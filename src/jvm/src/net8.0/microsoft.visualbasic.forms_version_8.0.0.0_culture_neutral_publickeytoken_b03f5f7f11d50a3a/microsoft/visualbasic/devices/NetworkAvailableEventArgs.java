@@ -170,9 +170,13 @@ public class NetworkAvailableEventArgs extends EventArgs  {
     
     public boolean getIsNetworkAvailable() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsNetworkAvailable = null;
         try {
-            return (boolean)classInstance.Get("IsNetworkAvailable");
+            retObjectIsNetworkAvailable = classInstance.Get("IsNetworkAvailable");
+            return (boolean)retObjectIsNetworkAvailable;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsNetworkAvailable != null ? retObjectIsNetworkAvailable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

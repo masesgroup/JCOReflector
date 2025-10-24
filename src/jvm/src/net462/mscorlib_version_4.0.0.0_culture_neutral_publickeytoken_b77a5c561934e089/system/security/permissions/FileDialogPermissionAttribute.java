@@ -169,10 +169,14 @@ public class FileDialogPermissionAttribute extends CodeAccessSecurityAttribute  
     
     public IPermission CreatePermission() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreatePermission = null;
         try {
-            JCObject objCreatePermission = (JCObject)classInstance.Invoke("CreatePermission");
+            retObjectCreatePermission = classInstance.Invoke("CreatePermission");
+            JCObject objCreatePermission = (JCObject)retObjectCreatePermission;
             return new IPermissionImplementation(objCreatePermission);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreatePermission != null ? retObjectCreatePermission.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -184,9 +188,13 @@ public class FileDialogPermissionAttribute extends CodeAccessSecurityAttribute  
     
     public boolean getOpen() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOpen = null;
         try {
-            return (boolean)classInstance.Get("Open");
+            retObjectOpen = classInstance.Get("Open");
+            return (boolean)retObjectOpen;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectOpen != null ? retObjectOpen.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -194,7 +202,7 @@ public class FileDialogPermissionAttribute extends CodeAccessSecurityAttribute  
 
     public void setOpen(boolean Open) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Open", Open);
         } catch (JCNativeException jcne) {
@@ -204,9 +212,13 @@ public class FileDialogPermissionAttribute extends CodeAccessSecurityAttribute  
 
     public boolean getSave() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSave = null;
         try {
-            return (boolean)classInstance.Get("Save");
+            retObjectSave = classInstance.Get("Save");
+            return (boolean)retObjectSave;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectSave != null ? retObjectSave.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -214,7 +226,7 @@ public class FileDialogPermissionAttribute extends CodeAccessSecurityAttribute  
 
     public void setSave(boolean Save) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Save", Save);
         } catch (JCNativeException jcne) {

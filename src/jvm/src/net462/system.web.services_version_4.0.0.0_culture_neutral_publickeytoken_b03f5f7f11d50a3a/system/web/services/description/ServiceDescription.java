@@ -179,9 +179,13 @@ public class ServiceDescription extends NamedItem  {
     
     public static boolean CanRead(XmlReader reader) throws Throwable, system.ArgumentNullException, system.NullReferenceException, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.io.PathTooLongException, system.OutOfMemoryException, system.MemberAccessException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.security.SecurityException, system.web.HttpException, system.web.HttpRequestValidationException, system.FormatException, system.UriFormatException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.RankException, system.MulticastNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCanRead = null;
         try {
-            return (boolean)classType.Invoke("CanRead", reader == null ? null : reader.getJCOInstance());
+            retObjectCanRead = classType.Invoke("CanRead", reader == null ? null : reader.getJCOInstance());
+            return (boolean)retObjectCanRead;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCanRead != null ? retObjectCanRead.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -189,10 +193,14 @@ public class ServiceDescription extends NamedItem  {
 
     public static ServiceDescription Read(Stream stream) throws Throwable, system.ArgumentException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.xml.XmlException, system.xml.schema.XmlSchemaException, system.RankException, system.MulticastNotSupportedException, system.MemberAccessException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.FormatException, system.MissingMethodException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectRead = null;
         try {
-            JCObject objRead = (JCObject)classType.Invoke("Read", stream == null ? null : stream.getJCOInstance());
+            retObjectRead = classType.Invoke("Read", stream == null ? null : stream.getJCOInstance());
+            JCObject objRead = (JCObject)retObjectRead;
             return new ServiceDescription(objRead);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRead != null ? retObjectRead.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,10 +208,14 @@ public class ServiceDescription extends NamedItem  {
 
     public static ServiceDescription Read(Stream stream, boolean validate) throws Throwable, system.ArgumentException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.xml.XmlException, system.xml.schema.XmlSchemaException, system.NullReferenceException, system.RankException, system.FormatException, system.MulticastNotSupportedException, system.MemberAccessException, system.io.PathTooLongException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException, system.OverflowException, system.MissingMethodException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectRead = null;
         try {
-            JCObject objRead = (JCObject)classType.Invoke("Read", stream == null ? null : stream.getJCOInstance(), validate);
+            retObjectRead = classType.Invoke("Read", stream == null ? null : stream.getJCOInstance(), validate);
+            JCObject objRead = (JCObject)retObjectRead;
             return new ServiceDescription(objRead);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRead != null ? retObjectRead.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -211,10 +223,14 @@ public class ServiceDescription extends NamedItem  {
 
     public static ServiceDescription Read(TextReader textReader) throws Throwable, system.ArgumentException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.xml.XmlException, system.xml.schema.XmlSchemaException, system.RankException, system.MulticastNotSupportedException, system.MemberAccessException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.FormatException, system.MissingMethodException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectRead = null;
         try {
-            JCObject objRead = (JCObject)classType.Invoke("Read", textReader == null ? null : textReader.getJCOInstance());
+            retObjectRead = classType.Invoke("Read", textReader == null ? null : textReader.getJCOInstance());
+            JCObject objRead = (JCObject)retObjectRead;
             return new ServiceDescription(objRead);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRead != null ? retObjectRead.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -222,10 +238,14 @@ public class ServiceDescription extends NamedItem  {
 
     public static ServiceDescription Read(TextReader textReader, boolean validate) throws Throwable, system.ArgumentException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.xml.XmlException, system.xml.schema.XmlSchemaException, system.NullReferenceException, system.RankException, system.FormatException, system.MulticastNotSupportedException, system.MemberAccessException, system.io.PathTooLongException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException, system.OverflowException, system.MissingMethodException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectRead = null;
         try {
-            JCObject objRead = (JCObject)classType.Invoke("Read", textReader == null ? null : textReader.getJCOInstance(), validate);
+            retObjectRead = classType.Invoke("Read", textReader == null ? null : textReader.getJCOInstance(), validate);
+            JCObject objRead = (JCObject)retObjectRead;
             return new ServiceDescription(objRead);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRead != null ? retObjectRead.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -233,10 +253,14 @@ public class ServiceDescription extends NamedItem  {
 
     public static ServiceDescription Read(java.lang.String fileName) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.NotSupportedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.io.PathTooLongException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.NullReferenceException, system.security.SecurityException, system.io.IOException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.xml.XmlException, system.xml.schema.XmlSchemaException, system.RankException, system.MulticastNotSupportedException, system.MemberAccessException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.FormatException, system.MissingMethodException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectRead = null;
         try {
-            JCObject objRead = (JCObject)classType.Invoke("Read", fileName);
+            retObjectRead = classType.Invoke("Read", fileName);
+            JCObject objRead = (JCObject)retObjectRead;
             return new ServiceDescription(objRead);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRead != null ? retObjectRead.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -244,10 +268,14 @@ public class ServiceDescription extends NamedItem  {
 
     public static ServiceDescription Read(java.lang.String fileName, boolean validate) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.NotSupportedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NullReferenceException, system.security.SecurityException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.xml.XmlException, system.xml.schema.XmlSchemaException, system.RankException, system.MulticastNotSupportedException, system.MemberAccessException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.FormatException, system.MissingMethodException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectRead = null;
         try {
-            JCObject objRead = (JCObject)classType.Invoke("Read", fileName, validate);
+            retObjectRead = classType.Invoke("Read", fileName, validate);
+            JCObject objRead = (JCObject)retObjectRead;
             return new ServiceDescription(objRead);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRead != null ? retObjectRead.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -255,10 +283,14 @@ public class ServiceDescription extends NamedItem  {
 
     public static ServiceDescription Read(XmlReader reader) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.xml.XmlException, system.globalization.CultureNotFoundException, system.xml.schema.XmlSchemaException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.NullReferenceException, system.RankException, system.threading.AbandonedMutexException, system.FormatException, system.MulticastNotSupportedException, system.MemberAccessException, system.io.PathTooLongException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException, system.OverflowException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectRead = null;
         try {
-            JCObject objRead = (JCObject)classType.Invoke("Read", reader == null ? null : reader.getJCOInstance());
+            retObjectRead = classType.Invoke("Read", reader == null ? null : reader.getJCOInstance());
+            JCObject objRead = (JCObject)retObjectRead;
             return new ServiceDescription(objRead);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRead != null ? retObjectRead.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -266,10 +298,14 @@ public class ServiceDescription extends NamedItem  {
 
     public static ServiceDescription Read(XmlReader reader, boolean validate) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.resources.MissingManifestResourceException, system.xml.XmlException, system.xml.schema.XmlSchemaException, system.NotImplementedException, system.NotSupportedException, system.configuration.ConfigurationException, system.RankException, system.FormatException, system.MulticastNotSupportedException, system.io.PathTooLongException, system.MemberAccessException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.io.DriveNotFoundException, system.OperationCanceledException, system.web.HttpException, system.web.HttpRequestValidationException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException, system.OverflowException, system.MissingMethodException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectRead = null;
         try {
-            JCObject objRead = (JCObject)classType.Invoke("Read", reader == null ? null : reader.getJCOInstance(), validate);
+            retObjectRead = classType.Invoke("Read", reader == null ? null : reader.getJCOInstance(), validate);
+            JCObject objRead = (JCObject)retObjectRead;
             return new ServiceDescription(objRead);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRead != null ? retObjectRead.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -277,7 +313,7 @@ public class ServiceDescription extends NamedItem  {
 
     public void Write(Stream stream) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.security.SecurityException, system.NotSupportedException, system.OutOfMemoryException, system.FormatException, system.IndexOutOfRangeException, system.InvalidOperationException, system.NotImplementedException, system.ObjectDisposedException, system.resources.MissingManifestResourceException, system.NullReferenceException, system.MemberAccessException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.RankException, system.MissingMethodException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Write", stream == null ? null : stream.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -287,7 +323,7 @@ public class ServiceDescription extends NamedItem  {
 
     public void Write(TextWriter writer) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.NullReferenceException, system.MemberAccessException, system.io.PathTooLongException, system.security.SecurityException, system.FormatException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.RankException, system.OutOfMemoryException, system.UnauthorizedAccessException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Write", writer == null ? null : writer.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -297,7 +333,7 @@ public class ServiceDescription extends NamedItem  {
 
     public void Write(java.lang.String fileName) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.io.PathTooLongException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.NullReferenceException, system.security.SecurityException, system.io.IOException, system.NotImplementedException, system.ObjectDisposedException, system.resources.MissingManifestResourceException, system.MemberAccessException, system.FormatException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.RankException, system.MissingMethodException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Write", fileName);
         } catch (JCNativeException jcne) {
@@ -307,7 +343,7 @@ public class ServiceDescription extends NamedItem  {
 
     public void Write(XmlWriter writer) throws Throwable, system.ArgumentNullException, system.NullReferenceException, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.io.PathTooLongException, system.OutOfMemoryException, system.MemberAccessException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.security.SecurityException, system.web.HttpException, system.web.HttpRequestValidationException, system.FormatException, system.UriFormatException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.RankException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Write", writer == null ? null : writer.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -321,10 +357,14 @@ public class ServiceDescription extends NamedItem  {
     
     public StringCollection getValidationWarnings() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValidationWarnings = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ValidationWarnings");
+            retObjectValidationWarnings = classInstance.Get("ValidationWarnings");
+            JCObject val = (JCObject)retObjectValidationWarnings;
             return new StringCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectValidationWarnings != null ? retObjectValidationWarnings.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -332,9 +372,13 @@ public class ServiceDescription extends NamedItem  {
 
     public java.lang.String getRetrievalUrl() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRetrievalUrl = null;
         try {
-            return (java.lang.String)classInstance.Get("RetrievalUrl");
+            retObjectRetrievalUrl = classInstance.Get("RetrievalUrl");
+            return (java.lang.String)retObjectRetrievalUrl;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectRetrievalUrl != null ? retObjectRetrievalUrl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -342,7 +386,7 @@ public class ServiceDescription extends NamedItem  {
 
     public void setRetrievalUrl(java.lang.String RetrievalUrl) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RetrievalUrl", RetrievalUrl);
         } catch (JCNativeException jcne) {
@@ -352,9 +396,13 @@ public class ServiceDescription extends NamedItem  {
 
     public java.lang.String getTargetNamespace() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTargetNamespace = null;
         try {
-            return (java.lang.String)classInstance.Get("TargetNamespace");
+            retObjectTargetNamespace = classInstance.Get("TargetNamespace");
+            return (java.lang.String)retObjectTargetNamespace;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectTargetNamespace != null ? retObjectTargetNamespace.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -362,7 +410,7 @@ public class ServiceDescription extends NamedItem  {
 
     public void setTargetNamespace(java.lang.String TargetNamespace) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TargetNamespace", TargetNamespace);
         } catch (JCNativeException jcne) {
@@ -372,10 +420,14 @@ public class ServiceDescription extends NamedItem  {
 
     public BindingCollection getBindings() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBindings = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Bindings");
+            retObjectBindings = classInstance.Get("Bindings");
+            JCObject val = (JCObject)retObjectBindings;
             return new BindingCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBindings != null ? retObjectBindings.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -383,10 +435,14 @@ public class ServiceDescription extends NamedItem  {
 
     public ImportCollection getImports() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectImports = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Imports");
+            retObjectImports = classInstance.Get("Imports");
+            JCObject val = (JCObject)retObjectImports;
             return new ImportCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectImports != null ? retObjectImports.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -394,10 +450,14 @@ public class ServiceDescription extends NamedItem  {
 
     public MessageCollection getMessages() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMessages = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Messages");
+            retObjectMessages = classInstance.Get("Messages");
+            JCObject val = (JCObject)retObjectMessages;
             return new MessageCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMessages != null ? retObjectMessages.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -405,10 +465,14 @@ public class ServiceDescription extends NamedItem  {
 
     public PortTypeCollection getPortTypes() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPortTypes = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PortTypes");
+            retObjectPortTypes = classInstance.Get("PortTypes");
+            JCObject val = (JCObject)retObjectPortTypes;
             return new PortTypeCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPortTypes != null ? retObjectPortTypes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -416,10 +480,14 @@ public class ServiceDescription extends NamedItem  {
 
     public ServiceCollection getServices() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectServices = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Services");
+            retObjectServices = classInstance.Get("Services");
+            JCObject val = (JCObject)retObjectServices;
             return new ServiceCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectServices != null ? retObjectServices.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -427,10 +495,14 @@ public class ServiceDescription extends NamedItem  {
 
     public ServiceDescriptionCollection getServiceDescriptions() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectServiceDescriptions = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ServiceDescriptions");
+            retObjectServiceDescriptions = classInstance.Get("ServiceDescriptions");
+            JCObject val = (JCObject)retObjectServiceDescriptions;
             return new ServiceDescriptionCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectServiceDescriptions != null ? retObjectServiceDescriptions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -438,10 +510,14 @@ public class ServiceDescription extends NamedItem  {
 
     public Types getTypes() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTypes = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Types");
+            retObjectTypes = classInstance.Get("Types");
+            JCObject val = (JCObject)retObjectTypes;
             return new Types(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTypes != null ? retObjectTypes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -449,7 +525,7 @@ public class ServiceDescription extends NamedItem  {
 
     public void setTypes(Types Types) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Types", Types == null ? null : Types.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -459,10 +535,14 @@ public class ServiceDescription extends NamedItem  {
 
     public static XmlSchema getSchema() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.resources.MissingManifestResourceException, system.globalization.CultureNotFoundException, system.xml.schema.XmlSchemaException, system.UriFormatException, system.NullReferenceException, system.xml.XmlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSchema = null;
         try {
-            JCObject val = (JCObject)classType.Get("Schema");
+            retObjectSchema = classType.Get("Schema");
+            JCObject val = (JCObject)retObjectSchema;
             return new XmlSchema(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSchema != null ? retObjectSchema.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -470,10 +550,14 @@ public class ServiceDescription extends NamedItem  {
 
     public static XmlSerializer getSerializer() throws Throwable, system.ArgumentNullException, system.NullReferenceException, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.io.PathTooLongException, system.MemberAccessException, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.SecurityException, system.web.HttpException, system.web.HttpRequestValidationException, system.FormatException, system.UriFormatException, system.OutOfMemoryException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.RankException, system.collections.generic.KeyNotFoundException, system.UnauthorizedAccessException, system.MulticastNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSerializer = null;
         try {
-            JCObject val = (JCObject)classType.Get("Serializer");
+            retObjectSerializer = classType.Get("Serializer");
+            JCObject val = (JCObject)retObjectSerializer;
             return new XmlSerializer(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSerializer != null ? retObjectSerializer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -144,10 +144,14 @@ public class IGridProviderImplementation extends NetObject implements IGridProvi
     
     public IRawElementProviderSimple GetItem(int row, int column) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetItem = null;
         try {
-            JCObject objGetItem = (JCObject)classInstance.Invoke("GetItem", row, column);
+            retObjectGetItem = classInstance.Invoke("GetItem", row, column);
+            JCObject objGetItem = (JCObject)retObjectGetItem;
             return new IRawElementProviderSimpleImplementation(objGetItem);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetItem != null ? retObjectGetItem.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -159,9 +163,20 @@ public class IGridProviderImplementation extends NetObject implements IGridProvi
     
     public int getColumnCount() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectColumnCount = null;
         try {
-            return (int)classInstance.Get("ColumnCount");
+            retObjectColumnCount = classInstance.Get("ColumnCount");
+            return (int)retObjectColumnCount;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectColumnCount_ToString = retObjectColumnCount == null ? "null" : retObjectColumnCount.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectColumnCountNumber = (java.lang.Number)retObjectColumnCount;
+                return retObjectColumnCountNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectColumnCount != null ? retObjectColumnCount.getClass() : "null", retObjectColumnCount_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,9 +184,20 @@ public class IGridProviderImplementation extends NetObject implements IGridProvi
 
     public int getRowCount() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRowCount = null;
         try {
-            return (int)classInstance.Get("RowCount");
+            retObjectRowCount = classInstance.Get("RowCount");
+            return (int)retObjectRowCount;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectRowCount_ToString = retObjectRowCount == null ? "null" : retObjectRowCount.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectRowCountNumber = (java.lang.Number)retObjectRowCount;
+                return retObjectRowCountNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectRowCount != null ? retObjectRowCount.getClass() : "null", retObjectRowCount_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

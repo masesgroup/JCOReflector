@@ -171,10 +171,14 @@ public class BindingBehaviorAttribute extends Attribute  {
     
     public BindingBehavior getBehavior() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBehavior = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Behavior");
+            retObjectBehavior = classInstance.Get("Behavior");
+            JCObject val = (JCObject)retObjectBehavior;
             return new BindingBehavior(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBehavior != null ? retObjectBehavior.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,7 +186,7 @@ public class BindingBehaviorAttribute extends Attribute  {
 
     public void setBehavior(BindingBehavior Behavior) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Behavior", Behavior == null ? null : Behavior.getJCOInstance());
         } catch (JCNativeException jcne) {

@@ -147,9 +147,13 @@ public class ICheckBoxControlImplementation extends NetObject implements ICheckB
     
     public boolean getChecked() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectChecked = null;
         try {
-            return (boolean)classInstance.Get("Checked");
+            retObjectChecked = classInstance.Get("Checked");
+            return (boolean)retObjectChecked;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectChecked != null ? retObjectChecked.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -157,7 +161,7 @@ public class ICheckBoxControlImplementation extends NetObject implements ICheckB
 
     public void setChecked(boolean Checked) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Checked", Checked);
         } catch (JCNativeException jcne) {
@@ -172,7 +176,7 @@ public class ICheckBoxControlImplementation extends NetObject implements ICheckB
 
     public void addCheckedChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("CheckedChanged", handler);
         } catch (JCNativeException jcne) {
@@ -182,7 +186,7 @@ public class ICheckBoxControlImplementation extends NetObject implements ICheckB
 
     public void removeCheckedChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("CheckedChanged", handler);
         } catch (JCNativeException jcne) {

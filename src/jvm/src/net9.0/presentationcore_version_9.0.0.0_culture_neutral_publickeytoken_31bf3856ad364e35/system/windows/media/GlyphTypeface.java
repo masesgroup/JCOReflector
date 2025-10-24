@@ -192,10 +192,14 @@ public class GlyphTypeface extends NetObject implements system.componentmodel.IS
     
     public Stream GetFontStream() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.UriFormatException, system.ArrayTypeMismatchException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.IOException, system.io.FileFormatException, system.collections.generic.KeyNotFoundException, system.net.WebException, system.componentmodel.Win32Exception, system.net.CookieException, system.OverflowException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetFontStream = null;
         try {
-            JCObject objGetFontStream = (JCObject)classInstance.Invoke("GetFontStream");
+            retObjectGetFontStream = classInstance.Invoke("GetFontStream");
+            JCObject objGetFontStream = (JCObject)retObjectGetFontStream;
             return new Stream(objGetFontStream);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetFontStream != null ? retObjectGetFontStream.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,10 +207,14 @@ public class GlyphTypeface extends NetObject implements system.componentmodel.IS
 
     public Geometry GetGlyphOutline(UInt16 glyphIndex, double renderingEmSize, double hintingEmSize) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.io.FileNotFoundException, system.UnauthorizedAccessException, system.io.FileFormatException, system.OutOfMemoryException, system.ArrayTypeMismatchException, system.componentmodel.Win32Exception, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetGlyphOutline = null;
         try {
-            JCObject objGetGlyphOutline = (JCObject)classInstance.Invoke("GetGlyphOutline", glyphIndex == null ? null : glyphIndex.getJCOInstance(), renderingEmSize, hintingEmSize);
+            retObjectGetGlyphOutline = classInstance.Invoke("GetGlyphOutline", glyphIndex == null ? null : glyphIndex.getJCOInstance(), renderingEmSize, hintingEmSize);
+            JCObject objGetGlyphOutline = (JCObject)retObjectGetGlyphOutline;
             return new Geometry(objGetGlyphOutline);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetGlyphOutline != null ? retObjectGetGlyphOutline.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -218,7 +226,7 @@ public class GlyphTypeface extends NetObject implements system.componentmodel.IS
      */
     @Deprecated 
     public void BeginInit() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToISupportInitialize to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToISupportInitialize to obtain the full interface.");
     }
 
     /**
@@ -227,7 +235,7 @@ public class GlyphTypeface extends NetObject implements system.componentmodel.IS
      */
     @Deprecated 
     public void EndInit() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToISupportInitialize to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToISupportInitialize to obtain the full interface.");
     }
 
 
@@ -236,9 +244,13 @@ public class GlyphTypeface extends NetObject implements system.componentmodel.IS
     
     public boolean getSymbol() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSymbol = null;
         try {
-            return (boolean)classInstance.Get("Symbol");
+            retObjectSymbol = classInstance.Get("Symbol");
+            return (boolean)retObjectSymbol;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectSymbol != null ? retObjectSymbol.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -246,9 +258,20 @@ public class GlyphTypeface extends NetObject implements system.componentmodel.IS
 
     public double getBaseline() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBaseline = null;
         try {
-            return (double)classInstance.Get("Baseline");
+            retObjectBaseline = classInstance.Get("Baseline");
+            return (double)retObjectBaseline;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectBaseline_ToString = retObjectBaseline == null ? "null" : retObjectBaseline.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectBaselineNumber = (java.lang.Number)retObjectBaseline;
+                return retObjectBaselineNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectBaseline != null ? retObjectBaseline.getClass() : "null", retObjectBaseline_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -256,9 +279,20 @@ public class GlyphTypeface extends NetObject implements system.componentmodel.IS
 
     public double getCapsHeight() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCapsHeight = null;
         try {
-            return (double)classInstance.Get("CapsHeight");
+            retObjectCapsHeight = classInstance.Get("CapsHeight");
+            return (double)retObjectCapsHeight;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCapsHeight_ToString = retObjectCapsHeight == null ? "null" : retObjectCapsHeight.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectCapsHeightNumber = (java.lang.Number)retObjectCapsHeight;
+                return retObjectCapsHeightNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectCapsHeight != null ? retObjectCapsHeight.getClass() : "null", retObjectCapsHeight_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -266,9 +300,20 @@ public class GlyphTypeface extends NetObject implements system.componentmodel.IS
 
     public double getHeight() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHeight = null;
         try {
-            return (double)classInstance.Get("Height");
+            retObjectHeight = classInstance.Get("Height");
+            return (double)retObjectHeight;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectHeight_ToString = retObjectHeight == null ? "null" : retObjectHeight.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectHeightNumber = (java.lang.Number)retObjectHeight;
+                return retObjectHeightNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectHeight != null ? retObjectHeight.getClass() : "null", retObjectHeight_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -276,9 +321,20 @@ public class GlyphTypeface extends NetObject implements system.componentmodel.IS
 
     public double getStrikethroughPosition() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStrikethroughPosition = null;
         try {
-            return (double)classInstance.Get("StrikethroughPosition");
+            retObjectStrikethroughPosition = classInstance.Get("StrikethroughPosition");
+            return (double)retObjectStrikethroughPosition;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectStrikethroughPosition_ToString = retObjectStrikethroughPosition == null ? "null" : retObjectStrikethroughPosition.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectStrikethroughPositionNumber = (java.lang.Number)retObjectStrikethroughPosition;
+                return retObjectStrikethroughPositionNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectStrikethroughPosition != null ? retObjectStrikethroughPosition.getClass() : "null", retObjectStrikethroughPosition_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -286,9 +342,20 @@ public class GlyphTypeface extends NetObject implements system.componentmodel.IS
 
     public double getStrikethroughThickness() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStrikethroughThickness = null;
         try {
-            return (double)classInstance.Get("StrikethroughThickness");
+            retObjectStrikethroughThickness = classInstance.Get("StrikethroughThickness");
+            return (double)retObjectStrikethroughThickness;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectStrikethroughThickness_ToString = retObjectStrikethroughThickness == null ? "null" : retObjectStrikethroughThickness.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectStrikethroughThicknessNumber = (java.lang.Number)retObjectStrikethroughThickness;
+                return retObjectStrikethroughThicknessNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectStrikethroughThickness != null ? retObjectStrikethroughThickness.getClass() : "null", retObjectStrikethroughThickness_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -296,9 +363,20 @@ public class GlyphTypeface extends NetObject implements system.componentmodel.IS
 
     public double getUnderlinePosition() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUnderlinePosition = null;
         try {
-            return (double)classInstance.Get("UnderlinePosition");
+            retObjectUnderlinePosition = classInstance.Get("UnderlinePosition");
+            return (double)retObjectUnderlinePosition;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectUnderlinePosition_ToString = retObjectUnderlinePosition == null ? "null" : retObjectUnderlinePosition.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectUnderlinePositionNumber = (java.lang.Number)retObjectUnderlinePosition;
+                return retObjectUnderlinePositionNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectUnderlinePosition != null ? retObjectUnderlinePosition.getClass() : "null", retObjectUnderlinePosition_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -306,9 +384,20 @@ public class GlyphTypeface extends NetObject implements system.componentmodel.IS
 
     public double getUnderlineThickness() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUnderlineThickness = null;
         try {
-            return (double)classInstance.Get("UnderlineThickness");
+            retObjectUnderlineThickness = classInstance.Get("UnderlineThickness");
+            return (double)retObjectUnderlineThickness;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectUnderlineThickness_ToString = retObjectUnderlineThickness == null ? "null" : retObjectUnderlineThickness.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectUnderlineThicknessNumber = (java.lang.Number)retObjectUnderlineThickness;
+                return retObjectUnderlineThicknessNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectUnderlineThickness != null ? retObjectUnderlineThickness.getClass() : "null", retObjectUnderlineThickness_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -316,9 +405,20 @@ public class GlyphTypeface extends NetObject implements system.componentmodel.IS
 
     public double getVersion() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.io.FileNotFoundException, system.UnauthorizedAccessException, system.io.FileFormatException, system.security.SecurityException, system.io.IOException, system.IndexOutOfRangeException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVersion = null;
         try {
-            return (double)classInstance.Get("Version");
+            retObjectVersion = classInstance.Get("Version");
+            return (double)retObjectVersion;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectVersion_ToString = retObjectVersion == null ? "null" : retObjectVersion.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectVersionNumber = (java.lang.Number)retObjectVersion;
+                return retObjectVersionNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectVersion != null ? retObjectVersion.getClass() : "null", retObjectVersion_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -326,9 +426,20 @@ public class GlyphTypeface extends NetObject implements system.componentmodel.IS
 
     public double getXHeight() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectXHeight = null;
         try {
-            return (double)classInstance.Get("XHeight");
+            retObjectXHeight = classInstance.Get("XHeight");
+            return (double)retObjectXHeight;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectXHeight_ToString = retObjectXHeight == null ? "null" : retObjectXHeight.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectXHeightNumber = (java.lang.Number)retObjectXHeight;
+                return retObjectXHeightNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectXHeight != null ? retObjectXHeight.getClass() : "null", retObjectXHeight_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -336,9 +447,20 @@ public class GlyphTypeface extends NetObject implements system.componentmodel.IS
 
     public int getGlyphCount() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.io.FileNotFoundException, system.UnauthorizedAccessException, system.io.FileFormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGlyphCount = null;
         try {
-            return (int)classInstance.Get("GlyphCount");
+            retObjectGlyphCount = classInstance.Get("GlyphCount");
+            return (int)retObjectGlyphCount;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGlyphCount_ToString = retObjectGlyphCount == null ? "null" : retObjectGlyphCount.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGlyphCountNumber = (java.lang.Number)retObjectGlyphCount;
+                return retObjectGlyphCountNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGlyphCount != null ? retObjectGlyphCount.getClass() : "null", retObjectGlyphCount_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -346,10 +468,14 @@ public class GlyphTypeface extends NetObject implements system.componentmodel.IS
 
     public Uri getFontUri() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFontUri = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("FontUri");
+            retObjectFontUri = classInstance.Get("FontUri");
+            JCObject val = (JCObject)retObjectFontUri;
             return new Uri(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFontUri != null ? retObjectFontUri.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -357,7 +483,7 @@ public class GlyphTypeface extends NetObject implements system.componentmodel.IS
 
     public void setFontUri(Uri FontUri) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FontUri", FontUri == null ? null : FontUri.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -367,10 +493,14 @@ public class GlyphTypeface extends NetObject implements system.componentmodel.IS
 
     public FontStretch getStretch() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStretch = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Stretch");
+            retObjectStretch = classInstance.Get("Stretch");
+            JCObject val = (JCObject)retObjectStretch;
             return new FontStretch(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStretch != null ? retObjectStretch.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -378,10 +508,14 @@ public class GlyphTypeface extends NetObject implements system.componentmodel.IS
 
     public FontStyle getStyle() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Style");
+            retObjectStyle = classInstance.Get("Style");
+            JCObject val = (JCObject)retObjectStyle;
             return new FontStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStyle != null ? retObjectStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -389,10 +523,14 @@ public class GlyphTypeface extends NetObject implements system.componentmodel.IS
 
     public FontWeight getWeight() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWeight = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Weight");
+            retObjectWeight = classInstance.Get("Weight");
+            JCObject val = (JCObject)retObjectWeight;
             return new FontWeight(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWeight != null ? retObjectWeight.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -400,10 +538,14 @@ public class GlyphTypeface extends NetObject implements system.componentmodel.IS
 
     public FontEmbeddingRight getEmbeddingRights() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.io.FileNotFoundException, system.UnauthorizedAccessException, system.io.FileFormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEmbeddingRights = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("EmbeddingRights");
+            retObjectEmbeddingRights = classInstance.Get("EmbeddingRights");
+            JCObject val = (JCObject)retObjectEmbeddingRights;
             return new FontEmbeddingRight(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEmbeddingRights != null ? retObjectEmbeddingRights.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -411,10 +553,14 @@ public class GlyphTypeface extends NetObject implements system.componentmodel.IS
 
     public StyleSimulations getStyleSimulations() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStyleSimulations = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("StyleSimulations");
+            retObjectStyleSimulations = classInstance.Get("StyleSimulations");
+            JCObject val = (JCObject)retObjectStyleSimulations;
             return new StyleSimulations(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStyleSimulations != null ? retObjectStyleSimulations.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -422,7 +568,7 @@ public class GlyphTypeface extends NetObject implements system.componentmodel.IS
 
     public void setStyleSimulations(StyleSimulations StyleSimulations) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("StyleSimulations", StyleSimulations == null ? null : StyleSimulations.getJCOInstance());
         } catch (JCNativeException jcne) {

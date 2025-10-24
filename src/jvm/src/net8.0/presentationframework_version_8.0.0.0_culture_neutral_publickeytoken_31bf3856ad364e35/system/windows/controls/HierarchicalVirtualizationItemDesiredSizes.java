@@ -168,9 +168,13 @@ public class HierarchicalVirtualizationItemDesiredSizes extends ValueType  {
     
     public boolean Equals(HierarchicalVirtualizationItemDesiredSizes comparisonItemSizes) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEquals = null;
         try {
-            return (boolean)classInstance.Invoke("Equals", comparisonItemSizes == null ? null : comparisonItemSizes.getJCOInstance());
+            retObjectEquals = classInstance.Invoke("Equals", comparisonItemSizes == null ? null : comparisonItemSizes.getJCOInstance());
+            return (boolean)retObjectEquals;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectEquals != null ? retObjectEquals.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,10 +186,14 @@ public class HierarchicalVirtualizationItemDesiredSizes extends ValueType  {
     
     public Size getLogicalSize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLogicalSize = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("LogicalSize");
+            retObjectLogicalSize = classInstance.Get("LogicalSize");
+            JCObject val = (JCObject)retObjectLogicalSize;
             return new Size(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLogicalSize != null ? retObjectLogicalSize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,10 +201,14 @@ public class HierarchicalVirtualizationItemDesiredSizes extends ValueType  {
 
     public Size getLogicalSizeAfterViewport() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLogicalSizeAfterViewport = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("LogicalSizeAfterViewport");
+            retObjectLogicalSizeAfterViewport = classInstance.Get("LogicalSizeAfterViewport");
+            JCObject val = (JCObject)retObjectLogicalSizeAfterViewport;
             return new Size(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLogicalSizeAfterViewport != null ? retObjectLogicalSizeAfterViewport.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -204,10 +216,14 @@ public class HierarchicalVirtualizationItemDesiredSizes extends ValueType  {
 
     public Size getLogicalSizeBeforeViewport() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLogicalSizeBeforeViewport = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("LogicalSizeBeforeViewport");
+            retObjectLogicalSizeBeforeViewport = classInstance.Get("LogicalSizeBeforeViewport");
+            JCObject val = (JCObject)retObjectLogicalSizeBeforeViewport;
             return new Size(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLogicalSizeBeforeViewport != null ? retObjectLogicalSizeBeforeViewport.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -215,10 +231,14 @@ public class HierarchicalVirtualizationItemDesiredSizes extends ValueType  {
 
     public Size getLogicalSizeInViewport() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLogicalSizeInViewport = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("LogicalSizeInViewport");
+            retObjectLogicalSizeInViewport = classInstance.Get("LogicalSizeInViewport");
+            JCObject val = (JCObject)retObjectLogicalSizeInViewport;
             return new Size(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLogicalSizeInViewport != null ? retObjectLogicalSizeInViewport.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -226,10 +246,14 @@ public class HierarchicalVirtualizationItemDesiredSizes extends ValueType  {
 
     public Size getPixelSize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPixelSize = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PixelSize");
+            retObjectPixelSize = classInstance.Get("PixelSize");
+            JCObject val = (JCObject)retObjectPixelSize;
             return new Size(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPixelSize != null ? retObjectPixelSize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -237,10 +261,14 @@ public class HierarchicalVirtualizationItemDesiredSizes extends ValueType  {
 
     public Size getPixelSizeAfterViewport() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPixelSizeAfterViewport = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PixelSizeAfterViewport");
+            retObjectPixelSizeAfterViewport = classInstance.Get("PixelSizeAfterViewport");
+            JCObject val = (JCObject)retObjectPixelSizeAfterViewport;
             return new Size(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPixelSizeAfterViewport != null ? retObjectPixelSizeAfterViewport.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -248,10 +276,14 @@ public class HierarchicalVirtualizationItemDesiredSizes extends ValueType  {
 
     public Size getPixelSizeBeforeViewport() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPixelSizeBeforeViewport = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PixelSizeBeforeViewport");
+            retObjectPixelSizeBeforeViewport = classInstance.Get("PixelSizeBeforeViewport");
+            JCObject val = (JCObject)retObjectPixelSizeBeforeViewport;
             return new Size(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPixelSizeBeforeViewport != null ? retObjectPixelSizeBeforeViewport.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -259,10 +291,14 @@ public class HierarchicalVirtualizationItemDesiredSizes extends ValueType  {
 
     public Size getPixelSizeInViewport() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPixelSizeInViewport = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PixelSizeInViewport");
+            retObjectPixelSizeInViewport = classInstance.Get("PixelSizeInViewport");
+            JCObject val = (JCObject)retObjectPixelSizeInViewport;
             return new Size(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPixelSizeInViewport != null ? retObjectPixelSizeInViewport.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -172,10 +172,14 @@ public class ModelValidatedEventArgs extends EventArgs  {
     
     public ModelBindingExecutionContext getModelBindingExecutionContext() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectModelBindingExecutionContext = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ModelBindingExecutionContext");
+            retObjectModelBindingExecutionContext = classInstance.Get("ModelBindingExecutionContext");
+            JCObject val = (JCObject)retObjectModelBindingExecutionContext;
             return new ModelBindingExecutionContext(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectModelBindingExecutionContext != null ? retObjectModelBindingExecutionContext.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,7 +187,7 @@ public class ModelValidatedEventArgs extends EventArgs  {
 
     public void setModelBindingExecutionContext(ModelBindingExecutionContext ModelBindingExecutionContext) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ModelBindingExecutionContext", ModelBindingExecutionContext == null ? null : ModelBindingExecutionContext.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -193,10 +197,14 @@ public class ModelValidatedEventArgs extends EventArgs  {
 
     public ModelValidationNode getParentNode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectParentNode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ParentNode");
+            retObjectParentNode = classInstance.Get("ParentNode");
+            JCObject val = (JCObject)retObjectParentNode;
             return new ModelValidationNode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParentNode != null ? retObjectParentNode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -204,7 +212,7 @@ public class ModelValidatedEventArgs extends EventArgs  {
 
     public void setParentNode(ModelValidationNode ParentNode) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ParentNode", ParentNode == null ? null : ParentNode.getJCOInstance());
         } catch (JCNativeException jcne) {

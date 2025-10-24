@@ -157,9 +157,13 @@ public class PropertyValueCollection extends CollectionBase  {
     
     public boolean Contains(NetObject value) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContains = null;
         try {
-            return (boolean)classInstance.Invoke("Contains", value == null ? null : value.getJCOInstance());
+            retObjectContains = classInstance.Invoke("Contains", value == null ? null : value.getJCOInstance());
+            return (boolean)retObjectContains;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectContains != null ? retObjectContains.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -167,9 +171,20 @@ public class PropertyValueCollection extends CollectionBase  {
 
     public int Add(NetObject value) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAdd = null;
         try {
-            return (int)classInstance.Invoke("Add", value == null ? null : value.getJCOInstance());
+            retObjectAdd = classInstance.Invoke("Add", value == null ? null : value.getJCOInstance());
+            return (int)retObjectAdd;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectAdd_ToString = retObjectAdd == null ? "null" : retObjectAdd.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectAddNumber = (java.lang.Number)retObjectAdd;
+                return retObjectAddNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectAdd != null ? retObjectAdd.getClass() : "null", retObjectAdd_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,9 +192,20 @@ public class PropertyValueCollection extends CollectionBase  {
 
     public int IndexOf(NetObject value) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIndexOf = null;
         try {
-            return (int)classInstance.Invoke("IndexOf", value == null ? null : value.getJCOInstance());
+            retObjectIndexOf = classInstance.Invoke("IndexOf", value == null ? null : value.getJCOInstance());
+            return (int)retObjectIndexOf;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectIndexOf_ToString = retObjectIndexOf == null ? "null" : retObjectIndexOf.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectIndexOfNumber = (java.lang.Number)retObjectIndexOf;
+                return retObjectIndexOfNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectIndexOf != null ? retObjectIndexOf.getClass() : "null", retObjectIndexOf_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,7 +213,7 @@ public class PropertyValueCollection extends CollectionBase  {
 
     public void AddRange(PropertyValueCollection value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddRange", value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -197,7 +223,7 @@ public class PropertyValueCollection extends CollectionBase  {
 
     public void AddRange(NetObject[] value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddRange", (java.lang.Object)toObjectFromArray(value));
         } catch (JCNativeException jcne) {
@@ -207,7 +233,7 @@ public class PropertyValueCollection extends CollectionBase  {
 
     public void CopyTo(NetObject[] array, int index) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CopyTo", toObjectFromArray(array), index);
         } catch (JCNativeException jcne) {
@@ -217,7 +243,7 @@ public class PropertyValueCollection extends CollectionBase  {
 
     public void Insert(int index, NetObject value) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Insert", index, value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -227,7 +253,7 @@ public class PropertyValueCollection extends CollectionBase  {
 
     public void Remove(NetObject value) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Remove", value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -241,10 +267,14 @@ public class PropertyValueCollection extends CollectionBase  {
     
     public NetObject getValue() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValue = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Value");
+            retObjectValue = classInstance.Get("Value");
+            JCObject val = (JCObject)retObjectValue;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectValue != null ? retObjectValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -252,7 +282,7 @@ public class PropertyValueCollection extends CollectionBase  {
 
     public void setValue(NetObject Value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.OverflowException, system.FormatException, system.security.cryptography.CryptographicException, system.threading.LockRecursionException, system.threading.SynchronizationLockException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Value", Value == null ? null : Value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -262,9 +292,13 @@ public class PropertyValueCollection extends CollectionBase  {
 
     public java.lang.String getPropertyName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPropertyName = null;
         try {
-            return (java.lang.String)classInstance.Get("PropertyName");
+            retObjectPropertyName = classInstance.Get("PropertyName");
+            return (java.lang.String)retObjectPropertyName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectPropertyName != null ? retObjectPropertyName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

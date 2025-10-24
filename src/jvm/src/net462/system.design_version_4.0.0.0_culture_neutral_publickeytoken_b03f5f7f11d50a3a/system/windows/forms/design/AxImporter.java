@@ -159,9 +159,13 @@ public class AxImporter extends NetObject  {
     
     public java.lang.String GenerateFromFile(FileInfo file) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.io.IOException, system.io.PathTooLongException, system.UriFormatException, system.UnauthorizedAccessException, system.TypeLoadException, system.MulticastNotSupportedException, system.io.FileNotFoundException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGenerateFromFile = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GenerateFromFile", file == null ? null : file.getJCOInstance());
+            retObjectGenerateFromFile = classInstance.Invoke("GenerateFromFile", file == null ? null : file.getJCOInstance());
+            return (java.lang.String)retObjectGenerateFromFile;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGenerateFromFile != null ? retObjectGenerateFromFile.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,9 +173,13 @@ public class AxImporter extends NetObject  {
 
     public java.lang.String GenerateFromTypeLibrary(UCOMITypeLib typeLib) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.NotSupportedException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.OutOfMemoryException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NullReferenceException, system.resources.MissingManifestResourceException, system.UriFormatException, system.TypeLoadException, system.MulticastNotSupportedException, system.globalization.CultureNotFoundException, system.RankException, system.OverflowException, system.FormatException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGenerateFromTypeLibrary = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GenerateFromTypeLibrary", typeLib == null ? null : typeLib.getJCOInstance());
+            retObjectGenerateFromTypeLibrary = classInstance.Invoke("GenerateFromTypeLibrary", typeLib == null ? null : typeLib.getJCOInstance());
+            return (java.lang.String)retObjectGenerateFromTypeLibrary;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGenerateFromTypeLibrary != null ? retObjectGenerateFromTypeLibrary.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,9 +187,13 @@ public class AxImporter extends NetObject  {
 
     public java.lang.String GenerateFromTypeLibrary(UCOMITypeLib typeLib, Guid clsid) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.io.PathTooLongException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NullReferenceException, system.security.SecurityException, system.io.IOException, system.NotImplementedException, system.FormatException, system.resources.MissingManifestResourceException, system.UriFormatException, system.OutOfMemoryException, system.UnauthorizedAccessException, system.TypeLoadException, system.MulticastNotSupportedException, system.io.FileNotFoundException, system.globalization.CultureNotFoundException, system.RankException, system.OverflowException, system.InvalidTimeZoneException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGenerateFromTypeLibrary = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GenerateFromTypeLibrary", typeLib == null ? null : typeLib.getJCOInstance(), clsid == null ? null : clsid.getJCOInstance());
+            retObjectGenerateFromTypeLibrary = classInstance.Invoke("GenerateFromTypeLibrary", typeLib == null ? null : typeLib.getJCOInstance(), clsid == null ? null : clsid.getJCOInstance());
+            return (java.lang.String)retObjectGenerateFromTypeLibrary;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGenerateFromTypeLibrary != null ? retObjectGenerateFromTypeLibrary.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,10 +205,12 @@ public class AxImporter extends NetObject  {
     
     public java.lang.String[] getGeneratedAssemblies() throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGeneratedAssemblies = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("GeneratedAssemblies");
+            retObjectGeneratedAssemblies = classInstance.Get("GeneratedAssemblies");
+            JCObject resultingObjects = (JCObject)retObjectGeneratedAssemblies;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -205,6 +219,8 @@ public class AxImporter extends NetObject  {
 				resultingArray[indexGeneratedAssemblies] = (java.lang.String)resultingArrayList.get(indexGeneratedAssemblies);
 			}
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into JCObject", retObjectGeneratedAssemblies != null ? retObjectGeneratedAssemblies.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -212,10 +228,12 @@ public class AxImporter extends NetObject  {
 
     public java.lang.String[] getGeneratedSources() throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGeneratedSources = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("GeneratedSources");
+            retObjectGeneratedSources = classInstance.Get("GeneratedSources");
+            JCObject resultingObjects = (JCObject)retObjectGeneratedSources;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -224,6 +242,8 @@ public class AxImporter extends NetObject  {
 				resultingArray[indexGeneratedSources] = (java.lang.String)resultingArrayList.get(indexGeneratedSources);
 			}
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into JCObject", retObjectGeneratedSources != null ? retObjectGeneratedSources.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

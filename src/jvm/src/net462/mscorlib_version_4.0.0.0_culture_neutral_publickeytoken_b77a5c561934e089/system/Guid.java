@@ -211,9 +211,13 @@ public class Guid extends ValueType  {
     
     public boolean Equals(Guid g) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEquals = null;
         try {
-            return (boolean)classInstance.Invoke("Equals", g == null ? null : g.getJCOInstance());
+            retObjectEquals = classInstance.Invoke("Equals", g == null ? null : g.getJCOInstance());
+            return (boolean)retObjectEquals;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectEquals != null ? retObjectEquals.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -221,9 +225,13 @@ public class Guid extends ValueType  {
 
     public static boolean TryParse(java.lang.String input, JCORefOut<Guid> result) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTryParse = null;
         try {
-            return (boolean)classType.Invoke("TryParse", input, result.getJCRefOut());
+            retObjectTryParse = classType.Invoke("TryParse", input, result.getJCRefOut());
+            return (boolean)retObjectTryParse;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryParse != null ? retObjectTryParse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -231,9 +239,13 @@ public class Guid extends ValueType  {
 
     public static boolean TryParseExact(java.lang.String input, java.lang.String format, JCORefOut<Guid> result) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTryParseExact = null;
         try {
-            return (boolean)classType.Invoke("TryParseExact", input, format, result.getJCRefOut());
+            retObjectTryParseExact = classType.Invoke("TryParseExact", input, format, result.getJCRefOut());
+            return (boolean)retObjectTryParseExact;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryParseExact != null ? retObjectTryParseExact.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -241,10 +253,12 @@ public class Guid extends ValueType  {
 
     public byte[] ToByteArray() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToByteArray = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("ToByteArray");
+            retObjectToByteArray = classInstance.Invoke("ToByteArray");
+            JCObject resultingObjects = (JCObject)retObjectToByteArray;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -253,6 +267,8 @@ public class Guid extends ValueType  {
 				resultingArray[indexToByteArray] = (byte)resultingArrayList.get(indexToByteArray);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectToByteArray != null ? retObjectToByteArray.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -260,9 +276,20 @@ public class Guid extends ValueType  {
 
     public int CompareTo(Guid value) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCompareTo = null;
         try {
-            return (int)classInstance.Invoke("CompareTo", value == null ? null : value.getJCOInstance());
+            retObjectCompareTo = classInstance.Invoke("CompareTo", value == null ? null : value.getJCOInstance());
+            return (int)retObjectCompareTo;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCompareTo_ToString = retObjectCompareTo == null ? "null" : retObjectCompareTo.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectCompareToNumber = (java.lang.Number)retObjectCompareTo;
+                return retObjectCompareToNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCompareTo != null ? retObjectCompareTo.getClass() : "null", retObjectCompareTo_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -270,9 +297,20 @@ public class Guid extends ValueType  {
 
     public int CompareTo(NetObject value) throws Throwable, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCompareTo = null;
         try {
-            return (int)classInstance.Invoke("CompareTo", value == null ? null : value.getJCOInstance());
+            retObjectCompareTo = classInstance.Invoke("CompareTo", value == null ? null : value.getJCOInstance());
+            return (int)retObjectCompareTo;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCompareTo_ToString = retObjectCompareTo == null ? "null" : retObjectCompareTo.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectCompareToNumber = (java.lang.Number)retObjectCompareTo;
+                return retObjectCompareToNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCompareTo != null ? retObjectCompareTo.getClass() : "null", retObjectCompareTo_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -280,10 +318,14 @@ public class Guid extends ValueType  {
 
     public static Guid NewGuid() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectNewGuid = null;
         try {
-            JCObject objNewGuid = (JCObject)classType.Invoke("NewGuid");
+            retObjectNewGuid = classType.Invoke("NewGuid");
+            JCObject objNewGuid = (JCObject)retObjectNewGuid;
             return new Guid(objNewGuid);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNewGuid != null ? retObjectNewGuid.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -291,10 +333,14 @@ public class Guid extends ValueType  {
 
     public static Guid Parse(java.lang.String input) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectParse = null;
         try {
-            JCObject objParse = (JCObject)classType.Invoke("Parse", input);
+            retObjectParse = classType.Invoke("Parse", input);
+            JCObject objParse = (JCObject)retObjectParse;
             return new Guid(objParse);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParse != null ? retObjectParse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -302,10 +348,14 @@ public class Guid extends ValueType  {
 
     public static Guid ParseExact(java.lang.String input, java.lang.String format) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectParseExact = null;
         try {
-            JCObject objParseExact = (JCObject)classType.Invoke("ParseExact", input, format);
+            retObjectParseExact = classType.Invoke("ParseExact", input, format);
+            JCObject objParseExact = (JCObject)retObjectParseExact;
             return new Guid(objParseExact);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParseExact != null ? retObjectParseExact.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -313,9 +363,13 @@ public class Guid extends ValueType  {
 
     public java.lang.String ToString(java.lang.String format) throws Throwable, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToString = null;
         try {
-            return (java.lang.String)classInstance.Invoke("ToString", format);
+            retObjectToString = classInstance.Invoke("ToString", format);
+            return (java.lang.String)retObjectToString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectToString != null ? retObjectToString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -323,9 +377,13 @@ public class Guid extends ValueType  {
 
     public java.lang.String ToString(java.lang.String format, IFormatProvider provider) throws Throwable, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToString = null;
         try {
-            return (java.lang.String)classInstance.Invoke("ToString", format, provider == null ? null : provider.getJCOInstance());
+            retObjectToString = classInstance.Invoke("ToString", format, provider == null ? null : provider.getJCOInstance());
+            return (java.lang.String)retObjectToString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectToString != null ? retObjectToString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

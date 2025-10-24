@@ -157,7 +157,7 @@ public class ValueTaskAwaiter extends ValueType  {
     
     public void GetResult() throws Throwable, system.PlatformNotSupportedException, system.diagnostics.tracing.EventSourceException, system.InvalidOperationException, system.threading.tasks.TaskSchedulerException, system.ObjectDisposedException, system.OperationCanceledException, system.ArgumentOutOfRangeException, system.threading.tasks.TaskCanceledException, system.NotSupportedException, system.ArgumentNullException, system.AggregateException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetResult");
         } catch (JCNativeException jcne) {
@@ -167,7 +167,7 @@ public class ValueTaskAwaiter extends ValueType  {
 
     public void OnCompleted(Action continuation) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("OnCompleted", continuation);
         } catch (JCNativeException jcne) {
@@ -177,7 +177,7 @@ public class ValueTaskAwaiter extends ValueType  {
 
     public void UnsafeOnCompleted(Action continuation) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("UnsafeOnCompleted", continuation);
         } catch (JCNativeException jcne) {
@@ -191,9 +191,13 @@ public class ValueTaskAwaiter extends ValueType  {
     
     public boolean getIsCompleted() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsCompleted = null;
         try {
-            return (boolean)classInstance.Get("IsCompleted");
+            retObjectIsCompleted = classInstance.Get("IsCompleted");
+            return (boolean)retObjectIsCompleted;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsCompleted != null ? retObjectIsCompleted.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

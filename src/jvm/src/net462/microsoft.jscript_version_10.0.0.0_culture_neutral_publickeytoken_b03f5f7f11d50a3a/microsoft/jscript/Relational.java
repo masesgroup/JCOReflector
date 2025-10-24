@@ -166,9 +166,20 @@ public class Relational extends BinaryOp  {
     
     public double EvaluateRelational(NetObject v1, NetObject v2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.NotImplementedException, system.NullReferenceException, system.NotSupportedException, system.InvalidOperationException, microsoft.jscript.JScriptException, system.ArgumentOutOfRangeException, microsoft.jscript.EndOfFile, system.MissingMethodException, system.OverflowException, system.globalization.CultureNotFoundException, system.FormatException, system.OutOfMemoryException, system.ArithmeticException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEvaluateRelational = null;
         try {
-            return (double)classInstance.Invoke("EvaluateRelational", v1 == null ? null : v1.getJCOInstance(), v2 == null ? null : v2.getJCOInstance());
+            retObjectEvaluateRelational = classInstance.Invoke("EvaluateRelational", v1 == null ? null : v1.getJCOInstance(), v2 == null ? null : v2.getJCOInstance());
+            return (double)retObjectEvaluateRelational;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectEvaluateRelational_ToString = retObjectEvaluateRelational == null ? "null" : retObjectEvaluateRelational.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectEvaluateRelationalNumber = (java.lang.Number)retObjectEvaluateRelational;
+                return retObjectEvaluateRelationalNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectEvaluateRelational != null ? retObjectEvaluateRelational.getClass() : "null", retObjectEvaluateRelational_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,9 +187,20 @@ public class Relational extends BinaryOp  {
 
     public static double JScriptCompare(NetObject v1, NetObject v2) throws Throwable, system.NotImplementedException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, microsoft.jscript.JScriptException, microsoft.jscript.EndOfFile, system.ArgumentNullException, system.MissingMethodException, system.OverflowException, system.globalization.CultureNotFoundException, system.FormatException, system.OutOfMemoryException, system.ArithmeticException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectJScriptCompare = null;
         try {
-            return (double)classType.Invoke("JScriptCompare", v1 == null ? null : v1.getJCOInstance(), v2 == null ? null : v2.getJCOInstance());
+            retObjectJScriptCompare = classType.Invoke("JScriptCompare", v1 == null ? null : v1.getJCOInstance(), v2 == null ? null : v2.getJCOInstance());
+            return (double)retObjectJScriptCompare;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectJScriptCompare_ToString = retObjectJScriptCompare == null ? "null" : retObjectJScriptCompare.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectJScriptCompareNumber = (java.lang.Number)retObjectJScriptCompare;
+                return retObjectJScriptCompareNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectJScriptCompare != null ? retObjectJScriptCompare.getClass() : "null", retObjectJScriptCompare_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

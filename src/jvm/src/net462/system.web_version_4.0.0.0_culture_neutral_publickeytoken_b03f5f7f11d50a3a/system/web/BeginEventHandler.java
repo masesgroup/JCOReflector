@@ -180,7 +180,7 @@ public class BeginEventHandler extends JCDelegate implements IJCEventEmit, IJCOB
         } else if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
         } else
-            throw new UnsupportedOperationException(
+            throw new java.lang.UnsupportedOperationException(
                     String.format("Class %s is not supported.", instance.getClass().getTypeName()));
     }
 
@@ -194,10 +194,14 @@ public class BeginEventHandler extends JCDelegate implements IJCEventEmit, IJCOB
 
     public IAsyncResult DynamicInvoke(NetObject sender, EventArgs e, AsyncCallback cb, NetObject extraData) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDynamicInvoke = null;
         try {
-            JCObject objDynamicInvoke = (JCObject)classInstance.Invoke("DynamicInvoke", sender == null ? null : sender.getJCOInstance(), e == null ? null : e.getJCOInstance(), cb == null ? null : cb.getJCOInstance(), extraData == null ? null : extraData.getJCOInstance());
+            retObjectDynamicInvoke = classInstance.Invoke("DynamicInvoke", sender == null ? null : sender.getJCOInstance(), e == null ? null : e.getJCOInstance(), cb == null ? null : cb.getJCOInstance(), extraData == null ? null : extraData.getJCOInstance());
+            JCObject objDynamicInvoke = (JCObject)retObjectDynamicInvoke;
             return new IAsyncResultImplementation(objDynamicInvoke);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDynamicInvoke != null ? retObjectDynamicInvoke.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

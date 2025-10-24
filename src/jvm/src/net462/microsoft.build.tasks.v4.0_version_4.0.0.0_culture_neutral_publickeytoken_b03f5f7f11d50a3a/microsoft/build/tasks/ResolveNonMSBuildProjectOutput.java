@@ -164,9 +164,13 @@ public class ResolveNonMSBuildProjectOutput extends ResolveProjectBase  {
     
     public boolean Execute() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.io.PathTooLongException, system.ArgumentOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.FormatException, system.NotImplementedException, system.IndexOutOfRangeException, system.xml.XmlException, system.xml.schema.XmlSchemaException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExecute = null;
         try {
-            return (boolean)classInstance.Invoke("Execute");
+            retObjectExecute = classInstance.Invoke("Execute");
+            return (boolean)retObjectExecute;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectExecute != null ? retObjectExecute.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,16 +182,20 @@ public class ResolveNonMSBuildProjectOutput extends ResolveProjectBase  {
     
     public final ITaskItem[] getResolvedOutputPaths() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResolvedOutputPaths = null;
         try {
             ArrayList<ITaskItem> resultingArrayList = new ArrayList<ITaskItem>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("ResolvedOutputPaths");
+            retObjectResolvedOutputPaths = classInstance.Get("ResolvedOutputPaths");
+            JCObject resultingObjects = (JCObject)retObjectResolvedOutputPaths;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ITaskItemImplementation(resultingObject));
             }
             ITaskItem[] resultingArray = new ITaskItem[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectResolvedOutputPaths != null ? retObjectResolvedOutputPaths.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,7 +203,7 @@ public class ResolveNonMSBuildProjectOutput extends ResolveProjectBase  {
 
     public void setResolvedOutputPaths(ITaskItem[] ResolvedOutputPaths) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ResolvedOutputPaths", toObjectFromArray(ResolvedOutputPaths));
         } catch (JCNativeException jcne) {
@@ -205,16 +213,20 @@ public class ResolveNonMSBuildProjectOutput extends ResolveProjectBase  {
 
     public final ITaskItem[] getUnresolvedProjectReferences() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUnresolvedProjectReferences = null;
         try {
             ArrayList<ITaskItem> resultingArrayList = new ArrayList<ITaskItem>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("UnresolvedProjectReferences");
+            retObjectUnresolvedProjectReferences = classInstance.Get("UnresolvedProjectReferences");
+            JCObject resultingObjects = (JCObject)retObjectUnresolvedProjectReferences;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ITaskItemImplementation(resultingObject));
             }
             ITaskItem[] resultingArray = new ITaskItem[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUnresolvedProjectReferences != null ? retObjectUnresolvedProjectReferences.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -222,7 +234,7 @@ public class ResolveNonMSBuildProjectOutput extends ResolveProjectBase  {
 
     public void setUnresolvedProjectReferences(ITaskItem[] UnresolvedProjectReferences) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UnresolvedProjectReferences", toObjectFromArray(UnresolvedProjectReferences));
         } catch (JCNativeException jcne) {
@@ -232,9 +244,13 @@ public class ResolveNonMSBuildProjectOutput extends ResolveProjectBase  {
 
     public java.lang.String getPreresolvedProjectOutputs() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPreresolvedProjectOutputs = null;
         try {
-            return (java.lang.String)classInstance.Get("PreresolvedProjectOutputs");
+            retObjectPreresolvedProjectOutputs = classInstance.Get("PreresolvedProjectOutputs");
+            return (java.lang.String)retObjectPreresolvedProjectOutputs;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectPreresolvedProjectOutputs != null ? retObjectPreresolvedProjectOutputs.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -242,7 +258,7 @@ public class ResolveNonMSBuildProjectOutput extends ResolveProjectBase  {
 
     public void setPreresolvedProjectOutputs(java.lang.String PreresolvedProjectOutputs) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PreresolvedProjectOutputs", PreresolvedProjectOutputs);
         } catch (JCNativeException jcne) {

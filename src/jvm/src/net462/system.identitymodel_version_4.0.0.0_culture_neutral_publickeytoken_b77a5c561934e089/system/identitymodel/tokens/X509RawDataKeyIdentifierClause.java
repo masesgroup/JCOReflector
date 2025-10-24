@@ -178,9 +178,13 @@ public class X509RawDataKeyIdentifierClause extends BinaryKeyIdentifierClause  {
     
     public boolean Matches(X509Certificate2 certificate) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMatches = null;
         try {
-            return (boolean)classInstance.Invoke("Matches", certificate == null ? null : certificate.getJCOInstance());
+            retObjectMatches = classInstance.Invoke("Matches", certificate == null ? null : certificate.getJCOInstance());
+            return (boolean)retObjectMatches;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectMatches != null ? retObjectMatches.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,10 +192,12 @@ public class X509RawDataKeyIdentifierClause extends BinaryKeyIdentifierClause  {
 
     public byte[] GetX509RawData() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetX509RawData = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetX509RawData");
+            retObjectGetX509RawData = classInstance.Invoke("GetX509RawData");
+            JCObject resultingObjects = (JCObject)retObjectGetX509RawData;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -200,6 +206,8 @@ public class X509RawDataKeyIdentifierClause extends BinaryKeyIdentifierClause  {
 				resultingArray[indexGetX509RawData] = (byte)resultingArrayList.get(indexGetX509RawData);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectGetX509RawData != null ? retObjectGetX509RawData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -207,10 +215,14 @@ public class X509RawDataKeyIdentifierClause extends BinaryKeyIdentifierClause  {
 
     public SecurityKey CreateKey() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.security.cryptography.CryptographicException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.AccessViolationException, system.OverflowException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateKey = null;
         try {
-            JCObject objCreateKey = (JCObject)classInstance.Invoke("CreateKey");
+            retObjectCreateKey = classInstance.Invoke("CreateKey");
+            JCObject objCreateKey = (JCObject)retObjectCreateKey;
             return new SecurityKey(objCreateKey);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateKey != null ? retObjectCreateKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

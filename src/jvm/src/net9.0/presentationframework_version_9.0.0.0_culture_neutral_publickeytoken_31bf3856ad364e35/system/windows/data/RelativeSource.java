@@ -188,9 +188,13 @@ public class RelativeSource extends MarkupExtension implements system.componentm
     
     public boolean ShouldSerializeAncestorLevel() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShouldSerializeAncestorLevel = null;
         try {
-            return (boolean)classInstance.Invoke("ShouldSerializeAncestorLevel");
+            retObjectShouldSerializeAncestorLevel = classInstance.Invoke("ShouldSerializeAncestorLevel");
+            return (boolean)retObjectShouldSerializeAncestorLevel;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectShouldSerializeAncestorLevel != null ? retObjectShouldSerializeAncestorLevel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,9 +202,13 @@ public class RelativeSource extends MarkupExtension implements system.componentm
 
     public boolean ShouldSerializeAncestorType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShouldSerializeAncestorType = null;
         try {
-            return (boolean)classInstance.Invoke("ShouldSerializeAncestorType");
+            retObjectShouldSerializeAncestorType = classInstance.Invoke("ShouldSerializeAncestorType");
+            return (boolean)retObjectShouldSerializeAncestorType;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectShouldSerializeAncestorType != null ? retObjectShouldSerializeAncestorType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -208,10 +216,14 @@ public class RelativeSource extends MarkupExtension implements system.componentm
 
     public NetObject ProvideValue(IServiceProvider serviceProvider) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProvideValue = null;
         try {
-            JCObject objProvideValue = (JCObject)classInstance.Invoke("ProvideValue", serviceProvider == null ? null : serviceProvider.getJCOInstance());
+            retObjectProvideValue = classInstance.Invoke("ProvideValue", serviceProvider == null ? null : serviceProvider.getJCOInstance());
+            JCObject objProvideValue = (JCObject)retObjectProvideValue;
             return new NetObject(objProvideValue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectProvideValue != null ? retObjectProvideValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -223,7 +235,7 @@ public class RelativeSource extends MarkupExtension implements system.componentm
      */
     @Deprecated 
     public void BeginInit() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToISupportInitialize to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToISupportInitialize to obtain the full interface.");
     }
 
     /**
@@ -232,7 +244,7 @@ public class RelativeSource extends MarkupExtension implements system.componentm
      */
     @Deprecated 
     public void EndInit() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToISupportInitialize to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToISupportInitialize to obtain the full interface.");
     }
 
 
@@ -241,9 +253,20 @@ public class RelativeSource extends MarkupExtension implements system.componentm
     
     public int getAncestorLevel() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAncestorLevel = null;
         try {
-            return (int)classInstance.Get("AncestorLevel");
+            retObjectAncestorLevel = classInstance.Get("AncestorLevel");
+            return (int)retObjectAncestorLevel;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectAncestorLevel_ToString = retObjectAncestorLevel == null ? "null" : retObjectAncestorLevel.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectAncestorLevelNumber = (java.lang.Number)retObjectAncestorLevel;
+                return retObjectAncestorLevelNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectAncestorLevel != null ? retObjectAncestorLevel.getClass() : "null", retObjectAncestorLevel_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -251,7 +274,7 @@ public class RelativeSource extends MarkupExtension implements system.componentm
 
     public void setAncestorLevel(int AncestorLevel) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AncestorLevel", AncestorLevel);
         } catch (JCNativeException jcne) {
@@ -261,10 +284,14 @@ public class RelativeSource extends MarkupExtension implements system.componentm
 
     public NetType getAncestorType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAncestorType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AncestorType");
+            retObjectAncestorType = classInstance.Get("AncestorType");
+            JCObject val = (JCObject)retObjectAncestorType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAncestorType != null ? retObjectAncestorType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -272,7 +299,7 @@ public class RelativeSource extends MarkupExtension implements system.componentm
 
     public void setAncestorType(NetType AncestorType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AncestorType", AncestorType == null ? null : AncestorType.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -282,10 +309,14 @@ public class RelativeSource extends MarkupExtension implements system.componentm
 
     public static RelativeSource getPreviousData() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectPreviousData = null;
         try {
-            JCObject val = (JCObject)classType.Get("PreviousData");
+            retObjectPreviousData = classType.Get("PreviousData");
+            JCObject val = (JCObject)retObjectPreviousData;
             return new RelativeSource(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPreviousData != null ? retObjectPreviousData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -293,10 +324,14 @@ public class RelativeSource extends MarkupExtension implements system.componentm
 
     public static RelativeSource getSelf() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSelf = null;
         try {
-            JCObject val = (JCObject)classType.Get("Self");
+            retObjectSelf = classType.Get("Self");
+            JCObject val = (JCObject)retObjectSelf;
             return new RelativeSource(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelf != null ? retObjectSelf.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -304,10 +339,14 @@ public class RelativeSource extends MarkupExtension implements system.componentm
 
     public static RelativeSource getTemplatedParent() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTemplatedParent = null;
         try {
-            JCObject val = (JCObject)classType.Get("TemplatedParent");
+            retObjectTemplatedParent = classType.Get("TemplatedParent");
+            JCObject val = (JCObject)retObjectTemplatedParent;
             return new RelativeSource(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTemplatedParent != null ? retObjectTemplatedParent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -315,10 +354,14 @@ public class RelativeSource extends MarkupExtension implements system.componentm
 
     public RelativeSourceMode getMode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Mode");
+            retObjectMode = classInstance.Get("Mode");
+            JCObject val = (JCObject)retObjectMode;
             return new RelativeSourceMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMode != null ? retObjectMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -326,7 +369,7 @@ public class RelativeSource extends MarkupExtension implements system.componentm
 
     public void setMode(RelativeSourceMode Mode) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Mode", Mode == null ? null : Mode.getJCOInstance());
         } catch (JCNativeException jcne) {

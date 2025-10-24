@@ -170,10 +170,14 @@ public class SamlAuthorizationDecisionClaimResource extends NetObject  {
     
     public SamlAccessDecision getAccessDecision() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAccessDecision = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AccessDecision");
+            retObjectAccessDecision = classInstance.Get("AccessDecision");
+            JCObject val = (JCObject)retObjectAccessDecision;
             return new SamlAccessDecision(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAccessDecision != null ? retObjectAccessDecision.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,9 +185,13 @@ public class SamlAuthorizationDecisionClaimResource extends NetObject  {
 
     public java.lang.String getActionName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectActionName = null;
         try {
-            return (java.lang.String)classInstance.Get("ActionName");
+            retObjectActionName = classInstance.Get("ActionName");
+            return (java.lang.String)retObjectActionName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectActionName != null ? retObjectActionName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,9 +199,13 @@ public class SamlAuthorizationDecisionClaimResource extends NetObject  {
 
     public java.lang.String getActionNamespace() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectActionNamespace = null;
         try {
-            return (java.lang.String)classInstance.Get("ActionNamespace");
+            retObjectActionNamespace = classInstance.Get("ActionNamespace");
+            return (java.lang.String)retObjectActionNamespace;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectActionNamespace != null ? retObjectActionNamespace.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,9 +213,13 @@ public class SamlAuthorizationDecisionClaimResource extends NetObject  {
 
     public java.lang.String getResource() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResource = null;
         try {
-            return (java.lang.String)classInstance.Get("Resource");
+            retObjectResource = classInstance.Get("Resource");
+            return (java.lang.String)retObjectResource;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectResource != null ? retObjectResource.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

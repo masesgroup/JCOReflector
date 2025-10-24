@@ -210,10 +210,14 @@ public class SqlBulkCopy extends NetObject implements system.IDisposable, AutoCl
     
     public Task WriteToServerAsync(DbDataReader reader) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.data.sqlclient.SqlException, system.threading.ThreadAbortException, system.threading.tasks.TaskSchedulerException, system.AggregateException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.threading.tasks.TaskCanceledException, system.threading.SemaphoreFullException, system.NotSupportedException, system.FormatException, system.data.sqltypes.SqlNullValueException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWriteToServerAsync = null;
         try {
-            JCObject objWriteToServerAsync = (JCObject)classInstance.Invoke("WriteToServerAsync", reader == null ? null : reader.getJCOInstance());
+            retObjectWriteToServerAsync = classInstance.Invoke("WriteToServerAsync", reader == null ? null : reader.getJCOInstance());
+            JCObject objWriteToServerAsync = (JCObject)retObjectWriteToServerAsync;
             return new Task(objWriteToServerAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWriteToServerAsync != null ? retObjectWriteToServerAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -221,10 +225,14 @@ public class SqlBulkCopy extends NetObject implements system.IDisposable, AutoCl
 
     public Task WriteToServerAsync(DbDataReader reader, CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OverflowException, system.IndexOutOfRangeException, system.data.sqlclient.SqlException, system.diagnostics.tracing.EventSourceException, system.threading.ThreadAbortException, system.threading.tasks.TaskSchedulerException, system.OperationCanceledException, system.AggregateException, system.threading.tasks.TaskCanceledException, system.threading.SemaphoreFullException, system.NotSupportedException, system.FormatException, system.data.sqltypes.SqlNullValueException, system.data.OperationAbortedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWriteToServerAsync = null;
         try {
-            JCObject objWriteToServerAsync = (JCObject)classInstance.Invoke("WriteToServerAsync", reader == null ? null : reader.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            retObjectWriteToServerAsync = classInstance.Invoke("WriteToServerAsync", reader == null ? null : reader.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objWriteToServerAsync = (JCObject)retObjectWriteToServerAsync;
             return new Task(objWriteToServerAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWriteToServerAsync != null ? retObjectWriteToServerAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -232,10 +240,14 @@ public class SqlBulkCopy extends NetObject implements system.IDisposable, AutoCl
 
     public Task WriteToServerAsync(DataRow[] rows) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.data.sqlclient.SqlException, system.threading.ThreadAbortException, system.threading.tasks.TaskSchedulerException, system.AggregateException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.threading.tasks.TaskCanceledException, system.threading.SemaphoreFullException, system.NotSupportedException, system.FormatException, system.data.sqltypes.SqlNullValueException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWriteToServerAsync = null;
         try {
-            JCObject objWriteToServerAsync = (JCObject)classInstance.Invoke("WriteToServerAsync", (java.lang.Object)toObjectFromArray(rows));
+            retObjectWriteToServerAsync = classInstance.Invoke("WriteToServerAsync", (java.lang.Object)toObjectFromArray(rows));
+            JCObject objWriteToServerAsync = (JCObject)retObjectWriteToServerAsync;
             return new Task(objWriteToServerAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWriteToServerAsync != null ? retObjectWriteToServerAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -243,10 +255,14 @@ public class SqlBulkCopy extends NetObject implements system.IDisposable, AutoCl
 
     public Task WriteToServerAsync(DataRow[] rows, CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OverflowException, system.IndexOutOfRangeException, system.data.sqlclient.SqlException, system.threading.ThreadAbortException, system.threading.tasks.TaskSchedulerException, system.OperationCanceledException, system.AggregateException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.threading.tasks.TaskCanceledException, system.threading.SemaphoreFullException, system.NotSupportedException, system.OutOfMemoryException, system.FormatException, system.data.sqltypes.SqlNullValueException, system.data.OperationAbortedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWriteToServerAsync = null;
         try {
-            JCObject objWriteToServerAsync = (JCObject)classInstance.Invoke("WriteToServerAsync", toObjectFromArray(rows), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            retObjectWriteToServerAsync = classInstance.Invoke("WriteToServerAsync", toObjectFromArray(rows), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objWriteToServerAsync = (JCObject)retObjectWriteToServerAsync;
             return new Task(objWriteToServerAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWriteToServerAsync != null ? retObjectWriteToServerAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -254,10 +270,14 @@ public class SqlBulkCopy extends NetObject implements system.IDisposable, AutoCl
 
     public Task WriteToServerAsync(DataTable table) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.data.sqlclient.SqlException, system.threading.ThreadAbortException, system.threading.tasks.TaskSchedulerException, system.AggregateException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.threading.tasks.TaskCanceledException, system.threading.SemaphoreFullException, system.NotSupportedException, system.FormatException, system.data.sqltypes.SqlNullValueException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWriteToServerAsync = null;
         try {
-            JCObject objWriteToServerAsync = (JCObject)classInstance.Invoke("WriteToServerAsync", table == null ? null : table.getJCOInstance());
+            retObjectWriteToServerAsync = classInstance.Invoke("WriteToServerAsync", table == null ? null : table.getJCOInstance());
+            JCObject objWriteToServerAsync = (JCObject)retObjectWriteToServerAsync;
             return new Task(objWriteToServerAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWriteToServerAsync != null ? retObjectWriteToServerAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -265,10 +285,14 @@ public class SqlBulkCopy extends NetObject implements system.IDisposable, AutoCl
 
     public Task WriteToServerAsync(DataTable table, DataRowState rowState) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.data.sqlclient.SqlException, system.threading.ThreadAbortException, system.threading.tasks.TaskSchedulerException, system.AggregateException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.threading.tasks.TaskCanceledException, system.threading.SemaphoreFullException, system.NotSupportedException, system.FormatException, system.data.sqltypes.SqlNullValueException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWriteToServerAsync = null;
         try {
-            JCObject objWriteToServerAsync = (JCObject)classInstance.Invoke("WriteToServerAsync", table == null ? null : table.getJCOInstance(), rowState == null ? null : rowState.getJCOInstance());
+            retObjectWriteToServerAsync = classInstance.Invoke("WriteToServerAsync", table == null ? null : table.getJCOInstance(), rowState == null ? null : rowState.getJCOInstance());
+            JCObject objWriteToServerAsync = (JCObject)retObjectWriteToServerAsync;
             return new Task(objWriteToServerAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWriteToServerAsync != null ? retObjectWriteToServerAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -276,10 +300,14 @@ public class SqlBulkCopy extends NetObject implements system.IDisposable, AutoCl
 
     public Task WriteToServerAsync(DataTable table, DataRowState rowState, CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OverflowException, system.IndexOutOfRangeException, system.data.sqlclient.SqlException, system.diagnostics.tracing.EventSourceException, system.threading.ThreadAbortException, system.threading.tasks.TaskSchedulerException, system.OperationCanceledException, system.AggregateException, system.threading.tasks.TaskCanceledException, system.threading.SemaphoreFullException, system.NotSupportedException, system.FormatException, system.data.sqltypes.SqlNullValueException, system.data.OperationAbortedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWriteToServerAsync = null;
         try {
-            JCObject objWriteToServerAsync = (JCObject)classInstance.Invoke("WriteToServerAsync", table == null ? null : table.getJCOInstance(), rowState == null ? null : rowState.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            retObjectWriteToServerAsync = classInstance.Invoke("WriteToServerAsync", table == null ? null : table.getJCOInstance(), rowState == null ? null : rowState.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objWriteToServerAsync = (JCObject)retObjectWriteToServerAsync;
             return new Task(objWriteToServerAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWriteToServerAsync != null ? retObjectWriteToServerAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -287,10 +315,14 @@ public class SqlBulkCopy extends NetObject implements system.IDisposable, AutoCl
 
     public Task WriteToServerAsync(DataTable table, CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.data.sqlclient.SqlException, system.threading.ThreadAbortException, system.threading.tasks.TaskSchedulerException, system.AggregateException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.threading.tasks.TaskCanceledException, system.threading.SemaphoreFullException, system.NotSupportedException, system.FormatException, system.data.sqltypes.SqlNullValueException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWriteToServerAsync = null;
         try {
-            JCObject objWriteToServerAsync = (JCObject)classInstance.Invoke("WriteToServerAsync", table == null ? null : table.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            retObjectWriteToServerAsync = classInstance.Invoke("WriteToServerAsync", table == null ? null : table.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objWriteToServerAsync = (JCObject)retObjectWriteToServerAsync;
             return new Task(objWriteToServerAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWriteToServerAsync != null ? retObjectWriteToServerAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -298,10 +330,14 @@ public class SqlBulkCopy extends NetObject implements system.IDisposable, AutoCl
 
     public Task WriteToServerAsync(IDataReader reader) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.data.sqlclient.SqlException, system.threading.ThreadAbortException, system.threading.tasks.TaskSchedulerException, system.AggregateException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.threading.tasks.TaskCanceledException, system.threading.SemaphoreFullException, system.NotSupportedException, system.FormatException, system.data.sqltypes.SqlNullValueException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWriteToServerAsync = null;
         try {
-            JCObject objWriteToServerAsync = (JCObject)classInstance.Invoke("WriteToServerAsync", reader == null ? null : reader.getJCOInstance());
+            retObjectWriteToServerAsync = classInstance.Invoke("WriteToServerAsync", reader == null ? null : reader.getJCOInstance());
+            JCObject objWriteToServerAsync = (JCObject)retObjectWriteToServerAsync;
             return new Task(objWriteToServerAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWriteToServerAsync != null ? retObjectWriteToServerAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -309,10 +345,14 @@ public class SqlBulkCopy extends NetObject implements system.IDisposable, AutoCl
 
     public Task WriteToServerAsync(IDataReader reader, CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OverflowException, system.IndexOutOfRangeException, system.data.sqlclient.SqlException, system.diagnostics.tracing.EventSourceException, system.threading.ThreadAbortException, system.threading.tasks.TaskSchedulerException, system.OperationCanceledException, system.AggregateException, system.threading.tasks.TaskCanceledException, system.threading.SemaphoreFullException, system.NotSupportedException, system.FormatException, system.data.sqltypes.SqlNullValueException, system.data.OperationAbortedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWriteToServerAsync = null;
         try {
-            JCObject objWriteToServerAsync = (JCObject)classInstance.Invoke("WriteToServerAsync", reader == null ? null : reader.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            retObjectWriteToServerAsync = classInstance.Invoke("WriteToServerAsync", reader == null ? null : reader.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objWriteToServerAsync = (JCObject)retObjectWriteToServerAsync;
             return new Task(objWriteToServerAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWriteToServerAsync != null ? retObjectWriteToServerAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -320,7 +360,7 @@ public class SqlBulkCopy extends NetObject implements system.IDisposable, AutoCl
 
     public void Close() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Close");
         } catch (JCNativeException jcne) {
@@ -330,7 +370,7 @@ public class SqlBulkCopy extends NetObject implements system.IDisposable, AutoCl
 
     public void WriteToServer(DbDataReader reader) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OverflowException, system.IndexOutOfRangeException, system.data.sqlclient.SqlException, system.diagnostics.tracing.EventSourceException, system.threading.ThreadAbortException, system.threading.tasks.TaskSchedulerException, system.OperationCanceledException, system.AggregateException, system.threading.tasks.TaskCanceledException, system.threading.SemaphoreFullException, system.NotSupportedException, system.FormatException, system.data.sqltypes.SqlNullValueException, system.data.OperationAbortedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteToServer", reader == null ? null : reader.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -340,7 +380,7 @@ public class SqlBulkCopy extends NetObject implements system.IDisposable, AutoCl
 
     public void WriteToServer(DataRow[] rows) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OverflowException, system.IndexOutOfRangeException, system.data.sqlclient.SqlException, system.diagnostics.tracing.EventSourceException, system.threading.ThreadAbortException, system.threading.tasks.TaskSchedulerException, system.OperationCanceledException, system.AggregateException, system.threading.tasks.TaskCanceledException, system.threading.SemaphoreFullException, system.NotSupportedException, system.FormatException, system.data.sqltypes.SqlNullValueException, system.data.OperationAbortedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteToServer", (java.lang.Object)toObjectFromArray(rows));
         } catch (JCNativeException jcne) {
@@ -350,7 +390,7 @@ public class SqlBulkCopy extends NetObject implements system.IDisposable, AutoCl
 
     public void WriteToServer(DataTable table) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.data.sqlclient.SqlException, system.threading.ThreadAbortException, system.threading.tasks.TaskSchedulerException, system.AggregateException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.threading.tasks.TaskCanceledException, system.threading.SemaphoreFullException, system.NotSupportedException, system.FormatException, system.data.sqltypes.SqlNullValueException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteToServer", table == null ? null : table.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -360,7 +400,7 @@ public class SqlBulkCopy extends NetObject implements system.IDisposable, AutoCl
 
     public void WriteToServer(DataTable table, DataRowState rowState) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OverflowException, system.IndexOutOfRangeException, system.data.sqlclient.SqlException, system.diagnostics.tracing.EventSourceException, system.threading.ThreadAbortException, system.threading.tasks.TaskSchedulerException, system.OperationCanceledException, system.AggregateException, system.threading.tasks.TaskCanceledException, system.threading.SemaphoreFullException, system.NotSupportedException, system.FormatException, system.data.sqltypes.SqlNullValueException, system.data.OperationAbortedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteToServer", table == null ? null : table.getJCOInstance(), rowState == null ? null : rowState.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -370,7 +410,7 @@ public class SqlBulkCopy extends NetObject implements system.IDisposable, AutoCl
 
     public void WriteToServer(IDataReader reader) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OverflowException, system.IndexOutOfRangeException, system.data.sqlclient.SqlException, system.diagnostics.tracing.EventSourceException, system.threading.ThreadAbortException, system.threading.tasks.TaskSchedulerException, system.OperationCanceledException, system.AggregateException, system.threading.tasks.TaskCanceledException, system.threading.SemaphoreFullException, system.NotSupportedException, system.FormatException, system.data.sqltypes.SqlNullValueException, system.data.OperationAbortedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteToServer", reader == null ? null : reader.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -384,13 +424,13 @@ public class SqlBulkCopy extends NetObject implements system.IDisposable, AutoCl
      */
     @Deprecated 
     public void Dispose() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDisposable to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDisposable to obtain the full interface.");
     }
 
     public void close() throws Exception {
         try {
             if (classInstance == null)
-                throw new UnsupportedOperationException("classInstance is null.");
+                throw new java.lang.UnsupportedOperationException("classInstance is null.");
             try {
                 classInstance.Invoke("Dispose");
             }
@@ -406,9 +446,13 @@ public class SqlBulkCopy extends NetObject implements system.IDisposable, AutoCl
     
     public boolean getEnableStreaming() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEnableStreaming = null;
         try {
-            return (boolean)classInstance.Get("EnableStreaming");
+            retObjectEnableStreaming = classInstance.Get("EnableStreaming");
+            return (boolean)retObjectEnableStreaming;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectEnableStreaming != null ? retObjectEnableStreaming.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -416,7 +460,7 @@ public class SqlBulkCopy extends NetObject implements system.IDisposable, AutoCl
 
     public void setEnableStreaming(boolean EnableStreaming) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EnableStreaming", EnableStreaming);
         } catch (JCNativeException jcne) {
@@ -426,9 +470,20 @@ public class SqlBulkCopy extends NetObject implements system.IDisposable, AutoCl
 
     public int getBatchSize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBatchSize = null;
         try {
-            return (int)classInstance.Get("BatchSize");
+            retObjectBatchSize = classInstance.Get("BatchSize");
+            return (int)retObjectBatchSize;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectBatchSize_ToString = retObjectBatchSize == null ? "null" : retObjectBatchSize.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectBatchSizeNumber = (java.lang.Number)retObjectBatchSize;
+                return retObjectBatchSizeNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectBatchSize != null ? retObjectBatchSize.getClass() : "null", retObjectBatchSize_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -436,7 +491,7 @@ public class SqlBulkCopy extends NetObject implements system.IDisposable, AutoCl
 
     public void setBatchSize(int BatchSize) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BatchSize", BatchSize);
         } catch (JCNativeException jcne) {
@@ -446,9 +501,20 @@ public class SqlBulkCopy extends NetObject implements system.IDisposable, AutoCl
 
     public int getBulkCopyTimeout() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBulkCopyTimeout = null;
         try {
-            return (int)classInstance.Get("BulkCopyTimeout");
+            retObjectBulkCopyTimeout = classInstance.Get("BulkCopyTimeout");
+            return (int)retObjectBulkCopyTimeout;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectBulkCopyTimeout_ToString = retObjectBulkCopyTimeout == null ? "null" : retObjectBulkCopyTimeout.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectBulkCopyTimeoutNumber = (java.lang.Number)retObjectBulkCopyTimeout;
+                return retObjectBulkCopyTimeoutNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectBulkCopyTimeout != null ? retObjectBulkCopyTimeout.getClass() : "null", retObjectBulkCopyTimeout_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -456,7 +522,7 @@ public class SqlBulkCopy extends NetObject implements system.IDisposable, AutoCl
 
     public void setBulkCopyTimeout(int BulkCopyTimeout) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BulkCopyTimeout", BulkCopyTimeout);
         } catch (JCNativeException jcne) {
@@ -466,9 +532,20 @@ public class SqlBulkCopy extends NetObject implements system.IDisposable, AutoCl
 
     public int getNotifyAfter() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNotifyAfter = null;
         try {
-            return (int)classInstance.Get("NotifyAfter");
+            retObjectNotifyAfter = classInstance.Get("NotifyAfter");
+            return (int)retObjectNotifyAfter;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectNotifyAfter_ToString = retObjectNotifyAfter == null ? "null" : retObjectNotifyAfter.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectNotifyAfterNumber = (java.lang.Number)retObjectNotifyAfter;
+                return retObjectNotifyAfterNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectNotifyAfter != null ? retObjectNotifyAfter.getClass() : "null", retObjectNotifyAfter_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -476,7 +553,7 @@ public class SqlBulkCopy extends NetObject implements system.IDisposable, AutoCl
 
     public void setNotifyAfter(int NotifyAfter) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("NotifyAfter", NotifyAfter);
         } catch (JCNativeException jcne) {
@@ -486,10 +563,14 @@ public class SqlBulkCopy extends NetObject implements system.IDisposable, AutoCl
 
     public SqlBulkCopyColumnMappingCollection getColumnMappings() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectColumnMappings = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ColumnMappings");
+            retObjectColumnMappings = classInstance.Get("ColumnMappings");
+            JCObject val = (JCObject)retObjectColumnMappings;
             return new SqlBulkCopyColumnMappingCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectColumnMappings != null ? retObjectColumnMappings.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -497,9 +578,13 @@ public class SqlBulkCopy extends NetObject implements system.IDisposable, AutoCl
 
     public java.lang.String getDestinationTableName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDestinationTableName = null;
         try {
-            return (java.lang.String)classInstance.Get("DestinationTableName");
+            retObjectDestinationTableName = classInstance.Get("DestinationTableName");
+            return (java.lang.String)retObjectDestinationTableName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDestinationTableName != null ? retObjectDestinationTableName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -507,7 +592,7 @@ public class SqlBulkCopy extends NetObject implements system.IDisposable, AutoCl
 
     public void setDestinationTableName(java.lang.String DestinationTableName) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DestinationTableName", DestinationTableName);
         } catch (JCNativeException jcne) {
@@ -522,7 +607,7 @@ public class SqlBulkCopy extends NetObject implements system.IDisposable, AutoCl
 
     public void addSqlRowsCopied(SqlRowsCopiedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("SqlRowsCopied", handler);
         } catch (JCNativeException jcne) {
@@ -532,7 +617,7 @@ public class SqlBulkCopy extends NetObject implements system.IDisposable, AutoCl
 
     public void removeSqlRowsCopied(SqlRowsCopiedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("SqlRowsCopied", handler);
         } catch (JCNativeException jcne) {

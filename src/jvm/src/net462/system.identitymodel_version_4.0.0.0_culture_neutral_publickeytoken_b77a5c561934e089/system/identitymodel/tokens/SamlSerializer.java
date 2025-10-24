@@ -175,10 +175,14 @@ public class SamlSerializer extends NetObject  {
     
     public SamlAdvice LoadAdvice(XmlDictionaryReader reader, SecurityTokenSerializer keyInfoSerializer, SecurityTokenResolver outOfBandTokenResolver) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException, system.xml.XmlException, system.UnauthorizedAccessException, system.security.cryptography.CryptographicException, system.AccessViolationException, system.security.cryptography.CryptographicUnexpectedOperationException, system.security.SecurityException, system.io.IOException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLoadAdvice = null;
         try {
-            JCObject objLoadAdvice = (JCObject)classInstance.Invoke("LoadAdvice", reader == null ? null : reader.getJCOInstance(), keyInfoSerializer == null ? null : keyInfoSerializer.getJCOInstance(), outOfBandTokenResolver == null ? null : outOfBandTokenResolver.getJCOInstance());
+            retObjectLoadAdvice = classInstance.Invoke("LoadAdvice", reader == null ? null : reader.getJCOInstance(), keyInfoSerializer == null ? null : keyInfoSerializer.getJCOInstance(), outOfBandTokenResolver == null ? null : outOfBandTokenResolver.getJCOInstance());
+            JCObject objLoadAdvice = (JCObject)retObjectLoadAdvice;
             return new SamlAdvice(objLoadAdvice);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLoadAdvice != null ? retObjectLoadAdvice.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,10 +190,14 @@ public class SamlSerializer extends NetObject  {
 
     public SamlAssertion LoadAssertion(XmlDictionaryReader reader, SecurityTokenSerializer keyInfoSerializer, SecurityTokenResolver outOfBandTokenResolver) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.InvalidTimeZoneException, system.NotSupportedException, system.xml.XmlException, system.UnauthorizedAccessException, system.security.cryptography.CryptographicException, system.AccessViolationException, system.security.cryptography.CryptographicUnexpectedOperationException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLoadAssertion = null;
         try {
-            JCObject objLoadAssertion = (JCObject)classInstance.Invoke("LoadAssertion", reader == null ? null : reader.getJCOInstance(), keyInfoSerializer == null ? null : keyInfoSerializer.getJCOInstance(), outOfBandTokenResolver == null ? null : outOfBandTokenResolver.getJCOInstance());
+            retObjectLoadAssertion = classInstance.Invoke("LoadAssertion", reader == null ? null : reader.getJCOInstance(), keyInfoSerializer == null ? null : keyInfoSerializer.getJCOInstance(), outOfBandTokenResolver == null ? null : outOfBandTokenResolver.getJCOInstance());
+            JCObject objLoadAssertion = (JCObject)retObjectLoadAssertion;
             return new SamlAssertion(objLoadAssertion);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLoadAssertion != null ? retObjectLoadAssertion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,10 +205,14 @@ public class SamlSerializer extends NetObject  {
 
     public SamlAttribute LoadAttribute(XmlDictionaryReader reader, SecurityTokenSerializer keyInfoSerializer, SecurityTokenResolver outOfBandTokenResolver) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException, system.NotSupportedException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLoadAttribute = null;
         try {
-            JCObject objLoadAttribute = (JCObject)classInstance.Invoke("LoadAttribute", reader == null ? null : reader.getJCOInstance(), keyInfoSerializer == null ? null : keyInfoSerializer.getJCOInstance(), outOfBandTokenResolver == null ? null : outOfBandTokenResolver.getJCOInstance());
+            retObjectLoadAttribute = classInstance.Invoke("LoadAttribute", reader == null ? null : reader.getJCOInstance(), keyInfoSerializer == null ? null : keyInfoSerializer.getJCOInstance(), outOfBandTokenResolver == null ? null : outOfBandTokenResolver.getJCOInstance());
+            JCObject objLoadAttribute = (JCObject)retObjectLoadAttribute;
             return new SamlAttribute(objLoadAttribute);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLoadAttribute != null ? retObjectLoadAttribute.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -208,10 +220,14 @@ public class SamlSerializer extends NetObject  {
 
     public SamlCondition LoadCondition(XmlDictionaryReader reader, SecurityTokenSerializer keyInfoSerializer, SecurityTokenResolver outOfBandTokenResolver) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLoadCondition = null;
         try {
-            JCObject objLoadCondition = (JCObject)classInstance.Invoke("LoadCondition", reader == null ? null : reader.getJCOInstance(), keyInfoSerializer == null ? null : keyInfoSerializer.getJCOInstance(), outOfBandTokenResolver == null ? null : outOfBandTokenResolver.getJCOInstance());
+            retObjectLoadCondition = classInstance.Invoke("LoadCondition", reader == null ? null : reader.getJCOInstance(), keyInfoSerializer == null ? null : keyInfoSerializer.getJCOInstance(), outOfBandTokenResolver == null ? null : outOfBandTokenResolver.getJCOInstance());
+            JCObject objLoadCondition = (JCObject)retObjectLoadCondition;
             return new SamlCondition(objLoadCondition);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLoadCondition != null ? retObjectLoadCondition.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -219,10 +235,14 @@ public class SamlSerializer extends NetObject  {
 
     public SamlConditions LoadConditions(XmlDictionaryReader reader, SecurityTokenSerializer keyInfoSerializer, SecurityTokenResolver outOfBandTokenResolver) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.InvalidTimeZoneException, system.NotSupportedException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLoadConditions = null;
         try {
-            JCObject objLoadConditions = (JCObject)classInstance.Invoke("LoadConditions", reader == null ? null : reader.getJCOInstance(), keyInfoSerializer == null ? null : keyInfoSerializer.getJCOInstance(), outOfBandTokenResolver == null ? null : outOfBandTokenResolver.getJCOInstance());
+            retObjectLoadConditions = classInstance.Invoke("LoadConditions", reader == null ? null : reader.getJCOInstance(), keyInfoSerializer == null ? null : keyInfoSerializer.getJCOInstance(), outOfBandTokenResolver == null ? null : outOfBandTokenResolver.getJCOInstance());
+            JCObject objLoadConditions = (JCObject)retObjectLoadConditions;
             return new SamlConditions(objLoadConditions);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLoadConditions != null ? retObjectLoadConditions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -230,10 +250,14 @@ public class SamlSerializer extends NetObject  {
 
     public SamlSecurityToken ReadToken(XmlReader reader, SecurityTokenSerializer keyInfoSerializer, SecurityTokenResolver outOfBandTokenResolver) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException, system.xml.XmlException, system.UnauthorizedAccessException, system.security.cryptography.CryptographicException, system.AccessViolationException, system.security.cryptography.CryptographicUnexpectedOperationException, system.security.SecurityException, system.io.IOException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadToken = null;
         try {
-            JCObject objReadToken = (JCObject)classInstance.Invoke("ReadToken", reader == null ? null : reader.getJCOInstance(), keyInfoSerializer == null ? null : keyInfoSerializer.getJCOInstance(), outOfBandTokenResolver == null ? null : outOfBandTokenResolver.getJCOInstance());
+            retObjectReadToken = classInstance.Invoke("ReadToken", reader == null ? null : reader.getJCOInstance(), keyInfoSerializer == null ? null : keyInfoSerializer.getJCOInstance(), outOfBandTokenResolver == null ? null : outOfBandTokenResolver.getJCOInstance());
+            JCObject objReadToken = (JCObject)retObjectReadToken;
             return new SamlSecurityToken(objReadToken);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadToken != null ? retObjectReadToken.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -241,10 +265,14 @@ public class SamlSerializer extends NetObject  {
 
     public SamlStatement LoadStatement(XmlDictionaryReader reader, SecurityTokenSerializer keyInfoSerializer, SecurityTokenResolver outOfBandTokenResolver) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.InvalidTimeZoneException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLoadStatement = null;
         try {
-            JCObject objLoadStatement = (JCObject)classInstance.Invoke("LoadStatement", reader == null ? null : reader.getJCOInstance(), keyInfoSerializer == null ? null : keyInfoSerializer.getJCOInstance(), outOfBandTokenResolver == null ? null : outOfBandTokenResolver.getJCOInstance());
+            retObjectLoadStatement = classInstance.Invoke("LoadStatement", reader == null ? null : reader.getJCOInstance(), keyInfoSerializer == null ? null : keyInfoSerializer.getJCOInstance(), outOfBandTokenResolver == null ? null : outOfBandTokenResolver.getJCOInstance());
+            JCObject objLoadStatement = (JCObject)retObjectLoadStatement;
             return new SamlStatement(objLoadStatement);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLoadStatement != null ? retObjectLoadStatement.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -252,7 +280,7 @@ public class SamlSerializer extends NetObject  {
 
     public void PopulateDictionary(IXmlDictionary dictionary) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("PopulateDictionary", dictionary == null ? null : dictionary.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -262,7 +290,7 @@ public class SamlSerializer extends NetObject  {
 
     public void WriteToken(SamlSecurityToken token, XmlWriter writer, SecurityTokenSerializer keyInfoSerializer) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.security.SecurityException, system.ApplicationException, system.NotSupportedException, system.TypeLoadException, system.PlatformNotSupportedException, system.security.cryptography.CryptographicException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteToken", token == null ? null : token.getJCOInstance(), writer == null ? null : writer.getJCOInstance(), keyInfoSerializer == null ? null : keyInfoSerializer.getJCOInstance());
         } catch (JCNativeException jcne) {

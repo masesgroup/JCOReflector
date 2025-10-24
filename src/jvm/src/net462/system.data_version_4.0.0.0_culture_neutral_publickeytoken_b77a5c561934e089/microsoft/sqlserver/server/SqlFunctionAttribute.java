@@ -168,9 +168,13 @@ public class SqlFunctionAttribute extends Attribute  {
     
     public boolean getIsDeterministic() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsDeterministic = null;
         try {
-            return (boolean)classInstance.Get("IsDeterministic");
+            retObjectIsDeterministic = classInstance.Get("IsDeterministic");
+            return (boolean)retObjectIsDeterministic;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsDeterministic != null ? retObjectIsDeterministic.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,7 +182,7 @@ public class SqlFunctionAttribute extends Attribute  {
 
     public void setIsDeterministic(boolean IsDeterministic) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsDeterministic", IsDeterministic);
         } catch (JCNativeException jcne) {
@@ -188,9 +192,13 @@ public class SqlFunctionAttribute extends Attribute  {
 
     public boolean getIsPrecise() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsPrecise = null;
         try {
-            return (boolean)classInstance.Get("IsPrecise");
+            retObjectIsPrecise = classInstance.Get("IsPrecise");
+            return (boolean)retObjectIsPrecise;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsPrecise != null ? retObjectIsPrecise.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,7 +206,7 @@ public class SqlFunctionAttribute extends Attribute  {
 
     public void setIsPrecise(boolean IsPrecise) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsPrecise", IsPrecise);
         } catch (JCNativeException jcne) {
@@ -208,10 +216,14 @@ public class SqlFunctionAttribute extends Attribute  {
 
     public DataAccessKind getDataAccess() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDataAccess = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DataAccess");
+            retObjectDataAccess = classInstance.Get("DataAccess");
+            JCObject val = (JCObject)retObjectDataAccess;
             return new DataAccessKind(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDataAccess != null ? retObjectDataAccess.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -219,7 +231,7 @@ public class SqlFunctionAttribute extends Attribute  {
 
     public void setDataAccess(DataAccessKind DataAccess) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DataAccess", DataAccess == null ? null : DataAccess.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -229,10 +241,14 @@ public class SqlFunctionAttribute extends Attribute  {
 
     public SystemDataAccessKind getSystemDataAccess() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSystemDataAccess = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SystemDataAccess");
+            retObjectSystemDataAccess = classInstance.Get("SystemDataAccess");
+            JCObject val = (JCObject)retObjectSystemDataAccess;
             return new SystemDataAccessKind(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSystemDataAccess != null ? retObjectSystemDataAccess.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -240,7 +256,7 @@ public class SqlFunctionAttribute extends Attribute  {
 
     public void setSystemDataAccess(SystemDataAccessKind SystemDataAccess) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SystemDataAccess", SystemDataAccess == null ? null : SystemDataAccess.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -250,9 +266,13 @@ public class SqlFunctionAttribute extends Attribute  {
 
     public java.lang.String getFillRowMethodName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFillRowMethodName = null;
         try {
-            return (java.lang.String)classInstance.Get("FillRowMethodName");
+            retObjectFillRowMethodName = classInstance.Get("FillRowMethodName");
+            return (java.lang.String)retObjectFillRowMethodName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectFillRowMethodName != null ? retObjectFillRowMethodName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -260,7 +280,7 @@ public class SqlFunctionAttribute extends Attribute  {
 
     public void setFillRowMethodName(java.lang.String FillRowMethodName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FillRowMethodName", FillRowMethodName);
         } catch (JCNativeException jcne) {
@@ -270,9 +290,13 @@ public class SqlFunctionAttribute extends Attribute  {
 
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectName = null;
         try {
-            return (java.lang.String)classInstance.Get("Name");
+            retObjectName = classInstance.Get("Name");
+            return (java.lang.String)retObjectName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectName != null ? retObjectName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -280,7 +304,7 @@ public class SqlFunctionAttribute extends Attribute  {
 
     public void setName(java.lang.String Name) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Name", Name);
         } catch (JCNativeException jcne) {
@@ -290,9 +314,13 @@ public class SqlFunctionAttribute extends Attribute  {
 
     public java.lang.String getTableDefinition() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTableDefinition = null;
         try {
-            return (java.lang.String)classInstance.Get("TableDefinition");
+            retObjectTableDefinition = classInstance.Get("TableDefinition");
+            return (java.lang.String)retObjectTableDefinition;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectTableDefinition != null ? retObjectTableDefinition.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -300,7 +328,7 @@ public class SqlFunctionAttribute extends Attribute  {
 
     public void setTableDefinition(java.lang.String TableDefinition) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TableDefinition", TableDefinition);
         } catch (JCNativeException jcne) {

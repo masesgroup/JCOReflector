@@ -167,9 +167,13 @@ public class PropertyFilter extends NetObject  {
     
     public boolean Match(IPropertyFilterTarget target) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMatch = null;
         try {
-            return (boolean)classInstance.Invoke("Match", target == null ? null : target.getJCOInstance());
+            retObjectMatch = classInstance.Invoke("Match", target == null ? null : target.getJCOInstance());
+            return (boolean)retObjectMatch;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectMatch != null ? retObjectMatch.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,9 +185,13 @@ public class PropertyFilter extends NetObject  {
     
     public boolean getIsEmpty() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsEmpty = null;
         try {
-            return (boolean)classInstance.Get("IsEmpty");
+            retObjectIsEmpty = classInstance.Get("IsEmpty");
+            return (boolean)retObjectIsEmpty;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsEmpty != null ? retObjectIsEmpty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

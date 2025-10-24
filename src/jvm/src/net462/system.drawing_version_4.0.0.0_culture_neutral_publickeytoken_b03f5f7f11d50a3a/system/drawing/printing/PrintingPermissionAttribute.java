@@ -170,10 +170,14 @@ public class PrintingPermissionAttribute extends CodeAccessSecurityAttribute  {
     
     public IPermission CreatePermission() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreatePermission = null;
         try {
-            JCObject objCreatePermission = (JCObject)classInstance.Invoke("CreatePermission");
+            retObjectCreatePermission = classInstance.Invoke("CreatePermission");
+            JCObject objCreatePermission = (JCObject)retObjectCreatePermission;
             return new IPermissionImplementation(objCreatePermission);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreatePermission != null ? retObjectCreatePermission.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -185,10 +189,14 @@ public class PrintingPermissionAttribute extends CodeAccessSecurityAttribute  {
     
     public PrintingPermissionLevel getLevel() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLevel = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Level");
+            retObjectLevel = classInstance.Get("Level");
+            JCObject val = (JCObject)retObjectLevel;
             return new PrintingPermissionLevel(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLevel != null ? retObjectLevel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,7 +204,7 @@ public class PrintingPermissionAttribute extends CodeAccessSecurityAttribute  {
 
     public void setLevel(PrintingPermissionLevel Level) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Level", Level == null ? null : Level.getJCOInstance());
         } catch (JCNativeException jcne) {

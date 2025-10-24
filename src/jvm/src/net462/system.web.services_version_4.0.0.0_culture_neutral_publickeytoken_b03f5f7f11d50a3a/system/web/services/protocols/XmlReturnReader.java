@@ -165,10 +165,14 @@ public class XmlReturnReader extends MimeReturnReader  {
     
     public NetObject GetInitializer(LogicalMethodInfo methodInfo) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.threading.ThreadAbortException, system.security.SecurityException, system.componentmodel.InvalidEnumArgumentException, system.io.FileNotFoundException, system.collections.generic.KeyNotFoundException, system.UnauthorizedAccessException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetInitializer = null;
         try {
-            JCObject objGetInitializer = (JCObject)classInstance.Invoke("GetInitializer", methodInfo == null ? null : methodInfo.getJCOInstance());
+            retObjectGetInitializer = classInstance.Invoke("GetInitializer", methodInfo == null ? null : methodInfo.getJCOInstance());
+            JCObject objGetInitializer = (JCObject)retObjectGetInitializer;
             return new NetObject(objGetInitializer);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetInitializer != null ? retObjectGetInitializer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,10 +180,14 @@ public class XmlReturnReader extends MimeReturnReader  {
 
     public NetObject Read(WebResponse response, Stream responseStream) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.FormatException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.InvalidCastException, system.MulticastNotSupportedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.xml.XmlException, system.OutOfMemoryException, system.OverflowException, system.MissingMethodException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRead = null;
         try {
-            JCObject objRead = (JCObject)classInstance.Invoke("Read", response == null ? null : response.getJCOInstance(), responseStream == null ? null : responseStream.getJCOInstance());
+            retObjectRead = classInstance.Invoke("Read", response == null ? null : response.getJCOInstance(), responseStream == null ? null : responseStream.getJCOInstance());
+            JCObject objRead = (JCObject)retObjectRead;
             return new NetObject(objRead);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRead != null ? retObjectRead.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,16 +195,20 @@ public class XmlReturnReader extends MimeReturnReader  {
 
     public NetObject[] GetInitializers(LogicalMethodInfo[] methodInfos) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.InvalidCastException, system.threading.ThreadAbortException, system.security.SecurityException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.io.FileNotFoundException, system.TypeLoadException, system.UnauthorizedAccessException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetInitializers = null;
         try {
             ArrayList<NetObject> resultingArrayList = new ArrayList<NetObject>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetInitializers", (java.lang.Object)toObjectFromArray(methodInfos));
+            retObjectGetInitializers = classInstance.Invoke("GetInitializers", (java.lang.Object)toObjectFromArray(methodInfos));
+            JCObject resultingObjects = (JCObject)retObjectGetInitializers;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new NetObject(resultingObject));
             }
             NetObject[] resultingArray = new NetObject[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetInitializers != null ? retObjectGetInitializers.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -204,7 +216,7 @@ public class XmlReturnReader extends MimeReturnReader  {
 
     public void Initialize(NetObject o) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Initialize", o == null ? null : o.getJCOInstance());
         } catch (JCNativeException jcne) {

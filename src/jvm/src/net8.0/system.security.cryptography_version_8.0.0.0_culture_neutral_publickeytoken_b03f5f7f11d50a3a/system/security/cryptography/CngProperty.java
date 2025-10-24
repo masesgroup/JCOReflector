@@ -168,9 +168,13 @@ public class CngProperty extends ValueType  {
     
     public boolean Equals(CngProperty other) throws Throwable, system.NotSupportedException, system.ArgumentException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEquals = null;
         try {
-            return (boolean)classInstance.Invoke("Equals", other == null ? null : other.getJCOInstance());
+            retObjectEquals = classInstance.Invoke("Equals", other == null ? null : other.getJCOInstance());
+            return (boolean)retObjectEquals;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectEquals != null ? retObjectEquals.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,10 +182,12 @@ public class CngProperty extends ValueType  {
 
     public byte[] GetValue() throws Throwable, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetValue = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetValue");
+            retObjectGetValue = classInstance.Invoke("GetValue");
+            JCObject resultingObjects = (JCObject)retObjectGetValue;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -190,6 +196,8 @@ public class CngProperty extends ValueType  {
 				resultingArray[indexGetValue] = (byte)resultingArrayList.get(indexGetValue);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectGetValue != null ? retObjectGetValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,10 +209,14 @@ public class CngProperty extends ValueType  {
     
     public CngPropertyOptions getOptions() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOptions = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Options");
+            retObjectOptions = classInstance.Get("Options");
+            JCObject val = (JCObject)retObjectOptions;
             return new CngPropertyOptions(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOptions != null ? retObjectOptions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -212,7 +224,7 @@ public class CngProperty extends ValueType  {
 
     public void setOptions(CngPropertyOptions Options) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Options", Options == null ? null : Options.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -222,9 +234,13 @@ public class CngProperty extends ValueType  {
 
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectName = null;
         try {
-            return (java.lang.String)classInstance.Get("Name");
+            retObjectName = classInstance.Get("Name");
+            return (java.lang.String)retObjectName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectName != null ? retObjectName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -232,7 +248,7 @@ public class CngProperty extends ValueType  {
 
     public void setName(java.lang.String Name) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Name", Name);
         } catch (JCNativeException jcne) {

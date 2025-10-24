@@ -168,10 +168,14 @@ public class GeneratedComInterfaceAttribute extends Attribute  {
     
     public ComInterfaceOptions getOptions() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOptions = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Options");
+            retObjectOptions = classInstance.Get("Options");
+            JCObject val = (JCObject)retObjectOptions;
             return new ComInterfaceOptions(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOptions != null ? retObjectOptions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,7 +183,7 @@ public class GeneratedComInterfaceAttribute extends Attribute  {
 
     public void setOptions(ComInterfaceOptions Options) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Options", Options == null ? null : Options.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -189,10 +193,14 @@ public class GeneratedComInterfaceAttribute extends Attribute  {
 
     public StringMarshalling getStringMarshalling() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStringMarshalling = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("StringMarshalling");
+            retObjectStringMarshalling = classInstance.Get("StringMarshalling");
+            JCObject val = (JCObject)retObjectStringMarshalling;
             return new StringMarshalling(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStringMarshalling != null ? retObjectStringMarshalling.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,7 +208,7 @@ public class GeneratedComInterfaceAttribute extends Attribute  {
 
     public void setStringMarshalling(StringMarshalling StringMarshalling) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("StringMarshalling", StringMarshalling == null ? null : StringMarshalling.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -210,10 +218,14 @@ public class GeneratedComInterfaceAttribute extends Attribute  {
 
     public NetType getStringMarshallingCustomType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStringMarshallingCustomType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("StringMarshallingCustomType");
+            retObjectStringMarshallingCustomType = classInstance.Get("StringMarshallingCustomType");
+            JCObject val = (JCObject)retObjectStringMarshallingCustomType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStringMarshallingCustomType != null ? retObjectStringMarshallingCustomType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -221,7 +233,7 @@ public class GeneratedComInterfaceAttribute extends Attribute  {
 
     public void setStringMarshallingCustomType(NetType StringMarshallingCustomType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("StringMarshallingCustomType", StringMarshallingCustomType == null ? null : StringMarshallingCustomType.getJCOInstance());
         } catch (JCNativeException jcne) {

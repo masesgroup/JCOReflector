@@ -165,10 +165,14 @@ public class TimeSpanSecondsOrInfiniteConverter extends TimeSpanSecondsConverter
     
     public NetObject ConvertFrom(ITypeDescriptorContext ctx, CultureInfo ci, NetObject data) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentNullException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConvertFrom = null;
         try {
-            JCObject objConvertFrom = (JCObject)classInstance.Invoke("ConvertFrom", ctx == null ? null : ctx.getJCOInstance(), ci == null ? null : ci.getJCOInstance(), data == null ? null : data.getJCOInstance());
+            retObjectConvertFrom = classInstance.Invoke("ConvertFrom", ctx == null ? null : ctx.getJCOInstance(), ci == null ? null : ci.getJCOInstance(), data == null ? null : data.getJCOInstance());
+            JCObject objConvertFrom = (JCObject)retObjectConvertFrom;
             return new NetObject(objConvertFrom);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConvertFrom != null ? retObjectConvertFrom.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,10 +180,14 @@ public class TimeSpanSecondsOrInfiniteConverter extends TimeSpanSecondsConverter
 
     public NetObject ConvertTo(ITypeDescriptorContext ctx, CultureInfo ci, NetObject value, NetType type) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConvertTo = null;
         try {
-            JCObject objConvertTo = (JCObject)classInstance.Invoke("ConvertTo", ctx == null ? null : ctx.getJCOInstance(), ci == null ? null : ci.getJCOInstance(), value == null ? null : value.getJCOInstance(), type == null ? null : type.getJCOInstance());
+            retObjectConvertTo = classInstance.Invoke("ConvertTo", ctx == null ? null : ctx.getJCOInstance(), ci == null ? null : ci.getJCOInstance(), value == null ? null : value.getJCOInstance(), type == null ? null : type.getJCOInstance());
+            JCObject objConvertTo = (JCObject)retObjectConvertTo;
             return new NetObject(objConvertTo);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConvertTo != null ? retObjectConvertTo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

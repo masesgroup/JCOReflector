@@ -159,9 +159,13 @@ public class MetafileHeader extends NetObject  {
     
     public boolean IsDisplay() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsDisplay = null;
         try {
-            return (boolean)classInstance.Invoke("IsDisplay");
+            retObjectIsDisplay = classInstance.Invoke("IsDisplay");
+            return (boolean)retObjectIsDisplay;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsDisplay != null ? retObjectIsDisplay.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,9 +173,13 @@ public class MetafileHeader extends NetObject  {
 
     public boolean IsEmf() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsEmf = null;
         try {
-            return (boolean)classInstance.Invoke("IsEmf");
+            retObjectIsEmf = classInstance.Invoke("IsEmf");
+            return (boolean)retObjectIsEmf;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsEmf != null ? retObjectIsEmf.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,9 +187,13 @@ public class MetafileHeader extends NetObject  {
 
     public boolean IsEmfOrEmfPlus() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsEmfOrEmfPlus = null;
         try {
-            return (boolean)classInstance.Invoke("IsEmfOrEmfPlus");
+            retObjectIsEmfOrEmfPlus = classInstance.Invoke("IsEmfOrEmfPlus");
+            return (boolean)retObjectIsEmfOrEmfPlus;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsEmfOrEmfPlus != null ? retObjectIsEmfOrEmfPlus.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -189,9 +201,13 @@ public class MetafileHeader extends NetObject  {
 
     public boolean IsEmfPlus() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsEmfPlus = null;
         try {
-            return (boolean)classInstance.Invoke("IsEmfPlus");
+            retObjectIsEmfPlus = classInstance.Invoke("IsEmfPlus");
+            return (boolean)retObjectIsEmfPlus;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsEmfPlus != null ? retObjectIsEmfPlus.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -199,9 +215,13 @@ public class MetafileHeader extends NetObject  {
 
     public boolean IsEmfPlusDual() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsEmfPlusDual = null;
         try {
-            return (boolean)classInstance.Invoke("IsEmfPlusDual");
+            retObjectIsEmfPlusDual = classInstance.Invoke("IsEmfPlusDual");
+            return (boolean)retObjectIsEmfPlusDual;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsEmfPlusDual != null ? retObjectIsEmfPlusDual.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -209,9 +229,13 @@ public class MetafileHeader extends NetObject  {
 
     public boolean IsEmfPlusOnly() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsEmfPlusOnly = null;
         try {
-            return (boolean)classInstance.Invoke("IsEmfPlusOnly");
+            retObjectIsEmfPlusOnly = classInstance.Invoke("IsEmfPlusOnly");
+            return (boolean)retObjectIsEmfPlusOnly;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsEmfPlusOnly != null ? retObjectIsEmfPlusOnly.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -219,9 +243,13 @@ public class MetafileHeader extends NetObject  {
 
     public boolean IsWmf() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsWmf = null;
         try {
-            return (boolean)classInstance.Invoke("IsWmf");
+            retObjectIsWmf = classInstance.Invoke("IsWmf");
+            return (boolean)retObjectIsWmf;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsWmf != null ? retObjectIsWmf.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -229,9 +257,13 @@ public class MetafileHeader extends NetObject  {
 
     public boolean IsWmfPlaceable() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsWmfPlaceable = null;
         try {
-            return (boolean)classInstance.Invoke("IsWmfPlaceable");
+            retObjectIsWmfPlaceable = classInstance.Invoke("IsWmfPlaceable");
+            return (boolean)retObjectIsWmfPlaceable;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsWmfPlaceable != null ? retObjectIsWmfPlaceable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -243,9 +275,20 @@ public class MetafileHeader extends NetObject  {
     
     public int getEmfPlusHeaderSize() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEmfPlusHeaderSize = null;
         try {
-            return (int)classInstance.Get("EmfPlusHeaderSize");
+            retObjectEmfPlusHeaderSize = classInstance.Get("EmfPlusHeaderSize");
+            return (int)retObjectEmfPlusHeaderSize;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectEmfPlusHeaderSize_ToString = retObjectEmfPlusHeaderSize == null ? "null" : retObjectEmfPlusHeaderSize.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectEmfPlusHeaderSizeNumber = (java.lang.Number)retObjectEmfPlusHeaderSize;
+                return retObjectEmfPlusHeaderSizeNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectEmfPlusHeaderSize != null ? retObjectEmfPlusHeaderSize.getClass() : "null", retObjectEmfPlusHeaderSize_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -253,9 +296,20 @@ public class MetafileHeader extends NetObject  {
 
     public int getLogicalDpiX() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLogicalDpiX = null;
         try {
-            return (int)classInstance.Get("LogicalDpiX");
+            retObjectLogicalDpiX = classInstance.Get("LogicalDpiX");
+            return (int)retObjectLogicalDpiX;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectLogicalDpiX_ToString = retObjectLogicalDpiX == null ? "null" : retObjectLogicalDpiX.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectLogicalDpiXNumber = (java.lang.Number)retObjectLogicalDpiX;
+                return retObjectLogicalDpiXNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectLogicalDpiX != null ? retObjectLogicalDpiX.getClass() : "null", retObjectLogicalDpiX_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -263,9 +317,20 @@ public class MetafileHeader extends NetObject  {
 
     public int getLogicalDpiY() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLogicalDpiY = null;
         try {
-            return (int)classInstance.Get("LogicalDpiY");
+            retObjectLogicalDpiY = classInstance.Get("LogicalDpiY");
+            return (int)retObjectLogicalDpiY;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectLogicalDpiY_ToString = retObjectLogicalDpiY == null ? "null" : retObjectLogicalDpiY.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectLogicalDpiYNumber = (java.lang.Number)retObjectLogicalDpiY;
+                return retObjectLogicalDpiYNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectLogicalDpiY != null ? retObjectLogicalDpiY.getClass() : "null", retObjectLogicalDpiY_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -273,9 +338,20 @@ public class MetafileHeader extends NetObject  {
 
     public int getMetafileSize() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMetafileSize = null;
         try {
-            return (int)classInstance.Get("MetafileSize");
+            retObjectMetafileSize = classInstance.Get("MetafileSize");
+            return (int)retObjectMetafileSize;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMetafileSize_ToString = retObjectMetafileSize == null ? "null" : retObjectMetafileSize.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMetafileSizeNumber = (java.lang.Number)retObjectMetafileSize;
+                return retObjectMetafileSizeNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMetafileSize != null ? retObjectMetafileSize.getClass() : "null", retObjectMetafileSize_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -283,9 +359,20 @@ public class MetafileHeader extends NetObject  {
 
     public int getVersion() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVersion = null;
         try {
-            return (int)classInstance.Get("Version");
+            retObjectVersion = classInstance.Get("Version");
+            return (int)retObjectVersion;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectVersion_ToString = retObjectVersion == null ? "null" : retObjectVersion.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectVersionNumber = (java.lang.Number)retObjectVersion;
+                return retObjectVersionNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectVersion != null ? retObjectVersion.getClass() : "null", retObjectVersion_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -293,10 +380,14 @@ public class MetafileHeader extends NetObject  {
 
     public Single getDpiX() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDpiX = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DpiX");
+            retObjectDpiX = classInstance.Get("DpiX");
+            JCObject val = (JCObject)retObjectDpiX;
             return new Single(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDpiX != null ? retObjectDpiX.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -304,10 +395,14 @@ public class MetafileHeader extends NetObject  {
 
     public Single getDpiY() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDpiY = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DpiY");
+            retObjectDpiY = classInstance.Get("DpiY");
+            JCObject val = (JCObject)retObjectDpiY;
             return new Single(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDpiY != null ? retObjectDpiY.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -315,10 +410,14 @@ public class MetafileHeader extends NetObject  {
 
     public MetafileType getType() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Type");
+            retObjectType = classInstance.Get("Type");
+            JCObject val = (JCObject)retObjectType;
             return new MetafileType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectType != null ? retObjectType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -326,10 +425,14 @@ public class MetafileHeader extends NetObject  {
 
     public MetaHeader getWmfHeader() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWmfHeader = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("WmfHeader");
+            retObjectWmfHeader = classInstance.Get("WmfHeader");
+            JCObject val = (JCObject)retObjectWmfHeader;
             return new MetaHeader(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWmfHeader != null ? retObjectWmfHeader.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -337,10 +440,14 @@ public class MetafileHeader extends NetObject  {
 
     public Rectangle getBounds() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBounds = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Bounds");
+            retObjectBounds = classInstance.Get("Bounds");
+            JCObject val = (JCObject)retObjectBounds;
             return new Rectangle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBounds != null ? retObjectBounds.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -173,9 +173,13 @@ public class JSScanner extends NetObject  {
     
     public boolean GotEndOfLine() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGotEndOfLine = null;
         try {
-            return (boolean)classInstance.Invoke("GotEndOfLine");
+            retObjectGotEndOfLine = classInstance.Invoke("GotEndOfLine");
+            return (boolean)retObjectGotEndOfLine;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectGotEndOfLine != null ? retObjectGotEndOfLine.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,9 +187,13 @@ public class JSScanner extends NetObject  {
 
     public static boolean IsKeyword(JSToken token) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsKeyword = null;
         try {
-            return (boolean)classType.Invoke("IsKeyword", token == null ? null : token.getJCOInstance());
+            retObjectIsKeyword = classType.Invoke("IsKeyword", token == null ? null : token.getJCOInstance());
+            return (boolean)retObjectIsKeyword;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsKeyword != null ? retObjectIsKeyword.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,9 +201,13 @@ public class JSScanner extends NetObject  {
 
     public static boolean IsOperator(JSToken token) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsOperator = null;
         try {
-            return (boolean)classType.Invoke("IsOperator", token == null ? null : token.getJCOInstance());
+            retObjectIsOperator = classType.Invoke("IsOperator", token == null ? null : token.getJCOInstance());
+            return (boolean)retObjectIsOperator;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsOperator != null ? retObjectIsOperator.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,9 +215,20 @@ public class JSScanner extends NetObject  {
 
     public int GetCurrentLine() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetCurrentLine = null;
         try {
-            return (int)classInstance.Invoke("GetCurrentLine");
+            retObjectGetCurrentLine = classInstance.Invoke("GetCurrentLine");
+            return (int)retObjectGetCurrentLine;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetCurrentLine_ToString = retObjectGetCurrentLine == null ? "null" : retObjectGetCurrentLine.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetCurrentLineNumber = (java.lang.Number)retObjectGetCurrentLine;
+                return retObjectGetCurrentLineNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetCurrentLine != null ? retObjectGetCurrentLine.getClass() : "null", retObjectGetCurrentLine_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,9 +236,20 @@ public class JSScanner extends NetObject  {
 
     public int GetCurrentPosition(boolean absolute) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetCurrentPosition = null;
         try {
-            return (int)classInstance.Invoke("GetCurrentPosition", absolute);
+            retObjectGetCurrentPosition = classInstance.Invoke("GetCurrentPosition", absolute);
+            return (int)retObjectGetCurrentPosition;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetCurrentPosition_ToString = retObjectGetCurrentPosition == null ? "null" : retObjectGetCurrentPosition.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetCurrentPositionNumber = (java.lang.Number)retObjectGetCurrentPosition;
+                return retObjectGetCurrentPositionNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetCurrentPosition != null ? retObjectGetCurrentPosition.getClass() : "null", retObjectGetCurrentPosition_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -223,9 +257,20 @@ public class JSScanner extends NetObject  {
 
     public int GetStartLinePosition() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetStartLinePosition = null;
         try {
-            return (int)classInstance.Invoke("GetStartLinePosition");
+            retObjectGetStartLinePosition = classInstance.Invoke("GetStartLinePosition");
+            return (int)retObjectGetStartLinePosition;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetStartLinePosition_ToString = retObjectGetStartLinePosition == null ? "null" : retObjectGetStartLinePosition.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetStartLinePositionNumber = (java.lang.Number)retObjectGetStartLinePosition;
+                return retObjectGetStartLinePositionNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetStartLinePosition != null ? retObjectGetStartLinePosition.getClass() : "null", retObjectGetStartLinePosition_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -233,9 +278,20 @@ public class JSScanner extends NetObject  {
 
     public int SkipMultiLineComment() throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSkipMultiLineComment = null;
         try {
-            return (int)classInstance.Invoke("SkipMultiLineComment");
+            retObjectSkipMultiLineComment = classInstance.Invoke("SkipMultiLineComment");
+            return (int)retObjectSkipMultiLineComment;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSkipMultiLineComment_ToString = retObjectSkipMultiLineComment == null ? "null" : retObjectSkipMultiLineComment.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectSkipMultiLineCommentNumber = (java.lang.Number)retObjectSkipMultiLineComment;
+                return retObjectSkipMultiLineCommentNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectSkipMultiLineComment != null ? retObjectSkipMultiLineComment.getClass() : "null", retObjectSkipMultiLineComment_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -243,9 +299,13 @@ public class JSScanner extends NetObject  {
 
     public java.lang.String GetSourceCode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSourceCode = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetSourceCode");
+            retObjectGetSourceCode = classInstance.Invoke("GetSourceCode");
+            return (java.lang.String)retObjectGetSourceCode;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetSourceCode != null ? retObjectGetSourceCode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -253,9 +313,13 @@ public class JSScanner extends NetObject  {
 
     public java.lang.String GetStringLiteral() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetStringLiteral = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetStringLiteral");
+            retObjectGetStringLiteral = classInstance.Invoke("GetStringLiteral");
+            return (java.lang.String)retObjectGetStringLiteral;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetStringLiteral != null ? retObjectGetStringLiteral.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -263,7 +327,7 @@ public class JSScanner extends NetObject  {
 
     public void GetNextToken() throws Throwable, system.ArgumentOutOfRangeException, system.NotImplementedException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, microsoft.jscript.EndOfFile, system.InvalidOperationException, system.OutOfMemoryException, microsoft.jscript.vsa.JSVsaException, system.NotSupportedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.FormatException, system.OverflowException, system.ArithmeticException, microsoft.jscript.JScriptException, system.MissingMethodException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetNextToken");
         } catch (JCNativeException jcne) {
@@ -273,7 +337,7 @@ public class JSScanner extends NetObject  {
 
     public void SetAuthoringMode(boolean mode) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetAuthoringMode", mode);
         } catch (JCNativeException jcne) {
@@ -283,7 +347,7 @@ public class JSScanner extends NetObject  {
 
     public void SetSource(Context sourceContext) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetSource", sourceContext == null ? null : sourceContext.getJCOInstance());
         } catch (JCNativeException jcne) {

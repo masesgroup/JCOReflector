@@ -162,10 +162,14 @@ public class TransactionOptions extends ValueType  {
     
     public TimeSpan getTimeout() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTimeout = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Timeout");
+            retObjectTimeout = classInstance.Get("Timeout");
+            JCObject val = (JCObject)retObjectTimeout;
             return new TimeSpan(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTimeout != null ? retObjectTimeout.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -173,7 +177,7 @@ public class TransactionOptions extends ValueType  {
 
     public void setTimeout(TimeSpan Timeout) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Timeout", Timeout == null ? null : Timeout.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -183,10 +187,14 @@ public class TransactionOptions extends ValueType  {
 
     public IsolationLevel getIsolationLevel() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsolationLevel = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("IsolationLevel");
+            retObjectIsolationLevel = classInstance.Get("IsolationLevel");
+            JCObject val = (JCObject)retObjectIsolationLevel;
             return new IsolationLevel(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIsolationLevel != null ? retObjectIsolationLevel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -194,7 +202,7 @@ public class TransactionOptions extends ValueType  {
 
     public void setIsolationLevel(IsolationLevel IsolationLevel) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsolationLevel", IsolationLevel == null ? null : IsolationLevel.getJCOInstance());
         } catch (JCNativeException jcne) {

@@ -166,9 +166,13 @@ public class SystemDrawingSection extends ConfigurationSection  {
     
     public java.lang.String getBitmapSuffix() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBitmapSuffix = null;
         try {
-            return (java.lang.String)classInstance.Get("BitmapSuffix");
+            retObjectBitmapSuffix = classInstance.Get("BitmapSuffix");
+            return (java.lang.String)retObjectBitmapSuffix;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectBitmapSuffix != null ? retObjectBitmapSuffix.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,7 +180,7 @@ public class SystemDrawingSection extends ConfigurationSection  {
 
     public void setBitmapSuffix(java.lang.String BitmapSuffix) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException, system.NotSupportedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BitmapSuffix", BitmapSuffix);
         } catch (JCNativeException jcne) {

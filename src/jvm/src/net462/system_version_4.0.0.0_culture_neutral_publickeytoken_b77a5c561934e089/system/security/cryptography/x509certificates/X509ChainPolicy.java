@@ -168,7 +168,7 @@ public class X509ChainPolicy extends NetObject  {
     
     public void Reset() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidTimeZoneException, system.OverflowException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Reset");
         } catch (JCNativeException jcne) {
@@ -182,10 +182,14 @@ public class X509ChainPolicy extends NetObject  {
     
     public DateTime getVerificationTime() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVerificationTime = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("VerificationTime");
+            retObjectVerificationTime = classInstance.Get("VerificationTime");
+            JCObject val = (JCObject)retObjectVerificationTime;
             return new DateTime(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVerificationTime != null ? retObjectVerificationTime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,7 +197,7 @@ public class X509ChainPolicy extends NetObject  {
 
     public void setVerificationTime(DateTime VerificationTime) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("VerificationTime", VerificationTime == null ? null : VerificationTime.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -203,10 +207,14 @@ public class X509ChainPolicy extends NetObject  {
 
     public OidCollection getApplicationPolicy() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectApplicationPolicy = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ApplicationPolicy");
+            retObjectApplicationPolicy = classInstance.Get("ApplicationPolicy");
+            JCObject val = (JCObject)retObjectApplicationPolicy;
             return new OidCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectApplicationPolicy != null ? retObjectApplicationPolicy.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -214,10 +222,14 @@ public class X509ChainPolicy extends NetObject  {
 
     public OidCollection getCertificatePolicy() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCertificatePolicy = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CertificatePolicy");
+            retObjectCertificatePolicy = classInstance.Get("CertificatePolicy");
+            JCObject val = (JCObject)retObjectCertificatePolicy;
             return new OidCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCertificatePolicy != null ? retObjectCertificatePolicy.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -225,10 +237,14 @@ public class X509ChainPolicy extends NetObject  {
 
     public X509Certificate2Collection getExtraStore() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExtraStore = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ExtraStore");
+            retObjectExtraStore = classInstance.Get("ExtraStore");
+            JCObject val = (JCObject)retObjectExtraStore;
             return new X509Certificate2Collection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExtraStore != null ? retObjectExtraStore.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -236,10 +252,14 @@ public class X509ChainPolicy extends NetObject  {
 
     public X509RevocationFlag getRevocationFlag() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRevocationFlag = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RevocationFlag");
+            retObjectRevocationFlag = classInstance.Get("RevocationFlag");
+            JCObject val = (JCObject)retObjectRevocationFlag;
             return new X509RevocationFlag(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRevocationFlag != null ? retObjectRevocationFlag.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -247,7 +267,7 @@ public class X509ChainPolicy extends NetObject  {
 
     public void setRevocationFlag(X509RevocationFlag RevocationFlag) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RevocationFlag", RevocationFlag == null ? null : RevocationFlag.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -257,10 +277,14 @@ public class X509ChainPolicy extends NetObject  {
 
     public X509RevocationMode getRevocationMode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRevocationMode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RevocationMode");
+            retObjectRevocationMode = classInstance.Get("RevocationMode");
+            JCObject val = (JCObject)retObjectRevocationMode;
             return new X509RevocationMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRevocationMode != null ? retObjectRevocationMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -268,7 +292,7 @@ public class X509ChainPolicy extends NetObject  {
 
     public void setRevocationMode(X509RevocationMode RevocationMode) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RevocationMode", RevocationMode == null ? null : RevocationMode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -278,10 +302,14 @@ public class X509ChainPolicy extends NetObject  {
 
     public X509VerificationFlags getVerificationFlags() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVerificationFlags = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("VerificationFlags");
+            retObjectVerificationFlags = classInstance.Get("VerificationFlags");
+            JCObject val = (JCObject)retObjectVerificationFlags;
             return new X509VerificationFlags(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVerificationFlags != null ? retObjectVerificationFlags.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -289,7 +317,7 @@ public class X509ChainPolicy extends NetObject  {
 
     public void setVerificationFlags(X509VerificationFlags VerificationFlags) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("VerificationFlags", VerificationFlags == null ? null : VerificationFlags.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -299,10 +327,14 @@ public class X509ChainPolicy extends NetObject  {
 
     public TimeSpan getUrlRetrievalTimeout() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUrlRetrievalTimeout = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("UrlRetrievalTimeout");
+            retObjectUrlRetrievalTimeout = classInstance.Get("UrlRetrievalTimeout");
+            JCObject val = (JCObject)retObjectUrlRetrievalTimeout;
             return new TimeSpan(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUrlRetrievalTimeout != null ? retObjectUrlRetrievalTimeout.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -310,7 +342,7 @@ public class X509ChainPolicy extends NetObject  {
 
     public void setUrlRetrievalTimeout(TimeSpan UrlRetrievalTimeout) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UrlRetrievalTimeout", UrlRetrievalTimeout == null ? null : UrlRetrievalTimeout.getJCOInstance());
         } catch (JCNativeException jcne) {

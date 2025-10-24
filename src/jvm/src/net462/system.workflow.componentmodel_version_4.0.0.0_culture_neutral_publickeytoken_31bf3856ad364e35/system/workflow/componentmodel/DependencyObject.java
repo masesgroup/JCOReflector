@@ -160,9 +160,13 @@ public class DependencyObject extends NetObject implements AutoCloseable {
     
     public boolean IsBindingSet(DependencyProperty dependencyProperty) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsBindingSet = null;
         try {
-            return (boolean)classInstance.Invoke("IsBindingSet", dependencyProperty == null ? null : dependencyProperty.getJCOInstance());
+            retObjectIsBindingSet = classInstance.Invoke("IsBindingSet", dependencyProperty == null ? null : dependencyProperty.getJCOInstance());
+            return (boolean)retObjectIsBindingSet;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsBindingSet != null ? retObjectIsBindingSet.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,9 +174,13 @@ public class DependencyObject extends NetObject implements AutoCloseable {
 
     public boolean MetaEquals(DependencyObject dependencyObject) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMetaEquals = null;
         try {
-            return (boolean)classInstance.Invoke("MetaEquals", dependencyObject == null ? null : dependencyObject.getJCOInstance());
+            retObjectMetaEquals = classInstance.Invoke("MetaEquals", dependencyObject == null ? null : dependencyObject.getJCOInstance());
+            return (boolean)retObjectMetaEquals;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectMetaEquals != null ? retObjectMetaEquals.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,9 +188,13 @@ public class DependencyObject extends NetObject implements AutoCloseable {
 
     public boolean RemoveProperty(DependencyProperty dependencyProperty) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRemoveProperty = null;
         try {
-            return (boolean)classInstance.Invoke("RemoveProperty", dependencyProperty == null ? null : dependencyProperty.getJCOInstance());
+            retObjectRemoveProperty = classInstance.Invoke("RemoveProperty", dependencyProperty == null ? null : dependencyProperty.getJCOInstance());
+            return (boolean)retObjectRemoveProperty;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectRemoveProperty != null ? retObjectRemoveProperty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,10 +202,14 @@ public class DependencyObject extends NetObject implements AutoCloseable {
 
     public NetObject GetValue(DependencyProperty dependencyProperty) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.MulticastNotSupportedException, system.NotSupportedException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetValue = null;
         try {
-            JCObject objGetValue = (JCObject)classInstance.Invoke("GetValue", dependencyProperty == null ? null : dependencyProperty.getJCOInstance());
+            retObjectGetValue = classInstance.Invoke("GetValue", dependencyProperty == null ? null : dependencyProperty.getJCOInstance());
+            JCObject objGetValue = (JCObject)retObjectGetValue;
             return new NetObject(objGetValue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetValue != null ? retObjectGetValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,10 +217,14 @@ public class DependencyObject extends NetObject implements AutoCloseable {
 
     public NetObject GetValueBase(DependencyProperty dependencyProperty) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.MulticastNotSupportedException, system.InvalidCastException, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetValueBase = null;
         try {
-            JCObject objGetValueBase = (JCObject)classInstance.Invoke("GetValueBase", dependencyProperty == null ? null : dependencyProperty.getJCOInstance());
+            retObjectGetValueBase = classInstance.Invoke("GetValueBase", dependencyProperty == null ? null : dependencyProperty.getJCOInstance());
+            JCObject objGetValueBase = (JCObject)retObjectGetValueBase;
             return new NetObject(objGetValueBase);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetValueBase != null ? retObjectGetValueBase.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -212,10 +232,14 @@ public class DependencyObject extends NetObject implements AutoCloseable {
 
     public ActivityBind GetBinding(DependencyProperty dependencyProperty) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetBinding = null;
         try {
-            JCObject objGetBinding = (JCObject)classInstance.Invoke("GetBinding", dependencyProperty == null ? null : dependencyProperty.getJCOInstance());
+            retObjectGetBinding = classInstance.Invoke("GetBinding", dependencyProperty == null ? null : dependencyProperty.getJCOInstance());
+            JCObject objGetBinding = (JCObject)retObjectGetBinding;
             return new ActivityBind(objGetBinding);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetBinding != null ? retObjectGetBinding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -223,7 +247,7 @@ public class DependencyObject extends NetObject implements AutoCloseable {
 
     public void AddHandler(DependencyProperty dependencyEvent, NetObject value) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddHandler", dependencyEvent == null ? null : dependencyEvent.getJCOInstance(), value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -233,7 +257,7 @@ public class DependencyObject extends NetObject implements AutoCloseable {
 
     public void Dispose() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
@@ -243,7 +267,7 @@ public class DependencyObject extends NetObject implements AutoCloseable {
 
     public void RemoveHandler(DependencyProperty dependencyEvent, NetObject value) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.RankException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RemoveHandler", dependencyEvent == null ? null : dependencyEvent.getJCOInstance(), value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -253,7 +277,7 @@ public class DependencyObject extends NetObject implements AutoCloseable {
 
     public void SetBinding(DependencyProperty dependencyProperty, ActivityBind bind) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetBinding", dependencyProperty == null ? null : dependencyProperty.getJCOInstance(), bind == null ? null : bind.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -263,7 +287,7 @@ public class DependencyObject extends NetObject implements AutoCloseable {
 
     public void SetValue(DependencyProperty dependencyProperty, NetObject value) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.MulticastNotSupportedException, system.NotSupportedException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetValue", dependencyProperty == null ? null : dependencyProperty.getJCOInstance(), value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -273,7 +297,7 @@ public class DependencyObject extends NetObject implements AutoCloseable {
 
     public void SetValueBase(DependencyProperty dependencyProperty, NetObject value) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.MulticastNotSupportedException, system.NotSupportedException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetValueBase", dependencyProperty == null ? null : dependencyProperty.getJCOInstance(), value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -284,7 +308,7 @@ public class DependencyObject extends NetObject implements AutoCloseable {
     public void close() throws Exception {
         try {
             if (classInstance == null)
-                throw new UnsupportedOperationException("classInstance is null.");
+                throw new java.lang.UnsupportedOperationException("classInstance is null.");
             try {
                 classInstance.Invoke("Dispose");
             }
@@ -300,10 +324,14 @@ public class DependencyObject extends NetObject implements AutoCloseable {
     
     public IDictionary getUserData() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUserData = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("UserData");
+            retObjectUserData = classInstance.Get("UserData");
+            JCObject val = (JCObject)retObjectUserData;
             return new IDictionaryImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUserData != null ? retObjectUserData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -311,10 +339,14 @@ public class DependencyObject extends NetObject implements AutoCloseable {
 
     public ISite getSite() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSite = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Site");
+            retObjectSite = classInstance.Get("Site");
+            JCObject val = (JCObject)retObjectSite;
             return new ISiteImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSite != null ? retObjectSite.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -322,7 +354,7 @@ public class DependencyObject extends NetObject implements AutoCloseable {
 
     public void setSite(ISite Site) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException, system.MulticastNotSupportedException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Site", Site == null ? null : Site.getJCOInstance());
         } catch (JCNativeException jcne) {

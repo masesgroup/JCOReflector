@@ -161,10 +161,14 @@ public class TemplatedControlDesigner extends ControlDesigner  {
     
     public IEnumerable GetTemplateContainerDataSource(java.lang.String templateName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetTemplateContainerDataSource = null;
         try {
-            JCObject objGetTemplateContainerDataSource = (JCObject)classInstance.Invoke("GetTemplateContainerDataSource", templateName);
+            retObjectGetTemplateContainerDataSource = classInstance.Invoke("GetTemplateContainerDataSource", templateName);
+            JCObject objGetTemplateContainerDataSource = (JCObject)retObjectGetTemplateContainerDataSource;
             return new IEnumerableImplementation(objGetTemplateContainerDataSource);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetTemplateContainerDataSource != null ? retObjectGetTemplateContainerDataSource.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,9 +176,13 @@ public class TemplatedControlDesigner extends ControlDesigner  {
 
     public java.lang.String GetTemplateContainerDataItemProperty(java.lang.String templateName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetTemplateContainerDataItemProperty = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetTemplateContainerDataItemProperty", templateName);
+            retObjectGetTemplateContainerDataItemProperty = classInstance.Invoke("GetTemplateContainerDataItemProperty", templateName);
+            return (java.lang.String)retObjectGetTemplateContainerDataItemProperty;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetTemplateContainerDataItemProperty != null ? retObjectGetTemplateContainerDataItemProperty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,9 +190,13 @@ public class TemplatedControlDesigner extends ControlDesigner  {
 
     public java.lang.String GetTemplateContent(ITemplateEditingFrame editingFrame, java.lang.String templateName, JCORefOut<java.util.concurrent.atomic.AtomicBoolean> allowEditing) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetTemplateContent = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetTemplateContent", editingFrame == null ? null : editingFrame.getJCOInstance(), templateName, allowEditing.getJCRefOut());
+            retObjectGetTemplateContent = classInstance.Invoke("GetTemplateContent", editingFrame == null ? null : editingFrame.getJCOInstance(), templateName, allowEditing.getJCRefOut());
+            return (java.lang.String)retObjectGetTemplateContent;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetTemplateContent != null ? retObjectGetTemplateContent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,10 +204,14 @@ public class TemplatedControlDesigner extends ControlDesigner  {
 
     public NetType GetTemplatePropertyParentType(java.lang.String templateName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetTemplatePropertyParentType = null;
         try {
-            JCObject objGetTemplatePropertyParentType = (JCObject)classInstance.Invoke("GetTemplatePropertyParentType", templateName);
+            retObjectGetTemplatePropertyParentType = classInstance.Invoke("GetTemplatePropertyParentType", templateName);
+            JCObject objGetTemplatePropertyParentType = (JCObject)retObjectGetTemplatePropertyParentType;
             return new NetType(objGetTemplatePropertyParentType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetTemplatePropertyParentType != null ? retObjectGetTemplatePropertyParentType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,16 +219,20 @@ public class TemplatedControlDesigner extends ControlDesigner  {
 
     public TemplateEditingVerb[] GetTemplateEditingVerbs() throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetTemplateEditingVerbs = null;
         try {
             ArrayList<TemplateEditingVerb> resultingArrayList = new ArrayList<TemplateEditingVerb>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetTemplateEditingVerbs");
+            retObjectGetTemplateEditingVerbs = classInstance.Invoke("GetTemplateEditingVerbs");
+            JCObject resultingObjects = (JCObject)retObjectGetTemplateEditingVerbs;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new TemplateEditingVerb(resultingObject));
             }
             TemplateEditingVerb[] resultingArray = new TemplateEditingVerb[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetTemplateEditingVerbs != null ? retObjectGetTemplateEditingVerbs.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -220,7 +240,7 @@ public class TemplatedControlDesigner extends ControlDesigner  {
 
     public void EnterTemplateMode(ITemplateEditingFrame newTemplateEditingFrame) throws Throwable, system.ArgumentNullException, system.configuration.ConfigurationErrorsException, system.ArgumentException, system.configuration.ConfigurationException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.web.HttpException, system.OverflowException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EnterTemplateMode", newTemplateEditingFrame == null ? null : newTemplateEditingFrame.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -230,7 +250,7 @@ public class TemplatedControlDesigner extends ControlDesigner  {
 
     public void ExitTemplateMode(boolean fSwitchingTemplates, boolean fNested, boolean fSave) throws Throwable, system.ArgumentNullException, system.IndexOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.configuration.ConfigurationException, system.NullReferenceException, system.NotImplementedException, system.web.HttpException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ExitTemplateMode", fSwitchingTemplates, fNested, fSave);
         } catch (JCNativeException jcne) {
@@ -240,7 +260,7 @@ public class TemplatedControlDesigner extends ControlDesigner  {
 
     public void Initialize(IComponent component) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.NotSupportedException, system.NullReferenceException, system.MulticastNotSupportedException, system.configuration.ConfigurationErrorsException, system.security.SecurityException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Initialize", component == null ? null : component.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -250,7 +270,7 @@ public class TemplatedControlDesigner extends ControlDesigner  {
 
     public void OnComponentChanged(NetObject sender, ComponentChangedEventArgs ce) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.resources.MissingManifestResourceException, system.web.HttpException, system.NotSupportedException, system.reflection.AmbiguousMatchException, system.web.HttpParseException, system.IndexOutOfRangeException, system.RankException, system.NullReferenceException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.PlatformNotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("OnComponentChanged", sender == null ? null : sender.getJCOInstance(), ce == null ? null : ce.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -260,7 +280,7 @@ public class TemplatedControlDesigner extends ControlDesigner  {
 
     public void OnSetParent() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("OnSetParent");
         } catch (JCNativeException jcne) {
@@ -270,7 +290,7 @@ public class TemplatedControlDesigner extends ControlDesigner  {
 
     public void SetTemplateContent(ITemplateEditingFrame editingFrame, java.lang.String templateName, java.lang.String templateContent) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetTemplateContent", editingFrame == null ? null : editingFrame.getJCOInstance(), templateName, templateContent);
         } catch (JCNativeException jcne) {
@@ -280,7 +300,7 @@ public class TemplatedControlDesigner extends ControlDesigner  {
 
     public void UpdateDesignTimeHtml() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.configuration.ConfigurationException, system.NullReferenceException, system.NotImplementedException, system.web.HttpException, system.OverflowException, system.web.HttpRequestValidationException, system.PlatformNotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("UpdateDesignTimeHtml");
         } catch (JCNativeException jcne) {
@@ -294,9 +314,13 @@ public class TemplatedControlDesigner extends ControlDesigner  {
     
     public boolean getCanEnterTemplateMode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanEnterTemplateMode = null;
         try {
-            return (boolean)classInstance.Get("CanEnterTemplateMode");
+            retObjectCanEnterTemplateMode = classInstance.Get("CanEnterTemplateMode");
+            return (boolean)retObjectCanEnterTemplateMode;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCanEnterTemplateMode != null ? retObjectCanEnterTemplateMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -304,9 +328,13 @@ public class TemplatedControlDesigner extends ControlDesigner  {
 
     public boolean getInTemplateMode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInTemplateMode = null;
         try {
-            return (boolean)classInstance.Get("InTemplateMode");
+            retObjectInTemplateMode = classInstance.Get("InTemplateMode");
+            return (boolean)retObjectInTemplateMode;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectInTemplateMode != null ? retObjectInTemplateMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -314,10 +342,14 @@ public class TemplatedControlDesigner extends ControlDesigner  {
 
     public ITemplateEditingFrame getActiveTemplateEditingFrame() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectActiveTemplateEditingFrame = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ActiveTemplateEditingFrame");
+            retObjectActiveTemplateEditingFrame = classInstance.Get("ActiveTemplateEditingFrame");
+            JCObject val = (JCObject)retObjectActiveTemplateEditingFrame;
             return new ITemplateEditingFrameImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectActiveTemplateEditingFrame != null ? retObjectActiveTemplateEditingFrame.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

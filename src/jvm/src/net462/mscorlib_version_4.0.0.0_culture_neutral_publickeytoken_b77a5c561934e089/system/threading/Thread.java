@@ -217,9 +217,13 @@ public class Thread extends CriticalFinalizerObject  {
     
     public boolean Join(int millisecondsTimeout) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectJoin = null;
         try {
-            return (boolean)classInstance.Invoke("Join", millisecondsTimeout);
+            retObjectJoin = classInstance.Invoke("Join", millisecondsTimeout);
+            return (boolean)retObjectJoin;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectJoin != null ? retObjectJoin.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -227,9 +231,13 @@ public class Thread extends CriticalFinalizerObject  {
 
     public boolean Join(TimeSpan timeout) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectJoin = null;
         try {
-            return (boolean)classInstance.Invoke("Join", timeout == null ? null : timeout.getJCOInstance());
+            retObjectJoin = classInstance.Invoke("Join", timeout == null ? null : timeout.getJCOInstance());
+            return (boolean)retObjectJoin;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectJoin != null ? retObjectJoin.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -237,9 +245,13 @@ public class Thread extends CriticalFinalizerObject  {
 
     public boolean TrySetApartmentState(ApartmentState state) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTrySetApartmentState = null;
         try {
-            return (boolean)classInstance.Invoke("TrySetApartmentState", state == null ? null : state.getJCOInstance());
+            retObjectTrySetApartmentState = classInstance.Invoke("TrySetApartmentState", state == null ? null : state.getJCOInstance());
+            return (boolean)retObjectTrySetApartmentState;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTrySetApartmentState != null ? retObjectTrySetApartmentState.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -247,9 +259,13 @@ public class Thread extends CriticalFinalizerObject  {
 
     public static boolean Yield() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectYield = null;
         try {
-            return (boolean)classType.Invoke("Yield");
+            retObjectYield = classType.Invoke("Yield");
+            return (boolean)retObjectYield;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectYield != null ? retObjectYield.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -257,9 +273,20 @@ public class Thread extends CriticalFinalizerObject  {
 
     public static int GetDomainID() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetDomainID = null;
         try {
-            return (int)classType.Invoke("GetDomainID");
+            retObjectGetDomainID = classType.Invoke("GetDomainID");
+            return (int)retObjectGetDomainID;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetDomainID_ToString = retObjectGetDomainID == null ? "null" : retObjectGetDomainID.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetDomainIDNumber = (java.lang.Number)retObjectGetDomainID;
+                return retObjectGetDomainIDNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetDomainID != null ? retObjectGetDomainID.getClass() : "null", retObjectGetDomainID_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -267,10 +294,14 @@ public class Thread extends CriticalFinalizerObject  {
 
     public static AppDomain GetDomain() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetDomain = null;
         try {
-            JCObject objGetDomain = (JCObject)classType.Invoke("GetDomain");
+            retObjectGetDomain = classType.Invoke("GetDomain");
+            JCObject objGetDomain = (JCObject)retObjectGetDomain;
             return new AppDomain(objGetDomain);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetDomain != null ? retObjectGetDomain.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -278,10 +309,14 @@ public class Thread extends CriticalFinalizerObject  {
 
     public static LocalDataStoreSlot AllocateDataSlot() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAllocateDataSlot = null;
         try {
-            JCObject objAllocateDataSlot = (JCObject)classType.Invoke("AllocateDataSlot");
+            retObjectAllocateDataSlot = classType.Invoke("AllocateDataSlot");
+            JCObject objAllocateDataSlot = (JCObject)retObjectAllocateDataSlot;
             return new LocalDataStoreSlot(objAllocateDataSlot);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAllocateDataSlot != null ? retObjectAllocateDataSlot.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -289,10 +324,14 @@ public class Thread extends CriticalFinalizerObject  {
 
     public static LocalDataStoreSlot AllocateNamedDataSlot(java.lang.String name) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAllocateNamedDataSlot = null;
         try {
-            JCObject objAllocateNamedDataSlot = (JCObject)classType.Invoke("AllocateNamedDataSlot", name);
+            retObjectAllocateNamedDataSlot = classType.Invoke("AllocateNamedDataSlot", name);
+            JCObject objAllocateNamedDataSlot = (JCObject)retObjectAllocateNamedDataSlot;
             return new LocalDataStoreSlot(objAllocateNamedDataSlot);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAllocateNamedDataSlot != null ? retObjectAllocateNamedDataSlot.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -300,10 +339,14 @@ public class Thread extends CriticalFinalizerObject  {
 
     public static LocalDataStoreSlot GetNamedDataSlot(java.lang.String name) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetNamedDataSlot = null;
         try {
-            JCObject objGetNamedDataSlot = (JCObject)classType.Invoke("GetNamedDataSlot", name);
+            retObjectGetNamedDataSlot = classType.Invoke("GetNamedDataSlot", name);
+            JCObject objGetNamedDataSlot = (JCObject)retObjectGetNamedDataSlot;
             return new LocalDataStoreSlot(objGetNamedDataSlot);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetNamedDataSlot != null ? retObjectGetNamedDataSlot.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -311,10 +354,14 @@ public class Thread extends CriticalFinalizerObject  {
 
     public static NetObject GetData(LocalDataStoreSlot slot) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetData = null;
         try {
-            JCObject objGetData = (JCObject)classType.Invoke("GetData", slot == null ? null : slot.getJCOInstance());
+            retObjectGetData = classType.Invoke("GetData", slot == null ? null : slot.getJCOInstance());
+            JCObject objGetData = (JCObject)retObjectGetData;
             return new NetObject(objGetData);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetData != null ? retObjectGetData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -322,10 +369,14 @@ public class Thread extends CriticalFinalizerObject  {
 
     public ApartmentState GetApartmentState() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetApartmentState = null;
         try {
-            JCObject objGetApartmentState = (JCObject)classInstance.Invoke("GetApartmentState");
+            retObjectGetApartmentState = classInstance.Invoke("GetApartmentState");
+            JCObject objGetApartmentState = (JCObject)retObjectGetApartmentState;
             return new ApartmentState(objGetApartmentState);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetApartmentState != null ? retObjectGetApartmentState.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -333,10 +384,14 @@ public class Thread extends CriticalFinalizerObject  {
 
     public CompressedStack GetCompressedStack() throws Throwable, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetCompressedStack = null;
         try {
-            JCObject objGetCompressedStack = (JCObject)classInstance.Invoke("GetCompressedStack");
+            retObjectGetCompressedStack = classInstance.Invoke("GetCompressedStack");
+            JCObject objGetCompressedStack = (JCObject)retObjectGetCompressedStack;
             return new CompressedStack(objGetCompressedStack);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCompressedStack != null ? retObjectGetCompressedStack.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -344,7 +399,7 @@ public class Thread extends CriticalFinalizerObject  {
 
     public void Abort() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Abort");
         } catch (JCNativeException jcne) {
@@ -354,7 +409,7 @@ public class Thread extends CriticalFinalizerObject  {
 
     public void Abort(NetObject stateInfo) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Abort", stateInfo == null ? null : stateInfo.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -364,7 +419,7 @@ public class Thread extends CriticalFinalizerObject  {
 
     public static void BeginCriticalRegion() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("BeginCriticalRegion");
         } catch (JCNativeException jcne) {
@@ -374,7 +429,7 @@ public class Thread extends CriticalFinalizerObject  {
 
     public static void BeginThreadAffinity() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("BeginThreadAffinity");
         } catch (JCNativeException jcne) {
@@ -384,7 +439,7 @@ public class Thread extends CriticalFinalizerObject  {
 
     public void DisableComObjectEagerCleanup() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DisableComObjectEagerCleanup");
         } catch (JCNativeException jcne) {
@@ -394,7 +449,7 @@ public class Thread extends CriticalFinalizerObject  {
 
     public static void EndCriticalRegion() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("EndCriticalRegion");
         } catch (JCNativeException jcne) {
@@ -404,7 +459,7 @@ public class Thread extends CriticalFinalizerObject  {
 
     public static void EndThreadAffinity() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("EndThreadAffinity");
         } catch (JCNativeException jcne) {
@@ -414,7 +469,7 @@ public class Thread extends CriticalFinalizerObject  {
 
     public static void FreeNamedDataSlot(java.lang.String name) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("FreeNamedDataSlot", name);
         } catch (JCNativeException jcne) {
@@ -424,7 +479,7 @@ public class Thread extends CriticalFinalizerObject  {
 
     public void Interrupt() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Interrupt");
         } catch (JCNativeException jcne) {
@@ -434,7 +489,7 @@ public class Thread extends CriticalFinalizerObject  {
 
     public void Join() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Join");
         } catch (JCNativeException jcne) {
@@ -444,7 +499,7 @@ public class Thread extends CriticalFinalizerObject  {
 
     public static void MemoryBarrier() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("MemoryBarrier");
         } catch (JCNativeException jcne) {
@@ -454,7 +509,7 @@ public class Thread extends CriticalFinalizerObject  {
 
     public static void ResetAbort() throws Throwable, system.threading.ThreadStateException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("ResetAbort");
         } catch (JCNativeException jcne) {
@@ -464,7 +519,7 @@ public class Thread extends CriticalFinalizerObject  {
 
     public void Resume() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Resume");
         } catch (JCNativeException jcne) {
@@ -474,7 +529,7 @@ public class Thread extends CriticalFinalizerObject  {
 
     public void SetApartmentState(ApartmentState state) throws Throwable, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetApartmentState", state == null ? null : state.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -484,7 +539,7 @@ public class Thread extends CriticalFinalizerObject  {
 
     public void SetCompressedStack(CompressedStack stack) throws Throwable, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetCompressedStack", stack == null ? null : stack.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -494,7 +549,7 @@ public class Thread extends CriticalFinalizerObject  {
 
     public static void SetData(LocalDataStoreSlot slot, NetObject data) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetData", slot == null ? null : slot.getJCOInstance(), data == null ? null : data.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -504,7 +559,7 @@ public class Thread extends CriticalFinalizerObject  {
 
     public static void Sleep(int millisecondsTimeout) throws Throwable, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Sleep", millisecondsTimeout);
         } catch (JCNativeException jcne) {
@@ -514,7 +569,7 @@ public class Thread extends CriticalFinalizerObject  {
 
     public static void Sleep(TimeSpan timeout) throws Throwable, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Sleep", timeout == null ? null : timeout.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -524,7 +579,7 @@ public class Thread extends CriticalFinalizerObject  {
 
     public static void SpinWait(int iterations) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SpinWait", iterations);
         } catch (JCNativeException jcne) {
@@ -534,7 +589,7 @@ public class Thread extends CriticalFinalizerObject  {
 
     public void Start() throws Throwable, system.security.SecurityException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Start");
         } catch (JCNativeException jcne) {
@@ -544,7 +599,7 @@ public class Thread extends CriticalFinalizerObject  {
 
     public void Start(NetObject parameter) throws Throwable, system.InvalidOperationException, system.security.SecurityException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Start", parameter == null ? null : parameter.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -554,7 +609,7 @@ public class Thread extends CriticalFinalizerObject  {
 
     public void Suspend() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Suspend");
         } catch (JCNativeException jcne) {
@@ -564,7 +619,7 @@ public class Thread extends CriticalFinalizerObject  {
 
     public static void VolatileWrite(JCORefOut<java.util.concurrent.atomic.AtomicReference<java.lang.Byte>> address, byte value) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("VolatileWrite", address.getJCRefOut(), value);
         } catch (JCNativeException jcne) {
@@ -574,7 +629,7 @@ public class Thread extends CriticalFinalizerObject  {
 
     public static void VolatileWrite(JCORefOut<java.util.concurrent.atomic.AtomicReference<java.lang.Double>> address, double value) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("VolatileWrite", address.getJCRefOut(), value);
         } catch (JCNativeException jcne) {
@@ -584,7 +639,7 @@ public class Thread extends CriticalFinalizerObject  {
 
     public static void VolatileWrite(JCORefOut<java.util.concurrent.atomic.AtomicReference<java.lang.Short>> address, short value) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("VolatileWrite", address.getJCRefOut(), value);
         } catch (JCNativeException jcne) {
@@ -594,7 +649,7 @@ public class Thread extends CriticalFinalizerObject  {
 
     public static void VolatileWrite(JCORefOut<java.util.concurrent.atomic.AtomicInteger> address, int value) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("VolatileWrite", address.getJCRefOut(), value);
         } catch (JCNativeException jcne) {
@@ -604,7 +659,7 @@ public class Thread extends CriticalFinalizerObject  {
 
     public static void VolatileWrite(JCORefOut<java.util.concurrent.atomic.AtomicLong> address, long value) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("VolatileWrite", address.getJCRefOut(), value);
         } catch (JCNativeException jcne) {
@@ -614,7 +669,7 @@ public class Thread extends CriticalFinalizerObject  {
 
     public static void VolatileWrite(JCORefOut<SByte> address, SByte value) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("VolatileWrite", address.getJCRefOut(), value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -624,7 +679,7 @@ public class Thread extends CriticalFinalizerObject  {
 
     public static void VolatileWrite(JCORefOut<Single> address, Single value) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("VolatileWrite", address.getJCRefOut(), value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -634,7 +689,7 @@ public class Thread extends CriticalFinalizerObject  {
 
     public static void VolatileWrite(JCORefOut<NetObject> address, NetObject value) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("VolatileWrite", address.getJCRefOut(), value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -644,7 +699,7 @@ public class Thread extends CriticalFinalizerObject  {
 
     public static void VolatileWrite(JCORefOut<UInt16> address, UInt16 value) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("VolatileWrite", address.getJCRefOut(), value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -654,7 +709,7 @@ public class Thread extends CriticalFinalizerObject  {
 
     public static void VolatileWrite(JCORefOut<UInt32> address, UInt32 value) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("VolatileWrite", address.getJCRefOut(), value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -664,7 +719,7 @@ public class Thread extends CriticalFinalizerObject  {
 
     public static void VolatileWrite(JCORefOut<UInt64> address, UInt64 value) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("VolatileWrite", address.getJCRefOut(), value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -678,7 +733,7 @@ public class Thread extends CriticalFinalizerObject  {
      */
     @Deprecated 
     public void GetTypeInfoCount(JCORefOut<UInt32> pcTInfo) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use To_Thread to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use To_Thread to obtain the full interface.");
     }
 
 
@@ -687,9 +742,13 @@ public class Thread extends CriticalFinalizerObject  {
     
     public boolean getIsAlive() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsAlive = null;
         try {
-            return (boolean)classInstance.Get("IsAlive");
+            retObjectIsAlive = classInstance.Get("IsAlive");
+            return (boolean)retObjectIsAlive;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsAlive != null ? retObjectIsAlive.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -697,9 +756,13 @@ public class Thread extends CriticalFinalizerObject  {
 
     public boolean getIsBackground() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsBackground = null;
         try {
-            return (boolean)classInstance.Get("IsBackground");
+            retObjectIsBackground = classInstance.Get("IsBackground");
+            return (boolean)retObjectIsBackground;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsBackground != null ? retObjectIsBackground.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -707,7 +770,7 @@ public class Thread extends CriticalFinalizerObject  {
 
     public void setIsBackground(boolean IsBackground) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsBackground", IsBackground);
         } catch (JCNativeException jcne) {
@@ -717,9 +780,13 @@ public class Thread extends CriticalFinalizerObject  {
 
     public boolean getIsThreadPoolThread() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsThreadPoolThread = null;
         try {
-            return (boolean)classInstance.Get("IsThreadPoolThread");
+            retObjectIsThreadPoolThread = classInstance.Get("IsThreadPoolThread");
+            return (boolean)retObjectIsThreadPoolThread;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsThreadPoolThread != null ? retObjectIsThreadPoolThread.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -727,9 +794,20 @@ public class Thread extends CriticalFinalizerObject  {
 
     public int getManagedThreadId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectManagedThreadId = null;
         try {
-            return (int)classInstance.Get("ManagedThreadId");
+            retObjectManagedThreadId = classInstance.Get("ManagedThreadId");
+            return (int)retObjectManagedThreadId;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectManagedThreadId_ToString = retObjectManagedThreadId == null ? "null" : retObjectManagedThreadId.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectManagedThreadIdNumber = (java.lang.Number)retObjectManagedThreadId;
+                return retObjectManagedThreadIdNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectManagedThreadId != null ? retObjectManagedThreadId.getClass() : "null", retObjectManagedThreadId_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -737,10 +815,14 @@ public class Thread extends CriticalFinalizerObject  {
 
     public CultureInfo getCurrentCulture() throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.ArgumentException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCurrentCulture = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CurrentCulture");
+            retObjectCurrentCulture = classInstance.Get("CurrentCulture");
+            JCObject val = (JCObject)retObjectCurrentCulture;
             return new CultureInfo(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCurrentCulture != null ? retObjectCurrentCulture.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -748,7 +830,7 @@ public class Thread extends CriticalFinalizerObject  {
 
     public void setCurrentCulture(CultureInfo CurrentCulture) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CurrentCulture", CurrentCulture == null ? null : CurrentCulture.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -758,10 +840,14 @@ public class Thread extends CriticalFinalizerObject  {
 
     public CultureInfo getCurrentUICulture() throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.ArgumentException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCurrentUICulture = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CurrentUICulture");
+            retObjectCurrentUICulture = classInstance.Get("CurrentUICulture");
+            JCObject val = (JCObject)retObjectCurrentUICulture;
             return new CultureInfo(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCurrentUICulture != null ? retObjectCurrentUICulture.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -769,7 +855,7 @@ public class Thread extends CriticalFinalizerObject  {
 
     public void setCurrentUICulture(CultureInfo CurrentUICulture) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.security.SecurityException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CurrentUICulture", CurrentUICulture == null ? null : CurrentUICulture.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -779,10 +865,14 @@ public class Thread extends CriticalFinalizerObject  {
 
     public static Context getCurrentContext() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.NullReferenceException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCurrentContext = null;
         try {
-            JCObject val = (JCObject)classType.Get("CurrentContext");
+            retObjectCurrentContext = classType.Get("CurrentContext");
+            JCObject val = (JCObject)retObjectCurrentContext;
             return new Context(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCurrentContext != null ? retObjectCurrentContext.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -790,10 +880,14 @@ public class Thread extends CriticalFinalizerObject  {
 
     public static IPrincipal getCurrentPrincipal() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.security.SecurityException, system.NullReferenceException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCurrentPrincipal = null;
         try {
-            JCObject val = (JCObject)classType.Get("CurrentPrincipal");
+            retObjectCurrentPrincipal = classType.Get("CurrentPrincipal");
+            JCObject val = (JCObject)retObjectCurrentPrincipal;
             return new IPrincipalImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCurrentPrincipal != null ? retObjectCurrentPrincipal.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -801,7 +895,7 @@ public class Thread extends CriticalFinalizerObject  {
 
     public static void setCurrentPrincipal(IPrincipal CurrentPrincipal) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.NullReferenceException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Set("CurrentPrincipal", CurrentPrincipal == null ? null : CurrentPrincipal.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -811,9 +905,13 @@ public class Thread extends CriticalFinalizerObject  {
 
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectName = null;
         try {
-            return (java.lang.String)classInstance.Get("Name");
+            retObjectName = classInstance.Get("Name");
+            return (java.lang.String)retObjectName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectName != null ? retObjectName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -821,7 +919,7 @@ public class Thread extends CriticalFinalizerObject  {
 
     public void setName(java.lang.String Name) throws Throwable, system.ArgumentException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Name", Name);
         } catch (JCNativeException jcne) {
@@ -831,10 +929,14 @@ public class Thread extends CriticalFinalizerObject  {
 
     public ApartmentState getApartmentState() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectApartmentState = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ApartmentState");
+            retObjectApartmentState = classInstance.Get("ApartmentState");
+            JCObject val = (JCObject)retObjectApartmentState;
             return new ApartmentState(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectApartmentState != null ? retObjectApartmentState.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -842,7 +944,7 @@ public class Thread extends CriticalFinalizerObject  {
 
     public void setApartmentState(ApartmentState ApartmentState) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ApartmentState", ApartmentState == null ? null : ApartmentState.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -852,10 +954,14 @@ public class Thread extends CriticalFinalizerObject  {
 
     public ExecutionContext getExecutionContext() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExecutionContext = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ExecutionContext");
+            retObjectExecutionContext = classInstance.Get("ExecutionContext");
+            JCObject val = (JCObject)retObjectExecutionContext;
             return new ExecutionContext(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExecutionContext != null ? retObjectExecutionContext.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -863,10 +969,14 @@ public class Thread extends CriticalFinalizerObject  {
 
     public static Thread getCurrentThread() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCurrentThread = null;
         try {
-            JCObject val = (JCObject)classType.Get("CurrentThread");
+            retObjectCurrentThread = classType.Get("CurrentThread");
+            JCObject val = (JCObject)retObjectCurrentThread;
             return new Thread(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCurrentThread != null ? retObjectCurrentThread.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -874,10 +984,14 @@ public class Thread extends CriticalFinalizerObject  {
 
     public ThreadPriority getPriority() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPriority = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Priority");
+            retObjectPriority = classInstance.Get("Priority");
+            JCObject val = (JCObject)retObjectPriority;
             return new ThreadPriority(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPriority != null ? retObjectPriority.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -885,7 +999,7 @@ public class Thread extends CriticalFinalizerObject  {
 
     public void setPriority(ThreadPriority Priority) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Priority", Priority == null ? null : Priority.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -895,10 +1009,14 @@ public class Thread extends CriticalFinalizerObject  {
 
     public ThreadState getThreadState() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectThreadState = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ThreadState");
+            retObjectThreadState = classInstance.Get("ThreadState");
+            JCObject val = (JCObject)retObjectThreadState;
             return new ThreadState(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectThreadState != null ? retObjectThreadState.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

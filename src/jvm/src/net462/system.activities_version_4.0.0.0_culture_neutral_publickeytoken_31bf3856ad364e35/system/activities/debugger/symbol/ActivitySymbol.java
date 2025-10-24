@@ -159,9 +159,20 @@ public class ActivitySymbol extends NetObject  {
     
     public int getEndColumn() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEndColumn = null;
         try {
-            return (int)classInstance.Get("EndColumn");
+            retObjectEndColumn = classInstance.Get("EndColumn");
+            return (int)retObjectEndColumn;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectEndColumn_ToString = retObjectEndColumn == null ? "null" : retObjectEndColumn.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectEndColumnNumber = (java.lang.Number)retObjectEndColumn;
+                return retObjectEndColumnNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectEndColumn != null ? retObjectEndColumn.getClass() : "null", retObjectEndColumn_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,7 +180,7 @@ public class ActivitySymbol extends NetObject  {
 
     public void setEndColumn(int EndColumn) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EndColumn", EndColumn);
         } catch (JCNativeException jcne) {
@@ -179,9 +190,20 @@ public class ActivitySymbol extends NetObject  {
 
     public int getEndLine() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEndLine = null;
         try {
-            return (int)classInstance.Get("EndLine");
+            retObjectEndLine = classInstance.Get("EndLine");
+            return (int)retObjectEndLine;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectEndLine_ToString = retObjectEndLine == null ? "null" : retObjectEndLine.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectEndLineNumber = (java.lang.Number)retObjectEndLine;
+                return retObjectEndLineNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectEndLine != null ? retObjectEndLine.getClass() : "null", retObjectEndLine_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -189,7 +211,7 @@ public class ActivitySymbol extends NetObject  {
 
     public void setEndLine(int EndLine) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EndLine", EndLine);
         } catch (JCNativeException jcne) {
@@ -199,9 +221,20 @@ public class ActivitySymbol extends NetObject  {
 
     public int getStartColumn() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStartColumn = null;
         try {
-            return (int)classInstance.Get("StartColumn");
+            retObjectStartColumn = classInstance.Get("StartColumn");
+            return (int)retObjectStartColumn;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectStartColumn_ToString = retObjectStartColumn == null ? "null" : retObjectStartColumn.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectStartColumnNumber = (java.lang.Number)retObjectStartColumn;
+                return retObjectStartColumnNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectStartColumn != null ? retObjectStartColumn.getClass() : "null", retObjectStartColumn_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -209,7 +242,7 @@ public class ActivitySymbol extends NetObject  {
 
     public void setStartColumn(int StartColumn) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("StartColumn", StartColumn);
         } catch (JCNativeException jcne) {
@@ -219,9 +252,20 @@ public class ActivitySymbol extends NetObject  {
 
     public int getStartLine() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStartLine = null;
         try {
-            return (int)classInstance.Get("StartLine");
+            retObjectStartLine = classInstance.Get("StartLine");
+            return (int)retObjectStartLine;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectStartLine_ToString = retObjectStartLine == null ? "null" : retObjectStartLine.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectStartLineNumber = (java.lang.Number)retObjectStartLine;
+                return retObjectStartLineNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectStartLine != null ? retObjectStartLine.getClass() : "null", retObjectStartLine_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -229,7 +273,7 @@ public class ActivitySymbol extends NetObject  {
 
     public void setStartLine(int StartLine) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("StartLine", StartLine);
         } catch (JCNativeException jcne) {
@@ -239,9 +283,13 @@ public class ActivitySymbol extends NetObject  {
 
     public java.lang.String getId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectId = null;
         try {
-            return (java.lang.String)classInstance.Get("Id");
+            retObjectId = classInstance.Get("Id");
+            return (java.lang.String)retObjectId;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectId != null ? retObjectId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

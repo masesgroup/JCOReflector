@@ -167,9 +167,13 @@ public class XmlSchemaComplexContent extends XmlSchemaContentModel  {
     
     public boolean getIsMixed() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsMixed = null;
         try {
-            return (boolean)classInstance.Get("IsMixed");
+            retObjectIsMixed = classInstance.Get("IsMixed");
+            return (boolean)retObjectIsMixed;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsMixed != null ? retObjectIsMixed.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,7 +181,7 @@ public class XmlSchemaComplexContent extends XmlSchemaContentModel  {
 
     public void setIsMixed(boolean IsMixed) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsMixed", IsMixed);
         } catch (JCNativeException jcne) {

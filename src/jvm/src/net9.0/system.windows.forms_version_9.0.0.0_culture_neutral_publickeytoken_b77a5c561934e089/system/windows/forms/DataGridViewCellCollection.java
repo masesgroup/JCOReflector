@@ -169,9 +169,13 @@ public class DataGridViewCellCollection extends BaseCollection  {
     
     public boolean Contains(DataGridViewCell dataGridViewCell) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContains = null;
         try {
-            return (boolean)classInstance.Invoke("Contains", dataGridViewCell == null ? null : dataGridViewCell.getJCOInstance());
+            retObjectContains = classInstance.Invoke("Contains", dataGridViewCell == null ? null : dataGridViewCell.getJCOInstance());
+            return (boolean)retObjectContains;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectContains != null ? retObjectContains.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,9 +183,20 @@ public class DataGridViewCellCollection extends BaseCollection  {
 
     public int Add(DataGridViewCell dataGridViewCell) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAdd = null;
         try {
-            return (int)classInstance.Invoke("Add", dataGridViewCell == null ? null : dataGridViewCell.getJCOInstance());
+            retObjectAdd = classInstance.Invoke("Add", dataGridViewCell == null ? null : dataGridViewCell.getJCOInstance());
+            return (int)retObjectAdd;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectAdd_ToString = retObjectAdd == null ? "null" : retObjectAdd.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectAddNumber = (java.lang.Number)retObjectAdd;
+                return retObjectAddNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectAdd != null ? retObjectAdd.getClass() : "null", retObjectAdd_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -189,9 +204,20 @@ public class DataGridViewCellCollection extends BaseCollection  {
 
     public int IndexOf(DataGridViewCell dataGridViewCell) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIndexOf = null;
         try {
-            return (int)classInstance.Invoke("IndexOf", dataGridViewCell == null ? null : dataGridViewCell.getJCOInstance());
+            retObjectIndexOf = classInstance.Invoke("IndexOf", dataGridViewCell == null ? null : dataGridViewCell.getJCOInstance());
+            return (int)retObjectIndexOf;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectIndexOf_ToString = retObjectIndexOf == null ? "null" : retObjectIndexOf.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectIndexOfNumber = (java.lang.Number)retObjectIndexOf;
+                return retObjectIndexOfNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectIndexOf != null ? retObjectIndexOf.getClass() : "null", retObjectIndexOf_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -199,7 +225,7 @@ public class DataGridViewCellCollection extends BaseCollection  {
 
     public void AddRange(DataGridViewCell... dataGridViewCells) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddRange", (java.lang.Object)toObjectFromArray(dataGridViewCells));
         } catch (JCNativeException jcne) {
@@ -209,7 +235,7 @@ public class DataGridViewCellCollection extends BaseCollection  {
 
     public void Clear() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Clear");
         } catch (JCNativeException jcne) {
@@ -219,7 +245,7 @@ public class DataGridViewCellCollection extends BaseCollection  {
 
     public void CopyTo(DataGridViewCell[] array, int index) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CopyTo", toObjectFromArray(array), index);
         } catch (JCNativeException jcne) {
@@ -229,7 +255,7 @@ public class DataGridViewCellCollection extends BaseCollection  {
 
     public void Insert(int index, DataGridViewCell dataGridViewCell) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Insert", index, dataGridViewCell == null ? null : dataGridViewCell.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -239,7 +265,7 @@ public class DataGridViewCellCollection extends BaseCollection  {
 
     public void Remove(DataGridViewCell cell) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidCastException, system.componentmodel.InvalidEnumArgumentException, system.TypeLoadException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Remove", cell == null ? null : cell.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -249,7 +275,7 @@ public class DataGridViewCellCollection extends BaseCollection  {
 
     public void RemoveAt(int index) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidCastException, system.componentmodel.InvalidEnumArgumentException, system.FormatException, system.TypeLoadException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RemoveAt", index);
         } catch (JCNativeException jcne) {
@@ -263,7 +289,7 @@ public class DataGridViewCellCollection extends BaseCollection  {
      */
     @Deprecated 
     public boolean Contains(NetObject value) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIList to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIList to obtain the full interface.");
     }
 
     /**
@@ -272,7 +298,7 @@ public class DataGridViewCellCollection extends BaseCollection  {
      */
     @Deprecated 
     public int Add(NetObject value) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIList to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIList to obtain the full interface.");
     }
 
     /**
@@ -281,7 +307,7 @@ public class DataGridViewCellCollection extends BaseCollection  {
      */
     @Deprecated 
     public int IndexOf(NetObject value) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIList to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIList to obtain the full interface.");
     }
 
     /**
@@ -290,7 +316,7 @@ public class DataGridViewCellCollection extends BaseCollection  {
      */
     @Deprecated 
     public void Insert(int index, NetObject value) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIList to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIList to obtain the full interface.");
     }
 
     /**
@@ -299,7 +325,7 @@ public class DataGridViewCellCollection extends BaseCollection  {
      */
     @Deprecated 
     public void Remove(NetObject value) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIList to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIList to obtain the full interface.");
     }
 
 
@@ -313,7 +339,7 @@ public class DataGridViewCellCollection extends BaseCollection  {
 
     public void addCollectionChanged(CollectionChangeEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("CollectionChanged", handler);
         } catch (JCNativeException jcne) {
@@ -323,7 +349,7 @@ public class DataGridViewCellCollection extends BaseCollection  {
 
     public void removeCollectionChanged(CollectionChangeEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("CollectionChanged", handler);
         } catch (JCNativeException jcne) {

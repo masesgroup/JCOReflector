@@ -166,9 +166,13 @@ public class GenerateDeploymentManifest extends GenerateManifestBase  {
     
     public boolean getCreateDesktopShortcut() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateDesktopShortcut = null;
         try {
-            return (boolean)classInstance.Get("CreateDesktopShortcut");
+            retObjectCreateDesktopShortcut = classInstance.Get("CreateDesktopShortcut");
+            return (boolean)retObjectCreateDesktopShortcut;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCreateDesktopShortcut != null ? retObjectCreateDesktopShortcut.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,7 +180,7 @@ public class GenerateDeploymentManifest extends GenerateManifestBase  {
 
     public void setCreateDesktopShortcut(boolean CreateDesktopShortcut) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CreateDesktopShortcut", CreateDesktopShortcut);
         } catch (JCNativeException jcne) {
@@ -186,9 +190,13 @@ public class GenerateDeploymentManifest extends GenerateManifestBase  {
 
     public boolean getDisallowUrlActivation() throws Throwable, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDisallowUrlActivation = null;
         try {
-            return (boolean)classInstance.Get("DisallowUrlActivation");
+            retObjectDisallowUrlActivation = classInstance.Get("DisallowUrlActivation");
+            return (boolean)retObjectDisallowUrlActivation;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectDisallowUrlActivation != null ? retObjectDisallowUrlActivation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,7 +204,7 @@ public class GenerateDeploymentManifest extends GenerateManifestBase  {
 
     public void setDisallowUrlActivation(boolean DisallowUrlActivation) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DisallowUrlActivation", DisallowUrlActivation);
         } catch (JCNativeException jcne) {
@@ -206,9 +214,13 @@ public class GenerateDeploymentManifest extends GenerateManifestBase  {
 
     public boolean getInstall() throws Throwable, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInstall = null;
         try {
-            return (boolean)classInstance.Get("Install");
+            retObjectInstall = classInstance.Get("Install");
+            return (boolean)retObjectInstall;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectInstall != null ? retObjectInstall.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -216,7 +228,7 @@ public class GenerateDeploymentManifest extends GenerateManifestBase  {
 
     public void setInstall(boolean Install) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Install", Install);
         } catch (JCNativeException jcne) {
@@ -226,9 +238,13 @@ public class GenerateDeploymentManifest extends GenerateManifestBase  {
 
     public boolean getMapFileExtensions() throws Throwable, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMapFileExtensions = null;
         try {
-            return (boolean)classInstance.Get("MapFileExtensions");
+            retObjectMapFileExtensions = classInstance.Get("MapFileExtensions");
+            return (boolean)retObjectMapFileExtensions;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectMapFileExtensions != null ? retObjectMapFileExtensions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -236,7 +252,7 @@ public class GenerateDeploymentManifest extends GenerateManifestBase  {
 
     public void setMapFileExtensions(boolean MapFileExtensions) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MapFileExtensions", MapFileExtensions);
         } catch (JCNativeException jcne) {
@@ -246,9 +262,13 @@ public class GenerateDeploymentManifest extends GenerateManifestBase  {
 
     public boolean getTrustUrlParameters() throws Throwable, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTrustUrlParameters = null;
         try {
-            return (boolean)classInstance.Get("TrustUrlParameters");
+            retObjectTrustUrlParameters = classInstance.Get("TrustUrlParameters");
+            return (boolean)retObjectTrustUrlParameters;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectTrustUrlParameters != null ? retObjectTrustUrlParameters.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -256,7 +276,7 @@ public class GenerateDeploymentManifest extends GenerateManifestBase  {
 
     public void setTrustUrlParameters(boolean TrustUrlParameters) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TrustUrlParameters", TrustUrlParameters);
         } catch (JCNativeException jcne) {
@@ -266,9 +286,13 @@ public class GenerateDeploymentManifest extends GenerateManifestBase  {
 
     public boolean getUpdateEnabled() throws Throwable, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUpdateEnabled = null;
         try {
-            return (boolean)classInstance.Get("UpdateEnabled");
+            retObjectUpdateEnabled = classInstance.Get("UpdateEnabled");
+            return (boolean)retObjectUpdateEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectUpdateEnabled != null ? retObjectUpdateEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -276,7 +300,7 @@ public class GenerateDeploymentManifest extends GenerateManifestBase  {
 
     public void setUpdateEnabled(boolean UpdateEnabled) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UpdateEnabled", UpdateEnabled);
         } catch (JCNativeException jcne) {
@@ -286,9 +310,20 @@ public class GenerateDeploymentManifest extends GenerateManifestBase  {
 
     public int getUpdateInterval() throws Throwable, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUpdateInterval = null;
         try {
-            return (int)classInstance.Get("UpdateInterval");
+            retObjectUpdateInterval = classInstance.Get("UpdateInterval");
+            return (int)retObjectUpdateInterval;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectUpdateInterval_ToString = retObjectUpdateInterval == null ? "null" : retObjectUpdateInterval.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectUpdateIntervalNumber = (java.lang.Number)retObjectUpdateInterval;
+                return retObjectUpdateIntervalNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectUpdateInterval != null ? retObjectUpdateInterval.getClass() : "null", retObjectUpdateInterval_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -296,7 +331,7 @@ public class GenerateDeploymentManifest extends GenerateManifestBase  {
 
     public void setUpdateInterval(int UpdateInterval) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UpdateInterval", UpdateInterval);
         } catch (JCNativeException jcne) {
@@ -306,9 +341,13 @@ public class GenerateDeploymentManifest extends GenerateManifestBase  {
 
     public java.lang.String getDeploymentUrl() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDeploymentUrl = null;
         try {
-            return (java.lang.String)classInstance.Get("DeploymentUrl");
+            retObjectDeploymentUrl = classInstance.Get("DeploymentUrl");
+            return (java.lang.String)retObjectDeploymentUrl;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDeploymentUrl != null ? retObjectDeploymentUrl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -316,7 +355,7 @@ public class GenerateDeploymentManifest extends GenerateManifestBase  {
 
     public void setDeploymentUrl(java.lang.String DeploymentUrl) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DeploymentUrl", DeploymentUrl);
         } catch (JCNativeException jcne) {
@@ -326,9 +365,13 @@ public class GenerateDeploymentManifest extends GenerateManifestBase  {
 
     public java.lang.String getErrorReportUrl() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectErrorReportUrl = null;
         try {
-            return (java.lang.String)classInstance.Get("ErrorReportUrl");
+            retObjectErrorReportUrl = classInstance.Get("ErrorReportUrl");
+            return (java.lang.String)retObjectErrorReportUrl;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectErrorReportUrl != null ? retObjectErrorReportUrl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -336,7 +379,7 @@ public class GenerateDeploymentManifest extends GenerateManifestBase  {
 
     public void setErrorReportUrl(java.lang.String ErrorReportUrl) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ErrorReportUrl", ErrorReportUrl);
         } catch (JCNativeException jcne) {
@@ -346,9 +389,13 @@ public class GenerateDeploymentManifest extends GenerateManifestBase  {
 
     public java.lang.String getMinimumRequiredVersion() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMinimumRequiredVersion = null;
         try {
-            return (java.lang.String)classInstance.Get("MinimumRequiredVersion");
+            retObjectMinimumRequiredVersion = classInstance.Get("MinimumRequiredVersion");
+            return (java.lang.String)retObjectMinimumRequiredVersion;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectMinimumRequiredVersion != null ? retObjectMinimumRequiredVersion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -356,7 +403,7 @@ public class GenerateDeploymentManifest extends GenerateManifestBase  {
 
     public void setMinimumRequiredVersion(java.lang.String MinimumRequiredVersion) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MinimumRequiredVersion", MinimumRequiredVersion);
         } catch (JCNativeException jcne) {
@@ -366,9 +413,13 @@ public class GenerateDeploymentManifest extends GenerateManifestBase  {
 
     public java.lang.String getProduct() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProduct = null;
         try {
-            return (java.lang.String)classInstance.Get("Product");
+            retObjectProduct = classInstance.Get("Product");
+            return (java.lang.String)retObjectProduct;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectProduct != null ? retObjectProduct.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -376,7 +427,7 @@ public class GenerateDeploymentManifest extends GenerateManifestBase  {
 
     public void setProduct(java.lang.String Product) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Product", Product);
         } catch (JCNativeException jcne) {
@@ -386,9 +437,13 @@ public class GenerateDeploymentManifest extends GenerateManifestBase  {
 
     public java.lang.String getPublisher() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPublisher = null;
         try {
-            return (java.lang.String)classInstance.Get("Publisher");
+            retObjectPublisher = classInstance.Get("Publisher");
+            return (java.lang.String)retObjectPublisher;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectPublisher != null ? retObjectPublisher.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -396,7 +451,7 @@ public class GenerateDeploymentManifest extends GenerateManifestBase  {
 
     public void setPublisher(java.lang.String Publisher) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Publisher", Publisher);
         } catch (JCNativeException jcne) {
@@ -406,9 +461,13 @@ public class GenerateDeploymentManifest extends GenerateManifestBase  {
 
     public java.lang.String getSuiteName() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSuiteName = null;
         try {
-            return (java.lang.String)classInstance.Get("SuiteName");
+            retObjectSuiteName = classInstance.Get("SuiteName");
+            return (java.lang.String)retObjectSuiteName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSuiteName != null ? retObjectSuiteName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -416,7 +475,7 @@ public class GenerateDeploymentManifest extends GenerateManifestBase  {
 
     public void setSuiteName(java.lang.String SuiteName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SuiteName", SuiteName);
         } catch (JCNativeException jcne) {
@@ -426,9 +485,13 @@ public class GenerateDeploymentManifest extends GenerateManifestBase  {
 
     public java.lang.String getSupportUrl() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSupportUrl = null;
         try {
-            return (java.lang.String)classInstance.Get("SupportUrl");
+            retObjectSupportUrl = classInstance.Get("SupportUrl");
+            return (java.lang.String)retObjectSupportUrl;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSupportUrl != null ? retObjectSupportUrl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -436,7 +499,7 @@ public class GenerateDeploymentManifest extends GenerateManifestBase  {
 
     public void setSupportUrl(java.lang.String SupportUrl) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SupportUrl", SupportUrl);
         } catch (JCNativeException jcne) {
@@ -446,9 +509,13 @@ public class GenerateDeploymentManifest extends GenerateManifestBase  {
 
     public java.lang.String getUpdateMode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUpdateMode = null;
         try {
-            return (java.lang.String)classInstance.Get("UpdateMode");
+            retObjectUpdateMode = classInstance.Get("UpdateMode");
+            return (java.lang.String)retObjectUpdateMode;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectUpdateMode != null ? retObjectUpdateMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -456,7 +523,7 @@ public class GenerateDeploymentManifest extends GenerateManifestBase  {
 
     public void setUpdateMode(java.lang.String UpdateMode) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UpdateMode", UpdateMode);
         } catch (JCNativeException jcne) {
@@ -466,9 +533,13 @@ public class GenerateDeploymentManifest extends GenerateManifestBase  {
 
     public java.lang.String getUpdateUnit() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUpdateUnit = null;
         try {
-            return (java.lang.String)classInstance.Get("UpdateUnit");
+            retObjectUpdateUnit = classInstance.Get("UpdateUnit");
+            return (java.lang.String)retObjectUpdateUnit;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectUpdateUnit != null ? retObjectUpdateUnit.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -476,7 +547,7 @@ public class GenerateDeploymentManifest extends GenerateManifestBase  {
 
     public void setUpdateUnit(java.lang.String UpdateUnit) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UpdateUnit", UpdateUnit);
         } catch (JCNativeException jcne) {

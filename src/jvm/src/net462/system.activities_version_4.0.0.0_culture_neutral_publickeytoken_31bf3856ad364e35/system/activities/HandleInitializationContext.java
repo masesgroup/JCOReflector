@@ -156,7 +156,7 @@ public class HandleInitializationContext extends NetObject  {
     
     public void UninitializeHandle(Handle handle) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("UninitializeHandle", handle == null ? null : handle.getJCOInstance());
         } catch (JCNativeException jcne) {

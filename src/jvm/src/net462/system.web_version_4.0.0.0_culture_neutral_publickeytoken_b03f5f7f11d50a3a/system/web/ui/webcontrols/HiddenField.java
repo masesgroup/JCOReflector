@@ -166,7 +166,7 @@ public class HiddenField extends Control implements system.web.ui.IPostBackDataH
     
     public void Focus() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Focus");
         } catch (JCNativeException jcne) {
@@ -180,7 +180,7 @@ public class HiddenField extends Control implements system.web.ui.IPostBackDataH
      */
     @Deprecated 
     public boolean LoadPostData(java.lang.String postDataKey, NameValueCollection postCollection) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIPostBackDataHandler to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIPostBackDataHandler to obtain the full interface.");
     }
 
     /**
@@ -189,7 +189,7 @@ public class HiddenField extends Control implements system.web.ui.IPostBackDataH
      */
     @Deprecated 
     public void RaisePostDataChangedEvent() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIPostBackDataHandler to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIPostBackDataHandler to obtain the full interface.");
     }
 
 
@@ -198,9 +198,13 @@ public class HiddenField extends Control implements system.web.ui.IPostBackDataH
     
     public java.lang.String getValue() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValue = null;
         try {
-            return (java.lang.String)classInstance.Get("Value");
+            retObjectValue = classInstance.Get("Value");
+            return (java.lang.String)retObjectValue;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectValue != null ? retObjectValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -208,7 +212,7 @@ public class HiddenField extends Control implements system.web.ui.IPostBackDataH
 
     public void setValue(java.lang.String Value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Value", Value);
         } catch (JCNativeException jcne) {
@@ -223,7 +227,7 @@ public class HiddenField extends Control implements system.web.ui.IPostBackDataH
 
     public void addValueChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ValueChanged", handler);
         } catch (JCNativeException jcne) {
@@ -233,7 +237,7 @@ public class HiddenField extends Control implements system.web.ui.IPostBackDataH
 
     public void removeValueChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ValueChanged", handler);
         } catch (JCNativeException jcne) {

@@ -172,10 +172,14 @@ public class GeometryHitTestResult extends HitTestResult  {
     
     public IntersectionDetail getIntersectionDetail() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIntersectionDetail = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("IntersectionDetail");
+            retObjectIntersectionDetail = classInstance.Get("IntersectionDetail");
+            JCObject val = (JCObject)retObjectIntersectionDetail;
             return new IntersectionDetail(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIntersectionDetail != null ? retObjectIntersectionDetail.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,10 +187,14 @@ public class GeometryHitTestResult extends HitTestResult  {
 
     public Visual getVisualHitNewGeometryHitTestResult() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVisualHit = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("VisualHit");
+            retObjectVisualHit = classInstance.Get("VisualHit");
+            JCObject val = (JCObject)retObjectVisualHit;
             return new Visual(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVisualHit != null ? retObjectVisualHit.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

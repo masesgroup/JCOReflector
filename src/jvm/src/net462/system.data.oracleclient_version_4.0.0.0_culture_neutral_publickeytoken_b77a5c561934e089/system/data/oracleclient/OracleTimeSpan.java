@@ -219,9 +219,20 @@ public class OracleTimeSpan extends ValueType  {
     
     public int CompareTo(NetObject obj) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCompareTo = null;
         try {
-            return (int)classInstance.Invoke("CompareTo", obj == null ? null : obj.getJCOInstance());
+            retObjectCompareTo = classInstance.Invoke("CompareTo", obj == null ? null : obj.getJCOInstance());
+            return (int)retObjectCompareTo;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCompareTo_ToString = retObjectCompareTo == null ? "null" : retObjectCompareTo.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectCompareToNumber = (java.lang.Number)retObjectCompareTo;
+                return retObjectCompareToNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCompareTo != null ? retObjectCompareTo.getClass() : "null", retObjectCompareTo_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -229,10 +240,14 @@ public class OracleTimeSpan extends ValueType  {
 
     public static OracleBoolean Equals(OracleTimeSpan x, OracleTimeSpan y) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectEquals = null;
         try {
-            JCObject objEquals = (JCObject)classType.Invoke("Equals", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            retObjectEquals = classType.Invoke("Equals", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            JCObject objEquals = (JCObject)retObjectEquals;
             return new OracleBoolean(objEquals);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEquals != null ? retObjectEquals.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -240,10 +255,14 @@ public class OracleTimeSpan extends ValueType  {
 
     public static OracleBoolean GreaterThan(OracleTimeSpan x, OracleTimeSpan y) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGreaterThan = null;
         try {
-            JCObject objGreaterThan = (JCObject)classType.Invoke("GreaterThan", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            retObjectGreaterThan = classType.Invoke("GreaterThan", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            JCObject objGreaterThan = (JCObject)retObjectGreaterThan;
             return new OracleBoolean(objGreaterThan);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGreaterThan != null ? retObjectGreaterThan.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -251,10 +270,14 @@ public class OracleTimeSpan extends ValueType  {
 
     public static OracleBoolean GreaterThanOrEqual(OracleTimeSpan x, OracleTimeSpan y) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGreaterThanOrEqual = null;
         try {
-            JCObject objGreaterThanOrEqual = (JCObject)classType.Invoke("GreaterThanOrEqual", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            retObjectGreaterThanOrEqual = classType.Invoke("GreaterThanOrEqual", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            JCObject objGreaterThanOrEqual = (JCObject)retObjectGreaterThanOrEqual;
             return new OracleBoolean(objGreaterThanOrEqual);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGreaterThanOrEqual != null ? retObjectGreaterThanOrEqual.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -262,10 +285,14 @@ public class OracleTimeSpan extends ValueType  {
 
     public static OracleBoolean LessThan(OracleTimeSpan x, OracleTimeSpan y) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLessThan = null;
         try {
-            JCObject objLessThan = (JCObject)classType.Invoke("LessThan", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            retObjectLessThan = classType.Invoke("LessThan", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            JCObject objLessThan = (JCObject)retObjectLessThan;
             return new OracleBoolean(objLessThan);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLessThan != null ? retObjectLessThan.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -273,10 +300,14 @@ public class OracleTimeSpan extends ValueType  {
 
     public static OracleBoolean LessThanOrEqual(OracleTimeSpan x, OracleTimeSpan y) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLessThanOrEqual = null;
         try {
-            JCObject objLessThanOrEqual = (JCObject)classType.Invoke("LessThanOrEqual", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            retObjectLessThanOrEqual = classType.Invoke("LessThanOrEqual", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            JCObject objLessThanOrEqual = (JCObject)retObjectLessThanOrEqual;
             return new OracleBoolean(objLessThanOrEqual);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLessThanOrEqual != null ? retObjectLessThanOrEqual.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -284,10 +315,14 @@ public class OracleTimeSpan extends ValueType  {
 
     public static OracleBoolean NotEquals(OracleTimeSpan x, OracleTimeSpan y) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectNotEquals = null;
         try {
-            JCObject objNotEquals = (JCObject)classType.Invoke("NotEquals", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            retObjectNotEquals = classType.Invoke("NotEquals", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            JCObject objNotEquals = (JCObject)retObjectNotEquals;
             return new OracleBoolean(objNotEquals);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNotEquals != null ? retObjectNotEquals.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -295,10 +330,14 @@ public class OracleTimeSpan extends ValueType  {
 
     public static OracleTimeSpan Parse(java.lang.String s) throws Throwable, system.ArgumentNullException, system.FormatException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectParse = null;
         try {
-            JCObject objParse = (JCObject)classType.Invoke("Parse", s);
+            retObjectParse = classType.Invoke("Parse", s);
+            JCObject objParse = (JCObject)retObjectParse;
             return new OracleTimeSpan(objParse);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParse != null ? retObjectParse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -310,9 +349,13 @@ public class OracleTimeSpan extends ValueType  {
     
     public boolean getIsNull() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsNull = null;
         try {
-            return (boolean)classInstance.Get("IsNull");
+            retObjectIsNull = classInstance.Get("IsNull");
+            return (boolean)retObjectIsNull;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsNull != null ? retObjectIsNull.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -320,9 +363,20 @@ public class OracleTimeSpan extends ValueType  {
 
     public int getDays() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDays = null;
         try {
-            return (int)classInstance.Get("Days");
+            retObjectDays = classInstance.Get("Days");
+            return (int)retObjectDays;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDays_ToString = retObjectDays == null ? "null" : retObjectDays.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectDaysNumber = (java.lang.Number)retObjectDays;
+                return retObjectDaysNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectDays != null ? retObjectDays.getClass() : "null", retObjectDays_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -330,9 +384,20 @@ public class OracleTimeSpan extends ValueType  {
 
     public int getHours() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHours = null;
         try {
-            return (int)classInstance.Get("Hours");
+            retObjectHours = classInstance.Get("Hours");
+            return (int)retObjectHours;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectHours_ToString = retObjectHours == null ? "null" : retObjectHours.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectHoursNumber = (java.lang.Number)retObjectHours;
+                return retObjectHoursNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectHours != null ? retObjectHours.getClass() : "null", retObjectHours_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -340,9 +405,20 @@ public class OracleTimeSpan extends ValueType  {
 
     public int getMilliseconds() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMilliseconds = null;
         try {
-            return (int)classInstance.Get("Milliseconds");
+            retObjectMilliseconds = classInstance.Get("Milliseconds");
+            return (int)retObjectMilliseconds;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMilliseconds_ToString = retObjectMilliseconds == null ? "null" : retObjectMilliseconds.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMillisecondsNumber = (java.lang.Number)retObjectMilliseconds;
+                return retObjectMillisecondsNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMilliseconds != null ? retObjectMilliseconds.getClass() : "null", retObjectMilliseconds_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -350,9 +426,20 @@ public class OracleTimeSpan extends ValueType  {
 
     public int getMinutes() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMinutes = null;
         try {
-            return (int)classInstance.Get("Minutes");
+            retObjectMinutes = classInstance.Get("Minutes");
+            return (int)retObjectMinutes;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMinutes_ToString = retObjectMinutes == null ? "null" : retObjectMinutes.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMinutesNumber = (java.lang.Number)retObjectMinutes;
+                return retObjectMinutesNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMinutes != null ? retObjectMinutes.getClass() : "null", retObjectMinutes_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -360,9 +447,20 @@ public class OracleTimeSpan extends ValueType  {
 
     public int getSeconds() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSeconds = null;
         try {
-            return (int)classInstance.Get("Seconds");
+            retObjectSeconds = classInstance.Get("Seconds");
+            return (int)retObjectSeconds;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSeconds_ToString = retObjectSeconds == null ? "null" : retObjectSeconds.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectSecondsNumber = (java.lang.Number)retObjectSeconds;
+                return retObjectSecondsNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectSeconds != null ? retObjectSeconds.getClass() : "null", retObjectSeconds_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -370,10 +468,14 @@ public class OracleTimeSpan extends ValueType  {
 
     public TimeSpan getValue() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValue = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Value");
+            retObjectValue = classInstance.Get("Value");
+            JCObject val = (JCObject)retObjectValue;
             return new TimeSpan(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectValue != null ? retObjectValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

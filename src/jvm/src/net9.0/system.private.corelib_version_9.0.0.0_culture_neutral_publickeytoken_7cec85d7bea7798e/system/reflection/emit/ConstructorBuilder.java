@@ -159,10 +159,14 @@ public class ConstructorBuilder extends ConstructorInfo  {
     
     public ILGenerator GetILGenerator() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetILGenerator = null;
         try {
-            JCObject objGetILGenerator = (JCObject)classInstance.Invoke("GetILGenerator");
+            retObjectGetILGenerator = classInstance.Invoke("GetILGenerator");
+            JCObject objGetILGenerator = (JCObject)retObjectGetILGenerator;
             return new ILGenerator(objGetILGenerator);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetILGenerator != null ? retObjectGetILGenerator.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,10 +174,14 @@ public class ConstructorBuilder extends ConstructorInfo  {
 
     public ILGenerator GetILGenerator(int streamSize) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetILGenerator = null;
         try {
-            JCObject objGetILGenerator = (JCObject)classInstance.Invoke("GetILGenerator", streamSize);
+            retObjectGetILGenerator = classInstance.Invoke("GetILGenerator", streamSize);
+            JCObject objGetILGenerator = (JCObject)retObjectGetILGenerator;
             return new ILGenerator(objGetILGenerator);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetILGenerator != null ? retObjectGetILGenerator.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,10 +189,14 @@ public class ConstructorBuilder extends ConstructorInfo  {
 
     public ParameterBuilder DefineParameter(int iSequence, ParameterAttributes attributes, java.lang.String strParamName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDefineParameter = null;
         try {
-            JCObject objDefineParameter = (JCObject)classInstance.Invoke("DefineParameter", iSequence, attributes == null ? null : attributes.getJCOInstance(), strParamName);
+            retObjectDefineParameter = classInstance.Invoke("DefineParameter", iSequence, attributes == null ? null : attributes.getJCOInstance(), strParamName);
+            JCObject objDefineParameter = (JCObject)retObjectDefineParameter;
             return new ParameterBuilder(objDefineParameter);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefineParameter != null ? retObjectDefineParameter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,7 +204,7 @@ public class ConstructorBuilder extends ConstructorInfo  {
 
     public void SetCustomAttribute(ConstructorInfo con, byte[] binaryAttribute) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetCustomAttribute", con == null ? null : con.getJCOInstance(), binaryAttribute);
         } catch (JCNativeException jcne) {
@@ -202,7 +214,7 @@ public class ConstructorBuilder extends ConstructorInfo  {
 
     public void SetCustomAttribute(ConstructorInfo dupParam0, JCORefOut dupParam1) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetCustomAttribute", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -212,7 +224,7 @@ public class ConstructorBuilder extends ConstructorInfo  {
 
     public void SetCustomAttribute(CustomAttributeBuilder customBuilder) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetCustomAttribute", customBuilder == null ? null : customBuilder.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -222,7 +234,7 @@ public class ConstructorBuilder extends ConstructorInfo  {
 
     public void SetImplementationFlags(MethodImplAttributes attributes) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetImplementationFlags", attributes == null ? null : attributes.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -236,9 +248,13 @@ public class ConstructorBuilder extends ConstructorInfo  {
     
     public boolean getInitLocals() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInitLocals = null;
         try {
-            return (boolean)classInstance.Get("InitLocals");
+            retObjectInitLocals = classInstance.Get("InitLocals");
+            return (boolean)retObjectInitLocals;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectInitLocals != null ? retObjectInitLocals.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -246,7 +262,7 @@ public class ConstructorBuilder extends ConstructorInfo  {
 
     public void setInitLocals(boolean InitLocals) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("InitLocals", InitLocals);
         } catch (JCNativeException jcne) {

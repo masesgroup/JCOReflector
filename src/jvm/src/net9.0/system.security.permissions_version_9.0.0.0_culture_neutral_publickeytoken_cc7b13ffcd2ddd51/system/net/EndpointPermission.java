@@ -160,9 +160,20 @@ public class EndpointPermission extends NetObject  {
     
     public int getPort() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPort = null;
         try {
-            return (int)classInstance.Get("Port");
+            retObjectPort = classInstance.Get("Port");
+            return (int)retObjectPort;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectPort_ToString = retObjectPort == null ? "null" : retObjectPort.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectPortNumber = (java.lang.Number)retObjectPort;
+                return retObjectPortNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectPort != null ? retObjectPort.getClass() : "null", retObjectPort_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,10 +181,14 @@ public class EndpointPermission extends NetObject  {
 
     public TransportType getTransport() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTransport = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Transport");
+            retObjectTransport = classInstance.Get("Transport");
+            JCObject val = (JCObject)retObjectTransport;
             return new TransportType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTransport != null ? retObjectTransport.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,9 +196,13 @@ public class EndpointPermission extends NetObject  {
 
     public java.lang.String getHostname() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHostname = null;
         try {
-            return (java.lang.String)classInstance.Get("Hostname");
+            retObjectHostname = classInstance.Get("Hostname");
+            return (java.lang.String)retObjectHostname;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectHostname != null ? retObjectHostname.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

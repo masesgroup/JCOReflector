@@ -297,7 +297,7 @@ public class TransactionScope extends NetObject implements AutoCloseable {
     
     public void Complete() throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OverflowException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.ArgumentNullException, system.ObjectDisposedException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Complete");
         } catch (JCNativeException jcne) {
@@ -307,7 +307,7 @@ public class TransactionScope extends NetObject implements AutoCloseable {
 
     public void Dispose() throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OverflowException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.transactions.TransactionException, system.threading.LockRecursionException, system.threading.AbandonedMutexException, system.threading.SynchronizationLockException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
@@ -318,7 +318,7 @@ public class TransactionScope extends NetObject implements AutoCloseable {
     public void close() throws Exception {
         try {
             if (classInstance == null)
-                throw new UnsupportedOperationException("classInstance is null.");
+                throw new java.lang.UnsupportedOperationException("classInstance is null.");
             try {
                 classInstance.Invoke("Dispose");
             }

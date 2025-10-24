@@ -167,9 +167,13 @@ public class SqlMembershipProvider extends MembershipProvider  {
     
     public boolean ChangePassword(java.lang.String username, java.lang.String oldPassword, java.lang.String newPassword) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.NullReferenceException, system.MemberAccessException, system.PlatformNotSupportedException, system.NotSupportedException, system.componentmodel.Win32Exception, system.configuration.provider.ProviderException, system.web.HttpException, system.io.IOException, system.io.PathTooLongException, system.FormatException, system.web.management.SqlExecutionException, system.security.SecurityException, system.ApplicationException, system.configuration.ConfigurationErrorsException, system.security.cryptography.CryptographicException, system.OutOfMemoryException, system.OverflowException, system.RankException, system.web.security.MembershipPasswordException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectChangePassword = null;
         try {
-            return (boolean)classInstance.Invoke("ChangePassword", username, oldPassword, newPassword);
+            retObjectChangePassword = classInstance.Invoke("ChangePassword", username, oldPassword, newPassword);
+            return (boolean)retObjectChangePassword;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectChangePassword != null ? retObjectChangePassword.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,9 +181,13 @@ public class SqlMembershipProvider extends MembershipProvider  {
 
     public boolean ChangePasswordQuestionAndAnswer(java.lang.String username, java.lang.String password, java.lang.String newPasswordQuestion, java.lang.String newPasswordAnswer) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.NullReferenceException, system.MemberAccessException, system.PlatformNotSupportedException, system.NotSupportedException, system.componentmodel.Win32Exception, system.configuration.provider.ProviderException, system.web.HttpException, system.io.IOException, system.io.PathTooLongException, system.FormatException, system.web.management.SqlExecutionException, system.security.SecurityException, system.ApplicationException, system.configuration.ConfigurationErrorsException, system.security.cryptography.CryptographicException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectChangePasswordQuestionAndAnswer = null;
         try {
-            return (boolean)classInstance.Invoke("ChangePasswordQuestionAndAnswer", username, password, newPasswordQuestion, newPasswordAnswer);
+            retObjectChangePasswordQuestionAndAnswer = classInstance.Invoke("ChangePasswordQuestionAndAnswer", username, password, newPasswordQuestion, newPasswordAnswer);
+            return (boolean)retObjectChangePasswordQuestionAndAnswer;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectChangePasswordQuestionAndAnswer != null ? retObjectChangePasswordQuestionAndAnswer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,9 +195,13 @@ public class SqlMembershipProvider extends MembershipProvider  {
 
     public boolean DeleteUser(java.lang.String username, boolean deleteAllRelatedData) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.NullReferenceException, system.MemberAccessException, system.io.PathTooLongException, system.PlatformNotSupportedException, system.NotSupportedException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.threading.AbandonedMutexException, system.configuration.provider.ProviderException, system.security.SecurityException, system.reflection.TargetException, system.reflection.TargetParameterCountException, system.web.HttpException, system.io.IOException, system.FormatException, system.web.management.SqlExecutionException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDeleteUser = null;
         try {
-            return (boolean)classInstance.Invoke("DeleteUser", username, deleteAllRelatedData);
+            retObjectDeleteUser = classInstance.Invoke("DeleteUser", username, deleteAllRelatedData);
+            return (boolean)retObjectDeleteUser;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectDeleteUser != null ? retObjectDeleteUser.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,9 +209,13 @@ public class SqlMembershipProvider extends MembershipProvider  {
 
     public boolean UnlockUser(java.lang.String username) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.NullReferenceException, system.MemberAccessException, system.io.PathTooLongException, system.PlatformNotSupportedException, system.NotSupportedException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.threading.AbandonedMutexException, system.configuration.provider.ProviderException, system.security.SecurityException, system.reflection.TargetException, system.reflection.TargetParameterCountException, system.web.HttpException, system.io.IOException, system.FormatException, system.web.management.SqlExecutionException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUnlockUser = null;
         try {
-            return (boolean)classInstance.Invoke("UnlockUser", username);
+            retObjectUnlockUser = classInstance.Invoke("UnlockUser", username);
+            return (boolean)retObjectUnlockUser;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectUnlockUser != null ? retObjectUnlockUser.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -207,9 +223,13 @@ public class SqlMembershipProvider extends MembershipProvider  {
 
     public boolean ValidateUser(java.lang.String username, java.lang.String password) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NullReferenceException, system.PlatformNotSupportedException, system.NotSupportedException, system.componentmodel.Win32Exception, system.MemberAccessException, system.configuration.provider.ProviderException, system.web.HttpException, system.io.IOException, system.io.PathTooLongException, system.FormatException, system.web.management.SqlExecutionException, system.configuration.ConfigurationErrorsException, system.security.cryptography.CryptographicException, system.ObjectDisposedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValidateUser = null;
         try {
-            return (boolean)classInstance.Invoke("ValidateUser", username, password);
+            retObjectValidateUser = classInstance.Invoke("ValidateUser", username, password);
+            return (boolean)retObjectValidateUser;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectValidateUser != null ? retObjectValidateUser.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -217,9 +237,20 @@ public class SqlMembershipProvider extends MembershipProvider  {
 
     public int GetNumberOfUsersOnline() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.MemberAccessException, system.io.PathTooLongException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.NotSupportedException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.threading.AbandonedMutexException, system.configuration.provider.ProviderException, system.security.SecurityException, system.reflection.TargetException, system.reflection.TargetParameterCountException, system.web.HttpException, system.io.IOException, system.FormatException, system.web.management.SqlExecutionException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetNumberOfUsersOnline = null;
         try {
-            return (int)classInstance.Invoke("GetNumberOfUsersOnline");
+            retObjectGetNumberOfUsersOnline = classInstance.Invoke("GetNumberOfUsersOnline");
+            return (int)retObjectGetNumberOfUsersOnline;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetNumberOfUsersOnline_ToString = retObjectGetNumberOfUsersOnline == null ? "null" : retObjectGetNumberOfUsersOnline.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetNumberOfUsersOnlineNumber = (java.lang.Number)retObjectGetNumberOfUsersOnline;
+                return retObjectGetNumberOfUsersOnlineNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetNumberOfUsersOnline != null ? retObjectGetNumberOfUsersOnline.getClass() : "null", retObjectGetNumberOfUsersOnline_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -227,9 +258,13 @@ public class SqlMembershipProvider extends MembershipProvider  {
 
     public java.lang.String GeneratePassword() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGeneratePassword = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GeneratePassword");
+            retObjectGeneratePassword = classInstance.Invoke("GeneratePassword");
+            return (java.lang.String)retObjectGeneratePassword;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGeneratePassword != null ? retObjectGeneratePassword.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -237,9 +272,13 @@ public class SqlMembershipProvider extends MembershipProvider  {
 
     public java.lang.String GetPassword(java.lang.String username, java.lang.String passwordAnswer) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.NullReferenceException, system.MemberAccessException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception, system.configuration.provider.ProviderException, system.web.HttpException, system.io.IOException, system.io.PathTooLongException, system.web.management.SqlExecutionException, system.security.SecurityException, system.ApplicationException, system.configuration.ConfigurationErrorsException, system.security.cryptography.CryptographicException, system.OutOfMemoryException, system.web.security.MembershipPasswordException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPassword = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetPassword", username, passwordAnswer);
+            retObjectGetPassword = classInstance.Invoke("GetPassword", username, passwordAnswer);
+            return (java.lang.String)retObjectGetPassword;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetPassword != null ? retObjectGetPassword.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -247,9 +286,13 @@ public class SqlMembershipProvider extends MembershipProvider  {
 
     public java.lang.String GetUserNameByEmail(java.lang.String email) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.NullReferenceException, system.MemberAccessException, system.io.PathTooLongException, system.PlatformNotSupportedException, system.NotSupportedException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.threading.AbandonedMutexException, system.configuration.provider.ProviderException, system.security.SecurityException, system.reflection.TargetException, system.reflection.TargetParameterCountException, system.web.HttpException, system.io.IOException, system.FormatException, system.web.management.SqlExecutionException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.diagnostics.tracing.EventSourceException, system.collections.generic.KeyNotFoundException, system.data.sqltypes.SqlNullValueException, system.data.sqlclient.SqlException, system.InvalidCastException, system.OverflowException, system.security.cryptography.CryptographicException, system.data.sqltypes.SqlTruncateException, system.threading.tasks.TaskSchedulerException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetUserNameByEmail = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetUserNameByEmail", email);
+            retObjectGetUserNameByEmail = classInstance.Invoke("GetUserNameByEmail", email);
+            return (java.lang.String)retObjectGetUserNameByEmail;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetUserNameByEmail != null ? retObjectGetUserNameByEmail.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -257,9 +300,13 @@ public class SqlMembershipProvider extends MembershipProvider  {
 
     public java.lang.String ResetPassword(java.lang.String username, java.lang.String passwordAnswer) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.NullReferenceException, system.MemberAccessException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.io.PathTooLongException, system.configuration.provider.ProviderException, system.security.SecurityException, system.reflection.TargetParameterCountException, system.web.HttpException, system.io.IOException, system.web.management.SqlExecutionException, system.configuration.ConfigurationException, system.diagnostics.tracing.EventSourceException, system.collections.generic.KeyNotFoundException, system.data.sqltypes.SqlNullValueException, system.InvalidCastException, system.data.sqlclient.SqlException, system.threading.tasks.TaskSchedulerException, system.web.security.MembershipPasswordException, system.ApplicationException, system.configuration.ConfigurationErrorsException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResetPassword = null;
         try {
-            return (java.lang.String)classInstance.Invoke("ResetPassword", username, passwordAnswer);
+            retObjectResetPassword = classInstance.Invoke("ResetPassword", username, passwordAnswer);
+            return (java.lang.String)retObjectResetPassword;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectResetPassword != null ? retObjectResetPassword.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -267,10 +314,14 @@ public class SqlMembershipProvider extends MembershipProvider  {
 
     public MembershipUser CreateUser(java.lang.String username, java.lang.String password, java.lang.String email, java.lang.String passwordQuestion, java.lang.String passwordAnswer, boolean isApproved, NetObject providerUserKey, JCORefOut<MembershipCreateStatus> status) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.OutOfMemoryException, system.FormatException, system.security.SecurityException, system.ApplicationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.configuration.provider.ProviderException, system.security.cryptography.CryptographicException, system.NullReferenceException, system.MemberAccessException, system.io.PathTooLongException, system.OverflowException, system.RankException, system.NotImplementedException, system.text.regularexpressions.RegexMatchTimeoutException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception, system.io.IOException, system.web.management.SqlExecutionException, system.InvalidTimeZoneException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateUser = null;
         try {
-            JCObject objCreateUser = (JCObject)classInstance.Invoke("CreateUser", username, password, email, passwordQuestion, passwordAnswer, isApproved, providerUserKey == null ? null : providerUserKey.getJCOInstance(), status.getJCRefOut());
+            retObjectCreateUser = classInstance.Invoke("CreateUser", username, password, email, passwordQuestion, passwordAnswer, isApproved, providerUserKey == null ? null : providerUserKey.getJCOInstance(), status.getJCRefOut());
+            JCObject objCreateUser = (JCObject)retObjectCreateUser;
             return new MembershipUser(objCreateUser);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateUser != null ? retObjectCreateUser.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -278,10 +329,14 @@ public class SqlMembershipProvider extends MembershipProvider  {
 
     public MembershipUser GetUser(NetObject providerUserKey, boolean userIsOnline) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NullReferenceException, system.MemberAccessException, system.io.PathTooLongException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.configuration.provider.ProviderException, system.security.SecurityException, system.reflection.TargetException, system.reflection.TargetParameterCountException, system.web.HttpException, system.io.IOException, system.FormatException, system.web.management.SqlExecutionException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.diagnostics.tracing.EventSourceException, system.collections.generic.KeyNotFoundException, system.data.sqltypes.SqlNullValueException, system.data.sqlclient.SqlException, system.InvalidCastException, system.OverflowException, system.security.cryptography.CryptographicException, system.IndexOutOfRangeException, system.data.sqltypes.SqlTruncateException, system.threading.tasks.TaskSchedulerException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetUser = null;
         try {
-            JCObject objGetUser = (JCObject)classInstance.Invoke("GetUser", providerUserKey == null ? null : providerUserKey.getJCOInstance(), userIsOnline);
+            retObjectGetUser = classInstance.Invoke("GetUser", providerUserKey == null ? null : providerUserKey.getJCOInstance(), userIsOnline);
+            JCObject objGetUser = (JCObject)retObjectGetUser;
             return new MembershipUser(objGetUser);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetUser != null ? retObjectGetUser.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -289,10 +344,14 @@ public class SqlMembershipProvider extends MembershipProvider  {
 
     public MembershipUser GetUser(java.lang.String username, boolean userIsOnline) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.NullReferenceException, system.MemberAccessException, system.io.PathTooLongException, system.PlatformNotSupportedException, system.NotSupportedException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.threading.AbandonedMutexException, system.configuration.provider.ProviderException, system.security.SecurityException, system.reflection.TargetException, system.reflection.TargetParameterCountException, system.web.HttpException, system.io.IOException, system.FormatException, system.web.management.SqlExecutionException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.diagnostics.tracing.EventSourceException, system.collections.generic.KeyNotFoundException, system.data.sqltypes.SqlNullValueException, system.data.sqlclient.SqlException, system.InvalidCastException, system.OverflowException, system.security.cryptography.CryptographicException, system.data.sqltypes.SqlTruncateException, system.threading.tasks.TaskSchedulerException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetUser = null;
         try {
-            JCObject objGetUser = (JCObject)classInstance.Invoke("GetUser", username, userIsOnline);
+            retObjectGetUser = classInstance.Invoke("GetUser", username, userIsOnline);
+            JCObject objGetUser = (JCObject)retObjectGetUser;
             return new MembershipUser(objGetUser);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetUser != null ? retObjectGetUser.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -300,10 +359,14 @@ public class SqlMembershipProvider extends MembershipProvider  {
 
     public MembershipUserCollection FindUsersByEmail(java.lang.String emailToMatch, int pageIndex, int pageSize, JCORefOut<java.util.concurrent.atomic.AtomicInteger> totalRecords) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.NullReferenceException, system.MemberAccessException, system.io.PathTooLongException, system.PlatformNotSupportedException, system.NotSupportedException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.threading.AbandonedMutexException, system.configuration.provider.ProviderException, system.security.SecurityException, system.reflection.TargetException, system.reflection.TargetParameterCountException, system.web.HttpException, system.io.IOException, system.FormatException, system.web.management.SqlExecutionException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.diagnostics.tracing.EventSourceException, system.collections.generic.KeyNotFoundException, system.data.sqltypes.SqlNullValueException, system.data.sqlclient.SqlException, system.InvalidCastException, system.OverflowException, system.security.cryptography.CryptographicException, system.data.sqltypes.SqlTruncateException, system.threading.tasks.TaskSchedulerException, system.InvalidTimeZoneException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFindUsersByEmail = null;
         try {
-            JCObject objFindUsersByEmail = (JCObject)classInstance.Invoke("FindUsersByEmail", emailToMatch, pageIndex, pageSize, totalRecords.getJCRefOut());
+            retObjectFindUsersByEmail = classInstance.Invoke("FindUsersByEmail", emailToMatch, pageIndex, pageSize, totalRecords.getJCRefOut());
+            JCObject objFindUsersByEmail = (JCObject)retObjectFindUsersByEmail;
             return new MembershipUserCollection(objFindUsersByEmail);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFindUsersByEmail != null ? retObjectFindUsersByEmail.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -311,10 +374,14 @@ public class SqlMembershipProvider extends MembershipProvider  {
 
     public MembershipUserCollection FindUsersByName(java.lang.String usernameToMatch, int pageIndex, int pageSize, JCORefOut<java.util.concurrent.atomic.AtomicInteger> totalRecords) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.NullReferenceException, system.MemberAccessException, system.io.PathTooLongException, system.PlatformNotSupportedException, system.NotSupportedException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.threading.AbandonedMutexException, system.configuration.provider.ProviderException, system.security.SecurityException, system.reflection.TargetException, system.reflection.TargetParameterCountException, system.web.HttpException, system.io.IOException, system.FormatException, system.web.management.SqlExecutionException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.diagnostics.tracing.EventSourceException, system.collections.generic.KeyNotFoundException, system.data.sqltypes.SqlNullValueException, system.data.sqlclient.SqlException, system.InvalidCastException, system.OverflowException, system.security.cryptography.CryptographicException, system.data.sqltypes.SqlTruncateException, system.threading.tasks.TaskSchedulerException, system.InvalidTimeZoneException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFindUsersByName = null;
         try {
-            JCObject objFindUsersByName = (JCObject)classInstance.Invoke("FindUsersByName", usernameToMatch, pageIndex, pageSize, totalRecords.getJCRefOut());
+            retObjectFindUsersByName = classInstance.Invoke("FindUsersByName", usernameToMatch, pageIndex, pageSize, totalRecords.getJCRefOut());
+            JCObject objFindUsersByName = (JCObject)retObjectFindUsersByName;
             return new MembershipUserCollection(objFindUsersByName);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFindUsersByName != null ? retObjectFindUsersByName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -322,10 +389,14 @@ public class SqlMembershipProvider extends MembershipProvider  {
 
     public MembershipUserCollection GetAllUsers(int pageIndex, int pageSize, JCORefOut<java.util.concurrent.atomic.AtomicInteger> totalRecords) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NullReferenceException, system.MemberAccessException, system.io.PathTooLongException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.configuration.provider.ProviderException, system.security.SecurityException, system.reflection.TargetException, system.reflection.TargetParameterCountException, system.web.HttpException, system.io.IOException, system.FormatException, system.web.management.SqlExecutionException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.diagnostics.tracing.EventSourceException, system.collections.generic.KeyNotFoundException, system.data.sqltypes.SqlNullValueException, system.data.sqlclient.SqlException, system.InvalidCastException, system.OverflowException, system.security.cryptography.CryptographicException, system.IndexOutOfRangeException, system.data.sqltypes.SqlTruncateException, system.threading.tasks.TaskSchedulerException, system.InvalidTimeZoneException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetAllUsers = null;
         try {
-            JCObject objGetAllUsers = (JCObject)classInstance.Invoke("GetAllUsers", pageIndex, pageSize, totalRecords.getJCRefOut());
+            retObjectGetAllUsers = classInstance.Invoke("GetAllUsers", pageIndex, pageSize, totalRecords.getJCRefOut());
+            JCObject objGetAllUsers = (JCObject)retObjectGetAllUsers;
             return new MembershipUserCollection(objGetAllUsers);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetAllUsers != null ? retObjectGetAllUsers.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -333,7 +404,7 @@ public class SqlMembershipProvider extends MembershipProvider  {
 
     public void Initialize(java.lang.String name, NameValueCollection config) throws Throwable, system.ArgumentException, system.security.SecurityException, system.ArgumentNullException, system.NotImplementedException, system.NotSupportedException, system.InvalidOperationException, system.MemberAccessException, system.reflection.TargetException, system.reflection.TargetParameterCountException, system.ObjectDisposedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.web.HttpException, system.IndexOutOfRangeException, system.configuration.provider.ProviderException, system.OutOfMemoryException, system.NullReferenceException, system.collections.generic.KeyNotFoundException, system.RankException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception, system.AccessViolationException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Initialize", name, config == null ? null : config.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -343,7 +414,7 @@ public class SqlMembershipProvider extends MembershipProvider  {
 
     public void UpdateUser(MembershipUser user) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.NullReferenceException, system.MemberAccessException, system.io.PathTooLongException, system.PlatformNotSupportedException, system.NotSupportedException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.threading.AbandonedMutexException, system.configuration.provider.ProviderException, system.security.SecurityException, system.reflection.TargetException, system.reflection.TargetParameterCountException, system.web.HttpException, system.io.IOException, system.FormatException, system.web.management.SqlExecutionException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("UpdateUser", user == null ? null : user.getJCOInstance());
         } catch (JCNativeException jcne) {

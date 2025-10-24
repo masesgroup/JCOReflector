@@ -170,9 +170,13 @@ public class DataGridViewAutoSizeModeEventArgs extends EventArgs  {
     
     public boolean getPreviousModeAutoSized() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPreviousModeAutoSized = null;
         try {
-            return (boolean)classInstance.Get("PreviousModeAutoSized");
+            retObjectPreviousModeAutoSized = classInstance.Get("PreviousModeAutoSized");
+            return (boolean)retObjectPreviousModeAutoSized;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectPreviousModeAutoSized != null ? retObjectPreviousModeAutoSized.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

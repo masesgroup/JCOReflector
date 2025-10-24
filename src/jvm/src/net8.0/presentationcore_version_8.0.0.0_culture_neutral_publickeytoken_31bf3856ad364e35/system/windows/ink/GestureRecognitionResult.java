@@ -161,10 +161,14 @@ public class GestureRecognitionResult extends NetObject  {
     
     public ApplicationGesture getApplicationGesture() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectApplicationGesture = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ApplicationGesture");
+            retObjectApplicationGesture = classInstance.Get("ApplicationGesture");
+            JCObject val = (JCObject)retObjectApplicationGesture;
             return new ApplicationGesture(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectApplicationGesture != null ? retObjectApplicationGesture.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,10 +176,14 @@ public class GestureRecognitionResult extends NetObject  {
 
     public RecognitionConfidence getRecognitionConfidence() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRecognitionConfidence = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RecognitionConfidence");
+            retObjectRecognitionConfidence = classInstance.Get("RecognitionConfidence");
+            JCObject val = (JCObject)retObjectRecognitionConfidence;
             return new RecognitionConfidence(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRecognitionConfidence != null ? retObjectRecognitionConfidence.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

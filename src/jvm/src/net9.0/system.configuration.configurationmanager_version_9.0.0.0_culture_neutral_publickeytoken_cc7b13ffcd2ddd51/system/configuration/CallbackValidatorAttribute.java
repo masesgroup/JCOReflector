@@ -167,9 +167,13 @@ public class CallbackValidatorAttribute extends ConfigurationValidatorAttribute 
     
     public java.lang.String getCallbackMethodName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCallbackMethodName = null;
         try {
-            return (java.lang.String)classInstance.Get("CallbackMethodName");
+            retObjectCallbackMethodName = classInstance.Get("CallbackMethodName");
+            return (java.lang.String)retObjectCallbackMethodName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectCallbackMethodName != null ? retObjectCallbackMethodName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,7 +181,7 @@ public class CallbackValidatorAttribute extends ConfigurationValidatorAttribute 
 
     public void setCallbackMethodName(java.lang.String CallbackMethodName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CallbackMethodName", CallbackMethodName);
         } catch (JCNativeException jcne) {
@@ -187,10 +191,14 @@ public class CallbackValidatorAttribute extends ConfigurationValidatorAttribute 
 
     public NetType getType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Type");
+            retObjectType = classInstance.Get("Type");
+            JCObject val = (JCObject)retObjectType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectType != null ? retObjectType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,7 +206,7 @@ public class CallbackValidatorAttribute extends ConfigurationValidatorAttribute 
 
     public void setType(NetType Type) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Type", Type == null ? null : Type.getJCOInstance());
         } catch (JCNativeException jcne) {

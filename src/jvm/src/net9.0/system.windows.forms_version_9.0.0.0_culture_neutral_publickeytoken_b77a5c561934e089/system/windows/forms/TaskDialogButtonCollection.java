@@ -162,10 +162,14 @@ public class TaskDialogButtonCollection extends NetObjectEnumerable  {
     
     public TaskDialogButton Add(java.lang.String text, boolean enabled, boolean allowCloseDialog) throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAdd = null;
         try {
-            JCObject objAdd = (JCObject)classInstance.Invoke("Add", text, enabled, allowCloseDialog);
+            retObjectAdd = classInstance.Invoke("Add", text, enabled, allowCloseDialog);
+            JCObject objAdd = (JCObject)retObjectAdd;
             return new TaskDialogButton(objAdd);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAdd != null ? retObjectAdd.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

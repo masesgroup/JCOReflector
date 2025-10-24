@@ -253,10 +253,14 @@ public class StackTrace extends NetObject  {
     
     public StackFrame GetFrame(int index) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetFrame = null;
         try {
-            JCObject objGetFrame = (JCObject)classInstance.Invoke("GetFrame", index);
+            retObjectGetFrame = classInstance.Invoke("GetFrame", index);
+            JCObject objGetFrame = (JCObject)retObjectGetFrame;
             return new StackFrame(objGetFrame);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetFrame != null ? retObjectGetFrame.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -264,16 +268,20 @@ public class StackTrace extends NetObject  {
 
     public StackFrame[] GetFrames() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetFrames = null;
         try {
             ArrayList<StackFrame> resultingArrayList = new ArrayList<StackFrame>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetFrames");
+            retObjectGetFrames = classInstance.Invoke("GetFrames");
+            JCObject resultingObjects = (JCObject)retObjectGetFrames;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new StackFrame(resultingObject));
             }
             StackFrame[] resultingArray = new StackFrame[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetFrames != null ? retObjectGetFrames.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -285,9 +293,20 @@ public class StackTrace extends NetObject  {
     
     public int getFrameCount() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFrameCount = null;
         try {
-            return (int)classInstance.Get("FrameCount");
+            retObjectFrameCount = classInstance.Get("FrameCount");
+            return (int)retObjectFrameCount;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectFrameCount_ToString = retObjectFrameCount == null ? "null" : retObjectFrameCount.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectFrameCountNumber = (java.lang.Number)retObjectFrameCount;
+                return retObjectFrameCountNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectFrameCount != null ? retObjectFrameCount.getClass() : "null", retObjectFrameCount_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

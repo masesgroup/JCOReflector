@@ -144,10 +144,14 @@ public class IActivationObjectImplementation extends NetObject implements IActiv
     
     public GlobalScope GetGlobalScope() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetGlobalScope = null;
         try {
-            JCObject objGetGlobalScope = (JCObject)classInstance.Invoke("GetGlobalScope");
+            retObjectGetGlobalScope = classInstance.Invoke("GetGlobalScope");
+            JCObject objGetGlobalScope = (JCObject)retObjectGetGlobalScope;
             return new GlobalScope(objGetGlobalScope);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetGlobalScope != null ? retObjectGetGlobalScope.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -155,10 +159,14 @@ public class IActivationObjectImplementation extends NetObject implements IActiv
 
     public NetObject GetDefaultThisObject() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDefaultThisObject = null;
         try {
-            JCObject objGetDefaultThisObject = (JCObject)classInstance.Invoke("GetDefaultThisObject");
+            retObjectGetDefaultThisObject = classInstance.Invoke("GetDefaultThisObject");
+            JCObject objGetDefaultThisObject = (JCObject)retObjectGetDefaultThisObject;
             return new NetObject(objGetDefaultThisObject);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetDefaultThisObject != null ? retObjectGetDefaultThisObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -166,10 +174,14 @@ public class IActivationObjectImplementation extends NetObject implements IActiv
 
     public NetObject GetMemberValue(java.lang.String name, int lexlevel) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetMemberValue = null;
         try {
-            JCObject objGetMemberValue = (JCObject)classInstance.Invoke("GetMemberValue", name, lexlevel);
+            retObjectGetMemberValue = classInstance.Invoke("GetMemberValue", name, lexlevel);
+            JCObject objGetMemberValue = (JCObject)retObjectGetMemberValue;
             return new NetObject(objGetMemberValue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetMemberValue != null ? retObjectGetMemberValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,10 +189,14 @@ public class IActivationObjectImplementation extends NetObject implements IActiv
 
     public FieldInfo GetField(java.lang.String name, int lexLevel) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetField = null;
         try {
-            JCObject objGetField = (JCObject)classInstance.Invoke("GetField", name, lexLevel);
+            retObjectGetField = classInstance.Invoke("GetField", name, lexLevel);
+            JCObject objGetField = (JCObject)retObjectGetField;
             return new FieldInfo(objGetField);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetField != null ? retObjectGetField.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,10 +204,14 @@ public class IActivationObjectImplementation extends NetObject implements IActiv
 
     public FieldInfo GetLocalField(java.lang.String name) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetLocalField = null;
         try {
-            JCObject objGetLocalField = (JCObject)classInstance.Invoke("GetLocalField", name);
+            retObjectGetLocalField = classInstance.Invoke("GetLocalField", name);
+            JCObject objGetLocalField = (JCObject)retObjectGetLocalField;
             return new FieldInfo(objGetLocalField);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetLocalField != null ? retObjectGetLocalField.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

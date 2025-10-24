@@ -168,7 +168,7 @@ public class VisualTarget extends CompositionTarget  {
     
     public void Dispose() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.componentmodel.Win32Exception, system.NotSupportedException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {

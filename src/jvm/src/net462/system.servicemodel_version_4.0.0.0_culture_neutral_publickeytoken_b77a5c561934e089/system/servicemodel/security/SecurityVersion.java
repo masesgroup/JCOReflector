@@ -158,10 +158,14 @@ public class SecurityVersion extends NetObject  {
     
     public static SecurityVersion getWSSecurity10() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectWSSecurity10 = null;
         try {
-            JCObject val = (JCObject)classType.Get("WSSecurity10");
+            retObjectWSSecurity10 = classType.Get("WSSecurity10");
+            JCObject val = (JCObject)retObjectWSSecurity10;
             return new SecurityVersion(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWSSecurity10 != null ? retObjectWSSecurity10.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,10 +173,14 @@ public class SecurityVersion extends NetObject  {
 
     public static SecurityVersion getWSSecurity11() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectWSSecurity11 = null;
         try {
-            JCObject val = (JCObject)classType.Get("WSSecurity11");
+            retObjectWSSecurity11 = classType.Get("WSSecurity11");
+            JCObject val = (JCObject)retObjectWSSecurity11;
             return new SecurityVersion(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWSSecurity11 != null ? retObjectWSSecurity11.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

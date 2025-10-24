@@ -160,10 +160,14 @@ public class WorkflowEnvironment extends NetObject  {
     
     public static Guid getWorkflowInstanceId() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectWorkflowInstanceId = null;
         try {
-            JCObject val = (JCObject)classType.Get("WorkflowInstanceId");
+            retObjectWorkflowInstanceId = classType.Get("WorkflowInstanceId");
+            JCObject val = (JCObject)retObjectWorkflowInstanceId;
             return new Guid(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWorkflowInstanceId != null ? retObjectWorkflowInstanceId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,10 +175,14 @@ public class WorkflowEnvironment extends NetObject  {
 
     public static IWorkBatch getWorkBatch() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectWorkBatch = null;
         try {
-            JCObject val = (JCObject)classType.Get("WorkBatch");
+            retObjectWorkBatch = classType.Get("WorkBatch");
+            JCObject val = (JCObject)retObjectWorkBatch;
             return new IWorkBatchImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWorkBatch != null ? retObjectWorkBatch.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

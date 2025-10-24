@@ -251,9 +251,13 @@ public class XmlSerializer extends NetObject  {
     
     public boolean CanDeserialize(XmlReader xmlReader) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanDeserialize = null;
         try {
-            return (boolean)classInstance.Invoke("CanDeserialize", xmlReader == null ? null : xmlReader.getJCOInstance());
+            retObjectCanDeserialize = classInstance.Invoke("CanDeserialize", xmlReader == null ? null : xmlReader.getJCOInstance());
+            return (boolean)retObjectCanDeserialize;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCanDeserialize != null ? retObjectCanDeserialize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -261,10 +265,14 @@ public class XmlSerializer extends NetObject  {
 
     public NetObject Deserialize(Stream stream) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.FormatException, system.xml.XmlException, system.InvalidOperationException, system.NotSupportedException, system.ArrayTypeMismatchException, system.io.IOException, system.OverflowException, system.NotImplementedException, system.collections.generic.KeyNotFoundException, system.MissingMethodException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDeserialize = null;
         try {
-            JCObject objDeserialize = (JCObject)classInstance.Invoke("Deserialize", stream == null ? null : stream.getJCOInstance());
+            retObjectDeserialize = classInstance.Invoke("Deserialize", stream == null ? null : stream.getJCOInstance());
+            JCObject objDeserialize = (JCObject)retObjectDeserialize;
             return new NetObject(objDeserialize);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDeserialize != null ? retObjectDeserialize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -272,10 +280,14 @@ public class XmlSerializer extends NetObject  {
 
     public NetObject Deserialize(TextReader textReader) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.xml.XmlException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException, system.OverflowException, system.NotImplementedException, system.collections.generic.KeyNotFoundException, system.MissingMethodException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDeserialize = null;
         try {
-            JCObject objDeserialize = (JCObject)classInstance.Invoke("Deserialize", textReader == null ? null : textReader.getJCOInstance());
+            retObjectDeserialize = classInstance.Invoke("Deserialize", textReader == null ? null : textReader.getJCOInstance());
+            JCObject objDeserialize = (JCObject)retObjectDeserialize;
             return new NetObject(objDeserialize);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDeserialize != null ? retObjectDeserialize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -283,10 +295,14 @@ public class XmlSerializer extends NetObject  {
 
     public NetObject Deserialize(XmlReader xmlReader, java.lang.String encodingStyle, XmlDeserializationEvents events) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.NotSupportedException, system.FormatException, system.xml.XmlException, system.OverflowException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.NotImplementedException, system.collections.generic.KeyNotFoundException, system.MissingMethodException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDeserialize = null;
         try {
-            JCObject objDeserialize = (JCObject)classInstance.Invoke("Deserialize", xmlReader == null ? null : xmlReader.getJCOInstance(), encodingStyle, events == null ? null : events.getJCOInstance());
+            retObjectDeserialize = classInstance.Invoke("Deserialize", xmlReader == null ? null : xmlReader.getJCOInstance(), encodingStyle, events == null ? null : events.getJCOInstance());
+            JCObject objDeserialize = (JCObject)retObjectDeserialize;
             return new NetObject(objDeserialize);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDeserialize != null ? retObjectDeserialize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -294,10 +310,14 @@ public class XmlSerializer extends NetObject  {
 
     public NetObject Deserialize(XmlReader xmlReader, java.lang.String encodingStyle) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.NotSupportedException, system.FormatException, system.xml.XmlException, system.OutOfMemoryException, system.OverflowException, system.IndexOutOfRangeException, system.NotImplementedException, system.collections.generic.KeyNotFoundException, system.MissingMethodException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDeserialize = null;
         try {
-            JCObject objDeserialize = (JCObject)classInstance.Invoke("Deserialize", xmlReader == null ? null : xmlReader.getJCOInstance(), encodingStyle);
+            retObjectDeserialize = classInstance.Invoke("Deserialize", xmlReader == null ? null : xmlReader.getJCOInstance(), encodingStyle);
+            JCObject objDeserialize = (JCObject)retObjectDeserialize;
             return new NetObject(objDeserialize);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDeserialize != null ? retObjectDeserialize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -305,10 +325,14 @@ public class XmlSerializer extends NetObject  {
 
     public NetObject Deserialize(XmlReader xmlReader, XmlDeserializationEvents events) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.NotSupportedException, system.FormatException, system.xml.XmlException, system.OutOfMemoryException, system.OverflowException, system.IndexOutOfRangeException, system.NotImplementedException, system.collections.generic.KeyNotFoundException, system.MissingMethodException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDeserialize = null;
         try {
-            JCObject objDeserialize = (JCObject)classInstance.Invoke("Deserialize", xmlReader == null ? null : xmlReader.getJCOInstance(), events == null ? null : events.getJCOInstance());
+            retObjectDeserialize = classInstance.Invoke("Deserialize", xmlReader == null ? null : xmlReader.getJCOInstance(), events == null ? null : events.getJCOInstance());
+            JCObject objDeserialize = (JCObject)retObjectDeserialize;
             return new NetObject(objDeserialize);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDeserialize != null ? retObjectDeserialize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -316,10 +340,14 @@ public class XmlSerializer extends NetObject  {
 
     public NetObject Deserialize(XmlReader xmlReader) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.FormatException, system.xml.XmlException, system.OutOfMemoryException, system.OverflowException, system.NotSupportedException, system.IndexOutOfRangeException, system.NotImplementedException, system.collections.generic.KeyNotFoundException, system.MissingMethodException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDeserialize = null;
         try {
-            JCObject objDeserialize = (JCObject)classInstance.Invoke("Deserialize", xmlReader == null ? null : xmlReader.getJCOInstance());
+            retObjectDeserialize = classInstance.Invoke("Deserialize", xmlReader == null ? null : xmlReader.getJCOInstance());
+            JCObject objDeserialize = (JCObject)retObjectDeserialize;
             return new NetObject(objDeserialize);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDeserialize != null ? retObjectDeserialize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -327,9 +355,13 @@ public class XmlSerializer extends NetObject  {
 
     public static java.lang.String GetXmlSerializerAssemblyName(NetType type, java.lang.String defaultNamespace) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.security.cryptography.CryptographicException, system.OverflowException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetXmlSerializerAssemblyName = null;
         try {
-            return (java.lang.String)classType.Invoke("GetXmlSerializerAssemblyName", type == null ? null : type.getJCOInstance(), defaultNamespace);
+            retObjectGetXmlSerializerAssemblyName = classType.Invoke("GetXmlSerializerAssemblyName", type == null ? null : type.getJCOInstance(), defaultNamespace);
+            return (java.lang.String)retObjectGetXmlSerializerAssemblyName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetXmlSerializerAssemblyName != null ? retObjectGetXmlSerializerAssemblyName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -337,9 +369,13 @@ public class XmlSerializer extends NetObject  {
 
     public static java.lang.String GetXmlSerializerAssemblyName(NetType type) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.security.cryptography.CryptographicException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetXmlSerializerAssemblyName = null;
         try {
-            return (java.lang.String)classType.Invoke("GetXmlSerializerAssemblyName", type == null ? null : type.getJCOInstance());
+            retObjectGetXmlSerializerAssemblyName = classType.Invoke("GetXmlSerializerAssemblyName", type == null ? null : type.getJCOInstance());
+            return (java.lang.String)retObjectGetXmlSerializerAssemblyName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetXmlSerializerAssemblyName != null ? retObjectGetXmlSerializerAssemblyName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -347,16 +383,20 @@ public class XmlSerializer extends NetObject  {
 
     public static XmlSerializer[] FromMappings(XmlMapping[] mappings, NetType type) throws Throwable, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.ArrayTypeMismatchException, system.NotSupportedException, system.security.cryptography.CryptographicException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.io.FileNotFoundException, system.RankException, system.diagnostics.tracing.EventSourceException, system.io.FileLoadException, system.MulticastNotSupportedException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException, system.collections.generic.KeyNotFoundException, system.InvalidCastException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFromMappings = null;
         try {
             ArrayList<XmlSerializer> resultingArrayList = new ArrayList<XmlSerializer>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("FromMappings", toObjectFromArray(mappings), type == null ? null : type.getJCOInstance());
+            retObjectFromMappings = classType.Invoke("FromMappings", toObjectFromArray(mappings), type == null ? null : type.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectFromMappings;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new XmlSerializer(resultingObject));
             }
             XmlSerializer[] resultingArray = new XmlSerializer[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFromMappings != null ? retObjectFromMappings.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -364,16 +404,20 @@ public class XmlSerializer extends NetObject  {
 
     public static XmlSerializer[] FromMappings(XmlMapping[] mappings) throws Throwable, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArrayTypeMismatchException, system.NotSupportedException, system.security.cryptography.CryptographicException, system.FormatException, system.OutOfMemoryException, system.io.FileNotFoundException, system.RankException, system.diagnostics.tracing.EventSourceException, system.globalization.CultureNotFoundException, system.MulticastNotSupportedException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException, system.io.FileLoadException, system.collections.generic.KeyNotFoundException, system.InvalidCastException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFromMappings = null;
         try {
             ArrayList<XmlSerializer> resultingArrayList = new ArrayList<XmlSerializer>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("FromMappings", (java.lang.Object)toObjectFromArray(mappings));
+            retObjectFromMappings = classType.Invoke("FromMappings", (java.lang.Object)toObjectFromArray(mappings));
+            JCObject resultingObjects = (JCObject)retObjectFromMappings;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new XmlSerializer(resultingObject));
             }
             XmlSerializer[] resultingArray = new XmlSerializer[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFromMappings != null ? retObjectFromMappings.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -381,16 +425,20 @@ public class XmlSerializer extends NetObject  {
 
     public static XmlSerializer[] FromTypes(NetType[] types) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.NotSupportedException, system.io.FileNotFoundException, system.diagnostics.tracing.EventSourceException, system.globalization.CultureNotFoundException, system.io.FileLoadException, system.ArgumentNullException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFromTypes = null;
         try {
             ArrayList<XmlSerializer> resultingArrayList = new ArrayList<XmlSerializer>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("FromTypes", (java.lang.Object)toObjectFromArray(types));
+            retObjectFromTypes = classType.Invoke("FromTypes", (java.lang.Object)toObjectFromArray(types));
+            JCObject resultingObjects = (JCObject)retObjectFromTypes;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new XmlSerializer(resultingObject));
             }
             XmlSerializer[] resultingArray = new XmlSerializer[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFromTypes != null ? retObjectFromTypes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -398,7 +446,7 @@ public class XmlSerializer extends NetObject  {
 
     public void Serialize(Stream stream, NetObject o, XmlSerializerNamespaces namespaces) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.ArrayTypeMismatchException, system.RankException, system.OverflowException, system.NotImplementedException, system.collections.generic.KeyNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Serialize", stream == null ? null : stream.getJCOInstance(), o == null ? null : o.getJCOInstance(), namespaces == null ? null : namespaces.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -408,7 +456,7 @@ public class XmlSerializer extends NetObject  {
 
     public void Serialize(Stream stream, NetObject o) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArgumentException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.NotImplementedException, system.collections.generic.KeyNotFoundException, system.MissingMethodException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Serialize", stream == null ? null : stream.getJCOInstance(), o == null ? null : o.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -418,7 +466,7 @@ public class XmlSerializer extends NetObject  {
 
     public void Serialize(TextWriter textWriter, NetObject o, XmlSerializerNamespaces namespaces) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.OverflowException, system.NotImplementedException, system.collections.generic.KeyNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Serialize", textWriter == null ? null : textWriter.getJCOInstance(), o == null ? null : o.getJCOInstance(), namespaces == null ? null : namespaces.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -428,7 +476,7 @@ public class XmlSerializer extends NetObject  {
 
     public void Serialize(TextWriter textWriter, NetObject o) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotImplementedException, system.collections.generic.KeyNotFoundException, system.NotSupportedException, system.MissingMethodException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Serialize", textWriter == null ? null : textWriter.getJCOInstance(), o == null ? null : o.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -438,7 +486,7 @@ public class XmlSerializer extends NetObject  {
 
     public void Serialize(XmlWriter xmlWriter, NetObject o, XmlSerializerNamespaces namespaces, java.lang.String encodingStyle, java.lang.String id) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.NotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.OverflowException, system.NotImplementedException, system.collections.generic.KeyNotFoundException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Serialize", xmlWriter == null ? null : xmlWriter.getJCOInstance(), o == null ? null : o.getJCOInstance(), namespaces == null ? null : namespaces.getJCOInstance(), encodingStyle, id);
         } catch (JCNativeException jcne) {
@@ -448,7 +496,7 @@ public class XmlSerializer extends NetObject  {
 
     public void Serialize(XmlWriter xmlWriter, NetObject o, XmlSerializerNamespaces namespaces, java.lang.String encodingStyle) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.NotSupportedException, system.OutOfMemoryException, system.FormatException, system.OverflowException, system.NotImplementedException, system.collections.generic.KeyNotFoundException, system.MissingMethodException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Serialize", xmlWriter == null ? null : xmlWriter.getJCOInstance(), o == null ? null : o.getJCOInstance(), namespaces == null ? null : namespaces.getJCOInstance(), encodingStyle);
         } catch (JCNativeException jcne) {
@@ -458,7 +506,7 @@ public class XmlSerializer extends NetObject  {
 
     public void Serialize(XmlWriter xmlWriter, NetObject o, XmlSerializerNamespaces namespaces) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.OverflowException, system.NotImplementedException, system.collections.generic.KeyNotFoundException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Serialize", xmlWriter == null ? null : xmlWriter.getJCOInstance(), o == null ? null : o.getJCOInstance(), namespaces == null ? null : namespaces.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -468,7 +516,7 @@ public class XmlSerializer extends NetObject  {
 
     public void Serialize(XmlWriter xmlWriter, NetObject o) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException, system.OverflowException, system.RankException, system.ArrayTypeMismatchException, system.NotImplementedException, system.collections.generic.KeyNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Serialize", xmlWriter == null ? null : xmlWriter.getJCOInstance(), o == null ? null : o.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -487,7 +535,7 @@ public class XmlSerializer extends NetObject  {
 
     public void addUnreferencedObject(UnreferencedObjectEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("UnreferencedObject", handler);
         } catch (JCNativeException jcne) {
@@ -497,7 +545,7 @@ public class XmlSerializer extends NetObject  {
 
     public void removeUnreferencedObject(UnreferencedObjectEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("UnreferencedObject", handler);
         } catch (JCNativeException jcne) {
@@ -507,7 +555,7 @@ public class XmlSerializer extends NetObject  {
 
     public void addUnknownAttribute(XmlAttributeEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("UnknownAttribute", handler);
         } catch (JCNativeException jcne) {
@@ -517,7 +565,7 @@ public class XmlSerializer extends NetObject  {
 
     public void removeUnknownAttribute(XmlAttributeEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("UnknownAttribute", handler);
         } catch (JCNativeException jcne) {
@@ -527,7 +575,7 @@ public class XmlSerializer extends NetObject  {
 
     public void addUnknownElement(XmlElementEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("UnknownElement", handler);
         } catch (JCNativeException jcne) {
@@ -537,7 +585,7 @@ public class XmlSerializer extends NetObject  {
 
     public void removeUnknownElement(XmlElementEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("UnknownElement", handler);
         } catch (JCNativeException jcne) {
@@ -547,7 +595,7 @@ public class XmlSerializer extends NetObject  {
 
     public void addUnknownNode(XmlNodeEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("UnknownNode", handler);
         } catch (JCNativeException jcne) {
@@ -557,7 +605,7 @@ public class XmlSerializer extends NetObject  {
 
     public void removeUnknownNode(XmlNodeEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("UnknownNode", handler);
         } catch (JCNativeException jcne) {

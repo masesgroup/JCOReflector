@@ -177,10 +177,14 @@ public class BlobEncoder extends ValueType  {
     
     public FieldTypeEncoder Field() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectField = null;
         try {
-            JCObject objField = (JCObject)classInstance.Invoke("Field");
+            retObjectField = classInstance.Invoke("Field");
+            JCObject objField = (JCObject)retObjectField;
             return new FieldTypeEncoder(objField);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectField != null ? retObjectField.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,10 +192,14 @@ public class BlobEncoder extends ValueType  {
 
     public GenericTypeArgumentsEncoder MethodSpecificationSignature(int genericArgumentCount) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMethodSpecificationSignature = null;
         try {
-            JCObject objMethodSpecificationSignature = (JCObject)classInstance.Invoke("MethodSpecificationSignature", genericArgumentCount);
+            retObjectMethodSpecificationSignature = classInstance.Invoke("MethodSpecificationSignature", genericArgumentCount);
+            JCObject objMethodSpecificationSignature = (JCObject)retObjectMethodSpecificationSignature;
             return new GenericTypeArgumentsEncoder(objMethodSpecificationSignature);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMethodSpecificationSignature != null ? retObjectMethodSpecificationSignature.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -199,10 +207,14 @@ public class BlobEncoder extends ValueType  {
 
     public LocalVariablesEncoder LocalVariableSignature(int variableCount) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLocalVariableSignature = null;
         try {
-            JCObject objLocalVariableSignature = (JCObject)classInstance.Invoke("LocalVariableSignature", variableCount);
+            retObjectLocalVariableSignature = classInstance.Invoke("LocalVariableSignature", variableCount);
+            JCObject objLocalVariableSignature = (JCObject)retObjectLocalVariableSignature;
             return new LocalVariablesEncoder(objLocalVariableSignature);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLocalVariableSignature != null ? retObjectLocalVariableSignature.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -210,10 +222,14 @@ public class BlobEncoder extends ValueType  {
 
     public MethodSignatureEncoder MethodSignature(SignatureCallingConvention convention, int genericParameterCount, boolean isInstanceMethod) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMethodSignature = null;
         try {
-            JCObject objMethodSignature = (JCObject)classInstance.Invoke("MethodSignature", convention == null ? null : convention.getJCOInstance(), genericParameterCount, isInstanceMethod);
+            retObjectMethodSignature = classInstance.Invoke("MethodSignature", convention == null ? null : convention.getJCOInstance(), genericParameterCount, isInstanceMethod);
+            JCObject objMethodSignature = (JCObject)retObjectMethodSignature;
             return new MethodSignatureEncoder(objMethodSignature);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMethodSignature != null ? retObjectMethodSignature.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -221,10 +237,14 @@ public class BlobEncoder extends ValueType  {
 
     public MethodSignatureEncoder PropertySignature(boolean isInstanceProperty) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPropertySignature = null;
         try {
-            JCObject objPropertySignature = (JCObject)classInstance.Invoke("PropertySignature", isInstanceProperty);
+            retObjectPropertySignature = classInstance.Invoke("PropertySignature", isInstanceProperty);
+            JCObject objPropertySignature = (JCObject)retObjectPropertySignature;
             return new MethodSignatureEncoder(objPropertySignature);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPropertySignature != null ? retObjectPropertySignature.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -232,10 +252,14 @@ public class BlobEncoder extends ValueType  {
 
     public NamedArgumentsEncoder PermissionSetArguments(int argumentCount) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPermissionSetArguments = null;
         try {
-            JCObject objPermissionSetArguments = (JCObject)classInstance.Invoke("PermissionSetArguments", argumentCount);
+            retObjectPermissionSetArguments = classInstance.Invoke("PermissionSetArguments", argumentCount);
+            JCObject objPermissionSetArguments = (JCObject)retObjectPermissionSetArguments;
             return new NamedArgumentsEncoder(objPermissionSetArguments);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPermissionSetArguments != null ? retObjectPermissionSetArguments.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -243,10 +267,14 @@ public class BlobEncoder extends ValueType  {
 
     public PermissionSetEncoder PermissionSetBlob(int attributeCount) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPermissionSetBlob = null;
         try {
-            JCObject objPermissionSetBlob = (JCObject)classInstance.Invoke("PermissionSetBlob", attributeCount);
+            retObjectPermissionSetBlob = classInstance.Invoke("PermissionSetBlob", attributeCount);
+            JCObject objPermissionSetBlob = (JCObject)retObjectPermissionSetBlob;
             return new PermissionSetEncoder(objPermissionSetBlob);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPermissionSetBlob != null ? retObjectPermissionSetBlob.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -254,10 +282,14 @@ public class BlobEncoder extends ValueType  {
 
     public SignatureTypeEncoder FieldSignature() throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFieldSignature = null;
         try {
-            JCObject objFieldSignature = (JCObject)classInstance.Invoke("FieldSignature");
+            retObjectFieldSignature = classInstance.Invoke("FieldSignature");
+            JCObject objFieldSignature = (JCObject)retObjectFieldSignature;
             return new SignatureTypeEncoder(objFieldSignature);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFieldSignature != null ? retObjectFieldSignature.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -265,10 +297,14 @@ public class BlobEncoder extends ValueType  {
 
     public SignatureTypeEncoder TypeSpecificationSignature() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTypeSpecificationSignature = null;
         try {
-            JCObject objTypeSpecificationSignature = (JCObject)classInstance.Invoke("TypeSpecificationSignature");
+            retObjectTypeSpecificationSignature = classInstance.Invoke("TypeSpecificationSignature");
+            JCObject objTypeSpecificationSignature = (JCObject)retObjectTypeSpecificationSignature;
             return new SignatureTypeEncoder(objTypeSpecificationSignature);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTypeSpecificationSignature != null ? retObjectTypeSpecificationSignature.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -276,7 +312,7 @@ public class BlobEncoder extends ValueType  {
 
     public void CustomAttributeSignature(JCORefOut<FixedArgumentsEncoder> fixedArguments, JCORefOut<CustomAttributeNamedArgumentsEncoder> namedArguments) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CustomAttributeSignature", fixedArguments.getJCRefOut(), namedArguments.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -290,10 +326,14 @@ public class BlobEncoder extends ValueType  {
     
     public BlobBuilder getBuilder() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBuilder = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Builder");
+            retObjectBuilder = classInstance.Get("Builder");
+            JCObject val = (JCObject)retObjectBuilder;
             return new BlobBuilder(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBuilder != null ? retObjectBuilder.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -156,10 +156,14 @@ public class ActiveXObjectConstructor extends ScriptFunction  {
     
     public NetObject CreateInstanceNewActiveXObjectConstructor(NetObject... args) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateInstance = null;
         try {
-            JCObject objCreateInstance = (JCObject)classInstance.Invoke("CreateInstance", (java.lang.Object)toObjectFromArray(args));
+            retObjectCreateInstance = classInstance.Invoke("CreateInstance", (java.lang.Object)toObjectFromArray(args));
+            JCObject objCreateInstance = (JCObject)retObjectCreateInstance;
             return new NetObject(objCreateInstance);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateInstance != null ? retObjectCreateInstance.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -167,10 +171,14 @@ public class ActiveXObjectConstructor extends ScriptFunction  {
 
     public NetObject Invoke() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInvoke = null;
         try {
-            JCObject objInvoke = (JCObject)classInstance.Invoke("Invoke");
+            retObjectInvoke = classInstance.Invoke("Invoke");
+            JCObject objInvoke = (JCObject)retObjectInvoke;
             return new NetObject(objInvoke);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInvoke != null ? retObjectInvoke.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

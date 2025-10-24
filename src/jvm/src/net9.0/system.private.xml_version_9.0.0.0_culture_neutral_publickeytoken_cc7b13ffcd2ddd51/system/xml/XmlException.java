@@ -182,7 +182,7 @@ public class XmlException extends SystemException {
     
     public void GetObjectData(SerializationInfo info, StreamingContext context) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.runtime.serialization.SerializationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetObjectData", info == null ? null : info.getJCOInstance(), context == null ? null : context.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -196,9 +196,20 @@ public class XmlException extends SystemException {
     
     public int getLineNumber() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLineNumber = null;
         try {
-            return (int)classInstance.Get("LineNumber");
+            retObjectLineNumber = classInstance.Get("LineNumber");
+            return (int)retObjectLineNumber;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectLineNumber_ToString = retObjectLineNumber == null ? "null" : retObjectLineNumber.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectLineNumberNumber = (java.lang.Number)retObjectLineNumber;
+                return retObjectLineNumberNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectLineNumber != null ? retObjectLineNumber.getClass() : "null", retObjectLineNumber_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -206,9 +217,20 @@ public class XmlException extends SystemException {
 
     public int getLinePosition() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLinePosition = null;
         try {
-            return (int)classInstance.Get("LinePosition");
+            retObjectLinePosition = classInstance.Get("LinePosition");
+            return (int)retObjectLinePosition;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectLinePosition_ToString = retObjectLinePosition == null ? "null" : retObjectLinePosition.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectLinePositionNumber = (java.lang.Number)retObjectLinePosition;
+                return retObjectLinePositionNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectLinePosition != null ? retObjectLinePosition.getClass() : "null", retObjectLinePosition_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -216,9 +238,13 @@ public class XmlException extends SystemException {
 
     public java.lang.String getSourceUri() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSourceUri = null;
         try {
-            return (java.lang.String)classInstance.Get("SourceUri");
+            retObjectSourceUri = classInstance.Get("SourceUri");
+            return (java.lang.String)retObjectSourceUri;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSourceUri != null ? retObjectSourceUri.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -161,10 +161,14 @@ public class BasicProfileViolation extends NetObject  {
     
     public StringCollection getElements() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectElements = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Elements");
+            retObjectElements = classInstance.Get("Elements");
+            JCObject val = (JCObject)retObjectElements;
             return new StringCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectElements != null ? retObjectElements.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,9 +176,13 @@ public class BasicProfileViolation extends NetObject  {
 
     public java.lang.String getDetails() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDetails = null;
         try {
-            return (java.lang.String)classInstance.Get("Details");
+            retObjectDetails = classInstance.Get("Details");
+            return (java.lang.String)retObjectDetails;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDetails != null ? retObjectDetails.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,9 +190,13 @@ public class BasicProfileViolation extends NetObject  {
 
     public java.lang.String getNormativeStatement() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNormativeStatement = null;
         try {
-            return (java.lang.String)classInstance.Get("NormativeStatement");
+            retObjectNormativeStatement = classInstance.Get("NormativeStatement");
+            return (java.lang.String)retObjectNormativeStatement;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectNormativeStatement != null ? retObjectNormativeStatement.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,9 +204,13 @@ public class BasicProfileViolation extends NetObject  {
 
     public java.lang.String getRecommendation() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRecommendation = null;
         try {
-            return (java.lang.String)classInstance.Get("Recommendation");
+            retObjectRecommendation = classInstance.Get("Recommendation");
+            return (java.lang.String)retObjectRecommendation;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectRecommendation != null ? retObjectRecommendation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,10 +218,14 @@ public class BasicProfileViolation extends NetObject  {
 
     public WsiProfiles getClaims() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClaims = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Claims");
+            retObjectClaims = classInstance.Get("Claims");
+            JCObject val = (JCObject)retObjectClaims;
             return new WsiProfiles(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClaims != null ? retObjectClaims.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

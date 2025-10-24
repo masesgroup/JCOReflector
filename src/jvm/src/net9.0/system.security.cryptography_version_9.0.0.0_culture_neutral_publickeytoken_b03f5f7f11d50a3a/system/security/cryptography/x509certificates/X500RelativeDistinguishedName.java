@@ -156,10 +156,14 @@ public class X500RelativeDistinguishedName extends NetObject  {
     
     public Oid GetSingleElementType() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSingleElementType = null;
         try {
-            JCObject objGetSingleElementType = (JCObject)classInstance.Invoke("GetSingleElementType");
+            retObjectGetSingleElementType = classInstance.Invoke("GetSingleElementType");
+            JCObject objGetSingleElementType = (JCObject)retObjectGetSingleElementType;
             return new Oid(objGetSingleElementType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSingleElementType != null ? retObjectGetSingleElementType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -167,9 +171,13 @@ public class X500RelativeDistinguishedName extends NetObject  {
 
     public java.lang.String GetSingleElementValue() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.formats.asn1.AsnContentException, system.security.cryptography.CryptographicException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSingleElementValue = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetSingleElementValue");
+            retObjectGetSingleElementValue = classInstance.Invoke("GetSingleElementValue");
+            return (java.lang.String)retObjectGetSingleElementValue;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetSingleElementValue != null ? retObjectGetSingleElementValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,9 +189,13 @@ public class X500RelativeDistinguishedName extends NetObject  {
     
     public boolean getHasMultipleElements() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHasMultipleElements = null;
         try {
-            return (boolean)classInstance.Get("HasMultipleElements");
+            retObjectHasMultipleElements = classInstance.Get("HasMultipleElements");
+            return (boolean)retObjectHasMultipleElements;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectHasMultipleElements != null ? retObjectHasMultipleElements.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

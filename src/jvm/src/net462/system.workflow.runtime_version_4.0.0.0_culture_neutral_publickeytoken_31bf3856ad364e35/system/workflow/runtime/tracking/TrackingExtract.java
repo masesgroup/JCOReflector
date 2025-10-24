@@ -158,9 +158,13 @@ public class TrackingExtract extends NetObject  {
     
     public java.lang.String getMember() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMember = null;
         try {
-            return (java.lang.String)classInstance.Get("Member");
+            retObjectMember = classInstance.Get("Member");
+            return (java.lang.String)retObjectMember;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectMember != null ? retObjectMember.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -168,7 +172,7 @@ public class TrackingExtract extends NetObject  {
 
     public void setMember(java.lang.String Member) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Member", Member);
         } catch (JCNativeException jcne) {
@@ -178,10 +182,14 @@ public class TrackingExtract extends NetObject  {
 
     public TrackingAnnotationCollection getAnnotations() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAnnotations = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Annotations");
+            retObjectAnnotations = classInstance.Get("Annotations");
+            JCObject val = (JCObject)retObjectAnnotations;
             return new TrackingAnnotationCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAnnotations != null ? retObjectAnnotations.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

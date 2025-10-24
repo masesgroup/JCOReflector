@@ -160,9 +160,20 @@ public class ContextMenuEventArgs extends RoutedEventArgs  {
     
     public double getCursorLeft() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCursorLeft = null;
         try {
-            return (double)classInstance.Get("CursorLeft");
+            retObjectCursorLeft = classInstance.Get("CursorLeft");
+            return (double)retObjectCursorLeft;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCursorLeft_ToString = retObjectCursorLeft == null ? "null" : retObjectCursorLeft.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectCursorLeftNumber = (java.lang.Number)retObjectCursorLeft;
+                return retObjectCursorLeftNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectCursorLeft != null ? retObjectCursorLeft.getClass() : "null", retObjectCursorLeft_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,9 +181,20 @@ public class ContextMenuEventArgs extends RoutedEventArgs  {
 
     public double getCursorTop() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCursorTop = null;
         try {
-            return (double)classInstance.Get("CursorTop");
+            retObjectCursorTop = classInstance.Get("CursorTop");
+            return (double)retObjectCursorTop;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCursorTop_ToString = retObjectCursorTop == null ? "null" : retObjectCursorTop.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectCursorTopNumber = (java.lang.Number)retObjectCursorTop;
+                return retObjectCursorTopNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectCursorTop != null ? retObjectCursorTop.getClass() : "null", retObjectCursorTop_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

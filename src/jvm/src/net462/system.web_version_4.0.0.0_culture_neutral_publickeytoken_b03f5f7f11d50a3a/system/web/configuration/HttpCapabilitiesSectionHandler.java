@@ -162,10 +162,14 @@ public class HttpCapabilitiesSectionHandler extends NetObject  {
     
     public NetObject Create(NetObject parent, NetObject configurationContext, XmlNode section) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OverflowException, system.FormatException, system.NullReferenceException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationErrorsException, system.text.regularexpressions.RegexMatchTimeoutException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.OutOfMemoryException, system.NotSupportedException, system.web.HttpException, system.NotImplementedException, system.security.SecurityException, system.configuration.ConfigurationException, system.UnauthorizedAccessException, system.io.IOException, system.xml.XmlException, system.xml.schema.XmlSchemaException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreate = null;
         try {
-            JCObject objCreate = (JCObject)classInstance.Invoke("Create", parent == null ? null : parent.getJCOInstance(), configurationContext == null ? null : configurationContext.getJCOInstance(), section == null ? null : section.getJCOInstance());
+            retObjectCreate = classInstance.Invoke("Create", parent == null ? null : parent.getJCOInstance(), configurationContext == null ? null : configurationContext.getJCOInstance(), section == null ? null : section.getJCOInstance());
+            JCObject objCreate = (JCObject)retObjectCreate;
             return new NetObject(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

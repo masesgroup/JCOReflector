@@ -160,10 +160,14 @@ public class TouchFrameEventArgs extends EventArgs  {
     
     public TouchPoint GetPrimaryTouchPoint(IInputElement relativeTo) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPrimaryTouchPoint = null;
         try {
-            JCObject objGetPrimaryTouchPoint = (JCObject)classInstance.Invoke("GetPrimaryTouchPoint", relativeTo == null ? null : relativeTo.getJCOInstance());
+            retObjectGetPrimaryTouchPoint = classInstance.Invoke("GetPrimaryTouchPoint", relativeTo == null ? null : relativeTo.getJCOInstance());
+            JCObject objGetPrimaryTouchPoint = (JCObject)retObjectGetPrimaryTouchPoint;
             return new TouchPoint(objGetPrimaryTouchPoint);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetPrimaryTouchPoint != null ? retObjectGetPrimaryTouchPoint.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,10 +175,14 @@ public class TouchFrameEventArgs extends EventArgs  {
 
     public TouchPointCollection GetTouchPoints(IInputElement relativeTo) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetTouchPoints = null;
         try {
-            JCObject objGetTouchPoints = (JCObject)classInstance.Invoke("GetTouchPoints", relativeTo == null ? null : relativeTo.getJCOInstance());
+            retObjectGetTouchPoints = classInstance.Invoke("GetTouchPoints", relativeTo == null ? null : relativeTo.getJCOInstance());
+            JCObject objGetTouchPoints = (JCObject)retObjectGetTouchPoints;
             return new TouchPointCollection(objGetTouchPoints);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetTouchPoints != null ? retObjectGetTouchPoints.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,7 +190,7 @@ public class TouchFrameEventArgs extends EventArgs  {
 
     public void SuspendMousePromotionUntilTouchUp() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SuspendMousePromotionUntilTouchUp");
         } catch (JCNativeException jcne) {
@@ -196,9 +204,20 @@ public class TouchFrameEventArgs extends EventArgs  {
     
     public int getTimestamp() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTimestamp = null;
         try {
-            return (int)classInstance.Get("Timestamp");
+            retObjectTimestamp = classInstance.Get("Timestamp");
+            return (int)retObjectTimestamp;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectTimestamp_ToString = retObjectTimestamp == null ? "null" : retObjectTimestamp.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectTimestampNumber = (java.lang.Number)retObjectTimestamp;
+                return retObjectTimestampNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectTimestamp != null ? retObjectTimestamp.getClass() : "null", retObjectTimestamp_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -206,7 +225,7 @@ public class TouchFrameEventArgs extends EventArgs  {
 
     public void setTimestamp(int Timestamp) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Timestamp", Timestamp);
         } catch (JCNativeException jcne) {

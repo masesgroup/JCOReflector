@@ -142,7 +142,7 @@ public class ICancelAddNewImplementation extends NetObject implements ICancelAdd
     
     public void CancelNew(int itemIndex) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CancelNew", itemIndex);
         } catch (JCNativeException jcne) {
@@ -152,7 +152,7 @@ public class ICancelAddNewImplementation extends NetObject implements ICancelAdd
 
     public void EndNew(int itemIndex) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EndNew", itemIndex);
         } catch (JCNativeException jcne) {

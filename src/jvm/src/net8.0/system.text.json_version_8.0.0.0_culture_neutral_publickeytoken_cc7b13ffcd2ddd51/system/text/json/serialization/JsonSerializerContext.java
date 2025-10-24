@@ -157,10 +157,14 @@ public class JsonSerializerContext extends NetObject implements system.text.json
     
     public JsonTypeInfo GetTypeInfo(NetType type) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetTypeInfo = null;
         try {
-            JCObject objGetTypeInfo = (JCObject)classInstance.Invoke("GetTypeInfo", type == null ? null : type.getJCOInstance());
+            retObjectGetTypeInfo = classInstance.Invoke("GetTypeInfo", type == null ? null : type.getJCOInstance());
+            JCObject objGetTypeInfo = (JCObject)retObjectGetTypeInfo;
             return new JsonTypeInfo(objGetTypeInfo);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetTypeInfo != null ? retObjectGetTypeInfo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,7 +176,7 @@ public class JsonSerializerContext extends NetObject implements system.text.json
      */
     @Deprecated 
     public JsonTypeInfo GetTypeInfo(NetType type, JsonSerializerOptions options) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIJsonTypeInfoResolver to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIJsonTypeInfoResolver to obtain the full interface.");
     }
 
 
@@ -181,10 +185,14 @@ public class JsonSerializerContext extends NetObject implements system.text.json
     
     public JsonSerializerOptions getOptions() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOptions = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Options");
+            retObjectOptions = classInstance.Get("Options");
+            JCObject val = (JCObject)retObjectOptions;
             return new JsonSerializerOptions(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOptions != null ? retObjectOptions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

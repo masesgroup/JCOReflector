@@ -161,7 +161,7 @@ public class Argument extends NetObject  {
     
     public void BeginInit() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("BeginInit");
         } catch (JCNativeException jcne) {
@@ -171,7 +171,7 @@ public class Argument extends NetObject  {
 
     public void EndInit() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EndInit");
         } catch (JCNativeException jcne) {
@@ -185,9 +185,13 @@ public class Argument extends NetObject  {
     
     public boolean getIsRequired() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsRequired = null;
         try {
-            return (boolean)classInstance.Get("IsRequired");
+            retObjectIsRequired = classInstance.Get("IsRequired");
+            return (boolean)retObjectIsRequired;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsRequired != null ? retObjectIsRequired.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,7 +199,7 @@ public class Argument extends NetObject  {
 
     public void setIsRequired(boolean IsRequired) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsRequired", IsRequired);
         } catch (JCNativeException jcne) {
@@ -205,9 +209,13 @@ public class Argument extends NetObject  {
 
     public java.lang.String getProperty() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProperty = null;
         try {
-            return (java.lang.String)classInstance.Get("Property");
+            retObjectProperty = classInstance.Get("Property");
+            return (java.lang.String)retObjectProperty;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectProperty != null ? retObjectProperty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -215,7 +223,7 @@ public class Argument extends NetObject  {
 
     public void setProperty(java.lang.String Property) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Property", Property);
         } catch (JCNativeException jcne) {
@@ -225,9 +233,13 @@ public class Argument extends NetObject  {
 
     public java.lang.String getSeparator() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSeparator = null;
         try {
-            return (java.lang.String)classInstance.Get("Separator");
+            retObjectSeparator = classInstance.Get("Separator");
+            return (java.lang.String)retObjectSeparator;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSeparator != null ? retObjectSeparator.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -235,7 +247,7 @@ public class Argument extends NetObject  {
 
     public void setSeparator(java.lang.String Separator) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Separator", Separator);
         } catch (JCNativeException jcne) {

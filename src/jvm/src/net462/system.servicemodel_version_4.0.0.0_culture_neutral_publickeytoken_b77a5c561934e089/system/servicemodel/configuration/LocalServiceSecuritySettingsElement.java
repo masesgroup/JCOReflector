@@ -167,9 +167,13 @@ public class LocalServiceSecuritySettingsElement extends ServiceModelConfigurati
     
     public boolean getDetectReplays() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDetectReplays = null;
         try {
-            return (boolean)classInstance.Get("DetectReplays");
+            retObjectDetectReplays = classInstance.Get("DetectReplays");
+            return (boolean)retObjectDetectReplays;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectDetectReplays != null ? retObjectDetectReplays.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,7 +181,7 @@ public class LocalServiceSecuritySettingsElement extends ServiceModelConfigurati
 
     public void setDetectReplays(boolean DetectReplays) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.NullReferenceException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DetectReplays", DetectReplays);
         } catch (JCNativeException jcne) {
@@ -187,9 +191,13 @@ public class LocalServiceSecuritySettingsElement extends ServiceModelConfigurati
 
     public boolean getReconnectTransportOnFailure() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReconnectTransportOnFailure = null;
         try {
-            return (boolean)classInstance.Get("ReconnectTransportOnFailure");
+            retObjectReconnectTransportOnFailure = classInstance.Get("ReconnectTransportOnFailure");
+            return (boolean)retObjectReconnectTransportOnFailure;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectReconnectTransportOnFailure != null ? retObjectReconnectTransportOnFailure.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,7 +205,7 @@ public class LocalServiceSecuritySettingsElement extends ServiceModelConfigurati
 
     public void setReconnectTransportOnFailure(boolean ReconnectTransportOnFailure) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.NullReferenceException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ReconnectTransportOnFailure", ReconnectTransportOnFailure);
         } catch (JCNativeException jcne) {
@@ -207,9 +215,20 @@ public class LocalServiceSecuritySettingsElement extends ServiceModelConfigurati
 
     public int getMaxCachedCookies() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxCachedCookies = null;
         try {
-            return (int)classInstance.Get("MaxCachedCookies");
+            retObjectMaxCachedCookies = classInstance.Get("MaxCachedCookies");
+            return (int)retObjectMaxCachedCookies;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaxCachedCookies_ToString = retObjectMaxCachedCookies == null ? "null" : retObjectMaxCachedCookies.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMaxCachedCookiesNumber = (java.lang.Number)retObjectMaxCachedCookies;
+                return retObjectMaxCachedCookiesNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxCachedCookies != null ? retObjectMaxCachedCookies.getClass() : "null", retObjectMaxCachedCookies_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -217,7 +236,7 @@ public class LocalServiceSecuritySettingsElement extends ServiceModelConfigurati
 
     public void setMaxCachedCookies(int MaxCachedCookies) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.NullReferenceException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaxCachedCookies", MaxCachedCookies);
         } catch (JCNativeException jcne) {
@@ -227,9 +246,20 @@ public class LocalServiceSecuritySettingsElement extends ServiceModelConfigurati
 
     public int getMaxPendingSessions() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxPendingSessions = null;
         try {
-            return (int)classInstance.Get("MaxPendingSessions");
+            retObjectMaxPendingSessions = classInstance.Get("MaxPendingSessions");
+            return (int)retObjectMaxPendingSessions;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaxPendingSessions_ToString = retObjectMaxPendingSessions == null ? "null" : retObjectMaxPendingSessions.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMaxPendingSessionsNumber = (java.lang.Number)retObjectMaxPendingSessions;
+                return retObjectMaxPendingSessionsNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxPendingSessions != null ? retObjectMaxPendingSessions.getClass() : "null", retObjectMaxPendingSessions_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -237,7 +267,7 @@ public class LocalServiceSecuritySettingsElement extends ServiceModelConfigurati
 
     public void setMaxPendingSessions(int MaxPendingSessions) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.NullReferenceException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaxPendingSessions", MaxPendingSessions);
         } catch (JCNativeException jcne) {
@@ -247,9 +277,20 @@ public class LocalServiceSecuritySettingsElement extends ServiceModelConfigurati
 
     public int getMaxStatefulNegotiations() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxStatefulNegotiations = null;
         try {
-            return (int)classInstance.Get("MaxStatefulNegotiations");
+            retObjectMaxStatefulNegotiations = classInstance.Get("MaxStatefulNegotiations");
+            return (int)retObjectMaxStatefulNegotiations;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaxStatefulNegotiations_ToString = retObjectMaxStatefulNegotiations == null ? "null" : retObjectMaxStatefulNegotiations.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMaxStatefulNegotiationsNumber = (java.lang.Number)retObjectMaxStatefulNegotiations;
+                return retObjectMaxStatefulNegotiationsNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxStatefulNegotiations != null ? retObjectMaxStatefulNegotiations.getClass() : "null", retObjectMaxStatefulNegotiations_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -257,7 +298,7 @@ public class LocalServiceSecuritySettingsElement extends ServiceModelConfigurati
 
     public void setMaxStatefulNegotiations(int MaxStatefulNegotiations) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.NullReferenceException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaxStatefulNegotiations", MaxStatefulNegotiations);
         } catch (JCNativeException jcne) {
@@ -267,9 +308,20 @@ public class LocalServiceSecuritySettingsElement extends ServiceModelConfigurati
 
     public int getReplayCacheSize() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReplayCacheSize = null;
         try {
-            return (int)classInstance.Get("ReplayCacheSize");
+            retObjectReplayCacheSize = classInstance.Get("ReplayCacheSize");
+            return (int)retObjectReplayCacheSize;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectReplayCacheSize_ToString = retObjectReplayCacheSize == null ? "null" : retObjectReplayCacheSize.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectReplayCacheSizeNumber = (java.lang.Number)retObjectReplayCacheSize;
+                return retObjectReplayCacheSizeNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectReplayCacheSize != null ? retObjectReplayCacheSize.getClass() : "null", retObjectReplayCacheSize_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -277,7 +329,7 @@ public class LocalServiceSecuritySettingsElement extends ServiceModelConfigurati
 
     public void setReplayCacheSize(int ReplayCacheSize) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.NullReferenceException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ReplayCacheSize", ReplayCacheSize);
         } catch (JCNativeException jcne) {
@@ -287,10 +339,14 @@ public class LocalServiceSecuritySettingsElement extends ServiceModelConfigurati
 
     public TimeSpan getInactivityTimeout() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInactivityTimeout = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("InactivityTimeout");
+            retObjectInactivityTimeout = classInstance.Get("InactivityTimeout");
+            JCObject val = (JCObject)retObjectInactivityTimeout;
             return new TimeSpan(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInactivityTimeout != null ? retObjectInactivityTimeout.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -298,7 +354,7 @@ public class LocalServiceSecuritySettingsElement extends ServiceModelConfigurati
 
     public void setInactivityTimeout(TimeSpan InactivityTimeout) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.NullReferenceException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("InactivityTimeout", InactivityTimeout == null ? null : InactivityTimeout.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -308,10 +364,14 @@ public class LocalServiceSecuritySettingsElement extends ServiceModelConfigurati
 
     public TimeSpan getIssuedCookieLifetime() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIssuedCookieLifetime = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("IssuedCookieLifetime");
+            retObjectIssuedCookieLifetime = classInstance.Get("IssuedCookieLifetime");
+            JCObject val = (JCObject)retObjectIssuedCookieLifetime;
             return new TimeSpan(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIssuedCookieLifetime != null ? retObjectIssuedCookieLifetime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -319,7 +379,7 @@ public class LocalServiceSecuritySettingsElement extends ServiceModelConfigurati
 
     public void setIssuedCookieLifetime(TimeSpan IssuedCookieLifetime) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.NullReferenceException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IssuedCookieLifetime", IssuedCookieLifetime == null ? null : IssuedCookieLifetime.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -329,10 +389,14 @@ public class LocalServiceSecuritySettingsElement extends ServiceModelConfigurati
 
     public TimeSpan getMaxClockSkew() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxClockSkew = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MaxClockSkew");
+            retObjectMaxClockSkew = classInstance.Get("MaxClockSkew");
+            JCObject val = (JCObject)retObjectMaxClockSkew;
             return new TimeSpan(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMaxClockSkew != null ? retObjectMaxClockSkew.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -340,7 +404,7 @@ public class LocalServiceSecuritySettingsElement extends ServiceModelConfigurati
 
     public void setMaxClockSkew(TimeSpan MaxClockSkew) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.NullReferenceException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaxClockSkew", MaxClockSkew == null ? null : MaxClockSkew.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -350,10 +414,14 @@ public class LocalServiceSecuritySettingsElement extends ServiceModelConfigurati
 
     public TimeSpan getNegotiationTimeout() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNegotiationTimeout = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("NegotiationTimeout");
+            retObjectNegotiationTimeout = classInstance.Get("NegotiationTimeout");
+            JCObject val = (JCObject)retObjectNegotiationTimeout;
             return new TimeSpan(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNegotiationTimeout != null ? retObjectNegotiationTimeout.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -361,7 +429,7 @@ public class LocalServiceSecuritySettingsElement extends ServiceModelConfigurati
 
     public void setNegotiationTimeout(TimeSpan NegotiationTimeout) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.NullReferenceException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("NegotiationTimeout", NegotiationTimeout == null ? null : NegotiationTimeout.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -371,10 +439,14 @@ public class LocalServiceSecuritySettingsElement extends ServiceModelConfigurati
 
     public TimeSpan getReplayWindow() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReplayWindow = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ReplayWindow");
+            retObjectReplayWindow = classInstance.Get("ReplayWindow");
+            JCObject val = (JCObject)retObjectReplayWindow;
             return new TimeSpan(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReplayWindow != null ? retObjectReplayWindow.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -382,7 +454,7 @@ public class LocalServiceSecuritySettingsElement extends ServiceModelConfigurati
 
     public void setReplayWindow(TimeSpan ReplayWindow) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.NullReferenceException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ReplayWindow", ReplayWindow == null ? null : ReplayWindow.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -392,10 +464,14 @@ public class LocalServiceSecuritySettingsElement extends ServiceModelConfigurati
 
     public TimeSpan getSessionKeyRenewalInterval() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSessionKeyRenewalInterval = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SessionKeyRenewalInterval");
+            retObjectSessionKeyRenewalInterval = classInstance.Get("SessionKeyRenewalInterval");
+            JCObject val = (JCObject)retObjectSessionKeyRenewalInterval;
             return new TimeSpan(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSessionKeyRenewalInterval != null ? retObjectSessionKeyRenewalInterval.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -403,7 +479,7 @@ public class LocalServiceSecuritySettingsElement extends ServiceModelConfigurati
 
     public void setSessionKeyRenewalInterval(TimeSpan SessionKeyRenewalInterval) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.NullReferenceException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SessionKeyRenewalInterval", SessionKeyRenewalInterval == null ? null : SessionKeyRenewalInterval.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -413,10 +489,14 @@ public class LocalServiceSecuritySettingsElement extends ServiceModelConfigurati
 
     public TimeSpan getSessionKeyRolloverInterval() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSessionKeyRolloverInterval = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SessionKeyRolloverInterval");
+            retObjectSessionKeyRolloverInterval = classInstance.Get("SessionKeyRolloverInterval");
+            JCObject val = (JCObject)retObjectSessionKeyRolloverInterval;
             return new TimeSpan(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSessionKeyRolloverInterval != null ? retObjectSessionKeyRolloverInterval.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -424,7 +504,7 @@ public class LocalServiceSecuritySettingsElement extends ServiceModelConfigurati
 
     public void setSessionKeyRolloverInterval(TimeSpan SessionKeyRolloverInterval) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.NullReferenceException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SessionKeyRolloverInterval", SessionKeyRolloverInterval == null ? null : SessionKeyRolloverInterval.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -434,10 +514,14 @@ public class LocalServiceSecuritySettingsElement extends ServiceModelConfigurati
 
     public TimeSpan getTimestampValidityDuration() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTimestampValidityDuration = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TimestampValidityDuration");
+            retObjectTimestampValidityDuration = classInstance.Get("TimestampValidityDuration");
+            JCObject val = (JCObject)retObjectTimestampValidityDuration;
             return new TimeSpan(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTimestampValidityDuration != null ? retObjectTimestampValidityDuration.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -445,7 +529,7 @@ public class LocalServiceSecuritySettingsElement extends ServiceModelConfigurati
 
     public void setTimestampValidityDuration(TimeSpan TimestampValidityDuration) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.NullReferenceException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TimestampValidityDuration", TimestampValidityDuration == null ? null : TimestampValidityDuration.getJCOInstance());
         } catch (JCNativeException jcne) {

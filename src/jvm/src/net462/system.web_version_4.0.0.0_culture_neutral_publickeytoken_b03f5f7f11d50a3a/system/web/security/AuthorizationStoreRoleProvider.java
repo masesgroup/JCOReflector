@@ -163,9 +163,13 @@ public class AuthorizationStoreRoleProvider extends RoleProvider  {
     
     public boolean DeleteRole(java.lang.String roleName, boolean throwOnPopulatedRole) throws Throwable, system.ArgumentException, system.security.SecurityException, system.ArgumentNullException, system.NotImplementedException, system.NotSupportedException, system.InvalidOperationException, system.MemberAccessException, system.reflection.TargetException, system.reflection.TargetParameterCountException, system.ObjectDisposedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.web.HttpException, system.IndexOutOfRangeException, system.InvalidTimeZoneException, system.PlatformNotSupportedException, system.NullReferenceException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.AccessViolationException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDeleteRole = null;
         try {
-            return (boolean)classInstance.Invoke("DeleteRole", roleName, throwOnPopulatedRole);
+            retObjectDeleteRole = classInstance.Invoke("DeleteRole", roleName, throwOnPopulatedRole);
+            return (boolean)retObjectDeleteRole;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectDeleteRole != null ? retObjectDeleteRole.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -173,9 +177,13 @@ public class AuthorizationStoreRoleProvider extends RoleProvider  {
 
     public boolean IsUserInRole(java.lang.String username, java.lang.String roleName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.web.HttpException, system.OverflowException, system.PlatformNotSupportedException, system.NotSupportedException, system.NullReferenceException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.threading.AbandonedMutexException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsUserInRole = null;
         try {
-            return (boolean)classInstance.Invoke("IsUserInRole", username, roleName);
+            retObjectIsUserInRole = classInstance.Invoke("IsUserInRole", username, roleName);
+            return (boolean)retObjectIsUserInRole;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsUserInRole != null ? retObjectIsUserInRole.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,9 +191,13 @@ public class AuthorizationStoreRoleProvider extends RoleProvider  {
 
     public boolean RoleExists(java.lang.String roleName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.web.HttpException, system.InvalidTimeZoneException, system.NotSupportedException, system.PlatformNotSupportedException, system.NullReferenceException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.AccessViolationException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.security.SecurityException, system.reflection.TargetParameterCountException, system.configuration.provider.ProviderException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRoleExists = null;
         try {
-            return (boolean)classInstance.Invoke("RoleExists", roleName);
+            retObjectRoleExists = classInstance.Invoke("RoleExists", roleName);
+            return (boolean)retObjectRoleExists;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectRoleExists != null ? retObjectRoleExists.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,10 +205,12 @@ public class AuthorizationStoreRoleProvider extends RoleProvider  {
 
     public java.lang.String[] FindUsersInRole(java.lang.String roleName, java.lang.String usernameToMatch) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFindUsersInRole = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("FindUsersInRole", roleName, usernameToMatch);
+            retObjectFindUsersInRole = classInstance.Invoke("FindUsersInRole", roleName, usernameToMatch);
+            JCObject resultingObjects = (JCObject)retObjectFindUsersInRole;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -205,6 +219,8 @@ public class AuthorizationStoreRoleProvider extends RoleProvider  {
 				resultingArray[indexFindUsersInRole] = (java.lang.String)resultingArrayList.get(indexFindUsersInRole);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectFindUsersInRole != null ? retObjectFindUsersInRole.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -212,10 +228,12 @@ public class AuthorizationStoreRoleProvider extends RoleProvider  {
 
     public java.lang.String[] GetAllRoles() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.ArgumentOutOfRangeException, system.InvalidTimeZoneException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.NotSupportedException, system.PlatformNotSupportedException, system.NullReferenceException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.AccessViolationException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.MemberAccessException, system.reflection.TargetException, system.reflection.TargetParameterCountException, system.TypeLoadException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException, system.security.SecurityException, system.configuration.ConfigurationException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetAllRoles = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetAllRoles");
+            retObjectGetAllRoles = classInstance.Invoke("GetAllRoles");
+            JCObject resultingObjects = (JCObject)retObjectGetAllRoles;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -224,6 +242,8 @@ public class AuthorizationStoreRoleProvider extends RoleProvider  {
 				resultingArray[indexGetAllRoles] = (java.lang.String)resultingArrayList.get(indexGetAllRoles);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectGetAllRoles != null ? retObjectGetAllRoles.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -231,10 +251,12 @@ public class AuthorizationStoreRoleProvider extends RoleProvider  {
 
     public java.lang.String[] GetRolesForUser(java.lang.String username) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.web.HttpException, system.OverflowException, system.PlatformNotSupportedException, system.NotSupportedException, system.NullReferenceException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.threading.AbandonedMutexException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetRolesForUser = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetRolesForUser", username);
+            retObjectGetRolesForUser = classInstance.Invoke("GetRolesForUser", username);
+            JCObject resultingObjects = (JCObject)retObjectGetRolesForUser;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -243,6 +265,8 @@ public class AuthorizationStoreRoleProvider extends RoleProvider  {
 				resultingArray[indexGetRolesForUser] = (java.lang.String)resultingArrayList.get(indexGetRolesForUser);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectGetRolesForUser != null ? retObjectGetRolesForUser.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -250,10 +274,12 @@ public class AuthorizationStoreRoleProvider extends RoleProvider  {
 
     public java.lang.String[] GetUsersInRole(java.lang.String roleName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.web.HttpException, system.InvalidTimeZoneException, system.NotSupportedException, system.PlatformNotSupportedException, system.NullReferenceException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.AccessViolationException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.security.SecurityException, system.reflection.TargetParameterCountException, system.configuration.provider.ProviderException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetUsersInRole = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetUsersInRole", roleName);
+            retObjectGetUsersInRole = classInstance.Invoke("GetUsersInRole", roleName);
+            JCObject resultingObjects = (JCObject)retObjectGetUsersInRole;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -262,6 +288,8 @@ public class AuthorizationStoreRoleProvider extends RoleProvider  {
 				resultingArray[indexGetUsersInRole] = (java.lang.String)resultingArrayList.get(indexGetUsersInRole);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectGetUsersInRole != null ? retObjectGetUsersInRole.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -269,7 +297,7 @@ public class AuthorizationStoreRoleProvider extends RoleProvider  {
 
     public void AddUsersToRoles(java.lang.String[] usernames, java.lang.String[] roleNames) throws Throwable, system.ArgumentException, system.security.SecurityException, system.ArgumentNullException, system.NotImplementedException, system.NotSupportedException, system.InvalidOperationException, system.MemberAccessException, system.reflection.TargetException, system.reflection.TargetParameterCountException, system.ObjectDisposedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.web.HttpException, system.IndexOutOfRangeException, system.InvalidTimeZoneException, system.PlatformNotSupportedException, system.NullReferenceException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.AccessViolationException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.configuration.provider.ProviderException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddUsersToRoles", usernames, roleNames);
         } catch (JCNativeException jcne) {
@@ -279,7 +307,7 @@ public class AuthorizationStoreRoleProvider extends RoleProvider  {
 
     public void AddUsersToRoles(JCORefOut dupParam0, JCORefOut dupParam1) throws Throwable, system.ArgumentException, system.security.SecurityException, system.ArgumentNullException, system.NotImplementedException, system.NotSupportedException, system.InvalidOperationException, system.MemberAccessException, system.reflection.TargetException, system.reflection.TargetParameterCountException, system.ObjectDisposedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.web.HttpException, system.IndexOutOfRangeException, system.InvalidTimeZoneException, system.PlatformNotSupportedException, system.NullReferenceException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.AccessViolationException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.configuration.provider.ProviderException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddUsersToRoles", dupParam0.getJCRefOut(), dupParam1.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -289,7 +317,7 @@ public class AuthorizationStoreRoleProvider extends RoleProvider  {
 
     public void CreateRole(java.lang.String roleName) throws Throwable, system.ArgumentException, system.security.SecurityException, system.ArgumentNullException, system.NotImplementedException, system.NotSupportedException, system.InvalidOperationException, system.MemberAccessException, system.reflection.TargetException, system.reflection.TargetParameterCountException, system.ObjectDisposedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.web.HttpException, system.IndexOutOfRangeException, system.InvalidTimeZoneException, system.PlatformNotSupportedException, system.NullReferenceException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.AccessViolationException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CreateRole", roleName);
         } catch (JCNativeException jcne) {
@@ -299,7 +327,7 @@ public class AuthorizationStoreRoleProvider extends RoleProvider  {
 
     public void Initialize(java.lang.String name, NameValueCollection config) throws Throwable, system.ArgumentException, system.security.SecurityException, system.ArgumentNullException, system.NotImplementedException, system.NotSupportedException, system.InvalidOperationException, system.MemberAccessException, system.reflection.TargetException, system.reflection.TargetParameterCountException, system.ObjectDisposedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.web.HttpException, system.IndexOutOfRangeException, system.configuration.provider.ProviderException, system.configuration.ConfigurationException, system.NullReferenceException, system.configuration.ConfigurationErrorsException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.AccessViolationException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Initialize", name, config == null ? null : config.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -309,7 +337,7 @@ public class AuthorizationStoreRoleProvider extends RoleProvider  {
 
     public void RemoveUsersFromRoles(java.lang.String[] userNames, java.lang.String[] roleNames) throws Throwable, system.ArgumentException, system.security.SecurityException, system.ArgumentNullException, system.NotImplementedException, system.NotSupportedException, system.InvalidOperationException, system.MemberAccessException, system.reflection.TargetException, system.reflection.TargetParameterCountException, system.ObjectDisposedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.web.HttpException, system.IndexOutOfRangeException, system.InvalidTimeZoneException, system.PlatformNotSupportedException, system.NullReferenceException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.AccessViolationException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.configuration.provider.ProviderException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RemoveUsersFromRoles", userNames, roleNames);
         } catch (JCNativeException jcne) {
@@ -319,7 +347,7 @@ public class AuthorizationStoreRoleProvider extends RoleProvider  {
 
     public void RemoveUsersFromRoles(JCORefOut dupParam0, JCORefOut dupParam1) throws Throwable, system.ArgumentException, system.security.SecurityException, system.ArgumentNullException, system.NotImplementedException, system.NotSupportedException, system.InvalidOperationException, system.MemberAccessException, system.reflection.TargetException, system.reflection.TargetParameterCountException, system.ObjectDisposedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.web.HttpException, system.IndexOutOfRangeException, system.InvalidTimeZoneException, system.PlatformNotSupportedException, system.NullReferenceException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.AccessViolationException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.configuration.provider.ProviderException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RemoveUsersFromRoles", dupParam0.getJCRefOut(), dupParam1.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -333,9 +361,20 @@ public class AuthorizationStoreRoleProvider extends RoleProvider  {
     
     public int getCacheRefreshInterval() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCacheRefreshInterval = null;
         try {
-            return (int)classInstance.Get("CacheRefreshInterval");
+            retObjectCacheRefreshInterval = classInstance.Get("CacheRefreshInterval");
+            return (int)retObjectCacheRefreshInterval;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCacheRefreshInterval_ToString = retObjectCacheRefreshInterval == null ? "null" : retObjectCacheRefreshInterval.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectCacheRefreshIntervalNumber = (java.lang.Number)retObjectCacheRefreshInterval;
+                return retObjectCacheRefreshIntervalNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCacheRefreshInterval != null ? retObjectCacheRefreshInterval.getClass() : "null", retObjectCacheRefreshInterval_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -343,9 +382,13 @@ public class AuthorizationStoreRoleProvider extends RoleProvider  {
 
     public java.lang.String getScopeName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectScopeName = null;
         try {
-            return (java.lang.String)classInstance.Get("ScopeName");
+            retObjectScopeName = classInstance.Get("ScopeName");
+            return (java.lang.String)retObjectScopeName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectScopeName != null ? retObjectScopeName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -353,7 +396,7 @@ public class AuthorizationStoreRoleProvider extends RoleProvider  {
 
     public void setScopeName(java.lang.String ScopeName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ScopeName", ScopeName);
         } catch (JCNativeException jcne) {

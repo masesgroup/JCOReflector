@@ -152,9 +152,20 @@ public class IMonikerImplementation extends NetObject implements IMoniker {
     
     public int IsDirty() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsDirty = null;
         try {
-            return (int)classInstance.Invoke("IsDirty");
+            retObjectIsDirty = classInstance.Invoke("IsDirty");
+            return (int)retObjectIsDirty;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectIsDirty_ToString = retObjectIsDirty == null ? "null" : retObjectIsDirty.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectIsDirtyNumber = (java.lang.Number)retObjectIsDirty;
+                return retObjectIsDirtyNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectIsDirty != null ? retObjectIsDirty.getClass() : "null", retObjectIsDirty_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -162,9 +173,20 @@ public class IMonikerImplementation extends NetObject implements IMoniker {
 
     public int IsEqual(IMoniker pmkOtherMoniker) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsEqual = null;
         try {
-            return (int)classInstance.Invoke("IsEqual", pmkOtherMoniker == null ? null : pmkOtherMoniker.getJCOInstance());
+            retObjectIsEqual = classInstance.Invoke("IsEqual", pmkOtherMoniker == null ? null : pmkOtherMoniker.getJCOInstance());
+            return (int)retObjectIsEqual;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectIsEqual_ToString = retObjectIsEqual == null ? "null" : retObjectIsEqual.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectIsEqualNumber = (java.lang.Number)retObjectIsEqual;
+                return retObjectIsEqualNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectIsEqual != null ? retObjectIsEqual.getClass() : "null", retObjectIsEqual_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,9 +194,20 @@ public class IMonikerImplementation extends NetObject implements IMoniker {
 
     public int IsRunning(IBindCtx pbc, IMoniker pmkToLeft, IMoniker pmkNewlyRunning) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsRunning = null;
         try {
-            return (int)classInstance.Invoke("IsRunning", pbc == null ? null : pbc.getJCOInstance(), pmkToLeft == null ? null : pmkToLeft.getJCOInstance(), pmkNewlyRunning == null ? null : pmkNewlyRunning.getJCOInstance());
+            retObjectIsRunning = classInstance.Invoke("IsRunning", pbc == null ? null : pbc.getJCOInstance(), pmkToLeft == null ? null : pmkToLeft.getJCOInstance(), pmkNewlyRunning == null ? null : pmkNewlyRunning.getJCOInstance());
+            return (int)retObjectIsRunning;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectIsRunning_ToString = retObjectIsRunning == null ? "null" : retObjectIsRunning.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectIsRunningNumber = (java.lang.Number)retObjectIsRunning;
+                return retObjectIsRunningNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectIsRunning != null ? retObjectIsRunning.getClass() : "null", retObjectIsRunning_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,9 +215,20 @@ public class IMonikerImplementation extends NetObject implements IMoniker {
 
     public int IsSystemMoniker(JCORefOut<java.util.concurrent.atomic.AtomicInteger> pdwMksys) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsSystemMoniker = null;
         try {
-            return (int)classInstance.Invoke("IsSystemMoniker", pdwMksys.getJCRefOut());
+            retObjectIsSystemMoniker = classInstance.Invoke("IsSystemMoniker", pdwMksys.getJCRefOut());
+            return (int)retObjectIsSystemMoniker;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectIsSystemMoniker_ToString = retObjectIsSystemMoniker == null ? "null" : retObjectIsSystemMoniker.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectIsSystemMonikerNumber = (java.lang.Number)retObjectIsSystemMoniker;
+                return retObjectIsSystemMonikerNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectIsSystemMoniker != null ? retObjectIsSystemMoniker.getClass() : "null", retObjectIsSystemMoniker_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,7 +236,7 @@ public class IMonikerImplementation extends NetObject implements IMoniker {
 
     public void BindToObject(IBindCtx pbc, IMoniker pmkToLeft, JCORefOut<Guid> riidResult, JCORefOut<NetObject> ppvResult) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("BindToObject", pbc == null ? null : pbc.getJCOInstance(), pmkToLeft == null ? null : pmkToLeft.getJCOInstance(), riidResult.getJCRefOut(), ppvResult.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -202,7 +246,7 @@ public class IMonikerImplementation extends NetObject implements IMoniker {
 
     public void BindToStorage(IBindCtx pbc, IMoniker pmkToLeft, JCORefOut<Guid> riid, JCORefOut<NetObject> ppvObj) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("BindToStorage", pbc == null ? null : pbc.getJCOInstance(), pmkToLeft == null ? null : pmkToLeft.getJCOInstance(), riid.getJCRefOut(), ppvObj.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -212,7 +256,7 @@ public class IMonikerImplementation extends NetObject implements IMoniker {
 
     public void CommonPrefixWith(IMoniker pmkOther, JCORefOut<IMoniker> ppmkPrefix) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CommonPrefixWith", pmkOther == null ? null : pmkOther.getJCOInstance(), ppmkPrefix.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -222,7 +266,7 @@ public class IMonikerImplementation extends NetObject implements IMoniker {
 
     public void ComposeWith(IMoniker pmkRight, boolean fOnlyIfNotGeneric, JCORefOut<IMoniker> ppmkComposite) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ComposeWith", pmkRight == null ? null : pmkRight.getJCOInstance(), fOnlyIfNotGeneric, ppmkComposite.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -232,7 +276,7 @@ public class IMonikerImplementation extends NetObject implements IMoniker {
 
     public void Enum(boolean fForward, JCORefOut<IEnumMoniker> ppenumMoniker) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Enum", fForward, ppenumMoniker.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -242,7 +286,7 @@ public class IMonikerImplementation extends NetObject implements IMoniker {
 
     public void GetClassID(JCORefOut<Guid> pClassID) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetClassID", pClassID.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -252,7 +296,7 @@ public class IMonikerImplementation extends NetObject implements IMoniker {
 
     public void GetDisplayName(IBindCtx pbc, IMoniker pmkToLeft, JCORefOut ppszDisplayName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetDisplayName", pbc == null ? null : pbc.getJCOInstance(), pmkToLeft == null ? null : pmkToLeft.getJCOInstance(), ppszDisplayName.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -262,7 +306,7 @@ public class IMonikerImplementation extends NetObject implements IMoniker {
 
     public void GetSizeMax(JCORefOut<java.util.concurrent.atomic.AtomicLong> pcbSize) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetSizeMax", pcbSize.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -272,7 +316,7 @@ public class IMonikerImplementation extends NetObject implements IMoniker {
 
     public void GetTimeOfLastChange(IBindCtx pbc, IMoniker pmkToLeft, JCORefOut<FILETIME> pFileTime) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetTimeOfLastChange", pbc == null ? null : pbc.getJCOInstance(), pmkToLeft == null ? null : pmkToLeft.getJCOInstance(), pFileTime.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -282,7 +326,7 @@ public class IMonikerImplementation extends NetObject implements IMoniker {
 
     public void Hash(JCORefOut<java.util.concurrent.atomic.AtomicInteger> pdwHash) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Hash", pdwHash.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -292,7 +336,7 @@ public class IMonikerImplementation extends NetObject implements IMoniker {
 
     public void Inverse(JCORefOut<IMoniker> ppmk) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Inverse", ppmk.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -302,7 +346,7 @@ public class IMonikerImplementation extends NetObject implements IMoniker {
 
     public void Load(IStream pStm) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Load", pStm == null ? null : pStm.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -312,7 +356,7 @@ public class IMonikerImplementation extends NetObject implements IMoniker {
 
     public void ParseDisplayName(IBindCtx pbc, IMoniker pmkToLeft, java.lang.String pszDisplayName, JCORefOut<java.util.concurrent.atomic.AtomicInteger> pchEaten, JCORefOut<IMoniker> ppmkOut) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ParseDisplayName", pbc == null ? null : pbc.getJCOInstance(), pmkToLeft == null ? null : pmkToLeft.getJCOInstance(), pszDisplayName, pchEaten.getJCRefOut(), ppmkOut.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -322,7 +366,7 @@ public class IMonikerImplementation extends NetObject implements IMoniker {
 
     public void Reduce(IBindCtx pbc, int dwReduceHowFar, JCORefOut<IMoniker> ppmkToLeft, JCORefOut<IMoniker> ppmkReduced) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Reduce", pbc == null ? null : pbc.getJCOInstance(), dwReduceHowFar, ppmkToLeft.getJCRefOut(), ppmkReduced.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -332,7 +376,7 @@ public class IMonikerImplementation extends NetObject implements IMoniker {
 
     public void RelativePathTo(IMoniker pmkOther, JCORefOut<IMoniker> ppmkRelPath) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RelativePathTo", pmkOther == null ? null : pmkOther.getJCOInstance(), ppmkRelPath.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -342,7 +386,7 @@ public class IMonikerImplementation extends NetObject implements IMoniker {
 
     public void Save(IStream pStm, boolean fClearDirty) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Save", pStm == null ? null : pStm.getJCOInstance(), fClearDirty);
         } catch (JCNativeException jcne) {

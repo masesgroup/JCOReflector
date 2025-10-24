@@ -152,10 +152,14 @@ public class IConstructionReturnMessageImplementation extends NetObject implemen
     
     public NetObject GetArg(int argNum) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetArg = null;
         try {
-            JCObject objGetArg = (JCObject)classInstance.Invoke("GetArg", argNum);
+            retObjectGetArg = classInstance.Invoke("GetArg", argNum);
+            JCObject objGetArg = (JCObject)retObjectGetArg;
             return new NetObject(objGetArg);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetArg != null ? retObjectGetArg.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -163,10 +167,14 @@ public class IConstructionReturnMessageImplementation extends NetObject implemen
 
     public NetObject GetOutArg(int argNum) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetOutArg = null;
         try {
-            JCObject objGetOutArg = (JCObject)classInstance.Invoke("GetOutArg", argNum);
+            retObjectGetOutArg = classInstance.Invoke("GetOutArg", argNum);
+            JCObject objGetOutArg = (JCObject)retObjectGetOutArg;
             return new NetObject(objGetOutArg);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetOutArg != null ? retObjectGetOutArg.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -174,9 +182,13 @@ public class IConstructionReturnMessageImplementation extends NetObject implemen
 
     public java.lang.String GetArgName(int index) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetArgName = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetArgName", index);
+            retObjectGetArgName = classInstance.Invoke("GetArgName", index);
+            return (java.lang.String)retObjectGetArgName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetArgName != null ? retObjectGetArgName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -184,9 +196,13 @@ public class IConstructionReturnMessageImplementation extends NetObject implemen
 
     public java.lang.String GetOutArgName(int index) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetOutArgName = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetOutArgName", index);
+            retObjectGetOutArgName = classInstance.Invoke("GetOutArgName", index);
+            return (java.lang.String)retObjectGetOutArgName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetOutArgName != null ? retObjectGetOutArgName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,9 +214,13 @@ public class IConstructionReturnMessageImplementation extends NetObject implemen
     
     public boolean getHasVarArgs() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHasVarArgs = null;
         try {
-            return (boolean)classInstance.Get("HasVarArgs");
+            retObjectHasVarArgs = classInstance.Get("HasVarArgs");
+            return (boolean)retObjectHasVarArgs;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectHasVarArgs != null ? retObjectHasVarArgs.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -208,9 +228,20 @@ public class IConstructionReturnMessageImplementation extends NetObject implemen
 
     public int getArgCount() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectArgCount = null;
         try {
-            return (int)classInstance.Get("ArgCount");
+            retObjectArgCount = classInstance.Get("ArgCount");
+            return (int)retObjectArgCount;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectArgCount_ToString = retObjectArgCount == null ? "null" : retObjectArgCount.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectArgCountNumber = (java.lang.Number)retObjectArgCount;
+                return retObjectArgCountNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectArgCount != null ? retObjectArgCount.getClass() : "null", retObjectArgCount_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -218,9 +249,20 @@ public class IConstructionReturnMessageImplementation extends NetObject implemen
 
     public int getOutArgCount() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOutArgCount = null;
         try {
-            return (int)classInstance.Get("OutArgCount");
+            retObjectOutArgCount = classInstance.Get("OutArgCount");
+            return (int)retObjectOutArgCount;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectOutArgCount_ToString = retObjectOutArgCount == null ? "null" : retObjectOutArgCount.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectOutArgCountNumber = (java.lang.Number)retObjectOutArgCount;
+                return retObjectOutArgCountNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectOutArgCount != null ? retObjectOutArgCount.getClass() : "null", retObjectOutArgCount_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -228,10 +270,14 @@ public class IConstructionReturnMessageImplementation extends NetObject implemen
 
     public IDictionary getProperties() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProperties = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Properties");
+            retObjectProperties = classInstance.Get("Properties");
+            JCObject val = (JCObject)retObjectProperties;
             return new IDictionaryImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectProperties != null ? retObjectProperties.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -239,10 +285,14 @@ public class IConstructionReturnMessageImplementation extends NetObject implemen
 
     public NetException getException() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectException = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Exception");
+            retObjectException = classInstance.Get("Exception");
+            JCObject val = (JCObject)retObjectException;
             return new NetException(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectException != null ? retObjectException.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -250,10 +300,14 @@ public class IConstructionReturnMessageImplementation extends NetObject implemen
 
     public NetObject getMethodSignature() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMethodSignature = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MethodSignature");
+            retObjectMethodSignature = classInstance.Get("MethodSignature");
+            JCObject val = (JCObject)retObjectMethodSignature;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMethodSignature != null ? retObjectMethodSignature.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -261,10 +315,14 @@ public class IConstructionReturnMessageImplementation extends NetObject implemen
 
     public NetObject getReturnValue() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReturnValue = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ReturnValue");
+            retObjectReturnValue = classInstance.Get("ReturnValue");
+            JCObject val = (JCObject)retObjectReturnValue;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReturnValue != null ? retObjectReturnValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -272,16 +330,20 @@ public class IConstructionReturnMessageImplementation extends NetObject implemen
 
     public final NetObject[] getArgs() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectArgs = null;
         try {
             ArrayList<NetObject> resultingArrayList = new ArrayList<NetObject>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("Args");
+            retObjectArgs = classInstance.Get("Args");
+            JCObject resultingObjects = (JCObject)retObjectArgs;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new NetObject(resultingObject));
             }
             NetObject[] resultingArray = new NetObject[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectArgs != null ? retObjectArgs.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -289,16 +351,20 @@ public class IConstructionReturnMessageImplementation extends NetObject implemen
 
     public final NetObject[] getOutArgs() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOutArgs = null;
         try {
             ArrayList<NetObject> resultingArrayList = new ArrayList<NetObject>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("OutArgs");
+            retObjectOutArgs = classInstance.Get("OutArgs");
+            JCObject resultingObjects = (JCObject)retObjectOutArgs;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new NetObject(resultingObject));
             }
             NetObject[] resultingArray = new NetObject[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOutArgs != null ? retObjectOutArgs.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -306,10 +372,14 @@ public class IConstructionReturnMessageImplementation extends NetObject implemen
 
     public MethodBase getMethodBase() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMethodBase = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MethodBase");
+            retObjectMethodBase = classInstance.Get("MethodBase");
+            JCObject val = (JCObject)retObjectMethodBase;
             return new MethodBase(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMethodBase != null ? retObjectMethodBase.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -317,10 +387,14 @@ public class IConstructionReturnMessageImplementation extends NetObject implemen
 
     public LogicalCallContext getLogicalCallContext() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLogicalCallContext = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("LogicalCallContext");
+            retObjectLogicalCallContext = classInstance.Get("LogicalCallContext");
+            JCObject val = (JCObject)retObjectLogicalCallContext;
             return new LogicalCallContext(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLogicalCallContext != null ? retObjectLogicalCallContext.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -328,9 +402,13 @@ public class IConstructionReturnMessageImplementation extends NetObject implemen
 
     public java.lang.String getMethodName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMethodName = null;
         try {
-            return (java.lang.String)classInstance.Get("MethodName");
+            retObjectMethodName = classInstance.Get("MethodName");
+            return (java.lang.String)retObjectMethodName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectMethodName != null ? retObjectMethodName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -338,9 +416,13 @@ public class IConstructionReturnMessageImplementation extends NetObject implemen
 
     public java.lang.String getTypeName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTypeName = null;
         try {
-            return (java.lang.String)classInstance.Get("TypeName");
+            retObjectTypeName = classInstance.Get("TypeName");
+            return (java.lang.String)retObjectTypeName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectTypeName != null ? retObjectTypeName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -348,9 +430,13 @@ public class IConstructionReturnMessageImplementation extends NetObject implemen
 
     public java.lang.String getUri() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUri = null;
         try {
-            return (java.lang.String)classInstance.Get("Uri");
+            retObjectUri = classInstance.Get("Uri");
+            return (java.lang.String)retObjectUri;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectUri != null ? retObjectUri.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

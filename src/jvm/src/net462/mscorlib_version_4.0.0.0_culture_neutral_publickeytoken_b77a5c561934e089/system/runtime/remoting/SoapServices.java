@@ -157,9 +157,13 @@ public class SoapServices extends NetObject  {
     
     public static boolean DecodeXmlNamespaceForClrTypeNamespace(java.lang.String inNamespace, JCORefOut typeNamespace, JCORefOut assemblyName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDecodeXmlNamespaceForClrTypeNamespace = null;
         try {
-            return (boolean)classType.Invoke("DecodeXmlNamespaceForClrTypeNamespace", inNamespace, typeNamespace.getJCRefOut(), assemblyName.getJCRefOut());
+            retObjectDecodeXmlNamespaceForClrTypeNamespace = classType.Invoke("DecodeXmlNamespaceForClrTypeNamespace", inNamespace, typeNamespace.getJCRefOut(), assemblyName.getJCRefOut());
+            return (boolean)retObjectDecodeXmlNamespaceForClrTypeNamespace;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectDecodeXmlNamespaceForClrTypeNamespace != null ? retObjectDecodeXmlNamespaceForClrTypeNamespace.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -167,9 +171,13 @@ public class SoapServices extends NetObject  {
 
     public static boolean GetTypeAndMethodNameFromSoapAction(java.lang.String soapAction, JCORefOut typeName, JCORefOut methodName) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.NotImplementedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetTypeAndMethodNameFromSoapAction = null;
         try {
-            return (boolean)classType.Invoke("GetTypeAndMethodNameFromSoapAction", soapAction, typeName.getJCRefOut(), methodName.getJCRefOut());
+            retObjectGetTypeAndMethodNameFromSoapAction = classType.Invoke("GetTypeAndMethodNameFromSoapAction", soapAction, typeName.getJCRefOut(), methodName.getJCRefOut());
+            return (boolean)retObjectGetTypeAndMethodNameFromSoapAction;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectGetTypeAndMethodNameFromSoapAction != null ? retObjectGetTypeAndMethodNameFromSoapAction.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,9 +185,13 @@ public class SoapServices extends NetObject  {
 
     public static boolean GetXmlElementForInteropType(NetType type, JCORefOut xmlElement, JCORefOut xmlNamespace) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetXmlElementForInteropType = null;
         try {
-            return (boolean)classType.Invoke("GetXmlElementForInteropType", type == null ? null : type.getJCOInstance(), xmlElement.getJCRefOut(), xmlNamespace.getJCRefOut());
+            retObjectGetXmlElementForInteropType = classType.Invoke("GetXmlElementForInteropType", type == null ? null : type.getJCOInstance(), xmlElement.getJCRefOut(), xmlNamespace.getJCRefOut());
+            return (boolean)retObjectGetXmlElementForInteropType;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectGetXmlElementForInteropType != null ? retObjectGetXmlElementForInteropType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,9 +199,13 @@ public class SoapServices extends NetObject  {
 
     public static boolean GetXmlTypeForInteropType(NetType type, JCORefOut xmlType, JCORefOut xmlTypeNamespace) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.NotImplementedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetXmlTypeForInteropType = null;
         try {
-            return (boolean)classType.Invoke("GetXmlTypeForInteropType", type == null ? null : type.getJCOInstance(), xmlType.getJCRefOut(), xmlTypeNamespace.getJCRefOut());
+            retObjectGetXmlTypeForInteropType = classType.Invoke("GetXmlTypeForInteropType", type == null ? null : type.getJCOInstance(), xmlType.getJCRefOut(), xmlTypeNamespace.getJCRefOut());
+            return (boolean)retObjectGetXmlTypeForInteropType;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectGetXmlTypeForInteropType != null ? retObjectGetXmlTypeForInteropType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,9 +213,13 @@ public class SoapServices extends NetObject  {
 
     public static boolean IsClrTypeNamespace(java.lang.String namespaceString) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsClrTypeNamespace = null;
         try {
-            return (boolean)classType.Invoke("IsClrTypeNamespace", namespaceString);
+            retObjectIsClrTypeNamespace = classType.Invoke("IsClrTypeNamespace", namespaceString);
+            return (boolean)retObjectIsClrTypeNamespace;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsClrTypeNamespace != null ? retObjectIsClrTypeNamespace.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -207,9 +227,13 @@ public class SoapServices extends NetObject  {
 
     public static boolean IsSoapActionValidForMethodBase(java.lang.String soapAction, MethodBase mb) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NullReferenceException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsSoapActionValidForMethodBase = null;
         try {
-            return (boolean)classType.Invoke("IsSoapActionValidForMethodBase", soapAction, mb == null ? null : mb.getJCOInstance());
+            retObjectIsSoapActionValidForMethodBase = classType.Invoke("IsSoapActionValidForMethodBase", soapAction, mb == null ? null : mb.getJCOInstance());
+            return (boolean)retObjectIsSoapActionValidForMethodBase;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsSoapActionValidForMethodBase != null ? retObjectIsSoapActionValidForMethodBase.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -217,9 +241,13 @@ public class SoapServices extends NetObject  {
 
     public static java.lang.String CodeXmlNamespaceForClrTypeNamespace(java.lang.String typeNamespace, java.lang.String assemblyName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCodeXmlNamespaceForClrTypeNamespace = null;
         try {
-            return (java.lang.String)classType.Invoke("CodeXmlNamespaceForClrTypeNamespace", typeNamespace, assemblyName);
+            retObjectCodeXmlNamespaceForClrTypeNamespace = classType.Invoke("CodeXmlNamespaceForClrTypeNamespace", typeNamespace, assemblyName);
+            return (java.lang.String)retObjectCodeXmlNamespaceForClrTypeNamespace;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectCodeXmlNamespaceForClrTypeNamespace != null ? retObjectCodeXmlNamespaceForClrTypeNamespace.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -227,9 +255,13 @@ public class SoapServices extends NetObject  {
 
     public static java.lang.String GetSoapActionFromMethodBase(MethodBase mb) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.OutOfMemoryException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetSoapActionFromMethodBase = null;
         try {
-            return (java.lang.String)classType.Invoke("GetSoapActionFromMethodBase", mb == null ? null : mb.getJCOInstance());
+            retObjectGetSoapActionFromMethodBase = classType.Invoke("GetSoapActionFromMethodBase", mb == null ? null : mb.getJCOInstance());
+            return (java.lang.String)retObjectGetSoapActionFromMethodBase;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetSoapActionFromMethodBase != null ? retObjectGetSoapActionFromMethodBase.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -237,9 +269,13 @@ public class SoapServices extends NetObject  {
 
     public static java.lang.String GetXmlNamespaceForMethodCall(MethodBase mb) throws Throwable, system.ArgumentException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetXmlNamespaceForMethodCall = null;
         try {
-            return (java.lang.String)classType.Invoke("GetXmlNamespaceForMethodCall", mb == null ? null : mb.getJCOInstance());
+            retObjectGetXmlNamespaceForMethodCall = classType.Invoke("GetXmlNamespaceForMethodCall", mb == null ? null : mb.getJCOInstance());
+            return (java.lang.String)retObjectGetXmlNamespaceForMethodCall;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetXmlNamespaceForMethodCall != null ? retObjectGetXmlNamespaceForMethodCall.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -247,9 +283,13 @@ public class SoapServices extends NetObject  {
 
     public static java.lang.String GetXmlNamespaceForMethodResponse(MethodBase mb) throws Throwable, system.ArgumentException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetXmlNamespaceForMethodResponse = null;
         try {
-            return (java.lang.String)classType.Invoke("GetXmlNamespaceForMethodResponse", mb == null ? null : mb.getJCOInstance());
+            retObjectGetXmlNamespaceForMethodResponse = classType.Invoke("GetXmlNamespaceForMethodResponse", mb == null ? null : mb.getJCOInstance());
+            return (java.lang.String)retObjectGetXmlNamespaceForMethodResponse;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetXmlNamespaceForMethodResponse != null ? retObjectGetXmlNamespaceForMethodResponse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -257,10 +297,14 @@ public class SoapServices extends NetObject  {
 
     public static NetType GetInteropTypeFromXmlElement(java.lang.String xmlElement, java.lang.String xmlNamespace) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetInteropTypeFromXmlElement = null;
         try {
-            JCObject objGetInteropTypeFromXmlElement = (JCObject)classType.Invoke("GetInteropTypeFromXmlElement", xmlElement, xmlNamespace);
+            retObjectGetInteropTypeFromXmlElement = classType.Invoke("GetInteropTypeFromXmlElement", xmlElement, xmlNamespace);
+            JCObject objGetInteropTypeFromXmlElement = (JCObject)retObjectGetInteropTypeFromXmlElement;
             return new NetType(objGetInteropTypeFromXmlElement);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetInteropTypeFromXmlElement != null ? retObjectGetInteropTypeFromXmlElement.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -268,10 +312,14 @@ public class SoapServices extends NetObject  {
 
     public static NetType GetInteropTypeFromXmlType(java.lang.String xmlType, java.lang.String xmlTypeNamespace) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetInteropTypeFromXmlType = null;
         try {
-            JCObject objGetInteropTypeFromXmlType = (JCObject)classType.Invoke("GetInteropTypeFromXmlType", xmlType, xmlTypeNamespace);
+            retObjectGetInteropTypeFromXmlType = classType.Invoke("GetInteropTypeFromXmlType", xmlType, xmlTypeNamespace);
+            JCObject objGetInteropTypeFromXmlType = (JCObject)retObjectGetInteropTypeFromXmlType;
             return new NetType(objGetInteropTypeFromXmlType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetInteropTypeFromXmlType != null ? retObjectGetInteropTypeFromXmlType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -279,7 +327,7 @@ public class SoapServices extends NetObject  {
 
     public static void GetInteropFieldTypeAndNameFromXmlAttribute(NetType containingType, java.lang.String xmlAttribute, java.lang.String xmlNamespace, JCORefOut<NetType> type, JCORefOut name) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("GetInteropFieldTypeAndNameFromXmlAttribute", containingType == null ? null : containingType.getJCOInstance(), xmlAttribute, xmlNamespace, type.getJCRefOut(), name.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -289,7 +337,7 @@ public class SoapServices extends NetObject  {
 
     public static void GetInteropFieldTypeAndNameFromXmlElement(NetType containingType, java.lang.String xmlElement, java.lang.String xmlNamespace, JCORefOut<NetType> type, JCORefOut name) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("GetInteropFieldTypeAndNameFromXmlElement", containingType == null ? null : containingType.getJCOInstance(), xmlElement, xmlNamespace, type.getJCRefOut(), name.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -299,7 +347,7 @@ public class SoapServices extends NetObject  {
 
     public static void PreLoad(Assembly assembly) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("PreLoad", assembly == null ? null : assembly.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -309,7 +357,7 @@ public class SoapServices extends NetObject  {
 
     public static void PreLoad(NetType type) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.OutOfMemoryException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("PreLoad", type == null ? null : type.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -319,7 +367,7 @@ public class SoapServices extends NetObject  {
 
     public static void RegisterInteropXmlElement(java.lang.String xmlElement, java.lang.String xmlNamespace, NetType type) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("RegisterInteropXmlElement", xmlElement, xmlNamespace, type == null ? null : type.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -329,7 +377,7 @@ public class SoapServices extends NetObject  {
 
     public static void RegisterInteropXmlType(java.lang.String xmlType, java.lang.String xmlTypeNamespace, NetType type) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("RegisterInteropXmlType", xmlType, xmlTypeNamespace, type == null ? null : type.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -339,7 +387,7 @@ public class SoapServices extends NetObject  {
 
     public static void RegisterSoapActionForMethodBase(MethodBase mb) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("RegisterSoapActionForMethodBase", mb == null ? null : mb.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -349,7 +397,7 @@ public class SoapServices extends NetObject  {
 
     public static void RegisterSoapActionForMethodBase(MethodBase mb, java.lang.String soapAction) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("RegisterSoapActionForMethodBase", mb == null ? null : mb.getJCOInstance(), soapAction);
         } catch (JCNativeException jcne) {
@@ -363,9 +411,13 @@ public class SoapServices extends NetObject  {
     
     public static java.lang.String getXmlNsForClrType() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectXmlNsForClrType = null;
         try {
-            return (java.lang.String)classType.Get("XmlNsForClrType");
+            retObjectXmlNsForClrType = classType.Get("XmlNsForClrType");
+            return (java.lang.String)retObjectXmlNsForClrType;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectXmlNsForClrType != null ? retObjectXmlNsForClrType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -373,9 +425,13 @@ public class SoapServices extends NetObject  {
 
     public static java.lang.String getXmlNsForClrTypeWithAssembly() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectXmlNsForClrTypeWithAssembly = null;
         try {
-            return (java.lang.String)classType.Get("XmlNsForClrTypeWithAssembly");
+            retObjectXmlNsForClrTypeWithAssembly = classType.Get("XmlNsForClrTypeWithAssembly");
+            return (java.lang.String)retObjectXmlNsForClrTypeWithAssembly;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectXmlNsForClrTypeWithAssembly != null ? retObjectXmlNsForClrTypeWithAssembly.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -383,9 +439,13 @@ public class SoapServices extends NetObject  {
 
     public static java.lang.String getXmlNsForClrTypeWithNs() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectXmlNsForClrTypeWithNs = null;
         try {
-            return (java.lang.String)classType.Get("XmlNsForClrTypeWithNs");
+            retObjectXmlNsForClrTypeWithNs = classType.Get("XmlNsForClrTypeWithNs");
+            return (java.lang.String)retObjectXmlNsForClrTypeWithNs;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectXmlNsForClrTypeWithNs != null ? retObjectXmlNsForClrTypeWithNs.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -393,9 +453,13 @@ public class SoapServices extends NetObject  {
 
     public static java.lang.String getXmlNsForClrTypeWithNsAndAssembly() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectXmlNsForClrTypeWithNsAndAssembly = null;
         try {
-            return (java.lang.String)classType.Get("XmlNsForClrTypeWithNsAndAssembly");
+            retObjectXmlNsForClrTypeWithNsAndAssembly = classType.Get("XmlNsForClrTypeWithNsAndAssembly");
+            return (java.lang.String)retObjectXmlNsForClrTypeWithNsAndAssembly;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectXmlNsForClrTypeWithNsAndAssembly != null ? retObjectXmlNsForClrTypeWithNsAndAssembly.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -173,10 +173,14 @@ public class SqlNotificationEventArgs extends EventArgs  {
     
     public SqlNotificationInfo getInfo() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInfo = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Info");
+            retObjectInfo = classInstance.Get("Info");
+            JCObject val = (JCObject)retObjectInfo;
             return new SqlNotificationInfo(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInfo != null ? retObjectInfo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -184,10 +188,14 @@ public class SqlNotificationEventArgs extends EventArgs  {
 
     public SqlNotificationSource getSource() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSource = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Source");
+            retObjectSource = classInstance.Get("Source");
+            JCObject val = (JCObject)retObjectSource;
             return new SqlNotificationSource(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSource != null ? retObjectSource.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,10 +203,14 @@ public class SqlNotificationEventArgs extends EventArgs  {
 
     public SqlNotificationType getType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Type");
+            retObjectType = classInstance.Get("Type");
+            JCObject val = (JCObject)retObjectType;
             return new SqlNotificationType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectType != null ? retObjectType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

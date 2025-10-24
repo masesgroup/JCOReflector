@@ -159,9 +159,13 @@ public class SecureEnvironment extends NetObject implements AutoCloseable {
     
     public static boolean IsUserActivated(ContentUser user) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.security.rightsmanagement.RightsManagementException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsUserActivated = null;
         try {
-            return (boolean)classType.Invoke("IsUserActivated", user == null ? null : user.getJCOInstance());
+            retObjectIsUserActivated = classType.Invoke("IsUserActivated", user == null ? null : user.getJCOInstance());
+            return (boolean)retObjectIsUserActivated;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsUserActivated != null ? retObjectIsUserActivated.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,10 +173,14 @@ public class SecureEnvironment extends NetObject implements AutoCloseable {
 
     public static SecureEnvironment Create(java.lang.String applicationManifest, AuthenticationType authentication, UserActivationMode userActivationMode) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.io.IOException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.security.rightsmanagement.RightsManagementException, system.UriFormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
         try {
-            JCObject objCreate = (JCObject)classType.Invoke("Create", applicationManifest, authentication == null ? null : authentication.getJCOInstance(), userActivationMode == null ? null : userActivationMode.getJCOInstance());
+            retObjectCreate = classType.Invoke("Create", applicationManifest, authentication == null ? null : authentication.getJCOInstance(), userActivationMode == null ? null : userActivationMode.getJCOInstance());
+            JCObject objCreate = (JCObject)retObjectCreate;
             return new SecureEnvironment(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,10 +188,14 @@ public class SecureEnvironment extends NetObject implements AutoCloseable {
 
     public static SecureEnvironment Create(java.lang.String applicationManifest, ContentUser user) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.io.IOException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.security.rightsmanagement.RightsManagementException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
         try {
-            JCObject objCreate = (JCObject)classType.Invoke("Create", applicationManifest, user == null ? null : user.getJCOInstance());
+            retObjectCreate = classType.Invoke("Create", applicationManifest, user == null ? null : user.getJCOInstance());
+            JCObject objCreate = (JCObject)retObjectCreate;
             return new SecureEnvironment(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,7 +203,7 @@ public class SecureEnvironment extends NetObject implements AutoCloseable {
 
     public void Dispose() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentException, system.security.SecurityException, system.io.IOException, system.ArgumentOutOfRangeException, system.security.rightsmanagement.RightsManagementException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
@@ -201,7 +213,7 @@ public class SecureEnvironment extends NetObject implements AutoCloseable {
 
     public static void RemoveActivatedUser(ContentUser user) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.security.rightsmanagement.RightsManagementException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("RemoveActivatedUser", user == null ? null : user.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -212,7 +224,7 @@ public class SecureEnvironment extends NetObject implements AutoCloseable {
     public void close() throws Exception {
         try {
             if (classInstance == null)
-                throw new UnsupportedOperationException("classInstance is null.");
+                throw new java.lang.UnsupportedOperationException("classInstance is null.");
             try {
                 classInstance.Invoke("Dispose");
             }
@@ -228,10 +240,14 @@ public class SecureEnvironment extends NetObject implements AutoCloseable {
     
     public ContentUser getUser() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUser = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("User");
+            retObjectUser = classInstance.Get("User");
+            JCObject val = (JCObject)retObjectUser;
             return new ContentUser(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUser != null ? retObjectUser.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -239,9 +255,13 @@ public class SecureEnvironment extends NetObject implements AutoCloseable {
 
     public java.lang.String getApplicationManifest() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectApplicationManifest = null;
         try {
-            return (java.lang.String)classInstance.Get("ApplicationManifest");
+            retObjectApplicationManifest = classInstance.Get("ApplicationManifest");
+            return (java.lang.String)retObjectApplicationManifest;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectApplicationManifest != null ? retObjectApplicationManifest.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

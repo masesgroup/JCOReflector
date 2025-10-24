@@ -195,7 +195,7 @@ public class ChannelDispatcher extends ChannelDispatcherBase  {
     
     public void CloseInput() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CloseInput");
         } catch (JCNativeException jcne) {
@@ -209,9 +209,13 @@ public class ChannelDispatcher extends ChannelDispatcherBase  {
     
     public boolean getAsynchronousTransactedAcceptEnabled() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAsynchronousTransactedAcceptEnabled = null;
         try {
-            return (boolean)classInstance.Get("AsynchronousTransactedAcceptEnabled");
+            retObjectAsynchronousTransactedAcceptEnabled = classInstance.Get("AsynchronousTransactedAcceptEnabled");
+            return (boolean)retObjectAsynchronousTransactedAcceptEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAsynchronousTransactedAcceptEnabled != null ? retObjectAsynchronousTransactedAcceptEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -219,7 +223,7 @@ public class ChannelDispatcher extends ChannelDispatcherBase  {
 
     public void setAsynchronousTransactedAcceptEnabled(boolean AsynchronousTransactedAcceptEnabled) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AsynchronousTransactedAcceptEnabled", AsynchronousTransactedAcceptEnabled);
         } catch (JCNativeException jcne) {
@@ -229,9 +233,13 @@ public class ChannelDispatcher extends ChannelDispatcherBase  {
 
     public boolean getIncludeExceptionDetailInFaults() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIncludeExceptionDetailInFaults = null;
         try {
-            return (boolean)classInstance.Get("IncludeExceptionDetailInFaults");
+            retObjectIncludeExceptionDetailInFaults = classInstance.Get("IncludeExceptionDetailInFaults");
+            return (boolean)retObjectIncludeExceptionDetailInFaults;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIncludeExceptionDetailInFaults != null ? retObjectIncludeExceptionDetailInFaults.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -239,7 +247,7 @@ public class ChannelDispatcher extends ChannelDispatcherBase  {
 
     public void setIncludeExceptionDetailInFaults(boolean IncludeExceptionDetailInFaults) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IncludeExceptionDetailInFaults", IncludeExceptionDetailInFaults);
         } catch (JCNativeException jcne) {
@@ -249,9 +257,13 @@ public class ChannelDispatcher extends ChannelDispatcherBase  {
 
     public boolean getIsTransactedAccept() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsTransactedAccept = null;
         try {
-            return (boolean)classInstance.Get("IsTransactedAccept");
+            retObjectIsTransactedAccept = classInstance.Get("IsTransactedAccept");
+            return (boolean)retObjectIsTransactedAccept;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsTransactedAccept != null ? retObjectIsTransactedAccept.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -259,9 +271,13 @@ public class ChannelDispatcher extends ChannelDispatcherBase  {
 
     public boolean getIsTransactedReceive() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsTransactedReceive = null;
         try {
-            return (boolean)classInstance.Get("IsTransactedReceive");
+            retObjectIsTransactedReceive = classInstance.Get("IsTransactedReceive");
+            return (boolean)retObjectIsTransactedReceive;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsTransactedReceive != null ? retObjectIsTransactedReceive.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -269,7 +285,7 @@ public class ChannelDispatcher extends ChannelDispatcherBase  {
 
     public void setIsTransactedReceive(boolean IsTransactedReceive) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsTransactedReceive", IsTransactedReceive);
         } catch (JCNativeException jcne) {
@@ -279,9 +295,13 @@ public class ChannelDispatcher extends ChannelDispatcherBase  {
 
     public boolean getManualAddressing() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectManualAddressing = null;
         try {
-            return (boolean)classInstance.Get("ManualAddressing");
+            retObjectManualAddressing = classInstance.Get("ManualAddressing");
+            return (boolean)retObjectManualAddressing;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectManualAddressing != null ? retObjectManualAddressing.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -289,7 +309,7 @@ public class ChannelDispatcher extends ChannelDispatcherBase  {
 
     public void setManualAddressing(boolean ManualAddressing) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ManualAddressing", ManualAddressing);
         } catch (JCNativeException jcne) {
@@ -299,9 +319,13 @@ public class ChannelDispatcher extends ChannelDispatcherBase  {
 
     public boolean getReceiveContextEnabled() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReceiveContextEnabled = null;
         try {
-            return (boolean)classInstance.Get("ReceiveContextEnabled");
+            retObjectReceiveContextEnabled = classInstance.Get("ReceiveContextEnabled");
+            return (boolean)retObjectReceiveContextEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectReceiveContextEnabled != null ? retObjectReceiveContextEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -309,7 +333,7 @@ public class ChannelDispatcher extends ChannelDispatcherBase  {
 
     public void setReceiveContextEnabled(boolean ReceiveContextEnabled) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ReceiveContextEnabled", ReceiveContextEnabled);
         } catch (JCNativeException jcne) {
@@ -319,9 +343,13 @@ public class ChannelDispatcher extends ChannelDispatcherBase  {
 
     public boolean getReceiveSynchronously() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReceiveSynchronously = null;
         try {
-            return (boolean)classInstance.Get("ReceiveSynchronously");
+            retObjectReceiveSynchronously = classInstance.Get("ReceiveSynchronously");
+            return (boolean)retObjectReceiveSynchronously;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectReceiveSynchronously != null ? retObjectReceiveSynchronously.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -329,7 +357,7 @@ public class ChannelDispatcher extends ChannelDispatcherBase  {
 
     public void setReceiveSynchronously(boolean ReceiveSynchronously) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ReceiveSynchronously", ReceiveSynchronously);
         } catch (JCNativeException jcne) {
@@ -339,9 +367,13 @@ public class ChannelDispatcher extends ChannelDispatcherBase  {
 
     public boolean getSendAsynchronously() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSendAsynchronously = null;
         try {
-            return (boolean)classInstance.Get("SendAsynchronously");
+            retObjectSendAsynchronously = classInstance.Get("SendAsynchronously");
+            return (boolean)retObjectSendAsynchronously;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectSendAsynchronously != null ? retObjectSendAsynchronously.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -349,7 +381,7 @@ public class ChannelDispatcher extends ChannelDispatcherBase  {
 
     public void setSendAsynchronously(boolean SendAsynchronously) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SendAsynchronously", SendAsynchronously);
         } catch (JCNativeException jcne) {
@@ -359,9 +391,20 @@ public class ChannelDispatcher extends ChannelDispatcherBase  {
 
     public int getMaxPendingReceives() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxPendingReceives = null;
         try {
-            return (int)classInstance.Get("MaxPendingReceives");
+            retObjectMaxPendingReceives = classInstance.Get("MaxPendingReceives");
+            return (int)retObjectMaxPendingReceives;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaxPendingReceives_ToString = retObjectMaxPendingReceives == null ? "null" : retObjectMaxPendingReceives.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMaxPendingReceivesNumber = (java.lang.Number)retObjectMaxPendingReceives;
+                return retObjectMaxPendingReceivesNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxPendingReceives != null ? retObjectMaxPendingReceives.getClass() : "null", retObjectMaxPendingReceives_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -369,7 +412,7 @@ public class ChannelDispatcher extends ChannelDispatcherBase  {
 
     public void setMaxPendingReceives(int MaxPendingReceives) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaxPendingReceives", MaxPendingReceives);
         } catch (JCNativeException jcne) {
@@ -379,9 +422,20 @@ public class ChannelDispatcher extends ChannelDispatcherBase  {
 
     public int getMaxTransactedBatchSize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxTransactedBatchSize = null;
         try {
-            return (int)classInstance.Get("MaxTransactedBatchSize");
+            retObjectMaxTransactedBatchSize = classInstance.Get("MaxTransactedBatchSize");
+            return (int)retObjectMaxTransactedBatchSize;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaxTransactedBatchSize_ToString = retObjectMaxTransactedBatchSize == null ? "null" : retObjectMaxTransactedBatchSize.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMaxTransactedBatchSizeNumber = (java.lang.Number)retObjectMaxTransactedBatchSize;
+                return retObjectMaxTransactedBatchSizeNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxTransactedBatchSize != null ? retObjectMaxTransactedBatchSize.getClass() : "null", retObjectMaxTransactedBatchSize_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -389,7 +443,7 @@ public class ChannelDispatcher extends ChannelDispatcherBase  {
 
     public void setMaxTransactedBatchSize(int MaxTransactedBatchSize) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaxTransactedBatchSize", MaxTransactedBatchSize);
         } catch (JCNativeException jcne) {
@@ -399,10 +453,14 @@ public class ChannelDispatcher extends ChannelDispatcherBase  {
 
     public MessageVersion getMessageVersion() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMessageVersion = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MessageVersion");
+            retObjectMessageVersion = classInstance.Get("MessageVersion");
+            JCObject val = (JCObject)retObjectMessageVersion;
             return new MessageVersion(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMessageVersion != null ? retObjectMessageVersion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -410,7 +468,7 @@ public class ChannelDispatcher extends ChannelDispatcherBase  {
 
     public void setMessageVersion(MessageVersion MessageVersion) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MessageVersion", MessageVersion == null ? null : MessageVersion.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -420,10 +478,14 @@ public class ChannelDispatcher extends ChannelDispatcherBase  {
 
     public ServiceThrottle getServiceThrottle() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectServiceThrottle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ServiceThrottle");
+            retObjectServiceThrottle = classInstance.Get("ServiceThrottle");
+            JCObject val = (JCObject)retObjectServiceThrottle;
             return new ServiceThrottle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectServiceThrottle != null ? retObjectServiceThrottle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -431,7 +493,7 @@ public class ChannelDispatcher extends ChannelDispatcherBase  {
 
     public void setServiceThrottle(ServiceThrottle ServiceThrottle) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ServiceThrottle", ServiceThrottle == null ? null : ServiceThrottle.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -441,9 +503,13 @@ public class ChannelDispatcher extends ChannelDispatcherBase  {
 
     public java.lang.String getBindingName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBindingName = null;
         try {
-            return (java.lang.String)classInstance.Get("BindingName");
+            retObjectBindingName = classInstance.Get("BindingName");
+            return (java.lang.String)retObjectBindingName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectBindingName != null ? retObjectBindingName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -451,10 +517,14 @@ public class ChannelDispatcher extends ChannelDispatcherBase  {
 
     public TimeSpan getTransactionTimeout() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTransactionTimeout = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TransactionTimeout");
+            retObjectTransactionTimeout = classInstance.Get("TransactionTimeout");
+            JCObject val = (JCObject)retObjectTransactionTimeout;
             return new TimeSpan(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTransactionTimeout != null ? retObjectTransactionTimeout.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -462,7 +532,7 @@ public class ChannelDispatcher extends ChannelDispatcherBase  {
 
     public void setTransactionTimeout(TimeSpan TransactionTimeout) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TransactionTimeout", TransactionTimeout == null ? null : TransactionTimeout.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -472,10 +542,14 @@ public class ChannelDispatcher extends ChannelDispatcherBase  {
 
     public IsolationLevel getTransactionIsolationLevel() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTransactionIsolationLevel = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TransactionIsolationLevel");
+            retObjectTransactionIsolationLevel = classInstance.Get("TransactionIsolationLevel");
+            JCObject val = (JCObject)retObjectTransactionIsolationLevel;
             return new IsolationLevel(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTransactionIsolationLevel != null ? retObjectTransactionIsolationLevel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -483,7 +557,7 @@ public class ChannelDispatcher extends ChannelDispatcherBase  {
 
     public void setTransactionIsolationLevel(IsolationLevel TransactionIsolationLevel) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TransactionIsolationLevel", TransactionIsolationLevel == null ? null : TransactionIsolationLevel.getJCOInstance());
         } catch (JCNativeException jcne) {

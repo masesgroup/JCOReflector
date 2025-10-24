@@ -172,9 +172,13 @@ public class Point4D extends ValueType implements system.IFormattable {
     
     public static boolean Equals(Point4D point1, Point4D point2) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectEquals = null;
         try {
-            return (boolean)classType.Invoke("Equals", point1 == null ? null : point1.getJCOInstance(), point2 == null ? null : point2.getJCOInstance());
+            retObjectEquals = classType.Invoke("Equals", point1 == null ? null : point1.getJCOInstance(), point2 == null ? null : point2.getJCOInstance());
+            return (boolean)retObjectEquals;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectEquals != null ? retObjectEquals.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,9 +186,13 @@ public class Point4D extends ValueType implements system.IFormattable {
 
     public boolean Equals(Point4D value) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEquals = null;
         try {
-            return (boolean)classInstance.Invoke("Equals", value == null ? null : value.getJCOInstance());
+            retObjectEquals = classInstance.Invoke("Equals", value == null ? null : value.getJCOInstance());
+            return (boolean)retObjectEquals;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectEquals != null ? retObjectEquals.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,9 +200,13 @@ public class Point4D extends ValueType implements system.IFormattable {
 
     public java.lang.String ToString(IFormatProvider provider) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToString = null;
         try {
-            return (java.lang.String)classInstance.Invoke("ToString", provider == null ? null : provider.getJCOInstance());
+            retObjectToString = classInstance.Invoke("ToString", provider == null ? null : provider.getJCOInstance());
+            return (java.lang.String)retObjectToString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectToString != null ? retObjectToString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,10 +214,14 @@ public class Point4D extends ValueType implements system.IFormattable {
 
     public static Point4D Add(Point4D point1, Point4D point2) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAdd = null;
         try {
-            JCObject objAdd = (JCObject)classType.Invoke("Add", point1 == null ? null : point1.getJCOInstance(), point2 == null ? null : point2.getJCOInstance());
+            retObjectAdd = classType.Invoke("Add", point1 == null ? null : point1.getJCOInstance(), point2 == null ? null : point2.getJCOInstance());
+            JCObject objAdd = (JCObject)retObjectAdd;
             return new Point4D(objAdd);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAdd != null ? retObjectAdd.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,10 +229,14 @@ public class Point4D extends ValueType implements system.IFormattable {
 
     public static Point4D Multiply(Point4D point, Matrix3D matrix) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMultiply = null;
         try {
-            JCObject objMultiply = (JCObject)classType.Invoke("Multiply", point == null ? null : point.getJCOInstance(), matrix == null ? null : matrix.getJCOInstance());
+            retObjectMultiply = classType.Invoke("Multiply", point == null ? null : point.getJCOInstance(), matrix == null ? null : matrix.getJCOInstance());
+            JCObject objMultiply = (JCObject)retObjectMultiply;
             return new Point4D(objMultiply);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMultiply != null ? retObjectMultiply.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -224,10 +244,14 @@ public class Point4D extends ValueType implements system.IFormattable {
 
     public static Point4D Parse(java.lang.String source) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectParse = null;
         try {
-            JCObject objParse = (JCObject)classType.Invoke("Parse", source);
+            retObjectParse = classType.Invoke("Parse", source);
+            JCObject objParse = (JCObject)retObjectParse;
             return new Point4D(objParse);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParse != null ? retObjectParse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -235,10 +259,14 @@ public class Point4D extends ValueType implements system.IFormattable {
 
     public static Point4D Subtract(Point4D point1, Point4D point2) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSubtract = null;
         try {
-            JCObject objSubtract = (JCObject)classType.Invoke("Subtract", point1 == null ? null : point1.getJCOInstance(), point2 == null ? null : point2.getJCOInstance());
+            retObjectSubtract = classType.Invoke("Subtract", point1 == null ? null : point1.getJCOInstance(), point2 == null ? null : point2.getJCOInstance());
+            JCObject objSubtract = (JCObject)retObjectSubtract;
             return new Point4D(objSubtract);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSubtract != null ? retObjectSubtract.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -246,7 +274,7 @@ public class Point4D extends ValueType implements system.IFormattable {
 
     public void Offset(double deltaX, double deltaY, double deltaZ, double deltaW) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Offset", deltaX, deltaY, deltaZ, deltaW);
         } catch (JCNativeException jcne) {
@@ -260,7 +288,7 @@ public class Point4D extends ValueType implements system.IFormattable {
      */
     @Deprecated 
     public java.lang.String ToString(java.lang.String format, IFormatProvider formatProvider) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIFormattable to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIFormattable to obtain the full interface.");
     }
 
 
@@ -269,9 +297,20 @@ public class Point4D extends ValueType implements system.IFormattable {
     
     public double getW() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectW = null;
         try {
-            return (double)classInstance.Get("W");
+            retObjectW = classInstance.Get("W");
+            return (double)retObjectW;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectW_ToString = retObjectW == null ? "null" : retObjectW.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectWNumber = (java.lang.Number)retObjectW;
+                return retObjectWNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectW != null ? retObjectW.getClass() : "null", retObjectW_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -279,7 +318,7 @@ public class Point4D extends ValueType implements system.IFormattable {
 
     public void setW(double W) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("W", W);
         } catch (JCNativeException jcne) {
@@ -289,9 +328,20 @@ public class Point4D extends ValueType implements system.IFormattable {
 
     public double getX() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectX = null;
         try {
-            return (double)classInstance.Get("X");
+            retObjectX = classInstance.Get("X");
+            return (double)retObjectX;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectX_ToString = retObjectX == null ? "null" : retObjectX.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectXNumber = (java.lang.Number)retObjectX;
+                return retObjectXNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectX != null ? retObjectX.getClass() : "null", retObjectX_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -299,7 +349,7 @@ public class Point4D extends ValueType implements system.IFormattable {
 
     public void setX(double X) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("X", X);
         } catch (JCNativeException jcne) {
@@ -309,9 +359,20 @@ public class Point4D extends ValueType implements system.IFormattable {
 
     public double getY() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectY = null;
         try {
-            return (double)classInstance.Get("Y");
+            retObjectY = classInstance.Get("Y");
+            return (double)retObjectY;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectY_ToString = retObjectY == null ? "null" : retObjectY.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectYNumber = (java.lang.Number)retObjectY;
+                return retObjectYNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectY != null ? retObjectY.getClass() : "null", retObjectY_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -319,7 +380,7 @@ public class Point4D extends ValueType implements system.IFormattable {
 
     public void setY(double Y) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Y", Y);
         } catch (JCNativeException jcne) {
@@ -329,9 +390,20 @@ public class Point4D extends ValueType implements system.IFormattable {
 
     public double getZ() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectZ = null;
         try {
-            return (double)classInstance.Get("Z");
+            retObjectZ = classInstance.Get("Z");
+            return (double)retObjectZ;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectZ_ToString = retObjectZ == null ? "null" : retObjectZ.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectZNumber = (java.lang.Number)retObjectZ;
+                return retObjectZNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectZ != null ? retObjectZ.getClass() : "null", retObjectZ_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -339,7 +411,7 @@ public class Point4D extends ValueType implements system.IFormattable {
 
     public void setZ(double Z) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Z", Z);
         } catch (JCNativeException jcne) {

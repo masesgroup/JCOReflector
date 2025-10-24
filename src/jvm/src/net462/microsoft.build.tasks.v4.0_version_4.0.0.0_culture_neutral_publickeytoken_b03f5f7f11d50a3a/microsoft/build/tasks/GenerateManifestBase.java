@@ -156,9 +156,13 @@ public class GenerateManifestBase extends Task  {
     
     public boolean Execute() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.NullReferenceException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.security.SecurityException, system.OutOfMemoryException, system.FormatException, system.xml.XmlException, system.xml.xpath.XPathException, system.collections.generic.KeyNotFoundException, system.RankException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExecute = null;
         try {
-            return (boolean)classInstance.Invoke("Execute");
+            retObjectExecute = classInstance.Invoke("Execute");
+            return (boolean)retObjectExecute;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectExecute != null ? retObjectExecute.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,9 +174,20 @@ public class GenerateManifestBase extends Task  {
     
     public int getMaxTargetPath() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxTargetPath = null;
         try {
-            return (int)classInstance.Get("MaxTargetPath");
+            retObjectMaxTargetPath = classInstance.Get("MaxTargetPath");
+            return (int)retObjectMaxTargetPath;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaxTargetPath_ToString = retObjectMaxTargetPath == null ? "null" : retObjectMaxTargetPath.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMaxTargetPathNumber = (java.lang.Number)retObjectMaxTargetPath;
+                return retObjectMaxTargetPathNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxTargetPath != null ? retObjectMaxTargetPath.getClass() : "null", retObjectMaxTargetPath_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,7 +195,7 @@ public class GenerateManifestBase extends Task  {
 
     public void setMaxTargetPath(int MaxTargetPath) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaxTargetPath", MaxTargetPath);
         } catch (JCNativeException jcne) {
@@ -190,10 +205,14 @@ public class GenerateManifestBase extends Task  {
 
     public ITaskItem getEntryPoint() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEntryPoint = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("EntryPoint");
+            retObjectEntryPoint = classInstance.Get("EntryPoint");
+            JCObject val = (JCObject)retObjectEntryPoint;
             return new ITaskItemImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEntryPoint != null ? retObjectEntryPoint.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,7 +220,7 @@ public class GenerateManifestBase extends Task  {
 
     public void setEntryPoint(ITaskItem EntryPoint) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EntryPoint", EntryPoint == null ? null : EntryPoint.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -211,10 +230,14 @@ public class GenerateManifestBase extends Task  {
 
     public ITaskItem getInputManifest() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInputManifest = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("InputManifest");
+            retObjectInputManifest = classInstance.Get("InputManifest");
+            JCObject val = (JCObject)retObjectInputManifest;
             return new ITaskItemImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInputManifest != null ? retObjectInputManifest.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -222,7 +245,7 @@ public class GenerateManifestBase extends Task  {
 
     public void setInputManifest(ITaskItem InputManifest) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("InputManifest", InputManifest == null ? null : InputManifest.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -232,10 +255,14 @@ public class GenerateManifestBase extends Task  {
 
     public ITaskItem getOutputManifest() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOutputManifest = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("OutputManifest");
+            retObjectOutputManifest = classInstance.Get("OutputManifest");
+            JCObject val = (JCObject)retObjectOutputManifest;
             return new ITaskItemImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOutputManifest != null ? retObjectOutputManifest.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -243,7 +270,7 @@ public class GenerateManifestBase extends Task  {
 
     public void setOutputManifest(ITaskItem OutputManifest) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("OutputManifest", OutputManifest == null ? null : OutputManifest.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -253,9 +280,13 @@ public class GenerateManifestBase extends Task  {
 
     public java.lang.String getAssemblyName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAssemblyName = null;
         try {
-            return (java.lang.String)classInstance.Get("AssemblyName");
+            retObjectAssemblyName = classInstance.Get("AssemblyName");
+            return (java.lang.String)retObjectAssemblyName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectAssemblyName != null ? retObjectAssemblyName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -263,7 +294,7 @@ public class GenerateManifestBase extends Task  {
 
     public void setAssemblyName(java.lang.String AssemblyName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AssemblyName", AssemblyName);
         } catch (JCNativeException jcne) {
@@ -273,9 +304,13 @@ public class GenerateManifestBase extends Task  {
 
     public java.lang.String getAssemblyVersion() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAssemblyVersion = null;
         try {
-            return (java.lang.String)classInstance.Get("AssemblyVersion");
+            retObjectAssemblyVersion = classInstance.Get("AssemblyVersion");
+            return (java.lang.String)retObjectAssemblyVersion;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectAssemblyVersion != null ? retObjectAssemblyVersion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -283,7 +318,7 @@ public class GenerateManifestBase extends Task  {
 
     public void setAssemblyVersion(java.lang.String AssemblyVersion) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AssemblyVersion", AssemblyVersion);
         } catch (JCNativeException jcne) {
@@ -293,9 +328,13 @@ public class GenerateManifestBase extends Task  {
 
     public java.lang.String getDescription() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDescription = null;
         try {
-            return (java.lang.String)classInstance.Get("Description");
+            retObjectDescription = classInstance.Get("Description");
+            return (java.lang.String)retObjectDescription;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDescription != null ? retObjectDescription.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -303,7 +342,7 @@ public class GenerateManifestBase extends Task  {
 
     public void setDescription(java.lang.String Description) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Description", Description);
         } catch (JCNativeException jcne) {
@@ -313,9 +352,13 @@ public class GenerateManifestBase extends Task  {
 
     public java.lang.String getPlatform() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPlatform = null;
         try {
-            return (java.lang.String)classInstance.Get("Platform");
+            retObjectPlatform = classInstance.Get("Platform");
+            return (java.lang.String)retObjectPlatform;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectPlatform != null ? retObjectPlatform.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -323,7 +366,7 @@ public class GenerateManifestBase extends Task  {
 
     public void setPlatform(java.lang.String Platform) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Platform", Platform);
         } catch (JCNativeException jcne) {
@@ -333,9 +376,13 @@ public class GenerateManifestBase extends Task  {
 
     public java.lang.String getTargetCulture() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTargetCulture = null;
         try {
-            return (java.lang.String)classInstance.Get("TargetCulture");
+            retObjectTargetCulture = classInstance.Get("TargetCulture");
+            return (java.lang.String)retObjectTargetCulture;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectTargetCulture != null ? retObjectTargetCulture.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -343,7 +390,7 @@ public class GenerateManifestBase extends Task  {
 
     public void setTargetCulture(java.lang.String TargetCulture) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TargetCulture", TargetCulture);
         } catch (JCNativeException jcne) {
@@ -353,9 +400,13 @@ public class GenerateManifestBase extends Task  {
 
     public java.lang.String getTargetFrameworkMoniker() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTargetFrameworkMoniker = null;
         try {
-            return (java.lang.String)classInstance.Get("TargetFrameworkMoniker");
+            retObjectTargetFrameworkMoniker = classInstance.Get("TargetFrameworkMoniker");
+            return (java.lang.String)retObjectTargetFrameworkMoniker;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectTargetFrameworkMoniker != null ? retObjectTargetFrameworkMoniker.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -363,7 +414,7 @@ public class GenerateManifestBase extends Task  {
 
     public void setTargetFrameworkMoniker(java.lang.String TargetFrameworkMoniker) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TargetFrameworkMoniker", TargetFrameworkMoniker);
         } catch (JCNativeException jcne) {
@@ -373,9 +424,13 @@ public class GenerateManifestBase extends Task  {
 
     public java.lang.String getTargetFrameworkVersion() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTargetFrameworkVersion = null;
         try {
-            return (java.lang.String)classInstance.Get("TargetFrameworkVersion");
+            retObjectTargetFrameworkVersion = classInstance.Get("TargetFrameworkVersion");
+            return (java.lang.String)retObjectTargetFrameworkVersion;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectTargetFrameworkVersion != null ? retObjectTargetFrameworkVersion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -383,7 +438,7 @@ public class GenerateManifestBase extends Task  {
 
     public void setTargetFrameworkVersion(java.lang.String TargetFrameworkVersion) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TargetFrameworkVersion", TargetFrameworkVersion);
         } catch (JCNativeException jcne) {

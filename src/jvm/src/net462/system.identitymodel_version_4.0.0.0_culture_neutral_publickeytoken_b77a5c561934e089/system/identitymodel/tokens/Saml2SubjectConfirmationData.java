@@ -167,10 +167,14 @@ public class Saml2SubjectConfirmationData extends NetObject  {
     
     public Saml2Id getInResponseTo() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInResponseTo = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("InResponseTo");
+            retObjectInResponseTo = classInstance.Get("InResponseTo");
+            JCObject val = (JCObject)retObjectInResponseTo;
             return new Saml2Id(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInResponseTo != null ? retObjectInResponseTo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,7 +182,7 @@ public class Saml2SubjectConfirmationData extends NetObject  {
 
     public void setInResponseTo(Saml2Id InResponseTo) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("InResponseTo", InResponseTo == null ? null : InResponseTo.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -188,9 +192,13 @@ public class Saml2SubjectConfirmationData extends NetObject  {
 
     public java.lang.String getAddress() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddress = null;
         try {
-            return (java.lang.String)classInstance.Get("Address");
+            retObjectAddress = classInstance.Get("Address");
+            return (java.lang.String)retObjectAddress;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectAddress != null ? retObjectAddress.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,7 +206,7 @@ public class Saml2SubjectConfirmationData extends NetObject  {
 
     public void setAddress(java.lang.String Address) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Address", Address);
         } catch (JCNativeException jcne) {
@@ -208,10 +216,14 @@ public class Saml2SubjectConfirmationData extends NetObject  {
 
     public Uri getRecipient() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRecipient = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Recipient");
+            retObjectRecipient = classInstance.Get("Recipient");
+            JCObject val = (JCObject)retObjectRecipient;
             return new Uri(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRecipient != null ? retObjectRecipient.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -219,7 +231,7 @@ public class Saml2SubjectConfirmationData extends NetObject  {
 
     public void setRecipient(Uri Recipient) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Recipient", Recipient == null ? null : Recipient.getJCOInstance());
         } catch (JCNativeException jcne) {

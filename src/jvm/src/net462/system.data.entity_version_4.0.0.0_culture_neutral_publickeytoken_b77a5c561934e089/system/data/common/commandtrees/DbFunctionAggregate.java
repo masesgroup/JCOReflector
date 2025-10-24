@@ -161,9 +161,13 @@ public class DbFunctionAggregate extends DbAggregate  {
     
     public boolean getDistinct() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDistinct = null;
         try {
-            return (boolean)classInstance.Get("Distinct");
+            retObjectDistinct = classInstance.Get("Distinct");
+            return (boolean)retObjectDistinct;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectDistinct != null ? retObjectDistinct.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,10 +175,14 @@ public class DbFunctionAggregate extends DbAggregate  {
 
     public EdmFunction getFunction() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFunction = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Function");
+            retObjectFunction = classInstance.Get("Function");
+            JCObject val = (JCObject)retObjectFunction;
             return new EdmFunction(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFunction != null ? retObjectFunction.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

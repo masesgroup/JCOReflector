@@ -159,9 +159,20 @@ public class Interaction extends NetObject  {
     
     public static int Shell(java.lang.String PathName, AppWinStyle Style, boolean Wait, int Timeout) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException, system.IndexOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NullReferenceException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectShell = null;
         try {
-            return (int)classType.Invoke("Shell", PathName, Style == null ? null : Style.getJCOInstance(), Wait, Timeout);
+            retObjectShell = classType.Invoke("Shell", PathName, Style == null ? null : Style.getJCOInstance(), Wait, Timeout);
+            return (int)retObjectShell;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectShell_ToString = retObjectShell == null ? "null" : retObjectShell.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectShellNumber = (java.lang.Number)retObjectShell;
+                return retObjectShellNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectShell != null ? retObjectShell.getClass() : "null", retObjectShell_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,10 +180,14 @@ public class Interaction extends NetObject  {
 
     public static MsgBoxResult MsgBox(NetObject Prompt, MsgBoxStyle Buttons, NetObject Title) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.FormatException, system.InvalidCastException, system.OverflowException, system.MemberAccessException, system.reflection.TargetException, system.reflection.TargetParameterCountException, system.NullReferenceException, system.MissingMemberException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.security.SecurityException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.componentmodel.InvalidAsynchronousStateException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMsgBox = null;
         try {
-            JCObject objMsgBox = (JCObject)classType.Invoke("MsgBox", Prompt == null ? null : Prompt.getJCOInstance(), Buttons == null ? null : Buttons.getJCOInstance(), Title == null ? null : Title.getJCOInstance());
+            retObjectMsgBox = classType.Invoke("MsgBox", Prompt == null ? null : Prompt.getJCOInstance(), Buttons == null ? null : Buttons.getJCOInstance(), Title == null ? null : Title.getJCOInstance());
+            JCObject objMsgBox = (JCObject)retObjectMsgBox;
             return new MsgBoxResult(objMsgBox);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMsgBox != null ? retObjectMsgBox.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,10 +195,14 @@ public class Interaction extends NetObject  {
 
     public static NetObject CallByName(NetObject ObjectRef, java.lang.String ProcName, CallType UseCallType, NetObject... Args) throws Throwable, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.MissingMemberException, system.InvalidCastException, system.FormatException, system.OverflowException, system.MissingMethodException, system.NullReferenceException, system.NotSupportedException, system.reflection.AmbiguousMatchException, system.RankException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCallByName = null;
         try {
-            JCObject objCallByName = (JCObject)classType.Invoke("CallByName", ObjectRef == null ? null : ObjectRef.getJCOInstance(), ProcName, UseCallType == null ? null : UseCallType.getJCOInstance(), toObjectFromArray(Args));
+            retObjectCallByName = classType.Invoke("CallByName", ObjectRef == null ? null : ObjectRef.getJCOInstance(), ProcName, UseCallType == null ? null : UseCallType.getJCOInstance(), toObjectFromArray(Args));
+            JCObject objCallByName = (JCObject)retObjectCallByName;
             return new NetObject(objCallByName);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCallByName != null ? retObjectCallByName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,10 +210,14 @@ public class Interaction extends NetObject  {
 
     public static NetObject Choose(double Index, NetObject... Choice) throws Throwable, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectChoose = null;
         try {
-            JCObject objChoose = (JCObject)classType.Invoke("Choose", Index, toObjectFromArray(Choice));
+            retObjectChoose = classType.Invoke("Choose", Index, toObjectFromArray(Choice));
+            JCObject objChoose = (JCObject)retObjectChoose;
             return new NetObject(objChoose);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectChoose != null ? retObjectChoose.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,10 +225,14 @@ public class Interaction extends NetObject  {
 
     public static NetObject CreateObject(java.lang.String ProgId, java.lang.String ServerName) throws Throwable, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.globalization.CultureNotFoundException, system.ArgumentException, system.InvalidOperationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NullReferenceException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateObject = null;
         try {
-            JCObject objCreateObject = (JCObject)classType.Invoke("CreateObject", ProgId, ServerName);
+            retObjectCreateObject = classType.Invoke("CreateObject", ProgId, ServerName);
+            JCObject objCreateObject = (JCObject)retObjectCreateObject;
             return new NetObject(objCreateObject);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateObject != null ? retObjectCreateObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,10 +240,14 @@ public class Interaction extends NetObject  {
 
     public static NetObject GetObject(java.lang.String PathName, java.lang.String _Class) throws Throwable, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.globalization.CultureNotFoundException, system.ArgumentException, system.InvalidOperationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetObject = null;
         try {
-            JCObject objGetObject = (JCObject)classType.Invoke("GetObject", PathName, _Class);
+            retObjectGetObject = classType.Invoke("GetObject", PathName, _Class);
+            JCObject objGetObject = (JCObject)retObjectGetObject;
             return new NetObject(objGetObject);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetObject != null ? retObjectGetObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -224,10 +255,14 @@ public class Interaction extends NetObject  {
 
     public static NetObject IIf(boolean Expression, NetObject TruePart, NetObject FalsePart) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIIf = null;
         try {
-            JCObject objIIf = (JCObject)classType.Invoke("IIf", Expression, TruePart == null ? null : TruePart.getJCOInstance(), FalsePart == null ? null : FalsePart.getJCOInstance());
+            retObjectIIf = classType.Invoke("IIf", Expression, TruePart == null ? null : TruePart.getJCOInstance(), FalsePart == null ? null : FalsePart.getJCOInstance());
+            JCObject objIIf = (JCObject)retObjectIIf;
             return new NetObject(objIIf);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIIf != null ? retObjectIIf.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -235,10 +270,14 @@ public class Interaction extends NetObject  {
 
     public static NetObject Switch(NetObject... VarExpr) throws Throwable, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.NullReferenceException, system.OverflowException, system.InvalidCastException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSwitch = null;
         try {
-            JCObject objSwitch = (JCObject)classType.Invoke("Switch", (java.lang.Object)toObjectFromArray(VarExpr));
+            retObjectSwitch = classType.Invoke("Switch", (java.lang.Object)toObjectFromArray(VarExpr));
+            JCObject objSwitch = (JCObject)retObjectSwitch;
             return new NetObject(objSwitch);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSwitch != null ? retObjectSwitch.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -246,9 +285,13 @@ public class Interaction extends NetObject  {
 
     public static java.lang.String Command() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.IndexOutOfRangeException, system.NullReferenceException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCommand = null;
         try {
-            return (java.lang.String)classType.Invoke("Command");
+            retObjectCommand = classType.Invoke("Command");
+            return (java.lang.String)retObjectCommand;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectCommand != null ? retObjectCommand.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -256,9 +299,13 @@ public class Interaction extends NetObject  {
 
     public static java.lang.String Environ(int Expression) throws Throwable, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.security.SecurityException, system.NullReferenceException, system.RankException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectEnviron = null;
         try {
-            return (java.lang.String)classType.Invoke("Environ", Expression);
+            retObjectEnviron = classType.Invoke("Environ", Expression);
+            return (java.lang.String)retObjectEnviron;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectEnviron != null ? retObjectEnviron.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -266,9 +313,13 @@ public class Interaction extends NetObject  {
 
     public static java.lang.String Environ(java.lang.String Expression) throws Throwable, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.NullReferenceException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectEnviron = null;
         try {
-            return (java.lang.String)classType.Invoke("Environ", Expression);
+            retObjectEnviron = classType.Invoke("Environ", Expression);
+            return (java.lang.String)retObjectEnviron;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectEnviron != null ? retObjectEnviron.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -276,9 +327,13 @@ public class Interaction extends NetObject  {
 
     public static java.lang.String GetSetting(java.lang.String AppName, java.lang.String Section, java.lang.String Key, java.lang.String Default) throws Throwable, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetSetting = null;
         try {
-            return (java.lang.String)classType.Invoke("GetSetting", AppName, Section, Key, Default);
+            retObjectGetSetting = classType.Invoke("GetSetting", AppName, Section, Key, Default);
+            return (java.lang.String)retObjectGetSetting;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetSetting != null ? retObjectGetSetting.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -286,9 +341,13 @@ public class Interaction extends NetObject  {
 
     public static java.lang.String InputBox(java.lang.String Prompt, java.lang.String Title, java.lang.String DefaultResponse, int XPos, int YPos) throws Throwable, system.InvalidOperationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.componentmodel.Win32Exception, system.ArgumentException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.io.IOException, system.NotSupportedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NullReferenceException, system.componentmodel.InvalidEnumArgumentException, system.resources.MissingManifestResourceException, system.RankException, system.MulticastNotSupportedException, system.OutOfMemoryException, system.security.SecurityException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectInputBox = null;
         try {
-            return (java.lang.String)classType.Invoke("InputBox", Prompt, Title, DefaultResponse, XPos, YPos);
+            retObjectInputBox = classType.Invoke("InputBox", Prompt, Title, DefaultResponse, XPos, YPos);
+            return (java.lang.String)retObjectInputBox;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectInputBox != null ? retObjectInputBox.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -296,9 +355,13 @@ public class Interaction extends NetObject  {
 
     public static java.lang.String Partition(long Number, long Start, long Stop, long Interval) throws Throwable, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectPartition = null;
         try {
-            return (java.lang.String)classType.Invoke("Partition", Number, Start, Stop, Interval);
+            retObjectPartition = classType.Invoke("Partition", Number, Start, Stop, Interval);
+            return (java.lang.String)retObjectPartition;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectPartition != null ? retObjectPartition.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -306,7 +369,7 @@ public class Interaction extends NetObject  {
 
     public static void AppActivate(int ProcessId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("AppActivate", ProcessId);
         } catch (JCNativeException jcne) {
@@ -316,7 +379,7 @@ public class Interaction extends NetObject  {
 
     public static void AppActivate(java.lang.String Title) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotImplementedException, system.resources.MissingManifestResourceException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("AppActivate", Title);
         } catch (JCNativeException jcne) {
@@ -326,7 +389,7 @@ public class Interaction extends NetObject  {
 
     public static void Beep() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Beep");
         } catch (JCNativeException jcne) {
@@ -336,7 +399,7 @@ public class Interaction extends NetObject  {
 
     public static void DeleteSetting(java.lang.String AppName, java.lang.String Section, java.lang.String Key) throws Throwable, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.UnauthorizedAccessException, system.io.IOException, system.security.SecurityException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("DeleteSetting", AppName, Section, Key);
         } catch (JCNativeException jcne) {
@@ -346,7 +409,7 @@ public class Interaction extends NetObject  {
 
     public static void SaveSetting(java.lang.String AppName, java.lang.String Section, java.lang.String Key, java.lang.String Setting) throws Throwable, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.UnauthorizedAccessException, system.io.IOException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SaveSetting", AppName, Section, Key, Setting);
         } catch (JCNativeException jcne) {

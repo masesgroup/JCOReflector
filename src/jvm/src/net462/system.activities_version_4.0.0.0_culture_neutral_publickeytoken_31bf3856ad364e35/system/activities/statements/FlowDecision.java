@@ -166,10 +166,14 @@ public class FlowDecision extends FlowNode  {
     
     public FlowNode getFalse() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFalse = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("False");
+            retObjectFalse = classInstance.Get("False");
+            JCObject val = (JCObject)retObjectFalse;
             return new FlowNode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFalse != null ? retObjectFalse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,7 +181,7 @@ public class FlowDecision extends FlowNode  {
 
     public void setFalse(FlowNode False) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("False", False == null ? null : False.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -187,10 +191,14 @@ public class FlowDecision extends FlowNode  {
 
     public FlowNode getTrue() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTrue = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("True");
+            retObjectTrue = classInstance.Get("True");
+            JCObject val = (JCObject)retObjectTrue;
             return new FlowNode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTrue != null ? retObjectTrue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,7 +206,7 @@ public class FlowDecision extends FlowNode  {
 
     public void setTrue(FlowNode True) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("True", True == null ? null : True.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -208,9 +216,13 @@ public class FlowDecision extends FlowNode  {
 
     public java.lang.String getDisplayName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDisplayName = null;
         try {
-            return (java.lang.String)classInstance.Get("DisplayName");
+            retObjectDisplayName = classInstance.Get("DisplayName");
+            return (java.lang.String)retObjectDisplayName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDisplayName != null ? retObjectDisplayName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -218,7 +230,7 @@ public class FlowDecision extends FlowNode  {
 
     public void setDisplayName(java.lang.String DisplayName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DisplayName", DisplayName);
         } catch (JCNativeException jcne) {

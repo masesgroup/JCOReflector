@@ -159,9 +159,13 @@ public class BitmapCodecInfo extends NetObject  {
     
     public boolean getSupportsAnimation() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.NotImplementedException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSupportsAnimation = null;
         try {
-            return (boolean)classInstance.Get("SupportsAnimation");
+            retObjectSupportsAnimation = classInstance.Get("SupportsAnimation");
+            return (boolean)retObjectSupportsAnimation;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectSupportsAnimation != null ? retObjectSupportsAnimation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,9 +173,13 @@ public class BitmapCodecInfo extends NetObject  {
 
     public boolean getSupportsLossless() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.NotImplementedException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSupportsLossless = null;
         try {
-            return (boolean)classInstance.Get("SupportsLossless");
+            retObjectSupportsLossless = classInstance.Get("SupportsLossless");
+            return (boolean)retObjectSupportsLossless;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectSupportsLossless != null ? retObjectSupportsLossless.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,9 +187,13 @@ public class BitmapCodecInfo extends NetObject  {
 
     public boolean getSupportsMultipleFrames() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.NotImplementedException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSupportsMultipleFrames = null;
         try {
-            return (boolean)classInstance.Get("SupportsMultipleFrames");
+            retObjectSupportsMultipleFrames = classInstance.Get("SupportsMultipleFrames");
+            return (boolean)retObjectSupportsMultipleFrames;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectSupportsMultipleFrames != null ? retObjectSupportsMultipleFrames.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -189,10 +201,14 @@ public class BitmapCodecInfo extends NetObject  {
 
     public Guid getContainerFormat() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.NotImplementedException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContainerFormat = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ContainerFormat");
+            retObjectContainerFormat = classInstance.Get("ContainerFormat");
+            JCObject val = (JCObject)retObjectContainerFormat;
             return new Guid(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContainerFormat != null ? retObjectContainerFormat.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,9 +216,13 @@ public class BitmapCodecInfo extends NetObject  {
 
     public java.lang.String getAuthor() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.NotImplementedException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAuthor = null;
         try {
-            return (java.lang.String)classInstance.Get("Author");
+            retObjectAuthor = classInstance.Get("Author");
+            return (java.lang.String)retObjectAuthor;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectAuthor != null ? retObjectAuthor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -210,9 +230,13 @@ public class BitmapCodecInfo extends NetObject  {
 
     public java.lang.String getDeviceManufacturer() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.NotImplementedException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDeviceManufacturer = null;
         try {
-            return (java.lang.String)classInstance.Get("DeviceManufacturer");
+            retObjectDeviceManufacturer = classInstance.Get("DeviceManufacturer");
+            return (java.lang.String)retObjectDeviceManufacturer;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDeviceManufacturer != null ? retObjectDeviceManufacturer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -220,9 +244,13 @@ public class BitmapCodecInfo extends NetObject  {
 
     public java.lang.String getDeviceModels() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.NotImplementedException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDeviceModels = null;
         try {
-            return (java.lang.String)classInstance.Get("DeviceModels");
+            retObjectDeviceModels = classInstance.Get("DeviceModels");
+            return (java.lang.String)retObjectDeviceModels;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDeviceModels != null ? retObjectDeviceModels.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -230,9 +258,13 @@ public class BitmapCodecInfo extends NetObject  {
 
     public java.lang.String getFileExtensions() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.NotImplementedException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFileExtensions = null;
         try {
-            return (java.lang.String)classInstance.Get("FileExtensions");
+            retObjectFileExtensions = classInstance.Get("FileExtensions");
+            return (java.lang.String)retObjectFileExtensions;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectFileExtensions != null ? retObjectFileExtensions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -240,9 +272,13 @@ public class BitmapCodecInfo extends NetObject  {
 
     public java.lang.String getFriendlyName() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.NotImplementedException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFriendlyName = null;
         try {
-            return (java.lang.String)classInstance.Get("FriendlyName");
+            retObjectFriendlyName = classInstance.Get("FriendlyName");
+            return (java.lang.String)retObjectFriendlyName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectFriendlyName != null ? retObjectFriendlyName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -250,9 +286,13 @@ public class BitmapCodecInfo extends NetObject  {
 
     public java.lang.String getMimeTypes() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.NotImplementedException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMimeTypes = null;
         try {
-            return (java.lang.String)classInstance.Get("MimeTypes");
+            retObjectMimeTypes = classInstance.Get("MimeTypes");
+            return (java.lang.String)retObjectMimeTypes;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectMimeTypes != null ? retObjectMimeTypes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -260,10 +300,14 @@ public class BitmapCodecInfo extends NetObject  {
 
     public Version getSpecificationVersion() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.NotImplementedException, system.OutOfMemoryException, system.FormatException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSpecificationVersion = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SpecificationVersion");
+            retObjectSpecificationVersion = classInstance.Get("SpecificationVersion");
+            JCObject val = (JCObject)retObjectSpecificationVersion;
             return new Version(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSpecificationVersion != null ? retObjectSpecificationVersion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -271,10 +315,14 @@ public class BitmapCodecInfo extends NetObject  {
 
     public Version getVersion() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.NotImplementedException, system.OutOfMemoryException, system.FormatException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVersion = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Version");
+            retObjectVersion = classInstance.Get("Version");
+            JCObject val = (JCObject)retObjectVersion;
             return new Version(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVersion != null ? retObjectVersion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

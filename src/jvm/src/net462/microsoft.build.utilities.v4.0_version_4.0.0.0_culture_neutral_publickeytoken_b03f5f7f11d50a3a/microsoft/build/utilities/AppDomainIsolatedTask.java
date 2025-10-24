@@ -159,9 +159,13 @@ public class AppDomainIsolatedTask extends MarshalByRefObject  {
     
     public boolean Execute() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExecute = null;
         try {
-            return (boolean)classInstance.Invoke("Execute");
+            retObjectExecute = classInstance.Invoke("Execute");
+            return (boolean)retObjectExecute;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectExecute != null ? retObjectExecute.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,10 +173,14 @@ public class AppDomainIsolatedTask extends MarshalByRefObject  {
 
     public NetObject InitializeLifetimeService() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInitializeLifetimeService = null;
         try {
-            JCObject objInitializeLifetimeService = (JCObject)classInstance.Invoke("InitializeLifetimeService");
+            retObjectInitializeLifetimeService = classInstance.Invoke("InitializeLifetimeService");
+            JCObject objInitializeLifetimeService = (JCObject)retObjectInitializeLifetimeService;
             return new NetObject(objInitializeLifetimeService);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInitializeLifetimeService != null ? retObjectInitializeLifetimeService.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -184,10 +192,14 @@ public class AppDomainIsolatedTask extends MarshalByRefObject  {
     
     public IBuildEngine getBuildEngine() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBuildEngine = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("BuildEngine");
+            retObjectBuildEngine = classInstance.Get("BuildEngine");
+            JCObject val = (JCObject)retObjectBuildEngine;
             return new IBuildEngineImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBuildEngine != null ? retObjectBuildEngine.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,7 +207,7 @@ public class AppDomainIsolatedTask extends MarshalByRefObject  {
 
     public void setBuildEngine(IBuildEngine BuildEngine) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BuildEngine", BuildEngine == null ? null : BuildEngine.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -205,10 +217,14 @@ public class AppDomainIsolatedTask extends MarshalByRefObject  {
 
     public ITaskHost getHostObject() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHostObject = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("HostObject");
+            retObjectHostObject = classInstance.Get("HostObject");
+            JCObject val = (JCObject)retObjectHostObject;
             return new ITaskHostImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHostObject != null ? retObjectHostObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -216,7 +232,7 @@ public class AppDomainIsolatedTask extends MarshalByRefObject  {
 
     public void setHostObject(ITaskHost HostObject) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("HostObject", HostObject == null ? null : HostObject.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -226,10 +242,14 @@ public class AppDomainIsolatedTask extends MarshalByRefObject  {
 
     public TaskLoggingHelper getLog() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLog = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Log");
+            retObjectLog = classInstance.Get("Log");
+            JCObject val = (JCObject)retObjectLog;
             return new TaskLoggingHelper(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLog != null ? retObjectLog.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

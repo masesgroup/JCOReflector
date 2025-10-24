@@ -158,9 +158,13 @@ public class XmlSchemaFacet extends XmlSchemaAnnotated  {
     
     public boolean getIsFixed() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsFixed = null;
         try {
-            return (boolean)classInstance.Get("IsFixed");
+            retObjectIsFixed = classInstance.Get("IsFixed");
+            return (boolean)retObjectIsFixed;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsFixed != null ? retObjectIsFixed.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -168,7 +172,7 @@ public class XmlSchemaFacet extends XmlSchemaAnnotated  {
 
     public void setIsFixed(boolean IsFixed) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsFixed", IsFixed);
         } catch (JCNativeException jcne) {
@@ -178,9 +182,13 @@ public class XmlSchemaFacet extends XmlSchemaAnnotated  {
 
     public java.lang.String getValue() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValue = null;
         try {
-            return (java.lang.String)classInstance.Get("Value");
+            retObjectValue = classInstance.Get("Value");
+            return (java.lang.String)retObjectValue;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectValue != null ? retObjectValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,7 +196,7 @@ public class XmlSchemaFacet extends XmlSchemaAnnotated  {
 
     public void setValue(java.lang.String Value) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Value", Value);
         } catch (JCNativeException jcne) {

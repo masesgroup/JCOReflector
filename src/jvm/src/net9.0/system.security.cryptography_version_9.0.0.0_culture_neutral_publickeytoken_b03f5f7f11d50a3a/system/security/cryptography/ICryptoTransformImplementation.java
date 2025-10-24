@@ -144,10 +144,12 @@ public class ICryptoTransformImplementation extends NetObject implements ICrypto
     
     public byte[] TransformFinalBlock(byte[] inputBuffer, int inputOffset, int inputCount) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTransformFinalBlock = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("TransformFinalBlock", inputBuffer, inputOffset, inputCount);
+            retObjectTransformFinalBlock = classInstance.Invoke("TransformFinalBlock", inputBuffer, inputOffset, inputCount);
+            JCObject resultingObjects = (JCObject)retObjectTransformFinalBlock;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -156,6 +158,8 @@ public class ICryptoTransformImplementation extends NetObject implements ICrypto
 				resultingArray[indexTransformFinalBlock] = (byte)resultingArrayList.get(indexTransformFinalBlock);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectTransformFinalBlock != null ? retObjectTransformFinalBlock.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -163,10 +167,12 @@ public class ICryptoTransformImplementation extends NetObject implements ICrypto
 
     public byte[] TransformFinalBlock(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTransformFinalBlock = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("TransformFinalBlock", dupParam0.getJCRefOut(), dupParam1, dupParam2);
+            retObjectTransformFinalBlock = classInstance.Invoke("TransformFinalBlock", dupParam0.getJCRefOut(), dupParam1, dupParam2);
+            JCObject resultingObjects = (JCObject)retObjectTransformFinalBlock;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -175,6 +181,8 @@ public class ICryptoTransformImplementation extends NetObject implements ICrypto
 				resultingArray[indexTransformFinalBlock] = (byte)resultingArrayList.get(indexTransformFinalBlock);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectTransformFinalBlock != null ? retObjectTransformFinalBlock.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,9 +190,20 @@ public class ICryptoTransformImplementation extends NetObject implements ICrypto
 
     public int TransformBlock(byte[] inputBuffer, int inputOffset, int inputCount, byte[] outputBuffer, int outputOffset) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTransformBlock = null;
         try {
-            return (int)classInstance.Invoke("TransformBlock", inputBuffer, inputOffset, inputCount, outputBuffer, outputOffset);
+            retObjectTransformBlock = classInstance.Invoke("TransformBlock", inputBuffer, inputOffset, inputCount, outputBuffer, outputOffset);
+            return (int)retObjectTransformBlock;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectTransformBlock_ToString = retObjectTransformBlock == null ? "null" : retObjectTransformBlock.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectTransformBlockNumber = (java.lang.Number)retObjectTransformBlock;
+                return retObjectTransformBlockNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectTransformBlock != null ? retObjectTransformBlock.getClass() : "null", retObjectTransformBlock_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,9 +211,20 @@ public class ICryptoTransformImplementation extends NetObject implements ICrypto
 
     public int TransformBlock(JCORefOut dupParam0, int dupParam1, int dupParam2, JCORefOut dupParam3, int dupParam4) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTransformBlock = null;
         try {
-            return (int)classInstance.Invoke("TransformBlock", dupParam0.getJCRefOut(), dupParam1, dupParam2, dupParam3.getJCRefOut(), dupParam4);
+            retObjectTransformBlock = classInstance.Invoke("TransformBlock", dupParam0.getJCRefOut(), dupParam1, dupParam2, dupParam3.getJCRefOut(), dupParam4);
+            return (int)retObjectTransformBlock;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectTransformBlock_ToString = retObjectTransformBlock == null ? "null" : retObjectTransformBlock.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectTransformBlockNumber = (java.lang.Number)retObjectTransformBlock;
+                return retObjectTransformBlockNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectTransformBlock != null ? retObjectTransformBlock.getClass() : "null", retObjectTransformBlock_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,7 +232,7 @@ public class ICryptoTransformImplementation extends NetObject implements ICrypto
 
     public void Dispose() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
@@ -216,9 +246,13 @@ public class ICryptoTransformImplementation extends NetObject implements ICrypto
     
     public boolean getCanReuseTransform() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanReuseTransform = null;
         try {
-            return (boolean)classInstance.Get("CanReuseTransform");
+            retObjectCanReuseTransform = classInstance.Get("CanReuseTransform");
+            return (boolean)retObjectCanReuseTransform;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCanReuseTransform != null ? retObjectCanReuseTransform.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -226,9 +260,13 @@ public class ICryptoTransformImplementation extends NetObject implements ICrypto
 
     public boolean getCanTransformMultipleBlocks() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanTransformMultipleBlocks = null;
         try {
-            return (boolean)classInstance.Get("CanTransformMultipleBlocks");
+            retObjectCanTransformMultipleBlocks = classInstance.Get("CanTransformMultipleBlocks");
+            return (boolean)retObjectCanTransformMultipleBlocks;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCanTransformMultipleBlocks != null ? retObjectCanTransformMultipleBlocks.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -236,9 +274,20 @@ public class ICryptoTransformImplementation extends NetObject implements ICrypto
 
     public int getInputBlockSize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInputBlockSize = null;
         try {
-            return (int)classInstance.Get("InputBlockSize");
+            retObjectInputBlockSize = classInstance.Get("InputBlockSize");
+            return (int)retObjectInputBlockSize;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectInputBlockSize_ToString = retObjectInputBlockSize == null ? "null" : retObjectInputBlockSize.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectInputBlockSizeNumber = (java.lang.Number)retObjectInputBlockSize;
+                return retObjectInputBlockSizeNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectInputBlockSize != null ? retObjectInputBlockSize.getClass() : "null", retObjectInputBlockSize_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -246,9 +295,20 @@ public class ICryptoTransformImplementation extends NetObject implements ICrypto
 
     public int getOutputBlockSize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOutputBlockSize = null;
         try {
-            return (int)classInstance.Get("OutputBlockSize");
+            retObjectOutputBlockSize = classInstance.Get("OutputBlockSize");
+            return (int)retObjectOutputBlockSize;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectOutputBlockSize_ToString = retObjectOutputBlockSize == null ? "null" : retObjectOutputBlockSize.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectOutputBlockSizeNumber = (java.lang.Number)retObjectOutputBlockSize;
+                return retObjectOutputBlockSizeNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectOutputBlockSize != null ? retObjectOutputBlockSize.getClass() : "null", retObjectOutputBlockSize_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

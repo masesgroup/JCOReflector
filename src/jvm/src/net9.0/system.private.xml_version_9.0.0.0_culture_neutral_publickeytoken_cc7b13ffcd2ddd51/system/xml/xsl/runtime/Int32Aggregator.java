@@ -156,7 +156,7 @@ public class Int32Aggregator extends ValueType  {
     
     public void Average(int value) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Average", value);
         } catch (JCNativeException jcne) {
@@ -166,7 +166,7 @@ public class Int32Aggregator extends ValueType  {
 
     public void Create() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Create");
         } catch (JCNativeException jcne) {
@@ -176,7 +176,7 @@ public class Int32Aggregator extends ValueType  {
 
     public void Maximum(int value) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Maximum", value);
         } catch (JCNativeException jcne) {
@@ -186,7 +186,7 @@ public class Int32Aggregator extends ValueType  {
 
     public void Minimum(int value) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Minimum", value);
         } catch (JCNativeException jcne) {
@@ -196,7 +196,7 @@ public class Int32Aggregator extends ValueType  {
 
     public void Sum(int value) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Sum", value);
         } catch (JCNativeException jcne) {
@@ -210,9 +210,13 @@ public class Int32Aggregator extends ValueType  {
     
     public boolean getIsEmpty() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsEmpty = null;
         try {
-            return (boolean)classInstance.Get("IsEmpty");
+            retObjectIsEmpty = classInstance.Get("IsEmpty");
+            return (boolean)retObjectIsEmpty;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsEmpty != null ? retObjectIsEmpty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -220,9 +224,20 @@ public class Int32Aggregator extends ValueType  {
 
     public int getAverageResult() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAverageResult = null;
         try {
-            return (int)classInstance.Get("AverageResult");
+            retObjectAverageResult = classInstance.Get("AverageResult");
+            return (int)retObjectAverageResult;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectAverageResult_ToString = retObjectAverageResult == null ? "null" : retObjectAverageResult.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectAverageResultNumber = (java.lang.Number)retObjectAverageResult;
+                return retObjectAverageResultNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectAverageResult != null ? retObjectAverageResult.getClass() : "null", retObjectAverageResult_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -230,9 +245,20 @@ public class Int32Aggregator extends ValueType  {
 
     public int getMaximumResult() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaximumResult = null;
         try {
-            return (int)classInstance.Get("MaximumResult");
+            retObjectMaximumResult = classInstance.Get("MaximumResult");
+            return (int)retObjectMaximumResult;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaximumResult_ToString = retObjectMaximumResult == null ? "null" : retObjectMaximumResult.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMaximumResultNumber = (java.lang.Number)retObjectMaximumResult;
+                return retObjectMaximumResultNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaximumResult != null ? retObjectMaximumResult.getClass() : "null", retObjectMaximumResult_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -240,9 +266,20 @@ public class Int32Aggregator extends ValueType  {
 
     public int getMinimumResult() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMinimumResult = null;
         try {
-            return (int)classInstance.Get("MinimumResult");
+            retObjectMinimumResult = classInstance.Get("MinimumResult");
+            return (int)retObjectMinimumResult;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMinimumResult_ToString = retObjectMinimumResult == null ? "null" : retObjectMinimumResult.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMinimumResultNumber = (java.lang.Number)retObjectMinimumResult;
+                return retObjectMinimumResultNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMinimumResult != null ? retObjectMinimumResult.getClass() : "null", retObjectMinimumResult_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -250,9 +287,20 @@ public class Int32Aggregator extends ValueType  {
 
     public int getSumResult() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSumResult = null;
         try {
-            return (int)classInstance.Get("SumResult");
+            retObjectSumResult = classInstance.Get("SumResult");
+            return (int)retObjectSumResult;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSumResult_ToString = retObjectSumResult == null ? "null" : retObjectSumResult.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectSumResultNumber = (java.lang.Number)retObjectSumResult;
+                return retObjectSumResultNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectSumResult != null ? retObjectSumResult.getClass() : "null", retObjectSumResult_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

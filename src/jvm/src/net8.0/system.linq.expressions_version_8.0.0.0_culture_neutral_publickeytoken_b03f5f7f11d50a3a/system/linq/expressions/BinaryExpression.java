@@ -159,10 +159,14 @@ public class BinaryExpression extends Expression  {
     
     public BinaryExpression Update(Expression left, LambdaExpression conversion, Expression right) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUpdate = null;
         try {
-            JCObject objUpdate = (JCObject)classInstance.Invoke("Update", left == null ? null : left.getJCOInstance(), conversion == null ? null : conversion.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            retObjectUpdate = classInstance.Invoke("Update", left == null ? null : left.getJCOInstance(), conversion == null ? null : conversion.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            JCObject objUpdate = (JCObject)retObjectUpdate;
             return new BinaryExpression(objUpdate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUpdate != null ? retObjectUpdate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,10 +174,14 @@ public class BinaryExpression extends Expression  {
 
     public Expression Reduce() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReduce = null;
         try {
-            JCObject objReduce = (JCObject)classInstance.Invoke("Reduce");
+            retObjectReduce = classInstance.Invoke("Reduce");
+            JCObject objReduce = (JCObject)retObjectReduce;
             return new Expression(objReduce);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReduce != null ? retObjectReduce.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -185,9 +193,13 @@ public class BinaryExpression extends Expression  {
     
     public boolean getIsLifted() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsLifted = null;
         try {
-            return (boolean)classInstance.Get("IsLifted");
+            retObjectIsLifted = classInstance.Get("IsLifted");
+            return (boolean)retObjectIsLifted;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsLifted != null ? retObjectIsLifted.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,9 +207,13 @@ public class BinaryExpression extends Expression  {
 
     public boolean getIsLiftedToNull() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsLiftedToNull = null;
         try {
-            return (boolean)classInstance.Get("IsLiftedToNull");
+            retObjectIsLiftedToNull = classInstance.Get("IsLiftedToNull");
+            return (boolean)retObjectIsLiftedToNull;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsLiftedToNull != null ? retObjectIsLiftedToNull.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -205,10 +221,14 @@ public class BinaryExpression extends Expression  {
 
     public Expression getLeft() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLeft = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Left");
+            retObjectLeft = classInstance.Get("Left");
+            JCObject val = (JCObject)retObjectLeft;
             return new Expression(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLeft != null ? retObjectLeft.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -216,10 +236,14 @@ public class BinaryExpression extends Expression  {
 
     public Expression getRight() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRight = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Right");
+            retObjectRight = classInstance.Get("Right");
+            JCObject val = (JCObject)retObjectRight;
             return new Expression(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRight != null ? retObjectRight.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -227,10 +251,14 @@ public class BinaryExpression extends Expression  {
 
     public LambdaExpression getConversion() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConversion = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Conversion");
+            retObjectConversion = classInstance.Get("Conversion");
+            JCObject val = (JCObject)retObjectConversion;
             return new LambdaExpression(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConversion != null ? retObjectConversion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -238,10 +266,14 @@ public class BinaryExpression extends Expression  {
 
     public MethodInfo getMethod() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMethod = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Method");
+            retObjectMethod = classInstance.Get("Method");
+            JCObject val = (JCObject)retObjectMethod;
             return new MethodInfo(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMethod != null ? retObjectMethod.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

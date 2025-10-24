@@ -158,9 +158,13 @@ public class SequencePoint extends ValueType  {
     
     public boolean Equals(SequencePoint other) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEquals = null;
         try {
-            return (boolean)classInstance.Invoke("Equals", other == null ? null : other.getJCOInstance());
+            retObjectEquals = classInstance.Invoke("Equals", other == null ? null : other.getJCOInstance());
+            return (boolean)retObjectEquals;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectEquals != null ? retObjectEquals.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,9 +176,13 @@ public class SequencePoint extends ValueType  {
     
     public boolean getIsHidden() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsHidden = null;
         try {
-            return (boolean)classInstance.Get("IsHidden");
+            retObjectIsHidden = classInstance.Get("IsHidden");
+            return (boolean)retObjectIsHidden;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsHidden != null ? retObjectIsHidden.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,9 +190,20 @@ public class SequencePoint extends ValueType  {
 
     public int getEndColumn() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEndColumn = null;
         try {
-            return (int)classInstance.Get("EndColumn");
+            retObjectEndColumn = classInstance.Get("EndColumn");
+            return (int)retObjectEndColumn;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectEndColumn_ToString = retObjectEndColumn == null ? "null" : retObjectEndColumn.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectEndColumnNumber = (java.lang.Number)retObjectEndColumn;
+                return retObjectEndColumnNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectEndColumn != null ? retObjectEndColumn.getClass() : "null", retObjectEndColumn_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,9 +211,20 @@ public class SequencePoint extends ValueType  {
 
     public int getEndLine() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEndLine = null;
         try {
-            return (int)classInstance.Get("EndLine");
+            retObjectEndLine = classInstance.Get("EndLine");
+            return (int)retObjectEndLine;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectEndLine_ToString = retObjectEndLine == null ? "null" : retObjectEndLine.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectEndLineNumber = (java.lang.Number)retObjectEndLine;
+                return retObjectEndLineNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectEndLine != null ? retObjectEndLine.getClass() : "null", retObjectEndLine_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,9 +232,20 @@ public class SequencePoint extends ValueType  {
 
     public int getOffset() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOffset = null;
         try {
-            return (int)classInstance.Get("Offset");
+            retObjectOffset = classInstance.Get("Offset");
+            return (int)retObjectOffset;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectOffset_ToString = retObjectOffset == null ? "null" : retObjectOffset.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectOffsetNumber = (java.lang.Number)retObjectOffset;
+                return retObjectOffsetNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectOffset != null ? retObjectOffset.getClass() : "null", retObjectOffset_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -212,9 +253,20 @@ public class SequencePoint extends ValueType  {
 
     public int getStartColumn() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStartColumn = null;
         try {
-            return (int)classInstance.Get("StartColumn");
+            retObjectStartColumn = classInstance.Get("StartColumn");
+            return (int)retObjectStartColumn;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectStartColumn_ToString = retObjectStartColumn == null ? "null" : retObjectStartColumn.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectStartColumnNumber = (java.lang.Number)retObjectStartColumn;
+                return retObjectStartColumnNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectStartColumn != null ? retObjectStartColumn.getClass() : "null", retObjectStartColumn_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -222,9 +274,20 @@ public class SequencePoint extends ValueType  {
 
     public int getStartLine() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStartLine = null;
         try {
-            return (int)classInstance.Get("StartLine");
+            retObjectStartLine = classInstance.Get("StartLine");
+            return (int)retObjectStartLine;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectStartLine_ToString = retObjectStartLine == null ? "null" : retObjectStartLine.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectStartLineNumber = (java.lang.Number)retObjectStartLine;
+                return retObjectStartLineNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectStartLine != null ? retObjectStartLine.getClass() : "null", retObjectStartLine_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -232,10 +295,14 @@ public class SequencePoint extends ValueType  {
 
     public DocumentHandle getDocument() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDocument = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Document");
+            retObjectDocument = classInstance.Get("Document");
+            JCObject val = (JCObject)retObjectDocument;
             return new DocumentHandle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDocument != null ? retObjectDocument.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

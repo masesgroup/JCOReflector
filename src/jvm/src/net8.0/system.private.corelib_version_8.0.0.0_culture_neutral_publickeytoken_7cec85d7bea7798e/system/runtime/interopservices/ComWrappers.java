@@ -154,7 +154,7 @@ public class ComWrappers extends NetObject  {
     
     public static void RegisterForMarshalling(ComWrappers instance) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("RegisterForMarshalling", instance == null ? null : instance.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -164,7 +164,7 @@ public class ComWrappers extends NetObject  {
 
     public static void RegisterForTrackerSupport(ComWrappers instance) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("RegisterForTrackerSupport", instance == null ? null : instance.getJCOInstance());
         } catch (JCNativeException jcne) {

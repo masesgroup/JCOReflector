@@ -157,7 +157,7 @@ public class MemoryMappedViewStream extends UnmanagedMemoryStream  {
     
     public void Flush() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Flush");
         } catch (JCNativeException jcne) {
@@ -167,7 +167,7 @@ public class MemoryMappedViewStream extends UnmanagedMemoryStream  {
 
     public void SetLength(long value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetLength", value);
         } catch (JCNativeException jcne) {
@@ -181,9 +181,20 @@ public class MemoryMappedViewStream extends UnmanagedMemoryStream  {
     
     public long getPointerOffset() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPointerOffset = null;
         try {
-            return (long)classInstance.Get("PointerOffset");
+            retObjectPointerOffset = classInstance.Get("PointerOffset");
+            return (long)retObjectPointerOffset;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectPointerOffset_ToString = retObjectPointerOffset == null ? "null" : retObjectPointerOffset.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectPointerOffsetNumber = (java.lang.Number)retObjectPointerOffset;
+                return retObjectPointerOffsetNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectPointerOffset != null ? retObjectPointerOffset.getClass() : "null", retObjectPointerOffset_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,10 +202,14 @@ public class MemoryMappedViewStream extends UnmanagedMemoryStream  {
 
     public SafeMemoryMappedViewHandle getSafeMemoryMappedViewHandle() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSafeMemoryMappedViewHandle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SafeMemoryMappedViewHandle");
+            retObjectSafeMemoryMappedViewHandle = classInstance.Get("SafeMemoryMappedViewHandle");
+            JCObject val = (JCObject)retObjectSafeMemoryMappedViewHandle;
             return new SafeMemoryMappedViewHandle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSafeMemoryMappedViewHandle != null ? retObjectSafeMemoryMappedViewHandle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -161,9 +161,13 @@ public class BoundPropertyEntry extends PropertyEntry  {
     
     public boolean getGenerated() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGenerated = null;
         try {
-            return (boolean)classInstance.Get("Generated");
+            retObjectGenerated = classInstance.Get("Generated");
+            return (boolean)retObjectGenerated;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectGenerated != null ? retObjectGenerated.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,7 +175,7 @@ public class BoundPropertyEntry extends PropertyEntry  {
 
     public void setGenerated(boolean Generated) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Generated", Generated);
         } catch (JCNativeException jcne) {
@@ -181,9 +185,13 @@ public class BoundPropertyEntry extends PropertyEntry  {
 
     public boolean getIsEncoded() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsEncoded = null;
         try {
-            return (boolean)classInstance.Get("IsEncoded");
+            retObjectIsEncoded = classInstance.Get("IsEncoded");
+            return (boolean)retObjectIsEncoded;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsEncoded != null ? retObjectIsEncoded.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,7 +199,7 @@ public class BoundPropertyEntry extends PropertyEntry  {
 
     public void setIsEncoded(boolean IsEncoded) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsEncoded", IsEncoded);
         } catch (JCNativeException jcne) {
@@ -201,9 +209,13 @@ public class BoundPropertyEntry extends PropertyEntry  {
 
     public boolean getReadOnlyProperty() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadOnlyProperty = null;
         try {
-            return (boolean)classInstance.Get("ReadOnlyProperty");
+            retObjectReadOnlyProperty = classInstance.Get("ReadOnlyProperty");
+            return (boolean)retObjectReadOnlyProperty;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectReadOnlyProperty != null ? retObjectReadOnlyProperty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -211,7 +223,7 @@ public class BoundPropertyEntry extends PropertyEntry  {
 
     public void setReadOnlyProperty(boolean ReadOnlyProperty) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ReadOnlyProperty", ReadOnlyProperty);
         } catch (JCNativeException jcne) {
@@ -221,9 +233,13 @@ public class BoundPropertyEntry extends PropertyEntry  {
 
     public boolean getTwoWayBound() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTwoWayBound = null;
         try {
-            return (boolean)classInstance.Get("TwoWayBound");
+            retObjectTwoWayBound = classInstance.Get("TwoWayBound");
+            return (boolean)retObjectTwoWayBound;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectTwoWayBound != null ? retObjectTwoWayBound.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -231,7 +247,7 @@ public class BoundPropertyEntry extends PropertyEntry  {
 
     public void setTwoWayBound(boolean TwoWayBound) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TwoWayBound", TwoWayBound);
         } catch (JCNativeException jcne) {
@@ -241,9 +257,13 @@ public class BoundPropertyEntry extends PropertyEntry  {
 
     public boolean getUseSetAttribute() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUseSetAttribute = null;
         try {
-            return (boolean)classInstance.Get("UseSetAttribute");
+            retObjectUseSetAttribute = classInstance.Get("UseSetAttribute");
+            return (boolean)retObjectUseSetAttribute;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectUseSetAttribute != null ? retObjectUseSetAttribute.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -251,7 +271,7 @@ public class BoundPropertyEntry extends PropertyEntry  {
 
     public void setUseSetAttribute(boolean UseSetAttribute) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UseSetAttribute", UseSetAttribute);
         } catch (JCNativeException jcne) {
@@ -261,10 +281,14 @@ public class BoundPropertyEntry extends PropertyEntry  {
 
     public NetObject getParsedExpressionData() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectParsedExpressionData = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ParsedExpressionData");
+            retObjectParsedExpressionData = classInstance.Get("ParsedExpressionData");
+            JCObject val = (JCObject)retObjectParsedExpressionData;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParsedExpressionData != null ? retObjectParsedExpressionData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -272,7 +296,7 @@ public class BoundPropertyEntry extends PropertyEntry  {
 
     public void setParsedExpressionData(NetObject ParsedExpressionData) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ParsedExpressionData", ParsedExpressionData == null ? null : ParsedExpressionData.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -282,9 +306,13 @@ public class BoundPropertyEntry extends PropertyEntry  {
 
     public java.lang.String getControlID() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectControlID = null;
         try {
-            return (java.lang.String)classInstance.Get("ControlID");
+            retObjectControlID = classInstance.Get("ControlID");
+            return (java.lang.String)retObjectControlID;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectControlID != null ? retObjectControlID.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -292,7 +320,7 @@ public class BoundPropertyEntry extends PropertyEntry  {
 
     public void setControlID(java.lang.String ControlID) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ControlID", ControlID);
         } catch (JCNativeException jcne) {
@@ -302,9 +330,13 @@ public class BoundPropertyEntry extends PropertyEntry  {
 
     public java.lang.String getExpression() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExpression = null;
         try {
-            return (java.lang.String)classInstance.Get("Expression");
+            retObjectExpression = classInstance.Get("Expression");
+            return (java.lang.String)retObjectExpression;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectExpression != null ? retObjectExpression.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -312,7 +344,7 @@ public class BoundPropertyEntry extends PropertyEntry  {
 
     public void setExpression(java.lang.String Expression) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Expression", Expression);
         } catch (JCNativeException jcne) {
@@ -322,9 +354,13 @@ public class BoundPropertyEntry extends PropertyEntry  {
 
     public java.lang.String getExpressionPrefix() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExpressionPrefix = null;
         try {
-            return (java.lang.String)classInstance.Get("ExpressionPrefix");
+            retObjectExpressionPrefix = classInstance.Get("ExpressionPrefix");
+            return (java.lang.String)retObjectExpressionPrefix;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectExpressionPrefix != null ? retObjectExpressionPrefix.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -332,7 +368,7 @@ public class BoundPropertyEntry extends PropertyEntry  {
 
     public void setExpressionPrefix(java.lang.String ExpressionPrefix) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ExpressionPrefix", ExpressionPrefix);
         } catch (JCNativeException jcne) {
@@ -342,9 +378,13 @@ public class BoundPropertyEntry extends PropertyEntry  {
 
     public java.lang.String getFieldName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFieldName = null;
         try {
-            return (java.lang.String)classInstance.Get("FieldName");
+            retObjectFieldName = classInstance.Get("FieldName");
+            return (java.lang.String)retObjectFieldName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectFieldName != null ? retObjectFieldName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -352,7 +392,7 @@ public class BoundPropertyEntry extends PropertyEntry  {
 
     public void setFieldName(java.lang.String FieldName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FieldName", FieldName);
         } catch (JCNativeException jcne) {
@@ -362,9 +402,13 @@ public class BoundPropertyEntry extends PropertyEntry  {
 
     public java.lang.String getFormatString() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFormatString = null;
         try {
-            return (java.lang.String)classInstance.Get("FormatString");
+            retObjectFormatString = classInstance.Get("FormatString");
+            return (java.lang.String)retObjectFormatString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectFormatString != null ? retObjectFormatString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -372,7 +416,7 @@ public class BoundPropertyEntry extends PropertyEntry  {
 
     public void setFormatString(java.lang.String FormatString) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FormatString", FormatString);
         } catch (JCNativeException jcne) {
@@ -382,10 +426,14 @@ public class BoundPropertyEntry extends PropertyEntry  {
 
     public NetType getControlType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectControlType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ControlType");
+            retObjectControlType = classInstance.Get("ControlType");
+            JCObject val = (JCObject)retObjectControlType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectControlType != null ? retObjectControlType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -393,7 +441,7 @@ public class BoundPropertyEntry extends PropertyEntry  {
 
     public void setControlType(NetType ControlType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ControlType", ControlType == null ? null : ControlType.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -403,10 +451,14 @@ public class BoundPropertyEntry extends PropertyEntry  {
 
     public ExpressionBuilder getExpressionBuilder() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExpressionBuilder = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ExpressionBuilder");
+            retObjectExpressionBuilder = classInstance.Get("ExpressionBuilder");
+            JCObject val = (JCObject)retObjectExpressionBuilder;
             return new ExpressionBuilder(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExpressionBuilder != null ? retObjectExpressionBuilder.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -414,7 +466,7 @@ public class BoundPropertyEntry extends PropertyEntry  {
 
     public void setExpressionBuilder(ExpressionBuilder ExpressionBuilder) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ExpressionBuilder", ExpressionBuilder == null ? null : ExpressionBuilder.getJCOInstance());
         } catch (JCNativeException jcne) {

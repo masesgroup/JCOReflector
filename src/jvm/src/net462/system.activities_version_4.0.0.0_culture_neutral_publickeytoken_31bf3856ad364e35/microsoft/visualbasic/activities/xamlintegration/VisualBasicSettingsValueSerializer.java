@@ -164,9 +164,13 @@ public class VisualBasicSettingsValueSerializer extends ValueSerializer  {
     
     public boolean CanConvertToString(NetObject value, IValueSerializerContext context) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanConvertToString = null;
         try {
-            return (boolean)classInstance.Invoke("CanConvertToString", value == null ? null : value.getJCOInstance(), context == null ? null : context.getJCOInstance());
+            retObjectCanConvertToString = classInstance.Invoke("CanConvertToString", value == null ? null : value.getJCOInstance(), context == null ? null : context.getJCOInstance());
+            return (boolean)retObjectCanConvertToString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCanConvertToString != null ? retObjectCanConvertToString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -174,9 +178,13 @@ public class VisualBasicSettingsValueSerializer extends ValueSerializer  {
 
     public java.lang.String ConvertToString(NetObject value, IValueSerializerContext context) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConvertToString = null;
         try {
-            return (java.lang.String)classInstance.Invoke("ConvertToString", value == null ? null : value.getJCOInstance(), context == null ? null : context.getJCOInstance());
+            retObjectConvertToString = classInstance.Invoke("ConvertToString", value == null ? null : value.getJCOInstance(), context == null ? null : context.getJCOInstance());
+            return (java.lang.String)retObjectConvertToString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectConvertToString != null ? retObjectConvertToString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

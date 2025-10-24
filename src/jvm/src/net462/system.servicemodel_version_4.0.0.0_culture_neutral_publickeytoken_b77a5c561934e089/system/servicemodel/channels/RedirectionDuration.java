@@ -156,10 +156,14 @@ public class RedirectionDuration extends NetObject  {
     
     public static RedirectionDuration Create(java.lang.String duration, java.lang.String ns) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
         try {
-            JCObject objCreate = (JCObject)classType.Invoke("Create", duration, ns);
+            retObjectCreate = classType.Invoke("Create", duration, ns);
+            JCObject objCreate = (JCObject)retObjectCreate;
             return new RedirectionDuration(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,10 +175,14 @@ public class RedirectionDuration extends NetObject  {
     
     public static RedirectionDuration getPermanent() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectPermanent = null;
         try {
-            JCObject val = (JCObject)classType.Get("Permanent");
+            retObjectPermanent = classType.Get("Permanent");
+            JCObject val = (JCObject)retObjectPermanent;
             return new RedirectionDuration(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPermanent != null ? retObjectPermanent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,10 +190,14 @@ public class RedirectionDuration extends NetObject  {
 
     public static RedirectionDuration getTemporary() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTemporary = null;
         try {
-            JCObject val = (JCObject)classType.Get("Temporary");
+            retObjectTemporary = classType.Get("Temporary");
+            JCObject val = (JCObject)retObjectTemporary;
             return new RedirectionDuration(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTemporary != null ? retObjectTemporary.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,9 +205,13 @@ public class RedirectionDuration extends NetObject  {
 
     public java.lang.String getNamespace() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNamespace = null;
         try {
-            return (java.lang.String)classInstance.Get("Namespace");
+            retObjectNamespace = classInstance.Get("Namespace");
+            return (java.lang.String)retObjectNamespace;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectNamespace != null ? retObjectNamespace.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,7 +219,7 @@ public class RedirectionDuration extends NetObject  {
 
     public void setNamespace(java.lang.String Namespace) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Namespace", Namespace);
         } catch (JCNativeException jcne) {
@@ -213,9 +229,13 @@ public class RedirectionDuration extends NetObject  {
 
     public java.lang.String getValue() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValue = null;
         try {
-            return (java.lang.String)classInstance.Get("Value");
+            retObjectValue = classInstance.Get("Value");
+            return (java.lang.String)retObjectValue;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectValue != null ? retObjectValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -223,7 +243,7 @@ public class RedirectionDuration extends NetObject  {
 
     public void setValue(java.lang.String Value) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Value", Value);
         } catch (JCNativeException jcne) {

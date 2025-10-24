@@ -156,9 +156,13 @@ public class ConfigurationElement extends NetObject  {
     
     public boolean IsReadOnly() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsReadOnly = null;
         try {
-            return (boolean)classInstance.Invoke("IsReadOnly");
+            retObjectIsReadOnly = classInstance.Invoke("IsReadOnly");
+            return (boolean)retObjectIsReadOnly;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsReadOnly != null ? retObjectIsReadOnly.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,9 +174,13 @@ public class ConfigurationElement extends NetObject  {
     
     public boolean getLockItem() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLockItem = null;
         try {
-            return (boolean)classInstance.Get("LockItem");
+            retObjectLockItem = classInstance.Get("LockItem");
+            return (boolean)retObjectLockItem;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectLockItem != null ? retObjectLockItem.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,7 +188,7 @@ public class ConfigurationElement extends NetObject  {
 
     public void setLockItem(boolean LockItem) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("LockItem", LockItem);
         } catch (JCNativeException jcne) {
@@ -190,10 +198,14 @@ public class ConfigurationElement extends NetObject  {
 
     public Configuration getCurrentConfiguration() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCurrentConfiguration = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CurrentConfiguration");
+            retObjectCurrentConfiguration = classInstance.Get("CurrentConfiguration");
+            JCObject val = (JCObject)retObjectCurrentConfiguration;
             return new Configuration(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCurrentConfiguration != null ? retObjectCurrentConfiguration.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,10 +213,14 @@ public class ConfigurationElement extends NetObject  {
 
     public ConfigurationLockCollection getLockAllAttributesExcept() throws Throwable, system.ArgumentNullException, system.RankException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.NotSupportedException, system.ArrayTypeMismatchException, system.InvalidCastException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLockAllAttributesExcept = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("LockAllAttributesExcept");
+            retObjectLockAllAttributesExcept = classInstance.Get("LockAllAttributesExcept");
+            JCObject val = (JCObject)retObjectLockAllAttributesExcept;
             return new ConfigurationLockCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLockAllAttributesExcept != null ? retObjectLockAllAttributesExcept.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -212,10 +228,14 @@ public class ConfigurationElement extends NetObject  {
 
     public ConfigurationLockCollection getLockAllElementsExcept() throws Throwable, system.ArgumentNullException, system.RankException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.NotSupportedException, system.ArrayTypeMismatchException, system.InvalidCastException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLockAllElementsExcept = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("LockAllElementsExcept");
+            retObjectLockAllElementsExcept = classInstance.Get("LockAllElementsExcept");
+            JCObject val = (JCObject)retObjectLockAllElementsExcept;
             return new ConfigurationLockCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLockAllElementsExcept != null ? retObjectLockAllElementsExcept.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -223,10 +243,14 @@ public class ConfigurationElement extends NetObject  {
 
     public ConfigurationLockCollection getLockAttributes() throws Throwable, system.ArgumentNullException, system.RankException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLockAttributes = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("LockAttributes");
+            retObjectLockAttributes = classInstance.Get("LockAttributes");
+            JCObject val = (JCObject)retObjectLockAttributes;
             return new ConfigurationLockCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLockAttributes != null ? retObjectLockAttributes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -234,10 +258,14 @@ public class ConfigurationElement extends NetObject  {
 
     public ConfigurationLockCollection getLockElements() throws Throwable, system.ArgumentNullException, system.RankException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLockElements = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("LockElements");
+            retObjectLockElements = classInstance.Get("LockElements");
+            JCObject val = (JCObject)retObjectLockElements;
             return new ConfigurationLockCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLockElements != null ? retObjectLockElements.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -245,10 +273,14 @@ public class ConfigurationElement extends NetObject  {
 
     public ElementInformation getElementInformation() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectElementInformation = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ElementInformation");
+            retObjectElementInformation = classInstance.Get("ElementInformation");
+            JCObject val = (JCObject)retObjectElementInformation;
             return new ElementInformation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectElementInformation != null ? retObjectElementInformation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

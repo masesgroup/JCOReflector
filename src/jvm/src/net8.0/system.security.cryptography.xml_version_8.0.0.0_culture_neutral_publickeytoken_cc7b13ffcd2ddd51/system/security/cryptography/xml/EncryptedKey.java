@@ -166,10 +166,14 @@ public class EncryptedKey extends EncryptedType  {
     
     public XmlElement GetXml() throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.IndexOutOfRangeException, system.xml.XmlException, system.ArgumentNullException, system.security.cryptography.CryptographicException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetXml = null;
         try {
-            JCObject objGetXml = (JCObject)classInstance.Invoke("GetXml");
+            retObjectGetXml = classInstance.Invoke("GetXml");
+            JCObject objGetXml = (JCObject)retObjectGetXml;
             return new XmlElement(objGetXml);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetXml != null ? retObjectGetXml.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,7 +181,7 @@ public class EncryptedKey extends EncryptedType  {
 
     public void AddReference(DataReference dataReference) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddReference", dataReference == null ? null : dataReference.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -187,7 +191,7 @@ public class EncryptedKey extends EncryptedType  {
 
     public void AddReference(KeyReference keyReference) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddReference", keyReference == null ? null : keyReference.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -197,7 +201,7 @@ public class EncryptedKey extends EncryptedType  {
 
     public void LoadXml(XmlElement value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.xml.xpath.XPathException, system.OutOfMemoryException, system.FormatException, system.OverflowException, system.security.cryptography.CryptographicException, system.TypeLoadException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("LoadXml", value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -211,10 +215,14 @@ public class EncryptedKey extends EncryptedType  {
     
     public ReferenceList getReferenceList() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReferenceList = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ReferenceList");
+            retObjectReferenceList = classInstance.Get("ReferenceList");
+            JCObject val = (JCObject)retObjectReferenceList;
             return new ReferenceList(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReferenceList != null ? retObjectReferenceList.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -222,9 +230,13 @@ public class EncryptedKey extends EncryptedType  {
 
     public java.lang.String getCarriedKeyName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCarriedKeyName = null;
         try {
-            return (java.lang.String)classInstance.Get("CarriedKeyName");
+            retObjectCarriedKeyName = classInstance.Get("CarriedKeyName");
+            return (java.lang.String)retObjectCarriedKeyName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectCarriedKeyName != null ? retObjectCarriedKeyName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -232,7 +244,7 @@ public class EncryptedKey extends EncryptedType  {
 
     public void setCarriedKeyName(java.lang.String CarriedKeyName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CarriedKeyName", CarriedKeyName);
         } catch (JCNativeException jcne) {
@@ -242,9 +254,13 @@ public class EncryptedKey extends EncryptedType  {
 
     public java.lang.String getRecipient() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRecipient = null;
         try {
-            return (java.lang.String)classInstance.Get("Recipient");
+            retObjectRecipient = classInstance.Get("Recipient");
+            return (java.lang.String)retObjectRecipient;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectRecipient != null ? retObjectRecipient.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -252,7 +268,7 @@ public class EncryptedKey extends EncryptedType  {
 
     public void setRecipient(java.lang.String Recipient) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Recipient", Recipient);
         } catch (JCNativeException jcne) {

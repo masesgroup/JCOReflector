@@ -167,9 +167,13 @@ public class DataGridViewComboBoxCell extends DataGridViewCell  {
     
     public boolean KeyEntersEditMode(KeyEventArgs e) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectKeyEntersEditMode = null;
         try {
-            return (boolean)classInstance.Invoke("KeyEntersEditMode", e == null ? null : e.getJCOInstance());
+            retObjectKeyEntersEditMode = classInstance.Invoke("KeyEntersEditMode", e == null ? null : e.getJCOInstance());
+            return (boolean)retObjectKeyEntersEditMode;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectKeyEntersEditMode != null ? retObjectKeyEntersEditMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,10 +181,14 @@ public class DataGridViewComboBoxCell extends DataGridViewCell  {
 
     public NetObject Clone() throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.PlatformNotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.MissingMethodException, system.reflection.TargetInvocationException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.componentmodel.Win32Exception, system.MulticastNotSupportedException, system.threading.ThreadStateException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClone = null;
         try {
-            JCObject objClone = (JCObject)classInstance.Invoke("Clone");
+            retObjectClone = classInstance.Invoke("Clone");
+            JCObject objClone = (JCObject)retObjectClone;
             return new NetObject(objClone);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClone != null ? retObjectClone.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,10 +196,14 @@ public class DataGridViewComboBoxCell extends DataGridViewCell  {
 
     public NetObject ParseFormattedValue(NetObject formattedValue, DataGridViewCellStyle cellStyle, TypeConverter formattedValueTypeConverter, TypeConverter valueTypeConverter) throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.collections.generic.KeyNotFoundException, system.FormatException, system.InvalidCastException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectParseFormattedValue = null;
         try {
-            JCObject objParseFormattedValue = (JCObject)classInstance.Invoke("ParseFormattedValue", formattedValue == null ? null : formattedValue.getJCOInstance(), cellStyle == null ? null : cellStyle.getJCOInstance(), formattedValueTypeConverter == null ? null : formattedValueTypeConverter.getJCOInstance(), valueTypeConverter == null ? null : valueTypeConverter.getJCOInstance());
+            retObjectParseFormattedValue = classInstance.Invoke("ParseFormattedValue", formattedValue == null ? null : formattedValue.getJCOInstance(), cellStyle == null ? null : cellStyle.getJCOInstance(), formattedValueTypeConverter == null ? null : formattedValueTypeConverter.getJCOInstance(), valueTypeConverter == null ? null : valueTypeConverter.getJCOInstance());
+            JCObject objParseFormattedValue = (JCObject)retObjectParseFormattedValue;
             return new NetObject(objParseFormattedValue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParseFormattedValue != null ? retObjectParseFormattedValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -199,7 +211,7 @@ public class DataGridViewComboBoxCell extends DataGridViewCell  {
 
     public void DetachEditingControl() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.NotImplementedException, system.InvalidCastException, system.componentmodel.Win32Exception, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DetachEditingControl");
         } catch (JCNativeException jcne) {
@@ -209,7 +221,7 @@ public class DataGridViewComboBoxCell extends DataGridViewCell  {
 
     public void InitializeEditingControl(int rowIndex, NetObject initialFormattedValue, DataGridViewCellStyle dataGridViewCellStyle) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.security.SecurityException, system.io.IOException, system.OverflowException, system.OutOfMemoryException, system.componentmodel.InvalidEnumArgumentException, system.threading.ThreadStateException, system.NotImplementedException, system.InvalidCastException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("InitializeEditingControl", rowIndex, initialFormattedValue == null ? null : initialFormattedValue.getJCOInstance(), dataGridViewCellStyle == null ? null : dataGridViewCellStyle.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -223,9 +235,13 @@ public class DataGridViewComboBoxCell extends DataGridViewCell  {
     
     public boolean getAutoComplete() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAutoComplete = null;
         try {
-            return (boolean)classInstance.Get("AutoComplete");
+            retObjectAutoComplete = classInstance.Get("AutoComplete");
+            return (boolean)retObjectAutoComplete;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAutoComplete != null ? retObjectAutoComplete.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -233,7 +249,7 @@ public class DataGridViewComboBoxCell extends DataGridViewCell  {
 
     public void setAutoComplete(boolean AutoComplete) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.threading.ThreadStateException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.MulticastNotSupportedException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AutoComplete", AutoComplete);
         } catch (JCNativeException jcne) {
@@ -243,9 +259,13 @@ public class DataGridViewComboBoxCell extends DataGridViewCell  {
 
     public boolean getDisplayStyleForCurrentCellOnly() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDisplayStyleForCurrentCellOnly = null;
         try {
-            return (boolean)classInstance.Get("DisplayStyleForCurrentCellOnly");
+            retObjectDisplayStyleForCurrentCellOnly = classInstance.Get("DisplayStyleForCurrentCellOnly");
+            return (boolean)retObjectDisplayStyleForCurrentCellOnly;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectDisplayStyleForCurrentCellOnly != null ? retObjectDisplayStyleForCurrentCellOnly.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -253,7 +273,7 @@ public class DataGridViewComboBoxCell extends DataGridViewCell  {
 
     public void setDisplayStyleForCurrentCellOnly(boolean DisplayStyleForCurrentCellOnly) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.ArrayTypeMismatchException, system.InvalidCastException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DisplayStyleForCurrentCellOnly", DisplayStyleForCurrentCellOnly);
         } catch (JCNativeException jcne) {
@@ -263,9 +283,13 @@ public class DataGridViewComboBoxCell extends DataGridViewCell  {
 
     public boolean getSorted() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSorted = null;
         try {
-            return (boolean)classInstance.Get("Sorted");
+            retObjectSorted = classInstance.Get("Sorted");
+            return (boolean)retObjectSorted;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectSorted != null ? retObjectSorted.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -273,7 +297,7 @@ public class DataGridViewComboBoxCell extends DataGridViewCell  {
 
     public void setSorted(boolean Sorted) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Sorted", Sorted);
         } catch (JCNativeException jcne) {
@@ -283,9 +307,20 @@ public class DataGridViewComboBoxCell extends DataGridViewCell  {
 
     public int getDropDownWidth() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDropDownWidth = null;
         try {
-            return (int)classInstance.Get("DropDownWidth");
+            retObjectDropDownWidth = classInstance.Get("DropDownWidth");
+            return (int)retObjectDropDownWidth;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDropDownWidth_ToString = retObjectDropDownWidth == null ? "null" : retObjectDropDownWidth.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectDropDownWidthNumber = (java.lang.Number)retObjectDropDownWidth;
+                return retObjectDropDownWidthNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectDropDownWidth != null ? retObjectDropDownWidth.getClass() : "null", retObjectDropDownWidth_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -293,7 +328,7 @@ public class DataGridViewComboBoxCell extends DataGridViewCell  {
 
     public void setDropDownWidth(int DropDownWidth) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DropDownWidth", DropDownWidth);
         } catch (JCNativeException jcne) {
@@ -303,9 +338,20 @@ public class DataGridViewComboBoxCell extends DataGridViewCell  {
 
     public int getMaxDropDownItems() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxDropDownItems = null;
         try {
-            return (int)classInstance.Get("MaxDropDownItems");
+            retObjectMaxDropDownItems = classInstance.Get("MaxDropDownItems");
+            return (int)retObjectMaxDropDownItems;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaxDropDownItems_ToString = retObjectMaxDropDownItems == null ? "null" : retObjectMaxDropDownItems.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMaxDropDownItemsNumber = (java.lang.Number)retObjectMaxDropDownItems;
+                return retObjectMaxDropDownItemsNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxDropDownItems != null ? retObjectMaxDropDownItems.getClass() : "null", retObjectMaxDropDownItems_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -313,7 +359,7 @@ public class DataGridViewComboBoxCell extends DataGridViewCell  {
 
     public void setMaxDropDownItems(int MaxDropDownItems) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaxDropDownItems", MaxDropDownItems);
         } catch (JCNativeException jcne) {
@@ -323,10 +369,14 @@ public class DataGridViewComboBoxCell extends DataGridViewCell  {
 
     public NetObject getDataSource() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDataSource = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DataSource");
+            retObjectDataSource = classInstance.Get("DataSource");
+            JCObject val = (JCObject)retObjectDataSource;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDataSource != null ? retObjectDataSource.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -334,7 +384,7 @@ public class DataGridViewComboBoxCell extends DataGridViewCell  {
 
     public void setDataSource(NetObject DataSource) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidCastException, system.MulticastNotSupportedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DataSource", DataSource == null ? null : DataSource.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -344,9 +394,13 @@ public class DataGridViewComboBoxCell extends DataGridViewCell  {
 
     public java.lang.String getDisplayMember() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDisplayMember = null;
         try {
-            return (java.lang.String)classInstance.Get("DisplayMember");
+            retObjectDisplayMember = classInstance.Get("DisplayMember");
+            return (java.lang.String)retObjectDisplayMember;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDisplayMember != null ? retObjectDisplayMember.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -354,7 +408,7 @@ public class DataGridViewComboBoxCell extends DataGridViewCell  {
 
     public void setDisplayMember(java.lang.String DisplayMember) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException, system.NotSupportedException, system.NullReferenceException, system.FormatException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotImplementedException, system.InvalidCastException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DisplayMember", DisplayMember);
         } catch (JCNativeException jcne) {
@@ -364,9 +418,13 @@ public class DataGridViewComboBoxCell extends DataGridViewCell  {
 
     public java.lang.String getValueMember() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValueMember = null;
         try {
-            return (java.lang.String)classInstance.Get("ValueMember");
+            retObjectValueMember = classInstance.Get("ValueMember");
+            return (java.lang.String)retObjectValueMember;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectValueMember != null ? retObjectValueMember.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -374,7 +432,7 @@ public class DataGridViewComboBoxCell extends DataGridViewCell  {
 
     public void setValueMember(java.lang.String ValueMember) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException, system.NotSupportedException, system.NullReferenceException, system.FormatException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotImplementedException, system.InvalidCastException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ValueMember", ValueMember);
         } catch (JCNativeException jcne) {
@@ -384,10 +442,14 @@ public class DataGridViewComboBoxCell extends DataGridViewCell  {
 
     public DataGridViewComboBoxDisplayStyle getDisplayStyle() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDisplayStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DisplayStyle");
+            retObjectDisplayStyle = classInstance.Get("DisplayStyle");
+            JCObject val = (JCObject)retObjectDisplayStyle;
             return new DataGridViewComboBoxDisplayStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDisplayStyle != null ? retObjectDisplayStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -395,7 +457,7 @@ public class DataGridViewComboBoxCell extends DataGridViewCell  {
 
     public void setDisplayStyle(DataGridViewComboBoxDisplayStyle DisplayStyle) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.ArgumentNullException, system.RankException, system.NotSupportedException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DisplayStyle", DisplayStyle == null ? null : DisplayStyle.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -405,10 +467,14 @@ public class DataGridViewComboBoxCell extends DataGridViewCell  {
 
     public FlatStyle getFlatStyle() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFlatStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("FlatStyle");
+            retObjectFlatStyle = classInstance.Get("FlatStyle");
+            JCObject val = (JCObject)retObjectFlatStyle;
             return new FlatStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFlatStyle != null ? retObjectFlatStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -416,7 +482,7 @@ public class DataGridViewComboBoxCell extends DataGridViewCell  {
 
     public void setFlatStyle(FlatStyle FlatStyle) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.ArgumentNullException, system.RankException, system.NotSupportedException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FlatStyle", FlatStyle == null ? null : FlatStyle.getJCOInstance());
         } catch (JCNativeException jcne) {

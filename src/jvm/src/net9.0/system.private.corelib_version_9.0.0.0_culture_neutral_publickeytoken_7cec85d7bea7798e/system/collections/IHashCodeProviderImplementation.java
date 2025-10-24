@@ -142,9 +142,20 @@ public class IHashCodeProviderImplementation extends NetObject implements IHashC
     
     public int GetHashCode(NetObject obj) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetHashCode = null;
         try {
-            return (int)classInstance.Invoke("GetHashCode", obj == null ? null : obj.getJCOInstance());
+            retObjectGetHashCode = classInstance.Invoke("GetHashCode", obj == null ? null : obj.getJCOInstance());
+            return (int)retObjectGetHashCode;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetHashCode_ToString = retObjectGetHashCode == null ? "null" : retObjectGetHashCode.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetHashCodeNumber = (java.lang.Number)retObjectGetHashCode;
+                return retObjectGetHashCodeNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetHashCode != null ? retObjectGetHashCode.getClass() : "null", retObjectGetHashCode_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

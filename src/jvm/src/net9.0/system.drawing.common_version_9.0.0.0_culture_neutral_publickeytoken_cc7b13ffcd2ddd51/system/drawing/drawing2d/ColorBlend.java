@@ -177,16 +177,20 @@ public class ColorBlend extends NetObject  {
     
     public final Single[] getPositions() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPositions = null;
         try {
             ArrayList<Single> resultingArrayList = new ArrayList<Single>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("Positions");
+            retObjectPositions = classInstance.Get("Positions");
+            JCObject resultingObjects = (JCObject)retObjectPositions;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new Single(resultingObject));
             }
             Single[] resultingArray = new Single[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPositions != null ? retObjectPositions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -194,7 +198,7 @@ public class ColorBlend extends NetObject  {
 
     public void setPositions(Single[] Positions) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Positions", toObjectFromArray(Positions));
         } catch (JCNativeException jcne) {
@@ -204,16 +208,20 @@ public class ColorBlend extends NetObject  {
 
     public final Color[] getColors() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectColors = null;
         try {
             ArrayList<Color> resultingArrayList = new ArrayList<Color>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("Colors");
+            retObjectColors = classInstance.Get("Colors");
+            JCObject resultingObjects = (JCObject)retObjectColors;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new Color(resultingObject));
             }
             Color[] resultingArray = new Color[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectColors != null ? retObjectColors.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -221,7 +229,7 @@ public class ColorBlend extends NetObject  {
 
     public void setColors(Color[] Colors) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Colors", toObjectFromArray(Colors));
         } catch (JCNativeException jcne) {

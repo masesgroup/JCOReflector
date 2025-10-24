@@ -167,7 +167,7 @@ public class WorkflowItemsPresenter extends ContentControl  {
     
     public void OnItemMoved(ModelItem modelItem) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("OnItemMoved", modelItem == null ? null : modelItem.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -181,9 +181,13 @@ public class WorkflowItemsPresenter extends ContentControl  {
     
     public boolean getIsDefaultContainer() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsDefaultContainer = null;
         try {
-            return (boolean)classInstance.Get("IsDefaultContainer");
+            retObjectIsDefaultContainer = classInstance.Get("IsDefaultContainer");
+            return (boolean)retObjectIsDefaultContainer;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsDefaultContainer != null ? retObjectIsDefaultContainer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,7 +195,7 @@ public class WorkflowItemsPresenter extends ContentControl  {
 
     public void setIsDefaultContainer(boolean IsDefaultContainer) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsDefaultContainer", IsDefaultContainer);
         } catch (JCNativeException jcne) {
@@ -201,10 +205,14 @@ public class WorkflowItemsPresenter extends ContentControl  {
 
     public ModelItemCollection getItems() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectItems = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Items");
+            retObjectItems = classInstance.Get("Items");
+            JCObject val = (JCObject)retObjectItems;
             return new ModelItemCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectItems != null ? retObjectItems.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -212,7 +220,7 @@ public class WorkflowItemsPresenter extends ContentControl  {
 
     public void setItems(ModelItemCollection Items) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Items", Items == null ? null : Items.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -222,10 +230,14 @@ public class WorkflowItemsPresenter extends ContentControl  {
 
     public TypeResolvingOptions getDroppingTypeResolvingOptions() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDroppingTypeResolvingOptions = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DroppingTypeResolvingOptions");
+            retObjectDroppingTypeResolvingOptions = classInstance.Get("DroppingTypeResolvingOptions");
+            JCObject val = (JCObject)retObjectDroppingTypeResolvingOptions;
             return new TypeResolvingOptions(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDroppingTypeResolvingOptions != null ? retObjectDroppingTypeResolvingOptions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -233,7 +245,7 @@ public class WorkflowItemsPresenter extends ContentControl  {
 
     public void setDroppingTypeResolvingOptions(TypeResolvingOptions DroppingTypeResolvingOptions) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DroppingTypeResolvingOptions", DroppingTypeResolvingOptions == null ? null : DroppingTypeResolvingOptions.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -243,9 +255,13 @@ public class WorkflowItemsPresenter extends ContentControl  {
 
     public java.lang.String getHintText() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHintText = null;
         try {
-            return (java.lang.String)classInstance.Get("HintText");
+            retObjectHintText = classInstance.Get("HintText");
+            return (java.lang.String)retObjectHintText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectHintText != null ? retObjectHintText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -253,7 +269,7 @@ public class WorkflowItemsPresenter extends ContentControl  {
 
     public void setHintText(java.lang.String HintText) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("HintText", HintText);
         } catch (JCNativeException jcne) {
@@ -263,10 +279,14 @@ public class WorkflowItemsPresenter extends ContentControl  {
 
     public NetType getAllowedItemType() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAllowedItemType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AllowedItemType");
+            retObjectAllowedItemType = classInstance.Get("AllowedItemType");
+            JCObject val = (JCObject)retObjectAllowedItemType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAllowedItemType != null ? retObjectAllowedItemType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -274,7 +294,7 @@ public class WorkflowItemsPresenter extends ContentControl  {
 
     public void setAllowedItemType(NetType AllowedItemType) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AllowedItemType", AllowedItemType == null ? null : AllowedItemType.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -284,10 +304,14 @@ public class WorkflowItemsPresenter extends ContentControl  {
 
     public ItemsPanelTemplate getItemsPanel() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectItemsPanel = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ItemsPanel");
+            retObjectItemsPanel = classInstance.Get("ItemsPanel");
+            JCObject val = (JCObject)retObjectItemsPanel;
             return new ItemsPanelTemplate(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectItemsPanel != null ? retObjectItemsPanel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -295,7 +319,7 @@ public class WorkflowItemsPresenter extends ContentControl  {
 
     public void setItemsPanel(ItemsPanelTemplate ItemsPanel) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ItemsPanel", ItemsPanel == null ? null : ItemsPanel.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -305,10 +329,14 @@ public class WorkflowItemsPresenter extends ContentControl  {
 
     public DataTemplate getFooterTemplate() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFooterTemplate = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("FooterTemplate");
+            retObjectFooterTemplate = classInstance.Get("FooterTemplate");
+            JCObject val = (JCObject)retObjectFooterTemplate;
             return new DataTemplate(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFooterTemplate != null ? retObjectFooterTemplate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -316,7 +344,7 @@ public class WorkflowItemsPresenter extends ContentControl  {
 
     public void setFooterTemplate(DataTemplate FooterTemplate) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FooterTemplate", FooterTemplate == null ? null : FooterTemplate.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -326,10 +354,14 @@ public class WorkflowItemsPresenter extends ContentControl  {
 
     public DataTemplate getHeaderTemplate() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHeaderTemplate = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("HeaderTemplate");
+            retObjectHeaderTemplate = classInstance.Get("HeaderTemplate");
+            JCObject val = (JCObject)retObjectHeaderTemplate;
             return new DataTemplate(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHeaderTemplate != null ? retObjectHeaderTemplate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -337,7 +369,7 @@ public class WorkflowItemsPresenter extends ContentControl  {
 
     public void setHeaderTemplate(DataTemplate HeaderTemplate) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("HeaderTemplate", HeaderTemplate == null ? null : HeaderTemplate.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -347,10 +379,14 @@ public class WorkflowItemsPresenter extends ContentControl  {
 
     public DataTemplate getSpacerTemplate() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSpacerTemplate = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SpacerTemplate");
+            retObjectSpacerTemplate = classInstance.Get("SpacerTemplate");
+            JCObject val = (JCObject)retObjectSpacerTemplate;
             return new DataTemplate(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSpacerTemplate != null ? retObjectSpacerTemplate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -358,7 +394,7 @@ public class WorkflowItemsPresenter extends ContentControl  {
 
     public void setSpacerTemplate(DataTemplate SpacerTemplate) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SpacerTemplate", SpacerTemplate == null ? null : SpacerTemplate.getJCOInstance());
         } catch (JCNativeException jcne) {

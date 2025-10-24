@@ -170,10 +170,14 @@ public class ModelDataMethodResult extends NetObject  {
     
     public OrderedDictionary getOutputParameters() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOutputParameters = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("OutputParameters");
+            retObjectOutputParameters = classInstance.Get("OutputParameters");
+            JCObject val = (JCObject)retObjectOutputParameters;
             return new OrderedDictionary(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOutputParameters != null ? retObjectOutputParameters.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,10 +185,14 @@ public class ModelDataMethodResult extends NetObject  {
 
     public NetObject getReturnValue() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReturnValue = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ReturnValue");
+            retObjectReturnValue = classInstance.Get("ReturnValue");
+            JCObject val = (JCObject)retObjectReturnValue;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReturnValue != null ? retObjectReturnValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,7 +200,7 @@ public class ModelDataMethodResult extends NetObject  {
 
     public void setReturnValue(NetObject ReturnValue) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ReturnValue", ReturnValue == null ? null : ReturnValue.getJCOInstance());
         } catch (JCNativeException jcne) {

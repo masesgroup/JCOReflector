@@ -155,10 +155,14 @@ public class DesignerGlyph extends NetObject  {
     
     public Rectangle GetBounds(ActivityDesigner designer, boolean activated) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetBounds = null;
         try {
-            JCObject objGetBounds = (JCObject)classInstance.Invoke("GetBounds", designer == null ? null : designer.getJCOInstance(), activated);
+            retObjectGetBounds = classInstance.Invoke("GetBounds", designer == null ? null : designer.getJCOInstance(), activated);
+            JCObject objGetBounds = (JCObject)retObjectGetBounds;
             return new Rectangle(objGetBounds);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetBounds != null ? retObjectGetBounds.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,9 +174,13 @@ public class DesignerGlyph extends NetObject  {
     
     public boolean getCanBeActivated() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanBeActivated = null;
         try {
-            return (boolean)classInstance.Get("CanBeActivated");
+            retObjectCanBeActivated = classInstance.Get("CanBeActivated");
+            return (boolean)retObjectCanBeActivated;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCanBeActivated != null ? retObjectCanBeActivated.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,9 +188,20 @@ public class DesignerGlyph extends NetObject  {
 
     public int getPriority() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPriority = null;
         try {
-            return (int)classInstance.Get("Priority");
+            retObjectPriority = classInstance.Get("Priority");
+            return (int)retObjectPriority;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectPriority_ToString = retObjectPriority == null ? "null" : retObjectPriority.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectPriorityNumber = (java.lang.Number)retObjectPriority;
+                return retObjectPriorityNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectPriority != null ? retObjectPriority.getClass() : "null", retObjectPriority_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

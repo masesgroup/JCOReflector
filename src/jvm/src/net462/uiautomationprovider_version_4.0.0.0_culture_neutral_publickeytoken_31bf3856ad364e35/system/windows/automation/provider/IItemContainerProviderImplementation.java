@@ -144,10 +144,14 @@ public class IItemContainerProviderImplementation extends NetObject implements I
     
     public IRawElementProviderSimple FindItemByProperty(IRawElementProviderSimple startAfter, int propertyId, NetObject value) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFindItemByProperty = null;
         try {
-            JCObject objFindItemByProperty = (JCObject)classInstance.Invoke("FindItemByProperty", startAfter == null ? null : startAfter.getJCOInstance(), propertyId, value == null ? null : value.getJCOInstance());
+            retObjectFindItemByProperty = classInstance.Invoke("FindItemByProperty", startAfter == null ? null : startAfter.getJCOInstance(), propertyId, value == null ? null : value.getJCOInstance());
+            JCObject objFindItemByProperty = (JCObject)retObjectFindItemByProperty;
             return new IRawElementProviderSimpleImplementation(objFindItemByProperty);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFindItemByProperty != null ? retObjectFindItemByProperty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

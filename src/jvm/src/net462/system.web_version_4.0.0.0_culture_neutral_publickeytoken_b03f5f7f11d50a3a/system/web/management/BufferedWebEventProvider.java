@@ -157,7 +157,7 @@ public class BufferedWebEventProvider extends WebEventProvider  {
     
     public void Flush() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.NullReferenceException, system.ObjectDisposedException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.web.HttpException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Flush");
         } catch (JCNativeException jcne) {
@@ -167,7 +167,7 @@ public class BufferedWebEventProvider extends WebEventProvider  {
 
     public void Initialize(java.lang.String name, NameValueCollection config) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.web.HttpException, system.configuration.provider.ProviderException, system.configuration.ConfigurationException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Initialize", name, config == null ? null : config.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -177,7 +177,7 @@ public class BufferedWebEventProvider extends WebEventProvider  {
 
     public void ProcessEvent(WebBaseEvent eventRaised) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ObjectDisposedException, system.resources.MissingManifestResourceException, system.web.HttpException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ProcessEvent", eventRaised == null ? null : eventRaised.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -187,7 +187,7 @@ public class BufferedWebEventProvider extends WebEventProvider  {
 
     public void ProcessEventFlush(WebEventBufferFlushInfo flushInfo) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ProcessEventFlush", flushInfo == null ? null : flushInfo.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -197,7 +197,7 @@ public class BufferedWebEventProvider extends WebEventProvider  {
 
     public void Shutdown() throws Throwable, system.ArgumentException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Shutdown");
         } catch (JCNativeException jcne) {
@@ -211,9 +211,13 @@ public class BufferedWebEventProvider extends WebEventProvider  {
     
     public boolean getUseBuffering() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUseBuffering = null;
         try {
-            return (boolean)classInstance.Get("UseBuffering");
+            retObjectUseBuffering = classInstance.Get("UseBuffering");
+            return (boolean)retObjectUseBuffering;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectUseBuffering != null ? retObjectUseBuffering.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -221,9 +225,13 @@ public class BufferedWebEventProvider extends WebEventProvider  {
 
     public java.lang.String getBufferMode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBufferMode = null;
         try {
-            return (java.lang.String)classInstance.Get("BufferMode");
+            retObjectBufferMode = classInstance.Get("BufferMode");
+            return (java.lang.String)retObjectBufferMode;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectBufferMode != null ? retObjectBufferMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

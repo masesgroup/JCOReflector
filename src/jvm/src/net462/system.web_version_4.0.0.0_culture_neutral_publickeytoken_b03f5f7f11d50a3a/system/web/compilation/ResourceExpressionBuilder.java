@@ -166,10 +166,14 @@ public class ResourceExpressionBuilder extends ExpressionBuilder  {
     
     public CodeExpression GetCodeExpression(BoundPropertyEntry entry, NetObject parsedData, ExpressionBuilderContext context) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetCodeExpression = null;
         try {
-            JCObject objGetCodeExpression = (JCObject)classInstance.Invoke("GetCodeExpression", entry == null ? null : entry.getJCOInstance(), parsedData == null ? null : parsedData.getJCOInstance(), context == null ? null : context.getJCOInstance());
+            retObjectGetCodeExpression = classInstance.Invoke("GetCodeExpression", entry == null ? null : entry.getJCOInstance(), parsedData == null ? null : parsedData.getJCOInstance(), context == null ? null : context.getJCOInstance());
+            JCObject objGetCodeExpression = (JCObject)retObjectGetCodeExpression;
             return new CodeExpression(objGetCodeExpression);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCodeExpression != null ? retObjectGetCodeExpression.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,10 +181,14 @@ public class ResourceExpressionBuilder extends ExpressionBuilder  {
 
     public NetObject EvaluateExpression(NetObject target, BoundPropertyEntry entry, NetObject parsedData, ExpressionBuilderContext context) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.web.HttpException, system.NotSupportedException, system.configuration.ConfigurationException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException, system.NullReferenceException, system.MemberAccessException, system.NotImplementedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEvaluateExpression = null;
         try {
-            JCObject objEvaluateExpression = (JCObject)classInstance.Invoke("EvaluateExpression", target == null ? null : target.getJCOInstance(), entry == null ? null : entry.getJCOInstance(), parsedData == null ? null : parsedData.getJCOInstance(), context == null ? null : context.getJCOInstance());
+            retObjectEvaluateExpression = classInstance.Invoke("EvaluateExpression", target == null ? null : target.getJCOInstance(), entry == null ? null : entry.getJCOInstance(), parsedData == null ? null : parsedData.getJCOInstance(), context == null ? null : context.getJCOInstance());
+            JCObject objEvaluateExpression = (JCObject)retObjectEvaluateExpression;
             return new NetObject(objEvaluateExpression);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEvaluateExpression != null ? retObjectEvaluateExpression.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,10 +196,14 @@ public class ResourceExpressionBuilder extends ExpressionBuilder  {
 
     public NetObject ParseExpression(java.lang.String expression, NetType propertyType, ExpressionBuilderContext context) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.NotImplementedException, system.NotSupportedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.web.HttpException, system.configuration.ConfigurationException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException, system.NullReferenceException, system.MemberAccessException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectParseExpression = null;
         try {
-            JCObject objParseExpression = (JCObject)classInstance.Invoke("ParseExpression", expression, propertyType == null ? null : propertyType.getJCOInstance(), context == null ? null : context.getJCOInstance());
+            retObjectParseExpression = classInstance.Invoke("ParseExpression", expression, propertyType == null ? null : propertyType.getJCOInstance(), context == null ? null : context.getJCOInstance());
+            JCObject objParseExpression = (JCObject)retObjectParseExpression;
             return new NetObject(objParseExpression);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParseExpression != null ? retObjectParseExpression.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -199,10 +211,14 @@ public class ResourceExpressionBuilder extends ExpressionBuilder  {
 
     public static ResourceExpressionFields ParseExpression(java.lang.String expression) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectParseExpression = null;
         try {
-            JCObject objParseExpression = (JCObject)classType.Invoke("ParseExpression", expression);
+            retObjectParseExpression = classType.Invoke("ParseExpression", expression);
+            JCObject objParseExpression = (JCObject)retObjectParseExpression;
             return new ResourceExpressionFields(objParseExpression);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParseExpression != null ? retObjectParseExpression.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

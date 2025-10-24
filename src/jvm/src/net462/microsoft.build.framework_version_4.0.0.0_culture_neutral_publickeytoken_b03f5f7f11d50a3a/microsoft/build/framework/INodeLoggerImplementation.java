@@ -147,7 +147,7 @@ public class INodeLoggerImplementation extends NetObject implements INodeLogger 
     
     public void Initialize(IEventSource eventSource) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Initialize", eventSource == null ? null : eventSource.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -157,7 +157,7 @@ public class INodeLoggerImplementation extends NetObject implements INodeLogger 
 
     public void Initialize(IEventSource eventSource, int nodeCount) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Initialize", eventSource == null ? null : eventSource.getJCOInstance(), nodeCount);
         } catch (JCNativeException jcne) {
@@ -167,7 +167,7 @@ public class INodeLoggerImplementation extends NetObject implements INodeLogger 
 
     public void Shutdown() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Shutdown");
         } catch (JCNativeException jcne) {
@@ -181,10 +181,14 @@ public class INodeLoggerImplementation extends NetObject implements INodeLogger 
     
     public LoggerVerbosity getVerbosity() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVerbosity = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Verbosity");
+            retObjectVerbosity = classInstance.Get("Verbosity");
+            JCObject val = (JCObject)retObjectVerbosity;
             return new LoggerVerbosity(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVerbosity != null ? retObjectVerbosity.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,7 +196,7 @@ public class INodeLoggerImplementation extends NetObject implements INodeLogger 
 
     public void setVerbosity(LoggerVerbosity Verbosity) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Verbosity", Verbosity == null ? null : Verbosity.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -202,9 +206,13 @@ public class INodeLoggerImplementation extends NetObject implements INodeLogger 
 
     public java.lang.String getParameters() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectParameters = null;
         try {
-            return (java.lang.String)classInstance.Get("Parameters");
+            retObjectParameters = classInstance.Get("Parameters");
+            return (java.lang.String)retObjectParameters;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectParameters != null ? retObjectParameters.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -212,7 +220,7 @@ public class INodeLoggerImplementation extends NetObject implements INodeLogger 
 
     public void setParameters(java.lang.String Parameters) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Parameters", Parameters);
         } catch (JCNativeException jcne) {

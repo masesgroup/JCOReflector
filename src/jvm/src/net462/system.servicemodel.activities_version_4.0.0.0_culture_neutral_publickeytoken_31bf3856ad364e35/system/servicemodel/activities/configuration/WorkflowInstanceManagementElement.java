@@ -166,9 +166,13 @@ public class WorkflowInstanceManagementElement extends BehaviorExtensionElement 
     
     public java.lang.String getAuthorizedWindowsGroup() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAuthorizedWindowsGroup = null;
         try {
-            return (java.lang.String)classInstance.Get("AuthorizedWindowsGroup");
+            retObjectAuthorizedWindowsGroup = classInstance.Get("AuthorizedWindowsGroup");
+            return (java.lang.String)retObjectAuthorizedWindowsGroup;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectAuthorizedWindowsGroup != null ? retObjectAuthorizedWindowsGroup.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,7 +180,7 @@ public class WorkflowInstanceManagementElement extends BehaviorExtensionElement 
 
     public void setAuthorizedWindowsGroup(java.lang.String AuthorizedWindowsGroup) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.NullReferenceException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AuthorizedWindowsGroup", AuthorizedWindowsGroup);
         } catch (JCNativeException jcne) {

@@ -158,10 +158,14 @@ public class VirtualDirectory extends VirtualFileBase  {
     
     public IEnumerable getChildren() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectChildren = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Children");
+            retObjectChildren = classInstance.Get("Children");
+            JCObject val = (JCObject)retObjectChildren;
             return new IEnumerableImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectChildren != null ? retObjectChildren.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,10 +173,14 @@ public class VirtualDirectory extends VirtualFileBase  {
 
     public IEnumerable getDirectories() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDirectories = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Directories");
+            retObjectDirectories = classInstance.Get("Directories");
+            JCObject val = (JCObject)retObjectDirectories;
             return new IEnumerableImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDirectories != null ? retObjectDirectories.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,10 +188,14 @@ public class VirtualDirectory extends VirtualFileBase  {
 
     public IEnumerable getFiles() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFiles = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Files");
+            retObjectFiles = classInstance.Get("Files");
+            JCObject val = (JCObject)retObjectFiles;
             return new IEnumerableImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFiles != null ? retObjectFiles.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

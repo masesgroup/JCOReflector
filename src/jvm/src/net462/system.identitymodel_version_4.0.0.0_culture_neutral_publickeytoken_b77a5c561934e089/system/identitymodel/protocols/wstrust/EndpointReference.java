@@ -170,10 +170,14 @@ public class EndpointReference extends NetObject  {
     
     public static EndpointReference ReadFrom(XmlDictionaryReader reader) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.xml.XmlException, system.security.SecurityException, system.MemberAccessException, system.NullReferenceException, system.UriFormatException, system.xml.schema.XmlSchemaException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectReadFrom = null;
         try {
-            JCObject objReadFrom = (JCObject)classType.Invoke("ReadFrom", reader == null ? null : reader.getJCOInstance());
+            retObjectReadFrom = classType.Invoke("ReadFrom", reader == null ? null : reader.getJCOInstance());
+            JCObject objReadFrom = (JCObject)retObjectReadFrom;
             return new EndpointReference(objReadFrom);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadFrom != null ? retObjectReadFrom.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,10 +185,14 @@ public class EndpointReference extends NetObject  {
 
     public static EndpointReference ReadFrom(XmlReader reader) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.xml.XmlException, system.security.SecurityException, system.UriFormatException, system.xml.schema.XmlSchemaException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectReadFrom = null;
         try {
-            JCObject objReadFrom = (JCObject)classType.Invoke("ReadFrom", reader == null ? null : reader.getJCOInstance());
+            retObjectReadFrom = classType.Invoke("ReadFrom", reader == null ? null : reader.getJCOInstance());
+            JCObject objReadFrom = (JCObject)retObjectReadFrom;
             return new EndpointReference(objReadFrom);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadFrom != null ? retObjectReadFrom.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,7 +200,7 @@ public class EndpointReference extends NetObject  {
 
     public void WriteTo(XmlWriter writer) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.UriFormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteTo", writer == null ? null : writer.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -206,10 +214,14 @@ public class EndpointReference extends NetObject  {
     
     public Uri getUri() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUri = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Uri");
+            retObjectUri = classInstance.Get("Uri");
+            JCObject val = (JCObject)retObjectUri;
             return new Uri(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUri != null ? retObjectUri.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

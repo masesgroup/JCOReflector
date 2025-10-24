@@ -171,10 +171,14 @@ public class ListSortDescription extends NetObject  {
     
     public ListSortDirection getSortDirection() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSortDirection = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SortDirection");
+            retObjectSortDirection = classInstance.Get("SortDirection");
+            JCObject val = (JCObject)retObjectSortDirection;
             return new ListSortDirection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSortDirection != null ? retObjectSortDirection.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,7 +186,7 @@ public class ListSortDescription extends NetObject  {
 
     public void setSortDirection(ListSortDirection SortDirection) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SortDirection", SortDirection == null ? null : SortDirection.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -192,10 +196,14 @@ public class ListSortDescription extends NetObject  {
 
     public PropertyDescriptor getPropertyDescriptor() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPropertyDescriptor = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PropertyDescriptor");
+            retObjectPropertyDescriptor = classInstance.Get("PropertyDescriptor");
+            JCObject val = (JCObject)retObjectPropertyDescriptor;
             return new PropertyDescriptor(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPropertyDescriptor != null ? retObjectPropertyDescriptor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,7 +211,7 @@ public class ListSortDescription extends NetObject  {
 
     public void setPropertyDescriptor(PropertyDescriptor PropertyDescriptor) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PropertyDescriptor", PropertyDescriptor == null ? null : PropertyDescriptor.getJCOInstance());
         } catch (JCNativeException jcne) {

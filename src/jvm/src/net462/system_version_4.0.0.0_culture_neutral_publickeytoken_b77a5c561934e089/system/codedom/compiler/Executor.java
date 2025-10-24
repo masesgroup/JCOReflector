@@ -154,9 +154,20 @@ public class Executor extends NetObject  {
     
     public static int ExecWaitWithCapture(java.lang.String cmd, TempFileCollection tempFiles, JCORefOut outputName, JCORefOut errorName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.IndexOutOfRangeException, system.security.SecurityException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.RankException, system.threading.AbandonedMutexException, system.runtime.interopservices.ExternalException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectExecWaitWithCapture = null;
         try {
-            return (int)classType.Invoke("ExecWaitWithCapture", cmd, tempFiles == null ? null : tempFiles.getJCOInstance(), outputName.getJCRefOut(), errorName.getJCRefOut());
+            retObjectExecWaitWithCapture = classType.Invoke("ExecWaitWithCapture", cmd, tempFiles == null ? null : tempFiles.getJCOInstance(), outputName.getJCRefOut(), errorName.getJCRefOut());
+            return (int)retObjectExecWaitWithCapture;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectExecWaitWithCapture_ToString = retObjectExecWaitWithCapture == null ? "null" : retObjectExecWaitWithCapture.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectExecWaitWithCaptureNumber = (java.lang.Number)retObjectExecWaitWithCapture;
+                return retObjectExecWaitWithCaptureNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectExecWaitWithCapture != null ? retObjectExecWaitWithCapture.getClass() : "null", retObjectExecWaitWithCapture_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -164,9 +175,20 @@ public class Executor extends NetObject  {
 
     public static int ExecWaitWithCapture(java.lang.String cmd, java.lang.String currentDir, TempFileCollection tempFiles, JCORefOut outputName, JCORefOut errorName) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.security.SecurityException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.NotSupportedException, system.io.IOException, system.RankException, system.threading.AbandonedMutexException, system.runtime.interopservices.ExternalException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectExecWaitWithCapture = null;
         try {
-            return (int)classType.Invoke("ExecWaitWithCapture", cmd, currentDir, tempFiles == null ? null : tempFiles.getJCOInstance(), outputName.getJCRefOut(), errorName.getJCRefOut());
+            retObjectExecWaitWithCapture = classType.Invoke("ExecWaitWithCapture", cmd, currentDir, tempFiles == null ? null : tempFiles.getJCOInstance(), outputName.getJCRefOut(), errorName.getJCRefOut());
+            return (int)retObjectExecWaitWithCapture;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectExecWaitWithCapture_ToString = retObjectExecWaitWithCapture == null ? "null" : retObjectExecWaitWithCapture.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectExecWaitWithCaptureNumber = (java.lang.Number)retObjectExecWaitWithCapture;
+                return retObjectExecWaitWithCaptureNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectExecWaitWithCapture != null ? retObjectExecWaitWithCapture.getClass() : "null", retObjectExecWaitWithCapture_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -174,7 +196,7 @@ public class Executor extends NetObject  {
 
     public static void ExecWait(java.lang.String cmd, TempFileCollection tempFiles) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.security.SecurityException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.OutOfMemoryException, system.RankException, system.threading.AbandonedMutexException, system.runtime.interopservices.ExternalException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("ExecWait", cmd, tempFiles == null ? null : tempFiles.getJCOInstance());
         } catch (JCNativeException jcne) {

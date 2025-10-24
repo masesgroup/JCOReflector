@@ -172,9 +172,13 @@ public class DataObjectPastingEventArgs extends DataObjectEventArgs  {
     
     public java.lang.String getFormatToApply() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFormatToApply = null;
         try {
-            return (java.lang.String)classInstance.Get("FormatToApply");
+            retObjectFormatToApply = classInstance.Get("FormatToApply");
+            return (java.lang.String)retObjectFormatToApply;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectFormatToApply != null ? retObjectFormatToApply.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,7 +186,7 @@ public class DataObjectPastingEventArgs extends DataObjectEventArgs  {
 
     public void setFormatToApply(java.lang.String FormatToApply) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FormatToApply", FormatToApply);
         } catch (JCNativeException jcne) {
@@ -192,10 +196,14 @@ public class DataObjectPastingEventArgs extends DataObjectEventArgs  {
 
     public IDataObject getDataObject() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDataObject = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DataObject");
+            retObjectDataObject = classInstance.Get("DataObject");
+            JCObject val = (JCObject)retObjectDataObject;
             return new IDataObjectImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDataObject != null ? retObjectDataObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,7 +211,7 @@ public class DataObjectPastingEventArgs extends DataObjectEventArgs  {
 
     public void setDataObject(IDataObject DataObject) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DataObject", DataObject == null ? null : DataObject.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -213,10 +221,14 @@ public class DataObjectPastingEventArgs extends DataObjectEventArgs  {
 
     public IDataObject getSourceDataObject() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSourceDataObject = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SourceDataObject");
+            retObjectSourceDataObject = classInstance.Get("SourceDataObject");
+            JCObject val = (JCObject)retObjectSourceDataObject;
             return new IDataObjectImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSourceDataObject != null ? retObjectSourceDataObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -167,16 +167,20 @@ public class TypeSchema extends NetObject  {
     
     public IDataSourceViewSchema[] GetViews() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetViews = null;
         try {
             ArrayList<IDataSourceViewSchema> resultingArrayList = new ArrayList<IDataSourceViewSchema>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetViews");
+            retObjectGetViews = classInstance.Invoke("GetViews");
+            JCObject resultingObjects = (JCObject)retObjectGetViews;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new IDataSourceViewSchemaImplementation(resultingObject));
             }
             IDataSourceViewSchema[] resultingArray = new IDataSourceViewSchema[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetViews != null ? retObjectGetViews.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

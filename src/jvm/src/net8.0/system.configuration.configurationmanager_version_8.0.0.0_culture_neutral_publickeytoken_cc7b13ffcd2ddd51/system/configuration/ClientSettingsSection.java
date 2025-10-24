@@ -167,10 +167,14 @@ public class ClientSettingsSection extends ConfigurationSection  {
     
     public SettingElementCollection getSettings() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSettings = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Settings");
+            retObjectSettings = classInstance.Get("Settings");
+            JCObject val = (JCObject)retObjectSettings;
             return new SettingElementCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSettings != null ? retObjectSettings.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

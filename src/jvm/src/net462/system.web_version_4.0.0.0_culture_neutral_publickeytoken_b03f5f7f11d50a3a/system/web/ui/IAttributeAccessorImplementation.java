@@ -142,9 +142,13 @@ public class IAttributeAccessorImplementation extends NetObject implements IAttr
     
     public java.lang.String GetAttribute(java.lang.String key) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetAttribute = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetAttribute", key);
+            retObjectGetAttribute = classInstance.Invoke("GetAttribute", key);
+            return (java.lang.String)retObjectGetAttribute;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetAttribute != null ? retObjectGetAttribute.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -152,7 +156,7 @@ public class IAttributeAccessorImplementation extends NetObject implements IAttr
 
     public void SetAttribute(java.lang.String key, java.lang.String value) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetAttribute", key, value);
         } catch (JCNativeException jcne) {

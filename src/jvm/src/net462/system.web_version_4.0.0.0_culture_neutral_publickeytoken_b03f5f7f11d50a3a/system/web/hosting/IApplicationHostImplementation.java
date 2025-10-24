@@ -144,9 +144,13 @@ public class IApplicationHostImplementation extends NetObject implements IApplic
     
     public java.lang.String GetPhysicalPath() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPhysicalPath = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetPhysicalPath");
+            retObjectGetPhysicalPath = classInstance.Invoke("GetPhysicalPath");
+            return (java.lang.String)retObjectGetPhysicalPath;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetPhysicalPath != null ? retObjectGetPhysicalPath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -154,9 +158,13 @@ public class IApplicationHostImplementation extends NetObject implements IApplic
 
     public java.lang.String GetSiteID() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSiteID = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetSiteID");
+            retObjectGetSiteID = classInstance.Invoke("GetSiteID");
+            return (java.lang.String)retObjectGetSiteID;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetSiteID != null ? retObjectGetSiteID.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -164,9 +172,13 @@ public class IApplicationHostImplementation extends NetObject implements IApplic
 
     public java.lang.String GetSiteName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSiteName = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetSiteName");
+            retObjectGetSiteName = classInstance.Invoke("GetSiteName");
+            return (java.lang.String)retObjectGetSiteName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetSiteName != null ? retObjectGetSiteName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -174,9 +186,13 @@ public class IApplicationHostImplementation extends NetObject implements IApplic
 
     public java.lang.String GetVirtualPath() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetVirtualPath = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetVirtualPath");
+            retObjectGetVirtualPath = classInstance.Invoke("GetVirtualPath");
+            return (java.lang.String)retObjectGetVirtualPath;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetVirtualPath != null ? retObjectGetVirtualPath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -184,10 +200,14 @@ public class IApplicationHostImplementation extends NetObject implements IApplic
 
     public IConfigMapPathFactory GetConfigMapPathFactory() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetConfigMapPathFactory = null;
         try {
-            JCObject objGetConfigMapPathFactory = (JCObject)classInstance.Invoke("GetConfigMapPathFactory");
+            retObjectGetConfigMapPathFactory = classInstance.Invoke("GetConfigMapPathFactory");
+            JCObject objGetConfigMapPathFactory = (JCObject)retObjectGetConfigMapPathFactory;
             return new IConfigMapPathFactoryImplementation(objGetConfigMapPathFactory);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetConfigMapPathFactory != null ? retObjectGetConfigMapPathFactory.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,7 +215,7 @@ public class IApplicationHostImplementation extends NetObject implements IApplic
 
     public void MessageReceived() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("MessageReceived");
         } catch (JCNativeException jcne) {

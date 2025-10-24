@@ -183,10 +183,14 @@ public class CipherData extends NetObject  {
     
     public XmlElement GetXml() throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.InvalidOperationException, system.xml.XmlException, system.ArgumentNullException, system.OutOfMemoryException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetXml = null;
         try {
-            JCObject objGetXml = (JCObject)classInstance.Invoke("GetXml");
+            retObjectGetXml = classInstance.Invoke("GetXml");
+            JCObject objGetXml = (JCObject)retObjectGetXml;
             return new XmlElement(objGetXml);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetXml != null ? retObjectGetXml.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -194,7 +198,7 @@ public class CipherData extends NetObject  {
 
     public void LoadXml(XmlElement value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.xml.xpath.XPathException, system.security.cryptography.CryptographicException, system.OutOfMemoryException, system.FormatException, system.TypeLoadException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("LoadXml", value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -208,10 +212,12 @@ public class CipherData extends NetObject  {
     
     public byte[] getCipherValue() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCipherValue = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("CipherValue");
+            retObjectCipherValue = classInstance.Get("CipherValue");
+            JCObject resultingObjects = (JCObject)retObjectCipherValue;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -220,6 +226,8 @@ public class CipherData extends NetObject  {
 				resultingArray[indexCipherValue] = (byte)resultingArrayList.get(indexCipherValue);
 			}
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into JCObject", retObjectCipherValue != null ? retObjectCipherValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -227,7 +235,7 @@ public class CipherData extends NetObject  {
 
     public void setCipherValue(byte[] CipherValue) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CipherValue", CipherValue);
         } catch (JCNativeException jcne) {
@@ -237,10 +245,14 @@ public class CipherData extends NetObject  {
 
     public CipherReference getCipherReference() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCipherReference = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CipherReference");
+            retObjectCipherReference = classInstance.Get("CipherReference");
+            JCObject val = (JCObject)retObjectCipherReference;
             return new CipherReference(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCipherReference != null ? retObjectCipherReference.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -248,7 +260,7 @@ public class CipherData extends NetObject  {
 
     public void setCipherReference(CipherReference CipherReference) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CipherReference", CipherReference == null ? null : CipherReference.getJCOInstance());
         } catch (JCNativeException jcne) {

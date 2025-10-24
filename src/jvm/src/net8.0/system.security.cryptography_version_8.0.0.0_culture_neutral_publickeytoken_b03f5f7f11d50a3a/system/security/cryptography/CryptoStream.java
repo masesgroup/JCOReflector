@@ -186,9 +186,20 @@ public class CryptoStream extends Stream  {
     
     public int EndRead(IAsyncResult asyncResult) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.diagnostics.tracing.EventSourceException, system.InvalidOperationException, system.threading.tasks.TaskSchedulerException, system.threading.tasks.TaskCanceledException, system.AggregateException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEndRead = null;
         try {
-            return (int)classInstance.Invoke("EndRead", asyncResult == null ? null : asyncResult.getJCOInstance());
+            retObjectEndRead = classInstance.Invoke("EndRead", asyncResult == null ? null : asyncResult.getJCOInstance());
+            return (int)retObjectEndRead;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectEndRead_ToString = retObjectEndRead == null ? "null" : retObjectEndRead.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectEndReadNumber = (java.lang.Number)retObjectEndRead;
+                return retObjectEndReadNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectEndRead != null ? retObjectEndRead.getClass() : "null", retObjectEndRead_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,9 +207,20 @@ public class CryptoStream extends Stream  {
 
     public int Read(byte[] buffer, int offset, int count) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.diagnostics.tracing.EventSourceException, system.threading.tasks.TaskSchedulerException, system.threading.tasks.TaskCanceledException, system.AggregateException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRead = null;
         try {
-            return (int)classInstance.Invoke("Read", buffer, offset, count);
+            retObjectRead = classInstance.Invoke("Read", buffer, offset, count);
+            return (int)retObjectRead;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectRead_ToString = retObjectRead == null ? "null" : retObjectRead.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectReadNumber = (java.lang.Number)retObjectRead;
+                return retObjectReadNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectRead != null ? retObjectRead.getClass() : "null", retObjectRead_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -206,9 +228,20 @@ public class CryptoStream extends Stream  {
 
     public int Read(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.diagnostics.tracing.EventSourceException, system.threading.tasks.TaskSchedulerException, system.threading.tasks.TaskCanceledException, system.AggregateException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRead = null;
         try {
-            return (int)classInstance.Invoke("Read", dupParam0.getJCRefOut(), dupParam1, dupParam2);
+            retObjectRead = classInstance.Invoke("Read", dupParam0.getJCRefOut(), dupParam1, dupParam2);
+            return (int)retObjectRead;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectRead_ToString = retObjectRead == null ? "null" : retObjectRead.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectReadNumber = (java.lang.Number)retObjectRead;
+                return retObjectReadNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectRead != null ? retObjectRead.getClass() : "null", retObjectRead_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -216,9 +249,20 @@ public class CryptoStream extends Stream  {
 
     public int ReadByte() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadByte = null;
         try {
-            return (int)classInstance.Invoke("ReadByte");
+            retObjectReadByte = classInstance.Invoke("ReadByte");
+            return (int)retObjectReadByte;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectReadByte_ToString = retObjectReadByte == null ? "null" : retObjectReadByte.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectReadByteNumber = (java.lang.Number)retObjectReadByte;
+                return retObjectReadByteNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectReadByte != null ? retObjectReadByte.getClass() : "null", retObjectReadByte_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -226,9 +270,20 @@ public class CryptoStream extends Stream  {
 
     public long Seek(long offset, SeekOrigin origin) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSeek = null;
         try {
-            return (long)classInstance.Invoke("Seek", offset, origin == null ? null : origin.getJCOInstance());
+            retObjectSeek = classInstance.Invoke("Seek", offset, origin == null ? null : origin.getJCOInstance());
+            return (long)retObjectSeek;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSeek_ToString = retObjectSeek == null ? "null" : retObjectSeek.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectSeekNumber = (java.lang.Number)retObjectSeek;
+                return retObjectSeekNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectSeek != null ? retObjectSeek.getClass() : "null", retObjectSeek_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -236,10 +291,14 @@ public class CryptoStream extends Stream  {
 
     public IAsyncResult BeginRead(byte[] buffer, int offset, int count, AsyncCallback callback, NetObject state) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.OperationCanceledException, system.threading.tasks.TaskCanceledException, system.AggregateException, system.threading.SemaphoreFullException, system.threading.tasks.TaskSchedulerException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginRead = null;
         try {
-            JCObject objBeginRead = (JCObject)classInstance.Invoke("BeginRead", buffer, offset, count, callback, state == null ? null : state.getJCOInstance());
+            retObjectBeginRead = classInstance.Invoke("BeginRead", buffer, offset, count, callback, state == null ? null : state.getJCOInstance());
+            JCObject objBeginRead = (JCObject)retObjectBeginRead;
             return new IAsyncResultImplementation(objBeginRead);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginRead != null ? retObjectBeginRead.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -247,10 +306,14 @@ public class CryptoStream extends Stream  {
 
     public IAsyncResult BeginRead(JCORefOut dupParam0, int dupParam1, int dupParam2, AsyncCallback dupParam3, NetObject dupParam4) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.OperationCanceledException, system.threading.tasks.TaskCanceledException, system.AggregateException, system.threading.SemaphoreFullException, system.threading.tasks.TaskSchedulerException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginRead = null;
         try {
-            JCObject objBeginRead = (JCObject)classInstance.Invoke("BeginRead", dupParam0.getJCRefOut(), dupParam1, dupParam2, dupParam3, dupParam4 == null ? null : dupParam4.getJCOInstance());
+            retObjectBeginRead = classInstance.Invoke("BeginRead", dupParam0.getJCRefOut(), dupParam1, dupParam2, dupParam3, dupParam4 == null ? null : dupParam4.getJCOInstance());
+            JCObject objBeginRead = (JCObject)retObjectBeginRead;
             return new IAsyncResultImplementation(objBeginRead);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginRead != null ? retObjectBeginRead.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -258,10 +321,14 @@ public class CryptoStream extends Stream  {
 
     public IAsyncResult BeginWrite(byte[] buffer, int offset, int count, AsyncCallback callback, NetObject state) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.OperationCanceledException, system.threading.tasks.TaskCanceledException, system.AggregateException, system.threading.SemaphoreFullException, system.threading.tasks.TaskSchedulerException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginWrite = null;
         try {
-            JCObject objBeginWrite = (JCObject)classInstance.Invoke("BeginWrite", buffer, offset, count, callback, state == null ? null : state.getJCOInstance());
+            retObjectBeginWrite = classInstance.Invoke("BeginWrite", buffer, offset, count, callback, state == null ? null : state.getJCOInstance());
+            JCObject objBeginWrite = (JCObject)retObjectBeginWrite;
             return new IAsyncResultImplementation(objBeginWrite);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginWrite != null ? retObjectBeginWrite.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -269,10 +336,14 @@ public class CryptoStream extends Stream  {
 
     public IAsyncResult BeginWrite(JCORefOut dupParam0, int dupParam1, int dupParam2, AsyncCallback dupParam3, NetObject dupParam4) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.OperationCanceledException, system.threading.tasks.TaskCanceledException, system.AggregateException, system.threading.SemaphoreFullException, system.threading.tasks.TaskSchedulerException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginWrite = null;
         try {
-            JCObject objBeginWrite = (JCObject)classInstance.Invoke("BeginWrite", dupParam0.getJCRefOut(), dupParam1, dupParam2, dupParam3, dupParam4 == null ? null : dupParam4.getJCOInstance());
+            retObjectBeginWrite = classInstance.Invoke("BeginWrite", dupParam0.getJCRefOut(), dupParam1, dupParam2, dupParam3, dupParam4 == null ? null : dupParam4.getJCOInstance());
+            JCObject objBeginWrite = (JCObject)retObjectBeginWrite;
             return new IAsyncResultImplementation(objBeginWrite);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginWrite != null ? retObjectBeginWrite.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -280,10 +351,14 @@ public class CryptoStream extends Stream  {
 
     public Task CopyToAsync(Stream destination, int bufferSize, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCopyToAsync = null;
         try {
-            JCObject objCopyToAsync = (JCObject)classInstance.Invoke("CopyToAsync", destination == null ? null : destination.getJCOInstance(), bufferSize, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            retObjectCopyToAsync = classInstance.Invoke("CopyToAsync", destination == null ? null : destination.getJCOInstance(), bufferSize, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objCopyToAsync = (JCObject)retObjectCopyToAsync;
             return new Task(objCopyToAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCopyToAsync != null ? retObjectCopyToAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -291,10 +366,14 @@ public class CryptoStream extends Stream  {
 
     public Task FlushAsync(CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFlushAsync = null;
         try {
-            JCObject objFlushAsync = (JCObject)classInstance.Invoke("FlushAsync", cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            retObjectFlushAsync = classInstance.Invoke("FlushAsync", cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objFlushAsync = (JCObject)retObjectFlushAsync;
             return new Task(objFlushAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFlushAsync != null ? retObjectFlushAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -302,10 +381,14 @@ public class CryptoStream extends Stream  {
 
     public Task WriteAsync(byte[] buffer, int offset, int count, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWriteAsync = null;
         try {
-            JCObject objWriteAsync = (JCObject)classInstance.Invoke("WriteAsync", buffer, offset, count, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            retObjectWriteAsync = classInstance.Invoke("WriteAsync", buffer, offset, count, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objWriteAsync = (JCObject)retObjectWriteAsync;
             return new Task(objWriteAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWriteAsync != null ? retObjectWriteAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -313,10 +396,14 @@ public class CryptoStream extends Stream  {
 
     public Task WriteAsync(JCORefOut dupParam0, int dupParam1, int dupParam2, CancellationToken dupParam3) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWriteAsync = null;
         try {
-            JCObject objWriteAsync = (JCObject)classInstance.Invoke("WriteAsync", dupParam0.getJCRefOut(), dupParam1, dupParam2, dupParam3 == null ? null : dupParam3.getJCOInstance());
+            retObjectWriteAsync = classInstance.Invoke("WriteAsync", dupParam0.getJCRefOut(), dupParam1, dupParam2, dupParam3 == null ? null : dupParam3.getJCOInstance());
+            JCObject objWriteAsync = (JCObject)retObjectWriteAsync;
             return new Task(objWriteAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWriteAsync != null ? retObjectWriteAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -324,10 +411,14 @@ public class CryptoStream extends Stream  {
 
     public ValueTask DisposeAsync() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDisposeAsync = null;
         try {
-            JCObject objDisposeAsync = (JCObject)classInstance.Invoke("DisposeAsync");
+            retObjectDisposeAsync = classInstance.Invoke("DisposeAsync");
+            JCObject objDisposeAsync = (JCObject)retObjectDisposeAsync;
             return new ValueTask(objDisposeAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDisposeAsync != null ? retObjectDisposeAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -335,10 +426,14 @@ public class CryptoStream extends Stream  {
 
     public ValueTask FlushFinalBlockAsync(CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFlushFinalBlockAsync = null;
         try {
-            JCObject objFlushFinalBlockAsync = (JCObject)classInstance.Invoke("FlushFinalBlockAsync", cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            retObjectFlushFinalBlockAsync = classInstance.Invoke("FlushFinalBlockAsync", cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objFlushFinalBlockAsync = (JCObject)retObjectFlushFinalBlockAsync;
             return new ValueTask(objFlushFinalBlockAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFlushFinalBlockAsync != null ? retObjectFlushFinalBlockAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -346,7 +441,7 @@ public class CryptoStream extends Stream  {
 
     public void Clear() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Clear");
         } catch (JCNativeException jcne) {
@@ -356,7 +451,7 @@ public class CryptoStream extends Stream  {
 
     public void CopyTo(Stream destination, int bufferSize) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CopyTo", destination == null ? null : destination.getJCOInstance(), bufferSize);
         } catch (JCNativeException jcne) {
@@ -366,7 +461,7 @@ public class CryptoStream extends Stream  {
 
     public void EndWrite(IAsyncResult asyncResult) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.diagnostics.tracing.EventSourceException, system.InvalidOperationException, system.threading.tasks.TaskSchedulerException, system.threading.tasks.TaskCanceledException, system.AggregateException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EndWrite", asyncResult == null ? null : asyncResult.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -376,7 +471,7 @@ public class CryptoStream extends Stream  {
 
     public void Flush() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Flush");
         } catch (JCNativeException jcne) {
@@ -386,7 +481,7 @@ public class CryptoStream extends Stream  {
 
     public void FlushFinalBlock() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.IndexOutOfRangeException, system.threading.tasks.TaskSchedulerException, system.ObjectDisposedException, system.OperationCanceledException, system.threading.tasks.TaskCanceledException, system.AggregateException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("FlushFinalBlock");
         } catch (JCNativeException jcne) {
@@ -396,7 +491,7 @@ public class CryptoStream extends Stream  {
 
     public void SetLength(long value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetLength", value);
         } catch (JCNativeException jcne) {
@@ -406,7 +501,7 @@ public class CryptoStream extends Stream  {
 
     public void Write(byte[] buffer, int offset, int count) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.threading.tasks.TaskSchedulerException, system.ObjectDisposedException, system.OperationCanceledException, system.threading.tasks.TaskCanceledException, system.AggregateException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Write", buffer, offset, count);
         } catch (JCNativeException jcne) {
@@ -416,7 +511,7 @@ public class CryptoStream extends Stream  {
 
     public void Write(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.threading.tasks.TaskSchedulerException, system.ObjectDisposedException, system.OperationCanceledException, system.threading.tasks.TaskCanceledException, system.AggregateException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Write", dupParam0.getJCRefOut(), dupParam1, dupParam2);
         } catch (JCNativeException jcne) {
@@ -426,7 +521,7 @@ public class CryptoStream extends Stream  {
 
     public void WriteByte(byte value) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteByte", value);
         } catch (JCNativeException jcne) {
@@ -440,9 +535,13 @@ public class CryptoStream extends Stream  {
     
     public boolean getHasFlushedFinalBlock() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHasFlushedFinalBlock = null;
         try {
-            return (boolean)classInstance.Get("HasFlushedFinalBlock");
+            retObjectHasFlushedFinalBlock = classInstance.Get("HasFlushedFinalBlock");
+            return (boolean)retObjectHasFlushedFinalBlock;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectHasFlushedFinalBlock != null ? retObjectHasFlushedFinalBlock.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

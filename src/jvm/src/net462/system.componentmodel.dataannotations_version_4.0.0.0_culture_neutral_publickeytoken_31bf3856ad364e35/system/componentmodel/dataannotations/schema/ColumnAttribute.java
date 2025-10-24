@@ -176,9 +176,20 @@ public class ColumnAttribute extends Attribute  {
     
     public int getOrder() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOrder = null;
         try {
-            return (int)classInstance.Get("Order");
+            retObjectOrder = classInstance.Get("Order");
+            return (int)retObjectOrder;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectOrder_ToString = retObjectOrder == null ? "null" : retObjectOrder.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectOrderNumber = (java.lang.Number)retObjectOrder;
+                return retObjectOrderNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectOrder != null ? retObjectOrder.getClass() : "null", retObjectOrder_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,7 +197,7 @@ public class ColumnAttribute extends Attribute  {
 
     public void setOrder(int Order) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Order", Order);
         } catch (JCNativeException jcne) {
@@ -196,9 +207,13 @@ public class ColumnAttribute extends Attribute  {
 
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectName = null;
         try {
-            return (java.lang.String)classInstance.Get("Name");
+            retObjectName = classInstance.Get("Name");
+            return (java.lang.String)retObjectName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectName != null ? retObjectName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -206,9 +221,13 @@ public class ColumnAttribute extends Attribute  {
 
     public java.lang.String getTypeName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTypeName = null;
         try {
-            return (java.lang.String)classInstance.Get("TypeName");
+            retObjectTypeName = classInstance.Get("TypeName");
+            return (java.lang.String)retObjectTypeName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectTypeName != null ? retObjectTypeName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -216,7 +235,7 @@ public class ColumnAttribute extends Attribute  {
 
     public void setTypeName(java.lang.String TypeName) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TypeName", TypeName);
         } catch (JCNativeException jcne) {

@@ -191,9 +191,13 @@ public class IPAddress extends NetObject implements system.IFormattable {
     
     public static boolean IsLoopback(IPAddress address) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsLoopback = null;
         try {
-            return (boolean)classType.Invoke("IsLoopback", address == null ? null : address.getJCOInstance());
+            retObjectIsLoopback = classType.Invoke("IsLoopback", address == null ? null : address.getJCOInstance());
+            return (boolean)retObjectIsLoopback;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsLoopback != null ? retObjectIsLoopback.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,9 +205,13 @@ public class IPAddress extends NetObject implements system.IFormattable {
 
     public static boolean TryParse(java.lang.String ipString, JCORefOut<IPAddress> address) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTryParse = null;
         try {
-            return (boolean)classType.Invoke("TryParse", ipString, address.getJCRefOut());
+            retObjectTryParse = classType.Invoke("TryParse", ipString, address.getJCRefOut());
+            return (boolean)retObjectTryParse;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryParse != null ? retObjectTryParse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -211,10 +219,12 @@ public class IPAddress extends NetObject implements system.IFormattable {
 
     public byte[] GetAddressBytes() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetAddressBytes = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetAddressBytes");
+            retObjectGetAddressBytes = classInstance.Invoke("GetAddressBytes");
+            JCObject resultingObjects = (JCObject)retObjectGetAddressBytes;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -223,6 +233,8 @@ public class IPAddress extends NetObject implements system.IFormattable {
 				resultingArray[indexGetAddressBytes] = (byte)resultingArrayList.get(indexGetAddressBytes);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectGetAddressBytes != null ? retObjectGetAddressBytes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -230,9 +242,20 @@ public class IPAddress extends NetObject implements system.IFormattable {
 
     public static short HostToNetworkOrder(short host) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectHostToNetworkOrder = null;
         try {
-            return (short)classType.Invoke("HostToNetworkOrder", host);
+            retObjectHostToNetworkOrder = classType.Invoke("HostToNetworkOrder", host);
+            return (short)retObjectHostToNetworkOrder;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectHostToNetworkOrder_ToString = retObjectHostToNetworkOrder == null ? "null" : retObjectHostToNetworkOrder.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectHostToNetworkOrderNumber = (java.lang.Number)retObjectHostToNetworkOrder;
+                return retObjectHostToNetworkOrderNumber.shortValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into short and, as fallback solution, into java.lang.Number", retObjectHostToNetworkOrder != null ? retObjectHostToNetworkOrder.getClass() : "null", retObjectHostToNetworkOrder_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -240,9 +263,20 @@ public class IPAddress extends NetObject implements system.IFormattable {
 
     public static short NetworkToHostOrder(short network) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectNetworkToHostOrder = null;
         try {
-            return (short)classType.Invoke("NetworkToHostOrder", network);
+            retObjectNetworkToHostOrder = classType.Invoke("NetworkToHostOrder", network);
+            return (short)retObjectNetworkToHostOrder;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectNetworkToHostOrder_ToString = retObjectNetworkToHostOrder == null ? "null" : retObjectNetworkToHostOrder.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectNetworkToHostOrderNumber = (java.lang.Number)retObjectNetworkToHostOrder;
+                return retObjectNetworkToHostOrderNumber.shortValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into short and, as fallback solution, into java.lang.Number", retObjectNetworkToHostOrder != null ? retObjectNetworkToHostOrder.getClass() : "null", retObjectNetworkToHostOrder_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -250,9 +284,20 @@ public class IPAddress extends NetObject implements system.IFormattable {
 
     public static int HostToNetworkOrder(int host) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectHostToNetworkOrder = null;
         try {
-            return (int)classType.Invoke("HostToNetworkOrder", host);
+            retObjectHostToNetworkOrder = classType.Invoke("HostToNetworkOrder", host);
+            return (int)retObjectHostToNetworkOrder;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectHostToNetworkOrder_ToString = retObjectHostToNetworkOrder == null ? "null" : retObjectHostToNetworkOrder.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectHostToNetworkOrderNumber = (java.lang.Number)retObjectHostToNetworkOrder;
+                return retObjectHostToNetworkOrderNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectHostToNetworkOrder != null ? retObjectHostToNetworkOrder.getClass() : "null", retObjectHostToNetworkOrder_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -260,9 +305,20 @@ public class IPAddress extends NetObject implements system.IFormattable {
 
     public static int NetworkToHostOrder(int network) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectNetworkToHostOrder = null;
         try {
-            return (int)classType.Invoke("NetworkToHostOrder", network);
+            retObjectNetworkToHostOrder = classType.Invoke("NetworkToHostOrder", network);
+            return (int)retObjectNetworkToHostOrder;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectNetworkToHostOrder_ToString = retObjectNetworkToHostOrder == null ? "null" : retObjectNetworkToHostOrder.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectNetworkToHostOrderNumber = (java.lang.Number)retObjectNetworkToHostOrder;
+                return retObjectNetworkToHostOrderNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectNetworkToHostOrder != null ? retObjectNetworkToHostOrder.getClass() : "null", retObjectNetworkToHostOrder_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -270,9 +326,20 @@ public class IPAddress extends NetObject implements system.IFormattable {
 
     public static long HostToNetworkOrder(long host) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectHostToNetworkOrder = null;
         try {
-            return (long)classType.Invoke("HostToNetworkOrder", host);
+            retObjectHostToNetworkOrder = classType.Invoke("HostToNetworkOrder", host);
+            return (long)retObjectHostToNetworkOrder;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectHostToNetworkOrder_ToString = retObjectHostToNetworkOrder == null ? "null" : retObjectHostToNetworkOrder.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectHostToNetworkOrderNumber = (java.lang.Number)retObjectHostToNetworkOrder;
+                return retObjectHostToNetworkOrderNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectHostToNetworkOrder != null ? retObjectHostToNetworkOrder.getClass() : "null", retObjectHostToNetworkOrder_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -280,9 +347,20 @@ public class IPAddress extends NetObject implements system.IFormattable {
 
     public static long NetworkToHostOrder(long network) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectNetworkToHostOrder = null;
         try {
-            return (long)classType.Invoke("NetworkToHostOrder", network);
+            retObjectNetworkToHostOrder = classType.Invoke("NetworkToHostOrder", network);
+            return (long)retObjectNetworkToHostOrder;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectNetworkToHostOrder_ToString = retObjectNetworkToHostOrder == null ? "null" : retObjectNetworkToHostOrder.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectNetworkToHostOrderNumber = (java.lang.Number)retObjectNetworkToHostOrder;
+                return retObjectNetworkToHostOrderNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectNetworkToHostOrder != null ? retObjectNetworkToHostOrder.getClass() : "null", retObjectNetworkToHostOrder_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -290,10 +368,14 @@ public class IPAddress extends NetObject implements system.IFormattable {
 
     public IPAddress MapToIPv4() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMapToIPv4 = null;
         try {
-            JCObject objMapToIPv4 = (JCObject)classInstance.Invoke("MapToIPv4");
+            retObjectMapToIPv4 = classInstance.Invoke("MapToIPv4");
+            JCObject objMapToIPv4 = (JCObject)retObjectMapToIPv4;
             return new IPAddress(objMapToIPv4);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMapToIPv4 != null ? retObjectMapToIPv4.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -301,10 +383,14 @@ public class IPAddress extends NetObject implements system.IFormattable {
 
     public IPAddress MapToIPv6() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMapToIPv6 = null;
         try {
-            JCObject objMapToIPv6 = (JCObject)classInstance.Invoke("MapToIPv6");
+            retObjectMapToIPv6 = classInstance.Invoke("MapToIPv6");
+            JCObject objMapToIPv6 = (JCObject)retObjectMapToIPv6;
             return new IPAddress(objMapToIPv6);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMapToIPv6 != null ? retObjectMapToIPv6.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -312,10 +398,14 @@ public class IPAddress extends NetObject implements system.IFormattable {
 
     public static IPAddress Parse(java.lang.String ipString) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectParse = null;
         try {
-            JCObject objParse = (JCObject)classType.Invoke("Parse", ipString);
+            retObjectParse = classType.Invoke("Parse", ipString);
+            JCObject objParse = (JCObject)retObjectParse;
             return new IPAddress(objParse);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParse != null ? retObjectParse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -327,7 +417,7 @@ public class IPAddress extends NetObject implements system.IFormattable {
      */
     @Deprecated 
     public java.lang.String ToString(java.lang.String format, IFormatProvider formatProvider) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIFormattable to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIFormattable to obtain the full interface.");
     }
 
 
@@ -336,9 +426,13 @@ public class IPAddress extends NetObject implements system.IFormattable {
     
     public boolean getIsIPv4MappedToIPv6() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsIPv4MappedToIPv6 = null;
         try {
-            return (boolean)classInstance.Get("IsIPv4MappedToIPv6");
+            retObjectIsIPv4MappedToIPv6 = classInstance.Get("IsIPv4MappedToIPv6");
+            return (boolean)retObjectIsIPv4MappedToIPv6;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsIPv4MappedToIPv6 != null ? retObjectIsIPv4MappedToIPv6.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -346,9 +440,13 @@ public class IPAddress extends NetObject implements system.IFormattable {
 
     public boolean getIsIPv6LinkLocal() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsIPv6LinkLocal = null;
         try {
-            return (boolean)classInstance.Get("IsIPv6LinkLocal");
+            retObjectIsIPv6LinkLocal = classInstance.Get("IsIPv6LinkLocal");
+            return (boolean)retObjectIsIPv6LinkLocal;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsIPv6LinkLocal != null ? retObjectIsIPv6LinkLocal.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -356,9 +454,13 @@ public class IPAddress extends NetObject implements system.IFormattable {
 
     public boolean getIsIPv6Multicast() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsIPv6Multicast = null;
         try {
-            return (boolean)classInstance.Get("IsIPv6Multicast");
+            retObjectIsIPv6Multicast = classInstance.Get("IsIPv6Multicast");
+            return (boolean)retObjectIsIPv6Multicast;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsIPv6Multicast != null ? retObjectIsIPv6Multicast.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -366,9 +468,13 @@ public class IPAddress extends NetObject implements system.IFormattable {
 
     public boolean getIsIPv6SiteLocal() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsIPv6SiteLocal = null;
         try {
-            return (boolean)classInstance.Get("IsIPv6SiteLocal");
+            retObjectIsIPv6SiteLocal = classInstance.Get("IsIPv6SiteLocal");
+            return (boolean)retObjectIsIPv6SiteLocal;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsIPv6SiteLocal != null ? retObjectIsIPv6SiteLocal.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -376,9 +482,13 @@ public class IPAddress extends NetObject implements system.IFormattable {
 
     public boolean getIsIPv6Teredo() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsIPv6Teredo = null;
         try {
-            return (boolean)classInstance.Get("IsIPv6Teredo");
+            retObjectIsIPv6Teredo = classInstance.Get("IsIPv6Teredo");
+            return (boolean)retObjectIsIPv6Teredo;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsIPv6Teredo != null ? retObjectIsIPv6Teredo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -386,9 +496,13 @@ public class IPAddress extends NetObject implements system.IFormattable {
 
     public boolean getIsIPv6UniqueLocal() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsIPv6UniqueLocal = null;
         try {
-            return (boolean)classInstance.Get("IsIPv6UniqueLocal");
+            retObjectIsIPv6UniqueLocal = classInstance.Get("IsIPv6UniqueLocal");
+            return (boolean)retObjectIsIPv6UniqueLocal;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsIPv6UniqueLocal != null ? retObjectIsIPv6UniqueLocal.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -396,9 +510,20 @@ public class IPAddress extends NetObject implements system.IFormattable {
 
     public long getAddress() throws Throwable, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.net.sockets.SocketException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddress = null;
         try {
-            return (long)classInstance.Get("Address");
+            retObjectAddress = classInstance.Get("Address");
+            return (long)retObjectAddress;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectAddress_ToString = retObjectAddress == null ? "null" : retObjectAddress.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectAddressNumber = (java.lang.Number)retObjectAddress;
+                return retObjectAddressNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectAddress != null ? retObjectAddress.getClass() : "null", retObjectAddress_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -406,7 +531,7 @@ public class IPAddress extends NetObject implements system.IFormattable {
 
     public void setAddress(long Address) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.net.sockets.SocketException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Address", Address);
         } catch (JCNativeException jcne) {
@@ -416,9 +541,20 @@ public class IPAddress extends NetObject implements system.IFormattable {
 
     public long getScopeId() throws Throwable, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.net.sockets.SocketException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectScopeId = null;
         try {
-            return (long)classInstance.Get("ScopeId");
+            retObjectScopeId = classInstance.Get("ScopeId");
+            return (long)retObjectScopeId;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectScopeId_ToString = retObjectScopeId == null ? "null" : retObjectScopeId.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectScopeIdNumber = (java.lang.Number)retObjectScopeId;
+                return retObjectScopeIdNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectScopeId != null ? retObjectScopeId.getClass() : "null", retObjectScopeId_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -426,7 +562,7 @@ public class IPAddress extends NetObject implements system.IFormattable {
 
     public void setScopeId(long ScopeId) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.net.sockets.SocketException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ScopeId", ScopeId);
         } catch (JCNativeException jcne) {
@@ -436,10 +572,14 @@ public class IPAddress extends NetObject implements system.IFormattable {
 
     public AddressFamily getAddressFamily() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddressFamily = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AddressFamily");
+            retObjectAddressFamily = classInstance.Get("AddressFamily");
+            JCObject val = (JCObject)retObjectAddressFamily;
             return new AddressFamily(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddressFamily != null ? retObjectAddressFamily.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

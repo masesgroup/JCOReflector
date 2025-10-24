@@ -178,9 +178,20 @@ public class RemovedActivityAction extends ActivityChangeAction  {
     
     public int getRemovedActivityIndex() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRemovedActivityIndex = null;
         try {
-            return (int)classInstance.Get("RemovedActivityIndex");
+            retObjectRemovedActivityIndex = classInstance.Get("RemovedActivityIndex");
+            return (int)retObjectRemovedActivityIndex;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectRemovedActivityIndex_ToString = retObjectRemovedActivityIndex == null ? "null" : retObjectRemovedActivityIndex.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectRemovedActivityIndexNumber = (java.lang.Number)retObjectRemovedActivityIndex;
+                return retObjectRemovedActivityIndexNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectRemovedActivityIndex != null ? retObjectRemovedActivityIndex.getClass() : "null", retObjectRemovedActivityIndex_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,7 +199,7 @@ public class RemovedActivityAction extends ActivityChangeAction  {
 
     public void setRemovedActivityIndex(int RemovedActivityIndex) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RemovedActivityIndex", RemovedActivityIndex);
         } catch (JCNativeException jcne) {
@@ -198,10 +209,14 @@ public class RemovedActivityAction extends ActivityChangeAction  {
 
     public Activity getOriginalRemovedActivity() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOriginalRemovedActivity = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("OriginalRemovedActivity");
+            retObjectOriginalRemovedActivity = classInstance.Get("OriginalRemovedActivity");
+            JCObject val = (JCObject)retObjectOriginalRemovedActivity;
             return new Activity(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOriginalRemovedActivity != null ? retObjectOriginalRemovedActivity.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -209,7 +224,7 @@ public class RemovedActivityAction extends ActivityChangeAction  {
 
     public void setOriginalRemovedActivity(Activity OriginalRemovedActivity) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("OriginalRemovedActivity", OriginalRemovedActivity == null ? null : OriginalRemovedActivity.getJCOInstance());
         } catch (JCNativeException jcne) {

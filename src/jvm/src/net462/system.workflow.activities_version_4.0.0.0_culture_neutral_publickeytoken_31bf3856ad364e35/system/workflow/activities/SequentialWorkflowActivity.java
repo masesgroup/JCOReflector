@@ -178,10 +178,14 @@ public class SequentialWorkflowActivity extends SequenceActivity  {
     
     public ActivityCondition getDynamicUpdateCondition() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDynamicUpdateCondition = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DynamicUpdateCondition");
+            retObjectDynamicUpdateCondition = classInstance.Get("DynamicUpdateCondition");
+            JCObject val = (JCObject)retObjectDynamicUpdateCondition;
             return new ActivityCondition(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDynamicUpdateCondition != null ? retObjectDynamicUpdateCondition.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -189,7 +193,7 @@ public class SequentialWorkflowActivity extends SequenceActivity  {
 
     public void setDynamicUpdateCondition(ActivityCondition DynamicUpdateCondition) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DynamicUpdateCondition", DynamicUpdateCondition == null ? null : DynamicUpdateCondition.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -204,7 +208,7 @@ public class SequentialWorkflowActivity extends SequenceActivity  {
 
     public void addCompleted(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Completed", handler);
         } catch (JCNativeException jcne) {
@@ -214,7 +218,7 @@ public class SequentialWorkflowActivity extends SequenceActivity  {
 
     public void removeCompleted(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Completed", handler);
         } catch (JCNativeException jcne) {
@@ -224,7 +228,7 @@ public class SequentialWorkflowActivity extends SequenceActivity  {
 
     public void addInitialized(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Initialized", handler);
         } catch (JCNativeException jcne) {
@@ -234,7 +238,7 @@ public class SequentialWorkflowActivity extends SequenceActivity  {
 
     public void removeInitialized(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Initialized", handler);
         } catch (JCNativeException jcne) {

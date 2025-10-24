@@ -158,10 +158,14 @@ public class Argument extends NetObject  {
     
     public static Argument Create(NetType type, ArgumentDirection direction) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
         try {
-            JCObject objCreate = (JCObject)classType.Invoke("Create", type == null ? null : type.getJCOInstance(), direction == null ? null : direction.getJCOInstance());
+            retObjectCreate = classType.Invoke("Create", type == null ? null : type.getJCOInstance(), direction == null ? null : direction.getJCOInstance());
+            JCObject objCreate = (JCObject)retObjectCreate;
             return new Argument(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,10 +173,14 @@ public class Argument extends NetObject  {
 
     public static Argument CreateReference(Argument argumentToReference, java.lang.String referencedArgumentName) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateReference = null;
         try {
-            JCObject objCreateReference = (JCObject)classType.Invoke("CreateReference", argumentToReference == null ? null : argumentToReference.getJCOInstance(), referencedArgumentName);
+            retObjectCreateReference = classType.Invoke("CreateReference", argumentToReference == null ? null : argumentToReference.getJCOInstance(), referencedArgumentName);
+            JCObject objCreateReference = (JCObject)retObjectCreateReference;
             return new Argument(objCreateReference);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateReference != null ? retObjectCreateReference.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,10 +188,14 @@ public class Argument extends NetObject  {
 
     public Location GetLocation(ActivityContext context) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetLocation = null;
         try {
-            JCObject objGetLocation = (JCObject)classInstance.Invoke("GetLocation", context == null ? null : context.getJCOInstance());
+            retObjectGetLocation = classInstance.Invoke("GetLocation", context == null ? null : context.getJCOInstance());
+            JCObject objGetLocation = (JCObject)retObjectGetLocation;
             return new Location(objGetLocation);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetLocation != null ? retObjectGetLocation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,10 +203,14 @@ public class Argument extends NetObject  {
 
     public NetObject Get(ActivityContext context) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGet = null;
         try {
-            JCObject objGet = (JCObject)classInstance.Invoke("Get", context == null ? null : context.getJCOInstance());
+            retObjectGet = classInstance.Invoke("Get", context == null ? null : context.getJCOInstance());
+            JCObject objGet = (JCObject)retObjectGet;
             return new NetObject(objGet);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGet != null ? retObjectGet.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,7 +218,7 @@ public class Argument extends NetObject  {
 
     public void Set(ActivityContext context, NetObject value) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Set", context == null ? null : context.getJCOInstance(), value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -216,9 +232,20 @@ public class Argument extends NetObject  {
     
     public int getEvaluationOrder() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEvaluationOrder = null;
         try {
-            return (int)classInstance.Get("EvaluationOrder");
+            retObjectEvaluationOrder = classInstance.Get("EvaluationOrder");
+            return (int)retObjectEvaluationOrder;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectEvaluationOrder_ToString = retObjectEvaluationOrder == null ? "null" : retObjectEvaluationOrder.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectEvaluationOrderNumber = (java.lang.Number)retObjectEvaluationOrder;
+                return retObjectEvaluationOrderNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectEvaluationOrder != null ? retObjectEvaluationOrder.getClass() : "null", retObjectEvaluationOrder_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -226,7 +253,7 @@ public class Argument extends NetObject  {
 
     public void setEvaluationOrder(int EvaluationOrder) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EvaluationOrder", EvaluationOrder);
         } catch (JCNativeException jcne) {
@@ -236,10 +263,14 @@ public class Argument extends NetObject  {
 
     public ActivityWithResult getExpression() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExpression = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Expression");
+            retObjectExpression = classInstance.Get("Expression");
+            JCObject val = (JCObject)retObjectExpression;
             return new ActivityWithResult(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExpression != null ? retObjectExpression.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -247,7 +278,7 @@ public class Argument extends NetObject  {
 
     public void setExpression(ActivityWithResult Expression) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Expression", Expression == null ? null : Expression.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -257,10 +288,14 @@ public class Argument extends NetObject  {
 
     public ArgumentDirection getDirection() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDirection = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Direction");
+            retObjectDirection = classInstance.Get("Direction");
+            JCObject val = (JCObject)retObjectDirection;
             return new ArgumentDirection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDirection != null ? retObjectDirection.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -268,7 +303,7 @@ public class Argument extends NetObject  {
 
     public void setDirection(ArgumentDirection Direction) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Direction", Direction == null ? null : Direction.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -278,10 +313,14 @@ public class Argument extends NetObject  {
 
     public NetType getArgumentType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectArgumentType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ArgumentType");
+            retObjectArgumentType = classInstance.Get("ArgumentType");
+            JCObject val = (JCObject)retObjectArgumentType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectArgumentType != null ? retObjectArgumentType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -289,7 +328,7 @@ public class Argument extends NetObject  {
 
     public void setArgumentType(NetType ArgumentType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ArgumentType", ArgumentType == null ? null : ArgumentType.getJCOInstance());
         } catch (JCNativeException jcne) {

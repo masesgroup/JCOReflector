@@ -164,10 +164,14 @@ public class DynamicDiscoveryDocument extends NetObject  {
     
     public static DynamicDiscoveryDocument Load(Stream stream) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.ArgumentException, system.threading.ThreadAbortException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.security.SecurityException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.RankException, system.io.FileNotFoundException, system.TypeLoadException, system.UnauthorizedAccessException, system.io.IOException, system.xml.XmlException, system.MulticastNotSupportedException, system.OverflowException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLoad = null;
         try {
-            JCObject objLoad = (JCObject)classType.Invoke("Load", stream == null ? null : stream.getJCOInstance());
+            retObjectLoad = classType.Invoke("Load", stream == null ? null : stream.getJCOInstance());
+            JCObject objLoad = (JCObject)retObjectLoad;
             return new DynamicDiscoveryDocument(objLoad);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLoad != null ? retObjectLoad.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -175,7 +179,7 @@ public class DynamicDiscoveryDocument extends NetObject  {
 
     public void Write(Stream stream) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.ArgumentException, system.threading.ThreadAbortException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.security.SecurityException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.RankException, system.io.FileNotFoundException, system.TypeLoadException, system.UnauthorizedAccessException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Write", stream == null ? null : stream.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -189,16 +193,20 @@ public class DynamicDiscoveryDocument extends NetObject  {
     
     public final ExcludePathInfo[] getExcludePaths() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExcludePaths = null;
         try {
             ArrayList<ExcludePathInfo> resultingArrayList = new ArrayList<ExcludePathInfo>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("ExcludePaths");
+            retObjectExcludePaths = classInstance.Get("ExcludePaths");
+            JCObject resultingObjects = (JCObject)retObjectExcludePaths;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ExcludePathInfo(resultingObject));
             }
             ExcludePathInfo[] resultingArray = new ExcludePathInfo[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExcludePaths != null ? retObjectExcludePaths.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -206,7 +214,7 @@ public class DynamicDiscoveryDocument extends NetObject  {
 
     public void setExcludePaths(ExcludePathInfo[] ExcludePaths) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ExcludePaths", toObjectFromArray(ExcludePaths));
         } catch (JCNativeException jcne) {

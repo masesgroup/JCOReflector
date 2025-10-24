@@ -198,9 +198,13 @@ public class ProfileParameter extends Parameter  {
     
     public java.lang.String getPropertyName() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPropertyName = null;
         try {
-            return (java.lang.String)classInstance.Get("PropertyName");
+            retObjectPropertyName = classInstance.Get("PropertyName");
+            return (java.lang.String)retObjectPropertyName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectPropertyName != null ? retObjectPropertyName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -208,7 +212,7 @@ public class ProfileParameter extends Parameter  {
 
     public void setPropertyName(java.lang.String PropertyName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PropertyName", PropertyName);
         } catch (JCNativeException jcne) {

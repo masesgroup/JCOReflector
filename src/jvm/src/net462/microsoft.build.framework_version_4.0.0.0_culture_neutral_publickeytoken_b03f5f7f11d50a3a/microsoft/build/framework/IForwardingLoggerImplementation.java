@@ -151,7 +151,7 @@ public class IForwardingLoggerImplementation extends NetObject implements IForwa
     
     public void Initialize(IEventSource eventSource) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Initialize", eventSource == null ? null : eventSource.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -161,7 +161,7 @@ public class IForwardingLoggerImplementation extends NetObject implements IForwa
 
     public void Initialize(IEventSource eventSource, int nodeCount) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Initialize", eventSource == null ? null : eventSource.getJCOInstance(), nodeCount);
         } catch (JCNativeException jcne) {
@@ -171,7 +171,7 @@ public class IForwardingLoggerImplementation extends NetObject implements IForwa
 
     public void Shutdown() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Shutdown");
         } catch (JCNativeException jcne) {
@@ -185,9 +185,20 @@ public class IForwardingLoggerImplementation extends NetObject implements IForwa
     
     public int getNodeId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNodeId = null;
         try {
-            return (int)classInstance.Get("NodeId");
+            retObjectNodeId = classInstance.Get("NodeId");
+            return (int)retObjectNodeId;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectNodeId_ToString = retObjectNodeId == null ? "null" : retObjectNodeId.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectNodeIdNumber = (java.lang.Number)retObjectNodeId;
+                return retObjectNodeIdNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectNodeId != null ? retObjectNodeId.getClass() : "null", retObjectNodeId_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,7 +206,7 @@ public class IForwardingLoggerImplementation extends NetObject implements IForwa
 
     public void setNodeId(int NodeId) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("NodeId", NodeId);
         } catch (JCNativeException jcne) {
@@ -205,10 +216,14 @@ public class IForwardingLoggerImplementation extends NetObject implements IForwa
 
     public IEventRedirector getBuildEventRedirector() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBuildEventRedirector = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("BuildEventRedirector");
+            retObjectBuildEventRedirector = classInstance.Get("BuildEventRedirector");
+            JCObject val = (JCObject)retObjectBuildEventRedirector;
             return new IEventRedirectorImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBuildEventRedirector != null ? retObjectBuildEventRedirector.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -216,7 +231,7 @@ public class IForwardingLoggerImplementation extends NetObject implements IForwa
 
     public void setBuildEventRedirector(IEventRedirector BuildEventRedirector) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BuildEventRedirector", BuildEventRedirector == null ? null : BuildEventRedirector.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -226,10 +241,14 @@ public class IForwardingLoggerImplementation extends NetObject implements IForwa
 
     public LoggerVerbosity getVerbosity() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVerbosity = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Verbosity");
+            retObjectVerbosity = classInstance.Get("Verbosity");
+            JCObject val = (JCObject)retObjectVerbosity;
             return new LoggerVerbosity(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVerbosity != null ? retObjectVerbosity.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -237,7 +256,7 @@ public class IForwardingLoggerImplementation extends NetObject implements IForwa
 
     public void setVerbosity(LoggerVerbosity Verbosity) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Verbosity", Verbosity == null ? null : Verbosity.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -247,9 +266,13 @@ public class IForwardingLoggerImplementation extends NetObject implements IForwa
 
     public java.lang.String getParameters() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectParameters = null;
         try {
-            return (java.lang.String)classInstance.Get("Parameters");
+            retObjectParameters = classInstance.Get("Parameters");
+            return (java.lang.String)retObjectParameters;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectParameters != null ? retObjectParameters.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -257,7 +280,7 @@ public class IForwardingLoggerImplementation extends NetObject implements IForwa
 
     public void setParameters(java.lang.String Parameters) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Parameters", Parameters);
         } catch (JCNativeException jcne) {

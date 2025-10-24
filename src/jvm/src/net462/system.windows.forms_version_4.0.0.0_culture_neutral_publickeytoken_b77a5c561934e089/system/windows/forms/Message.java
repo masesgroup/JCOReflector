@@ -157,10 +157,14 @@ public class Message extends ValueType  {
     
     public NetObject GetLParam(NetType cls) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetLParam = null;
         try {
-            JCObject objGetLParam = (JCObject)classInstance.Invoke("GetLParam", cls == null ? null : cls.getJCOInstance());
+            retObjectGetLParam = classInstance.Invoke("GetLParam", cls == null ? null : cls.getJCOInstance());
+            JCObject objGetLParam = (JCObject)retObjectGetLParam;
             return new NetObject(objGetLParam);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetLParam != null ? retObjectGetLParam.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,9 +176,20 @@ public class Message extends ValueType  {
     
     public int getMsg() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMsg = null;
         try {
-            return (int)classInstance.Get("Msg");
+            retObjectMsg = classInstance.Get("Msg");
+            return (int)retObjectMsg;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMsg_ToString = retObjectMsg == null ? "null" : retObjectMsg.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMsgNumber = (java.lang.Number)retObjectMsg;
+                return retObjectMsgNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMsg != null ? retObjectMsg.getClass() : "null", retObjectMsg_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,7 +197,7 @@ public class Message extends ValueType  {
 
     public void setMsg(int Msg) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Msg", Msg);
         } catch (JCNativeException jcne) {

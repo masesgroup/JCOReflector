@@ -175,7 +175,7 @@ public class HttpCachePolicyWrapper extends HttpCachePolicyBase  {
     
     public void AddValidationCallback(HttpCacheValidateHandler handler, NetObject data) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddValidationCallback", handler, data == null ? null : data.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -185,7 +185,7 @@ public class HttpCachePolicyWrapper extends HttpCachePolicyBase  {
 
     public void AppendCacheExtension(java.lang.String extension) throws Throwable, system.ArgumentNullException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AppendCacheExtension", extension);
         } catch (JCNativeException jcne) {
@@ -195,7 +195,7 @@ public class HttpCachePolicyWrapper extends HttpCachePolicyBase  {
 
     public void SetAllowResponseInBrowserHistory(boolean allow) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetAllowResponseInBrowserHistory", allow);
         } catch (JCNativeException jcne) {
@@ -205,7 +205,7 @@ public class HttpCachePolicyWrapper extends HttpCachePolicyBase  {
 
     public void SetCacheability(HttpCacheability cacheability) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetCacheability", cacheability == null ? null : cacheability.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -215,7 +215,7 @@ public class HttpCachePolicyWrapper extends HttpCachePolicyBase  {
 
     public void SetCacheability(HttpCacheability cacheability, java.lang.String field) throws Throwable, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetCacheability", cacheability == null ? null : cacheability.getJCOInstance(), field);
         } catch (JCNativeException jcne) {
@@ -225,7 +225,7 @@ public class HttpCachePolicyWrapper extends HttpCachePolicyBase  {
 
     public void SetETag(java.lang.String etag) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetETag", etag);
         } catch (JCNativeException jcne) {
@@ -235,7 +235,7 @@ public class HttpCachePolicyWrapper extends HttpCachePolicyBase  {
 
     public void SetETagFromFileDependencies() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetETagFromFileDependencies");
         } catch (JCNativeException jcne) {
@@ -245,7 +245,7 @@ public class HttpCachePolicyWrapper extends HttpCachePolicyBase  {
 
     public void SetExpires(DateTime date) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.OverflowException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetExpires", date == null ? null : date.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -255,7 +255,7 @@ public class HttpCachePolicyWrapper extends HttpCachePolicyBase  {
 
     public void SetLastModified(DateTime date) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.OverflowException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetLastModified", date == null ? null : date.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -265,7 +265,7 @@ public class HttpCachePolicyWrapper extends HttpCachePolicyBase  {
 
     public void SetLastModifiedFromFileDependencies() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetLastModifiedFromFileDependencies");
         } catch (JCNativeException jcne) {
@@ -275,7 +275,7 @@ public class HttpCachePolicyWrapper extends HttpCachePolicyBase  {
 
     public void SetMaxAge(TimeSpan delta) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetMaxAge", delta == null ? null : delta.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -285,7 +285,7 @@ public class HttpCachePolicyWrapper extends HttpCachePolicyBase  {
 
     public void SetNoServerCaching() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetNoServerCaching");
         } catch (JCNativeException jcne) {
@@ -295,7 +295,7 @@ public class HttpCachePolicyWrapper extends HttpCachePolicyBase  {
 
     public void SetNoStore() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetNoStore");
         } catch (JCNativeException jcne) {
@@ -305,7 +305,7 @@ public class HttpCachePolicyWrapper extends HttpCachePolicyBase  {
 
     public void SetNoTransforms() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetNoTransforms");
         } catch (JCNativeException jcne) {
@@ -315,7 +315,7 @@ public class HttpCachePolicyWrapper extends HttpCachePolicyBase  {
 
     public void SetOmitVaryStar(boolean omit) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetOmitVaryStar", omit);
         } catch (JCNativeException jcne) {
@@ -325,7 +325,7 @@ public class HttpCachePolicyWrapper extends HttpCachePolicyBase  {
 
     public void SetProxyMaxAge(TimeSpan delta) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetProxyMaxAge", delta == null ? null : delta.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -335,7 +335,7 @@ public class HttpCachePolicyWrapper extends HttpCachePolicyBase  {
 
     public void SetRevalidation(HttpCacheRevalidation revalidation) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetRevalidation", revalidation == null ? null : revalidation.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -345,7 +345,7 @@ public class HttpCachePolicyWrapper extends HttpCachePolicyBase  {
 
     public void SetSlidingExpiration(boolean slide) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetSlidingExpiration", slide);
         } catch (JCNativeException jcne) {
@@ -355,7 +355,7 @@ public class HttpCachePolicyWrapper extends HttpCachePolicyBase  {
 
     public void SetValidUntilExpires(boolean validUntilExpires) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetValidUntilExpires", validUntilExpires);
         } catch (JCNativeException jcne) {
@@ -365,7 +365,7 @@ public class HttpCachePolicyWrapper extends HttpCachePolicyBase  {
 
     public void SetVaryByCustom(java.lang.String custom) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetVaryByCustom", custom);
         } catch (JCNativeException jcne) {

@@ -194,10 +194,14 @@ public class RSAOpenSsl extends RSA  {
     
     public RSAParameters ExportParameters(boolean includePrivateParameters) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExportParameters = null;
         try {
-            JCObject objExportParameters = (JCObject)classInstance.Invoke("ExportParameters", includePrivateParameters);
+            retObjectExportParameters = classInstance.Invoke("ExportParameters", includePrivateParameters);
+            JCObject objExportParameters = (JCObject)retObjectExportParameters;
             return new RSAParameters(objExportParameters);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExportParameters != null ? retObjectExportParameters.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -205,10 +209,14 @@ public class RSAOpenSsl extends RSA  {
 
     public SafeEvpPKeyHandle DuplicateKeyHandle() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDuplicateKeyHandle = null;
         try {
-            JCObject objDuplicateKeyHandle = (JCObject)classInstance.Invoke("DuplicateKeyHandle");
+            retObjectDuplicateKeyHandle = classInstance.Invoke("DuplicateKeyHandle");
+            JCObject objDuplicateKeyHandle = (JCObject)retObjectDuplicateKeyHandle;
             return new SafeEvpPKeyHandle(objDuplicateKeyHandle);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDuplicateKeyHandle != null ? retObjectDuplicateKeyHandle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -216,7 +224,7 @@ public class RSAOpenSsl extends RSA  {
 
     public void ImportParameters(RSAParameters parameters) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ImportParameters", parameters == null ? null : parameters.getJCOInstance());
         } catch (JCNativeException jcne) {

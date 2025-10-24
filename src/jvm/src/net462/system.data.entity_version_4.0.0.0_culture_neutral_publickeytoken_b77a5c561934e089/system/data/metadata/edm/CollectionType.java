@@ -162,10 +162,14 @@ public class CollectionType extends EdmType  {
     
     public TypeUsage getTypeUsage() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTypeUsage = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TypeUsage");
+            retObjectTypeUsage = classInstance.Get("TypeUsage");
+            JCObject val = (JCObject)retObjectTypeUsage;
             return new TypeUsage(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTypeUsage != null ? retObjectTypeUsage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

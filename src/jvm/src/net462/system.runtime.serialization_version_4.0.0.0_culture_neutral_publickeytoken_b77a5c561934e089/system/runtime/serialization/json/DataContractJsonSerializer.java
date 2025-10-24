@@ -207,9 +207,13 @@ public class DataContractJsonSerializer extends XmlObjectSerializer  {
     
     public boolean IsStartObject(XmlDictionaryReader reader) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsStartObject = null;
         try {
-            return (boolean)classInstance.Invoke("IsStartObject", reader == null ? null : reader.getJCOInstance());
+            retObjectIsStartObject = classInstance.Invoke("IsStartObject", reader == null ? null : reader.getJCOInstance());
+            return (boolean)retObjectIsStartObject;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsStartObject != null ? retObjectIsStartObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -217,9 +221,13 @@ public class DataContractJsonSerializer extends XmlObjectSerializer  {
 
     public boolean IsStartObject(XmlReader reader) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsStartObject = null;
         try {
-            return (boolean)classInstance.Invoke("IsStartObject", reader == null ? null : reader.getJCOInstance());
+            retObjectIsStartObject = classInstance.Invoke("IsStartObject", reader == null ? null : reader.getJCOInstance());
+            return (boolean)retObjectIsStartObject;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsStartObject != null ? retObjectIsStartObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -227,10 +235,14 @@ public class DataContractJsonSerializer extends XmlObjectSerializer  {
 
     public NetObject ReadObject(Stream stream) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException, system.NotSupportedException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadObject = null;
         try {
-            JCObject objReadObject = (JCObject)classInstance.Invoke("ReadObject", stream == null ? null : stream.getJCOInstance());
+            retObjectReadObject = classInstance.Invoke("ReadObject", stream == null ? null : stream.getJCOInstance());
+            JCObject objReadObject = (JCObject)retObjectReadObject;
             return new NetObject(objReadObject);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadObject != null ? retObjectReadObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -238,10 +250,14 @@ public class DataContractJsonSerializer extends XmlObjectSerializer  {
 
     public NetObject ReadObject(XmlDictionaryReader reader) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.OutOfMemoryException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadObject = null;
         try {
-            JCObject objReadObject = (JCObject)classInstance.Invoke("ReadObject", reader == null ? null : reader.getJCOInstance());
+            retObjectReadObject = classInstance.Invoke("ReadObject", reader == null ? null : reader.getJCOInstance());
+            JCObject objReadObject = (JCObject)retObjectReadObject;
             return new NetObject(objReadObject);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadObject != null ? retObjectReadObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -249,10 +265,14 @@ public class DataContractJsonSerializer extends XmlObjectSerializer  {
 
     public NetObject ReadObject(XmlDictionaryReader reader, boolean verifyObjectName) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.OutOfMemoryException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadObject = null;
         try {
-            JCObject objReadObject = (JCObject)classInstance.Invoke("ReadObject", reader == null ? null : reader.getJCOInstance(), verifyObjectName);
+            retObjectReadObject = classInstance.Invoke("ReadObject", reader == null ? null : reader.getJCOInstance(), verifyObjectName);
+            JCObject objReadObject = (JCObject)retObjectReadObject;
             return new NetObject(objReadObject);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadObject != null ? retObjectReadObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -260,10 +280,14 @@ public class DataContractJsonSerializer extends XmlObjectSerializer  {
 
     public NetObject ReadObject(XmlReader reader) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.OutOfMemoryException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadObject = null;
         try {
-            JCObject objReadObject = (JCObject)classInstance.Invoke("ReadObject", reader == null ? null : reader.getJCOInstance());
+            retObjectReadObject = classInstance.Invoke("ReadObject", reader == null ? null : reader.getJCOInstance());
+            JCObject objReadObject = (JCObject)retObjectReadObject;
             return new NetObject(objReadObject);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadObject != null ? retObjectReadObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -271,10 +295,14 @@ public class DataContractJsonSerializer extends XmlObjectSerializer  {
 
     public NetObject ReadObject(XmlReader reader, boolean verifyObjectName) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.OutOfMemoryException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadObject = null;
         try {
-            JCObject objReadObject = (JCObject)classInstance.Invoke("ReadObject", reader == null ? null : reader.getJCOInstance(), verifyObjectName);
+            retObjectReadObject = classInstance.Invoke("ReadObject", reader == null ? null : reader.getJCOInstance(), verifyObjectName);
+            JCObject objReadObject = (JCObject)retObjectReadObject;
             return new NetObject(objReadObject);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadObject != null ? retObjectReadObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -282,7 +310,7 @@ public class DataContractJsonSerializer extends XmlObjectSerializer  {
 
     public void WriteEndObject(XmlDictionaryWriter writer) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteEndObject", writer == null ? null : writer.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -292,7 +320,7 @@ public class DataContractJsonSerializer extends XmlObjectSerializer  {
 
     public void WriteEndObject(XmlWriter writer) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteEndObject", writer == null ? null : writer.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -302,7 +330,7 @@ public class DataContractJsonSerializer extends XmlObjectSerializer  {
 
     public void WriteObject(Stream stream, NetObject graph) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException, system.NotSupportedException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteObject", stream == null ? null : stream.getJCOInstance(), graph == null ? null : graph.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -312,7 +340,7 @@ public class DataContractJsonSerializer extends XmlObjectSerializer  {
 
     public void WriteObject(XmlDictionaryWriter writer, NetObject graph) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.OutOfMemoryException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteObject", writer == null ? null : writer.getJCOInstance(), graph == null ? null : graph.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -322,7 +350,7 @@ public class DataContractJsonSerializer extends XmlObjectSerializer  {
 
     public void WriteObject(XmlWriter writer, NetObject graph) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.OutOfMemoryException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteObject", writer == null ? null : writer.getJCOInstance(), graph == null ? null : graph.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -332,7 +360,7 @@ public class DataContractJsonSerializer extends XmlObjectSerializer  {
 
     public void WriteObjectContent(XmlDictionaryWriter writer, NetObject graph) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.OutOfMemoryException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteObjectContent", writer == null ? null : writer.getJCOInstance(), graph == null ? null : graph.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -342,7 +370,7 @@ public class DataContractJsonSerializer extends XmlObjectSerializer  {
 
     public void WriteObjectContent(XmlWriter writer, NetObject graph) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.OutOfMemoryException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteObjectContent", writer == null ? null : writer.getJCOInstance(), graph == null ? null : graph.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -352,7 +380,7 @@ public class DataContractJsonSerializer extends XmlObjectSerializer  {
 
     public void WriteStartObject(XmlDictionaryWriter writer, NetObject graph) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteStartObject", writer == null ? null : writer.getJCOInstance(), graph == null ? null : graph.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -362,7 +390,7 @@ public class DataContractJsonSerializer extends XmlObjectSerializer  {
 
     public void WriteStartObject(XmlWriter writer, NetObject graph) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteStartObject", writer == null ? null : writer.getJCOInstance(), graph == null ? null : graph.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -376,9 +404,13 @@ public class DataContractJsonSerializer extends XmlObjectSerializer  {
     
     public boolean getIgnoreExtensionDataObject() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIgnoreExtensionDataObject = null;
         try {
-            return (boolean)classInstance.Get("IgnoreExtensionDataObject");
+            retObjectIgnoreExtensionDataObject = classInstance.Get("IgnoreExtensionDataObject");
+            return (boolean)retObjectIgnoreExtensionDataObject;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIgnoreExtensionDataObject != null ? retObjectIgnoreExtensionDataObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -386,9 +418,13 @@ public class DataContractJsonSerializer extends XmlObjectSerializer  {
 
     public boolean getSerializeReadOnlyTypes() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSerializeReadOnlyTypes = null;
         try {
-            return (boolean)classInstance.Get("SerializeReadOnlyTypes");
+            retObjectSerializeReadOnlyTypes = classInstance.Get("SerializeReadOnlyTypes");
+            return (boolean)retObjectSerializeReadOnlyTypes;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectSerializeReadOnlyTypes != null ? retObjectSerializeReadOnlyTypes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -396,9 +432,13 @@ public class DataContractJsonSerializer extends XmlObjectSerializer  {
 
     public boolean getUseSimpleDictionaryFormat() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUseSimpleDictionaryFormat = null;
         try {
-            return (boolean)classInstance.Get("UseSimpleDictionaryFormat");
+            retObjectUseSimpleDictionaryFormat = classInstance.Get("UseSimpleDictionaryFormat");
+            return (boolean)retObjectUseSimpleDictionaryFormat;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectUseSimpleDictionaryFormat != null ? retObjectUseSimpleDictionaryFormat.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -406,9 +446,20 @@ public class DataContractJsonSerializer extends XmlObjectSerializer  {
 
     public int getMaxItemsInObjectGraph() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxItemsInObjectGraph = null;
         try {
-            return (int)classInstance.Get("MaxItemsInObjectGraph");
+            retObjectMaxItemsInObjectGraph = classInstance.Get("MaxItemsInObjectGraph");
+            return (int)retObjectMaxItemsInObjectGraph;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaxItemsInObjectGraph_ToString = retObjectMaxItemsInObjectGraph == null ? "null" : retObjectMaxItemsInObjectGraph.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMaxItemsInObjectGraphNumber = (java.lang.Number)retObjectMaxItemsInObjectGraph;
+                return retObjectMaxItemsInObjectGraphNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxItemsInObjectGraph != null ? retObjectMaxItemsInObjectGraph.getClass() : "null", retObjectMaxItemsInObjectGraph_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -416,10 +467,14 @@ public class DataContractJsonSerializer extends XmlObjectSerializer  {
 
     public DateTimeFormat getDateTimeFormat() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDateTimeFormat = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DateTimeFormat");
+            retObjectDateTimeFormat = classInstance.Get("DateTimeFormat");
+            JCObject val = (JCObject)retObjectDateTimeFormat;
             return new DateTimeFormat(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDateTimeFormat != null ? retObjectDateTimeFormat.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -427,10 +482,14 @@ public class DataContractJsonSerializer extends XmlObjectSerializer  {
 
     public EmitTypeInformation getEmitTypeInformation() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEmitTypeInformation = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("EmitTypeInformation");
+            retObjectEmitTypeInformation = classInstance.Get("EmitTypeInformation");
+            JCObject val = (JCObject)retObjectEmitTypeInformation;
             return new EmitTypeInformation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEmitTypeInformation != null ? retObjectEmitTypeInformation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -438,10 +497,14 @@ public class DataContractJsonSerializer extends XmlObjectSerializer  {
 
     public IDataContractSurrogate getDataContractSurrogate() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDataContractSurrogate = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DataContractSurrogate");
+            retObjectDataContractSurrogate = classInstance.Get("DataContractSurrogate");
+            JCObject val = (JCObject)retObjectDataContractSurrogate;
             return new IDataContractSurrogateImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDataContractSurrogate != null ? retObjectDataContractSurrogate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

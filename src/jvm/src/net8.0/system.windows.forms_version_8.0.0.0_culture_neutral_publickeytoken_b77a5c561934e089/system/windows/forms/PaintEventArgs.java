@@ -168,7 +168,7 @@ public class PaintEventArgs extends EventArgs implements AutoCloseable {
     
     public void Dispose() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
@@ -182,13 +182,13 @@ public class PaintEventArgs extends EventArgs implements AutoCloseable {
      */
     @Deprecated 
     public void ReleaseHdc() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDeviceContext to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDeviceContext to obtain the full interface.");
     }
 
     public void close() throws Exception {
         try {
             if (classInstance == null)
-                throw new UnsupportedOperationException("classInstance is null.");
+                throw new java.lang.UnsupportedOperationException("classInstance is null.");
             try {
                 classInstance.Invoke("Dispose");
             }
@@ -204,10 +204,14 @@ public class PaintEventArgs extends EventArgs implements AutoCloseable {
     
     public Graphics getGraphics() throws Throwable, system.ArgumentException, system.MulticastNotSupportedException, system.PlatformNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGraphics = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Graphics");
+            retObjectGraphics = classInstance.Get("Graphics");
+            JCObject val = (JCObject)retObjectGraphics;
             return new Graphics(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGraphics != null ? retObjectGraphics.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -215,10 +219,14 @@ public class PaintEventArgs extends EventArgs implements AutoCloseable {
 
     public Rectangle getClipRectangle() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClipRectangle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ClipRectangle");
+            retObjectClipRectangle = classInstance.Get("ClipRectangle");
+            JCObject val = (JCObject)retObjectClipRectangle;
             return new Rectangle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClipRectangle != null ? retObjectClipRectangle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -182,7 +182,7 @@ public class MetadataReference extends NetObject implements system.xml.serializa
      */
     @Deprecated 
     public XmlSchema GetSchema() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIXmlSerializable to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIXmlSerializable to obtain the full interface.");
     }
 
     /**
@@ -191,7 +191,7 @@ public class MetadataReference extends NetObject implements system.xml.serializa
      */
     @Deprecated 
     public void ReadXml(XmlReader reader) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIXmlSerializable to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIXmlSerializable to obtain the full interface.");
     }
 
     /**
@@ -200,7 +200,7 @@ public class MetadataReference extends NetObject implements system.xml.serializa
      */
     @Deprecated 
     public void WriteXml(XmlWriter writer) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIXmlSerializable to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIXmlSerializable to obtain the full interface.");
     }
 
 
@@ -209,10 +209,14 @@ public class MetadataReference extends NetObject implements system.xml.serializa
     
     public AddressingVersion getAddressVersion() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddressVersion = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AddressVersion");
+            retObjectAddressVersion = classInstance.Get("AddressVersion");
+            JCObject val = (JCObject)retObjectAddressVersion;
             return new AddressingVersion(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddressVersion != null ? retObjectAddressVersion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -220,7 +224,7 @@ public class MetadataReference extends NetObject implements system.xml.serializa
 
     public void setAddressVersion(AddressingVersion AddressVersion) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AddressVersion", AddressVersion == null ? null : AddressVersion.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -230,10 +234,14 @@ public class MetadataReference extends NetObject implements system.xml.serializa
 
     public EndpointAddress getAddress() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddress = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Address");
+            retObjectAddress = classInstance.Get("Address");
+            JCObject val = (JCObject)retObjectAddress;
             return new EndpointAddress(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddress != null ? retObjectAddress.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -241,7 +249,7 @@ public class MetadataReference extends NetObject implements system.xml.serializa
 
     public void setAddress(EndpointAddress Address) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Address", Address == null ? null : Address.getJCOInstance());
         } catch (JCNativeException jcne) {

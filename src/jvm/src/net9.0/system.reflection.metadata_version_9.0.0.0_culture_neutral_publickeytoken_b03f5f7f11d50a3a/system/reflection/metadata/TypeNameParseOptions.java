@@ -165,9 +165,20 @@ public class TypeNameParseOptions extends NetObject  {
     
     public int getMaxNodes() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxNodes = null;
         try {
-            return (int)classInstance.Get("MaxNodes");
+            retObjectMaxNodes = classInstance.Get("MaxNodes");
+            return (int)retObjectMaxNodes;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaxNodes_ToString = retObjectMaxNodes == null ? "null" : retObjectMaxNodes.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMaxNodesNumber = (java.lang.Number)retObjectMaxNodes;
+                return retObjectMaxNodesNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxNodes != null ? retObjectMaxNodes.getClass() : "null", retObjectMaxNodes_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -175,7 +186,7 @@ public class TypeNameParseOptions extends NetObject  {
 
     public void setMaxNodes(int MaxNodes) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaxNodes", MaxNodes);
         } catch (JCNativeException jcne) {

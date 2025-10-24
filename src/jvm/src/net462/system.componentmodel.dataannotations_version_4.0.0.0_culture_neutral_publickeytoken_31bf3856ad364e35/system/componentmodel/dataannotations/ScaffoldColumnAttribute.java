@@ -170,9 +170,13 @@ public class ScaffoldColumnAttribute extends Attribute  {
     
     public boolean getScaffold() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectScaffold = null;
         try {
-            return (boolean)classInstance.Get("Scaffold");
+            retObjectScaffold = classInstance.Get("Scaffold");
+            return (boolean)retObjectScaffold;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectScaffold != null ? retObjectScaffold.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,7 +184,7 @@ public class ScaffoldColumnAttribute extends Attribute  {
 
     public void setScaffold(boolean Scaffold) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Scaffold", Scaffold);
         } catch (JCNativeException jcne) {

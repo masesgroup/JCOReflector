@@ -143,10 +143,14 @@ public class IInstanceTableImplementation extends NetObject implements IInstance
     
     public Activity GetActivity(java.lang.String instanceId, java.lang.String activityName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetActivity = null;
         try {
-            JCObject objGetActivity = (JCObject)classInstance.Invoke("GetActivity", instanceId, activityName);
+            retObjectGetActivity = classInstance.Invoke("GetActivity", instanceId, activityName);
+            JCObject objGetActivity = (JCObject)retObjectGetActivity;
             return new Activity(objGetActivity);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetActivity != null ? retObjectGetActivity.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

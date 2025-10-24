@@ -172,10 +172,14 @@ public class RemotingService extends Component  {
     
     public IPrincipal getUser() throws Throwable, system.NotImplementedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.runtime.remoting.RemotingException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUser = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("User");
+            retObjectUser = classInstance.Get("User");
+            JCObject val = (JCObject)retObjectUser;
             return new IPrincipalImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUser != null ? retObjectUser.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,10 +187,14 @@ public class RemotingService extends Component  {
 
     public HttpApplicationState getApplication() throws Throwable, system.NotImplementedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.runtime.remoting.RemotingException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectApplication = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Application");
+            retObjectApplication = classInstance.Get("Application");
+            JCObject val = (JCObject)retObjectApplication;
             return new HttpApplicationState(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectApplication != null ? retObjectApplication.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -194,10 +202,14 @@ public class RemotingService extends Component  {
 
     public HttpContext getContext() throws Throwable, system.NotImplementedException, system.ArgumentNullException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.runtime.remoting.RemotingException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContext = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Context");
+            retObjectContext = classInstance.Get("Context");
+            JCObject val = (JCObject)retObjectContext;
             return new HttpContext(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContext != null ? retObjectContext.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -205,10 +217,14 @@ public class RemotingService extends Component  {
 
     public HttpServerUtility getServer() throws Throwable, system.NotImplementedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.runtime.remoting.RemotingException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectServer = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Server");
+            retObjectServer = classInstance.Get("Server");
+            JCObject val = (JCObject)retObjectServer;
             return new HttpServerUtility(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectServer != null ? retObjectServer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -216,10 +232,14 @@ public class RemotingService extends Component  {
 
     public HttpSessionState getSession() throws Throwable, system.NotImplementedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.runtime.remoting.RemotingException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSession = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Session");
+            retObjectSession = classInstance.Get("Session");
+            JCObject val = (JCObject)retObjectSession;
             return new HttpSessionState(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSession != null ? retObjectSession.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

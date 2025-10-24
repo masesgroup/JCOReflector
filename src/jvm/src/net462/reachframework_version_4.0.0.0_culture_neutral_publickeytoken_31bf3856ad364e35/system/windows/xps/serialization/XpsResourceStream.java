@@ -167,7 +167,7 @@ public class XpsResourceStream extends NetObject  {
     
     public void Initialize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Initialize");
         } catch (JCNativeException jcne) {
@@ -181,10 +181,14 @@ public class XpsResourceStream extends NetObject  {
     
     public Stream getStream() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStream = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Stream");
+            retObjectStream = classInstance.Get("Stream");
+            JCObject val = (JCObject)retObjectStream;
             return new Stream(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStream != null ? retObjectStream.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,10 +196,14 @@ public class XpsResourceStream extends NetObject  {
 
     public Uri getUri() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUri = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Uri");
+            retObjectUri = classInstance.Get("Uri");
+            JCObject val = (JCObject)retObjectUri;
             return new Uri(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUri != null ? retObjectUri.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

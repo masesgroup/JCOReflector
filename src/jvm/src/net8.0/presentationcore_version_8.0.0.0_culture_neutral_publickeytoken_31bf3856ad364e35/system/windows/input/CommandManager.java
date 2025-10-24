@@ -160,7 +160,7 @@ public class CommandManager extends NetObject  {
     
     public static void AddCanExecuteHandler(UIElement element, CanExecuteRoutedEventHandler handler) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("AddCanExecuteHandler", element == null ? null : element.getJCOInstance(), handler);
         } catch (JCNativeException jcne) {
@@ -170,7 +170,7 @@ public class CommandManager extends NetObject  {
 
     public static void AddExecutedHandler(UIElement element, ExecutedRoutedEventHandler handler) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("AddExecutedHandler", element == null ? null : element.getJCOInstance(), handler);
         } catch (JCNativeException jcne) {
@@ -180,7 +180,7 @@ public class CommandManager extends NetObject  {
 
     public static void AddPreviewCanExecuteHandler(UIElement element, CanExecuteRoutedEventHandler handler) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("AddPreviewCanExecuteHandler", element == null ? null : element.getJCOInstance(), handler);
         } catch (JCNativeException jcne) {
@@ -190,7 +190,7 @@ public class CommandManager extends NetObject  {
 
     public static void AddPreviewExecutedHandler(UIElement element, ExecutedRoutedEventHandler handler) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("AddPreviewExecutedHandler", element == null ? null : element.getJCOInstance(), handler);
         } catch (JCNativeException jcne) {
@@ -200,7 +200,7 @@ public class CommandManager extends NetObject  {
 
     public static void InvalidateRequerySuggested() throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.TimeoutException, system.globalization.CultureNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("InvalidateRequerySuggested");
         } catch (JCNativeException jcne) {
@@ -210,7 +210,7 @@ public class CommandManager extends NetObject  {
 
     public static void RegisterClassCommandBinding(NetType type, CommandBinding commandBinding) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("RegisterClassCommandBinding", type == null ? null : type.getJCOInstance(), commandBinding == null ? null : commandBinding.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -220,7 +220,7 @@ public class CommandManager extends NetObject  {
 
     public static void RegisterClassInputBinding(NetType type, InputBinding inputBinding) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("RegisterClassInputBinding", type == null ? null : type.getJCOInstance(), inputBinding == null ? null : inputBinding.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -230,7 +230,7 @@ public class CommandManager extends NetObject  {
 
     public static void RemoveCanExecuteHandler(UIElement element, CanExecuteRoutedEventHandler handler) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("RemoveCanExecuteHandler", element == null ? null : element.getJCOInstance(), handler);
         } catch (JCNativeException jcne) {
@@ -240,7 +240,7 @@ public class CommandManager extends NetObject  {
 
     public static void RemoveExecutedHandler(UIElement element, ExecutedRoutedEventHandler handler) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("RemoveExecutedHandler", element == null ? null : element.getJCOInstance(), handler);
         } catch (JCNativeException jcne) {
@@ -250,7 +250,7 @@ public class CommandManager extends NetObject  {
 
     public static void RemovePreviewCanExecuteHandler(UIElement element, CanExecuteRoutedEventHandler handler) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("RemovePreviewCanExecuteHandler", element == null ? null : element.getJCOInstance(), handler);
         } catch (JCNativeException jcne) {
@@ -260,7 +260,7 @@ public class CommandManager extends NetObject  {
 
     public static void RemovePreviewExecutedHandler(UIElement element, ExecutedRoutedEventHandler handler) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("RemovePreviewExecutedHandler", element == null ? null : element.getJCOInstance(), handler);
         } catch (JCNativeException jcne) {

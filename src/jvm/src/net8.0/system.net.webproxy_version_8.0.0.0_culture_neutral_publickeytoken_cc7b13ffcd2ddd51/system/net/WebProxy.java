@@ -259,9 +259,13 @@ public class WebProxy extends NetObject implements system.runtime.serialization.
     
     public boolean IsBypassed(Uri host) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.UriFormatException, system.OutOfMemoryException, system.diagnostics.UnreachableException, system.FormatException, system.net.sockets.SocketException, system.net.networkinformation.NetworkInformationException, system.diagnostics.tracing.EventSourceException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.text.regularexpressions.RegexParseException, system.NotImplementedException, system.text.regularexpressions.RegexMatchTimeoutException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsBypassed = null;
         try {
-            return (boolean)classInstance.Invoke("IsBypassed", host == null ? null : host.getJCOInstance());
+            retObjectIsBypassed = classInstance.Invoke("IsBypassed", host == null ? null : host.getJCOInstance());
+            return (boolean)retObjectIsBypassed;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsBypassed != null ? retObjectIsBypassed.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -269,10 +273,14 @@ public class WebProxy extends NetObject implements system.runtime.serialization.
 
     public static WebProxy GetDefaultProxy() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetDefaultProxy = null;
         try {
-            JCObject objGetDefaultProxy = (JCObject)classType.Invoke("GetDefaultProxy");
+            retObjectGetDefaultProxy = classType.Invoke("GetDefaultProxy");
+            JCObject objGetDefaultProxy = (JCObject)retObjectGetDefaultProxy;
             return new WebProxy(objGetDefaultProxy);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetDefaultProxy != null ? retObjectGetDefaultProxy.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -280,10 +288,14 @@ public class WebProxy extends NetObject implements system.runtime.serialization.
 
     public Uri GetProxy(Uri destination) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.UriFormatException, system.OutOfMemoryException, system.diagnostics.UnreachableException, system.FormatException, system.net.sockets.SocketException, system.net.networkinformation.NetworkInformationException, system.diagnostics.tracing.EventSourceException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.text.regularexpressions.RegexParseException, system.NotImplementedException, system.text.regularexpressions.RegexMatchTimeoutException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetProxy = null;
         try {
-            JCObject objGetProxy = (JCObject)classInstance.Invoke("GetProxy", destination == null ? null : destination.getJCOInstance());
+            retObjectGetProxy = classInstance.Invoke("GetProxy", destination == null ? null : destination.getJCOInstance());
+            JCObject objGetProxy = (JCObject)retObjectGetProxy;
             return new Uri(objGetProxy);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetProxy != null ? retObjectGetProxy.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -295,7 +307,7 @@ public class WebProxy extends NetObject implements system.runtime.serialization.
      */
     @Deprecated 
     public void GetObjectData(SerializationInfo info, StreamingContext context) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToISerializable to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToISerializable to obtain the full interface.");
     }
 
 
@@ -304,9 +316,13 @@ public class WebProxy extends NetObject implements system.runtime.serialization.
     
     public boolean getBypassProxyOnLocal() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBypassProxyOnLocal = null;
         try {
-            return (boolean)classInstance.Get("BypassProxyOnLocal");
+            retObjectBypassProxyOnLocal = classInstance.Get("BypassProxyOnLocal");
+            return (boolean)retObjectBypassProxyOnLocal;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectBypassProxyOnLocal != null ? retObjectBypassProxyOnLocal.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -314,7 +330,7 @@ public class WebProxy extends NetObject implements system.runtime.serialization.
 
     public void setBypassProxyOnLocal(boolean BypassProxyOnLocal) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BypassProxyOnLocal", BypassProxyOnLocal);
         } catch (JCNativeException jcne) {
@@ -324,9 +340,13 @@ public class WebProxy extends NetObject implements system.runtime.serialization.
 
     public boolean getUseDefaultCredentials() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUseDefaultCredentials = null;
         try {
-            return (boolean)classInstance.Get("UseDefaultCredentials");
+            retObjectUseDefaultCredentials = classInstance.Get("UseDefaultCredentials");
+            return (boolean)retObjectUseDefaultCredentials;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectUseDefaultCredentials != null ? retObjectUseDefaultCredentials.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -334,7 +354,7 @@ public class WebProxy extends NetObject implements system.runtime.serialization.
 
     public void setUseDefaultCredentials(boolean UseDefaultCredentials) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UseDefaultCredentials", UseDefaultCredentials);
         } catch (JCNativeException jcne) {
@@ -344,10 +364,14 @@ public class WebProxy extends NetObject implements system.runtime.serialization.
 
     public NetArrayList getBypassArrayList() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBypassArrayList = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("BypassArrayList");
+            retObjectBypassArrayList = classInstance.Get("BypassArrayList");
+            JCObject val = (JCObject)retObjectBypassArrayList;
             return new NetArrayList(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBypassArrayList != null ? retObjectBypassArrayList.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -355,10 +379,14 @@ public class WebProxy extends NetObject implements system.runtime.serialization.
 
     public ICredentials getCredentials() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCredentials = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Credentials");
+            retObjectCredentials = classInstance.Get("Credentials");
+            JCObject val = (JCObject)retObjectCredentials;
             return new ICredentialsImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCredentials != null ? retObjectCredentials.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -366,7 +394,7 @@ public class WebProxy extends NetObject implements system.runtime.serialization.
 
     public void setCredentials(ICredentials Credentials) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Credentials", Credentials == null ? null : Credentials.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -376,10 +404,12 @@ public class WebProxy extends NetObject implements system.runtime.serialization.
 
     public java.lang.String[] getBypassList() throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBypassList = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("BypassList");
+            retObjectBypassList = classInstance.Get("BypassList");
+            JCObject resultingObjects = (JCObject)retObjectBypassList;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -388,6 +418,8 @@ public class WebProxy extends NetObject implements system.runtime.serialization.
 				resultingArray[indexBypassList] = (java.lang.String)resultingArrayList.get(indexBypassList);
 			}
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into JCObject", retObjectBypassList != null ? retObjectBypassList.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -395,7 +427,7 @@ public class WebProxy extends NetObject implements system.runtime.serialization.
 
     public void setBypassList(java.lang.String[] BypassList) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.text.regularexpressions.RegexParseException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BypassList", BypassList);
         } catch (JCNativeException jcne) {
@@ -405,10 +437,14 @@ public class WebProxy extends NetObject implements system.runtime.serialization.
 
     public Uri getAddress() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddress = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Address");
+            retObjectAddress = classInstance.Get("Address");
+            JCObject val = (JCObject)retObjectAddress;
             return new Uri(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddress != null ? retObjectAddress.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -416,7 +452,7 @@ public class WebProxy extends NetObject implements system.runtime.serialization.
 
     public void setAddress(Uri Address) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Address", Address == null ? null : Address.getJCOInstance());
         } catch (JCNativeException jcne) {

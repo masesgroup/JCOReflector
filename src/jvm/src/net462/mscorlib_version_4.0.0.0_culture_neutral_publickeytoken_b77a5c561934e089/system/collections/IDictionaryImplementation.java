@@ -145,9 +145,13 @@ public class IDictionaryImplementation extends IEnumerableImplementation impleme
     
     public boolean Contains(NetObject key) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContains = null;
         try {
-            return (boolean)classInstance.Invoke("Contains", key == null ? null : key.getJCOInstance());
+            retObjectContains = classInstance.Invoke("Contains", key == null ? null : key.getJCOInstance());
+            return (boolean)retObjectContains;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectContains != null ? retObjectContains.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -155,7 +159,7 @@ public class IDictionaryImplementation extends IEnumerableImplementation impleme
 
     public void Add(NetObject key, NetObject value) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Add", key == null ? null : key.getJCOInstance(), value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -165,7 +169,7 @@ public class IDictionaryImplementation extends IEnumerableImplementation impleme
 
     public void Clear() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Clear");
         } catch (JCNativeException jcne) {
@@ -175,7 +179,7 @@ public class IDictionaryImplementation extends IEnumerableImplementation impleme
 
     public void CopyTo(Array array, int index) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CopyTo", array == null ? null : array.getJCOInstance(), index);
         } catch (JCNativeException jcne) {
@@ -185,7 +189,7 @@ public class IDictionaryImplementation extends IEnumerableImplementation impleme
 
     public void Remove(NetObject key) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Remove", key == null ? null : key.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -199,9 +203,13 @@ public class IDictionaryImplementation extends IEnumerableImplementation impleme
     
     public boolean getIsFixedSize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsFixedSize = null;
         try {
-            return (boolean)classInstance.Get("IsFixedSize");
+            retObjectIsFixedSize = classInstance.Get("IsFixedSize");
+            return (boolean)retObjectIsFixedSize;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsFixedSize != null ? retObjectIsFixedSize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -209,9 +217,13 @@ public class IDictionaryImplementation extends IEnumerableImplementation impleme
 
     public boolean getIsReadOnly() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsReadOnly = null;
         try {
-            return (boolean)classInstance.Get("IsReadOnly");
+            retObjectIsReadOnly = classInstance.Get("IsReadOnly");
+            return (boolean)retObjectIsReadOnly;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsReadOnly != null ? retObjectIsReadOnly.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -219,9 +231,13 @@ public class IDictionaryImplementation extends IEnumerableImplementation impleme
 
     public boolean getIsSynchronized() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsSynchronized = null;
         try {
-            return (boolean)classInstance.Get("IsSynchronized");
+            retObjectIsSynchronized = classInstance.Get("IsSynchronized");
+            return (boolean)retObjectIsSynchronized;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsSynchronized != null ? retObjectIsSynchronized.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -229,9 +245,20 @@ public class IDictionaryImplementation extends IEnumerableImplementation impleme
 
     public int getCount() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCount = null;
         try {
-            return (int)classInstance.Get("Count");
+            retObjectCount = classInstance.Get("Count");
+            return (int)retObjectCount;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCount_ToString = retObjectCount == null ? "null" : retObjectCount.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectCountNumber = (java.lang.Number)retObjectCount;
+                return retObjectCountNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCount != null ? retObjectCount.getClass() : "null", retObjectCount_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -239,10 +266,14 @@ public class IDictionaryImplementation extends IEnumerableImplementation impleme
 
     public ICollection getKeys() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectKeys = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Keys");
+            retObjectKeys = classInstance.Get("Keys");
+            JCObject val = (JCObject)retObjectKeys;
             return new ICollectionImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectKeys != null ? retObjectKeys.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -250,10 +281,14 @@ public class IDictionaryImplementation extends IEnumerableImplementation impleme
 
     public ICollection getValues() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValues = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Values");
+            retObjectValues = classInstance.Get("Values");
+            JCObject val = (JCObject)retObjectValues;
             return new ICollectionImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectValues != null ? retObjectValues.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -261,10 +296,14 @@ public class IDictionaryImplementation extends IEnumerableImplementation impleme
 
     public NetObject getSyncRoot() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSyncRoot = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SyncRoot");
+            retObjectSyncRoot = classInstance.Get("SyncRoot");
+            JCObject val = (JCObject)retObjectSyncRoot;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSyncRoot != null ? retObjectSyncRoot.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -155,7 +155,7 @@ public class RenderTraceListener extends NetObject  {
     
     public void BeginRendering(TextWriter writer, NetObject renderedObject) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("BeginRendering", writer == null ? null : writer.getJCOInstance(), renderedObject == null ? null : renderedObject.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -165,7 +165,7 @@ public class RenderTraceListener extends NetObject  {
 
     public void EndRendering(TextWriter writer, NetObject renderedObject) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EndRendering", writer == null ? null : writer.getJCOInstance(), renderedObject == null ? null : renderedObject.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -175,7 +175,7 @@ public class RenderTraceListener extends NetObject  {
 
     public void Initialize(HttpContext context) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Initialize", context == null ? null : context.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -185,7 +185,7 @@ public class RenderTraceListener extends NetObject  {
 
     public void SetTraceData(NetObject tracedObject, NetObject traceDataKey, NetObject traceDataValue) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetTraceData", tracedObject == null ? null : tracedObject.getJCOInstance(), traceDataKey == null ? null : traceDataKey.getJCOInstance(), traceDataValue == null ? null : traceDataValue.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -195,7 +195,7 @@ public class RenderTraceListener extends NetObject  {
 
     public void ShareTraceData(NetObject source, NetObject destination) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ShareTraceData", source == null ? null : source.getJCOInstance(), destination == null ? null : destination.getJCOInstance());
         } catch (JCNativeException jcne) {

@@ -165,7 +165,7 @@ public class PasswordBox extends Control  {
     
     public void Clear() throws Throwable, system.NotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException, system.ObjectDisposedException, system.ArgumentNullException, system.security.cryptography.CryptographicException, system.ArgumentException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Clear");
         } catch (JCNativeException jcne) {
@@ -175,7 +175,7 @@ public class PasswordBox extends Control  {
 
     public void OnApplyTemplate() throws Throwable, system.componentmodel.InvalidEnumArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("OnApplyTemplate");
         } catch (JCNativeException jcne) {
@@ -185,7 +185,7 @@ public class PasswordBox extends Control  {
 
     public void Paste() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.FormatException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.componentmodel.Win32Exception, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Paste");
         } catch (JCNativeException jcne) {
@@ -195,7 +195,7 @@ public class PasswordBox extends Control  {
 
     public void SelectAll() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SelectAll");
         } catch (JCNativeException jcne) {
@@ -209,9 +209,13 @@ public class PasswordBox extends Control  {
     
     public boolean getIsInactiveSelectionHighlightEnabled() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsInactiveSelectionHighlightEnabled = null;
         try {
-            return (boolean)classInstance.Get("IsInactiveSelectionHighlightEnabled");
+            retObjectIsInactiveSelectionHighlightEnabled = classInstance.Get("IsInactiveSelectionHighlightEnabled");
+            return (boolean)retObjectIsInactiveSelectionHighlightEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsInactiveSelectionHighlightEnabled != null ? retObjectIsInactiveSelectionHighlightEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -219,7 +223,7 @@ public class PasswordBox extends Control  {
 
     public void setIsInactiveSelectionHighlightEnabled(boolean IsInactiveSelectionHighlightEnabled) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsInactiveSelectionHighlightEnabled", IsInactiveSelectionHighlightEnabled);
         } catch (JCNativeException jcne) {
@@ -229,9 +233,13 @@ public class PasswordBox extends Control  {
 
     public boolean getIsSelectionActive() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsSelectionActive = null;
         try {
-            return (boolean)classInstance.Get("IsSelectionActive");
+            retObjectIsSelectionActive = classInstance.Get("IsSelectionActive");
+            return (boolean)retObjectIsSelectionActive;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsSelectionActive != null ? retObjectIsSelectionActive.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -239,9 +247,13 @@ public class PasswordBox extends Control  {
 
     public char getPasswordChar() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPasswordChar = null;
         try {
-            return (char)classInstance.Get("PasswordChar");
+            retObjectPasswordChar = classInstance.Get("PasswordChar");
+            return (char)retObjectPasswordChar;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into char", retObjectPasswordChar != null ? retObjectPasswordChar.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -249,7 +261,7 @@ public class PasswordBox extends Control  {
 
     public void setPasswordChar(char PasswordChar) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PasswordChar", PasswordChar);
         } catch (JCNativeException jcne) {
@@ -259,9 +271,20 @@ public class PasswordBox extends Control  {
 
     public double getSelectionOpacity() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectionOpacity = null;
         try {
-            return (double)classInstance.Get("SelectionOpacity");
+            retObjectSelectionOpacity = classInstance.Get("SelectionOpacity");
+            return (double)retObjectSelectionOpacity;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSelectionOpacity_ToString = retObjectSelectionOpacity == null ? "null" : retObjectSelectionOpacity.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectSelectionOpacityNumber = (java.lang.Number)retObjectSelectionOpacity;
+                return retObjectSelectionOpacityNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectSelectionOpacity != null ? retObjectSelectionOpacity.getClass() : "null", retObjectSelectionOpacity_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -269,7 +292,7 @@ public class PasswordBox extends Control  {
 
     public void setSelectionOpacity(double SelectionOpacity) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SelectionOpacity", SelectionOpacity);
         } catch (JCNativeException jcne) {
@@ -279,9 +302,20 @@ public class PasswordBox extends Control  {
 
     public int getMaxLength() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxLength = null;
         try {
-            return (int)classInstance.Get("MaxLength");
+            retObjectMaxLength = classInstance.Get("MaxLength");
+            return (int)retObjectMaxLength;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaxLength_ToString = retObjectMaxLength == null ? "null" : retObjectMaxLength.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMaxLengthNumber = (java.lang.Number)retObjectMaxLength;
+                return retObjectMaxLengthNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxLength != null ? retObjectMaxLength.getClass() : "null", retObjectMaxLength_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -289,7 +323,7 @@ public class PasswordBox extends Control  {
 
     public void setMaxLength(int MaxLength) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaxLength", MaxLength);
         } catch (JCNativeException jcne) {
@@ -299,10 +333,14 @@ public class PasswordBox extends Control  {
 
     public SecureString getSecurePassword() throws Throwable, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSecurePassword = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SecurePassword");
+            retObjectSecurePassword = classInstance.Get("SecurePassword");
+            JCObject val = (JCObject)retObjectSecurePassword;
             return new SecureString(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSecurePassword != null ? retObjectSecurePassword.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -310,9 +348,13 @@ public class PasswordBox extends Control  {
 
     public java.lang.String getPassword() throws Throwable, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentNullException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPassword = null;
         try {
-            return (java.lang.String)classInstance.Get("Password");
+            retObjectPassword = classInstance.Get("Password");
+            return (java.lang.String)retObjectPassword;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectPassword != null ? retObjectPassword.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -320,7 +362,7 @@ public class PasswordBox extends Control  {
 
     public void setPassword(java.lang.String Password) throws Throwable, system.NotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException, system.ObjectDisposedException, system.ArgumentNullException, system.security.cryptography.CryptographicException, system.ArgumentException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Password", Password);
         } catch (JCNativeException jcne) {
@@ -330,10 +372,14 @@ public class PasswordBox extends Control  {
 
     public Brush getCaretBrush() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCaretBrush = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CaretBrush");
+            retObjectCaretBrush = classInstance.Get("CaretBrush");
+            JCObject val = (JCObject)retObjectCaretBrush;
             return new Brush(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCaretBrush != null ? retObjectCaretBrush.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -341,7 +387,7 @@ public class PasswordBox extends Control  {
 
     public void setCaretBrush(Brush CaretBrush) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CaretBrush", CaretBrush == null ? null : CaretBrush.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -351,10 +397,14 @@ public class PasswordBox extends Control  {
 
     public Brush getSelectionBrush() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectionBrush = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SelectionBrush");
+            retObjectSelectionBrush = classInstance.Get("SelectionBrush");
+            JCObject val = (JCObject)retObjectSelectionBrush;
             return new Brush(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelectionBrush != null ? retObjectSelectionBrush.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -362,7 +412,7 @@ public class PasswordBox extends Control  {
 
     public void setSelectionBrush(Brush SelectionBrush) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SelectionBrush", SelectionBrush == null ? null : SelectionBrush.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -372,10 +422,14 @@ public class PasswordBox extends Control  {
 
     public Brush getSelectionTextBrush() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectionTextBrush = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SelectionTextBrush");
+            retObjectSelectionTextBrush = classInstance.Get("SelectionTextBrush");
+            JCObject val = (JCObject)retObjectSelectionTextBrush;
             return new Brush(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelectionTextBrush != null ? retObjectSelectionTextBrush.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -383,7 +437,7 @@ public class PasswordBox extends Control  {
 
     public void setSelectionTextBrush(Brush SelectionTextBrush) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SelectionTextBrush", SelectionTextBrush == null ? null : SelectionTextBrush.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -398,7 +452,7 @@ public class PasswordBox extends Control  {
 
     public void addPasswordChanged(RoutedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("PasswordChanged", handler);
         } catch (JCNativeException jcne) {
@@ -408,7 +462,7 @@ public class PasswordBox extends Control  {
 
     public void removePasswordChanged(RoutedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("PasswordChanged", handler);
         } catch (JCNativeException jcne) {

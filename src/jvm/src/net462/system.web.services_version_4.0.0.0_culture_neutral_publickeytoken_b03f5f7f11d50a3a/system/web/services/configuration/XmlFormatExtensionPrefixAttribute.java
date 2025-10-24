@@ -176,9 +176,13 @@ public class XmlFormatExtensionPrefixAttribute extends Attribute  {
     
     public java.lang.String getNamespace() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNamespace = null;
         try {
-            return (java.lang.String)classInstance.Get("Namespace");
+            retObjectNamespace = classInstance.Get("Namespace");
+            return (java.lang.String)retObjectNamespace;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectNamespace != null ? retObjectNamespace.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,7 +190,7 @@ public class XmlFormatExtensionPrefixAttribute extends Attribute  {
 
     public void setNamespace(java.lang.String Namespace) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Namespace", Namespace);
         } catch (JCNativeException jcne) {
@@ -196,9 +200,13 @@ public class XmlFormatExtensionPrefixAttribute extends Attribute  {
 
     public java.lang.String getPrefix() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPrefix = null;
         try {
-            return (java.lang.String)classInstance.Get("Prefix");
+            retObjectPrefix = classInstance.Get("Prefix");
+            return (java.lang.String)retObjectPrefix;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectPrefix != null ? retObjectPrefix.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -206,7 +214,7 @@ public class XmlFormatExtensionPrefixAttribute extends Attribute  {
 
     public void setPrefix(java.lang.String Prefix) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Prefix", Prefix);
         } catch (JCNativeException jcne) {

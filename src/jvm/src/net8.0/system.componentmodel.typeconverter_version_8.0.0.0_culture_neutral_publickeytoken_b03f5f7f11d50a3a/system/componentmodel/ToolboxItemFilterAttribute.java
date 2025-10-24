@@ -177,9 +177,13 @@ public class ToolboxItemFilterAttribute extends Attribute  {
     
     public boolean Match(NetObject obj) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMatch = null;
         try {
-            return (boolean)classInstance.Invoke("Match", obj == null ? null : obj.getJCOInstance());
+            retObjectMatch = classInstance.Invoke("Match", obj == null ? null : obj.getJCOInstance());
+            return (boolean)retObjectMatch;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectMatch != null ? retObjectMatch.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,10 +195,14 @@ public class ToolboxItemFilterAttribute extends Attribute  {
     
     public ToolboxItemFilterType getFilterType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFilterType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("FilterType");
+            retObjectFilterType = classInstance.Get("FilterType");
+            JCObject val = (JCObject)retObjectFilterType;
             return new ToolboxItemFilterType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFilterType != null ? retObjectFilterType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,9 +210,13 @@ public class ToolboxItemFilterAttribute extends Attribute  {
 
     public java.lang.String getFilterString() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFilterString = null;
         try {
-            return (java.lang.String)classInstance.Get("FilterString");
+            retObjectFilterString = classInstance.Get("FilterString");
+            return (java.lang.String)retObjectFilterString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectFilterString != null ? retObjectFilterString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

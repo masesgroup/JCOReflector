@@ -174,10 +174,14 @@ public class StaticExtension extends MarkupExtension  {
     
     public NetObject ProvideValue(IServiceProvider serviceProvider) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.OverflowException, system.InvalidCastException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProvideValue = null;
         try {
-            JCObject objProvideValue = (JCObject)classInstance.Invoke("ProvideValue", serviceProvider == null ? null : serviceProvider.getJCOInstance());
+            retObjectProvideValue = classInstance.Invoke("ProvideValue", serviceProvider == null ? null : serviceProvider.getJCOInstance());
+            JCObject objProvideValue = (JCObject)retObjectProvideValue;
             return new NetObject(objProvideValue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectProvideValue != null ? retObjectProvideValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -189,9 +193,13 @@ public class StaticExtension extends MarkupExtension  {
     
     public java.lang.String getMember() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMember = null;
         try {
-            return (java.lang.String)classInstance.Get("Member");
+            retObjectMember = classInstance.Get("Member");
+            return (java.lang.String)retObjectMember;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectMember != null ? retObjectMember.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -199,7 +207,7 @@ public class StaticExtension extends MarkupExtension  {
 
     public void setMember(java.lang.String Member) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Member", Member);
         } catch (JCNativeException jcne) {
@@ -209,10 +217,14 @@ public class StaticExtension extends MarkupExtension  {
 
     public NetType getMemberType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMemberType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MemberType");
+            retObjectMemberType = classInstance.Get("MemberType");
+            JCObject val = (JCObject)retObjectMemberType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMemberType != null ? retObjectMemberType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -220,7 +232,7 @@ public class StaticExtension extends MarkupExtension  {
 
     public void setMemberType(NetType MemberType) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MemberType", MemberType == null ? null : MemberType.getJCOInstance());
         } catch (JCNativeException jcne) {

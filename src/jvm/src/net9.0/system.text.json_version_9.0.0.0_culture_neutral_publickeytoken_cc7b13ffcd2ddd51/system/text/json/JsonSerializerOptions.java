@@ -196,9 +196,13 @@ public class JsonSerializerOptions extends NetObject  {
     
     public boolean TryGetTypeInfo(NetType type, JCORefOut<JsonTypeInfo> typeInfo) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException, system.NullReferenceException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryGetTypeInfo = null;
         try {
-            return (boolean)classInstance.Invoke("TryGetTypeInfo", type == null ? null : type.getJCOInstance(), typeInfo.getJCRefOut());
+            retObjectTryGetTypeInfo = classInstance.Invoke("TryGetTypeInfo", type == null ? null : type.getJCOInstance(), typeInfo.getJCRefOut());
+            return (boolean)retObjectTryGetTypeInfo;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryGetTypeInfo != null ? retObjectTryGetTypeInfo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -206,10 +210,14 @@ public class JsonSerializerOptions extends NetObject  {
 
     public JsonConverter GetConverter(NetType typeToConvert) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetConverter = null;
         try {
-            JCObject objGetConverter = (JCObject)classInstance.Invoke("GetConverter", typeToConvert == null ? null : typeToConvert.getJCOInstance());
+            retObjectGetConverter = classInstance.Invoke("GetConverter", typeToConvert == null ? null : typeToConvert.getJCOInstance());
+            JCObject objGetConverter = (JCObject)retObjectGetConverter;
             return new JsonConverter(objGetConverter);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetConverter != null ? retObjectGetConverter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -217,10 +225,14 @@ public class JsonSerializerOptions extends NetObject  {
 
     public JsonTypeInfo GetTypeInfo(NetType type) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException, system.NullReferenceException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetTypeInfo = null;
         try {
-            JCObject objGetTypeInfo = (JCObject)classInstance.Invoke("GetTypeInfo", type == null ? null : type.getJCOInstance());
+            retObjectGetTypeInfo = classInstance.Invoke("GetTypeInfo", type == null ? null : type.getJCOInstance());
+            JCObject objGetTypeInfo = (JCObject)retObjectGetTypeInfo;
             return new JsonTypeInfo(objGetTypeInfo);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetTypeInfo != null ? retObjectGetTypeInfo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -228,7 +240,7 @@ public class JsonSerializerOptions extends NetObject  {
 
     public void MakeReadOnly() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("MakeReadOnly");
         } catch (JCNativeException jcne) {
@@ -238,7 +250,7 @@ public class JsonSerializerOptions extends NetObject  {
 
     public void MakeReadOnly(boolean populateMissingResolver) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.NullReferenceException, system.ArgumentNullException, system.IndexOutOfRangeException, system.diagnostics.tracing.EventSourceException, system.ArrayTypeMismatchException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("MakeReadOnly", populateMissingResolver);
         } catch (JCNativeException jcne) {
@@ -252,9 +264,13 @@ public class JsonSerializerOptions extends NetObject  {
     
     public boolean getAllowOutOfOrderMetadataProperties() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAllowOutOfOrderMetadataProperties = null;
         try {
-            return (boolean)classInstance.Get("AllowOutOfOrderMetadataProperties");
+            retObjectAllowOutOfOrderMetadataProperties = classInstance.Get("AllowOutOfOrderMetadataProperties");
+            return (boolean)retObjectAllowOutOfOrderMetadataProperties;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAllowOutOfOrderMetadataProperties != null ? retObjectAllowOutOfOrderMetadataProperties.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -262,7 +278,7 @@ public class JsonSerializerOptions extends NetObject  {
 
     public void setAllowOutOfOrderMetadataProperties(boolean AllowOutOfOrderMetadataProperties) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AllowOutOfOrderMetadataProperties", AllowOutOfOrderMetadataProperties);
         } catch (JCNativeException jcne) {
@@ -272,9 +288,13 @@ public class JsonSerializerOptions extends NetObject  {
 
     public boolean getAllowTrailingCommas() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAllowTrailingCommas = null;
         try {
-            return (boolean)classInstance.Get("AllowTrailingCommas");
+            retObjectAllowTrailingCommas = classInstance.Get("AllowTrailingCommas");
+            return (boolean)retObjectAllowTrailingCommas;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAllowTrailingCommas != null ? retObjectAllowTrailingCommas.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -282,7 +302,7 @@ public class JsonSerializerOptions extends NetObject  {
 
     public void setAllowTrailingCommas(boolean AllowTrailingCommas) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AllowTrailingCommas", AllowTrailingCommas);
         } catch (JCNativeException jcne) {
@@ -292,9 +312,13 @@ public class JsonSerializerOptions extends NetObject  {
 
     public boolean getIgnoreNullValues() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIgnoreNullValues = null;
         try {
-            return (boolean)classInstance.Get("IgnoreNullValues");
+            retObjectIgnoreNullValues = classInstance.Get("IgnoreNullValues");
+            return (boolean)retObjectIgnoreNullValues;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIgnoreNullValues != null ? retObjectIgnoreNullValues.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -302,7 +326,7 @@ public class JsonSerializerOptions extends NetObject  {
 
     public void setIgnoreNullValues(boolean IgnoreNullValues) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IgnoreNullValues", IgnoreNullValues);
         } catch (JCNativeException jcne) {
@@ -312,9 +336,13 @@ public class JsonSerializerOptions extends NetObject  {
 
     public boolean getIgnoreReadOnlyFields() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIgnoreReadOnlyFields = null;
         try {
-            return (boolean)classInstance.Get("IgnoreReadOnlyFields");
+            retObjectIgnoreReadOnlyFields = classInstance.Get("IgnoreReadOnlyFields");
+            return (boolean)retObjectIgnoreReadOnlyFields;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIgnoreReadOnlyFields != null ? retObjectIgnoreReadOnlyFields.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -322,7 +350,7 @@ public class JsonSerializerOptions extends NetObject  {
 
     public void setIgnoreReadOnlyFields(boolean IgnoreReadOnlyFields) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IgnoreReadOnlyFields", IgnoreReadOnlyFields);
         } catch (JCNativeException jcne) {
@@ -332,9 +360,13 @@ public class JsonSerializerOptions extends NetObject  {
 
     public boolean getIgnoreReadOnlyProperties() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIgnoreReadOnlyProperties = null;
         try {
-            return (boolean)classInstance.Get("IgnoreReadOnlyProperties");
+            retObjectIgnoreReadOnlyProperties = classInstance.Get("IgnoreReadOnlyProperties");
+            return (boolean)retObjectIgnoreReadOnlyProperties;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIgnoreReadOnlyProperties != null ? retObjectIgnoreReadOnlyProperties.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -342,7 +374,7 @@ public class JsonSerializerOptions extends NetObject  {
 
     public void setIgnoreReadOnlyProperties(boolean IgnoreReadOnlyProperties) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IgnoreReadOnlyProperties", IgnoreReadOnlyProperties);
         } catch (JCNativeException jcne) {
@@ -352,9 +384,13 @@ public class JsonSerializerOptions extends NetObject  {
 
     public boolean getIncludeFields() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIncludeFields = null;
         try {
-            return (boolean)classInstance.Get("IncludeFields");
+            retObjectIncludeFields = classInstance.Get("IncludeFields");
+            return (boolean)retObjectIncludeFields;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIncludeFields != null ? retObjectIncludeFields.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -362,7 +398,7 @@ public class JsonSerializerOptions extends NetObject  {
 
     public void setIncludeFields(boolean IncludeFields) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IncludeFields", IncludeFields);
         } catch (JCNativeException jcne) {
@@ -372,9 +408,13 @@ public class JsonSerializerOptions extends NetObject  {
 
     public boolean getIsReadOnly() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsReadOnly = null;
         try {
-            return (boolean)classInstance.Get("IsReadOnly");
+            retObjectIsReadOnly = classInstance.Get("IsReadOnly");
+            return (boolean)retObjectIsReadOnly;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsReadOnly != null ? retObjectIsReadOnly.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -382,9 +422,13 @@ public class JsonSerializerOptions extends NetObject  {
 
     public boolean getPropertyNameCaseInsensitive() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPropertyNameCaseInsensitive = null;
         try {
-            return (boolean)classInstance.Get("PropertyNameCaseInsensitive");
+            retObjectPropertyNameCaseInsensitive = classInstance.Get("PropertyNameCaseInsensitive");
+            return (boolean)retObjectPropertyNameCaseInsensitive;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectPropertyNameCaseInsensitive != null ? retObjectPropertyNameCaseInsensitive.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -392,7 +436,7 @@ public class JsonSerializerOptions extends NetObject  {
 
     public void setPropertyNameCaseInsensitive(boolean PropertyNameCaseInsensitive) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PropertyNameCaseInsensitive", PropertyNameCaseInsensitive);
         } catch (JCNativeException jcne) {
@@ -402,9 +446,13 @@ public class JsonSerializerOptions extends NetObject  {
 
     public boolean getRespectNullableAnnotations() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRespectNullableAnnotations = null;
         try {
-            return (boolean)classInstance.Get("RespectNullableAnnotations");
+            retObjectRespectNullableAnnotations = classInstance.Get("RespectNullableAnnotations");
+            return (boolean)retObjectRespectNullableAnnotations;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectRespectNullableAnnotations != null ? retObjectRespectNullableAnnotations.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -412,7 +460,7 @@ public class JsonSerializerOptions extends NetObject  {
 
     public void setRespectNullableAnnotations(boolean RespectNullableAnnotations) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RespectNullableAnnotations", RespectNullableAnnotations);
         } catch (JCNativeException jcne) {
@@ -422,9 +470,13 @@ public class JsonSerializerOptions extends NetObject  {
 
     public boolean getRespectRequiredConstructorParameters() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRespectRequiredConstructorParameters = null;
         try {
-            return (boolean)classInstance.Get("RespectRequiredConstructorParameters");
+            retObjectRespectRequiredConstructorParameters = classInstance.Get("RespectRequiredConstructorParameters");
+            return (boolean)retObjectRespectRequiredConstructorParameters;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectRespectRequiredConstructorParameters != null ? retObjectRespectRequiredConstructorParameters.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -432,7 +484,7 @@ public class JsonSerializerOptions extends NetObject  {
 
     public void setRespectRequiredConstructorParameters(boolean RespectRequiredConstructorParameters) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RespectRequiredConstructorParameters", RespectRequiredConstructorParameters);
         } catch (JCNativeException jcne) {
@@ -442,9 +494,13 @@ public class JsonSerializerOptions extends NetObject  {
 
     public boolean getWriteIndented() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWriteIndented = null;
         try {
-            return (boolean)classInstance.Get("WriteIndented");
+            retObjectWriteIndented = classInstance.Get("WriteIndented");
+            return (boolean)retObjectWriteIndented;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectWriteIndented != null ? retObjectWriteIndented.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -452,7 +508,7 @@ public class JsonSerializerOptions extends NetObject  {
 
     public void setWriteIndented(boolean WriteIndented) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("WriteIndented", WriteIndented);
         } catch (JCNativeException jcne) {
@@ -462,9 +518,13 @@ public class JsonSerializerOptions extends NetObject  {
 
     public char getIndentCharacter() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIndentCharacter = null;
         try {
-            return (char)classInstance.Get("IndentCharacter");
+            retObjectIndentCharacter = classInstance.Get("IndentCharacter");
+            return (char)retObjectIndentCharacter;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into char", retObjectIndentCharacter != null ? retObjectIndentCharacter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -472,7 +532,7 @@ public class JsonSerializerOptions extends NetObject  {
 
     public void setIndentCharacter(char IndentCharacter) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IndentCharacter", IndentCharacter);
         } catch (JCNativeException jcne) {
@@ -482,9 +542,20 @@ public class JsonSerializerOptions extends NetObject  {
 
     public int getDefaultBufferSize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDefaultBufferSize = null;
         try {
-            return (int)classInstance.Get("DefaultBufferSize");
+            retObjectDefaultBufferSize = classInstance.Get("DefaultBufferSize");
+            return (int)retObjectDefaultBufferSize;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDefaultBufferSize_ToString = retObjectDefaultBufferSize == null ? "null" : retObjectDefaultBufferSize.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectDefaultBufferSizeNumber = (java.lang.Number)retObjectDefaultBufferSize;
+                return retObjectDefaultBufferSizeNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectDefaultBufferSize != null ? retObjectDefaultBufferSize.getClass() : "null", retObjectDefaultBufferSize_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -492,7 +563,7 @@ public class JsonSerializerOptions extends NetObject  {
 
     public void setDefaultBufferSize(int DefaultBufferSize) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DefaultBufferSize", DefaultBufferSize);
         } catch (JCNativeException jcne) {
@@ -502,9 +573,20 @@ public class JsonSerializerOptions extends NetObject  {
 
     public int getIndentSize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIndentSize = null;
         try {
-            return (int)classInstance.Get("IndentSize");
+            retObjectIndentSize = classInstance.Get("IndentSize");
+            return (int)retObjectIndentSize;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectIndentSize_ToString = retObjectIndentSize == null ? "null" : retObjectIndentSize.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectIndentSizeNumber = (java.lang.Number)retObjectIndentSize;
+                return retObjectIndentSizeNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectIndentSize != null ? retObjectIndentSize.getClass() : "null", retObjectIndentSize_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -512,7 +594,7 @@ public class JsonSerializerOptions extends NetObject  {
 
     public void setIndentSize(int IndentSize) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IndentSize", IndentSize);
         } catch (JCNativeException jcne) {
@@ -522,9 +604,20 @@ public class JsonSerializerOptions extends NetObject  {
 
     public int getMaxDepth() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxDepth = null;
         try {
-            return (int)classInstance.Get("MaxDepth");
+            retObjectMaxDepth = classInstance.Get("MaxDepth");
+            return (int)retObjectMaxDepth;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaxDepth_ToString = retObjectMaxDepth == null ? "null" : retObjectMaxDepth.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMaxDepthNumber = (java.lang.Number)retObjectMaxDepth;
+                return retObjectMaxDepthNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxDepth != null ? retObjectMaxDepth.getClass() : "null", retObjectMaxDepth_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -532,7 +625,7 @@ public class JsonSerializerOptions extends NetObject  {
 
     public void setMaxDepth(int MaxDepth) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaxDepth", MaxDepth);
         } catch (JCNativeException jcne) {
@@ -542,9 +635,13 @@ public class JsonSerializerOptions extends NetObject  {
 
     public java.lang.String getNewLine() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNewLine = null;
         try {
-            return (java.lang.String)classInstance.Get("NewLine");
+            retObjectNewLine = classInstance.Get("NewLine");
+            return (java.lang.String)retObjectNewLine;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectNewLine != null ? retObjectNewLine.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -552,7 +649,7 @@ public class JsonSerializerOptions extends NetObject  {
 
     public void setNewLine(java.lang.String NewLine) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("NewLine", NewLine);
         } catch (JCNativeException jcne) {
@@ -562,10 +659,14 @@ public class JsonSerializerOptions extends NetObject  {
 
     public JavaScriptEncoder getEncoder() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEncoder = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Encoder");
+            retObjectEncoder = classInstance.Get("Encoder");
+            JCObject val = (JCObject)retObjectEncoder;
             return new JavaScriptEncoder(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEncoder != null ? retObjectEncoder.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -573,7 +674,7 @@ public class JsonSerializerOptions extends NetObject  {
 
     public void setEncoder(JavaScriptEncoder Encoder) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Encoder", Encoder == null ? null : Encoder.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -583,10 +684,14 @@ public class JsonSerializerOptions extends NetObject  {
 
     public JsonCommentHandling getReadCommentHandling() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadCommentHandling = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ReadCommentHandling");
+            retObjectReadCommentHandling = classInstance.Get("ReadCommentHandling");
+            JCObject val = (JCObject)retObjectReadCommentHandling;
             return new JsonCommentHandling(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadCommentHandling != null ? retObjectReadCommentHandling.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -594,7 +699,7 @@ public class JsonSerializerOptions extends NetObject  {
 
     public void setReadCommentHandling(JsonCommentHandling ReadCommentHandling) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ReadCommentHandling", ReadCommentHandling == null ? null : ReadCommentHandling.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -604,10 +709,14 @@ public class JsonSerializerOptions extends NetObject  {
 
     public JsonNamingPolicy getDictionaryKeyPolicy() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDictionaryKeyPolicy = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DictionaryKeyPolicy");
+            retObjectDictionaryKeyPolicy = classInstance.Get("DictionaryKeyPolicy");
+            JCObject val = (JCObject)retObjectDictionaryKeyPolicy;
             return new JsonNamingPolicy(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDictionaryKeyPolicy != null ? retObjectDictionaryKeyPolicy.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -615,7 +724,7 @@ public class JsonSerializerOptions extends NetObject  {
 
     public void setDictionaryKeyPolicy(JsonNamingPolicy DictionaryKeyPolicy) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DictionaryKeyPolicy", DictionaryKeyPolicy == null ? null : DictionaryKeyPolicy.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -625,10 +734,14 @@ public class JsonSerializerOptions extends NetObject  {
 
     public JsonNamingPolicy getPropertyNamingPolicy() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPropertyNamingPolicy = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PropertyNamingPolicy");
+            retObjectPropertyNamingPolicy = classInstance.Get("PropertyNamingPolicy");
+            JCObject val = (JCObject)retObjectPropertyNamingPolicy;
             return new JsonNamingPolicy(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPropertyNamingPolicy != null ? retObjectPropertyNamingPolicy.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -636,7 +749,7 @@ public class JsonSerializerOptions extends NetObject  {
 
     public void setPropertyNamingPolicy(JsonNamingPolicy PropertyNamingPolicy) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PropertyNamingPolicy", PropertyNamingPolicy == null ? null : PropertyNamingPolicy.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -646,10 +759,14 @@ public class JsonSerializerOptions extends NetObject  {
 
     public static JsonSerializerOptions getDefault() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.NotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDefault = null;
         try {
-            JCObject val = (JCObject)classType.Get("Default");
+            retObjectDefault = classType.Get("Default");
+            JCObject val = (JCObject)retObjectDefault;
             return new JsonSerializerOptions(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefault != null ? retObjectDefault.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -657,10 +774,14 @@ public class JsonSerializerOptions extends NetObject  {
 
     public static JsonSerializerOptions getWeb() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.NotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectWeb = null;
         try {
-            JCObject val = (JCObject)classType.Get("Web");
+            retObjectWeb = classType.Get("Web");
+            JCObject val = (JCObject)retObjectWeb;
             return new JsonSerializerOptions(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWeb != null ? retObjectWeb.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -668,10 +789,14 @@ public class JsonSerializerOptions extends NetObject  {
 
     public JsonIgnoreCondition getDefaultIgnoreCondition() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDefaultIgnoreCondition = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DefaultIgnoreCondition");
+            retObjectDefaultIgnoreCondition = classInstance.Get("DefaultIgnoreCondition");
+            JCObject val = (JCObject)retObjectDefaultIgnoreCondition;
             return new JsonIgnoreCondition(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefaultIgnoreCondition != null ? retObjectDefaultIgnoreCondition.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -679,7 +804,7 @@ public class JsonSerializerOptions extends NetObject  {
 
     public void setDefaultIgnoreCondition(JsonIgnoreCondition DefaultIgnoreCondition) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DefaultIgnoreCondition", DefaultIgnoreCondition == null ? null : DefaultIgnoreCondition.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -689,10 +814,14 @@ public class JsonSerializerOptions extends NetObject  {
 
     public JsonNumberHandling getNumberHandling() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNumberHandling = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("NumberHandling");
+            retObjectNumberHandling = classInstance.Get("NumberHandling");
+            JCObject val = (JCObject)retObjectNumberHandling;
             return new JsonNumberHandling(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNumberHandling != null ? retObjectNumberHandling.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -700,7 +829,7 @@ public class JsonSerializerOptions extends NetObject  {
 
     public void setNumberHandling(JsonNumberHandling NumberHandling) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("NumberHandling", NumberHandling == null ? null : NumberHandling.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -710,10 +839,14 @@ public class JsonSerializerOptions extends NetObject  {
 
     public JsonObjectCreationHandling getPreferredObjectCreationHandling() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPreferredObjectCreationHandling = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PreferredObjectCreationHandling");
+            retObjectPreferredObjectCreationHandling = classInstance.Get("PreferredObjectCreationHandling");
+            JCObject val = (JCObject)retObjectPreferredObjectCreationHandling;
             return new JsonObjectCreationHandling(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPreferredObjectCreationHandling != null ? retObjectPreferredObjectCreationHandling.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -721,7 +854,7 @@ public class JsonSerializerOptions extends NetObject  {
 
     public void setPreferredObjectCreationHandling(JsonObjectCreationHandling PreferredObjectCreationHandling) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PreferredObjectCreationHandling", PreferredObjectCreationHandling == null ? null : PreferredObjectCreationHandling.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -731,10 +864,14 @@ public class JsonSerializerOptions extends NetObject  {
 
     public JsonUnknownTypeHandling getUnknownTypeHandling() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUnknownTypeHandling = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("UnknownTypeHandling");
+            retObjectUnknownTypeHandling = classInstance.Get("UnknownTypeHandling");
+            JCObject val = (JCObject)retObjectUnknownTypeHandling;
             return new JsonUnknownTypeHandling(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUnknownTypeHandling != null ? retObjectUnknownTypeHandling.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -742,7 +879,7 @@ public class JsonSerializerOptions extends NetObject  {
 
     public void setUnknownTypeHandling(JsonUnknownTypeHandling UnknownTypeHandling) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UnknownTypeHandling", UnknownTypeHandling == null ? null : UnknownTypeHandling.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -752,10 +889,14 @@ public class JsonSerializerOptions extends NetObject  {
 
     public JsonUnmappedMemberHandling getUnmappedMemberHandling() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUnmappedMemberHandling = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("UnmappedMemberHandling");
+            retObjectUnmappedMemberHandling = classInstance.Get("UnmappedMemberHandling");
+            JCObject val = (JCObject)retObjectUnmappedMemberHandling;
             return new JsonUnmappedMemberHandling(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUnmappedMemberHandling != null ? retObjectUnmappedMemberHandling.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -763,7 +904,7 @@ public class JsonSerializerOptions extends NetObject  {
 
     public void setUnmappedMemberHandling(JsonUnmappedMemberHandling UnmappedMemberHandling) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UnmappedMemberHandling", UnmappedMemberHandling == null ? null : UnmappedMemberHandling.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -773,10 +914,14 @@ public class JsonSerializerOptions extends NetObject  {
 
     public IJsonTypeInfoResolver getTypeInfoResolver() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTypeInfoResolver = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TypeInfoResolver");
+            retObjectTypeInfoResolver = classInstance.Get("TypeInfoResolver");
+            JCObject val = (JCObject)retObjectTypeInfoResolver;
             return new IJsonTypeInfoResolverImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTypeInfoResolver != null ? retObjectTypeInfoResolver.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -784,7 +929,7 @@ public class JsonSerializerOptions extends NetObject  {
 
     public void setTypeInfoResolver(IJsonTypeInfoResolver TypeInfoResolver) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TypeInfoResolver", TypeInfoResolver == null ? null : TypeInfoResolver.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -794,10 +939,14 @@ public class JsonSerializerOptions extends NetObject  {
 
     public ReferenceHandler getReferenceHandler() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReferenceHandler = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ReferenceHandler");
+            retObjectReferenceHandler = classInstance.Get("ReferenceHandler");
+            JCObject val = (JCObject)retObjectReferenceHandler;
             return new ReferenceHandler(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReferenceHandler != null ? retObjectReferenceHandler.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -805,7 +954,7 @@ public class JsonSerializerOptions extends NetObject  {
 
     public void setReferenceHandler(ReferenceHandler ReferenceHandler) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ReferenceHandler", ReferenceHandler == null ? null : ReferenceHandler.getJCOInstance());
         } catch (JCNativeException jcne) {

@@ -166,9 +166,13 @@ public class ExcludeFromCodeCoverageAttribute extends Attribute  {
     
     public java.lang.String getJustification() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectJustification = null;
         try {
-            return (java.lang.String)classInstance.Get("Justification");
+            retObjectJustification = classInstance.Get("Justification");
+            return (java.lang.String)retObjectJustification;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectJustification != null ? retObjectJustification.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,7 +180,7 @@ public class ExcludeFromCodeCoverageAttribute extends Attribute  {
 
     public void setJustification(java.lang.String Justification) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Justification", Justification);
         } catch (JCNativeException jcne) {

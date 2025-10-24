@@ -144,10 +144,14 @@ public class ITypeResolutionServiceImplementation extends NetObject implements I
     
     public Assembly GetAssembly(AssemblyName name, boolean throwOnError) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetAssembly = null;
         try {
-            JCObject objGetAssembly = (JCObject)classInstance.Invoke("GetAssembly", name == null ? null : name.getJCOInstance(), throwOnError);
+            retObjectGetAssembly = classInstance.Invoke("GetAssembly", name == null ? null : name.getJCOInstance(), throwOnError);
+            JCObject objGetAssembly = (JCObject)retObjectGetAssembly;
             return new Assembly(objGetAssembly);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetAssembly != null ? retObjectGetAssembly.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -155,10 +159,14 @@ public class ITypeResolutionServiceImplementation extends NetObject implements I
 
     public Assembly GetAssembly(AssemblyName name) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetAssembly = null;
         try {
-            JCObject objGetAssembly = (JCObject)classInstance.Invoke("GetAssembly", name == null ? null : name.getJCOInstance());
+            retObjectGetAssembly = classInstance.Invoke("GetAssembly", name == null ? null : name.getJCOInstance());
+            JCObject objGetAssembly = (JCObject)retObjectGetAssembly;
             return new Assembly(objGetAssembly);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetAssembly != null ? retObjectGetAssembly.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -166,9 +174,13 @@ public class ITypeResolutionServiceImplementation extends NetObject implements I
 
     public java.lang.String GetPathOfAssembly(AssemblyName name) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPathOfAssembly = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetPathOfAssembly", name == null ? null : name.getJCOInstance());
+            retObjectGetPathOfAssembly = classInstance.Invoke("GetPathOfAssembly", name == null ? null : name.getJCOInstance());
+            return (java.lang.String)retObjectGetPathOfAssembly;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetPathOfAssembly != null ? retObjectGetPathOfAssembly.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,10 +188,14 @@ public class ITypeResolutionServiceImplementation extends NetObject implements I
 
     public NetType GetType(java.lang.String name, boolean throwOnError, boolean ignoreCase) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetType = null;
         try {
-            JCObject objGetType = (JCObject)classInstance.Invoke("GetType", name, throwOnError, ignoreCase);
+            retObjectGetType = classInstance.Invoke("GetType", name, throwOnError, ignoreCase);
+            JCObject objGetType = (JCObject)retObjectGetType;
             return new NetType(objGetType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetType != null ? retObjectGetType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,10 +203,14 @@ public class ITypeResolutionServiceImplementation extends NetObject implements I
 
     public NetType GetType(java.lang.String name, boolean throwOnError) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetType = null;
         try {
-            JCObject objGetType = (JCObject)classInstance.Invoke("GetType", name, throwOnError);
+            retObjectGetType = classInstance.Invoke("GetType", name, throwOnError);
+            JCObject objGetType = (JCObject)retObjectGetType;
             return new NetType(objGetType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetType != null ? retObjectGetType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,10 +218,14 @@ public class ITypeResolutionServiceImplementation extends NetObject implements I
 
     public NetType GetType(java.lang.String name) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetType = null;
         try {
-            JCObject objGetType = (JCObject)classInstance.Invoke("GetType", name);
+            retObjectGetType = classInstance.Invoke("GetType", name);
+            JCObject objGetType = (JCObject)retObjectGetType;
             return new NetType(objGetType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetType != null ? retObjectGetType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -209,7 +233,7 @@ public class ITypeResolutionServiceImplementation extends NetObject implements I
 
     public void ReferenceAssembly(AssemblyName name) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ReferenceAssembly", name == null ? null : name.getJCOInstance());
         } catch (JCNativeException jcne) {

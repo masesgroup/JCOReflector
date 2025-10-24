@@ -164,10 +164,14 @@ public class SerializerProvider extends NetObject  {
     
     public SerializerWriter CreateSerializerWriter(SerializerDescriptor serializerDescriptor, Stream stream) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OverflowException, system.IndexOutOfRangeException, system.FormatException, system.globalization.CultureNotFoundException, system.io.FileLoadException, system.MulticastNotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateSerializerWriter = null;
         try {
-            JCObject objCreateSerializerWriter = (JCObject)classInstance.Invoke("CreateSerializerWriter", serializerDescriptor == null ? null : serializerDescriptor.getJCOInstance(), stream == null ? null : stream.getJCOInstance());
+            retObjectCreateSerializerWriter = classInstance.Invoke("CreateSerializerWriter", serializerDescriptor == null ? null : serializerDescriptor.getJCOInstance(), stream == null ? null : stream.getJCOInstance());
+            JCObject objCreateSerializerWriter = (JCObject)retObjectCreateSerializerWriter;
             return new SerializerWriter(objCreateSerializerWriter);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateSerializerWriter != null ? retObjectCreateSerializerWriter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -175,7 +179,7 @@ public class SerializerProvider extends NetObject  {
 
     public static void RegisterSerializer(SerializerDescriptor serializerDescriptor, boolean overwrite) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.UnauthorizedAccessException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException, system.io.IOException, system.FormatException, system.security.SecurityException, system.OverflowException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("RegisterSerializer", serializerDescriptor == null ? null : serializerDescriptor.getJCOInstance(), overwrite);
         } catch (JCNativeException jcne) {
@@ -185,7 +189,7 @@ public class SerializerProvider extends NetObject  {
 
     public static void UnregisterSerializer(SerializerDescriptor serializerDescriptor) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.UnauthorizedAccessException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException, system.io.IOException, system.FormatException, system.security.SecurityException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("UnregisterSerializer", serializerDescriptor == null ? null : serializerDescriptor.getJCOInstance());
         } catch (JCNativeException jcne) {

@@ -179,9 +179,13 @@ public class Vector3DCollection extends Freezable implements system.IFormattable
     
     public boolean Contains(Vector3D value) throws Throwable, system.ArgumentException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContains = null;
         try {
-            return (boolean)classInstance.Invoke("Contains", value == null ? null : value.getJCOInstance());
+            retObjectContains = classInstance.Invoke("Contains", value == null ? null : value.getJCOInstance());
+            return (boolean)retObjectContains;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectContains != null ? retObjectContains.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -189,9 +193,13 @@ public class Vector3DCollection extends Freezable implements system.IFormattable
 
     public boolean Remove(Vector3D value) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRemove = null;
         try {
-            return (boolean)classInstance.Invoke("Remove", value == null ? null : value.getJCOInstance());
+            retObjectRemove = classInstance.Invoke("Remove", value == null ? null : value.getJCOInstance());
+            return (boolean)retObjectRemove;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectRemove != null ? retObjectRemove.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -199,9 +207,20 @@ public class Vector3DCollection extends Freezable implements system.IFormattable
 
     public int IndexOf(Vector3D value) throws Throwable, system.ArgumentException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIndexOf = null;
         try {
-            return (int)classInstance.Invoke("IndexOf", value == null ? null : value.getJCOInstance());
+            retObjectIndexOf = classInstance.Invoke("IndexOf", value == null ? null : value.getJCOInstance());
+            return (int)retObjectIndexOf;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectIndexOf_ToString = retObjectIndexOf == null ? "null" : retObjectIndexOf.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectIndexOfNumber = (java.lang.Number)retObjectIndexOf;
+                return retObjectIndexOfNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectIndexOf != null ? retObjectIndexOf.getClass() : "null", retObjectIndexOf_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -209,9 +228,13 @@ public class Vector3DCollection extends Freezable implements system.IFormattable
 
     public java.lang.String ToString(IFormatProvider provider) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.OutOfMemoryException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToString = null;
         try {
-            return (java.lang.String)classInstance.Invoke("ToString", provider == null ? null : provider.getJCOInstance());
+            retObjectToString = classInstance.Invoke("ToString", provider == null ? null : provider.getJCOInstance());
+            return (java.lang.String)retObjectToString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectToString != null ? retObjectToString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -219,10 +242,14 @@ public class Vector3DCollection extends Freezable implements system.IFormattable
 
     public Vector3DCollection CloneNewVector3DCollection() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ObjectDisposedException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.PlatformNotSupportedException, system.FormatException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClone = null;
         try {
-            JCObject objClone = (JCObject)classInstance.Invoke("Clone");
+            retObjectClone = classInstance.Invoke("Clone");
+            JCObject objClone = (JCObject)retObjectClone;
             return new Vector3DCollection(objClone);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClone != null ? retObjectClone.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -230,10 +257,14 @@ public class Vector3DCollection extends Freezable implements system.IFormattable
 
     public Vector3DCollection CloneCurrentValueNewVector3DCollection() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ObjectDisposedException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.PlatformNotSupportedException, system.FormatException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCloneCurrentValue = null;
         try {
-            JCObject objCloneCurrentValue = (JCObject)classInstance.Invoke("CloneCurrentValue");
+            retObjectCloneCurrentValue = classInstance.Invoke("CloneCurrentValue");
+            JCObject objCloneCurrentValue = (JCObject)retObjectCloneCurrentValue;
             return new Vector3DCollection(objCloneCurrentValue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCloneCurrentValue != null ? retObjectCloneCurrentValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -241,10 +272,14 @@ public class Vector3DCollection extends Freezable implements system.IFormattable
 
     public static Vector3DCollection Parse(java.lang.String source) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectParse = null;
         try {
-            JCObject objParse = (JCObject)classType.Invoke("Parse", source);
+            retObjectParse = classType.Invoke("Parse", source);
+            JCObject objParse = (JCObject)retObjectParse;
             return new Vector3DCollection(objParse);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParse != null ? retObjectParse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -252,7 +287,7 @@ public class Vector3DCollection extends Freezable implements system.IFormattable
 
     public void Add(Vector3D value) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Add", value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -262,7 +297,7 @@ public class Vector3DCollection extends Freezable implements system.IFormattable
 
     public void Clear() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Clear");
         } catch (JCNativeException jcne) {
@@ -272,7 +307,7 @@ public class Vector3DCollection extends Freezable implements system.IFormattable
 
     public void CopyTo(Vector3D[] array, int index) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CopyTo", toObjectFromArray(array), index);
         } catch (JCNativeException jcne) {
@@ -282,7 +317,7 @@ public class Vector3DCollection extends Freezable implements system.IFormattable
 
     public void Insert(int index, Vector3D value) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Insert", index, value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -292,7 +327,7 @@ public class Vector3DCollection extends Freezable implements system.IFormattable
 
     public void RemoveAt(int index) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RemoveAt", index);
         } catch (JCNativeException jcne) {
@@ -306,7 +341,7 @@ public class Vector3DCollection extends Freezable implements system.IFormattable
      */
     @Deprecated 
     public java.lang.String ToString(java.lang.String format, IFormatProvider formatProvider) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIFormattable to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIFormattable to obtain the full interface.");
     }
 
     /**
@@ -315,7 +350,7 @@ public class Vector3DCollection extends Freezable implements system.IFormattable
      */
     @Deprecated 
     public boolean Contains(NetObject value) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIList to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIList to obtain the full interface.");
     }
 
     /**
@@ -324,7 +359,7 @@ public class Vector3DCollection extends Freezable implements system.IFormattable
      */
     @Deprecated 
     public int Add(NetObject value) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIList to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIList to obtain the full interface.");
     }
 
     /**
@@ -333,7 +368,7 @@ public class Vector3DCollection extends Freezable implements system.IFormattable
      */
     @Deprecated 
     public int IndexOf(NetObject value) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIList to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIList to obtain the full interface.");
     }
 
     /**
@@ -342,7 +377,7 @@ public class Vector3DCollection extends Freezable implements system.IFormattable
      */
     @Deprecated 
     public void Insert(int index, NetObject value) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIList to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIList to obtain the full interface.");
     }
 
     /**
@@ -351,7 +386,7 @@ public class Vector3DCollection extends Freezable implements system.IFormattable
      */
     @Deprecated 
     public void Remove(NetObject value) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIList to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIList to obtain the full interface.");
     }
 
     /**
@@ -360,7 +395,7 @@ public class Vector3DCollection extends Freezable implements system.IFormattable
      */
     @Deprecated 
     public void CopyTo(Array array, int index) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICollection to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICollection to obtain the full interface.");
     }
 
 
@@ -369,9 +404,20 @@ public class Vector3DCollection extends Freezable implements system.IFormattable
     
     public int getCount() throws Throwable, system.ArgumentException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCount = null;
         try {
-            return (int)classInstance.Get("Count");
+            retObjectCount = classInstance.Get("Count");
+            return (int)retObjectCount;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCount_ToString = retObjectCount == null ? "null" : retObjectCount.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectCountNumber = (java.lang.Number)retObjectCount;
+                return retObjectCountNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCount != null ? retObjectCount.getClass() : "null", retObjectCount_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

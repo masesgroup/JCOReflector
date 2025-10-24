@@ -166,9 +166,20 @@ public class BitmapData extends NetObject  {
     
     public int getHeight() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHeight = null;
         try {
-            return (int)classInstance.Get("Height");
+            retObjectHeight = classInstance.Get("Height");
+            return (int)retObjectHeight;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectHeight_ToString = retObjectHeight == null ? "null" : retObjectHeight.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectHeightNumber = (java.lang.Number)retObjectHeight;
+                return retObjectHeightNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectHeight != null ? retObjectHeight.getClass() : "null", retObjectHeight_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,7 +187,7 @@ public class BitmapData extends NetObject  {
 
     public void setHeight(int Height) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Height", Height);
         } catch (JCNativeException jcne) {
@@ -186,9 +197,20 @@ public class BitmapData extends NetObject  {
 
     public int getReserved() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReserved = null;
         try {
-            return (int)classInstance.Get("Reserved");
+            retObjectReserved = classInstance.Get("Reserved");
+            return (int)retObjectReserved;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectReserved_ToString = retObjectReserved == null ? "null" : retObjectReserved.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectReservedNumber = (java.lang.Number)retObjectReserved;
+                return retObjectReservedNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectReserved != null ? retObjectReserved.getClass() : "null", retObjectReserved_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,7 +218,7 @@ public class BitmapData extends NetObject  {
 
     public void setReserved(int Reserved) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Reserved", Reserved);
         } catch (JCNativeException jcne) {
@@ -206,9 +228,20 @@ public class BitmapData extends NetObject  {
 
     public int getStride() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStride = null;
         try {
-            return (int)classInstance.Get("Stride");
+            retObjectStride = classInstance.Get("Stride");
+            return (int)retObjectStride;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectStride_ToString = retObjectStride == null ? "null" : retObjectStride.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectStrideNumber = (java.lang.Number)retObjectStride;
+                return retObjectStrideNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectStride != null ? retObjectStride.getClass() : "null", retObjectStride_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -216,7 +249,7 @@ public class BitmapData extends NetObject  {
 
     public void setStride(int Stride) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Stride", Stride);
         } catch (JCNativeException jcne) {
@@ -226,9 +259,20 @@ public class BitmapData extends NetObject  {
 
     public int getWidth() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWidth = null;
         try {
-            return (int)classInstance.Get("Width");
+            retObjectWidth = classInstance.Get("Width");
+            return (int)retObjectWidth;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectWidth_ToString = retObjectWidth == null ? "null" : retObjectWidth.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectWidthNumber = (java.lang.Number)retObjectWidth;
+                return retObjectWidthNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectWidth != null ? retObjectWidth.getClass() : "null", retObjectWidth_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -236,7 +280,7 @@ public class BitmapData extends NetObject  {
 
     public void setWidth(int Width) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Width", Width);
         } catch (JCNativeException jcne) {
@@ -246,10 +290,14 @@ public class BitmapData extends NetObject  {
 
     public PixelFormat getPixelFormat() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPixelFormat = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PixelFormat");
+            retObjectPixelFormat = classInstance.Get("PixelFormat");
+            JCObject val = (JCObject)retObjectPixelFormat;
             return new PixelFormat(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPixelFormat != null ? retObjectPixelFormat.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -257,7 +305,7 @@ public class BitmapData extends NetObject  {
 
     public void setPixelFormat(PixelFormat PixelFormat) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PixelFormat", PixelFormat == null ? null : PixelFormat.getJCOInstance());
         } catch (JCNativeException jcne) {

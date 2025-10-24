@@ -169,9 +169,13 @@ public class TickBar extends FrameworkElement  {
     
     public boolean getIsDirectionReversed() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsDirectionReversed = null;
         try {
-            return (boolean)classInstance.Get("IsDirectionReversed");
+            retObjectIsDirectionReversed = classInstance.Get("IsDirectionReversed");
+            return (boolean)retObjectIsDirectionReversed;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsDirectionReversed != null ? retObjectIsDirectionReversed.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,7 +183,7 @@ public class TickBar extends FrameworkElement  {
 
     public void setIsDirectionReversed(boolean IsDirectionReversed) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsDirectionReversed", IsDirectionReversed);
         } catch (JCNativeException jcne) {
@@ -189,9 +193,13 @@ public class TickBar extends FrameworkElement  {
 
     public boolean getIsSelectionRangeEnabled() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsSelectionRangeEnabled = null;
         try {
-            return (boolean)classInstance.Get("IsSelectionRangeEnabled");
+            retObjectIsSelectionRangeEnabled = classInstance.Get("IsSelectionRangeEnabled");
+            return (boolean)retObjectIsSelectionRangeEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsSelectionRangeEnabled != null ? retObjectIsSelectionRangeEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -199,7 +207,7 @@ public class TickBar extends FrameworkElement  {
 
     public void setIsSelectionRangeEnabled(boolean IsSelectionRangeEnabled) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsSelectionRangeEnabled", IsSelectionRangeEnabled);
         } catch (JCNativeException jcne) {
@@ -209,9 +217,20 @@ public class TickBar extends FrameworkElement  {
 
     public double getMaximum() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaximum = null;
         try {
-            return (double)classInstance.Get("Maximum");
+            retObjectMaximum = classInstance.Get("Maximum");
+            return (double)retObjectMaximum;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaximum_ToString = retObjectMaximum == null ? "null" : retObjectMaximum.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMaximumNumber = (java.lang.Number)retObjectMaximum;
+                return retObjectMaximumNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectMaximum != null ? retObjectMaximum.getClass() : "null", retObjectMaximum_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -219,7 +238,7 @@ public class TickBar extends FrameworkElement  {
 
     public void setMaximum(double Maximum) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Maximum", Maximum);
         } catch (JCNativeException jcne) {
@@ -229,9 +248,20 @@ public class TickBar extends FrameworkElement  {
 
     public double getMinimum() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMinimum = null;
         try {
-            return (double)classInstance.Get("Minimum");
+            retObjectMinimum = classInstance.Get("Minimum");
+            return (double)retObjectMinimum;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMinimum_ToString = retObjectMinimum == null ? "null" : retObjectMinimum.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMinimumNumber = (java.lang.Number)retObjectMinimum;
+                return retObjectMinimumNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectMinimum != null ? retObjectMinimum.getClass() : "null", retObjectMinimum_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -239,7 +269,7 @@ public class TickBar extends FrameworkElement  {
 
     public void setMinimum(double Minimum) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Minimum", Minimum);
         } catch (JCNativeException jcne) {
@@ -249,9 +279,20 @@ public class TickBar extends FrameworkElement  {
 
     public double getReservedSpace() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReservedSpace = null;
         try {
-            return (double)classInstance.Get("ReservedSpace");
+            retObjectReservedSpace = classInstance.Get("ReservedSpace");
+            return (double)retObjectReservedSpace;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectReservedSpace_ToString = retObjectReservedSpace == null ? "null" : retObjectReservedSpace.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectReservedSpaceNumber = (java.lang.Number)retObjectReservedSpace;
+                return retObjectReservedSpaceNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectReservedSpace != null ? retObjectReservedSpace.getClass() : "null", retObjectReservedSpace_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -259,7 +300,7 @@ public class TickBar extends FrameworkElement  {
 
     public void setReservedSpace(double ReservedSpace) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ReservedSpace", ReservedSpace);
         } catch (JCNativeException jcne) {
@@ -269,9 +310,20 @@ public class TickBar extends FrameworkElement  {
 
     public double getSelectionEnd() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectionEnd = null;
         try {
-            return (double)classInstance.Get("SelectionEnd");
+            retObjectSelectionEnd = classInstance.Get("SelectionEnd");
+            return (double)retObjectSelectionEnd;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSelectionEnd_ToString = retObjectSelectionEnd == null ? "null" : retObjectSelectionEnd.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectSelectionEndNumber = (java.lang.Number)retObjectSelectionEnd;
+                return retObjectSelectionEndNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectSelectionEnd != null ? retObjectSelectionEnd.getClass() : "null", retObjectSelectionEnd_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -279,7 +331,7 @@ public class TickBar extends FrameworkElement  {
 
     public void setSelectionEnd(double SelectionEnd) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SelectionEnd", SelectionEnd);
         } catch (JCNativeException jcne) {
@@ -289,9 +341,20 @@ public class TickBar extends FrameworkElement  {
 
     public double getSelectionStart() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectionStart = null;
         try {
-            return (double)classInstance.Get("SelectionStart");
+            retObjectSelectionStart = classInstance.Get("SelectionStart");
+            return (double)retObjectSelectionStart;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSelectionStart_ToString = retObjectSelectionStart == null ? "null" : retObjectSelectionStart.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectSelectionStartNumber = (java.lang.Number)retObjectSelectionStart;
+                return retObjectSelectionStartNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectSelectionStart != null ? retObjectSelectionStart.getClass() : "null", retObjectSelectionStart_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -299,7 +362,7 @@ public class TickBar extends FrameworkElement  {
 
     public void setSelectionStart(double SelectionStart) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SelectionStart", SelectionStart);
         } catch (JCNativeException jcne) {
@@ -309,9 +372,20 @@ public class TickBar extends FrameworkElement  {
 
     public double getTickFrequency() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTickFrequency = null;
         try {
-            return (double)classInstance.Get("TickFrequency");
+            retObjectTickFrequency = classInstance.Get("TickFrequency");
+            return (double)retObjectTickFrequency;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectTickFrequency_ToString = retObjectTickFrequency == null ? "null" : retObjectTickFrequency.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectTickFrequencyNumber = (java.lang.Number)retObjectTickFrequency;
+                return retObjectTickFrequencyNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectTickFrequency != null ? retObjectTickFrequency.getClass() : "null", retObjectTickFrequency_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -319,7 +393,7 @@ public class TickBar extends FrameworkElement  {
 
     public void setTickFrequency(double TickFrequency) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TickFrequency", TickFrequency);
         } catch (JCNativeException jcne) {
@@ -329,10 +403,14 @@ public class TickBar extends FrameworkElement  {
 
     public TickBarPlacement getPlacement() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPlacement = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Placement");
+            retObjectPlacement = classInstance.Get("Placement");
+            JCObject val = (JCObject)retObjectPlacement;
             return new TickBarPlacement(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPlacement != null ? retObjectPlacement.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -340,7 +418,7 @@ public class TickBar extends FrameworkElement  {
 
     public void setPlacement(TickBarPlacement Placement) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Placement", Placement == null ? null : Placement.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -350,10 +428,14 @@ public class TickBar extends FrameworkElement  {
 
     public Brush getFill() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFill = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Fill");
+            retObjectFill = classInstance.Get("Fill");
+            JCObject val = (JCObject)retObjectFill;
             return new Brush(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFill != null ? retObjectFill.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -361,7 +443,7 @@ public class TickBar extends FrameworkElement  {
 
     public void setFill(Brush Fill) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Fill", Fill == null ? null : Fill.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -371,10 +453,14 @@ public class TickBar extends FrameworkElement  {
 
     public DoubleCollection getTicks() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTicks = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Ticks");
+            retObjectTicks = classInstance.Get("Ticks");
+            JCObject val = (JCObject)retObjectTicks;
             return new DoubleCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTicks != null ? retObjectTicks.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -382,7 +468,7 @@ public class TickBar extends FrameworkElement  {
 
     public void setTicks(DoubleCollection Ticks) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Ticks", Ticks == null ? null : Ticks.getJCOInstance());
         } catch (JCNativeException jcne) {

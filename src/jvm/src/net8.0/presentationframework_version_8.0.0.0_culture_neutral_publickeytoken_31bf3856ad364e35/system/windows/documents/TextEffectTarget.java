@@ -157,7 +157,7 @@ public class TextEffectTarget extends NetObject  {
     
     public void Disable() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Disable");
         } catch (JCNativeException jcne) {
@@ -167,7 +167,7 @@ public class TextEffectTarget extends NetObject  {
 
     public void Enable() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Enable");
         } catch (JCNativeException jcne) {
@@ -181,9 +181,13 @@ public class TextEffectTarget extends NetObject  {
     
     public boolean getIsEnabled() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsEnabled = null;
         try {
-            return (boolean)classInstance.Get("IsEnabled");
+            retObjectIsEnabled = classInstance.Get("IsEnabled");
+            return (boolean)retObjectIsEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsEnabled != null ? retObjectIsEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,10 +195,14 @@ public class TextEffectTarget extends NetObject  {
 
     public DependencyObject getElement() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectElement = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Element");
+            retObjectElement = classInstance.Get("Element");
+            JCObject val = (JCObject)retObjectElement;
             return new DependencyObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectElement != null ? retObjectElement.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,10 +210,14 @@ public class TextEffectTarget extends NetObject  {
 
     public TextEffect getTextEffect() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTextEffect = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TextEffect");
+            retObjectTextEffect = classInstance.Get("TextEffect");
+            JCObject val = (JCObject)retObjectTextEffect;
             return new TextEffect(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTextEffect != null ? retObjectTextEffect.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

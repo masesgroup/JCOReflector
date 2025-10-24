@@ -66,7 +66,7 @@ public class HelloNETSocketClient {
                 }
             }
             if (ipAddress == null) {
-                Console.WriteLine("No Ip resolved for the address: " + address);
+                Console.WriteLine("CLIENT: No Ip resolved for the address: " + address);
                 return;
             }
             IPEndPoint remoteEP = new IPEndPoint(ipAddress, port);
@@ -79,8 +79,8 @@ public class HelloNETSocketClient {
                     Socket sender = new Socket(ipAddress.getAddressFamily(), SocketType.Stream, ProtocolType.Tcp);
                     // Connect the socket to the remote endpoint. Catch any errors.
                     sender.Connect(remoteEP.getAddress(), remoteEP.getPort());// ipAddress, 80);
-                    Console.WriteLine("Client connection #" + x);
-                    Console.WriteLine("Client socket connected to " + ipAddress.toString());
+                    Console.WriteLine("CLIENT: Client connection #" + x);
+                    Console.WriteLine("CLIENT: Client socket connected to " + ipAddress.toString());
                     // Encode the data string into a byte array.
                     byte[] msg;
                     msg = "Communication OK please exit".getBytes();
@@ -90,12 +90,12 @@ public class HelloNETSocketClient {
                         run = true;
                         exit = true;
                     }
-                    Console.WriteLine("Sent msg = " + Arrays.toString(msg));
+                    Console.WriteLine("CLIENT: Sent msg = " + Arrays.toString(msg));
                     // Send the data through the socket.
                     sender.Send(msg);
                     // Receive the response from the remote device.
                     while (sender.getAvailable() == 0 && !(run && exit));
-                    Console.WriteLine("Client bytes received " + sender.getAvailable());
+                    Console.WriteLine("CLIENT: Client bytes received " + sender.getAvailable());
                     if (asyncMode) {
                         // define the async event object
                         SocketAsyncEventArgs asea = new SocketAsyncEventArgs();
@@ -103,11 +103,11 @@ public class HelloNETSocketClient {
                         sender.ReceiveAsync(asea);
                         // decode and display the received data
                         String message = Encoding.getASCII().GetString(asea.getBuffer(), 0, asea.getBytesTransferred());
-                        if (message != null) Console.WriteLine("Client data received {0}", new NetObject(message));
+                        if (message != null) Console.WriteLine("CLIENT: Client data received {0}", new NetObject(message));
                     } else {
                         int recBytes = sender.Receive(JCORefOut.Create(bytes));
                         String message = Encoding.getASCII().GetString(bytes, 0, recBytes);
-                        if (message != null) Console.WriteLine("Client data received {0}", new NetObject(message));
+                        if (message != null) Console.WriteLine("CLIENT: Client data received {0}", new NetObject(message));
                     }
                     x++;
                     //force a closure after 50 connections if no external closure happened before 
@@ -129,6 +129,6 @@ public class HelloNETSocketClient {
             e.printStackTrace();
             System.exit(-1);
         }
-        System.out.println("Client exited correctly");
+        System.out.println("CLIENT: Client exited correctly");
     }
 }

@@ -205,10 +205,14 @@ public class RegistryAccessRule extends AccessRule  {
     
     public RegistryRights getRegistryRights() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRegistryRights = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RegistryRights");
+            retObjectRegistryRights = classInstance.Get("RegistryRights");
+            JCObject val = (JCObject)retObjectRegistryRights;
             return new RegistryRights(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRegistryRights != null ? retObjectRegistryRights.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -159,7 +159,7 @@ public class SqlTrackingWorkflowInstance extends NetObject  {
     
     public void Refresh() throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Refresh");
         } catch (JCNativeException jcne) {
@@ -173,9 +173,13 @@ public class SqlTrackingWorkflowInstance extends NetObject  {
     
     public boolean getAutoRefresh() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAutoRefresh = null;
         try {
-            return (boolean)classInstance.Get("AutoRefresh");
+            retObjectAutoRefresh = classInstance.Get("AutoRefresh");
+            return (boolean)retObjectAutoRefresh;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAutoRefresh != null ? retObjectAutoRefresh.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,7 +187,7 @@ public class SqlTrackingWorkflowInstance extends NetObject  {
 
     public void setAutoRefresh(boolean AutoRefresh) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AutoRefresh", AutoRefresh);
         } catch (JCNativeException jcne) {
@@ -193,9 +197,13 @@ public class SqlTrackingWorkflowInstance extends NetObject  {
 
     public boolean getWorkflowDefinitionUpdated() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.xml.XmlException, system.configuration.ConfigurationErrorsException, system.FormatException, system.OutOfMemoryException, system.NotSupportedException, system.NullReferenceException, system.IndexOutOfRangeException, system.InvalidCastException, system.workflow.componentmodel.serialization.WorkflowMarkupSerializationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWorkflowDefinitionUpdated = null;
         try {
-            return (boolean)classInstance.Get("WorkflowDefinitionUpdated");
+            retObjectWorkflowDefinitionUpdated = classInstance.Get("WorkflowDefinitionUpdated");
+            return (boolean)retObjectWorkflowDefinitionUpdated;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectWorkflowDefinitionUpdated != null ? retObjectWorkflowDefinitionUpdated.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,9 +211,20 @@ public class SqlTrackingWorkflowInstance extends NetObject  {
 
     public long getWorkflowInstanceInternalId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWorkflowInstanceInternalId = null;
         try {
-            return (long)classInstance.Get("WorkflowInstanceInternalId");
+            retObjectWorkflowInstanceInternalId = classInstance.Get("WorkflowInstanceInternalId");
+            return (long)retObjectWorkflowInstanceInternalId;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectWorkflowInstanceInternalId_ToString = retObjectWorkflowInstanceInternalId == null ? "null" : retObjectWorkflowInstanceInternalId.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectWorkflowInstanceInternalIdNumber = (java.lang.Number)retObjectWorkflowInstanceInternalId;
+                return retObjectWorkflowInstanceInternalIdNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectWorkflowInstanceInternalId != null ? retObjectWorkflowInstanceInternalId.getClass() : "null", retObjectWorkflowInstanceInternalId_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,7 +232,7 @@ public class SqlTrackingWorkflowInstance extends NetObject  {
 
     public void setWorkflowInstanceInternalId(long WorkflowInstanceInternalId) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("WorkflowInstanceInternalId", WorkflowInstanceInternalId);
         } catch (JCNativeException jcne) {
@@ -223,10 +242,14 @@ public class SqlTrackingWorkflowInstance extends NetObject  {
 
     public DateTime getInitialized() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInitialized = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Initialized");
+            retObjectInitialized = classInstance.Get("Initialized");
+            JCObject val = (JCObject)retObjectInitialized;
             return new DateTime(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInitialized != null ? retObjectInitialized.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -234,7 +257,7 @@ public class SqlTrackingWorkflowInstance extends NetObject  {
 
     public void setInitialized(DateTime Initialized) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Initialized", Initialized == null ? null : Initialized.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -244,10 +267,14 @@ public class SqlTrackingWorkflowInstance extends NetObject  {
 
     public Guid getInvokingWorkflowInstanceId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInvokingWorkflowInstanceId = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("InvokingWorkflowInstanceId");
+            retObjectInvokingWorkflowInstanceId = classInstance.Get("InvokingWorkflowInstanceId");
+            JCObject val = (JCObject)retObjectInvokingWorkflowInstanceId;
             return new Guid(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInvokingWorkflowInstanceId != null ? retObjectInvokingWorkflowInstanceId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -255,7 +282,7 @@ public class SqlTrackingWorkflowInstance extends NetObject  {
 
     public void setInvokingWorkflowInstanceId(Guid InvokingWorkflowInstanceId) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("InvokingWorkflowInstanceId", InvokingWorkflowInstanceId == null ? null : InvokingWorkflowInstanceId.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -265,10 +292,14 @@ public class SqlTrackingWorkflowInstance extends NetObject  {
 
     public Guid getWorkflowInstanceId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWorkflowInstanceId = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("WorkflowInstanceId");
+            retObjectWorkflowInstanceId = classInstance.Get("WorkflowInstanceId");
+            JCObject val = (JCObject)retObjectWorkflowInstanceId;
             return new Guid(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWorkflowInstanceId != null ? retObjectWorkflowInstanceId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -276,7 +307,7 @@ public class SqlTrackingWorkflowInstance extends NetObject  {
 
     public void setWorkflowInstanceId(Guid WorkflowInstanceId) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("WorkflowInstanceId", WorkflowInstanceId == null ? null : WorkflowInstanceId.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -286,10 +317,14 @@ public class SqlTrackingWorkflowInstance extends NetObject  {
 
     public NetType getWorkflowType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWorkflowType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("WorkflowType");
+            retObjectWorkflowType = classInstance.Get("WorkflowType");
+            JCObject val = (JCObject)retObjectWorkflowType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWorkflowType != null ? retObjectWorkflowType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -297,7 +332,7 @@ public class SqlTrackingWorkflowInstance extends NetObject  {
 
     public void setWorkflowType(NetType WorkflowType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("WorkflowType", WorkflowType == null ? null : WorkflowType.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -307,10 +342,14 @@ public class SqlTrackingWorkflowInstance extends NetObject  {
 
     public Activity getWorkflowDefinition() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.xml.XmlException, system.configuration.ConfigurationErrorsException, system.FormatException, system.OutOfMemoryException, system.NotSupportedException, system.NullReferenceException, system.IndexOutOfRangeException, system.InvalidCastException, system.workflow.componentmodel.serialization.WorkflowMarkupSerializationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWorkflowDefinition = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("WorkflowDefinition");
+            retObjectWorkflowDefinition = classInstance.Get("WorkflowDefinition");
+            JCObject val = (JCObject)retObjectWorkflowDefinition;
             return new Activity(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWorkflowDefinition != null ? retObjectWorkflowDefinition.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -318,10 +357,14 @@ public class SqlTrackingWorkflowInstance extends NetObject  {
 
     public WorkflowStatus getStatus() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStatus = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Status");
+            retObjectStatus = classInstance.Get("Status");
+            JCObject val = (JCObject)retObjectStatus;
             return new WorkflowStatus(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStatus != null ? retObjectStatus.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -329,7 +372,7 @@ public class SqlTrackingWorkflowInstance extends NetObject  {
 
     public void setStatus(WorkflowStatus Status) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Status", Status == null ? null : Status.getJCOInstance());
         } catch (JCNativeException jcne) {

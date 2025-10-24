@@ -155,7 +155,7 @@ public class WebEventProvider extends ProviderBase  {
     
     public void Flush() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Flush");
         } catch (JCNativeException jcne) {
@@ -165,7 +165,7 @@ public class WebEventProvider extends ProviderBase  {
 
     public void ProcessEvent(WebBaseEvent raisedEvent) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ProcessEvent", raisedEvent == null ? null : raisedEvent.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -175,7 +175,7 @@ public class WebEventProvider extends ProviderBase  {
 
     public void Shutdown() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Shutdown");
         } catch (JCNativeException jcne) {

@@ -159,10 +159,14 @@ public class SslStreamCertificateContext extends NetObject  {
     
     public static SslStreamCertificateContext Create(X509Certificate2 target, X509Certificate2Collection additionalCertificates, boolean offline, SslCertificateTrust trust) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.security.cryptography.CryptographicException, system.NotSupportedException, system.OverflowException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
         try {
-            JCObject objCreate = (JCObject)classType.Invoke("Create", target == null ? null : target.getJCOInstance(), additionalCertificates == null ? null : additionalCertificates.getJCOInstance(), offline, trust == null ? null : trust.getJCOInstance());
+            retObjectCreate = classType.Invoke("Create", target == null ? null : target.getJCOInstance(), additionalCertificates == null ? null : additionalCertificates.getJCOInstance(), offline, trust == null ? null : trust.getJCOInstance());
+            JCObject objCreate = (JCObject)retObjectCreate;
             return new SslStreamCertificateContext(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,10 +174,14 @@ public class SslStreamCertificateContext extends NetObject  {
 
     public static SslStreamCertificateContext Create(X509Certificate2 target, X509Certificate2Collection additionalCertificates, boolean offline) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.security.cryptography.CryptographicException, system.NotSupportedException, system.OverflowException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
         try {
-            JCObject objCreate = (JCObject)classType.Invoke("Create", target == null ? null : target.getJCOInstance(), additionalCertificates == null ? null : additionalCertificates.getJCOInstance(), offline);
+            retObjectCreate = classType.Invoke("Create", target == null ? null : target.getJCOInstance(), additionalCertificates == null ? null : additionalCertificates.getJCOInstance(), offline);
+            JCObject objCreate = (JCObject)retObjectCreate;
             return new SslStreamCertificateContext(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -185,10 +193,14 @@ public class SslStreamCertificateContext extends NetObject  {
     
     public X509Certificate2 getTargetCertificate() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTargetCertificate = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TargetCertificate");
+            retObjectTargetCertificate = classInstance.Get("TargetCertificate");
+            JCObject val = (JCObject)retObjectTargetCertificate;
             return new X509Certificate2(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTargetCertificate != null ? retObjectTargetCertificate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

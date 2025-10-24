@@ -178,7 +178,7 @@ public class AmbientTheme extends DesignerTheme  {
     
     public void Initialize() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Initialize");
         } catch (JCNativeException jcne) {
@@ -188,7 +188,7 @@ public class AmbientTheme extends DesignerTheme  {
 
     public void OnAmbientPropertyChanged(AmbientProperty ambientProperty) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.FormatException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("OnAmbientPropertyChanged", ambientProperty == null ? null : ambientProperty.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -202,9 +202,13 @@ public class AmbientTheme extends DesignerTheme  {
     
     public boolean getDrawGrayscale() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDrawGrayscale = null;
         try {
-            return (boolean)classInstance.Get("DrawGrayscale");
+            retObjectDrawGrayscale = classInstance.Get("DrawGrayscale");
+            return (boolean)retObjectDrawGrayscale;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectDrawGrayscale != null ? retObjectDrawGrayscale.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -212,7 +216,7 @@ public class AmbientTheme extends DesignerTheme  {
 
     public void setDrawGrayscale(boolean DrawGrayscale) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DrawGrayscale", DrawGrayscale);
         } catch (JCNativeException jcne) {
@@ -222,9 +226,13 @@ public class AmbientTheme extends DesignerTheme  {
 
     public boolean getDrawRounded() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDrawRounded = null;
         try {
-            return (boolean)classInstance.Get("DrawRounded");
+            retObjectDrawRounded = classInstance.Get("DrawRounded");
+            return (boolean)retObjectDrawRounded;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectDrawRounded != null ? retObjectDrawRounded.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -232,7 +240,7 @@ public class AmbientTheme extends DesignerTheme  {
 
     public void setDrawRounded(boolean DrawRounded) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DrawRounded", DrawRounded);
         } catch (JCNativeException jcne) {
@@ -242,9 +250,13 @@ public class AmbientTheme extends DesignerTheme  {
 
     public boolean getDrawShadow() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDrawShadow = null;
         try {
-            return (boolean)classInstance.Get("DrawShadow");
+            retObjectDrawShadow = classInstance.Get("DrawShadow");
+            return (boolean)retObjectDrawShadow;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectDrawShadow != null ? retObjectDrawShadow.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -252,7 +264,7 @@ public class AmbientTheme extends DesignerTheme  {
 
     public void setDrawShadow(boolean DrawShadow) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DrawShadow", DrawShadow);
         } catch (JCNativeException jcne) {
@@ -262,9 +274,13 @@ public class AmbientTheme extends DesignerTheme  {
 
     public boolean getShowConfigErrors() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShowConfigErrors = null;
         try {
-            return (boolean)classInstance.Get("ShowConfigErrors");
+            retObjectShowConfigErrors = classInstance.Get("ShowConfigErrors");
+            return (boolean)retObjectShowConfigErrors;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectShowConfigErrors != null ? retObjectShowConfigErrors.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -272,7 +288,7 @@ public class AmbientTheme extends DesignerTheme  {
 
     public void setShowConfigErrors(boolean ShowConfigErrors) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ShowConfigErrors", ShowConfigErrors);
         } catch (JCNativeException jcne) {
@@ -282,9 +298,13 @@ public class AmbientTheme extends DesignerTheme  {
 
     public boolean getShowDesignerBorder() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShowDesignerBorder = null;
         try {
-            return (boolean)classInstance.Get("ShowDesignerBorder");
+            retObjectShowDesignerBorder = classInstance.Get("ShowDesignerBorder");
+            return (boolean)retObjectShowDesignerBorder;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectShowDesignerBorder != null ? retObjectShowDesignerBorder.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -292,7 +312,7 @@ public class AmbientTheme extends DesignerTheme  {
 
     public void setShowDesignerBorder(boolean ShowDesignerBorder) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ShowDesignerBorder", ShowDesignerBorder);
         } catch (JCNativeException jcne) {
@@ -302,9 +322,13 @@ public class AmbientTheme extends DesignerTheme  {
 
     public boolean getShowGrid() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShowGrid = null;
         try {
-            return (boolean)classInstance.Get("ShowGrid");
+            retObjectShowGrid = classInstance.Get("ShowGrid");
+            return (boolean)retObjectShowGrid;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectShowGrid != null ? retObjectShowGrid.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -312,7 +336,7 @@ public class AmbientTheme extends DesignerTheme  {
 
     public void setShowGrid(boolean ShowGrid) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ShowGrid", ShowGrid);
         } catch (JCNativeException jcne) {
@@ -322,9 +346,13 @@ public class AmbientTheme extends DesignerTheme  {
 
     public boolean getUseOperatingSystemSettings() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUseOperatingSystemSettings = null;
         try {
-            return (boolean)classInstance.Get("UseOperatingSystemSettings");
+            retObjectUseOperatingSystemSettings = classInstance.Get("UseOperatingSystemSettings");
+            return (boolean)retObjectUseOperatingSystemSettings;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectUseOperatingSystemSettings != null ? retObjectUseOperatingSystemSettings.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -332,7 +360,7 @@ public class AmbientTheme extends DesignerTheme  {
 
     public void setUseOperatingSystemSettings(boolean UseOperatingSystemSettings) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.NullReferenceException, system.MemberAccessException, system.io.PathTooLongException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.threading.WaitHandleCannotBeOpenedException, system.MulticastNotSupportedException, system.runtime.interopservices.ExternalException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UseOperatingSystemSettings", UseOperatingSystemSettings);
         } catch (JCNativeException jcne) {
@@ -342,9 +370,20 @@ public class AmbientTheme extends DesignerTheme  {
 
     public int getBorderWidth() throws Throwable, system.ArgumentNullException, system.collections.generic.KeyNotFoundException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.xml.XmlException, system.NotSupportedException, system.configuration.ConfigurationErrorsException, system.FormatException, system.OutOfMemoryException, system.NullReferenceException, system.InvalidCastException, system.workflow.componentmodel.serialization.WorkflowMarkupSerializationException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBorderWidth = null;
         try {
-            return (int)classInstance.Get("BorderWidth");
+            retObjectBorderWidth = classInstance.Get("BorderWidth");
+            return (int)retObjectBorderWidth;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectBorderWidth_ToString = retObjectBorderWidth == null ? "null" : retObjectBorderWidth.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectBorderWidthNumber = (java.lang.Number)retObjectBorderWidth;
+                return retObjectBorderWidthNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectBorderWidth != null ? retObjectBorderWidth.getClass() : "null", retObjectBorderWidth_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -352,10 +391,14 @@ public class AmbientTheme extends DesignerTheme  {
 
     public Brush getBackgroundBrush() throws Throwable, system.InvalidOperationException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBackgroundBrush = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("BackgroundBrush");
+            retObjectBackgroundBrush = classInstance.Get("BackgroundBrush");
+            JCObject val = (JCObject)retObjectBackgroundBrush;
             return new Brush(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBackgroundBrush != null ? retObjectBackgroundBrush.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -363,10 +406,14 @@ public class AmbientTheme extends DesignerTheme  {
 
     public Brush getCommentIndicatorBrush() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.runtime.interopservices.ExternalException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCommentIndicatorBrush = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CommentIndicatorBrush");
+            retObjectCommentIndicatorBrush = classInstance.Get("CommentIndicatorBrush");
+            JCObject val = (JCObject)retObjectCommentIndicatorBrush;
             return new Brush(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCommentIndicatorBrush != null ? retObjectCommentIndicatorBrush.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -374,10 +421,14 @@ public class AmbientTheme extends DesignerTheme  {
 
     public Brush getDropIndicatorBrush() throws Throwable, system.InvalidOperationException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDropIndicatorBrush = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DropIndicatorBrush");
+            retObjectDropIndicatorBrush = classInstance.Get("DropIndicatorBrush");
+            JCObject val = (JCObject)retObjectDropIndicatorBrush;
             return new Brush(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDropIndicatorBrush != null ? retObjectDropIndicatorBrush.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -385,10 +436,14 @@ public class AmbientTheme extends DesignerTheme  {
 
     public Brush getForegroundBrush() throws Throwable, system.InvalidOperationException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectForegroundBrush = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ForegroundBrush");
+            retObjectForegroundBrush = classInstance.Get("ForegroundBrush");
+            JCObject val = (JCObject)retObjectForegroundBrush;
             return new Brush(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectForegroundBrush != null ? retObjectForegroundBrush.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -396,10 +451,14 @@ public class AmbientTheme extends DesignerTheme  {
 
     public Brush getMajorGridBrush() throws Throwable, system.InvalidOperationException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMajorGridBrush = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MajorGridBrush");
+            retObjectMajorGridBrush = classInstance.Get("MajorGridBrush");
+            JCObject val = (JCObject)retObjectMajorGridBrush;
             return new Brush(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMajorGridBrush != null ? retObjectMajorGridBrush.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -407,10 +466,14 @@ public class AmbientTheme extends DesignerTheme  {
 
     public Brush getReadonlyIndicatorBrush() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.runtime.interopservices.ExternalException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadonlyIndicatorBrush = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ReadonlyIndicatorBrush");
+            retObjectReadonlyIndicatorBrush = classInstance.Get("ReadonlyIndicatorBrush");
+            JCObject val = (JCObject)retObjectReadonlyIndicatorBrush;
             return new Brush(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadonlyIndicatorBrush != null ? retObjectReadonlyIndicatorBrush.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -418,10 +481,14 @@ public class AmbientTheme extends DesignerTheme  {
 
     public Brush getSelectionForegroundBrush() throws Throwable, system.InvalidOperationException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectionForegroundBrush = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SelectionForegroundBrush");
+            retObjectSelectionForegroundBrush = classInstance.Get("SelectionForegroundBrush");
+            JCObject val = (JCObject)retObjectSelectionForegroundBrush;
             return new Brush(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelectionForegroundBrush != null ? retObjectSelectionForegroundBrush.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -429,10 +496,14 @@ public class AmbientTheme extends DesignerTheme  {
 
     public Color getBackColor() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBackColor = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("BackColor");
+            retObjectBackColor = classInstance.Get("BackColor");
+            JCObject val = (JCObject)retObjectBackColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBackColor != null ? retObjectBackColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -440,7 +511,7 @@ public class AmbientTheme extends DesignerTheme  {
 
     public void setBackColor(Color BackColor) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BackColor", BackColor == null ? null : BackColor.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -450,10 +521,14 @@ public class AmbientTheme extends DesignerTheme  {
 
     public Color getCommentIndicatorColor() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCommentIndicatorColor = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CommentIndicatorColor");
+            retObjectCommentIndicatorColor = classInstance.Get("CommentIndicatorColor");
+            JCObject val = (JCObject)retObjectCommentIndicatorColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCommentIndicatorColor != null ? retObjectCommentIndicatorColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -461,7 +536,7 @@ public class AmbientTheme extends DesignerTheme  {
 
     public void setCommentIndicatorColor(Color CommentIndicatorColor) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.OutOfMemoryException, system.FormatException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CommentIndicatorColor", CommentIndicatorColor == null ? null : CommentIndicatorColor.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -471,10 +546,14 @@ public class AmbientTheme extends DesignerTheme  {
 
     public Color getDropIndicatorColor() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDropIndicatorColor = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DropIndicatorColor");
+            retObjectDropIndicatorColor = classInstance.Get("DropIndicatorColor");
+            JCObject val = (JCObject)retObjectDropIndicatorColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDropIndicatorColor != null ? retObjectDropIndicatorColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -482,7 +561,7 @@ public class AmbientTheme extends DesignerTheme  {
 
     public void setDropIndicatorColor(Color DropIndicatorColor) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.OutOfMemoryException, system.FormatException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DropIndicatorColor", DropIndicatorColor == null ? null : DropIndicatorColor.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -492,10 +571,14 @@ public class AmbientTheme extends DesignerTheme  {
 
     public Color getForeColor() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectForeColor = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ForeColor");
+            retObjectForeColor = classInstance.Get("ForeColor");
+            JCObject val = (JCObject)retObjectForeColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectForeColor != null ? retObjectForeColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -503,7 +586,7 @@ public class AmbientTheme extends DesignerTheme  {
 
     public void setForeColor(Color ForeColor) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.OutOfMemoryException, system.FormatException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ForeColor", ForeColor == null ? null : ForeColor.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -513,10 +596,14 @@ public class AmbientTheme extends DesignerTheme  {
 
     public Color getGridColor() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGridColor = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("GridColor");
+            retObjectGridColor = classInstance.Get("GridColor");
+            JCObject val = (JCObject)retObjectGridColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGridColor != null ? retObjectGridColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -524,7 +611,7 @@ public class AmbientTheme extends DesignerTheme  {
 
     public void setGridColor(Color GridColor) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.OutOfMemoryException, system.FormatException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("GridColor", GridColor == null ? null : GridColor.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -534,10 +621,14 @@ public class AmbientTheme extends DesignerTheme  {
 
     public Color getReadonlyIndicatorColor() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadonlyIndicatorColor = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ReadonlyIndicatorColor");
+            retObjectReadonlyIndicatorColor = classInstance.Get("ReadonlyIndicatorColor");
+            JCObject val = (JCObject)retObjectReadonlyIndicatorColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadonlyIndicatorColor != null ? retObjectReadonlyIndicatorColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -545,7 +636,7 @@ public class AmbientTheme extends DesignerTheme  {
 
     public void setReadonlyIndicatorColor(Color ReadonlyIndicatorColor) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ReadonlyIndicatorColor", ReadonlyIndicatorColor == null ? null : ReadonlyIndicatorColor.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -555,10 +646,14 @@ public class AmbientTheme extends DesignerTheme  {
 
     public Color getSelectionForeColor() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectionForeColor = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SelectionForeColor");
+            retObjectSelectionForeColor = classInstance.Get("SelectionForeColor");
+            JCObject val = (JCObject)retObjectSelectionForeColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelectionForeColor != null ? retObjectSelectionForeColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -566,7 +661,7 @@ public class AmbientTheme extends DesignerTheme  {
 
     public void setSelectionForeColor(Color SelectionForeColor) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.OutOfMemoryException, system.FormatException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SelectionForeColor", SelectionForeColor == null ? null : SelectionForeColor.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -576,10 +671,14 @@ public class AmbientTheme extends DesignerTheme  {
 
     public Color getSelectionPatternColor() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectionPatternColor = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SelectionPatternColor");
+            retObjectSelectionPatternColor = classInstance.Get("SelectionPatternColor");
+            JCObject val = (JCObject)retObjectSelectionPatternColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelectionPatternColor != null ? retObjectSelectionPatternColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -587,7 +686,7 @@ public class AmbientTheme extends DesignerTheme  {
 
     public void setSelectionPatternColor(Color SelectionPatternColor) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.OutOfMemoryException, system.FormatException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SelectionPatternColor", SelectionPatternColor == null ? null : SelectionPatternColor.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -597,10 +696,14 @@ public class AmbientTheme extends DesignerTheme  {
 
     public DashStyle getGridStyle() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGridStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("GridStyle");
+            retObjectGridStyle = classInstance.Get("GridStyle");
+            JCObject val = (JCObject)retObjectGridStyle;
             return new DashStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGridStyle != null ? retObjectGridStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -608,7 +711,7 @@ public class AmbientTheme extends DesignerTheme  {
 
     public void setGridStyle(DashStyle GridStyle) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.OutOfMemoryException, system.FormatException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("GridStyle", GridStyle == null ? null : GridStyle.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -618,10 +721,14 @@ public class AmbientTheme extends DesignerTheme  {
 
     public Font getBoldFont() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.ArgumentException, system.security.SecurityException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.RankException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBoldFont = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("BoldFont");
+            retObjectBoldFont = classInstance.Get("BoldFont");
+            JCObject val = (JCObject)retObjectBoldFont;
             return new Font(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBoldFont != null ? retObjectBoldFont.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -629,10 +736,14 @@ public class AmbientTheme extends DesignerTheme  {
 
     public Font getFont() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.ArgumentException, system.security.SecurityException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.RankException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFont = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Font");
+            retObjectFont = classInstance.Get("Font");
+            JCObject val = (JCObject)retObjectFont;
             return new Font(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFont != null ? retObjectFont.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -640,10 +751,14 @@ public class AmbientTheme extends DesignerTheme  {
 
     public Image getWorkflowWatermarkImage() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.io.PathTooLongException, system.ArgumentOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NotSupportedException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException, system.security.SecurityException, system.MemberAccessException, system.NullReferenceException, system.UriFormatException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWorkflowWatermarkImage = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("WorkflowWatermarkImage");
+            retObjectWorkflowWatermarkImage = classInstance.Get("WorkflowWatermarkImage");
+            JCObject val = (JCObject)retObjectWorkflowWatermarkImage;
             return new Image(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWorkflowWatermarkImage != null ? retObjectWorkflowWatermarkImage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -651,10 +766,14 @@ public class AmbientTheme extends DesignerTheme  {
 
     public Pen getCommentIndicatorPen() throws Throwable, system.InvalidOperationException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCommentIndicatorPen = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CommentIndicatorPen");
+            retObjectCommentIndicatorPen = classInstance.Get("CommentIndicatorPen");
+            JCObject val = (JCObject)retObjectCommentIndicatorPen;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCommentIndicatorPen != null ? retObjectCommentIndicatorPen.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -662,10 +781,14 @@ public class AmbientTheme extends DesignerTheme  {
 
     public Pen getDropIndicatorPen() throws Throwable, system.ArgumentNullException, system.collections.generic.KeyNotFoundException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.xml.XmlException, system.NotSupportedException, system.configuration.ConfigurationErrorsException, system.FormatException, system.MulticastNotSupportedException, system.NullReferenceException, system.InvalidCastException, system.workflow.componentmodel.serialization.WorkflowMarkupSerializationException, system.MissingMethodException, system.runtime.interopservices.ExternalException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDropIndicatorPen = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DropIndicatorPen");
+            retObjectDropIndicatorPen = classInstance.Get("DropIndicatorPen");
+            JCObject val = (JCObject)retObjectDropIndicatorPen;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDropIndicatorPen != null ? retObjectDropIndicatorPen.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -673,10 +796,14 @@ public class AmbientTheme extends DesignerTheme  {
 
     public Pen getForegroundPen() throws Throwable, system.InvalidOperationException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.componentmodel.InvalidEnumArgumentException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectForegroundPen = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ForegroundPen");
+            retObjectForegroundPen = classInstance.Get("ForegroundPen");
+            JCObject val = (JCObject)retObjectForegroundPen;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectForegroundPen != null ? retObjectForegroundPen.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -684,10 +811,14 @@ public class AmbientTheme extends DesignerTheme  {
 
     public Pen getMajorGridPen() throws Throwable, system.InvalidOperationException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.componentmodel.InvalidEnumArgumentException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMajorGridPen = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MajorGridPen");
+            retObjectMajorGridPen = classInstance.Get("MajorGridPen");
+            JCObject val = (JCObject)retObjectMajorGridPen;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMajorGridPen != null ? retObjectMajorGridPen.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -695,10 +826,14 @@ public class AmbientTheme extends DesignerTheme  {
 
     public Pen getMinorGridPen() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.componentmodel.InvalidEnumArgumentException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMinorGridPen = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MinorGridPen");
+            retObjectMinorGridPen = classInstance.Get("MinorGridPen");
+            JCObject val = (JCObject)retObjectMinorGridPen;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMinorGridPen != null ? retObjectMinorGridPen.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -706,10 +841,14 @@ public class AmbientTheme extends DesignerTheme  {
 
     public Pen getSelectionForegroundPen() throws Throwable, system.InvalidOperationException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectionForegroundPen = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SelectionForegroundPen");
+            retObjectSelectionForegroundPen = classInstance.Get("SelectionForegroundPen");
+            JCObject val = (JCObject)retObjectSelectionForegroundPen;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelectionForegroundPen != null ? retObjectSelectionForegroundPen.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -717,10 +856,14 @@ public class AmbientTheme extends DesignerTheme  {
 
     public Pen getSelectionPatternPen() throws Throwable, system.InvalidOperationException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.componentmodel.InvalidEnumArgumentException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectionPatternPen = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SelectionPatternPen");
+            retObjectSelectionPatternPen = classInstance.Get("SelectionPatternPen");
+            JCObject val = (JCObject)retObjectSelectionPatternPen;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelectionPatternPen != null ? retObjectSelectionPatternPen.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -728,10 +871,14 @@ public class AmbientTheme extends DesignerTheme  {
 
     public Size getGlyphSize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGlyphSize = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("GlyphSize");
+            retObjectGlyphSize = classInstance.Get("GlyphSize");
+            JCObject val = (JCObject)retObjectGlyphSize;
             return new Size(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGlyphSize != null ? retObjectGlyphSize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -739,10 +886,14 @@ public class AmbientTheme extends DesignerTheme  {
 
     public Size getGridSize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGridSize = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("GridSize");
+            retObjectGridSize = classInstance.Get("GridSize");
+            JCObject val = (JCObject)retObjectGridSize;
             return new Size(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGridSize != null ? retObjectGridSize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -750,10 +901,14 @@ public class AmbientTheme extends DesignerTheme  {
 
     public Size getMargin() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMargin = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Margin");
+            retObjectMargin = classInstance.Get("Margin");
+            JCObject val = (JCObject)retObjectMargin;
             return new Size(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMargin != null ? retObjectMargin.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -761,10 +916,14 @@ public class AmbientTheme extends DesignerTheme  {
 
     public Size getSelectionSize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectionSize = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SelectionSize");
+            retObjectSelectionSize = classInstance.Get("SelectionSize");
+            JCObject val = (JCObject)retObjectSelectionSize;
             return new Size(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelectionSize != null ? retObjectSelectionSize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -772,9 +931,13 @@ public class AmbientTheme extends DesignerTheme  {
 
     public java.lang.String getFontName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFontName = null;
         try {
-            return (java.lang.String)classInstance.Get("FontName");
+            retObjectFontName = classInstance.Get("FontName");
+            return (java.lang.String)retObjectFontName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectFontName != null ? retObjectFontName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -782,7 +945,7 @@ public class AmbientTheme extends DesignerTheme  {
 
     public void setFontName(java.lang.String FontName) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.OutOfMemoryException, system.FormatException, system.security.SecurityException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FontName", FontName);
         } catch (JCNativeException jcne) {
@@ -792,9 +955,13 @@ public class AmbientTheme extends DesignerTheme  {
 
     public java.lang.String getWatermarkImagePath() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWatermarkImagePath = null;
         try {
-            return (java.lang.String)classInstance.Get("WatermarkImagePath");
+            retObjectWatermarkImagePath = classInstance.Get("WatermarkImagePath");
+            return (java.lang.String)retObjectWatermarkImagePath;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectWatermarkImagePath != null ? retObjectWatermarkImagePath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -802,7 +969,7 @@ public class AmbientTheme extends DesignerTheme  {
 
     public void setWatermarkImagePath(java.lang.String WatermarkImagePath) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.OutOfMemoryException, system.FormatException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.security.SecurityException, system.MemberAccessException, system.NullReferenceException, system.UriFormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("WatermarkImagePath", WatermarkImagePath);
         } catch (JCNativeException jcne) {
@@ -812,10 +979,14 @@ public class AmbientTheme extends DesignerTheme  {
 
     public DesignerContentAlignment getWatermarkAlignment() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWatermarkAlignment = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("WatermarkAlignment");
+            retObjectWatermarkAlignment = classInstance.Get("WatermarkAlignment");
+            JCObject val = (JCObject)retObjectWatermarkAlignment;
             return new DesignerContentAlignment(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWatermarkAlignment != null ? retObjectWatermarkAlignment.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -823,7 +994,7 @@ public class AmbientTheme extends DesignerTheme  {
 
     public void setWatermarkAlignment(DesignerContentAlignment WatermarkAlignment) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("WatermarkAlignment", WatermarkAlignment == null ? null : WatermarkAlignment.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -833,10 +1004,14 @@ public class AmbientTheme extends DesignerTheme  {
 
     public DesignerSize getDesignerSize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDesignerSize = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DesignerSize");
+            retObjectDesignerSize = classInstance.Get("DesignerSize");
+            JCObject val = (JCObject)retObjectDesignerSize;
             return new DesignerSize(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDesignerSize != null ? retObjectDesignerSize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -844,7 +1019,7 @@ public class AmbientTheme extends DesignerTheme  {
 
     public void setDesignerSize(DesignerSize DesignerSize) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DesignerSize", DesignerSize == null ? null : DesignerSize.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -854,10 +1029,14 @@ public class AmbientTheme extends DesignerTheme  {
 
     public TextQuality getTextQuality() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTextQuality = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TextQuality");
+            retObjectTextQuality = classInstance.Get("TextQuality");
+            JCObject val = (JCObject)retObjectTextQuality;
             return new TextQuality(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTextQuality != null ? retObjectTextQuality.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -865,7 +1044,7 @@ public class AmbientTheme extends DesignerTheme  {
 
     public void setTextQuality(TextQuality TextQuality) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TextQuality", TextQuality == null ? null : TextQuality.getJCOInstance());
         } catch (JCNativeException jcne) {

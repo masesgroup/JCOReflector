@@ -207,9 +207,13 @@ public class ClaimsIdentity extends NetObject  {
     
     public boolean HasClaim(java.lang.String type, java.lang.String value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHasClaim = null;
         try {
-            return (boolean)classInstance.Invoke("HasClaim", type, value);
+            retObjectHasClaim = classInstance.Invoke("HasClaim", type, value);
+            return (boolean)retObjectHasClaim;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectHasClaim != null ? retObjectHasClaim.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -217,9 +221,13 @@ public class ClaimsIdentity extends NetObject  {
 
     public boolean TryRemoveClaim(Claim claim) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryRemoveClaim = null;
         try {
-            return (boolean)classInstance.Invoke("TryRemoveClaim", claim == null ? null : claim.getJCOInstance());
+            retObjectTryRemoveClaim = classInstance.Invoke("TryRemoveClaim", claim == null ? null : claim.getJCOInstance());
+            return (boolean)retObjectTryRemoveClaim;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryRemoveClaim != null ? retObjectTryRemoveClaim.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -227,10 +235,14 @@ public class ClaimsIdentity extends NetObject  {
 
     public Claim FindFirst(java.lang.String type) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFindFirst = null;
         try {
-            JCObject objFindFirst = (JCObject)classInstance.Invoke("FindFirst", type);
+            retObjectFindFirst = classInstance.Invoke("FindFirst", type);
+            JCObject objFindFirst = (JCObject)retObjectFindFirst;
             return new Claim(objFindFirst);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFindFirst != null ? retObjectFindFirst.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -238,10 +250,14 @@ public class ClaimsIdentity extends NetObject  {
 
     public ClaimsIdentity Clone() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClone = null;
         try {
-            JCObject objClone = (JCObject)classInstance.Invoke("Clone");
+            retObjectClone = classInstance.Invoke("Clone");
+            JCObject objClone = (JCObject)retObjectClone;
             return new ClaimsIdentity(objClone);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClone != null ? retObjectClone.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -249,7 +265,7 @@ public class ClaimsIdentity extends NetObject  {
 
     public void AddClaim(Claim claim) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddClaim", claim == null ? null : claim.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -259,7 +275,7 @@ public class ClaimsIdentity extends NetObject  {
 
     public void RemoveClaim(Claim claim) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RemoveClaim", claim == null ? null : claim.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -269,7 +285,7 @@ public class ClaimsIdentity extends NetObject  {
 
     public void WriteTo(BinaryWriter writer) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteTo", writer == null ? null : writer.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -283,9 +299,13 @@ public class ClaimsIdentity extends NetObject  {
     
     public boolean getIsAuthenticated() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsAuthenticated = null;
         try {
-            return (boolean)classInstance.Get("IsAuthenticated");
+            retObjectIsAuthenticated = classInstance.Get("IsAuthenticated");
+            return (boolean)retObjectIsAuthenticated;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsAuthenticated != null ? retObjectIsAuthenticated.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -293,10 +313,14 @@ public class ClaimsIdentity extends NetObject  {
 
     public NetObject getBootstrapContext() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBootstrapContext = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("BootstrapContext");
+            retObjectBootstrapContext = classInstance.Get("BootstrapContext");
+            JCObject val = (JCObject)retObjectBootstrapContext;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBootstrapContext != null ? retObjectBootstrapContext.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -304,7 +328,7 @@ public class ClaimsIdentity extends NetObject  {
 
     public void setBootstrapContext(NetObject BootstrapContext) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BootstrapContext", BootstrapContext == null ? null : BootstrapContext.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -314,10 +338,14 @@ public class ClaimsIdentity extends NetObject  {
 
     public ClaimsIdentity getActor() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectActor = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Actor");
+            retObjectActor = classInstance.Get("Actor");
+            JCObject val = (JCObject)retObjectActor;
             return new ClaimsIdentity(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectActor != null ? retObjectActor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -325,7 +353,7 @@ public class ClaimsIdentity extends NetObject  {
 
     public void setActor(ClaimsIdentity Actor) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Actor", Actor == null ? null : Actor.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -335,9 +363,13 @@ public class ClaimsIdentity extends NetObject  {
 
     public java.lang.String getAuthenticationType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAuthenticationType = null;
         try {
-            return (java.lang.String)classInstance.Get("AuthenticationType");
+            retObjectAuthenticationType = classInstance.Get("AuthenticationType");
+            return (java.lang.String)retObjectAuthenticationType;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectAuthenticationType != null ? retObjectAuthenticationType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -345,9 +377,13 @@ public class ClaimsIdentity extends NetObject  {
 
     public java.lang.String getLabel() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLabel = null;
         try {
-            return (java.lang.String)classInstance.Get("Label");
+            retObjectLabel = classInstance.Get("Label");
+            return (java.lang.String)retObjectLabel;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectLabel != null ? retObjectLabel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -355,7 +391,7 @@ public class ClaimsIdentity extends NetObject  {
 
     public void setLabel(java.lang.String Label) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Label", Label);
         } catch (JCNativeException jcne) {
@@ -365,9 +401,13 @@ public class ClaimsIdentity extends NetObject  {
 
     public java.lang.String getName() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectName = null;
         try {
-            return (java.lang.String)classInstance.Get("Name");
+            retObjectName = classInstance.Get("Name");
+            return (java.lang.String)retObjectName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectName != null ? retObjectName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -375,9 +415,13 @@ public class ClaimsIdentity extends NetObject  {
 
     public java.lang.String getNameClaimType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNameClaimType = null;
         try {
-            return (java.lang.String)classInstance.Get("NameClaimType");
+            retObjectNameClaimType = classInstance.Get("NameClaimType");
+            return (java.lang.String)retObjectNameClaimType;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectNameClaimType != null ? retObjectNameClaimType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -385,9 +429,13 @@ public class ClaimsIdentity extends NetObject  {
 
     public java.lang.String getRoleClaimType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRoleClaimType = null;
         try {
-            return (java.lang.String)classInstance.Get("RoleClaimType");
+            retObjectRoleClaimType = classInstance.Get("RoleClaimType");
+            return (java.lang.String)retObjectRoleClaimType;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectRoleClaimType != null ? retObjectRoleClaimType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

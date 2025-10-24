@@ -180,9 +180,20 @@ public class LinkClickedEventArgs extends EventArgs  {
     
     public int getLinkLength() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLinkLength = null;
         try {
-            return (int)classInstance.Get("LinkLength");
+            retObjectLinkLength = classInstance.Get("LinkLength");
+            return (int)retObjectLinkLength;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectLinkLength_ToString = retObjectLinkLength == null ? "null" : retObjectLinkLength.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectLinkLengthNumber = (java.lang.Number)retObjectLinkLength;
+                return retObjectLinkLengthNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectLinkLength != null ? retObjectLinkLength.getClass() : "null", retObjectLinkLength_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,9 +201,20 @@ public class LinkClickedEventArgs extends EventArgs  {
 
     public int getLinkStart() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLinkStart = null;
         try {
-            return (int)classInstance.Get("LinkStart");
+            retObjectLinkStart = classInstance.Get("LinkStart");
+            return (int)retObjectLinkStart;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectLinkStart_ToString = retObjectLinkStart == null ? "null" : retObjectLinkStart.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectLinkStartNumber = (java.lang.Number)retObjectLinkStart;
+                return retObjectLinkStartNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectLinkStart != null ? retObjectLinkStart.getClass() : "null", retObjectLinkStart_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,9 +222,13 @@ public class LinkClickedEventArgs extends EventArgs  {
 
     public java.lang.String getLinkText() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLinkText = null;
         try {
-            return (java.lang.String)classInstance.Get("LinkText");
+            retObjectLinkText = classInstance.Get("LinkText");
+            return (java.lang.String)retObjectLinkText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectLinkText != null ? retObjectLinkText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

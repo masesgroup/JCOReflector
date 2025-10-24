@@ -180,10 +180,14 @@ public class CustomAttributeTypedArgument extends ValueType  {
     
     public NetObject getValue() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValue = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Value");
+            retObjectValue = classInstance.Get("Value");
+            JCObject val = (JCObject)retObjectValue;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectValue != null ? retObjectValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,10 +195,14 @@ public class CustomAttributeTypedArgument extends ValueType  {
 
     public NetType getArgumentType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectArgumentType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ArgumentType");
+            retObjectArgumentType = classInstance.Get("ArgumentType");
+            JCObject val = (JCObject)retObjectArgumentType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectArgumentType != null ? retObjectArgumentType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

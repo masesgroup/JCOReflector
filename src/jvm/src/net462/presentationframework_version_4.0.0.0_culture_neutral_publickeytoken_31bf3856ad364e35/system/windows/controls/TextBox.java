@@ -174,9 +174,13 @@ public class TextBox extends TextBoxBase implements system.windows.markup.IAddCh
     
     public boolean ShouldSerializeText(XamlDesignerSerializationManager manager) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShouldSerializeText = null;
         try {
-            return (boolean)classInstance.Invoke("ShouldSerializeText", manager == null ? null : manager.getJCOInstance());
+            retObjectShouldSerializeText = classInstance.Invoke("ShouldSerializeText", manager == null ? null : manager.getJCOInstance());
+            return (boolean)retObjectShouldSerializeText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectShouldSerializeText != null ? retObjectShouldSerializeText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -184,9 +188,20 @@ public class TextBox extends TextBoxBase implements system.windows.markup.IAddCh
 
     public int GetCharacterIndexFromLineIndex(int lineIndex) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentException, system.NotSupportedException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetCharacterIndexFromLineIndex = null;
         try {
-            return (int)classInstance.Invoke("GetCharacterIndexFromLineIndex", lineIndex);
+            retObjectGetCharacterIndexFromLineIndex = classInstance.Invoke("GetCharacterIndexFromLineIndex", lineIndex);
+            return (int)retObjectGetCharacterIndexFromLineIndex;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetCharacterIndexFromLineIndex_ToString = retObjectGetCharacterIndexFromLineIndex == null ? "null" : retObjectGetCharacterIndexFromLineIndex.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetCharacterIndexFromLineIndexNumber = (java.lang.Number)retObjectGetCharacterIndexFromLineIndex;
+                return retObjectGetCharacterIndexFromLineIndexNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetCharacterIndexFromLineIndex != null ? retObjectGetCharacterIndexFromLineIndex.getClass() : "null", retObjectGetCharacterIndexFromLineIndex_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -194,9 +209,20 @@ public class TextBox extends TextBoxBase implements system.windows.markup.IAddCh
 
     public int GetCharacterIndexFromPoint(Point point, boolean snapToText) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentException, system.componentmodel.Win32Exception, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetCharacterIndexFromPoint = null;
         try {
-            return (int)classInstance.Invoke("GetCharacterIndexFromPoint", point == null ? null : point.getJCOInstance(), snapToText);
+            retObjectGetCharacterIndexFromPoint = classInstance.Invoke("GetCharacterIndexFromPoint", point == null ? null : point.getJCOInstance(), snapToText);
+            return (int)retObjectGetCharacterIndexFromPoint;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetCharacterIndexFromPoint_ToString = retObjectGetCharacterIndexFromPoint == null ? "null" : retObjectGetCharacterIndexFromPoint.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetCharacterIndexFromPointNumber = (java.lang.Number)retObjectGetCharacterIndexFromPoint;
+                return retObjectGetCharacterIndexFromPointNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetCharacterIndexFromPoint != null ? retObjectGetCharacterIndexFromPoint.getClass() : "null", retObjectGetCharacterIndexFromPoint_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -204,9 +230,20 @@ public class TextBox extends TextBoxBase implements system.windows.markup.IAddCh
 
     public int GetFirstVisibleLineIndex() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.UriFormatException, system.security.SecurityException, system.componentmodel.Win32Exception, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetFirstVisibleLineIndex = null;
         try {
-            return (int)classInstance.Invoke("GetFirstVisibleLineIndex");
+            retObjectGetFirstVisibleLineIndex = classInstance.Invoke("GetFirstVisibleLineIndex");
+            return (int)retObjectGetFirstVisibleLineIndex;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetFirstVisibleLineIndex_ToString = retObjectGetFirstVisibleLineIndex == null ? "null" : retObjectGetFirstVisibleLineIndex.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetFirstVisibleLineIndexNumber = (java.lang.Number)retObjectGetFirstVisibleLineIndex;
+                return retObjectGetFirstVisibleLineIndexNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetFirstVisibleLineIndex != null ? retObjectGetFirstVisibleLineIndex.getClass() : "null", retObjectGetFirstVisibleLineIndex_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -214,9 +251,20 @@ public class TextBox extends TextBoxBase implements system.windows.markup.IAddCh
 
     public int GetLastVisibleLineIndex() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.IndexOutOfRangeException, system.UriFormatException, system.security.SecurityException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetLastVisibleLineIndex = null;
         try {
-            return (int)classInstance.Invoke("GetLastVisibleLineIndex");
+            retObjectGetLastVisibleLineIndex = classInstance.Invoke("GetLastVisibleLineIndex");
+            return (int)retObjectGetLastVisibleLineIndex;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetLastVisibleLineIndex_ToString = retObjectGetLastVisibleLineIndex == null ? "null" : retObjectGetLastVisibleLineIndex.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetLastVisibleLineIndexNumber = (java.lang.Number)retObjectGetLastVisibleLineIndex;
+                return retObjectGetLastVisibleLineIndexNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetLastVisibleLineIndex != null ? retObjectGetLastVisibleLineIndex.getClass() : "null", retObjectGetLastVisibleLineIndex_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -224,9 +272,20 @@ public class TextBox extends TextBoxBase implements system.windows.markup.IAddCh
 
     public int GetLineIndexFromCharacterIndex(int charIndex) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.io.IOException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetLineIndexFromCharacterIndex = null;
         try {
-            return (int)classInstance.Invoke("GetLineIndexFromCharacterIndex", charIndex);
+            retObjectGetLineIndexFromCharacterIndex = classInstance.Invoke("GetLineIndexFromCharacterIndex", charIndex);
+            return (int)retObjectGetLineIndexFromCharacterIndex;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetLineIndexFromCharacterIndex_ToString = retObjectGetLineIndexFromCharacterIndex == null ? "null" : retObjectGetLineIndexFromCharacterIndex.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetLineIndexFromCharacterIndexNumber = (java.lang.Number)retObjectGetLineIndexFromCharacterIndex;
+                return retObjectGetLineIndexFromCharacterIndexNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetLineIndexFromCharacterIndex != null ? retObjectGetLineIndexFromCharacterIndex.getClass() : "null", retObjectGetLineIndexFromCharacterIndex_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -234,9 +293,20 @@ public class TextBox extends TextBoxBase implements system.windows.markup.IAddCh
 
     public int GetLineLength(int lineIndex) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentException, system.NotSupportedException, system.componentmodel.Win32Exception, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetLineLength = null;
         try {
-            return (int)classInstance.Invoke("GetLineLength", lineIndex);
+            retObjectGetLineLength = classInstance.Invoke("GetLineLength", lineIndex);
+            return (int)retObjectGetLineLength;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetLineLength_ToString = retObjectGetLineLength == null ? "null" : retObjectGetLineLength.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetLineLengthNumber = (java.lang.Number)retObjectGetLineLength;
+                return retObjectGetLineLengthNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetLineLength != null ? retObjectGetLineLength.getClass() : "null", retObjectGetLineLength_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -244,9 +314,20 @@ public class TextBox extends TextBoxBase implements system.windows.markup.IAddCh
 
     public int GetNextSpellingErrorCharacterIndex(int charIndex, LogicalDirection direction) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.io.IOException, system.runtime.interopservices.COMException, system.threading.SynchronizationLockException, system.PlatformNotSupportedException, system.NotSupportedException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetNextSpellingErrorCharacterIndex = null;
         try {
-            return (int)classInstance.Invoke("GetNextSpellingErrorCharacterIndex", charIndex, direction == null ? null : direction.getJCOInstance());
+            retObjectGetNextSpellingErrorCharacterIndex = classInstance.Invoke("GetNextSpellingErrorCharacterIndex", charIndex, direction == null ? null : direction.getJCOInstance());
+            return (int)retObjectGetNextSpellingErrorCharacterIndex;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetNextSpellingErrorCharacterIndex_ToString = retObjectGetNextSpellingErrorCharacterIndex == null ? "null" : retObjectGetNextSpellingErrorCharacterIndex.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetNextSpellingErrorCharacterIndexNumber = (java.lang.Number)retObjectGetNextSpellingErrorCharacterIndex;
+                return retObjectGetNextSpellingErrorCharacterIndexNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetNextSpellingErrorCharacterIndex != null ? retObjectGetNextSpellingErrorCharacterIndex.getClass() : "null", retObjectGetNextSpellingErrorCharacterIndex_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -254,9 +335,20 @@ public class TextBox extends TextBoxBase implements system.windows.markup.IAddCh
 
     public int GetSpellingErrorLength(int charIndex) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.runtime.interopservices.COMException, system.PlatformNotSupportedException, system.NotSupportedException, system.OutOfMemoryException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSpellingErrorLength = null;
         try {
-            return (int)classInstance.Invoke("GetSpellingErrorLength", charIndex);
+            retObjectGetSpellingErrorLength = classInstance.Invoke("GetSpellingErrorLength", charIndex);
+            return (int)retObjectGetSpellingErrorLength;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetSpellingErrorLength_ToString = retObjectGetSpellingErrorLength == null ? "null" : retObjectGetSpellingErrorLength.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetSpellingErrorLengthNumber = (java.lang.Number)retObjectGetSpellingErrorLength;
+                return retObjectGetSpellingErrorLengthNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetSpellingErrorLength != null ? retObjectGetSpellingErrorLength.getClass() : "null", retObjectGetSpellingErrorLength_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -264,9 +356,20 @@ public class TextBox extends TextBoxBase implements system.windows.markup.IAddCh
 
     public int GetSpellingErrorStart(int charIndex) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.runtime.interopservices.COMException, system.PlatformNotSupportedException, system.NotSupportedException, system.OutOfMemoryException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSpellingErrorStart = null;
         try {
-            return (int)classInstance.Invoke("GetSpellingErrorStart", charIndex);
+            retObjectGetSpellingErrorStart = classInstance.Invoke("GetSpellingErrorStart", charIndex);
+            return (int)retObjectGetSpellingErrorStart;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetSpellingErrorStart_ToString = retObjectGetSpellingErrorStart == null ? "null" : retObjectGetSpellingErrorStart.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetSpellingErrorStartNumber = (java.lang.Number)retObjectGetSpellingErrorStart;
+                return retObjectGetSpellingErrorStartNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetSpellingErrorStart != null ? retObjectGetSpellingErrorStart.getClass() : "null", retObjectGetSpellingErrorStart_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -274,9 +377,13 @@ public class TextBox extends TextBoxBase implements system.windows.markup.IAddCh
 
     public java.lang.String GetLineText(int lineIndex) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentException, system.NotSupportedException, system.componentmodel.Win32Exception, system.componentmodel.InvalidEnumArgumentException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetLineText = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetLineText", lineIndex);
+            retObjectGetLineText = classInstance.Invoke("GetLineText", lineIndex);
+            return (java.lang.String)retObjectGetLineText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetLineText != null ? retObjectGetLineText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -284,10 +391,14 @@ public class TextBox extends TextBoxBase implements system.windows.markup.IAddCh
 
     public SpellingError GetSpellingError(int charIndex) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.io.IOException, system.runtime.interopservices.COMException, system.threading.SynchronizationLockException, system.PlatformNotSupportedException, system.NotSupportedException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSpellingError = null;
         try {
-            JCObject objGetSpellingError = (JCObject)classInstance.Invoke("GetSpellingError", charIndex);
+            retObjectGetSpellingError = classInstance.Invoke("GetSpellingError", charIndex);
+            JCObject objGetSpellingError = (JCObject)retObjectGetSpellingError;
             return new SpellingError(objGetSpellingError);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSpellingError != null ? retObjectGetSpellingError.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -295,10 +406,14 @@ public class TextBox extends TextBoxBase implements system.windows.markup.IAddCh
 
     public Rect GetRectFromCharacterIndex(int charIndex) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetRectFromCharacterIndex = null;
         try {
-            JCObject objGetRectFromCharacterIndex = (JCObject)classInstance.Invoke("GetRectFromCharacterIndex", charIndex);
+            retObjectGetRectFromCharacterIndex = classInstance.Invoke("GetRectFromCharacterIndex", charIndex);
+            JCObject objGetRectFromCharacterIndex = (JCObject)retObjectGetRectFromCharacterIndex;
             return new Rect(objGetRectFromCharacterIndex);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetRectFromCharacterIndex != null ? retObjectGetRectFromCharacterIndex.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -306,10 +421,14 @@ public class TextBox extends TextBoxBase implements system.windows.markup.IAddCh
 
     public Rect GetRectFromCharacterIndex(int charIndex, boolean trailingEdge) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.io.IOException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetRectFromCharacterIndex = null;
         try {
-            JCObject objGetRectFromCharacterIndex = (JCObject)classInstance.Invoke("GetRectFromCharacterIndex", charIndex, trailingEdge);
+            retObjectGetRectFromCharacterIndex = classInstance.Invoke("GetRectFromCharacterIndex", charIndex, trailingEdge);
+            JCObject objGetRectFromCharacterIndex = (JCObject)retObjectGetRectFromCharacterIndex;
             return new Rect(objGetRectFromCharacterIndex);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetRectFromCharacterIndex != null ? retObjectGetRectFromCharacterIndex.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -317,7 +436,7 @@ public class TextBox extends TextBoxBase implements system.windows.markup.IAddCh
 
     public void Clear() throws Throwable, system.ArgumentException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.ArgumentNullException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.FormatException, system.ArgumentOutOfRangeException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Clear");
         } catch (JCNativeException jcne) {
@@ -327,7 +446,7 @@ public class TextBox extends TextBoxBase implements system.windows.markup.IAddCh
 
     public void ScrollToLine(int lineIndex) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentException, system.NotSupportedException, system.componentmodel.Win32Exception, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ScrollToLine", lineIndex);
         } catch (JCNativeException jcne) {
@@ -337,7 +456,7 @@ public class TextBox extends TextBoxBase implements system.windows.markup.IAddCh
 
     public void Select(int start, int length) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.security.SecurityException, system.io.IOException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Select", start, length);
         } catch (JCNativeException jcne) {
@@ -351,7 +470,7 @@ public class TextBox extends TextBoxBase implements system.windows.markup.IAddCh
      */
     @Deprecated 
     public void AddChild(NetObject value) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAddChild to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAddChild to obtain the full interface.");
     }
 
     /**
@@ -360,7 +479,7 @@ public class TextBox extends TextBoxBase implements system.windows.markup.IAddCh
      */
     @Deprecated 
     public void AddText(java.lang.String text) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAddChild to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAddChild to obtain the full interface.");
     }
 
 
@@ -369,9 +488,20 @@ public class TextBox extends TextBoxBase implements system.windows.markup.IAddCh
     
     public int getCaretIndex() throws Throwable, system.ArgumentException, system.security.SecurityException, system.io.IOException, system.InvalidOperationException, system.ArgumentNullException, system.resources.MissingManifestResourceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCaretIndex = null;
         try {
-            return (int)classInstance.Get("CaretIndex");
+            retObjectCaretIndex = classInstance.Get("CaretIndex");
+            return (int)retObjectCaretIndex;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCaretIndex_ToString = retObjectCaretIndex == null ? "null" : retObjectCaretIndex.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectCaretIndexNumber = (java.lang.Number)retObjectCaretIndex;
+                return retObjectCaretIndexNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCaretIndex != null ? retObjectCaretIndex.getClass() : "null", retObjectCaretIndex_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -379,7 +509,7 @@ public class TextBox extends TextBoxBase implements system.windows.markup.IAddCh
 
     public void setCaretIndex(int CaretIndex) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CaretIndex", CaretIndex);
         } catch (JCNativeException jcne) {
@@ -389,9 +519,20 @@ public class TextBox extends TextBoxBase implements system.windows.markup.IAddCh
 
     public int getLineCount() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLineCount = null;
         try {
-            return (int)classInstance.Get("LineCount");
+            retObjectLineCount = classInstance.Get("LineCount");
+            return (int)retObjectLineCount;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectLineCount_ToString = retObjectLineCount == null ? "null" : retObjectLineCount.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectLineCountNumber = (java.lang.Number)retObjectLineCount;
+                return retObjectLineCountNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectLineCount != null ? retObjectLineCount.getClass() : "null", retObjectLineCount_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -399,9 +540,20 @@ public class TextBox extends TextBoxBase implements system.windows.markup.IAddCh
 
     public int getMaxLength() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxLength = null;
         try {
-            return (int)classInstance.Get("MaxLength");
+            retObjectMaxLength = classInstance.Get("MaxLength");
+            return (int)retObjectMaxLength;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaxLength_ToString = retObjectMaxLength == null ? "null" : retObjectMaxLength.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMaxLengthNumber = (java.lang.Number)retObjectMaxLength;
+                return retObjectMaxLengthNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxLength != null ? retObjectMaxLength.getClass() : "null", retObjectMaxLength_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -409,7 +561,7 @@ public class TextBox extends TextBoxBase implements system.windows.markup.IAddCh
 
     public void setMaxLength(int MaxLength) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaxLength", MaxLength);
         } catch (JCNativeException jcne) {
@@ -419,9 +571,20 @@ public class TextBox extends TextBoxBase implements system.windows.markup.IAddCh
 
     public int getMaxLines() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxLines = null;
         try {
-            return (int)classInstance.Get("MaxLines");
+            retObjectMaxLines = classInstance.Get("MaxLines");
+            return (int)retObjectMaxLines;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaxLines_ToString = retObjectMaxLines == null ? "null" : retObjectMaxLines.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMaxLinesNumber = (java.lang.Number)retObjectMaxLines;
+                return retObjectMaxLinesNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxLines != null ? retObjectMaxLines.getClass() : "null", retObjectMaxLines_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -429,7 +592,7 @@ public class TextBox extends TextBoxBase implements system.windows.markup.IAddCh
 
     public void setMaxLines(int MaxLines) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaxLines", MaxLines);
         } catch (JCNativeException jcne) {
@@ -439,9 +602,20 @@ public class TextBox extends TextBoxBase implements system.windows.markup.IAddCh
 
     public int getMinLines() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMinLines = null;
         try {
-            return (int)classInstance.Get("MinLines");
+            retObjectMinLines = classInstance.Get("MinLines");
+            return (int)retObjectMinLines;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMinLines_ToString = retObjectMinLines == null ? "null" : retObjectMinLines.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMinLinesNumber = (java.lang.Number)retObjectMinLines;
+                return retObjectMinLinesNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMinLines != null ? retObjectMinLines.getClass() : "null", retObjectMinLines_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -449,7 +623,7 @@ public class TextBox extends TextBoxBase implements system.windows.markup.IAddCh
 
     public void setMinLines(int MinLines) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MinLines", MinLines);
         } catch (JCNativeException jcne) {
@@ -459,9 +633,20 @@ public class TextBox extends TextBoxBase implements system.windows.markup.IAddCh
 
     public int getSelectionLength() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectionLength = null;
         try {
-            return (int)classInstance.Get("SelectionLength");
+            retObjectSelectionLength = classInstance.Get("SelectionLength");
+            return (int)retObjectSelectionLength;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSelectionLength_ToString = retObjectSelectionLength == null ? "null" : retObjectSelectionLength.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectSelectionLengthNumber = (java.lang.Number)retObjectSelectionLength;
+                return retObjectSelectionLengthNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectSelectionLength != null ? retObjectSelectionLength.getClass() : "null", retObjectSelectionLength_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -469,7 +654,7 @@ public class TextBox extends TextBoxBase implements system.windows.markup.IAddCh
 
     public void setSelectionLength(int SelectionLength) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SelectionLength", SelectionLength);
         } catch (JCNativeException jcne) {
@@ -479,9 +664,20 @@ public class TextBox extends TextBoxBase implements system.windows.markup.IAddCh
 
     public int getSelectionStart() throws Throwable, system.ArgumentException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.ArgumentNullException, system.InvalidOperationException, system.resources.MissingManifestResourceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectionStart = null;
         try {
-            return (int)classInstance.Get("SelectionStart");
+            retObjectSelectionStart = classInstance.Get("SelectionStart");
+            return (int)retObjectSelectionStart;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSelectionStart_ToString = retObjectSelectionStart == null ? "null" : retObjectSelectionStart.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectSelectionStartNumber = (java.lang.Number)retObjectSelectionStart;
+                return retObjectSelectionStartNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectSelectionStart != null ? retObjectSelectionStart.getClass() : "null", retObjectSelectionStart_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -489,7 +685,7 @@ public class TextBox extends TextBoxBase implements system.windows.markup.IAddCh
 
     public void setSelectionStart(int SelectionStart) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SelectionStart", SelectionStart);
         } catch (JCNativeException jcne) {
@@ -499,9 +695,13 @@ public class TextBox extends TextBoxBase implements system.windows.markup.IAddCh
 
     public java.lang.String getSelectedText() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectedText = null;
         try {
-            return (java.lang.String)classInstance.Get("SelectedText");
+            retObjectSelectedText = classInstance.Get("SelectedText");
+            return (java.lang.String)retObjectSelectedText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSelectedText != null ? retObjectSelectedText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -509,7 +709,7 @@ public class TextBox extends TextBoxBase implements system.windows.markup.IAddCh
 
     public void setSelectedText(java.lang.String SelectedText) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SelectedText", SelectedText);
         } catch (JCNativeException jcne) {
@@ -519,9 +719,13 @@ public class TextBox extends TextBoxBase implements system.windows.markup.IAddCh
 
     public java.lang.String getText() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectText = null;
         try {
-            return (java.lang.String)classInstance.Get("Text");
+            retObjectText = classInstance.Get("Text");
+            return (java.lang.String)retObjectText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectText != null ? retObjectText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -529,7 +733,7 @@ public class TextBox extends TextBoxBase implements system.windows.markup.IAddCh
 
     public void setText(java.lang.String Text) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Text", Text);
         } catch (JCNativeException jcne) {
@@ -539,10 +743,14 @@ public class TextBox extends TextBoxBase implements system.windows.markup.IAddCh
 
     public CharacterCasing getCharacterCasing() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCharacterCasing = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CharacterCasing");
+            retObjectCharacterCasing = classInstance.Get("CharacterCasing");
+            JCObject val = (JCObject)retObjectCharacterCasing;
             return new CharacterCasing(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCharacterCasing != null ? retObjectCharacterCasing.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -550,7 +758,7 @@ public class TextBox extends TextBoxBase implements system.windows.markup.IAddCh
 
     public void setCharacterCasing(CharacterCasing CharacterCasing) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CharacterCasing", CharacterCasing == null ? null : CharacterCasing.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -560,10 +768,14 @@ public class TextBox extends TextBoxBase implements system.windows.markup.IAddCh
 
     public Typography getTypography() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTypography = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Typography");
+            retObjectTypography = classInstance.Get("Typography");
+            JCObject val = (JCObject)retObjectTypography;
             return new Typography(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTypography != null ? retObjectTypography.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -571,10 +783,14 @@ public class TextBox extends TextBoxBase implements system.windows.markup.IAddCh
 
     public TextAlignment getTextAlignment() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTextAlignment = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TextAlignment");
+            retObjectTextAlignment = classInstance.Get("TextAlignment");
+            JCObject val = (JCObject)retObjectTextAlignment;
             return new TextAlignment(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTextAlignment != null ? retObjectTextAlignment.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -582,7 +798,7 @@ public class TextBox extends TextBoxBase implements system.windows.markup.IAddCh
 
     public void setTextAlignment(TextAlignment TextAlignment) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TextAlignment", TextAlignment == null ? null : TextAlignment.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -592,10 +808,14 @@ public class TextBox extends TextBoxBase implements system.windows.markup.IAddCh
 
     public TextDecorationCollection getTextDecorations() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTextDecorations = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TextDecorations");
+            retObjectTextDecorations = classInstance.Get("TextDecorations");
+            JCObject val = (JCObject)retObjectTextDecorations;
             return new TextDecorationCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTextDecorations != null ? retObjectTextDecorations.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -603,7 +823,7 @@ public class TextBox extends TextBoxBase implements system.windows.markup.IAddCh
 
     public void setTextDecorations(TextDecorationCollection TextDecorations) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TextDecorations", TextDecorations == null ? null : TextDecorations.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -613,10 +833,14 @@ public class TextBox extends TextBoxBase implements system.windows.markup.IAddCh
 
     public TextWrapping getTextWrapping() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTextWrapping = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TextWrapping");
+            retObjectTextWrapping = classInstance.Get("TextWrapping");
+            JCObject val = (JCObject)retObjectTextWrapping;
             return new TextWrapping(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTextWrapping != null ? retObjectTextWrapping.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -624,7 +848,7 @@ public class TextBox extends TextBoxBase implements system.windows.markup.IAddCh
 
     public void setTextWrapping(TextWrapping TextWrapping) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TextWrapping", TextWrapping == null ? null : TextWrapping.getJCOInstance());
         } catch (JCNativeException jcne) {

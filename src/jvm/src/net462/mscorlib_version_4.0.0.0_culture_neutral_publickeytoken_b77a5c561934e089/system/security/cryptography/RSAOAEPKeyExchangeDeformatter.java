@@ -173,10 +173,12 @@ public class RSAOAEPKeyExchangeDeformatter extends AsymmetricKeyExchangeDeformat
     
     public byte[] DecryptKeyExchange(byte[] rgbData) throws Throwable, system.security.cryptography.CryptographicUnexpectedOperationException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.IndexOutOfRangeException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.ApplicationException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.TypeLoadException, system.io.IOException, system.security.cryptography.CryptographicException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDecryptKeyExchange = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("DecryptKeyExchange", (java.lang.Object)rgbData);
+            retObjectDecryptKeyExchange = classInstance.Invoke("DecryptKeyExchange", (java.lang.Object)rgbData);
+            JCObject resultingObjects = (JCObject)retObjectDecryptKeyExchange;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -185,6 +187,8 @@ public class RSAOAEPKeyExchangeDeformatter extends AsymmetricKeyExchangeDeformat
 				resultingArray[indexDecryptKeyExchange] = (byte)resultingArrayList.get(indexDecryptKeyExchange);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectDecryptKeyExchange != null ? retObjectDecryptKeyExchange.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,10 +196,12 @@ public class RSAOAEPKeyExchangeDeformatter extends AsymmetricKeyExchangeDeformat
 
     public byte[] DecryptKeyExchange(JCORefOut dupParam0) throws Throwable, system.security.cryptography.CryptographicUnexpectedOperationException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.IndexOutOfRangeException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.ApplicationException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.TypeLoadException, system.io.IOException, system.security.cryptography.CryptographicException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDecryptKeyExchange = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("DecryptKeyExchange", (java.lang.Object)dupParam0.getJCRefOut());
+            retObjectDecryptKeyExchange = classInstance.Invoke("DecryptKeyExchange", (java.lang.Object)dupParam0.getJCRefOut());
+            JCObject resultingObjects = (JCObject)retObjectDecryptKeyExchange;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -204,6 +210,8 @@ public class RSAOAEPKeyExchangeDeformatter extends AsymmetricKeyExchangeDeformat
 				resultingArray[indexDecryptKeyExchange] = (byte)resultingArrayList.get(indexDecryptKeyExchange);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectDecryptKeyExchange != null ? retObjectDecryptKeyExchange.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -211,7 +219,7 @@ public class RSAOAEPKeyExchangeDeformatter extends AsymmetricKeyExchangeDeformat
 
     public void SetKey(AsymmetricAlgorithm key) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetKey", key == null ? null : key.getJCOInstance());
         } catch (JCNativeException jcne) {

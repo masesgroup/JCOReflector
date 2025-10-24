@@ -161,9 +161,13 @@ public class ByteEqualityComparer extends NetObject  {
     
     public boolean Equals(byte x, byte y) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEquals = null;
         try {
-            return (boolean)classInstance.Invoke("Equals", x, y);
+            retObjectEquals = classInstance.Invoke("Equals", x, y);
+            return (boolean)retObjectEquals;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectEquals != null ? retObjectEquals.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,9 +175,20 @@ public class ByteEqualityComparer extends NetObject  {
 
     public int GetHashCode(byte b) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetHashCode = null;
         try {
-            return (int)classInstance.Invoke("GetHashCode", b);
+            retObjectGetHashCode = classInstance.Invoke("GetHashCode", b);
+            return (int)retObjectGetHashCode;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetHashCode_ToString = retObjectGetHashCode == null ? "null" : retObjectGetHashCode.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetHashCodeNumber = (java.lang.Number)retObjectGetHashCode;
+                return retObjectGetHashCodeNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetHashCode != null ? retObjectGetHashCode.getClass() : "null", retObjectGetHashCode_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

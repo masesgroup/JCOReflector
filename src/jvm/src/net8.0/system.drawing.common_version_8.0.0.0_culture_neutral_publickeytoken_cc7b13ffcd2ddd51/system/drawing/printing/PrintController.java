@@ -157,10 +157,14 @@ public class PrintController extends NetObject  {
     
     public Graphics OnStartPage(PrintDocument document, PrintPageEventArgs e) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOnStartPage = null;
         try {
-            JCObject objOnStartPage = (JCObject)classInstance.Invoke("OnStartPage", document == null ? null : document.getJCOInstance(), e == null ? null : e.getJCOInstance());
+            retObjectOnStartPage = classInstance.Invoke("OnStartPage", document == null ? null : document.getJCOInstance(), e == null ? null : e.getJCOInstance());
+            JCObject objOnStartPage = (JCObject)retObjectOnStartPage;
             return new Graphics(objOnStartPage);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOnStartPage != null ? retObjectOnStartPage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -168,7 +172,7 @@ public class PrintController extends NetObject  {
 
     public void OnEndPage(PrintDocument document, PrintPageEventArgs e) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("OnEndPage", document == null ? null : document.getJCOInstance(), e == null ? null : e.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -178,7 +182,7 @@ public class PrintController extends NetObject  {
 
     public void OnEndPrint(PrintDocument document, PrintEventArgs e) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("OnEndPrint", document == null ? null : document.getJCOInstance(), e == null ? null : e.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -188,7 +192,7 @@ public class PrintController extends NetObject  {
 
     public void OnStartPrint(PrintDocument document, PrintEventArgs e) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.ArgumentNullException, system.PlatformNotSupportedException, system.drawing.printing.InvalidPrinterException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.NotSupportedException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("OnStartPrint", document == null ? null : document.getJCOInstance(), e == null ? null : e.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -202,9 +206,13 @@ public class PrintController extends NetObject  {
     
     public boolean getIsPreview() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsPreview = null;
         try {
-            return (boolean)classInstance.Get("IsPreview");
+            retObjectIsPreview = classInstance.Get("IsPreview");
+            return (boolean)retObjectIsPreview;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsPreview != null ? retObjectIsPreview.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -209,9 +209,20 @@ public class OracleNumber extends ValueType  {
     
     public int CompareTo(NetObject obj) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCompareTo = null;
         try {
-            return (int)classInstance.Invoke("CompareTo", obj == null ? null : obj.getJCOInstance());
+            retObjectCompareTo = classInstance.Invoke("CompareTo", obj == null ? null : obj.getJCOInstance());
+            return (int)retObjectCompareTo;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCompareTo_ToString = retObjectCompareTo == null ? "null" : retObjectCompareTo.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectCompareToNumber = (java.lang.Number)retObjectCompareTo;
+                return retObjectCompareToNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCompareTo != null ? retObjectCompareTo.getClass() : "null", retObjectCompareTo_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -219,10 +230,14 @@ public class OracleNumber extends ValueType  {
 
     public static OracleBoolean Equals(OracleNumber x, OracleNumber y) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentNullException, system.globalization.CultureNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectEquals = null;
         try {
-            JCObject objEquals = (JCObject)classType.Invoke("Equals", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            retObjectEquals = classType.Invoke("Equals", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            JCObject objEquals = (JCObject)retObjectEquals;
             return new OracleBoolean(objEquals);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEquals != null ? retObjectEquals.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -230,10 +245,14 @@ public class OracleNumber extends ValueType  {
 
     public static OracleBoolean GreaterThan(OracleNumber x, OracleNumber y) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentNullException, system.globalization.CultureNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGreaterThan = null;
         try {
-            JCObject objGreaterThan = (JCObject)classType.Invoke("GreaterThan", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            retObjectGreaterThan = classType.Invoke("GreaterThan", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            JCObject objGreaterThan = (JCObject)retObjectGreaterThan;
             return new OracleBoolean(objGreaterThan);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGreaterThan != null ? retObjectGreaterThan.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -241,10 +260,14 @@ public class OracleNumber extends ValueType  {
 
     public static OracleBoolean GreaterThanOrEqual(OracleNumber x, OracleNumber y) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentNullException, system.globalization.CultureNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGreaterThanOrEqual = null;
         try {
-            JCObject objGreaterThanOrEqual = (JCObject)classType.Invoke("GreaterThanOrEqual", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            retObjectGreaterThanOrEqual = classType.Invoke("GreaterThanOrEqual", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            JCObject objGreaterThanOrEqual = (JCObject)retObjectGreaterThanOrEqual;
             return new OracleBoolean(objGreaterThanOrEqual);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGreaterThanOrEqual != null ? retObjectGreaterThanOrEqual.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -252,10 +275,14 @@ public class OracleNumber extends ValueType  {
 
     public static OracleBoolean LessThan(OracleNumber x, OracleNumber y) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentNullException, system.globalization.CultureNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLessThan = null;
         try {
-            JCObject objLessThan = (JCObject)classType.Invoke("LessThan", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            retObjectLessThan = classType.Invoke("LessThan", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            JCObject objLessThan = (JCObject)retObjectLessThan;
             return new OracleBoolean(objLessThan);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLessThan != null ? retObjectLessThan.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -263,10 +290,14 @@ public class OracleNumber extends ValueType  {
 
     public static OracleBoolean LessThanOrEqual(OracleNumber x, OracleNumber y) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentNullException, system.globalization.CultureNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLessThanOrEqual = null;
         try {
-            JCObject objLessThanOrEqual = (JCObject)classType.Invoke("LessThanOrEqual", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            retObjectLessThanOrEqual = classType.Invoke("LessThanOrEqual", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            JCObject objLessThanOrEqual = (JCObject)retObjectLessThanOrEqual;
             return new OracleBoolean(objLessThanOrEqual);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLessThanOrEqual != null ? retObjectLessThanOrEqual.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -274,10 +305,14 @@ public class OracleNumber extends ValueType  {
 
     public static OracleBoolean NotEquals(OracleNumber x, OracleNumber y) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentNullException, system.globalization.CultureNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectNotEquals = null;
         try {
-            JCObject objNotEquals = (JCObject)classType.Invoke("NotEquals", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            retObjectNotEquals = classType.Invoke("NotEquals", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            JCObject objNotEquals = (JCObject)retObjectNotEquals;
             return new OracleBoolean(objNotEquals);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNotEquals != null ? retObjectNotEquals.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -285,10 +320,14 @@ public class OracleNumber extends ValueType  {
 
     public static OracleNumber Abs(OracleNumber n) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAbs = null;
         try {
-            JCObject objAbs = (JCObject)classType.Invoke("Abs", n == null ? null : n.getJCOInstance());
+            retObjectAbs = classType.Invoke("Abs", n == null ? null : n.getJCOInstance());
+            JCObject objAbs = (JCObject)retObjectAbs;
             return new OracleNumber(objAbs);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAbs != null ? retObjectAbs.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -296,10 +335,14 @@ public class OracleNumber extends ValueType  {
 
     public static OracleNumber Acos(OracleNumber n) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAcos = null;
         try {
-            JCObject objAcos = (JCObject)classType.Invoke("Acos", n == null ? null : n.getJCOInstance());
+            retObjectAcos = classType.Invoke("Acos", n == null ? null : n.getJCOInstance());
+            JCObject objAcos = (JCObject)retObjectAcos;
             return new OracleNumber(objAcos);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAcos != null ? retObjectAcos.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -307,10 +350,14 @@ public class OracleNumber extends ValueType  {
 
     public static OracleNumber Add(OracleNumber x, OracleNumber y) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException, system.globalization.CultureNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAdd = null;
         try {
-            JCObject objAdd = (JCObject)classType.Invoke("Add", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            retObjectAdd = classType.Invoke("Add", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            JCObject objAdd = (JCObject)retObjectAdd;
             return new OracleNumber(objAdd);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAdd != null ? retObjectAdd.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -318,10 +365,14 @@ public class OracleNumber extends ValueType  {
 
     public static OracleNumber Asin(OracleNumber n) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAsin = null;
         try {
-            JCObject objAsin = (JCObject)classType.Invoke("Asin", n == null ? null : n.getJCOInstance());
+            retObjectAsin = classType.Invoke("Asin", n == null ? null : n.getJCOInstance());
+            JCObject objAsin = (JCObject)retObjectAsin;
             return new OracleNumber(objAsin);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAsin != null ? retObjectAsin.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -329,10 +380,14 @@ public class OracleNumber extends ValueType  {
 
     public static OracleNumber Atan(OracleNumber n) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAtan = null;
         try {
-            JCObject objAtan = (JCObject)classType.Invoke("Atan", n == null ? null : n.getJCOInstance());
+            retObjectAtan = classType.Invoke("Atan", n == null ? null : n.getJCOInstance());
+            JCObject objAtan = (JCObject)retObjectAtan;
             return new OracleNumber(objAtan);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAtan != null ? retObjectAtan.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -340,10 +395,14 @@ public class OracleNumber extends ValueType  {
 
     public static OracleNumber Atan2(OracleNumber y, OracleNumber x) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAtan2 = null;
         try {
-            JCObject objAtan2 = (JCObject)classType.Invoke("Atan2", y == null ? null : y.getJCOInstance(), x == null ? null : x.getJCOInstance());
+            retObjectAtan2 = classType.Invoke("Atan2", y == null ? null : y.getJCOInstance(), x == null ? null : x.getJCOInstance());
+            JCObject objAtan2 = (JCObject)retObjectAtan2;
             return new OracleNumber(objAtan2);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAtan2 != null ? retObjectAtan2.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -351,10 +410,14 @@ public class OracleNumber extends ValueType  {
 
     public static OracleNumber Ceiling(OracleNumber n) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCeiling = null;
         try {
-            JCObject objCeiling = (JCObject)classType.Invoke("Ceiling", n == null ? null : n.getJCOInstance());
+            retObjectCeiling = classType.Invoke("Ceiling", n == null ? null : n.getJCOInstance());
+            JCObject objCeiling = (JCObject)retObjectCeiling;
             return new OracleNumber(objCeiling);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCeiling != null ? retObjectCeiling.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -362,10 +425,14 @@ public class OracleNumber extends ValueType  {
 
     public static OracleNumber Cos(OracleNumber n) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCos = null;
         try {
-            JCObject objCos = (JCObject)classType.Invoke("Cos", n == null ? null : n.getJCOInstance());
+            retObjectCos = classType.Invoke("Cos", n == null ? null : n.getJCOInstance());
+            JCObject objCos = (JCObject)retObjectCos;
             return new OracleNumber(objCos);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCos != null ? retObjectCos.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -373,10 +440,14 @@ public class OracleNumber extends ValueType  {
 
     public static OracleNumber Cosh(OracleNumber n) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCosh = null;
         try {
-            JCObject objCosh = (JCObject)classType.Invoke("Cosh", n == null ? null : n.getJCOInstance());
+            retObjectCosh = classType.Invoke("Cosh", n == null ? null : n.getJCOInstance());
+            JCObject objCosh = (JCObject)retObjectCosh;
             return new OracleNumber(objCosh);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCosh != null ? retObjectCosh.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -384,10 +455,14 @@ public class OracleNumber extends ValueType  {
 
     public static OracleNumber Divide(OracleNumber x, OracleNumber y) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException, system.globalization.CultureNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDivide = null;
         try {
-            JCObject objDivide = (JCObject)classType.Invoke("Divide", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            retObjectDivide = classType.Invoke("Divide", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            JCObject objDivide = (JCObject)retObjectDivide;
             return new OracleNumber(objDivide);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDivide != null ? retObjectDivide.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -395,10 +470,14 @@ public class OracleNumber extends ValueType  {
 
     public static OracleNumber Exp(OracleNumber p) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectExp = null;
         try {
-            JCObject objExp = (JCObject)classType.Invoke("Exp", p == null ? null : p.getJCOInstance());
+            retObjectExp = classType.Invoke("Exp", p == null ? null : p.getJCOInstance());
+            JCObject objExp = (JCObject)retObjectExp;
             return new OracleNumber(objExp);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExp != null ? retObjectExp.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -406,10 +485,14 @@ public class OracleNumber extends ValueType  {
 
     public static OracleNumber Floor(OracleNumber n) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFloor = null;
         try {
-            JCObject objFloor = (JCObject)classType.Invoke("Floor", n == null ? null : n.getJCOInstance());
+            retObjectFloor = classType.Invoke("Floor", n == null ? null : n.getJCOInstance());
+            JCObject objFloor = (JCObject)retObjectFloor;
             return new OracleNumber(objFloor);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFloor != null ? retObjectFloor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -417,10 +500,14 @@ public class OracleNumber extends ValueType  {
 
     public static OracleNumber Log(OracleNumber n) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLog = null;
         try {
-            JCObject objLog = (JCObject)classType.Invoke("Log", n == null ? null : n.getJCOInstance());
+            retObjectLog = classType.Invoke("Log", n == null ? null : n.getJCOInstance());
+            JCObject objLog = (JCObject)retObjectLog;
             return new OracleNumber(objLog);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLog != null ? retObjectLog.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -428,10 +515,14 @@ public class OracleNumber extends ValueType  {
 
     public static OracleNumber Log(OracleNumber n, int newBase) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException, system.globalization.CultureNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLog = null;
         try {
-            JCObject objLog = (JCObject)classType.Invoke("Log", n == null ? null : n.getJCOInstance(), newBase);
+            retObjectLog = classType.Invoke("Log", n == null ? null : n.getJCOInstance(), newBase);
+            JCObject objLog = (JCObject)retObjectLog;
             return new OracleNumber(objLog);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLog != null ? retObjectLog.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -439,10 +530,14 @@ public class OracleNumber extends ValueType  {
 
     public static OracleNumber Log(OracleNumber n, OracleNumber newBase) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLog = null;
         try {
-            JCObject objLog = (JCObject)classType.Invoke("Log", n == null ? null : n.getJCOInstance(), newBase == null ? null : newBase.getJCOInstance());
+            retObjectLog = classType.Invoke("Log", n == null ? null : n.getJCOInstance(), newBase == null ? null : newBase.getJCOInstance());
+            JCObject objLog = (JCObject)retObjectLog;
             return new OracleNumber(objLog);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLog != null ? retObjectLog.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -450,10 +545,14 @@ public class OracleNumber extends ValueType  {
 
     public static OracleNumber Log10(OracleNumber n) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException, system.globalization.CultureNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLog10 = null;
         try {
-            JCObject objLog10 = (JCObject)classType.Invoke("Log10", n == null ? null : n.getJCOInstance());
+            retObjectLog10 = classType.Invoke("Log10", n == null ? null : n.getJCOInstance());
+            JCObject objLog10 = (JCObject)retObjectLog10;
             return new OracleNumber(objLog10);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLog10 != null ? retObjectLog10.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -461,10 +560,14 @@ public class OracleNumber extends ValueType  {
 
     public static OracleNumber Max(OracleNumber x, OracleNumber y) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentNullException, system.globalization.CultureNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMax = null;
         try {
-            JCObject objMax = (JCObject)classType.Invoke("Max", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            retObjectMax = classType.Invoke("Max", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            JCObject objMax = (JCObject)retObjectMax;
             return new OracleNumber(objMax);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMax != null ? retObjectMax.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -472,10 +575,14 @@ public class OracleNumber extends ValueType  {
 
     public static OracleNumber Min(OracleNumber x, OracleNumber y) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentNullException, system.globalization.CultureNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMin = null;
         try {
-            JCObject objMin = (JCObject)classType.Invoke("Min", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            retObjectMin = classType.Invoke("Min", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            JCObject objMin = (JCObject)retObjectMin;
             return new OracleNumber(objMin);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMin != null ? retObjectMin.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -483,10 +590,14 @@ public class OracleNumber extends ValueType  {
 
     public static OracleNumber Modulo(OracleNumber x, OracleNumber y) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException, system.globalization.CultureNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectModulo = null;
         try {
-            JCObject objModulo = (JCObject)classType.Invoke("Modulo", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            retObjectModulo = classType.Invoke("Modulo", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            JCObject objModulo = (JCObject)retObjectModulo;
             return new OracleNumber(objModulo);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectModulo != null ? retObjectModulo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -494,10 +605,14 @@ public class OracleNumber extends ValueType  {
 
     public static OracleNumber Multiply(OracleNumber x, OracleNumber y) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException, system.globalization.CultureNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMultiply = null;
         try {
-            JCObject objMultiply = (JCObject)classType.Invoke("Multiply", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            retObjectMultiply = classType.Invoke("Multiply", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            JCObject objMultiply = (JCObject)retObjectMultiply;
             return new OracleNumber(objMultiply);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMultiply != null ? retObjectMultiply.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -505,10 +620,14 @@ public class OracleNumber extends ValueType  {
 
     public static OracleNumber Negate(OracleNumber x) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException, system.globalization.CultureNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectNegate = null;
         try {
-            JCObject objNegate = (JCObject)classType.Invoke("Negate", x == null ? null : x.getJCOInstance());
+            retObjectNegate = classType.Invoke("Negate", x == null ? null : x.getJCOInstance());
+            JCObject objNegate = (JCObject)retObjectNegate;
             return new OracleNumber(objNegate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNegate != null ? retObjectNegate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -516,10 +635,14 @@ public class OracleNumber extends ValueType  {
 
     public static OracleNumber Parse(java.lang.String s) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException, system.FormatException, system.OverflowException, system.globalization.CultureNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectParse = null;
         try {
-            JCObject objParse = (JCObject)classType.Invoke("Parse", s);
+            retObjectParse = classType.Invoke("Parse", s);
+            JCObject objParse = (JCObject)retObjectParse;
             return new OracleNumber(objParse);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParse != null ? retObjectParse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -527,10 +650,14 @@ public class OracleNumber extends ValueType  {
 
     public static OracleNumber Pow(OracleNumber x, int y) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectPow = null;
         try {
-            JCObject objPow = (JCObject)classType.Invoke("Pow", x == null ? null : x.getJCOInstance(), y);
+            retObjectPow = classType.Invoke("Pow", x == null ? null : x.getJCOInstance(), y);
+            JCObject objPow = (JCObject)retObjectPow;
             return new OracleNumber(objPow);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPow != null ? retObjectPow.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -538,10 +665,14 @@ public class OracleNumber extends ValueType  {
 
     public static OracleNumber Pow(OracleNumber x, OracleNumber y) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectPow = null;
         try {
-            JCObject objPow = (JCObject)classType.Invoke("Pow", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            retObjectPow = classType.Invoke("Pow", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            JCObject objPow = (JCObject)retObjectPow;
             return new OracleNumber(objPow);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPow != null ? retObjectPow.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -549,10 +680,14 @@ public class OracleNumber extends ValueType  {
 
     public static OracleNumber Round(OracleNumber n, int position) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectRound = null;
         try {
-            JCObject objRound = (JCObject)classType.Invoke("Round", n == null ? null : n.getJCOInstance(), position);
+            retObjectRound = classType.Invoke("Round", n == null ? null : n.getJCOInstance(), position);
+            JCObject objRound = (JCObject)retObjectRound;
             return new OracleNumber(objRound);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRound != null ? retObjectRound.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -560,10 +695,14 @@ public class OracleNumber extends ValueType  {
 
     public static OracleNumber Shift(OracleNumber n, int digits) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.globalization.CultureNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectShift = null;
         try {
-            JCObject objShift = (JCObject)classType.Invoke("Shift", n == null ? null : n.getJCOInstance(), digits);
+            retObjectShift = classType.Invoke("Shift", n == null ? null : n.getJCOInstance(), digits);
+            JCObject objShift = (JCObject)retObjectShift;
             return new OracleNumber(objShift);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectShift != null ? retObjectShift.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -571,10 +710,14 @@ public class OracleNumber extends ValueType  {
 
     public static OracleNumber Sign(OracleNumber n) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.globalization.CultureNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSign = null;
         try {
-            JCObject objSign = (JCObject)classType.Invoke("Sign", n == null ? null : n.getJCOInstance());
+            retObjectSign = classType.Invoke("Sign", n == null ? null : n.getJCOInstance());
+            JCObject objSign = (JCObject)retObjectSign;
             return new OracleNumber(objSign);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSign != null ? retObjectSign.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -582,10 +725,14 @@ public class OracleNumber extends ValueType  {
 
     public static OracleNumber Sin(OracleNumber n) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSin = null;
         try {
-            JCObject objSin = (JCObject)classType.Invoke("Sin", n == null ? null : n.getJCOInstance());
+            retObjectSin = classType.Invoke("Sin", n == null ? null : n.getJCOInstance());
+            JCObject objSin = (JCObject)retObjectSin;
             return new OracleNumber(objSin);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSin != null ? retObjectSin.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -593,10 +740,14 @@ public class OracleNumber extends ValueType  {
 
     public static OracleNumber Sinh(OracleNumber n) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSinh = null;
         try {
-            JCObject objSinh = (JCObject)classType.Invoke("Sinh", n == null ? null : n.getJCOInstance());
+            retObjectSinh = classType.Invoke("Sinh", n == null ? null : n.getJCOInstance());
+            JCObject objSinh = (JCObject)retObjectSinh;
             return new OracleNumber(objSinh);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSinh != null ? retObjectSinh.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -604,10 +755,14 @@ public class OracleNumber extends ValueType  {
 
     public static OracleNumber Sqrt(OracleNumber n) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSqrt = null;
         try {
-            JCObject objSqrt = (JCObject)classType.Invoke("Sqrt", n == null ? null : n.getJCOInstance());
+            retObjectSqrt = classType.Invoke("Sqrt", n == null ? null : n.getJCOInstance());
+            JCObject objSqrt = (JCObject)retObjectSqrt;
             return new OracleNumber(objSqrt);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSqrt != null ? retObjectSqrt.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -615,10 +770,14 @@ public class OracleNumber extends ValueType  {
 
     public static OracleNumber Subtract(OracleNumber x, OracleNumber y) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException, system.globalization.CultureNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSubtract = null;
         try {
-            JCObject objSubtract = (JCObject)classType.Invoke("Subtract", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            retObjectSubtract = classType.Invoke("Subtract", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            JCObject objSubtract = (JCObject)retObjectSubtract;
             return new OracleNumber(objSubtract);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSubtract != null ? retObjectSubtract.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -626,10 +785,14 @@ public class OracleNumber extends ValueType  {
 
     public static OracleNumber Tan(OracleNumber n) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTan = null;
         try {
-            JCObject objTan = (JCObject)classType.Invoke("Tan", n == null ? null : n.getJCOInstance());
+            retObjectTan = classType.Invoke("Tan", n == null ? null : n.getJCOInstance());
+            JCObject objTan = (JCObject)retObjectTan;
             return new OracleNumber(objTan);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTan != null ? retObjectTan.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -637,10 +800,14 @@ public class OracleNumber extends ValueType  {
 
     public static OracleNumber Tanh(OracleNumber n) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTanh = null;
         try {
-            JCObject objTanh = (JCObject)classType.Invoke("Tanh", n == null ? null : n.getJCOInstance());
+            retObjectTanh = classType.Invoke("Tanh", n == null ? null : n.getJCOInstance());
+            JCObject objTanh = (JCObject)retObjectTanh;
             return new OracleNumber(objTanh);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTanh != null ? retObjectTanh.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -648,10 +815,14 @@ public class OracleNumber extends ValueType  {
 
     public static OracleNumber Truncate(OracleNumber n, int position) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.globalization.CultureNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTruncate = null;
         try {
-            JCObject objTruncate = (JCObject)classType.Invoke("Truncate", n == null ? null : n.getJCOInstance(), position);
+            retObjectTruncate = classType.Invoke("Truncate", n == null ? null : n.getJCOInstance(), position);
+            JCObject objTruncate = (JCObject)retObjectTruncate;
             return new OracleNumber(objTruncate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTruncate != null ? retObjectTruncate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -663,9 +834,13 @@ public class OracleNumber extends ValueType  {
     
     public boolean getIsNull() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsNull = null;
         try {
-            return (boolean)classInstance.Get("IsNull");
+            retObjectIsNull = classInstance.Get("IsNull");
+            return (boolean)retObjectIsNull;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsNull != null ? retObjectIsNull.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -673,10 +848,14 @@ public class OracleNumber extends ValueType  {
 
     public Decimal getValue() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValue = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Value");
+            retObjectValue = classInstance.Get("Value");
+            JCObject val = (JCObject)retObjectValue;
             return new Decimal(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectValue != null ? retObjectValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

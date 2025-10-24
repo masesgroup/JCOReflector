@@ -170,9 +170,13 @@ public class TargetFrameworkAttribute extends Attribute  {
     
     public java.lang.String getFrameworkDisplayName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFrameworkDisplayName = null;
         try {
-            return (java.lang.String)classInstance.Get("FrameworkDisplayName");
+            retObjectFrameworkDisplayName = classInstance.Get("FrameworkDisplayName");
+            return (java.lang.String)retObjectFrameworkDisplayName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectFrameworkDisplayName != null ? retObjectFrameworkDisplayName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,7 +184,7 @@ public class TargetFrameworkAttribute extends Attribute  {
 
     public void setFrameworkDisplayName(java.lang.String FrameworkDisplayName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FrameworkDisplayName", FrameworkDisplayName);
         } catch (JCNativeException jcne) {
@@ -190,9 +194,13 @@ public class TargetFrameworkAttribute extends Attribute  {
 
     public java.lang.String getFrameworkName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFrameworkName = null;
         try {
-            return (java.lang.String)classInstance.Get("FrameworkName");
+            retObjectFrameworkName = classInstance.Get("FrameworkName");
+            return (java.lang.String)retObjectFrameworkName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectFrameworkName != null ? retObjectFrameworkName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

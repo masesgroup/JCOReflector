@@ -158,9 +158,13 @@ public class MemberDescriptor extends NetObject  {
     
     public boolean getDesignTimeOnly() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDesignTimeOnly = null;
         try {
-            return (boolean)classInstance.Get("DesignTimeOnly");
+            retObjectDesignTimeOnly = classInstance.Get("DesignTimeOnly");
+            return (boolean)retObjectDesignTimeOnly;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectDesignTimeOnly != null ? retObjectDesignTimeOnly.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -168,9 +172,13 @@ public class MemberDescriptor extends NetObject  {
 
     public boolean getIsBrowsable() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsBrowsable = null;
         try {
-            return (boolean)classInstance.Get("IsBrowsable");
+            retObjectIsBrowsable = classInstance.Get("IsBrowsable");
+            return (boolean)retObjectIsBrowsable;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsBrowsable != null ? retObjectIsBrowsable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,10 +186,14 @@ public class MemberDescriptor extends NetObject  {
 
     public AttributeCollection getAttributes() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAttributes = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Attributes");
+            retObjectAttributes = classInstance.Get("Attributes");
+            JCObject val = (JCObject)retObjectAttributes;
             return new AttributeCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAttributes != null ? retObjectAttributes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -189,9 +201,13 @@ public class MemberDescriptor extends NetObject  {
 
     public java.lang.String getCategory() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.security.SecurityException, system.IndexOutOfRangeException, system.NotImplementedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCategory = null;
         try {
-            return (java.lang.String)classInstance.Get("Category");
+            retObjectCategory = classInstance.Get("Category");
+            return (java.lang.String)retObjectCategory;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectCategory != null ? retObjectCategory.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -199,9 +215,13 @@ public class MemberDescriptor extends NetObject  {
 
     public java.lang.String getDescription() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDescription = null;
         try {
-            return (java.lang.String)classInstance.Get("Description");
+            retObjectDescription = classInstance.Get("Description");
+            return (java.lang.String)retObjectDescription;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDescription != null ? retObjectDescription.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -209,9 +229,13 @@ public class MemberDescriptor extends NetObject  {
 
     public java.lang.String getDisplayName() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDisplayName = null;
         try {
-            return (java.lang.String)classInstance.Get("DisplayName");
+            retObjectDisplayName = classInstance.Get("DisplayName");
+            return (java.lang.String)retObjectDisplayName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDisplayName != null ? retObjectDisplayName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -219,9 +243,13 @@ public class MemberDescriptor extends NetObject  {
 
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectName = null;
         try {
-            return (java.lang.String)classInstance.Get("Name");
+            retObjectName = classInstance.Get("Name");
+            return (java.lang.String)retObjectName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectName != null ? retObjectName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

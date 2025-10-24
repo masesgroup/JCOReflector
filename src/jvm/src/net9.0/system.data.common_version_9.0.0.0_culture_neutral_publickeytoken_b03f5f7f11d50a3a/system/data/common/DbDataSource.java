@@ -157,10 +157,14 @@ public class DbDataSource extends NetObject implements AutoCloseable {
     
     public DbBatch CreateBatch() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateBatch = null;
         try {
-            JCObject objCreateBatch = (JCObject)classInstance.Invoke("CreateBatch");
+            retObjectCreateBatch = classInstance.Invoke("CreateBatch");
+            JCObject objCreateBatch = (JCObject)retObjectCreateBatch;
             return new DbBatch(objCreateBatch);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateBatch != null ? retObjectCreateBatch.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -168,10 +172,14 @@ public class DbDataSource extends NetObject implements AutoCloseable {
 
     public DbCommand CreateCommand(java.lang.String commandText) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateCommand = null;
         try {
-            JCObject objCreateCommand = (JCObject)classInstance.Invoke("CreateCommand", commandText);
+            retObjectCreateCommand = classInstance.Invoke("CreateCommand", commandText);
+            JCObject objCreateCommand = (JCObject)retObjectCreateCommand;
             return new DbCommand(objCreateCommand);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateCommand != null ? retObjectCreateCommand.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,10 +187,14 @@ public class DbDataSource extends NetObject implements AutoCloseable {
 
     public DbConnection CreateConnection() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateConnection = null;
         try {
-            JCObject objCreateConnection = (JCObject)classInstance.Invoke("CreateConnection");
+            retObjectCreateConnection = classInstance.Invoke("CreateConnection");
+            JCObject objCreateConnection = (JCObject)retObjectCreateConnection;
             return new DbConnection(objCreateConnection);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateConnection != null ? retObjectCreateConnection.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,10 +202,14 @@ public class DbDataSource extends NetObject implements AutoCloseable {
 
     public DbConnection OpenConnection() throws Throwable, system.NotSupportedException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOpenConnection = null;
         try {
-            JCObject objOpenConnection = (JCObject)classInstance.Invoke("OpenConnection");
+            retObjectOpenConnection = classInstance.Invoke("OpenConnection");
+            JCObject objOpenConnection = (JCObject)retObjectOpenConnection;
             return new DbConnection(objOpenConnection);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOpenConnection != null ? retObjectOpenConnection.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,10 +217,14 @@ public class DbDataSource extends NetObject implements AutoCloseable {
 
     public ValueTask DisposeAsync() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDisposeAsync = null;
         try {
-            JCObject objDisposeAsync = (JCObject)classInstance.Invoke("DisposeAsync");
+            retObjectDisposeAsync = classInstance.Invoke("DisposeAsync");
+            JCObject objDisposeAsync = (JCObject)retObjectDisposeAsync;
             return new ValueTask(objDisposeAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDisposeAsync != null ? retObjectDisposeAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -212,7 +232,7 @@ public class DbDataSource extends NetObject implements AutoCloseable {
 
     public void Dispose() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
@@ -223,7 +243,7 @@ public class DbDataSource extends NetObject implements AutoCloseable {
     public void close() throws Exception {
         try {
             if (classInstance == null)
-                throw new UnsupportedOperationException("classInstance is null.");
+                throw new java.lang.UnsupportedOperationException("classInstance is null.");
             try {
                 classInstance.Invoke("Dispose");
             }
@@ -239,9 +259,13 @@ public class DbDataSource extends NetObject implements AutoCloseable {
     
     public java.lang.String getConnectionString() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConnectionString = null;
         try {
-            return (java.lang.String)classInstance.Get("ConnectionString");
+            retObjectConnectionString = classInstance.Get("ConnectionString");
+            return (java.lang.String)retObjectConnectionString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectConnectionString != null ? retObjectConnectionString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

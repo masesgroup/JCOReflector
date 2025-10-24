@@ -166,9 +166,13 @@ public class DeniedValuesAttribute extends ValidationAttribute  {
     
     public boolean IsValid(NetObject value) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsValid = null;
         try {
-            return (boolean)classInstance.Invoke("IsValid", value == null ? null : value.getJCOInstance());
+            retObjectIsValid = classInstance.Invoke("IsValid", value == null ? null : value.getJCOInstance());
+            return (boolean)retObjectIsValid;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsValid != null ? retObjectIsValid.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,16 +184,20 @@ public class DeniedValuesAttribute extends ValidationAttribute  {
     
     public final NetObject[] getValues() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValues = null;
         try {
             ArrayList<NetObject> resultingArrayList = new ArrayList<NetObject>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("Values");
+            retObjectValues = classInstance.Get("Values");
+            JCObject resultingObjects = (JCObject)retObjectValues;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new NetObject(resultingObject));
             }
             NetObject[] resultingArray = new NetObject[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectValues != null ? retObjectValues.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

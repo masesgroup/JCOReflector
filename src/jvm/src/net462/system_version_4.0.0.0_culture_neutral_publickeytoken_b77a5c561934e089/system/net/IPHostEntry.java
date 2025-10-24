@@ -166,16 +166,20 @@ public class IPHostEntry extends NetObject  {
     
     public final IPAddress[] getAddressList() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddressList = null;
         try {
             ArrayList<IPAddress> resultingArrayList = new ArrayList<IPAddress>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("AddressList");
+            retObjectAddressList = classInstance.Get("AddressList");
+            JCObject resultingObjects = (JCObject)retObjectAddressList;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new IPAddress(resultingObject));
             }
             IPAddress[] resultingArray = new IPAddress[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddressList != null ? retObjectAddressList.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,7 +187,7 @@ public class IPHostEntry extends NetObject  {
 
     public void setAddressList(IPAddress[] AddressList) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AddressList", toObjectFromArray(AddressList));
         } catch (JCNativeException jcne) {
@@ -193,9 +197,13 @@ public class IPHostEntry extends NetObject  {
 
     public java.lang.String getHostName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHostName = null;
         try {
-            return (java.lang.String)classInstance.Get("HostName");
+            retObjectHostName = classInstance.Get("HostName");
+            return (java.lang.String)retObjectHostName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectHostName != null ? retObjectHostName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,7 +211,7 @@ public class IPHostEntry extends NetObject  {
 
     public void setHostName(java.lang.String HostName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("HostName", HostName);
         } catch (JCNativeException jcne) {
@@ -213,10 +221,12 @@ public class IPHostEntry extends NetObject  {
 
     public java.lang.String[] getAliases() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAliases = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("Aliases");
+            retObjectAliases = classInstance.Get("Aliases");
+            JCObject resultingObjects = (JCObject)retObjectAliases;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -225,6 +235,8 @@ public class IPHostEntry extends NetObject  {
 				resultingArray[indexAliases] = (java.lang.String)resultingArrayList.get(indexAliases);
 			}
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into JCObject", retObjectAliases != null ? retObjectAliases.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -232,7 +244,7 @@ public class IPHostEntry extends NetObject  {
 
     public void setAliases(java.lang.String[] Aliases) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Aliases", Aliases);
         } catch (JCNativeException jcne) {

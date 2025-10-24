@@ -167,10 +167,14 @@ public class XmlSchemaAttributeGroupRef extends XmlSchemaAnnotated  {
     
     public XmlQualifiedName getRefName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRefName = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RefName");
+            retObjectRefName = classInstance.Get("RefName");
+            JCObject val = (JCObject)retObjectRefName;
             return new XmlQualifiedName(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRefName != null ? retObjectRefName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,7 +182,7 @@ public class XmlSchemaAttributeGroupRef extends XmlSchemaAnnotated  {
 
     public void setRefName(XmlQualifiedName RefName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RefName", RefName == null ? null : RefName.getJCOInstance());
         } catch (JCNativeException jcne) {

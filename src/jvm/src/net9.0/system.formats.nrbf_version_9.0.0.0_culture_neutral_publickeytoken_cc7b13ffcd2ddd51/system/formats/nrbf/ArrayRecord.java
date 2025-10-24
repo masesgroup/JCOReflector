@@ -156,10 +156,14 @@ public class ArrayRecord extends SerializationRecord  {
     
     public Array GetArray(NetType expectedArrayType, boolean allowNulls) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetArray = null;
         try {
-            JCObject objGetArray = (JCObject)classInstance.Invoke("GetArray", expectedArrayType == null ? null : expectedArrayType.getJCOInstance(), allowNulls);
+            retObjectGetArray = classInstance.Invoke("GetArray", expectedArrayType == null ? null : expectedArrayType.getJCOInstance(), allowNulls);
+            JCObject objGetArray = (JCObject)retObjectGetArray;
             return new Array(objGetArray);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetArray != null ? retObjectGetArray.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,9 +175,20 @@ public class ArrayRecord extends SerializationRecord  {
     
     public int getRank() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRank = null;
         try {
-            return (int)classInstance.Get("Rank");
+            retObjectRank = classInstance.Get("Rank");
+            return (int)retObjectRank;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectRank_ToString = retObjectRank == null ? "null" : retObjectRank.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectRankNumber = (java.lang.Number)retObjectRank;
+                return retObjectRankNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectRank != null ? retObjectRank.getClass() : "null", retObjectRank_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

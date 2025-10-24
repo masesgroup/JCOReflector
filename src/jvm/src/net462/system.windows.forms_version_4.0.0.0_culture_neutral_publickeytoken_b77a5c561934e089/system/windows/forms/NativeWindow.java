@@ -165,7 +165,7 @@ public class NativeWindow extends MarshalByRefObject  {
     
     public void CreateHandle(CreateParams cp) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NullReferenceException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CreateHandle", cp == null ? null : cp.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -175,7 +175,7 @@ public class NativeWindow extends MarshalByRefObject  {
 
     public void DefWndProc(JCORefOut<Message> m) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DefWndProc", m.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -185,7 +185,7 @@ public class NativeWindow extends MarshalByRefObject  {
 
     public void DestroyHandle() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.security.SecurityException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DestroyHandle");
         } catch (JCNativeException jcne) {
@@ -195,7 +195,7 @@ public class NativeWindow extends MarshalByRefObject  {
 
     public void ReleaseHandle() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.security.SecurityException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ReleaseHandle");
         } catch (JCNativeException jcne) {

@@ -167,9 +167,13 @@ public class ListBoxItem extends ContentControl  {
     
     public boolean getIsSelected() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsSelected = null;
         try {
-            return (boolean)classInstance.Get("IsSelected");
+            retObjectIsSelected = classInstance.Get("IsSelected");
+            return (boolean)retObjectIsSelected;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsSelected != null ? retObjectIsSelected.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,7 +181,7 @@ public class ListBoxItem extends ContentControl  {
 
     public void setIsSelected(boolean IsSelected) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsSelected", IsSelected);
         } catch (JCNativeException jcne) {
@@ -192,7 +196,7 @@ public class ListBoxItem extends ContentControl  {
 
     public void addSelected(RoutedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Selected", handler);
         } catch (JCNativeException jcne) {
@@ -202,7 +206,7 @@ public class ListBoxItem extends ContentControl  {
 
     public void removeSelected(RoutedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Selected", handler);
         } catch (JCNativeException jcne) {
@@ -212,7 +216,7 @@ public class ListBoxItem extends ContentControl  {
 
     public void addUnselected(RoutedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Unselected", handler);
         } catch (JCNativeException jcne) {
@@ -222,7 +226,7 @@ public class ListBoxItem extends ContentControl  {
 
     public void removeUnselected(RoutedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Unselected", handler);
         } catch (JCNativeException jcne) {

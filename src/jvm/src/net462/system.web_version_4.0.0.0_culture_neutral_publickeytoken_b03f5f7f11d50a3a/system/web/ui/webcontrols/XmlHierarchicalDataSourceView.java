@@ -158,10 +158,14 @@ public class XmlHierarchicalDataSourceView extends HierarchicalDataSourceView  {
     
     public IHierarchicalEnumerable Select() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.OutOfMemoryException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.web.HttpException, system.configuration.provider.ProviderException, system.NotSupportedException, system.NullReferenceException, system.MemberAccessException, system.UriFormatException, system.globalization.CultureNotFoundException, system.xml.XmlException, system.web.HttpRequestValidationException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.xml.xsl.XsltCompileException, system.xml.schema.XmlSchemaException, system.xml.xpath.XPathException, system.MissingMethodException, system.security.SecurityException, system.NotImplementedException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelect = null;
         try {
-            JCObject objSelect = (JCObject)classInstance.Invoke("Select");
+            retObjectSelect = classInstance.Invoke("Select");
+            JCObject objSelect = (JCObject)retObjectSelect;
             return new IHierarchicalEnumerableImplementation(objSelect);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelect != null ? retObjectSelect.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

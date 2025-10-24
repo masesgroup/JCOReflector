@@ -176,10 +176,14 @@ public class HttpMethodAttribute extends Attribute  {
     
     public NetType getParameterFormatter() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectParameterFormatter = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ParameterFormatter");
+            retObjectParameterFormatter = classInstance.Get("ParameterFormatter");
+            JCObject val = (JCObject)retObjectParameterFormatter;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParameterFormatter != null ? retObjectParameterFormatter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,7 +191,7 @@ public class HttpMethodAttribute extends Attribute  {
 
     public void setParameterFormatter(NetType ParameterFormatter) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ParameterFormatter", ParameterFormatter == null ? null : ParameterFormatter.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -197,10 +201,14 @@ public class HttpMethodAttribute extends Attribute  {
 
     public NetType getReturnFormatter() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReturnFormatter = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ReturnFormatter");
+            retObjectReturnFormatter = classInstance.Get("ReturnFormatter");
+            JCObject val = (JCObject)retObjectReturnFormatter;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReturnFormatter != null ? retObjectReturnFormatter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -208,7 +216,7 @@ public class HttpMethodAttribute extends Attribute  {
 
     public void setReturnFormatter(NetType ReturnFormatter) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ReturnFormatter", ReturnFormatter == null ? null : ReturnFormatter.getJCOInstance());
         } catch (JCNativeException jcne) {

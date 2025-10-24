@@ -158,9 +158,13 @@ public class BaseDataListComponentEditor extends WindowsFormsComponentEditor  {
     
     public boolean EditComponent(ITypeDescriptorContext context, NetObject obj, IWin32Window parent) throws Throwable, system.configuration.ConfigurationErrorsException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.NotSupportedException, system.security.SecurityException, system.componentmodel.InvalidEnumArgumentException, system.NotImplementedException, system.OverflowException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.reflection.TargetInvocationException, system.RankException, system.MulticastNotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEditComponent = null;
         try {
-            return (boolean)classInstance.Invoke("EditComponent", context == null ? null : context.getJCOInstance(), obj == null ? null : obj.getJCOInstance(), parent == null ? null : parent.getJCOInstance());
+            retObjectEditComponent = classInstance.Invoke("EditComponent", context == null ? null : context.getJCOInstance(), obj == null ? null : obj.getJCOInstance(), parent == null ? null : parent.getJCOInstance());
+            return (boolean)retObjectEditComponent;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectEditComponent != null ? retObjectEditComponent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

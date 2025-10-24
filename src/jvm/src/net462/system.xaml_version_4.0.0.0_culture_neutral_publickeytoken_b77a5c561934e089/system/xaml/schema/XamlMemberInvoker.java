@@ -169,10 +169,14 @@ public class XamlMemberInvoker extends NetObject  {
     
     public NetObject GetValue(NetObject instance) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetValue = null;
         try {
-            JCObject objGetValue = (JCObject)classInstance.Invoke("GetValue", instance == null ? null : instance.getJCOInstance());
+            retObjectGetValue = classInstance.Invoke("GetValue", instance == null ? null : instance.getJCOInstance());
+            JCObject objGetValue = (JCObject)retObjectGetValue;
             return new NetObject(objGetValue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetValue != null ? retObjectGetValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,10 +184,14 @@ public class XamlMemberInvoker extends NetObject  {
 
     public ShouldSerializeResult ShouldSerializeValue(NetObject instance) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShouldSerializeValue = null;
         try {
-            JCObject objShouldSerializeValue = (JCObject)classInstance.Invoke("ShouldSerializeValue", instance == null ? null : instance.getJCOInstance());
+            retObjectShouldSerializeValue = classInstance.Invoke("ShouldSerializeValue", instance == null ? null : instance.getJCOInstance());
+            JCObject objShouldSerializeValue = (JCObject)retObjectShouldSerializeValue;
             return new ShouldSerializeResult(objShouldSerializeValue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectShouldSerializeValue != null ? retObjectShouldSerializeValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,7 +199,7 @@ public class XamlMemberInvoker extends NetObject  {
 
     public void SetValue(NetObject instance, NetObject value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetValue", instance == null ? null : instance.getJCOInstance(), value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -205,10 +213,14 @@ public class XamlMemberInvoker extends NetObject  {
     
     public MethodInfo getUnderlyingGetter() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUnderlyingGetter = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("UnderlyingGetter");
+            retObjectUnderlyingGetter = classInstance.Get("UnderlyingGetter");
+            JCObject val = (JCObject)retObjectUnderlyingGetter;
             return new MethodInfo(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUnderlyingGetter != null ? retObjectUnderlyingGetter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -216,10 +228,14 @@ public class XamlMemberInvoker extends NetObject  {
 
     public MethodInfo getUnderlyingSetter() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUnderlyingSetter = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("UnderlyingSetter");
+            retObjectUnderlyingSetter = classInstance.Get("UnderlyingSetter");
+            JCObject val = (JCObject)retObjectUnderlyingSetter;
             return new MethodInfo(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUnderlyingSetter != null ? retObjectUnderlyingSetter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -227,10 +243,14 @@ public class XamlMemberInvoker extends NetObject  {
 
     public static XamlMemberInvoker getUnknownInvoker() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectUnknownInvoker = null;
         try {
-            JCObject val = (JCObject)classType.Get("UnknownInvoker");
+            retObjectUnknownInvoker = classType.Get("UnknownInvoker");
+            JCObject val = (JCObject)retObjectUnknownInvoker;
             return new XamlMemberInvoker(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUnknownInvoker != null ? retObjectUnknownInvoker.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

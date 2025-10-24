@@ -165,9 +165,20 @@ public class BrotliCompressionOptions extends NetObject  {
     
     public int getQuality() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectQuality = null;
         try {
-            return (int)classInstance.Get("Quality");
+            retObjectQuality = classInstance.Get("Quality");
+            return (int)retObjectQuality;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectQuality_ToString = retObjectQuality == null ? "null" : retObjectQuality.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectQualityNumber = (java.lang.Number)retObjectQuality;
+                return retObjectQualityNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectQuality != null ? retObjectQuality.getClass() : "null", retObjectQuality_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -175,7 +186,7 @@ public class BrotliCompressionOptions extends NetObject  {
 
     public void setQuality(int Quality) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Quality", Quality);
         } catch (JCNativeException jcne) {

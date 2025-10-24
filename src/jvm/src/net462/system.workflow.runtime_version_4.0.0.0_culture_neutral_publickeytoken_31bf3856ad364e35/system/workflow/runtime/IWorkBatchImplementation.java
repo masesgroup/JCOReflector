@@ -144,7 +144,7 @@ public class IWorkBatchImplementation extends NetObject implements IWorkBatch {
     
     public void Add(IPendingWork work, NetObject workItem) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Add", work == null ? null : work.getJCOInstance(), workItem == null ? null : workItem.getJCOInstance());
         } catch (JCNativeException jcne) {

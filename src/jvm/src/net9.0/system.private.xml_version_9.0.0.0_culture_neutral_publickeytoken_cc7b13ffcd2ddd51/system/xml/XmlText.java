@@ -160,10 +160,14 @@ public class XmlText extends XmlCharacterData  {
     
     public XmlNode CloneNode(boolean deep) throws Throwable, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCloneNode = null;
         try {
-            JCObject objCloneNode = (JCObject)classInstance.Invoke("CloneNode", deep);
+            retObjectCloneNode = classInstance.Invoke("CloneNode", deep);
+            JCObject objCloneNode = (JCObject)retObjectCloneNode;
             return new XmlNode(objCloneNode);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCloneNode != null ? retObjectCloneNode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,10 +175,14 @@ public class XmlText extends XmlCharacterData  {
 
     public XmlText SplitText(int offset) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSplitText = null;
         try {
-            JCObject objSplitText = (JCObject)classInstance.Invoke("SplitText", offset);
+            retObjectSplitText = classInstance.Invoke("SplitText", offset);
+            JCObject objSplitText = (JCObject)retObjectSplitText;
             return new XmlText(objSplitText);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSplitText != null ? retObjectSplitText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,7 +190,7 @@ public class XmlText extends XmlCharacterData  {
 
     public void WriteContentTo(XmlWriter w) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteContentTo", w == null ? null : w.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -192,7 +200,7 @@ public class XmlText extends XmlCharacterData  {
 
     public void WriteTo(XmlWriter w) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteTo", w == null ? null : w.getJCOInstance());
         } catch (JCNativeException jcne) {

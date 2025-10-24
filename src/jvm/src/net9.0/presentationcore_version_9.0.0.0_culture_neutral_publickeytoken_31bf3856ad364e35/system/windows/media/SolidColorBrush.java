@@ -175,10 +175,14 @@ public class SolidColorBrush extends Brush  {
     
     public static NetObject DeserializeFrom(BinaryReader reader) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.io.IOException, system.IndexOutOfRangeException, system.FormatException, system.NullReferenceException, system.security.SecurityException, system.UnauthorizedAccessException, system.diagnostics.UnreachableException, system.UriFormatException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDeserializeFrom = null;
         try {
-            JCObject objDeserializeFrom = (JCObject)classType.Invoke("DeserializeFrom", reader == null ? null : reader.getJCOInstance());
+            retObjectDeserializeFrom = classType.Invoke("DeserializeFrom", reader == null ? null : reader.getJCOInstance());
+            JCObject objDeserializeFrom = (JCObject)retObjectDeserializeFrom;
             return new NetObject(objDeserializeFrom);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDeserializeFrom != null ? retObjectDeserializeFrom.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,10 +190,14 @@ public class SolidColorBrush extends Brush  {
 
     public SolidColorBrush CloneNewSolidColorBrush() throws Throwable, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClone = null;
         try {
-            JCObject objClone = (JCObject)classInstance.Invoke("Clone");
+            retObjectClone = classInstance.Invoke("Clone");
+            JCObject objClone = (JCObject)retObjectClone;
             return new SolidColorBrush(objClone);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClone != null ? retObjectClone.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,10 +205,14 @@ public class SolidColorBrush extends Brush  {
 
     public SolidColorBrush CloneCurrentValueNewSolidColorBrush() throws Throwable, system.InvalidOperationException, system.security.SecurityException, system.io.IOException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCloneCurrentValue = null;
         try {
-            JCObject objCloneCurrentValue = (JCObject)classInstance.Invoke("CloneCurrentValue");
+            retObjectCloneCurrentValue = classInstance.Invoke("CloneCurrentValue");
+            JCObject objCloneCurrentValue = (JCObject)retObjectCloneCurrentValue;
             return new SolidColorBrush(objCloneCurrentValue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCloneCurrentValue != null ? retObjectCloneCurrentValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -212,10 +224,14 @@ public class SolidColorBrush extends Brush  {
     
     public Color getColor() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectColor = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Color");
+            retObjectColor = classInstance.Get("Color");
+            JCObject val = (JCObject)retObjectColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectColor != null ? retObjectColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -223,7 +239,7 @@ public class SolidColorBrush extends Brush  {
 
     public void setColor(Color Color) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Color", Color == null ? null : Color.getJCOInstance());
         } catch (JCNativeException jcne) {

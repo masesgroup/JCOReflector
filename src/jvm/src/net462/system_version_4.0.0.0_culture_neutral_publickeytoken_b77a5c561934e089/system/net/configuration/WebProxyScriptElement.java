@@ -167,9 +167,20 @@ public class WebProxyScriptElement extends ConfigurationElement  {
     
     public int getAutoConfigUrlRetryInterval() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAutoConfigUrlRetryInterval = null;
         try {
-            return (int)classInstance.Get("AutoConfigUrlRetryInterval");
+            retObjectAutoConfigUrlRetryInterval = classInstance.Get("AutoConfigUrlRetryInterval");
+            return (int)retObjectAutoConfigUrlRetryInterval;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectAutoConfigUrlRetryInterval_ToString = retObjectAutoConfigUrlRetryInterval == null ? "null" : retObjectAutoConfigUrlRetryInterval.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectAutoConfigUrlRetryIntervalNumber = (java.lang.Number)retObjectAutoConfigUrlRetryInterval;
+                return retObjectAutoConfigUrlRetryIntervalNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectAutoConfigUrlRetryInterval != null ? retObjectAutoConfigUrlRetryInterval.getClass() : "null", retObjectAutoConfigUrlRetryInterval_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,7 +188,7 @@ public class WebProxyScriptElement extends ConfigurationElement  {
 
     public void setAutoConfigUrlRetryInterval(int AutoConfigUrlRetryInterval) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.NullReferenceException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AutoConfigUrlRetryInterval", AutoConfigUrlRetryInterval);
         } catch (JCNativeException jcne) {
@@ -187,10 +198,14 @@ public class WebProxyScriptElement extends ConfigurationElement  {
 
     public TimeSpan getDownloadTimeout() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDownloadTimeout = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DownloadTimeout");
+            retObjectDownloadTimeout = classInstance.Get("DownloadTimeout");
+            JCObject val = (JCObject)retObjectDownloadTimeout;
             return new TimeSpan(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDownloadTimeout != null ? retObjectDownloadTimeout.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,7 +213,7 @@ public class WebProxyScriptElement extends ConfigurationElement  {
 
     public void setDownloadTimeout(TimeSpan DownloadTimeout) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.NullReferenceException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DownloadTimeout", DownloadTimeout == null ? null : DownloadTimeout.getJCOInstance());
         } catch (JCNativeException jcne) {

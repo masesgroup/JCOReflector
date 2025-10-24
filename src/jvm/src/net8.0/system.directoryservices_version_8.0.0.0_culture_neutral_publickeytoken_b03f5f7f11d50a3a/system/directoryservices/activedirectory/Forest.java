@@ -170,9 +170,13 @@ public class Forest extends NetObject implements AutoCloseable {
     
     public boolean GetSelectiveAuthenticationStatus(java.lang.String targetForestName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OutOfMemoryException, system.AccessViolationException, system.security.SecurityException, system.directoryservices.activedirectory.ActiveDirectoryOperationException, system.FormatException, system.NullReferenceException, system.OverflowException, system.componentmodel.InvalidEnumArgumentException, system.directoryservices.activedirectory.ActiveDirectoryObjectNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSelectiveAuthenticationStatus = null;
         try {
-            return (boolean)classInstance.Invoke("GetSelectiveAuthenticationStatus", targetForestName);
+            retObjectGetSelectiveAuthenticationStatus = classInstance.Invoke("GetSelectiveAuthenticationStatus", targetForestName);
+            return (boolean)retObjectGetSelectiveAuthenticationStatus;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectGetSelectiveAuthenticationStatus != null ? retObjectGetSelectiveAuthenticationStatus.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,9 +184,13 @@ public class Forest extends NetObject implements AutoCloseable {
 
     public boolean GetSidFilteringStatus(java.lang.String targetForestName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OutOfMemoryException, system.AccessViolationException, system.security.SecurityException, system.directoryservices.activedirectory.ActiveDirectoryOperationException, system.FormatException, system.NullReferenceException, system.OverflowException, system.componentmodel.InvalidEnumArgumentException, system.directoryservices.activedirectory.ActiveDirectoryObjectNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSidFilteringStatus = null;
         try {
-            return (boolean)classInstance.Invoke("GetSidFilteringStatus", targetForestName);
+            retObjectGetSidFilteringStatus = classInstance.Invoke("GetSidFilteringStatus", targetForestName);
+            return (boolean)retObjectGetSidFilteringStatus;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectGetSidFilteringStatus != null ? retObjectGetSidFilteringStatus.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,10 +198,14 @@ public class Forest extends NetObject implements AutoCloseable {
 
     public static Forest GetCurrentForest() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.NotSupportedException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException, system.OutOfMemoryException, system.AccessViolationException, system.security.SecurityException, system.directoryservices.activedirectory.ActiveDirectoryOperationException, system.FormatException, system.security.cryptography.CryptographicException, system.NullReferenceException, system.OverflowException, system.componentmodel.InvalidEnumArgumentException, system.directoryservices.activedirectory.ActiveDirectoryObjectNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetCurrentForest = null;
         try {
-            JCObject objGetCurrentForest = (JCObject)classType.Invoke("GetCurrentForest");
+            retObjectGetCurrentForest = classType.Invoke("GetCurrentForest");
+            JCObject objGetCurrentForest = (JCObject)retObjectGetCurrentForest;
             return new Forest(objGetCurrentForest);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCurrentForest != null ? retObjectGetCurrentForest.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,10 +213,14 @@ public class Forest extends NetObject implements AutoCloseable {
 
     public static Forest GetForest(DirectoryContext context) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException, system.OutOfMemoryException, system.AccessViolationException, system.security.SecurityException, system.directoryservices.activedirectory.ActiveDirectoryOperationException, system.IndexOutOfRangeException, system.FormatException, system.security.cryptography.CryptographicException, system.NullReferenceException, system.OverflowException, system.componentmodel.InvalidEnumArgumentException, system.directoryservices.activedirectory.ActiveDirectoryObjectNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetForest = null;
         try {
-            JCObject objGetForest = (JCObject)classType.Invoke("GetForest", context == null ? null : context.getJCOInstance());
+            retObjectGetForest = classType.Invoke("GetForest", context == null ? null : context.getJCOInstance());
+            JCObject objGetForest = (JCObject)retObjectGetForest;
             return new Forest(objGetForest);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetForest != null ? retObjectGetForest.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -212,10 +228,14 @@ public class Forest extends NetObject implements AutoCloseable {
 
     public ForestTrustRelationshipInformation GetTrustRelationship(java.lang.String targetForestName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OutOfMemoryException, system.AccessViolationException, system.security.SecurityException, system.directoryservices.activedirectory.ActiveDirectoryOperationException, system.FormatException, system.NullReferenceException, system.OverflowException, system.componentmodel.InvalidEnumArgumentException, system.directoryservices.activedirectory.ActiveDirectoryObjectNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetTrustRelationship = null;
         try {
-            JCObject objGetTrustRelationship = (JCObject)classInstance.Invoke("GetTrustRelationship", targetForestName);
+            retObjectGetTrustRelationship = classInstance.Invoke("GetTrustRelationship", targetForestName);
+            JCObject objGetTrustRelationship = (JCObject)retObjectGetTrustRelationship;
             return new ForestTrustRelationshipInformation(objGetTrustRelationship);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetTrustRelationship != null ? retObjectGetTrustRelationship.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -223,10 +243,14 @@ public class Forest extends NetObject implements AutoCloseable {
 
     public GlobalCatalog FindGlobalCatalog() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException, system.OutOfMemoryException, system.FormatException, system.AccessViolationException, system.security.SecurityException, system.directoryservices.activedirectory.ActiveDirectoryOperationException, system.directoryservices.activedirectory.ActiveDirectoryObjectNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFindGlobalCatalog = null;
         try {
-            JCObject objFindGlobalCatalog = (JCObject)classInstance.Invoke("FindGlobalCatalog");
+            retObjectFindGlobalCatalog = classInstance.Invoke("FindGlobalCatalog");
+            JCObject objFindGlobalCatalog = (JCObject)retObjectFindGlobalCatalog;
             return new GlobalCatalog(objFindGlobalCatalog);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFindGlobalCatalog != null ? retObjectFindGlobalCatalog.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -234,10 +258,14 @@ public class Forest extends NetObject implements AutoCloseable {
 
     public GlobalCatalog FindGlobalCatalog(LocatorOptions flag) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException, system.OutOfMemoryException, system.FormatException, system.AccessViolationException, system.security.SecurityException, system.directoryservices.activedirectory.ActiveDirectoryOperationException, system.directoryservices.activedirectory.ActiveDirectoryObjectNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFindGlobalCatalog = null;
         try {
-            JCObject objFindGlobalCatalog = (JCObject)classInstance.Invoke("FindGlobalCatalog", flag == null ? null : flag.getJCOInstance());
+            retObjectFindGlobalCatalog = classInstance.Invoke("FindGlobalCatalog", flag == null ? null : flag.getJCOInstance());
+            JCObject objFindGlobalCatalog = (JCObject)retObjectFindGlobalCatalog;
             return new GlobalCatalog(objFindGlobalCatalog);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFindGlobalCatalog != null ? retObjectFindGlobalCatalog.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -245,10 +273,14 @@ public class Forest extends NetObject implements AutoCloseable {
 
     public GlobalCatalog FindGlobalCatalog(java.lang.String siteName, LocatorOptions flag) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException, system.OutOfMemoryException, system.FormatException, system.AccessViolationException, system.security.SecurityException, system.directoryservices.activedirectory.ActiveDirectoryOperationException, system.directoryservices.activedirectory.ActiveDirectoryObjectNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFindGlobalCatalog = null;
         try {
-            JCObject objFindGlobalCatalog = (JCObject)classInstance.Invoke("FindGlobalCatalog", siteName, flag == null ? null : flag.getJCOInstance());
+            retObjectFindGlobalCatalog = classInstance.Invoke("FindGlobalCatalog", siteName, flag == null ? null : flag.getJCOInstance());
+            JCObject objFindGlobalCatalog = (JCObject)retObjectFindGlobalCatalog;
             return new GlobalCatalog(objFindGlobalCatalog);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFindGlobalCatalog != null ? retObjectFindGlobalCatalog.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -256,10 +288,14 @@ public class Forest extends NetObject implements AutoCloseable {
 
     public GlobalCatalog FindGlobalCatalog(java.lang.String siteName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException, system.OutOfMemoryException, system.FormatException, system.AccessViolationException, system.security.SecurityException, system.directoryservices.activedirectory.ActiveDirectoryOperationException, system.directoryservices.activedirectory.ActiveDirectoryObjectNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFindGlobalCatalog = null;
         try {
-            JCObject objFindGlobalCatalog = (JCObject)classInstance.Invoke("FindGlobalCatalog", siteName);
+            retObjectFindGlobalCatalog = classInstance.Invoke("FindGlobalCatalog", siteName);
+            JCObject objFindGlobalCatalog = (JCObject)retObjectFindGlobalCatalog;
             return new GlobalCatalog(objFindGlobalCatalog);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFindGlobalCatalog != null ? retObjectFindGlobalCatalog.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -267,10 +303,14 @@ public class Forest extends NetObject implements AutoCloseable {
 
     public GlobalCatalogCollection FindAllDiscoverableGlobalCatalogs() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.AccessViolationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFindAllDiscoverableGlobalCatalogs = null;
         try {
-            JCObject objFindAllDiscoverableGlobalCatalogs = (JCObject)classInstance.Invoke("FindAllDiscoverableGlobalCatalogs");
+            retObjectFindAllDiscoverableGlobalCatalogs = classInstance.Invoke("FindAllDiscoverableGlobalCatalogs");
+            JCObject objFindAllDiscoverableGlobalCatalogs = (JCObject)retObjectFindAllDiscoverableGlobalCatalogs;
             return new GlobalCatalogCollection(objFindAllDiscoverableGlobalCatalogs);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFindAllDiscoverableGlobalCatalogs != null ? retObjectFindAllDiscoverableGlobalCatalogs.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -278,10 +318,14 @@ public class Forest extends NetObject implements AutoCloseable {
 
     public GlobalCatalogCollection FindAllDiscoverableGlobalCatalogs(java.lang.String siteName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.AccessViolationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFindAllDiscoverableGlobalCatalogs = null;
         try {
-            JCObject objFindAllDiscoverableGlobalCatalogs = (JCObject)classInstance.Invoke("FindAllDiscoverableGlobalCatalogs", siteName);
+            retObjectFindAllDiscoverableGlobalCatalogs = classInstance.Invoke("FindAllDiscoverableGlobalCatalogs", siteName);
+            JCObject objFindAllDiscoverableGlobalCatalogs = (JCObject)retObjectFindAllDiscoverableGlobalCatalogs;
             return new GlobalCatalogCollection(objFindAllDiscoverableGlobalCatalogs);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFindAllDiscoverableGlobalCatalogs != null ? retObjectFindAllDiscoverableGlobalCatalogs.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -289,10 +333,14 @@ public class Forest extends NetObject implements AutoCloseable {
 
     public GlobalCatalogCollection FindAllGlobalCatalogs() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.directoryservices.activedirectory.ActiveDirectoryOperationException, system.componentmodel.InvalidEnumArgumentException, system.directoryservices.activedirectory.ActiveDirectoryObjectNotFoundException, system.OutOfMemoryException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFindAllGlobalCatalogs = null;
         try {
-            JCObject objFindAllGlobalCatalogs = (JCObject)classInstance.Invoke("FindAllGlobalCatalogs");
+            retObjectFindAllGlobalCatalogs = classInstance.Invoke("FindAllGlobalCatalogs");
+            JCObject objFindAllGlobalCatalogs = (JCObject)retObjectFindAllGlobalCatalogs;
             return new GlobalCatalogCollection(objFindAllGlobalCatalogs);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFindAllGlobalCatalogs != null ? retObjectFindAllGlobalCatalogs.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -300,10 +348,14 @@ public class Forest extends NetObject implements AutoCloseable {
 
     public GlobalCatalogCollection FindAllGlobalCatalogs(java.lang.String siteName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.directoryservices.activedirectory.ActiveDirectoryOperationException, system.componentmodel.InvalidEnumArgumentException, system.directoryservices.activedirectory.ActiveDirectoryObjectNotFoundException, system.OutOfMemoryException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFindAllGlobalCatalogs = null;
         try {
-            JCObject objFindAllGlobalCatalogs = (JCObject)classInstance.Invoke("FindAllGlobalCatalogs", siteName);
+            retObjectFindAllGlobalCatalogs = classInstance.Invoke("FindAllGlobalCatalogs", siteName);
+            JCObject objFindAllGlobalCatalogs = (JCObject)retObjectFindAllGlobalCatalogs;
             return new GlobalCatalogCollection(objFindAllGlobalCatalogs);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFindAllGlobalCatalogs != null ? retObjectFindAllGlobalCatalogs.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -311,10 +363,14 @@ public class Forest extends NetObject implements AutoCloseable {
 
     public TrustRelationshipInformationCollection GetAllTrustRelationships() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OutOfMemoryException, system.AccessViolationException, system.security.SecurityException, system.directoryservices.activedirectory.ActiveDirectoryOperationException, system.FormatException, system.NullReferenceException, system.OverflowException, system.componentmodel.InvalidEnumArgumentException, system.directoryservices.activedirectory.ActiveDirectoryObjectNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetAllTrustRelationships = null;
         try {
-            JCObject objGetAllTrustRelationships = (JCObject)classInstance.Invoke("GetAllTrustRelationships");
+            retObjectGetAllTrustRelationships = classInstance.Invoke("GetAllTrustRelationships");
+            JCObject objGetAllTrustRelationships = (JCObject)retObjectGetAllTrustRelationships;
             return new TrustRelationshipInformationCollection(objGetAllTrustRelationships);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetAllTrustRelationships != null ? retObjectGetAllTrustRelationships.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -322,7 +378,7 @@ public class Forest extends NetObject implements AutoCloseable {
 
     public void CreateLocalSideOfTrustRelationship(java.lang.String targetForestName, TrustDirection direction, java.lang.String trustPassword) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.OutOfMemoryException, system.security.SecurityException, system.directoryservices.activedirectory.ActiveDirectoryOperationException, system.OverflowException, system.directoryservices.activedirectory.ActiveDirectoryObjectNotFoundException, system.directoryservices.activedirectory.ActiveDirectoryObjectExistsException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CreateLocalSideOfTrustRelationship", targetForestName, direction == null ? null : direction.getJCOInstance(), trustPassword);
         } catch (JCNativeException jcne) {
@@ -332,7 +388,7 @@ public class Forest extends NetObject implements AutoCloseable {
 
     public void CreateTrustRelationship(Forest targetForest, TrustDirection direction) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.OutOfMemoryException, system.security.SecurityException, system.directoryservices.activedirectory.ActiveDirectoryOperationException, system.OverflowException, system.directoryservices.activedirectory.ActiveDirectoryObjectNotFoundException, system.directoryservices.activedirectory.ActiveDirectoryObjectExistsException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CreateTrustRelationship", targetForest == null ? null : targetForest.getJCOInstance(), direction == null ? null : direction.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -342,7 +398,7 @@ public class Forest extends NetObject implements AutoCloseable {
 
     public void DeleteLocalSideOfTrustRelationship(java.lang.String targetForestName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OutOfMemoryException, system.AccessViolationException, system.security.SecurityException, system.directoryservices.activedirectory.ActiveDirectoryOperationException, system.FormatException, system.NullReferenceException, system.OverflowException, system.componentmodel.InvalidEnumArgumentException, system.directoryservices.activedirectory.ActiveDirectoryObjectNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DeleteLocalSideOfTrustRelationship", targetForestName);
         } catch (JCNativeException jcne) {
@@ -352,7 +408,7 @@ public class Forest extends NetObject implements AutoCloseable {
 
     public void DeleteTrustRelationship(Forest targetForest) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OutOfMemoryException, system.AccessViolationException, system.security.SecurityException, system.directoryservices.activedirectory.ActiveDirectoryOperationException, system.FormatException, system.NullReferenceException, system.OverflowException, system.componentmodel.InvalidEnumArgumentException, system.directoryservices.activedirectory.ActiveDirectoryObjectNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DeleteTrustRelationship", targetForest == null ? null : targetForest.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -362,7 +418,7 @@ public class Forest extends NetObject implements AutoCloseable {
 
     public void Dispose() throws Throwable, system.NotSupportedException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
@@ -372,7 +428,7 @@ public class Forest extends NetObject implements AutoCloseable {
 
     public void RaiseForestFunctionality(ForestMode forestMode) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.directoryservices.activedirectory.ActiveDirectoryOperationException, system.directoryservices.activedirectory.ActiveDirectoryObjectNotFoundException, system.OutOfMemoryException, system.OverflowException, system.threading.SynchronizationLockException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RaiseForestFunctionality", forestMode == null ? null : forestMode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -382,7 +438,7 @@ public class Forest extends NetObject implements AutoCloseable {
 
     public void RaiseForestFunctionalityLevel(int forestMode) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.componentmodel.InvalidEnumArgumentException, system.directoryservices.activedirectory.ActiveDirectoryObjectNotFoundException, system.OutOfMemoryException, system.directoryservices.activedirectory.ActiveDirectoryOperationException, system.FormatException, system.OverflowException, system.threading.LockRecursionException, system.threading.SynchronizationLockException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RaiseForestFunctionalityLevel", forestMode);
         } catch (JCNativeException jcne) {
@@ -392,7 +448,7 @@ public class Forest extends NetObject implements AutoCloseable {
 
     public void RepairTrustRelationship(Forest targetForest) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.security.SecurityException, system.directoryservices.activedirectory.ActiveDirectoryOperationException, system.FormatException, system.OverflowException, system.directoryservices.activedirectory.ActiveDirectoryObjectNotFoundException, system.AccessViolationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RepairTrustRelationship", targetForest == null ? null : targetForest.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -402,7 +458,7 @@ public class Forest extends NetObject implements AutoCloseable {
 
     public void SetSelectiveAuthenticationStatus(java.lang.String targetForestName, boolean enable) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OutOfMemoryException, system.AccessViolationException, system.security.SecurityException, system.directoryservices.activedirectory.ActiveDirectoryOperationException, system.FormatException, system.NullReferenceException, system.OverflowException, system.componentmodel.InvalidEnumArgumentException, system.directoryservices.activedirectory.ActiveDirectoryObjectNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetSelectiveAuthenticationStatus", targetForestName, enable);
         } catch (JCNativeException jcne) {
@@ -412,7 +468,7 @@ public class Forest extends NetObject implements AutoCloseable {
 
     public void SetSidFilteringStatus(java.lang.String targetForestName, boolean enable) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OutOfMemoryException, system.AccessViolationException, system.security.SecurityException, system.directoryservices.activedirectory.ActiveDirectoryOperationException, system.FormatException, system.NullReferenceException, system.OverflowException, system.componentmodel.InvalidEnumArgumentException, system.directoryservices.activedirectory.ActiveDirectoryObjectNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetSidFilteringStatus", targetForestName, enable);
         } catch (JCNativeException jcne) {
@@ -422,7 +478,7 @@ public class Forest extends NetObject implements AutoCloseable {
 
     public void UpdateLocalSideOfTrustRelationship(java.lang.String targetForestName, TrustDirection newTrustDirection, java.lang.String newTrustPassword) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OutOfMemoryException, system.AccessViolationException, system.security.SecurityException, system.directoryservices.activedirectory.ActiveDirectoryOperationException, system.NullReferenceException, system.OverflowException, system.directoryservices.activedirectory.ActiveDirectoryObjectNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("UpdateLocalSideOfTrustRelationship", targetForestName, newTrustDirection == null ? null : newTrustDirection.getJCOInstance(), newTrustPassword);
         } catch (JCNativeException jcne) {
@@ -432,7 +488,7 @@ public class Forest extends NetObject implements AutoCloseable {
 
     public void UpdateLocalSideOfTrustRelationship(java.lang.String targetForestName, java.lang.String newTrustPassword) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OutOfMemoryException, system.AccessViolationException, system.security.SecurityException, system.directoryservices.activedirectory.ActiveDirectoryOperationException, system.FormatException, system.NullReferenceException, system.OverflowException, system.componentmodel.InvalidEnumArgumentException, system.directoryservices.activedirectory.ActiveDirectoryObjectNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("UpdateLocalSideOfTrustRelationship", targetForestName, newTrustPassword);
         } catch (JCNativeException jcne) {
@@ -442,7 +498,7 @@ public class Forest extends NetObject implements AutoCloseable {
 
     public void UpdateTrustRelationship(Forest targetForest, TrustDirection newTrustDirection) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OutOfMemoryException, system.AccessViolationException, system.security.SecurityException, system.directoryservices.activedirectory.ActiveDirectoryOperationException, system.NullReferenceException, system.OverflowException, system.directoryservices.activedirectory.ActiveDirectoryObjectNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("UpdateTrustRelationship", targetForest == null ? null : targetForest.getJCOInstance(), newTrustDirection == null ? null : newTrustDirection.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -452,7 +508,7 @@ public class Forest extends NetObject implements AutoCloseable {
 
     public void VerifyOutboundTrustRelationship(java.lang.String targetForestName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OutOfMemoryException, system.AccessViolationException, system.security.SecurityException, system.directoryservices.activedirectory.ActiveDirectoryOperationException, system.FormatException, system.NullReferenceException, system.OverflowException, system.componentmodel.InvalidEnumArgumentException, system.directoryservices.activedirectory.ActiveDirectoryObjectNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("VerifyOutboundTrustRelationship", targetForestName);
         } catch (JCNativeException jcne) {
@@ -462,7 +518,7 @@ public class Forest extends NetObject implements AutoCloseable {
 
     public void VerifyTrustRelationship(Forest targetForest, TrustDirection direction) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OutOfMemoryException, system.AccessViolationException, system.security.SecurityException, system.directoryservices.activedirectory.ActiveDirectoryOperationException, system.NullReferenceException, system.OverflowException, system.directoryservices.activedirectory.ActiveDirectoryObjectNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("VerifyTrustRelationship", targetForest == null ? null : targetForest.getJCOInstance(), direction == null ? null : direction.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -473,7 +529,7 @@ public class Forest extends NetObject implements AutoCloseable {
     public void close() throws Exception {
         try {
             if (classInstance == null)
-                throw new UnsupportedOperationException("classInstance is null.");
+                throw new java.lang.UnsupportedOperationException("classInstance is null.");
             try {
                 classInstance.Invoke("Dispose");
             }
@@ -489,9 +545,20 @@ public class Forest extends NetObject implements AutoCloseable {
     
     public int getForestModeLevel() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.directoryservices.activedirectory.ActiveDirectoryOperationException, system.componentmodel.InvalidEnumArgumentException, system.directoryservices.activedirectory.ActiveDirectoryObjectNotFoundException, system.OutOfMemoryException, system.security.SecurityException, system.FormatException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectForestModeLevel = null;
         try {
-            return (int)classInstance.Get("ForestModeLevel");
+            retObjectForestModeLevel = classInstance.Get("ForestModeLevel");
+            return (int)retObjectForestModeLevel;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectForestModeLevel_ToString = retObjectForestModeLevel == null ? "null" : retObjectForestModeLevel.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectForestModeLevelNumber = (java.lang.Number)retObjectForestModeLevel;
+                return retObjectForestModeLevelNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectForestModeLevel != null ? retObjectForestModeLevel.getClass() : "null", retObjectForestModeLevel_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -499,10 +566,14 @@ public class Forest extends NetObject implements AutoCloseable {
 
     public ActiveDirectorySchema getSchema() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.directoryservices.activedirectory.ActiveDirectoryOperationException, system.FormatException, system.directoryservices.activedirectory.ActiveDirectoryObjectNotFoundException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSchema = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Schema");
+            retObjectSchema = classInstance.Get("Schema");
+            JCObject val = (JCObject)retObjectSchema;
             return new ActiveDirectorySchema(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSchema != null ? retObjectSchema.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -510,10 +581,14 @@ public class Forest extends NetObject implements AutoCloseable {
 
     public ApplicationPartitionCollection getApplicationPartitions() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.directoryservices.activedirectory.ActiveDirectoryOperationException, system.directoryservices.activedirectory.ActiveDirectoryObjectNotFoundException, system.componentmodel.InvalidEnumArgumentException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectApplicationPartitions = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ApplicationPartitions");
+            retObjectApplicationPartitions = classInstance.Get("ApplicationPartitions");
+            JCObject val = (JCObject)retObjectApplicationPartitions;
             return new ApplicationPartitionCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectApplicationPartitions != null ? retObjectApplicationPartitions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -521,10 +596,14 @@ public class Forest extends NetObject implements AutoCloseable {
 
     public Domain getRootDomain() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRootDomain = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RootDomain");
+            retObjectRootDomain = classInstance.Get("RootDomain");
+            JCObject val = (JCObject)retObjectRootDomain;
             return new Domain(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRootDomain != null ? retObjectRootDomain.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -532,10 +611,14 @@ public class Forest extends NetObject implements AutoCloseable {
 
     public DomainCollection getDomains() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.directoryservices.activedirectory.ActiveDirectoryOperationException, system.directoryservices.activedirectory.ActiveDirectoryObjectNotFoundException, system.componentmodel.InvalidEnumArgumentException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDomains = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Domains");
+            retObjectDomains = classInstance.Get("Domains");
+            JCObject val = (JCObject)retObjectDomains;
             return new DomainCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDomains != null ? retObjectDomains.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -543,10 +626,14 @@ public class Forest extends NetObject implements AutoCloseable {
 
     public DomainController getNamingRoleOwner() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.directoryservices.activedirectory.ActiveDirectoryOperationException, system.directoryservices.activedirectory.ActiveDirectoryObjectNotFoundException, system.componentmodel.InvalidEnumArgumentException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNamingRoleOwner = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("NamingRoleOwner");
+            retObjectNamingRoleOwner = classInstance.Get("NamingRoleOwner");
+            JCObject val = (JCObject)retObjectNamingRoleOwner;
             return new DomainController(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNamingRoleOwner != null ? retObjectNamingRoleOwner.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -554,10 +641,14 @@ public class Forest extends NetObject implements AutoCloseable {
 
     public DomainController getSchemaRoleOwner() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.directoryservices.activedirectory.ActiveDirectoryOperationException, system.directoryservices.activedirectory.ActiveDirectoryObjectNotFoundException, system.componentmodel.InvalidEnumArgumentException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSchemaRoleOwner = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SchemaRoleOwner");
+            retObjectSchemaRoleOwner = classInstance.Get("SchemaRoleOwner");
+            JCObject val = (JCObject)retObjectSchemaRoleOwner;
             return new DomainController(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSchemaRoleOwner != null ? retObjectSchemaRoleOwner.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -565,10 +656,14 @@ public class Forest extends NetObject implements AutoCloseable {
 
     public ForestMode getForestMode() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.componentmodel.InvalidEnumArgumentException, system.directoryservices.activedirectory.ActiveDirectoryObjectNotFoundException, system.OutOfMemoryException, system.directoryservices.activedirectory.ActiveDirectoryOperationException, system.FormatException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectForestMode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ForestMode");
+            retObjectForestMode = classInstance.Get("ForestMode");
+            JCObject val = (JCObject)retObjectForestMode;
             return new ForestMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectForestMode != null ? retObjectForestMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -576,10 +671,14 @@ public class Forest extends NetObject implements AutoCloseable {
 
     public GlobalCatalogCollection getGlobalCatalogs() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.componentmodel.InvalidEnumArgumentException, system.directoryservices.activedirectory.ActiveDirectoryObjectNotFoundException, system.OutOfMemoryException, system.directoryservices.activedirectory.ActiveDirectoryOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGlobalCatalogs = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("GlobalCatalogs");
+            retObjectGlobalCatalogs = classInstance.Get("GlobalCatalogs");
+            JCObject val = (JCObject)retObjectGlobalCatalogs;
             return new GlobalCatalogCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGlobalCatalogs != null ? retObjectGlobalCatalogs.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -587,10 +686,14 @@ public class Forest extends NetObject implements AutoCloseable {
 
     public ReadOnlySiteCollection getSites() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.directoryservices.activedirectory.ActiveDirectoryOperationException, system.componentmodel.InvalidEnumArgumentException, system.FormatException, system.directoryservices.activedirectory.ActiveDirectoryObjectNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSites = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Sites");
+            retObjectSites = classInstance.Get("Sites");
+            JCObject val = (JCObject)retObjectSites;
             return new ReadOnlySiteCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSites != null ? retObjectSites.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -598,9 +701,13 @@ public class Forest extends NetObject implements AutoCloseable {
 
     public java.lang.String getName() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectName = null;
         try {
-            return (java.lang.String)classInstance.Get("Name");
+            retObjectName = classInstance.Get("Name");
+            return (java.lang.String)retObjectName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectName != null ? retObjectName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

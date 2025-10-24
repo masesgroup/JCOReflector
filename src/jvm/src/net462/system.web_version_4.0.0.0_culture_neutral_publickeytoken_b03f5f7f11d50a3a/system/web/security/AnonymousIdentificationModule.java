@@ -163,7 +163,7 @@ public class AnonymousIdentificationModule extends NetObject  {
     
     public static void ClearAnonymousIdentifier() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.web.HttpException, system.InvalidOperationException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.IndexOutOfRangeException, system.web.HttpRequestValidationException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.ApplicationException, system.OverflowException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("ClearAnonymousIdentifier");
         } catch (JCNativeException jcne) {
@@ -173,7 +173,7 @@ public class AnonymousIdentificationModule extends NetObject  {
 
     public void Dispose() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
@@ -183,7 +183,7 @@ public class AnonymousIdentificationModule extends NetObject  {
 
     public void Init(HttpApplication app) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.web.HttpException, system.InvalidOperationException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.FormatException, system.IndexOutOfRangeException, system.NotSupportedException, system.ApplicationException, system.OverflowException, system.threading.ThreadAbortException, system.OutOfMemoryException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Init", app == null ? null : app.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -197,9 +197,13 @@ public class AnonymousIdentificationModule extends NetObject  {
     
     public static boolean getEnabled() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.web.HttpException, system.InvalidOperationException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectEnabled = null;
         try {
-            return (boolean)classType.Get("Enabled");
+            retObjectEnabled = classType.Get("Enabled");
+            return (boolean)retObjectEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectEnabled != null ? retObjectEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -212,7 +216,7 @@ public class AnonymousIdentificationModule extends NetObject  {
 
     public void addCreating(AnonymousIdentificationEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Creating", handler);
         } catch (JCNativeException jcne) {
@@ -222,7 +226,7 @@ public class AnonymousIdentificationModule extends NetObject  {
 
     public void removeCreating(AnonymousIdentificationEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Creating", handler);
         } catch (JCNativeException jcne) {

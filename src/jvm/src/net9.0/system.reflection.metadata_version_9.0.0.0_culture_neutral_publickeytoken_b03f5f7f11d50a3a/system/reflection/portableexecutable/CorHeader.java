@@ -162,9 +162,20 @@ public class CorHeader extends NetObject  {
     
     public int getEntryPointTokenOrRelativeVirtualAddress() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEntryPointTokenOrRelativeVirtualAddress = null;
         try {
-            return (int)classInstance.Get("EntryPointTokenOrRelativeVirtualAddress");
+            retObjectEntryPointTokenOrRelativeVirtualAddress = classInstance.Get("EntryPointTokenOrRelativeVirtualAddress");
+            return (int)retObjectEntryPointTokenOrRelativeVirtualAddress;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectEntryPointTokenOrRelativeVirtualAddress_ToString = retObjectEntryPointTokenOrRelativeVirtualAddress == null ? "null" : retObjectEntryPointTokenOrRelativeVirtualAddress.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectEntryPointTokenOrRelativeVirtualAddressNumber = (java.lang.Number)retObjectEntryPointTokenOrRelativeVirtualAddress;
+                return retObjectEntryPointTokenOrRelativeVirtualAddressNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectEntryPointTokenOrRelativeVirtualAddress != null ? retObjectEntryPointTokenOrRelativeVirtualAddress.getClass() : "null", retObjectEntryPointTokenOrRelativeVirtualAddress_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,10 +183,14 @@ public class CorHeader extends NetObject  {
 
     public CorFlags getFlags() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFlags = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Flags");
+            retObjectFlags = classInstance.Get("Flags");
+            JCObject val = (JCObject)retObjectFlags;
             return new CorFlags(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFlags != null ? retObjectFlags.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,10 +198,14 @@ public class CorHeader extends NetObject  {
 
     public DirectoryEntry getCodeManagerTableDirectory() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCodeManagerTableDirectory = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CodeManagerTableDirectory");
+            retObjectCodeManagerTableDirectory = classInstance.Get("CodeManagerTableDirectory");
+            JCObject val = (JCObject)retObjectCodeManagerTableDirectory;
             return new DirectoryEntry(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCodeManagerTableDirectory != null ? retObjectCodeManagerTableDirectory.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -194,10 +213,14 @@ public class CorHeader extends NetObject  {
 
     public DirectoryEntry getExportAddressTableJumpsDirectory() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExportAddressTableJumpsDirectory = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ExportAddressTableJumpsDirectory");
+            retObjectExportAddressTableJumpsDirectory = classInstance.Get("ExportAddressTableJumpsDirectory");
+            JCObject val = (JCObject)retObjectExportAddressTableJumpsDirectory;
             return new DirectoryEntry(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExportAddressTableJumpsDirectory != null ? retObjectExportAddressTableJumpsDirectory.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -205,10 +228,14 @@ public class CorHeader extends NetObject  {
 
     public DirectoryEntry getManagedNativeHeaderDirectory() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectManagedNativeHeaderDirectory = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ManagedNativeHeaderDirectory");
+            retObjectManagedNativeHeaderDirectory = classInstance.Get("ManagedNativeHeaderDirectory");
+            JCObject val = (JCObject)retObjectManagedNativeHeaderDirectory;
             return new DirectoryEntry(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectManagedNativeHeaderDirectory != null ? retObjectManagedNativeHeaderDirectory.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -216,10 +243,14 @@ public class CorHeader extends NetObject  {
 
     public DirectoryEntry getMetadataDirectory() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMetadataDirectory = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MetadataDirectory");
+            retObjectMetadataDirectory = classInstance.Get("MetadataDirectory");
+            JCObject val = (JCObject)retObjectMetadataDirectory;
             return new DirectoryEntry(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMetadataDirectory != null ? retObjectMetadataDirectory.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -227,10 +258,14 @@ public class CorHeader extends NetObject  {
 
     public DirectoryEntry getResourcesDirectory() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResourcesDirectory = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ResourcesDirectory");
+            retObjectResourcesDirectory = classInstance.Get("ResourcesDirectory");
+            JCObject val = (JCObject)retObjectResourcesDirectory;
             return new DirectoryEntry(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectResourcesDirectory != null ? retObjectResourcesDirectory.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -238,10 +273,14 @@ public class CorHeader extends NetObject  {
 
     public DirectoryEntry getStrongNameSignatureDirectory() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStrongNameSignatureDirectory = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("StrongNameSignatureDirectory");
+            retObjectStrongNameSignatureDirectory = classInstance.Get("StrongNameSignatureDirectory");
+            JCObject val = (JCObject)retObjectStrongNameSignatureDirectory;
             return new DirectoryEntry(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStrongNameSignatureDirectory != null ? retObjectStrongNameSignatureDirectory.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -249,10 +288,14 @@ public class CorHeader extends NetObject  {
 
     public DirectoryEntry getVtableFixupsDirectory() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVtableFixupsDirectory = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("VtableFixupsDirectory");
+            retObjectVtableFixupsDirectory = classInstance.Get("VtableFixupsDirectory");
+            JCObject val = (JCObject)retObjectVtableFixupsDirectory;
             return new DirectoryEntry(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVtableFixupsDirectory != null ? retObjectVtableFixupsDirectory.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -260,10 +303,14 @@ public class CorHeader extends NetObject  {
 
     public UInt16 getMajorRuntimeVersion() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMajorRuntimeVersion = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MajorRuntimeVersion");
+            retObjectMajorRuntimeVersion = classInstance.Get("MajorRuntimeVersion");
+            JCObject val = (JCObject)retObjectMajorRuntimeVersion;
             return new UInt16(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMajorRuntimeVersion != null ? retObjectMajorRuntimeVersion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -271,10 +318,14 @@ public class CorHeader extends NetObject  {
 
     public UInt16 getMinorRuntimeVersion() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMinorRuntimeVersion = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MinorRuntimeVersion");
+            retObjectMinorRuntimeVersion = classInstance.Get("MinorRuntimeVersion");
+            JCObject val = (JCObject)retObjectMinorRuntimeVersion;
             return new UInt16(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMinorRuntimeVersion != null ? retObjectMinorRuntimeVersion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

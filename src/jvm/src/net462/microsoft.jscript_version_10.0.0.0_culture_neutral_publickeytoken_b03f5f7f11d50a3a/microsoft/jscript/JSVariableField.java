@@ -155,16 +155,20 @@ public class JSVariableField extends JSField  {
     
     public NetObject[] GetCustomAttributes(boolean inherit) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetCustomAttributes = null;
         try {
             ArrayList<NetObject> resultingArrayList = new ArrayList<NetObject>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetCustomAttributes", inherit);
+            retObjectGetCustomAttributes = classInstance.Invoke("GetCustomAttributes", inherit);
+            JCObject resultingObjects = (JCObject)retObjectGetCustomAttributes;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new NetObject(resultingObject));
             }
             NetObject[] resultingArray = new NetObject[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCustomAttributes != null ? retObjectGetCustomAttributes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

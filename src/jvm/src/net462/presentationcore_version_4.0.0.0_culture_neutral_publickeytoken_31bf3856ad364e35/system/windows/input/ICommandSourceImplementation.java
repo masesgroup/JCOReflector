@@ -150,10 +150,14 @@ public class ICommandSourceImplementation extends NetObject implements ICommandS
     
     public NetObject getCommandParameter() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCommandParameter = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CommandParameter");
+            retObjectCommandParameter = classInstance.Get("CommandParameter");
+            JCObject val = (JCObject)retObjectCommandParameter;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCommandParameter != null ? retObjectCommandParameter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -161,10 +165,14 @@ public class ICommandSourceImplementation extends NetObject implements ICommandS
 
     public IInputElement getCommandTarget() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCommandTarget = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CommandTarget");
+            retObjectCommandTarget = classInstance.Get("CommandTarget");
+            JCObject val = (JCObject)retObjectCommandTarget;
             return new IInputElementImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCommandTarget != null ? retObjectCommandTarget.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,10 +180,14 @@ public class ICommandSourceImplementation extends NetObject implements ICommandS
 
     public ICommand getCommand() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCommand = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Command");
+            retObjectCommand = classInstance.Get("Command");
+            JCObject val = (JCObject)retObjectCommand;
             return new ICommandImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCommand != null ? retObjectCommand.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

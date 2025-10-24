@@ -158,9 +158,13 @@ public class ApplicationSecurityManager extends NetObject  {
     
     public static boolean DetermineApplicationTrust(ActivationContext activationContext, TrustManagerContext context) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.TypeLoadException, system.IndexOutOfRangeException, system.security.policy.PolicyException, system.RankException, system.NotImplementedException, system.MemberAccessException, system.reflection.TargetException, system.reflection.TargetParameterCountException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDetermineApplicationTrust = null;
         try {
-            return (boolean)classType.Invoke("DetermineApplicationTrust", activationContext == null ? null : activationContext.getJCOInstance(), context == null ? null : context.getJCOInstance());
+            retObjectDetermineApplicationTrust = classType.Invoke("DetermineApplicationTrust", activationContext == null ? null : activationContext.getJCOInstance(), context == null ? null : context.getJCOInstance());
+            return (boolean)retObjectDetermineApplicationTrust;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectDetermineApplicationTrust != null ? retObjectDetermineApplicationTrust.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,10 +176,14 @@ public class ApplicationSecurityManager extends NetObject  {
     
     public static ApplicationTrustCollection getUserApplicationTrusts() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectUserApplicationTrusts = null;
         try {
-            JCObject val = (JCObject)classType.Get("UserApplicationTrusts");
+            retObjectUserApplicationTrusts = classType.Get("UserApplicationTrusts");
+            JCObject val = (JCObject)retObjectUserApplicationTrusts;
             return new ApplicationTrustCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUserApplicationTrusts != null ? retObjectUserApplicationTrusts.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,10 +191,14 @@ public class ApplicationSecurityManager extends NetObject  {
 
     public static IApplicationTrustManager getApplicationTrustManager() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.IndexOutOfRangeException, system.NullReferenceException, system.security.SecurityException, system.OutOfMemoryException, system.security.XmlSyntaxException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.policy.PolicyException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectApplicationTrustManager = null;
         try {
-            JCObject val = (JCObject)classType.Get("ApplicationTrustManager");
+            retObjectApplicationTrustManager = classType.Get("ApplicationTrustManager");
+            JCObject val = (JCObject)retObjectApplicationTrustManager;
             return new IApplicationTrustManagerImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectApplicationTrustManager != null ? retObjectApplicationTrustManager.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

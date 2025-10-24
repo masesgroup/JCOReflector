@@ -172,10 +172,12 @@ public class CrossDomainMoveControl extends DirectoryControl  {
     
     public byte[] GetValue() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetValue = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetValue");
+            retObjectGetValue = classInstance.Invoke("GetValue");
+            JCObject resultingObjects = (JCObject)retObjectGetValue;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -184,6 +186,8 @@ public class CrossDomainMoveControl extends DirectoryControl  {
 				resultingArray[indexGetValue] = (byte)resultingArrayList.get(indexGetValue);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectGetValue != null ? retObjectGetValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,9 +199,13 @@ public class CrossDomainMoveControl extends DirectoryControl  {
     
     public java.lang.String getTargetDomainController() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTargetDomainController = null;
         try {
-            return (java.lang.String)classInstance.Get("TargetDomainController");
+            retObjectTargetDomainController = classInstance.Get("TargetDomainController");
+            return (java.lang.String)retObjectTargetDomainController;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectTargetDomainController != null ? retObjectTargetDomainController.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -205,7 +213,7 @@ public class CrossDomainMoveControl extends DirectoryControl  {
 
     public void setTargetDomainController(java.lang.String TargetDomainController) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TargetDomainController", TargetDomainController);
         } catch (JCNativeException jcne) {

@@ -143,10 +143,14 @@ public class IXamlNameResolverImplementation extends NetObject implements IXamlN
     
     public NetObject Resolve(java.lang.String name) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResolve = null;
         try {
-            JCObject objResolve = (JCObject)classInstance.Invoke("Resolve", name);
+            retObjectResolve = classInstance.Invoke("Resolve", name);
+            JCObject objResolve = (JCObject)retObjectResolve;
             return new NetObject(objResolve);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectResolve != null ? retObjectResolve.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -154,10 +158,14 @@ public class IXamlNameResolverImplementation extends NetObject implements IXamlN
 
     public NetObject Resolve(java.lang.String name, JCORefOut<java.util.concurrent.atomic.AtomicBoolean> isFullyInitialized) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResolve = null;
         try {
-            JCObject objResolve = (JCObject)classInstance.Invoke("Resolve", name, isFullyInitialized.getJCRefOut());
+            retObjectResolve = classInstance.Invoke("Resolve", name, isFullyInitialized.getJCRefOut());
+            JCObject objResolve = (JCObject)retObjectResolve;
             return new NetObject(objResolve);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectResolve != null ? retObjectResolve.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,9 +177,13 @@ public class IXamlNameResolverImplementation extends NetObject implements IXamlN
     
     public boolean getIsFixupTokenAvailable() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsFixupTokenAvailable = null;
         try {
-            return (boolean)classInstance.Get("IsFixupTokenAvailable");
+            retObjectIsFixupTokenAvailable = classInstance.Get("IsFixupTokenAvailable");
+            return (boolean)retObjectIsFixupTokenAvailable;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsFixupTokenAvailable != null ? retObjectIsFixupTokenAvailable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -184,7 +196,7 @@ public class IXamlNameResolverImplementation extends NetObject implements IXamlN
 
     public void addOnNameScopeInitializationComplete(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("OnNameScopeInitializationComplete", handler);
         } catch (JCNativeException jcne) {
@@ -194,7 +206,7 @@ public class IXamlNameResolverImplementation extends NetObject implements IXamlN
 
     public void removeOnNameScopeInitializationComplete(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("OnNameScopeInitializationComplete", handler);
         } catch (JCNativeException jcne) {

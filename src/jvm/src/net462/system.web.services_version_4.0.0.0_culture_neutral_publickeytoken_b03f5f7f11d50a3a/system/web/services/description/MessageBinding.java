@@ -159,10 +159,14 @@ public class MessageBinding extends NamedItem  {
     
     public OperationBinding getOperationBinding() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOperationBinding = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("OperationBinding");
+            retObjectOperationBinding = classInstance.Get("OperationBinding");
+            JCObject val = (JCObject)retObjectOperationBinding;
             return new OperationBinding(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOperationBinding != null ? retObjectOperationBinding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

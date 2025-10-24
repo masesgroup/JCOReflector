@@ -179,7 +179,7 @@ public class InvokeWorkflowActivity extends Activity  {
      */
     @Deprecated 
     public boolean CanFilterType(NetType type, boolean throwOnError) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToITypeFilterProvider to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToITypeFilterProvider to obtain the full interface.");
     }
 
 
@@ -188,10 +188,14 @@ public class InvokeWorkflowActivity extends Activity  {
     
     public Guid getInstanceId() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInstanceId = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("InstanceId");
+            retObjectInstanceId = classInstance.Get("InstanceId");
+            JCObject val = (JCObject)retObjectInstanceId;
             return new Guid(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInstanceId != null ? retObjectInstanceId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -199,10 +203,14 @@ public class InvokeWorkflowActivity extends Activity  {
 
     public NetType getTargetWorkflow() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTargetWorkflow = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TargetWorkflow");
+            retObjectTargetWorkflow = classInstance.Get("TargetWorkflow");
+            JCObject val = (JCObject)retObjectTargetWorkflow;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTargetWorkflow != null ? retObjectTargetWorkflow.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -210,7 +218,7 @@ public class InvokeWorkflowActivity extends Activity  {
 
     public void setTargetWorkflow(NetType TargetWorkflow) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException, system.MulticastNotSupportedException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TargetWorkflow", TargetWorkflow == null ? null : TargetWorkflow.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -220,10 +228,14 @@ public class InvokeWorkflowActivity extends Activity  {
 
     public WorkflowParameterBindingCollection getParameterBindings() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectParameterBindings = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ParameterBindings");
+            retObjectParameterBindings = classInstance.Get("ParameterBindings");
+            JCObject val = (JCObject)retObjectParameterBindings;
             return new WorkflowParameterBindingCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParameterBindings != null ? retObjectParameterBindings.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -236,7 +248,7 @@ public class InvokeWorkflowActivity extends Activity  {
 
     public void addInvoking(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Invoking", handler);
         } catch (JCNativeException jcne) {
@@ -246,7 +258,7 @@ public class InvokeWorkflowActivity extends Activity  {
 
     public void removeInvoking(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Invoking", handler);
         } catch (JCNativeException jcne) {

@@ -157,10 +157,14 @@ public class MethodInvoker extends NetObject  {
     
     public NetObject Invoke(NetObject obj, NetObject arg1, NetObject arg2, NetObject arg3, NetObject arg4) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.reflection.TargetParameterCountException, system.MemberAccessException, system.reflection.TargetException, system.OutOfMemoryException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInvoke = null;
         try {
-            JCObject objInvoke = (JCObject)classInstance.Invoke("Invoke", obj == null ? null : obj.getJCOInstance(), arg1 == null ? null : arg1.getJCOInstance(), arg2 == null ? null : arg2.getJCOInstance(), arg3 == null ? null : arg3.getJCOInstance(), arg4 == null ? null : arg4.getJCOInstance());
+            retObjectInvoke = classInstance.Invoke("Invoke", obj == null ? null : obj.getJCOInstance(), arg1 == null ? null : arg1.getJCOInstance(), arg2 == null ? null : arg2.getJCOInstance(), arg3 == null ? null : arg3.getJCOInstance(), arg4 == null ? null : arg4.getJCOInstance());
+            JCObject objInvoke = (JCObject)retObjectInvoke;
             return new NetObject(objInvoke);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInvoke != null ? retObjectInvoke.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -168,10 +172,14 @@ public class MethodInvoker extends NetObject  {
 
     public NetObject Invoke(NetObject obj, NetObject arg1, NetObject arg2, NetObject arg3) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.reflection.TargetParameterCountException, system.MemberAccessException, system.reflection.TargetException, system.OutOfMemoryException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInvoke = null;
         try {
-            JCObject objInvoke = (JCObject)classInstance.Invoke("Invoke", obj == null ? null : obj.getJCOInstance(), arg1 == null ? null : arg1.getJCOInstance(), arg2 == null ? null : arg2.getJCOInstance(), arg3 == null ? null : arg3.getJCOInstance());
+            retObjectInvoke = classInstance.Invoke("Invoke", obj == null ? null : obj.getJCOInstance(), arg1 == null ? null : arg1.getJCOInstance(), arg2 == null ? null : arg2.getJCOInstance(), arg3 == null ? null : arg3.getJCOInstance());
+            JCObject objInvoke = (JCObject)retObjectInvoke;
             return new NetObject(objInvoke);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInvoke != null ? retObjectInvoke.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,10 +187,14 @@ public class MethodInvoker extends NetObject  {
 
     public NetObject Invoke(NetObject obj, NetObject arg1, NetObject arg2) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.reflection.TargetParameterCountException, system.MemberAccessException, system.reflection.TargetException, system.OutOfMemoryException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInvoke = null;
         try {
-            JCObject objInvoke = (JCObject)classInstance.Invoke("Invoke", obj == null ? null : obj.getJCOInstance(), arg1 == null ? null : arg1.getJCOInstance(), arg2 == null ? null : arg2.getJCOInstance());
+            retObjectInvoke = classInstance.Invoke("Invoke", obj == null ? null : obj.getJCOInstance(), arg1 == null ? null : arg1.getJCOInstance(), arg2 == null ? null : arg2.getJCOInstance());
+            JCObject objInvoke = (JCObject)retObjectInvoke;
             return new NetObject(objInvoke);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInvoke != null ? retObjectInvoke.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,10 +202,14 @@ public class MethodInvoker extends NetObject  {
 
     public NetObject Invoke(NetObject obj, NetObject arg1) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.reflection.TargetParameterCountException, system.MemberAccessException, system.reflection.TargetException, system.OutOfMemoryException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInvoke = null;
         try {
-            JCObject objInvoke = (JCObject)classInstance.Invoke("Invoke", obj == null ? null : obj.getJCOInstance(), arg1 == null ? null : arg1.getJCOInstance());
+            retObjectInvoke = classInstance.Invoke("Invoke", obj == null ? null : obj.getJCOInstance(), arg1 == null ? null : arg1.getJCOInstance());
+            JCObject objInvoke = (JCObject)retObjectInvoke;
             return new NetObject(objInvoke);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInvoke != null ? retObjectInvoke.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,10 +217,14 @@ public class MethodInvoker extends NetObject  {
 
     public NetObject Invoke(NetObject obj) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.reflection.TargetParameterCountException, system.MemberAccessException, system.reflection.TargetException, system.OutOfMemoryException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInvoke = null;
         try {
-            JCObject objInvoke = (JCObject)classInstance.Invoke("Invoke", obj == null ? null : obj.getJCOInstance());
+            retObjectInvoke = classInstance.Invoke("Invoke", obj == null ? null : obj.getJCOInstance());
+            JCObject objInvoke = (JCObject)retObjectInvoke;
             return new NetObject(objInvoke);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInvoke != null ? retObjectInvoke.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -212,10 +232,14 @@ public class MethodInvoker extends NetObject  {
 
     public static MethodInvoker Create(MethodBase method) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
         try {
-            JCObject objCreate = (JCObject)classType.Invoke("Create", method == null ? null : method.getJCOInstance());
+            retObjectCreate = classType.Invoke("Create", method == null ? null : method.getJCOInstance());
+            JCObject objCreate = (JCObject)retObjectCreate;
             return new MethodInvoker(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

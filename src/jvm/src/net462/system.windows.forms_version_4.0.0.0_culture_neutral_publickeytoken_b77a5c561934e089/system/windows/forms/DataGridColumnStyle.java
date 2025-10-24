@@ -162,7 +162,7 @@ public class DataGridColumnStyle extends Component implements system.windows.for
     
     public void ResetHeaderText() throws Throwable, system.NullReferenceException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ResetHeaderText");
         } catch (JCNativeException jcne) {
@@ -176,7 +176,7 @@ public class DataGridColumnStyle extends Component implements system.windows.for
      */
     @Deprecated 
     public void ColumnStartedEditing(Control editingControl) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDataGridColumnStyleEditingNotificationService to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDataGridColumnStyleEditingNotificationService to obtain the full interface.");
     }
 
 
@@ -185,9 +185,13 @@ public class DataGridColumnStyle extends Component implements system.windows.for
     
     public boolean getReadOnly() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadOnly = null;
         try {
-            return (boolean)classInstance.Get("ReadOnly");
+            retObjectReadOnly = classInstance.Get("ReadOnly");
+            return (boolean)retObjectReadOnly;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectReadOnly != null ? retObjectReadOnly.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,7 +199,7 @@ public class DataGridColumnStyle extends Component implements system.windows.for
 
     public void setReadOnly(boolean ReadOnly) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ReadOnly", ReadOnly);
         } catch (JCNativeException jcne) {
@@ -205,9 +209,20 @@ public class DataGridColumnStyle extends Component implements system.windows.for
 
     public int getWidth() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWidth = null;
         try {
-            return (int)classInstance.Get("Width");
+            retObjectWidth = classInstance.Get("Width");
+            return (int)retObjectWidth;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectWidth_ToString = retObjectWidth == null ? "null" : retObjectWidth.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectWidthNumber = (java.lang.Number)retObjectWidth;
+                return retObjectWidthNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectWidth != null ? retObjectWidth.getClass() : "null", retObjectWidth_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -215,7 +230,7 @@ public class DataGridColumnStyle extends Component implements system.windows.for
 
     public void setWidth(int Width) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.NotSupportedException, system.NullReferenceException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Width", Width);
         } catch (JCNativeException jcne) {
@@ -225,10 +240,14 @@ public class DataGridColumnStyle extends Component implements system.windows.for
 
     public PropertyDescriptor getPropertyDescriptor() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPropertyDescriptor = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PropertyDescriptor");
+            retObjectPropertyDescriptor = classInstance.Get("PropertyDescriptor");
+            JCObject val = (JCObject)retObjectPropertyDescriptor;
             return new PropertyDescriptor(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPropertyDescriptor != null ? retObjectPropertyDescriptor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -236,7 +255,7 @@ public class DataGridColumnStyle extends Component implements system.windows.for
 
     public void setPropertyDescriptor(PropertyDescriptor PropertyDescriptor) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PropertyDescriptor", PropertyDescriptor == null ? null : PropertyDescriptor.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -246,9 +265,13 @@ public class DataGridColumnStyle extends Component implements system.windows.for
 
     public java.lang.String getHeaderText() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHeaderText = null;
         try {
-            return (java.lang.String)classInstance.Get("HeaderText");
+            retObjectHeaderText = classInstance.Get("HeaderText");
+            return (java.lang.String)retObjectHeaderText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectHeaderText != null ? retObjectHeaderText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -256,7 +279,7 @@ public class DataGridColumnStyle extends Component implements system.windows.for
 
     public void setHeaderText(java.lang.String HeaderText) throws Throwable, system.NullReferenceException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("HeaderText", HeaderText);
         } catch (JCNativeException jcne) {
@@ -266,9 +289,13 @@ public class DataGridColumnStyle extends Component implements system.windows.for
 
     public java.lang.String getMappingName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMappingName = null;
         try {
-            return (java.lang.String)classInstance.Get("MappingName");
+            retObjectMappingName = classInstance.Get("MappingName");
+            return (java.lang.String)retObjectMappingName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectMappingName != null ? retObjectMappingName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -276,7 +303,7 @@ public class DataGridColumnStyle extends Component implements system.windows.for
 
     public void setMappingName(java.lang.String MappingName) throws Throwable, system.NullReferenceException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MappingName", MappingName);
         } catch (JCNativeException jcne) {
@@ -286,9 +313,13 @@ public class DataGridColumnStyle extends Component implements system.windows.for
 
     public java.lang.String getNullText() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNullText = null;
         try {
-            return (java.lang.String)classInstance.Get("NullText");
+            retObjectNullText = classInstance.Get("NullText");
+            return (java.lang.String)retObjectNullText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectNullText != null ? retObjectNullText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -296,7 +327,7 @@ public class DataGridColumnStyle extends Component implements system.windows.for
 
     public void setNullText(java.lang.String NullText) throws Throwable, system.NullReferenceException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("NullText", NullText);
         } catch (JCNativeException jcne) {
@@ -306,10 +337,14 @@ public class DataGridColumnStyle extends Component implements system.windows.for
 
     public AccessibleObject getHeaderAccessibleObject() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHeaderAccessibleObject = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("HeaderAccessibleObject");
+            retObjectHeaderAccessibleObject = classInstance.Get("HeaderAccessibleObject");
+            JCObject val = (JCObject)retObjectHeaderAccessibleObject;
             return new AccessibleObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHeaderAccessibleObject != null ? retObjectHeaderAccessibleObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -317,10 +352,14 @@ public class DataGridColumnStyle extends Component implements system.windows.for
 
     public DataGridTableStyle getDataGridTableStyle() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDataGridTableStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DataGridTableStyle");
+            retObjectDataGridTableStyle = classInstance.Get("DataGridTableStyle");
+            JCObject val = (JCObject)retObjectDataGridTableStyle;
             return new DataGridTableStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDataGridTableStyle != null ? retObjectDataGridTableStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -328,10 +367,14 @@ public class DataGridColumnStyle extends Component implements system.windows.for
 
     public HorizontalAlignment getAlignment() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAlignment = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Alignment");
+            retObjectAlignment = classInstance.Get("Alignment");
+            JCObject val = (JCObject)retObjectAlignment;
             return new HorizontalAlignment(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAlignment != null ? retObjectAlignment.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -339,7 +382,7 @@ public class DataGridColumnStyle extends Component implements system.windows.for
 
     public void setAlignment(HorizontalAlignment Alignment) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Alignment", Alignment == null ? null : Alignment.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -354,7 +397,7 @@ public class DataGridColumnStyle extends Component implements system.windows.for
 
     public void addAlignmentChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("AlignmentChanged", handler);
         } catch (JCNativeException jcne) {
@@ -364,7 +407,7 @@ public class DataGridColumnStyle extends Component implements system.windows.for
 
     public void removeAlignmentChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("AlignmentChanged", handler);
         } catch (JCNativeException jcne) {
@@ -374,7 +417,7 @@ public class DataGridColumnStyle extends Component implements system.windows.for
 
     public void addFontChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("FontChanged", handler);
         } catch (JCNativeException jcne) {
@@ -384,7 +427,7 @@ public class DataGridColumnStyle extends Component implements system.windows.for
 
     public void removeFontChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("FontChanged", handler);
         } catch (JCNativeException jcne) {
@@ -394,7 +437,7 @@ public class DataGridColumnStyle extends Component implements system.windows.for
 
     public void addHeaderTextChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("HeaderTextChanged", handler);
         } catch (JCNativeException jcne) {
@@ -404,7 +447,7 @@ public class DataGridColumnStyle extends Component implements system.windows.for
 
     public void removeHeaderTextChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("HeaderTextChanged", handler);
         } catch (JCNativeException jcne) {
@@ -414,7 +457,7 @@ public class DataGridColumnStyle extends Component implements system.windows.for
 
     public void addMappingNameChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("MappingNameChanged", handler);
         } catch (JCNativeException jcne) {
@@ -424,7 +467,7 @@ public class DataGridColumnStyle extends Component implements system.windows.for
 
     public void removeMappingNameChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("MappingNameChanged", handler);
         } catch (JCNativeException jcne) {
@@ -434,7 +477,7 @@ public class DataGridColumnStyle extends Component implements system.windows.for
 
     public void addNullTextChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("NullTextChanged", handler);
         } catch (JCNativeException jcne) {
@@ -444,7 +487,7 @@ public class DataGridColumnStyle extends Component implements system.windows.for
 
     public void removeNullTextChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("NullTextChanged", handler);
         } catch (JCNativeException jcne) {
@@ -454,7 +497,7 @@ public class DataGridColumnStyle extends Component implements system.windows.for
 
     public void addPropertyDescriptorChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("PropertyDescriptorChanged", handler);
         } catch (JCNativeException jcne) {
@@ -464,7 +507,7 @@ public class DataGridColumnStyle extends Component implements system.windows.for
 
     public void removePropertyDescriptorChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("PropertyDescriptorChanged", handler);
         } catch (JCNativeException jcne) {
@@ -474,7 +517,7 @@ public class DataGridColumnStyle extends Component implements system.windows.for
 
     public void addReadOnlyChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ReadOnlyChanged", handler);
         } catch (JCNativeException jcne) {
@@ -484,7 +527,7 @@ public class DataGridColumnStyle extends Component implements system.windows.for
 
     public void removeReadOnlyChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ReadOnlyChanged", handler);
         } catch (JCNativeException jcne) {
@@ -494,7 +537,7 @@ public class DataGridColumnStyle extends Component implements system.windows.for
 
     public void addWidthChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("WidthChanged", handler);
         } catch (JCNativeException jcne) {
@@ -504,7 +547,7 @@ public class DataGridColumnStyle extends Component implements system.windows.for
 
     public void removeWidthChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("WidthChanged", handler);
         } catch (JCNativeException jcne) {

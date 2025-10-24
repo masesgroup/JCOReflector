@@ -172,9 +172,13 @@ public class IPNetwork extends ValueType implements system.IFormattable {
     
     public boolean Contains(IPAddress address) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContains = null;
         try {
-            return (boolean)classInstance.Invoke("Contains", address == null ? null : address.getJCOInstance());
+            retObjectContains = classInstance.Invoke("Contains", address == null ? null : address.getJCOInstance());
+            return (boolean)retObjectContains;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectContains != null ? retObjectContains.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,9 +186,13 @@ public class IPNetwork extends ValueType implements system.IFormattable {
 
     public boolean Equals(IPNetwork other) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEquals = null;
         try {
-            return (boolean)classInstance.Invoke("Equals", other == null ? null : other.getJCOInstance());
+            retObjectEquals = classInstance.Invoke("Equals", other == null ? null : other.getJCOInstance());
+            return (boolean)retObjectEquals;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectEquals != null ? retObjectEquals.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,9 +200,13 @@ public class IPNetwork extends ValueType implements system.IFormattable {
 
     public static boolean TryParse(java.lang.String s, JCORefOut<IPNetwork> result) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTryParse = null;
         try {
-            return (boolean)classType.Invoke("TryParse", s, result.getJCRefOut());
+            retObjectTryParse = classType.Invoke("TryParse", s, result.getJCRefOut());
+            return (boolean)retObjectTryParse;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryParse != null ? retObjectTryParse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,10 +214,14 @@ public class IPNetwork extends ValueType implements system.IFormattable {
 
     public static IPNetwork Parse(java.lang.String s) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectParse = null;
         try {
-            JCObject objParse = (JCObject)classType.Invoke("Parse", s);
+            retObjectParse = classType.Invoke("Parse", s);
+            JCObject objParse = (JCObject)retObjectParse;
             return new IPNetwork(objParse);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParse != null ? retObjectParse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -217,7 +233,7 @@ public class IPNetwork extends ValueType implements system.IFormattable {
      */
     @Deprecated 
     public java.lang.String ToString(java.lang.String format, IFormatProvider formatProvider) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIFormattable to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIFormattable to obtain the full interface.");
     }
 
 
@@ -226,9 +242,20 @@ public class IPNetwork extends ValueType implements system.IFormattable {
     
     public int getPrefixLength() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPrefixLength = null;
         try {
-            return (int)classInstance.Get("PrefixLength");
+            retObjectPrefixLength = classInstance.Get("PrefixLength");
+            return (int)retObjectPrefixLength;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectPrefixLength_ToString = retObjectPrefixLength == null ? "null" : retObjectPrefixLength.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectPrefixLengthNumber = (java.lang.Number)retObjectPrefixLength;
+                return retObjectPrefixLengthNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectPrefixLength != null ? retObjectPrefixLength.getClass() : "null", retObjectPrefixLength_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -236,10 +263,14 @@ public class IPNetwork extends ValueType implements system.IFormattable {
 
     public IPAddress getBaseAddress() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBaseAddress = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("BaseAddress");
+            retObjectBaseAddress = classInstance.Get("BaseAddress");
+            JCObject val = (JCObject)retObjectBaseAddress;
             return new IPAddress(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBaseAddress != null ? retObjectBaseAddress.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -171,9 +171,20 @@ public class StylusDownEventArgs extends StylusEventArgs  {
     
     public int getTapCount() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTapCount = null;
         try {
-            return (int)classInstance.Get("TapCount");
+            retObjectTapCount = classInstance.Get("TapCount");
+            return (int)retObjectTapCount;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectTapCount_ToString = retObjectTapCount == null ? "null" : retObjectTapCount.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectTapCountNumber = (java.lang.Number)retObjectTapCount;
+                return retObjectTapCountNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectTapCount != null ? retObjectTapCount.getClass() : "null", retObjectTapCount_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

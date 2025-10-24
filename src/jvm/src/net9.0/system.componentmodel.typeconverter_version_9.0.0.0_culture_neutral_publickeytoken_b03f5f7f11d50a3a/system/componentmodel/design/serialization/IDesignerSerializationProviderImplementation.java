@@ -144,10 +144,14 @@ public class IDesignerSerializationProviderImplementation extends NetObject impl
     
     public NetObject GetSerializer(IDesignerSerializationManager manager, NetObject currentSerializer, NetType objectType, NetType serializerType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSerializer = null;
         try {
-            JCObject objGetSerializer = (JCObject)classInstance.Invoke("GetSerializer", manager == null ? null : manager.getJCOInstance(), currentSerializer == null ? null : currentSerializer.getJCOInstance(), objectType == null ? null : objectType.getJCOInstance(), serializerType == null ? null : serializerType.getJCOInstance());
+            retObjectGetSerializer = classInstance.Invoke("GetSerializer", manager == null ? null : manager.getJCOInstance(), currentSerializer == null ? null : currentSerializer.getJCOInstance(), objectType == null ? null : objectType.getJCOInstance(), serializerType == null ? null : serializerType.getJCOInstance());
+            JCObject objGetSerializer = (JCObject)retObjectGetSerializer;
             return new NetObject(objGetSerializer);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSerializer != null ? retObjectGetSerializer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -167,9 +167,13 @@ public class HyperLink extends WebControl  {
     
     public java.lang.String getImageUrl() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectImageUrl = null;
         try {
-            return (java.lang.String)classInstance.Get("ImageUrl");
+            retObjectImageUrl = classInstance.Get("ImageUrl");
+            return (java.lang.String)retObjectImageUrl;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectImageUrl != null ? retObjectImageUrl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,7 +181,7 @@ public class HyperLink extends WebControl  {
 
     public void setImageUrl(java.lang.String ImageUrl) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ImageUrl", ImageUrl);
         } catch (JCNativeException jcne) {
@@ -187,9 +191,13 @@ public class HyperLink extends WebControl  {
 
     public java.lang.String getNavigateUrl() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNavigateUrl = null;
         try {
-            return (java.lang.String)classInstance.Get("NavigateUrl");
+            retObjectNavigateUrl = classInstance.Get("NavigateUrl");
+            return (java.lang.String)retObjectNavigateUrl;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectNavigateUrl != null ? retObjectNavigateUrl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,7 +205,7 @@ public class HyperLink extends WebControl  {
 
     public void setNavigateUrl(java.lang.String NavigateUrl) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("NavigateUrl", NavigateUrl);
         } catch (JCNativeException jcne) {
@@ -207,9 +215,13 @@ public class HyperLink extends WebControl  {
 
     public java.lang.String getTarget() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTarget = null;
         try {
-            return (java.lang.String)classInstance.Get("Target");
+            retObjectTarget = classInstance.Get("Target");
+            return (java.lang.String)retObjectTarget;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectTarget != null ? retObjectTarget.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -217,7 +229,7 @@ public class HyperLink extends WebControl  {
 
     public void setTarget(java.lang.String Target) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Target", Target);
         } catch (JCNativeException jcne) {
@@ -227,9 +239,13 @@ public class HyperLink extends WebControl  {
 
     public java.lang.String getText() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectText = null;
         try {
-            return (java.lang.String)classInstance.Get("Text");
+            retObjectText = classInstance.Get("Text");
+            return (java.lang.String)retObjectText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectText != null ? retObjectText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -237,7 +253,7 @@ public class HyperLink extends WebControl  {
 
     public void setText(java.lang.String Text) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Text", Text);
         } catch (JCNativeException jcne) {
@@ -247,10 +263,14 @@ public class HyperLink extends WebControl  {
 
     public Unit getImageHeight() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectImageHeight = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ImageHeight");
+            retObjectImageHeight = classInstance.Get("ImageHeight");
+            JCObject val = (JCObject)retObjectImageHeight;
             return new Unit(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectImageHeight != null ? retObjectImageHeight.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -258,7 +278,7 @@ public class HyperLink extends WebControl  {
 
     public void setImageHeight(Unit ImageHeight) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ImageHeight", ImageHeight == null ? null : ImageHeight.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -268,10 +288,14 @@ public class HyperLink extends WebControl  {
 
     public Unit getImageWidth() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectImageWidth = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ImageWidth");
+            retObjectImageWidth = classInstance.Get("ImageWidth");
+            JCObject val = (JCObject)retObjectImageWidth;
             return new Unit(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectImageWidth != null ? retObjectImageWidth.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -279,7 +303,7 @@ public class HyperLink extends WebControl  {
 
     public void setImageWidth(Unit ImageWidth) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ImageWidth", ImageWidth == null ? null : ImageWidth.getJCOInstance());
         } catch (JCNativeException jcne) {

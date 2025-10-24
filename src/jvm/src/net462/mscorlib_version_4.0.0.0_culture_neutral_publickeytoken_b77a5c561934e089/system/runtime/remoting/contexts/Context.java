@@ -169,9 +169,13 @@ public class Context extends NetObject  {
     
     public static boolean RegisterDynamicProperty(IDynamicProperty prop, ContextBoundObject obj, Context ctx) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NullReferenceException, system.InvalidOperationException, system.runtime.remoting.RemotingException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectRegisterDynamicProperty = null;
         try {
-            return (boolean)classType.Invoke("RegisterDynamicProperty", prop == null ? null : prop.getJCOInstance(), obj == null ? null : obj.getJCOInstance(), ctx == null ? null : ctx.getJCOInstance());
+            retObjectRegisterDynamicProperty = classType.Invoke("RegisterDynamicProperty", prop == null ? null : prop.getJCOInstance(), obj == null ? null : obj.getJCOInstance(), ctx == null ? null : ctx.getJCOInstance());
+            return (boolean)retObjectRegisterDynamicProperty;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectRegisterDynamicProperty != null ? retObjectRegisterDynamicProperty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,9 +183,13 @@ public class Context extends NetObject  {
 
     public static boolean UnregisterDynamicProperty(java.lang.String name, ContextBoundObject obj, Context ctx) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.runtime.remoting.RemotingException, system.NullReferenceException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectUnregisterDynamicProperty = null;
         try {
-            return (boolean)classType.Invoke("UnregisterDynamicProperty", name, obj == null ? null : obj.getJCOInstance(), ctx == null ? null : ctx.getJCOInstance());
+            retObjectUnregisterDynamicProperty = classType.Invoke("UnregisterDynamicProperty", name, obj == null ? null : obj.getJCOInstance(), ctx == null ? null : ctx.getJCOInstance());
+            return (boolean)retObjectUnregisterDynamicProperty;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectUnregisterDynamicProperty != null ? retObjectUnregisterDynamicProperty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -189,10 +197,14 @@ public class Context extends NetObject  {
 
     public static LocalDataStoreSlot AllocateDataSlot() throws Throwable, system.ArgumentException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAllocateDataSlot = null;
         try {
-            JCObject objAllocateDataSlot = (JCObject)classType.Invoke("AllocateDataSlot");
+            retObjectAllocateDataSlot = classType.Invoke("AllocateDataSlot");
+            JCObject objAllocateDataSlot = (JCObject)retObjectAllocateDataSlot;
             return new LocalDataStoreSlot(objAllocateDataSlot);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAllocateDataSlot != null ? retObjectAllocateDataSlot.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,10 +212,14 @@ public class Context extends NetObject  {
 
     public static LocalDataStoreSlot AllocateNamedDataSlot(java.lang.String name) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAllocateNamedDataSlot = null;
         try {
-            JCObject objAllocateNamedDataSlot = (JCObject)classType.Invoke("AllocateNamedDataSlot", name);
+            retObjectAllocateNamedDataSlot = classType.Invoke("AllocateNamedDataSlot", name);
+            JCObject objAllocateNamedDataSlot = (JCObject)retObjectAllocateNamedDataSlot;
             return new LocalDataStoreSlot(objAllocateNamedDataSlot);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAllocateNamedDataSlot != null ? retObjectAllocateNamedDataSlot.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -211,10 +227,14 @@ public class Context extends NetObject  {
 
     public static LocalDataStoreSlot GetNamedDataSlot(java.lang.String name) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetNamedDataSlot = null;
         try {
-            JCObject objGetNamedDataSlot = (JCObject)classType.Invoke("GetNamedDataSlot", name);
+            retObjectGetNamedDataSlot = classType.Invoke("GetNamedDataSlot", name);
+            JCObject objGetNamedDataSlot = (JCObject)retObjectGetNamedDataSlot;
             return new LocalDataStoreSlot(objGetNamedDataSlot);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetNamedDataSlot != null ? retObjectGetNamedDataSlot.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -222,10 +242,14 @@ public class Context extends NetObject  {
 
     public static NetObject GetData(LocalDataStoreSlot slot) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetData = null;
         try {
-            JCObject objGetData = (JCObject)classType.Invoke("GetData", slot == null ? null : slot.getJCOInstance());
+            retObjectGetData = classType.Invoke("GetData", slot == null ? null : slot.getJCOInstance());
+            JCObject objGetData = (JCObject)retObjectGetData;
             return new NetObject(objGetData);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetData != null ? retObjectGetData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -233,10 +257,14 @@ public class Context extends NetObject  {
 
     public IContextProperty GetProperty(java.lang.String name) throws Throwable, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetProperty = null;
         try {
-            JCObject objGetProperty = (JCObject)classInstance.Invoke("GetProperty", name);
+            retObjectGetProperty = classInstance.Invoke("GetProperty", name);
+            JCObject objGetProperty = (JCObject)retObjectGetProperty;
             return new IContextPropertyImplementation(objGetProperty);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetProperty != null ? retObjectGetProperty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -244,7 +272,7 @@ public class Context extends NetObject  {
 
     public void DoCallBack(CrossContextDelegate deleg) throws Throwable, system.ArgumentNullException, system.runtime.remoting.RemotingException, system.ArgumentException, system.InvalidOperationException, system.security.SecurityException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DoCallBack", deleg);
         } catch (JCNativeException jcne) {
@@ -254,7 +282,7 @@ public class Context extends NetObject  {
 
     public static void FreeNamedDataSlot(java.lang.String name) throws Throwable, system.ArgumentException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("FreeNamedDataSlot", name);
         } catch (JCNativeException jcne) {
@@ -264,7 +292,7 @@ public class Context extends NetObject  {
 
     public void Freeze() throws Throwable, system.ArgumentException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Freeze");
         } catch (JCNativeException jcne) {
@@ -274,7 +302,7 @@ public class Context extends NetObject  {
 
     public static void SetData(LocalDataStoreSlot slot, NetObject data) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetData", slot == null ? null : slot.getJCOInstance(), data == null ? null : data.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -284,7 +312,7 @@ public class Context extends NetObject  {
 
     public void SetProperty(IContextProperty prop) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetProperty", prop == null ? null : prop.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -298,9 +326,20 @@ public class Context extends NetObject  {
     
     public int getContextID() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContextID = null;
         try {
-            return (int)classInstance.Get("ContextID");
+            retObjectContextID = classInstance.Get("ContextID");
+            return (int)retObjectContextID;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectContextID_ToString = retObjectContextID == null ? "null" : retObjectContextID.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectContextIDNumber = (java.lang.Number)retObjectContextID;
+                return retObjectContextIDNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectContextID != null ? retObjectContextID.getClass() : "null", retObjectContextID_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -308,10 +347,14 @@ public class Context extends NetObject  {
 
     public static Context getDefaultContext() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.NullReferenceException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDefaultContext = null;
         try {
-            JCObject val = (JCObject)classType.Get("DefaultContext");
+            retObjectDefaultContext = classType.Get("DefaultContext");
+            JCObject val = (JCObject)retObjectDefaultContext;
             return new Context(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefaultContext != null ? retObjectDefaultContext.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -319,16 +362,20 @@ public class Context extends NetObject  {
 
     public final IContextProperty[] getContextProperties() throws Throwable, system.ArgumentException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContextProperties = null;
         try {
             ArrayList<IContextProperty> resultingArrayList = new ArrayList<IContextProperty>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("ContextProperties");
+            retObjectContextProperties = classInstance.Get("ContextProperties");
+            JCObject resultingObjects = (JCObject)retObjectContextProperties;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new IContextPropertyImplementation(resultingObject));
             }
             IContextProperty[] resultingArray = new IContextProperty[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContextProperties != null ? retObjectContextProperties.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

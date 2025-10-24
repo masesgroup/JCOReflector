@@ -143,10 +143,14 @@ public class ISecurityEncodableImplementation extends NetObject implements ISecu
     
     public SecurityElement ToXml() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToXml = null;
         try {
-            JCObject objToXml = (JCObject)classInstance.Invoke("ToXml");
+            retObjectToXml = classInstance.Invoke("ToXml");
+            JCObject objToXml = (JCObject)retObjectToXml;
             return new SecurityElement(objToXml);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToXml != null ? retObjectToXml.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -154,7 +158,7 @@ public class ISecurityEncodableImplementation extends NetObject implements ISecu
 
     public void FromXml(SecurityElement e) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("FromXml", e == null ? null : e.getJCOInstance());
         } catch (JCNativeException jcne) {

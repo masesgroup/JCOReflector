@@ -157,9 +157,13 @@ public class XPathResult extends NetObject implements AutoCloseable {
     
     public boolean GetResultAsBoolean() throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.OutOfMemoryException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.MulticastNotSupportedException, system.configuration.ConfigurationErrorsException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetResultAsBoolean = null;
         try {
-            return (boolean)classInstance.Invoke("GetResultAsBoolean");
+            retObjectGetResultAsBoolean = classInstance.Invoke("GetResultAsBoolean");
+            return (boolean)retObjectGetResultAsBoolean;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectGetResultAsBoolean != null ? retObjectGetResultAsBoolean.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -167,9 +171,20 @@ public class XPathResult extends NetObject implements AutoCloseable {
 
     public double GetResultAsNumber() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException, system.NullReferenceException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetResultAsNumber = null;
         try {
-            return (double)classInstance.Invoke("GetResultAsNumber");
+            retObjectGetResultAsNumber = classInstance.Invoke("GetResultAsNumber");
+            return (double)retObjectGetResultAsNumber;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetResultAsNumber_ToString = retObjectGetResultAsNumber == null ? "null" : retObjectGetResultAsNumber.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetResultAsNumberNumber = (java.lang.Number)retObjectGetResultAsNumber;
+                return retObjectGetResultAsNumberNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectGetResultAsNumber != null ? retObjectGetResultAsNumber.getClass() : "null", retObjectGetResultAsNumber_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,9 +192,13 @@ public class XPathResult extends NetObject implements AutoCloseable {
 
     public java.lang.String GetResultAsString() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetResultAsString = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetResultAsString");
+            retObjectGetResultAsString = classInstance.Invoke("GetResultAsString");
+            return (java.lang.String)retObjectGetResultAsString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetResultAsString != null ? retObjectGetResultAsString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,10 +206,14 @@ public class XPathResult extends NetObject implements AutoCloseable {
 
     public XPathNodeIterator GetResultAsNodeset() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetResultAsNodeset = null;
         try {
-            JCObject objGetResultAsNodeset = (JCObject)classInstance.Invoke("GetResultAsNodeset");
+            retObjectGetResultAsNodeset = classInstance.Invoke("GetResultAsNodeset");
+            JCObject objGetResultAsNodeset = (JCObject)retObjectGetResultAsNodeset;
             return new XPathNodeIterator(objGetResultAsNodeset);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetResultAsNodeset != null ? retObjectGetResultAsNodeset.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,7 +221,7 @@ public class XPathResult extends NetObject implements AutoCloseable {
 
     public void Dispose() throws Throwable, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
@@ -209,7 +232,7 @@ public class XPathResult extends NetObject implements AutoCloseable {
     public void close() throws Exception {
         try {
             if (classInstance == null)
-                throw new UnsupportedOperationException("classInstance is null.");
+                throw new java.lang.UnsupportedOperationException("classInstance is null.");
             try {
                 classInstance.Invoke("Dispose");
             }
@@ -225,10 +248,14 @@ public class XPathResult extends NetObject implements AutoCloseable {
     
     public XPathResultType getResultType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResultType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ResultType");
+            retObjectResultType = classInstance.Get("ResultType");
+            JCObject val = (JCObject)retObjectResultType;
             return new XPathResultType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectResultType != null ? retObjectResultType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

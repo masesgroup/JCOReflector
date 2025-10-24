@@ -175,10 +175,14 @@ public class SettingsSection extends ConfigurationSection  {
     
     public HttpListenerElement getHttpListener() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHttpListener = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("HttpListener");
+            retObjectHttpListener = classInstance.Get("HttpListener");
+            JCObject val = (JCObject)retObjectHttpListener;
             return new HttpListenerElement(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHttpListener != null ? retObjectHttpListener.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,10 +190,14 @@ public class SettingsSection extends ConfigurationSection  {
 
     public HttpWebRequestElement getHttpWebRequest() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHttpWebRequest = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("HttpWebRequest");
+            retObjectHttpWebRequest = classInstance.Get("HttpWebRequest");
+            JCObject val = (JCObject)retObjectHttpWebRequest;
             return new HttpWebRequestElement(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHttpWebRequest != null ? retObjectHttpWebRequest.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,10 +205,14 @@ public class SettingsSection extends ConfigurationSection  {
 
     public Ipv6Element getIpv6() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIpv6 = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Ipv6");
+            retObjectIpv6 = classInstance.Get("Ipv6");
+            JCObject val = (JCObject)retObjectIpv6;
             return new Ipv6Element(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIpv6 != null ? retObjectIpv6.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -208,10 +220,14 @@ public class SettingsSection extends ConfigurationSection  {
 
     public PerformanceCountersElement getPerformanceCounters() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPerformanceCounters = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PerformanceCounters");
+            retObjectPerformanceCounters = classInstance.Get("PerformanceCounters");
+            JCObject val = (JCObject)retObjectPerformanceCounters;
             return new PerformanceCountersElement(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPerformanceCounters != null ? retObjectPerformanceCounters.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -219,10 +235,14 @@ public class SettingsSection extends ConfigurationSection  {
 
     public ServicePointManagerElement getServicePointManager() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectServicePointManager = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ServicePointManager");
+            retObjectServicePointManager = classInstance.Get("ServicePointManager");
+            JCObject val = (JCObject)retObjectServicePointManager;
             return new ServicePointManagerElement(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectServicePointManager != null ? retObjectServicePointManager.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -230,10 +250,14 @@ public class SettingsSection extends ConfigurationSection  {
 
     public SocketElement getSocket() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSocket = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Socket");
+            retObjectSocket = classInstance.Get("Socket");
+            JCObject val = (JCObject)retObjectSocket;
             return new SocketElement(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSocket != null ? retObjectSocket.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -241,10 +265,14 @@ public class SettingsSection extends ConfigurationSection  {
 
     public WebProxyScriptElement getWebProxyScript() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWebProxyScript = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("WebProxyScript");
+            retObjectWebProxyScript = classInstance.Get("WebProxyScript");
+            JCObject val = (JCObject)retObjectWebProxyScript;
             return new WebProxyScriptElement(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWebProxyScript != null ? retObjectWebProxyScript.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -252,10 +280,14 @@ public class SettingsSection extends ConfigurationSection  {
 
     public WebUtilityElement getWebUtility() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWebUtility = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("WebUtility");
+            retObjectWebUtility = classInstance.Get("WebUtility");
+            JCObject val = (JCObject)retObjectWebUtility;
             return new WebUtilityElement(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWebUtility != null ? retObjectWebUtility.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -263,10 +295,14 @@ public class SettingsSection extends ConfigurationSection  {
 
     public WindowsAuthenticationElement getWindowsAuthentication() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWindowsAuthentication = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("WindowsAuthentication");
+            retObjectWindowsAuthentication = classInstance.Get("WindowsAuthentication");
+            JCObject val = (JCObject)retObjectWindowsAuthentication;
             return new WindowsAuthenticationElement(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWindowsAuthentication != null ? retObjectWindowsAuthentication.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -184,10 +184,14 @@ public class X509BasicConstraintsExtension extends X509Extension  {
     
     public static X509BasicConstraintsExtension CreateForEndEntity(boolean critical) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.ArgumentException, system.NotSupportedException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateForEndEntity = null;
         try {
-            JCObject objCreateForEndEntity = (JCObject)classType.Invoke("CreateForEndEntity", critical);
+            retObjectCreateForEndEntity = classType.Invoke("CreateForEndEntity", critical);
+            JCObject objCreateForEndEntity = (JCObject)retObjectCreateForEndEntity;
             return new X509BasicConstraintsExtension(objCreateForEndEntity);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateForEndEntity != null ? retObjectCreateForEndEntity.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,7 +199,7 @@ public class X509BasicConstraintsExtension extends X509Extension  {
 
     public void CopyFrom(AsnEncodedData asnEncodedData) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CopyFrom", asnEncodedData == null ? null : asnEncodedData.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -209,9 +213,13 @@ public class X509BasicConstraintsExtension extends X509Extension  {
     
     public boolean getCertificateAuthority() throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCertificateAuthority = null;
         try {
-            return (boolean)classInstance.Get("CertificateAuthority");
+            retObjectCertificateAuthority = classInstance.Get("CertificateAuthority");
+            return (boolean)retObjectCertificateAuthority;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCertificateAuthority != null ? retObjectCertificateAuthority.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -219,9 +227,13 @@ public class X509BasicConstraintsExtension extends X509Extension  {
 
     public boolean getHasPathLengthConstraint() throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHasPathLengthConstraint = null;
         try {
-            return (boolean)classInstance.Get("HasPathLengthConstraint");
+            retObjectHasPathLengthConstraint = classInstance.Get("HasPathLengthConstraint");
+            return (boolean)retObjectHasPathLengthConstraint;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectHasPathLengthConstraint != null ? retObjectHasPathLengthConstraint.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -229,9 +241,20 @@ public class X509BasicConstraintsExtension extends X509Extension  {
 
     public int getPathLengthConstraint() throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPathLengthConstraint = null;
         try {
-            return (int)classInstance.Get("PathLengthConstraint");
+            retObjectPathLengthConstraint = classInstance.Get("PathLengthConstraint");
+            return (int)retObjectPathLengthConstraint;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectPathLengthConstraint_ToString = retObjectPathLengthConstraint == null ? "null" : retObjectPathLengthConstraint.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectPathLengthConstraintNumber = (java.lang.Number)retObjectPathLengthConstraint;
+                return retObjectPathLengthConstraintNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectPathLengthConstraint != null ? retObjectPathLengthConstraint.getClass() : "null", retObjectPathLengthConstraint_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -195,10 +195,14 @@ public class KeyInfoX509Data extends KeyInfoClause  {
     
     public XmlElement GetXml() throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetXml = null;
         try {
-            JCObject objGetXml = (JCObject)classInstance.Invoke("GetXml");
+            retObjectGetXml = classInstance.Invoke("GetXml");
+            JCObject objGetXml = (JCObject)retObjectGetXml;
             return new XmlElement(objGetXml);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetXml != null ? retObjectGetXml.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -206,7 +210,7 @@ public class KeyInfoX509Data extends KeyInfoClause  {
 
     public void AddCertificate(X509Certificate certificate) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddCertificate", certificate == null ? null : certificate.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -216,7 +220,7 @@ public class KeyInfoX509Data extends KeyInfoClause  {
 
     public void AddIssuerSerial(java.lang.String issuerName, java.lang.String serialNumber) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.TypeInitializationException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddIssuerSerial", issuerName, serialNumber);
         } catch (JCNativeException jcne) {
@@ -226,7 +230,7 @@ public class KeyInfoX509Data extends KeyInfoClause  {
 
     public void AddSubjectKeyId(byte[] subjectKeyId) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddSubjectKeyId", (java.lang.Object)subjectKeyId);
         } catch (JCNativeException jcne) {
@@ -236,7 +240,7 @@ public class KeyInfoX509Data extends KeyInfoClause  {
 
     public void AddSubjectKeyId(JCORefOut dupParam0) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddSubjectKeyId", (java.lang.Object)dupParam0.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -246,7 +250,7 @@ public class KeyInfoX509Data extends KeyInfoClause  {
 
     public void AddSubjectKeyId(java.lang.String subjectKeyId) throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddSubjectKeyId", subjectKeyId);
         } catch (JCNativeException jcne) {
@@ -256,7 +260,7 @@ public class KeyInfoX509Data extends KeyInfoClause  {
 
     public void AddSubjectName(java.lang.String subjectName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddSubjectName", subjectName);
         } catch (JCNativeException jcne) {
@@ -266,7 +270,7 @@ public class KeyInfoX509Data extends KeyInfoClause  {
 
     public void LoadXml(XmlElement element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.xml.xpath.XPathException, system.security.cryptography.CryptographicException, system.OutOfMemoryException, system.FormatException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("LoadXml", element == null ? null : element.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -280,10 +284,12 @@ public class KeyInfoX509Data extends KeyInfoClause  {
     
     public byte[] getCRL() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCRL = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("CRL");
+            retObjectCRL = classInstance.Get("CRL");
+            JCObject resultingObjects = (JCObject)retObjectCRL;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -292,6 +298,8 @@ public class KeyInfoX509Data extends KeyInfoClause  {
 				resultingArray[indexCRL] = (byte)resultingArrayList.get(indexCRL);
 			}
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into JCObject", retObjectCRL != null ? retObjectCRL.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -299,7 +307,7 @@ public class KeyInfoX509Data extends KeyInfoClause  {
 
     public void setCRL(byte[] CRL) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CRL", CRL);
         } catch (JCNativeException jcne) {
@@ -309,10 +317,14 @@ public class KeyInfoX509Data extends KeyInfoClause  {
 
     public NetArrayList getCertificates() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCertificates = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Certificates");
+            retObjectCertificates = classInstance.Get("Certificates");
+            JCObject val = (JCObject)retObjectCertificates;
             return new NetArrayList(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCertificates != null ? retObjectCertificates.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -320,10 +332,14 @@ public class KeyInfoX509Data extends KeyInfoClause  {
 
     public NetArrayList getIssuerSerials() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIssuerSerials = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("IssuerSerials");
+            retObjectIssuerSerials = classInstance.Get("IssuerSerials");
+            JCObject val = (JCObject)retObjectIssuerSerials;
             return new NetArrayList(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIssuerSerials != null ? retObjectIssuerSerials.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -331,10 +347,14 @@ public class KeyInfoX509Data extends KeyInfoClause  {
 
     public NetArrayList getSubjectKeyIds() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSubjectKeyIds = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SubjectKeyIds");
+            retObjectSubjectKeyIds = classInstance.Get("SubjectKeyIds");
+            JCObject val = (JCObject)retObjectSubjectKeyIds;
             return new NetArrayList(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSubjectKeyIds != null ? retObjectSubjectKeyIds.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -342,10 +362,14 @@ public class KeyInfoX509Data extends KeyInfoClause  {
 
     public NetArrayList getSubjectNames() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSubjectNames = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SubjectNames");
+            retObjectSubjectNames = classInstance.Get("SubjectNames");
+            JCObject val = (JCObject)retObjectSubjectNames;
             return new NetArrayList(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSubjectNames != null ? retObjectSubjectNames.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

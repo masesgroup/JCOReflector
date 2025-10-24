@@ -162,7 +162,7 @@ public class DatePickerTextBox extends TextBox  {
     
     public void OnApplyTemplate() throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.NullReferenceException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("OnApplyTemplate");
         } catch (JCNativeException jcne) {

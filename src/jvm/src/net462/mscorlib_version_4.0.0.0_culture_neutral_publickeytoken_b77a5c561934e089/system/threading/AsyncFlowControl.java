@@ -157,9 +157,13 @@ public class AsyncFlowControl extends ValueType implements AutoCloseable {
     
     public boolean Equals(AsyncFlowControl obj) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEquals = null;
         try {
-            return (boolean)classInstance.Invoke("Equals", obj == null ? null : obj.getJCOInstance());
+            retObjectEquals = classInstance.Invoke("Equals", obj == null ? null : obj.getJCOInstance());
+            return (boolean)retObjectEquals;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectEquals != null ? retObjectEquals.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -167,7 +171,7 @@ public class AsyncFlowControl extends ValueType implements AutoCloseable {
 
     public void Dispose() throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
@@ -177,7 +181,7 @@ public class AsyncFlowControl extends ValueType implements AutoCloseable {
 
     public void Undo() throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Undo");
         } catch (JCNativeException jcne) {
@@ -188,7 +192,7 @@ public class AsyncFlowControl extends ValueType implements AutoCloseable {
     public void close() throws Exception {
         try {
             if (classInstance == null)
-                throw new UnsupportedOperationException("classInstance is null.");
+                throw new java.lang.UnsupportedOperationException("classInstance is null.");
             try {
                 classInstance.Invoke("Dispose");
             }

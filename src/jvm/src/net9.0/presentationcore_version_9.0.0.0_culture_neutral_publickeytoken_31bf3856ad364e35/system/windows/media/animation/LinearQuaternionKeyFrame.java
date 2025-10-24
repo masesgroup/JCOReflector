@@ -188,9 +188,13 @@ public class LinearQuaternionKeyFrame extends QuaternionKeyFrame  {
     
     public boolean getUseShortestPath() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUseShortestPath = null;
         try {
-            return (boolean)classInstance.Get("UseShortestPath");
+            retObjectUseShortestPath = classInstance.Get("UseShortestPath");
+            return (boolean)retObjectUseShortestPath;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectUseShortestPath != null ? retObjectUseShortestPath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,7 +202,7 @@ public class LinearQuaternionKeyFrame extends QuaternionKeyFrame  {
 
     public void setUseShortestPath(boolean UseShortestPath) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UseShortestPath", UseShortestPath);
         } catch (JCNativeException jcne) {

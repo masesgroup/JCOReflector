@@ -157,10 +157,14 @@ public class ArrayConstructor extends ScriptFunction  {
     
     public ArrayObject ConstructArray(NetObject[] args) throws Throwable, system.NotImplementedException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.ArithmeticException, system.OverflowException, microsoft.jscript.JScriptException, system.MissingMethodException, system.NullReferenceException, system.FormatException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConstructArray = null;
         try {
-            JCObject objConstructArray = (JCObject)classInstance.Invoke("ConstructArray", (java.lang.Object)toObjectFromArray(args));
+            retObjectConstructArray = classInstance.Invoke("ConstructArray", (java.lang.Object)toObjectFromArray(args));
+            JCObject objConstructArray = (JCObject)retObjectConstructArray;
             return new ArrayObject(objConstructArray);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConstructArray != null ? retObjectConstructArray.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -168,10 +172,14 @@ public class ArrayConstructor extends ScriptFunction  {
 
     public ArrayObject CreateInstanceNewArrayConstructor(NetObject... args) throws Throwable, system.NotImplementedException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.InvalidOperationException, system.ArgumentException, microsoft.jscript.JScriptException, microsoft.jscript.EndOfFile, system.MissingMethodException, system.OverflowException, system.FormatException, system.ArithmeticException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateInstance = null;
         try {
-            JCObject objCreateInstance = (JCObject)classInstance.Invoke("CreateInstance", (java.lang.Object)toObjectFromArray(args));
+            retObjectCreateInstance = classInstance.Invoke("CreateInstance", (java.lang.Object)toObjectFromArray(args));
+            JCObject objCreateInstance = (JCObject)retObjectCreateInstance;
             return new ArrayObject(objCreateInstance);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateInstance != null ? retObjectCreateInstance.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,10 +187,14 @@ public class ArrayConstructor extends ScriptFunction  {
 
     public ArrayObject Invoke(NetObject... args) throws Throwable, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, microsoft.jscript.JScriptException, system.MissingMethodException, system.NullReferenceException, system.FormatException, system.OverflowException, system.ArithmeticException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInvoke = null;
         try {
-            JCObject objInvoke = (JCObject)classInstance.Invoke("Invoke", (java.lang.Object)toObjectFromArray(args));
+            retObjectInvoke = classInstance.Invoke("Invoke", (java.lang.Object)toObjectFromArray(args));
+            JCObject objInvoke = (JCObject)retObjectInvoke;
             return new ArrayObject(objInvoke);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInvoke != null ? retObjectInvoke.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

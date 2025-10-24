@@ -158,10 +158,14 @@ public class Handle extends NetObject  {
     
     public ActivityInstance getOwner() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOwner = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Owner");
+            retObjectOwner = classInstance.Get("Owner");
+            JCObject val = (JCObject)retObjectOwner;
             return new ActivityInstance(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOwner != null ? retObjectOwner.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,9 +173,13 @@ public class Handle extends NetObject  {
 
     public java.lang.String getExecutionPropertyName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExecutionPropertyName = null;
         try {
-            return (java.lang.String)classInstance.Get("ExecutionPropertyName");
+            retObjectExecutionPropertyName = classInstance.Get("ExecutionPropertyName");
+            return (java.lang.String)retObjectExecutionPropertyName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectExecutionPropertyName != null ? retObjectExecutionPropertyName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

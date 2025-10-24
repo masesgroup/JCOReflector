@@ -156,10 +156,14 @@ public class GlobalizationExtensions extends NetObject  {
     
     public static StringComparer GetStringComparer(CompareInfo compareInfo, CompareOptions options) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetStringComparer = null;
         try {
-            JCObject objGetStringComparer = (JCObject)classType.Invoke("GetStringComparer", compareInfo == null ? null : compareInfo.getJCOInstance(), options == null ? null : options.getJCOInstance());
+            retObjectGetStringComparer = classType.Invoke("GetStringComparer", compareInfo == null ? null : compareInfo.getJCOInstance(), options == null ? null : options.getJCOInstance());
+            JCObject objGetStringComparer = (JCObject)retObjectGetStringComparer;
             return new StringComparer(objGetStringComparer);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetStringComparer != null ? retObjectGetStringComparer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

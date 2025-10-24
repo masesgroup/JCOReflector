@@ -161,9 +161,13 @@ public class DelegatingXmlDictionaryReader extends XmlDictionaryReader  {
     
     public boolean MoveToAttribute(java.lang.String name) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMoveToAttribute = null;
         try {
-            return (boolean)classInstance.Invoke("MoveToAttribute", name);
+            retObjectMoveToAttribute = classInstance.Invoke("MoveToAttribute", name);
+            return (boolean)retObjectMoveToAttribute;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectMoveToAttribute != null ? retObjectMoveToAttribute.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,9 +175,13 @@ public class DelegatingXmlDictionaryReader extends XmlDictionaryReader  {
 
     public boolean MoveToAttribute(java.lang.String name, java.lang.String ns) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMoveToAttribute = null;
         try {
-            return (boolean)classInstance.Invoke("MoveToAttribute", name, ns);
+            retObjectMoveToAttribute = classInstance.Invoke("MoveToAttribute", name, ns);
+            return (boolean)retObjectMoveToAttribute;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectMoveToAttribute != null ? retObjectMoveToAttribute.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,9 +189,13 @@ public class DelegatingXmlDictionaryReader extends XmlDictionaryReader  {
 
     public boolean MoveToElement() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMoveToElement = null;
         try {
-            return (boolean)classInstance.Invoke("MoveToElement");
+            retObjectMoveToElement = classInstance.Invoke("MoveToElement");
+            return (boolean)retObjectMoveToElement;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectMoveToElement != null ? retObjectMoveToElement.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,9 +203,13 @@ public class DelegatingXmlDictionaryReader extends XmlDictionaryReader  {
 
     public boolean MoveToFirstAttribute() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMoveToFirstAttribute = null;
         try {
-            return (boolean)classInstance.Invoke("MoveToFirstAttribute");
+            retObjectMoveToFirstAttribute = classInstance.Invoke("MoveToFirstAttribute");
+            return (boolean)retObjectMoveToFirstAttribute;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectMoveToFirstAttribute != null ? retObjectMoveToFirstAttribute.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,9 +217,13 @@ public class DelegatingXmlDictionaryReader extends XmlDictionaryReader  {
 
     public boolean MoveToNextAttribute() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMoveToNextAttribute = null;
         try {
-            return (boolean)classInstance.Invoke("MoveToNextAttribute");
+            retObjectMoveToNextAttribute = classInstance.Invoke("MoveToNextAttribute");
+            return (boolean)retObjectMoveToNextAttribute;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectMoveToNextAttribute != null ? retObjectMoveToNextAttribute.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -211,9 +231,13 @@ public class DelegatingXmlDictionaryReader extends XmlDictionaryReader  {
 
     public boolean Read() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRead = null;
         try {
-            return (boolean)classInstance.Invoke("Read");
+            retObjectRead = classInstance.Invoke("Read");
+            return (boolean)retObjectRead;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectRead != null ? retObjectRead.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -221,9 +245,13 @@ public class DelegatingXmlDictionaryReader extends XmlDictionaryReader  {
 
     public boolean ReadAttributeValue() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadAttributeValue = null;
         try {
-            return (boolean)classInstance.Invoke("ReadAttributeValue");
+            retObjectReadAttributeValue = classInstance.Invoke("ReadAttributeValue");
+            return (boolean)retObjectReadAttributeValue;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectReadAttributeValue != null ? retObjectReadAttributeValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -231,9 +259,20 @@ public class DelegatingXmlDictionaryReader extends XmlDictionaryReader  {
 
     public int ReadContentAsBase64(byte[] buffer, int index, int count) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadContentAsBase64 = null;
         try {
-            return (int)classInstance.Invoke("ReadContentAsBase64", buffer, index, count);
+            retObjectReadContentAsBase64 = classInstance.Invoke("ReadContentAsBase64", buffer, index, count);
+            return (int)retObjectReadContentAsBase64;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectReadContentAsBase64_ToString = retObjectReadContentAsBase64 == null ? "null" : retObjectReadContentAsBase64.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectReadContentAsBase64Number = (java.lang.Number)retObjectReadContentAsBase64;
+                return retObjectReadContentAsBase64Number.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectReadContentAsBase64 != null ? retObjectReadContentAsBase64.getClass() : "null", retObjectReadContentAsBase64_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -241,9 +280,20 @@ public class DelegatingXmlDictionaryReader extends XmlDictionaryReader  {
 
     public int ReadContentAsBase64(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadContentAsBase64 = null;
         try {
-            return (int)classInstance.Invoke("ReadContentAsBase64", dupParam0.getJCRefOut(), dupParam1, dupParam2);
+            retObjectReadContentAsBase64 = classInstance.Invoke("ReadContentAsBase64", dupParam0.getJCRefOut(), dupParam1, dupParam2);
+            return (int)retObjectReadContentAsBase64;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectReadContentAsBase64_ToString = retObjectReadContentAsBase64 == null ? "null" : retObjectReadContentAsBase64.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectReadContentAsBase64Number = (java.lang.Number)retObjectReadContentAsBase64;
+                return retObjectReadContentAsBase64Number.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectReadContentAsBase64 != null ? retObjectReadContentAsBase64.getClass() : "null", retObjectReadContentAsBase64_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -251,9 +301,20 @@ public class DelegatingXmlDictionaryReader extends XmlDictionaryReader  {
 
     public int ReadContentAsBinHex(byte[] buffer, int index, int count) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadContentAsBinHex = null;
         try {
-            return (int)classInstance.Invoke("ReadContentAsBinHex", buffer, index, count);
+            retObjectReadContentAsBinHex = classInstance.Invoke("ReadContentAsBinHex", buffer, index, count);
+            return (int)retObjectReadContentAsBinHex;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectReadContentAsBinHex_ToString = retObjectReadContentAsBinHex == null ? "null" : retObjectReadContentAsBinHex.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectReadContentAsBinHexNumber = (java.lang.Number)retObjectReadContentAsBinHex;
+                return retObjectReadContentAsBinHexNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectReadContentAsBinHex != null ? retObjectReadContentAsBinHex.getClass() : "null", retObjectReadContentAsBinHex_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -261,9 +322,20 @@ public class DelegatingXmlDictionaryReader extends XmlDictionaryReader  {
 
     public int ReadContentAsBinHex(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadContentAsBinHex = null;
         try {
-            return (int)classInstance.Invoke("ReadContentAsBinHex", dupParam0.getJCRefOut(), dupParam1, dupParam2);
+            retObjectReadContentAsBinHex = classInstance.Invoke("ReadContentAsBinHex", dupParam0.getJCRefOut(), dupParam1, dupParam2);
+            return (int)retObjectReadContentAsBinHex;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectReadContentAsBinHex_ToString = retObjectReadContentAsBinHex == null ? "null" : retObjectReadContentAsBinHex.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectReadContentAsBinHexNumber = (java.lang.Number)retObjectReadContentAsBinHex;
+                return retObjectReadContentAsBinHexNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectReadContentAsBinHex != null ? retObjectReadContentAsBinHex.getClass() : "null", retObjectReadContentAsBinHex_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -271,9 +343,20 @@ public class DelegatingXmlDictionaryReader extends XmlDictionaryReader  {
 
     public int ReadValueChunk(char[] buffer, int index, int count) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadValueChunk = null;
         try {
-            return (int)classInstance.Invoke("ReadValueChunk", buffer, index, count);
+            retObjectReadValueChunk = classInstance.Invoke("ReadValueChunk", buffer, index, count);
+            return (int)retObjectReadValueChunk;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectReadValueChunk_ToString = retObjectReadValueChunk == null ? "null" : retObjectReadValueChunk.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectReadValueChunkNumber = (java.lang.Number)retObjectReadValueChunk;
+                return retObjectReadValueChunkNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectReadValueChunk != null ? retObjectReadValueChunk.getClass() : "null", retObjectReadValueChunk_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -281,9 +364,20 @@ public class DelegatingXmlDictionaryReader extends XmlDictionaryReader  {
 
     public int ReadValueChunk(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadValueChunk = null;
         try {
-            return (int)classInstance.Invoke("ReadValueChunk", dupParam0.getJCRefOut(), dupParam1, dupParam2);
+            retObjectReadValueChunk = classInstance.Invoke("ReadValueChunk", dupParam0.getJCRefOut(), dupParam1, dupParam2);
+            return (int)retObjectReadValueChunk;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectReadValueChunk_ToString = retObjectReadValueChunk == null ? "null" : retObjectReadValueChunk.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectReadValueChunkNumber = (java.lang.Number)retObjectReadValueChunk;
+                return retObjectReadValueChunkNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectReadValueChunk != null ? retObjectReadValueChunk.getClass() : "null", retObjectReadValueChunk_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -291,9 +385,13 @@ public class DelegatingXmlDictionaryReader extends XmlDictionaryReader  {
 
     public java.lang.String GetAttribute(int i) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetAttribute = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetAttribute", i);
+            retObjectGetAttribute = classInstance.Invoke("GetAttribute", i);
+            return (java.lang.String)retObjectGetAttribute;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetAttribute != null ? retObjectGetAttribute.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -301,9 +399,13 @@ public class DelegatingXmlDictionaryReader extends XmlDictionaryReader  {
 
     public java.lang.String GetAttribute(java.lang.String name) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetAttribute = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetAttribute", name);
+            retObjectGetAttribute = classInstance.Invoke("GetAttribute", name);
+            return (java.lang.String)retObjectGetAttribute;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetAttribute != null ? retObjectGetAttribute.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -311,9 +413,13 @@ public class DelegatingXmlDictionaryReader extends XmlDictionaryReader  {
 
     public java.lang.String GetAttribute(java.lang.String name, java.lang.String namespaceURI) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetAttribute = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetAttribute", name, namespaceURI);
+            retObjectGetAttribute = classInstance.Invoke("GetAttribute", name, namespaceURI);
+            return (java.lang.String)retObjectGetAttribute;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetAttribute != null ? retObjectGetAttribute.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -321,9 +427,13 @@ public class DelegatingXmlDictionaryReader extends XmlDictionaryReader  {
 
     public java.lang.String LookupNamespace(java.lang.String prefix) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLookupNamespace = null;
         try {
-            return (java.lang.String)classInstance.Invoke("LookupNamespace", prefix);
+            retObjectLookupNamespace = classInstance.Invoke("LookupNamespace", prefix);
+            return (java.lang.String)retObjectLookupNamespace;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectLookupNamespace != null ? retObjectLookupNamespace.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -331,10 +441,14 @@ public class DelegatingXmlDictionaryReader extends XmlDictionaryReader  {
 
     public UniqueId ReadContentAsUniqueId() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadContentAsUniqueId = null;
         try {
-            JCObject objReadContentAsUniqueId = (JCObject)classInstance.Invoke("ReadContentAsUniqueId");
+            retObjectReadContentAsUniqueId = classInstance.Invoke("ReadContentAsUniqueId");
+            JCObject objReadContentAsUniqueId = (JCObject)retObjectReadContentAsUniqueId;
             return new UniqueId(objReadContentAsUniqueId);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadContentAsUniqueId != null ? retObjectReadContentAsUniqueId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -342,7 +456,7 @@ public class DelegatingXmlDictionaryReader extends XmlDictionaryReader  {
 
     public void Close() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Close");
         } catch (JCNativeException jcne) {
@@ -352,7 +466,7 @@ public class DelegatingXmlDictionaryReader extends XmlDictionaryReader  {
 
     public void MoveToAttribute(int i) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("MoveToAttribute", i);
         } catch (JCNativeException jcne) {
@@ -362,7 +476,7 @@ public class DelegatingXmlDictionaryReader extends XmlDictionaryReader  {
 
     public void ResolveEntity() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ResolveEntity");
         } catch (JCNativeException jcne) {

@@ -169,9 +169,13 @@ public class WrappedKeySecurityToken extends SecurityToken  {
     
     public boolean MatchesKeyIdentifierClause(SecurityKeyIdentifierClause keyIdentifierClause) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.ApplicationException, system.NotSupportedException, system.PlatformNotSupportedException, system.security.cryptography.CryptographicException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMatchesKeyIdentifierClause = null;
         try {
-            return (boolean)classInstance.Invoke("MatchesKeyIdentifierClause", keyIdentifierClause == null ? null : keyIdentifierClause.getJCOInstance());
+            retObjectMatchesKeyIdentifierClause = classInstance.Invoke("MatchesKeyIdentifierClause", keyIdentifierClause == null ? null : keyIdentifierClause.getJCOInstance());
+            return (boolean)retObjectMatchesKeyIdentifierClause;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectMatchesKeyIdentifierClause != null ? retObjectMatchesKeyIdentifierClause.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,10 +183,12 @@ public class WrappedKeySecurityToken extends SecurityToken  {
 
     public byte[] GetWrappedKey() throws Throwable, system.ArgumentException, system.MulticastNotSupportedException, system.ArgumentNullException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetWrappedKey = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetWrappedKey");
+            retObjectGetWrappedKey = classInstance.Invoke("GetWrappedKey");
+            JCObject resultingObjects = (JCObject)retObjectGetWrappedKey;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -191,6 +197,8 @@ public class WrappedKeySecurityToken extends SecurityToken  {
 				resultingArray[indexGetWrappedKey] = (byte)resultingArrayList.get(indexGetWrappedKey);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectGetWrappedKey != null ? retObjectGetWrappedKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,10 +210,14 @@ public class WrappedKeySecurityToken extends SecurityToken  {
     
     public SecurityKeyIdentifier getWrappingTokenReference() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWrappingTokenReference = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("WrappingTokenReference");
+            retObjectWrappingTokenReference = classInstance.Get("WrappingTokenReference");
+            JCObject val = (JCObject)retObjectWrappingTokenReference;
             return new SecurityKeyIdentifier(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWrappingTokenReference != null ? retObjectWrappingTokenReference.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,10 +225,14 @@ public class WrappedKeySecurityToken extends SecurityToken  {
 
     public SecurityToken getWrappingToken() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWrappingToken = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("WrappingToken");
+            retObjectWrappingToken = classInstance.Get("WrappingToken");
+            JCObject val = (JCObject)retObjectWrappingToken;
             return new SecurityToken(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWrappingToken != null ? retObjectWrappingToken.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -224,9 +240,13 @@ public class WrappedKeySecurityToken extends SecurityToken  {
 
     public java.lang.String getWrappingAlgorithm() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWrappingAlgorithm = null;
         try {
-            return (java.lang.String)classInstance.Get("WrappingAlgorithm");
+            retObjectWrappingAlgorithm = classInstance.Get("WrappingAlgorithm");
+            return (java.lang.String)retObjectWrappingAlgorithm;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectWrappingAlgorithm != null ? retObjectWrappingAlgorithm.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

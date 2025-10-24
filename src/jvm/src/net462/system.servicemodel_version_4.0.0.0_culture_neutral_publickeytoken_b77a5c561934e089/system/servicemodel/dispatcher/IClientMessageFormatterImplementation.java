@@ -144,10 +144,14 @@ public class IClientMessageFormatterImplementation extends NetObject implements 
     
     public NetObject DeserializeReply(Message message, NetObject[] parameters) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDeserializeReply = null;
         try {
-            JCObject objDeserializeReply = (JCObject)classInstance.Invoke("DeserializeReply", message == null ? null : message.getJCOInstance(), toObjectFromArray(parameters));
+            retObjectDeserializeReply = classInstance.Invoke("DeserializeReply", message == null ? null : message.getJCOInstance(), toObjectFromArray(parameters));
+            JCObject objDeserializeReply = (JCObject)retObjectDeserializeReply;
             return new NetObject(objDeserializeReply);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDeserializeReply != null ? retObjectDeserializeReply.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -155,10 +159,14 @@ public class IClientMessageFormatterImplementation extends NetObject implements 
 
     public Message SerializeRequest(MessageVersion messageVersion, NetObject[] parameters) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSerializeRequest = null;
         try {
-            JCObject objSerializeRequest = (JCObject)classInstance.Invoke("SerializeRequest", messageVersion == null ? null : messageVersion.getJCOInstance(), toObjectFromArray(parameters));
+            retObjectSerializeRequest = classInstance.Invoke("SerializeRequest", messageVersion == null ? null : messageVersion.getJCOInstance(), toObjectFromArray(parameters));
+            JCObject objSerializeRequest = (JCObject)retObjectSerializeRequest;
             return new Message(objSerializeRequest);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSerializeRequest != null ? retObjectSerializeRequest.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -160,9 +160,20 @@ public class ReplicationFailure extends NetObject  {
     
     public int getConsecutiveFailureCount() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConsecutiveFailureCount = null;
         try {
-            return (int)classInstance.Get("ConsecutiveFailureCount");
+            retObjectConsecutiveFailureCount = classInstance.Get("ConsecutiveFailureCount");
+            return (int)retObjectConsecutiveFailureCount;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectConsecutiveFailureCount_ToString = retObjectConsecutiveFailureCount == null ? "null" : retObjectConsecutiveFailureCount.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectConsecutiveFailureCountNumber = (java.lang.Number)retObjectConsecutiveFailureCount;
+                return retObjectConsecutiveFailureCountNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectConsecutiveFailureCount != null ? retObjectConsecutiveFailureCount.getClass() : "null", retObjectConsecutiveFailureCount_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,9 +181,20 @@ public class ReplicationFailure extends NetObject  {
 
     public int getLastErrorCode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLastErrorCode = null;
         try {
-            return (int)classInstance.Get("LastErrorCode");
+            retObjectLastErrorCode = classInstance.Get("LastErrorCode");
+            return (int)retObjectLastErrorCode;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectLastErrorCode_ToString = retObjectLastErrorCode == null ? "null" : retObjectLastErrorCode.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectLastErrorCodeNumber = (java.lang.Number)retObjectLastErrorCode;
+                return retObjectLastErrorCodeNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectLastErrorCode != null ? retObjectLastErrorCode.getClass() : "null", retObjectLastErrorCode_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,10 +202,14 @@ public class ReplicationFailure extends NetObject  {
 
     public DateTime getFirstFailureTime() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFirstFailureTime = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("FirstFailureTime");
+            retObjectFirstFailureTime = classInstance.Get("FirstFailureTime");
+            JCObject val = (JCObject)retObjectFirstFailureTime;
             return new DateTime(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFirstFailureTime != null ? retObjectFirstFailureTime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,9 +217,13 @@ public class ReplicationFailure extends NetObject  {
 
     public java.lang.String getLastErrorMessage() throws Throwable, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLastErrorMessage = null;
         try {
-            return (java.lang.String)classInstance.Get("LastErrorMessage");
+            retObjectLastErrorMessage = classInstance.Get("LastErrorMessage");
+            return (java.lang.String)retObjectLastErrorMessage;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectLastErrorMessage != null ? retObjectLastErrorMessage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,9 +231,13 @@ public class ReplicationFailure extends NetObject  {
 
     public java.lang.String getSourceServer() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.directoryservices.activedirectory.ActiveDirectoryOperationException, system.directoryservices.activedirectory.ActiveDirectoryObjectNotFoundException, system.OutOfMemoryException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.AccessViolationException, system.ArrayTypeMismatchException, system.FormatException, system.NotImplementedException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSourceServer = null;
         try {
-            return (java.lang.String)classInstance.Get("SourceServer");
+            retObjectSourceServer = classInstance.Get("SourceServer");
+            return (java.lang.String)retObjectSourceServer;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSourceServer != null ? retObjectSourceServer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -180,7 +180,7 @@ public class Calendar extends WebControl implements system.web.ui.IPostBackEvent
      */
     @Deprecated 
     public void RaisePostBackEvent(java.lang.String eventArgument) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIPostBackEventHandler to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIPostBackEventHandler to obtain the full interface.");
     }
 
 
@@ -189,9 +189,13 @@ public class Calendar extends WebControl implements system.web.ui.IPostBackEvent
     
     public boolean getShowDayHeader() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShowDayHeader = null;
         try {
-            return (boolean)classInstance.Get("ShowDayHeader");
+            retObjectShowDayHeader = classInstance.Get("ShowDayHeader");
+            return (boolean)retObjectShowDayHeader;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectShowDayHeader != null ? retObjectShowDayHeader.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -199,7 +203,7 @@ public class Calendar extends WebControl implements system.web.ui.IPostBackEvent
 
     public void setShowDayHeader(boolean ShowDayHeader) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ShowDayHeader", ShowDayHeader);
         } catch (JCNativeException jcne) {
@@ -209,9 +213,13 @@ public class Calendar extends WebControl implements system.web.ui.IPostBackEvent
 
     public boolean getShowGridLines() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShowGridLines = null;
         try {
-            return (boolean)classInstance.Get("ShowGridLines");
+            retObjectShowGridLines = classInstance.Get("ShowGridLines");
+            return (boolean)retObjectShowGridLines;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectShowGridLines != null ? retObjectShowGridLines.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -219,7 +227,7 @@ public class Calendar extends WebControl implements system.web.ui.IPostBackEvent
 
     public void setShowGridLines(boolean ShowGridLines) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ShowGridLines", ShowGridLines);
         } catch (JCNativeException jcne) {
@@ -229,9 +237,13 @@ public class Calendar extends WebControl implements system.web.ui.IPostBackEvent
 
     public boolean getShowNextPrevMonth() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShowNextPrevMonth = null;
         try {
-            return (boolean)classInstance.Get("ShowNextPrevMonth");
+            retObjectShowNextPrevMonth = classInstance.Get("ShowNextPrevMonth");
+            return (boolean)retObjectShowNextPrevMonth;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectShowNextPrevMonth != null ? retObjectShowNextPrevMonth.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -239,7 +251,7 @@ public class Calendar extends WebControl implements system.web.ui.IPostBackEvent
 
     public void setShowNextPrevMonth(boolean ShowNextPrevMonth) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ShowNextPrevMonth", ShowNextPrevMonth);
         } catch (JCNativeException jcne) {
@@ -249,9 +261,13 @@ public class Calendar extends WebControl implements system.web.ui.IPostBackEvent
 
     public boolean getShowTitle() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShowTitle = null;
         try {
-            return (boolean)classInstance.Get("ShowTitle");
+            retObjectShowTitle = classInstance.Get("ShowTitle");
+            return (boolean)retObjectShowTitle;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectShowTitle != null ? retObjectShowTitle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -259,7 +275,7 @@ public class Calendar extends WebControl implements system.web.ui.IPostBackEvent
 
     public void setShowTitle(boolean ShowTitle) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ShowTitle", ShowTitle);
         } catch (JCNativeException jcne) {
@@ -269,9 +285,13 @@ public class Calendar extends WebControl implements system.web.ui.IPostBackEvent
 
     public boolean getUseAccessibleHeader() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUseAccessibleHeader = null;
         try {
-            return (boolean)classInstance.Get("UseAccessibleHeader");
+            retObjectUseAccessibleHeader = classInstance.Get("UseAccessibleHeader");
+            return (boolean)retObjectUseAccessibleHeader;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectUseAccessibleHeader != null ? retObjectUseAccessibleHeader.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -279,7 +299,7 @@ public class Calendar extends WebControl implements system.web.ui.IPostBackEvent
 
     public void setUseAccessibleHeader(boolean UseAccessibleHeader) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UseAccessibleHeader", UseAccessibleHeader);
         } catch (JCNativeException jcne) {
@@ -289,9 +309,20 @@ public class Calendar extends WebControl implements system.web.ui.IPostBackEvent
 
     public int getCellPadding() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCellPadding = null;
         try {
-            return (int)classInstance.Get("CellPadding");
+            retObjectCellPadding = classInstance.Get("CellPadding");
+            return (int)retObjectCellPadding;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCellPadding_ToString = retObjectCellPadding == null ? "null" : retObjectCellPadding.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectCellPaddingNumber = (java.lang.Number)retObjectCellPadding;
+                return retObjectCellPaddingNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCellPadding != null ? retObjectCellPadding.getClass() : "null", retObjectCellPadding_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -299,7 +330,7 @@ public class Calendar extends WebControl implements system.web.ui.IPostBackEvent
 
     public void setCellPadding(int CellPadding) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CellPadding", CellPadding);
         } catch (JCNativeException jcne) {
@@ -309,9 +340,20 @@ public class Calendar extends WebControl implements system.web.ui.IPostBackEvent
 
     public int getCellSpacing() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCellSpacing = null;
         try {
-            return (int)classInstance.Get("CellSpacing");
+            retObjectCellSpacing = classInstance.Get("CellSpacing");
+            return (int)retObjectCellSpacing;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCellSpacing_ToString = retObjectCellSpacing == null ? "null" : retObjectCellSpacing.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectCellSpacingNumber = (java.lang.Number)retObjectCellSpacing;
+                return retObjectCellSpacingNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCellSpacing != null ? retObjectCellSpacing.getClass() : "null", retObjectCellSpacing_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -319,7 +361,7 @@ public class Calendar extends WebControl implements system.web.ui.IPostBackEvent
 
     public void setCellSpacing(int CellSpacing) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CellSpacing", CellSpacing);
         } catch (JCNativeException jcne) {
@@ -329,10 +371,14 @@ public class Calendar extends WebControl implements system.web.ui.IPostBackEvent
 
     public DateTime getSelectedDate() throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectedDate = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SelectedDate");
+            retObjectSelectedDate = classInstance.Get("SelectedDate");
+            JCObject val = (JCObject)retObjectSelectedDate;
             return new DateTime(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelectedDate != null ? retObjectSelectedDate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -340,7 +386,7 @@ public class Calendar extends WebControl implements system.web.ui.IPostBackEvent
 
     public void setSelectedDate(DateTime SelectedDate) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SelectedDate", SelectedDate == null ? null : SelectedDate.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -350,10 +396,14 @@ public class Calendar extends WebControl implements system.web.ui.IPostBackEvent
 
     public DateTime getTodaysDate() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.InvalidTimeZoneException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTodaysDate = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TodaysDate");
+            retObjectTodaysDate = classInstance.Get("TodaysDate");
+            JCObject val = (JCObject)retObjectTodaysDate;
             return new DateTime(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTodaysDate != null ? retObjectTodaysDate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -361,7 +411,7 @@ public class Calendar extends WebControl implements system.web.ui.IPostBackEvent
 
     public void setTodaysDate(DateTime TodaysDate) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TodaysDate", TodaysDate == null ? null : TodaysDate.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -371,10 +421,14 @@ public class Calendar extends WebControl implements system.web.ui.IPostBackEvent
 
     public DateTime getVisibleDate() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVisibleDate = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("VisibleDate");
+            retObjectVisibleDate = classInstance.Get("VisibleDate");
+            JCObject val = (JCObject)retObjectVisibleDate;
             return new DateTime(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVisibleDate != null ? retObjectVisibleDate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -382,7 +436,7 @@ public class Calendar extends WebControl implements system.web.ui.IPostBackEvent
 
     public void setVisibleDate(DateTime VisibleDate) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("VisibleDate", VisibleDate == null ? null : VisibleDate.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -392,9 +446,13 @@ public class Calendar extends WebControl implements system.web.ui.IPostBackEvent
 
     public java.lang.String getCaption() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCaption = null;
         try {
-            return (java.lang.String)classInstance.Get("Caption");
+            retObjectCaption = classInstance.Get("Caption");
+            return (java.lang.String)retObjectCaption;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectCaption != null ? retObjectCaption.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -402,7 +460,7 @@ public class Calendar extends WebControl implements system.web.ui.IPostBackEvent
 
     public void setCaption(java.lang.String Caption) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Caption", Caption);
         } catch (JCNativeException jcne) {
@@ -412,9 +470,13 @@ public class Calendar extends WebControl implements system.web.ui.IPostBackEvent
 
     public java.lang.String getNextMonthText() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNextMonthText = null;
         try {
-            return (java.lang.String)classInstance.Get("NextMonthText");
+            retObjectNextMonthText = classInstance.Get("NextMonthText");
+            return (java.lang.String)retObjectNextMonthText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectNextMonthText != null ? retObjectNextMonthText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -422,7 +484,7 @@ public class Calendar extends WebControl implements system.web.ui.IPostBackEvent
 
     public void setNextMonthText(java.lang.String NextMonthText) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("NextMonthText", NextMonthText);
         } catch (JCNativeException jcne) {
@@ -432,9 +494,13 @@ public class Calendar extends WebControl implements system.web.ui.IPostBackEvent
 
     public java.lang.String getPrevMonthText() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPrevMonthText = null;
         try {
-            return (java.lang.String)classInstance.Get("PrevMonthText");
+            retObjectPrevMonthText = classInstance.Get("PrevMonthText");
+            return (java.lang.String)retObjectPrevMonthText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectPrevMonthText != null ? retObjectPrevMonthText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -442,7 +508,7 @@ public class Calendar extends WebControl implements system.web.ui.IPostBackEvent
 
     public void setPrevMonthText(java.lang.String PrevMonthText) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PrevMonthText", PrevMonthText);
         } catch (JCNativeException jcne) {
@@ -452,9 +518,13 @@ public class Calendar extends WebControl implements system.web.ui.IPostBackEvent
 
     public java.lang.String getSelectMonthText() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectMonthText = null;
         try {
-            return (java.lang.String)classInstance.Get("SelectMonthText");
+            retObjectSelectMonthText = classInstance.Get("SelectMonthText");
+            return (java.lang.String)retObjectSelectMonthText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSelectMonthText != null ? retObjectSelectMonthText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -462,7 +532,7 @@ public class Calendar extends WebControl implements system.web.ui.IPostBackEvent
 
     public void setSelectMonthText(java.lang.String SelectMonthText) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SelectMonthText", SelectMonthText);
         } catch (JCNativeException jcne) {
@@ -472,9 +542,13 @@ public class Calendar extends WebControl implements system.web.ui.IPostBackEvent
 
     public java.lang.String getSelectWeekText() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectWeekText = null;
         try {
-            return (java.lang.String)classInstance.Get("SelectWeekText");
+            retObjectSelectWeekText = classInstance.Get("SelectWeekText");
+            return (java.lang.String)retObjectSelectWeekText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSelectWeekText != null ? retObjectSelectWeekText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -482,7 +556,7 @@ public class Calendar extends WebControl implements system.web.ui.IPostBackEvent
 
     public void setSelectWeekText(java.lang.String SelectWeekText) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SelectWeekText", SelectWeekText);
         } catch (JCNativeException jcne) {
@@ -492,10 +566,14 @@ public class Calendar extends WebControl implements system.web.ui.IPostBackEvent
 
     public CalendarSelectionMode getSelectionMode() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectionMode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SelectionMode");
+            retObjectSelectionMode = classInstance.Get("SelectionMode");
+            JCObject val = (JCObject)retObjectSelectionMode;
             return new CalendarSelectionMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelectionMode != null ? retObjectSelectionMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -503,7 +581,7 @@ public class Calendar extends WebControl implements system.web.ui.IPostBackEvent
 
     public void setSelectionMode(CalendarSelectionMode SelectionMode) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SelectionMode", SelectionMode == null ? null : SelectionMode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -513,10 +591,14 @@ public class Calendar extends WebControl implements system.web.ui.IPostBackEvent
 
     public DayNameFormat getDayNameFormat() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDayNameFormat = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DayNameFormat");
+            retObjectDayNameFormat = classInstance.Get("DayNameFormat");
+            JCObject val = (JCObject)retObjectDayNameFormat;
             return new DayNameFormat(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDayNameFormat != null ? retObjectDayNameFormat.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -524,7 +606,7 @@ public class Calendar extends WebControl implements system.web.ui.IPostBackEvent
 
     public void setDayNameFormat(DayNameFormat DayNameFormat) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DayNameFormat", DayNameFormat == null ? null : DayNameFormat.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -534,10 +616,14 @@ public class Calendar extends WebControl implements system.web.ui.IPostBackEvent
 
     public FirstDayOfWeek getFirstDayOfWeek() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFirstDayOfWeek = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("FirstDayOfWeek");
+            retObjectFirstDayOfWeek = classInstance.Get("FirstDayOfWeek");
+            JCObject val = (JCObject)retObjectFirstDayOfWeek;
             return new FirstDayOfWeek(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFirstDayOfWeek != null ? retObjectFirstDayOfWeek.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -545,7 +631,7 @@ public class Calendar extends WebControl implements system.web.ui.IPostBackEvent
 
     public void setFirstDayOfWeek(FirstDayOfWeek FirstDayOfWeek) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FirstDayOfWeek", FirstDayOfWeek == null ? null : FirstDayOfWeek.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -555,10 +641,14 @@ public class Calendar extends WebControl implements system.web.ui.IPostBackEvent
 
     public NextPrevFormat getNextPrevFormat() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNextPrevFormat = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("NextPrevFormat");
+            retObjectNextPrevFormat = classInstance.Get("NextPrevFormat");
+            JCObject val = (JCObject)retObjectNextPrevFormat;
             return new NextPrevFormat(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNextPrevFormat != null ? retObjectNextPrevFormat.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -566,7 +656,7 @@ public class Calendar extends WebControl implements system.web.ui.IPostBackEvent
 
     public void setNextPrevFormat(NextPrevFormat NextPrevFormat) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("NextPrevFormat", NextPrevFormat == null ? null : NextPrevFormat.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -576,10 +666,14 @@ public class Calendar extends WebControl implements system.web.ui.IPostBackEvent
 
     public SelectedDatesCollection getSelectedDates() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectedDates = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SelectedDates");
+            retObjectSelectedDates = classInstance.Get("SelectedDates");
+            JCObject val = (JCObject)retObjectSelectedDates;
             return new SelectedDatesCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelectedDates != null ? retObjectSelectedDates.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -587,10 +681,14 @@ public class Calendar extends WebControl implements system.web.ui.IPostBackEvent
 
     public TableCaptionAlign getCaptionAlign() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCaptionAlign = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CaptionAlign");
+            retObjectCaptionAlign = classInstance.Get("CaptionAlign");
+            JCObject val = (JCObject)retObjectCaptionAlign;
             return new TableCaptionAlign(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCaptionAlign != null ? retObjectCaptionAlign.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -598,7 +696,7 @@ public class Calendar extends WebControl implements system.web.ui.IPostBackEvent
 
     public void setCaptionAlign(TableCaptionAlign CaptionAlign) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CaptionAlign", CaptionAlign == null ? null : CaptionAlign.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -608,10 +706,14 @@ public class Calendar extends WebControl implements system.web.ui.IPostBackEvent
 
     public TableItemStyle getDayHeaderStyle() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDayHeaderStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DayHeaderStyle");
+            retObjectDayHeaderStyle = classInstance.Get("DayHeaderStyle");
+            JCObject val = (JCObject)retObjectDayHeaderStyle;
             return new TableItemStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDayHeaderStyle != null ? retObjectDayHeaderStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -619,10 +721,14 @@ public class Calendar extends WebControl implements system.web.ui.IPostBackEvent
 
     public TableItemStyle getDayStyle() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDayStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DayStyle");
+            retObjectDayStyle = classInstance.Get("DayStyle");
+            JCObject val = (JCObject)retObjectDayStyle;
             return new TableItemStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDayStyle != null ? retObjectDayStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -630,10 +736,14 @@ public class Calendar extends WebControl implements system.web.ui.IPostBackEvent
 
     public TableItemStyle getNextPrevStyle() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNextPrevStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("NextPrevStyle");
+            retObjectNextPrevStyle = classInstance.Get("NextPrevStyle");
+            JCObject val = (JCObject)retObjectNextPrevStyle;
             return new TableItemStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNextPrevStyle != null ? retObjectNextPrevStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -641,10 +751,14 @@ public class Calendar extends WebControl implements system.web.ui.IPostBackEvent
 
     public TableItemStyle getOtherMonthDayStyle() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOtherMonthDayStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("OtherMonthDayStyle");
+            retObjectOtherMonthDayStyle = classInstance.Get("OtherMonthDayStyle");
+            JCObject val = (JCObject)retObjectOtherMonthDayStyle;
             return new TableItemStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOtherMonthDayStyle != null ? retObjectOtherMonthDayStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -652,10 +766,14 @@ public class Calendar extends WebControl implements system.web.ui.IPostBackEvent
 
     public TableItemStyle getSelectedDayStyle() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectedDayStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SelectedDayStyle");
+            retObjectSelectedDayStyle = classInstance.Get("SelectedDayStyle");
+            JCObject val = (JCObject)retObjectSelectedDayStyle;
             return new TableItemStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelectedDayStyle != null ? retObjectSelectedDayStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -663,10 +781,14 @@ public class Calendar extends WebControl implements system.web.ui.IPostBackEvent
 
     public TableItemStyle getSelectorStyle() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectorStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SelectorStyle");
+            retObjectSelectorStyle = classInstance.Get("SelectorStyle");
+            JCObject val = (JCObject)retObjectSelectorStyle;
             return new TableItemStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelectorStyle != null ? retObjectSelectorStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -674,10 +796,14 @@ public class Calendar extends WebControl implements system.web.ui.IPostBackEvent
 
     public TableItemStyle getTitleStyle() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTitleStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TitleStyle");
+            retObjectTitleStyle = classInstance.Get("TitleStyle");
+            JCObject val = (JCObject)retObjectTitleStyle;
             return new TableItemStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTitleStyle != null ? retObjectTitleStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -685,10 +811,14 @@ public class Calendar extends WebControl implements system.web.ui.IPostBackEvent
 
     public TableItemStyle getTodayDayStyle() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTodayDayStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TodayDayStyle");
+            retObjectTodayDayStyle = classInstance.Get("TodayDayStyle");
+            JCObject val = (JCObject)retObjectTodayDayStyle;
             return new TableItemStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTodayDayStyle != null ? retObjectTodayDayStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -696,10 +826,14 @@ public class Calendar extends WebControl implements system.web.ui.IPostBackEvent
 
     public TableItemStyle getWeekendDayStyle() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWeekendDayStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("WeekendDayStyle");
+            retObjectWeekendDayStyle = classInstance.Get("WeekendDayStyle");
+            JCObject val = (JCObject)retObjectWeekendDayStyle;
             return new TableItemStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWeekendDayStyle != null ? retObjectWeekendDayStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -707,10 +841,14 @@ public class Calendar extends WebControl implements system.web.ui.IPostBackEvent
 
     public TitleFormat getTitleFormat() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTitleFormat = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TitleFormat");
+            retObjectTitleFormat = classInstance.Get("TitleFormat");
+            JCObject val = (JCObject)retObjectTitleFormat;
             return new TitleFormat(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTitleFormat != null ? retObjectTitleFormat.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -718,7 +856,7 @@ public class Calendar extends WebControl implements system.web.ui.IPostBackEvent
 
     public void setTitleFormat(TitleFormat TitleFormat) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TitleFormat", TitleFormat == null ? null : TitleFormat.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -733,7 +871,7 @@ public class Calendar extends WebControl implements system.web.ui.IPostBackEvent
 
     public void addSelectionChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("SelectionChanged", handler);
         } catch (JCNativeException jcne) {
@@ -743,7 +881,7 @@ public class Calendar extends WebControl implements system.web.ui.IPostBackEvent
 
     public void removeSelectionChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("SelectionChanged", handler);
         } catch (JCNativeException jcne) {
@@ -753,7 +891,7 @@ public class Calendar extends WebControl implements system.web.ui.IPostBackEvent
 
     public void addDayRender(DayRenderEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("DayRender", handler);
         } catch (JCNativeException jcne) {
@@ -763,7 +901,7 @@ public class Calendar extends WebControl implements system.web.ui.IPostBackEvent
 
     public void removeDayRender(DayRenderEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("DayRender", handler);
         } catch (JCNativeException jcne) {
@@ -773,7 +911,7 @@ public class Calendar extends WebControl implements system.web.ui.IPostBackEvent
 
     public void addVisibleMonthChanged(MonthChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("VisibleMonthChanged", handler);
         } catch (JCNativeException jcne) {
@@ -783,7 +921,7 @@ public class Calendar extends WebControl implements system.web.ui.IPostBackEvent
 
     public void removeVisibleMonthChanged(MonthChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("VisibleMonthChanged", handler);
         } catch (JCNativeException jcne) {

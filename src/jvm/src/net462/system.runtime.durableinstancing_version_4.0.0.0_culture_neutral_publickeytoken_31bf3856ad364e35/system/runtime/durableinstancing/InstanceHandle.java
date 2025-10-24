@@ -155,7 +155,7 @@ public class InstanceHandle extends NetObject  {
     
     public void Free() throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.OutOfMemoryException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.MulticastNotSupportedException, system.configuration.ConfigurationErrorsException, system.collections.generic.KeyNotFoundException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Free");
         } catch (JCNativeException jcne) {
@@ -169,9 +169,13 @@ public class InstanceHandle extends NetObject  {
     
     public boolean getIsValid() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsValid = null;
         try {
-            return (boolean)classInstance.Get("IsValid");
+            retObjectIsValid = classInstance.Get("IsValid");
+            return (boolean)retObjectIsValid;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsValid != null ? retObjectIsValid.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,7 +183,7 @@ public class InstanceHandle extends NetObject  {
 
     public void setIsValid(boolean IsValid) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsValid", IsValid);
         } catch (JCNativeException jcne) {

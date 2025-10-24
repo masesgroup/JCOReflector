@@ -180,7 +180,7 @@ public class TextComposition extends DispatcherObject  {
     
     public void Complete() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Complete");
         } catch (JCNativeException jcne) {
@@ -194,9 +194,13 @@ public class TextComposition extends DispatcherObject  {
     
     public java.lang.String getCompositionText() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCompositionText = null;
         try {
-            return (java.lang.String)classInstance.Get("CompositionText");
+            retObjectCompositionText = classInstance.Get("CompositionText");
+            return (java.lang.String)retObjectCompositionText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectCompositionText != null ? retObjectCompositionText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -204,7 +208,7 @@ public class TextComposition extends DispatcherObject  {
 
     public void setCompositionText(java.lang.String CompositionText) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CompositionText", CompositionText);
         } catch (JCNativeException jcne) {
@@ -214,9 +218,13 @@ public class TextComposition extends DispatcherObject  {
 
     public java.lang.String getControlText() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectControlText = null;
         try {
-            return (java.lang.String)classInstance.Get("ControlText");
+            retObjectControlText = classInstance.Get("ControlText");
+            return (java.lang.String)retObjectControlText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectControlText != null ? retObjectControlText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -224,7 +232,7 @@ public class TextComposition extends DispatcherObject  {
 
     public void setControlText(java.lang.String ControlText) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ControlText", ControlText);
         } catch (JCNativeException jcne) {
@@ -234,9 +242,13 @@ public class TextComposition extends DispatcherObject  {
 
     public java.lang.String getSystemCompositionText() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSystemCompositionText = null;
         try {
-            return (java.lang.String)classInstance.Get("SystemCompositionText");
+            retObjectSystemCompositionText = classInstance.Get("SystemCompositionText");
+            return (java.lang.String)retObjectSystemCompositionText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSystemCompositionText != null ? retObjectSystemCompositionText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -244,7 +256,7 @@ public class TextComposition extends DispatcherObject  {
 
     public void setSystemCompositionText(java.lang.String SystemCompositionText) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SystemCompositionText", SystemCompositionText);
         } catch (JCNativeException jcne) {
@@ -254,9 +266,13 @@ public class TextComposition extends DispatcherObject  {
 
     public java.lang.String getSystemText() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSystemText = null;
         try {
-            return (java.lang.String)classInstance.Get("SystemText");
+            retObjectSystemText = classInstance.Get("SystemText");
+            return (java.lang.String)retObjectSystemText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSystemText != null ? retObjectSystemText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -264,7 +280,7 @@ public class TextComposition extends DispatcherObject  {
 
     public void setSystemText(java.lang.String SystemText) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SystemText", SystemText);
         } catch (JCNativeException jcne) {
@@ -274,9 +290,13 @@ public class TextComposition extends DispatcherObject  {
 
     public java.lang.String getText() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectText = null;
         try {
-            return (java.lang.String)classInstance.Get("Text");
+            retObjectText = classInstance.Get("Text");
+            return (java.lang.String)retObjectText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectText != null ? retObjectText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -284,7 +304,7 @@ public class TextComposition extends DispatcherObject  {
 
     public void setText(java.lang.String Text) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Text", Text);
         } catch (JCNativeException jcne) {
@@ -294,10 +314,14 @@ public class TextComposition extends DispatcherObject  {
 
     public TextCompositionAutoComplete getAutoComplete() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAutoComplete = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AutoComplete");
+            retObjectAutoComplete = classInstance.Get("AutoComplete");
+            JCObject val = (JCObject)retObjectAutoComplete;
             return new TextCompositionAutoComplete(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAutoComplete != null ? retObjectAutoComplete.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

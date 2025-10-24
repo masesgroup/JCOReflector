@@ -159,10 +159,14 @@ public class PackWebResponse extends WebResponse  {
     
     public Stream GetResponseStream() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.io.IOException, system.InvalidCastException, system.threading.AbandonedMutexException, system.net.WebException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException, system.threading.WaitHandleCannotBeOpenedException, system.security.SecurityException, system.UnauthorizedAccessException, system.OutOfMemoryException, system.threading.tasks.TaskCanceledException, system.AggregateException, system.threading.SemaphoreFullException, system.ApplicationException, system.OperationCanceledException, system.UriFormatException, system.io.FileFormatException, system.io.InvalidDataException, system.xml.XmlException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetResponseStream = null;
         try {
-            JCObject objGetResponseStream = (JCObject)classInstance.Invoke("GetResponseStream");
+            retObjectGetResponseStream = classInstance.Invoke("GetResponseStream");
+            JCObject objGetResponseStream = (JCObject)retObjectGetResponseStream;
             return new Stream(objGetResponseStream);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetResponseStream != null ? retObjectGetResponseStream.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,7 +174,7 @@ public class PackWebResponse extends WebResponse  {
 
     public void Close() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Close");
         } catch (JCNativeException jcne) {
@@ -184,10 +188,14 @@ public class PackWebResponse extends WebResponse  {
     
     public WebResponse getInnerResponse() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.threading.AbandonedMutexException, system.net.WebException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInnerResponse = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("InnerResponse");
+            retObjectInnerResponse = classInstance.Get("InnerResponse");
+            JCObject val = (JCObject)retObjectInnerResponse;
             return new WebResponse(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInnerResponse != null ? retObjectInnerResponse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

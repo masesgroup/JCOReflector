@@ -173,10 +173,14 @@ public class SelectionChangedEventArgs extends RoutedEventArgs  {
     
     public IList getAddedItems() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddedItems = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AddedItems");
+            retObjectAddedItems = classInstance.Get("AddedItems");
+            JCObject val = (JCObject)retObjectAddedItems;
             return new IListImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddedItems != null ? retObjectAddedItems.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -184,10 +188,14 @@ public class SelectionChangedEventArgs extends RoutedEventArgs  {
 
     public IList getRemovedItems() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRemovedItems = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RemovedItems");
+            retObjectRemovedItems = classInstance.Get("RemovedItems");
+            JCObject val = (JCObject)retObjectRemovedItems;
             return new IListImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRemovedItems != null ? retObjectRemovedItems.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

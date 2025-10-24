@@ -177,9 +177,13 @@ public class CommandBindingCollection extends NetObjectEnumerable  {
     
     public boolean Contains(CommandBinding commandBinding) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContains = null;
         try {
-            return (boolean)classInstance.Invoke("Contains", commandBinding == null ? null : commandBinding.getJCOInstance());
+            retObjectContains = classInstance.Invoke("Contains", commandBinding == null ? null : commandBinding.getJCOInstance());
+            return (boolean)retObjectContains;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectContains != null ? retObjectContains.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,9 +191,20 @@ public class CommandBindingCollection extends NetObjectEnumerable  {
 
     public int Add(CommandBinding commandBinding) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAdd = null;
         try {
-            return (int)classInstance.Invoke("Add", commandBinding == null ? null : commandBinding.getJCOInstance());
+            retObjectAdd = classInstance.Invoke("Add", commandBinding == null ? null : commandBinding.getJCOInstance());
+            return (int)retObjectAdd;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectAdd_ToString = retObjectAdd == null ? "null" : retObjectAdd.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectAddNumber = (java.lang.Number)retObjectAdd;
+                return retObjectAddNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectAdd != null ? retObjectAdd.getClass() : "null", retObjectAdd_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,9 +212,20 @@ public class CommandBindingCollection extends NetObjectEnumerable  {
 
     public int IndexOf(CommandBinding value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIndexOf = null;
         try {
-            return (int)classInstance.Invoke("IndexOf", value == null ? null : value.getJCOInstance());
+            retObjectIndexOf = classInstance.Invoke("IndexOf", value == null ? null : value.getJCOInstance());
+            return (int)retObjectIndexOf;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectIndexOf_ToString = retObjectIndexOf == null ? "null" : retObjectIndexOf.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectIndexOfNumber = (java.lang.Number)retObjectIndexOf;
+                return retObjectIndexOfNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectIndexOf != null ? retObjectIndexOf.getClass() : "null", retObjectIndexOf_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -207,7 +233,7 @@ public class CommandBindingCollection extends NetObjectEnumerable  {
 
     public void AddRange(ICollection collection) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddRange", collection == null ? null : collection.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -217,7 +243,7 @@ public class CommandBindingCollection extends NetObjectEnumerable  {
 
     public void Clear() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Clear");
         } catch (JCNativeException jcne) {
@@ -227,7 +253,7 @@ public class CommandBindingCollection extends NetObjectEnumerable  {
 
     public void CopyTo(CommandBinding[] commandBindings, int index) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CopyTo", toObjectFromArray(commandBindings), index);
         } catch (JCNativeException jcne) {
@@ -237,7 +263,7 @@ public class CommandBindingCollection extends NetObjectEnumerable  {
 
     public void Insert(int index, CommandBinding commandBinding) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Insert", index, commandBinding == null ? null : commandBinding.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -247,7 +273,7 @@ public class CommandBindingCollection extends NetObjectEnumerable  {
 
     public void Remove(CommandBinding commandBinding) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Remove", commandBinding == null ? null : commandBinding.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -257,7 +283,7 @@ public class CommandBindingCollection extends NetObjectEnumerable  {
 
     public void RemoveAt(int index) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RemoveAt", index);
         } catch (JCNativeException jcne) {
@@ -271,7 +297,7 @@ public class CommandBindingCollection extends NetObjectEnumerable  {
      */
     @Deprecated 
     public boolean Contains(NetObject value) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIList to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIList to obtain the full interface.");
     }
 
     /**
@@ -280,7 +306,7 @@ public class CommandBindingCollection extends NetObjectEnumerable  {
      */
     @Deprecated 
     public int Add(NetObject value) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIList to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIList to obtain the full interface.");
     }
 
     /**
@@ -289,7 +315,7 @@ public class CommandBindingCollection extends NetObjectEnumerable  {
      */
     @Deprecated 
     public int IndexOf(NetObject value) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIList to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIList to obtain the full interface.");
     }
 
     /**
@@ -298,7 +324,7 @@ public class CommandBindingCollection extends NetObjectEnumerable  {
      */
     @Deprecated 
     public void Insert(int index, NetObject value) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIList to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIList to obtain the full interface.");
     }
 
     /**
@@ -307,7 +333,7 @@ public class CommandBindingCollection extends NetObjectEnumerable  {
      */
     @Deprecated 
     public void Remove(NetObject value) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIList to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIList to obtain the full interface.");
     }
 
     /**
@@ -316,7 +342,7 @@ public class CommandBindingCollection extends NetObjectEnumerable  {
      */
     @Deprecated 
     public void CopyTo(Array array, int index) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICollection to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICollection to obtain the full interface.");
     }
 
 
@@ -325,9 +351,13 @@ public class CommandBindingCollection extends NetObjectEnumerable  {
     
     public boolean getIsFixedSize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsFixedSize = null;
         try {
-            return (boolean)classInstance.Get("IsFixedSize");
+            retObjectIsFixedSize = classInstance.Get("IsFixedSize");
+            return (boolean)retObjectIsFixedSize;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsFixedSize != null ? retObjectIsFixedSize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -335,9 +365,13 @@ public class CommandBindingCollection extends NetObjectEnumerable  {
 
     public boolean getIsReadOnly() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsReadOnly = null;
         try {
-            return (boolean)classInstance.Get("IsReadOnly");
+            retObjectIsReadOnly = classInstance.Get("IsReadOnly");
+            return (boolean)retObjectIsReadOnly;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsReadOnly != null ? retObjectIsReadOnly.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -345,9 +379,13 @@ public class CommandBindingCollection extends NetObjectEnumerable  {
 
     public boolean getIsSynchronized() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsSynchronized = null;
         try {
-            return (boolean)classInstance.Get("IsSynchronized");
+            retObjectIsSynchronized = classInstance.Get("IsSynchronized");
+            return (boolean)retObjectIsSynchronized;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsSynchronized != null ? retObjectIsSynchronized.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -355,9 +393,20 @@ public class CommandBindingCollection extends NetObjectEnumerable  {
 
     public int getCount() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCount = null;
         try {
-            return (int)classInstance.Get("Count");
+            retObjectCount = classInstance.Get("Count");
+            return (int)retObjectCount;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCount_ToString = retObjectCount == null ? "null" : retObjectCount.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectCountNumber = (java.lang.Number)retObjectCount;
+                return retObjectCountNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCount != null ? retObjectCount.getClass() : "null", retObjectCount_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -365,10 +414,14 @@ public class CommandBindingCollection extends NetObjectEnumerable  {
 
     public NetObject getSyncRoot() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSyncRoot = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SyncRoot");
+            retObjectSyncRoot = classInstance.Get("SyncRoot");
+            JCObject val = (JCObject)retObjectSyncRoot;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSyncRoot != null ? retObjectSyncRoot.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

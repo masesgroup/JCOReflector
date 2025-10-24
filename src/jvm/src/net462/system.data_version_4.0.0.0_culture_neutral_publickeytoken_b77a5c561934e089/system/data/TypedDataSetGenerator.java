@@ -165,9 +165,13 @@ public class TypedDataSetGenerator extends NetObject  {
     
     public static java.lang.String GenerateIdName(java.lang.String name, ICodeGenerator codeGen) throws Throwable, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGenerateIdName = null;
         try {
-            return (java.lang.String)classType.Invoke("GenerateIdName", name, codeGen == null ? null : codeGen.getJCOInstance());
+            retObjectGenerateIdName = classType.Invoke("GenerateIdName", name, codeGen == null ? null : codeGen.getJCOInstance());
+            return (java.lang.String)retObjectGenerateIdName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGenerateIdName != null ? retObjectGenerateIdName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -175,7 +179,7 @@ public class TypedDataSetGenerator extends NetObject  {
 
     public static void Generate(DataSet dataSet, CodeNamespace codeNamespace, ICodeGenerator codeGen) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.NotSupportedException, system.FormatException, system.data.DataException, system.OutOfMemoryException, system.OverflowException, system.data.sqltypes.SqlNullValueException, system.data.sqltypes.SqlTruncateException, system.InvalidCastException, system.data.TypedDataSetGeneratorException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Generate", dataSet == null ? null : dataSet.getJCOInstance(), codeNamespace == null ? null : codeNamespace.getJCOInstance(), codeGen == null ? null : codeGen.getJCOInstance());
         } catch (JCNativeException jcne) {

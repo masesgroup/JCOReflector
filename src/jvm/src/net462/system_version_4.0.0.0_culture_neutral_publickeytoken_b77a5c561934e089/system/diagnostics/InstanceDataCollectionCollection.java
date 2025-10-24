@@ -165,9 +165,13 @@ public class InstanceDataCollectionCollection extends DictionaryBase  {
     
     public boolean Contains(java.lang.String counterName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContains = null;
         try {
-            return (boolean)classInstance.Invoke("Contains", counterName);
+            retObjectContains = classInstance.Invoke("Contains", counterName);
+            return (boolean)retObjectContains;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectContains != null ? retObjectContains.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -175,7 +179,7 @@ public class InstanceDataCollectionCollection extends DictionaryBase  {
 
     public void CopyTo(InstanceDataCollection[] counters, int index) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CopyTo", toObjectFromArray(counters), index);
         } catch (JCNativeException jcne) {
@@ -189,10 +193,14 @@ public class InstanceDataCollectionCollection extends DictionaryBase  {
     
     public ICollection getKeys() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectKeys = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Keys");
+            retObjectKeys = classInstance.Get("Keys");
+            JCObject val = (JCObject)retObjectKeys;
             return new ICollectionImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectKeys != null ? retObjectKeys.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,10 +208,14 @@ public class InstanceDataCollectionCollection extends DictionaryBase  {
 
     public ICollection getValues() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValues = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Values");
+            retObjectValues = classInstance.Get("Values");
+            JCObject val = (JCObject)retObjectValues;
             return new ICollectionImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectValues != null ? retObjectValues.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

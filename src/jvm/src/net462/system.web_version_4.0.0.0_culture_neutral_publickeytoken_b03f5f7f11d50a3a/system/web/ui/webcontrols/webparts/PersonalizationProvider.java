@@ -162,9 +162,20 @@ public class PersonalizationProvider extends ProviderBase  {
     
     public int GetCountOfState(PersonalizationScope scope, PersonalizationStateQuery query) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetCountOfState = null;
         try {
-            return (int)classInstance.Invoke("GetCountOfState", scope == null ? null : scope.getJCOInstance(), query == null ? null : query.getJCOInstance());
+            retObjectGetCountOfState = classInstance.Invoke("GetCountOfState", scope == null ? null : scope.getJCOInstance(), query == null ? null : query.getJCOInstance());
+            return (int)retObjectGetCountOfState;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetCountOfState_ToString = retObjectGetCountOfState == null ? "null" : retObjectGetCountOfState.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetCountOfStateNumber = (java.lang.Number)retObjectGetCountOfState;
+                return retObjectGetCountOfStateNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetCountOfState != null ? retObjectGetCountOfState.getClass() : "null", retObjectGetCountOfState_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,9 +183,20 @@ public class PersonalizationProvider extends ProviderBase  {
 
     public int ResetState(PersonalizationScope scope, java.lang.String[] paths, java.lang.String[] usernames) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResetState = null;
         try {
-            return (int)classInstance.Invoke("ResetState", scope == null ? null : scope.getJCOInstance(), paths, usernames);
+            retObjectResetState = classInstance.Invoke("ResetState", scope == null ? null : scope.getJCOInstance(), paths, usernames);
+            return (int)retObjectResetState;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectResetState_ToString = retObjectResetState == null ? "null" : retObjectResetState.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectResetStateNumber = (java.lang.Number)retObjectResetState;
+                return retObjectResetStateNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectResetState != null ? retObjectResetState.getClass() : "null", retObjectResetState_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,9 +204,20 @@ public class PersonalizationProvider extends ProviderBase  {
 
     public int ResetState(PersonalizationScope dupParam0, JCORefOut dupParam1, JCORefOut dupParam2) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResetState = null;
         try {
-            return (int)classInstance.Invoke("ResetState", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1.getJCRefOut(), dupParam2.getJCRefOut());
+            retObjectResetState = classInstance.Invoke("ResetState", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1.getJCRefOut(), dupParam2.getJCRefOut());
+            return (int)retObjectResetState;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectResetState_ToString = retObjectResetState == null ? "null" : retObjectResetState.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectResetStateNumber = (java.lang.Number)retObjectResetState;
+                return retObjectResetStateNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectResetState != null ? retObjectResetState.getClass() : "null", retObjectResetState_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,9 +225,20 @@ public class PersonalizationProvider extends ProviderBase  {
 
     public int ResetUserState(java.lang.String path, DateTime userInactiveSinceDate) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResetUserState = null;
         try {
-            return (int)classInstance.Invoke("ResetUserState", path, userInactiveSinceDate == null ? null : userInactiveSinceDate.getJCOInstance());
+            retObjectResetUserState = classInstance.Invoke("ResetUserState", path, userInactiveSinceDate == null ? null : userInactiveSinceDate.getJCOInstance());
+            return (int)retObjectResetUserState;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectResetUserState_ToString = retObjectResetUserState == null ? "null" : retObjectResetUserState.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectResetUserStateNumber = (java.lang.Number)retObjectResetUserState;
+                return retObjectResetUserStateNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectResetUserState != null ? retObjectResetUserState.getClass() : "null", retObjectResetUserState_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,10 +246,14 @@ public class PersonalizationProvider extends ProviderBase  {
 
     public IDictionary DetermineUserCapabilities(WebPartManager webPartManager) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.web.HttpException, system.web.HttpRequestValidationException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.NullReferenceException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDetermineUserCapabilities = null;
         try {
-            JCObject objDetermineUserCapabilities = (JCObject)classInstance.Invoke("DetermineUserCapabilities", webPartManager == null ? null : webPartManager.getJCOInstance());
+            retObjectDetermineUserCapabilities = classInstance.Invoke("DetermineUserCapabilities", webPartManager == null ? null : webPartManager.getJCOInstance());
+            JCObject objDetermineUserCapabilities = (JCObject)retObjectDetermineUserCapabilities;
             return new IDictionaryImplementation(objDetermineUserCapabilities);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDetermineUserCapabilities != null ? retObjectDetermineUserCapabilities.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,10 +261,14 @@ public class PersonalizationProvider extends ProviderBase  {
 
     public PersonalizationScope DetermineInitialScope(WebPartManager webPartManager, PersonalizationState loadedState) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.web.HttpException, system.NullReferenceException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.OverflowException, system.MemberAccessException, system.reflection.TargetException, system.reflection.TargetParameterCountException, system.configuration.provider.ProviderException, system.security.SecurityException, system.web.HttpParseException, system.web.HttpCompileException, system.threading.AbandonedMutexException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDetermineInitialScope = null;
         try {
-            JCObject objDetermineInitialScope = (JCObject)classInstance.Invoke("DetermineInitialScope", webPartManager == null ? null : webPartManager.getJCOInstance(), loadedState == null ? null : loadedState.getJCOInstance());
+            retObjectDetermineInitialScope = classInstance.Invoke("DetermineInitialScope", webPartManager == null ? null : webPartManager.getJCOInstance(), loadedState == null ? null : loadedState.getJCOInstance());
+            JCObject objDetermineInitialScope = (JCObject)retObjectDetermineInitialScope;
             return new PersonalizationScope(objDetermineInitialScope);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDetermineInitialScope != null ? retObjectDetermineInitialScope.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -224,10 +276,14 @@ public class PersonalizationProvider extends ProviderBase  {
 
     public PersonalizationState LoadPersonalizationState(WebPartManager webPartManager, boolean ignoreCurrentUser) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.web.HttpException, system.web.HttpRequestValidationException, system.security.SecurityException, system.io.EndOfStreamException, system.FormatException, system.io.IOException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLoadPersonalizationState = null;
         try {
-            JCObject objLoadPersonalizationState = (JCObject)classInstance.Invoke("LoadPersonalizationState", webPartManager == null ? null : webPartManager.getJCOInstance(), ignoreCurrentUser);
+            retObjectLoadPersonalizationState = classInstance.Invoke("LoadPersonalizationState", webPartManager == null ? null : webPartManager.getJCOInstance(), ignoreCurrentUser);
+            JCObject objLoadPersonalizationState = (JCObject)retObjectLoadPersonalizationState;
             return new PersonalizationState(objLoadPersonalizationState);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLoadPersonalizationState != null ? retObjectLoadPersonalizationState.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -235,10 +291,14 @@ public class PersonalizationProvider extends ProviderBase  {
 
     public PersonalizationStateInfoCollection FindState(PersonalizationScope scope, PersonalizationStateQuery query, int pageIndex, int pageSize, JCORefOut<java.util.concurrent.atomic.AtomicInteger> totalRecords) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFindState = null;
         try {
-            JCObject objFindState = (JCObject)classInstance.Invoke("FindState", scope == null ? null : scope.getJCOInstance(), query == null ? null : query.getJCOInstance(), pageIndex, pageSize, totalRecords.getJCRefOut());
+            retObjectFindState = classInstance.Invoke("FindState", scope == null ? null : scope.getJCOInstance(), query == null ? null : query.getJCOInstance(), pageIndex, pageSize, totalRecords.getJCRefOut());
+            JCObject objFindState = (JCObject)retObjectFindState;
             return new PersonalizationStateInfoCollection(objFindState);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFindState != null ? retObjectFindState.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -246,7 +306,7 @@ public class PersonalizationProvider extends ProviderBase  {
 
     public void ResetPersonalizationState(WebPartManager webPartManager) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.web.HttpException, system.web.HttpRequestValidationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ResetPersonalizationState", webPartManager == null ? null : webPartManager.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -256,7 +316,7 @@ public class PersonalizationProvider extends ProviderBase  {
 
     public void SavePersonalizationState(PersonalizationState state) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.web.HttpException, system.web.HttpRequestValidationException, system.security.SecurityException, system.UnauthorizedAccessException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SavePersonalizationState", state == null ? null : state.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -270,9 +330,13 @@ public class PersonalizationProvider extends ProviderBase  {
     
     public java.lang.String getApplicationName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectApplicationName = null;
         try {
-            return (java.lang.String)classInstance.Get("ApplicationName");
+            retObjectApplicationName = classInstance.Get("ApplicationName");
+            return (java.lang.String)retObjectApplicationName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectApplicationName != null ? retObjectApplicationName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -280,7 +344,7 @@ public class PersonalizationProvider extends ProviderBase  {
 
     public void setApplicationName(java.lang.String ApplicationName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ApplicationName", ApplicationName);
         } catch (JCNativeException jcne) {

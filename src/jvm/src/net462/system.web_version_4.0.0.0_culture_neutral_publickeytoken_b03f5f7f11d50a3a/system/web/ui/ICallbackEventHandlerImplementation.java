@@ -142,9 +142,13 @@ public class ICallbackEventHandlerImplementation extends NetObject implements IC
     
     public java.lang.String GetCallbackResult() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetCallbackResult = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetCallbackResult");
+            retObjectGetCallbackResult = classInstance.Invoke("GetCallbackResult");
+            return (java.lang.String)retObjectGetCallbackResult;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetCallbackResult != null ? retObjectGetCallbackResult.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -152,7 +156,7 @@ public class ICallbackEventHandlerImplementation extends NetObject implements IC
 
     public void RaiseCallbackEvent(java.lang.String eventArgument) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RaiseCallbackEvent", eventArgument);
         } catch (JCNativeException jcne) {

@@ -161,9 +161,13 @@ public class DataBinder extends NetObject  {
     
     public static boolean IsBindableType(NetType type) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.security.SecurityException, system.ObjectDisposedException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsBindableType = null;
         try {
-            return (boolean)classType.Invoke("IsBindableType", type == null ? null : type.getJCOInstance());
+            retObjectIsBindableType = classType.Invoke("IsBindableType", type == null ? null : type.getJCOInstance());
+            return (boolean)retObjectIsBindableType;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsBindableType != null ? retObjectIsBindableType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,10 +175,14 @@ public class DataBinder extends NetObject  {
 
     public static NetObject Eval(NetObject container, java.lang.String expression) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.resources.MissingManifestResourceException, system.NotSupportedException, system.NullReferenceException, system.NotImplementedException, system.web.HttpException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectEval = null;
         try {
-            JCObject objEval = (JCObject)classType.Invoke("Eval", container == null ? null : container.getJCOInstance(), expression);
+            retObjectEval = classType.Invoke("Eval", container == null ? null : container.getJCOInstance(), expression);
+            JCObject objEval = (JCObject)retObjectEval;
             return new NetObject(objEval);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEval != null ? retObjectEval.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,10 +190,14 @@ public class DataBinder extends NetObject  {
 
     public static NetObject GetDataItem(NetObject container) throws Throwable, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetDataItem = null;
         try {
-            JCObject objGetDataItem = (JCObject)classType.Invoke("GetDataItem", container == null ? null : container.getJCOInstance());
+            retObjectGetDataItem = classType.Invoke("GetDataItem", container == null ? null : container.getJCOInstance());
+            JCObject objGetDataItem = (JCObject)retObjectGetDataItem;
             return new NetObject(objGetDataItem);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetDataItem != null ? retObjectGetDataItem.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,10 +205,14 @@ public class DataBinder extends NetObject  {
 
     public static NetObject GetDataItem(NetObject container, JCORefOut<java.util.concurrent.atomic.AtomicBoolean> foundDataItem) throws Throwable, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetDataItem = null;
         try {
-            JCObject objGetDataItem = (JCObject)classType.Invoke("GetDataItem", container == null ? null : container.getJCOInstance(), foundDataItem.getJCRefOut());
+            retObjectGetDataItem = classType.Invoke("GetDataItem", container == null ? null : container.getJCOInstance(), foundDataItem.getJCRefOut());
+            JCObject objGetDataItem = (JCObject)retObjectGetDataItem;
             return new NetObject(objGetDataItem);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetDataItem != null ? retObjectGetDataItem.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -204,10 +220,14 @@ public class DataBinder extends NetObject  {
 
     public static NetObject GetIndexedPropertyValue(NetObject container, java.lang.String expr) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.NullReferenceException, system.web.HttpException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetIndexedPropertyValue = null;
         try {
-            JCObject objGetIndexedPropertyValue = (JCObject)classType.Invoke("GetIndexedPropertyValue", container == null ? null : container.getJCOInstance(), expr);
+            retObjectGetIndexedPropertyValue = classType.Invoke("GetIndexedPropertyValue", container == null ? null : container.getJCOInstance(), expr);
+            JCObject objGetIndexedPropertyValue = (JCObject)retObjectGetIndexedPropertyValue;
             return new NetObject(objGetIndexedPropertyValue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetIndexedPropertyValue != null ? retObjectGetIndexedPropertyValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -215,10 +235,14 @@ public class DataBinder extends NetObject  {
 
     public static NetObject GetPropertyValue(NetObject container, java.lang.String propName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.security.SecurityException, system.ObjectDisposedException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.web.HttpException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetPropertyValue = null;
         try {
-            JCObject objGetPropertyValue = (JCObject)classType.Invoke("GetPropertyValue", container == null ? null : container.getJCOInstance(), propName);
+            retObjectGetPropertyValue = classType.Invoke("GetPropertyValue", container == null ? null : container.getJCOInstance(), propName);
+            JCObject objGetPropertyValue = (JCObject)retObjectGetPropertyValue;
             return new NetObject(objGetPropertyValue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetPropertyValue != null ? retObjectGetPropertyValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -226,9 +250,13 @@ public class DataBinder extends NetObject  {
 
     public static java.lang.String Eval(NetObject container, java.lang.String expression, java.lang.String format) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.NotImplementedException, system.web.HttpException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectEval = null;
         try {
-            return (java.lang.String)classType.Invoke("Eval", container == null ? null : container.getJCOInstance(), expression, format);
+            retObjectEval = classType.Invoke("Eval", container == null ? null : container.getJCOInstance(), expression, format);
+            return (java.lang.String)retObjectEval;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectEval != null ? retObjectEval.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -236,9 +264,13 @@ public class DataBinder extends NetObject  {
 
     public static java.lang.String GetIndexedPropertyValue(NetObject container, java.lang.String propName, java.lang.String format) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.NotSupportedException, system.NullReferenceException, system.web.HttpException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetIndexedPropertyValue = null;
         try {
-            return (java.lang.String)classType.Invoke("GetIndexedPropertyValue", container == null ? null : container.getJCOInstance(), propName, format);
+            retObjectGetIndexedPropertyValue = classType.Invoke("GetIndexedPropertyValue", container == null ? null : container.getJCOInstance(), propName, format);
+            return (java.lang.String)retObjectGetIndexedPropertyValue;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetIndexedPropertyValue != null ? retObjectGetIndexedPropertyValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -246,9 +278,13 @@ public class DataBinder extends NetObject  {
 
     public static java.lang.String GetPropertyValue(NetObject container, java.lang.String propName, java.lang.String format) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.IndexOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.web.HttpException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetPropertyValue = null;
         try {
-            return (java.lang.String)classType.Invoke("GetPropertyValue", container == null ? null : container.getJCOInstance(), propName, format);
+            retObjectGetPropertyValue = classType.Invoke("GetPropertyValue", container == null ? null : container.getJCOInstance(), propName, format);
+            return (java.lang.String)retObjectGetPropertyValue;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetPropertyValue != null ? retObjectGetPropertyValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -260,9 +296,13 @@ public class DataBinder extends NetObject  {
     
     public static boolean getEnableCaching() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectEnableCaching = null;
         try {
-            return (boolean)classType.Get("EnableCaching");
+            retObjectEnableCaching = classType.Get("EnableCaching");
+            return (boolean)retObjectEnableCaching;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectEnableCaching != null ? retObjectEnableCaching.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -270,7 +310,7 @@ public class DataBinder extends NetObject  {
 
     public static void setEnableCaching(boolean EnableCaching) throws Throwable, system.diagnostics.tracing.EventSourceException, system.ArgumentNullException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Set("EnableCaching", EnableCaching);
         } catch (JCNativeException jcne) {

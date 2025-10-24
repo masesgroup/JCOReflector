@@ -176,9 +176,13 @@ public class HtmlGenericControl extends HtmlContainerControl  {
     
     public java.lang.String getTagName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTagName = null;
         try {
-            return (java.lang.String)classInstance.Get("TagName");
+            retObjectTagName = classInstance.Get("TagName");
+            return (java.lang.String)retObjectTagName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectTagName != null ? retObjectTagName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,7 +190,7 @@ public class HtmlGenericControl extends HtmlContainerControl  {
 
     public void setTagName(java.lang.String TagName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TagName", TagName);
         } catch (JCNativeException jcne) {

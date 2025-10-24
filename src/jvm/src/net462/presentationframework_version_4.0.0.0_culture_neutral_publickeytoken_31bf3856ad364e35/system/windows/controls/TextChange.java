@@ -159,9 +159,20 @@ public class TextChange extends NetObject  {
     
     public int getAddedLength() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddedLength = null;
         try {
-            return (int)classInstance.Get("AddedLength");
+            retObjectAddedLength = classInstance.Get("AddedLength");
+            return (int)retObjectAddedLength;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectAddedLength_ToString = retObjectAddedLength == null ? "null" : retObjectAddedLength.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectAddedLengthNumber = (java.lang.Number)retObjectAddedLength;
+                return retObjectAddedLengthNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectAddedLength != null ? retObjectAddedLength.getClass() : "null", retObjectAddedLength_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,7 +180,7 @@ public class TextChange extends NetObject  {
 
     public void setAddedLength(int AddedLength) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AddedLength", AddedLength);
         } catch (JCNativeException jcne) {
@@ -179,9 +190,20 @@ public class TextChange extends NetObject  {
 
     public int getOffset() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOffset = null;
         try {
-            return (int)classInstance.Get("Offset");
+            retObjectOffset = classInstance.Get("Offset");
+            return (int)retObjectOffset;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectOffset_ToString = retObjectOffset == null ? "null" : retObjectOffset.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectOffsetNumber = (java.lang.Number)retObjectOffset;
+                return retObjectOffsetNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectOffset != null ? retObjectOffset.getClass() : "null", retObjectOffset_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -189,7 +211,7 @@ public class TextChange extends NetObject  {
 
     public void setOffset(int Offset) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Offset", Offset);
         } catch (JCNativeException jcne) {
@@ -199,9 +221,20 @@ public class TextChange extends NetObject  {
 
     public int getRemovedLength() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRemovedLength = null;
         try {
-            return (int)classInstance.Get("RemovedLength");
+            retObjectRemovedLength = classInstance.Get("RemovedLength");
+            return (int)retObjectRemovedLength;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectRemovedLength_ToString = retObjectRemovedLength == null ? "null" : retObjectRemovedLength.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectRemovedLengthNumber = (java.lang.Number)retObjectRemovedLength;
+                return retObjectRemovedLengthNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectRemovedLength != null ? retObjectRemovedLength.getClass() : "null", retObjectRemovedLength_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -209,7 +242,7 @@ public class TextChange extends NetObject  {
 
     public void setRemovedLength(int RemovedLength) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RemovedLength", RemovedLength);
         } catch (JCNativeException jcne) {

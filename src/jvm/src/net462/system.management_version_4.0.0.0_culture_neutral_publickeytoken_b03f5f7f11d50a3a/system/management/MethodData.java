@@ -161,10 +161,14 @@ public class MethodData extends NetObject  {
     
     public ManagementBaseObject getInParameters() throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.management.ManagementException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInParameters = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("InParameters");
+            retObjectInParameters = classInstance.Get("InParameters");
+            JCObject val = (JCObject)retObjectInParameters;
             return new ManagementBaseObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInParameters != null ? retObjectInParameters.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,10 +176,14 @@ public class MethodData extends NetObject  {
 
     public ManagementBaseObject getOutParameters() throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.management.ManagementException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOutParameters = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("OutParameters");
+            retObjectOutParameters = classInstance.Get("OutParameters");
+            JCObject val = (JCObject)retObjectOutParameters;
             return new ManagementBaseObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOutParameters != null ? retObjectOutParameters.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,10 +191,14 @@ public class MethodData extends NetObject  {
 
     public QualifierDataCollection getQualifiers() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectQualifiers = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Qualifiers");
+            retObjectQualifiers = classInstance.Get("Qualifiers");
+            JCObject val = (JCObject)retObjectQualifiers;
             return new QualifierDataCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectQualifiers != null ? retObjectQualifiers.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -194,9 +206,13 @@ public class MethodData extends NetObject  {
 
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectName = null;
         try {
-            return (java.lang.String)classInstance.Get("Name");
+            retObjectName = classInstance.Get("Name");
+            return (java.lang.String)retObjectName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectName != null ? retObjectName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -204,9 +220,13 @@ public class MethodData extends NetObject  {
 
     public java.lang.String getOrigin() throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.FormatException, system.OverflowException, system.management.ManagementException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOrigin = null;
         try {
-            return (java.lang.String)classInstance.Get("Origin");
+            retObjectOrigin = classInstance.Get("Origin");
+            return (java.lang.String)retObjectOrigin;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectOrigin != null ? retObjectOrigin.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

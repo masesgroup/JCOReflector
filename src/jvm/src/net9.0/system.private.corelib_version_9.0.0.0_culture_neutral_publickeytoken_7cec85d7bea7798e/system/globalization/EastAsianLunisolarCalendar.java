@@ -157,9 +157,13 @@ public class EastAsianLunisolarCalendar extends Calendar  {
     
     public boolean IsLeapDay(int year, int month, int day, int era) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsLeapDay = null;
         try {
-            return (boolean)classInstance.Invoke("IsLeapDay", year, month, day, era);
+            retObjectIsLeapDay = classInstance.Invoke("IsLeapDay", year, month, day, era);
+            return (boolean)retObjectIsLeapDay;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsLeapDay != null ? retObjectIsLeapDay.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -167,9 +171,13 @@ public class EastAsianLunisolarCalendar extends Calendar  {
 
     public boolean IsLeapMonth(int year, int month, int era) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsLeapMonth = null;
         try {
-            return (boolean)classInstance.Invoke("IsLeapMonth", year, month, era);
+            retObjectIsLeapMonth = classInstance.Invoke("IsLeapMonth", year, month, era);
+            return (boolean)retObjectIsLeapMonth;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsLeapMonth != null ? retObjectIsLeapMonth.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,9 +185,13 @@ public class EastAsianLunisolarCalendar extends Calendar  {
 
     public boolean IsLeapYear(int year, int era) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NullReferenceException, system.NotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsLeapYear = null;
         try {
-            return (boolean)classInstance.Invoke("IsLeapYear", year, era);
+            retObjectIsLeapYear = classInstance.Invoke("IsLeapYear", year, era);
+            return (boolean)retObjectIsLeapYear;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsLeapYear != null ? retObjectIsLeapYear.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,9 +199,20 @@ public class EastAsianLunisolarCalendar extends Calendar  {
 
     public int GetCelestialStem(int sexagenaryYear) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.IndexOutOfRangeException, system.RankException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetCelestialStem = null;
         try {
-            return (int)classInstance.Invoke("GetCelestialStem", sexagenaryYear);
+            retObjectGetCelestialStem = classInstance.Invoke("GetCelestialStem", sexagenaryYear);
+            return (int)retObjectGetCelestialStem;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetCelestialStem_ToString = retObjectGetCelestialStem == null ? "null" : retObjectGetCelestialStem.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetCelestialStemNumber = (java.lang.Number)retObjectGetCelestialStem;
+                return retObjectGetCelestialStemNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetCelestialStem != null ? retObjectGetCelestialStem.getClass() : "null", retObjectGetCelestialStem_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,9 +220,20 @@ public class EastAsianLunisolarCalendar extends Calendar  {
 
     public int GetDayOfMonth(DateTime time) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDayOfMonth = null;
         try {
-            return (int)classInstance.Invoke("GetDayOfMonth", time == null ? null : time.getJCOInstance());
+            retObjectGetDayOfMonth = classInstance.Invoke("GetDayOfMonth", time == null ? null : time.getJCOInstance());
+            return (int)retObjectGetDayOfMonth;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetDayOfMonth_ToString = retObjectGetDayOfMonth == null ? "null" : retObjectGetDayOfMonth.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetDayOfMonthNumber = (java.lang.Number)retObjectGetDayOfMonth;
+                return retObjectGetDayOfMonthNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetDayOfMonth != null ? retObjectGetDayOfMonth.getClass() : "null", retObjectGetDayOfMonth_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -207,9 +241,20 @@ public class EastAsianLunisolarCalendar extends Calendar  {
 
     public int GetDayOfYear(DateTime time) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDayOfYear = null;
         try {
-            return (int)classInstance.Invoke("GetDayOfYear", time == null ? null : time.getJCOInstance());
+            retObjectGetDayOfYear = classInstance.Invoke("GetDayOfYear", time == null ? null : time.getJCOInstance());
+            return (int)retObjectGetDayOfYear;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetDayOfYear_ToString = retObjectGetDayOfYear == null ? "null" : retObjectGetDayOfYear.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetDayOfYearNumber = (java.lang.Number)retObjectGetDayOfYear;
+                return retObjectGetDayOfYearNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetDayOfYear != null ? retObjectGetDayOfYear.getClass() : "null", retObjectGetDayOfYear_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -217,9 +262,20 @@ public class EastAsianLunisolarCalendar extends Calendar  {
 
     public int GetDaysInMonth(int year, int month, int era) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDaysInMonth = null;
         try {
-            return (int)classInstance.Invoke("GetDaysInMonth", year, month, era);
+            retObjectGetDaysInMonth = classInstance.Invoke("GetDaysInMonth", year, month, era);
+            return (int)retObjectGetDaysInMonth;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetDaysInMonth_ToString = retObjectGetDaysInMonth == null ? "null" : retObjectGetDaysInMonth.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetDaysInMonthNumber = (java.lang.Number)retObjectGetDaysInMonth;
+                return retObjectGetDaysInMonthNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetDaysInMonth != null ? retObjectGetDaysInMonth.getClass() : "null", retObjectGetDaysInMonth_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -227,9 +283,20 @@ public class EastAsianLunisolarCalendar extends Calendar  {
 
     public int GetDaysInYear(int year, int era) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NullReferenceException, system.NotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDaysInYear = null;
         try {
-            return (int)classInstance.Invoke("GetDaysInYear", year, era);
+            retObjectGetDaysInYear = classInstance.Invoke("GetDaysInYear", year, era);
+            return (int)retObjectGetDaysInYear;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetDaysInYear_ToString = retObjectGetDaysInYear == null ? "null" : retObjectGetDaysInYear.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetDaysInYearNumber = (java.lang.Number)retObjectGetDaysInYear;
+                return retObjectGetDaysInYearNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetDaysInYear != null ? retObjectGetDaysInYear.getClass() : "null", retObjectGetDaysInYear_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -237,9 +304,20 @@ public class EastAsianLunisolarCalendar extends Calendar  {
 
     public int GetLeapMonth(int year, int era) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NullReferenceException, system.NotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetLeapMonth = null;
         try {
-            return (int)classInstance.Invoke("GetLeapMonth", year, era);
+            retObjectGetLeapMonth = classInstance.Invoke("GetLeapMonth", year, era);
+            return (int)retObjectGetLeapMonth;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetLeapMonth_ToString = retObjectGetLeapMonth == null ? "null" : retObjectGetLeapMonth.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetLeapMonthNumber = (java.lang.Number)retObjectGetLeapMonth;
+                return retObjectGetLeapMonthNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetLeapMonth != null ? retObjectGetLeapMonth.getClass() : "null", retObjectGetLeapMonth_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -247,9 +325,20 @@ public class EastAsianLunisolarCalendar extends Calendar  {
 
     public int GetMonth(DateTime time) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetMonth = null;
         try {
-            return (int)classInstance.Invoke("GetMonth", time == null ? null : time.getJCOInstance());
+            retObjectGetMonth = classInstance.Invoke("GetMonth", time == null ? null : time.getJCOInstance());
+            return (int)retObjectGetMonth;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetMonth_ToString = retObjectGetMonth == null ? "null" : retObjectGetMonth.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetMonthNumber = (java.lang.Number)retObjectGetMonth;
+                return retObjectGetMonthNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetMonth != null ? retObjectGetMonth.getClass() : "null", retObjectGetMonth_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -257,9 +346,20 @@ public class EastAsianLunisolarCalendar extends Calendar  {
 
     public int GetMonthsInYear(int year, int era) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NullReferenceException, system.NotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetMonthsInYear = null;
         try {
-            return (int)classInstance.Invoke("GetMonthsInYear", year, era);
+            retObjectGetMonthsInYear = classInstance.Invoke("GetMonthsInYear", year, era);
+            return (int)retObjectGetMonthsInYear;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetMonthsInYear_ToString = retObjectGetMonthsInYear == null ? "null" : retObjectGetMonthsInYear.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetMonthsInYearNumber = (java.lang.Number)retObjectGetMonthsInYear;
+                return retObjectGetMonthsInYearNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetMonthsInYear != null ? retObjectGetMonthsInYear.getClass() : "null", retObjectGetMonthsInYear_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -267,9 +367,20 @@ public class EastAsianLunisolarCalendar extends Calendar  {
 
     public int GetSexagenaryYear(DateTime time) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSexagenaryYear = null;
         try {
-            return (int)classInstance.Invoke("GetSexagenaryYear", time == null ? null : time.getJCOInstance());
+            retObjectGetSexagenaryYear = classInstance.Invoke("GetSexagenaryYear", time == null ? null : time.getJCOInstance());
+            return (int)retObjectGetSexagenaryYear;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetSexagenaryYear_ToString = retObjectGetSexagenaryYear == null ? "null" : retObjectGetSexagenaryYear.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetSexagenaryYearNumber = (java.lang.Number)retObjectGetSexagenaryYear;
+                return retObjectGetSexagenaryYearNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetSexagenaryYear != null ? retObjectGetSexagenaryYear.getClass() : "null", retObjectGetSexagenaryYear_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -277,9 +388,20 @@ public class EastAsianLunisolarCalendar extends Calendar  {
 
     public int GetTerrestrialBranch(int sexagenaryYear) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.IndexOutOfRangeException, system.RankException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetTerrestrialBranch = null;
         try {
-            return (int)classInstance.Invoke("GetTerrestrialBranch", sexagenaryYear);
+            retObjectGetTerrestrialBranch = classInstance.Invoke("GetTerrestrialBranch", sexagenaryYear);
+            return (int)retObjectGetTerrestrialBranch;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetTerrestrialBranch_ToString = retObjectGetTerrestrialBranch == null ? "null" : retObjectGetTerrestrialBranch.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetTerrestrialBranchNumber = (java.lang.Number)retObjectGetTerrestrialBranch;
+                return retObjectGetTerrestrialBranchNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetTerrestrialBranch != null ? retObjectGetTerrestrialBranch.getClass() : "null", retObjectGetTerrestrialBranch_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -287,9 +409,20 @@ public class EastAsianLunisolarCalendar extends Calendar  {
 
     public int GetYear(DateTime time) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetYear = null;
         try {
-            return (int)classInstance.Invoke("GetYear", time == null ? null : time.getJCOInstance());
+            retObjectGetYear = classInstance.Invoke("GetYear", time == null ? null : time.getJCOInstance());
+            return (int)retObjectGetYear;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetYear_ToString = retObjectGetYear == null ? "null" : retObjectGetYear.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetYearNumber = (java.lang.Number)retObjectGetYear;
+                return retObjectGetYearNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetYear != null ? retObjectGetYear.getClass() : "null", retObjectGetYear_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -297,9 +430,20 @@ public class EastAsianLunisolarCalendar extends Calendar  {
 
     public int ToFourDigitYear(int year) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToFourDigitYear = null;
         try {
-            return (int)classInstance.Invoke("ToFourDigitYear", year);
+            retObjectToFourDigitYear = classInstance.Invoke("ToFourDigitYear", year);
+            return (int)retObjectToFourDigitYear;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectToFourDigitYear_ToString = retObjectToFourDigitYear == null ? "null" : retObjectToFourDigitYear.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectToFourDigitYearNumber = (java.lang.Number)retObjectToFourDigitYear;
+                return retObjectToFourDigitYearNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectToFourDigitYear != null ? retObjectToFourDigitYear.getClass() : "null", retObjectToFourDigitYear_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -307,10 +451,14 @@ public class EastAsianLunisolarCalendar extends Calendar  {
 
     public DateTime AddMonths(DateTime time, int months) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.IndexOutOfRangeException, system.RankException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddMonths = null;
         try {
-            JCObject objAddMonths = (JCObject)classInstance.Invoke("AddMonths", time == null ? null : time.getJCOInstance(), months);
+            retObjectAddMonths = classInstance.Invoke("AddMonths", time == null ? null : time.getJCOInstance(), months);
+            JCObject objAddMonths = (JCObject)retObjectAddMonths;
             return new DateTime(objAddMonths);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddMonths != null ? retObjectAddMonths.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -318,10 +466,14 @@ public class EastAsianLunisolarCalendar extends Calendar  {
 
     public DateTime AddYears(DateTime time, int years) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddYears = null;
         try {
-            JCObject objAddYears = (JCObject)classInstance.Invoke("AddYears", time == null ? null : time.getJCOInstance(), years);
+            retObjectAddYears = classInstance.Invoke("AddYears", time == null ? null : time.getJCOInstance(), years);
+            JCObject objAddYears = (JCObject)retObjectAddYears;
             return new DateTime(objAddYears);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddYears != null ? retObjectAddYears.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -329,10 +481,14 @@ public class EastAsianLunisolarCalendar extends Calendar  {
 
     public DateTime ToDateTime(int year, int month, int day, int hour, int minute, int second, int millisecond, int era) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToDateTime = null;
         try {
-            JCObject objToDateTime = (JCObject)classInstance.Invoke("ToDateTime", year, month, day, hour, minute, second, millisecond, era);
+            retObjectToDateTime = classInstance.Invoke("ToDateTime", year, month, day, hour, minute, second, millisecond, era);
+            JCObject objToDateTime = (JCObject)retObjectToDateTime;
             return new DateTime(objToDateTime);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToDateTime != null ? retObjectToDateTime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -340,10 +496,14 @@ public class EastAsianLunisolarCalendar extends Calendar  {
 
     public DayOfWeek GetDayOfWeek(DateTime time) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDayOfWeek = null;
         try {
-            JCObject objGetDayOfWeek = (JCObject)classInstance.Invoke("GetDayOfWeek", time == null ? null : time.getJCOInstance());
+            retObjectGetDayOfWeek = classInstance.Invoke("GetDayOfWeek", time == null ? null : time.getJCOInstance());
+            JCObject objGetDayOfWeek = (JCObject)retObjectGetDayOfWeek;
             return new DayOfWeek(objGetDayOfWeek);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetDayOfWeek != null ? retObjectGetDayOfWeek.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

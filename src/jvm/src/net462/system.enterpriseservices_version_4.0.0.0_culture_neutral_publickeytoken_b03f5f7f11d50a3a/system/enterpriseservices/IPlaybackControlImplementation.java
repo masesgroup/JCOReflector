@@ -142,7 +142,7 @@ public class IPlaybackControlImplementation extends NetObject implements IPlayba
     
     public void FinalClientRetry() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("FinalClientRetry");
         } catch (JCNativeException jcne) {
@@ -152,7 +152,7 @@ public class IPlaybackControlImplementation extends NetObject implements IPlayba
 
     public void FinalServerRetry() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("FinalServerRetry");
         } catch (JCNativeException jcne) {

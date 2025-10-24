@@ -176,10 +176,14 @@ public class HostProtectionAttribute extends CodeAccessSecurityAttribute  {
     
     public IPermission CreatePermission() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreatePermission = null;
         try {
-            JCObject objCreatePermission = (JCObject)classInstance.Invoke("CreatePermission");
+            retObjectCreatePermission = classInstance.Invoke("CreatePermission");
+            JCObject objCreatePermission = (JCObject)retObjectCreatePermission;
             return new IPermissionImplementation(objCreatePermission);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreatePermission != null ? retObjectCreatePermission.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,9 +195,13 @@ public class HostProtectionAttribute extends CodeAccessSecurityAttribute  {
     
     public boolean getExternalProcessMgmt() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExternalProcessMgmt = null;
         try {
-            return (boolean)classInstance.Get("ExternalProcessMgmt");
+            retObjectExternalProcessMgmt = classInstance.Get("ExternalProcessMgmt");
+            return (boolean)retObjectExternalProcessMgmt;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectExternalProcessMgmt != null ? retObjectExternalProcessMgmt.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,7 +209,7 @@ public class HostProtectionAttribute extends CodeAccessSecurityAttribute  {
 
     public void setExternalProcessMgmt(boolean ExternalProcessMgmt) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ExternalProcessMgmt", ExternalProcessMgmt);
         } catch (JCNativeException jcne) {
@@ -211,9 +219,13 @@ public class HostProtectionAttribute extends CodeAccessSecurityAttribute  {
 
     public boolean getExternalThreading() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExternalThreading = null;
         try {
-            return (boolean)classInstance.Get("ExternalThreading");
+            retObjectExternalThreading = classInstance.Get("ExternalThreading");
+            return (boolean)retObjectExternalThreading;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectExternalThreading != null ? retObjectExternalThreading.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -221,7 +233,7 @@ public class HostProtectionAttribute extends CodeAccessSecurityAttribute  {
 
     public void setExternalThreading(boolean ExternalThreading) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ExternalThreading", ExternalThreading);
         } catch (JCNativeException jcne) {
@@ -231,9 +243,13 @@ public class HostProtectionAttribute extends CodeAccessSecurityAttribute  {
 
     public boolean getMayLeakOnAbort() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMayLeakOnAbort = null;
         try {
-            return (boolean)classInstance.Get("MayLeakOnAbort");
+            retObjectMayLeakOnAbort = classInstance.Get("MayLeakOnAbort");
+            return (boolean)retObjectMayLeakOnAbort;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectMayLeakOnAbort != null ? retObjectMayLeakOnAbort.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -241,7 +257,7 @@ public class HostProtectionAttribute extends CodeAccessSecurityAttribute  {
 
     public void setMayLeakOnAbort(boolean MayLeakOnAbort) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MayLeakOnAbort", MayLeakOnAbort);
         } catch (JCNativeException jcne) {
@@ -251,9 +267,13 @@ public class HostProtectionAttribute extends CodeAccessSecurityAttribute  {
 
     public boolean getSecurityInfrastructure() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSecurityInfrastructure = null;
         try {
-            return (boolean)classInstance.Get("SecurityInfrastructure");
+            retObjectSecurityInfrastructure = classInstance.Get("SecurityInfrastructure");
+            return (boolean)retObjectSecurityInfrastructure;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectSecurityInfrastructure != null ? retObjectSecurityInfrastructure.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -261,7 +281,7 @@ public class HostProtectionAttribute extends CodeAccessSecurityAttribute  {
 
     public void setSecurityInfrastructure(boolean SecurityInfrastructure) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SecurityInfrastructure", SecurityInfrastructure);
         } catch (JCNativeException jcne) {
@@ -271,9 +291,13 @@ public class HostProtectionAttribute extends CodeAccessSecurityAttribute  {
 
     public boolean getSelfAffectingProcessMgmt() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelfAffectingProcessMgmt = null;
         try {
-            return (boolean)classInstance.Get("SelfAffectingProcessMgmt");
+            retObjectSelfAffectingProcessMgmt = classInstance.Get("SelfAffectingProcessMgmt");
+            return (boolean)retObjectSelfAffectingProcessMgmt;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectSelfAffectingProcessMgmt != null ? retObjectSelfAffectingProcessMgmt.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -281,7 +305,7 @@ public class HostProtectionAttribute extends CodeAccessSecurityAttribute  {
 
     public void setSelfAffectingProcessMgmt(boolean SelfAffectingProcessMgmt) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SelfAffectingProcessMgmt", SelfAffectingProcessMgmt);
         } catch (JCNativeException jcne) {
@@ -291,9 +315,13 @@ public class HostProtectionAttribute extends CodeAccessSecurityAttribute  {
 
     public boolean getSelfAffectingThreading() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelfAffectingThreading = null;
         try {
-            return (boolean)classInstance.Get("SelfAffectingThreading");
+            retObjectSelfAffectingThreading = classInstance.Get("SelfAffectingThreading");
+            return (boolean)retObjectSelfAffectingThreading;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectSelfAffectingThreading != null ? retObjectSelfAffectingThreading.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -301,7 +329,7 @@ public class HostProtectionAttribute extends CodeAccessSecurityAttribute  {
 
     public void setSelfAffectingThreading(boolean SelfAffectingThreading) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SelfAffectingThreading", SelfAffectingThreading);
         } catch (JCNativeException jcne) {
@@ -311,9 +339,13 @@ public class HostProtectionAttribute extends CodeAccessSecurityAttribute  {
 
     public boolean getSharedState() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSharedState = null;
         try {
-            return (boolean)classInstance.Get("SharedState");
+            retObjectSharedState = classInstance.Get("SharedState");
+            return (boolean)retObjectSharedState;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectSharedState != null ? retObjectSharedState.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -321,7 +353,7 @@ public class HostProtectionAttribute extends CodeAccessSecurityAttribute  {
 
     public void setSharedState(boolean SharedState) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SharedState", SharedState);
         } catch (JCNativeException jcne) {
@@ -331,9 +363,13 @@ public class HostProtectionAttribute extends CodeAccessSecurityAttribute  {
 
     public boolean getSynchronization() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSynchronization = null;
         try {
-            return (boolean)classInstance.Get("Synchronization");
+            retObjectSynchronization = classInstance.Get("Synchronization");
+            return (boolean)retObjectSynchronization;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectSynchronization != null ? retObjectSynchronization.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -341,7 +377,7 @@ public class HostProtectionAttribute extends CodeAccessSecurityAttribute  {
 
     public void setSynchronization(boolean Synchronization) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Synchronization", Synchronization);
         } catch (JCNativeException jcne) {
@@ -351,9 +387,13 @@ public class HostProtectionAttribute extends CodeAccessSecurityAttribute  {
 
     public boolean getUI() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUI = null;
         try {
-            return (boolean)classInstance.Get("UI");
+            retObjectUI = classInstance.Get("UI");
+            return (boolean)retObjectUI;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectUI != null ? retObjectUI.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -361,7 +401,7 @@ public class HostProtectionAttribute extends CodeAccessSecurityAttribute  {
 
     public void setUI(boolean UI) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UI", UI);
         } catch (JCNativeException jcne) {
@@ -371,10 +411,14 @@ public class HostProtectionAttribute extends CodeAccessSecurityAttribute  {
 
     public HostProtectionResource getResources() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResources = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Resources");
+            retObjectResources = classInstance.Get("Resources");
+            JCObject val = (JCObject)retObjectResources;
             return new HostProtectionResource(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectResources != null ? retObjectResources.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -382,7 +426,7 @@ public class HostProtectionAttribute extends CodeAccessSecurityAttribute  {
 
     public void setResources(HostProtectionResource Resources) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Resources", Resources == null ? null : Resources.getJCOInstance());
         } catch (JCNativeException jcne) {

@@ -162,9 +162,13 @@ public class UserControlControlBuilder extends ControlBuilder  {
     
     public boolean NeedsTagInnerText() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNeedsTagInnerText = null;
         try {
-            return (boolean)classInstance.Invoke("NeedsTagInnerText");
+            retObjectNeedsTagInnerText = classInstance.Invoke("NeedsTagInnerText");
+            return (boolean)retObjectNeedsTagInnerText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectNeedsTagInnerText != null ? retObjectNeedsTagInnerText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,10 +176,14 @@ public class UserControlControlBuilder extends ControlBuilder  {
 
     public NetObject BuildObject() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.TypeLoadException, system.web.HttpException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBuildObject = null;
         try {
-            JCObject objBuildObject = (JCObject)classInstance.Invoke("BuildObject");
+            retObjectBuildObject = classInstance.Invoke("BuildObject");
+            JCObject objBuildObject = (JCObject)retObjectBuildObject;
             return new NetObject(objBuildObject);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBuildObject != null ? retObjectBuildObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,7 +191,7 @@ public class UserControlControlBuilder extends ControlBuilder  {
 
     public void SetTagInnerText(java.lang.String text) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetTagInnerText", text);
         } catch (JCNativeException jcne) {

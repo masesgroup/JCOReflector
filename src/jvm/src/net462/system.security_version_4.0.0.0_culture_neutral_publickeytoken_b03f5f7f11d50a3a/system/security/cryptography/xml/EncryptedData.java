@@ -163,10 +163,14 @@ public class EncryptedData extends EncryptedType  {
     
     public XmlElement GetXml() throws Throwable, system.ArgumentOutOfRangeException, system.NullReferenceException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentException, system.xml.XmlException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.security.cryptography.CryptographicException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetXml = null;
         try {
-            JCObject objGetXml = (JCObject)classInstance.Invoke("GetXml");
+            retObjectGetXml = classInstance.Invoke("GetXml");
+            JCObject objGetXml = (JCObject)retObjectGetXml;
             return new XmlElement(objGetXml);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetXml != null ? retObjectGetXml.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -174,7 +178,7 @@ public class EncryptedData extends EncryptedType  {
 
     public void LoadXml(XmlElement value) throws Throwable, system.ArgumentNullException, system.NullReferenceException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.xml.xpath.XPathException, system.FormatException, system.OverflowException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.security.cryptography.CryptographicException, system.ApplicationException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("LoadXml", value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {

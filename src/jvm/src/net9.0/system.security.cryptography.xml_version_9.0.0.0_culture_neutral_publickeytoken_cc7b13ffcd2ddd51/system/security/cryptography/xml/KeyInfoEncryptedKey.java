@@ -174,10 +174,14 @@ public class KeyInfoEncryptedKey extends KeyInfoClause  {
     
     public XmlElement GetXml() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetXml = null;
         try {
-            JCObject objGetXml = (JCObject)classInstance.Invoke("GetXml");
+            retObjectGetXml = classInstance.Invoke("GetXml");
+            JCObject objGetXml = (JCObject)retObjectGetXml;
             return new XmlElement(objGetXml);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetXml != null ? retObjectGetXml.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -185,7 +189,7 @@ public class KeyInfoEncryptedKey extends KeyInfoClause  {
 
     public void LoadXml(XmlElement value) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("LoadXml", value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -199,10 +203,14 @@ public class KeyInfoEncryptedKey extends KeyInfoClause  {
     
     public EncryptedKey getEncryptedKey() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEncryptedKey = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("EncryptedKey");
+            retObjectEncryptedKey = classInstance.Get("EncryptedKey");
+            JCObject val = (JCObject)retObjectEncryptedKey;
             return new EncryptedKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEncryptedKey != null ? retObjectEncryptedKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -210,7 +218,7 @@ public class KeyInfoEncryptedKey extends KeyInfoClause  {
 
     public void setEncryptedKey(EncryptedKey EncryptedKey) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EncryptedKey", EncryptedKey == null ? null : EncryptedKey.getJCOInstance());
         } catch (JCNativeException jcne) {

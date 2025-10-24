@@ -170,7 +170,7 @@ public class Viewport3D extends FrameworkElement implements system.windows.marku
      */
     @Deprecated 
     public void AddChild(NetObject value) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAddChild to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAddChild to obtain the full interface.");
     }
 
     /**
@@ -179,7 +179,7 @@ public class Viewport3D extends FrameworkElement implements system.windows.marku
      */
     @Deprecated 
     public void AddText(java.lang.String text) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAddChild to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAddChild to obtain the full interface.");
     }
 
 
@@ -188,10 +188,14 @@ public class Viewport3D extends FrameworkElement implements system.windows.marku
     
     public Camera getCamera() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCamera = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Camera");
+            retObjectCamera = classInstance.Get("Camera");
+            JCObject val = (JCObject)retObjectCamera;
             return new Camera(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCamera != null ? retObjectCamera.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -199,7 +203,7 @@ public class Viewport3D extends FrameworkElement implements system.windows.marku
 
     public void setCamera(Camera Camera) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Camera", Camera == null ? null : Camera.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -209,10 +213,14 @@ public class Viewport3D extends FrameworkElement implements system.windows.marku
 
     public Visual3DCollection getChildren() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectChildren = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Children");
+            retObjectChildren = classInstance.Get("Children");
+            JCObject val = (JCObject)retObjectChildren;
             return new Visual3DCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectChildren != null ? retObjectChildren.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

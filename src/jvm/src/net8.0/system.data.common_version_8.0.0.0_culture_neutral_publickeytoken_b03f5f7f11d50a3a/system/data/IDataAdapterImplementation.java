@@ -151,9 +151,20 @@ public class IDataAdapterImplementation extends NetObject implements IDataAdapte
     
     public int Fill(DataSet dataSet) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFill = null;
         try {
-            return (int)classInstance.Invoke("Fill", dataSet == null ? null : dataSet.getJCOInstance());
+            retObjectFill = classInstance.Invoke("Fill", dataSet == null ? null : dataSet.getJCOInstance());
+            return (int)retObjectFill;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectFill_ToString = retObjectFill == null ? "null" : retObjectFill.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectFillNumber = (java.lang.Number)retObjectFill;
+                return retObjectFillNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectFill != null ? retObjectFill.getClass() : "null", retObjectFill_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -161,9 +172,20 @@ public class IDataAdapterImplementation extends NetObject implements IDataAdapte
 
     public int Update(DataSet dataSet) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUpdate = null;
         try {
-            return (int)classInstance.Invoke("Update", dataSet == null ? null : dataSet.getJCOInstance());
+            retObjectUpdate = classInstance.Invoke("Update", dataSet == null ? null : dataSet.getJCOInstance());
+            return (int)retObjectUpdate;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectUpdate_ToString = retObjectUpdate == null ? "null" : retObjectUpdate.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectUpdateNumber = (java.lang.Number)retObjectUpdate;
+                return retObjectUpdateNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectUpdate != null ? retObjectUpdate.getClass() : "null", retObjectUpdate_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,16 +193,20 @@ public class IDataAdapterImplementation extends NetObject implements IDataAdapte
 
     public DataTable[] FillSchema(DataSet dataSet, SchemaType schemaType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFillSchema = null;
         try {
             ArrayList<DataTable> resultingArrayList = new ArrayList<DataTable>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("FillSchema", dataSet == null ? null : dataSet.getJCOInstance(), schemaType == null ? null : schemaType.getJCOInstance());
+            retObjectFillSchema = classInstance.Invoke("FillSchema", dataSet == null ? null : dataSet.getJCOInstance(), schemaType == null ? null : schemaType.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectFillSchema;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new DataTable(resultingObject));
             }
             DataTable[] resultingArray = new DataTable[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFillSchema != null ? retObjectFillSchema.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,16 +214,20 @@ public class IDataAdapterImplementation extends NetObject implements IDataAdapte
 
     public IDataParameter[] GetFillParameters() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetFillParameters = null;
         try {
             ArrayList<IDataParameter> resultingArrayList = new ArrayList<IDataParameter>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetFillParameters");
+            retObjectGetFillParameters = classInstance.Invoke("GetFillParameters");
+            JCObject resultingObjects = (JCObject)retObjectGetFillParameters;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new IDataParameterImplementation(resultingObject));
             }
             IDataParameter[] resultingArray = new IDataParameter[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetFillParameters != null ? retObjectGetFillParameters.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -209,10 +239,14 @@ public class IDataAdapterImplementation extends NetObject implements IDataAdapte
     
     public ITableMappingCollection getTableMappings() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTableMappings = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TableMappings");
+            retObjectTableMappings = classInstance.Get("TableMappings");
+            JCObject val = (JCObject)retObjectTableMappings;
             return new ITableMappingCollectionImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTableMappings != null ? retObjectTableMappings.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -220,10 +254,14 @@ public class IDataAdapterImplementation extends NetObject implements IDataAdapte
 
     public MissingMappingAction getMissingMappingAction() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMissingMappingAction = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MissingMappingAction");
+            retObjectMissingMappingAction = classInstance.Get("MissingMappingAction");
+            JCObject val = (JCObject)retObjectMissingMappingAction;
             return new MissingMappingAction(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMissingMappingAction != null ? retObjectMissingMappingAction.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -231,7 +269,7 @@ public class IDataAdapterImplementation extends NetObject implements IDataAdapte
 
     public void setMissingMappingAction(MissingMappingAction MissingMappingAction) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MissingMappingAction", MissingMappingAction == null ? null : MissingMappingAction.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -241,10 +279,14 @@ public class IDataAdapterImplementation extends NetObject implements IDataAdapte
 
     public MissingSchemaAction getMissingSchemaAction() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMissingSchemaAction = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MissingSchemaAction");
+            retObjectMissingSchemaAction = classInstance.Get("MissingSchemaAction");
+            JCObject val = (JCObject)retObjectMissingSchemaAction;
             return new MissingSchemaAction(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMissingSchemaAction != null ? retObjectMissingSchemaAction.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -252,7 +294,7 @@ public class IDataAdapterImplementation extends NetObject implements IDataAdapte
 
     public void setMissingSchemaAction(MissingSchemaAction MissingSchemaAction) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MissingSchemaAction", MissingSchemaAction == null ? null : MissingSchemaAction.getJCOInstance());
         } catch (JCNativeException jcne) {

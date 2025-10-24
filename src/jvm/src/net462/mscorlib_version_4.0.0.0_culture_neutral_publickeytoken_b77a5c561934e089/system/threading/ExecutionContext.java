@@ -160,9 +160,13 @@ public class ExecutionContext extends NetObject implements AutoCloseable {
     
     public static boolean IsFlowSuppressed() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsFlowSuppressed = null;
         try {
-            return (boolean)classType.Invoke("IsFlowSuppressed");
+            retObjectIsFlowSuppressed = classType.Invoke("IsFlowSuppressed");
+            return (boolean)retObjectIsFlowSuppressed;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsFlowSuppressed != null ? retObjectIsFlowSuppressed.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,10 +174,14 @@ public class ExecutionContext extends NetObject implements AutoCloseable {
 
     public static AsyncFlowControl SuppressFlow() throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.NullReferenceException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSuppressFlow = null;
         try {
-            JCObject objSuppressFlow = (JCObject)classType.Invoke("SuppressFlow");
+            retObjectSuppressFlow = classType.Invoke("SuppressFlow");
+            JCObject objSuppressFlow = (JCObject)retObjectSuppressFlow;
             return new AsyncFlowControl(objSuppressFlow);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSuppressFlow != null ? retObjectSuppressFlow.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,10 +189,14 @@ public class ExecutionContext extends NetObject implements AutoCloseable {
 
     public static ExecutionContext Capture() throws Throwable, system.ArgumentNullException, system.security.SecurityException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NullReferenceException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCapture = null;
         try {
-            JCObject objCapture = (JCObject)classType.Invoke("Capture");
+            retObjectCapture = classType.Invoke("Capture");
+            JCObject objCapture = (JCObject)retObjectCapture;
             return new ExecutionContext(objCapture);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCapture != null ? retObjectCapture.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,10 +204,14 @@ public class ExecutionContext extends NetObject implements AutoCloseable {
 
     public ExecutionContext CreateCopy() throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateCopy = null;
         try {
-            JCObject objCreateCopy = (JCObject)classInstance.Invoke("CreateCopy");
+            retObjectCreateCopy = classInstance.Invoke("CreateCopy");
+            JCObject objCreateCopy = (JCObject)retObjectCreateCopy;
             return new ExecutionContext(objCreateCopy);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateCopy != null ? retObjectCreateCopy.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,7 +219,7 @@ public class ExecutionContext extends NetObject implements AutoCloseable {
 
     public void Dispose() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
@@ -213,7 +229,7 @@ public class ExecutionContext extends NetObject implements AutoCloseable {
 
     public void GetObjectData(SerializationInfo info, StreamingContext context) throws Throwable, system.ArgumentNullException, system.runtime.serialization.SerializationException, system.ArgumentException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetObjectData", info == null ? null : info.getJCOInstance(), context == null ? null : context.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -223,7 +239,7 @@ public class ExecutionContext extends NetObject implements AutoCloseable {
 
     public static void RestoreFlow() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.NullReferenceException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("RestoreFlow");
         } catch (JCNativeException jcne) {
@@ -233,7 +249,7 @@ public class ExecutionContext extends NetObject implements AutoCloseable {
 
     public static void Run(ExecutionContext executionContext, ContextCallback callback, NetObject state) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.security.SecurityException, system.ArgumentException, system.NullReferenceException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Run", executionContext == null ? null : executionContext.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -244,7 +260,7 @@ public class ExecutionContext extends NetObject implements AutoCloseable {
     public void close() throws Exception {
         try {
             if (classInstance == null)
-                throw new UnsupportedOperationException("classInstance is null.");
+                throw new java.lang.UnsupportedOperationException("classInstance is null.");
             try {
                 classInstance.Invoke("Dispose");
             }

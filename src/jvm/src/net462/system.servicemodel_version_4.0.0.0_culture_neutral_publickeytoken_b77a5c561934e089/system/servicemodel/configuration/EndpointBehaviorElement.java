@@ -172,9 +172,13 @@ public class EndpointBehaviorElement extends NetObjectEnumerable  {
     
     public boolean CanAdd(BehaviorExtensionElement element) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.collections.generic.KeyNotFoundException, system.OverflowException, system.OutOfMemoryException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanAdd = null;
         try {
-            return (boolean)classInstance.Invoke("CanAdd", element == null ? null : element.getJCOInstance());
+            retObjectCanAdd = classInstance.Invoke("CanAdd", element == null ? null : element.getJCOInstance());
+            return (boolean)retObjectCanAdd;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCanAdd != null ? retObjectCanAdd.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,7 +186,7 @@ public class EndpointBehaviorElement extends NetObjectEnumerable  {
 
     public void Add(BehaviorExtensionElement element) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.NotSupportedException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Add", element == null ? null : element.getJCOInstance());
         } catch (JCNativeException jcne) {

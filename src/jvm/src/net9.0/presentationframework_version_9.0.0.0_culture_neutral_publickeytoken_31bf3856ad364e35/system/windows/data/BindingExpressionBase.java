@@ -163,9 +163,13 @@ public class BindingExpressionBase extends Expression implements system.windows.
     
     public boolean ValidateWithoutUpdate() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValidateWithoutUpdate = null;
         try {
-            return (boolean)classInstance.Invoke("ValidateWithoutUpdate");
+            retObjectValidateWithoutUpdate = classInstance.Invoke("ValidateWithoutUpdate");
+            return (boolean)retObjectValidateWithoutUpdate;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectValidateWithoutUpdate != null ? retObjectValidateWithoutUpdate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -173,7 +177,7 @@ public class BindingExpressionBase extends Expression implements system.windows.
 
     public void UpdateSource() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("UpdateSource");
         } catch (JCNativeException jcne) {
@@ -183,7 +187,7 @@ public class BindingExpressionBase extends Expression implements system.windows.
 
     public void UpdateTarget() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("UpdateTarget");
         } catch (JCNativeException jcne) {
@@ -197,7 +201,7 @@ public class BindingExpressionBase extends Expression implements system.windows.
      */
     @Deprecated 
     public boolean ReceiveWeakEvent(NetType managerType, NetObject sender, EventArgs e) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIWeakEventListener to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIWeakEventListener to obtain the full interface.");
     }
 
 
@@ -206,9 +210,13 @@ public class BindingExpressionBase extends Expression implements system.windows.
     
     public boolean getHasError() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHasError = null;
         try {
-            return (boolean)classInstance.Get("HasError");
+            retObjectHasError = classInstance.Get("HasError");
+            return (boolean)retObjectHasError;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectHasError != null ? retObjectHasError.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -216,9 +224,13 @@ public class BindingExpressionBase extends Expression implements system.windows.
 
     public boolean getHasValidationError() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHasValidationError = null;
         try {
-            return (boolean)classInstance.Get("HasValidationError");
+            retObjectHasValidationError = classInstance.Get("HasValidationError");
+            return (boolean)retObjectHasValidationError;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectHasValidationError != null ? retObjectHasValidationError.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -226,9 +238,13 @@ public class BindingExpressionBase extends Expression implements system.windows.
 
     public boolean getIsDirty() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsDirty = null;
         try {
-            return (boolean)classInstance.Get("IsDirty");
+            retObjectIsDirty = classInstance.Get("IsDirty");
+            return (boolean)retObjectIsDirty;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsDirty != null ? retObjectIsDirty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -236,10 +252,14 @@ public class BindingExpressionBase extends Expression implements system.windows.
 
     public ValidationError getValidationError() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValidationError = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ValidationError");
+            retObjectValidationError = classInstance.Get("ValidationError");
+            JCObject val = (JCObject)retObjectValidationError;
             return new ValidationError(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectValidationError != null ? retObjectValidationError.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -247,10 +267,14 @@ public class BindingExpressionBase extends Expression implements system.windows.
 
     public BindingBase getParentBindingBase() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectParentBindingBase = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ParentBindingBase");
+            retObjectParentBindingBase = classInstance.Get("ParentBindingBase");
+            JCObject val = (JCObject)retObjectParentBindingBase;
             return new BindingBase(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParentBindingBase != null ? retObjectParentBindingBase.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -258,10 +282,14 @@ public class BindingExpressionBase extends Expression implements system.windows.
 
     public BindingGroup getBindingGroup() throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBindingGroup = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("BindingGroup");
+            retObjectBindingGroup = classInstance.Get("BindingGroup");
+            JCObject val = (JCObject)retObjectBindingGroup;
             return new BindingGroup(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBindingGroup != null ? retObjectBindingGroup.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -269,10 +297,14 @@ public class BindingExpressionBase extends Expression implements system.windows.
 
     public BindingStatus getStatus() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStatus = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Status");
+            retObjectStatus = classInstance.Get("Status");
+            JCObject val = (JCObject)retObjectStatus;
             return new BindingStatus(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStatus != null ? retObjectStatus.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -280,10 +312,14 @@ public class BindingExpressionBase extends Expression implements system.windows.
 
     public DependencyObject getTarget() throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.componentmodel.InvalidEnumArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTarget = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Target");
+            retObjectTarget = classInstance.Get("Target");
+            JCObject val = (JCObject)retObjectTarget;
             return new DependencyObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTarget != null ? retObjectTarget.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -291,10 +327,14 @@ public class BindingExpressionBase extends Expression implements system.windows.
 
     public DependencyProperty getTargetProperty() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTargetProperty = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TargetProperty");
+            retObjectTargetProperty = classInstance.Get("TargetProperty");
+            JCObject val = (JCObject)retObjectTargetProperty;
             return new DependencyProperty(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTargetProperty != null ? retObjectTargetProperty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

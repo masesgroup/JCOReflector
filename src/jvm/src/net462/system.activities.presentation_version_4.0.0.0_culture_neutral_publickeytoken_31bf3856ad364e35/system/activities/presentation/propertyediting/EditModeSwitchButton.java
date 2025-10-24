@@ -167,9 +167,13 @@ public class EditModeSwitchButton extends Button  {
     
     public boolean getSyncModeToOwningContainer() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSyncModeToOwningContainer = null;
         try {
-            return (boolean)classInstance.Get("SyncModeToOwningContainer");
+            retObjectSyncModeToOwningContainer = classInstance.Get("SyncModeToOwningContainer");
+            return (boolean)retObjectSyncModeToOwningContainer;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectSyncModeToOwningContainer != null ? retObjectSyncModeToOwningContainer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,7 +181,7 @@ public class EditModeSwitchButton extends Button  {
 
     public void setSyncModeToOwningContainer(boolean SyncModeToOwningContainer) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SyncModeToOwningContainer", SyncModeToOwningContainer);
         } catch (JCNativeException jcne) {
@@ -187,10 +191,14 @@ public class EditModeSwitchButton extends Button  {
 
     public PropertyContainerEditMode getTargetEditMode() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTargetEditMode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TargetEditMode");
+            retObjectTargetEditMode = classInstance.Get("TargetEditMode");
+            JCObject val = (JCObject)retObjectTargetEditMode;
             return new PropertyContainerEditMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTargetEditMode != null ? retObjectTargetEditMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,7 +206,7 @@ public class EditModeSwitchButton extends Button  {
 
     public void setTargetEditMode(PropertyContainerEditMode TargetEditMode) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TargetEditMode", TargetEditMode == null ? null : TargetEditMode.getJCOInstance());
         } catch (JCNativeException jcne) {

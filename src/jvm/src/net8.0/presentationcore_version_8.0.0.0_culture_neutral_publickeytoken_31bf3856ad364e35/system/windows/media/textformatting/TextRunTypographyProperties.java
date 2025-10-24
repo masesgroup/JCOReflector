@@ -164,9 +164,13 @@ public class TextRunTypographyProperties extends NetObject  {
     
     public boolean getCapitalSpacing() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCapitalSpacing = null;
         try {
-            return (boolean)classInstance.Get("CapitalSpacing");
+            retObjectCapitalSpacing = classInstance.Get("CapitalSpacing");
+            return (boolean)retObjectCapitalSpacing;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCapitalSpacing != null ? retObjectCapitalSpacing.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -174,9 +178,13 @@ public class TextRunTypographyProperties extends NetObject  {
 
     public boolean getCaseSensitiveForms() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCaseSensitiveForms = null;
         try {
-            return (boolean)classInstance.Get("CaseSensitiveForms");
+            retObjectCaseSensitiveForms = classInstance.Get("CaseSensitiveForms");
+            return (boolean)retObjectCaseSensitiveForms;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCaseSensitiveForms != null ? retObjectCaseSensitiveForms.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -184,9 +192,13 @@ public class TextRunTypographyProperties extends NetObject  {
 
     public boolean getContextualAlternates() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContextualAlternates = null;
         try {
-            return (boolean)classInstance.Get("ContextualAlternates");
+            retObjectContextualAlternates = classInstance.Get("ContextualAlternates");
+            return (boolean)retObjectContextualAlternates;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectContextualAlternates != null ? retObjectContextualAlternates.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -194,9 +206,13 @@ public class TextRunTypographyProperties extends NetObject  {
 
     public boolean getContextualLigatures() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContextualLigatures = null;
         try {
-            return (boolean)classInstance.Get("ContextualLigatures");
+            retObjectContextualLigatures = classInstance.Get("ContextualLigatures");
+            return (boolean)retObjectContextualLigatures;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectContextualLigatures != null ? retObjectContextualLigatures.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -204,9 +220,13 @@ public class TextRunTypographyProperties extends NetObject  {
 
     public boolean getDiscretionaryLigatures() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDiscretionaryLigatures = null;
         try {
-            return (boolean)classInstance.Get("DiscretionaryLigatures");
+            retObjectDiscretionaryLigatures = classInstance.Get("DiscretionaryLigatures");
+            return (boolean)retObjectDiscretionaryLigatures;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectDiscretionaryLigatures != null ? retObjectDiscretionaryLigatures.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -214,9 +234,13 @@ public class TextRunTypographyProperties extends NetObject  {
 
     public boolean getEastAsianExpertForms() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEastAsianExpertForms = null;
         try {
-            return (boolean)classInstance.Get("EastAsianExpertForms");
+            retObjectEastAsianExpertForms = classInstance.Get("EastAsianExpertForms");
+            return (boolean)retObjectEastAsianExpertForms;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectEastAsianExpertForms != null ? retObjectEastAsianExpertForms.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -224,9 +248,13 @@ public class TextRunTypographyProperties extends NetObject  {
 
     public boolean getHistoricalForms() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHistoricalForms = null;
         try {
-            return (boolean)classInstance.Get("HistoricalForms");
+            retObjectHistoricalForms = classInstance.Get("HistoricalForms");
+            return (boolean)retObjectHistoricalForms;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectHistoricalForms != null ? retObjectHistoricalForms.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -234,9 +262,13 @@ public class TextRunTypographyProperties extends NetObject  {
 
     public boolean getHistoricalLigatures() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHistoricalLigatures = null;
         try {
-            return (boolean)classInstance.Get("HistoricalLigatures");
+            retObjectHistoricalLigatures = classInstance.Get("HistoricalLigatures");
+            return (boolean)retObjectHistoricalLigatures;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectHistoricalLigatures != null ? retObjectHistoricalLigatures.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -244,9 +276,13 @@ public class TextRunTypographyProperties extends NetObject  {
 
     public boolean getKerning() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectKerning = null;
         try {
-            return (boolean)classInstance.Get("Kerning");
+            retObjectKerning = classInstance.Get("Kerning");
+            return (boolean)retObjectKerning;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectKerning != null ? retObjectKerning.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -254,9 +290,13 @@ public class TextRunTypographyProperties extends NetObject  {
 
     public boolean getMathematicalGreek() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMathematicalGreek = null;
         try {
-            return (boolean)classInstance.Get("MathematicalGreek");
+            retObjectMathematicalGreek = classInstance.Get("MathematicalGreek");
+            return (boolean)retObjectMathematicalGreek;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectMathematicalGreek != null ? retObjectMathematicalGreek.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -264,9 +304,13 @@ public class TextRunTypographyProperties extends NetObject  {
 
     public boolean getSlashedZero() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSlashedZero = null;
         try {
-            return (boolean)classInstance.Get("SlashedZero");
+            retObjectSlashedZero = classInstance.Get("SlashedZero");
+            return (boolean)retObjectSlashedZero;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectSlashedZero != null ? retObjectSlashedZero.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -274,9 +318,13 @@ public class TextRunTypographyProperties extends NetObject  {
 
     public boolean getStandardLigatures() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStandardLigatures = null;
         try {
-            return (boolean)classInstance.Get("StandardLigatures");
+            retObjectStandardLigatures = classInstance.Get("StandardLigatures");
+            return (boolean)retObjectStandardLigatures;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectStandardLigatures != null ? retObjectStandardLigatures.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -284,9 +332,13 @@ public class TextRunTypographyProperties extends NetObject  {
 
     public boolean getStylisticSet1() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStylisticSet1 = null;
         try {
-            return (boolean)classInstance.Get("StylisticSet1");
+            retObjectStylisticSet1 = classInstance.Get("StylisticSet1");
+            return (boolean)retObjectStylisticSet1;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectStylisticSet1 != null ? retObjectStylisticSet1.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -294,9 +346,13 @@ public class TextRunTypographyProperties extends NetObject  {
 
     public boolean getStylisticSet10() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStylisticSet10 = null;
         try {
-            return (boolean)classInstance.Get("StylisticSet10");
+            retObjectStylisticSet10 = classInstance.Get("StylisticSet10");
+            return (boolean)retObjectStylisticSet10;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectStylisticSet10 != null ? retObjectStylisticSet10.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -304,9 +360,13 @@ public class TextRunTypographyProperties extends NetObject  {
 
     public boolean getStylisticSet11() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStylisticSet11 = null;
         try {
-            return (boolean)classInstance.Get("StylisticSet11");
+            retObjectStylisticSet11 = classInstance.Get("StylisticSet11");
+            return (boolean)retObjectStylisticSet11;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectStylisticSet11 != null ? retObjectStylisticSet11.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -314,9 +374,13 @@ public class TextRunTypographyProperties extends NetObject  {
 
     public boolean getStylisticSet12() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStylisticSet12 = null;
         try {
-            return (boolean)classInstance.Get("StylisticSet12");
+            retObjectStylisticSet12 = classInstance.Get("StylisticSet12");
+            return (boolean)retObjectStylisticSet12;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectStylisticSet12 != null ? retObjectStylisticSet12.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -324,9 +388,13 @@ public class TextRunTypographyProperties extends NetObject  {
 
     public boolean getStylisticSet13() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStylisticSet13 = null;
         try {
-            return (boolean)classInstance.Get("StylisticSet13");
+            retObjectStylisticSet13 = classInstance.Get("StylisticSet13");
+            return (boolean)retObjectStylisticSet13;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectStylisticSet13 != null ? retObjectStylisticSet13.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -334,9 +402,13 @@ public class TextRunTypographyProperties extends NetObject  {
 
     public boolean getStylisticSet14() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStylisticSet14 = null;
         try {
-            return (boolean)classInstance.Get("StylisticSet14");
+            retObjectStylisticSet14 = classInstance.Get("StylisticSet14");
+            return (boolean)retObjectStylisticSet14;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectStylisticSet14 != null ? retObjectStylisticSet14.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -344,9 +416,13 @@ public class TextRunTypographyProperties extends NetObject  {
 
     public boolean getStylisticSet15() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStylisticSet15 = null;
         try {
-            return (boolean)classInstance.Get("StylisticSet15");
+            retObjectStylisticSet15 = classInstance.Get("StylisticSet15");
+            return (boolean)retObjectStylisticSet15;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectStylisticSet15 != null ? retObjectStylisticSet15.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -354,9 +430,13 @@ public class TextRunTypographyProperties extends NetObject  {
 
     public boolean getStylisticSet16() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStylisticSet16 = null;
         try {
-            return (boolean)classInstance.Get("StylisticSet16");
+            retObjectStylisticSet16 = classInstance.Get("StylisticSet16");
+            return (boolean)retObjectStylisticSet16;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectStylisticSet16 != null ? retObjectStylisticSet16.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -364,9 +444,13 @@ public class TextRunTypographyProperties extends NetObject  {
 
     public boolean getStylisticSet17() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStylisticSet17 = null;
         try {
-            return (boolean)classInstance.Get("StylisticSet17");
+            retObjectStylisticSet17 = classInstance.Get("StylisticSet17");
+            return (boolean)retObjectStylisticSet17;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectStylisticSet17 != null ? retObjectStylisticSet17.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -374,9 +458,13 @@ public class TextRunTypographyProperties extends NetObject  {
 
     public boolean getStylisticSet18() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStylisticSet18 = null;
         try {
-            return (boolean)classInstance.Get("StylisticSet18");
+            retObjectStylisticSet18 = classInstance.Get("StylisticSet18");
+            return (boolean)retObjectStylisticSet18;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectStylisticSet18 != null ? retObjectStylisticSet18.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -384,9 +472,13 @@ public class TextRunTypographyProperties extends NetObject  {
 
     public boolean getStylisticSet19() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStylisticSet19 = null;
         try {
-            return (boolean)classInstance.Get("StylisticSet19");
+            retObjectStylisticSet19 = classInstance.Get("StylisticSet19");
+            return (boolean)retObjectStylisticSet19;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectStylisticSet19 != null ? retObjectStylisticSet19.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -394,9 +486,13 @@ public class TextRunTypographyProperties extends NetObject  {
 
     public boolean getStylisticSet2() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStylisticSet2 = null;
         try {
-            return (boolean)classInstance.Get("StylisticSet2");
+            retObjectStylisticSet2 = classInstance.Get("StylisticSet2");
+            return (boolean)retObjectStylisticSet2;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectStylisticSet2 != null ? retObjectStylisticSet2.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -404,9 +500,13 @@ public class TextRunTypographyProperties extends NetObject  {
 
     public boolean getStylisticSet20() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStylisticSet20 = null;
         try {
-            return (boolean)classInstance.Get("StylisticSet20");
+            retObjectStylisticSet20 = classInstance.Get("StylisticSet20");
+            return (boolean)retObjectStylisticSet20;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectStylisticSet20 != null ? retObjectStylisticSet20.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -414,9 +514,13 @@ public class TextRunTypographyProperties extends NetObject  {
 
     public boolean getStylisticSet3() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStylisticSet3 = null;
         try {
-            return (boolean)classInstance.Get("StylisticSet3");
+            retObjectStylisticSet3 = classInstance.Get("StylisticSet3");
+            return (boolean)retObjectStylisticSet3;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectStylisticSet3 != null ? retObjectStylisticSet3.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -424,9 +528,13 @@ public class TextRunTypographyProperties extends NetObject  {
 
     public boolean getStylisticSet4() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStylisticSet4 = null;
         try {
-            return (boolean)classInstance.Get("StylisticSet4");
+            retObjectStylisticSet4 = classInstance.Get("StylisticSet4");
+            return (boolean)retObjectStylisticSet4;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectStylisticSet4 != null ? retObjectStylisticSet4.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -434,9 +542,13 @@ public class TextRunTypographyProperties extends NetObject  {
 
     public boolean getStylisticSet5() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStylisticSet5 = null;
         try {
-            return (boolean)classInstance.Get("StylisticSet5");
+            retObjectStylisticSet5 = classInstance.Get("StylisticSet5");
+            return (boolean)retObjectStylisticSet5;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectStylisticSet5 != null ? retObjectStylisticSet5.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -444,9 +556,13 @@ public class TextRunTypographyProperties extends NetObject  {
 
     public boolean getStylisticSet6() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStylisticSet6 = null;
         try {
-            return (boolean)classInstance.Get("StylisticSet6");
+            retObjectStylisticSet6 = classInstance.Get("StylisticSet6");
+            return (boolean)retObjectStylisticSet6;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectStylisticSet6 != null ? retObjectStylisticSet6.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -454,9 +570,13 @@ public class TextRunTypographyProperties extends NetObject  {
 
     public boolean getStylisticSet7() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStylisticSet7 = null;
         try {
-            return (boolean)classInstance.Get("StylisticSet7");
+            retObjectStylisticSet7 = classInstance.Get("StylisticSet7");
+            return (boolean)retObjectStylisticSet7;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectStylisticSet7 != null ? retObjectStylisticSet7.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -464,9 +584,13 @@ public class TextRunTypographyProperties extends NetObject  {
 
     public boolean getStylisticSet8() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStylisticSet8 = null;
         try {
-            return (boolean)classInstance.Get("StylisticSet8");
+            retObjectStylisticSet8 = classInstance.Get("StylisticSet8");
+            return (boolean)retObjectStylisticSet8;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectStylisticSet8 != null ? retObjectStylisticSet8.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -474,9 +598,13 @@ public class TextRunTypographyProperties extends NetObject  {
 
     public boolean getStylisticSet9() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStylisticSet9 = null;
         try {
-            return (boolean)classInstance.Get("StylisticSet9");
+            retObjectStylisticSet9 = classInstance.Get("StylisticSet9");
+            return (boolean)retObjectStylisticSet9;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectStylisticSet9 != null ? retObjectStylisticSet9.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -484,9 +612,20 @@ public class TextRunTypographyProperties extends NetObject  {
 
     public int getAnnotationAlternates() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAnnotationAlternates = null;
         try {
-            return (int)classInstance.Get("AnnotationAlternates");
+            retObjectAnnotationAlternates = classInstance.Get("AnnotationAlternates");
+            return (int)retObjectAnnotationAlternates;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectAnnotationAlternates_ToString = retObjectAnnotationAlternates == null ? "null" : retObjectAnnotationAlternates.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectAnnotationAlternatesNumber = (java.lang.Number)retObjectAnnotationAlternates;
+                return retObjectAnnotationAlternatesNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectAnnotationAlternates != null ? retObjectAnnotationAlternates.getClass() : "null", retObjectAnnotationAlternates_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -494,9 +633,20 @@ public class TextRunTypographyProperties extends NetObject  {
 
     public int getContextualSwashes() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContextualSwashes = null;
         try {
-            return (int)classInstance.Get("ContextualSwashes");
+            retObjectContextualSwashes = classInstance.Get("ContextualSwashes");
+            return (int)retObjectContextualSwashes;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectContextualSwashes_ToString = retObjectContextualSwashes == null ? "null" : retObjectContextualSwashes.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectContextualSwashesNumber = (java.lang.Number)retObjectContextualSwashes;
+                return retObjectContextualSwashesNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectContextualSwashes != null ? retObjectContextualSwashes.getClass() : "null", retObjectContextualSwashes_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -504,9 +654,20 @@ public class TextRunTypographyProperties extends NetObject  {
 
     public int getStandardSwashes() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStandardSwashes = null;
         try {
-            return (int)classInstance.Get("StandardSwashes");
+            retObjectStandardSwashes = classInstance.Get("StandardSwashes");
+            return (int)retObjectStandardSwashes;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectStandardSwashes_ToString = retObjectStandardSwashes == null ? "null" : retObjectStandardSwashes.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectStandardSwashesNumber = (java.lang.Number)retObjectStandardSwashes;
+                return retObjectStandardSwashesNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectStandardSwashes != null ? retObjectStandardSwashes.getClass() : "null", retObjectStandardSwashes_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -514,9 +675,20 @@ public class TextRunTypographyProperties extends NetObject  {
 
     public int getStylisticAlternates() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStylisticAlternates = null;
         try {
-            return (int)classInstance.Get("StylisticAlternates");
+            retObjectStylisticAlternates = classInstance.Get("StylisticAlternates");
+            return (int)retObjectStylisticAlternates;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectStylisticAlternates_ToString = retObjectStylisticAlternates == null ? "null" : retObjectStylisticAlternates.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectStylisticAlternatesNumber = (java.lang.Number)retObjectStylisticAlternates;
+                return retObjectStylisticAlternatesNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectStylisticAlternates != null ? retObjectStylisticAlternates.getClass() : "null", retObjectStylisticAlternates_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -524,10 +696,14 @@ public class TextRunTypographyProperties extends NetObject  {
 
     public FontCapitals getCapitals() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCapitals = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Capitals");
+            retObjectCapitals = classInstance.Get("Capitals");
+            JCObject val = (JCObject)retObjectCapitals;
             return new FontCapitals(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCapitals != null ? retObjectCapitals.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -535,10 +711,14 @@ public class TextRunTypographyProperties extends NetObject  {
 
     public FontEastAsianLanguage getEastAsianLanguage() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEastAsianLanguage = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("EastAsianLanguage");
+            retObjectEastAsianLanguage = classInstance.Get("EastAsianLanguage");
+            JCObject val = (JCObject)retObjectEastAsianLanguage;
             return new FontEastAsianLanguage(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEastAsianLanguage != null ? retObjectEastAsianLanguage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -546,10 +726,14 @@ public class TextRunTypographyProperties extends NetObject  {
 
     public FontEastAsianWidths getEastAsianWidths() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEastAsianWidths = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("EastAsianWidths");
+            retObjectEastAsianWidths = classInstance.Get("EastAsianWidths");
+            JCObject val = (JCObject)retObjectEastAsianWidths;
             return new FontEastAsianWidths(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEastAsianWidths != null ? retObjectEastAsianWidths.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -557,10 +741,14 @@ public class TextRunTypographyProperties extends NetObject  {
 
     public FontFraction getFraction() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFraction = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Fraction");
+            retObjectFraction = classInstance.Get("Fraction");
+            JCObject val = (JCObject)retObjectFraction;
             return new FontFraction(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFraction != null ? retObjectFraction.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -568,10 +756,14 @@ public class TextRunTypographyProperties extends NetObject  {
 
     public FontNumeralAlignment getNumeralAlignment() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNumeralAlignment = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("NumeralAlignment");
+            retObjectNumeralAlignment = classInstance.Get("NumeralAlignment");
+            JCObject val = (JCObject)retObjectNumeralAlignment;
             return new FontNumeralAlignment(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNumeralAlignment != null ? retObjectNumeralAlignment.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -579,10 +771,14 @@ public class TextRunTypographyProperties extends NetObject  {
 
     public FontNumeralStyle getNumeralStyle() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNumeralStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("NumeralStyle");
+            retObjectNumeralStyle = classInstance.Get("NumeralStyle");
+            JCObject val = (JCObject)retObjectNumeralStyle;
             return new FontNumeralStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNumeralStyle != null ? retObjectNumeralStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -590,10 +786,14 @@ public class TextRunTypographyProperties extends NetObject  {
 
     public FontVariants getVariants() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVariants = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Variants");
+            retObjectVariants = classInstance.Get("Variants");
+            JCObject val = (JCObject)retObjectVariants;
             return new FontVariants(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVariants != null ? retObjectVariants.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -199,10 +199,14 @@ public class SplineDecimalKeyFrame extends DecimalKeyFrame  {
     
     public KeySpline getKeySpline() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectKeySpline = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("KeySpline");
+            retObjectKeySpline = classInstance.Get("KeySpline");
+            JCObject val = (JCObject)retObjectKeySpline;
             return new KeySpline(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectKeySpline != null ? retObjectKeySpline.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -210,7 +214,7 @@ public class SplineDecimalKeyFrame extends DecimalKeyFrame  {
 
     public void setKeySpline(KeySpline KeySpline) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("KeySpline", KeySpline == null ? null : KeySpline.getJCOInstance());
         } catch (JCNativeException jcne) {

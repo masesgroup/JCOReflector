@@ -202,10 +202,14 @@ public class CultureInfo extends NetObject  {
     
     public static CultureInfo CreateSpecificCulture(java.lang.String name) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.OutOfMemoryException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateSpecificCulture = null;
         try {
-            JCObject objCreateSpecificCulture = (JCObject)classType.Invoke("CreateSpecificCulture", name);
+            retObjectCreateSpecificCulture = classType.Invoke("CreateSpecificCulture", name);
+            JCObject objCreateSpecificCulture = (JCObject)retObjectCreateSpecificCulture;
             return new CultureInfo(objCreateSpecificCulture);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateSpecificCulture != null ? retObjectCreateSpecificCulture.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,10 +217,14 @@ public class CultureInfo extends NetObject  {
 
     public CultureInfo GetConsoleFallbackUICulture() throws Throwable, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.OutOfMemoryException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetConsoleFallbackUICulture = null;
         try {
-            JCObject objGetConsoleFallbackUICulture = (JCObject)classInstance.Invoke("GetConsoleFallbackUICulture");
+            retObjectGetConsoleFallbackUICulture = classInstance.Invoke("GetConsoleFallbackUICulture");
+            JCObject objGetConsoleFallbackUICulture = (JCObject)retObjectGetConsoleFallbackUICulture;
             return new CultureInfo(objGetConsoleFallbackUICulture);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetConsoleFallbackUICulture != null ? retObjectGetConsoleFallbackUICulture.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -224,10 +232,14 @@ public class CultureInfo extends NetObject  {
 
     public static CultureInfo GetCultureInfo(int culture) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetCultureInfo = null;
         try {
-            JCObject objGetCultureInfo = (JCObject)classType.Invoke("GetCultureInfo", culture);
+            retObjectGetCultureInfo = classType.Invoke("GetCultureInfo", culture);
+            JCObject objGetCultureInfo = (JCObject)retObjectGetCultureInfo;
             return new CultureInfo(objGetCultureInfo);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCultureInfo != null ? retObjectGetCultureInfo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -235,10 +247,14 @@ public class CultureInfo extends NetObject  {
 
     public static CultureInfo GetCultureInfo(java.lang.String name, boolean predefinedOnly) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetCultureInfo = null;
         try {
-            JCObject objGetCultureInfo = (JCObject)classType.Invoke("GetCultureInfo", name, predefinedOnly);
+            retObjectGetCultureInfo = classType.Invoke("GetCultureInfo", name, predefinedOnly);
+            JCObject objGetCultureInfo = (JCObject)retObjectGetCultureInfo;
             return new CultureInfo(objGetCultureInfo);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCultureInfo != null ? retObjectGetCultureInfo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -246,10 +262,14 @@ public class CultureInfo extends NetObject  {
 
     public static CultureInfo GetCultureInfo(java.lang.String name, java.lang.String altName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetCultureInfo = null;
         try {
-            JCObject objGetCultureInfo = (JCObject)classType.Invoke("GetCultureInfo", name, altName);
+            retObjectGetCultureInfo = classType.Invoke("GetCultureInfo", name, altName);
+            JCObject objGetCultureInfo = (JCObject)retObjectGetCultureInfo;
             return new CultureInfo(objGetCultureInfo);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCultureInfo != null ? retObjectGetCultureInfo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -257,10 +277,14 @@ public class CultureInfo extends NetObject  {
 
     public static CultureInfo GetCultureInfo(java.lang.String name) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.globalization.CultureNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetCultureInfo = null;
         try {
-            JCObject objGetCultureInfo = (JCObject)classType.Invoke("GetCultureInfo", name);
+            retObjectGetCultureInfo = classType.Invoke("GetCultureInfo", name);
+            JCObject objGetCultureInfo = (JCObject)retObjectGetCultureInfo;
             return new CultureInfo(objGetCultureInfo);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCultureInfo != null ? retObjectGetCultureInfo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -268,10 +292,14 @@ public class CultureInfo extends NetObject  {
 
     public static CultureInfo GetCultureInfoByIetfLanguageTag(java.lang.String name) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetCultureInfoByIetfLanguageTag = null;
         try {
-            JCObject objGetCultureInfoByIetfLanguageTag = (JCObject)classType.Invoke("GetCultureInfoByIetfLanguageTag", name);
+            retObjectGetCultureInfoByIetfLanguageTag = classType.Invoke("GetCultureInfoByIetfLanguageTag", name);
+            JCObject objGetCultureInfoByIetfLanguageTag = (JCObject)retObjectGetCultureInfoByIetfLanguageTag;
             return new CultureInfo(objGetCultureInfoByIetfLanguageTag);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCultureInfoByIetfLanguageTag != null ? retObjectGetCultureInfoByIetfLanguageTag.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -279,10 +307,14 @@ public class CultureInfo extends NetObject  {
 
     public static CultureInfo ReadOnly(CultureInfo ci) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.TypeInitializationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectReadOnly = null;
         try {
-            JCObject objReadOnly = (JCObject)classType.Invoke("ReadOnly", ci == null ? null : ci.getJCOInstance());
+            retObjectReadOnly = classType.Invoke("ReadOnly", ci == null ? null : ci.getJCOInstance());
+            JCObject objReadOnly = (JCObject)retObjectReadOnly;
             return new CultureInfo(objReadOnly);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadOnly != null ? retObjectReadOnly.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -290,16 +322,20 @@ public class CultureInfo extends NetObject  {
 
     public static CultureInfo[] GetCultures(CultureTypes types) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetCultures = null;
         try {
             ArrayList<CultureInfo> resultingArrayList = new ArrayList<CultureInfo>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("GetCultures", types == null ? null : types.getJCOInstance());
+            retObjectGetCultures = classType.Invoke("GetCultures", types == null ? null : types.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectGetCultures;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new CultureInfo(resultingObject));
             }
             CultureInfo[] resultingArray = new CultureInfo[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCultures != null ? retObjectGetCultures.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -307,10 +343,14 @@ public class CultureInfo extends NetObject  {
 
     public NetObject Clone() throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.ArgumentException, system.RankException, system.globalization.CultureNotFoundException, system.TypeInitializationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClone = null;
         try {
-            JCObject objClone = (JCObject)classInstance.Invoke("Clone");
+            retObjectClone = classInstance.Invoke("Clone");
+            JCObject objClone = (JCObject)retObjectClone;
             return new NetObject(objClone);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClone != null ? retObjectClone.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -318,10 +358,14 @@ public class CultureInfo extends NetObject  {
 
     public NetObject GetFormat(NetType formatType) throws Throwable, system.OutOfMemoryException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.RankException, system.TypeInitializationException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetFormat = null;
         try {
-            JCObject objGetFormat = (JCObject)classInstance.Invoke("GetFormat", formatType == null ? null : formatType.getJCOInstance());
+            retObjectGetFormat = classInstance.Invoke("GetFormat", formatType == null ? null : formatType.getJCOInstance());
+            JCObject objGetFormat = (JCObject)retObjectGetFormat;
             return new NetObject(objGetFormat);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetFormat != null ? retObjectGetFormat.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -329,7 +373,7 @@ public class CultureInfo extends NetObject  {
 
     public void ClearCachedData() throws Throwable, system.ArgumentNullException, system.OutOfMemoryException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ClearCachedData");
         } catch (JCNativeException jcne) {
@@ -343,9 +387,13 @@ public class CultureInfo extends NetObject  {
     
     public boolean getIsNeutralCulture() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsNeutralCulture = null;
         try {
-            return (boolean)classInstance.Get("IsNeutralCulture");
+            retObjectIsNeutralCulture = classInstance.Get("IsNeutralCulture");
+            return (boolean)retObjectIsNeutralCulture;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsNeutralCulture != null ? retObjectIsNeutralCulture.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -353,9 +401,13 @@ public class CultureInfo extends NetObject  {
 
     public boolean getIsReadOnly() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsReadOnly = null;
         try {
-            return (boolean)classInstance.Get("IsReadOnly");
+            retObjectIsReadOnly = classInstance.Get("IsReadOnly");
+            return (boolean)retObjectIsReadOnly;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsReadOnly != null ? retObjectIsReadOnly.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -363,9 +415,13 @@ public class CultureInfo extends NetObject  {
 
     public boolean getUseUserOverride() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUseUserOverride = null;
         try {
-            return (boolean)classInstance.Get("UseUserOverride");
+            retObjectUseUserOverride = classInstance.Get("UseUserOverride");
+            return (boolean)retObjectUseUserOverride;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectUseUserOverride != null ? retObjectUseUserOverride.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -373,9 +429,20 @@ public class CultureInfo extends NetObject  {
 
     public int getKeyboardLayoutId() throws Throwable, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectKeyboardLayoutId = null;
         try {
-            return (int)classInstance.Get("KeyboardLayoutId");
+            retObjectKeyboardLayoutId = classInstance.Get("KeyboardLayoutId");
+            return (int)retObjectKeyboardLayoutId;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectKeyboardLayoutId_ToString = retObjectKeyboardLayoutId == null ? "null" : retObjectKeyboardLayoutId.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectKeyboardLayoutIdNumber = (java.lang.Number)retObjectKeyboardLayoutId;
+                return retObjectKeyboardLayoutIdNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectKeyboardLayoutId != null ? retObjectKeyboardLayoutId.getClass() : "null", retObjectKeyboardLayoutId_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -383,9 +450,20 @@ public class CultureInfo extends NetObject  {
 
     public int getLCID() throws Throwable, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLCID = null;
         try {
-            return (int)classInstance.Get("LCID");
+            retObjectLCID = classInstance.Get("LCID");
+            return (int)retObjectLCID;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectLCID_ToString = retObjectLCID == null ? "null" : retObjectLCID.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectLCIDNumber = (java.lang.Number)retObjectLCID;
+                return retObjectLCIDNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectLCID != null ? retObjectLCID.getClass() : "null", retObjectLCID_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -393,10 +471,14 @@ public class CultureInfo extends NetObject  {
 
     public Calendar getCalendar() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.TypeInitializationException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCalendar = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Calendar");
+            retObjectCalendar = classInstance.Get("Calendar");
+            JCObject val = (JCObject)retObjectCalendar;
             return new Calendar(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCalendar != null ? retObjectCalendar.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -404,16 +486,20 @@ public class CultureInfo extends NetObject  {
 
     public final Calendar[] getOptionalCalendars() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.TypeInitializationException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOptionalCalendars = null;
         try {
             ArrayList<Calendar> resultingArrayList = new ArrayList<Calendar>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("OptionalCalendars");
+            retObjectOptionalCalendars = classInstance.Get("OptionalCalendars");
+            JCObject resultingObjects = (JCObject)retObjectOptionalCalendars;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new Calendar(resultingObject));
             }
             Calendar[] resultingArray = new Calendar[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOptionalCalendars != null ? retObjectOptionalCalendars.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -421,10 +507,14 @@ public class CultureInfo extends NetObject  {
 
     public CompareInfo getCompareInfo() throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCompareInfo = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CompareInfo");
+            retObjectCompareInfo = classInstance.Get("CompareInfo");
+            JCObject val = (JCObject)retObjectCompareInfo;
             return new CompareInfo(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCompareInfo != null ? retObjectCompareInfo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -432,10 +522,14 @@ public class CultureInfo extends NetObject  {
 
     public static CultureInfo getCurrentCulture() throws Throwable, system.ArgumentNullException, system.OutOfMemoryException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.globalization.CultureNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCurrentCulture = null;
         try {
-            JCObject val = (JCObject)classType.Get("CurrentCulture");
+            retObjectCurrentCulture = classType.Get("CurrentCulture");
+            JCObject val = (JCObject)retObjectCurrentCulture;
             return new CultureInfo(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCurrentCulture != null ? retObjectCurrentCulture.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -443,7 +537,7 @@ public class CultureInfo extends NetObject  {
 
     public static void setCurrentCulture(CultureInfo CurrentCulture) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Set("CurrentCulture", CurrentCulture == null ? null : CurrentCulture.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -453,10 +547,14 @@ public class CultureInfo extends NetObject  {
 
     public static CultureInfo getCurrentUICulture() throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.globalization.CultureNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCurrentUICulture = null;
         try {
-            JCObject val = (JCObject)classType.Get("CurrentUICulture");
+            retObjectCurrentUICulture = classType.Get("CurrentUICulture");
+            JCObject val = (JCObject)retObjectCurrentUICulture;
             return new CultureInfo(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCurrentUICulture != null ? retObjectCurrentUICulture.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -464,7 +562,7 @@ public class CultureInfo extends NetObject  {
 
     public static void setCurrentUICulture(CultureInfo CurrentUICulture) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Set("CurrentUICulture", CurrentUICulture == null ? null : CurrentUICulture.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -474,10 +572,14 @@ public class CultureInfo extends NetObject  {
 
     public static CultureInfo getDefaultThreadCurrentCulture() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDefaultThreadCurrentCulture = null;
         try {
-            JCObject val = (JCObject)classType.Get("DefaultThreadCurrentCulture");
+            retObjectDefaultThreadCurrentCulture = classType.Get("DefaultThreadCurrentCulture");
+            JCObject val = (JCObject)retObjectDefaultThreadCurrentCulture;
             return new CultureInfo(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefaultThreadCurrentCulture != null ? retObjectDefaultThreadCurrentCulture.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -485,7 +587,7 @@ public class CultureInfo extends NetObject  {
 
     public static void setDefaultThreadCurrentCulture(CultureInfo DefaultThreadCurrentCulture) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Set("DefaultThreadCurrentCulture", DefaultThreadCurrentCulture == null ? null : DefaultThreadCurrentCulture.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -495,10 +597,14 @@ public class CultureInfo extends NetObject  {
 
     public static CultureInfo getDefaultThreadCurrentUICulture() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDefaultThreadCurrentUICulture = null;
         try {
-            JCObject val = (JCObject)classType.Get("DefaultThreadCurrentUICulture");
+            retObjectDefaultThreadCurrentUICulture = classType.Get("DefaultThreadCurrentUICulture");
+            JCObject val = (JCObject)retObjectDefaultThreadCurrentUICulture;
             return new CultureInfo(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefaultThreadCurrentUICulture != null ? retObjectDefaultThreadCurrentUICulture.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -506,7 +612,7 @@ public class CultureInfo extends NetObject  {
 
     public static void setDefaultThreadCurrentUICulture(CultureInfo DefaultThreadCurrentUICulture) throws Throwable, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Set("DefaultThreadCurrentUICulture", DefaultThreadCurrentUICulture == null ? null : DefaultThreadCurrentUICulture.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -516,10 +622,14 @@ public class CultureInfo extends NetObject  {
 
     public static CultureInfo getInstalledUICulture() throws Throwable, system.ArgumentNullException, system.OutOfMemoryException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.globalization.CultureNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectInstalledUICulture = null;
         try {
-            JCObject val = (JCObject)classType.Get("InstalledUICulture");
+            retObjectInstalledUICulture = classType.Get("InstalledUICulture");
+            JCObject val = (JCObject)retObjectInstalledUICulture;
             return new CultureInfo(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInstalledUICulture != null ? retObjectInstalledUICulture.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -527,10 +637,14 @@ public class CultureInfo extends NetObject  {
 
     public static CultureInfo getInvariantCulture() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectInvariantCulture = null;
         try {
-            JCObject val = (JCObject)classType.Get("InvariantCulture");
+            retObjectInvariantCulture = classType.Get("InvariantCulture");
+            JCObject val = (JCObject)retObjectInvariantCulture;
             return new CultureInfo(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInvariantCulture != null ? retObjectInvariantCulture.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -538,10 +652,14 @@ public class CultureInfo extends NetObject  {
 
     public CultureInfo getParent() throws Throwable, system.NotSupportedException, system.ArgumentException, system.OutOfMemoryException, system.PlatformNotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectParent = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Parent");
+            retObjectParent = classInstance.Get("Parent");
+            JCObject val = (JCObject)retObjectParent;
             return new CultureInfo(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParent != null ? retObjectParent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -549,10 +667,14 @@ public class CultureInfo extends NetObject  {
 
     public CultureTypes getCultureTypes() throws Throwable, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.RankException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCultureTypes = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CultureTypes");
+            retObjectCultureTypes = classInstance.Get("CultureTypes");
+            JCObject val = (JCObject)retObjectCultureTypes;
             return new CultureTypes(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCultureTypes != null ? retObjectCultureTypes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -560,10 +682,14 @@ public class CultureInfo extends NetObject  {
 
     public DateTimeFormatInfo getDateTimeFormat() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.FormatException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.TypeInitializationException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDateTimeFormat = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DateTimeFormat");
+            retObjectDateTimeFormat = classInstance.Get("DateTimeFormat");
+            JCObject val = (JCObject)retObjectDateTimeFormat;
             return new DateTimeFormatInfo(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDateTimeFormat != null ? retObjectDateTimeFormat.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -571,7 +697,7 @@ public class CultureInfo extends NetObject  {
 
     public void setDateTimeFormat(DateTimeFormatInfo DateTimeFormat) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DateTimeFormat", DateTimeFormat == null ? null : DateTimeFormat.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -581,10 +707,14 @@ public class CultureInfo extends NetObject  {
 
     public NumberFormatInfo getNumberFormat() throws Throwable, system.OutOfMemoryException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNumberFormat = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("NumberFormat");
+            retObjectNumberFormat = classInstance.Get("NumberFormat");
+            JCObject val = (JCObject)retObjectNumberFormat;
             return new NumberFormatInfo(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNumberFormat != null ? retObjectNumberFormat.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -592,7 +722,7 @@ public class CultureInfo extends NetObject  {
 
     public void setNumberFormat(NumberFormatInfo NumberFormat) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("NumberFormat", NumberFormat == null ? null : NumberFormat.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -602,10 +732,14 @@ public class CultureInfo extends NetObject  {
 
     public TextInfo getTextInfo() throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTextInfo = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TextInfo");
+            retObjectTextInfo = classInstance.Get("TextInfo");
+            JCObject val = (JCObject)retObjectTextInfo;
             return new TextInfo(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTextInfo != null ? retObjectTextInfo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -613,9 +747,13 @@ public class CultureInfo extends NetObject  {
 
     public java.lang.String getDisplayName() throws Throwable, system.OutOfMemoryException, system.PlatformNotSupportedException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.runtime.interopservices.ExternalException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDisplayName = null;
         try {
-            return (java.lang.String)classInstance.Get("DisplayName");
+            retObjectDisplayName = classInstance.Get("DisplayName");
+            return (java.lang.String)retObjectDisplayName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDisplayName != null ? retObjectDisplayName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -623,9 +761,13 @@ public class CultureInfo extends NetObject  {
 
     public java.lang.String getEnglishName() throws Throwable, system.OutOfMemoryException, system.PlatformNotSupportedException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEnglishName = null;
         try {
-            return (java.lang.String)classInstance.Get("EnglishName");
+            retObjectEnglishName = classInstance.Get("EnglishName");
+            return (java.lang.String)retObjectEnglishName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectEnglishName != null ? retObjectEnglishName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -633,9 +775,13 @@ public class CultureInfo extends NetObject  {
 
     public java.lang.String getIetfLanguageTag() throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIetfLanguageTag = null;
         try {
-            return (java.lang.String)classInstance.Get("IetfLanguageTag");
+            retObjectIetfLanguageTag = classInstance.Get("IetfLanguageTag");
+            return (java.lang.String)retObjectIetfLanguageTag;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectIetfLanguageTag != null ? retObjectIetfLanguageTag.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -643,9 +789,13 @@ public class CultureInfo extends NetObject  {
 
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectName = null;
         try {
-            return (java.lang.String)classInstance.Get("Name");
+            retObjectName = classInstance.Get("Name");
+            return (java.lang.String)retObjectName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectName != null ? retObjectName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -653,9 +803,13 @@ public class CultureInfo extends NetObject  {
 
     public java.lang.String getNativeName() throws Throwable, system.OutOfMemoryException, system.PlatformNotSupportedException, system.InvalidOperationException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNativeName = null;
         try {
-            return (java.lang.String)classInstance.Get("NativeName");
+            retObjectNativeName = classInstance.Get("NativeName");
+            return (java.lang.String)retObjectNativeName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectNativeName != null ? retObjectNativeName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -663,9 +817,13 @@ public class CultureInfo extends NetObject  {
 
     public java.lang.String getThreeLetterISOLanguageName() throws Throwable, system.OutOfMemoryException, system.PlatformNotSupportedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectThreeLetterISOLanguageName = null;
         try {
-            return (java.lang.String)classInstance.Get("ThreeLetterISOLanguageName");
+            retObjectThreeLetterISOLanguageName = classInstance.Get("ThreeLetterISOLanguageName");
+            return (java.lang.String)retObjectThreeLetterISOLanguageName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectThreeLetterISOLanguageName != null ? retObjectThreeLetterISOLanguageName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -673,9 +831,13 @@ public class CultureInfo extends NetObject  {
 
     public java.lang.String getThreeLetterWindowsLanguageName() throws Throwable, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectThreeLetterWindowsLanguageName = null;
         try {
-            return (java.lang.String)classInstance.Get("ThreeLetterWindowsLanguageName");
+            retObjectThreeLetterWindowsLanguageName = classInstance.Get("ThreeLetterWindowsLanguageName");
+            return (java.lang.String)retObjectThreeLetterWindowsLanguageName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectThreeLetterWindowsLanguageName != null ? retObjectThreeLetterWindowsLanguageName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -683,9 +845,13 @@ public class CultureInfo extends NetObject  {
 
     public java.lang.String getTwoLetterISOLanguageName() throws Throwable, system.OutOfMemoryException, system.PlatformNotSupportedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTwoLetterISOLanguageName = null;
         try {
-            return (java.lang.String)classInstance.Get("TwoLetterISOLanguageName");
+            retObjectTwoLetterISOLanguageName = classInstance.Get("TwoLetterISOLanguageName");
+            return (java.lang.String)retObjectTwoLetterISOLanguageName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectTwoLetterISOLanguageName != null ? retObjectTwoLetterISOLanguageName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

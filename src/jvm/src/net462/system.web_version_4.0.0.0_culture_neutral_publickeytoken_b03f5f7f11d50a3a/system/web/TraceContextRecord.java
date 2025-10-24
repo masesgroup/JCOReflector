@@ -169,9 +169,13 @@ public class TraceContextRecord extends NetObject  {
     
     public boolean getIsWarning() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsWarning = null;
         try {
-            return (boolean)classInstance.Get("IsWarning");
+            retObjectIsWarning = classInstance.Get("IsWarning");
+            return (boolean)retObjectIsWarning;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsWarning != null ? retObjectIsWarning.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,10 +183,14 @@ public class TraceContextRecord extends NetObject  {
 
     public NetException getErrorInfo() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectErrorInfo = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ErrorInfo");
+            retObjectErrorInfo = classInstance.Get("ErrorInfo");
+            JCObject val = (JCObject)retObjectErrorInfo;
             return new NetException(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectErrorInfo != null ? retObjectErrorInfo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,9 +198,13 @@ public class TraceContextRecord extends NetObject  {
 
     public java.lang.String getCategory() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCategory = null;
         try {
-            return (java.lang.String)classInstance.Get("Category");
+            retObjectCategory = classInstance.Get("Category");
+            return (java.lang.String)retObjectCategory;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectCategory != null ? retObjectCategory.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,9 +212,13 @@ public class TraceContextRecord extends NetObject  {
 
     public java.lang.String getMessage() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMessage = null;
         try {
-            return (java.lang.String)classInstance.Get("Message");
+            retObjectMessage = classInstance.Get("Message");
+            return (java.lang.String)retObjectMessage;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectMessage != null ? retObjectMessage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

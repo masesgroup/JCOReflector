@@ -143,7 +143,7 @@ public class IWindowTargetImplementation extends NetObject implements IWindowTar
     
     public void OnMessage(JCORefOut<Message> m) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("OnMessage", m.getJCRefOut());
         } catch (JCNativeException jcne) {

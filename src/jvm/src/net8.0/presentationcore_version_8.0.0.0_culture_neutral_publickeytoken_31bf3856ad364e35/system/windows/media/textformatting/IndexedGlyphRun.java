@@ -160,9 +160,20 @@ public class IndexedGlyphRun extends NetObject  {
     
     public int getTextSourceCharacterIndex() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTextSourceCharacterIndex = null;
         try {
-            return (int)classInstance.Get("TextSourceCharacterIndex");
+            retObjectTextSourceCharacterIndex = classInstance.Get("TextSourceCharacterIndex");
+            return (int)retObjectTextSourceCharacterIndex;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectTextSourceCharacterIndex_ToString = retObjectTextSourceCharacterIndex == null ? "null" : retObjectTextSourceCharacterIndex.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectTextSourceCharacterIndexNumber = (java.lang.Number)retObjectTextSourceCharacterIndex;
+                return retObjectTextSourceCharacterIndexNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectTextSourceCharacterIndex != null ? retObjectTextSourceCharacterIndex.getClass() : "null", retObjectTextSourceCharacterIndex_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,9 +181,20 @@ public class IndexedGlyphRun extends NetObject  {
 
     public int getTextSourceLength() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTextSourceLength = null;
         try {
-            return (int)classInstance.Get("TextSourceLength");
+            retObjectTextSourceLength = classInstance.Get("TextSourceLength");
+            return (int)retObjectTextSourceLength;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectTextSourceLength_ToString = retObjectTextSourceLength == null ? "null" : retObjectTextSourceLength.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectTextSourceLengthNumber = (java.lang.Number)retObjectTextSourceLength;
+                return retObjectTextSourceLengthNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectTextSourceLength != null ? retObjectTextSourceLength.getClass() : "null", retObjectTextSourceLength_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,10 +202,14 @@ public class IndexedGlyphRun extends NetObject  {
 
     public GlyphRun getGlyphRun() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGlyphRun = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("GlyphRun");
+            retObjectGlyphRun = classInstance.Get("GlyphRun");
+            JCObject val = (JCObject)retObjectGlyphRun;
             return new GlyphRun(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGlyphRun != null ? retObjectGlyphRun.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

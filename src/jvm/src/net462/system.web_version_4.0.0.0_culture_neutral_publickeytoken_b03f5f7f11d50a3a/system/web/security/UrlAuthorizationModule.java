@@ -164,9 +164,13 @@ public class UrlAuthorizationModule extends NetObject  {
     
     public static boolean CheckUrlAccessForPrincipal(java.lang.String virtualPath, IPrincipal user, java.lang.String verb) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.OutOfMemoryException, system.web.HttpRequestValidationException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.configuration.ConfigurationException, system.NullReferenceException, system.security.SecurityException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCheckUrlAccessForPrincipal = null;
         try {
-            return (boolean)classType.Invoke("CheckUrlAccessForPrincipal", virtualPath, user == null ? null : user.getJCOInstance(), verb);
+            retObjectCheckUrlAccessForPrincipal = classType.Invoke("CheckUrlAccessForPrincipal", virtualPath, user == null ? null : user.getJCOInstance(), verb);
+            return (boolean)retObjectCheckUrlAccessForPrincipal;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCheckUrlAccessForPrincipal != null ? retObjectCheckUrlAccessForPrincipal.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -174,7 +178,7 @@ public class UrlAuthorizationModule extends NetObject  {
 
     public void Dispose() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
@@ -184,7 +188,7 @@ public class UrlAuthorizationModule extends NetObject  {
 
     public void Init(HttpApplication app) throws Throwable, system.ArgumentException, system.web.HttpException, system.ArgumentNullException, system.web.HttpRequestValidationException, system.configuration.ConfigurationErrorsException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.configuration.ConfigurationException, system.NullReferenceException, system.globalization.CultureNotFoundException, system.security.SecurityException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.OverflowException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Init", app == null ? null : app.getJCOInstance());
         } catch (JCNativeException jcne) {

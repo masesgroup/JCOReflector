@@ -161,10 +161,14 @@ public class BindableComponent extends Component  {
     
     public BindingContext getBindingContext() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBindingContext = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("BindingContext");
+            retObjectBindingContext = classInstance.Get("BindingContext");
+            JCObject val = (JCObject)retObjectBindingContext;
             return new BindingContext(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBindingContext != null ? retObjectBindingContext.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,7 +176,7 @@ public class BindableComponent extends Component  {
 
     public void setBindingContext(BindingContext BindingContext) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.MulticastNotSupportedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BindingContext", BindingContext == null ? null : BindingContext.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -182,10 +186,14 @@ public class BindableComponent extends Component  {
 
     public ControlBindingsCollection getDataBindings() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDataBindings = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DataBindings");
+            retObjectDataBindings = classInstance.Get("DataBindings");
+            JCObject val = (JCObject)retObjectDataBindings;
             return new ControlBindingsCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDataBindings != null ? retObjectDataBindings.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,7 +206,7 @@ public class BindableComponent extends Component  {
 
     public void addBindingContextChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("BindingContextChanged", handler);
         } catch (JCNativeException jcne) {
@@ -208,7 +216,7 @@ public class BindableComponent extends Component  {
 
     public void removeBindingContextChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("BindingContextChanged", handler);
         } catch (JCNativeException jcne) {

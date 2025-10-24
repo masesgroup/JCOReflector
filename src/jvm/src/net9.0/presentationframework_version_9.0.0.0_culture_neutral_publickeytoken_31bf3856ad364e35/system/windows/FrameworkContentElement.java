@@ -185,9 +185,13 @@ public class FrameworkContentElement extends ContentElement implements system.wi
     
     public boolean MoveFocus(TraversalRequest request) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMoveFocus = null;
         try {
-            return (boolean)classInstance.Invoke("MoveFocus", request == null ? null : request.getJCOInstance());
+            retObjectMoveFocus = classInstance.Invoke("MoveFocus", request == null ? null : request.getJCOInstance());
+            return (boolean)retObjectMoveFocus;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectMoveFocus != null ? retObjectMoveFocus.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,9 +199,13 @@ public class FrameworkContentElement extends ContentElement implements system.wi
 
     public boolean ShouldSerializeResources() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.MulticastNotSupportedException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShouldSerializeResources = null;
         try {
-            return (boolean)classInstance.Invoke("ShouldSerializeResources");
+            retObjectShouldSerializeResources = classInstance.Invoke("ShouldSerializeResources");
+            return (boolean)retObjectShouldSerializeResources;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectShouldSerializeResources != null ? retObjectShouldSerializeResources.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -205,9 +213,13 @@ public class FrameworkContentElement extends ContentElement implements system.wi
 
     public boolean ShouldSerializeStyle() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShouldSerializeStyle = null;
         try {
-            return (boolean)classInstance.Invoke("ShouldSerializeStyle");
+            retObjectShouldSerializeStyle = classInstance.Invoke("ShouldSerializeStyle");
+            return (boolean)retObjectShouldSerializeStyle;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectShouldSerializeStyle != null ? retObjectShouldSerializeStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -215,10 +227,14 @@ public class FrameworkContentElement extends ContentElement implements system.wi
 
     public NetObject FindName(java.lang.String name) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFindName = null;
         try {
-            JCObject objFindName = (JCObject)classInstance.Invoke("FindName", name);
+            retObjectFindName = classInstance.Invoke("FindName", name);
+            JCObject objFindName = (JCObject)retObjectFindName;
             return new NetObject(objFindName);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFindName != null ? retObjectFindName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -226,10 +242,14 @@ public class FrameworkContentElement extends ContentElement implements system.wi
 
     public NetObject FindResource(NetObject resourceKey) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception, system.collections.generic.KeyNotFoundException, system.InvalidCastException, system.OverflowException, system.reflection.AmbiguousMatchException, system.security.SecurityException, system.xaml.XamlException, system.NotImplementedException, system.windows.ResourceReferenceKeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFindResource = null;
         try {
-            JCObject objFindResource = (JCObject)classInstance.Invoke("FindResource", resourceKey == null ? null : resourceKey.getJCOInstance());
+            retObjectFindResource = classInstance.Invoke("FindResource", resourceKey == null ? null : resourceKey.getJCOInstance());
+            JCObject objFindResource = (JCObject)retObjectFindResource;
             return new NetObject(objFindResource);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFindResource != null ? retObjectFindResource.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -237,10 +257,14 @@ public class FrameworkContentElement extends ContentElement implements system.wi
 
     public NetObject TryFindResource(NetObject resourceKey) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception, system.collections.generic.KeyNotFoundException, system.InvalidCastException, system.OverflowException, system.reflection.AmbiguousMatchException, system.security.SecurityException, system.xaml.XamlException, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryFindResource = null;
         try {
-            JCObject objTryFindResource = (JCObject)classInstance.Invoke("TryFindResource", resourceKey == null ? null : resourceKey.getJCOInstance());
+            retObjectTryFindResource = classInstance.Invoke("TryFindResource", resourceKey == null ? null : resourceKey.getJCOInstance());
+            JCObject objTryFindResource = (JCObject)retObjectTryFindResource;
             return new NetObject(objTryFindResource);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTryFindResource != null ? retObjectTryFindResource.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -248,10 +272,14 @@ public class FrameworkContentElement extends ContentElement implements system.wi
 
     public BindingExpression GetBindingExpression(DependencyProperty dp) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetBindingExpression = null;
         try {
-            JCObject objGetBindingExpression = (JCObject)classInstance.Invoke("GetBindingExpression", dp == null ? null : dp.getJCOInstance());
+            retObjectGetBindingExpression = classInstance.Invoke("GetBindingExpression", dp == null ? null : dp.getJCOInstance());
+            JCObject objGetBindingExpression = (JCObject)retObjectGetBindingExpression;
             return new BindingExpression(objGetBindingExpression);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetBindingExpression != null ? retObjectGetBindingExpression.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -259,10 +287,14 @@ public class FrameworkContentElement extends ContentElement implements system.wi
 
     public BindingExpression SetBinding(DependencyProperty dp, java.lang.String path) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.TimeoutException, system.NullReferenceException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSetBinding = null;
         try {
-            JCObject objSetBinding = (JCObject)classInstance.Invoke("SetBinding", dp == null ? null : dp.getJCOInstance(), path);
+            retObjectSetBinding = classInstance.Invoke("SetBinding", dp == null ? null : dp.getJCOInstance(), path);
+            JCObject objSetBinding = (JCObject)retObjectSetBinding;
             return new BindingExpression(objSetBinding);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSetBinding != null ? retObjectSetBinding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -270,10 +302,14 @@ public class FrameworkContentElement extends ContentElement implements system.wi
 
     public BindingExpressionBase SetBinding(DependencyProperty dp, BindingBase binding) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSetBinding = null;
         try {
-            JCObject objSetBinding = (JCObject)classInstance.Invoke("SetBinding", dp == null ? null : dp.getJCOInstance(), binding == null ? null : binding.getJCOInstance());
+            retObjectSetBinding = classInstance.Invoke("SetBinding", dp == null ? null : dp.getJCOInstance(), binding == null ? null : binding.getJCOInstance());
+            JCObject objSetBinding = (JCObject)retObjectSetBinding;
             return new BindingExpressionBase(objSetBinding);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSetBinding != null ? retObjectSetBinding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -281,10 +317,14 @@ public class FrameworkContentElement extends ContentElement implements system.wi
 
     public DependencyObject PredictFocus(FocusNavigationDirection direction) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.PlatformNotSupportedException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPredictFocus = null;
         try {
-            JCObject objPredictFocus = (JCObject)classInstance.Invoke("PredictFocus", direction == null ? null : direction.getJCOInstance());
+            retObjectPredictFocus = classInstance.Invoke("PredictFocus", direction == null ? null : direction.getJCOInstance());
+            JCObject objPredictFocus = (JCObject)retObjectPredictFocus;
             return new DependencyObject(objPredictFocus);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPredictFocus != null ? retObjectPredictFocus.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -292,7 +332,7 @@ public class FrameworkContentElement extends ContentElement implements system.wi
 
     public void BeginInit() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("BeginInit");
         } catch (JCNativeException jcne) {
@@ -302,7 +342,7 @@ public class FrameworkContentElement extends ContentElement implements system.wi
 
     public void BeginStoryboard(Storyboard storyboard, HandoffBehavior handoffBehavior, boolean isControllable) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.MulticastNotSupportedException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("BeginStoryboard", storyboard == null ? null : storyboard.getJCOInstance(), handoffBehavior == null ? null : handoffBehavior.getJCOInstance(), isControllable);
         } catch (JCNativeException jcne) {
@@ -312,7 +352,7 @@ public class FrameworkContentElement extends ContentElement implements system.wi
 
     public void BeginStoryboard(Storyboard storyboard, HandoffBehavior handoffBehavior) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.MulticastNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.PlatformNotSupportedException, system.windows.media.animation.AnimationException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("BeginStoryboard", storyboard == null ? null : storyboard.getJCOInstance(), handoffBehavior == null ? null : handoffBehavior.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -322,7 +362,7 @@ public class FrameworkContentElement extends ContentElement implements system.wi
 
     public void BeginStoryboard(Storyboard storyboard) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.MulticastNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.PlatformNotSupportedException, system.windows.media.animation.AnimationException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("BeginStoryboard", storyboard == null ? null : storyboard.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -332,7 +372,7 @@ public class FrameworkContentElement extends ContentElement implements system.wi
 
     public void BringIntoView() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("BringIntoView");
         } catch (JCNativeException jcne) {
@@ -342,7 +382,7 @@ public class FrameworkContentElement extends ContentElement implements system.wi
 
     public void EndInit() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EndInit");
         } catch (JCNativeException jcne) {
@@ -352,7 +392,7 @@ public class FrameworkContentElement extends ContentElement implements system.wi
 
     public void RegisterName(java.lang.String name, NetObject scopedElement) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RegisterName", name, scopedElement == null ? null : scopedElement.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -362,7 +402,7 @@ public class FrameworkContentElement extends ContentElement implements system.wi
 
     public void SetResourceReference(DependencyProperty dp, NetObject name) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetResourceReference", dp == null ? null : dp.getJCOInstance(), name == null ? null : name.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -372,7 +412,7 @@ public class FrameworkContentElement extends ContentElement implements system.wi
 
     public void UnregisterName(java.lang.String name) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("UnregisterName", name);
         } catch (JCNativeException jcne) {
@@ -382,7 +422,7 @@ public class FrameworkContentElement extends ContentElement implements system.wi
 
     public void UpdateDefaultStyle() throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.InvalidOperationException, system.MulticastNotSupportedException, system.NotSupportedException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.UriFormatException, system.componentmodel.Win32Exception, system.net.WebException, system.io.IOException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("UpdateDefaultStyle");
         } catch (JCNativeException jcne) {
@@ -396,7 +436,7 @@ public class FrameworkContentElement extends ContentElement implements system.wi
      */
     @Deprecated 
     public boolean IsAmbientPropertyAvailable(java.lang.String propertyName) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIQueryAmbient to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIQueryAmbient to obtain the full interface.");
     }
 
 
@@ -405,9 +445,13 @@ public class FrameworkContentElement extends ContentElement implements system.wi
     
     public boolean getForceCursor() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectForceCursor = null;
         try {
-            return (boolean)classInstance.Get("ForceCursor");
+            retObjectForceCursor = classInstance.Get("ForceCursor");
+            return (boolean)retObjectForceCursor;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectForceCursor != null ? retObjectForceCursor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -415,7 +459,7 @@ public class FrameworkContentElement extends ContentElement implements system.wi
 
     public void setForceCursor(boolean ForceCursor) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ForceCursor", ForceCursor);
         } catch (JCNativeException jcne) {
@@ -425,9 +469,13 @@ public class FrameworkContentElement extends ContentElement implements system.wi
 
     public boolean getIsInitialized() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsInitialized = null;
         try {
-            return (boolean)classInstance.Get("IsInitialized");
+            retObjectIsInitialized = classInstance.Get("IsInitialized");
+            return (boolean)retObjectIsInitialized;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsInitialized != null ? retObjectIsInitialized.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -435,9 +483,13 @@ public class FrameworkContentElement extends ContentElement implements system.wi
 
     public boolean getIsLoaded() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsLoaded = null;
         try {
-            return (boolean)classInstance.Get("IsLoaded");
+            retObjectIsLoaded = classInstance.Get("IsLoaded");
+            return (boolean)retObjectIsLoaded;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsLoaded != null ? retObjectIsLoaded.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -445,9 +497,13 @@ public class FrameworkContentElement extends ContentElement implements system.wi
 
     public boolean getOverridesDefaultStyle() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOverridesDefaultStyle = null;
         try {
-            return (boolean)classInstance.Get("OverridesDefaultStyle");
+            retObjectOverridesDefaultStyle = classInstance.Get("OverridesDefaultStyle");
+            return (boolean)retObjectOverridesDefaultStyle;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectOverridesDefaultStyle != null ? retObjectOverridesDefaultStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -455,7 +511,7 @@ public class FrameworkContentElement extends ContentElement implements system.wi
 
     public void setOverridesDefaultStyle(boolean OverridesDefaultStyle) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("OverridesDefaultStyle", OverridesDefaultStyle);
         } catch (JCNativeException jcne) {
@@ -465,10 +521,14 @@ public class FrameworkContentElement extends ContentElement implements system.wi
 
     public NetObject getDataContext() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDataContext = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DataContext");
+            retObjectDataContext = classInstance.Get("DataContext");
+            JCObject val = (JCObject)retObjectDataContext;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDataContext != null ? retObjectDataContext.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -476,7 +536,7 @@ public class FrameworkContentElement extends ContentElement implements system.wi
 
     public void setDataContext(NetObject DataContext) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DataContext", DataContext == null ? null : DataContext.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -486,10 +546,14 @@ public class FrameworkContentElement extends ContentElement implements system.wi
 
     public NetObject getTag() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTag = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Tag");
+            retObjectTag = classInstance.Get("Tag");
+            JCObject val = (JCObject)retObjectTag;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTag != null ? retObjectTag.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -497,7 +561,7 @@ public class FrameworkContentElement extends ContentElement implements system.wi
 
     public void setTag(NetObject Tag) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Tag", Tag == null ? null : Tag.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -507,10 +571,14 @@ public class FrameworkContentElement extends ContentElement implements system.wi
 
     public NetObject getToolTip() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToolTip = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ToolTip");
+            retObjectToolTip = classInstance.Get("ToolTip");
+            JCObject val = (JCObject)retObjectToolTip;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToolTip != null ? retObjectToolTip.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -518,7 +586,7 @@ public class FrameworkContentElement extends ContentElement implements system.wi
 
     public void setToolTip(NetObject ToolTip) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ToolTip", ToolTip == null ? null : ToolTip.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -528,9 +596,13 @@ public class FrameworkContentElement extends ContentElement implements system.wi
 
     public java.lang.String getName() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectName = null;
         try {
-            return (java.lang.String)classInstance.Get("Name");
+            retObjectName = classInstance.Get("Name");
+            return (java.lang.String)retObjectName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectName != null ? retObjectName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -538,7 +610,7 @@ public class FrameworkContentElement extends ContentElement implements system.wi
 
     public void setName(java.lang.String Name) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Name", Name);
         } catch (JCNativeException jcne) {
@@ -548,10 +620,14 @@ public class FrameworkContentElement extends ContentElement implements system.wi
 
     public ContextMenu getContextMenu() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContextMenu = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ContextMenu");
+            retObjectContextMenu = classInstance.Get("ContextMenu");
+            JCObject val = (JCObject)retObjectContextMenu;
             return new ContextMenu(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContextMenu != null ? retObjectContextMenu.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -559,7 +635,7 @@ public class FrameworkContentElement extends ContentElement implements system.wi
 
     public void setContextMenu(ContextMenu ContextMenu) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ContextMenu", ContextMenu == null ? null : ContextMenu.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -569,10 +645,14 @@ public class FrameworkContentElement extends ContentElement implements system.wi
 
     public BindingGroup getBindingGroup() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBindingGroup = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("BindingGroup");
+            retObjectBindingGroup = classInstance.Get("BindingGroup");
+            JCObject val = (JCObject)retObjectBindingGroup;
             return new BindingGroup(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBindingGroup != null ? retObjectBindingGroup.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -580,7 +660,7 @@ public class FrameworkContentElement extends ContentElement implements system.wi
 
     public void setBindingGroup(BindingGroup BindingGroup) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BindingGroup", BindingGroup == null ? null : BindingGroup.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -590,10 +670,14 @@ public class FrameworkContentElement extends ContentElement implements system.wi
 
     public DependencyObject getParent() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectParent = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Parent");
+            retObjectParent = classInstance.Get("Parent");
+            JCObject val = (JCObject)retObjectParent;
             return new DependencyObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParent != null ? retObjectParent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -601,10 +685,14 @@ public class FrameworkContentElement extends ContentElement implements system.wi
 
     public DependencyObject getTemplatedParent() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTemplatedParent = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TemplatedParent");
+            retObjectTemplatedParent = classInstance.Get("TemplatedParent");
+            JCObject val = (JCObject)retObjectTemplatedParent;
             return new DependencyObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTemplatedParent != null ? retObjectTemplatedParent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -612,10 +700,14 @@ public class FrameworkContentElement extends ContentElement implements system.wi
 
     public Cursor getCursor() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCursor = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Cursor");
+            retObjectCursor = classInstance.Get("Cursor");
+            JCObject val = (JCObject)retObjectCursor;
             return new Cursor(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCursor != null ? retObjectCursor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -623,7 +715,7 @@ public class FrameworkContentElement extends ContentElement implements system.wi
 
     public void setCursor(Cursor Cursor) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Cursor", Cursor == null ? null : Cursor.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -633,10 +725,14 @@ public class FrameworkContentElement extends ContentElement implements system.wi
 
     public InputScope getInputScope() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInputScope = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("InputScope");
+            retObjectInputScope = classInstance.Get("InputScope");
+            JCObject val = (JCObject)retObjectInputScope;
             return new InputScope(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInputScope != null ? retObjectInputScope.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -644,7 +740,7 @@ public class FrameworkContentElement extends ContentElement implements system.wi
 
     public void setInputScope(InputScope InputScope) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("InputScope", InputScope == null ? null : InputScope.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -654,10 +750,14 @@ public class FrameworkContentElement extends ContentElement implements system.wi
 
     public XmlLanguage getLanguage() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLanguage = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Language");
+            retObjectLanguage = classInstance.Get("Language");
+            JCObject val = (JCObject)retObjectLanguage;
             return new XmlLanguage(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLanguage != null ? retObjectLanguage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -665,7 +765,7 @@ public class FrameworkContentElement extends ContentElement implements system.wi
 
     public void setLanguage(XmlLanguage Language) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Language", Language == null ? null : Language.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -675,10 +775,14 @@ public class FrameworkContentElement extends ContentElement implements system.wi
 
     public ResourceDictionary getResources() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.security.SecurityException, system.io.IOException, system.MulticastNotSupportedException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResources = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Resources");
+            retObjectResources = classInstance.Get("Resources");
+            JCObject val = (JCObject)retObjectResources;
             return new ResourceDictionary(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectResources != null ? retObjectResources.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -686,7 +790,7 @@ public class FrameworkContentElement extends ContentElement implements system.wi
 
     public void setResources(ResourceDictionary Resources) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Resources", Resources == null ? null : Resources.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -696,10 +800,14 @@ public class FrameworkContentElement extends ContentElement implements system.wi
 
     public Style getFocusVisualStyle() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFocusVisualStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("FocusVisualStyle");
+            retObjectFocusVisualStyle = classInstance.Get("FocusVisualStyle");
+            JCObject val = (JCObject)retObjectFocusVisualStyle;
             return new Style(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFocusVisualStyle != null ? retObjectFocusVisualStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -707,7 +815,7 @@ public class FrameworkContentElement extends ContentElement implements system.wi
 
     public void setFocusVisualStyle(Style FocusVisualStyle) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FocusVisualStyle", FocusVisualStyle == null ? null : FocusVisualStyle.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -717,10 +825,14 @@ public class FrameworkContentElement extends ContentElement implements system.wi
 
     public Style getStyle() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Style");
+            retObjectStyle = classInstance.Get("Style");
+            JCObject val = (JCObject)retObjectStyle;
             return new Style(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStyle != null ? retObjectStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -728,7 +840,7 @@ public class FrameworkContentElement extends ContentElement implements system.wi
 
     public void setStyle(Style Style) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Style", Style == null ? null : Style.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -743,7 +855,7 @@ public class FrameworkContentElement extends ContentElement implements system.wi
 
     public void addInitialized(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Initialized", handler);
         } catch (JCNativeException jcne) {
@@ -753,7 +865,7 @@ public class FrameworkContentElement extends ContentElement implements system.wi
 
     public void removeInitialized(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Initialized", handler);
         } catch (JCNativeException jcne) {
@@ -763,7 +875,7 @@ public class FrameworkContentElement extends ContentElement implements system.wi
 
     public void addContextMenuClosing(ContextMenuEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ContextMenuClosing", handler);
         } catch (JCNativeException jcne) {
@@ -773,7 +885,7 @@ public class FrameworkContentElement extends ContentElement implements system.wi
 
     public void removeContextMenuClosing(ContextMenuEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ContextMenuClosing", handler);
         } catch (JCNativeException jcne) {
@@ -783,7 +895,7 @@ public class FrameworkContentElement extends ContentElement implements system.wi
 
     public void addContextMenuOpening(ContextMenuEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ContextMenuOpening", handler);
         } catch (JCNativeException jcne) {
@@ -793,7 +905,7 @@ public class FrameworkContentElement extends ContentElement implements system.wi
 
     public void removeContextMenuOpening(ContextMenuEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ContextMenuOpening", handler);
         } catch (JCNativeException jcne) {
@@ -803,7 +915,7 @@ public class FrameworkContentElement extends ContentElement implements system.wi
 
     public void addToolTipClosing(ToolTipEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ToolTipClosing", handler);
         } catch (JCNativeException jcne) {
@@ -813,7 +925,7 @@ public class FrameworkContentElement extends ContentElement implements system.wi
 
     public void removeToolTipClosing(ToolTipEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ToolTipClosing", handler);
         } catch (JCNativeException jcne) {
@@ -823,7 +935,7 @@ public class FrameworkContentElement extends ContentElement implements system.wi
 
     public void addToolTipOpening(ToolTipEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ToolTipOpening", handler);
         } catch (JCNativeException jcne) {
@@ -833,7 +945,7 @@ public class FrameworkContentElement extends ContentElement implements system.wi
 
     public void removeToolTipOpening(ToolTipEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ToolTipOpening", handler);
         } catch (JCNativeException jcne) {
@@ -843,7 +955,7 @@ public class FrameworkContentElement extends ContentElement implements system.wi
 
     public void addDataContextChanged(DependencyPropertyChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("DataContextChanged", handler);
         } catch (JCNativeException jcne) {
@@ -853,7 +965,7 @@ public class FrameworkContentElement extends ContentElement implements system.wi
 
     public void removeDataContextChanged(DependencyPropertyChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("DataContextChanged", handler);
         } catch (JCNativeException jcne) {
@@ -863,7 +975,7 @@ public class FrameworkContentElement extends ContentElement implements system.wi
 
     public void addLoaded(RoutedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Loaded", handler);
         } catch (JCNativeException jcne) {
@@ -873,7 +985,7 @@ public class FrameworkContentElement extends ContentElement implements system.wi
 
     public void removeLoaded(RoutedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Loaded", handler);
         } catch (JCNativeException jcne) {
@@ -883,7 +995,7 @@ public class FrameworkContentElement extends ContentElement implements system.wi
 
     public void addUnloaded(RoutedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Unloaded", handler);
         } catch (JCNativeException jcne) {
@@ -893,7 +1005,7 @@ public class FrameworkContentElement extends ContentElement implements system.wi
 
     public void removeUnloaded(RoutedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Unloaded", handler);
         } catch (JCNativeException jcne) {

@@ -211,9 +211,13 @@ public class WSSecurityTokenSerializer extends SecurityTokenSerializer  {
     
     public boolean TryCreateKeyIdentifierClauseFromTokenXml(XmlElement element, SecurityTokenReferenceStyle tokenReferenceStyle, JCORefOut<SecurityKeyIdentifierClause> securityKeyIdentifierClause) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryCreateKeyIdentifierClauseFromTokenXml = null;
         try {
-            return (boolean)classInstance.Invoke("TryCreateKeyIdentifierClauseFromTokenXml", element == null ? null : element.getJCOInstance(), tokenReferenceStyle == null ? null : tokenReferenceStyle.getJCOInstance(), securityKeyIdentifierClause.getJCRefOut());
+            retObjectTryCreateKeyIdentifierClauseFromTokenXml = classInstance.Invoke("TryCreateKeyIdentifierClauseFromTokenXml", element == null ? null : element.getJCOInstance(), tokenReferenceStyle == null ? null : tokenReferenceStyle.getJCOInstance(), securityKeyIdentifierClause.getJCRefOut());
+            return (boolean)retObjectTryCreateKeyIdentifierClauseFromTokenXml;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryCreateKeyIdentifierClauseFromTokenXml != null ? retObjectTryCreateKeyIdentifierClauseFromTokenXml.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -221,10 +225,14 @@ public class WSSecurityTokenSerializer extends SecurityTokenSerializer  {
 
     public SecurityKeyIdentifierClause CreateKeyIdentifierClauseFromTokenXml(XmlElement element, SecurityTokenReferenceStyle tokenReferenceStyle) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateKeyIdentifierClauseFromTokenXml = null;
         try {
-            JCObject objCreateKeyIdentifierClauseFromTokenXml = (JCObject)classInstance.Invoke("CreateKeyIdentifierClauseFromTokenXml", element == null ? null : element.getJCOInstance(), tokenReferenceStyle == null ? null : tokenReferenceStyle.getJCOInstance());
+            retObjectCreateKeyIdentifierClauseFromTokenXml = classInstance.Invoke("CreateKeyIdentifierClauseFromTokenXml", element == null ? null : element.getJCOInstance(), tokenReferenceStyle == null ? null : tokenReferenceStyle.getJCOInstance());
+            JCObject objCreateKeyIdentifierClauseFromTokenXml = (JCObject)retObjectCreateKeyIdentifierClauseFromTokenXml;
             return new SecurityKeyIdentifierClause(objCreateKeyIdentifierClauseFromTokenXml);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateKeyIdentifierClauseFromTokenXml != null ? retObjectCreateKeyIdentifierClauseFromTokenXml.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -236,9 +244,13 @@ public class WSSecurityTokenSerializer extends SecurityTokenSerializer  {
     
     public boolean getEmitBspRequiredAttributes() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEmitBspRequiredAttributes = null;
         try {
-            return (boolean)classInstance.Get("EmitBspRequiredAttributes");
+            retObjectEmitBspRequiredAttributes = classInstance.Get("EmitBspRequiredAttributes");
+            return (boolean)retObjectEmitBspRequiredAttributes;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectEmitBspRequiredAttributes != null ? retObjectEmitBspRequiredAttributes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -246,9 +258,20 @@ public class WSSecurityTokenSerializer extends SecurityTokenSerializer  {
 
     public int getMaximumKeyDerivationLabelLength() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaximumKeyDerivationLabelLength = null;
         try {
-            return (int)classInstance.Get("MaximumKeyDerivationLabelLength");
+            retObjectMaximumKeyDerivationLabelLength = classInstance.Get("MaximumKeyDerivationLabelLength");
+            return (int)retObjectMaximumKeyDerivationLabelLength;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaximumKeyDerivationLabelLength_ToString = retObjectMaximumKeyDerivationLabelLength == null ? "null" : retObjectMaximumKeyDerivationLabelLength.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMaximumKeyDerivationLabelLengthNumber = (java.lang.Number)retObjectMaximumKeyDerivationLabelLength;
+                return retObjectMaximumKeyDerivationLabelLengthNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaximumKeyDerivationLabelLength != null ? retObjectMaximumKeyDerivationLabelLength.getClass() : "null", retObjectMaximumKeyDerivationLabelLength_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -256,9 +279,20 @@ public class WSSecurityTokenSerializer extends SecurityTokenSerializer  {
 
     public int getMaximumKeyDerivationNonceLength() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaximumKeyDerivationNonceLength = null;
         try {
-            return (int)classInstance.Get("MaximumKeyDerivationNonceLength");
+            retObjectMaximumKeyDerivationNonceLength = classInstance.Get("MaximumKeyDerivationNonceLength");
+            return (int)retObjectMaximumKeyDerivationNonceLength;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaximumKeyDerivationNonceLength_ToString = retObjectMaximumKeyDerivationNonceLength == null ? "null" : retObjectMaximumKeyDerivationNonceLength.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMaximumKeyDerivationNonceLengthNumber = (java.lang.Number)retObjectMaximumKeyDerivationNonceLength;
+                return retObjectMaximumKeyDerivationNonceLengthNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaximumKeyDerivationNonceLength != null ? retObjectMaximumKeyDerivationNonceLength.getClass() : "null", retObjectMaximumKeyDerivationNonceLength_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -266,9 +300,20 @@ public class WSSecurityTokenSerializer extends SecurityTokenSerializer  {
 
     public int getMaximumKeyDerivationOffset() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaximumKeyDerivationOffset = null;
         try {
-            return (int)classInstance.Get("MaximumKeyDerivationOffset");
+            retObjectMaximumKeyDerivationOffset = classInstance.Get("MaximumKeyDerivationOffset");
+            return (int)retObjectMaximumKeyDerivationOffset;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaximumKeyDerivationOffset_ToString = retObjectMaximumKeyDerivationOffset == null ? "null" : retObjectMaximumKeyDerivationOffset.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMaximumKeyDerivationOffsetNumber = (java.lang.Number)retObjectMaximumKeyDerivationOffset;
+                return retObjectMaximumKeyDerivationOffsetNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaximumKeyDerivationOffset != null ? retObjectMaximumKeyDerivationOffset.getClass() : "null", retObjectMaximumKeyDerivationOffset_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -276,10 +321,14 @@ public class WSSecurityTokenSerializer extends SecurityTokenSerializer  {
 
     public SecurityVersion getSecurityVersion() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSecurityVersion = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SecurityVersion");
+            retObjectSecurityVersion = classInstance.Get("SecurityVersion");
+            JCObject val = (JCObject)retObjectSecurityVersion;
             return new SecurityVersion(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSecurityVersion != null ? retObjectSecurityVersion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -287,10 +336,14 @@ public class WSSecurityTokenSerializer extends SecurityTokenSerializer  {
 
     public static WSSecurityTokenSerializer getDefaultInstance() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArgumentException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDefaultInstance = null;
         try {
-            JCObject val = (JCObject)classType.Get("DefaultInstance");
+            retObjectDefaultInstance = classType.Get("DefaultInstance");
+            JCObject val = (JCObject)retObjectDefaultInstance;
             return new WSSecurityTokenSerializer(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefaultInstance != null ? retObjectDefaultInstance.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

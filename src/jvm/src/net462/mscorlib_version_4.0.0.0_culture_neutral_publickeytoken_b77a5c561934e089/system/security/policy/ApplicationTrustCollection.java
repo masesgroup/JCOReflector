@@ -160,9 +160,20 @@ public class ApplicationTrustCollection extends NetObjectEnumerable  {
     
     public int Add(ApplicationTrust trust) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.RankException, system.runtime.serialization.SerializationException, system.NotSupportedException, system.NotImplementedException, system.security.SecurityException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAdd = null;
         try {
-            return (int)classInstance.Invoke("Add", trust == null ? null : trust.getJCOInstance());
+            retObjectAdd = classInstance.Invoke("Add", trust == null ? null : trust.getJCOInstance());
+            return (int)retObjectAdd;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectAdd_ToString = retObjectAdd == null ? "null" : retObjectAdd.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectAddNumber = (java.lang.Number)retObjectAdd;
+                return retObjectAddNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectAdd != null ? retObjectAdd.getClass() : "null", retObjectAdd_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,10 +181,14 @@ public class ApplicationTrustCollection extends NetObjectEnumerable  {
 
     public ApplicationTrustCollection Find(ApplicationIdentity applicationIdentity, ApplicationVersionMatch versionMatch) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.security.XmlSyntaxException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.NullReferenceException, system.OutOfMemoryException, system.FormatException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.runtime.serialization.SerializationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFind = null;
         try {
-            JCObject objFind = (JCObject)classInstance.Invoke("Find", applicationIdentity == null ? null : applicationIdentity.getJCOInstance(), versionMatch == null ? null : versionMatch.getJCOInstance());
+            retObjectFind = classInstance.Invoke("Find", applicationIdentity == null ? null : applicationIdentity.getJCOInstance(), versionMatch == null ? null : versionMatch.getJCOInstance());
+            JCObject objFind = (JCObject)retObjectFind;
             return new ApplicationTrustCollection(objFind);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFind != null ? retObjectFind.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,7 +196,7 @@ public class ApplicationTrustCollection extends NetObjectEnumerable  {
 
     public void AddRange(ApplicationTrust[] trusts) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.NullReferenceException, system.security.SecurityException, system.runtime.serialization.SerializationException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddRange", (java.lang.Object)toObjectFromArray(trusts));
         } catch (JCNativeException jcne) {
@@ -191,7 +206,7 @@ public class ApplicationTrustCollection extends NetObjectEnumerable  {
 
     public void AddRange(ApplicationTrustCollection trusts) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.security.XmlSyntaxException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.NullReferenceException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.runtime.serialization.SerializationException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddRange", trusts == null ? null : trusts.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -201,7 +216,7 @@ public class ApplicationTrustCollection extends NetObjectEnumerable  {
 
     public void Clear() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.security.XmlSyntaxException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.NullReferenceException, system.InvalidCastException, system.RankException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Clear");
         } catch (JCNativeException jcne) {
@@ -211,7 +226,7 @@ public class ApplicationTrustCollection extends NetObjectEnumerable  {
 
     public void CopyTo(ApplicationTrust[] array, int index) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CopyTo", toObjectFromArray(array), index);
         } catch (JCNativeException jcne) {
@@ -221,7 +236,7 @@ public class ApplicationTrustCollection extends NetObjectEnumerable  {
 
     public void Remove(ApplicationIdentity applicationIdentity, ApplicationVersionMatch versionMatch) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.security.XmlSyntaxException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.runtime.serialization.SerializationException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Remove", applicationIdentity == null ? null : applicationIdentity.getJCOInstance(), versionMatch == null ? null : versionMatch.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -231,7 +246,7 @@ public class ApplicationTrustCollection extends NetObjectEnumerable  {
 
     public void Remove(ApplicationTrust trust) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.security.XmlSyntaxException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.NullReferenceException, system.InvalidCastException, system.RankException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Remove", trust == null ? null : trust.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -241,7 +256,7 @@ public class ApplicationTrustCollection extends NetObjectEnumerable  {
 
     public void RemoveRange(ApplicationTrust[] trusts) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.security.XmlSyntaxException, system.NotSupportedException, system.InvalidOperationException, system.NullReferenceException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.runtime.serialization.SerializationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RemoveRange", (java.lang.Object)toObjectFromArray(trusts));
         } catch (JCNativeException jcne) {
@@ -251,7 +266,7 @@ public class ApplicationTrustCollection extends NetObjectEnumerable  {
 
     public void RemoveRange(ApplicationTrustCollection trusts) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.security.XmlSyntaxException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.NullReferenceException, system.OutOfMemoryException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.runtime.serialization.SerializationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RemoveRange", trusts == null ? null : trusts.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -265,7 +280,7 @@ public class ApplicationTrustCollection extends NetObjectEnumerable  {
      */
     @Deprecated 
     public void CopyTo(Array array, int index) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICollection to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICollection to obtain the full interface.");
     }
 
 
@@ -274,9 +289,13 @@ public class ApplicationTrustCollection extends NetObjectEnumerable  {
     
     public boolean getIsSynchronized() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsSynchronized = null;
         try {
-            return (boolean)classInstance.Get("IsSynchronized");
+            retObjectIsSynchronized = classInstance.Get("IsSynchronized");
+            return (boolean)retObjectIsSynchronized;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsSynchronized != null ? retObjectIsSynchronized.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -284,9 +303,20 @@ public class ApplicationTrustCollection extends NetObjectEnumerable  {
 
     public int getCount() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.security.XmlSyntaxException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.NullReferenceException, system.InvalidCastException, system.RankException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCount = null;
         try {
-            return (int)classInstance.Get("Count");
+            retObjectCount = classInstance.Get("Count");
+            return (int)retObjectCount;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCount_ToString = retObjectCount == null ? "null" : retObjectCount.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectCountNumber = (java.lang.Number)retObjectCount;
+                return retObjectCountNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCount != null ? retObjectCount.getClass() : "null", retObjectCount_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -294,10 +324,14 @@ public class ApplicationTrustCollection extends NetObjectEnumerable  {
 
     public NetObject getSyncRoot() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSyncRoot = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SyncRoot");
+            retObjectSyncRoot = classInstance.Get("SyncRoot");
+            JCObject val = (JCObject)retObjectSyncRoot;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSyncRoot != null ? retObjectSyncRoot.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

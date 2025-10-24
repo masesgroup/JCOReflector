@@ -148,9 +148,20 @@ public class IGridItemProviderImplementation extends NetObject implements IGridI
     
     public int getColumn() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectColumn = null;
         try {
-            return (int)classInstance.Get("Column");
+            retObjectColumn = classInstance.Get("Column");
+            return (int)retObjectColumn;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectColumn_ToString = retObjectColumn == null ? "null" : retObjectColumn.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectColumnNumber = (java.lang.Number)retObjectColumn;
+                return retObjectColumnNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectColumn != null ? retObjectColumn.getClass() : "null", retObjectColumn_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -158,9 +169,20 @@ public class IGridItemProviderImplementation extends NetObject implements IGridI
 
     public int getColumnSpan() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectColumnSpan = null;
         try {
-            return (int)classInstance.Get("ColumnSpan");
+            retObjectColumnSpan = classInstance.Get("ColumnSpan");
+            return (int)retObjectColumnSpan;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectColumnSpan_ToString = retObjectColumnSpan == null ? "null" : retObjectColumnSpan.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectColumnSpanNumber = (java.lang.Number)retObjectColumnSpan;
+                return retObjectColumnSpanNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectColumnSpan != null ? retObjectColumnSpan.getClass() : "null", retObjectColumnSpan_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -168,9 +190,20 @@ public class IGridItemProviderImplementation extends NetObject implements IGridI
 
     public int getRow() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRow = null;
         try {
-            return (int)classInstance.Get("Row");
+            retObjectRow = classInstance.Get("Row");
+            return (int)retObjectRow;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectRow_ToString = retObjectRow == null ? "null" : retObjectRow.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectRowNumber = (java.lang.Number)retObjectRow;
+                return retObjectRowNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectRow != null ? retObjectRow.getClass() : "null", retObjectRow_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,9 +211,20 @@ public class IGridItemProviderImplementation extends NetObject implements IGridI
 
     public int getRowSpan() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRowSpan = null;
         try {
-            return (int)classInstance.Get("RowSpan");
+            retObjectRowSpan = classInstance.Get("RowSpan");
+            return (int)retObjectRowSpan;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectRowSpan_ToString = retObjectRowSpan == null ? "null" : retObjectRowSpan.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectRowSpanNumber = (java.lang.Number)retObjectRowSpan;
+                return retObjectRowSpanNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectRowSpan != null ? retObjectRowSpan.getClass() : "null", retObjectRowSpan_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,10 +232,14 @@ public class IGridItemProviderImplementation extends NetObject implements IGridI
 
     public IRawElementProviderSimple getContainingGrid() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContainingGrid = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ContainingGrid");
+            retObjectContainingGrid = classInstance.Get("ContainingGrid");
+            JCObject val = (JCObject)retObjectContainingGrid;
             return new IRawElementProviderSimpleImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContainingGrid != null ? retObjectContainingGrid.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

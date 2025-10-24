@@ -162,10 +162,14 @@ public class NotifyInputEventArgs extends EventArgs  {
     
     public InputManager getInputManager() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInputManager = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("InputManager");
+            retObjectInputManager = classInstance.Get("InputManager");
+            JCObject val = (JCObject)retObjectInputManager;
             return new InputManager(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInputManager != null ? retObjectInputManager.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -173,10 +177,14 @@ public class NotifyInputEventArgs extends EventArgs  {
 
     public StagingAreaInputItem getStagingItem() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStagingItem = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("StagingItem");
+            retObjectStagingItem = classInstance.Get("StagingItem");
+            JCObject val = (JCObject)retObjectStagingItem;
             return new StagingAreaInputItem(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStagingItem != null ? retObjectStagingItem.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

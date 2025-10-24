@@ -179,9 +179,13 @@ public class BlobContentId extends ValueType  {
     
     public boolean Equals(BlobContentId other) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEquals = null;
         try {
-            return (boolean)classInstance.Invoke("Equals", other == null ? null : other.getJCOInstance());
+            retObjectEquals = classInstance.Invoke("Equals", other == null ? null : other.getJCOInstance());
+            return (boolean)retObjectEquals;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectEquals != null ? retObjectEquals.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -189,10 +193,14 @@ public class BlobContentId extends ValueType  {
 
     public static BlobContentId FromHash(byte[] hashCode) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFromHash = null;
         try {
-            JCObject objFromHash = (JCObject)classType.Invoke("FromHash", (java.lang.Object)hashCode);
+            retObjectFromHash = classType.Invoke("FromHash", (java.lang.Object)hashCode);
+            JCObject objFromHash = (JCObject)retObjectFromHash;
             return new BlobContentId(objFromHash);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFromHash != null ? retObjectFromHash.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,10 +208,14 @@ public class BlobContentId extends ValueType  {
 
     public static BlobContentId FromHash(JCORefOut dupParam0) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFromHash = null;
         try {
-            JCObject objFromHash = (JCObject)classType.Invoke("FromHash", (java.lang.Object)dupParam0.getJCRefOut());
+            retObjectFromHash = classType.Invoke("FromHash", (java.lang.Object)dupParam0.getJCRefOut());
+            JCObject objFromHash = (JCObject)retObjectFromHash;
             return new BlobContentId(objFromHash);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFromHash != null ? retObjectFromHash.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -215,9 +227,13 @@ public class BlobContentId extends ValueType  {
     
     public boolean getIsDefault() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsDefault = null;
         try {
-            return (boolean)classInstance.Get("IsDefault");
+            retObjectIsDefault = classInstance.Get("IsDefault");
+            return (boolean)retObjectIsDefault;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsDefault != null ? retObjectIsDefault.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -225,10 +241,14 @@ public class BlobContentId extends ValueType  {
 
     public Guid getGuid() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGuid = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Guid");
+            retObjectGuid = classInstance.Get("Guid");
+            JCObject val = (JCObject)retObjectGuid;
             return new Guid(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGuid != null ? retObjectGuid.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -236,10 +256,14 @@ public class BlobContentId extends ValueType  {
 
     public UInt32 getStamp() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStamp = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Stamp");
+            retObjectStamp = classInstance.Get("Stamp");
+            JCObject val = (JCObject)retObjectStamp;
             return new UInt32(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStamp != null ? retObjectStamp.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

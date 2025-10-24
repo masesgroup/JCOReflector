@@ -176,9 +176,20 @@ public class MarshalUsingAttribute extends Attribute  {
     
     public int getConstantElementCount() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConstantElementCount = null;
         try {
-            return (int)classInstance.Get("ConstantElementCount");
+            retObjectConstantElementCount = classInstance.Get("ConstantElementCount");
+            return (int)retObjectConstantElementCount;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectConstantElementCount_ToString = retObjectConstantElementCount == null ? "null" : retObjectConstantElementCount.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectConstantElementCountNumber = (java.lang.Number)retObjectConstantElementCount;
+                return retObjectConstantElementCountNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectConstantElementCount != null ? retObjectConstantElementCount.getClass() : "null", retObjectConstantElementCount_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,7 +197,7 @@ public class MarshalUsingAttribute extends Attribute  {
 
     public void setConstantElementCount(int ConstantElementCount) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ConstantElementCount", ConstantElementCount);
         } catch (JCNativeException jcne) {
@@ -196,9 +207,20 @@ public class MarshalUsingAttribute extends Attribute  {
 
     public int getElementIndirectionDepth() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectElementIndirectionDepth = null;
         try {
-            return (int)classInstance.Get("ElementIndirectionDepth");
+            retObjectElementIndirectionDepth = classInstance.Get("ElementIndirectionDepth");
+            return (int)retObjectElementIndirectionDepth;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectElementIndirectionDepth_ToString = retObjectElementIndirectionDepth == null ? "null" : retObjectElementIndirectionDepth.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectElementIndirectionDepthNumber = (java.lang.Number)retObjectElementIndirectionDepth;
+                return retObjectElementIndirectionDepthNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectElementIndirectionDepth != null ? retObjectElementIndirectionDepth.getClass() : "null", retObjectElementIndirectionDepth_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -206,7 +228,7 @@ public class MarshalUsingAttribute extends Attribute  {
 
     public void setElementIndirectionDepth(int ElementIndirectionDepth) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ElementIndirectionDepth", ElementIndirectionDepth);
         } catch (JCNativeException jcne) {
@@ -216,9 +238,13 @@ public class MarshalUsingAttribute extends Attribute  {
 
     public java.lang.String getCountElementName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCountElementName = null;
         try {
-            return (java.lang.String)classInstance.Get("CountElementName");
+            retObjectCountElementName = classInstance.Get("CountElementName");
+            return (java.lang.String)retObjectCountElementName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectCountElementName != null ? retObjectCountElementName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -226,7 +252,7 @@ public class MarshalUsingAttribute extends Attribute  {
 
     public void setCountElementName(java.lang.String CountElementName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CountElementName", CountElementName);
         } catch (JCNativeException jcne) {
@@ -236,10 +262,14 @@ public class MarshalUsingAttribute extends Attribute  {
 
     public NetType getNativeType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNativeType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("NativeType");
+            retObjectNativeType = classInstance.Get("NativeType");
+            JCObject val = (JCObject)retObjectNativeType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNativeType != null ? retObjectNativeType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

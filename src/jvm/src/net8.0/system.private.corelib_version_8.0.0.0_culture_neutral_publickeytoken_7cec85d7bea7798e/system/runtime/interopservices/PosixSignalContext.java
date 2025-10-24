@@ -170,9 +170,13 @@ public class PosixSignalContext extends NetObject  {
     
     public boolean getCancel() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCancel = null;
         try {
-            return (boolean)classInstance.Get("Cancel");
+            retObjectCancel = classInstance.Get("Cancel");
+            return (boolean)retObjectCancel;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCancel != null ? retObjectCancel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,7 +184,7 @@ public class PosixSignalContext extends NetObject  {
 
     public void setCancel(boolean Cancel) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Cancel", Cancel);
         } catch (JCNativeException jcne) {
@@ -190,10 +194,14 @@ public class PosixSignalContext extends NetObject  {
 
     public PosixSignal getSignal() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSignal = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Signal");
+            retObjectSignal = classInstance.Get("Signal");
+            JCObject val = (JCObject)retObjectSignal;
             return new PosixSignal(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSignal != null ? retObjectSignal.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,7 +209,7 @@ public class PosixSignalContext extends NetObject  {
 
     public void setSignal(PosixSignal Signal) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Signal", Signal == null ? null : Signal.getJCOInstance());
         } catch (JCNativeException jcne) {

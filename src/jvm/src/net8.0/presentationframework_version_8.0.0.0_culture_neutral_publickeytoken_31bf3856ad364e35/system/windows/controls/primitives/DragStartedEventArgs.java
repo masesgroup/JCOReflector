@@ -170,9 +170,20 @@ public class DragStartedEventArgs extends RoutedEventArgs  {
     
     public double getHorizontalOffset() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHorizontalOffset = null;
         try {
-            return (double)classInstance.Get("HorizontalOffset");
+            retObjectHorizontalOffset = classInstance.Get("HorizontalOffset");
+            return (double)retObjectHorizontalOffset;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectHorizontalOffset_ToString = retObjectHorizontalOffset == null ? "null" : retObjectHorizontalOffset.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectHorizontalOffsetNumber = (java.lang.Number)retObjectHorizontalOffset;
+                return retObjectHorizontalOffsetNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectHorizontalOffset != null ? retObjectHorizontalOffset.getClass() : "null", retObjectHorizontalOffset_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,9 +191,20 @@ public class DragStartedEventArgs extends RoutedEventArgs  {
 
     public double getVerticalOffset() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVerticalOffset = null;
         try {
-            return (double)classInstance.Get("VerticalOffset");
+            retObjectVerticalOffset = classInstance.Get("VerticalOffset");
+            return (double)retObjectVerticalOffset;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectVerticalOffset_ToString = retObjectVerticalOffset == null ? "null" : retObjectVerticalOffset.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectVerticalOffsetNumber = (java.lang.Number)retObjectVerticalOffset;
+                return retObjectVerticalOffsetNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectVerticalOffset != null ? retObjectVerticalOffset.getClass() : "null", retObjectVerticalOffset_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

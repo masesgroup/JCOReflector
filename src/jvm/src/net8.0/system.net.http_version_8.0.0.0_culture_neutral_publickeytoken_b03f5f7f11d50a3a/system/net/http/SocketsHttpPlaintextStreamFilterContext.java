@@ -162,10 +162,14 @@ public class SocketsHttpPlaintextStreamFilterContext extends NetObject  {
     
     public Stream getPlaintextStream() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPlaintextStream = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PlaintextStream");
+            retObjectPlaintextStream = classInstance.Get("PlaintextStream");
+            JCObject val = (JCObject)retObjectPlaintextStream;
             return new Stream(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPlaintextStream != null ? retObjectPlaintextStream.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -173,10 +177,14 @@ public class SocketsHttpPlaintextStreamFilterContext extends NetObject  {
 
     public HttpRequestMessage getInitialRequestMessage() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInitialRequestMessage = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("InitialRequestMessage");
+            retObjectInitialRequestMessage = classInstance.Get("InitialRequestMessage");
+            JCObject val = (JCObject)retObjectInitialRequestMessage;
             return new HttpRequestMessage(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInitialRequestMessage != null ? retObjectInitialRequestMessage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -184,10 +192,14 @@ public class SocketsHttpPlaintextStreamFilterContext extends NetObject  {
 
     public Version getNegotiatedHttpVersion() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNegotiatedHttpVersion = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("NegotiatedHttpVersion");
+            retObjectNegotiatedHttpVersion = classInstance.Get("NegotiatedHttpVersion");
+            JCObject val = (JCObject)retObjectNegotiatedHttpVersion;
             return new Version(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNegotiatedHttpVersion != null ? retObjectNegotiatedHttpVersion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

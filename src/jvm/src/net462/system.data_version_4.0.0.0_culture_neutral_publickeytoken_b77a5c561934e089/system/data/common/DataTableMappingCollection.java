@@ -166,9 +166,13 @@ public class DataTableMappingCollection extends MarshalByRefObject  {
     
     public boolean Contains(NetObject value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContains = null;
         try {
-            return (boolean)classInstance.Invoke("Contains", value == null ? null : value.getJCOInstance());
+            retObjectContains = classInstance.Invoke("Contains", value == null ? null : value.getJCOInstance());
+            return (boolean)retObjectContains;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectContains != null ? retObjectContains.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,9 +180,13 @@ public class DataTableMappingCollection extends MarshalByRefObject  {
 
     public boolean Contains(java.lang.String value) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContains = null;
         try {
-            return (boolean)classInstance.Invoke("Contains", value);
+            retObjectContains = classInstance.Invoke("Contains", value);
+            return (boolean)retObjectContains;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectContains != null ? retObjectContains.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,9 +194,20 @@ public class DataTableMappingCollection extends MarshalByRefObject  {
 
     public int Add(NetObject value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAdd = null;
         try {
-            return (int)classInstance.Invoke("Add", value == null ? null : value.getJCOInstance());
+            retObjectAdd = classInstance.Invoke("Add", value == null ? null : value.getJCOInstance());
+            return (int)retObjectAdd;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectAdd_ToString = retObjectAdd == null ? "null" : retObjectAdd.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectAddNumber = (java.lang.Number)retObjectAdd;
+                return retObjectAddNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectAdd != null ? retObjectAdd.getClass() : "null", retObjectAdd_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,9 +215,20 @@ public class DataTableMappingCollection extends MarshalByRefObject  {
 
     public int IndexOf(NetObject value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIndexOf = null;
         try {
-            return (int)classInstance.Invoke("IndexOf", value == null ? null : value.getJCOInstance());
+            retObjectIndexOf = classInstance.Invoke("IndexOf", value == null ? null : value.getJCOInstance());
+            return (int)retObjectIndexOf;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectIndexOf_ToString = retObjectIndexOf == null ? "null" : retObjectIndexOf.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectIndexOfNumber = (java.lang.Number)retObjectIndexOf;
+                return retObjectIndexOfNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectIndexOf != null ? retObjectIndexOf.getClass() : "null", retObjectIndexOf_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -206,9 +236,20 @@ public class DataTableMappingCollection extends MarshalByRefObject  {
 
     public int IndexOf(java.lang.String sourceTable) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIndexOf = null;
         try {
-            return (int)classInstance.Invoke("IndexOf", sourceTable);
+            retObjectIndexOf = classInstance.Invoke("IndexOf", sourceTable);
+            return (int)retObjectIndexOf;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectIndexOf_ToString = retObjectIndexOf == null ? "null" : retObjectIndexOf.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectIndexOfNumber = (java.lang.Number)retObjectIndexOf;
+                return retObjectIndexOfNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectIndexOf != null ? retObjectIndexOf.getClass() : "null", retObjectIndexOf_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -216,9 +257,20 @@ public class DataTableMappingCollection extends MarshalByRefObject  {
 
     public int IndexOfDataSetTable(java.lang.String dataSetTable) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIndexOfDataSetTable = null;
         try {
-            return (int)classInstance.Invoke("IndexOfDataSetTable", dataSetTable);
+            retObjectIndexOfDataSetTable = classInstance.Invoke("IndexOfDataSetTable", dataSetTable);
+            return (int)retObjectIndexOfDataSetTable;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectIndexOfDataSetTable_ToString = retObjectIndexOfDataSetTable == null ? "null" : retObjectIndexOfDataSetTable.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectIndexOfDataSetTableNumber = (java.lang.Number)retObjectIndexOfDataSetTable;
+                return retObjectIndexOfDataSetTableNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectIndexOfDataSetTable != null ? retObjectIndexOfDataSetTable.getClass() : "null", retObjectIndexOfDataSetTable_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -226,10 +278,14 @@ public class DataTableMappingCollection extends MarshalByRefObject  {
 
     public DataTableMapping Add(java.lang.String sourceTable, java.lang.String dataSetTable) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAdd = null;
         try {
-            JCObject objAdd = (JCObject)classInstance.Invoke("Add", sourceTable, dataSetTable);
+            retObjectAdd = classInstance.Invoke("Add", sourceTable, dataSetTable);
+            JCObject objAdd = (JCObject)retObjectAdd;
             return new DataTableMapping(objAdd);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAdd != null ? retObjectAdd.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -237,10 +293,14 @@ public class DataTableMappingCollection extends MarshalByRefObject  {
 
     public DataTableMapping GetByDataSetTable(java.lang.String dataSetTable) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetByDataSetTable = null;
         try {
-            JCObject objGetByDataSetTable = (JCObject)classInstance.Invoke("GetByDataSetTable", dataSetTable);
+            retObjectGetByDataSetTable = classInstance.Invoke("GetByDataSetTable", dataSetTable);
+            JCObject objGetByDataSetTable = (JCObject)retObjectGetByDataSetTable;
             return new DataTableMapping(objGetByDataSetTable);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetByDataSetTable != null ? retObjectGetByDataSetTable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -248,10 +308,14 @@ public class DataTableMappingCollection extends MarshalByRefObject  {
 
     public static DataTableMapping GetTableMappingBySchemaAction(DataTableMappingCollection tableMappings, java.lang.String sourceTable, java.lang.String dataSetTable, MissingMappingAction mappingAction) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetTableMappingBySchemaAction = null;
         try {
-            JCObject objGetTableMappingBySchemaAction = (JCObject)classType.Invoke("GetTableMappingBySchemaAction", tableMappings == null ? null : tableMappings.getJCOInstance(), sourceTable, dataSetTable, mappingAction == null ? null : mappingAction.getJCOInstance());
+            retObjectGetTableMappingBySchemaAction = classType.Invoke("GetTableMappingBySchemaAction", tableMappings == null ? null : tableMappings.getJCOInstance(), sourceTable, dataSetTable, mappingAction == null ? null : mappingAction.getJCOInstance());
+            JCObject objGetTableMappingBySchemaAction = (JCObject)retObjectGetTableMappingBySchemaAction;
             return new DataTableMapping(objGetTableMappingBySchemaAction);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetTableMappingBySchemaAction != null ? retObjectGetTableMappingBySchemaAction.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -259,7 +323,7 @@ public class DataTableMappingCollection extends MarshalByRefObject  {
 
     public void AddRange(Array values) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddRange", values == null ? null : values.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -269,7 +333,7 @@ public class DataTableMappingCollection extends MarshalByRefObject  {
 
     public void AddRange(DataTableMapping[] values) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddRange", (java.lang.Object)toObjectFromArray(values));
         } catch (JCNativeException jcne) {
@@ -279,7 +343,7 @@ public class DataTableMappingCollection extends MarshalByRefObject  {
 
     public void Clear() throws Throwable, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Clear");
         } catch (JCNativeException jcne) {
@@ -289,7 +353,7 @@ public class DataTableMappingCollection extends MarshalByRefObject  {
 
     public void CopyTo(Array array, int index) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CopyTo", array == null ? null : array.getJCOInstance(), index);
         } catch (JCNativeException jcne) {
@@ -299,7 +363,7 @@ public class DataTableMappingCollection extends MarshalByRefObject  {
 
     public void CopyTo(DataTableMapping[] array, int index) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CopyTo", toObjectFromArray(array), index);
         } catch (JCNativeException jcne) {
@@ -309,7 +373,7 @@ public class DataTableMappingCollection extends MarshalByRefObject  {
 
     public void Insert(int index, DataTableMapping value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Insert", index, value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -319,7 +383,7 @@ public class DataTableMappingCollection extends MarshalByRefObject  {
 
     public void Insert(int index, NetObject value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Insert", index, value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -329,7 +393,7 @@ public class DataTableMappingCollection extends MarshalByRefObject  {
 
     public void Remove(DataTableMapping value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Remove", value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -339,7 +403,7 @@ public class DataTableMappingCollection extends MarshalByRefObject  {
 
     public void Remove(NetObject value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Remove", value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -349,7 +413,7 @@ public class DataTableMappingCollection extends MarshalByRefObject  {
 
     public void RemoveAt(int index) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RemoveAt", index);
         } catch (JCNativeException jcne) {
@@ -359,7 +423,7 @@ public class DataTableMappingCollection extends MarshalByRefObject  {
 
     public void RemoveAt(java.lang.String sourceTable) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RemoveAt", sourceTable);
         } catch (JCNativeException jcne) {
@@ -373,9 +437,20 @@ public class DataTableMappingCollection extends MarshalByRefObject  {
     
     public int getCount() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCount = null;
         try {
-            return (int)classInstance.Get("Count");
+            retObjectCount = classInstance.Get("Count");
+            return (int)retObjectCount;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCount_ToString = retObjectCount == null ? "null" : retObjectCount.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectCountNumber = (java.lang.Number)retObjectCount;
+                return retObjectCountNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCount != null ? retObjectCount.getClass() : "null", retObjectCount_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

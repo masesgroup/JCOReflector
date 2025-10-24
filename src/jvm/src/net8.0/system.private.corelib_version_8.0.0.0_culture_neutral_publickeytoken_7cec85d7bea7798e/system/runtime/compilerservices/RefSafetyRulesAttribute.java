@@ -170,9 +170,20 @@ public class RefSafetyRulesAttribute extends Attribute  {
     
     public int getVersion() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVersion = null;
         try {
-            return (int)classInstance.Get("Version");
+            retObjectVersion = classInstance.Get("Version");
+            return (int)retObjectVersion;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectVersion_ToString = retObjectVersion == null ? "null" : retObjectVersion.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectVersionNumber = (java.lang.Number)retObjectVersion;
+                return retObjectVersionNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectVersion != null ? retObjectVersion.getClass() : "null", retObjectVersion_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

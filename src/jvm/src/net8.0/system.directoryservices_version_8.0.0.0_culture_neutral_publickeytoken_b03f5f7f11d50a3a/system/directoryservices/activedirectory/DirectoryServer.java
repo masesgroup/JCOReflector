@@ -163,10 +163,14 @@ public class DirectoryServer extends NetObject implements AutoCloseable {
     
     public ActiveDirectoryReplicationMetadata GetReplicationMetadata(java.lang.String objectPath) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetReplicationMetadata = null;
         try {
-            JCObject objGetReplicationMetadata = (JCObject)classInstance.Invoke("GetReplicationMetadata", objectPath);
+            retObjectGetReplicationMetadata = classInstance.Invoke("GetReplicationMetadata", objectPath);
+            JCObject objGetReplicationMetadata = (JCObject)retObjectGetReplicationMetadata;
             return new ActiveDirectoryReplicationMetadata(objGetReplicationMetadata);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetReplicationMetadata != null ? retObjectGetReplicationMetadata.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -174,10 +178,14 @@ public class DirectoryServer extends NetObject implements AutoCloseable {
 
     public ReplicationCursorCollection GetReplicationCursors(java.lang.String partition) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetReplicationCursors = null;
         try {
-            JCObject objGetReplicationCursors = (JCObject)classInstance.Invoke("GetReplicationCursors", partition);
+            retObjectGetReplicationCursors = classInstance.Invoke("GetReplicationCursors", partition);
+            JCObject objGetReplicationCursors = (JCObject)retObjectGetReplicationCursors;
             return new ReplicationCursorCollection(objGetReplicationCursors);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetReplicationCursors != null ? retObjectGetReplicationCursors.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -185,10 +193,14 @@ public class DirectoryServer extends NetObject implements AutoCloseable {
 
     public ReplicationFailureCollection GetReplicationConnectionFailures() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetReplicationConnectionFailures = null;
         try {
-            JCObject objGetReplicationConnectionFailures = (JCObject)classInstance.Invoke("GetReplicationConnectionFailures");
+            retObjectGetReplicationConnectionFailures = classInstance.Invoke("GetReplicationConnectionFailures");
+            JCObject objGetReplicationConnectionFailures = (JCObject)retObjectGetReplicationConnectionFailures;
             return new ReplicationFailureCollection(objGetReplicationConnectionFailures);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetReplicationConnectionFailures != null ? retObjectGetReplicationConnectionFailures.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,10 +208,14 @@ public class DirectoryServer extends NetObject implements AutoCloseable {
 
     public ReplicationNeighborCollection GetAllReplicationNeighbors() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetAllReplicationNeighbors = null;
         try {
-            JCObject objGetAllReplicationNeighbors = (JCObject)classInstance.Invoke("GetAllReplicationNeighbors");
+            retObjectGetAllReplicationNeighbors = classInstance.Invoke("GetAllReplicationNeighbors");
+            JCObject objGetAllReplicationNeighbors = (JCObject)retObjectGetAllReplicationNeighbors;
             return new ReplicationNeighborCollection(objGetAllReplicationNeighbors);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetAllReplicationNeighbors != null ? retObjectGetAllReplicationNeighbors.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -207,10 +223,14 @@ public class DirectoryServer extends NetObject implements AutoCloseable {
 
     public ReplicationNeighborCollection GetReplicationNeighbors(java.lang.String partition) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetReplicationNeighbors = null;
         try {
-            JCObject objGetReplicationNeighbors = (JCObject)classInstance.Invoke("GetReplicationNeighbors", partition);
+            retObjectGetReplicationNeighbors = classInstance.Invoke("GetReplicationNeighbors", partition);
+            JCObject objGetReplicationNeighbors = (JCObject)retObjectGetReplicationNeighbors;
             return new ReplicationNeighborCollection(objGetReplicationNeighbors);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetReplicationNeighbors != null ? retObjectGetReplicationNeighbors.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -218,10 +238,14 @@ public class DirectoryServer extends NetObject implements AutoCloseable {
 
     public ReplicationOperationInformation GetReplicationOperationInformation() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetReplicationOperationInformation = null;
         try {
-            JCObject objGetReplicationOperationInformation = (JCObject)classInstance.Invoke("GetReplicationOperationInformation");
+            retObjectGetReplicationOperationInformation = classInstance.Invoke("GetReplicationOperationInformation");
+            JCObject objGetReplicationOperationInformation = (JCObject)retObjectGetReplicationOperationInformation;
             return new ReplicationOperationInformation(objGetReplicationOperationInformation);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetReplicationOperationInformation != null ? retObjectGetReplicationOperationInformation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -229,10 +253,14 @@ public class DirectoryServer extends NetObject implements AutoCloseable {
 
     public DirectoryEntry GetDirectoryEntry() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.directoryservices.activedirectory.ActiveDirectoryOperationException, system.componentmodel.InvalidEnumArgumentException, system.directoryservices.activedirectory.ActiveDirectoryObjectNotFoundException, system.OutOfMemoryException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDirectoryEntry = null;
         try {
-            JCObject objGetDirectoryEntry = (JCObject)classInstance.Invoke("GetDirectoryEntry");
+            retObjectGetDirectoryEntry = classInstance.Invoke("GetDirectoryEntry");
+            JCObject objGetDirectoryEntry = (JCObject)retObjectGetDirectoryEntry;
             return new DirectoryEntry(objGetDirectoryEntry);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetDirectoryEntry != null ? retObjectGetDirectoryEntry.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -240,7 +268,7 @@ public class DirectoryServer extends NetObject implements AutoCloseable {
 
     public void CheckReplicationConsistency() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CheckReplicationConsistency");
         } catch (JCNativeException jcne) {
@@ -250,7 +278,7 @@ public class DirectoryServer extends NetObject implements AutoCloseable {
 
     public void Dispose() throws Throwable, system.NotSupportedException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
@@ -260,7 +288,7 @@ public class DirectoryServer extends NetObject implements AutoCloseable {
 
     public void MoveToAnotherSite(java.lang.String siteName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.directoryservices.activedirectory.ActiveDirectoryOperationException, system.FormatException, system.directoryservices.activedirectory.ActiveDirectoryObjectNotFoundException, system.componentmodel.InvalidEnumArgumentException, system.NullReferenceException, system.threading.SynchronizationLockException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("MoveToAnotherSite", siteName);
         } catch (JCNativeException jcne) {
@@ -270,7 +298,7 @@ public class DirectoryServer extends NetObject implements AutoCloseable {
 
     public void SyncReplicaFromAllServers(java.lang.String partition, SyncFromAllServersOptions options) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SyncReplicaFromAllServers", partition, options == null ? null : options.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -280,7 +308,7 @@ public class DirectoryServer extends NetObject implements AutoCloseable {
 
     public void SyncReplicaFromServer(java.lang.String partition, java.lang.String sourceServer) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SyncReplicaFromServer", partition, sourceServer);
         } catch (JCNativeException jcne) {
@@ -290,7 +318,7 @@ public class DirectoryServer extends NetObject implements AutoCloseable {
 
     public void TriggerSyncReplicaFromNeighbors(java.lang.String partition) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("TriggerSyncReplicaFromNeighbors", partition);
         } catch (JCNativeException jcne) {
@@ -301,7 +329,7 @@ public class DirectoryServer extends NetObject implements AutoCloseable {
     public void close() throws Exception {
         try {
             if (classInstance == null)
-                throw new UnsupportedOperationException("classInstance is null.");
+                throw new java.lang.UnsupportedOperationException("classInstance is null.");
             try {
                 classInstance.Invoke("Dispose");
             }
@@ -317,10 +345,14 @@ public class DirectoryServer extends NetObject implements AutoCloseable {
     
     public ReadOnlyStringCollection getPartitions() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.directoryservices.activedirectory.ActiveDirectoryOperationException, system.componentmodel.InvalidEnumArgumentException, system.directoryservices.activedirectory.ActiveDirectoryObjectNotFoundException, system.OutOfMemoryException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPartitions = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Partitions");
+            retObjectPartitions = classInstance.Get("Partitions");
+            JCObject val = (JCObject)retObjectPartitions;
             return new ReadOnlyStringCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPartitions != null ? retObjectPartitions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -328,10 +360,14 @@ public class DirectoryServer extends NetObject implements AutoCloseable {
 
     public ReplicationConnectionCollection getInboundConnections() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInboundConnections = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("InboundConnections");
+            retObjectInboundConnections = classInstance.Get("InboundConnections");
+            JCObject val = (JCObject)retObjectInboundConnections;
             return new ReplicationConnectionCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInboundConnections != null ? retObjectInboundConnections.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -339,10 +375,14 @@ public class DirectoryServer extends NetObject implements AutoCloseable {
 
     public ReplicationConnectionCollection getOutboundConnections() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOutboundConnections = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("OutboundConnections");
+            retObjectOutboundConnections = classInstance.Get("OutboundConnections");
+            JCObject val = (JCObject)retObjectOutboundConnections;
             return new ReplicationConnectionCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOutboundConnections != null ? retObjectOutboundConnections.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -350,9 +390,13 @@ public class DirectoryServer extends NetObject implements AutoCloseable {
 
     public SyncUpdateCallback getSyncFromAllServersCallback() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSyncFromAllServersCallback = null;
         try {
-            return (SyncUpdateCallback)classInstance.Get("SyncFromAllServersCallback");
+            retObjectSyncFromAllServersCallback = classInstance.Get("SyncFromAllServersCallback");
+            return (SyncUpdateCallback)retObjectSyncFromAllServersCallback;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into SyncUpdateCallback", retObjectSyncFromAllServersCallback != null ? retObjectSyncFromAllServersCallback.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -360,7 +404,7 @@ public class DirectoryServer extends NetObject implements AutoCloseable {
 
     public void setSyncFromAllServersCallback(SyncUpdateCallback SyncFromAllServersCallback) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SyncFromAllServersCallback", SyncFromAllServersCallback);
         } catch (JCNativeException jcne) {
@@ -370,9 +414,13 @@ public class DirectoryServer extends NetObject implements AutoCloseable {
 
     public java.lang.String getIPAddress() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIPAddress = null;
         try {
-            return (java.lang.String)classInstance.Get("IPAddress");
+            retObjectIPAddress = classInstance.Get("IPAddress");
+            return (java.lang.String)retObjectIPAddress;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectIPAddress != null ? retObjectIPAddress.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -380,9 +428,13 @@ public class DirectoryServer extends NetObject implements AutoCloseable {
 
     public java.lang.String getName() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectName = null;
         try {
-            return (java.lang.String)classInstance.Get("Name");
+            retObjectName = classInstance.Get("Name");
+            return (java.lang.String)retObjectName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectName != null ? retObjectName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -390,9 +442,13 @@ public class DirectoryServer extends NetObject implements AutoCloseable {
 
     public java.lang.String getSiteName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSiteName = null;
         try {
-            return (java.lang.String)classInstance.Get("SiteName");
+            retObjectSiteName = classInstance.Get("SiteName");
+            return (java.lang.String)retObjectSiteName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSiteName != null ? retObjectSiteName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

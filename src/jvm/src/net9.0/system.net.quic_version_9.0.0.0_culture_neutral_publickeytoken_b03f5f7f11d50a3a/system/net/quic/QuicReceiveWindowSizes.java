@@ -165,9 +165,20 @@ public class QuicReceiveWindowSizes extends NetObject  {
     
     public int getConnection() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConnection = null;
         try {
-            return (int)classInstance.Get("Connection");
+            retObjectConnection = classInstance.Get("Connection");
+            return (int)retObjectConnection;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectConnection_ToString = retObjectConnection == null ? "null" : retObjectConnection.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectConnectionNumber = (java.lang.Number)retObjectConnection;
+                return retObjectConnectionNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectConnection != null ? retObjectConnection.getClass() : "null", retObjectConnection_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -175,7 +186,7 @@ public class QuicReceiveWindowSizes extends NetObject  {
 
     public void setConnection(int Connection) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Connection", Connection);
         } catch (JCNativeException jcne) {
@@ -185,9 +196,20 @@ public class QuicReceiveWindowSizes extends NetObject  {
 
     public int getLocallyInitiatedBidirectionalStream() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLocallyInitiatedBidirectionalStream = null;
         try {
-            return (int)classInstance.Get("LocallyInitiatedBidirectionalStream");
+            retObjectLocallyInitiatedBidirectionalStream = classInstance.Get("LocallyInitiatedBidirectionalStream");
+            return (int)retObjectLocallyInitiatedBidirectionalStream;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectLocallyInitiatedBidirectionalStream_ToString = retObjectLocallyInitiatedBidirectionalStream == null ? "null" : retObjectLocallyInitiatedBidirectionalStream.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectLocallyInitiatedBidirectionalStreamNumber = (java.lang.Number)retObjectLocallyInitiatedBidirectionalStream;
+                return retObjectLocallyInitiatedBidirectionalStreamNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectLocallyInitiatedBidirectionalStream != null ? retObjectLocallyInitiatedBidirectionalStream.getClass() : "null", retObjectLocallyInitiatedBidirectionalStream_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,7 +217,7 @@ public class QuicReceiveWindowSizes extends NetObject  {
 
     public void setLocallyInitiatedBidirectionalStream(int LocallyInitiatedBidirectionalStream) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("LocallyInitiatedBidirectionalStream", LocallyInitiatedBidirectionalStream);
         } catch (JCNativeException jcne) {
@@ -205,9 +227,20 @@ public class QuicReceiveWindowSizes extends NetObject  {
 
     public int getRemotelyInitiatedBidirectionalStream() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRemotelyInitiatedBidirectionalStream = null;
         try {
-            return (int)classInstance.Get("RemotelyInitiatedBidirectionalStream");
+            retObjectRemotelyInitiatedBidirectionalStream = classInstance.Get("RemotelyInitiatedBidirectionalStream");
+            return (int)retObjectRemotelyInitiatedBidirectionalStream;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectRemotelyInitiatedBidirectionalStream_ToString = retObjectRemotelyInitiatedBidirectionalStream == null ? "null" : retObjectRemotelyInitiatedBidirectionalStream.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectRemotelyInitiatedBidirectionalStreamNumber = (java.lang.Number)retObjectRemotelyInitiatedBidirectionalStream;
+                return retObjectRemotelyInitiatedBidirectionalStreamNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectRemotelyInitiatedBidirectionalStream != null ? retObjectRemotelyInitiatedBidirectionalStream.getClass() : "null", retObjectRemotelyInitiatedBidirectionalStream_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -215,7 +248,7 @@ public class QuicReceiveWindowSizes extends NetObject  {
 
     public void setRemotelyInitiatedBidirectionalStream(int RemotelyInitiatedBidirectionalStream) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RemotelyInitiatedBidirectionalStream", RemotelyInitiatedBidirectionalStream);
         } catch (JCNativeException jcne) {
@@ -225,9 +258,20 @@ public class QuicReceiveWindowSizes extends NetObject  {
 
     public int getUnidirectionalStream() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUnidirectionalStream = null;
         try {
-            return (int)classInstance.Get("UnidirectionalStream");
+            retObjectUnidirectionalStream = classInstance.Get("UnidirectionalStream");
+            return (int)retObjectUnidirectionalStream;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectUnidirectionalStream_ToString = retObjectUnidirectionalStream == null ? "null" : retObjectUnidirectionalStream.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectUnidirectionalStreamNumber = (java.lang.Number)retObjectUnidirectionalStream;
+                return retObjectUnidirectionalStreamNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectUnidirectionalStream != null ? retObjectUnidirectionalStream.getClass() : "null", retObjectUnidirectionalStream_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -235,7 +279,7 @@ public class QuicReceiveWindowSizes extends NetObject  {
 
     public void setUnidirectionalStream(int UnidirectionalStream) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UnidirectionalStream", UnidirectionalStream);
         } catch (JCNativeException jcne) {

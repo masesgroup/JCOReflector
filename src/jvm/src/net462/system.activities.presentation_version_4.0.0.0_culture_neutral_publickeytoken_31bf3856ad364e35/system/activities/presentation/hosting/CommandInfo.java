@@ -161,9 +161,13 @@ public class CommandInfo extends NetObject  {
     
     public boolean getIsBindingEnabledInDesigner() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsBindingEnabledInDesigner = null;
         try {
-            return (boolean)classInstance.Get("IsBindingEnabledInDesigner");
+            retObjectIsBindingEnabledInDesigner = classInstance.Get("IsBindingEnabledInDesigner");
+            return (boolean)retObjectIsBindingEnabledInDesigner;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsBindingEnabledInDesigner != null ? retObjectIsBindingEnabledInDesigner.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,7 +175,7 @@ public class CommandInfo extends NetObject  {
 
     public void setIsBindingEnabledInDesigner(boolean IsBindingEnabledInDesigner) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsBindingEnabledInDesigner", IsBindingEnabledInDesigner);
         } catch (JCNativeException jcne) {
@@ -181,10 +185,14 @@ public class CommandInfo extends NetObject  {
 
     public ICommand getCommand() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCommand = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Command");
+            retObjectCommand = classInstance.Get("Command");
+            JCObject val = (JCObject)retObjectCommand;
             return new ICommandImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCommand != null ? retObjectCommand.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,7 +200,7 @@ public class CommandInfo extends NetObject  {
 
     public void setCommand(ICommand Command) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Command", Command == null ? null : Command.getJCOInstance());
         } catch (JCNativeException jcne) {

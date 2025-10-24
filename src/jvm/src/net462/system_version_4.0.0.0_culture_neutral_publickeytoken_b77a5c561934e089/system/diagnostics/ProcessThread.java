@@ -161,7 +161,7 @@ public class ProcessThread extends Component  {
     
     public void ResetIdealProcessor() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ResetIdealProcessor");
         } catch (JCNativeException jcne) {
@@ -175,9 +175,13 @@ public class ProcessThread extends Component  {
     
     public boolean getPriorityBoostEnabled() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPriorityBoostEnabled = null;
         try {
-            return (boolean)classInstance.Get("PriorityBoostEnabled");
+            retObjectPriorityBoostEnabled = classInstance.Get("PriorityBoostEnabled");
+            return (boolean)retObjectPriorityBoostEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectPriorityBoostEnabled != null ? retObjectPriorityBoostEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -185,7 +189,7 @@ public class ProcessThread extends Component  {
 
     public void setPriorityBoostEnabled(boolean PriorityBoostEnabled) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PriorityBoostEnabled", PriorityBoostEnabled);
         } catch (JCNativeException jcne) {
@@ -195,9 +199,20 @@ public class ProcessThread extends Component  {
 
     public int getBasePriority() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBasePriority = null;
         try {
-            return (int)classInstance.Get("BasePriority");
+            retObjectBasePriority = classInstance.Get("BasePriority");
+            return (int)retObjectBasePriority;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectBasePriority_ToString = retObjectBasePriority == null ? "null" : retObjectBasePriority.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectBasePriorityNumber = (java.lang.Number)retObjectBasePriority;
+                return retObjectBasePriorityNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectBasePriority != null ? retObjectBasePriority.getClass() : "null", retObjectBasePriority_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -205,9 +220,20 @@ public class ProcessThread extends Component  {
 
     public int getCurrentPriority() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCurrentPriority = null;
         try {
-            return (int)classInstance.Get("CurrentPriority");
+            retObjectCurrentPriority = classInstance.Get("CurrentPriority");
+            return (int)retObjectCurrentPriority;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCurrentPriority_ToString = retObjectCurrentPriority == null ? "null" : retObjectCurrentPriority.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectCurrentPriorityNumber = (java.lang.Number)retObjectCurrentPriority;
+                return retObjectCurrentPriorityNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCurrentPriority != null ? retObjectCurrentPriority.getClass() : "null", retObjectCurrentPriority_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -215,9 +241,20 @@ public class ProcessThread extends Component  {
 
     public int getId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectId = null;
         try {
-            return (int)classInstance.Get("Id");
+            retObjectId = classInstance.Get("Id");
+            return (int)retObjectId;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectId_ToString = retObjectId == null ? "null" : retObjectId.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectIdNumber = (java.lang.Number)retObjectId;
+                return retObjectIdNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectId != null ? retObjectId.getClass() : "null", retObjectId_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -225,7 +262,7 @@ public class ProcessThread extends Component  {
 
     public void setIdealProcessor(int IdealProcessor) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IdealProcessor", IdealProcessor);
         } catch (JCNativeException jcne) {
@@ -235,10 +272,14 @@ public class ProcessThread extends Component  {
 
     public DateTime getStartTime() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStartTime = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("StartTime");
+            retObjectStartTime = classInstance.Get("StartTime");
+            JCObject val = (JCObject)retObjectStartTime;
             return new DateTime(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStartTime != null ? retObjectStartTime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -246,10 +287,14 @@ public class ProcessThread extends Component  {
 
     public ThreadPriorityLevel getPriorityLevel() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPriorityLevel = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PriorityLevel");
+            retObjectPriorityLevel = classInstance.Get("PriorityLevel");
+            JCObject val = (JCObject)retObjectPriorityLevel;
             return new ThreadPriorityLevel(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPriorityLevel != null ? retObjectPriorityLevel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -257,7 +302,7 @@ public class ProcessThread extends Component  {
 
     public void setPriorityLevel(ThreadPriorityLevel PriorityLevel) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PriorityLevel", PriorityLevel == null ? null : PriorityLevel.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -267,10 +312,14 @@ public class ProcessThread extends Component  {
 
     public ThreadState getThreadState() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectThreadState = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ThreadState");
+            retObjectThreadState = classInstance.Get("ThreadState");
+            JCObject val = (JCObject)retObjectThreadState;
             return new ThreadState(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectThreadState != null ? retObjectThreadState.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -278,10 +327,14 @@ public class ProcessThread extends Component  {
 
     public ThreadWaitReason getWaitReason() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWaitReason = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("WaitReason");
+            retObjectWaitReason = classInstance.Get("WaitReason");
+            JCObject val = (JCObject)retObjectWaitReason;
             return new ThreadWaitReason(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWaitReason != null ? retObjectWaitReason.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -289,10 +342,14 @@ public class ProcessThread extends Component  {
 
     public TimeSpan getPrivilegedProcessorTime() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPrivilegedProcessorTime = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PrivilegedProcessorTime");
+            retObjectPrivilegedProcessorTime = classInstance.Get("PrivilegedProcessorTime");
+            JCObject val = (JCObject)retObjectPrivilegedProcessorTime;
             return new TimeSpan(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPrivilegedProcessorTime != null ? retObjectPrivilegedProcessorTime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -300,10 +357,14 @@ public class ProcessThread extends Component  {
 
     public TimeSpan getTotalProcessorTime() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTotalProcessorTime = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TotalProcessorTime");
+            retObjectTotalProcessorTime = classInstance.Get("TotalProcessorTime");
+            JCObject val = (JCObject)retObjectTotalProcessorTime;
             return new TimeSpan(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTotalProcessorTime != null ? retObjectTotalProcessorTime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -311,10 +372,14 @@ public class ProcessThread extends Component  {
 
     public TimeSpan getUserProcessorTime() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUserProcessorTime = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("UserProcessorTime");
+            retObjectUserProcessorTime = classInstance.Get("UserProcessorTime");
+            JCObject val = (JCObject)retObjectUserProcessorTime;
             return new TimeSpan(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUserProcessorTime != null ? retObjectUserProcessorTime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

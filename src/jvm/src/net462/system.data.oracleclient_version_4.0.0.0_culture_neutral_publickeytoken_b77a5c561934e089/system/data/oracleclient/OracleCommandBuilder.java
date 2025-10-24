@@ -175,10 +175,14 @@ public class OracleCommandBuilder extends DbCommandBuilder  {
     
     public OracleCommand GetDeleteCommandNewOracleCommandBuilder() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDeleteCommand = null;
         try {
-            JCObject objGetDeleteCommand = (JCObject)classInstance.Invoke("GetDeleteCommand");
+            retObjectGetDeleteCommand = classInstance.Invoke("GetDeleteCommand");
+            JCObject objGetDeleteCommand = (JCObject)retObjectGetDeleteCommand;
             return new OracleCommand(objGetDeleteCommand);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetDeleteCommand != null ? retObjectGetDeleteCommand.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,10 +190,14 @@ public class OracleCommandBuilder extends DbCommandBuilder  {
 
     public OracleCommand GetDeleteCommandNewOracleCommandBuilder(boolean useColumnsForParameterNames) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDeleteCommand = null;
         try {
-            JCObject objGetDeleteCommand = (JCObject)classInstance.Invoke("GetDeleteCommand", useColumnsForParameterNames);
+            retObjectGetDeleteCommand = classInstance.Invoke("GetDeleteCommand", useColumnsForParameterNames);
+            JCObject objGetDeleteCommand = (JCObject)retObjectGetDeleteCommand;
             return new OracleCommand(objGetDeleteCommand);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetDeleteCommand != null ? retObjectGetDeleteCommand.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,10 +205,14 @@ public class OracleCommandBuilder extends DbCommandBuilder  {
 
     public OracleCommand GetInsertCommandNewOracleCommandBuilder() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetInsertCommand = null;
         try {
-            JCObject objGetInsertCommand = (JCObject)classInstance.Invoke("GetInsertCommand");
+            retObjectGetInsertCommand = classInstance.Invoke("GetInsertCommand");
+            JCObject objGetInsertCommand = (JCObject)retObjectGetInsertCommand;
             return new OracleCommand(objGetInsertCommand);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetInsertCommand != null ? retObjectGetInsertCommand.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -208,10 +220,14 @@ public class OracleCommandBuilder extends DbCommandBuilder  {
 
     public OracleCommand GetInsertCommandNewOracleCommandBuilder(boolean useColumnsForParameterNames) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetInsertCommand = null;
         try {
-            JCObject objGetInsertCommand = (JCObject)classInstance.Invoke("GetInsertCommand", useColumnsForParameterNames);
+            retObjectGetInsertCommand = classInstance.Invoke("GetInsertCommand", useColumnsForParameterNames);
+            JCObject objGetInsertCommand = (JCObject)retObjectGetInsertCommand;
             return new OracleCommand(objGetInsertCommand);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetInsertCommand != null ? retObjectGetInsertCommand.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -219,10 +235,14 @@ public class OracleCommandBuilder extends DbCommandBuilder  {
 
     public OracleCommand GetUpdateCommandNewOracleCommandBuilder() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetUpdateCommand = null;
         try {
-            JCObject objGetUpdateCommand = (JCObject)classInstance.Invoke("GetUpdateCommand");
+            retObjectGetUpdateCommand = classInstance.Invoke("GetUpdateCommand");
+            JCObject objGetUpdateCommand = (JCObject)retObjectGetUpdateCommand;
             return new OracleCommand(objGetUpdateCommand);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetUpdateCommand != null ? retObjectGetUpdateCommand.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -230,10 +250,14 @@ public class OracleCommandBuilder extends DbCommandBuilder  {
 
     public OracleCommand GetUpdateCommandNewOracleCommandBuilder(boolean useColumnsForParameterNames) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetUpdateCommand = null;
         try {
-            JCObject objGetUpdateCommand = (JCObject)classInstance.Invoke("GetUpdateCommand", useColumnsForParameterNames);
+            retObjectGetUpdateCommand = classInstance.Invoke("GetUpdateCommand", useColumnsForParameterNames);
+            JCObject objGetUpdateCommand = (JCObject)retObjectGetUpdateCommand;
             return new OracleCommand(objGetUpdateCommand);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetUpdateCommand != null ? retObjectGetUpdateCommand.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -241,9 +265,13 @@ public class OracleCommandBuilder extends DbCommandBuilder  {
 
     public java.lang.String QuoteIdentifier(java.lang.String unquotedIdentifier) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectQuoteIdentifier = null;
         try {
-            return (java.lang.String)classInstance.Invoke("QuoteIdentifier", unquotedIdentifier);
+            retObjectQuoteIdentifier = classInstance.Invoke("QuoteIdentifier", unquotedIdentifier);
+            return (java.lang.String)retObjectQuoteIdentifier;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectQuoteIdentifier != null ? retObjectQuoteIdentifier.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -251,9 +279,13 @@ public class OracleCommandBuilder extends DbCommandBuilder  {
 
     public java.lang.String UnquoteIdentifier(java.lang.String quotedIdentifier) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUnquoteIdentifier = null;
         try {
-            return (java.lang.String)classInstance.Invoke("UnquoteIdentifier", quotedIdentifier);
+            retObjectUnquoteIdentifier = classInstance.Invoke("UnquoteIdentifier", quotedIdentifier);
+            return (java.lang.String)retObjectUnquoteIdentifier;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectUnquoteIdentifier != null ? retObjectUnquoteIdentifier.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -261,7 +293,7 @@ public class OracleCommandBuilder extends DbCommandBuilder  {
 
     public static void DeriveParameters(OracleCommand command) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.InvalidCastException, system.AccessViolationException, system.OverflowException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("DeriveParameters", command == null ? null : command.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -275,10 +307,14 @@ public class OracleCommandBuilder extends DbCommandBuilder  {
     
     public OracleDataAdapter getDataAdapterNewOracleCommandBuilder() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDataAdapter = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DataAdapter");
+            retObjectDataAdapter = classInstance.Get("DataAdapter");
+            JCObject val = (JCObject)retObjectDataAdapter;
             return new OracleDataAdapter(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDataAdapter != null ? retObjectDataAdapter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -286,7 +322,7 @@ public class OracleCommandBuilder extends DbCommandBuilder  {
 
     public void setDataAdapter(OracleDataAdapter DataAdapter) throws Throwable, system.ArgumentException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DataAdapter", DataAdapter == null ? null : DataAdapter.getJCOInstance());
         } catch (JCNativeException jcne) {

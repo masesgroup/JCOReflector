@@ -159,9 +159,13 @@ public class LambdaExpression extends Expression  {
     
     public static boolean getCanCompileToIL() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCanCompileToIL = null;
         try {
-            return (boolean)classType.Get("CanCompileToIL");
+            retObjectCanCompileToIL = classType.Get("CanCompileToIL");
+            return (boolean)retObjectCanCompileToIL;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCanCompileToIL != null ? retObjectCanCompileToIL.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,9 +173,13 @@ public class LambdaExpression extends Expression  {
 
     public static boolean getCanInterpret() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCanInterpret = null;
         try {
-            return (boolean)classType.Get("CanInterpret");
+            retObjectCanInterpret = classType.Get("CanInterpret");
+            return (boolean)retObjectCanInterpret;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCanInterpret != null ? retObjectCanInterpret.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,9 +187,13 @@ public class LambdaExpression extends Expression  {
 
     public boolean getTailCall() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTailCall = null;
         try {
-            return (boolean)classInstance.Get("TailCall");
+            retObjectTailCall = classInstance.Get("TailCall");
+            return (boolean)retObjectTailCall;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectTailCall != null ? retObjectTailCall.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -189,10 +201,14 @@ public class LambdaExpression extends Expression  {
 
     public Expression getBody() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBody = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Body");
+            retObjectBody = classInstance.Get("Body");
+            JCObject val = (JCObject)retObjectBody;
             return new Expression(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBody != null ? retObjectBody.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,9 +216,13 @@ public class LambdaExpression extends Expression  {
 
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectName = null;
         try {
-            return (java.lang.String)classInstance.Get("Name");
+            retObjectName = classInstance.Get("Name");
+            return (java.lang.String)retObjectName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectName != null ? retObjectName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -210,10 +230,14 @@ public class LambdaExpression extends Expression  {
 
     public NetType getReturnType() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReturnType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ReturnType");
+            retObjectReturnType = classInstance.Get("ReturnType");
+            JCObject val = (JCObject)retObjectReturnType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReturnType != null ? retObjectReturnType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

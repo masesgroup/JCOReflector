@@ -142,10 +142,14 @@ public class IDataSourceProviderImplementation extends NetObject implements IDat
     
     public IEnumerable GetResolvedSelectedDataSource() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetResolvedSelectedDataSource = null;
         try {
-            JCObject objGetResolvedSelectedDataSource = (JCObject)classInstance.Invoke("GetResolvedSelectedDataSource");
+            retObjectGetResolvedSelectedDataSource = classInstance.Invoke("GetResolvedSelectedDataSource");
+            JCObject objGetResolvedSelectedDataSource = (JCObject)retObjectGetResolvedSelectedDataSource;
             return new IEnumerableImplementation(objGetResolvedSelectedDataSource);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetResolvedSelectedDataSource != null ? retObjectGetResolvedSelectedDataSource.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -153,10 +157,14 @@ public class IDataSourceProviderImplementation extends NetObject implements IDat
 
     public NetObject GetSelectedDataSource() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSelectedDataSource = null;
         try {
-            JCObject objGetSelectedDataSource = (JCObject)classInstance.Invoke("GetSelectedDataSource");
+            retObjectGetSelectedDataSource = classInstance.Invoke("GetSelectedDataSource");
+            JCObject objGetSelectedDataSource = (JCObject)retObjectGetSelectedDataSource;
             return new NetObject(objGetSelectedDataSource);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSelectedDataSource != null ? retObjectGetSelectedDataSource.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

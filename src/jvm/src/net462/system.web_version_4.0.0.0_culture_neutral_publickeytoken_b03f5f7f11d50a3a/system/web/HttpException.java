@@ -213,9 +213,20 @@ public class HttpException extends ExternalException {
     
     public int GetHttpCode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetHttpCode = null;
         try {
-            return (int)classInstance.Invoke("GetHttpCode");
+            retObjectGetHttpCode = classInstance.Invoke("GetHttpCode");
+            return (int)retObjectGetHttpCode;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetHttpCode_ToString = retObjectGetHttpCode == null ? "null" : retObjectGetHttpCode.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetHttpCodeNumber = (java.lang.Number)retObjectGetHttpCode;
+                return retObjectGetHttpCodeNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetHttpCode != null ? retObjectGetHttpCode.getClass() : "null", retObjectGetHttpCode_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -223,9 +234,13 @@ public class HttpException extends ExternalException {
 
     public java.lang.String GetHtmlErrorMessage() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.io.PathTooLongException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.web.HttpException, system.OutOfMemoryException, system.security.SecurityException, system.threading.ThreadAbortException, system.io.FileNotFoundException, system.AccessViolationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetHtmlErrorMessage = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetHtmlErrorMessage");
+            retObjectGetHtmlErrorMessage = classInstance.Invoke("GetHtmlErrorMessage");
+            return (java.lang.String)retObjectGetHtmlErrorMessage;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetHtmlErrorMessage != null ? retObjectGetHtmlErrorMessage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -233,10 +248,14 @@ public class HttpException extends ExternalException {
 
     public static HttpException CreateFromLastError(java.lang.String message) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateFromLastError = null;
         try {
-            JCObject objCreateFromLastError = (JCObject)classType.Invoke("CreateFromLastError", message);
+            retObjectCreateFromLastError = classType.Invoke("CreateFromLastError", message);
+            JCObject objCreateFromLastError = (JCObject)retObjectCreateFromLastError;
             return new HttpException(objCreateFromLastError);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateFromLastError != null ? retObjectCreateFromLastError.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -244,7 +263,7 @@ public class HttpException extends ExternalException {
 
     public void GetObjectData(SerializationInfo info, StreamingContext context) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.security.SecurityException, system.TypeLoadException, system.NotSupportedException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.NotImplementedException, system.runtime.serialization.SerializationException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetObjectData", info == null ? null : info.getJCOInstance(), context == null ? null : context.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -258,9 +277,20 @@ public class HttpException extends ExternalException {
     
     public int getWebEventCode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWebEventCode = null;
         try {
-            return (int)classInstance.Get("WebEventCode");
+            retObjectWebEventCode = classInstance.Get("WebEventCode");
+            return (int)retObjectWebEventCode;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectWebEventCode_ToString = retObjectWebEventCode == null ? "null" : retObjectWebEventCode.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectWebEventCodeNumber = (java.lang.Number)retObjectWebEventCode;
+                return retObjectWebEventCodeNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectWebEventCode != null ? retObjectWebEventCode.getClass() : "null", retObjectWebEventCode_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -268,7 +298,7 @@ public class HttpException extends ExternalException {
 
     public void setWebEventCode(int WebEventCode) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("WebEventCode", WebEventCode);
         } catch (JCNativeException jcne) {

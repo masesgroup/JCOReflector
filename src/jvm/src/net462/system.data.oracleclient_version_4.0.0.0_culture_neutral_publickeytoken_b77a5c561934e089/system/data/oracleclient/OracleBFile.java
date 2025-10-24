@@ -159,9 +159,20 @@ public class OracleBFile extends Stream  {
     
     public int Read(byte[] buffer, int offset, int count) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.OutOfMemoryException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRead = null;
         try {
-            return (int)classInstance.Invoke("Read", buffer, offset, count);
+            retObjectRead = classInstance.Invoke("Read", buffer, offset, count);
+            return (int)retObjectRead;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectRead_ToString = retObjectRead == null ? "null" : retObjectRead.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectReadNumber = (java.lang.Number)retObjectRead;
+                return retObjectReadNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectRead != null ? retObjectRead.getClass() : "null", retObjectRead_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,9 +180,20 @@ public class OracleBFile extends Stream  {
 
     public int Read(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.OutOfMemoryException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRead = null;
         try {
-            return (int)classInstance.Invoke("Read", dupParam0.getJCRefOut(), dupParam1, dupParam2);
+            retObjectRead = classInstance.Invoke("Read", dupParam0.getJCRefOut(), dupParam1, dupParam2);
+            return (int)retObjectRead;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectRead_ToString = retObjectRead == null ? "null" : retObjectRead.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectReadNumber = (java.lang.Number)retObjectRead;
+                return retObjectReadNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectRead != null ? retObjectRead.getClass() : "null", retObjectRead_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,9 +201,20 @@ public class OracleBFile extends Stream  {
 
     public long CopyTo(long sourceOffset, OracleLob destination, long destinationOffset, long amount) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCopyTo = null;
         try {
-            return (long)classInstance.Invoke("CopyTo", sourceOffset, destination == null ? null : destination.getJCOInstance(), destinationOffset, amount);
+            retObjectCopyTo = classInstance.Invoke("CopyTo", sourceOffset, destination == null ? null : destination.getJCOInstance(), destinationOffset, amount);
+            return (long)retObjectCopyTo;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCopyTo_ToString = retObjectCopyTo == null ? "null" : retObjectCopyTo.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectCopyToNumber = (java.lang.Number)retObjectCopyTo;
+                return retObjectCopyToNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectCopyTo != null ? retObjectCopyTo.getClass() : "null", retObjectCopyTo_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -189,9 +222,20 @@ public class OracleBFile extends Stream  {
 
     public long CopyTo(OracleLob destination) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCopyTo = null;
         try {
-            return (long)classInstance.Invoke("CopyTo", destination == null ? null : destination.getJCOInstance());
+            retObjectCopyTo = classInstance.Invoke("CopyTo", destination == null ? null : destination.getJCOInstance());
+            return (long)retObjectCopyTo;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCopyTo_ToString = retObjectCopyTo == null ? "null" : retObjectCopyTo.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectCopyToNumber = (java.lang.Number)retObjectCopyTo;
+                return retObjectCopyToNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectCopyTo != null ? retObjectCopyTo.getClass() : "null", retObjectCopyTo_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -199,9 +243,20 @@ public class OracleBFile extends Stream  {
 
     public long CopyTo(OracleLob destination, long destinationOffset) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCopyTo = null;
         try {
-            return (long)classInstance.Invoke("CopyTo", destination == null ? null : destination.getJCOInstance(), destinationOffset);
+            retObjectCopyTo = classInstance.Invoke("CopyTo", destination == null ? null : destination.getJCOInstance(), destinationOffset);
+            return (long)retObjectCopyTo;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCopyTo_ToString = retObjectCopyTo == null ? "null" : retObjectCopyTo.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectCopyToNumber = (java.lang.Number)retObjectCopyTo;
+                return retObjectCopyToNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectCopyTo != null ? retObjectCopyTo.getClass() : "null", retObjectCopyTo_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -209,9 +264,20 @@ public class OracleBFile extends Stream  {
 
     public long Seek(long offset, SeekOrigin origin) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSeek = null;
         try {
-            return (long)classInstance.Invoke("Seek", offset, origin == null ? null : origin.getJCOInstance());
+            retObjectSeek = classInstance.Invoke("Seek", offset, origin == null ? null : origin.getJCOInstance());
+            return (long)retObjectSeek;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSeek_ToString = retObjectSeek == null ? "null" : retObjectSeek.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectSeekNumber = (java.lang.Number)retObjectSeek;
+                return retObjectSeekNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectSeek != null ? retObjectSeek.getClass() : "null", retObjectSeek_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -219,10 +285,14 @@ public class OracleBFile extends Stream  {
 
     public NetObject Clone() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClone = null;
         try {
-            JCObject objClone = (JCObject)classInstance.Invoke("Clone");
+            retObjectClone = classInstance.Invoke("Clone");
+            JCObject objClone = (JCObject)retObjectClone;
             return new NetObject(objClone);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClone != null ? retObjectClone.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -230,7 +300,7 @@ public class OracleBFile extends Stream  {
 
     public void Flush() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Flush");
         } catch (JCNativeException jcne) {
@@ -240,7 +310,7 @@ public class OracleBFile extends Stream  {
 
     public void SetFileName(java.lang.String directory, java.lang.String file) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetFileName", directory, file);
         } catch (JCNativeException jcne) {
@@ -250,7 +320,7 @@ public class OracleBFile extends Stream  {
 
     public void SetLength(long value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetLength", value);
         } catch (JCNativeException jcne) {
@@ -260,7 +330,7 @@ public class OracleBFile extends Stream  {
 
     public void Write(byte[] buffer, int offset, int count) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Write", buffer, offset, count);
         } catch (JCNativeException jcne) {
@@ -270,7 +340,7 @@ public class OracleBFile extends Stream  {
 
     public void Write(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Write", dupParam0.getJCRefOut(), dupParam1, dupParam2);
         } catch (JCNativeException jcne) {
@@ -284,9 +354,13 @@ public class OracleBFile extends Stream  {
     
     public boolean getFileExists() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFileExists = null;
         try {
-            return (boolean)classInstance.Get("FileExists");
+            retObjectFileExists = classInstance.Get("FileExists");
+            return (boolean)retObjectFileExists;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectFileExists != null ? retObjectFileExists.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -294,9 +368,13 @@ public class OracleBFile extends Stream  {
 
     public boolean getIsNull() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsNull = null;
         try {
-            return (boolean)classInstance.Get("IsNull");
+            retObjectIsNull = classInstance.Get("IsNull");
+            return (boolean)retObjectIsNull;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsNull != null ? retObjectIsNull.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -304,10 +382,14 @@ public class OracleBFile extends Stream  {
 
     public OracleConnection getConnection() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConnection = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Connection");
+            retObjectConnection = classInstance.Get("Connection");
+            JCObject val = (JCObject)retObjectConnection;
             return new OracleConnection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConnection != null ? retObjectConnection.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -315,10 +397,14 @@ public class OracleBFile extends Stream  {
 
     public NetObject getValue() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.OutOfMemoryException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValue = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Value");
+            retObjectValue = classInstance.Get("Value");
+            JCObject val = (JCObject)retObjectValue;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectValue != null ? retObjectValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -326,9 +412,13 @@ public class OracleBFile extends Stream  {
 
     public java.lang.String getDirectoryName() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDirectoryName = null;
         try {
-            return (java.lang.String)classInstance.Get("DirectoryName");
+            retObjectDirectoryName = classInstance.Get("DirectoryName");
+            return (java.lang.String)retObjectDirectoryName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDirectoryName != null ? retObjectDirectoryName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -336,9 +426,13 @@ public class OracleBFile extends Stream  {
 
     public java.lang.String getFileName() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFileName = null;
         try {
-            return (java.lang.String)classInstance.Get("FileName");
+            retObjectFileName = classInstance.Get("FileName");
+            return (java.lang.String)retObjectFileName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectFileName != null ? retObjectFileName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

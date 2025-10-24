@@ -146,7 +146,7 @@ public class IXmlJsonReaderInitializerImplementation extends NetObject implement
     
     public void SetInput(byte[] buffer, int offset, int count, Encoding encoding, XmlDictionaryReaderQuotas quotas, OnXmlDictionaryReaderClose onClose) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetInput", buffer, offset, count, encoding == null ? null : encoding.getJCOInstance(), quotas == null ? null : quotas.getJCOInstance(), onClose);
         } catch (JCNativeException jcne) {
@@ -156,7 +156,7 @@ public class IXmlJsonReaderInitializerImplementation extends NetObject implement
 
     public void SetInput(JCORefOut dupParam0, int dupParam1, int dupParam2, Encoding dupParam3, XmlDictionaryReaderQuotas dupParam4, OnXmlDictionaryReaderClose dupParam5) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetInput", dupParam0.getJCRefOut(), dupParam1, dupParam2, dupParam3 == null ? null : dupParam3.getJCOInstance(), dupParam4 == null ? null : dupParam4.getJCOInstance(), dupParam5);
         } catch (JCNativeException jcne) {
@@ -166,7 +166,7 @@ public class IXmlJsonReaderInitializerImplementation extends NetObject implement
 
     public void SetInput(Stream stream, Encoding encoding, XmlDictionaryReaderQuotas quotas, OnXmlDictionaryReaderClose onClose) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetInput", stream == null ? null : stream.getJCOInstance(), encoding == null ? null : encoding.getJCOInstance(), quotas == null ? null : quotas.getJCOInstance(), onClose);
         } catch (JCNativeException jcne) {

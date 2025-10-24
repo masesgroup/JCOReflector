@@ -153,9 +153,13 @@ public class ITypeLibConverterImplementation extends NetObject implements ITypeL
     
     public boolean GetPrimaryInteropAssembly(Guid g, int major, int minor, int lcid, JCORefOut asmName, JCORefOut asmCodeBase) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPrimaryInteropAssembly = null;
         try {
-            return (boolean)classInstance.Invoke("GetPrimaryInteropAssembly", g == null ? null : g.getJCOInstance(), major, minor, lcid, asmName.getJCRefOut(), asmCodeBase.getJCRefOut());
+            retObjectGetPrimaryInteropAssembly = classInstance.Invoke("GetPrimaryInteropAssembly", g == null ? null : g.getJCOInstance(), major, minor, lcid, asmName.getJCRefOut(), asmCodeBase.getJCRefOut());
+            return (boolean)retObjectGetPrimaryInteropAssembly;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectGetPrimaryInteropAssembly != null ? retObjectGetPrimaryInteropAssembly.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -163,10 +167,14 @@ public class ITypeLibConverterImplementation extends NetObject implements ITypeL
 
     public NetObject ConvertAssemblyToTypeLib(Assembly assembly, java.lang.String typeLibName, TypeLibExporterFlags flags, ITypeLibExporterNotifySink notifySink) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConvertAssemblyToTypeLib = null;
         try {
-            JCObject objConvertAssemblyToTypeLib = (JCObject)classInstance.Invoke("ConvertAssemblyToTypeLib", assembly == null ? null : assembly.getJCOInstance(), typeLibName, flags == null ? null : flags.getJCOInstance(), notifySink == null ? null : notifySink.getJCOInstance());
+            retObjectConvertAssemblyToTypeLib = classInstance.Invoke("ConvertAssemblyToTypeLib", assembly == null ? null : assembly.getJCOInstance(), typeLibName, flags == null ? null : flags.getJCOInstance(), notifySink == null ? null : notifySink.getJCOInstance());
+            JCObject objConvertAssemblyToTypeLib = (JCObject)retObjectConvertAssemblyToTypeLib;
             return new NetObject(objConvertAssemblyToTypeLib);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConvertAssemblyToTypeLib != null ? retObjectConvertAssemblyToTypeLib.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -174,10 +182,14 @@ public class ITypeLibConverterImplementation extends NetObject implements ITypeL
 
     public AssemblyBuilder ConvertTypeLibToAssembly(NetObject typeLib, java.lang.String asmFileName, int flags, ITypeLibImporterNotifySink notifySink, byte[] publicKey, StrongNameKeyPair keyPair, boolean unsafeInterfaces) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConvertTypeLibToAssembly = null;
         try {
-            JCObject objConvertTypeLibToAssembly = (JCObject)classInstance.Invoke("ConvertTypeLibToAssembly", typeLib == null ? null : typeLib.getJCOInstance(), asmFileName, flags, notifySink == null ? null : notifySink.getJCOInstance(), publicKey, keyPair == null ? null : keyPair.getJCOInstance(), unsafeInterfaces);
+            retObjectConvertTypeLibToAssembly = classInstance.Invoke("ConvertTypeLibToAssembly", typeLib == null ? null : typeLib.getJCOInstance(), asmFileName, flags, notifySink == null ? null : notifySink.getJCOInstance(), publicKey, keyPair == null ? null : keyPair.getJCOInstance(), unsafeInterfaces);
+            JCObject objConvertTypeLibToAssembly = (JCObject)retObjectConvertTypeLibToAssembly;
             return new AssemblyBuilder(objConvertTypeLibToAssembly);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConvertTypeLibToAssembly != null ? retObjectConvertTypeLibToAssembly.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -185,10 +197,14 @@ public class ITypeLibConverterImplementation extends NetObject implements ITypeL
 
     public AssemblyBuilder ConvertTypeLibToAssembly(NetObject dupParam0, java.lang.String dupParam1, int dupParam2, ITypeLibImporterNotifySink dupParam3, JCORefOut dupParam4, StrongNameKeyPair dupParam5, boolean dupParam6) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConvertTypeLibToAssembly = null;
         try {
-            JCObject objConvertTypeLibToAssembly = (JCObject)classInstance.Invoke("ConvertTypeLibToAssembly", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1, dupParam2, dupParam3 == null ? null : dupParam3.getJCOInstance(), dupParam4.getJCRefOut(), dupParam5 == null ? null : dupParam5.getJCOInstance(), dupParam6);
+            retObjectConvertTypeLibToAssembly = classInstance.Invoke("ConvertTypeLibToAssembly", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1, dupParam2, dupParam3 == null ? null : dupParam3.getJCOInstance(), dupParam4.getJCRefOut(), dupParam5 == null ? null : dupParam5.getJCOInstance(), dupParam6);
+            JCObject objConvertTypeLibToAssembly = (JCObject)retObjectConvertTypeLibToAssembly;
             return new AssemblyBuilder(objConvertTypeLibToAssembly);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConvertTypeLibToAssembly != null ? retObjectConvertTypeLibToAssembly.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,10 +212,14 @@ public class ITypeLibConverterImplementation extends NetObject implements ITypeL
 
     public AssemblyBuilder ConvertTypeLibToAssembly(NetObject typeLib, java.lang.String asmFileName, TypeLibImporterFlags flags, ITypeLibImporterNotifySink notifySink, byte[] publicKey, StrongNameKeyPair keyPair, java.lang.String asmNamespace, Version asmVersion) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConvertTypeLibToAssembly = null;
         try {
-            JCObject objConvertTypeLibToAssembly = (JCObject)classInstance.Invoke("ConvertTypeLibToAssembly", typeLib == null ? null : typeLib.getJCOInstance(), asmFileName, flags == null ? null : flags.getJCOInstance(), notifySink == null ? null : notifySink.getJCOInstance(), publicKey, keyPair == null ? null : keyPair.getJCOInstance(), asmNamespace, asmVersion == null ? null : asmVersion.getJCOInstance());
+            retObjectConvertTypeLibToAssembly = classInstance.Invoke("ConvertTypeLibToAssembly", typeLib == null ? null : typeLib.getJCOInstance(), asmFileName, flags == null ? null : flags.getJCOInstance(), notifySink == null ? null : notifySink.getJCOInstance(), publicKey, keyPair == null ? null : keyPair.getJCOInstance(), asmNamespace, asmVersion == null ? null : asmVersion.getJCOInstance());
+            JCObject objConvertTypeLibToAssembly = (JCObject)retObjectConvertTypeLibToAssembly;
             return new AssemblyBuilder(objConvertTypeLibToAssembly);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConvertTypeLibToAssembly != null ? retObjectConvertTypeLibToAssembly.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -207,10 +227,14 @@ public class ITypeLibConverterImplementation extends NetObject implements ITypeL
 
     public AssemblyBuilder ConvertTypeLibToAssembly(NetObject dupParam0, java.lang.String dupParam1, TypeLibImporterFlags dupParam2, ITypeLibImporterNotifySink dupParam3, JCORefOut dupParam4, StrongNameKeyPair dupParam5, java.lang.String dupParam6, Version dupParam7) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConvertTypeLibToAssembly = null;
         try {
-            JCObject objConvertTypeLibToAssembly = (JCObject)classInstance.Invoke("ConvertTypeLibToAssembly", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1, dupParam2 == null ? null : dupParam2.getJCOInstance(), dupParam3 == null ? null : dupParam3.getJCOInstance(), dupParam4.getJCRefOut(), dupParam5 == null ? null : dupParam5.getJCOInstance(), dupParam6, dupParam7 == null ? null : dupParam7.getJCOInstance());
+            retObjectConvertTypeLibToAssembly = classInstance.Invoke("ConvertTypeLibToAssembly", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1, dupParam2 == null ? null : dupParam2.getJCOInstance(), dupParam3 == null ? null : dupParam3.getJCOInstance(), dupParam4.getJCRefOut(), dupParam5 == null ? null : dupParam5.getJCOInstance(), dupParam6, dupParam7 == null ? null : dupParam7.getJCOInstance());
+            JCObject objConvertTypeLibToAssembly = (JCObject)retObjectConvertTypeLibToAssembly;
             return new AssemblyBuilder(objConvertTypeLibToAssembly);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConvertTypeLibToAssembly != null ? retObjectConvertTypeLibToAssembly.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

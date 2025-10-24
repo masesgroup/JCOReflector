@@ -156,9 +156,13 @@ public class ItemCollection extends NetObjectEnumerable  {
     
     public boolean TryGetEntityContainer(java.lang.String name, boolean ignoreCase, JCORefOut<EntityContainer> entityContainer) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryGetEntityContainer = null;
         try {
-            return (boolean)classInstance.Invoke("TryGetEntityContainer", name, ignoreCase, entityContainer.getJCRefOut());
+            retObjectTryGetEntityContainer = classInstance.Invoke("TryGetEntityContainer", name, ignoreCase, entityContainer.getJCRefOut());
+            return (boolean)retObjectTryGetEntityContainer;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryGetEntityContainer != null ? retObjectTryGetEntityContainer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -166,9 +170,13 @@ public class ItemCollection extends NetObjectEnumerable  {
 
     public boolean TryGetEntityContainer(java.lang.String name, JCORefOut<EntityContainer> entityContainer) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryGetEntityContainer = null;
         try {
-            return (boolean)classInstance.Invoke("TryGetEntityContainer", name, entityContainer.getJCRefOut());
+            retObjectTryGetEntityContainer = classInstance.Invoke("TryGetEntityContainer", name, entityContainer.getJCRefOut());
+            return (boolean)retObjectTryGetEntityContainer;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryGetEntityContainer != null ? retObjectTryGetEntityContainer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,9 +184,13 @@ public class ItemCollection extends NetObjectEnumerable  {
 
     public boolean TryGetType(java.lang.String name, java.lang.String namespaceName, boolean ignoreCase, JCORefOut<EdmType> type) throws Throwable, system.ArgumentNullException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryGetType = null;
         try {
-            return (boolean)classInstance.Invoke("TryGetType", name, namespaceName, ignoreCase, type.getJCRefOut());
+            retObjectTryGetType = classInstance.Invoke("TryGetType", name, namespaceName, ignoreCase, type.getJCRefOut());
+            return (boolean)retObjectTryGetType;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryGetType != null ? retObjectTryGetType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,9 +198,13 @@ public class ItemCollection extends NetObjectEnumerable  {
 
     public boolean TryGetType(java.lang.String name, java.lang.String namespaceName, JCORefOut<EdmType> type) throws Throwable, system.ArgumentNullException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryGetType = null;
         try {
-            return (boolean)classInstance.Invoke("TryGetType", name, namespaceName, type.getJCRefOut());
+            retObjectTryGetType = classInstance.Invoke("TryGetType", name, namespaceName, type.getJCRefOut());
+            return (boolean)retObjectTryGetType;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryGetType != null ? retObjectTryGetType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,10 +212,14 @@ public class ItemCollection extends NetObjectEnumerable  {
 
     public EdmType GetType(java.lang.String name, java.lang.String namespaceName) throws Throwable, system.ArgumentNullException, system.IndexOutOfRangeException, system.InvalidOperationException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetType = null;
         try {
-            JCObject objGetType = (JCObject)classInstance.Invoke("GetType", name, namespaceName);
+            retObjectGetType = classInstance.Invoke("GetType", name, namespaceName);
+            JCObject objGetType = (JCObject)retObjectGetType;
             return new EdmType(objGetType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetType != null ? retObjectGetType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -207,10 +227,14 @@ public class ItemCollection extends NetObjectEnumerable  {
 
     public EdmType GetType(java.lang.String name, java.lang.String namespaceName, boolean ignoreCase) throws Throwable, system.ArgumentNullException, system.IndexOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetType = null;
         try {
-            JCObject objGetType = (JCObject)classInstance.Invoke("GetType", name, namespaceName, ignoreCase);
+            retObjectGetType = classInstance.Invoke("GetType", name, namespaceName, ignoreCase);
+            JCObject objGetType = (JCObject)retObjectGetType;
             return new EdmType(objGetType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetType != null ? retObjectGetType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -218,10 +242,14 @@ public class ItemCollection extends NetObjectEnumerable  {
 
     public EntityContainer GetEntityContainer(java.lang.String name) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetEntityContainer = null;
         try {
-            JCObject objGetEntityContainer = (JCObject)classInstance.Invoke("GetEntityContainer", name);
+            retObjectGetEntityContainer = classInstance.Invoke("GetEntityContainer", name);
+            JCObject objGetEntityContainer = (JCObject)retObjectGetEntityContainer;
             return new EntityContainer(objGetEntityContainer);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetEntityContainer != null ? retObjectGetEntityContainer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -229,10 +257,14 @@ public class ItemCollection extends NetObjectEnumerable  {
 
     public EntityContainer GetEntityContainer(java.lang.String name, boolean ignoreCase) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetEntityContainer = null;
         try {
-            JCObject objGetEntityContainer = (JCObject)classInstance.Invoke("GetEntityContainer", name, ignoreCase);
+            retObjectGetEntityContainer = classInstance.Invoke("GetEntityContainer", name, ignoreCase);
+            JCObject objGetEntityContainer = (JCObject)retObjectGetEntityContainer;
             return new EntityContainer(objGetEntityContainer);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetEntityContainer != null ? retObjectGetEntityContainer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -244,10 +276,14 @@ public class ItemCollection extends NetObjectEnumerable  {
     
     public DataSpace getDataSpace() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDataSpace = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DataSpace");
+            retObjectDataSpace = classInstance.Get("DataSpace");
+            JCObject val = (JCObject)retObjectDataSpace;
             return new DataSpace(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDataSpace != null ? retObjectDataSpace.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -159,10 +159,14 @@ public class SamlSubjectStatement extends SamlStatement  {
     
     public IAuthorizationPolicy CreatePolicy(ClaimSet issuer, SamlSecurityTokenAuthenticator samlAuthenticator) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreatePolicy = null;
         try {
-            JCObject objCreatePolicy = (JCObject)classInstance.Invoke("CreatePolicy", issuer == null ? null : issuer.getJCOInstance(), samlAuthenticator == null ? null : samlAuthenticator.getJCOInstance());
+            retObjectCreatePolicy = classInstance.Invoke("CreatePolicy", issuer == null ? null : issuer.getJCOInstance(), samlAuthenticator == null ? null : samlAuthenticator.getJCOInstance());
+            JCObject objCreatePolicy = (JCObject)retObjectCreatePolicy;
             return new IAuthorizationPolicyImplementation(objCreatePolicy);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreatePolicy != null ? retObjectCreatePolicy.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,7 +174,7 @@ public class SamlSubjectStatement extends SamlStatement  {
 
     public void MakeReadOnly() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("MakeReadOnly");
         } catch (JCNativeException jcne) {
@@ -184,10 +188,14 @@ public class SamlSubjectStatement extends SamlStatement  {
     
     public SamlSubject getSamlSubject() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSamlSubject = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SamlSubject");
+            retObjectSamlSubject = classInstance.Get("SamlSubject");
+            JCObject val = (JCObject)retObjectSamlSubject;
             return new SamlSubject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSamlSubject != null ? retObjectSamlSubject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,7 +203,7 @@ public class SamlSubjectStatement extends SamlStatement  {
 
     public void setSamlSubject(SamlSubject SamlSubject) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SamlSubject", SamlSubject == null ? null : SamlSubject.getJCOInstance());
         } catch (JCNativeException jcne) {

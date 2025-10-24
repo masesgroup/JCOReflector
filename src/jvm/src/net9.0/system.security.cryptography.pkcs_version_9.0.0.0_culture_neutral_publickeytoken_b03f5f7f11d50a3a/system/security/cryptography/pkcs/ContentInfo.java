@@ -176,10 +176,14 @@ public class ContentInfo extends NetObject  {
     
     public static Oid GetContentType(byte[] encodedMessage) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetContentType = null;
         try {
-            JCObject objGetContentType = (JCObject)classType.Invoke("GetContentType", (java.lang.Object)encodedMessage);
+            retObjectGetContentType = classType.Invoke("GetContentType", (java.lang.Object)encodedMessage);
+            JCObject objGetContentType = (JCObject)retObjectGetContentType;
             return new Oid(objGetContentType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetContentType != null ? retObjectGetContentType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,10 +191,14 @@ public class ContentInfo extends NetObject  {
 
     public static Oid GetContentType(JCORefOut dupParam0) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetContentType = null;
         try {
-            JCObject objGetContentType = (JCObject)classType.Invoke("GetContentType", (java.lang.Object)dupParam0.getJCRefOut());
+            retObjectGetContentType = classType.Invoke("GetContentType", (java.lang.Object)dupParam0.getJCRefOut());
+            JCObject objGetContentType = (JCObject)retObjectGetContentType;
             return new Oid(objGetContentType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetContentType != null ? retObjectGetContentType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,10 +210,12 @@ public class ContentInfo extends NetObject  {
     
     public byte[] getContent() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContent = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("Content");
+            retObjectContent = classInstance.Get("Content");
+            JCObject resultingObjects = (JCObject)retObjectContent;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -214,6 +224,8 @@ public class ContentInfo extends NetObject  {
 				resultingArray[indexContent] = (byte)resultingArrayList.get(indexContent);
 			}
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into JCObject", retObjectContent != null ? retObjectContent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -221,10 +233,14 @@ public class ContentInfo extends NetObject  {
 
     public Oid getContentType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContentType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ContentType");
+            retObjectContentType = classInstance.Get("ContentType");
+            JCObject val = (JCObject)retObjectContentType;
             return new Oid(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContentType != null ? retObjectContentType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

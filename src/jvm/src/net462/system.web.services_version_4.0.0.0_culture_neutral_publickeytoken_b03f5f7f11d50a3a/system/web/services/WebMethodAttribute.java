@@ -207,9 +207,13 @@ public class WebMethodAttribute extends Attribute  {
     
     public boolean getBufferResponse() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBufferResponse = null;
         try {
-            return (boolean)classInstance.Get("BufferResponse");
+            retObjectBufferResponse = classInstance.Get("BufferResponse");
+            return (boolean)retObjectBufferResponse;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectBufferResponse != null ? retObjectBufferResponse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -217,7 +221,7 @@ public class WebMethodAttribute extends Attribute  {
 
     public void setBufferResponse(boolean BufferResponse) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BufferResponse", BufferResponse);
         } catch (JCNativeException jcne) {
@@ -227,9 +231,13 @@ public class WebMethodAttribute extends Attribute  {
 
     public boolean getEnableSession() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEnableSession = null;
         try {
-            return (boolean)classInstance.Get("EnableSession");
+            retObjectEnableSession = classInstance.Get("EnableSession");
+            return (boolean)retObjectEnableSession;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectEnableSession != null ? retObjectEnableSession.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -237,7 +245,7 @@ public class WebMethodAttribute extends Attribute  {
 
     public void setEnableSession(boolean EnableSession) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EnableSession", EnableSession);
         } catch (JCNativeException jcne) {
@@ -247,9 +255,20 @@ public class WebMethodAttribute extends Attribute  {
 
     public int getCacheDuration() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCacheDuration = null;
         try {
-            return (int)classInstance.Get("CacheDuration");
+            retObjectCacheDuration = classInstance.Get("CacheDuration");
+            return (int)retObjectCacheDuration;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCacheDuration_ToString = retObjectCacheDuration == null ? "null" : retObjectCacheDuration.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectCacheDurationNumber = (java.lang.Number)retObjectCacheDuration;
+                return retObjectCacheDurationNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCacheDuration != null ? retObjectCacheDuration.getClass() : "null", retObjectCacheDuration_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -257,7 +276,7 @@ public class WebMethodAttribute extends Attribute  {
 
     public void setCacheDuration(int CacheDuration) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CacheDuration", CacheDuration);
         } catch (JCNativeException jcne) {
@@ -267,10 +286,14 @@ public class WebMethodAttribute extends Attribute  {
 
     public TransactionOption getTransactionOption() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTransactionOption = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TransactionOption");
+            retObjectTransactionOption = classInstance.Get("TransactionOption");
+            JCObject val = (JCObject)retObjectTransactionOption;
             return new TransactionOption(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTransactionOption != null ? retObjectTransactionOption.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -278,7 +301,7 @@ public class WebMethodAttribute extends Attribute  {
 
     public void setTransactionOption(TransactionOption TransactionOption) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TransactionOption", TransactionOption == null ? null : TransactionOption.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -288,9 +311,13 @@ public class WebMethodAttribute extends Attribute  {
 
     public java.lang.String getDescription() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDescription = null;
         try {
-            return (java.lang.String)classInstance.Get("Description");
+            retObjectDescription = classInstance.Get("Description");
+            return (java.lang.String)retObjectDescription;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDescription != null ? retObjectDescription.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -298,7 +325,7 @@ public class WebMethodAttribute extends Attribute  {
 
     public void setDescription(java.lang.String Description) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Description", Description);
         } catch (JCNativeException jcne) {
@@ -308,9 +335,13 @@ public class WebMethodAttribute extends Attribute  {
 
     public java.lang.String getMessageName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMessageName = null;
         try {
-            return (java.lang.String)classInstance.Get("MessageName");
+            retObjectMessageName = classInstance.Get("MessageName");
+            return (java.lang.String)retObjectMessageName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectMessageName != null ? retObjectMessageName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -318,7 +349,7 @@ public class WebMethodAttribute extends Attribute  {
 
     public void setMessageName(java.lang.String MessageName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MessageName", MessageName);
         } catch (JCNativeException jcne) {

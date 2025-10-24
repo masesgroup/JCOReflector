@@ -160,10 +160,14 @@ public class StreamInfo extends NetObject  {
     
     public Stream GetStream() throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.io.IOException, system.io.DirectoryNotFoundException, system.security.SecurityException, system.UnauthorizedAccessException, system.ArgumentOutOfRangeException, system.io.FileFormatException, system.io.EndOfStreamException, system.RankException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetStream = null;
         try {
-            JCObject objGetStream = (JCObject)classInstance.Invoke("GetStream");
+            retObjectGetStream = classInstance.Invoke("GetStream");
+            JCObject objGetStream = (JCObject)retObjectGetStream;
             return new Stream(objGetStream);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetStream != null ? retObjectGetStream.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,10 +175,14 @@ public class StreamInfo extends NetObject  {
 
     public Stream GetStream(FileMode mode) throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.io.IOException, system.io.DirectoryNotFoundException, system.security.SecurityException, system.UnauthorizedAccessException, system.ArgumentOutOfRangeException, system.io.FileFormatException, system.io.EndOfStreamException, system.RankException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetStream = null;
         try {
-            JCObject objGetStream = (JCObject)classInstance.Invoke("GetStream", mode == null ? null : mode.getJCOInstance());
+            retObjectGetStream = classInstance.Invoke("GetStream", mode == null ? null : mode.getJCOInstance());
+            JCObject objGetStream = (JCObject)retObjectGetStream;
             return new Stream(objGetStream);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetStream != null ? retObjectGetStream.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,10 +190,14 @@ public class StreamInfo extends NetObject  {
 
     public Stream GetStream(FileMode mode, FileAccess access) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.io.IOException, system.io.DirectoryNotFoundException, system.security.SecurityException, system.UnauthorizedAccessException, system.globalization.CultureNotFoundException, system.io.FileFormatException, system.io.EndOfStreamException, system.RankException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetStream = null;
         try {
-            JCObject objGetStream = (JCObject)classInstance.Invoke("GetStream", mode == null ? null : mode.getJCOInstance(), access == null ? null : access.getJCOInstance());
+            retObjectGetStream = classInstance.Invoke("GetStream", mode == null ? null : mode.getJCOInstance(), access == null ? null : access.getJCOInstance());
+            JCObject objGetStream = (JCObject)retObjectGetStream;
             return new Stream(objGetStream);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetStream != null ? retObjectGetStream.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,10 +209,14 @@ public class StreamInfo extends NetObject  {
     
     public CompressionOption getCompressionOption() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.io.DirectoryNotFoundException, system.io.IOException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.io.FileFormatException, system.ArgumentOutOfRangeException, system.RankException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCompressionOption = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CompressionOption");
+            retObjectCompressionOption = classInstance.Get("CompressionOption");
+            JCObject val = (JCObject)retObjectCompressionOption;
             return new CompressionOption(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCompressionOption != null ? retObjectCompressionOption.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -208,10 +224,14 @@ public class StreamInfo extends NetObject  {
 
     public EncryptionOption getEncryptionOption() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.io.DirectoryNotFoundException, system.io.IOException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.io.FileFormatException, system.ArgumentOutOfRangeException, system.RankException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEncryptionOption = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("EncryptionOption");
+            retObjectEncryptionOption = classInstance.Get("EncryptionOption");
+            JCObject val = (JCObject)retObjectEncryptionOption;
             return new EncryptionOption(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEncryptionOption != null ? retObjectEncryptionOption.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -219,9 +239,13 @@ public class StreamInfo extends NetObject  {
 
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectName = null;
         try {
-            return (java.lang.String)classInstance.Get("Name");
+            retObjectName = classInstance.Get("Name");
+            return (java.lang.String)retObjectName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectName != null ? retObjectName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

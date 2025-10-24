@@ -162,9 +162,13 @@ public class EdmFunction extends EdmType  {
     
     public boolean getIsComposableAttribute() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsComposableAttribute = null;
         try {
-            return (boolean)classInstance.Get("IsComposableAttribute");
+            retObjectIsComposableAttribute = classInstance.Get("IsComposableAttribute");
+            return (boolean)retObjectIsComposableAttribute;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsComposableAttribute != null ? retObjectIsComposableAttribute.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,10 +176,14 @@ public class EdmFunction extends EdmType  {
 
     public FunctionParameter getReturnParameter() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReturnParameter = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ReturnParameter");
+            retObjectReturnParameter = classInstance.Get("ReturnParameter");
+            JCObject val = (JCObject)retObjectReturnParameter;
             return new FunctionParameter(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReturnParameter != null ? retObjectReturnParameter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,9 +191,13 @@ public class EdmFunction extends EdmType  {
 
     public java.lang.String getCommandTextAttribute() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCommandTextAttribute = null;
         try {
-            return (java.lang.String)classInstance.Get("CommandTextAttribute");
+            retObjectCommandTextAttribute = classInstance.Get("CommandTextAttribute");
+            return (java.lang.String)retObjectCommandTextAttribute;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectCommandTextAttribute != null ? retObjectCommandTextAttribute.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

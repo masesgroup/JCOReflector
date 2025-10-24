@@ -199,10 +199,14 @@ public class NamedPermissionSet extends PermissionSet  {
     
     public NamedPermissionSet Copy(java.lang.String name) throws Throwable, system.NullReferenceException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCopy = null;
         try {
-            JCObject objCopy = (JCObject)classInstance.Invoke("Copy", name);
+            retObjectCopy = classInstance.Invoke("Copy", name);
+            JCObject objCopy = (JCObject)retObjectCopy;
             return new NamedPermissionSet(objCopy);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCopy != null ? retObjectCopy.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -210,10 +214,14 @@ public class NamedPermissionSet extends PermissionSet  {
 
     public PermissionSet Copy() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCopy = null;
         try {
-            JCObject objCopy = (JCObject)classInstance.Invoke("Copy");
+            retObjectCopy = classInstance.Invoke("Copy");
+            JCObject objCopy = (JCObject)retObjectCopy;
             return new PermissionSet(objCopy);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCopy != null ? retObjectCopy.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -221,10 +229,14 @@ public class NamedPermissionSet extends PermissionSet  {
 
     public SecurityElement ToXml() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.NotSupportedException, system.NullReferenceException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToXml = null;
         try {
-            JCObject objToXml = (JCObject)classInstance.Invoke("ToXml");
+            retObjectToXml = classInstance.Invoke("ToXml");
+            JCObject objToXml = (JCObject)retObjectToXml;
             return new SecurityElement(objToXml);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToXml != null ? retObjectToXml.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -232,7 +244,7 @@ public class NamedPermissionSet extends PermissionSet  {
 
     public void FromXml(SecurityElement et) throws Throwable, system.ArgumentNullException, system.NullReferenceException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.ArgumentException, system.globalization.CultureNotFoundException, system.TypeLoadException, system.InvalidOperationException, system.security.SecurityException, system.NotImplementedException, system.NotSupportedException, system.MemberAccessException, system.reflection.TargetException, system.reflection.TargetParameterCountException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("FromXml", et == null ? null : et.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -246,9 +258,13 @@ public class NamedPermissionSet extends PermissionSet  {
     
     public java.lang.String getDescription() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDescription = null;
         try {
-            return (java.lang.String)classInstance.Get("Description");
+            retObjectDescription = classInstance.Get("Description");
+            return (java.lang.String)retObjectDescription;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDescription != null ? retObjectDescription.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -256,7 +272,7 @@ public class NamedPermissionSet extends PermissionSet  {
 
     public void setDescription(java.lang.String Description) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Description", Description);
         } catch (JCNativeException jcne) {
@@ -266,9 +282,13 @@ public class NamedPermissionSet extends PermissionSet  {
 
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectName = null;
         try {
-            return (java.lang.String)classInstance.Get("Name");
+            retObjectName = classInstance.Get("Name");
+            return (java.lang.String)retObjectName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectName != null ? retObjectName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -276,7 +296,7 @@ public class NamedPermissionSet extends PermissionSet  {
 
     public void setName(java.lang.String Name) throws Throwable, system.NullReferenceException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Name", Name);
         } catch (JCNativeException jcne) {

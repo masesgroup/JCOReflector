@@ -166,9 +166,20 @@ public class UniformGrid extends Panel  {
     
     public int getColumns() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectColumns = null;
         try {
-            return (int)classInstance.Get("Columns");
+            retObjectColumns = classInstance.Get("Columns");
+            return (int)retObjectColumns;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectColumns_ToString = retObjectColumns == null ? "null" : retObjectColumns.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectColumnsNumber = (java.lang.Number)retObjectColumns;
+                return retObjectColumnsNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectColumns != null ? retObjectColumns.getClass() : "null", retObjectColumns_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,7 +187,7 @@ public class UniformGrid extends Panel  {
 
     public void setColumns(int Columns) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Columns", Columns);
         } catch (JCNativeException jcne) {
@@ -186,9 +197,20 @@ public class UniformGrid extends Panel  {
 
     public int getFirstColumn() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFirstColumn = null;
         try {
-            return (int)classInstance.Get("FirstColumn");
+            retObjectFirstColumn = classInstance.Get("FirstColumn");
+            return (int)retObjectFirstColumn;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectFirstColumn_ToString = retObjectFirstColumn == null ? "null" : retObjectFirstColumn.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectFirstColumnNumber = (java.lang.Number)retObjectFirstColumn;
+                return retObjectFirstColumnNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectFirstColumn != null ? retObjectFirstColumn.getClass() : "null", retObjectFirstColumn_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,7 +218,7 @@ public class UniformGrid extends Panel  {
 
     public void setFirstColumn(int FirstColumn) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FirstColumn", FirstColumn);
         } catch (JCNativeException jcne) {
@@ -206,9 +228,20 @@ public class UniformGrid extends Panel  {
 
     public int getRows() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRows = null;
         try {
-            return (int)classInstance.Get("Rows");
+            retObjectRows = classInstance.Get("Rows");
+            return (int)retObjectRows;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectRows_ToString = retObjectRows == null ? "null" : retObjectRows.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectRowsNumber = (java.lang.Number)retObjectRows;
+                return retObjectRowsNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectRows != null ? retObjectRows.getClass() : "null", retObjectRows_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -216,7 +249,7 @@ public class UniformGrid extends Panel  {
 
     public void setRows(int Rows) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Rows", Rows);
         } catch (JCNativeException jcne) {

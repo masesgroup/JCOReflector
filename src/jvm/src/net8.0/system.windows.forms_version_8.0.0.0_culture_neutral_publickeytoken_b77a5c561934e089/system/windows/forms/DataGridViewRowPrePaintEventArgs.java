@@ -172,7 +172,7 @@ public class DataGridViewRowPrePaintEventArgs extends HandledEventArgs  {
     
     public void DrawFocus(Rectangle bounds, boolean cellsPaintSelectionBackground) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DrawFocus", bounds == null ? null : bounds.getJCOInstance(), cellsPaintSelectionBackground);
         } catch (JCNativeException jcne) {
@@ -182,7 +182,7 @@ public class DataGridViewRowPrePaintEventArgs extends HandledEventArgs  {
 
     public void PaintCells(Rectangle clipBounds, DataGridViewPaintParts paintParts) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.componentmodel.InvalidEnumArgumentException, system.runtime.interopservices.ExternalException, system.NotSupportedException, system.componentmodel.Win32Exception, system.InvalidCastException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("PaintCells", clipBounds == null ? null : clipBounds.getJCOInstance(), paintParts == null ? null : paintParts.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -192,7 +192,7 @@ public class DataGridViewRowPrePaintEventArgs extends HandledEventArgs  {
 
     public void PaintCellsBackground(Rectangle clipBounds, boolean cellsPaintSelectionBackground) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.componentmodel.InvalidEnumArgumentException, system.runtime.interopservices.ExternalException, system.NotSupportedException, system.componentmodel.Win32Exception, system.InvalidCastException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("PaintCellsBackground", clipBounds == null ? null : clipBounds.getJCOInstance(), cellsPaintSelectionBackground);
         } catch (JCNativeException jcne) {
@@ -202,7 +202,7 @@ public class DataGridViewRowPrePaintEventArgs extends HandledEventArgs  {
 
     public void PaintCellsContent(Rectangle clipBounds) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.componentmodel.InvalidEnumArgumentException, system.runtime.interopservices.ExternalException, system.NotSupportedException, system.componentmodel.Win32Exception, system.InvalidCastException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("PaintCellsContent", clipBounds == null ? null : clipBounds.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -212,7 +212,7 @@ public class DataGridViewRowPrePaintEventArgs extends HandledEventArgs  {
 
     public void PaintHeader(boolean paintSelectionBackground) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.componentmodel.InvalidEnumArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.NotSupportedException, system.componentmodel.Win32Exception, system.InvalidCastException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("PaintHeader", paintSelectionBackground);
         } catch (JCNativeException jcne) {
@@ -222,7 +222,7 @@ public class DataGridViewRowPrePaintEventArgs extends HandledEventArgs  {
 
     public void PaintHeader(DataGridViewPaintParts paintParts) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException, system.componentmodel.Win32Exception, system.InvalidCastException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("PaintHeader", paintParts == null ? null : paintParts.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -236,9 +236,13 @@ public class DataGridViewRowPrePaintEventArgs extends HandledEventArgs  {
     
     public boolean getIsFirstDisplayedRow() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsFirstDisplayedRow = null;
         try {
-            return (boolean)classInstance.Get("IsFirstDisplayedRow");
+            retObjectIsFirstDisplayedRow = classInstance.Get("IsFirstDisplayedRow");
+            return (boolean)retObjectIsFirstDisplayedRow;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsFirstDisplayedRow != null ? retObjectIsFirstDisplayedRow.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -246,7 +250,7 @@ public class DataGridViewRowPrePaintEventArgs extends HandledEventArgs  {
 
     public void setIsFirstDisplayedRow(boolean IsFirstDisplayedRow) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsFirstDisplayedRow", IsFirstDisplayedRow);
         } catch (JCNativeException jcne) {
@@ -256,9 +260,13 @@ public class DataGridViewRowPrePaintEventArgs extends HandledEventArgs  {
 
     public boolean getIsLastVisibleRow() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsLastVisibleRow = null;
         try {
-            return (boolean)classInstance.Get("IsLastVisibleRow");
+            retObjectIsLastVisibleRow = classInstance.Get("IsLastVisibleRow");
+            return (boolean)retObjectIsLastVisibleRow;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsLastVisibleRow != null ? retObjectIsLastVisibleRow.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -266,7 +274,7 @@ public class DataGridViewRowPrePaintEventArgs extends HandledEventArgs  {
 
     public void setIsLastVisibleRow(boolean IsLastVisibleRow) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsLastVisibleRow", IsLastVisibleRow);
         } catch (JCNativeException jcne) {
@@ -276,9 +284,20 @@ public class DataGridViewRowPrePaintEventArgs extends HandledEventArgs  {
 
     public int getRowIndex() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRowIndex = null;
         try {
-            return (int)classInstance.Get("RowIndex");
+            retObjectRowIndex = classInstance.Get("RowIndex");
+            return (int)retObjectRowIndex;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectRowIndex_ToString = retObjectRowIndex == null ? "null" : retObjectRowIndex.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectRowIndexNumber = (java.lang.Number)retObjectRowIndex;
+                return retObjectRowIndexNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectRowIndex != null ? retObjectRowIndex.getClass() : "null", retObjectRowIndex_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -286,7 +305,7 @@ public class DataGridViewRowPrePaintEventArgs extends HandledEventArgs  {
 
     public void setRowIndex(int RowIndex) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RowIndex", RowIndex);
         } catch (JCNativeException jcne) {
@@ -296,10 +315,14 @@ public class DataGridViewRowPrePaintEventArgs extends HandledEventArgs  {
 
     public Graphics getGraphics() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGraphics = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Graphics");
+            retObjectGraphics = classInstance.Get("Graphics");
+            JCObject val = (JCObject)retObjectGraphics;
             return new Graphics(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGraphics != null ? retObjectGraphics.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -307,7 +330,7 @@ public class DataGridViewRowPrePaintEventArgs extends HandledEventArgs  {
 
     public void setGraphics(Graphics Graphics) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Graphics", Graphics == null ? null : Graphics.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -317,10 +340,14 @@ public class DataGridViewRowPrePaintEventArgs extends HandledEventArgs  {
 
     public Rectangle getClipBounds() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClipBounds = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ClipBounds");
+            retObjectClipBounds = classInstance.Get("ClipBounds");
+            JCObject val = (JCObject)retObjectClipBounds;
             return new Rectangle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClipBounds != null ? retObjectClipBounds.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -328,7 +355,7 @@ public class DataGridViewRowPrePaintEventArgs extends HandledEventArgs  {
 
     public void setClipBounds(Rectangle ClipBounds) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ClipBounds", ClipBounds == null ? null : ClipBounds.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -338,10 +365,14 @@ public class DataGridViewRowPrePaintEventArgs extends HandledEventArgs  {
 
     public Rectangle getRowBounds() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRowBounds = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RowBounds");
+            retObjectRowBounds = classInstance.Get("RowBounds");
+            JCObject val = (JCObject)retObjectRowBounds;
             return new Rectangle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRowBounds != null ? retObjectRowBounds.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -349,7 +380,7 @@ public class DataGridViewRowPrePaintEventArgs extends HandledEventArgs  {
 
     public void setRowBounds(Rectangle RowBounds) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RowBounds", RowBounds == null ? null : RowBounds.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -359,9 +390,13 @@ public class DataGridViewRowPrePaintEventArgs extends HandledEventArgs  {
 
     public java.lang.String getErrorText() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectErrorText = null;
         try {
-            return (java.lang.String)classInstance.Get("ErrorText");
+            retObjectErrorText = classInstance.Get("ErrorText");
+            return (java.lang.String)retObjectErrorText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectErrorText != null ? retObjectErrorText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -369,7 +404,7 @@ public class DataGridViewRowPrePaintEventArgs extends HandledEventArgs  {
 
     public void setErrorText(java.lang.String ErrorText) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ErrorText", ErrorText);
         } catch (JCNativeException jcne) {
@@ -379,10 +414,14 @@ public class DataGridViewRowPrePaintEventArgs extends HandledEventArgs  {
 
     public DataGridViewCellStyle getInheritedRowStyle() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInheritedRowStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("InheritedRowStyle");
+            retObjectInheritedRowStyle = classInstance.Get("InheritedRowStyle");
+            JCObject val = (JCObject)retObjectInheritedRowStyle;
             return new DataGridViewCellStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInheritedRowStyle != null ? retObjectInheritedRowStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -390,7 +429,7 @@ public class DataGridViewRowPrePaintEventArgs extends HandledEventArgs  {
 
     public void setInheritedRowStyle(DataGridViewCellStyle InheritedRowStyle) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("InheritedRowStyle", InheritedRowStyle == null ? null : InheritedRowStyle.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -400,10 +439,14 @@ public class DataGridViewRowPrePaintEventArgs extends HandledEventArgs  {
 
     public DataGridViewElementStates getState() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectState = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("State");
+            retObjectState = classInstance.Get("State");
+            JCObject val = (JCObject)retObjectState;
             return new DataGridViewElementStates(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectState != null ? retObjectState.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -411,7 +454,7 @@ public class DataGridViewRowPrePaintEventArgs extends HandledEventArgs  {
 
     public void setState(DataGridViewElementStates State) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("State", State == null ? null : State.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -421,10 +464,14 @@ public class DataGridViewRowPrePaintEventArgs extends HandledEventArgs  {
 
     public DataGridViewPaintParts getPaintParts() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPaintParts = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PaintParts");
+            retObjectPaintParts = classInstance.Get("PaintParts");
+            JCObject val = (JCObject)retObjectPaintParts;
             return new DataGridViewPaintParts(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPaintParts != null ? retObjectPaintParts.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -432,7 +479,7 @@ public class DataGridViewRowPrePaintEventArgs extends HandledEventArgs  {
 
     public void setPaintParts(DataGridViewPaintParts PaintParts) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PaintParts", PaintParts == null ? null : PaintParts.getJCOInstance());
         } catch (JCNativeException jcne) {

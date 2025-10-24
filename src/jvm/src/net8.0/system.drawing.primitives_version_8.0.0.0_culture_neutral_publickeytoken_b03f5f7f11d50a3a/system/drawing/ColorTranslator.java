@@ -154,9 +154,20 @@ public class ColorTranslator extends NetObject  {
     
     public static int ToOle(Color c) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectToOle = null;
         try {
-            return (int)classType.Invoke("ToOle", c == null ? null : c.getJCOInstance());
+            retObjectToOle = classType.Invoke("ToOle", c == null ? null : c.getJCOInstance());
+            return (int)retObjectToOle;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectToOle_ToString = retObjectToOle == null ? "null" : retObjectToOle.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectToOleNumber = (java.lang.Number)retObjectToOle;
+                return retObjectToOleNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectToOle != null ? retObjectToOle.getClass() : "null", retObjectToOle_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -164,9 +175,20 @@ public class ColorTranslator extends NetObject  {
 
     public static int ToWin32(Color c) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectToWin32 = null;
         try {
-            return (int)classType.Invoke("ToWin32", c == null ? null : c.getJCOInstance());
+            retObjectToWin32 = classType.Invoke("ToWin32", c == null ? null : c.getJCOInstance());
+            return (int)retObjectToWin32;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectToWin32_ToString = retObjectToWin32 == null ? "null" : retObjectToWin32.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectToWin32Number = (java.lang.Number)retObjectToWin32;
+                return retObjectToWin32Number.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectToWin32 != null ? retObjectToWin32.getClass() : "null", retObjectToWin32_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -174,10 +196,14 @@ public class ColorTranslator extends NetObject  {
 
     public static Color FromHtml(java.lang.String htmlColor) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.runtime.interopservices.ExternalException, system.TypeInitializationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFromHtml = null;
         try {
-            JCObject objFromHtml = (JCObject)classType.Invoke("FromHtml", htmlColor);
+            retObjectFromHtml = classType.Invoke("FromHtml", htmlColor);
+            JCObject objFromHtml = (JCObject)retObjectFromHtml;
             return new Color(objFromHtml);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFromHtml != null ? retObjectFromHtml.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -185,10 +211,14 @@ public class ColorTranslator extends NetObject  {
 
     public static Color FromOle(int oleColor) throws Throwable, system.MissingMemberException, system.InvalidOperationException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.NotSupportedException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFromOle = null;
         try {
-            JCObject objFromOle = (JCObject)classType.Invoke("FromOle", oleColor);
+            retObjectFromOle = classType.Invoke("FromOle", oleColor);
+            JCObject objFromOle = (JCObject)retObjectFromOle;
             return new Color(objFromOle);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFromOle != null ? retObjectFromOle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,10 +226,14 @@ public class ColorTranslator extends NetObject  {
 
     public static Color FromWin32(int win32Color) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFromWin32 = null;
         try {
-            JCObject objFromWin32 = (JCObject)classType.Invoke("FromWin32", win32Color);
+            retObjectFromWin32 = classType.Invoke("FromWin32", win32Color);
+            JCObject objFromWin32 = (JCObject)retObjectFromWin32;
             return new Color(objFromWin32);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFromWin32 != null ? retObjectFromWin32.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -207,9 +241,13 @@ public class ColorTranslator extends NetObject  {
 
     public static java.lang.String ToHtml(Color c) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.ArgumentOutOfRangeException, system.OverflowException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectToHtml = null;
         try {
-            return (java.lang.String)classType.Invoke("ToHtml", c == null ? null : c.getJCOInstance());
+            retObjectToHtml = classType.Invoke("ToHtml", c == null ? null : c.getJCOInstance());
+            return (java.lang.String)retObjectToHtml;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectToHtml != null ? retObjectToHtml.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

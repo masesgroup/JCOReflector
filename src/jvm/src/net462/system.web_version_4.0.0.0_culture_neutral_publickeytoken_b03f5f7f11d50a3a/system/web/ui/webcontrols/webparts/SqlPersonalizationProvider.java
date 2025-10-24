@@ -167,9 +167,20 @@ public class SqlPersonalizationProvider extends PersonalizationProvider  {
     
     public int GetCountOfState(PersonalizationScope scope, PersonalizationStateQuery query) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.MemberAccessException, system.PlatformNotSupportedException, system.NotSupportedException, system.componentmodel.Win32Exception, system.configuration.provider.ProviderException, system.web.HttpException, system.io.IOException, system.io.PathTooLongException, system.FormatException, system.web.management.SqlExecutionException, system.security.SecurityException, system.InvalidTimeZoneException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetCountOfState = null;
         try {
-            return (int)classInstance.Invoke("GetCountOfState", scope == null ? null : scope.getJCOInstance(), query == null ? null : query.getJCOInstance());
+            retObjectGetCountOfState = classInstance.Invoke("GetCountOfState", scope == null ? null : scope.getJCOInstance(), query == null ? null : query.getJCOInstance());
+            return (int)retObjectGetCountOfState;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetCountOfState_ToString = retObjectGetCountOfState == null ? "null" : retObjectGetCountOfState.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetCountOfStateNumber = (java.lang.Number)retObjectGetCountOfState;
+                return retObjectGetCountOfStateNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetCountOfState != null ? retObjectGetCountOfState.getClass() : "null", retObjectGetCountOfState_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,9 +188,20 @@ public class SqlPersonalizationProvider extends PersonalizationProvider  {
 
     public int ResetState(PersonalizationScope scope, java.lang.String[] paths, java.lang.String[] usernames) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.NullReferenceException, system.PlatformNotSupportedException, system.NotSupportedException, system.componentmodel.Win32Exception, system.MemberAccessException, system.configuration.provider.ProviderException, system.web.HttpException, system.io.IOException, system.io.PathTooLongException, system.FormatException, system.web.management.SqlExecutionException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResetState = null;
         try {
-            return (int)classInstance.Invoke("ResetState", scope == null ? null : scope.getJCOInstance(), paths, usernames);
+            retObjectResetState = classInstance.Invoke("ResetState", scope == null ? null : scope.getJCOInstance(), paths, usernames);
+            return (int)retObjectResetState;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectResetState_ToString = retObjectResetState == null ? "null" : retObjectResetState.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectResetStateNumber = (java.lang.Number)retObjectResetState;
+                return retObjectResetStateNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectResetState != null ? retObjectResetState.getClass() : "null", retObjectResetState_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,9 +209,20 @@ public class SqlPersonalizationProvider extends PersonalizationProvider  {
 
     public int ResetState(PersonalizationScope dupParam0, JCORefOut dupParam1, JCORefOut dupParam2) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.NullReferenceException, system.PlatformNotSupportedException, system.NotSupportedException, system.componentmodel.Win32Exception, system.MemberAccessException, system.configuration.provider.ProviderException, system.web.HttpException, system.io.IOException, system.io.PathTooLongException, system.FormatException, system.web.management.SqlExecutionException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResetState = null;
         try {
-            return (int)classInstance.Invoke("ResetState", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1.getJCRefOut(), dupParam2.getJCRefOut());
+            retObjectResetState = classInstance.Invoke("ResetState", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1.getJCRefOut(), dupParam2.getJCRefOut());
+            return (int)retObjectResetState;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectResetState_ToString = retObjectResetState == null ? "null" : retObjectResetState.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectResetStateNumber = (java.lang.Number)retObjectResetState;
+                return retObjectResetStateNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectResetState != null ? retObjectResetState.getClass() : "null", retObjectResetState_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,9 +230,20 @@ public class SqlPersonalizationProvider extends PersonalizationProvider  {
 
     public int ResetUserState(java.lang.String path, DateTime userInactiveSinceDate) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.NullReferenceException, system.MemberAccessException, system.PlatformNotSupportedException, system.NotSupportedException, system.componentmodel.Win32Exception, system.configuration.provider.ProviderException, system.web.HttpException, system.io.IOException, system.io.PathTooLongException, system.FormatException, system.web.management.SqlExecutionException, system.security.SecurityException, system.InvalidTimeZoneException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResetUserState = null;
         try {
-            return (int)classInstance.Invoke("ResetUserState", path, userInactiveSinceDate == null ? null : userInactiveSinceDate.getJCOInstance());
+            retObjectResetUserState = classInstance.Invoke("ResetUserState", path, userInactiveSinceDate == null ? null : userInactiveSinceDate.getJCOInstance());
+            return (int)retObjectResetUserState;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectResetUserState_ToString = retObjectResetUserState == null ? "null" : retObjectResetUserState.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectResetUserStateNumber = (java.lang.Number)retObjectResetUserState;
+                return retObjectResetUserStateNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectResetUserState != null ? retObjectResetUserState.getClass() : "null", retObjectResetUserState_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -207,10 +251,14 @@ public class SqlPersonalizationProvider extends PersonalizationProvider  {
 
     public PersonalizationStateInfoCollection FindState(PersonalizationScope scope, PersonalizationStateQuery query, int pageIndex, int pageSize, JCORefOut<java.util.concurrent.atomic.AtomicInteger> totalRecords) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.NullReferenceException, system.MemberAccessException, system.PlatformNotSupportedException, system.NotSupportedException, system.componentmodel.Win32Exception, system.configuration.provider.ProviderException, system.web.HttpException, system.io.IOException, system.io.PathTooLongException, system.FormatException, system.web.management.SqlExecutionException, system.security.SecurityException, system.diagnostics.tracing.EventSourceException, system.collections.generic.KeyNotFoundException, system.data.sqltypes.SqlNullValueException, system.InvalidCastException, system.data.sqlclient.SqlException, system.threading.tasks.TaskSchedulerException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFindState = null;
         try {
-            JCObject objFindState = (JCObject)classInstance.Invoke("FindState", scope == null ? null : scope.getJCOInstance(), query == null ? null : query.getJCOInstance(), pageIndex, pageSize, totalRecords.getJCRefOut());
+            retObjectFindState = classInstance.Invoke("FindState", scope == null ? null : scope.getJCOInstance(), query == null ? null : query.getJCOInstance(), pageIndex, pageSize, totalRecords.getJCRefOut());
+            JCObject objFindState = (JCObject)retObjectFindState;
             return new PersonalizationStateInfoCollection(objFindState);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFindState != null ? retObjectFindState.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -218,7 +266,7 @@ public class SqlPersonalizationProvider extends PersonalizationProvider  {
 
     public void Initialize(java.lang.String name, NameValueCollection configSettings) throws Throwable, system.ArgumentException, system.security.SecurityException, system.ArgumentNullException, system.NotImplementedException, system.NotSupportedException, system.InvalidOperationException, system.MemberAccessException, system.reflection.TargetException, system.reflection.TargetParameterCountException, system.ObjectDisposedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.web.HttpException, system.IndexOutOfRangeException, system.configuration.provider.ProviderException, system.web.HttpRequestValidationException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Initialize", name, configSettings == null ? null : configSettings.getJCOInstance());
         } catch (JCNativeException jcne) {

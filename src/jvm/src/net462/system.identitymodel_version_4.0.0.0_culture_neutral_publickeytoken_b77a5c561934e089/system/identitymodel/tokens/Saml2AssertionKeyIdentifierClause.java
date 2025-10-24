@@ -176,9 +176,13 @@ public class Saml2AssertionKeyIdentifierClause extends SecurityKeyIdentifierClau
     
     public boolean Matches(SecurityKeyIdentifierClause keyIdentifierClause) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMatches = null;
         try {
-            return (boolean)classInstance.Invoke("Matches", keyIdentifierClause == null ? null : keyIdentifierClause.getJCOInstance());
+            retObjectMatches = classInstance.Invoke("Matches", keyIdentifierClause == null ? null : keyIdentifierClause.getJCOInstance());
+            return (boolean)retObjectMatches;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectMatches != null ? retObjectMatches.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,9 +190,13 @@ public class Saml2AssertionKeyIdentifierClause extends SecurityKeyIdentifierClau
 
     public static boolean Matches(java.lang.String assertionId, SecurityKeyIdentifierClause keyIdentifierClause) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMatches = null;
         try {
-            return (boolean)classType.Invoke("Matches", assertionId, keyIdentifierClause == null ? null : keyIdentifierClause.getJCOInstance());
+            retObjectMatches = classType.Invoke("Matches", assertionId, keyIdentifierClause == null ? null : keyIdentifierClause.getJCOInstance());
+            return (boolean)retObjectMatches;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectMatches != null ? retObjectMatches.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

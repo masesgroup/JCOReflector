@@ -170,9 +170,13 @@ public class NativeActivityContext extends ActivityContext  {
     
     public boolean RemoveBookmark(Bookmark bookmark) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRemoveBookmark = null;
         try {
-            return (boolean)classInstance.Invoke("RemoveBookmark", bookmark == null ? null : bookmark.getJCOInstance());
+            retObjectRemoveBookmark = classInstance.Invoke("RemoveBookmark", bookmark == null ? null : bookmark.getJCOInstance());
+            return (boolean)retObjectRemoveBookmark;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectRemoveBookmark != null ? retObjectRemoveBookmark.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,9 +184,13 @@ public class NativeActivityContext extends ActivityContext  {
 
     public boolean RemoveBookmark(java.lang.String name) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRemoveBookmark = null;
         try {
-            return (boolean)classInstance.Invoke("RemoveBookmark", name);
+            retObjectRemoveBookmark = classInstance.Invoke("RemoveBookmark", name);
+            return (boolean)retObjectRemoveBookmark;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectRemoveBookmark != null ? retObjectRemoveBookmark.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,9 +198,13 @@ public class NativeActivityContext extends ActivityContext  {
 
     public boolean RemoveBookmark(java.lang.String name, BookmarkScope scope) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRemoveBookmark = null;
         try {
-            return (boolean)classInstance.Invoke("RemoveBookmark", name, scope == null ? null : scope.getJCOInstance());
+            retObjectRemoveBookmark = classInstance.Invoke("RemoveBookmark", name, scope == null ? null : scope.getJCOInstance());
+            return (boolean)retObjectRemoveBookmark;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectRemoveBookmark != null ? retObjectRemoveBookmark.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,10 +212,14 @@ public class NativeActivityContext extends ActivityContext  {
 
     public ActivityInstance ScheduleAction(ActivityAction activityAction, CompletionCallback onCompleted, FaultCallback onFaulted) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.FormatException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectScheduleAction = null;
         try {
-            JCObject objScheduleAction = (JCObject)classInstance.Invoke("ScheduleAction", activityAction == null ? null : activityAction.getJCOInstance(), onCompleted, onFaulted);
+            retObjectScheduleAction = classInstance.Invoke("ScheduleAction", activityAction == null ? null : activityAction.getJCOInstance(), onCompleted, onFaulted);
+            JCObject objScheduleAction = (JCObject)retObjectScheduleAction;
             return new ActivityInstance(objScheduleAction);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectScheduleAction != null ? retObjectScheduleAction.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -211,10 +227,14 @@ public class NativeActivityContext extends ActivityContext  {
 
     public ActivityInstance ScheduleActivity(Activity activity) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectScheduleActivity = null;
         try {
-            JCObject objScheduleActivity = (JCObject)classInstance.Invoke("ScheduleActivity", activity == null ? null : activity.getJCOInstance());
+            retObjectScheduleActivity = classInstance.Invoke("ScheduleActivity", activity == null ? null : activity.getJCOInstance());
+            JCObject objScheduleActivity = (JCObject)retObjectScheduleActivity;
             return new ActivityInstance(objScheduleActivity);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectScheduleActivity != null ? retObjectScheduleActivity.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -222,10 +242,14 @@ public class NativeActivityContext extends ActivityContext  {
 
     public ActivityInstance ScheduleActivity(Activity activity, CompletionCallback onCompleted) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectScheduleActivity = null;
         try {
-            JCObject objScheduleActivity = (JCObject)classInstance.Invoke("ScheduleActivity", activity == null ? null : activity.getJCOInstance(), onCompleted);
+            retObjectScheduleActivity = classInstance.Invoke("ScheduleActivity", activity == null ? null : activity.getJCOInstance(), onCompleted);
+            JCObject objScheduleActivity = (JCObject)retObjectScheduleActivity;
             return new ActivityInstance(objScheduleActivity);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectScheduleActivity != null ? retObjectScheduleActivity.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -233,10 +257,14 @@ public class NativeActivityContext extends ActivityContext  {
 
     public ActivityInstance ScheduleActivity(Activity activity, CompletionCallback onCompleted, FaultCallback onFaulted) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectScheduleActivity = null;
         try {
-            JCObject objScheduleActivity = (JCObject)classInstance.Invoke("ScheduleActivity", activity == null ? null : activity.getJCOInstance(), onCompleted, onFaulted);
+            retObjectScheduleActivity = classInstance.Invoke("ScheduleActivity", activity == null ? null : activity.getJCOInstance(), onCompleted, onFaulted);
+            JCObject objScheduleActivity = (JCObject)retObjectScheduleActivity;
             return new ActivityInstance(objScheduleActivity);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectScheduleActivity != null ? retObjectScheduleActivity.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -244,10 +272,14 @@ public class NativeActivityContext extends ActivityContext  {
 
     public ActivityInstance ScheduleActivity(Activity activity, FaultCallback onFaulted) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectScheduleActivity = null;
         try {
-            JCObject objScheduleActivity = (JCObject)classInstance.Invoke("ScheduleActivity", activity == null ? null : activity.getJCOInstance(), onFaulted);
+            retObjectScheduleActivity = classInstance.Invoke("ScheduleActivity", activity == null ? null : activity.getJCOInstance(), onFaulted);
+            JCObject objScheduleActivity = (JCObject)retObjectScheduleActivity;
             return new ActivityInstance(objScheduleActivity);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectScheduleActivity != null ? retObjectScheduleActivity.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -255,10 +287,14 @@ public class NativeActivityContext extends ActivityContext  {
 
     public Bookmark CreateBookmark() throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.MulticastNotSupportedException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateBookmark = null;
         try {
-            JCObject objCreateBookmark = (JCObject)classInstance.Invoke("CreateBookmark");
+            retObjectCreateBookmark = classInstance.Invoke("CreateBookmark");
+            JCObject objCreateBookmark = (JCObject)retObjectCreateBookmark;
             return new Bookmark(objCreateBookmark);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateBookmark != null ? retObjectCreateBookmark.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -266,10 +302,14 @@ public class NativeActivityContext extends ActivityContext  {
 
     public Bookmark CreateBookmark(BookmarkCallback callback) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateBookmark = null;
         try {
-            JCObject objCreateBookmark = (JCObject)classInstance.Invoke("CreateBookmark", callback);
+            retObjectCreateBookmark = classInstance.Invoke("CreateBookmark", callback);
+            JCObject objCreateBookmark = (JCObject)retObjectCreateBookmark;
             return new Bookmark(objCreateBookmark);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateBookmark != null ? retObjectCreateBookmark.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -277,10 +317,14 @@ public class NativeActivityContext extends ActivityContext  {
 
     public Bookmark CreateBookmark(BookmarkCallback callback, BookmarkOptions options) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.FormatException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateBookmark = null;
         try {
-            JCObject objCreateBookmark = (JCObject)classInstance.Invoke("CreateBookmark", callback, options == null ? null : options.getJCOInstance());
+            retObjectCreateBookmark = classInstance.Invoke("CreateBookmark", callback, options == null ? null : options.getJCOInstance());
+            JCObject objCreateBookmark = (JCObject)retObjectCreateBookmark;
             return new Bookmark(objCreateBookmark);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateBookmark != null ? retObjectCreateBookmark.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -288,10 +332,14 @@ public class NativeActivityContext extends ActivityContext  {
 
     public Bookmark CreateBookmark(java.lang.String name) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.FormatException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateBookmark = null;
         try {
-            JCObject objCreateBookmark = (JCObject)classInstance.Invoke("CreateBookmark", name);
+            retObjectCreateBookmark = classInstance.Invoke("CreateBookmark", name);
+            JCObject objCreateBookmark = (JCObject)retObjectCreateBookmark;
             return new Bookmark(objCreateBookmark);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateBookmark != null ? retObjectCreateBookmark.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -299,10 +347,14 @@ public class NativeActivityContext extends ActivityContext  {
 
     public Bookmark CreateBookmark(java.lang.String name, BookmarkCallback callback) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateBookmark = null;
         try {
-            JCObject objCreateBookmark = (JCObject)classInstance.Invoke("CreateBookmark", name, callback);
+            retObjectCreateBookmark = classInstance.Invoke("CreateBookmark", name, callback);
+            JCObject objCreateBookmark = (JCObject)retObjectCreateBookmark;
             return new Bookmark(objCreateBookmark);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateBookmark != null ? retObjectCreateBookmark.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -310,10 +362,14 @@ public class NativeActivityContext extends ActivityContext  {
 
     public Bookmark CreateBookmark(java.lang.String name, BookmarkCallback callback, BookmarkOptions options) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.FormatException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateBookmark = null;
         try {
-            JCObject objCreateBookmark = (JCObject)classInstance.Invoke("CreateBookmark", name, callback, options == null ? null : options.getJCOInstance());
+            retObjectCreateBookmark = classInstance.Invoke("CreateBookmark", name, callback, options == null ? null : options.getJCOInstance());
+            JCObject objCreateBookmark = (JCObject)retObjectCreateBookmark;
             return new Bookmark(objCreateBookmark);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateBookmark != null ? retObjectCreateBookmark.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -321,10 +377,14 @@ public class NativeActivityContext extends ActivityContext  {
 
     public Bookmark CreateBookmark(java.lang.String name, BookmarkCallback callback, BookmarkScope scope) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateBookmark = null;
         try {
-            JCObject objCreateBookmark = (JCObject)classInstance.Invoke("CreateBookmark", name, callback, scope == null ? null : scope.getJCOInstance());
+            retObjectCreateBookmark = classInstance.Invoke("CreateBookmark", name, callback, scope == null ? null : scope.getJCOInstance());
+            JCObject objCreateBookmark = (JCObject)retObjectCreateBookmark;
             return new Bookmark(objCreateBookmark);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateBookmark != null ? retObjectCreateBookmark.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -332,10 +392,14 @@ public class NativeActivityContext extends ActivityContext  {
 
     public Bookmark CreateBookmark(java.lang.String name, BookmarkCallback callback, BookmarkScope scope, BookmarkOptions options) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateBookmark = null;
         try {
-            JCObject objCreateBookmark = (JCObject)classInstance.Invoke("CreateBookmark", name, callback, scope == null ? null : scope.getJCOInstance(), options == null ? null : options.getJCOInstance());
+            retObjectCreateBookmark = classInstance.Invoke("CreateBookmark", name, callback, scope == null ? null : scope.getJCOInstance(), options == null ? null : options.getJCOInstance());
+            JCObject objCreateBookmark = (JCObject)retObjectCreateBookmark;
             return new Bookmark(objCreateBookmark);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateBookmark != null ? retObjectCreateBookmark.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -343,10 +407,14 @@ public class NativeActivityContext extends ActivityContext  {
 
     public BookmarkResumptionResult ResumeBookmark(Bookmark bookmark, NetObject value) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResumeBookmark = null;
         try {
-            JCObject objResumeBookmark = (JCObject)classInstance.Invoke("ResumeBookmark", bookmark == null ? null : bookmark.getJCOInstance(), value == null ? null : value.getJCOInstance());
+            retObjectResumeBookmark = classInstance.Invoke("ResumeBookmark", bookmark == null ? null : bookmark.getJCOInstance(), value == null ? null : value.getJCOInstance());
+            JCObject objResumeBookmark = (JCObject)retObjectResumeBookmark;
             return new BookmarkResumptionResult(objResumeBookmark);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectResumeBookmark != null ? retObjectResumeBookmark.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -354,10 +422,14 @@ public class NativeActivityContext extends ActivityContext  {
 
     public NetObject GetValue(Variable variable) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetValue = null;
         try {
-            JCObject objGetValue = (JCObject)classInstance.Invoke("GetValue", variable == null ? null : variable.getJCOInstance());
+            retObjectGetValue = classInstance.Invoke("GetValue", variable == null ? null : variable.getJCOInstance());
+            JCObject objGetValue = (JCObject)retObjectGetValue;
             return new NetObject(objGetValue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetValue != null ? retObjectGetValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -365,7 +437,7 @@ public class NativeActivityContext extends ActivityContext  {
 
     public void Abort() throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Abort");
         } catch (JCNativeException jcne) {
@@ -375,7 +447,7 @@ public class NativeActivityContext extends ActivityContext  {
 
     public void Abort(NetException reason) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Abort", reason == null ? null : reason.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -385,7 +457,7 @@ public class NativeActivityContext extends ActivityContext  {
 
     public void AbortChildInstance(ActivityInstance activity) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.transactions.TransactionException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AbortChildInstance", activity == null ? null : activity.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -395,7 +467,7 @@ public class NativeActivityContext extends ActivityContext  {
 
     public void AbortChildInstance(ActivityInstance activity, NetException reason) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.collections.generic.KeyNotFoundException, system.ObjectDisposedException, system.transactions.TransactionException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AbortChildInstance", activity == null ? null : activity.getJCOInstance(), reason == null ? null : reason.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -405,7 +477,7 @@ public class NativeActivityContext extends ActivityContext  {
 
     public void CancelChild(ActivityInstance activityInstance) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CancelChild", activityInstance == null ? null : activityInstance.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -415,7 +487,7 @@ public class NativeActivityContext extends ActivityContext  {
 
     public void CancelChildren() throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CancelChildren");
         } catch (JCNativeException jcne) {
@@ -425,7 +497,7 @@ public class NativeActivityContext extends ActivityContext  {
 
     public void MarkCanceled() throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("MarkCanceled");
         } catch (JCNativeException jcne) {
@@ -435,7 +507,7 @@ public class NativeActivityContext extends ActivityContext  {
 
     public void RemoveAllBookmarks() throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RemoveAllBookmarks");
         } catch (JCNativeException jcne) {
@@ -445,7 +517,7 @@ public class NativeActivityContext extends ActivityContext  {
 
     public void SetValue(Variable variable, NetObject value) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetValue", variable == null ? null : variable.getJCOInstance(), value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -455,7 +527,7 @@ public class NativeActivityContext extends ActivityContext  {
 
     public void Track(CustomTrackingRecord record) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Track", record == null ? null : record.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -469,9 +541,13 @@ public class NativeActivityContext extends ActivityContext  {
     
     public boolean getIsCancellationRequested() throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsCancellationRequested = null;
         try {
-            return (boolean)classInstance.Get("IsCancellationRequested");
+            retObjectIsCancellationRequested = classInstance.Get("IsCancellationRequested");
+            return (boolean)retObjectIsCancellationRequested;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsCancellationRequested != null ? retObjectIsCancellationRequested.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -479,10 +555,14 @@ public class NativeActivityContext extends ActivityContext  {
 
     public BookmarkScope getDefaultBookmarkScope() throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDefaultBookmarkScope = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DefaultBookmarkScope");
+            retObjectDefaultBookmarkScope = classInstance.Get("DefaultBookmarkScope");
+            JCObject val = (JCObject)retObjectDefaultBookmarkScope;
             return new BookmarkScope(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefaultBookmarkScope != null ? retObjectDefaultBookmarkScope.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -490,10 +570,14 @@ public class NativeActivityContext extends ActivityContext  {
 
     public ExecutionProperties getProperties() throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProperties = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Properties");
+            retObjectProperties = classInstance.Get("Properties");
+            JCObject val = (JCObject)retObjectProperties;
             return new ExecutionProperties(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectProperties != null ? retObjectProperties.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

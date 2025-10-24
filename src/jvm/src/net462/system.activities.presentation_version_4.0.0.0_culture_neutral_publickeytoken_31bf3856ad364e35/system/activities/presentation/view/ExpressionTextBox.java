@@ -168,7 +168,7 @@ public class ExpressionTextBox extends UserControl  {
     
     public void BeginEdit() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("BeginEdit");
         } catch (JCNativeException jcne) {
@@ -178,7 +178,7 @@ public class ExpressionTextBox extends UserControl  {
 
     public void InitializeComponent() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.MemberAccessException, system.NullReferenceException, system.configuration.ConfigurationException, system.UriFormatException, system.OutOfMemoryException, system.UnauthorizedAccessException, system.io.IOException, system.NotSupportedException, system.OverflowException, system.collections.generic.KeyNotFoundException, system.InvalidCastException, system.configuration.ConfigurationErrorsException, system.threading.ThreadAbortException, system.reflection.AmbiguousMatchException, system.xaml.XamlException, system.windows.markup.XamlParseException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("InitializeComponent");
         } catch (JCNativeException jcne) {
@@ -188,7 +188,7 @@ public class ExpressionTextBox extends UserControl  {
 
     public static void RegisterExpressionActivityEditor(java.lang.String name, NetType expressionActivityEditorType, CreateExpressionFromStringCallback convertFromString) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("RegisterExpressionActivityEditor", name, expressionActivityEditorType == null ? null : expressionActivityEditorType.getJCOInstance(), convertFromString);
         } catch (JCNativeException jcne) {
@@ -202,7 +202,7 @@ public class ExpressionTextBox extends UserControl  {
      */
     @Deprecated 
     public void Connect(int connectionId, NetObject target) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIComponentConnector to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIComponentConnector to obtain the full interface.");
     }
 
 
@@ -211,9 +211,13 @@ public class ExpressionTextBox extends UserControl  {
     
     public boolean getAcceptsReturn() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAcceptsReturn = null;
         try {
-            return (boolean)classInstance.Get("AcceptsReturn");
+            retObjectAcceptsReturn = classInstance.Get("AcceptsReturn");
+            return (boolean)retObjectAcceptsReturn;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAcceptsReturn != null ? retObjectAcceptsReturn.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -221,7 +225,7 @@ public class ExpressionTextBox extends UserControl  {
 
     public void setAcceptsReturn(boolean AcceptsReturn) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AcceptsReturn", AcceptsReturn);
         } catch (JCNativeException jcne) {
@@ -231,9 +235,13 @@ public class ExpressionTextBox extends UserControl  {
 
     public boolean getAcceptsTab() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAcceptsTab = null;
         try {
-            return (boolean)classInstance.Get("AcceptsTab");
+            retObjectAcceptsTab = classInstance.Get("AcceptsTab");
+            return (boolean)retObjectAcceptsTab;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAcceptsTab != null ? retObjectAcceptsTab.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -241,7 +249,7 @@ public class ExpressionTextBox extends UserControl  {
 
     public void setAcceptsTab(boolean AcceptsTab) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AcceptsTab", AcceptsTab);
         } catch (JCNativeException jcne) {
@@ -251,9 +259,13 @@ public class ExpressionTextBox extends UserControl  {
 
     public boolean getExplicitCommit() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExplicitCommit = null;
         try {
-            return (boolean)classInstance.Get("ExplicitCommit");
+            retObjectExplicitCommit = classInstance.Get("ExplicitCommit");
+            return (boolean)retObjectExplicitCommit;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectExplicitCommit != null ? retObjectExplicitCommit.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -261,7 +273,7 @@ public class ExpressionTextBox extends UserControl  {
 
     public void setExplicitCommit(boolean ExplicitCommit) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ExplicitCommit", ExplicitCommit);
         } catch (JCNativeException jcne) {
@@ -271,9 +283,13 @@ public class ExpressionTextBox extends UserControl  {
 
     public boolean getIsReadOnly() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsReadOnly = null;
         try {
-            return (boolean)classInstance.Get("IsReadOnly");
+            retObjectIsReadOnly = classInstance.Get("IsReadOnly");
+            return (boolean)retObjectIsReadOnly;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsReadOnly != null ? retObjectIsReadOnly.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -281,7 +297,7 @@ public class ExpressionTextBox extends UserControl  {
 
     public void setIsReadOnly(boolean IsReadOnly) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsReadOnly", IsReadOnly);
         } catch (JCNativeException jcne) {
@@ -291,9 +307,13 @@ public class ExpressionTextBox extends UserControl  {
 
     public boolean getIsSupportedExpression() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsSupportedExpression = null;
         try {
-            return (boolean)classInstance.Get("IsSupportedExpression");
+            retObjectIsSupportedExpression = classInstance.Get("IsSupportedExpression");
+            return (boolean)retObjectIsSupportedExpression;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsSupportedExpression != null ? retObjectIsSupportedExpression.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -301,7 +321,7 @@ public class ExpressionTextBox extends UserControl  {
 
     public void setIsSupportedExpression(boolean IsSupportedExpression) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsSupportedExpression", IsSupportedExpression);
         } catch (JCNativeException jcne) {
@@ -311,9 +331,13 @@ public class ExpressionTextBox extends UserControl  {
 
     public boolean getUseLocationExpression() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUseLocationExpression = null;
         try {
-            return (boolean)classInstance.Get("UseLocationExpression");
+            retObjectUseLocationExpression = classInstance.Get("UseLocationExpression");
+            return (boolean)retObjectUseLocationExpression;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectUseLocationExpression != null ? retObjectUseLocationExpression.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -321,7 +345,7 @@ public class ExpressionTextBox extends UserControl  {
 
     public void setUseLocationExpression(boolean UseLocationExpression) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UseLocationExpression", UseLocationExpression);
         } catch (JCNativeException jcne) {
@@ -331,9 +355,20 @@ public class ExpressionTextBox extends UserControl  {
 
     public int getMaxLines() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxLines = null;
         try {
-            return (int)classInstance.Get("MaxLines");
+            retObjectMaxLines = classInstance.Get("MaxLines");
+            return (int)retObjectMaxLines;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaxLines_ToString = retObjectMaxLines == null ? "null" : retObjectMaxLines.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMaxLinesNumber = (java.lang.Number)retObjectMaxLines;
+                return retObjectMaxLinesNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxLines != null ? retObjectMaxLines.getClass() : "null", retObjectMaxLines_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -341,7 +376,7 @@ public class ExpressionTextBox extends UserControl  {
 
     public void setMaxLines(int MaxLines) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaxLines", MaxLines);
         } catch (JCNativeException jcne) {
@@ -351,9 +386,20 @@ public class ExpressionTextBox extends UserControl  {
 
     public int getMinLines() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMinLines = null;
         try {
-            return (int)classInstance.Get("MinLines");
+            retObjectMinLines = classInstance.Get("MinLines");
+            return (int)retObjectMinLines;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMinLines_ToString = retObjectMinLines == null ? "null" : retObjectMinLines.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMinLinesNumber = (java.lang.Number)retObjectMinLines;
+                return retObjectMinLinesNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMinLines != null ? retObjectMinLines.getClass() : "null", retObjectMinLines_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -361,7 +407,7 @@ public class ExpressionTextBox extends UserControl  {
 
     public void setMinLines(int MinLines) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MinLines", MinLines);
         } catch (JCNativeException jcne) {
@@ -371,10 +417,14 @@ public class ExpressionTextBox extends UserControl  {
 
     public ModelItem getExpression() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExpression = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Expression");
+            retObjectExpression = classInstance.Get("Expression");
+            JCObject val = (JCObject)retObjectExpression;
             return new ModelItem(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExpression != null ? retObjectExpression.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -382,7 +432,7 @@ public class ExpressionTextBox extends UserControl  {
 
     public void setExpression(ModelItem Expression) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Expression", Expression == null ? null : Expression.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -392,10 +442,14 @@ public class ExpressionTextBox extends UserControl  {
 
     public ModelItem getOwnerActivity() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOwnerActivity = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("OwnerActivity");
+            retObjectOwnerActivity = classInstance.Get("OwnerActivity");
+            JCObject val = (JCObject)retObjectOwnerActivity;
             return new ModelItem(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOwnerActivity != null ? retObjectOwnerActivity.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -403,7 +457,7 @@ public class ExpressionTextBox extends UserControl  {
 
     public void setOwnerActivity(ModelItem OwnerActivity) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("OwnerActivity", OwnerActivity == null ? null : OwnerActivity.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -413,10 +467,14 @@ public class ExpressionTextBox extends UserControl  {
 
     public IExpressionEditorService getExpressionEditorService() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExpressionEditorService = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ExpressionEditorService");
+            retObjectExpressionEditorService = classInstance.Get("ExpressionEditorService");
+            JCObject val = (JCObject)retObjectExpressionEditorService;
             return new IExpressionEditorServiceImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExpressionEditorService != null ? retObjectExpressionEditorService.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -424,9 +482,13 @@ public class ExpressionTextBox extends UserControl  {
 
     public java.lang.String getDefaultValue() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDefaultValue = null;
         try {
-            return (java.lang.String)classInstance.Get("DefaultValue");
+            retObjectDefaultValue = classInstance.Get("DefaultValue");
+            return (java.lang.String)retObjectDefaultValue;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDefaultValue != null ? retObjectDefaultValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -434,7 +496,7 @@ public class ExpressionTextBox extends UserControl  {
 
     public void setDefaultValue(java.lang.String DefaultValue) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DefaultValue", DefaultValue);
         } catch (JCNativeException jcne) {
@@ -444,9 +506,13 @@ public class ExpressionTextBox extends UserControl  {
 
     public java.lang.String getExpressionActivityEditor() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExpressionActivityEditor = null;
         try {
-            return (java.lang.String)classInstance.Get("ExpressionActivityEditor");
+            retObjectExpressionActivityEditor = classInstance.Get("ExpressionActivityEditor");
+            return (java.lang.String)retObjectExpressionActivityEditor;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectExpressionActivityEditor != null ? retObjectExpressionActivityEditor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -454,7 +520,7 @@ public class ExpressionTextBox extends UserControl  {
 
     public void setExpressionActivityEditor(java.lang.String ExpressionActivityEditor) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ExpressionActivityEditor", ExpressionActivityEditor);
         } catch (JCNativeException jcne) {
@@ -464,9 +530,13 @@ public class ExpressionTextBox extends UserControl  {
 
     public java.lang.String getHintText() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHintText = null;
         try {
-            return (java.lang.String)classInstance.Get("HintText");
+            retObjectHintText = classInstance.Get("HintText");
+            return (java.lang.String)retObjectHintText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectHintText != null ? retObjectHintText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -474,7 +544,7 @@ public class ExpressionTextBox extends UserControl  {
 
     public void setHintText(java.lang.String HintText) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("HintText", HintText);
         } catch (JCNativeException jcne) {
@@ -484,9 +554,13 @@ public class ExpressionTextBox extends UserControl  {
 
     public java.lang.String getPathToArgument() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPathToArgument = null;
         try {
-            return (java.lang.String)classInstance.Get("PathToArgument");
+            retObjectPathToArgument = classInstance.Get("PathToArgument");
+            return (java.lang.String)retObjectPathToArgument;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectPathToArgument != null ? retObjectPathToArgument.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -494,7 +568,7 @@ public class ExpressionTextBox extends UserControl  {
 
     public void setPathToArgument(java.lang.String PathToArgument) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PathToArgument", PathToArgument);
         } catch (JCNativeException jcne) {
@@ -504,10 +578,14 @@ public class ExpressionTextBox extends UserControl  {
 
     public NetType getExpressionType() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExpressionType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ExpressionType");
+            retObjectExpressionType = classInstance.Get("ExpressionType");
+            JCObject val = (JCObject)retObjectExpressionType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExpressionType != null ? retObjectExpressionType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -515,7 +593,7 @@ public class ExpressionTextBox extends UserControl  {
 
     public void setExpressionType(NetType ExpressionType) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ExpressionType", ExpressionType == null ? null : ExpressionType.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -525,10 +603,14 @@ public class ExpressionTextBox extends UserControl  {
 
     public ScrollBarVisibility getHorizontalScrollBarVisibility() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHorizontalScrollBarVisibility = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("HorizontalScrollBarVisibility");
+            retObjectHorizontalScrollBarVisibility = classInstance.Get("HorizontalScrollBarVisibility");
+            JCObject val = (JCObject)retObjectHorizontalScrollBarVisibility;
             return new ScrollBarVisibility(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHorizontalScrollBarVisibility != null ? retObjectHorizontalScrollBarVisibility.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -536,7 +618,7 @@ public class ExpressionTextBox extends UserControl  {
 
     public void setHorizontalScrollBarVisibility(ScrollBarVisibility HorizontalScrollBarVisibility) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("HorizontalScrollBarVisibility", HorizontalScrollBarVisibility == null ? null : HorizontalScrollBarVisibility.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -546,10 +628,14 @@ public class ExpressionTextBox extends UserControl  {
 
     public ScrollBarVisibility getVerticalScrollBarVisibility() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVerticalScrollBarVisibility = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("VerticalScrollBarVisibility");
+            retObjectVerticalScrollBarVisibility = classInstance.Get("VerticalScrollBarVisibility");
+            JCObject val = (JCObject)retObjectVerticalScrollBarVisibility;
             return new ScrollBarVisibility(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVerticalScrollBarVisibility != null ? retObjectVerticalScrollBarVisibility.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -557,7 +643,7 @@ public class ExpressionTextBox extends UserControl  {
 
     public void setVerticalScrollBarVisibility(ScrollBarVisibility VerticalScrollBarVisibility) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("VerticalScrollBarVisibility", VerticalScrollBarVisibility == null ? null : VerticalScrollBarVisibility.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -572,7 +658,7 @@ public class ExpressionTextBox extends UserControl  {
 
     public void addEditorLostLogicalFocus(RoutedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("EditorLostLogicalFocus", handler);
         } catch (JCNativeException jcne) {
@@ -582,7 +668,7 @@ public class ExpressionTextBox extends UserControl  {
 
     public void removeEditorLostLogicalFocus(RoutedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("EditorLostLogicalFocus", handler);
         } catch (JCNativeException jcne) {

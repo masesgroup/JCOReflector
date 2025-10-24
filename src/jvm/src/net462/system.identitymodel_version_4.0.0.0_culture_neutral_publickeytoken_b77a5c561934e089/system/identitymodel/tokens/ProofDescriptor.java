@@ -155,7 +155,7 @@ public class ProofDescriptor extends NetObject  {
     
     public void ApplyTo(RequestSecurityTokenResponse response) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ApplyTo", response == null ? null : response.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -169,10 +169,14 @@ public class ProofDescriptor extends NetObject  {
     
     public SecurityKeyIdentifier getKeyIdentifier() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectKeyIdentifier = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("KeyIdentifier");
+            retObjectKeyIdentifier = classInstance.Get("KeyIdentifier");
+            JCObject val = (JCObject)retObjectKeyIdentifier;
             return new SecurityKeyIdentifier(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectKeyIdentifier != null ? retObjectKeyIdentifier.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

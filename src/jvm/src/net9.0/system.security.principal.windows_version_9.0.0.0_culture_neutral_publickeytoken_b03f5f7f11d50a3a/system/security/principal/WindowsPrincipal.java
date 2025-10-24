@@ -171,9 +171,13 @@ public class WindowsPrincipal extends ClaimsPrincipal  {
     
     public boolean IsInRole(int rid) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsInRole = null;
         try {
-            return (boolean)classInstance.Invoke("IsInRole", rid);
+            retObjectIsInRole = classInstance.Invoke("IsInRole", rid);
+            return (boolean)retObjectIsInRole;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsInRole != null ? retObjectIsInRole.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,9 +185,13 @@ public class WindowsPrincipal extends ClaimsPrincipal  {
 
     public boolean IsInRole(SecurityIdentifier sid) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OutOfMemoryException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsInRole = null;
         try {
-            return (boolean)classInstance.Invoke("IsInRole", sid == null ? null : sid.getJCOInstance());
+            retObjectIsInRole = classInstance.Invoke("IsInRole", sid == null ? null : sid.getJCOInstance());
+            return (boolean)retObjectIsInRole;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsInRole != null ? retObjectIsInRole.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,9 +199,13 @@ public class WindowsPrincipal extends ClaimsPrincipal  {
 
     public boolean IsInRole(WindowsBuiltInRole role) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsInRole = null;
         try {
-            return (boolean)classInstance.Invoke("IsInRole", role == null ? null : role.getJCOInstance());
+            retObjectIsInRole = classInstance.Invoke("IsInRole", role == null ? null : role.getJCOInstance());
+            return (boolean)retObjectIsInRole;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsInRole != null ? retObjectIsInRole.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,9 +213,13 @@ public class WindowsPrincipal extends ClaimsPrincipal  {
 
     public boolean IsInRole(java.lang.String role) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.UnauthorizedAccessException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.AccessViolationException, system.security.principal.IdentityNotMappedException, system.security.SecurityException, system.NullReferenceException, system.NotSupportedException, system.runtime.interopservices.ExternalException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsInRole = null;
         try {
-            return (boolean)classInstance.Invoke("IsInRole", role);
+            retObjectIsInRole = classInstance.Invoke("IsInRole", role);
+            return (boolean)retObjectIsInRole;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsInRole != null ? retObjectIsInRole.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

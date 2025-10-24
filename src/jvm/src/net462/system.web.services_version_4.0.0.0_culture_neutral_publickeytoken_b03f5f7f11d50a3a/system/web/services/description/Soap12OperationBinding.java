@@ -166,9 +166,13 @@ public class Soap12OperationBinding extends SoapOperationBinding  {
     
     public boolean getSoapActionRequired() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSoapActionRequired = null;
         try {
-            return (boolean)classInstance.Get("SoapActionRequired");
+            retObjectSoapActionRequired = classInstance.Get("SoapActionRequired");
+            return (boolean)retObjectSoapActionRequired;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectSoapActionRequired != null ? retObjectSoapActionRequired.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,7 +180,7 @@ public class Soap12OperationBinding extends SoapOperationBinding  {
 
     public void setSoapActionRequired(boolean SoapActionRequired) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SoapActionRequired", SoapActionRequired);
         } catch (JCNativeException jcne) {

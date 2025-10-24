@@ -180,7 +180,7 @@ public class ArgumentNullException extends ArgumentException {
     
     public static void ThrowIfNull(NetObject argument, java.lang.String paramName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("ThrowIfNull", argument == null ? null : argument.getJCOInstance(), paramName);
         } catch (JCNativeException jcne) {

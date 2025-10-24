@@ -162,10 +162,14 @@ public class ApplicationSettingsBase extends SettingsBase  {
     
     public NetObject GetPreviousVersion(java.lang.String propertyName) throws Throwable, system.configuration.SettingsPropertyNotFoundException, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.io.FileNotFoundException, system.io.FileLoadException, system.runtime.serialization.SerializationException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.FormatException, system.io.EndOfStreamException, system.xml.XmlException, system.NotImplementedException, system.MissingMethodException, system.TypeLoadException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPreviousVersion = null;
         try {
-            JCObject objGetPreviousVersion = (JCObject)classInstance.Invoke("GetPreviousVersion", propertyName);
+            retObjectGetPreviousVersion = classInstance.Invoke("GetPreviousVersion", propertyName);
+            JCObject objGetPreviousVersion = (JCObject)retObjectGetPreviousVersion;
             return new NetObject(objGetPreviousVersion);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetPreviousVersion != null ? retObjectGetPreviousVersion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -173,7 +177,7 @@ public class ApplicationSettingsBase extends SettingsBase  {
 
     public void Reload() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Reload");
         } catch (JCNativeException jcne) {
@@ -183,7 +187,7 @@ public class ApplicationSettingsBase extends SettingsBase  {
 
     public void Reset() throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Reset");
         } catch (JCNativeException jcne) {
@@ -193,7 +197,7 @@ public class ApplicationSettingsBase extends SettingsBase  {
 
     public void Save() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Save");
         } catch (JCNativeException jcne) {
@@ -203,7 +207,7 @@ public class ApplicationSettingsBase extends SettingsBase  {
 
     public void Upgrade() throws Throwable, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Upgrade");
         } catch (JCNativeException jcne) {
@@ -217,9 +221,13 @@ public class ApplicationSettingsBase extends SettingsBase  {
     
     public java.lang.String getSettingsKey() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSettingsKey = null;
         try {
-            return (java.lang.String)classInstance.Get("SettingsKey");
+            retObjectSettingsKey = classInstance.Get("SettingsKey");
+            return (java.lang.String)retObjectSettingsKey;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSettingsKey != null ? retObjectSettingsKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -227,7 +235,7 @@ public class ApplicationSettingsBase extends SettingsBase  {
 
     public void setSettingsKey(java.lang.String SettingsKey) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SettingsKey", SettingsKey);
         } catch (JCNativeException jcne) {
@@ -242,7 +250,7 @@ public class ApplicationSettingsBase extends SettingsBase  {
 
     public void addPropertyChanged(PropertyChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("PropertyChanged", handler);
         } catch (JCNativeException jcne) {
@@ -252,7 +260,7 @@ public class ApplicationSettingsBase extends SettingsBase  {
 
     public void removePropertyChanged(PropertyChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("PropertyChanged", handler);
         } catch (JCNativeException jcne) {
@@ -262,7 +270,7 @@ public class ApplicationSettingsBase extends SettingsBase  {
 
     public void addSettingChanging(SettingChangingEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("SettingChanging", handler);
         } catch (JCNativeException jcne) {
@@ -272,7 +280,7 @@ public class ApplicationSettingsBase extends SettingsBase  {
 
     public void removeSettingChanging(SettingChangingEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("SettingChanging", handler);
         } catch (JCNativeException jcne) {
@@ -282,7 +290,7 @@ public class ApplicationSettingsBase extends SettingsBase  {
 
     public void addSettingsLoaded(SettingsLoadedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("SettingsLoaded", handler);
         } catch (JCNativeException jcne) {
@@ -292,7 +300,7 @@ public class ApplicationSettingsBase extends SettingsBase  {
 
     public void removeSettingsLoaded(SettingsLoadedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("SettingsLoaded", handler);
         } catch (JCNativeException jcne) {
@@ -302,7 +310,7 @@ public class ApplicationSettingsBase extends SettingsBase  {
 
     public void addSettingsSaving(SettingsSavingEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("SettingsSaving", handler);
         } catch (JCNativeException jcne) {
@@ -312,7 +320,7 @@ public class ApplicationSettingsBase extends SettingsBase  {
 
     public void removeSettingsSaving(SettingsSavingEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("SettingsSaving", handler);
         } catch (JCNativeException jcne) {

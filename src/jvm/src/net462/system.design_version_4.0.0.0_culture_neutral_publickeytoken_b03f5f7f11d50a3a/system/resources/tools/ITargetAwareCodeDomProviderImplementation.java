@@ -142,9 +142,13 @@ public class ITargetAwareCodeDomProviderImplementation extends NetObject impleme
     
     public boolean SupportsProperty(NetType type, java.lang.String propertyName, boolean isWritable) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSupportsProperty = null;
         try {
-            return (boolean)classInstance.Invoke("SupportsProperty", type == null ? null : type.getJCOInstance(), propertyName, isWritable);
+            retObjectSupportsProperty = classInstance.Invoke("SupportsProperty", type == null ? null : type.getJCOInstance(), propertyName, isWritable);
+            return (boolean)retObjectSupportsProperty;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectSupportsProperty != null ? retObjectSupportsProperty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

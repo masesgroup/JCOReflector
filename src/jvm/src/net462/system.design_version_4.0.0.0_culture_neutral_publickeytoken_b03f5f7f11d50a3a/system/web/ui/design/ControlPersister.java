@@ -161,9 +161,13 @@ public class ControlPersister extends NetObject  {
     
     public static java.lang.String PersistControl(Control control) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.web.HttpException, system.IndexOutOfRangeException, system.NotSupportedException, system.NullReferenceException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectPersistControl = null;
         try {
-            return (java.lang.String)classType.Invoke("PersistControl", control == null ? null : control.getJCOInstance());
+            retObjectPersistControl = classType.Invoke("PersistControl", control == null ? null : control.getJCOInstance());
+            return (java.lang.String)retObjectPersistControl;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectPersistControl != null ? retObjectPersistControl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,9 +175,13 @@ public class ControlPersister extends NetObject  {
 
     public static java.lang.String PersistControl(Control control, IDesignerHost host) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.web.HttpException, system.web.HttpParseException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectPersistControl = null;
         try {
-            return (java.lang.String)classType.Invoke("PersistControl", control == null ? null : control.getJCOInstance(), host == null ? null : host.getJCOInstance());
+            retObjectPersistControl = classType.Invoke("PersistControl", control == null ? null : control.getJCOInstance(), host == null ? null : host.getJCOInstance());
+            return (java.lang.String)retObjectPersistControl;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectPersistControl != null ? retObjectPersistControl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,9 +189,13 @@ public class ControlPersister extends NetObject  {
 
     public static java.lang.String PersistInnerProperties(NetObject component, IDesignerHost host) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.NotSupportedException, system.reflection.AmbiguousMatchException, system.web.HttpParseException, system.IndexOutOfRangeException, system.RankException, system.NullReferenceException, system.globalization.CultureNotFoundException, system.threading.ThreadAbortException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectPersistInnerProperties = null;
         try {
-            return (java.lang.String)classType.Invoke("PersistInnerProperties", component == null ? null : component.getJCOInstance(), host == null ? null : host.getJCOInstance());
+            retObjectPersistInnerProperties = classType.Invoke("PersistInnerProperties", component == null ? null : component.getJCOInstance(), host == null ? null : host.getJCOInstance());
+            return (java.lang.String)retObjectPersistInnerProperties;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectPersistInnerProperties != null ? retObjectPersistInnerProperties.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,9 +203,13 @@ public class ControlPersister extends NetObject  {
 
     public static java.lang.String PersistTemplate(ITemplate template, IDesignerHost host) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectPersistTemplate = null;
         try {
-            return (java.lang.String)classType.Invoke("PersistTemplate", template == null ? null : template.getJCOInstance(), host == null ? null : host.getJCOInstance());
+            retObjectPersistTemplate = classType.Invoke("PersistTemplate", template == null ? null : template.getJCOInstance(), host == null ? null : host.getJCOInstance());
+            return (java.lang.String)retObjectPersistTemplate;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectPersistTemplate != null ? retObjectPersistTemplate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,7 +217,7 @@ public class ControlPersister extends NetObject  {
 
     public static void PersistControl(TextWriter sw, Control control) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.web.HttpException, system.web.HttpParseException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("PersistControl", sw == null ? null : sw.getJCOInstance(), control == null ? null : control.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -211,7 +227,7 @@ public class ControlPersister extends NetObject  {
 
     public static void PersistControl(TextWriter sw, Control control, IDesignerHost host) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.web.HttpException, system.NotSupportedException, system.reflection.AmbiguousMatchException, system.web.HttpParseException, system.IndexOutOfRangeException, system.NullReferenceException, system.globalization.CultureNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("PersistControl", sw == null ? null : sw.getJCOInstance(), control == null ? null : control.getJCOInstance(), host == null ? null : host.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -221,7 +237,7 @@ public class ControlPersister extends NetObject  {
 
     public static void PersistInnerProperties(TextWriter sw, NetObject component, IDesignerHost host) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.web.HttpException, system.NotSupportedException, system.MissingMethodException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.reflection.AmbiguousMatchException, system.web.HttpParseException, system.FormatException, system.RankException, system.NullReferenceException, system.threading.ThreadAbortException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("PersistInnerProperties", sw == null ? null : sw.getJCOInstance(), component == null ? null : component.getJCOInstance(), host == null ? null : host.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -231,7 +247,7 @@ public class ControlPersister extends NetObject  {
 
     public static void PersistTemplate(TextWriter writer, ITemplate template, IDesignerHost host) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.web.HttpException, system.IndexOutOfRangeException, system.NotSupportedException, system.NullReferenceException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("PersistTemplate", writer == null ? null : writer.getJCOInstance(), template == null ? null : template.getJCOInstance(), host == null ? null : host.getJCOInstance());
         } catch (JCNativeException jcne) {

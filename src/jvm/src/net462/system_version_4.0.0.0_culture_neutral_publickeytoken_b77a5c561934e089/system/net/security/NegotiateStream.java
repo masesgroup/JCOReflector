@@ -189,9 +189,20 @@ public class NegotiateStream extends AuthenticatedStream  {
     
     public int EndRead(IAsyncResult asyncResult) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.diagnostics.tracing.EventSourceException, system.threading.ThreadAbortException, system.threading.tasks.TaskSchedulerException, system.OperationCanceledException, system.threading.tasks.TaskCanceledException, system.AggregateException, system.threading.SemaphoreFullException, system.threading.SynchronizationLockException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.threading.WaitHandleCannotBeOpenedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEndRead = null;
         try {
-            return (int)classInstance.Invoke("EndRead", asyncResult == null ? null : asyncResult.getJCOInstance());
+            retObjectEndRead = classInstance.Invoke("EndRead", asyncResult == null ? null : asyncResult.getJCOInstance());
+            return (int)retObjectEndRead;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectEndRead_ToString = retObjectEndRead == null ? "null" : retObjectEndRead.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectEndReadNumber = (java.lang.Number)retObjectEndRead;
+                return retObjectEndReadNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectEndRead != null ? retObjectEndRead.getClass() : "null", retObjectEndRead_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -199,9 +210,20 @@ public class NegotiateStream extends AuthenticatedStream  {
 
     public int Read(byte[] buffer, int offset, int count) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.threading.SemaphoreFullException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRead = null;
         try {
-            return (int)classInstance.Invoke("Read", buffer, offset, count);
+            retObjectRead = classInstance.Invoke("Read", buffer, offset, count);
+            return (int)retObjectRead;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectRead_ToString = retObjectRead == null ? "null" : retObjectRead.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectReadNumber = (java.lang.Number)retObjectRead;
+                return retObjectReadNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectRead != null ? retObjectRead.getClass() : "null", retObjectRead_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -209,9 +231,20 @@ public class NegotiateStream extends AuthenticatedStream  {
 
     public int Read(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.threading.SemaphoreFullException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRead = null;
         try {
-            return (int)classInstance.Invoke("Read", dupParam0.getJCRefOut(), dupParam1, dupParam2);
+            retObjectRead = classInstance.Invoke("Read", dupParam0.getJCRefOut(), dupParam1, dupParam2);
+            return (int)retObjectRead;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectRead_ToString = retObjectRead == null ? "null" : retObjectRead.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectReadNumber = (java.lang.Number)retObjectRead;
+                return retObjectReadNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectRead != null ? retObjectRead.getClass() : "null", retObjectRead_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -219,9 +252,20 @@ public class NegotiateStream extends AuthenticatedStream  {
 
     public long Seek(long offset, SeekOrigin origin) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSeek = null;
         try {
-            return (long)classInstance.Invoke("Seek", offset, origin == null ? null : origin.getJCOInstance());
+            retObjectSeek = classInstance.Invoke("Seek", offset, origin == null ? null : origin.getJCOInstance());
+            return (long)retObjectSeek;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSeek_ToString = retObjectSeek == null ? "null" : retObjectSeek.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectSeekNumber = (java.lang.Number)retObjectSeek;
+                return retObjectSeekNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectSeek != null ? retObjectSeek.getClass() : "null", retObjectSeek_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -229,10 +273,14 @@ public class NegotiateStream extends AuthenticatedStream  {
 
     public IAsyncResult BeginAuthenticateAsClient(AsyncCallback asyncCallback, NetObject asyncState) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.IndexOutOfRangeException, system.NullReferenceException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.threading.SemaphoreFullException, system.componentmodel.Win32Exception, system.AccessViolationException, system.security.SecurityException, system.threading.ThreadAbortException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.security.authentication.AuthenticationException, system.io.IOException, system.security.authentication.InvalidCredentialException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginAuthenticateAsClient = null;
         try {
-            JCObject objBeginAuthenticateAsClient = (JCObject)classInstance.Invoke("BeginAuthenticateAsClient", asyncCallback, asyncState == null ? null : asyncState.getJCOInstance());
+            retObjectBeginAuthenticateAsClient = classInstance.Invoke("BeginAuthenticateAsClient", asyncCallback, asyncState == null ? null : asyncState.getJCOInstance());
+            JCObject objBeginAuthenticateAsClient = (JCObject)retObjectBeginAuthenticateAsClient;
             return new IAsyncResultImplementation(objBeginAuthenticateAsClient);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginAuthenticateAsClient != null ? retObjectBeginAuthenticateAsClient.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -240,10 +288,14 @@ public class NegotiateStream extends AuthenticatedStream  {
 
     public IAsyncResult BeginAuthenticateAsClient(NetworkCredential credential, ChannelBinding binding, java.lang.String targetName, AsyncCallback asyncCallback, NetObject asyncState) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.threading.SemaphoreFullException, system.NotSupportedException, system.componentmodel.Win32Exception, system.AccessViolationException, system.security.SecurityException, system.FormatException, system.threading.ThreadAbortException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.security.authentication.AuthenticationException, system.io.IOException, system.security.authentication.InvalidCredentialException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginAuthenticateAsClient = null;
         try {
-            JCObject objBeginAuthenticateAsClient = (JCObject)classInstance.Invoke("BeginAuthenticateAsClient", credential == null ? null : credential.getJCOInstance(), binding == null ? null : binding.getJCOInstance(), targetName, asyncCallback, asyncState == null ? null : asyncState.getJCOInstance());
+            retObjectBeginAuthenticateAsClient = classInstance.Invoke("BeginAuthenticateAsClient", credential == null ? null : credential.getJCOInstance(), binding == null ? null : binding.getJCOInstance(), targetName, asyncCallback, asyncState == null ? null : asyncState.getJCOInstance());
+            JCObject objBeginAuthenticateAsClient = (JCObject)retObjectBeginAuthenticateAsClient;
             return new IAsyncResultImplementation(objBeginAuthenticateAsClient);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginAuthenticateAsClient != null ? retObjectBeginAuthenticateAsClient.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -251,10 +303,14 @@ public class NegotiateStream extends AuthenticatedStream  {
 
     public IAsyncResult BeginAuthenticateAsClient(NetworkCredential credential, ChannelBinding binding, java.lang.String targetName, ProtectionLevel requiredProtectionLevel, TokenImpersonationLevel allowedImpersonationLevel, AsyncCallback asyncCallback, NetObject asyncState) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.tasks.TaskCanceledException, system.AggregateException, system.threading.SemaphoreFullException, system.IndexOutOfRangeException, system.NotSupportedException, system.threading.tasks.TaskSchedulerException, system.componentmodel.Win32Exception, system.AccessViolationException, system.security.SecurityException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.security.authentication.AuthenticationException, system.io.IOException, system.threading.WaitHandleCannotBeOpenedException, system.security.authentication.InvalidCredentialException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginAuthenticateAsClient = null;
         try {
-            JCObject objBeginAuthenticateAsClient = (JCObject)classInstance.Invoke("BeginAuthenticateAsClient", credential == null ? null : credential.getJCOInstance(), binding == null ? null : binding.getJCOInstance(), targetName, requiredProtectionLevel == null ? null : requiredProtectionLevel.getJCOInstance(), allowedImpersonationLevel == null ? null : allowedImpersonationLevel.getJCOInstance(), asyncCallback, asyncState == null ? null : asyncState.getJCOInstance());
+            retObjectBeginAuthenticateAsClient = classInstance.Invoke("BeginAuthenticateAsClient", credential == null ? null : credential.getJCOInstance(), binding == null ? null : binding.getJCOInstance(), targetName, requiredProtectionLevel == null ? null : requiredProtectionLevel.getJCOInstance(), allowedImpersonationLevel == null ? null : allowedImpersonationLevel.getJCOInstance(), asyncCallback, asyncState == null ? null : asyncState.getJCOInstance());
+            JCObject objBeginAuthenticateAsClient = (JCObject)retObjectBeginAuthenticateAsClient;
             return new IAsyncResultImplementation(objBeginAuthenticateAsClient);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginAuthenticateAsClient != null ? retObjectBeginAuthenticateAsClient.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -262,10 +318,14 @@ public class NegotiateStream extends AuthenticatedStream  {
 
     public IAsyncResult BeginAuthenticateAsClient(NetworkCredential credential, java.lang.String targetName, AsyncCallback asyncCallback, NetObject asyncState) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.threading.SemaphoreFullException, system.NotSupportedException, system.componentmodel.Win32Exception, system.AccessViolationException, system.security.SecurityException, system.FormatException, system.threading.ThreadAbortException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.security.authentication.AuthenticationException, system.io.IOException, system.security.authentication.InvalidCredentialException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginAuthenticateAsClient = null;
         try {
-            JCObject objBeginAuthenticateAsClient = (JCObject)classInstance.Invoke("BeginAuthenticateAsClient", credential == null ? null : credential.getJCOInstance(), targetName, asyncCallback, asyncState == null ? null : asyncState.getJCOInstance());
+            retObjectBeginAuthenticateAsClient = classInstance.Invoke("BeginAuthenticateAsClient", credential == null ? null : credential.getJCOInstance(), targetName, asyncCallback, asyncState == null ? null : asyncState.getJCOInstance());
+            JCObject objBeginAuthenticateAsClient = (JCObject)retObjectBeginAuthenticateAsClient;
             return new IAsyncResultImplementation(objBeginAuthenticateAsClient);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginAuthenticateAsClient != null ? retObjectBeginAuthenticateAsClient.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -273,10 +333,14 @@ public class NegotiateStream extends AuthenticatedStream  {
 
     public IAsyncResult BeginAuthenticateAsClient(NetworkCredential credential, java.lang.String targetName, ProtectionLevel requiredProtectionLevel, TokenImpersonationLevel allowedImpersonationLevel, AsyncCallback asyncCallback, NetObject asyncState) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.threading.SemaphoreFullException, system.NotSupportedException, system.componentmodel.Win32Exception, system.AccessViolationException, system.security.SecurityException, system.FormatException, system.threading.ThreadAbortException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.security.authentication.AuthenticationException, system.io.IOException, system.security.authentication.InvalidCredentialException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginAuthenticateAsClient = null;
         try {
-            JCObject objBeginAuthenticateAsClient = (JCObject)classInstance.Invoke("BeginAuthenticateAsClient", credential == null ? null : credential.getJCOInstance(), targetName, requiredProtectionLevel == null ? null : requiredProtectionLevel.getJCOInstance(), allowedImpersonationLevel == null ? null : allowedImpersonationLevel.getJCOInstance(), asyncCallback, asyncState == null ? null : asyncState.getJCOInstance());
+            retObjectBeginAuthenticateAsClient = classInstance.Invoke("BeginAuthenticateAsClient", credential == null ? null : credential.getJCOInstance(), targetName, requiredProtectionLevel == null ? null : requiredProtectionLevel.getJCOInstance(), allowedImpersonationLevel == null ? null : allowedImpersonationLevel.getJCOInstance(), asyncCallback, asyncState == null ? null : asyncState.getJCOInstance());
+            JCObject objBeginAuthenticateAsClient = (JCObject)retObjectBeginAuthenticateAsClient;
             return new IAsyncResultImplementation(objBeginAuthenticateAsClient);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginAuthenticateAsClient != null ? retObjectBeginAuthenticateAsClient.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -284,10 +348,14 @@ public class NegotiateStream extends AuthenticatedStream  {
 
     public IAsyncResult BeginAuthenticateAsServer(AsyncCallback asyncCallback, NetObject asyncState) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.IndexOutOfRangeException, system.NullReferenceException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.io.IOException, system.PlatformNotSupportedException, system.InvalidOperationException, system.InvalidCastException, system.configuration.ConfigurationErrorsException, system.threading.SemaphoreFullException, system.componentmodel.Win32Exception, system.AccessViolationException, system.security.SecurityException, system.threading.ThreadAbortException, system.OutOfMemoryException, system.ObjectDisposedException, system.security.authentication.AuthenticationException, system.security.authentication.InvalidCredentialException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginAuthenticateAsServer = null;
         try {
-            JCObject objBeginAuthenticateAsServer = (JCObject)classInstance.Invoke("BeginAuthenticateAsServer", asyncCallback, asyncState == null ? null : asyncState.getJCOInstance());
+            retObjectBeginAuthenticateAsServer = classInstance.Invoke("BeginAuthenticateAsServer", asyncCallback, asyncState == null ? null : asyncState.getJCOInstance());
+            JCObject objBeginAuthenticateAsServer = (JCObject)retObjectBeginAuthenticateAsServer;
             return new IAsyncResultImplementation(objBeginAuthenticateAsServer);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginAuthenticateAsServer != null ? retObjectBeginAuthenticateAsServer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -295,10 +363,14 @@ public class NegotiateStream extends AuthenticatedStream  {
 
     public IAsyncResult BeginAuthenticateAsServer(NetworkCredential credential, ProtectionLevel requiredProtectionLevel, TokenImpersonationLevel requiredImpersonationLevel, AsyncCallback asyncCallback, NetObject asyncState) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.io.IOException, system.ArgumentNullException, system.PlatformNotSupportedException, system.InvalidOperationException, system.NotSupportedException, system.InvalidCastException, system.configuration.ConfigurationErrorsException, system.threading.SemaphoreFullException, system.componentmodel.Win32Exception, system.AccessViolationException, system.globalization.CultureNotFoundException, system.security.SecurityException, system.FormatException, system.threading.ThreadAbortException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.security.authentication.AuthenticationException, system.security.authentication.InvalidCredentialException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginAuthenticateAsServer = null;
         try {
-            JCObject objBeginAuthenticateAsServer = (JCObject)classInstance.Invoke("BeginAuthenticateAsServer", credential == null ? null : credential.getJCOInstance(), requiredProtectionLevel == null ? null : requiredProtectionLevel.getJCOInstance(), requiredImpersonationLevel == null ? null : requiredImpersonationLevel.getJCOInstance(), asyncCallback, asyncState == null ? null : asyncState.getJCOInstance());
+            retObjectBeginAuthenticateAsServer = classInstance.Invoke("BeginAuthenticateAsServer", credential == null ? null : credential.getJCOInstance(), requiredProtectionLevel == null ? null : requiredProtectionLevel.getJCOInstance(), requiredImpersonationLevel == null ? null : requiredImpersonationLevel.getJCOInstance(), asyncCallback, asyncState == null ? null : asyncState.getJCOInstance());
+            JCObject objBeginAuthenticateAsServer = (JCObject)retObjectBeginAuthenticateAsServer;
             return new IAsyncResultImplementation(objBeginAuthenticateAsServer);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginAuthenticateAsServer != null ? retObjectBeginAuthenticateAsServer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -306,10 +378,14 @@ public class NegotiateStream extends AuthenticatedStream  {
 
     public IAsyncResult BeginAuthenticateAsServer(NetworkCredential credential, ExtendedProtectionPolicy policy, ProtectionLevel requiredProtectionLevel, TokenImpersonationLevel requiredImpersonationLevel, AsyncCallback asyncCallback, NetObject asyncState) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.InvalidOperationException, system.PlatformNotSupportedException, system.NotSupportedException, system.componentmodel.Win32Exception, system.InvalidCastException, system.configuration.ConfigurationErrorsException, system.MissingMethodException, system.ObjectDisposedException, system.threading.SemaphoreFullException, system.AccessViolationException, system.threading.ThreadAbortException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.security.authentication.AuthenticationException, system.threading.WaitHandleCannotBeOpenedException, system.security.authentication.InvalidCredentialException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginAuthenticateAsServer = null;
         try {
-            JCObject objBeginAuthenticateAsServer = (JCObject)classInstance.Invoke("BeginAuthenticateAsServer", credential == null ? null : credential.getJCOInstance(), policy == null ? null : policy.getJCOInstance(), requiredProtectionLevel == null ? null : requiredProtectionLevel.getJCOInstance(), requiredImpersonationLevel == null ? null : requiredImpersonationLevel.getJCOInstance(), asyncCallback, asyncState == null ? null : asyncState.getJCOInstance());
+            retObjectBeginAuthenticateAsServer = classInstance.Invoke("BeginAuthenticateAsServer", credential == null ? null : credential.getJCOInstance(), policy == null ? null : policy.getJCOInstance(), requiredProtectionLevel == null ? null : requiredProtectionLevel.getJCOInstance(), requiredImpersonationLevel == null ? null : requiredImpersonationLevel.getJCOInstance(), asyncCallback, asyncState == null ? null : asyncState.getJCOInstance());
+            JCObject objBeginAuthenticateAsServer = (JCObject)retObjectBeginAuthenticateAsServer;
             return new IAsyncResultImplementation(objBeginAuthenticateAsServer);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginAuthenticateAsServer != null ? retObjectBeginAuthenticateAsServer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -317,10 +393,14 @@ public class NegotiateStream extends AuthenticatedStream  {
 
     public IAsyncResult BeginAuthenticateAsServer(ExtendedProtectionPolicy policy, AsyncCallback asyncCallback, NetObject asyncState) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.IndexOutOfRangeException, system.NullReferenceException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.io.IOException, system.PlatformNotSupportedException, system.InvalidOperationException, system.InvalidCastException, system.configuration.ConfigurationErrorsException, system.threading.SemaphoreFullException, system.componentmodel.Win32Exception, system.AccessViolationException, system.security.SecurityException, system.threading.ThreadAbortException, system.OutOfMemoryException, system.ObjectDisposedException, system.security.authentication.AuthenticationException, system.security.authentication.InvalidCredentialException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginAuthenticateAsServer = null;
         try {
-            JCObject objBeginAuthenticateAsServer = (JCObject)classInstance.Invoke("BeginAuthenticateAsServer", policy == null ? null : policy.getJCOInstance(), asyncCallback, asyncState == null ? null : asyncState.getJCOInstance());
+            retObjectBeginAuthenticateAsServer = classInstance.Invoke("BeginAuthenticateAsServer", policy == null ? null : policy.getJCOInstance(), asyncCallback, asyncState == null ? null : asyncState.getJCOInstance());
+            JCObject objBeginAuthenticateAsServer = (JCObject)retObjectBeginAuthenticateAsServer;
             return new IAsyncResultImplementation(objBeginAuthenticateAsServer);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginAuthenticateAsServer != null ? retObjectBeginAuthenticateAsServer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -328,10 +408,14 @@ public class NegotiateStream extends AuthenticatedStream  {
 
     public IAsyncResult BeginRead(byte[] buffer, int offset, int count, AsyncCallback asyncCallback, NetObject asyncState) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.threading.AbandonedMutexException, system.threading.tasks.TaskSchedulerException, system.threading.tasks.TaskCanceledException, system.AggregateException, system.IndexOutOfRangeException, system.threading.SemaphoreFullException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginRead = null;
         try {
-            JCObject objBeginRead = (JCObject)classInstance.Invoke("BeginRead", buffer, offset, count, asyncCallback, asyncState == null ? null : asyncState.getJCOInstance());
+            retObjectBeginRead = classInstance.Invoke("BeginRead", buffer, offset, count, asyncCallback, asyncState == null ? null : asyncState.getJCOInstance());
+            JCObject objBeginRead = (JCObject)retObjectBeginRead;
             return new IAsyncResultImplementation(objBeginRead);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginRead != null ? retObjectBeginRead.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -339,10 +423,14 @@ public class NegotiateStream extends AuthenticatedStream  {
 
     public IAsyncResult BeginRead(JCORefOut dupParam0, int dupParam1, int dupParam2, AsyncCallback dupParam3, NetObject dupParam4) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.threading.AbandonedMutexException, system.threading.tasks.TaskSchedulerException, system.threading.tasks.TaskCanceledException, system.AggregateException, system.IndexOutOfRangeException, system.threading.SemaphoreFullException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginRead = null;
         try {
-            JCObject objBeginRead = (JCObject)classInstance.Invoke("BeginRead", dupParam0.getJCRefOut(), dupParam1, dupParam2, dupParam3, dupParam4 == null ? null : dupParam4.getJCOInstance());
+            retObjectBeginRead = classInstance.Invoke("BeginRead", dupParam0.getJCRefOut(), dupParam1, dupParam2, dupParam3, dupParam4 == null ? null : dupParam4.getJCOInstance());
+            JCObject objBeginRead = (JCObject)retObjectBeginRead;
             return new IAsyncResultImplementation(objBeginRead);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginRead != null ? retObjectBeginRead.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -350,10 +438,14 @@ public class NegotiateStream extends AuthenticatedStream  {
 
     public IAsyncResult BeginWrite(byte[] buffer, int offset, int count, AsyncCallback asyncCallback, NetObject asyncState) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.threading.AbandonedMutexException, system.threading.tasks.TaskSchedulerException, system.threading.tasks.TaskCanceledException, system.AggregateException, system.IndexOutOfRangeException, system.AccessViolationException, system.componentmodel.Win32Exception, system.threading.SemaphoreFullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginWrite = null;
         try {
-            JCObject objBeginWrite = (JCObject)classInstance.Invoke("BeginWrite", buffer, offset, count, asyncCallback, asyncState == null ? null : asyncState.getJCOInstance());
+            retObjectBeginWrite = classInstance.Invoke("BeginWrite", buffer, offset, count, asyncCallback, asyncState == null ? null : asyncState.getJCOInstance());
+            JCObject objBeginWrite = (JCObject)retObjectBeginWrite;
             return new IAsyncResultImplementation(objBeginWrite);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginWrite != null ? retObjectBeginWrite.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -361,10 +453,14 @@ public class NegotiateStream extends AuthenticatedStream  {
 
     public IAsyncResult BeginWrite(JCORefOut dupParam0, int dupParam1, int dupParam2, AsyncCallback dupParam3, NetObject dupParam4) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.threading.AbandonedMutexException, system.threading.tasks.TaskSchedulerException, system.threading.tasks.TaskCanceledException, system.AggregateException, system.IndexOutOfRangeException, system.AccessViolationException, system.componentmodel.Win32Exception, system.threading.SemaphoreFullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginWrite = null;
         try {
-            JCObject objBeginWrite = (JCObject)classInstance.Invoke("BeginWrite", dupParam0.getJCRefOut(), dupParam1, dupParam2, dupParam3, dupParam4 == null ? null : dupParam4.getJCOInstance());
+            retObjectBeginWrite = classInstance.Invoke("BeginWrite", dupParam0.getJCRefOut(), dupParam1, dupParam2, dupParam3, dupParam4 == null ? null : dupParam4.getJCOInstance());
+            JCObject objBeginWrite = (JCObject)retObjectBeginWrite;
             return new IAsyncResultImplementation(objBeginWrite);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginWrite != null ? retObjectBeginWrite.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -372,10 +468,14 @@ public class NegotiateStream extends AuthenticatedStream  {
 
     public Task AuthenticateAsClientAsync() throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.threading.SemaphoreFullException, system.NotSupportedException, system.componentmodel.Win32Exception, system.AccessViolationException, system.security.SecurityException, system.threading.ThreadAbortException, system.OutOfMemoryException, system.security.authentication.AuthenticationException, system.io.IOException, system.security.authentication.InvalidCredentialException, system.threading.tasks.TaskSchedulerException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAuthenticateAsClientAsync = null;
         try {
-            JCObject objAuthenticateAsClientAsync = (JCObject)classInstance.Invoke("AuthenticateAsClientAsync");
+            retObjectAuthenticateAsClientAsync = classInstance.Invoke("AuthenticateAsClientAsync");
+            JCObject objAuthenticateAsClientAsync = (JCObject)retObjectAuthenticateAsClientAsync;
             return new Task(objAuthenticateAsClientAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAuthenticateAsClientAsync != null ? retObjectAuthenticateAsClientAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -383,10 +483,14 @@ public class NegotiateStream extends AuthenticatedStream  {
 
     public Task AuthenticateAsClientAsync(NetworkCredential credential, ChannelBinding binding, java.lang.String targetName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.threading.SemaphoreFullException, system.NotSupportedException, system.componentmodel.Win32Exception, system.AccessViolationException, system.security.SecurityException, system.threading.ThreadAbortException, system.OutOfMemoryException, system.security.authentication.AuthenticationException, system.io.IOException, system.security.authentication.InvalidCredentialException, system.threading.tasks.TaskSchedulerException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAuthenticateAsClientAsync = null;
         try {
-            JCObject objAuthenticateAsClientAsync = (JCObject)classInstance.Invoke("AuthenticateAsClientAsync", credential == null ? null : credential.getJCOInstance(), binding == null ? null : binding.getJCOInstance(), targetName);
+            retObjectAuthenticateAsClientAsync = classInstance.Invoke("AuthenticateAsClientAsync", credential == null ? null : credential.getJCOInstance(), binding == null ? null : binding.getJCOInstance(), targetName);
+            JCObject objAuthenticateAsClientAsync = (JCObject)retObjectAuthenticateAsClientAsync;
             return new Task(objAuthenticateAsClientAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAuthenticateAsClientAsync != null ? retObjectAuthenticateAsClientAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -394,10 +498,14 @@ public class NegotiateStream extends AuthenticatedStream  {
 
     public Task AuthenticateAsClientAsync(NetworkCredential credential, ChannelBinding binding, java.lang.String targetName, ProtectionLevel requiredProtectionLevel, TokenImpersonationLevel allowedImpersonationLevel) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.threading.SemaphoreFullException, system.NotSupportedException, system.componentmodel.Win32Exception, system.AccessViolationException, system.security.SecurityException, system.threading.ThreadAbortException, system.OutOfMemoryException, system.security.authentication.AuthenticationException, system.io.IOException, system.security.authentication.InvalidCredentialException, system.threading.tasks.TaskSchedulerException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAuthenticateAsClientAsync = null;
         try {
-            JCObject objAuthenticateAsClientAsync = (JCObject)classInstance.Invoke("AuthenticateAsClientAsync", credential == null ? null : credential.getJCOInstance(), binding == null ? null : binding.getJCOInstance(), targetName, requiredProtectionLevel == null ? null : requiredProtectionLevel.getJCOInstance(), allowedImpersonationLevel == null ? null : allowedImpersonationLevel.getJCOInstance());
+            retObjectAuthenticateAsClientAsync = classInstance.Invoke("AuthenticateAsClientAsync", credential == null ? null : credential.getJCOInstance(), binding == null ? null : binding.getJCOInstance(), targetName, requiredProtectionLevel == null ? null : requiredProtectionLevel.getJCOInstance(), allowedImpersonationLevel == null ? null : allowedImpersonationLevel.getJCOInstance());
+            JCObject objAuthenticateAsClientAsync = (JCObject)retObjectAuthenticateAsClientAsync;
             return new Task(objAuthenticateAsClientAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAuthenticateAsClientAsync != null ? retObjectAuthenticateAsClientAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -405,10 +513,14 @@ public class NegotiateStream extends AuthenticatedStream  {
 
     public Task AuthenticateAsClientAsync(NetworkCredential credential, java.lang.String targetName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.threading.SemaphoreFullException, system.NotSupportedException, system.componentmodel.Win32Exception, system.AccessViolationException, system.security.SecurityException, system.threading.ThreadAbortException, system.OutOfMemoryException, system.security.authentication.AuthenticationException, system.io.IOException, system.security.authentication.InvalidCredentialException, system.threading.tasks.TaskSchedulerException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAuthenticateAsClientAsync = null;
         try {
-            JCObject objAuthenticateAsClientAsync = (JCObject)classInstance.Invoke("AuthenticateAsClientAsync", credential == null ? null : credential.getJCOInstance(), targetName);
+            retObjectAuthenticateAsClientAsync = classInstance.Invoke("AuthenticateAsClientAsync", credential == null ? null : credential.getJCOInstance(), targetName);
+            JCObject objAuthenticateAsClientAsync = (JCObject)retObjectAuthenticateAsClientAsync;
             return new Task(objAuthenticateAsClientAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAuthenticateAsClientAsync != null ? retObjectAuthenticateAsClientAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -416,10 +528,14 @@ public class NegotiateStream extends AuthenticatedStream  {
 
     public Task AuthenticateAsClientAsync(NetworkCredential credential, java.lang.String targetName, ProtectionLevel requiredProtectionLevel, TokenImpersonationLevel allowedImpersonationLevel) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.componentmodel.Win32Exception, system.NotSupportedException, system.security.SecurityException, system.OutOfMemoryException, system.security.authentication.AuthenticationException, system.io.IOException, system.security.authentication.InvalidCredentialException, system.threading.tasks.TaskSchedulerException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAuthenticateAsClientAsync = null;
         try {
-            JCObject objAuthenticateAsClientAsync = (JCObject)classInstance.Invoke("AuthenticateAsClientAsync", credential == null ? null : credential.getJCOInstance(), targetName, requiredProtectionLevel == null ? null : requiredProtectionLevel.getJCOInstance(), allowedImpersonationLevel == null ? null : allowedImpersonationLevel.getJCOInstance());
+            retObjectAuthenticateAsClientAsync = classInstance.Invoke("AuthenticateAsClientAsync", credential == null ? null : credential.getJCOInstance(), targetName, requiredProtectionLevel == null ? null : requiredProtectionLevel.getJCOInstance(), allowedImpersonationLevel == null ? null : allowedImpersonationLevel.getJCOInstance());
+            JCObject objAuthenticateAsClientAsync = (JCObject)retObjectAuthenticateAsClientAsync;
             return new Task(objAuthenticateAsClientAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAuthenticateAsClientAsync != null ? retObjectAuthenticateAsClientAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -427,10 +543,14 @@ public class NegotiateStream extends AuthenticatedStream  {
 
     public Task AuthenticateAsServerAsync() throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception, system.NotSupportedException, system.security.SecurityException, system.OutOfMemoryException, system.security.authentication.AuthenticationException, system.io.IOException, system.security.authentication.InvalidCredentialException, system.threading.tasks.TaskSchedulerException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAuthenticateAsServerAsync = null;
         try {
-            JCObject objAuthenticateAsServerAsync = (JCObject)classInstance.Invoke("AuthenticateAsServerAsync");
+            retObjectAuthenticateAsServerAsync = classInstance.Invoke("AuthenticateAsServerAsync");
+            JCObject objAuthenticateAsServerAsync = (JCObject)retObjectAuthenticateAsServerAsync;
             return new Task(objAuthenticateAsServerAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAuthenticateAsServerAsync != null ? retObjectAuthenticateAsServerAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -438,10 +558,14 @@ public class NegotiateStream extends AuthenticatedStream  {
 
     public Task AuthenticateAsServerAsync(NetworkCredential credential, ProtectionLevel requiredProtectionLevel, TokenImpersonationLevel requiredImpersonationLevel) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.componentmodel.Win32Exception, system.NotSupportedException, system.security.SecurityException, system.OutOfMemoryException, system.security.authentication.AuthenticationException, system.io.IOException, system.security.authentication.InvalidCredentialException, system.threading.tasks.TaskSchedulerException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAuthenticateAsServerAsync = null;
         try {
-            JCObject objAuthenticateAsServerAsync = (JCObject)classInstance.Invoke("AuthenticateAsServerAsync", credential == null ? null : credential.getJCOInstance(), requiredProtectionLevel == null ? null : requiredProtectionLevel.getJCOInstance(), requiredImpersonationLevel == null ? null : requiredImpersonationLevel.getJCOInstance());
+            retObjectAuthenticateAsServerAsync = classInstance.Invoke("AuthenticateAsServerAsync", credential == null ? null : credential.getJCOInstance(), requiredProtectionLevel == null ? null : requiredProtectionLevel.getJCOInstance(), requiredImpersonationLevel == null ? null : requiredImpersonationLevel.getJCOInstance());
+            JCObject objAuthenticateAsServerAsync = (JCObject)retObjectAuthenticateAsServerAsync;
             return new Task(objAuthenticateAsServerAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAuthenticateAsServerAsync != null ? retObjectAuthenticateAsServerAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -449,10 +573,14 @@ public class NegotiateStream extends AuthenticatedStream  {
 
     public Task AuthenticateAsServerAsync(NetworkCredential credential, ExtendedProtectionPolicy policy, ProtectionLevel requiredProtectionLevel, TokenImpersonationLevel requiredImpersonationLevel) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.componentmodel.Win32Exception, system.NotSupportedException, system.security.SecurityException, system.OutOfMemoryException, system.security.authentication.AuthenticationException, system.io.IOException, system.security.authentication.InvalidCredentialException, system.threading.tasks.TaskSchedulerException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAuthenticateAsServerAsync = null;
         try {
-            JCObject objAuthenticateAsServerAsync = (JCObject)classInstance.Invoke("AuthenticateAsServerAsync", credential == null ? null : credential.getJCOInstance(), policy == null ? null : policy.getJCOInstance(), requiredProtectionLevel == null ? null : requiredProtectionLevel.getJCOInstance(), requiredImpersonationLevel == null ? null : requiredImpersonationLevel.getJCOInstance());
+            retObjectAuthenticateAsServerAsync = classInstance.Invoke("AuthenticateAsServerAsync", credential == null ? null : credential.getJCOInstance(), policy == null ? null : policy.getJCOInstance(), requiredProtectionLevel == null ? null : requiredProtectionLevel.getJCOInstance(), requiredImpersonationLevel == null ? null : requiredImpersonationLevel.getJCOInstance());
+            JCObject objAuthenticateAsServerAsync = (JCObject)retObjectAuthenticateAsServerAsync;
             return new Task(objAuthenticateAsServerAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAuthenticateAsServerAsync != null ? retObjectAuthenticateAsServerAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -460,10 +588,14 @@ public class NegotiateStream extends AuthenticatedStream  {
 
     public Task AuthenticateAsServerAsync(ExtendedProtectionPolicy policy) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception, system.NotSupportedException, system.security.SecurityException, system.OutOfMemoryException, system.security.authentication.AuthenticationException, system.io.IOException, system.security.authentication.InvalidCredentialException, system.threading.tasks.TaskSchedulerException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAuthenticateAsServerAsync = null;
         try {
-            JCObject objAuthenticateAsServerAsync = (JCObject)classInstance.Invoke("AuthenticateAsServerAsync", policy == null ? null : policy.getJCOInstance());
+            retObjectAuthenticateAsServerAsync = classInstance.Invoke("AuthenticateAsServerAsync", policy == null ? null : policy.getJCOInstance());
+            JCObject objAuthenticateAsServerAsync = (JCObject)retObjectAuthenticateAsServerAsync;
             return new Task(objAuthenticateAsServerAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAuthenticateAsServerAsync != null ? retObjectAuthenticateAsServerAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -471,7 +603,7 @@ public class NegotiateStream extends AuthenticatedStream  {
 
     public void AuthenticateAsClient() throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.IndexOutOfRangeException, system.NullReferenceException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.threading.SemaphoreFullException, system.componentmodel.Win32Exception, system.AccessViolationException, system.security.SecurityException, system.threading.ThreadAbortException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.security.authentication.AuthenticationException, system.io.IOException, system.security.authentication.InvalidCredentialException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AuthenticateAsClient");
         } catch (JCNativeException jcne) {
@@ -481,7 +613,7 @@ public class NegotiateStream extends AuthenticatedStream  {
 
     public void AuthenticateAsClient(NetworkCredential credential, ChannelBinding binding, java.lang.String targetName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.threading.SemaphoreFullException, system.NotSupportedException, system.componentmodel.Win32Exception, system.AccessViolationException, system.security.SecurityException, system.FormatException, system.threading.ThreadAbortException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.security.authentication.AuthenticationException, system.io.IOException, system.security.authentication.InvalidCredentialException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AuthenticateAsClient", credential == null ? null : credential.getJCOInstance(), binding == null ? null : binding.getJCOInstance(), targetName);
         } catch (JCNativeException jcne) {
@@ -491,7 +623,7 @@ public class NegotiateStream extends AuthenticatedStream  {
 
     public void AuthenticateAsClient(NetworkCredential credential, ChannelBinding binding, java.lang.String targetName, ProtectionLevel requiredProtectionLevel, TokenImpersonationLevel allowedImpersonationLevel) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.tasks.TaskCanceledException, system.AggregateException, system.threading.SemaphoreFullException, system.IndexOutOfRangeException, system.NotSupportedException, system.threading.tasks.TaskSchedulerException, system.componentmodel.Win32Exception, system.AccessViolationException, system.security.SecurityException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.security.authentication.AuthenticationException, system.io.IOException, system.threading.WaitHandleCannotBeOpenedException, system.security.authentication.InvalidCredentialException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AuthenticateAsClient", credential == null ? null : credential.getJCOInstance(), binding == null ? null : binding.getJCOInstance(), targetName, requiredProtectionLevel == null ? null : requiredProtectionLevel.getJCOInstance(), allowedImpersonationLevel == null ? null : allowedImpersonationLevel.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -501,7 +633,7 @@ public class NegotiateStream extends AuthenticatedStream  {
 
     public void AuthenticateAsClient(NetworkCredential credential, java.lang.String targetName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.threading.SemaphoreFullException, system.NotSupportedException, system.componentmodel.Win32Exception, system.AccessViolationException, system.security.SecurityException, system.FormatException, system.threading.ThreadAbortException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.security.authentication.AuthenticationException, system.io.IOException, system.security.authentication.InvalidCredentialException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AuthenticateAsClient", credential == null ? null : credential.getJCOInstance(), targetName);
         } catch (JCNativeException jcne) {
@@ -511,7 +643,7 @@ public class NegotiateStream extends AuthenticatedStream  {
 
     public void AuthenticateAsClient(NetworkCredential credential, java.lang.String targetName, ProtectionLevel requiredProtectionLevel, TokenImpersonationLevel allowedImpersonationLevel) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.threading.SemaphoreFullException, system.NotSupportedException, system.componentmodel.Win32Exception, system.AccessViolationException, system.security.SecurityException, system.FormatException, system.threading.ThreadAbortException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.security.authentication.AuthenticationException, system.io.IOException, system.security.authentication.InvalidCredentialException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AuthenticateAsClient", credential == null ? null : credential.getJCOInstance(), targetName, requiredProtectionLevel == null ? null : requiredProtectionLevel.getJCOInstance(), allowedImpersonationLevel == null ? null : allowedImpersonationLevel.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -521,7 +653,7 @@ public class NegotiateStream extends AuthenticatedStream  {
 
     public void AuthenticateAsServer() throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.IndexOutOfRangeException, system.NullReferenceException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.io.IOException, system.PlatformNotSupportedException, system.InvalidOperationException, system.InvalidCastException, system.configuration.ConfigurationErrorsException, system.threading.SemaphoreFullException, system.componentmodel.Win32Exception, system.AccessViolationException, system.security.SecurityException, system.threading.ThreadAbortException, system.OutOfMemoryException, system.ObjectDisposedException, system.security.authentication.AuthenticationException, system.security.authentication.InvalidCredentialException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AuthenticateAsServer");
         } catch (JCNativeException jcne) {
@@ -531,7 +663,7 @@ public class NegotiateStream extends AuthenticatedStream  {
 
     public void AuthenticateAsServer(NetworkCredential credential, ProtectionLevel requiredProtectionLevel, TokenImpersonationLevel requiredImpersonationLevel) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.io.IOException, system.ArgumentNullException, system.PlatformNotSupportedException, system.InvalidOperationException, system.NotSupportedException, system.InvalidCastException, system.configuration.ConfigurationErrorsException, system.threading.SemaphoreFullException, system.componentmodel.Win32Exception, system.AccessViolationException, system.globalization.CultureNotFoundException, system.security.SecurityException, system.FormatException, system.threading.ThreadAbortException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.security.authentication.AuthenticationException, system.security.authentication.InvalidCredentialException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AuthenticateAsServer", credential == null ? null : credential.getJCOInstance(), requiredProtectionLevel == null ? null : requiredProtectionLevel.getJCOInstance(), requiredImpersonationLevel == null ? null : requiredImpersonationLevel.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -541,7 +673,7 @@ public class NegotiateStream extends AuthenticatedStream  {
 
     public void AuthenticateAsServer(NetworkCredential credential, ExtendedProtectionPolicy policy, ProtectionLevel requiredProtectionLevel, TokenImpersonationLevel requiredImpersonationLevel) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.InvalidOperationException, system.PlatformNotSupportedException, system.NotSupportedException, system.componentmodel.Win32Exception, system.InvalidCastException, system.configuration.ConfigurationErrorsException, system.MissingMethodException, system.ObjectDisposedException, system.threading.SemaphoreFullException, system.AccessViolationException, system.threading.ThreadAbortException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.security.authentication.AuthenticationException, system.threading.WaitHandleCannotBeOpenedException, system.security.authentication.InvalidCredentialException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AuthenticateAsServer", credential == null ? null : credential.getJCOInstance(), policy == null ? null : policy.getJCOInstance(), requiredProtectionLevel == null ? null : requiredProtectionLevel.getJCOInstance(), requiredImpersonationLevel == null ? null : requiredImpersonationLevel.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -551,7 +683,7 @@ public class NegotiateStream extends AuthenticatedStream  {
 
     public void AuthenticateAsServer(ExtendedProtectionPolicy policy) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.IndexOutOfRangeException, system.NullReferenceException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.io.IOException, system.PlatformNotSupportedException, system.InvalidOperationException, system.InvalidCastException, system.configuration.ConfigurationErrorsException, system.threading.SemaphoreFullException, system.componentmodel.Win32Exception, system.AccessViolationException, system.security.SecurityException, system.threading.ThreadAbortException, system.OutOfMemoryException, system.ObjectDisposedException, system.security.authentication.AuthenticationException, system.security.authentication.InvalidCredentialException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AuthenticateAsServer", policy == null ? null : policy.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -561,7 +693,7 @@ public class NegotiateStream extends AuthenticatedStream  {
 
     public void EndAuthenticateAsClient(IAsyncResult asyncResult) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EndAuthenticateAsClient", asyncResult == null ? null : asyncResult.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -571,7 +703,7 @@ public class NegotiateStream extends AuthenticatedStream  {
 
     public void EndAuthenticateAsServer(IAsyncResult asyncResult) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EndAuthenticateAsServer", asyncResult == null ? null : asyncResult.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -581,7 +713,7 @@ public class NegotiateStream extends AuthenticatedStream  {
 
     public void EndWrite(IAsyncResult asyncResult) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.diagnostics.tracing.EventSourceException, system.threading.ThreadAbortException, system.threading.tasks.TaskSchedulerException, system.OperationCanceledException, system.threading.tasks.TaskCanceledException, system.AggregateException, system.threading.SemaphoreFullException, system.threading.SynchronizationLockException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.threading.WaitHandleCannotBeOpenedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EndWrite", asyncResult == null ? null : asyncResult.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -591,7 +723,7 @@ public class NegotiateStream extends AuthenticatedStream  {
 
     public void Flush() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Flush");
         } catch (JCNativeException jcne) {
@@ -601,7 +733,7 @@ public class NegotiateStream extends AuthenticatedStream  {
 
     public void SetLength(long value) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetLength", value);
         } catch (JCNativeException jcne) {
@@ -611,7 +743,7 @@ public class NegotiateStream extends AuthenticatedStream  {
 
     public void Write(byte[] buffer, int offset, int count) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.NotSupportedException, system.AccessViolationException, system.componentmodel.Win32Exception, system.io.IOException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.threading.tasks.TaskSchedulerException, system.threading.SemaphoreFullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Write", buffer, offset, count);
         } catch (JCNativeException jcne) {
@@ -621,7 +753,7 @@ public class NegotiateStream extends AuthenticatedStream  {
 
     public void Write(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.NotSupportedException, system.AccessViolationException, system.componentmodel.Win32Exception, system.io.IOException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.threading.tasks.TaskSchedulerException, system.threading.SemaphoreFullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Write", dupParam0.getJCRefOut(), dupParam1, dupParam2);
         } catch (JCNativeException jcne) {
@@ -635,10 +767,14 @@ public class NegotiateStream extends AuthenticatedStream  {
     
     public IIdentity getRemoteIdentity() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.AccessViolationException, system.NotSupportedException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRemoteIdentity = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RemoteIdentity");
+            retObjectRemoteIdentity = classInstance.Get("RemoteIdentity");
+            JCObject val = (JCObject)retObjectRemoteIdentity;
             return new IIdentityImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRemoteIdentity != null ? retObjectRemoteIdentity.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -646,10 +782,14 @@ public class NegotiateStream extends AuthenticatedStream  {
 
     public TokenImpersonationLevel getImpersonationLevel() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.AccessViolationException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectImpersonationLevel = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ImpersonationLevel");
+            retObjectImpersonationLevel = classInstance.Get("ImpersonationLevel");
+            JCObject val = (JCObject)retObjectImpersonationLevel;
             return new TokenImpersonationLevel(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectImpersonationLevel != null ? retObjectImpersonationLevel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

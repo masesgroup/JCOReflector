@@ -161,9 +161,13 @@ public class CorrelationTokenEventArgs extends EventArgs  {
     
     public boolean getIsInitializing() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsInitializing = null;
         try {
-            return (boolean)classInstance.Get("IsInitializing");
+            retObjectIsInitializing = classInstance.Get("IsInitializing");
+            return (boolean)retObjectIsInitializing;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsInitializing != null ? retObjectIsInitializing.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,10 +175,14 @@ public class CorrelationTokenEventArgs extends EventArgs  {
 
     public CorrelationToken getCorrelationToken() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCorrelationToken = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CorrelationToken");
+            retObjectCorrelationToken = classInstance.Get("CorrelationToken");
+            JCObject val = (JCObject)retObjectCorrelationToken;
             return new CorrelationToken(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCorrelationToken != null ? retObjectCorrelationToken.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

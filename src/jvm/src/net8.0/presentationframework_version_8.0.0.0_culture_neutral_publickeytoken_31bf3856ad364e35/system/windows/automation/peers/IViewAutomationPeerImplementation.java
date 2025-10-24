@@ -146,10 +146,14 @@ public class IViewAutomationPeerImplementation extends NetObject implements IVie
     
     public NetObject GetPattern(PatternInterface patternInterface) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPattern = null;
         try {
-            JCObject objGetPattern = (JCObject)classInstance.Invoke("GetPattern", patternInterface == null ? null : patternInterface.getJCOInstance());
+            retObjectGetPattern = classInstance.Invoke("GetPattern", patternInterface == null ? null : patternInterface.getJCOInstance());
+            JCObject objGetPattern = (JCObject)retObjectGetPattern;
             return new NetObject(objGetPattern);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetPattern != null ? retObjectGetPattern.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -157,10 +161,14 @@ public class IViewAutomationPeerImplementation extends NetObject implements IVie
 
     public AutomationControlType GetAutomationControlType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetAutomationControlType = null;
         try {
-            JCObject objGetAutomationControlType = (JCObject)classInstance.Invoke("GetAutomationControlType");
+            retObjectGetAutomationControlType = classInstance.Invoke("GetAutomationControlType");
+            JCObject objGetAutomationControlType = (JCObject)retObjectGetAutomationControlType;
             return new AutomationControlType(objGetAutomationControlType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetAutomationControlType != null ? retObjectGetAutomationControlType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -168,10 +176,14 @@ public class IViewAutomationPeerImplementation extends NetObject implements IVie
 
     public ItemAutomationPeer CreateItemAutomationPeer(NetObject item) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateItemAutomationPeer = null;
         try {
-            JCObject objCreateItemAutomationPeer = (JCObject)classInstance.Invoke("CreateItemAutomationPeer", item == null ? null : item.getJCOInstance());
+            retObjectCreateItemAutomationPeer = classInstance.Invoke("CreateItemAutomationPeer", item == null ? null : item.getJCOInstance());
+            JCObject objCreateItemAutomationPeer = (JCObject)retObjectCreateItemAutomationPeer;
             return new ItemAutomationPeer(objCreateItemAutomationPeer);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateItemAutomationPeer != null ? retObjectCreateItemAutomationPeer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,7 +191,7 @@ public class IViewAutomationPeerImplementation extends NetObject implements IVie
 
     public void ItemsChanged(NotifyCollectionChangedEventArgs e) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ItemsChanged", e == null ? null : e.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -189,7 +201,7 @@ public class IViewAutomationPeerImplementation extends NetObject implements IVie
 
     public void ViewDetached() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ViewDetached");
         } catch (JCNativeException jcne) {

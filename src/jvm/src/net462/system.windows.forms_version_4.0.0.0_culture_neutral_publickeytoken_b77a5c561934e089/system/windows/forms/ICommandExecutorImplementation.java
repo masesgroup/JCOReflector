@@ -142,7 +142,7 @@ public class ICommandExecutorImplementation extends NetObject implements IComman
     
     public void Execute() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Execute");
         } catch (JCNativeException jcne) {

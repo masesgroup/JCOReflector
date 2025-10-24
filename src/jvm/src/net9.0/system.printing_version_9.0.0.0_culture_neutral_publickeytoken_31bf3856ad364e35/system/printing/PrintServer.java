@@ -243,9 +243,13 @@ public class PrintServer extends PrintSystemObject  {
     
     public static boolean DeletePrintQueue(PrintQueue printQueue) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.ArgumentNullException, system.OutOfMemoryException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDeletePrintQueue = null;
         try {
-            return (boolean)classType.Invoke("DeletePrintQueue", printQueue == null ? null : printQueue.getJCOInstance());
+            retObjectDeletePrintQueue = classType.Invoke("DeletePrintQueue", printQueue == null ? null : printQueue.getJCOInstance());
+            return (boolean)retObjectDeletePrintQueue;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectDeletePrintQueue != null ? retObjectDeletePrintQueue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -253,9 +257,13 @@ public class PrintServer extends PrintSystemObject  {
 
     public static boolean DeletePrintQueue(java.lang.String printQueueName) throws Throwable, system.PlatformNotSupportedException, system.OutOfMemoryException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.ArgumentException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDeletePrintQueue = null;
         try {
-            return (boolean)classType.Invoke("DeletePrintQueue", printQueueName);
+            retObjectDeletePrintQueue = classType.Invoke("DeletePrintQueue", printQueueName);
+            return (boolean)retObjectDeletePrintQueue;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectDeletePrintQueue != null ? retObjectDeletePrintQueue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -263,10 +271,14 @@ public class PrintServer extends PrintSystemObject  {
 
     public PrintQueue GetPrintQueue(java.lang.String printQueueName, java.lang.String[] propertiesFilter) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException, system.printing.PrintingNotSupportedException, system.printing.PrintQueueException, system.ObjectDisposedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPrintQueue = null;
         try {
-            JCObject objGetPrintQueue = (JCObject)classInstance.Invoke("GetPrintQueue", printQueueName, propertiesFilter);
+            retObjectGetPrintQueue = classInstance.Invoke("GetPrintQueue", printQueueName, propertiesFilter);
+            JCObject objGetPrintQueue = (JCObject)retObjectGetPrintQueue;
             return new PrintQueue(objGetPrintQueue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetPrintQueue != null ? retObjectGetPrintQueue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -274,10 +286,14 @@ public class PrintServer extends PrintSystemObject  {
 
     public PrintQueue GetPrintQueue(java.lang.String dupParam0, JCORefOut dupParam1) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException, system.printing.PrintingNotSupportedException, system.printing.PrintQueueException, system.ObjectDisposedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPrintQueue = null;
         try {
-            JCObject objGetPrintQueue = (JCObject)classInstance.Invoke("GetPrintQueue", dupParam0, dupParam1.getJCRefOut());
+            retObjectGetPrintQueue = classInstance.Invoke("GetPrintQueue", dupParam0, dupParam1.getJCRefOut());
+            JCObject objGetPrintQueue = (JCObject)retObjectGetPrintQueue;
             return new PrintQueue(objGetPrintQueue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetPrintQueue != null ? retObjectGetPrintQueue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -285,10 +301,14 @@ public class PrintServer extends PrintSystemObject  {
 
     public PrintQueue GetPrintQueue(java.lang.String printQueueName) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException, system.printing.PrintingNotSupportedException, system.printing.PrintQueueException, system.ObjectDisposedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPrintQueue = null;
         try {
-            JCObject objGetPrintQueue = (JCObject)classInstance.Invoke("GetPrintQueue", printQueueName);
+            retObjectGetPrintQueue = classInstance.Invoke("GetPrintQueue", printQueueName);
+            JCObject objGetPrintQueue = (JCObject)retObjectGetPrintQueue;
             return new PrintQueue(objGetPrintQueue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetPrintQueue != null ? retObjectGetPrintQueue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -296,10 +316,14 @@ public class PrintServer extends PrintSystemObject  {
 
     public PrintQueue InstallPrintQueue(java.lang.String printQueueName, java.lang.String driverName, java.lang.String[] portNames, java.lang.String printProcessorName, PrintPropertyDictionary initialParameters) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException, system.OutOfMemoryException, system.AccessViolationException, system.ObjectDisposedException, system.FormatException, system.globalization.CultureNotFoundException, system.printing.PrintQueueException, system.printing.PrintCommitAttributesException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInstallPrintQueue = null;
         try {
-            JCObject objInstallPrintQueue = (JCObject)classInstance.Invoke("InstallPrintQueue", printQueueName, driverName, portNames, printProcessorName, initialParameters == null ? null : initialParameters.getJCOInstance());
+            retObjectInstallPrintQueue = classInstance.Invoke("InstallPrintQueue", printQueueName, driverName, portNames, printProcessorName, initialParameters == null ? null : initialParameters.getJCOInstance());
+            JCObject objInstallPrintQueue = (JCObject)retObjectInstallPrintQueue;
             return new PrintQueue(objInstallPrintQueue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInstallPrintQueue != null ? retObjectInstallPrintQueue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -307,10 +331,14 @@ public class PrintServer extends PrintSystemObject  {
 
     public PrintQueue InstallPrintQueue(java.lang.String dupParam0, java.lang.String dupParam1, JCORefOut dupParam2, java.lang.String dupParam3, PrintPropertyDictionary dupParam4) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException, system.OutOfMemoryException, system.AccessViolationException, system.ObjectDisposedException, system.FormatException, system.globalization.CultureNotFoundException, system.printing.PrintQueueException, system.printing.PrintCommitAttributesException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInstallPrintQueue = null;
         try {
-            JCObject objInstallPrintQueue = (JCObject)classInstance.Invoke("InstallPrintQueue", dupParam0, dupParam1, dupParam2.getJCRefOut(), dupParam3, dupParam4 == null ? null : dupParam4.getJCOInstance());
+            retObjectInstallPrintQueue = classInstance.Invoke("InstallPrintQueue", dupParam0, dupParam1, dupParam2.getJCRefOut(), dupParam3, dupParam4 == null ? null : dupParam4.getJCOInstance());
+            JCObject objInstallPrintQueue = (JCObject)retObjectInstallPrintQueue;
             return new PrintQueue(objInstallPrintQueue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInstallPrintQueue != null ? retObjectInstallPrintQueue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -318,10 +346,14 @@ public class PrintServer extends PrintSystemObject  {
 
     public PrintQueue InstallPrintQueue(java.lang.String printQueueName, java.lang.String driverName, java.lang.String[] portNames, java.lang.String printProcessorName, PrintQueueAttributes printQueueAttributes, PrintQueueStringProperty printQueueProperty, int printQueuePriority, int printQueueDefaultPriority) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException, system.FormatException, system.OutOfMemoryException, system.AccessViolationException, system.ObjectDisposedException, system.globalization.CultureNotFoundException, system.printing.PrintQueueException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInstallPrintQueue = null;
         try {
-            JCObject objInstallPrintQueue = (JCObject)classInstance.Invoke("InstallPrintQueue", printQueueName, driverName, portNames, printProcessorName, printQueueAttributes == null ? null : printQueueAttributes.getJCOInstance(), printQueueProperty == null ? null : printQueueProperty.getJCOInstance(), printQueuePriority, printQueueDefaultPriority);
+            retObjectInstallPrintQueue = classInstance.Invoke("InstallPrintQueue", printQueueName, driverName, portNames, printProcessorName, printQueueAttributes == null ? null : printQueueAttributes.getJCOInstance(), printQueueProperty == null ? null : printQueueProperty.getJCOInstance(), printQueuePriority, printQueueDefaultPriority);
+            JCObject objInstallPrintQueue = (JCObject)retObjectInstallPrintQueue;
             return new PrintQueue(objInstallPrintQueue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInstallPrintQueue != null ? retObjectInstallPrintQueue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -329,10 +361,14 @@ public class PrintServer extends PrintSystemObject  {
 
     public PrintQueue InstallPrintQueue(java.lang.String dupParam0, java.lang.String dupParam1, JCORefOut dupParam2, java.lang.String dupParam3, PrintQueueAttributes dupParam4, PrintQueueStringProperty dupParam5, int dupParam6, int dupParam7) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException, system.FormatException, system.OutOfMemoryException, system.AccessViolationException, system.ObjectDisposedException, system.globalization.CultureNotFoundException, system.printing.PrintQueueException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInstallPrintQueue = null;
         try {
-            JCObject objInstallPrintQueue = (JCObject)classInstance.Invoke("InstallPrintQueue", dupParam0, dupParam1, dupParam2.getJCRefOut(), dupParam3, dupParam4 == null ? null : dupParam4.getJCOInstance(), dupParam5 == null ? null : dupParam5.getJCOInstance(), dupParam6, dupParam7);
+            retObjectInstallPrintQueue = classInstance.Invoke("InstallPrintQueue", dupParam0, dupParam1, dupParam2.getJCRefOut(), dupParam3, dupParam4 == null ? null : dupParam4.getJCOInstance(), dupParam5 == null ? null : dupParam5.getJCOInstance(), dupParam6, dupParam7);
+            JCObject objInstallPrintQueue = (JCObject)retObjectInstallPrintQueue;
             return new PrintQueue(objInstallPrintQueue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInstallPrintQueue != null ? retObjectInstallPrintQueue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -340,10 +376,14 @@ public class PrintServer extends PrintSystemObject  {
 
     public PrintQueue InstallPrintQueue(java.lang.String printQueueName, java.lang.String driverName, java.lang.String[] portNames, java.lang.String printProcessorName, PrintQueueAttributes printQueueAttributes, java.lang.String printQueueShareName, java.lang.String printQueueComment, java.lang.String printQueueLocation, java.lang.String printQueueSeparatorFile, int printQueuePriority, int printQueueDefaultPriority) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException, system.OutOfMemoryException, system.FormatException, system.AccessViolationException, system.ObjectDisposedException, system.globalization.CultureNotFoundException, system.printing.PrintQueueException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInstallPrintQueue = null;
         try {
-            JCObject objInstallPrintQueue = (JCObject)classInstance.Invoke("InstallPrintQueue", printQueueName, driverName, portNames, printProcessorName, printQueueAttributes == null ? null : printQueueAttributes.getJCOInstance(), printQueueShareName, printQueueComment, printQueueLocation, printQueueSeparatorFile, printQueuePriority, printQueueDefaultPriority);
+            retObjectInstallPrintQueue = classInstance.Invoke("InstallPrintQueue", printQueueName, driverName, portNames, printProcessorName, printQueueAttributes == null ? null : printQueueAttributes.getJCOInstance(), printQueueShareName, printQueueComment, printQueueLocation, printQueueSeparatorFile, printQueuePriority, printQueueDefaultPriority);
+            JCObject objInstallPrintQueue = (JCObject)retObjectInstallPrintQueue;
             return new PrintQueue(objInstallPrintQueue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInstallPrintQueue != null ? retObjectInstallPrintQueue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -351,10 +391,14 @@ public class PrintServer extends PrintSystemObject  {
 
     public PrintQueue InstallPrintQueue(java.lang.String dupParam0, java.lang.String dupParam1, JCORefOut dupParam2, java.lang.String dupParam3, PrintQueueAttributes dupParam4, java.lang.String dupParam5, java.lang.String dupParam6, java.lang.String dupParam7, java.lang.String dupParam8, int dupParam9, int dupParam10) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException, system.OutOfMemoryException, system.FormatException, system.AccessViolationException, system.ObjectDisposedException, system.globalization.CultureNotFoundException, system.printing.PrintQueueException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInstallPrintQueue = null;
         try {
-            JCObject objInstallPrintQueue = (JCObject)classInstance.Invoke("InstallPrintQueue", dupParam0, dupParam1, dupParam2.getJCRefOut(), dupParam3, dupParam4 == null ? null : dupParam4.getJCOInstance(), dupParam5, dupParam6, dupParam7, dupParam8, dupParam9, dupParam10);
+            retObjectInstallPrintQueue = classInstance.Invoke("InstallPrintQueue", dupParam0, dupParam1, dupParam2.getJCRefOut(), dupParam3, dupParam4 == null ? null : dupParam4.getJCOInstance(), dupParam5, dupParam6, dupParam7, dupParam8, dupParam9, dupParam10);
+            JCObject objInstallPrintQueue = (JCObject)retObjectInstallPrintQueue;
             return new PrintQueue(objInstallPrintQueue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInstallPrintQueue != null ? retObjectInstallPrintQueue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -362,10 +406,14 @@ public class PrintServer extends PrintSystemObject  {
 
     public PrintQueue InstallPrintQueue(java.lang.String printQueueName, java.lang.String driverName, java.lang.String[] portNames, java.lang.String printProcessorName, PrintQueueAttributes printQueueAttributes) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException, system.OutOfMemoryException, system.FormatException, system.AccessViolationException, system.ObjectDisposedException, system.globalization.CultureNotFoundException, system.printing.PrintQueueException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInstallPrintQueue = null;
         try {
-            JCObject objInstallPrintQueue = (JCObject)classInstance.Invoke("InstallPrintQueue", printQueueName, driverName, portNames, printProcessorName, printQueueAttributes == null ? null : printQueueAttributes.getJCOInstance());
+            retObjectInstallPrintQueue = classInstance.Invoke("InstallPrintQueue", printQueueName, driverName, portNames, printProcessorName, printQueueAttributes == null ? null : printQueueAttributes.getJCOInstance());
+            JCObject objInstallPrintQueue = (JCObject)retObjectInstallPrintQueue;
             return new PrintQueue(objInstallPrintQueue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInstallPrintQueue != null ? retObjectInstallPrintQueue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -373,10 +421,14 @@ public class PrintServer extends PrintSystemObject  {
 
     public PrintQueue InstallPrintQueue(java.lang.String dupParam0, java.lang.String dupParam1, JCORefOut dupParam2, java.lang.String dupParam3, PrintQueueAttributes dupParam4) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException, system.OutOfMemoryException, system.FormatException, system.AccessViolationException, system.ObjectDisposedException, system.globalization.CultureNotFoundException, system.printing.PrintQueueException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInstallPrintQueue = null;
         try {
-            JCObject objInstallPrintQueue = (JCObject)classInstance.Invoke("InstallPrintQueue", dupParam0, dupParam1, dupParam2.getJCRefOut(), dupParam3, dupParam4 == null ? null : dupParam4.getJCOInstance());
+            retObjectInstallPrintQueue = classInstance.Invoke("InstallPrintQueue", dupParam0, dupParam1, dupParam2.getJCRefOut(), dupParam3, dupParam4 == null ? null : dupParam4.getJCOInstance());
+            JCObject objInstallPrintQueue = (JCObject)retObjectInstallPrintQueue;
             return new PrintQueue(objInstallPrintQueue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInstallPrintQueue != null ? retObjectInstallPrintQueue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -384,10 +436,14 @@ public class PrintServer extends PrintSystemObject  {
 
     public PrintQueueCollection GetPrintQueues() throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPrintQueues = null;
         try {
-            JCObject objGetPrintQueues = (JCObject)classInstance.Invoke("GetPrintQueues");
+            retObjectGetPrintQueues = classInstance.Invoke("GetPrintQueues");
+            JCObject objGetPrintQueues = (JCObject)retObjectGetPrintQueues;
             return new PrintQueueCollection(objGetPrintQueues);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetPrintQueues != null ? retObjectGetPrintQueues.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -395,10 +451,14 @@ public class PrintServer extends PrintSystemObject  {
 
     public PrintQueueCollection GetPrintQueues(EnumeratedPrintQueueTypes[] enumerationFlag) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPrintQueues = null;
         try {
-            JCObject objGetPrintQueues = (JCObject)classInstance.Invoke("GetPrintQueues", (java.lang.Object)toObjectFromArray(enumerationFlag));
+            retObjectGetPrintQueues = classInstance.Invoke("GetPrintQueues", (java.lang.Object)toObjectFromArray(enumerationFlag));
+            JCObject objGetPrintQueues = (JCObject)retObjectGetPrintQueues;
             return new PrintQueueCollection(objGetPrintQueues);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetPrintQueues != null ? retObjectGetPrintQueues.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -406,10 +466,14 @@ public class PrintServer extends PrintSystemObject  {
 
     public PrintQueueCollection GetPrintQueues(PrintQueueIndexedProperty[] propertiesFilter, EnumeratedPrintQueueTypes[] enumerationFlag) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPrintQueues = null;
         try {
-            JCObject objGetPrintQueues = (JCObject)classInstance.Invoke("GetPrintQueues", toObjectFromArray(propertiesFilter), toObjectFromArray(enumerationFlag));
+            retObjectGetPrintQueues = classInstance.Invoke("GetPrintQueues", toObjectFromArray(propertiesFilter), toObjectFromArray(enumerationFlag));
+            JCObject objGetPrintQueues = (JCObject)retObjectGetPrintQueues;
             return new PrintQueueCollection(objGetPrintQueues);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetPrintQueues != null ? retObjectGetPrintQueues.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -417,10 +481,14 @@ public class PrintServer extends PrintSystemObject  {
 
     public PrintQueueCollection GetPrintQueues(PrintQueueIndexedProperty[] propertiesFilter) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPrintQueues = null;
         try {
-            JCObject objGetPrintQueues = (JCObject)classInstance.Invoke("GetPrintQueues", (java.lang.Object)toObjectFromArray(propertiesFilter));
+            retObjectGetPrintQueues = classInstance.Invoke("GetPrintQueues", (java.lang.Object)toObjectFromArray(propertiesFilter));
+            JCObject objGetPrintQueues = (JCObject)retObjectGetPrintQueues;
             return new PrintQueueCollection(objGetPrintQueues);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetPrintQueues != null ? retObjectGetPrintQueues.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -428,10 +496,14 @@ public class PrintServer extends PrintSystemObject  {
 
     public PrintQueueCollection GetPrintQueues(java.lang.String[] propertiesFilter, EnumeratedPrintQueueTypes[] enumerationFlag) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPrintQueues = null;
         try {
-            JCObject objGetPrintQueues = (JCObject)classInstance.Invoke("GetPrintQueues", propertiesFilter, toObjectFromArray(enumerationFlag));
+            retObjectGetPrintQueues = classInstance.Invoke("GetPrintQueues", propertiesFilter, toObjectFromArray(enumerationFlag));
+            JCObject objGetPrintQueues = (JCObject)retObjectGetPrintQueues;
             return new PrintQueueCollection(objGetPrintQueues);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetPrintQueues != null ? retObjectGetPrintQueues.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -439,10 +511,14 @@ public class PrintServer extends PrintSystemObject  {
 
     public PrintQueueCollection GetPrintQueues(JCORefOut dupParam0, EnumeratedPrintQueueTypes[] dupParam1) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPrintQueues = null;
         try {
-            JCObject objGetPrintQueues = (JCObject)classInstance.Invoke("GetPrintQueues", dupParam0.getJCRefOut(), toObjectFromArray(dupParam1));
+            retObjectGetPrintQueues = classInstance.Invoke("GetPrintQueues", dupParam0.getJCRefOut(), toObjectFromArray(dupParam1));
+            JCObject objGetPrintQueues = (JCObject)retObjectGetPrintQueues;
             return new PrintQueueCollection(objGetPrintQueues);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetPrintQueues != null ? retObjectGetPrintQueues.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -450,10 +526,14 @@ public class PrintServer extends PrintSystemObject  {
 
     public PrintQueueCollection GetPrintQueues(java.lang.String[] propertiesFilter) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPrintQueues = null;
         try {
-            JCObject objGetPrintQueues = (JCObject)classInstance.Invoke("GetPrintQueues", (java.lang.Object)propertiesFilter);
+            retObjectGetPrintQueues = classInstance.Invoke("GetPrintQueues", (java.lang.Object)propertiesFilter);
+            JCObject objGetPrintQueues = (JCObject)retObjectGetPrintQueues;
             return new PrintQueueCollection(objGetPrintQueues);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetPrintQueues != null ? retObjectGetPrintQueues.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -461,10 +541,14 @@ public class PrintServer extends PrintSystemObject  {
 
     public PrintQueueCollection GetPrintQueues(JCORefOut dupParam0) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPrintQueues = null;
         try {
-            JCObject objGetPrintQueues = (JCObject)classInstance.Invoke("GetPrintQueues", (java.lang.Object)dupParam0.getJCRefOut());
+            retObjectGetPrintQueues = classInstance.Invoke("GetPrintQueues", (java.lang.Object)dupParam0.getJCRefOut());
+            JCObject objGetPrintQueues = (JCObject)retObjectGetPrintQueues;
             return new PrintQueueCollection(objGetPrintQueues);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetPrintQueues != null ? retObjectGetPrintQueues.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -472,7 +556,7 @@ public class PrintServer extends PrintSystemObject  {
 
     public void Commit() throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Commit");
         } catch (JCNativeException jcne) {
@@ -482,7 +566,7 @@ public class PrintServer extends PrintSystemObject  {
 
     public void Refresh() throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Refresh");
         } catch (JCNativeException jcne) {
@@ -496,9 +580,13 @@ public class PrintServer extends PrintSystemObject  {
     
     public boolean getBeepEnabled() throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeepEnabled = null;
         try {
-            return (boolean)classInstance.Get("BeepEnabled");
+            retObjectBeepEnabled = classInstance.Get("BeepEnabled");
+            return (boolean)retObjectBeepEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectBeepEnabled != null ? retObjectBeepEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -506,7 +594,7 @@ public class PrintServer extends PrintSystemObject  {
 
     public void setBeepEnabled(boolean BeepEnabled) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BeepEnabled", BeepEnabled);
         } catch (JCNativeException jcne) {
@@ -516,9 +604,13 @@ public class PrintServer extends PrintSystemObject  {
 
     public boolean getNetPopup() throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNetPopup = null;
         try {
-            return (boolean)classInstance.Get("NetPopup");
+            retObjectNetPopup = classInstance.Get("NetPopup");
+            return (boolean)retObjectNetPopup;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectNetPopup != null ? retObjectNetPopup.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -526,7 +618,7 @@ public class PrintServer extends PrintSystemObject  {
 
     public void setNetPopup(boolean NetPopup) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("NetPopup", NetPopup);
         } catch (JCNativeException jcne) {
@@ -536,9 +628,13 @@ public class PrintServer extends PrintSystemObject  {
 
     public boolean getRestartJobOnPoolEnabled() throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRestartJobOnPoolEnabled = null;
         try {
-            return (boolean)classInstance.Get("RestartJobOnPoolEnabled");
+            retObjectRestartJobOnPoolEnabled = classInstance.Get("RestartJobOnPoolEnabled");
+            return (boolean)retObjectRestartJobOnPoolEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectRestartJobOnPoolEnabled != null ? retObjectRestartJobOnPoolEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -546,7 +642,7 @@ public class PrintServer extends PrintSystemObject  {
 
     public void setRestartJobOnPoolEnabled(boolean RestartJobOnPoolEnabled) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RestartJobOnPoolEnabled", RestartJobOnPoolEnabled);
         } catch (JCNativeException jcne) {
@@ -556,9 +652,20 @@ public class PrintServer extends PrintSystemObject  {
 
     public byte getSubSystemVersion() throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSubSystemVersion = null;
         try {
-            return (byte)classInstance.Get("SubSystemVersion");
+            retObjectSubSystemVersion = classInstance.Get("SubSystemVersion");
+            return (byte)retObjectSubSystemVersion;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSubSystemVersion_ToString = retObjectSubSystemVersion == null ? "null" : retObjectSubSystemVersion.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectSubSystemVersionNumber = (java.lang.Number)retObjectSubSystemVersion;
+                return retObjectSubSystemVersionNumber.byteValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into byte and, as fallback solution, into java.lang.Number", retObjectSubSystemVersion != null ? retObjectSubSystemVersion.getClass() : "null", retObjectSubSystemVersion_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -566,9 +673,20 @@ public class PrintServer extends PrintSystemObject  {
 
     public int getMajorVersion() throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMajorVersion = null;
         try {
-            return (int)classInstance.Get("MajorVersion");
+            retObjectMajorVersion = classInstance.Get("MajorVersion");
+            return (int)retObjectMajorVersion;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMajorVersion_ToString = retObjectMajorVersion == null ? "null" : retObjectMajorVersion.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMajorVersionNumber = (java.lang.Number)retObjectMajorVersion;
+                return retObjectMajorVersionNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMajorVersion != null ? retObjectMajorVersion.getClass() : "null", retObjectMajorVersion_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -576,7 +694,7 @@ public class PrintServer extends PrintSystemObject  {
 
     public void setMajorVersion(int MajorVersion) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MajorVersion", MajorVersion);
         } catch (JCNativeException jcne) {
@@ -586,9 +704,20 @@ public class PrintServer extends PrintSystemObject  {
 
     public int getMinorVersion() throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMinorVersion = null;
         try {
-            return (int)classInstance.Get("MinorVersion");
+            retObjectMinorVersion = classInstance.Get("MinorVersion");
+            return (int)retObjectMinorVersion;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMinorVersion_ToString = retObjectMinorVersion == null ? "null" : retObjectMinorVersion.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMinorVersionNumber = (java.lang.Number)retObjectMinorVersion;
+                return retObjectMinorVersionNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMinorVersion != null ? retObjectMinorVersion.getClass() : "null", retObjectMinorVersion_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -596,7 +725,7 @@ public class PrintServer extends PrintSystemObject  {
 
     public void setMinorVersion(int MinorVersion) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MinorVersion", MinorVersion);
         } catch (JCNativeException jcne) {
@@ -606,9 +735,20 @@ public class PrintServer extends PrintSystemObject  {
 
     public int getRestartJobOnPoolTimeout() throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRestartJobOnPoolTimeout = null;
         try {
-            return (int)classInstance.Get("RestartJobOnPoolTimeout");
+            retObjectRestartJobOnPoolTimeout = classInstance.Get("RestartJobOnPoolTimeout");
+            return (int)retObjectRestartJobOnPoolTimeout;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectRestartJobOnPoolTimeout_ToString = retObjectRestartJobOnPoolTimeout == null ? "null" : retObjectRestartJobOnPoolTimeout.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectRestartJobOnPoolTimeoutNumber = (java.lang.Number)retObjectRestartJobOnPoolTimeout;
+                return retObjectRestartJobOnPoolTimeoutNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectRestartJobOnPoolTimeout != null ? retObjectRestartJobOnPoolTimeout.getClass() : "null", retObjectRestartJobOnPoolTimeout_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -616,7 +756,7 @@ public class PrintServer extends PrintSystemObject  {
 
     public void setRestartJobOnPoolTimeout(int RestartJobOnPoolTimeout) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RestartJobOnPoolTimeout", RestartJobOnPoolTimeout);
         } catch (JCNativeException jcne) {
@@ -626,10 +766,14 @@ public class PrintServer extends PrintSystemObject  {
 
     public PrintServerEventLoggingTypes getEventLog() throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEventLog = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("EventLog");
+            retObjectEventLog = classInstance.Get("EventLog");
+            JCObject val = (JCObject)retObjectEventLog;
             return new PrintServerEventLoggingTypes(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEventLog != null ? retObjectEventLog.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -637,7 +781,7 @@ public class PrintServer extends PrintSystemObject  {
 
     public void setEventLog(PrintServerEventLoggingTypes EventLog) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EventLog", EventLog == null ? null : EventLog.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -647,9 +791,13 @@ public class PrintServer extends PrintSystemObject  {
 
     public java.lang.String getDefaultSpoolDirectory() throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDefaultSpoolDirectory = null;
         try {
-            return (java.lang.String)classInstance.Get("DefaultSpoolDirectory");
+            retObjectDefaultSpoolDirectory = classInstance.Get("DefaultSpoolDirectory");
+            return (java.lang.String)retObjectDefaultSpoolDirectory;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDefaultSpoolDirectory != null ? retObjectDefaultSpoolDirectory.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -657,7 +805,7 @@ public class PrintServer extends PrintSystemObject  {
 
     public void setDefaultSpoolDirectory(java.lang.String DefaultSpoolDirectory) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DefaultSpoolDirectory", DefaultSpoolDirectory);
         } catch (JCNativeException jcne) {
@@ -667,10 +815,14 @@ public class PrintServer extends PrintSystemObject  {
 
     public ThreadPriority getDefaultPortThreadPriority() throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDefaultPortThreadPriority = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DefaultPortThreadPriority");
+            retObjectDefaultPortThreadPriority = classInstance.Get("DefaultPortThreadPriority");
+            JCObject val = (JCObject)retObjectDefaultPortThreadPriority;
             return new ThreadPriority(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefaultPortThreadPriority != null ? retObjectDefaultPortThreadPriority.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -678,7 +830,7 @@ public class PrintServer extends PrintSystemObject  {
 
     public void setDefaultPortThreadPriority(ThreadPriority DefaultPortThreadPriority) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DefaultPortThreadPriority", DefaultPortThreadPriority == null ? null : DefaultPortThreadPriority.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -688,10 +840,14 @@ public class PrintServer extends PrintSystemObject  {
 
     public ThreadPriority getDefaultSchedulerPriority() throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDefaultSchedulerPriority = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DefaultSchedulerPriority");
+            retObjectDefaultSchedulerPriority = classInstance.Get("DefaultSchedulerPriority");
+            JCObject val = (JCObject)retObjectDefaultSchedulerPriority;
             return new ThreadPriority(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefaultSchedulerPriority != null ? retObjectDefaultSchedulerPriority.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -699,7 +855,7 @@ public class PrintServer extends PrintSystemObject  {
 
     public void setDefaultSchedulerPriority(ThreadPriority DefaultSchedulerPriority) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DefaultSchedulerPriority", DefaultSchedulerPriority == null ? null : DefaultSchedulerPriority.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -709,10 +865,14 @@ public class PrintServer extends PrintSystemObject  {
 
     public ThreadPriority getPortThreadPriority() throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPortThreadPriority = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PortThreadPriority");
+            retObjectPortThreadPriority = classInstance.Get("PortThreadPriority");
+            JCObject val = (JCObject)retObjectPortThreadPriority;
             return new ThreadPriority(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPortThreadPriority != null ? retObjectPortThreadPriority.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -720,7 +880,7 @@ public class PrintServer extends PrintSystemObject  {
 
     public void setPortThreadPriority(ThreadPriority PortThreadPriority) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PortThreadPriority", PortThreadPriority == null ? null : PortThreadPriority.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -730,10 +890,14 @@ public class PrintServer extends PrintSystemObject  {
 
     public ThreadPriority getSchedulerPriority() throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSchedulerPriority = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SchedulerPriority");
+            retObjectSchedulerPriority = classInstance.Get("SchedulerPriority");
+            JCObject val = (JCObject)retObjectSchedulerPriority;
             return new ThreadPriority(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSchedulerPriority != null ? retObjectSchedulerPriority.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -741,7 +905,7 @@ public class PrintServer extends PrintSystemObject  {
 
     public void setSchedulerPriority(ThreadPriority SchedulerPriority) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SchedulerPriority", SchedulerPriority == null ? null : SchedulerPriority.getJCOInstance());
         } catch (JCNativeException jcne) {

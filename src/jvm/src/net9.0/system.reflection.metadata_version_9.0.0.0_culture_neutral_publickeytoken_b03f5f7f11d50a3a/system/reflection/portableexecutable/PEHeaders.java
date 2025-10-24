@@ -190,9 +190,13 @@ public class PEHeaders extends NetObject  {
     
     public boolean TryGetDirectoryOffset(DirectoryEntry directory, JCORefOut<java.util.concurrent.atomic.AtomicInteger> offset) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.BadImageFormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryGetDirectoryOffset = null;
         try {
-            return (boolean)classInstance.Invoke("TryGetDirectoryOffset", directory == null ? null : directory.getJCOInstance(), offset.getJCRefOut());
+            retObjectTryGetDirectoryOffset = classInstance.Invoke("TryGetDirectoryOffset", directory == null ? null : directory.getJCOInstance(), offset.getJCRefOut());
+            return (boolean)retObjectTryGetDirectoryOffset;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryGetDirectoryOffset != null ? retObjectTryGetDirectoryOffset.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,9 +204,20 @@ public class PEHeaders extends NetObject  {
 
     public int GetContainingSectionIndex(int relativeVirtualAddress) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetContainingSectionIndex = null;
         try {
-            return (int)classInstance.Invoke("GetContainingSectionIndex", relativeVirtualAddress);
+            retObjectGetContainingSectionIndex = classInstance.Invoke("GetContainingSectionIndex", relativeVirtualAddress);
+            return (int)retObjectGetContainingSectionIndex;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetContainingSectionIndex_ToString = retObjectGetContainingSectionIndex == null ? "null" : retObjectGetContainingSectionIndex.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetContainingSectionIndexNumber = (java.lang.Number)retObjectGetContainingSectionIndex;
+                return retObjectGetContainingSectionIndexNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetContainingSectionIndex != null ? retObjectGetContainingSectionIndex.getClass() : "null", retObjectGetContainingSectionIndex_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -214,9 +229,13 @@ public class PEHeaders extends NetObject  {
     
     public boolean getIsCoffOnly() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsCoffOnly = null;
         try {
-            return (boolean)classInstance.Get("IsCoffOnly");
+            retObjectIsCoffOnly = classInstance.Get("IsCoffOnly");
+            return (boolean)retObjectIsCoffOnly;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsCoffOnly != null ? retObjectIsCoffOnly.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -224,9 +243,13 @@ public class PEHeaders extends NetObject  {
 
     public boolean getIsConsoleApplication() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsConsoleApplication = null;
         try {
-            return (boolean)classInstance.Get("IsConsoleApplication");
+            retObjectIsConsoleApplication = classInstance.Get("IsConsoleApplication");
+            return (boolean)retObjectIsConsoleApplication;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsConsoleApplication != null ? retObjectIsConsoleApplication.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -234,9 +257,13 @@ public class PEHeaders extends NetObject  {
 
     public boolean getIsDll() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsDll = null;
         try {
-            return (boolean)classInstance.Get("IsDll");
+            retObjectIsDll = classInstance.Get("IsDll");
+            return (boolean)retObjectIsDll;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsDll != null ? retObjectIsDll.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -244,9 +271,13 @@ public class PEHeaders extends NetObject  {
 
     public boolean getIsExe() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsExe = null;
         try {
-            return (boolean)classInstance.Get("IsExe");
+            retObjectIsExe = classInstance.Get("IsExe");
+            return (boolean)retObjectIsExe;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsExe != null ? retObjectIsExe.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -254,9 +285,20 @@ public class PEHeaders extends NetObject  {
 
     public int getCoffHeaderStartOffset() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCoffHeaderStartOffset = null;
         try {
-            return (int)classInstance.Get("CoffHeaderStartOffset");
+            retObjectCoffHeaderStartOffset = classInstance.Get("CoffHeaderStartOffset");
+            return (int)retObjectCoffHeaderStartOffset;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCoffHeaderStartOffset_ToString = retObjectCoffHeaderStartOffset == null ? "null" : retObjectCoffHeaderStartOffset.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectCoffHeaderStartOffsetNumber = (java.lang.Number)retObjectCoffHeaderStartOffset;
+                return retObjectCoffHeaderStartOffsetNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCoffHeaderStartOffset != null ? retObjectCoffHeaderStartOffset.getClass() : "null", retObjectCoffHeaderStartOffset_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -264,9 +306,20 @@ public class PEHeaders extends NetObject  {
 
     public int getCorHeaderStartOffset() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCorHeaderStartOffset = null;
         try {
-            return (int)classInstance.Get("CorHeaderStartOffset");
+            retObjectCorHeaderStartOffset = classInstance.Get("CorHeaderStartOffset");
+            return (int)retObjectCorHeaderStartOffset;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCorHeaderStartOffset_ToString = retObjectCorHeaderStartOffset == null ? "null" : retObjectCorHeaderStartOffset.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectCorHeaderStartOffsetNumber = (java.lang.Number)retObjectCorHeaderStartOffset;
+                return retObjectCorHeaderStartOffsetNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCorHeaderStartOffset != null ? retObjectCorHeaderStartOffset.getClass() : "null", retObjectCorHeaderStartOffset_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -274,9 +327,20 @@ public class PEHeaders extends NetObject  {
 
     public int getMetadataSize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMetadataSize = null;
         try {
-            return (int)classInstance.Get("MetadataSize");
+            retObjectMetadataSize = classInstance.Get("MetadataSize");
+            return (int)retObjectMetadataSize;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMetadataSize_ToString = retObjectMetadataSize == null ? "null" : retObjectMetadataSize.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMetadataSizeNumber = (java.lang.Number)retObjectMetadataSize;
+                return retObjectMetadataSizeNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMetadataSize != null ? retObjectMetadataSize.getClass() : "null", retObjectMetadataSize_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -284,9 +348,20 @@ public class PEHeaders extends NetObject  {
 
     public int getMetadataStartOffset() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMetadataStartOffset = null;
         try {
-            return (int)classInstance.Get("MetadataStartOffset");
+            retObjectMetadataStartOffset = classInstance.Get("MetadataStartOffset");
+            return (int)retObjectMetadataStartOffset;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMetadataStartOffset_ToString = retObjectMetadataStartOffset == null ? "null" : retObjectMetadataStartOffset.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMetadataStartOffsetNumber = (java.lang.Number)retObjectMetadataStartOffset;
+                return retObjectMetadataStartOffsetNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMetadataStartOffset != null ? retObjectMetadataStartOffset.getClass() : "null", retObjectMetadataStartOffset_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -294,9 +369,20 @@ public class PEHeaders extends NetObject  {
 
     public int getPEHeaderStartOffset() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPEHeaderStartOffset = null;
         try {
-            return (int)classInstance.Get("PEHeaderStartOffset");
+            retObjectPEHeaderStartOffset = classInstance.Get("PEHeaderStartOffset");
+            return (int)retObjectPEHeaderStartOffset;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectPEHeaderStartOffset_ToString = retObjectPEHeaderStartOffset == null ? "null" : retObjectPEHeaderStartOffset.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectPEHeaderStartOffsetNumber = (java.lang.Number)retObjectPEHeaderStartOffset;
+                return retObjectPEHeaderStartOffsetNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectPEHeaderStartOffset != null ? retObjectPEHeaderStartOffset.getClass() : "null", retObjectPEHeaderStartOffset_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -304,10 +390,14 @@ public class PEHeaders extends NetObject  {
 
     public CoffHeader getCoffHeader() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCoffHeader = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CoffHeader");
+            retObjectCoffHeader = classInstance.Get("CoffHeader");
+            JCObject val = (JCObject)retObjectCoffHeader;
             return new CoffHeader(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCoffHeader != null ? retObjectCoffHeader.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -315,10 +405,14 @@ public class PEHeaders extends NetObject  {
 
     public CorHeader getCorHeader() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCorHeader = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CorHeader");
+            retObjectCorHeader = classInstance.Get("CorHeader");
+            JCObject val = (JCObject)retObjectCorHeader;
             return new CorHeader(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCorHeader != null ? retObjectCorHeader.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -326,10 +420,14 @@ public class PEHeaders extends NetObject  {
 
     public PEHeader getPEHeader() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPEHeader = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PEHeader");
+            retObjectPEHeader = classInstance.Get("PEHeader");
+            JCObject val = (JCObject)retObjectPEHeader;
             return new PEHeader(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPEHeader != null ? retObjectPEHeader.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -179,9 +179,13 @@ public class SecurityKeyElement extends SecurityKey  {
     
     public boolean IsAsymmetricAlgorithm(java.lang.String algorithm) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsAsymmetricAlgorithm = null;
         try {
-            return (boolean)classInstance.Invoke("IsAsymmetricAlgorithm", algorithm);
+            retObjectIsAsymmetricAlgorithm = classInstance.Invoke("IsAsymmetricAlgorithm", algorithm);
+            return (boolean)retObjectIsAsymmetricAlgorithm;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsAsymmetricAlgorithm != null ? retObjectIsAsymmetricAlgorithm.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -189,9 +193,13 @@ public class SecurityKeyElement extends SecurityKey  {
 
     public boolean IsSupportedAlgorithm(java.lang.String algorithm) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsSupportedAlgorithm = null;
         try {
-            return (boolean)classInstance.Invoke("IsSupportedAlgorithm", algorithm);
+            retObjectIsSupportedAlgorithm = classInstance.Invoke("IsSupportedAlgorithm", algorithm);
+            return (boolean)retObjectIsSupportedAlgorithm;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsSupportedAlgorithm != null ? retObjectIsSupportedAlgorithm.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -199,9 +207,13 @@ public class SecurityKeyElement extends SecurityKey  {
 
     public boolean IsSymmetricAlgorithm(java.lang.String algorithm) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsSymmetricAlgorithm = null;
         try {
-            return (boolean)classInstance.Invoke("IsSymmetricAlgorithm", algorithm);
+            retObjectIsSymmetricAlgorithm = classInstance.Invoke("IsSymmetricAlgorithm", algorithm);
+            return (boolean)retObjectIsSymmetricAlgorithm;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsSymmetricAlgorithm != null ? retObjectIsSymmetricAlgorithm.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -209,10 +221,12 @@ public class SecurityKeyElement extends SecurityKey  {
 
     public byte[] DecryptKey(java.lang.String algorithm, byte[] keyData) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDecryptKey = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("DecryptKey", algorithm, keyData);
+            retObjectDecryptKey = classInstance.Invoke("DecryptKey", algorithm, keyData);
+            JCObject resultingObjects = (JCObject)retObjectDecryptKey;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -221,6 +235,8 @@ public class SecurityKeyElement extends SecurityKey  {
 				resultingArray[indexDecryptKey] = (byte)resultingArrayList.get(indexDecryptKey);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectDecryptKey != null ? retObjectDecryptKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -228,10 +244,12 @@ public class SecurityKeyElement extends SecurityKey  {
 
     public byte[] DecryptKey(java.lang.String dupParam0, JCORefOut dupParam1) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDecryptKey = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("DecryptKey", dupParam0, dupParam1.getJCRefOut());
+            retObjectDecryptKey = classInstance.Invoke("DecryptKey", dupParam0, dupParam1.getJCRefOut());
+            JCObject resultingObjects = (JCObject)retObjectDecryptKey;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -240,6 +258,8 @@ public class SecurityKeyElement extends SecurityKey  {
 				resultingArray[indexDecryptKey] = (byte)resultingArrayList.get(indexDecryptKey);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectDecryptKey != null ? retObjectDecryptKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -247,10 +267,12 @@ public class SecurityKeyElement extends SecurityKey  {
 
     public byte[] EncryptKey(java.lang.String algorithm, byte[] keyData) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEncryptKey = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("EncryptKey", algorithm, keyData);
+            retObjectEncryptKey = classInstance.Invoke("EncryptKey", algorithm, keyData);
+            JCObject resultingObjects = (JCObject)retObjectEncryptKey;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -259,6 +281,8 @@ public class SecurityKeyElement extends SecurityKey  {
 				resultingArray[indexEncryptKey] = (byte)resultingArrayList.get(indexEncryptKey);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectEncryptKey != null ? retObjectEncryptKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -266,10 +290,12 @@ public class SecurityKeyElement extends SecurityKey  {
 
     public byte[] EncryptKey(java.lang.String dupParam0, JCORefOut dupParam1) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEncryptKey = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("EncryptKey", dupParam0, dupParam1.getJCRefOut());
+            retObjectEncryptKey = classInstance.Invoke("EncryptKey", dupParam0, dupParam1.getJCRefOut());
+            JCObject resultingObjects = (JCObject)retObjectEncryptKey;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -278,6 +304,8 @@ public class SecurityKeyElement extends SecurityKey  {
 				resultingArray[indexEncryptKey] = (byte)resultingArrayList.get(indexEncryptKey);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectEncryptKey != null ? retObjectEncryptKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

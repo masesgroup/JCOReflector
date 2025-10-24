@@ -156,10 +156,14 @@ public class RawStylusInput extends NetObject  {
     
     public StylusPointCollection GetStylusPoints() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetStylusPoints = null;
         try {
-            JCObject objGetStylusPoints = (JCObject)classInstance.Invoke("GetStylusPoints");
+            retObjectGetStylusPoints = classInstance.Invoke("GetStylusPoints");
+            JCObject objGetStylusPoints = (JCObject)retObjectGetStylusPoints;
             return new StylusPointCollection(objGetStylusPoints);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetStylusPoints != null ? retObjectGetStylusPoints.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -167,7 +171,7 @@ public class RawStylusInput extends NetObject  {
 
     public void NotifyWhenProcessed(NetObject callbackData) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("NotifyWhenProcessed", callbackData == null ? null : callbackData.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -177,7 +181,7 @@ public class RawStylusInput extends NetObject  {
 
     public void SetStylusPoints(StylusPointCollection stylusPoints) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetStylusPoints", stylusPoints == null ? null : stylusPoints.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -191,9 +195,20 @@ public class RawStylusInput extends NetObject  {
     
     public int getStylusDeviceId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStylusDeviceId = null;
         try {
-            return (int)classInstance.Get("StylusDeviceId");
+            retObjectStylusDeviceId = classInstance.Get("StylusDeviceId");
+            return (int)retObjectStylusDeviceId;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectStylusDeviceId_ToString = retObjectStylusDeviceId == null ? "null" : retObjectStylusDeviceId.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectStylusDeviceIdNumber = (java.lang.Number)retObjectStylusDeviceId;
+                return retObjectStylusDeviceIdNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectStylusDeviceId != null ? retObjectStylusDeviceId.getClass() : "null", retObjectStylusDeviceId_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,9 +216,20 @@ public class RawStylusInput extends NetObject  {
 
     public int getTabletDeviceId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTabletDeviceId = null;
         try {
-            return (int)classInstance.Get("TabletDeviceId");
+            retObjectTabletDeviceId = classInstance.Get("TabletDeviceId");
+            return (int)retObjectTabletDeviceId;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectTabletDeviceId_ToString = retObjectTabletDeviceId == null ? "null" : retObjectTabletDeviceId.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectTabletDeviceIdNumber = (java.lang.Number)retObjectTabletDeviceId;
+                return retObjectTabletDeviceIdNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectTabletDeviceId != null ? retObjectTabletDeviceId.getClass() : "null", retObjectTabletDeviceId_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -211,9 +237,20 @@ public class RawStylusInput extends NetObject  {
 
     public int getTimestamp() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTimestamp = null;
         try {
-            return (int)classInstance.Get("Timestamp");
+            retObjectTimestamp = classInstance.Get("Timestamp");
+            return (int)retObjectTimestamp;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectTimestamp_ToString = retObjectTimestamp == null ? "null" : retObjectTimestamp.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectTimestampNumber = (java.lang.Number)retObjectTimestamp;
+                return retObjectTimestampNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectTimestamp != null ? retObjectTimestamp.getClass() : "null", retObjectTimestamp_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

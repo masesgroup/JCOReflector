@@ -167,10 +167,14 @@ public class EditingScopeEventArgs extends EventArgs  {
     
     public EditingScope getEditingScope() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEditingScope = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("EditingScope");
+            retObjectEditingScope = classInstance.Get("EditingScope");
+            JCObject val = (JCObject)retObjectEditingScope;
             return new EditingScope(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEditingScope != null ? retObjectEditingScope.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,7 +182,7 @@ public class EditingScopeEventArgs extends EventArgs  {
 
     public void setEditingScope(EditingScope EditingScope) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EditingScope", EditingScope == null ? null : EditingScope.getJCOInstance());
         } catch (JCNativeException jcne) {

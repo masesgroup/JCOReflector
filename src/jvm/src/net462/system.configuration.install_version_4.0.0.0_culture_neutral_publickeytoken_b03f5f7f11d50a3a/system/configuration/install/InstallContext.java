@@ -172,9 +172,13 @@ public class InstallContext extends NetObject  {
     
     public boolean IsParameterTrue(java.lang.String paramName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsParameterTrue = null;
         try {
-            return (boolean)classInstance.Invoke("IsParameterTrue", paramName);
+            retObjectIsParameterTrue = classInstance.Invoke("IsParameterTrue", paramName);
+            return (boolean)retObjectIsParameterTrue;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsParameterTrue != null ? retObjectIsParameterTrue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,7 +186,7 @@ public class InstallContext extends NetObject  {
 
     public void LogMessage(java.lang.String message) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.NullReferenceException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.security.SecurityException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("LogMessage", message);
         } catch (JCNativeException jcne) {
@@ -196,10 +200,14 @@ public class InstallContext extends NetObject  {
     
     public StringDictionary getParameters() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectParameters = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Parameters");
+            retObjectParameters = classInstance.Get("Parameters");
+            JCObject val = (JCObject)retObjectParameters;
             return new StringDictionary(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParameters != null ? retObjectParameters.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

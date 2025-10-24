@@ -169,10 +169,14 @@ public class CodeGenerationManager extends NetObject  {
     
     public NetObject GetService(NetType serviceType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetService = null;
         try {
-            JCObject objGetService = (JCObject)classInstance.Invoke("GetService", serviceType == null ? null : serviceType.getJCOInstance());
+            retObjectGetService = classInstance.Invoke("GetService", serviceType == null ? null : serviceType.getJCOInstance());
+            JCObject objGetService = (JCObject)retObjectGetService;
             return new NetObject(objGetService);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetService != null ? retObjectGetService.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,16 +184,20 @@ public class CodeGenerationManager extends NetObject  {
 
     public ActivityCodeGenerator[] GetCodeGenerators(NetType type) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetCodeGenerators = null;
         try {
             ArrayList<ActivityCodeGenerator> resultingArrayList = new ArrayList<ActivityCodeGenerator>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetCodeGenerators", type == null ? null : type.getJCOInstance());
+            retObjectGetCodeGenerators = classInstance.Invoke("GetCodeGenerators", type == null ? null : type.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectGetCodeGenerators;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ActivityCodeGenerator(resultingObject));
             }
             ActivityCodeGenerator[] resultingArray = new ActivityCodeGenerator[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCodeGenerators != null ? retObjectGetCodeGenerators.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,10 +209,14 @@ public class CodeGenerationManager extends NetObject  {
     
     public ContextStack getContext() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContext = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Context");
+            retObjectContext = classInstance.Get("Context");
+            JCObject val = (JCObject)retObjectContext;
             return new ContextStack(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContext != null ? retObjectContext.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

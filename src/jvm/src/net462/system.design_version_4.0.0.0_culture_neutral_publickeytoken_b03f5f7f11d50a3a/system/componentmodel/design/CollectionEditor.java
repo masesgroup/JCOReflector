@@ -171,10 +171,14 @@ public class CollectionEditor extends UITypeEditor  {
     
     public UITypeEditorEditStyle GetEditStyle(ITypeDescriptorContext context) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetEditStyle = null;
         try {
-            JCObject objGetEditStyle = (JCObject)classInstance.Invoke("GetEditStyle", context == null ? null : context.getJCOInstance());
+            retObjectGetEditStyle = classInstance.Invoke("GetEditStyle", context == null ? null : context.getJCOInstance());
+            JCObject objGetEditStyle = (JCObject)retObjectGetEditStyle;
             return new UITypeEditorEditStyle(objGetEditStyle);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetEditStyle != null ? retObjectGetEditStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,10 +186,14 @@ public class CollectionEditor extends UITypeEditor  {
 
     public NetObject EditValue(ITypeDescriptorContext context, IServiceProvider provider, NetObject value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.TypeLoadException, system.componentmodel.InvalidEnumArgumentException, system.configuration.ConfigurationErrorsException, system.ObjectDisposedException, system.NullReferenceException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEditValue = null;
         try {
-            JCObject objEditValue = (JCObject)classInstance.Invoke("EditValue", context == null ? null : context.getJCOInstance(), provider == null ? null : provider.getJCOInstance(), value == null ? null : value.getJCOInstance());
+            retObjectEditValue = classInstance.Invoke("EditValue", context == null ? null : context.getJCOInstance(), provider == null ? null : provider.getJCOInstance(), value == null ? null : value.getJCOInstance());
+            JCObject objEditValue = (JCObject)retObjectEditValue;
             return new NetObject(objEditValue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEditValue != null ? retObjectEditValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

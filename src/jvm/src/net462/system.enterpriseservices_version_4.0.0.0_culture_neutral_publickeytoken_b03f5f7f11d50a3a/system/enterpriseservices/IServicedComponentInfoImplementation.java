@@ -142,7 +142,7 @@ public class IServicedComponentInfoImplementation extends NetObject implements I
     
     public void GetComponentInfo(JCORefOut<java.util.concurrent.atomic.AtomicInteger> infoMask, JCORefOut infoArray) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetComponentInfo", infoMask.getJCRefOut(), infoArray.getJCRefOut());
         } catch (JCNativeException jcne) {

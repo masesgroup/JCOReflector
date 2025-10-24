@@ -168,7 +168,7 @@ public class MenuAdapter extends WebControlAdapter implements system.web.ui.IPos
      */
     @Deprecated 
     public void RaisePostBackEvent(java.lang.String eventArgument) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIPostBackEventHandler to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIPostBackEventHandler to obtain the full interface.");
     }
 
 

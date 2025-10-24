@@ -154,9 +154,20 @@ public class PemEncoding extends NetObject  {
     
     public static int GetEncodedSize(int labelLength, int dataLength) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetEncodedSize = null;
         try {
-            return (int)classType.Invoke("GetEncodedSize", labelLength, dataLength);
+            retObjectGetEncodedSize = classType.Invoke("GetEncodedSize", labelLength, dataLength);
+            return (int)retObjectGetEncodedSize;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetEncodedSize_ToString = retObjectGetEncodedSize == null ? "null" : retObjectGetEncodedSize.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetEncodedSizeNumber = (java.lang.Number)retObjectGetEncodedSize;
+                return retObjectGetEncodedSizeNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetEncodedSize != null ? retObjectGetEncodedSize.getClass() : "null", retObjectGetEncodedSize_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

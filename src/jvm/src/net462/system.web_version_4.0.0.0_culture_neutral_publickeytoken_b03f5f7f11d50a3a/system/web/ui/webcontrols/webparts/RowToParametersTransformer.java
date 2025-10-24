@@ -165,10 +165,14 @@ public class RowToParametersTransformer extends WebPartTransformer  {
     
     public NetObject Transform(NetObject providerData) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTransform = null;
         try {
-            JCObject objTransform = (JCObject)classInstance.Invoke("Transform", providerData == null ? null : providerData.getJCOInstance());
+            retObjectTransform = classInstance.Invoke("Transform", providerData == null ? null : providerData.getJCOInstance());
+            JCObject objTransform = (JCObject)retObjectTransform;
             return new NetObject(objTransform);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTransform != null ? retObjectTransform.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,10 +180,14 @@ public class RowToParametersTransformer extends WebPartTransformer  {
 
     public Control CreateConfigurationControl() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateConfigurationControl = null;
         try {
-            JCObject objCreateConfigurationControl = (JCObject)classInstance.Invoke("CreateConfigurationControl");
+            retObjectCreateConfigurationControl = classInstance.Invoke("CreateConfigurationControl");
+            JCObject objCreateConfigurationControl = (JCObject)retObjectCreateConfigurationControl;
             return new Control(objCreateConfigurationControl);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateConfigurationControl != null ? retObjectCreateConfigurationControl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,7 +199,7 @@ public class RowToParametersTransformer extends WebPartTransformer  {
      */
     @Deprecated 
     public void GetParametersData(ParametersCallback callback) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIWebPartParameters to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIWebPartParameters to obtain the full interface.");
     }
 
     /**
@@ -200,7 +208,7 @@ public class RowToParametersTransformer extends WebPartTransformer  {
      */
     @Deprecated 
     public void SetConsumerSchema(PropertyDescriptorCollection schema) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIWebPartParameters to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIWebPartParameters to obtain the full interface.");
     }
 
 
@@ -209,10 +217,12 @@ public class RowToParametersTransformer extends WebPartTransformer  {
     
     public java.lang.String[] getConsumerFieldNames() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConsumerFieldNames = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("ConsumerFieldNames");
+            retObjectConsumerFieldNames = classInstance.Get("ConsumerFieldNames");
+            JCObject resultingObjects = (JCObject)retObjectConsumerFieldNames;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -221,6 +231,8 @@ public class RowToParametersTransformer extends WebPartTransformer  {
 				resultingArray[indexConsumerFieldNames] = (java.lang.String)resultingArrayList.get(indexConsumerFieldNames);
 			}
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into JCObject", retObjectConsumerFieldNames != null ? retObjectConsumerFieldNames.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -228,7 +240,7 @@ public class RowToParametersTransformer extends WebPartTransformer  {
 
     public void setConsumerFieldNames(java.lang.String[] ConsumerFieldNames) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ConsumerFieldNames", ConsumerFieldNames);
         } catch (JCNativeException jcne) {
@@ -238,10 +250,12 @@ public class RowToParametersTransformer extends WebPartTransformer  {
 
     public java.lang.String[] getProviderFieldNames() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProviderFieldNames = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("ProviderFieldNames");
+            retObjectProviderFieldNames = classInstance.Get("ProviderFieldNames");
+            JCObject resultingObjects = (JCObject)retObjectProviderFieldNames;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -250,6 +264,8 @@ public class RowToParametersTransformer extends WebPartTransformer  {
 				resultingArray[indexProviderFieldNames] = (java.lang.String)resultingArrayList.get(indexProviderFieldNames);
 			}
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into JCObject", retObjectProviderFieldNames != null ? retObjectProviderFieldNames.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -257,7 +273,7 @@ public class RowToParametersTransformer extends WebPartTransformer  {
 
     public void setProviderFieldNames(java.lang.String[] ProviderFieldNames) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ProviderFieldNames", ProviderFieldNames);
         } catch (JCNativeException jcne) {

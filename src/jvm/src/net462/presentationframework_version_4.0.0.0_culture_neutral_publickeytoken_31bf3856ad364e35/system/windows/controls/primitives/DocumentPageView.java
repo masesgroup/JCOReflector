@@ -175,7 +175,7 @@ public class DocumentPageView extends FrameworkElement implements system.IServic
      */
     @Deprecated 
     public NetObject GetService(NetType serviceType) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIServiceProvider to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIServiceProvider to obtain the full interface.");
     }
 
     /**
@@ -184,13 +184,13 @@ public class DocumentPageView extends FrameworkElement implements system.IServic
      */
     @Deprecated 
     public void Dispose() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDisposable to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDisposable to obtain the full interface.");
     }
 
     public void close() throws Exception {
         try {
             if (classInstance == null)
-                throw new UnsupportedOperationException("classInstance is null.");
+                throw new java.lang.UnsupportedOperationException("classInstance is null.");
             try {
                 classInstance.Invoke("Dispose");
             }
@@ -206,9 +206,20 @@ public class DocumentPageView extends FrameworkElement implements system.IServic
     
     public int getPageNumber() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPageNumber = null;
         try {
-            return (int)classInstance.Get("PageNumber");
+            retObjectPageNumber = classInstance.Get("PageNumber");
+            return (int)retObjectPageNumber;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectPageNumber_ToString = retObjectPageNumber == null ? "null" : retObjectPageNumber.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectPageNumberNumber = (java.lang.Number)retObjectPageNumber;
+                return retObjectPageNumberNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectPageNumber != null ? retObjectPageNumber.getClass() : "null", retObjectPageNumber_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -216,7 +227,7 @@ public class DocumentPageView extends FrameworkElement implements system.IServic
 
     public void setPageNumber(int PageNumber) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PageNumber", PageNumber);
         } catch (JCNativeException jcne) {
@@ -226,10 +237,14 @@ public class DocumentPageView extends FrameworkElement implements system.IServic
 
     public StretchDirection getStretchDirection() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStretchDirection = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("StretchDirection");
+            retObjectStretchDirection = classInstance.Get("StretchDirection");
+            JCObject val = (JCObject)retObjectStretchDirection;
             return new StretchDirection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStretchDirection != null ? retObjectStretchDirection.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -237,7 +252,7 @@ public class DocumentPageView extends FrameworkElement implements system.IServic
 
     public void setStretchDirection(StretchDirection StretchDirection) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("StretchDirection", StretchDirection == null ? null : StretchDirection.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -247,10 +262,14 @@ public class DocumentPageView extends FrameworkElement implements system.IServic
 
     public DocumentPage getDocumentPage() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDocumentPage = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DocumentPage");
+            retObjectDocumentPage = classInstance.Get("DocumentPage");
+            JCObject val = (JCObject)retObjectDocumentPage;
             return new DocumentPage(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDocumentPage != null ? retObjectDocumentPage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -258,10 +277,14 @@ public class DocumentPageView extends FrameworkElement implements system.IServic
 
     public DocumentPaginator getDocumentPaginator() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDocumentPaginator = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DocumentPaginator");
+            retObjectDocumentPaginator = classInstance.Get("DocumentPaginator");
+            JCObject val = (JCObject)retObjectDocumentPaginator;
             return new DocumentPaginator(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDocumentPaginator != null ? retObjectDocumentPaginator.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -269,7 +292,7 @@ public class DocumentPageView extends FrameworkElement implements system.IServic
 
     public void setDocumentPaginator(DocumentPaginator DocumentPaginator) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.FormatException, system.MulticastNotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DocumentPaginator", DocumentPaginator == null ? null : DocumentPaginator.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -279,10 +302,14 @@ public class DocumentPageView extends FrameworkElement implements system.IServic
 
     public Stretch getStretch() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStretch = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Stretch");
+            retObjectStretch = classInstance.Get("Stretch");
+            JCObject val = (JCObject)retObjectStretch;
             return new Stretch(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStretch != null ? retObjectStretch.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -290,7 +317,7 @@ public class DocumentPageView extends FrameworkElement implements system.IServic
 
     public void setStretch(Stretch Stretch) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Stretch", Stretch == null ? null : Stretch.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -305,7 +332,7 @@ public class DocumentPageView extends FrameworkElement implements system.IServic
 
     public void addPageConnected(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("PageConnected", handler);
         } catch (JCNativeException jcne) {
@@ -315,7 +342,7 @@ public class DocumentPageView extends FrameworkElement implements system.IServic
 
     public void removePageConnected(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("PageConnected", handler);
         } catch (JCNativeException jcne) {
@@ -325,7 +352,7 @@ public class DocumentPageView extends FrameworkElement implements system.IServic
 
     public void addPageDisconnected(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("PageDisconnected", handler);
         } catch (JCNativeException jcne) {
@@ -335,7 +362,7 @@ public class DocumentPageView extends FrameworkElement implements system.IServic
 
     public void removePageDisconnected(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("PageDisconnected", handler);
         } catch (JCNativeException jcne) {

@@ -166,9 +166,13 @@ public class RequiredFieldValidator extends BaseValidator  {
     
     public java.lang.String getInitialValue() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInitialValue = null;
         try {
-            return (java.lang.String)classInstance.Get("InitialValue");
+            retObjectInitialValue = classInstance.Get("InitialValue");
+            return (java.lang.String)retObjectInitialValue;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectInitialValue != null ? retObjectInitialValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,7 +180,7 @@ public class RequiredFieldValidator extends BaseValidator  {
 
     public void setInitialValue(java.lang.String InitialValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("InitialValue", InitialValue);
         } catch (JCNativeException jcne) {

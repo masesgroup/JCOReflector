@@ -212,9 +212,13 @@ public class TimeOnly extends ValueType  {
     
     public boolean Equals(TimeOnly value) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEquals = null;
         try {
-            return (boolean)classInstance.Invoke("Equals", value == null ? null : value.getJCOInstance());
+            retObjectEquals = classInstance.Invoke("Equals", value == null ? null : value.getJCOInstance());
+            return (boolean)retObjectEquals;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectEquals != null ? retObjectEquals.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -222,9 +226,13 @@ public class TimeOnly extends ValueType  {
 
     public boolean IsBetween(TimeOnly start, TimeOnly end) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsBetween = null;
         try {
-            return (boolean)classInstance.Invoke("IsBetween", start == null ? null : start.getJCOInstance(), end == null ? null : end.getJCOInstance());
+            retObjectIsBetween = classInstance.Invoke("IsBetween", start == null ? null : start.getJCOInstance(), end == null ? null : end.getJCOInstance());
+            return (boolean)retObjectIsBetween;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsBetween != null ? retObjectIsBetween.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -232,9 +240,13 @@ public class TimeOnly extends ValueType  {
 
     public static boolean TryParse(java.lang.String s, IFormatProvider provider, DateTimeStyles style, JCORefOut<TimeOnly> result) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.OverflowException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTryParse = null;
         try {
-            return (boolean)classType.Invoke("TryParse", s, provider == null ? null : provider.getJCOInstance(), style == null ? null : style.getJCOInstance(), result.getJCRefOut());
+            retObjectTryParse = classType.Invoke("TryParse", s, provider == null ? null : provider.getJCOInstance(), style == null ? null : style.getJCOInstance(), result.getJCRefOut());
+            return (boolean)retObjectTryParse;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryParse != null ? retObjectTryParse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -242,9 +254,13 @@ public class TimeOnly extends ValueType  {
 
     public static boolean TryParse(java.lang.String s, IFormatProvider provider, JCORefOut<TimeOnly> result) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.OverflowException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTryParse = null;
         try {
-            return (boolean)classType.Invoke("TryParse", s, provider == null ? null : provider.getJCOInstance(), result.getJCRefOut());
+            retObjectTryParse = classType.Invoke("TryParse", s, provider == null ? null : provider.getJCOInstance(), result.getJCRefOut());
+            return (boolean)retObjectTryParse;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryParse != null ? retObjectTryParse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -252,9 +268,13 @@ public class TimeOnly extends ValueType  {
 
     public static boolean TryParse(java.lang.String s, JCORefOut<TimeOnly> result) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.OverflowException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTryParse = null;
         try {
-            return (boolean)classType.Invoke("TryParse", s, result.getJCRefOut());
+            retObjectTryParse = classType.Invoke("TryParse", s, result.getJCRefOut());
+            return (boolean)retObjectTryParse;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryParse != null ? retObjectTryParse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -262,9 +282,13 @@ public class TimeOnly extends ValueType  {
 
     public static boolean TryParseExact(java.lang.String s, java.lang.String format, IFormatProvider provider, DateTimeStyles style, JCORefOut<TimeOnly> result) throws Throwable, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentNullException, system.RankException, system.ArrayTypeMismatchException, system.TypeInitializationException, system.OverflowException, system.OutOfMemoryException, system.FormatException, system.globalization.CultureNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTryParseExact = null;
         try {
-            return (boolean)classType.Invoke("TryParseExact", s, format, provider == null ? null : provider.getJCOInstance(), style == null ? null : style.getJCOInstance(), result.getJCRefOut());
+            retObjectTryParseExact = classType.Invoke("TryParseExact", s, format, provider == null ? null : provider.getJCOInstance(), style == null ? null : style.getJCOInstance(), result.getJCRefOut());
+            return (boolean)retObjectTryParseExact;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryParseExact != null ? retObjectTryParseExact.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -272,9 +296,13 @@ public class TimeOnly extends ValueType  {
 
     public static boolean TryParseExact(java.lang.String s, java.lang.String format, JCORefOut<TimeOnly> result) throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.RankException, system.ArgumentException, system.ArrayTypeMismatchException, system.TypeInitializationException, system.OverflowException, system.InvalidOperationException, system.ArgumentNullException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTryParseExact = null;
         try {
-            return (boolean)classType.Invoke("TryParseExact", s, format, result.getJCRefOut());
+            retObjectTryParseExact = classType.Invoke("TryParseExact", s, format, result.getJCRefOut());
+            return (boolean)retObjectTryParseExact;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryParseExact != null ? retObjectTryParseExact.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -282,9 +310,13 @@ public class TimeOnly extends ValueType  {
 
     public static boolean TryParseExact(java.lang.String s, java.lang.String[] formats, IFormatProvider provider, DateTimeStyles style, JCORefOut<TimeOnly> result) throws Throwable, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.OverflowException, system.InvalidOperationException, system.ArgumentNullException, system.OutOfMemoryException, system.FormatException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.ArgumentException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTryParseExact = null;
         try {
-            return (boolean)classType.Invoke("TryParseExact", s, formats, provider == null ? null : provider.getJCOInstance(), style == null ? null : style.getJCOInstance(), result.getJCRefOut());
+            retObjectTryParseExact = classType.Invoke("TryParseExact", s, formats, provider == null ? null : provider.getJCOInstance(), style == null ? null : style.getJCOInstance(), result.getJCRefOut());
+            return (boolean)retObjectTryParseExact;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryParseExact != null ? retObjectTryParseExact.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -292,9 +324,13 @@ public class TimeOnly extends ValueType  {
 
     public static boolean TryParseExact(java.lang.String s, java.lang.String[] formats, JCORefOut<TimeOnly> result) throws Throwable, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.OverflowException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.FormatException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTryParseExact = null;
         try {
-            return (boolean)classType.Invoke("TryParseExact", s, formats, result.getJCRefOut());
+            retObjectTryParseExact = classType.Invoke("TryParseExact", s, formats, result.getJCRefOut());
+            return (boolean)retObjectTryParseExact;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryParseExact != null ? retObjectTryParseExact.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -302,9 +338,20 @@ public class TimeOnly extends ValueType  {
 
     public int CompareTo(NetObject value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.IndexOutOfRangeException, system.RankException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCompareTo = null;
         try {
-            return (int)classInstance.Invoke("CompareTo", value == null ? null : value.getJCOInstance());
+            retObjectCompareTo = classInstance.Invoke("CompareTo", value == null ? null : value.getJCOInstance());
+            return (int)retObjectCompareTo;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCompareTo_ToString = retObjectCompareTo == null ? "null" : retObjectCompareTo.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectCompareToNumber = (java.lang.Number)retObjectCompareTo;
+                return retObjectCompareToNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCompareTo != null ? retObjectCompareTo.getClass() : "null", retObjectCompareTo_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -312,9 +359,20 @@ public class TimeOnly extends ValueType  {
 
     public int CompareTo(TimeOnly value) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCompareTo = null;
         try {
-            return (int)classInstance.Invoke("CompareTo", value == null ? null : value.getJCOInstance());
+            retObjectCompareTo = classInstance.Invoke("CompareTo", value == null ? null : value.getJCOInstance());
+            return (int)retObjectCompareTo;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCompareTo_ToString = retObjectCompareTo == null ? "null" : retObjectCompareTo.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectCompareToNumber = (java.lang.Number)retObjectCompareTo;
+                return retObjectCompareToNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCompareTo != null ? retObjectCompareTo.getClass() : "null", retObjectCompareTo_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -322,9 +380,13 @@ public class TimeOnly extends ValueType  {
 
     public java.lang.String ToLongTimeString() throws Throwable, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToLongTimeString = null;
         try {
-            return (java.lang.String)classInstance.Invoke("ToLongTimeString");
+            retObjectToLongTimeString = classInstance.Invoke("ToLongTimeString");
+            return (java.lang.String)retObjectToLongTimeString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectToLongTimeString != null ? retObjectToLongTimeString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -332,9 +394,13 @@ public class TimeOnly extends ValueType  {
 
     public java.lang.String ToShortTimeString() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToShortTimeString = null;
         try {
-            return (java.lang.String)classInstance.Invoke("ToShortTimeString");
+            retObjectToShortTimeString = classInstance.Invoke("ToShortTimeString");
+            return (java.lang.String)retObjectToShortTimeString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectToShortTimeString != null ? retObjectToShortTimeString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -342,9 +408,13 @@ public class TimeOnly extends ValueType  {
 
     public java.lang.String ToString(IFormatProvider provider) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.OutOfMemoryException, system.FormatException, system.globalization.CultureNotFoundException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToString = null;
         try {
-            return (java.lang.String)classInstance.Invoke("ToString", provider == null ? null : provider.getJCOInstance());
+            retObjectToString = classInstance.Invoke("ToString", provider == null ? null : provider.getJCOInstance());
+            return (java.lang.String)retObjectToString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectToString != null ? retObjectToString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -352,9 +422,13 @@ public class TimeOnly extends ValueType  {
 
     public java.lang.String ToString(java.lang.String format, IFormatProvider provider) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.security.SecurityException, system.OverflowException, system.FormatException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToString = null;
         try {
-            return (java.lang.String)classInstance.Invoke("ToString", format, provider == null ? null : provider.getJCOInstance());
+            retObjectToString = classInstance.Invoke("ToString", format, provider == null ? null : provider.getJCOInstance());
+            return (java.lang.String)retObjectToString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectToString != null ? retObjectToString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -362,9 +436,13 @@ public class TimeOnly extends ValueType  {
 
     public java.lang.String ToString(java.lang.String format) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.OutOfMemoryException, system.FormatException, system.globalization.CultureNotFoundException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToString = null;
         try {
-            return (java.lang.String)classInstance.Invoke("ToString", format);
+            retObjectToString = classInstance.Invoke("ToString", format);
+            return (java.lang.String)retObjectToString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectToString != null ? retObjectToString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -372,10 +450,14 @@ public class TimeOnly extends ValueType  {
 
     public TimeOnly Add(TimeSpan value, JCORefOut<java.util.concurrent.atomic.AtomicInteger> wrappedDays) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAdd = null;
         try {
-            JCObject objAdd = (JCObject)classInstance.Invoke("Add", value == null ? null : value.getJCOInstance(), wrappedDays.getJCRefOut());
+            retObjectAdd = classInstance.Invoke("Add", value == null ? null : value.getJCOInstance(), wrappedDays.getJCRefOut());
+            JCObject objAdd = (JCObject)retObjectAdd;
             return new TimeOnly(objAdd);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAdd != null ? retObjectAdd.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -383,10 +465,14 @@ public class TimeOnly extends ValueType  {
 
     public TimeOnly Add(TimeSpan value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAdd = null;
         try {
-            JCObject objAdd = (JCObject)classInstance.Invoke("Add", value == null ? null : value.getJCOInstance());
+            retObjectAdd = classInstance.Invoke("Add", value == null ? null : value.getJCOInstance());
+            JCObject objAdd = (JCObject)retObjectAdd;
             return new TimeOnly(objAdd);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAdd != null ? retObjectAdd.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -394,10 +480,14 @@ public class TimeOnly extends ValueType  {
 
     public TimeOnly AddHours(double value, JCORefOut<java.util.concurrent.atomic.AtomicInteger> wrappedDays) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddHours = null;
         try {
-            JCObject objAddHours = (JCObject)classInstance.Invoke("AddHours", value, wrappedDays.getJCRefOut());
+            retObjectAddHours = classInstance.Invoke("AddHours", value, wrappedDays.getJCRefOut());
+            JCObject objAddHours = (JCObject)retObjectAddHours;
             return new TimeOnly(objAddHours);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddHours != null ? retObjectAddHours.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -405,10 +495,14 @@ public class TimeOnly extends ValueType  {
 
     public TimeOnly AddHours(double value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddHours = null;
         try {
-            JCObject objAddHours = (JCObject)classInstance.Invoke("AddHours", value);
+            retObjectAddHours = classInstance.Invoke("AddHours", value);
+            JCObject objAddHours = (JCObject)retObjectAddHours;
             return new TimeOnly(objAddHours);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddHours != null ? retObjectAddHours.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -416,10 +510,14 @@ public class TimeOnly extends ValueType  {
 
     public TimeOnly AddMinutes(double value, JCORefOut<java.util.concurrent.atomic.AtomicInteger> wrappedDays) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddMinutes = null;
         try {
-            JCObject objAddMinutes = (JCObject)classInstance.Invoke("AddMinutes", value, wrappedDays.getJCRefOut());
+            retObjectAddMinutes = classInstance.Invoke("AddMinutes", value, wrappedDays.getJCRefOut());
+            JCObject objAddMinutes = (JCObject)retObjectAddMinutes;
             return new TimeOnly(objAddMinutes);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddMinutes != null ? retObjectAddMinutes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -427,10 +525,14 @@ public class TimeOnly extends ValueType  {
 
     public TimeOnly AddMinutes(double value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddMinutes = null;
         try {
-            JCObject objAddMinutes = (JCObject)classInstance.Invoke("AddMinutes", value);
+            retObjectAddMinutes = classInstance.Invoke("AddMinutes", value);
+            JCObject objAddMinutes = (JCObject)retObjectAddMinutes;
             return new TimeOnly(objAddMinutes);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddMinutes != null ? retObjectAddMinutes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -438,10 +540,14 @@ public class TimeOnly extends ValueType  {
 
     public static TimeOnly FromDateTime(DateTime dateTime) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFromDateTime = null;
         try {
-            JCObject objFromDateTime = (JCObject)classType.Invoke("FromDateTime", dateTime == null ? null : dateTime.getJCOInstance());
+            retObjectFromDateTime = classType.Invoke("FromDateTime", dateTime == null ? null : dateTime.getJCOInstance());
+            JCObject objFromDateTime = (JCObject)retObjectFromDateTime;
             return new TimeOnly(objFromDateTime);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFromDateTime != null ? retObjectFromDateTime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -449,10 +555,14 @@ public class TimeOnly extends ValueType  {
 
     public static TimeOnly FromTimeSpan(TimeSpan timeSpan) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFromTimeSpan = null;
         try {
-            JCObject objFromTimeSpan = (JCObject)classType.Invoke("FromTimeSpan", timeSpan == null ? null : timeSpan.getJCOInstance());
+            retObjectFromTimeSpan = classType.Invoke("FromTimeSpan", timeSpan == null ? null : timeSpan.getJCOInstance());
+            JCObject objFromTimeSpan = (JCObject)retObjectFromTimeSpan;
             return new TimeOnly(objFromTimeSpan);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFromTimeSpan != null ? retObjectFromTimeSpan.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -460,10 +570,14 @@ public class TimeOnly extends ValueType  {
 
     public static TimeOnly Parse(java.lang.String s, IFormatProvider provider, DateTimeStyles style) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.OverflowException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectParse = null;
         try {
-            JCObject objParse = (JCObject)classType.Invoke("Parse", s, provider == null ? null : provider.getJCOInstance(), style == null ? null : style.getJCOInstance());
+            retObjectParse = classType.Invoke("Parse", s, provider == null ? null : provider.getJCOInstance(), style == null ? null : style.getJCOInstance());
+            JCObject objParse = (JCObject)retObjectParse;
             return new TimeOnly(objParse);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParse != null ? retObjectParse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -471,10 +585,14 @@ public class TimeOnly extends ValueType  {
 
     public static TimeOnly Parse(java.lang.String s, IFormatProvider provider) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.OverflowException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectParse = null;
         try {
-            JCObject objParse = (JCObject)classType.Invoke("Parse", s, provider == null ? null : provider.getJCOInstance());
+            retObjectParse = classType.Invoke("Parse", s, provider == null ? null : provider.getJCOInstance());
+            JCObject objParse = (JCObject)retObjectParse;
             return new TimeOnly(objParse);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParse != null ? retObjectParse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -482,10 +600,14 @@ public class TimeOnly extends ValueType  {
 
     public static TimeOnly Parse(java.lang.String s) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.OverflowException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectParse = null;
         try {
-            JCObject objParse = (JCObject)classType.Invoke("Parse", s);
+            retObjectParse = classType.Invoke("Parse", s);
+            JCObject objParse = (JCObject)retObjectParse;
             return new TimeOnly(objParse);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParse != null ? retObjectParse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -493,10 +615,14 @@ public class TimeOnly extends ValueType  {
 
     public static TimeOnly ParseExact(java.lang.String s, java.lang.String format, IFormatProvider provider, DateTimeStyles style) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.TypeInitializationException, system.OverflowException, system.OutOfMemoryException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectParseExact = null;
         try {
-            JCObject objParseExact = (JCObject)classType.Invoke("ParseExact", s, format, provider == null ? null : provider.getJCOInstance(), style == null ? null : style.getJCOInstance());
+            retObjectParseExact = classType.Invoke("ParseExact", s, format, provider == null ? null : provider.getJCOInstance(), style == null ? null : style.getJCOInstance());
+            JCObject objParseExact = (JCObject)retObjectParseExact;
             return new TimeOnly(objParseExact);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParseExact != null ? retObjectParseExact.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -504,10 +630,14 @@ public class TimeOnly extends ValueType  {
 
     public static TimeOnly ParseExact(java.lang.String s, java.lang.String format) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.TypeInitializationException, system.OverflowException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectParseExact = null;
         try {
-            JCObject objParseExact = (JCObject)classType.Invoke("ParseExact", s, format);
+            retObjectParseExact = classType.Invoke("ParseExact", s, format);
+            JCObject objParseExact = (JCObject)retObjectParseExact;
             return new TimeOnly(objParseExact);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParseExact != null ? retObjectParseExact.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -515,10 +645,14 @@ public class TimeOnly extends ValueType  {
 
     public static TimeOnly ParseExact(java.lang.String s, java.lang.String[] formats, IFormatProvider provider, DateTimeStyles style) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectParseExact = null;
         try {
-            JCObject objParseExact = (JCObject)classType.Invoke("ParseExact", s, formats, provider == null ? null : provider.getJCOInstance(), style == null ? null : style.getJCOInstance());
+            retObjectParseExact = classType.Invoke("ParseExact", s, formats, provider == null ? null : provider.getJCOInstance(), style == null ? null : style.getJCOInstance());
+            JCObject objParseExact = (JCObject)retObjectParseExact;
             return new TimeOnly(objParseExact);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParseExact != null ? retObjectParseExact.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -526,10 +660,14 @@ public class TimeOnly extends ValueType  {
 
     public static TimeOnly ParseExact(java.lang.String dupParam0, JCORefOut dupParam1, IFormatProvider dupParam2, DateTimeStyles dupParam3) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectParseExact = null;
         try {
-            JCObject objParseExact = (JCObject)classType.Invoke("ParseExact", dupParam0, dupParam1.getJCRefOut(), dupParam2 == null ? null : dupParam2.getJCOInstance(), dupParam3 == null ? null : dupParam3.getJCOInstance());
+            retObjectParseExact = classType.Invoke("ParseExact", dupParam0, dupParam1.getJCRefOut(), dupParam2 == null ? null : dupParam2.getJCOInstance(), dupParam3 == null ? null : dupParam3.getJCOInstance());
+            JCObject objParseExact = (JCObject)retObjectParseExact;
             return new TimeOnly(objParseExact);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParseExact != null ? retObjectParseExact.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -537,10 +675,14 @@ public class TimeOnly extends ValueType  {
 
     public static TimeOnly ParseExact(java.lang.String s, java.lang.String[] formats) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OverflowException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectParseExact = null;
         try {
-            JCObject objParseExact = (JCObject)classType.Invoke("ParseExact", s, formats);
+            retObjectParseExact = classType.Invoke("ParseExact", s, formats);
+            JCObject objParseExact = (JCObject)retObjectParseExact;
             return new TimeOnly(objParseExact);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParseExact != null ? retObjectParseExact.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -548,10 +690,14 @@ public class TimeOnly extends ValueType  {
 
     public static TimeOnly ParseExact(java.lang.String dupParam0, JCORefOut dupParam1) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OverflowException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectParseExact = null;
         try {
-            JCObject objParseExact = (JCObject)classType.Invoke("ParseExact", dupParam0, dupParam1.getJCRefOut());
+            retObjectParseExact = classType.Invoke("ParseExact", dupParam0, dupParam1.getJCRefOut());
+            JCObject objParseExact = (JCObject)retObjectParseExact;
             return new TimeOnly(objParseExact);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParseExact != null ? retObjectParseExact.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -559,10 +705,14 @@ public class TimeOnly extends ValueType  {
 
     public TimeSpan ToTimeSpan() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToTimeSpan = null;
         try {
-            JCObject objToTimeSpan = (JCObject)classInstance.Invoke("ToTimeSpan");
+            retObjectToTimeSpan = classInstance.Invoke("ToTimeSpan");
+            JCObject objToTimeSpan = (JCObject)retObjectToTimeSpan;
             return new TimeSpan(objToTimeSpan);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToTimeSpan != null ? retObjectToTimeSpan.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -570,7 +720,7 @@ public class TimeOnly extends ValueType  {
 
     public void Deconstruct(JCORefOut<java.util.concurrent.atomic.AtomicInteger> hour, JCORefOut<java.util.concurrent.atomic.AtomicInteger> minute, JCORefOut<java.util.concurrent.atomic.AtomicInteger> second, JCORefOut<java.util.concurrent.atomic.AtomicInteger> millisecond, JCORefOut<java.util.concurrent.atomic.AtomicInteger> microsecond) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Deconstruct", hour.getJCRefOut(), minute.getJCRefOut(), second.getJCRefOut(), millisecond.getJCRefOut(), microsecond.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -580,7 +730,7 @@ public class TimeOnly extends ValueType  {
 
     public void Deconstruct(JCORefOut<java.util.concurrent.atomic.AtomicInteger> hour, JCORefOut<java.util.concurrent.atomic.AtomicInteger> minute, JCORefOut<java.util.concurrent.atomic.AtomicInteger> second, JCORefOut<java.util.concurrent.atomic.AtomicInteger> millisecond) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Deconstruct", hour.getJCRefOut(), minute.getJCRefOut(), second.getJCRefOut(), millisecond.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -590,7 +740,7 @@ public class TimeOnly extends ValueType  {
 
     public void Deconstruct(JCORefOut<java.util.concurrent.atomic.AtomicInteger> hour, JCORefOut<java.util.concurrent.atomic.AtomicInteger> minute, JCORefOut<java.util.concurrent.atomic.AtomicInteger> second) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Deconstruct", hour.getJCRefOut(), minute.getJCRefOut(), second.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -600,7 +750,7 @@ public class TimeOnly extends ValueType  {
 
     public void Deconstruct(JCORefOut<java.util.concurrent.atomic.AtomicInteger> hour, JCORefOut<java.util.concurrent.atomic.AtomicInteger> minute) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Deconstruct", hour.getJCRefOut(), minute.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -614,9 +764,20 @@ public class TimeOnly extends ValueType  {
     
     public int getHour() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHour = null;
         try {
-            return (int)classInstance.Get("Hour");
+            retObjectHour = classInstance.Get("Hour");
+            return (int)retObjectHour;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectHour_ToString = retObjectHour == null ? "null" : retObjectHour.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectHourNumber = (java.lang.Number)retObjectHour;
+                return retObjectHourNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectHour != null ? retObjectHour.getClass() : "null", retObjectHour_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -624,9 +785,20 @@ public class TimeOnly extends ValueType  {
 
     public int getMicrosecond() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMicrosecond = null;
         try {
-            return (int)classInstance.Get("Microsecond");
+            retObjectMicrosecond = classInstance.Get("Microsecond");
+            return (int)retObjectMicrosecond;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMicrosecond_ToString = retObjectMicrosecond == null ? "null" : retObjectMicrosecond.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMicrosecondNumber = (java.lang.Number)retObjectMicrosecond;
+                return retObjectMicrosecondNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMicrosecond != null ? retObjectMicrosecond.getClass() : "null", retObjectMicrosecond_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -634,9 +806,20 @@ public class TimeOnly extends ValueType  {
 
     public int getMillisecond() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMillisecond = null;
         try {
-            return (int)classInstance.Get("Millisecond");
+            retObjectMillisecond = classInstance.Get("Millisecond");
+            return (int)retObjectMillisecond;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMillisecond_ToString = retObjectMillisecond == null ? "null" : retObjectMillisecond.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMillisecondNumber = (java.lang.Number)retObjectMillisecond;
+                return retObjectMillisecondNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMillisecond != null ? retObjectMillisecond.getClass() : "null", retObjectMillisecond_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -644,9 +827,20 @@ public class TimeOnly extends ValueType  {
 
     public int getMinute() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMinute = null;
         try {
-            return (int)classInstance.Get("Minute");
+            retObjectMinute = classInstance.Get("Minute");
+            return (int)retObjectMinute;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMinute_ToString = retObjectMinute == null ? "null" : retObjectMinute.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMinuteNumber = (java.lang.Number)retObjectMinute;
+                return retObjectMinuteNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMinute != null ? retObjectMinute.getClass() : "null", retObjectMinute_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -654,9 +848,20 @@ public class TimeOnly extends ValueType  {
 
     public int getNanosecond() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNanosecond = null;
         try {
-            return (int)classInstance.Get("Nanosecond");
+            retObjectNanosecond = classInstance.Get("Nanosecond");
+            return (int)retObjectNanosecond;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectNanosecond_ToString = retObjectNanosecond == null ? "null" : retObjectNanosecond.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectNanosecondNumber = (java.lang.Number)retObjectNanosecond;
+                return retObjectNanosecondNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectNanosecond != null ? retObjectNanosecond.getClass() : "null", retObjectNanosecond_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -664,9 +869,20 @@ public class TimeOnly extends ValueType  {
 
     public int getSecond() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSecond = null;
         try {
-            return (int)classInstance.Get("Second");
+            retObjectSecond = classInstance.Get("Second");
+            return (int)retObjectSecond;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSecond_ToString = retObjectSecond == null ? "null" : retObjectSecond.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectSecondNumber = (java.lang.Number)retObjectSecond;
+                return retObjectSecondNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectSecond != null ? retObjectSecond.getClass() : "null", retObjectSecond_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -674,9 +890,20 @@ public class TimeOnly extends ValueType  {
 
     public long getTicks() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTicks = null;
         try {
-            return (long)classInstance.Get("Ticks");
+            retObjectTicks = classInstance.Get("Ticks");
+            return (long)retObjectTicks;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectTicks_ToString = retObjectTicks == null ? "null" : retObjectTicks.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectTicksNumber = (java.lang.Number)retObjectTicks;
+                return retObjectTicksNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectTicks != null ? retObjectTicks.getClass() : "null", retObjectTicks_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -684,10 +911,14 @@ public class TimeOnly extends ValueType  {
 
     public static TimeOnly getMaxValue() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMaxValue = null;
         try {
-            JCObject val = (JCObject)classType.Get("MaxValue");
+            retObjectMaxValue = classType.Get("MaxValue");
+            JCObject val = (JCObject)retObjectMaxValue;
             return new TimeOnly(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMaxValue != null ? retObjectMaxValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -695,10 +926,14 @@ public class TimeOnly extends ValueType  {
 
     public static TimeOnly getMinValue() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMinValue = null;
         try {
-            JCObject val = (JCObject)classType.Get("MinValue");
+            retObjectMinValue = classType.Get("MinValue");
+            JCObject val = (JCObject)retObjectMinValue;
             return new TimeOnly(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMinValue != null ? retObjectMinValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

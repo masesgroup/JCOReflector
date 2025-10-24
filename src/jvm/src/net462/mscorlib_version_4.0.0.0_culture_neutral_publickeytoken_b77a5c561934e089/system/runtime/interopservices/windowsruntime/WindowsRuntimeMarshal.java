@@ -155,10 +155,14 @@ public class WindowsRuntimeMarshal extends NetObject  {
     
     public static IActivationFactory GetActivationFactory(NetType type) throws Throwable, system.ArgumentNullException, system.NotImplementedException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetActivationFactory = null;
         try {
-            JCObject objGetActivationFactory = (JCObject)classType.Invoke("GetActivationFactory", type == null ? null : type.getJCOInstance());
+            retObjectGetActivationFactory = classType.Invoke("GetActivationFactory", type == null ? null : type.getJCOInstance());
+            JCObject objGetActivationFactory = (JCObject)retObjectGetActivationFactory;
             return new IActivationFactoryImplementation(objGetActivationFactory);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetActivationFactory != null ? retObjectGetActivationFactory.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

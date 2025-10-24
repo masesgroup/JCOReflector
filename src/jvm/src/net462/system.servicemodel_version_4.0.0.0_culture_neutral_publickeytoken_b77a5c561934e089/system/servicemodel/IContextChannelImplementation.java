@@ -157,10 +157,14 @@ public class IContextChannelImplementation extends NetObject implements IContext
     
     public IAsyncResult BeginClose(AsyncCallback callback, NetObject state) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginClose = null;
         try {
-            JCObject objBeginClose = (JCObject)classInstance.Invoke("BeginClose", callback, state == null ? null : state.getJCOInstance());
+            retObjectBeginClose = classInstance.Invoke("BeginClose", callback, state == null ? null : state.getJCOInstance());
+            JCObject objBeginClose = (JCObject)retObjectBeginClose;
             return new IAsyncResultImplementation(objBeginClose);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginClose != null ? retObjectBeginClose.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -168,10 +172,14 @@ public class IContextChannelImplementation extends NetObject implements IContext
 
     public IAsyncResult BeginClose(TimeSpan timeout, AsyncCallback callback, NetObject state) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginClose = null;
         try {
-            JCObject objBeginClose = (JCObject)classInstance.Invoke("BeginClose", timeout == null ? null : timeout.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            retObjectBeginClose = classInstance.Invoke("BeginClose", timeout == null ? null : timeout.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            JCObject objBeginClose = (JCObject)retObjectBeginClose;
             return new IAsyncResultImplementation(objBeginClose);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginClose != null ? retObjectBeginClose.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,10 +187,14 @@ public class IContextChannelImplementation extends NetObject implements IContext
 
     public IAsyncResult BeginOpen(AsyncCallback callback, NetObject state) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginOpen = null;
         try {
-            JCObject objBeginOpen = (JCObject)classInstance.Invoke("BeginOpen", callback, state == null ? null : state.getJCOInstance());
+            retObjectBeginOpen = classInstance.Invoke("BeginOpen", callback, state == null ? null : state.getJCOInstance());
+            JCObject objBeginOpen = (JCObject)retObjectBeginOpen;
             return new IAsyncResultImplementation(objBeginOpen);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginOpen != null ? retObjectBeginOpen.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,10 +202,14 @@ public class IContextChannelImplementation extends NetObject implements IContext
 
     public IAsyncResult BeginOpen(TimeSpan timeout, AsyncCallback callback, NetObject state) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginOpen = null;
         try {
-            JCObject objBeginOpen = (JCObject)classInstance.Invoke("BeginOpen", timeout == null ? null : timeout.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            retObjectBeginOpen = classInstance.Invoke("BeginOpen", timeout == null ? null : timeout.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            JCObject objBeginOpen = (JCObject)retObjectBeginOpen;
             return new IAsyncResultImplementation(objBeginOpen);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginOpen != null ? retObjectBeginOpen.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,7 +217,7 @@ public class IContextChannelImplementation extends NetObject implements IContext
 
     public void Abort() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Abort");
         } catch (JCNativeException jcne) {
@@ -211,7 +227,7 @@ public class IContextChannelImplementation extends NetObject implements IContext
 
     public void Close() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Close");
         } catch (JCNativeException jcne) {
@@ -221,7 +237,7 @@ public class IContextChannelImplementation extends NetObject implements IContext
 
     public void Close(TimeSpan timeout) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Close", timeout == null ? null : timeout.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -231,7 +247,7 @@ public class IContextChannelImplementation extends NetObject implements IContext
 
     public void EndClose(IAsyncResult result) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EndClose", result == null ? null : result.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -241,7 +257,7 @@ public class IContextChannelImplementation extends NetObject implements IContext
 
     public void EndOpen(IAsyncResult result) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EndOpen", result == null ? null : result.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -251,7 +267,7 @@ public class IContextChannelImplementation extends NetObject implements IContext
 
     public void Open() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Open");
         } catch (JCNativeException jcne) {
@@ -261,7 +277,7 @@ public class IContextChannelImplementation extends NetObject implements IContext
 
     public void Open(TimeSpan timeout) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Open", timeout == null ? null : timeout.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -275,9 +291,13 @@ public class IContextChannelImplementation extends NetObject implements IContext
     
     public boolean getAllowOutputBatching() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAllowOutputBatching = null;
         try {
-            return (boolean)classInstance.Get("AllowOutputBatching");
+            retObjectAllowOutputBatching = classInstance.Get("AllowOutputBatching");
+            return (boolean)retObjectAllowOutputBatching;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAllowOutputBatching != null ? retObjectAllowOutputBatching.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -285,7 +305,7 @@ public class IContextChannelImplementation extends NetObject implements IContext
 
     public void setAllowOutputBatching(boolean AllowOutputBatching) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AllowOutputBatching", AllowOutputBatching);
         } catch (JCNativeException jcne) {
@@ -295,10 +315,14 @@ public class IContextChannelImplementation extends NetObject implements IContext
 
     public IInputSession getInputSession() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInputSession = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("InputSession");
+            retObjectInputSession = classInstance.Get("InputSession");
+            JCObject val = (JCObject)retObjectInputSession;
             return new IInputSessionImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInputSession != null ? retObjectInputSession.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -306,10 +330,14 @@ public class IContextChannelImplementation extends NetObject implements IContext
 
     public IOutputSession getOutputSession() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOutputSession = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("OutputSession");
+            retObjectOutputSession = classInstance.Get("OutputSession");
+            JCObject val = (JCObject)retObjectOutputSession;
             return new IOutputSessionImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOutputSession != null ? retObjectOutputSession.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -317,10 +345,14 @@ public class IContextChannelImplementation extends NetObject implements IContext
 
     public CommunicationState getState() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectState = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("State");
+            retObjectState = classInstance.Get("State");
+            JCObject val = (JCObject)retObjectState;
             return new CommunicationState(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectState != null ? retObjectState.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -328,10 +360,14 @@ public class IContextChannelImplementation extends NetObject implements IContext
 
     public EndpointAddress getLocalAddress() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLocalAddress = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("LocalAddress");
+            retObjectLocalAddress = classInstance.Get("LocalAddress");
+            JCObject val = (JCObject)retObjectLocalAddress;
             return new EndpointAddress(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLocalAddress != null ? retObjectLocalAddress.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -339,10 +375,14 @@ public class IContextChannelImplementation extends NetObject implements IContext
 
     public EndpointAddress getRemoteAddress() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRemoteAddress = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RemoteAddress");
+            retObjectRemoteAddress = classInstance.Get("RemoteAddress");
+            JCObject val = (JCObject)retObjectRemoteAddress;
             return new EndpointAddress(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRemoteAddress != null ? retObjectRemoteAddress.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -350,9 +390,13 @@ public class IContextChannelImplementation extends NetObject implements IContext
 
     public java.lang.String getSessionId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSessionId = null;
         try {
-            return (java.lang.String)classInstance.Get("SessionId");
+            retObjectSessionId = classInstance.Get("SessionId");
+            return (java.lang.String)retObjectSessionId;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSessionId != null ? retObjectSessionId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -360,10 +404,14 @@ public class IContextChannelImplementation extends NetObject implements IContext
 
     public TimeSpan getOperationTimeout() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOperationTimeout = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("OperationTimeout");
+            retObjectOperationTimeout = classInstance.Get("OperationTimeout");
+            JCObject val = (JCObject)retObjectOperationTimeout;
             return new TimeSpan(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOperationTimeout != null ? retObjectOperationTimeout.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -371,7 +419,7 @@ public class IContextChannelImplementation extends NetObject implements IContext
 
     public void setOperationTimeout(TimeSpan OperationTimeout) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("OperationTimeout", OperationTimeout == null ? null : OperationTimeout.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -386,7 +434,7 @@ public class IContextChannelImplementation extends NetObject implements IContext
 
     public void addClosed(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Closed", handler);
         } catch (JCNativeException jcne) {
@@ -396,7 +444,7 @@ public class IContextChannelImplementation extends NetObject implements IContext
 
     public void removeClosed(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Closed", handler);
         } catch (JCNativeException jcne) {
@@ -406,7 +454,7 @@ public class IContextChannelImplementation extends NetObject implements IContext
 
     public void addClosing(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Closing", handler);
         } catch (JCNativeException jcne) {
@@ -416,7 +464,7 @@ public class IContextChannelImplementation extends NetObject implements IContext
 
     public void removeClosing(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Closing", handler);
         } catch (JCNativeException jcne) {
@@ -426,7 +474,7 @@ public class IContextChannelImplementation extends NetObject implements IContext
 
     public void addFaulted(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Faulted", handler);
         } catch (JCNativeException jcne) {
@@ -436,7 +484,7 @@ public class IContextChannelImplementation extends NetObject implements IContext
 
     public void removeFaulted(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Faulted", handler);
         } catch (JCNativeException jcne) {
@@ -446,7 +494,7 @@ public class IContextChannelImplementation extends NetObject implements IContext
 
     public void addOpened(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Opened", handler);
         } catch (JCNativeException jcne) {
@@ -456,7 +504,7 @@ public class IContextChannelImplementation extends NetObject implements IContext
 
     public void removeOpened(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Opened", handler);
         } catch (JCNativeException jcne) {
@@ -466,7 +514,7 @@ public class IContextChannelImplementation extends NetObject implements IContext
 
     public void addOpening(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Opening", handler);
         } catch (JCNativeException jcne) {
@@ -476,7 +524,7 @@ public class IContextChannelImplementation extends NetObject implements IContext
 
     public void removeOpening(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Opening", handler);
         } catch (JCNativeException jcne) {

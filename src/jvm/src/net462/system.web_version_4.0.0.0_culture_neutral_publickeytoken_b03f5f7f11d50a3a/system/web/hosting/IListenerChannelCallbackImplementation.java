@@ -142,9 +142,20 @@ public class IListenerChannelCallbackImplementation extends NetObject implements
     
     public int GetBlobLength() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetBlobLength = null;
         try {
-            return (int)classInstance.Invoke("GetBlobLength");
+            retObjectGetBlobLength = classInstance.Invoke("GetBlobLength");
+            return (int)retObjectGetBlobLength;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetBlobLength_ToString = retObjectGetBlobLength == null ? "null" : retObjectGetBlobLength.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetBlobLengthNumber = (java.lang.Number)retObjectGetBlobLength;
+                return retObjectGetBlobLengthNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetBlobLength != null ? retObjectGetBlobLength.getClass() : "null", retObjectGetBlobLength_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -152,9 +163,20 @@ public class IListenerChannelCallbackImplementation extends NetObject implements
 
     public int GetId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetId = null;
         try {
-            return (int)classInstance.Invoke("GetId");
+            retObjectGetId = classInstance.Invoke("GetId");
+            return (int)retObjectGetId;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetId_ToString = retObjectGetId == null ? "null" : retObjectGetId.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetIdNumber = (java.lang.Number)retObjectGetId;
+                return retObjectGetIdNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetId != null ? retObjectGetId.getClass() : "null", retObjectGetId_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -162,7 +184,7 @@ public class IListenerChannelCallbackImplementation extends NetObject implements
 
     public void GetBlob(JCORefOut buffer, JCORefOut<java.util.concurrent.atomic.AtomicInteger> bufferSize) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetBlob", buffer.getJCRefOut(), bufferSize.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -172,7 +194,7 @@ public class IListenerChannelCallbackImplementation extends NetObject implements
 
     public void ReportMessageReceived() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ReportMessageReceived");
         } catch (JCNativeException jcne) {
@@ -182,7 +204,7 @@ public class IListenerChannelCallbackImplementation extends NetObject implements
 
     public void ReportStarted() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ReportStarted");
         } catch (JCNativeException jcne) {
@@ -192,7 +214,7 @@ public class IListenerChannelCallbackImplementation extends NetObject implements
 
     public void ReportStopped(int hr) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ReportStopped", hr);
         } catch (JCNativeException jcne) {

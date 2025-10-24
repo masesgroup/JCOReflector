@@ -167,9 +167,13 @@ public class OutputCacheSection extends ConfigurationSection  {
     
     public boolean getEnableFragmentCache() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEnableFragmentCache = null;
         try {
-            return (boolean)classInstance.Get("EnableFragmentCache");
+            retObjectEnableFragmentCache = classInstance.Get("EnableFragmentCache");
+            return (boolean)retObjectEnableFragmentCache;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectEnableFragmentCache != null ? retObjectEnableFragmentCache.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,7 +181,7 @@ public class OutputCacheSection extends ConfigurationSection  {
 
     public void setEnableFragmentCache(boolean EnableFragmentCache) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.NullReferenceException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EnableFragmentCache", EnableFragmentCache);
         } catch (JCNativeException jcne) {
@@ -187,9 +191,13 @@ public class OutputCacheSection extends ConfigurationSection  {
 
     public boolean getEnableKernelCacheForVaryByStar() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEnableKernelCacheForVaryByStar = null;
         try {
-            return (boolean)classInstance.Get("EnableKernelCacheForVaryByStar");
+            retObjectEnableKernelCacheForVaryByStar = classInstance.Get("EnableKernelCacheForVaryByStar");
+            return (boolean)retObjectEnableKernelCacheForVaryByStar;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectEnableKernelCacheForVaryByStar != null ? retObjectEnableKernelCacheForVaryByStar.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,7 +205,7 @@ public class OutputCacheSection extends ConfigurationSection  {
 
     public void setEnableKernelCacheForVaryByStar(boolean EnableKernelCacheForVaryByStar) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.NullReferenceException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EnableKernelCacheForVaryByStar", EnableKernelCacheForVaryByStar);
         } catch (JCNativeException jcne) {
@@ -207,9 +215,13 @@ public class OutputCacheSection extends ConfigurationSection  {
 
     public boolean getEnableOutputCache() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEnableOutputCache = null;
         try {
-            return (boolean)classInstance.Get("EnableOutputCache");
+            retObjectEnableOutputCache = classInstance.Get("EnableOutputCache");
+            return (boolean)retObjectEnableOutputCache;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectEnableOutputCache != null ? retObjectEnableOutputCache.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -217,7 +229,7 @@ public class OutputCacheSection extends ConfigurationSection  {
 
     public void setEnableOutputCache(boolean EnableOutputCache) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.NullReferenceException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EnableOutputCache", EnableOutputCache);
         } catch (JCNativeException jcne) {
@@ -227,9 +239,13 @@ public class OutputCacheSection extends ConfigurationSection  {
 
     public boolean getOmitVaryStar() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOmitVaryStar = null;
         try {
-            return (boolean)classInstance.Get("OmitVaryStar");
+            retObjectOmitVaryStar = classInstance.Get("OmitVaryStar");
+            return (boolean)retObjectOmitVaryStar;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectOmitVaryStar != null ? retObjectOmitVaryStar.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -237,7 +253,7 @@ public class OutputCacheSection extends ConfigurationSection  {
 
     public void setOmitVaryStar(boolean OmitVaryStar) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.NullReferenceException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("OmitVaryStar", OmitVaryStar);
         } catch (JCNativeException jcne) {
@@ -247,9 +263,13 @@ public class OutputCacheSection extends ConfigurationSection  {
 
     public boolean getSendCacheControlHeader() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSendCacheControlHeader = null;
         try {
-            return (boolean)classInstance.Get("SendCacheControlHeader");
+            retObjectSendCacheControlHeader = classInstance.Get("SendCacheControlHeader");
+            return (boolean)retObjectSendCacheControlHeader;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectSendCacheControlHeader != null ? retObjectSendCacheControlHeader.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -257,7 +277,7 @@ public class OutputCacheSection extends ConfigurationSection  {
 
     public void setSendCacheControlHeader(boolean SendCacheControlHeader) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.NullReferenceException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SendCacheControlHeader", SendCacheControlHeader);
         } catch (JCNativeException jcne) {
@@ -267,10 +287,14 @@ public class OutputCacheSection extends ConfigurationSection  {
 
     public ProviderSettingsCollection getProviders() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProviders = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Providers");
+            retObjectProviders = classInstance.Get("Providers");
+            JCObject val = (JCObject)retObjectProviders;
             return new ProviderSettingsCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectProviders != null ? retObjectProviders.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -278,9 +302,13 @@ public class OutputCacheSection extends ConfigurationSection  {
 
     public java.lang.String getDefaultProviderName() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDefaultProviderName = null;
         try {
-            return (java.lang.String)classInstance.Get("DefaultProviderName");
+            retObjectDefaultProviderName = classInstance.Get("DefaultProviderName");
+            return (java.lang.String)retObjectDefaultProviderName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDefaultProviderName != null ? retObjectDefaultProviderName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -288,7 +316,7 @@ public class OutputCacheSection extends ConfigurationSection  {
 
     public void setDefaultProviderName(java.lang.String DefaultProviderName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.NullReferenceException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DefaultProviderName", DefaultProviderName);
         } catch (JCNativeException jcne) {

@@ -167,9 +167,13 @@ public class UInt32 extends ValueType  {
     
     public boolean Equals(UInt32 obj) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEquals = null;
         try {
-            return (boolean)classInstance.Invoke("Equals", obj == null ? null : obj.getJCOInstance());
+            retObjectEquals = classInstance.Invoke("Equals", obj == null ? null : obj.getJCOInstance());
+            return (boolean)retObjectEquals;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectEquals != null ? retObjectEquals.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,9 +181,13 @@ public class UInt32 extends ValueType  {
 
     public static boolean TryParse(java.lang.String s, NumberStyles style, IFormatProvider provider, JCORefOut<UInt32> result) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.TypeInitializationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTryParse = null;
         try {
-            return (boolean)classType.Invoke("TryParse", s, style == null ? null : style.getJCOInstance(), provider == null ? null : provider.getJCOInstance(), result.getJCRefOut());
+            retObjectTryParse = classType.Invoke("TryParse", s, style == null ? null : style.getJCOInstance(), provider == null ? null : provider.getJCOInstance(), result.getJCRefOut());
+            return (boolean)retObjectTryParse;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryParse != null ? retObjectTryParse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,9 +195,13 @@ public class UInt32 extends ValueType  {
 
     public static boolean TryParse(java.lang.String s, JCORefOut<UInt32> result) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.TypeInitializationException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTryParse = null;
         try {
-            return (boolean)classType.Invoke("TryParse", s, result.getJCRefOut());
+            retObjectTryParse = classType.Invoke("TryParse", s, result.getJCRefOut());
+            return (boolean)retObjectTryParse;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryParse != null ? retObjectTryParse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,9 +209,20 @@ public class UInt32 extends ValueType  {
 
     public int CompareTo(NetObject value) throws Throwable, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCompareTo = null;
         try {
-            return (int)classInstance.Invoke("CompareTo", value == null ? null : value.getJCOInstance());
+            retObjectCompareTo = classInstance.Invoke("CompareTo", value == null ? null : value.getJCOInstance());
+            return (int)retObjectCompareTo;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCompareTo_ToString = retObjectCompareTo == null ? "null" : retObjectCompareTo.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectCompareToNumber = (java.lang.Number)retObjectCompareTo;
+                return retObjectCompareToNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCompareTo != null ? retObjectCompareTo.getClass() : "null", retObjectCompareTo_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -207,9 +230,20 @@ public class UInt32 extends ValueType  {
 
     public int CompareTo(UInt32 value) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCompareTo = null;
         try {
-            return (int)classInstance.Invoke("CompareTo", value == null ? null : value.getJCOInstance());
+            retObjectCompareTo = classInstance.Invoke("CompareTo", value == null ? null : value.getJCOInstance());
+            return (int)retObjectCompareTo;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCompareTo_ToString = retObjectCompareTo == null ? "null" : retObjectCompareTo.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectCompareToNumber = (java.lang.Number)retObjectCompareTo;
+                return retObjectCompareToNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCompareTo != null ? retObjectCompareTo.getClass() : "null", retObjectCompareTo_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -217,9 +251,13 @@ public class UInt32 extends ValueType  {
 
     public java.lang.String ToString(IFormatProvider provider) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.TypeInitializationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToString = null;
         try {
-            return (java.lang.String)classInstance.Invoke("ToString", provider == null ? null : provider.getJCOInstance());
+            retObjectToString = classInstance.Invoke("ToString", provider == null ? null : provider.getJCOInstance());
+            return (java.lang.String)retObjectToString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectToString != null ? retObjectToString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -227,9 +265,13 @@ public class UInt32 extends ValueType  {
 
     public java.lang.String ToString(java.lang.String format) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.TypeInitializationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToString = null;
         try {
-            return (java.lang.String)classInstance.Invoke("ToString", format);
+            retObjectToString = classInstance.Invoke("ToString", format);
+            return (java.lang.String)retObjectToString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectToString != null ? retObjectToString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -237,9 +279,13 @@ public class UInt32 extends ValueType  {
 
     public java.lang.String ToString(java.lang.String format, IFormatProvider provider) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.TypeInitializationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToString = null;
         try {
-            return (java.lang.String)classInstance.Invoke("ToString", format, provider == null ? null : provider.getJCOInstance());
+            retObjectToString = classInstance.Invoke("ToString", format, provider == null ? null : provider.getJCOInstance());
+            return (java.lang.String)retObjectToString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectToString != null ? retObjectToString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -247,10 +293,14 @@ public class UInt32 extends ValueType  {
 
     public TypeCode GetTypeCode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetTypeCode = null;
         try {
-            JCObject objGetTypeCode = (JCObject)classInstance.Invoke("GetTypeCode");
+            retObjectGetTypeCode = classInstance.Invoke("GetTypeCode");
+            JCObject objGetTypeCode = (JCObject)retObjectGetTypeCode;
             return new TypeCode(objGetTypeCode);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetTypeCode != null ? retObjectGetTypeCode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -258,10 +308,14 @@ public class UInt32 extends ValueType  {
 
     public static UInt32 Parse(java.lang.String s) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.TypeInitializationException, system.FormatException, system.OverflowException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectParse = null;
         try {
-            JCObject objParse = (JCObject)classType.Invoke("Parse", s);
+            retObjectParse = classType.Invoke("Parse", s);
+            JCObject objParse = (JCObject)retObjectParse;
             return new UInt32(objParse);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParse != null ? retObjectParse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -269,10 +323,14 @@ public class UInt32 extends ValueType  {
 
     public static UInt32 Parse(java.lang.String s, NumberStyles style) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.TypeInitializationException, system.FormatException, system.OverflowException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectParse = null;
         try {
-            JCObject objParse = (JCObject)classType.Invoke("Parse", s, style == null ? null : style.getJCOInstance());
+            retObjectParse = classType.Invoke("Parse", s, style == null ? null : style.getJCOInstance());
+            JCObject objParse = (JCObject)retObjectParse;
             return new UInt32(objParse);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParse != null ? retObjectParse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -280,10 +338,14 @@ public class UInt32 extends ValueType  {
 
     public static UInt32 Parse(java.lang.String s, NumberStyles style, IFormatProvider provider) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.TypeInitializationException, system.FormatException, system.OverflowException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectParse = null;
         try {
-            JCObject objParse = (JCObject)classType.Invoke("Parse", s, style == null ? null : style.getJCOInstance(), provider == null ? null : provider.getJCOInstance());
+            retObjectParse = classType.Invoke("Parse", s, style == null ? null : style.getJCOInstance(), provider == null ? null : provider.getJCOInstance());
+            JCObject objParse = (JCObject)retObjectParse;
             return new UInt32(objParse);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParse != null ? retObjectParse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -291,10 +353,14 @@ public class UInt32 extends ValueType  {
 
     public static UInt32 Parse(java.lang.String s, IFormatProvider provider) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.TypeInitializationException, system.FormatException, system.OverflowException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectParse = null;
         try {
-            JCObject objParse = (JCObject)classType.Invoke("Parse", s, provider == null ? null : provider.getJCOInstance());
+            retObjectParse = classType.Invoke("Parse", s, provider == null ? null : provider.getJCOInstance());
+            JCObject objParse = (JCObject)retObjectParse;
             return new UInt32(objParse);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParse != null ? retObjectParse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -306,7 +372,7 @@ public class UInt32 extends ValueType  {
      */
     @Deprecated 
     public boolean ToBoolean(IFormatProvider provider) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIConvertible to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIConvertible to obtain the full interface.");
     }
 
     /**
@@ -315,7 +381,7 @@ public class UInt32 extends ValueType  {
      */
     @Deprecated 
     public byte ToByte(IFormatProvider provider) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIConvertible to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIConvertible to obtain the full interface.");
     }
 
     /**
@@ -324,7 +390,7 @@ public class UInt32 extends ValueType  {
      */
     @Deprecated 
     public char ToChar(IFormatProvider provider) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIConvertible to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIConvertible to obtain the full interface.");
     }
 
     /**
@@ -333,7 +399,7 @@ public class UInt32 extends ValueType  {
      */
     @Deprecated 
     public double ToDouble(IFormatProvider provider) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIConvertible to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIConvertible to obtain the full interface.");
     }
 
     /**
@@ -342,7 +408,7 @@ public class UInt32 extends ValueType  {
      */
     @Deprecated 
     public short ToInt16(IFormatProvider provider) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIConvertible to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIConvertible to obtain the full interface.");
     }
 
     /**
@@ -351,7 +417,7 @@ public class UInt32 extends ValueType  {
      */
     @Deprecated 
     public int ToInt32(IFormatProvider provider) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIConvertible to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIConvertible to obtain the full interface.");
     }
 
     /**
@@ -360,7 +426,7 @@ public class UInt32 extends ValueType  {
      */
     @Deprecated 
     public long ToInt64(IFormatProvider provider) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIConvertible to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIConvertible to obtain the full interface.");
     }
 
     /**
@@ -369,7 +435,7 @@ public class UInt32 extends ValueType  {
      */
     @Deprecated 
     public SByte ToSByte(IFormatProvider provider) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIConvertible to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIConvertible to obtain the full interface.");
     }
 
     /**
@@ -378,7 +444,7 @@ public class UInt32 extends ValueType  {
      */
     @Deprecated 
     public Single ToSingle(IFormatProvider provider) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIConvertible to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIConvertible to obtain the full interface.");
     }
 
     /**
@@ -387,7 +453,7 @@ public class UInt32 extends ValueType  {
      */
     @Deprecated 
     public DateTime ToDateTime(IFormatProvider provider) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIConvertible to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIConvertible to obtain the full interface.");
     }
 
     /**
@@ -396,7 +462,7 @@ public class UInt32 extends ValueType  {
      */
     @Deprecated 
     public Decimal ToDecimal(IFormatProvider provider) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIConvertible to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIConvertible to obtain the full interface.");
     }
 
     /**
@@ -405,7 +471,7 @@ public class UInt32 extends ValueType  {
      */
     @Deprecated 
     public NetObject ToType(NetType conversionType, IFormatProvider provider) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIConvertible to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIConvertible to obtain the full interface.");
     }
 
     /**
@@ -414,7 +480,7 @@ public class UInt32 extends ValueType  {
      */
     @Deprecated 
     public UInt16 ToUInt16(IFormatProvider provider) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIConvertible to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIConvertible to obtain the full interface.");
     }
 
     /**
@@ -423,7 +489,7 @@ public class UInt32 extends ValueType  {
      */
     @Deprecated 
     public UInt32 ToUInt32(IFormatProvider provider) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIConvertible to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIConvertible to obtain the full interface.");
     }
 
     /**
@@ -432,7 +498,7 @@ public class UInt32 extends ValueType  {
      */
     @Deprecated 
     public UInt64 ToUInt64(IFormatProvider provider) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIConvertible to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIConvertible to obtain the full interface.");
     }
 
 

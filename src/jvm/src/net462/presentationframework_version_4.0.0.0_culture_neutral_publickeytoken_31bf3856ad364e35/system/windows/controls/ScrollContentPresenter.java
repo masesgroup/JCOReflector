@@ -166,10 +166,14 @@ public class ScrollContentPresenter extends ContentPresenter  {
     
     public Rect MakeVisible(Visual visual, Rect rectangle) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentException, system.componentmodel.Win32Exception, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMakeVisible = null;
         try {
-            JCObject objMakeVisible = (JCObject)classInstance.Invoke("MakeVisible", visual == null ? null : visual.getJCOInstance(), rectangle == null ? null : rectangle.getJCOInstance());
+            retObjectMakeVisible = classInstance.Invoke("MakeVisible", visual == null ? null : visual.getJCOInstance(), rectangle == null ? null : rectangle.getJCOInstance());
+            JCObject objMakeVisible = (JCObject)retObjectMakeVisible;
             return new Rect(objMakeVisible);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMakeVisible != null ? retObjectMakeVisible.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,7 +181,7 @@ public class ScrollContentPresenter extends ContentPresenter  {
 
     public void LineDown() throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("LineDown");
         } catch (JCNativeException jcne) {
@@ -187,7 +191,7 @@ public class ScrollContentPresenter extends ContentPresenter  {
 
     public void LineLeft() throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("LineLeft");
         } catch (JCNativeException jcne) {
@@ -197,7 +201,7 @@ public class ScrollContentPresenter extends ContentPresenter  {
 
     public void LineRight() throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("LineRight");
         } catch (JCNativeException jcne) {
@@ -207,7 +211,7 @@ public class ScrollContentPresenter extends ContentPresenter  {
 
     public void LineUp() throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("LineUp");
         } catch (JCNativeException jcne) {
@@ -217,7 +221,7 @@ public class ScrollContentPresenter extends ContentPresenter  {
 
     public void MouseWheelDown() throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("MouseWheelDown");
         } catch (JCNativeException jcne) {
@@ -227,7 +231,7 @@ public class ScrollContentPresenter extends ContentPresenter  {
 
     public void MouseWheelLeft() throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("MouseWheelLeft");
         } catch (JCNativeException jcne) {
@@ -237,7 +241,7 @@ public class ScrollContentPresenter extends ContentPresenter  {
 
     public void MouseWheelRight() throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("MouseWheelRight");
         } catch (JCNativeException jcne) {
@@ -247,7 +251,7 @@ public class ScrollContentPresenter extends ContentPresenter  {
 
     public void MouseWheelUp() throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("MouseWheelUp");
         } catch (JCNativeException jcne) {
@@ -257,7 +261,7 @@ public class ScrollContentPresenter extends ContentPresenter  {
 
     public void OnApplyTemplate() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.InvalidCastException, system.MissingMethodException, system.reflection.TargetInvocationException, system.componentmodel.Win32Exception, system.componentmodel.InvalidEnumArgumentException, system.xaml.XamlException, system.security.SecurityException, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("OnApplyTemplate");
         } catch (JCNativeException jcne) {
@@ -267,7 +271,7 @@ public class ScrollContentPresenter extends ContentPresenter  {
 
     public void PageDown() throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("PageDown");
         } catch (JCNativeException jcne) {
@@ -277,7 +281,7 @@ public class ScrollContentPresenter extends ContentPresenter  {
 
     public void PageLeft() throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("PageLeft");
         } catch (JCNativeException jcne) {
@@ -287,7 +291,7 @@ public class ScrollContentPresenter extends ContentPresenter  {
 
     public void PageRight() throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("PageRight");
         } catch (JCNativeException jcne) {
@@ -297,7 +301,7 @@ public class ScrollContentPresenter extends ContentPresenter  {
 
     public void PageUp() throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("PageUp");
         } catch (JCNativeException jcne) {
@@ -307,7 +311,7 @@ public class ScrollContentPresenter extends ContentPresenter  {
 
     public void SetHorizontalOffset(double offset) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.security.SecurityException, system.MulticastNotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetHorizontalOffset", offset);
         } catch (JCNativeException jcne) {
@@ -317,7 +321,7 @@ public class ScrollContentPresenter extends ContentPresenter  {
 
     public void SetVerticalOffset(double offset) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.security.SecurityException, system.MulticastNotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetVerticalOffset", offset);
         } catch (JCNativeException jcne) {
@@ -331,9 +335,13 @@ public class ScrollContentPresenter extends ContentPresenter  {
     
     public boolean getCanContentScroll() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanContentScroll = null;
         try {
-            return (boolean)classInstance.Get("CanContentScroll");
+            retObjectCanContentScroll = classInstance.Get("CanContentScroll");
+            return (boolean)retObjectCanContentScroll;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCanContentScroll != null ? retObjectCanContentScroll.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -341,7 +349,7 @@ public class ScrollContentPresenter extends ContentPresenter  {
 
     public void setCanContentScroll(boolean CanContentScroll) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CanContentScroll", CanContentScroll);
         } catch (JCNativeException jcne) {
@@ -351,9 +359,13 @@ public class ScrollContentPresenter extends ContentPresenter  {
 
     public boolean getCanHorizontallyScroll() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanHorizontallyScroll = null;
         try {
-            return (boolean)classInstance.Get("CanHorizontallyScroll");
+            retObjectCanHorizontallyScroll = classInstance.Get("CanHorizontallyScroll");
+            return (boolean)retObjectCanHorizontallyScroll;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCanHorizontallyScroll != null ? retObjectCanHorizontallyScroll.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -361,7 +373,7 @@ public class ScrollContentPresenter extends ContentPresenter  {
 
     public void setCanHorizontallyScroll(boolean CanHorizontallyScroll) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.FormatException, system.MulticastNotSupportedException, system.NotImplementedException, system.ObjectDisposedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CanHorizontallyScroll", CanHorizontallyScroll);
         } catch (JCNativeException jcne) {
@@ -371,9 +383,13 @@ public class ScrollContentPresenter extends ContentPresenter  {
 
     public boolean getCanVerticallyScroll() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanVerticallyScroll = null;
         try {
-            return (boolean)classInstance.Get("CanVerticallyScroll");
+            retObjectCanVerticallyScroll = classInstance.Get("CanVerticallyScroll");
+            return (boolean)retObjectCanVerticallyScroll;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCanVerticallyScroll != null ? retObjectCanVerticallyScroll.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -381,7 +397,7 @@ public class ScrollContentPresenter extends ContentPresenter  {
 
     public void setCanVerticallyScroll(boolean CanVerticallyScroll) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.FormatException, system.MulticastNotSupportedException, system.NotImplementedException, system.ObjectDisposedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CanVerticallyScroll", CanVerticallyScroll);
         } catch (JCNativeException jcne) {
@@ -391,9 +407,20 @@ public class ScrollContentPresenter extends ContentPresenter  {
 
     public double getExtentHeight() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExtentHeight = null;
         try {
-            return (double)classInstance.Get("ExtentHeight");
+            retObjectExtentHeight = classInstance.Get("ExtentHeight");
+            return (double)retObjectExtentHeight;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectExtentHeight_ToString = retObjectExtentHeight == null ? "null" : retObjectExtentHeight.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectExtentHeightNumber = (java.lang.Number)retObjectExtentHeight;
+                return retObjectExtentHeightNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectExtentHeight != null ? retObjectExtentHeight.getClass() : "null", retObjectExtentHeight_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -401,9 +428,20 @@ public class ScrollContentPresenter extends ContentPresenter  {
 
     public double getExtentWidth() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExtentWidth = null;
         try {
-            return (double)classInstance.Get("ExtentWidth");
+            retObjectExtentWidth = classInstance.Get("ExtentWidth");
+            return (double)retObjectExtentWidth;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectExtentWidth_ToString = retObjectExtentWidth == null ? "null" : retObjectExtentWidth.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectExtentWidthNumber = (java.lang.Number)retObjectExtentWidth;
+                return retObjectExtentWidthNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectExtentWidth != null ? retObjectExtentWidth.getClass() : "null", retObjectExtentWidth_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -411,9 +449,20 @@ public class ScrollContentPresenter extends ContentPresenter  {
 
     public double getHorizontalOffset() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHorizontalOffset = null;
         try {
-            return (double)classInstance.Get("HorizontalOffset");
+            retObjectHorizontalOffset = classInstance.Get("HorizontalOffset");
+            return (double)retObjectHorizontalOffset;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectHorizontalOffset_ToString = retObjectHorizontalOffset == null ? "null" : retObjectHorizontalOffset.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectHorizontalOffsetNumber = (java.lang.Number)retObjectHorizontalOffset;
+                return retObjectHorizontalOffsetNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectHorizontalOffset != null ? retObjectHorizontalOffset.getClass() : "null", retObjectHorizontalOffset_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -421,9 +470,20 @@ public class ScrollContentPresenter extends ContentPresenter  {
 
     public double getVerticalOffset() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVerticalOffset = null;
         try {
-            return (double)classInstance.Get("VerticalOffset");
+            retObjectVerticalOffset = classInstance.Get("VerticalOffset");
+            return (double)retObjectVerticalOffset;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectVerticalOffset_ToString = retObjectVerticalOffset == null ? "null" : retObjectVerticalOffset.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectVerticalOffsetNumber = (java.lang.Number)retObjectVerticalOffset;
+                return retObjectVerticalOffsetNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectVerticalOffset != null ? retObjectVerticalOffset.getClass() : "null", retObjectVerticalOffset_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -431,9 +491,20 @@ public class ScrollContentPresenter extends ContentPresenter  {
 
     public double getViewportHeight() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectViewportHeight = null;
         try {
-            return (double)classInstance.Get("ViewportHeight");
+            retObjectViewportHeight = classInstance.Get("ViewportHeight");
+            return (double)retObjectViewportHeight;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectViewportHeight_ToString = retObjectViewportHeight == null ? "null" : retObjectViewportHeight.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectViewportHeightNumber = (java.lang.Number)retObjectViewportHeight;
+                return retObjectViewportHeightNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectViewportHeight != null ? retObjectViewportHeight.getClass() : "null", retObjectViewportHeight_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -441,9 +512,20 @@ public class ScrollContentPresenter extends ContentPresenter  {
 
     public double getViewportWidth() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectViewportWidth = null;
         try {
-            return (double)classInstance.Get("ViewportWidth");
+            retObjectViewportWidth = classInstance.Get("ViewportWidth");
+            return (double)retObjectViewportWidth;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectViewportWidth_ToString = retObjectViewportWidth == null ? "null" : retObjectViewportWidth.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectViewportWidthNumber = (java.lang.Number)retObjectViewportWidth;
+                return retObjectViewportWidthNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectViewportWidth != null ? retObjectViewportWidth.getClass() : "null", retObjectViewportWidth_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -451,10 +533,14 @@ public class ScrollContentPresenter extends ContentPresenter  {
 
     public ScrollViewer getScrollOwner() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectScrollOwner = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ScrollOwner");
+            retObjectScrollOwner = classInstance.Get("ScrollOwner");
+            JCObject val = (JCObject)retObjectScrollOwner;
             return new ScrollViewer(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectScrollOwner != null ? retObjectScrollOwner.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -462,7 +548,7 @@ public class ScrollContentPresenter extends ContentPresenter  {
 
     public void setScrollOwner(ScrollViewer ScrollOwner) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ScrollOwner", ScrollOwner == null ? null : ScrollOwner.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -472,10 +558,14 @@ public class ScrollContentPresenter extends ContentPresenter  {
 
     public AdornerLayer getAdornerLayer() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAdornerLayer = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AdornerLayer");
+            retObjectAdornerLayer = classInstance.Get("AdornerLayer");
+            JCObject val = (JCObject)retObjectAdornerLayer;
             return new AdornerLayer(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAdornerLayer != null ? retObjectAdornerLayer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

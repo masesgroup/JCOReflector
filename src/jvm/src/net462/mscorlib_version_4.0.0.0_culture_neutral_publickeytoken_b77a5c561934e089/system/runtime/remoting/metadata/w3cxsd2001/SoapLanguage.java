@@ -172,10 +172,14 @@ public class SoapLanguage extends NetObject  {
     
     public static SoapLanguage Parse(java.lang.String value) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectParse = null;
         try {
-            JCObject objParse = (JCObject)classType.Invoke("Parse", value);
+            retObjectParse = classType.Invoke("Parse", value);
+            JCObject objParse = (JCObject)retObjectParse;
             return new SoapLanguage(objParse);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParse != null ? retObjectParse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,9 +187,13 @@ public class SoapLanguage extends NetObject  {
 
     public java.lang.String GetXsdType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetXsdType = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetXsdType");
+            retObjectGetXsdType = classInstance.Invoke("GetXsdType");
+            return (java.lang.String)retObjectGetXsdType;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetXsdType != null ? retObjectGetXsdType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,9 +205,13 @@ public class SoapLanguage extends NetObject  {
     
     public java.lang.String getValue() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValue = null;
         try {
-            return (java.lang.String)classInstance.Get("Value");
+            retObjectValue = classInstance.Get("Value");
+            return (java.lang.String)retObjectValue;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectValue != null ? retObjectValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -207,7 +219,7 @@ public class SoapLanguage extends NetObject  {
 
     public void setValue(java.lang.String Value) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Value", Value);
         } catch (JCNativeException jcne) {
@@ -217,9 +229,13 @@ public class SoapLanguage extends NetObject  {
 
     public static java.lang.String getXsdType() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectXsdType = null;
         try {
-            return (java.lang.String)classType.Get("XsdType");
+            retObjectXsdType = classType.Get("XsdType");
+            return (java.lang.String)retObjectXsdType;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectXsdType != null ? retObjectXsdType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

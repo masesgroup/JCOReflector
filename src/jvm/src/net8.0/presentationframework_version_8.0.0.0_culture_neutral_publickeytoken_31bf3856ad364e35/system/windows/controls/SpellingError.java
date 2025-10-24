@@ -155,7 +155,7 @@ public class SpellingError extends NetObject  {
     
     public void Correct(java.lang.String correctedText) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Correct", correctedText);
         } catch (JCNativeException jcne) {
@@ -165,7 +165,7 @@ public class SpellingError extends NetObject  {
 
     public void IgnoreAll() throws Throwable, system.ArgumentException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.security.SecurityException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.io.IOException, system.UnauthorizedAccessException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.NotSupportedException, system.ArgumentNullException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.RankException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("IgnoreAll");
         } catch (JCNativeException jcne) {

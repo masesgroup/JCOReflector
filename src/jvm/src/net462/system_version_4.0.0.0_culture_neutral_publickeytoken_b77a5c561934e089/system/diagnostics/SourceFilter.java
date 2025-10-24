@@ -168,9 +168,13 @@ public class SourceFilter extends TraceFilter  {
     
     public boolean ShouldTrace(TraceEventCache cache, java.lang.String source, TraceEventType eventType, int id, java.lang.String formatOrMessage, NetObject[] args, NetObject data1, NetObject[] data) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShouldTrace = null;
         try {
-            return (boolean)classInstance.Invoke("ShouldTrace", cache == null ? null : cache.getJCOInstance(), source, eventType == null ? null : eventType.getJCOInstance(), id, formatOrMessage, toObjectFromArray(args), data1 == null ? null : data1.getJCOInstance(), toObjectFromArray(data));
+            retObjectShouldTrace = classInstance.Invoke("ShouldTrace", cache == null ? null : cache.getJCOInstance(), source, eventType == null ? null : eventType.getJCOInstance(), id, formatOrMessage, toObjectFromArray(args), data1 == null ? null : data1.getJCOInstance(), toObjectFromArray(data));
+            return (boolean)retObjectShouldTrace;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectShouldTrace != null ? retObjectShouldTrace.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,9 +186,13 @@ public class SourceFilter extends TraceFilter  {
     
     public java.lang.String getSource() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSource = null;
         try {
-            return (java.lang.String)classInstance.Get("Source");
+            retObjectSource = classInstance.Get("Source");
+            return (java.lang.String)retObjectSource;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSource != null ? retObjectSource.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,7 +200,7 @@ public class SourceFilter extends TraceFilter  {
 
     public void setSource(java.lang.String Source) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Source", Source);
         } catch (JCNativeException jcne) {

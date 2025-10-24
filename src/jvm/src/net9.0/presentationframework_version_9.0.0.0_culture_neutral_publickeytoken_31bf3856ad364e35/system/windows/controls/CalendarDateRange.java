@@ -187,10 +187,14 @@ public class CalendarDateRange extends NetObject  {
     
     public DateTime getEnd() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEnd = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("End");
+            retObjectEnd = classInstance.Get("End");
+            JCObject val = (JCObject)retObjectEnd;
             return new DateTime(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEnd != null ? retObjectEnd.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,7 +202,7 @@ public class CalendarDateRange extends NetObject  {
 
     public void setEnd(DateTime End) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("End", End == null ? null : End.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -208,10 +212,14 @@ public class CalendarDateRange extends NetObject  {
 
     public DateTime getStart() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStart = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Start");
+            retObjectStart = classInstance.Get("Start");
+            JCObject val = (JCObject)retObjectStart;
             return new DateTime(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStart != null ? retObjectStart.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -219,7 +227,7 @@ public class CalendarDateRange extends NetObject  {
 
     public void setStart(DateTime Start) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Start", Start == null ? null : Start.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -234,7 +242,7 @@ public class CalendarDateRange extends NetObject  {
 
     public void addPropertyChanged(PropertyChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("PropertyChanged", handler);
         } catch (JCNativeException jcne) {
@@ -244,7 +252,7 @@ public class CalendarDateRange extends NetObject  {
 
     public void removePropertyChanged(PropertyChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("PropertyChanged", handler);
         } catch (JCNativeException jcne) {

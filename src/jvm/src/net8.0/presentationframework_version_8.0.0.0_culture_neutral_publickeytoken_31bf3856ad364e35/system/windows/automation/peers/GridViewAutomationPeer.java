@@ -177,7 +177,7 @@ public class GridViewAutomationPeer extends NetObject  {
      */
     @Deprecated 
     public NetObject GetPattern(PatternInterface patternInterface) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIViewAutomationPeer to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIViewAutomationPeer to obtain the full interface.");
     }
 
     /**
@@ -186,7 +186,7 @@ public class GridViewAutomationPeer extends NetObject  {
      */
     @Deprecated 
     public AutomationControlType GetAutomationControlType() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIViewAutomationPeer to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIViewAutomationPeer to obtain the full interface.");
     }
 
     /**
@@ -195,7 +195,7 @@ public class GridViewAutomationPeer extends NetObject  {
      */
     @Deprecated 
     public ItemAutomationPeer CreateItemAutomationPeer(NetObject item) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIViewAutomationPeer to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIViewAutomationPeer to obtain the full interface.");
     }
 
     /**
@@ -204,7 +204,7 @@ public class GridViewAutomationPeer extends NetObject  {
      */
     @Deprecated 
     public void ItemsChanged(NotifyCollectionChangedEventArgs e) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIViewAutomationPeer to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIViewAutomationPeer to obtain the full interface.");
     }
 
     /**
@@ -213,7 +213,7 @@ public class GridViewAutomationPeer extends NetObject  {
      */
     @Deprecated 
     public void ViewDetached() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIViewAutomationPeer to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIViewAutomationPeer to obtain the full interface.");
     }
 
     /**
@@ -222,7 +222,7 @@ public class GridViewAutomationPeer extends NetObject  {
      */
     @Deprecated 
     public IRawElementProviderSimple[] GetColumnHeaders() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToITableProvider to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToITableProvider to obtain the full interface.");
     }
 
     /**
@@ -231,7 +231,7 @@ public class GridViewAutomationPeer extends NetObject  {
      */
     @Deprecated 
     public IRawElementProviderSimple[] GetRowHeaders() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToITableProvider to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToITableProvider to obtain the full interface.");
     }
 
     /**
@@ -240,7 +240,7 @@ public class GridViewAutomationPeer extends NetObject  {
      */
     @Deprecated 
     public IRawElementProviderSimple GetItem(int row, int column) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIGridProvider to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIGridProvider to obtain the full interface.");
     }
 
 

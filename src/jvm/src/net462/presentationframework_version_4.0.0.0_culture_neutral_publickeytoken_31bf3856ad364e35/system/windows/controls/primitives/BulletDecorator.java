@@ -168,10 +168,14 @@ public class BulletDecorator extends Decorator  {
     
     public Brush getBackground() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBackground = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Background");
+            retObjectBackground = classInstance.Get("Background");
+            JCObject val = (JCObject)retObjectBackground;
             return new Brush(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBackground != null ? retObjectBackground.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,7 +183,7 @@ public class BulletDecorator extends Decorator  {
 
     public void setBackground(Brush Background) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Background", Background == null ? null : Background.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -189,10 +193,14 @@ public class BulletDecorator extends Decorator  {
 
     public UIElement getBullet() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBullet = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Bullet");
+            retObjectBullet = classInstance.Get("Bullet");
+            JCObject val = (JCObject)retObjectBullet;
             return new UIElement(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBullet != null ? retObjectBullet.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,7 +208,7 @@ public class BulletDecorator extends Decorator  {
 
     public void setBullet(UIElement Bullet) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.security.SecurityException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Bullet", Bullet == null ? null : Bullet.getJCOInstance());
         } catch (JCNativeException jcne) {

@@ -157,9 +157,13 @@ public class ScrollProperties extends NetObject  {
     
     public boolean getEnabled() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEnabled = null;
         try {
-            return (boolean)classInstance.Get("Enabled");
+            retObjectEnabled = classInstance.Get("Enabled");
+            return (boolean)retObjectEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectEnabled != null ? retObjectEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -167,7 +171,7 @@ public class ScrollProperties extends NetObject  {
 
     public void setEnabled(boolean Enabled) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Enabled", Enabled);
         } catch (JCNativeException jcne) {
@@ -177,9 +181,13 @@ public class ScrollProperties extends NetObject  {
 
     public boolean getVisible() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVisible = null;
         try {
-            return (boolean)classInstance.Get("Visible");
+            retObjectVisible = classInstance.Get("Visible");
+            return (boolean)retObjectVisible;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectVisible != null ? retObjectVisible.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,7 +195,7 @@ public class ScrollProperties extends NetObject  {
 
     public void setVisible(boolean Visible) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.ObjectDisposedException, system.FormatException, system.componentmodel.Win32Exception, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.InvalidAsynchronousStateException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Visible", Visible);
         } catch (JCNativeException jcne) {
@@ -197,9 +205,20 @@ public class ScrollProperties extends NetObject  {
 
     public int getLargeChange() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLargeChange = null;
         try {
-            return (int)classInstance.Get("LargeChange");
+            retObjectLargeChange = classInstance.Get("LargeChange");
+            return (int)retObjectLargeChange;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectLargeChange_ToString = retObjectLargeChange == null ? "null" : retObjectLargeChange.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectLargeChangeNumber = (java.lang.Number)retObjectLargeChange;
+                return retObjectLargeChangeNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectLargeChange != null ? retObjectLargeChange.getClass() : "null", retObjectLargeChange_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -207,7 +226,7 @@ public class ScrollProperties extends NetObject  {
 
     public void setLargeChange(int LargeChange) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("LargeChange", LargeChange);
         } catch (JCNativeException jcne) {
@@ -217,9 +236,20 @@ public class ScrollProperties extends NetObject  {
 
     public int getMaximum() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaximum = null;
         try {
-            return (int)classInstance.Get("Maximum");
+            retObjectMaximum = classInstance.Get("Maximum");
+            return (int)retObjectMaximum;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaximum_ToString = retObjectMaximum == null ? "null" : retObjectMaximum.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMaximumNumber = (java.lang.Number)retObjectMaximum;
+                return retObjectMaximumNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaximum != null ? retObjectMaximum.getClass() : "null", retObjectMaximum_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -227,7 +257,7 @@ public class ScrollProperties extends NetObject  {
 
     public void setMaximum(int Maximum) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.componentmodel.InvalidAsynchronousStateException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Maximum", Maximum);
         } catch (JCNativeException jcne) {
@@ -237,9 +267,20 @@ public class ScrollProperties extends NetObject  {
 
     public int getMinimum() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMinimum = null;
         try {
-            return (int)classInstance.Get("Minimum");
+            retObjectMinimum = classInstance.Get("Minimum");
+            return (int)retObjectMinimum;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMinimum_ToString = retObjectMinimum == null ? "null" : retObjectMinimum.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMinimumNumber = (java.lang.Number)retObjectMinimum;
+                return retObjectMinimumNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMinimum != null ? retObjectMinimum.getClass() : "null", retObjectMinimum_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -247,7 +288,7 @@ public class ScrollProperties extends NetObject  {
 
     public void setMinimum(int Minimum) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Minimum", Minimum);
         } catch (JCNativeException jcne) {
@@ -257,9 +298,20 @@ public class ScrollProperties extends NetObject  {
 
     public int getSmallChange() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSmallChange = null;
         try {
-            return (int)classInstance.Get("SmallChange");
+            retObjectSmallChange = classInstance.Get("SmallChange");
+            return (int)retObjectSmallChange;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSmallChange_ToString = retObjectSmallChange == null ? "null" : retObjectSmallChange.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectSmallChangeNumber = (java.lang.Number)retObjectSmallChange;
+                return retObjectSmallChangeNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectSmallChange != null ? retObjectSmallChange.getClass() : "null", retObjectSmallChange_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -267,7 +319,7 @@ public class ScrollProperties extends NetObject  {
 
     public void setSmallChange(int SmallChange) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SmallChange", SmallChange);
         } catch (JCNativeException jcne) {
@@ -277,9 +329,20 @@ public class ScrollProperties extends NetObject  {
 
     public int getValue() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValue = null;
         try {
-            return (int)classInstance.Get("Value");
+            retObjectValue = classInstance.Get("Value");
+            return (int)retObjectValue;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectValue_ToString = retObjectValue == null ? "null" : retObjectValue.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectValueNumber = (java.lang.Number)retObjectValue;
+                return retObjectValueNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectValue != null ? retObjectValue.getClass() : "null", retObjectValue_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -287,7 +350,7 @@ public class ScrollProperties extends NetObject  {
 
     public void setValue(int Value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidCastException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.componentmodel.InvalidAsynchronousStateException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Value", Value);
         } catch (JCNativeException jcne) {

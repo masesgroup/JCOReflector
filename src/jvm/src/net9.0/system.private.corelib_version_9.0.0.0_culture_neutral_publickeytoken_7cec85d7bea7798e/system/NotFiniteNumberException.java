@@ -202,7 +202,7 @@ public class NotFiniteNumberException extends ArithmeticException {
     
     public void GetObjectData(SerializationInfo info, StreamingContext context) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.runtime.serialization.SerializationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetObjectData", info == null ? null : info.getJCOInstance(), context == null ? null : context.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -216,9 +216,20 @@ public class NotFiniteNumberException extends ArithmeticException {
     
     public double getOffendingNumber() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOffendingNumber = null;
         try {
-            return (double)classInstance.Get("OffendingNumber");
+            retObjectOffendingNumber = classInstance.Get("OffendingNumber");
+            return (double)retObjectOffendingNumber;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectOffendingNumber_ToString = retObjectOffendingNumber == null ? "null" : retObjectOffendingNumber.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectOffendingNumberNumber = (java.lang.Number)retObjectOffendingNumber;
+                return retObjectOffendingNumberNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectOffendingNumber != null ? retObjectOffendingNumber.getClass() : "null", retObjectOffendingNumber_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -165,7 +165,7 @@ public class Thumb extends Control  {
     
     public void CancelDrag() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException, system.componentmodel.Win32Exception, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CancelDrag");
         } catch (JCNativeException jcne) {
@@ -179,9 +179,13 @@ public class Thumb extends Control  {
     
     public boolean getIsDragging() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsDragging = null;
         try {
-            return (boolean)classInstance.Get("IsDragging");
+            retObjectIsDragging = classInstance.Get("IsDragging");
+            return (boolean)retObjectIsDragging;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsDragging != null ? retObjectIsDragging.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -189,7 +193,7 @@ public class Thumb extends Control  {
 
     public void setIsDragging(boolean IsDragging) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsDragging", IsDragging);
         } catch (JCNativeException jcne) {
@@ -204,7 +208,7 @@ public class Thumb extends Control  {
 
     public void addDragCompleted(DragCompletedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("DragCompleted", handler);
         } catch (JCNativeException jcne) {
@@ -214,7 +218,7 @@ public class Thumb extends Control  {
 
     public void removeDragCompleted(DragCompletedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("DragCompleted", handler);
         } catch (JCNativeException jcne) {
@@ -224,7 +228,7 @@ public class Thumb extends Control  {
 
     public void addDragDelta(DragDeltaEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("DragDelta", handler);
         } catch (JCNativeException jcne) {
@@ -234,7 +238,7 @@ public class Thumb extends Control  {
 
     public void removeDragDelta(DragDeltaEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("DragDelta", handler);
         } catch (JCNativeException jcne) {
@@ -244,7 +248,7 @@ public class Thumb extends Control  {
 
     public void addDragStarted(DragStartedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("DragStarted", handler);
         } catch (JCNativeException jcne) {
@@ -254,7 +258,7 @@ public class Thumb extends Control  {
 
     public void removeDragStarted(DragStartedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("DragStarted", handler);
         } catch (JCNativeException jcne) {

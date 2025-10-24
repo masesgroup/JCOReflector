@@ -144,7 +144,7 @@ public class IDropTargetImplementation extends NetObject implements IDropTarget 
     
     public void OnDragDrop(DragEventArgs e) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("OnDragDrop", e == null ? null : e.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -154,7 +154,7 @@ public class IDropTargetImplementation extends NetObject implements IDropTarget 
 
     public void OnDragEnter(DragEventArgs e) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("OnDragEnter", e == null ? null : e.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -164,7 +164,7 @@ public class IDropTargetImplementation extends NetObject implements IDropTarget 
 
     public void OnDragLeave(EventArgs e) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("OnDragLeave", e == null ? null : e.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -174,7 +174,7 @@ public class IDropTargetImplementation extends NetObject implements IDropTarget 
 
     public void OnDragOver(DragEventArgs e) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("OnDragOver", e == null ? null : e.getJCOInstance());
         } catch (JCNativeException jcne) {

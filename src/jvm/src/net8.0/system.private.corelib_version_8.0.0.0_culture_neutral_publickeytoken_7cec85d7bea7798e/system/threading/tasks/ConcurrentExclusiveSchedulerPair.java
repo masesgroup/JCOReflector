@@ -193,7 +193,7 @@ public class ConcurrentExclusiveSchedulerPair extends NetObject  {
     
     public void Complete() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.ArgumentException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.threading.SynchronizationLockException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Complete");
         } catch (JCNativeException jcne) {
@@ -207,10 +207,14 @@ public class ConcurrentExclusiveSchedulerPair extends NetObject  {
     
     public Task getCompletion() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCompletion = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Completion");
+            retObjectCompletion = classInstance.Get("Completion");
+            JCObject val = (JCObject)retObjectCompletion;
             return new Task(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCompletion != null ? retObjectCompletion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -218,10 +222,14 @@ public class ConcurrentExclusiveSchedulerPair extends NetObject  {
 
     public TaskScheduler getConcurrentScheduler() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConcurrentScheduler = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ConcurrentScheduler");
+            retObjectConcurrentScheduler = classInstance.Get("ConcurrentScheduler");
+            JCObject val = (JCObject)retObjectConcurrentScheduler;
             return new TaskScheduler(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConcurrentScheduler != null ? retObjectConcurrentScheduler.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -229,10 +237,14 @@ public class ConcurrentExclusiveSchedulerPair extends NetObject  {
 
     public TaskScheduler getExclusiveScheduler() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExclusiveScheduler = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ExclusiveScheduler");
+            retObjectExclusiveScheduler = classInstance.Get("ExclusiveScheduler");
+            JCObject val = (JCObject)retObjectExclusiveScheduler;
             return new TaskScheduler(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExclusiveScheduler != null ? retObjectExclusiveScheduler.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

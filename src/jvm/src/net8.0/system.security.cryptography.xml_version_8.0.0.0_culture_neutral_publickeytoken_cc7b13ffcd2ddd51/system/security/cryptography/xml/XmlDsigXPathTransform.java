@@ -163,10 +163,14 @@ public class XmlDsigXPathTransform extends Transform  {
     
     public NetObject GetOutput() throws Throwable, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.xml.xpath.XPathException, system.OutOfMemoryException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentNullException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetOutput = null;
         try {
-            JCObject objGetOutput = (JCObject)classInstance.Invoke("GetOutput");
+            retObjectGetOutput = classInstance.Invoke("GetOutput");
+            JCObject objGetOutput = (JCObject)retObjectGetOutput;
             return new NetObject(objGetOutput);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetOutput != null ? retObjectGetOutput.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -174,10 +178,14 @@ public class XmlDsigXPathTransform extends Transform  {
 
     public NetObject GetOutput(NetType type) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetOutput = null;
         try {
-            JCObject objGetOutput = (JCObject)classInstance.Invoke("GetOutput", type == null ? null : type.getJCOInstance());
+            retObjectGetOutput = classInstance.Invoke("GetOutput", type == null ? null : type.getJCOInstance());
+            JCObject objGetOutput = (JCObject)retObjectGetOutput;
             return new NetObject(objGetOutput);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetOutput != null ? retObjectGetOutput.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -185,7 +193,7 @@ public class XmlDsigXPathTransform extends Transform  {
 
     public void LoadInnerXml(XmlNodeList nodeList) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.security.cryptography.CryptographicException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("LoadInnerXml", nodeList == null ? null : nodeList.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -195,7 +203,7 @@ public class XmlDsigXPathTransform extends Transform  {
 
     public void LoadInput(NetObject obj) throws Throwable, system.ArgumentException, system.OutOfMemoryException, system.PlatformNotSupportedException, system.xml.XmlException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.ArrayTypeMismatchException, system.xml.schema.XmlSchemaException, system.ArgumentNullException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("LoadInput", obj == null ? null : obj.getJCOInstance());
         } catch (JCNativeException jcne) {

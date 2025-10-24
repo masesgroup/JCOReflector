@@ -163,7 +163,7 @@ public class Missing extends NetObject implements system.runtime.serialization.I
      */
     @Deprecated 
     public void GetObjectData(SerializationInfo info, StreamingContext context) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToISerializable to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToISerializable to obtain the full interface.");
     }
 
 

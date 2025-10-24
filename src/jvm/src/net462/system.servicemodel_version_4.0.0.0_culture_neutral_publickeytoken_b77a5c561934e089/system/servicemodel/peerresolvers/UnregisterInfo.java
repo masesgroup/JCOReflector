@@ -172,9 +172,13 @@ public class UnregisterInfo extends NetObject  {
     
     public boolean HasBody() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHasBody = null;
         try {
-            return (boolean)classInstance.Invoke("HasBody");
+            retObjectHasBody = classInstance.Invoke("HasBody");
+            return (boolean)retObjectHasBody;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectHasBody != null ? retObjectHasBody.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,10 +190,14 @@ public class UnregisterInfo extends NetObject  {
     
     public Guid getRegistrationId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRegistrationId = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RegistrationId");
+            retObjectRegistrationId = classInstance.Get("RegistrationId");
+            JCObject val = (JCObject)retObjectRegistrationId;
             return new Guid(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRegistrationId != null ? retObjectRegistrationId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,9 +205,13 @@ public class UnregisterInfo extends NetObject  {
 
     public java.lang.String getMeshId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMeshId = null;
         try {
-            return (java.lang.String)classInstance.Get("MeshId");
+            retObjectMeshId = classInstance.Get("MeshId");
+            return (java.lang.String)retObjectMeshId;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectMeshId != null ? retObjectMeshId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -176,10 +176,14 @@ public class TextEffect extends Animatable  {
     
     public TextEffect CloneNewTextEffect() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentException, system.security.SecurityException, system.io.IOException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClone = null;
         try {
-            JCObject objClone = (JCObject)classInstance.Invoke("Clone");
+            retObjectClone = classInstance.Invoke("Clone");
+            JCObject objClone = (JCObject)retObjectClone;
             return new TextEffect(objClone);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClone != null ? retObjectClone.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,10 +191,14 @@ public class TextEffect extends Animatable  {
 
     public TextEffect CloneCurrentValueNewTextEffect() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCloneCurrentValue = null;
         try {
-            JCObject objCloneCurrentValue = (JCObject)classInstance.Invoke("CloneCurrentValue");
+            retObjectCloneCurrentValue = classInstance.Invoke("CloneCurrentValue");
+            JCObject objCloneCurrentValue = (JCObject)retObjectCloneCurrentValue;
             return new TextEffect(objCloneCurrentValue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCloneCurrentValue != null ? retObjectCloneCurrentValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,9 +210,20 @@ public class TextEffect extends Animatable  {
     
     public int getPositionCount() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPositionCount = null;
         try {
-            return (int)classInstance.Get("PositionCount");
+            retObjectPositionCount = classInstance.Get("PositionCount");
+            return (int)retObjectPositionCount;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectPositionCount_ToString = retObjectPositionCount == null ? "null" : retObjectPositionCount.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectPositionCountNumber = (java.lang.Number)retObjectPositionCount;
+                return retObjectPositionCountNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectPositionCount != null ? retObjectPositionCount.getClass() : "null", retObjectPositionCount_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -212,7 +231,7 @@ public class TextEffect extends Animatable  {
 
     public void setPositionCount(int PositionCount) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PositionCount", PositionCount);
         } catch (JCNativeException jcne) {
@@ -222,9 +241,20 @@ public class TextEffect extends Animatable  {
 
     public int getPositionStart() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPositionStart = null;
         try {
-            return (int)classInstance.Get("PositionStart");
+            retObjectPositionStart = classInstance.Get("PositionStart");
+            return (int)retObjectPositionStart;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectPositionStart_ToString = retObjectPositionStart == null ? "null" : retObjectPositionStart.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectPositionStartNumber = (java.lang.Number)retObjectPositionStart;
+                return retObjectPositionStartNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectPositionStart != null ? retObjectPositionStart.getClass() : "null", retObjectPositionStart_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -232,7 +262,7 @@ public class TextEffect extends Animatable  {
 
     public void setPositionStart(int PositionStart) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PositionStart", PositionStart);
         } catch (JCNativeException jcne) {
@@ -242,10 +272,14 @@ public class TextEffect extends Animatable  {
 
     public Brush getForeground() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectForeground = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Foreground");
+            retObjectForeground = classInstance.Get("Foreground");
+            JCObject val = (JCObject)retObjectForeground;
             return new Brush(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectForeground != null ? retObjectForeground.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -253,7 +287,7 @@ public class TextEffect extends Animatable  {
 
     public void setForeground(Brush Foreground) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Foreground", Foreground == null ? null : Foreground.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -263,10 +297,14 @@ public class TextEffect extends Animatable  {
 
     public Geometry getClip() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClip = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Clip");
+            retObjectClip = classInstance.Get("Clip");
+            JCObject val = (JCObject)retObjectClip;
             return new Geometry(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClip != null ? retObjectClip.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -274,7 +312,7 @@ public class TextEffect extends Animatable  {
 
     public void setClip(Geometry Clip) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Clip", Clip == null ? null : Clip.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -284,10 +322,14 @@ public class TextEffect extends Animatable  {
 
     public Transform getTransform() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTransform = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Transform");
+            retObjectTransform = classInstance.Get("Transform");
+            JCObject val = (JCObject)retObjectTransform;
             return new Transform(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTransform != null ? retObjectTransform.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -295,7 +337,7 @@ public class TextEffect extends Animatable  {
 
     public void setTransform(Transform Transform) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Transform", Transform == null ? null : Transform.getJCOInstance());
         } catch (JCNativeException jcne) {

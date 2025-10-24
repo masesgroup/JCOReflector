@@ -160,9 +160,13 @@ public class UpdateCheckInfo extends NetObject  {
     
     public boolean getIsUpdateRequired() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsUpdateRequired = null;
         try {
-            return (boolean)classInstance.Get("IsUpdateRequired");
+            retObjectIsUpdateRequired = classInstance.Get("IsUpdateRequired");
+            return (boolean)retObjectIsUpdateRequired;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsUpdateRequired != null ? retObjectIsUpdateRequired.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,9 +174,13 @@ public class UpdateCheckInfo extends NetObject  {
 
     public boolean getUpdateAvailable() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUpdateAvailable = null;
         try {
-            return (boolean)classInstance.Get("UpdateAvailable");
+            retObjectUpdateAvailable = classInstance.Get("UpdateAvailable");
+            return (boolean)retObjectUpdateAvailable;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectUpdateAvailable != null ? retObjectUpdateAvailable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,9 +188,20 @@ public class UpdateCheckInfo extends NetObject  {
 
     public long getUpdateSizeBytes() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUpdateSizeBytes = null;
         try {
-            return (long)classInstance.Get("UpdateSizeBytes");
+            retObjectUpdateSizeBytes = classInstance.Get("UpdateSizeBytes");
+            return (long)retObjectUpdateSizeBytes;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectUpdateSizeBytes_ToString = retObjectUpdateSizeBytes == null ? "null" : retObjectUpdateSizeBytes.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectUpdateSizeBytesNumber = (java.lang.Number)retObjectUpdateSizeBytes;
+                return retObjectUpdateSizeBytesNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectUpdateSizeBytes != null ? retObjectUpdateSizeBytes.getClass() : "null", retObjectUpdateSizeBytes_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,10 +209,14 @@ public class UpdateCheckInfo extends NetObject  {
 
     public Version getAvailableVersion() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAvailableVersion = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AvailableVersion");
+            retObjectAvailableVersion = classInstance.Get("AvailableVersion");
+            JCObject val = (JCObject)retObjectAvailableVersion;
             return new Version(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAvailableVersion != null ? retObjectAvailableVersion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,10 +224,14 @@ public class UpdateCheckInfo extends NetObject  {
 
     public Version getMinimumRequiredVersion() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMinimumRequiredVersion = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MinimumRequiredVersion");
+            retObjectMinimumRequiredVersion = classInstance.Get("MinimumRequiredVersion");
+            JCObject val = (JCObject)retObjectMinimumRequiredVersion;
             return new Version(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMinimumRequiredVersion != null ? retObjectMinimumRequiredVersion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

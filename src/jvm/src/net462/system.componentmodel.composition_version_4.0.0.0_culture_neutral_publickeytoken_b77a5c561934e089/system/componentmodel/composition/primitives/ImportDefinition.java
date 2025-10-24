@@ -157,9 +157,13 @@ public class ImportDefinition extends NetObject  {
     
     public boolean IsConstraintSatisfiedBy(ExportDefinition exportDefinition) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.security.SecurityException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsConstraintSatisfiedBy = null;
         try {
-            return (boolean)classInstance.Invoke("IsConstraintSatisfiedBy", exportDefinition == null ? null : exportDefinition.getJCOInstance());
+            retObjectIsConstraintSatisfiedBy = classInstance.Invoke("IsConstraintSatisfiedBy", exportDefinition == null ? null : exportDefinition.getJCOInstance());
+            return (boolean)retObjectIsConstraintSatisfiedBy;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsConstraintSatisfiedBy != null ? retObjectIsConstraintSatisfiedBy.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,9 +175,13 @@ public class ImportDefinition extends NetObject  {
     
     public boolean getIsPrerequisite() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsPrerequisite = null;
         try {
-            return (boolean)classInstance.Get("IsPrerequisite");
+            retObjectIsPrerequisite = classInstance.Get("IsPrerequisite");
+            return (boolean)retObjectIsPrerequisite;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsPrerequisite != null ? retObjectIsPrerequisite.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,9 +189,13 @@ public class ImportDefinition extends NetObject  {
 
     public boolean getIsRecomposable() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsRecomposable = null;
         try {
-            return (boolean)classInstance.Get("IsRecomposable");
+            retObjectIsRecomposable = classInstance.Get("IsRecomposable");
+            return (boolean)retObjectIsRecomposable;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsRecomposable != null ? retObjectIsRecomposable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,10 +203,14 @@ public class ImportDefinition extends NetObject  {
 
     public ImportCardinality getCardinality() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCardinality = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Cardinality");
+            retObjectCardinality = classInstance.Get("Cardinality");
+            JCObject val = (JCObject)retObjectCardinality;
             return new ImportCardinality(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCardinality != null ? retObjectCardinality.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,9 +218,13 @@ public class ImportDefinition extends NetObject  {
 
     public java.lang.String getContractName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContractName = null;
         try {
-            return (java.lang.String)classInstance.Get("ContractName");
+            retObjectContractName = classInstance.Get("ContractName");
+            return (java.lang.String)retObjectContractName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectContractName != null ? retObjectContractName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

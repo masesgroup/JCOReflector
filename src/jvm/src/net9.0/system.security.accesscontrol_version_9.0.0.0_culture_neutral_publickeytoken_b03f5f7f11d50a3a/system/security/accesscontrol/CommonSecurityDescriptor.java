@@ -201,7 +201,7 @@ public class CommonSecurityDescriptor extends GenericSecurityDescriptor  {
     
     public void AddDiscretionaryAcl(byte revision, int trusted) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.OverflowException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddDiscretionaryAcl", revision, trusted);
         } catch (JCNativeException jcne) {
@@ -211,7 +211,7 @@ public class CommonSecurityDescriptor extends GenericSecurityDescriptor  {
 
     public void AddSystemAcl(byte revision, int trusted) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddSystemAcl", revision, trusted);
         } catch (JCNativeException jcne) {
@@ -221,7 +221,7 @@ public class CommonSecurityDescriptor extends GenericSecurityDescriptor  {
 
     public void PurgeAccessControl(SecurityIdentifier sid) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("PurgeAccessControl", sid == null ? null : sid.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -231,7 +231,7 @@ public class CommonSecurityDescriptor extends GenericSecurityDescriptor  {
 
     public void PurgeAudit(SecurityIdentifier sid) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("PurgeAudit", sid == null ? null : sid.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -241,7 +241,7 @@ public class CommonSecurityDescriptor extends GenericSecurityDescriptor  {
 
     public void SetDiscretionaryAclProtection(boolean isProtected, boolean preserveInheritance) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetDiscretionaryAclProtection", isProtected, preserveInheritance);
         } catch (JCNativeException jcne) {
@@ -251,7 +251,7 @@ public class CommonSecurityDescriptor extends GenericSecurityDescriptor  {
 
     public void SetSystemAclProtection(boolean isProtected, boolean preserveInheritance) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetSystemAclProtection", isProtected, preserveInheritance);
         } catch (JCNativeException jcne) {
@@ -265,9 +265,13 @@ public class CommonSecurityDescriptor extends GenericSecurityDescriptor  {
     
     public boolean getIsContainer() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsContainer = null;
         try {
-            return (boolean)classInstance.Get("IsContainer");
+            retObjectIsContainer = classInstance.Get("IsContainer");
+            return (boolean)retObjectIsContainer;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsContainer != null ? retObjectIsContainer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -275,9 +279,13 @@ public class CommonSecurityDescriptor extends GenericSecurityDescriptor  {
 
     public boolean getIsDiscretionaryAclCanonical() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsDiscretionaryAclCanonical = null;
         try {
-            return (boolean)classInstance.Get("IsDiscretionaryAclCanonical");
+            retObjectIsDiscretionaryAclCanonical = classInstance.Get("IsDiscretionaryAclCanonical");
+            return (boolean)retObjectIsDiscretionaryAclCanonical;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsDiscretionaryAclCanonical != null ? retObjectIsDiscretionaryAclCanonical.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -285,9 +293,13 @@ public class CommonSecurityDescriptor extends GenericSecurityDescriptor  {
 
     public boolean getIsDS() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsDS = null;
         try {
-            return (boolean)classInstance.Get("IsDS");
+            retObjectIsDS = classInstance.Get("IsDS");
+            return (boolean)retObjectIsDS;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsDS != null ? retObjectIsDS.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -295,9 +307,13 @@ public class CommonSecurityDescriptor extends GenericSecurityDescriptor  {
 
     public boolean getIsSystemAclCanonical() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsSystemAclCanonical = null;
         try {
-            return (boolean)classInstance.Get("IsSystemAclCanonical");
+            retObjectIsSystemAclCanonical = classInstance.Get("IsSystemAclCanonical");
+            return (boolean)retObjectIsSystemAclCanonical;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsSystemAclCanonical != null ? retObjectIsSystemAclCanonical.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -305,10 +321,14 @@ public class CommonSecurityDescriptor extends GenericSecurityDescriptor  {
 
     public DiscretionaryAcl getDiscretionaryAcl() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDiscretionaryAcl = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DiscretionaryAcl");
+            retObjectDiscretionaryAcl = classInstance.Get("DiscretionaryAcl");
+            JCObject val = (JCObject)retObjectDiscretionaryAcl;
             return new DiscretionaryAcl(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDiscretionaryAcl != null ? retObjectDiscretionaryAcl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -316,7 +336,7 @@ public class CommonSecurityDescriptor extends GenericSecurityDescriptor  {
 
     public void setDiscretionaryAcl(DiscretionaryAcl DiscretionaryAcl) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.OverflowException, system.IndexOutOfRangeException, system.RankException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DiscretionaryAcl", DiscretionaryAcl == null ? null : DiscretionaryAcl.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -326,10 +346,14 @@ public class CommonSecurityDescriptor extends GenericSecurityDescriptor  {
 
     public SystemAcl getSystemAcl() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSystemAcl = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SystemAcl");
+            retObjectSystemAcl = classInstance.Get("SystemAcl");
+            JCObject val = (JCObject)retObjectSystemAcl;
             return new SystemAcl(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSystemAcl != null ? retObjectSystemAcl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -337,7 +361,7 @@ public class CommonSecurityDescriptor extends GenericSecurityDescriptor  {
 
     public void setSystemAcl(SystemAcl SystemAcl) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SystemAcl", SystemAcl == null ? null : SystemAcl.getJCOInstance());
         } catch (JCNativeException jcne) {

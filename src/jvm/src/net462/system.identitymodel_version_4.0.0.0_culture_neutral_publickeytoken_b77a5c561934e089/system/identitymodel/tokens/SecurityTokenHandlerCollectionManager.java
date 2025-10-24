@@ -167,9 +167,13 @@ public class SecurityTokenHandlerCollectionManager extends NetObject  {
     
     public boolean ContainsKey(java.lang.String usage) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContainsKey = null;
         try {
-            return (boolean)classInstance.Invoke("ContainsKey", usage);
+            retObjectContainsKey = classInstance.Invoke("ContainsKey", usage);
+            return (boolean)retObjectContainsKey;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectContainsKey != null ? retObjectContainsKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,10 +181,14 @@ public class SecurityTokenHandlerCollectionManager extends NetObject  {
 
     public static SecurityTokenHandlerCollectionManager CreateDefaultSecurityTokenHandlerCollectionManager() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateDefaultSecurityTokenHandlerCollectionManager = null;
         try {
-            JCObject objCreateDefaultSecurityTokenHandlerCollectionManager = (JCObject)classType.Invoke("CreateDefaultSecurityTokenHandlerCollectionManager");
+            retObjectCreateDefaultSecurityTokenHandlerCollectionManager = classType.Invoke("CreateDefaultSecurityTokenHandlerCollectionManager");
+            JCObject objCreateDefaultSecurityTokenHandlerCollectionManager = (JCObject)retObjectCreateDefaultSecurityTokenHandlerCollectionManager;
             return new SecurityTokenHandlerCollectionManager(objCreateDefaultSecurityTokenHandlerCollectionManager);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateDefaultSecurityTokenHandlerCollectionManager != null ? retObjectCreateDefaultSecurityTokenHandlerCollectionManager.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,10 +196,14 @@ public class SecurityTokenHandlerCollectionManager extends NetObject  {
 
     public static SecurityTokenHandlerCollectionManager CreateEmptySecurityTokenHandlerCollectionManager() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateEmptySecurityTokenHandlerCollectionManager = null;
         try {
-            JCObject objCreateEmptySecurityTokenHandlerCollectionManager = (JCObject)classType.Invoke("CreateEmptySecurityTokenHandlerCollectionManager");
+            retObjectCreateEmptySecurityTokenHandlerCollectionManager = classType.Invoke("CreateEmptySecurityTokenHandlerCollectionManager");
+            JCObject objCreateEmptySecurityTokenHandlerCollectionManager = (JCObject)retObjectCreateEmptySecurityTokenHandlerCollectionManager;
             return new SecurityTokenHandlerCollectionManager(objCreateEmptySecurityTokenHandlerCollectionManager);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateEmptySecurityTokenHandlerCollectionManager != null ? retObjectCreateEmptySecurityTokenHandlerCollectionManager.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,9 +215,20 @@ public class SecurityTokenHandlerCollectionManager extends NetObject  {
     
     public int getCount() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCount = null;
         try {
-            return (int)classInstance.Get("Count");
+            retObjectCount = classInstance.Get("Count");
+            return (int)retObjectCount;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCount_ToString = retObjectCount == null ? "null" : retObjectCount.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectCountNumber = (java.lang.Number)retObjectCount;
+                return retObjectCountNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCount != null ? retObjectCount.getClass() : "null", retObjectCount_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,9 +236,13 @@ public class SecurityTokenHandlerCollectionManager extends NetObject  {
 
     public java.lang.String getServiceName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectServiceName = null;
         try {
-            return (java.lang.String)classInstance.Get("ServiceName");
+            retObjectServiceName = classInstance.Get("ServiceName");
+            return (java.lang.String)retObjectServiceName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectServiceName != null ? retObjectServiceName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

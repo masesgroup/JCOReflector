@@ -173,9 +173,20 @@ public class CaseInsensitiveHashCodeProvider extends NetObject  {
     
     public int GetHashCode(NetObject obj) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetHashCode = null;
         try {
-            return (int)classInstance.Invoke("GetHashCode", obj == null ? null : obj.getJCOInstance());
+            retObjectGetHashCode = classInstance.Invoke("GetHashCode", obj == null ? null : obj.getJCOInstance());
+            return (int)retObjectGetHashCode;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetHashCode_ToString = retObjectGetHashCode == null ? "null" : retObjectGetHashCode.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetHashCodeNumber = (java.lang.Number)retObjectGetHashCode;
+                return retObjectGetHashCodeNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetHashCode != null ? retObjectGetHashCode.getClass() : "null", retObjectGetHashCode_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,10 +198,14 @@ public class CaseInsensitiveHashCodeProvider extends NetObject  {
     
     public static CaseInsensitiveHashCodeProvider getDefault() throws Throwable, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDefault = null;
         try {
-            JCObject val = (JCObject)classType.Get("Default");
+            retObjectDefault = classType.Get("Default");
+            JCObject val = (JCObject)retObjectDefault;
             return new CaseInsensitiveHashCodeProvider(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefault != null ? retObjectDefault.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,10 +213,14 @@ public class CaseInsensitiveHashCodeProvider extends NetObject  {
 
     public static CaseInsensitiveHashCodeProvider getDefaultInvariant() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.NullReferenceException, system.globalization.CultureNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDefaultInvariant = null;
         try {
-            JCObject val = (JCObject)classType.Get("DefaultInvariant");
+            retObjectDefaultInvariant = classType.Get("DefaultInvariant");
+            JCObject val = (JCObject)retObjectDefaultInvariant;
             return new CaseInsensitiveHashCodeProvider(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefaultInvariant != null ? retObjectDefaultInvariant.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

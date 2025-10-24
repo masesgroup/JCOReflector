@@ -166,9 +166,20 @@ public class ExponentialEase extends EasingFunctionBase  {
     
     public double getExponent() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExponent = null;
         try {
-            return (double)classInstance.Get("Exponent");
+            retObjectExponent = classInstance.Get("Exponent");
+            return (double)retObjectExponent;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectExponent_ToString = retObjectExponent == null ? "null" : retObjectExponent.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectExponentNumber = (java.lang.Number)retObjectExponent;
+                return retObjectExponentNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectExponent != null ? retObjectExponent.getClass() : "null", retObjectExponent_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,7 +187,7 @@ public class ExponentialEase extends EasingFunctionBase  {
 
     public void setExponent(double Exponent) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Exponent", Exponent);
         } catch (JCNativeException jcne) {

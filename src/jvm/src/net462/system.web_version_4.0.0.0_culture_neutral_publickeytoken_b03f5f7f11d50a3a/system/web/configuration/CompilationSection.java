@@ -174,9 +174,13 @@ public class CompilationSection extends ConfigurationSection  {
     
     public boolean getBatch() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBatch = null;
         try {
-            return (boolean)classInstance.Get("Batch");
+            retObjectBatch = classInstance.Get("Batch");
+            return (boolean)retObjectBatch;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectBatch != null ? retObjectBatch.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -184,7 +188,7 @@ public class CompilationSection extends ConfigurationSection  {
 
     public void setBatch(boolean Batch) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.NullReferenceException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Batch", Batch);
         } catch (JCNativeException jcne) {
@@ -194,9 +198,13 @@ public class CompilationSection extends ConfigurationSection  {
 
     public boolean getDebug() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDebug = null;
         try {
-            return (boolean)classInstance.Get("Debug");
+            retObjectDebug = classInstance.Get("Debug");
+            return (boolean)retObjectDebug;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectDebug != null ? retObjectDebug.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -204,7 +212,7 @@ public class CompilationSection extends ConfigurationSection  {
 
     public void setDebug(boolean Debug) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.NullReferenceException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Debug", Debug);
         } catch (JCNativeException jcne) {
@@ -214,9 +222,13 @@ public class CompilationSection extends ConfigurationSection  {
 
     public boolean getDisableObsoleteWarnings() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDisableObsoleteWarnings = null;
         try {
-            return (boolean)classInstance.Get("DisableObsoleteWarnings");
+            retObjectDisableObsoleteWarnings = classInstance.Get("DisableObsoleteWarnings");
+            return (boolean)retObjectDisableObsoleteWarnings;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectDisableObsoleteWarnings != null ? retObjectDisableObsoleteWarnings.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -224,7 +236,7 @@ public class CompilationSection extends ConfigurationSection  {
 
     public void setDisableObsoleteWarnings(boolean DisableObsoleteWarnings) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.NullReferenceException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DisableObsoleteWarnings", DisableObsoleteWarnings);
         } catch (JCNativeException jcne) {
@@ -234,9 +246,13 @@ public class CompilationSection extends ConfigurationSection  {
 
     public boolean getEnablePrefetchOptimization() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEnablePrefetchOptimization = null;
         try {
-            return (boolean)classInstance.Get("EnablePrefetchOptimization");
+            retObjectEnablePrefetchOptimization = classInstance.Get("EnablePrefetchOptimization");
+            return (boolean)retObjectEnablePrefetchOptimization;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectEnablePrefetchOptimization != null ? retObjectEnablePrefetchOptimization.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -244,7 +260,7 @@ public class CompilationSection extends ConfigurationSection  {
 
     public void setEnablePrefetchOptimization(boolean EnablePrefetchOptimization) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.NullReferenceException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EnablePrefetchOptimization", EnablePrefetchOptimization);
         } catch (JCNativeException jcne) {
@@ -254,9 +270,13 @@ public class CompilationSection extends ConfigurationSection  {
 
     public boolean getExplicit() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExplicit = null;
         try {
-            return (boolean)classInstance.Get("Explicit");
+            retObjectExplicit = classInstance.Get("Explicit");
+            return (boolean)retObjectExplicit;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectExplicit != null ? retObjectExplicit.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -264,7 +284,7 @@ public class CompilationSection extends ConfigurationSection  {
 
     public void setExplicit(boolean Explicit) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.NullReferenceException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Explicit", Explicit);
         } catch (JCNativeException jcne) {
@@ -274,9 +294,13 @@ public class CompilationSection extends ConfigurationSection  {
 
     public boolean getOptimizeCompilations() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOptimizeCompilations = null;
         try {
-            return (boolean)classInstance.Get("OptimizeCompilations");
+            retObjectOptimizeCompilations = classInstance.Get("OptimizeCompilations");
+            return (boolean)retObjectOptimizeCompilations;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectOptimizeCompilations != null ? retObjectOptimizeCompilations.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -284,7 +308,7 @@ public class CompilationSection extends ConfigurationSection  {
 
     public void setOptimizeCompilations(boolean OptimizeCompilations) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.NullReferenceException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("OptimizeCompilations", OptimizeCompilations);
         } catch (JCNativeException jcne) {
@@ -294,9 +318,13 @@ public class CompilationSection extends ConfigurationSection  {
 
     public boolean getStrict() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStrict = null;
         try {
-            return (boolean)classInstance.Get("Strict");
+            retObjectStrict = classInstance.Get("Strict");
+            return (boolean)retObjectStrict;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectStrict != null ? retObjectStrict.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -304,7 +332,7 @@ public class CompilationSection extends ConfigurationSection  {
 
     public void setStrict(boolean Strict) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.NullReferenceException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Strict", Strict);
         } catch (JCNativeException jcne) {
@@ -314,9 +342,13 @@ public class CompilationSection extends ConfigurationSection  {
 
     public boolean getUrlLinePragmas() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUrlLinePragmas = null;
         try {
-            return (boolean)classInstance.Get("UrlLinePragmas");
+            retObjectUrlLinePragmas = classInstance.Get("UrlLinePragmas");
+            return (boolean)retObjectUrlLinePragmas;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectUrlLinePragmas != null ? retObjectUrlLinePragmas.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -324,7 +356,7 @@ public class CompilationSection extends ConfigurationSection  {
 
     public void setUrlLinePragmas(boolean UrlLinePragmas) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.NullReferenceException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UrlLinePragmas", UrlLinePragmas);
         } catch (JCNativeException jcne) {
@@ -334,9 +366,20 @@ public class CompilationSection extends ConfigurationSection  {
 
     public int getMaxBatchGeneratedFileSize() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxBatchGeneratedFileSize = null;
         try {
-            return (int)classInstance.Get("MaxBatchGeneratedFileSize");
+            retObjectMaxBatchGeneratedFileSize = classInstance.Get("MaxBatchGeneratedFileSize");
+            return (int)retObjectMaxBatchGeneratedFileSize;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaxBatchGeneratedFileSize_ToString = retObjectMaxBatchGeneratedFileSize == null ? "null" : retObjectMaxBatchGeneratedFileSize.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMaxBatchGeneratedFileSizeNumber = (java.lang.Number)retObjectMaxBatchGeneratedFileSize;
+                return retObjectMaxBatchGeneratedFileSizeNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxBatchGeneratedFileSize != null ? retObjectMaxBatchGeneratedFileSize.getClass() : "null", retObjectMaxBatchGeneratedFileSize_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -344,7 +387,7 @@ public class CompilationSection extends ConfigurationSection  {
 
     public void setMaxBatchGeneratedFileSize(int MaxBatchGeneratedFileSize) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.NullReferenceException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaxBatchGeneratedFileSize", MaxBatchGeneratedFileSize);
         } catch (JCNativeException jcne) {
@@ -354,9 +397,20 @@ public class CompilationSection extends ConfigurationSection  {
 
     public int getMaxBatchSize() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxBatchSize = null;
         try {
-            return (int)classInstance.Get("MaxBatchSize");
+            retObjectMaxBatchSize = classInstance.Get("MaxBatchSize");
+            return (int)retObjectMaxBatchSize;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaxBatchSize_ToString = retObjectMaxBatchSize == null ? "null" : retObjectMaxBatchSize.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMaxBatchSizeNumber = (java.lang.Number)retObjectMaxBatchSize;
+                return retObjectMaxBatchSizeNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxBatchSize != null ? retObjectMaxBatchSize.getClass() : "null", retObjectMaxBatchSize_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -364,7 +418,7 @@ public class CompilationSection extends ConfigurationSection  {
 
     public void setMaxBatchSize(int MaxBatchSize) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.NullReferenceException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaxBatchSize", MaxBatchSize);
         } catch (JCNativeException jcne) {
@@ -374,9 +428,20 @@ public class CompilationSection extends ConfigurationSection  {
 
     public int getMaxConcurrentCompilations() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxConcurrentCompilations = null;
         try {
-            return (int)classInstance.Get("MaxConcurrentCompilations");
+            retObjectMaxConcurrentCompilations = classInstance.Get("MaxConcurrentCompilations");
+            return (int)retObjectMaxConcurrentCompilations;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaxConcurrentCompilations_ToString = retObjectMaxConcurrentCompilations == null ? "null" : retObjectMaxConcurrentCompilations.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMaxConcurrentCompilationsNumber = (java.lang.Number)retObjectMaxConcurrentCompilations;
+                return retObjectMaxConcurrentCompilationsNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxConcurrentCompilations != null ? retObjectMaxConcurrentCompilations.getClass() : "null", retObjectMaxConcurrentCompilations_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -384,7 +449,7 @@ public class CompilationSection extends ConfigurationSection  {
 
     public void setMaxConcurrentCompilations(int MaxConcurrentCompilations) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.NullReferenceException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaxConcurrentCompilations", MaxConcurrentCompilations);
         } catch (JCNativeException jcne) {
@@ -394,9 +459,20 @@ public class CompilationSection extends ConfigurationSection  {
 
     public int getNumRecompilesBeforeAppRestart() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNumRecompilesBeforeAppRestart = null;
         try {
-            return (int)classInstance.Get("NumRecompilesBeforeAppRestart");
+            retObjectNumRecompilesBeforeAppRestart = classInstance.Get("NumRecompilesBeforeAppRestart");
+            return (int)retObjectNumRecompilesBeforeAppRestart;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectNumRecompilesBeforeAppRestart_ToString = retObjectNumRecompilesBeforeAppRestart == null ? "null" : retObjectNumRecompilesBeforeAppRestart.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectNumRecompilesBeforeAppRestartNumber = (java.lang.Number)retObjectNumRecompilesBeforeAppRestart;
+                return retObjectNumRecompilesBeforeAppRestartNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectNumRecompilesBeforeAppRestart != null ? retObjectNumRecompilesBeforeAppRestart.getClass() : "null", retObjectNumRecompilesBeforeAppRestart_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -404,7 +480,7 @@ public class CompilationSection extends ConfigurationSection  {
 
     public void setNumRecompilesBeforeAppRestart(int NumRecompilesBeforeAppRestart) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.NullReferenceException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("NumRecompilesBeforeAppRestart", NumRecompilesBeforeAppRestart);
         } catch (JCNativeException jcne) {
@@ -414,9 +490,13 @@ public class CompilationSection extends ConfigurationSection  {
 
     public java.lang.String getAssemblyPostProcessorType() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAssemblyPostProcessorType = null;
         try {
-            return (java.lang.String)classInstance.Get("AssemblyPostProcessorType");
+            retObjectAssemblyPostProcessorType = classInstance.Get("AssemblyPostProcessorType");
+            return (java.lang.String)retObjectAssemblyPostProcessorType;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectAssemblyPostProcessorType != null ? retObjectAssemblyPostProcessorType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -424,7 +504,7 @@ public class CompilationSection extends ConfigurationSection  {
 
     public void setAssemblyPostProcessorType(java.lang.String AssemblyPostProcessorType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.NullReferenceException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AssemblyPostProcessorType", AssemblyPostProcessorType);
         } catch (JCNativeException jcne) {
@@ -434,9 +514,13 @@ public class CompilationSection extends ConfigurationSection  {
 
     public java.lang.String getControlBuilderInterceptorType() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectControlBuilderInterceptorType = null;
         try {
-            return (java.lang.String)classInstance.Get("ControlBuilderInterceptorType");
+            retObjectControlBuilderInterceptorType = classInstance.Get("ControlBuilderInterceptorType");
+            return (java.lang.String)retObjectControlBuilderInterceptorType;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectControlBuilderInterceptorType != null ? retObjectControlBuilderInterceptorType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -444,7 +528,7 @@ public class CompilationSection extends ConfigurationSection  {
 
     public void setControlBuilderInterceptorType(java.lang.String ControlBuilderInterceptorType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.NullReferenceException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ControlBuilderInterceptorType", ControlBuilderInterceptorType);
         } catch (JCNativeException jcne) {
@@ -454,9 +538,13 @@ public class CompilationSection extends ConfigurationSection  {
 
     public java.lang.String getDefaultLanguage() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDefaultLanguage = null;
         try {
-            return (java.lang.String)classInstance.Get("DefaultLanguage");
+            retObjectDefaultLanguage = classInstance.Get("DefaultLanguage");
+            return (java.lang.String)retObjectDefaultLanguage;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDefaultLanguage != null ? retObjectDefaultLanguage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -464,7 +552,7 @@ public class CompilationSection extends ConfigurationSection  {
 
     public void setDefaultLanguage(java.lang.String DefaultLanguage) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.NullReferenceException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DefaultLanguage", DefaultLanguage);
         } catch (JCNativeException jcne) {
@@ -474,9 +562,13 @@ public class CompilationSection extends ConfigurationSection  {
 
     public java.lang.String getTargetFramework() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTargetFramework = null;
         try {
-            return (java.lang.String)classInstance.Get("TargetFramework");
+            retObjectTargetFramework = classInstance.Get("TargetFramework");
+            return (java.lang.String)retObjectTargetFramework;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectTargetFramework != null ? retObjectTargetFramework.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -484,7 +576,7 @@ public class CompilationSection extends ConfigurationSection  {
 
     public void setTargetFramework(java.lang.String TargetFramework) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.NullReferenceException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TargetFramework", TargetFramework);
         } catch (JCNativeException jcne) {
@@ -494,9 +586,13 @@ public class CompilationSection extends ConfigurationSection  {
 
     public java.lang.String getTempDirectory() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTempDirectory = null;
         try {
-            return (java.lang.String)classInstance.Get("TempDirectory");
+            retObjectTempDirectory = classInstance.Get("TempDirectory");
+            return (java.lang.String)retObjectTempDirectory;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectTempDirectory != null ? retObjectTempDirectory.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -504,7 +600,7 @@ public class CompilationSection extends ConfigurationSection  {
 
     public void setTempDirectory(java.lang.String TempDirectory) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.NullReferenceException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TempDirectory", TempDirectory);
         } catch (JCNativeException jcne) {
@@ -514,10 +610,14 @@ public class CompilationSection extends ConfigurationSection  {
 
     public TimeSpan getBatchTimeout() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBatchTimeout = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("BatchTimeout");
+            retObjectBatchTimeout = classInstance.Get("BatchTimeout");
+            JCObject val = (JCObject)retObjectBatchTimeout;
             return new TimeSpan(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBatchTimeout != null ? retObjectBatchTimeout.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -525,7 +625,7 @@ public class CompilationSection extends ConfigurationSection  {
 
     public void setBatchTimeout(TimeSpan BatchTimeout) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.NullReferenceException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BatchTimeout", BatchTimeout == null ? null : BatchTimeout.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -535,10 +635,14 @@ public class CompilationSection extends ConfigurationSection  {
 
     public AssemblyCollection getAssemblies() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAssemblies = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Assemblies");
+            retObjectAssemblies = classInstance.Get("Assemblies");
+            JCObject val = (JCObject)retObjectAssemblies;
             return new AssemblyCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAssemblies != null ? retObjectAssemblies.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -546,10 +650,14 @@ public class CompilationSection extends ConfigurationSection  {
 
     public BuildProviderCollection getBuildProviders() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBuildProviders = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("BuildProviders");
+            retObjectBuildProviders = classInstance.Get("BuildProviders");
+            JCObject val = (JCObject)retObjectBuildProviders;
             return new BuildProviderCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBuildProviders != null ? retObjectBuildProviders.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -557,10 +665,14 @@ public class CompilationSection extends ConfigurationSection  {
 
     public CodeSubDirectoriesCollection getCodeSubDirectories() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCodeSubDirectories = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CodeSubDirectories");
+            retObjectCodeSubDirectories = classInstance.Get("CodeSubDirectories");
+            JCObject val = (JCObject)retObjectCodeSubDirectories;
             return new CodeSubDirectoriesCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCodeSubDirectories != null ? retObjectCodeSubDirectories.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -568,10 +680,14 @@ public class CompilationSection extends ConfigurationSection  {
 
     public CompilerCollection getCompilers() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCompilers = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Compilers");
+            retObjectCompilers = classInstance.Get("Compilers");
+            JCObject val = (JCObject)retObjectCompilers;
             return new CompilerCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCompilers != null ? retObjectCompilers.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -579,10 +695,14 @@ public class CompilationSection extends ConfigurationSection  {
 
     public ExpressionBuilderCollection getExpressionBuilders() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExpressionBuilders = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ExpressionBuilders");
+            retObjectExpressionBuilders = classInstance.Get("ExpressionBuilders");
+            JCObject val = (JCObject)retObjectExpressionBuilders;
             return new ExpressionBuilderCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExpressionBuilders != null ? retObjectExpressionBuilders.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -590,10 +710,14 @@ public class CompilationSection extends ConfigurationSection  {
 
     public FolderLevelBuildProviderCollection getFolderLevelBuildProviders() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.FormatException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFolderLevelBuildProviders = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("FolderLevelBuildProviders");
+            retObjectFolderLevelBuildProviders = classInstance.Get("FolderLevelBuildProviders");
+            JCObject val = (JCObject)retObjectFolderLevelBuildProviders;
             return new FolderLevelBuildProviderCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFolderLevelBuildProviders != null ? retObjectFolderLevelBuildProviders.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -601,10 +725,14 @@ public class CompilationSection extends ConfigurationSection  {
 
     public ProfileGuidedOptimizationsFlags getProfileGuidedOptimizations() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProfileGuidedOptimizations = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ProfileGuidedOptimizations");
+            retObjectProfileGuidedOptimizations = classInstance.Get("ProfileGuidedOptimizations");
+            JCObject val = (JCObject)retObjectProfileGuidedOptimizations;
             return new ProfileGuidedOptimizationsFlags(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectProfileGuidedOptimizations != null ? retObjectProfileGuidedOptimizations.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -612,7 +740,7 @@ public class CompilationSection extends ConfigurationSection  {
 
     public void setProfileGuidedOptimizations(ProfileGuidedOptimizationsFlags ProfileGuidedOptimizations) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.NullReferenceException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ProfileGuidedOptimizations", ProfileGuidedOptimizations == null ? null : ProfileGuidedOptimizations.getJCOInstance());
         } catch (JCNativeException jcne) {

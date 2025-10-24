@@ -166,10 +166,14 @@ public class SequentialActivityDesigner extends StructuredCompositeActivityDesig
     
     public NetObject GetNextSelectableObject(NetObject obj, DesignerNavigationDirection direction) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.MissingMethodException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException, system.workflow.componentmodel.serialization.WorkflowMarkupSerializationException, system.runtime.interopservices.ExternalException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetNextSelectableObject = null;
         try {
-            JCObject objGetNextSelectableObject = (JCObject)classInstance.Invoke("GetNextSelectableObject", obj == null ? null : obj.getJCOInstance(), direction == null ? null : direction.getJCOInstance());
+            retObjectGetNextSelectableObject = classInstance.Invoke("GetNextSelectableObject", obj == null ? null : obj.getJCOInstance(), direction == null ? null : direction.getJCOInstance());
+            JCObject objGetNextSelectableObject = (JCObject)retObjectGetNextSelectableObject;
             return new NetObject(objGetNextSelectableObject);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetNextSelectableObject != null ? retObjectGetNextSelectableObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,10 +181,14 @@ public class SequentialActivityDesigner extends StructuredCompositeActivityDesig
 
     public HitTestInfo HitTest(Point point) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.MissingMethodException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.workflow.componentmodel.serialization.WorkflowMarkupSerializationException, system.runtime.interopservices.ExternalException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHitTest = null;
         try {
-            JCObject objHitTest = (JCObject)classInstance.Invoke("HitTest", point == null ? null : point.getJCOInstance());
+            retObjectHitTest = classInstance.Invoke("HitTest", point == null ? null : point.getJCOInstance());
+            JCObject objHitTest = (JCObject)retObjectHitTest;
             return new HitTestInfo(objHitTest);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHitTest != null ? retObjectHitTest.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

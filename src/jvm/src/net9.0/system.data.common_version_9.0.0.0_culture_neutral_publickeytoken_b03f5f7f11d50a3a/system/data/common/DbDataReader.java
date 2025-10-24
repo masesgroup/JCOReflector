@@ -164,9 +164,13 @@ public class DbDataReader extends MarshalByRefObject implements AutoCloseable {
     
     public boolean GetBoolean(int ordinal) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetBoolean = null;
         try {
-            return (boolean)classInstance.Invoke("GetBoolean", ordinal);
+            retObjectGetBoolean = classInstance.Invoke("GetBoolean", ordinal);
+            return (boolean)retObjectGetBoolean;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectGetBoolean != null ? retObjectGetBoolean.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -174,9 +178,13 @@ public class DbDataReader extends MarshalByRefObject implements AutoCloseable {
 
     public boolean IsDBNull(int ordinal) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsDBNull = null;
         try {
-            return (boolean)classInstance.Invoke("IsDBNull", ordinal);
+            retObjectIsDBNull = classInstance.Invoke("IsDBNull", ordinal);
+            return (boolean)retObjectIsDBNull;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsDBNull != null ? retObjectIsDBNull.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -184,9 +192,13 @@ public class DbDataReader extends MarshalByRefObject implements AutoCloseable {
 
     public boolean NextResult() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNextResult = null;
         try {
-            return (boolean)classInstance.Invoke("NextResult");
+            retObjectNextResult = classInstance.Invoke("NextResult");
+            return (boolean)retObjectNextResult;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectNextResult != null ? retObjectNextResult.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -194,9 +206,13 @@ public class DbDataReader extends MarshalByRefObject implements AutoCloseable {
 
     public boolean Read() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRead = null;
         try {
-            return (boolean)classInstance.Invoke("Read");
+            retObjectRead = classInstance.Invoke("Read");
+            return (boolean)retObjectRead;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectRead != null ? retObjectRead.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -204,9 +220,20 @@ public class DbDataReader extends MarshalByRefObject implements AutoCloseable {
 
     public byte GetByte(int ordinal) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetByte = null;
         try {
-            return (byte)classInstance.Invoke("GetByte", ordinal);
+            retObjectGetByte = classInstance.Invoke("GetByte", ordinal);
+            return (byte)retObjectGetByte;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetByte_ToString = retObjectGetByte == null ? "null" : retObjectGetByte.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetByteNumber = (java.lang.Number)retObjectGetByte;
+                return retObjectGetByteNumber.byteValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into byte and, as fallback solution, into java.lang.Number", retObjectGetByte != null ? retObjectGetByte.getClass() : "null", retObjectGetByte_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -214,9 +241,13 @@ public class DbDataReader extends MarshalByRefObject implements AutoCloseable {
 
     public char GetChar(int ordinal) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetChar = null;
         try {
-            return (char)classInstance.Invoke("GetChar", ordinal);
+            retObjectGetChar = classInstance.Invoke("GetChar", ordinal);
+            return (char)retObjectGetChar;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into char", retObjectGetChar != null ? retObjectGetChar.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -224,9 +255,20 @@ public class DbDataReader extends MarshalByRefObject implements AutoCloseable {
 
     public double GetDouble(int ordinal) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDouble = null;
         try {
-            return (double)classInstance.Invoke("GetDouble", ordinal);
+            retObjectGetDouble = classInstance.Invoke("GetDouble", ordinal);
+            return (double)retObjectGetDouble;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetDouble_ToString = retObjectGetDouble == null ? "null" : retObjectGetDouble.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetDoubleNumber = (java.lang.Number)retObjectGetDouble;
+                return retObjectGetDoubleNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectGetDouble != null ? retObjectGetDouble.getClass() : "null", retObjectGetDouble_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -234,9 +276,20 @@ public class DbDataReader extends MarshalByRefObject implements AutoCloseable {
 
     public short GetInt16(int ordinal) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetInt16 = null;
         try {
-            return (short)classInstance.Invoke("GetInt16", ordinal);
+            retObjectGetInt16 = classInstance.Invoke("GetInt16", ordinal);
+            return (short)retObjectGetInt16;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetInt16_ToString = retObjectGetInt16 == null ? "null" : retObjectGetInt16.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetInt16Number = (java.lang.Number)retObjectGetInt16;
+                return retObjectGetInt16Number.shortValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into short and, as fallback solution, into java.lang.Number", retObjectGetInt16 != null ? retObjectGetInt16.getClass() : "null", retObjectGetInt16_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -244,9 +297,20 @@ public class DbDataReader extends MarshalByRefObject implements AutoCloseable {
 
     public int GetInt32(int ordinal) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetInt32 = null;
         try {
-            return (int)classInstance.Invoke("GetInt32", ordinal);
+            retObjectGetInt32 = classInstance.Invoke("GetInt32", ordinal);
+            return (int)retObjectGetInt32;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetInt32_ToString = retObjectGetInt32 == null ? "null" : retObjectGetInt32.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetInt32Number = (java.lang.Number)retObjectGetInt32;
+                return retObjectGetInt32Number.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetInt32 != null ? retObjectGetInt32.getClass() : "null", retObjectGetInt32_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -254,9 +318,20 @@ public class DbDataReader extends MarshalByRefObject implements AutoCloseable {
 
     public int GetOrdinal(java.lang.String name) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetOrdinal = null;
         try {
-            return (int)classInstance.Invoke("GetOrdinal", name);
+            retObjectGetOrdinal = classInstance.Invoke("GetOrdinal", name);
+            return (int)retObjectGetOrdinal;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetOrdinal_ToString = retObjectGetOrdinal == null ? "null" : retObjectGetOrdinal.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetOrdinalNumber = (java.lang.Number)retObjectGetOrdinal;
+                return retObjectGetOrdinalNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetOrdinal != null ? retObjectGetOrdinal.getClass() : "null", retObjectGetOrdinal_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -264,9 +339,20 @@ public class DbDataReader extends MarshalByRefObject implements AutoCloseable {
 
     public int GetProviderSpecificValues(NetObject[] values) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetProviderSpecificValues = null;
         try {
-            return (int)classInstance.Invoke("GetProviderSpecificValues", (java.lang.Object)toObjectFromArray(values));
+            retObjectGetProviderSpecificValues = classInstance.Invoke("GetProviderSpecificValues", (java.lang.Object)toObjectFromArray(values));
+            return (int)retObjectGetProviderSpecificValues;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetProviderSpecificValues_ToString = retObjectGetProviderSpecificValues == null ? "null" : retObjectGetProviderSpecificValues.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetProviderSpecificValuesNumber = (java.lang.Number)retObjectGetProviderSpecificValues;
+                return retObjectGetProviderSpecificValuesNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetProviderSpecificValues != null ? retObjectGetProviderSpecificValues.getClass() : "null", retObjectGetProviderSpecificValues_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -274,9 +360,20 @@ public class DbDataReader extends MarshalByRefObject implements AutoCloseable {
 
     public int GetValues(NetObject[] values) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetValues = null;
         try {
-            return (int)classInstance.Invoke("GetValues", (java.lang.Object)toObjectFromArray(values));
+            retObjectGetValues = classInstance.Invoke("GetValues", (java.lang.Object)toObjectFromArray(values));
+            return (int)retObjectGetValues;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetValues_ToString = retObjectGetValues == null ? "null" : retObjectGetValues.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetValuesNumber = (java.lang.Number)retObjectGetValues;
+                return retObjectGetValuesNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetValues != null ? retObjectGetValues.getClass() : "null", retObjectGetValues_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -284,9 +381,20 @@ public class DbDataReader extends MarshalByRefObject implements AutoCloseable {
 
     public long GetBytes(int ordinal, long dataOffset, byte[] buffer, int bufferOffset, int length) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetBytes = null;
         try {
-            return (long)classInstance.Invoke("GetBytes", ordinal, dataOffset, buffer, bufferOffset, length);
+            retObjectGetBytes = classInstance.Invoke("GetBytes", ordinal, dataOffset, buffer, bufferOffset, length);
+            return (long)retObjectGetBytes;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetBytes_ToString = retObjectGetBytes == null ? "null" : retObjectGetBytes.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetBytesNumber = (java.lang.Number)retObjectGetBytes;
+                return retObjectGetBytesNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectGetBytes != null ? retObjectGetBytes.getClass() : "null", retObjectGetBytes_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -294,9 +402,20 @@ public class DbDataReader extends MarshalByRefObject implements AutoCloseable {
 
     public long GetBytes(int dupParam0, long dupParam1, JCORefOut dupParam2, int dupParam3, int dupParam4) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetBytes = null;
         try {
-            return (long)classInstance.Invoke("GetBytes", dupParam0, dupParam1, dupParam2.getJCRefOut(), dupParam3, dupParam4);
+            retObjectGetBytes = classInstance.Invoke("GetBytes", dupParam0, dupParam1, dupParam2.getJCRefOut(), dupParam3, dupParam4);
+            return (long)retObjectGetBytes;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetBytes_ToString = retObjectGetBytes == null ? "null" : retObjectGetBytes.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetBytesNumber = (java.lang.Number)retObjectGetBytes;
+                return retObjectGetBytesNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectGetBytes != null ? retObjectGetBytes.getClass() : "null", retObjectGetBytes_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -304,9 +423,20 @@ public class DbDataReader extends MarshalByRefObject implements AutoCloseable {
 
     public long GetChars(int ordinal, long dataOffset, char[] buffer, int bufferOffset, int length) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetChars = null;
         try {
-            return (long)classInstance.Invoke("GetChars", ordinal, dataOffset, buffer, bufferOffset, length);
+            retObjectGetChars = classInstance.Invoke("GetChars", ordinal, dataOffset, buffer, bufferOffset, length);
+            return (long)retObjectGetChars;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetChars_ToString = retObjectGetChars == null ? "null" : retObjectGetChars.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetCharsNumber = (java.lang.Number)retObjectGetChars;
+                return retObjectGetCharsNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectGetChars != null ? retObjectGetChars.getClass() : "null", retObjectGetChars_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -314,9 +444,20 @@ public class DbDataReader extends MarshalByRefObject implements AutoCloseable {
 
     public long GetChars(int dupParam0, long dupParam1, JCORefOut dupParam2, int dupParam3, int dupParam4) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetChars = null;
         try {
-            return (long)classInstance.Invoke("GetChars", dupParam0, dupParam1, dupParam2.getJCRefOut(), dupParam3, dupParam4);
+            retObjectGetChars = classInstance.Invoke("GetChars", dupParam0, dupParam1, dupParam2.getJCRefOut(), dupParam3, dupParam4);
+            return (long)retObjectGetChars;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetChars_ToString = retObjectGetChars == null ? "null" : retObjectGetChars.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetCharsNumber = (java.lang.Number)retObjectGetChars;
+                return retObjectGetCharsNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectGetChars != null ? retObjectGetChars.getClass() : "null", retObjectGetChars_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -324,9 +465,20 @@ public class DbDataReader extends MarshalByRefObject implements AutoCloseable {
 
     public long GetInt64(int ordinal) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetInt64 = null;
         try {
-            return (long)classInstance.Invoke("GetInt64", ordinal);
+            retObjectGetInt64 = classInstance.Invoke("GetInt64", ordinal);
+            return (long)retObjectGetInt64;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetInt64_ToString = retObjectGetInt64 == null ? "null" : retObjectGetInt64.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetInt64Number = (java.lang.Number)retObjectGetInt64;
+                return retObjectGetInt64Number.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectGetInt64 != null ? retObjectGetInt64.getClass() : "null", retObjectGetInt64_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -334,10 +486,14 @@ public class DbDataReader extends MarshalByRefObject implements AutoCloseable {
 
     public Single GetFloat(int ordinal) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetFloat = null;
         try {
-            JCObject objGetFloat = (JCObject)classInstance.Invoke("GetFloat", ordinal);
+            retObjectGetFloat = classInstance.Invoke("GetFloat", ordinal);
+            JCObject objGetFloat = (JCObject)retObjectGetFloat;
             return new Single(objGetFloat);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetFloat != null ? retObjectGetFloat.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -345,10 +501,14 @@ public class DbDataReader extends MarshalByRefObject implements AutoCloseable {
 
     public DbDataReader GetData(int ordinal) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetData = null;
         try {
-            JCObject objGetData = (JCObject)classInstance.Invoke("GetData", ordinal);
+            retObjectGetData = classInstance.Invoke("GetData", ordinal);
+            JCObject objGetData = (JCObject)retObjectGetData;
             return new DbDataReader(objGetData);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetData != null ? retObjectGetData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -356,10 +516,14 @@ public class DbDataReader extends MarshalByRefObject implements AutoCloseable {
 
     public DataTable GetSchemaTable() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSchemaTable = null;
         try {
-            JCObject objGetSchemaTable = (JCObject)classInstance.Invoke("GetSchemaTable");
+            retObjectGetSchemaTable = classInstance.Invoke("GetSchemaTable");
+            JCObject objGetSchemaTable = (JCObject)retObjectGetSchemaTable;
             return new DataTable(objGetSchemaTable);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSchemaTable != null ? retObjectGetSchemaTable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -367,10 +531,14 @@ public class DbDataReader extends MarshalByRefObject implements AutoCloseable {
 
     public DateTime GetDateTime(int ordinal) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDateTime = null;
         try {
-            JCObject objGetDateTime = (JCObject)classInstance.Invoke("GetDateTime", ordinal);
+            retObjectGetDateTime = classInstance.Invoke("GetDateTime", ordinal);
+            JCObject objGetDateTime = (JCObject)retObjectGetDateTime;
             return new DateTime(objGetDateTime);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetDateTime != null ? retObjectGetDateTime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -378,10 +546,14 @@ public class DbDataReader extends MarshalByRefObject implements AutoCloseable {
 
     public Decimal GetDecimal(int ordinal) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDecimal = null;
         try {
-            JCObject objGetDecimal = (JCObject)classInstance.Invoke("GetDecimal", ordinal);
+            retObjectGetDecimal = classInstance.Invoke("GetDecimal", ordinal);
+            JCObject objGetDecimal = (JCObject)retObjectGetDecimal;
             return new Decimal(objGetDecimal);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetDecimal != null ? retObjectGetDecimal.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -389,10 +561,14 @@ public class DbDataReader extends MarshalByRefObject implements AutoCloseable {
 
     public Guid GetGuid(int ordinal) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetGuid = null;
         try {
-            JCObject objGetGuid = (JCObject)classInstance.Invoke("GetGuid", ordinal);
+            retObjectGetGuid = classInstance.Invoke("GetGuid", ordinal);
+            JCObject objGetGuid = (JCObject)retObjectGetGuid;
             return new Guid(objGetGuid);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetGuid != null ? retObjectGetGuid.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -400,10 +576,14 @@ public class DbDataReader extends MarshalByRefObject implements AutoCloseable {
 
     public Stream GetStream(int ordinal) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetStream = null;
         try {
-            JCObject objGetStream = (JCObject)classInstance.Invoke("GetStream", ordinal);
+            retObjectGetStream = classInstance.Invoke("GetStream", ordinal);
+            JCObject objGetStream = (JCObject)retObjectGetStream;
             return new Stream(objGetStream);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetStream != null ? retObjectGetStream.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -411,10 +591,14 @@ public class DbDataReader extends MarshalByRefObject implements AutoCloseable {
 
     public TextReader GetTextReader(int ordinal) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetTextReader = null;
         try {
-            JCObject objGetTextReader = (JCObject)classInstance.Invoke("GetTextReader", ordinal);
+            retObjectGetTextReader = classInstance.Invoke("GetTextReader", ordinal);
+            JCObject objGetTextReader = (JCObject)retObjectGetTextReader;
             return new TextReader(objGetTextReader);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetTextReader != null ? retObjectGetTextReader.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -422,10 +606,14 @@ public class DbDataReader extends MarshalByRefObject implements AutoCloseable {
 
     public NetObject GetProviderSpecificValue(int ordinal) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetProviderSpecificValue = null;
         try {
-            JCObject objGetProviderSpecificValue = (JCObject)classInstance.Invoke("GetProviderSpecificValue", ordinal);
+            retObjectGetProviderSpecificValue = classInstance.Invoke("GetProviderSpecificValue", ordinal);
+            JCObject objGetProviderSpecificValue = (JCObject)retObjectGetProviderSpecificValue;
             return new NetObject(objGetProviderSpecificValue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetProviderSpecificValue != null ? retObjectGetProviderSpecificValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -433,10 +621,14 @@ public class DbDataReader extends MarshalByRefObject implements AutoCloseable {
 
     public NetObject GetValue(int ordinal) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetValue = null;
         try {
-            JCObject objGetValue = (JCObject)classInstance.Invoke("GetValue", ordinal);
+            retObjectGetValue = classInstance.Invoke("GetValue", ordinal);
+            JCObject objGetValue = (JCObject)retObjectGetValue;
             return new NetObject(objGetValue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetValue != null ? retObjectGetValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -444,9 +636,13 @@ public class DbDataReader extends MarshalByRefObject implements AutoCloseable {
 
     public java.lang.String GetDataTypeName(int ordinal) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDataTypeName = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetDataTypeName", ordinal);
+            retObjectGetDataTypeName = classInstance.Invoke("GetDataTypeName", ordinal);
+            return (java.lang.String)retObjectGetDataTypeName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetDataTypeName != null ? retObjectGetDataTypeName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -454,9 +650,13 @@ public class DbDataReader extends MarshalByRefObject implements AutoCloseable {
 
     public java.lang.String GetName(int ordinal) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetName = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetName", ordinal);
+            retObjectGetName = classInstance.Invoke("GetName", ordinal);
+            return (java.lang.String)retObjectGetName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetName != null ? retObjectGetName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -464,9 +664,13 @@ public class DbDataReader extends MarshalByRefObject implements AutoCloseable {
 
     public java.lang.String GetString(int ordinal) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetString = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetString", ordinal);
+            retObjectGetString = classInstance.Invoke("GetString", ordinal);
+            return (java.lang.String)retObjectGetString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetString != null ? retObjectGetString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -474,10 +678,14 @@ public class DbDataReader extends MarshalByRefObject implements AutoCloseable {
 
     public Task CloseAsync() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.NullReferenceException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCloseAsync = null;
         try {
-            JCObject objCloseAsync = (JCObject)classInstance.Invoke("CloseAsync");
+            retObjectCloseAsync = classInstance.Invoke("CloseAsync");
+            JCObject objCloseAsync = (JCObject)retObjectCloseAsync;
             return new Task(objCloseAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCloseAsync != null ? retObjectCloseAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -485,10 +693,14 @@ public class DbDataReader extends MarshalByRefObject implements AutoCloseable {
 
     public ValueTask DisposeAsync() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDisposeAsync = null;
         try {
-            JCObject objDisposeAsync = (JCObject)classInstance.Invoke("DisposeAsync");
+            retObjectDisposeAsync = classInstance.Invoke("DisposeAsync");
+            JCObject objDisposeAsync = (JCObject)retObjectDisposeAsync;
             return new ValueTask(objDisposeAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDisposeAsync != null ? retObjectDisposeAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -496,10 +708,14 @@ public class DbDataReader extends MarshalByRefObject implements AutoCloseable {
 
     public NetType GetFieldType(int ordinal) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetFieldType = null;
         try {
-            JCObject objGetFieldType = (JCObject)classInstance.Invoke("GetFieldType", ordinal);
+            retObjectGetFieldType = classInstance.Invoke("GetFieldType", ordinal);
+            JCObject objGetFieldType = (JCObject)retObjectGetFieldType;
             return new NetType(objGetFieldType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetFieldType != null ? retObjectGetFieldType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -507,10 +723,14 @@ public class DbDataReader extends MarshalByRefObject implements AutoCloseable {
 
     public NetType GetProviderSpecificFieldType(int ordinal) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetProviderSpecificFieldType = null;
         try {
-            JCObject objGetProviderSpecificFieldType = (JCObject)classInstance.Invoke("GetProviderSpecificFieldType", ordinal);
+            retObjectGetProviderSpecificFieldType = classInstance.Invoke("GetProviderSpecificFieldType", ordinal);
+            JCObject objGetProviderSpecificFieldType = (JCObject)retObjectGetProviderSpecificFieldType;
             return new NetType(objGetProviderSpecificFieldType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetProviderSpecificFieldType != null ? retObjectGetProviderSpecificFieldType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -518,7 +738,7 @@ public class DbDataReader extends MarshalByRefObject implements AutoCloseable {
 
     public void Close() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Close");
         } catch (JCNativeException jcne) {
@@ -528,7 +748,7 @@ public class DbDataReader extends MarshalByRefObject implements AutoCloseable {
 
     public void Dispose() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
@@ -539,7 +759,7 @@ public class DbDataReader extends MarshalByRefObject implements AutoCloseable {
     public void close() throws Exception {
         try {
             if (classInstance == null)
-                throw new UnsupportedOperationException("classInstance is null.");
+                throw new java.lang.UnsupportedOperationException("classInstance is null.");
             try {
                 classInstance.Invoke("Dispose");
             }
@@ -555,9 +775,13 @@ public class DbDataReader extends MarshalByRefObject implements AutoCloseable {
     
     public boolean getHasRows() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHasRows = null;
         try {
-            return (boolean)classInstance.Get("HasRows");
+            retObjectHasRows = classInstance.Get("HasRows");
+            return (boolean)retObjectHasRows;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectHasRows != null ? retObjectHasRows.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -565,9 +789,13 @@ public class DbDataReader extends MarshalByRefObject implements AutoCloseable {
 
     public boolean getIsClosed() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsClosed = null;
         try {
-            return (boolean)classInstance.Get("IsClosed");
+            retObjectIsClosed = classInstance.Get("IsClosed");
+            return (boolean)retObjectIsClosed;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsClosed != null ? retObjectIsClosed.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -575,9 +803,20 @@ public class DbDataReader extends MarshalByRefObject implements AutoCloseable {
 
     public int getDepth() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDepth = null;
         try {
-            return (int)classInstance.Get("Depth");
+            retObjectDepth = classInstance.Get("Depth");
+            return (int)retObjectDepth;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDepth_ToString = retObjectDepth == null ? "null" : retObjectDepth.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectDepthNumber = (java.lang.Number)retObjectDepth;
+                return retObjectDepthNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectDepth != null ? retObjectDepth.getClass() : "null", retObjectDepth_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -585,9 +824,20 @@ public class DbDataReader extends MarshalByRefObject implements AutoCloseable {
 
     public int getFieldCount() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFieldCount = null;
         try {
-            return (int)classInstance.Get("FieldCount");
+            retObjectFieldCount = classInstance.Get("FieldCount");
+            return (int)retObjectFieldCount;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectFieldCount_ToString = retObjectFieldCount == null ? "null" : retObjectFieldCount.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectFieldCountNumber = (java.lang.Number)retObjectFieldCount;
+                return retObjectFieldCountNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectFieldCount != null ? retObjectFieldCount.getClass() : "null", retObjectFieldCount_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -595,9 +845,20 @@ public class DbDataReader extends MarshalByRefObject implements AutoCloseable {
 
     public int getRecordsAffected() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRecordsAffected = null;
         try {
-            return (int)classInstance.Get("RecordsAffected");
+            retObjectRecordsAffected = classInstance.Get("RecordsAffected");
+            return (int)retObjectRecordsAffected;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectRecordsAffected_ToString = retObjectRecordsAffected == null ? "null" : retObjectRecordsAffected.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectRecordsAffectedNumber = (java.lang.Number)retObjectRecordsAffected;
+                return retObjectRecordsAffectedNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectRecordsAffected != null ? retObjectRecordsAffected.getClass() : "null", retObjectRecordsAffected_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -605,9 +866,20 @@ public class DbDataReader extends MarshalByRefObject implements AutoCloseable {
 
     public int getVisibleFieldCount() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVisibleFieldCount = null;
         try {
-            return (int)classInstance.Get("VisibleFieldCount");
+            retObjectVisibleFieldCount = classInstance.Get("VisibleFieldCount");
+            return (int)retObjectVisibleFieldCount;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectVisibleFieldCount_ToString = retObjectVisibleFieldCount == null ? "null" : retObjectVisibleFieldCount.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectVisibleFieldCountNumber = (java.lang.Number)retObjectVisibleFieldCount;
+                return retObjectVisibleFieldCountNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectVisibleFieldCount != null ? retObjectVisibleFieldCount.getClass() : "null", retObjectVisibleFieldCount_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

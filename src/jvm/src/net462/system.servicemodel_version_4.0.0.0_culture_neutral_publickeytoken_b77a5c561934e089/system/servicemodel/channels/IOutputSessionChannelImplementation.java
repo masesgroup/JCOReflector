@@ -157,10 +157,14 @@ public class IOutputSessionChannelImplementation extends NetObject implements IO
     
     public IAsyncResult BeginClose(AsyncCallback callback, NetObject state) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginClose = null;
         try {
-            JCObject objBeginClose = (JCObject)classInstance.Invoke("BeginClose", callback, state == null ? null : state.getJCOInstance());
+            retObjectBeginClose = classInstance.Invoke("BeginClose", callback, state == null ? null : state.getJCOInstance());
+            JCObject objBeginClose = (JCObject)retObjectBeginClose;
             return new IAsyncResultImplementation(objBeginClose);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginClose != null ? retObjectBeginClose.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -168,10 +172,14 @@ public class IOutputSessionChannelImplementation extends NetObject implements IO
 
     public IAsyncResult BeginClose(TimeSpan timeout, AsyncCallback callback, NetObject state) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginClose = null;
         try {
-            JCObject objBeginClose = (JCObject)classInstance.Invoke("BeginClose", timeout == null ? null : timeout.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            retObjectBeginClose = classInstance.Invoke("BeginClose", timeout == null ? null : timeout.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            JCObject objBeginClose = (JCObject)retObjectBeginClose;
             return new IAsyncResultImplementation(objBeginClose);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginClose != null ? retObjectBeginClose.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,10 +187,14 @@ public class IOutputSessionChannelImplementation extends NetObject implements IO
 
     public IAsyncResult BeginOpen(AsyncCallback callback, NetObject state) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginOpen = null;
         try {
-            JCObject objBeginOpen = (JCObject)classInstance.Invoke("BeginOpen", callback, state == null ? null : state.getJCOInstance());
+            retObjectBeginOpen = classInstance.Invoke("BeginOpen", callback, state == null ? null : state.getJCOInstance());
+            JCObject objBeginOpen = (JCObject)retObjectBeginOpen;
             return new IAsyncResultImplementation(objBeginOpen);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginOpen != null ? retObjectBeginOpen.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,10 +202,14 @@ public class IOutputSessionChannelImplementation extends NetObject implements IO
 
     public IAsyncResult BeginOpen(TimeSpan timeout, AsyncCallback callback, NetObject state) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginOpen = null;
         try {
-            JCObject objBeginOpen = (JCObject)classInstance.Invoke("BeginOpen", timeout == null ? null : timeout.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            retObjectBeginOpen = classInstance.Invoke("BeginOpen", timeout == null ? null : timeout.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            JCObject objBeginOpen = (JCObject)retObjectBeginOpen;
             return new IAsyncResultImplementation(objBeginOpen);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginOpen != null ? retObjectBeginOpen.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,10 +217,14 @@ public class IOutputSessionChannelImplementation extends NetObject implements IO
 
     public IAsyncResult BeginSend(Message message, AsyncCallback callback, NetObject state) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginSend = null;
         try {
-            JCObject objBeginSend = (JCObject)classInstance.Invoke("BeginSend", message == null ? null : message.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            retObjectBeginSend = classInstance.Invoke("BeginSend", message == null ? null : message.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            JCObject objBeginSend = (JCObject)retObjectBeginSend;
             return new IAsyncResultImplementation(objBeginSend);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginSend != null ? retObjectBeginSend.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -212,10 +232,14 @@ public class IOutputSessionChannelImplementation extends NetObject implements IO
 
     public IAsyncResult BeginSend(Message message, TimeSpan timeout, AsyncCallback callback, NetObject state) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginSend = null;
         try {
-            JCObject objBeginSend = (JCObject)classInstance.Invoke("BeginSend", message == null ? null : message.getJCOInstance(), timeout == null ? null : timeout.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            retObjectBeginSend = classInstance.Invoke("BeginSend", message == null ? null : message.getJCOInstance(), timeout == null ? null : timeout.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            JCObject objBeginSend = (JCObject)retObjectBeginSend;
             return new IAsyncResultImplementation(objBeginSend);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginSend != null ? retObjectBeginSend.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -223,7 +247,7 @@ public class IOutputSessionChannelImplementation extends NetObject implements IO
 
     public void Abort() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Abort");
         } catch (JCNativeException jcne) {
@@ -233,7 +257,7 @@ public class IOutputSessionChannelImplementation extends NetObject implements IO
 
     public void Close() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Close");
         } catch (JCNativeException jcne) {
@@ -243,7 +267,7 @@ public class IOutputSessionChannelImplementation extends NetObject implements IO
 
     public void Close(TimeSpan timeout) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Close", timeout == null ? null : timeout.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -253,7 +277,7 @@ public class IOutputSessionChannelImplementation extends NetObject implements IO
 
     public void EndClose(IAsyncResult result) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EndClose", result == null ? null : result.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -263,7 +287,7 @@ public class IOutputSessionChannelImplementation extends NetObject implements IO
 
     public void EndOpen(IAsyncResult result) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EndOpen", result == null ? null : result.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -273,7 +297,7 @@ public class IOutputSessionChannelImplementation extends NetObject implements IO
 
     public void EndSend(IAsyncResult result) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EndSend", result == null ? null : result.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -283,7 +307,7 @@ public class IOutputSessionChannelImplementation extends NetObject implements IO
 
     public void Open() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Open");
         } catch (JCNativeException jcne) {
@@ -293,7 +317,7 @@ public class IOutputSessionChannelImplementation extends NetObject implements IO
 
     public void Open(TimeSpan timeout) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Open", timeout == null ? null : timeout.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -303,7 +327,7 @@ public class IOutputSessionChannelImplementation extends NetObject implements IO
 
     public void Send(Message message) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Send", message == null ? null : message.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -313,7 +337,7 @@ public class IOutputSessionChannelImplementation extends NetObject implements IO
 
     public void Send(Message message, TimeSpan timeout) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Send", message == null ? null : message.getJCOInstance(), timeout == null ? null : timeout.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -327,10 +351,14 @@ public class IOutputSessionChannelImplementation extends NetObject implements IO
     
     public CommunicationState getState() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectState = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("State");
+            retObjectState = classInstance.Get("State");
+            JCObject val = (JCObject)retObjectState;
             return new CommunicationState(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectState != null ? retObjectState.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -338,10 +366,14 @@ public class IOutputSessionChannelImplementation extends NetObject implements IO
 
     public EndpointAddress getRemoteAddress() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRemoteAddress = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RemoteAddress");
+            retObjectRemoteAddress = classInstance.Get("RemoteAddress");
+            JCObject val = (JCObject)retObjectRemoteAddress;
             return new EndpointAddress(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRemoteAddress != null ? retObjectRemoteAddress.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -349,10 +381,14 @@ public class IOutputSessionChannelImplementation extends NetObject implements IO
 
     public Uri getVia() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVia = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Via");
+            retObjectVia = classInstance.Get("Via");
+            JCObject val = (JCObject)retObjectVia;
             return new Uri(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVia != null ? retObjectVia.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -365,7 +401,7 @@ public class IOutputSessionChannelImplementation extends NetObject implements IO
 
     public void addClosed(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Closed", handler);
         } catch (JCNativeException jcne) {
@@ -375,7 +411,7 @@ public class IOutputSessionChannelImplementation extends NetObject implements IO
 
     public void removeClosed(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Closed", handler);
         } catch (JCNativeException jcne) {
@@ -385,7 +421,7 @@ public class IOutputSessionChannelImplementation extends NetObject implements IO
 
     public void addClosing(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Closing", handler);
         } catch (JCNativeException jcne) {
@@ -395,7 +431,7 @@ public class IOutputSessionChannelImplementation extends NetObject implements IO
 
     public void removeClosing(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Closing", handler);
         } catch (JCNativeException jcne) {
@@ -405,7 +441,7 @@ public class IOutputSessionChannelImplementation extends NetObject implements IO
 
     public void addFaulted(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Faulted", handler);
         } catch (JCNativeException jcne) {
@@ -415,7 +451,7 @@ public class IOutputSessionChannelImplementation extends NetObject implements IO
 
     public void removeFaulted(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Faulted", handler);
         } catch (JCNativeException jcne) {
@@ -425,7 +461,7 @@ public class IOutputSessionChannelImplementation extends NetObject implements IO
 
     public void addOpened(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Opened", handler);
         } catch (JCNativeException jcne) {
@@ -435,7 +471,7 @@ public class IOutputSessionChannelImplementation extends NetObject implements IO
 
     public void removeOpened(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Opened", handler);
         } catch (JCNativeException jcne) {
@@ -445,7 +481,7 @@ public class IOutputSessionChannelImplementation extends NetObject implements IO
 
     public void addOpening(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Opening", handler);
         } catch (JCNativeException jcne) {
@@ -455,7 +491,7 @@ public class IOutputSessionChannelImplementation extends NetObject implements IO
 
     public void removeOpening(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Opening", handler);
         } catch (JCNativeException jcne) {

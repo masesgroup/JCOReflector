@@ -191,7 +191,7 @@ public class FlowDocument extends FrameworkContentElement implements system.ISer
     
     public void SetDpi(DpiScale dpiInfo) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetDpi", dpiInfo == null ? null : dpiInfo.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -205,7 +205,7 @@ public class FlowDocument extends FrameworkContentElement implements system.ISer
      */
     @Deprecated 
     public NetObject GetService(NetType serviceType) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIServiceProvider to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIServiceProvider to obtain the full interface.");
     }
 
     /**
@@ -214,7 +214,7 @@ public class FlowDocument extends FrameworkContentElement implements system.ISer
      */
     @Deprecated 
     public void AddChild(NetObject value) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAddChild to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAddChild to obtain the full interface.");
     }
 
     /**
@@ -223,7 +223,7 @@ public class FlowDocument extends FrameworkContentElement implements system.ISer
      */
     @Deprecated 
     public void AddText(java.lang.String text) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAddChild to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAddChild to obtain the full interface.");
     }
 
 
@@ -232,9 +232,13 @@ public class FlowDocument extends FrameworkContentElement implements system.ISer
     
     public boolean getIsColumnWidthFlexible() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsColumnWidthFlexible = null;
         try {
-            return (boolean)classInstance.Get("IsColumnWidthFlexible");
+            retObjectIsColumnWidthFlexible = classInstance.Get("IsColumnWidthFlexible");
+            return (boolean)retObjectIsColumnWidthFlexible;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsColumnWidthFlexible != null ? retObjectIsColumnWidthFlexible.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -242,7 +246,7 @@ public class FlowDocument extends FrameworkContentElement implements system.ISer
 
     public void setIsColumnWidthFlexible(boolean IsColumnWidthFlexible) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsColumnWidthFlexible", IsColumnWidthFlexible);
         } catch (JCNativeException jcne) {
@@ -252,9 +256,13 @@ public class FlowDocument extends FrameworkContentElement implements system.ISer
 
     public boolean getIsHyphenationEnabled() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsHyphenationEnabled = null;
         try {
-            return (boolean)classInstance.Get("IsHyphenationEnabled");
+            retObjectIsHyphenationEnabled = classInstance.Get("IsHyphenationEnabled");
+            return (boolean)retObjectIsHyphenationEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsHyphenationEnabled != null ? retObjectIsHyphenationEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -262,7 +270,7 @@ public class FlowDocument extends FrameworkContentElement implements system.ISer
 
     public void setIsHyphenationEnabled(boolean IsHyphenationEnabled) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsHyphenationEnabled", IsHyphenationEnabled);
         } catch (JCNativeException jcne) {
@@ -272,9 +280,13 @@ public class FlowDocument extends FrameworkContentElement implements system.ISer
 
     public boolean getIsOptimalParagraphEnabled() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsOptimalParagraphEnabled = null;
         try {
-            return (boolean)classInstance.Get("IsOptimalParagraphEnabled");
+            retObjectIsOptimalParagraphEnabled = classInstance.Get("IsOptimalParagraphEnabled");
+            return (boolean)retObjectIsOptimalParagraphEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsOptimalParagraphEnabled != null ? retObjectIsOptimalParagraphEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -282,7 +294,7 @@ public class FlowDocument extends FrameworkContentElement implements system.ISer
 
     public void setIsOptimalParagraphEnabled(boolean IsOptimalParagraphEnabled) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsOptimalParagraphEnabled", IsOptimalParagraphEnabled);
         } catch (JCNativeException jcne) {
@@ -292,9 +304,20 @@ public class FlowDocument extends FrameworkContentElement implements system.ISer
 
     public double getColumnGap() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectColumnGap = null;
         try {
-            return (double)classInstance.Get("ColumnGap");
+            retObjectColumnGap = classInstance.Get("ColumnGap");
+            return (double)retObjectColumnGap;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectColumnGap_ToString = retObjectColumnGap == null ? "null" : retObjectColumnGap.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectColumnGapNumber = (java.lang.Number)retObjectColumnGap;
+                return retObjectColumnGapNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectColumnGap != null ? retObjectColumnGap.getClass() : "null", retObjectColumnGap_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -302,7 +325,7 @@ public class FlowDocument extends FrameworkContentElement implements system.ISer
 
     public void setColumnGap(double ColumnGap) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ColumnGap", ColumnGap);
         } catch (JCNativeException jcne) {
@@ -312,9 +335,20 @@ public class FlowDocument extends FrameworkContentElement implements system.ISer
 
     public double getColumnRuleWidth() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectColumnRuleWidth = null;
         try {
-            return (double)classInstance.Get("ColumnRuleWidth");
+            retObjectColumnRuleWidth = classInstance.Get("ColumnRuleWidth");
+            return (double)retObjectColumnRuleWidth;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectColumnRuleWidth_ToString = retObjectColumnRuleWidth == null ? "null" : retObjectColumnRuleWidth.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectColumnRuleWidthNumber = (java.lang.Number)retObjectColumnRuleWidth;
+                return retObjectColumnRuleWidthNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectColumnRuleWidth != null ? retObjectColumnRuleWidth.getClass() : "null", retObjectColumnRuleWidth_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -322,7 +356,7 @@ public class FlowDocument extends FrameworkContentElement implements system.ISer
 
     public void setColumnRuleWidth(double ColumnRuleWidth) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ColumnRuleWidth", ColumnRuleWidth);
         } catch (JCNativeException jcne) {
@@ -332,9 +366,20 @@ public class FlowDocument extends FrameworkContentElement implements system.ISer
 
     public double getColumnWidth() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectColumnWidth = null;
         try {
-            return (double)classInstance.Get("ColumnWidth");
+            retObjectColumnWidth = classInstance.Get("ColumnWidth");
+            return (double)retObjectColumnWidth;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectColumnWidth_ToString = retObjectColumnWidth == null ? "null" : retObjectColumnWidth.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectColumnWidthNumber = (java.lang.Number)retObjectColumnWidth;
+                return retObjectColumnWidthNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectColumnWidth != null ? retObjectColumnWidth.getClass() : "null", retObjectColumnWidth_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -342,7 +387,7 @@ public class FlowDocument extends FrameworkContentElement implements system.ISer
 
     public void setColumnWidth(double ColumnWidth) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ColumnWidth", ColumnWidth);
         } catch (JCNativeException jcne) {
@@ -352,9 +397,20 @@ public class FlowDocument extends FrameworkContentElement implements system.ISer
 
     public double getFontSize() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFontSize = null;
         try {
-            return (double)classInstance.Get("FontSize");
+            retObjectFontSize = classInstance.Get("FontSize");
+            return (double)retObjectFontSize;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectFontSize_ToString = retObjectFontSize == null ? "null" : retObjectFontSize.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectFontSizeNumber = (java.lang.Number)retObjectFontSize;
+                return retObjectFontSizeNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectFontSize != null ? retObjectFontSize.getClass() : "null", retObjectFontSize_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -362,7 +418,7 @@ public class FlowDocument extends FrameworkContentElement implements system.ISer
 
     public void setFontSize(double FontSize) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FontSize", FontSize);
         } catch (JCNativeException jcne) {
@@ -372,9 +428,20 @@ public class FlowDocument extends FrameworkContentElement implements system.ISer
 
     public double getLineHeight() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLineHeight = null;
         try {
-            return (double)classInstance.Get("LineHeight");
+            retObjectLineHeight = classInstance.Get("LineHeight");
+            return (double)retObjectLineHeight;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectLineHeight_ToString = retObjectLineHeight == null ? "null" : retObjectLineHeight.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectLineHeightNumber = (java.lang.Number)retObjectLineHeight;
+                return retObjectLineHeightNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectLineHeight != null ? retObjectLineHeight.getClass() : "null", retObjectLineHeight_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -382,7 +449,7 @@ public class FlowDocument extends FrameworkContentElement implements system.ISer
 
     public void setLineHeight(double LineHeight) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("LineHeight", LineHeight);
         } catch (JCNativeException jcne) {
@@ -392,9 +459,20 @@ public class FlowDocument extends FrameworkContentElement implements system.ISer
 
     public double getMaxPageHeight() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxPageHeight = null;
         try {
-            return (double)classInstance.Get("MaxPageHeight");
+            retObjectMaxPageHeight = classInstance.Get("MaxPageHeight");
+            return (double)retObjectMaxPageHeight;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaxPageHeight_ToString = retObjectMaxPageHeight == null ? "null" : retObjectMaxPageHeight.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMaxPageHeightNumber = (java.lang.Number)retObjectMaxPageHeight;
+                return retObjectMaxPageHeightNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectMaxPageHeight != null ? retObjectMaxPageHeight.getClass() : "null", retObjectMaxPageHeight_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -402,7 +480,7 @@ public class FlowDocument extends FrameworkContentElement implements system.ISer
 
     public void setMaxPageHeight(double MaxPageHeight) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaxPageHeight", MaxPageHeight);
         } catch (JCNativeException jcne) {
@@ -412,9 +490,20 @@ public class FlowDocument extends FrameworkContentElement implements system.ISer
 
     public double getMaxPageWidth() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxPageWidth = null;
         try {
-            return (double)classInstance.Get("MaxPageWidth");
+            retObjectMaxPageWidth = classInstance.Get("MaxPageWidth");
+            return (double)retObjectMaxPageWidth;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaxPageWidth_ToString = retObjectMaxPageWidth == null ? "null" : retObjectMaxPageWidth.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMaxPageWidthNumber = (java.lang.Number)retObjectMaxPageWidth;
+                return retObjectMaxPageWidthNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectMaxPageWidth != null ? retObjectMaxPageWidth.getClass() : "null", retObjectMaxPageWidth_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -422,7 +511,7 @@ public class FlowDocument extends FrameworkContentElement implements system.ISer
 
     public void setMaxPageWidth(double MaxPageWidth) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaxPageWidth", MaxPageWidth);
         } catch (JCNativeException jcne) {
@@ -432,9 +521,20 @@ public class FlowDocument extends FrameworkContentElement implements system.ISer
 
     public double getMinPageHeight() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMinPageHeight = null;
         try {
-            return (double)classInstance.Get("MinPageHeight");
+            retObjectMinPageHeight = classInstance.Get("MinPageHeight");
+            return (double)retObjectMinPageHeight;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMinPageHeight_ToString = retObjectMinPageHeight == null ? "null" : retObjectMinPageHeight.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMinPageHeightNumber = (java.lang.Number)retObjectMinPageHeight;
+                return retObjectMinPageHeightNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectMinPageHeight != null ? retObjectMinPageHeight.getClass() : "null", retObjectMinPageHeight_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -442,7 +542,7 @@ public class FlowDocument extends FrameworkContentElement implements system.ISer
 
     public void setMinPageHeight(double MinPageHeight) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MinPageHeight", MinPageHeight);
         } catch (JCNativeException jcne) {
@@ -452,9 +552,20 @@ public class FlowDocument extends FrameworkContentElement implements system.ISer
 
     public double getMinPageWidth() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMinPageWidth = null;
         try {
-            return (double)classInstance.Get("MinPageWidth");
+            retObjectMinPageWidth = classInstance.Get("MinPageWidth");
+            return (double)retObjectMinPageWidth;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMinPageWidth_ToString = retObjectMinPageWidth == null ? "null" : retObjectMinPageWidth.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMinPageWidthNumber = (java.lang.Number)retObjectMinPageWidth;
+                return retObjectMinPageWidthNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectMinPageWidth != null ? retObjectMinPageWidth.getClass() : "null", retObjectMinPageWidth_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -462,7 +573,7 @@ public class FlowDocument extends FrameworkContentElement implements system.ISer
 
     public void setMinPageWidth(double MinPageWidth) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MinPageWidth", MinPageWidth);
         } catch (JCNativeException jcne) {
@@ -472,9 +583,20 @@ public class FlowDocument extends FrameworkContentElement implements system.ISer
 
     public double getPageHeight() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPageHeight = null;
         try {
-            return (double)classInstance.Get("PageHeight");
+            retObjectPageHeight = classInstance.Get("PageHeight");
+            return (double)retObjectPageHeight;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectPageHeight_ToString = retObjectPageHeight == null ? "null" : retObjectPageHeight.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectPageHeightNumber = (java.lang.Number)retObjectPageHeight;
+                return retObjectPageHeightNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectPageHeight != null ? retObjectPageHeight.getClass() : "null", retObjectPageHeight_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -482,7 +604,7 @@ public class FlowDocument extends FrameworkContentElement implements system.ISer
 
     public void setPageHeight(double PageHeight) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PageHeight", PageHeight);
         } catch (JCNativeException jcne) {
@@ -492,9 +614,20 @@ public class FlowDocument extends FrameworkContentElement implements system.ISer
 
     public double getPageWidth() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPageWidth = null;
         try {
-            return (double)classInstance.Get("PageWidth");
+            retObjectPageWidth = classInstance.Get("PageWidth");
+            return (double)retObjectPageWidth;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectPageWidth_ToString = retObjectPageWidth == null ? "null" : retObjectPageWidth.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectPageWidthNumber = (java.lang.Number)retObjectPageWidth;
+                return retObjectPageWidthNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectPageWidth != null ? retObjectPageWidth.getClass() : "null", retObjectPageWidth_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -502,7 +635,7 @@ public class FlowDocument extends FrameworkContentElement implements system.ISer
 
     public void setPageWidth(double PageWidth) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PageWidth", PageWidth);
         } catch (JCNativeException jcne) {
@@ -512,10 +645,14 @@ public class FlowDocument extends FrameworkContentElement implements system.ISer
 
     public BlockCollection getBlocks() throws Throwable, system.ArgumentException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.security.SecurityException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.io.IOException, system.UnauthorizedAccessException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBlocks = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Blocks");
+            retObjectBlocks = classInstance.Get("Blocks");
+            JCObject val = (JCObject)retObjectBlocks;
             return new BlockCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBlocks != null ? retObjectBlocks.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -523,10 +660,14 @@ public class FlowDocument extends FrameworkContentElement implements system.ISer
 
     public TextPointer getContentEnd() throws Throwable, system.ArgumentException, system.ObjectDisposedException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContentEnd = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ContentEnd");
+            retObjectContentEnd = classInstance.Get("ContentEnd");
+            JCObject val = (JCObject)retObjectContentEnd;
             return new TextPointer(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContentEnd != null ? retObjectContentEnd.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -534,10 +675,14 @@ public class FlowDocument extends FrameworkContentElement implements system.ISer
 
     public TextPointer getContentStart() throws Throwable, system.ArgumentException, system.ObjectDisposedException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContentStart = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ContentStart");
+            retObjectContentStart = classInstance.Get("ContentStart");
+            JCObject val = (JCObject)retObjectContentStart;
             return new TextPointer(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContentStart != null ? retObjectContentStart.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -545,10 +690,14 @@ public class FlowDocument extends FrameworkContentElement implements system.ISer
 
     public Typography getTypography() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTypography = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Typography");
+            retObjectTypography = classInstance.Get("Typography");
+            JCObject val = (JCObject)retObjectTypography;
             return new Typography(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTypography != null ? retObjectTypography.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -556,10 +705,14 @@ public class FlowDocument extends FrameworkContentElement implements system.ISer
 
     public FlowDirection getFlowDirection() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFlowDirection = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("FlowDirection");
+            retObjectFlowDirection = classInstance.Get("FlowDirection");
+            JCObject val = (JCObject)retObjectFlowDirection;
             return new FlowDirection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFlowDirection != null ? retObjectFlowDirection.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -567,7 +720,7 @@ public class FlowDocument extends FrameworkContentElement implements system.ISer
 
     public void setFlowDirection(FlowDirection FlowDirection) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FlowDirection", FlowDirection == null ? null : FlowDirection.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -577,10 +730,14 @@ public class FlowDocument extends FrameworkContentElement implements system.ISer
 
     public FontStretch getFontStretch() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFontStretch = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("FontStretch");
+            retObjectFontStretch = classInstance.Get("FontStretch");
+            JCObject val = (JCObject)retObjectFontStretch;
             return new FontStretch(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFontStretch != null ? retObjectFontStretch.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -588,7 +745,7 @@ public class FlowDocument extends FrameworkContentElement implements system.ISer
 
     public void setFontStretch(FontStretch FontStretch) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FontStretch", FontStretch == null ? null : FontStretch.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -598,10 +755,14 @@ public class FlowDocument extends FrameworkContentElement implements system.ISer
 
     public FontStyle getFontStyle() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFontStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("FontStyle");
+            retObjectFontStyle = classInstance.Get("FontStyle");
+            JCObject val = (JCObject)retObjectFontStyle;
             return new FontStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFontStyle != null ? retObjectFontStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -609,7 +770,7 @@ public class FlowDocument extends FrameworkContentElement implements system.ISer
 
     public void setFontStyle(FontStyle FontStyle) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FontStyle", FontStyle == null ? null : FontStyle.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -619,10 +780,14 @@ public class FlowDocument extends FrameworkContentElement implements system.ISer
 
     public FontWeight getFontWeight() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFontWeight = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("FontWeight");
+            retObjectFontWeight = classInstance.Get("FontWeight");
+            JCObject val = (JCObject)retObjectFontWeight;
             return new FontWeight(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFontWeight != null ? retObjectFontWeight.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -630,7 +795,7 @@ public class FlowDocument extends FrameworkContentElement implements system.ISer
 
     public void setFontWeight(FontWeight FontWeight) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FontWeight", FontWeight == null ? null : FontWeight.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -640,10 +805,14 @@ public class FlowDocument extends FrameworkContentElement implements system.ISer
 
     public LineStackingStrategy getLineStackingStrategy() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLineStackingStrategy = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("LineStackingStrategy");
+            retObjectLineStackingStrategy = classInstance.Get("LineStackingStrategy");
+            JCObject val = (JCObject)retObjectLineStackingStrategy;
             return new LineStackingStrategy(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLineStackingStrategy != null ? retObjectLineStackingStrategy.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -651,7 +820,7 @@ public class FlowDocument extends FrameworkContentElement implements system.ISer
 
     public void setLineStackingStrategy(LineStackingStrategy LineStackingStrategy) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("LineStackingStrategy", LineStackingStrategy == null ? null : LineStackingStrategy.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -661,10 +830,14 @@ public class FlowDocument extends FrameworkContentElement implements system.ISer
 
     public Brush getBackground() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBackground = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Background");
+            retObjectBackground = classInstance.Get("Background");
+            JCObject val = (JCObject)retObjectBackground;
             return new Brush(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBackground != null ? retObjectBackground.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -672,7 +845,7 @@ public class FlowDocument extends FrameworkContentElement implements system.ISer
 
     public void setBackground(Brush Background) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Background", Background == null ? null : Background.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -682,10 +855,14 @@ public class FlowDocument extends FrameworkContentElement implements system.ISer
 
     public Brush getColumnRuleBrush() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectColumnRuleBrush = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ColumnRuleBrush");
+            retObjectColumnRuleBrush = classInstance.Get("ColumnRuleBrush");
+            JCObject val = (JCObject)retObjectColumnRuleBrush;
             return new Brush(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectColumnRuleBrush != null ? retObjectColumnRuleBrush.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -693,7 +870,7 @@ public class FlowDocument extends FrameworkContentElement implements system.ISer
 
     public void setColumnRuleBrush(Brush ColumnRuleBrush) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ColumnRuleBrush", ColumnRuleBrush == null ? null : ColumnRuleBrush.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -703,10 +880,14 @@ public class FlowDocument extends FrameworkContentElement implements system.ISer
 
     public Brush getForeground() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectForeground = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Foreground");
+            retObjectForeground = classInstance.Get("Foreground");
+            JCObject val = (JCObject)retObjectForeground;
             return new Brush(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectForeground != null ? retObjectForeground.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -714,7 +895,7 @@ public class FlowDocument extends FrameworkContentElement implements system.ISer
 
     public void setForeground(Brush Foreground) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Foreground", Foreground == null ? null : Foreground.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -724,10 +905,14 @@ public class FlowDocument extends FrameworkContentElement implements system.ISer
 
     public FontFamily getFontFamily() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFontFamily = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("FontFamily");
+            retObjectFontFamily = classInstance.Get("FontFamily");
+            JCObject val = (JCObject)retObjectFontFamily;
             return new FontFamily(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFontFamily != null ? retObjectFontFamily.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -735,7 +920,7 @@ public class FlowDocument extends FrameworkContentElement implements system.ISer
 
     public void setFontFamily(FontFamily FontFamily) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FontFamily", FontFamily == null ? null : FontFamily.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -745,10 +930,14 @@ public class FlowDocument extends FrameworkContentElement implements system.ISer
 
     public TextEffectCollection getTextEffects() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTextEffects = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TextEffects");
+            retObjectTextEffects = classInstance.Get("TextEffects");
+            JCObject val = (JCObject)retObjectTextEffects;
             return new TextEffectCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTextEffects != null ? retObjectTextEffects.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -756,7 +945,7 @@ public class FlowDocument extends FrameworkContentElement implements system.ISer
 
     public void setTextEffects(TextEffectCollection TextEffects) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TextEffects", TextEffects == null ? null : TextEffects.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -766,10 +955,14 @@ public class FlowDocument extends FrameworkContentElement implements system.ISer
 
     public TextAlignment getTextAlignment() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTextAlignment = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TextAlignment");
+            retObjectTextAlignment = classInstance.Get("TextAlignment");
+            JCObject val = (JCObject)retObjectTextAlignment;
             return new TextAlignment(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTextAlignment != null ? retObjectTextAlignment.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -777,7 +970,7 @@ public class FlowDocument extends FrameworkContentElement implements system.ISer
 
     public void setTextAlignment(TextAlignment TextAlignment) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TextAlignment", TextAlignment == null ? null : TextAlignment.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -787,10 +980,14 @@ public class FlowDocument extends FrameworkContentElement implements system.ISer
 
     public Thickness getPagePadding() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPagePadding = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PagePadding");
+            retObjectPagePadding = classInstance.Get("PagePadding");
+            JCObject val = (JCObject)retObjectPagePadding;
             return new Thickness(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPagePadding != null ? retObjectPagePadding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -798,7 +995,7 @@ public class FlowDocument extends FrameworkContentElement implements system.ISer
 
     public void setPagePadding(Thickness PagePadding) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PagePadding", PagePadding == null ? null : PagePadding.getJCOInstance());
         } catch (JCNativeException jcne) {

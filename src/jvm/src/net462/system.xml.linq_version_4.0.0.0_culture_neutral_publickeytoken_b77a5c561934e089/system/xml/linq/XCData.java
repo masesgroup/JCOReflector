@@ -179,7 +179,7 @@ public class XCData extends XText  {
     
     public void WriteTo(XmlWriter writer) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteTo", writer == null ? null : writer.getJCOInstance());
         } catch (JCNativeException jcne) {

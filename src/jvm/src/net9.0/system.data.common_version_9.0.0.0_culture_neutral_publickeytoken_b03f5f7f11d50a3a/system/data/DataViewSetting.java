@@ -162,9 +162,13 @@ public class DataViewSetting extends NetObject  {
     
     public boolean getApplyDefaultSort() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectApplyDefaultSort = null;
         try {
-            return (boolean)classInstance.Get("ApplyDefaultSort");
+            retObjectApplyDefaultSort = classInstance.Get("ApplyDefaultSort");
+            return (boolean)retObjectApplyDefaultSort;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectApplyDefaultSort != null ? retObjectApplyDefaultSort.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,7 +176,7 @@ public class DataViewSetting extends NetObject  {
 
     public void setApplyDefaultSort(boolean ApplyDefaultSort) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ApplyDefaultSort", ApplyDefaultSort);
         } catch (JCNativeException jcne) {
@@ -182,10 +186,14 @@ public class DataViewSetting extends NetObject  {
 
     public DataTable getTable() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTable = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Table");
+            retObjectTable = classInstance.Get("Table");
+            JCObject val = (JCObject)retObjectTable;
             return new DataTable(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTable != null ? retObjectTable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,10 +201,14 @@ public class DataViewSetting extends NetObject  {
 
     public DataViewManager getDataViewManager() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDataViewManager = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DataViewManager");
+            retObjectDataViewManager = classInstance.Get("DataViewManager");
+            JCObject val = (JCObject)retObjectDataViewManager;
             return new DataViewManager(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDataViewManager != null ? retObjectDataViewManager.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -204,10 +216,14 @@ public class DataViewSetting extends NetObject  {
 
     public DataViewRowState getRowStateFilter() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRowStateFilter = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RowStateFilter");
+            retObjectRowStateFilter = classInstance.Get("RowStateFilter");
+            JCObject val = (JCObject)retObjectRowStateFilter;
             return new DataViewRowState(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRowStateFilter != null ? retObjectRowStateFilter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -215,7 +231,7 @@ public class DataViewSetting extends NetObject  {
 
     public void setRowStateFilter(DataViewRowState RowStateFilter) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RowStateFilter", RowStateFilter == null ? null : RowStateFilter.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -225,9 +241,13 @@ public class DataViewSetting extends NetObject  {
 
     public java.lang.String getRowFilter() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRowFilter = null;
         try {
-            return (java.lang.String)classInstance.Get("RowFilter");
+            retObjectRowFilter = classInstance.Get("RowFilter");
+            return (java.lang.String)retObjectRowFilter;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectRowFilter != null ? retObjectRowFilter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -235,7 +255,7 @@ public class DataViewSetting extends NetObject  {
 
     public void setRowFilter(java.lang.String RowFilter) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RowFilter", RowFilter);
         } catch (JCNativeException jcne) {
@@ -245,9 +265,13 @@ public class DataViewSetting extends NetObject  {
 
     public java.lang.String getSort() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSort = null;
         try {
-            return (java.lang.String)classInstance.Get("Sort");
+            retObjectSort = classInstance.Get("Sort");
+            return (java.lang.String)retObjectSort;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSort != null ? retObjectSort.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -255,7 +279,7 @@ public class DataViewSetting extends NetObject  {
 
     public void setSort(java.lang.String Sort) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Sort", Sort);
         } catch (JCNativeException jcne) {

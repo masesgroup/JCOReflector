@@ -167,9 +167,13 @@ public class CharacterHit extends ValueType  {
     
     public boolean Equals(CharacterHit obj) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEquals = null;
         try {
-            return (boolean)classInstance.Invoke("Equals", obj == null ? null : obj.getJCOInstance());
+            retObjectEquals = classInstance.Invoke("Equals", obj == null ? null : obj.getJCOInstance());
+            return (boolean)retObjectEquals;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectEquals != null ? retObjectEquals.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,9 +185,20 @@ public class CharacterHit extends ValueType  {
     
     public int getFirstCharacterIndex() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFirstCharacterIndex = null;
         try {
-            return (int)classInstance.Get("FirstCharacterIndex");
+            retObjectFirstCharacterIndex = classInstance.Get("FirstCharacterIndex");
+            return (int)retObjectFirstCharacterIndex;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectFirstCharacterIndex_ToString = retObjectFirstCharacterIndex == null ? "null" : retObjectFirstCharacterIndex.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectFirstCharacterIndexNumber = (java.lang.Number)retObjectFirstCharacterIndex;
+                return retObjectFirstCharacterIndexNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectFirstCharacterIndex != null ? retObjectFirstCharacterIndex.getClass() : "null", retObjectFirstCharacterIndex_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,9 +206,20 @@ public class CharacterHit extends ValueType  {
 
     public int getTrailingLength() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTrailingLength = null;
         try {
-            return (int)classInstance.Get("TrailingLength");
+            retObjectTrailingLength = classInstance.Get("TrailingLength");
+            return (int)retObjectTrailingLength;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectTrailingLength_ToString = retObjectTrailingLength == null ? "null" : retObjectTrailingLength.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectTrailingLengthNumber = (java.lang.Number)retObjectTrailingLength;
+                return retObjectTrailingLengthNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectTrailingLength != null ? retObjectTrailingLength.getClass() : "null", retObjectTrailingLength_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

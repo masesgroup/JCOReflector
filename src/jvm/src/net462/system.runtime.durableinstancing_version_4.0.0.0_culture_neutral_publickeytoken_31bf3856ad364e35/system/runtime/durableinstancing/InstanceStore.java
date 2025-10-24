@@ -162,10 +162,14 @@ public class InstanceStore extends NetObject  {
     
     public IAsyncResult BeginExecute(InstanceHandle handle, InstancePersistenceCommand command, TimeSpan timeout, AsyncCallback callback, NetObject state) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.OutOfMemoryException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.MulticastNotSupportedException, system.configuration.ConfigurationErrorsException, system.collections.generic.KeyNotFoundException, system.TypeLoadException, system.PlatformNotSupportedException, system.transactions.TransactionException, system.NotSupportedException, system.transactions.TransactionManagerCommunicationException, system.OverflowException, system.OperationCanceledException, system.TimeoutException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginExecute = null;
         try {
-            JCObject objBeginExecute = (JCObject)classInstance.Invoke("BeginExecute", handle == null ? null : handle.getJCOInstance(), command == null ? null : command.getJCOInstance(), timeout == null ? null : timeout.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            retObjectBeginExecute = classInstance.Invoke("BeginExecute", handle == null ? null : handle.getJCOInstance(), command == null ? null : command.getJCOInstance(), timeout == null ? null : timeout.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            JCObject objBeginExecute = (JCObject)retObjectBeginExecute;
             return new IAsyncResultImplementation(objBeginExecute);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginExecute != null ? retObjectBeginExecute.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -173,10 +177,14 @@ public class InstanceStore extends NetObject  {
 
     public IAsyncResult BeginWaitForEvents(InstanceHandle handle, TimeSpan timeout, AsyncCallback callback, NetObject state) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.OutOfMemoryException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.MulticastNotSupportedException, system.configuration.ConfigurationErrorsException, system.collections.generic.KeyNotFoundException, system.TimeoutException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginWaitForEvents = null;
         try {
-            JCObject objBeginWaitForEvents = (JCObject)classInstance.Invoke("BeginWaitForEvents", handle == null ? null : handle.getJCOInstance(), timeout == null ? null : timeout.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            retObjectBeginWaitForEvents = classInstance.Invoke("BeginWaitForEvents", handle == null ? null : handle.getJCOInstance(), timeout == null ? null : timeout.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            JCObject objBeginWaitForEvents = (JCObject)retObjectBeginWaitForEvents;
             return new IAsyncResultImplementation(objBeginWaitForEvents);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginWaitForEvents != null ? retObjectBeginWaitForEvents.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -184,10 +192,14 @@ public class InstanceStore extends NetObject  {
 
     public InstanceHandle CreateInstanceHandle() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateInstanceHandle = null;
         try {
-            JCObject objCreateInstanceHandle = (JCObject)classInstance.Invoke("CreateInstanceHandle");
+            retObjectCreateInstanceHandle = classInstance.Invoke("CreateInstanceHandle");
+            JCObject objCreateInstanceHandle = (JCObject)retObjectCreateInstanceHandle;
             return new InstanceHandle(objCreateInstanceHandle);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateInstanceHandle != null ? retObjectCreateInstanceHandle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,10 +207,14 @@ public class InstanceStore extends NetObject  {
 
     public InstanceHandle CreateInstanceHandle(Guid instanceId) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.MulticastNotSupportedException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateInstanceHandle = null;
         try {
-            JCObject objCreateInstanceHandle = (JCObject)classInstance.Invoke("CreateInstanceHandle", instanceId == null ? null : instanceId.getJCOInstance());
+            retObjectCreateInstanceHandle = classInstance.Invoke("CreateInstanceHandle", instanceId == null ? null : instanceId.getJCOInstance());
+            JCObject objCreateInstanceHandle = (JCObject)retObjectCreateInstanceHandle;
             return new InstanceHandle(objCreateInstanceHandle);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateInstanceHandle != null ? retObjectCreateInstanceHandle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -206,10 +222,14 @@ public class InstanceStore extends NetObject  {
 
     public InstanceHandle CreateInstanceHandle(InstanceOwner owner) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateInstanceHandle = null;
         try {
-            JCObject objCreateInstanceHandle = (JCObject)classInstance.Invoke("CreateInstanceHandle", owner == null ? null : owner.getJCOInstance());
+            retObjectCreateInstanceHandle = classInstance.Invoke("CreateInstanceHandle", owner == null ? null : owner.getJCOInstance());
+            JCObject objCreateInstanceHandle = (JCObject)retObjectCreateInstanceHandle;
             return new InstanceHandle(objCreateInstanceHandle);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateInstanceHandle != null ? retObjectCreateInstanceHandle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -217,10 +237,14 @@ public class InstanceStore extends NetObject  {
 
     public InstanceHandle CreateInstanceHandle(InstanceOwner owner, Guid instanceId) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.OutOfMemoryException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.MulticastNotSupportedException, system.configuration.ConfigurationErrorsException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateInstanceHandle = null;
         try {
-            JCObject objCreateInstanceHandle = (JCObject)classInstance.Invoke("CreateInstanceHandle", owner == null ? null : owner.getJCOInstance(), instanceId == null ? null : instanceId.getJCOInstance());
+            retObjectCreateInstanceHandle = classInstance.Invoke("CreateInstanceHandle", owner == null ? null : owner.getJCOInstance(), instanceId == null ? null : instanceId.getJCOInstance());
+            JCObject objCreateInstanceHandle = (JCObject)retObjectCreateInstanceHandle;
             return new InstanceHandle(objCreateInstanceHandle);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateInstanceHandle != null ? retObjectCreateInstanceHandle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -228,10 +252,14 @@ public class InstanceStore extends NetObject  {
 
     public InstanceView EndExecute(IAsyncResult result) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEndExecute = null;
         try {
-            JCObject objEndExecute = (JCObject)classInstance.Invoke("EndExecute", result == null ? null : result.getJCOInstance());
+            retObjectEndExecute = classInstance.Invoke("EndExecute", result == null ? null : result.getJCOInstance());
+            JCObject objEndExecute = (JCObject)retObjectEndExecute;
             return new InstanceView(objEndExecute);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEndExecute != null ? retObjectEndExecute.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -239,10 +267,14 @@ public class InstanceStore extends NetObject  {
 
     public InstanceView Execute(InstanceHandle handle, InstancePersistenceCommand command, TimeSpan timeout) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.OutOfMemoryException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.MulticastNotSupportedException, system.configuration.ConfigurationErrorsException, system.collections.generic.KeyNotFoundException, system.TypeLoadException, system.PlatformNotSupportedException, system.transactions.TransactionException, system.NotSupportedException, system.transactions.TransactionManagerCommunicationException, system.OverflowException, system.OperationCanceledException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.TimeoutException, system.threading.WaitHandleCannotBeOpenedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExecute = null;
         try {
-            JCObject objExecute = (JCObject)classInstance.Invoke("Execute", handle == null ? null : handle.getJCOInstance(), command == null ? null : command.getJCOInstance(), timeout == null ? null : timeout.getJCOInstance());
+            retObjectExecute = classInstance.Invoke("Execute", handle == null ? null : handle.getJCOInstance(), command == null ? null : command.getJCOInstance(), timeout == null ? null : timeout.getJCOInstance());
+            JCObject objExecute = (JCObject)retObjectExecute;
             return new InstanceView(objExecute);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExecute != null ? retObjectExecute.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -254,10 +286,14 @@ public class InstanceStore extends NetObject  {
     
     public InstanceOwner getDefaultInstanceOwner() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDefaultInstanceOwner = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DefaultInstanceOwner");
+            retObjectDefaultInstanceOwner = classInstance.Get("DefaultInstanceOwner");
+            JCObject val = (JCObject)retObjectDefaultInstanceOwner;
             return new InstanceOwner(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefaultInstanceOwner != null ? retObjectDefaultInstanceOwner.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -265,7 +301,7 @@ public class InstanceStore extends NetObject  {
 
     public void setDefaultInstanceOwner(InstanceOwner DefaultInstanceOwner) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DefaultInstanceOwner", DefaultInstanceOwner == null ? null : DefaultInstanceOwner.getJCOInstance());
         } catch (JCNativeException jcne) {

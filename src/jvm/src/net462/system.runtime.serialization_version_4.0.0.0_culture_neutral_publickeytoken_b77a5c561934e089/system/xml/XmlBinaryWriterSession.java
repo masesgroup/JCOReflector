@@ -162,9 +162,13 @@ public class XmlBinaryWriterSession extends NetObject  {
     
     public boolean TryAdd(XmlDictionaryString value, JCORefOut<java.util.concurrent.atomic.AtomicInteger> key) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryAdd = null;
         try {
-            return (boolean)classInstance.Invoke("TryAdd", value == null ? null : value.getJCOInstance(), key.getJCRefOut());
+            retObjectTryAdd = classInstance.Invoke("TryAdd", value == null ? null : value.getJCOInstance(), key.getJCRefOut());
+            return (boolean)retObjectTryAdd;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryAdd != null ? retObjectTryAdd.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,7 +176,7 @@ public class XmlBinaryWriterSession extends NetObject  {
 
     public void Reset() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Reset");
         } catch (JCNativeException jcne) {

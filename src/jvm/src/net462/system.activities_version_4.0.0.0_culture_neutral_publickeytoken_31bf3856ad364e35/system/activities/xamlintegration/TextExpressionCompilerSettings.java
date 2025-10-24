@@ -166,9 +166,13 @@ public class TextExpressionCompilerSettings extends NetObject  {
     
     public boolean getAlwaysGenerateSource() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAlwaysGenerateSource = null;
         try {
-            return (boolean)classInstance.Get("AlwaysGenerateSource");
+            retObjectAlwaysGenerateSource = classInstance.Get("AlwaysGenerateSource");
+            return (boolean)retObjectAlwaysGenerateSource;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAlwaysGenerateSource != null ? retObjectAlwaysGenerateSource.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,7 +180,7 @@ public class TextExpressionCompilerSettings extends NetObject  {
 
     public void setAlwaysGenerateSource(boolean AlwaysGenerateSource) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AlwaysGenerateSource", AlwaysGenerateSource);
         } catch (JCNativeException jcne) {
@@ -186,9 +190,13 @@ public class TextExpressionCompilerSettings extends NetObject  {
 
     public boolean getForImplementation() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectForImplementation = null;
         try {
-            return (boolean)classInstance.Get("ForImplementation");
+            retObjectForImplementation = classInstance.Get("ForImplementation");
+            return (boolean)retObjectForImplementation;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectForImplementation != null ? retObjectForImplementation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,7 +204,7 @@ public class TextExpressionCompilerSettings extends NetObject  {
 
     public void setForImplementation(boolean ForImplementation) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ForImplementation", ForImplementation);
         } catch (JCNativeException jcne) {
@@ -206,9 +214,13 @@ public class TextExpressionCompilerSettings extends NetObject  {
 
     public boolean getGenerateAsPartialClass() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGenerateAsPartialClass = null;
         try {
-            return (boolean)classInstance.Get("GenerateAsPartialClass");
+            retObjectGenerateAsPartialClass = classInstance.Get("GenerateAsPartialClass");
+            return (boolean)retObjectGenerateAsPartialClass;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectGenerateAsPartialClass != null ? retObjectGenerateAsPartialClass.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -216,7 +228,7 @@ public class TextExpressionCompilerSettings extends NetObject  {
 
     public void setGenerateAsPartialClass(boolean GenerateAsPartialClass) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("GenerateAsPartialClass", GenerateAsPartialClass);
         } catch (JCNativeException jcne) {
@@ -226,10 +238,14 @@ public class TextExpressionCompilerSettings extends NetObject  {
 
     public Activity getActivity() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectActivity = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Activity");
+            retObjectActivity = classInstance.Get("Activity");
+            JCObject val = (JCObject)retObjectActivity;
             return new Activity(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectActivity != null ? retObjectActivity.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -237,7 +253,7 @@ public class TextExpressionCompilerSettings extends NetObject  {
 
     public void setActivity(Activity Activity) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Activity", Activity == null ? null : Activity.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -247,9 +263,13 @@ public class TextExpressionCompilerSettings extends NetObject  {
 
     public java.lang.String getActivityName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectActivityName = null;
         try {
-            return (java.lang.String)classInstance.Get("ActivityName");
+            retObjectActivityName = classInstance.Get("ActivityName");
+            return (java.lang.String)retObjectActivityName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectActivityName != null ? retObjectActivityName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -257,7 +277,7 @@ public class TextExpressionCompilerSettings extends NetObject  {
 
     public void setActivityName(java.lang.String ActivityName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ActivityName", ActivityName);
         } catch (JCNativeException jcne) {
@@ -267,9 +287,13 @@ public class TextExpressionCompilerSettings extends NetObject  {
 
     public java.lang.String getActivityNamespace() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectActivityNamespace = null;
         try {
-            return (java.lang.String)classInstance.Get("ActivityNamespace");
+            retObjectActivityNamespace = classInstance.Get("ActivityNamespace");
+            return (java.lang.String)retObjectActivityNamespace;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectActivityNamespace != null ? retObjectActivityNamespace.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -277,7 +301,7 @@ public class TextExpressionCompilerSettings extends NetObject  {
 
     public void setActivityNamespace(java.lang.String ActivityNamespace) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ActivityNamespace", ActivityNamespace);
         } catch (JCNativeException jcne) {
@@ -287,9 +311,13 @@ public class TextExpressionCompilerSettings extends NetObject  {
 
     public java.lang.String getLanguage() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLanguage = null;
         try {
-            return (java.lang.String)classInstance.Get("Language");
+            retObjectLanguage = classInstance.Get("Language");
+            return (java.lang.String)retObjectLanguage;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectLanguage != null ? retObjectLanguage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -297,7 +325,7 @@ public class TextExpressionCompilerSettings extends NetObject  {
 
     public void setLanguage(java.lang.String Language) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Language", Language);
         } catch (JCNativeException jcne) {
@@ -307,9 +335,13 @@ public class TextExpressionCompilerSettings extends NetObject  {
 
     public java.lang.String getRootNamespace() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRootNamespace = null;
         try {
-            return (java.lang.String)classInstance.Get("RootNamespace");
+            retObjectRootNamespace = classInstance.Get("RootNamespace");
+            return (java.lang.String)retObjectRootNamespace;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectRootNamespace != null ? retObjectRootNamespace.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -317,7 +349,7 @@ public class TextExpressionCompilerSettings extends NetObject  {
 
     public void setRootNamespace(java.lang.String RootNamespace) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RootNamespace", RootNamespace);
         } catch (JCNativeException jcne) {

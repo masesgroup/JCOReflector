@@ -177,10 +177,14 @@ public class UnsignedPublishLicense extends NetObject  {
     
     public PublishLicense Sign(SecureEnvironment secureEnvironment, JCORefOut<UseLicense> authorUseLicense) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.security.rightsmanagement.RightsManagementException, system.FormatException, system.UriFormatException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSign = null;
         try {
-            JCObject objSign = (JCObject)classInstance.Invoke("Sign", secureEnvironment == null ? null : secureEnvironment.getJCOInstance(), authorUseLicense.getJCRefOut());
+            retObjectSign = classInstance.Invoke("Sign", secureEnvironment == null ? null : secureEnvironment.getJCOInstance(), authorUseLicense.getJCRefOut());
+            JCObject objSign = (JCObject)retObjectSign;
             return new PublishLicense(objSign);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSign != null ? retObjectSign.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,10 +196,14 @@ public class UnsignedPublishLicense extends NetObject  {
     
     public Guid getContentId() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContentId = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ContentId");
+            retObjectContentId = classInstance.Get("ContentId");
+            JCObject val = (JCObject)retObjectContentId;
             return new Guid(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContentId != null ? retObjectContentId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,7 +211,7 @@ public class UnsignedPublishLicense extends NetObject  {
 
     public void setContentId(Guid ContentId) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ContentId", ContentId == null ? null : ContentId.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -213,10 +221,14 @@ public class UnsignedPublishLicense extends NetObject  {
 
     public ContentUser getOwner() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOwner = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Owner");
+            retObjectOwner = classInstance.Get("Owner");
+            JCObject val = (JCObject)retObjectOwner;
             return new ContentUser(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOwner != null ? retObjectOwner.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -224,7 +236,7 @@ public class UnsignedPublishLicense extends NetObject  {
 
     public void setOwner(ContentUser Owner) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Owner", Owner == null ? null : Owner.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -234,9 +246,13 @@ public class UnsignedPublishLicense extends NetObject  {
 
     public java.lang.String getReferralInfoName() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReferralInfoName = null;
         try {
-            return (java.lang.String)classInstance.Get("ReferralInfoName");
+            retObjectReferralInfoName = classInstance.Get("ReferralInfoName");
+            return (java.lang.String)retObjectReferralInfoName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectReferralInfoName != null ? retObjectReferralInfoName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -244,7 +260,7 @@ public class UnsignedPublishLicense extends NetObject  {
 
     public void setReferralInfoName(java.lang.String ReferralInfoName) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ReferralInfoName", ReferralInfoName);
         } catch (JCNativeException jcne) {
@@ -254,10 +270,14 @@ public class UnsignedPublishLicense extends NetObject  {
 
     public Uri getReferralInfoUri() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReferralInfoUri = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ReferralInfoUri");
+            retObjectReferralInfoUri = classInstance.Get("ReferralInfoUri");
+            JCObject val = (JCObject)retObjectReferralInfoUri;
             return new Uri(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReferralInfoUri != null ? retObjectReferralInfoUri.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -265,7 +285,7 @@ public class UnsignedPublishLicense extends NetObject  {
 
     public void setReferralInfoUri(Uri ReferralInfoUri) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ReferralInfoUri", ReferralInfoUri == null ? null : ReferralInfoUri.getJCOInstance());
         } catch (JCNativeException jcne) {

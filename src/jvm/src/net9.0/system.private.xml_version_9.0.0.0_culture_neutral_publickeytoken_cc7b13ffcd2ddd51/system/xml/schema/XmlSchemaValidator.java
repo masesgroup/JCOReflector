@@ -181,10 +181,14 @@ public class XmlSchemaValidator extends NetObject  {
     
     public NetObject ValidateAttribute(java.lang.String localName, java.lang.String namespaceUri, java.lang.String attributeValue, XmlSchemaInfo schemaInfo) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.globalization.CultureNotFoundException, system.xml.schema.XmlSchemaException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValidateAttribute = null;
         try {
-            JCObject objValidateAttribute = (JCObject)classInstance.Invoke("ValidateAttribute", localName, namespaceUri, attributeValue, schemaInfo == null ? null : schemaInfo.getJCOInstance());
+            retObjectValidateAttribute = classInstance.Invoke("ValidateAttribute", localName, namespaceUri, attributeValue, schemaInfo == null ? null : schemaInfo.getJCOInstance());
+            JCObject objValidateAttribute = (JCObject)retObjectValidateAttribute;
             return new NetObject(objValidateAttribute);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectValidateAttribute != null ? retObjectValidateAttribute.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,10 +196,14 @@ public class XmlSchemaValidator extends NetObject  {
 
     public NetObject ValidateAttribute(java.lang.String localName, java.lang.String namespaceUri, XmlValueGetter attributeValue, XmlSchemaInfo schemaInfo) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.globalization.CultureNotFoundException, system.xml.schema.XmlSchemaException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValidateAttribute = null;
         try {
-            JCObject objValidateAttribute = (JCObject)classInstance.Invoke("ValidateAttribute", localName, namespaceUri, attributeValue, schemaInfo == null ? null : schemaInfo.getJCOInstance());
+            retObjectValidateAttribute = classInstance.Invoke("ValidateAttribute", localName, namespaceUri, attributeValue, schemaInfo == null ? null : schemaInfo.getJCOInstance());
+            JCObject objValidateAttribute = (JCObject)retObjectValidateAttribute;
             return new NetObject(objValidateAttribute);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectValidateAttribute != null ? retObjectValidateAttribute.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,10 +211,14 @@ public class XmlSchemaValidator extends NetObject  {
 
     public NetObject ValidateEndElement(XmlSchemaInfo schemaInfo, NetObject typedValue) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValidateEndElement = null;
         try {
-            JCObject objValidateEndElement = (JCObject)classInstance.Invoke("ValidateEndElement", schemaInfo == null ? null : schemaInfo.getJCOInstance(), typedValue == null ? null : typedValue.getJCOInstance());
+            retObjectValidateEndElement = classInstance.Invoke("ValidateEndElement", schemaInfo == null ? null : schemaInfo.getJCOInstance(), typedValue == null ? null : typedValue.getJCOInstance());
+            JCObject objValidateEndElement = (JCObject)retObjectValidateEndElement;
             return new NetObject(objValidateEndElement);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectValidateEndElement != null ? retObjectValidateEndElement.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -214,10 +226,14 @@ public class XmlSchemaValidator extends NetObject  {
 
     public NetObject ValidateEndElement(XmlSchemaInfo schemaInfo) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.OutOfMemoryException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.RankException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValidateEndElement = null;
         try {
-            JCObject objValidateEndElement = (JCObject)classInstance.Invoke("ValidateEndElement", schemaInfo == null ? null : schemaInfo.getJCOInstance());
+            retObjectValidateEndElement = classInstance.Invoke("ValidateEndElement", schemaInfo == null ? null : schemaInfo.getJCOInstance());
+            JCObject objValidateEndElement = (JCObject)retObjectValidateEndElement;
             return new NetObject(objValidateEndElement);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectValidateEndElement != null ? retObjectValidateEndElement.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -225,16 +241,20 @@ public class XmlSchemaValidator extends NetObject  {
 
     public XmlSchemaAttribute[] GetExpectedAttributes() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetExpectedAttributes = null;
         try {
             ArrayList<XmlSchemaAttribute> resultingArrayList = new ArrayList<XmlSchemaAttribute>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetExpectedAttributes");
+            retObjectGetExpectedAttributes = classInstance.Invoke("GetExpectedAttributes");
+            JCObject resultingObjects = (JCObject)retObjectGetExpectedAttributes;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new XmlSchemaAttribute(resultingObject));
             }
             XmlSchemaAttribute[] resultingArray = new XmlSchemaAttribute[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetExpectedAttributes != null ? retObjectGetExpectedAttributes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -242,16 +262,20 @@ public class XmlSchemaValidator extends NetObject  {
 
     public XmlSchemaParticle[] GetExpectedParticles() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetExpectedParticles = null;
         try {
             ArrayList<XmlSchemaParticle> resultingArrayList = new ArrayList<XmlSchemaParticle>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetExpectedParticles");
+            retObjectGetExpectedParticles = classInstance.Invoke("GetExpectedParticles");
+            JCObject resultingObjects = (JCObject)retObjectGetExpectedParticles;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new XmlSchemaParticle(resultingObject));
             }
             XmlSchemaParticle[] resultingArray = new XmlSchemaParticle[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetExpectedParticles != null ? retObjectGetExpectedParticles.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -259,7 +283,7 @@ public class XmlSchemaValidator extends NetObject  {
 
     public void AddSchema(XmlSchema schema) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.InvalidCastException, system.NullReferenceException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.UriFormatException, system.FormatException, system.xml.schema.XmlSchemaException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddSchema", schema == null ? null : schema.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -269,7 +293,7 @@ public class XmlSchemaValidator extends NetObject  {
 
     public void EndValidation() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EndValidation");
         } catch (JCNativeException jcne) {
@@ -279,7 +303,7 @@ public class XmlSchemaValidator extends NetObject  {
 
     public void GetUnspecifiedDefaultAttributes(NetArrayList defaultAttributes) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetUnspecifiedDefaultAttributes", defaultAttributes == null ? null : defaultAttributes.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -289,7 +313,7 @@ public class XmlSchemaValidator extends NetObject  {
 
     public void Initialize() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Initialize");
         } catch (JCNativeException jcne) {
@@ -299,7 +323,7 @@ public class XmlSchemaValidator extends NetObject  {
 
     public void Initialize(XmlSchemaObject partialValidationType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Initialize", partialValidationType == null ? null : partialValidationType.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -309,7 +333,7 @@ public class XmlSchemaValidator extends NetObject  {
 
     public void SkipToEndElement(XmlSchemaInfo schemaInfo) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SkipToEndElement", schemaInfo == null ? null : schemaInfo.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -319,7 +343,7 @@ public class XmlSchemaValidator extends NetObject  {
 
     public void ValidateElement(java.lang.String localName, java.lang.String namespaceUri, XmlSchemaInfo schemaInfo, java.lang.String xsiType, java.lang.String xsiNil, java.lang.String xsiSchemaLocation, java.lang.String xsiNoNamespaceSchemaLocation) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.xml.XmlException, system.globalization.CultureNotFoundException, system.UriFormatException, system.diagnostics.UnreachableException, system.xml.schema.XmlSchemaException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ValidateElement", localName, namespaceUri, schemaInfo == null ? null : schemaInfo.getJCOInstance(), xsiType, xsiNil, xsiSchemaLocation, xsiNoNamespaceSchemaLocation);
         } catch (JCNativeException jcne) {
@@ -329,7 +353,7 @@ public class XmlSchemaValidator extends NetObject  {
 
     public void ValidateElement(java.lang.String localName, java.lang.String namespaceUri, XmlSchemaInfo schemaInfo) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.FormatException, system.ArrayTypeMismatchException, system.xml.XmlException, system.globalization.CultureNotFoundException, system.UriFormatException, system.xml.schema.XmlSchemaException, system.RankException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ValidateElement", localName, namespaceUri, schemaInfo == null ? null : schemaInfo.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -339,7 +363,7 @@ public class XmlSchemaValidator extends NetObject  {
 
     public void ValidateEndOfAttributes(XmlSchemaInfo schemaInfo) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ValidateEndOfAttributes", schemaInfo == null ? null : schemaInfo.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -349,7 +373,7 @@ public class XmlSchemaValidator extends NetObject  {
 
     public void ValidateText(java.lang.String elementValue) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.diagnostics.UnreachableException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ValidateText", elementValue);
         } catch (JCNativeException jcne) {
@@ -359,7 +383,7 @@ public class XmlSchemaValidator extends NetObject  {
 
     public void ValidateText(XmlValueGetter elementValue) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.diagnostics.UnreachableException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ValidateText", elementValue);
         } catch (JCNativeException jcne) {
@@ -369,7 +393,7 @@ public class XmlSchemaValidator extends NetObject  {
 
     public void ValidateWhitespace(java.lang.String elementValue) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ValidateWhitespace", elementValue);
         } catch (JCNativeException jcne) {
@@ -379,7 +403,7 @@ public class XmlSchemaValidator extends NetObject  {
 
     public void ValidateWhitespace(XmlValueGetter elementValue) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ValidateWhitespace", elementValue);
         } catch (JCNativeException jcne) {
@@ -393,10 +417,14 @@ public class XmlSchemaValidator extends NetObject  {
     
     public NetObject getValidationEventSender() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValidationEventSender = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ValidationEventSender");
+            retObjectValidationEventSender = classInstance.Get("ValidationEventSender");
+            JCObject val = (JCObject)retObjectValidationEventSender;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectValidationEventSender != null ? retObjectValidationEventSender.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -404,7 +432,7 @@ public class XmlSchemaValidator extends NetObject  {
 
     public void setValidationEventSender(NetObject ValidationEventSender) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ValidationEventSender", ValidationEventSender == null ? null : ValidationEventSender.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -414,10 +442,14 @@ public class XmlSchemaValidator extends NetObject  {
 
     public Uri getSourceUri() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSourceUri = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SourceUri");
+            retObjectSourceUri = classInstance.Get("SourceUri");
+            JCObject val = (JCObject)retObjectSourceUri;
             return new Uri(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSourceUri != null ? retObjectSourceUri.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -425,7 +457,7 @@ public class XmlSchemaValidator extends NetObject  {
 
     public void setSourceUri(Uri SourceUri) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SourceUri", SourceUri == null ? null : SourceUri.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -435,10 +467,14 @@ public class XmlSchemaValidator extends NetObject  {
 
     public IXmlLineInfo getLineInfoProvider() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLineInfoProvider = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("LineInfoProvider");
+            retObjectLineInfoProvider = classInstance.Get("LineInfoProvider");
+            JCObject val = (JCObject)retObjectLineInfoProvider;
             return new IXmlLineInfoImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLineInfoProvider != null ? retObjectLineInfoProvider.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -446,7 +482,7 @@ public class XmlSchemaValidator extends NetObject  {
 
     public void setLineInfoProvider(IXmlLineInfo LineInfoProvider) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("LineInfoProvider", LineInfoProvider == null ? null : LineInfoProvider.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -456,7 +492,7 @@ public class XmlSchemaValidator extends NetObject  {
 
     public void setXmlResolver(XmlResolver XmlResolver) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("XmlResolver", XmlResolver == null ? null : XmlResolver.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -471,7 +507,7 @@ public class XmlSchemaValidator extends NetObject  {
 
     public void addValidationEventHandler(ValidationEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ValidationEventHandler", handler);
         } catch (JCNativeException jcne) {
@@ -481,7 +517,7 @@ public class XmlSchemaValidator extends NetObject  {
 
     public void removeValidationEventHandler(ValidationEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ValidationEventHandler", handler);
         } catch (JCNativeException jcne) {

@@ -155,9 +155,13 @@ public class ResourcePool extends NetObject  {
     
     public boolean PutResource(NetObject resource) throws Throwable, system.NotImplementedException, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.runtime.interopservices.COMException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPutResource = null;
         try {
-            return (boolean)classInstance.Invoke("PutResource", resource == null ? null : resource.getJCOInstance());
+            retObjectPutResource = classInstance.Invoke("PutResource", resource == null ? null : resource.getJCOInstance());
+            return (boolean)retObjectPutResource;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectPutResource != null ? retObjectPutResource.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -165,10 +169,14 @@ public class ResourcePool extends NetObject  {
 
     public NetObject GetResource() throws Throwable, system.NotImplementedException, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.runtime.interopservices.COMException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetResource = null;
         try {
-            JCObject objGetResource = (JCObject)classInstance.Invoke("GetResource");
+            retObjectGetResource = classInstance.Invoke("GetResource");
+            JCObject objGetResource = (JCObject)retObjectGetResource;
             return new NetObject(objGetResource);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetResource != null ? retObjectGetResource.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -202,9 +202,20 @@ public class ListChangedEventArgs extends EventArgs  {
     
     public int getNewIndex() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNewIndex = null;
         try {
-            return (int)classInstance.Get("NewIndex");
+            retObjectNewIndex = classInstance.Get("NewIndex");
+            return (int)retObjectNewIndex;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectNewIndex_ToString = retObjectNewIndex == null ? "null" : retObjectNewIndex.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectNewIndexNumber = (java.lang.Number)retObjectNewIndex;
+                return retObjectNewIndexNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectNewIndex != null ? retObjectNewIndex.getClass() : "null", retObjectNewIndex_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -212,9 +223,20 @@ public class ListChangedEventArgs extends EventArgs  {
 
     public int getOldIndex() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOldIndex = null;
         try {
-            return (int)classInstance.Get("OldIndex");
+            retObjectOldIndex = classInstance.Get("OldIndex");
+            return (int)retObjectOldIndex;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectOldIndex_ToString = retObjectOldIndex == null ? "null" : retObjectOldIndex.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectOldIndexNumber = (java.lang.Number)retObjectOldIndex;
+                return retObjectOldIndexNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectOldIndex != null ? retObjectOldIndex.getClass() : "null", retObjectOldIndex_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -222,10 +244,14 @@ public class ListChangedEventArgs extends EventArgs  {
 
     public ListChangedType getListChangedType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectListChangedType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ListChangedType");
+            retObjectListChangedType = classInstance.Get("ListChangedType");
+            JCObject val = (JCObject)retObjectListChangedType;
             return new ListChangedType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectListChangedType != null ? retObjectListChangedType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -233,10 +259,14 @@ public class ListChangedEventArgs extends EventArgs  {
 
     public PropertyDescriptor getPropertyDescriptor() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPropertyDescriptor = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PropertyDescriptor");
+            retObjectPropertyDescriptor = classInstance.Get("PropertyDescriptor");
+            JCObject val = (JCObject)retObjectPropertyDescriptor;
             return new PropertyDescriptor(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPropertyDescriptor != null ? retObjectPropertyDescriptor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

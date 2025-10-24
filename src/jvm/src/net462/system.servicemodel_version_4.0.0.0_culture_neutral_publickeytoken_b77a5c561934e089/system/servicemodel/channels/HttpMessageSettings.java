@@ -162,9 +162,13 @@ public class HttpMessageSettings extends NetObject  {
     
     public boolean Equals(HttpMessageSettings other) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEquals = null;
         try {
-            return (boolean)classInstance.Invoke("Equals", other == null ? null : other.getJCOInstance());
+            retObjectEquals = classInstance.Invoke("Equals", other == null ? null : other.getJCOInstance());
+            return (boolean)retObjectEquals;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectEquals != null ? retObjectEquals.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,9 +180,13 @@ public class HttpMessageSettings extends NetObject  {
     
     public boolean getHttpMessagesSupported() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHttpMessagesSupported = null;
         try {
-            return (boolean)classInstance.Get("HttpMessagesSupported");
+            retObjectHttpMessagesSupported = classInstance.Get("HttpMessagesSupported");
+            return (boolean)retObjectHttpMessagesSupported;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectHttpMessagesSupported != null ? retObjectHttpMessagesSupported.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,7 +194,7 @@ public class HttpMessageSettings extends NetObject  {
 
     public void setHttpMessagesSupported(boolean HttpMessagesSupported) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("HttpMessagesSupported", HttpMessagesSupported);
         } catch (JCNativeException jcne) {

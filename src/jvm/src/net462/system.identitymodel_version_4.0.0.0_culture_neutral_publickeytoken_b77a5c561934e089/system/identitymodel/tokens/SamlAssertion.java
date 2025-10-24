@@ -172,7 +172,7 @@ public class SamlAssertion extends NetObject  {
     
     public void MakeReadOnly() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("MakeReadOnly");
         } catch (JCNativeException jcne) {
@@ -182,7 +182,7 @@ public class SamlAssertion extends NetObject  {
 
     public void ReadXml(XmlDictionaryReader reader, SamlSerializer samlSerializer, SecurityTokenSerializer keyInfoSerializer, SecurityTokenResolver outOfBandTokenResolver) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException, system.xml.XmlException, system.UnauthorizedAccessException, system.security.cryptography.CryptographicUnexpectedOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ReadXml", reader == null ? null : reader.getJCOInstance(), samlSerializer == null ? null : samlSerializer.getJCOInstance(), keyInfoSerializer == null ? null : keyInfoSerializer.getJCOInstance(), outOfBandTokenResolver == null ? null : outOfBandTokenResolver.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -192,7 +192,7 @@ public class SamlAssertion extends NetObject  {
 
     public void WriteSourceData(XmlWriter writer) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteSourceData", writer == null ? null : writer.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -202,7 +202,7 @@ public class SamlAssertion extends NetObject  {
 
     public void WriteXml(XmlDictionaryWriter writer, SamlSerializer samlSerializer, SecurityTokenSerializer keyInfoSerializer) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteXml", writer == null ? null : writer.getJCOInstance(), samlSerializer == null ? null : samlSerializer.getJCOInstance(), keyInfoSerializer == null ? null : keyInfoSerializer.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -216,9 +216,13 @@ public class SamlAssertion extends NetObject  {
     
     public boolean getCanWriteSourceData() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanWriteSourceData = null;
         try {
-            return (boolean)classInstance.Get("CanWriteSourceData");
+            retObjectCanWriteSourceData = classInstance.Get("CanWriteSourceData");
+            return (boolean)retObjectCanWriteSourceData;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCanWriteSourceData != null ? retObjectCanWriteSourceData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -226,9 +230,13 @@ public class SamlAssertion extends NetObject  {
 
     public boolean getIsReadOnly() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsReadOnly = null;
         try {
-            return (boolean)classInstance.Get("IsReadOnly");
+            retObjectIsReadOnly = classInstance.Get("IsReadOnly");
+            return (boolean)retObjectIsReadOnly;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsReadOnly != null ? retObjectIsReadOnly.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -236,9 +244,20 @@ public class SamlAssertion extends NetObject  {
 
     public int getMajorVersion() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMajorVersion = null;
         try {
-            return (int)classInstance.Get("MajorVersion");
+            retObjectMajorVersion = classInstance.Get("MajorVersion");
+            return (int)retObjectMajorVersion;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMajorVersion_ToString = retObjectMajorVersion == null ? "null" : retObjectMajorVersion.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMajorVersionNumber = (java.lang.Number)retObjectMajorVersion;
+                return retObjectMajorVersionNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMajorVersion != null ? retObjectMajorVersion.getClass() : "null", retObjectMajorVersion_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -246,9 +265,20 @@ public class SamlAssertion extends NetObject  {
 
     public int getMinorVersion() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMinorVersion = null;
         try {
-            return (int)classInstance.Get("MinorVersion");
+            retObjectMinorVersion = classInstance.Get("MinorVersion");
+            return (int)retObjectMinorVersion;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMinorVersion_ToString = retObjectMinorVersion == null ? "null" : retObjectMinorVersion.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMinorVersionNumber = (java.lang.Number)retObjectMinorVersion;
+                return retObjectMinorVersionNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMinorVersion != null ? retObjectMinorVersion.getClass() : "null", retObjectMinorVersion_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -256,10 +286,14 @@ public class SamlAssertion extends NetObject  {
 
     public DateTime getIssueInstant() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIssueInstant = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("IssueInstant");
+            retObjectIssueInstant = classInstance.Get("IssueInstant");
+            JCObject val = (JCObject)retObjectIssueInstant;
             return new DateTime(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIssueInstant != null ? retObjectIssueInstant.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -267,7 +301,7 @@ public class SamlAssertion extends NetObject  {
 
     public void setIssueInstant(DateTime IssueInstant) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IssueInstant", IssueInstant == null ? null : IssueInstant.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -277,10 +311,14 @@ public class SamlAssertion extends NetObject  {
 
     public SamlAdvice getAdvice() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAdvice = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Advice");
+            retObjectAdvice = classInstance.Get("Advice");
+            JCObject val = (JCObject)retObjectAdvice;
             return new SamlAdvice(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAdvice != null ? retObjectAdvice.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -288,7 +326,7 @@ public class SamlAssertion extends NetObject  {
 
     public void setAdvice(SamlAdvice Advice) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Advice", Advice == null ? null : Advice.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -298,10 +336,14 @@ public class SamlAssertion extends NetObject  {
 
     public SamlConditions getConditions() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConditions = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Conditions");
+            retObjectConditions = classInstance.Get("Conditions");
+            JCObject val = (JCObject)retObjectConditions;
             return new SamlConditions(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConditions != null ? retObjectConditions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -309,7 +351,7 @@ public class SamlAssertion extends NetObject  {
 
     public void setConditions(SamlConditions Conditions) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Conditions", Conditions == null ? null : Conditions.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -319,10 +361,14 @@ public class SamlAssertion extends NetObject  {
 
     public SecurityToken getSigningToken() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSigningToken = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SigningToken");
+            retObjectSigningToken = classInstance.Get("SigningToken");
+            JCObject val = (JCObject)retObjectSigningToken;
             return new SecurityToken(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSigningToken != null ? retObjectSigningToken.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -330,7 +376,7 @@ public class SamlAssertion extends NetObject  {
 
     public void setSigningToken(SecurityToken SigningToken) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SigningToken", SigningToken == null ? null : SigningToken.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -340,10 +386,14 @@ public class SamlAssertion extends NetObject  {
 
     public SigningCredentials getSigningCredentials() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSigningCredentials = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SigningCredentials");
+            retObjectSigningCredentials = classInstance.Get("SigningCredentials");
+            JCObject val = (JCObject)retObjectSigningCredentials;
             return new SigningCredentials(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSigningCredentials != null ? retObjectSigningCredentials.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -351,7 +401,7 @@ public class SamlAssertion extends NetObject  {
 
     public void setSigningCredentials(SigningCredentials SigningCredentials) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SigningCredentials", SigningCredentials == null ? null : SigningCredentials.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -361,9 +411,13 @@ public class SamlAssertion extends NetObject  {
 
     public java.lang.String getAssertionId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAssertionId = null;
         try {
-            return (java.lang.String)classInstance.Get("AssertionId");
+            retObjectAssertionId = classInstance.Get("AssertionId");
+            return (java.lang.String)retObjectAssertionId;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectAssertionId != null ? retObjectAssertionId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -371,7 +425,7 @@ public class SamlAssertion extends NetObject  {
 
     public void setAssertionId(java.lang.String AssertionId) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AssertionId", AssertionId);
         } catch (JCNativeException jcne) {
@@ -381,9 +435,13 @@ public class SamlAssertion extends NetObject  {
 
     public java.lang.String getIssuer() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIssuer = null;
         try {
-            return (java.lang.String)classInstance.Get("Issuer");
+            retObjectIssuer = classInstance.Get("Issuer");
+            return (java.lang.String)retObjectIssuer;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectIssuer != null ? retObjectIssuer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -391,7 +449,7 @@ public class SamlAssertion extends NetObject  {
 
     public void setIssuer(java.lang.String Issuer) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Issuer", Issuer);
         } catch (JCNativeException jcne) {

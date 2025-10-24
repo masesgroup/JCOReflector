@@ -174,10 +174,14 @@ public class ActivityDesignerPaintEventArgs extends EventArgs  {
     
     public Graphics getGraphics() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGraphics = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Graphics");
+            retObjectGraphics = classInstance.Get("Graphics");
+            JCObject val = (JCObject)retObjectGraphics;
             return new Graphics(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGraphics != null ? retObjectGraphics.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -185,10 +189,14 @@ public class ActivityDesignerPaintEventArgs extends EventArgs  {
 
     public Rectangle getClipRectangle() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClipRectangle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ClipRectangle");
+            retObjectClipRectangle = classInstance.Get("ClipRectangle");
+            JCObject val = (JCObject)retObjectClipRectangle;
             return new Rectangle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClipRectangle != null ? retObjectClipRectangle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,10 +204,14 @@ public class ActivityDesignerPaintEventArgs extends EventArgs  {
 
     public ActivityDesignerTheme getDesignerTheme() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDesignerTheme = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DesignerTheme");
+            retObjectDesignerTheme = classInstance.Get("DesignerTheme");
+            JCObject val = (JCObject)retObjectDesignerTheme;
             return new ActivityDesignerTheme(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDesignerTheme != null ? retObjectDesignerTheme.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -207,10 +219,14 @@ public class ActivityDesignerPaintEventArgs extends EventArgs  {
 
     public AmbientTheme getAmbientTheme() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationErrorsException, system.FormatException, system.MulticastNotSupportedException, system.NullReferenceException, system.InvalidCastException, system.workflow.componentmodel.serialization.WorkflowMarkupSerializationException, system.MissingMethodException, system.runtime.interopservices.ExternalException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAmbientTheme = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AmbientTheme");
+            retObjectAmbientTheme = classInstance.Get("AmbientTheme");
+            JCObject val = (JCObject)retObjectAmbientTheme;
             return new AmbientTheme(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAmbientTheme != null ? retObjectAmbientTheme.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

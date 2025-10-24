@@ -143,9 +143,13 @@ public class IXmlDictionaryImplementation extends NetObject implements IXmlDicti
     
     public boolean TryLookup(int key, JCORefOut<XmlDictionaryString> result) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryLookup = null;
         try {
-            return (boolean)classInstance.Invoke("TryLookup", key, result.getJCRefOut());
+            retObjectTryLookup = classInstance.Invoke("TryLookup", key, result.getJCRefOut());
+            return (boolean)retObjectTryLookup;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryLookup != null ? retObjectTryLookup.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -153,9 +157,13 @@ public class IXmlDictionaryImplementation extends NetObject implements IXmlDicti
 
     public boolean TryLookup(java.lang.String value, JCORefOut<XmlDictionaryString> result) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryLookup = null;
         try {
-            return (boolean)classInstance.Invoke("TryLookup", value, result.getJCRefOut());
+            retObjectTryLookup = classInstance.Invoke("TryLookup", value, result.getJCRefOut());
+            return (boolean)retObjectTryLookup;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryLookup != null ? retObjectTryLookup.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -163,9 +171,13 @@ public class IXmlDictionaryImplementation extends NetObject implements IXmlDicti
 
     public boolean TryLookup(XmlDictionaryString value, JCORefOut<XmlDictionaryString> result) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryLookup = null;
         try {
-            return (boolean)classInstance.Invoke("TryLookup", value == null ? null : value.getJCOInstance(), result.getJCRefOut());
+            retObjectTryLookup = classInstance.Invoke("TryLookup", value == null ? null : value.getJCOInstance(), result.getJCRefOut());
+            return (boolean)retObjectTryLookup;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryLookup != null ? retObjectTryLookup.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

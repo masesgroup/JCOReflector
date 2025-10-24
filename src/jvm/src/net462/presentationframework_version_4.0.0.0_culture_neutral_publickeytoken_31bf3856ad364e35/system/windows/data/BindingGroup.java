@@ -164,9 +164,13 @@ public class BindingGroup extends DependencyObject  {
     
     public boolean CommitEdit() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.componentmodel.InvalidEnumArgumentException, system.MulticastNotSupportedException, system.security.SecurityException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCommitEdit = null;
         try {
-            return (boolean)classInstance.Invoke("CommitEdit");
+            retObjectCommitEdit = classInstance.Invoke("CommitEdit");
+            return (boolean)retObjectCommitEdit;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCommitEdit != null ? retObjectCommitEdit.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -174,9 +178,13 @@ public class BindingGroup extends DependencyObject  {
 
     public boolean TryGetValue(NetObject item, java.lang.String propertyName, JCORefOut<NetObject> value) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryGetValue = null;
         try {
-            return (boolean)classInstance.Invoke("TryGetValue", item == null ? null : item.getJCOInstance(), propertyName, value.getJCRefOut());
+            retObjectTryGetValue = classInstance.Invoke("TryGetValue", item == null ? null : item.getJCOInstance(), propertyName, value.getJCRefOut());
+            return (boolean)retObjectTryGetValue;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryGetValue != null ? retObjectTryGetValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -184,9 +192,13 @@ public class BindingGroup extends DependencyObject  {
 
     public boolean UpdateSources() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.componentmodel.InvalidEnumArgumentException, system.MulticastNotSupportedException, system.security.SecurityException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUpdateSources = null;
         try {
-            return (boolean)classInstance.Invoke("UpdateSources");
+            retObjectUpdateSources = classInstance.Invoke("UpdateSources");
+            return (boolean)retObjectUpdateSources;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectUpdateSources != null ? retObjectUpdateSources.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -194,9 +206,13 @@ public class BindingGroup extends DependencyObject  {
 
     public boolean ValidateWithoutUpdate() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.componentmodel.InvalidEnumArgumentException, system.MulticastNotSupportedException, system.security.SecurityException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValidateWithoutUpdate = null;
         try {
-            return (boolean)classInstance.Invoke("ValidateWithoutUpdate");
+            retObjectValidateWithoutUpdate = classInstance.Invoke("ValidateWithoutUpdate");
+            return (boolean)retObjectValidateWithoutUpdate;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectValidateWithoutUpdate != null ? retObjectValidateWithoutUpdate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -204,10 +220,14 @@ public class BindingGroup extends DependencyObject  {
 
     public NetObject GetValue(NetObject item, java.lang.String propertyName) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.windows.data.ValueUnavailableException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetValue = null;
         try {
-            JCObject objGetValue = (JCObject)classInstance.Invoke("GetValue", item == null ? null : item.getJCOInstance(), propertyName);
+            retObjectGetValue = classInstance.Invoke("GetValue", item == null ? null : item.getJCOInstance(), propertyName);
+            JCObject objGetValue = (JCObject)retObjectGetValue;
             return new NetObject(objGetValue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetValue != null ? retObjectGetValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -215,7 +235,7 @@ public class BindingGroup extends DependencyObject  {
 
     public void BeginEdit() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.OverflowException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("BeginEdit");
         } catch (JCNativeException jcne) {
@@ -225,7 +245,7 @@ public class BindingGroup extends DependencyObject  {
 
     public void CancelEdit() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CancelEdit");
         } catch (JCNativeException jcne) {
@@ -239,9 +259,13 @@ public class BindingGroup extends DependencyObject  {
     
     public boolean getCanRestoreValues() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.OverflowException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanRestoreValues = null;
         try {
-            return (boolean)classInstance.Get("CanRestoreValues");
+            retObjectCanRestoreValues = classInstance.Get("CanRestoreValues");
+            return (boolean)retObjectCanRestoreValues;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCanRestoreValues != null ? retObjectCanRestoreValues.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -249,9 +273,13 @@ public class BindingGroup extends DependencyObject  {
 
     public boolean getHasValidationError() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHasValidationError = null;
         try {
-            return (boolean)classInstance.Get("HasValidationError");
+            retObjectHasValidationError = classInstance.Get("HasValidationError");
+            return (boolean)retObjectHasValidationError;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectHasValidationError != null ? retObjectHasValidationError.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -259,9 +287,13 @@ public class BindingGroup extends DependencyObject  {
 
     public boolean getIsDirty() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsDirty = null;
         try {
-            return (boolean)classInstance.Get("IsDirty");
+            retObjectIsDirty = classInstance.Get("IsDirty");
+            return (boolean)retObjectIsDirty;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsDirty != null ? retObjectIsDirty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -269,9 +301,13 @@ public class BindingGroup extends DependencyObject  {
 
     public boolean getNotifyOnValidationError() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNotifyOnValidationError = null;
         try {
-            return (boolean)classInstance.Get("NotifyOnValidationError");
+            retObjectNotifyOnValidationError = classInstance.Get("NotifyOnValidationError");
+            return (boolean)retObjectNotifyOnValidationError;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectNotifyOnValidationError != null ? retObjectNotifyOnValidationError.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -279,7 +315,7 @@ public class BindingGroup extends DependencyObject  {
 
     public void setNotifyOnValidationError(boolean NotifyOnValidationError) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("NotifyOnValidationError", NotifyOnValidationError);
         } catch (JCNativeException jcne) {
@@ -289,9 +325,13 @@ public class BindingGroup extends DependencyObject  {
 
     public boolean getSharesProposedValues() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSharesProposedValues = null;
         try {
-            return (boolean)classInstance.Get("SharesProposedValues");
+            retObjectSharesProposedValues = classInstance.Get("SharesProposedValues");
+            return (boolean)retObjectSharesProposedValues;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectSharesProposedValues != null ? retObjectSharesProposedValues.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -299,7 +339,7 @@ public class BindingGroup extends DependencyObject  {
 
     public void setSharesProposedValues(boolean SharesProposedValues) throws Throwable, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SharesProposedValues", SharesProposedValues);
         } catch (JCNativeException jcne) {
@@ -309,9 +349,13 @@ public class BindingGroup extends DependencyObject  {
 
     public boolean getValidatesOnNotifyDataError() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValidatesOnNotifyDataError = null;
         try {
-            return (boolean)classInstance.Get("ValidatesOnNotifyDataError");
+            retObjectValidatesOnNotifyDataError = classInstance.Get("ValidatesOnNotifyDataError");
+            return (boolean)retObjectValidatesOnNotifyDataError;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectValidatesOnNotifyDataError != null ? retObjectValidatesOnNotifyDataError.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -319,7 +363,7 @@ public class BindingGroup extends DependencyObject  {
 
     public void setValidatesOnNotifyDataError(boolean ValidatesOnNotifyDataError) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ValidatesOnNotifyDataError", ValidatesOnNotifyDataError);
         } catch (JCNativeException jcne) {
@@ -329,10 +373,14 @@ public class BindingGroup extends DependencyObject  {
 
     public IList getItems() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.OverflowException, system.componentmodel.InvalidEnumArgumentException, system.threading.SynchronizationLockException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectItems = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Items");
+            retObjectItems = classInstance.Get("Items");
+            JCObject val = (JCObject)retObjectItems;
             return new IListImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectItems != null ? retObjectItems.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -340,9 +388,13 @@ public class BindingGroup extends DependencyObject  {
 
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectName = null;
         try {
-            return (java.lang.String)classInstance.Get("Name");
+            retObjectName = classInstance.Get("Name");
+            return (java.lang.String)retObjectName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectName != null ? retObjectName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -350,7 +402,7 @@ public class BindingGroup extends DependencyObject  {
 
     public void setName(java.lang.String Name) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Name", Name);
         } catch (JCNativeException jcne) {
@@ -360,10 +412,14 @@ public class BindingGroup extends DependencyObject  {
 
     public DependencyObject getOwner() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOwner = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Owner");
+            retObjectOwner = classInstance.Get("Owner");
+            JCObject val = (JCObject)retObjectOwner;
             return new DependencyObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOwner != null ? retObjectOwner.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

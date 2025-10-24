@@ -177,10 +177,14 @@ public class CodeThrowExceptionStatement extends CodeStatement  {
     
     public CodeExpression getToThrow() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToThrow = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ToThrow");
+            retObjectToThrow = classInstance.Get("ToThrow");
+            JCObject val = (JCObject)retObjectToThrow;
             return new CodeExpression(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToThrow != null ? retObjectToThrow.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,7 +192,7 @@ public class CodeThrowExceptionStatement extends CodeStatement  {
 
     public void setToThrow(CodeExpression ToThrow) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ToThrow", ToThrow == null ? null : ToThrow.getJCOInstance());
         } catch (JCNativeException jcne) {

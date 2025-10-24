@@ -153,9 +153,13 @@ public class Path extends NetObject  {
     
     public static boolean HasExtension(java.lang.String path) throws Throwable, system.ArgumentNullException, system.ArgumentException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectHasExtension = null;
         try {
-            return (boolean)classType.Invoke("HasExtension", path);
+            retObjectHasExtension = classType.Invoke("HasExtension", path);
+            return (boolean)retObjectHasExtension;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectHasExtension != null ? retObjectHasExtension.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -163,9 +167,13 @@ public class Path extends NetObject  {
 
     public static boolean IsPathRooted(java.lang.String path) throws Throwable, system.ArgumentNullException, system.ArgumentException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsPathRooted = null;
         try {
-            return (boolean)classType.Invoke("IsPathRooted", path);
+            retObjectIsPathRooted = classType.Invoke("IsPathRooted", path);
+            return (boolean)retObjectIsPathRooted;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsPathRooted != null ? retObjectIsPathRooted.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -173,10 +181,12 @@ public class Path extends NetObject  {
 
     public static char[] GetInvalidFileNameChars() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetInvalidFileNameChars = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("GetInvalidFileNameChars");
+            retObjectGetInvalidFileNameChars = classType.Invoke("GetInvalidFileNameChars");
+            JCObject resultingObjects = (JCObject)retObjectGetInvalidFileNameChars;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -185,6 +195,8 @@ public class Path extends NetObject  {
 				resultingArray[indexGetInvalidFileNameChars] = (char)resultingArrayList.get(indexGetInvalidFileNameChars);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into char", retObjectGetInvalidFileNameChars != null ? retObjectGetInvalidFileNameChars.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,10 +204,12 @@ public class Path extends NetObject  {
 
     public static char[] GetInvalidPathChars() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetInvalidPathChars = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("GetInvalidPathChars");
+            retObjectGetInvalidPathChars = classType.Invoke("GetInvalidPathChars");
+            JCObject resultingObjects = (JCObject)retObjectGetInvalidPathChars;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -204,6 +218,8 @@ public class Path extends NetObject  {
 				resultingArray[indexGetInvalidPathChars] = (char)resultingArrayList.get(indexGetInvalidPathChars);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into char", retObjectGetInvalidPathChars != null ? retObjectGetInvalidPathChars.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -211,9 +227,13 @@ public class Path extends NetObject  {
 
     public static java.lang.String ChangeExtension(java.lang.String path, java.lang.String extension) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectChangeExtension = null;
         try {
-            return (java.lang.String)classType.Invoke("ChangeExtension", path, extension);
+            retObjectChangeExtension = classType.Invoke("ChangeExtension", path, extension);
+            return (java.lang.String)retObjectChangeExtension;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectChangeExtension != null ? retObjectChangeExtension.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -221,9 +241,13 @@ public class Path extends NetObject  {
 
     public static java.lang.String Combine(java.lang.String path1, java.lang.String path2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCombine = null;
         try {
-            return (java.lang.String)classType.Invoke("Combine", path1, path2);
+            retObjectCombine = classType.Invoke("Combine", path1, path2);
+            return (java.lang.String)retObjectCombine;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectCombine != null ? retObjectCombine.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -231,9 +255,13 @@ public class Path extends NetObject  {
 
     public static java.lang.String Combine(java.lang.String path1, java.lang.String path2, java.lang.String path3) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCombine = null;
         try {
-            return (java.lang.String)classType.Invoke("Combine", path1, path2, path3);
+            retObjectCombine = classType.Invoke("Combine", path1, path2, path3);
+            return (java.lang.String)retObjectCombine;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectCombine != null ? retObjectCombine.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -241,9 +269,13 @@ public class Path extends NetObject  {
 
     public static java.lang.String Combine(java.lang.String path1, java.lang.String path2, java.lang.String path3, java.lang.String path4) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCombine = null;
         try {
-            return (java.lang.String)classType.Invoke("Combine", path1, path2, path3, path4);
+            retObjectCombine = classType.Invoke("Combine", path1, path2, path3, path4);
+            return (java.lang.String)retObjectCombine;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectCombine != null ? retObjectCombine.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -251,9 +283,13 @@ public class Path extends NetObject  {
 
     public static java.lang.String Combine(java.lang.String... paths) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCombine = null;
         try {
-            return (java.lang.String)classType.Invoke("Combine", (java.lang.Object)paths);
+            retObjectCombine = classType.Invoke("Combine", (java.lang.Object)paths);
+            return (java.lang.String)retObjectCombine;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectCombine != null ? retObjectCombine.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -261,9 +297,13 @@ public class Path extends NetObject  {
 
     public static java.lang.String Combine(JCORefOut dupParam0) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCombine = null;
         try {
-            return (java.lang.String)classType.Invoke("Combine", (java.lang.Object)dupParam0.getJCRefOut());
+            retObjectCombine = classType.Invoke("Combine", (java.lang.Object)dupParam0.getJCRefOut());
+            return (java.lang.String)retObjectCombine;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectCombine != null ? retObjectCombine.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -271,9 +311,13 @@ public class Path extends NetObject  {
 
     public static java.lang.String GetDirectoryName(java.lang.String path) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.io.PathTooLongException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetDirectoryName = null;
         try {
-            return (java.lang.String)classType.Invoke("GetDirectoryName", path);
+            retObjectGetDirectoryName = classType.Invoke("GetDirectoryName", path);
+            return (java.lang.String)retObjectGetDirectoryName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetDirectoryName != null ? retObjectGetDirectoryName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -281,9 +325,13 @@ public class Path extends NetObject  {
 
     public static java.lang.String GetExtension(java.lang.String path) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetExtension = null;
         try {
-            return (java.lang.String)classType.Invoke("GetExtension", path);
+            retObjectGetExtension = classType.Invoke("GetExtension", path);
+            return (java.lang.String)retObjectGetExtension;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetExtension != null ? retObjectGetExtension.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -291,9 +339,13 @@ public class Path extends NetObject  {
 
     public static java.lang.String GetFileName(java.lang.String path) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetFileName = null;
         try {
-            return (java.lang.String)classType.Invoke("GetFileName", path);
+            retObjectGetFileName = classType.Invoke("GetFileName", path);
+            return (java.lang.String)retObjectGetFileName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetFileName != null ? retObjectGetFileName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -301,9 +353,13 @@ public class Path extends NetObject  {
 
     public static java.lang.String GetFileNameWithoutExtension(java.lang.String path) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetFileNameWithoutExtension = null;
         try {
-            return (java.lang.String)classType.Invoke("GetFileNameWithoutExtension", path);
+            retObjectGetFileNameWithoutExtension = classType.Invoke("GetFileNameWithoutExtension", path);
+            return (java.lang.String)retObjectGetFileNameWithoutExtension;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetFileNameWithoutExtension != null ? retObjectGetFileNameWithoutExtension.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -311,9 +367,13 @@ public class Path extends NetObject  {
 
     public static java.lang.String GetFullPath(java.lang.String path) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.io.PathTooLongException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetFullPath = null;
         try {
-            return (java.lang.String)classType.Invoke("GetFullPath", path);
+            retObjectGetFullPath = classType.Invoke("GetFullPath", path);
+            return (java.lang.String)retObjectGetFullPath;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetFullPath != null ? retObjectGetFullPath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -321,9 +381,13 @@ public class Path extends NetObject  {
 
     public static java.lang.String GetPathRoot(java.lang.String path) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.io.PathTooLongException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetPathRoot = null;
         try {
-            return (java.lang.String)classType.Invoke("GetPathRoot", path);
+            retObjectGetPathRoot = classType.Invoke("GetPathRoot", path);
+            return (java.lang.String)retObjectGetPathRoot;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetPathRoot != null ? retObjectGetPathRoot.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -331,9 +395,13 @@ public class Path extends NetObject  {
 
     public static java.lang.String GetRandomFileName() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetRandomFileName = null;
         try {
-            return (java.lang.String)classType.Invoke("GetRandomFileName");
+            retObjectGetRandomFileName = classType.Invoke("GetRandomFileName");
+            return (java.lang.String)retObjectGetRandomFileName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetRandomFileName != null ? retObjectGetRandomFileName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -341,9 +409,13 @@ public class Path extends NetObject  {
 
     public static java.lang.String GetTempFileName() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetTempFileName = null;
         try {
-            return (java.lang.String)classType.Invoke("GetTempFileName");
+            retObjectGetTempFileName = classType.Invoke("GetTempFileName");
+            return (java.lang.String)retObjectGetTempFileName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetTempFileName != null ? retObjectGetTempFileName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -351,9 +423,13 @@ public class Path extends NetObject  {
 
     public static java.lang.String GetTempPath() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.IndexOutOfRangeException, system.NullReferenceException, system.NotSupportedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetTempPath = null;
         try {
-            return (java.lang.String)classType.Invoke("GetTempPath");
+            retObjectGetTempPath = classType.Invoke("GetTempPath");
+            return (java.lang.String)retObjectGetTempPath;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetTempPath != null ? retObjectGetTempPath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

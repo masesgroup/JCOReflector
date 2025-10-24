@@ -172,10 +172,14 @@ public class StoreContentChangedEventArgs extends EventArgs  {
     
     public Annotation getAnnotation() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAnnotation = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Annotation");
+            retObjectAnnotation = classInstance.Get("Annotation");
+            JCObject val = (JCObject)retObjectAnnotation;
             return new Annotation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAnnotation != null ? retObjectAnnotation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,10 +187,14 @@ public class StoreContentChangedEventArgs extends EventArgs  {
 
     public StoreContentAction getAction() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAction = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Action");
+            retObjectAction = classInstance.Get("Action");
+            JCObject val = (JCObject)retObjectAction;
             return new StoreContentAction(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAction != null ? retObjectAction.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

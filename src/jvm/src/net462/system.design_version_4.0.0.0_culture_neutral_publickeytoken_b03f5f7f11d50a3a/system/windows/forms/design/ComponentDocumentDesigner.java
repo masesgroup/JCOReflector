@@ -173,7 +173,7 @@ public class ComponentDocumentDesigner extends ComponentDesigner implements syst
     
     public void Initialize(IComponent component) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.NotSupportedException, system.RankException, system.NullReferenceException, system.configuration.ConfigurationErrorsException, system.globalization.CultureNotFoundException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.OutOfMemoryException, system.security.SecurityException, system.threading.ThreadStateException, system.MemberAccessException, system.MulticastNotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.runtime.interopservices.ExternalException, system.componentmodel.InvalidEnumArgumentException, system.runtime.serialization.SerializationException, system.NotImplementedException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Initialize", component == null ? null : component.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -187,7 +187,7 @@ public class ComponentDocumentDesigner extends ComponentDesigner implements syst
      */
     @Deprecated 
     public NetObject GetView(ViewTechnology technology) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIRootDesigner to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIRootDesigner to obtain the full interface.");
     }
 
     /**
@@ -196,7 +196,7 @@ public class ComponentDocumentDesigner extends ComponentDesigner implements syst
      */
     @Deprecated 
     public boolean GetToolSupported(ToolboxItem tool) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIToolboxUser to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIToolboxUser to obtain the full interface.");
     }
 
     /**
@@ -205,7 +205,7 @@ public class ComponentDocumentDesigner extends ComponentDesigner implements syst
      */
     @Deprecated 
     public void ToolPicked(ToolboxItem tool) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIToolboxUser to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIToolboxUser to obtain the full interface.");
     }
 
     /**
@@ -214,7 +214,7 @@ public class ComponentDocumentDesigner extends ComponentDesigner implements syst
      */
     @Deprecated 
     public boolean FilterAttributes(IComponent component, IDictionary attributes) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToITypeDescriptorFilterService to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToITypeDescriptorFilterService to obtain the full interface.");
     }
 
     /**
@@ -223,7 +223,7 @@ public class ComponentDocumentDesigner extends ComponentDesigner implements syst
      */
     @Deprecated 
     public boolean FilterEvents(IComponent component, IDictionary events) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToITypeDescriptorFilterService to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToITypeDescriptorFilterService to obtain the full interface.");
     }
 
     /**
@@ -232,7 +232,7 @@ public class ComponentDocumentDesigner extends ComponentDesigner implements syst
      */
     @Deprecated 
     public boolean FilterProperties(IComponent component, IDictionary properties) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToITypeDescriptorFilterService to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToITypeDescriptorFilterService to obtain the full interface.");
     }
 
 
@@ -241,9 +241,13 @@ public class ComponentDocumentDesigner extends ComponentDesigner implements syst
     
     public boolean getTrayAutoArrange() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTrayAutoArrange = null;
         try {
-            return (boolean)classInstance.Get("TrayAutoArrange");
+            retObjectTrayAutoArrange = classInstance.Get("TrayAutoArrange");
+            return (boolean)retObjectTrayAutoArrange;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectTrayAutoArrange != null ? retObjectTrayAutoArrange.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -251,7 +255,7 @@ public class ComponentDocumentDesigner extends ComponentDesigner implements syst
 
     public void setTrayAutoArrange(boolean TrayAutoArrange) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.RankException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.Win32Exception, system.NotSupportedException, system.NullReferenceException, system.OutOfMemoryException, system.componentmodel.InvalidAsynchronousStateException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TrayAutoArrange", TrayAutoArrange);
         } catch (JCNativeException jcne) {
@@ -261,9 +265,13 @@ public class ComponentDocumentDesigner extends ComponentDesigner implements syst
 
     public boolean getTrayLargeIcon() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTrayLargeIcon = null;
         try {
-            return (boolean)classInstance.Get("TrayLargeIcon");
+            retObjectTrayLargeIcon = classInstance.Get("TrayLargeIcon");
+            return (boolean)retObjectTrayLargeIcon;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectTrayLargeIcon != null ? retObjectTrayLargeIcon.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -271,7 +279,7 @@ public class ComponentDocumentDesigner extends ComponentDesigner implements syst
 
     public void setTrayLargeIcon(boolean TrayLargeIcon) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.NotSupportedException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TrayLargeIcon", TrayLargeIcon);
         } catch (JCNativeException jcne) {
@@ -281,10 +289,14 @@ public class ComponentDocumentDesigner extends ComponentDesigner implements syst
 
     public Control getControl() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectControl = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Control");
+            retObjectControl = classInstance.Get("Control");
+            JCObject val = (JCObject)retObjectControl;
             return new Control(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectControl != null ? retObjectControl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

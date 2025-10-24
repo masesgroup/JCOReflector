@@ -167,7 +167,7 @@ public class WorkflowViewElement extends ContentControl  {
     
     public void RegisterCompositeView(ICompositeView container) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RegisterCompositeView", container == null ? null : container.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -177,7 +177,7 @@ public class WorkflowViewElement extends ContentControl  {
 
     public void RegisterDefaultCompositeView(ICompositeView container) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RegisterDefaultCompositeView", container == null ? null : container.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -187,7 +187,7 @@ public class WorkflowViewElement extends ContentControl  {
 
     public void UnregisterCompositeView(ICompositeView container) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("UnregisterCompositeView", container == null ? null : container.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -197,7 +197,7 @@ public class WorkflowViewElement extends ContentControl  {
 
     public void UnregisterDefaultCompositeView(ICompositeView container) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("UnregisterDefaultCompositeView", container == null ? null : container.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -211,9 +211,13 @@ public class WorkflowViewElement extends ContentControl  {
     
     public boolean getCollapsible() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCollapsible = null;
         try {
-            return (boolean)classInstance.Get("Collapsible");
+            retObjectCollapsible = classInstance.Get("Collapsible");
+            return (boolean)retObjectCollapsible;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCollapsible != null ? retObjectCollapsible.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -221,7 +225,7 @@ public class WorkflowViewElement extends ContentControl  {
 
     public void setCollapsible(boolean Collapsible) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Collapsible", Collapsible);
         } catch (JCNativeException jcne) {
@@ -231,9 +235,13 @@ public class WorkflowViewElement extends ContentControl  {
 
     public boolean getExpandState() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExpandState = null;
         try {
-            return (boolean)classInstance.Get("ExpandState");
+            retObjectExpandState = classInstance.Get("ExpandState");
+            return (boolean)retObjectExpandState;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectExpandState != null ? retObjectExpandState.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -241,7 +249,7 @@ public class WorkflowViewElement extends ContentControl  {
 
     public void setExpandState(boolean ExpandState) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ExpandState", ExpandState);
         } catch (JCNativeException jcne) {
@@ -251,9 +259,13 @@ public class WorkflowViewElement extends ContentControl  {
 
     public boolean getIsRootDesigner() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsRootDesigner = null;
         try {
-            return (boolean)classInstance.Get("IsRootDesigner");
+            retObjectIsRootDesigner = classInstance.Get("IsRootDesigner");
+            return (boolean)retObjectIsRootDesigner;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsRootDesigner != null ? retObjectIsRootDesigner.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -261,7 +273,7 @@ public class WorkflowViewElement extends ContentControl  {
 
     public void setIsRootDesigner(boolean IsRootDesigner) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsRootDesigner", IsRootDesigner);
         } catch (JCNativeException jcne) {
@@ -271,9 +283,13 @@ public class WorkflowViewElement extends ContentControl  {
 
     public boolean getPinState() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPinState = null;
         try {
-            return (boolean)classInstance.Get("PinState");
+            retObjectPinState = classInstance.Get("PinState");
+            return (boolean)retObjectPinState;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectPinState != null ? retObjectPinState.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -281,7 +297,7 @@ public class WorkflowViewElement extends ContentControl  {
 
     public void setPinState(boolean PinState) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PinState", PinState);
         } catch (JCNativeException jcne) {
@@ -291,9 +307,13 @@ public class WorkflowViewElement extends ContentControl  {
 
     public boolean getShowExpanded() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShowExpanded = null;
         try {
-            return (boolean)classInstance.Get("ShowExpanded");
+            retObjectShowExpanded = classInstance.Get("ShowExpanded");
+            return (boolean)retObjectShowExpanded;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectShowExpanded != null ? retObjectShowExpanded.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -301,10 +321,14 @@ public class WorkflowViewElement extends ContentControl  {
 
     public EditingContext getContext() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContext = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Context");
+            retObjectContext = classInstance.Get("Context");
+            JCObject val = (JCObject)retObjectContext;
             return new EditingContext(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContext != null ? retObjectContext.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -312,7 +336,7 @@ public class WorkflowViewElement extends ContentControl  {
 
     public void setContext(EditingContext Context) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Context", Context == null ? null : Context.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -322,10 +346,14 @@ public class WorkflowViewElement extends ContentControl  {
 
     public ModelItem getModelItem() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectModelItem = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ModelItem");
+            retObjectModelItem = classInstance.Get("ModelItem");
+            JCObject val = (JCObject)retObjectModelItem;
             return new ModelItem(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectModelItem != null ? retObjectModelItem.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -333,7 +361,7 @@ public class WorkflowViewElement extends ContentControl  {
 
     public void setModelItem(ModelItem ModelItem) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ModelItem", ModelItem == null ? null : ModelItem.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -343,10 +371,14 @@ public class WorkflowViewElement extends ContentControl  {
 
     public FrameworkElement getDragHandle() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDragHandle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DragHandle");
+            retObjectDragHandle = classInstance.Get("DragHandle");
+            JCObject val = (JCObject)retObjectDragHandle;
             return new FrameworkElement(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDragHandle != null ? retObjectDragHandle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -354,7 +386,7 @@ public class WorkflowViewElement extends ContentControl  {
 
     public void setDragHandle(FrameworkElement DragHandle) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DragHandle", DragHandle == null ? null : DragHandle.getJCOInstance());
         } catch (JCNativeException jcne) {

@@ -167,9 +167,13 @@ public class ScrollBar extends Control  {
     
     public boolean getScaleScrollBarForDpiChange() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectScaleScrollBarForDpiChange = null;
         try {
-            return (boolean)classInstance.Get("ScaleScrollBarForDpiChange");
+            retObjectScaleScrollBarForDpiChange = classInstance.Get("ScaleScrollBarForDpiChange");
+            return (boolean)retObjectScaleScrollBarForDpiChange;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectScaleScrollBarForDpiChange != null ? retObjectScaleScrollBarForDpiChange.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,7 +181,7 @@ public class ScrollBar extends Control  {
 
     public void setScaleScrollBarForDpiChange(boolean ScaleScrollBarForDpiChange) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ScaleScrollBarForDpiChange", ScaleScrollBarForDpiChange);
         } catch (JCNativeException jcne) {
@@ -187,9 +191,13 @@ public class ScrollBar extends Control  {
 
     public boolean getTabStop() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTabStop = null;
         try {
-            return (boolean)classInstance.Get("TabStop");
+            retObjectTabStop = classInstance.Get("TabStop");
+            return (boolean)retObjectTabStop;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectTabStop != null ? retObjectTabStop.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,7 +205,7 @@ public class ScrollBar extends Control  {
 
     public void setTabStop(boolean TabStop) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TabStop", TabStop);
         } catch (JCNativeException jcne) {
@@ -207,9 +215,20 @@ public class ScrollBar extends Control  {
 
     public int getLargeChange() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLargeChange = null;
         try {
-            return (int)classInstance.Get("LargeChange");
+            retObjectLargeChange = classInstance.Get("LargeChange");
+            return (int)retObjectLargeChange;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectLargeChange_ToString = retObjectLargeChange == null ? "null" : retObjectLargeChange.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectLargeChangeNumber = (java.lang.Number)retObjectLargeChange;
+                return retObjectLargeChangeNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectLargeChange != null ? retObjectLargeChange.getClass() : "null", retObjectLargeChange_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -217,7 +236,7 @@ public class ScrollBar extends Control  {
 
     public void setLargeChange(int LargeChange) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("LargeChange", LargeChange);
         } catch (JCNativeException jcne) {
@@ -227,9 +246,20 @@ public class ScrollBar extends Control  {
 
     public int getMaximum() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaximum = null;
         try {
-            return (int)classInstance.Get("Maximum");
+            retObjectMaximum = classInstance.Get("Maximum");
+            return (int)retObjectMaximum;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaximum_ToString = retObjectMaximum == null ? "null" : retObjectMaximum.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMaximumNumber = (java.lang.Number)retObjectMaximum;
+                return retObjectMaximumNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaximum != null ? retObjectMaximum.getClass() : "null", retObjectMaximum_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -237,7 +267,7 @@ public class ScrollBar extends Control  {
 
     public void setMaximum(int Maximum) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Maximum", Maximum);
         } catch (JCNativeException jcne) {
@@ -247,9 +277,20 @@ public class ScrollBar extends Control  {
 
     public int getMinimum() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMinimum = null;
         try {
-            return (int)classInstance.Get("Minimum");
+            retObjectMinimum = classInstance.Get("Minimum");
+            return (int)retObjectMinimum;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMinimum_ToString = retObjectMinimum == null ? "null" : retObjectMinimum.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMinimumNumber = (java.lang.Number)retObjectMinimum;
+                return retObjectMinimumNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMinimum != null ? retObjectMinimum.getClass() : "null", retObjectMinimum_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -257,7 +298,7 @@ public class ScrollBar extends Control  {
 
     public void setMinimum(int Minimum) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Minimum", Minimum);
         } catch (JCNativeException jcne) {
@@ -267,9 +308,20 @@ public class ScrollBar extends Control  {
 
     public int getSmallChange() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSmallChange = null;
         try {
-            return (int)classInstance.Get("SmallChange");
+            retObjectSmallChange = classInstance.Get("SmallChange");
+            return (int)retObjectSmallChange;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSmallChange_ToString = retObjectSmallChange == null ? "null" : retObjectSmallChange.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectSmallChangeNumber = (java.lang.Number)retObjectSmallChange;
+                return retObjectSmallChangeNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectSmallChange != null ? retObjectSmallChange.getClass() : "null", retObjectSmallChange_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -277,7 +329,7 @@ public class ScrollBar extends Control  {
 
     public void setSmallChange(int SmallChange) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SmallChange", SmallChange);
         } catch (JCNativeException jcne) {
@@ -287,9 +339,20 @@ public class ScrollBar extends Control  {
 
     public int getValue() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValue = null;
         try {
-            return (int)classInstance.Get("Value");
+            retObjectValue = classInstance.Get("Value");
+            return (int)retObjectValue;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectValue_ToString = retObjectValue == null ? "null" : retObjectValue.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectValueNumber = (java.lang.Number)retObjectValue;
+                return retObjectValueNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectValue != null ? retObjectValue.getClass() : "null", retObjectValue_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -297,7 +360,7 @@ public class ScrollBar extends Control  {
 
     public void setValue(int Value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Value", Value);
         } catch (JCNativeException jcne) {
@@ -307,10 +370,14 @@ public class ScrollBar extends Control  {
 
     public ImeMode getImeMode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectImeMode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ImeMode");
+            retObjectImeMode = classInstance.Get("ImeMode");
+            JCObject val = (JCObject)retObjectImeMode;
             return new ImeMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectImeMode != null ? retObjectImeMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -318,7 +385,7 @@ public class ScrollBar extends Control  {
 
     public void setImeMode(ImeMode ImeMode) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.RankException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ImeMode", ImeMode == null ? null : ImeMode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -333,7 +400,7 @@ public class ScrollBar extends Control  {
 
     public void addAutoSizeChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("AutoSizeChanged", handler);
         } catch (JCNativeException jcne) {
@@ -343,7 +410,7 @@ public class ScrollBar extends Control  {
 
     public void removeAutoSizeChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("AutoSizeChanged", handler);
         } catch (JCNativeException jcne) {
@@ -353,7 +420,7 @@ public class ScrollBar extends Control  {
 
     public void addBackColorChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("BackColorChanged", handler);
         } catch (JCNativeException jcne) {
@@ -363,7 +430,7 @@ public class ScrollBar extends Control  {
 
     public void removeBackColorChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("BackColorChanged", handler);
         } catch (JCNativeException jcne) {
@@ -373,7 +440,7 @@ public class ScrollBar extends Control  {
 
     public void addBackgroundImageChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("BackgroundImageChanged", handler);
         } catch (JCNativeException jcne) {
@@ -383,7 +450,7 @@ public class ScrollBar extends Control  {
 
     public void removeBackgroundImageChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("BackgroundImageChanged", handler);
         } catch (JCNativeException jcne) {
@@ -393,7 +460,7 @@ public class ScrollBar extends Control  {
 
     public void addBackgroundImageLayoutChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("BackgroundImageLayoutChanged", handler);
         } catch (JCNativeException jcne) {
@@ -403,7 +470,7 @@ public class ScrollBar extends Control  {
 
     public void removeBackgroundImageLayoutChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("BackgroundImageLayoutChanged", handler);
         } catch (JCNativeException jcne) {
@@ -413,7 +480,7 @@ public class ScrollBar extends Control  {
 
     public void addClick(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Click", handler);
         } catch (JCNativeException jcne) {
@@ -423,7 +490,7 @@ public class ScrollBar extends Control  {
 
     public void removeClick(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Click", handler);
         } catch (JCNativeException jcne) {
@@ -433,7 +500,7 @@ public class ScrollBar extends Control  {
 
     public void addDoubleClick(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("DoubleClick", handler);
         } catch (JCNativeException jcne) {
@@ -443,7 +510,7 @@ public class ScrollBar extends Control  {
 
     public void removeDoubleClick(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("DoubleClick", handler);
         } catch (JCNativeException jcne) {
@@ -453,7 +520,7 @@ public class ScrollBar extends Control  {
 
     public void addFontChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("FontChanged", handler);
         } catch (JCNativeException jcne) {
@@ -463,7 +530,7 @@ public class ScrollBar extends Control  {
 
     public void removeFontChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("FontChanged", handler);
         } catch (JCNativeException jcne) {
@@ -473,7 +540,7 @@ public class ScrollBar extends Control  {
 
     public void addForeColorChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ForeColorChanged", handler);
         } catch (JCNativeException jcne) {
@@ -483,7 +550,7 @@ public class ScrollBar extends Control  {
 
     public void removeForeColorChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ForeColorChanged", handler);
         } catch (JCNativeException jcne) {
@@ -493,7 +560,7 @@ public class ScrollBar extends Control  {
 
     public void addImeModeChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ImeModeChanged", handler);
         } catch (JCNativeException jcne) {
@@ -503,7 +570,7 @@ public class ScrollBar extends Control  {
 
     public void removeImeModeChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ImeModeChanged", handler);
         } catch (JCNativeException jcne) {
@@ -513,7 +580,7 @@ public class ScrollBar extends Control  {
 
     public void addTextChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("TextChanged", handler);
         } catch (JCNativeException jcne) {
@@ -523,7 +590,7 @@ public class ScrollBar extends Control  {
 
     public void removeTextChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("TextChanged", handler);
         } catch (JCNativeException jcne) {
@@ -533,7 +600,7 @@ public class ScrollBar extends Control  {
 
     public void addValueChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ValueChanged", handler);
         } catch (JCNativeException jcne) {
@@ -543,7 +610,7 @@ public class ScrollBar extends Control  {
 
     public void removeValueChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ValueChanged", handler);
         } catch (JCNativeException jcne) {
@@ -553,7 +620,7 @@ public class ScrollBar extends Control  {
 
     public void addMouseClick(MouseEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("MouseClick", handler);
         } catch (JCNativeException jcne) {
@@ -563,7 +630,7 @@ public class ScrollBar extends Control  {
 
     public void removeMouseClick(MouseEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("MouseClick", handler);
         } catch (JCNativeException jcne) {
@@ -573,7 +640,7 @@ public class ScrollBar extends Control  {
 
     public void addMouseDoubleClick(MouseEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("MouseDoubleClick", handler);
         } catch (JCNativeException jcne) {
@@ -583,7 +650,7 @@ public class ScrollBar extends Control  {
 
     public void removeMouseDoubleClick(MouseEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("MouseDoubleClick", handler);
         } catch (JCNativeException jcne) {
@@ -593,7 +660,7 @@ public class ScrollBar extends Control  {
 
     public void addMouseDown(MouseEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("MouseDown", handler);
         } catch (JCNativeException jcne) {
@@ -603,7 +670,7 @@ public class ScrollBar extends Control  {
 
     public void removeMouseDown(MouseEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("MouseDown", handler);
         } catch (JCNativeException jcne) {
@@ -613,7 +680,7 @@ public class ScrollBar extends Control  {
 
     public void addMouseMove(MouseEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("MouseMove", handler);
         } catch (JCNativeException jcne) {
@@ -623,7 +690,7 @@ public class ScrollBar extends Control  {
 
     public void removeMouseMove(MouseEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("MouseMove", handler);
         } catch (JCNativeException jcne) {
@@ -633,7 +700,7 @@ public class ScrollBar extends Control  {
 
     public void addMouseUp(MouseEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("MouseUp", handler);
         } catch (JCNativeException jcne) {
@@ -643,7 +710,7 @@ public class ScrollBar extends Control  {
 
     public void removeMouseUp(MouseEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("MouseUp", handler);
         } catch (JCNativeException jcne) {
@@ -653,7 +720,7 @@ public class ScrollBar extends Control  {
 
     public void addPaint(PaintEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Paint", handler);
         } catch (JCNativeException jcne) {
@@ -663,7 +730,7 @@ public class ScrollBar extends Control  {
 
     public void removePaint(PaintEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Paint", handler);
         } catch (JCNativeException jcne) {
@@ -673,7 +740,7 @@ public class ScrollBar extends Control  {
 
     public void addScroll(ScrollEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Scroll", handler);
         } catch (JCNativeException jcne) {
@@ -683,7 +750,7 @@ public class ScrollBar extends Control  {
 
     public void removeScroll(ScrollEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Scroll", handler);
         } catch (JCNativeException jcne) {

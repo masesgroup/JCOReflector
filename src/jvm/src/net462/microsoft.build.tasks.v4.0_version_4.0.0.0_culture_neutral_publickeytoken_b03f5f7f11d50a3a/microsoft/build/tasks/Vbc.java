@@ -164,9 +164,13 @@ public class Vbc extends ManagedCompiler  {
     
     public boolean Execute() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.InvalidOperationException, system.InvalidCastException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.NullReferenceException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.threading.WaitHandleCannotBeOpenedException, system.OutOfMemoryException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception, system.MulticastNotSupportedException, system.RankException, system.security.cryptography.CryptographicException, system.collections.generic.KeyNotFoundException, system.IndexOutOfRangeException, system.threading.SemaphoreFullException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExecute = null;
         try {
-            return (boolean)classInstance.Invoke("Execute");
+            retObjectExecute = classInstance.Invoke("Execute");
+            return (boolean)retObjectExecute;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectExecute != null ? retObjectExecute.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,9 +182,13 @@ public class Vbc extends ManagedCompiler  {
     
     public boolean getGenerateDocumentation() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGenerateDocumentation = null;
         try {
-            return (boolean)classInstance.Get("GenerateDocumentation");
+            retObjectGenerateDocumentation = classInstance.Get("GenerateDocumentation");
+            return (boolean)retObjectGenerateDocumentation;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectGenerateDocumentation != null ? retObjectGenerateDocumentation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,7 +196,7 @@ public class Vbc extends ManagedCompiler  {
 
     public void setGenerateDocumentation(boolean GenerateDocumentation) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("GenerateDocumentation", GenerateDocumentation);
         } catch (JCNativeException jcne) {
@@ -198,9 +206,13 @@ public class Vbc extends ManagedCompiler  {
 
     public boolean getNoStandardLib() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNoStandardLib = null;
         try {
-            return (boolean)classInstance.Get("NoStandardLib");
+            retObjectNoStandardLib = classInstance.Get("NoStandardLib");
+            return (boolean)retObjectNoStandardLib;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectNoStandardLib != null ? retObjectNoStandardLib.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -208,7 +220,7 @@ public class Vbc extends ManagedCompiler  {
 
     public void setNoStandardLib(boolean NoStandardLib) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("NoStandardLib", NoStandardLib);
         } catch (JCNativeException jcne) {
@@ -218,9 +230,13 @@ public class Vbc extends ManagedCompiler  {
 
     public boolean getNoVBRuntimeReference() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNoVBRuntimeReference = null;
         try {
-            return (boolean)classInstance.Get("NoVBRuntimeReference");
+            retObjectNoVBRuntimeReference = classInstance.Get("NoVBRuntimeReference");
+            return (boolean)retObjectNoVBRuntimeReference;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectNoVBRuntimeReference != null ? retObjectNoVBRuntimeReference.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -228,7 +244,7 @@ public class Vbc extends ManagedCompiler  {
 
     public void setNoVBRuntimeReference(boolean NoVBRuntimeReference) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("NoVBRuntimeReference", NoVBRuntimeReference);
         } catch (JCNativeException jcne) {
@@ -238,9 +254,13 @@ public class Vbc extends ManagedCompiler  {
 
     public boolean getNoWarnings() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNoWarnings = null;
         try {
-            return (boolean)classInstance.Get("NoWarnings");
+            retObjectNoWarnings = classInstance.Get("NoWarnings");
+            return (boolean)retObjectNoWarnings;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectNoWarnings != null ? retObjectNoWarnings.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -248,7 +268,7 @@ public class Vbc extends ManagedCompiler  {
 
     public void setNoWarnings(boolean NoWarnings) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("NoWarnings", NoWarnings);
         } catch (JCNativeException jcne) {
@@ -258,9 +278,13 @@ public class Vbc extends ManagedCompiler  {
 
     public boolean getOptionExplicit() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOptionExplicit = null;
         try {
-            return (boolean)classInstance.Get("OptionExplicit");
+            retObjectOptionExplicit = classInstance.Get("OptionExplicit");
+            return (boolean)retObjectOptionExplicit;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectOptionExplicit != null ? retObjectOptionExplicit.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -268,7 +292,7 @@ public class Vbc extends ManagedCompiler  {
 
     public void setOptionExplicit(boolean OptionExplicit) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("OptionExplicit", OptionExplicit);
         } catch (JCNativeException jcne) {
@@ -278,9 +302,13 @@ public class Vbc extends ManagedCompiler  {
 
     public boolean getOptionInfer() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOptionInfer = null;
         try {
-            return (boolean)classInstance.Get("OptionInfer");
+            retObjectOptionInfer = classInstance.Get("OptionInfer");
+            return (boolean)retObjectOptionInfer;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectOptionInfer != null ? retObjectOptionInfer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -288,7 +316,7 @@ public class Vbc extends ManagedCompiler  {
 
     public void setOptionInfer(boolean OptionInfer) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("OptionInfer", OptionInfer);
         } catch (JCNativeException jcne) {
@@ -298,9 +326,13 @@ public class Vbc extends ManagedCompiler  {
 
     public boolean getOptionStrict() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOptionStrict = null;
         try {
-            return (boolean)classInstance.Get("OptionStrict");
+            retObjectOptionStrict = classInstance.Get("OptionStrict");
+            return (boolean)retObjectOptionStrict;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectOptionStrict != null ? retObjectOptionStrict.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -308,7 +340,7 @@ public class Vbc extends ManagedCompiler  {
 
     public void setOptionStrict(boolean OptionStrict) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("OptionStrict", OptionStrict);
         } catch (JCNativeException jcne) {
@@ -318,9 +350,13 @@ public class Vbc extends ManagedCompiler  {
 
     public boolean getRemoveIntegerChecks() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRemoveIntegerChecks = null;
         try {
-            return (boolean)classInstance.Get("RemoveIntegerChecks");
+            retObjectRemoveIntegerChecks = classInstance.Get("RemoveIntegerChecks");
+            return (boolean)retObjectRemoveIntegerChecks;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectRemoveIntegerChecks != null ? retObjectRemoveIntegerChecks.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -328,7 +364,7 @@ public class Vbc extends ManagedCompiler  {
 
     public void setRemoveIntegerChecks(boolean RemoveIntegerChecks) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RemoveIntegerChecks", RemoveIntegerChecks);
         } catch (JCNativeException jcne) {
@@ -338,9 +374,13 @@ public class Vbc extends ManagedCompiler  {
 
     public boolean getTargetCompactFramework() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTargetCompactFramework = null;
         try {
-            return (boolean)classInstance.Get("TargetCompactFramework");
+            retObjectTargetCompactFramework = classInstance.Get("TargetCompactFramework");
+            return (boolean)retObjectTargetCompactFramework;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectTargetCompactFramework != null ? retObjectTargetCompactFramework.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -348,7 +388,7 @@ public class Vbc extends ManagedCompiler  {
 
     public void setTargetCompactFramework(boolean TargetCompactFramework) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TargetCompactFramework", TargetCompactFramework);
         } catch (JCNativeException jcne) {
@@ -358,9 +398,13 @@ public class Vbc extends ManagedCompiler  {
 
     public boolean getUseHostCompilerIfAvailable() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUseHostCompilerIfAvailable = null;
         try {
-            return (boolean)classInstance.Get("UseHostCompilerIfAvailable");
+            retObjectUseHostCompilerIfAvailable = classInstance.Get("UseHostCompilerIfAvailable");
+            return (boolean)retObjectUseHostCompilerIfAvailable;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectUseHostCompilerIfAvailable != null ? retObjectUseHostCompilerIfAvailable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -368,7 +412,7 @@ public class Vbc extends ManagedCompiler  {
 
     public void setUseHostCompilerIfAvailable(boolean UseHostCompilerIfAvailable) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UseHostCompilerIfAvailable", UseHostCompilerIfAvailable);
         } catch (JCNativeException jcne) {
@@ -378,16 +422,20 @@ public class Vbc extends ManagedCompiler  {
 
     public final ITaskItem[] getImports() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectImports = null;
         try {
             ArrayList<ITaskItem> resultingArrayList = new ArrayList<ITaskItem>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("Imports");
+            retObjectImports = classInstance.Get("Imports");
+            JCObject resultingObjects = (JCObject)retObjectImports;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ITaskItemImplementation(resultingObject));
             }
             ITaskItem[] resultingArray = new ITaskItem[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectImports != null ? retObjectImports.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -395,7 +443,7 @@ public class Vbc extends ManagedCompiler  {
 
     public void setImports(ITaskItem[] Imports) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Imports", toObjectFromArray(Imports));
         } catch (JCNativeException jcne) {
@@ -405,9 +453,13 @@ public class Vbc extends ManagedCompiler  {
 
     public java.lang.String getBaseAddress() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBaseAddress = null;
         try {
-            return (java.lang.String)classInstance.Get("BaseAddress");
+            retObjectBaseAddress = classInstance.Get("BaseAddress");
+            return (java.lang.String)retObjectBaseAddress;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectBaseAddress != null ? retObjectBaseAddress.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -415,7 +467,7 @@ public class Vbc extends ManagedCompiler  {
 
     public void setBaseAddress(java.lang.String BaseAddress) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BaseAddress", BaseAddress);
         } catch (JCNativeException jcne) {
@@ -425,9 +477,13 @@ public class Vbc extends ManagedCompiler  {
 
     public java.lang.String getDisabledWarnings() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDisabledWarnings = null;
         try {
-            return (java.lang.String)classInstance.Get("DisabledWarnings");
+            retObjectDisabledWarnings = classInstance.Get("DisabledWarnings");
+            return (java.lang.String)retObjectDisabledWarnings;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDisabledWarnings != null ? retObjectDisabledWarnings.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -435,7 +491,7 @@ public class Vbc extends ManagedCompiler  {
 
     public void setDisabledWarnings(java.lang.String DisabledWarnings) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DisabledWarnings", DisabledWarnings);
         } catch (JCNativeException jcne) {
@@ -445,9 +501,13 @@ public class Vbc extends ManagedCompiler  {
 
     public java.lang.String getDocumentationFile() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDocumentationFile = null;
         try {
-            return (java.lang.String)classInstance.Get("DocumentationFile");
+            retObjectDocumentationFile = classInstance.Get("DocumentationFile");
+            return (java.lang.String)retObjectDocumentationFile;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDocumentationFile != null ? retObjectDocumentationFile.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -455,7 +515,7 @@ public class Vbc extends ManagedCompiler  {
 
     public void setDocumentationFile(java.lang.String DocumentationFile) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DocumentationFile", DocumentationFile);
         } catch (JCNativeException jcne) {
@@ -465,9 +525,13 @@ public class Vbc extends ManagedCompiler  {
 
     public java.lang.String getErrorReport() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectErrorReport = null;
         try {
-            return (java.lang.String)classInstance.Get("ErrorReport");
+            retObjectErrorReport = classInstance.Get("ErrorReport");
+            return (java.lang.String)retObjectErrorReport;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectErrorReport != null ? retObjectErrorReport.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -475,7 +539,7 @@ public class Vbc extends ManagedCompiler  {
 
     public void setErrorReport(java.lang.String ErrorReport) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ErrorReport", ErrorReport);
         } catch (JCNativeException jcne) {
@@ -485,9 +549,13 @@ public class Vbc extends ManagedCompiler  {
 
     public java.lang.String getLangVersion() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLangVersion = null;
         try {
-            return (java.lang.String)classInstance.Get("LangVersion");
+            retObjectLangVersion = classInstance.Get("LangVersion");
+            return (java.lang.String)retObjectLangVersion;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectLangVersion != null ? retObjectLangVersion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -495,7 +563,7 @@ public class Vbc extends ManagedCompiler  {
 
     public void setLangVersion(java.lang.String LangVersion) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("LangVersion", LangVersion);
         } catch (JCNativeException jcne) {
@@ -505,9 +573,13 @@ public class Vbc extends ManagedCompiler  {
 
     public java.lang.String getModuleAssemblyName() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectModuleAssemblyName = null;
         try {
-            return (java.lang.String)classInstance.Get("ModuleAssemblyName");
+            retObjectModuleAssemblyName = classInstance.Get("ModuleAssemblyName");
+            return (java.lang.String)retObjectModuleAssemblyName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectModuleAssemblyName != null ? retObjectModuleAssemblyName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -515,7 +587,7 @@ public class Vbc extends ManagedCompiler  {
 
     public void setModuleAssemblyName(java.lang.String ModuleAssemblyName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ModuleAssemblyName", ModuleAssemblyName);
         } catch (JCNativeException jcne) {
@@ -525,9 +597,13 @@ public class Vbc extends ManagedCompiler  {
 
     public java.lang.String getOptionCompare() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOptionCompare = null;
         try {
-            return (java.lang.String)classInstance.Get("OptionCompare");
+            retObjectOptionCompare = classInstance.Get("OptionCompare");
+            return (java.lang.String)retObjectOptionCompare;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectOptionCompare != null ? retObjectOptionCompare.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -535,7 +611,7 @@ public class Vbc extends ManagedCompiler  {
 
     public void setOptionCompare(java.lang.String OptionCompare) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("OptionCompare", OptionCompare);
         } catch (JCNativeException jcne) {
@@ -545,9 +621,13 @@ public class Vbc extends ManagedCompiler  {
 
     public java.lang.String getOptionStrictType() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOptionStrictType = null;
         try {
-            return (java.lang.String)classInstance.Get("OptionStrictType");
+            retObjectOptionStrictType = classInstance.Get("OptionStrictType");
+            return (java.lang.String)retObjectOptionStrictType;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectOptionStrictType != null ? retObjectOptionStrictType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -555,7 +635,7 @@ public class Vbc extends ManagedCompiler  {
 
     public void setOptionStrictType(java.lang.String OptionStrictType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("OptionStrictType", OptionStrictType);
         } catch (JCNativeException jcne) {
@@ -565,9 +645,13 @@ public class Vbc extends ManagedCompiler  {
 
     public java.lang.String getPdbFile() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPdbFile = null;
         try {
-            return (java.lang.String)classInstance.Get("PdbFile");
+            retObjectPdbFile = classInstance.Get("PdbFile");
+            return (java.lang.String)retObjectPdbFile;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectPdbFile != null ? retObjectPdbFile.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -575,7 +659,7 @@ public class Vbc extends ManagedCompiler  {
 
     public void setPdbFile(java.lang.String PdbFile) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PdbFile", PdbFile);
         } catch (JCNativeException jcne) {
@@ -585,9 +669,13 @@ public class Vbc extends ManagedCompiler  {
 
     public java.lang.String getRootNamespace() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRootNamespace = null;
         try {
-            return (java.lang.String)classInstance.Get("RootNamespace");
+            retObjectRootNamespace = classInstance.Get("RootNamespace");
+            return (java.lang.String)retObjectRootNamespace;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectRootNamespace != null ? retObjectRootNamespace.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -595,7 +683,7 @@ public class Vbc extends ManagedCompiler  {
 
     public void setRootNamespace(java.lang.String RootNamespace) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RootNamespace", RootNamespace);
         } catch (JCNativeException jcne) {
@@ -605,9 +693,13 @@ public class Vbc extends ManagedCompiler  {
 
     public java.lang.String getSdkPath() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSdkPath = null;
         try {
-            return (java.lang.String)classInstance.Get("SdkPath");
+            retObjectSdkPath = classInstance.Get("SdkPath");
+            return (java.lang.String)retObjectSdkPath;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSdkPath != null ? retObjectSdkPath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -615,7 +707,7 @@ public class Vbc extends ManagedCompiler  {
 
     public void setSdkPath(java.lang.String SdkPath) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SdkPath", SdkPath);
         } catch (JCNativeException jcne) {
@@ -625,9 +717,13 @@ public class Vbc extends ManagedCompiler  {
 
     public java.lang.String getVBRuntime() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVBRuntime = null;
         try {
-            return (java.lang.String)classInstance.Get("VBRuntime");
+            retObjectVBRuntime = classInstance.Get("VBRuntime");
+            return (java.lang.String)retObjectVBRuntime;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectVBRuntime != null ? retObjectVBRuntime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -635,7 +731,7 @@ public class Vbc extends ManagedCompiler  {
 
     public void setVBRuntime(java.lang.String VBRuntime) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("VBRuntime", VBRuntime);
         } catch (JCNativeException jcne) {
@@ -645,9 +741,13 @@ public class Vbc extends ManagedCompiler  {
 
     public java.lang.String getVBRuntimePath() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVBRuntimePath = null;
         try {
-            return (java.lang.String)classInstance.Get("VBRuntimePath");
+            retObjectVBRuntimePath = classInstance.Get("VBRuntimePath");
+            return (java.lang.String)retObjectVBRuntimePath;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectVBRuntimePath != null ? retObjectVBRuntimePath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -655,7 +755,7 @@ public class Vbc extends ManagedCompiler  {
 
     public void setVBRuntimePath(java.lang.String VBRuntimePath) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("VBRuntimePath", VBRuntimePath);
         } catch (JCNativeException jcne) {
@@ -665,9 +765,13 @@ public class Vbc extends ManagedCompiler  {
 
     public java.lang.String getVerbosity() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVerbosity = null;
         try {
-            return (java.lang.String)classInstance.Get("Verbosity");
+            retObjectVerbosity = classInstance.Get("Verbosity");
+            return (java.lang.String)retObjectVerbosity;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectVerbosity != null ? retObjectVerbosity.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -675,7 +779,7 @@ public class Vbc extends ManagedCompiler  {
 
     public void setVerbosity(java.lang.String Verbosity) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Verbosity", Verbosity);
         } catch (JCNativeException jcne) {
@@ -685,9 +789,13 @@ public class Vbc extends ManagedCompiler  {
 
     public java.lang.String getWarningsAsErrors() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWarningsAsErrors = null;
         try {
-            return (java.lang.String)classInstance.Get("WarningsAsErrors");
+            retObjectWarningsAsErrors = classInstance.Get("WarningsAsErrors");
+            return (java.lang.String)retObjectWarningsAsErrors;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectWarningsAsErrors != null ? retObjectWarningsAsErrors.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -695,7 +803,7 @@ public class Vbc extends ManagedCompiler  {
 
     public void setWarningsAsErrors(java.lang.String WarningsAsErrors) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("WarningsAsErrors", WarningsAsErrors);
         } catch (JCNativeException jcne) {
@@ -705,9 +813,13 @@ public class Vbc extends ManagedCompiler  {
 
     public java.lang.String getWarningsNotAsErrors() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWarningsNotAsErrors = null;
         try {
-            return (java.lang.String)classInstance.Get("WarningsNotAsErrors");
+            retObjectWarningsNotAsErrors = classInstance.Get("WarningsNotAsErrors");
+            return (java.lang.String)retObjectWarningsNotAsErrors;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectWarningsNotAsErrors != null ? retObjectWarningsNotAsErrors.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -715,7 +827,7 @@ public class Vbc extends ManagedCompiler  {
 
     public void setWarningsNotAsErrors(java.lang.String WarningsNotAsErrors) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("WarningsNotAsErrors", WarningsNotAsErrors);
         } catch (JCNativeException jcne) {

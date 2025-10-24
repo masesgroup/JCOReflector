@@ -180,9 +180,13 @@ public class ToolBarButton extends Component  {
     
     public boolean getEnabled() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEnabled = null;
         try {
-            return (boolean)classInstance.Get("Enabled");
+            retObjectEnabled = classInstance.Get("Enabled");
+            return (boolean)retObjectEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectEnabled != null ? retObjectEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,7 +194,7 @@ public class ToolBarButton extends Component  {
 
     public void setEnabled(boolean Enabled) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.componentmodel.Win32Exception, system.NotSupportedException, system.security.SecurityException, system.NullReferenceException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Enabled", Enabled);
         } catch (JCNativeException jcne) {
@@ -200,9 +204,13 @@ public class ToolBarButton extends Component  {
 
     public boolean getPartialPush() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.componentmodel.Win32Exception, system.NotSupportedException, system.security.SecurityException, system.NullReferenceException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPartialPush = null;
         try {
-            return (boolean)classInstance.Get("PartialPush");
+            retObjectPartialPush = classInstance.Get("PartialPush");
+            return (boolean)retObjectPartialPush;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectPartialPush != null ? retObjectPartialPush.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -210,7 +218,7 @@ public class ToolBarButton extends Component  {
 
     public void setPartialPush(boolean PartialPush) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.NotSupportedException, system.NullReferenceException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PartialPush", PartialPush);
         } catch (JCNativeException jcne) {
@@ -220,9 +228,13 @@ public class ToolBarButton extends Component  {
 
     public boolean getPushed() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.Win32Exception, system.NotSupportedException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPushed = null;
         try {
-            return (boolean)classInstance.Get("Pushed");
+            retObjectPushed = classInstance.Get("Pushed");
+            return (boolean)retObjectPushed;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectPushed != null ? retObjectPushed.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -230,7 +242,7 @@ public class ToolBarButton extends Component  {
 
     public void setPushed(boolean Pushed) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.NotSupportedException, system.security.SecurityException, system.NullReferenceException, system.OutOfMemoryException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Pushed", Pushed);
         } catch (JCNativeException jcne) {
@@ -240,9 +252,13 @@ public class ToolBarButton extends Component  {
 
     public boolean getVisible() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVisible = null;
         try {
-            return (boolean)classInstance.Get("Visible");
+            retObjectVisible = classInstance.Get("Visible");
+            return (boolean)retObjectVisible;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectVisible != null ? retObjectVisible.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -250,7 +266,7 @@ public class ToolBarButton extends Component  {
 
     public void setVisible(boolean Visible) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.NotSupportedException, system.NullReferenceException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Visible", Visible);
         } catch (JCNativeException jcne) {
@@ -260,9 +276,20 @@ public class ToolBarButton extends Component  {
 
     public int getImageIndex() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectImageIndex = null;
         try {
-            return (int)classInstance.Get("ImageIndex");
+            retObjectImageIndex = classInstance.Get("ImageIndex");
+            return (int)retObjectImageIndex;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectImageIndex_ToString = retObjectImageIndex == null ? "null" : retObjectImageIndex.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectImageIndexNumber = (java.lang.Number)retObjectImageIndex;
+                return retObjectImageIndexNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectImageIndex != null ? retObjectImageIndex.getClass() : "null", retObjectImageIndex_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -270,7 +297,7 @@ public class ToolBarButton extends Component  {
 
     public void setImageIndex(int ImageIndex) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.NullReferenceException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ImageIndex", ImageIndex);
         } catch (JCNativeException jcne) {
@@ -280,10 +307,14 @@ public class ToolBarButton extends Component  {
 
     public Rectangle getRectangle() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.NotSupportedException, system.configuration.ConfigurationErrorsException, system.security.SecurityException, system.NullReferenceException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRectangle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Rectangle");
+            retObjectRectangle = classInstance.Get("Rectangle");
+            JCObject val = (JCObject)retObjectRectangle;
             return new Rectangle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRectangle != null ? retObjectRectangle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -291,10 +322,14 @@ public class ToolBarButton extends Component  {
 
     public NetObject getTag() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTag = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Tag");
+            retObjectTag = classInstance.Get("Tag");
+            JCObject val = (JCObject)retObjectTag;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTag != null ? retObjectTag.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -302,7 +337,7 @@ public class ToolBarButton extends Component  {
 
     public void setTag(NetObject Tag) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Tag", Tag == null ? null : Tag.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -312,9 +347,13 @@ public class ToolBarButton extends Component  {
 
     public java.lang.String getImageKey() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectImageKey = null;
         try {
-            return (java.lang.String)classInstance.Get("ImageKey");
+            retObjectImageKey = classInstance.Get("ImageKey");
+            return (java.lang.String)retObjectImageKey;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectImageKey != null ? retObjectImageKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -322,7 +361,7 @@ public class ToolBarButton extends Component  {
 
     public void setImageKey(java.lang.String ImageKey) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.NotSupportedException, system.NullReferenceException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ImageKey", ImageKey);
         } catch (JCNativeException jcne) {
@@ -332,9 +371,13 @@ public class ToolBarButton extends Component  {
 
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectName = null;
         try {
-            return (java.lang.String)classInstance.Get("Name");
+            retObjectName = classInstance.Get("Name");
+            return (java.lang.String)retObjectName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectName != null ? retObjectName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -342,7 +385,7 @@ public class ToolBarButton extends Component  {
 
     public void setName(java.lang.String Name) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Name", Name);
         } catch (JCNativeException jcne) {
@@ -352,9 +395,13 @@ public class ToolBarButton extends Component  {
 
     public java.lang.String getText() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectText = null;
         try {
-            return (java.lang.String)classInstance.Get("Text");
+            retObjectText = classInstance.Get("Text");
+            return (java.lang.String)retObjectText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectText != null ? retObjectText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -362,7 +409,7 @@ public class ToolBarButton extends Component  {
 
     public void setText(java.lang.String Text) throws Throwable, system.NullReferenceException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.NotSupportedException, system.security.SecurityException, system.OutOfMemoryException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Text", Text);
         } catch (JCNativeException jcne) {
@@ -372,9 +419,13 @@ public class ToolBarButton extends Component  {
 
     public java.lang.String getToolTipText() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToolTipText = null;
         try {
-            return (java.lang.String)classInstance.Get("ToolTipText");
+            retObjectToolTipText = classInstance.Get("ToolTipText");
+            return (java.lang.String)retObjectToolTipText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectToolTipText != null ? retObjectToolTipText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -382,7 +433,7 @@ public class ToolBarButton extends Component  {
 
     public void setToolTipText(java.lang.String ToolTipText) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ToolTipText", ToolTipText);
         } catch (JCNativeException jcne) {
@@ -392,10 +443,14 @@ public class ToolBarButton extends Component  {
 
     public Menu getDropDownMenu() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDropDownMenu = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DropDownMenu");
+            retObjectDropDownMenu = classInstance.Get("DropDownMenu");
+            JCObject val = (JCObject)retObjectDropDownMenu;
             return new Menu(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDropDownMenu != null ? retObjectDropDownMenu.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -403,7 +458,7 @@ public class ToolBarButton extends Component  {
 
     public void setDropDownMenu(Menu DropDownMenu) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DropDownMenu", DropDownMenu == null ? null : DropDownMenu.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -413,10 +468,14 @@ public class ToolBarButton extends Component  {
 
     public ToolBar getParent() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectParent = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Parent");
+            retObjectParent = classInstance.Get("Parent");
+            JCObject val = (JCObject)retObjectParent;
             return new ToolBar(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParent != null ? retObjectParent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -424,10 +483,14 @@ public class ToolBarButton extends Component  {
 
     public ToolBarButtonStyle getStyle() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Style");
+            retObjectStyle = classInstance.Get("Style");
+            JCObject val = (JCObject)retObjectStyle;
             return new ToolBarButtonStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStyle != null ? retObjectStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -435,7 +498,7 @@ public class ToolBarButton extends Component  {
 
     public void setStyle(ToolBarButtonStyle Style) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NullReferenceException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Style", Style == null ? null : Style.getJCOInstance());
         } catch (JCNativeException jcne) {

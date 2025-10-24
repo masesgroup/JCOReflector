@@ -199,10 +199,14 @@ public class XmlReflectionImporter extends NetObject  {
     
     public XmlMembersMapping ImportMembersMapping(java.lang.String elementName, java.lang.String ns, XmlReflectionMember[] members, boolean hasWrapperElement) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectImportMembersMapping = null;
         try {
-            JCObject objImportMembersMapping = (JCObject)classInstance.Invoke("ImportMembersMapping", elementName, ns, toObjectFromArray(members), hasWrapperElement);
+            retObjectImportMembersMapping = classInstance.Invoke("ImportMembersMapping", elementName, ns, toObjectFromArray(members), hasWrapperElement);
+            JCObject objImportMembersMapping = (JCObject)retObjectImportMembersMapping;
             return new XmlMembersMapping(objImportMembersMapping);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectImportMembersMapping != null ? retObjectImportMembersMapping.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -210,10 +214,14 @@ public class XmlReflectionImporter extends NetObject  {
 
     public XmlMembersMapping ImportMembersMapping(java.lang.String elementName, java.lang.String ns, XmlReflectionMember[] members, boolean hasWrapperElement, boolean rpc) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.NotSupportedException, system.configuration.ConfigurationErrorsException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotImplementedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectImportMembersMapping = null;
         try {
-            JCObject objImportMembersMapping = (JCObject)classInstance.Invoke("ImportMembersMapping", elementName, ns, toObjectFromArray(members), hasWrapperElement, rpc);
+            retObjectImportMembersMapping = classInstance.Invoke("ImportMembersMapping", elementName, ns, toObjectFromArray(members), hasWrapperElement, rpc);
+            JCObject objImportMembersMapping = (JCObject)retObjectImportMembersMapping;
             return new XmlMembersMapping(objImportMembersMapping);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectImportMembersMapping != null ? retObjectImportMembersMapping.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -221,10 +229,14 @@ public class XmlReflectionImporter extends NetObject  {
 
     public XmlMembersMapping ImportMembersMapping(java.lang.String elementName, java.lang.String ns, XmlReflectionMember[] members, boolean hasWrapperElement, boolean rpc, boolean openModel) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.NotSupportedException, system.security.SecurityException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.FormatException, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectImportMembersMapping = null;
         try {
-            JCObject objImportMembersMapping = (JCObject)classInstance.Invoke("ImportMembersMapping", elementName, ns, toObjectFromArray(members), hasWrapperElement, rpc, openModel);
+            retObjectImportMembersMapping = classInstance.Invoke("ImportMembersMapping", elementName, ns, toObjectFromArray(members), hasWrapperElement, rpc, openModel);
+            JCObject objImportMembersMapping = (JCObject)retObjectImportMembersMapping;
             return new XmlMembersMapping(objImportMembersMapping);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectImportMembersMapping != null ? retObjectImportMembersMapping.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -232,10 +244,14 @@ public class XmlReflectionImporter extends NetObject  {
 
     public XmlMembersMapping ImportMembersMapping(java.lang.String elementName, java.lang.String ns, XmlReflectionMember[] members, boolean hasWrapperElement, boolean rpc, boolean openModel, XmlMappingAccess access) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.NotSupportedException, system.security.SecurityException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.FormatException, system.OverflowException, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectImportMembersMapping = null;
         try {
-            JCObject objImportMembersMapping = (JCObject)classInstance.Invoke("ImportMembersMapping", elementName, ns, toObjectFromArray(members), hasWrapperElement, rpc, openModel, access == null ? null : access.getJCOInstance());
+            retObjectImportMembersMapping = classInstance.Invoke("ImportMembersMapping", elementName, ns, toObjectFromArray(members), hasWrapperElement, rpc, openModel, access == null ? null : access.getJCOInstance());
+            JCObject objImportMembersMapping = (JCObject)retObjectImportMembersMapping;
             return new XmlMembersMapping(objImportMembersMapping);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectImportMembersMapping != null ? retObjectImportMembersMapping.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -243,10 +259,14 @@ public class XmlReflectionImporter extends NetObject  {
 
     public XmlTypeMapping ImportTypeMapping(NetType type) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotSupportedException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.security.SecurityException, system.NotImplementedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectImportTypeMapping = null;
         try {
-            JCObject objImportTypeMapping = (JCObject)classInstance.Invoke("ImportTypeMapping", type == null ? null : type.getJCOInstance());
+            retObjectImportTypeMapping = classInstance.Invoke("ImportTypeMapping", type == null ? null : type.getJCOInstance());
+            JCObject objImportTypeMapping = (JCObject)retObjectImportTypeMapping;
             return new XmlTypeMapping(objImportTypeMapping);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectImportTypeMapping != null ? retObjectImportTypeMapping.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -254,10 +274,14 @@ public class XmlReflectionImporter extends NetObject  {
 
     public XmlTypeMapping ImportTypeMapping(NetType type, java.lang.String defaultNamespace) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotSupportedException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.security.SecurityException, system.NotImplementedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectImportTypeMapping = null;
         try {
-            JCObject objImportTypeMapping = (JCObject)classInstance.Invoke("ImportTypeMapping", type == null ? null : type.getJCOInstance(), defaultNamespace);
+            retObjectImportTypeMapping = classInstance.Invoke("ImportTypeMapping", type == null ? null : type.getJCOInstance(), defaultNamespace);
+            JCObject objImportTypeMapping = (JCObject)retObjectImportTypeMapping;
             return new XmlTypeMapping(objImportTypeMapping);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectImportTypeMapping != null ? retObjectImportTypeMapping.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -265,10 +289,14 @@ public class XmlReflectionImporter extends NetObject  {
 
     public XmlTypeMapping ImportTypeMapping(NetType type, XmlRootAttribute root) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotSupportedException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.security.SecurityException, system.NotImplementedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectImportTypeMapping = null;
         try {
-            JCObject objImportTypeMapping = (JCObject)classInstance.Invoke("ImportTypeMapping", type == null ? null : type.getJCOInstance(), root == null ? null : root.getJCOInstance());
+            retObjectImportTypeMapping = classInstance.Invoke("ImportTypeMapping", type == null ? null : type.getJCOInstance(), root == null ? null : root.getJCOInstance());
+            JCObject objImportTypeMapping = (JCObject)retObjectImportTypeMapping;
             return new XmlTypeMapping(objImportTypeMapping);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectImportTypeMapping != null ? retObjectImportTypeMapping.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -276,10 +304,14 @@ public class XmlReflectionImporter extends NetObject  {
 
     public XmlTypeMapping ImportTypeMapping(NetType type, XmlRootAttribute root, java.lang.String defaultNamespace) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotSupportedException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.security.SecurityException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.FormatException, system.OverflowException, system.OutOfMemoryException, system.RankException, system.xml.schema.XmlSchemaException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectImportTypeMapping = null;
         try {
-            JCObject objImportTypeMapping = (JCObject)classInstance.Invoke("ImportTypeMapping", type == null ? null : type.getJCOInstance(), root == null ? null : root.getJCOInstance(), defaultNamespace);
+            retObjectImportTypeMapping = classInstance.Invoke("ImportTypeMapping", type == null ? null : type.getJCOInstance(), root == null ? null : root.getJCOInstance(), defaultNamespace);
+            JCObject objImportTypeMapping = (JCObject)retObjectImportTypeMapping;
             return new XmlTypeMapping(objImportTypeMapping);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectImportTypeMapping != null ? retObjectImportTypeMapping.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -287,7 +319,7 @@ public class XmlReflectionImporter extends NetObject  {
 
     public void IncludeType(NetType type) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.FormatException, system.OverflowException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotSupportedException, system.InvalidOperationException, system.security.SecurityException, system.NotImplementedException, system.OutOfMemoryException, system.RankException, system.xml.schema.XmlSchemaException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("IncludeType", type == null ? null : type.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -297,7 +329,7 @@ public class XmlReflectionImporter extends NetObject  {
 
     public void IncludeTypes(ICustomAttributeProvider provider) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.FormatException, system.OverflowException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("IncludeTypes", provider == null ? null : provider.getJCOInstance());
         } catch (JCNativeException jcne) {

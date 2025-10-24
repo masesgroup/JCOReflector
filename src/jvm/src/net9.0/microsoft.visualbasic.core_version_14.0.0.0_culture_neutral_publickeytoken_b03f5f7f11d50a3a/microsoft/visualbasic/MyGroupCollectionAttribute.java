@@ -170,9 +170,13 @@ public class MyGroupCollectionAttribute extends Attribute  {
     
     public java.lang.String getCreateMethod() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateMethod = null;
         try {
-            return (java.lang.String)classInstance.Get("CreateMethod");
+            retObjectCreateMethod = classInstance.Get("CreateMethod");
+            return (java.lang.String)retObjectCreateMethod;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectCreateMethod != null ? retObjectCreateMethod.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,9 +184,13 @@ public class MyGroupCollectionAttribute extends Attribute  {
 
     public java.lang.String getDefaultInstanceAlias() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDefaultInstanceAlias = null;
         try {
-            return (java.lang.String)classInstance.Get("DefaultInstanceAlias");
+            retObjectDefaultInstanceAlias = classInstance.Get("DefaultInstanceAlias");
+            return (java.lang.String)retObjectDefaultInstanceAlias;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDefaultInstanceAlias != null ? retObjectDefaultInstanceAlias.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,9 +198,13 @@ public class MyGroupCollectionAttribute extends Attribute  {
 
     public java.lang.String getDisposeMethod() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDisposeMethod = null;
         try {
-            return (java.lang.String)classInstance.Get("DisposeMethod");
+            retObjectDisposeMethod = classInstance.Get("DisposeMethod");
+            return (java.lang.String)retObjectDisposeMethod;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDisposeMethod != null ? retObjectDisposeMethod.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,9 +212,13 @@ public class MyGroupCollectionAttribute extends Attribute  {
 
     public java.lang.String getMyGroupName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMyGroupName = null;
         try {
-            return (java.lang.String)classInstance.Get("MyGroupName");
+            retObjectMyGroupName = classInstance.Get("MyGroupName");
+            return (java.lang.String)retObjectMyGroupName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectMyGroupName != null ? retObjectMyGroupName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

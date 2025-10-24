@@ -172,7 +172,7 @@ public class Repeater extends Control implements system.web.ui.INamingContainer 
     
     public void DataBind() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DataBind");
         } catch (JCNativeException jcne) {
@@ -186,10 +186,14 @@ public class Repeater extends Control implements system.web.ui.INamingContainer 
     
     public NetObject getDataSource() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDataSource = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DataSource");
+            retObjectDataSource = classInstance.Get("DataSource");
+            JCObject val = (JCObject)retObjectDataSource;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDataSource != null ? retObjectDataSource.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,7 +201,7 @@ public class Repeater extends Control implements system.web.ui.INamingContainer 
 
     public void setDataSource(NetObject DataSource) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.web.HttpException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DataSource", DataSource == null ? null : DataSource.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -207,9 +211,13 @@ public class Repeater extends Control implements system.web.ui.INamingContainer 
 
     public java.lang.String getDataMember() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDataMember = null;
         try {
-            return (java.lang.String)classInstance.Get("DataMember");
+            retObjectDataMember = classInstance.Get("DataMember");
+            return (java.lang.String)retObjectDataMember;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDataMember != null ? retObjectDataMember.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -217,7 +225,7 @@ public class Repeater extends Control implements system.web.ui.INamingContainer 
 
     public void setDataMember(java.lang.String DataMember) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.web.HttpException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DataMember", DataMember);
         } catch (JCNativeException jcne) {
@@ -227,9 +235,13 @@ public class Repeater extends Control implements system.web.ui.INamingContainer 
 
     public java.lang.String getDataSourceID() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDataSourceID = null;
         try {
-            return (java.lang.String)classInstance.Get("DataSourceID");
+            retObjectDataSourceID = classInstance.Get("DataSourceID");
+            return (java.lang.String)retObjectDataSourceID;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDataSourceID != null ? retObjectDataSourceID.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -237,7 +249,7 @@ public class Repeater extends Control implements system.web.ui.INamingContainer 
 
     public void setDataSourceID(java.lang.String DataSourceID) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.web.HttpException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DataSourceID", DataSourceID);
         } catch (JCNativeException jcne) {
@@ -247,9 +259,13 @@ public class Repeater extends Control implements system.web.ui.INamingContainer 
 
     public java.lang.String getItemType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectItemType = null;
         try {
-            return (java.lang.String)classInstance.Get("ItemType");
+            retObjectItemType = classInstance.Get("ItemType");
+            return (java.lang.String)retObjectItemType;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectItemType != null ? retObjectItemType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -257,7 +273,7 @@ public class Repeater extends Control implements system.web.ui.INamingContainer 
 
     public void setItemType(java.lang.String ItemType) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.web.HttpException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ItemType", ItemType);
         } catch (JCNativeException jcne) {
@@ -267,9 +283,13 @@ public class Repeater extends Control implements system.web.ui.INamingContainer 
 
     public java.lang.String getSelectMethod() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectMethod = null;
         try {
-            return (java.lang.String)classInstance.Get("SelectMethod");
+            retObjectSelectMethod = classInstance.Get("SelectMethod");
+            return (java.lang.String)retObjectSelectMethod;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSelectMethod != null ? retObjectSelectMethod.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -277,7 +297,7 @@ public class Repeater extends Control implements system.web.ui.INamingContainer 
 
     public void setSelectMethod(java.lang.String SelectMethod) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.web.HttpException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SelectMethod", SelectMethod);
         } catch (JCNativeException jcne) {
@@ -287,10 +307,14 @@ public class Repeater extends Control implements system.web.ui.INamingContainer 
 
     public ITemplate getAlternatingItemTemplate() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAlternatingItemTemplate = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AlternatingItemTemplate");
+            retObjectAlternatingItemTemplate = classInstance.Get("AlternatingItemTemplate");
+            JCObject val = (JCObject)retObjectAlternatingItemTemplate;
             return new ITemplateImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAlternatingItemTemplate != null ? retObjectAlternatingItemTemplate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -298,7 +322,7 @@ public class Repeater extends Control implements system.web.ui.INamingContainer 
 
     public void setAlternatingItemTemplate(ITemplate AlternatingItemTemplate) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AlternatingItemTemplate", AlternatingItemTemplate == null ? null : AlternatingItemTemplate.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -308,10 +332,14 @@ public class Repeater extends Control implements system.web.ui.INamingContainer 
 
     public ITemplate getFooterTemplate() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFooterTemplate = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("FooterTemplate");
+            retObjectFooterTemplate = classInstance.Get("FooterTemplate");
+            JCObject val = (JCObject)retObjectFooterTemplate;
             return new ITemplateImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFooterTemplate != null ? retObjectFooterTemplate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -319,7 +347,7 @@ public class Repeater extends Control implements system.web.ui.INamingContainer 
 
     public void setFooterTemplate(ITemplate FooterTemplate) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FooterTemplate", FooterTemplate == null ? null : FooterTemplate.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -329,10 +357,14 @@ public class Repeater extends Control implements system.web.ui.INamingContainer 
 
     public ITemplate getHeaderTemplate() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHeaderTemplate = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("HeaderTemplate");
+            retObjectHeaderTemplate = classInstance.Get("HeaderTemplate");
+            JCObject val = (JCObject)retObjectHeaderTemplate;
             return new ITemplateImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHeaderTemplate != null ? retObjectHeaderTemplate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -340,7 +372,7 @@ public class Repeater extends Control implements system.web.ui.INamingContainer 
 
     public void setHeaderTemplate(ITemplate HeaderTemplate) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("HeaderTemplate", HeaderTemplate == null ? null : HeaderTemplate.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -350,10 +382,14 @@ public class Repeater extends Control implements system.web.ui.INamingContainer 
 
     public ITemplate getItemTemplate() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectItemTemplate = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ItemTemplate");
+            retObjectItemTemplate = classInstance.Get("ItemTemplate");
+            JCObject val = (JCObject)retObjectItemTemplate;
             return new ITemplateImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectItemTemplate != null ? retObjectItemTemplate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -361,7 +397,7 @@ public class Repeater extends Control implements system.web.ui.INamingContainer 
 
     public void setItemTemplate(ITemplate ItemTemplate) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ItemTemplate", ItemTemplate == null ? null : ItemTemplate.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -371,10 +407,14 @@ public class Repeater extends Control implements system.web.ui.INamingContainer 
 
     public ITemplate getSeparatorTemplate() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSeparatorTemplate = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SeparatorTemplate");
+            retObjectSeparatorTemplate = classInstance.Get("SeparatorTemplate");
+            JCObject val = (JCObject)retObjectSeparatorTemplate;
             return new ITemplateImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSeparatorTemplate != null ? retObjectSeparatorTemplate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -382,7 +422,7 @@ public class Repeater extends Control implements system.web.ui.INamingContainer 
 
     public void setSeparatorTemplate(ITemplate SeparatorTemplate) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SeparatorTemplate", SeparatorTemplate == null ? null : SeparatorTemplate.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -392,10 +432,14 @@ public class Repeater extends Control implements system.web.ui.INamingContainer 
 
     public RepeaterItemCollection getItems() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.configuration.provider.ProviderException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectItems = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Items");
+            retObjectItems = classInstance.Get("Items");
+            JCObject val = (JCObject)retObjectItems;
             return new RepeaterItemCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectItems != null ? retObjectItems.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -408,7 +452,7 @@ public class Repeater extends Control implements system.web.ui.INamingContainer 
 
     public void addCallingDataMethods(CallingDataMethodsEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("CallingDataMethods", handler);
         } catch (JCNativeException jcne) {
@@ -418,7 +462,7 @@ public class Repeater extends Control implements system.web.ui.INamingContainer 
 
     public void removeCallingDataMethods(CallingDataMethodsEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("CallingDataMethods", handler);
         } catch (JCNativeException jcne) {
@@ -428,7 +472,7 @@ public class Repeater extends Control implements system.web.ui.INamingContainer 
 
     public void addCreatingModelDataSource(CreatingModelDataSourceEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("CreatingModelDataSource", handler);
         } catch (JCNativeException jcne) {
@@ -438,7 +482,7 @@ public class Repeater extends Control implements system.web.ui.INamingContainer 
 
     public void removeCreatingModelDataSource(CreatingModelDataSourceEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("CreatingModelDataSource", handler);
         } catch (JCNativeException jcne) {
@@ -448,7 +492,7 @@ public class Repeater extends Control implements system.web.ui.INamingContainer 
 
     public void addItemCommand(RepeaterCommandEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ItemCommand", handler);
         } catch (JCNativeException jcne) {
@@ -458,7 +502,7 @@ public class Repeater extends Control implements system.web.ui.INamingContainer 
 
     public void removeItemCommand(RepeaterCommandEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ItemCommand", handler);
         } catch (JCNativeException jcne) {
@@ -468,7 +512,7 @@ public class Repeater extends Control implements system.web.ui.INamingContainer 
 
     public void addItemCreated(RepeaterItemEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ItemCreated", handler);
         } catch (JCNativeException jcne) {
@@ -478,7 +522,7 @@ public class Repeater extends Control implements system.web.ui.INamingContainer 
 
     public void removeItemCreated(RepeaterItemEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ItemCreated", handler);
         } catch (JCNativeException jcne) {
@@ -488,7 +532,7 @@ public class Repeater extends Control implements system.web.ui.INamingContainer 
 
     public void addItemDataBound(RepeaterItemEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ItemDataBound", handler);
         } catch (JCNativeException jcne) {
@@ -498,7 +542,7 @@ public class Repeater extends Control implements system.web.ui.INamingContainer 
 
     public void removeItemDataBound(RepeaterItemEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ItemDataBound", handler);
         } catch (JCNativeException jcne) {

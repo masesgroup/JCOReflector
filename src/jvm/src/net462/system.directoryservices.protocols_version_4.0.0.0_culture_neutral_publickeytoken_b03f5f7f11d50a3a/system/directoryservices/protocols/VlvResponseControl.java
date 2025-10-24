@@ -161,10 +161,12 @@ public class VlvResponseControl extends DirectoryControl  {
     
     public byte[] getContextId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContextId = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("ContextId");
+            retObjectContextId = classInstance.Get("ContextId");
+            JCObject resultingObjects = (JCObject)retObjectContextId;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -173,6 +175,8 @@ public class VlvResponseControl extends DirectoryControl  {
 				resultingArray[indexContextId] = (byte)resultingArrayList.get(indexContextId);
 			}
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into JCObject", retObjectContextId != null ? retObjectContextId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,9 +184,20 @@ public class VlvResponseControl extends DirectoryControl  {
 
     public int getContentCount() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContentCount = null;
         try {
-            return (int)classInstance.Get("ContentCount");
+            retObjectContentCount = classInstance.Get("ContentCount");
+            return (int)retObjectContentCount;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectContentCount_ToString = retObjectContentCount == null ? "null" : retObjectContentCount.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectContentCountNumber = (java.lang.Number)retObjectContentCount;
+                return retObjectContentCountNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectContentCount != null ? retObjectContentCount.getClass() : "null", retObjectContentCount_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,9 +205,20 @@ public class VlvResponseControl extends DirectoryControl  {
 
     public int getTargetPosition() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTargetPosition = null;
         try {
-            return (int)classInstance.Get("TargetPosition");
+            retObjectTargetPosition = classInstance.Get("TargetPosition");
+            return (int)retObjectTargetPosition;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectTargetPosition_ToString = retObjectTargetPosition == null ? "null" : retObjectTargetPosition.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectTargetPositionNumber = (java.lang.Number)retObjectTargetPosition;
+                return retObjectTargetPositionNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectTargetPosition != null ? retObjectTargetPosition.getClass() : "null", retObjectTargetPosition_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,10 +226,14 @@ public class VlvResponseControl extends DirectoryControl  {
 
     public ResultCode getResult() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResult = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Result");
+            retObjectResult = classInstance.Get("Result");
+            JCObject val = (JCObject)retObjectResult;
             return new ResultCode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectResult != null ? retObjectResult.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

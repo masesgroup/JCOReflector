@@ -154,9 +154,13 @@ public class PackUriHelper extends NetObject  {
     
     public static boolean IsRelationshipPartUri(Uri partUri) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.UriFormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsRelationshipPartUri = null;
         try {
-            return (boolean)classType.Invoke("IsRelationshipPartUri", partUri == null ? null : partUri.getJCOInstance());
+            retObjectIsRelationshipPartUri = classType.Invoke("IsRelationshipPartUri", partUri == null ? null : partUri.getJCOInstance());
+            return (boolean)retObjectIsRelationshipPartUri;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsRelationshipPartUri != null ? retObjectIsRelationshipPartUri.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -164,9 +168,20 @@ public class PackUriHelper extends NetObject  {
 
     public static int ComparePackUri(Uri firstPackUri, Uri secondPackUri) throws Throwable, system.ArgumentException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.diagnostics.UnreachableException, system.UriFormatException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectComparePackUri = null;
         try {
-            return (int)classType.Invoke("ComparePackUri", firstPackUri == null ? null : firstPackUri.getJCOInstance(), secondPackUri == null ? null : secondPackUri.getJCOInstance());
+            retObjectComparePackUri = classType.Invoke("ComparePackUri", firstPackUri == null ? null : firstPackUri.getJCOInstance(), secondPackUri == null ? null : secondPackUri.getJCOInstance());
+            return (int)retObjectComparePackUri;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectComparePackUri_ToString = retObjectComparePackUri == null ? "null" : retObjectComparePackUri.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectComparePackUriNumber = (java.lang.Number)retObjectComparePackUri;
+                return retObjectComparePackUriNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectComparePackUri != null ? retObjectComparePackUri.getClass() : "null", retObjectComparePackUri_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -174,9 +189,20 @@ public class PackUriHelper extends NetObject  {
 
     public static int ComparePartUri(Uri firstPartUri, Uri secondPartUri) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.UriFormatException, system.globalization.CultureNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectComparePartUri = null;
         try {
-            return (int)classType.Invoke("ComparePartUri", firstPartUri == null ? null : firstPartUri.getJCOInstance(), secondPartUri == null ? null : secondPartUri.getJCOInstance());
+            retObjectComparePartUri = classType.Invoke("ComparePartUri", firstPartUri == null ? null : firstPartUri.getJCOInstance(), secondPartUri == null ? null : secondPartUri.getJCOInstance());
+            return (int)retObjectComparePartUri;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectComparePartUri_ToString = retObjectComparePartUri == null ? "null" : retObjectComparePartUri.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectComparePartUriNumber = (java.lang.Number)retObjectComparePartUri;
+                return retObjectComparePartUriNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectComparePartUri != null ? retObjectComparePartUri.getClass() : "null", retObjectComparePartUri_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -184,10 +210,14 @@ public class PackUriHelper extends NetObject  {
 
     public static Uri Create(Uri packageUri, Uri partUri, java.lang.String fragment) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.UriFormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
         try {
-            JCObject objCreate = (JCObject)classType.Invoke("Create", packageUri == null ? null : packageUri.getJCOInstance(), partUri == null ? null : partUri.getJCOInstance(), fragment);
+            retObjectCreate = classType.Invoke("Create", packageUri == null ? null : packageUri.getJCOInstance(), partUri == null ? null : partUri.getJCOInstance(), fragment);
+            JCObject objCreate = (JCObject)retObjectCreate;
             return new Uri(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,10 +225,14 @@ public class PackUriHelper extends NetObject  {
 
     public static Uri Create(Uri packageUri, Uri partUri) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
         try {
-            JCObject objCreate = (JCObject)classType.Invoke("Create", packageUri == null ? null : packageUri.getJCOInstance(), partUri == null ? null : partUri.getJCOInstance());
+            retObjectCreate = classType.Invoke("Create", packageUri == null ? null : packageUri.getJCOInstance(), partUri == null ? null : partUri.getJCOInstance());
+            JCObject objCreate = (JCObject)retObjectCreate;
             return new Uri(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -206,10 +240,14 @@ public class PackUriHelper extends NetObject  {
 
     public static Uri Create(Uri packageUri) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
         try {
-            JCObject objCreate = (JCObject)classType.Invoke("Create", packageUri == null ? null : packageUri.getJCOInstance());
+            retObjectCreate = classType.Invoke("Create", packageUri == null ? null : packageUri.getJCOInstance());
+            JCObject objCreate = (JCObject)retObjectCreate;
             return new Uri(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -217,10 +255,14 @@ public class PackUriHelper extends NetObject  {
 
     public static Uri CreatePartUri(Uri partUri) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.diagnostics.UnreachableException, system.IndexOutOfRangeException, system.UriFormatException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreatePartUri = null;
         try {
-            JCObject objCreatePartUri = (JCObject)classType.Invoke("CreatePartUri", partUri == null ? null : partUri.getJCOInstance());
+            retObjectCreatePartUri = classType.Invoke("CreatePartUri", partUri == null ? null : partUri.getJCOInstance());
+            JCObject objCreatePartUri = (JCObject)retObjectCreatePartUri;
             return new Uri(objCreatePartUri);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreatePartUri != null ? retObjectCreatePartUri.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -228,10 +270,14 @@ public class PackUriHelper extends NetObject  {
 
     public static Uri GetNormalizedPartUri(Uri partUri) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.UriFormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetNormalizedPartUri = null;
         try {
-            JCObject objGetNormalizedPartUri = (JCObject)classType.Invoke("GetNormalizedPartUri", partUri == null ? null : partUri.getJCOInstance());
+            retObjectGetNormalizedPartUri = classType.Invoke("GetNormalizedPartUri", partUri == null ? null : partUri.getJCOInstance());
+            JCObject objGetNormalizedPartUri = (JCObject)retObjectGetNormalizedPartUri;
             return new Uri(objGetNormalizedPartUri);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetNormalizedPartUri != null ? retObjectGetNormalizedPartUri.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -239,10 +285,14 @@ public class PackUriHelper extends NetObject  {
 
     public static Uri GetPackageUri(Uri packUri) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.diagnostics.UnreachableException, system.IndexOutOfRangeException, system.UriFormatException, system.OutOfMemoryException, system.globalization.CultureNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetPackageUri = null;
         try {
-            JCObject objGetPackageUri = (JCObject)classType.Invoke("GetPackageUri", packUri == null ? null : packUri.getJCOInstance());
+            retObjectGetPackageUri = classType.Invoke("GetPackageUri", packUri == null ? null : packUri.getJCOInstance());
+            JCObject objGetPackageUri = (JCObject)retObjectGetPackageUri;
             return new Uri(objGetPackageUri);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetPackageUri != null ? retObjectGetPackageUri.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -250,10 +300,14 @@ public class PackUriHelper extends NetObject  {
 
     public static Uri GetPartUri(Uri packUri) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.diagnostics.UnreachableException, system.IndexOutOfRangeException, system.UriFormatException, system.OutOfMemoryException, system.globalization.CultureNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetPartUri = null;
         try {
-            JCObject objGetPartUri = (JCObject)classType.Invoke("GetPartUri", packUri == null ? null : packUri.getJCOInstance());
+            retObjectGetPartUri = classType.Invoke("GetPartUri", packUri == null ? null : packUri.getJCOInstance());
+            JCObject objGetPartUri = (JCObject)retObjectGetPartUri;
             return new Uri(objGetPartUri);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetPartUri != null ? retObjectGetPartUri.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -261,10 +315,14 @@ public class PackUriHelper extends NetObject  {
 
     public static Uri GetRelationshipPartUri(Uri partUri) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.diagnostics.UnreachableException, system.UriFormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetRelationshipPartUri = null;
         try {
-            JCObject objGetRelationshipPartUri = (JCObject)classType.Invoke("GetRelationshipPartUri", partUri == null ? null : partUri.getJCOInstance());
+            retObjectGetRelationshipPartUri = classType.Invoke("GetRelationshipPartUri", partUri == null ? null : partUri.getJCOInstance());
+            JCObject objGetRelationshipPartUri = (JCObject)retObjectGetRelationshipPartUri;
             return new Uri(objGetRelationshipPartUri);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetRelationshipPartUri != null ? retObjectGetRelationshipPartUri.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -272,10 +330,14 @@ public class PackUriHelper extends NetObject  {
 
     public static Uri GetRelativeUri(Uri sourcePartUri, Uri targetPartUri) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.UriFormatException, system.OutOfMemoryException, system.diagnostics.UnreachableException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetRelativeUri = null;
         try {
-            JCObject objGetRelativeUri = (JCObject)classType.Invoke("GetRelativeUri", sourcePartUri == null ? null : sourcePartUri.getJCOInstance(), targetPartUri == null ? null : targetPartUri.getJCOInstance());
+            retObjectGetRelativeUri = classType.Invoke("GetRelativeUri", sourcePartUri == null ? null : sourcePartUri.getJCOInstance(), targetPartUri == null ? null : targetPartUri.getJCOInstance());
+            JCObject objGetRelativeUri = (JCObject)retObjectGetRelativeUri;
             return new Uri(objGetRelativeUri);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetRelativeUri != null ? retObjectGetRelativeUri.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -283,10 +345,14 @@ public class PackUriHelper extends NetObject  {
 
     public static Uri GetSourcePartUriFromRelationshipPartUri(Uri relationshipPartUri) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.UriFormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetSourcePartUriFromRelationshipPartUri = null;
         try {
-            JCObject objGetSourcePartUriFromRelationshipPartUri = (JCObject)classType.Invoke("GetSourcePartUriFromRelationshipPartUri", relationshipPartUri == null ? null : relationshipPartUri.getJCOInstance());
+            retObjectGetSourcePartUriFromRelationshipPartUri = classType.Invoke("GetSourcePartUriFromRelationshipPartUri", relationshipPartUri == null ? null : relationshipPartUri.getJCOInstance());
+            JCObject objGetSourcePartUriFromRelationshipPartUri = (JCObject)retObjectGetSourcePartUriFromRelationshipPartUri;
             return new Uri(objGetSourcePartUriFromRelationshipPartUri);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSourcePartUriFromRelationshipPartUri != null ? retObjectGetSourcePartUriFromRelationshipPartUri.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -294,10 +360,14 @@ public class PackUriHelper extends NetObject  {
 
     public static Uri ResolvePartUri(Uri sourcePartUri, Uri targetUri) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.diagnostics.UnreachableException, system.UriFormatException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectResolvePartUri = null;
         try {
-            JCObject objResolvePartUri = (JCObject)classType.Invoke("ResolvePartUri", sourcePartUri == null ? null : sourcePartUri.getJCOInstance(), targetUri == null ? null : targetUri.getJCOInstance());
+            retObjectResolvePartUri = classType.Invoke("ResolvePartUri", sourcePartUri == null ? null : sourcePartUri.getJCOInstance(), targetUri == null ? null : targetUri.getJCOInstance());
+            JCObject objResolvePartUri = (JCObject)retObjectResolvePartUri;
             return new Uri(objResolvePartUri);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectResolvePartUri != null ? retObjectResolvePartUri.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

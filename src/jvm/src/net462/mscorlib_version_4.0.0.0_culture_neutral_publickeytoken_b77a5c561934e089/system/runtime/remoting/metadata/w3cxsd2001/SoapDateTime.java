@@ -162,10 +162,14 @@ public class SoapDateTime extends NetObject  {
     
     public static DateTime Parse(java.lang.String value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.TypeInitializationException, system.FormatException, system.OverflowException, system.runtime.remoting.RemotingException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectParse = null;
         try {
-            JCObject objParse = (JCObject)classType.Invoke("Parse", value);
+            retObjectParse = classType.Invoke("Parse", value);
+            JCObject objParse = (JCObject)retObjectParse;
             return new DateTime(objParse);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParse != null ? retObjectParse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -173,9 +177,13 @@ public class SoapDateTime extends NetObject  {
 
     public static java.lang.String ToString(DateTime value) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.TypeInitializationException, system.InvalidOperationException, system.FormatException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NullReferenceException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectToString = null;
         try {
-            return (java.lang.String)classType.Invoke("ToString", value == null ? null : value.getJCOInstance());
+            retObjectToString = classType.Invoke("ToString", value == null ? null : value.getJCOInstance());
+            return (java.lang.String)retObjectToString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectToString != null ? retObjectToString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,9 +195,13 @@ public class SoapDateTime extends NetObject  {
     
     public static java.lang.String getXsdType() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectXsdType = null;
         try {
-            return (java.lang.String)classType.Get("XsdType");
+            retObjectXsdType = classType.Get("XsdType");
+            return (java.lang.String)retObjectXsdType;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectXsdType != null ? retObjectXsdType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -144,7 +144,7 @@ public class IReceiveMessageCallbackImplementation extends NetObject implements 
     
     public void OnReceiveMessage(OperationContext operationContext, ExecutionProperties activityExecutionProperties) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("OnReceiveMessage", operationContext == null ? null : operationContext.getJCOInstance(), activityExecutionProperties == null ? null : activityExecutionProperties.getJCOInstance());
         } catch (JCNativeException jcne) {

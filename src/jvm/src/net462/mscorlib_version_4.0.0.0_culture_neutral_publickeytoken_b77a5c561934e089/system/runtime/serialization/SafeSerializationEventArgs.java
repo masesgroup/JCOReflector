@@ -159,7 +159,7 @@ public class SafeSerializationEventArgs extends EventArgs  {
     
     public void AddSerializedState(ISafeSerializationData serializedState) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException, system.NotImplementedException, system.TypeLoadException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddSerializedState", serializedState == null ? null : serializedState.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -173,10 +173,14 @@ public class SafeSerializationEventArgs extends EventArgs  {
     
     public StreamingContext getStreamingContext() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStreamingContext = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("StreamingContext");
+            retObjectStreamingContext = classInstance.Get("StreamingContext");
+            JCObject val = (JCObject)retObjectStreamingContext;
             return new StreamingContext(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStreamingContext != null ? retObjectStreamingContext.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -158,9 +158,13 @@ public class PersonalizationAdministration extends NetObject  {
     
     public static boolean ResetSharedState(java.lang.String path) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.security.SecurityException, system.reflection.TargetParameterCountException, system.NotSupportedException, system.web.HttpException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectResetSharedState = null;
         try {
-            return (boolean)classType.Invoke("ResetSharedState", path);
+            retObjectResetSharedState = classType.Invoke("ResetSharedState", path);
+            return (boolean)retObjectResetSharedState;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectResetSharedState != null ? retObjectResetSharedState.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -168,9 +172,13 @@ public class PersonalizationAdministration extends NetObject  {
 
     public static boolean ResetUserState(java.lang.String path, java.lang.String username) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.security.SecurityException, system.reflection.TargetParameterCountException, system.NotSupportedException, system.web.HttpException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectResetUserState = null;
         try {
-            return (boolean)classType.Invoke("ResetUserState", path, username);
+            retObjectResetUserState = classType.Invoke("ResetUserState", path, username);
+            return (boolean)retObjectResetUserState;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectResetUserState != null ? retObjectResetUserState.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,9 +186,20 @@ public class PersonalizationAdministration extends NetObject  {
 
     public static int GetCountOfInactiveUserState(DateTime userInactiveSinceDate) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.configuration.ConfigurationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetCountOfInactiveUserState = null;
         try {
-            return (int)classType.Invoke("GetCountOfInactiveUserState", userInactiveSinceDate == null ? null : userInactiveSinceDate.getJCOInstance());
+            retObjectGetCountOfInactiveUserState = classType.Invoke("GetCountOfInactiveUserState", userInactiveSinceDate == null ? null : userInactiveSinceDate.getJCOInstance());
+            return (int)retObjectGetCountOfInactiveUserState;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetCountOfInactiveUserState_ToString = retObjectGetCountOfInactiveUserState == null ? "null" : retObjectGetCountOfInactiveUserState.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetCountOfInactiveUserStateNumber = (java.lang.Number)retObjectGetCountOfInactiveUserState;
+                return retObjectGetCountOfInactiveUserStateNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetCountOfInactiveUserState != null ? retObjectGetCountOfInactiveUserState.getClass() : "null", retObjectGetCountOfInactiveUserState_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,9 +207,20 @@ public class PersonalizationAdministration extends NetObject  {
 
     public static int GetCountOfInactiveUserState(java.lang.String pathToMatch, DateTime userInactiveSinceDate) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.reflection.TargetParameterCountException, system.NotSupportedException, system.web.HttpException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetCountOfInactiveUserState = null;
         try {
-            return (int)classType.Invoke("GetCountOfInactiveUserState", pathToMatch, userInactiveSinceDate == null ? null : userInactiveSinceDate.getJCOInstance());
+            retObjectGetCountOfInactiveUserState = classType.Invoke("GetCountOfInactiveUserState", pathToMatch, userInactiveSinceDate == null ? null : userInactiveSinceDate.getJCOInstance());
+            return (int)retObjectGetCountOfInactiveUserState;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetCountOfInactiveUserState_ToString = retObjectGetCountOfInactiveUserState == null ? "null" : retObjectGetCountOfInactiveUserState.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetCountOfInactiveUserStateNumber = (java.lang.Number)retObjectGetCountOfInactiveUserState;
+                return retObjectGetCountOfInactiveUserStateNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetCountOfInactiveUserState != null ? retObjectGetCountOfInactiveUserState.getClass() : "null", retObjectGetCountOfInactiveUserState_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,9 +228,20 @@ public class PersonalizationAdministration extends NetObject  {
 
     public static int GetCountOfState(PersonalizationScope scope) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.configuration.ConfigurationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetCountOfState = null;
         try {
-            return (int)classType.Invoke("GetCountOfState", scope == null ? null : scope.getJCOInstance());
+            retObjectGetCountOfState = classType.Invoke("GetCountOfState", scope == null ? null : scope.getJCOInstance());
+            return (int)retObjectGetCountOfState;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetCountOfState_ToString = retObjectGetCountOfState == null ? "null" : retObjectGetCountOfState.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetCountOfStateNumber = (java.lang.Number)retObjectGetCountOfState;
+                return retObjectGetCountOfStateNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetCountOfState != null ? retObjectGetCountOfState.getClass() : "null", retObjectGetCountOfState_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -208,9 +249,20 @@ public class PersonalizationAdministration extends NetObject  {
 
     public static int GetCountOfState(PersonalizationScope scope, java.lang.String pathToMatch) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.reflection.TargetParameterCountException, system.NotSupportedException, system.web.HttpException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetCountOfState = null;
         try {
-            return (int)classType.Invoke("GetCountOfState", scope == null ? null : scope.getJCOInstance(), pathToMatch);
+            retObjectGetCountOfState = classType.Invoke("GetCountOfState", scope == null ? null : scope.getJCOInstance(), pathToMatch);
+            return (int)retObjectGetCountOfState;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetCountOfState_ToString = retObjectGetCountOfState == null ? "null" : retObjectGetCountOfState.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetCountOfStateNumber = (java.lang.Number)retObjectGetCountOfState;
+                return retObjectGetCountOfStateNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetCountOfState != null ? retObjectGetCountOfState.getClass() : "null", retObjectGetCountOfState_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -218,9 +270,20 @@ public class PersonalizationAdministration extends NetObject  {
 
     public static int GetCountOfUserState(java.lang.String usernameToMatch) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.reflection.TargetParameterCountException, system.NotSupportedException, system.web.HttpException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetCountOfUserState = null;
         try {
-            return (int)classType.Invoke("GetCountOfUserState", usernameToMatch);
+            retObjectGetCountOfUserState = classType.Invoke("GetCountOfUserState", usernameToMatch);
+            return (int)retObjectGetCountOfUserState;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetCountOfUserState_ToString = retObjectGetCountOfUserState == null ? "null" : retObjectGetCountOfUserState.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetCountOfUserStateNumber = (java.lang.Number)retObjectGetCountOfUserState;
+                return retObjectGetCountOfUserStateNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetCountOfUserState != null ? retObjectGetCountOfUserState.getClass() : "null", retObjectGetCountOfUserState_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -228,9 +291,20 @@ public class PersonalizationAdministration extends NetObject  {
 
     public static int ResetAllState(PersonalizationScope scope) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.security.SecurityException, system.ArgumentNullException, system.reflection.TargetParameterCountException, system.NotSupportedException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException, system.FormatException, system.configuration.ConfigurationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectResetAllState = null;
         try {
-            return (int)classType.Invoke("ResetAllState", scope == null ? null : scope.getJCOInstance());
+            retObjectResetAllState = classType.Invoke("ResetAllState", scope == null ? null : scope.getJCOInstance());
+            return (int)retObjectResetAllState;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectResetAllState_ToString = retObjectResetAllState == null ? "null" : retObjectResetAllState.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectResetAllStateNumber = (java.lang.Number)retObjectResetAllState;
+                return retObjectResetAllStateNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectResetAllState != null ? retObjectResetAllState.getClass() : "null", retObjectResetAllState_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -238,9 +312,20 @@ public class PersonalizationAdministration extends NetObject  {
 
     public static int ResetInactiveUserState(DateTime userInactiveSinceDate) throws Throwable, system.ArgumentException, system.security.SecurityException, system.ArgumentNullException, system.reflection.TargetParameterCountException, system.NotSupportedException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.ArgumentOutOfRangeException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException, system.FormatException, system.configuration.ConfigurationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectResetInactiveUserState = null;
         try {
-            return (int)classType.Invoke("ResetInactiveUserState", userInactiveSinceDate == null ? null : userInactiveSinceDate.getJCOInstance());
+            retObjectResetInactiveUserState = classType.Invoke("ResetInactiveUserState", userInactiveSinceDate == null ? null : userInactiveSinceDate.getJCOInstance());
+            return (int)retObjectResetInactiveUserState;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectResetInactiveUserState_ToString = retObjectResetInactiveUserState == null ? "null" : retObjectResetInactiveUserState.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectResetInactiveUserStateNumber = (java.lang.Number)retObjectResetInactiveUserState;
+                return retObjectResetInactiveUserStateNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectResetInactiveUserState != null ? retObjectResetInactiveUserState.getClass() : "null", retObjectResetInactiveUserState_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -248,9 +333,20 @@ public class PersonalizationAdministration extends NetObject  {
 
     public static int ResetInactiveUserState(java.lang.String path, DateTime userInactiveSinceDate) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.security.SecurityException, system.reflection.TargetParameterCountException, system.NotSupportedException, system.web.HttpException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectResetInactiveUserState = null;
         try {
-            return (int)classType.Invoke("ResetInactiveUserState", path, userInactiveSinceDate == null ? null : userInactiveSinceDate.getJCOInstance());
+            retObjectResetInactiveUserState = classType.Invoke("ResetInactiveUserState", path, userInactiveSinceDate == null ? null : userInactiveSinceDate.getJCOInstance());
+            return (int)retObjectResetInactiveUserState;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectResetInactiveUserState_ToString = retObjectResetInactiveUserState == null ? "null" : retObjectResetInactiveUserState.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectResetInactiveUserStateNumber = (java.lang.Number)retObjectResetInactiveUserState;
+                return retObjectResetInactiveUserStateNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectResetInactiveUserState != null ? retObjectResetInactiveUserState.getClass() : "null", retObjectResetInactiveUserState_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -258,9 +354,20 @@ public class PersonalizationAdministration extends NetObject  {
 
     public static int ResetSharedState(java.lang.String[] paths) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException, system.reflection.TargetParameterCountException, system.NotSupportedException, system.web.HttpException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectResetSharedState = null;
         try {
-            return (int)classType.Invoke("ResetSharedState", (java.lang.Object)paths);
+            retObjectResetSharedState = classType.Invoke("ResetSharedState", (java.lang.Object)paths);
+            return (int)retObjectResetSharedState;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectResetSharedState_ToString = retObjectResetSharedState == null ? "null" : retObjectResetSharedState.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectResetSharedStateNumber = (java.lang.Number)retObjectResetSharedState;
+                return retObjectResetSharedStateNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectResetSharedState != null ? retObjectResetSharedState.getClass() : "null", retObjectResetSharedState_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -268,9 +375,20 @@ public class PersonalizationAdministration extends NetObject  {
 
     public static int ResetSharedState(JCORefOut dupParam0) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException, system.reflection.TargetParameterCountException, system.NotSupportedException, system.web.HttpException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectResetSharedState = null;
         try {
-            return (int)classType.Invoke("ResetSharedState", (java.lang.Object)dupParam0.getJCRefOut());
+            retObjectResetSharedState = classType.Invoke("ResetSharedState", (java.lang.Object)dupParam0.getJCRefOut());
+            return (int)retObjectResetSharedState;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectResetSharedState_ToString = retObjectResetSharedState == null ? "null" : retObjectResetSharedState.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectResetSharedStateNumber = (java.lang.Number)retObjectResetSharedState;
+                return retObjectResetSharedStateNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectResetSharedState != null ? retObjectResetSharedState.getClass() : "null", retObjectResetSharedState_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -278,9 +396,20 @@ public class PersonalizationAdministration extends NetObject  {
 
     public static int ResetState(PersonalizationStateInfoCollection data) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.configuration.ConfigurationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectResetState = null;
         try {
-            return (int)classType.Invoke("ResetState", data == null ? null : data.getJCOInstance());
+            retObjectResetState = classType.Invoke("ResetState", data == null ? null : data.getJCOInstance());
+            return (int)retObjectResetState;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectResetState_ToString = retObjectResetState == null ? "null" : retObjectResetState.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectResetStateNumber = (java.lang.Number)retObjectResetState;
+                return retObjectResetStateNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectResetState != null ? retObjectResetState.getClass() : "null", retObjectResetState_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -288,9 +417,20 @@ public class PersonalizationAdministration extends NetObject  {
 
     public static int ResetUserState(java.lang.String path) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.security.SecurityException, system.reflection.TargetParameterCountException, system.NotSupportedException, system.web.HttpException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectResetUserState = null;
         try {
-            return (int)classType.Invoke("ResetUserState", path);
+            retObjectResetUserState = classType.Invoke("ResetUserState", path);
+            return (int)retObjectResetUserState;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectResetUserState_ToString = retObjectResetUserState == null ? "null" : retObjectResetUserState.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectResetUserStateNumber = (java.lang.Number)retObjectResetUserState;
+                return retObjectResetUserStateNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectResetUserState != null ? retObjectResetUserState.getClass() : "null", retObjectResetUserState_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -298,9 +438,20 @@ public class PersonalizationAdministration extends NetObject  {
 
     public static int ResetUserState(java.lang.String path, java.lang.String[] usernames) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.security.SecurityException, system.reflection.TargetParameterCountException, system.NotSupportedException, system.web.HttpException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectResetUserState = null;
         try {
-            return (int)classType.Invoke("ResetUserState", path, usernames);
+            retObjectResetUserState = classType.Invoke("ResetUserState", path, usernames);
+            return (int)retObjectResetUserState;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectResetUserState_ToString = retObjectResetUserState == null ? "null" : retObjectResetUserState.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectResetUserStateNumber = (java.lang.Number)retObjectResetUserState;
+                return retObjectResetUserStateNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectResetUserState != null ? retObjectResetUserState.getClass() : "null", retObjectResetUserState_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -308,9 +459,20 @@ public class PersonalizationAdministration extends NetObject  {
 
     public static int ResetUserState(java.lang.String dupParam0, JCORefOut dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.security.SecurityException, system.reflection.TargetParameterCountException, system.NotSupportedException, system.web.HttpException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectResetUserState = null;
         try {
-            return (int)classType.Invoke("ResetUserState", dupParam0, dupParam1.getJCRefOut());
+            retObjectResetUserState = classType.Invoke("ResetUserState", dupParam0, dupParam1.getJCRefOut());
+            return (int)retObjectResetUserState;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectResetUserState_ToString = retObjectResetUserState == null ? "null" : retObjectResetUserState.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectResetUserStateNumber = (java.lang.Number)retObjectResetUserState;
+                return retObjectResetUserStateNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectResetUserState != null ? retObjectResetUserState.getClass() : "null", retObjectResetUserState_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -318,9 +480,20 @@ public class PersonalizationAdministration extends NetObject  {
 
     public static int ResetUserState(java.lang.String[] usernames) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException, system.reflection.TargetParameterCountException, system.NotSupportedException, system.web.HttpException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectResetUserState = null;
         try {
-            return (int)classType.Invoke("ResetUserState", (java.lang.Object)usernames);
+            retObjectResetUserState = classType.Invoke("ResetUserState", (java.lang.Object)usernames);
+            return (int)retObjectResetUserState;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectResetUserState_ToString = retObjectResetUserState == null ? "null" : retObjectResetUserState.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectResetUserStateNumber = (java.lang.Number)retObjectResetUserState;
+                return retObjectResetUserStateNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectResetUserState != null ? retObjectResetUserState.getClass() : "null", retObjectResetUserState_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -328,9 +501,20 @@ public class PersonalizationAdministration extends NetObject  {
 
     public static int ResetUserState(JCORefOut dupParam0) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException, system.reflection.TargetParameterCountException, system.NotSupportedException, system.web.HttpException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectResetUserState = null;
         try {
-            return (int)classType.Invoke("ResetUserState", (java.lang.Object)dupParam0.getJCRefOut());
+            retObjectResetUserState = classType.Invoke("ResetUserState", (java.lang.Object)dupParam0.getJCRefOut());
+            return (int)retObjectResetUserState;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectResetUserState_ToString = retObjectResetUserState == null ? "null" : retObjectResetUserState.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectResetUserStateNumber = (java.lang.Number)retObjectResetUserState;
+                return retObjectResetUserStateNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectResetUserState != null ? retObjectResetUserState.getClass() : "null", retObjectResetUserState_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -338,10 +522,14 @@ public class PersonalizationAdministration extends NetObject  {
 
     public static PersonalizationStateInfoCollection FindInactiveUserState(java.lang.String pathToMatch, java.lang.String usernameToMatch, DateTime userInactiveSinceDate) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.configuration.ConfigurationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFindInactiveUserState = null;
         try {
-            JCObject objFindInactiveUserState = (JCObject)classType.Invoke("FindInactiveUserState", pathToMatch, usernameToMatch, userInactiveSinceDate == null ? null : userInactiveSinceDate.getJCOInstance());
+            retObjectFindInactiveUserState = classType.Invoke("FindInactiveUserState", pathToMatch, usernameToMatch, userInactiveSinceDate == null ? null : userInactiveSinceDate.getJCOInstance());
+            JCObject objFindInactiveUserState = (JCObject)retObjectFindInactiveUserState;
             return new PersonalizationStateInfoCollection(objFindInactiveUserState);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFindInactiveUserState != null ? retObjectFindInactiveUserState.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -349,10 +537,14 @@ public class PersonalizationAdministration extends NetObject  {
 
     public static PersonalizationStateInfoCollection FindInactiveUserState(java.lang.String pathToMatch, java.lang.String usernameToMatch, DateTime userInactiveSinceDate, int pageIndex, int pageSize, JCORefOut<java.util.concurrent.atomic.AtomicInteger> totalRecords) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.reflection.TargetParameterCountException, system.NotSupportedException, system.web.HttpException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFindInactiveUserState = null;
         try {
-            JCObject objFindInactiveUserState = (JCObject)classType.Invoke("FindInactiveUserState", pathToMatch, usernameToMatch, userInactiveSinceDate == null ? null : userInactiveSinceDate.getJCOInstance(), pageIndex, pageSize, totalRecords.getJCRefOut());
+            retObjectFindInactiveUserState = classType.Invoke("FindInactiveUserState", pathToMatch, usernameToMatch, userInactiveSinceDate == null ? null : userInactiveSinceDate.getJCOInstance(), pageIndex, pageSize, totalRecords.getJCRefOut());
+            JCObject objFindInactiveUserState = (JCObject)retObjectFindInactiveUserState;
             return new PersonalizationStateInfoCollection(objFindInactiveUserState);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFindInactiveUserState != null ? retObjectFindInactiveUserState.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -360,10 +552,14 @@ public class PersonalizationAdministration extends NetObject  {
 
     public static PersonalizationStateInfoCollection FindSharedState(java.lang.String pathToMatch) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.configuration.ConfigurationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFindSharedState = null;
         try {
-            JCObject objFindSharedState = (JCObject)classType.Invoke("FindSharedState", pathToMatch);
+            retObjectFindSharedState = classType.Invoke("FindSharedState", pathToMatch);
+            JCObject objFindSharedState = (JCObject)retObjectFindSharedState;
             return new PersonalizationStateInfoCollection(objFindSharedState);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFindSharedState != null ? retObjectFindSharedState.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -371,10 +567,14 @@ public class PersonalizationAdministration extends NetObject  {
 
     public static PersonalizationStateInfoCollection FindSharedState(java.lang.String pathToMatch, int pageIndex, int pageSize, JCORefOut<java.util.concurrent.atomic.AtomicInteger> totalRecords) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.reflection.TargetParameterCountException, system.NotSupportedException, system.web.HttpException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFindSharedState = null;
         try {
-            JCObject objFindSharedState = (JCObject)classType.Invoke("FindSharedState", pathToMatch, pageIndex, pageSize, totalRecords.getJCRefOut());
+            retObjectFindSharedState = classType.Invoke("FindSharedState", pathToMatch, pageIndex, pageSize, totalRecords.getJCRefOut());
+            JCObject objFindSharedState = (JCObject)retObjectFindSharedState;
             return new PersonalizationStateInfoCollection(objFindSharedState);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFindSharedState != null ? retObjectFindSharedState.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -382,10 +582,14 @@ public class PersonalizationAdministration extends NetObject  {
 
     public static PersonalizationStateInfoCollection FindUserState(java.lang.String pathToMatch, java.lang.String usernameToMatch) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.configuration.ConfigurationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFindUserState = null;
         try {
-            JCObject objFindUserState = (JCObject)classType.Invoke("FindUserState", pathToMatch, usernameToMatch);
+            retObjectFindUserState = classType.Invoke("FindUserState", pathToMatch, usernameToMatch);
+            JCObject objFindUserState = (JCObject)retObjectFindUserState;
             return new PersonalizationStateInfoCollection(objFindUserState);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFindUserState != null ? retObjectFindUserState.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -393,10 +597,14 @@ public class PersonalizationAdministration extends NetObject  {
 
     public static PersonalizationStateInfoCollection FindUserState(java.lang.String pathToMatch, java.lang.String usernameToMatch, int pageIndex, int pageSize, JCORefOut<java.util.concurrent.atomic.AtomicInteger> totalRecords) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.reflection.TargetParameterCountException, system.NotSupportedException, system.web.HttpException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFindUserState = null;
         try {
-            JCObject objFindUserState = (JCObject)classType.Invoke("FindUserState", pathToMatch, usernameToMatch, pageIndex, pageSize, totalRecords.getJCRefOut());
+            retObjectFindUserState = classType.Invoke("FindUserState", pathToMatch, usernameToMatch, pageIndex, pageSize, totalRecords.getJCRefOut());
+            JCObject objFindUserState = (JCObject)retObjectFindUserState;
             return new PersonalizationStateInfoCollection(objFindUserState);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFindUserState != null ? retObjectFindUserState.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -404,10 +612,14 @@ public class PersonalizationAdministration extends NetObject  {
 
     public static PersonalizationStateInfoCollection GetAllInactiveUserState(DateTime userInactiveSinceDate) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.configuration.ConfigurationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetAllInactiveUserState = null;
         try {
-            JCObject objGetAllInactiveUserState = (JCObject)classType.Invoke("GetAllInactiveUserState", userInactiveSinceDate == null ? null : userInactiveSinceDate.getJCOInstance());
+            retObjectGetAllInactiveUserState = classType.Invoke("GetAllInactiveUserState", userInactiveSinceDate == null ? null : userInactiveSinceDate.getJCOInstance());
+            JCObject objGetAllInactiveUserState = (JCObject)retObjectGetAllInactiveUserState;
             return new PersonalizationStateInfoCollection(objGetAllInactiveUserState);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetAllInactiveUserState != null ? retObjectGetAllInactiveUserState.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -415,10 +627,14 @@ public class PersonalizationAdministration extends NetObject  {
 
     public static PersonalizationStateInfoCollection GetAllInactiveUserState(DateTime userInactiveSinceDate, int pageIndex, int pageSize, JCORefOut<java.util.concurrent.atomic.AtomicInteger> totalRecords) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException, system.reflection.TargetParameterCountException, system.NotSupportedException, system.web.HttpException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetAllInactiveUserState = null;
         try {
-            JCObject objGetAllInactiveUserState = (JCObject)classType.Invoke("GetAllInactiveUserState", userInactiveSinceDate == null ? null : userInactiveSinceDate.getJCOInstance(), pageIndex, pageSize, totalRecords.getJCRefOut());
+            retObjectGetAllInactiveUserState = classType.Invoke("GetAllInactiveUserState", userInactiveSinceDate == null ? null : userInactiveSinceDate.getJCOInstance(), pageIndex, pageSize, totalRecords.getJCRefOut());
+            JCObject objGetAllInactiveUserState = (JCObject)retObjectGetAllInactiveUserState;
             return new PersonalizationStateInfoCollection(objGetAllInactiveUserState);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetAllInactiveUserState != null ? retObjectGetAllInactiveUserState.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -426,10 +642,14 @@ public class PersonalizationAdministration extends NetObject  {
 
     public static PersonalizationStateInfoCollection GetAllState(PersonalizationScope scope) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.configuration.ConfigurationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetAllState = null;
         try {
-            JCObject objGetAllState = (JCObject)classType.Invoke("GetAllState", scope == null ? null : scope.getJCOInstance());
+            retObjectGetAllState = classType.Invoke("GetAllState", scope == null ? null : scope.getJCOInstance());
+            JCObject objGetAllState = (JCObject)retObjectGetAllState;
             return new PersonalizationStateInfoCollection(objGetAllState);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetAllState != null ? retObjectGetAllState.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -437,10 +657,14 @@ public class PersonalizationAdministration extends NetObject  {
 
     public static PersonalizationStateInfoCollection GetAllState(PersonalizationScope scope, int pageIndex, int pageSize, JCORefOut<java.util.concurrent.atomic.AtomicInteger> totalRecords) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException, system.reflection.TargetParameterCountException, system.NotSupportedException, system.web.HttpException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetAllState = null;
         try {
-            JCObject objGetAllState = (JCObject)classType.Invoke("GetAllState", scope == null ? null : scope.getJCOInstance(), pageIndex, pageSize, totalRecords.getJCRefOut());
+            retObjectGetAllState = classType.Invoke("GetAllState", scope == null ? null : scope.getJCOInstance(), pageIndex, pageSize, totalRecords.getJCRefOut());
+            JCObject objGetAllState = (JCObject)retObjectGetAllState;
             return new PersonalizationStateInfoCollection(objGetAllState);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetAllState != null ? retObjectGetAllState.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -452,9 +676,13 @@ public class PersonalizationAdministration extends NetObject  {
     
     public static java.lang.String getApplicationName() throws Throwable, system.ArgumentException, system.security.SecurityException, system.ArgumentNullException, system.reflection.TargetParameterCountException, system.NotSupportedException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.ArgumentOutOfRangeException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException, system.FormatException, system.configuration.ConfigurationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectApplicationName = null;
         try {
-            return (java.lang.String)classType.Get("ApplicationName");
+            retObjectApplicationName = classType.Get("ApplicationName");
+            return (java.lang.String)retObjectApplicationName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectApplicationName != null ? retObjectApplicationName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -462,7 +690,7 @@ public class PersonalizationAdministration extends NetObject  {
 
     public static void setApplicationName(java.lang.String ApplicationName) throws Throwable, system.ArgumentException, system.security.SecurityException, system.ArgumentNullException, system.reflection.TargetParameterCountException, system.NotSupportedException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.ArgumentOutOfRangeException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException, system.FormatException, system.configuration.ConfigurationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Set("ApplicationName", ApplicationName);
         } catch (JCNativeException jcne) {
@@ -472,10 +700,14 @@ public class PersonalizationAdministration extends NetObject  {
 
     public static PersonalizationProvider getProvider() throws Throwable, system.ArgumentException, system.security.SecurityException, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException, system.MemberAccessException, system.reflection.TargetException, system.reflection.TargetParameterCountException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.web.HttpException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectProvider = null;
         try {
-            JCObject val = (JCObject)classType.Get("Provider");
+            retObjectProvider = classType.Get("Provider");
+            JCObject val = (JCObject)retObjectProvider;
             return new PersonalizationProvider(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectProvider != null ? retObjectProvider.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -483,10 +715,14 @@ public class PersonalizationAdministration extends NetObject  {
 
     public static PersonalizationProviderCollection getProviders() throws Throwable, system.ArgumentException, system.security.SecurityException, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException, system.MemberAccessException, system.reflection.TargetException, system.reflection.TargetParameterCountException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.web.HttpException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectProviders = null;
         try {
-            JCObject val = (JCObject)classType.Get("Providers");
+            retObjectProviders = classType.Get("Providers");
+            JCObject val = (JCObject)retObjectProviders;
             return new PersonalizationProviderCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectProviders != null ? retObjectProviders.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

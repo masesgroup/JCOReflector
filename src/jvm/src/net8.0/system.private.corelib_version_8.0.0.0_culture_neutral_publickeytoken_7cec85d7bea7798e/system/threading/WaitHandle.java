@@ -157,9 +157,13 @@ public class WaitHandle extends MarshalByRefObject implements AutoCloseable {
     
     public static boolean SignalAndWait(WaitHandle toSignal, WaitHandle toWaitOn, int millisecondsTimeout, boolean exitContext) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSignalAndWait = null;
         try {
-            return (boolean)classType.Invoke("SignalAndWait", toSignal == null ? null : toSignal.getJCOInstance(), toWaitOn == null ? null : toWaitOn.getJCOInstance(), millisecondsTimeout, exitContext);
+            retObjectSignalAndWait = classType.Invoke("SignalAndWait", toSignal == null ? null : toSignal.getJCOInstance(), toWaitOn == null ? null : toWaitOn.getJCOInstance(), millisecondsTimeout, exitContext);
+            return (boolean)retObjectSignalAndWait;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectSignalAndWait != null ? retObjectSignalAndWait.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -167,9 +171,13 @@ public class WaitHandle extends MarshalByRefObject implements AutoCloseable {
 
     public static boolean SignalAndWait(WaitHandle toSignal, WaitHandle toWaitOn, TimeSpan timeout, boolean exitContext) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.threading.AbandonedMutexException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSignalAndWait = null;
         try {
-            return (boolean)classType.Invoke("SignalAndWait", toSignal == null ? null : toSignal.getJCOInstance(), toWaitOn == null ? null : toWaitOn.getJCOInstance(), timeout == null ? null : timeout.getJCOInstance(), exitContext);
+            retObjectSignalAndWait = classType.Invoke("SignalAndWait", toSignal == null ? null : toSignal.getJCOInstance(), toWaitOn == null ? null : toWaitOn.getJCOInstance(), timeout == null ? null : timeout.getJCOInstance(), exitContext);
+            return (boolean)retObjectSignalAndWait;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectSignalAndWait != null ? retObjectSignalAndWait.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,9 +185,13 @@ public class WaitHandle extends MarshalByRefObject implements AutoCloseable {
 
     public static boolean SignalAndWait(WaitHandle toSignal, WaitHandle toWaitOn) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSignalAndWait = null;
         try {
-            return (boolean)classType.Invoke("SignalAndWait", toSignal == null ? null : toSignal.getJCOInstance(), toWaitOn == null ? null : toWaitOn.getJCOInstance());
+            retObjectSignalAndWait = classType.Invoke("SignalAndWait", toSignal == null ? null : toSignal.getJCOInstance(), toWaitOn == null ? null : toWaitOn.getJCOInstance());
+            return (boolean)retObjectSignalAndWait;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectSignalAndWait != null ? retObjectSignalAndWait.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,9 +199,13 @@ public class WaitHandle extends MarshalByRefObject implements AutoCloseable {
 
     public static boolean WaitAll(WaitHandle[] waitHandles, int millisecondsTimeout, boolean exitContext) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.FormatException, system.ArrayTypeMismatchException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectWaitAll = null;
         try {
-            return (boolean)classType.Invoke("WaitAll", toObjectFromArray(waitHandles), millisecondsTimeout, exitContext);
+            retObjectWaitAll = classType.Invoke("WaitAll", toObjectFromArray(waitHandles), millisecondsTimeout, exitContext);
+            return (boolean)retObjectWaitAll;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectWaitAll != null ? retObjectWaitAll.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,9 +213,13 @@ public class WaitHandle extends MarshalByRefObject implements AutoCloseable {
 
     public static boolean WaitAll(WaitHandle[] waitHandles, int millisecondsTimeout) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.FormatException, system.ArrayTypeMismatchException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectWaitAll = null;
         try {
-            return (boolean)classType.Invoke("WaitAll", toObjectFromArray(waitHandles), millisecondsTimeout);
+            retObjectWaitAll = classType.Invoke("WaitAll", toObjectFromArray(waitHandles), millisecondsTimeout);
+            return (boolean)retObjectWaitAll;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectWaitAll != null ? retObjectWaitAll.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -207,9 +227,13 @@ public class WaitHandle extends MarshalByRefObject implements AutoCloseable {
 
     public static boolean WaitAll(WaitHandle[] waitHandles, TimeSpan timeout, boolean exitContext) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.ArgumentNullException, system.threading.AbandonedMutexException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectWaitAll = null;
         try {
-            return (boolean)classType.Invoke("WaitAll", toObjectFromArray(waitHandles), timeout == null ? null : timeout.getJCOInstance(), exitContext);
+            retObjectWaitAll = classType.Invoke("WaitAll", toObjectFromArray(waitHandles), timeout == null ? null : timeout.getJCOInstance(), exitContext);
+            return (boolean)retObjectWaitAll;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectWaitAll != null ? retObjectWaitAll.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -217,9 +241,13 @@ public class WaitHandle extends MarshalByRefObject implements AutoCloseable {
 
     public static boolean WaitAll(WaitHandle[] waitHandles, TimeSpan timeout) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.ArgumentNullException, system.threading.AbandonedMutexException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectWaitAll = null;
         try {
-            return (boolean)classType.Invoke("WaitAll", toObjectFromArray(waitHandles), timeout == null ? null : timeout.getJCOInstance());
+            retObjectWaitAll = classType.Invoke("WaitAll", toObjectFromArray(waitHandles), timeout == null ? null : timeout.getJCOInstance());
+            return (boolean)retObjectWaitAll;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectWaitAll != null ? retObjectWaitAll.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -227,9 +255,13 @@ public class WaitHandle extends MarshalByRefObject implements AutoCloseable {
 
     public static boolean WaitAll(WaitHandle[] waitHandles) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.FormatException, system.ArrayTypeMismatchException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectWaitAll = null;
         try {
-            return (boolean)classType.Invoke("WaitAll", (java.lang.Object)toObjectFromArray(waitHandles));
+            retObjectWaitAll = classType.Invoke("WaitAll", (java.lang.Object)toObjectFromArray(waitHandles));
+            return (boolean)retObjectWaitAll;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectWaitAll != null ? retObjectWaitAll.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -237,9 +269,13 @@ public class WaitHandle extends MarshalByRefObject implements AutoCloseable {
 
     public boolean WaitOne() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.ArrayTypeMismatchException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWaitOne = null;
         try {
-            return (boolean)classInstance.Invoke("WaitOne");
+            retObjectWaitOne = classInstance.Invoke("WaitOne");
+            return (boolean)retObjectWaitOne;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectWaitOne != null ? retObjectWaitOne.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -247,9 +283,13 @@ public class WaitHandle extends MarshalByRefObject implements AutoCloseable {
 
     public boolean WaitOne(int millisecondsTimeout, boolean exitContext) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWaitOne = null;
         try {
-            return (boolean)classInstance.Invoke("WaitOne", millisecondsTimeout, exitContext);
+            retObjectWaitOne = classInstance.Invoke("WaitOne", millisecondsTimeout, exitContext);
+            return (boolean)retObjectWaitOne;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectWaitOne != null ? retObjectWaitOne.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -257,9 +297,13 @@ public class WaitHandle extends MarshalByRefObject implements AutoCloseable {
 
     public boolean WaitOne(int millisecondsTimeout) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWaitOne = null;
         try {
-            return (boolean)classInstance.Invoke("WaitOne", millisecondsTimeout);
+            retObjectWaitOne = classInstance.Invoke("WaitOne", millisecondsTimeout);
+            return (boolean)retObjectWaitOne;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectWaitOne != null ? retObjectWaitOne.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -267,9 +311,13 @@ public class WaitHandle extends MarshalByRefObject implements AutoCloseable {
 
     public boolean WaitOne(TimeSpan timeout, boolean exitContext) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWaitOne = null;
         try {
-            return (boolean)classInstance.Invoke("WaitOne", timeout == null ? null : timeout.getJCOInstance(), exitContext);
+            retObjectWaitOne = classInstance.Invoke("WaitOne", timeout == null ? null : timeout.getJCOInstance(), exitContext);
+            return (boolean)retObjectWaitOne;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectWaitOne != null ? retObjectWaitOne.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -277,9 +325,13 @@ public class WaitHandle extends MarshalByRefObject implements AutoCloseable {
 
     public boolean WaitOne(TimeSpan timeout) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWaitOne = null;
         try {
-            return (boolean)classInstance.Invoke("WaitOne", timeout == null ? null : timeout.getJCOInstance());
+            retObjectWaitOne = classInstance.Invoke("WaitOne", timeout == null ? null : timeout.getJCOInstance());
+            return (boolean)retObjectWaitOne;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectWaitOne != null ? retObjectWaitOne.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -287,9 +339,20 @@ public class WaitHandle extends MarshalByRefObject implements AutoCloseable {
 
     public static int WaitAny(WaitHandle[] waitHandles, int millisecondsTimeout, boolean exitContext) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.FormatException, system.ArrayTypeMismatchException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectWaitAny = null;
         try {
-            return (int)classType.Invoke("WaitAny", toObjectFromArray(waitHandles), millisecondsTimeout, exitContext);
+            retObjectWaitAny = classType.Invoke("WaitAny", toObjectFromArray(waitHandles), millisecondsTimeout, exitContext);
+            return (int)retObjectWaitAny;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectWaitAny_ToString = retObjectWaitAny == null ? "null" : retObjectWaitAny.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectWaitAnyNumber = (java.lang.Number)retObjectWaitAny;
+                return retObjectWaitAnyNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectWaitAny != null ? retObjectWaitAny.getClass() : "null", retObjectWaitAny_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -297,9 +360,20 @@ public class WaitHandle extends MarshalByRefObject implements AutoCloseable {
 
     public static int WaitAny(WaitHandle[] waitHandles, int millisecondsTimeout) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.FormatException, system.ArrayTypeMismatchException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectWaitAny = null;
         try {
-            return (int)classType.Invoke("WaitAny", toObjectFromArray(waitHandles), millisecondsTimeout);
+            retObjectWaitAny = classType.Invoke("WaitAny", toObjectFromArray(waitHandles), millisecondsTimeout);
+            return (int)retObjectWaitAny;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectWaitAny_ToString = retObjectWaitAny == null ? "null" : retObjectWaitAny.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectWaitAnyNumber = (java.lang.Number)retObjectWaitAny;
+                return retObjectWaitAnyNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectWaitAny != null ? retObjectWaitAny.getClass() : "null", retObjectWaitAny_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -307,9 +381,20 @@ public class WaitHandle extends MarshalByRefObject implements AutoCloseable {
 
     public static int WaitAny(WaitHandle[] waitHandles, TimeSpan timeout, boolean exitContext) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.ArgumentNullException, system.threading.AbandonedMutexException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectWaitAny = null;
         try {
-            return (int)classType.Invoke("WaitAny", toObjectFromArray(waitHandles), timeout == null ? null : timeout.getJCOInstance(), exitContext);
+            retObjectWaitAny = classType.Invoke("WaitAny", toObjectFromArray(waitHandles), timeout == null ? null : timeout.getJCOInstance(), exitContext);
+            return (int)retObjectWaitAny;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectWaitAny_ToString = retObjectWaitAny == null ? "null" : retObjectWaitAny.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectWaitAnyNumber = (java.lang.Number)retObjectWaitAny;
+                return retObjectWaitAnyNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectWaitAny != null ? retObjectWaitAny.getClass() : "null", retObjectWaitAny_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -317,9 +402,20 @@ public class WaitHandle extends MarshalByRefObject implements AutoCloseable {
 
     public static int WaitAny(WaitHandle[] waitHandles, TimeSpan timeout) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.ArgumentNullException, system.threading.AbandonedMutexException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectWaitAny = null;
         try {
-            return (int)classType.Invoke("WaitAny", toObjectFromArray(waitHandles), timeout == null ? null : timeout.getJCOInstance());
+            retObjectWaitAny = classType.Invoke("WaitAny", toObjectFromArray(waitHandles), timeout == null ? null : timeout.getJCOInstance());
+            return (int)retObjectWaitAny;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectWaitAny_ToString = retObjectWaitAny == null ? "null" : retObjectWaitAny.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectWaitAnyNumber = (java.lang.Number)retObjectWaitAny;
+                return retObjectWaitAnyNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectWaitAny != null ? retObjectWaitAny.getClass() : "null", retObjectWaitAny_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -327,9 +423,20 @@ public class WaitHandle extends MarshalByRefObject implements AutoCloseable {
 
     public static int WaitAny(WaitHandle[] waitHandles) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.FormatException, system.ArrayTypeMismatchException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectWaitAny = null;
         try {
-            return (int)classType.Invoke("WaitAny", (java.lang.Object)toObjectFromArray(waitHandles));
+            retObjectWaitAny = classType.Invoke("WaitAny", (java.lang.Object)toObjectFromArray(waitHandles));
+            return (int)retObjectWaitAny;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectWaitAny_ToString = retObjectWaitAny == null ? "null" : retObjectWaitAny.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectWaitAnyNumber = (java.lang.Number)retObjectWaitAny;
+                return retObjectWaitAnyNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectWaitAny != null ? retObjectWaitAny.getClass() : "null", retObjectWaitAny_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -337,7 +444,7 @@ public class WaitHandle extends MarshalByRefObject implements AutoCloseable {
 
     public void Close() throws Throwable, system.ObjectDisposedException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Close");
         } catch (JCNativeException jcne) {
@@ -347,7 +454,7 @@ public class WaitHandle extends MarshalByRefObject implements AutoCloseable {
 
     public void Dispose() throws Throwable, system.ObjectDisposedException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
@@ -358,7 +465,7 @@ public class WaitHandle extends MarshalByRefObject implements AutoCloseable {
     public void close() throws Exception {
         try {
             if (classInstance == null)
-                throw new UnsupportedOperationException("classInstance is null.");
+                throw new java.lang.UnsupportedOperationException("classInstance is null.");
             try {
                 classInstance.Invoke("Dispose");
             }
@@ -374,10 +481,14 @@ public class WaitHandle extends MarshalByRefObject implements AutoCloseable {
     
     public SafeWaitHandle getSafeWaitHandle() throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSafeWaitHandle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SafeWaitHandle");
+            retObjectSafeWaitHandle = classInstance.Get("SafeWaitHandle");
+            JCObject val = (JCObject)retObjectSafeWaitHandle;
             return new SafeWaitHandle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSafeWaitHandle != null ? retObjectSafeWaitHandle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -385,7 +496,7 @@ public class WaitHandle extends MarshalByRefObject implements AutoCloseable {
 
     public void setSafeWaitHandle(SafeWaitHandle SafeWaitHandle) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SafeWaitHandle", SafeWaitHandle == null ? null : SafeWaitHandle.getJCOInstance());
         } catch (JCNativeException jcne) {

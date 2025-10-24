@@ -143,9 +143,13 @@ public class ICommandImplementation extends NetObject implements ICommand {
     
     public boolean CanExecute(NetObject parameter) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanExecute = null;
         try {
-            return (boolean)classInstance.Invoke("CanExecute", parameter == null ? null : parameter.getJCOInstance());
+            retObjectCanExecute = classInstance.Invoke("CanExecute", parameter == null ? null : parameter.getJCOInstance());
+            return (boolean)retObjectCanExecute;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCanExecute != null ? retObjectCanExecute.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -153,7 +157,7 @@ public class ICommandImplementation extends NetObject implements ICommand {
 
     public void Execute(NetObject parameter) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Execute", parameter == null ? null : parameter.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -172,7 +176,7 @@ public class ICommandImplementation extends NetObject implements ICommand {
 
     public void addCanExecuteChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("CanExecuteChanged", handler);
         } catch (JCNativeException jcne) {
@@ -182,7 +186,7 @@ public class ICommandImplementation extends NetObject implements ICommand {
 
     public void removeCanExecuteChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("CanExecuteChanged", handler);
         } catch (JCNativeException jcne) {

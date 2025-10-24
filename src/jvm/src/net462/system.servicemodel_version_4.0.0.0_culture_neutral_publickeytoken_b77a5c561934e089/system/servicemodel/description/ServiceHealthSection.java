@@ -172,10 +172,14 @@ public class ServiceHealthSection extends NetObjectEnumerable  {
     
     public ServiceHealthDataCollection CreateElementsCollection() throws Throwable, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateElementsCollection = null;
         try {
-            JCObject objCreateElementsCollection = (JCObject)classInstance.Invoke("CreateElementsCollection");
+            retObjectCreateElementsCollection = classInstance.Invoke("CreateElementsCollection");
+            JCObject objCreateElementsCollection = (JCObject)retObjectCreateElementsCollection;
             return new ServiceHealthDataCollection(objCreateElementsCollection);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateElementsCollection != null ? retObjectCreateElementsCollection.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,9 +191,13 @@ public class ServiceHealthSection extends NetObjectEnumerable  {
     
     public java.lang.String getBackgroundColor() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBackgroundColor = null;
         try {
-            return (java.lang.String)classInstance.Get("BackgroundColor");
+            retObjectBackgroundColor = classInstance.Get("BackgroundColor");
+            return (java.lang.String)retObjectBackgroundColor;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectBackgroundColor != null ? retObjectBackgroundColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,7 +205,7 @@ public class ServiceHealthSection extends NetObjectEnumerable  {
 
     public void setBackgroundColor(java.lang.String BackgroundColor) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BackgroundColor", BackgroundColor);
         } catch (JCNativeException jcne) {
@@ -207,9 +215,13 @@ public class ServiceHealthSection extends NetObjectEnumerable  {
 
     public java.lang.String getForegroundColor() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectForegroundColor = null;
         try {
-            return (java.lang.String)classInstance.Get("ForegroundColor");
+            retObjectForegroundColor = classInstance.Get("ForegroundColor");
+            return (java.lang.String)retObjectForegroundColor;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectForegroundColor != null ? retObjectForegroundColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -217,7 +229,7 @@ public class ServiceHealthSection extends NetObjectEnumerable  {
 
     public void setForegroundColor(java.lang.String ForegroundColor) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ForegroundColor", ForegroundColor);
         } catch (JCNativeException jcne) {
@@ -227,9 +239,13 @@ public class ServiceHealthSection extends NetObjectEnumerable  {
 
     public java.lang.String getTitle() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTitle = null;
         try {
-            return (java.lang.String)classInstance.Get("Title");
+            retObjectTitle = classInstance.Get("Title");
+            return (java.lang.String)retObjectTitle;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectTitle != null ? retObjectTitle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -237,7 +253,7 @@ public class ServiceHealthSection extends NetObjectEnumerable  {
 
     public void setTitle(java.lang.String Title) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Title", Title);
         } catch (JCNativeException jcne) {

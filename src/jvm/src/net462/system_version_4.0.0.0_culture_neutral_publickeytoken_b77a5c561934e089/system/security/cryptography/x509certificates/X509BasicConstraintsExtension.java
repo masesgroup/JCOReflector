@@ -183,7 +183,7 @@ public class X509BasicConstraintsExtension extends X509Extension  {
     
     public void CopyFrom(AsnEncodedData asnEncodedData) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CopyFrom", asnEncodedData == null ? null : asnEncodedData.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -197,9 +197,13 @@ public class X509BasicConstraintsExtension extends X509Extension  {
     
     public boolean getCertificateAuthority() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.security.cryptography.CryptographicException, system.ArgumentException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCertificateAuthority = null;
         try {
-            return (boolean)classInstance.Get("CertificateAuthority");
+            retObjectCertificateAuthority = classInstance.Get("CertificateAuthority");
+            return (boolean)retObjectCertificateAuthority;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCertificateAuthority != null ? retObjectCertificateAuthority.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -207,9 +211,13 @@ public class X509BasicConstraintsExtension extends X509Extension  {
 
     public boolean getHasPathLengthConstraint() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.security.cryptography.CryptographicException, system.ArgumentException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHasPathLengthConstraint = null;
         try {
-            return (boolean)classInstance.Get("HasPathLengthConstraint");
+            retObjectHasPathLengthConstraint = classInstance.Get("HasPathLengthConstraint");
+            return (boolean)retObjectHasPathLengthConstraint;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectHasPathLengthConstraint != null ? retObjectHasPathLengthConstraint.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -217,9 +225,20 @@ public class X509BasicConstraintsExtension extends X509Extension  {
 
     public int getPathLengthConstraint() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.security.cryptography.CryptographicException, system.ArgumentException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPathLengthConstraint = null;
         try {
-            return (int)classInstance.Get("PathLengthConstraint");
+            retObjectPathLengthConstraint = classInstance.Get("PathLengthConstraint");
+            return (int)retObjectPathLengthConstraint;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectPathLengthConstraint_ToString = retObjectPathLengthConstraint == null ? "null" : retObjectPathLengthConstraint.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectPathLengthConstraintNumber = (java.lang.Number)retObjectPathLengthConstraint;
+                return retObjectPathLengthConstraintNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectPathLengthConstraint != null ? retObjectPathLengthConstraint.getClass() : "null", retObjectPathLengthConstraint_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -187,9 +187,13 @@ public class SecurityContextKeyIdentifierClause extends SecurityKeyIdentifierCla
     
     public boolean Matches(SecurityKeyIdentifierClause keyIdentifierClause) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMatches = null;
         try {
-            return (boolean)classInstance.Invoke("Matches", keyIdentifierClause == null ? null : keyIdentifierClause.getJCOInstance());
+            retObjectMatches = classInstance.Invoke("Matches", keyIdentifierClause == null ? null : keyIdentifierClause.getJCOInstance());
+            return (boolean)retObjectMatches;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectMatches != null ? retObjectMatches.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,9 +201,13 @@ public class SecurityContextKeyIdentifierClause extends SecurityKeyIdentifierCla
 
     public boolean Matches(UniqueId contextId, UniqueId generation) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMatches = null;
         try {
-            return (boolean)classInstance.Invoke("Matches", contextId == null ? null : contextId.getJCOInstance(), generation == null ? null : generation.getJCOInstance());
+            retObjectMatches = classInstance.Invoke("Matches", contextId == null ? null : contextId.getJCOInstance(), generation == null ? null : generation.getJCOInstance());
+            return (boolean)retObjectMatches;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectMatches != null ? retObjectMatches.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -211,10 +219,14 @@ public class SecurityContextKeyIdentifierClause extends SecurityKeyIdentifierCla
     
     public UniqueId getContextId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContextId = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ContextId");
+            retObjectContextId = classInstance.Get("ContextId");
+            JCObject val = (JCObject)retObjectContextId;
             return new UniqueId(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContextId != null ? retObjectContextId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -222,10 +234,14 @@ public class SecurityContextKeyIdentifierClause extends SecurityKeyIdentifierCla
 
     public UniqueId getGeneration() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGeneration = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Generation");
+            retObjectGeneration = classInstance.Get("Generation");
+            JCObject val = (JCObject)retObjectGeneration;
             return new UniqueId(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGeneration != null ? retObjectGeneration.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

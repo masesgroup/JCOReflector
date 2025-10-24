@@ -165,9 +165,13 @@ public class ComClass extends NetObject  {
     
     public java.lang.String getClsId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClsId = null;
         try {
-            return (java.lang.String)classInstance.Get("ClsId");
+            retObjectClsId = classInstance.Get("ClsId");
+            return (java.lang.String)retObjectClsId;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectClsId != null ? retObjectClsId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -175,9 +179,13 @@ public class ComClass extends NetObject  {
 
     public java.lang.String getDescription() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDescription = null;
         try {
-            return (java.lang.String)classInstance.Get("Description");
+            retObjectDescription = classInstance.Get("Description");
+            return (java.lang.String)retObjectDescription;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDescription != null ? retObjectDescription.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -185,9 +193,13 @@ public class ComClass extends NetObject  {
 
     public java.lang.String getProgId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProgId = null;
         try {
-            return (java.lang.String)classInstance.Get("ProgId");
+            retObjectProgId = classInstance.Get("ProgId");
+            return (java.lang.String)retObjectProgId;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectProgId != null ? retObjectProgId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,9 +207,13 @@ public class ComClass extends NetObject  {
 
     public java.lang.String getThreadingModel() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectThreadingModel = null;
         try {
-            return (java.lang.String)classInstance.Get("ThreadingModel");
+            retObjectThreadingModel = classInstance.Get("ThreadingModel");
+            return (java.lang.String)retObjectThreadingModel;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectThreadingModel != null ? retObjectThreadingModel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -205,9 +221,13 @@ public class ComClass extends NetObject  {
 
     public java.lang.String getTlbId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTlbId = null;
         try {
-            return (java.lang.String)classInstance.Get("TlbId");
+            retObjectTlbId = classInstance.Get("TlbId");
+            return (java.lang.String)retObjectTlbId;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectTlbId != null ? retObjectTlbId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -215,9 +235,13 @@ public class ComClass extends NetObject  {
 
     public java.lang.String getXmlClsId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectXmlClsId = null;
         try {
-            return (java.lang.String)classInstance.Get("XmlClsId");
+            retObjectXmlClsId = classInstance.Get("XmlClsId");
+            return (java.lang.String)retObjectXmlClsId;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectXmlClsId != null ? retObjectXmlClsId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -225,7 +249,7 @@ public class ComClass extends NetObject  {
 
     public void setXmlClsId(java.lang.String XmlClsId) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("XmlClsId", XmlClsId);
         } catch (JCNativeException jcne) {
@@ -235,9 +259,13 @@ public class ComClass extends NetObject  {
 
     public java.lang.String getXmlDescription() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectXmlDescription = null;
         try {
-            return (java.lang.String)classInstance.Get("XmlDescription");
+            retObjectXmlDescription = classInstance.Get("XmlDescription");
+            return (java.lang.String)retObjectXmlDescription;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectXmlDescription != null ? retObjectXmlDescription.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -245,7 +273,7 @@ public class ComClass extends NetObject  {
 
     public void setXmlDescription(java.lang.String XmlDescription) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("XmlDescription", XmlDescription);
         } catch (JCNativeException jcne) {
@@ -255,9 +283,13 @@ public class ComClass extends NetObject  {
 
     public java.lang.String getXmlProgId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectXmlProgId = null;
         try {
-            return (java.lang.String)classInstance.Get("XmlProgId");
+            retObjectXmlProgId = classInstance.Get("XmlProgId");
+            return (java.lang.String)retObjectXmlProgId;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectXmlProgId != null ? retObjectXmlProgId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -265,7 +297,7 @@ public class ComClass extends NetObject  {
 
     public void setXmlProgId(java.lang.String XmlProgId) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("XmlProgId", XmlProgId);
         } catch (JCNativeException jcne) {
@@ -275,9 +307,13 @@ public class ComClass extends NetObject  {
 
     public java.lang.String getXmlThreadingModel() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectXmlThreadingModel = null;
         try {
-            return (java.lang.String)classInstance.Get("XmlThreadingModel");
+            retObjectXmlThreadingModel = classInstance.Get("XmlThreadingModel");
+            return (java.lang.String)retObjectXmlThreadingModel;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectXmlThreadingModel != null ? retObjectXmlThreadingModel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -285,7 +321,7 @@ public class ComClass extends NetObject  {
 
     public void setXmlThreadingModel(java.lang.String XmlThreadingModel) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("XmlThreadingModel", XmlThreadingModel);
         } catch (JCNativeException jcne) {
@@ -295,9 +331,13 @@ public class ComClass extends NetObject  {
 
     public java.lang.String getXmlTlbId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectXmlTlbId = null;
         try {
-            return (java.lang.String)classInstance.Get("XmlTlbId");
+            retObjectXmlTlbId = classInstance.Get("XmlTlbId");
+            return (java.lang.String)retObjectXmlTlbId;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectXmlTlbId != null ? retObjectXmlTlbId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -305,7 +345,7 @@ public class ComClass extends NetObject  {
 
     public void setXmlTlbId(java.lang.String XmlTlbId) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("XmlTlbId", XmlTlbId);
         } catch (JCNativeException jcne) {

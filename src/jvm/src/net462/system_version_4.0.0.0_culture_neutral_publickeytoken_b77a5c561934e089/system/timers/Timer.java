@@ -177,7 +177,7 @@ public class Timer extends Component  {
     
     public void BeginInit() throws Throwable, system.ArgumentException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("BeginInit");
         } catch (JCNativeException jcne) {
@@ -187,7 +187,7 @@ public class Timer extends Component  {
 
     public void Close() throws Throwable, system.ArgumentException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Close");
         } catch (JCNativeException jcne) {
@@ -197,7 +197,7 @@ public class Timer extends Component  {
 
     public void EndInit() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EndInit");
         } catch (JCNativeException jcne) {
@@ -207,7 +207,7 @@ public class Timer extends Component  {
 
     public void Start() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Start");
         } catch (JCNativeException jcne) {
@@ -217,7 +217,7 @@ public class Timer extends Component  {
 
     public void Stop() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Stop");
         } catch (JCNativeException jcne) {
@@ -231,9 +231,13 @@ public class Timer extends Component  {
     
     public boolean getAutoReset() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAutoReset = null;
         try {
-            return (boolean)classInstance.Get("AutoReset");
+            retObjectAutoReset = classInstance.Get("AutoReset");
+            return (boolean)retObjectAutoReset;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAutoReset != null ? retObjectAutoReset.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -241,7 +245,7 @@ public class Timer extends Component  {
 
     public void setAutoReset(boolean AutoReset) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AutoReset", AutoReset);
         } catch (JCNativeException jcne) {
@@ -251,9 +255,13 @@ public class Timer extends Component  {
 
     public boolean getEnabled() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEnabled = null;
         try {
-            return (boolean)classInstance.Get("Enabled");
+            retObjectEnabled = classInstance.Get("Enabled");
+            return (boolean)retObjectEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectEnabled != null ? retObjectEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -261,7 +269,7 @@ public class Timer extends Component  {
 
     public void setEnabled(boolean Enabled) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.InvalidOperationException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Enabled", Enabled);
         } catch (JCNativeException jcne) {
@@ -271,9 +279,20 @@ public class Timer extends Component  {
 
     public double getInterval() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInterval = null;
         try {
-            return (double)classInstance.Get("Interval");
+            retObjectInterval = classInstance.Get("Interval");
+            return (double)retObjectInterval;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectInterval_ToString = retObjectInterval == null ? "null" : retObjectInterval.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectIntervalNumber = (java.lang.Number)retObjectInterval;
+                return retObjectIntervalNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectInterval != null ? retObjectInterval.getClass() : "null", retObjectInterval_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -281,7 +300,7 @@ public class Timer extends Component  {
 
     public void setInterval(double Interval) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Interval", Interval);
         } catch (JCNativeException jcne) {
@@ -291,10 +310,14 @@ public class Timer extends Component  {
 
     public ISynchronizeInvoke getSynchronizingObject() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSynchronizingObject = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SynchronizingObject");
+            retObjectSynchronizingObject = classInstance.Get("SynchronizingObject");
+            JCObject val = (JCObject)retObjectSynchronizingObject;
             return new ISynchronizeInvokeImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSynchronizingObject != null ? retObjectSynchronizingObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -302,7 +325,7 @@ public class Timer extends Component  {
 
     public void setSynchronizingObject(ISynchronizeInvoke SynchronizingObject) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SynchronizingObject", SynchronizingObject == null ? null : SynchronizingObject.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -317,7 +340,7 @@ public class Timer extends Component  {
 
     public void addElapsed(ElapsedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Elapsed", handler);
         } catch (JCNativeException jcne) {
@@ -327,7 +350,7 @@ public class Timer extends Component  {
 
     public void removeElapsed(ElapsedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Elapsed", handler);
         } catch (JCNativeException jcne) {

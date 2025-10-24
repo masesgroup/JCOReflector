@@ -172,9 +172,20 @@ public class GridViewUpdateEventArgs extends CancelEventArgs  {
     
     public int getRowIndex() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRowIndex = null;
         try {
-            return (int)classInstance.Get("RowIndex");
+            retObjectRowIndex = classInstance.Get("RowIndex");
+            return (int)retObjectRowIndex;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectRowIndex_ToString = retObjectRowIndex == null ? "null" : retObjectRowIndex.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectRowIndexNumber = (java.lang.Number)retObjectRowIndex;
+                return retObjectRowIndexNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectRowIndex != null ? retObjectRowIndex.getClass() : "null", retObjectRowIndex_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,10 +193,14 @@ public class GridViewUpdateEventArgs extends CancelEventArgs  {
 
     public IOrderedDictionary getKeys() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectKeys = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Keys");
+            retObjectKeys = classInstance.Get("Keys");
+            JCObject val = (JCObject)retObjectKeys;
             return new IOrderedDictionaryImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectKeys != null ? retObjectKeys.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,10 +208,14 @@ public class GridViewUpdateEventArgs extends CancelEventArgs  {
 
     public IOrderedDictionary getNewValues() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNewValues = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("NewValues");
+            retObjectNewValues = classInstance.Get("NewValues");
+            JCObject val = (JCObject)retObjectNewValues;
             return new IOrderedDictionaryImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNewValues != null ? retObjectNewValues.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -204,10 +223,14 @@ public class GridViewUpdateEventArgs extends CancelEventArgs  {
 
     public IOrderedDictionary getOldValues() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOldValues = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("OldValues");
+            retObjectOldValues = classInstance.Get("OldValues");
+            JCObject val = (JCObject)retObjectOldValues;
             return new IOrderedDictionaryImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOldValues != null ? retObjectOldValues.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

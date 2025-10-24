@@ -144,7 +144,7 @@ public class IWebAdministrationServiceImplementation extends NetObject implement
     
     public void Start(IDictionary arguments) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Start", arguments == null ? null : arguments.getJCOInstance());
         } catch (JCNativeException jcne) {

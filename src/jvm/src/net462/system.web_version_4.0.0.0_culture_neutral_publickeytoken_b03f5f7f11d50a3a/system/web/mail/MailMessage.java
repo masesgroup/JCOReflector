@@ -172,10 +172,14 @@ public class MailMessage extends NetObject  {
     
     public IDictionary getFields() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFields = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Fields");
+            retObjectFields = classInstance.Get("Fields");
+            JCObject val = (JCObject)retObjectFields;
             return new IDictionaryImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFields != null ? retObjectFields.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,10 +187,14 @@ public class MailMessage extends NetObject  {
 
     public IDictionary getHeaders() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHeaders = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Headers");
+            retObjectHeaders = classInstance.Get("Headers");
+            JCObject val = (JCObject)retObjectHeaders;
             return new IDictionaryImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHeaders != null ? retObjectHeaders.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -194,10 +202,14 @@ public class MailMessage extends NetObject  {
 
     public IList getAttachments() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAttachments = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Attachments");
+            retObjectAttachments = classInstance.Get("Attachments");
+            JCObject val = (JCObject)retObjectAttachments;
             return new IListImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAttachments != null ? retObjectAttachments.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -205,9 +217,13 @@ public class MailMessage extends NetObject  {
 
     public java.lang.String getBcc() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBcc = null;
         try {
-            return (java.lang.String)classInstance.Get("Bcc");
+            retObjectBcc = classInstance.Get("Bcc");
+            return (java.lang.String)retObjectBcc;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectBcc != null ? retObjectBcc.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -215,7 +231,7 @@ public class MailMessage extends NetObject  {
 
     public void setBcc(java.lang.String Bcc) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Bcc", Bcc);
         } catch (JCNativeException jcne) {
@@ -225,9 +241,13 @@ public class MailMessage extends NetObject  {
 
     public java.lang.String getBody() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBody = null;
         try {
-            return (java.lang.String)classInstance.Get("Body");
+            retObjectBody = classInstance.Get("Body");
+            return (java.lang.String)retObjectBody;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectBody != null ? retObjectBody.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -235,7 +255,7 @@ public class MailMessage extends NetObject  {
 
     public void setBody(java.lang.String Body) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Body", Body);
         } catch (JCNativeException jcne) {
@@ -245,9 +265,13 @@ public class MailMessage extends NetObject  {
 
     public java.lang.String getCc() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCc = null;
         try {
-            return (java.lang.String)classInstance.Get("Cc");
+            retObjectCc = classInstance.Get("Cc");
+            return (java.lang.String)retObjectCc;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectCc != null ? retObjectCc.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -255,7 +279,7 @@ public class MailMessage extends NetObject  {
 
     public void setCc(java.lang.String Cc) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Cc", Cc);
         } catch (JCNativeException jcne) {
@@ -265,9 +289,13 @@ public class MailMessage extends NetObject  {
 
     public java.lang.String getFrom() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFrom = null;
         try {
-            return (java.lang.String)classInstance.Get("From");
+            retObjectFrom = classInstance.Get("From");
+            return (java.lang.String)retObjectFrom;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectFrom != null ? retObjectFrom.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -275,7 +303,7 @@ public class MailMessage extends NetObject  {
 
     public void setFrom(java.lang.String From) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("From", From);
         } catch (JCNativeException jcne) {
@@ -285,9 +313,13 @@ public class MailMessage extends NetObject  {
 
     public java.lang.String getSubject() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSubject = null;
         try {
-            return (java.lang.String)classInstance.Get("Subject");
+            retObjectSubject = classInstance.Get("Subject");
+            return (java.lang.String)retObjectSubject;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSubject != null ? retObjectSubject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -295,7 +327,7 @@ public class MailMessage extends NetObject  {
 
     public void setSubject(java.lang.String Subject) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Subject", Subject);
         } catch (JCNativeException jcne) {
@@ -305,9 +337,13 @@ public class MailMessage extends NetObject  {
 
     public java.lang.String getTo() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTo = null;
         try {
-            return (java.lang.String)classInstance.Get("To");
+            retObjectTo = classInstance.Get("To");
+            return (java.lang.String)retObjectTo;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectTo != null ? retObjectTo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -315,7 +351,7 @@ public class MailMessage extends NetObject  {
 
     public void setTo(java.lang.String To) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("To", To);
         } catch (JCNativeException jcne) {
@@ -325,9 +361,13 @@ public class MailMessage extends NetObject  {
 
     public java.lang.String getUrlContentBase() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUrlContentBase = null;
         try {
-            return (java.lang.String)classInstance.Get("UrlContentBase");
+            retObjectUrlContentBase = classInstance.Get("UrlContentBase");
+            return (java.lang.String)retObjectUrlContentBase;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectUrlContentBase != null ? retObjectUrlContentBase.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -335,7 +375,7 @@ public class MailMessage extends NetObject  {
 
     public void setUrlContentBase(java.lang.String UrlContentBase) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UrlContentBase", UrlContentBase);
         } catch (JCNativeException jcne) {
@@ -345,9 +385,13 @@ public class MailMessage extends NetObject  {
 
     public java.lang.String getUrlContentLocation() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUrlContentLocation = null;
         try {
-            return (java.lang.String)classInstance.Get("UrlContentLocation");
+            retObjectUrlContentLocation = classInstance.Get("UrlContentLocation");
+            return (java.lang.String)retObjectUrlContentLocation;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectUrlContentLocation != null ? retObjectUrlContentLocation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -355,7 +399,7 @@ public class MailMessage extends NetObject  {
 
     public void setUrlContentLocation(java.lang.String UrlContentLocation) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UrlContentLocation", UrlContentLocation);
         } catch (JCNativeException jcne) {
@@ -365,10 +409,14 @@ public class MailMessage extends NetObject  {
 
     public Encoding getBodyEncoding() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBodyEncoding = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("BodyEncoding");
+            retObjectBodyEncoding = classInstance.Get("BodyEncoding");
+            JCObject val = (JCObject)retObjectBodyEncoding;
             return new Encoding(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBodyEncoding != null ? retObjectBodyEncoding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -376,7 +424,7 @@ public class MailMessage extends NetObject  {
 
     public void setBodyEncoding(Encoding BodyEncoding) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BodyEncoding", BodyEncoding == null ? null : BodyEncoding.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -386,10 +434,14 @@ public class MailMessage extends NetObject  {
 
     public MailFormat getBodyFormat() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBodyFormat = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("BodyFormat");
+            retObjectBodyFormat = classInstance.Get("BodyFormat");
+            JCObject val = (JCObject)retObjectBodyFormat;
             return new MailFormat(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBodyFormat != null ? retObjectBodyFormat.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -397,7 +449,7 @@ public class MailMessage extends NetObject  {
 
     public void setBodyFormat(MailFormat BodyFormat) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BodyFormat", BodyFormat == null ? null : BodyFormat.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -407,10 +459,14 @@ public class MailMessage extends NetObject  {
 
     public MailPriority getPriority() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPriority = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Priority");
+            retObjectPriority = classInstance.Get("Priority");
+            JCObject val = (JCObject)retObjectPriority;
             return new MailPriority(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPriority != null ? retObjectPriority.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -418,7 +474,7 @@ public class MailMessage extends NetObject  {
 
     public void setPriority(MailPriority Priority) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Priority", Priority == null ? null : Priority.getJCOInstance());
         } catch (JCNativeException jcne) {

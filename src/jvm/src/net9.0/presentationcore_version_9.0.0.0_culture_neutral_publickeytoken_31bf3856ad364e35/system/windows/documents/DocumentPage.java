@@ -179,7 +179,7 @@ public class DocumentPage extends NetObject implements AutoCloseable {
     
     public void Dispose() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
@@ -190,7 +190,7 @@ public class DocumentPage extends NetObject implements AutoCloseable {
     public void close() throws Exception {
         try {
             if (classInstance == null)
-                throw new UnsupportedOperationException("classInstance is null.");
+                throw new java.lang.UnsupportedOperationException("classInstance is null.");
             try {
                 classInstance.Invoke("Dispose");
             }
@@ -206,10 +206,14 @@ public class DocumentPage extends NetObject implements AutoCloseable {
     
     public Visual getVisual() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVisual = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Visual");
+            retObjectVisual = classInstance.Get("Visual");
+            JCObject val = (JCObject)retObjectVisual;
             return new Visual(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVisual != null ? retObjectVisual.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -217,10 +221,14 @@ public class DocumentPage extends NetObject implements AutoCloseable {
 
     public Rect getBleedBox() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.componentmodel.Win32Exception, system.ArgumentException, system.MulticastNotSupportedException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBleedBox = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("BleedBox");
+            retObjectBleedBox = classInstance.Get("BleedBox");
+            JCObject val = (JCObject)retObjectBleedBox;
             return new Rect(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBleedBox != null ? retObjectBleedBox.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -228,10 +236,14 @@ public class DocumentPage extends NetObject implements AutoCloseable {
 
     public Rect getContentBox() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.componentmodel.Win32Exception, system.ArgumentException, system.MulticastNotSupportedException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContentBox = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ContentBox");
+            retObjectContentBox = classInstance.Get("ContentBox");
+            JCObject val = (JCObject)retObjectContentBox;
             return new Rect(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContentBox != null ? retObjectContentBox.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -239,10 +251,14 @@ public class DocumentPage extends NetObject implements AutoCloseable {
 
     public Size getSize() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.InvalidCastException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSize = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Size");
+            retObjectSize = classInstance.Get("Size");
+            JCObject val = (JCObject)retObjectSize;
             return new Size(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSize != null ? retObjectSize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -255,7 +271,7 @@ public class DocumentPage extends NetObject implements AutoCloseable {
 
     public void addPageDestroyed(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("PageDestroyed", handler);
         } catch (JCNativeException jcne) {
@@ -265,7 +281,7 @@ public class DocumentPage extends NetObject implements AutoCloseable {
 
     public void removePageDestroyed(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("PageDestroyed", handler);
         } catch (JCNativeException jcne) {

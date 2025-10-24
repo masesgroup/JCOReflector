@@ -157,10 +157,14 @@ public class ConfigurationSectionGroupCollection extends NameObjectCollectionBas
     
     public ConfigurationSectionGroup Get(int index) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGet = null;
         try {
-            JCObject objGet = (JCObject)classInstance.Invoke("Get", index);
+            retObjectGet = classInstance.Invoke("Get", index);
+            JCObject objGet = (JCObject)retObjectGet;
             return new ConfigurationSectionGroup(objGet);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGet != null ? retObjectGet.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -168,10 +172,14 @@ public class ConfigurationSectionGroupCollection extends NameObjectCollectionBas
 
     public ConfigurationSectionGroup Get(java.lang.String name) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.OutOfMemoryException, system.configuration.ConfigurationErrorsException, system.TypeLoadException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGet = null;
         try {
-            JCObject objGet = (JCObject)classInstance.Invoke("Get", name);
+            retObjectGet = classInstance.Invoke("Get", name);
+            JCObject objGet = (JCObject)retObjectGet;
             return new ConfigurationSectionGroup(objGet);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGet != null ? retObjectGet.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,9 +187,13 @@ public class ConfigurationSectionGroupCollection extends NameObjectCollectionBas
 
     public java.lang.String GetKey(int index) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetKey = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetKey", index);
+            retObjectGetKey = classInstance.Invoke("GetKey", index);
+            return (java.lang.String)retObjectGetKey;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetKey != null ? retObjectGetKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -189,7 +201,7 @@ public class ConfigurationSectionGroupCollection extends NameObjectCollectionBas
 
     public void Add(java.lang.String name, ConfigurationSectionGroup sectionGroup) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Add", name, sectionGroup == null ? null : sectionGroup.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -199,7 +211,7 @@ public class ConfigurationSectionGroupCollection extends NameObjectCollectionBas
 
     public void Clear() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.RankException, system.ArrayTypeMismatchException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Clear");
         } catch (JCNativeException jcne) {
@@ -209,7 +221,7 @@ public class ConfigurationSectionGroupCollection extends NameObjectCollectionBas
 
     public void CopyTo(ConfigurationSectionGroup[] array, int index) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException, system.configuration.ConfigurationErrorsException, system.TypeLoadException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CopyTo", toObjectFromArray(array), index);
         } catch (JCNativeException jcne) {
@@ -219,7 +231,7 @@ public class ConfigurationSectionGroupCollection extends NameObjectCollectionBas
 
     public void Remove(java.lang.String name) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Remove", name);
         } catch (JCNativeException jcne) {
@@ -229,7 +241,7 @@ public class ConfigurationSectionGroupCollection extends NameObjectCollectionBas
 
     public void RemoveAt(int index) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.RankException, system.ArrayTypeMismatchException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RemoveAt", index);
         } catch (JCNativeException jcne) {

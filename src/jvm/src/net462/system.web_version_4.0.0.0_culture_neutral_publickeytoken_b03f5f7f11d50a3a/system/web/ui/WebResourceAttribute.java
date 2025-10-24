@@ -170,9 +170,13 @@ public class WebResourceAttribute extends Attribute  {
     
     public boolean getCdnSupportsSecureConnection() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCdnSupportsSecureConnection = null;
         try {
-            return (boolean)classInstance.Get("CdnSupportsSecureConnection");
+            retObjectCdnSupportsSecureConnection = classInstance.Get("CdnSupportsSecureConnection");
+            return (boolean)retObjectCdnSupportsSecureConnection;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCdnSupportsSecureConnection != null ? retObjectCdnSupportsSecureConnection.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,7 +184,7 @@ public class WebResourceAttribute extends Attribute  {
 
     public void setCdnSupportsSecureConnection(boolean CdnSupportsSecureConnection) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CdnSupportsSecureConnection", CdnSupportsSecureConnection);
         } catch (JCNativeException jcne) {
@@ -190,9 +194,13 @@ public class WebResourceAttribute extends Attribute  {
 
     public boolean getPerformSubstitution() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPerformSubstitution = null;
         try {
-            return (boolean)classInstance.Get("PerformSubstitution");
+            retObjectPerformSubstitution = classInstance.Get("PerformSubstitution");
+            return (boolean)retObjectPerformSubstitution;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectPerformSubstitution != null ? retObjectPerformSubstitution.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,7 +208,7 @@ public class WebResourceAttribute extends Attribute  {
 
     public void setPerformSubstitution(boolean PerformSubstitution) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PerformSubstitution", PerformSubstitution);
         } catch (JCNativeException jcne) {
@@ -210,9 +218,13 @@ public class WebResourceAttribute extends Attribute  {
 
     public java.lang.String getCdnPath() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCdnPath = null;
         try {
-            return (java.lang.String)classInstance.Get("CdnPath");
+            retObjectCdnPath = classInstance.Get("CdnPath");
+            return (java.lang.String)retObjectCdnPath;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectCdnPath != null ? retObjectCdnPath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -220,7 +232,7 @@ public class WebResourceAttribute extends Attribute  {
 
     public void setCdnPath(java.lang.String CdnPath) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CdnPath", CdnPath);
         } catch (JCNativeException jcne) {
@@ -230,9 +242,13 @@ public class WebResourceAttribute extends Attribute  {
 
     public java.lang.String getContentType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContentType = null;
         try {
-            return (java.lang.String)classInstance.Get("ContentType");
+            retObjectContentType = classInstance.Get("ContentType");
+            return (java.lang.String)retObjectContentType;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectContentType != null ? retObjectContentType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -240,9 +256,13 @@ public class WebResourceAttribute extends Attribute  {
 
     public java.lang.String getLoadSuccessExpression() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLoadSuccessExpression = null;
         try {
-            return (java.lang.String)classInstance.Get("LoadSuccessExpression");
+            retObjectLoadSuccessExpression = classInstance.Get("LoadSuccessExpression");
+            return (java.lang.String)retObjectLoadSuccessExpression;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectLoadSuccessExpression != null ? retObjectLoadSuccessExpression.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -250,7 +270,7 @@ public class WebResourceAttribute extends Attribute  {
 
     public void setLoadSuccessExpression(java.lang.String LoadSuccessExpression) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("LoadSuccessExpression", LoadSuccessExpression);
         } catch (JCNativeException jcne) {
@@ -260,9 +280,13 @@ public class WebResourceAttribute extends Attribute  {
 
     public java.lang.String getWebResource() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWebResource = null;
         try {
-            return (java.lang.String)classInstance.Get("WebResource");
+            retObjectWebResource = classInstance.Get("WebResource");
+            return (java.lang.String)retObjectWebResource;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectWebResource != null ? retObjectWebResource.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

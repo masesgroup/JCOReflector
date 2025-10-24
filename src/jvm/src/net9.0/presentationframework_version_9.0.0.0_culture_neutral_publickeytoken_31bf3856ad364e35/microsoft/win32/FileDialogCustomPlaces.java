@@ -158,10 +158,14 @@ public class FileDialogCustomPlaces extends NetObject  {
     
     public static FileDialogCustomPlace getContacts() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.OverflowException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectContacts = null;
         try {
-            JCObject val = (JCObject)classType.Get("Contacts");
+            retObjectContacts = classType.Get("Contacts");
+            JCObject val = (JCObject)retObjectContacts;
             return new FileDialogCustomPlace(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContacts != null ? retObjectContacts.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,10 +173,14 @@ public class FileDialogCustomPlaces extends NetObject  {
 
     public static FileDialogCustomPlace getCookies() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.OverflowException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCookies = null;
         try {
-            JCObject val = (JCObject)classType.Get("Cookies");
+            retObjectCookies = classType.Get("Cookies");
+            JCObject val = (JCObject)retObjectCookies;
             return new FileDialogCustomPlace(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCookies != null ? retObjectCookies.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,10 +188,14 @@ public class FileDialogCustomPlaces extends NetObject  {
 
     public static FileDialogCustomPlace getDesktop() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.OverflowException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDesktop = null;
         try {
-            JCObject val = (JCObject)classType.Get("Desktop");
+            retObjectDesktop = classType.Get("Desktop");
+            JCObject val = (JCObject)retObjectDesktop;
             return new FileDialogCustomPlace(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDesktop != null ? retObjectDesktop.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,10 +203,14 @@ public class FileDialogCustomPlaces extends NetObject  {
 
     public static FileDialogCustomPlace getDocuments() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.OverflowException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDocuments = null;
         try {
-            JCObject val = (JCObject)classType.Get("Documents");
+            retObjectDocuments = classType.Get("Documents");
+            JCObject val = (JCObject)retObjectDocuments;
             return new FileDialogCustomPlace(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDocuments != null ? retObjectDocuments.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,10 +218,14 @@ public class FileDialogCustomPlaces extends NetObject  {
 
     public static FileDialogCustomPlace getFavorites() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.OverflowException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFavorites = null;
         try {
-            JCObject val = (JCObject)classType.Get("Favorites");
+            retObjectFavorites = classType.Get("Favorites");
+            JCObject val = (JCObject)retObjectFavorites;
             return new FileDialogCustomPlace(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFavorites != null ? retObjectFavorites.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,10 +233,14 @@ public class FileDialogCustomPlaces extends NetObject  {
 
     public static FileDialogCustomPlace getLocalApplicationData() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.OverflowException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLocalApplicationData = null;
         try {
-            JCObject val = (JCObject)classType.Get("LocalApplicationData");
+            retObjectLocalApplicationData = classType.Get("LocalApplicationData");
+            JCObject val = (JCObject)retObjectLocalApplicationData;
             return new FileDialogCustomPlace(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLocalApplicationData != null ? retObjectLocalApplicationData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -224,10 +248,14 @@ public class FileDialogCustomPlaces extends NetObject  {
 
     public static FileDialogCustomPlace getMusic() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.OverflowException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMusic = null;
         try {
-            JCObject val = (JCObject)classType.Get("Music");
+            retObjectMusic = classType.Get("Music");
+            JCObject val = (JCObject)retObjectMusic;
             return new FileDialogCustomPlace(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMusic != null ? retObjectMusic.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -235,10 +263,14 @@ public class FileDialogCustomPlaces extends NetObject  {
 
     public static FileDialogCustomPlace getPictures() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.OverflowException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectPictures = null;
         try {
-            JCObject val = (JCObject)classType.Get("Pictures");
+            retObjectPictures = classType.Get("Pictures");
+            JCObject val = (JCObject)retObjectPictures;
             return new FileDialogCustomPlace(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPictures != null ? retObjectPictures.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -246,10 +278,14 @@ public class FileDialogCustomPlaces extends NetObject  {
 
     public static FileDialogCustomPlace getProgramFiles() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.OverflowException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectProgramFiles = null;
         try {
-            JCObject val = (JCObject)classType.Get("ProgramFiles");
+            retObjectProgramFiles = classType.Get("ProgramFiles");
+            JCObject val = (JCObject)retObjectProgramFiles;
             return new FileDialogCustomPlace(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectProgramFiles != null ? retObjectProgramFiles.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -257,10 +293,14 @@ public class FileDialogCustomPlaces extends NetObject  {
 
     public static FileDialogCustomPlace getProgramFilesCommon() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.OverflowException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectProgramFilesCommon = null;
         try {
-            JCObject val = (JCObject)classType.Get("ProgramFilesCommon");
+            retObjectProgramFilesCommon = classType.Get("ProgramFilesCommon");
+            JCObject val = (JCObject)retObjectProgramFilesCommon;
             return new FileDialogCustomPlace(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectProgramFilesCommon != null ? retObjectProgramFilesCommon.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -268,10 +308,14 @@ public class FileDialogCustomPlaces extends NetObject  {
 
     public static FileDialogCustomPlace getPrograms() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.OverflowException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectPrograms = null;
         try {
-            JCObject val = (JCObject)classType.Get("Programs");
+            retObjectPrograms = classType.Get("Programs");
+            JCObject val = (JCObject)retObjectPrograms;
             return new FileDialogCustomPlace(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPrograms != null ? retObjectPrograms.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -279,10 +323,14 @@ public class FileDialogCustomPlaces extends NetObject  {
 
     public static FileDialogCustomPlace getRoamingApplicationData() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.OverflowException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectRoamingApplicationData = null;
         try {
-            JCObject val = (JCObject)classType.Get("RoamingApplicationData");
+            retObjectRoamingApplicationData = classType.Get("RoamingApplicationData");
+            JCObject val = (JCObject)retObjectRoamingApplicationData;
             return new FileDialogCustomPlace(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRoamingApplicationData != null ? retObjectRoamingApplicationData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -290,10 +338,14 @@ public class FileDialogCustomPlaces extends NetObject  {
 
     public static FileDialogCustomPlace getSendTo() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.OverflowException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSendTo = null;
         try {
-            JCObject val = (JCObject)classType.Get("SendTo");
+            retObjectSendTo = classType.Get("SendTo");
+            JCObject val = (JCObject)retObjectSendTo;
             return new FileDialogCustomPlace(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSendTo != null ? retObjectSendTo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -301,10 +353,14 @@ public class FileDialogCustomPlaces extends NetObject  {
 
     public static FileDialogCustomPlace getStartMenu() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.OverflowException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectStartMenu = null;
         try {
-            JCObject val = (JCObject)classType.Get("StartMenu");
+            retObjectStartMenu = classType.Get("StartMenu");
+            JCObject val = (JCObject)retObjectStartMenu;
             return new FileDialogCustomPlace(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStartMenu != null ? retObjectStartMenu.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -312,10 +368,14 @@ public class FileDialogCustomPlaces extends NetObject  {
 
     public static FileDialogCustomPlace getStartup() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.OverflowException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectStartup = null;
         try {
-            JCObject val = (JCObject)classType.Get("Startup");
+            retObjectStartup = classType.Get("Startup");
+            JCObject val = (JCObject)retObjectStartup;
             return new FileDialogCustomPlace(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStartup != null ? retObjectStartup.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -323,10 +383,14 @@ public class FileDialogCustomPlaces extends NetObject  {
 
     public static FileDialogCustomPlace getSystem() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.OverflowException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSystem = null;
         try {
-            JCObject val = (JCObject)classType.Get("System");
+            retObjectSystem = classType.Get("System");
+            JCObject val = (JCObject)retObjectSystem;
             return new FileDialogCustomPlace(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSystem != null ? retObjectSystem.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -334,10 +398,14 @@ public class FileDialogCustomPlaces extends NetObject  {
 
     public static FileDialogCustomPlace getTemplates() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.OverflowException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTemplates = null;
         try {
-            JCObject val = (JCObject)classType.Get("Templates");
+            retObjectTemplates = classType.Get("Templates");
+            JCObject val = (JCObject)retObjectTemplates;
             return new FileDialogCustomPlace(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTemplates != null ? retObjectTemplates.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

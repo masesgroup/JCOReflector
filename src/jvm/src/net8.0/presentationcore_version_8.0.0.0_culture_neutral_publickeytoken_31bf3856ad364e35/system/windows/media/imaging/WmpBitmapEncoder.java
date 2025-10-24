@@ -168,9 +168,13 @@ public class WmpBitmapEncoder extends BitmapEncoder  {
     
     public boolean getCompressedDomainTranscode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCompressedDomainTranscode = null;
         try {
-            return (boolean)classInstance.Get("CompressedDomainTranscode");
+            retObjectCompressedDomainTranscode = classInstance.Get("CompressedDomainTranscode");
+            return (boolean)retObjectCompressedDomainTranscode;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCompressedDomainTranscode != null ? retObjectCompressedDomainTranscode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,7 +182,7 @@ public class WmpBitmapEncoder extends BitmapEncoder  {
 
     public void setCompressedDomainTranscode(boolean CompressedDomainTranscode) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CompressedDomainTranscode", CompressedDomainTranscode);
         } catch (JCNativeException jcne) {
@@ -188,9 +192,13 @@ public class WmpBitmapEncoder extends BitmapEncoder  {
 
     public boolean getFlipHorizontal() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFlipHorizontal = null;
         try {
-            return (boolean)classInstance.Get("FlipHorizontal");
+            retObjectFlipHorizontal = classInstance.Get("FlipHorizontal");
+            return (boolean)retObjectFlipHorizontal;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectFlipHorizontal != null ? retObjectFlipHorizontal.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,7 +206,7 @@ public class WmpBitmapEncoder extends BitmapEncoder  {
 
     public void setFlipHorizontal(boolean FlipHorizontal) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FlipHorizontal", FlipHorizontal);
         } catch (JCNativeException jcne) {
@@ -208,9 +216,13 @@ public class WmpBitmapEncoder extends BitmapEncoder  {
 
     public boolean getFlipVertical() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFlipVertical = null;
         try {
-            return (boolean)classInstance.Get("FlipVertical");
+            retObjectFlipVertical = classInstance.Get("FlipVertical");
+            return (boolean)retObjectFlipVertical;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectFlipVertical != null ? retObjectFlipVertical.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -218,7 +230,7 @@ public class WmpBitmapEncoder extends BitmapEncoder  {
 
     public void setFlipVertical(boolean FlipVertical) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FlipVertical", FlipVertical);
         } catch (JCNativeException jcne) {
@@ -228,9 +240,13 @@ public class WmpBitmapEncoder extends BitmapEncoder  {
 
     public boolean getFrequencyOrder() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFrequencyOrder = null;
         try {
-            return (boolean)classInstance.Get("FrequencyOrder");
+            retObjectFrequencyOrder = classInstance.Get("FrequencyOrder");
+            return (boolean)retObjectFrequencyOrder;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectFrequencyOrder != null ? retObjectFrequencyOrder.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -238,7 +254,7 @@ public class WmpBitmapEncoder extends BitmapEncoder  {
 
     public void setFrequencyOrder(boolean FrequencyOrder) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FrequencyOrder", FrequencyOrder);
         } catch (JCNativeException jcne) {
@@ -248,9 +264,13 @@ public class WmpBitmapEncoder extends BitmapEncoder  {
 
     public boolean getIgnoreOverlap() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIgnoreOverlap = null;
         try {
-            return (boolean)classInstance.Get("IgnoreOverlap");
+            retObjectIgnoreOverlap = classInstance.Get("IgnoreOverlap");
+            return (boolean)retObjectIgnoreOverlap;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIgnoreOverlap != null ? retObjectIgnoreOverlap.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -258,7 +278,7 @@ public class WmpBitmapEncoder extends BitmapEncoder  {
 
     public void setIgnoreOverlap(boolean IgnoreOverlap) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IgnoreOverlap", IgnoreOverlap);
         } catch (JCNativeException jcne) {
@@ -268,9 +288,13 @@ public class WmpBitmapEncoder extends BitmapEncoder  {
 
     public boolean getInterleavedAlpha() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInterleavedAlpha = null;
         try {
-            return (boolean)classInstance.Get("InterleavedAlpha");
+            retObjectInterleavedAlpha = classInstance.Get("InterleavedAlpha");
+            return (boolean)retObjectInterleavedAlpha;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectInterleavedAlpha != null ? retObjectInterleavedAlpha.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -278,7 +302,7 @@ public class WmpBitmapEncoder extends BitmapEncoder  {
 
     public void setInterleavedAlpha(boolean InterleavedAlpha) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("InterleavedAlpha", InterleavedAlpha);
         } catch (JCNativeException jcne) {
@@ -288,9 +312,13 @@ public class WmpBitmapEncoder extends BitmapEncoder  {
 
     public boolean getLossless() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLossless = null;
         try {
-            return (boolean)classInstance.Get("Lossless");
+            retObjectLossless = classInstance.Get("Lossless");
+            return (boolean)retObjectLossless;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectLossless != null ? retObjectLossless.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -298,7 +326,7 @@ public class WmpBitmapEncoder extends BitmapEncoder  {
 
     public void setLossless(boolean Lossless) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Lossless", Lossless);
         } catch (JCNativeException jcne) {
@@ -308,9 +336,13 @@ public class WmpBitmapEncoder extends BitmapEncoder  {
 
     public boolean getUseCodecOptions() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUseCodecOptions = null;
         try {
-            return (boolean)classInstance.Get("UseCodecOptions");
+            retObjectUseCodecOptions = classInstance.Get("UseCodecOptions");
+            return (boolean)retObjectUseCodecOptions;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectUseCodecOptions != null ? retObjectUseCodecOptions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -318,7 +350,7 @@ public class WmpBitmapEncoder extends BitmapEncoder  {
 
     public void setUseCodecOptions(boolean UseCodecOptions) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UseCodecOptions", UseCodecOptions);
         } catch (JCNativeException jcne) {
@@ -328,9 +360,20 @@ public class WmpBitmapEncoder extends BitmapEncoder  {
 
     public byte getAlphaDataDiscardLevel() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAlphaDataDiscardLevel = null;
         try {
-            return (byte)classInstance.Get("AlphaDataDiscardLevel");
+            retObjectAlphaDataDiscardLevel = classInstance.Get("AlphaDataDiscardLevel");
+            return (byte)retObjectAlphaDataDiscardLevel;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectAlphaDataDiscardLevel_ToString = retObjectAlphaDataDiscardLevel == null ? "null" : retObjectAlphaDataDiscardLevel.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectAlphaDataDiscardLevelNumber = (java.lang.Number)retObjectAlphaDataDiscardLevel;
+                return retObjectAlphaDataDiscardLevelNumber.byteValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into byte and, as fallback solution, into java.lang.Number", retObjectAlphaDataDiscardLevel != null ? retObjectAlphaDataDiscardLevel.getClass() : "null", retObjectAlphaDataDiscardLevel_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -338,7 +381,7 @@ public class WmpBitmapEncoder extends BitmapEncoder  {
 
     public void setAlphaDataDiscardLevel(byte AlphaDataDiscardLevel) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AlphaDataDiscardLevel", AlphaDataDiscardLevel);
         } catch (JCNativeException jcne) {
@@ -348,9 +391,20 @@ public class WmpBitmapEncoder extends BitmapEncoder  {
 
     public byte getAlphaQualityLevel() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAlphaQualityLevel = null;
         try {
-            return (byte)classInstance.Get("AlphaQualityLevel");
+            retObjectAlphaQualityLevel = classInstance.Get("AlphaQualityLevel");
+            return (byte)retObjectAlphaQualityLevel;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectAlphaQualityLevel_ToString = retObjectAlphaQualityLevel == null ? "null" : retObjectAlphaQualityLevel.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectAlphaQualityLevelNumber = (java.lang.Number)retObjectAlphaQualityLevel;
+                return retObjectAlphaQualityLevelNumber.byteValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into byte and, as fallback solution, into java.lang.Number", retObjectAlphaQualityLevel != null ? retObjectAlphaQualityLevel.getClass() : "null", retObjectAlphaQualityLevel_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -358,7 +412,7 @@ public class WmpBitmapEncoder extends BitmapEncoder  {
 
     public void setAlphaQualityLevel(byte AlphaQualityLevel) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AlphaQualityLevel", AlphaQualityLevel);
         } catch (JCNativeException jcne) {
@@ -368,9 +422,20 @@ public class WmpBitmapEncoder extends BitmapEncoder  {
 
     public byte getImageDataDiscardLevel() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectImageDataDiscardLevel = null;
         try {
-            return (byte)classInstance.Get("ImageDataDiscardLevel");
+            retObjectImageDataDiscardLevel = classInstance.Get("ImageDataDiscardLevel");
+            return (byte)retObjectImageDataDiscardLevel;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectImageDataDiscardLevel_ToString = retObjectImageDataDiscardLevel == null ? "null" : retObjectImageDataDiscardLevel.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectImageDataDiscardLevelNumber = (java.lang.Number)retObjectImageDataDiscardLevel;
+                return retObjectImageDataDiscardLevelNumber.byteValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into byte and, as fallback solution, into java.lang.Number", retObjectImageDataDiscardLevel != null ? retObjectImageDataDiscardLevel.getClass() : "null", retObjectImageDataDiscardLevel_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -378,7 +443,7 @@ public class WmpBitmapEncoder extends BitmapEncoder  {
 
     public void setImageDataDiscardLevel(byte ImageDataDiscardLevel) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ImageDataDiscardLevel", ImageDataDiscardLevel);
         } catch (JCNativeException jcne) {
@@ -388,9 +453,20 @@ public class WmpBitmapEncoder extends BitmapEncoder  {
 
     public byte getOverlapLevel() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOverlapLevel = null;
         try {
-            return (byte)classInstance.Get("OverlapLevel");
+            retObjectOverlapLevel = classInstance.Get("OverlapLevel");
+            return (byte)retObjectOverlapLevel;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectOverlapLevel_ToString = retObjectOverlapLevel == null ? "null" : retObjectOverlapLevel.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectOverlapLevelNumber = (java.lang.Number)retObjectOverlapLevel;
+                return retObjectOverlapLevelNumber.byteValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into byte and, as fallback solution, into java.lang.Number", retObjectOverlapLevel != null ? retObjectOverlapLevel.getClass() : "null", retObjectOverlapLevel_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -398,7 +474,7 @@ public class WmpBitmapEncoder extends BitmapEncoder  {
 
     public void setOverlapLevel(byte OverlapLevel) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("OverlapLevel", OverlapLevel);
         } catch (JCNativeException jcne) {
@@ -408,9 +484,20 @@ public class WmpBitmapEncoder extends BitmapEncoder  {
 
     public byte getQualityLevel() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectQualityLevel = null;
         try {
-            return (byte)classInstance.Get("QualityLevel");
+            retObjectQualityLevel = classInstance.Get("QualityLevel");
+            return (byte)retObjectQualityLevel;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectQualityLevel_ToString = retObjectQualityLevel == null ? "null" : retObjectQualityLevel.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectQualityLevelNumber = (java.lang.Number)retObjectQualityLevel;
+                return retObjectQualityLevelNumber.byteValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into byte and, as fallback solution, into java.lang.Number", retObjectQualityLevel != null ? retObjectQualityLevel.getClass() : "null", retObjectQualityLevel_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -418,7 +505,7 @@ public class WmpBitmapEncoder extends BitmapEncoder  {
 
     public void setQualityLevel(byte QualityLevel) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("QualityLevel", QualityLevel);
         } catch (JCNativeException jcne) {
@@ -428,9 +515,20 @@ public class WmpBitmapEncoder extends BitmapEncoder  {
 
     public byte getSubsamplingLevel() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSubsamplingLevel = null;
         try {
-            return (byte)classInstance.Get("SubsamplingLevel");
+            retObjectSubsamplingLevel = classInstance.Get("SubsamplingLevel");
+            return (byte)retObjectSubsamplingLevel;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSubsamplingLevel_ToString = retObjectSubsamplingLevel == null ? "null" : retObjectSubsamplingLevel.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectSubsamplingLevelNumber = (java.lang.Number)retObjectSubsamplingLevel;
+                return retObjectSubsamplingLevelNumber.byteValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into byte and, as fallback solution, into java.lang.Number", retObjectSubsamplingLevel != null ? retObjectSubsamplingLevel.getClass() : "null", retObjectSubsamplingLevel_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -438,7 +536,7 @@ public class WmpBitmapEncoder extends BitmapEncoder  {
 
     public void setSubsamplingLevel(byte SubsamplingLevel) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SubsamplingLevel", SubsamplingLevel);
         } catch (JCNativeException jcne) {
@@ -448,9 +546,20 @@ public class WmpBitmapEncoder extends BitmapEncoder  {
 
     public short getHorizontalTileSlices() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHorizontalTileSlices = null;
         try {
-            return (short)classInstance.Get("HorizontalTileSlices");
+            retObjectHorizontalTileSlices = classInstance.Get("HorizontalTileSlices");
+            return (short)retObjectHorizontalTileSlices;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectHorizontalTileSlices_ToString = retObjectHorizontalTileSlices == null ? "null" : retObjectHorizontalTileSlices.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectHorizontalTileSlicesNumber = (java.lang.Number)retObjectHorizontalTileSlices;
+                return retObjectHorizontalTileSlicesNumber.shortValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into short and, as fallback solution, into java.lang.Number", retObjectHorizontalTileSlices != null ? retObjectHorizontalTileSlices.getClass() : "null", retObjectHorizontalTileSlices_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -458,7 +567,7 @@ public class WmpBitmapEncoder extends BitmapEncoder  {
 
     public void setHorizontalTileSlices(short HorizontalTileSlices) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("HorizontalTileSlices", HorizontalTileSlices);
         } catch (JCNativeException jcne) {
@@ -468,9 +577,20 @@ public class WmpBitmapEncoder extends BitmapEncoder  {
 
     public short getVerticalTileSlices() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVerticalTileSlices = null;
         try {
-            return (short)classInstance.Get("VerticalTileSlices");
+            retObjectVerticalTileSlices = classInstance.Get("VerticalTileSlices");
+            return (short)retObjectVerticalTileSlices;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectVerticalTileSlices_ToString = retObjectVerticalTileSlices == null ? "null" : retObjectVerticalTileSlices.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectVerticalTileSlicesNumber = (java.lang.Number)retObjectVerticalTileSlices;
+                return retObjectVerticalTileSlicesNumber.shortValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into short and, as fallback solution, into java.lang.Number", retObjectVerticalTileSlices != null ? retObjectVerticalTileSlices.getClass() : "null", retObjectVerticalTileSlices_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -478,7 +598,7 @@ public class WmpBitmapEncoder extends BitmapEncoder  {
 
     public void setVerticalTileSlices(short VerticalTileSlices) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("VerticalTileSlices", VerticalTileSlices);
         } catch (JCNativeException jcne) {
@@ -488,10 +608,14 @@ public class WmpBitmapEncoder extends BitmapEncoder  {
 
     public Single getImageQualityLevel() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectImageQualityLevel = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ImageQualityLevel");
+            retObjectImageQualityLevel = classInstance.Get("ImageQualityLevel");
+            JCObject val = (JCObject)retObjectImageQualityLevel;
             return new Single(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectImageQualityLevel != null ? retObjectImageQualityLevel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -499,7 +623,7 @@ public class WmpBitmapEncoder extends BitmapEncoder  {
 
     public void setImageQualityLevel(Single ImageQualityLevel) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ImageQualityLevel", ImageQualityLevel == null ? null : ImageQualityLevel.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -509,10 +633,14 @@ public class WmpBitmapEncoder extends BitmapEncoder  {
 
     public Rotation getRotation() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRotation = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Rotation");
+            retObjectRotation = classInstance.Get("Rotation");
+            JCObject val = (JCObject)retObjectRotation;
             return new Rotation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRotation != null ? retObjectRotation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -520,7 +648,7 @@ public class WmpBitmapEncoder extends BitmapEncoder  {
 
     public void setRotation(Rotation Rotation) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Rotation", Rotation == null ? null : Rotation.getJCOInstance());
         } catch (JCNativeException jcne) {

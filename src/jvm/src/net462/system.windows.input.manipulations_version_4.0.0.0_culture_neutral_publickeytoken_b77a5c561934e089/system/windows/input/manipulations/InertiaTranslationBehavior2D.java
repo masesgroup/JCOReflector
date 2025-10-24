@@ -167,10 +167,14 @@ public class InertiaTranslationBehavior2D extends InertiaParameters2D  {
     
     public Single getDesiredDeceleration() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDesiredDeceleration = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DesiredDeceleration");
+            retObjectDesiredDeceleration = classInstance.Get("DesiredDeceleration");
+            JCObject val = (JCObject)retObjectDesiredDeceleration;
             return new Single(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDesiredDeceleration != null ? retObjectDesiredDeceleration.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,7 +182,7 @@ public class InertiaTranslationBehavior2D extends InertiaParameters2D  {
 
     public void setDesiredDeceleration(Single DesiredDeceleration) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DesiredDeceleration", DesiredDeceleration == null ? null : DesiredDeceleration.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -188,10 +192,14 @@ public class InertiaTranslationBehavior2D extends InertiaParameters2D  {
 
     public Single getDesiredDisplacement() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDesiredDisplacement = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DesiredDisplacement");
+            retObjectDesiredDisplacement = classInstance.Get("DesiredDisplacement");
+            JCObject val = (JCObject)retObjectDesiredDisplacement;
             return new Single(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDesiredDisplacement != null ? retObjectDesiredDisplacement.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -199,7 +207,7 @@ public class InertiaTranslationBehavior2D extends InertiaParameters2D  {
 
     public void setDesiredDisplacement(Single DesiredDisplacement) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DesiredDisplacement", DesiredDisplacement == null ? null : DesiredDisplacement.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -209,10 +217,14 @@ public class InertiaTranslationBehavior2D extends InertiaParameters2D  {
 
     public Single getInitialVelocityX() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInitialVelocityX = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("InitialVelocityX");
+            retObjectInitialVelocityX = classInstance.Get("InitialVelocityX");
+            JCObject val = (JCObject)retObjectInitialVelocityX;
             return new Single(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInitialVelocityX != null ? retObjectInitialVelocityX.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -220,7 +232,7 @@ public class InertiaTranslationBehavior2D extends InertiaParameters2D  {
 
     public void setInitialVelocityX(Single InitialVelocityX) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("InitialVelocityX", InitialVelocityX == null ? null : InitialVelocityX.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -230,10 +242,14 @@ public class InertiaTranslationBehavior2D extends InertiaParameters2D  {
 
     public Single getInitialVelocityY() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInitialVelocityY = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("InitialVelocityY");
+            retObjectInitialVelocityY = classInstance.Get("InitialVelocityY");
+            JCObject val = (JCObject)retObjectInitialVelocityY;
             return new Single(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInitialVelocityY != null ? retObjectInitialVelocityY.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -241,7 +257,7 @@ public class InertiaTranslationBehavior2D extends InertiaParameters2D  {
 
     public void setInitialVelocityY(Single InitialVelocityY) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("InitialVelocityY", InitialVelocityY == null ? null : InitialVelocityY.getJCOInstance());
         } catch (JCNativeException jcne) {

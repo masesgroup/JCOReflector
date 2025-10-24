@@ -171,9 +171,13 @@ public class ToolStripItemCollection extends ArrangedElementCollection  {
     
     public boolean Contains(ToolStripItem value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContains = null;
         try {
-            return (boolean)classInstance.Invoke("Contains", value == null ? null : value.getJCOInstance());
+            retObjectContains = classInstance.Invoke("Contains", value == null ? null : value.getJCOInstance());
+            return (boolean)retObjectContains;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectContains != null ? retObjectContains.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,9 +185,13 @@ public class ToolStripItemCollection extends ArrangedElementCollection  {
 
     public boolean ContainsKey(java.lang.String key) throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContainsKey = null;
         try {
-            return (boolean)classInstance.Invoke("ContainsKey", key);
+            retObjectContainsKey = classInstance.Invoke("ContainsKey", key);
+            return (boolean)retObjectContainsKey;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectContainsKey != null ? retObjectContainsKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,9 +199,20 @@ public class ToolStripItemCollection extends ArrangedElementCollection  {
 
     public int Add(ToolStripItem value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.MulticastNotSupportedException, system.threading.ThreadStateException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAdd = null;
         try {
-            return (int)classInstance.Invoke("Add", value == null ? null : value.getJCOInstance());
+            retObjectAdd = classInstance.Invoke("Add", value == null ? null : value.getJCOInstance());
+            return (int)retObjectAdd;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectAdd_ToString = retObjectAdd == null ? "null" : retObjectAdd.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectAddNumber = (java.lang.Number)retObjectAdd;
+                return retObjectAddNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectAdd != null ? retObjectAdd.getClass() : "null", retObjectAdd_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,9 +220,20 @@ public class ToolStripItemCollection extends ArrangedElementCollection  {
 
     public int IndexOf(ToolStripItem value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIndexOf = null;
         try {
-            return (int)classInstance.Invoke("IndexOf", value == null ? null : value.getJCOInstance());
+            retObjectIndexOf = classInstance.Invoke("IndexOf", value == null ? null : value.getJCOInstance());
+            return (int)retObjectIndexOf;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectIndexOf_ToString = retObjectIndexOf == null ? "null" : retObjectIndexOf.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectIndexOfNumber = (java.lang.Number)retObjectIndexOf;
+                return retObjectIndexOfNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectIndexOf != null ? retObjectIndexOf.getClass() : "null", retObjectIndexOf_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -211,9 +241,20 @@ public class ToolStripItemCollection extends ArrangedElementCollection  {
 
     public int IndexOfKey(java.lang.String key) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIndexOfKey = null;
         try {
-            return (int)classInstance.Invoke("IndexOfKey", key);
+            retObjectIndexOfKey = classInstance.Invoke("IndexOfKey", key);
+            return (int)retObjectIndexOfKey;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectIndexOfKey_ToString = retObjectIndexOfKey == null ? "null" : retObjectIndexOfKey.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectIndexOfKeyNumber = (java.lang.Number)retObjectIndexOfKey;
+                return retObjectIndexOfKeyNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectIndexOfKey != null ? retObjectIndexOfKey.getClass() : "null", retObjectIndexOfKey_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -221,10 +262,14 @@ public class ToolStripItemCollection extends ArrangedElementCollection  {
 
     public ToolStripItem Add(Image image) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.componentmodel.InvalidEnumArgumentException, system.ArgumentOutOfRangeException, system.MulticastNotSupportedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAdd = null;
         try {
-            JCObject objAdd = (JCObject)classInstance.Invoke("Add", image == null ? null : image.getJCOInstance());
+            retObjectAdd = classInstance.Invoke("Add", image == null ? null : image.getJCOInstance());
+            JCObject objAdd = (JCObject)retObjectAdd;
             return new ToolStripItem(objAdd);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAdd != null ? retObjectAdd.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -232,10 +277,14 @@ public class ToolStripItemCollection extends ArrangedElementCollection  {
 
     public ToolStripItem Add(java.lang.String text, Image image, EventHandler onClick) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.MulticastNotSupportedException, system.threading.ThreadStateException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAdd = null;
         try {
-            JCObject objAdd = (JCObject)classInstance.Invoke("Add", text, image == null ? null : image.getJCOInstance(), onClick);
+            retObjectAdd = classInstance.Invoke("Add", text, image == null ? null : image.getJCOInstance(), onClick);
+            JCObject objAdd = (JCObject)retObjectAdd;
             return new ToolStripItem(objAdd);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAdd != null ? retObjectAdd.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -243,10 +292,14 @@ public class ToolStripItemCollection extends ArrangedElementCollection  {
 
     public ToolStripItem Add(java.lang.String text, Image image) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.componentmodel.InvalidEnumArgumentException, system.ArgumentOutOfRangeException, system.MulticastNotSupportedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAdd = null;
         try {
-            JCObject objAdd = (JCObject)classInstance.Invoke("Add", text, image == null ? null : image.getJCOInstance());
+            retObjectAdd = classInstance.Invoke("Add", text, image == null ? null : image.getJCOInstance());
+            JCObject objAdd = (JCObject)retObjectAdd;
             return new ToolStripItem(objAdd);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAdd != null ? retObjectAdd.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -254,10 +307,14 @@ public class ToolStripItemCollection extends ArrangedElementCollection  {
 
     public ToolStripItem Add(java.lang.String text) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.componentmodel.InvalidEnumArgumentException, system.ArgumentOutOfRangeException, system.MulticastNotSupportedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAdd = null;
         try {
-            JCObject objAdd = (JCObject)classInstance.Invoke("Add", text);
+            retObjectAdd = classInstance.Invoke("Add", text);
+            JCObject objAdd = (JCObject)retObjectAdd;
             return new ToolStripItem(objAdd);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAdd != null ? retObjectAdd.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -265,16 +322,20 @@ public class ToolStripItemCollection extends ArrangedElementCollection  {
 
     public ToolStripItem[] Find(java.lang.String key, boolean searchAllChildren) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFind = null;
         try {
             ArrayList<ToolStripItem> resultingArrayList = new ArrayList<ToolStripItem>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("Find", key, searchAllChildren);
+            retObjectFind = classInstance.Invoke("Find", key, searchAllChildren);
+            JCObject resultingObjects = (JCObject)retObjectFind;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ToolStripItem(resultingObject));
             }
             ToolStripItem[] resultingArray = new ToolStripItem[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFind != null ? retObjectFind.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -282,7 +343,7 @@ public class ToolStripItemCollection extends ArrangedElementCollection  {
 
     public void AddRange(ToolStripItem[] toolStripItems) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.MulticastNotSupportedException, system.threading.ThreadStateException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddRange", (java.lang.Object)toObjectFromArray(toolStripItems));
         } catch (JCNativeException jcne) {
@@ -292,7 +353,7 @@ public class ToolStripItemCollection extends ArrangedElementCollection  {
 
     public void AddRange(ToolStripItemCollection toolStripItems) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.MulticastNotSupportedException, system.threading.ThreadStateException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddRange", toolStripItems == null ? null : toolStripItems.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -302,7 +363,7 @@ public class ToolStripItemCollection extends ArrangedElementCollection  {
 
     public void Clear() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.NotSupportedException, system.componentmodel.Win32Exception, system.RankException, system.ArrayTypeMismatchException, system.MulticastNotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Clear");
         } catch (JCNativeException jcne) {
@@ -312,7 +373,7 @@ public class ToolStripItemCollection extends ArrangedElementCollection  {
 
     public void CopyTo(ToolStripItem[] array, int index) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CopyTo", toObjectFromArray(array), index);
         } catch (JCNativeException jcne) {
@@ -322,7 +383,7 @@ public class ToolStripItemCollection extends ArrangedElementCollection  {
 
     public void Insert(int index, ToolStripItem value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.MulticastNotSupportedException, system.threading.ThreadStateException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Insert", index, value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -332,7 +393,7 @@ public class ToolStripItemCollection extends ArrangedElementCollection  {
 
     public void Remove(ToolStripItem value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.NotSupportedException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.MulticastNotSupportedException, system.threading.ThreadStateException, system.OverflowException, system.componentmodel.Win32Exception, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Remove", value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -342,7 +403,7 @@ public class ToolStripItemCollection extends ArrangedElementCollection  {
 
     public void RemoveAt(int index) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.NotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.MulticastNotSupportedException, system.threading.ThreadStateException, system.OverflowException, system.componentmodel.Win32Exception, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RemoveAt", index);
         } catch (JCNativeException jcne) {
@@ -352,7 +413,7 @@ public class ToolStripItemCollection extends ArrangedElementCollection  {
 
     public void RemoveByKey(java.lang.String key) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.NotSupportedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.MulticastNotSupportedException, system.threading.ThreadStateException, system.componentmodel.Win32Exception, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RemoveByKey", key);
         } catch (JCNativeException jcne) {

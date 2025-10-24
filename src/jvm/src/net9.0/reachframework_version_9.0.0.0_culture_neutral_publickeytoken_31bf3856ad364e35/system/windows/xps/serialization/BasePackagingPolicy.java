@@ -159,10 +159,14 @@ public class BasePackagingPolicy extends NetObject implements system.IDisposable
     
     public XpsResourceStream AcquireResourceStreamForXpsColorContext(java.lang.String resourceId) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAcquireResourceStreamForXpsColorContext = null;
         try {
-            JCObject objAcquireResourceStreamForXpsColorContext = (JCObject)classInstance.Invoke("AcquireResourceStreamForXpsColorContext", resourceId);
+            retObjectAcquireResourceStreamForXpsColorContext = classInstance.Invoke("AcquireResourceStreamForXpsColorContext", resourceId);
+            JCObject objAcquireResourceStreamForXpsColorContext = (JCObject)retObjectAcquireResourceStreamForXpsColorContext;
             return new XpsResourceStream(objAcquireResourceStreamForXpsColorContext);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAcquireResourceStreamForXpsColorContext != null ? retObjectAcquireResourceStreamForXpsColorContext.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,10 +174,14 @@ public class BasePackagingPolicy extends NetObject implements system.IDisposable
 
     public XpsResourceStream AcquireResourceStreamForXpsFont() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAcquireResourceStreamForXpsFont = null;
         try {
-            JCObject objAcquireResourceStreamForXpsFont = (JCObject)classInstance.Invoke("AcquireResourceStreamForXpsFont");
+            retObjectAcquireResourceStreamForXpsFont = classInstance.Invoke("AcquireResourceStreamForXpsFont");
+            JCObject objAcquireResourceStreamForXpsFont = (JCObject)retObjectAcquireResourceStreamForXpsFont;
             return new XpsResourceStream(objAcquireResourceStreamForXpsFont);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAcquireResourceStreamForXpsFont != null ? retObjectAcquireResourceStreamForXpsFont.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,10 +189,14 @@ public class BasePackagingPolicy extends NetObject implements system.IDisposable
 
     public XpsResourceStream AcquireResourceStreamForXpsFont(java.lang.String resourceId) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAcquireResourceStreamForXpsFont = null;
         try {
-            JCObject objAcquireResourceStreamForXpsFont = (JCObject)classInstance.Invoke("AcquireResourceStreamForXpsFont", resourceId);
+            retObjectAcquireResourceStreamForXpsFont = classInstance.Invoke("AcquireResourceStreamForXpsFont", resourceId);
+            JCObject objAcquireResourceStreamForXpsFont = (JCObject)retObjectAcquireResourceStreamForXpsFont;
             return new XpsResourceStream(objAcquireResourceStreamForXpsFont);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAcquireResourceStreamForXpsFont != null ? retObjectAcquireResourceStreamForXpsFont.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,10 +204,14 @@ public class BasePackagingPolicy extends NetObject implements system.IDisposable
 
     public XpsResourceStream AcquireResourceStreamForXpsImage(java.lang.String resourceId) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAcquireResourceStreamForXpsImage = null;
         try {
-            JCObject objAcquireResourceStreamForXpsImage = (JCObject)classInstance.Invoke("AcquireResourceStreamForXpsImage", resourceId);
+            retObjectAcquireResourceStreamForXpsImage = classInstance.Invoke("AcquireResourceStreamForXpsImage", resourceId);
+            JCObject objAcquireResourceStreamForXpsImage = (JCObject)retObjectAcquireResourceStreamForXpsImage;
             return new XpsResourceStream(objAcquireResourceStreamForXpsImage);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAcquireResourceStreamForXpsImage != null ? retObjectAcquireResourceStreamForXpsImage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,10 +219,14 @@ public class BasePackagingPolicy extends NetObject implements system.IDisposable
 
     public XpsResourceStream AcquireResourceStreamForXpsResourceDictionary(java.lang.String resourceId) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAcquireResourceStreamForXpsResourceDictionary = null;
         try {
-            JCObject objAcquireResourceStreamForXpsResourceDictionary = (JCObject)classInstance.Invoke("AcquireResourceStreamForXpsResourceDictionary", resourceId);
+            retObjectAcquireResourceStreamForXpsResourceDictionary = classInstance.Invoke("AcquireResourceStreamForXpsResourceDictionary", resourceId);
+            JCObject objAcquireResourceStreamForXpsResourceDictionary = (JCObject)retObjectAcquireResourceStreamForXpsResourceDictionary;
             return new XpsResourceStream(objAcquireResourceStreamForXpsResourceDictionary);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAcquireResourceStreamForXpsResourceDictionary != null ? retObjectAcquireResourceStreamForXpsResourceDictionary.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -214,10 +234,14 @@ public class BasePackagingPolicy extends NetObject implements system.IDisposable
 
     public XmlWriter AcquireXmlWriterForFixedDocument() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAcquireXmlWriterForFixedDocument = null;
         try {
-            JCObject objAcquireXmlWriterForFixedDocument = (JCObject)classInstance.Invoke("AcquireXmlWriterForFixedDocument");
+            retObjectAcquireXmlWriterForFixedDocument = classInstance.Invoke("AcquireXmlWriterForFixedDocument");
+            JCObject objAcquireXmlWriterForFixedDocument = (JCObject)retObjectAcquireXmlWriterForFixedDocument;
             return new XmlWriter(objAcquireXmlWriterForFixedDocument);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAcquireXmlWriterForFixedDocument != null ? retObjectAcquireXmlWriterForFixedDocument.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -225,10 +249,14 @@ public class BasePackagingPolicy extends NetObject implements system.IDisposable
 
     public XmlWriter AcquireXmlWriterForFixedDocumentSequence() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAcquireXmlWriterForFixedDocumentSequence = null;
         try {
-            JCObject objAcquireXmlWriterForFixedDocumentSequence = (JCObject)classInstance.Invoke("AcquireXmlWriterForFixedDocumentSequence");
+            retObjectAcquireXmlWriterForFixedDocumentSequence = classInstance.Invoke("AcquireXmlWriterForFixedDocumentSequence");
+            JCObject objAcquireXmlWriterForFixedDocumentSequence = (JCObject)retObjectAcquireXmlWriterForFixedDocumentSequence;
             return new XmlWriter(objAcquireXmlWriterForFixedDocumentSequence);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAcquireXmlWriterForFixedDocumentSequence != null ? retObjectAcquireXmlWriterForFixedDocumentSequence.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -236,10 +264,14 @@ public class BasePackagingPolicy extends NetObject implements system.IDisposable
 
     public XmlWriter AcquireXmlWriterForFixedPage() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAcquireXmlWriterForFixedPage = null;
         try {
-            JCObject objAcquireXmlWriterForFixedPage = (JCObject)classInstance.Invoke("AcquireXmlWriterForFixedPage");
+            retObjectAcquireXmlWriterForFixedPage = classInstance.Invoke("AcquireXmlWriterForFixedPage");
+            JCObject objAcquireXmlWriterForFixedPage = (JCObject)retObjectAcquireXmlWriterForFixedPage;
             return new XmlWriter(objAcquireXmlWriterForFixedPage);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAcquireXmlWriterForFixedPage != null ? retObjectAcquireXmlWriterForFixedPage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -247,10 +279,14 @@ public class BasePackagingPolicy extends NetObject implements system.IDisposable
 
     public XmlWriter AcquireXmlWriterForPage() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAcquireXmlWriterForPage = null;
         try {
-            JCObject objAcquireXmlWriterForPage = (JCObject)classInstance.Invoke("AcquireXmlWriterForPage");
+            retObjectAcquireXmlWriterForPage = classInstance.Invoke("AcquireXmlWriterForPage");
+            JCObject objAcquireXmlWriterForPage = (JCObject)retObjectAcquireXmlWriterForPage;
             return new XmlWriter(objAcquireXmlWriterForPage);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAcquireXmlWriterForPage != null ? retObjectAcquireXmlWriterForPage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -258,10 +294,14 @@ public class BasePackagingPolicy extends NetObject implements system.IDisposable
 
     public XmlWriter AcquireXmlWriterForResourceDictionary() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAcquireXmlWriterForResourceDictionary = null;
         try {
-            JCObject objAcquireXmlWriterForResourceDictionary = (JCObject)classInstance.Invoke("AcquireXmlWriterForResourceDictionary");
+            retObjectAcquireXmlWriterForResourceDictionary = classInstance.Invoke("AcquireXmlWriterForResourceDictionary");
+            JCObject objAcquireXmlWriterForResourceDictionary = (JCObject)retObjectAcquireXmlWriterForResourceDictionary;
             return new XmlWriter(objAcquireXmlWriterForResourceDictionary);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAcquireXmlWriterForResourceDictionary != null ? retObjectAcquireXmlWriterForResourceDictionary.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -269,7 +309,7 @@ public class BasePackagingPolicy extends NetObject implements system.IDisposable
 
     public void PersistPrintTicket(PrintTicket printTicket) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("PersistPrintTicket", printTicket == null ? null : printTicket.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -279,7 +319,7 @@ public class BasePackagingPolicy extends NetObject implements system.IDisposable
 
     public void PreCommitCurrentPage() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("PreCommitCurrentPage");
         } catch (JCNativeException jcne) {
@@ -289,7 +329,7 @@ public class BasePackagingPolicy extends NetObject implements system.IDisposable
 
     public void RelateResourceToCurrentPage(Uri targetUri, java.lang.String relationshipName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RelateResourceToCurrentPage", targetUri == null ? null : targetUri.getJCOInstance(), relationshipName);
         } catch (JCNativeException jcne) {
@@ -299,7 +339,7 @@ public class BasePackagingPolicy extends NetObject implements system.IDisposable
 
     public void RelateRestrictedFontToCurrentDocument(Uri targetUri) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RelateRestrictedFontToCurrentDocument", targetUri == null ? null : targetUri.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -309,7 +349,7 @@ public class BasePackagingPolicy extends NetObject implements system.IDisposable
 
     public void ReleaseResourceStreamForXpsColorContext() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ReleaseResourceStreamForXpsColorContext");
         } catch (JCNativeException jcne) {
@@ -319,7 +359,7 @@ public class BasePackagingPolicy extends NetObject implements system.IDisposable
 
     public void ReleaseResourceStreamForXpsFont() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ReleaseResourceStreamForXpsFont");
         } catch (JCNativeException jcne) {
@@ -329,7 +369,7 @@ public class BasePackagingPolicy extends NetObject implements system.IDisposable
 
     public void ReleaseResourceStreamForXpsFont(java.lang.String resourceId) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ReleaseResourceStreamForXpsFont", resourceId);
         } catch (JCNativeException jcne) {
@@ -339,7 +379,7 @@ public class BasePackagingPolicy extends NetObject implements system.IDisposable
 
     public void ReleaseResourceStreamForXpsImage() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ReleaseResourceStreamForXpsImage");
         } catch (JCNativeException jcne) {
@@ -349,7 +389,7 @@ public class BasePackagingPolicy extends NetObject implements system.IDisposable
 
     public void ReleaseResourceStreamForXpsResourceDictionary() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ReleaseResourceStreamForXpsResourceDictionary");
         } catch (JCNativeException jcne) {
@@ -359,7 +399,7 @@ public class BasePackagingPolicy extends NetObject implements system.IDisposable
 
     public void ReleaseXmlWriterForFixedDocument() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ReleaseXmlWriterForFixedDocument");
         } catch (JCNativeException jcne) {
@@ -369,7 +409,7 @@ public class BasePackagingPolicy extends NetObject implements system.IDisposable
 
     public void ReleaseXmlWriterForFixedDocumentSequence() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ReleaseXmlWriterForFixedDocumentSequence");
         } catch (JCNativeException jcne) {
@@ -379,7 +419,7 @@ public class BasePackagingPolicy extends NetObject implements system.IDisposable
 
     public void ReleaseXmlWriterForFixedPage() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ReleaseXmlWriterForFixedPage");
         } catch (JCNativeException jcne) {
@@ -393,13 +433,13 @@ public class BasePackagingPolicy extends NetObject implements system.IDisposable
      */
     @Deprecated 
     public void Dispose() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDisposable to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDisposable to obtain the full interface.");
     }
 
     public void close() throws Exception {
         try {
             if (classInstance == null)
-                throw new UnsupportedOperationException("classInstance is null.");
+                throw new java.lang.UnsupportedOperationException("classInstance is null.");
             try {
                 classInstance.Invoke("Dispose");
             }
@@ -415,10 +455,14 @@ public class BasePackagingPolicy extends NetObject implements system.IDisposable
     
     public Uri getCurrentFixedDocumentUri() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCurrentFixedDocumentUri = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CurrentFixedDocumentUri");
+            retObjectCurrentFixedDocumentUri = classInstance.Get("CurrentFixedDocumentUri");
+            JCObject val = (JCObject)retObjectCurrentFixedDocumentUri;
             return new Uri(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCurrentFixedDocumentUri != null ? retObjectCurrentFixedDocumentUri.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -426,10 +470,14 @@ public class BasePackagingPolicy extends NetObject implements system.IDisposable
 
     public Uri getCurrentFixedPageUri() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCurrentFixedPageUri = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CurrentFixedPageUri");
+            retObjectCurrentFixedPageUri = classInstance.Get("CurrentFixedPageUri");
+            JCObject val = (JCObject)retObjectCurrentFixedPageUri;
             return new Uri(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCurrentFixedPageUri != null ? retObjectCurrentFixedPageUri.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

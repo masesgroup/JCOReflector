@@ -166,9 +166,13 @@ public class ClassRecord extends SerializationRecord  {
     
     public boolean GetBoolean(java.lang.String memberName) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetBoolean = null;
         try {
-            return (boolean)classInstance.Invoke("GetBoolean", memberName);
+            retObjectGetBoolean = classInstance.Invoke("GetBoolean", memberName);
+            return (boolean)retObjectGetBoolean;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectGetBoolean != null ? retObjectGetBoolean.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,9 +180,13 @@ public class ClassRecord extends SerializationRecord  {
 
     public boolean HasMember(java.lang.String memberName) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHasMember = null;
         try {
-            return (boolean)classInstance.Invoke("HasMember", memberName);
+            retObjectHasMember = classInstance.Invoke("HasMember", memberName);
+            return (boolean)retObjectHasMember;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectHasMember != null ? retObjectHasMember.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,9 +194,20 @@ public class ClassRecord extends SerializationRecord  {
 
     public byte GetByte(java.lang.String memberName) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetByte = null;
         try {
-            return (byte)classInstance.Invoke("GetByte", memberName);
+            retObjectGetByte = classInstance.Invoke("GetByte", memberName);
+            return (byte)retObjectGetByte;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetByte_ToString = retObjectGetByte == null ? "null" : retObjectGetByte.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetByteNumber = (java.lang.Number)retObjectGetByte;
+                return retObjectGetByteNumber.byteValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into byte and, as fallback solution, into java.lang.Number", retObjectGetByte != null ? retObjectGetByte.getClass() : "null", retObjectGetByte_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,9 +215,13 @@ public class ClassRecord extends SerializationRecord  {
 
     public char GetChar(java.lang.String memberName) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetChar = null;
         try {
-            return (char)classInstance.Invoke("GetChar", memberName);
+            retObjectGetChar = classInstance.Invoke("GetChar", memberName);
+            return (char)retObjectGetChar;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into char", retObjectGetChar != null ? retObjectGetChar.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -206,9 +229,20 @@ public class ClassRecord extends SerializationRecord  {
 
     public double GetDouble(java.lang.String memberName) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDouble = null;
         try {
-            return (double)classInstance.Invoke("GetDouble", memberName);
+            retObjectGetDouble = classInstance.Invoke("GetDouble", memberName);
+            return (double)retObjectGetDouble;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetDouble_ToString = retObjectGetDouble == null ? "null" : retObjectGetDouble.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetDoubleNumber = (java.lang.Number)retObjectGetDouble;
+                return retObjectGetDoubleNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectGetDouble != null ? retObjectGetDouble.getClass() : "null", retObjectGetDouble_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -216,9 +250,20 @@ public class ClassRecord extends SerializationRecord  {
 
     public short GetInt16(java.lang.String memberName) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetInt16 = null;
         try {
-            return (short)classInstance.Invoke("GetInt16", memberName);
+            retObjectGetInt16 = classInstance.Invoke("GetInt16", memberName);
+            return (short)retObjectGetInt16;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetInt16_ToString = retObjectGetInt16 == null ? "null" : retObjectGetInt16.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetInt16Number = (java.lang.Number)retObjectGetInt16;
+                return retObjectGetInt16Number.shortValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into short and, as fallback solution, into java.lang.Number", retObjectGetInt16 != null ? retObjectGetInt16.getClass() : "null", retObjectGetInt16_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -226,9 +271,20 @@ public class ClassRecord extends SerializationRecord  {
 
     public int GetInt32(java.lang.String memberName) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetInt32 = null;
         try {
-            return (int)classInstance.Invoke("GetInt32", memberName);
+            retObjectGetInt32 = classInstance.Invoke("GetInt32", memberName);
+            return (int)retObjectGetInt32;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetInt32_ToString = retObjectGetInt32 == null ? "null" : retObjectGetInt32.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetInt32Number = (java.lang.Number)retObjectGetInt32;
+                return retObjectGetInt32Number.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetInt32 != null ? retObjectGetInt32.getClass() : "null", retObjectGetInt32_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -236,9 +292,20 @@ public class ClassRecord extends SerializationRecord  {
 
     public long GetInt64(java.lang.String memberName) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetInt64 = null;
         try {
-            return (long)classInstance.Invoke("GetInt64", memberName);
+            retObjectGetInt64 = classInstance.Invoke("GetInt64", memberName);
+            return (long)retObjectGetInt64;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetInt64_ToString = retObjectGetInt64 == null ? "null" : retObjectGetInt64.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetInt64Number = (java.lang.Number)retObjectGetInt64;
+                return retObjectGetInt64Number.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectGetInt64 != null ? retObjectGetInt64.getClass() : "null", retObjectGetInt64_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -246,10 +313,14 @@ public class ClassRecord extends SerializationRecord  {
 
     public SByte GetSByte(java.lang.String memberName) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSByte = null;
         try {
-            JCObject objGetSByte = (JCObject)classInstance.Invoke("GetSByte", memberName);
+            retObjectGetSByte = classInstance.Invoke("GetSByte", memberName);
+            JCObject objGetSByte = (JCObject)retObjectGetSByte;
             return new SByte(objGetSByte);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSByte != null ? retObjectGetSByte.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -257,10 +328,14 @@ public class ClassRecord extends SerializationRecord  {
 
     public Single GetSingle(java.lang.String memberName) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSingle = null;
         try {
-            JCObject objGetSingle = (JCObject)classInstance.Invoke("GetSingle", memberName);
+            retObjectGetSingle = classInstance.Invoke("GetSingle", memberName);
+            JCObject objGetSingle = (JCObject)retObjectGetSingle;
             return new Single(objGetSingle);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSingle != null ? retObjectGetSingle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -268,10 +343,14 @@ public class ClassRecord extends SerializationRecord  {
 
     public DateTime GetDateTime(java.lang.String memberName) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDateTime = null;
         try {
-            JCObject objGetDateTime = (JCObject)classInstance.Invoke("GetDateTime", memberName);
+            retObjectGetDateTime = classInstance.Invoke("GetDateTime", memberName);
+            JCObject objGetDateTime = (JCObject)retObjectGetDateTime;
             return new DateTime(objGetDateTime);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetDateTime != null ? retObjectGetDateTime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -279,10 +358,14 @@ public class ClassRecord extends SerializationRecord  {
 
     public Decimal GetDecimal(java.lang.String memberName) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDecimal = null;
         try {
-            JCObject objGetDecimal = (JCObject)classInstance.Invoke("GetDecimal", memberName);
+            retObjectGetDecimal = classInstance.Invoke("GetDecimal", memberName);
+            JCObject objGetDecimal = (JCObject)retObjectGetDecimal;
             return new Decimal(objGetDecimal);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetDecimal != null ? retObjectGetDecimal.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -290,10 +373,14 @@ public class ClassRecord extends SerializationRecord  {
 
     public ArrayRecord GetArrayRecord(java.lang.String memberName) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetArrayRecord = null;
         try {
-            JCObject objGetArrayRecord = (JCObject)classInstance.Invoke("GetArrayRecord", memberName);
+            retObjectGetArrayRecord = classInstance.Invoke("GetArrayRecord", memberName);
+            JCObject objGetArrayRecord = (JCObject)retObjectGetArrayRecord;
             return new ArrayRecord(objGetArrayRecord);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetArrayRecord != null ? retObjectGetArrayRecord.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -301,10 +388,14 @@ public class ClassRecord extends SerializationRecord  {
 
     public ClassRecord GetClassRecord(java.lang.String memberName) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetClassRecord = null;
         try {
-            JCObject objGetClassRecord = (JCObject)classInstance.Invoke("GetClassRecord", memberName);
+            retObjectGetClassRecord = classInstance.Invoke("GetClassRecord", memberName);
+            JCObject objGetClassRecord = (JCObject)retObjectGetClassRecord;
             return new ClassRecord(objGetClassRecord);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetClassRecord != null ? retObjectGetClassRecord.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -312,10 +403,14 @@ public class ClassRecord extends SerializationRecord  {
 
     public SerializationRecord GetSerializationRecord(java.lang.String memberName) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException, system.runtime.serialization.SerializationException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSerializationRecord = null;
         try {
-            JCObject objGetSerializationRecord = (JCObject)classInstance.Invoke("GetSerializationRecord", memberName);
+            retObjectGetSerializationRecord = classInstance.Invoke("GetSerializationRecord", memberName);
+            JCObject objGetSerializationRecord = (JCObject)retObjectGetSerializationRecord;
             return new SerializationRecord(objGetSerializationRecord);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSerializationRecord != null ? retObjectGetSerializationRecord.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -323,10 +418,14 @@ public class ClassRecord extends SerializationRecord  {
 
     public NetObject GetRawValue(java.lang.String memberName) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetRawValue = null;
         try {
-            JCObject objGetRawValue = (JCObject)classInstance.Invoke("GetRawValue", memberName);
+            retObjectGetRawValue = classInstance.Invoke("GetRawValue", memberName);
+            JCObject objGetRawValue = (JCObject)retObjectGetRawValue;
             return new NetObject(objGetRawValue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetRawValue != null ? retObjectGetRawValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -334,9 +433,13 @@ public class ClassRecord extends SerializationRecord  {
 
     public java.lang.String GetString(java.lang.String memberName) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetString = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetString", memberName);
+            retObjectGetString = classInstance.Invoke("GetString", memberName);
+            return (java.lang.String)retObjectGetString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetString != null ? retObjectGetString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -344,10 +447,14 @@ public class ClassRecord extends SerializationRecord  {
 
     public TimeSpan GetTimeSpan(java.lang.String memberName) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetTimeSpan = null;
         try {
-            JCObject objGetTimeSpan = (JCObject)classInstance.Invoke("GetTimeSpan", memberName);
+            retObjectGetTimeSpan = classInstance.Invoke("GetTimeSpan", memberName);
+            JCObject objGetTimeSpan = (JCObject)retObjectGetTimeSpan;
             return new TimeSpan(objGetTimeSpan);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetTimeSpan != null ? retObjectGetTimeSpan.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -355,10 +462,14 @@ public class ClassRecord extends SerializationRecord  {
 
     public UInt16 GetUInt16(java.lang.String memberName) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetUInt16 = null;
         try {
-            JCObject objGetUInt16 = (JCObject)classInstance.Invoke("GetUInt16", memberName);
+            retObjectGetUInt16 = classInstance.Invoke("GetUInt16", memberName);
+            JCObject objGetUInt16 = (JCObject)retObjectGetUInt16;
             return new UInt16(objGetUInt16);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetUInt16 != null ? retObjectGetUInt16.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -366,10 +477,14 @@ public class ClassRecord extends SerializationRecord  {
 
     public UInt32 GetUInt32(java.lang.String memberName) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetUInt32 = null;
         try {
-            JCObject objGetUInt32 = (JCObject)classInstance.Invoke("GetUInt32", memberName);
+            retObjectGetUInt32 = classInstance.Invoke("GetUInt32", memberName);
+            JCObject objGetUInt32 = (JCObject)retObjectGetUInt32;
             return new UInt32(objGetUInt32);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetUInt32 != null ? retObjectGetUInt32.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -377,10 +492,14 @@ public class ClassRecord extends SerializationRecord  {
 
     public UInt64 GetUInt64(java.lang.String memberName) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetUInt64 = null;
         try {
-            JCObject objGetUInt64 = (JCObject)classInstance.Invoke("GetUInt64", memberName);
+            retObjectGetUInt64 = classInstance.Invoke("GetUInt64", memberName);
+            JCObject objGetUInt64 = (JCObject)retObjectGetUInt64;
             return new UInt64(objGetUInt64);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetUInt64 != null ? retObjectGetUInt64.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

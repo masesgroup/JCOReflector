@@ -161,10 +161,12 @@ public class HttpCacheVaryByParams extends NetObject  {
     
     public java.lang.String[] GetParams() throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetParams = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetParams");
+            retObjectGetParams = classInstance.Invoke("GetParams");
+            JCObject resultingObjects = (JCObject)retObjectGetParams;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -173,6 +175,8 @@ public class HttpCacheVaryByParams extends NetObject  {
 				resultingArray[indexGetParams] = (java.lang.String)resultingArrayList.get(indexGetParams);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectGetParams != null ? retObjectGetParams.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,7 +184,7 @@ public class HttpCacheVaryByParams extends NetObject  {
 
     public void SetParams(java.lang.String[] parameters) throws Throwable, system.NullReferenceException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetParams", (java.lang.Object)parameters);
         } catch (JCNativeException jcne) {
@@ -190,7 +194,7 @@ public class HttpCacheVaryByParams extends NetObject  {
 
     public void SetParams(JCORefOut dupParam0) throws Throwable, system.NullReferenceException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetParams", (java.lang.Object)dupParam0.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -204,9 +208,13 @@ public class HttpCacheVaryByParams extends NetObject  {
     
     public boolean getIgnoreParams() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIgnoreParams = null;
         try {
-            return (boolean)classInstance.Get("IgnoreParams");
+            retObjectIgnoreParams = classInstance.Get("IgnoreParams");
+            return (boolean)retObjectIgnoreParams;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIgnoreParams != null ? retObjectIgnoreParams.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -214,7 +222,7 @@ public class HttpCacheVaryByParams extends NetObject  {
 
     public void setIgnoreParams(boolean IgnoreParams) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IgnoreParams", IgnoreParams);
         } catch (JCNativeException jcne) {

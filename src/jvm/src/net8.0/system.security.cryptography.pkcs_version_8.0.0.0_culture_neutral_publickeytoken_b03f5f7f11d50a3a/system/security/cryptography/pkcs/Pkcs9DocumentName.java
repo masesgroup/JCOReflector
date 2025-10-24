@@ -183,7 +183,7 @@ public class Pkcs9DocumentName extends Pkcs9AttributeObject  {
     
     public void CopyFrom(AsnEncodedData asnEncodedData) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CopyFrom", asnEncodedData == null ? null : asnEncodedData.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -197,9 +197,13 @@ public class Pkcs9DocumentName extends Pkcs9AttributeObject  {
     
     public java.lang.String getDocumentName() throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.formats.asn1.AsnContentException, system.ArgumentNullException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDocumentName = null;
         try {
-            return (java.lang.String)classInstance.Get("DocumentName");
+            retObjectDocumentName = classInstance.Get("DocumentName");
+            return (java.lang.String)retObjectDocumentName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDocumentName != null ? retObjectDocumentName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -167,9 +167,13 @@ public class Xml extends Control  {
     
     public boolean HasControls() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHasControls = null;
         try {
-            return (boolean)classInstance.Invoke("HasControls");
+            retObjectHasControls = classInstance.Invoke("HasControls");
+            return (boolean)retObjectHasControls;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectHasControls != null ? retObjectHasControls.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,10 +181,14 @@ public class Xml extends Control  {
 
     public Control FindControl(java.lang.String id) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.NullReferenceException, system.ArgumentOutOfRangeException, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFindControl = null;
         try {
-            JCObject objFindControl = (JCObject)classInstance.Invoke("FindControl", id);
+            retObjectFindControl = classInstance.Invoke("FindControl", id);
+            JCObject objFindControl = (JCObject)retObjectFindControl;
             return new Control(objFindControl);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFindControl != null ? retObjectFindControl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,7 +196,7 @@ public class Xml extends Control  {
 
     public void Focus() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Focus");
         } catch (JCNativeException jcne) {
@@ -202,9 +210,13 @@ public class Xml extends Control  {
     
     public java.lang.String getDocumentContent() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDocumentContent = null;
         try {
-            return (java.lang.String)classInstance.Get("DocumentContent");
+            retObjectDocumentContent = classInstance.Get("DocumentContent");
+            return (java.lang.String)retObjectDocumentContent;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDocumentContent != null ? retObjectDocumentContent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -212,7 +224,7 @@ public class Xml extends Control  {
 
     public void setDocumentContent(java.lang.String DocumentContent) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DocumentContent", DocumentContent);
         } catch (JCNativeException jcne) {
@@ -222,9 +234,13 @@ public class Xml extends Control  {
 
     public java.lang.String getDocumentSource() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDocumentSource = null;
         try {
-            return (java.lang.String)classInstance.Get("DocumentSource");
+            retObjectDocumentSource = classInstance.Get("DocumentSource");
+            return (java.lang.String)retObjectDocumentSource;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDocumentSource != null ? retObjectDocumentSource.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -232,7 +248,7 @@ public class Xml extends Control  {
 
     public void setDocumentSource(java.lang.String DocumentSource) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DocumentSource", DocumentSource);
         } catch (JCNativeException jcne) {
@@ -242,9 +258,13 @@ public class Xml extends Control  {
 
     public java.lang.String getTransformSource() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTransformSource = null;
         try {
-            return (java.lang.String)classInstance.Get("TransformSource");
+            retObjectTransformSource = classInstance.Get("TransformSource");
+            return (java.lang.String)retObjectTransformSource;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectTransformSource != null ? retObjectTransformSource.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -252,7 +272,7 @@ public class Xml extends Control  {
 
     public void setTransformSource(java.lang.String TransformSource) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TransformSource", TransformSource);
         } catch (JCNativeException jcne) {
@@ -262,10 +282,14 @@ public class Xml extends Control  {
 
     public XmlDocument getDocument() throws Throwable, system.ArgumentException, system.configuration.ConfigurationErrorsException, system.web.HttpException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException, system.xml.XmlException, system.NotImplementedException, system.web.HttpRequestValidationException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDocument = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Document");
+            retObjectDocument = classInstance.Get("Document");
+            JCObject val = (JCObject)retObjectDocument;
             return new XmlDocument(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDocument != null ? retObjectDocument.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -273,7 +297,7 @@ public class Xml extends Control  {
 
     public void setDocument(XmlDocument Document) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Document", Document == null ? null : Document.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -283,10 +307,14 @@ public class Xml extends Control  {
 
     public XPathNavigator getXPathNavigator() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectXPathNavigator = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("XPathNavigator");
+            retObjectXPathNavigator = classInstance.Get("XPathNavigator");
+            JCObject val = (JCObject)retObjectXPathNavigator;
             return new XPathNavigator(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectXPathNavigator != null ? retObjectXPathNavigator.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -294,7 +322,7 @@ public class Xml extends Control  {
 
     public void setXPathNavigator(XPathNavigator XPathNavigator) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("XPathNavigator", XPathNavigator == null ? null : XPathNavigator.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -304,10 +332,14 @@ public class Xml extends Control  {
 
     public XsltArgumentList getTransformArgumentList() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTransformArgumentList = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TransformArgumentList");
+            retObjectTransformArgumentList = classInstance.Get("TransformArgumentList");
+            JCObject val = (JCObject)retObjectTransformArgumentList;
             return new XsltArgumentList(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTransformArgumentList != null ? retObjectTransformArgumentList.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -315,7 +347,7 @@ public class Xml extends Control  {
 
     public void setTransformArgumentList(XsltArgumentList TransformArgumentList) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TransformArgumentList", TransformArgumentList == null ? null : TransformArgumentList.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -325,10 +357,14 @@ public class Xml extends Control  {
 
     public XslTransform getTransform() throws Throwable, system.ArgumentException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.web.HttpException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.configuration.ConfigurationException, system.InvalidCastException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTransform = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Transform");
+            retObjectTransform = classInstance.Get("Transform");
+            JCObject val = (JCObject)retObjectTransform;
             return new XslTransform(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTransform != null ? retObjectTransform.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -336,7 +372,7 @@ public class Xml extends Control  {
 
     public void setTransform(XslTransform Transform) throws Throwable, system.ArgumentException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.web.HttpException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.configuration.ConfigurationException, system.InvalidCastException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Transform", Transform == null ? null : Transform.getJCOInstance());
         } catch (JCNativeException jcne) {

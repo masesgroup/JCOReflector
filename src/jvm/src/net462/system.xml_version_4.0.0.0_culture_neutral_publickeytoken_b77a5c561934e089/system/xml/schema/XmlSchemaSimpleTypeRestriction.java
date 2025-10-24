@@ -169,10 +169,14 @@ public class XmlSchemaSimpleTypeRestriction extends XmlSchemaSimpleTypeContent  
     
     public XmlSchemaObjectCollection getFacets() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFacets = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Facets");
+            retObjectFacets = classInstance.Get("Facets");
+            JCObject val = (JCObject)retObjectFacets;
             return new XmlSchemaObjectCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFacets != null ? retObjectFacets.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,10 +184,14 @@ public class XmlSchemaSimpleTypeRestriction extends XmlSchemaSimpleTypeContent  
 
     public XmlSchemaSimpleType getBaseType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBaseType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("BaseType");
+            retObjectBaseType = classInstance.Get("BaseType");
+            JCObject val = (JCObject)retObjectBaseType;
             return new XmlSchemaSimpleType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBaseType != null ? retObjectBaseType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,7 +199,7 @@ public class XmlSchemaSimpleTypeRestriction extends XmlSchemaSimpleTypeContent  
 
     public void setBaseType(XmlSchemaSimpleType BaseType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BaseType", BaseType == null ? null : BaseType.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -201,10 +209,14 @@ public class XmlSchemaSimpleTypeRestriction extends XmlSchemaSimpleTypeContent  
 
     public XmlQualifiedName getBaseTypeName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBaseTypeName = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("BaseTypeName");
+            retObjectBaseTypeName = classInstance.Get("BaseTypeName");
+            JCObject val = (JCObject)retObjectBaseTypeName;
             return new XmlQualifiedName(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBaseTypeName != null ? retObjectBaseTypeName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -212,7 +224,7 @@ public class XmlSchemaSimpleTypeRestriction extends XmlSchemaSimpleTypeContent  
 
     public void setBaseTypeName(XmlQualifiedName BaseTypeName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BaseTypeName", BaseTypeName == null ? null : BaseTypeName.getJCOInstance());
         } catch (JCNativeException jcne) {

@@ -196,7 +196,7 @@ public class DbExpressionVisitor extends NetObject  {
     
     public void Visit(DbAndExpression expression) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Visit", expression == null ? null : expression.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -206,7 +206,7 @@ public class DbExpressionVisitor extends NetObject  {
 
     public void Visit(DbApplyExpression expression) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Visit", expression == null ? null : expression.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -216,7 +216,7 @@ public class DbExpressionVisitor extends NetObject  {
 
     public void Visit(DbArithmeticExpression expression) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Visit", expression == null ? null : expression.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -226,7 +226,7 @@ public class DbExpressionVisitor extends NetObject  {
 
     public void Visit(DbCaseExpression expression) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Visit", expression == null ? null : expression.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -236,7 +236,7 @@ public class DbExpressionVisitor extends NetObject  {
 
     public void Visit(DbCastExpression expression) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Visit", expression == null ? null : expression.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -246,7 +246,7 @@ public class DbExpressionVisitor extends NetObject  {
 
     public void Visit(DbComparisonExpression expression) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Visit", expression == null ? null : expression.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -256,7 +256,7 @@ public class DbExpressionVisitor extends NetObject  {
 
     public void Visit(DbConstantExpression expression) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Visit", expression == null ? null : expression.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -266,7 +266,7 @@ public class DbExpressionVisitor extends NetObject  {
 
     public void Visit(DbCrossJoinExpression expression) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Visit", expression == null ? null : expression.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -276,7 +276,7 @@ public class DbExpressionVisitor extends NetObject  {
 
     public void Visit(DbDerefExpression expression) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Visit", expression == null ? null : expression.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -286,7 +286,7 @@ public class DbExpressionVisitor extends NetObject  {
 
     public void Visit(DbDistinctExpression expression) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Visit", expression == null ? null : expression.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -296,7 +296,7 @@ public class DbExpressionVisitor extends NetObject  {
 
     public void Visit(DbElementExpression expression) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Visit", expression == null ? null : expression.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -306,7 +306,7 @@ public class DbExpressionVisitor extends NetObject  {
 
     public void Visit(DbEntityRefExpression expression) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Visit", expression == null ? null : expression.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -316,7 +316,7 @@ public class DbExpressionVisitor extends NetObject  {
 
     public void Visit(DbExceptExpression expression) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Visit", expression == null ? null : expression.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -326,7 +326,7 @@ public class DbExpressionVisitor extends NetObject  {
 
     public void Visit(DbExpression expression) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Visit", expression == null ? null : expression.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -336,7 +336,7 @@ public class DbExpressionVisitor extends NetObject  {
 
     public void Visit(DbFilterExpression expression) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Visit", expression == null ? null : expression.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -346,7 +346,7 @@ public class DbExpressionVisitor extends NetObject  {
 
     public void Visit(DbFunctionExpression expression) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Visit", expression == null ? null : expression.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -356,7 +356,7 @@ public class DbExpressionVisitor extends NetObject  {
 
     public void Visit(DbGroupByExpression expression) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Visit", expression == null ? null : expression.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -366,7 +366,7 @@ public class DbExpressionVisitor extends NetObject  {
 
     public void Visit(DbIntersectExpression expression) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Visit", expression == null ? null : expression.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -376,7 +376,7 @@ public class DbExpressionVisitor extends NetObject  {
 
     public void Visit(DbIsEmptyExpression expression) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Visit", expression == null ? null : expression.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -386,7 +386,7 @@ public class DbExpressionVisitor extends NetObject  {
 
     public void Visit(DbIsNullExpression expression) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Visit", expression == null ? null : expression.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -396,7 +396,7 @@ public class DbExpressionVisitor extends NetObject  {
 
     public void Visit(DbIsOfExpression expression) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Visit", expression == null ? null : expression.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -406,7 +406,7 @@ public class DbExpressionVisitor extends NetObject  {
 
     public void Visit(DbJoinExpression expression) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Visit", expression == null ? null : expression.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -416,7 +416,7 @@ public class DbExpressionVisitor extends NetObject  {
 
     public void Visit(DbLambdaExpression expression) throws Throwable, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Visit", expression == null ? null : expression.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -426,7 +426,7 @@ public class DbExpressionVisitor extends NetObject  {
 
     public void Visit(DbLikeExpression expression) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Visit", expression == null ? null : expression.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -436,7 +436,7 @@ public class DbExpressionVisitor extends NetObject  {
 
     public void Visit(DbLimitExpression expression) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Visit", expression == null ? null : expression.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -446,7 +446,7 @@ public class DbExpressionVisitor extends NetObject  {
 
     public void Visit(DbNewInstanceExpression expression) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Visit", expression == null ? null : expression.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -456,7 +456,7 @@ public class DbExpressionVisitor extends NetObject  {
 
     public void Visit(DbNotExpression expression) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Visit", expression == null ? null : expression.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -466,7 +466,7 @@ public class DbExpressionVisitor extends NetObject  {
 
     public void Visit(DbNullExpression expression) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Visit", expression == null ? null : expression.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -476,7 +476,7 @@ public class DbExpressionVisitor extends NetObject  {
 
     public void Visit(DbOfTypeExpression expression) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Visit", expression == null ? null : expression.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -486,7 +486,7 @@ public class DbExpressionVisitor extends NetObject  {
 
     public void Visit(DbOrExpression expression) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Visit", expression == null ? null : expression.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -496,7 +496,7 @@ public class DbExpressionVisitor extends NetObject  {
 
     public void Visit(DbParameterReferenceExpression expression) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Visit", expression == null ? null : expression.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -506,7 +506,7 @@ public class DbExpressionVisitor extends NetObject  {
 
     public void Visit(DbProjectExpression expression) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Visit", expression == null ? null : expression.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -516,7 +516,7 @@ public class DbExpressionVisitor extends NetObject  {
 
     public void Visit(DbPropertyExpression expression) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Visit", expression == null ? null : expression.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -526,7 +526,7 @@ public class DbExpressionVisitor extends NetObject  {
 
     public void Visit(DbQuantifierExpression expression) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Visit", expression == null ? null : expression.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -536,7 +536,7 @@ public class DbExpressionVisitor extends NetObject  {
 
     public void Visit(DbRefExpression expression) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Visit", expression == null ? null : expression.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -546,7 +546,7 @@ public class DbExpressionVisitor extends NetObject  {
 
     public void Visit(DbRefKeyExpression expression) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Visit", expression == null ? null : expression.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -556,7 +556,7 @@ public class DbExpressionVisitor extends NetObject  {
 
     public void Visit(DbRelationshipNavigationExpression expression) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Visit", expression == null ? null : expression.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -566,7 +566,7 @@ public class DbExpressionVisitor extends NetObject  {
 
     public void Visit(DbScanExpression expression) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Visit", expression == null ? null : expression.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -576,7 +576,7 @@ public class DbExpressionVisitor extends NetObject  {
 
     public void Visit(DbSkipExpression expression) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Visit", expression == null ? null : expression.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -586,7 +586,7 @@ public class DbExpressionVisitor extends NetObject  {
 
     public void Visit(DbSortExpression expression) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Visit", expression == null ? null : expression.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -596,7 +596,7 @@ public class DbExpressionVisitor extends NetObject  {
 
     public void Visit(DbTreatExpression expression) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Visit", expression == null ? null : expression.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -606,7 +606,7 @@ public class DbExpressionVisitor extends NetObject  {
 
     public void Visit(DbUnionAllExpression expression) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Visit", expression == null ? null : expression.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -616,7 +616,7 @@ public class DbExpressionVisitor extends NetObject  {
 
     public void Visit(DbVariableReferenceExpression expression) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Visit", expression == null ? null : expression.getJCOInstance());
         } catch (JCNativeException jcne) {

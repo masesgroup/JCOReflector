@@ -224,10 +224,14 @@ public class ForeignKeyConstraint extends Constraint  {
     
     public AcceptRejectRule getAcceptRejectRule() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAcceptRejectRule = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AcceptRejectRule");
+            retObjectAcceptRejectRule = classInstance.Get("AcceptRejectRule");
+            JCObject val = (JCObject)retObjectAcceptRejectRule;
             return new AcceptRejectRule(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAcceptRejectRule != null ? retObjectAcceptRejectRule.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -235,7 +239,7 @@ public class ForeignKeyConstraint extends Constraint  {
 
     public void setAcceptRejectRule(AcceptRejectRule AcceptRejectRule) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AcceptRejectRule", AcceptRejectRule == null ? null : AcceptRejectRule.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -245,16 +249,20 @@ public class ForeignKeyConstraint extends Constraint  {
 
     public final DataColumn[] getColumns() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectColumns = null;
         try {
             ArrayList<DataColumn> resultingArrayList = new ArrayList<DataColumn>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("Columns");
+            retObjectColumns = classInstance.Get("Columns");
+            JCObject resultingObjects = (JCObject)retObjectColumns;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new DataColumn(resultingObject));
             }
             DataColumn[] resultingArray = new DataColumn[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectColumns != null ? retObjectColumns.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -262,16 +270,20 @@ public class ForeignKeyConstraint extends Constraint  {
 
     public final DataColumn[] getRelatedColumns() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRelatedColumns = null;
         try {
             ArrayList<DataColumn> resultingArrayList = new ArrayList<DataColumn>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("RelatedColumns");
+            retObjectRelatedColumns = classInstance.Get("RelatedColumns");
+            JCObject resultingObjects = (JCObject)retObjectRelatedColumns;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new DataColumn(resultingObject));
             }
             DataColumn[] resultingArray = new DataColumn[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRelatedColumns != null ? retObjectRelatedColumns.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -279,10 +291,14 @@ public class ForeignKeyConstraint extends Constraint  {
 
     public DataTable getRelatedTable() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRelatedTable = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RelatedTable");
+            retObjectRelatedTable = classInstance.Get("RelatedTable");
+            JCObject val = (JCObject)retObjectRelatedTable;
             return new DataTable(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRelatedTable != null ? retObjectRelatedTable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -290,10 +306,14 @@ public class ForeignKeyConstraint extends Constraint  {
 
     public Rule getDeleteRule() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDeleteRule = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DeleteRule");
+            retObjectDeleteRule = classInstance.Get("DeleteRule");
+            JCObject val = (JCObject)retObjectDeleteRule;
             return new Rule(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDeleteRule != null ? retObjectDeleteRule.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -301,7 +321,7 @@ public class ForeignKeyConstraint extends Constraint  {
 
     public void setDeleteRule(Rule DeleteRule) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DeleteRule", DeleteRule == null ? null : DeleteRule.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -311,10 +331,14 @@ public class ForeignKeyConstraint extends Constraint  {
 
     public Rule getUpdateRule() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUpdateRule = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("UpdateRule");
+            retObjectUpdateRule = classInstance.Get("UpdateRule");
+            JCObject val = (JCObject)retObjectUpdateRule;
             return new Rule(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUpdateRule != null ? retObjectUpdateRule.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -322,7 +346,7 @@ public class ForeignKeyConstraint extends Constraint  {
 
     public void setUpdateRule(Rule UpdateRule) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UpdateRule", UpdateRule == null ? null : UpdateRule.getJCOInstance());
         } catch (JCNativeException jcne) {

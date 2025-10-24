@@ -157,7 +157,7 @@ public class EvaluationContext extends NetObject  {
     
     public void AddClaimSet(IAuthorizationPolicy policy, ClaimSet claimSet) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddClaimSet", policy == null ? null : policy.getJCOInstance(), claimSet == null ? null : claimSet.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -167,7 +167,7 @@ public class EvaluationContext extends NetObject  {
 
     public void RecordExpirationTime(DateTime expirationTime) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RecordExpirationTime", expirationTime == null ? null : expirationTime.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -181,9 +181,20 @@ public class EvaluationContext extends NetObject  {
     
     public int getGeneration() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGeneration = null;
         try {
-            return (int)classInstance.Get("Generation");
+            retObjectGeneration = classInstance.Get("Generation");
+            return (int)retObjectGeneration;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGeneration_ToString = retObjectGeneration == null ? "null" : retObjectGeneration.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGenerationNumber = (java.lang.Number)retObjectGeneration;
+                return retObjectGenerationNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGeneration != null ? retObjectGeneration.getClass() : "null", retObjectGeneration_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

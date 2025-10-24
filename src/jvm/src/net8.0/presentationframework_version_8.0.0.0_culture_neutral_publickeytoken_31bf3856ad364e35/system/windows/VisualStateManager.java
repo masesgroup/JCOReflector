@@ -166,9 +166,13 @@ public class VisualStateManager extends DependencyObject  {
     
     public static boolean GoToElementState(FrameworkElement stateGroupsRoot, java.lang.String stateName, boolean useTransitions) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.collections.generic.KeyNotFoundException, system.MulticastNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGoToElementState = null;
         try {
-            return (boolean)classType.Invoke("GoToElementState", stateGroupsRoot == null ? null : stateGroupsRoot.getJCOInstance(), stateName, useTransitions);
+            retObjectGoToElementState = classType.Invoke("GoToElementState", stateGroupsRoot == null ? null : stateGroupsRoot.getJCOInstance(), stateName, useTransitions);
+            return (boolean)retObjectGoToElementState;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectGoToElementState != null ? retObjectGoToElementState.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,9 +180,13 @@ public class VisualStateManager extends DependencyObject  {
 
     public static boolean GoToState(FrameworkElement control, java.lang.String stateName, boolean useTransitions) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.collections.generic.KeyNotFoundException, system.MulticastNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGoToState = null;
         try {
-            return (boolean)classType.Invoke("GoToState", control == null ? null : control.getJCOInstance(), stateName, useTransitions);
+            retObjectGoToState = classType.Invoke("GoToState", control == null ? null : control.getJCOInstance(), stateName, useTransitions);
+            return (boolean)retObjectGoToState;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectGoToState != null ? retObjectGoToState.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,10 +194,14 @@ public class VisualStateManager extends DependencyObject  {
 
     public static IList GetVisualStateGroups(FrameworkElement obj) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetVisualStateGroups = null;
         try {
-            JCObject objGetVisualStateGroups = (JCObject)classType.Invoke("GetVisualStateGroups", obj == null ? null : obj.getJCOInstance());
+            retObjectGetVisualStateGroups = classType.Invoke("GetVisualStateGroups", obj == null ? null : obj.getJCOInstance());
+            JCObject objGetVisualStateGroups = (JCObject)retObjectGetVisualStateGroups;
             return new IListImplementation(objGetVisualStateGroups);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetVisualStateGroups != null ? retObjectGetVisualStateGroups.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,10 +209,14 @@ public class VisualStateManager extends DependencyObject  {
 
     public static VisualStateManager GetCustomVisualStateManager(FrameworkElement obj) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetCustomVisualStateManager = null;
         try {
-            JCObject objGetCustomVisualStateManager = (JCObject)classType.Invoke("GetCustomVisualStateManager", obj == null ? null : obj.getJCOInstance());
+            retObjectGetCustomVisualStateManager = classType.Invoke("GetCustomVisualStateManager", obj == null ? null : obj.getJCOInstance());
+            JCObject objGetCustomVisualStateManager = (JCObject)retObjectGetCustomVisualStateManager;
             return new VisualStateManager(objGetCustomVisualStateManager);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCustomVisualStateManager != null ? retObjectGetCustomVisualStateManager.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -208,7 +224,7 @@ public class VisualStateManager extends DependencyObject  {
 
     public static void SetCustomVisualStateManager(FrameworkElement obj, VisualStateManager value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetCustomVisualStateManager", obj == null ? null : obj.getJCOInstance(), value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {

@@ -201,9 +201,20 @@ public class EntityCommand extends DbCommand  {
     
     public int ExecuteNonQuery() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.data.ProviderIncompatibleException, system.data.EntityCommandExecutionException, system.threading.SynchronizationLockException, system.data.MetadataException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExecuteNonQuery = null;
         try {
-            return (int)classInstance.Invoke("ExecuteNonQuery");
+            retObjectExecuteNonQuery = classInstance.Invoke("ExecuteNonQuery");
+            return (int)retObjectExecuteNonQuery;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectExecuteNonQuery_ToString = retObjectExecuteNonQuery == null ? "null" : retObjectExecuteNonQuery.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectExecuteNonQueryNumber = (java.lang.Number)retObjectExecuteNonQuery;
+                return retObjectExecuteNonQueryNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectExecuteNonQuery != null ? retObjectExecuteNonQuery.getClass() : "null", retObjectExecuteNonQuery_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -211,10 +222,14 @@ public class EntityCommand extends DbCommand  {
 
     public EntityDataReader ExecuteReaderNewEntityCommand() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.data.ProviderIncompatibleException, system.data.EntityCommandExecutionException, system.data.MetadataException, system.threading.SynchronizationLockException, system.globalization.CultureNotFoundException, system.io.FileNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExecuteReader = null;
         try {
-            JCObject objExecuteReader = (JCObject)classInstance.Invoke("ExecuteReader");
+            retObjectExecuteReader = classInstance.Invoke("ExecuteReader");
+            JCObject objExecuteReader = (JCObject)retObjectExecuteReader;
             return new EntityDataReader(objExecuteReader);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExecuteReader != null ? retObjectExecuteReader.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -222,10 +237,14 @@ public class EntityCommand extends DbCommand  {
 
     public EntityDataReader ExecuteReaderNewEntityCommand(CommandBehavior behavior) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.FormatException, system.data.ProviderIncompatibleException, system.data.EntityCommandExecutionException, system.data.MetadataException, system.threading.SynchronizationLockException, system.threading.LockRecursionException, system.MissingMethodException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExecuteReader = null;
         try {
-            JCObject objExecuteReader = (JCObject)classInstance.Invoke("ExecuteReader", behavior == null ? null : behavior.getJCOInstance());
+            retObjectExecuteReader = classInstance.Invoke("ExecuteReader", behavior == null ? null : behavior.getJCOInstance());
+            JCObject objExecuteReader = (JCObject)retObjectExecuteReader;
             return new EntityDataReader(objExecuteReader);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExecuteReader != null ? retObjectExecuteReader.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -233,10 +252,14 @@ public class EntityCommand extends DbCommand  {
 
     public EntityParameter CreateParameterNewEntityCommand() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateParameter = null;
         try {
-            JCObject objCreateParameter = (JCObject)classInstance.Invoke("CreateParameter");
+            retObjectCreateParameter = classInstance.Invoke("CreateParameter");
+            JCObject objCreateParameter = (JCObject)retObjectCreateParameter;
             return new EntityParameter(objCreateParameter);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateParameter != null ? retObjectCreateParameter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -244,10 +267,14 @@ public class EntityCommand extends DbCommand  {
 
     public NetObject ExecuteScalar() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.data.ProviderIncompatibleException, system.data.EntityCommandExecutionException, system.threading.SynchronizationLockException, system.data.MetadataException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExecuteScalar = null;
         try {
-            JCObject objExecuteScalar = (JCObject)classInstance.Invoke("ExecuteScalar");
+            retObjectExecuteScalar = classInstance.Invoke("ExecuteScalar");
+            JCObject objExecuteScalar = (JCObject)retObjectExecuteScalar;
             return new NetObject(objExecuteScalar);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExecuteScalar != null ? retObjectExecuteScalar.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -255,9 +282,13 @@ public class EntityCommand extends DbCommand  {
 
     public java.lang.String ToTraceString() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.collections.generic.KeyNotFoundException, system.threading.SynchronizationLockException, system.data.MetadataException, system.data.EntitySqlException, system.data.ProviderIncompatibleException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToTraceString = null;
         try {
-            return (java.lang.String)classInstance.Invoke("ToTraceString");
+            retObjectToTraceString = classInstance.Invoke("ToTraceString");
+            return (java.lang.String)retObjectToTraceString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectToTraceString != null ? retObjectToTraceString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -265,7 +296,7 @@ public class EntityCommand extends DbCommand  {
 
     public void Cancel() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Cancel");
         } catch (JCNativeException jcne) {
@@ -275,7 +306,7 @@ public class EntityCommand extends DbCommand  {
 
     public void Prepare() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.collections.generic.KeyNotFoundException, system.threading.SynchronizationLockException, system.data.MetadataException, system.data.EntitySqlException, system.data.ProviderIncompatibleException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Prepare");
         } catch (JCNativeException jcne) {
@@ -289,9 +320,13 @@ public class EntityCommand extends DbCommand  {
     
     public boolean getEnablePlanCaching() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEnablePlanCaching = null;
         try {
-            return (boolean)classInstance.Get("EnablePlanCaching");
+            retObjectEnablePlanCaching = classInstance.Get("EnablePlanCaching");
+            return (boolean)retObjectEnablePlanCaching;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectEnablePlanCaching != null ? retObjectEnablePlanCaching.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -299,7 +334,7 @@ public class EntityCommand extends DbCommand  {
 
     public void setEnablePlanCaching(boolean EnablePlanCaching) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EnablePlanCaching", EnablePlanCaching);
         } catch (JCNativeException jcne) {
@@ -309,10 +344,14 @@ public class EntityCommand extends DbCommand  {
 
     public DbCommandTree getCommandTree() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCommandTree = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CommandTree");
+            retObjectCommandTree = classInstance.Get("CommandTree");
+            JCObject val = (JCObject)retObjectCommandTree;
             return new DbCommandTree(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCommandTree != null ? retObjectCommandTree.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -320,7 +359,7 @@ public class EntityCommand extends DbCommand  {
 
     public void setCommandTree(DbCommandTree CommandTree) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CommandTree", CommandTree == null ? null : CommandTree.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -330,10 +369,14 @@ public class EntityCommand extends DbCommand  {
 
     public EntityConnection getConnectionNewEntityCommand() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConnection = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Connection");
+            retObjectConnection = classInstance.Get("Connection");
+            JCObject val = (JCObject)retObjectConnection;
             return new EntityConnection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConnection != null ? retObjectConnection.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -341,7 +384,7 @@ public class EntityCommand extends DbCommand  {
 
     public void setConnection(EntityConnection Connection) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Connection", Connection == null ? null : Connection.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -351,10 +394,14 @@ public class EntityCommand extends DbCommand  {
 
     public EntityParameterCollection getParametersNewEntityCommand() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectParameters = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Parameters");
+            retObjectParameters = classInstance.Get("Parameters");
+            JCObject val = (JCObject)retObjectParameters;
             return new EntityParameterCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParameters != null ? retObjectParameters.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -362,10 +409,14 @@ public class EntityCommand extends DbCommand  {
 
     public EntityTransaction getTransactionNewEntityCommand() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTransaction = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Transaction");
+            retObjectTransaction = classInstance.Get("Transaction");
+            JCObject val = (JCObject)retObjectTransaction;
             return new EntityTransaction(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTransaction != null ? retObjectTransaction.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -373,7 +424,7 @@ public class EntityCommand extends DbCommand  {
 
     public void setTransaction(EntityTransaction Transaction) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Transaction", Transaction == null ? null : Transaction.getJCOInstance());
         } catch (JCNativeException jcne) {

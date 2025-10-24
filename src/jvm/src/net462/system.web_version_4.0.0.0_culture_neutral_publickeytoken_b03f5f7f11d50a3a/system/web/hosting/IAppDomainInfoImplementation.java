@@ -142,9 +142,13 @@ public class IAppDomainInfoImplementation extends NetObject implements IAppDomai
     
     public boolean IsIdle() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsIdle = null;
         try {
-            return (boolean)classInstance.Invoke("IsIdle");
+            retObjectIsIdle = classInstance.Invoke("IsIdle");
+            return (boolean)retObjectIsIdle;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsIdle != null ? retObjectIsIdle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -152,9 +156,20 @@ public class IAppDomainInfoImplementation extends NetObject implements IAppDomai
 
     public int GetSiteId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSiteId = null;
         try {
-            return (int)classInstance.Invoke("GetSiteId");
+            retObjectGetSiteId = classInstance.Invoke("GetSiteId");
+            return (int)retObjectGetSiteId;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetSiteId_ToString = retObjectGetSiteId == null ? "null" : retObjectGetSiteId.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetSiteIdNumber = (java.lang.Number)retObjectGetSiteId;
+                return retObjectGetSiteIdNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetSiteId != null ? retObjectGetSiteId.getClass() : "null", retObjectGetSiteId_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -162,9 +177,13 @@ public class IAppDomainInfoImplementation extends NetObject implements IAppDomai
 
     public java.lang.String GetId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetId = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetId");
+            retObjectGetId = classInstance.Invoke("GetId");
+            return (java.lang.String)retObjectGetId;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetId != null ? retObjectGetId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,9 +191,13 @@ public class IAppDomainInfoImplementation extends NetObject implements IAppDomai
 
     public java.lang.String GetPhysicalPath() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPhysicalPath = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetPhysicalPath");
+            retObjectGetPhysicalPath = classInstance.Invoke("GetPhysicalPath");
+            return (java.lang.String)retObjectGetPhysicalPath;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetPhysicalPath != null ? retObjectGetPhysicalPath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,9 +205,13 @@ public class IAppDomainInfoImplementation extends NetObject implements IAppDomai
 
     public java.lang.String GetVirtualPath() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetVirtualPath = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetVirtualPath");
+            retObjectGetVirtualPath = classInstance.Invoke("GetVirtualPath");
+            return (java.lang.String)retObjectGetVirtualPath;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetVirtualPath != null ? retObjectGetVirtualPath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

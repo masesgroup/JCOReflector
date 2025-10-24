@@ -165,10 +165,14 @@ public class CollectionsUtil extends NetObject  {
     
     public static Hashtable CreateCaseInsensitiveHashtable() throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateCaseInsensitiveHashtable = null;
         try {
-            JCObject objCreateCaseInsensitiveHashtable = (JCObject)classType.Invoke("CreateCaseInsensitiveHashtable");
+            retObjectCreateCaseInsensitiveHashtable = classType.Invoke("CreateCaseInsensitiveHashtable");
+            JCObject objCreateCaseInsensitiveHashtable = (JCObject)retObjectCreateCaseInsensitiveHashtable;
             return new Hashtable(objCreateCaseInsensitiveHashtable);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateCaseInsensitiveHashtable != null ? retObjectCreateCaseInsensitiveHashtable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,10 +180,14 @@ public class CollectionsUtil extends NetObject  {
 
     public static Hashtable CreateCaseInsensitiveHashtable(int capacity) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateCaseInsensitiveHashtable = null;
         try {
-            JCObject objCreateCaseInsensitiveHashtable = (JCObject)classType.Invoke("CreateCaseInsensitiveHashtable", capacity);
+            retObjectCreateCaseInsensitiveHashtable = classType.Invoke("CreateCaseInsensitiveHashtable", capacity);
+            JCObject objCreateCaseInsensitiveHashtable = (JCObject)retObjectCreateCaseInsensitiveHashtable;
             return new Hashtable(objCreateCaseInsensitiveHashtable);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateCaseInsensitiveHashtable != null ? retObjectCreateCaseInsensitiveHashtable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,10 +195,14 @@ public class CollectionsUtil extends NetObject  {
 
     public static Hashtable CreateCaseInsensitiveHashtable(IDictionary d) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateCaseInsensitiveHashtable = null;
         try {
-            JCObject objCreateCaseInsensitiveHashtable = (JCObject)classType.Invoke("CreateCaseInsensitiveHashtable", d == null ? null : d.getJCOInstance());
+            retObjectCreateCaseInsensitiveHashtable = classType.Invoke("CreateCaseInsensitiveHashtable", d == null ? null : d.getJCOInstance());
+            JCObject objCreateCaseInsensitiveHashtable = (JCObject)retObjectCreateCaseInsensitiveHashtable;
             return new Hashtable(objCreateCaseInsensitiveHashtable);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateCaseInsensitiveHashtable != null ? retObjectCreateCaseInsensitiveHashtable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,10 +210,14 @@ public class CollectionsUtil extends NetObject  {
 
     public static SortedList CreateCaseInsensitiveSortedList() throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateCaseInsensitiveSortedList = null;
         try {
-            JCObject objCreateCaseInsensitiveSortedList = (JCObject)classType.Invoke("CreateCaseInsensitiveSortedList");
+            retObjectCreateCaseInsensitiveSortedList = classType.Invoke("CreateCaseInsensitiveSortedList");
+            JCObject objCreateCaseInsensitiveSortedList = (JCObject)retObjectCreateCaseInsensitiveSortedList;
             return new SortedList(objCreateCaseInsensitiveSortedList);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateCaseInsensitiveSortedList != null ? retObjectCreateCaseInsensitiveSortedList.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

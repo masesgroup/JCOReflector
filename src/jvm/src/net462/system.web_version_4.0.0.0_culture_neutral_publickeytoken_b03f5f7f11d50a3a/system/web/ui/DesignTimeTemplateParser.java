@@ -160,10 +160,14 @@ public class DesignTimeTemplateParser extends NetObject  {
     
     public static Control ParseControl(DesignTimeParseData data) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.configuration.ConfigurationException, system.web.HttpParseException, system.MissingMethodException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectParseControl = null;
         try {
-            JCObject objParseControl = (JCObject)classType.Invoke("ParseControl", data == null ? null : data.getJCOInstance());
+            retObjectParseControl = classType.Invoke("ParseControl", data == null ? null : data.getJCOInstance());
+            JCObject objParseControl = (JCObject)retObjectParseControl;
             return new Control(objParseControl);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParseControl != null ? retObjectParseControl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,16 +175,20 @@ public class DesignTimeTemplateParser extends NetObject  {
 
     public static Control[] ParseControls(DesignTimeParseData data) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.configuration.ConfigurationException, system.web.HttpParseException, system.MissingMethodException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectParseControls = null;
         try {
             ArrayList<Control> resultingArrayList = new ArrayList<Control>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("ParseControls", data == null ? null : data.getJCOInstance());
+            retObjectParseControls = classType.Invoke("ParseControls", data == null ? null : data.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectParseControls;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new Control(resultingObject));
             }
             Control[] resultingArray = new Control[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParseControls != null ? retObjectParseControls.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,10 +196,14 @@ public class DesignTimeTemplateParser extends NetObject  {
 
     public static ControlBuilder ParseTheme(IDesignerHost host, java.lang.String theme, java.lang.String themePath) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NullReferenceException, system.configuration.ConfigurationErrorsException, system.web.HttpException, system.NotSupportedException, system.configuration.ConfigurationException, system.text.regularexpressions.RegexMatchTimeoutException, system.FormatException, system.OutOfMemoryException, system.web.HttpParseException, system.io.IOException, system.io.PathTooLongException, system.reflection.AmbiguousMatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectParseTheme = null;
         try {
-            JCObject objParseTheme = (JCObject)classType.Invoke("ParseTheme", host == null ? null : host.getJCOInstance(), theme, themePath);
+            retObjectParseTheme = classType.Invoke("ParseTheme", host == null ? null : host.getJCOInstance(), theme, themePath);
+            JCObject objParseTheme = (JCObject)retObjectParseTheme;
             return new ControlBuilder(objParseTheme);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParseTheme != null ? retObjectParseTheme.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -199,10 +211,14 @@ public class DesignTimeTemplateParser extends NetObject  {
 
     public static ITemplate ParseTemplate(DesignTimeParseData data) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NullReferenceException, system.configuration.ConfigurationErrorsException, system.web.HttpException, system.NotSupportedException, system.configuration.ConfigurationException, system.text.regularexpressions.RegexMatchTimeoutException, system.FormatException, system.OutOfMemoryException, system.web.HttpParseException, system.io.IOException, system.io.PathTooLongException, system.reflection.AmbiguousMatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectParseTemplate = null;
         try {
-            JCObject objParseTemplate = (JCObject)classType.Invoke("ParseTemplate", data == null ? null : data.getJCOInstance());
+            retObjectParseTemplate = classType.Invoke("ParseTemplate", data == null ? null : data.getJCOInstance());
+            JCObject objParseTemplate = (JCObject)retObjectParseTemplate;
             return new ITemplateImplementation(objParseTemplate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParseTemplate != null ? retObjectParseTemplate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

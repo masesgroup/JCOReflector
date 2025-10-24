@@ -183,10 +183,14 @@ public class GnuTarEntry extends PosixTarEntry  {
     
     public DateTimeOffset getAccessTime() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAccessTime = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AccessTime");
+            retObjectAccessTime = classInstance.Get("AccessTime");
+            JCObject val = (JCObject)retObjectAccessTime;
             return new DateTimeOffset(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAccessTime != null ? retObjectAccessTime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -194,7 +198,7 @@ public class GnuTarEntry extends PosixTarEntry  {
 
     public void setAccessTime(DateTimeOffset AccessTime) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AccessTime", AccessTime == null ? null : AccessTime.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -204,10 +208,14 @@ public class GnuTarEntry extends PosixTarEntry  {
 
     public DateTimeOffset getChangeTime() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectChangeTime = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ChangeTime");
+            retObjectChangeTime = classInstance.Get("ChangeTime");
+            JCObject val = (JCObject)retObjectChangeTime;
             return new DateTimeOffset(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectChangeTime != null ? retObjectChangeTime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -215,7 +223,7 @@ public class GnuTarEntry extends PosixTarEntry  {
 
     public void setChangeTime(DateTimeOffset ChangeTime) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ChangeTime", ChangeTime == null ? null : ChangeTime.getJCOInstance());
         } catch (JCNativeException jcne) {

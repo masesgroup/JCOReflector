@@ -184,10 +184,14 @@ public class OleDbConnection extends DbConnection implements system.ICloneable {
     
     public DataTable GetOleDbSchemaTable(Guid schema, NetObject[] restrictions) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException, system.NullReferenceException, system.configuration.ConfigurationErrorsException, system.data.DataException, system.OverflowException, system.InvalidCastException, system.collections.generic.KeyNotFoundException, system.IndexOutOfRangeException, system.AccessViolationException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.data.sqltypes.SqlNullValueException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetOleDbSchemaTable = null;
         try {
-            JCObject objGetOleDbSchemaTable = (JCObject)classInstance.Invoke("GetOleDbSchemaTable", schema == null ? null : schema.getJCOInstance(), toObjectFromArray(restrictions));
+            retObjectGetOleDbSchemaTable = classInstance.Invoke("GetOleDbSchemaTable", schema == null ? null : schema.getJCOInstance(), toObjectFromArray(restrictions));
+            JCObject objGetOleDbSchemaTable = (JCObject)retObjectGetOleDbSchemaTable;
             return new DataTable(objGetOleDbSchemaTable);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetOleDbSchemaTable != null ? retObjectGetOleDbSchemaTable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,10 +199,14 @@ public class OleDbConnection extends DbConnection implements system.ICloneable {
 
     public DataTable GetSchema() throws Throwable, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSchema = null;
         try {
-            JCObject objGetSchema = (JCObject)classInstance.Invoke("GetSchema");
+            retObjectGetSchema = classInstance.Invoke("GetSchema");
+            JCObject objGetSchema = (JCObject)retObjectGetSchema;
             return new DataTable(objGetSchema);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSchema != null ? retObjectGetSchema.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -206,10 +214,14 @@ public class OleDbConnection extends DbConnection implements system.ICloneable {
 
     public DataTable GetSchema(java.lang.String collectionName) throws Throwable, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSchema = null;
         try {
-            JCObject objGetSchema = (JCObject)classInstance.Invoke("GetSchema", collectionName);
+            retObjectGetSchema = classInstance.Invoke("GetSchema", collectionName);
+            JCObject objGetSchema = (JCObject)retObjectGetSchema;
             return new DataTable(objGetSchema);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSchema != null ? retObjectGetSchema.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -217,10 +229,14 @@ public class OleDbConnection extends DbConnection implements system.ICloneable {
 
     public DataTable GetSchema(java.lang.String collectionName, java.lang.String[] restrictionValues) throws Throwable, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSchema = null;
         try {
-            JCObject objGetSchema = (JCObject)classInstance.Invoke("GetSchema", collectionName, restrictionValues);
+            retObjectGetSchema = classInstance.Invoke("GetSchema", collectionName, restrictionValues);
+            JCObject objGetSchema = (JCObject)retObjectGetSchema;
             return new DataTable(objGetSchema);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSchema != null ? retObjectGetSchema.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -228,10 +244,14 @@ public class OleDbConnection extends DbConnection implements system.ICloneable {
 
     public DataTable GetSchema(java.lang.String dupParam0, JCORefOut dupParam1) throws Throwable, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSchema = null;
         try {
-            JCObject objGetSchema = (JCObject)classInstance.Invoke("GetSchema", dupParam0, dupParam1.getJCRefOut());
+            retObjectGetSchema = classInstance.Invoke("GetSchema", dupParam0, dupParam1.getJCRefOut());
+            JCObject objGetSchema = (JCObject)retObjectGetSchema;
             return new DataTable(objGetSchema);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSchema != null ? retObjectGetSchema.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -239,10 +259,14 @@ public class OleDbConnection extends DbConnection implements system.ICloneable {
 
     public OleDbCommand CreateCommandNewOleDbConnection() throws Throwable, system.ArgumentNullException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateCommand = null;
         try {
-            JCObject objCreateCommand = (JCObject)classInstance.Invoke("CreateCommand");
+            retObjectCreateCommand = classInstance.Invoke("CreateCommand");
+            JCObject objCreateCommand = (JCObject)retObjectCreateCommand;
             return new OleDbCommand(objCreateCommand);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateCommand != null ? retObjectCreateCommand.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -250,10 +274,14 @@ public class OleDbConnection extends DbConnection implements system.ICloneable {
 
     public OleDbTransaction BeginTransactionNewOleDbConnection() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginTransaction = null;
         try {
-            JCObject objBeginTransaction = (JCObject)classInstance.Invoke("BeginTransaction");
+            retObjectBeginTransaction = classInstance.Invoke("BeginTransaction");
+            JCObject objBeginTransaction = (JCObject)retObjectBeginTransaction;
             return new OleDbTransaction(objBeginTransaction);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginTransaction != null ? retObjectBeginTransaction.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -261,10 +289,14 @@ public class OleDbConnection extends DbConnection implements system.ICloneable {
 
     public OleDbTransaction BeginTransactionNewOleDbConnection(IsolationLevel isolationLevel) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginTransaction = null;
         try {
-            JCObject objBeginTransaction = (JCObject)classInstance.Invoke("BeginTransaction", isolationLevel == null ? null : isolationLevel.getJCOInstance());
+            retObjectBeginTransaction = classInstance.Invoke("BeginTransaction", isolationLevel == null ? null : isolationLevel.getJCOInstance());
+            JCObject objBeginTransaction = (JCObject)retObjectBeginTransaction;
             return new OleDbTransaction(objBeginTransaction);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginTransaction != null ? retObjectBeginTransaction.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -272,7 +304,7 @@ public class OleDbConnection extends DbConnection implements system.ICloneable {
 
     public void ChangeDatabase(java.lang.String value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.AccessViolationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ChangeDatabase", value);
         } catch (JCNativeException jcne) {
@@ -282,7 +314,7 @@ public class OleDbConnection extends DbConnection implements system.ICloneable {
 
     public void Close() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.transactions.TransactionException, system.PlatformNotSupportedException, system.NotSupportedException, system.threading.SemaphoreFullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Close");
         } catch (JCNativeException jcne) {
@@ -292,7 +324,7 @@ public class OleDbConnection extends DbConnection implements system.ICloneable {
 
     public void EnlistDistributedTransaction(ITransaction transaction) throws Throwable, system.ArgumentException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NullReferenceException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.PlatformNotSupportedException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.transactions.TransactionException, system.OverflowException, system.transactions.TransactionManagerCommunicationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EnlistDistributedTransaction", transaction == null ? null : transaction.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -302,7 +334,7 @@ public class OleDbConnection extends DbConnection implements system.ICloneable {
 
     public void EnlistTransaction(Transaction transaction) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.collections.generic.KeyNotFoundException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EnlistTransaction", transaction == null ? null : transaction.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -312,7 +344,7 @@ public class OleDbConnection extends DbConnection implements system.ICloneable {
 
     public void Open() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NullReferenceException, system.configuration.ConfigurationErrorsException, system.transactions.TransactionPromotionException, system.transactions.TransactionException, system.transactions.TransactionInDoubtException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Open");
         } catch (JCNativeException jcne) {
@@ -322,7 +354,7 @@ public class OleDbConnection extends DbConnection implements system.ICloneable {
 
     public static void ReleaseObjectPool() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("ReleaseObjectPool");
         } catch (JCNativeException jcne) {
@@ -332,7 +364,7 @@ public class OleDbConnection extends DbConnection implements system.ICloneable {
 
     public void ResetState() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.OutOfMemoryException, system.AccessViolationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ResetState");
         } catch (JCNativeException jcne) {
@@ -346,7 +378,7 @@ public class OleDbConnection extends DbConnection implements system.ICloneable {
      */
     @Deprecated 
     public NetObject Clone() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICloneable to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICloneable to obtain the full interface.");
     }
 
 
@@ -355,9 +387,13 @@ public class OleDbConnection extends DbConnection implements system.ICloneable {
     
     public java.lang.String getProvider() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProvider = null;
         try {
-            return (java.lang.String)classInstance.Get("Provider");
+            retObjectProvider = classInstance.Get("Provider");
+            return (java.lang.String)retObjectProvider;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectProvider != null ? retObjectProvider.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -370,7 +406,7 @@ public class OleDbConnection extends DbConnection implements system.ICloneable {
 
     public void addInfoMessage(OleDbInfoMessageEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("InfoMessage", handler);
         } catch (JCNativeException jcne) {
@@ -380,7 +416,7 @@ public class OleDbConnection extends DbConnection implements system.ICloneable {
 
     public void removeInfoMessage(OleDbInfoMessageEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("InfoMessage", handler);
         } catch (JCNativeException jcne) {

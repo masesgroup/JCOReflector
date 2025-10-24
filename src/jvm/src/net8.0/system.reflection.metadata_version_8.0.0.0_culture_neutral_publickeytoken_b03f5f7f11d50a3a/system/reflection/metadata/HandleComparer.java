@@ -158,9 +158,13 @@ public class HandleComparer extends NetObject  {
     
     public boolean Equals(EntityHandle x, EntityHandle y) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEquals = null;
         try {
-            return (boolean)classInstance.Invoke("Equals", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            retObjectEquals = classInstance.Invoke("Equals", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            return (boolean)retObjectEquals;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectEquals != null ? retObjectEquals.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -168,9 +172,13 @@ public class HandleComparer extends NetObject  {
 
     public boolean Equals(Handle x, Handle y) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEquals = null;
         try {
-            return (boolean)classInstance.Invoke("Equals", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            retObjectEquals = classInstance.Invoke("Equals", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            return (boolean)retObjectEquals;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectEquals != null ? retObjectEquals.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,9 +186,20 @@ public class HandleComparer extends NetObject  {
 
     public int Compare(EntityHandle x, EntityHandle y) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCompare = null;
         try {
-            return (int)classInstance.Invoke("Compare", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            retObjectCompare = classInstance.Invoke("Compare", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            return (int)retObjectCompare;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCompare_ToString = retObjectCompare == null ? "null" : retObjectCompare.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectCompareNumber = (java.lang.Number)retObjectCompare;
+                return retObjectCompareNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCompare != null ? retObjectCompare.getClass() : "null", retObjectCompare_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,9 +207,20 @@ public class HandleComparer extends NetObject  {
 
     public int Compare(Handle x, Handle y) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCompare = null;
         try {
-            return (int)classInstance.Invoke("Compare", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            retObjectCompare = classInstance.Invoke("Compare", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            return (int)retObjectCompare;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCompare_ToString = retObjectCompare == null ? "null" : retObjectCompare.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectCompareNumber = (java.lang.Number)retObjectCompare;
+                return retObjectCompareNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCompare != null ? retObjectCompare.getClass() : "null", retObjectCompare_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,9 +228,20 @@ public class HandleComparer extends NetObject  {
 
     public int GetHashCode(EntityHandle obj) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetHashCode = null;
         try {
-            return (int)classInstance.Invoke("GetHashCode", obj == null ? null : obj.getJCOInstance());
+            retObjectGetHashCode = classInstance.Invoke("GetHashCode", obj == null ? null : obj.getJCOInstance());
+            return (int)retObjectGetHashCode;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetHashCode_ToString = retObjectGetHashCode == null ? "null" : retObjectGetHashCode.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetHashCodeNumber = (java.lang.Number)retObjectGetHashCode;
+                return retObjectGetHashCodeNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetHashCode != null ? retObjectGetHashCode.getClass() : "null", retObjectGetHashCode_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -208,9 +249,20 @@ public class HandleComparer extends NetObject  {
 
     public int GetHashCode(Handle obj) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetHashCode = null;
         try {
-            return (int)classInstance.Invoke("GetHashCode", obj == null ? null : obj.getJCOInstance());
+            retObjectGetHashCode = classInstance.Invoke("GetHashCode", obj == null ? null : obj.getJCOInstance());
+            return (int)retObjectGetHashCode;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetHashCode_ToString = retObjectGetHashCode == null ? "null" : retObjectGetHashCode.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetHashCodeNumber = (java.lang.Number)retObjectGetHashCode;
+                return retObjectGetHashCodeNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetHashCode != null ? retObjectGetHashCode.getClass() : "null", retObjectGetHashCode_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -222,10 +274,14 @@ public class HandleComparer extends NetObject  {
     
     public static HandleComparer getDefault() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDefault = null;
         try {
-            JCObject val = (JCObject)classType.Get("Default");
+            retObjectDefault = classType.Get("Default");
+            JCObject val = (JCObject)retObjectDefault;
             return new HandleComparer(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefault != null ? retObjectDefault.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

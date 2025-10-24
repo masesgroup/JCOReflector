@@ -144,7 +144,7 @@ public class IAsyncStateMachineImplementation extends NetObject implements IAsyn
     
     public void MoveNext() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("MoveNext");
         } catch (JCNativeException jcne) {
@@ -154,7 +154,7 @@ public class IAsyncStateMachineImplementation extends NetObject implements IAsyn
 
     public void SetStateMachine(IAsyncStateMachine stateMachine) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetStateMachine", stateMachine == null ? null : stateMachine.getJCOInstance());
         } catch (JCNativeException jcne) {

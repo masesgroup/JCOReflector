@@ -170,9 +170,13 @@ public class EncoderFallbackException extends ArgumentException {
     
     public boolean IsUnknownSurrogate() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsUnknownSurrogate = null;
         try {
-            return (boolean)classInstance.Invoke("IsUnknownSurrogate");
+            retObjectIsUnknownSurrogate = classInstance.Invoke("IsUnknownSurrogate");
+            return (boolean)retObjectIsUnknownSurrogate;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsUnknownSurrogate != null ? retObjectIsUnknownSurrogate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -184,9 +188,13 @@ public class EncoderFallbackException extends ArgumentException {
     
     public char getCharUnknown() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCharUnknown = null;
         try {
-            return (char)classInstance.Get("CharUnknown");
+            retObjectCharUnknown = classInstance.Get("CharUnknown");
+            return (char)retObjectCharUnknown;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into char", retObjectCharUnknown != null ? retObjectCharUnknown.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -194,9 +202,13 @@ public class EncoderFallbackException extends ArgumentException {
 
     public char getCharUnknownHigh() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCharUnknownHigh = null;
         try {
-            return (char)classInstance.Get("CharUnknownHigh");
+            retObjectCharUnknownHigh = classInstance.Get("CharUnknownHigh");
+            return (char)retObjectCharUnknownHigh;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into char", retObjectCharUnknownHigh != null ? retObjectCharUnknownHigh.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -204,9 +216,13 @@ public class EncoderFallbackException extends ArgumentException {
 
     public char getCharUnknownLow() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCharUnknownLow = null;
         try {
-            return (char)classInstance.Get("CharUnknownLow");
+            retObjectCharUnknownLow = classInstance.Get("CharUnknownLow");
+            return (char)retObjectCharUnknownLow;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into char", retObjectCharUnknownLow != null ? retObjectCharUnknownLow.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -214,9 +230,20 @@ public class EncoderFallbackException extends ArgumentException {
 
     public int getIndex() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIndex = null;
         try {
-            return (int)classInstance.Get("Index");
+            retObjectIndex = classInstance.Get("Index");
+            return (int)retObjectIndex;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectIndex_ToString = retObjectIndex == null ? "null" : retObjectIndex.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectIndexNumber = (java.lang.Number)retObjectIndex;
+                return retObjectIndexNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectIndex != null ? retObjectIndex.getClass() : "null", retObjectIndex_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -174,10 +174,14 @@ public class Wizard extends CompositeControl  {
     
     public ICollection GetHistory() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetHistory = null;
         try {
-            JCObject objGetHistory = (JCObject)classInstance.Invoke("GetHistory");
+            retObjectGetHistory = classInstance.Invoke("GetHistory");
+            JCObject objGetHistory = (JCObject)retObjectGetHistory;
             return new ICollectionImplementation(objGetHistory);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetHistory != null ? retObjectGetHistory.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -185,10 +189,14 @@ public class Wizard extends CompositeControl  {
 
     public WizardStepType GetStepType(WizardStepBase wizardStep, int index) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetStepType = null;
         try {
-            JCObject objGetStepType = (JCObject)classInstance.Invoke("GetStepType", wizardStep == null ? null : wizardStep.getJCOInstance(), index);
+            retObjectGetStepType = classInstance.Invoke("GetStepType", wizardStep == null ? null : wizardStep.getJCOInstance(), index);
+            JCObject objGetStepType = (JCObject)retObjectGetStepType;
             return new WizardStepType(objGetStepType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetStepType != null ? retObjectGetStepType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,7 +204,7 @@ public class Wizard extends CompositeControl  {
 
     public void MoveTo(WizardStepBase wizardStep) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("MoveTo", wizardStep == null ? null : wizardStep.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -210,9 +218,13 @@ public class Wizard extends CompositeControl  {
     
     public boolean getDisplayCancelButton() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDisplayCancelButton = null;
         try {
-            return (boolean)classInstance.Get("DisplayCancelButton");
+            retObjectDisplayCancelButton = classInstance.Get("DisplayCancelButton");
+            return (boolean)retObjectDisplayCancelButton;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectDisplayCancelButton != null ? retObjectDisplayCancelButton.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -220,7 +232,7 @@ public class Wizard extends CompositeControl  {
 
     public void setDisplayCancelButton(boolean DisplayCancelButton) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DisplayCancelButton", DisplayCancelButton);
         } catch (JCNativeException jcne) {
@@ -230,9 +242,13 @@ public class Wizard extends CompositeControl  {
 
     public boolean getDisplaySideBar() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDisplaySideBar = null;
         try {
-            return (boolean)classInstance.Get("DisplaySideBar");
+            retObjectDisplaySideBar = classInstance.Get("DisplaySideBar");
+            return (boolean)retObjectDisplaySideBar;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectDisplaySideBar != null ? retObjectDisplaySideBar.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -240,7 +256,7 @@ public class Wizard extends CompositeControl  {
 
     public void setDisplaySideBar(boolean DisplaySideBar) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DisplaySideBar", DisplaySideBar);
         } catch (JCNativeException jcne) {
@@ -250,9 +266,20 @@ public class Wizard extends CompositeControl  {
 
     public int getActiveStepIndex() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectActiveStepIndex = null;
         try {
-            return (int)classInstance.Get("ActiveStepIndex");
+            retObjectActiveStepIndex = classInstance.Get("ActiveStepIndex");
+            return (int)retObjectActiveStepIndex;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectActiveStepIndex_ToString = retObjectActiveStepIndex == null ? "null" : retObjectActiveStepIndex.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectActiveStepIndexNumber = (java.lang.Number)retObjectActiveStepIndex;
+                return retObjectActiveStepIndexNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectActiveStepIndex != null ? retObjectActiveStepIndex.getClass() : "null", retObjectActiveStepIndex_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -260,7 +287,7 @@ public class Wizard extends CompositeControl  {
 
     public void setActiveStepIndex(int ActiveStepIndex) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ActiveStepIndex", ActiveStepIndex);
         } catch (JCNativeException jcne) {
@@ -270,9 +297,20 @@ public class Wizard extends CompositeControl  {
 
     public int getCellPadding() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCellPadding = null;
         try {
-            return (int)classInstance.Get("CellPadding");
+            retObjectCellPadding = classInstance.Get("CellPadding");
+            return (int)retObjectCellPadding;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCellPadding_ToString = retObjectCellPadding == null ? "null" : retObjectCellPadding.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectCellPaddingNumber = (java.lang.Number)retObjectCellPadding;
+                return retObjectCellPaddingNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCellPadding != null ? retObjectCellPadding.getClass() : "null", retObjectCellPadding_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -280,7 +318,7 @@ public class Wizard extends CompositeControl  {
 
     public void setCellPadding(int CellPadding) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CellPadding", CellPadding);
         } catch (JCNativeException jcne) {
@@ -290,9 +328,20 @@ public class Wizard extends CompositeControl  {
 
     public int getCellSpacing() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCellSpacing = null;
         try {
-            return (int)classInstance.Get("CellSpacing");
+            retObjectCellSpacing = classInstance.Get("CellSpacing");
+            return (int)retObjectCellSpacing;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCellSpacing_ToString = retObjectCellSpacing == null ? "null" : retObjectCellSpacing.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectCellSpacingNumber = (java.lang.Number)retObjectCellSpacing;
+                return retObjectCellSpacingNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCellSpacing != null ? retObjectCellSpacing.getClass() : "null", retObjectCellSpacing_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -300,7 +349,7 @@ public class Wizard extends CompositeControl  {
 
     public void setCellSpacing(int CellSpacing) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CellSpacing", CellSpacing);
         } catch (JCNativeException jcne) {
@@ -310,9 +359,13 @@ public class Wizard extends CompositeControl  {
 
     public java.lang.String getCancelButtonImageUrl() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCancelButtonImageUrl = null;
         try {
-            return (java.lang.String)classInstance.Get("CancelButtonImageUrl");
+            retObjectCancelButtonImageUrl = classInstance.Get("CancelButtonImageUrl");
+            return (java.lang.String)retObjectCancelButtonImageUrl;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectCancelButtonImageUrl != null ? retObjectCancelButtonImageUrl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -320,7 +373,7 @@ public class Wizard extends CompositeControl  {
 
     public void setCancelButtonImageUrl(java.lang.String CancelButtonImageUrl) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CancelButtonImageUrl", CancelButtonImageUrl);
         } catch (JCNativeException jcne) {
@@ -330,9 +383,13 @@ public class Wizard extends CompositeControl  {
 
     public java.lang.String getCancelButtonText() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCancelButtonText = null;
         try {
-            return (java.lang.String)classInstance.Get("CancelButtonText");
+            retObjectCancelButtonText = classInstance.Get("CancelButtonText");
+            return (java.lang.String)retObjectCancelButtonText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectCancelButtonText != null ? retObjectCancelButtonText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -340,7 +397,7 @@ public class Wizard extends CompositeControl  {
 
     public void setCancelButtonText(java.lang.String CancelButtonText) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CancelButtonText", CancelButtonText);
         } catch (JCNativeException jcne) {
@@ -350,9 +407,13 @@ public class Wizard extends CompositeControl  {
 
     public java.lang.String getCancelDestinationPageUrl() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCancelDestinationPageUrl = null;
         try {
-            return (java.lang.String)classInstance.Get("CancelDestinationPageUrl");
+            retObjectCancelDestinationPageUrl = classInstance.Get("CancelDestinationPageUrl");
+            return (java.lang.String)retObjectCancelDestinationPageUrl;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectCancelDestinationPageUrl != null ? retObjectCancelDestinationPageUrl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -360,7 +421,7 @@ public class Wizard extends CompositeControl  {
 
     public void setCancelDestinationPageUrl(java.lang.String CancelDestinationPageUrl) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CancelDestinationPageUrl", CancelDestinationPageUrl);
         } catch (JCNativeException jcne) {
@@ -370,9 +431,13 @@ public class Wizard extends CompositeControl  {
 
     public java.lang.String getFinishCompleteButtonImageUrl() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFinishCompleteButtonImageUrl = null;
         try {
-            return (java.lang.String)classInstance.Get("FinishCompleteButtonImageUrl");
+            retObjectFinishCompleteButtonImageUrl = classInstance.Get("FinishCompleteButtonImageUrl");
+            return (java.lang.String)retObjectFinishCompleteButtonImageUrl;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectFinishCompleteButtonImageUrl != null ? retObjectFinishCompleteButtonImageUrl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -380,7 +445,7 @@ public class Wizard extends CompositeControl  {
 
     public void setFinishCompleteButtonImageUrl(java.lang.String FinishCompleteButtonImageUrl) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FinishCompleteButtonImageUrl", FinishCompleteButtonImageUrl);
         } catch (JCNativeException jcne) {
@@ -390,9 +455,13 @@ public class Wizard extends CompositeControl  {
 
     public java.lang.String getFinishCompleteButtonText() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFinishCompleteButtonText = null;
         try {
-            return (java.lang.String)classInstance.Get("FinishCompleteButtonText");
+            retObjectFinishCompleteButtonText = classInstance.Get("FinishCompleteButtonText");
+            return (java.lang.String)retObjectFinishCompleteButtonText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectFinishCompleteButtonText != null ? retObjectFinishCompleteButtonText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -400,7 +469,7 @@ public class Wizard extends CompositeControl  {
 
     public void setFinishCompleteButtonText(java.lang.String FinishCompleteButtonText) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FinishCompleteButtonText", FinishCompleteButtonText);
         } catch (JCNativeException jcne) {
@@ -410,9 +479,13 @@ public class Wizard extends CompositeControl  {
 
     public java.lang.String getFinishDestinationPageUrl() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFinishDestinationPageUrl = null;
         try {
-            return (java.lang.String)classInstance.Get("FinishDestinationPageUrl");
+            retObjectFinishDestinationPageUrl = classInstance.Get("FinishDestinationPageUrl");
+            return (java.lang.String)retObjectFinishDestinationPageUrl;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectFinishDestinationPageUrl != null ? retObjectFinishDestinationPageUrl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -420,7 +493,7 @@ public class Wizard extends CompositeControl  {
 
     public void setFinishDestinationPageUrl(java.lang.String FinishDestinationPageUrl) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FinishDestinationPageUrl", FinishDestinationPageUrl);
         } catch (JCNativeException jcne) {
@@ -430,9 +503,13 @@ public class Wizard extends CompositeControl  {
 
     public java.lang.String getFinishPreviousButtonImageUrl() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFinishPreviousButtonImageUrl = null;
         try {
-            return (java.lang.String)classInstance.Get("FinishPreviousButtonImageUrl");
+            retObjectFinishPreviousButtonImageUrl = classInstance.Get("FinishPreviousButtonImageUrl");
+            return (java.lang.String)retObjectFinishPreviousButtonImageUrl;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectFinishPreviousButtonImageUrl != null ? retObjectFinishPreviousButtonImageUrl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -440,7 +517,7 @@ public class Wizard extends CompositeControl  {
 
     public void setFinishPreviousButtonImageUrl(java.lang.String FinishPreviousButtonImageUrl) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FinishPreviousButtonImageUrl", FinishPreviousButtonImageUrl);
         } catch (JCNativeException jcne) {
@@ -450,9 +527,13 @@ public class Wizard extends CompositeControl  {
 
     public java.lang.String getFinishPreviousButtonText() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFinishPreviousButtonText = null;
         try {
-            return (java.lang.String)classInstance.Get("FinishPreviousButtonText");
+            retObjectFinishPreviousButtonText = classInstance.Get("FinishPreviousButtonText");
+            return (java.lang.String)retObjectFinishPreviousButtonText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectFinishPreviousButtonText != null ? retObjectFinishPreviousButtonText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -460,7 +541,7 @@ public class Wizard extends CompositeControl  {
 
     public void setFinishPreviousButtonText(java.lang.String FinishPreviousButtonText) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FinishPreviousButtonText", FinishPreviousButtonText);
         } catch (JCNativeException jcne) {
@@ -470,9 +551,13 @@ public class Wizard extends CompositeControl  {
 
     public java.lang.String getHeaderText() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHeaderText = null;
         try {
-            return (java.lang.String)classInstance.Get("HeaderText");
+            retObjectHeaderText = classInstance.Get("HeaderText");
+            return (java.lang.String)retObjectHeaderText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectHeaderText != null ? retObjectHeaderText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -480,7 +565,7 @@ public class Wizard extends CompositeControl  {
 
     public void setHeaderText(java.lang.String HeaderText) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("HeaderText", HeaderText);
         } catch (JCNativeException jcne) {
@@ -490,9 +575,13 @@ public class Wizard extends CompositeControl  {
 
     public java.lang.String getSkipLinkText() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSkipLinkText = null;
         try {
-            return (java.lang.String)classInstance.Get("SkipLinkText");
+            retObjectSkipLinkText = classInstance.Get("SkipLinkText");
+            return (java.lang.String)retObjectSkipLinkText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSkipLinkText != null ? retObjectSkipLinkText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -500,7 +589,7 @@ public class Wizard extends CompositeControl  {
 
     public void setSkipLinkText(java.lang.String SkipLinkText) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SkipLinkText", SkipLinkText);
         } catch (JCNativeException jcne) {
@@ -510,9 +599,13 @@ public class Wizard extends CompositeControl  {
 
     public java.lang.String getStartNextButtonImageUrl() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStartNextButtonImageUrl = null;
         try {
-            return (java.lang.String)classInstance.Get("StartNextButtonImageUrl");
+            retObjectStartNextButtonImageUrl = classInstance.Get("StartNextButtonImageUrl");
+            return (java.lang.String)retObjectStartNextButtonImageUrl;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectStartNextButtonImageUrl != null ? retObjectStartNextButtonImageUrl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -520,7 +613,7 @@ public class Wizard extends CompositeControl  {
 
     public void setStartNextButtonImageUrl(java.lang.String StartNextButtonImageUrl) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("StartNextButtonImageUrl", StartNextButtonImageUrl);
         } catch (JCNativeException jcne) {
@@ -530,9 +623,13 @@ public class Wizard extends CompositeControl  {
 
     public java.lang.String getStartNextButtonText() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStartNextButtonText = null;
         try {
-            return (java.lang.String)classInstance.Get("StartNextButtonText");
+            retObjectStartNextButtonText = classInstance.Get("StartNextButtonText");
+            return (java.lang.String)retObjectStartNextButtonText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectStartNextButtonText != null ? retObjectStartNextButtonText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -540,7 +637,7 @@ public class Wizard extends CompositeControl  {
 
     public void setStartNextButtonText(java.lang.String StartNextButtonText) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("StartNextButtonText", StartNextButtonText);
         } catch (JCNativeException jcne) {
@@ -550,9 +647,13 @@ public class Wizard extends CompositeControl  {
 
     public java.lang.String getStepNextButtonImageUrl() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStepNextButtonImageUrl = null;
         try {
-            return (java.lang.String)classInstance.Get("StepNextButtonImageUrl");
+            retObjectStepNextButtonImageUrl = classInstance.Get("StepNextButtonImageUrl");
+            return (java.lang.String)retObjectStepNextButtonImageUrl;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectStepNextButtonImageUrl != null ? retObjectStepNextButtonImageUrl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -560,7 +661,7 @@ public class Wizard extends CompositeControl  {
 
     public void setStepNextButtonImageUrl(java.lang.String StepNextButtonImageUrl) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("StepNextButtonImageUrl", StepNextButtonImageUrl);
         } catch (JCNativeException jcne) {
@@ -570,9 +671,13 @@ public class Wizard extends CompositeControl  {
 
     public java.lang.String getStepNextButtonText() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStepNextButtonText = null;
         try {
-            return (java.lang.String)classInstance.Get("StepNextButtonText");
+            retObjectStepNextButtonText = classInstance.Get("StepNextButtonText");
+            return (java.lang.String)retObjectStepNextButtonText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectStepNextButtonText != null ? retObjectStepNextButtonText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -580,7 +685,7 @@ public class Wizard extends CompositeControl  {
 
     public void setStepNextButtonText(java.lang.String StepNextButtonText) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("StepNextButtonText", StepNextButtonText);
         } catch (JCNativeException jcne) {
@@ -590,9 +695,13 @@ public class Wizard extends CompositeControl  {
 
     public java.lang.String getStepPreviousButtonImageUrl() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStepPreviousButtonImageUrl = null;
         try {
-            return (java.lang.String)classInstance.Get("StepPreviousButtonImageUrl");
+            retObjectStepPreviousButtonImageUrl = classInstance.Get("StepPreviousButtonImageUrl");
+            return (java.lang.String)retObjectStepPreviousButtonImageUrl;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectStepPreviousButtonImageUrl != null ? retObjectStepPreviousButtonImageUrl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -600,7 +709,7 @@ public class Wizard extends CompositeControl  {
 
     public void setStepPreviousButtonImageUrl(java.lang.String StepPreviousButtonImageUrl) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("StepPreviousButtonImageUrl", StepPreviousButtonImageUrl);
         } catch (JCNativeException jcne) {
@@ -610,9 +719,13 @@ public class Wizard extends CompositeControl  {
 
     public java.lang.String getStepPreviousButtonText() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStepPreviousButtonText = null;
         try {
-            return (java.lang.String)classInstance.Get("StepPreviousButtonText");
+            retObjectStepPreviousButtonText = classInstance.Get("StepPreviousButtonText");
+            return (java.lang.String)retObjectStepPreviousButtonText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectStepPreviousButtonText != null ? retObjectStepPreviousButtonText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -620,7 +733,7 @@ public class Wizard extends CompositeControl  {
 
     public void setStepPreviousButtonText(java.lang.String StepPreviousButtonText) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("StepPreviousButtonText", StepPreviousButtonText);
         } catch (JCNativeException jcne) {
@@ -630,10 +743,14 @@ public class Wizard extends CompositeControl  {
 
     public ITemplate getFinishNavigationTemplate() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFinishNavigationTemplate = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("FinishNavigationTemplate");
+            retObjectFinishNavigationTemplate = classInstance.Get("FinishNavigationTemplate");
+            JCObject val = (JCObject)retObjectFinishNavigationTemplate;
             return new ITemplateImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFinishNavigationTemplate != null ? retObjectFinishNavigationTemplate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -641,7 +758,7 @@ public class Wizard extends CompositeControl  {
 
     public void setFinishNavigationTemplate(ITemplate FinishNavigationTemplate) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FinishNavigationTemplate", FinishNavigationTemplate == null ? null : FinishNavigationTemplate.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -651,10 +768,14 @@ public class Wizard extends CompositeControl  {
 
     public ITemplate getHeaderTemplate() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHeaderTemplate = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("HeaderTemplate");
+            retObjectHeaderTemplate = classInstance.Get("HeaderTemplate");
+            JCObject val = (JCObject)retObjectHeaderTemplate;
             return new ITemplateImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHeaderTemplate != null ? retObjectHeaderTemplate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -662,7 +783,7 @@ public class Wizard extends CompositeControl  {
 
     public void setHeaderTemplate(ITemplate HeaderTemplate) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("HeaderTemplate", HeaderTemplate == null ? null : HeaderTemplate.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -672,10 +793,14 @@ public class Wizard extends CompositeControl  {
 
     public ITemplate getLayoutTemplate() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLayoutTemplate = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("LayoutTemplate");
+            retObjectLayoutTemplate = classInstance.Get("LayoutTemplate");
+            JCObject val = (JCObject)retObjectLayoutTemplate;
             return new ITemplateImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLayoutTemplate != null ? retObjectLayoutTemplate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -683,7 +808,7 @@ public class Wizard extends CompositeControl  {
 
     public void setLayoutTemplate(ITemplate LayoutTemplate) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("LayoutTemplate", LayoutTemplate == null ? null : LayoutTemplate.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -693,10 +818,14 @@ public class Wizard extends CompositeControl  {
 
     public ITemplate getSideBarTemplate() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSideBarTemplate = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SideBarTemplate");
+            retObjectSideBarTemplate = classInstance.Get("SideBarTemplate");
+            JCObject val = (JCObject)retObjectSideBarTemplate;
             return new ITemplateImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSideBarTemplate != null ? retObjectSideBarTemplate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -704,7 +833,7 @@ public class Wizard extends CompositeControl  {
 
     public void setSideBarTemplate(ITemplate SideBarTemplate) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SideBarTemplate", SideBarTemplate == null ? null : SideBarTemplate.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -714,10 +843,14 @@ public class Wizard extends CompositeControl  {
 
     public ITemplate getStartNavigationTemplate() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStartNavigationTemplate = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("StartNavigationTemplate");
+            retObjectStartNavigationTemplate = classInstance.Get("StartNavigationTemplate");
+            JCObject val = (JCObject)retObjectStartNavigationTemplate;
             return new ITemplateImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStartNavigationTemplate != null ? retObjectStartNavigationTemplate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -725,7 +858,7 @@ public class Wizard extends CompositeControl  {
 
     public void setStartNavigationTemplate(ITemplate StartNavigationTemplate) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("StartNavigationTemplate", StartNavigationTemplate == null ? null : StartNavigationTemplate.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -735,10 +868,14 @@ public class Wizard extends CompositeControl  {
 
     public ITemplate getStepNavigationTemplate() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStepNavigationTemplate = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("StepNavigationTemplate");
+            retObjectStepNavigationTemplate = classInstance.Get("StepNavigationTemplate");
+            JCObject val = (JCObject)retObjectStepNavigationTemplate;
             return new ITemplateImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStepNavigationTemplate != null ? retObjectStepNavigationTemplate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -746,7 +883,7 @@ public class Wizard extends CompositeControl  {
 
     public void setStepNavigationTemplate(ITemplate StepNavigationTemplate) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("StepNavigationTemplate", StepNavigationTemplate == null ? null : StepNavigationTemplate.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -756,10 +893,14 @@ public class Wizard extends CompositeControl  {
 
     public ButtonType getCancelButtonType() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCancelButtonType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CancelButtonType");
+            retObjectCancelButtonType = classInstance.Get("CancelButtonType");
+            JCObject val = (JCObject)retObjectCancelButtonType;
             return new ButtonType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCancelButtonType != null ? retObjectCancelButtonType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -767,7 +908,7 @@ public class Wizard extends CompositeControl  {
 
     public void setCancelButtonType(ButtonType CancelButtonType) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CancelButtonType", CancelButtonType == null ? null : CancelButtonType.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -777,10 +918,14 @@ public class Wizard extends CompositeControl  {
 
     public ButtonType getFinishCompleteButtonType() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFinishCompleteButtonType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("FinishCompleteButtonType");
+            retObjectFinishCompleteButtonType = classInstance.Get("FinishCompleteButtonType");
+            JCObject val = (JCObject)retObjectFinishCompleteButtonType;
             return new ButtonType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFinishCompleteButtonType != null ? retObjectFinishCompleteButtonType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -788,7 +933,7 @@ public class Wizard extends CompositeControl  {
 
     public void setFinishCompleteButtonType(ButtonType FinishCompleteButtonType) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FinishCompleteButtonType", FinishCompleteButtonType == null ? null : FinishCompleteButtonType.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -798,10 +943,14 @@ public class Wizard extends CompositeControl  {
 
     public ButtonType getFinishPreviousButtonType() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFinishPreviousButtonType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("FinishPreviousButtonType");
+            retObjectFinishPreviousButtonType = classInstance.Get("FinishPreviousButtonType");
+            JCObject val = (JCObject)retObjectFinishPreviousButtonType;
             return new ButtonType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFinishPreviousButtonType != null ? retObjectFinishPreviousButtonType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -809,7 +958,7 @@ public class Wizard extends CompositeControl  {
 
     public void setFinishPreviousButtonType(ButtonType FinishPreviousButtonType) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FinishPreviousButtonType", FinishPreviousButtonType == null ? null : FinishPreviousButtonType.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -819,10 +968,14 @@ public class Wizard extends CompositeControl  {
 
     public ButtonType getStartNextButtonType() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStartNextButtonType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("StartNextButtonType");
+            retObjectStartNextButtonType = classInstance.Get("StartNextButtonType");
+            JCObject val = (JCObject)retObjectStartNextButtonType;
             return new ButtonType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStartNextButtonType != null ? retObjectStartNextButtonType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -830,7 +983,7 @@ public class Wizard extends CompositeControl  {
 
     public void setStartNextButtonType(ButtonType StartNextButtonType) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("StartNextButtonType", StartNextButtonType == null ? null : StartNextButtonType.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -840,10 +993,14 @@ public class Wizard extends CompositeControl  {
 
     public ButtonType getStepNextButtonType() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStepNextButtonType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("StepNextButtonType");
+            retObjectStepNextButtonType = classInstance.Get("StepNextButtonType");
+            JCObject val = (JCObject)retObjectStepNextButtonType;
             return new ButtonType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStepNextButtonType != null ? retObjectStepNextButtonType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -851,7 +1008,7 @@ public class Wizard extends CompositeControl  {
 
     public void setStepNextButtonType(ButtonType StepNextButtonType) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("StepNextButtonType", StepNextButtonType == null ? null : StepNextButtonType.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -861,10 +1018,14 @@ public class Wizard extends CompositeControl  {
 
     public ButtonType getStepPreviousButtonType() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStepPreviousButtonType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("StepPreviousButtonType");
+            retObjectStepPreviousButtonType = classInstance.Get("StepPreviousButtonType");
+            JCObject val = (JCObject)retObjectStepPreviousButtonType;
             return new ButtonType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStepPreviousButtonType != null ? retObjectStepPreviousButtonType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -872,7 +1033,7 @@ public class Wizard extends CompositeControl  {
 
     public void setStepPreviousButtonType(ButtonType StepPreviousButtonType) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("StepPreviousButtonType", StepPreviousButtonType == null ? null : StepPreviousButtonType.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -882,10 +1043,14 @@ public class Wizard extends CompositeControl  {
 
     public Style getCancelButtonStyle() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCancelButtonStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CancelButtonStyle");
+            retObjectCancelButtonStyle = classInstance.Get("CancelButtonStyle");
+            JCObject val = (JCObject)retObjectCancelButtonStyle;
             return new Style(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCancelButtonStyle != null ? retObjectCancelButtonStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -893,10 +1058,14 @@ public class Wizard extends CompositeControl  {
 
     public Style getFinishCompleteButtonStyle() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFinishCompleteButtonStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("FinishCompleteButtonStyle");
+            retObjectFinishCompleteButtonStyle = classInstance.Get("FinishCompleteButtonStyle");
+            JCObject val = (JCObject)retObjectFinishCompleteButtonStyle;
             return new Style(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFinishCompleteButtonStyle != null ? retObjectFinishCompleteButtonStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -904,10 +1073,14 @@ public class Wizard extends CompositeControl  {
 
     public Style getFinishPreviousButtonStyle() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFinishPreviousButtonStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("FinishPreviousButtonStyle");
+            retObjectFinishPreviousButtonStyle = classInstance.Get("FinishPreviousButtonStyle");
+            JCObject val = (JCObject)retObjectFinishPreviousButtonStyle;
             return new Style(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFinishPreviousButtonStyle != null ? retObjectFinishPreviousButtonStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -915,10 +1088,14 @@ public class Wizard extends CompositeControl  {
 
     public Style getNavigationButtonStyle() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNavigationButtonStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("NavigationButtonStyle");
+            retObjectNavigationButtonStyle = classInstance.Get("NavigationButtonStyle");
+            JCObject val = (JCObject)retObjectNavigationButtonStyle;
             return new Style(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNavigationButtonStyle != null ? retObjectNavigationButtonStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -926,10 +1103,14 @@ public class Wizard extends CompositeControl  {
 
     public Style getSideBarButtonStyle() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSideBarButtonStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SideBarButtonStyle");
+            retObjectSideBarButtonStyle = classInstance.Get("SideBarButtonStyle");
+            JCObject val = (JCObject)retObjectSideBarButtonStyle;
             return new Style(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSideBarButtonStyle != null ? retObjectSideBarButtonStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -937,10 +1118,14 @@ public class Wizard extends CompositeControl  {
 
     public Style getStartNextButtonStyle() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStartNextButtonStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("StartNextButtonStyle");
+            retObjectStartNextButtonStyle = classInstance.Get("StartNextButtonStyle");
+            JCObject val = (JCObject)retObjectStartNextButtonStyle;
             return new Style(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStartNextButtonStyle != null ? retObjectStartNextButtonStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -948,10 +1133,14 @@ public class Wizard extends CompositeControl  {
 
     public Style getStepNextButtonStyle() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStepNextButtonStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("StepNextButtonStyle");
+            retObjectStepNextButtonStyle = classInstance.Get("StepNextButtonStyle");
+            JCObject val = (JCObject)retObjectStepNextButtonStyle;
             return new Style(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStepNextButtonStyle != null ? retObjectStepNextButtonStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -959,10 +1148,14 @@ public class Wizard extends CompositeControl  {
 
     public Style getStepPreviousButtonStyle() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStepPreviousButtonStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("StepPreviousButtonStyle");
+            retObjectStepPreviousButtonStyle = classInstance.Get("StepPreviousButtonStyle");
+            JCObject val = (JCObject)retObjectStepPreviousButtonStyle;
             return new Style(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStepPreviousButtonStyle != null ? retObjectStepPreviousButtonStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -970,10 +1163,14 @@ public class Wizard extends CompositeControl  {
 
     public TableItemStyle getHeaderStyle() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHeaderStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("HeaderStyle");
+            retObjectHeaderStyle = classInstance.Get("HeaderStyle");
+            JCObject val = (JCObject)retObjectHeaderStyle;
             return new TableItemStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHeaderStyle != null ? retObjectHeaderStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -981,10 +1178,14 @@ public class Wizard extends CompositeControl  {
 
     public TableItemStyle getNavigationStyle() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNavigationStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("NavigationStyle");
+            retObjectNavigationStyle = classInstance.Get("NavigationStyle");
+            JCObject val = (JCObject)retObjectNavigationStyle;
             return new TableItemStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNavigationStyle != null ? retObjectNavigationStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -992,10 +1193,14 @@ public class Wizard extends CompositeControl  {
 
     public TableItemStyle getSideBarStyle() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSideBarStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SideBarStyle");
+            retObjectSideBarStyle = classInstance.Get("SideBarStyle");
+            JCObject val = (JCObject)retObjectSideBarStyle;
             return new TableItemStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSideBarStyle != null ? retObjectSideBarStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1003,10 +1208,14 @@ public class Wizard extends CompositeControl  {
 
     public TableItemStyle getStepStyle() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStepStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("StepStyle");
+            retObjectStepStyle = classInstance.Get("StepStyle");
+            JCObject val = (JCObject)retObjectStepStyle;
             return new TableItemStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStepStyle != null ? retObjectStepStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1014,10 +1223,14 @@ public class Wizard extends CompositeControl  {
 
     public WizardStepBase getActiveStep() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectActiveStep = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ActiveStep");
+            retObjectActiveStep = classInstance.Get("ActiveStep");
+            JCObject val = (JCObject)retObjectActiveStep;
             return new WizardStepBase(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectActiveStep != null ? retObjectActiveStep.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1025,10 +1238,14 @@ public class Wizard extends CompositeControl  {
 
     public WizardStepCollection getWizardSteps() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWizardSteps = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("WizardSteps");
+            retObjectWizardSteps = classInstance.Get("WizardSteps");
+            JCObject val = (JCObject)retObjectWizardSteps;
             return new WizardStepCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWizardSteps != null ? retObjectWizardSteps.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1041,7 +1258,7 @@ public class Wizard extends CompositeControl  {
 
     public void addActiveStepChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ActiveStepChanged", handler);
         } catch (JCNativeException jcne) {
@@ -1051,7 +1268,7 @@ public class Wizard extends CompositeControl  {
 
     public void removeActiveStepChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ActiveStepChanged", handler);
         } catch (JCNativeException jcne) {
@@ -1061,7 +1278,7 @@ public class Wizard extends CompositeControl  {
 
     public void addCancelButtonClick(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("CancelButtonClick", handler);
         } catch (JCNativeException jcne) {
@@ -1071,7 +1288,7 @@ public class Wizard extends CompositeControl  {
 
     public void removeCancelButtonClick(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("CancelButtonClick", handler);
         } catch (JCNativeException jcne) {
@@ -1081,7 +1298,7 @@ public class Wizard extends CompositeControl  {
 
     public void addFinishButtonClick(WizardNavigationEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("FinishButtonClick", handler);
         } catch (JCNativeException jcne) {
@@ -1091,7 +1308,7 @@ public class Wizard extends CompositeControl  {
 
     public void removeFinishButtonClick(WizardNavigationEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("FinishButtonClick", handler);
         } catch (JCNativeException jcne) {
@@ -1101,7 +1318,7 @@ public class Wizard extends CompositeControl  {
 
     public void addNextButtonClick(WizardNavigationEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("NextButtonClick", handler);
         } catch (JCNativeException jcne) {
@@ -1111,7 +1328,7 @@ public class Wizard extends CompositeControl  {
 
     public void removeNextButtonClick(WizardNavigationEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("NextButtonClick", handler);
         } catch (JCNativeException jcne) {
@@ -1121,7 +1338,7 @@ public class Wizard extends CompositeControl  {
 
     public void addPreviousButtonClick(WizardNavigationEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("PreviousButtonClick", handler);
         } catch (JCNativeException jcne) {
@@ -1131,7 +1348,7 @@ public class Wizard extends CompositeControl  {
 
     public void removePreviousButtonClick(WizardNavigationEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("PreviousButtonClick", handler);
         } catch (JCNativeException jcne) {
@@ -1141,7 +1358,7 @@ public class Wizard extends CompositeControl  {
 
     public void addSideBarButtonClick(WizardNavigationEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("SideBarButtonClick", handler);
         } catch (JCNativeException jcne) {
@@ -1151,7 +1368,7 @@ public class Wizard extends CompositeControl  {
 
     public void removeSideBarButtonClick(WizardNavigationEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("SideBarButtonClick", handler);
         } catch (JCNativeException jcne) {

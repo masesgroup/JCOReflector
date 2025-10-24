@@ -143,9 +143,13 @@ public class IWebProxyScriptImplementation extends NetObject implements IWebProx
     
     public boolean Load(Uri scriptLocation, java.lang.String script, NetType helperType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLoad = null;
         try {
-            return (boolean)classInstance.Invoke("Load", scriptLocation == null ? null : scriptLocation.getJCOInstance(), script, helperType == null ? null : helperType.getJCOInstance());
+            retObjectLoad = classInstance.Invoke("Load", scriptLocation == null ? null : scriptLocation.getJCOInstance(), script, helperType == null ? null : helperType.getJCOInstance());
+            return (boolean)retObjectLoad;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectLoad != null ? retObjectLoad.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -153,9 +157,13 @@ public class IWebProxyScriptImplementation extends NetObject implements IWebProx
 
     public java.lang.String Run(java.lang.String url, java.lang.String host) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRun = null;
         try {
-            return (java.lang.String)classInstance.Invoke("Run", url, host);
+            retObjectRun = classInstance.Invoke("Run", url, host);
+            return (java.lang.String)retObjectRun;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectRun != null ? retObjectRun.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -163,7 +171,7 @@ public class IWebProxyScriptImplementation extends NetObject implements IWebProx
 
     public void Close() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Close");
         } catch (JCNativeException jcne) {

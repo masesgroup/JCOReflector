@@ -193,7 +193,7 @@ public class RuleEvaluationIncompatibleTypesException extends RuleException {
     
     public void GetObjectData(SerializationInfo info, StreamingContext context) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.security.SecurityException, system.TypeLoadException, system.NotSupportedException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.NotImplementedException, system.runtime.serialization.SerializationException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetObjectData", info == null ? null : info.getJCOInstance(), context == null ? null : context.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -207,10 +207,14 @@ public class RuleEvaluationIncompatibleTypesException extends RuleException {
     
     public CodeBinaryOperatorType getOperator() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOperator = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Operator");
+            retObjectOperator = classInstance.Get("Operator");
+            JCObject val = (JCObject)retObjectOperator;
             return new CodeBinaryOperatorType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOperator != null ? retObjectOperator.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -218,7 +222,7 @@ public class RuleEvaluationIncompatibleTypesException extends RuleException {
 
     public void setOperator(CodeBinaryOperatorType Operator) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Operator", Operator == null ? null : Operator.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -228,10 +232,14 @@ public class RuleEvaluationIncompatibleTypesException extends RuleException {
 
     public NetType getLeft() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLeft = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Left");
+            retObjectLeft = classInstance.Get("Left");
+            JCObject val = (JCObject)retObjectLeft;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLeft != null ? retObjectLeft.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -239,7 +247,7 @@ public class RuleEvaluationIncompatibleTypesException extends RuleException {
 
     public void setLeft(NetType Left) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Left", Left == null ? null : Left.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -249,10 +257,14 @@ public class RuleEvaluationIncompatibleTypesException extends RuleException {
 
     public NetType getRight() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRight = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Right");
+            retObjectRight = classInstance.Get("Right");
+            JCObject val = (JCObject)retObjectRight;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRight != null ? retObjectRight.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -260,7 +272,7 @@ public class RuleEvaluationIncompatibleTypesException extends RuleException {
 
     public void setRight(NetType Right) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Right", Right == null ? null : Right.getJCOInstance());
         } catch (JCNativeException jcne) {

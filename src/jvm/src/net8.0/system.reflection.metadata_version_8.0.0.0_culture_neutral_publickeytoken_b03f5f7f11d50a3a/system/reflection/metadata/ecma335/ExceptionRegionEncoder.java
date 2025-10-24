@@ -160,9 +160,13 @@ public class ExceptionRegionEncoder extends ValueType  {
     
     public static boolean IsSmallExceptionRegion(int startOffset, int length) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsSmallExceptionRegion = null;
         try {
-            return (boolean)classType.Invoke("IsSmallExceptionRegion", startOffset, length);
+            retObjectIsSmallExceptionRegion = classType.Invoke("IsSmallExceptionRegion", startOffset, length);
+            return (boolean)retObjectIsSmallExceptionRegion;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsSmallExceptionRegion != null ? retObjectIsSmallExceptionRegion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,9 +174,13 @@ public class ExceptionRegionEncoder extends ValueType  {
 
     public static boolean IsSmallRegionCount(int exceptionRegionCount) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsSmallRegionCount = null;
         try {
-            return (boolean)classType.Invoke("IsSmallRegionCount", exceptionRegionCount);
+            retObjectIsSmallRegionCount = classType.Invoke("IsSmallRegionCount", exceptionRegionCount);
+            return (boolean)retObjectIsSmallRegionCount;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsSmallRegionCount != null ? retObjectIsSmallRegionCount.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,10 +188,14 @@ public class ExceptionRegionEncoder extends ValueType  {
 
     public ExceptionRegionEncoder Add(ExceptionRegionKind kind, int tryOffset, int tryLength, int handlerOffset, int handlerLength, EntityHandle catchType, int filterOffset) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAdd = null;
         try {
-            JCObject objAdd = (JCObject)classInstance.Invoke("Add", kind == null ? null : kind.getJCOInstance(), tryOffset, tryLength, handlerOffset, handlerLength, catchType == null ? null : catchType.getJCOInstance(), filterOffset);
+            retObjectAdd = classInstance.Invoke("Add", kind == null ? null : kind.getJCOInstance(), tryOffset, tryLength, handlerOffset, handlerLength, catchType == null ? null : catchType.getJCOInstance(), filterOffset);
+            JCObject objAdd = (JCObject)retObjectAdd;
             return new ExceptionRegionEncoder(objAdd);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAdd != null ? retObjectAdd.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,10 +203,14 @@ public class ExceptionRegionEncoder extends ValueType  {
 
     public ExceptionRegionEncoder AddCatch(int tryOffset, int tryLength, int handlerOffset, int handlerLength, EntityHandle catchType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddCatch = null;
         try {
-            JCObject objAddCatch = (JCObject)classInstance.Invoke("AddCatch", tryOffset, tryLength, handlerOffset, handlerLength, catchType == null ? null : catchType.getJCOInstance());
+            retObjectAddCatch = classInstance.Invoke("AddCatch", tryOffset, tryLength, handlerOffset, handlerLength, catchType == null ? null : catchType.getJCOInstance());
+            JCObject objAddCatch = (JCObject)retObjectAddCatch;
             return new ExceptionRegionEncoder(objAddCatch);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddCatch != null ? retObjectAddCatch.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,10 +218,14 @@ public class ExceptionRegionEncoder extends ValueType  {
 
     public ExceptionRegionEncoder AddFault(int tryOffset, int tryLength, int handlerOffset, int handlerLength) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddFault = null;
         try {
-            JCObject objAddFault = (JCObject)classInstance.Invoke("AddFault", tryOffset, tryLength, handlerOffset, handlerLength);
+            retObjectAddFault = classInstance.Invoke("AddFault", tryOffset, tryLength, handlerOffset, handlerLength);
+            JCObject objAddFault = (JCObject)retObjectAddFault;
             return new ExceptionRegionEncoder(objAddFault);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddFault != null ? retObjectAddFault.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,10 +233,14 @@ public class ExceptionRegionEncoder extends ValueType  {
 
     public ExceptionRegionEncoder AddFilter(int tryOffset, int tryLength, int handlerOffset, int handlerLength, int filterOffset) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddFilter = null;
         try {
-            JCObject objAddFilter = (JCObject)classInstance.Invoke("AddFilter", tryOffset, tryLength, handlerOffset, handlerLength, filterOffset);
+            retObjectAddFilter = classInstance.Invoke("AddFilter", tryOffset, tryLength, handlerOffset, handlerLength, filterOffset);
+            JCObject objAddFilter = (JCObject)retObjectAddFilter;
             return new ExceptionRegionEncoder(objAddFilter);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddFilter != null ? retObjectAddFilter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -224,10 +248,14 @@ public class ExceptionRegionEncoder extends ValueType  {
 
     public ExceptionRegionEncoder AddFinally(int tryOffset, int tryLength, int handlerOffset, int handlerLength) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddFinally = null;
         try {
-            JCObject objAddFinally = (JCObject)classInstance.Invoke("AddFinally", tryOffset, tryLength, handlerOffset, handlerLength);
+            retObjectAddFinally = classInstance.Invoke("AddFinally", tryOffset, tryLength, handlerOffset, handlerLength);
+            JCObject objAddFinally = (JCObject)retObjectAddFinally;
             return new ExceptionRegionEncoder(objAddFinally);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddFinally != null ? retObjectAddFinally.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -239,9 +267,13 @@ public class ExceptionRegionEncoder extends ValueType  {
     
     public boolean getHasSmallFormat() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHasSmallFormat = null;
         try {
-            return (boolean)classInstance.Get("HasSmallFormat");
+            retObjectHasSmallFormat = classInstance.Get("HasSmallFormat");
+            return (boolean)retObjectHasSmallFormat;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectHasSmallFormat != null ? retObjectHasSmallFormat.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -249,10 +281,14 @@ public class ExceptionRegionEncoder extends ValueType  {
 
     public BlobBuilder getBuilder() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBuilder = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Builder");
+            retObjectBuilder = classInstance.Get("Builder");
+            JCObject val = (JCObject)retObjectBuilder;
             return new BlobBuilder(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBuilder != null ? retObjectBuilder.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

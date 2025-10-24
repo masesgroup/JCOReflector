@@ -146,10 +146,14 @@ public class IRepeatInfoUserImplementation extends NetObject implements IRepeatI
     
     public Style GetItemStyle(ListItemType itemType, int repeatIndex) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetItemStyle = null;
         try {
-            JCObject objGetItemStyle = (JCObject)classInstance.Invoke("GetItemStyle", itemType == null ? null : itemType.getJCOInstance(), repeatIndex);
+            retObjectGetItemStyle = classInstance.Invoke("GetItemStyle", itemType == null ? null : itemType.getJCOInstance(), repeatIndex);
+            JCObject objGetItemStyle = (JCObject)retObjectGetItemStyle;
             return new Style(objGetItemStyle);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetItemStyle != null ? retObjectGetItemStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -157,7 +161,7 @@ public class IRepeatInfoUserImplementation extends NetObject implements IRepeatI
 
     public void RenderItem(ListItemType itemType, int repeatIndex, RepeatInfo repeatInfo, HtmlTextWriter writer) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RenderItem", itemType == null ? null : itemType.getJCOInstance(), repeatIndex, repeatInfo == null ? null : repeatInfo.getJCOInstance(), writer == null ? null : writer.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -171,9 +175,13 @@ public class IRepeatInfoUserImplementation extends NetObject implements IRepeatI
     
     public boolean getHasFooter() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHasFooter = null;
         try {
-            return (boolean)classInstance.Get("HasFooter");
+            retObjectHasFooter = classInstance.Get("HasFooter");
+            return (boolean)retObjectHasFooter;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectHasFooter != null ? retObjectHasFooter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,9 +189,13 @@ public class IRepeatInfoUserImplementation extends NetObject implements IRepeatI
 
     public boolean getHasHeader() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHasHeader = null;
         try {
-            return (boolean)classInstance.Get("HasHeader");
+            retObjectHasHeader = classInstance.Get("HasHeader");
+            return (boolean)retObjectHasHeader;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectHasHeader != null ? retObjectHasHeader.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,9 +203,13 @@ public class IRepeatInfoUserImplementation extends NetObject implements IRepeatI
 
     public boolean getHasSeparators() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHasSeparators = null;
         try {
-            return (boolean)classInstance.Get("HasSeparators");
+            retObjectHasSeparators = classInstance.Get("HasSeparators");
+            return (boolean)retObjectHasSeparators;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectHasSeparators != null ? retObjectHasSeparators.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,9 +217,20 @@ public class IRepeatInfoUserImplementation extends NetObject implements IRepeatI
 
     public int getRepeatedItemCount() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRepeatedItemCount = null;
         try {
-            return (int)classInstance.Get("RepeatedItemCount");
+            retObjectRepeatedItemCount = classInstance.Get("RepeatedItemCount");
+            return (int)retObjectRepeatedItemCount;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectRepeatedItemCount_ToString = retObjectRepeatedItemCount == null ? "null" : retObjectRepeatedItemCount.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectRepeatedItemCountNumber = (java.lang.Number)retObjectRepeatedItemCount;
+                return retObjectRepeatedItemCountNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectRepeatedItemCount != null ? retObjectRepeatedItemCount.getClass() : "null", retObjectRepeatedItemCount_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -159,10 +159,14 @@ public class StructuredCompositeActivityDesigner extends CompositeActivityDesign
     
     public NetObject GetNextSelectableObject(NetObject current, DesignerNavigationDirection direction) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.MissingMethodException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetNextSelectableObject = null;
         try {
-            JCObject objGetNextSelectableObject = (JCObject)classInstance.Invoke("GetNextSelectableObject", current == null ? null : current.getJCOInstance(), direction == null ? null : direction.getJCOInstance());
+            retObjectGetNextSelectableObject = classInstance.Invoke("GetNextSelectableObject", current == null ? null : current.getJCOInstance(), direction == null ? null : direction.getJCOInstance());
+            JCObject objGetNextSelectableObject = (JCObject)retObjectGetNextSelectableObject;
             return new NetObject(objGetNextSelectableObject);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetNextSelectableObject != null ? retObjectGetNextSelectableObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,7 +174,7 @@ public class StructuredCompositeActivityDesigner extends CompositeActivityDesign
 
     public void EnsureVisibleContainedDesigner(ActivityDesigner containedDesigner) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.MulticastNotSupportedException, system.ObjectDisposedException, system.NotSupportedException, system.MissingMethodException, system.NotImplementedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EnsureVisibleContainedDesigner", containedDesigner == null ? null : containedDesigner.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -184,10 +188,14 @@ public class StructuredCompositeActivityDesigner extends CompositeActivityDesign
     
     public DesignerView getActiveView() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.TypeLoadException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.MissingMethodException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectActiveView = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ActiveView");
+            retObjectActiveView = classInstance.Get("ActiveView");
+            JCObject val = (JCObject)retObjectActiveView;
             return new DesignerView(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectActiveView != null ? retObjectActiveView.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,7 +203,7 @@ public class StructuredCompositeActivityDesigner extends CompositeActivityDesign
 
     public void setActiveView(DesignerView ActiveView) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.MulticastNotSupportedException, system.ObjectDisposedException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ActiveView", ActiveView == null ? null : ActiveView.getJCOInstance());
         } catch (JCNativeException jcne) {

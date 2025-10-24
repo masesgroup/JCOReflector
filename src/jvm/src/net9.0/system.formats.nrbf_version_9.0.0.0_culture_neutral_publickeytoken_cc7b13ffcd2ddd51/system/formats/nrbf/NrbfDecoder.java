@@ -157,9 +157,13 @@ public class NrbfDecoder extends NetObject  {
     
     public static boolean StartsWithPayloadHeader(Stream stream) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectStartsWithPayloadHeader = null;
         try {
-            return (boolean)classType.Invoke("StartsWithPayloadHeader", stream == null ? null : stream.getJCOInstance());
+            retObjectStartsWithPayloadHeader = classType.Invoke("StartsWithPayloadHeader", stream == null ? null : stream.getJCOInstance());
+            return (boolean)retObjectStartsWithPayloadHeader;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectStartsWithPayloadHeader != null ? retObjectStartsWithPayloadHeader.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -167,10 +171,14 @@ public class NrbfDecoder extends NetObject  {
 
     public static ClassRecord DecodeClassRecord(Stream payload, PayloadOptions options, boolean leaveOpen) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.runtime.serialization.SerializationException, system.InvalidOperationException, system.io.EndOfStreamException, system.FormatException, system.io.IOException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDecodeClassRecord = null;
         try {
-            JCObject objDecodeClassRecord = (JCObject)classType.Invoke("DecodeClassRecord", payload == null ? null : payload.getJCOInstance(), options == null ? null : options.getJCOInstance(), leaveOpen);
+            retObjectDecodeClassRecord = classType.Invoke("DecodeClassRecord", payload == null ? null : payload.getJCOInstance(), options == null ? null : options.getJCOInstance(), leaveOpen);
+            JCObject objDecodeClassRecord = (JCObject)retObjectDecodeClassRecord;
             return new ClassRecord(objDecodeClassRecord);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDecodeClassRecord != null ? retObjectDecodeClassRecord.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,10 +186,14 @@ public class NrbfDecoder extends NetObject  {
 
     public static SerializationRecord Decode(Stream payload, PayloadOptions options, boolean leaveOpen) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.runtime.serialization.SerializationException, system.io.EndOfStreamException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDecode = null;
         try {
-            JCObject objDecode = (JCObject)classType.Invoke("Decode", payload == null ? null : payload.getJCOInstance(), options == null ? null : options.getJCOInstance(), leaveOpen);
+            retObjectDecode = classType.Invoke("Decode", payload == null ? null : payload.getJCOInstance(), options == null ? null : options.getJCOInstance(), leaveOpen);
+            JCObject objDecode = (JCObject)retObjectDecode;
             return new SerializationRecord(objDecode);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDecode != null ? retObjectDecode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

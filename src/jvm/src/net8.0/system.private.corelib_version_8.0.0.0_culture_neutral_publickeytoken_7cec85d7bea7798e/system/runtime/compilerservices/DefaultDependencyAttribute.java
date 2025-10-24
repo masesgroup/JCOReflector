@@ -171,10 +171,14 @@ public class DefaultDependencyAttribute extends Attribute  {
     
     public LoadHint getLoadHint() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLoadHint = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("LoadHint");
+            retObjectLoadHint = classInstance.Get("LoadHint");
+            JCObject val = (JCObject)retObjectLoadHint;
             return new LoadHint(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLoadHint != null ? retObjectLoadHint.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

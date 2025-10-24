@@ -157,9 +157,20 @@ public class EntityViewContainer extends NetObject  {
     
     public int getViewCount() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectViewCount = null;
         try {
-            return (int)classInstance.Get("ViewCount");
+            retObjectViewCount = classInstance.Get("ViewCount");
+            return (int)retObjectViewCount;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectViewCount_ToString = retObjectViewCount == null ? "null" : retObjectViewCount.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectViewCountNumber = (java.lang.Number)retObjectViewCount;
+                return retObjectViewCountNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectViewCount != null ? retObjectViewCount.getClass() : "null", retObjectViewCount_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -167,7 +178,7 @@ public class EntityViewContainer extends NetObject  {
 
     public void setViewCount(int ViewCount) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ViewCount", ViewCount);
         } catch (JCNativeException jcne) {
@@ -177,9 +188,13 @@ public class EntityViewContainer extends NetObject  {
 
     public java.lang.String getEdmEntityContainerName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEdmEntityContainerName = null;
         try {
-            return (java.lang.String)classInstance.Get("EdmEntityContainerName");
+            retObjectEdmEntityContainerName = classInstance.Get("EdmEntityContainerName");
+            return (java.lang.String)retObjectEdmEntityContainerName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectEdmEntityContainerName != null ? retObjectEdmEntityContainerName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,7 +202,7 @@ public class EntityViewContainer extends NetObject  {
 
     public void setEdmEntityContainerName(java.lang.String EdmEntityContainerName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EdmEntityContainerName", EdmEntityContainerName);
         } catch (JCNativeException jcne) {
@@ -197,9 +212,13 @@ public class EntityViewContainer extends NetObject  {
 
     public java.lang.String getHashOverAllExtentViews() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHashOverAllExtentViews = null;
         try {
-            return (java.lang.String)classInstance.Get("HashOverAllExtentViews");
+            retObjectHashOverAllExtentViews = classInstance.Get("HashOverAllExtentViews");
+            return (java.lang.String)retObjectHashOverAllExtentViews;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectHashOverAllExtentViews != null ? retObjectHashOverAllExtentViews.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -207,7 +226,7 @@ public class EntityViewContainer extends NetObject  {
 
     public void setHashOverAllExtentViews(java.lang.String HashOverAllExtentViews) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("HashOverAllExtentViews", HashOverAllExtentViews);
         } catch (JCNativeException jcne) {
@@ -217,9 +236,13 @@ public class EntityViewContainer extends NetObject  {
 
     public java.lang.String getHashOverMappingClosure() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHashOverMappingClosure = null;
         try {
-            return (java.lang.String)classInstance.Get("HashOverMappingClosure");
+            retObjectHashOverMappingClosure = classInstance.Get("HashOverMappingClosure");
+            return (java.lang.String)retObjectHashOverMappingClosure;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectHashOverMappingClosure != null ? retObjectHashOverMappingClosure.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -227,7 +250,7 @@ public class EntityViewContainer extends NetObject  {
 
     public void setHashOverMappingClosure(java.lang.String HashOverMappingClosure) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("HashOverMappingClosure", HashOverMappingClosure);
         } catch (JCNativeException jcne) {
@@ -237,9 +260,13 @@ public class EntityViewContainer extends NetObject  {
 
     public java.lang.String getStoreEntityContainerName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStoreEntityContainerName = null;
         try {
-            return (java.lang.String)classInstance.Get("StoreEntityContainerName");
+            retObjectStoreEntityContainerName = classInstance.Get("StoreEntityContainerName");
+            return (java.lang.String)retObjectStoreEntityContainerName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectStoreEntityContainerName != null ? retObjectStoreEntityContainerName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -247,7 +274,7 @@ public class EntityViewContainer extends NetObject  {
 
     public void setStoreEntityContainerName(java.lang.String StoreEntityContainerName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("StoreEntityContainerName", StoreEntityContainerName);
         } catch (JCNativeException jcne) {

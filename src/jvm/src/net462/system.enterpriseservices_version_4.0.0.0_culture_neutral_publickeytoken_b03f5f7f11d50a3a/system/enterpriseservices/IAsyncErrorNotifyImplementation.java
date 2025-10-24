@@ -142,7 +142,7 @@ public class IAsyncErrorNotifyImplementation extends NetObject implements IAsync
     
     public void OnError(int hresult) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("OnError", hresult);
         } catch (JCNativeException jcne) {

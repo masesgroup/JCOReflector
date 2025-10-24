@@ -182,9 +182,20 @@ public class StylusPointPropertyInfo extends StylusPointProperty  {
     
     public int getMaximum() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaximum = null;
         try {
-            return (int)classInstance.Get("Maximum");
+            retObjectMaximum = classInstance.Get("Maximum");
+            return (int)retObjectMaximum;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaximum_ToString = retObjectMaximum == null ? "null" : retObjectMaximum.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMaximumNumber = (java.lang.Number)retObjectMaximum;
+                return retObjectMaximumNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaximum != null ? retObjectMaximum.getClass() : "null", retObjectMaximum_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,9 +203,20 @@ public class StylusPointPropertyInfo extends StylusPointProperty  {
 
     public int getMinimum() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMinimum = null;
         try {
-            return (int)classInstance.Get("Minimum");
+            retObjectMinimum = classInstance.Get("Minimum");
+            return (int)retObjectMinimum;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMinimum_ToString = retObjectMinimum == null ? "null" : retObjectMinimum.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMinimumNumber = (java.lang.Number)retObjectMinimum;
+                return retObjectMinimumNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMinimum != null ? retObjectMinimum.getClass() : "null", retObjectMinimum_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,10 +224,14 @@ public class StylusPointPropertyInfo extends StylusPointProperty  {
 
     public Single getResolution() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResolution = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Resolution");
+            retObjectResolution = classInstance.Get("Resolution");
+            JCObject val = (JCObject)retObjectResolution;
             return new Single(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectResolution != null ? retObjectResolution.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,7 +239,7 @@ public class StylusPointPropertyInfo extends StylusPointProperty  {
 
     public void setResolution(Single Resolution) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Resolution", Resolution == null ? null : Resolution.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -223,10 +249,14 @@ public class StylusPointPropertyInfo extends StylusPointProperty  {
 
     public StylusPointPropertyUnit getUnit() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUnit = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Unit");
+            retObjectUnit = classInstance.Get("Unit");
+            JCObject val = (JCObject)retObjectUnit;
             return new StylusPointPropertyUnit(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUnit != null ? retObjectUnit.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

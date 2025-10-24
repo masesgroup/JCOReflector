@@ -190,9 +190,13 @@ public class SqlDataRecord extends NetObject  {
     
     public boolean GetBoolean(int ordinal) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.data.sqlclient.SqlException, system.data.sqltypes.SqlNullValueException, system.OverflowException, system.xml.XmlException, system.reflection.TargetInvocationException, system.NotSupportedException, microsoft.sqlserver.server.InvalidUdtException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetBoolean = null;
         try {
-            return (boolean)classInstance.Invoke("GetBoolean", ordinal);
+            retObjectGetBoolean = classInstance.Invoke("GetBoolean", ordinal);
+            return (boolean)retObjectGetBoolean;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectGetBoolean != null ? retObjectGetBoolean.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,9 +204,13 @@ public class SqlDataRecord extends NetObject  {
 
     public boolean IsDBNull(int ordinal) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.data.sqlclient.SqlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsDBNull = null;
         try {
-            return (boolean)classInstance.Invoke("IsDBNull", ordinal);
+            retObjectIsDBNull = classInstance.Invoke("IsDBNull", ordinal);
+            return (boolean)retObjectIsDBNull;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsDBNull != null ? retObjectIsDBNull.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -210,9 +218,20 @@ public class SqlDataRecord extends NetObject  {
 
     public byte GetByte(int ordinal) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.data.sqlclient.SqlException, system.data.sqltypes.SqlNullValueException, system.OverflowException, system.xml.XmlException, system.reflection.TargetInvocationException, system.NotSupportedException, microsoft.sqlserver.server.InvalidUdtException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetByte = null;
         try {
-            return (byte)classInstance.Invoke("GetByte", ordinal);
+            retObjectGetByte = classInstance.Invoke("GetByte", ordinal);
+            return (byte)retObjectGetByte;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetByte_ToString = retObjectGetByte == null ? "null" : retObjectGetByte.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetByteNumber = (java.lang.Number)retObjectGetByte;
+                return retObjectGetByteNumber.byteValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into byte and, as fallback solution, into java.lang.Number", retObjectGetByte != null ? retObjectGetByte.getClass() : "null", retObjectGetByte_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -220,9 +239,13 @@ public class SqlDataRecord extends NetObject  {
 
     public char GetChar(int ordinal) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetChar = null;
         try {
-            return (char)classInstance.Invoke("GetChar", ordinal);
+            retObjectGetChar = classInstance.Invoke("GetChar", ordinal);
+            return (char)retObjectGetChar;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into char", retObjectGetChar != null ? retObjectGetChar.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -230,9 +253,20 @@ public class SqlDataRecord extends NetObject  {
 
     public double GetDouble(int ordinal) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.data.sqlclient.SqlException, system.data.sqltypes.SqlNullValueException, system.OverflowException, system.xml.XmlException, system.reflection.TargetInvocationException, system.NotSupportedException, microsoft.sqlserver.server.InvalidUdtException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDouble = null;
         try {
-            return (double)classInstance.Invoke("GetDouble", ordinal);
+            retObjectGetDouble = classInstance.Invoke("GetDouble", ordinal);
+            return (double)retObjectGetDouble;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetDouble_ToString = retObjectGetDouble == null ? "null" : retObjectGetDouble.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetDoubleNumber = (java.lang.Number)retObjectGetDouble;
+                return retObjectGetDoubleNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectGetDouble != null ? retObjectGetDouble.getClass() : "null", retObjectGetDouble_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -240,9 +274,20 @@ public class SqlDataRecord extends NetObject  {
 
     public short GetInt16(int ordinal) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.data.sqlclient.SqlException, system.data.sqltypes.SqlNullValueException, system.OverflowException, system.xml.XmlException, system.reflection.TargetInvocationException, system.NotSupportedException, microsoft.sqlserver.server.InvalidUdtException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetInt16 = null;
         try {
-            return (short)classInstance.Invoke("GetInt16", ordinal);
+            retObjectGetInt16 = classInstance.Invoke("GetInt16", ordinal);
+            return (short)retObjectGetInt16;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetInt16_ToString = retObjectGetInt16 == null ? "null" : retObjectGetInt16.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetInt16Number = (java.lang.Number)retObjectGetInt16;
+                return retObjectGetInt16Number.shortValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into short and, as fallback solution, into java.lang.Number", retObjectGetInt16 != null ? retObjectGetInt16.getClass() : "null", retObjectGetInt16_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -250,9 +295,20 @@ public class SqlDataRecord extends NetObject  {
 
     public int GetInt32(int ordinal) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.data.sqlclient.SqlException, system.data.sqltypes.SqlNullValueException, system.OverflowException, system.xml.XmlException, system.reflection.TargetInvocationException, system.NotSupportedException, microsoft.sqlserver.server.InvalidUdtException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetInt32 = null;
         try {
-            return (int)classInstance.Invoke("GetInt32", ordinal);
+            retObjectGetInt32 = classInstance.Invoke("GetInt32", ordinal);
+            return (int)retObjectGetInt32;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetInt32_ToString = retObjectGetInt32 == null ? "null" : retObjectGetInt32.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetInt32Number = (java.lang.Number)retObjectGetInt32;
+                return retObjectGetInt32Number.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetInt32 != null ? retObjectGetInt32.getClass() : "null", retObjectGetInt32_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -260,9 +316,20 @@ public class SqlDataRecord extends NetObject  {
 
     public int GetOrdinal(java.lang.String name) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetOrdinal = null;
         try {
-            return (int)classInstance.Invoke("GetOrdinal", name);
+            retObjectGetOrdinal = classInstance.Invoke("GetOrdinal", name);
+            return (int)retObjectGetOrdinal;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetOrdinal_ToString = retObjectGetOrdinal == null ? "null" : retObjectGetOrdinal.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetOrdinalNumber = (java.lang.Number)retObjectGetOrdinal;
+                return retObjectGetOrdinalNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetOrdinal != null ? retObjectGetOrdinal.getClass() : "null", retObjectGetOrdinal_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -270,9 +337,20 @@ public class SqlDataRecord extends NetObject  {
 
     public int GetSqlValues(NetObject[] values) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.data.sqlclient.SqlException, system.data.sqltypes.SqlTypeException, system.OverflowException, microsoft.sqlserver.server.InvalidUdtException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSqlValues = null;
         try {
-            return (int)classInstance.Invoke("GetSqlValues", (java.lang.Object)toObjectFromArray(values));
+            retObjectGetSqlValues = classInstance.Invoke("GetSqlValues", (java.lang.Object)toObjectFromArray(values));
+            return (int)retObjectGetSqlValues;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetSqlValues_ToString = retObjectGetSqlValues == null ? "null" : retObjectGetSqlValues.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetSqlValuesNumber = (java.lang.Number)retObjectGetSqlValues;
+                return retObjectGetSqlValuesNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetSqlValues != null ? retObjectGetSqlValues.getClass() : "null", retObjectGetSqlValues_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -280,9 +358,20 @@ public class SqlDataRecord extends NetObject  {
 
     public int GetValues(NetObject[] values) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.data.sqlclient.SqlException, system.data.sqltypes.SqlNullValueException, system.OverflowException, system.xml.XmlException, system.reflection.TargetInvocationException, system.NotSupportedException, microsoft.sqlserver.server.InvalidUdtException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetValues = null;
         try {
-            return (int)classInstance.Invoke("GetValues", (java.lang.Object)toObjectFromArray(values));
+            retObjectGetValues = classInstance.Invoke("GetValues", (java.lang.Object)toObjectFromArray(values));
+            return (int)retObjectGetValues;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetValues_ToString = retObjectGetValues == null ? "null" : retObjectGetValues.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetValuesNumber = (java.lang.Number)retObjectGetValues;
+                return retObjectGetValuesNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetValues != null ? retObjectGetValues.getClass() : "null", retObjectGetValues_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -290,9 +379,20 @@ public class SqlDataRecord extends NetObject  {
 
     public int SetValues(NetObject... values) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.InvalidCastException, system.data.sqlclient.SqlException, system.data.sqltypes.SqlTypeException, system.OverflowException, system.data.sqltypes.SqlNullValueException, system.data.sqltypes.SqlTruncateException, system.DivideByZeroException, system.xml.XmlException, system.NotSupportedException, microsoft.sqlserver.server.InvalidUdtException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSetValues = null;
         try {
-            return (int)classInstance.Invoke("SetValues", (java.lang.Object)toObjectFromArray(values));
+            retObjectSetValues = classInstance.Invoke("SetValues", (java.lang.Object)toObjectFromArray(values));
+            return (int)retObjectSetValues;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSetValues_ToString = retObjectSetValues == null ? "null" : retObjectSetValues.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectSetValuesNumber = (java.lang.Number)retObjectSetValues;
+                return retObjectSetValuesNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectSetValues != null ? retObjectSetValues.getClass() : "null", retObjectSetValues_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -300,9 +400,20 @@ public class SqlDataRecord extends NetObject  {
 
     public long GetBytes(int ordinal, long fieldOffset, byte[] buffer, int bufferOffset, int length) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.data.sqlclient.SqlException, system.data.sqltypes.SqlNullValueException, system.data.sqltypes.SqlTypeException, system.OverflowException, microsoft.sqlserver.server.InvalidUdtException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetBytes = null;
         try {
-            return (long)classInstance.Invoke("GetBytes", ordinal, fieldOffset, buffer, bufferOffset, length);
+            retObjectGetBytes = classInstance.Invoke("GetBytes", ordinal, fieldOffset, buffer, bufferOffset, length);
+            return (long)retObjectGetBytes;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetBytes_ToString = retObjectGetBytes == null ? "null" : retObjectGetBytes.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetBytesNumber = (java.lang.Number)retObjectGetBytes;
+                return retObjectGetBytesNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectGetBytes != null ? retObjectGetBytes.getClass() : "null", retObjectGetBytes_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -310,9 +421,20 @@ public class SqlDataRecord extends NetObject  {
 
     public long GetBytes(int dupParam0, long dupParam1, JCORefOut dupParam2, int dupParam3, int dupParam4) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.data.sqlclient.SqlException, system.data.sqltypes.SqlNullValueException, system.data.sqltypes.SqlTypeException, system.OverflowException, microsoft.sqlserver.server.InvalidUdtException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetBytes = null;
         try {
-            return (long)classInstance.Invoke("GetBytes", dupParam0, dupParam1, dupParam2.getJCRefOut(), dupParam3, dupParam4);
+            retObjectGetBytes = classInstance.Invoke("GetBytes", dupParam0, dupParam1, dupParam2.getJCRefOut(), dupParam3, dupParam4);
+            return (long)retObjectGetBytes;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetBytes_ToString = retObjectGetBytes == null ? "null" : retObjectGetBytes.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetBytesNumber = (java.lang.Number)retObjectGetBytes;
+                return retObjectGetBytesNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectGetBytes != null ? retObjectGetBytes.getClass() : "null", retObjectGetBytes_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -320,9 +442,20 @@ public class SqlDataRecord extends NetObject  {
 
     public long GetChars(int ordinal, long fieldOffset, char[] buffer, int bufferOffset, int length) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.data.sqlclient.SqlException, system.data.sqltypes.SqlNullValueException, system.OverflowException, system.xml.XmlException, system.reflection.TargetInvocationException, system.NotSupportedException, microsoft.sqlserver.server.InvalidUdtException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetChars = null;
         try {
-            return (long)classInstance.Invoke("GetChars", ordinal, fieldOffset, buffer, bufferOffset, length);
+            retObjectGetChars = classInstance.Invoke("GetChars", ordinal, fieldOffset, buffer, bufferOffset, length);
+            return (long)retObjectGetChars;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetChars_ToString = retObjectGetChars == null ? "null" : retObjectGetChars.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetCharsNumber = (java.lang.Number)retObjectGetChars;
+                return retObjectGetCharsNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectGetChars != null ? retObjectGetChars.getClass() : "null", retObjectGetChars_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -330,9 +463,20 @@ public class SqlDataRecord extends NetObject  {
 
     public long GetChars(int dupParam0, long dupParam1, JCORefOut dupParam2, int dupParam3, int dupParam4) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.data.sqlclient.SqlException, system.data.sqltypes.SqlNullValueException, system.OverflowException, system.xml.XmlException, system.reflection.TargetInvocationException, system.NotSupportedException, microsoft.sqlserver.server.InvalidUdtException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetChars = null;
         try {
-            return (long)classInstance.Invoke("GetChars", dupParam0, dupParam1, dupParam2.getJCRefOut(), dupParam3, dupParam4);
+            retObjectGetChars = classInstance.Invoke("GetChars", dupParam0, dupParam1, dupParam2.getJCRefOut(), dupParam3, dupParam4);
+            return (long)retObjectGetChars;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetChars_ToString = retObjectGetChars == null ? "null" : retObjectGetChars.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetCharsNumber = (java.lang.Number)retObjectGetChars;
+                return retObjectGetCharsNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectGetChars != null ? retObjectGetChars.getClass() : "null", retObjectGetChars_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -340,9 +484,20 @@ public class SqlDataRecord extends NetObject  {
 
     public long GetInt64(int ordinal) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.data.sqlclient.SqlException, system.data.sqltypes.SqlNullValueException, system.OverflowException, system.xml.XmlException, system.reflection.TargetInvocationException, system.NotSupportedException, microsoft.sqlserver.server.InvalidUdtException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetInt64 = null;
         try {
-            return (long)classInstance.Invoke("GetInt64", ordinal);
+            retObjectGetInt64 = classInstance.Invoke("GetInt64", ordinal);
+            return (long)retObjectGetInt64;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetInt64_ToString = retObjectGetInt64 == null ? "null" : retObjectGetInt64.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetInt64Number = (java.lang.Number)retObjectGetInt64;
+                return retObjectGetInt64Number.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectGetInt64 != null ? retObjectGetInt64.getClass() : "null", retObjectGetInt64_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -350,10 +505,14 @@ public class SqlDataRecord extends NetObject  {
 
     public SqlMetaData GetSqlMetaData(int ordinal) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSqlMetaData = null;
         try {
-            JCObject objGetSqlMetaData = (JCObject)classInstance.Invoke("GetSqlMetaData", ordinal);
+            retObjectGetSqlMetaData = classInstance.Invoke("GetSqlMetaData", ordinal);
+            JCObject objGetSqlMetaData = (JCObject)retObjectGetSqlMetaData;
             return new SqlMetaData(objGetSqlMetaData);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSqlMetaData != null ? retObjectGetSqlMetaData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -361,10 +520,14 @@ public class SqlDataRecord extends NetObject  {
 
     public Single GetFloat(int ordinal) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.data.sqlclient.SqlException, system.data.sqltypes.SqlNullValueException, system.OverflowException, system.xml.XmlException, system.reflection.TargetInvocationException, system.NotSupportedException, microsoft.sqlserver.server.InvalidUdtException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetFloat = null;
         try {
-            JCObject objGetFloat = (JCObject)classInstance.Invoke("GetFloat", ordinal);
+            retObjectGetFloat = classInstance.Invoke("GetFloat", ordinal);
+            JCObject objGetFloat = (JCObject)retObjectGetFloat;
             return new Single(objGetFloat);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetFloat != null ? retObjectGetFloat.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -372,10 +535,14 @@ public class SqlDataRecord extends NetObject  {
 
     public SqlBinary GetSqlBinary(int ordinal) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.data.sqlclient.SqlException, system.data.sqltypes.SqlTypeException, system.OverflowException, microsoft.sqlserver.server.InvalidUdtException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSqlBinary = null;
         try {
-            JCObject objGetSqlBinary = (JCObject)classInstance.Invoke("GetSqlBinary", ordinal);
+            retObjectGetSqlBinary = classInstance.Invoke("GetSqlBinary", ordinal);
+            JCObject objGetSqlBinary = (JCObject)retObjectGetSqlBinary;
             return new SqlBinary(objGetSqlBinary);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSqlBinary != null ? retObjectGetSqlBinary.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -383,10 +550,14 @@ public class SqlDataRecord extends NetObject  {
 
     public SqlBoolean GetSqlBoolean(int ordinal) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.data.sqlclient.SqlException, system.data.sqltypes.SqlTypeException, system.OverflowException, microsoft.sqlserver.server.InvalidUdtException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSqlBoolean = null;
         try {
-            JCObject objGetSqlBoolean = (JCObject)classInstance.Invoke("GetSqlBoolean", ordinal);
+            retObjectGetSqlBoolean = classInstance.Invoke("GetSqlBoolean", ordinal);
+            JCObject objGetSqlBoolean = (JCObject)retObjectGetSqlBoolean;
             return new SqlBoolean(objGetSqlBoolean);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSqlBoolean != null ? retObjectGetSqlBoolean.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -394,10 +565,14 @@ public class SqlDataRecord extends NetObject  {
 
     public SqlByte GetSqlByte(int ordinal) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.data.sqlclient.SqlException, system.data.sqltypes.SqlTypeException, system.OverflowException, microsoft.sqlserver.server.InvalidUdtException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSqlByte = null;
         try {
-            JCObject objGetSqlByte = (JCObject)classInstance.Invoke("GetSqlByte", ordinal);
+            retObjectGetSqlByte = classInstance.Invoke("GetSqlByte", ordinal);
+            JCObject objGetSqlByte = (JCObject)retObjectGetSqlByte;
             return new SqlByte(objGetSqlByte);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSqlByte != null ? retObjectGetSqlByte.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -405,10 +580,14 @@ public class SqlDataRecord extends NetObject  {
 
     public SqlBytes GetSqlBytes(int ordinal) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.data.sqlclient.SqlException, system.data.sqltypes.SqlTypeException, system.OverflowException, microsoft.sqlserver.server.InvalidUdtException, system.InvalidCastException, system.data.sqltypes.SqlNullValueException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSqlBytes = null;
         try {
-            JCObject objGetSqlBytes = (JCObject)classInstance.Invoke("GetSqlBytes", ordinal);
+            retObjectGetSqlBytes = classInstance.Invoke("GetSqlBytes", ordinal);
+            JCObject objGetSqlBytes = (JCObject)retObjectGetSqlBytes;
             return new SqlBytes(objGetSqlBytes);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSqlBytes != null ? retObjectGetSqlBytes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -416,10 +595,14 @@ public class SqlDataRecord extends NetObject  {
 
     public SqlChars GetSqlChars(int ordinal) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.data.sqlclient.SqlException, system.data.sqltypes.SqlNullValueException, system.xml.XmlException, system.reflection.TargetInvocationException, system.NotSupportedException, system.data.sqltypes.SqlTypeException, system.OverflowException, microsoft.sqlserver.server.InvalidUdtException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSqlChars = null;
         try {
-            JCObject objGetSqlChars = (JCObject)classInstance.Invoke("GetSqlChars", ordinal);
+            retObjectGetSqlChars = classInstance.Invoke("GetSqlChars", ordinal);
+            JCObject objGetSqlChars = (JCObject)retObjectGetSqlChars;
             return new SqlChars(objGetSqlChars);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSqlChars != null ? retObjectGetSqlChars.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -427,10 +610,14 @@ public class SqlDataRecord extends NetObject  {
 
     public SqlDateTime GetSqlDateTime(int ordinal) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.data.sqlclient.SqlException, system.data.sqltypes.SqlTypeException, system.OverflowException, microsoft.sqlserver.server.InvalidUdtException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSqlDateTime = null;
         try {
-            JCObject objGetSqlDateTime = (JCObject)classInstance.Invoke("GetSqlDateTime", ordinal);
+            retObjectGetSqlDateTime = classInstance.Invoke("GetSqlDateTime", ordinal);
+            JCObject objGetSqlDateTime = (JCObject)retObjectGetSqlDateTime;
             return new SqlDateTime(objGetSqlDateTime);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSqlDateTime != null ? retObjectGetSqlDateTime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -438,10 +625,14 @@ public class SqlDataRecord extends NetObject  {
 
     public SqlDecimal GetSqlDecimal(int ordinal) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.data.sqlclient.SqlException, system.data.sqltypes.SqlTypeException, system.OverflowException, microsoft.sqlserver.server.InvalidUdtException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSqlDecimal = null;
         try {
-            JCObject objGetSqlDecimal = (JCObject)classInstance.Invoke("GetSqlDecimal", ordinal);
+            retObjectGetSqlDecimal = classInstance.Invoke("GetSqlDecimal", ordinal);
+            JCObject objGetSqlDecimal = (JCObject)retObjectGetSqlDecimal;
             return new SqlDecimal(objGetSqlDecimal);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSqlDecimal != null ? retObjectGetSqlDecimal.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -449,10 +640,14 @@ public class SqlDataRecord extends NetObject  {
 
     public SqlDouble GetSqlDouble(int ordinal) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.data.sqlclient.SqlException, system.OverflowException, system.data.sqltypes.SqlTypeException, microsoft.sqlserver.server.InvalidUdtException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSqlDouble = null;
         try {
-            JCObject objGetSqlDouble = (JCObject)classInstance.Invoke("GetSqlDouble", ordinal);
+            retObjectGetSqlDouble = classInstance.Invoke("GetSqlDouble", ordinal);
+            JCObject objGetSqlDouble = (JCObject)retObjectGetSqlDouble;
             return new SqlDouble(objGetSqlDouble);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSqlDouble != null ? retObjectGetSqlDouble.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -460,10 +655,14 @@ public class SqlDataRecord extends NetObject  {
 
     public SqlGuid GetSqlGuid(int ordinal) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.data.sqlclient.SqlException, system.data.sqltypes.SqlTypeException, system.OverflowException, microsoft.sqlserver.server.InvalidUdtException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSqlGuid = null;
         try {
-            JCObject objGetSqlGuid = (JCObject)classInstance.Invoke("GetSqlGuid", ordinal);
+            retObjectGetSqlGuid = classInstance.Invoke("GetSqlGuid", ordinal);
+            JCObject objGetSqlGuid = (JCObject)retObjectGetSqlGuid;
             return new SqlGuid(objGetSqlGuid);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSqlGuid != null ? retObjectGetSqlGuid.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -471,10 +670,14 @@ public class SqlDataRecord extends NetObject  {
 
     public SqlInt16 GetSqlInt16(int ordinal) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.data.sqlclient.SqlException, system.data.sqltypes.SqlTypeException, system.OverflowException, microsoft.sqlserver.server.InvalidUdtException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSqlInt16 = null;
         try {
-            JCObject objGetSqlInt16 = (JCObject)classInstance.Invoke("GetSqlInt16", ordinal);
+            retObjectGetSqlInt16 = classInstance.Invoke("GetSqlInt16", ordinal);
+            JCObject objGetSqlInt16 = (JCObject)retObjectGetSqlInt16;
             return new SqlInt16(objGetSqlInt16);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSqlInt16 != null ? retObjectGetSqlInt16.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -482,10 +685,14 @@ public class SqlDataRecord extends NetObject  {
 
     public SqlInt32 GetSqlInt32(int ordinal) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.data.sqlclient.SqlException, system.data.sqltypes.SqlTypeException, system.OverflowException, microsoft.sqlserver.server.InvalidUdtException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSqlInt32 = null;
         try {
-            JCObject objGetSqlInt32 = (JCObject)classInstance.Invoke("GetSqlInt32", ordinal);
+            retObjectGetSqlInt32 = classInstance.Invoke("GetSqlInt32", ordinal);
+            JCObject objGetSqlInt32 = (JCObject)retObjectGetSqlInt32;
             return new SqlInt32(objGetSqlInt32);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSqlInt32 != null ? retObjectGetSqlInt32.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -493,10 +700,14 @@ public class SqlDataRecord extends NetObject  {
 
     public SqlInt64 GetSqlInt64(int ordinal) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.data.sqlclient.SqlException, system.data.sqltypes.SqlTypeException, system.OverflowException, microsoft.sqlserver.server.InvalidUdtException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSqlInt64 = null;
         try {
-            JCObject objGetSqlInt64 = (JCObject)classInstance.Invoke("GetSqlInt64", ordinal);
+            retObjectGetSqlInt64 = classInstance.Invoke("GetSqlInt64", ordinal);
+            JCObject objGetSqlInt64 = (JCObject)retObjectGetSqlInt64;
             return new SqlInt64(objGetSqlInt64);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSqlInt64 != null ? retObjectGetSqlInt64.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -504,10 +715,14 @@ public class SqlDataRecord extends NetObject  {
 
     public SqlMoney GetSqlMoney(int ordinal) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.data.sqlclient.SqlException, system.data.sqltypes.SqlTypeException, system.OverflowException, microsoft.sqlserver.server.InvalidUdtException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSqlMoney = null;
         try {
-            JCObject objGetSqlMoney = (JCObject)classInstance.Invoke("GetSqlMoney", ordinal);
+            retObjectGetSqlMoney = classInstance.Invoke("GetSqlMoney", ordinal);
+            JCObject objGetSqlMoney = (JCObject)retObjectGetSqlMoney;
             return new SqlMoney(objGetSqlMoney);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSqlMoney != null ? retObjectGetSqlMoney.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -515,10 +730,14 @@ public class SqlDataRecord extends NetObject  {
 
     public SqlSingle GetSqlSingle(int ordinal) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.data.sqlclient.SqlException, system.OverflowException, system.data.sqltypes.SqlTypeException, microsoft.sqlserver.server.InvalidUdtException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSqlSingle = null;
         try {
-            JCObject objGetSqlSingle = (JCObject)classInstance.Invoke("GetSqlSingle", ordinal);
+            retObjectGetSqlSingle = classInstance.Invoke("GetSqlSingle", ordinal);
+            JCObject objGetSqlSingle = (JCObject)retObjectGetSqlSingle;
             return new SqlSingle(objGetSqlSingle);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSqlSingle != null ? retObjectGetSqlSingle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -526,10 +745,14 @@ public class SqlDataRecord extends NetObject  {
 
     public SqlString GetSqlString(int ordinal) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.data.sqlclient.SqlException, system.data.sqltypes.SqlNullValueException, system.xml.XmlException, system.reflection.TargetInvocationException, system.NotSupportedException, system.data.sqltypes.SqlTypeException, system.OverflowException, microsoft.sqlserver.server.InvalidUdtException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSqlString = null;
         try {
-            JCObject objGetSqlString = (JCObject)classInstance.Invoke("GetSqlString", ordinal);
+            retObjectGetSqlString = classInstance.Invoke("GetSqlString", ordinal);
+            JCObject objGetSqlString = (JCObject)retObjectGetSqlString;
             return new SqlString(objGetSqlString);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSqlString != null ? retObjectGetSqlString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -537,10 +760,14 @@ public class SqlDataRecord extends NetObject  {
 
     public SqlXml GetSqlXml(int ordinal) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.data.sqlclient.SqlException, system.data.sqltypes.SqlTypeException, system.OverflowException, microsoft.sqlserver.server.InvalidUdtException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSqlXml = null;
         try {
-            JCObject objGetSqlXml = (JCObject)classInstance.Invoke("GetSqlXml", ordinal);
+            retObjectGetSqlXml = classInstance.Invoke("GetSqlXml", ordinal);
+            JCObject objGetSqlXml = (JCObject)retObjectGetSqlXml;
             return new SqlXml(objGetSqlXml);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSqlXml != null ? retObjectGetSqlXml.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -548,10 +775,14 @@ public class SqlDataRecord extends NetObject  {
 
     public DateTime GetDateTime(int ordinal) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.data.sqlclient.SqlException, system.data.sqltypes.SqlNullValueException, system.OverflowException, system.xml.XmlException, system.reflection.TargetInvocationException, system.NotSupportedException, microsoft.sqlserver.server.InvalidUdtException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDateTime = null;
         try {
-            JCObject objGetDateTime = (JCObject)classInstance.Invoke("GetDateTime", ordinal);
+            retObjectGetDateTime = classInstance.Invoke("GetDateTime", ordinal);
+            JCObject objGetDateTime = (JCObject)retObjectGetDateTime;
             return new DateTime(objGetDateTime);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetDateTime != null ? retObjectGetDateTime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -559,10 +790,14 @@ public class SqlDataRecord extends NetObject  {
 
     public DateTimeOffset GetDateTimeOffset(int ordinal) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.data.sqlclient.SqlException, system.data.sqltypes.SqlNullValueException, system.OverflowException, system.xml.XmlException, system.reflection.TargetInvocationException, system.NotSupportedException, microsoft.sqlserver.server.InvalidUdtException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDateTimeOffset = null;
         try {
-            JCObject objGetDateTimeOffset = (JCObject)classInstance.Invoke("GetDateTimeOffset", ordinal);
+            retObjectGetDateTimeOffset = classInstance.Invoke("GetDateTimeOffset", ordinal);
+            JCObject objGetDateTimeOffset = (JCObject)retObjectGetDateTimeOffset;
             return new DateTimeOffset(objGetDateTimeOffset);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetDateTimeOffset != null ? retObjectGetDateTimeOffset.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -570,10 +805,14 @@ public class SqlDataRecord extends NetObject  {
 
     public Decimal GetDecimal(int ordinal) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.data.sqlclient.SqlException, system.data.sqltypes.SqlNullValueException, system.OverflowException, system.xml.XmlException, system.reflection.TargetInvocationException, system.NotSupportedException, microsoft.sqlserver.server.InvalidUdtException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDecimal = null;
         try {
-            JCObject objGetDecimal = (JCObject)classInstance.Invoke("GetDecimal", ordinal);
+            retObjectGetDecimal = classInstance.Invoke("GetDecimal", ordinal);
+            JCObject objGetDecimal = (JCObject)retObjectGetDecimal;
             return new Decimal(objGetDecimal);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetDecimal != null ? retObjectGetDecimal.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -581,10 +820,14 @@ public class SqlDataRecord extends NetObject  {
 
     public Guid GetGuid(int ordinal) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.data.sqlclient.SqlException, system.data.sqltypes.SqlNullValueException, system.OverflowException, system.xml.XmlException, system.reflection.TargetInvocationException, system.NotSupportedException, microsoft.sqlserver.server.InvalidUdtException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetGuid = null;
         try {
-            JCObject objGetGuid = (JCObject)classInstance.Invoke("GetGuid", ordinal);
+            retObjectGetGuid = classInstance.Invoke("GetGuid", ordinal);
+            JCObject objGetGuid = (JCObject)retObjectGetGuid;
             return new Guid(objGetGuid);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetGuid != null ? retObjectGetGuid.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -592,10 +835,14 @@ public class SqlDataRecord extends NetObject  {
 
     public NetObject GetSqlValue(int ordinal) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.data.sqlclient.SqlException, system.data.sqltypes.SqlTypeException, system.OverflowException, microsoft.sqlserver.server.InvalidUdtException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSqlValue = null;
         try {
-            JCObject objGetSqlValue = (JCObject)classInstance.Invoke("GetSqlValue", ordinal);
+            retObjectGetSqlValue = classInstance.Invoke("GetSqlValue", ordinal);
+            JCObject objGetSqlValue = (JCObject)retObjectGetSqlValue;
             return new NetObject(objGetSqlValue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSqlValue != null ? retObjectGetSqlValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -603,10 +850,14 @@ public class SqlDataRecord extends NetObject  {
 
     public NetObject GetValue(int ordinal) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.data.sqlclient.SqlException, system.data.sqltypes.SqlNullValueException, system.OverflowException, system.xml.XmlException, system.reflection.TargetInvocationException, system.NotSupportedException, microsoft.sqlserver.server.InvalidUdtException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetValue = null;
         try {
-            JCObject objGetValue = (JCObject)classInstance.Invoke("GetValue", ordinal);
+            retObjectGetValue = classInstance.Invoke("GetValue", ordinal);
+            JCObject objGetValue = (JCObject)retObjectGetValue;
             return new NetObject(objGetValue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetValue != null ? retObjectGetValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -614,9 +865,13 @@ public class SqlDataRecord extends NetObject  {
 
     public java.lang.String GetDataTypeName(int ordinal) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDataTypeName = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetDataTypeName", ordinal);
+            retObjectGetDataTypeName = classInstance.Invoke("GetDataTypeName", ordinal);
+            return (java.lang.String)retObjectGetDataTypeName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetDataTypeName != null ? retObjectGetDataTypeName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -624,9 +879,13 @@ public class SqlDataRecord extends NetObject  {
 
     public java.lang.String GetName(int ordinal) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetName = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetName", ordinal);
+            retObjectGetName = classInstance.Invoke("GetName", ordinal);
+            return (java.lang.String)retObjectGetName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetName != null ? retObjectGetName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -634,9 +893,13 @@ public class SqlDataRecord extends NetObject  {
 
     public java.lang.String GetString(int ordinal) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.data.sqlclient.SqlException, system.data.sqltypes.SqlNullValueException, system.OverflowException, system.xml.XmlException, system.reflection.TargetInvocationException, system.NotSupportedException, microsoft.sqlserver.server.InvalidUdtException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetString = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetString", ordinal);
+            retObjectGetString = classInstance.Invoke("GetString", ordinal);
+            return (java.lang.String)retObjectGetString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetString != null ? retObjectGetString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -644,10 +907,14 @@ public class SqlDataRecord extends NetObject  {
 
     public TimeSpan GetTimeSpan(int ordinal) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.data.sqlclient.SqlException, system.data.sqltypes.SqlNullValueException, system.OverflowException, system.xml.XmlException, system.reflection.TargetInvocationException, system.NotSupportedException, microsoft.sqlserver.server.InvalidUdtException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetTimeSpan = null;
         try {
-            JCObject objGetTimeSpan = (JCObject)classInstance.Invoke("GetTimeSpan", ordinal);
+            retObjectGetTimeSpan = classInstance.Invoke("GetTimeSpan", ordinal);
+            JCObject objGetTimeSpan = (JCObject)retObjectGetTimeSpan;
             return new TimeSpan(objGetTimeSpan);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetTimeSpan != null ? retObjectGetTimeSpan.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -655,10 +922,14 @@ public class SqlDataRecord extends NetObject  {
 
     public NetType GetFieldType(int ordinal) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetFieldType = null;
         try {
-            JCObject objGetFieldType = (JCObject)classInstance.Invoke("GetFieldType", ordinal);
+            retObjectGetFieldType = classInstance.Invoke("GetFieldType", ordinal);
+            JCObject objGetFieldType = (JCObject)retObjectGetFieldType;
             return new NetType(objGetFieldType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetFieldType != null ? retObjectGetFieldType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -666,10 +937,14 @@ public class SqlDataRecord extends NetObject  {
 
     public NetType GetSqlFieldType(int ordinal) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSqlFieldType = null;
         try {
-            JCObject objGetSqlFieldType = (JCObject)classInstance.Invoke("GetSqlFieldType", ordinal);
+            retObjectGetSqlFieldType = classInstance.Invoke("GetSqlFieldType", ordinal);
+            JCObject objGetSqlFieldType = (JCObject)retObjectGetSqlFieldType;
             return new NetType(objGetSqlFieldType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSqlFieldType != null ? retObjectGetSqlFieldType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -677,7 +952,7 @@ public class SqlDataRecord extends NetObject  {
 
     public void SetBoolean(int ordinal, boolean value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.InvalidCastException, system.data.sqlclient.SqlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetBoolean", ordinal, value);
         } catch (JCNativeException jcne) {
@@ -687,7 +962,7 @@ public class SqlDataRecord extends NetObject  {
 
     public void SetByte(int ordinal, byte value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.InvalidCastException, system.data.sqlclient.SqlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetByte", ordinal, value);
         } catch (JCNativeException jcne) {
@@ -697,7 +972,7 @@ public class SqlDataRecord extends NetObject  {
 
     public void SetBytes(int ordinal, long fieldOffset, byte[] buffer, int bufferOffset, int length) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.InvalidCastException, system.data.sqlclient.SqlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetBytes", ordinal, fieldOffset, buffer, bufferOffset, length);
         } catch (JCNativeException jcne) {
@@ -707,7 +982,7 @@ public class SqlDataRecord extends NetObject  {
 
     public void SetBytes(int dupParam0, long dupParam1, JCORefOut dupParam2, int dupParam3, int dupParam4) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.InvalidCastException, system.data.sqlclient.SqlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetBytes", dupParam0, dupParam1, dupParam2.getJCRefOut(), dupParam3, dupParam4);
         } catch (JCNativeException jcne) {
@@ -717,7 +992,7 @@ public class SqlDataRecord extends NetObject  {
 
     public void SetChar(int ordinal, char value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetChar", ordinal, value);
         } catch (JCNativeException jcne) {
@@ -727,7 +1002,7 @@ public class SqlDataRecord extends NetObject  {
 
     public void SetChars(int ordinal, long fieldOffset, char[] buffer, int bufferOffset, int length) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.InvalidCastException, system.data.sqlclient.SqlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetChars", ordinal, fieldOffset, buffer, bufferOffset, length);
         } catch (JCNativeException jcne) {
@@ -737,7 +1012,7 @@ public class SqlDataRecord extends NetObject  {
 
     public void SetChars(int dupParam0, long dupParam1, JCORefOut dupParam2, int dupParam3, int dupParam4) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.InvalidCastException, system.data.sqlclient.SqlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetChars", dupParam0, dupParam1, dupParam2.getJCRefOut(), dupParam3, dupParam4);
         } catch (JCNativeException jcne) {
@@ -747,7 +1022,7 @@ public class SqlDataRecord extends NetObject  {
 
     public void SetDateTime(int ordinal, DateTime value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.InvalidCastException, system.data.sqlclient.SqlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetDateTime", ordinal, value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -757,7 +1032,7 @@ public class SqlDataRecord extends NetObject  {
 
     public void SetDateTimeOffset(int ordinal, DateTimeOffset value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.InvalidCastException, system.data.sqlclient.SqlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetDateTimeOffset", ordinal, value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -767,7 +1042,7 @@ public class SqlDataRecord extends NetObject  {
 
     public void SetDBNull(int ordinal) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.data.sqlclient.SqlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetDBNull", ordinal);
         } catch (JCNativeException jcne) {
@@ -777,7 +1052,7 @@ public class SqlDataRecord extends NetObject  {
 
     public void SetDecimal(int ordinal, Decimal value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.InvalidCastException, system.data.sqlclient.SqlException, system.data.sqltypes.SqlNullValueException, system.data.sqltypes.SqlTruncateException, system.OverflowException, system.DivideByZeroException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetDecimal", ordinal, value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -787,7 +1062,7 @@ public class SqlDataRecord extends NetObject  {
 
     public void SetDouble(int ordinal, double value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.InvalidCastException, system.data.sqlclient.SqlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetDouble", ordinal, value);
         } catch (JCNativeException jcne) {
@@ -797,7 +1072,7 @@ public class SqlDataRecord extends NetObject  {
 
     public void SetFloat(int ordinal, Single value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.InvalidCastException, system.data.sqlclient.SqlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetFloat", ordinal, value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -807,7 +1082,7 @@ public class SqlDataRecord extends NetObject  {
 
     public void SetGuid(int ordinal, Guid value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.InvalidCastException, system.data.sqlclient.SqlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetGuid", ordinal, value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -817,7 +1092,7 @@ public class SqlDataRecord extends NetObject  {
 
     public void SetInt16(int ordinal, short value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.InvalidCastException, system.data.sqlclient.SqlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetInt16", ordinal, value);
         } catch (JCNativeException jcne) {
@@ -827,7 +1102,7 @@ public class SqlDataRecord extends NetObject  {
 
     public void SetInt32(int ordinal, int value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.InvalidCastException, system.data.sqlclient.SqlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetInt32", ordinal, value);
         } catch (JCNativeException jcne) {
@@ -837,7 +1112,7 @@ public class SqlDataRecord extends NetObject  {
 
     public void SetInt64(int ordinal, long value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.InvalidCastException, system.data.sqlclient.SqlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetInt64", ordinal, value);
         } catch (JCNativeException jcne) {
@@ -847,7 +1122,7 @@ public class SqlDataRecord extends NetObject  {
 
     public void SetSqlBinary(int ordinal, SqlBinary value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.InvalidCastException, system.data.sqltypes.SqlNullValueException, system.data.sqlclient.SqlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetSqlBinary", ordinal, value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -857,7 +1132,7 @@ public class SqlDataRecord extends NetObject  {
 
     public void SetSqlBoolean(int ordinal, SqlBoolean value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.InvalidCastException, system.data.sqltypes.SqlNullValueException, system.data.sqlclient.SqlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetSqlBoolean", ordinal, value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -867,7 +1142,7 @@ public class SqlDataRecord extends NetObject  {
 
     public void SetSqlByte(int ordinal, SqlByte value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.InvalidCastException, system.data.sqltypes.SqlNullValueException, system.data.sqlclient.SqlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetSqlByte", ordinal, value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -877,7 +1152,7 @@ public class SqlDataRecord extends NetObject  {
 
     public void SetSqlBytes(int ordinal, SqlBytes value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.InvalidCastException, system.data.sqltypes.SqlNullValueException, system.data.sqlclient.SqlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetSqlBytes", ordinal, value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -887,7 +1162,7 @@ public class SqlDataRecord extends NetObject  {
 
     public void SetSqlChars(int ordinal, SqlChars value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.InvalidCastException, system.data.sqltypes.SqlNullValueException, system.data.sqlclient.SqlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetSqlChars", ordinal, value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -897,7 +1172,7 @@ public class SqlDataRecord extends NetObject  {
 
     public void SetSqlDateTime(int ordinal, SqlDateTime value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.InvalidCastException, system.data.sqltypes.SqlNullValueException, system.data.sqlclient.SqlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetSqlDateTime", ordinal, value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -907,7 +1182,7 @@ public class SqlDataRecord extends NetObject  {
 
     public void SetSqlDecimal(int ordinal, SqlDecimal value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.InvalidCastException, system.data.sqlclient.SqlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetSqlDecimal", ordinal, value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -917,7 +1192,7 @@ public class SqlDataRecord extends NetObject  {
 
     public void SetSqlDouble(int ordinal, SqlDouble value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.InvalidCastException, system.data.sqltypes.SqlNullValueException, system.data.sqlclient.SqlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetSqlDouble", ordinal, value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -927,7 +1202,7 @@ public class SqlDataRecord extends NetObject  {
 
     public void SetSqlGuid(int ordinal, SqlGuid value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.InvalidCastException, system.data.sqltypes.SqlNullValueException, system.data.sqlclient.SqlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetSqlGuid", ordinal, value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -937,7 +1212,7 @@ public class SqlDataRecord extends NetObject  {
 
     public void SetSqlInt16(int ordinal, SqlInt16 value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.InvalidCastException, system.data.sqltypes.SqlNullValueException, system.data.sqlclient.SqlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetSqlInt16", ordinal, value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -947,7 +1222,7 @@ public class SqlDataRecord extends NetObject  {
 
     public void SetSqlInt32(int ordinal, SqlInt32 value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.InvalidCastException, system.data.sqltypes.SqlNullValueException, system.data.sqlclient.SqlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetSqlInt32", ordinal, value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -957,7 +1232,7 @@ public class SqlDataRecord extends NetObject  {
 
     public void SetSqlInt64(int ordinal, SqlInt64 value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.InvalidCastException, system.data.sqltypes.SqlNullValueException, system.data.sqlclient.SqlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetSqlInt64", ordinal, value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -967,7 +1242,7 @@ public class SqlDataRecord extends NetObject  {
 
     public void SetSqlMoney(int ordinal, SqlMoney value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.InvalidCastException, system.data.sqltypes.SqlNullValueException, system.data.sqlclient.SqlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetSqlMoney", ordinal, value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -977,7 +1252,7 @@ public class SqlDataRecord extends NetObject  {
 
     public void SetSqlSingle(int ordinal, SqlSingle value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.InvalidCastException, system.data.sqltypes.SqlNullValueException, system.data.sqlclient.SqlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetSqlSingle", ordinal, value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -987,7 +1262,7 @@ public class SqlDataRecord extends NetObject  {
 
     public void SetSqlString(int ordinal, SqlString value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.InvalidCastException, system.data.sqlclient.SqlException, system.data.sqltypes.SqlNullValueException, microsoft.sqlserver.server.InvalidUdtException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetSqlString", ordinal, value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -997,7 +1272,7 @@ public class SqlDataRecord extends NetObject  {
 
     public void SetSqlXml(int ordinal, SqlXml value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.InvalidCastException, system.data.sqlclient.SqlException, system.data.sqltypes.SqlNullValueException, system.reflection.TargetInvocationException, system.xml.XmlException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetSqlXml", ordinal, value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1007,7 +1282,7 @@ public class SqlDataRecord extends NetObject  {
 
     public void SetString(int ordinal, java.lang.String value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.InvalidCastException, system.data.sqlclient.SqlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetString", ordinal, value);
         } catch (JCNativeException jcne) {
@@ -1017,7 +1292,7 @@ public class SqlDataRecord extends NetObject  {
 
     public void SetTimeSpan(int ordinal, TimeSpan value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.InvalidCastException, system.data.sqlclient.SqlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetTimeSpan", ordinal, value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1027,7 +1302,7 @@ public class SqlDataRecord extends NetObject  {
 
     public void SetValue(int ordinal, NetObject value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.InvalidCastException, system.data.sqlclient.SqlException, system.data.sqltypes.SqlTypeException, system.OverflowException, system.data.sqltypes.SqlNullValueException, system.data.sqltypes.SqlTruncateException, system.DivideByZeroException, system.xml.XmlException, system.NotSupportedException, microsoft.sqlserver.server.InvalidUdtException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetValue", ordinal, value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1041,7 +1316,7 @@ public class SqlDataRecord extends NetObject  {
      */
     @Deprecated 
     public IDataReader GetData(int i) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDataRecord to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDataRecord to obtain the full interface.");
     }
 
 
@@ -1050,9 +1325,20 @@ public class SqlDataRecord extends NetObject  {
     
     public int getFieldCount() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFieldCount = null;
         try {
-            return (int)classInstance.Get("FieldCount");
+            retObjectFieldCount = classInstance.Get("FieldCount");
+            return (int)retObjectFieldCount;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectFieldCount_ToString = retObjectFieldCount == null ? "null" : retObjectFieldCount.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectFieldCountNumber = (java.lang.Number)retObjectFieldCount;
+                return retObjectFieldCountNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectFieldCount != null ? retObjectFieldCount.getClass() : "null", retObjectFieldCount_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

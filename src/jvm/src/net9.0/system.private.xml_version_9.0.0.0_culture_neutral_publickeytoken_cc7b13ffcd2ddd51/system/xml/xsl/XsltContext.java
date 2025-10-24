@@ -160,9 +160,13 @@ public class XsltContext extends XmlNamespaceManager  {
     
     public boolean PreserveWhitespace(XPathNavigator node) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPreserveWhitespace = null;
         try {
-            return (boolean)classInstance.Invoke("PreserveWhitespace", node == null ? null : node.getJCOInstance());
+            retObjectPreserveWhitespace = classInstance.Invoke("PreserveWhitespace", node == null ? null : node.getJCOInstance());
+            return (boolean)retObjectPreserveWhitespace;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectPreserveWhitespace != null ? retObjectPreserveWhitespace.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,9 +174,20 @@ public class XsltContext extends XmlNamespaceManager  {
 
     public int CompareDocument(java.lang.String baseUri, java.lang.String nextbaseUri) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCompareDocument = null;
         try {
-            return (int)classInstance.Invoke("CompareDocument", baseUri, nextbaseUri);
+            retObjectCompareDocument = classInstance.Invoke("CompareDocument", baseUri, nextbaseUri);
+            return (int)retObjectCompareDocument;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCompareDocument_ToString = retObjectCompareDocument == null ? "null" : retObjectCompareDocument.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectCompareDocumentNumber = (java.lang.Number)retObjectCompareDocument;
+                return retObjectCompareDocumentNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCompareDocument != null ? retObjectCompareDocument.getClass() : "null", retObjectCompareDocument_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,10 +195,14 @@ public class XsltContext extends XmlNamespaceManager  {
 
     public IXsltContextFunction ResolveFunction(java.lang.String prefix, java.lang.String name, XPathResultType[] ArgTypes) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResolveFunction = null;
         try {
-            JCObject objResolveFunction = (JCObject)classInstance.Invoke("ResolveFunction", prefix, name, toObjectFromArray(ArgTypes));
+            retObjectResolveFunction = classInstance.Invoke("ResolveFunction", prefix, name, toObjectFromArray(ArgTypes));
+            JCObject objResolveFunction = (JCObject)retObjectResolveFunction;
             return new IXsltContextFunctionImplementation(objResolveFunction);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectResolveFunction != null ? retObjectResolveFunction.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,10 +210,14 @@ public class XsltContext extends XmlNamespaceManager  {
 
     public IXsltContextVariable ResolveVariable(java.lang.String prefix, java.lang.String name) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResolveVariable = null;
         try {
-            JCObject objResolveVariable = (JCObject)classInstance.Invoke("ResolveVariable", prefix, name);
+            retObjectResolveVariable = classInstance.Invoke("ResolveVariable", prefix, name);
+            JCObject objResolveVariable = (JCObject)retObjectResolveVariable;
             return new IXsltContextVariableImplementation(objResolveVariable);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectResolveVariable != null ? retObjectResolveVariable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -206,9 +229,13 @@ public class XsltContext extends XmlNamespaceManager  {
     
     public boolean getWhitespace() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWhitespace = null;
         try {
-            return (boolean)classInstance.Get("Whitespace");
+            retObjectWhitespace = classInstance.Get("Whitespace");
+            return (boolean)retObjectWhitespace;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectWhitespace != null ? retObjectWhitespace.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

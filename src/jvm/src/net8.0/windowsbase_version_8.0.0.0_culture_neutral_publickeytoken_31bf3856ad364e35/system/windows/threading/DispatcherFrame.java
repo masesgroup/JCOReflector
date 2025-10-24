@@ -176,9 +176,13 @@ public class DispatcherFrame extends DispatcherObject  {
     
     public boolean getContinue() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContinue = null;
         try {
-            return (boolean)classInstance.Get("Continue");
+            retObjectContinue = classInstance.Get("Continue");
+            return (boolean)retObjectContinue;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectContinue != null ? retObjectContinue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,7 +190,7 @@ public class DispatcherFrame extends DispatcherObject  {
 
     public void setContinue(boolean Continue) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.RankException, system.ArrayTypeMismatchException, system.componentmodel.Win32Exception, system.InvalidCastException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Continue", Continue);
         } catch (JCNativeException jcne) {

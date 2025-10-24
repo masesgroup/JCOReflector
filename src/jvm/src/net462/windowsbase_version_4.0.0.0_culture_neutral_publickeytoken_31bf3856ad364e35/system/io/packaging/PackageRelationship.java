@@ -162,10 +162,14 @@ public class PackageRelationship extends NetObject  {
     
     public Package getPackage() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPackage = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Package");
+            retObjectPackage = classInstance.Get("Package");
+            JCObject val = (JCObject)retObjectPackage;
             return new Package(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPackage != null ? retObjectPackage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -173,10 +177,14 @@ public class PackageRelationship extends NetObject  {
 
     public TargetMode getTargetMode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTargetMode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TargetMode");
+            retObjectTargetMode = classInstance.Get("TargetMode");
+            JCObject val = (JCObject)retObjectTargetMode;
             return new TargetMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTargetMode != null ? retObjectTargetMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -184,9 +192,13 @@ public class PackageRelationship extends NetObject  {
 
     public java.lang.String getId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectId = null;
         try {
-            return (java.lang.String)classInstance.Get("Id");
+            retObjectId = classInstance.Get("Id");
+            return (java.lang.String)retObjectId;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectId != null ? retObjectId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -194,9 +206,13 @@ public class PackageRelationship extends NetObject  {
 
     public java.lang.String getRelationshipType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRelationshipType = null;
         try {
-            return (java.lang.String)classInstance.Get("RelationshipType");
+            retObjectRelationshipType = classInstance.Get("RelationshipType");
+            return (java.lang.String)retObjectRelationshipType;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectRelationshipType != null ? retObjectRelationshipType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -204,10 +220,14 @@ public class PackageRelationship extends NetObject  {
 
     public Uri getSourceUri() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSourceUri = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SourceUri");
+            retObjectSourceUri = classInstance.Get("SourceUri");
+            JCObject val = (JCObject)retObjectSourceUri;
             return new Uri(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSourceUri != null ? retObjectSourceUri.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -215,10 +235,14 @@ public class PackageRelationship extends NetObject  {
 
     public Uri getTargetUri() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTargetUri = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TargetUri");
+            retObjectTargetUri = classInstance.Get("TargetUri");
+            JCObject val = (JCObject)retObjectTargetUri;
             return new Uri(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTargetUri != null ? retObjectTargetUri.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

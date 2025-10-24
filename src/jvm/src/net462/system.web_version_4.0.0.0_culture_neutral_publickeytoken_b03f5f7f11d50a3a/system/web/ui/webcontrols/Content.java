@@ -169,9 +169,13 @@ public class Content extends Control implements system.web.ui.INamingContainer {
     
     public java.lang.String getContentPlaceHolderID() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContentPlaceHolderID = null;
         try {
-            return (java.lang.String)classInstance.Get("ContentPlaceHolderID");
+            retObjectContentPlaceHolderID = classInstance.Get("ContentPlaceHolderID");
+            return (java.lang.String)retObjectContentPlaceHolderID;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectContentPlaceHolderID != null ? retObjectContentPlaceHolderID.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,7 +183,7 @@ public class Content extends Control implements system.web.ui.INamingContainer {
 
     public void setContentPlaceHolderID(java.lang.String ContentPlaceHolderID) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ContentPlaceHolderID", ContentPlaceHolderID);
         } catch (JCNativeException jcne) {
@@ -194,7 +198,7 @@ public class Content extends Control implements system.web.ui.INamingContainer {
 
     public void addDataBinding(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("DataBinding", handler);
         } catch (JCNativeException jcne) {
@@ -204,7 +208,7 @@ public class Content extends Control implements system.web.ui.INamingContainer {
 
     public void removeDataBinding(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("DataBinding", handler);
         } catch (JCNativeException jcne) {
@@ -214,7 +218,7 @@ public class Content extends Control implements system.web.ui.INamingContainer {
 
     public void addDisposed(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Disposed", handler);
         } catch (JCNativeException jcne) {
@@ -224,7 +228,7 @@ public class Content extends Control implements system.web.ui.INamingContainer {
 
     public void removeDisposed(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Disposed", handler);
         } catch (JCNativeException jcne) {
@@ -234,7 +238,7 @@ public class Content extends Control implements system.web.ui.INamingContainer {
 
     public void addInit(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Init", handler);
         } catch (JCNativeException jcne) {
@@ -244,7 +248,7 @@ public class Content extends Control implements system.web.ui.INamingContainer {
 
     public void removeInit(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Init", handler);
         } catch (JCNativeException jcne) {
@@ -254,7 +258,7 @@ public class Content extends Control implements system.web.ui.INamingContainer {
 
     public void addLoad(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Load", handler);
         } catch (JCNativeException jcne) {
@@ -264,7 +268,7 @@ public class Content extends Control implements system.web.ui.INamingContainer {
 
     public void removeLoad(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Load", handler);
         } catch (JCNativeException jcne) {
@@ -274,7 +278,7 @@ public class Content extends Control implements system.web.ui.INamingContainer {
 
     public void addPreRender(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("PreRender", handler);
         } catch (JCNativeException jcne) {
@@ -284,7 +288,7 @@ public class Content extends Control implements system.web.ui.INamingContainer {
 
     public void removePreRender(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("PreRender", handler);
         } catch (JCNativeException jcne) {
@@ -294,7 +298,7 @@ public class Content extends Control implements system.web.ui.INamingContainer {
 
     public void addUnload(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Unload", handler);
         } catch (JCNativeException jcne) {
@@ -304,7 +308,7 @@ public class Content extends Control implements system.web.ui.INamingContainer {
 
     public void removeUnload(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Unload", handler);
         } catch (JCNativeException jcne) {

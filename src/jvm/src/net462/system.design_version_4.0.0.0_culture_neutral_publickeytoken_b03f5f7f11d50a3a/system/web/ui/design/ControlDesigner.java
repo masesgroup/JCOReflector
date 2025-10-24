@@ -183,9 +183,13 @@ public class ControlDesigner extends HtmlControlDesigner  {
     
     public boolean IsPropertyBound(java.lang.String propName) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsPropertyBound = null;
         try {
-            return (boolean)classInstance.Invoke("IsPropertyBound", propName);
+            retObjectIsPropertyBound = classInstance.Invoke("IsPropertyBound", propName);
+            return (boolean)retObjectIsPropertyBound;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsPropertyBound != null ? retObjectIsPropertyBound.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,10 +197,14 @@ public class ControlDesigner extends HtmlControlDesigner  {
 
     public Rectangle GetBounds() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetBounds = null;
         try {
-            JCObject objGetBounds = (JCObject)classInstance.Invoke("GetBounds");
+            retObjectGetBounds = classInstance.Invoke("GetBounds");
+            JCObject objGetBounds = (JCObject)retObjectGetBounds;
             return new Rectangle(objGetBounds);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetBounds != null ? retObjectGetBounds.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -204,9 +212,13 @@ public class ControlDesigner extends HtmlControlDesigner  {
 
     public java.lang.String GetDesignTimeHtml() throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.configuration.ConfigurationException, system.NullReferenceException, system.TypeLoadException, system.NotImplementedException, system.web.HttpException, system.configuration.provider.ProviderException, system.OutOfMemoryException, system.OverflowException, system.web.HttpRequestValidationException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDesignTimeHtml = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetDesignTimeHtml");
+            retObjectGetDesignTimeHtml = classInstance.Invoke("GetDesignTimeHtml");
+            return (java.lang.String)retObjectGetDesignTimeHtml;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetDesignTimeHtml != null ? retObjectGetDesignTimeHtml.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -214,9 +226,13 @@ public class ControlDesigner extends HtmlControlDesigner  {
 
     public java.lang.String GetDesignTimeHtml(DesignerRegionCollection regions) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.configuration.ConfigurationException, system.NullReferenceException, system.NotImplementedException, system.web.HttpException, system.OutOfMemoryException, system.OverflowException, system.web.HttpRequestValidationException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDesignTimeHtml = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetDesignTimeHtml", regions == null ? null : regions.getJCOInstance());
+            retObjectGetDesignTimeHtml = classInstance.Invoke("GetDesignTimeHtml", regions == null ? null : regions.getJCOInstance());
+            return (java.lang.String)retObjectGetDesignTimeHtml;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetDesignTimeHtml != null ? retObjectGetDesignTimeHtml.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -224,9 +240,13 @@ public class ControlDesigner extends HtmlControlDesigner  {
 
     public java.lang.String GetEditableDesignerRegionContent(EditableDesignerRegion region) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetEditableDesignerRegionContent = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetEditableDesignerRegionContent", region == null ? null : region.getJCOInstance());
+            retObjectGetEditableDesignerRegionContent = classInstance.Invoke("GetEditableDesignerRegionContent", region == null ? null : region.getJCOInstance());
+            return (java.lang.String)retObjectGetEditableDesignerRegionContent;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetEditableDesignerRegionContent != null ? retObjectGetEditableDesignerRegionContent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -234,9 +254,13 @@ public class ControlDesigner extends HtmlControlDesigner  {
 
     public java.lang.String GetPersistenceContent() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.web.HttpException, system.ArgumentException, system.web.HttpParseException, system.NotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPersistenceContent = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetPersistenceContent");
+            retObjectGetPersistenceContent = classInstance.Invoke("GetPersistenceContent");
+            return (java.lang.String)retObjectGetPersistenceContent;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetPersistenceContent != null ? retObjectGetPersistenceContent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -244,9 +268,13 @@ public class ControlDesigner extends HtmlControlDesigner  {
 
     public java.lang.String GetPersistInnerHtml() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.NotSupportedException, system.reflection.AmbiguousMatchException, system.web.HttpParseException, system.IndexOutOfRangeException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPersistInnerHtml = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetPersistInnerHtml");
+            retObjectGetPersistInnerHtml = classInstance.Invoke("GetPersistInnerHtml");
+            return (java.lang.String)retObjectGetPersistInnerHtml;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetPersistInnerHtml != null ? retObjectGetPersistInnerHtml.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -254,10 +282,14 @@ public class ControlDesigner extends HtmlControlDesigner  {
 
     public static DesignTimeResourceProviderFactory GetDesignTimeResourceProviderFactory(IServiceProvider serviceProvider) throws Throwable, system.configuration.ConfigurationErrorsException, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotImplementedException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.configuration.ConfigurationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetDesignTimeResourceProviderFactory = null;
         try {
-            JCObject objGetDesignTimeResourceProviderFactory = (JCObject)classType.Invoke("GetDesignTimeResourceProviderFactory", serviceProvider == null ? null : serviceProvider.getJCOInstance());
+            retObjectGetDesignTimeResourceProviderFactory = classType.Invoke("GetDesignTimeResourceProviderFactory", serviceProvider == null ? null : serviceProvider.getJCOInstance());
+            JCObject objGetDesignTimeResourceProviderFactory = (JCObject)retObjectGetDesignTimeResourceProviderFactory;
             return new DesignTimeResourceProviderFactory(objGetDesignTimeResourceProviderFactory);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetDesignTimeResourceProviderFactory != null ? retObjectGetDesignTimeResourceProviderFactory.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -265,10 +297,14 @@ public class ControlDesigner extends HtmlControlDesigner  {
 
     public ViewRendering GetViewRendering() throws Throwable, system.ArgumentNullException, system.web.HttpException, system.OverflowException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetViewRendering = null;
         try {
-            JCObject objGetViewRendering = (JCObject)classInstance.Invoke("GetViewRendering");
+            retObjectGetViewRendering = classInstance.Invoke("GetViewRendering");
+            JCObject objGetViewRendering = (JCObject)retObjectGetViewRendering;
             return new ViewRendering(objGetViewRendering);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetViewRendering != null ? retObjectGetViewRendering.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -276,10 +312,14 @@ public class ControlDesigner extends HtmlControlDesigner  {
 
     public static ViewRendering GetViewRendering(Control control) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.configuration.ConfigurationErrorsException, system.ArgumentException, system.configuration.ConfigurationException, system.NotImplementedException, system.web.HttpException, system.InvalidOperationException, system.OverflowException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetViewRendering = null;
         try {
-            JCObject objGetViewRendering = (JCObject)classType.Invoke("GetViewRendering", control == null ? null : control.getJCOInstance());
+            retObjectGetViewRendering = classType.Invoke("GetViewRendering", control == null ? null : control.getJCOInstance());
+            JCObject objGetViewRendering = (JCObject)retObjectGetViewRendering;
             return new ViewRendering(objGetViewRendering);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetViewRendering != null ? retObjectGetViewRendering.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -287,10 +327,14 @@ public class ControlDesigner extends HtmlControlDesigner  {
 
     public static ViewRendering GetViewRendering(ControlDesigner designer) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.configuration.ConfigurationException, system.NullReferenceException, system.NotImplementedException, system.web.HttpException, system.OverflowException, system.web.HttpRequestValidationException, system.PlatformNotSupportedException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetViewRendering = null;
         try {
-            JCObject objGetViewRendering = (JCObject)classType.Invoke("GetViewRendering", designer == null ? null : designer.getJCOInstance());
+            retObjectGetViewRendering = classType.Invoke("GetViewRendering", designer == null ? null : designer.getJCOInstance());
+            JCObject objGetViewRendering = (JCObject)retObjectGetViewRendering;
             return new ViewRendering(objGetViewRendering);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetViewRendering != null ? retObjectGetViewRendering.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -298,7 +342,7 @@ public class ControlDesigner extends HtmlControlDesigner  {
 
     public void Initialize(IComponent component) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.RankException, system.NullReferenceException, system.MulticastNotSupportedException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException, system.security.SecurityException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Initialize", component == null ? null : component.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -308,7 +352,7 @@ public class ControlDesigner extends HtmlControlDesigner  {
 
     public void Invalidate() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Invalidate");
         } catch (JCNativeException jcne) {
@@ -318,7 +362,7 @@ public class ControlDesigner extends HtmlControlDesigner  {
 
     public void Invalidate(Rectangle rectangle) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Invalidate", rectangle == null ? null : rectangle.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -328,7 +372,7 @@ public class ControlDesigner extends HtmlControlDesigner  {
 
     public static void InvokeTransactedChange(IComponent component, TransactedChangeCallback callback, NetObject context, java.lang.String description) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("InvokeTransactedChange", component == null ? null : component.getJCOInstance(), callback, context == null ? null : context.getJCOInstance(), description);
         } catch (JCNativeException jcne) {
@@ -338,7 +382,7 @@ public class ControlDesigner extends HtmlControlDesigner  {
 
     public static void InvokeTransactedChange(IComponent component, TransactedChangeCallback callback, NetObject context, java.lang.String description, MemberDescriptor member) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("InvokeTransactedChange", component == null ? null : component.getJCOInstance(), callback, context == null ? null : context.getJCOInstance(), description, member == null ? null : member.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -348,7 +392,7 @@ public class ControlDesigner extends HtmlControlDesigner  {
 
     public static void InvokeTransactedChange(IServiceProvider serviceProvider, IComponent component, TransactedChangeCallback callback, NetObject context, java.lang.String description, MemberDescriptor member) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("InvokeTransactedChange", serviceProvider == null ? null : serviceProvider.getJCOInstance(), component == null ? null : component.getJCOInstance(), callback, context == null ? null : context.getJCOInstance(), description, member == null ? null : member.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -358,7 +402,7 @@ public class ControlDesigner extends HtmlControlDesigner  {
 
     public void Localize(IDesignTimeResourceWriter resourceWriter) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.security.SecurityException, system.NotSupportedException, system.configuration.ConfigurationException, system.TypeLoadException, system.FormatException, system.NotImplementedException, system.OverflowException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Localize", resourceWriter == null ? null : resourceWriter.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -368,7 +412,7 @@ public class ControlDesigner extends HtmlControlDesigner  {
 
     public void OnAutoFormatApplied(DesignerAutoFormat appliedAutoFormat) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("OnAutoFormatApplied", appliedAutoFormat == null ? null : appliedAutoFormat.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -378,7 +422,7 @@ public class ControlDesigner extends HtmlControlDesigner  {
 
     public void OnComponentChanged(NetObject sender, ComponentChangedEventArgs ce) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.IndexOutOfRangeException, system.web.HttpException, system.NotSupportedException, system.MissingMethodException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.reflection.AmbiguousMatchException, system.web.HttpParseException, system.FormatException, system.RankException, system.NullReferenceException, system.threading.ThreadAbortException, system.OverflowException, system.web.HttpRequestValidationException, system.PlatformNotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("OnComponentChanged", sender == null ? null : sender.getJCOInstance(), ce == null ? null : ce.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -388,7 +432,7 @@ public class ControlDesigner extends HtmlControlDesigner  {
 
     public void OnComponentChanging(NetObject sender, ComponentChangingEventArgs ce) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("OnComponentChanging", sender == null ? null : sender.getJCOInstance(), ce == null ? null : ce.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -398,7 +442,7 @@ public class ControlDesigner extends HtmlControlDesigner  {
 
     public void RaiseResizeEvent() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RaiseResizeEvent");
         } catch (JCNativeException jcne) {
@@ -408,7 +452,7 @@ public class ControlDesigner extends HtmlControlDesigner  {
 
     public void RegisterClone(NetObject original, NetObject clone) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.web.HttpException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.reflection.AmbiguousMatchException, system.web.HttpParseException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RegisterClone", original == null ? null : original.getJCOInstance(), clone == null ? null : clone.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -418,7 +462,7 @@ public class ControlDesigner extends HtmlControlDesigner  {
 
     public void SetEditableDesignerRegionContent(EditableDesignerRegion region, java.lang.String content) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetEditableDesignerRegionContent", region == null ? null : region.getJCOInstance(), content);
         } catch (JCNativeException jcne) {
@@ -428,7 +472,7 @@ public class ControlDesigner extends HtmlControlDesigner  {
 
     public void UpdateDesignTimeHtml() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.configuration.ConfigurationException, system.NullReferenceException, system.NotImplementedException, system.web.HttpException, system.OutOfMemoryException, system.OverflowException, system.web.HttpRequestValidationException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("UpdateDesignTimeHtml");
         } catch (JCNativeException jcne) {
@@ -442,9 +486,13 @@ public class ControlDesigner extends HtmlControlDesigner  {
     
     public boolean getAllowResize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAllowResize = null;
         try {
-            return (boolean)classInstance.Get("AllowResize");
+            retObjectAllowResize = classInstance.Get("AllowResize");
+            return (boolean)retObjectAllowResize;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAllowResize != null ? retObjectAllowResize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -452,9 +500,13 @@ public class ControlDesigner extends HtmlControlDesigner  {
 
     public boolean getDesignTimeHtmlRequiresLoadComplete() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDesignTimeHtmlRequiresLoadComplete = null;
         try {
-            return (boolean)classInstance.Get("DesignTimeHtmlRequiresLoadComplete");
+            retObjectDesignTimeHtmlRequiresLoadComplete = classInstance.Get("DesignTimeHtmlRequiresLoadComplete");
+            return (boolean)retObjectDesignTimeHtmlRequiresLoadComplete;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectDesignTimeHtmlRequiresLoadComplete != null ? retObjectDesignTimeHtmlRequiresLoadComplete.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -462,9 +514,13 @@ public class ControlDesigner extends HtmlControlDesigner  {
 
     public boolean getIsDirty() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsDirty = null;
         try {
-            return (boolean)classInstance.Get("IsDirty");
+            retObjectIsDirty = classInstance.Get("IsDirty");
+            return (boolean)retObjectIsDirty;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsDirty != null ? retObjectIsDirty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -472,7 +528,7 @@ public class ControlDesigner extends HtmlControlDesigner  {
 
     public void setIsDirty(boolean IsDirty) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsDirty", IsDirty);
         } catch (JCNativeException jcne) {
@@ -482,9 +538,13 @@ public class ControlDesigner extends HtmlControlDesigner  {
 
     public boolean getReadOnly() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadOnly = null;
         try {
-            return (boolean)classInstance.Get("ReadOnly");
+            retObjectReadOnly = classInstance.Get("ReadOnly");
+            return (boolean)retObjectReadOnly;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectReadOnly != null ? retObjectReadOnly.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -492,7 +552,7 @@ public class ControlDesigner extends HtmlControlDesigner  {
 
     public void setReadOnly(boolean ReadOnly) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ReadOnly", ReadOnly);
         } catch (JCNativeException jcne) {
@@ -502,9 +562,13 @@ public class ControlDesigner extends HtmlControlDesigner  {
 
     public boolean getViewControlCreated() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectViewControlCreated = null;
         try {
-            return (boolean)classInstance.Get("ViewControlCreated");
+            retObjectViewControlCreated = classInstance.Get("ViewControlCreated");
+            return (boolean)retObjectViewControlCreated;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectViewControlCreated != null ? retObjectViewControlCreated.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -512,7 +576,7 @@ public class ControlDesigner extends HtmlControlDesigner  {
 
     public void setViewControlCreated(boolean ViewControlCreated) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ViewControlCreated", ViewControlCreated);
         } catch (JCNativeException jcne) {
@@ -522,9 +586,13 @@ public class ControlDesigner extends HtmlControlDesigner  {
 
     public java.lang.String getID() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectID = null;
         try {
-            return (java.lang.String)classInstance.Get("ID");
+            retObjectID = classInstance.Get("ID");
+            return (java.lang.String)retObjectID;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectID != null ? retObjectID.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -532,7 +600,7 @@ public class ControlDesigner extends HtmlControlDesigner  {
 
     public void setID(java.lang.String ID) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ID", ID);
         } catch (JCNativeException jcne) {
@@ -542,10 +610,14 @@ public class ControlDesigner extends HtmlControlDesigner  {
 
     public Control getViewControl() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.FormatException, system.configuration.ConfigurationException, system.NullReferenceException, system.security.SecurityException, system.TypeLoadException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectViewControl = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ViewControl");
+            retObjectViewControl = classInstance.Get("ViewControl");
+            JCObject val = (JCObject)retObjectViewControl;
             return new Control(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectViewControl != null ? retObjectViewControl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -553,7 +625,7 @@ public class ControlDesigner extends HtmlControlDesigner  {
 
     public void setViewControl(Control ViewControl) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ViewControl", ViewControl == null ? null : ViewControl.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -563,10 +635,14 @@ public class ControlDesigner extends HtmlControlDesigner  {
 
     public DesignerAutoFormatCollection getAutoFormats() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAutoFormats = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AutoFormats");
+            retObjectAutoFormats = classInstance.Get("AutoFormats");
+            JCObject val = (JCObject)retObjectAutoFormats;
             return new DesignerAutoFormatCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAutoFormats != null ? retObjectAutoFormats.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -574,10 +650,14 @@ public class ControlDesigner extends HtmlControlDesigner  {
 
     public TemplateGroupCollection getTemplateGroups() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTemplateGroups = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TemplateGroups");
+            retObjectTemplateGroups = classInstance.Get("TemplateGroups");
+            JCObject val = (JCObject)retObjectTemplateGroups;
             return new TemplateGroupCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTemplateGroups != null ? retObjectTemplateGroups.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

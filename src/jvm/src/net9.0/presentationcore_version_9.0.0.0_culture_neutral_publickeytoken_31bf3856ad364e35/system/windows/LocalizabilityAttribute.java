@@ -173,10 +173,14 @@ public class LocalizabilityAttribute extends Attribute  {
     
     public LocalizationCategory getCategory() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCategory = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Category");
+            retObjectCategory = classInstance.Get("Category");
+            JCObject val = (JCObject)retObjectCategory;
             return new LocalizationCategory(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCategory != null ? retObjectCategory.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -184,10 +188,14 @@ public class LocalizabilityAttribute extends Attribute  {
 
     public Modifiability getModifiability() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectModifiability = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Modifiability");
+            retObjectModifiability = classInstance.Get("Modifiability");
+            JCObject val = (JCObject)retObjectModifiability;
             return new Modifiability(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectModifiability != null ? retObjectModifiability.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,7 +203,7 @@ public class LocalizabilityAttribute extends Attribute  {
 
     public void setModifiability(Modifiability Modifiability) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Modifiability", Modifiability == null ? null : Modifiability.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -205,10 +213,14 @@ public class LocalizabilityAttribute extends Attribute  {
 
     public Readability getReadability() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadability = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Readability");
+            retObjectReadability = classInstance.Get("Readability");
+            JCObject val = (JCObject)retObjectReadability;
             return new Readability(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadability != null ? retObjectReadability.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -216,7 +228,7 @@ public class LocalizabilityAttribute extends Attribute  {
 
     public void setReadability(Readability Readability) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Readability", Readability == null ? null : Readability.getJCOInstance());
         } catch (JCNativeException jcne) {

@@ -165,10 +165,14 @@ public class MethodSignatureGenerator extends NetObject  {
     
     public CodeMemberMethod GenerateMethod() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.IndexOutOfRangeException, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGenerateMethod = null;
         try {
-            JCObject objGenerateMethod = (JCObject)classInstance.Invoke("GenerateMethod");
+            retObjectGenerateMethod = classInstance.Invoke("GenerateMethod");
+            JCObject objGenerateMethod = (JCObject)retObjectGenerateMethod;
             return new CodeMemberMethod(objGenerateMethod);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGenerateMethod != null ? retObjectGenerateMethod.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,10 +180,14 @@ public class MethodSignatureGenerator extends NetObject  {
 
     public CodeTypeDeclaration GenerateUpdatingMethods() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.FormatException, system.data.DataException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGenerateUpdatingMethods = null;
         try {
-            JCObject objGenerateUpdatingMethods = (JCObject)classInstance.Invoke("GenerateUpdatingMethods");
+            retObjectGenerateUpdatingMethods = classInstance.Invoke("GenerateUpdatingMethods");
+            JCObject objGenerateUpdatingMethods = (JCObject)retObjectGenerateUpdatingMethods;
             return new CodeTypeDeclaration(objGenerateUpdatingMethods);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGenerateUpdatingMethods != null ? retObjectGenerateUpdatingMethods.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,9 +195,13 @@ public class MethodSignatureGenerator extends NetObject  {
 
     public java.lang.String GenerateMethodSignature() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotSupportedException, system.IndexOutOfRangeException, system.NotImplementedException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGenerateMethodSignature = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GenerateMethodSignature");
+            retObjectGenerateMethodSignature = classInstance.Invoke("GenerateMethodSignature");
+            return (java.lang.String)retObjectGenerateMethodSignature;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGenerateMethodSignature != null ? retObjectGenerateMethodSignature.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,7 +209,7 @@ public class MethodSignatureGenerator extends NetObject  {
 
     public void SetDesignTableContent(java.lang.String designTableContent) throws Throwable, system.ArgumentNullException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.xml.XmlException, system.xml.schema.XmlSchemaException, system.RankException, system.xml.schema.XmlSchemaInferenceException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetDesignTableContent", designTableContent);
         } catch (JCNativeException jcne) {
@@ -207,7 +219,7 @@ public class MethodSignatureGenerator extends NetObject  {
 
     public void SetMethodSourceContent(java.lang.String methodSourceContent) throws Throwable, system.ArgumentNullException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.xml.XmlException, system.xml.schema.XmlSchemaException, system.RankException, system.xml.schema.XmlSchemaInferenceException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetMethodSourceContent", methodSourceContent);
         } catch (JCNativeException jcne) {
@@ -221,9 +233,13 @@ public class MethodSignatureGenerator extends NetObject  {
     
     public boolean getIsGetMethod() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsGetMethod = null;
         try {
-            return (boolean)classInstance.Get("IsGetMethod");
+            retObjectIsGetMethod = classInstance.Get("IsGetMethod");
+            return (boolean)retObjectIsGetMethod;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsGetMethod != null ? retObjectIsGetMethod.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -231,7 +247,7 @@ public class MethodSignatureGenerator extends NetObject  {
 
     public void setIsGetMethod(boolean IsGetMethod) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsGetMethod", IsGetMethod);
         } catch (JCNativeException jcne) {
@@ -241,9 +257,13 @@ public class MethodSignatureGenerator extends NetObject  {
 
     public boolean getPagingMethod() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPagingMethod = null;
         try {
-            return (boolean)classInstance.Get("PagingMethod");
+            retObjectPagingMethod = classInstance.Get("PagingMethod");
+            return (boolean)retObjectPagingMethod;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectPagingMethod != null ? retObjectPagingMethod.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -251,7 +271,7 @@ public class MethodSignatureGenerator extends NetObject  {
 
     public void setPagingMethod(boolean PagingMethod) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PagingMethod", PagingMethod);
         } catch (JCNativeException jcne) {
@@ -261,10 +281,14 @@ public class MethodSignatureGenerator extends NetObject  {
 
     public CodeDomProvider getCodeProvider() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCodeProvider = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CodeProvider");
+            retObjectCodeProvider = classInstance.Get("CodeProvider");
+            JCObject val = (JCObject)retObjectCodeProvider;
             return new CodeDomProvider(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCodeProvider != null ? retObjectCodeProvider.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -272,7 +296,7 @@ public class MethodSignatureGenerator extends NetObject  {
 
     public void setCodeProvider(CodeDomProvider CodeProvider) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CodeProvider", CodeProvider == null ? null : CodeProvider.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -282,10 +306,14 @@ public class MethodSignatureGenerator extends NetObject  {
 
     public ParameterGenerationOption getParameterOption() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectParameterOption = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ParameterOption");
+            retObjectParameterOption = classInstance.Get("ParameterOption");
+            JCObject val = (JCObject)retObjectParameterOption;
             return new ParameterGenerationOption(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParameterOption != null ? retObjectParameterOption.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -293,7 +321,7 @@ public class MethodSignatureGenerator extends NetObject  {
 
     public void setParameterOption(ParameterGenerationOption ParameterOption) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ParameterOption", ParameterOption == null ? null : ParameterOption.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -303,9 +331,13 @@ public class MethodSignatureGenerator extends NetObject  {
 
     public java.lang.String getDataSetClassName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDataSetClassName = null;
         try {
-            return (java.lang.String)classInstance.Get("DataSetClassName");
+            retObjectDataSetClassName = classInstance.Get("DataSetClassName");
+            return (java.lang.String)retObjectDataSetClassName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDataSetClassName != null ? retObjectDataSetClassName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -313,7 +345,7 @@ public class MethodSignatureGenerator extends NetObject  {
 
     public void setDataSetClassName(java.lang.String DataSetClassName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DataSetClassName", DataSetClassName);
         } catch (JCNativeException jcne) {
@@ -323,9 +355,13 @@ public class MethodSignatureGenerator extends NetObject  {
 
     public java.lang.String getTableClassName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTableClassName = null;
         try {
-            return (java.lang.String)classInstance.Get("TableClassName");
+            retObjectTableClassName = classInstance.Get("TableClassName");
+            return (java.lang.String)retObjectTableClassName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectTableClassName != null ? retObjectTableClassName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -333,7 +369,7 @@ public class MethodSignatureGenerator extends NetObject  {
 
     public void setTableClassName(java.lang.String TableClassName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TableClassName", TableClassName);
         } catch (JCNativeException jcne) {
@@ -343,10 +379,14 @@ public class MethodSignatureGenerator extends NetObject  {
 
     public NetType getContainerParameterType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContainerParameterType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ContainerParameterType");
+            retObjectContainerParameterType = classInstance.Get("ContainerParameterType");
+            JCObject val = (JCObject)retObjectContainerParameterType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContainerParameterType != null ? retObjectContainerParameterType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -354,7 +394,7 @@ public class MethodSignatureGenerator extends NetObject  {
 
     public void setContainerParameterType(NetType ContainerParameterType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ContainerParameterType", ContainerParameterType == null ? null : ContainerParameterType.getJCOInstance());
         } catch (JCNativeException jcne) {

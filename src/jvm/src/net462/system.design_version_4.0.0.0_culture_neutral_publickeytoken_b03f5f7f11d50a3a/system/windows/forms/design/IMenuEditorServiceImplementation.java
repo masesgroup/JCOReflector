@@ -145,9 +145,13 @@ public class IMenuEditorServiceImplementation extends NetObject implements IMenu
     
     public boolean IsActive() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsActive = null;
         try {
-            return (boolean)classInstance.Invoke("IsActive");
+            retObjectIsActive = classInstance.Invoke("IsActive");
+            return (boolean)retObjectIsActive;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsActive != null ? retObjectIsActive.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -155,9 +159,13 @@ public class IMenuEditorServiceImplementation extends NetObject implements IMenu
 
     public boolean MessageFilter(JCORefOut<Message> m) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMessageFilter = null;
         try {
-            return (boolean)classInstance.Invoke("MessageFilter", m.getJCRefOut());
+            retObjectMessageFilter = classInstance.Invoke("MessageFilter", m.getJCRefOut());
+            return (boolean)retObjectMessageFilter;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectMessageFilter != null ? retObjectMessageFilter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -165,10 +173,14 @@ public class IMenuEditorServiceImplementation extends NetObject implements IMenu
 
     public Menu GetMenu() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetMenu = null;
         try {
-            JCObject objGetMenu = (JCObject)classInstance.Invoke("GetMenu");
+            retObjectGetMenu = classInstance.Invoke("GetMenu");
+            JCObject objGetMenu = (JCObject)retObjectGetMenu;
             return new Menu(objGetMenu);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetMenu != null ? retObjectGetMenu.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,7 +188,7 @@ public class IMenuEditorServiceImplementation extends NetObject implements IMenu
 
     public void SetMenu(Menu menu) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetMenu", menu == null ? null : menu.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -186,7 +198,7 @@ public class IMenuEditorServiceImplementation extends NetObject implements IMenu
 
     public void SetSelection(MenuItem item) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetSelection", item == null ? null : item.getJCOInstance());
         } catch (JCNativeException jcne) {

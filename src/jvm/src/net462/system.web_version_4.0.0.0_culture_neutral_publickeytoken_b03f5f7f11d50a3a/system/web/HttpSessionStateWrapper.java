@@ -171,7 +171,7 @@ public class HttpSessionStateWrapper extends HttpSessionStateBase  {
     
     public void Abandon() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Abandon");
         } catch (JCNativeException jcne) {
@@ -181,7 +181,7 @@ public class HttpSessionStateWrapper extends HttpSessionStateBase  {
 
     public void Add(java.lang.String name, NetObject value) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Add", name, value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -191,7 +191,7 @@ public class HttpSessionStateWrapper extends HttpSessionStateBase  {
 
     public void Clear() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Clear");
         } catch (JCNativeException jcne) {
@@ -201,7 +201,7 @@ public class HttpSessionStateWrapper extends HttpSessionStateBase  {
 
     public void CopyTo(Array array, int index) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CopyTo", array == null ? null : array.getJCOInstance(), index);
         } catch (JCNativeException jcne) {
@@ -211,7 +211,7 @@ public class HttpSessionStateWrapper extends HttpSessionStateBase  {
 
     public void Remove(java.lang.String name) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Remove", name);
         } catch (JCNativeException jcne) {
@@ -221,7 +221,7 @@ public class HttpSessionStateWrapper extends HttpSessionStateBase  {
 
     public void RemoveAll() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RemoveAll");
         } catch (JCNativeException jcne) {
@@ -231,7 +231,7 @@ public class HttpSessionStateWrapper extends HttpSessionStateBase  {
 
     public void RemoveAt(int index) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RemoveAt", index);
         } catch (JCNativeException jcne) {

@@ -157,9 +157,13 @@ public class MinMaxParagraphWidth extends ValueType  {
     
     public boolean Equals(MinMaxParagraphWidth value) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEquals = null;
         try {
-            return (boolean)classInstance.Invoke("Equals", value == null ? null : value.getJCOInstance());
+            retObjectEquals = classInstance.Invoke("Equals", value == null ? null : value.getJCOInstance());
+            return (boolean)retObjectEquals;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectEquals != null ? retObjectEquals.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,9 +175,20 @@ public class MinMaxParagraphWidth extends ValueType  {
     
     public double getMaxWidth() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxWidth = null;
         try {
-            return (double)classInstance.Get("MaxWidth");
+            retObjectMaxWidth = classInstance.Get("MaxWidth");
+            return (double)retObjectMaxWidth;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaxWidth_ToString = retObjectMaxWidth == null ? "null" : retObjectMaxWidth.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMaxWidthNumber = (java.lang.Number)retObjectMaxWidth;
+                return retObjectMaxWidthNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectMaxWidth != null ? retObjectMaxWidth.getClass() : "null", retObjectMaxWidth_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,9 +196,20 @@ public class MinMaxParagraphWidth extends ValueType  {
 
     public double getMinWidth() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMinWidth = null;
         try {
-            return (double)classInstance.Get("MinWidth");
+            retObjectMinWidth = classInstance.Get("MinWidth");
+            return (double)retObjectMinWidth;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMinWidth_ToString = retObjectMinWidth == null ? "null" : retObjectMinWidth.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMinWidthNumber = (java.lang.Number)retObjectMinWidth;
+                return retObjectMinWidthNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectMinWidth != null ? retObjectMinWidth.getClass() : "null", retObjectMinWidth_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

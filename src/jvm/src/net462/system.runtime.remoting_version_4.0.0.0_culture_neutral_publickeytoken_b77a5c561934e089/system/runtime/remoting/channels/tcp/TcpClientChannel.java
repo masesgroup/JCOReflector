@@ -187,10 +187,14 @@ public class TcpClientChannel extends NetObject  {
     
     public IMessageSink CreateMessageSink(java.lang.String url, NetObject remoteChannelData, JCORefOut objectURI) throws Throwable, system.ArgumentOutOfRangeException, system.NotImplementedException, system.ArgumentNullException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.runtime.remoting.RemotingException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateMessageSink = null;
         try {
-            JCObject objCreateMessageSink = (JCObject)classInstance.Invoke("CreateMessageSink", url, remoteChannelData == null ? null : remoteChannelData.getJCOInstance(), objectURI.getJCRefOut());
+            retObjectCreateMessageSink = classInstance.Invoke("CreateMessageSink", url, remoteChannelData == null ? null : remoteChannelData.getJCOInstance(), objectURI.getJCRefOut());
+            JCObject objCreateMessageSink = (JCObject)retObjectCreateMessageSink;
             return new IMessageSinkImplementation(objCreateMessageSink);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateMessageSink != null ? retObjectCreateMessageSink.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,9 +202,13 @@ public class TcpClientChannel extends NetObject  {
 
     public java.lang.String Parse(java.lang.String url, JCORefOut objectURI) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectParse = null;
         try {
-            return (java.lang.String)classInstance.Invoke("Parse", url, objectURI.getJCRefOut());
+            retObjectParse = classInstance.Invoke("Parse", url, objectURI.getJCRefOut());
+            return (java.lang.String)retObjectParse;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectParse != null ? retObjectParse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -212,9 +220,13 @@ public class TcpClientChannel extends NetObject  {
     
     public boolean getIsSecured() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsSecured = null;
         try {
-            return (boolean)classInstance.Get("IsSecured");
+            retObjectIsSecured = classInstance.Get("IsSecured");
+            return (boolean)retObjectIsSecured;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsSecured != null ? retObjectIsSecured.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -222,7 +234,7 @@ public class TcpClientChannel extends NetObject  {
 
     public void setIsSecured(boolean IsSecured) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsSecured", IsSecured);
         } catch (JCNativeException jcne) {
@@ -232,9 +244,20 @@ public class TcpClientChannel extends NetObject  {
 
     public int getChannelPriority() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectChannelPriority = null;
         try {
-            return (int)classInstance.Get("ChannelPriority");
+            retObjectChannelPriority = classInstance.Get("ChannelPriority");
+            return (int)retObjectChannelPriority;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectChannelPriority_ToString = retObjectChannelPriority == null ? "null" : retObjectChannelPriority.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectChannelPriorityNumber = (java.lang.Number)retObjectChannelPriority;
+                return retObjectChannelPriorityNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectChannelPriority != null ? retObjectChannelPriority.getClass() : "null", retObjectChannelPriority_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -242,9 +265,13 @@ public class TcpClientChannel extends NetObject  {
 
     public java.lang.String getChannelName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectChannelName = null;
         try {
-            return (java.lang.String)classInstance.Get("ChannelName");
+            retObjectChannelName = classInstance.Get("ChannelName");
+            return (java.lang.String)retObjectChannelName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectChannelName != null ? retObjectChannelName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

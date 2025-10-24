@@ -166,9 +166,20 @@ public class InertiaExpansionBehavior extends NetObject  {
     
     public double getDesiredDeceleration() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDesiredDeceleration = null;
         try {
-            return (double)classInstance.Get("DesiredDeceleration");
+            retObjectDesiredDeceleration = classInstance.Get("DesiredDeceleration");
+            return (double)retObjectDesiredDeceleration;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDesiredDeceleration_ToString = retObjectDesiredDeceleration == null ? "null" : retObjectDesiredDeceleration.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectDesiredDecelerationNumber = (java.lang.Number)retObjectDesiredDeceleration;
+                return retObjectDesiredDecelerationNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectDesiredDeceleration != null ? retObjectDesiredDeceleration.getClass() : "null", retObjectDesiredDeceleration_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,7 +187,7 @@ public class InertiaExpansionBehavior extends NetObject  {
 
     public void setDesiredDeceleration(double DesiredDeceleration) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DesiredDeceleration", DesiredDeceleration);
         } catch (JCNativeException jcne) {
@@ -186,9 +197,20 @@ public class InertiaExpansionBehavior extends NetObject  {
 
     public double getInitialRadius() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInitialRadius = null;
         try {
-            return (double)classInstance.Get("InitialRadius");
+            retObjectInitialRadius = classInstance.Get("InitialRadius");
+            return (double)retObjectInitialRadius;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectInitialRadius_ToString = retObjectInitialRadius == null ? "null" : retObjectInitialRadius.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectInitialRadiusNumber = (java.lang.Number)retObjectInitialRadius;
+                return retObjectInitialRadiusNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectInitialRadius != null ? retObjectInitialRadius.getClass() : "null", retObjectInitialRadius_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,7 +218,7 @@ public class InertiaExpansionBehavior extends NetObject  {
 
     public void setInitialRadius(double InitialRadius) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("InitialRadius", InitialRadius);
         } catch (JCNativeException jcne) {
@@ -206,10 +228,14 @@ public class InertiaExpansionBehavior extends NetObject  {
 
     public Vector getDesiredExpansion() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDesiredExpansion = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DesiredExpansion");
+            retObjectDesiredExpansion = classInstance.Get("DesiredExpansion");
+            JCObject val = (JCObject)retObjectDesiredExpansion;
             return new Vector(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDesiredExpansion != null ? retObjectDesiredExpansion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -217,7 +243,7 @@ public class InertiaExpansionBehavior extends NetObject  {
 
     public void setDesiredExpansion(Vector DesiredExpansion) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DesiredExpansion", DesiredExpansion == null ? null : DesiredExpansion.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -227,10 +253,14 @@ public class InertiaExpansionBehavior extends NetObject  {
 
     public Vector getInitialVelocity() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInitialVelocity = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("InitialVelocity");
+            retObjectInitialVelocity = classInstance.Get("InitialVelocity");
+            JCObject val = (JCObject)retObjectInitialVelocity;
             return new Vector(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInitialVelocity != null ? retObjectInitialVelocity.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -238,7 +268,7 @@ public class InertiaExpansionBehavior extends NetObject  {
 
     public void setInitialVelocity(Vector InitialVelocity) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("InitialVelocity", InitialVelocity == null ? null : InitialVelocity.getJCOInstance());
         } catch (JCNativeException jcne) {

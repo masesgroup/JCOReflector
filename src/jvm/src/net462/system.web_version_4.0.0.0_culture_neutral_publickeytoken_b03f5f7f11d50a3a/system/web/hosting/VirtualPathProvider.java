@@ -159,9 +159,13 @@ public class VirtualPathProvider extends MarshalByRefObject  {
     
     public boolean DirectoryExists(java.lang.String virtualDir) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDirectoryExists = null;
         try {
-            return (boolean)classInstance.Invoke("DirectoryExists", virtualDir);
+            retObjectDirectoryExists = classInstance.Invoke("DirectoryExists", virtualDir);
+            return (boolean)retObjectDirectoryExists;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectDirectoryExists != null ? retObjectDirectoryExists.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,9 +173,13 @@ public class VirtualPathProvider extends MarshalByRefObject  {
 
     public boolean FileExists(java.lang.String virtualPath) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFileExists = null;
         try {
-            return (boolean)classInstance.Invoke("FileExists", virtualPath);
+            retObjectFileExists = classInstance.Invoke("FileExists", virtualPath);
+            return (boolean)retObjectFileExists;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectFileExists != null ? retObjectFileExists.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,10 +187,14 @@ public class VirtualPathProvider extends MarshalByRefObject  {
 
     public static Stream OpenFile(java.lang.String virtualPath) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.web.HttpException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOpenFile = null;
         try {
-            JCObject objOpenFile = (JCObject)classType.Invoke("OpenFile", virtualPath);
+            retObjectOpenFile = classType.Invoke("OpenFile", virtualPath);
+            JCObject objOpenFile = (JCObject)retObjectOpenFile;
             return new Stream(objOpenFile);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOpenFile != null ? retObjectOpenFile.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,10 +202,14 @@ public class VirtualPathProvider extends MarshalByRefObject  {
 
     public NetObject InitializeLifetimeService() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInitializeLifetimeService = null;
         try {
-            JCObject objInitializeLifetimeService = (JCObject)classInstance.Invoke("InitializeLifetimeService");
+            retObjectInitializeLifetimeService = classInstance.Invoke("InitializeLifetimeService");
+            JCObject objInitializeLifetimeService = (JCObject)retObjectInitializeLifetimeService;
             return new NetObject(objInitializeLifetimeService);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInitializeLifetimeService != null ? retObjectInitializeLifetimeService.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,9 +217,13 @@ public class VirtualPathProvider extends MarshalByRefObject  {
 
     public java.lang.String CombineVirtualPaths(java.lang.String basePath, java.lang.String relativePath) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.web.HttpException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCombineVirtualPaths = null;
         try {
-            return (java.lang.String)classInstance.Invoke("CombineVirtualPaths", basePath, relativePath);
+            retObjectCombineVirtualPaths = classInstance.Invoke("CombineVirtualPaths", basePath, relativePath);
+            return (java.lang.String)retObjectCombineVirtualPaths;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectCombineVirtualPaths != null ? retObjectCombineVirtualPaths.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -211,9 +231,13 @@ public class VirtualPathProvider extends MarshalByRefObject  {
 
     public java.lang.String GetCacheKey(java.lang.String virtualPath) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetCacheKey = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetCacheKey", virtualPath);
+            retObjectGetCacheKey = classInstance.Invoke("GetCacheKey", virtualPath);
+            return (java.lang.String)retObjectGetCacheKey;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetCacheKey != null ? retObjectGetCacheKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -221,9 +245,13 @@ public class VirtualPathProvider extends MarshalByRefObject  {
 
     public java.lang.String GetFileHash(java.lang.String virtualPath, IEnumerable virtualPathDependencies) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetFileHash = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetFileHash", virtualPath, virtualPathDependencies == null ? null : virtualPathDependencies.getJCOInstance());
+            retObjectGetFileHash = classInstance.Invoke("GetFileHash", virtualPath, virtualPathDependencies == null ? null : virtualPathDependencies.getJCOInstance());
+            return (java.lang.String)retObjectGetFileHash;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetFileHash != null ? retObjectGetFileHash.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -231,10 +259,14 @@ public class VirtualPathProvider extends MarshalByRefObject  {
 
     public CacheDependency GetCacheDependency(java.lang.String virtualPath, IEnumerable virtualPathDependencies, DateTime utcStart) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetCacheDependency = null;
         try {
-            JCObject objGetCacheDependency = (JCObject)classInstance.Invoke("GetCacheDependency", virtualPath, virtualPathDependencies == null ? null : virtualPathDependencies.getJCOInstance(), utcStart == null ? null : utcStart.getJCOInstance());
+            retObjectGetCacheDependency = classInstance.Invoke("GetCacheDependency", virtualPath, virtualPathDependencies == null ? null : virtualPathDependencies.getJCOInstance(), utcStart == null ? null : utcStart.getJCOInstance());
+            JCObject objGetCacheDependency = (JCObject)retObjectGetCacheDependency;
             return new CacheDependency(objGetCacheDependency);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCacheDependency != null ? retObjectGetCacheDependency.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -242,10 +274,14 @@ public class VirtualPathProvider extends MarshalByRefObject  {
 
     public VirtualDirectory GetDirectory(java.lang.String virtualDir) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDirectory = null;
         try {
-            JCObject objGetDirectory = (JCObject)classInstance.Invoke("GetDirectory", virtualDir);
+            retObjectGetDirectory = classInstance.Invoke("GetDirectory", virtualDir);
+            JCObject objGetDirectory = (JCObject)retObjectGetDirectory;
             return new VirtualDirectory(objGetDirectory);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetDirectory != null ? retObjectGetDirectory.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -253,10 +289,14 @@ public class VirtualPathProvider extends MarshalByRefObject  {
 
     public VirtualFile GetFile(java.lang.String virtualPath) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetFile = null;
         try {
-            JCObject objGetFile = (JCObject)classInstance.Invoke("GetFile", virtualPath);
+            retObjectGetFile = classInstance.Invoke("GetFile", virtualPath);
+            JCObject objGetFile = (JCObject)retObjectGetFile;
             return new VirtualFile(objGetFile);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetFile != null ? retObjectGetFile.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

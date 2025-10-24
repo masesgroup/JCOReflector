@@ -164,9 +164,13 @@ public class FindUnderPath extends TaskExtension  {
     
     public boolean Execute() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.io.PathTooLongException, system.ArgumentOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.InvalidOperationException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExecute = null;
         try {
-            return (boolean)classInstance.Invoke("Execute");
+            retObjectExecute = classInstance.Invoke("Execute");
+            return (boolean)retObjectExecute;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectExecute != null ? retObjectExecute.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,9 +182,13 @@ public class FindUnderPath extends TaskExtension  {
     
     public boolean getUpdateToAbsolutePaths() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUpdateToAbsolutePaths = null;
         try {
-            return (boolean)classInstance.Get("UpdateToAbsolutePaths");
+            retObjectUpdateToAbsolutePaths = classInstance.Get("UpdateToAbsolutePaths");
+            return (boolean)retObjectUpdateToAbsolutePaths;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectUpdateToAbsolutePaths != null ? retObjectUpdateToAbsolutePaths.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,7 +196,7 @@ public class FindUnderPath extends TaskExtension  {
 
     public void setUpdateToAbsolutePaths(boolean UpdateToAbsolutePaths) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UpdateToAbsolutePaths", UpdateToAbsolutePaths);
         } catch (JCNativeException jcne) {
@@ -198,10 +206,14 @@ public class FindUnderPath extends TaskExtension  {
 
     public ITaskItem getPath() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPath = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Path");
+            retObjectPath = classInstance.Get("Path");
+            JCObject val = (JCObject)retObjectPath;
             return new ITaskItemImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPath != null ? retObjectPath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -209,7 +221,7 @@ public class FindUnderPath extends TaskExtension  {
 
     public void setPath(ITaskItem Path) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Path", Path == null ? null : Path.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -219,16 +231,20 @@ public class FindUnderPath extends TaskExtension  {
 
     public final ITaskItem[] getFiles() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFiles = null;
         try {
             ArrayList<ITaskItem> resultingArrayList = new ArrayList<ITaskItem>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("Files");
+            retObjectFiles = classInstance.Get("Files");
+            JCObject resultingObjects = (JCObject)retObjectFiles;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ITaskItemImplementation(resultingObject));
             }
             ITaskItem[] resultingArray = new ITaskItem[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFiles != null ? retObjectFiles.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -236,7 +252,7 @@ public class FindUnderPath extends TaskExtension  {
 
     public void setFiles(ITaskItem[] Files) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Files", toObjectFromArray(Files));
         } catch (JCNativeException jcne) {
@@ -246,16 +262,20 @@ public class FindUnderPath extends TaskExtension  {
 
     public final ITaskItem[] getInPath() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInPath = null;
         try {
             ArrayList<ITaskItem> resultingArrayList = new ArrayList<ITaskItem>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("InPath");
+            retObjectInPath = classInstance.Get("InPath");
+            JCObject resultingObjects = (JCObject)retObjectInPath;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ITaskItemImplementation(resultingObject));
             }
             ITaskItem[] resultingArray = new ITaskItem[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInPath != null ? retObjectInPath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -263,7 +283,7 @@ public class FindUnderPath extends TaskExtension  {
 
     public void setInPath(ITaskItem[] InPath) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("InPath", toObjectFromArray(InPath));
         } catch (JCNativeException jcne) {
@@ -273,16 +293,20 @@ public class FindUnderPath extends TaskExtension  {
 
     public final ITaskItem[] getOutOfPath() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOutOfPath = null;
         try {
             ArrayList<ITaskItem> resultingArrayList = new ArrayList<ITaskItem>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("OutOfPath");
+            retObjectOutOfPath = classInstance.Get("OutOfPath");
+            JCObject resultingObjects = (JCObject)retObjectOutOfPath;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ITaskItemImplementation(resultingObject));
             }
             ITaskItem[] resultingArray = new ITaskItem[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOutOfPath != null ? retObjectOutOfPath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -290,7 +314,7 @@ public class FindUnderPath extends TaskExtension  {
 
     public void setOutOfPath(ITaskItem[] OutOfPath) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("OutOfPath", toObjectFromArray(OutOfPath));
         } catch (JCNativeException jcne) {

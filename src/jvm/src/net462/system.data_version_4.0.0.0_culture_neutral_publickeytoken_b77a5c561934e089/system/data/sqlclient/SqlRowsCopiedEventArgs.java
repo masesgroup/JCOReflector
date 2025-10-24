@@ -170,9 +170,13 @@ public class SqlRowsCopiedEventArgs extends EventArgs  {
     
     public boolean getAbort() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAbort = null;
         try {
-            return (boolean)classInstance.Get("Abort");
+            retObjectAbort = classInstance.Get("Abort");
+            return (boolean)retObjectAbort;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAbort != null ? retObjectAbort.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,7 +184,7 @@ public class SqlRowsCopiedEventArgs extends EventArgs  {
 
     public void setAbort(boolean Abort) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Abort", Abort);
         } catch (JCNativeException jcne) {
@@ -190,9 +194,20 @@ public class SqlRowsCopiedEventArgs extends EventArgs  {
 
     public long getRowsCopied() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRowsCopied = null;
         try {
-            return (long)classInstance.Get("RowsCopied");
+            retObjectRowsCopied = classInstance.Get("RowsCopied");
+            return (long)retObjectRowsCopied;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectRowsCopied_ToString = retObjectRowsCopied == null ? "null" : retObjectRowsCopied.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectRowsCopiedNumber = (java.lang.Number)retObjectRowsCopied;
+                return retObjectRowsCopiedNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectRowsCopied != null ? retObjectRowsCopied.getClass() : "null", retObjectRowsCopied_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

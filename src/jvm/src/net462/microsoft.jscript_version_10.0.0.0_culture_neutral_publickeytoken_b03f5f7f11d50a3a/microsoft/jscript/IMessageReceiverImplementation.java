@@ -142,7 +142,7 @@ public class IMessageReceiverImplementation extends NetObject implements IMessag
     
     public void Message(java.lang.String strValue) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Message", strValue);
         } catch (JCNativeException jcne) {

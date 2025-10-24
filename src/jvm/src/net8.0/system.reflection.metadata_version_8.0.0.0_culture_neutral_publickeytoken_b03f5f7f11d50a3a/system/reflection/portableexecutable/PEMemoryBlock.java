@@ -157,10 +157,14 @@ public class PEMemoryBlock extends ValueType  {
     
     public BlobReader GetReader() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetReader = null;
         try {
-            JCObject objGetReader = (JCObject)classInstance.Invoke("GetReader");
+            retObjectGetReader = classInstance.Invoke("GetReader");
+            JCObject objGetReader = (JCObject)retObjectGetReader;
             return new BlobReader(objGetReader);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetReader != null ? retObjectGetReader.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -168,10 +172,14 @@ public class PEMemoryBlock extends ValueType  {
 
     public BlobReader GetReader(int start, int length) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetReader = null;
         try {
-            JCObject objGetReader = (JCObject)classInstance.Invoke("GetReader", start, length);
+            retObjectGetReader = classInstance.Invoke("GetReader", start, length);
+            JCObject objGetReader = (JCObject)retObjectGetReader;
             return new BlobReader(objGetReader);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetReader != null ? retObjectGetReader.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,9 +191,20 @@ public class PEMemoryBlock extends ValueType  {
     
     public int getLength() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLength = null;
         try {
-            return (int)classInstance.Get("Length");
+            retObjectLength = classInstance.Get("Length");
+            return (int)retObjectLength;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectLength_ToString = retObjectLength == null ? "null" : retObjectLength.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectLengthNumber = (java.lang.Number)retObjectLength;
+                return retObjectLengthNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectLength != null ? retObjectLength.getClass() : "null", retObjectLength_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

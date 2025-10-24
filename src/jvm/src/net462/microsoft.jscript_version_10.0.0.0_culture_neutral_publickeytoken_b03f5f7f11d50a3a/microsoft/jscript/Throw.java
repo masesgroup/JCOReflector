@@ -156,10 +156,14 @@ public class Throw extends AST  {
     
     public static NetException JScriptThrow(NetObject value) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectJScriptThrow = null;
         try {
-            JCObject objJScriptThrow = (JCObject)classType.Invoke("JScriptThrow", value == null ? null : value.getJCOInstance());
+            retObjectJScriptThrow = classType.Invoke("JScriptThrow", value == null ? null : value.getJCOInstance());
+            JCObject objJScriptThrow = (JCObject)retObjectJScriptThrow;
             return new NetException(objJScriptThrow);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectJScriptThrow != null ? retObjectJScriptThrow.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

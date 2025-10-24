@@ -146,9 +146,13 @@ public class IColumnMappingImplementation extends NetObject implements IColumnMa
     
     public java.lang.String getDataSetColumn() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDataSetColumn = null;
         try {
-            return (java.lang.String)classInstance.Get("DataSetColumn");
+            retObjectDataSetColumn = classInstance.Get("DataSetColumn");
+            return (java.lang.String)retObjectDataSetColumn;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDataSetColumn != null ? retObjectDataSetColumn.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -156,7 +160,7 @@ public class IColumnMappingImplementation extends NetObject implements IColumnMa
 
     public void setDataSetColumn(java.lang.String DataSetColumn) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DataSetColumn", DataSetColumn);
         } catch (JCNativeException jcne) {
@@ -166,9 +170,13 @@ public class IColumnMappingImplementation extends NetObject implements IColumnMa
 
     public java.lang.String getSourceColumn() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSourceColumn = null;
         try {
-            return (java.lang.String)classInstance.Get("SourceColumn");
+            retObjectSourceColumn = classInstance.Get("SourceColumn");
+            return (java.lang.String)retObjectSourceColumn;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSourceColumn != null ? retObjectSourceColumn.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,7 +184,7 @@ public class IColumnMappingImplementation extends NetObject implements IColumnMa
 
     public void setSourceColumn(java.lang.String SourceColumn) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SourceColumn", SourceColumn);
         } catch (JCNativeException jcne) {

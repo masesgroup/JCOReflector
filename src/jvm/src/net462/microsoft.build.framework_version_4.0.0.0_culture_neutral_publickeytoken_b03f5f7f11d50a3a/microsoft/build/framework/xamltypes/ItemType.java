@@ -161,7 +161,7 @@ public class ItemType extends NetObject  {
     
     public void BeginInit() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("BeginInit");
         } catch (JCNativeException jcne) {
@@ -171,7 +171,7 @@ public class ItemType extends NetObject  {
 
     public void EndInit() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EndInit");
         } catch (JCNativeException jcne) {
@@ -185,9 +185,13 @@ public class ItemType extends NetObject  {
     
     public boolean getUpToDateCheckInput() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUpToDateCheckInput = null;
         try {
-            return (boolean)classInstance.Get("UpToDateCheckInput");
+            retObjectUpToDateCheckInput = classInstance.Get("UpToDateCheckInput");
+            return (boolean)retObjectUpToDateCheckInput;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectUpToDateCheckInput != null ? retObjectUpToDateCheckInput.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,7 +199,7 @@ public class ItemType extends NetObject  {
 
     public void setUpToDateCheckInput(boolean UpToDateCheckInput) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UpToDateCheckInput", UpToDateCheckInput);
         } catch (JCNativeException jcne) {
@@ -205,9 +209,13 @@ public class ItemType extends NetObject  {
 
     public java.lang.String getDefaultContentType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDefaultContentType = null;
         try {
-            return (java.lang.String)classInstance.Get("DefaultContentType");
+            retObjectDefaultContentType = classInstance.Get("DefaultContentType");
+            return (java.lang.String)retObjectDefaultContentType;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDefaultContentType != null ? retObjectDefaultContentType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -215,7 +223,7 @@ public class ItemType extends NetObject  {
 
     public void setDefaultContentType(java.lang.String DefaultContentType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DefaultContentType", DefaultContentType);
         } catch (JCNativeException jcne) {
@@ -225,9 +233,13 @@ public class ItemType extends NetObject  {
 
     public java.lang.String getDisplayName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDisplayName = null;
         try {
-            return (java.lang.String)classInstance.Get("DisplayName");
+            retObjectDisplayName = classInstance.Get("DisplayName");
+            return (java.lang.String)retObjectDisplayName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDisplayName != null ? retObjectDisplayName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -235,7 +247,7 @@ public class ItemType extends NetObject  {
 
     public void setDisplayName(java.lang.String DisplayName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DisplayName", DisplayName);
         } catch (JCNativeException jcne) {
@@ -245,9 +257,13 @@ public class ItemType extends NetObject  {
 
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectName = null;
         try {
-            return (java.lang.String)classInstance.Get("Name");
+            retObjectName = classInstance.Get("Name");
+            return (java.lang.String)retObjectName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectName != null ? retObjectName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -255,7 +271,7 @@ public class ItemType extends NetObject  {
 
     public void setName(java.lang.String Name) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Name", Name);
         } catch (JCNativeException jcne) {

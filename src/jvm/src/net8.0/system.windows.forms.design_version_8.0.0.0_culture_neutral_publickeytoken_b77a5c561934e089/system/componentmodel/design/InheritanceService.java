@@ -166,10 +166,14 @@ public class InheritanceService extends NetObject implements AutoCloseable {
     
     public InheritanceAttribute GetInheritanceAttribute(IComponent component) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetInheritanceAttribute = null;
         try {
-            JCObject objGetInheritanceAttribute = (JCObject)classInstance.Invoke("GetInheritanceAttribute", component == null ? null : component.getJCOInstance());
+            retObjectGetInheritanceAttribute = classInstance.Invoke("GetInheritanceAttribute", component == null ? null : component.getJCOInstance());
+            JCObject objGetInheritanceAttribute = (JCObject)retObjectGetInheritanceAttribute;
             return new InheritanceAttribute(objGetInheritanceAttribute);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetInheritanceAttribute != null ? retObjectGetInheritanceAttribute.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,7 +181,7 @@ public class InheritanceService extends NetObject implements AutoCloseable {
 
     public void AddInheritedComponents(IComponent component, IContainer container) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.ArgumentNullException, system.TypeLoadException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddInheritedComponents", component == null ? null : component.getJCOInstance(), container == null ? null : container.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -187,7 +191,7 @@ public class InheritanceService extends NetObject implements AutoCloseable {
 
     public void Dispose() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
@@ -198,7 +202,7 @@ public class InheritanceService extends NetObject implements AutoCloseable {
     public void close() throws Exception {
         try {
             if (classInstance == null)
-                throw new UnsupportedOperationException("classInstance is null.");
+                throw new java.lang.UnsupportedOperationException("classInstance is null.");
             try {
                 classInstance.Invoke("Dispose");
             }

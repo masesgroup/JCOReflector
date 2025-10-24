@@ -167,9 +167,13 @@ public class ArrayWithOffset extends ValueType  {
     
     public boolean Equals(ArrayWithOffset obj) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEquals = null;
         try {
-            return (boolean)classInstance.Invoke("Equals", obj == null ? null : obj.getJCOInstance());
+            retObjectEquals = classInstance.Invoke("Equals", obj == null ? null : obj.getJCOInstance());
+            return (boolean)retObjectEquals;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectEquals != null ? retObjectEquals.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,9 +181,20 @@ public class ArrayWithOffset extends ValueType  {
 
     public int GetOffset() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetOffset = null;
         try {
-            return (int)classInstance.Invoke("GetOffset");
+            retObjectGetOffset = classInstance.Invoke("GetOffset");
+            return (int)retObjectGetOffset;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetOffset_ToString = retObjectGetOffset == null ? "null" : retObjectGetOffset.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetOffsetNumber = (java.lang.Number)retObjectGetOffset;
+                return retObjectGetOffsetNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetOffset != null ? retObjectGetOffset.getClass() : "null", retObjectGetOffset_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,10 +202,14 @@ public class ArrayWithOffset extends ValueType  {
 
     public NetObject GetArray() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetArray = null;
         try {
-            JCObject objGetArray = (JCObject)classInstance.Invoke("GetArray");
+            retObjectGetArray = classInstance.Invoke("GetArray");
+            JCObject objGetArray = (JCObject)retObjectGetArray;
             return new NetObject(objGetArray);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetArray != null ? retObjectGetArray.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

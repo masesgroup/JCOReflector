@@ -171,9 +171,20 @@ public class AsyncContentLoadedEventArgs extends AutomationEventArgs  {
     
     public double getPercentComplete() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPercentComplete = null;
         try {
-            return (double)classInstance.Get("PercentComplete");
+            retObjectPercentComplete = classInstance.Get("PercentComplete");
+            return (double)retObjectPercentComplete;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectPercentComplete_ToString = retObjectPercentComplete == null ? "null" : retObjectPercentComplete.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectPercentCompleteNumber = (java.lang.Number)retObjectPercentComplete;
+                return retObjectPercentCompleteNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectPercentComplete != null ? retObjectPercentComplete.getClass() : "null", retObjectPercentComplete_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,10 +192,14 @@ public class AsyncContentLoadedEventArgs extends AutomationEventArgs  {
 
     public AsyncContentLoadedState getAsyncContentLoadedState() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAsyncContentLoadedState = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AsyncContentLoadedState");
+            retObjectAsyncContentLoadedState = classInstance.Get("AsyncContentLoadedState");
+            JCObject val = (JCObject)retObjectAsyncContentLoadedState;
             return new AsyncContentLoadedState(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAsyncContentLoadedState != null ? retObjectAsyncContentLoadedState.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -170,9 +170,13 @@ public class RequiresUnreferencedCodeAttribute extends Attribute  {
     
     public java.lang.String getMessage() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMessage = null;
         try {
-            return (java.lang.String)classInstance.Get("Message");
+            retObjectMessage = classInstance.Get("Message");
+            return (java.lang.String)retObjectMessage;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectMessage != null ? retObjectMessage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,9 +184,13 @@ public class RequiresUnreferencedCodeAttribute extends Attribute  {
 
     public java.lang.String getUrl() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUrl = null;
         try {
-            return (java.lang.String)classInstance.Get("Url");
+            retObjectUrl = classInstance.Get("Url");
+            return (java.lang.String)retObjectUrl;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectUrl != null ? retObjectUrl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,7 +198,7 @@ public class RequiresUnreferencedCodeAttribute extends Attribute  {
 
     public void setUrl(java.lang.String Url) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Url", Url);
         } catch (JCNativeException jcne) {

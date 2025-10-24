@@ -162,9 +162,13 @@ public class CircleHotSpot extends HotSpot  {
     
     public java.lang.String GetCoordinates() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.TypeInitializationException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetCoordinates = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetCoordinates");
+            retObjectGetCoordinates = classInstance.Invoke("GetCoordinates");
+            return (java.lang.String)retObjectGetCoordinates;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetCoordinates != null ? retObjectGetCoordinates.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,9 +180,20 @@ public class CircleHotSpot extends HotSpot  {
     
     public int getRadius() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRadius = null;
         try {
-            return (int)classInstance.Get("Radius");
+            retObjectRadius = classInstance.Get("Radius");
+            return (int)retObjectRadius;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectRadius_ToString = retObjectRadius == null ? "null" : retObjectRadius.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectRadiusNumber = (java.lang.Number)retObjectRadius;
+                return retObjectRadiusNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectRadius != null ? retObjectRadius.getClass() : "null", retObjectRadius_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,7 +201,7 @@ public class CircleHotSpot extends HotSpot  {
 
     public void setRadius(int Radius) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Radius", Radius);
         } catch (JCNativeException jcne) {
@@ -196,9 +211,20 @@ public class CircleHotSpot extends HotSpot  {
 
     public int getX() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectX = null;
         try {
-            return (int)classInstance.Get("X");
+            retObjectX = classInstance.Get("X");
+            return (int)retObjectX;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectX_ToString = retObjectX == null ? "null" : retObjectX.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectXNumber = (java.lang.Number)retObjectX;
+                return retObjectXNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectX != null ? retObjectX.getClass() : "null", retObjectX_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -206,7 +232,7 @@ public class CircleHotSpot extends HotSpot  {
 
     public void setX(int X) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("X", X);
         } catch (JCNativeException jcne) {
@@ -216,9 +242,20 @@ public class CircleHotSpot extends HotSpot  {
 
     public int getY() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectY = null;
         try {
-            return (int)classInstance.Get("Y");
+            retObjectY = classInstance.Get("Y");
+            return (int)retObjectY;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectY_ToString = retObjectY == null ? "null" : retObjectY.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectYNumber = (java.lang.Number)retObjectY;
+                return retObjectYNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectY != null ? retObjectY.getClass() : "null", retObjectY_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -226,7 +263,7 @@ public class CircleHotSpot extends HotSpot  {
 
     public void setY(int Y) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Y", Y);
         } catch (JCNativeException jcne) {

@@ -226,9 +226,20 @@ public class UriBuilder extends NetObject  {
     
     public int getPort() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPort = null;
         try {
-            return (int)classInstance.Get("Port");
+            retObjectPort = classInstance.Get("Port");
+            return (int)retObjectPort;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectPort_ToString = retObjectPort == null ? "null" : retObjectPort.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectPortNumber = (java.lang.Number)retObjectPort;
+                return retObjectPortNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectPort != null ? retObjectPort.getClass() : "null", retObjectPort_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -236,7 +247,7 @@ public class UriBuilder extends NetObject  {
 
     public void setPort(int Port) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Port", Port);
         } catch (JCNativeException jcne) {
@@ -246,9 +257,13 @@ public class UriBuilder extends NetObject  {
 
     public java.lang.String getFragment() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFragment = null;
         try {
-            return (java.lang.String)classInstance.Get("Fragment");
+            retObjectFragment = classInstance.Get("Fragment");
+            return (java.lang.String)retObjectFragment;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectFragment != null ? retObjectFragment.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -256,7 +271,7 @@ public class UriBuilder extends NetObject  {
 
     public void setFragment(java.lang.String Fragment) throws Throwable, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Fragment", Fragment);
         } catch (JCNativeException jcne) {
@@ -266,9 +281,13 @@ public class UriBuilder extends NetObject  {
 
     public java.lang.String getHost() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHost = null;
         try {
-            return (java.lang.String)classInstance.Get("Host");
+            retObjectHost = classInstance.Get("Host");
+            return (java.lang.String)retObjectHost;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectHost != null ? retObjectHost.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -276,7 +295,7 @@ public class UriBuilder extends NetObject  {
 
     public void setHost(java.lang.String Host) throws Throwable, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Host", Host);
         } catch (JCNativeException jcne) {
@@ -286,9 +305,13 @@ public class UriBuilder extends NetObject  {
 
     public java.lang.String getPassword() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPassword = null;
         try {
-            return (java.lang.String)classInstance.Get("Password");
+            retObjectPassword = classInstance.Get("Password");
+            return (java.lang.String)retObjectPassword;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectPassword != null ? retObjectPassword.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -296,7 +319,7 @@ public class UriBuilder extends NetObject  {
 
     public void setPassword(java.lang.String Password) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Password", Password);
         } catch (JCNativeException jcne) {
@@ -306,9 +329,13 @@ public class UriBuilder extends NetObject  {
 
     public java.lang.String getPath() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPath = null;
         try {
-            return (java.lang.String)classInstance.Get("Path");
+            retObjectPath = classInstance.Get("Path");
+            return (java.lang.String)retObjectPath;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectPath != null ? retObjectPath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -316,7 +343,7 @@ public class UriBuilder extends NetObject  {
 
     public void setPath(java.lang.String Path) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.UriFormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Path", Path);
         } catch (JCNativeException jcne) {
@@ -326,9 +353,13 @@ public class UriBuilder extends NetObject  {
 
     public java.lang.String getQuery() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectQuery = null;
         try {
-            return (java.lang.String)classInstance.Get("Query");
+            retObjectQuery = classInstance.Get("Query");
+            return (java.lang.String)retObjectQuery;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectQuery != null ? retObjectQuery.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -336,7 +367,7 @@ public class UriBuilder extends NetObject  {
 
     public void setQuery(java.lang.String Query) throws Throwable, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Query", Query);
         } catch (JCNativeException jcne) {
@@ -346,9 +377,13 @@ public class UriBuilder extends NetObject  {
 
     public java.lang.String getScheme() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectScheme = null;
         try {
-            return (java.lang.String)classInstance.Get("Scheme");
+            retObjectScheme = classInstance.Get("Scheme");
+            return (java.lang.String)retObjectScheme;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectScheme != null ? retObjectScheme.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -356,7 +391,7 @@ public class UriBuilder extends NetObject  {
 
     public void setScheme(java.lang.String Scheme) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Scheme", Scheme);
         } catch (JCNativeException jcne) {
@@ -366,9 +401,13 @@ public class UriBuilder extends NetObject  {
 
     public java.lang.String getUserName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUserName = null;
         try {
-            return (java.lang.String)classInstance.Get("UserName");
+            retObjectUserName = classInstance.Get("UserName");
+            return (java.lang.String)retObjectUserName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectUserName != null ? retObjectUserName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -376,7 +415,7 @@ public class UriBuilder extends NetObject  {
 
     public void setUserName(java.lang.String UserName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UserName", UserName);
         } catch (JCNativeException jcne) {
@@ -386,10 +425,14 @@ public class UriBuilder extends NetObject  {
 
     public Uri getUri() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.MemberAccessException, system.NullReferenceException, system.configuration.ConfigurationException, system.UriFormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUri = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Uri");
+            retObjectUri = classInstance.Get("Uri");
+            JCObject val = (JCObject)retObjectUri;
             return new Uri(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUri != null ? retObjectUri.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

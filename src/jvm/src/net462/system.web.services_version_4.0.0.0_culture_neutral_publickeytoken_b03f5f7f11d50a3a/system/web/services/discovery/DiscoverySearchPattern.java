@@ -154,10 +154,14 @@ public class DiscoverySearchPattern extends NetObject  {
     
     public DiscoveryReference GetDiscoveryReference(java.lang.String filename) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDiscoveryReference = null;
         try {
-            JCObject objGetDiscoveryReference = (JCObject)classInstance.Invoke("GetDiscoveryReference", filename);
+            retObjectGetDiscoveryReference = classInstance.Invoke("GetDiscoveryReference", filename);
+            JCObject objGetDiscoveryReference = (JCObject)retObjectGetDiscoveryReference;
             return new DiscoveryReference(objGetDiscoveryReference);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetDiscoveryReference != null ? retObjectGetDiscoveryReference.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,9 +173,13 @@ public class DiscoverySearchPattern extends NetObject  {
     
     public java.lang.String getPattern() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPattern = null;
         try {
-            return (java.lang.String)classInstance.Get("Pattern");
+            retObjectPattern = classInstance.Get("Pattern");
+            return (java.lang.String)retObjectPattern;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectPattern != null ? retObjectPattern.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

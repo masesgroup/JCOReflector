@@ -168,10 +168,14 @@ public class NetMsmqSecurity extends NetObject  {
     
     public MessageSecurityOverMsmq getMessage() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMessage = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Message");
+            retObjectMessage = classInstance.Get("Message");
+            JCObject val = (JCObject)retObjectMessage;
             return new MessageSecurityOverMsmq(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMessage != null ? retObjectMessage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,7 +183,7 @@ public class NetMsmqSecurity extends NetObject  {
 
     public void setMessage(MessageSecurityOverMsmq Message) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Message", Message == null ? null : Message.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -189,10 +193,14 @@ public class NetMsmqSecurity extends NetObject  {
 
     public MsmqTransportSecurity getTransport() throws Throwable, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTransport = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Transport");
+            retObjectTransport = classInstance.Get("Transport");
+            JCObject val = (JCObject)retObjectTransport;
             return new MsmqTransportSecurity(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTransport != null ? retObjectTransport.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,7 +208,7 @@ public class NetMsmqSecurity extends NetObject  {
 
     public void setTransport(MsmqTransportSecurity Transport) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Transport", Transport == null ? null : Transport.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -210,10 +218,14 @@ public class NetMsmqSecurity extends NetObject  {
 
     public NetMsmqSecurityMode getMode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Mode");
+            retObjectMode = classInstance.Get("Mode");
+            JCObject val = (JCObject)retObjectMode;
             return new NetMsmqSecurityMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMode != null ? retObjectMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -221,7 +233,7 @@ public class NetMsmqSecurity extends NetObject  {
 
     public void setMode(NetMsmqSecurityMode Mode) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Mode", Mode == null ? null : Mode.getJCOInstance());
         } catch (JCNativeException jcne) {

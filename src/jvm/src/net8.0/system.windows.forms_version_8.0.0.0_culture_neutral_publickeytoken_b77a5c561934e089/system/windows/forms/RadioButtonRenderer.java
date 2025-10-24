@@ -162,9 +162,13 @@ public class RadioButtonRenderer extends NetObject  {
     
     public static boolean IsBackgroundPartiallyTransparent(RadioButtonState state) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.threading.AbandonedMutexException, system.runtime.interopservices.ExternalException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsBackgroundPartiallyTransparent = null;
         try {
-            return (boolean)classType.Invoke("IsBackgroundPartiallyTransparent", state == null ? null : state.getJCOInstance());
+            retObjectIsBackgroundPartiallyTransparent = classType.Invoke("IsBackgroundPartiallyTransparent", state == null ? null : state.getJCOInstance());
+            return (boolean)retObjectIsBackgroundPartiallyTransparent;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsBackgroundPartiallyTransparent != null ? retObjectIsBackgroundPartiallyTransparent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,10 +176,14 @@ public class RadioButtonRenderer extends NetObject  {
 
     public static Size GetGlyphSize(Graphics g, RadioButtonState state) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.Win32Exception, system.collections.generic.KeyNotFoundException, system.threading.AbandonedMutexException, system.runtime.interopservices.ExternalException, system.componentmodel.InvalidEnumArgumentException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetGlyphSize = null;
         try {
-            JCObject objGetGlyphSize = (JCObject)classType.Invoke("GetGlyphSize", g == null ? null : g.getJCOInstance(), state == null ? null : state.getJCOInstance());
+            retObjectGetGlyphSize = classType.Invoke("GetGlyphSize", g == null ? null : g.getJCOInstance(), state == null ? null : state.getJCOInstance());
+            JCObject objGetGlyphSize = (JCObject)retObjectGetGlyphSize;
             return new Size(objGetGlyphSize);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetGlyphSize != null ? retObjectGetGlyphSize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,7 +191,7 @@ public class RadioButtonRenderer extends NetObject  {
 
     public static void DrawParentBackground(Graphics g, Rectangle bounds, Control childControl) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.threading.AbandonedMutexException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.componentmodel.Win32Exception, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("DrawParentBackground", g == null ? null : g.getJCOInstance(), bounds == null ? null : bounds.getJCOInstance(), childControl == null ? null : childControl.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -193,7 +201,7 @@ public class RadioButtonRenderer extends NetObject  {
 
     public static void DrawRadioButton(Graphics g, Point glyphLocation, Rectangle textBounds, java.lang.String radioButtonText, Font font, boolean focused, RadioButtonState state) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception, system.runtime.interopservices.ExternalException, system.componentmodel.InvalidEnumArgumentException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("DrawRadioButton", g == null ? null : g.getJCOInstance(), glyphLocation == null ? null : glyphLocation.getJCOInstance(), textBounds == null ? null : textBounds.getJCOInstance(), radioButtonText, font == null ? null : font.getJCOInstance(), focused, state == null ? null : state.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -203,7 +211,7 @@ public class RadioButtonRenderer extends NetObject  {
 
     public static void DrawRadioButton(Graphics g, Point glyphLocation, Rectangle textBounds, java.lang.String radioButtonText, Font font, Image image, Rectangle imageBounds, boolean focused, RadioButtonState state) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception, system.runtime.interopservices.ExternalException, system.componentmodel.InvalidEnumArgumentException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("DrawRadioButton", g == null ? null : g.getJCOInstance(), glyphLocation == null ? null : glyphLocation.getJCOInstance(), textBounds == null ? null : textBounds.getJCOInstance(), radioButtonText, font == null ? null : font.getJCOInstance(), image == null ? null : image.getJCOInstance(), imageBounds == null ? null : imageBounds.getJCOInstance(), focused, state == null ? null : state.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -213,7 +221,7 @@ public class RadioButtonRenderer extends NetObject  {
 
     public static void DrawRadioButton(Graphics g, Point glyphLocation, Rectangle textBounds, java.lang.String radioButtonText, Font font, TextFormatFlags flags, boolean focused, RadioButtonState state) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.FormatException, system.componentmodel.Win32Exception, system.collections.generic.KeyNotFoundException, system.runtime.interopservices.ExternalException, system.componentmodel.InvalidEnumArgumentException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("DrawRadioButton", g == null ? null : g.getJCOInstance(), glyphLocation == null ? null : glyphLocation.getJCOInstance(), textBounds == null ? null : textBounds.getJCOInstance(), radioButtonText, font == null ? null : font.getJCOInstance(), flags == null ? null : flags.getJCOInstance(), focused, state == null ? null : state.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -223,7 +231,7 @@ public class RadioButtonRenderer extends NetObject  {
 
     public static void DrawRadioButton(Graphics g, Point glyphLocation, Rectangle textBounds, java.lang.String radioButtonText, Font font, TextFormatFlags flags, Image image, Rectangle imageBounds, boolean focused, RadioButtonState state) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.FormatException, system.componentmodel.Win32Exception, system.collections.generic.KeyNotFoundException, system.runtime.interopservices.ExternalException, system.componentmodel.InvalidEnumArgumentException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("DrawRadioButton", g == null ? null : g.getJCOInstance(), glyphLocation == null ? null : glyphLocation.getJCOInstance(), textBounds == null ? null : textBounds.getJCOInstance(), radioButtonText, font == null ? null : font.getJCOInstance(), flags == null ? null : flags.getJCOInstance(), image == null ? null : image.getJCOInstance(), imageBounds == null ? null : imageBounds.getJCOInstance(), focused, state == null ? null : state.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -233,7 +241,7 @@ public class RadioButtonRenderer extends NetObject  {
 
     public static void DrawRadioButton(Graphics g, Point glyphLocation, RadioButtonState state) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.collections.generic.KeyNotFoundException, system.componentmodel.Win32Exception, system.runtime.interopservices.ExternalException, system.componentmodel.InvalidEnumArgumentException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("DrawRadioButton", g == null ? null : g.getJCOInstance(), glyphLocation == null ? null : glyphLocation.getJCOInstance(), state == null ? null : state.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -247,9 +255,13 @@ public class RadioButtonRenderer extends NetObject  {
     
     public static boolean getRenderMatchingApplicationState() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectRenderMatchingApplicationState = null;
         try {
-            return (boolean)classType.Get("RenderMatchingApplicationState");
+            retObjectRenderMatchingApplicationState = classType.Get("RenderMatchingApplicationState");
+            return (boolean)retObjectRenderMatchingApplicationState;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectRenderMatchingApplicationState != null ? retObjectRenderMatchingApplicationState.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -257,7 +269,7 @@ public class RadioButtonRenderer extends NetObject  {
 
     public static void setRenderMatchingApplicationState(boolean RenderMatchingApplicationState) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Set("RenderMatchingApplicationState", RenderMatchingApplicationState);
         } catch (JCNativeException jcne) {

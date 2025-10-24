@@ -160,9 +160,13 @@ public class XamlBackgroundReader extends NetObject  {
     
     public boolean Read() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRead = null;
         try {
-            return (boolean)classInstance.Invoke("Read");
+            retObjectRead = classInstance.Invoke("Read");
+            return (boolean)retObjectRead;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectRead != null ? retObjectRead.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,7 +174,7 @@ public class XamlBackgroundReader extends NetObject  {
 
     public void StartThread() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("StartThread");
         } catch (JCNativeException jcne) {
@@ -180,7 +184,7 @@ public class XamlBackgroundReader extends NetObject  {
 
     public void StartThread(java.lang.String threadName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.security.SecurityException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("StartThread", threadName);
         } catch (JCNativeException jcne) {
@@ -194,9 +198,13 @@ public class XamlBackgroundReader extends NetObject  {
     
     public boolean getHasLineInfo() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHasLineInfo = null;
         try {
-            return (boolean)classInstance.Get("HasLineInfo");
+            retObjectHasLineInfo = classInstance.Get("HasLineInfo");
+            return (boolean)retObjectHasLineInfo;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectHasLineInfo != null ? retObjectHasLineInfo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -204,9 +212,20 @@ public class XamlBackgroundReader extends NetObject  {
 
     public int getLineNumber() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLineNumber = null;
         try {
-            return (int)classInstance.Get("LineNumber");
+            retObjectLineNumber = classInstance.Get("LineNumber");
+            return (int)retObjectLineNumber;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectLineNumber_ToString = retObjectLineNumber == null ? "null" : retObjectLineNumber.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectLineNumberNumber = (java.lang.Number)retObjectLineNumber;
+                return retObjectLineNumberNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectLineNumber != null ? retObjectLineNumber.getClass() : "null", retObjectLineNumber_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -214,9 +233,20 @@ public class XamlBackgroundReader extends NetObject  {
 
     public int getLinePosition() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLinePosition = null;
         try {
-            return (int)classInstance.Get("LinePosition");
+            retObjectLinePosition = classInstance.Get("LinePosition");
+            return (int)retObjectLinePosition;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectLinePosition_ToString = retObjectLinePosition == null ? "null" : retObjectLinePosition.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectLinePositionNumber = (java.lang.Number)retObjectLinePosition;
+                return retObjectLinePositionNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectLinePosition != null ? retObjectLinePosition.getClass() : "null", retObjectLinePosition_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -170,9 +170,13 @@ public class OraclePermissionAttribute extends CodeAccessSecurityAttribute  {
     
     public boolean ShouldSerializeConnectionString() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShouldSerializeConnectionString = null;
         try {
-            return (boolean)classInstance.Invoke("ShouldSerializeConnectionString");
+            retObjectShouldSerializeConnectionString = classInstance.Invoke("ShouldSerializeConnectionString");
+            return (boolean)retObjectShouldSerializeConnectionString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectShouldSerializeConnectionString != null ? retObjectShouldSerializeConnectionString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,9 +184,13 @@ public class OraclePermissionAttribute extends CodeAccessSecurityAttribute  {
 
     public boolean ShouldSerializeKeyRestrictions() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShouldSerializeKeyRestrictions = null;
         try {
-            return (boolean)classInstance.Invoke("ShouldSerializeKeyRestrictions");
+            retObjectShouldSerializeKeyRestrictions = classInstance.Invoke("ShouldSerializeKeyRestrictions");
+            return (boolean)retObjectShouldSerializeKeyRestrictions;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectShouldSerializeKeyRestrictions != null ? retObjectShouldSerializeKeyRestrictions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,10 +198,14 @@ public class OraclePermissionAttribute extends CodeAccessSecurityAttribute  {
 
     public IPermission CreatePermission() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.RankException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreatePermission = null;
         try {
-            JCObject objCreatePermission = (JCObject)classInstance.Invoke("CreatePermission");
+            retObjectCreatePermission = classInstance.Invoke("CreatePermission");
+            JCObject objCreatePermission = (JCObject)retObjectCreatePermission;
             return new IPermissionImplementation(objCreatePermission);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreatePermission != null ? retObjectCreatePermission.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -205,9 +217,13 @@ public class OraclePermissionAttribute extends CodeAccessSecurityAttribute  {
     
     public boolean getAllowBlankPassword() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAllowBlankPassword = null;
         try {
-            return (boolean)classInstance.Get("AllowBlankPassword");
+            retObjectAllowBlankPassword = classInstance.Get("AllowBlankPassword");
+            return (boolean)retObjectAllowBlankPassword;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAllowBlankPassword != null ? retObjectAllowBlankPassword.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -215,7 +231,7 @@ public class OraclePermissionAttribute extends CodeAccessSecurityAttribute  {
 
     public void setAllowBlankPassword(boolean AllowBlankPassword) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AllowBlankPassword", AllowBlankPassword);
         } catch (JCNativeException jcne) {
@@ -225,10 +241,14 @@ public class OraclePermissionAttribute extends CodeAccessSecurityAttribute  {
 
     public KeyRestrictionBehavior getKeyRestrictionBehavior() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectKeyRestrictionBehavior = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("KeyRestrictionBehavior");
+            retObjectKeyRestrictionBehavior = classInstance.Get("KeyRestrictionBehavior");
+            JCObject val = (JCObject)retObjectKeyRestrictionBehavior;
             return new KeyRestrictionBehavior(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectKeyRestrictionBehavior != null ? retObjectKeyRestrictionBehavior.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -236,7 +256,7 @@ public class OraclePermissionAttribute extends CodeAccessSecurityAttribute  {
 
     public void setKeyRestrictionBehavior(KeyRestrictionBehavior KeyRestrictionBehavior) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("KeyRestrictionBehavior", KeyRestrictionBehavior == null ? null : KeyRestrictionBehavior.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -246,9 +266,13 @@ public class OraclePermissionAttribute extends CodeAccessSecurityAttribute  {
 
     public java.lang.String getConnectionString() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConnectionString = null;
         try {
-            return (java.lang.String)classInstance.Get("ConnectionString");
+            retObjectConnectionString = classInstance.Get("ConnectionString");
+            return (java.lang.String)retObjectConnectionString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectConnectionString != null ? retObjectConnectionString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -256,7 +280,7 @@ public class OraclePermissionAttribute extends CodeAccessSecurityAttribute  {
 
     public void setConnectionString(java.lang.String ConnectionString) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ConnectionString", ConnectionString);
         } catch (JCNativeException jcne) {
@@ -266,9 +290,13 @@ public class OraclePermissionAttribute extends CodeAccessSecurityAttribute  {
 
     public java.lang.String getKeyRestrictions() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectKeyRestrictions = null;
         try {
-            return (java.lang.String)classInstance.Get("KeyRestrictions");
+            retObjectKeyRestrictions = classInstance.Get("KeyRestrictions");
+            return (java.lang.String)retObjectKeyRestrictions;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectKeyRestrictions != null ? retObjectKeyRestrictions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -276,7 +304,7 @@ public class OraclePermissionAttribute extends CodeAccessSecurityAttribute  {
 
     public void setKeyRestrictions(java.lang.String KeyRestrictions) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("KeyRestrictions", KeyRestrictions);
         } catch (JCNativeException jcne) {

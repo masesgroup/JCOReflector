@@ -166,10 +166,14 @@ public class BindableTemplateBuilder extends TemplateBuilder  {
     
     public IOrderedDictionary ExtractValues(Control container) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExtractValues = null;
         try {
-            JCObject objExtractValues = (JCObject)classInstance.Invoke("ExtractValues", container == null ? null : container.getJCOInstance());
+            retObjectExtractValues = classInstance.Invoke("ExtractValues", container == null ? null : container.getJCOInstance());
+            JCObject objExtractValues = (JCObject)retObjectExtractValues;
             return new IOrderedDictionaryImplementation(objExtractValues);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExtractValues != null ? retObjectExtractValues.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,7 +181,7 @@ public class BindableTemplateBuilder extends TemplateBuilder  {
 
     public void OnAppendToParentBuilder(ControlBuilder parentBuilder) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.FormatException, system.reflection.AmbiguousMatchException, system.OverflowException, system.text.regularexpressions.RegexMatchTimeoutException, system.TypeLoadException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.web.HttpParseException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("OnAppendToParentBuilder", parentBuilder == null ? null : parentBuilder.getJCOInstance());
         } catch (JCNativeException jcne) {

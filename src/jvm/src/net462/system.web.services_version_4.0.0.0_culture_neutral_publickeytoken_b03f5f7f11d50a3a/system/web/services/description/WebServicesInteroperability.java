@@ -160,9 +160,13 @@ public class WebServicesInteroperability extends NetObject  {
     
     public static boolean CheckConformance(WsiProfiles claims, ServiceDescription description, BasicProfileViolationCollection violations) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.xml.schema.XmlSchemaException, system.MulticastNotSupportedException, system.RankException, system.UriFormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCheckConformance = null;
         try {
-            return (boolean)classType.Invoke("CheckConformance", claims == null ? null : claims.getJCOInstance(), description == null ? null : description.getJCOInstance(), violations == null ? null : violations.getJCOInstance());
+            retObjectCheckConformance = classType.Invoke("CheckConformance", claims == null ? null : claims.getJCOInstance(), description == null ? null : description.getJCOInstance(), violations == null ? null : violations.getJCOInstance());
+            return (boolean)retObjectCheckConformance;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCheckConformance != null ? retObjectCheckConformance.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,9 +174,13 @@ public class WebServicesInteroperability extends NetObject  {
 
     public static boolean CheckConformance(WsiProfiles claims, ServiceDescriptionCollection descriptions, BasicProfileViolationCollection violations) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.xml.schema.XmlSchemaException, system.xml.XmlException, system.MulticastNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCheckConformance = null;
         try {
-            return (boolean)classType.Invoke("CheckConformance", claims == null ? null : claims.getJCOInstance(), descriptions == null ? null : descriptions.getJCOInstance(), violations == null ? null : violations.getJCOInstance());
+            retObjectCheckConformance = classType.Invoke("CheckConformance", claims == null ? null : claims.getJCOInstance(), descriptions == null ? null : descriptions.getJCOInstance(), violations == null ? null : violations.getJCOInstance());
+            return (boolean)retObjectCheckConformance;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCheckConformance != null ? retObjectCheckConformance.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,9 +188,13 @@ public class WebServicesInteroperability extends NetObject  {
 
     public static boolean CheckConformance(WsiProfiles claims, WebReference webReference, BasicProfileViolationCollection violations) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.xml.schema.XmlSchemaException, system.xml.XmlException, system.MulticastNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCheckConformance = null;
         try {
-            return (boolean)classType.Invoke("CheckConformance", claims == null ? null : claims.getJCOInstance(), webReference == null ? null : webReference.getJCOInstance(), violations == null ? null : violations.getJCOInstance());
+            retObjectCheckConformance = classType.Invoke("CheckConformance", claims == null ? null : claims.getJCOInstance(), webReference == null ? null : webReference.getJCOInstance(), violations == null ? null : violations.getJCOInstance());
+            return (boolean)retObjectCheckConformance;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCheckConformance != null ? retObjectCheckConformance.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

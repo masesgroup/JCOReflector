@@ -171,10 +171,14 @@ public class Claim extends NetObject  {
     
     public static Claim CreateDenyOnlyWindowsSidClaim(SecurityIdentifier sid) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateDenyOnlyWindowsSidClaim = null;
         try {
-            JCObject objCreateDenyOnlyWindowsSidClaim = (JCObject)classType.Invoke("CreateDenyOnlyWindowsSidClaim", sid == null ? null : sid.getJCOInstance());
+            retObjectCreateDenyOnlyWindowsSidClaim = classType.Invoke("CreateDenyOnlyWindowsSidClaim", sid == null ? null : sid.getJCOInstance());
+            JCObject objCreateDenyOnlyWindowsSidClaim = (JCObject)retObjectCreateDenyOnlyWindowsSidClaim;
             return new Claim(objCreateDenyOnlyWindowsSidClaim);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateDenyOnlyWindowsSidClaim != null ? retObjectCreateDenyOnlyWindowsSidClaim.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,10 +186,14 @@ public class Claim extends NetObject  {
 
     public static Claim CreateDnsClaim(java.lang.String dns) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateDnsClaim = null;
         try {
-            JCObject objCreateDnsClaim = (JCObject)classType.Invoke("CreateDnsClaim", dns);
+            retObjectCreateDnsClaim = classType.Invoke("CreateDnsClaim", dns);
+            JCObject objCreateDnsClaim = (JCObject)retObjectCreateDnsClaim;
             return new Claim(objCreateDnsClaim);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateDnsClaim != null ? retObjectCreateDnsClaim.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,10 +201,14 @@ public class Claim extends NetObject  {
 
     public static Claim CreateHashClaim(byte[] hash) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateHashClaim = null;
         try {
-            JCObject objCreateHashClaim = (JCObject)classType.Invoke("CreateHashClaim", (java.lang.Object)hash);
+            retObjectCreateHashClaim = classType.Invoke("CreateHashClaim", (java.lang.Object)hash);
+            JCObject objCreateHashClaim = (JCObject)retObjectCreateHashClaim;
             return new Claim(objCreateHashClaim);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateHashClaim != null ? retObjectCreateHashClaim.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -204,10 +216,14 @@ public class Claim extends NetObject  {
 
     public static Claim CreateHashClaim(JCORefOut dupParam0) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateHashClaim = null;
         try {
-            JCObject objCreateHashClaim = (JCObject)classType.Invoke("CreateHashClaim", (java.lang.Object)dupParam0.getJCRefOut());
+            retObjectCreateHashClaim = classType.Invoke("CreateHashClaim", (java.lang.Object)dupParam0.getJCRefOut());
+            JCObject objCreateHashClaim = (JCObject)retObjectCreateHashClaim;
             return new Claim(objCreateHashClaim);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateHashClaim != null ? retObjectCreateHashClaim.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -215,10 +231,14 @@ public class Claim extends NetObject  {
 
     public static Claim CreateMailAddressClaim(MailAddress mailAddress) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateMailAddressClaim = null;
         try {
-            JCObject objCreateMailAddressClaim = (JCObject)classType.Invoke("CreateMailAddressClaim", mailAddress == null ? null : mailAddress.getJCOInstance());
+            retObjectCreateMailAddressClaim = classType.Invoke("CreateMailAddressClaim", mailAddress == null ? null : mailAddress.getJCOInstance());
+            JCObject objCreateMailAddressClaim = (JCObject)retObjectCreateMailAddressClaim;
             return new Claim(objCreateMailAddressClaim);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateMailAddressClaim != null ? retObjectCreateMailAddressClaim.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -226,10 +246,14 @@ public class Claim extends NetObject  {
 
     public static Claim CreateNameClaim(java.lang.String name) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateNameClaim = null;
         try {
-            JCObject objCreateNameClaim = (JCObject)classType.Invoke("CreateNameClaim", name);
+            retObjectCreateNameClaim = classType.Invoke("CreateNameClaim", name);
+            JCObject objCreateNameClaim = (JCObject)retObjectCreateNameClaim;
             return new Claim(objCreateNameClaim);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateNameClaim != null ? retObjectCreateNameClaim.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -237,10 +261,14 @@ public class Claim extends NetObject  {
 
     public static Claim CreateRsaClaim(RSA rsa) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateRsaClaim = null;
         try {
-            JCObject objCreateRsaClaim = (JCObject)classType.Invoke("CreateRsaClaim", rsa == null ? null : rsa.getJCOInstance());
+            retObjectCreateRsaClaim = classType.Invoke("CreateRsaClaim", rsa == null ? null : rsa.getJCOInstance());
+            JCObject objCreateRsaClaim = (JCObject)retObjectCreateRsaClaim;
             return new Claim(objCreateRsaClaim);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateRsaClaim != null ? retObjectCreateRsaClaim.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -248,10 +276,14 @@ public class Claim extends NetObject  {
 
     public static Claim CreateSpnClaim(java.lang.String spn) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateSpnClaim = null;
         try {
-            JCObject objCreateSpnClaim = (JCObject)classType.Invoke("CreateSpnClaim", spn);
+            retObjectCreateSpnClaim = classType.Invoke("CreateSpnClaim", spn);
+            JCObject objCreateSpnClaim = (JCObject)retObjectCreateSpnClaim;
             return new Claim(objCreateSpnClaim);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateSpnClaim != null ? retObjectCreateSpnClaim.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -259,10 +291,14 @@ public class Claim extends NetObject  {
 
     public static Claim CreateThumbprintClaim(byte[] thumbprint) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateThumbprintClaim = null;
         try {
-            JCObject objCreateThumbprintClaim = (JCObject)classType.Invoke("CreateThumbprintClaim", (java.lang.Object)thumbprint);
+            retObjectCreateThumbprintClaim = classType.Invoke("CreateThumbprintClaim", (java.lang.Object)thumbprint);
+            JCObject objCreateThumbprintClaim = (JCObject)retObjectCreateThumbprintClaim;
             return new Claim(objCreateThumbprintClaim);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateThumbprintClaim != null ? retObjectCreateThumbprintClaim.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -270,10 +306,14 @@ public class Claim extends NetObject  {
 
     public static Claim CreateThumbprintClaim(JCORefOut dupParam0) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateThumbprintClaim = null;
         try {
-            JCObject objCreateThumbprintClaim = (JCObject)classType.Invoke("CreateThumbprintClaim", (java.lang.Object)dupParam0.getJCRefOut());
+            retObjectCreateThumbprintClaim = classType.Invoke("CreateThumbprintClaim", (java.lang.Object)dupParam0.getJCRefOut());
+            JCObject objCreateThumbprintClaim = (JCObject)retObjectCreateThumbprintClaim;
             return new Claim(objCreateThumbprintClaim);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateThumbprintClaim != null ? retObjectCreateThumbprintClaim.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -281,10 +321,14 @@ public class Claim extends NetObject  {
 
     public static Claim CreateUpnClaim(java.lang.String upn) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateUpnClaim = null;
         try {
-            JCObject objCreateUpnClaim = (JCObject)classType.Invoke("CreateUpnClaim", upn);
+            retObjectCreateUpnClaim = classType.Invoke("CreateUpnClaim", upn);
+            JCObject objCreateUpnClaim = (JCObject)retObjectCreateUpnClaim;
             return new Claim(objCreateUpnClaim);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateUpnClaim != null ? retObjectCreateUpnClaim.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -292,10 +336,14 @@ public class Claim extends NetObject  {
 
     public static Claim CreateUriClaim(Uri uri) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateUriClaim = null;
         try {
-            JCObject objCreateUriClaim = (JCObject)classType.Invoke("CreateUriClaim", uri == null ? null : uri.getJCOInstance());
+            retObjectCreateUriClaim = classType.Invoke("CreateUriClaim", uri == null ? null : uri.getJCOInstance());
+            JCObject objCreateUriClaim = (JCObject)retObjectCreateUriClaim;
             return new Claim(objCreateUriClaim);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateUriClaim != null ? retObjectCreateUriClaim.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -303,10 +351,14 @@ public class Claim extends NetObject  {
 
     public static Claim CreateWindowsSidClaim(SecurityIdentifier sid) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateWindowsSidClaim = null;
         try {
-            JCObject objCreateWindowsSidClaim = (JCObject)classType.Invoke("CreateWindowsSidClaim", sid == null ? null : sid.getJCOInstance());
+            retObjectCreateWindowsSidClaim = classType.Invoke("CreateWindowsSidClaim", sid == null ? null : sid.getJCOInstance());
+            JCObject objCreateWindowsSidClaim = (JCObject)retObjectCreateWindowsSidClaim;
             return new Claim(objCreateWindowsSidClaim);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateWindowsSidClaim != null ? retObjectCreateWindowsSidClaim.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -314,10 +366,14 @@ public class Claim extends NetObject  {
 
     public static Claim CreateX500DistinguishedNameClaim(X500DistinguishedName x500DistinguishedName) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateX500DistinguishedNameClaim = null;
         try {
-            JCObject objCreateX500DistinguishedNameClaim = (JCObject)classType.Invoke("CreateX500DistinguishedNameClaim", x500DistinguishedName == null ? null : x500DistinguishedName.getJCOInstance());
+            retObjectCreateX500DistinguishedNameClaim = classType.Invoke("CreateX500DistinguishedNameClaim", x500DistinguishedName == null ? null : x500DistinguishedName.getJCOInstance());
+            JCObject objCreateX500DistinguishedNameClaim = (JCObject)retObjectCreateX500DistinguishedNameClaim;
             return new Claim(objCreateX500DistinguishedNameClaim);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateX500DistinguishedNameClaim != null ? retObjectCreateX500DistinguishedNameClaim.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -329,10 +385,14 @@ public class Claim extends NetObject  {
     
     public static Claim getSystem() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSystem = null;
         try {
-            JCObject val = (JCObject)classType.Get("System");
+            retObjectSystem = classType.Get("System");
+            JCObject val = (JCObject)retObjectSystem;
             return new Claim(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSystem != null ? retObjectSystem.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -340,10 +400,14 @@ public class Claim extends NetObject  {
 
     public NetObject getResource() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResource = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Resource");
+            retObjectResource = classInstance.Get("Resource");
+            JCObject val = (JCObject)retObjectResource;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectResource != null ? retObjectResource.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -351,9 +415,13 @@ public class Claim extends NetObject  {
 
     public java.lang.String getClaimType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClaimType = null;
         try {
-            return (java.lang.String)classInstance.Get("ClaimType");
+            retObjectClaimType = classInstance.Get("ClaimType");
+            return (java.lang.String)retObjectClaimType;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectClaimType != null ? retObjectClaimType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -361,9 +429,13 @@ public class Claim extends NetObject  {
 
     public java.lang.String getRight() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRight = null;
         try {
-            return (java.lang.String)classInstance.Get("Right");
+            retObjectRight = classInstance.Get("Right");
+            return (java.lang.String)retObjectRight;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectRight != null ? retObjectRight.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

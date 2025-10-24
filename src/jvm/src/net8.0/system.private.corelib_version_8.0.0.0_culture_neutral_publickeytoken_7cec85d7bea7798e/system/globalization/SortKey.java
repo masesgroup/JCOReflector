@@ -156,9 +156,20 @@ public class SortKey extends NetObject  {
     
     public static int Compare(SortKey sortkey1, SortKey sortkey2) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCompare = null;
         try {
-            return (int)classType.Invoke("Compare", sortkey1 == null ? null : sortkey1.getJCOInstance(), sortkey2 == null ? null : sortkey2.getJCOInstance());
+            retObjectCompare = classType.Invoke("Compare", sortkey1 == null ? null : sortkey1.getJCOInstance(), sortkey2 == null ? null : sortkey2.getJCOInstance());
+            return (int)retObjectCompare;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCompare_ToString = retObjectCompare == null ? "null" : retObjectCompare.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectCompareNumber = (java.lang.Number)retObjectCompare;
+                return retObjectCompareNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCompare != null ? retObjectCompare.getClass() : "null", retObjectCompare_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,10 +181,12 @@ public class SortKey extends NetObject  {
     
     public byte[] getKeyData() throws Throwable, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectKeyData = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("KeyData");
+            retObjectKeyData = classInstance.Get("KeyData");
+            JCObject resultingObjects = (JCObject)retObjectKeyData;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -182,6 +195,8 @@ public class SortKey extends NetObject  {
 				resultingArray[indexKeyData] = (byte)resultingArrayList.get(indexKeyData);
 			}
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into JCObject", retObjectKeyData != null ? retObjectKeyData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -189,9 +204,13 @@ public class SortKey extends NetObject  {
 
     public java.lang.String getOriginalString() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOriginalString = null;
         try {
-            return (java.lang.String)classInstance.Get("OriginalString");
+            retObjectOriginalString = classInstance.Get("OriginalString");
+            return (java.lang.String)retObjectOriginalString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectOriginalString != null ? retObjectOriginalString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

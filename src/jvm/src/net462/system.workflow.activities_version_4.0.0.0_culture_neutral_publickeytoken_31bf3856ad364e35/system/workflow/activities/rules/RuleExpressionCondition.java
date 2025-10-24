@@ -195,9 +195,13 @@ public class RuleExpressionCondition extends RuleCondition  {
     
     public boolean Evaluate(RuleExecution execution) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.InvalidCastException, system.OverflowException, system.workflow.activities.rules.RuleEvaluationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEvaluate = null;
         try {
-            return (boolean)classInstance.Invoke("Evaluate", execution == null ? null : execution.getJCOInstance());
+            retObjectEvaluate = classInstance.Invoke("Evaluate", execution == null ? null : execution.getJCOInstance());
+            return (boolean)retObjectEvaluate;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectEvaluate != null ? retObjectEvaluate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -205,9 +209,13 @@ public class RuleExpressionCondition extends RuleCondition  {
 
     public boolean Validate(RuleValidation validation) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValidate = null;
         try {
-            return (boolean)classInstance.Invoke("Validate", validation == null ? null : validation.getJCOInstance());
+            retObjectValidate = classInstance.Invoke("Validate", validation == null ? null : validation.getJCOInstance());
+            return (boolean)retObjectValidate;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectValidate != null ? retObjectValidate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -215,10 +223,14 @@ public class RuleExpressionCondition extends RuleCondition  {
 
     public RuleCondition Clone() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClone = null;
         try {
-            JCObject objClone = (JCObject)classInstance.Invoke("Clone");
+            retObjectClone = classInstance.Invoke("Clone");
+            JCObject objClone = (JCObject)retObjectClone;
             return new RuleCondition(objClone);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClone != null ? retObjectClone.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -226,7 +238,7 @@ public class RuleExpressionCondition extends RuleCondition  {
 
     public void OnRuntimeInitialized() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("OnRuntimeInitialized");
         } catch (JCNativeException jcne) {
@@ -240,10 +252,14 @@ public class RuleExpressionCondition extends RuleCondition  {
     
     public CodeExpression getExpression() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExpression = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Expression");
+            retObjectExpression = classInstance.Get("Expression");
+            JCObject val = (JCObject)retObjectExpression;
             return new CodeExpression(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExpression != null ? retObjectExpression.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -251,7 +267,7 @@ public class RuleExpressionCondition extends RuleCondition  {
 
     public void setExpression(CodeExpression Expression) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Expression", Expression == null ? null : Expression.getJCOInstance());
         } catch (JCNativeException jcne) {

@@ -165,7 +165,7 @@ public class IEventSourceImplementation extends NetObject implements IEventSourc
 
     public void addAnyEventRaised(AnyEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("AnyEventRaised", handler);
         } catch (JCNativeException jcne) {
@@ -175,7 +175,7 @@ public class IEventSourceImplementation extends NetObject implements IEventSourc
 
     public void removeAnyEventRaised(AnyEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("AnyEventRaised", handler);
         } catch (JCNativeException jcne) {
@@ -185,7 +185,7 @@ public class IEventSourceImplementation extends NetObject implements IEventSourc
 
     public void addErrorRaised(BuildErrorEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ErrorRaised", handler);
         } catch (JCNativeException jcne) {
@@ -195,7 +195,7 @@ public class IEventSourceImplementation extends NetObject implements IEventSourc
 
     public void removeErrorRaised(BuildErrorEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ErrorRaised", handler);
         } catch (JCNativeException jcne) {
@@ -205,7 +205,7 @@ public class IEventSourceImplementation extends NetObject implements IEventSourc
 
     public void addBuildFinished(BuildFinishedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("BuildFinished", handler);
         } catch (JCNativeException jcne) {
@@ -215,7 +215,7 @@ public class IEventSourceImplementation extends NetObject implements IEventSourc
 
     public void removeBuildFinished(BuildFinishedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("BuildFinished", handler);
         } catch (JCNativeException jcne) {
@@ -225,7 +225,7 @@ public class IEventSourceImplementation extends NetObject implements IEventSourc
 
     public void addMessageRaised(BuildMessageEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("MessageRaised", handler);
         } catch (JCNativeException jcne) {
@@ -235,7 +235,7 @@ public class IEventSourceImplementation extends NetObject implements IEventSourc
 
     public void removeMessageRaised(BuildMessageEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("MessageRaised", handler);
         } catch (JCNativeException jcne) {
@@ -245,7 +245,7 @@ public class IEventSourceImplementation extends NetObject implements IEventSourc
 
     public void addBuildStarted(BuildStartedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("BuildStarted", handler);
         } catch (JCNativeException jcne) {
@@ -255,7 +255,7 @@ public class IEventSourceImplementation extends NetObject implements IEventSourc
 
     public void removeBuildStarted(BuildStartedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("BuildStarted", handler);
         } catch (JCNativeException jcne) {
@@ -265,7 +265,7 @@ public class IEventSourceImplementation extends NetObject implements IEventSourc
 
     public void addStatusEventRaised(BuildStatusEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("StatusEventRaised", handler);
         } catch (JCNativeException jcne) {
@@ -275,7 +275,7 @@ public class IEventSourceImplementation extends NetObject implements IEventSourc
 
     public void removeStatusEventRaised(BuildStatusEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("StatusEventRaised", handler);
         } catch (JCNativeException jcne) {
@@ -285,7 +285,7 @@ public class IEventSourceImplementation extends NetObject implements IEventSourc
 
     public void addWarningRaised(BuildWarningEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("WarningRaised", handler);
         } catch (JCNativeException jcne) {
@@ -295,7 +295,7 @@ public class IEventSourceImplementation extends NetObject implements IEventSourc
 
     public void removeWarningRaised(BuildWarningEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("WarningRaised", handler);
         } catch (JCNativeException jcne) {
@@ -305,7 +305,7 @@ public class IEventSourceImplementation extends NetObject implements IEventSourc
 
     public void addCustomEventRaised(CustomBuildEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("CustomEventRaised", handler);
         } catch (JCNativeException jcne) {
@@ -315,7 +315,7 @@ public class IEventSourceImplementation extends NetObject implements IEventSourc
 
     public void removeCustomEventRaised(CustomBuildEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("CustomEventRaised", handler);
         } catch (JCNativeException jcne) {
@@ -325,7 +325,7 @@ public class IEventSourceImplementation extends NetObject implements IEventSourc
 
     public void addProjectFinished(ProjectFinishedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ProjectFinished", handler);
         } catch (JCNativeException jcne) {
@@ -335,7 +335,7 @@ public class IEventSourceImplementation extends NetObject implements IEventSourc
 
     public void removeProjectFinished(ProjectFinishedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ProjectFinished", handler);
         } catch (JCNativeException jcne) {
@@ -345,7 +345,7 @@ public class IEventSourceImplementation extends NetObject implements IEventSourc
 
     public void addProjectStarted(ProjectStartedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ProjectStarted", handler);
         } catch (JCNativeException jcne) {
@@ -355,7 +355,7 @@ public class IEventSourceImplementation extends NetObject implements IEventSourc
 
     public void removeProjectStarted(ProjectStartedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ProjectStarted", handler);
         } catch (JCNativeException jcne) {
@@ -365,7 +365,7 @@ public class IEventSourceImplementation extends NetObject implements IEventSourc
 
     public void addTargetFinished(TargetFinishedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("TargetFinished", handler);
         } catch (JCNativeException jcne) {
@@ -375,7 +375,7 @@ public class IEventSourceImplementation extends NetObject implements IEventSourc
 
     public void removeTargetFinished(TargetFinishedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("TargetFinished", handler);
         } catch (JCNativeException jcne) {
@@ -385,7 +385,7 @@ public class IEventSourceImplementation extends NetObject implements IEventSourc
 
     public void addTargetStarted(TargetStartedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("TargetStarted", handler);
         } catch (JCNativeException jcne) {
@@ -395,7 +395,7 @@ public class IEventSourceImplementation extends NetObject implements IEventSourc
 
     public void removeTargetStarted(TargetStartedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("TargetStarted", handler);
         } catch (JCNativeException jcne) {
@@ -405,7 +405,7 @@ public class IEventSourceImplementation extends NetObject implements IEventSourc
 
     public void addTaskFinished(TaskFinishedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("TaskFinished", handler);
         } catch (JCNativeException jcne) {
@@ -415,7 +415,7 @@ public class IEventSourceImplementation extends NetObject implements IEventSourc
 
     public void removeTaskFinished(TaskFinishedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("TaskFinished", handler);
         } catch (JCNativeException jcne) {
@@ -425,7 +425,7 @@ public class IEventSourceImplementation extends NetObject implements IEventSourc
 
     public void addTaskStarted(TaskStartedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("TaskStarted", handler);
         } catch (JCNativeException jcne) {
@@ -435,7 +435,7 @@ public class IEventSourceImplementation extends NetObject implements IEventSourc
 
     public void removeTaskStarted(TaskStartedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("TaskStarted", handler);
         } catch (JCNativeException jcne) {

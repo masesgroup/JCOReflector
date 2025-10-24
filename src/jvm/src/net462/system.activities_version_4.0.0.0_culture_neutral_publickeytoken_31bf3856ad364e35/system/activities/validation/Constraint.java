@@ -156,7 +156,7 @@ public class Constraint extends NativeActivity  {
     
     public static void AddValidationError(NativeActivityContext context, ValidationError error) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("AddValidationError", context == null ? null : context.getJCOInstance(), error == null ? null : error.getJCOInstance());
         } catch (JCNativeException jcne) {

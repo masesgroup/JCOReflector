@@ -176,9 +176,13 @@ public class WebWorkflowRole extends WorkflowRole  {
     
     public boolean IncludesIdentity(java.lang.String identity) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.configuration.ConfigurationException, system.configuration.provider.ProviderException, system.TypeLoadException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIncludesIdentity = null;
         try {
-            return (boolean)classInstance.Invoke("IncludesIdentity", identity);
+            retObjectIncludesIdentity = classInstance.Invoke("IncludesIdentity", identity);
+            return (boolean)retObjectIncludesIdentity;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIncludesIdentity != null ? retObjectIncludesIdentity.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,9 +194,13 @@ public class WebWorkflowRole extends WorkflowRole  {
     
     public java.lang.String getRoleProvider() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRoleProvider = null;
         try {
-            return (java.lang.String)classInstance.Get("RoleProvider");
+            retObjectRoleProvider = classInstance.Get("RoleProvider");
+            return (java.lang.String)retObjectRoleProvider;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectRoleProvider != null ? retObjectRoleProvider.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,7 +208,7 @@ public class WebWorkflowRole extends WorkflowRole  {
 
     public void setRoleProvider(java.lang.String RoleProvider) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RoleProvider", RoleProvider);
         } catch (JCNativeException jcne) {

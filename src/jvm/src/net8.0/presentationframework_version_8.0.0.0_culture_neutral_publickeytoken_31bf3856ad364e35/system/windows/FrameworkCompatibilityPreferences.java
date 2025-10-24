@@ -157,9 +157,13 @@ public class FrameworkCompatibilityPreferences extends NetObject  {
     
     public static boolean getAreInactiveSelectionHighlightBrushKeysSupported() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAreInactiveSelectionHighlightBrushKeysSupported = null;
         try {
-            return (boolean)classType.Get("AreInactiveSelectionHighlightBrushKeysSupported");
+            retObjectAreInactiveSelectionHighlightBrushKeysSupported = classType.Get("AreInactiveSelectionHighlightBrushKeysSupported");
+            return (boolean)retObjectAreInactiveSelectionHighlightBrushKeysSupported;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAreInactiveSelectionHighlightBrushKeysSupported != null ? retObjectAreInactiveSelectionHighlightBrushKeysSupported.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -167,7 +171,7 @@ public class FrameworkCompatibilityPreferences extends NetObject  {
 
     public static void setAreInactiveSelectionHighlightBrushKeysSupported(boolean AreInactiveSelectionHighlightBrushKeysSupported) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.ArgumentException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Set("AreInactiveSelectionHighlightBrushKeysSupported", AreInactiveSelectionHighlightBrushKeysSupported);
         } catch (JCNativeException jcne) {
@@ -177,9 +181,13 @@ public class FrameworkCompatibilityPreferences extends NetObject  {
 
     public static boolean getKeepTextBoxDisplaySynchronizedWithTextProperty() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectKeepTextBoxDisplaySynchronizedWithTextProperty = null;
         try {
-            return (boolean)classType.Get("KeepTextBoxDisplaySynchronizedWithTextProperty");
+            retObjectKeepTextBoxDisplaySynchronizedWithTextProperty = classType.Get("KeepTextBoxDisplaySynchronizedWithTextProperty");
+            return (boolean)retObjectKeepTextBoxDisplaySynchronizedWithTextProperty;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectKeepTextBoxDisplaySynchronizedWithTextProperty != null ? retObjectKeepTextBoxDisplaySynchronizedWithTextProperty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,7 +195,7 @@ public class FrameworkCompatibilityPreferences extends NetObject  {
 
     public static void setKeepTextBoxDisplaySynchronizedWithTextProperty(boolean KeepTextBoxDisplaySynchronizedWithTextProperty) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.ArgumentException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Set("KeepTextBoxDisplaySynchronizedWithTextProperty", KeepTextBoxDisplaySynchronizedWithTextProperty);
         } catch (JCNativeException jcne) {
@@ -197,9 +205,13 @@ public class FrameworkCompatibilityPreferences extends NetObject  {
 
     public static boolean getShouldThrowOnCopyOrCutFailure() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectShouldThrowOnCopyOrCutFailure = null;
         try {
-            return (boolean)classType.Get("ShouldThrowOnCopyOrCutFailure");
+            retObjectShouldThrowOnCopyOrCutFailure = classType.Get("ShouldThrowOnCopyOrCutFailure");
+            return (boolean)retObjectShouldThrowOnCopyOrCutFailure;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectShouldThrowOnCopyOrCutFailure != null ? retObjectShouldThrowOnCopyOrCutFailure.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -207,7 +219,7 @@ public class FrameworkCompatibilityPreferences extends NetObject  {
 
     public static void setShouldThrowOnCopyOrCutFailure(boolean ShouldThrowOnCopyOrCutFailure) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Set("ShouldThrowOnCopyOrCutFailure", ShouldThrowOnCopyOrCutFailure);
         } catch (JCNativeException jcne) {

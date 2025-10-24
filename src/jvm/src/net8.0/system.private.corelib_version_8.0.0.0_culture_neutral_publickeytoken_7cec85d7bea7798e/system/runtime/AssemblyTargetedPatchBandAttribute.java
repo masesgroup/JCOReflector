@@ -170,9 +170,13 @@ public class AssemblyTargetedPatchBandAttribute extends Attribute  {
     
     public java.lang.String getTargetedPatchBand() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTargetedPatchBand = null;
         try {
-            return (java.lang.String)classInstance.Get("TargetedPatchBand");
+            retObjectTargetedPatchBand = classInstance.Get("TargetedPatchBand");
+            return (java.lang.String)retObjectTargetedPatchBand;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectTargetedPatchBand != null ? retObjectTargetedPatchBand.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

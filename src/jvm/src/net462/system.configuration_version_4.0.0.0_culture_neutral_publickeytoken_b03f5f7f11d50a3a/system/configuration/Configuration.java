@@ -165,10 +165,14 @@ public class Configuration extends NetObject  {
     
     public ConfigurationSection GetSection(java.lang.String sectionName) throws Throwable, system.configuration.ConfigurationErrorsException, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.NotImplementedException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSection = null;
         try {
-            JCObject objGetSection = (JCObject)classInstance.Invoke("GetSection", sectionName);
+            retObjectGetSection = classInstance.Invoke("GetSection", sectionName);
+            JCObject objGetSection = (JCObject)retObjectGetSection;
             return new ConfigurationSection(objGetSection);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSection != null ? retObjectGetSection.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,10 +180,14 @@ public class Configuration extends NetObject  {
 
     public ConfigurationSectionGroup GetSectionGroup(java.lang.String sectionGroupName) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.configuration.ConfigurationErrorsException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.TypeLoadException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSectionGroup = null;
         try {
-            JCObject objGetSectionGroup = (JCObject)classInstance.Invoke("GetSectionGroup", sectionGroupName);
+            retObjectGetSectionGroup = classInstance.Invoke("GetSectionGroup", sectionGroupName);
+            JCObject objGetSectionGroup = (JCObject)retObjectGetSectionGroup;
             return new ConfigurationSectionGroup(objGetSectionGroup);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSectionGroup != null ? retObjectGetSectionGroup.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,7 +195,7 @@ public class Configuration extends NetObject  {
 
     public void Save() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.io.PathTooLongException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException, system.security.SecurityException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NullReferenceException, system.configuration.ConfigurationException, system.xml.XmlException, system.io.IOException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Save");
         } catch (JCNativeException jcne) {
@@ -197,7 +205,7 @@ public class Configuration extends NetObject  {
 
     public void Save(ConfigurationSaveMode saveMode) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.io.PathTooLongException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException, system.security.SecurityException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NullReferenceException, system.configuration.ConfigurationException, system.xml.XmlException, system.io.IOException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Save", saveMode == null ? null : saveMode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -207,7 +215,7 @@ public class Configuration extends NetObject  {
 
     public void Save(ConfigurationSaveMode saveMode, boolean forceSaveAll) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.io.PathTooLongException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException, system.security.SecurityException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NullReferenceException, system.configuration.ConfigurationException, system.xml.XmlException, system.io.IOException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Save", saveMode == null ? null : saveMode.getJCOInstance(), forceSaveAll);
         } catch (JCNativeException jcne) {
@@ -217,7 +225,7 @@ public class Configuration extends NetObject  {
 
     public void SaveAs(java.lang.String filename) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NotSupportedException, system.configuration.ConfigurationErrorsException, system.security.SecurityException, system.TypeLoadException, system.NullReferenceException, system.configuration.ConfigurationException, system.xml.XmlException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SaveAs", filename);
         } catch (JCNativeException jcne) {
@@ -227,7 +235,7 @@ public class Configuration extends NetObject  {
 
     public void SaveAs(java.lang.String filename, ConfigurationSaveMode saveMode) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NotSupportedException, system.configuration.ConfigurationErrorsException, system.security.SecurityException, system.TypeLoadException, system.NullReferenceException, system.configuration.ConfigurationException, system.xml.XmlException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SaveAs", filename, saveMode == null ? null : saveMode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -237,7 +245,7 @@ public class Configuration extends NetObject  {
 
     public void SaveAs(java.lang.String filename, ConfigurationSaveMode saveMode, boolean forceSaveAll) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.io.PathTooLongException, system.NotSupportedException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException, system.security.SecurityException, system.TypeLoadException, system.NullReferenceException, system.configuration.ConfigurationException, system.xml.XmlException, system.io.IOException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SaveAs", filename, saveMode == null ? null : saveMode.getJCOInstance(), forceSaveAll);
         } catch (JCNativeException jcne) {
@@ -251,9 +259,13 @@ public class Configuration extends NetObject  {
     
     public boolean getHasFile() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHasFile = null;
         try {
-            return (boolean)classInstance.Get("HasFile");
+            retObjectHasFile = classInstance.Get("HasFile");
+            return (boolean)retObjectHasFile;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectHasFile != null ? retObjectHasFile.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -261,9 +273,13 @@ public class Configuration extends NetObject  {
 
     public boolean getNamespaceDeclared() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNamespaceDeclared = null;
         try {
-            return (boolean)classInstance.Get("NamespaceDeclared");
+            retObjectNamespaceDeclared = classInstance.Get("NamespaceDeclared");
+            return (boolean)retObjectNamespaceDeclared;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectNamespaceDeclared != null ? retObjectNamespaceDeclared.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -271,7 +287,7 @@ public class Configuration extends NetObject  {
 
     public void setNamespaceDeclared(boolean NamespaceDeclared) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("NamespaceDeclared", NamespaceDeclared);
         } catch (JCNativeException jcne) {
@@ -281,10 +297,14 @@ public class Configuration extends NetObject  {
 
     public AppSettingsSection getAppSettings() throws Throwable, system.configuration.ConfigurationErrorsException, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotImplementedException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAppSettings = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AppSettings");
+            retObjectAppSettings = classInstance.Get("AppSettings");
+            JCObject val = (JCObject)retObjectAppSettings;
             return new AppSettingsSection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAppSettings != null ? retObjectAppSettings.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -292,10 +312,14 @@ public class Configuration extends NetObject  {
 
     public ConfigurationLocationCollection getLocations() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLocations = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Locations");
+            retObjectLocations = classInstance.Get("Locations");
+            JCObject val = (JCObject)retObjectLocations;
             return new ConfigurationLocationCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLocations != null ? retObjectLocations.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -303,10 +327,14 @@ public class Configuration extends NetObject  {
 
     public ConfigurationSectionCollection getSections() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSections = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Sections");
+            retObjectSections = classInstance.Get("Sections");
+            JCObject val = (JCObject)retObjectSections;
             return new ConfigurationSectionCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSections != null ? retObjectSections.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -314,10 +342,14 @@ public class Configuration extends NetObject  {
 
     public ConfigurationSectionGroup getRootSectionGroup() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRootSectionGroup = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RootSectionGroup");
+            retObjectRootSectionGroup = classInstance.Get("RootSectionGroup");
+            JCObject val = (JCObject)retObjectRootSectionGroup;
             return new ConfigurationSectionGroup(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRootSectionGroup != null ? retObjectRootSectionGroup.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -325,10 +357,14 @@ public class Configuration extends NetObject  {
 
     public ConfigurationSectionGroupCollection getSectionGroups() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSectionGroups = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SectionGroups");
+            retObjectSectionGroups = classInstance.Get("SectionGroups");
+            JCObject val = (JCObject)retObjectSectionGroups;
             return new ConfigurationSectionGroupCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSectionGroups != null ? retObjectSectionGroups.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -336,10 +372,14 @@ public class Configuration extends NetObject  {
 
     public ConnectionStringsSection getConnectionStrings() throws Throwable, system.configuration.ConfigurationErrorsException, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotImplementedException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConnectionStrings = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ConnectionStrings");
+            retObjectConnectionStrings = classInstance.Get("ConnectionStrings");
+            JCObject val = (JCObject)retObjectConnectionStrings;
             return new ConnectionStringsSection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConnectionStrings != null ? retObjectConnectionStrings.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -347,10 +387,14 @@ public class Configuration extends NetObject  {
 
     public ContextInformation getEvaluationContext() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEvaluationContext = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("EvaluationContext");
+            retObjectEvaluationContext = classInstance.Get("EvaluationContext");
+            JCObject val = (JCObject)retObjectEvaluationContext;
             return new ContextInformation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEvaluationContext != null ? retObjectEvaluationContext.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -358,10 +402,14 @@ public class Configuration extends NetObject  {
 
     public FrameworkName getTargetFramework() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTargetFramework = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TargetFramework");
+            retObjectTargetFramework = classInstance.Get("TargetFramework");
+            JCObject val = (JCObject)retObjectTargetFramework;
             return new FrameworkName(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTargetFramework != null ? retObjectTargetFramework.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -369,7 +417,7 @@ public class Configuration extends NetObject  {
 
     public void setTargetFramework(FrameworkName TargetFramework) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TargetFramework", TargetFramework == null ? null : TargetFramework.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -379,9 +427,13 @@ public class Configuration extends NetObject  {
 
     public java.lang.String getFilePath() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFilePath = null;
         try {
-            return (java.lang.String)classInstance.Get("FilePath");
+            retObjectFilePath = classInstance.Get("FilePath");
+            return (java.lang.String)retObjectFilePath;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectFilePath != null ? retObjectFilePath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

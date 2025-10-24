@@ -155,9 +155,13 @@ public class PersonalizationState extends NetObject  {
     
     public java.lang.String GetAuthorizationFilter(java.lang.String webPartID) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetAuthorizationFilter = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetAuthorizationFilter", webPartID);
+            retObjectGetAuthorizationFilter = classInstance.Invoke("GetAuthorizationFilter", webPartID);
+            return (java.lang.String)retObjectGetAuthorizationFilter;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetAuthorizationFilter != null ? retObjectGetAuthorizationFilter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -165,7 +169,7 @@ public class PersonalizationState extends NetObject  {
 
     public void ApplyWebPartManagerPersonalization() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ApplyWebPartManagerPersonalization");
         } catch (JCNativeException jcne) {
@@ -175,7 +179,7 @@ public class PersonalizationState extends NetObject  {
 
     public void ApplyWebPartPersonalization(WebPart webPart) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ApplyWebPartPersonalization", webPart == null ? null : webPart.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -185,7 +189,7 @@ public class PersonalizationState extends NetObject  {
 
     public void ExtractWebPartManagerPersonalization() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ExtractWebPartManagerPersonalization");
         } catch (JCNativeException jcne) {
@@ -195,7 +199,7 @@ public class PersonalizationState extends NetObject  {
 
     public void ExtractWebPartPersonalization(WebPart webPart) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ExtractWebPartPersonalization", webPart == null ? null : webPart.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -205,7 +209,7 @@ public class PersonalizationState extends NetObject  {
 
     public void SetWebPartDirty(WebPart webPart) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetWebPartDirty", webPart == null ? null : webPart.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -215,7 +219,7 @@ public class PersonalizationState extends NetObject  {
 
     public void SetWebPartManagerDirty() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetWebPartManagerDirty");
         } catch (JCNativeException jcne) {
@@ -229,9 +233,13 @@ public class PersonalizationState extends NetObject  {
     
     public boolean getIsDirty() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsDirty = null;
         try {
-            return (boolean)classInstance.Get("IsDirty");
+            retObjectIsDirty = classInstance.Get("IsDirty");
+            return (boolean)retObjectIsDirty;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsDirty != null ? retObjectIsDirty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -239,9 +247,13 @@ public class PersonalizationState extends NetObject  {
 
     public boolean getIsEmpty() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsEmpty = null;
         try {
-            return (boolean)classInstance.Get("IsEmpty");
+            retObjectIsEmpty = classInstance.Get("IsEmpty");
+            return (boolean)retObjectIsEmpty;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsEmpty != null ? retObjectIsEmpty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -249,10 +261,14 @@ public class PersonalizationState extends NetObject  {
 
     public WebPartManager getWebPartManager() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWebPartManager = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("WebPartManager");
+            retObjectWebPartManager = classInstance.Get("WebPartManager");
+            JCObject val = (JCObject)retObjectWebPartManager;
             return new WebPartManager(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWebPartManager != null ? retObjectWebPartManager.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -169,10 +169,14 @@ public class Border extends Decorator  {
     
     public CornerRadius getCornerRadius() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCornerRadius = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CornerRadius");
+            retObjectCornerRadius = classInstance.Get("CornerRadius");
+            JCObject val = (JCObject)retObjectCornerRadius;
             return new CornerRadius(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCornerRadius != null ? retObjectCornerRadius.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,7 +184,7 @@ public class Border extends Decorator  {
 
     public void setCornerRadius(CornerRadius CornerRadius) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CornerRadius", CornerRadius == null ? null : CornerRadius.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -190,10 +194,14 @@ public class Border extends Decorator  {
 
     public Brush getBackground() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBackground = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Background");
+            retObjectBackground = classInstance.Get("Background");
+            JCObject val = (JCObject)retObjectBackground;
             return new Brush(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBackground != null ? retObjectBackground.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,7 +209,7 @@ public class Border extends Decorator  {
 
     public void setBackground(Brush Background) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Background", Background == null ? null : Background.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -211,10 +219,14 @@ public class Border extends Decorator  {
 
     public Brush getBorderBrush() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBorderBrush = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("BorderBrush");
+            retObjectBorderBrush = classInstance.Get("BorderBrush");
+            JCObject val = (JCObject)retObjectBorderBrush;
             return new Brush(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBorderBrush != null ? retObjectBorderBrush.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -222,7 +234,7 @@ public class Border extends Decorator  {
 
     public void setBorderBrush(Brush BorderBrush) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BorderBrush", BorderBrush == null ? null : BorderBrush.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -232,10 +244,14 @@ public class Border extends Decorator  {
 
     public Thickness getBorderThickness() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBorderThickness = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("BorderThickness");
+            retObjectBorderThickness = classInstance.Get("BorderThickness");
+            JCObject val = (JCObject)retObjectBorderThickness;
             return new Thickness(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBorderThickness != null ? retObjectBorderThickness.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -243,7 +259,7 @@ public class Border extends Decorator  {
 
     public void setBorderThickness(Thickness BorderThickness) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BorderThickness", BorderThickness == null ? null : BorderThickness.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -253,10 +269,14 @@ public class Border extends Decorator  {
 
     public Thickness getPadding() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPadding = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Padding");
+            retObjectPadding = classInstance.Get("Padding");
+            JCObject val = (JCObject)retObjectPadding;
             return new Thickness(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPadding != null ? retObjectPadding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -264,7 +284,7 @@ public class Border extends Decorator  {
 
     public void setPadding(Thickness Padding) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Padding", Padding == null ? null : Padding.getJCOInstance());
         } catch (JCNativeException jcne) {

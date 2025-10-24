@@ -168,10 +168,14 @@ public class PermissionSetEncoder extends ValueType  {
     
     public PermissionSetEncoder AddPermission(java.lang.String typeName, BlobBuilder encodedArguments) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddPermission = null;
         try {
-            JCObject objAddPermission = (JCObject)classInstance.Invoke("AddPermission", typeName, encodedArguments == null ? null : encodedArguments.getJCOInstance());
+            retObjectAddPermission = classInstance.Invoke("AddPermission", typeName, encodedArguments == null ? null : encodedArguments.getJCOInstance());
+            JCObject objAddPermission = (JCObject)retObjectAddPermission;
             return new PermissionSetEncoder(objAddPermission);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddPermission != null ? retObjectAddPermission.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,10 +187,14 @@ public class PermissionSetEncoder extends ValueType  {
     
     public BlobBuilder getBuilder() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBuilder = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Builder");
+            retObjectBuilder = classInstance.Get("Builder");
+            JCObject val = (JCObject)retObjectBuilder;
             return new BlobBuilder(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBuilder != null ? retObjectBuilder.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

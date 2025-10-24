@@ -162,9 +162,13 @@ public class TouchDevice extends InputDevice  {
     
     public boolean Capture(IInputElement element, CaptureMode captureMode) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.FormatException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCapture = null;
         try {
-            return (boolean)classInstance.Invoke("Capture", element == null ? null : element.getJCOInstance(), captureMode == null ? null : captureMode.getJCOInstance());
+            retObjectCapture = classInstance.Invoke("Capture", element == null ? null : element.getJCOInstance(), captureMode == null ? null : captureMode.getJCOInstance());
+            return (boolean)retObjectCapture;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCapture != null ? retObjectCapture.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,9 +176,13 @@ public class TouchDevice extends InputDevice  {
 
     public boolean Capture(IInputElement element) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.MulticastNotSupportedException, system.OutOfMemoryException, system.RankException, system.ArrayTypeMismatchException, system.collections.generic.KeyNotFoundException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCapture = null;
         try {
-            return (boolean)classInstance.Invoke("Capture", element == null ? null : element.getJCOInstance());
+            retObjectCapture = classInstance.Invoke("Capture", element == null ? null : element.getJCOInstance());
+            return (boolean)retObjectCapture;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCapture != null ? retObjectCapture.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,10 +190,14 @@ public class TouchDevice extends InputDevice  {
 
     public TouchPoint GetTouchPoint(IInputElement relativeTo) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetTouchPoint = null;
         try {
-            JCObject objGetTouchPoint = (JCObject)classInstance.Invoke("GetTouchPoint", relativeTo == null ? null : relativeTo.getJCOInstance());
+            retObjectGetTouchPoint = classInstance.Invoke("GetTouchPoint", relativeTo == null ? null : relativeTo.getJCOInstance());
+            JCObject objGetTouchPoint = (JCObject)retObjectGetTouchPoint;
             return new TouchPoint(objGetTouchPoint);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetTouchPoint != null ? retObjectGetTouchPoint.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,10 +205,14 @@ public class TouchDevice extends InputDevice  {
 
     public TouchPointCollection GetIntermediateTouchPoints(IInputElement relativeTo) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetIntermediateTouchPoints = null;
         try {
-            JCObject objGetIntermediateTouchPoints = (JCObject)classInstance.Invoke("GetIntermediateTouchPoints", relativeTo == null ? null : relativeTo.getJCOInstance());
+            retObjectGetIntermediateTouchPoints = classInstance.Invoke("GetIntermediateTouchPoints", relativeTo == null ? null : relativeTo.getJCOInstance());
+            JCObject objGetIntermediateTouchPoints = (JCObject)retObjectGetIntermediateTouchPoints;
             return new TouchPointCollection(objGetIntermediateTouchPoints);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetIntermediateTouchPoints != null ? retObjectGetIntermediateTouchPoints.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -204,7 +220,7 @@ public class TouchDevice extends InputDevice  {
 
     public void Synchronize() throws Throwable, system.InvalidOperationException, system.componentmodel.Win32Exception, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Synchronize");
         } catch (JCNativeException jcne) {
@@ -218,7 +234,7 @@ public class TouchDevice extends InputDevice  {
      */
     @Deprecated 
     public Point GetPosition(IInputElement relativeTo) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIManipulator to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIManipulator to obtain the full interface.");
     }
 
     /**
@@ -227,7 +243,7 @@ public class TouchDevice extends InputDevice  {
      */
     @Deprecated 
     public void ManipulationEnded(boolean cancel) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIManipulator to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIManipulator to obtain the full interface.");
     }
 
 
@@ -236,9 +252,13 @@ public class TouchDevice extends InputDevice  {
     
     public boolean getIsActive() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsActive = null;
         try {
-            return (boolean)classInstance.Get("IsActive");
+            retObjectIsActive = classInstance.Get("IsActive");
+            return (boolean)retObjectIsActive;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsActive != null ? retObjectIsActive.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -246,9 +266,20 @@ public class TouchDevice extends InputDevice  {
 
     public int getId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectId = null;
         try {
-            return (int)classInstance.Get("Id");
+            retObjectId = classInstance.Get("Id");
+            return (int)retObjectId;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectId_ToString = retObjectId == null ? "null" : retObjectId.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectIdNumber = (java.lang.Number)retObjectId;
+                return retObjectIdNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectId != null ? retObjectId.getClass() : "null", retObjectId_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -256,10 +287,14 @@ public class TouchDevice extends InputDevice  {
 
     public IInputElement getCaptured() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCaptured = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Captured");
+            retObjectCaptured = classInstance.Get("Captured");
+            JCObject val = (JCObject)retObjectCaptured;
             return new IInputElementImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCaptured != null ? retObjectCaptured.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -267,10 +302,14 @@ public class TouchDevice extends InputDevice  {
 
     public IInputElement getDirectlyOver() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDirectlyOver = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DirectlyOver");
+            retObjectDirectlyOver = classInstance.Get("DirectlyOver");
+            JCObject val = (JCObject)retObjectDirectlyOver;
             return new IInputElementImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDirectlyOver != null ? retObjectDirectlyOver.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -278,10 +317,14 @@ public class TouchDevice extends InputDevice  {
 
     public CaptureMode getCaptureMode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCaptureMode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CaptureMode");
+            retObjectCaptureMode = classInstance.Get("CaptureMode");
+            JCObject val = (JCObject)retObjectCaptureMode;
             return new CaptureMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCaptureMode != null ? retObjectCaptureMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -294,7 +337,7 @@ public class TouchDevice extends InputDevice  {
 
     public void addActivated(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Activated", handler);
         } catch (JCNativeException jcne) {
@@ -304,7 +347,7 @@ public class TouchDevice extends InputDevice  {
 
     public void removeActivated(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Activated", handler);
         } catch (JCNativeException jcne) {
@@ -314,7 +357,7 @@ public class TouchDevice extends InputDevice  {
 
     public void addDeactivated(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Deactivated", handler);
         } catch (JCNativeException jcne) {
@@ -324,7 +367,7 @@ public class TouchDevice extends InputDevice  {
 
     public void removeDeactivated(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Deactivated", handler);
         } catch (JCNativeException jcne) {
@@ -334,7 +377,7 @@ public class TouchDevice extends InputDevice  {
 
     public void addUpdated(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Updated", handler);
         } catch (JCNativeException jcne) {
@@ -344,7 +387,7 @@ public class TouchDevice extends InputDevice  {
 
     public void removeUpdated(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Updated", handler);
         } catch (JCNativeException jcne) {

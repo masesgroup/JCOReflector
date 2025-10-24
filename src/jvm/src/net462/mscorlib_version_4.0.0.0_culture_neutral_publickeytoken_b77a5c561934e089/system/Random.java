@@ -171,9 +171,20 @@ public class Random extends NetObject  {
     
     public double NextDouble() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNextDouble = null;
         try {
-            return (double)classInstance.Invoke("NextDouble");
+            retObjectNextDouble = classInstance.Invoke("NextDouble");
+            return (double)retObjectNextDouble;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectNextDouble_ToString = retObjectNextDouble == null ? "null" : retObjectNextDouble.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectNextDoubleNumber = (java.lang.Number)retObjectNextDouble;
+                return retObjectNextDoubleNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectNextDouble != null ? retObjectNextDouble.getClass() : "null", retObjectNextDouble_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,9 +192,20 @@ public class Random extends NetObject  {
 
     public int Next() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNext = null;
         try {
-            return (int)classInstance.Invoke("Next");
+            retObjectNext = classInstance.Invoke("Next");
+            return (int)retObjectNext;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectNext_ToString = retObjectNext == null ? "null" : retObjectNext.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectNextNumber = (java.lang.Number)retObjectNext;
+                return retObjectNextNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectNext != null ? retObjectNext.getClass() : "null", retObjectNext_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,9 +213,20 @@ public class Random extends NetObject  {
 
     public int Next(int maxValue) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNext = null;
         try {
-            return (int)classInstance.Invoke("Next", maxValue);
+            retObjectNext = classInstance.Invoke("Next", maxValue);
+            return (int)retObjectNext;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectNext_ToString = retObjectNext == null ? "null" : retObjectNext.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectNextNumber = (java.lang.Number)retObjectNext;
+                return retObjectNextNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectNext != null ? retObjectNext.getClass() : "null", retObjectNext_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,9 +234,20 @@ public class Random extends NetObject  {
 
     public int Next(int minValue, int maxValue) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNext = null;
         try {
-            return (int)classInstance.Invoke("Next", minValue, maxValue);
+            retObjectNext = classInstance.Invoke("Next", minValue, maxValue);
+            return (int)retObjectNext;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectNext_ToString = retObjectNext == null ? "null" : retObjectNext.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectNextNumber = (java.lang.Number)retObjectNext;
+                return retObjectNextNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectNext != null ? retObjectNext.getClass() : "null", retObjectNext_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -211,7 +255,7 @@ public class Random extends NetObject  {
 
     public void NextBytes(byte[] buffer) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("NextBytes", (java.lang.Object)buffer);
         } catch (JCNativeException jcne) {
@@ -221,7 +265,7 @@ public class Random extends NetObject  {
 
     public void NextBytes(JCORefOut dupParam0) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("NextBytes", (java.lang.Object)dupParam0.getJCRefOut());
         } catch (JCNativeException jcne) {

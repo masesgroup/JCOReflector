@@ -203,7 +203,7 @@ public class DirectoryOperationException extends DirectoryException {
     
     public void GetObjectData(SerializationInfo serializationInfo, StreamingContext streamingContext) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.security.SecurityException, system.TypeLoadException, system.NotSupportedException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.NotImplementedException, system.runtime.serialization.SerializationException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetObjectData", serializationInfo == null ? null : serializationInfo.getJCOInstance(), streamingContext == null ? null : streamingContext.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -217,10 +217,14 @@ public class DirectoryOperationException extends DirectoryException {
     
     public DirectoryResponse getResponse() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResponse = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Response");
+            retObjectResponse = classInstance.Get("Response");
+            JCObject val = (JCObject)retObjectResponse;
             return new DirectoryResponse(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectResponse != null ? retObjectResponse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

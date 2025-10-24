@@ -154,7 +154,7 @@ public class PageExecutionListener extends NetObject  {
     
     public void BeginContext(PageExecutionContext context) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("BeginContext", context == null ? null : context.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -164,7 +164,7 @@ public class PageExecutionListener extends NetObject  {
 
     public void EndContext(PageExecutionContext context) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EndContext", context == null ? null : context.getJCOInstance());
         } catch (JCNativeException jcne) {

@@ -172,10 +172,14 @@ public class ExeConfigurationFileMap extends ConfigurationFileMap  {
     
     public NetObject Clone() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClone = null;
         try {
-            JCObject objClone = (JCObject)classInstance.Invoke("Clone");
+            retObjectClone = classInstance.Invoke("Clone");
+            JCObject objClone = (JCObject)retObjectClone;
             return new NetObject(objClone);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClone != null ? retObjectClone.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,9 +191,13 @@ public class ExeConfigurationFileMap extends ConfigurationFileMap  {
     
     public java.lang.String getExeConfigFilename() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExeConfigFilename = null;
         try {
-            return (java.lang.String)classInstance.Get("ExeConfigFilename");
+            retObjectExeConfigFilename = classInstance.Get("ExeConfigFilename");
+            return (java.lang.String)retObjectExeConfigFilename;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectExeConfigFilename != null ? retObjectExeConfigFilename.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,7 +205,7 @@ public class ExeConfigurationFileMap extends ConfigurationFileMap  {
 
     public void setExeConfigFilename(java.lang.String ExeConfigFilename) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ExeConfigFilename", ExeConfigFilename);
         } catch (JCNativeException jcne) {
@@ -207,9 +215,13 @@ public class ExeConfigurationFileMap extends ConfigurationFileMap  {
 
     public java.lang.String getLocalUserConfigFilename() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLocalUserConfigFilename = null;
         try {
-            return (java.lang.String)classInstance.Get("LocalUserConfigFilename");
+            retObjectLocalUserConfigFilename = classInstance.Get("LocalUserConfigFilename");
+            return (java.lang.String)retObjectLocalUserConfigFilename;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectLocalUserConfigFilename != null ? retObjectLocalUserConfigFilename.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -217,7 +229,7 @@ public class ExeConfigurationFileMap extends ConfigurationFileMap  {
 
     public void setLocalUserConfigFilename(java.lang.String LocalUserConfigFilename) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("LocalUserConfigFilename", LocalUserConfigFilename);
         } catch (JCNativeException jcne) {
@@ -227,9 +239,13 @@ public class ExeConfigurationFileMap extends ConfigurationFileMap  {
 
     public java.lang.String getRoamingUserConfigFilename() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRoamingUserConfigFilename = null;
         try {
-            return (java.lang.String)classInstance.Get("RoamingUserConfigFilename");
+            retObjectRoamingUserConfigFilename = classInstance.Get("RoamingUserConfigFilename");
+            return (java.lang.String)retObjectRoamingUserConfigFilename;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectRoamingUserConfigFilename != null ? retObjectRoamingUserConfigFilename.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -237,7 +253,7 @@ public class ExeConfigurationFileMap extends ConfigurationFileMap  {
 
     public void setRoamingUserConfigFilename(java.lang.String RoamingUserConfigFilename) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RoamingUserConfigFilename", RoamingUserConfigFilename);
         } catch (JCNativeException jcne) {

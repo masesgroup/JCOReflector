@@ -142,10 +142,14 @@ public class IAccessibleImplementation extends NetObject implements IAccessible 
     
     public NetObject accHitTest(int xLeft, int yTop) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectaccHitTest = null;
         try {
-            JCObject objaccHitTest = (JCObject)classInstance.Invoke("accHitTest", xLeft, yTop);
+            retObjectaccHitTest = classInstance.Invoke("accHitTest", xLeft, yTop);
+            JCObject objaccHitTest = (JCObject)retObjectaccHitTest;
             return new NetObject(objaccHitTest);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectaccHitTest != null ? retObjectaccHitTest.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -153,10 +157,14 @@ public class IAccessibleImplementation extends NetObject implements IAccessible 
 
     public NetObject accNavigate(int navDir, NetObject varStart) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectaccNavigate = null;
         try {
-            JCObject objaccNavigate = (JCObject)classInstance.Invoke("accNavigate", navDir, varStart == null ? null : varStart.getJCOInstance());
+            retObjectaccNavigate = classInstance.Invoke("accNavigate", navDir, varStart == null ? null : varStart.getJCOInstance());
+            JCObject objaccNavigate = (JCObject)retObjectaccNavigate;
             return new NetObject(objaccNavigate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectaccNavigate != null ? retObjectaccNavigate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -164,7 +172,7 @@ public class IAccessibleImplementation extends NetObject implements IAccessible 
 
     public void accDoDefaultAction(NetObject varChild) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("accDoDefaultAction", varChild == null ? null : varChild.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -174,7 +182,7 @@ public class IAccessibleImplementation extends NetObject implements IAccessible 
 
     public void accLocation(JCORefOut<java.util.concurrent.atomic.AtomicInteger> pxLeft, JCORefOut<java.util.concurrent.atomic.AtomicInteger> pyTop, JCORefOut<java.util.concurrent.atomic.AtomicInteger> pcxWidth, JCORefOut<java.util.concurrent.atomic.AtomicInteger> pcyHeight, NetObject varChild) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("accLocation", pxLeft.getJCRefOut(), pyTop.getJCRefOut(), pcxWidth.getJCRefOut(), pcyHeight.getJCRefOut(), varChild == null ? null : varChild.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -184,7 +192,7 @@ public class IAccessibleImplementation extends NetObject implements IAccessible 
 
     public void accSelect(int flagsSelect, NetObject varChild) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("accSelect", flagsSelect, varChild == null ? null : varChild.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -198,9 +206,20 @@ public class IAccessibleImplementation extends NetObject implements IAccessible 
     
     public int getaccChildCount() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectaccChildCount = null;
         try {
-            return (int)classInstance.Get("accChildCount");
+            retObjectaccChildCount = classInstance.Get("accChildCount");
+            return (int)retObjectaccChildCount;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectaccChildCount_ToString = retObjectaccChildCount == null ? "null" : retObjectaccChildCount.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectaccChildCountNumber = (java.lang.Number)retObjectaccChildCount;
+                return retObjectaccChildCountNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectaccChildCount != null ? retObjectaccChildCount.getClass() : "null", retObjectaccChildCount_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -208,10 +227,14 @@ public class IAccessibleImplementation extends NetObject implements IAccessible 
 
     public NetObject getaccFocus() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectaccFocus = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("accFocus");
+            retObjectaccFocus = classInstance.Get("accFocus");
+            JCObject val = (JCObject)retObjectaccFocus;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectaccFocus != null ? retObjectaccFocus.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -219,10 +242,14 @@ public class IAccessibleImplementation extends NetObject implements IAccessible 
 
     public NetObject getaccParent() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectaccParent = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("accParent");
+            retObjectaccParent = classInstance.Get("accParent");
+            JCObject val = (JCObject)retObjectaccParent;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectaccParent != null ? retObjectaccParent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -230,10 +257,14 @@ public class IAccessibleImplementation extends NetObject implements IAccessible 
 
     public NetObject getaccSelection() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectaccSelection = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("accSelection");
+            retObjectaccSelection = classInstance.Get("accSelection");
+            JCObject val = (JCObject)retObjectaccSelection;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectaccSelection != null ? retObjectaccSelection.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

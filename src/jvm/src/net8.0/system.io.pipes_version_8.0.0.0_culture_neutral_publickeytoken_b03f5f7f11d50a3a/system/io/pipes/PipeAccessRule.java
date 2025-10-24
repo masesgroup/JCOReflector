@@ -183,10 +183,14 @@ public class PipeAccessRule extends AccessRule  {
     
     public PipeAccessRights getPipeAccessRights() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPipeAccessRights = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PipeAccessRights");
+            retObjectPipeAccessRights = classInstance.Get("PipeAccessRights");
+            JCObject val = (JCObject)retObjectPipeAccessRights;
             return new PipeAccessRights(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPipeAccessRights != null ? retObjectPipeAccessRights.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

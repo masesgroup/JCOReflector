@@ -159,7 +159,7 @@ public class DesignerOptionService extends NetObject implements system.component
      */
     @Deprecated 
     public NetObject GetOptionValue(java.lang.String pageName, java.lang.String valueName) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDesignerOptionService to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDesignerOptionService to obtain the full interface.");
     }
 
     /**
@@ -168,7 +168,7 @@ public class DesignerOptionService extends NetObject implements system.component
      */
     @Deprecated 
     public void SetOptionValue(java.lang.String pageName, java.lang.String valueName, NetObject value) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDesignerOptionService to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDesignerOptionService to obtain the full interface.");
     }
 
 

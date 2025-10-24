@@ -182,10 +182,14 @@ public class RuntimeTransactionHandle extends Handle implements system.activitie
     
     public Transaction GetCurrentTransaction(AsyncCodeActivityContext context) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetCurrentTransaction = null;
         try {
-            JCObject objGetCurrentTransaction = (JCObject)classInstance.Invoke("GetCurrentTransaction", context == null ? null : context.getJCOInstance());
+            retObjectGetCurrentTransaction = classInstance.Invoke("GetCurrentTransaction", context == null ? null : context.getJCOInstance());
+            JCObject objGetCurrentTransaction = (JCObject)retObjectGetCurrentTransaction;
             return new Transaction(objGetCurrentTransaction);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCurrentTransaction != null ? retObjectGetCurrentTransaction.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,10 +197,14 @@ public class RuntimeTransactionHandle extends Handle implements system.activitie
 
     public Transaction GetCurrentTransaction(CodeActivityContext context) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetCurrentTransaction = null;
         try {
-            JCObject objGetCurrentTransaction = (JCObject)classInstance.Invoke("GetCurrentTransaction", context == null ? null : context.getJCOInstance());
+            retObjectGetCurrentTransaction = classInstance.Invoke("GetCurrentTransaction", context == null ? null : context.getJCOInstance());
+            JCObject objGetCurrentTransaction = (JCObject)retObjectGetCurrentTransaction;
             return new Transaction(objGetCurrentTransaction);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCurrentTransaction != null ? retObjectGetCurrentTransaction.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -204,10 +212,14 @@ public class RuntimeTransactionHandle extends Handle implements system.activitie
 
     public Transaction GetCurrentTransaction(NativeActivityContext context) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetCurrentTransaction = null;
         try {
-            JCObject objGetCurrentTransaction = (JCObject)classInstance.Invoke("GetCurrentTransaction", context == null ? null : context.getJCOInstance());
+            retObjectGetCurrentTransaction = classInstance.Invoke("GetCurrentTransaction", context == null ? null : context.getJCOInstance());
+            JCObject objGetCurrentTransaction = (JCObject)retObjectGetCurrentTransaction;
             return new Transaction(objGetCurrentTransaction);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCurrentTransaction != null ? retObjectGetCurrentTransaction.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -215,7 +227,7 @@ public class RuntimeTransactionHandle extends Handle implements system.activitie
 
     public void CompleteTransaction(NativeActivityContext context) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CompleteTransaction", context == null ? null : context.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -225,7 +237,7 @@ public class RuntimeTransactionHandle extends Handle implements system.activitie
 
     public void CompleteTransaction(NativeActivityContext context, BookmarkCallback callback) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CompleteTransaction", context == null ? null : context.getJCOInstance(), callback);
         } catch (JCNativeException jcne) {
@@ -239,7 +251,7 @@ public class RuntimeTransactionHandle extends Handle implements system.activitie
      */
     @Deprecated 
     public void CleanupWorkflowThread() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIExecutionProperty to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIExecutionProperty to obtain the full interface.");
     }
 
     /**
@@ -248,7 +260,7 @@ public class RuntimeTransactionHandle extends Handle implements system.activitie
      */
     @Deprecated 
     public void SetupWorkflowThread() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIExecutionProperty to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIExecutionProperty to obtain the full interface.");
     }
 
     /**
@@ -257,7 +269,7 @@ public class RuntimeTransactionHandle extends Handle implements system.activitie
      */
     @Deprecated 
     public void Register(RegistrationContext context) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIPropertyRegistrationCallback to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIPropertyRegistrationCallback to obtain the full interface.");
     }
 
     /**
@@ -266,7 +278,7 @@ public class RuntimeTransactionHandle extends Handle implements system.activitie
      */
     @Deprecated 
     public void Unregister(RegistrationContext context) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIPropertyRegistrationCallback to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIPropertyRegistrationCallback to obtain the full interface.");
     }
 
 
@@ -275,9 +287,13 @@ public class RuntimeTransactionHandle extends Handle implements system.activitie
     
     public boolean getAbortInstanceOnTransactionFailure() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAbortInstanceOnTransactionFailure = null;
         try {
-            return (boolean)classInstance.Get("AbortInstanceOnTransactionFailure");
+            retObjectAbortInstanceOnTransactionFailure = classInstance.Get("AbortInstanceOnTransactionFailure");
+            return (boolean)retObjectAbortInstanceOnTransactionFailure;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAbortInstanceOnTransactionFailure != null ? retObjectAbortInstanceOnTransactionFailure.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -285,7 +301,7 @@ public class RuntimeTransactionHandle extends Handle implements system.activitie
 
     public void setAbortInstanceOnTransactionFailure(boolean AbortInstanceOnTransactionFailure) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AbortInstanceOnTransactionFailure", AbortInstanceOnTransactionFailure);
         } catch (JCNativeException jcne) {
@@ -295,9 +311,13 @@ public class RuntimeTransactionHandle extends Handle implements system.activitie
 
     public boolean getSuppressTransaction() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSuppressTransaction = null;
         try {
-            return (boolean)classInstance.Get("SuppressTransaction");
+            retObjectSuppressTransaction = classInstance.Get("SuppressTransaction");
+            return (boolean)retObjectSuppressTransaction;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectSuppressTransaction != null ? retObjectSuppressTransaction.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -305,7 +325,7 @@ public class RuntimeTransactionHandle extends Handle implements system.activitie
 
     public void setSuppressTransaction(boolean SuppressTransaction) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SuppressTransaction", SuppressTransaction);
         } catch (JCNativeException jcne) {

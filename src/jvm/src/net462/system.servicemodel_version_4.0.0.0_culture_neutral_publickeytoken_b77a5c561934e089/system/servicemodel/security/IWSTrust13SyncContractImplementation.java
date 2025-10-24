@@ -143,10 +143,14 @@ public class IWSTrust13SyncContractImplementation extends NetObject implements I
     
     public Message ProcessTrust13Cancel(Message message) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProcessTrust13Cancel = null;
         try {
-            JCObject objProcessTrust13Cancel = (JCObject)classInstance.Invoke("ProcessTrust13Cancel", message == null ? null : message.getJCOInstance());
+            retObjectProcessTrust13Cancel = classInstance.Invoke("ProcessTrust13Cancel", message == null ? null : message.getJCOInstance());
+            JCObject objProcessTrust13Cancel = (JCObject)retObjectProcessTrust13Cancel;
             return new Message(objProcessTrust13Cancel);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectProcessTrust13Cancel != null ? retObjectProcessTrust13Cancel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -154,10 +158,14 @@ public class IWSTrust13SyncContractImplementation extends NetObject implements I
 
     public Message ProcessTrust13CancelResponse(Message message) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProcessTrust13CancelResponse = null;
         try {
-            JCObject objProcessTrust13CancelResponse = (JCObject)classInstance.Invoke("ProcessTrust13CancelResponse", message == null ? null : message.getJCOInstance());
+            retObjectProcessTrust13CancelResponse = classInstance.Invoke("ProcessTrust13CancelResponse", message == null ? null : message.getJCOInstance());
+            JCObject objProcessTrust13CancelResponse = (JCObject)retObjectProcessTrust13CancelResponse;
             return new Message(objProcessTrust13CancelResponse);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectProcessTrust13CancelResponse != null ? retObjectProcessTrust13CancelResponse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -165,10 +173,14 @@ public class IWSTrust13SyncContractImplementation extends NetObject implements I
 
     public Message ProcessTrust13Issue(Message message) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProcessTrust13Issue = null;
         try {
-            JCObject objProcessTrust13Issue = (JCObject)classInstance.Invoke("ProcessTrust13Issue", message == null ? null : message.getJCOInstance());
+            retObjectProcessTrust13Issue = classInstance.Invoke("ProcessTrust13Issue", message == null ? null : message.getJCOInstance());
+            JCObject objProcessTrust13Issue = (JCObject)retObjectProcessTrust13Issue;
             return new Message(objProcessTrust13Issue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectProcessTrust13Issue != null ? retObjectProcessTrust13Issue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,10 +188,14 @@ public class IWSTrust13SyncContractImplementation extends NetObject implements I
 
     public Message ProcessTrust13IssueResponse(Message message) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProcessTrust13IssueResponse = null;
         try {
-            JCObject objProcessTrust13IssueResponse = (JCObject)classInstance.Invoke("ProcessTrust13IssueResponse", message == null ? null : message.getJCOInstance());
+            retObjectProcessTrust13IssueResponse = classInstance.Invoke("ProcessTrust13IssueResponse", message == null ? null : message.getJCOInstance());
+            JCObject objProcessTrust13IssueResponse = (JCObject)retObjectProcessTrust13IssueResponse;
             return new Message(objProcessTrust13IssueResponse);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectProcessTrust13IssueResponse != null ? retObjectProcessTrust13IssueResponse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,10 +203,14 @@ public class IWSTrust13SyncContractImplementation extends NetObject implements I
 
     public Message ProcessTrust13Renew(Message message) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProcessTrust13Renew = null;
         try {
-            JCObject objProcessTrust13Renew = (JCObject)classInstance.Invoke("ProcessTrust13Renew", message == null ? null : message.getJCOInstance());
+            retObjectProcessTrust13Renew = classInstance.Invoke("ProcessTrust13Renew", message == null ? null : message.getJCOInstance());
+            JCObject objProcessTrust13Renew = (JCObject)retObjectProcessTrust13Renew;
             return new Message(objProcessTrust13Renew);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectProcessTrust13Renew != null ? retObjectProcessTrust13Renew.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,10 +218,14 @@ public class IWSTrust13SyncContractImplementation extends NetObject implements I
 
     public Message ProcessTrust13RenewResponse(Message message) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProcessTrust13RenewResponse = null;
         try {
-            JCObject objProcessTrust13RenewResponse = (JCObject)classInstance.Invoke("ProcessTrust13RenewResponse", message == null ? null : message.getJCOInstance());
+            retObjectProcessTrust13RenewResponse = classInstance.Invoke("ProcessTrust13RenewResponse", message == null ? null : message.getJCOInstance());
+            JCObject objProcessTrust13RenewResponse = (JCObject)retObjectProcessTrust13RenewResponse;
             return new Message(objProcessTrust13RenewResponse);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectProcessTrust13RenewResponse != null ? retObjectProcessTrust13RenewResponse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -209,10 +233,14 @@ public class IWSTrust13SyncContractImplementation extends NetObject implements I
 
     public Message ProcessTrust13Validate(Message message) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProcessTrust13Validate = null;
         try {
-            JCObject objProcessTrust13Validate = (JCObject)classInstance.Invoke("ProcessTrust13Validate", message == null ? null : message.getJCOInstance());
+            retObjectProcessTrust13Validate = classInstance.Invoke("ProcessTrust13Validate", message == null ? null : message.getJCOInstance());
+            JCObject objProcessTrust13Validate = (JCObject)retObjectProcessTrust13Validate;
             return new Message(objProcessTrust13Validate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectProcessTrust13Validate != null ? retObjectProcessTrust13Validate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -220,10 +248,14 @@ public class IWSTrust13SyncContractImplementation extends NetObject implements I
 
     public Message ProcessTrust13ValidateResponse(Message message) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProcessTrust13ValidateResponse = null;
         try {
-            JCObject objProcessTrust13ValidateResponse = (JCObject)classInstance.Invoke("ProcessTrust13ValidateResponse", message == null ? null : message.getJCOInstance());
+            retObjectProcessTrust13ValidateResponse = classInstance.Invoke("ProcessTrust13ValidateResponse", message == null ? null : message.getJCOInstance());
+            JCObject objProcessTrust13ValidateResponse = (JCObject)retObjectProcessTrust13ValidateResponse;
             return new Message(objProcessTrust13ValidateResponse);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectProcessTrust13ValidateResponse != null ? retObjectProcessTrust13ValidateResponse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

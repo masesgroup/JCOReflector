@@ -225,10 +225,12 @@ public class MemoryStream extends Stream  {
     
     public byte[] GetBuffer() throws Throwable, system.UnauthorizedAccessException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetBuffer = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetBuffer");
+            retObjectGetBuffer = classInstance.Invoke("GetBuffer");
+            JCObject resultingObjects = (JCObject)retObjectGetBuffer;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -237,6 +239,8 @@ public class MemoryStream extends Stream  {
 				resultingArray[indexGetBuffer] = (byte)resultingArrayList.get(indexGetBuffer);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectGetBuffer != null ? retObjectGetBuffer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -244,10 +248,12 @@ public class MemoryStream extends Stream  {
 
     public byte[] ToArray() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToArray = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("ToArray");
+            retObjectToArray = classInstance.Invoke("ToArray");
+            JCObject resultingObjects = (JCObject)retObjectToArray;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -256,6 +262,8 @@ public class MemoryStream extends Stream  {
 				resultingArray[indexToArray] = (byte)resultingArrayList.get(indexToArray);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectToArray != null ? retObjectToArray.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -263,9 +271,20 @@ public class MemoryStream extends Stream  {
 
     public int Read(JCORefOut buffer, int offset, int count) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRead = null;
         try {
-            return (int)classInstance.Invoke("Read", buffer.getJCRefOut(), offset, count);
+            retObjectRead = classInstance.Invoke("Read", buffer.getJCRefOut(), offset, count);
+            return (int)retObjectRead;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectRead_ToString = retObjectRead == null ? "null" : retObjectRead.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectReadNumber = (java.lang.Number)retObjectRead;
+                return retObjectReadNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectRead != null ? retObjectRead.getClass() : "null", retObjectRead_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -273,9 +292,20 @@ public class MemoryStream extends Stream  {
 
     public int ReadByte() throws Throwable, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadByte = null;
         try {
-            return (int)classInstance.Invoke("ReadByte");
+            retObjectReadByte = classInstance.Invoke("ReadByte");
+            return (int)retObjectReadByte;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectReadByte_ToString = retObjectReadByte == null ? "null" : retObjectReadByte.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectReadByteNumber = (java.lang.Number)retObjectReadByte;
+                return retObjectReadByteNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectReadByte != null ? retObjectReadByte.getClass() : "null", retObjectReadByte_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -283,9 +313,20 @@ public class MemoryStream extends Stream  {
 
     public long Seek(long offset, SeekOrigin loc) throws Throwable, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.io.IOException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSeek = null;
         try {
-            return (long)classInstance.Invoke("Seek", offset, loc == null ? null : loc.getJCOInstance());
+            retObjectSeek = classInstance.Invoke("Seek", offset, loc == null ? null : loc.getJCOInstance());
+            return (long)retObjectSeek;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSeek_ToString = retObjectSeek == null ? "null" : retObjectSeek.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectSeekNumber = (java.lang.Number)retObjectSeek;
+                return retObjectSeekNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectSeek != null ? retObjectSeek.getClass() : "null", retObjectSeek_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -293,10 +334,14 @@ public class MemoryStream extends Stream  {
 
     public Task CopyToAsync(Stream destination, int bufferSize, CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.NotSupportedException, system.security.SecurityException, system.InvalidOperationException, system.ArgumentException, system.OperationCanceledException, system.threading.tasks.TaskSchedulerException, system.threading.SemaphoreFullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCopyToAsync = null;
         try {
-            JCObject objCopyToAsync = (JCObject)classInstance.Invoke("CopyToAsync", destination == null ? null : destination.getJCOInstance(), bufferSize, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            retObjectCopyToAsync = classInstance.Invoke("CopyToAsync", destination == null ? null : destination.getJCOInstance(), bufferSize, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objCopyToAsync = (JCObject)retObjectCopyToAsync;
             return new Task(objCopyToAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCopyToAsync != null ? retObjectCopyToAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -304,10 +349,14 @@ public class MemoryStream extends Stream  {
 
     public Task FlushAsync(CancellationToken cancellationToken) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFlushAsync = null;
         try {
-            JCObject objFlushAsync = (JCObject)classInstance.Invoke("FlushAsync", cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            retObjectFlushAsync = classInstance.Invoke("FlushAsync", cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objFlushAsync = (JCObject)retObjectFlushAsync;
             return new Task(objFlushAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFlushAsync != null ? retObjectFlushAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -315,10 +364,14 @@ public class MemoryStream extends Stream  {
 
     public Task WriteAsync(byte[] buffer, int offset, int count, CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.MulticastNotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWriteAsync = null;
         try {
-            JCObject objWriteAsync = (JCObject)classInstance.Invoke("WriteAsync", buffer, offset, count, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            retObjectWriteAsync = classInstance.Invoke("WriteAsync", buffer, offset, count, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objWriteAsync = (JCObject)retObjectWriteAsync;
             return new Task(objWriteAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWriteAsync != null ? retObjectWriteAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -326,10 +379,14 @@ public class MemoryStream extends Stream  {
 
     public Task WriteAsync(JCORefOut dupParam0, int dupParam1, int dupParam2, CancellationToken dupParam3) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.MulticastNotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWriteAsync = null;
         try {
-            JCObject objWriteAsync = (JCObject)classInstance.Invoke("WriteAsync", dupParam0.getJCRefOut(), dupParam1, dupParam2, dupParam3 == null ? null : dupParam3.getJCOInstance());
+            retObjectWriteAsync = classInstance.Invoke("WriteAsync", dupParam0.getJCRefOut(), dupParam1, dupParam2, dupParam3 == null ? null : dupParam3.getJCOInstance());
+            JCObject objWriteAsync = (JCObject)retObjectWriteAsync;
             return new Task(objWriteAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWriteAsync != null ? retObjectWriteAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -337,7 +394,7 @@ public class MemoryStream extends Stream  {
 
     public void Flush() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Flush");
         } catch (JCNativeException jcne) {
@@ -347,7 +404,7 @@ public class MemoryStream extends Stream  {
 
     public void SetLength(long value) throws Throwable, system.ArgumentOutOfRangeException, system.NotSupportedException, system.io.IOException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetLength", value);
         } catch (JCNativeException jcne) {
@@ -357,7 +414,7 @@ public class MemoryStream extends Stream  {
 
     public void Write(byte[] buffer, int offset, int count) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ObjectDisposedException, system.NotSupportedException, system.io.IOException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Write", buffer, offset, count);
         } catch (JCNativeException jcne) {
@@ -367,7 +424,7 @@ public class MemoryStream extends Stream  {
 
     public void Write(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ObjectDisposedException, system.NotSupportedException, system.io.IOException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Write", dupParam0.getJCRefOut(), dupParam1, dupParam2);
         } catch (JCNativeException jcne) {
@@ -377,7 +434,7 @@ public class MemoryStream extends Stream  {
 
     public void WriteByte(byte value) throws Throwable, system.ObjectDisposedException, system.NotSupportedException, system.io.IOException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteByte", value);
         } catch (JCNativeException jcne) {
@@ -387,7 +444,7 @@ public class MemoryStream extends Stream  {
 
     public void WriteTo(Stream stream) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteTo", stream == null ? null : stream.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -401,9 +458,20 @@ public class MemoryStream extends Stream  {
     
     public int getCapacity() throws Throwable, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCapacity = null;
         try {
-            return (int)classInstance.Get("Capacity");
+            retObjectCapacity = classInstance.Get("Capacity");
+            return (int)retObjectCapacity;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCapacity_ToString = retObjectCapacity == null ? "null" : retObjectCapacity.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectCapacityNumber = (java.lang.Number)retObjectCapacity;
+                return retObjectCapacityNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCapacity != null ? retObjectCapacity.getClass() : "null", retObjectCapacity_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -411,7 +479,7 @@ public class MemoryStream extends Stream  {
 
     public void setCapacity(int Capacity) throws Throwable, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Capacity", Capacity);
         } catch (JCNativeException jcne) {

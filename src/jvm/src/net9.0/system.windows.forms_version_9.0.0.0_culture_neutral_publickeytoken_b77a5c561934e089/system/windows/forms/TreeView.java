@@ -184,9 +184,20 @@ public class TreeView extends Control  {
     
     public int GetNodeCount(boolean includeSubTrees) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetNodeCount = null;
         try {
-            return (int)classInstance.Invoke("GetNodeCount", includeSubTrees);
+            retObjectGetNodeCount = classInstance.Invoke("GetNodeCount", includeSubTrees);
+            return (int)retObjectGetNodeCount;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetNodeCount_ToString = retObjectGetNodeCount == null ? "null" : retObjectGetNodeCount.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetNodeCountNumber = (java.lang.Number)retObjectGetNodeCount;
+                return retObjectGetNodeCountNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetNodeCount != null ? retObjectGetNodeCount.getClass() : "null", retObjectGetNodeCount_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -194,10 +205,14 @@ public class TreeView extends Control  {
 
     public TreeNode GetNodeAt(int x, int y) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetNodeAt = null;
         try {
-            JCObject objGetNodeAt = (JCObject)classInstance.Invoke("GetNodeAt", x, y);
+            retObjectGetNodeAt = classInstance.Invoke("GetNodeAt", x, y);
+            JCObject objGetNodeAt = (JCObject)retObjectGetNodeAt;
             return new TreeNode(objGetNodeAt);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetNodeAt != null ? retObjectGetNodeAt.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -205,10 +220,14 @@ public class TreeView extends Control  {
 
     public TreeNode GetNodeAt(Point pt) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetNodeAt = null;
         try {
-            JCObject objGetNodeAt = (JCObject)classInstance.Invoke("GetNodeAt", pt == null ? null : pt.getJCOInstance());
+            retObjectGetNodeAt = classInstance.Invoke("GetNodeAt", pt == null ? null : pt.getJCOInstance());
+            JCObject objGetNodeAt = (JCObject)retObjectGetNodeAt;
             return new TreeNode(objGetNodeAt);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetNodeAt != null ? retObjectGetNodeAt.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -216,10 +235,14 @@ public class TreeView extends Control  {
 
     public TreeViewHitTestInfo HitTest(int x, int y) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHitTest = null;
         try {
-            JCObject objHitTest = (JCObject)classInstance.Invoke("HitTest", x, y);
+            retObjectHitTest = classInstance.Invoke("HitTest", x, y);
+            JCObject objHitTest = (JCObject)retObjectHitTest;
             return new TreeViewHitTestInfo(objHitTest);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHitTest != null ? retObjectHitTest.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -227,10 +250,14 @@ public class TreeView extends Control  {
 
     public TreeViewHitTestInfo HitTest(Point pt) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHitTest = null;
         try {
-            JCObject objHitTest = (JCObject)classInstance.Invoke("HitTest", pt == null ? null : pt.getJCOInstance());
+            retObjectHitTest = classInstance.Invoke("HitTest", pt == null ? null : pt.getJCOInstance());
+            JCObject objHitTest = (JCObject)retObjectHitTest;
             return new TreeViewHitTestInfo(objHitTest);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHitTest != null ? retObjectHitTest.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -238,7 +265,7 @@ public class TreeView extends Control  {
 
     public void BeginUpdate() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("BeginUpdate");
         } catch (JCNativeException jcne) {
@@ -248,7 +275,7 @@ public class TreeView extends Control  {
 
     public void CollapseAll() throws Throwable, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentNullException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CollapseAll");
         } catch (JCNativeException jcne) {
@@ -258,7 +285,7 @@ public class TreeView extends Control  {
 
     public void EndUpdate() throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EndUpdate");
         } catch (JCNativeException jcne) {
@@ -268,7 +295,7 @@ public class TreeView extends Control  {
 
     public void ExpandAll() throws Throwable, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ExpandAll");
         } catch (JCNativeException jcne) {
@@ -278,7 +305,7 @@ public class TreeView extends Control  {
 
     public void Sort() throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.ArrayTypeMismatchException, system.InvalidCastException, system.InvalidOperationException, system.ObjectDisposedException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Sort");
         } catch (JCNativeException jcne) {
@@ -292,9 +319,13 @@ public class TreeView extends Control  {
     
     public boolean getCheckBoxes() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCheckBoxes = null;
         try {
-            return (boolean)classInstance.Get("CheckBoxes");
+            retObjectCheckBoxes = classInstance.Get("CheckBoxes");
+            return (boolean)retObjectCheckBoxes;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCheckBoxes != null ? retObjectCheckBoxes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -302,7 +333,7 @@ public class TreeView extends Control  {
 
     public void setCheckBoxes(boolean CheckBoxes) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.ObjectDisposedException, system.NotSupportedException, system.FormatException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CheckBoxes", CheckBoxes);
         } catch (JCNativeException jcne) {
@@ -312,9 +343,13 @@ public class TreeView extends Control  {
 
     public boolean getFullRowSelect() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFullRowSelect = null;
         try {
-            return (boolean)classInstance.Get("FullRowSelect");
+            retObjectFullRowSelect = classInstance.Get("FullRowSelect");
+            return (boolean)retObjectFullRowSelect;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectFullRowSelect != null ? retObjectFullRowSelect.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -322,7 +357,7 @@ public class TreeView extends Control  {
 
     public void setFullRowSelect(boolean FullRowSelect) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.ObjectDisposedException, system.NotSupportedException, system.FormatException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FullRowSelect", FullRowSelect);
         } catch (JCNativeException jcne) {
@@ -332,9 +367,13 @@ public class TreeView extends Control  {
 
     public boolean getHideSelection() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHideSelection = null;
         try {
-            return (boolean)classInstance.Get("HideSelection");
+            retObjectHideSelection = classInstance.Get("HideSelection");
+            return (boolean)retObjectHideSelection;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectHideSelection != null ? retObjectHideSelection.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -342,7 +381,7 @@ public class TreeView extends Control  {
 
     public void setHideSelection(boolean HideSelection) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.ObjectDisposedException, system.NotSupportedException, system.FormatException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("HideSelection", HideSelection);
         } catch (JCNativeException jcne) {
@@ -352,9 +391,13 @@ public class TreeView extends Control  {
 
     public boolean getHotTracking() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHotTracking = null;
         try {
-            return (boolean)classInstance.Get("HotTracking");
+            retObjectHotTracking = classInstance.Get("HotTracking");
+            return (boolean)retObjectHotTracking;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectHotTracking != null ? retObjectHotTracking.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -362,7 +405,7 @@ public class TreeView extends Control  {
 
     public void setHotTracking(boolean HotTracking) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.ObjectDisposedException, system.NotSupportedException, system.FormatException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("HotTracking", HotTracking);
         } catch (JCNativeException jcne) {
@@ -372,9 +415,13 @@ public class TreeView extends Control  {
 
     public boolean getLabelEdit() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLabelEdit = null;
         try {
-            return (boolean)classInstance.Get("LabelEdit");
+            retObjectLabelEdit = classInstance.Get("LabelEdit");
+            return (boolean)retObjectLabelEdit;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectLabelEdit != null ? retObjectLabelEdit.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -382,7 +429,7 @@ public class TreeView extends Control  {
 
     public void setLabelEdit(boolean LabelEdit) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.ObjectDisposedException, system.NotSupportedException, system.FormatException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("LabelEdit", LabelEdit);
         } catch (JCNativeException jcne) {
@@ -392,9 +439,13 @@ public class TreeView extends Control  {
 
     public boolean getRightToLeftLayout() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRightToLeftLayout = null;
         try {
-            return (boolean)classInstance.Get("RightToLeftLayout");
+            retObjectRightToLeftLayout = classInstance.Get("RightToLeftLayout");
+            return (boolean)retObjectRightToLeftLayout;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectRightToLeftLayout != null ? retObjectRightToLeftLayout.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -402,7 +453,7 @@ public class TreeView extends Control  {
 
     public void setRightToLeftLayout(boolean RightToLeftLayout) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.ArrayTypeMismatchException, system.InvalidCastException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RightToLeftLayout", RightToLeftLayout);
         } catch (JCNativeException jcne) {
@@ -412,9 +463,13 @@ public class TreeView extends Control  {
 
     public boolean getScrollable() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectScrollable = null;
         try {
-            return (boolean)classInstance.Get("Scrollable");
+            retObjectScrollable = classInstance.Get("Scrollable");
+            return (boolean)retObjectScrollable;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectScrollable != null ? retObjectScrollable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -422,7 +477,7 @@ public class TreeView extends Control  {
 
     public void setScrollable(boolean Scrollable) throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Scrollable", Scrollable);
         } catch (JCNativeException jcne) {
@@ -432,9 +487,13 @@ public class TreeView extends Control  {
 
     public boolean getShowLines() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShowLines = null;
         try {
-            return (boolean)classInstance.Get("ShowLines");
+            retObjectShowLines = classInstance.Get("ShowLines");
+            return (boolean)retObjectShowLines;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectShowLines != null ? retObjectShowLines.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -442,7 +501,7 @@ public class TreeView extends Control  {
 
     public void setShowLines(boolean ShowLines) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.ObjectDisposedException, system.NotSupportedException, system.FormatException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ShowLines", ShowLines);
         } catch (JCNativeException jcne) {
@@ -452,9 +511,13 @@ public class TreeView extends Control  {
 
     public boolean getShowNodeToolTips() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShowNodeToolTips = null;
         try {
-            return (boolean)classInstance.Get("ShowNodeToolTips");
+            retObjectShowNodeToolTips = classInstance.Get("ShowNodeToolTips");
+            return (boolean)retObjectShowNodeToolTips;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectShowNodeToolTips != null ? retObjectShowNodeToolTips.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -462,7 +525,7 @@ public class TreeView extends Control  {
 
     public void setShowNodeToolTips(boolean ShowNodeToolTips) throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ShowNodeToolTips", ShowNodeToolTips);
         } catch (JCNativeException jcne) {
@@ -472,9 +535,13 @@ public class TreeView extends Control  {
 
     public boolean getShowPlusMinus() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShowPlusMinus = null;
         try {
-            return (boolean)classInstance.Get("ShowPlusMinus");
+            retObjectShowPlusMinus = classInstance.Get("ShowPlusMinus");
+            return (boolean)retObjectShowPlusMinus;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectShowPlusMinus != null ? retObjectShowPlusMinus.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -482,7 +549,7 @@ public class TreeView extends Control  {
 
     public void setShowPlusMinus(boolean ShowPlusMinus) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.ObjectDisposedException, system.NotSupportedException, system.FormatException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ShowPlusMinus", ShowPlusMinus);
         } catch (JCNativeException jcne) {
@@ -492,9 +559,13 @@ public class TreeView extends Control  {
 
     public boolean getShowRootLines() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShowRootLines = null;
         try {
-            return (boolean)classInstance.Get("ShowRootLines");
+            retObjectShowRootLines = classInstance.Get("ShowRootLines");
+            return (boolean)retObjectShowRootLines;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectShowRootLines != null ? retObjectShowRootLines.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -502,7 +573,7 @@ public class TreeView extends Control  {
 
     public void setShowRootLines(boolean ShowRootLines) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.ObjectDisposedException, system.NotSupportedException, system.FormatException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ShowRootLines", ShowRootLines);
         } catch (JCNativeException jcne) {
@@ -512,9 +583,13 @@ public class TreeView extends Control  {
 
     public boolean getSorted() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSorted = null;
         try {
-            return (boolean)classInstance.Get("Sorted");
+            retObjectSorted = classInstance.Get("Sorted");
+            return (boolean)retObjectSorted;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectSorted != null ? retObjectSorted.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -522,7 +597,7 @@ public class TreeView extends Control  {
 
     public void setSorted(boolean Sorted) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.NotSupportedException, system.ArrayTypeMismatchException, system.InvalidCastException, system.InvalidOperationException, system.ObjectDisposedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Sorted", Sorted);
         } catch (JCNativeException jcne) {
@@ -532,9 +607,20 @@ public class TreeView extends Control  {
 
     public int getImageIndex() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectImageIndex = null;
         try {
-            return (int)classInstance.Get("ImageIndex");
+            retObjectImageIndex = classInstance.Get("ImageIndex");
+            return (int)retObjectImageIndex;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectImageIndex_ToString = retObjectImageIndex == null ? "null" : retObjectImageIndex.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectImageIndexNumber = (java.lang.Number)retObjectImageIndex;
+                return retObjectImageIndexNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectImageIndex != null ? retObjectImageIndex.getClass() : "null", retObjectImageIndex_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -542,7 +628,7 @@ public class TreeView extends Control  {
 
     public void setImageIndex(int ImageIndex) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.Win32Exception, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ImageIndex", ImageIndex);
         } catch (JCNativeException jcne) {
@@ -552,9 +638,20 @@ public class TreeView extends Control  {
 
     public int getIndent() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIndent = null;
         try {
-            return (int)classInstance.Get("Indent");
+            retObjectIndent = classInstance.Get("Indent");
+            return (int)retObjectIndent;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectIndent_ToString = retObjectIndent == null ? "null" : retObjectIndent.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectIndentNumber = (java.lang.Number)retObjectIndent;
+                return retObjectIndentNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectIndent != null ? retObjectIndent.getClass() : "null", retObjectIndent_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -562,7 +659,7 @@ public class TreeView extends Control  {
 
     public void setIndent(int Indent) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Indent", Indent);
         } catch (JCNativeException jcne) {
@@ -572,9 +669,20 @@ public class TreeView extends Control  {
 
     public int getItemHeight() throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.RankException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectItemHeight = null;
         try {
-            return (int)classInstance.Get("ItemHeight");
+            retObjectItemHeight = classInstance.Get("ItemHeight");
+            return (int)retObjectItemHeight;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectItemHeight_ToString = retObjectItemHeight == null ? "null" : retObjectItemHeight.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectItemHeightNumber = (java.lang.Number)retObjectItemHeight;
+                return retObjectItemHeightNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectItemHeight != null ? retObjectItemHeight.getClass() : "null", retObjectItemHeight_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -582,7 +690,7 @@ public class TreeView extends Control  {
 
     public void setItemHeight(int ItemHeight) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.Win32Exception, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ItemHeight", ItemHeight);
         } catch (JCNativeException jcne) {
@@ -592,9 +700,20 @@ public class TreeView extends Control  {
 
     public int getSelectedImageIndex() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectedImageIndex = null;
         try {
-            return (int)classInstance.Get("SelectedImageIndex");
+            retObjectSelectedImageIndex = classInstance.Get("SelectedImageIndex");
+            return (int)retObjectSelectedImageIndex;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSelectedImageIndex_ToString = retObjectSelectedImageIndex == null ? "null" : retObjectSelectedImageIndex.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectSelectedImageIndexNumber = (java.lang.Number)retObjectSelectedImageIndex;
+                return retObjectSelectedImageIndexNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectSelectedImageIndex != null ? retObjectSelectedImageIndex.getClass() : "null", retObjectSelectedImageIndex_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -602,7 +721,7 @@ public class TreeView extends Control  {
 
     public void setSelectedImageIndex(int SelectedImageIndex) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.Win32Exception, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SelectedImageIndex", SelectedImageIndex);
         } catch (JCNativeException jcne) {
@@ -612,9 +731,20 @@ public class TreeView extends Control  {
 
     public int getVisibleCount() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVisibleCount = null;
         try {
-            return (int)classInstance.Get("VisibleCount");
+            retObjectVisibleCount = classInstance.Get("VisibleCount");
+            return (int)retObjectVisibleCount;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectVisibleCount_ToString = retObjectVisibleCount == null ? "null" : retObjectVisibleCount.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectVisibleCountNumber = (java.lang.Number)retObjectVisibleCount;
+                return retObjectVisibleCountNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectVisibleCount != null ? retObjectVisibleCount.getClass() : "null", retObjectVisibleCount_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -622,10 +752,14 @@ public class TreeView extends Control  {
 
     public IComparer getTreeViewNodeSorter() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTreeViewNodeSorter = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TreeViewNodeSorter");
+            retObjectTreeViewNodeSorter = classInstance.Get("TreeViewNodeSorter");
+            JCObject val = (JCObject)retObjectTreeViewNodeSorter;
             return new IComparerImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTreeViewNodeSorter != null ? retObjectTreeViewNodeSorter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -633,7 +767,7 @@ public class TreeView extends Control  {
 
     public void setTreeViewNodeSorter(IComparer TreeViewNodeSorter) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.ArrayTypeMismatchException, system.InvalidCastException, system.InvalidOperationException, system.FormatException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TreeViewNodeSorter", TreeViewNodeSorter == null ? null : TreeViewNodeSorter.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -643,10 +777,14 @@ public class TreeView extends Control  {
 
     public Color getLineColor() throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLineColor = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("LineColor");
+            retObjectLineColor = classInstance.Get("LineColor");
+            JCObject val = (JCObject)retObjectLineColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLineColor != null ? retObjectLineColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -654,7 +792,7 @@ public class TreeView extends Control  {
 
     public void setLineColor(Color LineColor) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("LineColor", LineColor == null ? null : LineColor.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -664,9 +802,13 @@ public class TreeView extends Control  {
 
     public java.lang.String getImageKey() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectImageKey = null;
         try {
-            return (java.lang.String)classInstance.Get("ImageKey");
+            retObjectImageKey = classInstance.Get("ImageKey");
+            return (java.lang.String)retObjectImageKey;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectImageKey != null ? retObjectImageKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -674,7 +816,7 @@ public class TreeView extends Control  {
 
     public void setImageKey(java.lang.String ImageKey) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ImageKey", ImageKey);
         } catch (JCNativeException jcne) {
@@ -684,9 +826,13 @@ public class TreeView extends Control  {
 
     public java.lang.String getPathSeparator() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPathSeparator = null;
         try {
-            return (java.lang.String)classInstance.Get("PathSeparator");
+            retObjectPathSeparator = classInstance.Get("PathSeparator");
+            return (java.lang.String)retObjectPathSeparator;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectPathSeparator != null ? retObjectPathSeparator.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -694,7 +840,7 @@ public class TreeView extends Control  {
 
     public void setPathSeparator(java.lang.String PathSeparator) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PathSeparator", PathSeparator);
         } catch (JCNativeException jcne) {
@@ -704,9 +850,13 @@ public class TreeView extends Control  {
 
     public java.lang.String getSelectedImageKey() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectedImageKey = null;
         try {
-            return (java.lang.String)classInstance.Get("SelectedImageKey");
+            retObjectSelectedImageKey = classInstance.Get("SelectedImageKey");
+            return (java.lang.String)retObjectSelectedImageKey;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSelectedImageKey != null ? retObjectSelectedImageKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -714,7 +864,7 @@ public class TreeView extends Control  {
 
     public void setSelectedImageKey(java.lang.String SelectedImageKey) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SelectedImageKey", SelectedImageKey);
         } catch (JCNativeException jcne) {
@@ -724,10 +874,14 @@ public class TreeView extends Control  {
 
     public BorderStyle getBorderStyle() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBorderStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("BorderStyle");
+            retObjectBorderStyle = classInstance.Get("BorderStyle");
+            JCObject val = (JCObject)retObjectBorderStyle;
             return new BorderStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBorderStyle != null ? retObjectBorderStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -735,7 +889,7 @@ public class TreeView extends Control  {
 
     public void setBorderStyle(BorderStyle BorderStyle) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.ArgumentNullException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BorderStyle", BorderStyle == null ? null : BorderStyle.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -745,10 +899,14 @@ public class TreeView extends Control  {
 
     public ImageList getImageList() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectImageList = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ImageList");
+            retObjectImageList = classInstance.Get("ImageList");
+            JCObject val = (JCObject)retObjectImageList;
             return new ImageList(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectImageList != null ? retObjectImageList.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -756,7 +914,7 @@ public class TreeView extends Control  {
 
     public void setImageList(ImageList ImageList) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ImageList", ImageList == null ? null : ImageList.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -766,10 +924,14 @@ public class TreeView extends Control  {
 
     public ImageList getStateImageList() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStateImageList = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("StateImageList");
+            retObjectStateImageList = classInstance.Get("StateImageList");
+            JCObject val = (JCObject)retObjectStateImageList;
             return new ImageList(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStateImageList != null ? retObjectStateImageList.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -777,7 +939,7 @@ public class TreeView extends Control  {
 
     public void setStateImageList(ImageList StateImageList) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.NotSupportedException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidCastException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("StateImageList", StateImageList == null ? null : StateImageList.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -787,10 +949,14 @@ public class TreeView extends Control  {
 
     public Padding getPadding() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPadding = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Padding");
+            retObjectPadding = classInstance.Get("Padding");
+            JCObject val = (JCObject)retObjectPadding;
             return new Padding(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPadding != null ? retObjectPadding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -798,7 +964,7 @@ public class TreeView extends Control  {
 
     public void setPadding(Padding Padding) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.ArrayTypeMismatchException, system.InvalidCastException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Padding", Padding == null ? null : Padding.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -808,10 +974,14 @@ public class TreeView extends Control  {
 
     public TreeNode getSelectedNode() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectedNode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SelectedNode");
+            retObjectSelectedNode = classInstance.Get("SelectedNode");
+            JCObject val = (JCObject)retObjectSelectedNode;
             return new TreeNode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelectedNode != null ? retObjectSelectedNode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -819,7 +989,7 @@ public class TreeView extends Control  {
 
     public void setSelectedNode(TreeNode SelectedNode) throws Throwable, system.ObjectDisposedException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception, system.ArgumentException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SelectedNode", SelectedNode == null ? null : SelectedNode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -829,10 +999,14 @@ public class TreeView extends Control  {
 
     public TreeNode getTopNode() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTopNode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TopNode");
+            retObjectTopNode = classInstance.Get("TopNode");
+            JCObject val = (JCObject)retObjectTopNode;
             return new TreeNode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTopNode != null ? retObjectTopNode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -840,7 +1014,7 @@ public class TreeView extends Control  {
 
     public void setTopNode(TreeNode TopNode) throws Throwable, system.ObjectDisposedException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception, system.ArgumentException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TopNode", TopNode == null ? null : TopNode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -850,10 +1024,14 @@ public class TreeView extends Control  {
 
     public TreeNodeCollection getNodes() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNodes = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Nodes");
+            retObjectNodes = classInstance.Get("Nodes");
+            JCObject val = (JCObject)retObjectNodes;
             return new TreeNodeCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNodes != null ? retObjectNodes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -861,10 +1039,14 @@ public class TreeView extends Control  {
 
     public TreeViewDrawMode getDrawMode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDrawMode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DrawMode");
+            retObjectDrawMode = classInstance.Get("DrawMode");
+            JCObject val = (JCObject)retObjectDrawMode;
             return new TreeViewDrawMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDrawMode != null ? retObjectDrawMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -872,7 +1054,7 @@ public class TreeView extends Control  {
 
     public void setDrawMode(TreeViewDrawMode DrawMode) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DrawMode", DrawMode == null ? null : DrawMode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -887,7 +1069,7 @@ public class TreeView extends Control  {
 
     public void addBackgroundImageChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("BackgroundImageChanged", handler);
         } catch (JCNativeException jcne) {
@@ -897,7 +1079,7 @@ public class TreeView extends Control  {
 
     public void removeBackgroundImageChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("BackgroundImageChanged", handler);
         } catch (JCNativeException jcne) {
@@ -907,7 +1089,7 @@ public class TreeView extends Control  {
 
     public void addBackgroundImageLayoutChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("BackgroundImageLayoutChanged", handler);
         } catch (JCNativeException jcne) {
@@ -917,7 +1099,7 @@ public class TreeView extends Control  {
 
     public void removeBackgroundImageLayoutChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("BackgroundImageLayoutChanged", handler);
         } catch (JCNativeException jcne) {
@@ -927,7 +1109,7 @@ public class TreeView extends Control  {
 
     public void addPaddingChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("PaddingChanged", handler);
         } catch (JCNativeException jcne) {
@@ -937,7 +1119,7 @@ public class TreeView extends Control  {
 
     public void removePaddingChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("PaddingChanged", handler);
         } catch (JCNativeException jcne) {
@@ -947,7 +1129,7 @@ public class TreeView extends Control  {
 
     public void addRightToLeftLayoutChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("RightToLeftLayoutChanged", handler);
         } catch (JCNativeException jcne) {
@@ -957,7 +1139,7 @@ public class TreeView extends Control  {
 
     public void removeRightToLeftLayoutChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("RightToLeftLayoutChanged", handler);
         } catch (JCNativeException jcne) {
@@ -967,7 +1149,7 @@ public class TreeView extends Control  {
 
     public void addTextChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("TextChanged", handler);
         } catch (JCNativeException jcne) {
@@ -977,7 +1159,7 @@ public class TreeView extends Control  {
 
     public void removeTextChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("TextChanged", handler);
         } catch (JCNativeException jcne) {
@@ -987,7 +1169,7 @@ public class TreeView extends Control  {
 
     public void addDrawNode(DrawTreeNodeEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("DrawNode", handler);
         } catch (JCNativeException jcne) {
@@ -997,7 +1179,7 @@ public class TreeView extends Control  {
 
     public void removeDrawNode(DrawTreeNodeEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("DrawNode", handler);
         } catch (JCNativeException jcne) {
@@ -1007,7 +1189,7 @@ public class TreeView extends Control  {
 
     public void addItemDrag(ItemDragEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ItemDrag", handler);
         } catch (JCNativeException jcne) {
@@ -1017,7 +1199,7 @@ public class TreeView extends Control  {
 
     public void removeItemDrag(ItemDragEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ItemDrag", handler);
         } catch (JCNativeException jcne) {
@@ -1027,7 +1209,7 @@ public class TreeView extends Control  {
 
     public void addAfterLabelEdit(NodeLabelEditEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("AfterLabelEdit", handler);
         } catch (JCNativeException jcne) {
@@ -1037,7 +1219,7 @@ public class TreeView extends Control  {
 
     public void removeAfterLabelEdit(NodeLabelEditEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("AfterLabelEdit", handler);
         } catch (JCNativeException jcne) {
@@ -1047,7 +1229,7 @@ public class TreeView extends Control  {
 
     public void addBeforeLabelEdit(NodeLabelEditEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("BeforeLabelEdit", handler);
         } catch (JCNativeException jcne) {
@@ -1057,7 +1239,7 @@ public class TreeView extends Control  {
 
     public void removeBeforeLabelEdit(NodeLabelEditEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("BeforeLabelEdit", handler);
         } catch (JCNativeException jcne) {
@@ -1067,7 +1249,7 @@ public class TreeView extends Control  {
 
     public void addPaint(PaintEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Paint", handler);
         } catch (JCNativeException jcne) {
@@ -1077,7 +1259,7 @@ public class TreeView extends Control  {
 
     public void removePaint(PaintEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Paint", handler);
         } catch (JCNativeException jcne) {
@@ -1087,7 +1269,7 @@ public class TreeView extends Control  {
 
     public void addNodeMouseClick(TreeNodeMouseClickEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("NodeMouseClick", handler);
         } catch (JCNativeException jcne) {
@@ -1097,7 +1279,7 @@ public class TreeView extends Control  {
 
     public void removeNodeMouseClick(TreeNodeMouseClickEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("NodeMouseClick", handler);
         } catch (JCNativeException jcne) {
@@ -1107,7 +1289,7 @@ public class TreeView extends Control  {
 
     public void addNodeMouseDoubleClick(TreeNodeMouseClickEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("NodeMouseDoubleClick", handler);
         } catch (JCNativeException jcne) {
@@ -1117,7 +1299,7 @@ public class TreeView extends Control  {
 
     public void removeNodeMouseDoubleClick(TreeNodeMouseClickEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("NodeMouseDoubleClick", handler);
         } catch (JCNativeException jcne) {
@@ -1127,7 +1309,7 @@ public class TreeView extends Control  {
 
     public void addNodeMouseHover(TreeNodeMouseHoverEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("NodeMouseHover", handler);
         } catch (JCNativeException jcne) {
@@ -1137,7 +1319,7 @@ public class TreeView extends Control  {
 
     public void removeNodeMouseHover(TreeNodeMouseHoverEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("NodeMouseHover", handler);
         } catch (JCNativeException jcne) {
@@ -1147,7 +1329,7 @@ public class TreeView extends Control  {
 
     public void addBeforeCheck(TreeViewCancelEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("BeforeCheck", handler);
         } catch (JCNativeException jcne) {
@@ -1157,7 +1339,7 @@ public class TreeView extends Control  {
 
     public void removeBeforeCheck(TreeViewCancelEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("BeforeCheck", handler);
         } catch (JCNativeException jcne) {
@@ -1167,7 +1349,7 @@ public class TreeView extends Control  {
 
     public void addBeforeCollapse(TreeViewCancelEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("BeforeCollapse", handler);
         } catch (JCNativeException jcne) {
@@ -1177,7 +1359,7 @@ public class TreeView extends Control  {
 
     public void removeBeforeCollapse(TreeViewCancelEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("BeforeCollapse", handler);
         } catch (JCNativeException jcne) {
@@ -1187,7 +1369,7 @@ public class TreeView extends Control  {
 
     public void addBeforeExpand(TreeViewCancelEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("BeforeExpand", handler);
         } catch (JCNativeException jcne) {
@@ -1197,7 +1379,7 @@ public class TreeView extends Control  {
 
     public void removeBeforeExpand(TreeViewCancelEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("BeforeExpand", handler);
         } catch (JCNativeException jcne) {
@@ -1207,7 +1389,7 @@ public class TreeView extends Control  {
 
     public void addBeforeSelect(TreeViewCancelEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("BeforeSelect", handler);
         } catch (JCNativeException jcne) {
@@ -1217,7 +1399,7 @@ public class TreeView extends Control  {
 
     public void removeBeforeSelect(TreeViewCancelEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("BeforeSelect", handler);
         } catch (JCNativeException jcne) {
@@ -1227,7 +1409,7 @@ public class TreeView extends Control  {
 
     public void addAfterCheck(TreeViewEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("AfterCheck", handler);
         } catch (JCNativeException jcne) {
@@ -1237,7 +1419,7 @@ public class TreeView extends Control  {
 
     public void removeAfterCheck(TreeViewEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("AfterCheck", handler);
         } catch (JCNativeException jcne) {
@@ -1247,7 +1429,7 @@ public class TreeView extends Control  {
 
     public void addAfterCollapse(TreeViewEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("AfterCollapse", handler);
         } catch (JCNativeException jcne) {
@@ -1257,7 +1439,7 @@ public class TreeView extends Control  {
 
     public void removeAfterCollapse(TreeViewEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("AfterCollapse", handler);
         } catch (JCNativeException jcne) {
@@ -1267,7 +1449,7 @@ public class TreeView extends Control  {
 
     public void addAfterExpand(TreeViewEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("AfterExpand", handler);
         } catch (JCNativeException jcne) {
@@ -1277,7 +1459,7 @@ public class TreeView extends Control  {
 
     public void removeAfterExpand(TreeViewEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("AfterExpand", handler);
         } catch (JCNativeException jcne) {
@@ -1287,7 +1469,7 @@ public class TreeView extends Control  {
 
     public void addAfterSelect(TreeViewEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("AfterSelect", handler);
         } catch (JCNativeException jcne) {
@@ -1297,7 +1479,7 @@ public class TreeView extends Control  {
 
     public void removeAfterSelect(TreeViewEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("AfterSelect", handler);
         } catch (JCNativeException jcne) {

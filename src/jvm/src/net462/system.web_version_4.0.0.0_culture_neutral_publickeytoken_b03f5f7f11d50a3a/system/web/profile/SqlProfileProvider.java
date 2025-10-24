@@ -169,9 +169,20 @@ public class SqlProfileProvider extends ProfileProvider  {
     
     public int DeleteInactiveProfiles(ProfileAuthenticationOption authenticationOption, DateTime userInactiveSinceDate) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.MemberAccessException, system.io.PathTooLongException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.NotSupportedException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.threading.AbandonedMutexException, system.configuration.provider.ProviderException, system.security.SecurityException, system.reflection.TargetException, system.reflection.TargetParameterCountException, system.web.HttpException, system.io.IOException, system.FormatException, system.web.management.SqlExecutionException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.InvalidTimeZoneException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDeleteInactiveProfiles = null;
         try {
-            return (int)classInstance.Invoke("DeleteInactiveProfiles", authenticationOption == null ? null : authenticationOption.getJCOInstance(), userInactiveSinceDate == null ? null : userInactiveSinceDate.getJCOInstance());
+            retObjectDeleteInactiveProfiles = classInstance.Invoke("DeleteInactiveProfiles", authenticationOption == null ? null : authenticationOption.getJCOInstance(), userInactiveSinceDate == null ? null : userInactiveSinceDate.getJCOInstance());
+            return (int)retObjectDeleteInactiveProfiles;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDeleteInactiveProfiles_ToString = retObjectDeleteInactiveProfiles == null ? "null" : retObjectDeleteInactiveProfiles.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectDeleteInactiveProfilesNumber = (java.lang.Number)retObjectDeleteInactiveProfiles;
+                return retObjectDeleteInactiveProfilesNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectDeleteInactiveProfiles != null ? retObjectDeleteInactiveProfiles.getClass() : "null", retObjectDeleteInactiveProfiles_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,9 +190,20 @@ public class SqlProfileProvider extends ProfileProvider  {
 
     public int DeleteProfiles(java.lang.String[] usernames) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.NullReferenceException, system.MemberAccessException, system.io.PathTooLongException, system.PlatformNotSupportedException, system.NotSupportedException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.threading.AbandonedMutexException, system.configuration.provider.ProviderException, system.security.SecurityException, system.reflection.TargetException, system.reflection.TargetParameterCountException, system.web.HttpException, system.io.IOException, system.FormatException, system.web.management.SqlExecutionException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDeleteProfiles = null;
         try {
-            return (int)classInstance.Invoke("DeleteProfiles", (java.lang.Object)usernames);
+            retObjectDeleteProfiles = classInstance.Invoke("DeleteProfiles", (java.lang.Object)usernames);
+            return (int)retObjectDeleteProfiles;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDeleteProfiles_ToString = retObjectDeleteProfiles == null ? "null" : retObjectDeleteProfiles.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectDeleteProfilesNumber = (java.lang.Number)retObjectDeleteProfiles;
+                return retObjectDeleteProfilesNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectDeleteProfiles != null ? retObjectDeleteProfiles.getClass() : "null", retObjectDeleteProfiles_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -189,9 +211,20 @@ public class SqlProfileProvider extends ProfileProvider  {
 
     public int DeleteProfiles(JCORefOut dupParam0) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.NullReferenceException, system.MemberAccessException, system.io.PathTooLongException, system.PlatformNotSupportedException, system.NotSupportedException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.threading.AbandonedMutexException, system.configuration.provider.ProviderException, system.security.SecurityException, system.reflection.TargetException, system.reflection.TargetParameterCountException, system.web.HttpException, system.io.IOException, system.FormatException, system.web.management.SqlExecutionException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDeleteProfiles = null;
         try {
-            return (int)classInstance.Invoke("DeleteProfiles", (java.lang.Object)dupParam0.getJCRefOut());
+            retObjectDeleteProfiles = classInstance.Invoke("DeleteProfiles", (java.lang.Object)dupParam0.getJCRefOut());
+            return (int)retObjectDeleteProfiles;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDeleteProfiles_ToString = retObjectDeleteProfiles == null ? "null" : retObjectDeleteProfiles.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectDeleteProfilesNumber = (java.lang.Number)retObjectDeleteProfiles;
+                return retObjectDeleteProfilesNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectDeleteProfiles != null ? retObjectDeleteProfiles.getClass() : "null", retObjectDeleteProfiles_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -199,9 +232,20 @@ public class SqlProfileProvider extends ProfileProvider  {
 
     public int DeleteProfiles(ProfileInfoCollection profiles) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDeleteProfiles = null;
         try {
-            return (int)classInstance.Invoke("DeleteProfiles", profiles == null ? null : profiles.getJCOInstance());
+            retObjectDeleteProfiles = classInstance.Invoke("DeleteProfiles", profiles == null ? null : profiles.getJCOInstance());
+            return (int)retObjectDeleteProfiles;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDeleteProfiles_ToString = retObjectDeleteProfiles == null ? "null" : retObjectDeleteProfiles.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectDeleteProfilesNumber = (java.lang.Number)retObjectDeleteProfiles;
+                return retObjectDeleteProfilesNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectDeleteProfiles != null ? retObjectDeleteProfiles.getClass() : "null", retObjectDeleteProfiles_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -209,9 +253,20 @@ public class SqlProfileProvider extends ProfileProvider  {
 
     public int GetNumberOfInactiveProfiles(ProfileAuthenticationOption authenticationOption, DateTime userInactiveSinceDate) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.MemberAccessException, system.io.PathTooLongException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.NotSupportedException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.threading.AbandonedMutexException, system.configuration.provider.ProviderException, system.security.SecurityException, system.reflection.TargetException, system.reflection.TargetParameterCountException, system.web.HttpException, system.io.IOException, system.FormatException, system.web.management.SqlExecutionException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.InvalidTimeZoneException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetNumberOfInactiveProfiles = null;
         try {
-            return (int)classInstance.Invoke("GetNumberOfInactiveProfiles", authenticationOption == null ? null : authenticationOption.getJCOInstance(), userInactiveSinceDate == null ? null : userInactiveSinceDate.getJCOInstance());
+            retObjectGetNumberOfInactiveProfiles = classInstance.Invoke("GetNumberOfInactiveProfiles", authenticationOption == null ? null : authenticationOption.getJCOInstance(), userInactiveSinceDate == null ? null : userInactiveSinceDate.getJCOInstance());
+            return (int)retObjectGetNumberOfInactiveProfiles;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetNumberOfInactiveProfiles_ToString = retObjectGetNumberOfInactiveProfiles == null ? "null" : retObjectGetNumberOfInactiveProfiles.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetNumberOfInactiveProfilesNumber = (java.lang.Number)retObjectGetNumberOfInactiveProfiles;
+                return retObjectGetNumberOfInactiveProfilesNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetNumberOfInactiveProfiles != null ? retObjectGetNumberOfInactiveProfiles.getClass() : "null", retObjectGetNumberOfInactiveProfiles_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -219,10 +274,14 @@ public class SqlProfileProvider extends ProfileProvider  {
 
     public SettingsPropertyValueCollection GetPropertyValues(SettingsContext sc, SettingsPropertyCollection properties) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotSupportedException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.web.HttpException, system.NullReferenceException, system.MemberAccessException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.io.PathTooLongException, system.configuration.provider.ProviderException, system.security.SecurityException, system.reflection.TargetParameterCountException, system.io.IOException, system.FormatException, system.web.management.SqlExecutionException, system.configuration.ConfigurationException, system.diagnostics.tracing.EventSourceException, system.collections.generic.KeyNotFoundException, system.data.sqltypes.SqlNullValueException, system.InvalidCastException, system.data.sqlclient.SqlException, system.threading.tasks.TaskSchedulerException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPropertyValues = null;
         try {
-            JCObject objGetPropertyValues = (JCObject)classInstance.Invoke("GetPropertyValues", sc == null ? null : sc.getJCOInstance(), properties == null ? null : properties.getJCOInstance());
+            retObjectGetPropertyValues = classInstance.Invoke("GetPropertyValues", sc == null ? null : sc.getJCOInstance(), properties == null ? null : properties.getJCOInstance());
+            JCObject objGetPropertyValues = (JCObject)retObjectGetPropertyValues;
             return new SettingsPropertyValueCollection(objGetPropertyValues);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetPropertyValues != null ? retObjectGetPropertyValues.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -230,10 +289,14 @@ public class SqlProfileProvider extends ProfileProvider  {
 
     public ProfileInfoCollection FindInactiveProfilesByUserName(ProfileAuthenticationOption authenticationOption, java.lang.String usernameToMatch, DateTime userInactiveSinceDate, int pageIndex, int pageSize, JCORefOut<java.util.concurrent.atomic.AtomicInteger> totalRecords) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.InvalidTimeZoneException, system.security.SecurityException, system.io.IOException, system.OverflowException, system.NullReferenceException, system.MemberAccessException, system.PlatformNotSupportedException, system.NotSupportedException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.io.PathTooLongException, system.configuration.provider.ProviderException, system.reflection.TargetParameterCountException, system.web.HttpException, system.FormatException, system.web.management.SqlExecutionException, system.configuration.ConfigurationException, system.diagnostics.tracing.EventSourceException, system.collections.generic.KeyNotFoundException, system.data.sqltypes.SqlNullValueException, system.InvalidCastException, system.data.sqlclient.SqlException, system.threading.tasks.TaskSchedulerException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFindInactiveProfilesByUserName = null;
         try {
-            JCObject objFindInactiveProfilesByUserName = (JCObject)classInstance.Invoke("FindInactiveProfilesByUserName", authenticationOption == null ? null : authenticationOption.getJCOInstance(), usernameToMatch, userInactiveSinceDate == null ? null : userInactiveSinceDate.getJCOInstance(), pageIndex, pageSize, totalRecords.getJCRefOut());
+            retObjectFindInactiveProfilesByUserName = classInstance.Invoke("FindInactiveProfilesByUserName", authenticationOption == null ? null : authenticationOption.getJCOInstance(), usernameToMatch, userInactiveSinceDate == null ? null : userInactiveSinceDate.getJCOInstance(), pageIndex, pageSize, totalRecords.getJCRefOut());
+            JCObject objFindInactiveProfilesByUserName = (JCObject)retObjectFindInactiveProfilesByUserName;
             return new ProfileInfoCollection(objFindInactiveProfilesByUserName);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFindInactiveProfilesByUserName != null ? retObjectFindInactiveProfilesByUserName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -241,10 +304,14 @@ public class SqlProfileProvider extends ProfileProvider  {
 
     public ProfileInfoCollection FindProfilesByUserName(ProfileAuthenticationOption authenticationOption, java.lang.String usernameToMatch, int pageIndex, int pageSize, JCORefOut<java.util.concurrent.atomic.AtomicInteger> totalRecords) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.NullReferenceException, system.MemberAccessException, system.PlatformNotSupportedException, system.NotSupportedException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.io.PathTooLongException, system.configuration.provider.ProviderException, system.security.SecurityException, system.reflection.TargetParameterCountException, system.web.HttpException, system.io.IOException, system.FormatException, system.web.management.SqlExecutionException, system.configuration.ConfigurationException, system.diagnostics.tracing.EventSourceException, system.collections.generic.KeyNotFoundException, system.data.sqltypes.SqlNullValueException, system.InvalidCastException, system.data.sqlclient.SqlException, system.threading.tasks.TaskSchedulerException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFindProfilesByUserName = null;
         try {
-            JCObject objFindProfilesByUserName = (JCObject)classInstance.Invoke("FindProfilesByUserName", authenticationOption == null ? null : authenticationOption.getJCOInstance(), usernameToMatch, pageIndex, pageSize, totalRecords.getJCRefOut());
+            retObjectFindProfilesByUserName = classInstance.Invoke("FindProfilesByUserName", authenticationOption == null ? null : authenticationOption.getJCOInstance(), usernameToMatch, pageIndex, pageSize, totalRecords.getJCRefOut());
+            JCObject objFindProfilesByUserName = (JCObject)retObjectFindProfilesByUserName;
             return new ProfileInfoCollection(objFindProfilesByUserName);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFindProfilesByUserName != null ? retObjectFindProfilesByUserName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -252,10 +319,14 @@ public class SqlProfileProvider extends ProfileProvider  {
 
     public ProfileInfoCollection GetAllInactiveProfiles(ProfileAuthenticationOption authenticationOption, DateTime userInactiveSinceDate, int pageIndex, int pageSize, JCORefOut<java.util.concurrent.atomic.AtomicInteger> totalRecords) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidTimeZoneException, system.security.SecurityException, system.io.IOException, system.InvalidOperationException, system.NotSupportedException, system.OverflowException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.NullReferenceException, system.MemberAccessException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.io.PathTooLongException, system.configuration.provider.ProviderException, system.reflection.TargetParameterCountException, system.web.HttpException, system.FormatException, system.web.management.SqlExecutionException, system.configuration.ConfigurationException, system.diagnostics.tracing.EventSourceException, system.collections.generic.KeyNotFoundException, system.data.sqltypes.SqlNullValueException, system.InvalidCastException, system.data.sqlclient.SqlException, system.threading.tasks.TaskSchedulerException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetAllInactiveProfiles = null;
         try {
-            JCObject objGetAllInactiveProfiles = (JCObject)classInstance.Invoke("GetAllInactiveProfiles", authenticationOption == null ? null : authenticationOption.getJCOInstance(), userInactiveSinceDate == null ? null : userInactiveSinceDate.getJCOInstance(), pageIndex, pageSize, totalRecords.getJCRefOut());
+            retObjectGetAllInactiveProfiles = classInstance.Invoke("GetAllInactiveProfiles", authenticationOption == null ? null : authenticationOption.getJCOInstance(), userInactiveSinceDate == null ? null : userInactiveSinceDate.getJCOInstance(), pageIndex, pageSize, totalRecords.getJCRefOut());
+            JCObject objGetAllInactiveProfiles = (JCObject)retObjectGetAllInactiveProfiles;
             return new ProfileInfoCollection(objGetAllInactiveProfiles);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetAllInactiveProfiles != null ? retObjectGetAllInactiveProfiles.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -263,10 +334,14 @@ public class SqlProfileProvider extends ProfileProvider  {
 
     public ProfileInfoCollection GetAllProfiles(ProfileAuthenticationOption authenticationOption, int pageIndex, int pageSize, JCORefOut<java.util.concurrent.atomic.AtomicInteger> totalRecords) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.NullReferenceException, system.MemberAccessException, system.PlatformNotSupportedException, system.NotSupportedException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.io.PathTooLongException, system.configuration.provider.ProviderException, system.security.SecurityException, system.reflection.TargetParameterCountException, system.web.HttpException, system.io.IOException, system.FormatException, system.web.management.SqlExecutionException, system.configuration.ConfigurationException, system.diagnostics.tracing.EventSourceException, system.collections.generic.KeyNotFoundException, system.data.sqltypes.SqlNullValueException, system.InvalidCastException, system.data.sqlclient.SqlException, system.threading.tasks.TaskSchedulerException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetAllProfiles = null;
         try {
-            JCObject objGetAllProfiles = (JCObject)classInstance.Invoke("GetAllProfiles", authenticationOption == null ? null : authenticationOption.getJCOInstance(), pageIndex, pageSize, totalRecords.getJCRefOut());
+            retObjectGetAllProfiles = classInstance.Invoke("GetAllProfiles", authenticationOption == null ? null : authenticationOption.getJCOInstance(), pageIndex, pageSize, totalRecords.getJCRefOut());
+            JCObject objGetAllProfiles = (JCObject)retObjectGetAllProfiles;
             return new ProfileInfoCollection(objGetAllProfiles);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetAllProfiles != null ? retObjectGetAllProfiles.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -274,7 +349,7 @@ public class SqlProfileProvider extends ProfileProvider  {
 
     public void Initialize(java.lang.String name, NameValueCollection config) throws Throwable, system.ArgumentException, system.security.SecurityException, system.ArgumentNullException, system.NotImplementedException, system.NotSupportedException, system.InvalidOperationException, system.MemberAccessException, system.reflection.TargetException, system.reflection.TargetParameterCountException, system.ObjectDisposedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.web.HttpException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NullReferenceException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.AccessViolationException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Initialize", name, config == null ? null : config.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -284,7 +359,7 @@ public class SqlProfileProvider extends ProfileProvider  {
 
     public void SetPropertyValues(SettingsContext sc, SettingsPropertyValueCollection properties) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.FormatException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentException, system.OutOfMemoryException, system.io.FileNotFoundException, system.runtime.serialization.SerializationException, system.xml.XmlException, system.NotImplementedException, system.NotSupportedException, system.MissingMethodException, system.NullReferenceException, system.MemberAccessException, system.TypeLoadException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.configuration.provider.ProviderException, system.security.SecurityException, system.reflection.TargetException, system.reflection.TargetParameterCountException, system.web.HttpException, system.web.management.SqlExecutionException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetPropertyValues", sc == null ? null : sc.getJCOInstance(), properties == null ? null : properties.getJCOInstance());
         } catch (JCNativeException jcne) {

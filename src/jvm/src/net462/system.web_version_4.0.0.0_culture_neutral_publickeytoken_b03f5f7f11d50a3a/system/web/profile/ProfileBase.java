@@ -165,10 +165,14 @@ public class ProfileBase extends SettingsBase  {
     
     public NetObject GetPropertyValue(java.lang.String propertyName) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.SettingsPropertyNotFoundException, system.NotSupportedException, system.FormatException, system.xml.XmlException, system.NullReferenceException, system.MemberAccessException, system.MissingMethodException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPropertyValue = null;
         try {
-            JCObject objGetPropertyValue = (JCObject)classInstance.Invoke("GetPropertyValue", propertyName);
+            retObjectGetPropertyValue = classInstance.Invoke("GetPropertyValue", propertyName);
+            JCObject objGetPropertyValue = (JCObject)retObjectGetPropertyValue;
             return new NetObject(objGetPropertyValue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetPropertyValue != null ? retObjectGetPropertyValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,10 +180,14 @@ public class ProfileBase extends SettingsBase  {
 
     public static ProfileBase Create(java.lang.String username) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.web.HttpException, system.ArgumentNullException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException, system.security.SecurityException, system.reflection.TargetParameterCountException, system.configuration.provider.ProviderException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
         try {
-            JCObject objCreate = (JCObject)classType.Invoke("Create", username);
+            retObjectCreate = classType.Invoke("Create", username);
+            JCObject objCreate = (JCObject)retObjectCreate;
             return new ProfileBase(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,10 +195,14 @@ public class ProfileBase extends SettingsBase  {
 
     public static ProfileBase Create(java.lang.String username, boolean isAuthenticated) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.configuration.ConfigurationErrorsException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationException, system.security.SecurityException, system.MemberAccessException, system.reflection.TargetException, system.reflection.TargetParameterCountException, system.web.HttpException, system.configuration.provider.ProviderException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
         try {
-            JCObject objCreate = (JCObject)classType.Invoke("Create", username, isAuthenticated);
+            retObjectCreate = classType.Invoke("Create", username, isAuthenticated);
+            JCObject objCreate = (JCObject)retObjectCreate;
             return new ProfileBase(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,10 +210,14 @@ public class ProfileBase extends SettingsBase  {
 
     public ProfileGroupBase GetProfileGroup(java.lang.String groupName) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.web.HttpException, system.ArgumentOutOfRangeException, system.web.HttpCompileException, system.web.HttpParseException, system.OperationCanceledException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.configuration.provider.ProviderException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetProfileGroup = null;
         try {
-            JCObject objGetProfileGroup = (JCObject)classInstance.Invoke("GetProfileGroup", groupName);
+            retObjectGetProfileGroup = classInstance.Invoke("GetProfileGroup", groupName);
+            JCObject objGetProfileGroup = (JCObject)retObjectGetProfileGroup;
             return new ProfileGroupBase(objGetProfileGroup);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetProfileGroup != null ? retObjectGetProfileGroup.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -209,7 +225,7 @@ public class ProfileBase extends SettingsBase  {
 
     public void Initialize(java.lang.String username, boolean isAuthenticated) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.InvalidOperationException, system.security.SecurityException, system.NotSupportedException, system.MemberAccessException, system.reflection.TargetException, system.reflection.TargetParameterCountException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.configuration.provider.ProviderException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Initialize", username, isAuthenticated);
         } catch (JCNativeException jcne) {
@@ -219,7 +235,7 @@ public class ProfileBase extends SettingsBase  {
 
     public void Save() throws Throwable, system.security.SecurityException, system.ArgumentException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Save");
         } catch (JCNativeException jcne) {
@@ -229,7 +245,7 @@ public class ProfileBase extends SettingsBase  {
 
     public void SetPropertyValue(java.lang.String propertyName, NetObject propertyValue) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.SettingsPropertyNotFoundException, system.configuration.SettingsPropertyIsReadOnlyException, system.configuration.SettingsPropertyWrongTypeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetPropertyValue", propertyName, propertyValue == null ? null : propertyValue.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -243,9 +259,13 @@ public class ProfileBase extends SettingsBase  {
     
     public boolean getIsAnonymous() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsAnonymous = null;
         try {
-            return (boolean)classInstance.Get("IsAnonymous");
+            retObjectIsAnonymous = classInstance.Get("IsAnonymous");
+            return (boolean)retObjectIsAnonymous;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsAnonymous != null ? retObjectIsAnonymous.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -253,9 +273,13 @@ public class ProfileBase extends SettingsBase  {
 
     public boolean getIsDirty() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsDirty = null;
         try {
-            return (boolean)classInstance.Get("IsDirty");
+            retObjectIsDirty = classInstance.Get("IsDirty");
+            return (boolean)retObjectIsDirty;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsDirty != null ? retObjectIsDirty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -263,10 +287,14 @@ public class ProfileBase extends SettingsBase  {
 
     public DateTime getLastActivityDate() throws Throwable, system.ArgumentException, system.security.SecurityException, system.ArgumentNullException, system.reflection.TargetParameterCountException, system.NotSupportedException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.configuration.provider.ProviderException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLastActivityDate = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("LastActivityDate");
+            retObjectLastActivityDate = classInstance.Get("LastActivityDate");
+            JCObject val = (JCObject)retObjectLastActivityDate;
             return new DateTime(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLastActivityDate != null ? retObjectLastActivityDate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -274,10 +302,14 @@ public class ProfileBase extends SettingsBase  {
 
     public DateTime getLastUpdatedDate() throws Throwable, system.ArgumentException, system.security.SecurityException, system.ArgumentNullException, system.reflection.TargetParameterCountException, system.NotSupportedException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.configuration.provider.ProviderException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLastUpdatedDate = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("LastUpdatedDate");
+            retObjectLastUpdatedDate = classInstance.Get("LastUpdatedDate");
+            JCObject val = (JCObject)retObjectLastUpdatedDate;
             return new DateTime(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLastUpdatedDate != null ? retObjectLastUpdatedDate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -285,9 +317,13 @@ public class ProfileBase extends SettingsBase  {
 
     public java.lang.String getUserName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUserName = null;
         try {
-            return (java.lang.String)classInstance.Get("UserName");
+            retObjectUserName = classInstance.Get("UserName");
+            return (java.lang.String)retObjectUserName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectUserName != null ? retObjectUserName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

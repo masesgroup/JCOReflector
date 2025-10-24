@@ -172,7 +172,7 @@ public class FixedDocumentSequence extends FrameworkContentElement implements sy
      */
     @Deprecated 
     public void AddChild(NetObject value) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAddChild to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAddChild to obtain the full interface.");
     }
 
     /**
@@ -181,7 +181,7 @@ public class FixedDocumentSequence extends FrameworkContentElement implements sy
      */
     @Deprecated 
     public void AddText(java.lang.String text) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAddChild to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAddChild to obtain the full interface.");
     }
 
     /**
@@ -190,7 +190,7 @@ public class FixedDocumentSequence extends FrameworkContentElement implements sy
      */
     @Deprecated 
     public NetObject GetService(NetType serviceType) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIServiceProvider to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIServiceProvider to obtain the full interface.");
     }
 
 
@@ -199,10 +199,14 @@ public class FixedDocumentSequence extends FrameworkContentElement implements sy
     
     public NetObject getPrintTicket() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPrintTicket = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PrintTicket");
+            retObjectPrintTicket = classInstance.Get("PrintTicket");
+            JCObject val = (JCObject)retObjectPrintTicket;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPrintTicket != null ? retObjectPrintTicket.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -210,7 +214,7 @@ public class FixedDocumentSequence extends FrameworkContentElement implements sy
 
     public void setPrintTicket(NetObject PrintTicket) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PrintTicket", PrintTicket == null ? null : PrintTicket.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -220,10 +224,14 @@ public class FixedDocumentSequence extends FrameworkContentElement implements sy
 
     public DocumentPaginator getDocumentPaginator() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDocumentPaginator = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DocumentPaginator");
+            retObjectDocumentPaginator = classInstance.Get("DocumentPaginator");
+            JCObject val = (JCObject)retObjectDocumentPaginator;
             return new DocumentPaginator(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDocumentPaginator != null ? retObjectDocumentPaginator.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -231,10 +239,14 @@ public class FixedDocumentSequence extends FrameworkContentElement implements sy
 
     public DocumentReferenceCollection getReferences() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReferences = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("References");
+            retObjectReferences = classInstance.Get("References");
+            JCObject val = (JCObject)retObjectReferences;
             return new DocumentReferenceCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReferences != null ? retObjectReferences.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

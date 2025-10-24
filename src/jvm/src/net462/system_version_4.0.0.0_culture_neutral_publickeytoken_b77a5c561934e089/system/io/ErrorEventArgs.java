@@ -166,10 +166,14 @@ public class ErrorEventArgs extends EventArgs  {
     
     public NetException GetException() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetException = null;
         try {
-            JCObject objGetException = (JCObject)classInstance.Invoke("GetException");
+            retObjectGetException = classInstance.Invoke("GetException");
+            JCObject objGetException = (JCObject)retObjectGetException;
             return new NetException(objGetException);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetException != null ? retObjectGetException.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

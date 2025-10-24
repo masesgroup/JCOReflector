@@ -165,7 +165,7 @@ public class BackgroundWorker extends Component  {
     
     public void CancelAsync() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CancelAsync");
         } catch (JCNativeException jcne) {
@@ -175,7 +175,7 @@ public class BackgroundWorker extends Component  {
 
     public void ReportProgress(int percentProgress, NetObject userState) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ReportProgress", percentProgress, userState == null ? null : userState.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -185,7 +185,7 @@ public class BackgroundWorker extends Component  {
 
     public void ReportProgress(int percentProgress) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ReportProgress", percentProgress);
         } catch (JCNativeException jcne) {
@@ -195,7 +195,7 @@ public class BackgroundWorker extends Component  {
 
     public void RunWorkerAsync() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.NotSupportedException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RunWorkerAsync");
         } catch (JCNativeException jcne) {
@@ -205,7 +205,7 @@ public class BackgroundWorker extends Component  {
 
     public void RunWorkerAsync(NetObject argument) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException, system.NotSupportedException, system.diagnostics.tracing.EventSourceException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RunWorkerAsync", argument == null ? null : argument.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -219,9 +219,13 @@ public class BackgroundWorker extends Component  {
     
     public boolean getCancellationPending() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCancellationPending = null;
         try {
-            return (boolean)classInstance.Get("CancellationPending");
+            retObjectCancellationPending = classInstance.Get("CancellationPending");
+            return (boolean)retObjectCancellationPending;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCancellationPending != null ? retObjectCancellationPending.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -229,9 +233,13 @@ public class BackgroundWorker extends Component  {
 
     public boolean getIsBusy() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsBusy = null;
         try {
-            return (boolean)classInstance.Get("IsBusy");
+            retObjectIsBusy = classInstance.Get("IsBusy");
+            return (boolean)retObjectIsBusy;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsBusy != null ? retObjectIsBusy.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -239,9 +247,13 @@ public class BackgroundWorker extends Component  {
 
     public boolean getWorkerReportsProgress() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWorkerReportsProgress = null;
         try {
-            return (boolean)classInstance.Get("WorkerReportsProgress");
+            retObjectWorkerReportsProgress = classInstance.Get("WorkerReportsProgress");
+            return (boolean)retObjectWorkerReportsProgress;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectWorkerReportsProgress != null ? retObjectWorkerReportsProgress.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -249,7 +261,7 @@ public class BackgroundWorker extends Component  {
 
     public void setWorkerReportsProgress(boolean WorkerReportsProgress) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("WorkerReportsProgress", WorkerReportsProgress);
         } catch (JCNativeException jcne) {
@@ -259,9 +271,13 @@ public class BackgroundWorker extends Component  {
 
     public boolean getWorkerSupportsCancellation() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWorkerSupportsCancellation = null;
         try {
-            return (boolean)classInstance.Get("WorkerSupportsCancellation");
+            retObjectWorkerSupportsCancellation = classInstance.Get("WorkerSupportsCancellation");
+            return (boolean)retObjectWorkerSupportsCancellation;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectWorkerSupportsCancellation != null ? retObjectWorkerSupportsCancellation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -269,7 +285,7 @@ public class BackgroundWorker extends Component  {
 
     public void setWorkerSupportsCancellation(boolean WorkerSupportsCancellation) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("WorkerSupportsCancellation", WorkerSupportsCancellation);
         } catch (JCNativeException jcne) {
@@ -284,7 +300,7 @@ public class BackgroundWorker extends Component  {
 
     public void addDoWork(DoWorkEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("DoWork", handler);
         } catch (JCNativeException jcne) {
@@ -294,7 +310,7 @@ public class BackgroundWorker extends Component  {
 
     public void removeDoWork(DoWorkEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("DoWork", handler);
         } catch (JCNativeException jcne) {
@@ -304,7 +320,7 @@ public class BackgroundWorker extends Component  {
 
     public void addProgressChanged(ProgressChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ProgressChanged", handler);
         } catch (JCNativeException jcne) {
@@ -314,7 +330,7 @@ public class BackgroundWorker extends Component  {
 
     public void removeProgressChanged(ProgressChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ProgressChanged", handler);
         } catch (JCNativeException jcne) {
@@ -324,7 +340,7 @@ public class BackgroundWorker extends Component  {
 
     public void addRunWorkerCompleted(RunWorkerCompletedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("RunWorkerCompleted", handler);
         } catch (JCNativeException jcne) {
@@ -334,7 +350,7 @@ public class BackgroundWorker extends Component  {
 
     public void removeRunWorkerCompleted(RunWorkerCompletedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("RunWorkerCompleted", handler);
         } catch (JCNativeException jcne) {

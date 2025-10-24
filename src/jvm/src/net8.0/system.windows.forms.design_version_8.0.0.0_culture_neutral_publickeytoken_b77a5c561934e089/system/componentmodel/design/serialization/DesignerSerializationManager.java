@@ -186,10 +186,14 @@ public class DesignerSerializationManager extends NetObject implements system.IS
     
     public IDisposable CreateSession() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateSession = null;
         try {
-            JCObject objCreateSession = (JCObject)classInstance.Invoke("CreateSession");
+            retObjectCreateSession = classInstance.Invoke("CreateSession");
+            JCObject objCreateSession = (JCObject)retObjectCreateSession;
             return new IDisposableImplementation(objCreateSession);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateSession != null ? retObjectCreateSession.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,10 +201,14 @@ public class DesignerSerializationManager extends NetObject implements system.IS
 
     public NetObject GetSerializer(NetType objectType, NetType serializerType) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.TypeLoadException, system.FormatException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.MissingMethodException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSerializer = null;
         try {
-            JCObject objGetSerializer = (JCObject)classInstance.Invoke("GetSerializer", objectType == null ? null : objectType.getJCOInstance(), serializerType == null ? null : serializerType.getJCOInstance());
+            retObjectGetSerializer = classInstance.Invoke("GetSerializer", objectType == null ? null : objectType.getJCOInstance(), serializerType == null ? null : serializerType.getJCOInstance());
+            JCObject objGetSerializer = (JCObject)retObjectGetSerializer;
             return new NetObject(objGetSerializer);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSerializer != null ? retObjectGetSerializer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -208,10 +216,14 @@ public class DesignerSerializationManager extends NetObject implements system.IS
 
     public NetType GetRuntimeType(java.lang.String typeName) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.TypeLoadException, system.ArgumentOutOfRangeException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetRuntimeType = null;
         try {
-            JCObject objGetRuntimeType = (JCObject)classInstance.Invoke("GetRuntimeType", typeName);
+            retObjectGetRuntimeType = classInstance.Invoke("GetRuntimeType", typeName);
+            JCObject objGetRuntimeType = (JCObject)retObjectGetRuntimeType;
             return new NetType(objGetRuntimeType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetRuntimeType != null ? retObjectGetRuntimeType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -223,7 +235,7 @@ public class DesignerSerializationManager extends NetObject implements system.IS
      */
     @Deprecated 
     public NetObject CreateInstance(NetType type, ICollection arguments, java.lang.String name, boolean addToContainer) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDesignerSerializationManager to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDesignerSerializationManager to obtain the full interface.");
     }
 
     /**
@@ -232,7 +244,7 @@ public class DesignerSerializationManager extends NetObject implements system.IS
      */
     @Deprecated 
     public NetObject GetInstance(java.lang.String name) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDesignerSerializationManager to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDesignerSerializationManager to obtain the full interface.");
     }
 
     /**
@@ -241,7 +253,7 @@ public class DesignerSerializationManager extends NetObject implements system.IS
      */
     @Deprecated 
     public java.lang.String GetName(NetObject value) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDesignerSerializationManager to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDesignerSerializationManager to obtain the full interface.");
     }
 
     /**
@@ -250,7 +262,7 @@ public class DesignerSerializationManager extends NetObject implements system.IS
      */
     @Deprecated 
     public NetType GetType(java.lang.String typeName) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDesignerSerializationManager to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDesignerSerializationManager to obtain the full interface.");
     }
 
     /**
@@ -259,7 +271,7 @@ public class DesignerSerializationManager extends NetObject implements system.IS
      */
     @Deprecated 
     public void AddSerializationProvider(IDesignerSerializationProvider provider) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDesignerSerializationManager to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDesignerSerializationManager to obtain the full interface.");
     }
 
     /**
@@ -268,7 +280,7 @@ public class DesignerSerializationManager extends NetObject implements system.IS
      */
     @Deprecated 
     public void RemoveSerializationProvider(IDesignerSerializationProvider provider) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDesignerSerializationManager to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDesignerSerializationManager to obtain the full interface.");
     }
 
     /**
@@ -277,7 +289,7 @@ public class DesignerSerializationManager extends NetObject implements system.IS
      */
     @Deprecated 
     public void ReportError(NetObject errorInformation) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDesignerSerializationManager to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDesignerSerializationManager to obtain the full interface.");
     }
 
     /**
@@ -286,7 +298,7 @@ public class DesignerSerializationManager extends NetObject implements system.IS
      */
     @Deprecated 
     public void SetName(NetObject instance, java.lang.String name) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDesignerSerializationManager to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDesignerSerializationManager to obtain the full interface.");
     }
 
     /**
@@ -295,7 +307,7 @@ public class DesignerSerializationManager extends NetObject implements system.IS
      */
     @Deprecated 
     public NetObject GetService(NetType serviceType) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIServiceProvider to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIServiceProvider to obtain the full interface.");
     }
 
 
@@ -304,9 +316,13 @@ public class DesignerSerializationManager extends NetObject implements system.IS
     
     public boolean getPreserveNames() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPreserveNames = null;
         try {
-            return (boolean)classInstance.Get("PreserveNames");
+            retObjectPreserveNames = classInstance.Get("PreserveNames");
+            return (boolean)retObjectPreserveNames;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectPreserveNames != null ? retObjectPreserveNames.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -314,7 +330,7 @@ public class DesignerSerializationManager extends NetObject implements system.IS
 
     public void setPreserveNames(boolean PreserveNames) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PreserveNames", PreserveNames);
         } catch (JCNativeException jcne) {
@@ -324,9 +340,13 @@ public class DesignerSerializationManager extends NetObject implements system.IS
 
     public boolean getRecycleInstances() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRecycleInstances = null;
         try {
-            return (boolean)classInstance.Get("RecycleInstances");
+            retObjectRecycleInstances = classInstance.Get("RecycleInstances");
+            return (boolean)retObjectRecycleInstances;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectRecycleInstances != null ? retObjectRecycleInstances.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -334,7 +354,7 @@ public class DesignerSerializationManager extends NetObject implements system.IS
 
     public void setRecycleInstances(boolean RecycleInstances) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RecycleInstances", RecycleInstances);
         } catch (JCNativeException jcne) {
@@ -344,9 +364,13 @@ public class DesignerSerializationManager extends NetObject implements system.IS
 
     public boolean getValidateRecycledTypes() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValidateRecycledTypes = null;
         try {
-            return (boolean)classInstance.Get("ValidateRecycledTypes");
+            retObjectValidateRecycledTypes = classInstance.Get("ValidateRecycledTypes");
+            return (boolean)retObjectValidateRecycledTypes;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectValidateRecycledTypes != null ? retObjectValidateRecycledTypes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -354,7 +378,7 @@ public class DesignerSerializationManager extends NetObject implements system.IS
 
     public void setValidateRecycledTypes(boolean ValidateRecycledTypes) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ValidateRecycledTypes", ValidateRecycledTypes);
         } catch (JCNativeException jcne) {
@@ -364,10 +388,14 @@ public class DesignerSerializationManager extends NetObject implements system.IS
 
     public IList getErrors() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectErrors = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Errors");
+            retObjectErrors = classInstance.Get("Errors");
+            JCObject val = (JCObject)retObjectErrors;
             return new IListImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectErrors != null ? retObjectErrors.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -375,10 +403,14 @@ public class DesignerSerializationManager extends NetObject implements system.IS
 
     public IContainer getContainer() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContainer = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Container");
+            retObjectContainer = classInstance.Get("Container");
+            JCObject val = (JCObject)retObjectContainer;
             return new IContainerImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContainer != null ? retObjectContainer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -386,7 +418,7 @@ public class DesignerSerializationManager extends NetObject implements system.IS
 
     public void setContainer(IContainer Container) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Container", Container == null ? null : Container.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -396,10 +428,14 @@ public class DesignerSerializationManager extends NetObject implements system.IS
 
     public NetObject getPropertyProvider() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPropertyProvider = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PropertyProvider");
+            retObjectPropertyProvider = classInstance.Get("PropertyProvider");
+            JCObject val = (JCObject)retObjectPropertyProvider;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPropertyProvider != null ? retObjectPropertyProvider.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -407,7 +443,7 @@ public class DesignerSerializationManager extends NetObject implements system.IS
 
     public void setPropertyProvider(NetObject PropertyProvider) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PropertyProvider", PropertyProvider == null ? null : PropertyProvider.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -422,7 +458,7 @@ public class DesignerSerializationManager extends NetObject implements system.IS
 
     public void addSessionCreated(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("SessionCreated", handler);
         } catch (JCNativeException jcne) {
@@ -432,7 +468,7 @@ public class DesignerSerializationManager extends NetObject implements system.IS
 
     public void removeSessionCreated(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("SessionCreated", handler);
         } catch (JCNativeException jcne) {
@@ -442,7 +478,7 @@ public class DesignerSerializationManager extends NetObject implements system.IS
 
     public void addSessionDisposed(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("SessionDisposed", handler);
         } catch (JCNativeException jcne) {
@@ -452,7 +488,7 @@ public class DesignerSerializationManager extends NetObject implements system.IS
 
     public void removeSessionDisposed(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("SessionDisposed", handler);
         } catch (JCNativeException jcne) {

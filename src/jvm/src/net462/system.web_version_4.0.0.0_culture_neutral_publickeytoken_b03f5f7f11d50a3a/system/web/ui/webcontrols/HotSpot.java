@@ -154,9 +154,13 @@ public class HotSpot extends NetObject  {
     
     public java.lang.String GetCoordinates() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetCoordinates = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetCoordinates");
+            retObjectGetCoordinates = classInstance.Invoke("GetCoordinates");
+            return (java.lang.String)retObjectGetCoordinates;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetCoordinates != null ? retObjectGetCoordinates.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -168,7 +172,7 @@ public class HotSpot extends NetObject  {
      */
     @Deprecated 
     public NetObject SaveViewState() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIStateManager to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIStateManager to obtain the full interface.");
     }
 
     /**
@@ -177,7 +181,7 @@ public class HotSpot extends NetObject  {
      */
     @Deprecated 
     public void LoadViewState(NetObject state) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIStateManager to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIStateManager to obtain the full interface.");
     }
 
     /**
@@ -186,7 +190,7 @@ public class HotSpot extends NetObject  {
      */
     @Deprecated 
     public void TrackViewState() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIStateManager to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIStateManager to obtain the full interface.");
     }
 
 
@@ -195,9 +199,20 @@ public class HotSpot extends NetObject  {
     
     public short getTabIndex() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTabIndex = null;
         try {
-            return (short)classInstance.Get("TabIndex");
+            retObjectTabIndex = classInstance.Get("TabIndex");
+            return (short)retObjectTabIndex;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectTabIndex_ToString = retObjectTabIndex == null ? "null" : retObjectTabIndex.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectTabIndexNumber = (java.lang.Number)retObjectTabIndex;
+                return retObjectTabIndexNumber.shortValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into short and, as fallback solution, into java.lang.Number", retObjectTabIndex != null ? retObjectTabIndex.getClass() : "null", retObjectTabIndex_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -205,7 +220,7 @@ public class HotSpot extends NetObject  {
 
     public void setTabIndex(short TabIndex) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TabIndex", TabIndex);
         } catch (JCNativeException jcne) {
@@ -215,9 +230,13 @@ public class HotSpot extends NetObject  {
 
     public java.lang.String getAccessKey() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAccessKey = null;
         try {
-            return (java.lang.String)classInstance.Get("AccessKey");
+            retObjectAccessKey = classInstance.Get("AccessKey");
+            return (java.lang.String)retObjectAccessKey;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectAccessKey != null ? retObjectAccessKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -225,7 +244,7 @@ public class HotSpot extends NetObject  {
 
     public void setAccessKey(java.lang.String AccessKey) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AccessKey", AccessKey);
         } catch (JCNativeException jcne) {
@@ -235,9 +254,13 @@ public class HotSpot extends NetObject  {
 
     public java.lang.String getAlternateText() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAlternateText = null;
         try {
-            return (java.lang.String)classInstance.Get("AlternateText");
+            retObjectAlternateText = classInstance.Get("AlternateText");
+            return (java.lang.String)retObjectAlternateText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectAlternateText != null ? retObjectAlternateText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -245,7 +268,7 @@ public class HotSpot extends NetObject  {
 
     public void setAlternateText(java.lang.String AlternateText) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AlternateText", AlternateText);
         } catch (JCNativeException jcne) {
@@ -255,9 +278,13 @@ public class HotSpot extends NetObject  {
 
     public java.lang.String getNavigateUrl() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNavigateUrl = null;
         try {
-            return (java.lang.String)classInstance.Get("NavigateUrl");
+            retObjectNavigateUrl = classInstance.Get("NavigateUrl");
+            return (java.lang.String)retObjectNavigateUrl;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectNavigateUrl != null ? retObjectNavigateUrl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -265,7 +292,7 @@ public class HotSpot extends NetObject  {
 
     public void setNavigateUrl(java.lang.String NavigateUrl) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("NavigateUrl", NavigateUrl);
         } catch (JCNativeException jcne) {
@@ -275,9 +302,13 @@ public class HotSpot extends NetObject  {
 
     public java.lang.String getPostBackValue() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPostBackValue = null;
         try {
-            return (java.lang.String)classInstance.Get("PostBackValue");
+            retObjectPostBackValue = classInstance.Get("PostBackValue");
+            return (java.lang.String)retObjectPostBackValue;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectPostBackValue != null ? retObjectPostBackValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -285,7 +316,7 @@ public class HotSpot extends NetObject  {
 
     public void setPostBackValue(java.lang.String PostBackValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PostBackValue", PostBackValue);
         } catch (JCNativeException jcne) {
@@ -295,9 +326,13 @@ public class HotSpot extends NetObject  {
 
     public java.lang.String getTarget() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTarget = null;
         try {
-            return (java.lang.String)classInstance.Get("Target");
+            retObjectTarget = classInstance.Get("Target");
+            return (java.lang.String)retObjectTarget;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectTarget != null ? retObjectTarget.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -305,7 +340,7 @@ public class HotSpot extends NetObject  {
 
     public void setTarget(java.lang.String Target) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Target", Target);
         } catch (JCNativeException jcne) {
@@ -315,10 +350,14 @@ public class HotSpot extends NetObject  {
 
     public HotSpotMode getHotSpotMode() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHotSpotMode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("HotSpotMode");
+            retObjectHotSpotMode = classInstance.Get("HotSpotMode");
+            JCObject val = (JCObject)retObjectHotSpotMode;
             return new HotSpotMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHotSpotMode != null ? retObjectHotSpotMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -326,7 +365,7 @@ public class HotSpot extends NetObject  {
 
     public void setHotSpotMode(HotSpotMode HotSpotMode) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("HotSpotMode", HotSpotMode == null ? null : HotSpotMode.getJCOInstance());
         } catch (JCNativeException jcne) {

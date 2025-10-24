@@ -162,10 +162,14 @@ public class TypeReference extends ValueType  {
     
     public EntityHandle getResolutionScope() throws Throwable, system.BadImageFormatException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResolutionScope = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ResolutionScope");
+            retObjectResolutionScope = classInstance.Get("ResolutionScope");
+            JCObject val = (JCObject)retObjectResolutionScope;
             return new EntityHandle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectResolutionScope != null ? retObjectResolutionScope.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -173,10 +177,14 @@ public class TypeReference extends ValueType  {
 
     public StringHandle getName() throws Throwable, system.ArgumentException, system.BadImageFormatException, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectName = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Name");
+            retObjectName = classInstance.Get("Name");
+            JCObject val = (JCObject)retObjectName;
             return new StringHandle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectName != null ? retObjectName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -184,10 +192,14 @@ public class TypeReference extends ValueType  {
 
     public StringHandle getNamespace() throws Throwable, system.ArgumentException, system.BadImageFormatException, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNamespace = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Namespace");
+            retObjectNamespace = classInstance.Get("Namespace");
+            JCObject val = (JCObject)retObjectNamespace;
             return new StringHandle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNamespace != null ? retObjectNamespace.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

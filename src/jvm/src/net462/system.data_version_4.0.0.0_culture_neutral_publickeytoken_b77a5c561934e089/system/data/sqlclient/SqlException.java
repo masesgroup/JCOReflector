@@ -174,7 +174,7 @@ public class SqlException extends DbException {
     
     public void GetObjectData(SerializationInfo si, StreamingContext context) throws Throwable, system.ArgumentNullException, system.runtime.serialization.SerializationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.TypeLoadException, system.NotSupportedException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.FormatException, system.NotImplementedException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetObjectData", si == null ? null : si.getJCOInstance(), context == null ? null : context.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -188,9 +188,20 @@ public class SqlException extends DbException {
     
     public byte get_Class() throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClass = null;
         try {
-            return (byte)classInstance.Get("Class");
+            retObjectClass = classInstance.Get("Class");
+            return (byte)retObjectClass;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectClass_ToString = retObjectClass == null ? "null" : retObjectClass.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectClassNumber = (java.lang.Number)retObjectClass;
+                return retObjectClassNumber.byteValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into byte and, as fallback solution, into java.lang.Number", retObjectClass != null ? retObjectClass.getClass() : "null", retObjectClass_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,9 +209,20 @@ public class SqlException extends DbException {
 
     public byte getState() throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectState = null;
         try {
-            return (byte)classInstance.Get("State");
+            retObjectState = classInstance.Get("State");
+            return (byte)retObjectState;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectState_ToString = retObjectState == null ? "null" : retObjectState.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectStateNumber = (java.lang.Number)retObjectState;
+                return retObjectStateNumber.byteValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into byte and, as fallback solution, into java.lang.Number", retObjectState != null ? retObjectState.getClass() : "null", retObjectState_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -208,9 +230,20 @@ public class SqlException extends DbException {
 
     public int getLineNumber() throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLineNumber = null;
         try {
-            return (int)classInstance.Get("LineNumber");
+            retObjectLineNumber = classInstance.Get("LineNumber");
+            return (int)retObjectLineNumber;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectLineNumber_ToString = retObjectLineNumber == null ? "null" : retObjectLineNumber.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectLineNumberNumber = (java.lang.Number)retObjectLineNumber;
+                return retObjectLineNumberNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectLineNumber != null ? retObjectLineNumber.getClass() : "null", retObjectLineNumber_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -218,9 +251,20 @@ public class SqlException extends DbException {
 
     public int getNumber() throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNumber = null;
         try {
-            return (int)classInstance.Get("Number");
+            retObjectNumber = classInstance.Get("Number");
+            return (int)retObjectNumber;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectNumber_ToString = retObjectNumber == null ? "null" : retObjectNumber.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectNumberNumber = (java.lang.Number)retObjectNumber;
+                return retObjectNumberNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectNumber != null ? retObjectNumber.getClass() : "null", retObjectNumber_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -228,10 +272,14 @@ public class SqlException extends DbException {
 
     public SqlErrorCollection getErrors() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectErrors = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Errors");
+            retObjectErrors = classInstance.Get("Errors");
+            JCObject val = (JCObject)retObjectErrors;
             return new SqlErrorCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectErrors != null ? retObjectErrors.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -239,10 +287,14 @@ public class SqlException extends DbException {
 
     public Guid getClientConnectionId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClientConnectionId = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ClientConnectionId");
+            retObjectClientConnectionId = classInstance.Get("ClientConnectionId");
+            JCObject val = (JCObject)retObjectClientConnectionId;
             return new Guid(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClientConnectionId != null ? retObjectClientConnectionId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -250,9 +302,13 @@ public class SqlException extends DbException {
 
     public java.lang.String getProcedure() throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProcedure = null;
         try {
-            return (java.lang.String)classInstance.Get("Procedure");
+            retObjectProcedure = classInstance.Get("Procedure");
+            return (java.lang.String)retObjectProcedure;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectProcedure != null ? retObjectProcedure.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -260,9 +316,13 @@ public class SqlException extends DbException {
 
     public java.lang.String getServer() throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectServer = null;
         try {
-            return (java.lang.String)classInstance.Get("Server");
+            retObjectServer = classInstance.Get("Server");
+            return (java.lang.String)retObjectServer;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectServer != null ? retObjectServer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

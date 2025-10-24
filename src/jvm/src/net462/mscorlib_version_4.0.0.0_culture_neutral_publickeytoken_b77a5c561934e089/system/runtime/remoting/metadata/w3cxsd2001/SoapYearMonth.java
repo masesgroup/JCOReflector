@@ -183,10 +183,14 @@ public class SoapYearMonth extends NetObject  {
     
     public static SoapYearMonth Parse(java.lang.String value) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.TypeInitializationException, system.InvalidOperationException, system.FormatException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.OverflowException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectParse = null;
         try {
-            JCObject objParse = (JCObject)classType.Invoke("Parse", value);
+            retObjectParse = classType.Invoke("Parse", value);
+            JCObject objParse = (JCObject)retObjectParse;
             return new SoapYearMonth(objParse);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParse != null ? retObjectParse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -194,9 +198,13 @@ public class SoapYearMonth extends NetObject  {
 
     public java.lang.String GetXsdType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetXsdType = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetXsdType");
+            retObjectGetXsdType = classInstance.Invoke("GetXsdType");
+            return (java.lang.String)retObjectGetXsdType;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetXsdType != null ? retObjectGetXsdType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -208,9 +216,20 @@ public class SoapYearMonth extends NetObject  {
     
     public int getSign() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSign = null;
         try {
-            return (int)classInstance.Get("Sign");
+            retObjectSign = classInstance.Get("Sign");
+            return (int)retObjectSign;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSign_ToString = retObjectSign == null ? "null" : retObjectSign.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectSignNumber = (java.lang.Number)retObjectSign;
+                return retObjectSignNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectSign != null ? retObjectSign.getClass() : "null", retObjectSign_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -218,7 +237,7 @@ public class SoapYearMonth extends NetObject  {
 
     public void setSign(int Sign) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Sign", Sign);
         } catch (JCNativeException jcne) {
@@ -228,10 +247,14 @@ public class SoapYearMonth extends NetObject  {
 
     public DateTime getValue() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValue = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Value");
+            retObjectValue = classInstance.Get("Value");
+            JCObject val = (JCObject)retObjectValue;
             return new DateTime(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectValue != null ? retObjectValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -239,7 +262,7 @@ public class SoapYearMonth extends NetObject  {
 
     public void setValue(DateTime Value) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Value", Value == null ? null : Value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -249,9 +272,13 @@ public class SoapYearMonth extends NetObject  {
 
     public static java.lang.String getXsdType() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectXsdType = null;
         try {
-            return (java.lang.String)classType.Get("XsdType");
+            retObjectXsdType = classType.Get("XsdType");
+            return (java.lang.String)retObjectXsdType;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectXsdType != null ? retObjectXsdType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

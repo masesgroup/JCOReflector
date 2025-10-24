@@ -161,7 +161,7 @@ public class TabRenderer extends NetObject  {
     
     public static void DrawTabItem(Graphics g, Rectangle bounds, boolean focused, TabItemState state) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.NullReferenceException, system.componentmodel.InvalidEnumArgumentException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("DrawTabItem", g == null ? null : g.getJCOInstance(), bounds == null ? null : bounds.getJCOInstance(), focused, state == null ? null : state.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -171,7 +171,7 @@ public class TabRenderer extends NetObject  {
 
     public static void DrawTabItem(Graphics g, Rectangle bounds, Image image, Rectangle imageRectangle, boolean focused, TabItemState state) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.NullReferenceException, system.componentmodel.InvalidEnumArgumentException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("DrawTabItem", g == null ? null : g.getJCOInstance(), bounds == null ? null : bounds.getJCOInstance(), image == null ? null : image.getJCOInstance(), imageRectangle == null ? null : imageRectangle.getJCOInstance(), focused, state == null ? null : state.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -181,7 +181,7 @@ public class TabRenderer extends NetObject  {
 
     public static void DrawTabItem(Graphics g, Rectangle bounds, java.lang.String tabItemText, Font font, boolean focused, TabItemState state) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.NullReferenceException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("DrawTabItem", g == null ? null : g.getJCOInstance(), bounds == null ? null : bounds.getJCOInstance(), tabItemText, font == null ? null : font.getJCOInstance(), focused, state == null ? null : state.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -191,7 +191,7 @@ public class TabRenderer extends NetObject  {
 
     public static void DrawTabItem(Graphics g, Rectangle bounds, java.lang.String tabItemText, Font font, Image image, Rectangle imageRectangle, boolean focused, TabItemState state) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.NullReferenceException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("DrawTabItem", g == null ? null : g.getJCOInstance(), bounds == null ? null : bounds.getJCOInstance(), tabItemText, font == null ? null : font.getJCOInstance(), image == null ? null : image.getJCOInstance(), imageRectangle == null ? null : imageRectangle.getJCOInstance(), focused, state == null ? null : state.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -201,7 +201,7 @@ public class TabRenderer extends NetObject  {
 
     public static void DrawTabItem(Graphics g, Rectangle bounds, java.lang.String tabItemText, Font font, TextFormatFlags flags, boolean focused, TabItemState state) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.componentmodel.InvalidEnumArgumentException, system.NullReferenceException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("DrawTabItem", g == null ? null : g.getJCOInstance(), bounds == null ? null : bounds.getJCOInstance(), tabItemText, font == null ? null : font.getJCOInstance(), flags == null ? null : flags.getJCOInstance(), focused, state == null ? null : state.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -211,7 +211,7 @@ public class TabRenderer extends NetObject  {
 
     public static void DrawTabItem(Graphics g, Rectangle bounds, java.lang.String tabItemText, Font font, TextFormatFlags flags, Image image, Rectangle imageRectangle, boolean focused, TabItemState state) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.componentmodel.InvalidEnumArgumentException, system.NullReferenceException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("DrawTabItem", g == null ? null : g.getJCOInstance(), bounds == null ? null : bounds.getJCOInstance(), tabItemText, font == null ? null : font.getJCOInstance(), flags == null ? null : flags.getJCOInstance(), image == null ? null : image.getJCOInstance(), imageRectangle == null ? null : imageRectangle.getJCOInstance(), focused, state == null ? null : state.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -221,7 +221,7 @@ public class TabRenderer extends NetObject  {
 
     public static void DrawTabItem(Graphics g, Rectangle bounds, java.lang.String tabItemText, Font font, TabItemState state) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.componentmodel.InvalidEnumArgumentException, system.NullReferenceException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("DrawTabItem", g == null ? null : g.getJCOInstance(), bounds == null ? null : bounds.getJCOInstance(), tabItemText, font == null ? null : font.getJCOInstance(), state == null ? null : state.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -231,7 +231,7 @@ public class TabRenderer extends NetObject  {
 
     public static void DrawTabItem(Graphics g, Rectangle bounds, TabItemState state) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("DrawTabItem", g == null ? null : g.getJCOInstance(), bounds == null ? null : bounds.getJCOInstance(), state == null ? null : state.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -241,7 +241,7 @@ public class TabRenderer extends NetObject  {
 
     public static void DrawTabPage(Graphics g, Rectangle bounds) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("DrawTabPage", g == null ? null : g.getJCOInstance(), bounds == null ? null : bounds.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -255,9 +255,13 @@ public class TabRenderer extends NetObject  {
     
     public static boolean getIsSupported() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.resources.MissingManifestResourceException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsSupported = null;
         try {
-            return (boolean)classType.Get("IsSupported");
+            retObjectIsSupported = classType.Get("IsSupported");
+            return (boolean)retObjectIsSupported;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsSupported != null ? retObjectIsSupported.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

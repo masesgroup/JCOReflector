@@ -157,9 +157,20 @@ public class DatePrototype extends DateObject  {
     
     public static double getDate(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectgetDate = null;
         try {
-            return (double)classType.Invoke("getDate", thisob == null ? null : thisob.getJCOInstance());
+            retObjectgetDate = classType.Invoke("getDate", thisob == null ? null : thisob.getJCOInstance());
+            return (double)retObjectgetDate;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectgetDate_ToString = retObjectgetDate == null ? "null" : retObjectgetDate.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectgetDateNumber = (java.lang.Number)retObjectgetDate;
+                return retObjectgetDateNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectgetDate != null ? retObjectgetDate.getClass() : "null", retObjectgetDate_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -167,9 +178,20 @@ public class DatePrototype extends DateObject  {
 
     public static double getDay(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectgetDay = null;
         try {
-            return (double)classType.Invoke("getDay", thisob == null ? null : thisob.getJCOInstance());
+            retObjectgetDay = classType.Invoke("getDay", thisob == null ? null : thisob.getJCOInstance());
+            return (double)retObjectgetDay;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectgetDay_ToString = retObjectgetDay == null ? "null" : retObjectgetDay.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectgetDayNumber = (java.lang.Number)retObjectgetDay;
+                return retObjectgetDayNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectgetDay != null ? retObjectgetDay.getClass() : "null", retObjectgetDay_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,9 +199,20 @@ public class DatePrototype extends DateObject  {
 
     public static double getFullYear(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectgetFullYear = null;
         try {
-            return (double)classType.Invoke("getFullYear", thisob == null ? null : thisob.getJCOInstance());
+            retObjectgetFullYear = classType.Invoke("getFullYear", thisob == null ? null : thisob.getJCOInstance());
+            return (double)retObjectgetFullYear;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectgetFullYear_ToString = retObjectgetFullYear == null ? "null" : retObjectgetFullYear.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectgetFullYearNumber = (java.lang.Number)retObjectgetFullYear;
+                return retObjectgetFullYearNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectgetFullYear != null ? retObjectgetFullYear.getClass() : "null", retObjectgetFullYear_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,9 +220,20 @@ public class DatePrototype extends DateObject  {
 
     public static double getHours(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectgetHours = null;
         try {
-            return (double)classType.Invoke("getHours", thisob == null ? null : thisob.getJCOInstance());
+            retObjectgetHours = classType.Invoke("getHours", thisob == null ? null : thisob.getJCOInstance());
+            return (double)retObjectgetHours;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectgetHours_ToString = retObjectgetHours == null ? "null" : retObjectgetHours.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectgetHoursNumber = (java.lang.Number)retObjectgetHours;
+                return retObjectgetHoursNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectgetHours != null ? retObjectgetHours.getClass() : "null", retObjectgetHours_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,9 +241,20 @@ public class DatePrototype extends DateObject  {
 
     public static double getMilliseconds(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectgetMilliseconds = null;
         try {
-            return (double)classType.Invoke("getMilliseconds", thisob == null ? null : thisob.getJCOInstance());
+            retObjectgetMilliseconds = classType.Invoke("getMilliseconds", thisob == null ? null : thisob.getJCOInstance());
+            return (double)retObjectgetMilliseconds;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectgetMilliseconds_ToString = retObjectgetMilliseconds == null ? "null" : retObjectgetMilliseconds.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectgetMillisecondsNumber = (java.lang.Number)retObjectgetMilliseconds;
+                return retObjectgetMillisecondsNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectgetMilliseconds != null ? retObjectgetMilliseconds.getClass() : "null", retObjectgetMilliseconds_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -207,9 +262,20 @@ public class DatePrototype extends DateObject  {
 
     public static double getMinutes(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectgetMinutes = null;
         try {
-            return (double)classType.Invoke("getMinutes", thisob == null ? null : thisob.getJCOInstance());
+            retObjectgetMinutes = classType.Invoke("getMinutes", thisob == null ? null : thisob.getJCOInstance());
+            return (double)retObjectgetMinutes;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectgetMinutes_ToString = retObjectgetMinutes == null ? "null" : retObjectgetMinutes.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectgetMinutesNumber = (java.lang.Number)retObjectgetMinutes;
+                return retObjectgetMinutesNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectgetMinutes != null ? retObjectgetMinutes.getClass() : "null", retObjectgetMinutes_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -217,9 +283,20 @@ public class DatePrototype extends DateObject  {
 
     public static double getMonth(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectgetMonth = null;
         try {
-            return (double)classType.Invoke("getMonth", thisob == null ? null : thisob.getJCOInstance());
+            retObjectgetMonth = classType.Invoke("getMonth", thisob == null ? null : thisob.getJCOInstance());
+            return (double)retObjectgetMonth;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectgetMonth_ToString = retObjectgetMonth == null ? "null" : retObjectgetMonth.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectgetMonthNumber = (java.lang.Number)retObjectgetMonth;
+                return retObjectgetMonthNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectgetMonth != null ? retObjectgetMonth.getClass() : "null", retObjectgetMonth_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -227,9 +304,20 @@ public class DatePrototype extends DateObject  {
 
     public static double getSeconds(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectgetSeconds = null;
         try {
-            return (double)classType.Invoke("getSeconds", thisob == null ? null : thisob.getJCOInstance());
+            retObjectgetSeconds = classType.Invoke("getSeconds", thisob == null ? null : thisob.getJCOInstance());
+            return (double)retObjectgetSeconds;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectgetSeconds_ToString = retObjectgetSeconds == null ? "null" : retObjectgetSeconds.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectgetSecondsNumber = (java.lang.Number)retObjectgetSeconds;
+                return retObjectgetSecondsNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectgetSeconds != null ? retObjectgetSeconds.getClass() : "null", retObjectgetSeconds_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -237,9 +325,20 @@ public class DatePrototype extends DateObject  {
 
     public static double getTime(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectgetTime = null;
         try {
-            return (double)classType.Invoke("getTime", thisob == null ? null : thisob.getJCOInstance());
+            retObjectgetTime = classType.Invoke("getTime", thisob == null ? null : thisob.getJCOInstance());
+            return (double)retObjectgetTime;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectgetTime_ToString = retObjectgetTime == null ? "null" : retObjectgetTime.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectgetTimeNumber = (java.lang.Number)retObjectgetTime;
+                return retObjectgetTimeNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectgetTime != null ? retObjectgetTime.getClass() : "null", retObjectgetTime_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -247,9 +346,20 @@ public class DatePrototype extends DateObject  {
 
     public static double getTimezoneOffset(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectgetTimezoneOffset = null;
         try {
-            return (double)classType.Invoke("getTimezoneOffset", thisob == null ? null : thisob.getJCOInstance());
+            retObjectgetTimezoneOffset = classType.Invoke("getTimezoneOffset", thisob == null ? null : thisob.getJCOInstance());
+            return (double)retObjectgetTimezoneOffset;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectgetTimezoneOffset_ToString = retObjectgetTimezoneOffset == null ? "null" : retObjectgetTimezoneOffset.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectgetTimezoneOffsetNumber = (java.lang.Number)retObjectgetTimezoneOffset;
+                return retObjectgetTimezoneOffsetNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectgetTimezoneOffset != null ? retObjectgetTimezoneOffset.getClass() : "null", retObjectgetTimezoneOffset_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -257,9 +367,20 @@ public class DatePrototype extends DateObject  {
 
     public static double getUTCDate(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectgetUTCDate = null;
         try {
-            return (double)classType.Invoke("getUTCDate", thisob == null ? null : thisob.getJCOInstance());
+            retObjectgetUTCDate = classType.Invoke("getUTCDate", thisob == null ? null : thisob.getJCOInstance());
+            return (double)retObjectgetUTCDate;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectgetUTCDate_ToString = retObjectgetUTCDate == null ? "null" : retObjectgetUTCDate.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectgetUTCDateNumber = (java.lang.Number)retObjectgetUTCDate;
+                return retObjectgetUTCDateNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectgetUTCDate != null ? retObjectgetUTCDate.getClass() : "null", retObjectgetUTCDate_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -267,9 +388,20 @@ public class DatePrototype extends DateObject  {
 
     public static double getUTCDay(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectgetUTCDay = null;
         try {
-            return (double)classType.Invoke("getUTCDay", thisob == null ? null : thisob.getJCOInstance());
+            retObjectgetUTCDay = classType.Invoke("getUTCDay", thisob == null ? null : thisob.getJCOInstance());
+            return (double)retObjectgetUTCDay;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectgetUTCDay_ToString = retObjectgetUTCDay == null ? "null" : retObjectgetUTCDay.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectgetUTCDayNumber = (java.lang.Number)retObjectgetUTCDay;
+                return retObjectgetUTCDayNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectgetUTCDay != null ? retObjectgetUTCDay.getClass() : "null", retObjectgetUTCDay_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -277,9 +409,20 @@ public class DatePrototype extends DateObject  {
 
     public static double getUTCFullYear(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectgetUTCFullYear = null;
         try {
-            return (double)classType.Invoke("getUTCFullYear", thisob == null ? null : thisob.getJCOInstance());
+            retObjectgetUTCFullYear = classType.Invoke("getUTCFullYear", thisob == null ? null : thisob.getJCOInstance());
+            return (double)retObjectgetUTCFullYear;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectgetUTCFullYear_ToString = retObjectgetUTCFullYear == null ? "null" : retObjectgetUTCFullYear.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectgetUTCFullYearNumber = (java.lang.Number)retObjectgetUTCFullYear;
+                return retObjectgetUTCFullYearNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectgetUTCFullYear != null ? retObjectgetUTCFullYear.getClass() : "null", retObjectgetUTCFullYear_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -287,9 +430,20 @@ public class DatePrototype extends DateObject  {
 
     public static double getUTCHours(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectgetUTCHours = null;
         try {
-            return (double)classType.Invoke("getUTCHours", thisob == null ? null : thisob.getJCOInstance());
+            retObjectgetUTCHours = classType.Invoke("getUTCHours", thisob == null ? null : thisob.getJCOInstance());
+            return (double)retObjectgetUTCHours;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectgetUTCHours_ToString = retObjectgetUTCHours == null ? "null" : retObjectgetUTCHours.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectgetUTCHoursNumber = (java.lang.Number)retObjectgetUTCHours;
+                return retObjectgetUTCHoursNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectgetUTCHours != null ? retObjectgetUTCHours.getClass() : "null", retObjectgetUTCHours_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -297,9 +451,20 @@ public class DatePrototype extends DateObject  {
 
     public static double getUTCMilliseconds(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectgetUTCMilliseconds = null;
         try {
-            return (double)classType.Invoke("getUTCMilliseconds", thisob == null ? null : thisob.getJCOInstance());
+            retObjectgetUTCMilliseconds = classType.Invoke("getUTCMilliseconds", thisob == null ? null : thisob.getJCOInstance());
+            return (double)retObjectgetUTCMilliseconds;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectgetUTCMilliseconds_ToString = retObjectgetUTCMilliseconds == null ? "null" : retObjectgetUTCMilliseconds.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectgetUTCMillisecondsNumber = (java.lang.Number)retObjectgetUTCMilliseconds;
+                return retObjectgetUTCMillisecondsNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectgetUTCMilliseconds != null ? retObjectgetUTCMilliseconds.getClass() : "null", retObjectgetUTCMilliseconds_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -307,9 +472,20 @@ public class DatePrototype extends DateObject  {
 
     public static double getUTCMinutes(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectgetUTCMinutes = null;
         try {
-            return (double)classType.Invoke("getUTCMinutes", thisob == null ? null : thisob.getJCOInstance());
+            retObjectgetUTCMinutes = classType.Invoke("getUTCMinutes", thisob == null ? null : thisob.getJCOInstance());
+            return (double)retObjectgetUTCMinutes;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectgetUTCMinutes_ToString = retObjectgetUTCMinutes == null ? "null" : retObjectgetUTCMinutes.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectgetUTCMinutesNumber = (java.lang.Number)retObjectgetUTCMinutes;
+                return retObjectgetUTCMinutesNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectgetUTCMinutes != null ? retObjectgetUTCMinutes.getClass() : "null", retObjectgetUTCMinutes_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -317,9 +493,20 @@ public class DatePrototype extends DateObject  {
 
     public static double getUTCMonth(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectgetUTCMonth = null;
         try {
-            return (double)classType.Invoke("getUTCMonth", thisob == null ? null : thisob.getJCOInstance());
+            retObjectgetUTCMonth = classType.Invoke("getUTCMonth", thisob == null ? null : thisob.getJCOInstance());
+            return (double)retObjectgetUTCMonth;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectgetUTCMonth_ToString = retObjectgetUTCMonth == null ? "null" : retObjectgetUTCMonth.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectgetUTCMonthNumber = (java.lang.Number)retObjectgetUTCMonth;
+                return retObjectgetUTCMonthNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectgetUTCMonth != null ? retObjectgetUTCMonth.getClass() : "null", retObjectgetUTCMonth_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -327,9 +514,20 @@ public class DatePrototype extends DateObject  {
 
     public static double getUTCSeconds(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectgetUTCSeconds = null;
         try {
-            return (double)classType.Invoke("getUTCSeconds", thisob == null ? null : thisob.getJCOInstance());
+            retObjectgetUTCSeconds = classType.Invoke("getUTCSeconds", thisob == null ? null : thisob.getJCOInstance());
+            return (double)retObjectgetUTCSeconds;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectgetUTCSeconds_ToString = retObjectgetUTCSeconds == null ? "null" : retObjectgetUTCSeconds.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectgetUTCSecondsNumber = (java.lang.Number)retObjectgetUTCSeconds;
+                return retObjectgetUTCSecondsNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectgetUTCSeconds != null ? retObjectgetUTCSeconds.getClass() : "null", retObjectgetUTCSeconds_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -337,9 +535,20 @@ public class DatePrototype extends DateObject  {
 
     public static double getYear(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectgetYear = null;
         try {
-            return (double)classType.Invoke("getYear", thisob == null ? null : thisob.getJCOInstance());
+            retObjectgetYear = classType.Invoke("getYear", thisob == null ? null : thisob.getJCOInstance());
+            return (double)retObjectgetYear;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectgetYear_ToString = retObjectgetYear == null ? "null" : retObjectgetYear.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectgetYearNumber = (java.lang.Number)retObjectgetYear;
+                return retObjectgetYearNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectgetYear != null ? retObjectgetYear.getClass() : "null", retObjectgetYear_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -347,9 +556,20 @@ public class DatePrototype extends DateObject  {
 
     public static double setDate(NetObject thisob, double ddate) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArithmeticException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectsetDate = null;
         try {
-            return (double)classType.Invoke("setDate", thisob == null ? null : thisob.getJCOInstance(), ddate);
+            retObjectsetDate = classType.Invoke("setDate", thisob == null ? null : thisob.getJCOInstance(), ddate);
+            return (double)retObjectsetDate;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectsetDate_ToString = retObjectsetDate == null ? "null" : retObjectsetDate.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectsetDateNumber = (java.lang.Number)retObjectsetDate;
+                return retObjectsetDateNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectsetDate != null ? retObjectsetDate.getClass() : "null", retObjectsetDate_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -357,9 +577,20 @@ public class DatePrototype extends DateObject  {
 
     public static double setFullYear(NetObject thisob, double dyear, NetObject month, NetObject date) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException, system.IndexOutOfRangeException, system.MissingMethodException, system.NullReferenceException, system.FormatException, system.OverflowException, system.ArithmeticException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectsetFullYear = null;
         try {
-            return (double)classType.Invoke("setFullYear", thisob == null ? null : thisob.getJCOInstance(), dyear, month == null ? null : month.getJCOInstance(), date == null ? null : date.getJCOInstance());
+            retObjectsetFullYear = classType.Invoke("setFullYear", thisob == null ? null : thisob.getJCOInstance(), dyear, month == null ? null : month.getJCOInstance(), date == null ? null : date.getJCOInstance());
+            return (double)retObjectsetFullYear;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectsetFullYear_ToString = retObjectsetFullYear == null ? "null" : retObjectsetFullYear.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectsetFullYearNumber = (java.lang.Number)retObjectsetFullYear;
+                return retObjectsetFullYearNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectsetFullYear != null ? retObjectsetFullYear.getClass() : "null", retObjectsetFullYear_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -367,9 +598,20 @@ public class DatePrototype extends DateObject  {
 
     public static double setHours(NetObject thisob, double dhour, NetObject min, NetObject sec, NetObject msec) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException, system.IndexOutOfRangeException, system.MissingMethodException, system.NullReferenceException, system.FormatException, system.OverflowException, system.ArithmeticException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectsetHours = null;
         try {
-            return (double)classType.Invoke("setHours", thisob == null ? null : thisob.getJCOInstance(), dhour, min == null ? null : min.getJCOInstance(), sec == null ? null : sec.getJCOInstance(), msec == null ? null : msec.getJCOInstance());
+            retObjectsetHours = classType.Invoke("setHours", thisob == null ? null : thisob.getJCOInstance(), dhour, min == null ? null : min.getJCOInstance(), sec == null ? null : sec.getJCOInstance(), msec == null ? null : msec.getJCOInstance());
+            return (double)retObjectsetHours;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectsetHours_ToString = retObjectsetHours == null ? "null" : retObjectsetHours.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectsetHoursNumber = (java.lang.Number)retObjectsetHours;
+                return retObjectsetHoursNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectsetHours != null ? retObjectsetHours.getClass() : "null", retObjectsetHours_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -377,9 +619,20 @@ public class DatePrototype extends DateObject  {
 
     public static double setMilliseconds(NetObject thisob, double dmsec) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArithmeticException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectsetMilliseconds = null;
         try {
-            return (double)classType.Invoke("setMilliseconds", thisob == null ? null : thisob.getJCOInstance(), dmsec);
+            retObjectsetMilliseconds = classType.Invoke("setMilliseconds", thisob == null ? null : thisob.getJCOInstance(), dmsec);
+            return (double)retObjectsetMilliseconds;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectsetMilliseconds_ToString = retObjectsetMilliseconds == null ? "null" : retObjectsetMilliseconds.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectsetMillisecondsNumber = (java.lang.Number)retObjectsetMilliseconds;
+                return retObjectsetMillisecondsNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectsetMilliseconds != null ? retObjectsetMilliseconds.getClass() : "null", retObjectsetMilliseconds_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -387,9 +640,20 @@ public class DatePrototype extends DateObject  {
 
     public static double setMinutes(NetObject thisob, double dmin, NetObject sec, NetObject msec) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException, system.IndexOutOfRangeException, system.MissingMethodException, system.NullReferenceException, system.FormatException, system.OverflowException, system.ArithmeticException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectsetMinutes = null;
         try {
-            return (double)classType.Invoke("setMinutes", thisob == null ? null : thisob.getJCOInstance(), dmin, sec == null ? null : sec.getJCOInstance(), msec == null ? null : msec.getJCOInstance());
+            retObjectsetMinutes = classType.Invoke("setMinutes", thisob == null ? null : thisob.getJCOInstance(), dmin, sec == null ? null : sec.getJCOInstance(), msec == null ? null : msec.getJCOInstance());
+            return (double)retObjectsetMinutes;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectsetMinutes_ToString = retObjectsetMinutes == null ? "null" : retObjectsetMinutes.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectsetMinutesNumber = (java.lang.Number)retObjectsetMinutes;
+                return retObjectsetMinutesNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectsetMinutes != null ? retObjectsetMinutes.getClass() : "null", retObjectsetMinutes_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -397,9 +661,20 @@ public class DatePrototype extends DateObject  {
 
     public static double setMonth(NetObject thisob, double dmonth, NetObject date) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException, system.IndexOutOfRangeException, system.MissingMethodException, system.NullReferenceException, system.FormatException, system.OverflowException, system.ArithmeticException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectsetMonth = null;
         try {
-            return (double)classType.Invoke("setMonth", thisob == null ? null : thisob.getJCOInstance(), dmonth, date == null ? null : date.getJCOInstance());
+            retObjectsetMonth = classType.Invoke("setMonth", thisob == null ? null : thisob.getJCOInstance(), dmonth, date == null ? null : date.getJCOInstance());
+            return (double)retObjectsetMonth;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectsetMonth_ToString = retObjectsetMonth == null ? "null" : retObjectsetMonth.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectsetMonthNumber = (java.lang.Number)retObjectsetMonth;
+                return retObjectsetMonthNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectsetMonth != null ? retObjectsetMonth.getClass() : "null", retObjectsetMonth_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -407,9 +682,20 @@ public class DatePrototype extends DateObject  {
 
     public static double setSeconds(NetObject thisob, double dsec, NetObject msec) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException, system.IndexOutOfRangeException, system.MissingMethodException, system.NullReferenceException, system.FormatException, system.OverflowException, system.ArithmeticException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectsetSeconds = null;
         try {
-            return (double)classType.Invoke("setSeconds", thisob == null ? null : thisob.getJCOInstance(), dsec, msec == null ? null : msec.getJCOInstance());
+            retObjectsetSeconds = classType.Invoke("setSeconds", thisob == null ? null : thisob.getJCOInstance(), dsec, msec == null ? null : msec.getJCOInstance());
+            return (double)retObjectsetSeconds;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectsetSeconds_ToString = retObjectsetSeconds == null ? "null" : retObjectsetSeconds.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectsetSecondsNumber = (java.lang.Number)retObjectsetSeconds;
+                return retObjectsetSecondsNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectsetSeconds != null ? retObjectsetSeconds.getClass() : "null", retObjectsetSeconds_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -417,9 +703,20 @@ public class DatePrototype extends DateObject  {
 
     public static double setTime(NetObject thisob, double time) throws Throwable, microsoft.jscript.JScriptException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectsetTime = null;
         try {
-            return (double)classType.Invoke("setTime", thisob == null ? null : thisob.getJCOInstance(), time);
+            retObjectsetTime = classType.Invoke("setTime", thisob == null ? null : thisob.getJCOInstance(), time);
+            return (double)retObjectsetTime;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectsetTime_ToString = retObjectsetTime == null ? "null" : retObjectsetTime.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectsetTimeNumber = (java.lang.Number)retObjectsetTime;
+                return retObjectsetTimeNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectsetTime != null ? retObjectsetTime.getClass() : "null", retObjectsetTime_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -427,9 +724,20 @@ public class DatePrototype extends DateObject  {
 
     public static double setUTCDate(NetObject thisob, double ddate) throws Throwable, microsoft.jscript.JScriptException, system.ArithmeticException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectsetUTCDate = null;
         try {
-            return (double)classType.Invoke("setUTCDate", thisob == null ? null : thisob.getJCOInstance(), ddate);
+            retObjectsetUTCDate = classType.Invoke("setUTCDate", thisob == null ? null : thisob.getJCOInstance(), ddate);
+            return (double)retObjectsetUTCDate;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectsetUTCDate_ToString = retObjectsetUTCDate == null ? "null" : retObjectsetUTCDate.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectsetUTCDateNumber = (java.lang.Number)retObjectsetUTCDate;
+                return retObjectsetUTCDateNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectsetUTCDate != null ? retObjectsetUTCDate.getClass() : "null", retObjectsetUTCDate_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -437,9 +745,20 @@ public class DatePrototype extends DateObject  {
 
     public static double setUTCFullYear(NetObject thisob, double dyear, NetObject month, NetObject date) throws Throwable, microsoft.jscript.JScriptException, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.MissingMethodException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.FormatException, system.OverflowException, system.ArithmeticException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectsetUTCFullYear = null;
         try {
-            return (double)classType.Invoke("setUTCFullYear", thisob == null ? null : thisob.getJCOInstance(), dyear, month == null ? null : month.getJCOInstance(), date == null ? null : date.getJCOInstance());
+            retObjectsetUTCFullYear = classType.Invoke("setUTCFullYear", thisob == null ? null : thisob.getJCOInstance(), dyear, month == null ? null : month.getJCOInstance(), date == null ? null : date.getJCOInstance());
+            return (double)retObjectsetUTCFullYear;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectsetUTCFullYear_ToString = retObjectsetUTCFullYear == null ? "null" : retObjectsetUTCFullYear.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectsetUTCFullYearNumber = (java.lang.Number)retObjectsetUTCFullYear;
+                return retObjectsetUTCFullYearNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectsetUTCFullYear != null ? retObjectsetUTCFullYear.getClass() : "null", retObjectsetUTCFullYear_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -447,9 +766,20 @@ public class DatePrototype extends DateObject  {
 
     public static double setUTCHours(NetObject thisob, double dhour, NetObject min, NetObject sec, NetObject msec) throws Throwable, microsoft.jscript.JScriptException, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.MissingMethodException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.FormatException, system.OverflowException, system.ArithmeticException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectsetUTCHours = null;
         try {
-            return (double)classType.Invoke("setUTCHours", thisob == null ? null : thisob.getJCOInstance(), dhour, min == null ? null : min.getJCOInstance(), sec == null ? null : sec.getJCOInstance(), msec == null ? null : msec.getJCOInstance());
+            retObjectsetUTCHours = classType.Invoke("setUTCHours", thisob == null ? null : thisob.getJCOInstance(), dhour, min == null ? null : min.getJCOInstance(), sec == null ? null : sec.getJCOInstance(), msec == null ? null : msec.getJCOInstance());
+            return (double)retObjectsetUTCHours;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectsetUTCHours_ToString = retObjectsetUTCHours == null ? "null" : retObjectsetUTCHours.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectsetUTCHoursNumber = (java.lang.Number)retObjectsetUTCHours;
+                return retObjectsetUTCHoursNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectsetUTCHours != null ? retObjectsetUTCHours.getClass() : "null", retObjectsetUTCHours_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -457,9 +787,20 @@ public class DatePrototype extends DateObject  {
 
     public static double setUTCMilliseconds(NetObject thisob, double dmsec) throws Throwable, microsoft.jscript.JScriptException, system.ArithmeticException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectsetUTCMilliseconds = null;
         try {
-            return (double)classType.Invoke("setUTCMilliseconds", thisob == null ? null : thisob.getJCOInstance(), dmsec);
+            retObjectsetUTCMilliseconds = classType.Invoke("setUTCMilliseconds", thisob == null ? null : thisob.getJCOInstance(), dmsec);
+            return (double)retObjectsetUTCMilliseconds;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectsetUTCMilliseconds_ToString = retObjectsetUTCMilliseconds == null ? "null" : retObjectsetUTCMilliseconds.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectsetUTCMillisecondsNumber = (java.lang.Number)retObjectsetUTCMilliseconds;
+                return retObjectsetUTCMillisecondsNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectsetUTCMilliseconds != null ? retObjectsetUTCMilliseconds.getClass() : "null", retObjectsetUTCMilliseconds_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -467,9 +808,20 @@ public class DatePrototype extends DateObject  {
 
     public static double setUTCMinutes(NetObject thisob, double dmin, NetObject sec, NetObject msec) throws Throwable, microsoft.jscript.JScriptException, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.MissingMethodException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.FormatException, system.OverflowException, system.ArithmeticException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectsetUTCMinutes = null;
         try {
-            return (double)classType.Invoke("setUTCMinutes", thisob == null ? null : thisob.getJCOInstance(), dmin, sec == null ? null : sec.getJCOInstance(), msec == null ? null : msec.getJCOInstance());
+            retObjectsetUTCMinutes = classType.Invoke("setUTCMinutes", thisob == null ? null : thisob.getJCOInstance(), dmin, sec == null ? null : sec.getJCOInstance(), msec == null ? null : msec.getJCOInstance());
+            return (double)retObjectsetUTCMinutes;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectsetUTCMinutes_ToString = retObjectsetUTCMinutes == null ? "null" : retObjectsetUTCMinutes.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectsetUTCMinutesNumber = (java.lang.Number)retObjectsetUTCMinutes;
+                return retObjectsetUTCMinutesNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectsetUTCMinutes != null ? retObjectsetUTCMinutes.getClass() : "null", retObjectsetUTCMinutes_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -477,9 +829,20 @@ public class DatePrototype extends DateObject  {
 
     public static double setUTCMonth(NetObject thisob, double dmonth, NetObject date) throws Throwable, microsoft.jscript.JScriptException, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.MissingMethodException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.FormatException, system.OverflowException, system.ArithmeticException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectsetUTCMonth = null;
         try {
-            return (double)classType.Invoke("setUTCMonth", thisob == null ? null : thisob.getJCOInstance(), dmonth, date == null ? null : date.getJCOInstance());
+            retObjectsetUTCMonth = classType.Invoke("setUTCMonth", thisob == null ? null : thisob.getJCOInstance(), dmonth, date == null ? null : date.getJCOInstance());
+            return (double)retObjectsetUTCMonth;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectsetUTCMonth_ToString = retObjectsetUTCMonth == null ? "null" : retObjectsetUTCMonth.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectsetUTCMonthNumber = (java.lang.Number)retObjectsetUTCMonth;
+                return retObjectsetUTCMonthNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectsetUTCMonth != null ? retObjectsetUTCMonth.getClass() : "null", retObjectsetUTCMonth_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -487,9 +850,20 @@ public class DatePrototype extends DateObject  {
 
     public static double setUTCSeconds(NetObject thisob, double dsec, NetObject msec) throws Throwable, microsoft.jscript.JScriptException, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.MissingMethodException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.FormatException, system.OverflowException, system.ArithmeticException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectsetUTCSeconds = null;
         try {
-            return (double)classType.Invoke("setUTCSeconds", thisob == null ? null : thisob.getJCOInstance(), dsec, msec == null ? null : msec.getJCOInstance());
+            retObjectsetUTCSeconds = classType.Invoke("setUTCSeconds", thisob == null ? null : thisob.getJCOInstance(), dsec, msec == null ? null : msec.getJCOInstance());
+            return (double)retObjectsetUTCSeconds;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectsetUTCSeconds_ToString = retObjectsetUTCSeconds == null ? "null" : retObjectsetUTCSeconds.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectsetUTCSecondsNumber = (java.lang.Number)retObjectsetUTCSeconds;
+                return retObjectsetUTCSecondsNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectsetUTCSeconds != null ? retObjectsetUTCSeconds.getClass() : "null", retObjectsetUTCSeconds_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -497,9 +871,20 @@ public class DatePrototype extends DateObject  {
 
     public static double setYear(NetObject thisob, double dyear) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArithmeticException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectsetYear = null;
         try {
-            return (double)classType.Invoke("setYear", thisob == null ? null : thisob.getJCOInstance(), dyear);
+            retObjectsetYear = classType.Invoke("setYear", thisob == null ? null : thisob.getJCOInstance(), dyear);
+            return (double)retObjectsetYear;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectsetYear_ToString = retObjectsetYear == null ? "null" : retObjectsetYear.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectsetYearNumber = (java.lang.Number)retObjectsetYear;
+                return retObjectsetYearNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectsetYear != null ? retObjectsetYear.getClass() : "null", retObjectsetYear_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -507,9 +892,20 @@ public class DatePrototype extends DateObject  {
 
     public static double valueOf(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectvalueOf = null;
         try {
-            return (double)classType.Invoke("valueOf", thisob == null ? null : thisob.getJCOInstance());
+            retObjectvalueOf = classType.Invoke("valueOf", thisob == null ? null : thisob.getJCOInstance());
+            return (double)retObjectvalueOf;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectvalueOf_ToString = retObjectvalueOf == null ? "null" : retObjectvalueOf.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectvalueOfNumber = (java.lang.Number)retObjectvalueOf;
+                return retObjectvalueOfNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectvalueOf != null ? retObjectvalueOf.getClass() : "null", retObjectvalueOf_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -517,10 +913,14 @@ public class DatePrototype extends DateObject  {
 
     public static NetObject getVarDate(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectgetVarDate = null;
         try {
-            JCObject objgetVarDate = (JCObject)classType.Invoke("getVarDate", thisob == null ? null : thisob.getJCOInstance());
+            retObjectgetVarDate = classType.Invoke("getVarDate", thisob == null ? null : thisob.getJCOInstance());
+            JCObject objgetVarDate = (JCObject)retObjectgetVarDate;
             return new NetObject(objgetVarDate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectgetVarDate != null ? retObjectgetVarDate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -528,9 +928,13 @@ public class DatePrototype extends DateObject  {
 
     public static java.lang.String toDateString(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjecttoDateString = null;
         try {
-            return (java.lang.String)classType.Invoke("toDateString", thisob == null ? null : thisob.getJCOInstance());
+            retObjecttoDateString = classType.Invoke("toDateString", thisob == null ? null : thisob.getJCOInstance());
+            return (java.lang.String)retObjecttoDateString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjecttoDateString != null ? retObjecttoDateString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -538,9 +942,13 @@ public class DatePrototype extends DateObject  {
 
     public static java.lang.String toGMTString(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjecttoGMTString = null;
         try {
-            return (java.lang.String)classType.Invoke("toGMTString", thisob == null ? null : thisob.getJCOInstance());
+            retObjecttoGMTString = classType.Invoke("toGMTString", thisob == null ? null : thisob.getJCOInstance());
+            return (java.lang.String)retObjecttoGMTString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjecttoGMTString != null ? retObjecttoGMTString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -548,9 +956,13 @@ public class DatePrototype extends DateObject  {
 
     public static java.lang.String toLocaleDateString(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.TypeInitializationException, system.InvalidOperationException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.OverflowException, system.FormatException, system.globalization.CultureNotFoundException, system.NullReferenceException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjecttoLocaleDateString = null;
         try {
-            return (java.lang.String)classType.Invoke("toLocaleDateString", thisob == null ? null : thisob.getJCOInstance());
+            retObjecttoLocaleDateString = classType.Invoke("toLocaleDateString", thisob == null ? null : thisob.getJCOInstance());
+            return (java.lang.String)retObjecttoLocaleDateString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjecttoLocaleDateString != null ? retObjecttoLocaleDateString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -558,9 +970,13 @@ public class DatePrototype extends DateObject  {
 
     public static java.lang.String toLocaleString(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.TypeInitializationException, system.InvalidOperationException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.OverflowException, system.FormatException, system.globalization.CultureNotFoundException, system.NullReferenceException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjecttoLocaleString = null;
         try {
-            return (java.lang.String)classType.Invoke("toLocaleString", thisob == null ? null : thisob.getJCOInstance());
+            retObjecttoLocaleString = classType.Invoke("toLocaleString", thisob == null ? null : thisob.getJCOInstance());
+            return (java.lang.String)retObjecttoLocaleString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjecttoLocaleString != null ? retObjecttoLocaleString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -568,9 +984,13 @@ public class DatePrototype extends DateObject  {
 
     public static java.lang.String toLocaleTimeString(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.TypeInitializationException, system.InvalidOperationException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.OverflowException, system.FormatException, system.globalization.CultureNotFoundException, system.NullReferenceException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjecttoLocaleTimeString = null;
         try {
-            return (java.lang.String)classType.Invoke("toLocaleTimeString", thisob == null ? null : thisob.getJCOInstance());
+            retObjecttoLocaleTimeString = classType.Invoke("toLocaleTimeString", thisob == null ? null : thisob.getJCOInstance());
+            return (java.lang.String)retObjecttoLocaleTimeString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjecttoLocaleTimeString != null ? retObjecttoLocaleTimeString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -578,9 +998,13 @@ public class DatePrototype extends DateObject  {
 
     public static java.lang.String toString(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjecttoString = null;
         try {
-            return (java.lang.String)classType.Invoke("toString", thisob == null ? null : thisob.getJCOInstance());
+            retObjecttoString = classType.Invoke("toString", thisob == null ? null : thisob.getJCOInstance());
+            return (java.lang.String)retObjecttoString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjecttoString != null ? retObjecttoString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -588,9 +1012,13 @@ public class DatePrototype extends DateObject  {
 
     public static java.lang.String toTimeString(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjecttoTimeString = null;
         try {
-            return (java.lang.String)classType.Invoke("toTimeString", thisob == null ? null : thisob.getJCOInstance());
+            retObjecttoTimeString = classType.Invoke("toTimeString", thisob == null ? null : thisob.getJCOInstance());
+            return (java.lang.String)retObjecttoTimeString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjecttoTimeString != null ? retObjecttoTimeString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -598,9 +1026,13 @@ public class DatePrototype extends DateObject  {
 
     public static java.lang.String toUTCString(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjecttoUTCString = null;
         try {
-            return (java.lang.String)classType.Invoke("toUTCString", thisob == null ? null : thisob.getJCOInstance());
+            retObjecttoUTCString = classType.Invoke("toUTCString", thisob == null ? null : thisob.getJCOInstance());
+            return (java.lang.String)retObjecttoUTCString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjecttoUTCString != null ? retObjecttoUTCString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -612,10 +1044,14 @@ public class DatePrototype extends DateObject  {
     
     public static DateConstructor getconstructor() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectconstructor = null;
         try {
-            JCObject val = (JCObject)classType.Get("constructor");
+            retObjectconstructor = classType.Get("constructor");
+            JCObject val = (JCObject)retObjectconstructor;
             return new DateConstructor(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectconstructor != null ? retObjectconstructor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

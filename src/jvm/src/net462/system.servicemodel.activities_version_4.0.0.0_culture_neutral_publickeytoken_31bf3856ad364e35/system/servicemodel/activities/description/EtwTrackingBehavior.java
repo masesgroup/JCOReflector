@@ -163,7 +163,7 @@ public class EtwTrackingBehavior extends NetObject  {
     
     public void ApplyDispatchBehavior(ServiceDescription serviceDescription, ServiceHostBase serviceHostBase) throws Throwable, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentException, system.collections.generic.KeyNotFoundException, system.MulticastNotSupportedException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ApplyDispatchBehavior", serviceDescription == null ? null : serviceDescription.getJCOInstance(), serviceHostBase == null ? null : serviceHostBase.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -173,7 +173,7 @@ public class EtwTrackingBehavior extends NetObject  {
 
     public void Validate(ServiceDescription serviceDescription, ServiceHostBase serviceHostBase) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Validate", serviceDescription == null ? null : serviceDescription.getJCOInstance(), serviceHostBase == null ? null : serviceHostBase.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -187,9 +187,13 @@ public class EtwTrackingBehavior extends NetObject  {
     
     public java.lang.String getProfileName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProfileName = null;
         try {
-            return (java.lang.String)classInstance.Get("ProfileName");
+            retObjectProfileName = classInstance.Get("ProfileName");
+            return (java.lang.String)retObjectProfileName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectProfileName != null ? retObjectProfileName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,7 +201,7 @@ public class EtwTrackingBehavior extends NetObject  {
 
     public void setProfileName(java.lang.String ProfileName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ProfileName", ProfileName);
         } catch (JCNativeException jcne) {

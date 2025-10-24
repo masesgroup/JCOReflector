@@ -148,16 +148,20 @@ public class IPropertyValueUIServiceImplementation extends NetObject implements 
     
     public PropertyValueUIItem[] GetPropertyUIValueItems(ITypeDescriptorContext context, PropertyDescriptor propDesc) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPropertyUIValueItems = null;
         try {
             ArrayList<PropertyValueUIItem> resultingArrayList = new ArrayList<PropertyValueUIItem>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetPropertyUIValueItems", context == null ? null : context.getJCOInstance(), propDesc == null ? null : propDesc.getJCOInstance());
+            retObjectGetPropertyUIValueItems = classInstance.Invoke("GetPropertyUIValueItems", context == null ? null : context.getJCOInstance(), propDesc == null ? null : propDesc.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectGetPropertyUIValueItems;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new PropertyValueUIItem(resultingObject));
             }
             PropertyValueUIItem[] resultingArray = new PropertyValueUIItem[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetPropertyUIValueItems != null ? retObjectGetPropertyUIValueItems.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -165,7 +169,7 @@ public class IPropertyValueUIServiceImplementation extends NetObject implements 
 
     public void AddPropertyValueUIHandler(PropertyValueUIHandler newHandler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddPropertyValueUIHandler", newHandler);
         } catch (JCNativeException jcne) {
@@ -175,7 +179,7 @@ public class IPropertyValueUIServiceImplementation extends NetObject implements 
 
     public void NotifyPropertyValueUIItemsChanged() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("NotifyPropertyValueUIItemsChanged");
         } catch (JCNativeException jcne) {
@@ -185,7 +189,7 @@ public class IPropertyValueUIServiceImplementation extends NetObject implements 
 
     public void RemovePropertyValueUIHandler(PropertyValueUIHandler newHandler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RemovePropertyValueUIHandler", newHandler);
         } catch (JCNativeException jcne) {
@@ -204,7 +208,7 @@ public class IPropertyValueUIServiceImplementation extends NetObject implements 
 
     public void addPropertyUIValueItemsChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("PropertyUIValueItemsChanged", handler);
         } catch (JCNativeException jcne) {
@@ -214,7 +218,7 @@ public class IPropertyValueUIServiceImplementation extends NetObject implements 
 
     public void removePropertyUIValueItemsChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("PropertyUIValueItemsChanged", handler);
         } catch (JCNativeException jcne) {

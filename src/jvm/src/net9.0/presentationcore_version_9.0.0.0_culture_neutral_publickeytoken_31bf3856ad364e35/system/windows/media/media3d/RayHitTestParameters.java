@@ -172,10 +172,14 @@ public class RayHitTestParameters extends HitTestParameters3D  {
     
     public Point3D getOrigin() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOrigin = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Origin");
+            retObjectOrigin = classInstance.Get("Origin");
+            JCObject val = (JCObject)retObjectOrigin;
             return new Point3D(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOrigin != null ? retObjectOrigin.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,10 +187,14 @@ public class RayHitTestParameters extends HitTestParameters3D  {
 
     public Vector3D getDirection() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDirection = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Direction");
+            retObjectDirection = classInstance.Get("Direction");
+            JCObject val = (JCObject)retObjectDirection;
             return new Vector3D(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDirection != null ? retObjectDirection.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

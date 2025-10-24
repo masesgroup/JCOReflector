@@ -167,9 +167,20 @@ public class DateTimeFormatInfo extends NetObject  {
     
     public int GetEra(java.lang.String eraName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.NullReferenceException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.runtime.interopservices.ExternalException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetEra = null;
         try {
-            return (int)classInstance.Invoke("GetEra", eraName);
+            retObjectGetEra = classInstance.Invoke("GetEra", eraName);
+            return (int)retObjectGetEra;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetEra_ToString = retObjectGetEra == null ? "null" : retObjectGetEra.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetEraNumber = (java.lang.Number)retObjectGetEra;
+                return retObjectGetEraNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetEra != null ? retObjectGetEra.getClass() : "null", retObjectGetEra_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,10 +188,14 @@ public class DateTimeFormatInfo extends NetObject  {
 
     public static DateTimeFormatInfo GetInstance(IFormatProvider provider) throws Throwable, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.TypeInitializationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetInstance = null;
         try {
-            JCObject objGetInstance = (JCObject)classType.Invoke("GetInstance", provider == null ? null : provider.getJCOInstance());
+            retObjectGetInstance = classType.Invoke("GetInstance", provider == null ? null : provider.getJCOInstance());
+            JCObject objGetInstance = (JCObject)retObjectGetInstance;
             return new DateTimeFormatInfo(objGetInstance);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetInstance != null ? retObjectGetInstance.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,10 +203,14 @@ public class DateTimeFormatInfo extends NetObject  {
 
     public static DateTimeFormatInfo ReadOnly(DateTimeFormatInfo dtfi) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectReadOnly = null;
         try {
-            JCObject objReadOnly = (JCObject)classType.Invoke("ReadOnly", dtfi == null ? null : dtfi.getJCOInstance());
+            retObjectReadOnly = classType.Invoke("ReadOnly", dtfi == null ? null : dtfi.getJCOInstance());
+            JCObject objReadOnly = (JCObject)retObjectReadOnly;
             return new DateTimeFormatInfo(objReadOnly);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadOnly != null ? retObjectReadOnly.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -199,10 +218,14 @@ public class DateTimeFormatInfo extends NetObject  {
 
     public NetObject Clone() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClone = null;
         try {
-            JCObject objClone = (JCObject)classInstance.Invoke("Clone");
+            retObjectClone = classInstance.Invoke("Clone");
+            JCObject objClone = (JCObject)retObjectClone;
             return new NetObject(objClone);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClone != null ? retObjectClone.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -210,10 +233,14 @@ public class DateTimeFormatInfo extends NetObject  {
 
     public NetObject GetFormat(NetType formatType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetFormat = null;
         try {
-            JCObject objGetFormat = (JCObject)classInstance.Invoke("GetFormat", formatType == null ? null : formatType.getJCOInstance());
+            retObjectGetFormat = classInstance.Invoke("GetFormat", formatType == null ? null : formatType.getJCOInstance());
+            JCObject objGetFormat = (JCObject)retObjectGetFormat;
             return new NetObject(objGetFormat);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetFormat != null ? retObjectGetFormat.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -221,9 +248,13 @@ public class DateTimeFormatInfo extends NetObject  {
 
     public java.lang.String GetAbbreviatedDayName(DayOfWeek dayofweek) throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetAbbreviatedDayName = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetAbbreviatedDayName", dayofweek == null ? null : dayofweek.getJCOInstance());
+            retObjectGetAbbreviatedDayName = classInstance.Invoke("GetAbbreviatedDayName", dayofweek == null ? null : dayofweek.getJCOInstance());
+            return (java.lang.String)retObjectGetAbbreviatedDayName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetAbbreviatedDayName != null ? retObjectGetAbbreviatedDayName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -231,9 +262,13 @@ public class DateTimeFormatInfo extends NetObject  {
 
     public java.lang.String GetAbbreviatedEraName(int era) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentNullException, system.NotSupportedException, system.NullReferenceException, system.OutOfMemoryException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetAbbreviatedEraName = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetAbbreviatedEraName", era);
+            retObjectGetAbbreviatedEraName = classInstance.Invoke("GetAbbreviatedEraName", era);
+            return (java.lang.String)retObjectGetAbbreviatedEraName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetAbbreviatedEraName != null ? retObjectGetAbbreviatedEraName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -241,9 +276,13 @@ public class DateTimeFormatInfo extends NetObject  {
 
     public java.lang.String GetAbbreviatedMonthName(int month) throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetAbbreviatedMonthName = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetAbbreviatedMonthName", month);
+            retObjectGetAbbreviatedMonthName = classInstance.Invoke("GetAbbreviatedMonthName", month);
+            return (java.lang.String)retObjectGetAbbreviatedMonthName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetAbbreviatedMonthName != null ? retObjectGetAbbreviatedMonthName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -251,9 +290,13 @@ public class DateTimeFormatInfo extends NetObject  {
 
     public java.lang.String GetDayName(DayOfWeek dayofweek) throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDayName = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetDayName", dayofweek == null ? null : dayofweek.getJCOInstance());
+            retObjectGetDayName = classInstance.Invoke("GetDayName", dayofweek == null ? null : dayofweek.getJCOInstance());
+            return (java.lang.String)retObjectGetDayName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetDayName != null ? retObjectGetDayName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -261,9 +304,13 @@ public class DateTimeFormatInfo extends NetObject  {
 
     public java.lang.String GetEraName(int era) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NullReferenceException, system.InvalidOperationException, system.OutOfMemoryException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetEraName = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetEraName", era);
+            retObjectGetEraName = classInstance.Invoke("GetEraName", era);
+            return (java.lang.String)retObjectGetEraName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetEraName != null ? retObjectGetEraName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -271,9 +318,13 @@ public class DateTimeFormatInfo extends NetObject  {
 
     public java.lang.String GetMonthName(int month) throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetMonthName = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetMonthName", month);
+            retObjectGetMonthName = classInstance.Invoke("GetMonthName", month);
+            return (java.lang.String)retObjectGetMonthName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetMonthName != null ? retObjectGetMonthName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -281,9 +332,13 @@ public class DateTimeFormatInfo extends NetObject  {
 
     public java.lang.String GetShortestDayName(DayOfWeek dayOfWeek) throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetShortestDayName = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetShortestDayName", dayOfWeek == null ? null : dayOfWeek.getJCOInstance());
+            retObjectGetShortestDayName = classInstance.Invoke("GetShortestDayName", dayOfWeek == null ? null : dayOfWeek.getJCOInstance());
+            return (java.lang.String)retObjectGetShortestDayName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetShortestDayName != null ? retObjectGetShortestDayName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -291,10 +346,12 @@ public class DateTimeFormatInfo extends NetObject  {
 
     public java.lang.String[] GetAllDateTimePatterns() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetAllDateTimePatterns = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetAllDateTimePatterns");
+            retObjectGetAllDateTimePatterns = classInstance.Invoke("GetAllDateTimePatterns");
+            JCObject resultingObjects = (JCObject)retObjectGetAllDateTimePatterns;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -303,6 +360,8 @@ public class DateTimeFormatInfo extends NetObject  {
 				resultingArray[indexGetAllDateTimePatterns] = (java.lang.String)resultingArrayList.get(indexGetAllDateTimePatterns);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectGetAllDateTimePatterns != null ? retObjectGetAllDateTimePatterns.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -310,10 +369,12 @@ public class DateTimeFormatInfo extends NetObject  {
 
     public java.lang.String[] GetAllDateTimePatterns(char format) throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetAllDateTimePatterns = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetAllDateTimePatterns", format);
+            retObjectGetAllDateTimePatterns = classInstance.Invoke("GetAllDateTimePatterns", format);
+            JCObject resultingObjects = (JCObject)retObjectGetAllDateTimePatterns;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -322,6 +383,8 @@ public class DateTimeFormatInfo extends NetObject  {
 				resultingArray[indexGetAllDateTimePatterns] = (java.lang.String)resultingArrayList.get(indexGetAllDateTimePatterns);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectGetAllDateTimePatterns != null ? retObjectGetAllDateTimePatterns.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -329,7 +392,7 @@ public class DateTimeFormatInfo extends NetObject  {
 
     public void SetAllDateTimePatterns(java.lang.String[] patterns, char format) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.IndexOutOfRangeException, system.RankException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.NullReferenceException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetAllDateTimePatterns", patterns, format);
         } catch (JCNativeException jcne) {
@@ -339,7 +402,7 @@ public class DateTimeFormatInfo extends NetObject  {
 
     public void SetAllDateTimePatterns(JCORefOut dupParam0, char dupParam1) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.IndexOutOfRangeException, system.RankException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.NullReferenceException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetAllDateTimePatterns", dupParam0.getJCRefOut(), dupParam1);
         } catch (JCNativeException jcne) {
@@ -353,9 +416,13 @@ public class DateTimeFormatInfo extends NetObject  {
     
     public boolean getIsReadOnly() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsReadOnly = null;
         try {
-            return (boolean)classInstance.Get("IsReadOnly");
+            retObjectIsReadOnly = classInstance.Get("IsReadOnly");
+            return (boolean)retObjectIsReadOnly;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsReadOnly != null ? retObjectIsReadOnly.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -363,10 +430,14 @@ public class DateTimeFormatInfo extends NetObject  {
 
     public DayOfWeek getFirstDayOfWeek() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFirstDayOfWeek = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("FirstDayOfWeek");
+            retObjectFirstDayOfWeek = classInstance.Get("FirstDayOfWeek");
+            JCObject val = (JCObject)retObjectFirstDayOfWeek;
             return new DayOfWeek(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFirstDayOfWeek != null ? retObjectFirstDayOfWeek.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -374,7 +445,7 @@ public class DateTimeFormatInfo extends NetObject  {
 
     public void setFirstDayOfWeek(DayOfWeek FirstDayOfWeek) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.IndexOutOfRangeException, system.RankException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FirstDayOfWeek", FirstDayOfWeek == null ? null : FirstDayOfWeek.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -384,10 +455,14 @@ public class DateTimeFormatInfo extends NetObject  {
 
     public Calendar getCalendar() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCalendar = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Calendar");
+            retObjectCalendar = classInstance.Get("Calendar");
+            JCObject val = (JCObject)retObjectCalendar;
             return new Calendar(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCalendar != null ? retObjectCalendar.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -395,7 +470,7 @@ public class DateTimeFormatInfo extends NetObject  {
 
     public void setCalendar(Calendar Calendar) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.IndexOutOfRangeException, system.RankException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Calendar", Calendar == null ? null : Calendar.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -405,10 +480,14 @@ public class DateTimeFormatInfo extends NetObject  {
 
     public CalendarWeekRule getCalendarWeekRule() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCalendarWeekRule = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CalendarWeekRule");
+            retObjectCalendarWeekRule = classInstance.Get("CalendarWeekRule");
+            JCObject val = (JCObject)retObjectCalendarWeekRule;
             return new CalendarWeekRule(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCalendarWeekRule != null ? retObjectCalendarWeekRule.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -416,7 +495,7 @@ public class DateTimeFormatInfo extends NetObject  {
 
     public void setCalendarWeekRule(CalendarWeekRule CalendarWeekRule) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.IndexOutOfRangeException, system.RankException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CalendarWeekRule", CalendarWeekRule == null ? null : CalendarWeekRule.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -426,10 +505,14 @@ public class DateTimeFormatInfo extends NetObject  {
 
     public static DateTimeFormatInfo getCurrentInfo() throws Throwable, system.ArgumentNullException, system.OutOfMemoryException, system.ArgumentException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.RankException, system.InvalidCastException, system.TypeInitializationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCurrentInfo = null;
         try {
-            JCObject val = (JCObject)classType.Get("CurrentInfo");
+            retObjectCurrentInfo = classType.Get("CurrentInfo");
+            JCObject val = (JCObject)retObjectCurrentInfo;
             return new DateTimeFormatInfo(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCurrentInfo != null ? retObjectCurrentInfo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -437,10 +520,14 @@ public class DateTimeFormatInfo extends NetObject  {
 
     public static DateTimeFormatInfo getInvariantInfo() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectInvariantInfo = null;
         try {
-            JCObject val = (JCObject)classType.Get("InvariantInfo");
+            retObjectInvariantInfo = classType.Get("InvariantInfo");
+            JCObject val = (JCObject)retObjectInvariantInfo;
             return new DateTimeFormatInfo(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInvariantInfo != null ? retObjectInvariantInfo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -448,9 +535,13 @@ public class DateTimeFormatInfo extends NetObject  {
 
     public java.lang.String getAMDesignator() throws Throwable, system.OutOfMemoryException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAMDesignator = null;
         try {
-            return (java.lang.String)classInstance.Get("AMDesignator");
+            retObjectAMDesignator = classInstance.Get("AMDesignator");
+            return (java.lang.String)retObjectAMDesignator;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectAMDesignator != null ? retObjectAMDesignator.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -458,7 +549,7 @@ public class DateTimeFormatInfo extends NetObject  {
 
     public void setAMDesignator(java.lang.String AMDesignator) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.IndexOutOfRangeException, system.RankException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AMDesignator", AMDesignator);
         } catch (JCNativeException jcne) {
@@ -468,9 +559,13 @@ public class DateTimeFormatInfo extends NetObject  {
 
     public java.lang.String getDateSeparator() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDateSeparator = null;
         try {
-            return (java.lang.String)classInstance.Get("DateSeparator");
+            retObjectDateSeparator = classInstance.Get("DateSeparator");
+            return (java.lang.String)retObjectDateSeparator;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDateSeparator != null ? retObjectDateSeparator.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -478,7 +573,7 @@ public class DateTimeFormatInfo extends NetObject  {
 
     public void setDateSeparator(java.lang.String DateSeparator) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.IndexOutOfRangeException, system.RankException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DateSeparator", DateSeparator);
         } catch (JCNativeException jcne) {
@@ -488,9 +583,13 @@ public class DateTimeFormatInfo extends NetObject  {
 
     public java.lang.String getFullDateTimePattern() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFullDateTimePattern = null;
         try {
-            return (java.lang.String)classInstance.Get("FullDateTimePattern");
+            retObjectFullDateTimePattern = classInstance.Get("FullDateTimePattern");
+            return (java.lang.String)retObjectFullDateTimePattern;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectFullDateTimePattern != null ? retObjectFullDateTimePattern.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -498,7 +597,7 @@ public class DateTimeFormatInfo extends NetObject  {
 
     public void setFullDateTimePattern(java.lang.String FullDateTimePattern) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.IndexOutOfRangeException, system.RankException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FullDateTimePattern", FullDateTimePattern);
         } catch (JCNativeException jcne) {
@@ -508,9 +607,13 @@ public class DateTimeFormatInfo extends NetObject  {
 
     public java.lang.String getLongDatePattern() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLongDatePattern = null;
         try {
-            return (java.lang.String)classInstance.Get("LongDatePattern");
+            retObjectLongDatePattern = classInstance.Get("LongDatePattern");
+            return (java.lang.String)retObjectLongDatePattern;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectLongDatePattern != null ? retObjectLongDatePattern.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -518,7 +621,7 @@ public class DateTimeFormatInfo extends NetObject  {
 
     public void setLongDatePattern(java.lang.String LongDatePattern) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.IndexOutOfRangeException, system.RankException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("LongDatePattern", LongDatePattern);
         } catch (JCNativeException jcne) {
@@ -528,9 +631,13 @@ public class DateTimeFormatInfo extends NetObject  {
 
     public java.lang.String getLongTimePattern() throws Throwable, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArrayTypeMismatchException, system.ArgumentException, system.OutOfMemoryException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLongTimePattern = null;
         try {
-            return (java.lang.String)classInstance.Get("LongTimePattern");
+            retObjectLongTimePattern = classInstance.Get("LongTimePattern");
+            return (java.lang.String)retObjectLongTimePattern;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectLongTimePattern != null ? retObjectLongTimePattern.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -538,7 +645,7 @@ public class DateTimeFormatInfo extends NetObject  {
 
     public void setLongTimePattern(java.lang.String LongTimePattern) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.IndexOutOfRangeException, system.RankException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("LongTimePattern", LongTimePattern);
         } catch (JCNativeException jcne) {
@@ -548,9 +655,13 @@ public class DateTimeFormatInfo extends NetObject  {
 
     public java.lang.String getMonthDayPattern() throws Throwable, system.ArgumentNullException, system.IndexOutOfRangeException, system.RankException, system.ArgumentException, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMonthDayPattern = null;
         try {
-            return (java.lang.String)classInstance.Get("MonthDayPattern");
+            retObjectMonthDayPattern = classInstance.Get("MonthDayPattern");
+            return (java.lang.String)retObjectMonthDayPattern;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectMonthDayPattern != null ? retObjectMonthDayPattern.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -558,7 +669,7 @@ public class DateTimeFormatInfo extends NetObject  {
 
     public void setMonthDayPattern(java.lang.String MonthDayPattern) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.IndexOutOfRangeException, system.RankException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MonthDayPattern", MonthDayPattern);
         } catch (JCNativeException jcne) {
@@ -568,9 +679,13 @@ public class DateTimeFormatInfo extends NetObject  {
 
     public java.lang.String getNativeCalendarName() throws Throwable, system.ArgumentNullException, system.IndexOutOfRangeException, system.RankException, system.ArgumentException, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNativeCalendarName = null;
         try {
-            return (java.lang.String)classInstance.Get("NativeCalendarName");
+            retObjectNativeCalendarName = classInstance.Get("NativeCalendarName");
+            return (java.lang.String)retObjectNativeCalendarName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectNativeCalendarName != null ? retObjectNativeCalendarName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -578,9 +693,13 @@ public class DateTimeFormatInfo extends NetObject  {
 
     public java.lang.String getPMDesignator() throws Throwable, system.OutOfMemoryException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPMDesignator = null;
         try {
-            return (java.lang.String)classInstance.Get("PMDesignator");
+            retObjectPMDesignator = classInstance.Get("PMDesignator");
+            return (java.lang.String)retObjectPMDesignator;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectPMDesignator != null ? retObjectPMDesignator.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -588,7 +707,7 @@ public class DateTimeFormatInfo extends NetObject  {
 
     public void setPMDesignator(java.lang.String PMDesignator) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.IndexOutOfRangeException, system.RankException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PMDesignator", PMDesignator);
         } catch (JCNativeException jcne) {
@@ -598,9 +717,13 @@ public class DateTimeFormatInfo extends NetObject  {
 
     public java.lang.String getRFC1123Pattern() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRFC1123Pattern = null;
         try {
-            return (java.lang.String)classInstance.Get("RFC1123Pattern");
+            retObjectRFC1123Pattern = classInstance.Get("RFC1123Pattern");
+            return (java.lang.String)retObjectRFC1123Pattern;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectRFC1123Pattern != null ? retObjectRFC1123Pattern.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -608,9 +731,13 @@ public class DateTimeFormatInfo extends NetObject  {
 
     public java.lang.String getShortDatePattern() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShortDatePattern = null;
         try {
-            return (java.lang.String)classInstance.Get("ShortDatePattern");
+            retObjectShortDatePattern = classInstance.Get("ShortDatePattern");
+            return (java.lang.String)retObjectShortDatePattern;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectShortDatePattern != null ? retObjectShortDatePattern.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -618,7 +745,7 @@ public class DateTimeFormatInfo extends NetObject  {
 
     public void setShortDatePattern(java.lang.String ShortDatePattern) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.IndexOutOfRangeException, system.RankException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ShortDatePattern", ShortDatePattern);
         } catch (JCNativeException jcne) {
@@ -628,9 +755,13 @@ public class DateTimeFormatInfo extends NetObject  {
 
     public java.lang.String getShortTimePattern() throws Throwable, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArrayTypeMismatchException, system.ArgumentException, system.OutOfMemoryException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShortTimePattern = null;
         try {
-            return (java.lang.String)classInstance.Get("ShortTimePattern");
+            retObjectShortTimePattern = classInstance.Get("ShortTimePattern");
+            return (java.lang.String)retObjectShortTimePattern;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectShortTimePattern != null ? retObjectShortTimePattern.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -638,7 +769,7 @@ public class DateTimeFormatInfo extends NetObject  {
 
     public void setShortTimePattern(java.lang.String ShortTimePattern) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.IndexOutOfRangeException, system.RankException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ShortTimePattern", ShortTimePattern);
         } catch (JCNativeException jcne) {
@@ -648,9 +779,13 @@ public class DateTimeFormatInfo extends NetObject  {
 
     public java.lang.String getSortableDateTimePattern() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSortableDateTimePattern = null;
         try {
-            return (java.lang.String)classInstance.Get("SortableDateTimePattern");
+            retObjectSortableDateTimePattern = classInstance.Get("SortableDateTimePattern");
+            return (java.lang.String)retObjectSortableDateTimePattern;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSortableDateTimePattern != null ? retObjectSortableDateTimePattern.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -658,9 +793,13 @@ public class DateTimeFormatInfo extends NetObject  {
 
     public java.lang.String getTimeSeparator() throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.ArgumentNullException, system.IndexOutOfRangeException, system.RankException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTimeSeparator = null;
         try {
-            return (java.lang.String)classInstance.Get("TimeSeparator");
+            retObjectTimeSeparator = classInstance.Get("TimeSeparator");
+            return (java.lang.String)retObjectTimeSeparator;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectTimeSeparator != null ? retObjectTimeSeparator.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -668,7 +807,7 @@ public class DateTimeFormatInfo extends NetObject  {
 
     public void setTimeSeparator(java.lang.String TimeSeparator) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.IndexOutOfRangeException, system.RankException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TimeSeparator", TimeSeparator);
         } catch (JCNativeException jcne) {
@@ -678,9 +817,13 @@ public class DateTimeFormatInfo extends NetObject  {
 
     public java.lang.String getUniversalSortableDateTimePattern() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUniversalSortableDateTimePattern = null;
         try {
-            return (java.lang.String)classInstance.Get("UniversalSortableDateTimePattern");
+            retObjectUniversalSortableDateTimePattern = classInstance.Get("UniversalSortableDateTimePattern");
+            return (java.lang.String)retObjectUniversalSortableDateTimePattern;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectUniversalSortableDateTimePattern != null ? retObjectUniversalSortableDateTimePattern.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -688,9 +831,13 @@ public class DateTimeFormatInfo extends NetObject  {
 
     public java.lang.String getYearMonthPattern() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectYearMonthPattern = null;
         try {
-            return (java.lang.String)classInstance.Get("YearMonthPattern");
+            retObjectYearMonthPattern = classInstance.Get("YearMonthPattern");
+            return (java.lang.String)retObjectYearMonthPattern;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectYearMonthPattern != null ? retObjectYearMonthPattern.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -698,7 +845,7 @@ public class DateTimeFormatInfo extends NetObject  {
 
     public void setYearMonthPattern(java.lang.String YearMonthPattern) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.IndexOutOfRangeException, system.RankException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("YearMonthPattern", YearMonthPattern);
         } catch (JCNativeException jcne) {
@@ -708,10 +855,12 @@ public class DateTimeFormatInfo extends NetObject  {
 
     public java.lang.String[] getAbbreviatedDayNames() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAbbreviatedDayNames = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("AbbreviatedDayNames");
+            retObjectAbbreviatedDayNames = classInstance.Get("AbbreviatedDayNames");
+            JCObject resultingObjects = (JCObject)retObjectAbbreviatedDayNames;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -720,6 +869,8 @@ public class DateTimeFormatInfo extends NetObject  {
 				resultingArray[indexAbbreviatedDayNames] = (java.lang.String)resultingArrayList.get(indexAbbreviatedDayNames);
 			}
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into JCObject", retObjectAbbreviatedDayNames != null ? retObjectAbbreviatedDayNames.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -727,7 +878,7 @@ public class DateTimeFormatInfo extends NetObject  {
 
     public void setAbbreviatedDayNames(java.lang.String[] AbbreviatedDayNames) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.IndexOutOfRangeException, system.RankException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AbbreviatedDayNames", AbbreviatedDayNames);
         } catch (JCNativeException jcne) {
@@ -737,10 +888,12 @@ public class DateTimeFormatInfo extends NetObject  {
 
     public java.lang.String[] getAbbreviatedMonthGenitiveNames() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAbbreviatedMonthGenitiveNames = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("AbbreviatedMonthGenitiveNames");
+            retObjectAbbreviatedMonthGenitiveNames = classInstance.Get("AbbreviatedMonthGenitiveNames");
+            JCObject resultingObjects = (JCObject)retObjectAbbreviatedMonthGenitiveNames;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -749,6 +902,8 @@ public class DateTimeFormatInfo extends NetObject  {
 				resultingArray[indexAbbreviatedMonthGenitiveNames] = (java.lang.String)resultingArrayList.get(indexAbbreviatedMonthGenitiveNames);
 			}
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into JCObject", retObjectAbbreviatedMonthGenitiveNames != null ? retObjectAbbreviatedMonthGenitiveNames.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -756,7 +911,7 @@ public class DateTimeFormatInfo extends NetObject  {
 
     public void setAbbreviatedMonthGenitiveNames(java.lang.String[] AbbreviatedMonthGenitiveNames) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.IndexOutOfRangeException, system.RankException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AbbreviatedMonthGenitiveNames", AbbreviatedMonthGenitiveNames);
         } catch (JCNativeException jcne) {
@@ -766,10 +921,12 @@ public class DateTimeFormatInfo extends NetObject  {
 
     public java.lang.String[] getAbbreviatedMonthNames() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAbbreviatedMonthNames = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("AbbreviatedMonthNames");
+            retObjectAbbreviatedMonthNames = classInstance.Get("AbbreviatedMonthNames");
+            JCObject resultingObjects = (JCObject)retObjectAbbreviatedMonthNames;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -778,6 +935,8 @@ public class DateTimeFormatInfo extends NetObject  {
 				resultingArray[indexAbbreviatedMonthNames] = (java.lang.String)resultingArrayList.get(indexAbbreviatedMonthNames);
 			}
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into JCObject", retObjectAbbreviatedMonthNames != null ? retObjectAbbreviatedMonthNames.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -785,7 +944,7 @@ public class DateTimeFormatInfo extends NetObject  {
 
     public void setAbbreviatedMonthNames(java.lang.String[] AbbreviatedMonthNames) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.IndexOutOfRangeException, system.RankException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AbbreviatedMonthNames", AbbreviatedMonthNames);
         } catch (JCNativeException jcne) {
@@ -795,10 +954,12 @@ public class DateTimeFormatInfo extends NetObject  {
 
     public java.lang.String[] getDayNames() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDayNames = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("DayNames");
+            retObjectDayNames = classInstance.Get("DayNames");
+            JCObject resultingObjects = (JCObject)retObjectDayNames;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -807,6 +968,8 @@ public class DateTimeFormatInfo extends NetObject  {
 				resultingArray[indexDayNames] = (java.lang.String)resultingArrayList.get(indexDayNames);
 			}
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into JCObject", retObjectDayNames != null ? retObjectDayNames.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -814,7 +977,7 @@ public class DateTimeFormatInfo extends NetObject  {
 
     public void setDayNames(java.lang.String[] DayNames) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.IndexOutOfRangeException, system.RankException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DayNames", DayNames);
         } catch (JCNativeException jcne) {
@@ -824,10 +987,12 @@ public class DateTimeFormatInfo extends NetObject  {
 
     public java.lang.String[] getMonthGenitiveNames() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMonthGenitiveNames = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("MonthGenitiveNames");
+            retObjectMonthGenitiveNames = classInstance.Get("MonthGenitiveNames");
+            JCObject resultingObjects = (JCObject)retObjectMonthGenitiveNames;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -836,6 +1001,8 @@ public class DateTimeFormatInfo extends NetObject  {
 				resultingArray[indexMonthGenitiveNames] = (java.lang.String)resultingArrayList.get(indexMonthGenitiveNames);
 			}
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into JCObject", retObjectMonthGenitiveNames != null ? retObjectMonthGenitiveNames.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -843,7 +1010,7 @@ public class DateTimeFormatInfo extends NetObject  {
 
     public void setMonthGenitiveNames(java.lang.String[] MonthGenitiveNames) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.IndexOutOfRangeException, system.RankException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MonthGenitiveNames", MonthGenitiveNames);
         } catch (JCNativeException jcne) {
@@ -853,10 +1020,12 @@ public class DateTimeFormatInfo extends NetObject  {
 
     public java.lang.String[] getMonthNames() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMonthNames = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("MonthNames");
+            retObjectMonthNames = classInstance.Get("MonthNames");
+            JCObject resultingObjects = (JCObject)retObjectMonthNames;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -865,6 +1034,8 @@ public class DateTimeFormatInfo extends NetObject  {
 				resultingArray[indexMonthNames] = (java.lang.String)resultingArrayList.get(indexMonthNames);
 			}
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into JCObject", retObjectMonthNames != null ? retObjectMonthNames.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -872,7 +1043,7 @@ public class DateTimeFormatInfo extends NetObject  {
 
     public void setMonthNames(java.lang.String[] MonthNames) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.IndexOutOfRangeException, system.RankException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MonthNames", MonthNames);
         } catch (JCNativeException jcne) {
@@ -882,10 +1053,12 @@ public class DateTimeFormatInfo extends NetObject  {
 
     public java.lang.String[] getShortestDayNames() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShortestDayNames = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("ShortestDayNames");
+            retObjectShortestDayNames = classInstance.Get("ShortestDayNames");
+            JCObject resultingObjects = (JCObject)retObjectShortestDayNames;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -894,6 +1067,8 @@ public class DateTimeFormatInfo extends NetObject  {
 				resultingArray[indexShortestDayNames] = (java.lang.String)resultingArrayList.get(indexShortestDayNames);
 			}
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into JCObject", retObjectShortestDayNames != null ? retObjectShortestDayNames.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -901,7 +1076,7 @@ public class DateTimeFormatInfo extends NetObject  {
 
     public void setShortestDayNames(java.lang.String[] ShortestDayNames) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.IndexOutOfRangeException, system.RankException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ShortestDayNames", ShortestDayNames);
         } catch (JCNativeException jcne) {

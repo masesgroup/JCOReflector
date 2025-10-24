@@ -157,10 +157,14 @@ public class SettingsProvider extends ProviderBase  {
     
     public SettingsPropertyValueCollection GetPropertyValues(SettingsContext context, SettingsPropertyCollection collection) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPropertyValues = null;
         try {
-            JCObject objGetPropertyValues = (JCObject)classInstance.Invoke("GetPropertyValues", context == null ? null : context.getJCOInstance(), collection == null ? null : collection.getJCOInstance());
+            retObjectGetPropertyValues = classInstance.Invoke("GetPropertyValues", context == null ? null : context.getJCOInstance(), collection == null ? null : collection.getJCOInstance());
+            JCObject objGetPropertyValues = (JCObject)retObjectGetPropertyValues;
             return new SettingsPropertyValueCollection(objGetPropertyValues);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetPropertyValues != null ? retObjectGetPropertyValues.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -168,7 +172,7 @@ public class SettingsProvider extends ProviderBase  {
 
     public void SetPropertyValues(SettingsContext context, SettingsPropertyValueCollection collection) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetPropertyValues", context == null ? null : context.getJCOInstance(), collection == null ? null : collection.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -182,9 +186,13 @@ public class SettingsProvider extends ProviderBase  {
     
     public java.lang.String getApplicationName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectApplicationName = null;
         try {
-            return (java.lang.String)classInstance.Get("ApplicationName");
+            retObjectApplicationName = classInstance.Get("ApplicationName");
+            return (java.lang.String)retObjectApplicationName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectApplicationName != null ? retObjectApplicationName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,7 +200,7 @@ public class SettingsProvider extends ProviderBase  {
 
     public void setApplicationName(java.lang.String ApplicationName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ApplicationName", ApplicationName);
         } catch (JCNativeException jcne) {

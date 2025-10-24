@@ -147,9 +147,13 @@ public class ICredentialPolicyImplementation extends NetObject implements ICrede
     
     public boolean ShouldSendCredential(Uri challengeUri, WebRequest request, NetworkCredential credential, IAuthenticationModule authenticationModule) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShouldSendCredential = null;
         try {
-            return (boolean)classInstance.Invoke("ShouldSendCredential", challengeUri == null ? null : challengeUri.getJCOInstance(), request == null ? null : request.getJCOInstance(), credential == null ? null : credential.getJCOInstance(), authenticationModule == null ? null : authenticationModule.getJCOInstance());
+            retObjectShouldSendCredential = classInstance.Invoke("ShouldSendCredential", challengeUri == null ? null : challengeUri.getJCOInstance(), request == null ? null : request.getJCOInstance(), credential == null ? null : credential.getJCOInstance(), authenticationModule == null ? null : authenticationModule.getJCOInstance());
+            return (boolean)retObjectShouldSendCredential;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectShouldSendCredential != null ? retObjectShouldSendCredential.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

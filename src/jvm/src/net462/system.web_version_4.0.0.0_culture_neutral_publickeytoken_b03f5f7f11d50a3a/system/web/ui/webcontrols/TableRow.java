@@ -170,10 +170,14 @@ public class TableRow extends WebControl  {
     
     public HorizontalAlign getHorizontalAlign() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHorizontalAlign = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("HorizontalAlign");
+            retObjectHorizontalAlign = classInstance.Get("HorizontalAlign");
+            JCObject val = (JCObject)retObjectHorizontalAlign;
             return new HorizontalAlign(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHorizontalAlign != null ? retObjectHorizontalAlign.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,7 +185,7 @@ public class TableRow extends WebControl  {
 
     public void setHorizontalAlign(HorizontalAlign HorizontalAlign) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("HorizontalAlign", HorizontalAlign == null ? null : HorizontalAlign.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -191,10 +195,14 @@ public class TableRow extends WebControl  {
 
     public TableCellCollection getCells() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCells = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Cells");
+            retObjectCells = classInstance.Get("Cells");
+            JCObject val = (JCObject)retObjectCells;
             return new TableCellCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCells != null ? retObjectCells.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,10 +210,14 @@ public class TableRow extends WebControl  {
 
     public TableRowSection getTableSection() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTableSection = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TableSection");
+            retObjectTableSection = classInstance.Get("TableSection");
+            JCObject val = (JCObject)retObjectTableSection;
             return new TableRowSection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTableSection != null ? retObjectTableSection.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,7 +225,7 @@ public class TableRow extends WebControl  {
 
     public void setTableSection(TableRowSection TableSection) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TableSection", TableSection == null ? null : TableSection.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -223,10 +235,14 @@ public class TableRow extends WebControl  {
 
     public VerticalAlign getVerticalAlign() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVerticalAlign = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("VerticalAlign");
+            retObjectVerticalAlign = classInstance.Get("VerticalAlign");
+            JCObject val = (JCObject)retObjectVerticalAlign;
             return new VerticalAlign(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVerticalAlign != null ? retObjectVerticalAlign.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -234,7 +250,7 @@ public class TableRow extends WebControl  {
 
     public void setVerticalAlign(VerticalAlign VerticalAlign) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("VerticalAlign", VerticalAlign == null ? null : VerticalAlign.getJCOInstance());
         } catch (JCNativeException jcne) {

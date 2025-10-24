@@ -179,9 +179,13 @@ public class HttpCookie extends NetObject  {
     
     public static boolean TryParse(java.lang.String input, JCORefOut<HttpCookie> result) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.web.HttpException, system.ArgumentNullException, system.configuration.ConfigurationErrorsException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.configuration.ConfigurationException, system.threading.ThreadAbortException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.OverflowException, system.InvalidCastException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTryParse = null;
         try {
-            return (boolean)classType.Invoke("TryParse", input, result.getJCRefOut());
+            retObjectTryParse = classType.Invoke("TryParse", input, result.getJCRefOut());
+            return (boolean)retObjectTryParse;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryParse != null ? retObjectTryParse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,9 +197,13 @@ public class HttpCookie extends NetObject  {
     
     public boolean getHasKeys() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.ArgumentNullException, system.InvalidOperationException, system.threading.ThreadAbortException, system.NotSupportedException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHasKeys = null;
         try {
-            return (boolean)classInstance.Get("HasKeys");
+            retObjectHasKeys = classInstance.Get("HasKeys");
+            return (boolean)retObjectHasKeys;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectHasKeys != null ? retObjectHasKeys.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,9 +211,13 @@ public class HttpCookie extends NetObject  {
 
     public boolean getHttpOnly() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHttpOnly = null;
         try {
-            return (boolean)classInstance.Get("HttpOnly");
+            retObjectHttpOnly = classInstance.Get("HttpOnly");
+            return (boolean)retObjectHttpOnly;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectHttpOnly != null ? retObjectHttpOnly.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,7 +225,7 @@ public class HttpCookie extends NetObject  {
 
     public void setHttpOnly(boolean HttpOnly) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("HttpOnly", HttpOnly);
         } catch (JCNativeException jcne) {
@@ -223,9 +235,13 @@ public class HttpCookie extends NetObject  {
 
     public boolean getSecure() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSecure = null;
         try {
-            return (boolean)classInstance.Get("Secure");
+            retObjectSecure = classInstance.Get("Secure");
+            return (boolean)retObjectSecure;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectSecure != null ? retObjectSecure.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -233,7 +249,7 @@ public class HttpCookie extends NetObject  {
 
     public void setSecure(boolean Secure) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Secure", Secure);
         } catch (JCNativeException jcne) {
@@ -243,9 +259,13 @@ public class HttpCookie extends NetObject  {
 
     public boolean getShareable() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShareable = null;
         try {
-            return (boolean)classInstance.Get("Shareable");
+            retObjectShareable = classInstance.Get("Shareable");
+            return (boolean)retObjectShareable;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectShareable != null ? retObjectShareable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -253,7 +273,7 @@ public class HttpCookie extends NetObject  {
 
     public void setShareable(boolean Shareable) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Shareable", Shareable);
         } catch (JCNativeException jcne) {
@@ -263,10 +283,14 @@ public class HttpCookie extends NetObject  {
 
     public NameValueCollection getValues() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationErrorsException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.configuration.ConfigurationException, system.InvalidOperationException, system.IndexOutOfRangeException, system.threading.ThreadAbortException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValues = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Values");
+            retObjectValues = classInstance.Get("Values");
+            JCObject val = (JCObject)retObjectValues;
             return new NameValueCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectValues != null ? retObjectValues.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -274,10 +298,14 @@ public class HttpCookie extends NetObject  {
 
     public DateTime getExpires() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExpires = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Expires");
+            retObjectExpires = classInstance.Get("Expires");
+            JCObject val = (JCObject)retObjectExpires;
             return new DateTime(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExpires != null ? retObjectExpires.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -285,7 +313,7 @@ public class HttpCookie extends NetObject  {
 
     public void setExpires(DateTime Expires) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Expires", Expires == null ? null : Expires.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -295,9 +323,13 @@ public class HttpCookie extends NetObject  {
 
     public java.lang.String getDomain() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDomain = null;
         try {
-            return (java.lang.String)classInstance.Get("Domain");
+            retObjectDomain = classInstance.Get("Domain");
+            return (java.lang.String)retObjectDomain;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDomain != null ? retObjectDomain.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -305,7 +337,7 @@ public class HttpCookie extends NetObject  {
 
     public void setDomain(java.lang.String Domain) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Domain", Domain);
         } catch (JCNativeException jcne) {
@@ -315,9 +347,13 @@ public class HttpCookie extends NetObject  {
 
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectName = null;
         try {
-            return (java.lang.String)classInstance.Get("Name");
+            retObjectName = classInstance.Get("Name");
+            return (java.lang.String)retObjectName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectName != null ? retObjectName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -325,7 +361,7 @@ public class HttpCookie extends NetObject  {
 
     public void setName(java.lang.String Name) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Name", Name);
         } catch (JCNativeException jcne) {
@@ -335,9 +371,13 @@ public class HttpCookie extends NetObject  {
 
     public java.lang.String getPath() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPath = null;
         try {
-            return (java.lang.String)classInstance.Get("Path");
+            retObjectPath = classInstance.Get("Path");
+            return (java.lang.String)retObjectPath;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectPath != null ? retObjectPath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -345,7 +385,7 @@ public class HttpCookie extends NetObject  {
 
     public void setPath(java.lang.String Path) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Path", Path);
         } catch (JCNativeException jcne) {
@@ -355,9 +395,13 @@ public class HttpCookie extends NetObject  {
 
     public java.lang.String getValue() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValue = null;
         try {
-            return (java.lang.String)classInstance.Get("Value");
+            retObjectValue = classInstance.Get("Value");
+            return (java.lang.String)retObjectValue;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectValue != null ? retObjectValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -365,7 +409,7 @@ public class HttpCookie extends NetObject  {
 
     public void setValue(java.lang.String Value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Value", Value);
         } catch (JCNativeException jcne) {
@@ -375,10 +419,14 @@ public class HttpCookie extends NetObject  {
 
     public SameSiteMode getSameSite() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSameSite = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SameSite");
+            retObjectSameSite = classInstance.Get("SameSite");
+            JCObject val = (JCObject)retObjectSameSite;
             return new SameSiteMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSameSite != null ? retObjectSameSite.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -386,7 +434,7 @@ public class HttpCookie extends NetObject  {
 
     public void setSameSite(SameSiteMode SameSite) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SameSite", SameSite == null ? null : SameSite.getJCOInstance());
         } catch (JCNativeException jcne) {

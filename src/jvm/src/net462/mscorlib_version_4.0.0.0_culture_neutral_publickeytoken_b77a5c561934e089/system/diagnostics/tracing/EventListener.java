@@ -164,9 +164,20 @@ public class EventListener extends NetObject implements AutoCloseable {
     
     public static int EventSourceIndex(EventSource eventSource) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectEventSourceIndex = null;
         try {
-            return (int)classType.Invoke("EventSourceIndex", eventSource == null ? null : eventSource.getJCOInstance());
+            retObjectEventSourceIndex = classType.Invoke("EventSourceIndex", eventSource == null ? null : eventSource.getJCOInstance());
+            return (int)retObjectEventSourceIndex;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectEventSourceIndex_ToString = retObjectEventSourceIndex == null ? "null" : retObjectEventSourceIndex.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectEventSourceIndexNumber = (java.lang.Number)retObjectEventSourceIndex;
+                return retObjectEventSourceIndexNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectEventSourceIndex != null ? retObjectEventSourceIndex.getClass() : "null", retObjectEventSourceIndex_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -174,7 +185,7 @@ public class EventListener extends NetObject implements AutoCloseable {
 
     public void DisableEvents(EventSource eventSource) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.InvalidCastException, system.NullReferenceException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.SecurityException, system.collections.generic.KeyNotFoundException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.threading.AbandonedMutexException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DisableEvents", eventSource == null ? null : eventSource.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -184,7 +195,7 @@ public class EventListener extends NetObject implements AutoCloseable {
 
     public void Dispose() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
@@ -194,7 +205,7 @@ public class EventListener extends NetObject implements AutoCloseable {
 
     public void EnableEvents(EventSource eventSource, EventLevel level) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.NullReferenceException, system.InvalidOperationException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EnableEvents", eventSource == null ? null : eventSource.getJCOInstance(), level == null ? null : level.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -204,7 +215,7 @@ public class EventListener extends NetObject implements AutoCloseable {
 
     public void EnableEvents(EventSource eventSource, EventLevel level, EventKeywords matchAnyKeyword) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.InvalidOperationException, system.NotSupportedException, system.MissingMethodException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.security.SecurityException, system.collections.generic.KeyNotFoundException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.MulticastNotSupportedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EnableEvents", eventSource == null ? null : eventSource.getJCOInstance(), level == null ? null : level.getJCOInstance(), matchAnyKeyword == null ? null : matchAnyKeyword.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -215,7 +226,7 @@ public class EventListener extends NetObject implements AutoCloseable {
     public void close() throws Exception {
         try {
             if (classInstance == null)
-                throw new UnsupportedOperationException("classInstance is null.");
+                throw new java.lang.UnsupportedOperationException("classInstance is null.");
             try {
                 classInstance.Invoke("Dispose");
             }

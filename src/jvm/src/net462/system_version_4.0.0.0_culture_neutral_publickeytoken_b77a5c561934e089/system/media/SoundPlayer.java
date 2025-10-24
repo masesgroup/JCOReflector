@@ -189,7 +189,7 @@ public class SoundPlayer extends Component implements system.runtime.serializati
     
     public void Load() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.NotSupportedException, system.UriFormatException, system.io.PathTooLongException, system.io.FileNotFoundException, system.threading.AbandonedMutexException, system.TimeoutException, system.configuration.ConfigurationException, system.InvalidCastException, system.configuration.ConfigurationErrorsException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Load");
         } catch (JCNativeException jcne) {
@@ -199,7 +199,7 @@ public class SoundPlayer extends Component implements system.runtime.serializati
 
     public void LoadAsync() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.NotSupportedException, system.UriFormatException, system.io.PathTooLongException, system.io.FileNotFoundException, system.security.SecurityException, system.NullReferenceException, system.configuration.ConfigurationException, system.InvalidCastException, system.configuration.ConfigurationErrorsException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("LoadAsync");
         } catch (JCNativeException jcne) {
@@ -209,7 +209,7 @@ public class SoundPlayer extends Component implements system.runtime.serializati
 
     public void Play() throws Throwable, system.security.SecurityException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OutOfMemoryException, system.UriFormatException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.TimeoutException, system.configuration.ConfigurationException, system.InvalidCastException, system.configuration.ConfigurationErrorsException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Play");
         } catch (JCNativeException jcne) {
@@ -219,7 +219,7 @@ public class SoundPlayer extends Component implements system.runtime.serializati
 
     public void PlayLooping() throws Throwable, system.security.SecurityException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OutOfMemoryException, system.UriFormatException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.TimeoutException, system.configuration.ConfigurationException, system.InvalidCastException, system.configuration.ConfigurationErrorsException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("PlayLooping");
         } catch (JCNativeException jcne) {
@@ -229,7 +229,7 @@ public class SoundPlayer extends Component implements system.runtime.serializati
 
     public void PlaySync() throws Throwable, system.security.SecurityException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OutOfMemoryException, system.UriFormatException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.TimeoutException, system.configuration.ConfigurationException, system.InvalidCastException, system.configuration.ConfigurationErrorsException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("PlaySync");
         } catch (JCNativeException jcne) {
@@ -239,7 +239,7 @@ public class SoundPlayer extends Component implements system.runtime.serializati
 
     public void Stop() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Stop");
         } catch (JCNativeException jcne) {
@@ -253,7 +253,7 @@ public class SoundPlayer extends Component implements system.runtime.serializati
      */
     @Deprecated 
     public void GetObjectData(SerializationInfo info, StreamingContext context) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToISerializable to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToISerializable to obtain the full interface.");
     }
 
 
@@ -262,9 +262,13 @@ public class SoundPlayer extends Component implements system.runtime.serializati
     
     public boolean getIsLoadCompleted() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsLoadCompleted = null;
         try {
-            return (boolean)classInstance.Get("IsLoadCompleted");
+            retObjectIsLoadCompleted = classInstance.Get("IsLoadCompleted");
+            return (boolean)retObjectIsLoadCompleted;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsLoadCompleted != null ? retObjectIsLoadCompleted.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -272,9 +276,20 @@ public class SoundPlayer extends Component implements system.runtime.serializati
 
     public int getLoadTimeout() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLoadTimeout = null;
         try {
-            return (int)classInstance.Get("LoadTimeout");
+            retObjectLoadTimeout = classInstance.Get("LoadTimeout");
+            return (int)retObjectLoadTimeout;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectLoadTimeout_ToString = retObjectLoadTimeout == null ? "null" : retObjectLoadTimeout.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectLoadTimeoutNumber = (java.lang.Number)retObjectLoadTimeout;
+                return retObjectLoadTimeoutNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectLoadTimeout != null ? retObjectLoadTimeout.getClass() : "null", retObjectLoadTimeout_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -282,7 +297,7 @@ public class SoundPlayer extends Component implements system.runtime.serializati
 
     public void setLoadTimeout(int LoadTimeout) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("LoadTimeout", LoadTimeout);
         } catch (JCNativeException jcne) {
@@ -292,10 +307,14 @@ public class SoundPlayer extends Component implements system.runtime.serializati
 
     public Stream getStream() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStream = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Stream");
+            retObjectStream = classInstance.Get("Stream");
+            JCObject val = (JCObject)retObjectStream;
             return new Stream(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStream != null ? retObjectStream.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -303,7 +322,7 @@ public class SoundPlayer extends Component implements system.runtime.serializati
 
     public void setStream(Stream Stream) throws Throwable, system.ArgumentException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Stream", Stream == null ? null : Stream.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -313,10 +332,14 @@ public class SoundPlayer extends Component implements system.runtime.serializati
 
     public NetObject getTag() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTag = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Tag");
+            retObjectTag = classInstance.Get("Tag");
+            JCObject val = (JCObject)retObjectTag;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTag != null ? retObjectTag.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -324,7 +347,7 @@ public class SoundPlayer extends Component implements system.runtime.serializati
 
     public void setTag(NetObject Tag) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Tag", Tag == null ? null : Tag.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -334,9 +357,13 @@ public class SoundPlayer extends Component implements system.runtime.serializati
 
     public java.lang.String getSoundLocation() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NullReferenceException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSoundLocation = null;
         try {
-            return (java.lang.String)classInstance.Get("SoundLocation");
+            retObjectSoundLocation = classInstance.Get("SoundLocation");
+            return (java.lang.String)retObjectSoundLocation;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSoundLocation != null ? retObjectSoundLocation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -344,7 +371,7 @@ public class SoundPlayer extends Component implements system.runtime.serializati
 
     public void setSoundLocation(java.lang.String SoundLocation) throws Throwable, system.NullReferenceException, system.ArgumentException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException, system.security.SecurityException, system.UriFormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SoundLocation", SoundLocation);
         } catch (JCNativeException jcne) {
@@ -359,7 +386,7 @@ public class SoundPlayer extends Component implements system.runtime.serializati
 
     public void addLoadCompleted(AsyncCompletedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("LoadCompleted", handler);
         } catch (JCNativeException jcne) {
@@ -369,7 +396,7 @@ public class SoundPlayer extends Component implements system.runtime.serializati
 
     public void removeLoadCompleted(AsyncCompletedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("LoadCompleted", handler);
         } catch (JCNativeException jcne) {
@@ -379,7 +406,7 @@ public class SoundPlayer extends Component implements system.runtime.serializati
 
     public void addSoundLocationChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("SoundLocationChanged", handler);
         } catch (JCNativeException jcne) {
@@ -389,7 +416,7 @@ public class SoundPlayer extends Component implements system.runtime.serializati
 
     public void removeSoundLocationChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("SoundLocationChanged", handler);
         } catch (JCNativeException jcne) {
@@ -399,7 +426,7 @@ public class SoundPlayer extends Component implements system.runtime.serializati
 
     public void addStreamChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("StreamChanged", handler);
         } catch (JCNativeException jcne) {
@@ -409,7 +436,7 @@ public class SoundPlayer extends Component implements system.runtime.serializati
 
     public void removeStreamChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("StreamChanged", handler);
         } catch (JCNativeException jcne) {

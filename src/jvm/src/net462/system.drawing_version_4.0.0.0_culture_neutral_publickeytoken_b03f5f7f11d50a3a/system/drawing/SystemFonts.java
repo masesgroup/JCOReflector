@@ -156,10 +156,14 @@ public class SystemFonts extends NetObject  {
     
     public static Font GetFontByName(java.lang.String systemFontName) throws Throwable, system.NullReferenceException, system.ArgumentNullException, system.ArgumentException, system.security.SecurityException, system.NotSupportedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetFontByName = null;
         try {
-            JCObject objGetFontByName = (JCObject)classType.Invoke("GetFontByName", systemFontName);
+            retObjectGetFontByName = classType.Invoke("GetFontByName", systemFontName);
+            JCObject objGetFontByName = (JCObject)retObjectGetFontByName;
             return new Font(objGetFontByName);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetFontByName != null ? retObjectGetFontByName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,10 +175,14 @@ public class SystemFonts extends NetObject  {
     
     public static Font getCaptionFont() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.security.SecurityException, system.NotSupportedException, system.MissingMethodException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCaptionFont = null;
         try {
-            JCObject val = (JCObject)classType.Get("CaptionFont");
+            retObjectCaptionFont = classType.Get("CaptionFont");
+            JCObject val = (JCObject)retObjectCaptionFont;
             return new Font(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCaptionFont != null ? retObjectCaptionFont.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,10 +190,14 @@ public class SystemFonts extends NetObject  {
 
     public static Font getDefaultFont() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.security.SecurityException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDefaultFont = null;
         try {
-            JCObject val = (JCObject)classType.Get("DefaultFont");
+            retObjectDefaultFont = classType.Get("DefaultFont");
+            JCObject val = (JCObject)retObjectDefaultFont;
             return new Font(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefaultFont != null ? retObjectDefaultFont.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,10 +205,14 @@ public class SystemFonts extends NetObject  {
 
     public static Font getDialogFont() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.security.SecurityException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDialogFont = null;
         try {
-            JCObject val = (JCObject)classType.Get("DialogFont");
+            retObjectDialogFont = classType.Get("DialogFont");
+            JCObject val = (JCObject)retObjectDialogFont;
             return new Font(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDialogFont != null ? retObjectDialogFont.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -204,10 +220,14 @@ public class SystemFonts extends NetObject  {
 
     public static Font getIconTitleFont() throws Throwable, system.ArgumentNullException, system.security.SecurityException, system.NotSupportedException, system.ArgumentException, system.MissingMethodException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIconTitleFont = null;
         try {
-            JCObject val = (JCObject)classType.Get("IconTitleFont");
+            retObjectIconTitleFont = classType.Get("IconTitleFont");
+            JCObject val = (JCObject)retObjectIconTitleFont;
             return new Font(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIconTitleFont != null ? retObjectIconTitleFont.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -215,10 +235,14 @@ public class SystemFonts extends NetObject  {
 
     public static Font getMenuFont() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.security.SecurityException, system.NotSupportedException, system.MissingMethodException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMenuFont = null;
         try {
-            JCObject val = (JCObject)classType.Get("MenuFont");
+            retObjectMenuFont = classType.Get("MenuFont");
+            JCObject val = (JCObject)retObjectMenuFont;
             return new Font(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMenuFont != null ? retObjectMenuFont.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -226,10 +250,14 @@ public class SystemFonts extends NetObject  {
 
     public static Font getMessageBoxFont() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.security.SecurityException, system.NotSupportedException, system.MissingMethodException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMessageBoxFont = null;
         try {
-            JCObject val = (JCObject)classType.Get("MessageBoxFont");
+            retObjectMessageBoxFont = classType.Get("MessageBoxFont");
+            JCObject val = (JCObject)retObjectMessageBoxFont;
             return new Font(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMessageBoxFont != null ? retObjectMessageBoxFont.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -237,10 +265,14 @@ public class SystemFonts extends NetObject  {
 
     public static Font getSmallCaptionFont() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.security.SecurityException, system.NotSupportedException, system.MissingMethodException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSmallCaptionFont = null;
         try {
-            JCObject val = (JCObject)classType.Get("SmallCaptionFont");
+            retObjectSmallCaptionFont = classType.Get("SmallCaptionFont");
+            JCObject val = (JCObject)retObjectSmallCaptionFont;
             return new Font(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSmallCaptionFont != null ? retObjectSmallCaptionFont.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -248,10 +280,14 @@ public class SystemFonts extends NetObject  {
 
     public static Font getStatusFont() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.security.SecurityException, system.NotSupportedException, system.MissingMethodException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectStatusFont = null;
         try {
-            JCObject val = (JCObject)classType.Get("StatusFont");
+            retObjectStatusFont = classType.Get("StatusFont");
+            JCObject val = (JCObject)retObjectStatusFont;
             return new Font(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStatusFont != null ? retObjectStatusFont.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

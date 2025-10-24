@@ -166,9 +166,13 @@ public class InertiaProcessor2D extends NetObject  {
     
     public boolean Process(long timestamp) throws Throwable, system.NotSupportedException, system.ArgumentException, system.OutOfMemoryException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProcess = null;
         try {
-            return (boolean)classInstance.Invoke("Process", timestamp);
+            retObjectProcess = classInstance.Invoke("Process", timestamp);
+            return (boolean)retObjectProcess;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectProcess != null ? retObjectProcess.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,7 +180,7 @@ public class InertiaProcessor2D extends NetObject  {
 
     public void Complete(long timestamp) throws Throwable, system.NotSupportedException, system.ArgumentException, system.OutOfMemoryException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Complete", timestamp);
         } catch (JCNativeException jcne) {
@@ -186,7 +190,7 @@ public class InertiaProcessor2D extends NetObject  {
 
     public void SetParameters(InertiaParameters2D parameters) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetParameters", parameters == null ? null : parameters.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -200,9 +204,13 @@ public class InertiaProcessor2D extends NetObject  {
     
     public boolean getIsRunning() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsRunning = null;
         try {
-            return (boolean)classInstance.Get("IsRunning");
+            retObjectIsRunning = classInstance.Get("IsRunning");
+            return (boolean)retObjectIsRunning;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsRunning != null ? retObjectIsRunning.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -210,10 +218,14 @@ public class InertiaProcessor2D extends NetObject  {
 
     public Single getInitialOriginX() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInitialOriginX = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("InitialOriginX");
+            retObjectInitialOriginX = classInstance.Get("InitialOriginX");
+            JCObject val = (JCObject)retObjectInitialOriginX;
             return new Single(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInitialOriginX != null ? retObjectInitialOriginX.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -221,7 +233,7 @@ public class InertiaProcessor2D extends NetObject  {
 
     public void setInitialOriginX(Single InitialOriginX) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("InitialOriginX", InitialOriginX == null ? null : InitialOriginX.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -231,10 +243,14 @@ public class InertiaProcessor2D extends NetObject  {
 
     public Single getInitialOriginY() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInitialOriginY = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("InitialOriginY");
+            retObjectInitialOriginY = classInstance.Get("InitialOriginY");
+            JCObject val = (JCObject)retObjectInitialOriginY;
             return new Single(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInitialOriginY != null ? retObjectInitialOriginY.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -242,7 +258,7 @@ public class InertiaProcessor2D extends NetObject  {
 
     public void setInitialOriginY(Single InitialOriginY) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("InitialOriginY", InitialOriginY == null ? null : InitialOriginY.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -252,10 +268,14 @@ public class InertiaProcessor2D extends NetObject  {
 
     public InertiaExpansionBehavior2D getExpansionBehavior() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExpansionBehavior = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ExpansionBehavior");
+            retObjectExpansionBehavior = classInstance.Get("ExpansionBehavior");
+            JCObject val = (JCObject)retObjectExpansionBehavior;
             return new InertiaExpansionBehavior2D(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExpansionBehavior != null ? retObjectExpansionBehavior.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -263,7 +283,7 @@ public class InertiaProcessor2D extends NetObject  {
 
     public void setExpansionBehavior(InertiaExpansionBehavior2D ExpansionBehavior) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ExpansionBehavior", ExpansionBehavior == null ? null : ExpansionBehavior.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -273,10 +293,14 @@ public class InertiaProcessor2D extends NetObject  {
 
     public InertiaRotationBehavior2D getRotationBehavior() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRotationBehavior = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RotationBehavior");
+            retObjectRotationBehavior = classInstance.Get("RotationBehavior");
+            JCObject val = (JCObject)retObjectRotationBehavior;
             return new InertiaRotationBehavior2D(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRotationBehavior != null ? retObjectRotationBehavior.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -284,7 +308,7 @@ public class InertiaProcessor2D extends NetObject  {
 
     public void setRotationBehavior(InertiaRotationBehavior2D RotationBehavior) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RotationBehavior", RotationBehavior == null ? null : RotationBehavior.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -294,10 +318,14 @@ public class InertiaProcessor2D extends NetObject  {
 
     public InertiaTranslationBehavior2D getTranslationBehavior() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTranslationBehavior = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TranslationBehavior");
+            retObjectTranslationBehavior = classInstance.Get("TranslationBehavior");
+            JCObject val = (JCObject)retObjectTranslationBehavior;
             return new InertiaTranslationBehavior2D(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTranslationBehavior != null ? retObjectTranslationBehavior.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -305,7 +333,7 @@ public class InertiaProcessor2D extends NetObject  {
 
     public void setTranslationBehavior(InertiaTranslationBehavior2D TranslationBehavior) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TranslationBehavior", TranslationBehavior == null ? null : TranslationBehavior.getJCOInstance());
         } catch (JCNativeException jcne) {

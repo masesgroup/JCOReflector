@@ -200,10 +200,14 @@ public class EasingThicknessKeyFrame extends ThicknessKeyFrame  {
     
     public IEasingFunction getEasingFunction() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEasingFunction = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("EasingFunction");
+            retObjectEasingFunction = classInstance.Get("EasingFunction");
+            JCObject val = (JCObject)retObjectEasingFunction;
             return new IEasingFunctionImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEasingFunction != null ? retObjectEasingFunction.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -211,7 +215,7 @@ public class EasingThicknessKeyFrame extends ThicknessKeyFrame  {
 
     public void setEasingFunction(IEasingFunction EasingFunction) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EasingFunction", EasingFunction == null ? null : EasingFunction.getJCOInstance());
         } catch (JCNativeException jcne) {

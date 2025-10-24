@@ -182,7 +182,7 @@ public class MultipartContent extends HttpContent  {
     
     public void Add(HttpContent content) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Add", content == null ? null : content.getJCOInstance());
         } catch (JCNativeException jcne) {

@@ -163,9 +163,13 @@ public class HtmlElementEventArgs extends EventArgs  {
     
     public boolean getAltKeyPressed() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAltKeyPressed = null;
         try {
-            return (boolean)classInstance.Get("AltKeyPressed");
+            retObjectAltKeyPressed = classInstance.Get("AltKeyPressed");
+            return (boolean)retObjectAltKeyPressed;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAltKeyPressed != null ? retObjectAltKeyPressed.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -173,9 +177,13 @@ public class HtmlElementEventArgs extends EventArgs  {
 
     public boolean getBubbleEvent() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBubbleEvent = null;
         try {
-            return (boolean)classInstance.Get("BubbleEvent");
+            retObjectBubbleEvent = classInstance.Get("BubbleEvent");
+            return (boolean)retObjectBubbleEvent;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectBubbleEvent != null ? retObjectBubbleEvent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,7 +191,7 @@ public class HtmlElementEventArgs extends EventArgs  {
 
     public void setBubbleEvent(boolean BubbleEvent) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BubbleEvent", BubbleEvent);
         } catch (JCNativeException jcne) {
@@ -193,9 +201,13 @@ public class HtmlElementEventArgs extends EventArgs  {
 
     public boolean getCtrlKeyPressed() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCtrlKeyPressed = null;
         try {
-            return (boolean)classInstance.Get("CtrlKeyPressed");
+            retObjectCtrlKeyPressed = classInstance.Get("CtrlKeyPressed");
+            return (boolean)retObjectCtrlKeyPressed;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCtrlKeyPressed != null ? retObjectCtrlKeyPressed.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,9 +215,13 @@ public class HtmlElementEventArgs extends EventArgs  {
 
     public boolean getReturnValue() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReturnValue = null;
         try {
-            return (boolean)classInstance.Get("ReturnValue");
+            retObjectReturnValue = classInstance.Get("ReturnValue");
+            return (boolean)retObjectReturnValue;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectReturnValue != null ? retObjectReturnValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,7 +229,7 @@ public class HtmlElementEventArgs extends EventArgs  {
 
     public void setReturnValue(boolean ReturnValue) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ReturnValue", ReturnValue);
         } catch (JCNativeException jcne) {
@@ -223,9 +239,13 @@ public class HtmlElementEventArgs extends EventArgs  {
 
     public boolean getShiftKeyPressed() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShiftKeyPressed = null;
         try {
-            return (boolean)classInstance.Get("ShiftKeyPressed");
+            retObjectShiftKeyPressed = classInstance.Get("ShiftKeyPressed");
+            return (boolean)retObjectShiftKeyPressed;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectShiftKeyPressed != null ? retObjectShiftKeyPressed.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -233,9 +253,20 @@ public class HtmlElementEventArgs extends EventArgs  {
 
     public int getKeyPressedCode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectKeyPressedCode = null;
         try {
-            return (int)classInstance.Get("KeyPressedCode");
+            retObjectKeyPressedCode = classInstance.Get("KeyPressedCode");
+            return (int)retObjectKeyPressedCode;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectKeyPressedCode_ToString = retObjectKeyPressedCode == null ? "null" : retObjectKeyPressedCode.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectKeyPressedCodeNumber = (java.lang.Number)retObjectKeyPressedCode;
+                return retObjectKeyPressedCodeNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectKeyPressedCode != null ? retObjectKeyPressedCode.getClass() : "null", retObjectKeyPressedCode_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -243,10 +274,14 @@ public class HtmlElementEventArgs extends EventArgs  {
 
     public Point getClientMousePosition() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClientMousePosition = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ClientMousePosition");
+            retObjectClientMousePosition = classInstance.Get("ClientMousePosition");
+            JCObject val = (JCObject)retObjectClientMousePosition;
             return new Point(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClientMousePosition != null ? retObjectClientMousePosition.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -254,10 +289,14 @@ public class HtmlElementEventArgs extends EventArgs  {
 
     public Point getMousePosition() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMousePosition = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MousePosition");
+            retObjectMousePosition = classInstance.Get("MousePosition");
+            JCObject val = (JCObject)retObjectMousePosition;
             return new Point(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMousePosition != null ? retObjectMousePosition.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -265,10 +304,14 @@ public class HtmlElementEventArgs extends EventArgs  {
 
     public Point getOffsetMousePosition() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOffsetMousePosition = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("OffsetMousePosition");
+            retObjectOffsetMousePosition = classInstance.Get("OffsetMousePosition");
+            JCObject val = (JCObject)retObjectOffsetMousePosition;
             return new Point(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOffsetMousePosition != null ? retObjectOffsetMousePosition.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -276,9 +319,13 @@ public class HtmlElementEventArgs extends EventArgs  {
 
     public java.lang.String getEventType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEventType = null;
         try {
-            return (java.lang.String)classInstance.Get("EventType");
+            retObjectEventType = classInstance.Get("EventType");
+            return (java.lang.String)retObjectEventType;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectEventType != null ? retObjectEventType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -286,10 +333,14 @@ public class HtmlElementEventArgs extends EventArgs  {
 
     public HtmlElement getFromElement() throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFromElement = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("FromElement");
+            retObjectFromElement = classInstance.Get("FromElement");
+            JCObject val = (JCObject)retObjectFromElement;
             return new HtmlElement(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFromElement != null ? retObjectFromElement.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -297,10 +348,14 @@ public class HtmlElementEventArgs extends EventArgs  {
 
     public HtmlElement getToElement() throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToElement = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ToElement");
+            retObjectToElement = classInstance.Get("ToElement");
+            JCObject val = (JCObject)retObjectToElement;
             return new HtmlElement(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToElement != null ? retObjectToElement.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -308,10 +363,14 @@ public class HtmlElementEventArgs extends EventArgs  {
 
     public MouseButtons getMouseButtonsPressed() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMouseButtonsPressed = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MouseButtonsPressed");
+            retObjectMouseButtonsPressed = classInstance.Get("MouseButtonsPressed");
+            JCObject val = (JCObject)retObjectMouseButtonsPressed;
             return new MouseButtons(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMouseButtonsPressed != null ? retObjectMouseButtonsPressed.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

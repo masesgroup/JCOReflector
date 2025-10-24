@@ -158,10 +158,14 @@ public class SecurityUtilities extends NetObject  {
     
     public static PermissionSet ComputeZonePermissionSet(java.lang.String targetZone, PermissionSet includedPermissionSet, java.lang.String[] excludedPermissions) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.xml.XmlException, system.NullReferenceException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectComputeZonePermissionSet = null;
         try {
-            JCObject objComputeZonePermissionSet = (JCObject)classType.Invoke("ComputeZonePermissionSet", targetZone, includedPermissionSet == null ? null : includedPermissionSet.getJCOInstance(), excludedPermissions);
+            retObjectComputeZonePermissionSet = classType.Invoke("ComputeZonePermissionSet", targetZone, includedPermissionSet == null ? null : includedPermissionSet.getJCOInstance(), excludedPermissions);
+            JCObject objComputeZonePermissionSet = (JCObject)retObjectComputeZonePermissionSet;
             return new PermissionSet(objComputeZonePermissionSet);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectComputeZonePermissionSet != null ? retObjectComputeZonePermissionSet.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,10 +173,14 @@ public class SecurityUtilities extends NetObject  {
 
     public static PermissionSet ComputeZonePermissionSet(java.lang.String dupParam0, PermissionSet dupParam1, JCORefOut dupParam2) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.xml.XmlException, system.NullReferenceException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectComputeZonePermissionSet = null;
         try {
-            JCObject objComputeZonePermissionSet = (JCObject)classType.Invoke("ComputeZonePermissionSet", dupParam0, dupParam1 == null ? null : dupParam1.getJCOInstance(), dupParam2.getJCRefOut());
+            retObjectComputeZonePermissionSet = classType.Invoke("ComputeZonePermissionSet", dupParam0, dupParam1 == null ? null : dupParam1.getJCOInstance(), dupParam2.getJCRefOut());
+            JCObject objComputeZonePermissionSet = (JCObject)retObjectComputeZonePermissionSet;
             return new PermissionSet(objComputeZonePermissionSet);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectComputeZonePermissionSet != null ? retObjectComputeZonePermissionSet.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,10 +188,14 @@ public class SecurityUtilities extends NetObject  {
 
     public static PermissionSet IdentityListToPermissionSet(java.lang.String[] ids) throws Throwable, system.ArgumentOutOfRangeException, system.NullReferenceException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.xml.XmlException, system.RankException, system.security.SecurityException, system.reflection.TargetParameterCountException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIdentityListToPermissionSet = null;
         try {
-            JCObject objIdentityListToPermissionSet = (JCObject)classType.Invoke("IdentityListToPermissionSet", (java.lang.Object)ids);
+            retObjectIdentityListToPermissionSet = classType.Invoke("IdentityListToPermissionSet", (java.lang.Object)ids);
+            JCObject objIdentityListToPermissionSet = (JCObject)retObjectIdentityListToPermissionSet;
             return new PermissionSet(objIdentityListToPermissionSet);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIdentityListToPermissionSet != null ? retObjectIdentityListToPermissionSet.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,10 +203,14 @@ public class SecurityUtilities extends NetObject  {
 
     public static PermissionSet IdentityListToPermissionSet(JCORefOut dupParam0) throws Throwable, system.ArgumentOutOfRangeException, system.NullReferenceException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.xml.XmlException, system.RankException, system.security.SecurityException, system.reflection.TargetParameterCountException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIdentityListToPermissionSet = null;
         try {
-            JCObject objIdentityListToPermissionSet = (JCObject)classType.Invoke("IdentityListToPermissionSet", (java.lang.Object)dupParam0.getJCRefOut());
+            retObjectIdentityListToPermissionSet = classType.Invoke("IdentityListToPermissionSet", (java.lang.Object)dupParam0.getJCRefOut());
+            JCObject objIdentityListToPermissionSet = (JCObject)retObjectIdentityListToPermissionSet;
             return new PermissionSet(objIdentityListToPermissionSet);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIdentityListToPermissionSet != null ? retObjectIdentityListToPermissionSet.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,10 +218,14 @@ public class SecurityUtilities extends NetObject  {
 
     public static PermissionSet XmlToPermissionSet(XmlElement element) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.NullReferenceException, system.security.SecurityException, system.NotSupportedException, system.MemberAccessException, system.reflection.TargetException, system.reflection.TargetParameterCountException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectXmlToPermissionSet = null;
         try {
-            JCObject objXmlToPermissionSet = (JCObject)classType.Invoke("XmlToPermissionSet", element == null ? null : element.getJCOInstance());
+            retObjectXmlToPermissionSet = classType.Invoke("XmlToPermissionSet", element == null ? null : element.getJCOInstance());
+            JCObject objXmlToPermissionSet = (JCObject)retObjectXmlToPermissionSet;
             return new PermissionSet(objXmlToPermissionSet);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectXmlToPermissionSet != null ? retObjectXmlToPermissionSet.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,10 +233,12 @@ public class SecurityUtilities extends NetObject  {
 
     public static java.lang.String[] PermissionSetToIdentityList(PermissionSet permissionSet) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.xml.XmlException, system.xml.schema.XmlSchemaException, system.NullReferenceException, system.xml.xpath.XPathException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectPermissionSetToIdentityList = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("PermissionSetToIdentityList", permissionSet == null ? null : permissionSet.getJCOInstance());
+            retObjectPermissionSetToIdentityList = classType.Invoke("PermissionSetToIdentityList", permissionSet == null ? null : permissionSet.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectPermissionSetToIdentityList;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -225,6 +247,8 @@ public class SecurityUtilities extends NetObject  {
 				resultingArray[indexPermissionSetToIdentityList] = (java.lang.String)resultingArrayList.get(indexPermissionSetToIdentityList);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectPermissionSetToIdentityList != null ? retObjectPermissionSetToIdentityList.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -232,7 +256,7 @@ public class SecurityUtilities extends NetObject  {
 
     public static void SignFile(X509Certificate2 cert, Uri timestampUrl, java.lang.String path) throws Throwable, system.NotImplementedException, system.ArgumentNullException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.globalization.CultureNotFoundException, system.io.PathTooLongException, system.resources.MissingManifestResourceException, system.io.FileNotFoundException, system.security.cryptography.CryptographicException, system.NullReferenceException, system.io.IOException, system.AccessViolationException, system.RankException, system.OverflowException, system.PlatformNotSupportedException, system.ApplicationException, system.componentmodel.Win32Exception, system.collections.generic.KeyNotFoundException, system.componentmodel.WarningException, system.threading.ThreadAbortException, system.UnauthorizedAccessException, system.security.accesscontrol.PrivilegeNotHeldException, system.xml.XmlException, system.xml.schema.XmlSchemaException, system.xml.xpath.XPathException, system.security.cryptography.CryptographicUnexpectedOperationException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SignFile", cert == null ? null : cert.getJCOInstance(), timestampUrl == null ? null : timestampUrl.getJCOInstance(), path);
         } catch (JCNativeException jcne) {
@@ -242,7 +266,7 @@ public class SecurityUtilities extends NetObject  {
 
     public static void SignFile(java.lang.String certPath, SecureString certPassword, Uri timestampUrl, java.lang.String path) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException, system.ObjectDisposedException, system.security.cryptography.CryptographicException, system.InvalidOperationException, system.AccessViolationException, system.NotImplementedException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.FormatException, system.NullReferenceException, system.security.SecurityException, system.RankException, system.ApplicationException, system.componentmodel.Win32Exception, system.collections.generic.KeyNotFoundException, system.IndexOutOfRangeException, system.componentmodel.WarningException, system.threading.ThreadAbortException, system.security.accesscontrol.PrivilegeNotHeldException, system.xml.XmlException, system.xml.schema.XmlSchemaException, system.xml.xpath.XPathException, system.PlatformNotSupportedException, system.security.cryptography.CryptographicUnexpectedOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SignFile", certPath, certPassword == null ? null : certPassword.getJCOInstance(), timestampUrl == null ? null : timestampUrl.getJCOInstance(), path);
         } catch (JCNativeException jcne) {
@@ -252,7 +276,7 @@ public class SecurityUtilities extends NetObject  {
 
     public static void SignFile(java.lang.String certThumbprint, Uri timestampUrl, java.lang.String path) throws Throwable, system.NotImplementedException, system.ArgumentNullException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.security.cryptography.CryptographicException, system.AccessViolationException, system.RankException, system.OverflowException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NullReferenceException, system.ApplicationException, system.componentmodel.Win32Exception, system.collections.generic.KeyNotFoundException, system.componentmodel.WarningException, system.threading.ThreadAbortException, system.security.accesscontrol.PrivilegeNotHeldException, system.xml.XmlException, system.xml.schema.XmlSchemaException, system.xml.xpath.XPathException, system.PlatformNotSupportedException, system.security.cryptography.CryptographicUnexpectedOperationException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SignFile", certThumbprint, timestampUrl == null ? null : timestampUrl.getJCOInstance(), path);
         } catch (JCNativeException jcne) {

@@ -142,9 +142,13 @@ public class IProcessHostSupportFunctionsImplementation extends NetObject implem
     
     public java.lang.String GetAppHostConfigFilename() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetAppHostConfigFilename = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetAppHostConfigFilename");
+            retObjectGetAppHostConfigFilename = classInstance.Invoke("GetAppHostConfigFilename");
+            return (java.lang.String)retObjectGetAppHostConfigFilename;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetAppHostConfigFilename != null ? retObjectGetAppHostConfigFilename.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -152,9 +156,13 @@ public class IProcessHostSupportFunctionsImplementation extends NetObject implem
 
     public java.lang.String GetRootWebConfigFilename() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetRootWebConfigFilename = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetRootWebConfigFilename");
+            retObjectGetRootWebConfigFilename = classInstance.Invoke("GetRootWebConfigFilename");
+            return (java.lang.String)retObjectGetRootWebConfigFilename;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetRootWebConfigFilename != null ? retObjectGetRootWebConfigFilename.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -162,7 +170,7 @@ public class IProcessHostSupportFunctionsImplementation extends NetObject implem
 
     public void GetApplicationProperties(java.lang.String appId, JCORefOut virtualPath, JCORefOut physicalPath, JCORefOut siteName, JCORefOut siteId) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetApplicationProperties", appId, virtualPath.getJCRefOut(), physicalPath.getJCRefOut(), siteName.getJCRefOut(), siteId.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -172,7 +180,7 @@ public class IProcessHostSupportFunctionsImplementation extends NetObject implem
 
     public void MapPath(java.lang.String appId, java.lang.String virtualPath, JCORefOut physicalPath) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("MapPath", appId, virtualPath, physicalPath.getJCRefOut());
         } catch (JCNativeException jcne) {

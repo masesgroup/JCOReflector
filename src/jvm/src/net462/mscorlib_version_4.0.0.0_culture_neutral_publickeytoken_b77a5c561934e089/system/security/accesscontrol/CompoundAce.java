@@ -169,7 +169,7 @@ public class CompoundAce extends KnownAce  {
     
     public void GetBinaryForm(byte[] binaryForm, int offset) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.SystemException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetBinaryForm", binaryForm, offset);
         } catch (JCNativeException jcne) {
@@ -179,7 +179,7 @@ public class CompoundAce extends KnownAce  {
 
     public void GetBinaryForm(JCORefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.SystemException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetBinaryForm", dupParam0.getJCRefOut(), dupParam1);
         } catch (JCNativeException jcne) {
@@ -193,10 +193,14 @@ public class CompoundAce extends KnownAce  {
     
     public CompoundAceType getCompoundAceType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCompoundAceType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CompoundAceType");
+            retObjectCompoundAceType = classInstance.Get("CompoundAceType");
+            JCObject val = (JCObject)retObjectCompoundAceType;
             return new CompoundAceType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCompoundAceType != null ? retObjectCompoundAceType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -204,7 +208,7 @@ public class CompoundAce extends KnownAce  {
 
     public void setCompoundAceType(CompoundAceType CompoundAceType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CompoundAceType", CompoundAceType == null ? null : CompoundAceType.getJCOInstance());
         } catch (JCNativeException jcne) {

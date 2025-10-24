@@ -164,10 +164,14 @@ public class HttpRemotingHandlerFactory extends NetObject  {
     
     public IHttpHandler GetHandler(HttpContext context, java.lang.String verb, java.lang.String url, java.lang.String filePath) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.runtime.remoting.RemotingException, system.FormatException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.NullReferenceException, system.threading.ThreadAbortException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.web.HttpParseException, system.web.HttpCompileException, system.net.sockets.SocketException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetHandler = null;
         try {
-            JCObject objGetHandler = (JCObject)classInstance.Invoke("GetHandler", context == null ? null : context.getJCOInstance(), verb, url, filePath);
+            retObjectGetHandler = classInstance.Invoke("GetHandler", context == null ? null : context.getJCOInstance(), verb, url, filePath);
+            JCObject objGetHandler = (JCObject)retObjectGetHandler;
             return new IHttpHandlerImplementation(objGetHandler);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetHandler != null ? retObjectGetHandler.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -175,7 +179,7 @@ public class HttpRemotingHandlerFactory extends NetObject  {
 
     public void ReleaseHandler(IHttpHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ReleaseHandler", handler == null ? null : handler.getJCOInstance());
         } catch (JCNativeException jcne) {

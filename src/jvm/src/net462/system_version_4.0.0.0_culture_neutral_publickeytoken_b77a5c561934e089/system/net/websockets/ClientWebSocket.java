@@ -168,10 +168,14 @@ public class ClientWebSocket extends WebSocket  {
     
     public Task CloseAsync(WebSocketCloseStatus closeStatus, java.lang.String statusDescription, CancellationToken cancellationToken) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCloseAsync = null;
         try {
-            JCObject objCloseAsync = (JCObject)classInstance.Invoke("CloseAsync", closeStatus == null ? null : closeStatus.getJCOInstance(), statusDescription, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            retObjectCloseAsync = classInstance.Invoke("CloseAsync", closeStatus == null ? null : closeStatus.getJCOInstance(), statusDescription, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objCloseAsync = (JCObject)retObjectCloseAsync;
             return new Task(objCloseAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCloseAsync != null ? retObjectCloseAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,10 +183,14 @@ public class ClientWebSocket extends WebSocket  {
 
     public Task CloseOutputAsync(WebSocketCloseStatus closeStatus, java.lang.String statusDescription, CancellationToken cancellationToken) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCloseOutputAsync = null;
         try {
-            JCObject objCloseOutputAsync = (JCObject)classInstance.Invoke("CloseOutputAsync", closeStatus == null ? null : closeStatus.getJCOInstance(), statusDescription, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            retObjectCloseOutputAsync = classInstance.Invoke("CloseOutputAsync", closeStatus == null ? null : closeStatus.getJCOInstance(), statusDescription, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objCloseOutputAsync = (JCObject)retObjectCloseOutputAsync;
             return new Task(objCloseOutputAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCloseOutputAsync != null ? retObjectCloseOutputAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,10 +198,14 @@ public class ClientWebSocket extends WebSocket  {
 
     public Task ConnectAsync(Uri uri, CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.SecurityException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConnectAsync = null;
         try {
-            JCObject objConnectAsync = (JCObject)classInstance.Invoke("ConnectAsync", uri == null ? null : uri.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            retObjectConnectAsync = classInstance.Invoke("ConnectAsync", uri == null ? null : uri.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objConnectAsync = (JCObject)retObjectConnectAsync;
             return new Task(objConnectAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConnectAsync != null ? retObjectConnectAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,7 +213,7 @@ public class ClientWebSocket extends WebSocket  {
 
     public void Abort() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Abort");
         } catch (JCNativeException jcne) {
@@ -211,7 +223,7 @@ public class ClientWebSocket extends WebSocket  {
 
     public void Dispose() throws Throwable, system.ObjectDisposedException, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.InvalidOperationException, system.AggregateException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
@@ -225,10 +237,14 @@ public class ClientWebSocket extends WebSocket  {
     
     public ClientWebSocketOptions getOptions() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOptions = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Options");
+            retObjectOptions = classInstance.Get("Options");
+            JCObject val = (JCObject)retObjectOptions;
             return new ClientWebSocketOptions(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOptions != null ? retObjectOptions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

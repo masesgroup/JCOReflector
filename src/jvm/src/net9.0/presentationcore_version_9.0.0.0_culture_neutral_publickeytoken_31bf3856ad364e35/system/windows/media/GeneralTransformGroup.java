@@ -166,9 +166,13 @@ public class GeneralTransformGroup extends GeneralTransform  {
     
     public boolean TryTransform(Point inPoint, JCORefOut<Point> result) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryTransform = null;
         try {
-            return (boolean)classInstance.Invoke("TryTransform", inPoint == null ? null : inPoint.getJCOInstance(), result.getJCRefOut());
+            retObjectTryTransform = classInstance.Invoke("TryTransform", inPoint == null ? null : inPoint.getJCOInstance(), result.getJCRefOut());
+            return (boolean)retObjectTryTransform;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryTransform != null ? retObjectTryTransform.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,10 +180,14 @@ public class GeneralTransformGroup extends GeneralTransform  {
 
     public GeneralTransformGroup CloneNewGeneralTransformGroup() throws Throwable, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClone = null;
         try {
-            JCObject objClone = (JCObject)classInstance.Invoke("Clone");
+            retObjectClone = classInstance.Invoke("Clone");
+            JCObject objClone = (JCObject)retObjectClone;
             return new GeneralTransformGroup(objClone);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClone != null ? retObjectClone.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,10 +195,14 @@ public class GeneralTransformGroup extends GeneralTransform  {
 
     public GeneralTransformGroup CloneCurrentValueNewGeneralTransformGroup() throws Throwable, system.InvalidOperationException, system.security.SecurityException, system.io.IOException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCloneCurrentValue = null;
         try {
-            JCObject objCloneCurrentValue = (JCObject)classInstance.Invoke("CloneCurrentValue");
+            retObjectCloneCurrentValue = classInstance.Invoke("CloneCurrentValue");
+            JCObject objCloneCurrentValue = (JCObject)retObjectCloneCurrentValue;
             return new GeneralTransformGroup(objCloneCurrentValue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCloneCurrentValue != null ? retObjectCloneCurrentValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,10 +210,14 @@ public class GeneralTransformGroup extends GeneralTransform  {
 
     public Rect TransformBounds(Rect rect) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTransformBounds = null;
         try {
-            JCObject objTransformBounds = (JCObject)classInstance.Invoke("TransformBounds", rect == null ? null : rect.getJCOInstance());
+            retObjectTransformBounds = classInstance.Invoke("TransformBounds", rect == null ? null : rect.getJCOInstance());
+            JCObject objTransformBounds = (JCObject)retObjectTransformBounds;
             return new Rect(objTransformBounds);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTransformBounds != null ? retObjectTransformBounds.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,10 +229,14 @@ public class GeneralTransformGroup extends GeneralTransform  {
     
     public GeneralTransformCollection getChildren() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectChildren = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Children");
+            retObjectChildren = classInstance.Get("Children");
+            JCObject val = (JCObject)retObjectChildren;
             return new GeneralTransformCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectChildren != null ? retObjectChildren.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -224,7 +244,7 @@ public class GeneralTransformGroup extends GeneralTransform  {
 
     public void setChildren(GeneralTransformCollection Children) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Children", Children == null ? null : Children.getJCOInstance());
         } catch (JCNativeException jcne) {

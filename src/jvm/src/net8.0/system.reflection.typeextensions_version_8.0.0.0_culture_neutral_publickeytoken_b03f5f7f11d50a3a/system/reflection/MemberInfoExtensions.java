@@ -154,9 +154,13 @@ public class MemberInfoExtensions extends NetObject  {
     
     public static boolean HasMetadataToken(MemberInfo member) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectHasMetadataToken = null;
         try {
-            return (boolean)classType.Invoke("HasMetadataToken", member == null ? null : member.getJCOInstance());
+            retObjectHasMetadataToken = classType.Invoke("HasMetadataToken", member == null ? null : member.getJCOInstance());
+            return (boolean)retObjectHasMetadataToken;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectHasMetadataToken != null ? retObjectHasMetadataToken.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -164,9 +168,20 @@ public class MemberInfoExtensions extends NetObject  {
 
     public static int GetMetadataToken(MemberInfo member) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetMetadataToken = null;
         try {
-            return (int)classType.Invoke("GetMetadataToken", member == null ? null : member.getJCOInstance());
+            retObjectGetMetadataToken = classType.Invoke("GetMetadataToken", member == null ? null : member.getJCOInstance());
+            return (int)retObjectGetMetadataToken;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetMetadataToken_ToString = retObjectGetMetadataToken == null ? "null" : retObjectGetMetadataToken.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetMetadataTokenNumber = (java.lang.Number)retObjectGetMetadataToken;
+                return retObjectGetMetadataTokenNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetMetadataToken != null ? retObjectGetMetadataToken.getClass() : "null", retObjectGetMetadataToken_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

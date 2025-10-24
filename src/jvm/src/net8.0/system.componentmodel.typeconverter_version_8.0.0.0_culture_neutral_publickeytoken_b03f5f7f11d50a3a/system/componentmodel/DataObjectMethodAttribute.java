@@ -177,9 +177,13 @@ public class DataObjectMethodAttribute extends Attribute  {
     
     public boolean Match(NetObject obj) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMatch = null;
         try {
-            return (boolean)classInstance.Invoke("Match", obj == null ? null : obj.getJCOInstance());
+            retObjectMatch = classInstance.Invoke("Match", obj == null ? null : obj.getJCOInstance());
+            return (boolean)retObjectMatch;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectMatch != null ? retObjectMatch.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,9 +195,13 @@ public class DataObjectMethodAttribute extends Attribute  {
     
     public boolean getIsDefault() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsDefault = null;
         try {
-            return (boolean)classInstance.Get("IsDefault");
+            retObjectIsDefault = classInstance.Get("IsDefault");
+            return (boolean)retObjectIsDefault;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsDefault != null ? retObjectIsDefault.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,10 +209,14 @@ public class DataObjectMethodAttribute extends Attribute  {
 
     public DataObjectMethodType getMethodType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMethodType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MethodType");
+            retObjectMethodType = classInstance.Get("MethodType");
+            JCObject val = (JCObject)retObjectMethodType;
             return new DataObjectMethodType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMethodType != null ? retObjectMethodType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

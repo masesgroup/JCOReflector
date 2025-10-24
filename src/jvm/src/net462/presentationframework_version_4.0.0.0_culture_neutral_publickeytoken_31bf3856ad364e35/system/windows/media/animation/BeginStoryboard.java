@@ -168,9 +168,13 @@ public class BeginStoryboard extends TriggerAction  {
     
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectName = null;
         try {
-            return (java.lang.String)classInstance.Get("Name");
+            retObjectName = classInstance.Get("Name");
+            return (java.lang.String)retObjectName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectName != null ? retObjectName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,7 +182,7 @@ public class BeginStoryboard extends TriggerAction  {
 
     public void setName(java.lang.String Name) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Name", Name);
         } catch (JCNativeException jcne) {
@@ -188,10 +192,14 @@ public class BeginStoryboard extends TriggerAction  {
 
     public HandoffBehavior getHandoffBehavior() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHandoffBehavior = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("HandoffBehavior");
+            retObjectHandoffBehavior = classInstance.Get("HandoffBehavior");
+            JCObject val = (JCObject)retObjectHandoffBehavior;
             return new HandoffBehavior(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHandoffBehavior != null ? retObjectHandoffBehavior.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -199,7 +207,7 @@ public class BeginStoryboard extends TriggerAction  {
 
     public void setHandoffBehavior(HandoffBehavior HandoffBehavior) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("HandoffBehavior", HandoffBehavior == null ? null : HandoffBehavior.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -209,10 +217,14 @@ public class BeginStoryboard extends TriggerAction  {
 
     public Storyboard getStoryboard() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStoryboard = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Storyboard");
+            retObjectStoryboard = classInstance.Get("Storyboard");
+            JCObject val = (JCObject)retObjectStoryboard;
             return new Storyboard(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStoryboard != null ? retObjectStoryboard.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -220,7 +232,7 @@ public class BeginStoryboard extends TriggerAction  {
 
     public void setStoryboard(Storyboard Storyboard) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Storyboard", Storyboard == null ? null : Storyboard.getJCOInstance());
         } catch (JCNativeException jcne) {

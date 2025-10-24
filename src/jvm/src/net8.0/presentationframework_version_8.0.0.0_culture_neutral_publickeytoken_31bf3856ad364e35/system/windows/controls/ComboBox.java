@@ -164,7 +164,7 @@ public class ComboBox extends Selector  {
     
     public void OnApplyTemplate() throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.NotSupportedException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException, system.componentmodel.InvalidEnumArgumentException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("OnApplyTemplate");
         } catch (JCNativeException jcne) {
@@ -178,9 +178,13 @@ public class ComboBox extends Selector  {
     
     public boolean getIsDropDownOpen() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsDropDownOpen = null;
         try {
-            return (boolean)classInstance.Get("IsDropDownOpen");
+            retObjectIsDropDownOpen = classInstance.Get("IsDropDownOpen");
+            return (boolean)retObjectIsDropDownOpen;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsDropDownOpen != null ? retObjectIsDropDownOpen.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,7 +192,7 @@ public class ComboBox extends Selector  {
 
     public void setIsDropDownOpen(boolean IsDropDownOpen) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsDropDownOpen", IsDropDownOpen);
         } catch (JCNativeException jcne) {
@@ -198,9 +202,13 @@ public class ComboBox extends Selector  {
 
     public boolean getIsEditable() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsEditable = null;
         try {
-            return (boolean)classInstance.Get("IsEditable");
+            retObjectIsEditable = classInstance.Get("IsEditable");
+            return (boolean)retObjectIsEditable;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsEditable != null ? retObjectIsEditable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -208,7 +216,7 @@ public class ComboBox extends Selector  {
 
     public void setIsEditable(boolean IsEditable) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsEditable", IsEditable);
         } catch (JCNativeException jcne) {
@@ -218,9 +226,13 @@ public class ComboBox extends Selector  {
 
     public boolean getIsReadOnly() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsReadOnly = null;
         try {
-            return (boolean)classInstance.Get("IsReadOnly");
+            retObjectIsReadOnly = classInstance.Get("IsReadOnly");
+            return (boolean)retObjectIsReadOnly;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsReadOnly != null ? retObjectIsReadOnly.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -228,7 +240,7 @@ public class ComboBox extends Selector  {
 
     public void setIsReadOnly(boolean IsReadOnly) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsReadOnly", IsReadOnly);
         } catch (JCNativeException jcne) {
@@ -238,9 +250,13 @@ public class ComboBox extends Selector  {
 
     public boolean getIsSelectionBoxHighlighted() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsSelectionBoxHighlighted = null;
         try {
-            return (boolean)classInstance.Get("IsSelectionBoxHighlighted");
+            retObjectIsSelectionBoxHighlighted = classInstance.Get("IsSelectionBoxHighlighted");
+            return (boolean)retObjectIsSelectionBoxHighlighted;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsSelectionBoxHighlighted != null ? retObjectIsSelectionBoxHighlighted.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -248,9 +264,13 @@ public class ComboBox extends Selector  {
 
     public boolean getShouldPreserveUserEnteredPrefix() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShouldPreserveUserEnteredPrefix = null;
         try {
-            return (boolean)classInstance.Get("ShouldPreserveUserEnteredPrefix");
+            retObjectShouldPreserveUserEnteredPrefix = classInstance.Get("ShouldPreserveUserEnteredPrefix");
+            return (boolean)retObjectShouldPreserveUserEnteredPrefix;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectShouldPreserveUserEnteredPrefix != null ? retObjectShouldPreserveUserEnteredPrefix.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -258,7 +278,7 @@ public class ComboBox extends Selector  {
 
     public void setShouldPreserveUserEnteredPrefix(boolean ShouldPreserveUserEnteredPrefix) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ShouldPreserveUserEnteredPrefix", ShouldPreserveUserEnteredPrefix);
         } catch (JCNativeException jcne) {
@@ -268,9 +288,13 @@ public class ComboBox extends Selector  {
 
     public boolean getStaysOpenOnEdit() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStaysOpenOnEdit = null;
         try {
-            return (boolean)classInstance.Get("StaysOpenOnEdit");
+            retObjectStaysOpenOnEdit = classInstance.Get("StaysOpenOnEdit");
+            return (boolean)retObjectStaysOpenOnEdit;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectStaysOpenOnEdit != null ? retObjectStaysOpenOnEdit.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -278,7 +302,7 @@ public class ComboBox extends Selector  {
 
     public void setStaysOpenOnEdit(boolean StaysOpenOnEdit) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("StaysOpenOnEdit", StaysOpenOnEdit);
         } catch (JCNativeException jcne) {
@@ -288,9 +312,20 @@ public class ComboBox extends Selector  {
 
     public double getMaxDropDownHeight() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxDropDownHeight = null;
         try {
-            return (double)classInstance.Get("MaxDropDownHeight");
+            retObjectMaxDropDownHeight = classInstance.Get("MaxDropDownHeight");
+            return (double)retObjectMaxDropDownHeight;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaxDropDownHeight_ToString = retObjectMaxDropDownHeight == null ? "null" : retObjectMaxDropDownHeight.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMaxDropDownHeightNumber = (java.lang.Number)retObjectMaxDropDownHeight;
+                return retObjectMaxDropDownHeightNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectMaxDropDownHeight != null ? retObjectMaxDropDownHeight.getClass() : "null", retObjectMaxDropDownHeight_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -298,7 +333,7 @@ public class ComboBox extends Selector  {
 
     public void setMaxDropDownHeight(double MaxDropDownHeight) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaxDropDownHeight", MaxDropDownHeight);
         } catch (JCNativeException jcne) {
@@ -308,10 +343,14 @@ public class ComboBox extends Selector  {
 
     public NetObject getSelectionBoxItem() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectionBoxItem = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SelectionBoxItem");
+            retObjectSelectionBoxItem = classInstance.Get("SelectionBoxItem");
+            JCObject val = (JCObject)retObjectSelectionBoxItem;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelectionBoxItem != null ? retObjectSelectionBoxItem.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -319,7 +358,7 @@ public class ComboBox extends Selector  {
 
     public void setSelectionBoxItem(NetObject SelectionBoxItem) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SelectionBoxItem", SelectionBoxItem == null ? null : SelectionBoxItem.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -329,9 +368,13 @@ public class ComboBox extends Selector  {
 
     public java.lang.String getSelectionBoxItemStringFormat() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectionBoxItemStringFormat = null;
         try {
-            return (java.lang.String)classInstance.Get("SelectionBoxItemStringFormat");
+            retObjectSelectionBoxItemStringFormat = classInstance.Get("SelectionBoxItemStringFormat");
+            return (java.lang.String)retObjectSelectionBoxItemStringFormat;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSelectionBoxItemStringFormat != null ? retObjectSelectionBoxItemStringFormat.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -339,7 +382,7 @@ public class ComboBox extends Selector  {
 
     public void setSelectionBoxItemStringFormat(java.lang.String SelectionBoxItemStringFormat) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SelectionBoxItemStringFormat", SelectionBoxItemStringFormat);
         } catch (JCNativeException jcne) {
@@ -349,9 +392,13 @@ public class ComboBox extends Selector  {
 
     public java.lang.String getText() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectText = null;
         try {
-            return (java.lang.String)classInstance.Get("Text");
+            retObjectText = classInstance.Get("Text");
+            return (java.lang.String)retObjectText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectText != null ? retObjectText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -359,7 +406,7 @@ public class ComboBox extends Selector  {
 
     public void setText(java.lang.String Text) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Text", Text);
         } catch (JCNativeException jcne) {
@@ -369,10 +416,14 @@ public class ComboBox extends Selector  {
 
     public DataTemplate getSelectionBoxItemTemplate() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectionBoxItemTemplate = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SelectionBoxItemTemplate");
+            retObjectSelectionBoxItemTemplate = classInstance.Get("SelectionBoxItemTemplate");
+            JCObject val = (JCObject)retObjectSelectionBoxItemTemplate;
             return new DataTemplate(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelectionBoxItemTemplate != null ? retObjectSelectionBoxItemTemplate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -380,7 +431,7 @@ public class ComboBox extends Selector  {
 
     public void setSelectionBoxItemTemplate(DataTemplate SelectionBoxItemTemplate) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SelectionBoxItemTemplate", SelectionBoxItemTemplate == null ? null : SelectionBoxItemTemplate.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -395,7 +446,7 @@ public class ComboBox extends Selector  {
 
     public void addDropDownClosed(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("DropDownClosed", handler);
         } catch (JCNativeException jcne) {
@@ -405,7 +456,7 @@ public class ComboBox extends Selector  {
 
     public void removeDropDownClosed(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("DropDownClosed", handler);
         } catch (JCNativeException jcne) {
@@ -415,7 +466,7 @@ public class ComboBox extends Selector  {
 
     public void addDropDownOpened(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("DropDownOpened", handler);
         } catch (JCNativeException jcne) {
@@ -425,7 +476,7 @@ public class ComboBox extends Selector  {
 
     public void removeDropDownOpened(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("DropDownOpened", handler);
         } catch (JCNativeException jcne) {

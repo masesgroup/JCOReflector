@@ -169,9 +169,13 @@ public class TextRange extends NetObject  {
     
     public boolean CanLoad(java.lang.String dataFormat) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.security.SecurityException, system.InvalidOperationException, system.io.IOException, system.UnauthorizedAccessException, system.IndexOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanLoad = null;
         try {
-            return (boolean)classInstance.Invoke("CanLoad", dataFormat);
+            retObjectCanLoad = classInstance.Invoke("CanLoad", dataFormat);
+            return (boolean)retObjectCanLoad;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCanLoad != null ? retObjectCanLoad.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,9 +183,13 @@ public class TextRange extends NetObject  {
 
     public boolean CanSave(java.lang.String dataFormat) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanSave = null;
         try {
-            return (boolean)classInstance.Invoke("CanSave", dataFormat);
+            retObjectCanSave = classInstance.Invoke("CanSave", dataFormat);
+            return (boolean)retObjectCanSave;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCanSave != null ? retObjectCanSave.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -189,9 +197,13 @@ public class TextRange extends NetObject  {
 
     public boolean Contains(TextPointer textPointer) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContains = null;
         try {
-            return (boolean)classInstance.Invoke("Contains", textPointer == null ? null : textPointer.getJCOInstance());
+            retObjectContains = classInstance.Invoke("Contains", textPointer == null ? null : textPointer.getJCOInstance());
+            return (boolean)retObjectContains;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectContains != null ? retObjectContains.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -199,10 +211,14 @@ public class TextRange extends NetObject  {
 
     public NetObject GetPropertyValue(DependencyProperty formattingProperty) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPropertyValue = null;
         try {
-            JCObject objGetPropertyValue = (JCObject)classInstance.Invoke("GetPropertyValue", formattingProperty == null ? null : formattingProperty.getJCOInstance());
+            retObjectGetPropertyValue = classInstance.Invoke("GetPropertyValue", formattingProperty == null ? null : formattingProperty.getJCOInstance());
+            JCObject objGetPropertyValue = (JCObject)retObjectGetPropertyValue;
             return new NetObject(objGetPropertyValue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetPropertyValue != null ? retObjectGetPropertyValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -210,7 +226,7 @@ public class TextRange extends NetObject  {
 
     public void ApplyPropertyValue(DependencyProperty formattingProperty, NetObject value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.security.SecurityException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.io.IOException, system.UnauthorizedAccessException, system.NotSupportedException, system.collections.generic.KeyNotFoundException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ApplyPropertyValue", formattingProperty == null ? null : formattingProperty.getJCOInstance(), value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -220,7 +236,7 @@ public class TextRange extends NetObject  {
 
     public void ClearAllProperties() throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OutOfMemoryException, system.security.SecurityException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.io.IOException, system.UnauthorizedAccessException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ClearAllProperties");
         } catch (JCNativeException jcne) {
@@ -230,7 +246,7 @@ public class TextRange extends NetObject  {
 
     public void Load(Stream stream, java.lang.String dataFormat) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.componentmodel.InvalidEnumArgumentException, system.OutOfMemoryException, system.xaml.XamlException, system.NotImplementedException, system.windows.markup.XamlParseException, system.io.FileFormatException, system.io.InvalidDataException, system.xml.XmlException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Load", stream == null ? null : stream.getJCOInstance(), dataFormat);
         } catch (JCNativeException jcne) {
@@ -240,7 +256,7 @@ public class TextRange extends NetObject  {
 
     public void Save(Stream stream, java.lang.String dataFormat, boolean preserveTextElements) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Save", stream == null ? null : stream.getJCOInstance(), dataFormat, preserveTextElements);
         } catch (JCNativeException jcne) {
@@ -250,7 +266,7 @@ public class TextRange extends NetObject  {
 
     public void Save(Stream stream, java.lang.String dataFormat) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Save", stream == null ? null : stream.getJCOInstance(), dataFormat);
         } catch (JCNativeException jcne) {
@@ -260,7 +276,7 @@ public class TextRange extends NetObject  {
 
     public void Select(TextPointer position1, TextPointer position2) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Select", position1 == null ? null : position1.getJCOInstance(), position2 == null ? null : position2.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -274,9 +290,13 @@ public class TextRange extends NetObject  {
     
     public boolean getIsEmpty() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsEmpty = null;
         try {
-            return (boolean)classInstance.Get("IsEmpty");
+            retObjectIsEmpty = classInstance.Get("IsEmpty");
+            return (boolean)retObjectIsEmpty;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsEmpty != null ? retObjectIsEmpty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -284,9 +304,13 @@ public class TextRange extends NetObject  {
 
     public java.lang.String getText() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectText = null;
         try {
-            return (java.lang.String)classInstance.Get("Text");
+            retObjectText = classInstance.Get("Text");
+            return (java.lang.String)retObjectText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectText != null ? retObjectText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -294,7 +318,7 @@ public class TextRange extends NetObject  {
 
     public void setText(java.lang.String Text) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Text", Text);
         } catch (JCNativeException jcne) {
@@ -304,10 +328,14 @@ public class TextRange extends NetObject  {
 
     public TextPointer getEnd() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEnd = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("End");
+            retObjectEnd = classInstance.Get("End");
+            JCObject val = (JCObject)retObjectEnd;
             return new TextPointer(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEnd != null ? retObjectEnd.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -315,10 +343,14 @@ public class TextRange extends NetObject  {
 
     public TextPointer getStart() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStart = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Start");
+            retObjectStart = classInstance.Get("Start");
+            JCObject val = (JCObject)retObjectStart;
             return new TextPointer(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStart != null ? retObjectStart.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -331,7 +363,7 @@ public class TextRange extends NetObject  {
 
     public void addChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Changed", handler);
         } catch (JCNativeException jcne) {
@@ -341,7 +373,7 @@ public class TextRange extends NetObject  {
 
     public void removeChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Changed", handler);
         } catch (JCNativeException jcne) {

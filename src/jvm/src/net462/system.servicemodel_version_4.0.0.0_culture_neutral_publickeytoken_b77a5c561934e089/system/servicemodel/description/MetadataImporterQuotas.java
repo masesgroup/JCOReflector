@@ -166,10 +166,14 @@ public class MetadataImporterQuotas extends NetObject  {
     
     public static MetadataImporterQuotas getDefaults() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDefaults = null;
         try {
-            JCObject val = (JCObject)classType.Get("Defaults");
+            retObjectDefaults = classType.Get("Defaults");
+            JCObject val = (JCObject)retObjectDefaults;
             return new MetadataImporterQuotas(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefaults != null ? retObjectDefaults.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,10 +181,14 @@ public class MetadataImporterQuotas extends NetObject  {
 
     public static MetadataImporterQuotas getMax() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMax = null;
         try {
-            JCObject val = (JCObject)classType.Get("Max");
+            retObjectMax = classType.Get("Max");
+            JCObject val = (JCObject)retObjectMax;
             return new MetadataImporterQuotas(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMax != null ? retObjectMax.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

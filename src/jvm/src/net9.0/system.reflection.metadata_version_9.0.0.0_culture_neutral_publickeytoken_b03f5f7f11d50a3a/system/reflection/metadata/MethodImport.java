@@ -163,10 +163,14 @@ public class MethodImport extends ValueType  {
     
     public ModuleReferenceHandle getModule() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectModule = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Module");
+            retObjectModule = classInstance.Get("Module");
+            JCObject val = (JCObject)retObjectModule;
             return new ModuleReferenceHandle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectModule != null ? retObjectModule.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -174,10 +178,14 @@ public class MethodImport extends ValueType  {
 
     public StringHandle getName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectName = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Name");
+            retObjectName = classInstance.Get("Name");
+            JCObject val = (JCObject)retObjectName;
             return new StringHandle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectName != null ? retObjectName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -185,10 +193,14 @@ public class MethodImport extends ValueType  {
 
     public MethodImportAttributes getAttributes() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAttributes = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Attributes");
+            retObjectAttributes = classInstance.Get("Attributes");
+            JCObject val = (JCObject)retObjectAttributes;
             return new MethodImportAttributes(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAttributes != null ? retObjectAttributes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

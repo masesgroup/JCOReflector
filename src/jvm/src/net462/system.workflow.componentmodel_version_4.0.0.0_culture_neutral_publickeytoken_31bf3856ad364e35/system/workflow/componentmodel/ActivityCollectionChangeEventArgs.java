@@ -172,9 +172,20 @@ public class ActivityCollectionChangeEventArgs extends EventArgs  {
     
     public int getIndex() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIndex = null;
         try {
-            return (int)classInstance.Get("Index");
+            retObjectIndex = classInstance.Get("Index");
+            return (int)retObjectIndex;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectIndex_ToString = retObjectIndex == null ? "null" : retObjectIndex.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectIndexNumber = (java.lang.Number)retObjectIndex;
+                return retObjectIndexNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectIndex != null ? retObjectIndex.getClass() : "null", retObjectIndex_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,10 +193,14 @@ public class ActivityCollectionChangeEventArgs extends EventArgs  {
 
     public NetObject getOwner() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOwner = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Owner");
+            retObjectOwner = classInstance.Get("Owner");
+            JCObject val = (JCObject)retObjectOwner;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOwner != null ? retObjectOwner.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,10 +208,14 @@ public class ActivityCollectionChangeEventArgs extends EventArgs  {
 
     public ActivityCollectionChangeAction getAction() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAction = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Action");
+            retObjectAction = classInstance.Get("Action");
+            JCObject val = (JCObject)retObjectAction;
             return new ActivityCollectionChangeAction(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAction != null ? retObjectAction.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -168,9 +168,13 @@ public class InputManager extends DispatcherObject  {
     
     public boolean ProcessInput(InputEventArgs input) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.MulticastNotSupportedException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProcessInput = null;
         try {
-            return (boolean)classInstance.Invoke("ProcessInput", input == null ? null : input.getJCOInstance());
+            retObjectProcessInput = classInstance.Invoke("ProcessInput", input == null ? null : input.getJCOInstance());
+            return (boolean)retObjectProcessInput;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectProcessInput != null ? retObjectProcessInput.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,7 +182,7 @@ public class InputManager extends DispatcherObject  {
 
     public void PopMenuMode(PresentationSource menuSite) throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("PopMenuMode", menuSite == null ? null : menuSite.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -188,7 +192,7 @@ public class InputManager extends DispatcherObject  {
 
     public void PushMenuMode(PresentationSource menuSite) throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("PushMenuMode", menuSite == null ? null : menuSite.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -202,9 +206,13 @@ public class InputManager extends DispatcherObject  {
     
     public boolean getIsInMenuMode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsInMenuMode = null;
         try {
-            return (boolean)classInstance.Get("IsInMenuMode");
+            retObjectIsInMenuMode = classInstance.Get("IsInMenuMode");
+            return (boolean)retObjectIsInMenuMode;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsInMenuMode != null ? retObjectIsInMenuMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -212,10 +220,14 @@ public class InputManager extends DispatcherObject  {
 
     public ICollection getInputProviders() throws Throwable, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInputProviders = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("InputProviders");
+            retObjectInputProviders = classInstance.Get("InputProviders");
+            JCObject val = (JCObject)retObjectInputProviders;
             return new ICollectionImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInputProviders != null ? retObjectInputProviders.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -223,10 +235,14 @@ public class InputManager extends DispatcherObject  {
 
     public InputDevice getMostRecentInputDevice() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMostRecentInputDevice = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MostRecentInputDevice");
+            retObjectMostRecentInputDevice = classInstance.Get("MostRecentInputDevice");
+            JCObject val = (JCObject)retObjectMostRecentInputDevice;
             return new InputDevice(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMostRecentInputDevice != null ? retObjectMostRecentInputDevice.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -234,7 +250,7 @@ public class InputManager extends DispatcherObject  {
 
     public void setMostRecentInputDevice(InputDevice MostRecentInputDevice) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MostRecentInputDevice", MostRecentInputDevice == null ? null : MostRecentInputDevice.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -244,10 +260,14 @@ public class InputManager extends DispatcherObject  {
 
     public static InputManager getCurrent() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.IndexOutOfRangeException, system.OutOfMemoryException, system.OverflowException, system.TimeoutException, system.security.SecurityException, system.PlatformNotSupportedException, system.NotSupportedException, system.FormatException, system.MulticastNotSupportedException, system.collections.generic.KeyNotFoundException, system.NullReferenceException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCurrent = null;
         try {
-            JCObject val = (JCObject)classType.Get("Current");
+            retObjectCurrent = classType.Get("Current");
+            JCObject val = (JCObject)retObjectCurrent;
             return new InputManager(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCurrent != null ? retObjectCurrent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -255,10 +275,14 @@ public class InputManager extends DispatcherObject  {
 
     public KeyboardDevice getPrimaryKeyboardDevice() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPrimaryKeyboardDevice = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PrimaryKeyboardDevice");
+            retObjectPrimaryKeyboardDevice = classInstance.Get("PrimaryKeyboardDevice");
+            JCObject val = (JCObject)retObjectPrimaryKeyboardDevice;
             return new KeyboardDevice(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPrimaryKeyboardDevice != null ? retObjectPrimaryKeyboardDevice.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -266,10 +290,14 @@ public class InputManager extends DispatcherObject  {
 
     public MouseDevice getPrimaryMouseDevice() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPrimaryMouseDevice = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PrimaryMouseDevice");
+            retObjectPrimaryMouseDevice = classInstance.Get("PrimaryMouseDevice");
+            JCObject val = (JCObject)retObjectPrimaryMouseDevice;
             return new MouseDevice(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPrimaryMouseDevice != null ? retObjectPrimaryMouseDevice.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -282,7 +310,7 @@ public class InputManager extends DispatcherObject  {
 
     public void addEnterMenuMode(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("EnterMenuMode", handler);
         } catch (JCNativeException jcne) {
@@ -292,7 +320,7 @@ public class InputManager extends DispatcherObject  {
 
     public void removeEnterMenuMode(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("EnterMenuMode", handler);
         } catch (JCNativeException jcne) {
@@ -302,7 +330,7 @@ public class InputManager extends DispatcherObject  {
 
     public void addHitTestInvalidatedAsync(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("HitTestInvalidatedAsync", handler);
         } catch (JCNativeException jcne) {
@@ -312,7 +340,7 @@ public class InputManager extends DispatcherObject  {
 
     public void removeHitTestInvalidatedAsync(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("HitTestInvalidatedAsync", handler);
         } catch (JCNativeException jcne) {
@@ -322,7 +350,7 @@ public class InputManager extends DispatcherObject  {
 
     public void addLeaveMenuMode(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("LeaveMenuMode", handler);
         } catch (JCNativeException jcne) {
@@ -332,7 +360,7 @@ public class InputManager extends DispatcherObject  {
 
     public void removeLeaveMenuMode(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("LeaveMenuMode", handler);
         } catch (JCNativeException jcne) {
@@ -342,7 +370,7 @@ public class InputManager extends DispatcherObject  {
 
     public void addPostNotifyInput(NotifyInputEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("PostNotifyInput", handler);
         } catch (JCNativeException jcne) {
@@ -352,7 +380,7 @@ public class InputManager extends DispatcherObject  {
 
     public void removePostNotifyInput(NotifyInputEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("PostNotifyInput", handler);
         } catch (JCNativeException jcne) {
@@ -362,7 +390,7 @@ public class InputManager extends DispatcherObject  {
 
     public void addPreNotifyInput(NotifyInputEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("PreNotifyInput", handler);
         } catch (JCNativeException jcne) {
@@ -372,7 +400,7 @@ public class InputManager extends DispatcherObject  {
 
     public void removePreNotifyInput(NotifyInputEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("PreNotifyInput", handler);
         } catch (JCNativeException jcne) {
@@ -382,7 +410,7 @@ public class InputManager extends DispatcherObject  {
 
     public void addPreProcessInput(PreProcessInputEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("PreProcessInput", handler);
         } catch (JCNativeException jcne) {
@@ -392,7 +420,7 @@ public class InputManager extends DispatcherObject  {
 
     public void removePreProcessInput(PreProcessInputEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("PreProcessInput", handler);
         } catch (JCNativeException jcne) {
@@ -402,7 +430,7 @@ public class InputManager extends DispatcherObject  {
 
     public void addPostProcessInput(ProcessInputEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("PostProcessInput", handler);
         } catch (JCNativeException jcne) {
@@ -412,7 +440,7 @@ public class InputManager extends DispatcherObject  {
 
     public void removePostProcessInput(ProcessInputEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("PostProcessInput", handler);
         } catch (JCNativeException jcne) {

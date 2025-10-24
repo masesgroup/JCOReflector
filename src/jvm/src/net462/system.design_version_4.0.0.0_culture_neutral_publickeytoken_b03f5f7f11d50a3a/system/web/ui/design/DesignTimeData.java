@@ -161,10 +161,14 @@ public class DesignTimeData extends NetObject  {
     
     public static IEnumerable GetDataMember(IListSource dataSource, java.lang.String dataMember) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.RankException, system.NullReferenceException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetDataMember = null;
         try {
-            JCObject objGetDataMember = (JCObject)classType.Invoke("GetDataMember", dataSource == null ? null : dataSource.getJCOInstance(), dataMember);
+            retObjectGetDataMember = classType.Invoke("GetDataMember", dataSource == null ? null : dataSource.getJCOInstance(), dataMember);
+            JCObject objGetDataMember = (JCObject)retObjectGetDataMember;
             return new IEnumerableImplementation(objGetDataMember);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetDataMember != null ? retObjectGetDataMember.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,10 +176,14 @@ public class DesignTimeData extends NetObject  {
 
     public static IEnumerable GetDesignTimeDataSource(DataTable dataTable, int minimumRows) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.InvalidTimeZoneException, system.OverflowException, system.data.DataException, system.MulticastNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetDesignTimeDataSource = null;
         try {
-            JCObject objGetDesignTimeDataSource = (JCObject)classType.Invoke("GetDesignTimeDataSource", dataTable == null ? null : dataTable.getJCOInstance(), minimumRows);
+            retObjectGetDesignTimeDataSource = classType.Invoke("GetDesignTimeDataSource", dataTable == null ? null : dataTable.getJCOInstance(), minimumRows);
+            JCObject objGetDesignTimeDataSource = (JCObject)retObjectGetDesignTimeDataSource;
             return new IEnumerableImplementation(objGetDesignTimeDataSource);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetDesignTimeDataSource != null ? retObjectGetDesignTimeDataSource.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,10 +191,14 @@ public class DesignTimeData extends NetObject  {
 
     public static IEnumerable GetSelectedDataSource(IComponent component, java.lang.String dataSource, java.lang.String dataMember) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NullReferenceException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetSelectedDataSource = null;
         try {
-            JCObject objGetSelectedDataSource = (JCObject)classType.Invoke("GetSelectedDataSource", component == null ? null : component.getJCOInstance(), dataSource, dataMember);
+            retObjectGetSelectedDataSource = classType.Invoke("GetSelectedDataSource", component == null ? null : component.getJCOInstance(), dataSource, dataMember);
+            JCObject objGetSelectedDataSource = (JCObject)retObjectGetSelectedDataSource;
             return new IEnumerableImplementation(objGetSelectedDataSource);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSelectedDataSource != null ? retObjectGetSelectedDataSource.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -194,10 +206,14 @@ public class DesignTimeData extends NetObject  {
 
     public static PropertyDescriptorCollection GetDataFields(IEnumerable dataSource) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetDataFields = null;
         try {
-            JCObject objGetDataFields = (JCObject)classType.Invoke("GetDataFields", dataSource == null ? null : dataSource.getJCOInstance());
+            retObjectGetDataFields = classType.Invoke("GetDataFields", dataSource == null ? null : dataSource.getJCOInstance());
+            JCObject objGetDataFields = (JCObject)retObjectGetDataFields;
             return new PropertyDescriptorCollection(objGetDataFields);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetDataFields != null ? retObjectGetDataFields.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -205,10 +221,14 @@ public class DesignTimeData extends NetObject  {
 
     public static DataTable CreateDummyDataBoundDataTable() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException, system.NullReferenceException, system.configuration.ConfigurationErrorsException, system.data.DataException, system.OverflowException, system.InvalidCastException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateDummyDataBoundDataTable = null;
         try {
-            JCObject objCreateDummyDataBoundDataTable = (JCObject)classType.Invoke("CreateDummyDataBoundDataTable");
+            retObjectCreateDummyDataBoundDataTable = classType.Invoke("CreateDummyDataBoundDataTable");
+            JCObject objCreateDummyDataBoundDataTable = (JCObject)retObjectCreateDummyDataBoundDataTable;
             return new DataTable(objCreateDummyDataBoundDataTable);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateDummyDataBoundDataTable != null ? retObjectCreateDummyDataBoundDataTable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -216,10 +236,14 @@ public class DesignTimeData extends NetObject  {
 
     public static DataTable CreateDummyDataTable() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException, system.NullReferenceException, system.configuration.ConfigurationErrorsException, system.data.DataException, system.OverflowException, system.InvalidCastException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateDummyDataTable = null;
         try {
-            JCObject objCreateDummyDataTable = (JCObject)classType.Invoke("CreateDummyDataTable");
+            retObjectCreateDummyDataTable = classType.Invoke("CreateDummyDataTable");
+            JCObject objCreateDummyDataTable = (JCObject)retObjectCreateDummyDataTable;
             return new DataTable(objCreateDummyDataTable);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateDummyDataTable != null ? retObjectCreateDummyDataTable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -227,10 +251,14 @@ public class DesignTimeData extends NetObject  {
 
     public static DataTable CreateSampleDataTable(IEnumerable referenceData) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.NotSupportedException, system.data.DataException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateSampleDataTable = null;
         try {
-            JCObject objCreateSampleDataTable = (JCObject)classType.Invoke("CreateSampleDataTable", referenceData == null ? null : referenceData.getJCOInstance());
+            retObjectCreateSampleDataTable = classType.Invoke("CreateSampleDataTable", referenceData == null ? null : referenceData.getJCOInstance());
+            JCObject objCreateSampleDataTable = (JCObject)retObjectCreateSampleDataTable;
             return new DataTable(objCreateSampleDataTable);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateSampleDataTable != null ? retObjectCreateSampleDataTable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -238,10 +266,14 @@ public class DesignTimeData extends NetObject  {
 
     public static DataTable CreateSampleDataTable(IEnumerable referenceData, boolean useDataBoundData) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.NotSupportedException, system.data.DataException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateSampleDataTable = null;
         try {
-            JCObject objCreateSampleDataTable = (JCObject)classType.Invoke("CreateSampleDataTable", referenceData == null ? null : referenceData.getJCOInstance(), useDataBoundData);
+            retObjectCreateSampleDataTable = classType.Invoke("CreateSampleDataTable", referenceData == null ? null : referenceData.getJCOInstance(), useDataBoundData);
+            JCObject objCreateSampleDataTable = (JCObject)retObjectCreateSampleDataTable;
             return new DataTable(objCreateSampleDataTable);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateSampleDataTable != null ? retObjectCreateSampleDataTable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -249,10 +281,14 @@ public class DesignTimeData extends NetObject  {
 
     public static NetObject GetSelectedDataSource(IComponent component, java.lang.String dataSource) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetSelectedDataSource = null;
         try {
-            JCObject objGetSelectedDataSource = (JCObject)classType.Invoke("GetSelectedDataSource", component == null ? null : component.getJCOInstance(), dataSource);
+            retObjectGetSelectedDataSource = classType.Invoke("GetSelectedDataSource", component == null ? null : component.getJCOInstance(), dataSource);
+            JCObject objGetSelectedDataSource = (JCObject)retObjectGetSelectedDataSource;
             return new NetObject(objGetSelectedDataSource);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSelectedDataSource != null ? retObjectGetSelectedDataSource.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -260,10 +296,12 @@ public class DesignTimeData extends NetObject  {
 
     public static java.lang.String[] GetDataMembers(NetObject dataSource) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.RankException, system.NullReferenceException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetDataMembers = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("GetDataMembers", dataSource == null ? null : dataSource.getJCOInstance());
+            retObjectGetDataMembers = classType.Invoke("GetDataMembers", dataSource == null ? null : dataSource.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectGetDataMembers;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -272,6 +310,8 @@ public class DesignTimeData extends NetObject  {
 				resultingArray[indexGetDataMembers] = (java.lang.String)resultingArrayList.get(indexGetDataMembers);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectGetDataMembers != null ? retObjectGetDataMembers.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

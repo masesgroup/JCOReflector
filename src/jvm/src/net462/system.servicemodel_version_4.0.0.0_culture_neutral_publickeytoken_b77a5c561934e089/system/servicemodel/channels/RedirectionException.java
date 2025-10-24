@@ -216,7 +216,7 @@ public class RedirectionException extends CommunicationException {
     
     public void GetObjectData(SerializationInfo info, StreamingContext context) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.security.SecurityException, system.TypeLoadException, system.NotSupportedException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.NotImplementedException, system.runtime.serialization.SerializationException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetObjectData", info == null ? null : info.getJCOInstance(), context == null ? null : context.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -230,10 +230,14 @@ public class RedirectionException extends CommunicationException {
     
     public RedirectionDuration getDuration() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDuration = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Duration");
+            retObjectDuration = classInstance.Get("Duration");
+            JCObject val = (JCObject)retObjectDuration;
             return new RedirectionDuration(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDuration != null ? retObjectDuration.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -241,7 +245,7 @@ public class RedirectionException extends CommunicationException {
 
     public void setDuration(RedirectionDuration Duration) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Duration", Duration == null ? null : Duration.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -251,10 +255,14 @@ public class RedirectionException extends CommunicationException {
 
     public RedirectionScope getScope() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectScope = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Scope");
+            retObjectScope = classInstance.Get("Scope");
+            JCObject val = (JCObject)retObjectScope;
             return new RedirectionScope(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectScope != null ? retObjectScope.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -262,7 +270,7 @@ public class RedirectionException extends CommunicationException {
 
     public void setScope(RedirectionScope Scope) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Scope", Scope == null ? null : Scope.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -272,10 +280,14 @@ public class RedirectionException extends CommunicationException {
 
     public RedirectionType getType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Type");
+            retObjectType = classInstance.Get("Type");
+            JCObject val = (JCObject)retObjectType;
             return new RedirectionType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectType != null ? retObjectType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -283,7 +295,7 @@ public class RedirectionException extends CommunicationException {
 
     public void setType(RedirectionType Type) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Type", Type == null ? null : Type.getJCOInstance());
         } catch (JCNativeException jcne) {

@@ -170,9 +170,13 @@ public class UsableDuringInitializationAttribute extends Attribute  {
     
     public boolean getUsable() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUsable = null;
         try {
-            return (boolean)classInstance.Get("Usable");
+            retObjectUsable = classInstance.Get("Usable");
+            return (boolean)retObjectUsable;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectUsable != null ? retObjectUsable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

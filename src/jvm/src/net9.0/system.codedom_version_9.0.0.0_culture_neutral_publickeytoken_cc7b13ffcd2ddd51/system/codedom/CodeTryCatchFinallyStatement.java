@@ -189,10 +189,14 @@ public class CodeTryCatchFinallyStatement extends CodeStatement  {
     
     public CodeCatchClauseCollection getCatchClauses() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCatchClauses = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CatchClauses");
+            retObjectCatchClauses = classInstance.Get("CatchClauses");
+            JCObject val = (JCObject)retObjectCatchClauses;
             return new CodeCatchClauseCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCatchClauses != null ? retObjectCatchClauses.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,10 +204,14 @@ public class CodeTryCatchFinallyStatement extends CodeStatement  {
 
     public CodeStatementCollection getFinallyStatements() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFinallyStatements = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("FinallyStatements");
+            retObjectFinallyStatements = classInstance.Get("FinallyStatements");
+            JCObject val = (JCObject)retObjectFinallyStatements;
             return new CodeStatementCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFinallyStatements != null ? retObjectFinallyStatements.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -211,10 +219,14 @@ public class CodeTryCatchFinallyStatement extends CodeStatement  {
 
     public CodeStatementCollection getTryStatements() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryStatements = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TryStatements");
+            retObjectTryStatements = classInstance.Get("TryStatements");
+            JCObject val = (JCObject)retObjectTryStatements;
             return new CodeStatementCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTryStatements != null ? retObjectTryStatements.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

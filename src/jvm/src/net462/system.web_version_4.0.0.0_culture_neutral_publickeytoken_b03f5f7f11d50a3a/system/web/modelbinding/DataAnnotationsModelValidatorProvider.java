@@ -164,7 +164,7 @@ public class DataAnnotationsModelValidatorProvider extends AssociatedValidatorPr
     
     public static void RegisterAdapter(NetType attributeType, NetType adapterType) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.TypeLoadException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.threading.LockRecursionException, system.threading.AbandonedMutexException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.threading.SynchronizationLockException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("RegisterAdapter", attributeType == null ? null : attributeType.getJCOInstance(), adapterType == null ? null : adapterType.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -174,7 +174,7 @@ public class DataAnnotationsModelValidatorProvider extends AssociatedValidatorPr
 
     public static void RegisterAdapterFactory(NetType attributeType, DataAnnotationsModelValidationFactory factory) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.TypeLoadException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.threading.LockRecursionException, system.threading.AbandonedMutexException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.threading.SynchronizationLockException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("RegisterAdapterFactory", attributeType == null ? null : attributeType.getJCOInstance(), factory);
         } catch (JCNativeException jcne) {
@@ -184,7 +184,7 @@ public class DataAnnotationsModelValidatorProvider extends AssociatedValidatorPr
 
     public static void RegisterDefaultAdapter(NetType adapterType) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.TypeLoadException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("RegisterDefaultAdapter", adapterType == null ? null : adapterType.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -194,7 +194,7 @@ public class DataAnnotationsModelValidatorProvider extends AssociatedValidatorPr
 
     public static void RegisterDefaultAdapterFactory(DataAnnotationsModelValidationFactory factory) throws Throwable, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("RegisterDefaultAdapterFactory", factory);
         } catch (JCNativeException jcne) {
@@ -204,7 +204,7 @@ public class DataAnnotationsModelValidatorProvider extends AssociatedValidatorPr
 
     public static void RegisterDefaultValidatableObjectAdapter(NetType adapterType) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.TypeLoadException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("RegisterDefaultValidatableObjectAdapter", adapterType == null ? null : adapterType.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -214,7 +214,7 @@ public class DataAnnotationsModelValidatorProvider extends AssociatedValidatorPr
 
     public static void RegisterDefaultValidatableObjectAdapterFactory(DataAnnotationsValidatableObjectAdapterFactory factory) throws Throwable, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("RegisterDefaultValidatableObjectAdapterFactory", factory);
         } catch (JCNativeException jcne) {
@@ -224,7 +224,7 @@ public class DataAnnotationsModelValidatorProvider extends AssociatedValidatorPr
 
     public static void RegisterValidatableObjectAdapter(NetType modelType, NetType adapterType) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.TypeLoadException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.threading.LockRecursionException, system.threading.AbandonedMutexException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.threading.SynchronizationLockException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("RegisterValidatableObjectAdapter", modelType == null ? null : modelType.getJCOInstance(), adapterType == null ? null : adapterType.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -234,7 +234,7 @@ public class DataAnnotationsModelValidatorProvider extends AssociatedValidatorPr
 
     public static void RegisterValidatableObjectAdapterFactory(NetType modelType, DataAnnotationsValidatableObjectAdapterFactory factory) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.TypeLoadException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.threading.LockRecursionException, system.threading.AbandonedMutexException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.threading.SynchronizationLockException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("RegisterValidatableObjectAdapterFactory", modelType == null ? null : modelType.getJCOInstance(), factory);
         } catch (JCNativeException jcne) {
@@ -248,9 +248,13 @@ public class DataAnnotationsModelValidatorProvider extends AssociatedValidatorPr
     
     public static boolean getAddImplicitRequiredAttributeForValueTypes() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAddImplicitRequiredAttributeForValueTypes = null;
         try {
-            return (boolean)classType.Get("AddImplicitRequiredAttributeForValueTypes");
+            retObjectAddImplicitRequiredAttributeForValueTypes = classType.Get("AddImplicitRequiredAttributeForValueTypes");
+            return (boolean)retObjectAddImplicitRequiredAttributeForValueTypes;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAddImplicitRequiredAttributeForValueTypes != null ? retObjectAddImplicitRequiredAttributeForValueTypes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -258,7 +262,7 @@ public class DataAnnotationsModelValidatorProvider extends AssociatedValidatorPr
 
     public static void setAddImplicitRequiredAttributeForValueTypes(boolean AddImplicitRequiredAttributeForValueTypes) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Set("AddImplicitRequiredAttributeForValueTypes", AddImplicitRequiredAttributeForValueTypes);
         } catch (JCNativeException jcne) {

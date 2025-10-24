@@ -170,10 +170,14 @@ public class SmtpSection extends ConfigurationSection  {
     
     public SmtpNetworkElement getNetwork() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNetwork = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Network");
+            retObjectNetwork = classInstance.Get("Network");
+            JCObject val = (JCObject)retObjectNetwork;
             return new SmtpNetworkElement(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNetwork != null ? retObjectNetwork.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,10 +185,14 @@ public class SmtpSection extends ConfigurationSection  {
 
     public SmtpSpecifiedPickupDirectoryElement getSpecifiedPickupDirectory() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSpecifiedPickupDirectory = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SpecifiedPickupDirectory");
+            retObjectSpecifiedPickupDirectory = classInstance.Get("SpecifiedPickupDirectory");
+            JCObject val = (JCObject)retObjectSpecifiedPickupDirectory;
             return new SmtpSpecifiedPickupDirectoryElement(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSpecifiedPickupDirectory != null ? retObjectSpecifiedPickupDirectory.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,10 +200,14 @@ public class SmtpSection extends ConfigurationSection  {
 
     public SmtpDeliveryFormat getDeliveryFormat() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDeliveryFormat = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DeliveryFormat");
+            retObjectDeliveryFormat = classInstance.Get("DeliveryFormat");
+            JCObject val = (JCObject)retObjectDeliveryFormat;
             return new SmtpDeliveryFormat(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDeliveryFormat != null ? retObjectDeliveryFormat.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,7 +215,7 @@ public class SmtpSection extends ConfigurationSection  {
 
     public void setDeliveryFormat(SmtpDeliveryFormat DeliveryFormat) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.NullReferenceException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DeliveryFormat", DeliveryFormat == null ? null : DeliveryFormat.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -213,10 +225,14 @@ public class SmtpSection extends ConfigurationSection  {
 
     public SmtpDeliveryMethod getDeliveryMethod() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDeliveryMethod = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DeliveryMethod");
+            retObjectDeliveryMethod = classInstance.Get("DeliveryMethod");
+            JCObject val = (JCObject)retObjectDeliveryMethod;
             return new SmtpDeliveryMethod(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDeliveryMethod != null ? retObjectDeliveryMethod.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -224,7 +240,7 @@ public class SmtpSection extends ConfigurationSection  {
 
     public void setDeliveryMethod(SmtpDeliveryMethod DeliveryMethod) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.NullReferenceException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DeliveryMethod", DeliveryMethod == null ? null : DeliveryMethod.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -234,9 +250,13 @@ public class SmtpSection extends ConfigurationSection  {
 
     public java.lang.String getFrom() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFrom = null;
         try {
-            return (java.lang.String)classInstance.Get("From");
+            retObjectFrom = classInstance.Get("From");
+            return (java.lang.String)retObjectFrom;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectFrom != null ? retObjectFrom.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -244,7 +264,7 @@ public class SmtpSection extends ConfigurationSection  {
 
     public void setFrom(java.lang.String From) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.NullReferenceException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("From", From);
         } catch (JCNativeException jcne) {

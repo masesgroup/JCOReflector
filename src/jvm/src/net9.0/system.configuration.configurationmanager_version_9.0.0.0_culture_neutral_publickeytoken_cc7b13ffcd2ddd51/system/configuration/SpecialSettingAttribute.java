@@ -171,10 +171,14 @@ public class SpecialSettingAttribute extends Attribute  {
     
     public SpecialSetting getSpecialSetting() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSpecialSetting = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SpecialSetting");
+            retObjectSpecialSetting = classInstance.Get("SpecialSetting");
+            JCObject val = (JCObject)retObjectSpecialSetting;
             return new SpecialSetting(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSpecialSetting != null ? retObjectSpecialSetting.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

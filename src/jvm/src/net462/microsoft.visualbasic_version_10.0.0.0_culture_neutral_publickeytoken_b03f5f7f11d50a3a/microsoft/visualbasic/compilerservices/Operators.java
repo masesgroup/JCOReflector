@@ -156,9 +156,13 @@ public class Operators extends NetObject  {
     
     public static boolean ConditionalCompareObjectEqual(NetObject Left, NetObject Right, boolean TextCompare) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.FormatException, system.NullReferenceException, system.OverflowException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.InvalidCastException, system.TypeInitializationException, system.RankException, microsoft.visualbasic.compilerservices.InternalErrorException, system.MissingMemberException, system.MemberAccessException, system.reflection.TargetException, system.reflection.TargetParameterCountException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectConditionalCompareObjectEqual = null;
         try {
-            return (boolean)classType.Invoke("ConditionalCompareObjectEqual", Left == null ? null : Left.getJCOInstance(), Right == null ? null : Right.getJCOInstance(), TextCompare);
+            retObjectConditionalCompareObjectEqual = classType.Invoke("ConditionalCompareObjectEqual", Left == null ? null : Left.getJCOInstance(), Right == null ? null : Right.getJCOInstance(), TextCompare);
+            return (boolean)retObjectConditionalCompareObjectEqual;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectConditionalCompareObjectEqual != null ? retObjectConditionalCompareObjectEqual.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -166,9 +170,13 @@ public class Operators extends NetObject  {
 
     public static boolean ConditionalCompareObjectGreater(NetObject Left, NetObject Right, boolean TextCompare) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.FormatException, system.NullReferenceException, system.OverflowException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.InvalidCastException, system.TypeInitializationException, system.RankException, microsoft.visualbasic.compilerservices.InternalErrorException, system.MissingMemberException, system.MemberAccessException, system.reflection.TargetException, system.reflection.TargetParameterCountException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectConditionalCompareObjectGreater = null;
         try {
-            return (boolean)classType.Invoke("ConditionalCompareObjectGreater", Left == null ? null : Left.getJCOInstance(), Right == null ? null : Right.getJCOInstance(), TextCompare);
+            retObjectConditionalCompareObjectGreater = classType.Invoke("ConditionalCompareObjectGreater", Left == null ? null : Left.getJCOInstance(), Right == null ? null : Right.getJCOInstance(), TextCompare);
+            return (boolean)retObjectConditionalCompareObjectGreater;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectConditionalCompareObjectGreater != null ? retObjectConditionalCompareObjectGreater.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,9 +184,13 @@ public class Operators extends NetObject  {
 
     public static boolean ConditionalCompareObjectGreaterEqual(NetObject Left, NetObject Right, boolean TextCompare) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.FormatException, system.NullReferenceException, system.OverflowException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.InvalidCastException, system.TypeInitializationException, system.RankException, microsoft.visualbasic.compilerservices.InternalErrorException, system.MissingMemberException, system.MemberAccessException, system.reflection.TargetException, system.reflection.TargetParameterCountException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectConditionalCompareObjectGreaterEqual = null;
         try {
-            return (boolean)classType.Invoke("ConditionalCompareObjectGreaterEqual", Left == null ? null : Left.getJCOInstance(), Right == null ? null : Right.getJCOInstance(), TextCompare);
+            retObjectConditionalCompareObjectGreaterEqual = classType.Invoke("ConditionalCompareObjectGreaterEqual", Left == null ? null : Left.getJCOInstance(), Right == null ? null : Right.getJCOInstance(), TextCompare);
+            return (boolean)retObjectConditionalCompareObjectGreaterEqual;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectConditionalCompareObjectGreaterEqual != null ? retObjectConditionalCompareObjectGreaterEqual.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,9 +198,13 @@ public class Operators extends NetObject  {
 
     public static boolean ConditionalCompareObjectLess(NetObject Left, NetObject Right, boolean TextCompare) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.FormatException, system.NullReferenceException, system.OverflowException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.InvalidCastException, system.TypeInitializationException, system.RankException, microsoft.visualbasic.compilerservices.InternalErrorException, system.MissingMemberException, system.MemberAccessException, system.reflection.TargetException, system.reflection.TargetParameterCountException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectConditionalCompareObjectLess = null;
         try {
-            return (boolean)classType.Invoke("ConditionalCompareObjectLess", Left == null ? null : Left.getJCOInstance(), Right == null ? null : Right.getJCOInstance(), TextCompare);
+            retObjectConditionalCompareObjectLess = classType.Invoke("ConditionalCompareObjectLess", Left == null ? null : Left.getJCOInstance(), Right == null ? null : Right.getJCOInstance(), TextCompare);
+            return (boolean)retObjectConditionalCompareObjectLess;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectConditionalCompareObjectLess != null ? retObjectConditionalCompareObjectLess.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,9 +212,13 @@ public class Operators extends NetObject  {
 
     public static boolean ConditionalCompareObjectLessEqual(NetObject Left, NetObject Right, boolean TextCompare) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.FormatException, system.NullReferenceException, system.OverflowException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.InvalidCastException, system.TypeInitializationException, system.RankException, microsoft.visualbasic.compilerservices.InternalErrorException, system.MissingMemberException, system.MemberAccessException, system.reflection.TargetException, system.reflection.TargetParameterCountException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectConditionalCompareObjectLessEqual = null;
         try {
-            return (boolean)classType.Invoke("ConditionalCompareObjectLessEqual", Left == null ? null : Left.getJCOInstance(), Right == null ? null : Right.getJCOInstance(), TextCompare);
+            retObjectConditionalCompareObjectLessEqual = classType.Invoke("ConditionalCompareObjectLessEqual", Left == null ? null : Left.getJCOInstance(), Right == null ? null : Right.getJCOInstance(), TextCompare);
+            return (boolean)retObjectConditionalCompareObjectLessEqual;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectConditionalCompareObjectLessEqual != null ? retObjectConditionalCompareObjectLessEqual.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -206,9 +226,13 @@ public class Operators extends NetObject  {
 
     public static boolean ConditionalCompareObjectNotEqual(NetObject Left, NetObject Right, boolean TextCompare) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.FormatException, system.NullReferenceException, system.OverflowException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.InvalidCastException, system.TypeInitializationException, system.RankException, microsoft.visualbasic.compilerservices.InternalErrorException, system.MissingMemberException, system.MemberAccessException, system.reflection.TargetException, system.reflection.TargetParameterCountException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectConditionalCompareObjectNotEqual = null;
         try {
-            return (boolean)classType.Invoke("ConditionalCompareObjectNotEqual", Left == null ? null : Left.getJCOInstance(), Right == null ? null : Right.getJCOInstance(), TextCompare);
+            retObjectConditionalCompareObjectNotEqual = classType.Invoke("ConditionalCompareObjectNotEqual", Left == null ? null : Left.getJCOInstance(), Right == null ? null : Right.getJCOInstance(), TextCompare);
+            return (boolean)retObjectConditionalCompareObjectNotEqual;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectConditionalCompareObjectNotEqual != null ? retObjectConditionalCompareObjectNotEqual.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -216,9 +240,13 @@ public class Operators extends NetObject  {
 
     public static boolean LikeString(java.lang.String Source, java.lang.String Pattern, CompareMethod CompareOption) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ArgumentException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLikeString = null;
         try {
-            return (boolean)classType.Invoke("LikeString", Source, Pattern, CompareOption == null ? null : CompareOption.getJCOInstance());
+            retObjectLikeString = classType.Invoke("LikeString", Source, Pattern, CompareOption == null ? null : CompareOption.getJCOInstance());
+            return (boolean)retObjectLikeString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectLikeString != null ? retObjectLikeString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -226,9 +254,20 @@ public class Operators extends NetObject  {
 
     public static int CompareObject(NetObject Left, NetObject Right, boolean TextCompare) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.FormatException, system.NullReferenceException, system.OverflowException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.InvalidCastException, system.TypeInitializationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCompareObject = null;
         try {
-            return (int)classType.Invoke("CompareObject", Left == null ? null : Left.getJCOInstance(), Right == null ? null : Right.getJCOInstance(), TextCompare);
+            retObjectCompareObject = classType.Invoke("CompareObject", Left == null ? null : Left.getJCOInstance(), Right == null ? null : Right.getJCOInstance(), TextCompare);
+            return (int)retObjectCompareObject;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCompareObject_ToString = retObjectCompareObject == null ? "null" : retObjectCompareObject.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectCompareObjectNumber = (java.lang.Number)retObjectCompareObject;
+                return retObjectCompareObjectNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCompareObject != null ? retObjectCompareObject.getClass() : "null", retObjectCompareObject_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -236,9 +275,20 @@ public class Operators extends NetObject  {
 
     public static int CompareString(java.lang.String Left, java.lang.String Right, boolean TextCompare) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCompareString = null;
         try {
-            return (int)classType.Invoke("CompareString", Left, Right, TextCompare);
+            retObjectCompareString = classType.Invoke("CompareString", Left, Right, TextCompare);
+            return (int)retObjectCompareString;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCompareString_ToString = retObjectCompareString == null ? "null" : retObjectCompareString.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectCompareStringNumber = (java.lang.Number)retObjectCompareString;
+                return retObjectCompareStringNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCompareString != null ? retObjectCompareString.getClass() : "null", retObjectCompareString_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -246,10 +296,14 @@ public class Operators extends NetObject  {
 
     public static NetObject AddObject(NetObject Left, NetObject Right) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.TypeInitializationException, system.InvalidOperationException, system.IndexOutOfRangeException, system.OverflowException, system.FormatException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.NullReferenceException, system.ArgumentException, system.ObjectDisposedException, system.NotSupportedException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.InvalidCastException, system.RankException, microsoft.visualbasic.compilerservices.InternalErrorException, system.MissingMemberException, system.MemberAccessException, system.reflection.TargetException, system.reflection.TargetParameterCountException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAddObject = null;
         try {
-            JCObject objAddObject = (JCObject)classType.Invoke("AddObject", Left == null ? null : Left.getJCOInstance(), Right == null ? null : Right.getJCOInstance());
+            retObjectAddObject = classType.Invoke("AddObject", Left == null ? null : Left.getJCOInstance(), Right == null ? null : Right.getJCOInstance());
+            JCObject objAddObject = (JCObject)retObjectAddObject;
             return new NetObject(objAddObject);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddObject != null ? retObjectAddObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -257,10 +311,14 @@ public class Operators extends NetObject  {
 
     public static NetObject AndObject(NetObject Left, NetObject Right) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotSupportedException, system.InvalidOperationException, system.OverflowException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.InvalidCastException, system.NullReferenceException, system.RankException, microsoft.visualbasic.compilerservices.InternalErrorException, system.MissingMemberException, system.MemberAccessException, system.reflection.TargetException, system.reflection.TargetParameterCountException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAndObject = null;
         try {
-            JCObject objAndObject = (JCObject)classType.Invoke("AndObject", Left == null ? null : Left.getJCOInstance(), Right == null ? null : Right.getJCOInstance());
+            retObjectAndObject = classType.Invoke("AndObject", Left == null ? null : Left.getJCOInstance(), Right == null ? null : Right.getJCOInstance());
+            JCObject objAndObject = (JCObject)retObjectAndObject;
             return new NetObject(objAndObject);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAndObject != null ? retObjectAndObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -268,10 +326,14 @@ public class Operators extends NetObject  {
 
     public static NetObject CompareObjectEqual(NetObject Left, NetObject Right, boolean TextCompare) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.FormatException, system.NullReferenceException, system.OverflowException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.InvalidCastException, system.TypeInitializationException, system.RankException, microsoft.visualbasic.compilerservices.InternalErrorException, system.MissingMemberException, system.MemberAccessException, system.reflection.TargetException, system.reflection.TargetParameterCountException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCompareObjectEqual = null;
         try {
-            JCObject objCompareObjectEqual = (JCObject)classType.Invoke("CompareObjectEqual", Left == null ? null : Left.getJCOInstance(), Right == null ? null : Right.getJCOInstance(), TextCompare);
+            retObjectCompareObjectEqual = classType.Invoke("CompareObjectEqual", Left == null ? null : Left.getJCOInstance(), Right == null ? null : Right.getJCOInstance(), TextCompare);
+            JCObject objCompareObjectEqual = (JCObject)retObjectCompareObjectEqual;
             return new NetObject(objCompareObjectEqual);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCompareObjectEqual != null ? retObjectCompareObjectEqual.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -279,10 +341,14 @@ public class Operators extends NetObject  {
 
     public static NetObject CompareObjectGreater(NetObject Left, NetObject Right, boolean TextCompare) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.FormatException, system.NullReferenceException, system.OverflowException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.InvalidCastException, system.TypeInitializationException, system.RankException, microsoft.visualbasic.compilerservices.InternalErrorException, system.MissingMemberException, system.MemberAccessException, system.reflection.TargetException, system.reflection.TargetParameterCountException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCompareObjectGreater = null;
         try {
-            JCObject objCompareObjectGreater = (JCObject)classType.Invoke("CompareObjectGreater", Left == null ? null : Left.getJCOInstance(), Right == null ? null : Right.getJCOInstance(), TextCompare);
+            retObjectCompareObjectGreater = classType.Invoke("CompareObjectGreater", Left == null ? null : Left.getJCOInstance(), Right == null ? null : Right.getJCOInstance(), TextCompare);
+            JCObject objCompareObjectGreater = (JCObject)retObjectCompareObjectGreater;
             return new NetObject(objCompareObjectGreater);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCompareObjectGreater != null ? retObjectCompareObjectGreater.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -290,10 +356,14 @@ public class Operators extends NetObject  {
 
     public static NetObject CompareObjectGreaterEqual(NetObject Left, NetObject Right, boolean TextCompare) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.FormatException, system.NullReferenceException, system.OverflowException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.InvalidCastException, system.TypeInitializationException, system.RankException, microsoft.visualbasic.compilerservices.InternalErrorException, system.MissingMemberException, system.MemberAccessException, system.reflection.TargetException, system.reflection.TargetParameterCountException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCompareObjectGreaterEqual = null;
         try {
-            JCObject objCompareObjectGreaterEqual = (JCObject)classType.Invoke("CompareObjectGreaterEqual", Left == null ? null : Left.getJCOInstance(), Right == null ? null : Right.getJCOInstance(), TextCompare);
+            retObjectCompareObjectGreaterEqual = classType.Invoke("CompareObjectGreaterEqual", Left == null ? null : Left.getJCOInstance(), Right == null ? null : Right.getJCOInstance(), TextCompare);
+            JCObject objCompareObjectGreaterEqual = (JCObject)retObjectCompareObjectGreaterEqual;
             return new NetObject(objCompareObjectGreaterEqual);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCompareObjectGreaterEqual != null ? retObjectCompareObjectGreaterEqual.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -301,10 +371,14 @@ public class Operators extends NetObject  {
 
     public static NetObject CompareObjectLess(NetObject Left, NetObject Right, boolean TextCompare) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.FormatException, system.NullReferenceException, system.OverflowException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.InvalidCastException, system.TypeInitializationException, system.RankException, microsoft.visualbasic.compilerservices.InternalErrorException, system.MissingMemberException, system.MemberAccessException, system.reflection.TargetException, system.reflection.TargetParameterCountException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCompareObjectLess = null;
         try {
-            JCObject objCompareObjectLess = (JCObject)classType.Invoke("CompareObjectLess", Left == null ? null : Left.getJCOInstance(), Right == null ? null : Right.getJCOInstance(), TextCompare);
+            retObjectCompareObjectLess = classType.Invoke("CompareObjectLess", Left == null ? null : Left.getJCOInstance(), Right == null ? null : Right.getJCOInstance(), TextCompare);
+            JCObject objCompareObjectLess = (JCObject)retObjectCompareObjectLess;
             return new NetObject(objCompareObjectLess);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCompareObjectLess != null ? retObjectCompareObjectLess.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -312,10 +386,14 @@ public class Operators extends NetObject  {
 
     public static NetObject CompareObjectLessEqual(NetObject Left, NetObject Right, boolean TextCompare) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.FormatException, system.NullReferenceException, system.OverflowException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.InvalidCastException, system.TypeInitializationException, system.RankException, microsoft.visualbasic.compilerservices.InternalErrorException, system.MissingMemberException, system.MemberAccessException, system.reflection.TargetException, system.reflection.TargetParameterCountException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCompareObjectLessEqual = null;
         try {
-            JCObject objCompareObjectLessEqual = (JCObject)classType.Invoke("CompareObjectLessEqual", Left == null ? null : Left.getJCOInstance(), Right == null ? null : Right.getJCOInstance(), TextCompare);
+            retObjectCompareObjectLessEqual = classType.Invoke("CompareObjectLessEqual", Left == null ? null : Left.getJCOInstance(), Right == null ? null : Right.getJCOInstance(), TextCompare);
+            JCObject objCompareObjectLessEqual = (JCObject)retObjectCompareObjectLessEqual;
             return new NetObject(objCompareObjectLessEqual);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCompareObjectLessEqual != null ? retObjectCompareObjectLessEqual.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -323,10 +401,14 @@ public class Operators extends NetObject  {
 
     public static NetObject CompareObjectNotEqual(NetObject Left, NetObject Right, boolean TextCompare) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.FormatException, system.NullReferenceException, system.OverflowException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.InvalidCastException, system.TypeInitializationException, system.RankException, microsoft.visualbasic.compilerservices.InternalErrorException, system.MissingMemberException, system.MemberAccessException, system.reflection.TargetException, system.reflection.TargetParameterCountException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCompareObjectNotEqual = null;
         try {
-            JCObject objCompareObjectNotEqual = (JCObject)classType.Invoke("CompareObjectNotEqual", Left == null ? null : Left.getJCOInstance(), Right == null ? null : Right.getJCOInstance(), TextCompare);
+            retObjectCompareObjectNotEqual = classType.Invoke("CompareObjectNotEqual", Left == null ? null : Left.getJCOInstance(), Right == null ? null : Right.getJCOInstance(), TextCompare);
+            JCObject objCompareObjectNotEqual = (JCObject)retObjectCompareObjectNotEqual;
             return new NetObject(objCompareObjectNotEqual);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCompareObjectNotEqual != null ? retObjectCompareObjectNotEqual.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -334,10 +416,14 @@ public class Operators extends NetObject  {
 
     public static NetObject ConcatenateObject(NetObject Left, NetObject Right) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.NotSupportedException, system.NotImplementedException, system.RankException, system.ArgumentOutOfRangeException, microsoft.visualbasic.compilerservices.InternalErrorException, system.InvalidCastException, system.NullReferenceException, system.MissingMemberException, system.MemberAccessException, system.reflection.TargetException, system.reflection.TargetParameterCountException, system.OverflowException, system.FormatException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectConcatenateObject = null;
         try {
-            JCObject objConcatenateObject = (JCObject)classType.Invoke("ConcatenateObject", Left == null ? null : Left.getJCOInstance(), Right == null ? null : Right.getJCOInstance());
+            retObjectConcatenateObject = classType.Invoke("ConcatenateObject", Left == null ? null : Left.getJCOInstance(), Right == null ? null : Right.getJCOInstance());
+            JCObject objConcatenateObject = (JCObject)retObjectConcatenateObject;
             return new NetObject(objConcatenateObject);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConcatenateObject != null ? retObjectConcatenateObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -345,10 +431,14 @@ public class Operators extends NetObject  {
 
     public static NetObject DivideObject(NetObject Left, NetObject Right) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.FormatException, system.NullReferenceException, system.OverflowException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidCastException, system.RankException, microsoft.visualbasic.compilerservices.InternalErrorException, system.MissingMemberException, system.MemberAccessException, system.reflection.TargetException, system.reflection.TargetParameterCountException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDivideObject = null;
         try {
-            JCObject objDivideObject = (JCObject)classType.Invoke("DivideObject", Left == null ? null : Left.getJCOInstance(), Right == null ? null : Right.getJCOInstance());
+            retObjectDivideObject = classType.Invoke("DivideObject", Left == null ? null : Left.getJCOInstance(), Right == null ? null : Right.getJCOInstance());
+            JCObject objDivideObject = (JCObject)retObjectDivideObject;
             return new NetObject(objDivideObject);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDivideObject != null ? retObjectDivideObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -356,10 +446,14 @@ public class Operators extends NetObject  {
 
     public static NetObject ExponentObject(NetObject Left, NetObject Right) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.FormatException, system.NullReferenceException, system.OverflowException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidCastException, system.RankException, microsoft.visualbasic.compilerservices.InternalErrorException, system.MissingMemberException, system.MemberAccessException, system.reflection.TargetException, system.reflection.TargetParameterCountException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectExponentObject = null;
         try {
-            JCObject objExponentObject = (JCObject)classType.Invoke("ExponentObject", Left == null ? null : Left.getJCOInstance(), Right == null ? null : Right.getJCOInstance());
+            retObjectExponentObject = classType.Invoke("ExponentObject", Left == null ? null : Left.getJCOInstance(), Right == null ? null : Right.getJCOInstance());
+            JCObject objExponentObject = (JCObject)retObjectExponentObject;
             return new NetObject(objExponentObject);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExponentObject != null ? retObjectExponentObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -367,10 +461,14 @@ public class Operators extends NetObject  {
 
     public static NetObject FallbackInvokeUserDefinedOperator(NetObject vbOp, NetObject[] Arguments) throws Throwable, system.OverflowException, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.FormatException, system.NullReferenceException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidCastException, system.RankException, microsoft.visualbasic.compilerservices.InternalErrorException, system.MissingMemberException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFallbackInvokeUserDefinedOperator = null;
         try {
-            JCObject objFallbackInvokeUserDefinedOperator = (JCObject)classType.Invoke("FallbackInvokeUserDefinedOperator", vbOp == null ? null : vbOp.getJCOInstance(), toObjectFromArray(Arguments));
+            retObjectFallbackInvokeUserDefinedOperator = classType.Invoke("FallbackInvokeUserDefinedOperator", vbOp == null ? null : vbOp.getJCOInstance(), toObjectFromArray(Arguments));
+            JCObject objFallbackInvokeUserDefinedOperator = (JCObject)retObjectFallbackInvokeUserDefinedOperator;
             return new NetObject(objFallbackInvokeUserDefinedOperator);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFallbackInvokeUserDefinedOperator != null ? retObjectFallbackInvokeUserDefinedOperator.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -378,10 +476,14 @@ public class Operators extends NetObject  {
 
     public static NetObject IntDivideObject(NetObject Left, NetObject Right) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotSupportedException, system.InvalidOperationException, system.OverflowException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.InvalidCastException, system.RankException, microsoft.visualbasic.compilerservices.InternalErrorException, system.NullReferenceException, system.MissingMemberException, system.MemberAccessException, system.reflection.TargetException, system.reflection.TargetParameterCountException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIntDivideObject = null;
         try {
-            JCObject objIntDivideObject = (JCObject)classType.Invoke("IntDivideObject", Left == null ? null : Left.getJCOInstance(), Right == null ? null : Right.getJCOInstance());
+            retObjectIntDivideObject = classType.Invoke("IntDivideObject", Left == null ? null : Left.getJCOInstance(), Right == null ? null : Right.getJCOInstance());
+            JCObject objIntDivideObject = (JCObject)retObjectIntDivideObject;
             return new NetObject(objIntDivideObject);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIntDivideObject != null ? retObjectIntDivideObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -389,10 +491,14 @@ public class Operators extends NetObject  {
 
     public static NetObject LeftShiftObject(NetObject Operand, NetObject Amount) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.NotSupportedException, system.NotImplementedException, system.RankException, system.ArgumentOutOfRangeException, microsoft.visualbasic.compilerservices.InternalErrorException, system.InvalidCastException, system.NullReferenceException, system.MissingMemberException, system.MemberAccessException, system.reflection.TargetException, system.reflection.TargetParameterCountException, system.ObjectDisposedException, system.FormatException, system.OverflowException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLeftShiftObject = null;
         try {
-            JCObject objLeftShiftObject = (JCObject)classType.Invoke("LeftShiftObject", Operand == null ? null : Operand.getJCOInstance(), Amount == null ? null : Amount.getJCOInstance());
+            retObjectLeftShiftObject = classType.Invoke("LeftShiftObject", Operand == null ? null : Operand.getJCOInstance(), Amount == null ? null : Amount.getJCOInstance());
+            JCObject objLeftShiftObject = (JCObject)retObjectLeftShiftObject;
             return new NetObject(objLeftShiftObject);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLeftShiftObject != null ? retObjectLeftShiftObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -400,10 +506,14 @@ public class Operators extends NetObject  {
 
     public static NetObject LikeObject(NetObject Source, NetObject Pattern, CompareMethod CompareOption) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.NotSupportedException, system.NotImplementedException, system.RankException, system.ArgumentOutOfRangeException, microsoft.visualbasic.compilerservices.InternalErrorException, system.InvalidCastException, system.NullReferenceException, system.MissingMemberException, system.MemberAccessException, system.reflection.TargetException, system.reflection.TargetParameterCountException, system.OverflowException, system.FormatException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLikeObject = null;
         try {
-            JCObject objLikeObject = (JCObject)classType.Invoke("LikeObject", Source == null ? null : Source.getJCOInstance(), Pattern == null ? null : Pattern.getJCOInstance(), CompareOption == null ? null : CompareOption.getJCOInstance());
+            retObjectLikeObject = classType.Invoke("LikeObject", Source == null ? null : Source.getJCOInstance(), Pattern == null ? null : Pattern.getJCOInstance(), CompareOption == null ? null : CompareOption.getJCOInstance());
+            JCObject objLikeObject = (JCObject)retObjectLikeObject;
             return new NetObject(objLikeObject);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLikeObject != null ? retObjectLikeObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -411,10 +521,14 @@ public class Operators extends NetObject  {
 
     public static NetObject ModObject(NetObject Left, NetObject Right) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.FormatException, system.NullReferenceException, system.OverflowException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidCastException, system.RankException, microsoft.visualbasic.compilerservices.InternalErrorException, system.MissingMemberException, system.MemberAccessException, system.reflection.TargetException, system.reflection.TargetParameterCountException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectModObject = null;
         try {
-            JCObject objModObject = (JCObject)classType.Invoke("ModObject", Left == null ? null : Left.getJCOInstance(), Right == null ? null : Right.getJCOInstance());
+            retObjectModObject = classType.Invoke("ModObject", Left == null ? null : Left.getJCOInstance(), Right == null ? null : Right.getJCOInstance());
+            JCObject objModObject = (JCObject)retObjectModObject;
             return new NetObject(objModObject);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectModObject != null ? retObjectModObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -422,10 +536,14 @@ public class Operators extends NetObject  {
 
     public static NetObject MultiplyObject(NetObject Left, NetObject Right) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.FormatException, system.NullReferenceException, system.OverflowException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidCastException, system.RankException, microsoft.visualbasic.compilerservices.InternalErrorException, system.MissingMemberException, system.MemberAccessException, system.reflection.TargetException, system.reflection.TargetParameterCountException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMultiplyObject = null;
         try {
-            JCObject objMultiplyObject = (JCObject)classType.Invoke("MultiplyObject", Left == null ? null : Left.getJCOInstance(), Right == null ? null : Right.getJCOInstance());
+            retObjectMultiplyObject = classType.Invoke("MultiplyObject", Left == null ? null : Left.getJCOInstance(), Right == null ? null : Right.getJCOInstance());
+            JCObject objMultiplyObject = (JCObject)retObjectMultiplyObject;
             return new NetObject(objMultiplyObject);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMultiplyObject != null ? retObjectMultiplyObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -433,10 +551,14 @@ public class Operators extends NetObject  {
 
     public static NetObject NegateObject(NetObject Operand) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.FormatException, system.NullReferenceException, system.OverflowException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidCastException, system.NotImplementedException, system.RankException, microsoft.visualbasic.compilerservices.InternalErrorException, system.MissingMemberException, system.MemberAccessException, system.reflection.TargetException, system.reflection.TargetParameterCountException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectNegateObject = null;
         try {
-            JCObject objNegateObject = (JCObject)classType.Invoke("NegateObject", Operand == null ? null : Operand.getJCOInstance());
+            retObjectNegateObject = classType.Invoke("NegateObject", Operand == null ? null : Operand.getJCOInstance());
+            JCObject objNegateObject = (JCObject)retObjectNegateObject;
             return new NetObject(objNegateObject);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNegateObject != null ? retObjectNegateObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -444,10 +566,14 @@ public class Operators extends NetObject  {
 
     public static NetObject NotObject(NetObject Operand) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotSupportedException, system.InvalidOperationException, system.OverflowException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.InvalidCastException, system.RankException, microsoft.visualbasic.compilerservices.InternalErrorException, system.NullReferenceException, system.MissingMemberException, system.MemberAccessException, system.reflection.TargetException, system.reflection.TargetParameterCountException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectNotObject = null;
         try {
-            JCObject objNotObject = (JCObject)classType.Invoke("NotObject", Operand == null ? null : Operand.getJCOInstance());
+            retObjectNotObject = classType.Invoke("NotObject", Operand == null ? null : Operand.getJCOInstance());
+            JCObject objNotObject = (JCObject)retObjectNotObject;
             return new NetObject(objNotObject);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNotObject != null ? retObjectNotObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -455,10 +581,14 @@ public class Operators extends NetObject  {
 
     public static NetObject OrObject(NetObject Left, NetObject Right) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotSupportedException, system.InvalidOperationException, system.OverflowException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.InvalidCastException, system.NullReferenceException, system.RankException, microsoft.visualbasic.compilerservices.InternalErrorException, system.MissingMemberException, system.MemberAccessException, system.reflection.TargetException, system.reflection.TargetParameterCountException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOrObject = null;
         try {
-            JCObject objOrObject = (JCObject)classType.Invoke("OrObject", Left == null ? null : Left.getJCOInstance(), Right == null ? null : Right.getJCOInstance());
+            retObjectOrObject = classType.Invoke("OrObject", Left == null ? null : Left.getJCOInstance(), Right == null ? null : Right.getJCOInstance());
+            JCObject objOrObject = (JCObject)retObjectOrObject;
             return new NetObject(objOrObject);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOrObject != null ? retObjectOrObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -466,10 +596,14 @@ public class Operators extends NetObject  {
 
     public static NetObject PlusObject(NetObject Operand) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.FormatException, system.NullReferenceException, system.OverflowException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidCastException, system.RankException, microsoft.visualbasic.compilerservices.InternalErrorException, system.MissingMemberException, system.MemberAccessException, system.reflection.TargetException, system.reflection.TargetParameterCountException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectPlusObject = null;
         try {
-            JCObject objPlusObject = (JCObject)classType.Invoke("PlusObject", Operand == null ? null : Operand.getJCOInstance());
+            retObjectPlusObject = classType.Invoke("PlusObject", Operand == null ? null : Operand.getJCOInstance());
+            JCObject objPlusObject = (JCObject)retObjectPlusObject;
             return new NetObject(objPlusObject);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPlusObject != null ? retObjectPlusObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -477,10 +611,14 @@ public class Operators extends NetObject  {
 
     public static NetObject RightShiftObject(NetObject Operand, NetObject Amount) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.NotSupportedException, system.NotImplementedException, system.RankException, system.ArgumentOutOfRangeException, microsoft.visualbasic.compilerservices.InternalErrorException, system.InvalidCastException, system.NullReferenceException, system.MissingMemberException, system.MemberAccessException, system.reflection.TargetException, system.reflection.TargetParameterCountException, system.ObjectDisposedException, system.FormatException, system.OverflowException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectRightShiftObject = null;
         try {
-            JCObject objRightShiftObject = (JCObject)classType.Invoke("RightShiftObject", Operand == null ? null : Operand.getJCOInstance(), Amount == null ? null : Amount.getJCOInstance());
+            retObjectRightShiftObject = classType.Invoke("RightShiftObject", Operand == null ? null : Operand.getJCOInstance(), Amount == null ? null : Amount.getJCOInstance());
+            JCObject objRightShiftObject = (JCObject)retObjectRightShiftObject;
             return new NetObject(objRightShiftObject);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRightShiftObject != null ? retObjectRightShiftObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -488,10 +626,14 @@ public class Operators extends NetObject  {
 
     public static NetObject SubtractObject(NetObject Left, NetObject Right) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.FormatException, system.NullReferenceException, system.OverflowException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidCastException, system.RankException, microsoft.visualbasic.compilerservices.InternalErrorException, system.MissingMemberException, system.MemberAccessException, system.reflection.TargetException, system.reflection.TargetParameterCountException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSubtractObject = null;
         try {
-            JCObject objSubtractObject = (JCObject)classType.Invoke("SubtractObject", Left == null ? null : Left.getJCOInstance(), Right == null ? null : Right.getJCOInstance());
+            retObjectSubtractObject = classType.Invoke("SubtractObject", Left == null ? null : Left.getJCOInstance(), Right == null ? null : Right.getJCOInstance());
+            JCObject objSubtractObject = (JCObject)retObjectSubtractObject;
             return new NetObject(objSubtractObject);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSubtractObject != null ? retObjectSubtractObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -499,10 +641,14 @@ public class Operators extends NetObject  {
 
     public static NetObject XorObject(NetObject Left, NetObject Right) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotSupportedException, system.InvalidOperationException, system.OverflowException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.InvalidCastException, system.NullReferenceException, system.RankException, microsoft.visualbasic.compilerservices.InternalErrorException, system.MissingMemberException, system.MemberAccessException, system.reflection.TargetException, system.reflection.TargetParameterCountException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectXorObject = null;
         try {
-            JCObject objXorObject = (JCObject)classType.Invoke("XorObject", Left == null ? null : Left.getJCOInstance(), Right == null ? null : Right.getJCOInstance());
+            retObjectXorObject = classType.Invoke("XorObject", Left == null ? null : Left.getJCOInstance(), Right == null ? null : Right.getJCOInstance());
+            JCObject objXorObject = (JCObject)retObjectXorObject;
             return new NetObject(objXorObject);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectXorObject != null ? retObjectXorObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

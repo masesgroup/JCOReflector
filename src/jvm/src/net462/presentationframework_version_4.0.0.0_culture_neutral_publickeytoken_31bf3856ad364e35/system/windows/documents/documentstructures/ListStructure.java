@@ -165,7 +165,7 @@ public class ListStructure extends SemanticBasicElement implements system.window
     
     public void Add(ListItemStructure listItem) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Add", listItem == null ? null : listItem.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -179,7 +179,7 @@ public class ListStructure extends SemanticBasicElement implements system.window
      */
     @Deprecated 
     public void AddChild(NetObject value) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAddChild to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAddChild to obtain the full interface.");
     }
 
     /**
@@ -188,7 +188,7 @@ public class ListStructure extends SemanticBasicElement implements system.window
      */
     @Deprecated 
     public void AddText(java.lang.String text) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAddChild to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAddChild to obtain the full interface.");
     }
 
 

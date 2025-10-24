@@ -207,10 +207,14 @@ public class ByteAnimation extends ByteAnimationBase  {
     
     public ByteAnimation CloneNewByteAnimation() throws Throwable, system.InvalidOperationException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClone = null;
         try {
-            JCObject objClone = (JCObject)classInstance.Invoke("Clone");
+            retObjectClone = classInstance.Invoke("Clone");
+            JCObject objClone = (JCObject)retObjectClone;
             return new ByteAnimation(objClone);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClone != null ? retObjectClone.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -222,9 +226,13 @@ public class ByteAnimation extends ByteAnimationBase  {
     
     public boolean getIsAdditive() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsAdditive = null;
         try {
-            return (boolean)classInstance.Get("IsAdditive");
+            retObjectIsAdditive = classInstance.Get("IsAdditive");
+            return (boolean)retObjectIsAdditive;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsAdditive != null ? retObjectIsAdditive.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -232,7 +240,7 @@ public class ByteAnimation extends ByteAnimationBase  {
 
     public void setIsAdditive(boolean IsAdditive) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsAdditive", IsAdditive);
         } catch (JCNativeException jcne) {
@@ -242,9 +250,13 @@ public class ByteAnimation extends ByteAnimationBase  {
 
     public boolean getIsCumulative() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsCumulative = null;
         try {
-            return (boolean)classInstance.Get("IsCumulative");
+            retObjectIsCumulative = classInstance.Get("IsCumulative");
+            return (boolean)retObjectIsCumulative;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsCumulative != null ? retObjectIsCumulative.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -252,7 +264,7 @@ public class ByteAnimation extends ByteAnimationBase  {
 
     public void setIsCumulative(boolean IsCumulative) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsCumulative", IsCumulative);
         } catch (JCNativeException jcne) {
@@ -262,10 +274,14 @@ public class ByteAnimation extends ByteAnimationBase  {
 
     public IEasingFunction getEasingFunction() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEasingFunction = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("EasingFunction");
+            retObjectEasingFunction = classInstance.Get("EasingFunction");
+            JCObject val = (JCObject)retObjectEasingFunction;
             return new IEasingFunctionImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEasingFunction != null ? retObjectEasingFunction.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -273,7 +289,7 @@ public class ByteAnimation extends ByteAnimationBase  {
 
     public void setEasingFunction(IEasingFunction EasingFunction) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EasingFunction", EasingFunction == null ? null : EasingFunction.getJCOInstance());
         } catch (JCNativeException jcne) {

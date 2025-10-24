@@ -167,10 +167,14 @@ public class WorkflowTrackPoint extends NetObject  {
     
     public TrackingAnnotationCollection getAnnotations() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAnnotations = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Annotations");
+            retObjectAnnotations = classInstance.Get("Annotations");
+            JCObject val = (JCObject)retObjectAnnotations;
             return new TrackingAnnotationCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAnnotations != null ? retObjectAnnotations.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,10 +182,14 @@ public class WorkflowTrackPoint extends NetObject  {
 
     public WorkflowTrackingLocation getMatchingLocation() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMatchingLocation = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MatchingLocation");
+            retObjectMatchingLocation = classInstance.Get("MatchingLocation");
+            JCObject val = (JCObject)retObjectMatchingLocation;
             return new WorkflowTrackingLocation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMatchingLocation != null ? retObjectMatchingLocation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -189,7 +197,7 @@ public class WorkflowTrackPoint extends NetObject  {
 
     public void setMatchingLocation(WorkflowTrackingLocation MatchingLocation) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MatchingLocation", MatchingLocation == null ? null : MatchingLocation.getJCOInstance());
         } catch (JCNativeException jcne) {

@@ -165,9 +165,13 @@ public class WorkflowCompilerOptionsService extends NetObject  {
     
     public boolean getCheckTypes() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCheckTypes = null;
         try {
-            return (boolean)classInstance.Get("CheckTypes");
+            retObjectCheckTypes = classInstance.Get("CheckTypes");
+            return (boolean)retObjectCheckTypes;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCheckTypes != null ? retObjectCheckTypes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -175,9 +179,13 @@ public class WorkflowCompilerOptionsService extends NetObject  {
 
     public java.lang.String getLanguage() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLanguage = null;
         try {
-            return (java.lang.String)classInstance.Get("Language");
+            retObjectLanguage = classInstance.Get("Language");
+            return (java.lang.String)retObjectLanguage;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectLanguage != null ? retObjectLanguage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -185,9 +193,13 @@ public class WorkflowCompilerOptionsService extends NetObject  {
 
     public java.lang.String getRootNamespace() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRootNamespace = null;
         try {
-            return (java.lang.String)classInstance.Get("RootNamespace");
+            retObjectRootNamespace = classInstance.Get("RootNamespace");
+            return (java.lang.String)retObjectRootNamespace;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectRootNamespace != null ? retObjectRootNamespace.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,9 +207,13 @@ public class WorkflowCompilerOptionsService extends NetObject  {
 
     public java.lang.String getTargetFrameworkMoniker() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTargetFrameworkMoniker = null;
         try {
-            return (java.lang.String)classInstance.Get("TargetFrameworkMoniker");
+            retObjectTargetFrameworkMoniker = classInstance.Get("TargetFrameworkMoniker");
+            return (java.lang.String)retObjectTargetFrameworkMoniker;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectTargetFrameworkMoniker != null ? retObjectTargetFrameworkMoniker.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

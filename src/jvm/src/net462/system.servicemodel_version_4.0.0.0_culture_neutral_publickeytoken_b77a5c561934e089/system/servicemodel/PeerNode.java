@@ -157,7 +157,7 @@ public class PeerNode extends NetObject  {
     
     public void RefreshConnection() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException, system.MissingMethodException, system.net.sockets.SocketException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RefreshConnection");
         } catch (JCNativeException jcne) {
@@ -171,9 +171,13 @@ public class PeerNode extends NetObject  {
     
     public boolean getIsOnline() throws Throwable, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsOnline = null;
         try {
-            return (boolean)classInstance.Get("IsOnline");
+            retObjectIsOnline = classInstance.Get("IsOnline");
+            return (boolean)retObjectIsOnline;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsOnline != null ? retObjectIsOnline.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,9 +185,20 @@ public class PeerNode extends NetObject  {
 
     public int getPort() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException, system.UriFormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPort = null;
         try {
-            return (int)classInstance.Get("Port");
+            retObjectPort = classInstance.Get("Port");
+            return (int)retObjectPort;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectPort_ToString = retObjectPort == null ? "null" : retObjectPort.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectPortNumber = (java.lang.Number)retObjectPort;
+                return retObjectPortNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectPort != null ? retObjectPort.getClass() : "null", retObjectPort_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,10 +206,14 @@ public class PeerNode extends NetObject  {
 
     public PeerMessagePropagationFilter getMessagePropagationFilter() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMessagePropagationFilter = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MessagePropagationFilter");
+            retObjectMessagePropagationFilter = classInstance.Get("MessagePropagationFilter");
+            JCObject val = (JCObject)retObjectMessagePropagationFilter;
             return new PeerMessagePropagationFilter(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMessagePropagationFilter != null ? retObjectMessagePropagationFilter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,7 +221,7 @@ public class PeerNode extends NetObject  {
 
     public void setMessagePropagationFilter(PeerMessagePropagationFilter MessagePropagationFilter) throws Throwable, system.ArgumentException, system.NotImplementedException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MessagePropagationFilter", MessagePropagationFilter == null ? null : MessagePropagationFilter.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -217,7 +236,7 @@ public class PeerNode extends NetObject  {
 
     public void addOffline(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Offline", handler);
         } catch (JCNativeException jcne) {
@@ -227,7 +246,7 @@ public class PeerNode extends NetObject  {
 
     public void removeOffline(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Offline", handler);
         } catch (JCNativeException jcne) {
@@ -237,7 +256,7 @@ public class PeerNode extends NetObject  {
 
     public void addOnline(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Online", handler);
         } catch (JCNativeException jcne) {
@@ -247,7 +266,7 @@ public class PeerNode extends NetObject  {
 
     public void removeOnline(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Online", handler);
         } catch (JCNativeException jcne) {

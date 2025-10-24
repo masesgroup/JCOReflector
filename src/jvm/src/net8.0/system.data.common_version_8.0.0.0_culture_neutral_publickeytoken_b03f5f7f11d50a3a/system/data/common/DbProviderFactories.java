@@ -157,9 +157,13 @@ public class DbProviderFactories extends NetObject  {
     
     public static boolean TryGetFactory(java.lang.String providerInvariantName, JCORefOut<DbProviderFactory> factory) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.TypeLoadException, system.RankException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTryGetFactory = null;
         try {
-            return (boolean)classType.Invoke("TryGetFactory", providerInvariantName, factory.getJCRefOut());
+            retObjectTryGetFactory = classType.Invoke("TryGetFactory", providerInvariantName, factory.getJCRefOut());
+            return (boolean)retObjectTryGetFactory;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryGetFactory != null ? retObjectTryGetFactory.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -167,9 +171,13 @@ public class DbProviderFactories extends NetObject  {
 
     public static boolean UnregisterFactory(java.lang.String providerInvariantName) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectUnregisterFactory = null;
         try {
-            return (boolean)classType.Invoke("UnregisterFactory", providerInvariantName);
+            retObjectUnregisterFactory = classType.Invoke("UnregisterFactory", providerInvariantName);
+            return (boolean)retObjectUnregisterFactory;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectUnregisterFactory != null ? retObjectUnregisterFactory.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,10 +185,14 @@ public class DbProviderFactories extends NetObject  {
 
     public static DbProviderFactory GetFactory(DbConnection connection) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetFactory = null;
         try {
-            JCObject objGetFactory = (JCObject)classType.Invoke("GetFactory", connection == null ? null : connection.getJCOInstance());
+            retObjectGetFactory = classType.Invoke("GetFactory", connection == null ? null : connection.getJCOInstance());
+            JCObject objGetFactory = (JCObject)retObjectGetFactory;
             return new DbProviderFactory(objGetFactory);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetFactory != null ? retObjectGetFactory.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,10 +200,14 @@ public class DbProviderFactories extends NetObject  {
 
     public static DbProviderFactory GetFactory(DataRow providerRow) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.FormatException, system.TypeLoadException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetFactory = null;
         try {
-            JCObject objGetFactory = (JCObject)classType.Invoke("GetFactory", providerRow == null ? null : providerRow.getJCOInstance());
+            retObjectGetFactory = classType.Invoke("GetFactory", providerRow == null ? null : providerRow.getJCOInstance());
+            JCObject objGetFactory = (JCObject)retObjectGetFactory;
             return new DbProviderFactory(objGetFactory);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetFactory != null ? retObjectGetFactory.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -199,10 +215,14 @@ public class DbProviderFactories extends NetObject  {
 
     public static DbProviderFactory GetFactory(java.lang.String providerInvariantName) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.TypeLoadException, system.RankException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetFactory = null;
         try {
-            JCObject objGetFactory = (JCObject)classType.Invoke("GetFactory", providerInvariantName);
+            retObjectGetFactory = classType.Invoke("GetFactory", providerInvariantName);
+            JCObject objGetFactory = (JCObject)retObjectGetFactory;
             return new DbProviderFactory(objGetFactory);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetFactory != null ? retObjectGetFactory.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -210,10 +230,14 @@ public class DbProviderFactories extends NetObject  {
 
     public static DataTable GetFactoryClasses() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.NotSupportedException, system.RankException, system.ArrayTypeMismatchException, system.OverflowException, system.InvalidCastException, system.threading.SynchronizationLockException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetFactoryClasses = null;
         try {
-            JCObject objGetFactoryClasses = (JCObject)classType.Invoke("GetFactoryClasses");
+            retObjectGetFactoryClasses = classType.Invoke("GetFactoryClasses");
+            JCObject objGetFactoryClasses = (JCObject)retObjectGetFactoryClasses;
             return new DataTable(objGetFactoryClasses);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetFactoryClasses != null ? retObjectGetFactoryClasses.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -221,7 +245,7 @@ public class DbProviderFactories extends NetObject  {
 
     public static void RegisterFactory(java.lang.String providerInvariantName, DbProviderFactory factory) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("RegisterFactory", providerInvariantName, factory == null ? null : factory.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -231,7 +255,7 @@ public class DbProviderFactories extends NetObject  {
 
     public static void RegisterFactory(java.lang.String providerInvariantName, java.lang.String factoryTypeAssemblyQualifiedName) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("RegisterFactory", providerInvariantName, factoryTypeAssemblyQualifiedName);
         } catch (JCNativeException jcne) {
@@ -241,7 +265,7 @@ public class DbProviderFactories extends NetObject  {
 
     public static void RegisterFactory(java.lang.String providerInvariantName, NetType providerFactoryClass) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("RegisterFactory", providerInvariantName, providerFactoryClass == null ? null : providerFactoryClass.getJCOInstance());
         } catch (JCNativeException jcne) {

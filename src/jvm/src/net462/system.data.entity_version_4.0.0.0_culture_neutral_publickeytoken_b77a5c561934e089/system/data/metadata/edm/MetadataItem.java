@@ -156,10 +156,14 @@ public class MetadataItem extends NetObject  {
     
     public static EdmType GetBuiltInType(BuiltInTypeKind builtInTypeKind) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetBuiltInType = null;
         try {
-            JCObject objGetBuiltInType = (JCObject)classType.Invoke("GetBuiltInType", builtInTypeKind == null ? null : builtInTypeKind.getJCOInstance());
+            retObjectGetBuiltInType = classType.Invoke("GetBuiltInType", builtInTypeKind == null ? null : builtInTypeKind.getJCOInstance());
+            JCObject objGetBuiltInType = (JCObject)retObjectGetBuiltInType;
             return new EdmType(objGetBuiltInType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetBuiltInType != null ? retObjectGetBuiltInType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,10 +175,14 @@ public class MetadataItem extends NetObject  {
     
     public BuiltInTypeKind getBuiltInTypeKind() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBuiltInTypeKind = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("BuiltInTypeKind");
+            retObjectBuiltInTypeKind = classInstance.Get("BuiltInTypeKind");
+            JCObject val = (JCObject)retObjectBuiltInTypeKind;
             return new BuiltInTypeKind(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBuiltInTypeKind != null ? retObjectBuiltInTypeKind.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,10 +190,14 @@ public class MetadataItem extends NetObject  {
 
     public Documentation getDocumentation() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDocumentation = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Documentation");
+            retObjectDocumentation = classInstance.Get("Documentation");
+            JCObject val = (JCObject)retObjectDocumentation;
             return new Documentation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDocumentation != null ? retObjectDocumentation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,7 +205,7 @@ public class MetadataItem extends NetObject  {
 
     public void setDocumentation(Documentation Documentation) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Documentation", Documentation == null ? null : Documentation.getJCOInstance());
         } catch (JCNativeException jcne) {

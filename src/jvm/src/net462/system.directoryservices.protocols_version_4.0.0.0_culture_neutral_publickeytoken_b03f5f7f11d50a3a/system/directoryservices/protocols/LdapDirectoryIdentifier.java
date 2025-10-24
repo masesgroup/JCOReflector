@@ -220,9 +220,13 @@ public class LdapDirectoryIdentifier extends DirectoryIdentifier  {
     
     public boolean getConnectionless() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConnectionless = null;
         try {
-            return (boolean)classInstance.Get("Connectionless");
+            retObjectConnectionless = classInstance.Get("Connectionless");
+            return (boolean)retObjectConnectionless;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectConnectionless != null ? retObjectConnectionless.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -230,9 +234,13 @@ public class LdapDirectoryIdentifier extends DirectoryIdentifier  {
 
     public boolean getFullyQualifiedDnsHostName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFullyQualifiedDnsHostName = null;
         try {
-            return (boolean)classInstance.Get("FullyQualifiedDnsHostName");
+            retObjectFullyQualifiedDnsHostName = classInstance.Get("FullyQualifiedDnsHostName");
+            return (boolean)retObjectFullyQualifiedDnsHostName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectFullyQualifiedDnsHostName != null ? retObjectFullyQualifiedDnsHostName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -240,9 +248,20 @@ public class LdapDirectoryIdentifier extends DirectoryIdentifier  {
 
     public int getPortNumber() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPortNumber = null;
         try {
-            return (int)classInstance.Get("PortNumber");
+            retObjectPortNumber = classInstance.Get("PortNumber");
+            return (int)retObjectPortNumber;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectPortNumber_ToString = retObjectPortNumber == null ? "null" : retObjectPortNumber.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectPortNumberNumber = (java.lang.Number)retObjectPortNumber;
+                return retObjectPortNumberNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectPortNumber != null ? retObjectPortNumber.getClass() : "null", retObjectPortNumber_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -250,10 +269,12 @@ public class LdapDirectoryIdentifier extends DirectoryIdentifier  {
 
     public java.lang.String[] getServers() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectServers = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("Servers");
+            retObjectServers = classInstance.Get("Servers");
+            JCObject resultingObjects = (JCObject)retObjectServers;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -262,6 +283,8 @@ public class LdapDirectoryIdentifier extends DirectoryIdentifier  {
 				resultingArray[indexServers] = (java.lang.String)resultingArrayList.get(indexServers);
 			}
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into JCObject", retObjectServers != null ? retObjectServers.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

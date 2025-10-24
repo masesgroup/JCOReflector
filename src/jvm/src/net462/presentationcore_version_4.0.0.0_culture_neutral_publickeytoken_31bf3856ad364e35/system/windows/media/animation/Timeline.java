@@ -160,10 +160,14 @@ public class Timeline extends Animatable  {
     
     public Clock CreateClock() throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.NotSupportedException, system.OverflowException, system.ArgumentException, system.ArgumentOutOfRangeException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.security.SecurityException, system.MulticastNotSupportedException, system.InvalidCastException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateClock = null;
         try {
-            JCObject objCreateClock = (JCObject)classInstance.Invoke("CreateClock");
+            retObjectCreateClock = classInstance.Invoke("CreateClock");
+            JCObject objCreateClock = (JCObject)retObjectCreateClock;
             return new Clock(objCreateClock);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateClock != null ? retObjectCreateClock.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,10 +175,14 @@ public class Timeline extends Animatable  {
 
     public Clock CreateClock(boolean hasControllableRoot) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.componentmodel.Win32Exception, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.OverflowException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateClock = null;
         try {
-            JCObject objCreateClock = (JCObject)classInstance.Invoke("CreateClock", hasControllableRoot);
+            retObjectCreateClock = classInstance.Invoke("CreateClock", hasControllableRoot);
+            JCObject objCreateClock = (JCObject)retObjectCreateClock;
             return new Clock(objCreateClock);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateClock != null ? retObjectCreateClock.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,10 +190,14 @@ public class Timeline extends Animatable  {
 
     public Timeline CloneNewTimeline() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentException, system.security.SecurityException, system.io.IOException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClone = null;
         try {
-            JCObject objClone = (JCObject)classInstance.Invoke("Clone");
+            retObjectClone = classInstance.Invoke("Clone");
+            JCObject objClone = (JCObject)retObjectClone;
             return new Timeline(objClone);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClone != null ? retObjectClone.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,10 +205,14 @@ public class Timeline extends Animatable  {
 
     public Timeline CloneCurrentValueNewTimeline() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCloneCurrentValue = null;
         try {
-            JCObject objCloneCurrentValue = (JCObject)classInstance.Invoke("CloneCurrentValue");
+            retObjectCloneCurrentValue = classInstance.Invoke("CloneCurrentValue");
+            JCObject objCloneCurrentValue = (JCObject)retObjectCloneCurrentValue;
             return new Timeline(objCloneCurrentValue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCloneCurrentValue != null ? retObjectCloneCurrentValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -208,9 +224,13 @@ public class Timeline extends Animatable  {
     
     public boolean getAutoReverse() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAutoReverse = null;
         try {
-            return (boolean)classInstance.Get("AutoReverse");
+            retObjectAutoReverse = classInstance.Get("AutoReverse");
+            return (boolean)retObjectAutoReverse;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAutoReverse != null ? retObjectAutoReverse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -218,7 +238,7 @@ public class Timeline extends Animatable  {
 
     public void setAutoReverse(boolean AutoReverse) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AutoReverse", AutoReverse);
         } catch (JCNativeException jcne) {
@@ -228,9 +248,20 @@ public class Timeline extends Animatable  {
 
     public double getAccelerationRatio() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAccelerationRatio = null;
         try {
-            return (double)classInstance.Get("AccelerationRatio");
+            retObjectAccelerationRatio = classInstance.Get("AccelerationRatio");
+            return (double)retObjectAccelerationRatio;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectAccelerationRatio_ToString = retObjectAccelerationRatio == null ? "null" : retObjectAccelerationRatio.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectAccelerationRatioNumber = (java.lang.Number)retObjectAccelerationRatio;
+                return retObjectAccelerationRatioNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectAccelerationRatio != null ? retObjectAccelerationRatio.getClass() : "null", retObjectAccelerationRatio_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -238,7 +269,7 @@ public class Timeline extends Animatable  {
 
     public void setAccelerationRatio(double AccelerationRatio) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AccelerationRatio", AccelerationRatio);
         } catch (JCNativeException jcne) {
@@ -248,9 +279,20 @@ public class Timeline extends Animatable  {
 
     public double getDecelerationRatio() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDecelerationRatio = null;
         try {
-            return (double)classInstance.Get("DecelerationRatio");
+            retObjectDecelerationRatio = classInstance.Get("DecelerationRatio");
+            return (double)retObjectDecelerationRatio;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDecelerationRatio_ToString = retObjectDecelerationRatio == null ? "null" : retObjectDecelerationRatio.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectDecelerationRatioNumber = (java.lang.Number)retObjectDecelerationRatio;
+                return retObjectDecelerationRatioNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectDecelerationRatio != null ? retObjectDecelerationRatio.getClass() : "null", retObjectDecelerationRatio_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -258,7 +300,7 @@ public class Timeline extends Animatable  {
 
     public void setDecelerationRatio(double DecelerationRatio) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DecelerationRatio", DecelerationRatio);
         } catch (JCNativeException jcne) {
@@ -268,9 +310,20 @@ public class Timeline extends Animatable  {
 
     public double getSpeedRatio() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSpeedRatio = null;
         try {
-            return (double)classInstance.Get("SpeedRatio");
+            retObjectSpeedRatio = classInstance.Get("SpeedRatio");
+            return (double)retObjectSpeedRatio;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSpeedRatio_ToString = retObjectSpeedRatio == null ? "null" : retObjectSpeedRatio.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectSpeedRatioNumber = (java.lang.Number)retObjectSpeedRatio;
+                return retObjectSpeedRatioNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectSpeedRatio != null ? retObjectSpeedRatio.getClass() : "null", retObjectSpeedRatio_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -278,7 +331,7 @@ public class Timeline extends Animatable  {
 
     public void setSpeedRatio(double SpeedRatio) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SpeedRatio", SpeedRatio);
         } catch (JCNativeException jcne) {
@@ -288,9 +341,13 @@ public class Timeline extends Animatable  {
 
     public java.lang.String getName() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectName = null;
         try {
-            return (java.lang.String)classInstance.Get("Name");
+            retObjectName = classInstance.Get("Name");
+            return (java.lang.String)retObjectName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectName != null ? retObjectName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -298,7 +355,7 @@ public class Timeline extends Animatable  {
 
     public void setName(java.lang.String Name) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Name", Name);
         } catch (JCNativeException jcne) {
@@ -308,10 +365,14 @@ public class Timeline extends Animatable  {
 
     public Duration getDuration() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDuration = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Duration");
+            retObjectDuration = classInstance.Get("Duration");
+            JCObject val = (JCObject)retObjectDuration;
             return new Duration(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDuration != null ? retObjectDuration.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -319,7 +380,7 @@ public class Timeline extends Animatable  {
 
     public void setDuration(Duration Duration) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Duration", Duration == null ? null : Duration.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -329,10 +390,14 @@ public class Timeline extends Animatable  {
 
     public FillBehavior getFillBehavior() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFillBehavior = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("FillBehavior");
+            retObjectFillBehavior = classInstance.Get("FillBehavior");
+            JCObject val = (JCObject)retObjectFillBehavior;
             return new FillBehavior(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFillBehavior != null ? retObjectFillBehavior.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -340,7 +405,7 @@ public class Timeline extends Animatable  {
 
     public void setFillBehavior(FillBehavior FillBehavior) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FillBehavior", FillBehavior == null ? null : FillBehavior.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -350,10 +415,14 @@ public class Timeline extends Animatable  {
 
     public RepeatBehavior getRepeatBehavior() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRepeatBehavior = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RepeatBehavior");
+            retObjectRepeatBehavior = classInstance.Get("RepeatBehavior");
+            JCObject val = (JCObject)retObjectRepeatBehavior;
             return new RepeatBehavior(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRepeatBehavior != null ? retObjectRepeatBehavior.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -361,7 +430,7 @@ public class Timeline extends Animatable  {
 
     public void setRepeatBehavior(RepeatBehavior RepeatBehavior) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RepeatBehavior", RepeatBehavior == null ? null : RepeatBehavior.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -376,7 +445,7 @@ public class Timeline extends Animatable  {
 
     public void addCompleted(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Completed", handler);
         } catch (JCNativeException jcne) {
@@ -386,7 +455,7 @@ public class Timeline extends Animatable  {
 
     public void removeCompleted(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Completed", handler);
         } catch (JCNativeException jcne) {
@@ -396,7 +465,7 @@ public class Timeline extends Animatable  {
 
     public void addCurrentGlobalSpeedInvalidated(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("CurrentGlobalSpeedInvalidated", handler);
         } catch (JCNativeException jcne) {
@@ -406,7 +475,7 @@ public class Timeline extends Animatable  {
 
     public void removeCurrentGlobalSpeedInvalidated(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("CurrentGlobalSpeedInvalidated", handler);
         } catch (JCNativeException jcne) {
@@ -416,7 +485,7 @@ public class Timeline extends Animatable  {
 
     public void addCurrentStateInvalidated(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("CurrentStateInvalidated", handler);
         } catch (JCNativeException jcne) {
@@ -426,7 +495,7 @@ public class Timeline extends Animatable  {
 
     public void removeCurrentStateInvalidated(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("CurrentStateInvalidated", handler);
         } catch (JCNativeException jcne) {
@@ -436,7 +505,7 @@ public class Timeline extends Animatable  {
 
     public void addCurrentTimeInvalidated(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("CurrentTimeInvalidated", handler);
         } catch (JCNativeException jcne) {
@@ -446,7 +515,7 @@ public class Timeline extends Animatable  {
 
     public void removeCurrentTimeInvalidated(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("CurrentTimeInvalidated", handler);
         } catch (JCNativeException jcne) {
@@ -456,7 +525,7 @@ public class Timeline extends Animatable  {
 
     public void addRemoveRequested(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("RemoveRequested", handler);
         } catch (JCNativeException jcne) {
@@ -466,7 +535,7 @@ public class Timeline extends Animatable  {
 
     public void removeRemoveRequested(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("RemoveRequested", handler);
         } catch (JCNativeException jcne) {

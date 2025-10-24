@@ -157,10 +157,14 @@ public class ServiceDomain extends NetObject  {
     
     public static TransactionStatus Leave() throws Throwable, system.InvalidOperationException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLeave = null;
         try {
-            JCObject objLeave = (JCObject)classType.Invoke("Leave");
+            retObjectLeave = classType.Invoke("Leave");
+            JCObject objLeave = (JCObject)retObjectLeave;
             return new TransactionStatus(objLeave);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLeave != null ? retObjectLeave.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -168,7 +172,7 @@ public class ServiceDomain extends NetObject  {
 
     public static void Enter(ServiceConfig cfg) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Enter", cfg == null ? null : cfg.getJCOInstance());
         } catch (JCNativeException jcne) {

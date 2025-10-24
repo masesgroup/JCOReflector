@@ -143,7 +143,7 @@ public class ITrackingHandlerImplementation extends NetObject implements ITracki
     
     public void DisconnectedObject(NetObject obj) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DisconnectedObject", obj == null ? null : obj.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -153,7 +153,7 @@ public class ITrackingHandlerImplementation extends NetObject implements ITracki
 
     public void MarshaledObject(NetObject obj, ObjRef or) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("MarshaledObject", obj == null ? null : obj.getJCOInstance(), or == null ? null : or.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -163,7 +163,7 @@ public class ITrackingHandlerImplementation extends NetObject implements ITracki
 
     public void UnmarshaledObject(NetObject obj, ObjRef or) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("UnmarshaledObject", obj == null ? null : obj.getJCOInstance(), or == null ? null : or.getJCOInstance());
         } catch (JCNativeException jcne) {

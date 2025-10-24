@@ -168,10 +168,14 @@ public class DesignerActionList extends NetObject  {
     
     public DesignerActionItemCollection GetSortedActionItems() throws Throwable, system.ArgumentNullException, system.IndexOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.InvalidOperationException, system.NotSupportedException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSortedActionItems = null;
         try {
-            JCObject objGetSortedActionItems = (JCObject)classInstance.Invoke("GetSortedActionItems");
+            retObjectGetSortedActionItems = classInstance.Invoke("GetSortedActionItems");
+            JCObject objGetSortedActionItems = (JCObject)retObjectGetSortedActionItems;
             return new DesignerActionItemCollection(objGetSortedActionItems);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSortedActionItems != null ? retObjectGetSortedActionItems.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,10 +183,14 @@ public class DesignerActionList extends NetObject  {
 
     public NetObject GetService(NetType serviceType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetService = null;
         try {
-            JCObject objGetService = (JCObject)classInstance.Invoke("GetService", serviceType == null ? null : serviceType.getJCOInstance());
+            retObjectGetService = classInstance.Invoke("GetService", serviceType == null ? null : serviceType.getJCOInstance());
+            JCObject objGetService = (JCObject)retObjectGetService;
             return new NetObject(objGetService);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetService != null ? retObjectGetService.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -194,9 +202,13 @@ public class DesignerActionList extends NetObject  {
     
     public boolean getAutoShow() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAutoShow = null;
         try {
-            return (boolean)classInstance.Get("AutoShow");
+            retObjectAutoShow = classInstance.Get("AutoShow");
+            return (boolean)retObjectAutoShow;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAutoShow != null ? retObjectAutoShow.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -204,7 +216,7 @@ public class DesignerActionList extends NetObject  {
 
     public void setAutoShow(boolean AutoShow) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AutoShow", AutoShow);
         } catch (JCNativeException jcne) {
@@ -214,10 +226,14 @@ public class DesignerActionList extends NetObject  {
 
     public IComponent getComponent() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectComponent = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Component");
+            retObjectComponent = classInstance.Get("Component");
+            JCObject val = (JCObject)retObjectComponent;
             return new IComponentImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectComponent != null ? retObjectComponent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

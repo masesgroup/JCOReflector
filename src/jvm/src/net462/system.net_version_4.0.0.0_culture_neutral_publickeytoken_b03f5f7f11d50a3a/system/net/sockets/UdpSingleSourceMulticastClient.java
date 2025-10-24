@@ -169,9 +169,20 @@ public class UdpSingleSourceMulticastClient extends NetObject implements AutoClo
     
     public int EndReceiveFromSource(IAsyncResult result, JCORefOut<java.util.concurrent.atomic.AtomicInteger> sourcePort) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.net.sockets.SocketException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEndReceiveFromSource = null;
         try {
-            return (int)classInstance.Invoke("EndReceiveFromSource", result == null ? null : result.getJCOInstance(), sourcePort.getJCRefOut());
+            retObjectEndReceiveFromSource = classInstance.Invoke("EndReceiveFromSource", result == null ? null : result.getJCOInstance(), sourcePort.getJCRefOut());
+            return (int)retObjectEndReceiveFromSource;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectEndReceiveFromSource_ToString = retObjectEndReceiveFromSource == null ? "null" : retObjectEndReceiveFromSource.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectEndReceiveFromSourceNumber = (java.lang.Number)retObjectEndReceiveFromSource;
+                return retObjectEndReceiveFromSourceNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectEndReceiveFromSource != null ? retObjectEndReceiveFromSource.getClass() : "null", retObjectEndReceiveFromSource_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,10 +190,14 @@ public class UdpSingleSourceMulticastClient extends NetObject implements AutoClo
 
     public IAsyncResult BeginJoinGroup(AsyncCallback callback, NetObject state) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.net.sockets.SocketException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginJoinGroup = null;
         try {
-            JCObject objBeginJoinGroup = (JCObject)classInstance.Invoke("BeginJoinGroup", callback, state == null ? null : state.getJCOInstance());
+            retObjectBeginJoinGroup = classInstance.Invoke("BeginJoinGroup", callback, state == null ? null : state.getJCOInstance());
+            JCObject objBeginJoinGroup = (JCObject)retObjectBeginJoinGroup;
             return new IAsyncResultImplementation(objBeginJoinGroup);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginJoinGroup != null ? retObjectBeginJoinGroup.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,10 +205,14 @@ public class UdpSingleSourceMulticastClient extends NetObject implements AutoClo
 
     public IAsyncResult BeginReceiveFromSource(byte[] buffer, int offset, int count, AsyncCallback callback, NetObject state) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.net.sockets.SocketException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginReceiveFromSource = null;
         try {
-            JCObject objBeginReceiveFromSource = (JCObject)classInstance.Invoke("BeginReceiveFromSource", buffer, offset, count, callback, state == null ? null : state.getJCOInstance());
+            retObjectBeginReceiveFromSource = classInstance.Invoke("BeginReceiveFromSource", buffer, offset, count, callback, state == null ? null : state.getJCOInstance());
+            JCObject objBeginReceiveFromSource = (JCObject)retObjectBeginReceiveFromSource;
             return new IAsyncResultImplementation(objBeginReceiveFromSource);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginReceiveFromSource != null ? retObjectBeginReceiveFromSource.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,10 +220,14 @@ public class UdpSingleSourceMulticastClient extends NetObject implements AutoClo
 
     public IAsyncResult BeginReceiveFromSource(JCORefOut dupParam0, int dupParam1, int dupParam2, AsyncCallback dupParam3, NetObject dupParam4) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.net.sockets.SocketException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginReceiveFromSource = null;
         try {
-            JCObject objBeginReceiveFromSource = (JCObject)classInstance.Invoke("BeginReceiveFromSource", dupParam0.getJCRefOut(), dupParam1, dupParam2, dupParam3, dupParam4 == null ? null : dupParam4.getJCOInstance());
+            retObjectBeginReceiveFromSource = classInstance.Invoke("BeginReceiveFromSource", dupParam0.getJCRefOut(), dupParam1, dupParam2, dupParam3, dupParam4 == null ? null : dupParam4.getJCOInstance());
+            JCObject objBeginReceiveFromSource = (JCObject)retObjectBeginReceiveFromSource;
             return new IAsyncResultImplementation(objBeginReceiveFromSource);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginReceiveFromSource != null ? retObjectBeginReceiveFromSource.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -212,10 +235,14 @@ public class UdpSingleSourceMulticastClient extends NetObject implements AutoClo
 
     public IAsyncResult BeginSendToSource(byte[] buffer, int offset, int count, int remotePort, AsyncCallback callback, NetObject state) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.net.sockets.SocketException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginSendToSource = null;
         try {
-            JCObject objBeginSendToSource = (JCObject)classInstance.Invoke("BeginSendToSource", buffer, offset, count, remotePort, callback, state == null ? null : state.getJCOInstance());
+            retObjectBeginSendToSource = classInstance.Invoke("BeginSendToSource", buffer, offset, count, remotePort, callback, state == null ? null : state.getJCOInstance());
+            JCObject objBeginSendToSource = (JCObject)retObjectBeginSendToSource;
             return new IAsyncResultImplementation(objBeginSendToSource);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginSendToSource != null ? retObjectBeginSendToSource.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -223,10 +250,14 @@ public class UdpSingleSourceMulticastClient extends NetObject implements AutoClo
 
     public IAsyncResult BeginSendToSource(JCORefOut dupParam0, int dupParam1, int dupParam2, int dupParam3, AsyncCallback dupParam4, NetObject dupParam5) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.net.sockets.SocketException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginSendToSource = null;
         try {
-            JCObject objBeginSendToSource = (JCObject)classInstance.Invoke("BeginSendToSource", dupParam0.getJCRefOut(), dupParam1, dupParam2, dupParam3, dupParam4, dupParam5 == null ? null : dupParam5.getJCOInstance());
+            retObjectBeginSendToSource = classInstance.Invoke("BeginSendToSource", dupParam0.getJCRefOut(), dupParam1, dupParam2, dupParam3, dupParam4, dupParam5 == null ? null : dupParam5.getJCOInstance());
+            JCObject objBeginSendToSource = (JCObject)retObjectBeginSendToSource;
             return new IAsyncResultImplementation(objBeginSendToSource);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginSendToSource != null ? retObjectBeginSendToSource.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -234,7 +265,7 @@ public class UdpSingleSourceMulticastClient extends NetObject implements AutoClo
 
     public void Dispose() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
@@ -244,7 +275,7 @@ public class UdpSingleSourceMulticastClient extends NetObject implements AutoClo
 
     public void EndJoinGroup(IAsyncResult result) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EndJoinGroup", result == null ? null : result.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -254,7 +285,7 @@ public class UdpSingleSourceMulticastClient extends NetObject implements AutoClo
 
     public void EndSendToSource(IAsyncResult result) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EndSendToSource", result == null ? null : result.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -265,7 +296,7 @@ public class UdpSingleSourceMulticastClient extends NetObject implements AutoClo
     public void close() throws Exception {
         try {
             if (classInstance == null)
-                throw new UnsupportedOperationException("classInstance is null.");
+                throw new java.lang.UnsupportedOperationException("classInstance is null.");
             try {
                 classInstance.Invoke("Dispose");
             }
@@ -281,9 +312,20 @@ public class UdpSingleSourceMulticastClient extends NetObject implements AutoClo
     
     public int getReceiveBufferSize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReceiveBufferSize = null;
         try {
-            return (int)classInstance.Get("ReceiveBufferSize");
+            retObjectReceiveBufferSize = classInstance.Get("ReceiveBufferSize");
+            return (int)retObjectReceiveBufferSize;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectReceiveBufferSize_ToString = retObjectReceiveBufferSize == null ? "null" : retObjectReceiveBufferSize.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectReceiveBufferSizeNumber = (java.lang.Number)retObjectReceiveBufferSize;
+                return retObjectReceiveBufferSizeNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectReceiveBufferSize != null ? retObjectReceiveBufferSize.getClass() : "null", retObjectReceiveBufferSize_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -291,7 +333,7 @@ public class UdpSingleSourceMulticastClient extends NetObject implements AutoClo
 
     public void setReceiveBufferSize(int ReceiveBufferSize) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ReceiveBufferSize", ReceiveBufferSize);
         } catch (JCNativeException jcne) {
@@ -301,9 +343,20 @@ public class UdpSingleSourceMulticastClient extends NetObject implements AutoClo
 
     public int getSendBufferSize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSendBufferSize = null;
         try {
-            return (int)classInstance.Get("SendBufferSize");
+            retObjectSendBufferSize = classInstance.Get("SendBufferSize");
+            return (int)retObjectSendBufferSize;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSendBufferSize_ToString = retObjectSendBufferSize == null ? "null" : retObjectSendBufferSize.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectSendBufferSizeNumber = (java.lang.Number)retObjectSendBufferSize;
+                return retObjectSendBufferSizeNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectSendBufferSize != null ? retObjectSendBufferSize.getClass() : "null", retObjectSendBufferSize_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -311,7 +364,7 @@ public class UdpSingleSourceMulticastClient extends NetObject implements AutoClo
 
     public void setSendBufferSize(int SendBufferSize) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SendBufferSize", SendBufferSize);
         } catch (JCNativeException jcne) {

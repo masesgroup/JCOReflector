@@ -167,9 +167,13 @@ public class OperationContractAttribute extends Attribute  {
     
     public boolean getAsyncPattern() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAsyncPattern = null;
         try {
-            return (boolean)classInstance.Get("AsyncPattern");
+            retObjectAsyncPattern = classInstance.Get("AsyncPattern");
+            return (boolean)retObjectAsyncPattern;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAsyncPattern != null ? retObjectAsyncPattern.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,7 +181,7 @@ public class OperationContractAttribute extends Attribute  {
 
     public void setAsyncPattern(boolean AsyncPattern) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AsyncPattern", AsyncPattern);
         } catch (JCNativeException jcne) {
@@ -187,9 +191,13 @@ public class OperationContractAttribute extends Attribute  {
 
     public boolean getHasProtectionLevel() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHasProtectionLevel = null;
         try {
-            return (boolean)classInstance.Get("HasProtectionLevel");
+            retObjectHasProtectionLevel = classInstance.Get("HasProtectionLevel");
+            return (boolean)retObjectHasProtectionLevel;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectHasProtectionLevel != null ? retObjectHasProtectionLevel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,9 +205,13 @@ public class OperationContractAttribute extends Attribute  {
 
     public boolean getIsInitiating() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsInitiating = null;
         try {
-            return (boolean)classInstance.Get("IsInitiating");
+            retObjectIsInitiating = classInstance.Get("IsInitiating");
+            return (boolean)retObjectIsInitiating;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsInitiating != null ? retObjectIsInitiating.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -207,7 +219,7 @@ public class OperationContractAttribute extends Attribute  {
 
     public void setIsInitiating(boolean IsInitiating) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsInitiating", IsInitiating);
         } catch (JCNativeException jcne) {
@@ -217,9 +229,13 @@ public class OperationContractAttribute extends Attribute  {
 
     public boolean getIsOneWay() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsOneWay = null;
         try {
-            return (boolean)classInstance.Get("IsOneWay");
+            retObjectIsOneWay = classInstance.Get("IsOneWay");
+            return (boolean)retObjectIsOneWay;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsOneWay != null ? retObjectIsOneWay.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -227,7 +243,7 @@ public class OperationContractAttribute extends Attribute  {
 
     public void setIsOneWay(boolean IsOneWay) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsOneWay", IsOneWay);
         } catch (JCNativeException jcne) {
@@ -237,9 +253,13 @@ public class OperationContractAttribute extends Attribute  {
 
     public boolean getIsTerminating() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsTerminating = null;
         try {
-            return (boolean)classInstance.Get("IsTerminating");
+            retObjectIsTerminating = classInstance.Get("IsTerminating");
+            return (boolean)retObjectIsTerminating;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsTerminating != null ? retObjectIsTerminating.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -247,7 +267,7 @@ public class OperationContractAttribute extends Attribute  {
 
     public void setIsTerminating(boolean IsTerminating) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsTerminating", IsTerminating);
         } catch (JCNativeException jcne) {
@@ -257,10 +277,14 @@ public class OperationContractAttribute extends Attribute  {
 
     public ProtectionLevel getProtectionLevel() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProtectionLevel = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ProtectionLevel");
+            retObjectProtectionLevel = classInstance.Get("ProtectionLevel");
+            JCObject val = (JCObject)retObjectProtectionLevel;
             return new ProtectionLevel(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectProtectionLevel != null ? retObjectProtectionLevel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -268,7 +292,7 @@ public class OperationContractAttribute extends Attribute  {
 
     public void setProtectionLevel(ProtectionLevel ProtectionLevel) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ProtectionLevel", ProtectionLevel == null ? null : ProtectionLevel.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -278,9 +302,13 @@ public class OperationContractAttribute extends Attribute  {
 
     public java.lang.String getAction() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAction = null;
         try {
-            return (java.lang.String)classInstance.Get("Action");
+            retObjectAction = classInstance.Get("Action");
+            return (java.lang.String)retObjectAction;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectAction != null ? retObjectAction.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -288,7 +316,7 @@ public class OperationContractAttribute extends Attribute  {
 
     public void setAction(java.lang.String Action) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Action", Action);
         } catch (JCNativeException jcne) {
@@ -298,9 +326,13 @@ public class OperationContractAttribute extends Attribute  {
 
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectName = null;
         try {
-            return (java.lang.String)classInstance.Get("Name");
+            retObjectName = classInstance.Get("Name");
+            return (java.lang.String)retObjectName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectName != null ? retObjectName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -308,7 +340,7 @@ public class OperationContractAttribute extends Attribute  {
 
     public void setName(java.lang.String Name) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Name", Name);
         } catch (JCNativeException jcne) {
@@ -318,9 +350,13 @@ public class OperationContractAttribute extends Attribute  {
 
     public java.lang.String getReplyAction() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReplyAction = null;
         try {
-            return (java.lang.String)classInstance.Get("ReplyAction");
+            retObjectReplyAction = classInstance.Get("ReplyAction");
+            return (java.lang.String)retObjectReplyAction;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectReplyAction != null ? retObjectReplyAction.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -328,7 +364,7 @@ public class OperationContractAttribute extends Attribute  {
 
     public void setReplyAction(java.lang.String ReplyAction) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ReplyAction", ReplyAction);
         } catch (JCNativeException jcne) {

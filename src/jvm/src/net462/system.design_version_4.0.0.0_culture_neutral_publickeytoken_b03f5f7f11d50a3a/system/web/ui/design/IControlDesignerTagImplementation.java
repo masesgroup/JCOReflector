@@ -142,9 +142,13 @@ public class IControlDesignerTagImplementation extends NetObject implements ICon
     
     public java.lang.String GetAttribute(java.lang.String name) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetAttribute = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetAttribute", name);
+            retObjectGetAttribute = classInstance.Invoke("GetAttribute", name);
+            return (java.lang.String)retObjectGetAttribute;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetAttribute != null ? retObjectGetAttribute.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -152,9 +156,13 @@ public class IControlDesignerTagImplementation extends NetObject implements ICon
 
     public java.lang.String GetContent() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetContent = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetContent");
+            retObjectGetContent = classInstance.Invoke("GetContent");
+            return (java.lang.String)retObjectGetContent;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetContent != null ? retObjectGetContent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -162,9 +170,13 @@ public class IControlDesignerTagImplementation extends NetObject implements ICon
 
     public java.lang.String GetOuterContent() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetOuterContent = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetOuterContent");
+            retObjectGetOuterContent = classInstance.Invoke("GetOuterContent");
+            return (java.lang.String)retObjectGetOuterContent;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetOuterContent != null ? retObjectGetOuterContent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,7 +184,7 @@ public class IControlDesignerTagImplementation extends NetObject implements ICon
 
     public void RemoveAttribute(java.lang.String name) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RemoveAttribute", name);
         } catch (JCNativeException jcne) {
@@ -182,7 +194,7 @@ public class IControlDesignerTagImplementation extends NetObject implements ICon
 
     public void SetAttribute(java.lang.String name, java.lang.String value) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetAttribute", name, value);
         } catch (JCNativeException jcne) {
@@ -192,7 +204,7 @@ public class IControlDesignerTagImplementation extends NetObject implements ICon
 
     public void SetContent(java.lang.String content) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetContent", content);
         } catch (JCNativeException jcne) {
@@ -202,7 +214,7 @@ public class IControlDesignerTagImplementation extends NetObject implements ICon
 
     public void SetDirty(boolean dirty) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetDirty", dirty);
         } catch (JCNativeException jcne) {
@@ -216,9 +228,13 @@ public class IControlDesignerTagImplementation extends NetObject implements ICon
     
     public boolean getIsDirty() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsDirty = null;
         try {
-            return (boolean)classInstance.Get("IsDirty");
+            retObjectIsDirty = classInstance.Get("IsDirty");
+            return (boolean)retObjectIsDirty;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsDirty != null ? retObjectIsDirty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

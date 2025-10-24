@@ -178,9 +178,20 @@ public class SqlDataSourceView extends DataSourceView  {
     
     public int Delete(IDictionary keys, IDictionary oldValues) throws Throwable, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDelete = null;
         try {
-            return (int)classInstance.Invoke("Delete", keys == null ? null : keys.getJCOInstance(), oldValues == null ? null : oldValues.getJCOInstance());
+            retObjectDelete = classInstance.Invoke("Delete", keys == null ? null : keys.getJCOInstance(), oldValues == null ? null : oldValues.getJCOInstance());
+            return (int)retObjectDelete;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDelete_ToString = retObjectDelete == null ? "null" : retObjectDelete.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectDeleteNumber = (java.lang.Number)retObjectDelete;
+                return retObjectDeleteNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectDelete != null ? retObjectDelete.getClass() : "null", retObjectDelete_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,9 +199,20 @@ public class SqlDataSourceView extends DataSourceView  {
 
     public int Insert(IDictionary values) throws Throwable, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInsert = null;
         try {
-            return (int)classInstance.Invoke("Insert", values == null ? null : values.getJCOInstance());
+            retObjectInsert = classInstance.Invoke("Insert", values == null ? null : values.getJCOInstance());
+            return (int)retObjectInsert;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectInsert_ToString = retObjectInsert == null ? "null" : retObjectInsert.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectInsertNumber = (java.lang.Number)retObjectInsert;
+                return retObjectInsertNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectInsert != null ? retObjectInsert.getClass() : "null", retObjectInsert_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,9 +220,20 @@ public class SqlDataSourceView extends DataSourceView  {
 
     public int Update(IDictionary keys, IDictionary values, IDictionary oldValues) throws Throwable, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUpdate = null;
         try {
-            return (int)classInstance.Invoke("Update", keys == null ? null : keys.getJCOInstance(), values == null ? null : values.getJCOInstance(), oldValues == null ? null : oldValues.getJCOInstance());
+            retObjectUpdate = classInstance.Invoke("Update", keys == null ? null : keys.getJCOInstance(), values == null ? null : values.getJCOInstance(), oldValues == null ? null : oldValues.getJCOInstance());
+            return (int)retObjectUpdate;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectUpdate_ToString = retObjectUpdate == null ? "null" : retObjectUpdate.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectUpdateNumber = (java.lang.Number)retObjectUpdate;
+                return retObjectUpdateNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectUpdate != null ? retObjectUpdate.getClass() : "null", retObjectUpdate_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -208,10 +241,14 @@ public class SqlDataSourceView extends DataSourceView  {
 
     public IEnumerable Select(DataSourceSelectArguments arguments) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelect = null;
         try {
-            JCObject objSelect = (JCObject)classInstance.Invoke("Select", arguments == null ? null : arguments.getJCOInstance());
+            retObjectSelect = classInstance.Invoke("Select", arguments == null ? null : arguments.getJCOInstance());
+            JCObject objSelect = (JCObject)retObjectSelect;
             return new IEnumerableImplementation(objSelect);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelect != null ? retObjectSelect.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -223,7 +260,7 @@ public class SqlDataSourceView extends DataSourceView  {
      */
     @Deprecated 
     public NetObject SaveViewState() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIStateManager to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIStateManager to obtain the full interface.");
     }
 
     /**
@@ -232,7 +269,7 @@ public class SqlDataSourceView extends DataSourceView  {
      */
     @Deprecated 
     public void LoadViewState(NetObject state) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIStateManager to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIStateManager to obtain the full interface.");
     }
 
     /**
@@ -241,7 +278,7 @@ public class SqlDataSourceView extends DataSourceView  {
      */
     @Deprecated 
     public void TrackViewState() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIStateManager to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIStateManager to obtain the full interface.");
     }
 
 
@@ -250,9 +287,13 @@ public class SqlDataSourceView extends DataSourceView  {
     
     public boolean getCancelSelectOnNullParameter() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCancelSelectOnNullParameter = null;
         try {
-            return (boolean)classInstance.Get("CancelSelectOnNullParameter");
+            retObjectCancelSelectOnNullParameter = classInstance.Get("CancelSelectOnNullParameter");
+            return (boolean)retObjectCancelSelectOnNullParameter;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCancelSelectOnNullParameter != null ? retObjectCancelSelectOnNullParameter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -260,7 +301,7 @@ public class SqlDataSourceView extends DataSourceView  {
 
     public void setCancelSelectOnNullParameter(boolean CancelSelectOnNullParameter) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CancelSelectOnNullParameter", CancelSelectOnNullParameter);
         } catch (JCNativeException jcne) {
@@ -270,9 +311,13 @@ public class SqlDataSourceView extends DataSourceView  {
 
     public java.lang.String getDeleteCommand() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDeleteCommand = null;
         try {
-            return (java.lang.String)classInstance.Get("DeleteCommand");
+            retObjectDeleteCommand = classInstance.Get("DeleteCommand");
+            return (java.lang.String)retObjectDeleteCommand;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDeleteCommand != null ? retObjectDeleteCommand.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -280,7 +325,7 @@ public class SqlDataSourceView extends DataSourceView  {
 
     public void setDeleteCommand(java.lang.String DeleteCommand) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DeleteCommand", DeleteCommand);
         } catch (JCNativeException jcne) {
@@ -290,9 +335,13 @@ public class SqlDataSourceView extends DataSourceView  {
 
     public java.lang.String getFilterExpression() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFilterExpression = null;
         try {
-            return (java.lang.String)classInstance.Get("FilterExpression");
+            retObjectFilterExpression = classInstance.Get("FilterExpression");
+            return (java.lang.String)retObjectFilterExpression;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectFilterExpression != null ? retObjectFilterExpression.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -300,7 +349,7 @@ public class SqlDataSourceView extends DataSourceView  {
 
     public void setFilterExpression(java.lang.String FilterExpression) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FilterExpression", FilterExpression);
         } catch (JCNativeException jcne) {
@@ -310,9 +359,13 @@ public class SqlDataSourceView extends DataSourceView  {
 
     public java.lang.String getInsertCommand() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInsertCommand = null;
         try {
-            return (java.lang.String)classInstance.Get("InsertCommand");
+            retObjectInsertCommand = classInstance.Get("InsertCommand");
+            return (java.lang.String)retObjectInsertCommand;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectInsertCommand != null ? retObjectInsertCommand.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -320,7 +373,7 @@ public class SqlDataSourceView extends DataSourceView  {
 
     public void setInsertCommand(java.lang.String InsertCommand) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("InsertCommand", InsertCommand);
         } catch (JCNativeException jcne) {
@@ -330,9 +383,13 @@ public class SqlDataSourceView extends DataSourceView  {
 
     public java.lang.String getOldValuesParameterFormatString() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOldValuesParameterFormatString = null;
         try {
-            return (java.lang.String)classInstance.Get("OldValuesParameterFormatString");
+            retObjectOldValuesParameterFormatString = classInstance.Get("OldValuesParameterFormatString");
+            return (java.lang.String)retObjectOldValuesParameterFormatString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectOldValuesParameterFormatString != null ? retObjectOldValuesParameterFormatString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -340,7 +397,7 @@ public class SqlDataSourceView extends DataSourceView  {
 
     public void setOldValuesParameterFormatString(java.lang.String OldValuesParameterFormatString) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("OldValuesParameterFormatString", OldValuesParameterFormatString);
         } catch (JCNativeException jcne) {
@@ -350,9 +407,13 @@ public class SqlDataSourceView extends DataSourceView  {
 
     public java.lang.String getSelectCommand() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectCommand = null;
         try {
-            return (java.lang.String)classInstance.Get("SelectCommand");
+            retObjectSelectCommand = classInstance.Get("SelectCommand");
+            return (java.lang.String)retObjectSelectCommand;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSelectCommand != null ? retObjectSelectCommand.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -360,7 +421,7 @@ public class SqlDataSourceView extends DataSourceView  {
 
     public void setSelectCommand(java.lang.String SelectCommand) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SelectCommand", SelectCommand);
         } catch (JCNativeException jcne) {
@@ -370,9 +431,13 @@ public class SqlDataSourceView extends DataSourceView  {
 
     public java.lang.String getSortParameterName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSortParameterName = null;
         try {
-            return (java.lang.String)classInstance.Get("SortParameterName");
+            retObjectSortParameterName = classInstance.Get("SortParameterName");
+            return (java.lang.String)retObjectSortParameterName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSortParameterName != null ? retObjectSortParameterName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -380,7 +445,7 @@ public class SqlDataSourceView extends DataSourceView  {
 
     public void setSortParameterName(java.lang.String SortParameterName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SortParameterName", SortParameterName);
         } catch (JCNativeException jcne) {
@@ -390,9 +455,13 @@ public class SqlDataSourceView extends DataSourceView  {
 
     public java.lang.String getUpdateCommand() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUpdateCommand = null;
         try {
-            return (java.lang.String)classInstance.Get("UpdateCommand");
+            retObjectUpdateCommand = classInstance.Get("UpdateCommand");
+            return (java.lang.String)retObjectUpdateCommand;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectUpdateCommand != null ? retObjectUpdateCommand.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -400,7 +469,7 @@ public class SqlDataSourceView extends DataSourceView  {
 
     public void setUpdateCommand(java.lang.String UpdateCommand) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UpdateCommand", UpdateCommand);
         } catch (JCNativeException jcne) {
@@ -410,10 +479,14 @@ public class SqlDataSourceView extends DataSourceView  {
 
     public ConflictOptions getConflictDetection() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConflictDetection = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ConflictDetection");
+            retObjectConflictDetection = classInstance.Get("ConflictDetection");
+            JCObject val = (JCObject)retObjectConflictDetection;
             return new ConflictOptions(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConflictDetection != null ? retObjectConflictDetection.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -421,7 +494,7 @@ public class SqlDataSourceView extends DataSourceView  {
 
     public void setConflictDetection(ConflictOptions ConflictDetection) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ConflictDetection", ConflictDetection == null ? null : ConflictDetection.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -431,10 +504,14 @@ public class SqlDataSourceView extends DataSourceView  {
 
     public ParameterCollection getDeleteParameters() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDeleteParameters = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DeleteParameters");
+            retObjectDeleteParameters = classInstance.Get("DeleteParameters");
+            JCObject val = (JCObject)retObjectDeleteParameters;
             return new ParameterCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDeleteParameters != null ? retObjectDeleteParameters.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -442,10 +519,14 @@ public class SqlDataSourceView extends DataSourceView  {
 
     public ParameterCollection getFilterParameters() throws Throwable, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFilterParameters = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("FilterParameters");
+            retObjectFilterParameters = classInstance.Get("FilterParameters");
+            JCObject val = (JCObject)retObjectFilterParameters;
             return new ParameterCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFilterParameters != null ? retObjectFilterParameters.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -453,10 +534,14 @@ public class SqlDataSourceView extends DataSourceView  {
 
     public ParameterCollection getInsertParameters() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInsertParameters = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("InsertParameters");
+            retObjectInsertParameters = classInstance.Get("InsertParameters");
+            JCObject val = (JCObject)retObjectInsertParameters;
             return new ParameterCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInsertParameters != null ? retObjectInsertParameters.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -464,10 +549,14 @@ public class SqlDataSourceView extends DataSourceView  {
 
     public ParameterCollection getSelectParameters() throws Throwable, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectParameters = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SelectParameters");
+            retObjectSelectParameters = classInstance.Get("SelectParameters");
+            JCObject val = (JCObject)retObjectSelectParameters;
             return new ParameterCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelectParameters != null ? retObjectSelectParameters.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -475,10 +564,14 @@ public class SqlDataSourceView extends DataSourceView  {
 
     public ParameterCollection getUpdateParameters() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUpdateParameters = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("UpdateParameters");
+            retObjectUpdateParameters = classInstance.Get("UpdateParameters");
+            JCObject val = (JCObject)retObjectUpdateParameters;
             return new ParameterCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUpdateParameters != null ? retObjectUpdateParameters.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -486,10 +579,14 @@ public class SqlDataSourceView extends DataSourceView  {
 
     public SqlDataSourceCommandType getDeleteCommandType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDeleteCommandType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DeleteCommandType");
+            retObjectDeleteCommandType = classInstance.Get("DeleteCommandType");
+            JCObject val = (JCObject)retObjectDeleteCommandType;
             return new SqlDataSourceCommandType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDeleteCommandType != null ? retObjectDeleteCommandType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -497,7 +594,7 @@ public class SqlDataSourceView extends DataSourceView  {
 
     public void setDeleteCommandType(SqlDataSourceCommandType DeleteCommandType) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DeleteCommandType", DeleteCommandType == null ? null : DeleteCommandType.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -507,10 +604,14 @@ public class SqlDataSourceView extends DataSourceView  {
 
     public SqlDataSourceCommandType getInsertCommandType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInsertCommandType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("InsertCommandType");
+            retObjectInsertCommandType = classInstance.Get("InsertCommandType");
+            JCObject val = (JCObject)retObjectInsertCommandType;
             return new SqlDataSourceCommandType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInsertCommandType != null ? retObjectInsertCommandType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -518,7 +619,7 @@ public class SqlDataSourceView extends DataSourceView  {
 
     public void setInsertCommandType(SqlDataSourceCommandType InsertCommandType) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("InsertCommandType", InsertCommandType == null ? null : InsertCommandType.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -528,10 +629,14 @@ public class SqlDataSourceView extends DataSourceView  {
 
     public SqlDataSourceCommandType getSelectCommandType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectCommandType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SelectCommandType");
+            retObjectSelectCommandType = classInstance.Get("SelectCommandType");
+            JCObject val = (JCObject)retObjectSelectCommandType;
             return new SqlDataSourceCommandType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelectCommandType != null ? retObjectSelectCommandType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -539,7 +644,7 @@ public class SqlDataSourceView extends DataSourceView  {
 
     public void setSelectCommandType(SqlDataSourceCommandType SelectCommandType) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SelectCommandType", SelectCommandType == null ? null : SelectCommandType.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -549,10 +654,14 @@ public class SqlDataSourceView extends DataSourceView  {
 
     public SqlDataSourceCommandType getUpdateCommandType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUpdateCommandType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("UpdateCommandType");
+            retObjectUpdateCommandType = classInstance.Get("UpdateCommandType");
+            JCObject val = (JCObject)retObjectUpdateCommandType;
             return new SqlDataSourceCommandType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUpdateCommandType != null ? retObjectUpdateCommandType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -560,7 +669,7 @@ public class SqlDataSourceView extends DataSourceView  {
 
     public void setUpdateCommandType(SqlDataSourceCommandType UpdateCommandType) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UpdateCommandType", UpdateCommandType == null ? null : UpdateCommandType.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -575,7 +684,7 @@ public class SqlDataSourceView extends DataSourceView  {
 
     public void addDeleting(SqlDataSourceCommandEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Deleting", handler);
         } catch (JCNativeException jcne) {
@@ -585,7 +694,7 @@ public class SqlDataSourceView extends DataSourceView  {
 
     public void removeDeleting(SqlDataSourceCommandEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Deleting", handler);
         } catch (JCNativeException jcne) {
@@ -595,7 +704,7 @@ public class SqlDataSourceView extends DataSourceView  {
 
     public void addInserting(SqlDataSourceCommandEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Inserting", handler);
         } catch (JCNativeException jcne) {
@@ -605,7 +714,7 @@ public class SqlDataSourceView extends DataSourceView  {
 
     public void removeInserting(SqlDataSourceCommandEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Inserting", handler);
         } catch (JCNativeException jcne) {
@@ -615,7 +724,7 @@ public class SqlDataSourceView extends DataSourceView  {
 
     public void addUpdating(SqlDataSourceCommandEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Updating", handler);
         } catch (JCNativeException jcne) {
@@ -625,7 +734,7 @@ public class SqlDataSourceView extends DataSourceView  {
 
     public void removeUpdating(SqlDataSourceCommandEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Updating", handler);
         } catch (JCNativeException jcne) {
@@ -635,7 +744,7 @@ public class SqlDataSourceView extends DataSourceView  {
 
     public void addFiltering(SqlDataSourceFilteringEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Filtering", handler);
         } catch (JCNativeException jcne) {
@@ -645,7 +754,7 @@ public class SqlDataSourceView extends DataSourceView  {
 
     public void removeFiltering(SqlDataSourceFilteringEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Filtering", handler);
         } catch (JCNativeException jcne) {
@@ -655,7 +764,7 @@ public class SqlDataSourceView extends DataSourceView  {
 
     public void addSelecting(SqlDataSourceSelectingEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Selecting", handler);
         } catch (JCNativeException jcne) {
@@ -665,7 +774,7 @@ public class SqlDataSourceView extends DataSourceView  {
 
     public void removeSelecting(SqlDataSourceSelectingEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Selecting", handler);
         } catch (JCNativeException jcne) {
@@ -675,7 +784,7 @@ public class SqlDataSourceView extends DataSourceView  {
 
     public void addDeleted(SqlDataSourceStatusEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Deleted", handler);
         } catch (JCNativeException jcne) {
@@ -685,7 +794,7 @@ public class SqlDataSourceView extends DataSourceView  {
 
     public void removeDeleted(SqlDataSourceStatusEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Deleted", handler);
         } catch (JCNativeException jcne) {
@@ -695,7 +804,7 @@ public class SqlDataSourceView extends DataSourceView  {
 
     public void addInserted(SqlDataSourceStatusEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Inserted", handler);
         } catch (JCNativeException jcne) {
@@ -705,7 +814,7 @@ public class SqlDataSourceView extends DataSourceView  {
 
     public void removeInserted(SqlDataSourceStatusEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Inserted", handler);
         } catch (JCNativeException jcne) {
@@ -715,7 +824,7 @@ public class SqlDataSourceView extends DataSourceView  {
 
     public void addSelected(SqlDataSourceStatusEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Selected", handler);
         } catch (JCNativeException jcne) {
@@ -725,7 +834,7 @@ public class SqlDataSourceView extends DataSourceView  {
 
     public void removeSelected(SqlDataSourceStatusEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Selected", handler);
         } catch (JCNativeException jcne) {
@@ -735,7 +844,7 @@ public class SqlDataSourceView extends DataSourceView  {
 
     public void addUpdated(SqlDataSourceStatusEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Updated", handler);
         } catch (JCNativeException jcne) {
@@ -745,7 +854,7 @@ public class SqlDataSourceView extends DataSourceView  {
 
     public void removeUpdated(SqlDataSourceStatusEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Updated", handler);
         } catch (JCNativeException jcne) {

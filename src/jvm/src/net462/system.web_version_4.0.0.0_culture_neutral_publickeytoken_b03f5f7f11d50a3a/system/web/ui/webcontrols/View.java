@@ -172,7 +172,7 @@ public class View extends Control  {
 
     public void addActivate(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Activate", handler);
         } catch (JCNativeException jcne) {
@@ -182,7 +182,7 @@ public class View extends Control  {
 
     public void removeActivate(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Activate", handler);
         } catch (JCNativeException jcne) {
@@ -192,7 +192,7 @@ public class View extends Control  {
 
     public void addDeactivate(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Deactivate", handler);
         } catch (JCNativeException jcne) {
@@ -202,7 +202,7 @@ public class View extends Control  {
 
     public void removeDeactivate(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Deactivate", handler);
         } catch (JCNativeException jcne) {

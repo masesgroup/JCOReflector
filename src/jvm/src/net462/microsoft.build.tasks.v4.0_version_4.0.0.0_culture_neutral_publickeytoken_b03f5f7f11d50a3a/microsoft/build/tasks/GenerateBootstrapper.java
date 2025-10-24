@@ -164,9 +164,13 @@ public class GenerateBootstrapper extends TaskExtension  {
     
     public boolean Execute() throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArgumentException, system.ObjectDisposedException, system.OutOfMemoryException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.NotSupportedException, system.InvalidOperationException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.resources.MissingManifestResourceException, system.xml.XmlException, system.xml.xpath.XPathException, system.xml.schema.XmlSchemaException, system.FormatException, system.OverflowException, system.InvalidCastException, system.NotImplementedException, system.UriFormatException, system.security.cryptography.CryptographicException, system.PlatformNotSupportedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExecute = null;
         try {
-            return (boolean)classInstance.Invoke("Execute");
+            retObjectExecute = classInstance.Invoke("Execute");
+            return (boolean)retObjectExecute;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectExecute != null ? retObjectExecute.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,9 +182,13 @@ public class GenerateBootstrapper extends TaskExtension  {
     
     public boolean getApplicationRequiresElevation() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectApplicationRequiresElevation = null;
         try {
-            return (boolean)classInstance.Get("ApplicationRequiresElevation");
+            retObjectApplicationRequiresElevation = classInstance.Get("ApplicationRequiresElevation");
+            return (boolean)retObjectApplicationRequiresElevation;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectApplicationRequiresElevation != null ? retObjectApplicationRequiresElevation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,7 +196,7 @@ public class GenerateBootstrapper extends TaskExtension  {
 
     public void setApplicationRequiresElevation(boolean ApplicationRequiresElevation) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ApplicationRequiresElevation", ApplicationRequiresElevation);
         } catch (JCNativeException jcne) {
@@ -198,9 +206,13 @@ public class GenerateBootstrapper extends TaskExtension  {
 
     public boolean getCopyComponents() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCopyComponents = null;
         try {
-            return (boolean)classInstance.Get("CopyComponents");
+            retObjectCopyComponents = classInstance.Get("CopyComponents");
+            return (boolean)retObjectCopyComponents;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCopyComponents != null ? retObjectCopyComponents.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -208,7 +220,7 @@ public class GenerateBootstrapper extends TaskExtension  {
 
     public void setCopyComponents(boolean CopyComponents) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CopyComponents", CopyComponents);
         } catch (JCNativeException jcne) {
@@ -218,9 +230,13 @@ public class GenerateBootstrapper extends TaskExtension  {
 
     public boolean getValidate() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValidate = null;
         try {
-            return (boolean)classInstance.Get("Validate");
+            retObjectValidate = classInstance.Get("Validate");
+            return (boolean)retObjectValidate;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectValidate != null ? retObjectValidate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -228,7 +244,7 @@ public class GenerateBootstrapper extends TaskExtension  {
 
     public void setValidate(boolean Validate) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Validate", Validate);
         } catch (JCNativeException jcne) {
@@ -238,16 +254,20 @@ public class GenerateBootstrapper extends TaskExtension  {
 
     public final ITaskItem[] getBootstrapperItems() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBootstrapperItems = null;
         try {
             ArrayList<ITaskItem> resultingArrayList = new ArrayList<ITaskItem>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("BootstrapperItems");
+            retObjectBootstrapperItems = classInstance.Get("BootstrapperItems");
+            JCObject resultingObjects = (JCObject)retObjectBootstrapperItems;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ITaskItemImplementation(resultingObject));
             }
             ITaskItem[] resultingArray = new ITaskItem[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBootstrapperItems != null ? retObjectBootstrapperItems.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -255,7 +275,7 @@ public class GenerateBootstrapper extends TaskExtension  {
 
     public void setBootstrapperItems(ITaskItem[] BootstrapperItems) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BootstrapperItems", toObjectFromArray(BootstrapperItems));
         } catch (JCNativeException jcne) {
@@ -265,9 +285,13 @@ public class GenerateBootstrapper extends TaskExtension  {
 
     public java.lang.String getApplicationFile() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectApplicationFile = null;
         try {
-            return (java.lang.String)classInstance.Get("ApplicationFile");
+            retObjectApplicationFile = classInstance.Get("ApplicationFile");
+            return (java.lang.String)retObjectApplicationFile;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectApplicationFile != null ? retObjectApplicationFile.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -275,7 +299,7 @@ public class GenerateBootstrapper extends TaskExtension  {
 
     public void setApplicationFile(java.lang.String ApplicationFile) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ApplicationFile", ApplicationFile);
         } catch (JCNativeException jcne) {
@@ -285,9 +309,13 @@ public class GenerateBootstrapper extends TaskExtension  {
 
     public java.lang.String getApplicationName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectApplicationName = null;
         try {
-            return (java.lang.String)classInstance.Get("ApplicationName");
+            retObjectApplicationName = classInstance.Get("ApplicationName");
+            return (java.lang.String)retObjectApplicationName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectApplicationName != null ? retObjectApplicationName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -295,7 +323,7 @@ public class GenerateBootstrapper extends TaskExtension  {
 
     public void setApplicationName(java.lang.String ApplicationName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ApplicationName", ApplicationName);
         } catch (JCNativeException jcne) {
@@ -305,9 +333,13 @@ public class GenerateBootstrapper extends TaskExtension  {
 
     public java.lang.String getApplicationUrl() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectApplicationUrl = null;
         try {
-            return (java.lang.String)classInstance.Get("ApplicationUrl");
+            retObjectApplicationUrl = classInstance.Get("ApplicationUrl");
+            return (java.lang.String)retObjectApplicationUrl;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectApplicationUrl != null ? retObjectApplicationUrl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -315,7 +347,7 @@ public class GenerateBootstrapper extends TaskExtension  {
 
     public void setApplicationUrl(java.lang.String ApplicationUrl) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ApplicationUrl", ApplicationUrl);
         } catch (JCNativeException jcne) {
@@ -325,9 +357,13 @@ public class GenerateBootstrapper extends TaskExtension  {
 
     public java.lang.String getBootstrapperKeyFile() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBootstrapperKeyFile = null;
         try {
-            return (java.lang.String)classInstance.Get("BootstrapperKeyFile");
+            retObjectBootstrapperKeyFile = classInstance.Get("BootstrapperKeyFile");
+            return (java.lang.String)retObjectBootstrapperKeyFile;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectBootstrapperKeyFile != null ? retObjectBootstrapperKeyFile.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -335,7 +371,7 @@ public class GenerateBootstrapper extends TaskExtension  {
 
     public void setBootstrapperKeyFile(java.lang.String BootstrapperKeyFile) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BootstrapperKeyFile", BootstrapperKeyFile);
         } catch (JCNativeException jcne) {
@@ -345,9 +381,13 @@ public class GenerateBootstrapper extends TaskExtension  {
 
     public java.lang.String getComponentsLocation() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectComponentsLocation = null;
         try {
-            return (java.lang.String)classInstance.Get("ComponentsLocation");
+            retObjectComponentsLocation = classInstance.Get("ComponentsLocation");
+            return (java.lang.String)retObjectComponentsLocation;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectComponentsLocation != null ? retObjectComponentsLocation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -355,7 +395,7 @@ public class GenerateBootstrapper extends TaskExtension  {
 
     public void setComponentsLocation(java.lang.String ComponentsLocation) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ComponentsLocation", ComponentsLocation);
         } catch (JCNativeException jcne) {
@@ -365,9 +405,13 @@ public class GenerateBootstrapper extends TaskExtension  {
 
     public java.lang.String getComponentsUrl() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectComponentsUrl = null;
         try {
-            return (java.lang.String)classInstance.Get("ComponentsUrl");
+            retObjectComponentsUrl = classInstance.Get("ComponentsUrl");
+            return (java.lang.String)retObjectComponentsUrl;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectComponentsUrl != null ? retObjectComponentsUrl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -375,7 +419,7 @@ public class GenerateBootstrapper extends TaskExtension  {
 
     public void setComponentsUrl(java.lang.String ComponentsUrl) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ComponentsUrl", ComponentsUrl);
         } catch (JCNativeException jcne) {
@@ -385,9 +429,13 @@ public class GenerateBootstrapper extends TaskExtension  {
 
     public java.lang.String getCulture() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCulture = null;
         try {
-            return (java.lang.String)classInstance.Get("Culture");
+            retObjectCulture = classInstance.Get("Culture");
+            return (java.lang.String)retObjectCulture;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectCulture != null ? retObjectCulture.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -395,7 +443,7 @@ public class GenerateBootstrapper extends TaskExtension  {
 
     public void setCulture(java.lang.String Culture) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Culture", Culture);
         } catch (JCNativeException jcne) {
@@ -405,9 +453,13 @@ public class GenerateBootstrapper extends TaskExtension  {
 
     public java.lang.String getFallbackCulture() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFallbackCulture = null;
         try {
-            return (java.lang.String)classInstance.Get("FallbackCulture");
+            retObjectFallbackCulture = classInstance.Get("FallbackCulture");
+            return (java.lang.String)retObjectFallbackCulture;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectFallbackCulture != null ? retObjectFallbackCulture.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -415,7 +467,7 @@ public class GenerateBootstrapper extends TaskExtension  {
 
     public void setFallbackCulture(java.lang.String FallbackCulture) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FallbackCulture", FallbackCulture);
         } catch (JCNativeException jcne) {
@@ -425,9 +477,13 @@ public class GenerateBootstrapper extends TaskExtension  {
 
     public java.lang.String getOutputPath() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOutputPath = null;
         try {
-            return (java.lang.String)classInstance.Get("OutputPath");
+            retObjectOutputPath = classInstance.Get("OutputPath");
+            return (java.lang.String)retObjectOutputPath;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectOutputPath != null ? retObjectOutputPath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -435,7 +491,7 @@ public class GenerateBootstrapper extends TaskExtension  {
 
     public void setOutputPath(java.lang.String OutputPath) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("OutputPath", OutputPath);
         } catch (JCNativeException jcne) {
@@ -445,9 +501,13 @@ public class GenerateBootstrapper extends TaskExtension  {
 
     public java.lang.String getPath() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPath = null;
         try {
-            return (java.lang.String)classInstance.Get("Path");
+            retObjectPath = classInstance.Get("Path");
+            return (java.lang.String)retObjectPath;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectPath != null ? retObjectPath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -455,7 +515,7 @@ public class GenerateBootstrapper extends TaskExtension  {
 
     public void setPath(java.lang.String Path) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Path", Path);
         } catch (JCNativeException jcne) {
@@ -465,9 +525,13 @@ public class GenerateBootstrapper extends TaskExtension  {
 
     public java.lang.String getSupportUrl() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSupportUrl = null;
         try {
-            return (java.lang.String)classInstance.Get("SupportUrl");
+            retObjectSupportUrl = classInstance.Get("SupportUrl");
+            return (java.lang.String)retObjectSupportUrl;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSupportUrl != null ? retObjectSupportUrl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -475,7 +539,7 @@ public class GenerateBootstrapper extends TaskExtension  {
 
     public void setSupportUrl(java.lang.String SupportUrl) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SupportUrl", SupportUrl);
         } catch (JCNativeException jcne) {
@@ -485,9 +549,13 @@ public class GenerateBootstrapper extends TaskExtension  {
 
     public java.lang.String getVisualStudioVersion() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVisualStudioVersion = null;
         try {
-            return (java.lang.String)classInstance.Get("VisualStudioVersion");
+            retObjectVisualStudioVersion = classInstance.Get("VisualStudioVersion");
+            return (java.lang.String)retObjectVisualStudioVersion;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectVisualStudioVersion != null ? retObjectVisualStudioVersion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -495,7 +563,7 @@ public class GenerateBootstrapper extends TaskExtension  {
 
     public void setVisualStudioVersion(java.lang.String VisualStudioVersion) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("VisualStudioVersion", VisualStudioVersion);
         } catch (JCNativeException jcne) {
@@ -505,10 +573,12 @@ public class GenerateBootstrapper extends TaskExtension  {
 
     public java.lang.String[] getBootstrapperComponentFiles() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBootstrapperComponentFiles = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("BootstrapperComponentFiles");
+            retObjectBootstrapperComponentFiles = classInstance.Get("BootstrapperComponentFiles");
+            JCObject resultingObjects = (JCObject)retObjectBootstrapperComponentFiles;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -517,6 +587,8 @@ public class GenerateBootstrapper extends TaskExtension  {
 				resultingArray[indexBootstrapperComponentFiles] = (java.lang.String)resultingArrayList.get(indexBootstrapperComponentFiles);
 			}
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into JCObject", retObjectBootstrapperComponentFiles != null ? retObjectBootstrapperComponentFiles.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -524,7 +596,7 @@ public class GenerateBootstrapper extends TaskExtension  {
 
     public void setBootstrapperComponentFiles(java.lang.String[] BootstrapperComponentFiles) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BootstrapperComponentFiles", BootstrapperComponentFiles);
         } catch (JCNativeException jcne) {

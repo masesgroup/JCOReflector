@@ -170,9 +170,20 @@ public class UpDownEventArgs extends EventArgs  {
     
     public int getButtonID() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectButtonID = null;
         try {
-            return (int)classInstance.Get("ButtonID");
+            retObjectButtonID = classInstance.Get("ButtonID");
+            return (int)retObjectButtonID;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectButtonID_ToString = retObjectButtonID == null ? "null" : retObjectButtonID.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectButtonIDNumber = (java.lang.Number)retObjectButtonID;
+                return retObjectButtonIDNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectButtonID != null ? retObjectButtonID.getClass() : "null", retObjectButtonID_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

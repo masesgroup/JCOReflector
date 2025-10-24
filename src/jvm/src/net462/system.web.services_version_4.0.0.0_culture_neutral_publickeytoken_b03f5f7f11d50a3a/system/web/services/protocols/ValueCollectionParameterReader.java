@@ -156,9 +156,13 @@ public class ValueCollectionParameterReader extends MimeParameterReader  {
     
     public static boolean IsSupported(ParameterInfo paramInfo) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsSupported = null;
         try {
-            return (boolean)classType.Invoke("IsSupported", paramInfo == null ? null : paramInfo.getJCOInstance());
+            retObjectIsSupported = classType.Invoke("IsSupported", paramInfo == null ? null : paramInfo.getJCOInstance());
+            return (boolean)retObjectIsSupported;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsSupported != null ? retObjectIsSupported.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -166,9 +170,13 @@ public class ValueCollectionParameterReader extends MimeParameterReader  {
 
     public static boolean IsSupported(LogicalMethodInfo methodInfo) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsSupported = null;
         try {
-            return (boolean)classType.Invoke("IsSupported", methodInfo == null ? null : methodInfo.getJCOInstance());
+            retObjectIsSupported = classType.Invoke("IsSupported", methodInfo == null ? null : methodInfo.getJCOInstance());
+            return (boolean)retObjectIsSupported;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsSupported != null ? retObjectIsSupported.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,10 +184,14 @@ public class ValueCollectionParameterReader extends MimeParameterReader  {
 
     public NetObject GetInitializer(LogicalMethodInfo methodInfo) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetInitializer = null;
         try {
-            JCObject objGetInitializer = (JCObject)classInstance.Invoke("GetInitializer", methodInfo == null ? null : methodInfo.getJCOInstance());
+            retObjectGetInitializer = classInstance.Invoke("GetInitializer", methodInfo == null ? null : methodInfo.getJCOInstance());
+            JCObject objGetInitializer = (JCObject)retObjectGetInitializer;
             return new NetObject(objGetInitializer);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetInitializer != null ? retObjectGetInitializer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,7 +199,7 @@ public class ValueCollectionParameterReader extends MimeParameterReader  {
 
     public void Initialize(NetObject o) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Initialize", o == null ? null : o.getJCOInstance());
         } catch (JCNativeException jcne) {

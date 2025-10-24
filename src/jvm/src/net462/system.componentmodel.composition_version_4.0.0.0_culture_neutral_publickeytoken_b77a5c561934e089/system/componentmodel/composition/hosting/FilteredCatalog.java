@@ -157,10 +157,14 @@ public class FilteredCatalog extends ComposablePartCatalog  {
     
     public FilteredCatalog IncludeDependencies() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentException, system.componentmodel.composition.ChangeRejectedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIncludeDependencies = null;
         try {
-            JCObject objIncludeDependencies = (JCObject)classInstance.Invoke("IncludeDependencies");
+            retObjectIncludeDependencies = classInstance.Invoke("IncludeDependencies");
+            JCObject objIncludeDependencies = (JCObject)retObjectIncludeDependencies;
             return new FilteredCatalog(objIncludeDependencies);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIncludeDependencies != null ? retObjectIncludeDependencies.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -168,10 +172,14 @@ public class FilteredCatalog extends ComposablePartCatalog  {
 
     public FilteredCatalog IncludeDependents() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentException, system.componentmodel.composition.ChangeRejectedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIncludeDependents = null;
         try {
-            JCObject objIncludeDependents = (JCObject)classInstance.Invoke("IncludeDependents");
+            retObjectIncludeDependents = classInstance.Invoke("IncludeDependents");
+            JCObject objIncludeDependents = (JCObject)retObjectIncludeDependents;
             return new FilteredCatalog(objIncludeDependents);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIncludeDependents != null ? retObjectIncludeDependents.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,10 +191,14 @@ public class FilteredCatalog extends ComposablePartCatalog  {
     
     public FilteredCatalog getComplement() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectComplement = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Complement");
+            retObjectComplement = classInstance.Get("Complement");
+            JCObject val = (JCObject)retObjectComplement;
             return new FilteredCatalog(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectComplement != null ? retObjectComplement.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

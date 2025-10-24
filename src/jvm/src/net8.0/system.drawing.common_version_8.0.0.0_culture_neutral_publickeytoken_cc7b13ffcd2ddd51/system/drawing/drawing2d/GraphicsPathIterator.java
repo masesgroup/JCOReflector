@@ -168,9 +168,13 @@ public class GraphicsPathIterator extends MarshalByRefObject implements AutoClos
     
     public boolean HasCurve() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHasCurve = null;
         try {
-            return (boolean)classInstance.Invoke("HasCurve");
+            retObjectHasCurve = classInstance.Invoke("HasCurve");
+            return (boolean)retObjectHasCurve;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectHasCurve != null ? retObjectHasCurve.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,9 +182,20 @@ public class GraphicsPathIterator extends MarshalByRefObject implements AutoClos
 
     public int CopyData(JCORefOut<PointF[]> points, JCORefOut types, int startIndex, int endIndex) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OverflowException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCopyData = null;
         try {
-            return (int)classInstance.Invoke("CopyData", points.getJCRefOut(), types.getJCRefOut(), startIndex, endIndex);
+            retObjectCopyData = classInstance.Invoke("CopyData", points.getJCRefOut(), types.getJCRefOut(), startIndex, endIndex);
+            return (int)retObjectCopyData;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCopyData_ToString = retObjectCopyData == null ? "null" : retObjectCopyData.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectCopyDataNumber = (java.lang.Number)retObjectCopyData;
+                return retObjectCopyDataNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCopyData != null ? retObjectCopyData.getClass() : "null", retObjectCopyData_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,9 +203,20 @@ public class GraphicsPathIterator extends MarshalByRefObject implements AutoClos
 
     public int Enumerate(JCORefOut<PointF[]> points, JCORefOut types) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OverflowException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEnumerate = null;
         try {
-            return (int)classInstance.Invoke("Enumerate", points.getJCRefOut(), types.getJCRefOut());
+            retObjectEnumerate = classInstance.Invoke("Enumerate", points.getJCRefOut(), types.getJCRefOut());
+            return (int)retObjectEnumerate;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectEnumerate_ToString = retObjectEnumerate == null ? "null" : retObjectEnumerate.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectEnumerateNumber = (java.lang.Number)retObjectEnumerate;
+                return retObjectEnumerateNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectEnumerate != null ? retObjectEnumerate.getClass() : "null", retObjectEnumerate_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,9 +224,20 @@ public class GraphicsPathIterator extends MarshalByRefObject implements AutoClos
 
     public int NextMarker(JCORefOut<java.util.concurrent.atomic.AtomicInteger> startIndex, JCORefOut<java.util.concurrent.atomic.AtomicInteger> endIndex) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNextMarker = null;
         try {
-            return (int)classInstance.Invoke("NextMarker", startIndex.getJCRefOut(), endIndex.getJCRefOut());
+            retObjectNextMarker = classInstance.Invoke("NextMarker", startIndex.getJCRefOut(), endIndex.getJCRefOut());
+            return (int)retObjectNextMarker;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectNextMarker_ToString = retObjectNextMarker == null ? "null" : retObjectNextMarker.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectNextMarkerNumber = (java.lang.Number)retObjectNextMarker;
+                return retObjectNextMarkerNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectNextMarker != null ? retObjectNextMarker.getClass() : "null", retObjectNextMarker_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -208,9 +245,20 @@ public class GraphicsPathIterator extends MarshalByRefObject implements AutoClos
 
     public int NextMarker(GraphicsPath path) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNextMarker = null;
         try {
-            return (int)classInstance.Invoke("NextMarker", path == null ? null : path.getJCOInstance());
+            retObjectNextMarker = classInstance.Invoke("NextMarker", path == null ? null : path.getJCOInstance());
+            return (int)retObjectNextMarker;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectNextMarker_ToString = retObjectNextMarker == null ? "null" : retObjectNextMarker.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectNextMarkerNumber = (java.lang.Number)retObjectNextMarker;
+                return retObjectNextMarkerNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectNextMarker != null ? retObjectNextMarker.getClass() : "null", retObjectNextMarker_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -218,9 +266,20 @@ public class GraphicsPathIterator extends MarshalByRefObject implements AutoClos
 
     public int NextPathType(JCORefOut<java.util.concurrent.atomic.AtomicReference<java.lang.Byte>> pathType, JCORefOut<java.util.concurrent.atomic.AtomicInteger> startIndex, JCORefOut<java.util.concurrent.atomic.AtomicInteger> endIndex) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNextPathType = null;
         try {
-            return (int)classInstance.Invoke("NextPathType", pathType.getJCRefOut(), startIndex.getJCRefOut(), endIndex.getJCRefOut());
+            retObjectNextPathType = classInstance.Invoke("NextPathType", pathType.getJCRefOut(), startIndex.getJCRefOut(), endIndex.getJCRefOut());
+            return (int)retObjectNextPathType;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectNextPathType_ToString = retObjectNextPathType == null ? "null" : retObjectNextPathType.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectNextPathTypeNumber = (java.lang.Number)retObjectNextPathType;
+                return retObjectNextPathTypeNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectNextPathType != null ? retObjectNextPathType.getClass() : "null", retObjectNextPathType_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -228,9 +287,20 @@ public class GraphicsPathIterator extends MarshalByRefObject implements AutoClos
 
     public int NextSubpath(JCORefOut<java.util.concurrent.atomic.AtomicInteger> startIndex, JCORefOut<java.util.concurrent.atomic.AtomicInteger> endIndex, JCORefOut<java.util.concurrent.atomic.AtomicBoolean> isClosed) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNextSubpath = null;
         try {
-            return (int)classInstance.Invoke("NextSubpath", startIndex.getJCRefOut(), endIndex.getJCRefOut(), isClosed.getJCRefOut());
+            retObjectNextSubpath = classInstance.Invoke("NextSubpath", startIndex.getJCRefOut(), endIndex.getJCRefOut(), isClosed.getJCRefOut());
+            return (int)retObjectNextSubpath;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectNextSubpath_ToString = retObjectNextSubpath == null ? "null" : retObjectNextSubpath.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectNextSubpathNumber = (java.lang.Number)retObjectNextSubpath;
+                return retObjectNextSubpathNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectNextSubpath != null ? retObjectNextSubpath.getClass() : "null", retObjectNextSubpath_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -238,9 +308,20 @@ public class GraphicsPathIterator extends MarshalByRefObject implements AutoClos
 
     public int NextSubpath(GraphicsPath path, JCORefOut<java.util.concurrent.atomic.AtomicBoolean> isClosed) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNextSubpath = null;
         try {
-            return (int)classInstance.Invoke("NextSubpath", path == null ? null : path.getJCOInstance(), isClosed.getJCRefOut());
+            retObjectNextSubpath = classInstance.Invoke("NextSubpath", path == null ? null : path.getJCOInstance(), isClosed.getJCRefOut());
+            return (int)retObjectNextSubpath;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectNextSubpath_ToString = retObjectNextSubpath == null ? "null" : retObjectNextSubpath.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectNextSubpathNumber = (java.lang.Number)retObjectNextSubpath;
+                return retObjectNextSubpathNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectNextSubpath != null ? retObjectNextSubpath.getClass() : "null", retObjectNextSubpath_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -248,7 +329,7 @@ public class GraphicsPathIterator extends MarshalByRefObject implements AutoClos
 
     public void Dispose() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
@@ -258,7 +339,7 @@ public class GraphicsPathIterator extends MarshalByRefObject implements AutoClos
 
     public void Rewind() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OverflowException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Rewind");
         } catch (JCNativeException jcne) {
@@ -269,7 +350,7 @@ public class GraphicsPathIterator extends MarshalByRefObject implements AutoClos
     public void close() throws Exception {
         try {
             if (classInstance == null)
-                throw new UnsupportedOperationException("classInstance is null.");
+                throw new java.lang.UnsupportedOperationException("classInstance is null.");
             try {
                 classInstance.Invoke("Dispose");
             }
@@ -285,9 +366,20 @@ public class GraphicsPathIterator extends MarshalByRefObject implements AutoClos
     
     public int getCount() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCount = null;
         try {
-            return (int)classInstance.Get("Count");
+            retObjectCount = classInstance.Get("Count");
+            return (int)retObjectCount;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCount_ToString = retObjectCount == null ? "null" : retObjectCount.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectCountNumber = (java.lang.Number)retObjectCount;
+                return retObjectCountNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCount != null ? retObjectCount.getClass() : "null", retObjectCount_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -295,9 +387,20 @@ public class GraphicsPathIterator extends MarshalByRefObject implements AutoClos
 
     public int getSubpathCount() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSubpathCount = null;
         try {
-            return (int)classInstance.Get("SubpathCount");
+            retObjectSubpathCount = classInstance.Get("SubpathCount");
+            return (int)retObjectSubpathCount;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSubpathCount_ToString = retObjectSubpathCount == null ? "null" : retObjectSubpathCount.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectSubpathCountNumber = (java.lang.Number)retObjectSubpathCount;
+                return retObjectSubpathCountNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectSubpathCount != null ? retObjectSubpathCount.getClass() : "null", retObjectSubpathCount_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

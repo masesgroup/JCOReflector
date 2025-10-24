@@ -143,7 +143,7 @@ public class IDockProviderImplementation extends NetObject implements IDockProvi
     
     public void SetDockPosition(DockPosition dockPosition) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetDockPosition", dockPosition == null ? null : dockPosition.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -157,10 +157,14 @@ public class IDockProviderImplementation extends NetObject implements IDockProvi
     
     public DockPosition getDockPosition() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDockPosition = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DockPosition");
+            retObjectDockPosition = classInstance.Get("DockPosition");
+            JCObject val = (JCObject)retObjectDockPosition;
             return new DockPosition(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDockPosition != null ? retObjectDockPosition.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

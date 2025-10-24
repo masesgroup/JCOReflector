@@ -163,9 +163,13 @@ public class TableRow extends TextElement  {
     
     public boolean ShouldSerializeCells() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShouldSerializeCells = null;
         try {
-            return (boolean)classInstance.Invoke("ShouldSerializeCells");
+            retObjectShouldSerializeCells = classInstance.Invoke("ShouldSerializeCells");
+            return (boolean)retObjectShouldSerializeCells;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectShouldSerializeCells != null ? retObjectShouldSerializeCells.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,10 +181,14 @@ public class TableRow extends TextElement  {
     
     public TableCellCollection getCells() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCells = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Cells");
+            retObjectCells = classInstance.Get("Cells");
+            JCObject val = (JCObject)retObjectCells;
             return new TableCellCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCells != null ? retObjectCells.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

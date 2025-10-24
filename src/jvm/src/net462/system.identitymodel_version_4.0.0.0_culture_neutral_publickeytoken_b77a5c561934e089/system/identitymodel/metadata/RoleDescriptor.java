@@ -160,10 +160,14 @@ public class RoleDescriptor extends NetObject  {
     
     public DateTime getValidUntil() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValidUntil = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ValidUntil");
+            retObjectValidUntil = classInstance.Get("ValidUntil");
+            JCObject val = (JCObject)retObjectValidUntil;
             return new DateTime(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectValidUntil != null ? retObjectValidUntil.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,7 +175,7 @@ public class RoleDescriptor extends NetObject  {
 
     public void setValidUntil(DateTime ValidUntil) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ValidUntil", ValidUntil == null ? null : ValidUntil.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -181,10 +185,14 @@ public class RoleDescriptor extends NetObject  {
 
     public Organization getOrganization() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOrganization = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Organization");
+            retObjectOrganization = classInstance.Get("Organization");
+            JCObject val = (JCObject)retObjectOrganization;
             return new Organization(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOrganization != null ? retObjectOrganization.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,7 +200,7 @@ public class RoleDescriptor extends NetObject  {
 
     public void setOrganization(Organization Organization) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Organization", Organization == null ? null : Organization.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -202,10 +210,14 @@ public class RoleDescriptor extends NetObject  {
 
     public Uri getErrorUrl() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectErrorUrl = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ErrorUrl");
+            retObjectErrorUrl = classInstance.Get("ErrorUrl");
+            JCObject val = (JCObject)retObjectErrorUrl;
             return new Uri(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectErrorUrl != null ? retObjectErrorUrl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,7 +225,7 @@ public class RoleDescriptor extends NetObject  {
 
     public void setErrorUrl(Uri ErrorUrl) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ErrorUrl", ErrorUrl == null ? null : ErrorUrl.getJCOInstance());
         } catch (JCNativeException jcne) {

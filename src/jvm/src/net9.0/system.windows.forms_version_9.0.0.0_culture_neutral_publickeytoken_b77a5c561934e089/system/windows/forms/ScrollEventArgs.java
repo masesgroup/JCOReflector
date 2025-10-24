@@ -202,9 +202,20 @@ public class ScrollEventArgs extends EventArgs  {
     
     public int getNewValue() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNewValue = null;
         try {
-            return (int)classInstance.Get("NewValue");
+            retObjectNewValue = classInstance.Get("NewValue");
+            return (int)retObjectNewValue;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectNewValue_ToString = retObjectNewValue == null ? "null" : retObjectNewValue.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectNewValueNumber = (java.lang.Number)retObjectNewValue;
+                return retObjectNewValueNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectNewValue != null ? retObjectNewValue.getClass() : "null", retObjectNewValue_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -212,7 +223,7 @@ public class ScrollEventArgs extends EventArgs  {
 
     public void setNewValue(int NewValue) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("NewValue", NewValue);
         } catch (JCNativeException jcne) {
@@ -222,9 +233,20 @@ public class ScrollEventArgs extends EventArgs  {
 
     public int getOldValue() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOldValue = null;
         try {
-            return (int)classInstance.Get("OldValue");
+            retObjectOldValue = classInstance.Get("OldValue");
+            return (int)retObjectOldValue;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectOldValue_ToString = retObjectOldValue == null ? "null" : retObjectOldValue.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectOldValueNumber = (java.lang.Number)retObjectOldValue;
+                return retObjectOldValueNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectOldValue != null ? retObjectOldValue.getClass() : "null", retObjectOldValue_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -232,10 +254,14 @@ public class ScrollEventArgs extends EventArgs  {
 
     public ScrollEventType getType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Type");
+            retObjectType = classInstance.Get("Type");
+            JCObject val = (JCObject)retObjectType;
             return new ScrollEventType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectType != null ? retObjectType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -243,10 +269,14 @@ public class ScrollEventArgs extends EventArgs  {
 
     public ScrollOrientation getScrollOrientation() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectScrollOrientation = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ScrollOrientation");
+            retObjectScrollOrientation = classInstance.Get("ScrollOrientation");
+            JCObject val = (JCObject)retObjectScrollOrientation;
             return new ScrollOrientation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectScrollOrientation != null ? retObjectScrollOrientation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -197,9 +197,13 @@ public class Regex extends NetObject implements system.runtime.serialization.ISe
     
     public boolean IsMatch(java.lang.String input) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.text.regularexpressions.RegexMatchTimeoutException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsMatch = null;
         try {
-            return (boolean)classInstance.Invoke("IsMatch", input);
+            retObjectIsMatch = classInstance.Invoke("IsMatch", input);
+            return (boolean)retObjectIsMatch;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsMatch != null ? retObjectIsMatch.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -207,9 +211,13 @@ public class Regex extends NetObject implements system.runtime.serialization.ISe
 
     public boolean IsMatch(java.lang.String input, int startat) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OverflowException, system.text.regularexpressions.RegexMatchTimeoutException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsMatch = null;
         try {
-            return (boolean)classInstance.Invoke("IsMatch", input, startat);
+            retObjectIsMatch = classInstance.Invoke("IsMatch", input, startat);
+            return (boolean)retObjectIsMatch;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsMatch != null ? retObjectIsMatch.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -217,9 +225,13 @@ public class Regex extends NetObject implements system.runtime.serialization.ISe
 
     public static boolean IsMatch(java.lang.String input, java.lang.String pattern) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NullReferenceException, system.collections.generic.KeyNotFoundException, system.NotSupportedException, system.RankException, system.security.SecurityException, system.NotImplementedException, system.OverflowException, system.text.regularexpressions.RegexMatchTimeoutException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsMatch = null;
         try {
-            return (boolean)classType.Invoke("IsMatch", input, pattern);
+            retObjectIsMatch = classType.Invoke("IsMatch", input, pattern);
+            return (boolean)retObjectIsMatch;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsMatch != null ? retObjectIsMatch.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -227,9 +239,13 @@ public class Regex extends NetObject implements system.runtime.serialization.ISe
 
     public static boolean IsMatch(java.lang.String input, java.lang.String pattern, RegexOptions options) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NullReferenceException, system.collections.generic.KeyNotFoundException, system.NotSupportedException, system.RankException, system.security.SecurityException, system.NotImplementedException, system.OverflowException, system.text.regularexpressions.RegexMatchTimeoutException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsMatch = null;
         try {
-            return (boolean)classType.Invoke("IsMatch", input, pattern, options == null ? null : options.getJCOInstance());
+            retObjectIsMatch = classType.Invoke("IsMatch", input, pattern, options == null ? null : options.getJCOInstance());
+            return (boolean)retObjectIsMatch;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsMatch != null ? retObjectIsMatch.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -237,9 +253,13 @@ public class Regex extends NetObject implements system.runtime.serialization.ISe
 
     public static boolean IsMatch(java.lang.String input, java.lang.String pattern, RegexOptions options, TimeSpan matchTimeout) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.FormatException, system.NullReferenceException, system.collections.generic.KeyNotFoundException, system.RankException, system.security.SecurityException, system.OverflowException, system.text.regularexpressions.RegexMatchTimeoutException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsMatch = null;
         try {
-            return (boolean)classType.Invoke("IsMatch", input, pattern, options == null ? null : options.getJCOInstance(), matchTimeout == null ? null : matchTimeout.getJCOInstance());
+            retObjectIsMatch = classType.Invoke("IsMatch", input, pattern, options == null ? null : options.getJCOInstance(), matchTimeout == null ? null : matchTimeout.getJCOInstance());
+            return (boolean)retObjectIsMatch;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsMatch != null ? retObjectIsMatch.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -247,9 +267,20 @@ public class Regex extends NetObject implements system.runtime.serialization.ISe
 
     public int GroupNumberFromName(java.lang.String name) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGroupNumberFromName = null;
         try {
-            return (int)classInstance.Invoke("GroupNumberFromName", name);
+            retObjectGroupNumberFromName = classInstance.Invoke("GroupNumberFromName", name);
+            return (int)retObjectGroupNumberFromName;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGroupNumberFromName_ToString = retObjectGroupNumberFromName == null ? "null" : retObjectGroupNumberFromName.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGroupNumberFromNameNumber = (java.lang.Number)retObjectGroupNumberFromName;
+                return retObjectGroupNumberFromNameNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGroupNumberFromName != null ? retObjectGroupNumberFromName.getClass() : "null", retObjectGroupNumberFromName_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -257,10 +288,12 @@ public class Regex extends NetObject implements system.runtime.serialization.ISe
 
     public int[] GetGroupNumbers() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetGroupNumbers = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetGroupNumbers");
+            retObjectGetGroupNumbers = classInstance.Invoke("GetGroupNumbers");
+            JCObject resultingObjects = (JCObject)retObjectGetGroupNumbers;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -269,6 +302,8 @@ public class Regex extends NetObject implements system.runtime.serialization.ISe
 				resultingArray[indexGetGroupNumbers] = (int)resultingArrayList.get(indexGetGroupNumbers);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectGetGroupNumbers != null ? retObjectGetGroupNumbers.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -276,9 +311,13 @@ public class Regex extends NetObject implements system.runtime.serialization.ISe
 
     public static java.lang.String Escape(java.lang.String str) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectEscape = null;
         try {
-            return (java.lang.String)classType.Invoke("Escape", str);
+            retObjectEscape = classType.Invoke("Escape", str);
+            return (java.lang.String)retObjectEscape;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectEscape != null ? retObjectEscape.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -286,9 +325,13 @@ public class Regex extends NetObject implements system.runtime.serialization.ISe
 
     public java.lang.String GroupNameFromNumber(int i) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGroupNameFromNumber = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GroupNameFromNumber", i);
+            retObjectGroupNameFromNumber = classInstance.Invoke("GroupNameFromNumber", i);
+            return (java.lang.String)retObjectGroupNameFromNumber;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGroupNameFromNumber != null ? retObjectGroupNameFromNumber.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -296,9 +339,13 @@ public class Regex extends NetObject implements system.runtime.serialization.ISe
 
     public java.lang.String Replace(java.lang.String input, java.lang.String replacement) throws Throwable, system.ArgumentNullException, system.NullReferenceException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.text.regularexpressions.RegexMatchTimeoutException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReplace = null;
         try {
-            return (java.lang.String)classInstance.Invoke("Replace", input, replacement);
+            retObjectReplace = classInstance.Invoke("Replace", input, replacement);
+            return (java.lang.String)retObjectReplace;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectReplace != null ? retObjectReplace.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -306,9 +353,13 @@ public class Regex extends NetObject implements system.runtime.serialization.ISe
 
     public java.lang.String Replace(java.lang.String input, java.lang.String replacement, int count) throws Throwable, system.ArgumentNullException, system.NullReferenceException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.text.regularexpressions.RegexMatchTimeoutException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReplace = null;
         try {
-            return (java.lang.String)classInstance.Invoke("Replace", input, replacement, count);
+            retObjectReplace = classInstance.Invoke("Replace", input, replacement, count);
+            return (java.lang.String)retObjectReplace;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectReplace != null ? retObjectReplace.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -316,9 +367,13 @@ public class Regex extends NetObject implements system.runtime.serialization.ISe
 
     public java.lang.String Replace(java.lang.String input, java.lang.String replacement, int count, int startat) throws Throwable, system.ArgumentNullException, system.NullReferenceException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.text.regularexpressions.RegexMatchTimeoutException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReplace = null;
         try {
-            return (java.lang.String)classInstance.Invoke("Replace", input, replacement, count, startat);
+            retObjectReplace = classInstance.Invoke("Replace", input, replacement, count, startat);
+            return (java.lang.String)retObjectReplace;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectReplace != null ? retObjectReplace.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -326,9 +381,13 @@ public class Regex extends NetObject implements system.runtime.serialization.ISe
 
     public static java.lang.String Replace(java.lang.String input, java.lang.String pattern, java.lang.String replacement) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NullReferenceException, system.collections.generic.KeyNotFoundException, system.NotSupportedException, system.RankException, system.security.SecurityException, system.NotImplementedException, system.text.regularexpressions.RegexMatchTimeoutException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectReplace = null;
         try {
-            return (java.lang.String)classType.Invoke("Replace", input, pattern, replacement);
+            retObjectReplace = classType.Invoke("Replace", input, pattern, replacement);
+            return (java.lang.String)retObjectReplace;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectReplace != null ? retObjectReplace.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -336,9 +395,13 @@ public class Regex extends NetObject implements system.runtime.serialization.ISe
 
     public static java.lang.String Replace(java.lang.String input, java.lang.String pattern, java.lang.String replacement, RegexOptions options) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NullReferenceException, system.collections.generic.KeyNotFoundException, system.NotSupportedException, system.RankException, system.security.SecurityException, system.NotImplementedException, system.text.regularexpressions.RegexMatchTimeoutException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectReplace = null;
         try {
-            return (java.lang.String)classType.Invoke("Replace", input, pattern, replacement, options == null ? null : options.getJCOInstance());
+            retObjectReplace = classType.Invoke("Replace", input, pattern, replacement, options == null ? null : options.getJCOInstance());
+            return (java.lang.String)retObjectReplace;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectReplace != null ? retObjectReplace.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -346,9 +409,13 @@ public class Regex extends NetObject implements system.runtime.serialization.ISe
 
     public static java.lang.String Replace(java.lang.String input, java.lang.String pattern, java.lang.String replacement, RegexOptions options, TimeSpan matchTimeout) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.FormatException, system.NullReferenceException, system.collections.generic.KeyNotFoundException, system.RankException, system.security.SecurityException, system.text.regularexpressions.RegexMatchTimeoutException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectReplace = null;
         try {
-            return (java.lang.String)classType.Invoke("Replace", input, pattern, replacement, options == null ? null : options.getJCOInstance(), matchTimeout == null ? null : matchTimeout.getJCOInstance());
+            retObjectReplace = classType.Invoke("Replace", input, pattern, replacement, options == null ? null : options.getJCOInstance(), matchTimeout == null ? null : matchTimeout.getJCOInstance());
+            return (java.lang.String)retObjectReplace;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectReplace != null ? retObjectReplace.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -356,9 +423,13 @@ public class Regex extends NetObject implements system.runtime.serialization.ISe
 
     public static java.lang.String Replace(java.lang.String input, java.lang.String pattern, MatchEvaluator evaluator) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NullReferenceException, system.collections.generic.KeyNotFoundException, system.NotSupportedException, system.RankException, system.security.SecurityException, system.NotImplementedException, system.text.regularexpressions.RegexMatchTimeoutException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectReplace = null;
         try {
-            return (java.lang.String)classType.Invoke("Replace", input, pattern, evaluator);
+            retObjectReplace = classType.Invoke("Replace", input, pattern, evaluator);
+            return (java.lang.String)retObjectReplace;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectReplace != null ? retObjectReplace.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -366,9 +437,13 @@ public class Regex extends NetObject implements system.runtime.serialization.ISe
 
     public static java.lang.String Replace(java.lang.String input, java.lang.String pattern, MatchEvaluator evaluator, RegexOptions options) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NullReferenceException, system.collections.generic.KeyNotFoundException, system.NotSupportedException, system.RankException, system.security.SecurityException, system.NotImplementedException, system.text.regularexpressions.RegexMatchTimeoutException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectReplace = null;
         try {
-            return (java.lang.String)classType.Invoke("Replace", input, pattern, evaluator, options == null ? null : options.getJCOInstance());
+            retObjectReplace = classType.Invoke("Replace", input, pattern, evaluator, options == null ? null : options.getJCOInstance());
+            return (java.lang.String)retObjectReplace;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectReplace != null ? retObjectReplace.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -376,9 +451,13 @@ public class Regex extends NetObject implements system.runtime.serialization.ISe
 
     public static java.lang.String Replace(java.lang.String input, java.lang.String pattern, MatchEvaluator evaluator, RegexOptions options, TimeSpan matchTimeout) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.FormatException, system.NullReferenceException, system.collections.generic.KeyNotFoundException, system.RankException, system.security.SecurityException, system.text.regularexpressions.RegexMatchTimeoutException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectReplace = null;
         try {
-            return (java.lang.String)classType.Invoke("Replace", input, pattern, evaluator, options == null ? null : options.getJCOInstance(), matchTimeout == null ? null : matchTimeout.getJCOInstance());
+            retObjectReplace = classType.Invoke("Replace", input, pattern, evaluator, options == null ? null : options.getJCOInstance(), matchTimeout == null ? null : matchTimeout.getJCOInstance());
+            return (java.lang.String)retObjectReplace;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectReplace != null ? retObjectReplace.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -386,9 +465,13 @@ public class Regex extends NetObject implements system.runtime.serialization.ISe
 
     public java.lang.String Replace(java.lang.String input, MatchEvaluator evaluator) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.text.regularexpressions.RegexMatchTimeoutException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReplace = null;
         try {
-            return (java.lang.String)classInstance.Invoke("Replace", input, evaluator);
+            retObjectReplace = classInstance.Invoke("Replace", input, evaluator);
+            return (java.lang.String)retObjectReplace;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectReplace != null ? retObjectReplace.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -396,9 +479,13 @@ public class Regex extends NetObject implements system.runtime.serialization.ISe
 
     public java.lang.String Replace(java.lang.String input, MatchEvaluator evaluator, int count) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.text.regularexpressions.RegexMatchTimeoutException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReplace = null;
         try {
-            return (java.lang.String)classInstance.Invoke("Replace", input, evaluator, count);
+            retObjectReplace = classInstance.Invoke("Replace", input, evaluator, count);
+            return (java.lang.String)retObjectReplace;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectReplace != null ? retObjectReplace.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -406,9 +493,13 @@ public class Regex extends NetObject implements system.runtime.serialization.ISe
 
     public java.lang.String Replace(java.lang.String input, MatchEvaluator evaluator, int count, int startat) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OverflowException, system.text.regularexpressions.RegexMatchTimeoutException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReplace = null;
         try {
-            return (java.lang.String)classInstance.Invoke("Replace", input, evaluator, count, startat);
+            retObjectReplace = classInstance.Invoke("Replace", input, evaluator, count, startat);
+            return (java.lang.String)retObjectReplace;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectReplace != null ? retObjectReplace.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -416,9 +507,13 @@ public class Regex extends NetObject implements system.runtime.serialization.ISe
 
     public static java.lang.String Unescape(java.lang.String str) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.OutOfMemoryException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectUnescape = null;
         try {
-            return (java.lang.String)classType.Invoke("Unescape", str);
+            retObjectUnescape = classType.Invoke("Unescape", str);
+            return (java.lang.String)retObjectUnescape;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectUnescape != null ? retObjectUnescape.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -426,10 +521,12 @@ public class Regex extends NetObject implements system.runtime.serialization.ISe
 
     public java.lang.String[] GetGroupNames() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetGroupNames = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetGroupNames");
+            retObjectGetGroupNames = classInstance.Invoke("GetGroupNames");
+            JCObject resultingObjects = (JCObject)retObjectGetGroupNames;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -438,6 +535,8 @@ public class Regex extends NetObject implements system.runtime.serialization.ISe
 				resultingArray[indexGetGroupNames] = (java.lang.String)resultingArrayList.get(indexGetGroupNames);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectGetGroupNames != null ? retObjectGetGroupNames.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -445,10 +544,12 @@ public class Regex extends NetObject implements system.runtime.serialization.ISe
 
     public java.lang.String[] Split(java.lang.String input) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.text.regularexpressions.RegexMatchTimeoutException, system.RankException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSplit = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("Split", input);
+            retObjectSplit = classInstance.Invoke("Split", input);
+            JCObject resultingObjects = (JCObject)retObjectSplit;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -457,6 +558,8 @@ public class Regex extends NetObject implements system.runtime.serialization.ISe
 				resultingArray[indexSplit] = (java.lang.String)resultingArrayList.get(indexSplit);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSplit != null ? retObjectSplit.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -464,10 +567,12 @@ public class Regex extends NetObject implements system.runtime.serialization.ISe
 
     public java.lang.String[] Split(java.lang.String input, int count) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OverflowException, system.text.regularexpressions.RegexMatchTimeoutException, system.RankException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSplit = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("Split", input, count);
+            retObjectSplit = classInstance.Invoke("Split", input, count);
+            JCObject resultingObjects = (JCObject)retObjectSplit;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -476,6 +581,8 @@ public class Regex extends NetObject implements system.runtime.serialization.ISe
 				resultingArray[indexSplit] = (java.lang.String)resultingArrayList.get(indexSplit);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSplit != null ? retObjectSplit.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -483,10 +590,12 @@ public class Regex extends NetObject implements system.runtime.serialization.ISe
 
     public java.lang.String[] Split(java.lang.String input, int count, int startat) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OverflowException, system.text.regularexpressions.RegexMatchTimeoutException, system.RankException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSplit = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("Split", input, count, startat);
+            retObjectSplit = classInstance.Invoke("Split", input, count, startat);
+            JCObject resultingObjects = (JCObject)retObjectSplit;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -495,6 +604,8 @@ public class Regex extends NetObject implements system.runtime.serialization.ISe
 				resultingArray[indexSplit] = (java.lang.String)resultingArrayList.get(indexSplit);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSplit != null ? retObjectSplit.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -502,10 +613,12 @@ public class Regex extends NetObject implements system.runtime.serialization.ISe
 
     public static java.lang.String[] Split(java.lang.String input, java.lang.String pattern) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NullReferenceException, system.collections.generic.KeyNotFoundException, system.NotSupportedException, system.RankException, system.security.SecurityException, system.NotImplementedException, system.text.regularexpressions.RegexMatchTimeoutException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSplit = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("Split", input, pattern);
+            retObjectSplit = classType.Invoke("Split", input, pattern);
+            JCObject resultingObjects = (JCObject)retObjectSplit;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -514,6 +627,8 @@ public class Regex extends NetObject implements system.runtime.serialization.ISe
 				resultingArray[indexSplit] = (java.lang.String)resultingArrayList.get(indexSplit);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSplit != null ? retObjectSplit.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -521,10 +636,12 @@ public class Regex extends NetObject implements system.runtime.serialization.ISe
 
     public static java.lang.String[] Split(java.lang.String input, java.lang.String pattern, RegexOptions options) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NullReferenceException, system.collections.generic.KeyNotFoundException, system.NotSupportedException, system.RankException, system.security.SecurityException, system.NotImplementedException, system.text.regularexpressions.RegexMatchTimeoutException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSplit = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("Split", input, pattern, options == null ? null : options.getJCOInstance());
+            retObjectSplit = classType.Invoke("Split", input, pattern, options == null ? null : options.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectSplit;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -533,6 +650,8 @@ public class Regex extends NetObject implements system.runtime.serialization.ISe
 				resultingArray[indexSplit] = (java.lang.String)resultingArrayList.get(indexSplit);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSplit != null ? retObjectSplit.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -540,10 +659,12 @@ public class Regex extends NetObject implements system.runtime.serialization.ISe
 
     public static java.lang.String[] Split(java.lang.String input, java.lang.String pattern, RegexOptions options, TimeSpan matchTimeout) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.FormatException, system.NullReferenceException, system.collections.generic.KeyNotFoundException, system.RankException, system.security.SecurityException, system.text.regularexpressions.RegexMatchTimeoutException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSplit = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("Split", input, pattern, options == null ? null : options.getJCOInstance(), matchTimeout == null ? null : matchTimeout.getJCOInstance());
+            retObjectSplit = classType.Invoke("Split", input, pattern, options == null ? null : options.getJCOInstance(), matchTimeout == null ? null : matchTimeout.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectSplit;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -552,6 +673,8 @@ public class Regex extends NetObject implements system.runtime.serialization.ISe
 				resultingArray[indexSplit] = (java.lang.String)resultingArrayList.get(indexSplit);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSplit != null ? retObjectSplit.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -559,10 +682,14 @@ public class Regex extends NetObject implements system.runtime.serialization.ISe
 
     public Match Match(java.lang.String input) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.text.regularexpressions.RegexMatchTimeoutException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMatch = null;
         try {
-            JCObject objMatch = (JCObject)classInstance.Invoke("Match", input);
+            retObjectMatch = classInstance.Invoke("Match", input);
+            JCObject objMatch = (JCObject)retObjectMatch;
             return new Match(objMatch);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMatch != null ? retObjectMatch.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -570,10 +697,14 @@ public class Regex extends NetObject implements system.runtime.serialization.ISe
 
     public Match Match(java.lang.String input, int startat) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OverflowException, system.text.regularexpressions.RegexMatchTimeoutException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMatch = null;
         try {
-            JCObject objMatch = (JCObject)classInstance.Invoke("Match", input, startat);
+            retObjectMatch = classInstance.Invoke("Match", input, startat);
+            JCObject objMatch = (JCObject)retObjectMatch;
             return new Match(objMatch);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMatch != null ? retObjectMatch.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -581,10 +712,14 @@ public class Regex extends NetObject implements system.runtime.serialization.ISe
 
     public Match Match(java.lang.String input, int beginning, int length) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OverflowException, system.text.regularexpressions.RegexMatchTimeoutException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMatch = null;
         try {
-            JCObject objMatch = (JCObject)classInstance.Invoke("Match", input, beginning, length);
+            retObjectMatch = classInstance.Invoke("Match", input, beginning, length);
+            JCObject objMatch = (JCObject)retObjectMatch;
             return new Match(objMatch);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMatch != null ? retObjectMatch.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -592,10 +727,14 @@ public class Regex extends NetObject implements system.runtime.serialization.ISe
 
     public static Match Match(java.lang.String input, java.lang.String pattern) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NullReferenceException, system.collections.generic.KeyNotFoundException, system.NotSupportedException, system.RankException, system.security.SecurityException, system.NotImplementedException, system.OverflowException, system.text.regularexpressions.RegexMatchTimeoutException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMatch = null;
         try {
-            JCObject objMatch = (JCObject)classType.Invoke("Match", input, pattern);
+            retObjectMatch = classType.Invoke("Match", input, pattern);
+            JCObject objMatch = (JCObject)retObjectMatch;
             return new Match(objMatch);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMatch != null ? retObjectMatch.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -603,10 +742,14 @@ public class Regex extends NetObject implements system.runtime.serialization.ISe
 
     public static Match Match(java.lang.String input, java.lang.String pattern, RegexOptions options) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NullReferenceException, system.collections.generic.KeyNotFoundException, system.NotSupportedException, system.RankException, system.security.SecurityException, system.NotImplementedException, system.OverflowException, system.text.regularexpressions.RegexMatchTimeoutException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMatch = null;
         try {
-            JCObject objMatch = (JCObject)classType.Invoke("Match", input, pattern, options == null ? null : options.getJCOInstance());
+            retObjectMatch = classType.Invoke("Match", input, pattern, options == null ? null : options.getJCOInstance());
+            JCObject objMatch = (JCObject)retObjectMatch;
             return new Match(objMatch);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMatch != null ? retObjectMatch.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -614,10 +757,14 @@ public class Regex extends NetObject implements system.runtime.serialization.ISe
 
     public static Match Match(java.lang.String input, java.lang.String pattern, RegexOptions options, TimeSpan matchTimeout) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.FormatException, system.NullReferenceException, system.collections.generic.KeyNotFoundException, system.RankException, system.security.SecurityException, system.OverflowException, system.text.regularexpressions.RegexMatchTimeoutException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMatch = null;
         try {
-            JCObject objMatch = (JCObject)classType.Invoke("Match", input, pattern, options == null ? null : options.getJCOInstance(), matchTimeout == null ? null : matchTimeout.getJCOInstance());
+            retObjectMatch = classType.Invoke("Match", input, pattern, options == null ? null : options.getJCOInstance(), matchTimeout == null ? null : matchTimeout.getJCOInstance());
+            JCObject objMatch = (JCObject)retObjectMatch;
             return new Match(objMatch);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMatch != null ? retObjectMatch.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -625,10 +772,14 @@ public class Regex extends NetObject implements system.runtime.serialization.ISe
 
     public MatchCollection Matches(java.lang.String input) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMatches = null;
         try {
-            JCObject objMatches = (JCObject)classInstance.Invoke("Matches", input);
+            retObjectMatches = classInstance.Invoke("Matches", input);
+            JCObject objMatches = (JCObject)retObjectMatches;
             return new MatchCollection(objMatches);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMatches != null ? retObjectMatches.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -636,10 +787,14 @@ public class Regex extends NetObject implements system.runtime.serialization.ISe
 
     public MatchCollection Matches(java.lang.String input, int startat) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMatches = null;
         try {
-            JCObject objMatches = (JCObject)classInstance.Invoke("Matches", input, startat);
+            retObjectMatches = classInstance.Invoke("Matches", input, startat);
+            JCObject objMatches = (JCObject)retObjectMatches;
             return new MatchCollection(objMatches);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMatches != null ? retObjectMatches.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -647,10 +802,14 @@ public class Regex extends NetObject implements system.runtime.serialization.ISe
 
     public static MatchCollection Matches(java.lang.String input, java.lang.String pattern) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NullReferenceException, system.collections.generic.KeyNotFoundException, system.NotSupportedException, system.RankException, system.security.SecurityException, system.NotImplementedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMatches = null;
         try {
-            JCObject objMatches = (JCObject)classType.Invoke("Matches", input, pattern);
+            retObjectMatches = classType.Invoke("Matches", input, pattern);
+            JCObject objMatches = (JCObject)retObjectMatches;
             return new MatchCollection(objMatches);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMatches != null ? retObjectMatches.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -658,10 +817,14 @@ public class Regex extends NetObject implements system.runtime.serialization.ISe
 
     public static MatchCollection Matches(java.lang.String input, java.lang.String pattern, RegexOptions options) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NullReferenceException, system.collections.generic.KeyNotFoundException, system.NotSupportedException, system.RankException, system.security.SecurityException, system.NotImplementedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMatches = null;
         try {
-            JCObject objMatches = (JCObject)classType.Invoke("Matches", input, pattern, options == null ? null : options.getJCOInstance());
+            retObjectMatches = classType.Invoke("Matches", input, pattern, options == null ? null : options.getJCOInstance());
+            JCObject objMatches = (JCObject)retObjectMatches;
             return new MatchCollection(objMatches);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMatches != null ? retObjectMatches.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -669,10 +832,14 @@ public class Regex extends NetObject implements system.runtime.serialization.ISe
 
     public static MatchCollection Matches(java.lang.String input, java.lang.String pattern, RegexOptions options, TimeSpan matchTimeout) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.FormatException, system.NullReferenceException, system.collections.generic.KeyNotFoundException, system.RankException, system.security.SecurityException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMatches = null;
         try {
-            JCObject objMatches = (JCObject)classType.Invoke("Matches", input, pattern, options == null ? null : options.getJCOInstance(), matchTimeout == null ? null : matchTimeout.getJCOInstance());
+            retObjectMatches = classType.Invoke("Matches", input, pattern, options == null ? null : options.getJCOInstance(), matchTimeout == null ? null : matchTimeout.getJCOInstance());
+            JCObject objMatches = (JCObject)retObjectMatches;
             return new MatchCollection(objMatches);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMatches != null ? retObjectMatches.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -680,7 +847,7 @@ public class Regex extends NetObject implements system.runtime.serialization.ISe
 
     public static void CompileToAssembly(RegexCompilationInfo[] regexinfos, AssemblyName assemblyname) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.security.SecurityException, system.NotSupportedException, system.FormatException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.InvalidOperationException, system.NullReferenceException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.io.FileNotFoundException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.collections.generic.KeyNotFoundException, system.RankException, system.UnauthorizedAccessException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("CompileToAssembly", toObjectFromArray(regexinfos), assemblyname == null ? null : assemblyname.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -690,7 +857,7 @@ public class Regex extends NetObject implements system.runtime.serialization.ISe
 
     public static void CompileToAssembly(RegexCompilationInfo[] regexinfos, AssemblyName assemblyname, CustomAttributeBuilder[] attributes) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.security.SecurityException, system.NotSupportedException, system.FormatException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.InvalidOperationException, system.NullReferenceException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.io.FileNotFoundException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.collections.generic.KeyNotFoundException, system.RankException, system.UnauthorizedAccessException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("CompileToAssembly", toObjectFromArray(regexinfos), assemblyname == null ? null : assemblyname.getJCOInstance(), toObjectFromArray(attributes));
         } catch (JCNativeException jcne) {
@@ -700,7 +867,7 @@ public class Regex extends NetObject implements system.runtime.serialization.ISe
 
     public static void CompileToAssembly(RegexCompilationInfo[] regexinfos, AssemblyName assemblyname, CustomAttributeBuilder[] attributes, java.lang.String resourceFile) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.security.SecurityException, system.NotSupportedException, system.FormatException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.InvalidOperationException, system.NullReferenceException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.io.FileNotFoundException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.collections.generic.KeyNotFoundException, system.RankException, system.UnauthorizedAccessException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("CompileToAssembly", toObjectFromArray(regexinfos), assemblyname == null ? null : assemblyname.getJCOInstance(), toObjectFromArray(attributes), resourceFile);
         } catch (JCNativeException jcne) {
@@ -714,7 +881,7 @@ public class Regex extends NetObject implements system.runtime.serialization.ISe
      */
     @Deprecated 
     public void GetObjectData(SerializationInfo info, StreamingContext context) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToISerializable to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToISerializable to obtain the full interface.");
     }
 
 
@@ -723,9 +890,13 @@ public class Regex extends NetObject implements system.runtime.serialization.ISe
     
     public boolean getRightToLeft() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRightToLeft = null;
         try {
-            return (boolean)classInstance.Get("RightToLeft");
+            retObjectRightToLeft = classInstance.Get("RightToLeft");
+            return (boolean)retObjectRightToLeft;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectRightToLeft != null ? retObjectRightToLeft.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -733,9 +904,20 @@ public class Regex extends NetObject implements system.runtime.serialization.ISe
 
     public static int getCacheSize() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCacheSize = null;
         try {
-            return (int)classType.Get("CacheSize");
+            retObjectCacheSize = classType.Get("CacheSize");
+            return (int)retObjectCacheSize;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCacheSize_ToString = retObjectCacheSize == null ? "null" : retObjectCacheSize.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectCacheSizeNumber = (java.lang.Number)retObjectCacheSize;
+                return retObjectCacheSizeNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCacheSize != null ? retObjectCacheSize.getClass() : "null", retObjectCacheSize_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -743,7 +925,7 @@ public class Regex extends NetObject implements system.runtime.serialization.ISe
 
     public static void setCacheSize(int CacheSize) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Set("CacheSize", CacheSize);
         } catch (JCNativeException jcne) {
@@ -753,10 +935,14 @@ public class Regex extends NetObject implements system.runtime.serialization.ISe
 
     public RegexOptions getOptions() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOptions = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Options");
+            retObjectOptions = classInstance.Get("Options");
+            JCObject val = (JCObject)retObjectOptions;
             return new RegexOptions(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOptions != null ? retObjectOptions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -764,10 +950,14 @@ public class Regex extends NetObject implements system.runtime.serialization.ISe
 
     public TimeSpan getMatchTimeout() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMatchTimeout = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MatchTimeout");
+            retObjectMatchTimeout = classInstance.Get("MatchTimeout");
+            JCObject val = (JCObject)retObjectMatchTimeout;
             return new TimeSpan(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMatchTimeout != null ? retObjectMatchTimeout.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

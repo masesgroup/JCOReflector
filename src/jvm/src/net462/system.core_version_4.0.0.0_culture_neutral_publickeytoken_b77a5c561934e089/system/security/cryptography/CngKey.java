@@ -170,9 +170,13 @@ public class CngKey extends NetObject implements AutoCloseable {
     
     public static boolean Exists(java.lang.String keyName) throws Throwable, system.NullReferenceException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.security.cryptography.CryptographicException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectExists = null;
         try {
-            return (boolean)classType.Invoke("Exists", keyName);
+            retObjectExists = classType.Invoke("Exists", keyName);
+            return (boolean)retObjectExists;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectExists != null ? retObjectExists.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,9 +184,13 @@ public class CngKey extends NetObject implements AutoCloseable {
 
     public static boolean Exists(java.lang.String keyName, CngProvider provider) throws Throwable, system.ArgumentNullException, system.NullReferenceException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.security.cryptography.CryptographicException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectExists = null;
         try {
-            return (boolean)classType.Invoke("Exists", keyName, provider == null ? null : provider.getJCOInstance());
+            retObjectExists = classType.Invoke("Exists", keyName, provider == null ? null : provider.getJCOInstance());
+            return (boolean)retObjectExists;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectExists != null ? retObjectExists.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,9 +198,13 @@ public class CngKey extends NetObject implements AutoCloseable {
 
     public static boolean Exists(java.lang.String keyName, CngProvider provider, CngKeyOpenOptions options) throws Throwable, system.ArgumentNullException, system.NullReferenceException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.security.cryptography.CryptographicException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectExists = null;
         try {
-            return (boolean)classType.Invoke("Exists", keyName, provider == null ? null : provider.getJCOInstance(), options == null ? null : options.getJCOInstance());
+            retObjectExists = classType.Invoke("Exists", keyName, provider == null ? null : provider.getJCOInstance(), options == null ? null : options.getJCOInstance());
+            return (boolean)retObjectExists;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectExists != null ? retObjectExists.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,9 +212,13 @@ public class CngKey extends NetObject implements AutoCloseable {
 
     public boolean HasProperty(java.lang.String name, CngPropertyOptions options) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHasProperty = null;
         try {
-            return (boolean)classInstance.Invoke("HasProperty", name, options == null ? null : options.getJCOInstance());
+            retObjectHasProperty = classInstance.Invoke("HasProperty", name, options == null ? null : options.getJCOInstance());
+            return (boolean)retObjectHasProperty;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectHasProperty != null ? retObjectHasProperty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -210,10 +226,12 @@ public class CngKey extends NetObject implements AutoCloseable {
 
     public byte[] Export(CngKeyBlobFormat format) throws Throwable, system.NullReferenceException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.security.cryptography.CryptographicException, system.ArgumentException, system.RankException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExport = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("Export", format == null ? null : format.getJCOInstance());
+            retObjectExport = classInstance.Invoke("Export", format == null ? null : format.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectExport;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -222,6 +240,8 @@ public class CngKey extends NetObject implements AutoCloseable {
 				resultingArray[indexExport] = (byte)resultingArrayList.get(indexExport);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectExport != null ? retObjectExport.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -229,10 +249,14 @@ public class CngKey extends NetObject implements AutoCloseable {
 
     public static CngKey Create(CngAlgorithm algorithm) throws Throwable, system.NullReferenceException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.RankException, system.security.cryptography.CryptographicException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
         try {
-            JCObject objCreate = (JCObject)classType.Invoke("Create", algorithm == null ? null : algorithm.getJCOInstance());
+            retObjectCreate = classType.Invoke("Create", algorithm == null ? null : algorithm.getJCOInstance());
+            JCObject objCreate = (JCObject)retObjectCreate;
             return new CngKey(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -240,10 +264,14 @@ public class CngKey extends NetObject implements AutoCloseable {
 
     public static CngKey Create(CngAlgorithm algorithm, java.lang.String keyName) throws Throwable, system.NullReferenceException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.RankException, system.security.cryptography.CryptographicException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
         try {
-            JCObject objCreate = (JCObject)classType.Invoke("Create", algorithm == null ? null : algorithm.getJCOInstance(), keyName);
+            retObjectCreate = classType.Invoke("Create", algorithm == null ? null : algorithm.getJCOInstance(), keyName);
+            JCObject objCreate = (JCObject)retObjectCreate;
             return new CngKey(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -251,10 +279,14 @@ public class CngKey extends NetObject implements AutoCloseable {
 
     public static CngKey Create(CngAlgorithm algorithm, java.lang.String keyName, CngKeyCreationParameters creationParameters) throws Throwable, system.NullReferenceException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.PlatformNotSupportedException, system.RankException, system.security.cryptography.CryptographicException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
         try {
-            JCObject objCreate = (JCObject)classType.Invoke("Create", algorithm == null ? null : algorithm.getJCOInstance(), keyName, creationParameters == null ? null : creationParameters.getJCOInstance());
+            retObjectCreate = classType.Invoke("Create", algorithm == null ? null : algorithm.getJCOInstance(), keyName, creationParameters == null ? null : creationParameters.getJCOInstance());
+            JCObject objCreate = (JCObject)retObjectCreate;
             return new CngKey(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -262,10 +294,14 @@ public class CngKey extends NetObject implements AutoCloseable {
 
     public static CngKey Import(byte[] keyBlob, CngKeyBlobFormat format) throws Throwable, system.NullReferenceException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.security.cryptography.CryptographicException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectImport = null;
         try {
-            JCObject objImport = (JCObject)classType.Invoke("Import", keyBlob, format == null ? null : format.getJCOInstance());
+            retObjectImport = classType.Invoke("Import", keyBlob, format == null ? null : format.getJCOInstance());
+            JCObject objImport = (JCObject)retObjectImport;
             return new CngKey(objImport);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectImport != null ? retObjectImport.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -273,10 +309,14 @@ public class CngKey extends NetObject implements AutoCloseable {
 
     public static CngKey Import(JCORefOut dupParam0, CngKeyBlobFormat dupParam1) throws Throwable, system.NullReferenceException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.security.cryptography.CryptographicException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectImport = null;
         try {
-            JCObject objImport = (JCObject)classType.Invoke("Import", dupParam0.getJCRefOut(), dupParam1 == null ? null : dupParam1.getJCOInstance());
+            retObjectImport = classType.Invoke("Import", dupParam0.getJCRefOut(), dupParam1 == null ? null : dupParam1.getJCOInstance());
+            JCObject objImport = (JCObject)retObjectImport;
             return new CngKey(objImport);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectImport != null ? retObjectImport.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -284,10 +324,14 @@ public class CngKey extends NetObject implements AutoCloseable {
 
     public static CngKey Import(byte[] keyBlob, CngKeyBlobFormat format, CngProvider provider) throws Throwable, system.ArgumentNullException, system.NullReferenceException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.security.cryptography.CryptographicException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectImport = null;
         try {
-            JCObject objImport = (JCObject)classType.Invoke("Import", keyBlob, format == null ? null : format.getJCOInstance(), provider == null ? null : provider.getJCOInstance());
+            retObjectImport = classType.Invoke("Import", keyBlob, format == null ? null : format.getJCOInstance(), provider == null ? null : provider.getJCOInstance());
+            JCObject objImport = (JCObject)retObjectImport;
             return new CngKey(objImport);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectImport != null ? retObjectImport.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -295,10 +339,14 @@ public class CngKey extends NetObject implements AutoCloseable {
 
     public static CngKey Import(JCORefOut dupParam0, CngKeyBlobFormat dupParam1, CngProvider dupParam2) throws Throwable, system.ArgumentNullException, system.NullReferenceException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.security.cryptography.CryptographicException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectImport = null;
         try {
-            JCObject objImport = (JCObject)classType.Invoke("Import", dupParam0.getJCRefOut(), dupParam1 == null ? null : dupParam1.getJCOInstance(), dupParam2 == null ? null : dupParam2.getJCOInstance());
+            retObjectImport = classType.Invoke("Import", dupParam0.getJCRefOut(), dupParam1 == null ? null : dupParam1.getJCOInstance(), dupParam2 == null ? null : dupParam2.getJCOInstance());
+            JCObject objImport = (JCObject)retObjectImport;
             return new CngKey(objImport);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectImport != null ? retObjectImport.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -306,10 +354,14 @@ public class CngKey extends NetObject implements AutoCloseable {
 
     public static CngKey Open(SafeNCryptKeyHandle keyHandle, CngKeyHandleOpenOptions keyHandleOpenOptions) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.cryptography.CryptographicException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOpen = null;
         try {
-            JCObject objOpen = (JCObject)classType.Invoke("Open", keyHandle == null ? null : keyHandle.getJCOInstance(), keyHandleOpenOptions == null ? null : keyHandleOpenOptions.getJCOInstance());
+            retObjectOpen = classType.Invoke("Open", keyHandle == null ? null : keyHandle.getJCOInstance(), keyHandleOpenOptions == null ? null : keyHandleOpenOptions.getJCOInstance());
+            JCObject objOpen = (JCObject)retObjectOpen;
             return new CngKey(objOpen);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOpen != null ? retObjectOpen.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -317,10 +369,14 @@ public class CngKey extends NetObject implements AutoCloseable {
 
     public static CngKey Open(java.lang.String keyName) throws Throwable, system.NullReferenceException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.RankException, system.security.cryptography.CryptographicException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOpen = null;
         try {
-            JCObject objOpen = (JCObject)classType.Invoke("Open", keyName);
+            retObjectOpen = classType.Invoke("Open", keyName);
+            JCObject objOpen = (JCObject)retObjectOpen;
             return new CngKey(objOpen);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOpen != null ? retObjectOpen.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -328,10 +384,14 @@ public class CngKey extends NetObject implements AutoCloseable {
 
     public static CngKey Open(java.lang.String keyName, CngProvider provider) throws Throwable, system.ArgumentNullException, system.NullReferenceException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.RankException, system.security.cryptography.CryptographicException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOpen = null;
         try {
-            JCObject objOpen = (JCObject)classType.Invoke("Open", keyName, provider == null ? null : provider.getJCOInstance());
+            retObjectOpen = classType.Invoke("Open", keyName, provider == null ? null : provider.getJCOInstance());
+            JCObject objOpen = (JCObject)retObjectOpen;
             return new CngKey(objOpen);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOpen != null ? retObjectOpen.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -339,10 +399,14 @@ public class CngKey extends NetObject implements AutoCloseable {
 
     public static CngKey Open(java.lang.String keyName, CngProvider provider, CngKeyOpenOptions openOptions) throws Throwable, system.ArgumentNullException, system.NullReferenceException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.RankException, system.security.cryptography.CryptographicException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOpen = null;
         try {
-            JCObject objOpen = (JCObject)classType.Invoke("Open", keyName, provider == null ? null : provider.getJCOInstance(), openOptions == null ? null : openOptions.getJCOInstance());
+            retObjectOpen = classType.Invoke("Open", keyName, provider == null ? null : provider.getJCOInstance(), openOptions == null ? null : openOptions.getJCOInstance());
+            JCObject objOpen = (JCObject)retObjectOpen;
             return new CngKey(objOpen);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOpen != null ? retObjectOpen.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -350,10 +414,14 @@ public class CngKey extends NetObject implements AutoCloseable {
 
     public CngProperty GetProperty(java.lang.String name, CngPropertyOptions options) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetProperty = null;
         try {
-            JCObject objGetProperty = (JCObject)classInstance.Invoke("GetProperty", name, options == null ? null : options.getJCOInstance());
+            retObjectGetProperty = classInstance.Invoke("GetProperty", name, options == null ? null : options.getJCOInstance());
+            JCObject objGetProperty = (JCObject)retObjectGetProperty;
             return new CngProperty(objGetProperty);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetProperty != null ? retObjectGetProperty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -361,7 +429,7 @@ public class CngKey extends NetObject implements AutoCloseable {
 
     public void Delete() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.security.cryptography.CryptographicException, system.ArgumentException, system.RankException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Delete");
         } catch (JCNativeException jcne) {
@@ -371,7 +439,7 @@ public class CngKey extends NetObject implements AutoCloseable {
 
     public void Dispose() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
@@ -381,7 +449,7 @@ public class CngKey extends NetObject implements AutoCloseable {
 
     public void SetProperty(CngProperty property) throws Throwable, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.ArgumentNullException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetProperty", property == null ? null : property.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -392,7 +460,7 @@ public class CngKey extends NetObject implements AutoCloseable {
     public void close() throws Exception {
         try {
             if (classInstance == null)
-                throw new UnsupportedOperationException("classInstance is null.");
+                throw new java.lang.UnsupportedOperationException("classInstance is null.");
             try {
                 classInstance.Invoke("Dispose");
             }
@@ -408,9 +476,13 @@ public class CngKey extends NetObject implements AutoCloseable {
     
     public boolean getIsEphemeral() throws Throwable, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.ArgumentNullException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsEphemeral = null;
         try {
-            return (boolean)classInstance.Get("IsEphemeral");
+            retObjectIsEphemeral = classInstance.Get("IsEphemeral");
+            return (boolean)retObjectIsEphemeral;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsEphemeral != null ? retObjectIsEphemeral.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -418,7 +490,7 @@ public class CngKey extends NetObject implements AutoCloseable {
 
     public void setIsEphemeral(boolean IsEphemeral) throws Throwable, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.ArgumentNullException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsEphemeral", IsEphemeral);
         } catch (JCNativeException jcne) {
@@ -428,9 +500,13 @@ public class CngKey extends NetObject implements AutoCloseable {
 
     public boolean getIsMachineKey() throws Throwable, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.ArgumentNullException, system.security.cryptography.CryptographicException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsMachineKey = null;
         try {
-            return (boolean)classInstance.Get("IsMachineKey");
+            retObjectIsMachineKey = classInstance.Get("IsMachineKey");
+            return (boolean)retObjectIsMachineKey;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsMachineKey != null ? retObjectIsMachineKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -438,9 +514,20 @@ public class CngKey extends NetObject implements AutoCloseable {
 
     public int getKeySize() throws Throwable, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.ArgumentNullException, system.security.cryptography.CryptographicException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectKeySize = null;
         try {
-            return (int)classInstance.Get("KeySize");
+            retObjectKeySize = classInstance.Get("KeySize");
+            return (int)retObjectKeySize;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectKeySize_ToString = retObjectKeySize == null ? "null" : retObjectKeySize.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectKeySizeNumber = (java.lang.Number)retObjectKeySize;
+                return retObjectKeySizeNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectKeySize != null ? retObjectKeySize.getClass() : "null", retObjectKeySize_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -448,10 +535,14 @@ public class CngKey extends NetObject implements AutoCloseable {
 
     public SafeNCryptKeyHandle getHandle() throws Throwable, system.MissingMethodException, system.InvalidOperationException, system.ArgumentException, system.security.SecurityException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHandle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Handle");
+            retObjectHandle = classInstance.Get("Handle");
+            JCObject val = (JCObject)retObjectHandle;
             return new SafeNCryptKeyHandle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHandle != null ? retObjectHandle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -459,10 +550,14 @@ public class CngKey extends NetObject implements AutoCloseable {
 
     public SafeNCryptProviderHandle getProviderHandle() throws Throwable, system.MissingMethodException, system.InvalidOperationException, system.ArgumentException, system.security.SecurityException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProviderHandle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ProviderHandle");
+            retObjectProviderHandle = classInstance.Get("ProviderHandle");
+            JCObject val = (JCObject)retObjectProviderHandle;
             return new SafeNCryptProviderHandle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectProviderHandle != null ? retObjectProviderHandle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -470,10 +565,14 @@ public class CngKey extends NetObject implements AutoCloseable {
 
     public CngAlgorithm getAlgorithm() throws Throwable, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.ArgumentNullException, system.security.cryptography.CryptographicException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAlgorithm = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Algorithm");
+            retObjectAlgorithm = classInstance.Get("Algorithm");
+            JCObject val = (JCObject)retObjectAlgorithm;
             return new CngAlgorithm(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAlgorithm != null ? retObjectAlgorithm.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -481,10 +580,14 @@ public class CngKey extends NetObject implements AutoCloseable {
 
     public CngAlgorithmGroup getAlgorithmGroup() throws Throwable, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.ArgumentNullException, system.security.cryptography.CryptographicException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAlgorithmGroup = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AlgorithmGroup");
+            retObjectAlgorithmGroup = classInstance.Get("AlgorithmGroup");
+            JCObject val = (JCObject)retObjectAlgorithmGroup;
             return new CngAlgorithmGroup(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAlgorithmGroup != null ? retObjectAlgorithmGroup.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -492,10 +595,14 @@ public class CngKey extends NetObject implements AutoCloseable {
 
     public CngExportPolicies getExportPolicy() throws Throwable, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.ArgumentNullException, system.security.cryptography.CryptographicException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExportPolicy = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ExportPolicy");
+            retObjectExportPolicy = classInstance.Get("ExportPolicy");
+            JCObject val = (JCObject)retObjectExportPolicy;
             return new CngExportPolicies(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExportPolicy != null ? retObjectExportPolicy.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -503,7 +610,7 @@ public class CngKey extends NetObject implements AutoCloseable {
 
     public void setExportPolicy(CngExportPolicies ExportPolicy) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ExportPolicy", ExportPolicy == null ? null : ExportPolicy.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -513,10 +620,14 @@ public class CngKey extends NetObject implements AutoCloseable {
 
     public CngKeyUsages getKeyUsage() throws Throwable, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.ArgumentNullException, system.security.cryptography.CryptographicException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectKeyUsage = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("KeyUsage");
+            retObjectKeyUsage = classInstance.Get("KeyUsage");
+            JCObject val = (JCObject)retObjectKeyUsage;
             return new CngKeyUsages(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectKeyUsage != null ? retObjectKeyUsage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -524,10 +635,14 @@ public class CngKey extends NetObject implements AutoCloseable {
 
     public CngProvider getProvider() throws Throwable, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.ArgumentNullException, system.security.cryptography.CryptographicException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProvider = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Provider");
+            retObjectProvider = classInstance.Get("Provider");
+            JCObject val = (JCObject)retObjectProvider;
             return new CngProvider(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectProvider != null ? retObjectProvider.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -535,10 +650,14 @@ public class CngKey extends NetObject implements AutoCloseable {
 
     public CngUIPolicy getUIPolicy() throws Throwable, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.ArgumentNullException, system.security.cryptography.CryptographicException, system.MissingMethodException, system.InvalidOperationException, system.ArgumentException, system.security.SecurityException, system.reflection.TargetInvocationException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUIPolicy = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("UIPolicy");
+            retObjectUIPolicy = classInstance.Get("UIPolicy");
+            JCObject val = (JCObject)retObjectUIPolicy;
             return new CngUIPolicy(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUIPolicy != null ? retObjectUIPolicy.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -546,9 +665,13 @@ public class CngKey extends NetObject implements AutoCloseable {
 
     public java.lang.String getKeyName() throws Throwable, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.ArgumentNullException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectKeyName = null;
         try {
-            return (java.lang.String)classInstance.Get("KeyName");
+            retObjectKeyName = classInstance.Get("KeyName");
+            return (java.lang.String)retObjectKeyName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectKeyName != null ? retObjectKeyName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -556,9 +679,13 @@ public class CngKey extends NetObject implements AutoCloseable {
 
     public java.lang.String getUniqueName() throws Throwable, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.ArgumentNullException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUniqueName = null;
         try {
-            return (java.lang.String)classInstance.Get("UniqueName");
+            retObjectUniqueName = classInstance.Get("UniqueName");
+            return (java.lang.String)retObjectUniqueName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectUniqueName != null ? retObjectUniqueName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

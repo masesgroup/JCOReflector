@@ -163,10 +163,14 @@ public class SafeEvpPKeyHandle extends SafeHandle  {
     
     public SafeEvpPKeyHandle DuplicateHandle() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDuplicateHandle = null;
         try {
-            JCObject objDuplicateHandle = (JCObject)classInstance.Invoke("DuplicateHandle");
+            retObjectDuplicateHandle = classInstance.Invoke("DuplicateHandle");
+            JCObject objDuplicateHandle = (JCObject)retObjectDuplicateHandle;
             return new SafeEvpPKeyHandle(objDuplicateHandle);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDuplicateHandle != null ? retObjectDuplicateHandle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -174,10 +178,14 @@ public class SafeEvpPKeyHandle extends SafeHandle  {
 
     public static SafeEvpPKeyHandle OpenPrivateKeyFromEngine(java.lang.String engineName, java.lang.String keyId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOpenPrivateKeyFromEngine = null;
         try {
-            JCObject objOpenPrivateKeyFromEngine = (JCObject)classType.Invoke("OpenPrivateKeyFromEngine", engineName, keyId);
+            retObjectOpenPrivateKeyFromEngine = classType.Invoke("OpenPrivateKeyFromEngine", engineName, keyId);
+            JCObject objOpenPrivateKeyFromEngine = (JCObject)retObjectOpenPrivateKeyFromEngine;
             return new SafeEvpPKeyHandle(objOpenPrivateKeyFromEngine);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOpenPrivateKeyFromEngine != null ? retObjectOpenPrivateKeyFromEngine.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -185,10 +193,14 @@ public class SafeEvpPKeyHandle extends SafeHandle  {
 
     public static SafeEvpPKeyHandle OpenPublicKeyFromEngine(java.lang.String engineName, java.lang.String keyId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOpenPublicKeyFromEngine = null;
         try {
-            JCObject objOpenPublicKeyFromEngine = (JCObject)classType.Invoke("OpenPublicKeyFromEngine", engineName, keyId);
+            retObjectOpenPublicKeyFromEngine = classType.Invoke("OpenPublicKeyFromEngine", engineName, keyId);
+            JCObject objOpenPublicKeyFromEngine = (JCObject)retObjectOpenPublicKeyFromEngine;
             return new SafeEvpPKeyHandle(objOpenPublicKeyFromEngine);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOpenPublicKeyFromEngine != null ? retObjectOpenPublicKeyFromEngine.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,9 +212,20 @@ public class SafeEvpPKeyHandle extends SafeHandle  {
     
     public static long getOpenSslVersion() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOpenSslVersion = null;
         try {
-            return (long)classType.Get("OpenSslVersion");
+            retObjectOpenSslVersion = classType.Get("OpenSslVersion");
+            return (long)retObjectOpenSslVersion;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectOpenSslVersion_ToString = retObjectOpenSslVersion == null ? "null" : retObjectOpenSslVersion.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectOpenSslVersionNumber = (java.lang.Number)retObjectOpenSslVersion;
+                return retObjectOpenSslVersionNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectOpenSslVersion != null ? retObjectOpenSslVersion.getClass() : "null", retObjectOpenSslVersion_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

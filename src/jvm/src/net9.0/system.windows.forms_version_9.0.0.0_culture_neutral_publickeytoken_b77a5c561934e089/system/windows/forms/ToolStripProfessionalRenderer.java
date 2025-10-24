@@ -177,9 +177,13 @@ public class ToolStripProfessionalRenderer extends ToolStripRenderer  {
     
     public boolean getRoundedEdges() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRoundedEdges = null;
         try {
-            return (boolean)classInstance.Get("RoundedEdges");
+            retObjectRoundedEdges = classInstance.Get("RoundedEdges");
+            return (boolean)retObjectRoundedEdges;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectRoundedEdges != null ? retObjectRoundedEdges.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,7 +191,7 @@ public class ToolStripProfessionalRenderer extends ToolStripRenderer  {
 
     public void setRoundedEdges(boolean RoundedEdges) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RoundedEdges", RoundedEdges);
         } catch (JCNativeException jcne) {
@@ -197,10 +201,14 @@ public class ToolStripProfessionalRenderer extends ToolStripRenderer  {
 
     public ProfessionalColorTable getColorTable() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectColorTable = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ColorTable");
+            retObjectColorTable = classInstance.Get("ColorTable");
+            JCObject val = (JCObject)retObjectColorTable;
             return new ProfessionalColorTable(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectColorTable != null ? retObjectColorTable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

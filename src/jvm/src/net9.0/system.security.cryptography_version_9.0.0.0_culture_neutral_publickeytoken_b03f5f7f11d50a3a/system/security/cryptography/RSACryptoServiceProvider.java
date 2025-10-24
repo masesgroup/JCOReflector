@@ -200,9 +200,13 @@ public class RSACryptoServiceProvider extends RSA  {
     
     public boolean VerifyData(byte[] buffer, NetObject halg, byte[] signature) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.NullReferenceException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVerifyData = null;
         try {
-            return (boolean)classInstance.Invoke("VerifyData", buffer, halg == null ? null : halg.getJCOInstance(), signature);
+            retObjectVerifyData = classInstance.Invoke("VerifyData", buffer, halg == null ? null : halg.getJCOInstance(), signature);
+            return (boolean)retObjectVerifyData;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectVerifyData != null ? retObjectVerifyData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -210,9 +214,13 @@ public class RSACryptoServiceProvider extends RSA  {
 
     public boolean VerifyData(JCORefOut dupParam0, NetObject dupParam1, JCORefOut dupParam2) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.NullReferenceException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVerifyData = null;
         try {
-            return (boolean)classInstance.Invoke("VerifyData", dupParam0.getJCRefOut(), dupParam1 == null ? null : dupParam1.getJCOInstance(), dupParam2.getJCRefOut());
+            retObjectVerifyData = classInstance.Invoke("VerifyData", dupParam0.getJCRefOut(), dupParam1 == null ? null : dupParam1.getJCOInstance(), dupParam2.getJCRefOut());
+            return (boolean)retObjectVerifyData;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectVerifyData != null ? retObjectVerifyData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -220,9 +228,13 @@ public class RSACryptoServiceProvider extends RSA  {
 
     public boolean VerifyHash(byte[] hash, byte[] signature, HashAlgorithmName hashAlgorithm, RSASignaturePadding padding) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.security.cryptography.CryptographicException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVerifyHash = null;
         try {
-            return (boolean)classInstance.Invoke("VerifyHash", hash, signature, hashAlgorithm == null ? null : hashAlgorithm.getJCOInstance(), padding == null ? null : padding.getJCOInstance());
+            retObjectVerifyHash = classInstance.Invoke("VerifyHash", hash, signature, hashAlgorithm == null ? null : hashAlgorithm.getJCOInstance(), padding == null ? null : padding.getJCOInstance());
+            return (boolean)retObjectVerifyHash;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectVerifyHash != null ? retObjectVerifyHash.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -230,9 +242,13 @@ public class RSACryptoServiceProvider extends RSA  {
 
     public boolean VerifyHash(JCORefOut dupParam0, JCORefOut dupParam1, HashAlgorithmName dupParam2, RSASignaturePadding dupParam3) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.security.cryptography.CryptographicException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVerifyHash = null;
         try {
-            return (boolean)classInstance.Invoke("VerifyHash", dupParam0.getJCRefOut(), dupParam1.getJCRefOut(), dupParam2 == null ? null : dupParam2.getJCOInstance(), dupParam3 == null ? null : dupParam3.getJCOInstance());
+            retObjectVerifyHash = classInstance.Invoke("VerifyHash", dupParam0.getJCRefOut(), dupParam1.getJCRefOut(), dupParam2 == null ? null : dupParam2.getJCOInstance(), dupParam3 == null ? null : dupParam3.getJCOInstance());
+            return (boolean)retObjectVerifyHash;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectVerifyHash != null ? retObjectVerifyHash.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -240,9 +256,13 @@ public class RSACryptoServiceProvider extends RSA  {
 
     public boolean VerifyHash(byte[] rgbHash, java.lang.String str, byte[] rgbSignature) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.runtime.interopservices.ExternalException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVerifyHash = null;
         try {
-            return (boolean)classInstance.Invoke("VerifyHash", rgbHash, str, rgbSignature);
+            retObjectVerifyHash = classInstance.Invoke("VerifyHash", rgbHash, str, rgbSignature);
+            return (boolean)retObjectVerifyHash;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectVerifyHash != null ? retObjectVerifyHash.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -250,9 +270,13 @@ public class RSACryptoServiceProvider extends RSA  {
 
     public boolean VerifyHash(JCORefOut dupParam0, java.lang.String dupParam1, JCORefOut dupParam2) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.runtime.interopservices.ExternalException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVerifyHash = null;
         try {
-            return (boolean)classInstance.Invoke("VerifyHash", dupParam0.getJCRefOut(), dupParam1, dupParam2.getJCRefOut());
+            retObjectVerifyHash = classInstance.Invoke("VerifyHash", dupParam0.getJCRefOut(), dupParam1, dupParam2.getJCRefOut());
+            return (boolean)retObjectVerifyHash;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectVerifyHash != null ? retObjectVerifyHash.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -260,10 +284,12 @@ public class RSACryptoServiceProvider extends RSA  {
 
     public byte[] Decrypt(byte[] rgb, boolean fOAEP) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.security.cryptography.CryptographicException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDecrypt = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("Decrypt", rgb, fOAEP);
+            retObjectDecrypt = classInstance.Invoke("Decrypt", rgb, fOAEP);
+            JCObject resultingObjects = (JCObject)retObjectDecrypt;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -272,6 +298,8 @@ public class RSACryptoServiceProvider extends RSA  {
 				resultingArray[indexDecrypt] = (byte)resultingArrayList.get(indexDecrypt);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectDecrypt != null ? retObjectDecrypt.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -279,10 +307,12 @@ public class RSACryptoServiceProvider extends RSA  {
 
     public byte[] Decrypt(JCORefOut dupParam0, boolean dupParam1) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.security.cryptography.CryptographicException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDecrypt = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("Decrypt", dupParam0.getJCRefOut(), dupParam1);
+            retObjectDecrypt = classInstance.Invoke("Decrypt", dupParam0.getJCRefOut(), dupParam1);
+            JCObject resultingObjects = (JCObject)retObjectDecrypt;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -291,6 +321,8 @@ public class RSACryptoServiceProvider extends RSA  {
 				resultingArray[indexDecrypt] = (byte)resultingArrayList.get(indexDecrypt);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectDecrypt != null ? retObjectDecrypt.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -298,10 +330,12 @@ public class RSACryptoServiceProvider extends RSA  {
 
     public byte[] Decrypt(byte[] data, RSAEncryptionPadding padding) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.security.cryptography.CryptographicException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDecrypt = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("Decrypt", data, padding == null ? null : padding.getJCOInstance());
+            retObjectDecrypt = classInstance.Invoke("Decrypt", data, padding == null ? null : padding.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectDecrypt;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -310,6 +344,8 @@ public class RSACryptoServiceProvider extends RSA  {
 				resultingArray[indexDecrypt] = (byte)resultingArrayList.get(indexDecrypt);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectDecrypt != null ? retObjectDecrypt.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -317,10 +353,12 @@ public class RSACryptoServiceProvider extends RSA  {
 
     public byte[] Decrypt(JCORefOut dupParam0, RSAEncryptionPadding dupParam1) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.security.cryptography.CryptographicException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDecrypt = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("Decrypt", dupParam0.getJCRefOut(), dupParam1 == null ? null : dupParam1.getJCOInstance());
+            retObjectDecrypt = classInstance.Invoke("Decrypt", dupParam0.getJCRefOut(), dupParam1 == null ? null : dupParam1.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectDecrypt;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -329,6 +367,8 @@ public class RSACryptoServiceProvider extends RSA  {
 				resultingArray[indexDecrypt] = (byte)resultingArrayList.get(indexDecrypt);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectDecrypt != null ? retObjectDecrypt.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -336,10 +376,12 @@ public class RSACryptoServiceProvider extends RSA  {
 
     public byte[] DecryptValue(byte[] rgb) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDecryptValue = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("DecryptValue", (java.lang.Object)rgb);
+            retObjectDecryptValue = classInstance.Invoke("DecryptValue", (java.lang.Object)rgb);
+            JCObject resultingObjects = (JCObject)retObjectDecryptValue;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -348,6 +390,8 @@ public class RSACryptoServiceProvider extends RSA  {
 				resultingArray[indexDecryptValue] = (byte)resultingArrayList.get(indexDecryptValue);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectDecryptValue != null ? retObjectDecryptValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -355,10 +399,12 @@ public class RSACryptoServiceProvider extends RSA  {
 
     public byte[] DecryptValue(JCORefOut dupParam0) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDecryptValue = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("DecryptValue", (java.lang.Object)dupParam0.getJCRefOut());
+            retObjectDecryptValue = classInstance.Invoke("DecryptValue", (java.lang.Object)dupParam0.getJCRefOut());
+            JCObject resultingObjects = (JCObject)retObjectDecryptValue;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -367,6 +413,8 @@ public class RSACryptoServiceProvider extends RSA  {
 				resultingArray[indexDecryptValue] = (byte)resultingArrayList.get(indexDecryptValue);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectDecryptValue != null ? retObjectDecryptValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -374,10 +422,12 @@ public class RSACryptoServiceProvider extends RSA  {
 
     public byte[] Encrypt(byte[] rgb, boolean fOAEP) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.security.cryptography.CryptographicException, system.IndexOutOfRangeException, system.FormatException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEncrypt = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("Encrypt", rgb, fOAEP);
+            retObjectEncrypt = classInstance.Invoke("Encrypt", rgb, fOAEP);
+            JCObject resultingObjects = (JCObject)retObjectEncrypt;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -386,6 +436,8 @@ public class RSACryptoServiceProvider extends RSA  {
 				resultingArray[indexEncrypt] = (byte)resultingArrayList.get(indexEncrypt);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectEncrypt != null ? retObjectEncrypt.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -393,10 +445,12 @@ public class RSACryptoServiceProvider extends RSA  {
 
     public byte[] Encrypt(JCORefOut dupParam0, boolean dupParam1) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.security.cryptography.CryptographicException, system.IndexOutOfRangeException, system.FormatException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEncrypt = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("Encrypt", dupParam0.getJCRefOut(), dupParam1);
+            retObjectEncrypt = classInstance.Invoke("Encrypt", dupParam0.getJCRefOut(), dupParam1);
+            JCObject resultingObjects = (JCObject)retObjectEncrypt;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -405,6 +459,8 @@ public class RSACryptoServiceProvider extends RSA  {
 				resultingArray[indexEncrypt] = (byte)resultingArrayList.get(indexEncrypt);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectEncrypt != null ? retObjectEncrypt.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -412,10 +468,12 @@ public class RSACryptoServiceProvider extends RSA  {
 
     public byte[] Encrypt(byte[] data, RSAEncryptionPadding padding) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.security.cryptography.CryptographicException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEncrypt = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("Encrypt", data, padding == null ? null : padding.getJCOInstance());
+            retObjectEncrypt = classInstance.Invoke("Encrypt", data, padding == null ? null : padding.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectEncrypt;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -424,6 +482,8 @@ public class RSACryptoServiceProvider extends RSA  {
 				resultingArray[indexEncrypt] = (byte)resultingArrayList.get(indexEncrypt);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectEncrypt != null ? retObjectEncrypt.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -431,10 +491,12 @@ public class RSACryptoServiceProvider extends RSA  {
 
     public byte[] Encrypt(JCORefOut dupParam0, RSAEncryptionPadding dupParam1) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.security.cryptography.CryptographicException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEncrypt = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("Encrypt", dupParam0.getJCRefOut(), dupParam1 == null ? null : dupParam1.getJCOInstance());
+            retObjectEncrypt = classInstance.Invoke("Encrypt", dupParam0.getJCRefOut(), dupParam1 == null ? null : dupParam1.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectEncrypt;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -443,6 +505,8 @@ public class RSACryptoServiceProvider extends RSA  {
 				resultingArray[indexEncrypt] = (byte)resultingArrayList.get(indexEncrypt);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectEncrypt != null ? retObjectEncrypt.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -450,10 +514,12 @@ public class RSACryptoServiceProvider extends RSA  {
 
     public byte[] EncryptValue(byte[] rgb) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEncryptValue = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("EncryptValue", (java.lang.Object)rgb);
+            retObjectEncryptValue = classInstance.Invoke("EncryptValue", (java.lang.Object)rgb);
+            JCObject resultingObjects = (JCObject)retObjectEncryptValue;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -462,6 +528,8 @@ public class RSACryptoServiceProvider extends RSA  {
 				resultingArray[indexEncryptValue] = (byte)resultingArrayList.get(indexEncryptValue);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectEncryptValue != null ? retObjectEncryptValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -469,10 +537,12 @@ public class RSACryptoServiceProvider extends RSA  {
 
     public byte[] EncryptValue(JCORefOut dupParam0) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEncryptValue = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("EncryptValue", (java.lang.Object)dupParam0.getJCRefOut());
+            retObjectEncryptValue = classInstance.Invoke("EncryptValue", (java.lang.Object)dupParam0.getJCRefOut());
+            JCObject resultingObjects = (JCObject)retObjectEncryptValue;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -481,6 +551,8 @@ public class RSACryptoServiceProvider extends RSA  {
 				resultingArray[indexEncryptValue] = (byte)resultingArrayList.get(indexEncryptValue);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectEncryptValue != null ? retObjectEncryptValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -488,10 +560,12 @@ public class RSACryptoServiceProvider extends RSA  {
 
     public byte[] ExportCspBlob(boolean includePrivateParameters) throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.security.cryptography.CryptographicException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExportCspBlob = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("ExportCspBlob", includePrivateParameters);
+            retObjectExportCspBlob = classInstance.Invoke("ExportCspBlob", includePrivateParameters);
+            JCObject resultingObjects = (JCObject)retObjectExportCspBlob;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -500,6 +574,8 @@ public class RSACryptoServiceProvider extends RSA  {
 				resultingArray[indexExportCspBlob] = (byte)resultingArrayList.get(indexExportCspBlob);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectExportCspBlob != null ? retObjectExportCspBlob.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -507,10 +583,12 @@ public class RSACryptoServiceProvider extends RSA  {
 
     public byte[] SignData(byte[] buffer, int offset, int count, NetObject halg) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.NullReferenceException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSignData = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("SignData", buffer, offset, count, halg == null ? null : halg.getJCOInstance());
+            retObjectSignData = classInstance.Invoke("SignData", buffer, offset, count, halg == null ? null : halg.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectSignData;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -519,6 +597,8 @@ public class RSACryptoServiceProvider extends RSA  {
 				resultingArray[indexSignData] = (byte)resultingArrayList.get(indexSignData);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectSignData != null ? retObjectSignData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -526,10 +606,12 @@ public class RSACryptoServiceProvider extends RSA  {
 
     public byte[] SignData(JCORefOut dupParam0, int dupParam1, int dupParam2, NetObject dupParam3) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.NullReferenceException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSignData = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("SignData", dupParam0.getJCRefOut(), dupParam1, dupParam2, dupParam3 == null ? null : dupParam3.getJCOInstance());
+            retObjectSignData = classInstance.Invoke("SignData", dupParam0.getJCRefOut(), dupParam1, dupParam2, dupParam3 == null ? null : dupParam3.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectSignData;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -538,6 +620,8 @@ public class RSACryptoServiceProvider extends RSA  {
 				resultingArray[indexSignData] = (byte)resultingArrayList.get(indexSignData);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectSignData != null ? retObjectSignData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -545,10 +629,12 @@ public class RSACryptoServiceProvider extends RSA  {
 
     public byte[] SignData(byte[] buffer, NetObject halg) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.NullReferenceException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSignData = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("SignData", buffer, halg == null ? null : halg.getJCOInstance());
+            retObjectSignData = classInstance.Invoke("SignData", buffer, halg == null ? null : halg.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectSignData;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -557,6 +643,8 @@ public class RSACryptoServiceProvider extends RSA  {
 				resultingArray[indexSignData] = (byte)resultingArrayList.get(indexSignData);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectSignData != null ? retObjectSignData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -564,10 +652,12 @@ public class RSACryptoServiceProvider extends RSA  {
 
     public byte[] SignData(JCORefOut dupParam0, NetObject dupParam1) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.NullReferenceException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSignData = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("SignData", dupParam0.getJCRefOut(), dupParam1 == null ? null : dupParam1.getJCOInstance());
+            retObjectSignData = classInstance.Invoke("SignData", dupParam0.getJCRefOut(), dupParam1 == null ? null : dupParam1.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectSignData;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -576,6 +666,8 @@ public class RSACryptoServiceProvider extends RSA  {
 				resultingArray[indexSignData] = (byte)resultingArrayList.get(indexSignData);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectSignData != null ? retObjectSignData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -583,10 +675,12 @@ public class RSACryptoServiceProvider extends RSA  {
 
     public byte[] SignData(Stream inputStream, NetObject halg) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.NullReferenceException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.ArrayTypeMismatchException, system.io.IOException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSignData = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("SignData", inputStream == null ? null : inputStream.getJCOInstance(), halg == null ? null : halg.getJCOInstance());
+            retObjectSignData = classInstance.Invoke("SignData", inputStream == null ? null : inputStream.getJCOInstance(), halg == null ? null : halg.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectSignData;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -595,6 +689,8 @@ public class RSACryptoServiceProvider extends RSA  {
 				resultingArray[indexSignData] = (byte)resultingArrayList.get(indexSignData);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectSignData != null ? retObjectSignData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -602,10 +698,12 @@ public class RSACryptoServiceProvider extends RSA  {
 
     public byte[] SignHash(byte[] hash, HashAlgorithmName hashAlgorithm, RSASignaturePadding padding) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.security.cryptography.CryptographicException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSignHash = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("SignHash", hash, hashAlgorithm == null ? null : hashAlgorithm.getJCOInstance(), padding == null ? null : padding.getJCOInstance());
+            retObjectSignHash = classInstance.Invoke("SignHash", hash, hashAlgorithm == null ? null : hashAlgorithm.getJCOInstance(), padding == null ? null : padding.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectSignHash;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -614,6 +712,8 @@ public class RSACryptoServiceProvider extends RSA  {
 				resultingArray[indexSignHash] = (byte)resultingArrayList.get(indexSignHash);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectSignHash != null ? retObjectSignHash.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -621,10 +721,12 @@ public class RSACryptoServiceProvider extends RSA  {
 
     public byte[] SignHash(JCORefOut dupParam0, HashAlgorithmName dupParam1, RSASignaturePadding dupParam2) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.security.cryptography.CryptographicException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSignHash = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("SignHash", dupParam0.getJCRefOut(), dupParam1 == null ? null : dupParam1.getJCOInstance(), dupParam2 == null ? null : dupParam2.getJCOInstance());
+            retObjectSignHash = classInstance.Invoke("SignHash", dupParam0.getJCRefOut(), dupParam1 == null ? null : dupParam1.getJCOInstance(), dupParam2 == null ? null : dupParam2.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectSignHash;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -633,6 +735,8 @@ public class RSACryptoServiceProvider extends RSA  {
 				resultingArray[indexSignHash] = (byte)resultingArrayList.get(indexSignHash);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectSignHash != null ? retObjectSignHash.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -640,10 +744,12 @@ public class RSACryptoServiceProvider extends RSA  {
 
     public byte[] SignHash(byte[] rgbHash, java.lang.String str) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.security.cryptography.CryptographicException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSignHash = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("SignHash", rgbHash, str);
+            retObjectSignHash = classInstance.Invoke("SignHash", rgbHash, str);
+            JCObject resultingObjects = (JCObject)retObjectSignHash;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -652,6 +758,8 @@ public class RSACryptoServiceProvider extends RSA  {
 				resultingArray[indexSignHash] = (byte)resultingArrayList.get(indexSignHash);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectSignHash != null ? retObjectSignHash.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -659,10 +767,12 @@ public class RSACryptoServiceProvider extends RSA  {
 
     public byte[] SignHash(JCORefOut dupParam0, java.lang.String dupParam1) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.security.cryptography.CryptographicException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSignHash = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("SignHash", dupParam0.getJCRefOut(), dupParam1);
+            retObjectSignHash = classInstance.Invoke("SignHash", dupParam0.getJCRefOut(), dupParam1);
+            JCObject resultingObjects = (JCObject)retObjectSignHash;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -671,6 +781,8 @@ public class RSACryptoServiceProvider extends RSA  {
 				resultingArray[indexSignHash] = (byte)resultingArrayList.get(indexSignHash);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectSignHash != null ? retObjectSignHash.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -678,10 +790,14 @@ public class RSACryptoServiceProvider extends RSA  {
 
     public RSAParameters ExportParameters(boolean includePrivateParameters) throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.security.cryptography.CryptographicException, system.ArrayTypeMismatchException, system.ObjectDisposedException, system.ArgumentNullException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException, system.io.IOException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExportParameters = null;
         try {
-            JCObject objExportParameters = (JCObject)classInstance.Invoke("ExportParameters", includePrivateParameters);
+            retObjectExportParameters = classInstance.Invoke("ExportParameters", includePrivateParameters);
+            JCObject objExportParameters = (JCObject)retObjectExportParameters;
             return new RSAParameters(objExportParameters);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExportParameters != null ? retObjectExportParameters.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -689,7 +805,7 @@ public class RSACryptoServiceProvider extends RSA  {
 
     public void ImportCspBlob(byte[] keyBlob) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.security.cryptography.CryptographicException, system.globalization.CultureNotFoundException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ImportCspBlob", (java.lang.Object)keyBlob);
         } catch (JCNativeException jcne) {
@@ -699,7 +815,7 @@ public class RSACryptoServiceProvider extends RSA  {
 
     public void ImportCspBlob(JCORefOut dupParam0) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.security.cryptography.CryptographicException, system.globalization.CultureNotFoundException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ImportCspBlob", (java.lang.Object)dupParam0.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -709,7 +825,7 @@ public class RSACryptoServiceProvider extends RSA  {
 
     public void ImportParameters(RSAParameters parameters) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.FormatException, system.security.cryptography.CryptographicException, system.ArgumentNullException, system.NotSupportedException, system.ObjectDisposedException, system.globalization.CultureNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ImportParameters", parameters == null ? null : parameters.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -723,9 +839,13 @@ public class RSACryptoServiceProvider extends RSA  {
     
     public boolean getPersistKeyInCsp() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.security.cryptography.CryptographicException, system.globalization.CultureNotFoundException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPersistKeyInCsp = null;
         try {
-            return (boolean)classInstance.Get("PersistKeyInCsp");
+            retObjectPersistKeyInCsp = classInstance.Get("PersistKeyInCsp");
+            return (boolean)retObjectPersistKeyInCsp;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectPersistKeyInCsp != null ? retObjectPersistKeyInCsp.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -733,7 +853,7 @@ public class RSACryptoServiceProvider extends RSA  {
 
     public void setPersistKeyInCsp(boolean PersistKeyInCsp) throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.security.cryptography.CryptographicException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.ArgumentNullException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PersistKeyInCsp", PersistKeyInCsp);
         } catch (JCNativeException jcne) {
@@ -743,9 +863,13 @@ public class RSACryptoServiceProvider extends RSA  {
 
     public boolean getPublicOnly() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.security.cryptography.CryptographicException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPublicOnly = null;
         try {
-            return (boolean)classInstance.Get("PublicOnly");
+            retObjectPublicOnly = classInstance.Get("PublicOnly");
+            return (boolean)retObjectPublicOnly;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectPublicOnly != null ? retObjectPublicOnly.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -753,9 +877,13 @@ public class RSACryptoServiceProvider extends RSA  {
 
     public static boolean getUseMachineKeyStore() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectUseMachineKeyStore = null;
         try {
-            return (boolean)classType.Get("UseMachineKeyStore");
+            retObjectUseMachineKeyStore = classType.Get("UseMachineKeyStore");
+            return (boolean)retObjectUseMachineKeyStore;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectUseMachineKeyStore != null ? retObjectUseMachineKeyStore.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -763,7 +891,7 @@ public class RSACryptoServiceProvider extends RSA  {
 
     public static void setUseMachineKeyStore(boolean UseMachineKeyStore) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Set("UseMachineKeyStore", UseMachineKeyStore);
         } catch (JCNativeException jcne) {
@@ -773,10 +901,14 @@ public class RSACryptoServiceProvider extends RSA  {
 
     public CspKeyContainerInfo getCspKeyContainerInfo() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.security.cryptography.CryptographicException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCspKeyContainerInfo = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CspKeyContainerInfo");
+            retObjectCspKeyContainerInfo = classInstance.Get("CspKeyContainerInfo");
+            JCObject val = (JCObject)retObjectCspKeyContainerInfo;
             return new CspKeyContainerInfo(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCspKeyContainerInfo != null ? retObjectCspKeyContainerInfo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

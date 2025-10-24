@@ -176,9 +176,13 @@ public class XmlTextAttribute extends Attribute  {
     
     public java.lang.String getDataType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDataType = null;
         try {
-            return (java.lang.String)classInstance.Get("DataType");
+            retObjectDataType = classInstance.Get("DataType");
+            return (java.lang.String)retObjectDataType;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDataType != null ? retObjectDataType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,7 +190,7 @@ public class XmlTextAttribute extends Attribute  {
 
     public void setDataType(java.lang.String DataType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DataType", DataType);
         } catch (JCNativeException jcne) {
@@ -196,10 +200,14 @@ public class XmlTextAttribute extends Attribute  {
 
     public NetType getType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Type");
+            retObjectType = classInstance.Get("Type");
+            JCObject val = (JCObject)retObjectType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectType != null ? retObjectType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -207,7 +215,7 @@ public class XmlTextAttribute extends Attribute  {
 
     public void setType(NetType Type) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Type", Type == null ? null : Type.getJCOInstance());
         } catch (JCNativeException jcne) {

@@ -171,9 +171,13 @@ public class DataGridAutoGeneratingColumnEventArgs extends EventArgs  {
     
     public boolean getCancel() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCancel = null;
         try {
-            return (boolean)classInstance.Get("Cancel");
+            retObjectCancel = classInstance.Get("Cancel");
+            return (boolean)retObjectCancel;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCancel != null ? retObjectCancel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,7 +185,7 @@ public class DataGridAutoGeneratingColumnEventArgs extends EventArgs  {
 
     public void setCancel(boolean Cancel) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Cancel", Cancel);
         } catch (JCNativeException jcne) {
@@ -191,10 +195,14 @@ public class DataGridAutoGeneratingColumnEventArgs extends EventArgs  {
 
     public NetObject getPropertyDescriptor() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPropertyDescriptor = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PropertyDescriptor");
+            retObjectPropertyDescriptor = classInstance.Get("PropertyDescriptor");
+            JCObject val = (JCObject)retObjectPropertyDescriptor;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPropertyDescriptor != null ? retObjectPropertyDescriptor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,7 +210,7 @@ public class DataGridAutoGeneratingColumnEventArgs extends EventArgs  {
 
     public void setPropertyDescriptor(NetObject PropertyDescriptor) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PropertyDescriptor", PropertyDescriptor == null ? null : PropertyDescriptor.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -212,9 +220,13 @@ public class DataGridAutoGeneratingColumnEventArgs extends EventArgs  {
 
     public java.lang.String getPropertyName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPropertyName = null;
         try {
-            return (java.lang.String)classInstance.Get("PropertyName");
+            retObjectPropertyName = classInstance.Get("PropertyName");
+            return (java.lang.String)retObjectPropertyName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectPropertyName != null ? retObjectPropertyName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -222,10 +234,14 @@ public class DataGridAutoGeneratingColumnEventArgs extends EventArgs  {
 
     public NetType getPropertyType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPropertyType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PropertyType");
+            retObjectPropertyType = classInstance.Get("PropertyType");
+            JCObject val = (JCObject)retObjectPropertyType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPropertyType != null ? retObjectPropertyType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -233,10 +249,14 @@ public class DataGridAutoGeneratingColumnEventArgs extends EventArgs  {
 
     public DataGridColumn getColumn() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectColumn = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Column");
+            retObjectColumn = classInstance.Get("Column");
+            JCObject val = (JCObject)retObjectColumn;
             return new DataGridColumn(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectColumn != null ? retObjectColumn.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -244,7 +264,7 @@ public class DataGridAutoGeneratingColumnEventArgs extends EventArgs  {
 
     public void setColumn(DataGridColumn Column) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Column", Column == null ? null : Column.getJCOInstance());
         } catch (JCNativeException jcne) {

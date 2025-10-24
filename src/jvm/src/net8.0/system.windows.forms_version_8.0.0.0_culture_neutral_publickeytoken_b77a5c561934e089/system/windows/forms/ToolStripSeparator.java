@@ -173,10 +173,14 @@ public class ToolStripSeparator extends ToolStripItem  {
     
     public Size GetPreferredSize(Size constrainingSize) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPreferredSize = null;
         try {
-            JCObject objGetPreferredSize = (JCObject)classInstance.Invoke("GetPreferredSize", constrainingSize == null ? null : constrainingSize.getJCOInstance());
+            retObjectGetPreferredSize = classInstance.Invoke("GetPreferredSize", constrainingSize == null ? null : constrainingSize.getJCOInstance());
+            JCObject objGetPreferredSize = (JCObject)retObjectGetPreferredSize;
             return new Size(objGetPreferredSize);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetPreferredSize != null ? retObjectGetPreferredSize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,9 +192,13 @@ public class ToolStripSeparator extends ToolStripItem  {
     
     public boolean getAutoToolTip() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAutoToolTip = null;
         try {
-            return (boolean)classInstance.Get("AutoToolTip");
+            retObjectAutoToolTip = classInstance.Get("AutoToolTip");
+            return (boolean)retObjectAutoToolTip;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAutoToolTip != null ? retObjectAutoToolTip.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,7 +206,7 @@ public class ToolStripSeparator extends ToolStripItem  {
 
     public void setAutoToolTip(boolean AutoToolTip) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AutoToolTip", AutoToolTip);
         } catch (JCNativeException jcne) {
@@ -208,9 +216,13 @@ public class ToolStripSeparator extends ToolStripItem  {
 
     public boolean getDoubleClickEnabled() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDoubleClickEnabled = null;
         try {
-            return (boolean)classInstance.Get("DoubleClickEnabled");
+            retObjectDoubleClickEnabled = classInstance.Get("DoubleClickEnabled");
+            return (boolean)retObjectDoubleClickEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectDoubleClickEnabled != null ? retObjectDoubleClickEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -218,7 +230,7 @@ public class ToolStripSeparator extends ToolStripItem  {
 
     public void setDoubleClickEnabled(boolean DoubleClickEnabled) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DoubleClickEnabled", DoubleClickEnabled);
         } catch (JCNativeException jcne) {
@@ -228,9 +240,13 @@ public class ToolStripSeparator extends ToolStripItem  {
 
     public boolean getRightToLeftAutoMirrorImage() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRightToLeftAutoMirrorImage = null;
         try {
-            return (boolean)classInstance.Get("RightToLeftAutoMirrorImage");
+            retObjectRightToLeftAutoMirrorImage = classInstance.Get("RightToLeftAutoMirrorImage");
+            return (boolean)retObjectRightToLeftAutoMirrorImage;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectRightToLeftAutoMirrorImage != null ? retObjectRightToLeftAutoMirrorImage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -238,7 +254,7 @@ public class ToolStripSeparator extends ToolStripItem  {
 
     public void setRightToLeftAutoMirrorImage(boolean RightToLeftAutoMirrorImage) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RightToLeftAutoMirrorImage", RightToLeftAutoMirrorImage);
         } catch (JCNativeException jcne) {
@@ -248,9 +264,20 @@ public class ToolStripSeparator extends ToolStripItem  {
 
     public int getImageIndex() throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectImageIndex = null;
         try {
-            return (int)classInstance.Get("ImageIndex");
+            retObjectImageIndex = classInstance.Get("ImageIndex");
+            return (int)retObjectImageIndex;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectImageIndex_ToString = retObjectImageIndex == null ? "null" : retObjectImageIndex.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectImageIndexNumber = (java.lang.Number)retObjectImageIndex;
+                return retObjectImageIndexNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectImageIndex != null ? retObjectImageIndex.getClass() : "null", retObjectImageIndex_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -258,7 +285,7 @@ public class ToolStripSeparator extends ToolStripItem  {
 
     public void setImageIndex(int ImageIndex) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ImageIndex", ImageIndex);
         } catch (JCNativeException jcne) {
@@ -268,10 +295,14 @@ public class ToolStripSeparator extends ToolStripItem  {
 
     public Color getImageTransparentColor() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectImageTransparentColor = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ImageTransparentColor");
+            retObjectImageTransparentColor = classInstance.Get("ImageTransparentColor");
+            JCObject val = (JCObject)retObjectImageTransparentColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectImageTransparentColor != null ? retObjectImageTransparentColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -279,7 +310,7 @@ public class ToolStripSeparator extends ToolStripItem  {
 
     public void setImageTransparentColor(Color ImageTransparentColor) throws Throwable, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArgumentException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException, system.ArgumentNullException, system.RankException, system.ArrayTypeMismatchException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ImageTransparentColor", ImageTransparentColor == null ? null : ImageTransparentColor.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -289,10 +320,14 @@ public class ToolStripSeparator extends ToolStripItem  {
 
     public ContentAlignment getImageAlign() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectImageAlign = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ImageAlign");
+            retObjectImageAlign = classInstance.Get("ImageAlign");
+            JCObject val = (JCObject)retObjectImageAlign;
             return new ContentAlignment(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectImageAlign != null ? retObjectImageAlign.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -300,7 +335,7 @@ public class ToolStripSeparator extends ToolStripItem  {
 
     public void setImageAlign(ContentAlignment ImageAlign) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ImageAlign", ImageAlign == null ? null : ImageAlign.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -310,10 +345,14 @@ public class ToolStripSeparator extends ToolStripItem  {
 
     public ContentAlignment getTextAlign() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTextAlign = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TextAlign");
+            retObjectTextAlign = classInstance.Get("TextAlign");
+            JCObject val = (JCObject)retObjectTextAlign;
             return new ContentAlignment(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTextAlign != null ? retObjectTextAlign.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -321,7 +360,7 @@ public class ToolStripSeparator extends ToolStripItem  {
 
     public void setTextAlign(ContentAlignment TextAlign) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TextAlign", TextAlign == null ? null : TextAlign.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -331,9 +370,13 @@ public class ToolStripSeparator extends ToolStripItem  {
 
     public java.lang.String getImageKey() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectImageKey = null;
         try {
-            return (java.lang.String)classInstance.Get("ImageKey");
+            retObjectImageKey = classInstance.Get("ImageKey");
+            return (java.lang.String)retObjectImageKey;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectImageKey != null ? retObjectImageKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -341,7 +384,7 @@ public class ToolStripSeparator extends ToolStripItem  {
 
     public void setImageKey(java.lang.String ImageKey) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.ArrayTypeMismatchException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ImageKey", ImageKey);
         } catch (JCNativeException jcne) {
@@ -351,9 +394,13 @@ public class ToolStripSeparator extends ToolStripItem  {
 
     public java.lang.String getToolTipText() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToolTipText = null;
         try {
-            return (java.lang.String)classInstance.Get("ToolTipText");
+            retObjectToolTipText = classInstance.Get("ToolTipText");
+            return (java.lang.String)retObjectToolTipText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectToolTipText != null ? retObjectToolTipText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -361,7 +408,7 @@ public class ToolStripSeparator extends ToolStripItem  {
 
     public void setToolTipText(java.lang.String ToolTipText) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ToolTipText", ToolTipText);
         } catch (JCNativeException jcne) {
@@ -371,10 +418,14 @@ public class ToolStripSeparator extends ToolStripItem  {
 
     public TextImageRelation getTextImageRelation() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTextImageRelation = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TextImageRelation");
+            retObjectTextImageRelation = classInstance.Get("TextImageRelation");
+            JCObject val = (JCObject)retObjectTextImageRelation;
             return new TextImageRelation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTextImageRelation != null ? retObjectTextImageRelation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -382,7 +433,7 @@ public class ToolStripSeparator extends ToolStripItem  {
 
     public void setTextImageRelation(TextImageRelation TextImageRelation) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TextImageRelation", TextImageRelation == null ? null : TextImageRelation.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -392,10 +443,14 @@ public class ToolStripSeparator extends ToolStripItem  {
 
     public ToolStripItemDisplayStyle getDisplayStyle() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDisplayStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DisplayStyle");
+            retObjectDisplayStyle = classInstance.Get("DisplayStyle");
+            JCObject val = (JCObject)retObjectDisplayStyle;
             return new ToolStripItemDisplayStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDisplayStyle != null ? retObjectDisplayStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -403,7 +458,7 @@ public class ToolStripSeparator extends ToolStripItem  {
 
     public void setDisplayStyle(ToolStripItemDisplayStyle DisplayStyle) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DisplayStyle", DisplayStyle == null ? null : DisplayStyle.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -413,10 +468,14 @@ public class ToolStripSeparator extends ToolStripItem  {
 
     public ToolStripItemImageScaling getImageScaling() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectImageScaling = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ImageScaling");
+            retObjectImageScaling = classInstance.Get("ImageScaling");
+            JCObject val = (JCObject)retObjectImageScaling;
             return new ToolStripItemImageScaling(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectImageScaling != null ? retObjectImageScaling.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -424,7 +483,7 @@ public class ToolStripSeparator extends ToolStripItem  {
 
     public void setImageScaling(ToolStripItemImageScaling ImageScaling) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ImageScaling", ImageScaling == null ? null : ImageScaling.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -439,7 +498,7 @@ public class ToolStripSeparator extends ToolStripItem  {
 
     public void addDisplayStyleChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("DisplayStyleChanged", handler);
         } catch (JCNativeException jcne) {
@@ -449,7 +508,7 @@ public class ToolStripSeparator extends ToolStripItem  {
 
     public void removeDisplayStyleChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("DisplayStyleChanged", handler);
         } catch (JCNativeException jcne) {
@@ -459,7 +518,7 @@ public class ToolStripSeparator extends ToolStripItem  {
 
     public void addEnabledChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("EnabledChanged", handler);
         } catch (JCNativeException jcne) {
@@ -469,7 +528,7 @@ public class ToolStripSeparator extends ToolStripItem  {
 
     public void removeEnabledChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("EnabledChanged", handler);
         } catch (JCNativeException jcne) {
@@ -479,7 +538,7 @@ public class ToolStripSeparator extends ToolStripItem  {
 
     public void addTextChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("TextChanged", handler);
         } catch (JCNativeException jcne) {
@@ -489,7 +548,7 @@ public class ToolStripSeparator extends ToolStripItem  {
 
     public void removeTextChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("TextChanged", handler);
         } catch (JCNativeException jcne) {

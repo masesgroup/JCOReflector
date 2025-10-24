@@ -181,7 +181,7 @@ public class ImageList extends Component  {
     
     public void Draw(Graphics g, int x, int y, int index) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.AccessViolationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Draw", g == null ? null : g.getJCOInstance(), x, y, index);
         } catch (JCNativeException jcne) {
@@ -191,7 +191,7 @@ public class ImageList extends Component  {
 
     public void Draw(Graphics g, int x, int y, int width, int height, int index) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.OverflowException, system.AccessViolationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Draw", g == null ? null : g.getJCOInstance(), x, y, width, height, index);
         } catch (JCNativeException jcne) {
@@ -201,7 +201,7 @@ public class ImageList extends Component  {
 
     public void Draw(Graphics g, Point pt, int index) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.AccessViolationException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Draw", g == null ? null : g.getJCOInstance(), pt == null ? null : pt.getJCOInstance(), index);
         } catch (JCNativeException jcne) {
@@ -215,9 +215,13 @@ public class ImageList extends Component  {
     
     public boolean getHandleCreated() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHandleCreated = null;
         try {
-            return (boolean)classInstance.Get("HandleCreated");
+            retObjectHandleCreated = classInstance.Get("HandleCreated");
+            return (boolean)retObjectHandleCreated;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectHandleCreated != null ? retObjectHandleCreated.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -225,10 +229,14 @@ public class ImageList extends Component  {
 
     public Color getTransparentColor() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTransparentColor = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TransparentColor");
+            retObjectTransparentColor = classInstance.Get("TransparentColor");
+            JCObject val = (JCObject)retObjectTransparentColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTransparentColor != null ? retObjectTransparentColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -236,7 +244,7 @@ public class ImageList extends Component  {
 
     public void setTransparentColor(Color TransparentColor) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TransparentColor", TransparentColor == null ? null : TransparentColor.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -246,10 +254,14 @@ public class ImageList extends Component  {
 
     public Size getImageSize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectImageSize = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ImageSize");
+            retObjectImageSize = classInstance.Get("ImageSize");
+            JCObject val = (JCObject)retObjectImageSize;
             return new Size(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectImageSize != null ? retObjectImageSize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -257,7 +269,7 @@ public class ImageList extends Component  {
 
     public void setImageSize(Size ImageSize) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.AccessViolationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ImageSize", ImageSize == null ? null : ImageSize.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -267,10 +279,14 @@ public class ImageList extends Component  {
 
     public NetObject getTag() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTag = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Tag");
+            retObjectTag = classInstance.Get("Tag");
+            JCObject val = (JCObject)retObjectTag;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTag != null ? retObjectTag.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -278,7 +294,7 @@ public class ImageList extends Component  {
 
     public void setTag(NetObject Tag) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Tag", Tag == null ? null : Tag.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -288,10 +304,14 @@ public class ImageList extends Component  {
 
     public ColorDepth getColorDepth() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectColorDepth = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ColorDepth");
+            retObjectColorDepth = classInstance.Get("ColorDepth");
+            JCObject val = (JCObject)retObjectColorDepth;
             return new ColorDepth(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectColorDepth != null ? retObjectColorDepth.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -299,7 +319,7 @@ public class ImageList extends Component  {
 
     public void setColorDepth(ColorDepth ColorDepth) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.AccessViolationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ColorDepth", ColorDepth == null ? null : ColorDepth.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -309,10 +329,14 @@ public class ImageList extends Component  {
 
     public ImageListStreamer getImageStream() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.AccessViolationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectImageStream = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ImageStream");
+            retObjectImageStream = classInstance.Get("ImageStream");
+            JCObject val = (JCObject)retObjectImageStream;
             return new ImageListStreamer(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectImageStream != null ? retObjectImageStream.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -320,7 +344,7 @@ public class ImageList extends Component  {
 
     public void setImageStream(ImageListStreamer ImageStream) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.AccessViolationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ImageStream", ImageStream == null ? null : ImageStream.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -335,7 +359,7 @@ public class ImageList extends Component  {
 
     public void addRecreateHandle(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("RecreateHandle", handler);
         } catch (JCNativeException jcne) {
@@ -345,7 +369,7 @@ public class ImageList extends Component  {
 
     public void removeRecreateHandle(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("RecreateHandle", handler);
         } catch (JCNativeException jcne) {

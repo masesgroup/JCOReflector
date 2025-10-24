@@ -169,9 +169,20 @@ public class TextEmbeddedObjectMetrics extends NetObject  {
     
     public double getBaseline() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBaseline = null;
         try {
-            return (double)classInstance.Get("Baseline");
+            retObjectBaseline = classInstance.Get("Baseline");
+            return (double)retObjectBaseline;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectBaseline_ToString = retObjectBaseline == null ? "null" : retObjectBaseline.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectBaselineNumber = (java.lang.Number)retObjectBaseline;
+                return retObjectBaselineNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectBaseline != null ? retObjectBaseline.getClass() : "null", retObjectBaseline_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,9 +190,20 @@ public class TextEmbeddedObjectMetrics extends NetObject  {
 
     public double getHeight() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHeight = null;
         try {
-            return (double)classInstance.Get("Height");
+            retObjectHeight = classInstance.Get("Height");
+            return (double)retObjectHeight;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectHeight_ToString = retObjectHeight == null ? "null" : retObjectHeight.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectHeightNumber = (java.lang.Number)retObjectHeight;
+                return retObjectHeightNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectHeight != null ? retObjectHeight.getClass() : "null", retObjectHeight_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -189,9 +211,20 @@ public class TextEmbeddedObjectMetrics extends NetObject  {
 
     public double getWidth() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWidth = null;
         try {
-            return (double)classInstance.Get("Width");
+            retObjectWidth = classInstance.Get("Width");
+            return (double)retObjectWidth;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectWidth_ToString = retObjectWidth == null ? "null" : retObjectWidth.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectWidthNumber = (java.lang.Number)retObjectWidth;
+                return retObjectWidthNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectWidth != null ? retObjectWidth.getClass() : "null", retObjectWidth_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

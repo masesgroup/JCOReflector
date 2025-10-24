@@ -198,9 +198,13 @@ public class Page extends TemplateControl  {
     
     public boolean IsClientScriptBlockRegistered(java.lang.String key) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsClientScriptBlockRegistered = null;
         try {
-            return (boolean)classInstance.Invoke("IsClientScriptBlockRegistered", key);
+            retObjectIsClientScriptBlockRegistered = classInstance.Invoke("IsClientScriptBlockRegistered", key);
+            return (boolean)retObjectIsClientScriptBlockRegistered;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsClientScriptBlockRegistered != null ? retObjectIsClientScriptBlockRegistered.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -208,9 +212,13 @@ public class Page extends TemplateControl  {
 
     public boolean IsStartupScriptRegistered(java.lang.String key) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsStartupScriptRegistered = null;
         try {
-            return (boolean)classInstance.Invoke("IsStartupScriptRegistered", key);
+            retObjectIsStartupScriptRegistered = classInstance.Invoke("IsStartupScriptRegistered", key);
+            return (boolean)retObjectIsStartupScriptRegistered;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsStartupScriptRegistered != null ? retObjectIsStartupScriptRegistered.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -218,9 +226,13 @@ public class Page extends TemplateControl  {
 
     public boolean RequiresControlState(Control control) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRequiresControlState = null;
         try {
-            return (boolean)classInstance.Invoke("RequiresControlState", control == null ? null : control.getJCOInstance());
+            retObjectRequiresControlState = classInstance.Invoke("RequiresControlState", control == null ? null : control.getJCOInstance());
+            return (boolean)retObjectRequiresControlState;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectRequiresControlState != null ? retObjectRequiresControlState.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -228,9 +240,20 @@ public class Page extends TemplateControl  {
 
     public int GetTypeHashCode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetTypeHashCode = null;
         try {
-            return (int)classInstance.Invoke("GetTypeHashCode");
+            retObjectGetTypeHashCode = classInstance.Invoke("GetTypeHashCode");
+            return (int)retObjectGetTypeHashCode;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetTypeHashCode_ToString = retObjectGetTypeHashCode == null ? "null" : retObjectGetTypeHashCode.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetTypeHashCodeNumber = (java.lang.Number)retObjectGetTypeHashCode;
+                return retObjectGetTypeHashCodeNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetTypeHashCode != null ? retObjectGetTypeHashCode.getClass() : "null", retObjectGetTypeHashCode_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -238,10 +261,14 @@ public class Page extends TemplateControl  {
 
     public NetObject GetDataItem() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDataItem = null;
         try {
-            JCObject objGetDataItem = (JCObject)classInstance.Invoke("GetDataItem");
+            retObjectGetDataItem = classInstance.Invoke("GetDataItem");
+            JCObject objGetDataItem = (JCObject)retObjectGetDataItem;
             return new NetObject(objGetDataItem);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetDataItem != null ? retObjectGetDataItem.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -249,9 +276,13 @@ public class Page extends TemplateControl  {
 
     public java.lang.String GetPostBackClientEvent(Control control, java.lang.String argument) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.configuration.ConfigurationErrorsException, system.web.HttpException, system.NullReferenceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPostBackClientEvent = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetPostBackClientEvent", control == null ? null : control.getJCOInstance(), argument);
+            retObjectGetPostBackClientEvent = classInstance.Invoke("GetPostBackClientEvent", control == null ? null : control.getJCOInstance(), argument);
+            return (java.lang.String)retObjectGetPostBackClientEvent;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetPostBackClientEvent != null ? retObjectGetPostBackClientEvent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -259,9 +290,13 @@ public class Page extends TemplateControl  {
 
     public java.lang.String GetPostBackClientHyperlink(Control control, java.lang.String argument) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.configuration.ConfigurationErrorsException, system.web.HttpException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPostBackClientHyperlink = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetPostBackClientHyperlink", control == null ? null : control.getJCOInstance(), argument);
+            retObjectGetPostBackClientHyperlink = classInstance.Invoke("GetPostBackClientHyperlink", control == null ? null : control.getJCOInstance(), argument);
+            return (java.lang.String)retObjectGetPostBackClientHyperlink;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetPostBackClientHyperlink != null ? retObjectGetPostBackClientHyperlink.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -269,9 +304,13 @@ public class Page extends TemplateControl  {
 
     public java.lang.String GetPostBackEventReference(Control control) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.configuration.ConfigurationErrorsException, system.web.HttpException, system.NullReferenceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPostBackEventReference = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetPostBackEventReference", control == null ? null : control.getJCOInstance());
+            retObjectGetPostBackEventReference = classInstance.Invoke("GetPostBackEventReference", control == null ? null : control.getJCOInstance());
+            return (java.lang.String)retObjectGetPostBackEventReference;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetPostBackEventReference != null ? retObjectGetPostBackEventReference.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -279,9 +318,13 @@ public class Page extends TemplateControl  {
 
     public java.lang.String GetPostBackEventReference(Control control, java.lang.String argument) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.configuration.ConfigurationErrorsException, system.web.HttpException, system.NullReferenceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPostBackEventReference = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetPostBackEventReference", control == null ? null : control.getJCOInstance(), argument);
+            retObjectGetPostBackEventReference = classInstance.Invoke("GetPostBackEventReference", control == null ? null : control.getJCOInstance(), argument);
+            return (java.lang.String)retObjectGetPostBackEventReference;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetPostBackEventReference != null ? retObjectGetPostBackEventReference.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -289,9 +332,13 @@ public class Page extends TemplateControl  {
 
     public java.lang.String MapPath(java.lang.String virtualPath) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.OutOfMemoryException, system.threading.ThreadAbortException, system.web.HttpRequestValidationException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMapPath = null;
         try {
-            return (java.lang.String)classInstance.Invoke("MapPath", virtualPath);
+            retObjectMapPath = classInstance.Invoke("MapPath", virtualPath);
+            return (java.lang.String)retObjectMapPath;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectMapPath != null ? retObjectMapPath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -299,10 +346,14 @@ public class Page extends TemplateControl  {
 
     public Control FindControl(java.lang.String id) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.configuration.provider.ProviderException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFindControl = null;
         try {
-            JCObject objFindControl = (JCObject)classInstance.Invoke("FindControl", id);
+            retObjectFindControl = classInstance.Invoke("FindControl", id);
+            JCObject objFindControl = (JCObject)retObjectFindControl;
             return new Control(objFindControl);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFindControl != null ? retObjectFindControl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -310,10 +361,14 @@ public class Page extends TemplateControl  {
 
     public static HtmlTextWriter CreateHtmlTextWriterFromType(TextWriter tw, NetType writerType) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.web.HttpException, system.NotSupportedException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateHtmlTextWriterFromType = null;
         try {
-            JCObject objCreateHtmlTextWriterFromType = (JCObject)classType.Invoke("CreateHtmlTextWriterFromType", tw == null ? null : tw.getJCOInstance(), writerType == null ? null : writerType.getJCOInstance());
+            retObjectCreateHtmlTextWriterFromType = classType.Invoke("CreateHtmlTextWriterFromType", tw == null ? null : tw.getJCOInstance(), writerType == null ? null : writerType.getJCOInstance());
+            JCObject objCreateHtmlTextWriterFromType = (JCObject)retObjectCreateHtmlTextWriterFromType;
             return new HtmlTextWriter(objCreateHtmlTextWriterFromType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateHtmlTextWriterFromType != null ? retObjectCreateHtmlTextWriterFromType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -321,10 +376,14 @@ public class Page extends TemplateControl  {
 
     public ValidatorCollection GetValidators(java.lang.String validationGroup) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetValidators = null;
         try {
-            JCObject objGetValidators = (JCObject)classInstance.Invoke("GetValidators", validationGroup);
+            retObjectGetValidators = classInstance.Invoke("GetValidators", validationGroup);
+            JCObject objGetValidators = (JCObject)retObjectGetValidators;
             return new ValidatorCollection(objGetValidators);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetValidators != null ? retObjectGetValidators.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -332,7 +391,7 @@ public class Page extends TemplateControl  {
 
     public void AddOnPreRenderCompleteAsync(BeginEventHandler beginHandler, EndEventHandler endHandler) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.configuration.ConfigurationErrorsException, system.web.HttpException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.ApplicationException, system.web.HttpUnhandledException, system.PlatformNotSupportedException, system.threading.ThreadStateException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddOnPreRenderCompleteAsync", beginHandler, endHandler);
         } catch (JCNativeException jcne) {
@@ -342,7 +401,7 @@ public class Page extends TemplateControl  {
 
     public void AddOnPreRenderCompleteAsync(BeginEventHandler beginHandler, EndEventHandler endHandler, NetObject state) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.web.HttpException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.configuration.ConfigurationException, system.InvalidCastException, system.NullReferenceException, system.OutOfMemoryException, system.ApplicationException, system.web.HttpUnhandledException, system.security.SecurityException, system.PlatformNotSupportedException, system.threading.LockRecursionException, system.threading.SynchronizationLockException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddOnPreRenderCompleteAsync", beginHandler, endHandler, state == null ? null : state.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -352,7 +411,7 @@ public class Page extends TemplateControl  {
 
     public void DesignerInitialize() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.configuration.provider.ProviderException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.FormatException, system.reflection.AmbiguousMatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DesignerInitialize");
         } catch (JCNativeException jcne) {
@@ -362,7 +421,7 @@ public class Page extends TemplateControl  {
 
     public void ExecuteRegisteredAsyncTasks() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.web.HttpException, system.ArgumentNullException, system.web.HttpRequestValidationException, system.configuration.ConfigurationErrorsException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationException, system.OverflowException, system.threading.ThreadStateException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ExecuteRegisteredAsyncTasks");
         } catch (JCNativeException jcne) {
@@ -372,7 +431,7 @@ public class Page extends TemplateControl  {
 
     public void ProcessRequest(HttpContext context) throws Throwable, system.security.SecurityException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.NullReferenceException, system.NotSupportedException, system.MulticastNotSupportedException, system.threading.ThreadStateException, system.web.HttpUnhandledException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ProcessRequest", context == null ? null : context.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -382,7 +441,7 @@ public class Page extends TemplateControl  {
 
     public void RegisterArrayDeclaration(java.lang.String arrayName, java.lang.String arrayValue) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RegisterArrayDeclaration", arrayName, arrayValue);
         } catch (JCNativeException jcne) {
@@ -392,7 +451,7 @@ public class Page extends TemplateControl  {
 
     public void RegisterAsyncTask(PageAsyncTask task) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.web.HttpException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.configuration.ConfigurationException, system.InvalidCastException, system.NullReferenceException, system.threading.ThreadStateException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RegisterAsyncTask", task == null ? null : task.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -402,7 +461,7 @@ public class Page extends TemplateControl  {
 
     public void RegisterClientScriptBlock(java.lang.String key, java.lang.String script) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RegisterClientScriptBlock", key, script);
         } catch (JCNativeException jcne) {
@@ -412,7 +471,7 @@ public class Page extends TemplateControl  {
 
     public void RegisterHiddenField(java.lang.String hiddenFieldName, java.lang.String hiddenFieldInitialValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RegisterHiddenField", hiddenFieldName, hiddenFieldInitialValue);
         } catch (JCNativeException jcne) {
@@ -422,7 +481,7 @@ public class Page extends TemplateControl  {
 
     public void RegisterOnSubmitStatement(java.lang.String key, java.lang.String script) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RegisterOnSubmitStatement", key, script);
         } catch (JCNativeException jcne) {
@@ -432,7 +491,7 @@ public class Page extends TemplateControl  {
 
     public void RegisterRequiresControlState(Control control) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.configuration.provider.ProviderException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RegisterRequiresControlState", control == null ? null : control.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -442,7 +501,7 @@ public class Page extends TemplateControl  {
 
     public void RegisterRequiresPostBack(Control control) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RegisterRequiresPostBack", control == null ? null : control.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -452,7 +511,7 @@ public class Page extends TemplateControl  {
 
     public void RegisterRequiresRaiseEvent(IPostBackEventHandler control) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RegisterRequiresRaiseEvent", control == null ? null : control.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -462,7 +521,7 @@ public class Page extends TemplateControl  {
 
     public void RegisterRequiresViewStateEncryption() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RegisterRequiresViewStateEncryption");
         } catch (JCNativeException jcne) {
@@ -472,7 +531,7 @@ public class Page extends TemplateControl  {
 
     public void RegisterStartupScript(java.lang.String key, java.lang.String script) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RegisterStartupScript", key, script);
         } catch (JCNativeException jcne) {
@@ -482,7 +541,7 @@ public class Page extends TemplateControl  {
 
     public void RegisterViewStateHandler() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RegisterViewStateHandler");
         } catch (JCNativeException jcne) {
@@ -492,7 +551,7 @@ public class Page extends TemplateControl  {
 
     public void SetFocus(java.lang.String clientID) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.configuration.ConfigurationErrorsException, system.web.HttpException, system.configuration.provider.ProviderException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetFocus", clientID);
         } catch (JCNativeException jcne) {
@@ -502,7 +561,7 @@ public class Page extends TemplateControl  {
 
     public void SetFocus(Control control) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.configuration.ConfigurationErrorsException, system.web.HttpException, system.configuration.provider.ProviderException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetFocus", control == null ? null : control.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -512,7 +571,7 @@ public class Page extends TemplateControl  {
 
     public void UnregisterRequiresControlState(Control control) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("UnregisterRequiresControlState", control == null ? null : control.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -522,7 +581,7 @@ public class Page extends TemplateControl  {
 
     public void Validate() throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Validate");
         } catch (JCNativeException jcne) {
@@ -532,7 +591,7 @@ public class Page extends TemplateControl  {
 
     public void Validate(java.lang.String validationGroup) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Validate", validationGroup);
         } catch (JCNativeException jcne) {
@@ -542,7 +601,7 @@ public class Page extends TemplateControl  {
 
     public void VerifyRenderingInServerForm(Control control) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.web.HttpException, system.web.HttpRequestValidationException, system.configuration.ConfigurationErrorsException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("VerifyRenderingInServerForm", control == null ? null : control.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -556,9 +615,13 @@ public class Page extends TemplateControl  {
     
     public boolean getBuffer() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.web.HttpException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBuffer = null;
         try {
-            return (boolean)classInstance.Get("Buffer");
+            retObjectBuffer = classInstance.Get("Buffer");
+            return (boolean)retObjectBuffer;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectBuffer != null ? retObjectBuffer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -566,7 +629,7 @@ public class Page extends TemplateControl  {
 
     public void setBuffer(boolean Buffer) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.web.HttpException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Buffer", Buffer);
         } catch (JCNativeException jcne) {
@@ -576,9 +639,13 @@ public class Page extends TemplateControl  {
 
     public boolean getEnableEventValidation() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEnableEventValidation = null;
         try {
-            return (boolean)classInstance.Get("EnableEventValidation");
+            retObjectEnableEventValidation = classInstance.Get("EnableEventValidation");
+            return (boolean)retObjectEnableEventValidation;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectEnableEventValidation != null ? retObjectEnableEventValidation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -586,7 +653,7 @@ public class Page extends TemplateControl  {
 
     public void setEnableEventValidation(boolean EnableEventValidation) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EnableEventValidation", EnableEventValidation);
         } catch (JCNativeException jcne) {
@@ -596,9 +663,13 @@ public class Page extends TemplateControl  {
 
     public boolean getEnableViewStateMac() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEnableViewStateMac = null;
         try {
-            return (boolean)classInstance.Get("EnableViewStateMac");
+            retObjectEnableViewStateMac = classInstance.Get("EnableViewStateMac");
+            return (boolean)retObjectEnableViewStateMac;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectEnableViewStateMac != null ? retObjectEnableViewStateMac.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -606,7 +677,7 @@ public class Page extends TemplateControl  {
 
     public void setEnableViewStateMac(boolean EnableViewStateMac) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EnableViewStateMac", EnableViewStateMac);
         } catch (JCNativeException jcne) {
@@ -616,9 +687,13 @@ public class Page extends TemplateControl  {
 
     public boolean getIsAsync() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsAsync = null;
         try {
-            return (boolean)classInstance.Get("IsAsync");
+            retObjectIsAsync = classInstance.Get("IsAsync");
+            return (boolean)retObjectIsAsync;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsAsync != null ? retObjectIsAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -626,9 +701,13 @@ public class Page extends TemplateControl  {
 
     public boolean getIsCallback() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsCallback = null;
         try {
-            return (boolean)classInstance.Get("IsCallback");
+            retObjectIsCallback = classInstance.Get("IsCallback");
+            return (boolean)retObjectIsCallback;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsCallback != null ? retObjectIsCallback.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -636,9 +715,13 @@ public class Page extends TemplateControl  {
 
     public boolean getIsCrossPagePostBack() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsCrossPagePostBack = null;
         try {
-            return (boolean)classInstance.Get("IsCrossPagePostBack");
+            retObjectIsCrossPagePostBack = classInstance.Get("IsCrossPagePostBack");
+            return (boolean)retObjectIsCrossPagePostBack;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsCrossPagePostBack != null ? retObjectIsCrossPagePostBack.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -646,9 +729,13 @@ public class Page extends TemplateControl  {
 
     public boolean getIsPostBack() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsPostBack = null;
         try {
-            return (boolean)classInstance.Get("IsPostBack");
+            retObjectIsPostBack = classInstance.Get("IsPostBack");
+            return (boolean)retObjectIsPostBack;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsPostBack != null ? retObjectIsPostBack.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -656,9 +743,13 @@ public class Page extends TemplateControl  {
 
     public boolean getIsPostBackEventControlRegistered() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsPostBackEventControlRegistered = null;
         try {
-            return (boolean)classInstance.Get("IsPostBackEventControlRegistered");
+            retObjectIsPostBackEventControlRegistered = classInstance.Get("IsPostBackEventControlRegistered");
+            return (boolean)retObjectIsPostBackEventControlRegistered;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsPostBackEventControlRegistered != null ? retObjectIsPostBackEventControlRegistered.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -666,9 +757,13 @@ public class Page extends TemplateControl  {
 
     public boolean getIsReusable() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsReusable = null;
         try {
-            return (boolean)classInstance.Get("IsReusable");
+            retObjectIsReusable = classInstance.Get("IsReusable");
+            return (boolean)retObjectIsReusable;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsReusable != null ? retObjectIsReusable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -676,9 +771,13 @@ public class Page extends TemplateControl  {
 
     public boolean getIsValid() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.web.HttpException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsValid = null;
         try {
-            return (boolean)classInstance.Get("IsValid");
+            retObjectIsValid = classInstance.Get("IsValid");
+            return (boolean)retObjectIsValid;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsValid != null ? retObjectIsValid.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -686,9 +785,13 @@ public class Page extends TemplateControl  {
 
     public boolean getMaintainScrollPositionOnPostBack() throws Throwable, system.ArgumentException, system.web.HttpException, system.ArgumentNullException, system.web.HttpRequestValidationException, system.configuration.ConfigurationErrorsException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.configuration.ConfigurationException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.globalization.CultureNotFoundException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaintainScrollPositionOnPostBack = null;
         try {
-            return (boolean)classInstance.Get("MaintainScrollPositionOnPostBack");
+            retObjectMaintainScrollPositionOnPostBack = classInstance.Get("MaintainScrollPositionOnPostBack");
+            return (boolean)retObjectMaintainScrollPositionOnPostBack;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectMaintainScrollPositionOnPostBack != null ? retObjectMaintainScrollPositionOnPostBack.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -696,7 +799,7 @@ public class Page extends TemplateControl  {
 
     public void setMaintainScrollPositionOnPostBack(boolean MaintainScrollPositionOnPostBack) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.web.HttpException, system.OutOfMemoryException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaintainScrollPositionOnPostBack", MaintainScrollPositionOnPostBack);
         } catch (JCNativeException jcne) {
@@ -706,9 +809,13 @@ public class Page extends TemplateControl  {
 
     public boolean getSkipFormActionValidation() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSkipFormActionValidation = null;
         try {
-            return (boolean)classInstance.Get("SkipFormActionValidation");
+            retObjectSkipFormActionValidation = classInstance.Get("SkipFormActionValidation");
+            return (boolean)retObjectSkipFormActionValidation;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectSkipFormActionValidation != null ? retObjectSkipFormActionValidation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -716,7 +823,7 @@ public class Page extends TemplateControl  {
 
     public void setSkipFormActionValidation(boolean SkipFormActionValidation) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SkipFormActionValidation", SkipFormActionValidation);
         } catch (JCNativeException jcne) {
@@ -726,9 +833,13 @@ public class Page extends TemplateControl  {
 
     public boolean getSmartNavigation() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.web.HttpException, system.web.HttpRequestValidationException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.configuration.ConfigurationException, system.NullReferenceException, system.FormatException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSmartNavigation = null;
         try {
-            return (boolean)classInstance.Get("SmartNavigation");
+            retObjectSmartNavigation = classInstance.Get("SmartNavigation");
+            return (boolean)retObjectSmartNavigation;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectSmartNavigation != null ? retObjectSmartNavigation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -736,7 +847,7 @@ public class Page extends TemplateControl  {
 
     public void setSmartNavigation(boolean SmartNavigation) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SmartNavigation", SmartNavigation);
         } catch (JCNativeException jcne) {
@@ -746,9 +857,13 @@ public class Page extends TemplateControl  {
 
     public boolean getTraceEnabled() throws Throwable, system.ArgumentException, system.web.HttpException, system.ArgumentNullException, system.configuration.ConfigurationErrorsException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTraceEnabled = null;
         try {
-            return (boolean)classInstance.Get("TraceEnabled");
+            retObjectTraceEnabled = classInstance.Get("TraceEnabled");
+            return (boolean)retObjectTraceEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectTraceEnabled != null ? retObjectTraceEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -756,7 +871,7 @@ public class Page extends TemplateControl  {
 
     public void setTraceEnabled(boolean TraceEnabled) throws Throwable, system.ArgumentException, system.web.HttpException, system.ArgumentNullException, system.configuration.ConfigurationErrorsException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TraceEnabled", TraceEnabled);
         } catch (JCNativeException jcne) {
@@ -766,9 +881,13 @@ public class Page extends TemplateControl  {
 
     public char getIdSeparator() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.configuration.provider.ProviderException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIdSeparator = null;
         try {
-            return (char)classInstance.Get("IdSeparator");
+            retObjectIdSeparator = classInstance.Get("IdSeparator");
+            return (char)retObjectIdSeparator;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into char", retObjectIdSeparator != null ? retObjectIdSeparator.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -776,9 +895,20 @@ public class Page extends TemplateControl  {
 
     public int getCodePage() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.web.HttpException, system.web.HttpRequestValidationException, system.configuration.ConfigurationErrorsException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCodePage = null;
         try {
-            return (int)classInstance.Get("CodePage");
+            retObjectCodePage = classInstance.Get("CodePage");
+            return (int)retObjectCodePage;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCodePage_ToString = retObjectCodePage == null ? "null" : retObjectCodePage.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectCodePageNumber = (java.lang.Number)retObjectCodePage;
+                return retObjectCodePageNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCodePage != null ? retObjectCodePage.getClass() : "null", retObjectCodePage_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -786,7 +916,7 @@ public class Page extends TemplateControl  {
 
     public void setCodePage(int CodePage) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.web.HttpException, system.NotSupportedException, system.OutOfMemoryException, system.configuration.ConfigurationErrorsException, system.IndexOutOfRangeException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CodePage", CodePage);
         } catch (JCNativeException jcne) {
@@ -796,9 +926,20 @@ public class Page extends TemplateControl  {
 
     public int getLCID() throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.ArgumentException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLCID = null;
         try {
-            return (int)classInstance.Get("LCID");
+            retObjectLCID = classInstance.Get("LCID");
+            return (int)retObjectLCID;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectLCID_ToString = retObjectLCID == null ? "null" : retObjectLCID.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectLCIDNumber = (java.lang.Number)retObjectLCID;
+                return retObjectLCIDNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectLCID != null ? retObjectLCID.getClass() : "null", retObjectLCID_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -806,7 +947,7 @@ public class Page extends TemplateControl  {
 
     public void setLCID(int LCID) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArgumentNullException, system.NotSupportedException, system.IndexOutOfRangeException, system.TypeInitializationException, system.InvalidOperationException, system.FormatException, system.security.SecurityException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("LCID", LCID);
         } catch (JCNativeException jcne) {
@@ -816,9 +957,20 @@ public class Page extends TemplateControl  {
 
     public int getMaxPageStateFieldLength() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxPageStateFieldLength = null;
         try {
-            return (int)classInstance.Get("MaxPageStateFieldLength");
+            retObjectMaxPageStateFieldLength = classInstance.Get("MaxPageStateFieldLength");
+            return (int)retObjectMaxPageStateFieldLength;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaxPageStateFieldLength_ToString = retObjectMaxPageStateFieldLength == null ? "null" : retObjectMaxPageStateFieldLength.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMaxPageStateFieldLengthNumber = (java.lang.Number)retObjectMaxPageStateFieldLength;
+                return retObjectMaxPageStateFieldLengthNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxPageStateFieldLength != null ? retObjectMaxPageStateFieldLength.getClass() : "null", retObjectMaxPageStateFieldLength_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -826,7 +978,7 @@ public class Page extends TemplateControl  {
 
     public void setMaxPageStateFieldLength(int MaxPageStateFieldLength) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaxPageStateFieldLength", MaxPageStateFieldLength);
         } catch (JCNativeException jcne) {
@@ -836,10 +988,14 @@ public class Page extends TemplateControl  {
 
     public IDictionary getItems() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectItems = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Items");
+            retObjectItems = classInstance.Get("Items");
+            JCObject val = (JCObject)retObjectItems;
             return new IDictionaryImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectItems != null ? retObjectItems.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -847,10 +1003,14 @@ public class Page extends TemplateControl  {
 
     public IPrincipal getUser() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUser = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("User");
+            retObjectUser = classInstance.Get("User");
+            JCObject val = (JCObject)retObjectUser;
             return new IPrincipalImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUser != null ? retObjectUser.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -858,9 +1018,13 @@ public class Page extends TemplateControl  {
 
     public java.lang.String getClientQueryString() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.web.HttpException, system.web.HttpRequestValidationException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.NullReferenceException, system.threading.ThreadAbortException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClientQueryString = null;
         try {
-            return (java.lang.String)classInstance.Get("ClientQueryString");
+            retObjectClientQueryString = classInstance.Get("ClientQueryString");
+            return (java.lang.String)retObjectClientQueryString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectClientQueryString != null ? retObjectClientQueryString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -868,9 +1032,13 @@ public class Page extends TemplateControl  {
 
     public java.lang.String getClientTarget() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClientTarget = null;
         try {
-            return (java.lang.String)classInstance.Get("ClientTarget");
+            retObjectClientTarget = classInstance.Get("ClientTarget");
+            return (java.lang.String)retObjectClientTarget;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectClientTarget != null ? retObjectClientTarget.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -878,7 +1046,7 @@ public class Page extends TemplateControl  {
 
     public void setClientTarget(java.lang.String ClientTarget) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ClientTarget", ClientTarget);
         } catch (JCNativeException jcne) {
@@ -888,9 +1056,13 @@ public class Page extends TemplateControl  {
 
     public java.lang.String getContentType() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.web.HttpException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContentType = null;
         try {
-            return (java.lang.String)classInstance.Get("ContentType");
+            retObjectContentType = classInstance.Get("ContentType");
+            return (java.lang.String)retObjectContentType;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectContentType != null ? retObjectContentType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -898,7 +1070,7 @@ public class Page extends TemplateControl  {
 
     public void setContentType(java.lang.String ContentType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.web.HttpException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ContentType", ContentType);
         } catch (JCNativeException jcne) {
@@ -908,9 +1080,13 @@ public class Page extends TemplateControl  {
 
     public java.lang.String getCulture() throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.ArgumentException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.ObjectDisposedException, system.BadImageFormatException, system.FormatException, system.io.IOException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCulture = null;
         try {
-            return (java.lang.String)classInstance.Get("Culture");
+            retObjectCulture = classInstance.Get("Culture");
+            return (java.lang.String)retObjectCulture;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectCulture != null ? retObjectCulture.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -918,7 +1094,7 @@ public class Page extends TemplateControl  {
 
     public void setCulture(java.lang.String Culture) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.configuration.ConfigurationException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Culture", Culture);
         } catch (JCNativeException jcne) {
@@ -928,9 +1104,13 @@ public class Page extends TemplateControl  {
 
     public java.lang.String getErrorPage() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectErrorPage = null;
         try {
-            return (java.lang.String)classInstance.Get("ErrorPage");
+            retObjectErrorPage = classInstance.Get("ErrorPage");
+            return (java.lang.String)retObjectErrorPage;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectErrorPage != null ? retObjectErrorPage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -938,7 +1118,7 @@ public class Page extends TemplateControl  {
 
     public void setErrorPage(java.lang.String ErrorPage) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ErrorPage", ErrorPage);
         } catch (JCNativeException jcne) {
@@ -948,9 +1128,13 @@ public class Page extends TemplateControl  {
 
     public java.lang.String getMasterPageFile() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.web.HttpException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMasterPageFile = null;
         try {
-            return (java.lang.String)classInstance.Get("MasterPageFile");
+            retObjectMasterPageFile = classInstance.Get("MasterPageFile");
+            return (java.lang.String)retObjectMasterPageFile;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectMasterPageFile != null ? retObjectMasterPageFile.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -958,7 +1142,7 @@ public class Page extends TemplateControl  {
 
     public void setMasterPageFile(java.lang.String MasterPageFile) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.web.HttpException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MasterPageFile", MasterPageFile);
         } catch (JCNativeException jcne) {
@@ -968,9 +1152,13 @@ public class Page extends TemplateControl  {
 
     public java.lang.String getMetaDescription() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMetaDescription = null;
         try {
-            return (java.lang.String)classInstance.Get("MetaDescription");
+            retObjectMetaDescription = classInstance.Get("MetaDescription");
+            return (java.lang.String)retObjectMetaDescription;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectMetaDescription != null ? retObjectMetaDescription.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -978,7 +1166,7 @@ public class Page extends TemplateControl  {
 
     public void setMetaDescription(java.lang.String MetaDescription) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MetaDescription", MetaDescription);
         } catch (JCNativeException jcne) {
@@ -988,9 +1176,13 @@ public class Page extends TemplateControl  {
 
     public java.lang.String getMetaKeywords() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMetaKeywords = null;
         try {
-            return (java.lang.String)classInstance.Get("MetaKeywords");
+            retObjectMetaKeywords = classInstance.Get("MetaKeywords");
+            return (java.lang.String)retObjectMetaKeywords;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectMetaKeywords != null ? retObjectMetaKeywords.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -998,7 +1190,7 @@ public class Page extends TemplateControl  {
 
     public void setMetaKeywords(java.lang.String MetaKeywords) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MetaKeywords", MetaKeywords);
         } catch (JCNativeException jcne) {
@@ -1008,9 +1200,13 @@ public class Page extends TemplateControl  {
 
     public java.lang.String getResponseEncoding() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.web.HttpException, system.web.HttpRequestValidationException, system.configuration.ConfigurationErrorsException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResponseEncoding = null;
         try {
-            return (java.lang.String)classInstance.Get("ResponseEncoding");
+            retObjectResponseEncoding = classInstance.Get("ResponseEncoding");
+            return (java.lang.String)retObjectResponseEncoding;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectResponseEncoding != null ? retObjectResponseEncoding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1018,7 +1214,7 @@ public class Page extends TemplateControl  {
 
     public void setResponseEncoding(java.lang.String ResponseEncoding) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.web.HttpException, system.NotSupportedException, system.OutOfMemoryException, system.configuration.ConfigurationErrorsException, system.IndexOutOfRangeException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ResponseEncoding", ResponseEncoding);
         } catch (JCNativeException jcne) {
@@ -1028,9 +1224,13 @@ public class Page extends TemplateControl  {
 
     public java.lang.String getStyleSheetTheme() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStyleSheetTheme = null;
         try {
-            return (java.lang.String)classInstance.Get("StyleSheetTheme");
+            retObjectStyleSheetTheme = classInstance.Get("StyleSheetTheme");
+            return (java.lang.String)retObjectStyleSheetTheme;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectStyleSheetTheme != null ? retObjectStyleSheetTheme.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1038,7 +1238,7 @@ public class Page extends TemplateControl  {
 
     public void setStyleSheetTheme(java.lang.String StyleSheetTheme) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("StyleSheetTheme", StyleSheetTheme);
         } catch (JCNativeException jcne) {
@@ -1048,9 +1248,13 @@ public class Page extends TemplateControl  {
 
     public java.lang.String getTheme() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTheme = null;
         try {
-            return (java.lang.String)classInstance.Get("Theme");
+            retObjectTheme = classInstance.Get("Theme");
+            return (java.lang.String)retObjectTheme;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectTheme != null ? retObjectTheme.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1058,7 +1262,7 @@ public class Page extends TemplateControl  {
 
     public void setTheme(java.lang.String Theme) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Theme", Theme);
         } catch (JCNativeException jcne) {
@@ -1068,9 +1272,13 @@ public class Page extends TemplateControl  {
 
     public java.lang.String getTitle() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTitle = null;
         try {
-            return (java.lang.String)classInstance.Get("Title");
+            retObjectTitle = classInstance.Get("Title");
+            return (java.lang.String)retObjectTitle;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectTitle != null ? retObjectTitle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1078,7 +1286,7 @@ public class Page extends TemplateControl  {
 
     public void setTitle(java.lang.String Title) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Title", Title);
         } catch (JCNativeException jcne) {
@@ -1088,9 +1296,13 @@ public class Page extends TemplateControl  {
 
     public java.lang.String getUICulture() throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.ArgumentException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.BadImageFormatException, system.FormatException, system.io.IOException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUICulture = null;
         try {
-            return (java.lang.String)classInstance.Get("UICulture");
+            retObjectUICulture = classInstance.Get("UICulture");
+            return (java.lang.String)retObjectUICulture;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectUICulture != null ? retObjectUICulture.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1098,7 +1310,7 @@ public class Page extends TemplateControl  {
 
     public void setUICulture(java.lang.String UICulture) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.configuration.ConfigurationException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UICulture", UICulture);
         } catch (JCNativeException jcne) {
@@ -1108,9 +1320,13 @@ public class Page extends TemplateControl  {
 
     public java.lang.String getViewStateUserKey() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectViewStateUserKey = null;
         try {
-            return (java.lang.String)classInstance.Get("ViewStateUserKey");
+            retObjectViewStateUserKey = classInstance.Get("ViewStateUserKey");
+            return (java.lang.String)retObjectViewStateUserKey;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectViewStateUserKey != null ? retObjectViewStateUserKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1118,7 +1334,7 @@ public class Page extends TemplateControl  {
 
     public void setViewStateUserKey(java.lang.String ViewStateUserKey) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.web.HttpException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ViewStateUserKey", ViewStateUserKey);
         } catch (JCNativeException jcne) {
@@ -1128,10 +1344,14 @@ public class Page extends TemplateControl  {
 
     public TimeSpan getAsyncTimeout() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.web.HttpException, system.web.HttpRequestValidationException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ObjectDisposedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.configuration.ConfigurationException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAsyncTimeout = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AsyncTimeout");
+            retObjectAsyncTimeout = classInstance.Get("AsyncTimeout");
+            JCObject val = (JCObject)retObjectAsyncTimeout;
             return new TimeSpan(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAsyncTimeout != null ? retObjectAsyncTimeout.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1139,7 +1359,7 @@ public class Page extends TemplateControl  {
 
     public void setAsyncTimeout(TimeSpan AsyncTimeout) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AsyncTimeout", AsyncTimeout == null ? null : AsyncTimeout.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1149,10 +1369,14 @@ public class Page extends TemplateControl  {
 
     public Cache getCache() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.web.HttpException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCache = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Cache");
+            retObjectCache = classInstance.Get("Cache");
+            JCObject val = (JCObject)retObjectCache;
             return new Cache(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCache != null ? retObjectCache.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1160,10 +1384,14 @@ public class Page extends TemplateControl  {
 
     public HttpApplicationState getApplication() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectApplication = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Application");
+            retObjectApplication = classInstance.Get("Application");
+            JCObject val = (JCObject)retObjectApplication;
             return new HttpApplicationState(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectApplication != null ? retObjectApplication.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1171,10 +1399,14 @@ public class Page extends TemplateControl  {
 
     public HttpRequest getRequest() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.web.HttpException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRequest = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Request");
+            retObjectRequest = classInstance.Get("Request");
+            JCObject val = (JCObject)retObjectRequest;
             return new HttpRequest(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRequest != null ? retObjectRequest.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1182,10 +1414,14 @@ public class Page extends TemplateControl  {
 
     public HttpResponse getResponse() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.web.HttpException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResponse = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Response");
+            retObjectResponse = classInstance.Get("Response");
+            JCObject val = (JCObject)retObjectResponse;
             return new HttpResponse(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectResponse != null ? retObjectResponse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1193,10 +1429,14 @@ public class Page extends TemplateControl  {
 
     public HttpServerUtility getServer() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectServer = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Server");
+            retObjectServer = classInstance.Get("Server");
+            JCObject val = (JCObject)retObjectServer;
             return new HttpServerUtility(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectServer != null ? retObjectServer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1204,10 +1444,14 @@ public class Page extends TemplateControl  {
 
     public ModelBindingExecutionContext getModelBindingExecutionContext() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectModelBindingExecutionContext = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ModelBindingExecutionContext");
+            retObjectModelBindingExecutionContext = classInstance.Get("ModelBindingExecutionContext");
+            JCObject val = (JCObject)retObjectModelBindingExecutionContext;
             return new ModelBindingExecutionContext(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectModelBindingExecutionContext != null ? retObjectModelBindingExecutionContext.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1215,10 +1459,14 @@ public class Page extends TemplateControl  {
 
     public ModelStateDictionary getModelState() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectModelState = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ModelState");
+            retObjectModelState = classInstance.Get("ModelState");
+            JCObject val = (JCObject)retObjectModelState;
             return new ModelStateDictionary(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectModelState != null ? retObjectModelState.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1226,10 +1474,14 @@ public class Page extends TemplateControl  {
 
     public RouteData getRouteData() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.web.HttpException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRouteData = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RouteData");
+            retObjectRouteData = classInstance.Get("RouteData");
+            JCObject val = (JCObject)retObjectRouteData;
             return new RouteData(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRouteData != null ? retObjectRouteData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1237,10 +1489,14 @@ public class Page extends TemplateControl  {
 
     public HttpSessionState getSession() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSession = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Session");
+            retObjectSession = classInstance.Get("Session");
+            JCObject val = (JCObject)retObjectSession;
             return new HttpSessionState(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSession != null ? retObjectSession.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1248,10 +1504,14 @@ public class Page extends TemplateControl  {
 
     public TraceContext getTrace() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.web.HttpException, system.ArgumentNullException, system.configuration.ConfigurationErrorsException, system.InvalidOperationException, system.NotSupportedException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTrace = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Trace");
+            retObjectTrace = classInstance.Get("Trace");
+            JCObject val = (JCObject)retObjectTrace;
             return new TraceContext(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTrace != null ? retObjectTrace.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1259,10 +1519,14 @@ public class Page extends TemplateControl  {
 
     public TraceMode getTraceModeValue() throws Throwable, system.ArgumentException, system.web.HttpException, system.ArgumentNullException, system.configuration.ConfigurationErrorsException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTraceModeValue = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TraceModeValue");
+            retObjectTraceModeValue = classInstance.Get("TraceModeValue");
+            JCObject val = (JCObject)retObjectTraceModeValue;
             return new TraceMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTraceModeValue != null ? retObjectTraceModeValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1270,7 +1534,7 @@ public class Page extends TemplateControl  {
 
     public void setTraceModeValue(TraceMode TraceModeValue) throws Throwable, system.ArgumentException, system.web.HttpException, system.ArgumentNullException, system.configuration.ConfigurationErrorsException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException, system.ArgumentOutOfRangeException, system.FormatException, system.IndexOutOfRangeException, system.web.HttpRequestValidationException, system.OverflowException, system.NullReferenceException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TraceModeValue", TraceModeValue == null ? null : TraceModeValue.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1280,10 +1544,14 @@ public class Page extends TemplateControl  {
 
     public PageAdapter getPageAdapter() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.configuration.provider.ProviderException, system.NotSupportedException, system.NullReferenceException, system.TypeLoadException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPageAdapter = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PageAdapter");
+            retObjectPageAdapter = classInstance.Get("PageAdapter");
+            JCObject val = (JCObject)retObjectPageAdapter;
             return new PageAdapter(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPageAdapter != null ? retObjectPageAdapter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1291,10 +1559,14 @@ public class Page extends TemplateControl  {
 
     public ClientScriptManager getClientScript() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClientScript = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ClientScript");
+            retObjectClientScript = classInstance.Get("ClientScript");
+            JCObject val = (JCObject)retObjectClientScript;
             return new ClientScriptManager(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClientScript != null ? retObjectClientScript.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1302,10 +1574,14 @@ public class Page extends TemplateControl  {
 
     public Control getAutoPostBackControl() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAutoPostBackControl = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AutoPostBackControl");
+            retObjectAutoPostBackControl = classInstance.Get("AutoPostBackControl");
+            JCObject val = (JCObject)retObjectAutoPostBackControl;
             return new Control(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAutoPostBackControl != null ? retObjectAutoPostBackControl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1313,7 +1589,7 @@ public class Page extends TemplateControl  {
 
     public void setAutoPostBackControl(Control AutoPostBackControl) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AutoPostBackControl", AutoPostBackControl == null ? null : AutoPostBackControl.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1323,10 +1599,14 @@ public class Page extends TemplateControl  {
 
     public HtmlForm getForm() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectForm = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Form");
+            retObjectForm = classInstance.Get("Form");
+            JCObject val = (JCObject)retObjectForm;
             return new HtmlForm(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectForm != null ? retObjectForm.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1334,10 +1614,14 @@ public class Page extends TemplateControl  {
 
     public HtmlHead getHeader() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHeader = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Header");
+            retObjectHeader = classInstance.Get("Header");
+            JCObject val = (JCObject)retObjectHeader;
             return new HtmlHead(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHeader != null ? retObjectHeader.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1345,10 +1629,14 @@ public class Page extends TemplateControl  {
 
     public MasterPage getMaster() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.web.HttpException, system.NullReferenceException, system.NotImplementedException, system.web.HttpParseException, system.web.HttpCompileException, system.MulticastNotSupportedException, system.security.SecurityException, system.configuration.ConfigurationErrorsException, system.reflection.AmbiguousMatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaster = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Master");
+            retObjectMaster = classInstance.Get("Master");
+            JCObject val = (JCObject)retObjectMaster;
             return new MasterPage(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMaster != null ? retObjectMaster.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1356,10 +1644,14 @@ public class Page extends TemplateControl  {
 
     public Page getPreviousPage() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.web.HttpException, system.web.HttpRequestValidationException, system.globalization.CultureNotFoundException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException, system.security.SecurityException, system.web.HttpParseException, system.web.HttpCompileException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.OverflowException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPreviousPage = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PreviousPage");
+            retObjectPreviousPage = classInstance.Get("PreviousPage");
+            JCObject val = (JCObject)retObjectPreviousPage;
             return new Page(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPreviousPage != null ? retObjectPreviousPage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1367,10 +1659,14 @@ public class Page extends TemplateControl  {
 
     public UnobtrusiveValidationMode getUnobtrusiveValidationMode() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationErrorsException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.InvalidCastException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUnobtrusiveValidationMode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("UnobtrusiveValidationMode");
+            retObjectUnobtrusiveValidationMode = classInstance.Get("UnobtrusiveValidationMode");
+            JCObject val = (JCObject)retObjectUnobtrusiveValidationMode;
             return new UnobtrusiveValidationMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUnobtrusiveValidationMode != null ? retObjectUnobtrusiveValidationMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1378,7 +1674,7 @@ public class Page extends TemplateControl  {
 
     public void setUnobtrusiveValidationMode(UnobtrusiveValidationMode UnobtrusiveValidationMode) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UnobtrusiveValidationMode", UnobtrusiveValidationMode == null ? null : UnobtrusiveValidationMode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1388,10 +1684,14 @@ public class Page extends TemplateControl  {
 
     public ValidatorCollection getValidators() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValidators = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Validators");
+            retObjectValidators = classInstance.Get("Validators");
+            JCObject val = (JCObject)retObjectValidators;
             return new ValidatorCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectValidators != null ? retObjectValidators.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1399,10 +1699,14 @@ public class Page extends TemplateControl  {
 
     public ViewStateEncryptionMode getViewStateEncryptionMode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectViewStateEncryptionMode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ViewStateEncryptionMode");
+            retObjectViewStateEncryptionMode = classInstance.Get("ViewStateEncryptionMode");
+            JCObject val = (JCObject)retObjectViewStateEncryptionMode;
             return new ViewStateEncryptionMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectViewStateEncryptionMode != null ? retObjectViewStateEncryptionMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1410,7 +1714,7 @@ public class Page extends TemplateControl  {
 
     public void setViewStateEncryptionMode(ViewStateEncryptionMode ViewStateEncryptionMode) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ViewStateEncryptionMode", ViewStateEncryptionMode == null ? null : ViewStateEncryptionMode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1425,7 +1729,7 @@ public class Page extends TemplateControl  {
 
     public void addInitComplete(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("InitComplete", handler);
         } catch (JCNativeException jcne) {
@@ -1435,7 +1739,7 @@ public class Page extends TemplateControl  {
 
     public void removeInitComplete(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("InitComplete", handler);
         } catch (JCNativeException jcne) {
@@ -1445,7 +1749,7 @@ public class Page extends TemplateControl  {
 
     public void addLoadComplete(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("LoadComplete", handler);
         } catch (JCNativeException jcne) {
@@ -1455,7 +1759,7 @@ public class Page extends TemplateControl  {
 
     public void removeLoadComplete(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("LoadComplete", handler);
         } catch (JCNativeException jcne) {
@@ -1465,7 +1769,7 @@ public class Page extends TemplateControl  {
 
     public void addPreInit(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("PreInit", handler);
         } catch (JCNativeException jcne) {
@@ -1475,7 +1779,7 @@ public class Page extends TemplateControl  {
 
     public void removePreInit(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("PreInit", handler);
         } catch (JCNativeException jcne) {
@@ -1485,7 +1789,7 @@ public class Page extends TemplateControl  {
 
     public void addPreLoad(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("PreLoad", handler);
         } catch (JCNativeException jcne) {
@@ -1495,7 +1799,7 @@ public class Page extends TemplateControl  {
 
     public void removePreLoad(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("PreLoad", handler);
         } catch (JCNativeException jcne) {
@@ -1505,7 +1809,7 @@ public class Page extends TemplateControl  {
 
     public void addPreRenderComplete(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("PreRenderComplete", handler);
         } catch (JCNativeException jcne) {
@@ -1515,7 +1819,7 @@ public class Page extends TemplateControl  {
 
     public void removePreRenderComplete(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("PreRenderComplete", handler);
         } catch (JCNativeException jcne) {
@@ -1525,7 +1829,7 @@ public class Page extends TemplateControl  {
 
     public void addSaveStateComplete(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("SaveStateComplete", handler);
         } catch (JCNativeException jcne) {
@@ -1535,7 +1839,7 @@ public class Page extends TemplateControl  {
 
     public void removeSaveStateComplete(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("SaveStateComplete", handler);
         } catch (JCNativeException jcne) {

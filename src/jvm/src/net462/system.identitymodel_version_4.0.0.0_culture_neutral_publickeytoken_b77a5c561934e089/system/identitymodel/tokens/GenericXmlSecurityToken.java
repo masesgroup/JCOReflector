@@ -159,9 +159,13 @@ public class GenericXmlSecurityToken extends SecurityToken  {
     
     public boolean MatchesKeyIdentifierClause(SecurityKeyIdentifierClause keyIdentifierClause) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMatchesKeyIdentifierClause = null;
         try {
-            return (boolean)classInstance.Invoke("MatchesKeyIdentifierClause", keyIdentifierClause == null ? null : keyIdentifierClause.getJCOInstance());
+            retObjectMatchesKeyIdentifierClause = classInstance.Invoke("MatchesKeyIdentifierClause", keyIdentifierClause == null ? null : keyIdentifierClause.getJCOInstance());
+            return (boolean)retObjectMatchesKeyIdentifierClause;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectMatchesKeyIdentifierClause != null ? retObjectMatchesKeyIdentifierClause.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -173,10 +177,14 @@ public class GenericXmlSecurityToken extends SecurityToken  {
     
     public SecurityKeyIdentifierClause getExternalTokenReference() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExternalTokenReference = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ExternalTokenReference");
+            retObjectExternalTokenReference = classInstance.Get("ExternalTokenReference");
+            JCObject val = (JCObject)retObjectExternalTokenReference;
             return new SecurityKeyIdentifierClause(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExternalTokenReference != null ? retObjectExternalTokenReference.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -184,10 +192,14 @@ public class GenericXmlSecurityToken extends SecurityToken  {
 
     public SecurityKeyIdentifierClause getInternalTokenReference() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInternalTokenReference = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("InternalTokenReference");
+            retObjectInternalTokenReference = classInstance.Get("InternalTokenReference");
+            JCObject val = (JCObject)retObjectInternalTokenReference;
             return new SecurityKeyIdentifierClause(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInternalTokenReference != null ? retObjectInternalTokenReference.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,10 +207,14 @@ public class GenericXmlSecurityToken extends SecurityToken  {
 
     public SecurityToken getProofToken() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProofToken = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ProofToken");
+            retObjectProofToken = classInstance.Get("ProofToken");
+            JCObject val = (JCObject)retObjectProofToken;
             return new SecurityToken(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectProofToken != null ? retObjectProofToken.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -206,10 +222,14 @@ public class GenericXmlSecurityToken extends SecurityToken  {
 
     public XmlElement getTokenXml() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTokenXml = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TokenXml");
+            retObjectTokenXml = classInstance.Get("TokenXml");
+            JCObject val = (JCObject)retObjectTokenXml;
             return new XmlElement(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTokenXml != null ? retObjectTokenXml.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -193,10 +193,14 @@ public class WebReference extends NetObject  {
     
     public CodeNamespace getProxyCode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProxyCode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ProxyCode");
+            retObjectProxyCode = classInstance.Get("ProxyCode");
+            JCObject val = (JCObject)retObjectProxyCode;
             return new CodeNamespace(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectProxyCode != null ? retObjectProxyCode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -204,10 +208,14 @@ public class WebReference extends NetObject  {
 
     public StringCollection getValidationWarnings() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValidationWarnings = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ValidationWarnings");
+            retObjectValidationWarnings = classInstance.Get("ValidationWarnings");
+            JCObject val = (JCObject)retObjectValidationWarnings;
             return new StringCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectValidationWarnings != null ? retObjectValidationWarnings.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -215,9 +223,13 @@ public class WebReference extends NetObject  {
 
     public java.lang.String getAppSettingBaseUrl() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAppSettingBaseUrl = null;
         try {
-            return (java.lang.String)classInstance.Get("AppSettingBaseUrl");
+            retObjectAppSettingBaseUrl = classInstance.Get("AppSettingBaseUrl");
+            return (java.lang.String)retObjectAppSettingBaseUrl;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectAppSettingBaseUrl != null ? retObjectAppSettingBaseUrl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -225,9 +237,13 @@ public class WebReference extends NetObject  {
 
     public java.lang.String getAppSettingUrlKey() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAppSettingUrlKey = null;
         try {
-            return (java.lang.String)classInstance.Get("AppSettingUrlKey");
+            retObjectAppSettingUrlKey = classInstance.Get("AppSettingUrlKey");
+            return (java.lang.String)retObjectAppSettingUrlKey;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectAppSettingUrlKey != null ? retObjectAppSettingUrlKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -235,9 +251,13 @@ public class WebReference extends NetObject  {
 
     public java.lang.String getProtocolName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProtocolName = null;
         try {
-            return (java.lang.String)classInstance.Get("ProtocolName");
+            retObjectProtocolName = classInstance.Get("ProtocolName");
+            return (java.lang.String)retObjectProtocolName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectProtocolName != null ? retObjectProtocolName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -245,7 +265,7 @@ public class WebReference extends NetObject  {
 
     public void setProtocolName(java.lang.String ProtocolName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ProtocolName", ProtocolName);
         } catch (JCNativeException jcne) {
@@ -255,10 +275,14 @@ public class WebReference extends NetObject  {
 
     public ServiceDescriptionImportWarnings getWarnings() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWarnings = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Warnings");
+            retObjectWarnings = classInstance.Get("Warnings");
+            JCObject val = (JCObject)retObjectWarnings;
             return new ServiceDescriptionImportWarnings(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWarnings != null ? retObjectWarnings.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -266,7 +290,7 @@ public class WebReference extends NetObject  {
 
     public void setWarnings(ServiceDescriptionImportWarnings Warnings) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Warnings", Warnings == null ? null : Warnings.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -276,10 +300,14 @@ public class WebReference extends NetObject  {
 
     public DiscoveryClientDocumentCollection getDocuments() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDocuments = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Documents");
+            retObjectDocuments = classInstance.Get("Documents");
+            JCObject val = (JCObject)retObjectDocuments;
             return new DiscoveryClientDocumentCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDocuments != null ? retObjectDocuments.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

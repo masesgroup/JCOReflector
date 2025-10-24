@@ -158,10 +158,14 @@ public class ScriptFunction extends JSObject  {
     
     public NetObject CreateInstance(NetObject... args) throws Throwable, system.NotImplementedException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateInstance = null;
         try {
-            JCObject objCreateInstance = (JCObject)classInstance.Invoke("CreateInstance", (java.lang.Object)toObjectFromArray(args));
+            retObjectCreateInstance = classInstance.Invoke("CreateInstance", (java.lang.Object)toObjectFromArray(args));
+            JCObject objCreateInstance = (JCObject)retObjectCreateInstance;
             return new NetObject(objCreateInstance);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateInstance != null ? retObjectCreateInstance.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,10 +173,14 @@ public class ScriptFunction extends JSObject  {
 
     public NetObject Invoke(NetObject thisob, NetObject... args) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInvoke = null;
         try {
-            JCObject objInvoke = (JCObject)classInstance.Invoke("Invoke", thisob == null ? null : thisob.getJCOInstance(), toObjectFromArray(args));
+            retObjectInvoke = classInstance.Invoke("Invoke", thisob == null ? null : thisob.getJCOInstance(), toObjectFromArray(args));
+            JCObject objInvoke = (JCObject)retObjectInvoke;
             return new NetObject(objInvoke);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInvoke != null ? retObjectInvoke.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,10 +188,14 @@ public class ScriptFunction extends JSObject  {
 
     public NetObject InvokeMember(java.lang.String name, BindingFlags invokeAttr, Binder binder, NetObject target, NetObject[] args, ParameterModifier[] modifiers, CultureInfo culture, java.lang.String[] namedParameters) throws Throwable, system.reflection.TargetException, system.NullReferenceException, system.ArgumentException, system.NotImplementedException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.globalization.CultureNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException, system.resources.MissingManifestResourceException, microsoft.jscript.JScriptException, system.OverflowException, system.FormatException, system.ArithmeticException, system.reflection.AmbiguousMatchException, system.MissingMemberException, system.InvalidCastException, microsoft.jscript.vsa.JSVsaException, system.security.SecurityException, system.MissingFieldException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInvokeMember = null;
         try {
-            JCObject objInvokeMember = (JCObject)classInstance.Invoke("InvokeMember", name, invokeAttr == null ? null : invokeAttr.getJCOInstance(), binder == null ? null : binder.getJCOInstance(), target == null ? null : target.getJCOInstance(), toObjectFromArray(args), toObjectFromArray(modifiers), culture == null ? null : culture.getJCOInstance(), namedParameters);
+            retObjectInvokeMember = classInstance.Invoke("InvokeMember", name, invokeAttr == null ? null : invokeAttr.getJCOInstance(), binder == null ? null : binder.getJCOInstance(), target == null ? null : target.getJCOInstance(), toObjectFromArray(args), toObjectFromArray(modifiers), culture == null ? null : culture.getJCOInstance(), namedParameters);
+            JCObject objInvokeMember = (JCObject)retObjectInvokeMember;
             return new NetObject(objInvokeMember);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInvokeMember != null ? retObjectInvokeMember.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,10 +203,14 @@ public class ScriptFunction extends JSObject  {
 
     public NetObject InvokeMember(java.lang.String dupParam0, BindingFlags dupParam1, Binder dupParam2, NetObject dupParam3, NetObject[] dupParam4, ParameterModifier[] dupParam5, CultureInfo dupParam6, JCORefOut dupParam7) throws Throwable, system.reflection.TargetException, system.NullReferenceException, system.ArgumentException, system.NotImplementedException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.globalization.CultureNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException, system.resources.MissingManifestResourceException, microsoft.jscript.JScriptException, system.OverflowException, system.FormatException, system.ArithmeticException, system.reflection.AmbiguousMatchException, system.MissingMemberException, system.InvalidCastException, microsoft.jscript.vsa.JSVsaException, system.security.SecurityException, system.MissingFieldException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInvokeMember = null;
         try {
-            JCObject objInvokeMember = (JCObject)classInstance.Invoke("InvokeMember", dupParam0, dupParam1 == null ? null : dupParam1.getJCOInstance(), dupParam2 == null ? null : dupParam2.getJCOInstance(), dupParam3 == null ? null : dupParam3.getJCOInstance(), toObjectFromArray(dupParam4), toObjectFromArray(dupParam5), dupParam6 == null ? null : dupParam6.getJCOInstance(), dupParam7.getJCRefOut());
+            retObjectInvokeMember = classInstance.Invoke("InvokeMember", dupParam0, dupParam1 == null ? null : dupParam1.getJCOInstance(), dupParam2 == null ? null : dupParam2.getJCOInstance(), dupParam3 == null ? null : dupParam3.getJCOInstance(), toObjectFromArray(dupParam4), toObjectFromArray(dupParam5), dupParam6 == null ? null : dupParam6.getJCOInstance(), dupParam7.getJCRefOut());
+            JCObject objInvokeMember = (JCObject)retObjectInvokeMember;
             return new NetObject(objInvokeMember);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInvokeMember != null ? retObjectInvokeMember.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -206,9 +222,20 @@ public class ScriptFunction extends JSObject  {
     
     public int getlength() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectlength = null;
         try {
-            return (int)classInstance.Get("length");
+            retObjectlength = classInstance.Get("length");
+            return (int)retObjectlength;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectlength_ToString = retObjectlength == null ? "null" : retObjectlength.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectlengthNumber = (java.lang.Number)retObjectlength;
+                return retObjectlengthNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectlength != null ? retObjectlength.getClass() : "null", retObjectlength_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -216,7 +243,7 @@ public class ScriptFunction extends JSObject  {
 
     public void setlength(int length) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("length", length);
         } catch (JCNativeException jcne) {
@@ -226,10 +253,14 @@ public class ScriptFunction extends JSObject  {
 
     public NetObject getprototype() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectprototype = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("prototype");
+            retObjectprototype = classInstance.Get("prototype");
+            JCObject val = (JCObject)retObjectprototype;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectprototype != null ? retObjectprototype.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -237,7 +268,7 @@ public class ScriptFunction extends JSObject  {
 
     public void setprototype(NetObject prototype) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("prototype", prototype == null ? null : prototype.getJCOInstance());
         } catch (JCNativeException jcne) {

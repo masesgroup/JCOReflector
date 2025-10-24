@@ -157,10 +157,14 @@ public class Activator extends NetObject  {
     
     public static NetObject CreateInstance(NetType type, boolean nonPublic) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.NullReferenceException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateInstance = null;
         try {
-            JCObject objCreateInstance = (JCObject)classType.Invoke("CreateInstance", type == null ? null : type.getJCOInstance(), nonPublic);
+            retObjectCreateInstance = classType.Invoke("CreateInstance", type == null ? null : type.getJCOInstance(), nonPublic);
+            JCObject objCreateInstance = (JCObject)retObjectCreateInstance;
             return new NetObject(objCreateInstance);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateInstance != null ? retObjectCreateInstance.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -168,10 +172,14 @@ public class Activator extends NetObject  {
 
     public static NetObject CreateInstance(NetType type, NetObject[] args, NetObject[] activationAttributes) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.NullReferenceException, system.MissingMethodException, system.reflection.TargetInvocationException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateInstance = null;
         try {
-            JCObject objCreateInstance = (JCObject)classType.Invoke("CreateInstance", type == null ? null : type.getJCOInstance(), toObjectFromArray(args), toObjectFromArray(activationAttributes));
+            retObjectCreateInstance = classType.Invoke("CreateInstance", type == null ? null : type.getJCOInstance(), toObjectFromArray(args), toObjectFromArray(activationAttributes));
+            JCObject objCreateInstance = (JCObject)retObjectCreateInstance;
             return new NetObject(objCreateInstance);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateInstance != null ? retObjectCreateInstance.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,10 +187,14 @@ public class Activator extends NetObject  {
 
     public static NetObject CreateInstance(NetType type, NetObject... args) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.NullReferenceException, system.MissingMethodException, system.reflection.TargetInvocationException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateInstance = null;
         try {
-            JCObject objCreateInstance = (JCObject)classType.Invoke("CreateInstance", type == null ? null : type.getJCOInstance(), toObjectFromArray(args));
+            retObjectCreateInstance = classType.Invoke("CreateInstance", type == null ? null : type.getJCOInstance(), toObjectFromArray(args));
+            JCObject objCreateInstance = (JCObject)retObjectCreateInstance;
             return new NetObject(objCreateInstance);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateInstance != null ? retObjectCreateInstance.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,10 +202,14 @@ public class Activator extends NetObject  {
 
     public static NetObject CreateInstance(NetType type, BindingFlags bindingAttr, Binder binder, NetObject[] args, CultureInfo culture, NetObject[] activationAttributes) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.NullReferenceException, system.MissingMethodException, system.reflection.TargetInvocationException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NotImplementedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateInstance = null;
         try {
-            JCObject objCreateInstance = (JCObject)classType.Invoke("CreateInstance", type == null ? null : type.getJCOInstance(), bindingAttr == null ? null : bindingAttr.getJCOInstance(), binder == null ? null : binder.getJCOInstance(), toObjectFromArray(args), culture == null ? null : culture.getJCOInstance(), toObjectFromArray(activationAttributes));
+            retObjectCreateInstance = classType.Invoke("CreateInstance", type == null ? null : type.getJCOInstance(), bindingAttr == null ? null : bindingAttr.getJCOInstance(), binder == null ? null : binder.getJCOInstance(), toObjectFromArray(args), culture == null ? null : culture.getJCOInstance(), toObjectFromArray(activationAttributes));
+            JCObject objCreateInstance = (JCObject)retObjectCreateInstance;
             return new NetObject(objCreateInstance);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateInstance != null ? retObjectCreateInstance.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,10 +217,14 @@ public class Activator extends NetObject  {
 
     public static NetObject CreateInstance(NetType type, BindingFlags bindingAttr, Binder binder, NetObject[] args, CultureInfo culture) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.NullReferenceException, system.MissingMethodException, system.reflection.TargetInvocationException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateInstance = null;
         try {
-            JCObject objCreateInstance = (JCObject)classType.Invoke("CreateInstance", type == null ? null : type.getJCOInstance(), bindingAttr == null ? null : bindingAttr.getJCOInstance(), binder == null ? null : binder.getJCOInstance(), toObjectFromArray(args), culture == null ? null : culture.getJCOInstance());
+            retObjectCreateInstance = classType.Invoke("CreateInstance", type == null ? null : type.getJCOInstance(), bindingAttr == null ? null : bindingAttr.getJCOInstance(), binder == null ? null : binder.getJCOInstance(), toObjectFromArray(args), culture == null ? null : culture.getJCOInstance());
+            JCObject objCreateInstance = (JCObject)retObjectCreateInstance;
             return new NetObject(objCreateInstance);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateInstance != null ? retObjectCreateInstance.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -212,10 +232,14 @@ public class Activator extends NetObject  {
 
     public static NetObject CreateInstance(NetType type) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.NullReferenceException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateInstance = null;
         try {
-            JCObject objCreateInstance = (JCObject)classType.Invoke("CreateInstance", type == null ? null : type.getJCOInstance());
+            retObjectCreateInstance = classType.Invoke("CreateInstance", type == null ? null : type.getJCOInstance());
+            JCObject objCreateInstance = (JCObject)retObjectCreateInstance;
             return new NetObject(objCreateInstance);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateInstance != null ? retObjectCreateInstance.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -223,10 +247,14 @@ public class Activator extends NetObject  {
 
     public static ObjectHandle CreateInstance(java.lang.String assemblyName, java.lang.String typeName, boolean ignoreCase, BindingFlags bindingAttr, Binder binder, NetObject[] args, CultureInfo culture, NetObject[] activationAttributes) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.io.FileLoadException, system.OutOfMemoryException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateInstance = null;
         try {
-            JCObject objCreateInstance = (JCObject)classType.Invoke("CreateInstance", assemblyName, typeName, ignoreCase, bindingAttr == null ? null : bindingAttr.getJCOInstance(), binder == null ? null : binder.getJCOInstance(), toObjectFromArray(args), culture == null ? null : culture.getJCOInstance(), toObjectFromArray(activationAttributes));
+            retObjectCreateInstance = classType.Invoke("CreateInstance", assemblyName, typeName, ignoreCase, bindingAttr == null ? null : bindingAttr.getJCOInstance(), binder == null ? null : binder.getJCOInstance(), toObjectFromArray(args), culture == null ? null : culture.getJCOInstance(), toObjectFromArray(activationAttributes));
+            JCObject objCreateInstance = (JCObject)retObjectCreateInstance;
             return new ObjectHandle(objCreateInstance);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateInstance != null ? retObjectCreateInstance.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -234,10 +262,14 @@ public class Activator extends NetObject  {
 
     public static ObjectHandle CreateInstance(java.lang.String assemblyName, java.lang.String typeName, NetObject[] activationAttributes) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.io.FileLoadException, system.OutOfMemoryException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateInstance = null;
         try {
-            JCObject objCreateInstance = (JCObject)classType.Invoke("CreateInstance", assemblyName, typeName, toObjectFromArray(activationAttributes));
+            retObjectCreateInstance = classType.Invoke("CreateInstance", assemblyName, typeName, toObjectFromArray(activationAttributes));
+            JCObject objCreateInstance = (JCObject)retObjectCreateInstance;
             return new ObjectHandle(objCreateInstance);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateInstance != null ? retObjectCreateInstance.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -245,10 +277,14 @@ public class Activator extends NetObject  {
 
     public static ObjectHandle CreateInstance(java.lang.String assemblyName, java.lang.String typeName) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.io.FileLoadException, system.OutOfMemoryException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateInstance = null;
         try {
-            JCObject objCreateInstance = (JCObject)classType.Invoke("CreateInstance", assemblyName, typeName);
+            retObjectCreateInstance = classType.Invoke("CreateInstance", assemblyName, typeName);
+            JCObject objCreateInstance = (JCObject)retObjectCreateInstance;
             return new ObjectHandle(objCreateInstance);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateInstance != null ? retObjectCreateInstance.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -256,10 +292,14 @@ public class Activator extends NetObject  {
 
     public static ObjectHandle CreateInstanceFrom(java.lang.String assemblyFile, java.lang.String typeName, boolean ignoreCase, BindingFlags bindingAttr, Binder binder, NetObject[] args, CultureInfo culture, NetObject[] activationAttributes) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.io.FileLoadException, system.MulticastNotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateInstanceFrom = null;
         try {
-            JCObject objCreateInstanceFrom = (JCObject)classType.Invoke("CreateInstanceFrom", assemblyFile, typeName, ignoreCase, bindingAttr == null ? null : bindingAttr.getJCOInstance(), binder == null ? null : binder.getJCOInstance(), toObjectFromArray(args), culture == null ? null : culture.getJCOInstance(), toObjectFromArray(activationAttributes));
+            retObjectCreateInstanceFrom = classType.Invoke("CreateInstanceFrom", assemblyFile, typeName, ignoreCase, bindingAttr == null ? null : bindingAttr.getJCOInstance(), binder == null ? null : binder.getJCOInstance(), toObjectFromArray(args), culture == null ? null : culture.getJCOInstance(), toObjectFromArray(activationAttributes));
+            JCObject objCreateInstanceFrom = (JCObject)retObjectCreateInstanceFrom;
             return new ObjectHandle(objCreateInstanceFrom);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateInstanceFrom != null ? retObjectCreateInstanceFrom.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -267,10 +307,14 @@ public class Activator extends NetObject  {
 
     public static ObjectHandle CreateInstanceFrom(java.lang.String assemblyFile, java.lang.String typeName, NetObject[] activationAttributes) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.io.FileLoadException, system.MulticastNotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateInstanceFrom = null;
         try {
-            JCObject objCreateInstanceFrom = (JCObject)classType.Invoke("CreateInstanceFrom", assemblyFile, typeName, toObjectFromArray(activationAttributes));
+            retObjectCreateInstanceFrom = classType.Invoke("CreateInstanceFrom", assemblyFile, typeName, toObjectFromArray(activationAttributes));
+            JCObject objCreateInstanceFrom = (JCObject)retObjectCreateInstanceFrom;
             return new ObjectHandle(objCreateInstanceFrom);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateInstanceFrom != null ? retObjectCreateInstanceFrom.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -278,10 +322,14 @@ public class Activator extends NetObject  {
 
     public static ObjectHandle CreateInstanceFrom(java.lang.String assemblyFile, java.lang.String typeName) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.io.FileLoadException, system.MulticastNotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateInstanceFrom = null;
         try {
-            JCObject objCreateInstanceFrom = (JCObject)classType.Invoke("CreateInstanceFrom", assemblyFile, typeName);
+            retObjectCreateInstanceFrom = classType.Invoke("CreateInstanceFrom", assemblyFile, typeName);
+            JCObject objCreateInstanceFrom = (JCObject)retObjectCreateInstanceFrom;
             return new ObjectHandle(objCreateInstanceFrom);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateInstanceFrom != null ? retObjectCreateInstanceFrom.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

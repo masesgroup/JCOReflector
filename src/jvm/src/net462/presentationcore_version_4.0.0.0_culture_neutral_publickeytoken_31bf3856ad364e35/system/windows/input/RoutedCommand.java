@@ -185,9 +185,13 @@ public class RoutedCommand extends NetObject  {
     
     public boolean CanExecute(NetObject parameter, IInputElement target) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.componentmodel.Win32Exception, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanExecute = null;
         try {
-            return (boolean)classInstance.Invoke("CanExecute", parameter == null ? null : parameter.getJCOInstance(), target == null ? null : target.getJCOInstance());
+            retObjectCanExecute = classInstance.Invoke("CanExecute", parameter == null ? null : parameter.getJCOInstance(), target == null ? null : target.getJCOInstance());
+            return (boolean)retObjectCanExecute;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCanExecute != null ? retObjectCanExecute.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,7 +199,7 @@ public class RoutedCommand extends NetObject  {
 
     public void Execute(NetObject parameter, IInputElement target) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Execute", parameter == null ? null : parameter.getJCOInstance(), target == null ? null : target.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -209,7 +213,7 @@ public class RoutedCommand extends NetObject  {
      */
     @Deprecated 
     public boolean CanExecute(NetObject parameter) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICommand to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICommand to obtain the full interface.");
     }
 
     /**
@@ -218,7 +222,7 @@ public class RoutedCommand extends NetObject  {
      */
     @Deprecated 
     public void Execute(NetObject parameter) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICommand to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICommand to obtain the full interface.");
     }
 
 
@@ -227,9 +231,13 @@ public class RoutedCommand extends NetObject  {
     
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectName = null;
         try {
-            return (java.lang.String)classInstance.Get("Name");
+            retObjectName = classInstance.Get("Name");
+            return (java.lang.String)retObjectName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectName != null ? retObjectName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -237,10 +245,14 @@ public class RoutedCommand extends NetObject  {
 
     public NetType getOwnerType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOwnerType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("OwnerType");
+            retObjectOwnerType = classInstance.Get("OwnerType");
+            JCObject val = (JCObject)retObjectOwnerType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOwnerType != null ? retObjectOwnerType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -248,10 +260,14 @@ public class RoutedCommand extends NetObject  {
 
     public InputGestureCollection getInputGestures() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInputGestures = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("InputGestures");
+            retObjectInputGestures = classInstance.Get("InputGestures");
+            JCObject val = (JCObject)retObjectInputGestures;
             return new InputGestureCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInputGestures != null ? retObjectInputGestures.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -264,7 +280,7 @@ public class RoutedCommand extends NetObject  {
 
     public void addCanExecuteChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("CanExecuteChanged", handler);
         } catch (JCNativeException jcne) {
@@ -274,7 +290,7 @@ public class RoutedCommand extends NetObject  {
 
     public void removeCanExecuteChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("CanExecuteChanged", handler);
         } catch (JCNativeException jcne) {

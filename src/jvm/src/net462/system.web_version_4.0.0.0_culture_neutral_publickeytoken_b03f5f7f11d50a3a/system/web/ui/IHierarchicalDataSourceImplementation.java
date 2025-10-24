@@ -144,10 +144,14 @@ public class IHierarchicalDataSourceImplementation extends NetObject implements 
     
     public HierarchicalDataSourceView GetHierarchicalView(java.lang.String viewPath) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetHierarchicalView = null;
         try {
-            JCObject objGetHierarchicalView = (JCObject)classInstance.Invoke("GetHierarchicalView", viewPath);
+            retObjectGetHierarchicalView = classInstance.Invoke("GetHierarchicalView", viewPath);
+            JCObject objGetHierarchicalView = (JCObject)retObjectGetHierarchicalView;
             return new HierarchicalDataSourceView(objGetHierarchicalView);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetHierarchicalView != null ? retObjectGetHierarchicalView.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -164,7 +168,7 @@ public class IHierarchicalDataSourceImplementation extends NetObject implements 
 
     public void addDataSourceChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("DataSourceChanged", handler);
         } catch (JCNativeException jcne) {
@@ -174,7 +178,7 @@ public class IHierarchicalDataSourceImplementation extends NetObject implements 
 
     public void removeDataSourceChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("DataSourceChanged", handler);
         } catch (JCNativeException jcne) {

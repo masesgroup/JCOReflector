@@ -155,9 +155,20 @@ public class Int16KeyFrame extends Freezable  {
     
     public short InterpolateValue(short baseValue, double keyFrameProgress) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInterpolateValue = null;
         try {
-            return (short)classInstance.Invoke("InterpolateValue", baseValue, keyFrameProgress);
+            retObjectInterpolateValue = classInstance.Invoke("InterpolateValue", baseValue, keyFrameProgress);
+            return (short)retObjectInterpolateValue;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectInterpolateValue_ToString = retObjectInterpolateValue == null ? "null" : retObjectInterpolateValue.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectInterpolateValueNumber = (java.lang.Number)retObjectInterpolateValue;
+                return retObjectInterpolateValueNumber.shortValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into short and, as fallback solution, into java.lang.Number", retObjectInterpolateValue != null ? retObjectInterpolateValue.getClass() : "null", retObjectInterpolateValue_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,9 +180,20 @@ public class Int16KeyFrame extends Freezable  {
     
     public short getValue() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValue = null;
         try {
-            return (short)classInstance.Get("Value");
+            retObjectValue = classInstance.Get("Value");
+            return (short)retObjectValue;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectValue_ToString = retObjectValue == null ? "null" : retObjectValue.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectValueNumber = (java.lang.Number)retObjectValue;
+                return retObjectValueNumber.shortValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into short and, as fallback solution, into java.lang.Number", retObjectValue != null ? retObjectValue.getClass() : "null", retObjectValue_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,7 +201,7 @@ public class Int16KeyFrame extends Freezable  {
 
     public void setValue(short Value) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Value", Value);
         } catch (JCNativeException jcne) {
@@ -189,10 +211,14 @@ public class Int16KeyFrame extends Freezable  {
 
     public KeyTime getKeyTime() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectKeyTime = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("KeyTime");
+            retObjectKeyTime = classInstance.Get("KeyTime");
+            JCObject val = (JCObject)retObjectKeyTime;
             return new KeyTime(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectKeyTime != null ? retObjectKeyTime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,7 +226,7 @@ public class Int16KeyFrame extends Freezable  {
 
     public void setKeyTime(KeyTime KeyTime) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("KeyTime", KeyTime == null ? null : KeyTime.getJCOInstance());
         } catch (JCNativeException jcne) {

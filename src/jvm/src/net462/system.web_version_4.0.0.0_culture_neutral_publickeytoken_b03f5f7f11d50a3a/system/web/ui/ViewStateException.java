@@ -171,7 +171,7 @@ public class ViewStateException extends NetException {
     
     public void GetObjectData(SerializationInfo info, StreamingContext context) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.security.SecurityException, system.TypeLoadException, system.NotSupportedException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.NotImplementedException, system.runtime.serialization.SerializationException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetObjectData", info == null ? null : info.getJCOInstance(), context == null ? null : context.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -185,9 +185,13 @@ public class ViewStateException extends NetException {
     
     public boolean getIsConnected() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsConnected = null;
         try {
-            return (boolean)classInstance.Get("IsConnected");
+            retObjectIsConnected = classInstance.Get("IsConnected");
+            return (boolean)retObjectIsConnected;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsConnected != null ? retObjectIsConnected.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,9 +199,13 @@ public class ViewStateException extends NetException {
 
     public java.lang.String getPath() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPath = null;
         try {
-            return (java.lang.String)classInstance.Get("Path");
+            retObjectPath = classInstance.Get("Path");
+            return (java.lang.String)retObjectPath;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectPath != null ? retObjectPath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -205,9 +213,13 @@ public class ViewStateException extends NetException {
 
     public java.lang.String getPersistedState() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPersistedState = null;
         try {
-            return (java.lang.String)classInstance.Get("PersistedState");
+            retObjectPersistedState = classInstance.Get("PersistedState");
+            return (java.lang.String)retObjectPersistedState;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectPersistedState != null ? retObjectPersistedState.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -215,9 +227,13 @@ public class ViewStateException extends NetException {
 
     public java.lang.String getReferer() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReferer = null;
         try {
-            return (java.lang.String)classInstance.Get("Referer");
+            retObjectReferer = classInstance.Get("Referer");
+            return (java.lang.String)retObjectReferer;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectReferer != null ? retObjectReferer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -225,9 +241,13 @@ public class ViewStateException extends NetException {
 
     public java.lang.String getRemoteAddress() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRemoteAddress = null;
         try {
-            return (java.lang.String)classInstance.Get("RemoteAddress");
+            retObjectRemoteAddress = classInstance.Get("RemoteAddress");
+            return (java.lang.String)retObjectRemoteAddress;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectRemoteAddress != null ? retObjectRemoteAddress.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -235,9 +255,13 @@ public class ViewStateException extends NetException {
 
     public java.lang.String getRemotePort() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRemotePort = null;
         try {
-            return (java.lang.String)classInstance.Get("RemotePort");
+            retObjectRemotePort = classInstance.Get("RemotePort");
+            return (java.lang.String)retObjectRemotePort;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectRemotePort != null ? retObjectRemotePort.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -245,9 +269,13 @@ public class ViewStateException extends NetException {
 
     public java.lang.String getUserAgent() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUserAgent = null;
         try {
-            return (java.lang.String)classInstance.Get("UserAgent");
+            retObjectUserAgent = classInstance.Get("UserAgent");
+            return (java.lang.String)retObjectUserAgent;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectUserAgent != null ? retObjectUserAgent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

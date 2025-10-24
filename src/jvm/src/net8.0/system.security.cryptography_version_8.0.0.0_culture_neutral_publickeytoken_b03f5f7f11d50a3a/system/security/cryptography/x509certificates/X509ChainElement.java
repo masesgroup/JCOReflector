@@ -161,10 +161,14 @@ public class X509ChainElement extends NetObject  {
     
     public X509Certificate2 getCertificate() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCertificate = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Certificate");
+            retObjectCertificate = classInstance.Get("Certificate");
+            JCObject val = (JCObject)retObjectCertificate;
             return new X509Certificate2(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCertificate != null ? retObjectCertificate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,7 +176,7 @@ public class X509ChainElement extends NetObject  {
 
     public void setCertificate(X509Certificate2 Certificate) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Certificate", Certificate == null ? null : Certificate.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -182,16 +186,20 @@ public class X509ChainElement extends NetObject  {
 
     public final X509ChainStatus[] getChainElementStatus() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectChainElementStatus = null;
         try {
             ArrayList<X509ChainStatus> resultingArrayList = new ArrayList<X509ChainStatus>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("ChainElementStatus");
+            retObjectChainElementStatus = classInstance.Get("ChainElementStatus");
+            JCObject resultingObjects = (JCObject)retObjectChainElementStatus;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new X509ChainStatus(resultingObject));
             }
             X509ChainStatus[] resultingArray = new X509ChainStatus[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectChainElementStatus != null ? retObjectChainElementStatus.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -199,7 +207,7 @@ public class X509ChainElement extends NetObject  {
 
     public void setChainElementStatus(X509ChainStatus[] ChainElementStatus) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ChainElementStatus", toObjectFromArray(ChainElementStatus));
         } catch (JCNativeException jcne) {
@@ -209,9 +217,13 @@ public class X509ChainElement extends NetObject  {
 
     public java.lang.String getInformation() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInformation = null;
         try {
-            return (java.lang.String)classInstance.Get("Information");
+            retObjectInformation = classInstance.Get("Information");
+            return (java.lang.String)retObjectInformation;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectInformation != null ? retObjectInformation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -219,7 +231,7 @@ public class X509ChainElement extends NetObject  {
 
     public void setInformation(java.lang.String Information) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Information", Information);
         } catch (JCNativeException jcne) {

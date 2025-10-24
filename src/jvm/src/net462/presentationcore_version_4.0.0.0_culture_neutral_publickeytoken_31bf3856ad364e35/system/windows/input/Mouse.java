@@ -165,9 +165,13 @@ public class Mouse extends NetObject  {
     
     public static boolean Capture(IInputElement element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.NullReferenceException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCapture = null;
         try {
-            return (boolean)classType.Invoke("Capture", element == null ? null : element.getJCOInstance());
+            retObjectCapture = classType.Invoke("Capture", element == null ? null : element.getJCOInstance());
+            return (boolean)retObjectCapture;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCapture != null ? retObjectCapture.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -175,9 +179,13 @@ public class Mouse extends NetObject  {
 
     public static boolean Capture(IInputElement element, CaptureMode captureMode) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.NullReferenceException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCapture = null;
         try {
-            return (boolean)classType.Invoke("Capture", element == null ? null : element.getJCOInstance(), captureMode == null ? null : captureMode.getJCOInstance());
+            retObjectCapture = classType.Invoke("Capture", element == null ? null : element.getJCOInstance(), captureMode == null ? null : captureMode.getJCOInstance());
+            return (boolean)retObjectCapture;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCapture != null ? retObjectCapture.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -185,9 +193,13 @@ public class Mouse extends NetObject  {
 
     public static boolean SetCursor(Cursor cursor) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.NullReferenceException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSetCursor = null;
         try {
-            return (boolean)classType.Invoke("SetCursor", cursor == null ? null : cursor.getJCOInstance());
+            retObjectSetCursor = classType.Invoke("SetCursor", cursor == null ? null : cursor.getJCOInstance());
+            return (boolean)retObjectSetCursor;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectSetCursor != null ? retObjectSetCursor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,9 +207,20 @@ public class Mouse extends NetObject  {
 
     public static int GetIntermediatePoints(IInputElement relativeTo, Point[] points) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.NullReferenceException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetIntermediatePoints = null;
         try {
-            return (int)classType.Invoke("GetIntermediatePoints", relativeTo == null ? null : relativeTo.getJCOInstance(), toObjectFromArray(points));
+            retObjectGetIntermediatePoints = classType.Invoke("GetIntermediatePoints", relativeTo == null ? null : relativeTo.getJCOInstance(), toObjectFromArray(points));
+            return (int)retObjectGetIntermediatePoints;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetIntermediatePoints_ToString = retObjectGetIntermediatePoints == null ? "null" : retObjectGetIntermediatePoints.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetIntermediatePointsNumber = (java.lang.Number)retObjectGetIntermediatePoints;
+                return retObjectGetIntermediatePointsNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetIntermediatePoints != null ? retObjectGetIntermediatePoints.getClass() : "null", retObjectGetIntermediatePoints_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -205,10 +228,14 @@ public class Mouse extends NetObject  {
 
     public static Point GetPosition(IInputElement relativeTo) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.NullReferenceException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetPosition = null;
         try {
-            JCObject objGetPosition = (JCObject)classType.Invoke("GetPosition", relativeTo == null ? null : relativeTo.getJCOInstance());
+            retObjectGetPosition = classType.Invoke("GetPosition", relativeTo == null ? null : relativeTo.getJCOInstance());
+            JCObject objGetPosition = (JCObject)retObjectGetPosition;
             return new Point(objGetPosition);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetPosition != null ? retObjectGetPosition.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -216,7 +243,7 @@ public class Mouse extends NetObject  {
 
     public static void AddGotMouseCaptureHandler(DependencyObject element, MouseEventHandler handler) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("AddGotMouseCaptureHandler", element == null ? null : element.getJCOInstance(), handler);
         } catch (JCNativeException jcne) {
@@ -226,7 +253,7 @@ public class Mouse extends NetObject  {
 
     public static void AddLostMouseCaptureHandler(DependencyObject element, MouseEventHandler handler) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("AddLostMouseCaptureHandler", element == null ? null : element.getJCOInstance(), handler);
         } catch (JCNativeException jcne) {
@@ -236,7 +263,7 @@ public class Mouse extends NetObject  {
 
     public static void AddMouseDownHandler(DependencyObject element, MouseButtonEventHandler handler) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("AddMouseDownHandler", element == null ? null : element.getJCOInstance(), handler);
         } catch (JCNativeException jcne) {
@@ -246,7 +273,7 @@ public class Mouse extends NetObject  {
 
     public static void AddMouseEnterHandler(DependencyObject element, MouseEventHandler handler) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("AddMouseEnterHandler", element == null ? null : element.getJCOInstance(), handler);
         } catch (JCNativeException jcne) {
@@ -256,7 +283,7 @@ public class Mouse extends NetObject  {
 
     public static void AddMouseLeaveHandler(DependencyObject element, MouseEventHandler handler) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("AddMouseLeaveHandler", element == null ? null : element.getJCOInstance(), handler);
         } catch (JCNativeException jcne) {
@@ -266,7 +293,7 @@ public class Mouse extends NetObject  {
 
     public static void AddMouseMoveHandler(DependencyObject element, MouseEventHandler handler) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("AddMouseMoveHandler", element == null ? null : element.getJCOInstance(), handler);
         } catch (JCNativeException jcne) {
@@ -276,7 +303,7 @@ public class Mouse extends NetObject  {
 
     public static void AddMouseUpHandler(DependencyObject element, MouseButtonEventHandler handler) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("AddMouseUpHandler", element == null ? null : element.getJCOInstance(), handler);
         } catch (JCNativeException jcne) {
@@ -286,7 +313,7 @@ public class Mouse extends NetObject  {
 
     public static void AddMouseWheelHandler(DependencyObject element, MouseWheelEventHandler handler) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("AddMouseWheelHandler", element == null ? null : element.getJCOInstance(), handler);
         } catch (JCNativeException jcne) {
@@ -296,7 +323,7 @@ public class Mouse extends NetObject  {
 
     public static void AddPreviewMouseDownHandler(DependencyObject element, MouseButtonEventHandler handler) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("AddPreviewMouseDownHandler", element == null ? null : element.getJCOInstance(), handler);
         } catch (JCNativeException jcne) {
@@ -306,7 +333,7 @@ public class Mouse extends NetObject  {
 
     public static void AddPreviewMouseDownOutsideCapturedElementHandler(DependencyObject element, MouseButtonEventHandler handler) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("AddPreviewMouseDownOutsideCapturedElementHandler", element == null ? null : element.getJCOInstance(), handler);
         } catch (JCNativeException jcne) {
@@ -316,7 +343,7 @@ public class Mouse extends NetObject  {
 
     public static void AddPreviewMouseMoveHandler(DependencyObject element, MouseEventHandler handler) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("AddPreviewMouseMoveHandler", element == null ? null : element.getJCOInstance(), handler);
         } catch (JCNativeException jcne) {
@@ -326,7 +353,7 @@ public class Mouse extends NetObject  {
 
     public static void AddPreviewMouseUpHandler(DependencyObject element, MouseButtonEventHandler handler) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("AddPreviewMouseUpHandler", element == null ? null : element.getJCOInstance(), handler);
         } catch (JCNativeException jcne) {
@@ -336,7 +363,7 @@ public class Mouse extends NetObject  {
 
     public static void AddPreviewMouseUpOutsideCapturedElementHandler(DependencyObject element, MouseButtonEventHandler handler) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("AddPreviewMouseUpOutsideCapturedElementHandler", element == null ? null : element.getJCOInstance(), handler);
         } catch (JCNativeException jcne) {
@@ -346,7 +373,7 @@ public class Mouse extends NetObject  {
 
     public static void AddPreviewMouseWheelHandler(DependencyObject element, MouseWheelEventHandler handler) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("AddPreviewMouseWheelHandler", element == null ? null : element.getJCOInstance(), handler);
         } catch (JCNativeException jcne) {
@@ -356,7 +383,7 @@ public class Mouse extends NetObject  {
 
     public static void AddQueryCursorHandler(DependencyObject element, QueryCursorEventHandler handler) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("AddQueryCursorHandler", element == null ? null : element.getJCOInstance(), handler);
         } catch (JCNativeException jcne) {
@@ -366,7 +393,7 @@ public class Mouse extends NetObject  {
 
     public static void RemoveGotMouseCaptureHandler(DependencyObject element, MouseEventHandler handler) throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("RemoveGotMouseCaptureHandler", element == null ? null : element.getJCOInstance(), handler);
         } catch (JCNativeException jcne) {
@@ -376,7 +403,7 @@ public class Mouse extends NetObject  {
 
     public static void RemoveLostMouseCaptureHandler(DependencyObject element, MouseEventHandler handler) throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("RemoveLostMouseCaptureHandler", element == null ? null : element.getJCOInstance(), handler);
         } catch (JCNativeException jcne) {
@@ -386,7 +413,7 @@ public class Mouse extends NetObject  {
 
     public static void RemoveMouseDownHandler(DependencyObject element, MouseButtonEventHandler handler) throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("RemoveMouseDownHandler", element == null ? null : element.getJCOInstance(), handler);
         } catch (JCNativeException jcne) {
@@ -396,7 +423,7 @@ public class Mouse extends NetObject  {
 
     public static void RemoveMouseEnterHandler(DependencyObject element, MouseEventHandler handler) throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("RemoveMouseEnterHandler", element == null ? null : element.getJCOInstance(), handler);
         } catch (JCNativeException jcne) {
@@ -406,7 +433,7 @@ public class Mouse extends NetObject  {
 
     public static void RemoveMouseLeaveHandler(DependencyObject element, MouseEventHandler handler) throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("RemoveMouseLeaveHandler", element == null ? null : element.getJCOInstance(), handler);
         } catch (JCNativeException jcne) {
@@ -416,7 +443,7 @@ public class Mouse extends NetObject  {
 
     public static void RemoveMouseMoveHandler(DependencyObject element, MouseEventHandler handler) throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("RemoveMouseMoveHandler", element == null ? null : element.getJCOInstance(), handler);
         } catch (JCNativeException jcne) {
@@ -426,7 +453,7 @@ public class Mouse extends NetObject  {
 
     public static void RemoveMouseUpHandler(DependencyObject element, MouseButtonEventHandler handler) throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("RemoveMouseUpHandler", element == null ? null : element.getJCOInstance(), handler);
         } catch (JCNativeException jcne) {
@@ -436,7 +463,7 @@ public class Mouse extends NetObject  {
 
     public static void RemoveMouseWheelHandler(DependencyObject element, MouseWheelEventHandler handler) throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("RemoveMouseWheelHandler", element == null ? null : element.getJCOInstance(), handler);
         } catch (JCNativeException jcne) {
@@ -446,7 +473,7 @@ public class Mouse extends NetObject  {
 
     public static void RemovePreviewMouseDownHandler(DependencyObject element, MouseButtonEventHandler handler) throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("RemovePreviewMouseDownHandler", element == null ? null : element.getJCOInstance(), handler);
         } catch (JCNativeException jcne) {
@@ -456,7 +483,7 @@ public class Mouse extends NetObject  {
 
     public static void RemovePreviewMouseDownOutsideCapturedElementHandler(DependencyObject element, MouseButtonEventHandler handler) throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("RemovePreviewMouseDownOutsideCapturedElementHandler", element == null ? null : element.getJCOInstance(), handler);
         } catch (JCNativeException jcne) {
@@ -466,7 +493,7 @@ public class Mouse extends NetObject  {
 
     public static void RemovePreviewMouseMoveHandler(DependencyObject element, MouseEventHandler handler) throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("RemovePreviewMouseMoveHandler", element == null ? null : element.getJCOInstance(), handler);
         } catch (JCNativeException jcne) {
@@ -476,7 +503,7 @@ public class Mouse extends NetObject  {
 
     public static void RemovePreviewMouseUpHandler(DependencyObject element, MouseButtonEventHandler handler) throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("RemovePreviewMouseUpHandler", element == null ? null : element.getJCOInstance(), handler);
         } catch (JCNativeException jcne) {
@@ -486,7 +513,7 @@ public class Mouse extends NetObject  {
 
     public static void RemovePreviewMouseUpOutsideCapturedElementHandler(DependencyObject element, MouseButtonEventHandler handler) throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("RemovePreviewMouseUpOutsideCapturedElementHandler", element == null ? null : element.getJCOInstance(), handler);
         } catch (JCNativeException jcne) {
@@ -496,7 +523,7 @@ public class Mouse extends NetObject  {
 
     public static void RemovePreviewMouseWheelHandler(DependencyObject element, MouseWheelEventHandler handler) throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("RemovePreviewMouseWheelHandler", element == null ? null : element.getJCOInstance(), handler);
         } catch (JCNativeException jcne) {
@@ -506,7 +533,7 @@ public class Mouse extends NetObject  {
 
     public static void RemoveQueryCursorHandler(DependencyObject element, QueryCursorEventHandler handler) throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("RemoveQueryCursorHandler", element == null ? null : element.getJCOInstance(), handler);
         } catch (JCNativeException jcne) {
@@ -516,7 +543,7 @@ public class Mouse extends NetObject  {
 
     public static void Synchronize() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.NullReferenceException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Synchronize");
         } catch (JCNativeException jcne) {
@@ -526,7 +553,7 @@ public class Mouse extends NetObject  {
 
     public static void UpdateCursor() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.NullReferenceException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("UpdateCursor");
         } catch (JCNativeException jcne) {
@@ -540,10 +567,14 @@ public class Mouse extends NetObject  {
     
     public static IInputElement getCaptured() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.NullReferenceException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCaptured = null;
         try {
-            JCObject val = (JCObject)classType.Get("Captured");
+            retObjectCaptured = classType.Get("Captured");
+            JCObject val = (JCObject)retObjectCaptured;
             return new IInputElementImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCaptured != null ? retObjectCaptured.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -551,10 +582,14 @@ public class Mouse extends NetObject  {
 
     public static IInputElement getDirectlyOver() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.NullReferenceException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDirectlyOver = null;
         try {
-            JCObject val = (JCObject)classType.Get("DirectlyOver");
+            retObjectDirectlyOver = classType.Get("DirectlyOver");
+            JCObject val = (JCObject)retObjectDirectlyOver;
             return new IInputElementImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDirectlyOver != null ? retObjectDirectlyOver.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -562,10 +597,14 @@ public class Mouse extends NetObject  {
 
     public static Cursor getOverrideCursor() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.NullReferenceException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOverrideCursor = null;
         try {
-            JCObject val = (JCObject)classType.Get("OverrideCursor");
+            retObjectOverrideCursor = classType.Get("OverrideCursor");
+            JCObject val = (JCObject)retObjectOverrideCursor;
             return new Cursor(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOverrideCursor != null ? retObjectOverrideCursor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -573,7 +612,7 @@ public class Mouse extends NetObject  {
 
     public static void setOverrideCursor(Cursor OverrideCursor) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.NullReferenceException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Set("OverrideCursor", OverrideCursor == null ? null : OverrideCursor.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -583,10 +622,14 @@ public class Mouse extends NetObject  {
 
     public static MouseButtonState getLeftButton() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.NullReferenceException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLeftButton = null;
         try {
-            JCObject val = (JCObject)classType.Get("LeftButton");
+            retObjectLeftButton = classType.Get("LeftButton");
+            JCObject val = (JCObject)retObjectLeftButton;
             return new MouseButtonState(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLeftButton != null ? retObjectLeftButton.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -594,10 +637,14 @@ public class Mouse extends NetObject  {
 
     public static MouseButtonState getMiddleButton() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.NullReferenceException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMiddleButton = null;
         try {
-            JCObject val = (JCObject)classType.Get("MiddleButton");
+            retObjectMiddleButton = classType.Get("MiddleButton");
+            JCObject val = (JCObject)retObjectMiddleButton;
             return new MouseButtonState(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMiddleButton != null ? retObjectMiddleButton.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -605,10 +652,14 @@ public class Mouse extends NetObject  {
 
     public static MouseButtonState getRightButton() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.NullReferenceException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectRightButton = null;
         try {
-            JCObject val = (JCObject)classType.Get("RightButton");
+            retObjectRightButton = classType.Get("RightButton");
+            JCObject val = (JCObject)retObjectRightButton;
             return new MouseButtonState(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRightButton != null ? retObjectRightButton.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -616,10 +667,14 @@ public class Mouse extends NetObject  {
 
     public static MouseButtonState getXButton1() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.NullReferenceException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectXButton1 = null;
         try {
-            JCObject val = (JCObject)classType.Get("XButton1");
+            retObjectXButton1 = classType.Get("XButton1");
+            JCObject val = (JCObject)retObjectXButton1;
             return new MouseButtonState(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectXButton1 != null ? retObjectXButton1.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -627,10 +682,14 @@ public class Mouse extends NetObject  {
 
     public static MouseButtonState getXButton2() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.NullReferenceException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectXButton2 = null;
         try {
-            JCObject val = (JCObject)classType.Get("XButton2");
+            retObjectXButton2 = classType.Get("XButton2");
+            JCObject val = (JCObject)retObjectXButton2;
             return new MouseButtonState(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectXButton2 != null ? retObjectXButton2.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -638,10 +697,14 @@ public class Mouse extends NetObject  {
 
     public static MouseDevice getPrimaryDevice() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.FormatException, system.MulticastNotSupportedException, system.collections.generic.KeyNotFoundException, system.NullReferenceException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectPrimaryDevice = null;
         try {
-            JCObject val = (JCObject)classType.Get("PrimaryDevice");
+            retObjectPrimaryDevice = classType.Get("PrimaryDevice");
+            JCObject val = (JCObject)retObjectPrimaryDevice;
             return new MouseDevice(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPrimaryDevice != null ? retObjectPrimaryDevice.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

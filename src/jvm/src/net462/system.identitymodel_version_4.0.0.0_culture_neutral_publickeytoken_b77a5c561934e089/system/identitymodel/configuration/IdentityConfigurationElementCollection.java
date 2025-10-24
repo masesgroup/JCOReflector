@@ -163,10 +163,14 @@ public class IdentityConfigurationElementCollection extends ConfigurationElement
     
     public IdentityConfigurationElement GetElement(java.lang.String name) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.configuration.ConfigurationErrorsException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetElement = null;
         try {
-            JCObject objGetElement = (JCObject)classInstance.Invoke("GetElement", name);
+            retObjectGetElement = classInstance.Invoke("GetElement", name);
+            JCObject objGetElement = (JCObject)retObjectGetElement;
             return new IdentityConfigurationElement(objGetElement);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetElement != null ? retObjectGetElement.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

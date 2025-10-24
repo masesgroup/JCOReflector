@@ -162,9 +162,13 @@ public class Cloud extends NetObject implements system.runtime.serialization.ISe
     
     public boolean Equals(Cloud other) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEquals = null;
         try {
-            return (boolean)classInstance.Invoke("Equals", other == null ? null : other.getJCOInstance());
+            retObjectEquals = classInstance.Invoke("Equals", other == null ? null : other.getJCOInstance());
+            return (boolean)retObjectEquals;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectEquals != null ? retObjectEquals.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,10 +176,14 @@ public class Cloud extends NetObject implements system.runtime.serialization.ISe
 
     public static Cloud GetCloudByName(java.lang.String cloudName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.FormatException, system.net.peertopeer.PeerToPeerException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetCloudByName = null;
         try {
-            JCObject objGetCloudByName = (JCObject)classType.Invoke("GetCloudByName", cloudName);
+            retObjectGetCloudByName = classType.Invoke("GetCloudByName", cloudName);
+            JCObject objGetCloudByName = (JCObject)retObjectGetCloudByName;
             return new Cloud(objGetCloudByName);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCloudByName != null ? retObjectGetCloudByName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,10 +191,14 @@ public class Cloud extends NetObject implements system.runtime.serialization.ISe
 
     public static CloudCollection GetAvailableClouds() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.FormatException, system.net.peertopeer.PeerToPeerException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetAvailableClouds = null;
         try {
-            JCObject objGetAvailableClouds = (JCObject)classType.Invoke("GetAvailableClouds");
+            retObjectGetAvailableClouds = classType.Invoke("GetAvailableClouds");
+            JCObject objGetAvailableClouds = (JCObject)retObjectGetAvailableClouds;
             return new CloudCollection(objGetAvailableClouds);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetAvailableClouds != null ? retObjectGetAvailableClouds.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,7 +210,7 @@ public class Cloud extends NetObject implements system.runtime.serialization.ISe
      */
     @Deprecated 
     public void GetObjectData(SerializationInfo info, StreamingContext context) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToISerializable to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToISerializable to obtain the full interface.");
     }
 
 
@@ -207,9 +219,20 @@ public class Cloud extends NetObject implements system.runtime.serialization.ISe
     
     public int getScopeId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectScopeId = null;
         try {
-            return (int)classInstance.Get("ScopeId");
+            retObjectScopeId = classInstance.Get("ScopeId");
+            return (int)retObjectScopeId;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectScopeId_ToString = retObjectScopeId == null ? "null" : retObjectScopeId.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectScopeIdNumber = (java.lang.Number)retObjectScopeId;
+                return retObjectScopeIdNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectScopeId != null ? retObjectScopeId.getClass() : "null", retObjectScopeId_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -217,10 +240,14 @@ public class Cloud extends NetObject implements system.runtime.serialization.ISe
 
     public static Cloud getGlobal() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.FormatException, system.net.peertopeer.PeerToPeerException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGlobal = null;
         try {
-            JCObject val = (JCObject)classType.Get("Global");
+            retObjectGlobal = classType.Get("Global");
+            JCObject val = (JCObject)retObjectGlobal;
             return new Cloud(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGlobal != null ? retObjectGlobal.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -228,10 +255,14 @@ public class Cloud extends NetObject implements system.runtime.serialization.ISe
 
     public PnrpScope getScope() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectScope = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Scope");
+            retObjectScope = classInstance.Get("Scope");
+            JCObject val = (JCObject)retObjectScope;
             return new PnrpScope(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectScope != null ? retObjectScope.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -239,9 +270,13 @@ public class Cloud extends NetObject implements system.runtime.serialization.ISe
 
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectName = null;
         try {
-            return (java.lang.String)classInstance.Get("Name");
+            retObjectName = classInstance.Get("Name");
+            return (java.lang.String)retObjectName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectName != null ? retObjectName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

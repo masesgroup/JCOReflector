@@ -157,7 +157,7 @@ public class CorrelationManager extends NetObject  {
     
     public void StartLogicalOperation() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.security.SecurityException, system.InvalidOperationException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("StartLogicalOperation");
         } catch (JCNativeException jcne) {
@@ -167,7 +167,7 @@ public class CorrelationManager extends NetObject  {
 
     public void StartLogicalOperation(NetObject operationId) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.security.SecurityException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("StartLogicalOperation", operationId == null ? null : operationId.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -177,7 +177,7 @@ public class CorrelationManager extends NetObject  {
 
     public void StopLogicalOperation() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.security.SecurityException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("StopLogicalOperation");
         } catch (JCNativeException jcne) {
@@ -191,10 +191,14 @@ public class CorrelationManager extends NetObject  {
     
     public Stack getLogicalOperationStack() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.security.SecurityException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLogicalOperationStack = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("LogicalOperationStack");
+            retObjectLogicalOperationStack = classInstance.Get("LogicalOperationStack");
+            JCObject val = (JCObject)retObjectLogicalOperationStack;
             return new Stack(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLogicalOperationStack != null ? retObjectLogicalOperationStack.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,10 +206,14 @@ public class CorrelationManager extends NetObject  {
 
     public Guid getActivityId() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectActivityId = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ActivityId");
+            retObjectActivityId = classInstance.Get("ActivityId");
+            JCObject val = (JCObject)retObjectActivityId;
             return new Guid(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectActivityId != null ? retObjectActivityId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,7 +221,7 @@ public class CorrelationManager extends NetObject  {
 
     public void setActivityId(Guid ActivityId) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ActivityId", ActivityId == null ? null : ActivityId.getJCOInstance());
         } catch (JCNativeException jcne) {

@@ -162,10 +162,14 @@ public class DataGridViewCellStyleContentChangedEventArgs extends EventArgs  {
     
     public DataGridViewCellStyle getCellStyle() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCellStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CellStyle");
+            retObjectCellStyle = classInstance.Get("CellStyle");
+            JCObject val = (JCObject)retObjectCellStyle;
             return new DataGridViewCellStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCellStyle != null ? retObjectCellStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -173,10 +177,14 @@ public class DataGridViewCellStyleContentChangedEventArgs extends EventArgs  {
 
     public DataGridViewCellStyleScopes getCellStyleScope() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCellStyleScope = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CellStyleScope");
+            retObjectCellStyleScope = classInstance.Get("CellStyleScope");
+            JCObject val = (JCObject)retObjectCellStyleScope;
             return new DataGridViewCellStyleScopes(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCellStyleScope != null ? retObjectCellStyleScope.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

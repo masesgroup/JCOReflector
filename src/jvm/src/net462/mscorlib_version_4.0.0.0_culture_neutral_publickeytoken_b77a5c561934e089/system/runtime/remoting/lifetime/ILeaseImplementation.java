@@ -146,10 +146,14 @@ public class ILeaseImplementation extends NetObject implements ILease {
     
     public TimeSpan Renew(TimeSpan renewalTime) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRenew = null;
         try {
-            JCObject objRenew = (JCObject)classInstance.Invoke("Renew", renewalTime == null ? null : renewalTime.getJCOInstance());
+            retObjectRenew = classInstance.Invoke("Renew", renewalTime == null ? null : renewalTime.getJCOInstance());
+            JCObject objRenew = (JCObject)retObjectRenew;
             return new TimeSpan(objRenew);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRenew != null ? retObjectRenew.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -157,7 +161,7 @@ public class ILeaseImplementation extends NetObject implements ILease {
 
     public void Register(ISponsor obj) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Register", obj == null ? null : obj.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -167,7 +171,7 @@ public class ILeaseImplementation extends NetObject implements ILease {
 
     public void Register(ISponsor obj, TimeSpan renewalTime) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Register", obj == null ? null : obj.getJCOInstance(), renewalTime == null ? null : renewalTime.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -177,7 +181,7 @@ public class ILeaseImplementation extends NetObject implements ILease {
 
     public void Unregister(ISponsor obj) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Unregister", obj == null ? null : obj.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -191,10 +195,14 @@ public class ILeaseImplementation extends NetObject implements ILease {
     
     public LeaseState getCurrentState() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCurrentState = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CurrentState");
+            retObjectCurrentState = classInstance.Get("CurrentState");
+            JCObject val = (JCObject)retObjectCurrentState;
             return new LeaseState(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCurrentState != null ? retObjectCurrentState.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,10 +210,14 @@ public class ILeaseImplementation extends NetObject implements ILease {
 
     public TimeSpan getCurrentLeaseTime() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCurrentLeaseTime = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CurrentLeaseTime");
+            retObjectCurrentLeaseTime = classInstance.Get("CurrentLeaseTime");
+            JCObject val = (JCObject)retObjectCurrentLeaseTime;
             return new TimeSpan(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCurrentLeaseTime != null ? retObjectCurrentLeaseTime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,10 +225,14 @@ public class ILeaseImplementation extends NetObject implements ILease {
 
     public TimeSpan getInitialLeaseTime() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInitialLeaseTime = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("InitialLeaseTime");
+            retObjectInitialLeaseTime = classInstance.Get("InitialLeaseTime");
+            JCObject val = (JCObject)retObjectInitialLeaseTime;
             return new TimeSpan(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInitialLeaseTime != null ? retObjectInitialLeaseTime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -224,7 +240,7 @@ public class ILeaseImplementation extends NetObject implements ILease {
 
     public void setInitialLeaseTime(TimeSpan InitialLeaseTime) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("InitialLeaseTime", InitialLeaseTime == null ? null : InitialLeaseTime.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -234,10 +250,14 @@ public class ILeaseImplementation extends NetObject implements ILease {
 
     public TimeSpan getRenewOnCallTime() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRenewOnCallTime = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RenewOnCallTime");
+            retObjectRenewOnCallTime = classInstance.Get("RenewOnCallTime");
+            JCObject val = (JCObject)retObjectRenewOnCallTime;
             return new TimeSpan(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRenewOnCallTime != null ? retObjectRenewOnCallTime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -245,7 +265,7 @@ public class ILeaseImplementation extends NetObject implements ILease {
 
     public void setRenewOnCallTime(TimeSpan RenewOnCallTime) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RenewOnCallTime", RenewOnCallTime == null ? null : RenewOnCallTime.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -255,10 +275,14 @@ public class ILeaseImplementation extends NetObject implements ILease {
 
     public TimeSpan getSponsorshipTimeout() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSponsorshipTimeout = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SponsorshipTimeout");
+            retObjectSponsorshipTimeout = classInstance.Get("SponsorshipTimeout");
+            JCObject val = (JCObject)retObjectSponsorshipTimeout;
             return new TimeSpan(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSponsorshipTimeout != null ? retObjectSponsorshipTimeout.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -266,7 +290,7 @@ public class ILeaseImplementation extends NetObject implements ILease {
 
     public void setSponsorshipTimeout(TimeSpan SponsorshipTimeout) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SponsorshipTimeout", SponsorshipTimeout == null ? null : SponsorshipTimeout.getJCOInstance());
         } catch (JCNativeException jcne) {

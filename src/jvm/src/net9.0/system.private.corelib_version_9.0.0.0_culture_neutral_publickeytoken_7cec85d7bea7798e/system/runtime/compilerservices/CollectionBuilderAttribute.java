@@ -170,9 +170,13 @@ public class CollectionBuilderAttribute extends Attribute  {
     
     public java.lang.String getMethodName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMethodName = null;
         try {
-            return (java.lang.String)classInstance.Get("MethodName");
+            retObjectMethodName = classInstance.Get("MethodName");
+            return (java.lang.String)retObjectMethodName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectMethodName != null ? retObjectMethodName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,10 +184,14 @@ public class CollectionBuilderAttribute extends Attribute  {
 
     public NetType getBuilderType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBuilderType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("BuilderType");
+            retObjectBuilderType = classInstance.Get("BuilderType");
+            JCObject val = (JCObject)retObjectBuilderType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBuilderType != null ? retObjectBuilderType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

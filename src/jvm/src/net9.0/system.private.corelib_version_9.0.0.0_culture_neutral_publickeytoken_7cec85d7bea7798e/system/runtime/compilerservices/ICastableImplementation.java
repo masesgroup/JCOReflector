@@ -143,9 +143,13 @@ public class ICastableImplementation extends NetObject implements ICastable {
     
     public boolean IsInstanceOfInterface(RuntimeTypeHandle interfaceType, JCORefOut<NetException> castError) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsInstanceOfInterface = null;
         try {
-            return (boolean)classInstance.Invoke("IsInstanceOfInterface", interfaceType == null ? null : interfaceType.getJCOInstance(), castError.getJCRefOut());
+            retObjectIsInstanceOfInterface = classInstance.Invoke("IsInstanceOfInterface", interfaceType == null ? null : interfaceType.getJCOInstance(), castError.getJCRefOut());
+            return (boolean)retObjectIsInstanceOfInterface;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsInstanceOfInterface != null ? retObjectIsInstanceOfInterface.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -153,10 +157,14 @@ public class ICastableImplementation extends NetObject implements ICastable {
 
     public RuntimeTypeHandle GetImplType(RuntimeTypeHandle interfaceType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetImplType = null;
         try {
-            JCObject objGetImplType = (JCObject)classInstance.Invoke("GetImplType", interfaceType == null ? null : interfaceType.getJCOInstance());
+            retObjectGetImplType = classInstance.Invoke("GetImplType", interfaceType == null ? null : interfaceType.getJCOInstance());
+            JCObject objGetImplType = (JCObject)retObjectGetImplType;
             return new RuntimeTypeHandle(objGetImplType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetImplType != null ? retObjectGetImplType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

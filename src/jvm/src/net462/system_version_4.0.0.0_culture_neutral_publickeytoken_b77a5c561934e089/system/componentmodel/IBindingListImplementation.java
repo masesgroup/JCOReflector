@@ -150,9 +150,13 @@ public class IBindingListImplementation extends IEnumerableImplementation implem
     
     public boolean Contains(NetObject value) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContains = null;
         try {
-            return (boolean)classInstance.Invoke("Contains", value == null ? null : value.getJCOInstance());
+            retObjectContains = classInstance.Invoke("Contains", value == null ? null : value.getJCOInstance());
+            return (boolean)retObjectContains;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectContains != null ? retObjectContains.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -160,9 +164,20 @@ public class IBindingListImplementation extends IEnumerableImplementation implem
 
     public int Add(NetObject value) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAdd = null;
         try {
-            return (int)classInstance.Invoke("Add", value == null ? null : value.getJCOInstance());
+            retObjectAdd = classInstance.Invoke("Add", value == null ? null : value.getJCOInstance());
+            return (int)retObjectAdd;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectAdd_ToString = retObjectAdd == null ? "null" : retObjectAdd.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectAddNumber = (java.lang.Number)retObjectAdd;
+                return retObjectAddNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectAdd != null ? retObjectAdd.getClass() : "null", retObjectAdd_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,9 +185,20 @@ public class IBindingListImplementation extends IEnumerableImplementation implem
 
     public int Find(PropertyDescriptor property, NetObject key) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFind = null;
         try {
-            return (int)classInstance.Invoke("Find", property == null ? null : property.getJCOInstance(), key == null ? null : key.getJCOInstance());
+            retObjectFind = classInstance.Invoke("Find", property == null ? null : property.getJCOInstance(), key == null ? null : key.getJCOInstance());
+            return (int)retObjectFind;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectFind_ToString = retObjectFind == null ? "null" : retObjectFind.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectFindNumber = (java.lang.Number)retObjectFind;
+                return retObjectFindNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectFind != null ? retObjectFind.getClass() : "null", retObjectFind_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,9 +206,20 @@ public class IBindingListImplementation extends IEnumerableImplementation implem
 
     public int IndexOf(NetObject value) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIndexOf = null;
         try {
-            return (int)classInstance.Invoke("IndexOf", value == null ? null : value.getJCOInstance());
+            retObjectIndexOf = classInstance.Invoke("IndexOf", value == null ? null : value.getJCOInstance());
+            return (int)retObjectIndexOf;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectIndexOf_ToString = retObjectIndexOf == null ? "null" : retObjectIndexOf.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectIndexOfNumber = (java.lang.Number)retObjectIndexOf;
+                return retObjectIndexOfNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectIndexOf != null ? retObjectIndexOf.getClass() : "null", retObjectIndexOf_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,10 +227,14 @@ public class IBindingListImplementation extends IEnumerableImplementation implem
 
     public NetObject AddNew() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddNew = null;
         try {
-            JCObject objAddNew = (JCObject)classInstance.Invoke("AddNew");
+            retObjectAddNew = classInstance.Invoke("AddNew");
+            JCObject objAddNew = (JCObject)retObjectAddNew;
             return new NetObject(objAddNew);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddNew != null ? retObjectAddNew.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,7 +242,7 @@ public class IBindingListImplementation extends IEnumerableImplementation implem
 
     public void AddIndex(PropertyDescriptor property) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddIndex", property == null ? null : property.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -211,7 +252,7 @@ public class IBindingListImplementation extends IEnumerableImplementation implem
 
     public void ApplySort(PropertyDescriptor property, ListSortDirection direction) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ApplySort", property == null ? null : property.getJCOInstance(), direction == null ? null : direction.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -221,7 +262,7 @@ public class IBindingListImplementation extends IEnumerableImplementation implem
 
     public void Clear() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Clear");
         } catch (JCNativeException jcne) {
@@ -231,7 +272,7 @@ public class IBindingListImplementation extends IEnumerableImplementation implem
 
     public void CopyTo(Array array, int index) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CopyTo", array == null ? null : array.getJCOInstance(), index);
         } catch (JCNativeException jcne) {
@@ -241,7 +282,7 @@ public class IBindingListImplementation extends IEnumerableImplementation implem
 
     public void Insert(int index, NetObject value) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Insert", index, value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -251,7 +292,7 @@ public class IBindingListImplementation extends IEnumerableImplementation implem
 
     public void Remove(NetObject value) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Remove", value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -261,7 +302,7 @@ public class IBindingListImplementation extends IEnumerableImplementation implem
 
     public void RemoveAt(int index) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RemoveAt", index);
         } catch (JCNativeException jcne) {
@@ -271,7 +312,7 @@ public class IBindingListImplementation extends IEnumerableImplementation implem
 
     public void RemoveIndex(PropertyDescriptor property) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RemoveIndex", property == null ? null : property.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -281,7 +322,7 @@ public class IBindingListImplementation extends IEnumerableImplementation implem
 
     public void RemoveSort() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RemoveSort");
         } catch (JCNativeException jcne) {
@@ -295,9 +336,13 @@ public class IBindingListImplementation extends IEnumerableImplementation implem
     
     public boolean getAllowEdit() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAllowEdit = null;
         try {
-            return (boolean)classInstance.Get("AllowEdit");
+            retObjectAllowEdit = classInstance.Get("AllowEdit");
+            return (boolean)retObjectAllowEdit;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAllowEdit != null ? retObjectAllowEdit.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -305,9 +350,13 @@ public class IBindingListImplementation extends IEnumerableImplementation implem
 
     public boolean getAllowNew() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAllowNew = null;
         try {
-            return (boolean)classInstance.Get("AllowNew");
+            retObjectAllowNew = classInstance.Get("AllowNew");
+            return (boolean)retObjectAllowNew;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAllowNew != null ? retObjectAllowNew.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -315,9 +364,13 @@ public class IBindingListImplementation extends IEnumerableImplementation implem
 
     public boolean getAllowRemove() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAllowRemove = null;
         try {
-            return (boolean)classInstance.Get("AllowRemove");
+            retObjectAllowRemove = classInstance.Get("AllowRemove");
+            return (boolean)retObjectAllowRemove;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAllowRemove != null ? retObjectAllowRemove.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -325,9 +378,13 @@ public class IBindingListImplementation extends IEnumerableImplementation implem
 
     public boolean getIsFixedSize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsFixedSize = null;
         try {
-            return (boolean)classInstance.Get("IsFixedSize");
+            retObjectIsFixedSize = classInstance.Get("IsFixedSize");
+            return (boolean)retObjectIsFixedSize;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsFixedSize != null ? retObjectIsFixedSize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -335,9 +392,13 @@ public class IBindingListImplementation extends IEnumerableImplementation implem
 
     public boolean getIsReadOnly() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsReadOnly = null;
         try {
-            return (boolean)classInstance.Get("IsReadOnly");
+            retObjectIsReadOnly = classInstance.Get("IsReadOnly");
+            return (boolean)retObjectIsReadOnly;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsReadOnly != null ? retObjectIsReadOnly.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -345,9 +406,13 @@ public class IBindingListImplementation extends IEnumerableImplementation implem
 
     public boolean getIsSorted() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsSorted = null;
         try {
-            return (boolean)classInstance.Get("IsSorted");
+            retObjectIsSorted = classInstance.Get("IsSorted");
+            return (boolean)retObjectIsSorted;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsSorted != null ? retObjectIsSorted.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -355,9 +420,13 @@ public class IBindingListImplementation extends IEnumerableImplementation implem
 
     public boolean getIsSynchronized() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsSynchronized = null;
         try {
-            return (boolean)classInstance.Get("IsSynchronized");
+            retObjectIsSynchronized = classInstance.Get("IsSynchronized");
+            return (boolean)retObjectIsSynchronized;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsSynchronized != null ? retObjectIsSynchronized.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -365,9 +434,13 @@ public class IBindingListImplementation extends IEnumerableImplementation implem
 
     public boolean getSupportsChangeNotification() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSupportsChangeNotification = null;
         try {
-            return (boolean)classInstance.Get("SupportsChangeNotification");
+            retObjectSupportsChangeNotification = classInstance.Get("SupportsChangeNotification");
+            return (boolean)retObjectSupportsChangeNotification;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectSupportsChangeNotification != null ? retObjectSupportsChangeNotification.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -375,9 +448,13 @@ public class IBindingListImplementation extends IEnumerableImplementation implem
 
     public boolean getSupportsSearching() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSupportsSearching = null;
         try {
-            return (boolean)classInstance.Get("SupportsSearching");
+            retObjectSupportsSearching = classInstance.Get("SupportsSearching");
+            return (boolean)retObjectSupportsSearching;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectSupportsSearching != null ? retObjectSupportsSearching.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -385,9 +462,13 @@ public class IBindingListImplementation extends IEnumerableImplementation implem
 
     public boolean getSupportsSorting() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSupportsSorting = null;
         try {
-            return (boolean)classInstance.Get("SupportsSorting");
+            retObjectSupportsSorting = classInstance.Get("SupportsSorting");
+            return (boolean)retObjectSupportsSorting;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectSupportsSorting != null ? retObjectSupportsSorting.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -395,9 +476,20 @@ public class IBindingListImplementation extends IEnumerableImplementation implem
 
     public int getCount() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCount = null;
         try {
-            return (int)classInstance.Get("Count");
+            retObjectCount = classInstance.Get("Count");
+            return (int)retObjectCount;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCount_ToString = retObjectCount == null ? "null" : retObjectCount.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectCountNumber = (java.lang.Number)retObjectCount;
+                return retObjectCountNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCount != null ? retObjectCount.getClass() : "null", retObjectCount_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -405,10 +497,14 @@ public class IBindingListImplementation extends IEnumerableImplementation implem
 
     public ListSortDirection getSortDirection() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSortDirection = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SortDirection");
+            retObjectSortDirection = classInstance.Get("SortDirection");
+            JCObject val = (JCObject)retObjectSortDirection;
             return new ListSortDirection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSortDirection != null ? retObjectSortDirection.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -416,10 +512,14 @@ public class IBindingListImplementation extends IEnumerableImplementation implem
 
     public PropertyDescriptor getSortProperty() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSortProperty = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SortProperty");
+            retObjectSortProperty = classInstance.Get("SortProperty");
+            JCObject val = (JCObject)retObjectSortProperty;
             return new PropertyDescriptor(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSortProperty != null ? retObjectSortProperty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -427,10 +527,14 @@ public class IBindingListImplementation extends IEnumerableImplementation implem
 
     public NetObject getSyncRoot() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSyncRoot = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SyncRoot");
+            retObjectSyncRoot = classInstance.Get("SyncRoot");
+            JCObject val = (JCObject)retObjectSyncRoot;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSyncRoot != null ? retObjectSyncRoot.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -443,7 +547,7 @@ public class IBindingListImplementation extends IEnumerableImplementation implem
 
     public void addListChanged(ListChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ListChanged", handler);
         } catch (JCNativeException jcne) {
@@ -453,7 +557,7 @@ public class IBindingListImplementation extends IEnumerableImplementation implem
 
     public void removeListChanged(ListChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ListChanged", handler);
         } catch (JCNativeException jcne) {

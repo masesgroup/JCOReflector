@@ -170,9 +170,13 @@ public class TraversalRequest extends NetObject  {
     
     public boolean getWrapped() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWrapped = null;
         try {
-            return (boolean)classInstance.Get("Wrapped");
+            retObjectWrapped = classInstance.Get("Wrapped");
+            return (boolean)retObjectWrapped;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectWrapped != null ? retObjectWrapped.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,7 +184,7 @@ public class TraversalRequest extends NetObject  {
 
     public void setWrapped(boolean Wrapped) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Wrapped", Wrapped);
         } catch (JCNativeException jcne) {
@@ -190,10 +194,14 @@ public class TraversalRequest extends NetObject  {
 
     public FocusNavigationDirection getFocusNavigationDirection() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFocusNavigationDirection = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("FocusNavigationDirection");
+            retObjectFocusNavigationDirection = classInstance.Get("FocusNavigationDirection");
+            JCObject val = (JCObject)retObjectFocusNavigationDirection;
             return new FocusNavigationDirection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFocusNavigationDirection != null ? retObjectFocusNavigationDirection.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

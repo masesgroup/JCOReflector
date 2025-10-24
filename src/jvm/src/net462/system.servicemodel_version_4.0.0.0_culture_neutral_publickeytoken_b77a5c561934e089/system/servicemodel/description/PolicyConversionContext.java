@@ -159,10 +159,14 @@ public class PolicyConversionContext extends NetObject  {
     
     public PolicyAssertionCollection GetBindingAssertions() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetBindingAssertions = null;
         try {
-            JCObject objGetBindingAssertions = (JCObject)classInstance.Invoke("GetBindingAssertions");
+            retObjectGetBindingAssertions = classInstance.Invoke("GetBindingAssertions");
+            JCObject objGetBindingAssertions = (JCObject)retObjectGetBindingAssertions;
             return new PolicyAssertionCollection(objGetBindingAssertions);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetBindingAssertions != null ? retObjectGetBindingAssertions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,10 +174,14 @@ public class PolicyConversionContext extends NetObject  {
 
     public PolicyAssertionCollection GetFaultBindingAssertions(FaultDescription fault) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetFaultBindingAssertions = null;
         try {
-            JCObject objGetFaultBindingAssertions = (JCObject)classInstance.Invoke("GetFaultBindingAssertions", fault == null ? null : fault.getJCOInstance());
+            retObjectGetFaultBindingAssertions = classInstance.Invoke("GetFaultBindingAssertions", fault == null ? null : fault.getJCOInstance());
+            JCObject objGetFaultBindingAssertions = (JCObject)retObjectGetFaultBindingAssertions;
             return new PolicyAssertionCollection(objGetFaultBindingAssertions);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetFaultBindingAssertions != null ? retObjectGetFaultBindingAssertions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,10 +189,14 @@ public class PolicyConversionContext extends NetObject  {
 
     public PolicyAssertionCollection GetMessageBindingAssertions(MessageDescription message) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetMessageBindingAssertions = null;
         try {
-            JCObject objGetMessageBindingAssertions = (JCObject)classInstance.Invoke("GetMessageBindingAssertions", message == null ? null : message.getJCOInstance());
+            retObjectGetMessageBindingAssertions = classInstance.Invoke("GetMessageBindingAssertions", message == null ? null : message.getJCOInstance());
+            JCObject objGetMessageBindingAssertions = (JCObject)retObjectGetMessageBindingAssertions;
             return new PolicyAssertionCollection(objGetMessageBindingAssertions);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetMessageBindingAssertions != null ? retObjectGetMessageBindingAssertions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,10 +204,14 @@ public class PolicyConversionContext extends NetObject  {
 
     public PolicyAssertionCollection GetOperationBindingAssertions(OperationDescription operation) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetOperationBindingAssertions = null;
         try {
-            JCObject objGetOperationBindingAssertions = (JCObject)classInstance.Invoke("GetOperationBindingAssertions", operation == null ? null : operation.getJCOInstance());
+            retObjectGetOperationBindingAssertions = classInstance.Invoke("GetOperationBindingAssertions", operation == null ? null : operation.getJCOInstance());
+            JCObject objGetOperationBindingAssertions = (JCObject)retObjectGetOperationBindingAssertions;
             return new PolicyAssertionCollection(objGetOperationBindingAssertions);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetOperationBindingAssertions != null ? retObjectGetOperationBindingAssertions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -207,10 +223,14 @@ public class PolicyConversionContext extends NetObject  {
     
     public BindingElementCollection getBindingElements() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBindingElements = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("BindingElements");
+            retObjectBindingElements = classInstance.Get("BindingElements");
+            JCObject val = (JCObject)retObjectBindingElements;
             return new BindingElementCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBindingElements != null ? retObjectBindingElements.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -218,10 +238,14 @@ public class PolicyConversionContext extends NetObject  {
 
     public ContractDescription getContract() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContract = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Contract");
+            retObjectContract = classInstance.Get("Contract");
+            JCObject val = (JCObject)retObjectContract;
             return new ContractDescription(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContract != null ? retObjectContract.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

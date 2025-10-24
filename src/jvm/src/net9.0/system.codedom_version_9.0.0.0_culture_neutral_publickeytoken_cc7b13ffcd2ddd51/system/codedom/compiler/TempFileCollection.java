@@ -184,9 +184,13 @@ public class TempFileCollection extends NetObjectEnumerable implements system.ID
     
     public java.lang.String AddExtension(java.lang.String fileExtension, boolean keepFile) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.io.IOException, system.runtime.serialization.SerializationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddExtension = null;
         try {
-            return (java.lang.String)classInstance.Invoke("AddExtension", fileExtension, keepFile);
+            retObjectAddExtension = classInstance.Invoke("AddExtension", fileExtension, keepFile);
+            return (java.lang.String)retObjectAddExtension;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectAddExtension != null ? retObjectAddExtension.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -194,9 +198,13 @@ public class TempFileCollection extends NetObjectEnumerable implements system.ID
 
     public java.lang.String AddExtension(java.lang.String fileExtension) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.OutOfMemoryException, system.io.IOException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddExtension = null;
         try {
-            return (java.lang.String)classInstance.Invoke("AddExtension", fileExtension);
+            retObjectAddExtension = classInstance.Invoke("AddExtension", fileExtension);
+            return (java.lang.String)retObjectAddExtension;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectAddExtension != null ? retObjectAddExtension.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -204,7 +212,7 @@ public class TempFileCollection extends NetObjectEnumerable implements system.ID
 
     public void AddFile(java.lang.String fileName, boolean keepFile) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddFile", fileName, keepFile);
         } catch (JCNativeException jcne) {
@@ -214,7 +222,7 @@ public class TempFileCollection extends NetObjectEnumerable implements system.ID
 
     public void CopyTo(java.lang.String[] fileNames, int start) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CopyTo", fileNames, start);
         } catch (JCNativeException jcne) {
@@ -224,7 +232,7 @@ public class TempFileCollection extends NetObjectEnumerable implements system.ID
 
     public void CopyTo(JCORefOut dupParam0, int dupParam1) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CopyTo", dupParam0.getJCRefOut(), dupParam1);
         } catch (JCNativeException jcne) {
@@ -234,7 +242,7 @@ public class TempFileCollection extends NetObjectEnumerable implements system.ID
 
     public void Delete() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.io.IOException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Delete");
         } catch (JCNativeException jcne) {
@@ -248,7 +256,7 @@ public class TempFileCollection extends NetObjectEnumerable implements system.ID
      */
     @Deprecated 
     public void CopyTo(Array array, int index) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICollection to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICollection to obtain the full interface.");
     }
 
     /**
@@ -257,13 +265,13 @@ public class TempFileCollection extends NetObjectEnumerable implements system.ID
      */
     @Deprecated 
     public void Dispose() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDisposable to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDisposable to obtain the full interface.");
     }
 
     public void close() throws Exception {
         try {
             if (classInstance == null)
-                throw new UnsupportedOperationException("classInstance is null.");
+                throw new java.lang.UnsupportedOperationException("classInstance is null.");
             try {
                 classInstance.Invoke("Dispose");
             }
@@ -279,9 +287,13 @@ public class TempFileCollection extends NetObjectEnumerable implements system.ID
     
     public boolean getKeepFiles() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectKeepFiles = null;
         try {
-            return (boolean)classInstance.Get("KeepFiles");
+            retObjectKeepFiles = classInstance.Get("KeepFiles");
+            return (boolean)retObjectKeepFiles;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectKeepFiles != null ? retObjectKeepFiles.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -289,7 +301,7 @@ public class TempFileCollection extends NetObjectEnumerable implements system.ID
 
     public void setKeepFiles(boolean KeepFiles) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("KeepFiles", KeepFiles);
         } catch (JCNativeException jcne) {
@@ -299,9 +311,20 @@ public class TempFileCollection extends NetObjectEnumerable implements system.ID
 
     public int getCount() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCount = null;
         try {
-            return (int)classInstance.Get("Count");
+            retObjectCount = classInstance.Get("Count");
+            return (int)retObjectCount;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCount_ToString = retObjectCount == null ? "null" : retObjectCount.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectCountNumber = (java.lang.Number)retObjectCount;
+                return retObjectCountNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCount != null ? retObjectCount.getClass() : "null", retObjectCount_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -309,9 +332,13 @@ public class TempFileCollection extends NetObjectEnumerable implements system.ID
 
     public java.lang.String getBasePath() throws Throwable, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.RankException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.io.IOException, system.runtime.serialization.SerializationException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBasePath = null;
         try {
-            return (java.lang.String)classInstance.Get("BasePath");
+            retObjectBasePath = classInstance.Get("BasePath");
+            return (java.lang.String)retObjectBasePath;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectBasePath != null ? retObjectBasePath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -319,9 +346,13 @@ public class TempFileCollection extends NetObjectEnumerable implements system.ID
 
     public java.lang.String getTempDir() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTempDir = null;
         try {
-            return (java.lang.String)classInstance.Get("TempDir");
+            retObjectTempDir = classInstance.Get("TempDir");
+            return (java.lang.String)retObjectTempDir;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectTempDir != null ? retObjectTempDir.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

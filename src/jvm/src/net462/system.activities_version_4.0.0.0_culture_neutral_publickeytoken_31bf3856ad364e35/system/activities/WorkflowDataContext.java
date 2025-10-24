@@ -158,10 +158,14 @@ public class WorkflowDataContext extends CustomTypeDescriptor implements AutoClo
     
     public PropertyDescriptorCollection GetProperties() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetProperties = null;
         try {
-            JCObject objGetProperties = (JCObject)classInstance.Invoke("GetProperties");
+            retObjectGetProperties = classInstance.Invoke("GetProperties");
+            JCObject objGetProperties = (JCObject)retObjectGetProperties;
             return new PropertyDescriptorCollection(objGetProperties);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetProperties != null ? retObjectGetProperties.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,7 +173,7 @@ public class WorkflowDataContext extends CustomTypeDescriptor implements AutoClo
 
     public void Dispose() throws Throwable, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
@@ -180,7 +184,7 @@ public class WorkflowDataContext extends CustomTypeDescriptor implements AutoClo
     public void close() throws Exception {
         try {
             if (classInstance == null)
-                throw new UnsupportedOperationException("classInstance is null.");
+                throw new java.lang.UnsupportedOperationException("classInstance is null.");
             try {
                 classInstance.Invoke("Dispose");
             }
@@ -201,7 +205,7 @@ public class WorkflowDataContext extends CustomTypeDescriptor implements AutoClo
 
     public void addPropertyChanged(PropertyChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("PropertyChanged", handler);
         } catch (JCNativeException jcne) {
@@ -211,7 +215,7 @@ public class WorkflowDataContext extends CustomTypeDescriptor implements AutoClo
 
     public void removePropertyChanged(PropertyChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("PropertyChanged", handler);
         } catch (JCNativeException jcne) {

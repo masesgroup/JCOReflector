@@ -197,10 +197,14 @@ public class CodeCommentStatement extends CodeStatement  {
     
     public CodeComment getComment() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectComment = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Comment");
+            retObjectComment = classInstance.Get("Comment");
+            JCObject val = (JCObject)retObjectComment;
             return new CodeComment(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectComment != null ? retObjectComment.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -208,7 +212,7 @@ public class CodeCommentStatement extends CodeStatement  {
 
     public void setComment(CodeComment Comment) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Comment", Comment == null ? null : Comment.getJCOInstance());
         } catch (JCNativeException jcne) {

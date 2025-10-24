@@ -163,9 +163,13 @@ public class EventLogEntry extends Component implements system.runtime.serializa
     
     public boolean Equals(EventLogEntry otherEntry) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEquals = null;
         try {
-            return (boolean)classInstance.Invoke("Equals", otherEntry == null ? null : otherEntry.getJCOInstance());
+            retObjectEquals = classInstance.Invoke("Equals", otherEntry == null ? null : otherEntry.getJCOInstance());
+            return (boolean)retObjectEquals;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectEquals != null ? retObjectEquals.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,7 +181,7 @@ public class EventLogEntry extends Component implements system.runtime.serializa
      */
     @Deprecated 
     public void GetObjectData(SerializationInfo info, StreamingContext context) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToISerializable to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToISerializable to obtain the full interface.");
     }
 
 
@@ -186,10 +190,12 @@ public class EventLogEntry extends Component implements system.runtime.serializa
     
     public byte[] getData() throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentNullException, system.RankException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectData = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("Data");
+            retObjectData = classInstance.Get("Data");
+            JCObject resultingObjects = (JCObject)retObjectData;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -198,6 +204,8 @@ public class EventLogEntry extends Component implements system.runtime.serializa
 				resultingArray[indexData] = (byte)resultingArrayList.get(indexData);
 			}
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into JCObject", retObjectData != null ? retObjectData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -205,9 +213,20 @@ public class EventLogEntry extends Component implements system.runtime.serializa
 
     public short getCategoryNumber() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCategoryNumber = null;
         try {
-            return (short)classInstance.Get("CategoryNumber");
+            retObjectCategoryNumber = classInstance.Get("CategoryNumber");
+            return (short)retObjectCategoryNumber;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCategoryNumber_ToString = retObjectCategoryNumber == null ? "null" : retObjectCategoryNumber.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectCategoryNumberNumber = (java.lang.Number)retObjectCategoryNumber;
+                return retObjectCategoryNumberNumber.shortValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into short and, as fallback solution, into java.lang.Number", retObjectCategoryNumber != null ? retObjectCategoryNumber.getClass() : "null", retObjectCategoryNumber_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -215,9 +234,20 @@ public class EventLogEntry extends Component implements system.runtime.serializa
 
     public int getEventID() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEventID = null;
         try {
-            return (int)classInstance.Get("EventID");
+            retObjectEventID = classInstance.Get("EventID");
+            return (int)retObjectEventID;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectEventID_ToString = retObjectEventID == null ? "null" : retObjectEventID.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectEventIDNumber = (java.lang.Number)retObjectEventID;
+                return retObjectEventIDNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectEventID != null ? retObjectEventID.getClass() : "null", retObjectEventID_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -225,9 +255,20 @@ public class EventLogEntry extends Component implements system.runtime.serializa
 
     public int getIndex() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIndex = null;
         try {
-            return (int)classInstance.Get("Index");
+            retObjectIndex = classInstance.Get("Index");
+            return (int)retObjectIndex;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectIndex_ToString = retObjectIndex == null ? "null" : retObjectIndex.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectIndexNumber = (java.lang.Number)retObjectIndex;
+                return retObjectIndexNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectIndex != null ? retObjectIndex.getClass() : "null", retObjectIndex_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -235,9 +276,20 @@ public class EventLogEntry extends Component implements system.runtime.serializa
 
     public long getInstanceId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInstanceId = null;
         try {
-            return (long)classInstance.Get("InstanceId");
+            retObjectInstanceId = classInstance.Get("InstanceId");
+            return (long)retObjectInstanceId;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectInstanceId_ToString = retObjectInstanceId == null ? "null" : retObjectInstanceId.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectInstanceIdNumber = (java.lang.Number)retObjectInstanceId;
+                return retObjectInstanceIdNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectInstanceId != null ? retObjectInstanceId.getClass() : "null", retObjectInstanceId_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -245,10 +297,14 @@ public class EventLogEntry extends Component implements system.runtime.serializa
 
     public DateTime getTimeGenerated() throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidTimeZoneException, system.InvalidOperationException, system.UnauthorizedAccessException, system.io.IOException, system.NullReferenceException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTimeGenerated = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TimeGenerated");
+            retObjectTimeGenerated = classInstance.Get("TimeGenerated");
+            JCObject val = (JCObject)retObjectTimeGenerated;
             return new DateTime(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTimeGenerated != null ? retObjectTimeGenerated.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -256,10 +312,14 @@ public class EventLogEntry extends Component implements system.runtime.serializa
 
     public DateTime getTimeWritten() throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidTimeZoneException, system.InvalidOperationException, system.UnauthorizedAccessException, system.io.IOException, system.NullReferenceException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTimeWritten = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TimeWritten");
+            retObjectTimeWritten = classInstance.Get("TimeWritten");
+            JCObject val = (JCObject)retObjectTimeWritten;
             return new DateTime(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTimeWritten != null ? retObjectTimeWritten.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -267,10 +327,14 @@ public class EventLogEntry extends Component implements system.runtime.serializa
 
     public EventLogEntryType getEntryType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEntryType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("EntryType");
+            retObjectEntryType = classInstance.Get("EntryType");
+            JCObject val = (JCObject)retObjectEntryType;
             return new EventLogEntryType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEntryType != null ? retObjectEntryType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -278,9 +342,13 @@ public class EventLogEntry extends Component implements system.runtime.serializa
 
     public java.lang.String getCategory() throws Throwable, system.ArgumentException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.RankException, system.InvalidCastException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCategory = null;
         try {
-            return (java.lang.String)classInstance.Get("Category");
+            retObjectCategory = classInstance.Get("Category");
+            return (java.lang.String)retObjectCategory;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectCategory != null ? retObjectCategory.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -288,9 +356,13 @@ public class EventLogEntry extends Component implements system.runtime.serializa
 
     public java.lang.String getMachineName() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMachineName = null;
         try {
-            return (java.lang.String)classInstance.Get("MachineName");
+            retObjectMachineName = classInstance.Get("MachineName");
+            return (java.lang.String)retObjectMachineName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectMachineName != null ? retObjectMachineName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -298,9 +370,13 @@ public class EventLogEntry extends Component implements system.runtime.serializa
 
     public java.lang.String getMessage() throws Throwable, system.ArgumentException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.RankException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMessage = null;
         try {
-            return (java.lang.String)classInstance.Get("Message");
+            retObjectMessage = classInstance.Get("Message");
+            return (java.lang.String)retObjectMessage;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectMessage != null ? retObjectMessage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -308,9 +384,13 @@ public class EventLogEntry extends Component implements system.runtime.serializa
 
     public java.lang.String getSource() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSource = null;
         try {
-            return (java.lang.String)classInstance.Get("Source");
+            retObjectSource = classInstance.Get("Source");
+            return (java.lang.String)retObjectSource;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSource != null ? retObjectSource.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -318,9 +398,13 @@ public class EventLogEntry extends Component implements system.runtime.serializa
 
     public java.lang.String getUserName() throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentNullException, system.RankException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.ArrayTypeMismatchException, system.InvalidCastException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUserName = null;
         try {
-            return (java.lang.String)classInstance.Get("UserName");
+            retObjectUserName = classInstance.Get("UserName");
+            return (java.lang.String)retObjectUserName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectUserName != null ? retObjectUserName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -328,10 +412,12 @@ public class EventLogEntry extends Component implements system.runtime.serializa
 
     public java.lang.String[] getReplacementStrings() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReplacementStrings = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("ReplacementStrings");
+            retObjectReplacementStrings = classInstance.Get("ReplacementStrings");
+            JCObject resultingObjects = (JCObject)retObjectReplacementStrings;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -340,6 +426,8 @@ public class EventLogEntry extends Component implements system.runtime.serializa
 				resultingArray[indexReplacementStrings] = (java.lang.String)resultingArrayList.get(indexReplacementStrings);
 			}
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into JCObject", retObjectReplacementStrings != null ? retObjectReplacementStrings.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -157,10 +157,14 @@ public class CompilerInfo extends NetObject  {
     
     public CodeDomProvider CreateProvider() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.TypeLoadException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.ArgumentNullException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateProvider = null;
         try {
-            JCObject objCreateProvider = (JCObject)classInstance.Invoke("CreateProvider");
+            retObjectCreateProvider = classInstance.Invoke("CreateProvider");
+            JCObject objCreateProvider = (JCObject)retObjectCreateProvider;
             return new CodeDomProvider(objCreateProvider);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateProvider != null ? retObjectCreateProvider.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -168,10 +172,14 @@ public class CompilerInfo extends NetObject  {
 
     public CompilerParameters CreateDefaultCompilerParameters() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.RankException, system.ArgumentException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateDefaultCompilerParameters = null;
         try {
-            JCObject objCreateDefaultCompilerParameters = (JCObject)classInstance.Invoke("CreateDefaultCompilerParameters");
+            retObjectCreateDefaultCompilerParameters = classInstance.Invoke("CreateDefaultCompilerParameters");
+            JCObject objCreateDefaultCompilerParameters = (JCObject)retObjectCreateDefaultCompilerParameters;
             return new CompilerParameters(objCreateDefaultCompilerParameters);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateDefaultCompilerParameters != null ? retObjectCreateDefaultCompilerParameters.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,10 +187,12 @@ public class CompilerInfo extends NetObject  {
 
     public java.lang.String[] GetExtensions() throws Throwable, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetExtensions = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetExtensions");
+            retObjectGetExtensions = classInstance.Invoke("GetExtensions");
+            JCObject resultingObjects = (JCObject)retObjectGetExtensions;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -191,6 +201,8 @@ public class CompilerInfo extends NetObject  {
 				resultingArray[indexGetExtensions] = (java.lang.String)resultingArrayList.get(indexGetExtensions);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectGetExtensions != null ? retObjectGetExtensions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,10 +210,12 @@ public class CompilerInfo extends NetObject  {
 
     public java.lang.String[] GetLanguages() throws Throwable, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetLanguages = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetLanguages");
+            retObjectGetLanguages = classInstance.Invoke("GetLanguages");
+            JCObject resultingObjects = (JCObject)retObjectGetLanguages;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -210,6 +224,8 @@ public class CompilerInfo extends NetObject  {
 				resultingArray[indexGetLanguages] = (java.lang.String)resultingArrayList.get(indexGetLanguages);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectGetLanguages != null ? retObjectGetLanguages.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -221,9 +237,13 @@ public class CompilerInfo extends NetObject  {
     
     public boolean getIsCodeDomProviderTypeValid() throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.TypeLoadException, system.ArgumentOutOfRangeException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsCodeDomProviderTypeValid = null;
         try {
-            return (boolean)classInstance.Get("IsCodeDomProviderTypeValid");
+            retObjectIsCodeDomProviderTypeValid = classInstance.Get("IsCodeDomProviderTypeValid");
+            return (boolean)retObjectIsCodeDomProviderTypeValid;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsCodeDomProviderTypeValid != null ? retObjectIsCodeDomProviderTypeValid.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -231,10 +251,14 @@ public class CompilerInfo extends NetObject  {
 
     public NetType getCodeDomProviderType() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.ArgumentException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.TypeLoadException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCodeDomProviderType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CodeDomProviderType");
+            retObjectCodeDomProviderType = classInstance.Get("CodeDomProviderType");
+            JCObject val = (JCObject)retObjectCodeDomProviderType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCodeDomProviderType != null ? retObjectCodeDomProviderType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

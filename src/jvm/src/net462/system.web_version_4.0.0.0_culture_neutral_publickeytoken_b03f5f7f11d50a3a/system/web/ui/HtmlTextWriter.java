@@ -183,9 +183,13 @@ public class HtmlTextWriter extends TextWriter  {
     
     public boolean IsValidFormAttribute(java.lang.String attribute) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsValidFormAttribute = null;
         try {
-            return (boolean)classInstance.Invoke("IsValidFormAttribute", attribute);
+            retObjectIsValidFormAttribute = classInstance.Invoke("IsValidFormAttribute", attribute);
+            return (boolean)retObjectIsValidFormAttribute;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsValidFormAttribute != null ? retObjectIsValidFormAttribute.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,7 +197,7 @@ public class HtmlTextWriter extends TextWriter  {
 
     public void AddAttribute(java.lang.String name, java.lang.String value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.threading.ThreadAbortException, system.InvalidOperationException, system.web.HttpException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddAttribute", name, value);
         } catch (JCNativeException jcne) {
@@ -203,7 +207,7 @@ public class HtmlTextWriter extends TextWriter  {
 
     public void AddAttribute(java.lang.String name, java.lang.String value, boolean fEndode) throws Throwable, system.ArgumentException, system.threading.ThreadAbortException, system.InvalidOperationException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.web.HttpException, system.NullReferenceException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddAttribute", name, value, fEndode);
         } catch (JCNativeException jcne) {
@@ -213,7 +217,7 @@ public class HtmlTextWriter extends TextWriter  {
 
     public void AddAttribute(HtmlTextWriterAttribute key, java.lang.String value) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddAttribute", key == null ? null : key.getJCOInstance(), value);
         } catch (JCNativeException jcne) {
@@ -223,7 +227,7 @@ public class HtmlTextWriter extends TextWriter  {
 
     public void AddAttribute(HtmlTextWriterAttribute key, java.lang.String value, boolean fEncode) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddAttribute", key == null ? null : key.getJCOInstance(), value, fEncode);
         } catch (JCNativeException jcne) {
@@ -233,7 +237,7 @@ public class HtmlTextWriter extends TextWriter  {
 
     public void AddStyleAttribute(java.lang.String name, java.lang.String value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.threading.ThreadAbortException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.resources.MissingManifestResourceException, system.web.HttpException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddStyleAttribute", name, value);
         } catch (JCNativeException jcne) {
@@ -243,7 +247,7 @@ public class HtmlTextWriter extends TextWriter  {
 
     public void AddStyleAttribute(HtmlTextWriterStyle key, java.lang.String value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.threading.ThreadAbortException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.web.HttpException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddStyleAttribute", key == null ? null : key.getJCOInstance(), value);
         } catch (JCNativeException jcne) {
@@ -253,7 +257,7 @@ public class HtmlTextWriter extends TextWriter  {
 
     public void BeginRender() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("BeginRender");
         } catch (JCNativeException jcne) {
@@ -263,7 +267,7 @@ public class HtmlTextWriter extends TextWriter  {
 
     public void Close() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Close");
         } catch (JCNativeException jcne) {
@@ -273,7 +277,7 @@ public class HtmlTextWriter extends TextWriter  {
 
     public void EndRender() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EndRender");
         } catch (JCNativeException jcne) {
@@ -283,7 +287,7 @@ public class HtmlTextWriter extends TextWriter  {
 
     public void EnterStyle(Style style) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NullReferenceException, system.OutOfMemoryException, system.FormatException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EnterStyle", style == null ? null : style.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -293,7 +297,7 @@ public class HtmlTextWriter extends TextWriter  {
 
     public void EnterStyle(Style style, HtmlTextWriterTag tag) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NullReferenceException, system.OutOfMemoryException, system.FormatException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EnterStyle", style == null ? null : style.getJCOInstance(), tag == null ? null : tag.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -303,7 +307,7 @@ public class HtmlTextWriter extends TextWriter  {
 
     public void ExitStyle(Style style) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ExitStyle", style == null ? null : style.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -313,7 +317,7 @@ public class HtmlTextWriter extends TextWriter  {
 
     public void ExitStyle(Style style, HtmlTextWriterTag tag) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ExitStyle", style == null ? null : style.getJCOInstance(), tag == null ? null : tag.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -323,7 +327,7 @@ public class HtmlTextWriter extends TextWriter  {
 
     public void Flush() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Flush");
         } catch (JCNativeException jcne) {
@@ -333,7 +337,7 @@ public class HtmlTextWriter extends TextWriter  {
 
     public void RenderBeginTag(java.lang.String tagName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentOutOfRangeException, system.threading.ThreadAbortException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.web.HttpException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RenderBeginTag", tagName);
         } catch (JCNativeException jcne) {
@@ -343,7 +347,7 @@ public class HtmlTextWriter extends TextWriter  {
 
     public void RenderBeginTag(HtmlTextWriterTag tagKey) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.threading.ThreadAbortException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.UriFormatException, system.OutOfMemoryException, system.web.HttpException, system.PlatformNotSupportedException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RenderBeginTag", tagKey == null ? null : tagKey.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -353,7 +357,7 @@ public class HtmlTextWriter extends TextWriter  {
 
     public void RenderEndTag() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RenderEndTag");
         } catch (JCNativeException jcne) {
@@ -363,7 +367,7 @@ public class HtmlTextWriter extends TextWriter  {
 
     public void Write(boolean value) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Write", value);
         } catch (JCNativeException jcne) {
@@ -373,7 +377,7 @@ public class HtmlTextWriter extends TextWriter  {
 
     public void Write(char value) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Write", value);
         } catch (JCNativeException jcne) {
@@ -383,7 +387,7 @@ public class HtmlTextWriter extends TextWriter  {
 
     public void Write(char[] buffer) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Write", (java.lang.Object)buffer);
         } catch (JCNativeException jcne) {
@@ -393,7 +397,7 @@ public class HtmlTextWriter extends TextWriter  {
 
     public void Write(JCORefOut dupParam0) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Write", (java.lang.Object)dupParam0.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -403,7 +407,7 @@ public class HtmlTextWriter extends TextWriter  {
 
     public void Write(char[] buffer, int index, int count) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Write", buffer, index, count);
         } catch (JCNativeException jcne) {
@@ -413,7 +417,7 @@ public class HtmlTextWriter extends TextWriter  {
 
     public void Write(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Write", dupParam0.getJCRefOut(), dupParam1, dupParam2);
         } catch (JCNativeException jcne) {
@@ -423,7 +427,7 @@ public class HtmlTextWriter extends TextWriter  {
 
     public void Write(double value) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Write", value);
         } catch (JCNativeException jcne) {
@@ -433,7 +437,7 @@ public class HtmlTextWriter extends TextWriter  {
 
     public void Write(int value) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Write", value);
         } catch (JCNativeException jcne) {
@@ -443,7 +447,7 @@ public class HtmlTextWriter extends TextWriter  {
 
     public void Write(long value) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Write", value);
         } catch (JCNativeException jcne) {
@@ -453,7 +457,7 @@ public class HtmlTextWriter extends TextWriter  {
 
     public void Write(Single value) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Write", value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -463,7 +467,7 @@ public class HtmlTextWriter extends TextWriter  {
 
     public void Write(NetObject value) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Write", value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -473,7 +477,7 @@ public class HtmlTextWriter extends TextWriter  {
 
     public void Write(java.lang.String s) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Write", s);
         } catch (JCNativeException jcne) {
@@ -483,7 +487,7 @@ public class HtmlTextWriter extends TextWriter  {
 
     public void Write(java.lang.String format, NetObject arg0) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Write", format, arg0 == null ? null : arg0.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -493,7 +497,7 @@ public class HtmlTextWriter extends TextWriter  {
 
     public void Write(java.lang.String format, NetObject arg0, NetObject arg1) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Write", format, arg0 == null ? null : arg0.getJCOInstance(), arg1 == null ? null : arg1.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -503,7 +507,7 @@ public class HtmlTextWriter extends TextWriter  {
 
     public void Write(java.lang.String format, NetObject... arg) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Write", format, toObjectFromArray(arg));
         } catch (JCNativeException jcne) {
@@ -513,7 +517,7 @@ public class HtmlTextWriter extends TextWriter  {
 
     public void WriteAttribute(java.lang.String name, java.lang.String value) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.threading.ThreadAbortException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.web.HttpException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteAttribute", name, value);
         } catch (JCNativeException jcne) {
@@ -523,7 +527,7 @@ public class HtmlTextWriter extends TextWriter  {
 
     public void WriteAttribute(java.lang.String name, java.lang.String value, boolean fEncode) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.threading.ThreadAbortException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.web.HttpException, system.PlatformNotSupportedException, system.NotSupportedException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteAttribute", name, value, fEncode);
         } catch (JCNativeException jcne) {
@@ -533,7 +537,7 @@ public class HtmlTextWriter extends TextWriter  {
 
     public void WriteBeginTag(java.lang.String tagName) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteBeginTag", tagName);
         } catch (JCNativeException jcne) {
@@ -543,7 +547,7 @@ public class HtmlTextWriter extends TextWriter  {
 
     public void WriteBreak() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteBreak");
         } catch (JCNativeException jcne) {
@@ -553,7 +557,7 @@ public class HtmlTextWriter extends TextWriter  {
 
     public void WriteEncodedText(java.lang.String text) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.threading.ThreadAbortException, system.MissingMethodException, system.reflection.TargetInvocationException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteEncodedText", text);
         } catch (JCNativeException jcne) {
@@ -563,7 +567,7 @@ public class HtmlTextWriter extends TextWriter  {
 
     public void WriteEncodedUrl(java.lang.String url) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.threading.ThreadAbortException, system.InvalidOperationException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteEncodedUrl", url);
         } catch (JCNativeException jcne) {
@@ -573,7 +577,7 @@ public class HtmlTextWriter extends TextWriter  {
 
     public void WriteEncodedUrlParameter(java.lang.String urlText) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.threading.ThreadAbortException, system.InvalidOperationException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteEncodedUrlParameter", urlText);
         } catch (JCNativeException jcne) {
@@ -583,7 +587,7 @@ public class HtmlTextWriter extends TextWriter  {
 
     public void WriteEndTag(java.lang.String tagName) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteEndTag", tagName);
         } catch (JCNativeException jcne) {
@@ -593,7 +597,7 @@ public class HtmlTextWriter extends TextWriter  {
 
     public void WriteFullBeginTag(java.lang.String tagName) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteFullBeginTag", tagName);
         } catch (JCNativeException jcne) {
@@ -603,7 +607,7 @@ public class HtmlTextWriter extends TextWriter  {
 
     public void WriteLine() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteLine");
         } catch (JCNativeException jcne) {
@@ -613,7 +617,7 @@ public class HtmlTextWriter extends TextWriter  {
 
     public void WriteLine(boolean value) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteLine", value);
         } catch (JCNativeException jcne) {
@@ -623,7 +627,7 @@ public class HtmlTextWriter extends TextWriter  {
 
     public void WriteLine(char value) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteLine", value);
         } catch (JCNativeException jcne) {
@@ -633,7 +637,7 @@ public class HtmlTextWriter extends TextWriter  {
 
     public void WriteLine(char[] buffer) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteLine", (java.lang.Object)buffer);
         } catch (JCNativeException jcne) {
@@ -643,7 +647,7 @@ public class HtmlTextWriter extends TextWriter  {
 
     public void WriteLine(JCORefOut dupParam0) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteLine", (java.lang.Object)dupParam0.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -653,7 +657,7 @@ public class HtmlTextWriter extends TextWriter  {
 
     public void WriteLine(char[] buffer, int index, int count) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteLine", buffer, index, count);
         } catch (JCNativeException jcne) {
@@ -663,7 +667,7 @@ public class HtmlTextWriter extends TextWriter  {
 
     public void WriteLine(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteLine", dupParam0.getJCRefOut(), dupParam1, dupParam2);
         } catch (JCNativeException jcne) {
@@ -673,7 +677,7 @@ public class HtmlTextWriter extends TextWriter  {
 
     public void WriteLine(double value) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteLine", value);
         } catch (JCNativeException jcne) {
@@ -683,7 +687,7 @@ public class HtmlTextWriter extends TextWriter  {
 
     public void WriteLine(int value) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteLine", value);
         } catch (JCNativeException jcne) {
@@ -693,7 +697,7 @@ public class HtmlTextWriter extends TextWriter  {
 
     public void WriteLine(long value) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteLine", value);
         } catch (JCNativeException jcne) {
@@ -703,7 +707,7 @@ public class HtmlTextWriter extends TextWriter  {
 
     public void WriteLine(Single value) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteLine", value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -713,7 +717,7 @@ public class HtmlTextWriter extends TextWriter  {
 
     public void WriteLine(NetObject value) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteLine", value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -723,7 +727,7 @@ public class HtmlTextWriter extends TextWriter  {
 
     public void WriteLine(java.lang.String s) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteLine", s);
         } catch (JCNativeException jcne) {
@@ -733,7 +737,7 @@ public class HtmlTextWriter extends TextWriter  {
 
     public void WriteLine(java.lang.String format, NetObject arg0) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteLine", format, arg0 == null ? null : arg0.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -743,7 +747,7 @@ public class HtmlTextWriter extends TextWriter  {
 
     public void WriteLine(java.lang.String format, NetObject arg0, NetObject arg1) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteLine", format, arg0 == null ? null : arg0.getJCOInstance(), arg1 == null ? null : arg1.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -753,7 +757,7 @@ public class HtmlTextWriter extends TextWriter  {
 
     public void WriteLine(java.lang.String format, NetObject... arg) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteLine", format, toObjectFromArray(arg));
         } catch (JCNativeException jcne) {
@@ -763,7 +767,7 @@ public class HtmlTextWriter extends TextWriter  {
 
     public void WriteLine(UInt32 value) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteLine", value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -773,7 +777,7 @@ public class HtmlTextWriter extends TextWriter  {
 
     public void WriteLineNoTabs(java.lang.String s) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteLineNoTabs", s);
         } catch (JCNativeException jcne) {
@@ -783,7 +787,7 @@ public class HtmlTextWriter extends TextWriter  {
 
     public void WriteStyleAttribute(java.lang.String name, java.lang.String value) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.threading.ThreadAbortException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.web.HttpException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteStyleAttribute", name, value);
         } catch (JCNativeException jcne) {
@@ -793,7 +797,7 @@ public class HtmlTextWriter extends TextWriter  {
 
     public void WriteStyleAttribute(java.lang.String name, java.lang.String value, boolean fEncode) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.threading.ThreadAbortException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.web.HttpException, system.PlatformNotSupportedException, system.NotSupportedException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteStyleAttribute", name, value, fEncode);
         } catch (JCNativeException jcne) {
@@ -807,9 +811,20 @@ public class HtmlTextWriter extends TextWriter  {
     
     public int getIndent() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIndent = null;
         try {
-            return (int)classInstance.Get("Indent");
+            retObjectIndent = classInstance.Get("Indent");
+            return (int)retObjectIndent;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectIndent_ToString = retObjectIndent == null ? "null" : retObjectIndent.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectIndentNumber = (java.lang.Number)retObjectIndent;
+                return retObjectIndentNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectIndent != null ? retObjectIndent.getClass() : "null", retObjectIndent_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -817,7 +832,7 @@ public class HtmlTextWriter extends TextWriter  {
 
     public void setIndent(int Indent) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Indent", Indent);
         } catch (JCNativeException jcne) {
@@ -827,10 +842,14 @@ public class HtmlTextWriter extends TextWriter  {
 
     public TextWriter getInnerWriter() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInnerWriter = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("InnerWriter");
+            retObjectInnerWriter = classInstance.Get("InnerWriter");
+            JCObject val = (JCObject)retObjectInnerWriter;
             return new TextWriter(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInnerWriter != null ? retObjectInnerWriter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -838,7 +857,7 @@ public class HtmlTextWriter extends TextWriter  {
 
     public void setInnerWriter(TextWriter InnerWriter) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("InnerWriter", InnerWriter == null ? null : InnerWriter.getJCOInstance());
         } catch (JCNativeException jcne) {

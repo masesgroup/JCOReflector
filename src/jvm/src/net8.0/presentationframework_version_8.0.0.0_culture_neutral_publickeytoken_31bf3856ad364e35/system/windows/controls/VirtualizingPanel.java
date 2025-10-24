@@ -163,9 +163,13 @@ public class VirtualizingPanel extends Panel  {
     
     public static boolean GetIsContainerVirtualizable(DependencyObject element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetIsContainerVirtualizable = null;
         try {
-            return (boolean)classType.Invoke("GetIsContainerVirtualizable", element == null ? null : element.getJCOInstance());
+            retObjectGetIsContainerVirtualizable = classType.Invoke("GetIsContainerVirtualizable", element == null ? null : element.getJCOInstance());
+            return (boolean)retObjectGetIsContainerVirtualizable;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectGetIsContainerVirtualizable != null ? retObjectGetIsContainerVirtualizable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -173,9 +177,13 @@ public class VirtualizingPanel extends Panel  {
 
     public static boolean GetIsVirtualizing(DependencyObject element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetIsVirtualizing = null;
         try {
-            return (boolean)classType.Invoke("GetIsVirtualizing", element == null ? null : element.getJCOInstance());
+            retObjectGetIsVirtualizing = classType.Invoke("GetIsVirtualizing", element == null ? null : element.getJCOInstance());
+            return (boolean)retObjectGetIsVirtualizing;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectGetIsVirtualizing != null ? retObjectGetIsVirtualizing.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,9 +191,13 @@ public class VirtualizingPanel extends Panel  {
 
     public static boolean GetIsVirtualizingWhenGrouping(DependencyObject element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetIsVirtualizingWhenGrouping = null;
         try {
-            return (boolean)classType.Invoke("GetIsVirtualizingWhenGrouping", element == null ? null : element.getJCOInstance());
+            retObjectGetIsVirtualizingWhenGrouping = classType.Invoke("GetIsVirtualizingWhenGrouping", element == null ? null : element.getJCOInstance());
+            return (boolean)retObjectGetIsVirtualizingWhenGrouping;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectGetIsVirtualizingWhenGrouping != null ? retObjectGetIsVirtualizingWhenGrouping.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,9 +205,13 @@ public class VirtualizingPanel extends Panel  {
 
     public boolean ShouldItemsChangeAffectLayout(boolean areItemChangesLocal, ItemsChangedEventArgs args) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShouldItemsChangeAffectLayout = null;
         try {
-            return (boolean)classInstance.Invoke("ShouldItemsChangeAffectLayout", areItemChangesLocal, args == null ? null : args.getJCOInstance());
+            retObjectShouldItemsChangeAffectLayout = classInstance.Invoke("ShouldItemsChangeAffectLayout", areItemChangesLocal, args == null ? null : args.getJCOInstance());
+            return (boolean)retObjectShouldItemsChangeAffectLayout;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectShouldItemsChangeAffectLayout != null ? retObjectShouldItemsChangeAffectLayout.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,9 +219,20 @@ public class VirtualizingPanel extends Panel  {
 
     public double GetItemOffset(UIElement child) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetItemOffset = null;
         try {
-            return (double)classInstance.Invoke("GetItemOffset", child == null ? null : child.getJCOInstance());
+            retObjectGetItemOffset = classInstance.Invoke("GetItemOffset", child == null ? null : child.getJCOInstance());
+            return (double)retObjectGetItemOffset;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetItemOffset_ToString = retObjectGetItemOffset == null ? "null" : retObjectGetItemOffset.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetItemOffsetNumber = (java.lang.Number)retObjectGetItemOffset;
+                return retObjectGetItemOffsetNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectGetItemOffset != null ? retObjectGetItemOffset.getClass() : "null", retObjectGetItemOffset_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,10 +240,14 @@ public class VirtualizingPanel extends Panel  {
 
     public static ScrollUnit GetScrollUnit(DependencyObject element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetScrollUnit = null;
         try {
-            JCObject objGetScrollUnit = (JCObject)classType.Invoke("GetScrollUnit", element == null ? null : element.getJCOInstance());
+            retObjectGetScrollUnit = classType.Invoke("GetScrollUnit", element == null ? null : element.getJCOInstance());
+            JCObject objGetScrollUnit = (JCObject)retObjectGetScrollUnit;
             return new ScrollUnit(objGetScrollUnit);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetScrollUnit != null ? retObjectGetScrollUnit.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -224,10 +255,14 @@ public class VirtualizingPanel extends Panel  {
 
     public static VirtualizationCacheLength GetCacheLength(DependencyObject element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetCacheLength = null;
         try {
-            JCObject objGetCacheLength = (JCObject)classType.Invoke("GetCacheLength", element == null ? null : element.getJCOInstance());
+            retObjectGetCacheLength = classType.Invoke("GetCacheLength", element == null ? null : element.getJCOInstance());
+            JCObject objGetCacheLength = (JCObject)retObjectGetCacheLength;
             return new VirtualizationCacheLength(objGetCacheLength);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCacheLength != null ? retObjectGetCacheLength.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -235,10 +270,14 @@ public class VirtualizingPanel extends Panel  {
 
     public static VirtualizationCacheLengthUnit GetCacheLengthUnit(DependencyObject element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetCacheLengthUnit = null;
         try {
-            JCObject objGetCacheLengthUnit = (JCObject)classType.Invoke("GetCacheLengthUnit", element == null ? null : element.getJCOInstance());
+            retObjectGetCacheLengthUnit = classType.Invoke("GetCacheLengthUnit", element == null ? null : element.getJCOInstance());
+            JCObject objGetCacheLengthUnit = (JCObject)retObjectGetCacheLengthUnit;
             return new VirtualizationCacheLengthUnit(objGetCacheLengthUnit);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCacheLengthUnit != null ? retObjectGetCacheLengthUnit.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -246,10 +285,14 @@ public class VirtualizingPanel extends Panel  {
 
     public static VirtualizationMode GetVirtualizationMode(DependencyObject element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetVirtualizationMode = null;
         try {
-            JCObject objGetVirtualizationMode = (JCObject)classType.Invoke("GetVirtualizationMode", element == null ? null : element.getJCOInstance());
+            retObjectGetVirtualizationMode = classType.Invoke("GetVirtualizationMode", element == null ? null : element.getJCOInstance());
+            JCObject objGetVirtualizationMode = (JCObject)retObjectGetVirtualizationMode;
             return new VirtualizationMode(objGetVirtualizationMode);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetVirtualizationMode != null ? retObjectGetVirtualizationMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -257,7 +300,7 @@ public class VirtualizingPanel extends Panel  {
 
     public void BringIndexIntoViewPublic(int index) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("BringIndexIntoViewPublic", index);
         } catch (JCNativeException jcne) {
@@ -267,7 +310,7 @@ public class VirtualizingPanel extends Panel  {
 
     public static void SetCacheLength(DependencyObject element, VirtualizationCacheLength value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetCacheLength", element == null ? null : element.getJCOInstance(), value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -277,7 +320,7 @@ public class VirtualizingPanel extends Panel  {
 
     public static void SetCacheLengthUnit(DependencyObject element, VirtualizationCacheLengthUnit value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetCacheLengthUnit", element == null ? null : element.getJCOInstance(), value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -287,7 +330,7 @@ public class VirtualizingPanel extends Panel  {
 
     public static void SetIsContainerVirtualizable(DependencyObject element, boolean value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetIsContainerVirtualizable", element == null ? null : element.getJCOInstance(), value);
         } catch (JCNativeException jcne) {
@@ -297,7 +340,7 @@ public class VirtualizingPanel extends Panel  {
 
     public static void SetIsVirtualizing(DependencyObject element, boolean value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetIsVirtualizing", element == null ? null : element.getJCOInstance(), value);
         } catch (JCNativeException jcne) {
@@ -307,7 +350,7 @@ public class VirtualizingPanel extends Panel  {
 
     public static void SetIsVirtualizingWhenGrouping(DependencyObject element, boolean value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetIsVirtualizingWhenGrouping", element == null ? null : element.getJCOInstance(), value);
         } catch (JCNativeException jcne) {
@@ -317,7 +360,7 @@ public class VirtualizingPanel extends Panel  {
 
     public static void SetScrollUnit(DependencyObject element, ScrollUnit value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetScrollUnit", element == null ? null : element.getJCOInstance(), value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -327,7 +370,7 @@ public class VirtualizingPanel extends Panel  {
 
     public static void SetVirtualizationMode(DependencyObject element, VirtualizationMode value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetVirtualizationMode", element == null ? null : element.getJCOInstance(), value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -341,9 +384,13 @@ public class VirtualizingPanel extends Panel  {
     
     public boolean getCanHierarchicallyScrollAndVirtualize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanHierarchicallyScrollAndVirtualize = null;
         try {
-            return (boolean)classInstance.Get("CanHierarchicallyScrollAndVirtualize");
+            retObjectCanHierarchicallyScrollAndVirtualize = classInstance.Get("CanHierarchicallyScrollAndVirtualize");
+            return (boolean)retObjectCanHierarchicallyScrollAndVirtualize;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCanHierarchicallyScrollAndVirtualize != null ? retObjectCanHierarchicallyScrollAndVirtualize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -351,10 +398,14 @@ public class VirtualizingPanel extends Panel  {
 
     public IItemContainerGenerator getItemContainerGenerator() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectItemContainerGenerator = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ItemContainerGenerator");
+            retObjectItemContainerGenerator = classInstance.Get("ItemContainerGenerator");
+            JCObject val = (JCObject)retObjectItemContainerGenerator;
             return new IItemContainerGeneratorImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectItemContainerGenerator != null ? retObjectItemContainerGenerator.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -158,10 +158,12 @@ public class SymmetricSecurityKey extends SecurityKey  {
     
     public byte[] GenerateDerivedKey(java.lang.String algorithm, byte[] label, byte[] nonce, int derivedKeyLength, int offset) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGenerateDerivedKey = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GenerateDerivedKey", algorithm, label, nonce, derivedKeyLength, offset);
+            retObjectGenerateDerivedKey = classInstance.Invoke("GenerateDerivedKey", algorithm, label, nonce, derivedKeyLength, offset);
+            JCObject resultingObjects = (JCObject)retObjectGenerateDerivedKey;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -170,6 +172,8 @@ public class SymmetricSecurityKey extends SecurityKey  {
 				resultingArray[indexGenerateDerivedKey] = (byte)resultingArrayList.get(indexGenerateDerivedKey);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectGenerateDerivedKey != null ? retObjectGenerateDerivedKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,10 +181,12 @@ public class SymmetricSecurityKey extends SecurityKey  {
 
     public byte[] GenerateDerivedKey(java.lang.String dupParam0, JCORefOut dupParam1, JCORefOut dupParam2, int dupParam3, int dupParam4) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGenerateDerivedKey = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GenerateDerivedKey", dupParam0, dupParam1.getJCRefOut(), dupParam2.getJCRefOut(), dupParam3, dupParam4);
+            retObjectGenerateDerivedKey = classInstance.Invoke("GenerateDerivedKey", dupParam0, dupParam1.getJCRefOut(), dupParam2.getJCRefOut(), dupParam3, dupParam4);
+            JCObject resultingObjects = (JCObject)retObjectGenerateDerivedKey;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -189,6 +195,8 @@ public class SymmetricSecurityKey extends SecurityKey  {
 				resultingArray[indexGenerateDerivedKey] = (byte)resultingArrayList.get(indexGenerateDerivedKey);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectGenerateDerivedKey != null ? retObjectGenerateDerivedKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,10 +204,12 @@ public class SymmetricSecurityKey extends SecurityKey  {
 
     public byte[] GetSymmetricKey() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSymmetricKey = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetSymmetricKey");
+            retObjectGetSymmetricKey = classInstance.Invoke("GetSymmetricKey");
+            JCObject resultingObjects = (JCObject)retObjectGetSymmetricKey;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -208,6 +218,8 @@ public class SymmetricSecurityKey extends SecurityKey  {
 				resultingArray[indexGetSymmetricKey] = (byte)resultingArrayList.get(indexGetSymmetricKey);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectGetSymmetricKey != null ? retObjectGetSymmetricKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -215,9 +227,20 @@ public class SymmetricSecurityKey extends SecurityKey  {
 
     public int GetIVSize(java.lang.String algorithm) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetIVSize = null;
         try {
-            return (int)classInstance.Invoke("GetIVSize", algorithm);
+            retObjectGetIVSize = classInstance.Invoke("GetIVSize", algorithm);
+            return (int)retObjectGetIVSize;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetIVSize_ToString = retObjectGetIVSize == null ? "null" : retObjectGetIVSize.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetIVSizeNumber = (java.lang.Number)retObjectGetIVSize;
+                return retObjectGetIVSizeNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetIVSize != null ? retObjectGetIVSize.getClass() : "null", retObjectGetIVSize_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -225,10 +248,14 @@ public class SymmetricSecurityKey extends SecurityKey  {
 
     public ICryptoTransform GetDecryptionTransform(java.lang.String algorithm, byte[] iv) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDecryptionTransform = null;
         try {
-            JCObject objGetDecryptionTransform = (JCObject)classInstance.Invoke("GetDecryptionTransform", algorithm, iv);
+            retObjectGetDecryptionTransform = classInstance.Invoke("GetDecryptionTransform", algorithm, iv);
+            JCObject objGetDecryptionTransform = (JCObject)retObjectGetDecryptionTransform;
             return new ICryptoTransformImplementation(objGetDecryptionTransform);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetDecryptionTransform != null ? retObjectGetDecryptionTransform.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -236,10 +263,14 @@ public class SymmetricSecurityKey extends SecurityKey  {
 
     public ICryptoTransform GetDecryptionTransform(java.lang.String dupParam0, JCORefOut dupParam1) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDecryptionTransform = null;
         try {
-            JCObject objGetDecryptionTransform = (JCObject)classInstance.Invoke("GetDecryptionTransform", dupParam0, dupParam1.getJCRefOut());
+            retObjectGetDecryptionTransform = classInstance.Invoke("GetDecryptionTransform", dupParam0, dupParam1.getJCRefOut());
+            JCObject objGetDecryptionTransform = (JCObject)retObjectGetDecryptionTransform;
             return new ICryptoTransformImplementation(objGetDecryptionTransform);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetDecryptionTransform != null ? retObjectGetDecryptionTransform.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -247,10 +278,14 @@ public class SymmetricSecurityKey extends SecurityKey  {
 
     public ICryptoTransform GetEncryptionTransform(java.lang.String algorithm, byte[] iv) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetEncryptionTransform = null;
         try {
-            JCObject objGetEncryptionTransform = (JCObject)classInstance.Invoke("GetEncryptionTransform", algorithm, iv);
+            retObjectGetEncryptionTransform = classInstance.Invoke("GetEncryptionTransform", algorithm, iv);
+            JCObject objGetEncryptionTransform = (JCObject)retObjectGetEncryptionTransform;
             return new ICryptoTransformImplementation(objGetEncryptionTransform);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetEncryptionTransform != null ? retObjectGetEncryptionTransform.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -258,10 +293,14 @@ public class SymmetricSecurityKey extends SecurityKey  {
 
     public ICryptoTransform GetEncryptionTransform(java.lang.String dupParam0, JCORefOut dupParam1) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetEncryptionTransform = null;
         try {
-            JCObject objGetEncryptionTransform = (JCObject)classInstance.Invoke("GetEncryptionTransform", dupParam0, dupParam1.getJCRefOut());
+            retObjectGetEncryptionTransform = classInstance.Invoke("GetEncryptionTransform", dupParam0, dupParam1.getJCRefOut());
+            JCObject objGetEncryptionTransform = (JCObject)retObjectGetEncryptionTransform;
             return new ICryptoTransformImplementation(objGetEncryptionTransform);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetEncryptionTransform != null ? retObjectGetEncryptionTransform.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -269,10 +308,14 @@ public class SymmetricSecurityKey extends SecurityKey  {
 
     public KeyedHashAlgorithm GetKeyedHashAlgorithm(java.lang.String algorithm) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetKeyedHashAlgorithm = null;
         try {
-            JCObject objGetKeyedHashAlgorithm = (JCObject)classInstance.Invoke("GetKeyedHashAlgorithm", algorithm);
+            retObjectGetKeyedHashAlgorithm = classInstance.Invoke("GetKeyedHashAlgorithm", algorithm);
+            JCObject objGetKeyedHashAlgorithm = (JCObject)retObjectGetKeyedHashAlgorithm;
             return new KeyedHashAlgorithm(objGetKeyedHashAlgorithm);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetKeyedHashAlgorithm != null ? retObjectGetKeyedHashAlgorithm.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -280,10 +323,14 @@ public class SymmetricSecurityKey extends SecurityKey  {
 
     public SymmetricAlgorithm GetSymmetricAlgorithm(java.lang.String algorithm) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSymmetricAlgorithm = null;
         try {
-            JCObject objGetSymmetricAlgorithm = (JCObject)classInstance.Invoke("GetSymmetricAlgorithm", algorithm);
+            retObjectGetSymmetricAlgorithm = classInstance.Invoke("GetSymmetricAlgorithm", algorithm);
+            JCObject objGetSymmetricAlgorithm = (JCObject)retObjectGetSymmetricAlgorithm;
             return new SymmetricAlgorithm(objGetSymmetricAlgorithm);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSymmetricAlgorithm != null ? retObjectGetSymmetricAlgorithm.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

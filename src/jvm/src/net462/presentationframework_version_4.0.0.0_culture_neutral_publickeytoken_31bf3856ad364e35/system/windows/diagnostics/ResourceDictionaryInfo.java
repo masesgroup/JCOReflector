@@ -162,10 +162,14 @@ public class ResourceDictionaryInfo extends NetObject  {
     
     public Assembly getAssembly() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAssembly = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Assembly");
+            retObjectAssembly = classInstance.Get("Assembly");
+            JCObject val = (JCObject)retObjectAssembly;
             return new Assembly(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAssembly != null ? retObjectAssembly.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -173,7 +177,7 @@ public class ResourceDictionaryInfo extends NetObject  {
 
     public void setAssembly(Assembly Assembly) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Assembly", Assembly == null ? null : Assembly.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -183,10 +187,14 @@ public class ResourceDictionaryInfo extends NetObject  {
 
     public Assembly getResourceDictionaryAssembly() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResourceDictionaryAssembly = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ResourceDictionaryAssembly");
+            retObjectResourceDictionaryAssembly = classInstance.Get("ResourceDictionaryAssembly");
+            JCObject val = (JCObject)retObjectResourceDictionaryAssembly;
             return new Assembly(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectResourceDictionaryAssembly != null ? retObjectResourceDictionaryAssembly.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -194,7 +202,7 @@ public class ResourceDictionaryInfo extends NetObject  {
 
     public void setResourceDictionaryAssembly(Assembly ResourceDictionaryAssembly) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ResourceDictionaryAssembly", ResourceDictionaryAssembly == null ? null : ResourceDictionaryAssembly.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -204,10 +212,14 @@ public class ResourceDictionaryInfo extends NetObject  {
 
     public Uri getSourceUri() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSourceUri = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SourceUri");
+            retObjectSourceUri = classInstance.Get("SourceUri");
+            JCObject val = (JCObject)retObjectSourceUri;
             return new Uri(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSourceUri != null ? retObjectSourceUri.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -215,7 +227,7 @@ public class ResourceDictionaryInfo extends NetObject  {
 
     public void setSourceUri(Uri SourceUri) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SourceUri", SourceUri == null ? null : SourceUri.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -225,10 +237,14 @@ public class ResourceDictionaryInfo extends NetObject  {
 
     public ResourceDictionary getResourceDictionary() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResourceDictionary = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ResourceDictionary");
+            retObjectResourceDictionary = classInstance.Get("ResourceDictionary");
+            JCObject val = (JCObject)retObjectResourceDictionary;
             return new ResourceDictionary(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectResourceDictionary != null ? retObjectResourceDictionary.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -236,7 +252,7 @@ public class ResourceDictionaryInfo extends NetObject  {
 
     public void setResourceDictionary(ResourceDictionary ResourceDictionary) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ResourceDictionary", ResourceDictionary == null ? null : ResourceDictionary.getJCOInstance());
         } catch (JCNativeException jcne) {

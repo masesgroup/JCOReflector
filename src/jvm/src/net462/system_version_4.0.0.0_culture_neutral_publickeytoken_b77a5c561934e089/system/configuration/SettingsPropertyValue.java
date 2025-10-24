@@ -170,9 +170,13 @@ public class SettingsPropertyValue extends NetObject  {
     
     public boolean getDeserialized() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDeserialized = null;
         try {
-            return (boolean)classInstance.Get("Deserialized");
+            retObjectDeserialized = classInstance.Get("Deserialized");
+            return (boolean)retObjectDeserialized;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectDeserialized != null ? retObjectDeserialized.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,7 +184,7 @@ public class SettingsPropertyValue extends NetObject  {
 
     public void setDeserialized(boolean Deserialized) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Deserialized", Deserialized);
         } catch (JCNativeException jcne) {
@@ -190,9 +194,13 @@ public class SettingsPropertyValue extends NetObject  {
 
     public boolean getIsDirty() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsDirty = null;
         try {
-            return (boolean)classInstance.Get("IsDirty");
+            retObjectIsDirty = classInstance.Get("IsDirty");
+            return (boolean)retObjectIsDirty;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsDirty != null ? retObjectIsDirty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,7 +208,7 @@ public class SettingsPropertyValue extends NetObject  {
 
     public void setIsDirty(boolean IsDirty) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsDirty", IsDirty);
         } catch (JCNativeException jcne) {
@@ -210,9 +218,13 @@ public class SettingsPropertyValue extends NetObject  {
 
     public boolean getUsingDefaultValue() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUsingDefaultValue = null;
         try {
-            return (boolean)classInstance.Get("UsingDefaultValue");
+            retObjectUsingDefaultValue = classInstance.Get("UsingDefaultValue");
+            return (boolean)retObjectUsingDefaultValue;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectUsingDefaultValue != null ? retObjectUsingDefaultValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -220,10 +232,14 @@ public class SettingsPropertyValue extends NetObject  {
 
     public SettingsProperty getProperty() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProperty = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Property");
+            retObjectProperty = classInstance.Get("Property");
+            JCObject val = (JCObject)retObjectProperty;
             return new SettingsProperty(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectProperty != null ? retObjectProperty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -231,10 +247,14 @@ public class SettingsPropertyValue extends NetObject  {
 
     public NetObject getPropertyValue() throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.runtime.serialization.SerializationException, system.OutOfMemoryException, system.NotImplementedException, system.InvalidOperationException, system.io.FileNotFoundException, system.FormatException, system.xml.XmlException, system.MissingMethodException, system.IndexOutOfRangeException, system.io.PathTooLongException, system.MemberAccessException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.TypeLoadException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPropertyValue = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PropertyValue");
+            retObjectPropertyValue = classInstance.Get("PropertyValue");
+            JCObject val = (JCObject)retObjectPropertyValue;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPropertyValue != null ? retObjectPropertyValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -242,7 +262,7 @@ public class SettingsPropertyValue extends NetObject  {
 
     public void setPropertyValue(NetObject PropertyValue) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PropertyValue", PropertyValue == null ? null : PropertyValue.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -252,10 +272,14 @@ public class SettingsPropertyValue extends NetObject  {
 
     public NetObject getSerializedValue() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentException, system.runtime.serialization.SerializationException, system.NotImplementedException, system.security.SecurityException, system.NullReferenceException, system.OutOfMemoryException, system.threading.ThreadAbortException, system.configuration.ConfigurationErrorsException, system.componentmodel.InvalidEnumArgumentException, system.io.FileNotFoundException, system.UnauthorizedAccessException, system.MissingMethodException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSerializedValue = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SerializedValue");
+            retObjectSerializedValue = classInstance.Get("SerializedValue");
+            JCObject val = (JCObject)retObjectSerializedValue;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSerializedValue != null ? retObjectSerializedValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -263,7 +287,7 @@ public class SettingsPropertyValue extends NetObject  {
 
     public void setSerializedValue(NetObject SerializedValue) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SerializedValue", SerializedValue == null ? null : SerializedValue.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -273,9 +297,13 @@ public class SettingsPropertyValue extends NetObject  {
 
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectName = null;
         try {
-            return (java.lang.String)classInstance.Get("Name");
+            retObjectName = classInstance.Get("Name");
+            return (java.lang.String)retObjectName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectName != null ? retObjectName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

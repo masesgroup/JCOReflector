@@ -173,7 +173,7 @@ public class ApplicationContext extends NetObject implements AutoCloseable {
     
     public void Dispose() throws Throwable, system.ArgumentException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
@@ -183,7 +183,7 @@ public class ApplicationContext extends NetObject implements AutoCloseable {
 
     public void ExitThread() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ExitThread");
         } catch (JCNativeException jcne) {
@@ -194,7 +194,7 @@ public class ApplicationContext extends NetObject implements AutoCloseable {
     public void close() throws Exception {
         try {
             if (classInstance == null)
-                throw new UnsupportedOperationException("classInstance is null.");
+                throw new java.lang.UnsupportedOperationException("classInstance is null.");
             try {
                 classInstance.Invoke("Dispose");
             }
@@ -210,10 +210,14 @@ public class ApplicationContext extends NetObject implements AutoCloseable {
     
     public NetObject getTag() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTag = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Tag");
+            retObjectTag = classInstance.Get("Tag");
+            JCObject val = (JCObject)retObjectTag;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTag != null ? retObjectTag.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -221,7 +225,7 @@ public class ApplicationContext extends NetObject implements AutoCloseable {
 
     public void setTag(NetObject Tag) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Tag", Tag == null ? null : Tag.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -231,10 +235,14 @@ public class ApplicationContext extends NetObject implements AutoCloseable {
 
     public Form getMainForm() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMainForm = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MainForm");
+            retObjectMainForm = classInstance.Get("MainForm");
+            JCObject val = (JCObject)retObjectMainForm;
             return new Form(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMainForm != null ? retObjectMainForm.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -242,7 +250,7 @@ public class ApplicationContext extends NetObject implements AutoCloseable {
 
     public void setMainForm(Form MainForm) throws Throwable, system.ArgumentException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MainForm", MainForm == null ? null : MainForm.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -257,7 +265,7 @@ public class ApplicationContext extends NetObject implements AutoCloseable {
 
     public void addThreadExit(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ThreadExit", handler);
         } catch (JCNativeException jcne) {
@@ -267,7 +275,7 @@ public class ApplicationContext extends NetObject implements AutoCloseable {
 
     public void removeThreadExit(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ThreadExit", handler);
         } catch (JCNativeException jcne) {

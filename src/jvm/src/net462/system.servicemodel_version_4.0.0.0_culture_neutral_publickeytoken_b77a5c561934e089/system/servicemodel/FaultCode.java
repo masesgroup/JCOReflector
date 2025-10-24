@@ -196,10 +196,14 @@ public class FaultCode extends NetObject  {
     
     public static FaultCode CreateReceiverFaultCode(FaultCode subCode) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException, system.UriFormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateReceiverFaultCode = null;
         try {
-            JCObject objCreateReceiverFaultCode = (JCObject)classType.Invoke("CreateReceiverFaultCode", subCode == null ? null : subCode.getJCOInstance());
+            retObjectCreateReceiverFaultCode = classType.Invoke("CreateReceiverFaultCode", subCode == null ? null : subCode.getJCOInstance());
+            JCObject objCreateReceiverFaultCode = (JCObject)retObjectCreateReceiverFaultCode;
             return new FaultCode(objCreateReceiverFaultCode);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateReceiverFaultCode != null ? retObjectCreateReceiverFaultCode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -207,10 +211,14 @@ public class FaultCode extends NetObject  {
 
     public static FaultCode CreateReceiverFaultCode(java.lang.String name, java.lang.String ns) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.UriFormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateReceiverFaultCode = null;
         try {
-            JCObject objCreateReceiverFaultCode = (JCObject)classType.Invoke("CreateReceiverFaultCode", name, ns);
+            retObjectCreateReceiverFaultCode = classType.Invoke("CreateReceiverFaultCode", name, ns);
+            JCObject objCreateReceiverFaultCode = (JCObject)retObjectCreateReceiverFaultCode;
             return new FaultCode(objCreateReceiverFaultCode);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateReceiverFaultCode != null ? retObjectCreateReceiverFaultCode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -218,10 +226,14 @@ public class FaultCode extends NetObject  {
 
     public static FaultCode CreateSenderFaultCode(FaultCode subCode) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.UriFormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateSenderFaultCode = null;
         try {
-            JCObject objCreateSenderFaultCode = (JCObject)classType.Invoke("CreateSenderFaultCode", subCode == null ? null : subCode.getJCOInstance());
+            retObjectCreateSenderFaultCode = classType.Invoke("CreateSenderFaultCode", subCode == null ? null : subCode.getJCOInstance());
+            JCObject objCreateSenderFaultCode = (JCObject)retObjectCreateSenderFaultCode;
             return new FaultCode(objCreateSenderFaultCode);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateSenderFaultCode != null ? retObjectCreateSenderFaultCode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -229,10 +241,14 @@ public class FaultCode extends NetObject  {
 
     public static FaultCode CreateSenderFaultCode(java.lang.String name, java.lang.String ns) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.UriFormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateSenderFaultCode = null;
         try {
-            JCObject objCreateSenderFaultCode = (JCObject)classType.Invoke("CreateSenderFaultCode", name, ns);
+            retObjectCreateSenderFaultCode = classType.Invoke("CreateSenderFaultCode", name, ns);
+            JCObject objCreateSenderFaultCode = (JCObject)retObjectCreateSenderFaultCode;
             return new FaultCode(objCreateSenderFaultCode);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateSenderFaultCode != null ? retObjectCreateSenderFaultCode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -244,9 +260,13 @@ public class FaultCode extends NetObject  {
     
     public boolean getIsPredefinedFault() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsPredefinedFault = null;
         try {
-            return (boolean)classInstance.Get("IsPredefinedFault");
+            retObjectIsPredefinedFault = classInstance.Get("IsPredefinedFault");
+            return (boolean)retObjectIsPredefinedFault;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsPredefinedFault != null ? retObjectIsPredefinedFault.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -254,9 +274,13 @@ public class FaultCode extends NetObject  {
 
     public boolean getIsReceiverFault() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsReceiverFault = null;
         try {
-            return (boolean)classInstance.Get("IsReceiverFault");
+            retObjectIsReceiverFault = classInstance.Get("IsReceiverFault");
+            return (boolean)retObjectIsReceiverFault;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsReceiverFault != null ? retObjectIsReceiverFault.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -264,9 +288,13 @@ public class FaultCode extends NetObject  {
 
     public boolean getIsSenderFault() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsSenderFault = null;
         try {
-            return (boolean)classInstance.Get("IsSenderFault");
+            retObjectIsSenderFault = classInstance.Get("IsSenderFault");
+            return (boolean)retObjectIsSenderFault;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsSenderFault != null ? retObjectIsSenderFault.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -274,10 +302,14 @@ public class FaultCode extends NetObject  {
 
     public FaultCode getSubCode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSubCode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SubCode");
+            retObjectSubCode = classInstance.Get("SubCode");
+            JCObject val = (JCObject)retObjectSubCode;
             return new FaultCode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSubCode != null ? retObjectSubCode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -285,9 +317,13 @@ public class FaultCode extends NetObject  {
 
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectName = null;
         try {
-            return (java.lang.String)classInstance.Get("Name");
+            retObjectName = classInstance.Get("Name");
+            return (java.lang.String)retObjectName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectName != null ? retObjectName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -295,9 +331,13 @@ public class FaultCode extends NetObject  {
 
     public java.lang.String getNamespace() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNamespace = null;
         try {
-            return (java.lang.String)classInstance.Get("Namespace");
+            retObjectNamespace = classInstance.Get("Namespace");
+            return (java.lang.String)retObjectNamespace;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectNamespace != null ? retObjectNamespace.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

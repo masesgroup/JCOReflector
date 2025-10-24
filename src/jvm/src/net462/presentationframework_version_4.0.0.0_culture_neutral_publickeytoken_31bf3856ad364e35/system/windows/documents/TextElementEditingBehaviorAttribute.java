@@ -166,9 +166,13 @@ public class TextElementEditingBehaviorAttribute extends Attribute  {
     
     public boolean getIsMergeable() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsMergeable = null;
         try {
-            return (boolean)classInstance.Get("IsMergeable");
+            retObjectIsMergeable = classInstance.Get("IsMergeable");
+            return (boolean)retObjectIsMergeable;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsMergeable != null ? retObjectIsMergeable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,7 +180,7 @@ public class TextElementEditingBehaviorAttribute extends Attribute  {
 
     public void setIsMergeable(boolean IsMergeable) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsMergeable", IsMergeable);
         } catch (JCNativeException jcne) {
@@ -186,9 +190,13 @@ public class TextElementEditingBehaviorAttribute extends Attribute  {
 
     public boolean getIsTypographicOnly() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsTypographicOnly = null;
         try {
-            return (boolean)classInstance.Get("IsTypographicOnly");
+            retObjectIsTypographicOnly = classInstance.Get("IsTypographicOnly");
+            return (boolean)retObjectIsTypographicOnly;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsTypographicOnly != null ? retObjectIsTypographicOnly.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,7 +204,7 @@ public class TextElementEditingBehaviorAttribute extends Attribute  {
 
     public void setIsTypographicOnly(boolean IsTypographicOnly) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsTypographicOnly", IsTypographicOnly);
         } catch (JCNativeException jcne) {

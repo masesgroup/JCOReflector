@@ -186,10 +186,14 @@ public class RadialGradientBrush extends GradientBrush  {
     
     public RadialGradientBrush CloneNewRadialGradientBrush() throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClone = null;
         try {
-            JCObject objClone = (JCObject)classInstance.Invoke("Clone");
+            retObjectClone = classInstance.Invoke("Clone");
+            JCObject objClone = (JCObject)retObjectClone;
             return new RadialGradientBrush(objClone);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClone != null ? retObjectClone.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,10 +201,14 @@ public class RadialGradientBrush extends GradientBrush  {
 
     public RadialGradientBrush CloneCurrentValueNewRadialGradientBrush() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentException, system.FormatException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCloneCurrentValue = null;
         try {
-            JCObject objCloneCurrentValue = (JCObject)classInstance.Invoke("CloneCurrentValue");
+            retObjectCloneCurrentValue = classInstance.Invoke("CloneCurrentValue");
+            JCObject objCloneCurrentValue = (JCObject)retObjectCloneCurrentValue;
             return new RadialGradientBrush(objCloneCurrentValue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCloneCurrentValue != null ? retObjectCloneCurrentValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -212,9 +220,20 @@ public class RadialGradientBrush extends GradientBrush  {
     
     public double getRadiusX() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRadiusX = null;
         try {
-            return (double)classInstance.Get("RadiusX");
+            retObjectRadiusX = classInstance.Get("RadiusX");
+            return (double)retObjectRadiusX;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectRadiusX_ToString = retObjectRadiusX == null ? "null" : retObjectRadiusX.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectRadiusXNumber = (java.lang.Number)retObjectRadiusX;
+                return retObjectRadiusXNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectRadiusX != null ? retObjectRadiusX.getClass() : "null", retObjectRadiusX_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -222,7 +241,7 @@ public class RadialGradientBrush extends GradientBrush  {
 
     public void setRadiusX(double RadiusX) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RadiusX", RadiusX);
         } catch (JCNativeException jcne) {
@@ -232,9 +251,20 @@ public class RadialGradientBrush extends GradientBrush  {
 
     public double getRadiusY() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRadiusY = null;
         try {
-            return (double)classInstance.Get("RadiusY");
+            retObjectRadiusY = classInstance.Get("RadiusY");
+            return (double)retObjectRadiusY;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectRadiusY_ToString = retObjectRadiusY == null ? "null" : retObjectRadiusY.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectRadiusYNumber = (java.lang.Number)retObjectRadiusY;
+                return retObjectRadiusYNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectRadiusY != null ? retObjectRadiusY.getClass() : "null", retObjectRadiusY_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -242,7 +272,7 @@ public class RadialGradientBrush extends GradientBrush  {
 
     public void setRadiusY(double RadiusY) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RadiusY", RadiusY);
         } catch (JCNativeException jcne) {
@@ -252,10 +282,14 @@ public class RadialGradientBrush extends GradientBrush  {
 
     public Point getCenter() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCenter = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Center");
+            retObjectCenter = classInstance.Get("Center");
+            JCObject val = (JCObject)retObjectCenter;
             return new Point(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCenter != null ? retObjectCenter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -263,7 +297,7 @@ public class RadialGradientBrush extends GradientBrush  {
 
     public void setCenter(Point Center) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Center", Center == null ? null : Center.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -273,10 +307,14 @@ public class RadialGradientBrush extends GradientBrush  {
 
     public Point getGradientOrigin() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGradientOrigin = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("GradientOrigin");
+            retObjectGradientOrigin = classInstance.Get("GradientOrigin");
+            JCObject val = (JCObject)retObjectGradientOrigin;
             return new Point(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGradientOrigin != null ? retObjectGradientOrigin.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -284,7 +322,7 @@ public class RadialGradientBrush extends GradientBrush  {
 
     public void setGradientOrigin(Point GradientOrigin) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("GradientOrigin", GradientOrigin == null ? null : GradientOrigin.getJCOInstance());
         } catch (JCNativeException jcne) {

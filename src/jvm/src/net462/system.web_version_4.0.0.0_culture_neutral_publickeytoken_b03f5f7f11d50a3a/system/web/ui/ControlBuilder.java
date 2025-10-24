@@ -177,9 +177,13 @@ public class ControlBuilder extends NetObject  {
     
     public boolean AllowWhitespaceLiterals() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAllowWhitespaceLiterals = null;
         try {
-            return (boolean)classInstance.Invoke("AllowWhitespaceLiterals");
+            retObjectAllowWhitespaceLiterals = classInstance.Invoke("AllowWhitespaceLiterals");
+            return (boolean)retObjectAllowWhitespaceLiterals;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectAllowWhitespaceLiterals != null ? retObjectAllowWhitespaceLiterals.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,9 +191,13 @@ public class ControlBuilder extends NetObject  {
 
     public boolean HasBody() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHasBody = null;
         try {
-            return (boolean)classInstance.Invoke("HasBody");
+            retObjectHasBody = classInstance.Invoke("HasBody");
+            return (boolean)retObjectHasBody;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectHasBody != null ? retObjectHasBody.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,9 +205,13 @@ public class ControlBuilder extends NetObject  {
 
     public boolean HtmlDecodeLiterals() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHtmlDecodeLiterals = null;
         try {
-            return (boolean)classInstance.Invoke("HtmlDecodeLiterals");
+            retObjectHtmlDecodeLiterals = classInstance.Invoke("HtmlDecodeLiterals");
+            return (boolean)retObjectHtmlDecodeLiterals;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectHtmlDecodeLiterals != null ? retObjectHtmlDecodeLiterals.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -207,9 +219,13 @@ public class ControlBuilder extends NetObject  {
 
     public boolean NeedsTagInnerText() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNeedsTagInnerText = null;
         try {
-            return (boolean)classInstance.Invoke("NeedsTagInnerText");
+            retObjectNeedsTagInnerText = classInstance.Invoke("NeedsTagInnerText");
+            return (boolean)retObjectNeedsTagInnerText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectNeedsTagInnerText != null ? retObjectNeedsTagInnerText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -217,10 +233,14 @@ public class ControlBuilder extends NetObject  {
 
     public NetObject BuildObject() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.NullReferenceException, system.TypeLoadException, system.web.HttpException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBuildObject = null;
         try {
-            JCObject objBuildObject = (JCObject)classInstance.Invoke("BuildObject");
+            retObjectBuildObject = classInstance.Invoke("BuildObject");
+            JCObject objBuildObject = (JCObject)retObjectBuildObject;
             return new NetObject(objBuildObject);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBuildObject != null ? retObjectBuildObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -228,9 +248,13 @@ public class ControlBuilder extends NetObject  {
 
     public java.lang.String GetResourceKey() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetResourceKey = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetResourceKey");
+            retObjectGetResourceKey = classInstance.Invoke("GetResourceKey");
+            return (java.lang.String)retObjectGetResourceKey;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetResourceKey != null ? retObjectGetResourceKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -238,10 +262,14 @@ public class ControlBuilder extends NetObject  {
 
     public NetType GetChildControlType(java.lang.String tagName, IDictionary attribs) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetChildControlType = null;
         try {
-            JCObject objGetChildControlType = (JCObject)classInstance.Invoke("GetChildControlType", tagName, attribs == null ? null : attribs.getJCOInstance());
+            retObjectGetChildControlType = classInstance.Invoke("GetChildControlType", tagName, attribs == null ? null : attribs.getJCOInstance());
+            JCObject objGetChildControlType = (JCObject)retObjectGetChildControlType;
             return new NetType(objGetChildControlType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetChildControlType != null ? retObjectGetChildControlType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -249,10 +277,14 @@ public class ControlBuilder extends NetObject  {
 
     public static ControlBuilder CreateBuilderFromType(TemplateParser parser, ControlBuilder parentBuilder, NetType type, java.lang.String tagName, java.lang.String id, IDictionary attribs, int line, java.lang.String sourceFileName) throws Throwable, system.ArgumentNullException, system.NotImplementedException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.web.HttpException, system.NotSupportedException, system.NullReferenceException, system.TypeLoadException, system.security.SecurityException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.reflection.AmbiguousMatchException, system.configuration.provider.ProviderException, system.web.HttpParseException, system.text.regularexpressions.RegexMatchTimeoutException, system.InvalidCastException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateBuilderFromType = null;
         try {
-            JCObject objCreateBuilderFromType = (JCObject)classType.Invoke("CreateBuilderFromType", parser == null ? null : parser.getJCOInstance(), parentBuilder == null ? null : parentBuilder.getJCOInstance(), type == null ? null : type.getJCOInstance(), tagName, id, attribs == null ? null : attribs.getJCOInstance(), line, sourceFileName);
+            retObjectCreateBuilderFromType = classType.Invoke("CreateBuilderFromType", parser == null ? null : parser.getJCOInstance(), parentBuilder == null ? null : parentBuilder.getJCOInstance(), type == null ? null : type.getJCOInstance(), tagName, id, attribs == null ? null : attribs.getJCOInstance(), line, sourceFileName);
+            JCObject objCreateBuilderFromType = (JCObject)retObjectCreateBuilderFromType;
             return new ControlBuilder(objCreateBuilderFromType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateBuilderFromType != null ? retObjectCreateBuilderFromType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -260,10 +292,14 @@ public class ControlBuilder extends NetObject  {
 
     public ObjectPersistData GetObjectPersistData() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.NotSupportedException, system.MissingMethodException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.reflection.AmbiguousMatchException, system.web.HttpParseException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetObjectPersistData = null;
         try {
-            JCObject objGetObjectPersistData = (JCObject)classInstance.Invoke("GetObjectPersistData");
+            retObjectGetObjectPersistData = classInstance.Invoke("GetObjectPersistData");
+            JCObject objGetObjectPersistData = (JCObject)retObjectGetObjectPersistData;
             return new ObjectPersistData(objGetObjectPersistData);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetObjectPersistData != null ? retObjectGetObjectPersistData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -271,7 +307,7 @@ public class ControlBuilder extends NetObject  {
 
     public void AppendLiteralString(java.lang.String s) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.threading.ThreadAbortException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AppendLiteralString", s);
         } catch (JCNativeException jcne) {
@@ -281,7 +317,7 @@ public class ControlBuilder extends NetObject  {
 
     public void AppendSubBuilder(ControlBuilder subBuilder) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.FormatException, system.reflection.AmbiguousMatchException, system.OverflowException, system.text.regularexpressions.RegexMatchTimeoutException, system.TypeLoadException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.web.HttpParseException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AppendSubBuilder", subBuilder == null ? null : subBuilder.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -291,7 +327,7 @@ public class ControlBuilder extends NetObject  {
 
     public void CloseControl() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CloseControl");
         } catch (JCNativeException jcne) {
@@ -301,7 +337,7 @@ public class ControlBuilder extends NetObject  {
 
     public void Init(TemplateParser parser, ControlBuilder parentBuilder, NetType type, java.lang.String tagName, java.lang.String id, IDictionary attribs) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.configuration.ConfigurationException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.collections.generic.KeyNotFoundException, system.web.HttpCompileException, system.FormatException, system.reflection.AmbiguousMatchException, system.web.HttpParseException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Init", parser == null ? null : parser.getJCOInstance(), parentBuilder == null ? null : parentBuilder.getJCOInstance(), type == null ? null : type.getJCOInstance(), tagName, id, attribs == null ? null : attribs.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -311,7 +347,7 @@ public class ControlBuilder extends NetObject  {
 
     public void OnAppendToParentBuilder(ControlBuilder parentBuilder) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.web.HttpException, system.FormatException, system.reflection.AmbiguousMatchException, system.OverflowException, system.text.regularexpressions.RegexMatchTimeoutException, system.TypeLoadException, system.OutOfMemoryException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.web.HttpParseException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("OnAppendToParentBuilder", parentBuilder == null ? null : parentBuilder.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -321,7 +357,7 @@ public class ControlBuilder extends NetObject  {
 
     public void ProcessGeneratedCode(CodeCompileUnit codeCompileUnit, CodeTypeDeclaration baseType, CodeTypeDeclaration derivedType, CodeMemberMethod buildMethod, CodeMemberMethod dataBindingMethod) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ProcessGeneratedCode", codeCompileUnit == null ? null : codeCompileUnit.getJCOInstance(), baseType == null ? null : baseType.getJCOInstance(), derivedType == null ? null : derivedType.getJCOInstance(), buildMethod == null ? null : buildMethod.getJCOInstance(), dataBindingMethod == null ? null : dataBindingMethod.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -331,7 +367,7 @@ public class ControlBuilder extends NetObject  {
 
     public void SetResourceKey(java.lang.String resourceKey) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.web.HttpException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetResourceKey", resourceKey);
         } catch (JCNativeException jcne) {
@@ -341,7 +377,7 @@ public class ControlBuilder extends NetObject  {
 
     public void SetServiceProvider(IServiceProvider serviceProvider) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetServiceProvider", serviceProvider == null ? null : serviceProvider.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -351,7 +387,7 @@ public class ControlBuilder extends NetObject  {
 
     public void SetTagInnerText(java.lang.String text) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetTagInnerText", text);
         } catch (JCNativeException jcne) {
@@ -365,9 +401,13 @@ public class ControlBuilder extends NetObject  {
     
     public boolean getHasAspCode() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHasAspCode = null;
         try {
-            return (boolean)classInstance.Get("HasAspCode");
+            retObjectHasAspCode = classInstance.Get("HasAspCode");
+            return (boolean)retObjectHasAspCode;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectHasAspCode != null ? retObjectHasAspCode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -375,9 +415,13 @@ public class ControlBuilder extends NetObject  {
 
     public boolean getLocalize() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLocalize = null;
         try {
-            return (boolean)classInstance.Get("Localize");
+            retObjectLocalize = classInstance.Get("Localize");
+            return (boolean)retObjectLocalize;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectLocalize != null ? retObjectLocalize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -385,10 +429,14 @@ public class ControlBuilder extends NetObject  {
 
     public NetArrayList getSubBuilders() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSubBuilders = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SubBuilders");
+            retObjectSubBuilders = classInstance.Get("SubBuilders");
+            JCObject val = (JCObject)retObjectSubBuilders;
             return new NetArrayList(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSubBuilders != null ? retObjectSubBuilders.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -396,10 +444,14 @@ public class ControlBuilder extends NetObject  {
 
     public ICollection getComplexPropertyEntries() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectComplexPropertyEntries = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ComplexPropertyEntries");
+            retObjectComplexPropertyEntries = classInstance.Get("ComplexPropertyEntries");
+            JCObject val = (JCObject)retObjectComplexPropertyEntries;
             return new ICollectionImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectComplexPropertyEntries != null ? retObjectComplexPropertyEntries.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -407,10 +459,14 @@ public class ControlBuilder extends NetObject  {
 
     public ICollection getTemplatePropertyEntries() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTemplatePropertyEntries = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TemplatePropertyEntries");
+            retObjectTemplatePropertyEntries = classInstance.Get("TemplatePropertyEntries");
+            JCObject val = (JCObject)retObjectTemplatePropertyEntries;
             return new ICollectionImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTemplatePropertyEntries != null ? retObjectTemplatePropertyEntries.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -418,10 +474,14 @@ public class ControlBuilder extends NetObject  {
 
     public IServiceProvider getServiceProvider() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectServiceProvider = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ServiceProvider");
+            retObjectServiceProvider = classInstance.Get("ServiceProvider");
+            JCObject val = (JCObject)retObjectServiceProvider;
             return new IServiceProviderImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectServiceProvider != null ? retObjectServiceProvider.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -429,9 +489,13 @@ public class ControlBuilder extends NetObject  {
 
     public java.lang.String getID() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectID = null;
         try {
-            return (java.lang.String)classInstance.Get("ID");
+            retObjectID = classInstance.Get("ID");
+            return (java.lang.String)retObjectID;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectID != null ? retObjectID.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -439,7 +503,7 @@ public class ControlBuilder extends NetObject  {
 
     public void setID(java.lang.String ID) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ID", ID);
         } catch (JCNativeException jcne) {
@@ -449,9 +513,13 @@ public class ControlBuilder extends NetObject  {
 
     public java.lang.String getItemType() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectItemType = null;
         try {
-            return (java.lang.String)classInstance.Get("ItemType");
+            retObjectItemType = classInstance.Get("ItemType");
+            return (java.lang.String)retObjectItemType;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectItemType != null ? retObjectItemType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -459,9 +527,13 @@ public class ControlBuilder extends NetObject  {
 
     public java.lang.String getPageVirtualPath() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPageVirtualPath = null;
         try {
-            return (java.lang.String)classInstance.Get("PageVirtualPath");
+            retObjectPageVirtualPath = classInstance.Get("PageVirtualPath");
+            return (java.lang.String)retObjectPageVirtualPath;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectPageVirtualPath != null ? retObjectPageVirtualPath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -469,9 +541,13 @@ public class ControlBuilder extends NetObject  {
 
     public java.lang.String getTagName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTagName = null;
         try {
-            return (java.lang.String)classInstance.Get("TagName");
+            retObjectTagName = classInstance.Get("TagName");
+            return (java.lang.String)retObjectTagName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectTagName != null ? retObjectTagName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -479,10 +555,14 @@ public class ControlBuilder extends NetObject  {
 
     public NetType getBindingContainerType() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBindingContainerType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("BindingContainerType");
+            retObjectBindingContainerType = classInstance.Get("BindingContainerType");
+            JCObject val = (JCObject)retObjectBindingContainerType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBindingContainerType != null ? retObjectBindingContainerType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -490,10 +570,14 @@ public class ControlBuilder extends NetObject  {
 
     public NetType getControlType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectControlType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ControlType");
+            retObjectControlType = classInstance.Get("ControlType");
+            JCObject val = (JCObject)retObjectControlType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectControlType != null ? retObjectControlType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -501,10 +585,14 @@ public class ControlBuilder extends NetObject  {
 
     public NetType getDeclareType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDeclareType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DeclareType");
+            retObjectDeclareType = classInstance.Get("DeclareType");
+            JCObject val = (JCObject)retObjectDeclareType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDeclareType != null ? retObjectDeclareType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -512,10 +600,14 @@ public class ControlBuilder extends NetObject  {
 
     public NetType getNamingContainerType() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNamingContainerType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("NamingContainerType");
+            retObjectNamingContainerType = classInstance.Get("NamingContainerType");
+            JCObject val = (JCObject)retObjectNamingContainerType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNamingContainerType != null ? retObjectNamingContainerType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -523,10 +615,14 @@ public class ControlBuilder extends NetObject  {
 
     public ControlBuilder getBindingContainerBuilder() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBindingContainerBuilder = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("BindingContainerBuilder");
+            retObjectBindingContainerBuilder = classInstance.Get("BindingContainerBuilder");
+            JCObject val = (JCObject)retObjectBindingContainerBuilder;
             return new ControlBuilder(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBindingContainerBuilder != null ? retObjectBindingContainerBuilder.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -534,10 +630,14 @@ public class ControlBuilder extends NetObject  {
 
     public IFilterResolutionService getCurrentFilterResolutionService() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCurrentFilterResolutionService = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CurrentFilterResolutionService");
+            retObjectCurrentFilterResolutionService = classInstance.Get("CurrentFilterResolutionService");
+            JCObject val = (JCObject)retObjectCurrentFilterResolutionService;
             return new IFilterResolutionServiceImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCurrentFilterResolutionService != null ? retObjectCurrentFilterResolutionService.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -545,10 +645,14 @@ public class ControlBuilder extends NetObject  {
 
     public IThemeResolutionService getThemeResolutionService() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectThemeResolutionService = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ThemeResolutionService");
+            retObjectThemeResolutionService = classInstance.Get("ThemeResolutionService");
+            JCObject val = (JCObject)retObjectThemeResolutionService;
             return new IThemeResolutionServiceImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectThemeResolutionService != null ? retObjectThemeResolutionService.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

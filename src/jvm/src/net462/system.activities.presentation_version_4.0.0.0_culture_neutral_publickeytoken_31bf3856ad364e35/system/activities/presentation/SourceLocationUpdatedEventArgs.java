@@ -172,10 +172,14 @@ public class SourceLocationUpdatedEventArgs extends EventArgs  {
     
     public SourceLocation getUpdatedSourceLocation() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUpdatedSourceLocation = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("UpdatedSourceLocation");
+            retObjectUpdatedSourceLocation = classInstance.Get("UpdatedSourceLocation");
+            JCObject val = (JCObject)retObjectUpdatedSourceLocation;
             return new SourceLocation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUpdatedSourceLocation != null ? retObjectUpdatedSourceLocation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,7 +187,7 @@ public class SourceLocationUpdatedEventArgs extends EventArgs  {
 
     public void setUpdatedSourceLocation(SourceLocation UpdatedSourceLocation) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UpdatedSourceLocation", UpdatedSourceLocation == null ? null : UpdatedSourceLocation.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -193,10 +197,14 @@ public class SourceLocationUpdatedEventArgs extends EventArgs  {
 
     public Guid getObjectReference() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectObjectReference = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ObjectReference");
+            retObjectObjectReference = classInstance.Get("ObjectReference");
+            JCObject val = (JCObject)retObjectObjectReference;
             return new Guid(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectObjectReference != null ? retObjectObjectReference.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -204,7 +212,7 @@ public class SourceLocationUpdatedEventArgs extends EventArgs  {
 
     public void setObjectReference(Guid ObjectReference) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ObjectReference", ObjectReference == null ? null : ObjectReference.getJCOInstance());
         } catch (JCNativeException jcne) {

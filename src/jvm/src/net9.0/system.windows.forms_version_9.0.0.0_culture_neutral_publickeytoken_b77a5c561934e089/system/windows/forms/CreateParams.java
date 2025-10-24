@@ -165,9 +165,20 @@ public class CreateParams extends NetObject  {
     
     public int getClassStyle() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClassStyle = null;
         try {
-            return (int)classInstance.Get("ClassStyle");
+            retObjectClassStyle = classInstance.Get("ClassStyle");
+            return (int)retObjectClassStyle;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectClassStyle_ToString = retObjectClassStyle == null ? "null" : retObjectClassStyle.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectClassStyleNumber = (java.lang.Number)retObjectClassStyle;
+                return retObjectClassStyleNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectClassStyle != null ? retObjectClassStyle.getClass() : "null", retObjectClassStyle_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -175,7 +186,7 @@ public class CreateParams extends NetObject  {
 
     public void setClassStyle(int ClassStyle) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ClassStyle", ClassStyle);
         } catch (JCNativeException jcne) {
@@ -185,9 +196,20 @@ public class CreateParams extends NetObject  {
 
     public int getExStyle() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExStyle = null;
         try {
-            return (int)classInstance.Get("ExStyle");
+            retObjectExStyle = classInstance.Get("ExStyle");
+            return (int)retObjectExStyle;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectExStyle_ToString = retObjectExStyle == null ? "null" : retObjectExStyle.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectExStyleNumber = (java.lang.Number)retObjectExStyle;
+                return retObjectExStyleNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectExStyle != null ? retObjectExStyle.getClass() : "null", retObjectExStyle_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,7 +217,7 @@ public class CreateParams extends NetObject  {
 
     public void setExStyle(int ExStyle) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ExStyle", ExStyle);
         } catch (JCNativeException jcne) {
@@ -205,9 +227,20 @@ public class CreateParams extends NetObject  {
 
     public int getHeight() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHeight = null;
         try {
-            return (int)classInstance.Get("Height");
+            retObjectHeight = classInstance.Get("Height");
+            return (int)retObjectHeight;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectHeight_ToString = retObjectHeight == null ? "null" : retObjectHeight.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectHeightNumber = (java.lang.Number)retObjectHeight;
+                return retObjectHeightNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectHeight != null ? retObjectHeight.getClass() : "null", retObjectHeight_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -215,7 +248,7 @@ public class CreateParams extends NetObject  {
 
     public void setHeight(int Height) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Height", Height);
         } catch (JCNativeException jcne) {
@@ -225,9 +258,20 @@ public class CreateParams extends NetObject  {
 
     public int getStyle() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStyle = null;
         try {
-            return (int)classInstance.Get("Style");
+            retObjectStyle = classInstance.Get("Style");
+            return (int)retObjectStyle;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectStyle_ToString = retObjectStyle == null ? "null" : retObjectStyle.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectStyleNumber = (java.lang.Number)retObjectStyle;
+                return retObjectStyleNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectStyle != null ? retObjectStyle.getClass() : "null", retObjectStyle_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -235,7 +279,7 @@ public class CreateParams extends NetObject  {
 
     public void setStyle(int Style) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Style", Style);
         } catch (JCNativeException jcne) {
@@ -245,9 +289,20 @@ public class CreateParams extends NetObject  {
 
     public int getWidth() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWidth = null;
         try {
-            return (int)classInstance.Get("Width");
+            retObjectWidth = classInstance.Get("Width");
+            return (int)retObjectWidth;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectWidth_ToString = retObjectWidth == null ? "null" : retObjectWidth.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectWidthNumber = (java.lang.Number)retObjectWidth;
+                return retObjectWidthNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectWidth != null ? retObjectWidth.getClass() : "null", retObjectWidth_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -255,7 +310,7 @@ public class CreateParams extends NetObject  {
 
     public void setWidth(int Width) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Width", Width);
         } catch (JCNativeException jcne) {
@@ -265,9 +320,20 @@ public class CreateParams extends NetObject  {
 
     public int getX() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectX = null;
         try {
-            return (int)classInstance.Get("X");
+            retObjectX = classInstance.Get("X");
+            return (int)retObjectX;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectX_ToString = retObjectX == null ? "null" : retObjectX.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectXNumber = (java.lang.Number)retObjectX;
+                return retObjectXNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectX != null ? retObjectX.getClass() : "null", retObjectX_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -275,7 +341,7 @@ public class CreateParams extends NetObject  {
 
     public void setX(int X) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("X", X);
         } catch (JCNativeException jcne) {
@@ -285,9 +351,20 @@ public class CreateParams extends NetObject  {
 
     public int getY() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectY = null;
         try {
-            return (int)classInstance.Get("Y");
+            retObjectY = classInstance.Get("Y");
+            return (int)retObjectY;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectY_ToString = retObjectY == null ? "null" : retObjectY.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectYNumber = (java.lang.Number)retObjectY;
+                return retObjectYNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectY != null ? retObjectY.getClass() : "null", retObjectY_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -295,7 +372,7 @@ public class CreateParams extends NetObject  {
 
     public void setY(int Y) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Y", Y);
         } catch (JCNativeException jcne) {
@@ -305,10 +382,14 @@ public class CreateParams extends NetObject  {
 
     public NetObject getParam() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectParam = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Param");
+            retObjectParam = classInstance.Get("Param");
+            JCObject val = (JCObject)retObjectParam;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParam != null ? retObjectParam.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -316,7 +397,7 @@ public class CreateParams extends NetObject  {
 
     public void setParam(NetObject Param) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Param", Param == null ? null : Param.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -326,9 +407,13 @@ public class CreateParams extends NetObject  {
 
     public java.lang.String getCaption() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCaption = null;
         try {
-            return (java.lang.String)classInstance.Get("Caption");
+            retObjectCaption = classInstance.Get("Caption");
+            return (java.lang.String)retObjectCaption;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectCaption != null ? retObjectCaption.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -336,7 +421,7 @@ public class CreateParams extends NetObject  {
 
     public void setCaption(java.lang.String Caption) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Caption", Caption);
         } catch (JCNativeException jcne) {
@@ -346,9 +431,13 @@ public class CreateParams extends NetObject  {
 
     public java.lang.String getClassName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClassName = null;
         try {
-            return (java.lang.String)classInstance.Get("ClassName");
+            retObjectClassName = classInstance.Get("ClassName");
+            return (java.lang.String)retObjectClassName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectClassName != null ? retObjectClassName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -356,7 +445,7 @@ public class CreateParams extends NetObject  {
 
     public void setClassName(java.lang.String ClassName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ClassName", ClassName);
         } catch (JCNativeException jcne) {

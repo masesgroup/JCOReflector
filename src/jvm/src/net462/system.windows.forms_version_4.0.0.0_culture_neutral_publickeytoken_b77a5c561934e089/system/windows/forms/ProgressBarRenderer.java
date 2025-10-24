@@ -157,7 +157,7 @@ public class ProgressBarRenderer extends NetObject  {
     
     public static void DrawHorizontalBar(Graphics g, Rectangle bounds) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("DrawHorizontalBar", g == null ? null : g.getJCOInstance(), bounds == null ? null : bounds.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -167,7 +167,7 @@ public class ProgressBarRenderer extends NetObject  {
 
     public static void DrawHorizontalChunks(Graphics g, Rectangle bounds) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("DrawHorizontalChunks", g == null ? null : g.getJCOInstance(), bounds == null ? null : bounds.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -177,7 +177,7 @@ public class ProgressBarRenderer extends NetObject  {
 
     public static void DrawVerticalBar(Graphics g, Rectangle bounds) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("DrawVerticalBar", g == null ? null : g.getJCOInstance(), bounds == null ? null : bounds.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -187,7 +187,7 @@ public class ProgressBarRenderer extends NetObject  {
 
     public static void DrawVerticalChunks(Graphics g, Rectangle bounds) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("DrawVerticalChunks", g == null ? null : g.getJCOInstance(), bounds == null ? null : bounds.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -201,9 +201,13 @@ public class ProgressBarRenderer extends NetObject  {
     
     public static boolean getIsSupported() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.resources.MissingManifestResourceException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsSupported = null;
         try {
-            return (boolean)classType.Get("IsSupported");
+            retObjectIsSupported = classType.Get("IsSupported");
+            return (boolean)retObjectIsSupported;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsSupported != null ? retObjectIsSupported.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -211,9 +215,20 @@ public class ProgressBarRenderer extends NetObject  {
 
     public static int getChunkSpaceThickness() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectChunkSpaceThickness = null;
         try {
-            return (int)classType.Get("ChunkSpaceThickness");
+            retObjectChunkSpaceThickness = classType.Get("ChunkSpaceThickness");
+            return (int)retObjectChunkSpaceThickness;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectChunkSpaceThickness_ToString = retObjectChunkSpaceThickness == null ? "null" : retObjectChunkSpaceThickness.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectChunkSpaceThicknessNumber = (java.lang.Number)retObjectChunkSpaceThickness;
+                return retObjectChunkSpaceThicknessNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectChunkSpaceThickness != null ? retObjectChunkSpaceThickness.getClass() : "null", retObjectChunkSpaceThickness_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -221,9 +236,20 @@ public class ProgressBarRenderer extends NetObject  {
 
     public static int getChunkThickness() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectChunkThickness = null;
         try {
-            return (int)classType.Get("ChunkThickness");
+            retObjectChunkThickness = classType.Get("ChunkThickness");
+            return (int)retObjectChunkThickness;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectChunkThickness_ToString = retObjectChunkThickness == null ? "null" : retObjectChunkThickness.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectChunkThicknessNumber = (java.lang.Number)retObjectChunkThickness;
+                return retObjectChunkThicknessNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectChunkThickness != null ? retObjectChunkThickness.getClass() : "null", retObjectChunkThickness_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -151,9 +151,13 @@ public class IDbDataParameterImplementation extends NetObject implements IDbData
     
     public boolean getIsNullable() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsNullable = null;
         try {
-            return (boolean)classInstance.Get("IsNullable");
+            retObjectIsNullable = classInstance.Get("IsNullable");
+            return (boolean)retObjectIsNullable;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsNullable != null ? retObjectIsNullable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -161,9 +165,20 @@ public class IDbDataParameterImplementation extends NetObject implements IDbData
 
     public byte getPrecision() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPrecision = null;
         try {
-            return (byte)classInstance.Get("Precision");
+            retObjectPrecision = classInstance.Get("Precision");
+            return (byte)retObjectPrecision;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectPrecision_ToString = retObjectPrecision == null ? "null" : retObjectPrecision.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectPrecisionNumber = (java.lang.Number)retObjectPrecision;
+                return retObjectPrecisionNumber.byteValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into byte and, as fallback solution, into java.lang.Number", retObjectPrecision != null ? retObjectPrecision.getClass() : "null", retObjectPrecision_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,7 +186,7 @@ public class IDbDataParameterImplementation extends NetObject implements IDbData
 
     public void setPrecision(byte Precision) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Precision", Precision);
         } catch (JCNativeException jcne) {
@@ -181,9 +196,20 @@ public class IDbDataParameterImplementation extends NetObject implements IDbData
 
     public byte getScale() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectScale = null;
         try {
-            return (byte)classInstance.Get("Scale");
+            retObjectScale = classInstance.Get("Scale");
+            return (byte)retObjectScale;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectScale_ToString = retObjectScale == null ? "null" : retObjectScale.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectScaleNumber = (java.lang.Number)retObjectScale;
+                return retObjectScaleNumber.byteValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into byte and, as fallback solution, into java.lang.Number", retObjectScale != null ? retObjectScale.getClass() : "null", retObjectScale_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,7 +217,7 @@ public class IDbDataParameterImplementation extends NetObject implements IDbData
 
     public void setScale(byte Scale) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Scale", Scale);
         } catch (JCNativeException jcne) {
@@ -201,9 +227,20 @@ public class IDbDataParameterImplementation extends NetObject implements IDbData
 
     public int getSize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSize = null;
         try {
-            return (int)classInstance.Get("Size");
+            retObjectSize = classInstance.Get("Size");
+            return (int)retObjectSize;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSize_ToString = retObjectSize == null ? "null" : retObjectSize.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectSizeNumber = (java.lang.Number)retObjectSize;
+                return retObjectSizeNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectSize != null ? retObjectSize.getClass() : "null", retObjectSize_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -211,7 +248,7 @@ public class IDbDataParameterImplementation extends NetObject implements IDbData
 
     public void setSize(int Size) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Size", Size);
         } catch (JCNativeException jcne) {
@@ -221,10 +258,14 @@ public class IDbDataParameterImplementation extends NetObject implements IDbData
 
     public DataRowVersion getSourceVersion() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSourceVersion = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SourceVersion");
+            retObjectSourceVersion = classInstance.Get("SourceVersion");
+            JCObject val = (JCObject)retObjectSourceVersion;
             return new DataRowVersion(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSourceVersion != null ? retObjectSourceVersion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -232,7 +273,7 @@ public class IDbDataParameterImplementation extends NetObject implements IDbData
 
     public void setSourceVersion(DataRowVersion SourceVersion) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SourceVersion", SourceVersion == null ? null : SourceVersion.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -242,10 +283,14 @@ public class IDbDataParameterImplementation extends NetObject implements IDbData
 
     public DbType getDbType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDbType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DbType");
+            retObjectDbType = classInstance.Get("DbType");
+            JCObject val = (JCObject)retObjectDbType;
             return new DbType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDbType != null ? retObjectDbType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -253,7 +298,7 @@ public class IDbDataParameterImplementation extends NetObject implements IDbData
 
     public void setDbType(DbType DbType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DbType", DbType == null ? null : DbType.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -263,10 +308,14 @@ public class IDbDataParameterImplementation extends NetObject implements IDbData
 
     public ParameterDirection getDirection() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDirection = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Direction");
+            retObjectDirection = classInstance.Get("Direction");
+            JCObject val = (JCObject)retObjectDirection;
             return new ParameterDirection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDirection != null ? retObjectDirection.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -274,7 +323,7 @@ public class IDbDataParameterImplementation extends NetObject implements IDbData
 
     public void setDirection(ParameterDirection Direction) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Direction", Direction == null ? null : Direction.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -284,10 +333,14 @@ public class IDbDataParameterImplementation extends NetObject implements IDbData
 
     public NetObject getValue() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValue = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Value");
+            retObjectValue = classInstance.Get("Value");
+            JCObject val = (JCObject)retObjectValue;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectValue != null ? retObjectValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -295,7 +348,7 @@ public class IDbDataParameterImplementation extends NetObject implements IDbData
 
     public void setValue(NetObject Value) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Value", Value == null ? null : Value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -305,9 +358,13 @@ public class IDbDataParameterImplementation extends NetObject implements IDbData
 
     public java.lang.String getParameterName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectParameterName = null;
         try {
-            return (java.lang.String)classInstance.Get("ParameterName");
+            retObjectParameterName = classInstance.Get("ParameterName");
+            return (java.lang.String)retObjectParameterName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectParameterName != null ? retObjectParameterName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -315,7 +372,7 @@ public class IDbDataParameterImplementation extends NetObject implements IDbData
 
     public void setParameterName(java.lang.String ParameterName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ParameterName", ParameterName);
         } catch (JCNativeException jcne) {
@@ -325,9 +382,13 @@ public class IDbDataParameterImplementation extends NetObject implements IDbData
 
     public java.lang.String getSourceColumn() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSourceColumn = null;
         try {
-            return (java.lang.String)classInstance.Get("SourceColumn");
+            retObjectSourceColumn = classInstance.Get("SourceColumn");
+            return (java.lang.String)retObjectSourceColumn;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSourceColumn != null ? retObjectSourceColumn.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -335,7 +396,7 @@ public class IDbDataParameterImplementation extends NetObject implements IDbData
 
     public void setSourceColumn(java.lang.String SourceColumn) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SourceColumn", SourceColumn);
         } catch (JCNativeException jcne) {

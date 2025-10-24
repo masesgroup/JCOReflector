@@ -167,10 +167,14 @@ public class PartialTrustVisibleAssembliesSection extends ConfigurationSection  
     
     public PartialTrustVisibleAssemblyCollection getPartialTrustVisibleAssemblies() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.FormatException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPartialTrustVisibleAssemblies = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PartialTrustVisibleAssemblies");
+            retObjectPartialTrustVisibleAssemblies = classInstance.Get("PartialTrustVisibleAssemblies");
+            JCObject val = (JCObject)retObjectPartialTrustVisibleAssemblies;
             return new PartialTrustVisibleAssemblyCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPartialTrustVisibleAssemblies != null ? retObjectPartialTrustVisibleAssemblies.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

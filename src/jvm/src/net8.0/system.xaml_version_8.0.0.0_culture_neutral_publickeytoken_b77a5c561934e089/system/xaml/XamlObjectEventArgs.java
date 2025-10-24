@@ -171,9 +171,20 @@ public class XamlObjectEventArgs extends EventArgs  {
     
     public int getElementLineNumber() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectElementLineNumber = null;
         try {
-            return (int)classInstance.Get("ElementLineNumber");
+            retObjectElementLineNumber = classInstance.Get("ElementLineNumber");
+            return (int)retObjectElementLineNumber;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectElementLineNumber_ToString = retObjectElementLineNumber == null ? "null" : retObjectElementLineNumber.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectElementLineNumberNumber = (java.lang.Number)retObjectElementLineNumber;
+                return retObjectElementLineNumberNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectElementLineNumber != null ? retObjectElementLineNumber.getClass() : "null", retObjectElementLineNumber_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,7 +192,7 @@ public class XamlObjectEventArgs extends EventArgs  {
 
     public void setElementLineNumber(int ElementLineNumber) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ElementLineNumber", ElementLineNumber);
         } catch (JCNativeException jcne) {
@@ -191,9 +202,20 @@ public class XamlObjectEventArgs extends EventArgs  {
 
     public int getElementLinePosition() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectElementLinePosition = null;
         try {
-            return (int)classInstance.Get("ElementLinePosition");
+            retObjectElementLinePosition = classInstance.Get("ElementLinePosition");
+            return (int)retObjectElementLinePosition;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectElementLinePosition_ToString = retObjectElementLinePosition == null ? "null" : retObjectElementLinePosition.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectElementLinePositionNumber = (java.lang.Number)retObjectElementLinePosition;
+                return retObjectElementLinePositionNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectElementLinePosition != null ? retObjectElementLinePosition.getClass() : "null", retObjectElementLinePosition_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,7 +223,7 @@ public class XamlObjectEventArgs extends EventArgs  {
 
     public void setElementLinePosition(int ElementLinePosition) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ElementLinePosition", ElementLinePosition);
         } catch (JCNativeException jcne) {
@@ -211,10 +233,14 @@ public class XamlObjectEventArgs extends EventArgs  {
 
     public NetObject getInstance() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInstance = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Instance");
+            retObjectInstance = classInstance.Get("Instance");
+            JCObject val = (JCObject)retObjectInstance;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInstance != null ? retObjectInstance.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -222,7 +248,7 @@ public class XamlObjectEventArgs extends EventArgs  {
 
     public void setInstance(NetObject Instance) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Instance", Instance == null ? null : Instance.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -232,10 +258,14 @@ public class XamlObjectEventArgs extends EventArgs  {
 
     public Uri getSourceBamlUri() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSourceBamlUri = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SourceBamlUri");
+            retObjectSourceBamlUri = classInstance.Get("SourceBamlUri");
+            JCObject val = (JCObject)retObjectSourceBamlUri;
             return new Uri(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSourceBamlUri != null ? retObjectSourceBamlUri.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -243,7 +273,7 @@ public class XamlObjectEventArgs extends EventArgs  {
 
     public void setSourceBamlUri(Uri SourceBamlUri) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SourceBamlUri", SourceBamlUri == null ? null : SourceBamlUri.getJCOInstance());
         } catch (JCNativeException jcne) {

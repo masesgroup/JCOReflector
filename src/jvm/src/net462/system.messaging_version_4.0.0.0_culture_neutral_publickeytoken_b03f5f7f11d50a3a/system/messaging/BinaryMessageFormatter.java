@@ -174,9 +174,13 @@ public class BinaryMessageFormatter extends NetObject  {
     
     public boolean CanRead(Message message) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanRead = null;
         try {
-            return (boolean)classInstance.Invoke("CanRead", message == null ? null : message.getJCOInstance());
+            retObjectCanRead = classInstance.Invoke("CanRead", message == null ? null : message.getJCOInstance());
+            return (boolean)retObjectCanRead;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCanRead != null ? retObjectCanRead.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -184,10 +188,14 @@ public class BinaryMessageFormatter extends NetObject  {
 
     public NetObject Clone() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClone = null;
         try {
-            JCObject objClone = (JCObject)classInstance.Invoke("Clone");
+            retObjectClone = classInstance.Invoke("Clone");
+            JCObject objClone = (JCObject)retObjectClone;
             return new NetObject(objClone);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClone != null ? retObjectClone.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,10 +203,14 @@ public class BinaryMessageFormatter extends NetObject  {
 
     public NetObject Read(Message message) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.runtime.serialization.SerializationException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRead = null;
         try {
-            JCObject objRead = (JCObject)classInstance.Invoke("Read", message == null ? null : message.getJCOInstance());
+            retObjectRead = classInstance.Invoke("Read", message == null ? null : message.getJCOInstance());
+            JCObject objRead = (JCObject)retObjectRead;
             return new NetObject(objRead);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRead != null ? retObjectRead.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -206,7 +218,7 @@ public class BinaryMessageFormatter extends NetObject  {
 
     public void Write(Message message, NetObject obj) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.NotSupportedException, system.runtime.serialization.SerializationException, system.InvalidOperationException, system.NotImplementedException, system.security.SecurityException, system.reflection.TargetException, system.NullReferenceException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Write", message == null ? null : message.getJCOInstance(), obj == null ? null : obj.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -220,10 +232,14 @@ public class BinaryMessageFormatter extends NetObject  {
     
     public FormatterAssemblyStyle getTopObjectFormat() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTopObjectFormat = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TopObjectFormat");
+            retObjectTopObjectFormat = classInstance.Get("TopObjectFormat");
+            JCObject val = (JCObject)retObjectTopObjectFormat;
             return new FormatterAssemblyStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTopObjectFormat != null ? retObjectTopObjectFormat.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -231,7 +247,7 @@ public class BinaryMessageFormatter extends NetObject  {
 
     public void setTopObjectFormat(FormatterAssemblyStyle TopObjectFormat) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TopObjectFormat", TopObjectFormat == null ? null : TopObjectFormat.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -241,10 +257,14 @@ public class BinaryMessageFormatter extends NetObject  {
 
     public FormatterTypeStyle getTypeFormat() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTypeFormat = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TypeFormat");
+            retObjectTypeFormat = classInstance.Get("TypeFormat");
+            JCObject val = (JCObject)retObjectTypeFormat;
             return new FormatterTypeStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTypeFormat != null ? retObjectTypeFormat.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -252,7 +272,7 @@ public class BinaryMessageFormatter extends NetObject  {
 
     public void setTypeFormat(FormatterTypeStyle TypeFormat) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TypeFormat", TypeFormat == null ? null : TypeFormat.getJCOInstance());
         } catch (JCNativeException jcne) {

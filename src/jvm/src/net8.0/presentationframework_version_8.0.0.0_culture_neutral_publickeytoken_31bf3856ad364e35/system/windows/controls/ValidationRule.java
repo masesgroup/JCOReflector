@@ -158,10 +158,14 @@ public class ValidationRule extends NetObject  {
     
     public ValidationResult Validate(NetObject value, CultureInfo cultureInfo, BindingExpressionBase owner) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValidate = null;
         try {
-            JCObject objValidate = (JCObject)classInstance.Invoke("Validate", value == null ? null : value.getJCOInstance(), cultureInfo == null ? null : cultureInfo.getJCOInstance(), owner == null ? null : owner.getJCOInstance());
+            retObjectValidate = classInstance.Invoke("Validate", value == null ? null : value.getJCOInstance(), cultureInfo == null ? null : cultureInfo.getJCOInstance(), owner == null ? null : owner.getJCOInstance());
+            JCObject objValidate = (JCObject)retObjectValidate;
             return new ValidationResult(objValidate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectValidate != null ? retObjectValidate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,10 +173,14 @@ public class ValidationRule extends NetObject  {
 
     public ValidationResult Validate(NetObject value, CultureInfo cultureInfo, BindingGroup owner) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValidate = null;
         try {
-            JCObject objValidate = (JCObject)classInstance.Invoke("Validate", value == null ? null : value.getJCOInstance(), cultureInfo == null ? null : cultureInfo.getJCOInstance(), owner == null ? null : owner.getJCOInstance());
+            retObjectValidate = classInstance.Invoke("Validate", value == null ? null : value.getJCOInstance(), cultureInfo == null ? null : cultureInfo.getJCOInstance(), owner == null ? null : owner.getJCOInstance());
+            JCObject objValidate = (JCObject)retObjectValidate;
             return new ValidationResult(objValidate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectValidate != null ? retObjectValidate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,10 +188,14 @@ public class ValidationRule extends NetObject  {
 
     public ValidationResult Validate(NetObject value, CultureInfo cultureInfo) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValidate = null;
         try {
-            JCObject objValidate = (JCObject)classInstance.Invoke("Validate", value == null ? null : value.getJCOInstance(), cultureInfo == null ? null : cultureInfo.getJCOInstance());
+            retObjectValidate = classInstance.Invoke("Validate", value == null ? null : value.getJCOInstance(), cultureInfo == null ? null : cultureInfo.getJCOInstance());
+            JCObject objValidate = (JCObject)retObjectValidate;
             return new ValidationResult(objValidate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectValidate != null ? retObjectValidate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,9 +207,13 @@ public class ValidationRule extends NetObject  {
     
     public boolean getValidatesOnTargetUpdated() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValidatesOnTargetUpdated = null;
         try {
-            return (boolean)classInstance.Get("ValidatesOnTargetUpdated");
+            retObjectValidatesOnTargetUpdated = classInstance.Get("ValidatesOnTargetUpdated");
+            return (boolean)retObjectValidatesOnTargetUpdated;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectValidatesOnTargetUpdated != null ? retObjectValidatesOnTargetUpdated.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -205,7 +221,7 @@ public class ValidationRule extends NetObject  {
 
     public void setValidatesOnTargetUpdated(boolean ValidatesOnTargetUpdated) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ValidatesOnTargetUpdated", ValidatesOnTargetUpdated);
         } catch (JCNativeException jcne) {
@@ -215,10 +231,14 @@ public class ValidationRule extends NetObject  {
 
     public ValidationStep getValidationStep() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValidationStep = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ValidationStep");
+            retObjectValidationStep = classInstance.Get("ValidationStep");
+            JCObject val = (JCObject)retObjectValidationStep;
             return new ValidationStep(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectValidationStep != null ? retObjectValidationStep.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -226,7 +246,7 @@ public class ValidationRule extends NetObject  {
 
     public void setValidationStep(ValidationStep ValidationStep) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ValidationStep", ValidationStep == null ? null : ValidationStep.getJCOInstance());
         } catch (JCNativeException jcne) {

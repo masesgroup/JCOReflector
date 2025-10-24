@@ -161,9 +161,13 @@ public class WindowsClientCredential extends NetObject  {
     
     public boolean getAllowNtlm() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAllowNtlm = null;
         try {
-            return (boolean)classInstance.Get("AllowNtlm");
+            retObjectAllowNtlm = classInstance.Get("AllowNtlm");
+            return (boolean)retObjectAllowNtlm;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAllowNtlm != null ? retObjectAllowNtlm.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,7 +175,7 @@ public class WindowsClientCredential extends NetObject  {
 
     public void setAllowNtlm(boolean AllowNtlm) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AllowNtlm", AllowNtlm);
         } catch (JCNativeException jcne) {
@@ -181,10 +185,14 @@ public class WindowsClientCredential extends NetObject  {
 
     public NetworkCredential getClientCredential() throws Throwable, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.ArgumentNullException, system.InvalidOperationException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClientCredential = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ClientCredential");
+            retObjectClientCredential = classInstance.Get("ClientCredential");
+            JCObject val = (JCObject)retObjectClientCredential;
             return new NetworkCredential(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClientCredential != null ? retObjectClientCredential.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,7 +200,7 @@ public class WindowsClientCredential extends NetObject  {
 
     public void setClientCredential(NetworkCredential ClientCredential) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ClientCredential", ClientCredential == null ? null : ClientCredential.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -202,10 +210,14 @@ public class WindowsClientCredential extends NetObject  {
 
     public TokenImpersonationLevel getAllowedImpersonationLevel() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAllowedImpersonationLevel = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AllowedImpersonationLevel");
+            retObjectAllowedImpersonationLevel = classInstance.Get("AllowedImpersonationLevel");
+            JCObject val = (JCObject)retObjectAllowedImpersonationLevel;
             return new TokenImpersonationLevel(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAllowedImpersonationLevel != null ? retObjectAllowedImpersonationLevel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,7 +225,7 @@ public class WindowsClientCredential extends NetObject  {
 
     public void setAllowedImpersonationLevel(TokenImpersonationLevel AllowedImpersonationLevel) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException, system.threading.ThreadAbortException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AllowedImpersonationLevel", AllowedImpersonationLevel == null ? null : AllowedImpersonationLevel.getJCOInstance());
         } catch (JCNativeException jcne) {

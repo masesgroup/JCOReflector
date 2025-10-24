@@ -164,9 +164,13 @@ public class AttributedModelServices extends NetObject  {
     
     public static boolean Exports(ComposablePartDefinition part, NetType contractType) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.NotSupportedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectExports = null;
         try {
-            return (boolean)classType.Invoke("Exports", part == null ? null : part.getJCOInstance(), contractType == null ? null : contractType.getJCOInstance());
+            retObjectExports = classType.Invoke("Exports", part == null ? null : part.getJCOInstance(), contractType == null ? null : contractType.getJCOInstance());
+            return (boolean)retObjectExports;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectExports != null ? retObjectExports.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -174,9 +178,13 @@ public class AttributedModelServices extends NetObject  {
 
     public static boolean Imports(ComposablePartDefinition part, NetType contractType) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.NotSupportedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectImports = null;
         try {
-            return (boolean)classType.Invoke("Imports", part == null ? null : part.getJCOInstance(), contractType == null ? null : contractType.getJCOInstance());
+            retObjectImports = classType.Invoke("Imports", part == null ? null : part.getJCOInstance(), contractType == null ? null : contractType.getJCOInstance());
+            return (boolean)retObjectImports;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectImports != null ? retObjectImports.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -184,9 +192,13 @@ public class AttributedModelServices extends NetObject  {
 
     public static boolean Imports(ComposablePartDefinition part, NetType contractType, ImportCardinality importCardinality) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.NotSupportedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectImports = null;
         try {
-            return (boolean)classType.Invoke("Imports", part == null ? null : part.getJCOInstance(), contractType == null ? null : contractType.getJCOInstance(), importCardinality == null ? null : importCardinality.getJCOInstance());
+            retObjectImports = classType.Invoke("Imports", part == null ? null : part.getJCOInstance(), contractType == null ? null : contractType.getJCOInstance(), importCardinality == null ? null : importCardinality.getJCOInstance());
+            return (boolean)retObjectImports;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectImports != null ? retObjectImports.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -194,10 +206,14 @@ public class AttributedModelServices extends NetObject  {
 
     public static ComposablePart AddPart(CompositionBatch batch, NetObject attributedPart) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAddPart = null;
         try {
-            JCObject objAddPart = (JCObject)classType.Invoke("AddPart", batch == null ? null : batch.getJCOInstance(), attributedPart == null ? null : attributedPart.getJCOInstance());
+            retObjectAddPart = classType.Invoke("AddPart", batch == null ? null : batch.getJCOInstance(), attributedPart == null ? null : attributedPart.getJCOInstance());
+            JCObject objAddPart = (JCObject)retObjectAddPart;
             return new ComposablePart(objAddPart);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddPart != null ? retObjectAddPart.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -205,10 +221,14 @@ public class AttributedModelServices extends NetObject  {
 
     public static ComposablePart CreatePart(ComposablePartDefinition partDefinition, NetObject attributedPart) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreatePart = null;
         try {
-            JCObject objCreatePart = (JCObject)classType.Invoke("CreatePart", partDefinition == null ? null : partDefinition.getJCOInstance(), attributedPart == null ? null : attributedPart.getJCOInstance());
+            retObjectCreatePart = classType.Invoke("CreatePart", partDefinition == null ? null : partDefinition.getJCOInstance(), attributedPart == null ? null : attributedPart.getJCOInstance());
+            JCObject objCreatePart = (JCObject)retObjectCreatePart;
             return new ComposablePart(objCreatePart);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreatePart != null ? retObjectCreatePart.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -216,10 +236,14 @@ public class AttributedModelServices extends NetObject  {
 
     public static ComposablePart CreatePart(NetObject attributedPart) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreatePart = null;
         try {
-            JCObject objCreatePart = (JCObject)classType.Invoke("CreatePart", attributedPart == null ? null : attributedPart.getJCOInstance());
+            retObjectCreatePart = classType.Invoke("CreatePart", attributedPart == null ? null : attributedPart.getJCOInstance());
+            JCObject objCreatePart = (JCObject)retObjectCreatePart;
             return new ComposablePart(objCreatePart);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreatePart != null ? retObjectCreatePart.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -227,10 +251,14 @@ public class AttributedModelServices extends NetObject  {
 
     public static ComposablePart CreatePart(NetObject attributedPart, ReflectionContext reflectionContext) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotImplementedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreatePart = null;
         try {
-            JCObject objCreatePart = (JCObject)classType.Invoke("CreatePart", attributedPart == null ? null : attributedPart.getJCOInstance(), reflectionContext == null ? null : reflectionContext.getJCOInstance());
+            retObjectCreatePart = classType.Invoke("CreatePart", attributedPart == null ? null : attributedPart.getJCOInstance(), reflectionContext == null ? null : reflectionContext.getJCOInstance());
+            JCObject objCreatePart = (JCObject)retObjectCreatePart;
             return new ComposablePart(objCreatePart);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreatePart != null ? retObjectCreatePart.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -238,10 +266,14 @@ public class AttributedModelServices extends NetObject  {
 
     public static ComposablePart SatisfyImportsOnce(ICompositionService compositionService, NetObject attributedPart) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSatisfyImportsOnce = null;
         try {
-            JCObject objSatisfyImportsOnce = (JCObject)classType.Invoke("SatisfyImportsOnce", compositionService == null ? null : compositionService.getJCOInstance(), attributedPart == null ? null : attributedPart.getJCOInstance());
+            retObjectSatisfyImportsOnce = classType.Invoke("SatisfyImportsOnce", compositionService == null ? null : compositionService.getJCOInstance(), attributedPart == null ? null : attributedPart.getJCOInstance());
+            JCObject objSatisfyImportsOnce = (JCObject)retObjectSatisfyImportsOnce;
             return new ComposablePart(objSatisfyImportsOnce);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSatisfyImportsOnce != null ? retObjectSatisfyImportsOnce.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -249,10 +281,14 @@ public class AttributedModelServices extends NetObject  {
 
     public static ComposablePart SatisfyImportsOnce(ICompositionService compositionService, NetObject attributedPart, ReflectionContext reflectionContext) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.NotImplementedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSatisfyImportsOnce = null;
         try {
-            JCObject objSatisfyImportsOnce = (JCObject)classType.Invoke("SatisfyImportsOnce", compositionService == null ? null : compositionService.getJCOInstance(), attributedPart == null ? null : attributedPart.getJCOInstance(), reflectionContext == null ? null : reflectionContext.getJCOInstance());
+            retObjectSatisfyImportsOnce = classType.Invoke("SatisfyImportsOnce", compositionService == null ? null : compositionService.getJCOInstance(), attributedPart == null ? null : attributedPart.getJCOInstance(), reflectionContext == null ? null : reflectionContext.getJCOInstance());
+            JCObject objSatisfyImportsOnce = (JCObject)retObjectSatisfyImportsOnce;
             return new ComposablePart(objSatisfyImportsOnce);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSatisfyImportsOnce != null ? retObjectSatisfyImportsOnce.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -260,10 +296,14 @@ public class AttributedModelServices extends NetObject  {
 
     public static ComposablePartDefinition CreatePartDefinition(NetType type, ICompositionElement origin) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreatePartDefinition = null;
         try {
-            JCObject objCreatePartDefinition = (JCObject)classType.Invoke("CreatePartDefinition", type == null ? null : type.getJCOInstance(), origin == null ? null : origin.getJCOInstance());
+            retObjectCreatePartDefinition = classType.Invoke("CreatePartDefinition", type == null ? null : type.getJCOInstance(), origin == null ? null : origin.getJCOInstance());
+            JCObject objCreatePartDefinition = (JCObject)retObjectCreatePartDefinition;
             return new ComposablePartDefinition(objCreatePartDefinition);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreatePartDefinition != null ? retObjectCreatePartDefinition.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -271,10 +311,14 @@ public class AttributedModelServices extends NetObject  {
 
     public static ComposablePartDefinition CreatePartDefinition(NetType type, ICompositionElement origin, boolean ensureIsDiscoverable) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreatePartDefinition = null;
         try {
-            JCObject objCreatePartDefinition = (JCObject)classType.Invoke("CreatePartDefinition", type == null ? null : type.getJCOInstance(), origin == null ? null : origin.getJCOInstance(), ensureIsDiscoverable);
+            retObjectCreatePartDefinition = classType.Invoke("CreatePartDefinition", type == null ? null : type.getJCOInstance(), origin == null ? null : origin.getJCOInstance(), ensureIsDiscoverable);
+            JCObject objCreatePartDefinition = (JCObject)retObjectCreatePartDefinition;
             return new ComposablePartDefinition(objCreatePartDefinition);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreatePartDefinition != null ? retObjectCreatePartDefinition.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -282,9 +326,13 @@ public class AttributedModelServices extends NetObject  {
 
     public static java.lang.String GetContractName(NetType type) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.NotSupportedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetContractName = null;
         try {
-            return (java.lang.String)classType.Invoke("GetContractName", type == null ? null : type.getJCOInstance());
+            retObjectGetContractName = classType.Invoke("GetContractName", type == null ? null : type.getJCOInstance());
+            return (java.lang.String)retObjectGetContractName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetContractName != null ? retObjectGetContractName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -292,9 +340,13 @@ public class AttributedModelServices extends NetObject  {
 
     public static java.lang.String GetTypeIdentity(MethodInfo method) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.OutOfMemoryException, system.NotSupportedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetTypeIdentity = null;
         try {
-            return (java.lang.String)classType.Invoke("GetTypeIdentity", method == null ? null : method.getJCOInstance());
+            retObjectGetTypeIdentity = classType.Invoke("GetTypeIdentity", method == null ? null : method.getJCOInstance());
+            return (java.lang.String)retObjectGetTypeIdentity;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetTypeIdentity != null ? retObjectGetTypeIdentity.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -302,9 +354,13 @@ public class AttributedModelServices extends NetObject  {
 
     public static java.lang.String GetTypeIdentity(NetType type) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.OutOfMemoryException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetTypeIdentity = null;
         try {
-            return (java.lang.String)classType.Invoke("GetTypeIdentity", type == null ? null : type.getJCOInstance());
+            retObjectGetTypeIdentity = classType.Invoke("GetTypeIdentity", type == null ? null : type.getJCOInstance());
+            return (java.lang.String)retObjectGetTypeIdentity;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetTypeIdentity != null ? retObjectGetTypeIdentity.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -312,7 +368,7 @@ public class AttributedModelServices extends NetObject  {
 
     public static void ComposeParts(CompositionContainer container, NetObject... attributedParts) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.InvalidOperationException, system.NotImplementedException, system.componentmodel.composition.CompositionException, system.componentmodel.composition.ChangeRejectedException, system.MulticastNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("ComposeParts", container == null ? null : container.getJCOInstance(), toObjectFromArray(attributedParts));
         } catch (JCNativeException jcne) {

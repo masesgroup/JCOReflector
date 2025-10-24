@@ -242,9 +242,13 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
     
     public boolean AreAllCellsSelected(boolean includeInvisibleCells) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.RankException, system.componentmodel.InvalidEnumArgumentException, system.NullReferenceException, system.MulticastNotSupportedException, system.NotSupportedException, system.threading.ThreadStateException, system.componentmodel.Win32Exception, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAreAllCellsSelected = null;
         try {
-            return (boolean)classInstance.Invoke("AreAllCellsSelected", includeInvisibleCells);
+            retObjectAreAllCellsSelected = classInstance.Invoke("AreAllCellsSelected", includeInvisibleCells);
+            return (boolean)retObjectAreAllCellsSelected;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectAreAllCellsSelected != null ? retObjectAreAllCellsSelected.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -252,9 +256,13 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public boolean BeginEdit(boolean selectAll) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.NullReferenceException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.InvalidCastException, system.collections.generic.KeyNotFoundException, system.RankException, system.OverflowException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginEdit = null;
         try {
-            return (boolean)classInstance.Invoke("BeginEdit", selectAll);
+            retObjectBeginEdit = classInstance.Invoke("BeginEdit", selectAll);
+            return (boolean)retObjectBeginEdit;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectBeginEdit != null ? retObjectBeginEdit.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -262,9 +270,13 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public boolean CancelEdit() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.NullReferenceException, system.NotSupportedException, system.InvalidCastException, system.FormatException, system.RankException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCancelEdit = null;
         try {
-            return (boolean)classInstance.Invoke("CancelEdit");
+            retObjectCancelEdit = classInstance.Invoke("CancelEdit");
+            return (boolean)retObjectCancelEdit;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCancelEdit != null ? retObjectCancelEdit.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -272,9 +284,13 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public boolean CommitEdit(DataGridViewDataErrorContexts context) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.ArgumentException, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException, system.InvalidCastException, system.FormatException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCommitEdit = null;
         try {
-            return (boolean)classInstance.Invoke("CommitEdit", context == null ? null : context.getJCOInstance());
+            retObjectCommitEdit = classInstance.Invoke("CommitEdit", context == null ? null : context.getJCOInstance());
+            return (boolean)retObjectCommitEdit;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCommitEdit != null ? retObjectCommitEdit.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -282,9 +298,13 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public boolean EndEdit() throws Throwable, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.MissingMethodException, system.reflection.TargetInvocationException, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException, system.InvalidCastException, system.security.SecurityException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEndEdit = null;
         try {
-            return (boolean)classInstance.Invoke("EndEdit");
+            retObjectEndEdit = classInstance.Invoke("EndEdit");
+            return (boolean)retObjectEndEdit;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectEndEdit != null ? retObjectEndEdit.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -292,9 +312,13 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public boolean EndEdit(DataGridViewDataErrorContexts context) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.ArgumentException, system.NullReferenceException, system.IndexOutOfRangeException, system.NotSupportedException, system.InvalidCastException, system.FormatException, system.MissingMethodException, system.reflection.TargetInvocationException, system.componentmodel.InvalidEnumArgumentException, system.RankException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEndEdit = null;
         try {
-            return (boolean)classInstance.Invoke("EndEdit", context == null ? null : context.getJCOInstance());
+            retObjectEndEdit = classInstance.Invoke("EndEdit", context == null ? null : context.getJCOInstance());
+            return (boolean)retObjectEndEdit;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectEndEdit != null ? retObjectEndEdit.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -302,9 +326,13 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public boolean RefreshEdit() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.componentmodel.InvalidEnumArgumentException, system.NullReferenceException, system.NotSupportedException, system.security.SecurityException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.InvalidCastException, system.FormatException, system.RankException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRefreshEdit = null;
         try {
-            return (boolean)classInstance.Invoke("RefreshEdit");
+            retObjectRefreshEdit = classInstance.Invoke("RefreshEdit");
+            return (boolean)retObjectRefreshEdit;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectRefreshEdit != null ? retObjectRefreshEdit.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -312,9 +340,20 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public int DisplayedColumnCount(boolean includePartialColumns) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.RankException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDisplayedColumnCount = null;
         try {
-            return (int)classInstance.Invoke("DisplayedColumnCount", includePartialColumns);
+            retObjectDisplayedColumnCount = classInstance.Invoke("DisplayedColumnCount", includePartialColumns);
+            return (int)retObjectDisplayedColumnCount;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDisplayedColumnCount_ToString = retObjectDisplayedColumnCount == null ? "null" : retObjectDisplayedColumnCount.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectDisplayedColumnCountNumber = (java.lang.Number)retObjectDisplayedColumnCount;
+                return retObjectDisplayedColumnCountNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectDisplayedColumnCount != null ? retObjectDisplayedColumnCount.getClass() : "null", retObjectDisplayedColumnCount_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -322,9 +361,20 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public int DisplayedRowCount(boolean includePartialRow) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDisplayedRowCount = null;
         try {
-            return (int)classInstance.Invoke("DisplayedRowCount", includePartialRow);
+            retObjectDisplayedRowCount = classInstance.Invoke("DisplayedRowCount", includePartialRow);
+            return (int)retObjectDisplayedRowCount;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDisplayedRowCount_ToString = retObjectDisplayedRowCount == null ? "null" : retObjectDisplayedRowCount.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectDisplayedRowCountNumber = (java.lang.Number)retObjectDisplayedRowCount;
+                return retObjectDisplayedRowCountNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectDisplayedRowCount != null ? retObjectDisplayedRowCount.getClass() : "null", retObjectDisplayedRowCount_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -332,9 +382,20 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public int GetCellCount(DataGridViewElementStates includeFilter) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetCellCount = null;
         try {
-            return (int)classInstance.Invoke("GetCellCount", includeFilter == null ? null : includeFilter.getJCOInstance());
+            retObjectGetCellCount = classInstance.Invoke("GetCellCount", includeFilter == null ? null : includeFilter.getJCOInstance());
+            return (int)retObjectGetCellCount;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetCellCount_ToString = retObjectGetCellCount == null ? "null" : retObjectGetCellCount.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetCellCountNumber = (java.lang.Number)retObjectGetCellCount;
+                return retObjectGetCellCountNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetCellCount != null ? retObjectGetCellCount.getClass() : "null", retObjectGetCellCount_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -342,10 +403,14 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public Rectangle GetCellDisplayRectangle(int columnIndex, int rowIndex, boolean cutOverflow) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetCellDisplayRectangle = null;
         try {
-            JCObject objGetCellDisplayRectangle = (JCObject)classInstance.Invoke("GetCellDisplayRectangle", columnIndex, rowIndex, cutOverflow);
+            retObjectGetCellDisplayRectangle = classInstance.Invoke("GetCellDisplayRectangle", columnIndex, rowIndex, cutOverflow);
+            JCObject objGetCellDisplayRectangle = (JCObject)retObjectGetCellDisplayRectangle;
             return new Rectangle(objGetCellDisplayRectangle);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCellDisplayRectangle != null ? retObjectGetCellDisplayRectangle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -353,10 +418,14 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public Rectangle GetColumnDisplayRectangle(int columnIndex, boolean cutOverflow) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetColumnDisplayRectangle = null;
         try {
-            JCObject objGetColumnDisplayRectangle = (JCObject)classInstance.Invoke("GetColumnDisplayRectangle", columnIndex, cutOverflow);
+            retObjectGetColumnDisplayRectangle = classInstance.Invoke("GetColumnDisplayRectangle", columnIndex, cutOverflow);
+            JCObject objGetColumnDisplayRectangle = (JCObject)retObjectGetColumnDisplayRectangle;
             return new Rectangle(objGetColumnDisplayRectangle);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetColumnDisplayRectangle != null ? retObjectGetColumnDisplayRectangle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -364,10 +433,14 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public Rectangle GetRowDisplayRectangle(int rowIndex, boolean cutOverflow) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetRowDisplayRectangle = null;
         try {
-            JCObject objGetRowDisplayRectangle = (JCObject)classInstance.Invoke("GetRowDisplayRectangle", rowIndex, cutOverflow);
+            retObjectGetRowDisplayRectangle = classInstance.Invoke("GetRowDisplayRectangle", rowIndex, cutOverflow);
+            JCObject objGetRowDisplayRectangle = (JCObject)retObjectGetRowDisplayRectangle;
             return new Rectangle(objGetRowDisplayRectangle);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetRowDisplayRectangle != null ? retObjectGetRowDisplayRectangle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -375,10 +448,14 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public DataGridViewAdvancedBorderStyle AdjustColumnHeaderBorderStyle(DataGridViewAdvancedBorderStyle dataGridViewAdvancedBorderStyleInput, DataGridViewAdvancedBorderStyle dataGridViewAdvancedBorderStylePlaceholder, boolean isFirstDisplayedColumn, boolean isLastVisibleColumn) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.IndexOutOfRangeException, system.RankException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAdjustColumnHeaderBorderStyle = null;
         try {
-            JCObject objAdjustColumnHeaderBorderStyle = (JCObject)classInstance.Invoke("AdjustColumnHeaderBorderStyle", dataGridViewAdvancedBorderStyleInput == null ? null : dataGridViewAdvancedBorderStyleInput.getJCOInstance(), dataGridViewAdvancedBorderStylePlaceholder == null ? null : dataGridViewAdvancedBorderStylePlaceholder.getJCOInstance(), isFirstDisplayedColumn, isLastVisibleColumn);
+            retObjectAdjustColumnHeaderBorderStyle = classInstance.Invoke("AdjustColumnHeaderBorderStyle", dataGridViewAdvancedBorderStyleInput == null ? null : dataGridViewAdvancedBorderStyleInput.getJCOInstance(), dataGridViewAdvancedBorderStylePlaceholder == null ? null : dataGridViewAdvancedBorderStylePlaceholder.getJCOInstance(), isFirstDisplayedColumn, isLastVisibleColumn);
+            JCObject objAdjustColumnHeaderBorderStyle = (JCObject)retObjectAdjustColumnHeaderBorderStyle;
             return new DataGridViewAdvancedBorderStyle(objAdjustColumnHeaderBorderStyle);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAdjustColumnHeaderBorderStyle != null ? retObjectAdjustColumnHeaderBorderStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -386,10 +463,14 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public DataObject GetClipboardContent() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.RankException, system.componentmodel.InvalidEnumArgumentException, system.NullReferenceException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetClipboardContent = null;
         try {
-            JCObject objGetClipboardContent = (JCObject)classInstance.Invoke("GetClipboardContent");
+            retObjectGetClipboardContent = classInstance.Invoke("GetClipboardContent");
+            JCObject objGetClipboardContent = (JCObject)retObjectGetClipboardContent;
             return new DataObject(objGetClipboardContent);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetClipboardContent != null ? retObjectGetClipboardContent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -397,7 +478,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void AutoResizeColumn(int columnIndex) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AutoResizeColumn", columnIndex);
         } catch (JCNativeException jcne) {
@@ -407,7 +488,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void AutoResizeColumn(int columnIndex, DataGridViewAutoSizeColumnMode autoSizeColumnMode) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AutoResizeColumn", columnIndex, autoSizeColumnMode == null ? null : autoSizeColumnMode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -417,7 +498,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void AutoResizeColumnHeadersHeight() throws Throwable, system.configuration.ConfigurationErrorsException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AutoResizeColumnHeadersHeight");
         } catch (JCNativeException jcne) {
@@ -427,7 +508,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void AutoResizeColumnHeadersHeight(int columnIndex) throws Throwable, system.ArgumentOutOfRangeException, system.configuration.ConfigurationErrorsException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AutoResizeColumnHeadersHeight", columnIndex);
         } catch (JCNativeException jcne) {
@@ -437,7 +518,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void AutoResizeColumns() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AutoResizeColumns");
         } catch (JCNativeException jcne) {
@@ -447,7 +528,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void AutoResizeColumns(DataGridViewAutoSizeColumnsMode autoSizeColumnsMode) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AutoResizeColumns", autoSizeColumnsMode == null ? null : autoSizeColumnsMode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -457,7 +538,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void AutoResizeRow(int rowIndex) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AutoResizeRow", rowIndex);
         } catch (JCNativeException jcne) {
@@ -467,7 +548,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void AutoResizeRow(int rowIndex, DataGridViewAutoSizeRowMode autoSizeRowMode) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AutoResizeRow", rowIndex, autoSizeRowMode == null ? null : autoSizeRowMode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -477,7 +558,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void AutoResizeRowHeadersWidth(int rowIndex, DataGridViewRowHeadersWidthSizeMode rowHeadersWidthSizeMode) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.componentmodel.InvalidEnumArgumentException, system.configuration.ConfigurationErrorsException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AutoResizeRowHeadersWidth", rowIndex, rowHeadersWidthSizeMode == null ? null : rowHeadersWidthSizeMode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -487,7 +568,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void AutoResizeRowHeadersWidth(DataGridViewRowHeadersWidthSizeMode rowHeadersWidthSizeMode) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.componentmodel.InvalidEnumArgumentException, system.configuration.ConfigurationErrorsException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AutoResizeRowHeadersWidth", rowHeadersWidthSizeMode == null ? null : rowHeadersWidthSizeMode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -497,7 +578,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void AutoResizeRows() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AutoResizeRows");
         } catch (JCNativeException jcne) {
@@ -507,7 +588,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void AutoResizeRows(DataGridViewAutoSizeRowsMode autoSizeRowsMode) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AutoResizeRows", autoSizeRowsMode == null ? null : autoSizeRowsMode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -517,7 +598,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void ClearSelection() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException, system.NullReferenceException, system.NotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.InvalidCastException, system.security.SecurityException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ClearSelection");
         } catch (JCNativeException jcne) {
@@ -527,7 +608,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void InvalidateCell(int columnIndex, int rowIndex) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.NotSupportedException, system.NullReferenceException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("InvalidateCell", columnIndex, rowIndex);
         } catch (JCNativeException jcne) {
@@ -537,7 +618,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void InvalidateCell(DataGridViewCell dataGridViewCell) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("InvalidateCell", dataGridViewCell == null ? null : dataGridViewCell.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -547,7 +628,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void InvalidateColumn(int columnIndex) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException, system.RankException, system.componentmodel.Win32Exception, system.NotSupportedException, system.NullReferenceException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("InvalidateColumn", columnIndex);
         } catch (JCNativeException jcne) {
@@ -557,7 +638,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void InvalidateRow(int rowIndex) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException, system.componentmodel.Win32Exception, system.NotSupportedException, system.NullReferenceException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("InvalidateRow", rowIndex);
         } catch (JCNativeException jcne) {
@@ -567,7 +648,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void NotifyCurrentCellDirty(boolean dirty) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentException, system.InvalidOperationException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("NotifyCurrentCellDirty", dirty);
         } catch (JCNativeException jcne) {
@@ -577,7 +658,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void ResetText() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.NotSupportedException, system.NullReferenceException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ResetText");
         } catch (JCNativeException jcne) {
@@ -587,7 +668,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void SelectAll() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.NullReferenceException, system.TypeLoadException, system.MulticastNotSupportedException, system.NotSupportedException, system.threading.ThreadStateException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.IndexOutOfRangeException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SelectAll");
         } catch (JCNativeException jcne) {
@@ -597,7 +678,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void Sort(IComparer comparer) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.IndexOutOfRangeException, system.componentmodel.InvalidEnumArgumentException, system.OverflowException, system.InvalidCastException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Sort", comparer == null ? null : comparer.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -607,7 +688,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void Sort(DataGridViewColumn dataGridViewColumn, ListSortDirection direction) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.OverflowException, system.InvalidCastException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Sort", dataGridViewColumn == null ? null : dataGridViewColumn.getJCOInstance(), direction == null ? null : direction.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -617,7 +698,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void UpdateCellErrorText(int columnIndex, int rowIndex) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.NotSupportedException, system.NullReferenceException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("UpdateCellErrorText", columnIndex, rowIndex);
         } catch (JCNativeException jcne) {
@@ -627,7 +708,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void UpdateCellValue(int columnIndex, int rowIndex) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentException, system.InvalidOperationException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.componentmodel.InvalidEnumArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("UpdateCellValue", columnIndex, rowIndex);
         } catch (JCNativeException jcne) {
@@ -637,7 +718,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void UpdateRowErrorText(int rowIndex) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.NotSupportedException, system.NullReferenceException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("UpdateRowErrorText", rowIndex);
         } catch (JCNativeException jcne) {
@@ -647,7 +728,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void UpdateRowErrorText(int rowIndexStart, int rowIndexEnd) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.RankException, system.componentmodel.Win32Exception, system.NotSupportedException, system.security.SecurityException, system.NullReferenceException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("UpdateRowErrorText", rowIndexStart, rowIndexEnd);
         } catch (JCNativeException jcne) {
@@ -657,7 +738,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void UpdateRowHeightInfo(int rowIndex, boolean updateToEnd) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.NotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.ArithmeticException, system.RankException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("UpdateRowHeightInfo", rowIndex, updateToEnd);
         } catch (JCNativeException jcne) {
@@ -671,7 +752,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
      */
     @Deprecated 
     public void BeginInit() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToISupportInitialize to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToISupportInitialize to obtain the full interface.");
     }
 
     /**
@@ -680,7 +761,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
      */
     @Deprecated 
     public void EndInit() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToISupportInitialize to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToISupportInitialize to obtain the full interface.");
     }
 
 
@@ -689,9 +770,13 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
     
     public boolean getAllowUserToAddRows() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAllowUserToAddRows = null;
         try {
-            return (boolean)classInstance.Get("AllowUserToAddRows");
+            retObjectAllowUserToAddRows = classInstance.Get("AllowUserToAddRows");
+            return (boolean)retObjectAllowUserToAddRows;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAllowUserToAddRows != null ? retObjectAllowUserToAddRows.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -699,7 +784,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void setAllowUserToAddRows(boolean AllowUserToAddRows) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.IndexOutOfRangeException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AllowUserToAddRows", AllowUserToAddRows);
         } catch (JCNativeException jcne) {
@@ -709,9 +794,13 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public boolean getAllowUserToDeleteRows() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAllowUserToDeleteRows = null;
         try {
-            return (boolean)classInstance.Get("AllowUserToDeleteRows");
+            retObjectAllowUserToDeleteRows = classInstance.Get("AllowUserToDeleteRows");
+            return (boolean)retObjectAllowUserToDeleteRows;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAllowUserToDeleteRows != null ? retObjectAllowUserToDeleteRows.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -719,7 +808,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void setAllowUserToDeleteRows(boolean AllowUserToDeleteRows) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AllowUserToDeleteRows", AllowUserToDeleteRows);
         } catch (JCNativeException jcne) {
@@ -729,9 +818,13 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public boolean getAllowUserToOrderColumns() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAllowUserToOrderColumns = null;
         try {
-            return (boolean)classInstance.Get("AllowUserToOrderColumns");
+            retObjectAllowUserToOrderColumns = classInstance.Get("AllowUserToOrderColumns");
+            return (boolean)retObjectAllowUserToOrderColumns;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAllowUserToOrderColumns != null ? retObjectAllowUserToOrderColumns.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -739,7 +832,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void setAllowUserToOrderColumns(boolean AllowUserToOrderColumns) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AllowUserToOrderColumns", AllowUserToOrderColumns);
         } catch (JCNativeException jcne) {
@@ -749,9 +842,13 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public boolean getAllowUserToResizeColumns() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAllowUserToResizeColumns = null;
         try {
-            return (boolean)classInstance.Get("AllowUserToResizeColumns");
+            retObjectAllowUserToResizeColumns = classInstance.Get("AllowUserToResizeColumns");
+            return (boolean)retObjectAllowUserToResizeColumns;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAllowUserToResizeColumns != null ? retObjectAllowUserToResizeColumns.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -759,7 +856,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void setAllowUserToResizeColumns(boolean AllowUserToResizeColumns) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AllowUserToResizeColumns", AllowUserToResizeColumns);
         } catch (JCNativeException jcne) {
@@ -769,9 +866,13 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public boolean getAllowUserToResizeRows() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAllowUserToResizeRows = null;
         try {
-            return (boolean)classInstance.Get("AllowUserToResizeRows");
+            retObjectAllowUserToResizeRows = classInstance.Get("AllowUserToResizeRows");
+            return (boolean)retObjectAllowUserToResizeRows;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAllowUserToResizeRows != null ? retObjectAllowUserToResizeRows.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -779,7 +880,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void setAllowUserToResizeRows(boolean AllowUserToResizeRows) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AllowUserToResizeRows", AllowUserToResizeRows);
         } catch (JCNativeException jcne) {
@@ -789,9 +890,13 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public boolean getAutoGenerateColumns() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAutoGenerateColumns = null;
         try {
-            return (boolean)classInstance.Get("AutoGenerateColumns");
+            retObjectAutoGenerateColumns = classInstance.Get("AutoGenerateColumns");
+            return (boolean)retObjectAutoGenerateColumns;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAutoGenerateColumns != null ? retObjectAutoGenerateColumns.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -799,7 +904,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void setAutoGenerateColumns(boolean AutoGenerateColumns) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException, system.InvalidCastException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AutoGenerateColumns", AutoGenerateColumns);
         } catch (JCNativeException jcne) {
@@ -809,9 +914,13 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public boolean getColumnHeadersVisible() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectColumnHeadersVisible = null;
         try {
-            return (boolean)classInstance.Get("ColumnHeadersVisible");
+            retObjectColumnHeadersVisible = classInstance.Get("ColumnHeadersVisible");
+            return (boolean)retObjectColumnHeadersVisible;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectColumnHeadersVisible != null ? retObjectColumnHeadersVisible.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -819,7 +928,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void setColumnHeadersVisible(boolean ColumnHeadersVisible) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.RankException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.NotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.ArithmeticException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ColumnHeadersVisible", ColumnHeadersVisible);
         } catch (JCNativeException jcne) {
@@ -829,9 +938,13 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public boolean getEnableHeadersVisualStyles() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEnableHeadersVisualStyles = null;
         try {
-            return (boolean)classInstance.Get("EnableHeadersVisualStyles");
+            retObjectEnableHeadersVisualStyles = classInstance.Get("EnableHeadersVisualStyles");
+            return (boolean)retObjectEnableHeadersVisualStyles;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectEnableHeadersVisualStyles != null ? retObjectEnableHeadersVisualStyles.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -839,7 +952,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void setEnableHeadersVisualStyles(boolean EnableHeadersVisualStyles) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.NotSupportedException, system.security.SecurityException, system.NullReferenceException, system.OutOfMemoryException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EnableHeadersVisualStyles", EnableHeadersVisualStyles);
         } catch (JCNativeException jcne) {
@@ -849,9 +962,13 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public boolean getIsCurrentCellDirty() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsCurrentCellDirty = null;
         try {
-            return (boolean)classInstance.Get("IsCurrentCellDirty");
+            retObjectIsCurrentCellDirty = classInstance.Get("IsCurrentCellDirty");
+            return (boolean)retObjectIsCurrentCellDirty;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsCurrentCellDirty != null ? retObjectIsCurrentCellDirty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -859,9 +976,13 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public boolean getIsCurrentCellInEditMode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsCurrentCellInEditMode = null;
         try {
-            return (boolean)classInstance.Get("IsCurrentCellInEditMode");
+            retObjectIsCurrentCellInEditMode = classInstance.Get("IsCurrentCellInEditMode");
+            return (boolean)retObjectIsCurrentCellInEditMode;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsCurrentCellInEditMode != null ? retObjectIsCurrentCellInEditMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -869,9 +990,13 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public boolean getIsCurrentRowDirty() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsCurrentRowDirty = null;
         try {
-            return (boolean)classInstance.Get("IsCurrentRowDirty");
+            retObjectIsCurrentRowDirty = classInstance.Get("IsCurrentRowDirty");
+            return (boolean)retObjectIsCurrentRowDirty;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsCurrentRowDirty != null ? retObjectIsCurrentRowDirty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -879,9 +1004,13 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public boolean getMultiSelect() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMultiSelect = null;
         try {
-            return (boolean)classInstance.Get("MultiSelect");
+            retObjectMultiSelect = classInstance.Get("MultiSelect");
+            return (boolean)retObjectMultiSelect;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectMultiSelect != null ? retObjectMultiSelect.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -889,7 +1018,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void setMultiSelect(boolean MultiSelect) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NullReferenceException, system.NotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MultiSelect", MultiSelect);
         } catch (JCNativeException jcne) {
@@ -899,9 +1028,13 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public boolean getReadOnly() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadOnly = null;
         try {
-            return (boolean)classInstance.Get("ReadOnly");
+            retObjectReadOnly = classInstance.Get("ReadOnly");
+            return (boolean)retObjectReadOnly;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectReadOnly != null ? retObjectReadOnly.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -909,7 +1042,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void setReadOnly(boolean ReadOnly) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.ArgumentException, system.NullReferenceException, system.IndexOutOfRangeException, system.NotSupportedException, system.InvalidCastException, system.FormatException, system.MissingMethodException, system.reflection.TargetInvocationException, system.componentmodel.InvalidEnumArgumentException, system.RankException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ReadOnly", ReadOnly);
         } catch (JCNativeException jcne) {
@@ -919,9 +1052,13 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public boolean getRowHeadersVisible() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRowHeadersVisible = null;
         try {
-            return (boolean)classInstance.Get("RowHeadersVisible");
+            retObjectRowHeadersVisible = classInstance.Get("RowHeadersVisible");
+            return (boolean)retObjectRowHeadersVisible;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectRowHeadersVisible != null ? retObjectRowHeadersVisible.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -929,7 +1066,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void setRowHeadersVisible(boolean RowHeadersVisible) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.componentmodel.InvalidEnumArgumentException, system.ArithmeticException, system.RankException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RowHeadersVisible", RowHeadersVisible);
         } catch (JCNativeException jcne) {
@@ -939,9 +1076,13 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public boolean getShowCellErrors() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShowCellErrors = null;
         try {
-            return (boolean)classInstance.Get("ShowCellErrors");
+            retObjectShowCellErrors = classInstance.Get("ShowCellErrors");
+            return (boolean)retObjectShowCellErrors;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectShowCellErrors != null ? retObjectShowCellErrors.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -949,7 +1090,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void setShowCellErrors(boolean ShowCellErrors) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.configuration.ConfigurationErrorsException, system.InvalidOperationException, system.security.SecurityException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.threading.AbandonedMutexException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException, system.NotSupportedException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ShowCellErrors", ShowCellErrors);
         } catch (JCNativeException jcne) {
@@ -959,9 +1100,13 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public boolean getShowCellToolTips() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShowCellToolTips = null;
         try {
-            return (boolean)classInstance.Get("ShowCellToolTips");
+            retObjectShowCellToolTips = classInstance.Get("ShowCellToolTips");
+            return (boolean)retObjectShowCellToolTips;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectShowCellToolTips != null ? retObjectShowCellToolTips.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -969,7 +1114,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void setShowCellToolTips(boolean ShowCellToolTips) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.configuration.ConfigurationErrorsException, system.InvalidOperationException, system.security.SecurityException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.threading.AbandonedMutexException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ShowCellToolTips", ShowCellToolTips);
         } catch (JCNativeException jcne) {
@@ -979,9 +1124,13 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public boolean getShowEditingIcon() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShowEditingIcon = null;
         try {
-            return (boolean)classInstance.Get("ShowEditingIcon");
+            retObjectShowEditingIcon = classInstance.Get("ShowEditingIcon");
+            return (boolean)retObjectShowEditingIcon;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectShowEditingIcon != null ? retObjectShowEditingIcon.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -989,7 +1138,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void setShowEditingIcon(boolean ShowEditingIcon) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.NotSupportedException, system.NullReferenceException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ShowEditingIcon", ShowEditingIcon);
         } catch (JCNativeException jcne) {
@@ -999,9 +1148,13 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public boolean getShowRowErrors() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShowRowErrors = null;
         try {
-            return (boolean)classInstance.Get("ShowRowErrors");
+            retObjectShowRowErrors = classInstance.Get("ShowRowErrors");
+            return (boolean)retObjectShowRowErrors;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectShowRowErrors != null ? retObjectShowRowErrors.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1009,7 +1162,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void setShowRowErrors(boolean ShowRowErrors) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.configuration.ConfigurationErrorsException, system.InvalidOperationException, system.security.SecurityException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.threading.AbandonedMutexException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ShowRowErrors", ShowRowErrors);
         } catch (JCNativeException jcne) {
@@ -1019,9 +1172,13 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public boolean getStandardTab() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStandardTab = null;
         try {
-            return (boolean)classInstance.Get("StandardTab");
+            retObjectStandardTab = classInstance.Get("StandardTab");
+            return (boolean)retObjectStandardTab;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectStandardTab != null ? retObjectStandardTab.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1029,7 +1186,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void setStandardTab(boolean StandardTab) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("StandardTab", StandardTab);
         } catch (JCNativeException jcne) {
@@ -1039,9 +1196,13 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public boolean getVirtualMode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVirtualMode = null;
         try {
-            return (boolean)classInstance.Get("VirtualMode");
+            retObjectVirtualMode = classInstance.Get("VirtualMode");
+            return (boolean)retObjectVirtualMode;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectVirtualMode != null ? retObjectVirtualMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1049,7 +1210,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void setVirtualMode(boolean VirtualMode) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.NotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.ArithmeticException, system.RankException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("VirtualMode", VirtualMode);
         } catch (JCNativeException jcne) {
@@ -1059,9 +1220,20 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public int getColumnCount() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectColumnCount = null;
         try {
-            return (int)classInstance.Get("ColumnCount");
+            retObjectColumnCount = classInstance.Get("ColumnCount");
+            return (int)retObjectColumnCount;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectColumnCount_ToString = retObjectColumnCount == null ? "null" : retObjectColumnCount.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectColumnCountNumber = (java.lang.Number)retObjectColumnCount;
+                return retObjectColumnCountNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectColumnCount != null ? retObjectColumnCount.getClass() : "null", retObjectColumnCount_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1069,7 +1241,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void setColumnCount(int ColumnCount) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.componentmodel.InvalidEnumArgumentException, system.FormatException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ColumnCount", ColumnCount);
         } catch (JCNativeException jcne) {
@@ -1079,9 +1251,20 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public int getColumnHeadersHeight() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectColumnHeadersHeight = null;
         try {
-            return (int)classInstance.Get("ColumnHeadersHeight");
+            retObjectColumnHeadersHeight = classInstance.Get("ColumnHeadersHeight");
+            return (int)retObjectColumnHeadersHeight;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectColumnHeadersHeight_ToString = retObjectColumnHeadersHeight == null ? "null" : retObjectColumnHeadersHeight.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectColumnHeadersHeightNumber = (java.lang.Number)retObjectColumnHeadersHeight;
+                return retObjectColumnHeadersHeightNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectColumnHeadersHeight != null ? retObjectColumnHeadersHeight.getClass() : "null", retObjectColumnHeadersHeight_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1089,7 +1272,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void setColumnHeadersHeight(int ColumnHeadersHeight) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.componentmodel.InvalidEnumArgumentException, system.ArithmeticException, system.RankException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ColumnHeadersHeight", ColumnHeadersHeight);
         } catch (JCNativeException jcne) {
@@ -1099,9 +1282,20 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public int getFirstDisplayedScrollingColumnHiddenWidth() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFirstDisplayedScrollingColumnHiddenWidth = null;
         try {
-            return (int)classInstance.Get("FirstDisplayedScrollingColumnHiddenWidth");
+            retObjectFirstDisplayedScrollingColumnHiddenWidth = classInstance.Get("FirstDisplayedScrollingColumnHiddenWidth");
+            return (int)retObjectFirstDisplayedScrollingColumnHiddenWidth;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectFirstDisplayedScrollingColumnHiddenWidth_ToString = retObjectFirstDisplayedScrollingColumnHiddenWidth == null ? "null" : retObjectFirstDisplayedScrollingColumnHiddenWidth.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectFirstDisplayedScrollingColumnHiddenWidthNumber = (java.lang.Number)retObjectFirstDisplayedScrollingColumnHiddenWidth;
+                return retObjectFirstDisplayedScrollingColumnHiddenWidthNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectFirstDisplayedScrollingColumnHiddenWidth != null ? retObjectFirstDisplayedScrollingColumnHiddenWidth.getClass() : "null", retObjectFirstDisplayedScrollingColumnHiddenWidth_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1109,9 +1303,20 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public int getFirstDisplayedScrollingColumnIndex() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFirstDisplayedScrollingColumnIndex = null;
         try {
-            return (int)classInstance.Get("FirstDisplayedScrollingColumnIndex");
+            retObjectFirstDisplayedScrollingColumnIndex = classInstance.Get("FirstDisplayedScrollingColumnIndex");
+            return (int)retObjectFirstDisplayedScrollingColumnIndex;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectFirstDisplayedScrollingColumnIndex_ToString = retObjectFirstDisplayedScrollingColumnIndex == null ? "null" : retObjectFirstDisplayedScrollingColumnIndex.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectFirstDisplayedScrollingColumnIndexNumber = (java.lang.Number)retObjectFirstDisplayedScrollingColumnIndex;
+                return retObjectFirstDisplayedScrollingColumnIndexNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectFirstDisplayedScrollingColumnIndex != null ? retObjectFirstDisplayedScrollingColumnIndex.getClass() : "null", retObjectFirstDisplayedScrollingColumnIndex_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1119,7 +1324,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void setFirstDisplayedScrollingColumnIndex(int FirstDisplayedScrollingColumnIndex) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.componentmodel.Win32Exception, system.configuration.ConfigurationErrorsException, system.security.SecurityException, system.NullReferenceException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.InvalidCastException, system.componentmodel.InvalidEnumArgumentException, system.RankException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FirstDisplayedScrollingColumnIndex", FirstDisplayedScrollingColumnIndex);
         } catch (JCNativeException jcne) {
@@ -1129,9 +1334,20 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public int getFirstDisplayedScrollingRowIndex() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFirstDisplayedScrollingRowIndex = null;
         try {
-            return (int)classInstance.Get("FirstDisplayedScrollingRowIndex");
+            retObjectFirstDisplayedScrollingRowIndex = classInstance.Get("FirstDisplayedScrollingRowIndex");
+            return (int)retObjectFirstDisplayedScrollingRowIndex;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectFirstDisplayedScrollingRowIndex_ToString = retObjectFirstDisplayedScrollingRowIndex == null ? "null" : retObjectFirstDisplayedScrollingRowIndex.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectFirstDisplayedScrollingRowIndexNumber = (java.lang.Number)retObjectFirstDisplayedScrollingRowIndex;
+                return retObjectFirstDisplayedScrollingRowIndexNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectFirstDisplayedScrollingRowIndex != null ? retObjectFirstDisplayedScrollingRowIndex.getClass() : "null", retObjectFirstDisplayedScrollingRowIndex_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1139,7 +1355,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void setFirstDisplayedScrollingRowIndex(int FirstDisplayedScrollingRowIndex) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.NotSupportedException, system.configuration.ConfigurationErrorsException, system.security.SecurityException, system.NullReferenceException, system.OutOfMemoryException, system.InvalidCastException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.RankException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FirstDisplayedScrollingRowIndex", FirstDisplayedScrollingRowIndex);
         } catch (JCNativeException jcne) {
@@ -1149,9 +1365,20 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public int getHorizontalScrollingOffset() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHorizontalScrollingOffset = null;
         try {
-            return (int)classInstance.Get("HorizontalScrollingOffset");
+            retObjectHorizontalScrollingOffset = classInstance.Get("HorizontalScrollingOffset");
+            return (int)retObjectHorizontalScrollingOffset;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectHorizontalScrollingOffset_ToString = retObjectHorizontalScrollingOffset == null ? "null" : retObjectHorizontalScrollingOffset.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectHorizontalScrollingOffsetNumber = (java.lang.Number)retObjectHorizontalScrollingOffset;
+                return retObjectHorizontalScrollingOffsetNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectHorizontalScrollingOffset != null ? retObjectHorizontalScrollingOffset.getClass() : "null", retObjectHorizontalScrollingOffset_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1159,7 +1386,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void setHorizontalScrollingOffset(int HorizontalScrollingOffset) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NullReferenceException, system.OutOfMemoryException, system.RankException, system.componentmodel.InvalidEnumArgumentException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("HorizontalScrollingOffset", HorizontalScrollingOffset);
         } catch (JCNativeException jcne) {
@@ -1169,9 +1396,20 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public int getNewRowIndex() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNewRowIndex = null;
         try {
-            return (int)classInstance.Get("NewRowIndex");
+            retObjectNewRowIndex = classInstance.Get("NewRowIndex");
+            return (int)retObjectNewRowIndex;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectNewRowIndex_ToString = retObjectNewRowIndex == null ? "null" : retObjectNewRowIndex.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectNewRowIndexNumber = (java.lang.Number)retObjectNewRowIndex;
+                return retObjectNewRowIndexNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectNewRowIndex != null ? retObjectNewRowIndex.getClass() : "null", retObjectNewRowIndex_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1179,9 +1417,20 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public int getRowCount() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRowCount = null;
         try {
-            return (int)classInstance.Get("RowCount");
+            retObjectRowCount = classInstance.Get("RowCount");
+            return (int)retObjectRowCount;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectRowCount_ToString = retObjectRowCount == null ? "null" : retObjectRowCount.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectRowCountNumber = (java.lang.Number)retObjectRowCount;
+                return retObjectRowCountNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectRowCount != null ? retObjectRowCount.getClass() : "null", retObjectRowCount_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1189,7 +1438,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void setRowCount(int RowCount) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NullReferenceException, system.componentmodel.InvalidEnumArgumentException, system.InvalidCastException, system.componentmodel.Win32Exception, system.configuration.ConfigurationErrorsException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RowCount", RowCount);
         } catch (JCNativeException jcne) {
@@ -1199,9 +1448,20 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public int getRowHeadersWidth() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRowHeadersWidth = null;
         try {
-            return (int)classInstance.Get("RowHeadersWidth");
+            retObjectRowHeadersWidth = classInstance.Get("RowHeadersWidth");
+            return (int)retObjectRowHeadersWidth;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectRowHeadersWidth_ToString = retObjectRowHeadersWidth == null ? "null" : retObjectRowHeadersWidth.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectRowHeadersWidthNumber = (java.lang.Number)retObjectRowHeadersWidth;
+                return retObjectRowHeadersWidthNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectRowHeadersWidth != null ? retObjectRowHeadersWidth.getClass() : "null", retObjectRowHeadersWidth_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1209,7 +1469,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void setRowHeadersWidth(int RowHeadersWidth) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.componentmodel.InvalidEnumArgumentException, system.ArithmeticException, system.RankException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RowHeadersWidth", RowHeadersWidth);
         } catch (JCNativeException jcne) {
@@ -1219,9 +1479,20 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public int getVerticalScrollingOffset() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVerticalScrollingOffset = null;
         try {
-            return (int)classInstance.Get("VerticalScrollingOffset");
+            retObjectVerticalScrollingOffset = classInstance.Get("VerticalScrollingOffset");
+            return (int)retObjectVerticalScrollingOffset;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectVerticalScrollingOffset_ToString = retObjectVerticalScrollingOffset == null ? "null" : retObjectVerticalScrollingOffset.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectVerticalScrollingOffsetNumber = (java.lang.Number)retObjectVerticalScrollingOffset;
+                return retObjectVerticalScrollingOffsetNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectVerticalScrollingOffset != null ? retObjectVerticalScrollingOffset.getClass() : "null", retObjectVerticalScrollingOffset_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1229,10 +1500,14 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public Color getBackgroundColor() throws Throwable, system.NullReferenceException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBackgroundColor = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("BackgroundColor");
+            retObjectBackgroundColor = classInstance.Get("BackgroundColor");
+            JCObject val = (JCObject)retObjectBackgroundColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBackgroundColor != null ? retObjectBackgroundColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1240,7 +1515,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void setBackgroundColor(Color BackgroundColor) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException, system.componentmodel.Win32Exception, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BackgroundColor", BackgroundColor == null ? null : BackgroundColor.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1250,10 +1525,14 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public Color getGridColor() throws Throwable, system.NullReferenceException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGridColor = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("GridColor");
+            retObjectGridColor = classInstance.Get("GridColor");
+            JCObject val = (JCObject)retObjectGridColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGridColor != null ? retObjectGridColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1261,7 +1540,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void setGridColor(Color GridColor) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException, system.componentmodel.Win32Exception, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("GridColor", GridColor == null ? null : GridColor.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1271,10 +1550,14 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public Point getCurrentCellAddress() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCurrentCellAddress = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CurrentCellAddress");
+            retObjectCurrentCellAddress = classInstance.Get("CurrentCellAddress");
+            JCObject val = (JCObject)retObjectCurrentCellAddress;
             return new Point(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCurrentCellAddress != null ? retObjectCurrentCellAddress.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1282,10 +1565,14 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public NetObject getDataSource() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDataSource = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DataSource");
+            retObjectDataSource = classInstance.Get("DataSource");
+            JCObject val = (JCObject)retObjectDataSource;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDataSource != null ? retObjectDataSource.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1293,7 +1580,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void setDataSource(NetObject DataSource) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.componentmodel.InvalidEnumArgumentException, system.InvalidCastException, system.NotSupportedException, system.FormatException, system.RankException, system.OverflowException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DataSource", DataSource == null ? null : DataSource.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1303,9 +1590,13 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public java.lang.String getDataMember() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDataMember = null;
         try {
-            return (java.lang.String)classInstance.Get("DataMember");
+            retObjectDataMember = classInstance.Get("DataMember");
+            return (java.lang.String)retObjectDataMember;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDataMember != null ? retObjectDataMember.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1313,7 +1604,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void setDataMember(java.lang.String DataMember) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.componentmodel.InvalidEnumArgumentException, system.InvalidCastException, system.NotSupportedException, system.FormatException, system.RankException, system.OverflowException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DataMember", DataMember);
         } catch (JCNativeException jcne) {
@@ -1323,10 +1614,14 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public BorderStyle getBorderStyle() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBorderStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("BorderStyle");
+            retObjectBorderStyle = classInstance.Get("BorderStyle");
+            JCObject val = (JCObject)retObjectBorderStyle;
             return new BorderStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBorderStyle != null ? retObjectBorderStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1334,7 +1629,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void setBorderStyle(BorderStyle BorderStyle) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.ArithmeticException, system.RankException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BorderStyle", BorderStyle == null ? null : BorderStyle.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1344,10 +1639,14 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public Control getEditingControl() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEditingControl = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("EditingControl");
+            retObjectEditingControl = classInstance.Get("EditingControl");
+            JCObject val = (JCObject)retObjectEditingControl;
             return new Control(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEditingControl != null ? retObjectEditingControl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1355,10 +1654,14 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public Cursor getUserSetCursor() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUserSetCursor = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("UserSetCursor");
+            retObjectUserSetCursor = classInstance.Get("UserSetCursor");
+            JCObject val = (JCObject)retObjectUserSetCursor;
             return new Cursor(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUserSetCursor != null ? retObjectUserSetCursor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1366,10 +1669,14 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public DataGridViewAdvancedBorderStyle getAdjustedTopLeftHeaderBorderStyle() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.IndexOutOfRangeException, system.RankException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAdjustedTopLeftHeaderBorderStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AdjustedTopLeftHeaderBorderStyle");
+            retObjectAdjustedTopLeftHeaderBorderStyle = classInstance.Get("AdjustedTopLeftHeaderBorderStyle");
+            JCObject val = (JCObject)retObjectAdjustedTopLeftHeaderBorderStyle;
             return new DataGridViewAdvancedBorderStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAdjustedTopLeftHeaderBorderStyle != null ? retObjectAdjustedTopLeftHeaderBorderStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1377,10 +1684,14 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public DataGridViewAdvancedBorderStyle getAdvancedCellBorderStyle() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAdvancedCellBorderStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AdvancedCellBorderStyle");
+            retObjectAdvancedCellBorderStyle = classInstance.Get("AdvancedCellBorderStyle");
+            JCObject val = (JCObject)retObjectAdvancedCellBorderStyle;
             return new DataGridViewAdvancedBorderStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAdvancedCellBorderStyle != null ? retObjectAdvancedCellBorderStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1388,10 +1699,14 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public DataGridViewAdvancedBorderStyle getAdvancedColumnHeadersBorderStyle() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAdvancedColumnHeadersBorderStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AdvancedColumnHeadersBorderStyle");
+            retObjectAdvancedColumnHeadersBorderStyle = classInstance.Get("AdvancedColumnHeadersBorderStyle");
+            JCObject val = (JCObject)retObjectAdvancedColumnHeadersBorderStyle;
             return new DataGridViewAdvancedBorderStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAdvancedColumnHeadersBorderStyle != null ? retObjectAdvancedColumnHeadersBorderStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1399,10 +1714,14 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public DataGridViewAdvancedBorderStyle getAdvancedRowHeadersBorderStyle() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAdvancedRowHeadersBorderStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AdvancedRowHeadersBorderStyle");
+            retObjectAdvancedRowHeadersBorderStyle = classInstance.Get("AdvancedRowHeadersBorderStyle");
+            JCObject val = (JCObject)retObjectAdvancedRowHeadersBorderStyle;
             return new DataGridViewAdvancedBorderStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAdvancedRowHeadersBorderStyle != null ? retObjectAdvancedRowHeadersBorderStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1410,10 +1729,14 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public DataGridViewAutoSizeColumnsMode getAutoSizeColumnsMode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAutoSizeColumnsMode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AutoSizeColumnsMode");
+            retObjectAutoSizeColumnsMode = classInstance.Get("AutoSizeColumnsMode");
+            JCObject val = (JCObject)retObjectAutoSizeColumnsMode;
             return new DataGridViewAutoSizeColumnsMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAutoSizeColumnsMode != null ? retObjectAutoSizeColumnsMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1421,7 +1744,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void setAutoSizeColumnsMode(DataGridViewAutoSizeColumnsMode AutoSizeColumnsMode) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AutoSizeColumnsMode", AutoSizeColumnsMode == null ? null : AutoSizeColumnsMode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1431,10 +1754,14 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public DataGridViewAutoSizeRowsMode getAutoSizeRowsMode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAutoSizeRowsMode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AutoSizeRowsMode");
+            retObjectAutoSizeRowsMode = classInstance.Get("AutoSizeRowsMode");
+            JCObject val = (JCObject)retObjectAutoSizeRowsMode;
             return new DataGridViewAutoSizeRowsMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAutoSizeRowsMode != null ? retObjectAutoSizeRowsMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1442,7 +1769,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void setAutoSizeRowsMode(DataGridViewAutoSizeRowsMode AutoSizeRowsMode) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AutoSizeRowsMode", AutoSizeRowsMode == null ? null : AutoSizeRowsMode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1452,10 +1779,14 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public DataGridViewCell getCurrentCell() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.NullReferenceException, system.TypeLoadException, system.MulticastNotSupportedException, system.NotSupportedException, system.threading.ThreadStateException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCurrentCell = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CurrentCell");
+            retObjectCurrentCell = classInstance.Get("CurrentCell");
+            JCObject val = (JCObject)retObjectCurrentCell;
             return new DataGridViewCell(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCurrentCell != null ? retObjectCurrentCell.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1463,7 +1794,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void setCurrentCell(DataGridViewCell CurrentCell) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NullReferenceException, system.NotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.InvalidCastException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CurrentCell", CurrentCell == null ? null : CurrentCell.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1473,10 +1804,14 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public DataGridViewCell getFirstDisplayedCell() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.componentmodel.InvalidEnumArgumentException, system.NullReferenceException, system.MulticastNotSupportedException, system.NotSupportedException, system.threading.ThreadStateException, system.componentmodel.Win32Exception, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFirstDisplayedCell = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("FirstDisplayedCell");
+            retObjectFirstDisplayedCell = classInstance.Get("FirstDisplayedCell");
+            JCObject val = (JCObject)retObjectFirstDisplayedCell;
             return new DataGridViewCell(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFirstDisplayedCell != null ? retObjectFirstDisplayedCell.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1484,7 +1819,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void setFirstDisplayedCell(DataGridViewCell FirstDisplayedCell) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.NullReferenceException, system.MulticastNotSupportedException, system.threading.ThreadStateException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.IndexOutOfRangeException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FirstDisplayedCell", FirstDisplayedCell == null ? null : FirstDisplayedCell.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1494,10 +1829,14 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public DataGridViewCellBorderStyle getCellBorderStyle() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCellBorderStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CellBorderStyle");
+            retObjectCellBorderStyle = classInstance.Get("CellBorderStyle");
+            JCObject val = (JCObject)retObjectCellBorderStyle;
             return new DataGridViewCellBorderStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCellBorderStyle != null ? retObjectCellBorderStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1505,7 +1844,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void setCellBorderStyle(DataGridViewCellBorderStyle CellBorderStyle) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.RankException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CellBorderStyle", CellBorderStyle == null ? null : CellBorderStyle.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1515,10 +1854,14 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public DataGridViewCellStyle getAlternatingRowsDefaultCellStyle() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAlternatingRowsDefaultCellStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AlternatingRowsDefaultCellStyle");
+            retObjectAlternatingRowsDefaultCellStyle = classInstance.Get("AlternatingRowsDefaultCellStyle");
+            JCObject val = (JCObject)retObjectAlternatingRowsDefaultCellStyle;
             return new DataGridViewCellStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAlternatingRowsDefaultCellStyle != null ? retObjectAlternatingRowsDefaultCellStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1526,7 +1869,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void setAlternatingRowsDefaultCellStyle(DataGridViewCellStyle AlternatingRowsDefaultCellStyle) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AlternatingRowsDefaultCellStyle", AlternatingRowsDefaultCellStyle == null ? null : AlternatingRowsDefaultCellStyle.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1536,10 +1879,14 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public DataGridViewCellStyle getColumnHeadersDefaultCellStyle() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NullReferenceException, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectColumnHeadersDefaultCellStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ColumnHeadersDefaultCellStyle");
+            retObjectColumnHeadersDefaultCellStyle = classInstance.Get("ColumnHeadersDefaultCellStyle");
+            JCObject val = (JCObject)retObjectColumnHeadersDefaultCellStyle;
             return new DataGridViewCellStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectColumnHeadersDefaultCellStyle != null ? retObjectColumnHeadersDefaultCellStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1547,7 +1894,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void setColumnHeadersDefaultCellStyle(DataGridViewCellStyle ColumnHeadersDefaultCellStyle) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NullReferenceException, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ColumnHeadersDefaultCellStyle", ColumnHeadersDefaultCellStyle == null ? null : ColumnHeadersDefaultCellStyle.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1557,10 +1904,14 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public DataGridViewCellStyle getDefaultCellStyle() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NullReferenceException, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDefaultCellStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DefaultCellStyle");
+            retObjectDefaultCellStyle = classInstance.Get("DefaultCellStyle");
+            JCObject val = (JCObject)retObjectDefaultCellStyle;
             return new DataGridViewCellStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefaultCellStyle != null ? retObjectDefaultCellStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1568,7 +1919,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void setDefaultCellStyle(DataGridViewCellStyle DefaultCellStyle) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NullReferenceException, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DefaultCellStyle", DefaultCellStyle == null ? null : DefaultCellStyle.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1578,10 +1929,14 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public DataGridViewCellStyle getRowHeadersDefaultCellStyle() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NullReferenceException, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRowHeadersDefaultCellStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RowHeadersDefaultCellStyle");
+            retObjectRowHeadersDefaultCellStyle = classInstance.Get("RowHeadersDefaultCellStyle");
+            JCObject val = (JCObject)retObjectRowHeadersDefaultCellStyle;
             return new DataGridViewCellStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRowHeadersDefaultCellStyle != null ? retObjectRowHeadersDefaultCellStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1589,7 +1944,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void setRowHeadersDefaultCellStyle(DataGridViewCellStyle RowHeadersDefaultCellStyle) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NullReferenceException, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RowHeadersDefaultCellStyle", RowHeadersDefaultCellStyle == null ? null : RowHeadersDefaultCellStyle.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1599,10 +1954,14 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public DataGridViewCellStyle getRowsDefaultCellStyle() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRowsDefaultCellStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RowsDefaultCellStyle");
+            retObjectRowsDefaultCellStyle = classInstance.Get("RowsDefaultCellStyle");
+            JCObject val = (JCObject)retObjectRowsDefaultCellStyle;
             return new DataGridViewCellStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRowsDefaultCellStyle != null ? retObjectRowsDefaultCellStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1610,7 +1969,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void setRowsDefaultCellStyle(DataGridViewCellStyle RowsDefaultCellStyle) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RowsDefaultCellStyle", RowsDefaultCellStyle == null ? null : RowsDefaultCellStyle.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1620,10 +1979,14 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public DataGridViewClipboardCopyMode getClipboardCopyMode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClipboardCopyMode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ClipboardCopyMode");
+            retObjectClipboardCopyMode = classInstance.Get("ClipboardCopyMode");
+            JCObject val = (JCObject)retObjectClipboardCopyMode;
             return new DataGridViewClipboardCopyMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClipboardCopyMode != null ? retObjectClipboardCopyMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1631,7 +1994,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void setClipboardCopyMode(DataGridViewClipboardCopyMode ClipboardCopyMode) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ClipboardCopyMode", ClipboardCopyMode == null ? null : ClipboardCopyMode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1641,10 +2004,14 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public DataGridViewColumn getSortedColumn() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSortedColumn = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SortedColumn");
+            retObjectSortedColumn = classInstance.Get("SortedColumn");
+            JCObject val = (JCObject)retObjectSortedColumn;
             return new DataGridViewColumn(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSortedColumn != null ? retObjectSortedColumn.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1652,10 +2019,14 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public DataGridViewColumnCollection getColumns() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectColumns = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Columns");
+            retObjectColumns = classInstance.Get("Columns");
+            JCObject val = (JCObject)retObjectColumns;
             return new DataGridViewColumnCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectColumns != null ? retObjectColumns.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1663,10 +2034,14 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public DataGridViewColumnHeadersHeightSizeMode getColumnHeadersHeightSizeMode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectColumnHeadersHeightSizeMode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ColumnHeadersHeightSizeMode");
+            retObjectColumnHeadersHeightSizeMode = classInstance.Get("ColumnHeadersHeightSizeMode");
+            JCObject val = (JCObject)retObjectColumnHeadersHeightSizeMode;
             return new DataGridViewColumnHeadersHeightSizeMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectColumnHeadersHeightSizeMode != null ? retObjectColumnHeadersHeightSizeMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1674,7 +2049,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void setColumnHeadersHeightSizeMode(DataGridViewColumnHeadersHeightSizeMode ColumnHeadersHeightSizeMode) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ColumnHeadersHeightSizeMode", ColumnHeadersHeightSizeMode == null ? null : ColumnHeadersHeightSizeMode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1684,10 +2059,14 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public DataGridViewEditMode getEditMode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEditMode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("EditMode");
+            retObjectEditMode = classInstance.Get("EditMode");
+            JCObject val = (JCObject)retObjectEditMode;
             return new DataGridViewEditMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEditMode != null ? retObjectEditMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1695,7 +2074,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void setEditMode(DataGridViewEditMode EditMode) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.security.SecurityException, system.OutOfMemoryException, system.InvalidCastException, system.collections.generic.KeyNotFoundException, system.RankException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EditMode", EditMode == null ? null : EditMode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1705,10 +2084,14 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public DataGridViewHeaderBorderStyle getColumnHeadersBorderStyle() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectColumnHeadersBorderStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ColumnHeadersBorderStyle");
+            retObjectColumnHeadersBorderStyle = classInstance.Get("ColumnHeadersBorderStyle");
+            JCObject val = (JCObject)retObjectColumnHeadersBorderStyle;
             return new DataGridViewHeaderBorderStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectColumnHeadersBorderStyle != null ? retObjectColumnHeadersBorderStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1716,7 +2099,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void setColumnHeadersBorderStyle(DataGridViewHeaderBorderStyle ColumnHeadersBorderStyle) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.RankException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ColumnHeadersBorderStyle", ColumnHeadersBorderStyle == null ? null : ColumnHeadersBorderStyle.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1726,10 +2109,14 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public DataGridViewHeaderBorderStyle getRowHeadersBorderStyle() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRowHeadersBorderStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RowHeadersBorderStyle");
+            retObjectRowHeadersBorderStyle = classInstance.Get("RowHeadersBorderStyle");
+            JCObject val = (JCObject)retObjectRowHeadersBorderStyle;
             return new DataGridViewHeaderBorderStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRowHeadersBorderStyle != null ? retObjectRowHeadersBorderStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1737,7 +2124,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void setRowHeadersBorderStyle(DataGridViewHeaderBorderStyle RowHeadersBorderStyle) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.RankException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RowHeadersBorderStyle", RowHeadersBorderStyle == null ? null : RowHeadersBorderStyle.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1747,10 +2134,14 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public DataGridViewHeaderCell getTopLeftHeaderCell() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationErrorsException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTopLeftHeaderCell = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TopLeftHeaderCell");
+            retObjectTopLeftHeaderCell = classInstance.Get("TopLeftHeaderCell");
+            JCObject val = (JCObject)retObjectTopLeftHeaderCell;
             return new DataGridViewHeaderCell(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTopLeftHeaderCell != null ? retObjectTopLeftHeaderCell.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1758,7 +2149,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void setTopLeftHeaderCell(DataGridViewHeaderCell TopLeftHeaderCell) throws Throwable, system.InvalidOperationException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NullReferenceException, system.NotSupportedException, system.ArgumentNullException, system.NotImplementedException, system.MissingMethodException, system.componentmodel.InvalidEnumArgumentException, system.globalization.CultureNotFoundException, system.RankException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TopLeftHeaderCell", TopLeftHeaderCell == null ? null : TopLeftHeaderCell.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1768,10 +2159,14 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public DataGridViewRow getCurrentRow() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.NullReferenceException, system.TypeLoadException, system.MulticastNotSupportedException, system.NotSupportedException, system.threading.ThreadStateException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCurrentRow = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CurrentRow");
+            retObjectCurrentRow = classInstance.Get("CurrentRow");
+            JCObject val = (JCObject)retObjectCurrentRow;
             return new DataGridViewRow(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCurrentRow != null ? retObjectCurrentRow.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1779,10 +2174,14 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public DataGridViewRow getRowTemplate() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.RankException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRowTemplate = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RowTemplate");
+            retObjectRowTemplate = classInstance.Get("RowTemplate");
+            JCObject val = (JCObject)retObjectRowTemplate;
             return new DataGridViewRow(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRowTemplate != null ? retObjectRowTemplate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1790,7 +2189,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void setRowTemplate(DataGridViewRow RowTemplate) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RowTemplate", RowTemplate == null ? null : RowTemplate.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1800,10 +2199,14 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public DataGridViewRowCollection getRows() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRows = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Rows");
+            retObjectRows = classInstance.Get("Rows");
+            JCObject val = (JCObject)retObjectRows;
             return new DataGridViewRowCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRows != null ? retObjectRows.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1811,10 +2214,14 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public DataGridViewRowHeadersWidthSizeMode getRowHeadersWidthSizeMode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRowHeadersWidthSizeMode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RowHeadersWidthSizeMode");
+            retObjectRowHeadersWidthSizeMode = classInstance.Get("RowHeadersWidthSizeMode");
+            JCObject val = (JCObject)retObjectRowHeadersWidthSizeMode;
             return new DataGridViewRowHeadersWidthSizeMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRowHeadersWidthSizeMode != null ? retObjectRowHeadersWidthSizeMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1822,7 +2229,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void setRowHeadersWidthSizeMode(DataGridViewRowHeadersWidthSizeMode RowHeadersWidthSizeMode) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RowHeadersWidthSizeMode", RowHeadersWidthSizeMode == null ? null : RowHeadersWidthSizeMode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1832,10 +2239,14 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public DataGridViewSelectedCellCollection getSelectedCells() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.NullReferenceException, system.TypeLoadException, system.MulticastNotSupportedException, system.NotSupportedException, system.threading.ThreadStateException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectedCells = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SelectedCells");
+            retObjectSelectedCells = classInstance.Get("SelectedCells");
+            JCObject val = (JCObject)retObjectSelectedCells;
             return new DataGridViewSelectedCellCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelectedCells != null ? retObjectSelectedCells.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1843,10 +2254,14 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public DataGridViewSelectedColumnCollection getSelectedColumns() throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectedColumns = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SelectedColumns");
+            retObjectSelectedColumns = classInstance.Get("SelectedColumns");
+            JCObject val = (JCObject)retObjectSelectedColumns;
             return new DataGridViewSelectedColumnCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelectedColumns != null ? retObjectSelectedColumns.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1854,10 +2269,14 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public DataGridViewSelectedRowCollection getSelectedRows() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.NullReferenceException, system.TypeLoadException, system.MulticastNotSupportedException, system.NotSupportedException, system.threading.ThreadStateException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectedRows = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SelectedRows");
+            retObjectSelectedRows = classInstance.Get("SelectedRows");
+            JCObject val = (JCObject)retObjectSelectedRows;
             return new DataGridViewSelectedRowCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelectedRows != null ? retObjectSelectedRows.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1865,10 +2284,14 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public DataGridViewSelectionMode getSelectionMode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectionMode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SelectionMode");
+            retObjectSelectionMode = classInstance.Get("SelectionMode");
+            JCObject val = (JCObject)retObjectSelectionMode;
             return new DataGridViewSelectionMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelectionMode != null ? retObjectSelectionMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1876,7 +2299,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void setSelectionMode(DataGridViewSelectionMode SelectionMode) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.NullReferenceException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SelectionMode", SelectionMode == null ? null : SelectionMode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1886,10 +2309,14 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public Padding getPadding() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPadding = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Padding");
+            retObjectPadding = classInstance.Get("Padding");
+            JCObject val = (JCObject)retObjectPadding;
             return new Padding(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPadding != null ? retObjectPadding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1897,7 +2324,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void setPadding(Padding Padding) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Padding", Padding == null ? null : Padding.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1907,10 +2334,14 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public Panel getEditingPanel() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.configuration.ConfigurationErrorsException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEditingPanel = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("EditingPanel");
+            retObjectEditingPanel = classInstance.Get("EditingPanel");
+            JCObject val = (JCObject)retObjectEditingPanel;
             return new Panel(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEditingPanel != null ? retObjectEditingPanel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1918,10 +2349,14 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public ScrollBars getScrollBars() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectScrollBars = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ScrollBars");
+            retObjectScrollBars = classInstance.Get("ScrollBars");
+            JCObject val = (JCObject)retObjectScrollBars;
             return new ScrollBars(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectScrollBars != null ? retObjectScrollBars.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1929,7 +2364,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void setScrollBars(ScrollBars ScrollBars) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.RankException, system.InvalidCastException, system.runtime.interopservices.ExternalException, system.ArithmeticException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ScrollBars", ScrollBars == null ? null : ScrollBars.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1939,10 +2374,14 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public SortOrder getSortOrder() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSortOrder = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SortOrder");
+            retObjectSortOrder = classInstance.Get("SortOrder");
+            JCObject val = (JCObject)retObjectSortOrder;
             return new SortOrder(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSortOrder != null ? retObjectSortOrder.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1955,7 +2394,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void addAllowUserToAddRowsChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("AllowUserToAddRowsChanged", handler);
         } catch (JCNativeException jcne) {
@@ -1965,7 +2404,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void removeAllowUserToAddRowsChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("AllowUserToAddRowsChanged", handler);
         } catch (JCNativeException jcne) {
@@ -1975,7 +2414,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void addAllowUserToDeleteRowsChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("AllowUserToDeleteRowsChanged", handler);
         } catch (JCNativeException jcne) {
@@ -1985,7 +2424,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void removeAllowUserToDeleteRowsChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("AllowUserToDeleteRowsChanged", handler);
         } catch (JCNativeException jcne) {
@@ -1995,7 +2434,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void addAllowUserToOrderColumnsChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("AllowUserToOrderColumnsChanged", handler);
         } catch (JCNativeException jcne) {
@@ -2005,7 +2444,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void removeAllowUserToOrderColumnsChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("AllowUserToOrderColumnsChanged", handler);
         } catch (JCNativeException jcne) {
@@ -2015,7 +2454,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void addAllowUserToResizeColumnsChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("AllowUserToResizeColumnsChanged", handler);
         } catch (JCNativeException jcne) {
@@ -2025,7 +2464,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void removeAllowUserToResizeColumnsChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("AllowUserToResizeColumnsChanged", handler);
         } catch (JCNativeException jcne) {
@@ -2035,7 +2474,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void addAllowUserToResizeRowsChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("AllowUserToResizeRowsChanged", handler);
         } catch (JCNativeException jcne) {
@@ -2045,7 +2484,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void removeAllowUserToResizeRowsChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("AllowUserToResizeRowsChanged", handler);
         } catch (JCNativeException jcne) {
@@ -2055,7 +2494,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void addAlternatingRowsDefaultCellStyleChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("AlternatingRowsDefaultCellStyleChanged", handler);
         } catch (JCNativeException jcne) {
@@ -2065,7 +2504,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void removeAlternatingRowsDefaultCellStyleChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("AlternatingRowsDefaultCellStyleChanged", handler);
         } catch (JCNativeException jcne) {
@@ -2075,7 +2514,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void addAutoGenerateColumnsChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("AutoGenerateColumnsChanged", handler);
         } catch (JCNativeException jcne) {
@@ -2085,7 +2524,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void removeAutoGenerateColumnsChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("AutoGenerateColumnsChanged", handler);
         } catch (JCNativeException jcne) {
@@ -2095,7 +2534,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void addBackColorChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("BackColorChanged", handler);
         } catch (JCNativeException jcne) {
@@ -2105,7 +2544,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void removeBackColorChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("BackColorChanged", handler);
         } catch (JCNativeException jcne) {
@@ -2115,7 +2554,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void addBackgroundColorChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("BackgroundColorChanged", handler);
         } catch (JCNativeException jcne) {
@@ -2125,7 +2564,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void removeBackgroundColorChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("BackgroundColorChanged", handler);
         } catch (JCNativeException jcne) {
@@ -2135,7 +2574,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void addBackgroundImageChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("BackgroundImageChanged", handler);
         } catch (JCNativeException jcne) {
@@ -2145,7 +2584,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void removeBackgroundImageChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("BackgroundImageChanged", handler);
         } catch (JCNativeException jcne) {
@@ -2155,7 +2594,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void addBackgroundImageLayoutChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("BackgroundImageLayoutChanged", handler);
         } catch (JCNativeException jcne) {
@@ -2165,7 +2604,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void removeBackgroundImageLayoutChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("BackgroundImageLayoutChanged", handler);
         } catch (JCNativeException jcne) {
@@ -2175,7 +2614,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void addBorderStyleChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("BorderStyleChanged", handler);
         } catch (JCNativeException jcne) {
@@ -2185,7 +2624,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void removeBorderStyleChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("BorderStyleChanged", handler);
         } catch (JCNativeException jcne) {
@@ -2195,7 +2634,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void addCellBorderStyleChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("CellBorderStyleChanged", handler);
         } catch (JCNativeException jcne) {
@@ -2205,7 +2644,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void removeCellBorderStyleChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("CellBorderStyleChanged", handler);
         } catch (JCNativeException jcne) {
@@ -2215,7 +2654,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void addColumnHeadersBorderStyleChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ColumnHeadersBorderStyleChanged", handler);
         } catch (JCNativeException jcne) {
@@ -2225,7 +2664,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void removeColumnHeadersBorderStyleChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ColumnHeadersBorderStyleChanged", handler);
         } catch (JCNativeException jcne) {
@@ -2235,7 +2674,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void addColumnHeadersDefaultCellStyleChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ColumnHeadersDefaultCellStyleChanged", handler);
         } catch (JCNativeException jcne) {
@@ -2245,7 +2684,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void removeColumnHeadersDefaultCellStyleChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ColumnHeadersDefaultCellStyleChanged", handler);
         } catch (JCNativeException jcne) {
@@ -2255,7 +2694,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void addColumnHeadersHeightChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ColumnHeadersHeightChanged", handler);
         } catch (JCNativeException jcne) {
@@ -2265,7 +2704,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void removeColumnHeadersHeightChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ColumnHeadersHeightChanged", handler);
         } catch (JCNativeException jcne) {
@@ -2275,7 +2714,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void addCurrentCellChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("CurrentCellChanged", handler);
         } catch (JCNativeException jcne) {
@@ -2285,7 +2724,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void removeCurrentCellChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("CurrentCellChanged", handler);
         } catch (JCNativeException jcne) {
@@ -2295,7 +2734,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void addCurrentCellDirtyStateChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("CurrentCellDirtyStateChanged", handler);
         } catch (JCNativeException jcne) {
@@ -2305,7 +2744,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void removeCurrentCellDirtyStateChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("CurrentCellDirtyStateChanged", handler);
         } catch (JCNativeException jcne) {
@@ -2315,7 +2754,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void addDataMemberChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("DataMemberChanged", handler);
         } catch (JCNativeException jcne) {
@@ -2325,7 +2764,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void removeDataMemberChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("DataMemberChanged", handler);
         } catch (JCNativeException jcne) {
@@ -2335,7 +2774,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void addDataSourceChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("DataSourceChanged", handler);
         } catch (JCNativeException jcne) {
@@ -2345,7 +2784,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void removeDataSourceChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("DataSourceChanged", handler);
         } catch (JCNativeException jcne) {
@@ -2355,7 +2794,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void addDefaultCellStyleChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("DefaultCellStyleChanged", handler);
         } catch (JCNativeException jcne) {
@@ -2365,7 +2804,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void removeDefaultCellStyleChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("DefaultCellStyleChanged", handler);
         } catch (JCNativeException jcne) {
@@ -2375,7 +2814,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void addEditModeChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("EditModeChanged", handler);
         } catch (JCNativeException jcne) {
@@ -2385,7 +2824,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void removeEditModeChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("EditModeChanged", handler);
         } catch (JCNativeException jcne) {
@@ -2395,7 +2834,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void addFontChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("FontChanged", handler);
         } catch (JCNativeException jcne) {
@@ -2405,7 +2844,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void removeFontChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("FontChanged", handler);
         } catch (JCNativeException jcne) {
@@ -2415,7 +2854,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void addForeColorChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ForeColorChanged", handler);
         } catch (JCNativeException jcne) {
@@ -2425,7 +2864,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void removeForeColorChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ForeColorChanged", handler);
         } catch (JCNativeException jcne) {
@@ -2435,7 +2874,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void addGridColorChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("GridColorChanged", handler);
         } catch (JCNativeException jcne) {
@@ -2445,7 +2884,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void removeGridColorChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("GridColorChanged", handler);
         } catch (JCNativeException jcne) {
@@ -2455,7 +2894,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void addMultiSelectChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("MultiSelectChanged", handler);
         } catch (JCNativeException jcne) {
@@ -2465,7 +2904,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void removeMultiSelectChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("MultiSelectChanged", handler);
         } catch (JCNativeException jcne) {
@@ -2475,7 +2914,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void addPaddingChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("PaddingChanged", handler);
         } catch (JCNativeException jcne) {
@@ -2485,7 +2924,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void removePaddingChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("PaddingChanged", handler);
         } catch (JCNativeException jcne) {
@@ -2495,7 +2934,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void addReadOnlyChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ReadOnlyChanged", handler);
         } catch (JCNativeException jcne) {
@@ -2505,7 +2944,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void removeReadOnlyChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ReadOnlyChanged", handler);
         } catch (JCNativeException jcne) {
@@ -2515,7 +2954,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void addRowHeadersBorderStyleChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("RowHeadersBorderStyleChanged", handler);
         } catch (JCNativeException jcne) {
@@ -2525,7 +2964,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void removeRowHeadersBorderStyleChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("RowHeadersBorderStyleChanged", handler);
         } catch (JCNativeException jcne) {
@@ -2535,7 +2974,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void addRowHeadersDefaultCellStyleChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("RowHeadersDefaultCellStyleChanged", handler);
         } catch (JCNativeException jcne) {
@@ -2545,7 +2984,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void removeRowHeadersDefaultCellStyleChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("RowHeadersDefaultCellStyleChanged", handler);
         } catch (JCNativeException jcne) {
@@ -2555,7 +2994,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void addRowHeadersWidthChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("RowHeadersWidthChanged", handler);
         } catch (JCNativeException jcne) {
@@ -2565,7 +3004,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void removeRowHeadersWidthChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("RowHeadersWidthChanged", handler);
         } catch (JCNativeException jcne) {
@@ -2575,7 +3014,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void addRowsDefaultCellStyleChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("RowsDefaultCellStyleChanged", handler);
         } catch (JCNativeException jcne) {
@@ -2585,7 +3024,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void removeRowsDefaultCellStyleChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("RowsDefaultCellStyleChanged", handler);
         } catch (JCNativeException jcne) {
@@ -2595,7 +3034,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void addSelectionChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("SelectionChanged", handler);
         } catch (JCNativeException jcne) {
@@ -2605,7 +3044,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void removeSelectionChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("SelectionChanged", handler);
         } catch (JCNativeException jcne) {
@@ -2615,7 +3054,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void addSorted(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Sorted", handler);
         } catch (JCNativeException jcne) {
@@ -2625,7 +3064,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void removeSorted(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Sorted", handler);
         } catch (JCNativeException jcne) {
@@ -2635,7 +3074,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void addStyleChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("StyleChanged", handler);
         } catch (JCNativeException jcne) {
@@ -2645,7 +3084,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void removeStyleChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("StyleChanged", handler);
         } catch (JCNativeException jcne) {
@@ -2655,7 +3094,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void addTextChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("TextChanged", handler);
         } catch (JCNativeException jcne) {
@@ -2665,7 +3104,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void removeTextChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("TextChanged", handler);
         } catch (JCNativeException jcne) {
@@ -2675,7 +3114,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void addAutoSizeColumnModeChanged(DataGridViewAutoSizeColumnModeEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("AutoSizeColumnModeChanged", handler);
         } catch (JCNativeException jcne) {
@@ -2685,7 +3124,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void removeAutoSizeColumnModeChanged(DataGridViewAutoSizeColumnModeEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("AutoSizeColumnModeChanged", handler);
         } catch (JCNativeException jcne) {
@@ -2695,7 +3134,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void addAutoSizeColumnsModeChanged(DataGridViewAutoSizeColumnsModeEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("AutoSizeColumnsModeChanged", handler);
         } catch (JCNativeException jcne) {
@@ -2705,7 +3144,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void removeAutoSizeColumnsModeChanged(DataGridViewAutoSizeColumnsModeEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("AutoSizeColumnsModeChanged", handler);
         } catch (JCNativeException jcne) {
@@ -2715,7 +3154,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void addAutoSizeRowsModeChanged(DataGridViewAutoSizeModeEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("AutoSizeRowsModeChanged", handler);
         } catch (JCNativeException jcne) {
@@ -2725,7 +3164,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void removeAutoSizeRowsModeChanged(DataGridViewAutoSizeModeEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("AutoSizeRowsModeChanged", handler);
         } catch (JCNativeException jcne) {
@@ -2735,7 +3174,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void addColumnHeadersHeightSizeModeChanged(DataGridViewAutoSizeModeEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ColumnHeadersHeightSizeModeChanged", handler);
         } catch (JCNativeException jcne) {
@@ -2745,7 +3184,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void removeColumnHeadersHeightSizeModeChanged(DataGridViewAutoSizeModeEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ColumnHeadersHeightSizeModeChanged", handler);
         } catch (JCNativeException jcne) {
@@ -2755,7 +3194,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void addRowHeadersWidthSizeModeChanged(DataGridViewAutoSizeModeEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("RowHeadersWidthSizeModeChanged", handler);
         } catch (JCNativeException jcne) {
@@ -2765,7 +3204,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void removeRowHeadersWidthSizeModeChanged(DataGridViewAutoSizeModeEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("RowHeadersWidthSizeModeChanged", handler);
         } catch (JCNativeException jcne) {
@@ -2775,7 +3214,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void addDataBindingComplete(DataGridViewBindingCompleteEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("DataBindingComplete", handler);
         } catch (JCNativeException jcne) {
@@ -2785,7 +3224,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void removeDataBindingComplete(DataGridViewBindingCompleteEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("DataBindingComplete", handler);
         } catch (JCNativeException jcne) {
@@ -2795,7 +3234,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void addCellBeginEdit(DataGridViewCellCancelEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("CellBeginEdit", handler);
         } catch (JCNativeException jcne) {
@@ -2805,7 +3244,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void removeCellBeginEdit(DataGridViewCellCancelEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("CellBeginEdit", handler);
         } catch (JCNativeException jcne) {
@@ -2815,7 +3254,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void addRowValidating(DataGridViewCellCancelEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("RowValidating", handler);
         } catch (JCNativeException jcne) {
@@ -2825,7 +3264,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void removeRowValidating(DataGridViewCellCancelEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("RowValidating", handler);
         } catch (JCNativeException jcne) {
@@ -2835,7 +3274,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void addCellContextMenuStripNeeded(DataGridViewCellContextMenuStripNeededEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("CellContextMenuStripNeeded", handler);
         } catch (JCNativeException jcne) {
@@ -2845,7 +3284,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void removeCellContextMenuStripNeeded(DataGridViewCellContextMenuStripNeededEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("CellContextMenuStripNeeded", handler);
         } catch (JCNativeException jcne) {
@@ -2855,7 +3294,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void addCellErrorTextNeeded(DataGridViewCellErrorTextNeededEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("CellErrorTextNeeded", handler);
         } catch (JCNativeException jcne) {
@@ -2865,7 +3304,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void removeCellErrorTextNeeded(DataGridViewCellErrorTextNeededEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("CellErrorTextNeeded", handler);
         } catch (JCNativeException jcne) {
@@ -2875,7 +3314,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void addCellClick(DataGridViewCellEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("CellClick", handler);
         } catch (JCNativeException jcne) {
@@ -2885,7 +3324,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void removeCellClick(DataGridViewCellEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("CellClick", handler);
         } catch (JCNativeException jcne) {
@@ -2895,7 +3334,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void addCellContentClick(DataGridViewCellEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("CellContentClick", handler);
         } catch (JCNativeException jcne) {
@@ -2905,7 +3344,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void removeCellContentClick(DataGridViewCellEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("CellContentClick", handler);
         } catch (JCNativeException jcne) {
@@ -2915,7 +3354,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void addCellContentDoubleClick(DataGridViewCellEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("CellContentDoubleClick", handler);
         } catch (JCNativeException jcne) {
@@ -2925,7 +3364,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void removeCellContentDoubleClick(DataGridViewCellEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("CellContentDoubleClick", handler);
         } catch (JCNativeException jcne) {
@@ -2935,7 +3374,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void addCellContextMenuStripChanged(DataGridViewCellEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("CellContextMenuStripChanged", handler);
         } catch (JCNativeException jcne) {
@@ -2945,7 +3384,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void removeCellContextMenuStripChanged(DataGridViewCellEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("CellContextMenuStripChanged", handler);
         } catch (JCNativeException jcne) {
@@ -2955,7 +3394,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void addCellDoubleClick(DataGridViewCellEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("CellDoubleClick", handler);
         } catch (JCNativeException jcne) {
@@ -2965,7 +3404,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void removeCellDoubleClick(DataGridViewCellEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("CellDoubleClick", handler);
         } catch (JCNativeException jcne) {
@@ -2975,7 +3414,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void addCellEndEdit(DataGridViewCellEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("CellEndEdit", handler);
         } catch (JCNativeException jcne) {
@@ -2985,7 +3424,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void removeCellEndEdit(DataGridViewCellEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("CellEndEdit", handler);
         } catch (JCNativeException jcne) {
@@ -2995,7 +3434,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void addCellEnter(DataGridViewCellEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("CellEnter", handler);
         } catch (JCNativeException jcne) {
@@ -3005,7 +3444,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void removeCellEnter(DataGridViewCellEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("CellEnter", handler);
         } catch (JCNativeException jcne) {
@@ -3015,7 +3454,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void addCellErrorTextChanged(DataGridViewCellEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("CellErrorTextChanged", handler);
         } catch (JCNativeException jcne) {
@@ -3025,7 +3464,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void removeCellErrorTextChanged(DataGridViewCellEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("CellErrorTextChanged", handler);
         } catch (JCNativeException jcne) {
@@ -3035,7 +3474,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void addCellLeave(DataGridViewCellEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("CellLeave", handler);
         } catch (JCNativeException jcne) {
@@ -3045,7 +3484,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void removeCellLeave(DataGridViewCellEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("CellLeave", handler);
         } catch (JCNativeException jcne) {
@@ -3055,7 +3494,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void addCellMouseEnter(DataGridViewCellEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("CellMouseEnter", handler);
         } catch (JCNativeException jcne) {
@@ -3065,7 +3504,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void removeCellMouseEnter(DataGridViewCellEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("CellMouseEnter", handler);
         } catch (JCNativeException jcne) {
@@ -3075,7 +3514,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void addCellMouseLeave(DataGridViewCellEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("CellMouseLeave", handler);
         } catch (JCNativeException jcne) {
@@ -3085,7 +3524,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void removeCellMouseLeave(DataGridViewCellEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("CellMouseLeave", handler);
         } catch (JCNativeException jcne) {
@@ -3095,7 +3534,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void addCellStyleChanged(DataGridViewCellEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("CellStyleChanged", handler);
         } catch (JCNativeException jcne) {
@@ -3105,7 +3544,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void removeCellStyleChanged(DataGridViewCellEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("CellStyleChanged", handler);
         } catch (JCNativeException jcne) {
@@ -3115,7 +3554,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void addCellToolTipTextChanged(DataGridViewCellEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("CellToolTipTextChanged", handler);
         } catch (JCNativeException jcne) {
@@ -3125,7 +3564,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void removeCellToolTipTextChanged(DataGridViewCellEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("CellToolTipTextChanged", handler);
         } catch (JCNativeException jcne) {
@@ -3135,7 +3574,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void addCellValidated(DataGridViewCellEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("CellValidated", handler);
         } catch (JCNativeException jcne) {
@@ -3145,7 +3584,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void removeCellValidated(DataGridViewCellEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("CellValidated", handler);
         } catch (JCNativeException jcne) {
@@ -3155,7 +3594,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void addCellValueChanged(DataGridViewCellEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("CellValueChanged", handler);
         } catch (JCNativeException jcne) {
@@ -3165,7 +3604,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void removeCellValueChanged(DataGridViewCellEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("CellValueChanged", handler);
         } catch (JCNativeException jcne) {
@@ -3175,7 +3614,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void addRowEnter(DataGridViewCellEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("RowEnter", handler);
         } catch (JCNativeException jcne) {
@@ -3185,7 +3624,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void removeRowEnter(DataGridViewCellEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("RowEnter", handler);
         } catch (JCNativeException jcne) {
@@ -3195,7 +3634,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void addRowLeave(DataGridViewCellEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("RowLeave", handler);
         } catch (JCNativeException jcne) {
@@ -3205,7 +3644,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void removeRowLeave(DataGridViewCellEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("RowLeave", handler);
         } catch (JCNativeException jcne) {
@@ -3215,7 +3654,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void addRowValidated(DataGridViewCellEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("RowValidated", handler);
         } catch (JCNativeException jcne) {
@@ -3225,7 +3664,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void removeRowValidated(DataGridViewCellEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("RowValidated", handler);
         } catch (JCNativeException jcne) {
@@ -3235,7 +3674,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void addCellFormatting(DataGridViewCellFormattingEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("CellFormatting", handler);
         } catch (JCNativeException jcne) {
@@ -3245,7 +3684,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void removeCellFormatting(DataGridViewCellFormattingEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("CellFormatting", handler);
         } catch (JCNativeException jcne) {
@@ -3255,7 +3694,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void addCellMouseClick(DataGridViewCellMouseEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("CellMouseClick", handler);
         } catch (JCNativeException jcne) {
@@ -3265,7 +3704,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void removeCellMouseClick(DataGridViewCellMouseEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("CellMouseClick", handler);
         } catch (JCNativeException jcne) {
@@ -3275,7 +3714,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void addCellMouseDoubleClick(DataGridViewCellMouseEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("CellMouseDoubleClick", handler);
         } catch (JCNativeException jcne) {
@@ -3285,7 +3724,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void removeCellMouseDoubleClick(DataGridViewCellMouseEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("CellMouseDoubleClick", handler);
         } catch (JCNativeException jcne) {
@@ -3295,7 +3734,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void addCellMouseDown(DataGridViewCellMouseEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("CellMouseDown", handler);
         } catch (JCNativeException jcne) {
@@ -3305,7 +3744,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void removeCellMouseDown(DataGridViewCellMouseEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("CellMouseDown", handler);
         } catch (JCNativeException jcne) {
@@ -3315,7 +3754,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void addCellMouseMove(DataGridViewCellMouseEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("CellMouseMove", handler);
         } catch (JCNativeException jcne) {
@@ -3325,7 +3764,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void removeCellMouseMove(DataGridViewCellMouseEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("CellMouseMove", handler);
         } catch (JCNativeException jcne) {
@@ -3335,7 +3774,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void addCellMouseUp(DataGridViewCellMouseEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("CellMouseUp", handler);
         } catch (JCNativeException jcne) {
@@ -3345,7 +3784,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void removeCellMouseUp(DataGridViewCellMouseEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("CellMouseUp", handler);
         } catch (JCNativeException jcne) {
@@ -3355,7 +3794,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void addColumnHeaderMouseClick(DataGridViewCellMouseEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ColumnHeaderMouseClick", handler);
         } catch (JCNativeException jcne) {
@@ -3365,7 +3804,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void removeColumnHeaderMouseClick(DataGridViewCellMouseEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ColumnHeaderMouseClick", handler);
         } catch (JCNativeException jcne) {
@@ -3375,7 +3814,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void addColumnHeaderMouseDoubleClick(DataGridViewCellMouseEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ColumnHeaderMouseDoubleClick", handler);
         } catch (JCNativeException jcne) {
@@ -3385,7 +3824,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void removeColumnHeaderMouseDoubleClick(DataGridViewCellMouseEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ColumnHeaderMouseDoubleClick", handler);
         } catch (JCNativeException jcne) {
@@ -3395,7 +3834,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void addRowHeaderMouseClick(DataGridViewCellMouseEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("RowHeaderMouseClick", handler);
         } catch (JCNativeException jcne) {
@@ -3405,7 +3844,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void removeRowHeaderMouseClick(DataGridViewCellMouseEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("RowHeaderMouseClick", handler);
         } catch (JCNativeException jcne) {
@@ -3415,7 +3854,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void addRowHeaderMouseDoubleClick(DataGridViewCellMouseEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("RowHeaderMouseDoubleClick", handler);
         } catch (JCNativeException jcne) {
@@ -3425,7 +3864,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void removeRowHeaderMouseDoubleClick(DataGridViewCellMouseEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("RowHeaderMouseDoubleClick", handler);
         } catch (JCNativeException jcne) {
@@ -3435,7 +3874,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void addCellPainting(DataGridViewCellPaintingEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("CellPainting", handler);
         } catch (JCNativeException jcne) {
@@ -3445,7 +3884,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void removeCellPainting(DataGridViewCellPaintingEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("CellPainting", handler);
         } catch (JCNativeException jcne) {
@@ -3455,7 +3894,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void addCellParsing(DataGridViewCellParsingEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("CellParsing", handler);
         } catch (JCNativeException jcne) {
@@ -3465,7 +3904,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void removeCellParsing(DataGridViewCellParsingEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("CellParsing", handler);
         } catch (JCNativeException jcne) {
@@ -3475,7 +3914,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void addCellStateChanged(DataGridViewCellStateChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("CellStateChanged", handler);
         } catch (JCNativeException jcne) {
@@ -3485,7 +3924,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void removeCellStateChanged(DataGridViewCellStateChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("CellStateChanged", handler);
         } catch (JCNativeException jcne) {
@@ -3495,7 +3934,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void addCellStyleContentChanged(DataGridViewCellStyleContentChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("CellStyleContentChanged", handler);
         } catch (JCNativeException jcne) {
@@ -3505,7 +3944,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void removeCellStyleContentChanged(DataGridViewCellStyleContentChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("CellStyleContentChanged", handler);
         } catch (JCNativeException jcne) {
@@ -3515,7 +3954,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void addCellToolTipTextNeeded(DataGridViewCellToolTipTextNeededEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("CellToolTipTextNeeded", handler);
         } catch (JCNativeException jcne) {
@@ -3525,7 +3964,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void removeCellToolTipTextNeeded(DataGridViewCellToolTipTextNeededEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("CellToolTipTextNeeded", handler);
         } catch (JCNativeException jcne) {
@@ -3535,7 +3974,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void addCellValidating(DataGridViewCellValidatingEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("CellValidating", handler);
         } catch (JCNativeException jcne) {
@@ -3545,7 +3984,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void removeCellValidating(DataGridViewCellValidatingEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("CellValidating", handler);
         } catch (JCNativeException jcne) {
@@ -3555,7 +3994,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void addCellValueNeeded(DataGridViewCellValueEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("CellValueNeeded", handler);
         } catch (JCNativeException jcne) {
@@ -3565,7 +4004,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void removeCellValueNeeded(DataGridViewCellValueEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("CellValueNeeded", handler);
         } catch (JCNativeException jcne) {
@@ -3575,7 +4014,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void addCellValuePushed(DataGridViewCellValueEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("CellValuePushed", handler);
         } catch (JCNativeException jcne) {
@@ -3585,7 +4024,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void removeCellValuePushed(DataGridViewCellValueEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("CellValuePushed", handler);
         } catch (JCNativeException jcne) {
@@ -3595,7 +4034,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void addColumnDividerDoubleClick(DataGridViewColumnDividerDoubleClickEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ColumnDividerDoubleClick", handler);
         } catch (JCNativeException jcne) {
@@ -3605,7 +4044,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void removeColumnDividerDoubleClick(DataGridViewColumnDividerDoubleClickEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ColumnDividerDoubleClick", handler);
         } catch (JCNativeException jcne) {
@@ -3615,7 +4054,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void addColumnAdded(DataGridViewColumnEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ColumnAdded", handler);
         } catch (JCNativeException jcne) {
@@ -3625,7 +4064,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void removeColumnAdded(DataGridViewColumnEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ColumnAdded", handler);
         } catch (JCNativeException jcne) {
@@ -3635,7 +4074,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void addColumnContextMenuStripChanged(DataGridViewColumnEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ColumnContextMenuStripChanged", handler);
         } catch (JCNativeException jcne) {
@@ -3645,7 +4084,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void removeColumnContextMenuStripChanged(DataGridViewColumnEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ColumnContextMenuStripChanged", handler);
         } catch (JCNativeException jcne) {
@@ -3655,7 +4094,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void addColumnDataPropertyNameChanged(DataGridViewColumnEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ColumnDataPropertyNameChanged", handler);
         } catch (JCNativeException jcne) {
@@ -3665,7 +4104,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void removeColumnDataPropertyNameChanged(DataGridViewColumnEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ColumnDataPropertyNameChanged", handler);
         } catch (JCNativeException jcne) {
@@ -3675,7 +4114,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void addColumnDefaultCellStyleChanged(DataGridViewColumnEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ColumnDefaultCellStyleChanged", handler);
         } catch (JCNativeException jcne) {
@@ -3685,7 +4124,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void removeColumnDefaultCellStyleChanged(DataGridViewColumnEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ColumnDefaultCellStyleChanged", handler);
         } catch (JCNativeException jcne) {
@@ -3695,7 +4134,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void addColumnDisplayIndexChanged(DataGridViewColumnEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ColumnDisplayIndexChanged", handler);
         } catch (JCNativeException jcne) {
@@ -3705,7 +4144,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void removeColumnDisplayIndexChanged(DataGridViewColumnEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ColumnDisplayIndexChanged", handler);
         } catch (JCNativeException jcne) {
@@ -3715,7 +4154,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void addColumnDividerWidthChanged(DataGridViewColumnEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ColumnDividerWidthChanged", handler);
         } catch (JCNativeException jcne) {
@@ -3725,7 +4164,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void removeColumnDividerWidthChanged(DataGridViewColumnEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ColumnDividerWidthChanged", handler);
         } catch (JCNativeException jcne) {
@@ -3735,7 +4174,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void addColumnHeaderCellChanged(DataGridViewColumnEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ColumnHeaderCellChanged", handler);
         } catch (JCNativeException jcne) {
@@ -3745,7 +4184,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void removeColumnHeaderCellChanged(DataGridViewColumnEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ColumnHeaderCellChanged", handler);
         } catch (JCNativeException jcne) {
@@ -3755,7 +4194,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void addColumnMinimumWidthChanged(DataGridViewColumnEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ColumnMinimumWidthChanged", handler);
         } catch (JCNativeException jcne) {
@@ -3765,7 +4204,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void removeColumnMinimumWidthChanged(DataGridViewColumnEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ColumnMinimumWidthChanged", handler);
         } catch (JCNativeException jcne) {
@@ -3775,7 +4214,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void addColumnNameChanged(DataGridViewColumnEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ColumnNameChanged", handler);
         } catch (JCNativeException jcne) {
@@ -3785,7 +4224,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void removeColumnNameChanged(DataGridViewColumnEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ColumnNameChanged", handler);
         } catch (JCNativeException jcne) {
@@ -3795,7 +4234,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void addColumnRemoved(DataGridViewColumnEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ColumnRemoved", handler);
         } catch (JCNativeException jcne) {
@@ -3805,7 +4244,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void removeColumnRemoved(DataGridViewColumnEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ColumnRemoved", handler);
         } catch (JCNativeException jcne) {
@@ -3815,7 +4254,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void addColumnSortModeChanged(DataGridViewColumnEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ColumnSortModeChanged", handler);
         } catch (JCNativeException jcne) {
@@ -3825,7 +4264,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void removeColumnSortModeChanged(DataGridViewColumnEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ColumnSortModeChanged", handler);
         } catch (JCNativeException jcne) {
@@ -3835,7 +4274,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void addColumnToolTipTextChanged(DataGridViewColumnEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ColumnToolTipTextChanged", handler);
         } catch (JCNativeException jcne) {
@@ -3845,7 +4284,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void removeColumnToolTipTextChanged(DataGridViewColumnEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ColumnToolTipTextChanged", handler);
         } catch (JCNativeException jcne) {
@@ -3855,7 +4294,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void addColumnWidthChanged(DataGridViewColumnEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ColumnWidthChanged", handler);
         } catch (JCNativeException jcne) {
@@ -3865,7 +4304,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void removeColumnWidthChanged(DataGridViewColumnEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ColumnWidthChanged", handler);
         } catch (JCNativeException jcne) {
@@ -3875,7 +4314,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void addColumnStateChanged(DataGridViewColumnStateChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ColumnStateChanged", handler);
         } catch (JCNativeException jcne) {
@@ -3885,7 +4324,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void removeColumnStateChanged(DataGridViewColumnStateChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ColumnStateChanged", handler);
         } catch (JCNativeException jcne) {
@@ -3895,7 +4334,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void addDataError(DataGridViewDataErrorEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("DataError", handler);
         } catch (JCNativeException jcne) {
@@ -3905,7 +4344,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void removeDataError(DataGridViewDataErrorEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("DataError", handler);
         } catch (JCNativeException jcne) {
@@ -3915,7 +4354,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void addEditingControlShowing(DataGridViewEditingControlShowingEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("EditingControlShowing", handler);
         } catch (JCNativeException jcne) {
@@ -3925,7 +4364,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void removeEditingControlShowing(DataGridViewEditingControlShowingEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("EditingControlShowing", handler);
         } catch (JCNativeException jcne) {
@@ -3935,7 +4374,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void addUserDeletingRow(DataGridViewRowCancelEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("UserDeletingRow", handler);
         } catch (JCNativeException jcne) {
@@ -3945,7 +4384,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void removeUserDeletingRow(DataGridViewRowCancelEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("UserDeletingRow", handler);
         } catch (JCNativeException jcne) {
@@ -3955,7 +4394,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void addRowContextMenuStripNeeded(DataGridViewRowContextMenuStripNeededEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("RowContextMenuStripNeeded", handler);
         } catch (JCNativeException jcne) {
@@ -3965,7 +4404,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void removeRowContextMenuStripNeeded(DataGridViewRowContextMenuStripNeededEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("RowContextMenuStripNeeded", handler);
         } catch (JCNativeException jcne) {
@@ -3975,7 +4414,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void addRowDividerDoubleClick(DataGridViewRowDividerDoubleClickEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("RowDividerDoubleClick", handler);
         } catch (JCNativeException jcne) {
@@ -3985,7 +4424,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void removeRowDividerDoubleClick(DataGridViewRowDividerDoubleClickEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("RowDividerDoubleClick", handler);
         } catch (JCNativeException jcne) {
@@ -3995,7 +4434,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void addRowErrorTextNeeded(DataGridViewRowErrorTextNeededEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("RowErrorTextNeeded", handler);
         } catch (JCNativeException jcne) {
@@ -4005,7 +4444,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void removeRowErrorTextNeeded(DataGridViewRowErrorTextNeededEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("RowErrorTextNeeded", handler);
         } catch (JCNativeException jcne) {
@@ -4015,7 +4454,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void addDefaultValuesNeeded(DataGridViewRowEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("DefaultValuesNeeded", handler);
         } catch (JCNativeException jcne) {
@@ -4025,7 +4464,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void removeDefaultValuesNeeded(DataGridViewRowEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("DefaultValuesNeeded", handler);
         } catch (JCNativeException jcne) {
@@ -4035,7 +4474,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void addNewRowNeeded(DataGridViewRowEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("NewRowNeeded", handler);
         } catch (JCNativeException jcne) {
@@ -4045,7 +4484,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void removeNewRowNeeded(DataGridViewRowEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("NewRowNeeded", handler);
         } catch (JCNativeException jcne) {
@@ -4055,7 +4494,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void addRowContextMenuStripChanged(DataGridViewRowEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("RowContextMenuStripChanged", handler);
         } catch (JCNativeException jcne) {
@@ -4065,7 +4504,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void removeRowContextMenuStripChanged(DataGridViewRowEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("RowContextMenuStripChanged", handler);
         } catch (JCNativeException jcne) {
@@ -4075,7 +4514,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void addRowDefaultCellStyleChanged(DataGridViewRowEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("RowDefaultCellStyleChanged", handler);
         } catch (JCNativeException jcne) {
@@ -4085,7 +4524,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void removeRowDefaultCellStyleChanged(DataGridViewRowEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("RowDefaultCellStyleChanged", handler);
         } catch (JCNativeException jcne) {
@@ -4095,7 +4534,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void addRowDividerHeightChanged(DataGridViewRowEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("RowDividerHeightChanged", handler);
         } catch (JCNativeException jcne) {
@@ -4105,7 +4544,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void removeRowDividerHeightChanged(DataGridViewRowEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("RowDividerHeightChanged", handler);
         } catch (JCNativeException jcne) {
@@ -4115,7 +4554,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void addRowErrorTextChanged(DataGridViewRowEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("RowErrorTextChanged", handler);
         } catch (JCNativeException jcne) {
@@ -4125,7 +4564,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void removeRowErrorTextChanged(DataGridViewRowEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("RowErrorTextChanged", handler);
         } catch (JCNativeException jcne) {
@@ -4135,7 +4574,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void addRowHeaderCellChanged(DataGridViewRowEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("RowHeaderCellChanged", handler);
         } catch (JCNativeException jcne) {
@@ -4145,7 +4584,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void removeRowHeaderCellChanged(DataGridViewRowEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("RowHeaderCellChanged", handler);
         } catch (JCNativeException jcne) {
@@ -4155,7 +4594,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void addRowHeightChanged(DataGridViewRowEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("RowHeightChanged", handler);
         } catch (JCNativeException jcne) {
@@ -4165,7 +4604,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void removeRowHeightChanged(DataGridViewRowEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("RowHeightChanged", handler);
         } catch (JCNativeException jcne) {
@@ -4175,7 +4614,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void addRowMinimumHeightChanged(DataGridViewRowEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("RowMinimumHeightChanged", handler);
         } catch (JCNativeException jcne) {
@@ -4185,7 +4624,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void removeRowMinimumHeightChanged(DataGridViewRowEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("RowMinimumHeightChanged", handler);
         } catch (JCNativeException jcne) {
@@ -4195,7 +4634,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void addRowUnshared(DataGridViewRowEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("RowUnshared", handler);
         } catch (JCNativeException jcne) {
@@ -4205,7 +4644,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void removeRowUnshared(DataGridViewRowEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("RowUnshared", handler);
         } catch (JCNativeException jcne) {
@@ -4215,7 +4654,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void addUserAddedRow(DataGridViewRowEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("UserAddedRow", handler);
         } catch (JCNativeException jcne) {
@@ -4225,7 +4664,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void removeUserAddedRow(DataGridViewRowEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("UserAddedRow", handler);
         } catch (JCNativeException jcne) {
@@ -4235,7 +4674,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void addUserDeletedRow(DataGridViewRowEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("UserDeletedRow", handler);
         } catch (JCNativeException jcne) {
@@ -4245,7 +4684,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void removeUserDeletedRow(DataGridViewRowEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("UserDeletedRow", handler);
         } catch (JCNativeException jcne) {
@@ -4255,7 +4694,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void addRowHeightInfoNeeded(DataGridViewRowHeightInfoNeededEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("RowHeightInfoNeeded", handler);
         } catch (JCNativeException jcne) {
@@ -4265,7 +4704,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void removeRowHeightInfoNeeded(DataGridViewRowHeightInfoNeededEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("RowHeightInfoNeeded", handler);
         } catch (JCNativeException jcne) {
@@ -4275,7 +4714,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void addRowHeightInfoPushed(DataGridViewRowHeightInfoPushedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("RowHeightInfoPushed", handler);
         } catch (JCNativeException jcne) {
@@ -4285,7 +4724,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void removeRowHeightInfoPushed(DataGridViewRowHeightInfoPushedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("RowHeightInfoPushed", handler);
         } catch (JCNativeException jcne) {
@@ -4295,7 +4734,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void addRowPostPaint(DataGridViewRowPostPaintEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("RowPostPaint", handler);
         } catch (JCNativeException jcne) {
@@ -4305,7 +4744,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void removeRowPostPaint(DataGridViewRowPostPaintEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("RowPostPaint", handler);
         } catch (JCNativeException jcne) {
@@ -4315,7 +4754,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void addRowPrePaint(DataGridViewRowPrePaintEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("RowPrePaint", handler);
         } catch (JCNativeException jcne) {
@@ -4325,7 +4764,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void removeRowPrePaint(DataGridViewRowPrePaintEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("RowPrePaint", handler);
         } catch (JCNativeException jcne) {
@@ -4335,7 +4774,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void addRowsAdded(DataGridViewRowsAddedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("RowsAdded", handler);
         } catch (JCNativeException jcne) {
@@ -4345,7 +4784,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void removeRowsAdded(DataGridViewRowsAddedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("RowsAdded", handler);
         } catch (JCNativeException jcne) {
@@ -4355,7 +4794,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void addRowsRemoved(DataGridViewRowsRemovedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("RowsRemoved", handler);
         } catch (JCNativeException jcne) {
@@ -4365,7 +4804,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void removeRowsRemoved(DataGridViewRowsRemovedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("RowsRemoved", handler);
         } catch (JCNativeException jcne) {
@@ -4375,7 +4814,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void addRowStateChanged(DataGridViewRowStateChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("RowStateChanged", handler);
         } catch (JCNativeException jcne) {
@@ -4385,7 +4824,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void removeRowStateChanged(DataGridViewRowStateChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("RowStateChanged", handler);
         } catch (JCNativeException jcne) {
@@ -4395,7 +4834,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void addSortCompare(DataGridViewSortCompareEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("SortCompare", handler);
         } catch (JCNativeException jcne) {
@@ -4405,7 +4844,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void removeSortCompare(DataGridViewSortCompareEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("SortCompare", handler);
         } catch (JCNativeException jcne) {
@@ -4415,7 +4854,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void addCancelRowEdit(QuestionEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("CancelRowEdit", handler);
         } catch (JCNativeException jcne) {
@@ -4425,7 +4864,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void removeCancelRowEdit(QuestionEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("CancelRowEdit", handler);
         } catch (JCNativeException jcne) {
@@ -4435,7 +4874,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void addRowDirtyStateNeeded(QuestionEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("RowDirtyStateNeeded", handler);
         } catch (JCNativeException jcne) {
@@ -4445,7 +4884,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void removeRowDirtyStateNeeded(QuestionEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("RowDirtyStateNeeded", handler);
         } catch (JCNativeException jcne) {
@@ -4455,7 +4894,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void addScroll(ScrollEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Scroll", handler);
         } catch (JCNativeException jcne) {
@@ -4465,7 +4904,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
 
     public void removeScroll(ScrollEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Scroll", handler);
         } catch (JCNativeException jcne) {

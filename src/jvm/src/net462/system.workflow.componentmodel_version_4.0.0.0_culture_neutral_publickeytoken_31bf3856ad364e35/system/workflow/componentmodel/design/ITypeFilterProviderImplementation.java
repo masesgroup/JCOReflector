@@ -142,9 +142,13 @@ public class ITypeFilterProviderImplementation extends NetObject implements ITyp
     
     public boolean CanFilterType(NetType type, boolean throwOnError) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanFilterType = null;
         try {
-            return (boolean)classInstance.Invoke("CanFilterType", type == null ? null : type.getJCOInstance(), throwOnError);
+            retObjectCanFilterType = classInstance.Invoke("CanFilterType", type == null ? null : type.getJCOInstance(), throwOnError);
+            return (boolean)retObjectCanFilterType;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCanFilterType != null ? retObjectCanFilterType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -156,9 +160,13 @@ public class ITypeFilterProviderImplementation extends NetObject implements ITyp
     
     public java.lang.String getFilterDescription() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFilterDescription = null;
         try {
-            return (java.lang.String)classInstance.Get("FilterDescription");
+            retObjectFilterDescription = classInstance.Get("FilterDescription");
+            return (java.lang.String)retObjectFilterDescription;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectFilterDescription != null ? retObjectFilterDescription.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

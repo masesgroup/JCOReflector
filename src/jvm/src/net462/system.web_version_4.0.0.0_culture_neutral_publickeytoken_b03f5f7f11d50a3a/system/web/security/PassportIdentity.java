@@ -163,9 +163,13 @@ public class PassportIdentity extends NetObject implements system.IDisposable, A
     
     public static boolean CryptIsValid() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.runtime.interopservices.COMException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCryptIsValid = null;
         try {
-            return (boolean)classType.Invoke("CryptIsValid");
+            retObjectCryptIsValid = classType.Invoke("CryptIsValid");
+            return (boolean)retObjectCryptIsValid;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCryptIsValid != null ? retObjectCryptIsValid.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -173,9 +177,13 @@ public class PassportIdentity extends NetObject implements system.IDisposable, A
 
     public boolean GetIsAuthenticated(int iTimeWindow, boolean bForceLogin, boolean bCheckSecure) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.runtime.interopservices.COMException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetIsAuthenticated = null;
         try {
-            return (boolean)classInstance.Invoke("GetIsAuthenticated", iTimeWindow, bForceLogin, bCheckSecure);
+            retObjectGetIsAuthenticated = classInstance.Invoke("GetIsAuthenticated", iTimeWindow, bForceLogin, bCheckSecure);
+            return (boolean)retObjectGetIsAuthenticated;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectGetIsAuthenticated != null ? retObjectGetIsAuthenticated.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,9 +191,13 @@ public class PassportIdentity extends NetObject implements system.IDisposable, A
 
     public boolean GetIsAuthenticated(int iTimeWindow, int iForceLogin, int iCheckSecure) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.runtime.interopservices.COMException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetIsAuthenticated = null;
         try {
-            return (boolean)classInstance.Invoke("GetIsAuthenticated", iTimeWindow, iForceLogin, iCheckSecure);
+            retObjectGetIsAuthenticated = classInstance.Invoke("GetIsAuthenticated", iTimeWindow, iForceLogin, iCheckSecure);
+            return (boolean)retObjectGetIsAuthenticated;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectGetIsAuthenticated != null ? retObjectGetIsAuthenticated.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,9 +205,13 @@ public class PassportIdentity extends NetObject implements system.IDisposable, A
 
     public boolean HasFlag(int iFlagMask) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.runtime.interopservices.COMException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHasFlag = null;
         try {
-            return (boolean)classInstance.Invoke("HasFlag", iFlagMask);
+            retObjectHasFlag = classInstance.Invoke("HasFlag", iFlagMask);
+            return (boolean)retObjectHasFlag;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectHasFlag != null ? retObjectHasFlag.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,9 +219,13 @@ public class PassportIdentity extends NetObject implements system.IDisposable, A
 
     public boolean HasProfile(java.lang.String strProfile) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.runtime.interopservices.COMException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHasProfile = null;
         try {
-            return (boolean)classInstance.Invoke("HasProfile", strProfile);
+            retObjectHasProfile = classInstance.Invoke("HasProfile", strProfile);
+            return (boolean)retObjectHasProfile;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectHasProfile != null ? retObjectHasProfile.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,9 +233,13 @@ public class PassportIdentity extends NetObject implements system.IDisposable, A
 
     public boolean HaveConsent(boolean bNeedFullConsent, boolean bNeedBirthdate) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.runtime.interopservices.COMException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHaveConsent = null;
         try {
-            return (boolean)classInstance.Invoke("HaveConsent", bNeedFullConsent, bNeedBirthdate);
+            retObjectHaveConsent = classInstance.Invoke("HaveConsent", bNeedFullConsent, bNeedBirthdate);
+            return (boolean)retObjectHaveConsent;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectHaveConsent != null ? retObjectHaveConsent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -223,9 +247,20 @@ public class PassportIdentity extends NetObject implements system.IDisposable, A
 
     public static int CryptPutHost(java.lang.String strHost) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.runtime.interopservices.COMException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCryptPutHost = null;
         try {
-            return (int)classType.Invoke("CryptPutHost", strHost);
+            retObjectCryptPutHost = classType.Invoke("CryptPutHost", strHost);
+            return (int)retObjectCryptPutHost;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCryptPutHost_ToString = retObjectCryptPutHost == null ? "null" : retObjectCryptPutHost.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectCryptPutHostNumber = (java.lang.Number)retObjectCryptPutHost;
+                return retObjectCryptPutHostNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCryptPutHost != null ? retObjectCryptPutHost.getClass() : "null", retObjectCryptPutHost_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -233,9 +268,20 @@ public class PassportIdentity extends NetObject implements system.IDisposable, A
 
     public static int CryptPutSite(java.lang.String strSite) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.runtime.interopservices.COMException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCryptPutSite = null;
         try {
-            return (int)classType.Invoke("CryptPutSite", strSite);
+            retObjectCryptPutSite = classType.Invoke("CryptPutSite", strSite);
+            return (int)retObjectCryptPutSite;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCryptPutSite_ToString = retObjectCryptPutSite == null ? "null" : retObjectCryptPutSite.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectCryptPutSiteNumber = (java.lang.Number)retObjectCryptPutSite;
+                return retObjectCryptPutSiteNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCryptPutSite != null ? retObjectCryptPutSite.getClass() : "null", retObjectCryptPutSite_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -243,9 +289,20 @@ public class PassportIdentity extends NetObject implements system.IDisposable, A
 
     public int LoginUser() throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.runtime.interopservices.COMException, system.web.HttpException, system.PlatformNotSupportedException, system.NotSupportedException, system.threading.ThreadAbortException, system.web.HttpRequestValidationException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.OverflowException, system.NullReferenceException, system.ApplicationException, system.UriFormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLoginUser = null;
         try {
-            return (int)classInstance.Invoke("LoginUser");
+            retObjectLoginUser = classInstance.Invoke("LoginUser");
+            return (int)retObjectLoginUser;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectLoginUser_ToString = retObjectLoginUser == null ? "null" : retObjectLoginUser.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectLoginUserNumber = (java.lang.Number)retObjectLoginUser;
+                return retObjectLoginUserNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectLoginUser != null ? retObjectLoginUser.getClass() : "null", retObjectLoginUser_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -253,9 +310,20 @@ public class PassportIdentity extends NetObject implements system.IDisposable, A
 
     public int LoginUser(java.lang.String strReturnUrl) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.runtime.interopservices.COMException, system.web.HttpException, system.PlatformNotSupportedException, system.NotSupportedException, system.threading.ThreadAbortException, system.web.HttpRequestValidationException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.OverflowException, system.NullReferenceException, system.ApplicationException, system.UriFormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLoginUser = null;
         try {
-            return (int)classInstance.Invoke("LoginUser", strReturnUrl);
+            retObjectLoginUser = classInstance.Invoke("LoginUser", strReturnUrl);
+            return (int)retObjectLoginUser;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectLoginUser_ToString = retObjectLoginUser == null ? "null" : retObjectLoginUser.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectLoginUserNumber = (java.lang.Number)retObjectLoginUser;
+                return retObjectLoginUserNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectLoginUser != null ? retObjectLoginUser.getClass() : "null", retObjectLoginUser_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -263,9 +331,20 @@ public class PassportIdentity extends NetObject implements system.IDisposable, A
 
     public int LoginUser(java.lang.String szRetURL, int iTimeWindow, boolean fForceLogin, java.lang.String szCOBrandArgs, int iLangID, java.lang.String strNameSpace, int iKPP, boolean fUseSecureAuth, NetObject oExtraParams) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.runtime.interopservices.COMException, system.web.HttpException, system.PlatformNotSupportedException, system.NotSupportedException, system.threading.ThreadAbortException, system.web.HttpRequestValidationException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.OverflowException, system.NullReferenceException, system.ApplicationException, system.UriFormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLoginUser = null;
         try {
-            return (int)classInstance.Invoke("LoginUser", szRetURL, iTimeWindow, fForceLogin, szCOBrandArgs, iLangID, strNameSpace, iKPP, fUseSecureAuth, oExtraParams == null ? null : oExtraParams.getJCOInstance());
+            retObjectLoginUser = classInstance.Invoke("LoginUser", szRetURL, iTimeWindow, fForceLogin, szCOBrandArgs, iLangID, strNameSpace, iKPP, fUseSecureAuth, oExtraParams == null ? null : oExtraParams.getJCOInstance());
+            return (int)retObjectLoginUser;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectLoginUser_ToString = retObjectLoginUser == null ? "null" : retObjectLoginUser.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectLoginUserNumber = (java.lang.Number)retObjectLoginUser;
+                return retObjectLoginUserNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectLoginUser != null ? retObjectLoginUser.getClass() : "null", retObjectLoginUser_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -273,9 +352,20 @@ public class PassportIdentity extends NetObject implements system.IDisposable, A
 
     public int LoginUser(java.lang.String szRetURL, int iTimeWindow, int fForceLogin, java.lang.String szCOBrandArgs, int iLangID, java.lang.String strNameSpace, int iKPP, int iUseSecureAuth, NetObject oExtraParams) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.runtime.interopservices.COMException, system.IndexOutOfRangeException, system.web.HttpException, system.PlatformNotSupportedException, system.NotSupportedException, system.threading.ThreadAbortException, system.web.HttpRequestValidationException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.OutOfMemoryException, system.OverflowException, system.NullReferenceException, system.ApplicationException, system.UriFormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLoginUser = null;
         try {
-            return (int)classInstance.Invoke("LoginUser", szRetURL, iTimeWindow, fForceLogin, szCOBrandArgs, iLangID, strNameSpace, iKPP, iUseSecureAuth, oExtraParams == null ? null : oExtraParams.getJCOInstance());
+            retObjectLoginUser = classInstance.Invoke("LoginUser", szRetURL, iTimeWindow, fForceLogin, szCOBrandArgs, iLangID, strNameSpace, iKPP, iUseSecureAuth, oExtraParams == null ? null : oExtraParams.getJCOInstance());
+            return (int)retObjectLoginUser;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectLoginUser_ToString = retObjectLoginUser == null ? "null" : retObjectLoginUser.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectLoginUserNumber = (java.lang.Number)retObjectLoginUser;
+                return retObjectLoginUserNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectLoginUser != null ? retObjectLoginUser.getClass() : "null", retObjectLoginUser_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -283,10 +373,14 @@ public class PassportIdentity extends NetObject implements system.IDisposable, A
 
     public NetObject GetCurrentConfig(java.lang.String strAttribute) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetCurrentConfig = null;
         try {
-            JCObject objGetCurrentConfig = (JCObject)classInstance.Invoke("GetCurrentConfig", strAttribute);
+            retObjectGetCurrentConfig = classInstance.Invoke("GetCurrentConfig", strAttribute);
+            JCObject objGetCurrentConfig = (JCObject)retObjectGetCurrentConfig;
             return new NetObject(objGetCurrentConfig);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCurrentConfig != null ? retObjectGetCurrentConfig.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -294,10 +388,14 @@ public class PassportIdentity extends NetObject implements system.IDisposable, A
 
     public NetObject GetOption(java.lang.String strOpt) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetOption = null;
         try {
-            JCObject objGetOption = (JCObject)classInstance.Invoke("GetOption", strOpt);
+            retObjectGetOption = classInstance.Invoke("GetOption", strOpt);
+            JCObject objGetOption = (JCObject)retObjectGetOption;
             return new NetObject(objGetOption);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetOption != null ? retObjectGetOption.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -305,10 +403,14 @@ public class PassportIdentity extends NetObject implements system.IDisposable, A
 
     public NetObject GetProfileObject(java.lang.String strProfileName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetProfileObject = null;
         try {
-            JCObject objGetProfileObject = (JCObject)classInstance.Invoke("GetProfileObject", strProfileName);
+            retObjectGetProfileObject = classInstance.Invoke("GetProfileObject", strProfileName);
+            JCObject objGetProfileObject = (JCObject)retObjectGetProfileObject;
             return new NetObject(objGetProfileObject);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetProfileObject != null ? retObjectGetProfileObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -316,10 +418,14 @@ public class PassportIdentity extends NetObject implements system.IDisposable, A
 
     public NetObject Ticket(java.lang.String strAttribute) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTicket = null;
         try {
-            JCObject objTicket = (JCObject)classInstance.Invoke("Ticket", strAttribute);
+            retObjectTicket = classInstance.Invoke("Ticket", strAttribute);
+            JCObject objTicket = (JCObject)retObjectTicket;
             return new NetObject(objTicket);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTicket != null ? retObjectTicket.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -327,9 +433,13 @@ public class PassportIdentity extends NetObject implements system.IDisposable, A
 
     public java.lang.String AuthUrl() throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.runtime.interopservices.COMException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAuthUrl = null;
         try {
-            return (java.lang.String)classInstance.Invoke("AuthUrl");
+            retObjectAuthUrl = classInstance.Invoke("AuthUrl");
+            return (java.lang.String)retObjectAuthUrl;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectAuthUrl != null ? retObjectAuthUrl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -337,9 +447,13 @@ public class PassportIdentity extends NetObject implements system.IDisposable, A
 
     public java.lang.String AuthUrl(java.lang.String strReturnUrl) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.runtime.interopservices.COMException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAuthUrl = null;
         try {
-            return (java.lang.String)classInstance.Invoke("AuthUrl", strReturnUrl);
+            retObjectAuthUrl = classInstance.Invoke("AuthUrl", strReturnUrl);
+            return (java.lang.String)retObjectAuthUrl;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectAuthUrl != null ? retObjectAuthUrl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -347,9 +461,13 @@ public class PassportIdentity extends NetObject implements system.IDisposable, A
 
     public java.lang.String AuthUrl(java.lang.String strReturnUrl, int iTimeWindow, boolean fForceLogin, java.lang.String strCoBrandedArgs, int iLangID, java.lang.String strNameSpace, int iKPP, boolean bUseSecureAuth) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.NotSupportedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.runtime.interopservices.COMException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAuthUrl = null;
         try {
-            return (java.lang.String)classInstance.Invoke("AuthUrl", strReturnUrl, iTimeWindow, fForceLogin, strCoBrandedArgs, iLangID, strNameSpace, iKPP, bUseSecureAuth);
+            retObjectAuthUrl = classInstance.Invoke("AuthUrl", strReturnUrl, iTimeWindow, fForceLogin, strCoBrandedArgs, iLangID, strNameSpace, iKPP, bUseSecureAuth);
+            return (java.lang.String)retObjectAuthUrl;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectAuthUrl != null ? retObjectAuthUrl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -357,9 +475,13 @@ public class PassportIdentity extends NetObject implements system.IDisposable, A
 
     public java.lang.String AuthUrl(java.lang.String strReturnUrl, int iTimeWindow, int iForceLogin, java.lang.String strCoBrandedArgs, int iLangID, java.lang.String strNameSpace, int iKPP, int iUseSecureAuth) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.NotSupportedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.runtime.interopservices.COMException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAuthUrl = null;
         try {
-            return (java.lang.String)classInstance.Invoke("AuthUrl", strReturnUrl, iTimeWindow, iForceLogin, strCoBrandedArgs, iLangID, strNameSpace, iKPP, iUseSecureAuth);
+            retObjectAuthUrl = classInstance.Invoke("AuthUrl", strReturnUrl, iTimeWindow, iForceLogin, strCoBrandedArgs, iLangID, strNameSpace, iKPP, iUseSecureAuth);
+            return (java.lang.String)retObjectAuthUrl;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectAuthUrl != null ? retObjectAuthUrl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -367,9 +489,13 @@ public class PassportIdentity extends NetObject implements system.IDisposable, A
 
     public java.lang.String AuthUrl2() throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.runtime.interopservices.COMException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAuthUrl2 = null;
         try {
-            return (java.lang.String)classInstance.Invoke("AuthUrl2");
+            retObjectAuthUrl2 = classInstance.Invoke("AuthUrl2");
+            return (java.lang.String)retObjectAuthUrl2;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectAuthUrl2 != null ? retObjectAuthUrl2.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -377,9 +503,13 @@ public class PassportIdentity extends NetObject implements system.IDisposable, A
 
     public java.lang.String AuthUrl2(java.lang.String strReturnUrl) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.runtime.interopservices.COMException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAuthUrl2 = null;
         try {
-            return (java.lang.String)classInstance.Invoke("AuthUrl2", strReturnUrl);
+            retObjectAuthUrl2 = classInstance.Invoke("AuthUrl2", strReturnUrl);
+            return (java.lang.String)retObjectAuthUrl2;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectAuthUrl2 != null ? retObjectAuthUrl2.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -387,9 +517,13 @@ public class PassportIdentity extends NetObject implements system.IDisposable, A
 
     public java.lang.String AuthUrl2(java.lang.String strReturnUrl, int iTimeWindow, boolean fForceLogin, java.lang.String strCoBrandedArgs, int iLangID, java.lang.String strNameSpace, int iKPP, boolean bUseSecureAuth) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.NotSupportedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.runtime.interopservices.COMException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAuthUrl2 = null;
         try {
-            return (java.lang.String)classInstance.Invoke("AuthUrl2", strReturnUrl, iTimeWindow, fForceLogin, strCoBrandedArgs, iLangID, strNameSpace, iKPP, bUseSecureAuth);
+            retObjectAuthUrl2 = classInstance.Invoke("AuthUrl2", strReturnUrl, iTimeWindow, fForceLogin, strCoBrandedArgs, iLangID, strNameSpace, iKPP, bUseSecureAuth);
+            return (java.lang.String)retObjectAuthUrl2;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectAuthUrl2 != null ? retObjectAuthUrl2.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -397,9 +531,13 @@ public class PassportIdentity extends NetObject implements system.IDisposable, A
 
     public java.lang.String AuthUrl2(java.lang.String strReturnUrl, int iTimeWindow, int iForceLogin, java.lang.String strCoBrandedArgs, int iLangID, java.lang.String strNameSpace, int iKPP, int iUseSecureAuth) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.NotSupportedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.runtime.interopservices.COMException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAuthUrl2 = null;
         try {
-            return (java.lang.String)classInstance.Invoke("AuthUrl2", strReturnUrl, iTimeWindow, iForceLogin, strCoBrandedArgs, iLangID, strNameSpace, iKPP, iUseSecureAuth);
+            retObjectAuthUrl2 = classInstance.Invoke("AuthUrl2", strReturnUrl, iTimeWindow, iForceLogin, strCoBrandedArgs, iLangID, strNameSpace, iKPP, iUseSecureAuth);
+            return (java.lang.String)retObjectAuthUrl2;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectAuthUrl2 != null ? retObjectAuthUrl2.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -407,9 +545,13 @@ public class PassportIdentity extends NetObject implements system.IDisposable, A
 
     public static java.lang.String Compress(java.lang.String strData) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.runtime.interopservices.COMException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCompress = null;
         try {
-            return (java.lang.String)classType.Invoke("Compress", strData);
+            retObjectCompress = classType.Invoke("Compress", strData);
+            return (java.lang.String)retObjectCompress;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectCompress != null ? retObjectCompress.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -417,9 +559,13 @@ public class PassportIdentity extends NetObject implements system.IDisposable, A
 
     public static java.lang.String Decompress(java.lang.String strData) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.runtime.interopservices.COMException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDecompress = null;
         try {
-            return (java.lang.String)classType.Invoke("Decompress", strData);
+            retObjectDecompress = classType.Invoke("Decompress", strData);
+            return (java.lang.String)retObjectDecompress;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectDecompress != null ? retObjectDecompress.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -427,9 +573,13 @@ public class PassportIdentity extends NetObject implements system.IDisposable, A
 
     public static java.lang.String Decrypt(java.lang.String strData) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.runtime.interopservices.COMException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDecrypt = null;
         try {
-            return (java.lang.String)classType.Invoke("Decrypt", strData);
+            retObjectDecrypt = classType.Invoke("Decrypt", strData);
+            return (java.lang.String)retObjectDecrypt;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectDecrypt != null ? retObjectDecrypt.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -437,9 +587,13 @@ public class PassportIdentity extends NetObject implements system.IDisposable, A
 
     public static java.lang.String Encrypt(java.lang.String strData) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.runtime.interopservices.COMException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectEncrypt = null;
         try {
-            return (java.lang.String)classType.Invoke("Encrypt", strData);
+            retObjectEncrypt = classType.Invoke("Encrypt", strData);
+            return (java.lang.String)retObjectEncrypt;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectEncrypt != null ? retObjectEncrypt.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -447,9 +601,13 @@ public class PassportIdentity extends NetObject implements system.IDisposable, A
 
     public java.lang.String GetDomainAttribute(java.lang.String strAttribute, int iLCID, java.lang.String strDomain) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.NotSupportedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.runtime.interopservices.COMException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDomainAttribute = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetDomainAttribute", strAttribute, iLCID, strDomain);
+            retObjectGetDomainAttribute = classInstance.Invoke("GetDomainAttribute", strAttribute, iLCID, strDomain);
+            return (java.lang.String)retObjectGetDomainAttribute;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetDomainAttribute != null ? retObjectGetDomainAttribute.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -457,9 +615,13 @@ public class PassportIdentity extends NetObject implements system.IDisposable, A
 
     public java.lang.String GetDomainFromMemberName(java.lang.String strMemberName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.NotSupportedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.runtime.interopservices.COMException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDomainFromMemberName = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetDomainFromMemberName", strMemberName);
+            retObjectGetDomainFromMemberName = classInstance.Invoke("GetDomainFromMemberName", strMemberName);
+            return (java.lang.String)retObjectGetDomainFromMemberName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetDomainFromMemberName != null ? retObjectGetDomainFromMemberName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -467,9 +629,13 @@ public class PassportIdentity extends NetObject implements system.IDisposable, A
 
     public java.lang.String GetLoginChallenge() throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.runtime.interopservices.COMException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetLoginChallenge = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetLoginChallenge");
+            retObjectGetLoginChallenge = classInstance.Invoke("GetLoginChallenge");
+            return (java.lang.String)retObjectGetLoginChallenge;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetLoginChallenge != null ? retObjectGetLoginChallenge.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -477,9 +643,13 @@ public class PassportIdentity extends NetObject implements system.IDisposable, A
 
     public java.lang.String GetLoginChallenge(java.lang.String strReturnUrl) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.runtime.interopservices.COMException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetLoginChallenge = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetLoginChallenge", strReturnUrl);
+            retObjectGetLoginChallenge = classInstance.Invoke("GetLoginChallenge", strReturnUrl);
+            return (java.lang.String)retObjectGetLoginChallenge;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetLoginChallenge != null ? retObjectGetLoginChallenge.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -487,9 +657,13 @@ public class PassportIdentity extends NetObject implements system.IDisposable, A
 
     public java.lang.String GetLoginChallenge(java.lang.String szRetURL, int iTimeWindow, int fForceLogin, java.lang.String szCOBrandArgs, int iLangID, java.lang.String strNameSpace, int iKPP, int iUseSecureAuth, NetObject oExtraParams) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.NotSupportedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.runtime.interopservices.COMException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetLoginChallenge = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetLoginChallenge", szRetURL, iTimeWindow, fForceLogin, szCOBrandArgs, iLangID, strNameSpace, iKPP, iUseSecureAuth, oExtraParams == null ? null : oExtraParams.getJCOInstance());
+            retObjectGetLoginChallenge = classInstance.Invoke("GetLoginChallenge", szRetURL, iTimeWindow, fForceLogin, szCOBrandArgs, iLangID, strNameSpace, iKPP, iUseSecureAuth, oExtraParams == null ? null : oExtraParams.getJCOInstance());
+            return (java.lang.String)retObjectGetLoginChallenge;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetLoginChallenge != null ? retObjectGetLoginChallenge.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -497,9 +671,13 @@ public class PassportIdentity extends NetObject implements system.IDisposable, A
 
     public java.lang.String LogoTag() throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.runtime.interopservices.COMException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLogoTag = null;
         try {
-            return (java.lang.String)classInstance.Invoke("LogoTag");
+            retObjectLogoTag = classInstance.Invoke("LogoTag");
+            return (java.lang.String)retObjectLogoTag;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectLogoTag != null ? retObjectLogoTag.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -507,9 +685,13 @@ public class PassportIdentity extends NetObject implements system.IDisposable, A
 
     public java.lang.String LogoTag(java.lang.String strReturnUrl) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.runtime.interopservices.COMException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLogoTag = null;
         try {
-            return (java.lang.String)classInstance.Invoke("LogoTag", strReturnUrl);
+            retObjectLogoTag = classInstance.Invoke("LogoTag", strReturnUrl);
+            return (java.lang.String)retObjectLogoTag;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectLogoTag != null ? retObjectLogoTag.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -517,9 +699,13 @@ public class PassportIdentity extends NetObject implements system.IDisposable, A
 
     public java.lang.String LogoTag(java.lang.String strReturnUrl, int iTimeWindow, boolean fForceLogin, java.lang.String strCoBrandedArgs, int iLangID, boolean fSecure, java.lang.String strNameSpace, int iKPP, boolean bUseSecureAuth) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.runtime.interopservices.COMException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLogoTag = null;
         try {
-            return (java.lang.String)classInstance.Invoke("LogoTag", strReturnUrl, iTimeWindow, fForceLogin, strCoBrandedArgs, iLangID, fSecure, strNameSpace, iKPP, bUseSecureAuth);
+            retObjectLogoTag = classInstance.Invoke("LogoTag", strReturnUrl, iTimeWindow, fForceLogin, strCoBrandedArgs, iLangID, fSecure, strNameSpace, iKPP, bUseSecureAuth);
+            return (java.lang.String)retObjectLogoTag;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectLogoTag != null ? retObjectLogoTag.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -527,9 +713,13 @@ public class PassportIdentity extends NetObject implements system.IDisposable, A
 
     public java.lang.String LogoTag(java.lang.String strReturnUrl, int iTimeWindow, int iForceLogin, java.lang.String strCoBrandedArgs, int iLangID, int iSecure, java.lang.String strNameSpace, int iKPP, int iUseSecureAuth) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.NotSupportedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.runtime.interopservices.COMException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLogoTag = null;
         try {
-            return (java.lang.String)classInstance.Invoke("LogoTag", strReturnUrl, iTimeWindow, iForceLogin, strCoBrandedArgs, iLangID, iSecure, strNameSpace, iKPP, iUseSecureAuth);
+            retObjectLogoTag = classInstance.Invoke("LogoTag", strReturnUrl, iTimeWindow, iForceLogin, strCoBrandedArgs, iLangID, iSecure, strNameSpace, iKPP, iUseSecureAuth);
+            return (java.lang.String)retObjectLogoTag;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectLogoTag != null ? retObjectLogoTag.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -537,9 +727,13 @@ public class PassportIdentity extends NetObject implements system.IDisposable, A
 
     public java.lang.String LogoTag2() throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.runtime.interopservices.COMException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLogoTag2 = null;
         try {
-            return (java.lang.String)classInstance.Invoke("LogoTag2");
+            retObjectLogoTag2 = classInstance.Invoke("LogoTag2");
+            return (java.lang.String)retObjectLogoTag2;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectLogoTag2 != null ? retObjectLogoTag2.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -547,9 +741,13 @@ public class PassportIdentity extends NetObject implements system.IDisposable, A
 
     public java.lang.String LogoTag2(java.lang.String strReturnUrl) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.runtime.interopservices.COMException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLogoTag2 = null;
         try {
-            return (java.lang.String)classInstance.Invoke("LogoTag2", strReturnUrl);
+            retObjectLogoTag2 = classInstance.Invoke("LogoTag2", strReturnUrl);
+            return (java.lang.String)retObjectLogoTag2;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectLogoTag2 != null ? retObjectLogoTag2.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -557,9 +755,13 @@ public class PassportIdentity extends NetObject implements system.IDisposable, A
 
     public java.lang.String LogoTag2(java.lang.String strReturnUrl, int iTimeWindow, boolean fForceLogin, java.lang.String strCoBrandedArgs, int iLangID, boolean fSecure, java.lang.String strNameSpace, int iKPP, boolean bUseSecureAuth) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.runtime.interopservices.COMException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLogoTag2 = null;
         try {
-            return (java.lang.String)classInstance.Invoke("LogoTag2", strReturnUrl, iTimeWindow, fForceLogin, strCoBrandedArgs, iLangID, fSecure, strNameSpace, iKPP, bUseSecureAuth);
+            retObjectLogoTag2 = classInstance.Invoke("LogoTag2", strReturnUrl, iTimeWindow, fForceLogin, strCoBrandedArgs, iLangID, fSecure, strNameSpace, iKPP, bUseSecureAuth);
+            return (java.lang.String)retObjectLogoTag2;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectLogoTag2 != null ? retObjectLogoTag2.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -567,9 +769,13 @@ public class PassportIdentity extends NetObject implements system.IDisposable, A
 
     public java.lang.String LogoTag2(java.lang.String strReturnUrl, int iTimeWindow, int iForceLogin, java.lang.String strCoBrandedArgs, int iLangID, int iSecure, java.lang.String strNameSpace, int iKPP, int iUseSecureAuth) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.NotSupportedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.runtime.interopservices.COMException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLogoTag2 = null;
         try {
-            return (java.lang.String)classInstance.Invoke("LogoTag2", strReturnUrl, iTimeWindow, iForceLogin, strCoBrandedArgs, iLangID, iSecure, strNameSpace, iKPP, iUseSecureAuth);
+            retObjectLogoTag2 = classInstance.Invoke("LogoTag2", strReturnUrl, iTimeWindow, iForceLogin, strCoBrandedArgs, iLangID, iSecure, strNameSpace, iKPP, iUseSecureAuth);
+            return (java.lang.String)retObjectLogoTag2;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectLogoTag2 != null ? retObjectLogoTag2.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -577,9 +783,13 @@ public class PassportIdentity extends NetObject implements system.IDisposable, A
 
     public java.lang.String LogoutURL() throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.runtime.interopservices.COMException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLogoutURL = null;
         try {
-            return (java.lang.String)classInstance.Invoke("LogoutURL");
+            retObjectLogoutURL = classInstance.Invoke("LogoutURL");
+            return (java.lang.String)retObjectLogoutURL;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectLogoutURL != null ? retObjectLogoutURL.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -587,9 +797,13 @@ public class PassportIdentity extends NetObject implements system.IDisposable, A
 
     public java.lang.String LogoutURL(java.lang.String szReturnURL, java.lang.String szCOBrandArgs, int iLangID, java.lang.String strDomain, int iUseSecureAuth) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.NotSupportedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.runtime.interopservices.COMException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLogoutURL = null;
         try {
-            return (java.lang.String)classInstance.Invoke("LogoutURL", szReturnURL, szCOBrandArgs, iLangID, strDomain, iUseSecureAuth);
+            retObjectLogoutURL = classInstance.Invoke("LogoutURL", szReturnURL, szCOBrandArgs, iLangID, strDomain, iUseSecureAuth);
+            return (java.lang.String)retObjectLogoutURL;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectLogoutURL != null ? retObjectLogoutURL.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -597,7 +811,7 @@ public class PassportIdentity extends NetObject implements system.IDisposable, A
 
     public void SetOption(java.lang.String strOpt, NetObject vOpt) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.runtime.interopservices.COMException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetOption", strOpt, vOpt == null ? null : vOpt.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -607,7 +821,7 @@ public class PassportIdentity extends NetObject implements system.IDisposable, A
 
     public static void SignOut(java.lang.String strSignOutDotGifFileName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.web.HttpException, system.NotSupportedException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.web.HttpRequestValidationException, system.PlatformNotSupportedException, system.runtime.interopservices.COMException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.OverflowException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NullReferenceException, system.ApplicationException, system.UriFormatException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SignOut", strSignOutDotGifFileName);
         } catch (JCNativeException jcne) {
@@ -621,13 +835,13 @@ public class PassportIdentity extends NetObject implements system.IDisposable, A
      */
     @Deprecated 
     public void Dispose() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDisposable to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDisposable to obtain the full interface.");
     }
 
     public void close() throws Exception {
         try {
             if (classInstance == null)
-                throw new UnsupportedOperationException("classInstance is null.");
+                throw new java.lang.UnsupportedOperationException("classInstance is null.");
             try {
                 classInstance.Invoke("Dispose");
             }
@@ -643,9 +857,13 @@ public class PassportIdentity extends NetObject implements system.IDisposable, A
     
     public boolean getGetFromNetworkServer() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.runtime.interopservices.COMException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetFromNetworkServer = null;
         try {
-            return (boolean)classInstance.Get("GetFromNetworkServer");
+            retObjectGetFromNetworkServer = classInstance.Get("GetFromNetworkServer");
+            return (boolean)retObjectGetFromNetworkServer;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectGetFromNetworkServer != null ? retObjectGetFromNetworkServer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -653,9 +871,13 @@ public class PassportIdentity extends NetObject implements system.IDisposable, A
 
     public boolean getHasSavedPassword() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.runtime.interopservices.COMException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHasSavedPassword = null;
         try {
-            return (boolean)classInstance.Get("HasSavedPassword");
+            retObjectHasSavedPassword = classInstance.Get("HasSavedPassword");
+            return (boolean)retObjectHasSavedPassword;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectHasSavedPassword != null ? retObjectHasSavedPassword.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -663,9 +885,13 @@ public class PassportIdentity extends NetObject implements system.IDisposable, A
 
     public boolean getHasTicket() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.runtime.interopservices.COMException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHasTicket = null;
         try {
-            return (boolean)classInstance.Get("HasTicket");
+            retObjectHasTicket = classInstance.Get("HasTicket");
+            return (boolean)retObjectHasTicket;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectHasTicket != null ? retObjectHasTicket.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -673,9 +899,13 @@ public class PassportIdentity extends NetObject implements system.IDisposable, A
 
     public boolean getIsAuthenticated() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsAuthenticated = null;
         try {
-            return (boolean)classInstance.Get("IsAuthenticated");
+            retObjectIsAuthenticated = classInstance.Get("IsAuthenticated");
+            return (boolean)retObjectIsAuthenticated;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsAuthenticated != null ? retObjectIsAuthenticated.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -683,9 +913,20 @@ public class PassportIdentity extends NetObject implements system.IDisposable, A
 
     public int getError() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectError = null;
         try {
-            return (int)classInstance.Get("Error");
+            retObjectError = classInstance.Get("Error");
+            return (int)retObjectError;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectError_ToString = retObjectError == null ? "null" : retObjectError.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectErrorNumber = (java.lang.Number)retObjectError;
+                return retObjectErrorNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectError != null ? retObjectError.getClass() : "null", retObjectError_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -693,9 +934,20 @@ public class PassportIdentity extends NetObject implements system.IDisposable, A
 
     public int getTicketAge() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.runtime.interopservices.COMException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTicketAge = null;
         try {
-            return (int)classInstance.Get("TicketAge");
+            retObjectTicketAge = classInstance.Get("TicketAge");
+            return (int)retObjectTicketAge;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectTicketAge_ToString = retObjectTicketAge == null ? "null" : retObjectTicketAge.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectTicketAgeNumber = (java.lang.Number)retObjectTicketAge;
+                return retObjectTicketAgeNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectTicketAge != null ? retObjectTicketAge.getClass() : "null", retObjectTicketAge_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -703,9 +955,20 @@ public class PassportIdentity extends NetObject implements system.IDisposable, A
 
     public int getTimeSinceSignIn() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.runtime.interopservices.COMException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTimeSinceSignIn = null;
         try {
-            return (int)classInstance.Get("TimeSinceSignIn");
+            retObjectTimeSinceSignIn = classInstance.Get("TimeSinceSignIn");
+            return (int)retObjectTimeSinceSignIn;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectTimeSinceSignIn_ToString = retObjectTimeSinceSignIn == null ? "null" : retObjectTimeSinceSignIn.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectTimeSinceSignInNumber = (java.lang.Number)retObjectTimeSinceSignIn;
+                return retObjectTimeSinceSignInNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectTimeSinceSignIn != null ? retObjectTimeSinceSignIn.getClass() : "null", retObjectTimeSinceSignIn_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -713,9 +976,13 @@ public class PassportIdentity extends NetObject implements system.IDisposable, A
 
     public java.lang.String getAuthenticationType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAuthenticationType = null;
         try {
-            return (java.lang.String)classInstance.Get("AuthenticationType");
+            retObjectAuthenticationType = classInstance.Get("AuthenticationType");
+            return (java.lang.String)retObjectAuthenticationType;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectAuthenticationType != null ? retObjectAuthenticationType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -723,9 +990,13 @@ public class PassportIdentity extends NetObject implements system.IDisposable, A
 
     public java.lang.String getHexPUID() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.NotSupportedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.runtime.interopservices.COMException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHexPUID = null;
         try {
-            return (java.lang.String)classInstance.Get("HexPUID");
+            retObjectHexPUID = classInstance.Get("HexPUID");
+            return (java.lang.String)retObjectHexPUID;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectHexPUID != null ? retObjectHexPUID.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -733,9 +1004,13 @@ public class PassportIdentity extends NetObject implements system.IDisposable, A
 
     public java.lang.String getName() throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.runtime.interopservices.COMException, system.OverflowException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectName = null;
         try {
-            return (java.lang.String)classInstance.Get("Name");
+            retObjectName = classInstance.Get("Name");
+            return (java.lang.String)retObjectName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectName != null ? retObjectName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -148,9 +148,20 @@ public class IDataItemContainerImplementation extends NetObject implements IData
     
     public int getDataItemIndex() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDataItemIndex = null;
         try {
-            return (int)classInstance.Get("DataItemIndex");
+            retObjectDataItemIndex = classInstance.Get("DataItemIndex");
+            return (int)retObjectDataItemIndex;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDataItemIndex_ToString = retObjectDataItemIndex == null ? "null" : retObjectDataItemIndex.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectDataItemIndexNumber = (java.lang.Number)retObjectDataItemIndex;
+                return retObjectDataItemIndexNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectDataItemIndex != null ? retObjectDataItemIndex.getClass() : "null", retObjectDataItemIndex_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -158,9 +169,20 @@ public class IDataItemContainerImplementation extends NetObject implements IData
 
     public int getDisplayIndex() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDisplayIndex = null;
         try {
-            return (int)classInstance.Get("DisplayIndex");
+            retObjectDisplayIndex = classInstance.Get("DisplayIndex");
+            return (int)retObjectDisplayIndex;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDisplayIndex_ToString = retObjectDisplayIndex == null ? "null" : retObjectDisplayIndex.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectDisplayIndexNumber = (java.lang.Number)retObjectDisplayIndex;
+                return retObjectDisplayIndexNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectDisplayIndex != null ? retObjectDisplayIndex.getClass() : "null", retObjectDisplayIndex_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -168,10 +190,14 @@ public class IDataItemContainerImplementation extends NetObject implements IData
 
     public NetObject getDataItem() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDataItem = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DataItem");
+            retObjectDataItem = classInstance.Get("DataItem");
+            JCObject val = (JCObject)retObjectDataItem;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDataItem != null ? retObjectDataItem.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

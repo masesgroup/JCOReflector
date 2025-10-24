@@ -164,10 +164,14 @@ public class DockPanel extends Panel  {
     
     public static Dock GetDock(UIElement element) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetDock = null;
         try {
-            JCObject objGetDock = (JCObject)classType.Invoke("GetDock", element == null ? null : element.getJCOInstance());
+            retObjectGetDock = classType.Invoke("GetDock", element == null ? null : element.getJCOInstance());
+            JCObject objGetDock = (JCObject)retObjectGetDock;
             return new Dock(objGetDock);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetDock != null ? retObjectGetDock.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -175,7 +179,7 @@ public class DockPanel extends Panel  {
 
     public static void SetDock(UIElement element, Dock dock) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetDock", element == null ? null : element.getJCOInstance(), dock == null ? null : dock.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -189,9 +193,13 @@ public class DockPanel extends Panel  {
     
     public boolean getLastChildFill() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLastChildFill = null;
         try {
-            return (boolean)classInstance.Get("LastChildFill");
+            retObjectLastChildFill = classInstance.Get("LastChildFill");
+            return (boolean)retObjectLastChildFill;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectLastChildFill != null ? retObjectLastChildFill.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -199,7 +207,7 @@ public class DockPanel extends Panel  {
 
     public void setLastChildFill(boolean LastChildFill) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("LastChildFill", LastChildFill);
         } catch (JCNativeException jcne) {

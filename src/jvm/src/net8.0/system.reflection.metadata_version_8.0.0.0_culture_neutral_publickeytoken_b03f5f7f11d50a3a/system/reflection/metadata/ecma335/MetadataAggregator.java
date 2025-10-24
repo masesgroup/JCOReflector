@@ -157,10 +157,14 @@ public class MetadataAggregator extends NetObject  {
     
     public Handle GetGenerationHandle(Handle handle, JCORefOut<java.util.concurrent.atomic.AtomicInteger> generation) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetGenerationHandle = null;
         try {
-            JCObject objGetGenerationHandle = (JCObject)classInstance.Invoke("GetGenerationHandle", handle == null ? null : handle.getJCOInstance(), generation.getJCRefOut());
+            retObjectGetGenerationHandle = classInstance.Invoke("GetGenerationHandle", handle == null ? null : handle.getJCOInstance(), generation.getJCRefOut());
+            JCObject objGetGenerationHandle = (JCObject)retObjectGetGenerationHandle;
             return new Handle(objGetGenerationHandle);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetGenerationHandle != null ? retObjectGetGenerationHandle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

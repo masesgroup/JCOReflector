@@ -172,9 +172,13 @@ public class TypeProvider extends NetObject implements AutoCloseable {
     
     public static boolean IsAssignable(NetType toType, NetType fromType) throws Throwable, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsAssignable = null;
         try {
-            return (boolean)classType.Invoke("IsAssignable", toType == null ? null : toType.getJCOInstance(), fromType == null ? null : fromType.getJCOInstance());
+            retObjectIsAssignable = classType.Invoke("IsAssignable", toType == null ? null : toType.getJCOInstance(), fromType == null ? null : fromType.getJCOInstance());
+            return (boolean)retObjectIsAssignable;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsAssignable != null ? retObjectIsAssignable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,9 +186,13 @@ public class TypeProvider extends NetObject implements AutoCloseable {
 
     public static boolean IsEnum(NetType type) throws Throwable, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsEnum = null;
         try {
-            return (boolean)classType.Invoke("IsEnum", type == null ? null : type.getJCOInstance());
+            retObjectIsEnum = classType.Invoke("IsEnum", type == null ? null : type.getJCOInstance());
+            return (boolean)retObjectIsEnum;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsEnum != null ? retObjectIsEnum.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,9 +200,13 @@ public class TypeProvider extends NetObject implements AutoCloseable {
 
     public static boolean IsSubclassOf(NetType subclass, NetType superClass) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsSubclassOf = null;
         try {
-            return (boolean)classType.Invoke("IsSubclassOf", subclass == null ? null : subclass.getJCOInstance(), superClass == null ? null : superClass.getJCOInstance());
+            retObjectIsSubclassOf = classType.Invoke("IsSubclassOf", subclass == null ? null : subclass.getJCOInstance(), superClass == null ? null : superClass.getJCOInstance());
+            return (boolean)retObjectIsSubclassOf;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsSubclassOf != null ? retObjectIsSubclassOf.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,9 +214,13 @@ public class TypeProvider extends NetObject implements AutoCloseable {
 
     public boolean IsSupportedProperty(PropertyInfo property, NetObject declaringInstance) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsSupportedProperty = null;
         try {
-            return (boolean)classInstance.Invoke("IsSupportedProperty", property == null ? null : property.getJCOInstance(), declaringInstance == null ? null : declaringInstance.getJCOInstance());
+            retObjectIsSupportedProperty = classInstance.Invoke("IsSupportedProperty", property == null ? null : property.getJCOInstance(), declaringInstance == null ? null : declaringInstance.getJCOInstance());
+            return (boolean)retObjectIsSupportedProperty;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsSupportedProperty != null ? retObjectIsSupportedProperty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -212,10 +228,14 @@ public class TypeProvider extends NetObject implements AutoCloseable {
 
     public NetObject GetService(NetType serviceType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetService = null;
         try {
-            JCObject objGetService = (JCObject)classInstance.Invoke("GetService", serviceType == null ? null : serviceType.getJCOInstance());
+            retObjectGetService = classInstance.Invoke("GetService", serviceType == null ? null : serviceType.getJCOInstance());
+            JCObject objGetService = (JCObject)retObjectGetService;
             return new NetObject(objGetService);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetService != null ? retObjectGetService.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -223,9 +243,13 @@ public class TypeProvider extends NetObject implements AutoCloseable {
 
     public java.lang.String GetAssemblyName(NetType type) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetAssemblyName = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetAssemblyName", type == null ? null : type.getJCOInstance());
+            retObjectGetAssemblyName = classInstance.Invoke("GetAssemblyName", type == null ? null : type.getJCOInstance());
+            return (java.lang.String)retObjectGetAssemblyName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetAssemblyName != null ? retObjectGetAssemblyName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -233,10 +257,12 @@ public class TypeProvider extends NetObject implements AutoCloseable {
 
     public static java.lang.String[] GetEnumNames(NetType enumType) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetEnumNames = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("GetEnumNames", enumType == null ? null : enumType.getJCOInstance());
+            retObjectGetEnumNames = classType.Invoke("GetEnumNames", enumType == null ? null : enumType.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectGetEnumNames;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -245,6 +271,8 @@ public class TypeProvider extends NetObject implements AutoCloseable {
 				resultingArray[indexGetEnumNames] = (java.lang.String)resultingArrayList.get(indexGetEnumNames);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectGetEnumNames != null ? retObjectGetEnumNames.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -252,10 +280,14 @@ public class TypeProvider extends NetObject implements AutoCloseable {
 
     public static NetType GetEventHandlerType(EventInfo eventInfo) throws Throwable, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetEventHandlerType = null;
         try {
-            JCObject objGetEventHandlerType = (JCObject)classType.Invoke("GetEventHandlerType", eventInfo == null ? null : eventInfo.getJCOInstance());
+            retObjectGetEventHandlerType = classType.Invoke("GetEventHandlerType", eventInfo == null ? null : eventInfo.getJCOInstance());
+            JCObject objGetEventHandlerType = (JCObject)retObjectGetEventHandlerType;
             return new NetType(objGetEventHandlerType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetEventHandlerType != null ? retObjectGetEventHandlerType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -263,10 +295,14 @@ public class TypeProvider extends NetObject implements AutoCloseable {
 
     public NetType GetType(java.lang.String name) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.FormatException, system.NotImplementedException, system.MemberAccessException, system.reflection.TargetException, system.reflection.TargetParameterCountException, system.RankException, system.globalization.CultureNotFoundException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetType = null;
         try {
-            JCObject objGetType = (JCObject)classInstance.Invoke("GetType", name);
+            retObjectGetType = classInstance.Invoke("GetType", name);
+            JCObject objGetType = (JCObject)retObjectGetType;
             return new NetType(objGetType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetType != null ? retObjectGetType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -274,10 +310,14 @@ public class TypeProvider extends NetObject implements AutoCloseable {
 
     public NetType GetType(java.lang.String name, boolean throwOnError) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.io.PathTooLongException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.FormatException, system.io.FileNotFoundException, system.RankException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.OverflowException, system.reflection.TargetParameterCountException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetType = null;
         try {
-            JCObject objGetType = (JCObject)classInstance.Invoke("GetType", name, throwOnError);
+            retObjectGetType = classInstance.Invoke("GetType", name, throwOnError);
+            JCObject objGetType = (JCObject)retObjectGetType;
             return new NetType(objGetType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetType != null ? retObjectGetType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -285,16 +325,20 @@ public class TypeProvider extends NetObject implements AutoCloseable {
 
     public NetType[] GetTypes() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.io.PathTooLongException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.FormatException, system.io.FileNotFoundException, system.RankException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.OverflowException, system.reflection.TargetParameterCountException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetTypes = null;
         try {
             ArrayList<NetType> resultingArrayList = new ArrayList<NetType>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetTypes");
+            retObjectGetTypes = classInstance.Invoke("GetTypes");
+            JCObject resultingObjects = (JCObject)retObjectGetTypes;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new NetType(resultingObject));
             }
             NetType[] resultingArray = new NetType[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetTypes != null ? retObjectGetTypes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -302,7 +346,7 @@ public class TypeProvider extends NetObject implements AutoCloseable {
 
     public void AddAssembly(Assembly assembly) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.NotSupportedException, system.NotImplementedException, system.MemberAccessException, system.reflection.TargetException, system.reflection.TargetParameterCountException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddAssembly", assembly == null ? null : assembly.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -312,7 +356,7 @@ public class TypeProvider extends NetObject implements AutoCloseable {
 
     public void AddAssemblyReference(java.lang.String path) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.io.PathTooLongException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException, system.MemberAccessException, system.reflection.TargetException, system.reflection.TargetParameterCountException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddAssemblyReference", path);
         } catch (JCNativeException jcne) {
@@ -322,7 +366,7 @@ public class TypeProvider extends NetObject implements AutoCloseable {
 
     public void AddCodeCompileUnit(CodeCompileUnit codeCompileUnit) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.MemberAccessException, system.reflection.TargetException, system.reflection.TargetParameterCountException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddCodeCompileUnit", codeCompileUnit == null ? null : codeCompileUnit.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -332,7 +376,7 @@ public class TypeProvider extends NetObject implements AutoCloseable {
 
     public void Dispose() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
@@ -342,7 +386,7 @@ public class TypeProvider extends NetObject implements AutoCloseable {
 
     public void RefreshCodeCompileUnit(CodeCompileUnit codeCompileUnit, EventHandler refresher) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.MemberAccessException, system.reflection.TargetException, system.reflection.TargetParameterCountException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RefreshCodeCompileUnit", codeCompileUnit == null ? null : codeCompileUnit.getJCOInstance(), refresher);
         } catch (JCNativeException jcne) {
@@ -352,7 +396,7 @@ public class TypeProvider extends NetObject implements AutoCloseable {
 
     public void RemoveAssembly(Assembly assembly) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotSupportedException, system.FormatException, system.InvalidOperationException, system.NotImplementedException, system.MemberAccessException, system.reflection.TargetException, system.reflection.TargetParameterCountException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RemoveAssembly", assembly == null ? null : assembly.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -362,7 +406,7 @@ public class TypeProvider extends NetObject implements AutoCloseable {
 
     public void RemoveAssemblyReference(java.lang.String path) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotSupportedException, system.FormatException, system.InvalidOperationException, system.NotImplementedException, system.MemberAccessException, system.reflection.TargetException, system.reflection.TargetParameterCountException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RemoveAssemblyReference", path);
         } catch (JCNativeException jcne) {
@@ -372,7 +416,7 @@ public class TypeProvider extends NetObject implements AutoCloseable {
 
     public void RemoveCodeCompileUnit(CodeCompileUnit codeCompileUnit) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArgumentException, system.FormatException, system.InvalidOperationException, system.NotImplementedException, system.MemberAccessException, system.reflection.TargetException, system.reflection.TargetParameterCountException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RemoveCodeCompileUnit", codeCompileUnit == null ? null : codeCompileUnit.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -382,7 +426,7 @@ public class TypeProvider extends NetObject implements AutoCloseable {
 
     public void SetLocalAssembly(Assembly assembly) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException, system.NotImplementedException, system.MemberAccessException, system.reflection.TargetException, system.reflection.TargetParameterCountException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetLocalAssembly", assembly == null ? null : assembly.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -393,7 +437,7 @@ public class TypeProvider extends NetObject implements AutoCloseable {
     public void close() throws Exception {
         try {
             if (classInstance == null)
-                throw new UnsupportedOperationException("classInstance is null.");
+                throw new java.lang.UnsupportedOperationException("classInstance is null.");
             try {
                 classInstance.Invoke("Dispose");
             }
@@ -409,10 +453,14 @@ public class TypeProvider extends NetObject implements AutoCloseable {
     
     public Assembly getLocalAssembly() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLocalAssembly = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("LocalAssembly");
+            retObjectLocalAssembly = classInstance.Get("LocalAssembly");
+            JCObject val = (JCObject)retObjectLocalAssembly;
             return new Assembly(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLocalAssembly != null ? retObjectLocalAssembly.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -425,7 +473,7 @@ public class TypeProvider extends NetObject implements AutoCloseable {
 
     public void addTypeLoadErrorsChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("TypeLoadErrorsChanged", handler);
         } catch (JCNativeException jcne) {
@@ -435,7 +483,7 @@ public class TypeProvider extends NetObject implements AutoCloseable {
 
     public void removeTypeLoadErrorsChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("TypeLoadErrorsChanged", handler);
         } catch (JCNativeException jcne) {
@@ -445,7 +493,7 @@ public class TypeProvider extends NetObject implements AutoCloseable {
 
     public void addTypesChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("TypesChanged", handler);
         } catch (JCNativeException jcne) {
@@ -455,7 +503,7 @@ public class TypeProvider extends NetObject implements AutoCloseable {
 
     public void removeTypesChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("TypesChanged", handler);
         } catch (JCNativeException jcne) {

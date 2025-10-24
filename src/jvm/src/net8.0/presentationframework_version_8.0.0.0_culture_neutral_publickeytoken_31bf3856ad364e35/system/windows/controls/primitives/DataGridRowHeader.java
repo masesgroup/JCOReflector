@@ -164,7 +164,7 @@ public class DataGridRowHeader extends ButtonBase  {
     
     public void OnApplyTemplate() throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("OnApplyTemplate");
         } catch (JCNativeException jcne) {
@@ -178,9 +178,13 @@ public class DataGridRowHeader extends ButtonBase  {
     
     public boolean getIsRowSelected() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsRowSelected = null;
         try {
-            return (boolean)classInstance.Get("IsRowSelected");
+            retObjectIsRowSelected = classInstance.Get("IsRowSelected");
+            return (boolean)retObjectIsRowSelected;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsRowSelected != null ? retObjectIsRowSelected.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,10 +192,14 @@ public class DataGridRowHeader extends ButtonBase  {
 
     public Brush getSeparatorBrush() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSeparatorBrush = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SeparatorBrush");
+            retObjectSeparatorBrush = classInstance.Get("SeparatorBrush");
+            JCObject val = (JCObject)retObjectSeparatorBrush;
             return new Brush(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSeparatorBrush != null ? retObjectSeparatorBrush.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -199,7 +207,7 @@ public class DataGridRowHeader extends ButtonBase  {
 
     public void setSeparatorBrush(Brush SeparatorBrush) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SeparatorBrush", SeparatorBrush == null ? null : SeparatorBrush.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -209,10 +217,14 @@ public class DataGridRowHeader extends ButtonBase  {
 
     public Visibility getSeparatorVisibility() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSeparatorVisibility = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SeparatorVisibility");
+            retObjectSeparatorVisibility = classInstance.Get("SeparatorVisibility");
+            JCObject val = (JCObject)retObjectSeparatorVisibility;
             return new Visibility(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSeparatorVisibility != null ? retObjectSeparatorVisibility.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -220,7 +232,7 @@ public class DataGridRowHeader extends ButtonBase  {
 
     public void setSeparatorVisibility(Visibility SeparatorVisibility) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SeparatorVisibility", SeparatorVisibility == null ? null : SeparatorVisibility.getJCOInstance());
         } catch (JCNativeException jcne) {

@@ -147,7 +147,7 @@ public class IConnectionPointContainerImplementation extends NetObject implement
     
     public void EnumConnectionPoints(JCORefOut<IEnumConnectionPoints> ppEnum) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EnumConnectionPoints", ppEnum.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -157,7 +157,7 @@ public class IConnectionPointContainerImplementation extends NetObject implement
 
     public void FindConnectionPoint(JCORefOut<Guid> riid, JCORefOut<IConnectionPoint> ppCP) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("FindConnectionPoint", riid.getJCRefOut(), ppCP.getJCRefOut());
         } catch (JCNativeException jcne) {

@@ -159,10 +159,14 @@ public class TcpConnectionInformation extends NetObject  {
     
     public IPEndPoint getLocalEndPoint() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLocalEndPoint = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("LocalEndPoint");
+            retObjectLocalEndPoint = classInstance.Get("LocalEndPoint");
+            JCObject val = (JCObject)retObjectLocalEndPoint;
             return new IPEndPoint(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLocalEndPoint != null ? retObjectLocalEndPoint.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,10 +174,14 @@ public class TcpConnectionInformation extends NetObject  {
 
     public IPEndPoint getRemoteEndPoint() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRemoteEndPoint = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RemoteEndPoint");
+            retObjectRemoteEndPoint = classInstance.Get("RemoteEndPoint");
+            JCObject val = (JCObject)retObjectRemoteEndPoint;
             return new IPEndPoint(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRemoteEndPoint != null ? retObjectRemoteEndPoint.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,10 +189,14 @@ public class TcpConnectionInformation extends NetObject  {
 
     public TcpState getState() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectState = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("State");
+            retObjectState = classInstance.Get("State");
+            JCObject val = (JCObject)retObjectState;
             return new TcpState(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectState != null ? retObjectState.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -161,9 +161,13 @@ public class ManipulationCompletedEventArgs extends InputEventArgs  {
     
     public boolean Cancel() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCancel = null;
         try {
-            return (boolean)classInstance.Invoke("Cancel");
+            retObjectCancel = classInstance.Invoke("Cancel");
+            return (boolean)retObjectCancel;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCancel != null ? retObjectCancel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -175,9 +179,13 @@ public class ManipulationCompletedEventArgs extends InputEventArgs  {
     
     public boolean getIsInertial() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsInertial = null;
         try {
-            return (boolean)classInstance.Get("IsInertial");
+            retObjectIsInertial = classInstance.Get("IsInertial");
+            return (boolean)retObjectIsInertial;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsInertial != null ? retObjectIsInertial.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -185,7 +193,7 @@ public class ManipulationCompletedEventArgs extends InputEventArgs  {
 
     public void setIsInertial(boolean IsInertial) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsInertial", IsInertial);
         } catch (JCNativeException jcne) {
@@ -195,10 +203,14 @@ public class ManipulationCompletedEventArgs extends InputEventArgs  {
 
     public IInputElement getManipulationContainer() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectManipulationContainer = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ManipulationContainer");
+            retObjectManipulationContainer = classInstance.Get("ManipulationContainer");
+            JCObject val = (JCObject)retObjectManipulationContainer;
             return new IInputElementImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectManipulationContainer != null ? retObjectManipulationContainer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -206,7 +218,7 @@ public class ManipulationCompletedEventArgs extends InputEventArgs  {
 
     public void setManipulationContainer(IInputElement ManipulationContainer) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ManipulationContainer", ManipulationContainer == null ? null : ManipulationContainer.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -216,10 +228,14 @@ public class ManipulationCompletedEventArgs extends InputEventArgs  {
 
     public ManipulationDelta getTotalManipulation() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTotalManipulation = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TotalManipulation");
+            retObjectTotalManipulation = classInstance.Get("TotalManipulation");
+            JCObject val = (JCObject)retObjectTotalManipulation;
             return new ManipulationDelta(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTotalManipulation != null ? retObjectTotalManipulation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -227,7 +243,7 @@ public class ManipulationCompletedEventArgs extends InputEventArgs  {
 
     public void setTotalManipulation(ManipulationDelta TotalManipulation) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TotalManipulation", TotalManipulation == null ? null : TotalManipulation.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -237,10 +253,14 @@ public class ManipulationCompletedEventArgs extends InputEventArgs  {
 
     public ManipulationVelocities getFinalVelocities() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFinalVelocities = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("FinalVelocities");
+            retObjectFinalVelocities = classInstance.Get("FinalVelocities");
+            JCObject val = (JCObject)retObjectFinalVelocities;
             return new ManipulationVelocities(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFinalVelocities != null ? retObjectFinalVelocities.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -248,7 +268,7 @@ public class ManipulationCompletedEventArgs extends InputEventArgs  {
 
     public void setFinalVelocities(ManipulationVelocities FinalVelocities) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FinalVelocities", FinalVelocities == null ? null : FinalVelocities.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -258,10 +278,14 @@ public class ManipulationCompletedEventArgs extends InputEventArgs  {
 
     public Point getManipulationOrigin() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectManipulationOrigin = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ManipulationOrigin");
+            retObjectManipulationOrigin = classInstance.Get("ManipulationOrigin");
+            JCObject val = (JCObject)retObjectManipulationOrigin;
             return new Point(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectManipulationOrigin != null ? retObjectManipulationOrigin.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -269,7 +293,7 @@ public class ManipulationCompletedEventArgs extends InputEventArgs  {
 
     public void setManipulationOrigin(Point ManipulationOrigin) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ManipulationOrigin", ManipulationOrigin == null ? null : ManipulationOrigin.getJCOInstance());
         } catch (JCNativeException jcne) {

@@ -144,7 +144,7 @@ public class IPolicyImportExtensionImplementation extends NetObject implements I
     
     public void ImportPolicy(MetadataImporter importer, PolicyConversionContext context) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ImportPolicy", importer == null ? null : importer.getJCOInstance(), context == null ? null : context.getJCOInstance());
         } catch (JCNativeException jcne) {

@@ -192,9 +192,13 @@ public class Plane extends ValueType  {
     
     public boolean Equals(Plane other) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEquals = null;
         try {
-            return (boolean)classInstance.Invoke("Equals", other == null ? null : other.getJCOInstance());
+            retObjectEquals = classInstance.Invoke("Equals", other == null ? null : other.getJCOInstance());
+            return (boolean)retObjectEquals;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectEquals != null ? retObjectEquals.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,10 +206,14 @@ public class Plane extends ValueType  {
 
     public static Single Dot(Plane plane, Vector4 value) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDot = null;
         try {
-            JCObject objDot = (JCObject)classType.Invoke("Dot", plane == null ? null : plane.getJCOInstance(), value == null ? null : value.getJCOInstance());
+            retObjectDot = classType.Invoke("Dot", plane == null ? null : plane.getJCOInstance(), value == null ? null : value.getJCOInstance());
+            JCObject objDot = (JCObject)retObjectDot;
             return new Single(objDot);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDot != null ? retObjectDot.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,10 +221,14 @@ public class Plane extends ValueType  {
 
     public static Single DotCoordinate(Plane plane, Vector3 value) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDotCoordinate = null;
         try {
-            JCObject objDotCoordinate = (JCObject)classType.Invoke("DotCoordinate", plane == null ? null : plane.getJCOInstance(), value == null ? null : value.getJCOInstance());
+            retObjectDotCoordinate = classType.Invoke("DotCoordinate", plane == null ? null : plane.getJCOInstance(), value == null ? null : value.getJCOInstance());
+            JCObject objDotCoordinate = (JCObject)retObjectDotCoordinate;
             return new Single(objDotCoordinate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDotCoordinate != null ? retObjectDotCoordinate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -224,10 +236,14 @@ public class Plane extends ValueType  {
 
     public static Single DotNormal(Plane plane, Vector3 value) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDotNormal = null;
         try {
-            JCObject objDotNormal = (JCObject)classType.Invoke("DotNormal", plane == null ? null : plane.getJCOInstance(), value == null ? null : value.getJCOInstance());
+            retObjectDotNormal = classType.Invoke("DotNormal", plane == null ? null : plane.getJCOInstance(), value == null ? null : value.getJCOInstance());
+            JCObject objDotNormal = (JCObject)retObjectDotNormal;
             return new Single(objDotNormal);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDotNormal != null ? retObjectDotNormal.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -235,10 +251,14 @@ public class Plane extends ValueType  {
 
     public static Plane CreateFromVertices(Vector3 point1, Vector3 point2, Vector3 point3) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateFromVertices = null;
         try {
-            JCObject objCreateFromVertices = (JCObject)classType.Invoke("CreateFromVertices", point1 == null ? null : point1.getJCOInstance(), point2 == null ? null : point2.getJCOInstance(), point3 == null ? null : point3.getJCOInstance());
+            retObjectCreateFromVertices = classType.Invoke("CreateFromVertices", point1 == null ? null : point1.getJCOInstance(), point2 == null ? null : point2.getJCOInstance(), point3 == null ? null : point3.getJCOInstance());
+            JCObject objCreateFromVertices = (JCObject)retObjectCreateFromVertices;
             return new Plane(objCreateFromVertices);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateFromVertices != null ? retObjectCreateFromVertices.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -246,10 +266,14 @@ public class Plane extends ValueType  {
 
     public static Plane Normalize(Plane value) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectNormalize = null;
         try {
-            JCObject objNormalize = (JCObject)classType.Invoke("Normalize", value == null ? null : value.getJCOInstance());
+            retObjectNormalize = classType.Invoke("Normalize", value == null ? null : value.getJCOInstance());
+            JCObject objNormalize = (JCObject)retObjectNormalize;
             return new Plane(objNormalize);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNormalize != null ? retObjectNormalize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -257,10 +281,14 @@ public class Plane extends ValueType  {
 
     public static Plane Transform(Plane plane, Matrix4x4 matrix) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTransform = null;
         try {
-            JCObject objTransform = (JCObject)classType.Invoke("Transform", plane == null ? null : plane.getJCOInstance(), matrix == null ? null : matrix.getJCOInstance());
+            retObjectTransform = classType.Invoke("Transform", plane == null ? null : plane.getJCOInstance(), matrix == null ? null : matrix.getJCOInstance());
+            JCObject objTransform = (JCObject)retObjectTransform;
             return new Plane(objTransform);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTransform != null ? retObjectTransform.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -268,10 +296,14 @@ public class Plane extends ValueType  {
 
     public static Plane Transform(Plane plane, Quaternion rotation) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTransform = null;
         try {
-            JCObject objTransform = (JCObject)classType.Invoke("Transform", plane == null ? null : plane.getJCOInstance(), rotation == null ? null : rotation.getJCOInstance());
+            retObjectTransform = classType.Invoke("Transform", plane == null ? null : plane.getJCOInstance(), rotation == null ? null : rotation.getJCOInstance());
+            JCObject objTransform = (JCObject)retObjectTransform;
             return new Plane(objTransform);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTransform != null ? retObjectTransform.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -163,7 +163,7 @@ public class ActivityMetadata extends ValueType  {
     
     public void AddArgument(RuntimeArgument argument) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.RankException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddArgument", argument == null ? null : argument.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -173,7 +173,7 @@ public class ActivityMetadata extends ValueType  {
 
     public void AddImportedChild(Activity importedChild) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddImportedChild", importedChild == null ? null : importedChild.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -183,7 +183,7 @@ public class ActivityMetadata extends ValueType  {
 
     public void AddImportedChild(Activity importedChild, NetObject origin) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddImportedChild", importedChild == null ? null : importedChild.getJCOInstance(), origin == null ? null : origin.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -193,7 +193,7 @@ public class ActivityMetadata extends ValueType  {
 
     public void AddImportedDelegate(ActivityDelegate importedDelegate) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddImportedDelegate", importedDelegate == null ? null : importedDelegate.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -203,7 +203,7 @@ public class ActivityMetadata extends ValueType  {
 
     public void AddImportedDelegate(ActivityDelegate importedDelegate, NetObject origin) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddImportedDelegate", importedDelegate == null ? null : importedDelegate.getJCOInstance(), origin == null ? null : origin.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -213,7 +213,7 @@ public class ActivityMetadata extends ValueType  {
 
     public void AddValidationError(ValidationError validationError) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddValidationError", validationError == null ? null : validationError.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -223,7 +223,7 @@ public class ActivityMetadata extends ValueType  {
 
     public void AddValidationError(java.lang.String validationErrorMessage) throws Throwable, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddValidationError", validationErrorMessage);
         } catch (JCNativeException jcne) {
@@ -233,7 +233,7 @@ public class ActivityMetadata extends ValueType  {
 
     public void AddVariable(Variable variable) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddVariable", variable == null ? null : variable.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -243,7 +243,7 @@ public class ActivityMetadata extends ValueType  {
 
     public void AddVariable(Variable variable, NetObject origin) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddVariable", variable == null ? null : variable.getJCOInstance(), origin == null ? null : origin.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -253,7 +253,7 @@ public class ActivityMetadata extends ValueType  {
 
     public void Bind(Argument binding, RuntimeArgument argument) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Bind", binding == null ? null : binding.getJCOInstance(), argument == null ? null : argument.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -263,7 +263,7 @@ public class ActivityMetadata extends ValueType  {
 
     public void RequireExtension(NetType extensionType) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RequireExtension", extensionType == null ? null : extensionType.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -277,9 +277,13 @@ public class ActivityMetadata extends ValueType  {
     
     public boolean getHasViolations() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHasViolations = null;
         try {
-            return (boolean)classInstance.Get("HasViolations");
+            retObjectHasViolations = classInstance.Get("HasViolations");
+            return (boolean)retObjectHasViolations;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectHasViolations != null ? retObjectHasViolations.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -287,10 +291,14 @@ public class ActivityMetadata extends ValueType  {
 
     public LocationReferenceEnvironment getEnvironment() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEnvironment = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Environment");
+            retObjectEnvironment = classInstance.Get("Environment");
+            JCObject val = (JCObject)retObjectEnvironment;
             return new LocationReferenceEnvironment(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEnvironment != null ? retObjectEnvironment.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

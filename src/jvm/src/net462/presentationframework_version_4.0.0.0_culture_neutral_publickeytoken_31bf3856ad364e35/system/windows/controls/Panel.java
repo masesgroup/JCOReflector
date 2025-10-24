@@ -160,9 +160,13 @@ public class Panel extends FrameworkElement implements system.windows.markup.IAd
     
     public boolean ShouldSerializeChildren() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShouldSerializeChildren = null;
         try {
-            return (boolean)classInstance.Invoke("ShouldSerializeChildren");
+            retObjectShouldSerializeChildren = classInstance.Invoke("ShouldSerializeChildren");
+            return (boolean)retObjectShouldSerializeChildren;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectShouldSerializeChildren != null ? retObjectShouldSerializeChildren.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,9 +174,20 @@ public class Panel extends FrameworkElement implements system.windows.markup.IAd
 
     public static int GetZIndex(UIElement element) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetZIndex = null;
         try {
-            return (int)classType.Invoke("GetZIndex", element == null ? null : element.getJCOInstance());
+            retObjectGetZIndex = classType.Invoke("GetZIndex", element == null ? null : element.getJCOInstance());
+            return (int)retObjectGetZIndex;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetZIndex_ToString = retObjectGetZIndex == null ? "null" : retObjectGetZIndex.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetZIndexNumber = (java.lang.Number)retObjectGetZIndex;
+                return retObjectGetZIndexNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetZIndex != null ? retObjectGetZIndex.getClass() : "null", retObjectGetZIndex_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,7 +195,7 @@ public class Panel extends FrameworkElement implements system.windows.markup.IAd
 
     public static void SetZIndex(UIElement element, int value) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetZIndex", element == null ? null : element.getJCOInstance(), value);
         } catch (JCNativeException jcne) {
@@ -194,7 +209,7 @@ public class Panel extends FrameworkElement implements system.windows.markup.IAd
      */
     @Deprecated 
     public void AddChild(NetObject value) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAddChild to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAddChild to obtain the full interface.");
     }
 
     /**
@@ -203,7 +218,7 @@ public class Panel extends FrameworkElement implements system.windows.markup.IAd
      */
     @Deprecated 
     public void AddText(java.lang.String text) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAddChild to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAddChild to obtain the full interface.");
     }
 
 
@@ -212,9 +227,13 @@ public class Panel extends FrameworkElement implements system.windows.markup.IAd
     
     public boolean getHasLogicalOrientationPublic() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHasLogicalOrientationPublic = null;
         try {
-            return (boolean)classInstance.Get("HasLogicalOrientationPublic");
+            retObjectHasLogicalOrientationPublic = classInstance.Get("HasLogicalOrientationPublic");
+            return (boolean)retObjectHasLogicalOrientationPublic;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectHasLogicalOrientationPublic != null ? retObjectHasLogicalOrientationPublic.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -222,9 +241,13 @@ public class Panel extends FrameworkElement implements system.windows.markup.IAd
 
     public boolean getIsItemsHost() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsItemsHost = null;
         try {
-            return (boolean)classInstance.Get("IsItemsHost");
+            retObjectIsItemsHost = classInstance.Get("IsItemsHost");
+            return (boolean)retObjectIsItemsHost;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsItemsHost != null ? retObjectIsItemsHost.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -232,7 +255,7 @@ public class Panel extends FrameworkElement implements system.windows.markup.IAd
 
     public void setIsItemsHost(boolean IsItemsHost) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsItemsHost", IsItemsHost);
         } catch (JCNativeException jcne) {
@@ -242,10 +265,14 @@ public class Panel extends FrameworkElement implements system.windows.markup.IAd
 
     public Orientation getLogicalOrientationPublic() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLogicalOrientationPublic = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("LogicalOrientationPublic");
+            retObjectLogicalOrientationPublic = classInstance.Get("LogicalOrientationPublic");
+            JCObject val = (JCObject)retObjectLogicalOrientationPublic;
             return new Orientation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLogicalOrientationPublic != null ? retObjectLogicalOrientationPublic.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -253,10 +280,14 @@ public class Panel extends FrameworkElement implements system.windows.markup.IAd
 
     public UIElementCollection getChildren() throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.NotSupportedException, system.FormatException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectChildren = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Children");
+            retObjectChildren = classInstance.Get("Children");
+            JCObject val = (JCObject)retObjectChildren;
             return new UIElementCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectChildren != null ? retObjectChildren.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -264,10 +295,14 @@ public class Panel extends FrameworkElement implements system.windows.markup.IAd
 
     public Brush getBackground() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBackground = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Background");
+            retObjectBackground = classInstance.Get("Background");
+            JCObject val = (JCObject)retObjectBackground;
             return new Brush(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBackground != null ? retObjectBackground.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -275,7 +310,7 @@ public class Panel extends FrameworkElement implements system.windows.markup.IAd
 
     public void setBackground(Brush Background) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Background", Background == null ? null : Background.getJCOInstance());
         } catch (JCNativeException jcne) {

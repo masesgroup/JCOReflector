@@ -171,9 +171,13 @@ public class PreviewKeyDownEventArgs extends EventArgs  {
     
     public boolean getAlt() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAlt = null;
         try {
-            return (boolean)classInstance.Get("Alt");
+            retObjectAlt = classInstance.Get("Alt");
+            return (boolean)retObjectAlt;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAlt != null ? retObjectAlt.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,9 +185,13 @@ public class PreviewKeyDownEventArgs extends EventArgs  {
 
     public boolean getControl() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectControl = null;
         try {
-            return (boolean)classInstance.Get("Control");
+            retObjectControl = classInstance.Get("Control");
+            return (boolean)retObjectControl;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectControl != null ? retObjectControl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,9 +199,13 @@ public class PreviewKeyDownEventArgs extends EventArgs  {
 
     public boolean getIsInputKey() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsInputKey = null;
         try {
-            return (boolean)classInstance.Get("IsInputKey");
+            retObjectIsInputKey = classInstance.Get("IsInputKey");
+            return (boolean)retObjectIsInputKey;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsInputKey != null ? retObjectIsInputKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,7 +213,7 @@ public class PreviewKeyDownEventArgs extends EventArgs  {
 
     public void setIsInputKey(boolean IsInputKey) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsInputKey", IsInputKey);
         } catch (JCNativeException jcne) {
@@ -211,9 +223,13 @@ public class PreviewKeyDownEventArgs extends EventArgs  {
 
     public boolean getShift() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShift = null;
         try {
-            return (boolean)classInstance.Get("Shift");
+            retObjectShift = classInstance.Get("Shift");
+            return (boolean)retObjectShift;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectShift != null ? retObjectShift.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -221,9 +237,20 @@ public class PreviewKeyDownEventArgs extends EventArgs  {
 
     public int getKeyValue() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectKeyValue = null;
         try {
-            return (int)classInstance.Get("KeyValue");
+            retObjectKeyValue = classInstance.Get("KeyValue");
+            return (int)retObjectKeyValue;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectKeyValue_ToString = retObjectKeyValue == null ? "null" : retObjectKeyValue.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectKeyValueNumber = (java.lang.Number)retObjectKeyValue;
+                return retObjectKeyValueNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectKeyValue != null ? retObjectKeyValue.getClass() : "null", retObjectKeyValue_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -231,10 +258,14 @@ public class PreviewKeyDownEventArgs extends EventArgs  {
 
     public Keys getKeyCode() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectKeyCode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("KeyCode");
+            retObjectKeyCode = classInstance.Get("KeyCode");
+            JCObject val = (JCObject)retObjectKeyCode;
             return new Keys(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectKeyCode != null ? retObjectKeyCode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -242,10 +273,14 @@ public class PreviewKeyDownEventArgs extends EventArgs  {
 
     public Keys getKeyData() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectKeyData = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("KeyData");
+            retObjectKeyData = classInstance.Get("KeyData");
+            JCObject val = (JCObject)retObjectKeyData;
             return new Keys(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectKeyData != null ? retObjectKeyData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -253,10 +288,14 @@ public class PreviewKeyDownEventArgs extends EventArgs  {
 
     public Keys getModifiers() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectModifiers = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Modifiers");
+            retObjectModifiers = classInstance.Get("Modifiers");
+            JCObject val = (JCObject)retObjectModifiers;
             return new Keys(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectModifiers != null ? retObjectModifiers.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

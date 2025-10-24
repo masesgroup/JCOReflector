@@ -180,10 +180,14 @@ public class SiteMapDataSourceView extends DataSourceView  {
     
     public IEnumerable Select(DataSourceSelectArguments arguments) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelect = null;
         try {
-            JCObject objSelect = (JCObject)classInstance.Invoke("Select", arguments == null ? null : arguments.getJCOInstance());
+            retObjectSelect = classInstance.Invoke("Select", arguments == null ? null : arguments.getJCOInstance());
+            JCObject objSelect = (JCObject)retObjectSelect;
             return new IEnumerableImplementation(objSelect);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelect != null ? retObjectSelect.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

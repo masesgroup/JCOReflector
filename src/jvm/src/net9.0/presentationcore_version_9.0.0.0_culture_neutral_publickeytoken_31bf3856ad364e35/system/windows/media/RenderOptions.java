@@ -159,9 +159,20 @@ public class RenderOptions extends NetObject  {
     
     public static double GetCacheInvalidationThresholdMaximum(DependencyObject target) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetCacheInvalidationThresholdMaximum = null;
         try {
-            return (double)classType.Invoke("GetCacheInvalidationThresholdMaximum", target == null ? null : target.getJCOInstance());
+            retObjectGetCacheInvalidationThresholdMaximum = classType.Invoke("GetCacheInvalidationThresholdMaximum", target == null ? null : target.getJCOInstance());
+            return (double)retObjectGetCacheInvalidationThresholdMaximum;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetCacheInvalidationThresholdMaximum_ToString = retObjectGetCacheInvalidationThresholdMaximum == null ? "null" : retObjectGetCacheInvalidationThresholdMaximum.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetCacheInvalidationThresholdMaximumNumber = (java.lang.Number)retObjectGetCacheInvalidationThresholdMaximum;
+                return retObjectGetCacheInvalidationThresholdMaximumNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectGetCacheInvalidationThresholdMaximum != null ? retObjectGetCacheInvalidationThresholdMaximum.getClass() : "null", retObjectGetCacheInvalidationThresholdMaximum_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,9 +180,20 @@ public class RenderOptions extends NetObject  {
 
     public static double GetCacheInvalidationThresholdMinimum(DependencyObject target) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetCacheInvalidationThresholdMinimum = null;
         try {
-            return (double)classType.Invoke("GetCacheInvalidationThresholdMinimum", target == null ? null : target.getJCOInstance());
+            retObjectGetCacheInvalidationThresholdMinimum = classType.Invoke("GetCacheInvalidationThresholdMinimum", target == null ? null : target.getJCOInstance());
+            return (double)retObjectGetCacheInvalidationThresholdMinimum;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetCacheInvalidationThresholdMinimum_ToString = retObjectGetCacheInvalidationThresholdMinimum == null ? "null" : retObjectGetCacheInvalidationThresholdMinimum.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetCacheInvalidationThresholdMinimumNumber = (java.lang.Number)retObjectGetCacheInvalidationThresholdMinimum;
+                return retObjectGetCacheInvalidationThresholdMinimumNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectGetCacheInvalidationThresholdMinimum != null ? retObjectGetCacheInvalidationThresholdMinimum.getClass() : "null", retObjectGetCacheInvalidationThresholdMinimum_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,10 +201,14 @@ public class RenderOptions extends NetObject  {
 
     public static BitmapScalingMode GetBitmapScalingMode(DependencyObject target) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetBitmapScalingMode = null;
         try {
-            JCObject objGetBitmapScalingMode = (JCObject)classType.Invoke("GetBitmapScalingMode", target == null ? null : target.getJCOInstance());
+            retObjectGetBitmapScalingMode = classType.Invoke("GetBitmapScalingMode", target == null ? null : target.getJCOInstance());
+            JCObject objGetBitmapScalingMode = (JCObject)retObjectGetBitmapScalingMode;
             return new BitmapScalingMode(objGetBitmapScalingMode);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetBitmapScalingMode != null ? retObjectGetBitmapScalingMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,10 +216,14 @@ public class RenderOptions extends NetObject  {
 
     public static CachingHint GetCachingHint(DependencyObject target) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetCachingHint = null;
         try {
-            JCObject objGetCachingHint = (JCObject)classType.Invoke("GetCachingHint", target == null ? null : target.getJCOInstance());
+            retObjectGetCachingHint = classType.Invoke("GetCachingHint", target == null ? null : target.getJCOInstance());
+            JCObject objGetCachingHint = (JCObject)retObjectGetCachingHint;
             return new CachingHint(objGetCachingHint);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCachingHint != null ? retObjectGetCachingHint.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,10 +231,14 @@ public class RenderOptions extends NetObject  {
 
     public static ClearTypeHint GetClearTypeHint(DependencyObject target) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetClearTypeHint = null;
         try {
-            JCObject objGetClearTypeHint = (JCObject)classType.Invoke("GetClearTypeHint", target == null ? null : target.getJCOInstance());
+            retObjectGetClearTypeHint = classType.Invoke("GetClearTypeHint", target == null ? null : target.getJCOInstance());
+            JCObject objGetClearTypeHint = (JCObject)retObjectGetClearTypeHint;
             return new ClearTypeHint(objGetClearTypeHint);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetClearTypeHint != null ? retObjectGetClearTypeHint.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -212,10 +246,14 @@ public class RenderOptions extends NetObject  {
 
     public static EdgeMode GetEdgeMode(DependencyObject target) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetEdgeMode = null;
         try {
-            JCObject objGetEdgeMode = (JCObject)classType.Invoke("GetEdgeMode", target == null ? null : target.getJCOInstance());
+            retObjectGetEdgeMode = classType.Invoke("GetEdgeMode", target == null ? null : target.getJCOInstance());
+            JCObject objGetEdgeMode = (JCObject)retObjectGetEdgeMode;
             return new EdgeMode(objGetEdgeMode);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetEdgeMode != null ? retObjectGetEdgeMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -223,7 +261,7 @@ public class RenderOptions extends NetObject  {
 
     public static void SetBitmapScalingMode(DependencyObject target, BitmapScalingMode bitmapScalingMode) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetBitmapScalingMode", target == null ? null : target.getJCOInstance(), bitmapScalingMode == null ? null : bitmapScalingMode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -233,7 +271,7 @@ public class RenderOptions extends NetObject  {
 
     public static void SetCacheInvalidationThresholdMaximum(DependencyObject target, double cacheInvalidationThresholdMaximum) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetCacheInvalidationThresholdMaximum", target == null ? null : target.getJCOInstance(), cacheInvalidationThresholdMaximum);
         } catch (JCNativeException jcne) {
@@ -243,7 +281,7 @@ public class RenderOptions extends NetObject  {
 
     public static void SetCacheInvalidationThresholdMinimum(DependencyObject target, double cacheInvalidationThresholdMinimum) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetCacheInvalidationThresholdMinimum", target == null ? null : target.getJCOInstance(), cacheInvalidationThresholdMinimum);
         } catch (JCNativeException jcne) {
@@ -253,7 +291,7 @@ public class RenderOptions extends NetObject  {
 
     public static void SetCachingHint(DependencyObject target, CachingHint cachingHint) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetCachingHint", target == null ? null : target.getJCOInstance(), cachingHint == null ? null : cachingHint.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -263,7 +301,7 @@ public class RenderOptions extends NetObject  {
 
     public static void SetClearTypeHint(DependencyObject target, ClearTypeHint clearTypeHint) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetClearTypeHint", target == null ? null : target.getJCOInstance(), clearTypeHint == null ? null : clearTypeHint.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -273,7 +311,7 @@ public class RenderOptions extends NetObject  {
 
     public static void SetEdgeMode(DependencyObject target, EdgeMode edgeMode) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetEdgeMode", target == null ? null : target.getJCOInstance(), edgeMode == null ? null : edgeMode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -287,10 +325,14 @@ public class RenderOptions extends NetObject  {
     
     public static RenderMode getProcessRenderMode() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectProcessRenderMode = null;
         try {
-            JCObject val = (JCObject)classType.Get("ProcessRenderMode");
+            retObjectProcessRenderMode = classType.Get("ProcessRenderMode");
+            JCObject val = (JCObject)retObjectProcessRenderMode;
             return new RenderMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectProcessRenderMode != null ? retObjectProcessRenderMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -298,7 +340,7 @@ public class RenderOptions extends NetObject  {
 
     public static void setProcessRenderMode(RenderMode ProcessRenderMode) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Set("ProcessRenderMode", ProcessRenderMode == null ? null : ProcessRenderMode.getJCOInstance());
         } catch (JCNativeException jcne) {

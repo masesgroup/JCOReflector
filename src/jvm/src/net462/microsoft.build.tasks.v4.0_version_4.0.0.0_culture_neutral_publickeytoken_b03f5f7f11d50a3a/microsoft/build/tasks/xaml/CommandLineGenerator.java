@@ -156,9 +156,13 @@ public class CommandLineGenerator extends NetObject  {
     
     public java.lang.String GenerateCommandLine() throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NullReferenceException, system.ObjectDisposedException, system.RankException, system.NotSupportedException, system.security.SecurityException, system.NotImplementedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGenerateCommandLine = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GenerateCommandLine");
+            retObjectGenerateCommandLine = classInstance.Invoke("GenerateCommandLine");
+            return (java.lang.String)retObjectGenerateCommandLine;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGenerateCommandLine != null ? retObjectGenerateCommandLine.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,9 +174,13 @@ public class CommandLineGenerator extends NetObject  {
     
     public java.lang.String getAdditionalOptions() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAdditionalOptions = null;
         try {
-            return (java.lang.String)classInstance.Get("AdditionalOptions");
+            retObjectAdditionalOptions = classInstance.Get("AdditionalOptions");
+            return (java.lang.String)retObjectAdditionalOptions;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectAdditionalOptions != null ? retObjectAdditionalOptions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,7 +188,7 @@ public class CommandLineGenerator extends NetObject  {
 
     public void setAdditionalOptions(java.lang.String AdditionalOptions) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AdditionalOptions", AdditionalOptions);
         } catch (JCNativeException jcne) {
@@ -190,9 +198,13 @@ public class CommandLineGenerator extends NetObject  {
 
     public java.lang.String getAlwaysAppend() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAlwaysAppend = null;
         try {
-            return (java.lang.String)classInstance.Get("AlwaysAppend");
+            retObjectAlwaysAppend = classInstance.Get("AlwaysAppend");
+            return (java.lang.String)retObjectAlwaysAppend;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectAlwaysAppend != null ? retObjectAlwaysAppend.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,7 +212,7 @@ public class CommandLineGenerator extends NetObject  {
 
     public void setAlwaysAppend(java.lang.String AlwaysAppend) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AlwaysAppend", AlwaysAppend);
         } catch (JCNativeException jcne) {
@@ -210,9 +222,13 @@ public class CommandLineGenerator extends NetObject  {
 
     public java.lang.String getCommandLineTemplate() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCommandLineTemplate = null;
         try {
-            return (java.lang.String)classInstance.Get("CommandLineTemplate");
+            retObjectCommandLineTemplate = classInstance.Get("CommandLineTemplate");
+            return (java.lang.String)retObjectCommandLineTemplate;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectCommandLineTemplate != null ? retObjectCommandLineTemplate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -220,7 +236,7 @@ public class CommandLineGenerator extends NetObject  {
 
     public void setCommandLineTemplate(java.lang.String CommandLineTemplate) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CommandLineTemplate", CommandLineTemplate);
         } catch (JCNativeException jcne) {

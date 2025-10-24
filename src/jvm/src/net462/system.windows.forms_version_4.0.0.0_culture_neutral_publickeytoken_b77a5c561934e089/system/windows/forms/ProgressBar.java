@@ -173,7 +173,7 @@ public class ProgressBar extends Control  {
     
     public void Increment(int value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.componentmodel.Win32Exception, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Increment", value);
         } catch (JCNativeException jcne) {
@@ -183,7 +183,7 @@ public class ProgressBar extends Control  {
 
     public void PerformStep() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NullReferenceException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("PerformStep");
         } catch (JCNativeException jcne) {
@@ -193,7 +193,7 @@ public class ProgressBar extends Control  {
 
     public void ResetForeColor() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.componentmodel.Win32Exception, system.NullReferenceException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ResetForeColor");
         } catch (JCNativeException jcne) {
@@ -207,9 +207,13 @@ public class ProgressBar extends Control  {
     
     public boolean getCausesValidation() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCausesValidation = null;
         try {
-            return (boolean)classInstance.Get("CausesValidation");
+            retObjectCausesValidation = classInstance.Get("CausesValidation");
+            return (boolean)retObjectCausesValidation;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCausesValidation != null ? retObjectCausesValidation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -217,7 +221,7 @@ public class ProgressBar extends Control  {
 
     public void setCausesValidation(boolean CausesValidation) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CausesValidation", CausesValidation);
         } catch (JCNativeException jcne) {
@@ -227,9 +231,13 @@ public class ProgressBar extends Control  {
 
     public boolean getRightToLeftLayout() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRightToLeftLayout = null;
         try {
-            return (boolean)classInstance.Get("RightToLeftLayout");
+            retObjectRightToLeftLayout = classInstance.Get("RightToLeftLayout");
+            return (boolean)retObjectRightToLeftLayout;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectRightToLeftLayout != null ? retObjectRightToLeftLayout.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -237,7 +245,7 @@ public class ProgressBar extends Control  {
 
     public void setRightToLeftLayout(boolean RightToLeftLayout) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.ArgumentException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RightToLeftLayout", RightToLeftLayout);
         } catch (JCNativeException jcne) {
@@ -247,9 +255,13 @@ public class ProgressBar extends Control  {
 
     public boolean getTabStop() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTabStop = null;
         try {
-            return (boolean)classInstance.Get("TabStop");
+            retObjectTabStop = classInstance.Get("TabStop");
+            return (boolean)retObjectTabStop;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectTabStop != null ? retObjectTabStop.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -257,7 +269,7 @@ public class ProgressBar extends Control  {
 
     public void setTabStop(boolean TabStop) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.Win32Exception, system.NotSupportedException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TabStop", TabStop);
         } catch (JCNativeException jcne) {
@@ -267,9 +279,20 @@ public class ProgressBar extends Control  {
 
     public int getMarqueeAnimationSpeed() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMarqueeAnimationSpeed = null;
         try {
-            return (int)classInstance.Get("MarqueeAnimationSpeed");
+            retObjectMarqueeAnimationSpeed = classInstance.Get("MarqueeAnimationSpeed");
+            return (int)retObjectMarqueeAnimationSpeed;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMarqueeAnimationSpeed_ToString = retObjectMarqueeAnimationSpeed == null ? "null" : retObjectMarqueeAnimationSpeed.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMarqueeAnimationSpeedNumber = (java.lang.Number)retObjectMarqueeAnimationSpeed;
+                return retObjectMarqueeAnimationSpeedNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMarqueeAnimationSpeed != null ? retObjectMarqueeAnimationSpeed.getClass() : "null", retObjectMarqueeAnimationSpeed_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -277,7 +300,7 @@ public class ProgressBar extends Control  {
 
     public void setMarqueeAnimationSpeed(int MarqueeAnimationSpeed) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException, system.componentmodel.Win32Exception, system.NotSupportedException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MarqueeAnimationSpeed", MarqueeAnimationSpeed);
         } catch (JCNativeException jcne) {
@@ -287,9 +310,20 @@ public class ProgressBar extends Control  {
 
     public int getMaximum() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaximum = null;
         try {
-            return (int)classInstance.Get("Maximum");
+            retObjectMaximum = classInstance.Get("Maximum");
+            return (int)retObjectMaximum;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaximum_ToString = retObjectMaximum == null ? "null" : retObjectMaximum.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMaximumNumber = (java.lang.Number)retObjectMaximum;
+                return retObjectMaximumNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaximum != null ? retObjectMaximum.getClass() : "null", retObjectMaximum_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -297,7 +331,7 @@ public class ProgressBar extends Control  {
 
     public void setMaximum(int Maximum) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NullReferenceException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Maximum", Maximum);
         } catch (JCNativeException jcne) {
@@ -307,9 +341,20 @@ public class ProgressBar extends Control  {
 
     public int getMinimum() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMinimum = null;
         try {
-            return (int)classInstance.Get("Minimum");
+            retObjectMinimum = classInstance.Get("Minimum");
+            return (int)retObjectMinimum;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMinimum_ToString = retObjectMinimum == null ? "null" : retObjectMinimum.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMinimumNumber = (java.lang.Number)retObjectMinimum;
+                return retObjectMinimumNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMinimum != null ? retObjectMinimum.getClass() : "null", retObjectMinimum_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -317,7 +362,7 @@ public class ProgressBar extends Control  {
 
     public void setMinimum(int Minimum) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NullReferenceException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Minimum", Minimum);
         } catch (JCNativeException jcne) {
@@ -327,9 +372,20 @@ public class ProgressBar extends Control  {
 
     public int getStep() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStep = null;
         try {
-            return (int)classInstance.Get("Step");
+            retObjectStep = classInstance.Get("Step");
+            return (int)retObjectStep;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectStep_ToString = retObjectStep == null ? "null" : retObjectStep.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectStepNumber = (java.lang.Number)retObjectStep;
+                return retObjectStepNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectStep != null ? retObjectStep.getClass() : "null", retObjectStep_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -337,7 +393,7 @@ public class ProgressBar extends Control  {
 
     public void setStep(int Step) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.NotSupportedException, system.security.SecurityException, system.NullReferenceException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Step", Step);
         } catch (JCNativeException jcne) {
@@ -347,9 +403,20 @@ public class ProgressBar extends Control  {
 
     public int getValue() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValue = null;
         try {
-            return (int)classInstance.Get("Value");
+            retObjectValue = classInstance.Get("Value");
+            return (int)retObjectValue;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectValue_ToString = retObjectValue == null ? "null" : retObjectValue.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectValueNumber = (java.lang.Number)retObjectValue;
+                return retObjectValueNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectValue != null ? retObjectValue.getClass() : "null", retObjectValue_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -357,7 +424,7 @@ public class ProgressBar extends Control  {
 
     public void setValue(int Value) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Value", Value);
         } catch (JCNativeException jcne) {
@@ -367,10 +434,14 @@ public class ProgressBar extends Control  {
 
     public ImeMode getImeMode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectImeMode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ImeMode");
+            retObjectImeMode = classInstance.Get("ImeMode");
+            JCObject val = (JCObject)retObjectImeMode;
             return new ImeMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectImeMode != null ? retObjectImeMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -378,7 +449,7 @@ public class ProgressBar extends Control  {
 
     public void setImeMode(ImeMode ImeMode) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException, system.security.SecurityException, system.NullReferenceException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ImeMode", ImeMode == null ? null : ImeMode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -388,10 +459,14 @@ public class ProgressBar extends Control  {
 
     public Padding getPadding() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPadding = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Padding");
+            retObjectPadding = classInstance.Get("Padding");
+            JCObject val = (JCObject)retObjectPadding;
             return new Padding(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPadding != null ? retObjectPadding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -399,7 +474,7 @@ public class ProgressBar extends Control  {
 
     public void setPadding(Padding Padding) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Padding", Padding == null ? null : Padding.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -409,10 +484,14 @@ public class ProgressBar extends Control  {
 
     public ProgressBarStyle getStyle() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Style");
+            retObjectStyle = classInstance.Get("Style");
+            JCObject val = (JCObject)retObjectStyle;
             return new ProgressBarStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStyle != null ? retObjectStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -420,7 +499,7 @@ public class ProgressBar extends Control  {
 
     public void setStyle(ProgressBarStyle Style) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NullReferenceException, system.OutOfMemoryException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Style", Style == null ? null : Style.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -435,7 +514,7 @@ public class ProgressBar extends Control  {
 
     public void addBackgroundImageChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("BackgroundImageChanged", handler);
         } catch (JCNativeException jcne) {
@@ -445,7 +524,7 @@ public class ProgressBar extends Control  {
 
     public void removeBackgroundImageChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("BackgroundImageChanged", handler);
         } catch (JCNativeException jcne) {
@@ -455,7 +534,7 @@ public class ProgressBar extends Control  {
 
     public void addBackgroundImageLayoutChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("BackgroundImageLayoutChanged", handler);
         } catch (JCNativeException jcne) {
@@ -465,7 +544,7 @@ public class ProgressBar extends Control  {
 
     public void removeBackgroundImageLayoutChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("BackgroundImageLayoutChanged", handler);
         } catch (JCNativeException jcne) {
@@ -475,7 +554,7 @@ public class ProgressBar extends Control  {
 
     public void addCausesValidationChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("CausesValidationChanged", handler);
         } catch (JCNativeException jcne) {
@@ -485,7 +564,7 @@ public class ProgressBar extends Control  {
 
     public void removeCausesValidationChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("CausesValidationChanged", handler);
         } catch (JCNativeException jcne) {
@@ -495,7 +574,7 @@ public class ProgressBar extends Control  {
 
     public void addDoubleClick(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("DoubleClick", handler);
         } catch (JCNativeException jcne) {
@@ -505,7 +584,7 @@ public class ProgressBar extends Control  {
 
     public void removeDoubleClick(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("DoubleClick", handler);
         } catch (JCNativeException jcne) {
@@ -515,7 +594,7 @@ public class ProgressBar extends Control  {
 
     public void addEnter(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Enter", handler);
         } catch (JCNativeException jcne) {
@@ -525,7 +604,7 @@ public class ProgressBar extends Control  {
 
     public void removeEnter(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Enter", handler);
         } catch (JCNativeException jcne) {
@@ -535,7 +614,7 @@ public class ProgressBar extends Control  {
 
     public void addFontChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("FontChanged", handler);
         } catch (JCNativeException jcne) {
@@ -545,7 +624,7 @@ public class ProgressBar extends Control  {
 
     public void removeFontChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("FontChanged", handler);
         } catch (JCNativeException jcne) {
@@ -555,7 +634,7 @@ public class ProgressBar extends Control  {
 
     public void addImeModeChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ImeModeChanged", handler);
         } catch (JCNativeException jcne) {
@@ -565,7 +644,7 @@ public class ProgressBar extends Control  {
 
     public void removeImeModeChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ImeModeChanged", handler);
         } catch (JCNativeException jcne) {
@@ -575,7 +654,7 @@ public class ProgressBar extends Control  {
 
     public void addLeave(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Leave", handler);
         } catch (JCNativeException jcne) {
@@ -585,7 +664,7 @@ public class ProgressBar extends Control  {
 
     public void removeLeave(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Leave", handler);
         } catch (JCNativeException jcne) {
@@ -595,7 +674,7 @@ public class ProgressBar extends Control  {
 
     public void addPaddingChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("PaddingChanged", handler);
         } catch (JCNativeException jcne) {
@@ -605,7 +684,7 @@ public class ProgressBar extends Control  {
 
     public void removePaddingChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("PaddingChanged", handler);
         } catch (JCNativeException jcne) {
@@ -615,7 +694,7 @@ public class ProgressBar extends Control  {
 
     public void addRightToLeftLayoutChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("RightToLeftLayoutChanged", handler);
         } catch (JCNativeException jcne) {
@@ -625,7 +704,7 @@ public class ProgressBar extends Control  {
 
     public void removeRightToLeftLayoutChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("RightToLeftLayoutChanged", handler);
         } catch (JCNativeException jcne) {
@@ -635,7 +714,7 @@ public class ProgressBar extends Control  {
 
     public void addTabStopChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("TabStopChanged", handler);
         } catch (JCNativeException jcne) {
@@ -645,7 +724,7 @@ public class ProgressBar extends Control  {
 
     public void removeTabStopChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("TabStopChanged", handler);
         } catch (JCNativeException jcne) {
@@ -655,7 +734,7 @@ public class ProgressBar extends Control  {
 
     public void addTextChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("TextChanged", handler);
         } catch (JCNativeException jcne) {
@@ -665,7 +744,7 @@ public class ProgressBar extends Control  {
 
     public void removeTextChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("TextChanged", handler);
         } catch (JCNativeException jcne) {
@@ -675,7 +754,7 @@ public class ProgressBar extends Control  {
 
     public void addKeyDown(KeyEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("KeyDown", handler);
         } catch (JCNativeException jcne) {
@@ -685,7 +764,7 @@ public class ProgressBar extends Control  {
 
     public void removeKeyDown(KeyEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("KeyDown", handler);
         } catch (JCNativeException jcne) {
@@ -695,7 +774,7 @@ public class ProgressBar extends Control  {
 
     public void addKeyUp(KeyEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("KeyUp", handler);
         } catch (JCNativeException jcne) {
@@ -705,7 +784,7 @@ public class ProgressBar extends Control  {
 
     public void removeKeyUp(KeyEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("KeyUp", handler);
         } catch (JCNativeException jcne) {
@@ -715,7 +794,7 @@ public class ProgressBar extends Control  {
 
     public void addKeyPress(KeyPressEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("KeyPress", handler);
         } catch (JCNativeException jcne) {
@@ -725,7 +804,7 @@ public class ProgressBar extends Control  {
 
     public void removeKeyPress(KeyPressEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("KeyPress", handler);
         } catch (JCNativeException jcne) {
@@ -735,7 +814,7 @@ public class ProgressBar extends Control  {
 
     public void addMouseDoubleClick(MouseEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("MouseDoubleClick", handler);
         } catch (JCNativeException jcne) {
@@ -745,7 +824,7 @@ public class ProgressBar extends Control  {
 
     public void removeMouseDoubleClick(MouseEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("MouseDoubleClick", handler);
         } catch (JCNativeException jcne) {
@@ -755,7 +834,7 @@ public class ProgressBar extends Control  {
 
     public void addPaint(PaintEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Paint", handler);
         } catch (JCNativeException jcne) {
@@ -765,7 +844,7 @@ public class ProgressBar extends Control  {
 
     public void removePaint(PaintEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Paint", handler);
         } catch (JCNativeException jcne) {

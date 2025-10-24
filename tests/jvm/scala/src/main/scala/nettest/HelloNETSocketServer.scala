@@ -44,10 +44,6 @@ object HelloNETSocketServer {
   var data: String = null
 
   def StartListening(asyncMode: scala.Boolean, address: String, port: Int): Unit = { // Data buffer for incoming data.
-    val bytes = new scala.Array[scala.Byte](1024)
-    var ipAddress : IPAddress = null
-    // Establish the local endpoint for the socket.
-    // Dns.GetHostName returns the name of the host running the application.
     try {
       val ipHostInfo = Dns.GetHostEntry(Dns.GetHostName)
       val ipAddresses = ipHostInfo.getAddressList
@@ -56,6 +52,16 @@ object HelloNETSocketServer {
       for (ipAddressAvailable <- ipAddresses) {
         System.out.println(ipAddressAvailable)
       }
+    } catch {
+      case e: Throwable =>
+        e.printStackTrace()
+    }
+
+    val bytes = new scala.Array[scala.Byte](1024)
+    var ipAddress : IPAddress = null
+    // Establish the local endpoint for the socket.
+    // Dns.GetHostName returns the name of the host running the application.
+    try {
       // parse ip address
       ipAddress = IPAddress.Parse(address)
       val localEndPoint = new IPEndPoint(ipAddress, port)

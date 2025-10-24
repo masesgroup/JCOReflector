@@ -160,9 +160,20 @@ public class GCGenerationInfo extends ValueType  {
     
     public long getFragmentationAfterBytes() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFragmentationAfterBytes = null;
         try {
-            return (long)classInstance.Get("FragmentationAfterBytes");
+            retObjectFragmentationAfterBytes = classInstance.Get("FragmentationAfterBytes");
+            return (long)retObjectFragmentationAfterBytes;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectFragmentationAfterBytes_ToString = retObjectFragmentationAfterBytes == null ? "null" : retObjectFragmentationAfterBytes.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectFragmentationAfterBytesNumber = (java.lang.Number)retObjectFragmentationAfterBytes;
+                return retObjectFragmentationAfterBytesNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectFragmentationAfterBytes != null ? retObjectFragmentationAfterBytes.getClass() : "null", retObjectFragmentationAfterBytes_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,9 +181,20 @@ public class GCGenerationInfo extends ValueType  {
 
     public long getFragmentationBeforeBytes() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFragmentationBeforeBytes = null;
         try {
-            return (long)classInstance.Get("FragmentationBeforeBytes");
+            retObjectFragmentationBeforeBytes = classInstance.Get("FragmentationBeforeBytes");
+            return (long)retObjectFragmentationBeforeBytes;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectFragmentationBeforeBytes_ToString = retObjectFragmentationBeforeBytes == null ? "null" : retObjectFragmentationBeforeBytes.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectFragmentationBeforeBytesNumber = (java.lang.Number)retObjectFragmentationBeforeBytes;
+                return retObjectFragmentationBeforeBytesNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectFragmentationBeforeBytes != null ? retObjectFragmentationBeforeBytes.getClass() : "null", retObjectFragmentationBeforeBytes_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,9 +202,20 @@ public class GCGenerationInfo extends ValueType  {
 
     public long getSizeAfterBytes() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSizeAfterBytes = null;
         try {
-            return (long)classInstance.Get("SizeAfterBytes");
+            retObjectSizeAfterBytes = classInstance.Get("SizeAfterBytes");
+            return (long)retObjectSizeAfterBytes;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSizeAfterBytes_ToString = retObjectSizeAfterBytes == null ? "null" : retObjectSizeAfterBytes.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectSizeAfterBytesNumber = (java.lang.Number)retObjectSizeAfterBytes;
+                return retObjectSizeAfterBytesNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectSizeAfterBytes != null ? retObjectSizeAfterBytes.getClass() : "null", retObjectSizeAfterBytes_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,9 +223,20 @@ public class GCGenerationInfo extends ValueType  {
 
     public long getSizeBeforeBytes() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSizeBeforeBytes = null;
         try {
-            return (long)classInstance.Get("SizeBeforeBytes");
+            retObjectSizeBeforeBytes = classInstance.Get("SizeBeforeBytes");
+            return (long)retObjectSizeBeforeBytes;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSizeBeforeBytes_ToString = retObjectSizeBeforeBytes == null ? "null" : retObjectSizeBeforeBytes.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectSizeBeforeBytesNumber = (java.lang.Number)retObjectSizeBeforeBytes;
+                return retObjectSizeBeforeBytesNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectSizeBeforeBytes != null ? retObjectSizeBeforeBytes.getClass() : "null", retObjectSizeBeforeBytes_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

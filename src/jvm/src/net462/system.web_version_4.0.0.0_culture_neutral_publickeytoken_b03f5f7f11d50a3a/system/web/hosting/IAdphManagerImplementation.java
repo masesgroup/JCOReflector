@@ -144,7 +144,7 @@ public class IAdphManagerImplementation extends NetObject implements IAdphManage
     
     public void StartAppDomainProtocolListenerChannel(java.lang.String appId, java.lang.String protocolId, IListenerChannelCallback listenerChannelCallback) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("StartAppDomainProtocolListenerChannel", appId, protocolId, listenerChannelCallback == null ? null : listenerChannelCallback.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -154,7 +154,7 @@ public class IAdphManagerImplementation extends NetObject implements IAdphManage
 
     public void StopAppDomainProtocol(java.lang.String appId, java.lang.String protocolId, boolean immediate) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("StopAppDomainProtocol", appId, protocolId, immediate);
         } catch (JCNativeException jcne) {
@@ -164,7 +164,7 @@ public class IAdphManagerImplementation extends NetObject implements IAdphManage
 
     public void StopAppDomainProtocolListenerChannel(java.lang.String appId, java.lang.String protocolId, int listenerChannelId, boolean immediate) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("StopAppDomainProtocolListenerChannel", appId, protocolId, listenerChannelId, immediate);
         } catch (JCNativeException jcne) {

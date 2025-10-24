@@ -171,9 +171,13 @@ public class KeyboardInputProviderAcquireFocusEventArgs extends KeyboardEventArg
     
     public boolean getFocusAcquired() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFocusAcquired = null;
         try {
-            return (boolean)classInstance.Get("FocusAcquired");
+            retObjectFocusAcquired = classInstance.Get("FocusAcquired");
+            return (boolean)retObjectFocusAcquired;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectFocusAcquired != null ? retObjectFocusAcquired.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

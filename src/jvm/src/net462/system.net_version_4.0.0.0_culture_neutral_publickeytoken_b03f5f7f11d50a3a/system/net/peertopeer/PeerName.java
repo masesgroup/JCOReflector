@@ -181,9 +181,13 @@ public class PeerName extends NetObject implements system.runtime.serialization.
     
     public boolean Equals(PeerName other) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEquals = null;
         try {
-            return (boolean)classInstance.Invoke("Equals", other == null ? null : other.getJCOInstance());
+            retObjectEquals = classInstance.Invoke("Equals", other == null ? null : other.getJCOInstance());
+            return (boolean)retObjectEquals;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectEquals != null ? retObjectEquals.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,10 +195,14 @@ public class PeerName extends NetObject implements system.runtime.serialization.
 
     public static PeerName CreateFromPeerHostName(java.lang.String peerHostName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.InvalidCastException, system.NullReferenceException, system.OverflowException, system.PlatformNotSupportedException, system.FormatException, system.IndexOutOfRangeException, system.net.peertopeer.PeerToPeerException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateFromPeerHostName = null;
         try {
-            JCObject objCreateFromPeerHostName = (JCObject)classType.Invoke("CreateFromPeerHostName", peerHostName);
+            retObjectCreateFromPeerHostName = classType.Invoke("CreateFromPeerHostName", peerHostName);
+            JCObject objCreateFromPeerHostName = (JCObject)retObjectCreateFromPeerHostName;
             return new PeerName(objCreateFromPeerHostName);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateFromPeerHostName != null ? retObjectCreateFromPeerHostName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,10 +210,14 @@ public class PeerName extends NetObject implements system.runtime.serialization.
 
     public static PeerName CreateRelativePeerName(PeerName peerName, java.lang.String classifier) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.InvalidCastException, system.NullReferenceException, system.OverflowException, system.PlatformNotSupportedException, system.FormatException, system.net.peertopeer.PeerToPeerException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateRelativePeerName = null;
         try {
-            JCObject objCreateRelativePeerName = (JCObject)classType.Invoke("CreateRelativePeerName", peerName == null ? null : peerName.getJCOInstance(), classifier);
+            retObjectCreateRelativePeerName = classType.Invoke("CreateRelativePeerName", peerName == null ? null : peerName.getJCOInstance(), classifier);
+            JCObject objCreateRelativePeerName = (JCObject)retObjectCreateRelativePeerName;
             return new PeerName(objCreateRelativePeerName);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateRelativePeerName != null ? retObjectCreateRelativePeerName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -217,7 +229,7 @@ public class PeerName extends NetObject implements system.runtime.serialization.
      */
     @Deprecated 
     public void GetObjectData(SerializationInfo info, StreamingContext context) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToISerializable to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToISerializable to obtain the full interface.");
     }
 
 
@@ -226,9 +238,13 @@ public class PeerName extends NetObject implements system.runtime.serialization.
     
     public boolean getIsSecured() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsSecured = null;
         try {
-            return (boolean)classInstance.Get("IsSecured");
+            retObjectIsSecured = classInstance.Get("IsSecured");
+            return (boolean)retObjectIsSecured;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsSecured != null ? retObjectIsSecured.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -236,9 +252,13 @@ public class PeerName extends NetObject implements system.runtime.serialization.
 
     public java.lang.String getAuthority() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAuthority = null;
         try {
-            return (java.lang.String)classInstance.Get("Authority");
+            retObjectAuthority = classInstance.Get("Authority");
+            return (java.lang.String)retObjectAuthority;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectAuthority != null ? retObjectAuthority.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -246,9 +266,13 @@ public class PeerName extends NetObject implements system.runtime.serialization.
 
     public java.lang.String getClassifier() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClassifier = null;
         try {
-            return (java.lang.String)classInstance.Get("Classifier");
+            retObjectClassifier = classInstance.Get("Classifier");
+            return (java.lang.String)retObjectClassifier;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectClassifier != null ? retObjectClassifier.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -256,9 +280,13 @@ public class PeerName extends NetObject implements system.runtime.serialization.
 
     public java.lang.String getPeerHostName() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.InvalidCastException, system.NullReferenceException, system.OverflowException, system.PlatformNotSupportedException, system.FormatException, system.IndexOutOfRangeException, system.net.peertopeer.PeerToPeerException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPeerHostName = null;
         try {
-            return (java.lang.String)classInstance.Get("PeerHostName");
+            retObjectPeerHostName = classInstance.Get("PeerHostName");
+            return (java.lang.String)retObjectPeerHostName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectPeerHostName != null ? retObjectPeerHostName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

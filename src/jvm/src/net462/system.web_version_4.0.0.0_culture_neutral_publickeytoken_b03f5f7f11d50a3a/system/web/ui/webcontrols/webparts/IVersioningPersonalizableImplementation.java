@@ -144,7 +144,7 @@ public class IVersioningPersonalizableImplementation extends NetObject implement
     
     public void Load(IDictionary unknownProperties) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Load", unknownProperties == null ? null : unknownProperties.getJCOInstance());
         } catch (JCNativeException jcne) {

@@ -175,9 +175,13 @@ public class PingOptions extends NetObject  {
     
     public boolean getDontFragment() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDontFragment = null;
         try {
-            return (boolean)classInstance.Get("DontFragment");
+            retObjectDontFragment = classInstance.Get("DontFragment");
+            return (boolean)retObjectDontFragment;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectDontFragment != null ? retObjectDontFragment.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -185,7 +189,7 @@ public class PingOptions extends NetObject  {
 
     public void setDontFragment(boolean DontFragment) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DontFragment", DontFragment);
         } catch (JCNativeException jcne) {
@@ -195,9 +199,20 @@ public class PingOptions extends NetObject  {
 
     public int getTtl() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTtl = null;
         try {
-            return (int)classInstance.Get("Ttl");
+            retObjectTtl = classInstance.Get("Ttl");
+            return (int)retObjectTtl;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectTtl_ToString = retObjectTtl == null ? "null" : retObjectTtl.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectTtlNumber = (java.lang.Number)retObjectTtl;
+                return retObjectTtlNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectTtl != null ? retObjectTtl.getClass() : "null", retObjectTtl_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -205,7 +220,7 @@ public class PingOptions extends NetObject  {
 
     public void setTtl(int Ttl) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Ttl", Ttl);
         } catch (JCNativeException jcne) {

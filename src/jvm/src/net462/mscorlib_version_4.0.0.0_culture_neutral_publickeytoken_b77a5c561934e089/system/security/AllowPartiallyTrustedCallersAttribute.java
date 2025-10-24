@@ -167,10 +167,14 @@ public class AllowPartiallyTrustedCallersAttribute extends Attribute  {
     
     public PartialTrustVisibilityLevel getPartialTrustVisibilityLevel() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPartialTrustVisibilityLevel = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PartialTrustVisibilityLevel");
+            retObjectPartialTrustVisibilityLevel = classInstance.Get("PartialTrustVisibilityLevel");
+            JCObject val = (JCObject)retObjectPartialTrustVisibilityLevel;
             return new PartialTrustVisibilityLevel(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPartialTrustVisibilityLevel != null ? retObjectPartialTrustVisibilityLevel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,7 +182,7 @@ public class AllowPartiallyTrustedCallersAttribute extends Attribute  {
 
     public void setPartialTrustVisibilityLevel(PartialTrustVisibilityLevel PartialTrustVisibilityLevel) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PartialTrustVisibilityLevel", PartialTrustVisibilityLevel == null ? null : PartialTrustVisibilityLevel.getJCOInstance());
         } catch (JCNativeException jcne) {

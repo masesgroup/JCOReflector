@@ -165,10 +165,14 @@ public class PageParser extends TemplateControlParser  {
     
     public static IHttpHandler GetCompiledPageInstance(java.lang.String virtualPath, java.lang.String inputFile, HttpContext context) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.io.PathTooLongException, system.ArgumentOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.InvalidOperationException, system.NotSupportedException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.web.HttpException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException, system.threading.ThreadAbortException, system.web.HttpRequestValidationException, system.configuration.ConfigurationException, system.web.HttpParseException, system.web.HttpCompileException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetCompiledPageInstance = null;
         try {
-            JCObject objGetCompiledPageInstance = (JCObject)classType.Invoke("GetCompiledPageInstance", virtualPath, inputFile, context == null ? null : context.getJCOInstance());
+            retObjectGetCompiledPageInstance = classType.Invoke("GetCompiledPageInstance", virtualPath, inputFile, context == null ? null : context.getJCOInstance());
+            JCObject objGetCompiledPageInstance = (JCObject)retObjectGetCompiledPageInstance;
             return new IHttpHandlerImplementation(objGetCompiledPageInstance);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCompiledPageInstance != null ? retObjectGetCompiledPageInstance.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,9 +184,13 @@ public class PageParser extends TemplateControlParser  {
     
     public static boolean getEnableLongStringsAsResources() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectEnableLongStringsAsResources = null;
         try {
-            return (boolean)classType.Get("EnableLongStringsAsResources");
+            retObjectEnableLongStringsAsResources = classType.Get("EnableLongStringsAsResources");
+            return (boolean)retObjectEnableLongStringsAsResources;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectEnableLongStringsAsResources != null ? retObjectEnableLongStringsAsResources.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,7 +198,7 @@ public class PageParser extends TemplateControlParser  {
 
     public static void setEnableLongStringsAsResources(boolean EnableLongStringsAsResources) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Set("EnableLongStringsAsResources", EnableLongStringsAsResources);
         } catch (JCNativeException jcne) {
@@ -200,10 +208,14 @@ public class PageParser extends TemplateControlParser  {
 
     public static NetType getDefaultApplicationBaseType() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDefaultApplicationBaseType = null;
         try {
-            JCObject val = (JCObject)classType.Get("DefaultApplicationBaseType");
+            retObjectDefaultApplicationBaseType = classType.Get("DefaultApplicationBaseType");
+            JCObject val = (JCObject)retObjectDefaultApplicationBaseType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefaultApplicationBaseType != null ? retObjectDefaultApplicationBaseType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -211,7 +223,7 @@ public class PageParser extends TemplateControlParser  {
 
     public static void setDefaultApplicationBaseType(NetType DefaultApplicationBaseType) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Set("DefaultApplicationBaseType", DefaultApplicationBaseType == null ? null : DefaultApplicationBaseType.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -221,10 +233,14 @@ public class PageParser extends TemplateControlParser  {
 
     public static NetType getDefaultPageBaseType() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDefaultPageBaseType = null;
         try {
-            JCObject val = (JCObject)classType.Get("DefaultPageBaseType");
+            retObjectDefaultPageBaseType = classType.Get("DefaultPageBaseType");
+            JCObject val = (JCObject)retObjectDefaultPageBaseType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefaultPageBaseType != null ? retObjectDefaultPageBaseType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -232,7 +248,7 @@ public class PageParser extends TemplateControlParser  {
 
     public static void setDefaultPageBaseType(NetType DefaultPageBaseType) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Set("DefaultPageBaseType", DefaultPageBaseType == null ? null : DefaultPageBaseType.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -242,10 +258,14 @@ public class PageParser extends TemplateControlParser  {
 
     public static NetType getDefaultPageParserFilterType() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDefaultPageParserFilterType = null;
         try {
-            JCObject val = (JCObject)classType.Get("DefaultPageParserFilterType");
+            retObjectDefaultPageParserFilterType = classType.Get("DefaultPageParserFilterType");
+            JCObject val = (JCObject)retObjectDefaultPageParserFilterType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefaultPageParserFilterType != null ? retObjectDefaultPageParserFilterType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -253,7 +273,7 @@ public class PageParser extends TemplateControlParser  {
 
     public static void setDefaultPageParserFilterType(NetType DefaultPageParserFilterType) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Set("DefaultPageParserFilterType", DefaultPageParserFilterType == null ? null : DefaultPageParserFilterType.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -263,10 +283,14 @@ public class PageParser extends TemplateControlParser  {
 
     public static NetType getDefaultUserControlBaseType() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDefaultUserControlBaseType = null;
         try {
-            JCObject val = (JCObject)classType.Get("DefaultUserControlBaseType");
+            retObjectDefaultUserControlBaseType = classType.Get("DefaultUserControlBaseType");
+            JCObject val = (JCObject)retObjectDefaultUserControlBaseType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefaultUserControlBaseType != null ? retObjectDefaultUserControlBaseType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -274,7 +298,7 @@ public class PageParser extends TemplateControlParser  {
 
     public static void setDefaultUserControlBaseType(NetType DefaultUserControlBaseType) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Set("DefaultUserControlBaseType", DefaultUserControlBaseType == null ? null : DefaultUserControlBaseType.getJCOInstance());
         } catch (JCNativeException jcne) {

@@ -167,10 +167,14 @@ public class WebRequestModulesSection extends ConfigurationSection  {
     
     public WebRequestModuleElementCollection getWebRequestModules() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWebRequestModules = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("WebRequestModules");
+            retObjectWebRequestModules = classInstance.Get("WebRequestModules");
+            JCObject val = (JCObject)retObjectWebRequestModules;
             return new WebRequestModuleElementCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWebRequestModules != null ? retObjectWebRequestModules.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

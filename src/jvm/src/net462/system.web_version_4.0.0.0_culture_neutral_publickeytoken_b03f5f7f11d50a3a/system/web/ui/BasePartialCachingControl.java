@@ -156,7 +156,7 @@ public class BasePartialCachingControl extends Control  {
     
     public void Dispose() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.web.HttpException, system.OverflowException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
@@ -170,10 +170,14 @@ public class BasePartialCachingControl extends Control  {
     
     public CacheDependency getDependency() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDependency = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Dependency");
+            retObjectDependency = classInstance.Get("Dependency");
+            JCObject val = (JCObject)retObjectDependency;
             return new CacheDependency(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDependency != null ? retObjectDependency.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,7 +185,7 @@ public class BasePartialCachingControl extends Control  {
 
     public void setDependency(CacheDependency Dependency) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Dependency", Dependency == null ? null : Dependency.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -191,10 +195,14 @@ public class BasePartialCachingControl extends Control  {
 
     public ControlCachePolicy getCachePolicy() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCachePolicy = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CachePolicy");
+            retObjectCachePolicy = classInstance.Get("CachePolicy");
+            JCObject val = (JCObject)retObjectCachePolicy;
             return new ControlCachePolicy(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCachePolicy != null ? retObjectCachePolicy.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

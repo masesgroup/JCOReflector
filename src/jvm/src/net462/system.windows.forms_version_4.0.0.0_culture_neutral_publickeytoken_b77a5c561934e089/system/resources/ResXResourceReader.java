@@ -255,10 +255,14 @@ public class ResXResourceReader extends NetObjectEnumerable implements system.ID
     
     public IDictionaryEnumerator GetMetadataEnumerator() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.ArgumentOutOfRangeException, system.io.PathTooLongException, system.NullReferenceException, system.resources.MissingManifestResourceException, system.xml.XmlException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetMetadataEnumerator = null;
         try {
-            JCObject objGetMetadataEnumerator = (JCObject)classInstance.Invoke("GetMetadataEnumerator");
+            retObjectGetMetadataEnumerator = classInstance.Invoke("GetMetadataEnumerator");
+            JCObject objGetMetadataEnumerator = (JCObject)retObjectGetMetadataEnumerator;
             return new IDictionaryEnumeratorImplementation(objGetMetadataEnumerator);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetMetadataEnumerator != null ? retObjectGetMetadataEnumerator.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -266,10 +270,14 @@ public class ResXResourceReader extends NetObjectEnumerable implements system.ID
 
     public static ResXResourceReader FromFileContents(java.lang.String fileContents) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFromFileContents = null;
         try {
-            JCObject objFromFileContents = (JCObject)classType.Invoke("FromFileContents", fileContents);
+            retObjectFromFileContents = classType.Invoke("FromFileContents", fileContents);
+            JCObject objFromFileContents = (JCObject)retObjectFromFileContents;
             return new ResXResourceReader(objFromFileContents);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFromFileContents != null ? retObjectFromFileContents.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -277,10 +285,14 @@ public class ResXResourceReader extends NetObjectEnumerable implements system.ID
 
     public static ResXResourceReader FromFileContents(java.lang.String fileContents, ITypeResolutionService typeResolver) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFromFileContents = null;
         try {
-            JCObject objFromFileContents = (JCObject)classType.Invoke("FromFileContents", fileContents, typeResolver == null ? null : typeResolver.getJCOInstance());
+            retObjectFromFileContents = classType.Invoke("FromFileContents", fileContents, typeResolver == null ? null : typeResolver.getJCOInstance());
+            JCObject objFromFileContents = (JCObject)retObjectFromFileContents;
             return new ResXResourceReader(objFromFileContents);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFromFileContents != null ? retObjectFromFileContents.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -288,10 +300,14 @@ public class ResXResourceReader extends NetObjectEnumerable implements system.ID
 
     public static ResXResourceReader FromFileContents(java.lang.String fileContents, AssemblyName[] assemblyNames) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFromFileContents = null;
         try {
-            JCObject objFromFileContents = (JCObject)classType.Invoke("FromFileContents", fileContents, toObjectFromArray(assemblyNames));
+            retObjectFromFileContents = classType.Invoke("FromFileContents", fileContents, toObjectFromArray(assemblyNames));
+            JCObject objFromFileContents = (JCObject)retObjectFromFileContents;
             return new ResXResourceReader(objFromFileContents);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFromFileContents != null ? retObjectFromFileContents.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -299,7 +315,7 @@ public class ResXResourceReader extends NetObjectEnumerable implements system.ID
 
     public void Close() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Close");
         } catch (JCNativeException jcne) {
@@ -313,13 +329,13 @@ public class ResXResourceReader extends NetObjectEnumerable implements system.ID
      */
     @Deprecated 
     public void Dispose() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDisposable to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDisposable to obtain the full interface.");
     }
 
     public void close() throws Exception {
         try {
             if (classInstance == null)
-                throw new UnsupportedOperationException("classInstance is null.");
+                throw new java.lang.UnsupportedOperationException("classInstance is null.");
             try {
                 classInstance.Invoke("Dispose");
             }
@@ -335,9 +351,13 @@ public class ResXResourceReader extends NetObjectEnumerable implements system.ID
     
     public boolean getUseResXDataNodes() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUseResXDataNodes = null;
         try {
-            return (boolean)classInstance.Get("UseResXDataNodes");
+            retObjectUseResXDataNodes = classInstance.Get("UseResXDataNodes");
+            return (boolean)retObjectUseResXDataNodes;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectUseResXDataNodes != null ? retObjectUseResXDataNodes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -345,7 +365,7 @@ public class ResXResourceReader extends NetObjectEnumerable implements system.ID
 
     public void setUseResXDataNodes(boolean UseResXDataNodes) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UseResXDataNodes", UseResXDataNodes);
         } catch (JCNativeException jcne) {
@@ -355,9 +375,13 @@ public class ResXResourceReader extends NetObjectEnumerable implements system.ID
 
     public java.lang.String getBasePath() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBasePath = null;
         try {
-            return (java.lang.String)classInstance.Get("BasePath");
+            retObjectBasePath = classInstance.Get("BasePath");
+            return (java.lang.String)retObjectBasePath;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectBasePath != null ? retObjectBasePath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -365,7 +389,7 @@ public class ResXResourceReader extends NetObjectEnumerable implements system.ID
 
     public void setBasePath(java.lang.String BasePath) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BasePath", BasePath);
         } catch (JCNativeException jcne) {

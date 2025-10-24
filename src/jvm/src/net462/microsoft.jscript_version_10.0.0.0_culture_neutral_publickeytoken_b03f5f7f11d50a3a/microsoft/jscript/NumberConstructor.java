@@ -157,9 +157,20 @@ public class NumberConstructor extends ScriptFunction  {
     
     public double Invoke(NetObject arg) throws Throwable, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException, microsoft.jscript.JScriptException, system.IndexOutOfRangeException, system.ArgumentNullException, system.MissingMethodException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.FormatException, system.OverflowException, system.ArithmeticException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInvoke = null;
         try {
-            return (double)classInstance.Invoke("Invoke", arg == null ? null : arg.getJCOInstance());
+            retObjectInvoke = classInstance.Invoke("Invoke", arg == null ? null : arg.getJCOInstance());
+            return (double)retObjectInvoke;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectInvoke_ToString = retObjectInvoke == null ? "null" : retObjectInvoke.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectInvokeNumber = (java.lang.Number)retObjectInvoke;
+                return retObjectInvokeNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectInvoke != null ? retObjectInvoke.getClass() : "null", retObjectInvoke_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -167,10 +178,14 @@ public class NumberConstructor extends ScriptFunction  {
 
     public NumberObject CreateInstanceNewNumberConstructor(NetObject... args) throws Throwable, system.NotImplementedException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.InvalidOperationException, system.ArgumentException, microsoft.jscript.JScriptException, system.MissingMethodException, system.NullReferenceException, system.FormatException, system.OverflowException, system.ArithmeticException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateInstance = null;
         try {
-            JCObject objCreateInstance = (JCObject)classInstance.Invoke("CreateInstance", (java.lang.Object)toObjectFromArray(args));
+            retObjectCreateInstance = classInstance.Invoke("CreateInstance", (java.lang.Object)toObjectFromArray(args));
+            JCObject objCreateInstance = (JCObject)retObjectCreateInstance;
             return new NumberObject(objCreateInstance);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateInstance != null ? retObjectCreateInstance.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

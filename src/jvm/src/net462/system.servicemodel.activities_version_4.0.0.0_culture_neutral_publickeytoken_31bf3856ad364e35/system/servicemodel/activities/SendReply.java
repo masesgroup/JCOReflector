@@ -170,9 +170,13 @@ public class SendReply extends Activity  {
     
     public boolean getPersistBeforeSend() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPersistBeforeSend = null;
         try {
-            return (boolean)classInstance.Get("PersistBeforeSend");
+            retObjectPersistBeforeSend = classInstance.Get("PersistBeforeSend");
+            return (boolean)retObjectPersistBeforeSend;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectPersistBeforeSend != null ? retObjectPersistBeforeSend.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,7 +184,7 @@ public class SendReply extends Activity  {
 
     public void setPersistBeforeSend(boolean PersistBeforeSend) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PersistBeforeSend", PersistBeforeSend);
         } catch (JCNativeException jcne) {
@@ -190,10 +194,14 @@ public class SendReply extends Activity  {
 
     public Receive getRequest() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRequest = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Request");
+            retObjectRequest = classInstance.Get("Request");
+            JCObject val = (JCObject)retObjectRequest;
             return new Receive(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRequest != null ? retObjectRequest.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,7 +209,7 @@ public class SendReply extends Activity  {
 
     public void setRequest(Receive Request) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Request", Request == null ? null : Request.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -211,10 +219,14 @@ public class SendReply extends Activity  {
 
     public SendContent getContent() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContent = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Content");
+            retObjectContent = classInstance.Get("Content");
+            JCObject val = (JCObject)retObjectContent;
             return new SendContent(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContent != null ? retObjectContent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -222,7 +234,7 @@ public class SendReply extends Activity  {
 
     public void setContent(SendContent Content) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Content", Content == null ? null : Content.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -232,9 +244,13 @@ public class SendReply extends Activity  {
 
     public java.lang.String getAction() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAction = null;
         try {
-            return (java.lang.String)classInstance.Get("Action");
+            retObjectAction = classInstance.Get("Action");
+            return (java.lang.String)retObjectAction;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectAction != null ? retObjectAction.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -242,7 +258,7 @@ public class SendReply extends Activity  {
 
     public void setAction(java.lang.String Action) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Action", Action);
         } catch (JCNativeException jcne) {

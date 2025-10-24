@@ -174,7 +174,7 @@ public class DeliveryRequirementsAttribute extends Attribute implements system.s
      */
     @Deprecated 
     public void AddBindingParameters(ContractDescription contractDescription, ServiceEndpoint endpoint, BindingParameterCollection bindingParameters) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIContractBehavior to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIContractBehavior to obtain the full interface.");
     }
 
     /**
@@ -183,7 +183,7 @@ public class DeliveryRequirementsAttribute extends Attribute implements system.s
      */
     @Deprecated 
     public void ApplyClientBehavior(ContractDescription contractDescription, ServiceEndpoint endpoint, ClientRuntime clientRuntime) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIContractBehavior to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIContractBehavior to obtain the full interface.");
     }
 
     /**
@@ -192,7 +192,7 @@ public class DeliveryRequirementsAttribute extends Attribute implements system.s
      */
     @Deprecated 
     public void ApplyDispatchBehavior(ContractDescription contractDescription, ServiceEndpoint endpoint, DispatchRuntime dispatchRuntime) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIContractBehavior to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIContractBehavior to obtain the full interface.");
     }
 
     /**
@@ -201,7 +201,7 @@ public class DeliveryRequirementsAttribute extends Attribute implements system.s
      */
     @Deprecated 
     public void Validate(ContractDescription contractDescription, ServiceEndpoint endpoint) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIContractBehavior to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIContractBehavior to obtain the full interface.");
     }
 
 
@@ -210,9 +210,13 @@ public class DeliveryRequirementsAttribute extends Attribute implements system.s
     
     public boolean getRequireOrderedDelivery() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRequireOrderedDelivery = null;
         try {
-            return (boolean)classInstance.Get("RequireOrderedDelivery");
+            retObjectRequireOrderedDelivery = classInstance.Get("RequireOrderedDelivery");
+            return (boolean)retObjectRequireOrderedDelivery;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectRequireOrderedDelivery != null ? retObjectRequireOrderedDelivery.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -220,7 +224,7 @@ public class DeliveryRequirementsAttribute extends Attribute implements system.s
 
     public void setRequireOrderedDelivery(boolean RequireOrderedDelivery) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RequireOrderedDelivery", RequireOrderedDelivery);
         } catch (JCNativeException jcne) {
@@ -230,10 +234,14 @@ public class DeliveryRequirementsAttribute extends Attribute implements system.s
 
     public QueuedDeliveryRequirementsMode getQueuedDeliveryRequirements() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectQueuedDeliveryRequirements = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("QueuedDeliveryRequirements");
+            retObjectQueuedDeliveryRequirements = classInstance.Get("QueuedDeliveryRequirements");
+            JCObject val = (JCObject)retObjectQueuedDeliveryRequirements;
             return new QueuedDeliveryRequirementsMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectQueuedDeliveryRequirements != null ? retObjectQueuedDeliveryRequirements.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -241,7 +249,7 @@ public class DeliveryRequirementsAttribute extends Attribute implements system.s
 
     public void setQueuedDeliveryRequirements(QueuedDeliveryRequirementsMode QueuedDeliveryRequirements) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("QueuedDeliveryRequirements", QueuedDeliveryRequirements == null ? null : QueuedDeliveryRequirements.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -251,10 +259,14 @@ public class DeliveryRequirementsAttribute extends Attribute implements system.s
 
     public NetType getTargetContract() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTargetContract = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TargetContract");
+            retObjectTargetContract = classInstance.Get("TargetContract");
+            JCObject val = (JCObject)retObjectTargetContract;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTargetContract != null ? retObjectTargetContract.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -262,7 +274,7 @@ public class DeliveryRequirementsAttribute extends Attribute implements system.s
 
     public void setTargetContract(NetType TargetContract) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TargetContract", TargetContract == null ? null : TargetContract.getJCOInstance());
         } catch (JCNativeException jcne) {

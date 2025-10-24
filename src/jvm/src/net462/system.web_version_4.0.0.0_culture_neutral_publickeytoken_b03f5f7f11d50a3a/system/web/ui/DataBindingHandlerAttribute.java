@@ -186,9 +186,13 @@ public class DataBindingHandlerAttribute extends Attribute  {
     
     public java.lang.String getHandlerTypeName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHandlerTypeName = null;
         try {
-            return (java.lang.String)classInstance.Get("HandlerTypeName");
+            retObjectHandlerTypeName = classInstance.Get("HandlerTypeName");
+            return (java.lang.String)retObjectHandlerTypeName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectHandlerTypeName != null ? retObjectHandlerTypeName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

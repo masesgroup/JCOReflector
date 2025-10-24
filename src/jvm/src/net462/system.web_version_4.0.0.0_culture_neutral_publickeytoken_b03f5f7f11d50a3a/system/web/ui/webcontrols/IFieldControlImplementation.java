@@ -148,10 +148,14 @@ public class IFieldControlImplementation extends NetObject implements IFieldCont
     
     public IAutoFieldGenerator getFieldsGenerator() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFieldsGenerator = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("FieldsGenerator");
+            retObjectFieldsGenerator = classInstance.Get("FieldsGenerator");
+            JCObject val = (JCObject)retObjectFieldsGenerator;
             return new IAutoFieldGeneratorImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFieldsGenerator != null ? retObjectFieldsGenerator.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -159,7 +163,7 @@ public class IFieldControlImplementation extends NetObject implements IFieldCont
 
     public void setFieldsGenerator(IAutoFieldGenerator FieldsGenerator) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FieldsGenerator", FieldsGenerator == null ? null : FieldsGenerator.getJCOInstance());
         } catch (JCNativeException jcne) {

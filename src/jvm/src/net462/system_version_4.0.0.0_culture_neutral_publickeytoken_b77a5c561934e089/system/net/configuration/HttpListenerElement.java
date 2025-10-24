@@ -167,9 +167,13 @@ public class HttpListenerElement extends ConfigurationElement  {
     
     public boolean getUnescapeRequestUrl() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUnescapeRequestUrl = null;
         try {
-            return (boolean)classInstance.Get("UnescapeRequestUrl");
+            retObjectUnescapeRequestUrl = classInstance.Get("UnescapeRequestUrl");
+            return (boolean)retObjectUnescapeRequestUrl;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectUnescapeRequestUrl != null ? retObjectUnescapeRequestUrl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,10 +181,14 @@ public class HttpListenerElement extends ConfigurationElement  {
 
     public HttpListenerTimeoutsElement getTimeouts() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTimeouts = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Timeouts");
+            retObjectTimeouts = classInstance.Get("Timeouts");
+            JCObject val = (JCObject)retObjectTimeouts;
             return new HttpListenerTimeoutsElement(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTimeouts != null ? retObjectTimeouts.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -156,9 +156,13 @@ public class IsolatedStoragePermission extends CodeAccessPermission  {
     
     public boolean IsUnrestricted() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsUnrestricted = null;
         try {
-            return (boolean)classInstance.Invoke("IsUnrestricted");
+            retObjectIsUnrestricted = classInstance.Invoke("IsUnrestricted");
+            return (boolean)retObjectIsUnrestricted;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsUnrestricted != null ? retObjectIsUnrestricted.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -166,10 +170,14 @@ public class IsolatedStoragePermission extends CodeAccessPermission  {
 
     public SecurityElement ToXml() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToXml = null;
         try {
-            JCObject objToXml = (JCObject)classInstance.Invoke("ToXml");
+            retObjectToXml = classInstance.Invoke("ToXml");
+            JCObject objToXml = (JCObject)retObjectToXml;
             return new SecurityElement(objToXml);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToXml != null ? retObjectToXml.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,7 +185,7 @@ public class IsolatedStoragePermission extends CodeAccessPermission  {
 
     public void FromXml(SecurityElement esd) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("FromXml", esd == null ? null : esd.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -191,9 +199,20 @@ public class IsolatedStoragePermission extends CodeAccessPermission  {
     
     public long getUserQuota() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUserQuota = null;
         try {
-            return (long)classInstance.Get("UserQuota");
+            retObjectUserQuota = classInstance.Get("UserQuota");
+            return (long)retObjectUserQuota;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectUserQuota_ToString = retObjectUserQuota == null ? "null" : retObjectUserQuota.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectUserQuotaNumber = (java.lang.Number)retObjectUserQuota;
+                return retObjectUserQuotaNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectUserQuota != null ? retObjectUserQuota.getClass() : "null", retObjectUserQuota_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,7 +220,7 @@ public class IsolatedStoragePermission extends CodeAccessPermission  {
 
     public void setUserQuota(long UserQuota) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UserQuota", UserQuota);
         } catch (JCNativeException jcne) {
@@ -211,10 +230,14 @@ public class IsolatedStoragePermission extends CodeAccessPermission  {
 
     public IsolatedStorageContainment getUsageAllowed() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUsageAllowed = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("UsageAllowed");
+            retObjectUsageAllowed = classInstance.Get("UsageAllowed");
+            JCObject val = (JCObject)retObjectUsageAllowed;
             return new IsolatedStorageContainment(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUsageAllowed != null ? retObjectUsageAllowed.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -222,7 +245,7 @@ public class IsolatedStoragePermission extends CodeAccessPermission  {
 
     public void setUsageAllowed(IsolatedStorageContainment UsageAllowed) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UsageAllowed", UsageAllowed == null ? null : UsageAllowed.getJCOInstance());
         } catch (JCNativeException jcne) {

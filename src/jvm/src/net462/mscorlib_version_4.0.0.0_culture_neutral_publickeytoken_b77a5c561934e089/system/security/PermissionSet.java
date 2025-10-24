@@ -183,9 +183,13 @@ public class PermissionSet extends NetObjectEnumerable implements system.runtime
     
     public boolean ContainsNonCodeAccessPermissions() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.NullReferenceException, system.FormatException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContainsNonCodeAccessPermissions = null;
         try {
-            return (boolean)classInstance.Invoke("ContainsNonCodeAccessPermissions");
+            retObjectContainsNonCodeAccessPermissions = classInstance.Invoke("ContainsNonCodeAccessPermissions");
+            return (boolean)retObjectContainsNonCodeAccessPermissions;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectContainsNonCodeAccessPermissions != null ? retObjectContainsNonCodeAccessPermissions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,9 +197,13 @@ public class PermissionSet extends NetObjectEnumerable implements system.runtime
 
     public boolean IsEmpty() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.NullReferenceException, system.FormatException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsEmpty = null;
         try {
-            return (boolean)classInstance.Invoke("IsEmpty");
+            retObjectIsEmpty = classInstance.Invoke("IsEmpty");
+            return (boolean)retObjectIsEmpty;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsEmpty != null ? retObjectIsEmpty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,9 +211,13 @@ public class PermissionSet extends NetObjectEnumerable implements system.runtime
 
     public boolean IsSubsetOf(PermissionSet target) throws Throwable, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.NullReferenceException, system.ArgumentException, system.security.SecurityException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsSubsetOf = null;
         try {
-            return (boolean)classInstance.Invoke("IsSubsetOf", target == null ? null : target.getJCOInstance());
+            retObjectIsSubsetOf = classInstance.Invoke("IsSubsetOf", target == null ? null : target.getJCOInstance());
+            return (boolean)retObjectIsSubsetOf;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsSubsetOf != null ? retObjectIsSubsetOf.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,9 +225,13 @@ public class PermissionSet extends NetObjectEnumerable implements system.runtime
 
     public boolean IsUnrestricted() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsUnrestricted = null;
         try {
-            return (boolean)classInstance.Invoke("IsUnrestricted");
+            retObjectIsUnrestricted = classInstance.Invoke("IsUnrestricted");
+            return (boolean)retObjectIsUnrestricted;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsUnrestricted != null ? retObjectIsUnrestricted.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -223,10 +239,12 @@ public class PermissionSet extends NetObjectEnumerable implements system.runtime
 
     public static byte[] ConvertPermissionSet(java.lang.String inFormat, byte[] inData, java.lang.String outFormat) throws Throwable, system.NotImplementedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectConvertPermissionSet = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("ConvertPermissionSet", inFormat, inData, outFormat);
+            retObjectConvertPermissionSet = classType.Invoke("ConvertPermissionSet", inFormat, inData, outFormat);
+            JCObject resultingObjects = (JCObject)retObjectConvertPermissionSet;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -235,6 +253,8 @@ public class PermissionSet extends NetObjectEnumerable implements system.runtime
 				resultingArray[indexConvertPermissionSet] = (byte)resultingArrayList.get(indexConvertPermissionSet);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectConvertPermissionSet != null ? retObjectConvertPermissionSet.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -242,10 +262,12 @@ public class PermissionSet extends NetObjectEnumerable implements system.runtime
 
     public static byte[] ConvertPermissionSet(java.lang.String dupParam0, JCORefOut dupParam1, java.lang.String dupParam2) throws Throwable, system.NotImplementedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectConvertPermissionSet = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("ConvertPermissionSet", dupParam0, dupParam1.getJCRefOut(), dupParam2);
+            retObjectConvertPermissionSet = classType.Invoke("ConvertPermissionSet", dupParam0, dupParam1.getJCRefOut(), dupParam2);
+            JCObject resultingObjects = (JCObject)retObjectConvertPermissionSet;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -254,6 +276,8 @@ public class PermissionSet extends NetObjectEnumerable implements system.runtime
 				resultingArray[indexConvertPermissionSet] = (byte)resultingArrayList.get(indexConvertPermissionSet);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectConvertPermissionSet != null ? retObjectConvertPermissionSet.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -261,10 +285,14 @@ public class PermissionSet extends NetObjectEnumerable implements system.runtime
 
     public IPermission AddPermission(IPermission perm) throws Throwable, system.ArgumentException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddPermission = null;
         try {
-            JCObject objAddPermission = (JCObject)classInstance.Invoke("AddPermission", perm == null ? null : perm.getJCOInstance());
+            retObjectAddPermission = classInstance.Invoke("AddPermission", perm == null ? null : perm.getJCOInstance());
+            JCObject objAddPermission = (JCObject)retObjectAddPermission;
             return new IPermissionImplementation(objAddPermission);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddPermission != null ? retObjectAddPermission.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -272,10 +300,14 @@ public class PermissionSet extends NetObjectEnumerable implements system.runtime
 
     public IPermission GetPermission(NetType permClass) throws Throwable, system.ArgumentException, system.security.SecurityException, system.ArgumentNullException, system.NotImplementedException, system.NotSupportedException, system.InvalidOperationException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetException, system.reflection.TargetParameterCountException, system.FormatException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPermission = null;
         try {
-            JCObject objGetPermission = (JCObject)classInstance.Invoke("GetPermission", permClass == null ? null : permClass.getJCOInstance());
+            retObjectGetPermission = classInstance.Invoke("GetPermission", permClass == null ? null : permClass.getJCOInstance());
+            JCObject objGetPermission = (JCObject)retObjectGetPermission;
             return new IPermissionImplementation(objGetPermission);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetPermission != null ? retObjectGetPermission.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -283,10 +315,14 @@ public class PermissionSet extends NetObjectEnumerable implements system.runtime
 
     public IPermission RemovePermission(NetType permClass) throws Throwable, system.ArgumentException, system.security.SecurityException, system.ArgumentNullException, system.NotImplementedException, system.NotSupportedException, system.InvalidOperationException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetException, system.reflection.TargetParameterCountException, system.FormatException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRemovePermission = null;
         try {
-            JCObject objRemovePermission = (JCObject)classInstance.Invoke("RemovePermission", permClass == null ? null : permClass.getJCOInstance());
+            retObjectRemovePermission = classInstance.Invoke("RemovePermission", permClass == null ? null : permClass.getJCOInstance());
+            JCObject objRemovePermission = (JCObject)retObjectRemovePermission;
             return new IPermissionImplementation(objRemovePermission);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRemovePermission != null ? retObjectRemovePermission.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -294,10 +330,14 @@ public class PermissionSet extends NetObjectEnumerable implements system.runtime
 
     public IPermission SetPermission(IPermission perm) throws Throwable, system.ArgumentException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.FormatException, system.security.SecurityException, system.InvalidOperationException, system.MissingMethodException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSetPermission = null;
         try {
-            JCObject objSetPermission = (JCObject)classInstance.Invoke("SetPermission", perm == null ? null : perm.getJCOInstance());
+            retObjectSetPermission = classInstance.Invoke("SetPermission", perm == null ? null : perm.getJCOInstance());
+            JCObject objSetPermission = (JCObject)retObjectSetPermission;
             return new IPermissionImplementation(objSetPermission);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSetPermission != null ? retObjectSetPermission.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -305,10 +345,14 @@ public class PermissionSet extends NetObjectEnumerable implements system.runtime
 
     public PermissionSet Copy() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCopy = null;
         try {
-            JCObject objCopy = (JCObject)classInstance.Invoke("Copy");
+            retObjectCopy = classInstance.Invoke("Copy");
+            JCObject objCopy = (JCObject)retObjectCopy;
             return new PermissionSet(objCopy);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCopy != null ? retObjectCopy.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -316,10 +360,14 @@ public class PermissionSet extends NetObjectEnumerable implements system.runtime
 
     public PermissionSet Intersect(PermissionSet other) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.NullReferenceException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIntersect = null;
         try {
-            JCObject objIntersect = (JCObject)classInstance.Invoke("Intersect", other == null ? null : other.getJCOInstance());
+            retObjectIntersect = classInstance.Invoke("Intersect", other == null ? null : other.getJCOInstance());
+            JCObject objIntersect = (JCObject)retObjectIntersect;
             return new PermissionSet(objIntersect);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIntersect != null ? retObjectIntersect.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -327,10 +375,14 @@ public class PermissionSet extends NetObjectEnumerable implements system.runtime
 
     public PermissionSet Union(PermissionSet other) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.NullReferenceException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUnion = null;
         try {
-            JCObject objUnion = (JCObject)classInstance.Invoke("Union", other == null ? null : other.getJCOInstance());
+            retObjectUnion = classInstance.Invoke("Union", other == null ? null : other.getJCOInstance());
+            JCObject objUnion = (JCObject)retObjectUnion;
             return new PermissionSet(objUnion);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUnion != null ? retObjectUnion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -338,10 +390,14 @@ public class PermissionSet extends NetObjectEnumerable implements system.runtime
 
     public SecurityElement ToXml() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.NotSupportedException, system.NullReferenceException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToXml = null;
         try {
-            JCObject objToXml = (JCObject)classInstance.Invoke("ToXml");
+            retObjectToXml = classInstance.Invoke("ToXml");
+            JCObject objToXml = (JCObject)retObjectToXml;
             return new SecurityElement(objToXml);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToXml != null ? retObjectToXml.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -349,7 +405,7 @@ public class PermissionSet extends NetObjectEnumerable implements system.runtime
 
     public void Assert() throws Throwable, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Assert");
         } catch (JCNativeException jcne) {
@@ -359,7 +415,7 @@ public class PermissionSet extends NetObjectEnumerable implements system.runtime
 
     public void CopyTo(Array array, int index) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.NullReferenceException, system.FormatException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CopyTo", array == null ? null : array.getJCOInstance(), index);
         } catch (JCNativeException jcne) {
@@ -369,7 +425,7 @@ public class PermissionSet extends NetObjectEnumerable implements system.runtime
 
     public void Demand() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.NullReferenceException, system.FormatException, system.security.SecurityException, system.MissingMethodException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Demand");
         } catch (JCNativeException jcne) {
@@ -379,7 +435,7 @@ public class PermissionSet extends NetObjectEnumerable implements system.runtime
 
     public void Deny() throws Throwable, system.InvalidOperationException, system.NotSupportedException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Deny");
         } catch (JCNativeException jcne) {
@@ -389,7 +445,7 @@ public class PermissionSet extends NetObjectEnumerable implements system.runtime
 
     public void FromXml(SecurityElement et) throws Throwable, system.ArgumentNullException, system.NullReferenceException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.ArgumentException, system.globalization.CultureNotFoundException, system.TypeLoadException, system.InvalidOperationException, system.security.SecurityException, system.NotImplementedException, system.NotSupportedException, system.MemberAccessException, system.reflection.TargetException, system.reflection.TargetParameterCountException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("FromXml", et == null ? null : et.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -399,7 +455,7 @@ public class PermissionSet extends NetObjectEnumerable implements system.runtime
 
     public void PermitOnly() throws Throwable, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("PermitOnly");
         } catch (JCNativeException jcne) {
@@ -409,7 +465,7 @@ public class PermissionSet extends NetObjectEnumerable implements system.runtime
 
     public static void RevertAssert() throws Throwable, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("RevertAssert");
         } catch (JCNativeException jcne) {
@@ -423,7 +479,7 @@ public class PermissionSet extends NetObjectEnumerable implements system.runtime
      */
     @Deprecated 
     public void OnDeserialization(NetObject sender) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDeserializationCallback to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDeserializationCallback to obtain the full interface.");
     }
 
 
@@ -432,9 +488,13 @@ public class PermissionSet extends NetObjectEnumerable implements system.runtime
     
     public boolean getIsReadOnly() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsReadOnly = null;
         try {
-            return (boolean)classInstance.Get("IsReadOnly");
+            retObjectIsReadOnly = classInstance.Get("IsReadOnly");
+            return (boolean)retObjectIsReadOnly;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsReadOnly != null ? retObjectIsReadOnly.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -442,9 +502,13 @@ public class PermissionSet extends NetObjectEnumerable implements system.runtime
 
     public boolean getIsSynchronized() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsSynchronized = null;
         try {
-            return (boolean)classInstance.Get("IsSynchronized");
+            retObjectIsSynchronized = classInstance.Get("IsSynchronized");
+            return (boolean)retObjectIsSynchronized;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsSynchronized != null ? retObjectIsSynchronized.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -452,9 +516,20 @@ public class PermissionSet extends NetObjectEnumerable implements system.runtime
 
     public int getCount() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCount = null;
         try {
-            return (int)classInstance.Get("Count");
+            retObjectCount = classInstance.Get("Count");
+            return (int)retObjectCount;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCount_ToString = retObjectCount == null ? "null" : retObjectCount.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectCountNumber = (java.lang.Number)retObjectCount;
+                return retObjectCountNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCount != null ? retObjectCount.getClass() : "null", retObjectCount_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -462,10 +537,14 @@ public class PermissionSet extends NetObjectEnumerable implements system.runtime
 
     public NetObject getSyncRoot() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSyncRoot = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SyncRoot");
+            retObjectSyncRoot = classInstance.Get("SyncRoot");
+            JCObject val = (JCObject)retObjectSyncRoot;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSyncRoot != null ? retObjectSyncRoot.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

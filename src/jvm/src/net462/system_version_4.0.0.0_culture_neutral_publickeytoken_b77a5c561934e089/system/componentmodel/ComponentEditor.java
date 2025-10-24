@@ -155,9 +155,13 @@ public class ComponentEditor extends NetObject  {
     
     public boolean EditComponent(ITypeDescriptorContext context, NetObject component) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEditComponent = null;
         try {
-            return (boolean)classInstance.Invoke("EditComponent", context == null ? null : context.getJCOInstance(), component == null ? null : component.getJCOInstance());
+            retObjectEditComponent = classInstance.Invoke("EditComponent", context == null ? null : context.getJCOInstance(), component == null ? null : component.getJCOInstance());
+            return (boolean)retObjectEditComponent;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectEditComponent != null ? retObjectEditComponent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -165,9 +169,13 @@ public class ComponentEditor extends NetObject  {
 
     public boolean EditComponent(NetObject component) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEditComponent = null;
         try {
-            return (boolean)classInstance.Invoke("EditComponent", component == null ? null : component.getJCOInstance());
+            retObjectEditComponent = classInstance.Invoke("EditComponent", component == null ? null : component.getJCOInstance());
+            return (boolean)retObjectEditComponent;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectEditComponent != null ? retObjectEditComponent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

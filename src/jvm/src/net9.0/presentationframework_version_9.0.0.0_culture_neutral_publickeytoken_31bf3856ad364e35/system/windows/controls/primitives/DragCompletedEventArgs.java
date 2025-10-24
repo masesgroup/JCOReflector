@@ -170,9 +170,13 @@ public class DragCompletedEventArgs extends RoutedEventArgs  {
     
     public boolean getCanceled() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanceled = null;
         try {
-            return (boolean)classInstance.Get("Canceled");
+            retObjectCanceled = classInstance.Get("Canceled");
+            return (boolean)retObjectCanceled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCanceled != null ? retObjectCanceled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,9 +184,20 @@ public class DragCompletedEventArgs extends RoutedEventArgs  {
 
     public double getHorizontalChange() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHorizontalChange = null;
         try {
-            return (double)classInstance.Get("HorizontalChange");
+            retObjectHorizontalChange = classInstance.Get("HorizontalChange");
+            return (double)retObjectHorizontalChange;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectHorizontalChange_ToString = retObjectHorizontalChange == null ? "null" : retObjectHorizontalChange.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectHorizontalChangeNumber = (java.lang.Number)retObjectHorizontalChange;
+                return retObjectHorizontalChangeNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectHorizontalChange != null ? retObjectHorizontalChange.getClass() : "null", retObjectHorizontalChange_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,9 +205,20 @@ public class DragCompletedEventArgs extends RoutedEventArgs  {
 
     public double getVerticalChange() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVerticalChange = null;
         try {
-            return (double)classInstance.Get("VerticalChange");
+            retObjectVerticalChange = classInstance.Get("VerticalChange");
+            return (double)retObjectVerticalChange;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectVerticalChange_ToString = retObjectVerticalChange == null ? "null" : retObjectVerticalChange.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectVerticalChangeNumber = (java.lang.Number)retObjectVerticalChange;
+                return retObjectVerticalChangeNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectVerticalChange != null ? retObjectVerticalChange.getClass() : "null", retObjectVerticalChange_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

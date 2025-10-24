@@ -179,9 +179,13 @@ public class ClaimTypeRequirement extends NetObject  {
     
     public boolean getIsOptional() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsOptional = null;
         try {
-            return (boolean)classInstance.Get("IsOptional");
+            retObjectIsOptional = classInstance.Get("IsOptional");
+            return (boolean)retObjectIsOptional;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsOptional != null ? retObjectIsOptional.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -189,9 +193,13 @@ public class ClaimTypeRequirement extends NetObject  {
 
     public java.lang.String getClaimType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClaimType = null;
         try {
-            return (java.lang.String)classInstance.Get("ClaimType");
+            retObjectClaimType = classInstance.Get("ClaimType");
+            return (java.lang.String)retObjectClaimType;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectClaimType != null ? retObjectClaimType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

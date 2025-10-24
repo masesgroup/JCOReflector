@@ -177,10 +177,14 @@ public class DataGridViewImageColumn extends DataGridViewColumn  {
     
     public NetObject Clone() throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.Win32Exception, system.NotSupportedException, system.OutOfMemoryException, system.componentmodel.InvalidEnumArgumentException, system.RankException, system.ArrayTypeMismatchException, system.OverflowException, system.MulticastNotSupportedException, system.threading.ThreadStateException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClone = null;
         try {
-            JCObject objClone = (JCObject)classInstance.Invoke("Clone");
+            retObjectClone = classInstance.Invoke("Clone");
+            JCObject objClone = (JCObject)retObjectClone;
             return new NetObject(objClone);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClone != null ? retObjectClone.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,9 +196,13 @@ public class DataGridViewImageColumn extends DataGridViewColumn  {
     
     public boolean getValuesAreIcons() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValuesAreIcons = null;
         try {
-            return (boolean)classInstance.Get("ValuesAreIcons");
+            retObjectValuesAreIcons = classInstance.Get("ValuesAreIcons");
+            return (boolean)retObjectValuesAreIcons;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectValuesAreIcons != null ? retObjectValuesAreIcons.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,7 +210,7 @@ public class DataGridViewImageColumn extends DataGridViewColumn  {
 
     public void setValuesAreIcons(boolean ValuesAreIcons) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.componentmodel.Win32Exception, system.OverflowException, system.NotSupportedException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ValuesAreIcons", ValuesAreIcons);
         } catch (JCNativeException jcne) {
@@ -212,10 +220,14 @@ public class DataGridViewImageColumn extends DataGridViewColumn  {
 
     public Icon getIcon() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIcon = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Icon");
+            retObjectIcon = classInstance.Get("Icon");
+            JCObject val = (JCObject)retObjectIcon;
             return new Icon(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIcon != null ? retObjectIcon.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -223,7 +235,7 @@ public class DataGridViewImageColumn extends DataGridViewColumn  {
 
     public void setIcon(Icon Icon) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.FormatException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Icon", Icon == null ? null : Icon.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -233,10 +245,14 @@ public class DataGridViewImageColumn extends DataGridViewColumn  {
 
     public Image getImage() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectImage = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Image");
+            retObjectImage = classInstance.Get("Image");
+            JCObject val = (JCObject)retObjectImage;
             return new Image(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectImage != null ? retObjectImage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -244,7 +260,7 @@ public class DataGridViewImageColumn extends DataGridViewColumn  {
 
     public void setImage(Image Image) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.FormatException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Image", Image == null ? null : Image.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -254,9 +270,13 @@ public class DataGridViewImageColumn extends DataGridViewColumn  {
 
     public java.lang.String getDescription() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDescription = null;
         try {
-            return (java.lang.String)classInstance.Get("Description");
+            retObjectDescription = classInstance.Get("Description");
+            return (java.lang.String)retObjectDescription;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDescription != null ? retObjectDescription.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -264,7 +284,7 @@ public class DataGridViewImageColumn extends DataGridViewColumn  {
 
     public void setDescription(java.lang.String Description) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Description", Description);
         } catch (JCNativeException jcne) {
@@ -274,10 +294,14 @@ public class DataGridViewImageColumn extends DataGridViewColumn  {
 
     public DataGridViewImageCellLayout getImageLayout() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectImageLayout = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ImageLayout");
+            retObjectImageLayout = classInstance.Get("ImageLayout");
+            JCObject val = (JCObject)retObjectImageLayout;
             return new DataGridViewImageCellLayout(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectImageLayout != null ? retObjectImageLayout.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -285,7 +309,7 @@ public class DataGridViewImageColumn extends DataGridViewColumn  {
 
     public void setImageLayout(DataGridViewImageCellLayout ImageLayout) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.componentmodel.InvalidEnumArgumentException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ImageLayout", ImageLayout == null ? null : ImageLayout.getJCOInstance());
         } catch (JCNativeException jcne) {

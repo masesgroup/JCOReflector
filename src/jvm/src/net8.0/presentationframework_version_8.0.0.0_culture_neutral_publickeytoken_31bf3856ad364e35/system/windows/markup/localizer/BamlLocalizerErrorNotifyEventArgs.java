@@ -162,10 +162,14 @@ public class BamlLocalizerErrorNotifyEventArgs extends EventArgs  {
     
     public BamlLocalizableResourceKey getKey() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectKey = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Key");
+            retObjectKey = classInstance.Get("Key");
+            JCObject val = (JCObject)retObjectKey;
             return new BamlLocalizableResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectKey != null ? retObjectKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -173,10 +177,14 @@ public class BamlLocalizerErrorNotifyEventArgs extends EventArgs  {
 
     public BamlLocalizerError getError() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectError = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Error");
+            retObjectError = classInstance.Get("Error");
+            JCObject val = (JCObject)retObjectError;
             return new BamlLocalizerError(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectError != null ? retObjectError.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

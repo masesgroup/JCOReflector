@@ -165,7 +165,7 @@ public class ListBox extends Selector  {
     
     public void ScrollIntoView(NetObject item) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.Win32Exception, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ScrollIntoView", item == null ? null : item.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -175,7 +175,7 @@ public class ListBox extends Selector  {
 
     public void SelectAll() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentNullException, system.NotSupportedException, system.FormatException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SelectAll");
         } catch (JCNativeException jcne) {
@@ -185,7 +185,7 @@ public class ListBox extends Selector  {
 
     public void UnselectAll() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentNullException, system.RankException, system.ArrayTypeMismatchException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("UnselectAll");
         } catch (JCNativeException jcne) {
@@ -199,10 +199,14 @@ public class ListBox extends Selector  {
     
     public IList getSelectedItems() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectedItems = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SelectedItems");
+            retObjectSelectedItems = classInstance.Get("SelectedItems");
+            JCObject val = (JCObject)retObjectSelectedItems;
             return new IListImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelectedItems != null ? retObjectSelectedItems.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -210,10 +214,14 @@ public class ListBox extends Selector  {
 
     public SelectionMode getSelectionMode() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectionMode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SelectionMode");
+            retObjectSelectionMode = classInstance.Get("SelectionMode");
+            JCObject val = (JCObject)retObjectSelectionMode;
             return new SelectionMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelectionMode != null ? retObjectSelectionMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -221,7 +229,7 @@ public class ListBox extends Selector  {
 
     public void setSelectionMode(SelectionMode SelectionMode) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SelectionMode", SelectionMode == null ? null : SelectionMode.getJCOInstance());
         } catch (JCNativeException jcne) {

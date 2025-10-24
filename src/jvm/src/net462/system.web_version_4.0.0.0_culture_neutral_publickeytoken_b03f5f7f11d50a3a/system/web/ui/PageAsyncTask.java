@@ -181,9 +181,13 @@ public class PageAsyncTask extends NetObject  {
     
     public boolean getExecuteInParallel() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExecuteInParallel = null;
         try {
-            return (boolean)classInstance.Get("ExecuteInParallel");
+            retObjectExecuteInParallel = classInstance.Get("ExecuteInParallel");
+            return (boolean)retObjectExecuteInParallel;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectExecuteInParallel != null ? retObjectExecuteInParallel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,7 +195,7 @@ public class PageAsyncTask extends NetObject  {
 
     public void setExecuteInParallel(boolean ExecuteInParallel) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ExecuteInParallel", ExecuteInParallel);
         } catch (JCNativeException jcne) {
@@ -201,10 +205,14 @@ public class PageAsyncTask extends NetObject  {
 
     public NetObject getState() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectState = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("State");
+            retObjectState = classInstance.Get("State");
+            JCObject val = (JCObject)retObjectState;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectState != null ? retObjectState.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -212,7 +220,7 @@ public class PageAsyncTask extends NetObject  {
 
     public void setState(NetObject State) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("State", State == null ? null : State.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -222,9 +230,13 @@ public class PageAsyncTask extends NetObject  {
 
     public BeginEventHandler getBeginHandler() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginHandler = null;
         try {
-            return (BeginEventHandler)classInstance.Get("BeginHandler");
+            retObjectBeginHandler = classInstance.Get("BeginHandler");
+            return (BeginEventHandler)retObjectBeginHandler;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into BeginEventHandler", retObjectBeginHandler != null ? retObjectBeginHandler.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -232,7 +244,7 @@ public class PageAsyncTask extends NetObject  {
 
     public void setBeginHandler(BeginEventHandler BeginHandler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BeginHandler", BeginHandler);
         } catch (JCNativeException jcne) {
@@ -242,9 +254,13 @@ public class PageAsyncTask extends NetObject  {
 
     public EndEventHandler getEndHandler() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEndHandler = null;
         try {
-            return (EndEventHandler)classInstance.Get("EndHandler");
+            retObjectEndHandler = classInstance.Get("EndHandler");
+            return (EndEventHandler)retObjectEndHandler;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into EndEventHandler", retObjectEndHandler != null ? retObjectEndHandler.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -252,7 +268,7 @@ public class PageAsyncTask extends NetObject  {
 
     public void setEndHandler(EndEventHandler EndHandler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EndHandler", EndHandler);
         } catch (JCNativeException jcne) {
@@ -262,9 +278,13 @@ public class PageAsyncTask extends NetObject  {
 
     public EndEventHandler getTimeoutHandler() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTimeoutHandler = null;
         try {
-            return (EndEventHandler)classInstance.Get("TimeoutHandler");
+            retObjectTimeoutHandler = classInstance.Get("TimeoutHandler");
+            return (EndEventHandler)retObjectTimeoutHandler;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into EndEventHandler", retObjectTimeoutHandler != null ? retObjectTimeoutHandler.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -272,7 +292,7 @@ public class PageAsyncTask extends NetObject  {
 
     public void setTimeoutHandler(EndEventHandler TimeoutHandler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TimeoutHandler", TimeoutHandler);
         } catch (JCNativeException jcne) {

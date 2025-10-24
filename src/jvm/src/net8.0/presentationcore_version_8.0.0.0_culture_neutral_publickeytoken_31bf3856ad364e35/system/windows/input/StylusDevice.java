@@ -165,9 +165,13 @@ public class StylusDevice extends InputDevice  {
     
     public boolean Capture(IInputElement element, CaptureMode captureMode) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCapture = null;
         try {
-            return (boolean)classInstance.Invoke("Capture", element == null ? null : element.getJCOInstance(), captureMode == null ? null : captureMode.getJCOInstance());
+            retObjectCapture = classInstance.Invoke("Capture", element == null ? null : element.getJCOInstance(), captureMode == null ? null : captureMode.getJCOInstance());
+            return (boolean)retObjectCapture;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCapture != null ? retObjectCapture.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -175,9 +179,13 @@ public class StylusDevice extends InputDevice  {
 
     public boolean Capture(IInputElement element) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCapture = null;
         try {
-            return (boolean)classInstance.Invoke("Capture", element == null ? null : element.getJCOInstance());
+            retObjectCapture = classInstance.Invoke("Capture", element == null ? null : element.getJCOInstance());
+            return (boolean)retObjectCapture;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCapture != null ? retObjectCapture.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -185,10 +193,14 @@ public class StylusDevice extends InputDevice  {
 
     public StylusPointCollection GetStylusPoints(IInputElement relativeTo, StylusPointDescription subsetToReformatTo) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetStylusPoints = null;
         try {
-            JCObject objGetStylusPoints = (JCObject)classInstance.Invoke("GetStylusPoints", relativeTo == null ? null : relativeTo.getJCOInstance(), subsetToReformatTo == null ? null : subsetToReformatTo.getJCOInstance());
+            retObjectGetStylusPoints = classInstance.Invoke("GetStylusPoints", relativeTo == null ? null : relativeTo.getJCOInstance(), subsetToReformatTo == null ? null : subsetToReformatTo.getJCOInstance());
+            JCObject objGetStylusPoints = (JCObject)retObjectGetStylusPoints;
             return new StylusPointCollection(objGetStylusPoints);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetStylusPoints != null ? retObjectGetStylusPoints.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,10 +208,14 @@ public class StylusDevice extends InputDevice  {
 
     public StylusPointCollection GetStylusPoints(IInputElement relativeTo) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetStylusPoints = null;
         try {
-            JCObject objGetStylusPoints = (JCObject)classInstance.Invoke("GetStylusPoints", relativeTo == null ? null : relativeTo.getJCOInstance());
+            retObjectGetStylusPoints = classInstance.Invoke("GetStylusPoints", relativeTo == null ? null : relativeTo.getJCOInstance());
+            JCObject objGetStylusPoints = (JCObject)retObjectGetStylusPoints;
             return new StylusPointCollection(objGetStylusPoints);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetStylusPoints != null ? retObjectGetStylusPoints.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -207,10 +223,14 @@ public class StylusDevice extends InputDevice  {
 
     public Point GetPosition(IInputElement relativeTo) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPosition = null;
         try {
-            JCObject objGetPosition = (JCObject)classInstance.Invoke("GetPosition", relativeTo == null ? null : relativeTo.getJCOInstance());
+            retObjectGetPosition = classInstance.Invoke("GetPosition", relativeTo == null ? null : relativeTo.getJCOInstance());
+            JCObject objGetPosition = (JCObject)retObjectGetPosition;
             return new Point(objGetPosition);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetPosition != null ? retObjectGetPosition.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -218,7 +238,7 @@ public class StylusDevice extends InputDevice  {
 
     public void Synchronize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Synchronize");
         } catch (JCNativeException jcne) {
@@ -232,9 +252,13 @@ public class StylusDevice extends InputDevice  {
     
     public boolean getInAir() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInAir = null;
         try {
-            return (boolean)classInstance.Get("InAir");
+            retObjectInAir = classInstance.Get("InAir");
+            return (boolean)retObjectInAir;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectInAir != null ? retObjectInAir.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -242,9 +266,13 @@ public class StylusDevice extends InputDevice  {
 
     public boolean getInRange() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInRange = null;
         try {
-            return (boolean)classInstance.Get("InRange");
+            retObjectInRange = classInstance.Get("InRange");
+            return (boolean)retObjectInRange;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectInRange != null ? retObjectInRange.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -252,9 +280,13 @@ public class StylusDevice extends InputDevice  {
 
     public boolean getInverted() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInverted = null;
         try {
-            return (boolean)classInstance.Get("Inverted");
+            retObjectInverted = classInstance.Get("Inverted");
+            return (boolean)retObjectInverted;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectInverted != null ? retObjectInverted.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -262,9 +294,13 @@ public class StylusDevice extends InputDevice  {
 
     public boolean getIsValid() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsValid = null;
         try {
-            return (boolean)classInstance.Get("IsValid");
+            retObjectIsValid = classInstance.Get("IsValid");
+            return (boolean)retObjectIsValid;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsValid != null ? retObjectIsValid.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -272,9 +308,20 @@ public class StylusDevice extends InputDevice  {
 
     public int getId() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectId = null;
         try {
-            return (int)classInstance.Get("Id");
+            retObjectId = classInstance.Get("Id");
+            return (int)retObjectId;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectId_ToString = retObjectId == null ? "null" : retObjectId.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectIdNumber = (java.lang.Number)retObjectId;
+                return retObjectIdNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectId != null ? retObjectId.getClass() : "null", retObjectId_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -282,9 +329,13 @@ public class StylusDevice extends InputDevice  {
 
     public java.lang.String getName() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectName = null;
         try {
-            return (java.lang.String)classInstance.Get("Name");
+            retObjectName = classInstance.Get("Name");
+            return (java.lang.String)retObjectName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectName != null ? retObjectName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -292,10 +343,14 @@ public class StylusDevice extends InputDevice  {
 
     public IInputElement getCaptured() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCaptured = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Captured");
+            retObjectCaptured = classInstance.Get("Captured");
+            JCObject val = (JCObject)retObjectCaptured;
             return new IInputElementImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCaptured != null ? retObjectCaptured.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -303,10 +358,14 @@ public class StylusDevice extends InputDevice  {
 
     public IInputElement getDirectlyOver() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDirectlyOver = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DirectlyOver");
+            retObjectDirectlyOver = classInstance.Get("DirectlyOver");
+            JCObject val = (JCObject)retObjectDirectlyOver;
             return new IInputElementImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDirectlyOver != null ? retObjectDirectlyOver.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -314,10 +373,14 @@ public class StylusDevice extends InputDevice  {
 
     public StylusButtonCollection getStylusButtons() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStylusButtons = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("StylusButtons");
+            retObjectStylusButtons = classInstance.Get("StylusButtons");
+            JCObject val = (JCObject)retObjectStylusButtons;
             return new StylusButtonCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStylusButtons != null ? retObjectStylusButtons.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -325,10 +388,14 @@ public class StylusDevice extends InputDevice  {
 
     public TabletDevice getTabletDevice() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTabletDevice = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TabletDevice");
+            retObjectTabletDevice = classInstance.Get("TabletDevice");
+            JCObject val = (JCObject)retObjectTabletDevice;
             return new TabletDevice(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTabletDevice != null ? retObjectTabletDevice.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

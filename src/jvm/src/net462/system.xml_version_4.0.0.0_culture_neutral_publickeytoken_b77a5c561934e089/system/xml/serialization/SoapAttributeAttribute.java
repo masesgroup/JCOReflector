@@ -176,9 +176,13 @@ public class SoapAttributeAttribute extends Attribute  {
     
     public java.lang.String getAttributeName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAttributeName = null;
         try {
-            return (java.lang.String)classInstance.Get("AttributeName");
+            retObjectAttributeName = classInstance.Get("AttributeName");
+            return (java.lang.String)retObjectAttributeName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectAttributeName != null ? retObjectAttributeName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,7 +190,7 @@ public class SoapAttributeAttribute extends Attribute  {
 
     public void setAttributeName(java.lang.String AttributeName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AttributeName", AttributeName);
         } catch (JCNativeException jcne) {
@@ -196,9 +200,13 @@ public class SoapAttributeAttribute extends Attribute  {
 
     public java.lang.String getDataType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDataType = null;
         try {
-            return (java.lang.String)classInstance.Get("DataType");
+            retObjectDataType = classInstance.Get("DataType");
+            return (java.lang.String)retObjectDataType;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDataType != null ? retObjectDataType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -206,7 +214,7 @@ public class SoapAttributeAttribute extends Attribute  {
 
     public void setDataType(java.lang.String DataType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DataType", DataType);
         } catch (JCNativeException jcne) {
@@ -216,9 +224,13 @@ public class SoapAttributeAttribute extends Attribute  {
 
     public java.lang.String getNamespace() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNamespace = null;
         try {
-            return (java.lang.String)classInstance.Get("Namespace");
+            retObjectNamespace = classInstance.Get("Namespace");
+            return (java.lang.String)retObjectNamespace;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectNamespace != null ? retObjectNamespace.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -226,7 +238,7 @@ public class SoapAttributeAttribute extends Attribute  {
 
     public void setNamespace(java.lang.String Namespace) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Namespace", Namespace);
         } catch (JCNativeException jcne) {

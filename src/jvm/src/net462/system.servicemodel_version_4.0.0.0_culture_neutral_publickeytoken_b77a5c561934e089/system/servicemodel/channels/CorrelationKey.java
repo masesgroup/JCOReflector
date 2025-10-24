@@ -162,9 +162,13 @@ public class CorrelationKey extends InstanceKey  {
     
     public java.lang.String getKeyString() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectKeyString = null;
         try {
-            return (java.lang.String)classInstance.Get("KeyString");
+            retObjectKeyString = classInstance.Get("KeyString");
+            return (java.lang.String)retObjectKeyString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectKeyString != null ? retObjectKeyString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,7 +176,7 @@ public class CorrelationKey extends InstanceKey  {
 
     public void setKeyString(java.lang.String KeyString) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("KeyString", KeyString);
         } catch (JCNativeException jcne) {
@@ -182,9 +186,13 @@ public class CorrelationKey extends InstanceKey  {
 
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectName = null;
         try {
-            return (java.lang.String)classInstance.Get("Name");
+            retObjectName = classInstance.Get("Name");
+            return (java.lang.String)retObjectName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectName != null ? retObjectName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,7 +200,7 @@ public class CorrelationKey extends InstanceKey  {
 
     public void setName(java.lang.String Name) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Name", Name);
         } catch (JCNativeException jcne) {
@@ -202,10 +210,14 @@ public class CorrelationKey extends InstanceKey  {
 
     public XName getScopeName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectScopeName = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ScopeName");
+            retObjectScopeName = classInstance.Get("ScopeName");
+            JCObject val = (JCObject)retObjectScopeName;
             return new XName(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectScopeName != null ? retObjectScopeName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,7 +225,7 @@ public class CorrelationKey extends InstanceKey  {
 
     public void setScopeName(XName ScopeName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ScopeName", ScopeName == null ? null : ScopeName.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -223,10 +235,14 @@ public class CorrelationKey extends InstanceKey  {
 
     public XNamespace getProvider() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProvider = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Provider");
+            retObjectProvider = classInstance.Get("Provider");
+            JCObject val = (JCObject)retObjectProvider;
             return new XNamespace(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectProvider != null ? retObjectProvider.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -234,7 +250,7 @@ public class CorrelationKey extends InstanceKey  {
 
     public void setProvider(XNamespace Provider) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Provider", Provider == null ? null : Provider.getJCOInstance());
         } catch (JCNativeException jcne) {

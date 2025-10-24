@@ -157,9 +157,13 @@ public class FaultConverter extends NetObject  {
     
     public boolean TryCreateException(Message message, MessageFault fault, JCORefOut<NetException> exception) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryCreateException = null;
         try {
-            return (boolean)classInstance.Invoke("TryCreateException", message == null ? null : message.getJCOInstance(), fault == null ? null : fault.getJCOInstance(), exception.getJCRefOut());
+            retObjectTryCreateException = classInstance.Invoke("TryCreateException", message == null ? null : message.getJCOInstance(), fault == null ? null : fault.getJCOInstance(), exception.getJCRefOut());
+            return (boolean)retObjectTryCreateException;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryCreateException != null ? retObjectTryCreateException.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -167,9 +171,13 @@ public class FaultConverter extends NetObject  {
 
     public boolean TryCreateFaultMessage(NetException exception, JCORefOut<Message> message) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryCreateFaultMessage = null;
         try {
-            return (boolean)classInstance.Invoke("TryCreateFaultMessage", exception == null ? null : exception.getJCOInstance(), message.getJCRefOut());
+            retObjectTryCreateFaultMessage = classInstance.Invoke("TryCreateFaultMessage", exception == null ? null : exception.getJCOInstance(), message.getJCRefOut());
+            return (boolean)retObjectTryCreateFaultMessage;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryCreateFaultMessage != null ? retObjectTryCreateFaultMessage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,10 +185,14 @@ public class FaultConverter extends NetObject  {
 
     public static FaultConverter GetDefaultFaultConverter(MessageVersion version) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetDefaultFaultConverter = null;
         try {
-            JCObject objGetDefaultFaultConverter = (JCObject)classType.Invoke("GetDefaultFaultConverter", version == null ? null : version.getJCOInstance());
+            retObjectGetDefaultFaultConverter = classType.Invoke("GetDefaultFaultConverter", version == null ? null : version.getJCOInstance());
+            JCObject objGetDefaultFaultConverter = (JCObject)retObjectGetDefaultFaultConverter;
             return new FaultConverter(objGetDefaultFaultConverter);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetDefaultFaultConverter != null ? retObjectGetDefaultFaultConverter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

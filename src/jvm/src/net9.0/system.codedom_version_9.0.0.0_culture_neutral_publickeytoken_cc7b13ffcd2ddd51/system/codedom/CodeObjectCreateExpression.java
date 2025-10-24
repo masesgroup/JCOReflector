@@ -198,10 +198,14 @@ public class CodeObjectCreateExpression extends CodeExpression  {
     
     public CodeExpressionCollection getParameters() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectParameters = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Parameters");
+            retObjectParameters = classInstance.Get("Parameters");
+            JCObject val = (JCObject)retObjectParameters;
             return new CodeExpressionCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParameters != null ? retObjectParameters.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -209,10 +213,14 @@ public class CodeObjectCreateExpression extends CodeExpression  {
 
     public CodeTypeReference getCreateType() throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.RankException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CreateType");
+            retObjectCreateType = classInstance.Get("CreateType");
+            JCObject val = (JCObject)retObjectCreateType;
             return new CodeTypeReference(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateType != null ? retObjectCreateType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -220,7 +228,7 @@ public class CodeObjectCreateExpression extends CodeExpression  {
 
     public void setCreateType(CodeTypeReference CreateType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CreateType", CreateType == null ? null : CreateType.getJCOInstance());
         } catch (JCNativeException jcne) {

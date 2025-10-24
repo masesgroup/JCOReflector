@@ -224,9 +224,13 @@ public class Socket extends NetObject implements AutoCloseable {
     
     public boolean AcceptAsync(SocketAsyncEventArgs e) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.PlatformNotSupportedException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.net.sockets.SocketException, system.ArgumentNullException, system.ArrayTypeMismatchException, system.OverflowException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAcceptAsync = null;
         try {
-            return (boolean)classInstance.Invoke("AcceptAsync", e == null ? null : e.getJCOInstance());
+            retObjectAcceptAsync = classInstance.Invoke("AcceptAsync", e == null ? null : e.getJCOInstance());
+            return (boolean)retObjectAcceptAsync;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectAcceptAsync != null ? retObjectAcceptAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -234,9 +238,13 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public boolean ConnectAsync(SocketAsyncEventArgs e) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.net.sockets.SocketException, system.diagnostics.tracing.EventSourceException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConnectAsync = null;
         try {
-            return (boolean)classInstance.Invoke("ConnectAsync", e == null ? null : e.getJCOInstance());
+            retObjectConnectAsync = classInstance.Invoke("ConnectAsync", e == null ? null : e.getJCOInstance());
+            return (boolean)retObjectConnectAsync;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectConnectAsync != null ? retObjectConnectAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -244,9 +252,13 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public static boolean ConnectAsync(SocketType socketType, ProtocolType protocolType, SocketAsyncEventArgs e) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.net.sockets.SocketException, system.threading.tasks.TaskSchedulerException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectConnectAsync = null;
         try {
-            return (boolean)classType.Invoke("ConnectAsync", socketType == null ? null : socketType.getJCOInstance(), protocolType == null ? null : protocolType.getJCOInstance(), e == null ? null : e.getJCOInstance());
+            retObjectConnectAsync = classType.Invoke("ConnectAsync", socketType == null ? null : socketType.getJCOInstance(), protocolType == null ? null : protocolType.getJCOInstance(), e == null ? null : e.getJCOInstance());
+            return (boolean)retObjectConnectAsync;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectConnectAsync != null ? retObjectConnectAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -254,9 +266,13 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public boolean DisconnectAsync(SocketAsyncEventArgs e) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.OverflowException, system.FormatException, system.net.sockets.SocketException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDisconnectAsync = null;
         try {
-            return (boolean)classInstance.Invoke("DisconnectAsync", e == null ? null : e.getJCOInstance());
+            retObjectDisconnectAsync = classInstance.Invoke("DisconnectAsync", e == null ? null : e.getJCOInstance());
+            return (boolean)retObjectDisconnectAsync;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectDisconnectAsync != null ? retObjectDisconnectAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -264,9 +280,13 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public boolean Poll(int microSeconds, SelectMode mode) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.FormatException, system.ArgumentNullException, system.diagnostics.tracing.EventSourceException, system.net.sockets.SocketException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPoll = null;
         try {
-            return (boolean)classInstance.Invoke("Poll", microSeconds, mode == null ? null : mode.getJCOInstance());
+            retObjectPoll = classInstance.Invoke("Poll", microSeconds, mode == null ? null : mode.getJCOInstance());
+            return (boolean)retObjectPoll;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectPoll != null ? retObjectPoll.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -274,9 +294,13 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public boolean Poll(TimeSpan timeout, SelectMode mode) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException, system.net.sockets.SocketException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPoll = null;
         try {
-            return (boolean)classInstance.Invoke("Poll", timeout == null ? null : timeout.getJCOInstance(), mode == null ? null : mode.getJCOInstance());
+            retObjectPoll = classInstance.Invoke("Poll", timeout == null ? null : timeout.getJCOInstance(), mode == null ? null : mode.getJCOInstance());
+            return (boolean)retObjectPoll;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectPoll != null ? retObjectPoll.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -284,9 +308,13 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public boolean ReceiveAsync(SocketAsyncEventArgs e) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.net.sockets.SocketException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReceiveAsync = null;
         try {
-            return (boolean)classInstance.Invoke("ReceiveAsync", e == null ? null : e.getJCOInstance());
+            retObjectReceiveAsync = classInstance.Invoke("ReceiveAsync", e == null ? null : e.getJCOInstance());
+            return (boolean)retObjectReceiveAsync;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectReceiveAsync != null ? retObjectReceiveAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -294,9 +322,13 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public boolean ReceiveFromAsync(SocketAsyncEventArgs e) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.net.sockets.SocketException, system.ArrayTypeMismatchException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReceiveFromAsync = null;
         try {
-            return (boolean)classInstance.Invoke("ReceiveFromAsync", e == null ? null : e.getJCOInstance());
+            retObjectReceiveFromAsync = classInstance.Invoke("ReceiveFromAsync", e == null ? null : e.getJCOInstance());
+            return (boolean)retObjectReceiveFromAsync;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectReceiveFromAsync != null ? retObjectReceiveFromAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -304,9 +336,13 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public boolean ReceiveMessageFromAsync(SocketAsyncEventArgs e) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.net.sockets.SocketException, system.OutOfMemoryException, system.OverflowException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReceiveMessageFromAsync = null;
         try {
-            return (boolean)classInstance.Invoke("ReceiveMessageFromAsync", e == null ? null : e.getJCOInstance());
+            retObjectReceiveMessageFromAsync = classInstance.Invoke("ReceiveMessageFromAsync", e == null ? null : e.getJCOInstance());
+            return (boolean)retObjectReceiveMessageFromAsync;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectReceiveMessageFromAsync != null ? retObjectReceiveMessageFromAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -314,9 +350,13 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public boolean SendAsync(SocketAsyncEventArgs e) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.net.sockets.SocketException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSendAsync = null;
         try {
-            return (boolean)classInstance.Invoke("SendAsync", e == null ? null : e.getJCOInstance());
+            retObjectSendAsync = classInstance.Invoke("SendAsync", e == null ? null : e.getJCOInstance());
+            return (boolean)retObjectSendAsync;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectSendAsync != null ? retObjectSendAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -324,9 +364,13 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public boolean SendPacketsAsync(SocketAsyncEventArgs e) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.net.sockets.SocketException, system.ArrayTypeMismatchException, system.runtime.serialization.SerializationException, system.globalization.CultureNotFoundException, system.io.IOException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSendPacketsAsync = null;
         try {
-            return (boolean)classInstance.Invoke("SendPacketsAsync", e == null ? null : e.getJCOInstance());
+            retObjectSendPacketsAsync = classInstance.Invoke("SendPacketsAsync", e == null ? null : e.getJCOInstance());
+            return (boolean)retObjectSendPacketsAsync;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectSendPacketsAsync != null ? retObjectSendPacketsAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -334,9 +378,13 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public boolean SendToAsync(SocketAsyncEventArgs e) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.net.sockets.SocketException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSendToAsync = null;
         try {
-            return (boolean)classInstance.Invoke("SendToAsync", e == null ? null : e.getJCOInstance());
+            retObjectSendToAsync = classInstance.Invoke("SendToAsync", e == null ? null : e.getJCOInstance());
+            return (boolean)retObjectSendToAsync;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectSendToAsync != null ? retObjectSendToAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -344,10 +392,12 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public byte[] GetSocketOption(SocketOptionLevel optionLevel, SocketOptionName optionName, int optionLength) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.net.sockets.SocketException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSocketOption = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetSocketOption", optionLevel == null ? null : optionLevel.getJCOInstance(), optionName == null ? null : optionName.getJCOInstance(), optionLength);
+            retObjectGetSocketOption = classInstance.Invoke("GetSocketOption", optionLevel == null ? null : optionLevel.getJCOInstance(), optionName == null ? null : optionName.getJCOInstance(), optionLength);
+            JCObject resultingObjects = (JCObject)retObjectGetSocketOption;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -356,6 +406,8 @@ public class Socket extends NetObject implements AutoCloseable {
 				resultingArray[indexGetSocketOption] = (byte)resultingArrayList.get(indexGetSocketOption);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectGetSocketOption != null ? retObjectGetSocketOption.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -363,9 +415,20 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public int EndReceive(IAsyncResult asyncResult, JCORefOut<SocketError> errorCode) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.diagnostics.tracing.EventSourceException, system.InvalidOperationException, system.threading.tasks.TaskSchedulerException, system.threading.tasks.TaskCanceledException, system.AggregateException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEndReceive = null;
         try {
-            return (int)classInstance.Invoke("EndReceive", asyncResult == null ? null : asyncResult.getJCOInstance(), errorCode.getJCRefOut());
+            retObjectEndReceive = classInstance.Invoke("EndReceive", asyncResult == null ? null : asyncResult.getJCOInstance(), errorCode.getJCRefOut());
+            return (int)retObjectEndReceive;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectEndReceive_ToString = retObjectEndReceive == null ? "null" : retObjectEndReceive.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectEndReceiveNumber = (java.lang.Number)retObjectEndReceive;
+                return retObjectEndReceiveNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectEndReceive != null ? retObjectEndReceive.getClass() : "null", retObjectEndReceive_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -373,9 +436,20 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public int EndReceive(IAsyncResult asyncResult) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.diagnostics.tracing.EventSourceException, system.InvalidOperationException, system.threading.tasks.TaskSchedulerException, system.threading.tasks.TaskCanceledException, system.AggregateException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEndReceive = null;
         try {
-            return (int)classInstance.Invoke("EndReceive", asyncResult == null ? null : asyncResult.getJCOInstance());
+            retObjectEndReceive = classInstance.Invoke("EndReceive", asyncResult == null ? null : asyncResult.getJCOInstance());
+            return (int)retObjectEndReceive;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectEndReceive_ToString = retObjectEndReceive == null ? "null" : retObjectEndReceive.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectEndReceiveNumber = (java.lang.Number)retObjectEndReceive;
+                return retObjectEndReceiveNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectEndReceive != null ? retObjectEndReceive.getClass() : "null", retObjectEndReceive_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -383,9 +457,20 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public int EndReceiveFrom(IAsyncResult asyncResult, JCORefOut<EndPoint> endPoint) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.net.sockets.SocketException, system.threading.tasks.TaskSchedulerException, system.threading.tasks.TaskCanceledException, system.AggregateException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEndReceiveFrom = null;
         try {
-            return (int)classInstance.Invoke("EndReceiveFrom", asyncResult == null ? null : asyncResult.getJCOInstance(), endPoint.getJCRefOut());
+            retObjectEndReceiveFrom = classInstance.Invoke("EndReceiveFrom", asyncResult == null ? null : asyncResult.getJCOInstance(), endPoint.getJCRefOut());
+            return (int)retObjectEndReceiveFrom;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectEndReceiveFrom_ToString = retObjectEndReceiveFrom == null ? "null" : retObjectEndReceiveFrom.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectEndReceiveFromNumber = (java.lang.Number)retObjectEndReceiveFrom;
+                return retObjectEndReceiveFromNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectEndReceiveFrom != null ? retObjectEndReceiveFrom.getClass() : "null", retObjectEndReceiveFrom_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -393,9 +478,20 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public int EndReceiveMessageFrom(IAsyncResult asyncResult, JCORefOut<SocketFlags> socketFlags, JCORefOut<EndPoint> endPoint, JCORefOut<IPPacketInformation> ipPacketInformation) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.net.sockets.SocketException, system.threading.tasks.TaskSchedulerException, system.threading.tasks.TaskCanceledException, system.AggregateException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEndReceiveMessageFrom = null;
         try {
-            return (int)classInstance.Invoke("EndReceiveMessageFrom", asyncResult == null ? null : asyncResult.getJCOInstance(), socketFlags.getJCRefOut(), endPoint.getJCRefOut(), ipPacketInformation.getJCRefOut());
+            retObjectEndReceiveMessageFrom = classInstance.Invoke("EndReceiveMessageFrom", asyncResult == null ? null : asyncResult.getJCOInstance(), socketFlags.getJCRefOut(), endPoint.getJCRefOut(), ipPacketInformation.getJCRefOut());
+            return (int)retObjectEndReceiveMessageFrom;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectEndReceiveMessageFrom_ToString = retObjectEndReceiveMessageFrom == null ? "null" : retObjectEndReceiveMessageFrom.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectEndReceiveMessageFromNumber = (java.lang.Number)retObjectEndReceiveMessageFrom;
+                return retObjectEndReceiveMessageFromNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectEndReceiveMessageFrom != null ? retObjectEndReceiveMessageFrom.getClass() : "null", retObjectEndReceiveMessageFrom_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -403,9 +499,20 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public int EndSend(IAsyncResult asyncResult, JCORefOut<SocketError> errorCode) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.diagnostics.tracing.EventSourceException, system.InvalidOperationException, system.threading.tasks.TaskSchedulerException, system.threading.tasks.TaskCanceledException, system.AggregateException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEndSend = null;
         try {
-            return (int)classInstance.Invoke("EndSend", asyncResult == null ? null : asyncResult.getJCOInstance(), errorCode.getJCRefOut());
+            retObjectEndSend = classInstance.Invoke("EndSend", asyncResult == null ? null : asyncResult.getJCOInstance(), errorCode.getJCRefOut());
+            return (int)retObjectEndSend;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectEndSend_ToString = retObjectEndSend == null ? "null" : retObjectEndSend.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectEndSendNumber = (java.lang.Number)retObjectEndSend;
+                return retObjectEndSendNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectEndSend != null ? retObjectEndSend.getClass() : "null", retObjectEndSend_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -413,9 +520,20 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public int EndSend(IAsyncResult asyncResult) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.diagnostics.tracing.EventSourceException, system.InvalidOperationException, system.threading.tasks.TaskSchedulerException, system.threading.tasks.TaskCanceledException, system.AggregateException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEndSend = null;
         try {
-            return (int)classInstance.Invoke("EndSend", asyncResult == null ? null : asyncResult.getJCOInstance());
+            retObjectEndSend = classInstance.Invoke("EndSend", asyncResult == null ? null : asyncResult.getJCOInstance());
+            return (int)retObjectEndSend;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectEndSend_ToString = retObjectEndSend == null ? "null" : retObjectEndSend.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectEndSendNumber = (java.lang.Number)retObjectEndSend;
+                return retObjectEndSendNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectEndSend != null ? retObjectEndSend.getClass() : "null", retObjectEndSend_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -423,9 +541,20 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public int EndSendTo(IAsyncResult asyncResult) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.diagnostics.tracing.EventSourceException, system.InvalidOperationException, system.threading.tasks.TaskSchedulerException, system.threading.tasks.TaskCanceledException, system.AggregateException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEndSendTo = null;
         try {
-            return (int)classInstance.Invoke("EndSendTo", asyncResult == null ? null : asyncResult.getJCOInstance());
+            retObjectEndSendTo = classInstance.Invoke("EndSendTo", asyncResult == null ? null : asyncResult.getJCOInstance());
+            return (int)retObjectEndSendTo;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectEndSendTo_ToString = retObjectEndSendTo == null ? "null" : retObjectEndSendTo.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectEndSendToNumber = (java.lang.Number)retObjectEndSendTo;
+                return retObjectEndSendToNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectEndSendTo != null ? retObjectEndSendTo.getClass() : "null", retObjectEndSendTo_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -433,9 +562,20 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public int IOControl(int ioControlCode, byte[] optionInValue, byte[] optionOutValue) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.FormatException, system.ArgumentNullException, system.diagnostics.tracing.EventSourceException, system.net.sockets.SocketException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIOControl = null;
         try {
-            return (int)classInstance.Invoke("IOControl", ioControlCode, optionInValue, optionOutValue);
+            retObjectIOControl = classInstance.Invoke("IOControl", ioControlCode, optionInValue, optionOutValue);
+            return (int)retObjectIOControl;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectIOControl_ToString = retObjectIOControl == null ? "null" : retObjectIOControl.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectIOControlNumber = (java.lang.Number)retObjectIOControl;
+                return retObjectIOControlNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectIOControl != null ? retObjectIOControl.getClass() : "null", retObjectIOControl_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -443,9 +583,20 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public int IOControl(int dupParam0, JCORefOut dupParam1, JCORefOut dupParam2) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.FormatException, system.ArgumentNullException, system.diagnostics.tracing.EventSourceException, system.net.sockets.SocketException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIOControl = null;
         try {
-            return (int)classInstance.Invoke("IOControl", dupParam0, dupParam1.getJCRefOut(), dupParam2.getJCRefOut());
+            retObjectIOControl = classInstance.Invoke("IOControl", dupParam0, dupParam1.getJCRefOut(), dupParam2.getJCRefOut());
+            return (int)retObjectIOControl;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectIOControl_ToString = retObjectIOControl == null ? "null" : retObjectIOControl.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectIOControlNumber = (java.lang.Number)retObjectIOControl;
+                return retObjectIOControlNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectIOControl != null ? retObjectIOControl.getClass() : "null", retObjectIOControl_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -453,9 +604,20 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public int IOControl(IOControlCode ioControlCode, byte[] optionInValue, byte[] optionOutValue) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.diagnostics.tracing.EventSourceException, system.net.sockets.SocketException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIOControl = null;
         try {
-            return (int)classInstance.Invoke("IOControl", ioControlCode == null ? null : ioControlCode.getJCOInstance(), optionInValue, optionOutValue);
+            retObjectIOControl = classInstance.Invoke("IOControl", ioControlCode == null ? null : ioControlCode.getJCOInstance(), optionInValue, optionOutValue);
+            return (int)retObjectIOControl;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectIOControl_ToString = retObjectIOControl == null ? "null" : retObjectIOControl.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectIOControlNumber = (java.lang.Number)retObjectIOControl;
+                return retObjectIOControlNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectIOControl != null ? retObjectIOControl.getClass() : "null", retObjectIOControl_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -463,9 +625,20 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public int IOControl(IOControlCode dupParam0, JCORefOut dupParam1, JCORefOut dupParam2) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.diagnostics.tracing.EventSourceException, system.net.sockets.SocketException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIOControl = null;
         try {
-            return (int)classInstance.Invoke("IOControl", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1.getJCRefOut(), dupParam2.getJCRefOut());
+            retObjectIOControl = classInstance.Invoke("IOControl", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1.getJCRefOut(), dupParam2.getJCRefOut());
+            return (int)retObjectIOControl;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectIOControl_ToString = retObjectIOControl == null ? "null" : retObjectIOControl.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectIOControlNumber = (java.lang.Number)retObjectIOControl;
+                return retObjectIOControlNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectIOControl != null ? retObjectIOControl.getClass() : "null", retObjectIOControl_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -473,9 +646,20 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public int Receive(byte[] buffer, int offset, int size, SocketFlags socketFlags, JCORefOut<SocketError> errorCode) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.net.sockets.SocketException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReceive = null;
         try {
-            return (int)classInstance.Invoke("Receive", buffer, offset, size, socketFlags == null ? null : socketFlags.getJCOInstance(), errorCode.getJCRefOut());
+            retObjectReceive = classInstance.Invoke("Receive", buffer, offset, size, socketFlags == null ? null : socketFlags.getJCOInstance(), errorCode.getJCRefOut());
+            return (int)retObjectReceive;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectReceive_ToString = retObjectReceive == null ? "null" : retObjectReceive.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectReceiveNumber = (java.lang.Number)retObjectReceive;
+                return retObjectReceiveNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectReceive != null ? retObjectReceive.getClass() : "null", retObjectReceive_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -483,9 +667,20 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public int Receive(byte[] buffer, int offset, int size, SocketFlags socketFlags) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.net.sockets.SocketException, system.OutOfMemoryException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReceive = null;
         try {
-            return (int)classInstance.Invoke("Receive", buffer, offset, size, socketFlags == null ? null : socketFlags.getJCOInstance());
+            retObjectReceive = classInstance.Invoke("Receive", buffer, offset, size, socketFlags == null ? null : socketFlags.getJCOInstance());
+            return (int)retObjectReceive;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectReceive_ToString = retObjectReceive == null ? "null" : retObjectReceive.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectReceiveNumber = (java.lang.Number)retObjectReceive;
+                return retObjectReceiveNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectReceive != null ? retObjectReceive.getClass() : "null", retObjectReceive_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -493,9 +688,20 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public int Receive(JCORefOut dupParam0, int dupParam1, int dupParam2, SocketFlags dupParam3) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.net.sockets.SocketException, system.OutOfMemoryException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReceive = null;
         try {
-            return (int)classInstance.Invoke("Receive", dupParam0.getJCRefOut(), dupParam1, dupParam2, dupParam3 == null ? null : dupParam3.getJCOInstance());
+            retObjectReceive = classInstance.Invoke("Receive", dupParam0.getJCRefOut(), dupParam1, dupParam2, dupParam3 == null ? null : dupParam3.getJCOInstance());
+            return (int)retObjectReceive;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectReceive_ToString = retObjectReceive == null ? "null" : retObjectReceive.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectReceiveNumber = (java.lang.Number)retObjectReceive;
+                return retObjectReceiveNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectReceive != null ? retObjectReceive.getClass() : "null", retObjectReceive_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -503,9 +709,20 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public int Receive(byte[] buffer, int size, SocketFlags socketFlags) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.net.sockets.SocketException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReceive = null;
         try {
-            return (int)classInstance.Invoke("Receive", buffer, size, socketFlags == null ? null : socketFlags.getJCOInstance());
+            retObjectReceive = classInstance.Invoke("Receive", buffer, size, socketFlags == null ? null : socketFlags.getJCOInstance());
+            return (int)retObjectReceive;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectReceive_ToString = retObjectReceive == null ? "null" : retObjectReceive.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectReceiveNumber = (java.lang.Number)retObjectReceive;
+                return retObjectReceiveNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectReceive != null ? retObjectReceive.getClass() : "null", retObjectReceive_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -513,9 +730,20 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public int Receive(JCORefOut dupParam0, int dupParam1, SocketFlags dupParam2) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.net.sockets.SocketException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReceive = null;
         try {
-            return (int)classInstance.Invoke("Receive", dupParam0.getJCRefOut(), dupParam1, dupParam2 == null ? null : dupParam2.getJCOInstance());
+            retObjectReceive = classInstance.Invoke("Receive", dupParam0.getJCRefOut(), dupParam1, dupParam2 == null ? null : dupParam2.getJCOInstance());
+            return (int)retObjectReceive;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectReceive_ToString = retObjectReceive == null ? "null" : retObjectReceive.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectReceiveNumber = (java.lang.Number)retObjectReceive;
+                return retObjectReceiveNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectReceive != null ? retObjectReceive.getClass() : "null", retObjectReceive_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -523,9 +751,20 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public int Receive(byte[] buffer, SocketFlags socketFlags) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.net.sockets.SocketException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReceive = null;
         try {
-            return (int)classInstance.Invoke("Receive", buffer, socketFlags == null ? null : socketFlags.getJCOInstance());
+            retObjectReceive = classInstance.Invoke("Receive", buffer, socketFlags == null ? null : socketFlags.getJCOInstance());
+            return (int)retObjectReceive;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectReceive_ToString = retObjectReceive == null ? "null" : retObjectReceive.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectReceiveNumber = (java.lang.Number)retObjectReceive;
+                return retObjectReceiveNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectReceive != null ? retObjectReceive.getClass() : "null", retObjectReceive_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -533,9 +772,20 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public int Receive(JCORefOut dupParam0, SocketFlags dupParam1) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.net.sockets.SocketException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReceive = null;
         try {
-            return (int)classInstance.Invoke("Receive", dupParam0.getJCRefOut(), dupParam1 == null ? null : dupParam1.getJCOInstance());
+            retObjectReceive = classInstance.Invoke("Receive", dupParam0.getJCRefOut(), dupParam1 == null ? null : dupParam1.getJCOInstance());
+            return (int)retObjectReceive;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectReceive_ToString = retObjectReceive == null ? "null" : retObjectReceive.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectReceiveNumber = (java.lang.Number)retObjectReceive;
+                return retObjectReceiveNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectReceive != null ? retObjectReceive.getClass() : "null", retObjectReceive_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -543,9 +793,20 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public int Receive(byte[] buffer) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.net.sockets.SocketException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReceive = null;
         try {
-            return (int)classInstance.Invoke("Receive", (java.lang.Object)buffer);
+            retObjectReceive = classInstance.Invoke("Receive", (java.lang.Object)buffer);
+            return (int)retObjectReceive;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectReceive_ToString = retObjectReceive == null ? "null" : retObjectReceive.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectReceiveNumber = (java.lang.Number)retObjectReceive;
+                return retObjectReceiveNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectReceive != null ? retObjectReceive.getClass() : "null", retObjectReceive_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -553,9 +814,20 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public int Receive(JCORefOut dupParam0) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.net.sockets.SocketException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReceive = null;
         try {
-            return (int)classInstance.Invoke("Receive", (java.lang.Object)dupParam0.getJCRefOut());
+            retObjectReceive = classInstance.Invoke("Receive", (java.lang.Object)dupParam0.getJCRefOut());
+            return (int)retObjectReceive;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectReceive_ToString = retObjectReceive == null ? "null" : retObjectReceive.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectReceiveNumber = (java.lang.Number)retObjectReceive;
+                return retObjectReceiveNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectReceive != null ? retObjectReceive.getClass() : "null", retObjectReceive_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -563,9 +835,20 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public int ReceiveFrom(byte[] buffer, int offset, int size, SocketFlags socketFlags, JCORefOut<EndPoint> remoteEP) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.net.sockets.SocketException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReceiveFrom = null;
         try {
-            return (int)classInstance.Invoke("ReceiveFrom", buffer, offset, size, socketFlags == null ? null : socketFlags.getJCOInstance(), remoteEP.getJCRefOut());
+            retObjectReceiveFrom = classInstance.Invoke("ReceiveFrom", buffer, offset, size, socketFlags == null ? null : socketFlags.getJCOInstance(), remoteEP.getJCRefOut());
+            return (int)retObjectReceiveFrom;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectReceiveFrom_ToString = retObjectReceiveFrom == null ? "null" : retObjectReceiveFrom.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectReceiveFromNumber = (java.lang.Number)retObjectReceiveFrom;
+                return retObjectReceiveFromNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectReceiveFrom != null ? retObjectReceiveFrom.getClass() : "null", retObjectReceiveFrom_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -573,9 +856,20 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public int ReceiveFrom(byte[] buffer, int size, SocketFlags socketFlags, JCORefOut<EndPoint> remoteEP) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.net.sockets.SocketException, system.ArrayTypeMismatchException, system.diagnostics.tracing.EventSourceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReceiveFrom = null;
         try {
-            return (int)classInstance.Invoke("ReceiveFrom", buffer, size, socketFlags == null ? null : socketFlags.getJCOInstance(), remoteEP.getJCRefOut());
+            retObjectReceiveFrom = classInstance.Invoke("ReceiveFrom", buffer, size, socketFlags == null ? null : socketFlags.getJCOInstance(), remoteEP.getJCRefOut());
+            return (int)retObjectReceiveFrom;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectReceiveFrom_ToString = retObjectReceiveFrom == null ? "null" : retObjectReceiveFrom.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectReceiveFromNumber = (java.lang.Number)retObjectReceiveFrom;
+                return retObjectReceiveFromNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectReceiveFrom != null ? retObjectReceiveFrom.getClass() : "null", retObjectReceiveFrom_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -583,9 +877,20 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public int ReceiveFrom(byte[] buffer, JCORefOut<EndPoint> remoteEP) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.net.sockets.SocketException, system.ArrayTypeMismatchException, system.diagnostics.tracing.EventSourceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReceiveFrom = null;
         try {
-            return (int)classInstance.Invoke("ReceiveFrom", buffer, remoteEP.getJCRefOut());
+            retObjectReceiveFrom = classInstance.Invoke("ReceiveFrom", buffer, remoteEP.getJCRefOut());
+            return (int)retObjectReceiveFrom;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectReceiveFrom_ToString = retObjectReceiveFrom == null ? "null" : retObjectReceiveFrom.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectReceiveFromNumber = (java.lang.Number)retObjectReceiveFrom;
+                return retObjectReceiveFromNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectReceiveFrom != null ? retObjectReceiveFrom.getClass() : "null", retObjectReceiveFrom_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -593,9 +898,20 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public int ReceiveFrom(byte[] buffer, SocketFlags socketFlags, JCORefOut<EndPoint> remoteEP) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.net.sockets.SocketException, system.ArrayTypeMismatchException, system.diagnostics.tracing.EventSourceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReceiveFrom = null;
         try {
-            return (int)classInstance.Invoke("ReceiveFrom", buffer, socketFlags == null ? null : socketFlags.getJCOInstance(), remoteEP.getJCRefOut());
+            retObjectReceiveFrom = classInstance.Invoke("ReceiveFrom", buffer, socketFlags == null ? null : socketFlags.getJCOInstance(), remoteEP.getJCRefOut());
+            return (int)retObjectReceiveFrom;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectReceiveFrom_ToString = retObjectReceiveFrom == null ? "null" : retObjectReceiveFrom.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectReceiveFromNumber = (java.lang.Number)retObjectReceiveFrom;
+                return retObjectReceiveFromNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectReceiveFrom != null ? retObjectReceiveFrom.getClass() : "null", retObjectReceiveFrom_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -603,9 +919,20 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public int ReceiveMessageFrom(byte[] buffer, int offset, int size, JCORefOut<SocketFlags> socketFlags, JCORefOut<EndPoint> remoteEP, JCORefOut<IPPacketInformation> ipPacketInformation) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.net.sockets.SocketException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReceiveMessageFrom = null;
         try {
-            return (int)classInstance.Invoke("ReceiveMessageFrom", buffer, offset, size, socketFlags.getJCRefOut(), remoteEP.getJCRefOut(), ipPacketInformation.getJCRefOut());
+            retObjectReceiveMessageFrom = classInstance.Invoke("ReceiveMessageFrom", buffer, offset, size, socketFlags.getJCRefOut(), remoteEP.getJCRefOut(), ipPacketInformation.getJCRefOut());
+            return (int)retObjectReceiveMessageFrom;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectReceiveMessageFrom_ToString = retObjectReceiveMessageFrom == null ? "null" : retObjectReceiveMessageFrom.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectReceiveMessageFromNumber = (java.lang.Number)retObjectReceiveMessageFrom;
+                return retObjectReceiveMessageFromNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectReceiveMessageFrom != null ? retObjectReceiveMessageFrom.getClass() : "null", retObjectReceiveMessageFrom_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -613,9 +940,20 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public int Send(byte[] buffer, int offset, int size, SocketFlags socketFlags, JCORefOut<SocketError> errorCode) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.net.sockets.SocketException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSend = null;
         try {
-            return (int)classInstance.Invoke("Send", buffer, offset, size, socketFlags == null ? null : socketFlags.getJCOInstance(), errorCode.getJCRefOut());
+            retObjectSend = classInstance.Invoke("Send", buffer, offset, size, socketFlags == null ? null : socketFlags.getJCOInstance(), errorCode.getJCRefOut());
+            return (int)retObjectSend;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSend_ToString = retObjectSend == null ? "null" : retObjectSend.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectSendNumber = (java.lang.Number)retObjectSend;
+                return retObjectSendNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectSend != null ? retObjectSend.getClass() : "null", retObjectSend_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -623,9 +961,20 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public int Send(byte[] buffer, int offset, int size, SocketFlags socketFlags) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.net.sockets.SocketException, system.OutOfMemoryException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSend = null;
         try {
-            return (int)classInstance.Invoke("Send", buffer, offset, size, socketFlags == null ? null : socketFlags.getJCOInstance());
+            retObjectSend = classInstance.Invoke("Send", buffer, offset, size, socketFlags == null ? null : socketFlags.getJCOInstance());
+            return (int)retObjectSend;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSend_ToString = retObjectSend == null ? "null" : retObjectSend.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectSendNumber = (java.lang.Number)retObjectSend;
+                return retObjectSendNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectSend != null ? retObjectSend.getClass() : "null", retObjectSend_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -633,9 +982,20 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public int Send(JCORefOut dupParam0, int dupParam1, int dupParam2, SocketFlags dupParam3) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.net.sockets.SocketException, system.OutOfMemoryException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSend = null;
         try {
-            return (int)classInstance.Invoke("Send", dupParam0.getJCRefOut(), dupParam1, dupParam2, dupParam3 == null ? null : dupParam3.getJCOInstance());
+            retObjectSend = classInstance.Invoke("Send", dupParam0.getJCRefOut(), dupParam1, dupParam2, dupParam3 == null ? null : dupParam3.getJCOInstance());
+            return (int)retObjectSend;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSend_ToString = retObjectSend == null ? "null" : retObjectSend.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectSendNumber = (java.lang.Number)retObjectSend;
+                return retObjectSendNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectSend != null ? retObjectSend.getClass() : "null", retObjectSend_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -643,9 +1003,20 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public int Send(byte[] buffer, int size, SocketFlags socketFlags) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.net.sockets.SocketException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSend = null;
         try {
-            return (int)classInstance.Invoke("Send", buffer, size, socketFlags == null ? null : socketFlags.getJCOInstance());
+            retObjectSend = classInstance.Invoke("Send", buffer, size, socketFlags == null ? null : socketFlags.getJCOInstance());
+            return (int)retObjectSend;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSend_ToString = retObjectSend == null ? "null" : retObjectSend.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectSendNumber = (java.lang.Number)retObjectSend;
+                return retObjectSendNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectSend != null ? retObjectSend.getClass() : "null", retObjectSend_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -653,9 +1024,20 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public int Send(JCORefOut dupParam0, int dupParam1, SocketFlags dupParam2) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.net.sockets.SocketException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSend = null;
         try {
-            return (int)classInstance.Invoke("Send", dupParam0.getJCRefOut(), dupParam1, dupParam2 == null ? null : dupParam2.getJCOInstance());
+            retObjectSend = classInstance.Invoke("Send", dupParam0.getJCRefOut(), dupParam1, dupParam2 == null ? null : dupParam2.getJCOInstance());
+            return (int)retObjectSend;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSend_ToString = retObjectSend == null ? "null" : retObjectSend.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectSendNumber = (java.lang.Number)retObjectSend;
+                return retObjectSendNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectSend != null ? retObjectSend.getClass() : "null", retObjectSend_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -663,9 +1045,20 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public int Send(byte[] buffer, SocketFlags socketFlags) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.net.sockets.SocketException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSend = null;
         try {
-            return (int)classInstance.Invoke("Send", buffer, socketFlags == null ? null : socketFlags.getJCOInstance());
+            retObjectSend = classInstance.Invoke("Send", buffer, socketFlags == null ? null : socketFlags.getJCOInstance());
+            return (int)retObjectSend;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSend_ToString = retObjectSend == null ? "null" : retObjectSend.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectSendNumber = (java.lang.Number)retObjectSend;
+                return retObjectSendNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectSend != null ? retObjectSend.getClass() : "null", retObjectSend_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -673,9 +1066,20 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public int Send(JCORefOut dupParam0, SocketFlags dupParam1) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.net.sockets.SocketException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSend = null;
         try {
-            return (int)classInstance.Invoke("Send", dupParam0.getJCRefOut(), dupParam1 == null ? null : dupParam1.getJCOInstance());
+            retObjectSend = classInstance.Invoke("Send", dupParam0.getJCRefOut(), dupParam1 == null ? null : dupParam1.getJCOInstance());
+            return (int)retObjectSend;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSend_ToString = retObjectSend == null ? "null" : retObjectSend.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectSendNumber = (java.lang.Number)retObjectSend;
+                return retObjectSendNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectSend != null ? retObjectSend.getClass() : "null", retObjectSend_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -683,9 +1087,20 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public int Send(byte[] buffer) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.net.sockets.SocketException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSend = null;
         try {
-            return (int)classInstance.Invoke("Send", (java.lang.Object)buffer);
+            retObjectSend = classInstance.Invoke("Send", (java.lang.Object)buffer);
+            return (int)retObjectSend;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSend_ToString = retObjectSend == null ? "null" : retObjectSend.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectSendNumber = (java.lang.Number)retObjectSend;
+                return retObjectSendNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectSend != null ? retObjectSend.getClass() : "null", retObjectSend_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -693,9 +1108,20 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public int Send(JCORefOut dupParam0) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.net.sockets.SocketException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSend = null;
         try {
-            return (int)classInstance.Invoke("Send", (java.lang.Object)dupParam0.getJCRefOut());
+            retObjectSend = classInstance.Invoke("Send", (java.lang.Object)dupParam0.getJCRefOut());
+            return (int)retObjectSend;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSend_ToString = retObjectSend == null ? "null" : retObjectSend.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectSendNumber = (java.lang.Number)retObjectSend;
+                return retObjectSendNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectSend != null ? retObjectSend.getClass() : "null", retObjectSend_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -703,9 +1129,20 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public int SendTo(byte[] buffer, int offset, int size, SocketFlags socketFlags, EndPoint remoteEP) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.net.sockets.SocketException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSendTo = null;
         try {
-            return (int)classInstance.Invoke("SendTo", buffer, offset, size, socketFlags == null ? null : socketFlags.getJCOInstance(), remoteEP == null ? null : remoteEP.getJCOInstance());
+            retObjectSendTo = classInstance.Invoke("SendTo", buffer, offset, size, socketFlags == null ? null : socketFlags.getJCOInstance(), remoteEP == null ? null : remoteEP.getJCOInstance());
+            return (int)retObjectSendTo;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSendTo_ToString = retObjectSendTo == null ? "null" : retObjectSendTo.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectSendToNumber = (java.lang.Number)retObjectSendTo;
+                return retObjectSendToNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectSendTo != null ? retObjectSendTo.getClass() : "null", retObjectSendTo_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -713,9 +1150,20 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public int SendTo(JCORefOut dupParam0, int dupParam1, int dupParam2, SocketFlags dupParam3, EndPoint dupParam4) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.net.sockets.SocketException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSendTo = null;
         try {
-            return (int)classInstance.Invoke("SendTo", dupParam0.getJCRefOut(), dupParam1, dupParam2, dupParam3 == null ? null : dupParam3.getJCOInstance(), dupParam4 == null ? null : dupParam4.getJCOInstance());
+            retObjectSendTo = classInstance.Invoke("SendTo", dupParam0.getJCRefOut(), dupParam1, dupParam2, dupParam3 == null ? null : dupParam3.getJCOInstance(), dupParam4 == null ? null : dupParam4.getJCOInstance());
+            return (int)retObjectSendTo;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSendTo_ToString = retObjectSendTo == null ? "null" : retObjectSendTo.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectSendToNumber = (java.lang.Number)retObjectSendTo;
+                return retObjectSendToNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectSendTo != null ? retObjectSendTo.getClass() : "null", retObjectSendTo_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -723,9 +1171,20 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public int SendTo(byte[] buffer, int size, SocketFlags socketFlags, EndPoint remoteEP) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.net.sockets.SocketException, system.OutOfMemoryException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSendTo = null;
         try {
-            return (int)classInstance.Invoke("SendTo", buffer, size, socketFlags == null ? null : socketFlags.getJCOInstance(), remoteEP == null ? null : remoteEP.getJCOInstance());
+            retObjectSendTo = classInstance.Invoke("SendTo", buffer, size, socketFlags == null ? null : socketFlags.getJCOInstance(), remoteEP == null ? null : remoteEP.getJCOInstance());
+            return (int)retObjectSendTo;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSendTo_ToString = retObjectSendTo == null ? "null" : retObjectSendTo.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectSendToNumber = (java.lang.Number)retObjectSendTo;
+                return retObjectSendToNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectSendTo != null ? retObjectSendTo.getClass() : "null", retObjectSendTo_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -733,9 +1192,20 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public int SendTo(JCORefOut dupParam0, int dupParam1, SocketFlags dupParam2, EndPoint dupParam3) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.net.sockets.SocketException, system.OutOfMemoryException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSendTo = null;
         try {
-            return (int)classInstance.Invoke("SendTo", dupParam0.getJCRefOut(), dupParam1, dupParam2 == null ? null : dupParam2.getJCOInstance(), dupParam3 == null ? null : dupParam3.getJCOInstance());
+            retObjectSendTo = classInstance.Invoke("SendTo", dupParam0.getJCRefOut(), dupParam1, dupParam2 == null ? null : dupParam2.getJCOInstance(), dupParam3 == null ? null : dupParam3.getJCOInstance());
+            return (int)retObjectSendTo;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSendTo_ToString = retObjectSendTo == null ? "null" : retObjectSendTo.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectSendToNumber = (java.lang.Number)retObjectSendTo;
+                return retObjectSendToNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectSendTo != null ? retObjectSendTo.getClass() : "null", retObjectSendTo_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -743,9 +1213,20 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public int SendTo(byte[] buffer, EndPoint remoteEP) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.net.sockets.SocketException, system.OutOfMemoryException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSendTo = null;
         try {
-            return (int)classInstance.Invoke("SendTo", buffer, remoteEP == null ? null : remoteEP.getJCOInstance());
+            retObjectSendTo = classInstance.Invoke("SendTo", buffer, remoteEP == null ? null : remoteEP.getJCOInstance());
+            return (int)retObjectSendTo;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSendTo_ToString = retObjectSendTo == null ? "null" : retObjectSendTo.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectSendToNumber = (java.lang.Number)retObjectSendTo;
+                return retObjectSendToNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectSendTo != null ? retObjectSendTo.getClass() : "null", retObjectSendTo_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -753,9 +1234,20 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public int SendTo(JCORefOut dupParam0, EndPoint dupParam1) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.net.sockets.SocketException, system.OutOfMemoryException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSendTo = null;
         try {
-            return (int)classInstance.Invoke("SendTo", dupParam0.getJCRefOut(), dupParam1 == null ? null : dupParam1.getJCOInstance());
+            retObjectSendTo = classInstance.Invoke("SendTo", dupParam0.getJCRefOut(), dupParam1 == null ? null : dupParam1.getJCOInstance());
+            return (int)retObjectSendTo;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSendTo_ToString = retObjectSendTo == null ? "null" : retObjectSendTo.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectSendToNumber = (java.lang.Number)retObjectSendTo;
+                return retObjectSendToNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectSendTo != null ? retObjectSendTo.getClass() : "null", retObjectSendTo_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -763,9 +1255,20 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public int SendTo(byte[] buffer, SocketFlags socketFlags, EndPoint remoteEP) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.net.sockets.SocketException, system.OutOfMemoryException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSendTo = null;
         try {
-            return (int)classInstance.Invoke("SendTo", buffer, socketFlags == null ? null : socketFlags.getJCOInstance(), remoteEP == null ? null : remoteEP.getJCOInstance());
+            retObjectSendTo = classInstance.Invoke("SendTo", buffer, socketFlags == null ? null : socketFlags.getJCOInstance(), remoteEP == null ? null : remoteEP.getJCOInstance());
+            return (int)retObjectSendTo;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSendTo_ToString = retObjectSendTo == null ? "null" : retObjectSendTo.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectSendToNumber = (java.lang.Number)retObjectSendTo;
+                return retObjectSendToNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectSendTo != null ? retObjectSendTo.getClass() : "null", retObjectSendTo_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -773,9 +1276,20 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public int SendTo(JCORefOut dupParam0, SocketFlags dupParam1, EndPoint dupParam2) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.net.sockets.SocketException, system.OutOfMemoryException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSendTo = null;
         try {
-            return (int)classInstance.Invoke("SendTo", dupParam0.getJCRefOut(), dupParam1 == null ? null : dupParam1.getJCOInstance(), dupParam2 == null ? null : dupParam2.getJCOInstance());
+            retObjectSendTo = classInstance.Invoke("SendTo", dupParam0.getJCRefOut(), dupParam1 == null ? null : dupParam1.getJCOInstance(), dupParam2 == null ? null : dupParam2.getJCOInstance());
+            return (int)retObjectSendTo;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSendTo_ToString = retObjectSendTo == null ? "null" : retObjectSendTo.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectSendToNumber = (java.lang.Number)retObjectSendTo;
+                return retObjectSendToNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectSendTo != null ? retObjectSendTo.getClass() : "null", retObjectSendTo_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -783,10 +1297,14 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public IAsyncResult BeginAccept(int receiveSize, AsyncCallback callback, NetObject state) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.diagnostics.tracing.EventSourceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginAccept = null;
         try {
-            JCObject objBeginAccept = (JCObject)classInstance.Invoke("BeginAccept", receiveSize, callback, state == null ? null : state.getJCOInstance());
+            retObjectBeginAccept = classInstance.Invoke("BeginAccept", receiveSize, callback, state == null ? null : state.getJCOInstance());
+            JCObject objBeginAccept = (JCObject)retObjectBeginAccept;
             return new IAsyncResultImplementation(objBeginAccept);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginAccept != null ? retObjectBeginAccept.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -794,10 +1312,14 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public IAsyncResult BeginAccept(AsyncCallback callback, NetObject state) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.ArgumentException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.net.sockets.SocketException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginAccept = null;
         try {
-            JCObject objBeginAccept = (JCObject)classInstance.Invoke("BeginAccept", callback, state == null ? null : state.getJCOInstance());
+            retObjectBeginAccept = classInstance.Invoke("BeginAccept", callback, state == null ? null : state.getJCOInstance());
+            JCObject objBeginAccept = (JCObject)retObjectBeginAccept;
             return new IAsyncResultImplementation(objBeginAccept);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginAccept != null ? retObjectBeginAccept.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -805,10 +1327,14 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public IAsyncResult BeginAccept(Socket acceptSocket, int receiveSize, AsyncCallback callback, NetObject state) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.diagnostics.tracing.EventSourceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginAccept = null;
         try {
-            JCObject objBeginAccept = (JCObject)classInstance.Invoke("BeginAccept", acceptSocket == null ? null : acceptSocket.getJCOInstance(), receiveSize, callback, state == null ? null : state.getJCOInstance());
+            retObjectBeginAccept = classInstance.Invoke("BeginAccept", acceptSocket == null ? null : acceptSocket.getJCOInstance(), receiveSize, callback, state == null ? null : state.getJCOInstance());
+            JCObject objBeginAccept = (JCObject)retObjectBeginAccept;
             return new IAsyncResultImplementation(objBeginAccept);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginAccept != null ? retObjectBeginAccept.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -816,10 +1342,14 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public IAsyncResult BeginConnect(EndPoint remoteEP, AsyncCallback callback, NetObject state) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.ArgumentException, system.InvalidOperationException, system.net.sockets.SocketException, system.NotSupportedException, system.FormatException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginConnect = null;
         try {
-            JCObject objBeginConnect = (JCObject)classInstance.Invoke("BeginConnect", remoteEP == null ? null : remoteEP.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            retObjectBeginConnect = classInstance.Invoke("BeginConnect", remoteEP == null ? null : remoteEP.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            JCObject objBeginConnect = (JCObject)retObjectBeginConnect;
             return new IAsyncResultImplementation(objBeginConnect);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginConnect != null ? retObjectBeginConnect.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -827,10 +1357,14 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public IAsyncResult BeginConnect(IPAddress address, int port, AsyncCallback requestCallback, NetObject state) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.net.sockets.SocketException, system.diagnostics.tracing.EventSourceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginConnect = null;
         try {
-            JCObject objBeginConnect = (JCObject)classInstance.Invoke("BeginConnect", address == null ? null : address.getJCOInstance(), port, requestCallback, state == null ? null : state.getJCOInstance());
+            retObjectBeginConnect = classInstance.Invoke("BeginConnect", address == null ? null : address.getJCOInstance(), port, requestCallback, state == null ? null : state.getJCOInstance());
+            JCObject objBeginConnect = (JCObject)retObjectBeginConnect;
             return new IAsyncResultImplementation(objBeginConnect);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginConnect != null ? retObjectBeginConnect.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -838,10 +1372,14 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public IAsyncResult BeginConnect(IPAddress[] addresses, int port, AsyncCallback requestCallback, NetObject state) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.net.sockets.SocketException, system.diagnostics.tracing.EventSourceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginConnect = null;
         try {
-            JCObject objBeginConnect = (JCObject)classInstance.Invoke("BeginConnect", toObjectFromArray(addresses), port, requestCallback, state == null ? null : state.getJCOInstance());
+            retObjectBeginConnect = classInstance.Invoke("BeginConnect", toObjectFromArray(addresses), port, requestCallback, state == null ? null : state.getJCOInstance());
+            JCObject objBeginConnect = (JCObject)retObjectBeginConnect;
             return new IAsyncResultImplementation(objBeginConnect);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginConnect != null ? retObjectBeginConnect.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -849,10 +1387,14 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public IAsyncResult BeginConnect(java.lang.String host, int port, AsyncCallback requestCallback, NetObject state) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.ObjectDisposedException, system.net.sockets.SocketException, system.diagnostics.tracing.EventSourceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginConnect = null;
         try {
-            JCObject objBeginConnect = (JCObject)classInstance.Invoke("BeginConnect", host, port, requestCallback, state == null ? null : state.getJCOInstance());
+            retObjectBeginConnect = classInstance.Invoke("BeginConnect", host, port, requestCallback, state == null ? null : state.getJCOInstance());
+            JCObject objBeginConnect = (JCObject)retObjectBeginConnect;
             return new IAsyncResultImplementation(objBeginConnect);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginConnect != null ? retObjectBeginConnect.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -860,10 +1402,14 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public IAsyncResult BeginDisconnect(boolean reuseSocket, AsyncCallback callback, NetObject state) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.ObjectDisposedException, system.net.sockets.SocketException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginDisconnect = null;
         try {
-            JCObject objBeginDisconnect = (JCObject)classInstance.Invoke("BeginDisconnect", reuseSocket, callback, state == null ? null : state.getJCOInstance());
+            retObjectBeginDisconnect = classInstance.Invoke("BeginDisconnect", reuseSocket, callback, state == null ? null : state.getJCOInstance());
+            JCObject objBeginDisconnect = (JCObject)retObjectBeginDisconnect;
             return new IAsyncResultImplementation(objBeginDisconnect);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginDisconnect != null ? retObjectBeginDisconnect.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -871,10 +1417,14 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public IAsyncResult BeginReceive(byte[] buffer, int offset, int size, SocketFlags socketFlags, AsyncCallback callback, NetObject state) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.ArrayTypeMismatchException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginReceive = null;
         try {
-            JCObject objBeginReceive = (JCObject)classInstance.Invoke("BeginReceive", buffer, offset, size, socketFlags == null ? null : socketFlags.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            retObjectBeginReceive = classInstance.Invoke("BeginReceive", buffer, offset, size, socketFlags == null ? null : socketFlags.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            JCObject objBeginReceive = (JCObject)retObjectBeginReceive;
             return new IAsyncResultImplementation(objBeginReceive);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginReceive != null ? retObjectBeginReceive.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -882,10 +1432,14 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public IAsyncResult BeginReceive(JCORefOut dupParam0, int dupParam1, int dupParam2, SocketFlags dupParam3, AsyncCallback dupParam4, NetObject dupParam5) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.ArrayTypeMismatchException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginReceive = null;
         try {
-            JCObject objBeginReceive = (JCObject)classInstance.Invoke("BeginReceive", dupParam0.getJCRefOut(), dupParam1, dupParam2, dupParam3 == null ? null : dupParam3.getJCOInstance(), dupParam4, dupParam5 == null ? null : dupParam5.getJCOInstance());
+            retObjectBeginReceive = classInstance.Invoke("BeginReceive", dupParam0.getJCRefOut(), dupParam1, dupParam2, dupParam3 == null ? null : dupParam3.getJCOInstance(), dupParam4, dupParam5 == null ? null : dupParam5.getJCOInstance());
+            JCObject objBeginReceive = (JCObject)retObjectBeginReceive;
             return new IAsyncResultImplementation(objBeginReceive);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginReceive != null ? retObjectBeginReceive.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -893,10 +1447,14 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public IAsyncResult BeginReceive(byte[] buffer, int offset, int size, SocketFlags socketFlags, JCORefOut<SocketError> errorCode, AsyncCallback callback, NetObject state) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.ArrayTypeMismatchException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginReceive = null;
         try {
-            JCObject objBeginReceive = (JCObject)classInstance.Invoke("BeginReceive", buffer, offset, size, socketFlags == null ? null : socketFlags.getJCOInstance(), errorCode.getJCRefOut(), callback, state == null ? null : state.getJCOInstance());
+            retObjectBeginReceive = classInstance.Invoke("BeginReceive", buffer, offset, size, socketFlags == null ? null : socketFlags.getJCOInstance(), errorCode.getJCRefOut(), callback, state == null ? null : state.getJCOInstance());
+            JCObject objBeginReceive = (JCObject)retObjectBeginReceive;
             return new IAsyncResultImplementation(objBeginReceive);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginReceive != null ? retObjectBeginReceive.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -904,10 +1462,14 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public IAsyncResult BeginReceiveFrom(byte[] buffer, int offset, int size, SocketFlags socketFlags, JCORefOut<EndPoint> remoteEP, AsyncCallback callback, NetObject state) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.net.sockets.SocketException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException, system.threading.tasks.TaskSchedulerException, system.OperationCanceledException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginReceiveFrom = null;
         try {
-            JCObject objBeginReceiveFrom = (JCObject)classInstance.Invoke("BeginReceiveFrom", buffer, offset, size, socketFlags == null ? null : socketFlags.getJCOInstance(), remoteEP.getJCRefOut(), callback, state == null ? null : state.getJCOInstance());
+            retObjectBeginReceiveFrom = classInstance.Invoke("BeginReceiveFrom", buffer, offset, size, socketFlags == null ? null : socketFlags.getJCOInstance(), remoteEP.getJCRefOut(), callback, state == null ? null : state.getJCOInstance());
+            JCObject objBeginReceiveFrom = (JCObject)retObjectBeginReceiveFrom;
             return new IAsyncResultImplementation(objBeginReceiveFrom);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginReceiveFrom != null ? retObjectBeginReceiveFrom.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -915,10 +1477,14 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public IAsyncResult BeginReceiveMessageFrom(byte[] buffer, int offset, int size, SocketFlags socketFlags, JCORefOut<EndPoint> remoteEP, AsyncCallback callback, NetObject state) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.ObjectDisposedException, system.net.sockets.SocketException, system.ArrayTypeMismatchException, system.threading.tasks.TaskSchedulerException, system.OperationCanceledException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginReceiveMessageFrom = null;
         try {
-            JCObject objBeginReceiveMessageFrom = (JCObject)classInstance.Invoke("BeginReceiveMessageFrom", buffer, offset, size, socketFlags == null ? null : socketFlags.getJCOInstance(), remoteEP.getJCRefOut(), callback, state == null ? null : state.getJCOInstance());
+            retObjectBeginReceiveMessageFrom = classInstance.Invoke("BeginReceiveMessageFrom", buffer, offset, size, socketFlags == null ? null : socketFlags.getJCOInstance(), remoteEP.getJCRefOut(), callback, state == null ? null : state.getJCOInstance());
+            JCObject objBeginReceiveMessageFrom = (JCObject)retObjectBeginReceiveMessageFrom;
             return new IAsyncResultImplementation(objBeginReceiveMessageFrom);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginReceiveMessageFrom != null ? retObjectBeginReceiveMessageFrom.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -926,10 +1492,14 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public IAsyncResult BeginSend(byte[] buffer, int offset, int size, SocketFlags socketFlags, AsyncCallback callback, NetObject state) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.OutOfMemoryException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginSend = null;
         try {
-            JCObject objBeginSend = (JCObject)classInstance.Invoke("BeginSend", buffer, offset, size, socketFlags == null ? null : socketFlags.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            retObjectBeginSend = classInstance.Invoke("BeginSend", buffer, offset, size, socketFlags == null ? null : socketFlags.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            JCObject objBeginSend = (JCObject)retObjectBeginSend;
             return new IAsyncResultImplementation(objBeginSend);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginSend != null ? retObjectBeginSend.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -937,10 +1507,14 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public IAsyncResult BeginSend(JCORefOut dupParam0, int dupParam1, int dupParam2, SocketFlags dupParam3, AsyncCallback dupParam4, NetObject dupParam5) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.OutOfMemoryException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginSend = null;
         try {
-            JCObject objBeginSend = (JCObject)classInstance.Invoke("BeginSend", dupParam0.getJCRefOut(), dupParam1, dupParam2, dupParam3 == null ? null : dupParam3.getJCOInstance(), dupParam4, dupParam5 == null ? null : dupParam5.getJCOInstance());
+            retObjectBeginSend = classInstance.Invoke("BeginSend", dupParam0.getJCRefOut(), dupParam1, dupParam2, dupParam3 == null ? null : dupParam3.getJCOInstance(), dupParam4, dupParam5 == null ? null : dupParam5.getJCOInstance());
+            JCObject objBeginSend = (JCObject)retObjectBeginSend;
             return new IAsyncResultImplementation(objBeginSend);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginSend != null ? retObjectBeginSend.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -948,10 +1522,14 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public IAsyncResult BeginSend(byte[] buffer, int offset, int size, SocketFlags socketFlags, JCORefOut<SocketError> errorCode, AsyncCallback callback, NetObject state) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.OutOfMemoryException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginSend = null;
         try {
-            JCObject objBeginSend = (JCObject)classInstance.Invoke("BeginSend", buffer, offset, size, socketFlags == null ? null : socketFlags.getJCOInstance(), errorCode.getJCRefOut(), callback, state == null ? null : state.getJCOInstance());
+            retObjectBeginSend = classInstance.Invoke("BeginSend", buffer, offset, size, socketFlags == null ? null : socketFlags.getJCOInstance(), errorCode.getJCRefOut(), callback, state == null ? null : state.getJCOInstance());
+            JCObject objBeginSend = (JCObject)retObjectBeginSend;
             return new IAsyncResultImplementation(objBeginSend);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginSend != null ? retObjectBeginSend.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -959,10 +1537,14 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public IAsyncResult BeginSendFile(java.lang.String fileName, byte[] preBuffer, byte[] postBuffer, TransmitFileOptions flags, AsyncCallback callback, NetObject state) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.ArgumentNullException, system.diagnostics.tracing.EventSourceException, system.net.sockets.SocketException, system.ArrayTypeMismatchException, system.runtime.serialization.SerializationException, system.io.IOException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginSendFile = null;
         try {
-            JCObject objBeginSendFile = (JCObject)classInstance.Invoke("BeginSendFile", fileName, preBuffer, postBuffer, flags == null ? null : flags.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            retObjectBeginSendFile = classInstance.Invoke("BeginSendFile", fileName, preBuffer, postBuffer, flags == null ? null : flags.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            JCObject objBeginSendFile = (JCObject)retObjectBeginSendFile;
             return new IAsyncResultImplementation(objBeginSendFile);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginSendFile != null ? retObjectBeginSendFile.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -970,10 +1552,14 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public IAsyncResult BeginSendFile(java.lang.String dupParam0, JCORefOut dupParam1, JCORefOut dupParam2, TransmitFileOptions dupParam3, AsyncCallback dupParam4, NetObject dupParam5) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.ArgumentNullException, system.diagnostics.tracing.EventSourceException, system.net.sockets.SocketException, system.ArrayTypeMismatchException, system.runtime.serialization.SerializationException, system.io.IOException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginSendFile = null;
         try {
-            JCObject objBeginSendFile = (JCObject)classInstance.Invoke("BeginSendFile", dupParam0, dupParam1.getJCRefOut(), dupParam2.getJCRefOut(), dupParam3 == null ? null : dupParam3.getJCOInstance(), dupParam4, dupParam5 == null ? null : dupParam5.getJCOInstance());
+            retObjectBeginSendFile = classInstance.Invoke("BeginSendFile", dupParam0, dupParam1.getJCRefOut(), dupParam2.getJCRefOut(), dupParam3 == null ? null : dupParam3.getJCOInstance(), dupParam4, dupParam5 == null ? null : dupParam5.getJCOInstance());
+            JCObject objBeginSendFile = (JCObject)retObjectBeginSendFile;
             return new IAsyncResultImplementation(objBeginSendFile);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginSendFile != null ? retObjectBeginSendFile.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -981,10 +1567,14 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public IAsyncResult BeginSendFile(java.lang.String fileName, AsyncCallback callback, NetObject state) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.InvalidOperationException, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.diagnostics.tracing.EventSourceException, system.net.sockets.SocketException, system.ArrayTypeMismatchException, system.runtime.serialization.SerializationException, system.io.IOException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginSendFile = null;
         try {
-            JCObject objBeginSendFile = (JCObject)classInstance.Invoke("BeginSendFile", fileName, callback, state == null ? null : state.getJCOInstance());
+            retObjectBeginSendFile = classInstance.Invoke("BeginSendFile", fileName, callback, state == null ? null : state.getJCOInstance());
+            JCObject objBeginSendFile = (JCObject)retObjectBeginSendFile;
             return new IAsyncResultImplementation(objBeginSendFile);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginSendFile != null ? retObjectBeginSendFile.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -992,10 +1582,14 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public IAsyncResult BeginSendTo(byte[] buffer, int offset, int size, SocketFlags socketFlags, EndPoint remoteEP, AsyncCallback callback, NetObject state) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.net.sockets.SocketException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginSendTo = null;
         try {
-            JCObject objBeginSendTo = (JCObject)classInstance.Invoke("BeginSendTo", buffer, offset, size, socketFlags == null ? null : socketFlags.getJCOInstance(), remoteEP == null ? null : remoteEP.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            retObjectBeginSendTo = classInstance.Invoke("BeginSendTo", buffer, offset, size, socketFlags == null ? null : socketFlags.getJCOInstance(), remoteEP == null ? null : remoteEP.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            JCObject objBeginSendTo = (JCObject)retObjectBeginSendTo;
             return new IAsyncResultImplementation(objBeginSendTo);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginSendTo != null ? retObjectBeginSendTo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1003,10 +1597,14 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public IAsyncResult BeginSendTo(JCORefOut dupParam0, int dupParam1, int dupParam2, SocketFlags dupParam3, EndPoint dupParam4, AsyncCallback dupParam5, NetObject dupParam6) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.net.sockets.SocketException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginSendTo = null;
         try {
-            JCObject objBeginSendTo = (JCObject)classInstance.Invoke("BeginSendTo", dupParam0.getJCRefOut(), dupParam1, dupParam2, dupParam3 == null ? null : dupParam3.getJCOInstance(), dupParam4 == null ? null : dupParam4.getJCOInstance(), dupParam5, dupParam6 == null ? null : dupParam6.getJCOInstance());
+            retObjectBeginSendTo = classInstance.Invoke("BeginSendTo", dupParam0.getJCRefOut(), dupParam1, dupParam2, dupParam3 == null ? null : dupParam3.getJCOInstance(), dupParam4 == null ? null : dupParam4.getJCOInstance(), dupParam5, dupParam6 == null ? null : dupParam6.getJCOInstance());
+            JCObject objBeginSendTo = (JCObject)retObjectBeginSendTo;
             return new IAsyncResultImplementation(objBeginSendTo);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginSendTo != null ? retObjectBeginSendTo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1014,10 +1612,14 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public Socket Accept() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.net.sockets.SocketException, system.OutOfMemoryException, system.PlatformNotSupportedException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.ArgumentNullException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAccept = null;
         try {
-            JCObject objAccept = (JCObject)classInstance.Invoke("Accept");
+            retObjectAccept = classInstance.Invoke("Accept");
+            JCObject objAccept = (JCObject)retObjectAccept;
             return new Socket(objAccept);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAccept != null ? retObjectAccept.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1025,10 +1627,14 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public Socket EndAccept(JCORefOut buffer, JCORefOut<java.util.concurrent.atomic.AtomicInteger> bytesTransferred, IAsyncResult asyncResult) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.diagnostics.tracing.EventSourceException, system.InvalidOperationException, system.threading.tasks.TaskSchedulerException, system.threading.tasks.TaskCanceledException, system.AggregateException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEndAccept = null;
         try {
-            JCObject objEndAccept = (JCObject)classInstance.Invoke("EndAccept", buffer.getJCRefOut(), bytesTransferred.getJCRefOut(), asyncResult == null ? null : asyncResult.getJCOInstance());
+            retObjectEndAccept = classInstance.Invoke("EndAccept", buffer.getJCRefOut(), bytesTransferred.getJCRefOut(), asyncResult == null ? null : asyncResult.getJCOInstance());
+            JCObject objEndAccept = (JCObject)retObjectEndAccept;
             return new Socket(objEndAccept);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEndAccept != null ? retObjectEndAccept.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1036,10 +1642,14 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public Socket EndAccept(JCORefOut buffer, IAsyncResult asyncResult) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.threading.tasks.TaskSchedulerException, system.PlatformNotSupportedException, system.threading.tasks.TaskCanceledException, system.ArgumentOutOfRangeException, system.AggregateException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEndAccept = null;
         try {
-            JCObject objEndAccept = (JCObject)classInstance.Invoke("EndAccept", buffer.getJCRefOut(), asyncResult == null ? null : asyncResult.getJCOInstance());
+            retObjectEndAccept = classInstance.Invoke("EndAccept", buffer.getJCRefOut(), asyncResult == null ? null : asyncResult.getJCOInstance());
+            JCObject objEndAccept = (JCObject)retObjectEndAccept;
             return new Socket(objEndAccept);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEndAccept != null ? retObjectEndAccept.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1047,10 +1657,14 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public Socket EndAccept(IAsyncResult asyncResult) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.diagnostics.tracing.EventSourceException, system.InvalidOperationException, system.threading.tasks.TaskSchedulerException, system.threading.tasks.TaskCanceledException, system.AggregateException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEndAccept = null;
         try {
-            JCObject objEndAccept = (JCObject)classInstance.Invoke("EndAccept", asyncResult == null ? null : asyncResult.getJCOInstance());
+            retObjectEndAccept = classInstance.Invoke("EndAccept", asyncResult == null ? null : asyncResult.getJCOInstance());
+            JCObject objEndAccept = (JCObject)retObjectEndAccept;
             return new Socket(objEndAccept);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEndAccept != null ? retObjectEndAccept.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1058,10 +1672,14 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public SocketInformation DuplicateAndClose(int targetProcessId) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.net.sockets.SocketException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.ArgumentNullException, system.diagnostics.tracing.EventSourceException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDuplicateAndClose = null;
         try {
-            JCObject objDuplicateAndClose = (JCObject)classInstance.Invoke("DuplicateAndClose", targetProcessId);
+            retObjectDuplicateAndClose = classInstance.Invoke("DuplicateAndClose", targetProcessId);
+            JCObject objDuplicateAndClose = (JCObject)retObjectDuplicateAndClose;
             return new SocketInformation(objDuplicateAndClose);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDuplicateAndClose != null ? retObjectDuplicateAndClose.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1069,10 +1687,14 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public NetObject GetSocketOption(SocketOptionLevel optionLevel, SocketOptionName optionName) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.ArgumentNullException, system.diagnostics.tracing.EventSourceException, system.net.sockets.SocketException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSocketOption = null;
         try {
-            JCObject objGetSocketOption = (JCObject)classInstance.Invoke("GetSocketOption", optionLevel == null ? null : optionLevel.getJCOInstance(), optionName == null ? null : optionName.getJCOInstance());
+            retObjectGetSocketOption = classInstance.Invoke("GetSocketOption", optionLevel == null ? null : optionLevel.getJCOInstance(), optionName == null ? null : optionName.getJCOInstance());
+            JCObject objGetSocketOption = (JCObject)retObjectGetSocketOption;
             return new NetObject(objGetSocketOption);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSocketOption != null ? retObjectGetSocketOption.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1080,10 +1702,14 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public Task ConnectAsync(EndPoint remoteEP) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.ObjectDisposedException, system.net.sockets.SocketException, system.FormatException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConnectAsync = null;
         try {
-            JCObject objConnectAsync = (JCObject)classInstance.Invoke("ConnectAsync", remoteEP == null ? null : remoteEP.getJCOInstance());
+            retObjectConnectAsync = classInstance.Invoke("ConnectAsync", remoteEP == null ? null : remoteEP.getJCOInstance());
+            JCObject objConnectAsync = (JCObject)retObjectConnectAsync;
             return new Task(objConnectAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConnectAsync != null ? retObjectConnectAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1091,10 +1717,14 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public Task ConnectAsync(IPAddress address, int port) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.net.sockets.SocketException, system.FormatException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConnectAsync = null;
         try {
-            JCObject objConnectAsync = (JCObject)classInstance.Invoke("ConnectAsync", address == null ? null : address.getJCOInstance(), port);
+            retObjectConnectAsync = classInstance.Invoke("ConnectAsync", address == null ? null : address.getJCOInstance(), port);
+            JCObject objConnectAsync = (JCObject)retObjectConnectAsync;
             return new Task(objConnectAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConnectAsync != null ? retObjectConnectAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1102,10 +1732,14 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public Task ConnectAsync(IPAddress[] addresses, int port) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.net.sockets.SocketException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConnectAsync = null;
         try {
-            JCObject objConnectAsync = (JCObject)classInstance.Invoke("ConnectAsync", toObjectFromArray(addresses), port);
+            retObjectConnectAsync = classInstance.Invoke("ConnectAsync", toObjectFromArray(addresses), port);
+            JCObject objConnectAsync = (JCObject)retObjectConnectAsync;
             return new Task(objConnectAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConnectAsync != null ? retObjectConnectAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1113,10 +1747,14 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public Task ConnectAsync(java.lang.String host, int port) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.ObjectDisposedException, system.net.sockets.SocketException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConnectAsync = null;
         try {
-            JCObject objConnectAsync = (JCObject)classInstance.Invoke("ConnectAsync", host, port);
+            retObjectConnectAsync = classInstance.Invoke("ConnectAsync", host, port);
+            JCObject objConnectAsync = (JCObject)retObjectConnectAsync;
             return new Task(objConnectAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConnectAsync != null ? retObjectConnectAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1124,10 +1762,14 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public ValueTask ConnectAsync(EndPoint remoteEP, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.ObjectDisposedException, system.net.sockets.SocketException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConnectAsync = null;
         try {
-            JCObject objConnectAsync = (JCObject)classInstance.Invoke("ConnectAsync", remoteEP == null ? null : remoteEP.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            retObjectConnectAsync = classInstance.Invoke("ConnectAsync", remoteEP == null ? null : remoteEP.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objConnectAsync = (JCObject)retObjectConnectAsync;
             return new ValueTask(objConnectAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConnectAsync != null ? retObjectConnectAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1135,10 +1777,14 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public ValueTask ConnectAsync(IPAddress address, int port, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.ObjectDisposedException, system.net.sockets.SocketException, system.FormatException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConnectAsync = null;
         try {
-            JCObject objConnectAsync = (JCObject)classInstance.Invoke("ConnectAsync", address == null ? null : address.getJCOInstance(), port, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            retObjectConnectAsync = classInstance.Invoke("ConnectAsync", address == null ? null : address.getJCOInstance(), port, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objConnectAsync = (JCObject)retObjectConnectAsync;
             return new ValueTask(objConnectAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConnectAsync != null ? retObjectConnectAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1146,10 +1792,14 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public ValueTask ConnectAsync(IPAddress[] addresses, int port, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.net.sockets.SocketException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConnectAsync = null;
         try {
-            JCObject objConnectAsync = (JCObject)classInstance.Invoke("ConnectAsync", toObjectFromArray(addresses), port, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            retObjectConnectAsync = classInstance.Invoke("ConnectAsync", toObjectFromArray(addresses), port, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objConnectAsync = (JCObject)retObjectConnectAsync;
             return new ValueTask(objConnectAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConnectAsync != null ? retObjectConnectAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1157,10 +1807,14 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public ValueTask ConnectAsync(java.lang.String host, int port, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.net.sockets.SocketException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConnectAsync = null;
         try {
-            JCObject objConnectAsync = (JCObject)classInstance.Invoke("ConnectAsync", host, port, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            retObjectConnectAsync = classInstance.Invoke("ConnectAsync", host, port, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objConnectAsync = (JCObject)retObjectConnectAsync;
             return new ValueTask(objConnectAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConnectAsync != null ? retObjectConnectAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1168,10 +1822,14 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public ValueTask DisconnectAsync(boolean reuseSocket, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.ObjectDisposedException, system.OverflowException, system.net.sockets.SocketException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDisconnectAsync = null;
         try {
-            JCObject objDisconnectAsync = (JCObject)classInstance.Invoke("DisconnectAsync", reuseSocket, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            retObjectDisconnectAsync = classInstance.Invoke("DisconnectAsync", reuseSocket, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objDisconnectAsync = (JCObject)retObjectDisconnectAsync;
             return new ValueTask(objDisconnectAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDisconnectAsync != null ? retObjectDisconnectAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1179,10 +1837,14 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public ValueTask SendFileAsync(java.lang.String fileName, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.ObjectDisposedException, system.net.sockets.SocketException, system.ArrayTypeMismatchException, system.runtime.serialization.SerializationException, system.io.IOException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSendFileAsync = null;
         try {
-            JCObject objSendFileAsync = (JCObject)classInstance.Invoke("SendFileAsync", fileName, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            retObjectSendFileAsync = classInstance.Invoke("SendFileAsync", fileName, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objSendFileAsync = (JCObject)retObjectSendFileAsync;
             return new ValueTask(objSendFileAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSendFileAsync != null ? retObjectSendFileAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1190,7 +1852,7 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public void Bind(EndPoint localEP) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.ObjectDisposedException, system.ArgumentNullException, system.net.sockets.SocketException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Bind", localEP == null ? null : localEP.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1200,7 +1862,7 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public static void CancelConnectAsync(SocketAsyncEventArgs e) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.AggregateException, system.IndexOutOfRangeException, system.FormatException, system.diagnostics.tracing.EventSourceException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("CancelConnectAsync", e == null ? null : e.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1210,7 +1872,7 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public void Close() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.ObjectDisposedException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Close");
         } catch (JCNativeException jcne) {
@@ -1220,7 +1882,7 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public void Close(int timeout) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Close", timeout);
         } catch (JCNativeException jcne) {
@@ -1230,7 +1892,7 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public void Connect(EndPoint remoteEP) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.net.sockets.SocketException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.FormatException, system.ArgumentNullException, system.diagnostics.tracing.EventSourceException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Connect", remoteEP == null ? null : remoteEP.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1240,7 +1902,7 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public void Connect(IPAddress address, int port) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.net.sockets.SocketException, system.PlatformNotSupportedException, system.ArgumentNullException, system.FormatException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Connect", address == null ? null : address.getJCOInstance(), port);
         } catch (JCNativeException jcne) {
@@ -1250,7 +1912,7 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public void Connect(IPAddress[] addresses, int port) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.net.sockets.SocketException, system.PlatformNotSupportedException, system.ArgumentNullException, system.FormatException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Connect", toObjectFromArray(addresses), port);
         } catch (JCNativeException jcne) {
@@ -1260,7 +1922,7 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public void Connect(java.lang.String host, int port) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.net.sockets.SocketException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Connect", host, port);
         } catch (JCNativeException jcne) {
@@ -1270,7 +1932,7 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public void Disconnect(boolean reuseSocket) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.OverflowException, system.FormatException, system.PlatformNotSupportedException, system.net.sockets.SocketException, system.OutOfMemoryException, system.ArgumentNullException, system.diagnostics.tracing.EventSourceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Disconnect", reuseSocket);
         } catch (JCNativeException jcne) {
@@ -1280,7 +1942,7 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public void Dispose() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.ObjectDisposedException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
@@ -1290,7 +1952,7 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public void EndConnect(IAsyncResult asyncResult) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.diagnostics.tracing.EventSourceException, system.InvalidOperationException, system.threading.tasks.TaskSchedulerException, system.threading.tasks.TaskCanceledException, system.AggregateException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EndConnect", asyncResult == null ? null : asyncResult.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1300,7 +1962,7 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public void EndDisconnect(IAsyncResult asyncResult) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.diagnostics.tracing.EventSourceException, system.InvalidOperationException, system.threading.tasks.TaskSchedulerException, system.threading.tasks.TaskCanceledException, system.AggregateException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EndDisconnect", asyncResult == null ? null : asyncResult.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1310,7 +1972,7 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public void EndSendFile(IAsyncResult asyncResult) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.diagnostics.tracing.EventSourceException, system.InvalidOperationException, system.threading.tasks.TaskSchedulerException, system.threading.tasks.TaskCanceledException, system.AggregateException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EndSendFile", asyncResult == null ? null : asyncResult.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1320,7 +1982,7 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public void GetSocketOption(SocketOptionLevel optionLevel, SocketOptionName optionName, byte[] optionValue) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.net.sockets.SocketException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetSocketOption", optionLevel == null ? null : optionLevel.getJCOInstance(), optionName == null ? null : optionName.getJCOInstance(), optionValue);
         } catch (JCNativeException jcne) {
@@ -1330,7 +1992,7 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public void GetSocketOption(SocketOptionLevel dupParam0, SocketOptionName dupParam1, JCORefOut dupParam2) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.net.sockets.SocketException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetSocketOption", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1 == null ? null : dupParam1.getJCOInstance(), dupParam2.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -1340,7 +2002,7 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public void Listen() throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.InvalidOperationException, system.ArgumentException, system.ArrayTypeMismatchException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Listen");
         } catch (JCNativeException jcne) {
@@ -1350,7 +2012,7 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public void Listen(int backlog) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.ObjectDisposedException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Listen", backlog);
         } catch (JCNativeException jcne) {
@@ -1360,7 +2022,7 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public static void Select(IList checkRead, IList checkWrite, IList checkError, int microSeconds) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.NotSupportedException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.net.sockets.SocketException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Select", checkRead == null ? null : checkRead.getJCOInstance(), checkWrite == null ? null : checkWrite.getJCOInstance(), checkError == null ? null : checkError.getJCOInstance(), microSeconds);
         } catch (JCNativeException jcne) {
@@ -1370,7 +2032,7 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public static void Select(IList checkRead, IList checkWrite, IList checkError, TimeSpan timeout) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.ArgumentNullException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException, system.net.sockets.SocketException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Select", checkRead == null ? null : checkRead.getJCOInstance(), checkWrite == null ? null : checkWrite.getJCOInstance(), checkError == null ? null : checkError.getJCOInstance(), timeout == null ? null : timeout.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1380,7 +2042,7 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public void SendFile(java.lang.String fileName, byte[] preBuffer, byte[] postBuffer, TransmitFileOptions flags) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.ArgumentNullException, system.diagnostics.tracing.EventSourceException, system.net.sockets.SocketException, system.runtime.serialization.SerializationException, system.io.IOException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SendFile", fileName, preBuffer, postBuffer, flags == null ? null : flags.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1390,7 +2052,7 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public void SendFile(java.lang.String dupParam0, JCORefOut dupParam1, JCORefOut dupParam2, TransmitFileOptions dupParam3) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.ArgumentNullException, system.diagnostics.tracing.EventSourceException, system.net.sockets.SocketException, system.runtime.serialization.SerializationException, system.io.IOException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SendFile", dupParam0, dupParam1.getJCRefOut(), dupParam2.getJCRefOut(), dupParam3 == null ? null : dupParam3.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1400,7 +2062,7 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public void SendFile(java.lang.String fileName) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.InvalidOperationException, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.diagnostics.tracing.EventSourceException, system.net.sockets.SocketException, system.ArrayTypeMismatchException, system.runtime.serialization.SerializationException, system.io.IOException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SendFile", fileName);
         } catch (JCNativeException jcne) {
@@ -1410,7 +2072,7 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public void SetIPProtectionLevel(IPProtectionLevel level) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.ArrayTypeMismatchException, system.net.sockets.SocketException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetIPProtectionLevel", level == null ? null : level.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1420,7 +2082,7 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public void SetSocketOption(SocketOptionLevel optionLevel, SocketOptionName optionName, boolean optionValue) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.InvalidOperationException, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.diagnostics.tracing.EventSourceException, system.ArrayTypeMismatchException, system.net.sockets.SocketException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetSocketOption", optionLevel == null ? null : optionLevel.getJCOInstance(), optionName == null ? null : optionName.getJCOInstance(), optionValue);
         } catch (JCNativeException jcne) {
@@ -1430,7 +2092,7 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public void SetSocketOption(SocketOptionLevel optionLevel, SocketOptionName optionName, byte[] optionValue) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.FormatException, system.ArgumentNullException, system.diagnostics.tracing.EventSourceException, system.ArrayTypeMismatchException, system.net.sockets.SocketException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetSocketOption", optionLevel == null ? null : optionLevel.getJCOInstance(), optionName == null ? null : optionName.getJCOInstance(), optionValue);
         } catch (JCNativeException jcne) {
@@ -1440,7 +2102,7 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public void SetSocketOption(SocketOptionLevel dupParam0, SocketOptionName dupParam1, JCORefOut dupParam2) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.FormatException, system.ArgumentNullException, system.diagnostics.tracing.EventSourceException, system.ArrayTypeMismatchException, system.net.sockets.SocketException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetSocketOption", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1 == null ? null : dupParam1.getJCOInstance(), dupParam2.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -1450,7 +2112,7 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public void SetSocketOption(SocketOptionLevel optionLevel, SocketOptionName optionName, int optionValue) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.FormatException, system.ArgumentNullException, system.diagnostics.tracing.EventSourceException, system.ArrayTypeMismatchException, system.net.sockets.SocketException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetSocketOption", optionLevel == null ? null : optionLevel.getJCOInstance(), optionName == null ? null : optionName.getJCOInstance(), optionValue);
         } catch (JCNativeException jcne) {
@@ -1460,7 +2122,7 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public void SetSocketOption(SocketOptionLevel optionLevel, SocketOptionName optionName, NetObject optionValue) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.FormatException, system.ArgumentNullException, system.diagnostics.tracing.EventSourceException, system.net.sockets.SocketException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetSocketOption", optionLevel == null ? null : optionLevel.getJCOInstance(), optionName == null ? null : optionName.getJCOInstance(), optionValue == null ? null : optionValue.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1470,7 +2132,7 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public void Shutdown(SocketShutdown how) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.FormatException, system.ArgumentNullException, system.diagnostics.tracing.EventSourceException, system.net.sockets.SocketException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Shutdown", how == null ? null : how.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1481,7 +2143,7 @@ public class Socket extends NetObject implements AutoCloseable {
     public void close() throws Exception {
         try {
             if (classInstance == null)
-                throw new UnsupportedOperationException("classInstance is null.");
+                throw new java.lang.UnsupportedOperationException("classInstance is null.");
             try {
                 classInstance.Invoke("Dispose");
             }
@@ -1497,9 +2159,13 @@ public class Socket extends NetObject implements AutoCloseable {
     
     public boolean getBlocking() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBlocking = null;
         try {
-            return (boolean)classInstance.Get("Blocking");
+            retObjectBlocking = classInstance.Get("Blocking");
+            return (boolean)retObjectBlocking;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectBlocking != null ? retObjectBlocking.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1507,7 +2173,7 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public void setBlocking(boolean Blocking) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.FormatException, system.ArgumentNullException, system.diagnostics.tracing.EventSourceException, system.net.sockets.SocketException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Blocking", Blocking);
         } catch (JCNativeException jcne) {
@@ -1517,9 +2183,13 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public boolean getConnected() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.ObjectDisposedException, system.net.sockets.SocketException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConnected = null;
         try {
-            return (boolean)classInstance.Get("Connected");
+            retObjectConnected = classInstance.Get("Connected");
+            return (boolean)retObjectConnected;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectConnected != null ? retObjectConnected.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1527,9 +2197,13 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public boolean getDontFragment() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.InvalidOperationException, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.diagnostics.tracing.EventSourceException, system.net.sockets.SocketException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDontFragment = null;
         try {
-            return (boolean)classInstance.Get("DontFragment");
+            retObjectDontFragment = classInstance.Get("DontFragment");
+            return (boolean)retObjectDontFragment;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectDontFragment != null ? retObjectDontFragment.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1537,7 +2211,7 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public void setDontFragment(boolean DontFragment) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.InvalidOperationException, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.diagnostics.tracing.EventSourceException, system.ArrayTypeMismatchException, system.net.sockets.SocketException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DontFragment", DontFragment);
         } catch (JCNativeException jcne) {
@@ -1547,9 +2221,13 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public boolean getDualMode() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.InvalidOperationException, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.diagnostics.tracing.EventSourceException, system.net.sockets.SocketException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDualMode = null;
         try {
-            return (boolean)classInstance.Get("DualMode");
+            retObjectDualMode = classInstance.Get("DualMode");
+            return (boolean)retObjectDualMode;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectDualMode != null ? retObjectDualMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1557,7 +2235,7 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public void setDualMode(boolean DualMode) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.NotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.ArrayTypeMismatchException, system.net.sockets.SocketException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DualMode", DualMode);
         } catch (JCNativeException jcne) {
@@ -1567,9 +2245,13 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public boolean getEnableBroadcast() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.InvalidOperationException, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.diagnostics.tracing.EventSourceException, system.net.sockets.SocketException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEnableBroadcast = null;
         try {
-            return (boolean)classInstance.Get("EnableBroadcast");
+            retObjectEnableBroadcast = classInstance.Get("EnableBroadcast");
+            return (boolean)retObjectEnableBroadcast;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectEnableBroadcast != null ? retObjectEnableBroadcast.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1577,7 +2259,7 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public void setEnableBroadcast(boolean EnableBroadcast) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.InvalidOperationException, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.diagnostics.tracing.EventSourceException, system.ArrayTypeMismatchException, system.net.sockets.SocketException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EnableBroadcast", EnableBroadcast);
         } catch (JCNativeException jcne) {
@@ -1587,9 +2269,13 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public boolean getExclusiveAddressUse() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.InvalidOperationException, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.diagnostics.tracing.EventSourceException, system.net.sockets.SocketException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExclusiveAddressUse = null;
         try {
-            return (boolean)classInstance.Get("ExclusiveAddressUse");
+            retObjectExclusiveAddressUse = classInstance.Get("ExclusiveAddressUse");
+            return (boolean)retObjectExclusiveAddressUse;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectExclusiveAddressUse != null ? retObjectExclusiveAddressUse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1597,7 +2283,7 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public void setExclusiveAddressUse(boolean ExclusiveAddressUse) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.NotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.ArrayTypeMismatchException, system.net.sockets.SocketException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ExclusiveAddressUse", ExclusiveAddressUse);
         } catch (JCNativeException jcne) {
@@ -1607,9 +2293,13 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public boolean getIsBound() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsBound = null;
         try {
-            return (boolean)classInstance.Get("IsBound");
+            retObjectIsBound = classInstance.Get("IsBound");
+            return (boolean)retObjectIsBound;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsBound != null ? retObjectIsBound.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1617,9 +2307,13 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public boolean getMulticastLoopback() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.InvalidOperationException, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.diagnostics.tracing.EventSourceException, system.net.sockets.SocketException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMulticastLoopback = null;
         try {
-            return (boolean)classInstance.Get("MulticastLoopback");
+            retObjectMulticastLoopback = classInstance.Get("MulticastLoopback");
+            return (boolean)retObjectMulticastLoopback;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectMulticastLoopback != null ? retObjectMulticastLoopback.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1627,7 +2321,7 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public void setMulticastLoopback(boolean MulticastLoopback) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.InvalidOperationException, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.diagnostics.tracing.EventSourceException, system.ArrayTypeMismatchException, system.net.sockets.SocketException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MulticastLoopback", MulticastLoopback);
         } catch (JCNativeException jcne) {
@@ -1637,9 +2331,13 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public boolean getNoDelay() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.InvalidOperationException, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.diagnostics.tracing.EventSourceException, system.net.sockets.SocketException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNoDelay = null;
         try {
-            return (boolean)classInstance.Get("NoDelay");
+            retObjectNoDelay = classInstance.Get("NoDelay");
+            return (boolean)retObjectNoDelay;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectNoDelay != null ? retObjectNoDelay.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1647,7 +2345,7 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public void setNoDelay(boolean NoDelay) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.InvalidOperationException, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.diagnostics.tracing.EventSourceException, system.ArrayTypeMismatchException, system.net.sockets.SocketException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("NoDelay", NoDelay);
         } catch (JCNativeException jcne) {
@@ -1657,9 +2355,13 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public static boolean getOSSupportsIPv4() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOSSupportsIPv4 = null;
         try {
-            return (boolean)classType.Get("OSSupportsIPv4");
+            retObjectOSSupportsIPv4 = classType.Get("OSSupportsIPv4");
+            return (boolean)retObjectOSSupportsIPv4;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectOSSupportsIPv4 != null ? retObjectOSSupportsIPv4.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1667,9 +2369,13 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public static boolean getOSSupportsIPv6() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOSSupportsIPv6 = null;
         try {
-            return (boolean)classType.Get("OSSupportsIPv6");
+            retObjectOSSupportsIPv6 = classType.Get("OSSupportsIPv6");
+            return (boolean)retObjectOSSupportsIPv6;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectOSSupportsIPv6 != null ? retObjectOSSupportsIPv6.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1677,9 +2383,13 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public static boolean getOSSupportsUnixDomainSockets() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOSSupportsUnixDomainSockets = null;
         try {
-            return (boolean)classType.Get("OSSupportsUnixDomainSockets");
+            retObjectOSSupportsUnixDomainSockets = classType.Get("OSSupportsUnixDomainSockets");
+            return (boolean)retObjectOSSupportsUnixDomainSockets;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectOSSupportsUnixDomainSockets != null ? retObjectOSSupportsUnixDomainSockets.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1687,9 +2397,13 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public static boolean getSupportsIPv4() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSupportsIPv4 = null;
         try {
-            return (boolean)classType.Get("SupportsIPv4");
+            retObjectSupportsIPv4 = classType.Get("SupportsIPv4");
+            return (boolean)retObjectSupportsIPv4;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectSupportsIPv4 != null ? retObjectSupportsIPv4.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1697,9 +2411,13 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public static boolean getSupportsIPv6() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSupportsIPv6 = null;
         try {
-            return (boolean)classType.Get("SupportsIPv6");
+            retObjectSupportsIPv6 = classType.Get("SupportsIPv6");
+            return (boolean)retObjectSupportsIPv6;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectSupportsIPv6 != null ? retObjectSupportsIPv6.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1707,9 +2425,13 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public boolean getUseOnlyOverlappedIO() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUseOnlyOverlappedIO = null;
         try {
-            return (boolean)classInstance.Get("UseOnlyOverlappedIO");
+            retObjectUseOnlyOverlappedIO = classInstance.Get("UseOnlyOverlappedIO");
+            return (boolean)retObjectUseOnlyOverlappedIO;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectUseOnlyOverlappedIO != null ? retObjectUseOnlyOverlappedIO.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1717,7 +2439,7 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public void setUseOnlyOverlappedIO(boolean UseOnlyOverlappedIO) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UseOnlyOverlappedIO", UseOnlyOverlappedIO);
         } catch (JCNativeException jcne) {
@@ -1727,9 +2449,20 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public short getTtl() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.InvalidOperationException, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.diagnostics.tracing.EventSourceException, system.net.sockets.SocketException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTtl = null;
         try {
-            return (short)classInstance.Get("Ttl");
+            retObjectTtl = classInstance.Get("Ttl");
+            return (short)retObjectTtl;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectTtl_ToString = retObjectTtl == null ? "null" : retObjectTtl.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectTtlNumber = (java.lang.Number)retObjectTtl;
+                return retObjectTtlNumber.shortValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into short and, as fallback solution, into java.lang.Number", retObjectTtl != null ? retObjectTtl.getClass() : "null", retObjectTtl_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1737,7 +2470,7 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public void setTtl(short Ttl) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException, system.net.sockets.SocketException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Ttl", Ttl);
         } catch (JCNativeException jcne) {
@@ -1747,9 +2480,20 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public int getAvailable() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.FormatException, system.ArgumentNullException, system.diagnostics.tracing.EventSourceException, system.net.sockets.SocketException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAvailable = null;
         try {
-            return (int)classInstance.Get("Available");
+            retObjectAvailable = classInstance.Get("Available");
+            return (int)retObjectAvailable;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectAvailable_ToString = retObjectAvailable == null ? "null" : retObjectAvailable.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectAvailableNumber = (java.lang.Number)retObjectAvailable;
+                return retObjectAvailableNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectAvailable != null ? retObjectAvailable.getClass() : "null", retObjectAvailable_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1757,9 +2501,20 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public int getReceiveBufferSize() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.InvalidOperationException, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.diagnostics.tracing.EventSourceException, system.net.sockets.SocketException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReceiveBufferSize = null;
         try {
-            return (int)classInstance.Get("ReceiveBufferSize");
+            retObjectReceiveBufferSize = classInstance.Get("ReceiveBufferSize");
+            return (int)retObjectReceiveBufferSize;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectReceiveBufferSize_ToString = retObjectReceiveBufferSize == null ? "null" : retObjectReceiveBufferSize.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectReceiveBufferSizeNumber = (java.lang.Number)retObjectReceiveBufferSize;
+                return retObjectReceiveBufferSizeNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectReceiveBufferSize != null ? retObjectReceiveBufferSize.getClass() : "null", retObjectReceiveBufferSize_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1767,7 +2522,7 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public void setReceiveBufferSize(int ReceiveBufferSize) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.net.sockets.SocketException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ReceiveBufferSize", ReceiveBufferSize);
         } catch (JCNativeException jcne) {
@@ -1777,9 +2532,20 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public int getReceiveTimeout() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.InvalidOperationException, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.diagnostics.tracing.EventSourceException, system.net.sockets.SocketException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReceiveTimeout = null;
         try {
-            return (int)classInstance.Get("ReceiveTimeout");
+            retObjectReceiveTimeout = classInstance.Get("ReceiveTimeout");
+            return (int)retObjectReceiveTimeout;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectReceiveTimeout_ToString = retObjectReceiveTimeout == null ? "null" : retObjectReceiveTimeout.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectReceiveTimeoutNumber = (java.lang.Number)retObjectReceiveTimeout;
+                return retObjectReceiveTimeoutNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectReceiveTimeout != null ? retObjectReceiveTimeout.getClass() : "null", retObjectReceiveTimeout_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1787,7 +2553,7 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public void setReceiveTimeout(int ReceiveTimeout) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException, system.net.sockets.SocketException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ReceiveTimeout", ReceiveTimeout);
         } catch (JCNativeException jcne) {
@@ -1797,9 +2563,20 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public int getSendBufferSize() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.InvalidOperationException, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.diagnostics.tracing.EventSourceException, system.net.sockets.SocketException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSendBufferSize = null;
         try {
-            return (int)classInstance.Get("SendBufferSize");
+            retObjectSendBufferSize = classInstance.Get("SendBufferSize");
+            return (int)retObjectSendBufferSize;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSendBufferSize_ToString = retObjectSendBufferSize == null ? "null" : retObjectSendBufferSize.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectSendBufferSizeNumber = (java.lang.Number)retObjectSendBufferSize;
+                return retObjectSendBufferSizeNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectSendBufferSize != null ? retObjectSendBufferSize.getClass() : "null", retObjectSendBufferSize_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1807,7 +2584,7 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public void setSendBufferSize(int SendBufferSize) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.net.sockets.SocketException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SendBufferSize", SendBufferSize);
         } catch (JCNativeException jcne) {
@@ -1817,9 +2594,20 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public int getSendTimeout() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.InvalidOperationException, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.diagnostics.tracing.EventSourceException, system.net.sockets.SocketException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSendTimeout = null;
         try {
-            return (int)classInstance.Get("SendTimeout");
+            retObjectSendTimeout = classInstance.Get("SendTimeout");
+            return (int)retObjectSendTimeout;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSendTimeout_ToString = retObjectSendTimeout == null ? "null" : retObjectSendTimeout.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectSendTimeoutNumber = (java.lang.Number)retObjectSendTimeout;
+                return retObjectSendTimeoutNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectSendTimeout != null ? retObjectSendTimeout.getClass() : "null", retObjectSendTimeout_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1827,7 +2615,7 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public void setSendTimeout(int SendTimeout) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException, system.net.sockets.SocketException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SendTimeout", SendTimeout);
         } catch (JCNativeException jcne) {
@@ -1837,10 +2625,14 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public EndPoint getLocalEndPoint() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.net.sockets.SocketException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.ArgumentNullException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLocalEndPoint = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("LocalEndPoint");
+            retObjectLocalEndPoint = classInstance.Get("LocalEndPoint");
+            JCObject val = (JCObject)retObjectLocalEndPoint;
             return new EndPoint(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLocalEndPoint != null ? retObjectLocalEndPoint.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1848,10 +2640,14 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public EndPoint getRemoteEndPoint() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.net.sockets.SocketException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.ArgumentNullException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRemoteEndPoint = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RemoteEndPoint");
+            retObjectRemoteEndPoint = classInstance.Get("RemoteEndPoint");
+            JCObject val = (JCObject)retObjectRemoteEndPoint;
             return new EndPoint(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRemoteEndPoint != null ? retObjectRemoteEndPoint.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1859,10 +2655,14 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public AddressFamily getAddressFamily() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddressFamily = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AddressFamily");
+            retObjectAddressFamily = classInstance.Get("AddressFamily");
+            JCObject val = (JCObject)retObjectAddressFamily;
             return new AddressFamily(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddressFamily != null ? retObjectAddressFamily.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1870,10 +2670,14 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public LingerOption getLingerState() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.InvalidOperationException, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.diagnostics.tracing.EventSourceException, system.net.sockets.SocketException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLingerState = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("LingerState");
+            retObjectLingerState = classInstance.Get("LingerState");
+            JCObject val = (JCObject)retObjectLingerState;
             return new LingerOption(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLingerState != null ? retObjectLingerState.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1881,7 +2685,7 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public void setLingerState(LingerOption LingerState) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.InvalidOperationException, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.diagnostics.tracing.EventSourceException, system.net.sockets.SocketException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("LingerState", LingerState == null ? null : LingerState.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1891,10 +2695,14 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public ProtocolType getProtocolType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProtocolType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ProtocolType");
+            retObjectProtocolType = classInstance.Get("ProtocolType");
+            JCObject val = (JCObject)retObjectProtocolType;
             return new ProtocolType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectProtocolType != null ? retObjectProtocolType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1902,10 +2710,14 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public SafeSocketHandle getSafeHandle() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSafeHandle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SafeHandle");
+            retObjectSafeHandle = classInstance.Get("SafeHandle");
+            JCObject val = (JCObject)retObjectSafeHandle;
             return new SafeSocketHandle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSafeHandle != null ? retObjectSafeHandle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1913,10 +2725,14 @@ public class Socket extends NetObject implements AutoCloseable {
 
     public SocketType getSocketType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSocketType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SocketType");
+            retObjectSocketType = classInstance.Get("SocketType");
+            JCObject val = (JCObject)retObjectSocketType;
             return new SocketType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSocketType != null ? retObjectSocketType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

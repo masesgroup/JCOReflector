@@ -172,7 +172,7 @@ public class HtmlInputImage extends HtmlInputControl implements system.web.ui.IP
      */
     @Deprecated 
     public boolean LoadPostData(java.lang.String postDataKey, NameValueCollection postCollection) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIPostBackDataHandler to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIPostBackDataHandler to obtain the full interface.");
     }
 
     /**
@@ -181,7 +181,7 @@ public class HtmlInputImage extends HtmlInputControl implements system.web.ui.IP
      */
     @Deprecated 
     public void RaisePostDataChangedEvent() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIPostBackDataHandler to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIPostBackDataHandler to obtain the full interface.");
     }
 
     /**
@@ -190,7 +190,7 @@ public class HtmlInputImage extends HtmlInputControl implements system.web.ui.IP
      */
     @Deprecated 
     public void RaisePostBackEvent(java.lang.String eventArgument) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIPostBackEventHandler to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIPostBackEventHandler to obtain the full interface.");
     }
 
 
@@ -199,9 +199,13 @@ public class HtmlInputImage extends HtmlInputControl implements system.web.ui.IP
     
     public boolean getCausesValidation() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCausesValidation = null;
         try {
-            return (boolean)classInstance.Get("CausesValidation");
+            retObjectCausesValidation = classInstance.Get("CausesValidation");
+            return (boolean)retObjectCausesValidation;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCausesValidation != null ? retObjectCausesValidation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -209,7 +213,7 @@ public class HtmlInputImage extends HtmlInputControl implements system.web.ui.IP
 
     public void setCausesValidation(boolean CausesValidation) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CausesValidation", CausesValidation);
         } catch (JCNativeException jcne) {
@@ -219,9 +223,20 @@ public class HtmlInputImage extends HtmlInputControl implements system.web.ui.IP
 
     public int getBorder() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ObjectDisposedException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBorder = null;
         try {
-            return (int)classInstance.Get("Border");
+            retObjectBorder = classInstance.Get("Border");
+            return (int)retObjectBorder;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectBorder_ToString = retObjectBorder == null ? "null" : retObjectBorder.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectBorderNumber = (java.lang.Number)retObjectBorder;
+                return retObjectBorderNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectBorder != null ? retObjectBorder.getClass() : "null", retObjectBorder_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -229,7 +244,7 @@ public class HtmlInputImage extends HtmlInputControl implements system.web.ui.IP
 
     public void setBorder(int Border) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Border", Border);
         } catch (JCNativeException jcne) {
@@ -239,9 +254,13 @@ public class HtmlInputImage extends HtmlInputControl implements system.web.ui.IP
 
     public java.lang.String getAlign() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ObjectDisposedException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAlign = null;
         try {
-            return (java.lang.String)classInstance.Get("Align");
+            retObjectAlign = classInstance.Get("Align");
+            return (java.lang.String)retObjectAlign;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectAlign != null ? retObjectAlign.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -249,7 +268,7 @@ public class HtmlInputImage extends HtmlInputControl implements system.web.ui.IP
 
     public void setAlign(java.lang.String Align) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.resources.MissingManifestResourceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Align", Align);
         } catch (JCNativeException jcne) {
@@ -259,9 +278,13 @@ public class HtmlInputImage extends HtmlInputControl implements system.web.ui.IP
 
     public java.lang.String getAlt() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ObjectDisposedException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAlt = null;
         try {
-            return (java.lang.String)classInstance.Get("Alt");
+            retObjectAlt = classInstance.Get("Alt");
+            return (java.lang.String)retObjectAlt;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectAlt != null ? retObjectAlt.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -269,7 +292,7 @@ public class HtmlInputImage extends HtmlInputControl implements system.web.ui.IP
 
     public void setAlt(java.lang.String Alt) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.resources.MissingManifestResourceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Alt", Alt);
         } catch (JCNativeException jcne) {
@@ -279,9 +302,13 @@ public class HtmlInputImage extends HtmlInputControl implements system.web.ui.IP
 
     public java.lang.String getSrc() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ObjectDisposedException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSrc = null;
         try {
-            return (java.lang.String)classInstance.Get("Src");
+            retObjectSrc = classInstance.Get("Src");
+            return (java.lang.String)retObjectSrc;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSrc != null ? retObjectSrc.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -289,7 +316,7 @@ public class HtmlInputImage extends HtmlInputControl implements system.web.ui.IP
 
     public void setSrc(java.lang.String Src) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.resources.MissingManifestResourceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Src", Src);
         } catch (JCNativeException jcne) {
@@ -299,9 +326,13 @@ public class HtmlInputImage extends HtmlInputControl implements system.web.ui.IP
 
     public java.lang.String getValidationGroup() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValidationGroup = null;
         try {
-            return (java.lang.String)classInstance.Get("ValidationGroup");
+            retObjectValidationGroup = classInstance.Get("ValidationGroup");
+            return (java.lang.String)retObjectValidationGroup;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectValidationGroup != null ? retObjectValidationGroup.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -309,7 +340,7 @@ public class HtmlInputImage extends HtmlInputControl implements system.web.ui.IP
 
     public void setValidationGroup(java.lang.String ValidationGroup) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ValidationGroup", ValidationGroup);
         } catch (JCNativeException jcne) {
@@ -324,7 +355,7 @@ public class HtmlInputImage extends HtmlInputControl implements system.web.ui.IP
 
     public void addServerClick(ImageClickEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ServerClick", handler);
         } catch (JCNativeException jcne) {
@@ -334,7 +365,7 @@ public class HtmlInputImage extends HtmlInputControl implements system.web.ui.IP
 
     public void removeServerClick(ImageClickEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ServerClick", handler);
         } catch (JCNativeException jcne) {

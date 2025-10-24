@@ -203,10 +203,14 @@ public class TcpClient extends NetObject implements AutoCloseable {
     
     public IAsyncResult BeginConnect(IPAddress address, int port, AsyncCallback requestCallback, NetObject state) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.ArgumentException, system.InvalidOperationException, system.net.sockets.SocketException, system.NotSupportedException, system.diagnostics.tracing.EventSourceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginConnect = null;
         try {
-            JCObject objBeginConnect = (JCObject)classInstance.Invoke("BeginConnect", address == null ? null : address.getJCOInstance(), port, requestCallback, state == null ? null : state.getJCOInstance());
+            retObjectBeginConnect = classInstance.Invoke("BeginConnect", address == null ? null : address.getJCOInstance(), port, requestCallback, state == null ? null : state.getJCOInstance());
+            JCObject objBeginConnect = (JCObject)retObjectBeginConnect;
             return new IAsyncResultImplementation(objBeginConnect);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginConnect != null ? retObjectBeginConnect.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -214,10 +218,14 @@ public class TcpClient extends NetObject implements AutoCloseable {
 
     public IAsyncResult BeginConnect(IPAddress[] addresses, int port, AsyncCallback requestCallback, NetObject state) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.net.sockets.SocketException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginConnect = null;
         try {
-            JCObject objBeginConnect = (JCObject)classInstance.Invoke("BeginConnect", toObjectFromArray(addresses), port, requestCallback, state == null ? null : state.getJCOInstance());
+            retObjectBeginConnect = classInstance.Invoke("BeginConnect", toObjectFromArray(addresses), port, requestCallback, state == null ? null : state.getJCOInstance());
+            JCObject objBeginConnect = (JCObject)retObjectBeginConnect;
             return new IAsyncResultImplementation(objBeginConnect);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginConnect != null ? retObjectBeginConnect.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -225,10 +233,14 @@ public class TcpClient extends NetObject implements AutoCloseable {
 
     public IAsyncResult BeginConnect(java.lang.String host, int port, AsyncCallback requestCallback, NetObject state) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.ObjectDisposedException, system.net.sockets.SocketException, system.NotSupportedException, system.diagnostics.tracing.EventSourceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginConnect = null;
         try {
-            JCObject objBeginConnect = (JCObject)classInstance.Invoke("BeginConnect", host, port, requestCallback, state == null ? null : state.getJCOInstance());
+            retObjectBeginConnect = classInstance.Invoke("BeginConnect", host, port, requestCallback, state == null ? null : state.getJCOInstance());
+            JCObject objBeginConnect = (JCObject)retObjectBeginConnect;
             return new IAsyncResultImplementation(objBeginConnect);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginConnect != null ? retObjectBeginConnect.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -236,10 +248,14 @@ public class TcpClient extends NetObject implements AutoCloseable {
 
     public NetworkStream GetStream() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.ArgumentNullException, system.diagnostics.tracing.EventSourceException, system.net.sockets.SocketException, system.io.IOException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetStream = null;
         try {
-            JCObject objGetStream = (JCObject)classInstance.Invoke("GetStream");
+            retObjectGetStream = classInstance.Invoke("GetStream");
+            JCObject objGetStream = (JCObject)retObjectGetStream;
             return new NetworkStream(objGetStream);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetStream != null ? retObjectGetStream.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -247,10 +263,14 @@ public class TcpClient extends NetObject implements AutoCloseable {
 
     public Task ConnectAsync(IPAddress address, int port) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.net.sockets.SocketException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConnectAsync = null;
         try {
-            JCObject objConnectAsync = (JCObject)classInstance.Invoke("ConnectAsync", address == null ? null : address.getJCOInstance(), port);
+            retObjectConnectAsync = classInstance.Invoke("ConnectAsync", address == null ? null : address.getJCOInstance(), port);
+            JCObject objConnectAsync = (JCObject)retObjectConnectAsync;
             return new Task(objConnectAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConnectAsync != null ? retObjectConnectAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -258,10 +278,14 @@ public class TcpClient extends NetObject implements AutoCloseable {
 
     public Task ConnectAsync(IPAddress[] addresses, int port) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.net.sockets.SocketException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConnectAsync = null;
         try {
-            JCObject objConnectAsync = (JCObject)classInstance.Invoke("ConnectAsync", toObjectFromArray(addresses), port);
+            retObjectConnectAsync = classInstance.Invoke("ConnectAsync", toObjectFromArray(addresses), port);
+            JCObject objConnectAsync = (JCObject)retObjectConnectAsync;
             return new Task(objConnectAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConnectAsync != null ? retObjectConnectAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -269,10 +293,14 @@ public class TcpClient extends NetObject implements AutoCloseable {
 
     public Task ConnectAsync(IPEndPoint remoteEP) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.ArgumentException, system.InvalidOperationException, system.net.sockets.SocketException, system.NotSupportedException, system.FormatException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConnectAsync = null;
         try {
-            JCObject objConnectAsync = (JCObject)classInstance.Invoke("ConnectAsync", remoteEP == null ? null : remoteEP.getJCOInstance());
+            retObjectConnectAsync = classInstance.Invoke("ConnectAsync", remoteEP == null ? null : remoteEP.getJCOInstance());
+            JCObject objConnectAsync = (JCObject)retObjectConnectAsync;
             return new Task(objConnectAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConnectAsync != null ? retObjectConnectAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -280,10 +308,14 @@ public class TcpClient extends NetObject implements AutoCloseable {
 
     public Task ConnectAsync(java.lang.String host, int port) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.ObjectDisposedException, system.net.sockets.SocketException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConnectAsync = null;
         try {
-            JCObject objConnectAsync = (JCObject)classInstance.Invoke("ConnectAsync", host, port);
+            retObjectConnectAsync = classInstance.Invoke("ConnectAsync", host, port);
+            JCObject objConnectAsync = (JCObject)retObjectConnectAsync;
             return new Task(objConnectAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConnectAsync != null ? retObjectConnectAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -291,10 +323,14 @@ public class TcpClient extends NetObject implements AutoCloseable {
 
     public ValueTask ConnectAsync(IPAddress address, int port, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.net.sockets.SocketException, system.FormatException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConnectAsync = null;
         try {
-            JCObject objConnectAsync = (JCObject)classInstance.Invoke("ConnectAsync", address == null ? null : address.getJCOInstance(), port, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            retObjectConnectAsync = classInstance.Invoke("ConnectAsync", address == null ? null : address.getJCOInstance(), port, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objConnectAsync = (JCObject)retObjectConnectAsync;
             return new ValueTask(objConnectAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConnectAsync != null ? retObjectConnectAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -302,10 +338,14 @@ public class TcpClient extends NetObject implements AutoCloseable {
 
     public ValueTask ConnectAsync(IPAddress[] addresses, int port, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.net.sockets.SocketException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConnectAsync = null;
         try {
-            JCObject objConnectAsync = (JCObject)classInstance.Invoke("ConnectAsync", toObjectFromArray(addresses), port, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            retObjectConnectAsync = classInstance.Invoke("ConnectAsync", toObjectFromArray(addresses), port, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objConnectAsync = (JCObject)retObjectConnectAsync;
             return new ValueTask(objConnectAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConnectAsync != null ? retObjectConnectAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -313,10 +353,14 @@ public class TcpClient extends NetObject implements AutoCloseable {
 
     public ValueTask ConnectAsync(IPEndPoint remoteEP, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.ObjectDisposedException, system.net.sockets.SocketException, system.FormatException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConnectAsync = null;
         try {
-            JCObject objConnectAsync = (JCObject)classInstance.Invoke("ConnectAsync", remoteEP == null ? null : remoteEP.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            retObjectConnectAsync = classInstance.Invoke("ConnectAsync", remoteEP == null ? null : remoteEP.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objConnectAsync = (JCObject)retObjectConnectAsync;
             return new ValueTask(objConnectAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConnectAsync != null ? retObjectConnectAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -324,10 +368,14 @@ public class TcpClient extends NetObject implements AutoCloseable {
 
     public ValueTask ConnectAsync(java.lang.String host, int port, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.ObjectDisposedException, system.net.sockets.SocketException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConnectAsync = null;
         try {
-            JCObject objConnectAsync = (JCObject)classInstance.Invoke("ConnectAsync", host, port, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            retObjectConnectAsync = classInstance.Invoke("ConnectAsync", host, port, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objConnectAsync = (JCObject)retObjectConnectAsync;
             return new ValueTask(objConnectAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConnectAsync != null ? retObjectConnectAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -335,7 +383,7 @@ public class TcpClient extends NetObject implements AutoCloseable {
 
     public void Close() throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.OutOfMemoryException, system.ArgumentException, system.FormatException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.diagnostics.tracing.EventSourceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Close");
         } catch (JCNativeException jcne) {
@@ -345,7 +393,7 @@ public class TcpClient extends NetObject implements AutoCloseable {
 
     public void Connect(IPAddress address, int port) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.net.sockets.SocketException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.ArgumentNullException, system.diagnostics.tracing.EventSourceException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Connect", address == null ? null : address.getJCOInstance(), port);
         } catch (JCNativeException jcne) {
@@ -355,7 +403,7 @@ public class TcpClient extends NetObject implements AutoCloseable {
 
     public void Connect(IPAddress[] ipAddresses, int port) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.net.sockets.SocketException, system.PlatformNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Connect", toObjectFromArray(ipAddresses), port);
         } catch (JCNativeException jcne) {
@@ -365,7 +413,7 @@ public class TcpClient extends NetObject implements AutoCloseable {
 
     public void Connect(IPEndPoint remoteEP) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.net.sockets.SocketException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.ArgumentNullException, system.diagnostics.tracing.EventSourceException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Connect", remoteEP == null ? null : remoteEP.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -375,7 +423,7 @@ public class TcpClient extends NetObject implements AutoCloseable {
 
     public void Connect(java.lang.String hostname, int port) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.net.sockets.SocketException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Connect", hostname, port);
         } catch (JCNativeException jcne) {
@@ -385,7 +433,7 @@ public class TcpClient extends NetObject implements AutoCloseable {
 
     public void Dispose() throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.ArgumentException, system.FormatException, system.ArgumentOutOfRangeException, system.diagnostics.tracing.EventSourceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
@@ -395,7 +443,7 @@ public class TcpClient extends NetObject implements AutoCloseable {
 
     public void EndConnect(IAsyncResult asyncResult) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.threading.tasks.TaskSchedulerException, system.PlatformNotSupportedException, system.threading.tasks.TaskCanceledException, system.ArgumentOutOfRangeException, system.AggregateException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EndConnect", asyncResult == null ? null : asyncResult.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -406,7 +454,7 @@ public class TcpClient extends NetObject implements AutoCloseable {
     public void close() throws Exception {
         try {
             if (classInstance == null)
-                throw new UnsupportedOperationException("classInstance is null.");
+                throw new java.lang.UnsupportedOperationException("classInstance is null.");
             try {
                 classInstance.Invoke("Dispose");
             }
@@ -422,9 +470,13 @@ public class TcpClient extends NetObject implements AutoCloseable {
     
     public boolean getConnected() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.InvalidOperationException, system.FormatException, system.ArgumentOutOfRangeException, system.diagnostics.tracing.EventSourceException, system.ObjectDisposedException, system.net.sockets.SocketException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConnected = null;
         try {
-            return (boolean)classInstance.Get("Connected");
+            retObjectConnected = classInstance.Get("Connected");
+            return (boolean)retObjectConnected;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectConnected != null ? retObjectConnected.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -432,9 +484,13 @@ public class TcpClient extends NetObject implements AutoCloseable {
 
     public boolean getExclusiveAddressUse() throws Throwable, system.ObjectDisposedException, system.PlatformNotSupportedException, system.ArgumentNullException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.InvalidOperationException, system.diagnostics.tracing.EventSourceException, system.net.sockets.SocketException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExclusiveAddressUse = null;
         try {
-            return (boolean)classInstance.Get("ExclusiveAddressUse");
+            retObjectExclusiveAddressUse = classInstance.Get("ExclusiveAddressUse");
+            return (boolean)retObjectExclusiveAddressUse;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectExclusiveAddressUse != null ? retObjectExclusiveAddressUse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -442,7 +498,7 @@ public class TcpClient extends NetObject implements AutoCloseable {
 
     public void setExclusiveAddressUse(boolean ExclusiveAddressUse) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.ArrayTypeMismatchException, system.net.sockets.SocketException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ExclusiveAddressUse", ExclusiveAddressUse);
         } catch (JCNativeException jcne) {
@@ -452,9 +508,13 @@ public class TcpClient extends NetObject implements AutoCloseable {
 
     public boolean getNoDelay() throws Throwable, system.ObjectDisposedException, system.PlatformNotSupportedException, system.ArgumentNullException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.InvalidOperationException, system.diagnostics.tracing.EventSourceException, system.net.sockets.SocketException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNoDelay = null;
         try {
-            return (boolean)classInstance.Get("NoDelay");
+            retObjectNoDelay = classInstance.Get("NoDelay");
+            return (boolean)retObjectNoDelay;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectNoDelay != null ? retObjectNoDelay.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -462,7 +522,7 @@ public class TcpClient extends NetObject implements AutoCloseable {
 
     public void setNoDelay(boolean NoDelay) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.InvalidOperationException, system.ArgumentException, system.FormatException, system.ArgumentOutOfRangeException, system.diagnostics.tracing.EventSourceException, system.ArrayTypeMismatchException, system.net.sockets.SocketException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("NoDelay", NoDelay);
         } catch (JCNativeException jcne) {
@@ -472,9 +532,20 @@ public class TcpClient extends NetObject implements AutoCloseable {
 
     public int getAvailable() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.InvalidOperationException, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.diagnostics.tracing.EventSourceException, system.net.sockets.SocketException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAvailable = null;
         try {
-            return (int)classInstance.Get("Available");
+            retObjectAvailable = classInstance.Get("Available");
+            return (int)retObjectAvailable;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectAvailable_ToString = retObjectAvailable == null ? "null" : retObjectAvailable.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectAvailableNumber = (java.lang.Number)retObjectAvailable;
+                return retObjectAvailableNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectAvailable != null ? retObjectAvailable.getClass() : "null", retObjectAvailable_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -482,9 +553,20 @@ public class TcpClient extends NetObject implements AutoCloseable {
 
     public int getReceiveBufferSize() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.InvalidOperationException, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.diagnostics.tracing.EventSourceException, system.net.sockets.SocketException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReceiveBufferSize = null;
         try {
-            return (int)classInstance.Get("ReceiveBufferSize");
+            retObjectReceiveBufferSize = classInstance.Get("ReceiveBufferSize");
+            return (int)retObjectReceiveBufferSize;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectReceiveBufferSize_ToString = retObjectReceiveBufferSize == null ? "null" : retObjectReceiveBufferSize.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectReceiveBufferSizeNumber = (java.lang.Number)retObjectReceiveBufferSize;
+                return retObjectReceiveBufferSizeNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectReceiveBufferSize != null ? retObjectReceiveBufferSize.getClass() : "null", retObjectReceiveBufferSize_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -492,7 +574,7 @@ public class TcpClient extends NetObject implements AutoCloseable {
 
     public void setReceiveBufferSize(int ReceiveBufferSize) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.InvalidOperationException, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.diagnostics.tracing.EventSourceException, system.ArrayTypeMismatchException, system.net.sockets.SocketException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ReceiveBufferSize", ReceiveBufferSize);
         } catch (JCNativeException jcne) {
@@ -502,9 +584,20 @@ public class TcpClient extends NetObject implements AutoCloseable {
 
     public int getReceiveTimeout() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.InvalidOperationException, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.diagnostics.tracing.EventSourceException, system.net.sockets.SocketException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReceiveTimeout = null;
         try {
-            return (int)classInstance.Get("ReceiveTimeout");
+            retObjectReceiveTimeout = classInstance.Get("ReceiveTimeout");
+            return (int)retObjectReceiveTimeout;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectReceiveTimeout_ToString = retObjectReceiveTimeout == null ? "null" : retObjectReceiveTimeout.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectReceiveTimeoutNumber = (java.lang.Number)retObjectReceiveTimeout;
+                return retObjectReceiveTimeoutNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectReceiveTimeout != null ? retObjectReceiveTimeout.getClass() : "null", retObjectReceiveTimeout_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -512,7 +605,7 @@ public class TcpClient extends NetObject implements AutoCloseable {
 
     public void setReceiveTimeout(int ReceiveTimeout) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.InvalidOperationException, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.diagnostics.tracing.EventSourceException, system.ArrayTypeMismatchException, system.net.sockets.SocketException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ReceiveTimeout", ReceiveTimeout);
         } catch (JCNativeException jcne) {
@@ -522,9 +615,20 @@ public class TcpClient extends NetObject implements AutoCloseable {
 
     public int getSendBufferSize() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.InvalidOperationException, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.diagnostics.tracing.EventSourceException, system.net.sockets.SocketException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSendBufferSize = null;
         try {
-            return (int)classInstance.Get("SendBufferSize");
+            retObjectSendBufferSize = classInstance.Get("SendBufferSize");
+            return (int)retObjectSendBufferSize;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSendBufferSize_ToString = retObjectSendBufferSize == null ? "null" : retObjectSendBufferSize.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectSendBufferSizeNumber = (java.lang.Number)retObjectSendBufferSize;
+                return retObjectSendBufferSizeNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectSendBufferSize != null ? retObjectSendBufferSize.getClass() : "null", retObjectSendBufferSize_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -532,7 +636,7 @@ public class TcpClient extends NetObject implements AutoCloseable {
 
     public void setSendBufferSize(int SendBufferSize) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.InvalidOperationException, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.diagnostics.tracing.EventSourceException, system.ArrayTypeMismatchException, system.net.sockets.SocketException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SendBufferSize", SendBufferSize);
         } catch (JCNativeException jcne) {
@@ -542,9 +646,20 @@ public class TcpClient extends NetObject implements AutoCloseable {
 
     public int getSendTimeout() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.InvalidOperationException, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.diagnostics.tracing.EventSourceException, system.net.sockets.SocketException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSendTimeout = null;
         try {
-            return (int)classInstance.Get("SendTimeout");
+            retObjectSendTimeout = classInstance.Get("SendTimeout");
+            return (int)retObjectSendTimeout;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSendTimeout_ToString = retObjectSendTimeout == null ? "null" : retObjectSendTimeout.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectSendTimeoutNumber = (java.lang.Number)retObjectSendTimeout;
+                return retObjectSendTimeoutNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectSendTimeout != null ? retObjectSendTimeout.getClass() : "null", retObjectSendTimeout_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -552,7 +667,7 @@ public class TcpClient extends NetObject implements AutoCloseable {
 
     public void setSendTimeout(int SendTimeout) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.InvalidOperationException, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.diagnostics.tracing.EventSourceException, system.ArrayTypeMismatchException, system.net.sockets.SocketException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SendTimeout", SendTimeout);
         } catch (JCNativeException jcne) {
@@ -562,10 +677,14 @@ public class TcpClient extends NetObject implements AutoCloseable {
 
     public LingerOption getLingerState() throws Throwable, system.ObjectDisposedException, system.PlatformNotSupportedException, system.ArgumentNullException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.InvalidOperationException, system.diagnostics.tracing.EventSourceException, system.net.sockets.SocketException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLingerState = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("LingerState");
+            retObjectLingerState = classInstance.Get("LingerState");
+            JCObject val = (JCObject)retObjectLingerState;
             return new LingerOption(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLingerState != null ? retObjectLingerState.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -573,7 +692,7 @@ public class TcpClient extends NetObject implements AutoCloseable {
 
     public void setLingerState(LingerOption LingerState) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.InvalidOperationException, system.ArgumentException, system.FormatException, system.ArgumentOutOfRangeException, system.diagnostics.tracing.EventSourceException, system.globalization.CultureNotFoundException, system.net.sockets.SocketException, system.ArrayTypeMismatchException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("LingerState", LingerState == null ? null : LingerState.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -583,10 +702,14 @@ public class TcpClient extends NetObject implements AutoCloseable {
 
     public Socket getClient() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClient = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Client");
+            retObjectClient = classInstance.Get("Client");
+            JCObject val = (JCObject)retObjectClient;
             return new Socket(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClient != null ? retObjectClient.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -594,7 +717,7 @@ public class TcpClient extends NetObject implements AutoCloseable {
 
     public void setClient(Socket Client) throws Throwable, system.OutOfMemoryException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.net.sockets.SocketException, system.ObjectDisposedException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Client", Client == null ? null : Client.getJCOInstance());
         } catch (JCNativeException jcne) {

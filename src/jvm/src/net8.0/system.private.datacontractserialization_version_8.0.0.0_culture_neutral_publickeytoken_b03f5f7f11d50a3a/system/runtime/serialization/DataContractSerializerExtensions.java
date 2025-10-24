@@ -156,10 +156,14 @@ public class DataContractSerializerExtensions extends NetObject  {
     
     public static ISerializationSurrogateProvider GetSerializationSurrogateProvider(DataContractSerializer serializer) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetSerializationSurrogateProvider = null;
         try {
-            JCObject objGetSerializationSurrogateProvider = (JCObject)classType.Invoke("GetSerializationSurrogateProvider", serializer == null ? null : serializer.getJCOInstance());
+            retObjectGetSerializationSurrogateProvider = classType.Invoke("GetSerializationSurrogateProvider", serializer == null ? null : serializer.getJCOInstance());
+            JCObject objGetSerializationSurrogateProvider = (JCObject)retObjectGetSerializationSurrogateProvider;
             return new ISerializationSurrogateProviderImplementation(objGetSerializationSurrogateProvider);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSerializationSurrogateProvider != null ? retObjectGetSerializationSurrogateProvider.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -167,7 +171,7 @@ public class DataContractSerializerExtensions extends NetObject  {
 
     public static void SetSerializationSurrogateProvider(DataContractSerializer serializer, ISerializationSurrogateProvider provider) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetSerializationSurrogateProvider", serializer == null ? null : serializer.getJCOInstance(), provider == null ? null : provider.getJCOInstance());
         } catch (JCNativeException jcne) {

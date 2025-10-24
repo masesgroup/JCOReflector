@@ -154,9 +154,20 @@ public class TextSource extends NetObject  {
     
     public int GetTextEffectCharacterIndexFromTextSourceCharacterIndex(int textSourceCharacterIndex) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetTextEffectCharacterIndexFromTextSourceCharacterIndex = null;
         try {
-            return (int)classInstance.Invoke("GetTextEffectCharacterIndexFromTextSourceCharacterIndex", textSourceCharacterIndex);
+            retObjectGetTextEffectCharacterIndexFromTextSourceCharacterIndex = classInstance.Invoke("GetTextEffectCharacterIndexFromTextSourceCharacterIndex", textSourceCharacterIndex);
+            return (int)retObjectGetTextEffectCharacterIndexFromTextSourceCharacterIndex;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetTextEffectCharacterIndexFromTextSourceCharacterIndex_ToString = retObjectGetTextEffectCharacterIndexFromTextSourceCharacterIndex == null ? "null" : retObjectGetTextEffectCharacterIndexFromTextSourceCharacterIndex.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetTextEffectCharacterIndexFromTextSourceCharacterIndexNumber = (java.lang.Number)retObjectGetTextEffectCharacterIndexFromTextSourceCharacterIndex;
+                return retObjectGetTextEffectCharacterIndexFromTextSourceCharacterIndexNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetTextEffectCharacterIndexFromTextSourceCharacterIndex != null ? retObjectGetTextEffectCharacterIndexFromTextSourceCharacterIndex.getClass() : "null", retObjectGetTextEffectCharacterIndexFromTextSourceCharacterIndex_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -164,10 +175,14 @@ public class TextSource extends NetObject  {
 
     public TextRun GetTextRun(int textSourceCharacterIndex) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetTextRun = null;
         try {
-            JCObject objGetTextRun = (JCObject)classInstance.Invoke("GetTextRun", textSourceCharacterIndex);
+            retObjectGetTextRun = classInstance.Invoke("GetTextRun", textSourceCharacterIndex);
+            JCObject objGetTextRun = (JCObject)retObjectGetTextRun;
             return new TextRun(objGetTextRun);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetTextRun != null ? retObjectGetTextRun.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,9 +194,20 @@ public class TextSource extends NetObject  {
     
     public double getPixelsPerDip() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPixelsPerDip = null;
         try {
-            return (double)classInstance.Get("PixelsPerDip");
+            retObjectPixelsPerDip = classInstance.Get("PixelsPerDip");
+            return (double)retObjectPixelsPerDip;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectPixelsPerDip_ToString = retObjectPixelsPerDip == null ? "null" : retObjectPixelsPerDip.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectPixelsPerDipNumber = (java.lang.Number)retObjectPixelsPerDip;
+                return retObjectPixelsPerDipNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectPixelsPerDip != null ? retObjectPixelsPerDip.getClass() : "null", retObjectPixelsPerDip_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -189,7 +215,7 @@ public class TextSource extends NetObject  {
 
     public void setPixelsPerDip(double PixelsPerDip) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PixelsPerDip", PixelsPerDip);
         } catch (JCNativeException jcne) {

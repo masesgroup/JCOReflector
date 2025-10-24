@@ -174,10 +174,14 @@ public class EventWatcherOptions extends ManagementOptions  {
     
     public NetObject Clone() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.NotSupportedException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClone = null;
         try {
-            JCObject objClone = (JCObject)classInstance.Invoke("Clone");
+            retObjectClone = classInstance.Invoke("Clone");
+            JCObject objClone = (JCObject)retObjectClone;
             return new NetObject(objClone);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClone != null ? retObjectClone.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -189,9 +193,20 @@ public class EventWatcherOptions extends ManagementOptions  {
     
     public int getBlockSize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBlockSize = null;
         try {
-            return (int)classInstance.Get("BlockSize");
+            retObjectBlockSize = classInstance.Get("BlockSize");
+            return (int)retObjectBlockSize;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectBlockSize_ToString = retObjectBlockSize == null ? "null" : retObjectBlockSize.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectBlockSizeNumber = (java.lang.Number)retObjectBlockSize;
+                return retObjectBlockSizeNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectBlockSize != null ? retObjectBlockSize.getClass() : "null", retObjectBlockSize_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -199,7 +214,7 @@ public class EventWatcherOptions extends ManagementOptions  {
 
     public void setBlockSize(int BlockSize) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BlockSize", BlockSize);
         } catch (JCNativeException jcne) {

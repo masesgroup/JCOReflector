@@ -144,7 +144,7 @@ public class IWebPartTableImplementation extends NetObject implements IWebPartTa
     
     public void GetTableData(TableCallback callback) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetTableData", callback);
         } catch (JCNativeException jcne) {
@@ -158,10 +158,14 @@ public class IWebPartTableImplementation extends NetObject implements IWebPartTa
     
     public PropertyDescriptorCollection getSchema() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSchema = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Schema");
+            retObjectSchema = classInstance.Get("Schema");
+            JCObject val = (JCObject)retObjectSchema;
             return new PropertyDescriptorCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSchema != null ? retObjectSchema.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

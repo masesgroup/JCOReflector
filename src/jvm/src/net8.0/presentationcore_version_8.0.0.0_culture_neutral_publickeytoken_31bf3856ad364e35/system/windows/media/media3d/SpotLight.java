@@ -176,10 +176,14 @@ public class SpotLight extends PointLightBase  {
     
     public SpotLight CloneNewSpotLight() throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClone = null;
         try {
-            JCObject objClone = (JCObject)classInstance.Invoke("Clone");
+            retObjectClone = classInstance.Invoke("Clone");
+            JCObject objClone = (JCObject)retObjectClone;
             return new SpotLight(objClone);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClone != null ? retObjectClone.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,10 +191,14 @@ public class SpotLight extends PointLightBase  {
 
     public SpotLight CloneCurrentValueNewSpotLight() throws Throwable, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCloneCurrentValue = null;
         try {
-            JCObject objCloneCurrentValue = (JCObject)classInstance.Invoke("CloneCurrentValue");
+            retObjectCloneCurrentValue = classInstance.Invoke("CloneCurrentValue");
+            JCObject objCloneCurrentValue = (JCObject)retObjectCloneCurrentValue;
             return new SpotLight(objCloneCurrentValue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCloneCurrentValue != null ? retObjectCloneCurrentValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,9 +210,20 @@ public class SpotLight extends PointLightBase  {
     
     public double getInnerConeAngle() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInnerConeAngle = null;
         try {
-            return (double)classInstance.Get("InnerConeAngle");
+            retObjectInnerConeAngle = classInstance.Get("InnerConeAngle");
+            return (double)retObjectInnerConeAngle;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectInnerConeAngle_ToString = retObjectInnerConeAngle == null ? "null" : retObjectInnerConeAngle.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectInnerConeAngleNumber = (java.lang.Number)retObjectInnerConeAngle;
+                return retObjectInnerConeAngleNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectInnerConeAngle != null ? retObjectInnerConeAngle.getClass() : "null", retObjectInnerConeAngle_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -212,7 +231,7 @@ public class SpotLight extends PointLightBase  {
 
     public void setInnerConeAngle(double InnerConeAngle) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("InnerConeAngle", InnerConeAngle);
         } catch (JCNativeException jcne) {
@@ -222,9 +241,20 @@ public class SpotLight extends PointLightBase  {
 
     public double getOuterConeAngle() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOuterConeAngle = null;
         try {
-            return (double)classInstance.Get("OuterConeAngle");
+            retObjectOuterConeAngle = classInstance.Get("OuterConeAngle");
+            return (double)retObjectOuterConeAngle;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectOuterConeAngle_ToString = retObjectOuterConeAngle == null ? "null" : retObjectOuterConeAngle.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectOuterConeAngleNumber = (java.lang.Number)retObjectOuterConeAngle;
+                return retObjectOuterConeAngleNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectOuterConeAngle != null ? retObjectOuterConeAngle.getClass() : "null", retObjectOuterConeAngle_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -232,7 +262,7 @@ public class SpotLight extends PointLightBase  {
 
     public void setOuterConeAngle(double OuterConeAngle) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("OuterConeAngle", OuterConeAngle);
         } catch (JCNativeException jcne) {
@@ -242,10 +272,14 @@ public class SpotLight extends PointLightBase  {
 
     public Vector3D getDirection() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDirection = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Direction");
+            retObjectDirection = classInstance.Get("Direction");
+            JCObject val = (JCObject)retObjectDirection;
             return new Vector3D(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDirection != null ? retObjectDirection.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -253,7 +287,7 @@ public class SpotLight extends PointLightBase  {
 
     public void setDirection(Vector3D Direction) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Direction", Direction == null ? null : Direction.getJCOInstance());
         } catch (JCNativeException jcne) {

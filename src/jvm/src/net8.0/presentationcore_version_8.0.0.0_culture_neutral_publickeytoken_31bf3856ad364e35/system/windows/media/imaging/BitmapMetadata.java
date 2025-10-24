@@ -167,9 +167,13 @@ public class BitmapMetadata extends ImageMetadata  {
     
     public boolean ContainsQuery(java.lang.String query) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContainsQuery = null;
         try {
-            return (boolean)classInstance.Invoke("ContainsQuery", query);
+            retObjectContainsQuery = classInstance.Invoke("ContainsQuery", query);
+            return (boolean)retObjectContainsQuery;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectContainsQuery != null ? retObjectContainsQuery.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,10 +181,14 @@ public class BitmapMetadata extends ImageMetadata  {
 
     public NetObject GetQuery(java.lang.String query) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.AccessViolationException, system.NotImplementedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetQuery = null;
         try {
-            JCObject objGetQuery = (JCObject)classInstance.Invoke("GetQuery", query);
+            retObjectGetQuery = classInstance.Invoke("GetQuery", query);
+            JCObject objGetQuery = (JCObject)retObjectGetQuery;
             return new NetObject(objGetQuery);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetQuery != null ? retObjectGetQuery.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,10 +196,14 @@ public class BitmapMetadata extends ImageMetadata  {
 
     public BitmapMetadata CloneNewBitmapMetadata() throws Throwable, system.InvalidOperationException, system.security.SecurityException, system.io.IOException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClone = null;
         try {
-            JCObject objClone = (JCObject)classInstance.Invoke("Clone");
+            retObjectClone = classInstance.Invoke("Clone");
+            JCObject objClone = (JCObject)retObjectClone;
             return new BitmapMetadata(objClone);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClone != null ? retObjectClone.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -199,7 +211,7 @@ public class BitmapMetadata extends ImageMetadata  {
 
     public void RemoveQuery(java.lang.String query) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RemoveQuery", query);
         } catch (JCNativeException jcne) {
@@ -209,7 +221,7 @@ public class BitmapMetadata extends ImageMetadata  {
 
     public void SetQuery(java.lang.String query, NetObject value) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.OutOfMemoryException, system.AccessViolationException, system.NotImplementedException, system.ObjectDisposedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetQuery", query, value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -223,9 +235,13 @@ public class BitmapMetadata extends ImageMetadata  {
     
     public boolean getIsFixedSize() throws Throwable, system.ArgumentException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsFixedSize = null;
         try {
-            return (boolean)classInstance.Get("IsFixedSize");
+            retObjectIsFixedSize = classInstance.Get("IsFixedSize");
+            return (boolean)retObjectIsFixedSize;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsFixedSize != null ? retObjectIsFixedSize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -233,9 +249,13 @@ public class BitmapMetadata extends ImageMetadata  {
 
     public boolean getIsReadOnly() throws Throwable, system.ArgumentException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsReadOnly = null;
         try {
-            return (boolean)classInstance.Get("IsReadOnly");
+            retObjectIsReadOnly = classInstance.Get("IsReadOnly");
+            return (boolean)retObjectIsReadOnly;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsReadOnly != null ? retObjectIsReadOnly.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -243,9 +263,20 @@ public class BitmapMetadata extends ImageMetadata  {
 
     public int getRating() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.AccessViolationException, system.NotImplementedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRating = null;
         try {
-            return (int)classInstance.Get("Rating");
+            retObjectRating = classInstance.Get("Rating");
+            return (int)retObjectRating;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectRating_ToString = retObjectRating == null ? "null" : retObjectRating.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectRatingNumber = (java.lang.Number)retObjectRating;
+                return retObjectRatingNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectRating != null ? retObjectRating.getClass() : "null", retObjectRating_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -253,7 +284,7 @@ public class BitmapMetadata extends ImageMetadata  {
 
     public void setRating(int Rating) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.AccessViolationException, system.ArrayTypeMismatchException, system.NotImplementedException, system.ObjectDisposedException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Rating", Rating);
         } catch (JCNativeException jcne) {
@@ -263,9 +294,13 @@ public class BitmapMetadata extends ImageMetadata  {
 
     public java.lang.String getApplicationName() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.AccessViolationException, system.NotImplementedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectApplicationName = null;
         try {
-            return (java.lang.String)classInstance.Get("ApplicationName");
+            retObjectApplicationName = classInstance.Get("ApplicationName");
+            return (java.lang.String)retObjectApplicationName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectApplicationName != null ? retObjectApplicationName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -273,7 +308,7 @@ public class BitmapMetadata extends ImageMetadata  {
 
     public void setApplicationName(java.lang.String ApplicationName) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.AccessViolationException, system.ArrayTypeMismatchException, system.NotImplementedException, system.ObjectDisposedException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ApplicationName", ApplicationName);
         } catch (JCNativeException jcne) {
@@ -283,9 +318,13 @@ public class BitmapMetadata extends ImageMetadata  {
 
     public java.lang.String getCameraManufacturer() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.AccessViolationException, system.NotImplementedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCameraManufacturer = null;
         try {
-            return (java.lang.String)classInstance.Get("CameraManufacturer");
+            retObjectCameraManufacturer = classInstance.Get("CameraManufacturer");
+            return (java.lang.String)retObjectCameraManufacturer;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectCameraManufacturer != null ? retObjectCameraManufacturer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -293,7 +332,7 @@ public class BitmapMetadata extends ImageMetadata  {
 
     public void setCameraManufacturer(java.lang.String CameraManufacturer) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.AccessViolationException, system.ArrayTypeMismatchException, system.NotImplementedException, system.ObjectDisposedException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CameraManufacturer", CameraManufacturer);
         } catch (JCNativeException jcne) {
@@ -303,9 +342,13 @@ public class BitmapMetadata extends ImageMetadata  {
 
     public java.lang.String getCameraModel() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.AccessViolationException, system.NotImplementedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCameraModel = null;
         try {
-            return (java.lang.String)classInstance.Get("CameraModel");
+            retObjectCameraModel = classInstance.Get("CameraModel");
+            return (java.lang.String)retObjectCameraModel;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectCameraModel != null ? retObjectCameraModel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -313,7 +356,7 @@ public class BitmapMetadata extends ImageMetadata  {
 
     public void setCameraModel(java.lang.String CameraModel) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.AccessViolationException, system.ArrayTypeMismatchException, system.NotImplementedException, system.ObjectDisposedException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CameraModel", CameraModel);
         } catch (JCNativeException jcne) {
@@ -323,9 +366,13 @@ public class BitmapMetadata extends ImageMetadata  {
 
     public java.lang.String getComment() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.AccessViolationException, system.NotImplementedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectComment = null;
         try {
-            return (java.lang.String)classInstance.Get("Comment");
+            retObjectComment = classInstance.Get("Comment");
+            return (java.lang.String)retObjectComment;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectComment != null ? retObjectComment.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -333,7 +380,7 @@ public class BitmapMetadata extends ImageMetadata  {
 
     public void setComment(java.lang.String Comment) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.AccessViolationException, system.ArrayTypeMismatchException, system.NotImplementedException, system.ObjectDisposedException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Comment", Comment);
         } catch (JCNativeException jcne) {
@@ -343,9 +390,13 @@ public class BitmapMetadata extends ImageMetadata  {
 
     public java.lang.String getCopyright() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.AccessViolationException, system.NotImplementedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCopyright = null;
         try {
-            return (java.lang.String)classInstance.Get("Copyright");
+            retObjectCopyright = classInstance.Get("Copyright");
+            return (java.lang.String)retObjectCopyright;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectCopyright != null ? retObjectCopyright.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -353,7 +404,7 @@ public class BitmapMetadata extends ImageMetadata  {
 
     public void setCopyright(java.lang.String Copyright) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.AccessViolationException, system.ArrayTypeMismatchException, system.NotImplementedException, system.ObjectDisposedException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Copyright", Copyright);
         } catch (JCNativeException jcne) {
@@ -363,9 +414,13 @@ public class BitmapMetadata extends ImageMetadata  {
 
     public java.lang.String getDateTaken() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.AccessViolationException, system.NotImplementedException, system.FormatException, system.InvalidTimeZoneException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDateTaken = null;
         try {
-            return (java.lang.String)classInstance.Get("DateTaken");
+            retObjectDateTaken = classInstance.Get("DateTaken");
+            return (java.lang.String)retObjectDateTaken;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDateTaken != null ? retObjectDateTaken.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -373,7 +428,7 @@ public class BitmapMetadata extends ImageMetadata  {
 
     public void setDateTaken(java.lang.String DateTaken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.OverflowException, system.FormatException, system.AccessViolationException, system.ArgumentNullException, system.OutOfMemoryException, system.NotImplementedException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DateTaken", DateTaken);
         } catch (JCNativeException jcne) {
@@ -383,9 +438,13 @@ public class BitmapMetadata extends ImageMetadata  {
 
     public java.lang.String getFormat() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFormat = null;
         try {
-            return (java.lang.String)classInstance.Get("Format");
+            retObjectFormat = classInstance.Get("Format");
+            return (java.lang.String)retObjectFormat;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectFormat != null ? retObjectFormat.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -393,9 +452,13 @@ public class BitmapMetadata extends ImageMetadata  {
 
     public java.lang.String getLocation() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLocation = null;
         try {
-            return (java.lang.String)classInstance.Get("Location");
+            retObjectLocation = classInstance.Get("Location");
+            return (java.lang.String)retObjectLocation;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectLocation != null ? retObjectLocation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -403,9 +466,13 @@ public class BitmapMetadata extends ImageMetadata  {
 
     public java.lang.String getSubject() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.AccessViolationException, system.NotImplementedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSubject = null;
         try {
-            return (java.lang.String)classInstance.Get("Subject");
+            retObjectSubject = classInstance.Get("Subject");
+            return (java.lang.String)retObjectSubject;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSubject != null ? retObjectSubject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -413,7 +480,7 @@ public class BitmapMetadata extends ImageMetadata  {
 
     public void setSubject(java.lang.String Subject) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.AccessViolationException, system.ArrayTypeMismatchException, system.NotImplementedException, system.ObjectDisposedException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Subject", Subject);
         } catch (JCNativeException jcne) {
@@ -423,9 +490,13 @@ public class BitmapMetadata extends ImageMetadata  {
 
     public java.lang.String getTitle() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.AccessViolationException, system.NotImplementedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTitle = null;
         try {
-            return (java.lang.String)classInstance.Get("Title");
+            retObjectTitle = classInstance.Get("Title");
+            return (java.lang.String)retObjectTitle;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectTitle != null ? retObjectTitle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -433,7 +504,7 @@ public class BitmapMetadata extends ImageMetadata  {
 
     public void setTitle(java.lang.String Title) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.AccessViolationException, system.ArrayTypeMismatchException, system.NotImplementedException, system.ObjectDisposedException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Title", Title);
         } catch (JCNativeException jcne) {

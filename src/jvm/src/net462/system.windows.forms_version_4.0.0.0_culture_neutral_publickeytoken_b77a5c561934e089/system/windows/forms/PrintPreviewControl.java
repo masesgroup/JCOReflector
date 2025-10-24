@@ -165,7 +165,7 @@ public class PrintPreviewControl extends Control  {
     
     public void InvalidatePreview() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.NotSupportedException, system.security.SecurityException, system.NullReferenceException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("InvalidatePreview");
         } catch (JCNativeException jcne) {
@@ -175,7 +175,7 @@ public class PrintPreviewControl extends Control  {
 
     public void ResetBackColor() throws Throwable, system.InvalidOperationException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.security.SecurityException, system.componentmodel.Win32Exception, system.NullReferenceException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ResetBackColor");
         } catch (JCNativeException jcne) {
@@ -185,7 +185,7 @@ public class PrintPreviewControl extends Control  {
 
     public void ResetForeColor() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.componentmodel.Win32Exception, system.NullReferenceException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ResetForeColor");
         } catch (JCNativeException jcne) {
@@ -199,9 +199,13 @@ public class PrintPreviewControl extends Control  {
     
     public boolean getAutoZoom() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAutoZoom = null;
         try {
-            return (boolean)classInstance.Get("AutoZoom");
+            retObjectAutoZoom = classInstance.Get("AutoZoom");
+            return (boolean)retObjectAutoZoom;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAutoZoom != null ? retObjectAutoZoom.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -209,7 +213,7 @@ public class PrintPreviewControl extends Control  {
 
     public void setAutoZoom(boolean AutoZoom) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.NotSupportedException, system.security.SecurityException, system.NullReferenceException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AutoZoom", AutoZoom);
         } catch (JCNativeException jcne) {
@@ -219,9 +223,13 @@ public class PrintPreviewControl extends Control  {
 
     public boolean getUseAntiAlias() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUseAntiAlias = null;
         try {
-            return (boolean)classInstance.Get("UseAntiAlias");
+            retObjectUseAntiAlias = classInstance.Get("UseAntiAlias");
+            return (boolean)retObjectUseAntiAlias;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectUseAntiAlias != null ? retObjectUseAntiAlias.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -229,7 +237,7 @@ public class PrintPreviewControl extends Control  {
 
     public void setUseAntiAlias(boolean UseAntiAlias) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UseAntiAlias", UseAntiAlias);
         } catch (JCNativeException jcne) {
@@ -239,9 +247,20 @@ public class PrintPreviewControl extends Control  {
 
     public double getZoom() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectZoom = null;
         try {
-            return (double)classInstance.Get("Zoom");
+            retObjectZoom = classInstance.Get("Zoom");
+            return (double)retObjectZoom;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectZoom_ToString = retObjectZoom == null ? "null" : retObjectZoom.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectZoomNumber = (java.lang.Number)retObjectZoom;
+                return retObjectZoomNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectZoom != null ? retObjectZoom.getClass() : "null", retObjectZoom_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -249,7 +268,7 @@ public class PrintPreviewControl extends Control  {
 
     public void setZoom(double Zoom) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NullReferenceException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Zoom", Zoom);
         } catch (JCNativeException jcne) {
@@ -259,9 +278,20 @@ public class PrintPreviewControl extends Control  {
 
     public int getColumns() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectColumns = null;
         try {
-            return (int)classInstance.Get("Columns");
+            retObjectColumns = classInstance.Get("Columns");
+            return (int)retObjectColumns;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectColumns_ToString = retObjectColumns == null ? "null" : retObjectColumns.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectColumnsNumber = (java.lang.Number)retObjectColumns;
+                return retObjectColumnsNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectColumns != null ? retObjectColumns.getClass() : "null", retObjectColumns_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -269,7 +299,7 @@ public class PrintPreviewControl extends Control  {
 
     public void setColumns(int Columns) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NullReferenceException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Columns", Columns);
         } catch (JCNativeException jcne) {
@@ -279,9 +309,20 @@ public class PrintPreviewControl extends Control  {
 
     public int getRows() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRows = null;
         try {
-            return (int)classInstance.Get("Rows");
+            retObjectRows = classInstance.Get("Rows");
+            return (int)retObjectRows;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectRows_ToString = retObjectRows == null ? "null" : retObjectRows.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectRowsNumber = (java.lang.Number)retObjectRows;
+                return retObjectRowsNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectRows != null ? retObjectRows.getClass() : "null", retObjectRows_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -289,7 +330,7 @@ public class PrintPreviewControl extends Control  {
 
     public void setRows(int Rows) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NullReferenceException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Rows", Rows);
         } catch (JCNativeException jcne) {
@@ -299,9 +340,20 @@ public class PrintPreviewControl extends Control  {
 
     public int getStartPage() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStartPage = null;
         try {
-            return (int)classInstance.Get("StartPage");
+            retObjectStartPage = classInstance.Get("StartPage");
+            return (int)retObjectStartPage;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectStartPage_ToString = retObjectStartPage == null ? "null" : retObjectStartPage.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectStartPageNumber = (java.lang.Number)retObjectStartPage;
+                return retObjectStartPageNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectStartPage != null ? retObjectStartPage.getClass() : "null", retObjectStartPage_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -309,7 +361,7 @@ public class PrintPreviewControl extends Control  {
 
     public void setStartPage(int StartPage) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NullReferenceException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("StartPage", StartPage);
         } catch (JCNativeException jcne) {
@@ -319,10 +371,14 @@ public class PrintPreviewControl extends Control  {
 
     public PrintDocument getDocument() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDocument = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Document");
+            retObjectDocument = classInstance.Get("Document");
+            JCObject val = (JCObject)retObjectDocument;
             return new PrintDocument(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDocument != null ? retObjectDocument.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -330,7 +386,7 @@ public class PrintPreviewControl extends Control  {
 
     public void setDocument(PrintDocument Document) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.NotSupportedException, system.NullReferenceException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Document", Document == null ? null : Document.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -345,7 +401,7 @@ public class PrintPreviewControl extends Control  {
 
     public void addStartPageChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("StartPageChanged", handler);
         } catch (JCNativeException jcne) {
@@ -355,7 +411,7 @@ public class PrintPreviewControl extends Control  {
 
     public void removeStartPageChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("StartPageChanged", handler);
         } catch (JCNativeException jcne) {
@@ -365,7 +421,7 @@ public class PrintPreviewControl extends Control  {
 
     public void addTextChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("TextChanged", handler);
         } catch (JCNativeException jcne) {
@@ -375,7 +431,7 @@ public class PrintPreviewControl extends Control  {
 
     public void removeTextChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("TextChanged", handler);
         } catch (JCNativeException jcne) {

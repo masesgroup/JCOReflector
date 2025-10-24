@@ -165,9 +165,13 @@ public class InputMethod extends DispatcherObject  {
     
     public static boolean GetIsInputMethodEnabled(DependencyObject target) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetIsInputMethodEnabled = null;
         try {
-            return (boolean)classType.Invoke("GetIsInputMethodEnabled", target == null ? null : target.getJCOInstance());
+            retObjectGetIsInputMethodEnabled = classType.Invoke("GetIsInputMethodEnabled", target == null ? null : target.getJCOInstance());
+            return (boolean)retObjectGetIsInputMethodEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectGetIsInputMethodEnabled != null ? retObjectGetIsInputMethodEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -175,9 +179,13 @@ public class InputMethod extends DispatcherObject  {
 
     public static boolean GetIsInputMethodSuspended(DependencyObject target) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetIsInputMethodSuspended = null;
         try {
-            return (boolean)classType.Invoke("GetIsInputMethodSuspended", target == null ? null : target.getJCOInstance());
+            retObjectGetIsInputMethodSuspended = classType.Invoke("GetIsInputMethodSuspended", target == null ? null : target.getJCOInstance());
+            return (boolean)retObjectGetIsInputMethodSuspended;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectGetIsInputMethodSuspended != null ? retObjectGetIsInputMethodSuspended.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -185,10 +193,14 @@ public class InputMethod extends DispatcherObject  {
 
     public static ImeConversionModeValues GetPreferredImeConversionMode(DependencyObject target) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetPreferredImeConversionMode = null;
         try {
-            JCObject objGetPreferredImeConversionMode = (JCObject)classType.Invoke("GetPreferredImeConversionMode", target == null ? null : target.getJCOInstance());
+            retObjectGetPreferredImeConversionMode = classType.Invoke("GetPreferredImeConversionMode", target == null ? null : target.getJCOInstance());
+            JCObject objGetPreferredImeConversionMode = (JCObject)retObjectGetPreferredImeConversionMode;
             return new ImeConversionModeValues(objGetPreferredImeConversionMode);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetPreferredImeConversionMode != null ? retObjectGetPreferredImeConversionMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,10 +208,14 @@ public class InputMethod extends DispatcherObject  {
 
     public static ImeSentenceModeValues GetPreferredImeSentenceMode(DependencyObject target) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetPreferredImeSentenceMode = null;
         try {
-            JCObject objGetPreferredImeSentenceMode = (JCObject)classType.Invoke("GetPreferredImeSentenceMode", target == null ? null : target.getJCOInstance());
+            retObjectGetPreferredImeSentenceMode = classType.Invoke("GetPreferredImeSentenceMode", target == null ? null : target.getJCOInstance());
+            JCObject objGetPreferredImeSentenceMode = (JCObject)retObjectGetPreferredImeSentenceMode;
             return new ImeSentenceModeValues(objGetPreferredImeSentenceMode);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetPreferredImeSentenceMode != null ? retObjectGetPreferredImeSentenceMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -207,10 +223,14 @@ public class InputMethod extends DispatcherObject  {
 
     public static InputMethodState GetPreferredImeState(DependencyObject target) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetPreferredImeState = null;
         try {
-            JCObject objGetPreferredImeState = (JCObject)classType.Invoke("GetPreferredImeState", target == null ? null : target.getJCOInstance());
+            retObjectGetPreferredImeState = classType.Invoke("GetPreferredImeState", target == null ? null : target.getJCOInstance());
+            JCObject objGetPreferredImeState = (JCObject)retObjectGetPreferredImeState;
             return new InputMethodState(objGetPreferredImeState);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetPreferredImeState != null ? retObjectGetPreferredImeState.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -218,10 +238,14 @@ public class InputMethod extends DispatcherObject  {
 
     public static InputScope GetInputScope(DependencyObject target) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetInputScope = null;
         try {
-            JCObject objGetInputScope = (JCObject)classType.Invoke("GetInputScope", target == null ? null : target.getJCOInstance());
+            retObjectGetInputScope = classType.Invoke("GetInputScope", target == null ? null : target.getJCOInstance());
+            JCObject objGetInputScope = (JCObject)retObjectGetInputScope;
             return new InputScope(objGetInputScope);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetInputScope != null ? retObjectGetInputScope.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -229,7 +253,7 @@ public class InputMethod extends DispatcherObject  {
 
     public static void SetInputScope(DependencyObject target, InputScope value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetInputScope", target == null ? null : target.getJCOInstance(), value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -239,7 +263,7 @@ public class InputMethod extends DispatcherObject  {
 
     public static void SetIsInputMethodEnabled(DependencyObject target, boolean value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetIsInputMethodEnabled", target == null ? null : target.getJCOInstance(), value);
         } catch (JCNativeException jcne) {
@@ -249,7 +273,7 @@ public class InputMethod extends DispatcherObject  {
 
     public static void SetIsInputMethodSuspended(DependencyObject target, boolean value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetIsInputMethodSuspended", target == null ? null : target.getJCOInstance(), value);
         } catch (JCNativeException jcne) {
@@ -259,7 +283,7 @@ public class InputMethod extends DispatcherObject  {
 
     public static void SetPreferredImeConversionMode(DependencyObject target, ImeConversionModeValues value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetPreferredImeConversionMode", target == null ? null : target.getJCOInstance(), value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -269,7 +293,7 @@ public class InputMethod extends DispatcherObject  {
 
     public static void SetPreferredImeSentenceMode(DependencyObject target, ImeSentenceModeValues value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetPreferredImeSentenceMode", target == null ? null : target.getJCOInstance(), value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -279,7 +303,7 @@ public class InputMethod extends DispatcherObject  {
 
     public static void SetPreferredImeState(DependencyObject target, InputMethodState value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetPreferredImeState", target == null ? null : target.getJCOInstance(), value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -289,7 +313,7 @@ public class InputMethod extends DispatcherObject  {
 
     public void ShowConfigureUI() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.NotSupportedException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ShowConfigureUI");
         } catch (JCNativeException jcne) {
@@ -299,7 +323,7 @@ public class InputMethod extends DispatcherObject  {
 
     public void ShowConfigureUI(UIElement element) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.ArgumentNullException, system.componentmodel.Win32Exception, system.globalization.CultureNotFoundException, system.NotSupportedException, system.NullReferenceException, system.MulticastNotSupportedException, system.security.SecurityException, system.io.IOException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ShowConfigureUI", element == null ? null : element.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -309,7 +333,7 @@ public class InputMethod extends DispatcherObject  {
 
     public void ShowRegisterWordUI() throws Throwable, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.NotSupportedException, system.NullReferenceException, system.ArgumentException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ShowRegisterWordUI");
         } catch (JCNativeException jcne) {
@@ -319,7 +343,7 @@ public class InputMethod extends DispatcherObject  {
 
     public void ShowRegisterWordUI(java.lang.String registeredText) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.NotSupportedException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ShowRegisterWordUI", registeredText);
         } catch (JCNativeException jcne) {
@@ -329,7 +353,7 @@ public class InputMethod extends DispatcherObject  {
 
     public void ShowRegisterWordUI(UIElement element, java.lang.String registeredText) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.ArgumentNullException, system.componentmodel.Win32Exception, system.globalization.CultureNotFoundException, system.NotSupportedException, system.NullReferenceException, system.MulticastNotSupportedException, system.security.SecurityException, system.io.IOException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ShowRegisterWordUI", element == null ? null : element.getJCOInstance(), registeredText);
         } catch (JCNativeException jcne) {
@@ -343,9 +367,13 @@ public class InputMethod extends DispatcherObject  {
     
     public boolean getCanShowConfigurationUI() throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.ArgumentNullException, system.componentmodel.Win32Exception, system.globalization.CultureNotFoundException, system.NotSupportedException, system.NullReferenceException, system.MulticastNotSupportedException, system.security.SecurityException, system.io.IOException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanShowConfigurationUI = null;
         try {
-            return (boolean)classInstance.Get("CanShowConfigurationUI");
+            retObjectCanShowConfigurationUI = classInstance.Get("CanShowConfigurationUI");
+            return (boolean)retObjectCanShowConfigurationUI;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCanShowConfigurationUI != null ? retObjectCanShowConfigurationUI.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -353,9 +381,13 @@ public class InputMethod extends DispatcherObject  {
 
     public boolean getCanShowRegisterWordUI() throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.ArgumentNullException, system.componentmodel.Win32Exception, system.globalization.CultureNotFoundException, system.NotSupportedException, system.NullReferenceException, system.MulticastNotSupportedException, system.security.SecurityException, system.io.IOException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanShowRegisterWordUI = null;
         try {
-            return (boolean)classInstance.Get("CanShowRegisterWordUI");
+            retObjectCanShowRegisterWordUI = classInstance.Get("CanShowRegisterWordUI");
+            return (boolean)retObjectCanShowRegisterWordUI;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCanShowRegisterWordUI != null ? retObjectCanShowRegisterWordUI.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -363,10 +395,14 @@ public class InputMethod extends DispatcherObject  {
 
     public ImeConversionModeValues getImeConversionMode() throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.SecurityException, system.ArrayTypeMismatchException, system.io.IOException, system.UnauthorizedAccessException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectImeConversionMode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ImeConversionMode");
+            retObjectImeConversionMode = classInstance.Get("ImeConversionMode");
+            JCObject val = (JCObject)retObjectImeConversionMode;
             return new ImeConversionModeValues(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectImeConversionMode != null ? retObjectImeConversionMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -374,7 +410,7 @@ public class InputMethod extends DispatcherObject  {
 
     public void setImeConversionMode(ImeConversionModeValues ImeConversionMode) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ImeConversionMode", ImeConversionMode == null ? null : ImeConversionMode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -384,10 +420,14 @@ public class InputMethod extends DispatcherObject  {
 
     public ImeSentenceModeValues getImeSentenceMode() throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.SecurityException, system.ArrayTypeMismatchException, system.io.IOException, system.UnauthorizedAccessException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectImeSentenceMode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ImeSentenceMode");
+            retObjectImeSentenceMode = classInstance.Get("ImeSentenceMode");
+            JCObject val = (JCObject)retObjectImeSentenceMode;
             return new ImeSentenceModeValues(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectImeSentenceMode != null ? retObjectImeSentenceMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -395,7 +435,7 @@ public class InputMethod extends DispatcherObject  {
 
     public void setImeSentenceMode(ImeSentenceModeValues ImeSentenceMode) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidCastException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.MulticastNotSupportedException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ImeSentenceMode", ImeSentenceMode == null ? null : ImeSentenceMode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -405,10 +445,14 @@ public class InputMethod extends DispatcherObject  {
 
     public static InputMethod getCurrent() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCurrent = null;
         try {
-            JCObject val = (JCObject)classType.Get("Current");
+            retObjectCurrent = classType.Get("Current");
+            JCObject val = (JCObject)retObjectCurrent;
             return new InputMethod(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCurrent != null ? retObjectCurrent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -416,10 +460,14 @@ public class InputMethod extends DispatcherObject  {
 
     public InputMethodState getHandwritingState() throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.SecurityException, system.ArrayTypeMismatchException, system.io.IOException, system.UnauthorizedAccessException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHandwritingState = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("HandwritingState");
+            retObjectHandwritingState = classInstance.Get("HandwritingState");
+            JCObject val = (JCObject)retObjectHandwritingState;
             return new InputMethodState(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHandwritingState != null ? retObjectHandwritingState.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -427,7 +475,7 @@ public class InputMethod extends DispatcherObject  {
 
     public void setHandwritingState(InputMethodState HandwritingState) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.SecurityException, system.ArrayTypeMismatchException, system.io.IOException, system.UnauthorizedAccessException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("HandwritingState", HandwritingState == null ? null : HandwritingState.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -437,10 +485,14 @@ public class InputMethod extends DispatcherObject  {
 
     public InputMethodState getImeState() throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.SecurityException, system.ArrayTypeMismatchException, system.io.IOException, system.UnauthorizedAccessException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectImeState = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ImeState");
+            retObjectImeState = classInstance.Get("ImeState");
+            JCObject val = (JCObject)retObjectImeState;
             return new InputMethodState(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectImeState != null ? retObjectImeState.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -448,7 +500,7 @@ public class InputMethod extends DispatcherObject  {
 
     public void setImeState(InputMethodState ImeState) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.SecurityException, system.ArrayTypeMismatchException, system.io.IOException, system.UnauthorizedAccessException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ImeState", ImeState == null ? null : ImeState.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -458,10 +510,14 @@ public class InputMethod extends DispatcherObject  {
 
     public InputMethodState getMicrophoneState() throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.SecurityException, system.ArrayTypeMismatchException, system.io.IOException, system.UnauthorizedAccessException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMicrophoneState = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MicrophoneState");
+            retObjectMicrophoneState = classInstance.Get("MicrophoneState");
+            JCObject val = (JCObject)retObjectMicrophoneState;
             return new InputMethodState(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMicrophoneState != null ? retObjectMicrophoneState.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -469,7 +525,7 @@ public class InputMethod extends DispatcherObject  {
 
     public void setMicrophoneState(InputMethodState MicrophoneState) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.SecurityException, system.ArrayTypeMismatchException, system.io.IOException, system.UnauthorizedAccessException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MicrophoneState", MicrophoneState == null ? null : MicrophoneState.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -479,10 +535,14 @@ public class InputMethod extends DispatcherObject  {
 
     public SpeechMode getSpeechMode() throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.SecurityException, system.ArrayTypeMismatchException, system.io.IOException, system.UnauthorizedAccessException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSpeechMode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SpeechMode");
+            retObjectSpeechMode = classInstance.Get("SpeechMode");
+            JCObject val = (JCObject)retObjectSpeechMode;
             return new SpeechMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSpeechMode != null ? retObjectSpeechMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -490,7 +550,7 @@ public class InputMethod extends DispatcherObject  {
 
     public void setSpeechMode(SpeechMode SpeechMode) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.SecurityException, system.ArrayTypeMismatchException, system.io.IOException, system.UnauthorizedAccessException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SpeechMode", SpeechMode == null ? null : SpeechMode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -505,7 +565,7 @@ public class InputMethod extends DispatcherObject  {
 
     public void addStateChanged(InputMethodStateChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("StateChanged", handler);
         } catch (JCNativeException jcne) {
@@ -515,7 +575,7 @@ public class InputMethod extends DispatcherObject  {
 
     public void removeStateChanged(InputMethodStateChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("StateChanged", handler);
         } catch (JCNativeException jcne) {

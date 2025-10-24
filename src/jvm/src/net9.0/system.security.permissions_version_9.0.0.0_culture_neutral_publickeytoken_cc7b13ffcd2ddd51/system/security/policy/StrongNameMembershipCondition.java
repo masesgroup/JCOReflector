@@ -172,9 +172,13 @@ public class StrongNameMembershipCondition extends NetObject  {
     
     public boolean Check(Evidence evidence) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCheck = null;
         try {
-            return (boolean)classInstance.Invoke("Check", evidence == null ? null : evidence.getJCOInstance());
+            retObjectCheck = classInstance.Invoke("Check", evidence == null ? null : evidence.getJCOInstance());
+            return (boolean)retObjectCheck;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCheck != null ? retObjectCheck.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,10 +186,14 @@ public class StrongNameMembershipCondition extends NetObject  {
 
     public IMembershipCondition Copy() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCopy = null;
         try {
-            JCObject objCopy = (JCObject)classInstance.Invoke("Copy");
+            retObjectCopy = classInstance.Invoke("Copy");
+            JCObject objCopy = (JCObject)retObjectCopy;
             return new IMembershipConditionImplementation(objCopy);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCopy != null ? retObjectCopy.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,10 +201,14 @@ public class StrongNameMembershipCondition extends NetObject  {
 
     public SecurityElement ToXml() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToXml = null;
         try {
-            JCObject objToXml = (JCObject)classInstance.Invoke("ToXml");
+            retObjectToXml = classInstance.Invoke("ToXml");
+            JCObject objToXml = (JCObject)retObjectToXml;
             return new SecurityElement(objToXml);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToXml != null ? retObjectToXml.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -204,10 +216,14 @@ public class StrongNameMembershipCondition extends NetObject  {
 
     public SecurityElement ToXml(PolicyLevel level) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToXml = null;
         try {
-            JCObject objToXml = (JCObject)classInstance.Invoke("ToXml", level == null ? null : level.getJCOInstance());
+            retObjectToXml = classInstance.Invoke("ToXml", level == null ? null : level.getJCOInstance());
+            JCObject objToXml = (JCObject)retObjectToXml;
             return new SecurityElement(objToXml);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToXml != null ? retObjectToXml.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -215,7 +231,7 @@ public class StrongNameMembershipCondition extends NetObject  {
 
     public void FromXml(SecurityElement e, PolicyLevel level) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("FromXml", e == null ? null : e.getJCOInstance(), level == null ? null : level.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -225,7 +241,7 @@ public class StrongNameMembershipCondition extends NetObject  {
 
     public void FromXml(SecurityElement e) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("FromXml", e == null ? null : e.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -239,10 +255,14 @@ public class StrongNameMembershipCondition extends NetObject  {
     
     public StrongNamePublicKeyBlob getPublicKey() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPublicKey = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PublicKey");
+            retObjectPublicKey = classInstance.Get("PublicKey");
+            JCObject val = (JCObject)retObjectPublicKey;
             return new StrongNamePublicKeyBlob(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPublicKey != null ? retObjectPublicKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -250,7 +270,7 @@ public class StrongNameMembershipCondition extends NetObject  {
 
     public void setPublicKey(StrongNamePublicKeyBlob PublicKey) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PublicKey", PublicKey == null ? null : PublicKey.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -260,9 +280,13 @@ public class StrongNameMembershipCondition extends NetObject  {
 
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectName = null;
         try {
-            return (java.lang.String)classInstance.Get("Name");
+            retObjectName = classInstance.Get("Name");
+            return (java.lang.String)retObjectName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectName != null ? retObjectName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -270,7 +294,7 @@ public class StrongNameMembershipCondition extends NetObject  {
 
     public void setName(java.lang.String Name) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Name", Name);
         } catch (JCNativeException jcne) {
@@ -280,10 +304,14 @@ public class StrongNameMembershipCondition extends NetObject  {
 
     public Version getVersion() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVersion = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Version");
+            retObjectVersion = classInstance.Get("Version");
+            JCObject val = (JCObject)retObjectVersion;
             return new Version(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVersion != null ? retObjectVersion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -291,7 +319,7 @@ public class StrongNameMembershipCondition extends NetObject  {
 
     public void setVersion(Version Version) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Version", Version == null ? null : Version.getJCOInstance());
         } catch (JCNativeException jcne) {

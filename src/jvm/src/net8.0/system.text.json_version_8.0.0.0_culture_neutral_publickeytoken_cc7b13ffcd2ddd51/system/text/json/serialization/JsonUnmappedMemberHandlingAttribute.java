@@ -171,10 +171,14 @@ public class JsonUnmappedMemberHandlingAttribute extends JsonAttribute  {
     
     public JsonUnmappedMemberHandling getUnmappedMemberHandling() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUnmappedMemberHandling = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("UnmappedMemberHandling");
+            retObjectUnmappedMemberHandling = classInstance.Get("UnmappedMemberHandling");
+            JCObject val = (JCObject)retObjectUnmappedMemberHandling;
             return new JsonUnmappedMemberHandling(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUnmappedMemberHandling != null ? retObjectUnmappedMemberHandling.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

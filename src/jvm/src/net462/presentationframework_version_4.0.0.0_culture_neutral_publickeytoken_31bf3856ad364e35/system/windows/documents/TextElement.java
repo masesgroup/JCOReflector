@@ -165,9 +165,20 @@ public class TextElement extends FrameworkContentElement implements system.windo
     
     public static double GetFontSize(DependencyObject element) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetFontSize = null;
         try {
-            return (double)classType.Invoke("GetFontSize", element == null ? null : element.getJCOInstance());
+            retObjectGetFontSize = classType.Invoke("GetFontSize", element == null ? null : element.getJCOInstance());
+            return (double)retObjectGetFontSize;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetFontSize_ToString = retObjectGetFontSize == null ? "null" : retObjectGetFontSize.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetFontSizeNumber = (java.lang.Number)retObjectGetFontSize;
+                return retObjectGetFontSizeNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectGetFontSize != null ? retObjectGetFontSize.getClass() : "null", retObjectGetFontSize_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -175,10 +186,14 @@ public class TextElement extends FrameworkContentElement implements system.windo
 
     public static FontStretch GetFontStretch(DependencyObject element) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetFontStretch = null;
         try {
-            JCObject objGetFontStretch = (JCObject)classType.Invoke("GetFontStretch", element == null ? null : element.getJCOInstance());
+            retObjectGetFontStretch = classType.Invoke("GetFontStretch", element == null ? null : element.getJCOInstance());
+            JCObject objGetFontStretch = (JCObject)retObjectGetFontStretch;
             return new FontStretch(objGetFontStretch);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetFontStretch != null ? retObjectGetFontStretch.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,10 +201,14 @@ public class TextElement extends FrameworkContentElement implements system.windo
 
     public static FontStyle GetFontStyle(DependencyObject element) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetFontStyle = null;
         try {
-            JCObject objGetFontStyle = (JCObject)classType.Invoke("GetFontStyle", element == null ? null : element.getJCOInstance());
+            retObjectGetFontStyle = classType.Invoke("GetFontStyle", element == null ? null : element.getJCOInstance());
+            JCObject objGetFontStyle = (JCObject)retObjectGetFontStyle;
             return new FontStyle(objGetFontStyle);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetFontStyle != null ? retObjectGetFontStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,10 +216,14 @@ public class TextElement extends FrameworkContentElement implements system.windo
 
     public static FontWeight GetFontWeight(DependencyObject element) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetFontWeight = null;
         try {
-            JCObject objGetFontWeight = (JCObject)classType.Invoke("GetFontWeight", element == null ? null : element.getJCOInstance());
+            retObjectGetFontWeight = classType.Invoke("GetFontWeight", element == null ? null : element.getJCOInstance());
+            JCObject objGetFontWeight = (JCObject)retObjectGetFontWeight;
             return new FontWeight(objGetFontWeight);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetFontWeight != null ? retObjectGetFontWeight.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -208,10 +231,14 @@ public class TextElement extends FrameworkContentElement implements system.windo
 
     public static Brush GetForeground(DependencyObject element) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetForeground = null;
         try {
-            JCObject objGetForeground = (JCObject)classType.Invoke("GetForeground", element == null ? null : element.getJCOInstance());
+            retObjectGetForeground = classType.Invoke("GetForeground", element == null ? null : element.getJCOInstance());
+            JCObject objGetForeground = (JCObject)retObjectGetForeground;
             return new Brush(objGetForeground);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetForeground != null ? retObjectGetForeground.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -219,10 +246,14 @@ public class TextElement extends FrameworkContentElement implements system.windo
 
     public static FontFamily GetFontFamily(DependencyObject element) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetFontFamily = null;
         try {
-            JCObject objGetFontFamily = (JCObject)classType.Invoke("GetFontFamily", element == null ? null : element.getJCOInstance());
+            retObjectGetFontFamily = classType.Invoke("GetFontFamily", element == null ? null : element.getJCOInstance());
+            JCObject objGetFontFamily = (JCObject)retObjectGetFontFamily;
             return new FontFamily(objGetFontFamily);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetFontFamily != null ? retObjectGetFontFamily.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -230,7 +261,7 @@ public class TextElement extends FrameworkContentElement implements system.windo
 
     public static void SetFontFamily(DependencyObject element, FontFamily value) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetFontFamily", element == null ? null : element.getJCOInstance(), value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -240,7 +271,7 @@ public class TextElement extends FrameworkContentElement implements system.windo
 
     public static void SetFontSize(DependencyObject element, double value) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetFontSize", element == null ? null : element.getJCOInstance(), value);
         } catch (JCNativeException jcne) {
@@ -250,7 +281,7 @@ public class TextElement extends FrameworkContentElement implements system.windo
 
     public static void SetFontStretch(DependencyObject element, FontStretch value) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetFontStretch", element == null ? null : element.getJCOInstance(), value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -260,7 +291,7 @@ public class TextElement extends FrameworkContentElement implements system.windo
 
     public static void SetFontStyle(DependencyObject element, FontStyle value) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetFontStyle", element == null ? null : element.getJCOInstance(), value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -270,7 +301,7 @@ public class TextElement extends FrameworkContentElement implements system.windo
 
     public static void SetFontWeight(DependencyObject element, FontWeight value) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetFontWeight", element == null ? null : element.getJCOInstance(), value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -280,7 +311,7 @@ public class TextElement extends FrameworkContentElement implements system.windo
 
     public static void SetForeground(DependencyObject element, Brush value) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetForeground", element == null ? null : element.getJCOInstance(), value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -294,7 +325,7 @@ public class TextElement extends FrameworkContentElement implements system.windo
      */
     @Deprecated 
     public void AddChild(NetObject value) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAddChild to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAddChild to obtain the full interface.");
     }
 
     /**
@@ -303,7 +334,7 @@ public class TextElement extends FrameworkContentElement implements system.windo
      */
     @Deprecated 
     public void AddText(java.lang.String text) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAddChild to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAddChild to obtain the full interface.");
     }
 
 
@@ -312,9 +343,20 @@ public class TextElement extends FrameworkContentElement implements system.windo
     
     public double getFontSize() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFontSize = null;
         try {
-            return (double)classInstance.Get("FontSize");
+            retObjectFontSize = classInstance.Get("FontSize");
+            return (double)retObjectFontSize;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectFontSize_ToString = retObjectFontSize == null ? "null" : retObjectFontSize.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectFontSizeNumber = (java.lang.Number)retObjectFontSize;
+                return retObjectFontSizeNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectFontSize != null ? retObjectFontSize.getClass() : "null", retObjectFontSize_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -322,7 +364,7 @@ public class TextElement extends FrameworkContentElement implements system.windo
 
     public void setFontSize(double FontSize) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FontSize", FontSize);
         } catch (JCNativeException jcne) {
@@ -332,10 +374,14 @@ public class TextElement extends FrameworkContentElement implements system.windo
 
     public TextPointer getContentEnd() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentNullException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContentEnd = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ContentEnd");
+            retObjectContentEnd = classInstance.Get("ContentEnd");
+            JCObject val = (JCObject)retObjectContentEnd;
             return new TextPointer(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContentEnd != null ? retObjectContentEnd.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -343,10 +389,14 @@ public class TextElement extends FrameworkContentElement implements system.windo
 
     public TextPointer getContentStart() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentNullException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContentStart = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ContentStart");
+            retObjectContentStart = classInstance.Get("ContentStart");
+            JCObject val = (JCObject)retObjectContentStart;
             return new TextPointer(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContentStart != null ? retObjectContentStart.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -354,10 +404,14 @@ public class TextElement extends FrameworkContentElement implements system.windo
 
     public TextPointer getElementEnd() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentNullException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectElementEnd = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ElementEnd");
+            retObjectElementEnd = classInstance.Get("ElementEnd");
+            JCObject val = (JCObject)retObjectElementEnd;
             return new TextPointer(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectElementEnd != null ? retObjectElementEnd.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -365,10 +419,14 @@ public class TextElement extends FrameworkContentElement implements system.windo
 
     public TextPointer getElementStart() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentNullException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectElementStart = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ElementStart");
+            retObjectElementStart = classInstance.Get("ElementStart");
+            JCObject val = (JCObject)retObjectElementStart;
             return new TextPointer(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectElementStart != null ? retObjectElementStart.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -376,10 +434,14 @@ public class TextElement extends FrameworkContentElement implements system.windo
 
     public Typography getTypography() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTypography = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Typography");
+            retObjectTypography = classInstance.Get("Typography");
+            JCObject val = (JCObject)retObjectTypography;
             return new Typography(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTypography != null ? retObjectTypography.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -387,10 +449,14 @@ public class TextElement extends FrameworkContentElement implements system.windo
 
     public FontStretch getFontStretch() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFontStretch = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("FontStretch");
+            retObjectFontStretch = classInstance.Get("FontStretch");
+            JCObject val = (JCObject)retObjectFontStretch;
             return new FontStretch(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFontStretch != null ? retObjectFontStretch.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -398,7 +464,7 @@ public class TextElement extends FrameworkContentElement implements system.windo
 
     public void setFontStretch(FontStretch FontStretch) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FontStretch", FontStretch == null ? null : FontStretch.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -408,10 +474,14 @@ public class TextElement extends FrameworkContentElement implements system.windo
 
     public FontStyle getFontStyle() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFontStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("FontStyle");
+            retObjectFontStyle = classInstance.Get("FontStyle");
+            JCObject val = (JCObject)retObjectFontStyle;
             return new FontStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFontStyle != null ? retObjectFontStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -419,7 +489,7 @@ public class TextElement extends FrameworkContentElement implements system.windo
 
     public void setFontStyle(FontStyle FontStyle) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FontStyle", FontStyle == null ? null : FontStyle.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -429,10 +499,14 @@ public class TextElement extends FrameworkContentElement implements system.windo
 
     public FontWeight getFontWeight() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFontWeight = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("FontWeight");
+            retObjectFontWeight = classInstance.Get("FontWeight");
+            JCObject val = (JCObject)retObjectFontWeight;
             return new FontWeight(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFontWeight != null ? retObjectFontWeight.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -440,7 +514,7 @@ public class TextElement extends FrameworkContentElement implements system.windo
 
     public void setFontWeight(FontWeight FontWeight) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FontWeight", FontWeight == null ? null : FontWeight.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -450,10 +524,14 @@ public class TextElement extends FrameworkContentElement implements system.windo
 
     public Brush getBackground() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBackground = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Background");
+            retObjectBackground = classInstance.Get("Background");
+            JCObject val = (JCObject)retObjectBackground;
             return new Brush(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBackground != null ? retObjectBackground.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -461,7 +539,7 @@ public class TextElement extends FrameworkContentElement implements system.windo
 
     public void setBackground(Brush Background) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Background", Background == null ? null : Background.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -471,10 +549,14 @@ public class TextElement extends FrameworkContentElement implements system.windo
 
     public Brush getForeground() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectForeground = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Foreground");
+            retObjectForeground = classInstance.Get("Foreground");
+            JCObject val = (JCObject)retObjectForeground;
             return new Brush(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectForeground != null ? retObjectForeground.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -482,7 +564,7 @@ public class TextElement extends FrameworkContentElement implements system.windo
 
     public void setForeground(Brush Foreground) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Foreground", Foreground == null ? null : Foreground.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -492,10 +574,14 @@ public class TextElement extends FrameworkContentElement implements system.windo
 
     public FontFamily getFontFamily() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFontFamily = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("FontFamily");
+            retObjectFontFamily = classInstance.Get("FontFamily");
+            JCObject val = (JCObject)retObjectFontFamily;
             return new FontFamily(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFontFamily != null ? retObjectFontFamily.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -503,7 +589,7 @@ public class TextElement extends FrameworkContentElement implements system.windo
 
     public void setFontFamily(FontFamily FontFamily) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FontFamily", FontFamily == null ? null : FontFamily.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -513,10 +599,14 @@ public class TextElement extends FrameworkContentElement implements system.windo
 
     public TextEffectCollection getTextEffects() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTextEffects = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TextEffects");
+            retObjectTextEffects = classInstance.Get("TextEffects");
+            JCObject val = (JCObject)retObjectTextEffects;
             return new TextEffectCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTextEffects != null ? retObjectTextEffects.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -524,7 +614,7 @@ public class TextElement extends FrameworkContentElement implements system.windo
 
     public void setTextEffects(TextEffectCollection TextEffects) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TextEffects", TextEffects == null ? null : TextEffects.getJCOInstance());
         } catch (JCNativeException jcne) {

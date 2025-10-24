@@ -170,9 +170,13 @@ public class SetStateEventArgs extends EventArgs  {
     
     public java.lang.String getTargetStateName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTargetStateName = null;
         try {
-            return (java.lang.String)classInstance.Get("TargetStateName");
+            retObjectTargetStateName = classInstance.Get("TargetStateName");
+            return (java.lang.String)retObjectTargetStateName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectTargetStateName != null ? retObjectTargetStateName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

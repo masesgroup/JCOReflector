@@ -162,9 +162,13 @@ public class FormatUrl extends TaskExtension  {
     
     public boolean Execute() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.UriFormatException, system.globalization.CultureNotFoundException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExecute = null;
         try {
-            return (boolean)classInstance.Invoke("Execute");
+            retObjectExecute = classInstance.Invoke("Execute");
+            return (boolean)retObjectExecute;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectExecute != null ? retObjectExecute.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,9 +180,13 @@ public class FormatUrl extends TaskExtension  {
     
     public java.lang.String getInputUrl() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInputUrl = null;
         try {
-            return (java.lang.String)classInstance.Get("InputUrl");
+            retObjectInputUrl = classInstance.Get("InputUrl");
+            return (java.lang.String)retObjectInputUrl;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectInputUrl != null ? retObjectInputUrl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,7 +194,7 @@ public class FormatUrl extends TaskExtension  {
 
     public void setInputUrl(java.lang.String InputUrl) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("InputUrl", InputUrl);
         } catch (JCNativeException jcne) {
@@ -196,9 +204,13 @@ public class FormatUrl extends TaskExtension  {
 
     public java.lang.String getOutputUrl() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOutputUrl = null;
         try {
-            return (java.lang.String)classInstance.Get("OutputUrl");
+            retObjectOutputUrl = classInstance.Get("OutputUrl");
+            return (java.lang.String)retObjectOutputUrl;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectOutputUrl != null ? retObjectOutputUrl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -206,7 +218,7 @@ public class FormatUrl extends TaskExtension  {
 
     public void setOutputUrl(java.lang.String OutputUrl) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("OutputUrl", OutputUrl);
         } catch (JCNativeException jcne) {

@@ -155,10 +155,14 @@ public class IXpsFixedPageWriterImplementation extends NetObject implements IXps
     
     public XpsColorContext AddColorContext() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddColorContext = null;
         try {
-            JCObject objAddColorContext = (JCObject)classInstance.Invoke("AddColorContext");
+            retObjectAddColorContext = classInstance.Invoke("AddColorContext");
+            JCObject objAddColorContext = (JCObject)retObjectAddColorContext;
             return new XpsColorContext(objAddColorContext);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddColorContext != null ? retObjectAddColorContext.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -166,10 +170,14 @@ public class IXpsFixedPageWriterImplementation extends NetObject implements IXps
 
     public XpsFont AddFont() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddFont = null;
         try {
-            JCObject objAddFont = (JCObject)classInstance.Invoke("AddFont");
+            retObjectAddFont = classInstance.Invoke("AddFont");
+            JCObject objAddFont = (JCObject)retObjectAddFont;
             return new XpsFont(objAddFont);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddFont != null ? retObjectAddFont.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,10 +185,14 @@ public class IXpsFixedPageWriterImplementation extends NetObject implements IXps
 
     public XpsFont AddFont(boolean obfuscate) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddFont = null;
         try {
-            JCObject objAddFont = (JCObject)classInstance.Invoke("AddFont", obfuscate);
+            retObjectAddFont = classInstance.Invoke("AddFont", obfuscate);
+            JCObject objAddFont = (JCObject)retObjectAddFont;
             return new XpsFont(objAddFont);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddFont != null ? retObjectAddFont.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,10 +200,14 @@ public class IXpsFixedPageWriterImplementation extends NetObject implements IXps
 
     public XpsFont AddFont(boolean obfuscate, boolean addRestrictedRelationship) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddFont = null;
         try {
-            JCObject objAddFont = (JCObject)classInstance.Invoke("AddFont", obfuscate, addRestrictedRelationship);
+            retObjectAddFont = classInstance.Invoke("AddFont", obfuscate, addRestrictedRelationship);
+            JCObject objAddFont = (JCObject)retObjectAddFont;
             return new XpsFont(objAddFont);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddFont != null ? retObjectAddFont.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -199,10 +215,14 @@ public class IXpsFixedPageWriterImplementation extends NetObject implements IXps
 
     public XpsImage AddImage(java.lang.String mimeType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddImage = null;
         try {
-            JCObject objAddImage = (JCObject)classInstance.Invoke("AddImage", mimeType);
+            retObjectAddImage = classInstance.Invoke("AddImage", mimeType);
+            JCObject objAddImage = (JCObject)retObjectAddImage;
             return new XpsImage(objAddImage);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddImage != null ? retObjectAddImage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -210,10 +230,14 @@ public class IXpsFixedPageWriterImplementation extends NetObject implements IXps
 
     public XpsImage AddImage(XpsImageType imageType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddImage = null;
         try {
-            JCObject objAddImage = (JCObject)classInstance.Invoke("AddImage", imageType == null ? null : imageType.getJCOInstance());
+            retObjectAddImage = classInstance.Invoke("AddImage", imageType == null ? null : imageType.getJCOInstance());
+            JCObject objAddImage = (JCObject)retObjectAddImage;
             return new XpsImage(objAddImage);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddImage != null ? retObjectAddImage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -221,10 +245,14 @@ public class IXpsFixedPageWriterImplementation extends NetObject implements IXps
 
     public XpsResource AddResource(NetType resourceType, Uri resourceUri) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddResource = null;
         try {
-            JCObject objAddResource = (JCObject)classInstance.Invoke("AddResource", resourceType == null ? null : resourceType.getJCOInstance(), resourceUri == null ? null : resourceUri.getJCOInstance());
+            retObjectAddResource = classInstance.Invoke("AddResource", resourceType == null ? null : resourceType.getJCOInstance(), resourceUri == null ? null : resourceUri.getJCOInstance());
+            JCObject objAddResource = (JCObject)retObjectAddResource;
             return new XpsResource(objAddResource);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddResource != null ? retObjectAddResource.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -232,10 +260,14 @@ public class IXpsFixedPageWriterImplementation extends NetObject implements IXps
 
     public XpsResourceDictionary AddResourceDictionary() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddResourceDictionary = null;
         try {
-            JCObject objAddResourceDictionary = (JCObject)classInstance.Invoke("AddResourceDictionary");
+            retObjectAddResourceDictionary = classInstance.Invoke("AddResourceDictionary");
+            JCObject objAddResourceDictionary = (JCObject)retObjectAddResourceDictionary;
             return new XpsResourceDictionary(objAddResourceDictionary);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddResourceDictionary != null ? retObjectAddResourceDictionary.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -243,10 +275,14 @@ public class IXpsFixedPageWriterImplementation extends NetObject implements IXps
 
     public XpsStructure AddStoryFragment() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddStoryFragment = null;
         try {
-            JCObject objAddStoryFragment = (JCObject)classInstance.Invoke("AddStoryFragment");
+            retObjectAddStoryFragment = classInstance.Invoke("AddStoryFragment");
+            JCObject objAddStoryFragment = (JCObject)retObjectAddStoryFragment;
             return new XpsStructure(objAddStoryFragment);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddStoryFragment != null ? retObjectAddStoryFragment.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -254,10 +290,14 @@ public class IXpsFixedPageWriterImplementation extends NetObject implements IXps
 
     public XpsThumbnail AddThumbnail(XpsImageType imageType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddThumbnail = null;
         try {
-            JCObject objAddThumbnail = (JCObject)classInstance.Invoke("AddThumbnail", imageType == null ? null : imageType.getJCOInstance());
+            retObjectAddThumbnail = classInstance.Invoke("AddThumbnail", imageType == null ? null : imageType.getJCOInstance());
+            JCObject objAddThumbnail = (JCObject)retObjectAddThumbnail;
             return new XpsThumbnail(objAddThumbnail);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddThumbnail != null ? retObjectAddThumbnail.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -265,7 +305,7 @@ public class IXpsFixedPageWriterImplementation extends NetObject implements IXps
 
     public void Commit() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Commit");
         } catch (JCNativeException jcne) {
@@ -279,9 +319,20 @@ public class IXpsFixedPageWriterImplementation extends NetObject implements IXps
     
     public int getPageNumber() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPageNumber = null;
         try {
-            return (int)classInstance.Get("PageNumber");
+            retObjectPageNumber = classInstance.Get("PageNumber");
+            return (int)retObjectPageNumber;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectPageNumber_ToString = retObjectPageNumber == null ? "null" : retObjectPageNumber.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectPageNumberNumber = (java.lang.Number)retObjectPageNumber;
+                return retObjectPageNumberNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectPageNumber != null ? retObjectPageNumber.getClass() : "null", retObjectPageNumber_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -289,7 +340,7 @@ public class IXpsFixedPageWriterImplementation extends NetObject implements IXps
 
     public void setPrintTicket(PrintTicket PrintTicket) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PrintTicket", PrintTicket == null ? null : PrintTicket.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -299,10 +350,14 @@ public class IXpsFixedPageWriterImplementation extends NetObject implements IXps
 
     public Uri getUri() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUri = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Uri");
+            retObjectUri = classInstance.Get("Uri");
+            JCObject val = (JCObject)retObjectUri;
             return new Uri(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUri != null ? retObjectUri.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -310,10 +365,14 @@ public class IXpsFixedPageWriterImplementation extends NetObject implements IXps
 
     public XmlWriter getXmlWriter() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectXmlWriter = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("XmlWriter");
+            retObjectXmlWriter = classInstance.Get("XmlWriter");
+            JCObject val = (JCObject)retObjectXmlWriter;
             return new XmlWriter(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectXmlWriter != null ? retObjectXmlWriter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

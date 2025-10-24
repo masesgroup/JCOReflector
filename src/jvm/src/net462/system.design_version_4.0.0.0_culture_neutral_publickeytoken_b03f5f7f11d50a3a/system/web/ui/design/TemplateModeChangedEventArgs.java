@@ -171,10 +171,14 @@ public class TemplateModeChangedEventArgs extends EventArgs  {
     
     public TemplateGroup getNewTemplateGroup() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNewTemplateGroup = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("NewTemplateGroup");
+            retObjectNewTemplateGroup = classInstance.Get("NewTemplateGroup");
+            JCObject val = (JCObject)retObjectNewTemplateGroup;
             return new TemplateGroup(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNewTemplateGroup != null ? retObjectNewTemplateGroup.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

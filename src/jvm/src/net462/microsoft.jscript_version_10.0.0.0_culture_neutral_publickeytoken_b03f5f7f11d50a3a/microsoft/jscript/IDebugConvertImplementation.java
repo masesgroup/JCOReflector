@@ -150,10 +150,14 @@ public class IDebugConvertImplementation extends NetObject implements IDebugConv
     
     public NetObject GetManagedCharObject(UInt16 i) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetManagedCharObject = null;
         try {
-            JCObject objGetManagedCharObject = (JCObject)classInstance.Invoke("GetManagedCharObject", i == null ? null : i.getJCOInstance());
+            retObjectGetManagedCharObject = classInstance.Invoke("GetManagedCharObject", i == null ? null : i.getJCOInstance());
+            JCObject objGetManagedCharObject = (JCObject)retObjectGetManagedCharObject;
             return new NetObject(objGetManagedCharObject);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetManagedCharObject != null ? retObjectGetManagedCharObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -161,10 +165,14 @@ public class IDebugConvertImplementation extends NetObject implements IDebugConv
 
     public NetObject GetManagedInt64Object(long i) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetManagedInt64Object = null;
         try {
-            JCObject objGetManagedInt64Object = (JCObject)classInstance.Invoke("GetManagedInt64Object", i);
+            retObjectGetManagedInt64Object = classInstance.Invoke("GetManagedInt64Object", i);
+            JCObject objGetManagedInt64Object = (JCObject)retObjectGetManagedInt64Object;
             return new NetObject(objGetManagedInt64Object);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetManagedInt64Object != null ? retObjectGetManagedInt64Object.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,10 +180,14 @@ public class IDebugConvertImplementation extends NetObject implements IDebugConv
 
     public NetObject GetManagedObject(NetObject value) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetManagedObject = null;
         try {
-            JCObject objGetManagedObject = (JCObject)classInstance.Invoke("GetManagedObject", value == null ? null : value.getJCOInstance());
+            retObjectGetManagedObject = classInstance.Invoke("GetManagedObject", value == null ? null : value.getJCOInstance());
+            JCObject objGetManagedObject = (JCObject)retObjectGetManagedObject;
             return new NetObject(objGetManagedObject);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetManagedObject != null ? retObjectGetManagedObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,10 +195,14 @@ public class IDebugConvertImplementation extends NetObject implements IDebugConv
 
     public NetObject GetManagedUInt64Object(UInt64 i) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetManagedUInt64Object = null;
         try {
-            JCObject objGetManagedUInt64Object = (JCObject)classInstance.Invoke("GetManagedUInt64Object", i == null ? null : i.getJCOInstance());
+            retObjectGetManagedUInt64Object = classInstance.Invoke("GetManagedUInt64Object", i == null ? null : i.getJCOInstance());
+            JCObject objGetManagedUInt64Object = (JCObject)retObjectGetManagedUInt64Object;
             return new NetObject(objGetManagedUInt64Object);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetManagedUInt64Object != null ? retObjectGetManagedUInt64Object.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -194,10 +210,14 @@ public class IDebugConvertImplementation extends NetObject implements IDebugConv
 
     public NetObject ToPrimitive(NetObject value, TypeCode typeCode, boolean truncationPermitted) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToPrimitive = null;
         try {
-            JCObject objToPrimitive = (JCObject)classInstance.Invoke("ToPrimitive", value == null ? null : value.getJCOInstance(), typeCode == null ? null : typeCode.getJCOInstance(), truncationPermitted);
+            retObjectToPrimitive = classInstance.Invoke("ToPrimitive", value == null ? null : value.getJCOInstance(), typeCode == null ? null : typeCode.getJCOInstance(), truncationPermitted);
+            JCObject objToPrimitive = (JCObject)retObjectToPrimitive;
             return new NetObject(objToPrimitive);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToPrimitive != null ? retObjectToPrimitive.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -205,9 +225,13 @@ public class IDebugConvertImplementation extends NetObject implements IDebugConv
 
     public java.lang.String BooleanToString(boolean value) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBooleanToString = null;
         try {
-            return (java.lang.String)classInstance.Invoke("BooleanToString", value);
+            retObjectBooleanToString = classInstance.Invoke("BooleanToString", value);
+            return (java.lang.String)retObjectBooleanToString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectBooleanToString != null ? retObjectBooleanToString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -215,9 +239,13 @@ public class IDebugConvertImplementation extends NetObject implements IDebugConv
 
     public java.lang.String ByteToString(byte value, int radix) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectByteToString = null;
         try {
-            return (java.lang.String)classInstance.Invoke("ByteToString", value, radix);
+            retObjectByteToString = classInstance.Invoke("ByteToString", value, radix);
+            return (java.lang.String)retObjectByteToString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectByteToString != null ? retObjectByteToString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -225,9 +253,13 @@ public class IDebugConvertImplementation extends NetObject implements IDebugConv
 
     public java.lang.String DoubleToDateString(double value) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDoubleToDateString = null;
         try {
-            return (java.lang.String)classInstance.Invoke("DoubleToDateString", value);
+            retObjectDoubleToDateString = classInstance.Invoke("DoubleToDateString", value);
+            return (java.lang.String)retObjectDoubleToDateString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectDoubleToDateString != null ? retObjectDoubleToDateString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -235,9 +267,13 @@ public class IDebugConvertImplementation extends NetObject implements IDebugConv
 
     public java.lang.String DoubleToString(double value) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDoubleToString = null;
         try {
-            return (java.lang.String)classInstance.Invoke("DoubleToString", value);
+            retObjectDoubleToString = classInstance.Invoke("DoubleToString", value);
+            return (java.lang.String)retObjectDoubleToString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectDoubleToString != null ? retObjectDoubleToString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -245,9 +281,13 @@ public class IDebugConvertImplementation extends NetObject implements IDebugConv
 
     public java.lang.String GetErrorMessageForHR(int hr, IJSVsaEngine engine) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetErrorMessageForHR = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetErrorMessageForHR", hr, engine == null ? null : engine.getJCOInstance());
+            retObjectGetErrorMessageForHR = classInstance.Invoke("GetErrorMessageForHR", hr, engine == null ? null : engine.getJCOInstance());
+            return (java.lang.String)retObjectGetErrorMessageForHR;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetErrorMessageForHR != null ? retObjectGetErrorMessageForHR.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -255,9 +295,13 @@ public class IDebugConvertImplementation extends NetObject implements IDebugConv
 
     public java.lang.String Int16ToString(short value, int radix) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInt16ToString = null;
         try {
-            return (java.lang.String)classInstance.Invoke("Int16ToString", value, radix);
+            retObjectInt16ToString = classInstance.Invoke("Int16ToString", value, radix);
+            return (java.lang.String)retObjectInt16ToString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectInt16ToString != null ? retObjectInt16ToString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -265,9 +309,13 @@ public class IDebugConvertImplementation extends NetObject implements IDebugConv
 
     public java.lang.String Int32ToString(int value, int radix) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInt32ToString = null;
         try {
-            return (java.lang.String)classInstance.Invoke("Int32ToString", value, radix);
+            retObjectInt32ToString = classInstance.Invoke("Int32ToString", value, radix);
+            return (java.lang.String)retObjectInt32ToString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectInt32ToString != null ? retObjectInt32ToString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -275,9 +323,13 @@ public class IDebugConvertImplementation extends NetObject implements IDebugConv
 
     public java.lang.String Int64ToString(long value, int radix) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInt64ToString = null;
         try {
-            return (java.lang.String)classInstance.Invoke("Int64ToString", value, radix);
+            retObjectInt64ToString = classInstance.Invoke("Int64ToString", value, radix);
+            return (java.lang.String)retObjectInt64ToString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectInt64ToString != null ? retObjectInt64ToString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -285,9 +337,13 @@ public class IDebugConvertImplementation extends NetObject implements IDebugConv
 
     public java.lang.String RegexpToString(java.lang.String source, boolean ignoreCase, boolean global, boolean multiline) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRegexpToString = null;
         try {
-            return (java.lang.String)classInstance.Invoke("RegexpToString", source, ignoreCase, global, multiline);
+            retObjectRegexpToString = classInstance.Invoke("RegexpToString", source, ignoreCase, global, multiline);
+            return (java.lang.String)retObjectRegexpToString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectRegexpToString != null ? retObjectRegexpToString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -295,9 +351,13 @@ public class IDebugConvertImplementation extends NetObject implements IDebugConv
 
     public java.lang.String SByteToString(SByte value, int radix) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSByteToString = null;
         try {
-            return (java.lang.String)classInstance.Invoke("SByteToString", value == null ? null : value.getJCOInstance(), radix);
+            retObjectSByteToString = classInstance.Invoke("SByteToString", value == null ? null : value.getJCOInstance(), radix);
+            return (java.lang.String)retObjectSByteToString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectSByteToString != null ? retObjectSByteToString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -305,9 +365,13 @@ public class IDebugConvertImplementation extends NetObject implements IDebugConv
 
     public java.lang.String SingleToString(Single value) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSingleToString = null;
         try {
-            return (java.lang.String)classInstance.Invoke("SingleToString", value == null ? null : value.getJCOInstance());
+            retObjectSingleToString = classInstance.Invoke("SingleToString", value == null ? null : value.getJCOInstance());
+            return (java.lang.String)retObjectSingleToString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectSingleToString != null ? retObjectSingleToString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -315,9 +379,13 @@ public class IDebugConvertImplementation extends NetObject implements IDebugConv
 
     public java.lang.String StringToPrintable(java.lang.String source) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStringToPrintable = null;
         try {
-            return (java.lang.String)classInstance.Invoke("StringToPrintable", source);
+            retObjectStringToPrintable = classInstance.Invoke("StringToPrintable", source);
+            return (java.lang.String)retObjectStringToPrintable;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectStringToPrintable != null ? retObjectStringToPrintable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -325,9 +393,13 @@ public class IDebugConvertImplementation extends NetObject implements IDebugConv
 
     public java.lang.String UInt16ToString(UInt16 value, int radix) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUInt16ToString = null;
         try {
-            return (java.lang.String)classInstance.Invoke("UInt16ToString", value == null ? null : value.getJCOInstance(), radix);
+            retObjectUInt16ToString = classInstance.Invoke("UInt16ToString", value == null ? null : value.getJCOInstance(), radix);
+            return (java.lang.String)retObjectUInt16ToString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectUInt16ToString != null ? retObjectUInt16ToString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -335,9 +407,13 @@ public class IDebugConvertImplementation extends NetObject implements IDebugConv
 
     public java.lang.String UInt32ToString(UInt32 value, int radix) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUInt32ToString = null;
         try {
-            return (java.lang.String)classInstance.Invoke("UInt32ToString", value == null ? null : value.getJCOInstance(), radix);
+            retObjectUInt32ToString = classInstance.Invoke("UInt32ToString", value == null ? null : value.getJCOInstance(), radix);
+            return (java.lang.String)retObjectUInt32ToString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectUInt32ToString != null ? retObjectUInt32ToString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -345,9 +421,13 @@ public class IDebugConvertImplementation extends NetObject implements IDebugConv
 
     public java.lang.String UInt64ToString(UInt64 value, int radix) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUInt64ToString = null;
         try {
-            return (java.lang.String)classInstance.Invoke("UInt64ToString", value == null ? null : value.getJCOInstance(), radix);
+            retObjectUInt64ToString = classInstance.Invoke("UInt64ToString", value == null ? null : value.getJCOInstance(), radix);
+            return (java.lang.String)retObjectUInt64ToString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectUInt64ToString != null ? retObjectUInt64ToString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

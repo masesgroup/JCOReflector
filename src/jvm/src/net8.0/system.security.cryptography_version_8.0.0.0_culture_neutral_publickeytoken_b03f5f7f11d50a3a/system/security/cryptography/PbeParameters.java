@@ -171,9 +171,20 @@ public class PbeParameters extends NetObject  {
     
     public int getIterationCount() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIterationCount = null;
         try {
-            return (int)classInstance.Get("IterationCount");
+            retObjectIterationCount = classInstance.Get("IterationCount");
+            return (int)retObjectIterationCount;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectIterationCount_ToString = retObjectIterationCount == null ? "null" : retObjectIterationCount.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectIterationCountNumber = (java.lang.Number)retObjectIterationCount;
+                return retObjectIterationCountNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectIterationCount != null ? retObjectIterationCount.getClass() : "null", retObjectIterationCount_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,10 +192,14 @@ public class PbeParameters extends NetObject  {
 
     public HashAlgorithmName getHashAlgorithm() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHashAlgorithm = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("HashAlgorithm");
+            retObjectHashAlgorithm = classInstance.Get("HashAlgorithm");
+            JCObject val = (JCObject)retObjectHashAlgorithm;
             return new HashAlgorithmName(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHashAlgorithm != null ? retObjectHashAlgorithm.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,10 +207,14 @@ public class PbeParameters extends NetObject  {
 
     public PbeEncryptionAlgorithm getEncryptionAlgorithm() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEncryptionAlgorithm = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("EncryptionAlgorithm");
+            retObjectEncryptionAlgorithm = classInstance.Get("EncryptionAlgorithm");
+            JCObject val = (JCObject)retObjectEncryptionAlgorithm;
             return new PbeEncryptionAlgorithm(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEncryptionAlgorithm != null ? retObjectEncryptionAlgorithm.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

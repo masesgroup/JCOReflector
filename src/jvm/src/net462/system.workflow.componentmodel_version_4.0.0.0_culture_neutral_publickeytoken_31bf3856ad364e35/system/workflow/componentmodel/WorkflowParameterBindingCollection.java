@@ -167,10 +167,14 @@ public class WorkflowParameterBindingCollection extends NetObjectEnumerable  {
     
     public WorkflowParameterBinding GetItem(java.lang.String key) throws Throwable, system.ArgumentNullException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetItem = null;
         try {
-            JCObject objGetItem = (JCObject)classInstance.Invoke("GetItem", key);
+            retObjectGetItem = classInstance.Invoke("GetItem", key);
+            JCObject objGetItem = (JCObject)retObjectGetItem;
             return new WorkflowParameterBinding(objGetItem);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetItem != null ? retObjectGetItem.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

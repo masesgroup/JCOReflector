@@ -175,9 +175,20 @@ public class SqlNotificationRequest extends NetObject  {
     
     public int getTimeout() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTimeout = null;
         try {
-            return (int)classInstance.Get("Timeout");
+            retObjectTimeout = classInstance.Get("Timeout");
+            return (int)retObjectTimeout;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectTimeout_ToString = retObjectTimeout == null ? "null" : retObjectTimeout.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectTimeoutNumber = (java.lang.Number)retObjectTimeout;
+                return retObjectTimeoutNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectTimeout != null ? retObjectTimeout.getClass() : "null", retObjectTimeout_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -185,7 +196,7 @@ public class SqlNotificationRequest extends NetObject  {
 
     public void setTimeout(int Timeout) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Timeout", Timeout);
         } catch (JCNativeException jcne) {
@@ -195,9 +206,13 @@ public class SqlNotificationRequest extends NetObject  {
 
     public java.lang.String getOptions() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOptions = null;
         try {
-            return (java.lang.String)classInstance.Get("Options");
+            retObjectOptions = classInstance.Get("Options");
+            return (java.lang.String)retObjectOptions;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectOptions != null ? retObjectOptions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -205,7 +220,7 @@ public class SqlNotificationRequest extends NetObject  {
 
     public void setOptions(java.lang.String Options) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Options", Options);
         } catch (JCNativeException jcne) {
@@ -215,9 +230,13 @@ public class SqlNotificationRequest extends NetObject  {
 
     public java.lang.String getUserData() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUserData = null;
         try {
-            return (java.lang.String)classInstance.Get("UserData");
+            retObjectUserData = classInstance.Get("UserData");
+            return (java.lang.String)retObjectUserData;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectUserData != null ? retObjectUserData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -225,7 +244,7 @@ public class SqlNotificationRequest extends NetObject  {
 
     public void setUserData(java.lang.String UserData) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UserData", UserData);
         } catch (JCNativeException jcne) {

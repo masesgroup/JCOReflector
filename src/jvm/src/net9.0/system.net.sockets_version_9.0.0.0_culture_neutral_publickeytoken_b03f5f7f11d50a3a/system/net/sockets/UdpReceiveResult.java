@@ -168,9 +168,13 @@ public class UdpReceiveResult extends ValueType  {
     
     public boolean Equals(UdpReceiveResult other) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEquals = null;
         try {
-            return (boolean)classInstance.Invoke("Equals", other == null ? null : other.getJCOInstance());
+            retObjectEquals = classInstance.Invoke("Equals", other == null ? null : other.getJCOInstance());
+            return (boolean)retObjectEquals;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectEquals != null ? retObjectEquals.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,10 +186,12 @@ public class UdpReceiveResult extends ValueType  {
     
     public byte[] getBuffer() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBuffer = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("Buffer");
+            retObjectBuffer = classInstance.Get("Buffer");
+            JCObject resultingObjects = (JCObject)retObjectBuffer;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -194,6 +200,8 @@ public class UdpReceiveResult extends ValueType  {
 				resultingArray[indexBuffer] = (byte)resultingArrayList.get(indexBuffer);
 			}
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into JCObject", retObjectBuffer != null ? retObjectBuffer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,10 +209,14 @@ public class UdpReceiveResult extends ValueType  {
 
     public IPEndPoint getRemoteEndPoint() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRemoteEndPoint = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RemoteEndPoint");
+            retObjectRemoteEndPoint = classInstance.Get("RemoteEndPoint");
+            JCObject val = (JCObject)retObjectRemoteEndPoint;
             return new IPEndPoint(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRemoteEndPoint != null ? retObjectRemoteEndPoint.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

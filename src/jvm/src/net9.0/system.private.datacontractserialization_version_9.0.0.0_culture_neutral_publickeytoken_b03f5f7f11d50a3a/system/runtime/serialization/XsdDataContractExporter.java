@@ -175,9 +175,13 @@ public class XsdDataContractExporter extends NetObject  {
     
     public boolean CanExport(NetType type) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.runtime.serialization.InvalidDataContractException, system.runtime.serialization.SerializationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanExport = null;
         try {
-            return (boolean)classInstance.Invoke("CanExport", type == null ? null : type.getJCOInstance());
+            retObjectCanExport = classInstance.Invoke("CanExport", type == null ? null : type.getJCOInstance());
+            return (boolean)retObjectCanExport;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCanExport != null ? retObjectCanExport.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -185,10 +189,14 @@ public class XsdDataContractExporter extends NetObject  {
 
     public XmlSchemaType GetSchemaType(NetType type) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.runtime.serialization.InvalidDataContractException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSchemaType = null;
         try {
-            JCObject objGetSchemaType = (JCObject)classInstance.Invoke("GetSchemaType", type == null ? null : type.getJCOInstance());
+            retObjectGetSchemaType = classInstance.Invoke("GetSchemaType", type == null ? null : type.getJCOInstance());
+            JCObject objGetSchemaType = (JCObject)retObjectGetSchemaType;
             return new XmlSchemaType(objGetSchemaType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSchemaType != null ? retObjectGetSchemaType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,10 +204,14 @@ public class XsdDataContractExporter extends NetObject  {
 
     public XmlQualifiedName GetRootElementName(NetType type) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.runtime.serialization.InvalidDataContractException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetRootElementName = null;
         try {
-            JCObject objGetRootElementName = (JCObject)classInstance.Invoke("GetRootElementName", type == null ? null : type.getJCOInstance());
+            retObjectGetRootElementName = classInstance.Invoke("GetRootElementName", type == null ? null : type.getJCOInstance());
+            JCObject objGetRootElementName = (JCObject)retObjectGetRootElementName;
             return new XmlQualifiedName(objGetRootElementName);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetRootElementName != null ? retObjectGetRootElementName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -207,10 +219,14 @@ public class XsdDataContractExporter extends NetObject  {
 
     public XmlQualifiedName GetSchemaTypeName(NetType type) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.runtime.serialization.InvalidDataContractException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSchemaTypeName = null;
         try {
-            JCObject objGetSchemaTypeName = (JCObject)classInstance.Invoke("GetSchemaTypeName", type == null ? null : type.getJCOInstance());
+            retObjectGetSchemaTypeName = classInstance.Invoke("GetSchemaTypeName", type == null ? null : type.getJCOInstance());
+            JCObject objGetSchemaTypeName = (JCObject)retObjectGetSchemaTypeName;
             return new XmlQualifiedName(objGetSchemaTypeName);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSchemaTypeName != null ? retObjectGetSchemaTypeName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -218,7 +234,7 @@ public class XsdDataContractExporter extends NetObject  {
 
     public void Export(NetType type) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.runtime.serialization.InvalidDataContractException, system.runtime.serialization.SerializationException, system.globalization.CultureNotFoundException, system.xml.schema.XmlSchemaException, system.xml.XmlException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Export", type == null ? null : type.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -232,10 +248,14 @@ public class XsdDataContractExporter extends NetObject  {
     
     public ExportOptions getOptions() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOptions = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Options");
+            retObjectOptions = classInstance.Get("Options");
+            JCObject val = (JCObject)retObjectOptions;
             return new ExportOptions(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOptions != null ? retObjectOptions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -243,7 +263,7 @@ public class XsdDataContractExporter extends NetObject  {
 
     public void setOptions(ExportOptions Options) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Options", Options == null ? null : Options.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -253,10 +273,14 @@ public class XsdDataContractExporter extends NetObject  {
 
     public XmlSchemaSet getSchemas() throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.xml.schema.XmlSchemaException, system.OutOfMemoryException, system.xml.XmlException, system.InvalidOperationException, system.FormatException, system.RankException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSchemas = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Schemas");
+            retObjectSchemas = classInstance.Get("Schemas");
+            JCObject val = (JCObject)retObjectSchemas;
             return new XmlSchemaSet(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSchemas != null ? retObjectSchemas.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

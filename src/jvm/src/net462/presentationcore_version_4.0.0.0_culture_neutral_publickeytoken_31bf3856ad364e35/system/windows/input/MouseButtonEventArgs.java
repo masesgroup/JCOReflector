@@ -184,9 +184,20 @@ public class MouseButtonEventArgs extends MouseEventArgs  {
     
     public int getClickCount() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClickCount = null;
         try {
-            return (int)classInstance.Get("ClickCount");
+            retObjectClickCount = classInstance.Get("ClickCount");
+            return (int)retObjectClickCount;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectClickCount_ToString = retObjectClickCount == null ? "null" : retObjectClickCount.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectClickCountNumber = (java.lang.Number)retObjectClickCount;
+                return retObjectClickCountNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectClickCount != null ? retObjectClickCount.getClass() : "null", retObjectClickCount_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -194,7 +205,7 @@ public class MouseButtonEventArgs extends MouseEventArgs  {
 
     public void setClickCount(int ClickCount) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ClickCount", ClickCount);
         } catch (JCNativeException jcne) {
@@ -204,10 +215,14 @@ public class MouseButtonEventArgs extends MouseEventArgs  {
 
     public MouseButton getChangedButton() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectChangedButton = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ChangedButton");
+            retObjectChangedButton = classInstance.Get("ChangedButton");
+            JCObject val = (JCObject)retObjectChangedButton;
             return new MouseButton(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectChangedButton != null ? retObjectChangedButton.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -215,10 +230,14 @@ public class MouseButtonEventArgs extends MouseEventArgs  {
 
     public MouseButtonState getButtonState() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectButtonState = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ButtonState");
+            retObjectButtonState = classInstance.Get("ButtonState");
+            JCObject val = (JCObject)retObjectButtonState;
             return new MouseButtonState(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectButtonState != null ? retObjectButtonState.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

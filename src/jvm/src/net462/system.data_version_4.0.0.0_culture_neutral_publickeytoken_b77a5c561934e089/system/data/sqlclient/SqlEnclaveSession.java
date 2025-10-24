@@ -165,10 +165,12 @@ public class SqlEnclaveSession extends NetObject  {
     
     public byte[] GetSessionKey() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSessionKey = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetSessionKey");
+            retObjectGetSessionKey = classInstance.Invoke("GetSessionKey");
+            JCObject resultingObjects = (JCObject)retObjectGetSessionKey;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -177,6 +179,8 @@ public class SqlEnclaveSession extends NetObject  {
 				resultingArray[indexGetSessionKey] = (byte)resultingArrayList.get(indexGetSessionKey);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectGetSessionKey != null ? retObjectGetSessionKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,9 +192,20 @@ public class SqlEnclaveSession extends NetObject  {
     
     public long getSessionId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSessionId = null;
         try {
-            return (long)classInstance.Get("SessionId");
+            retObjectSessionId = classInstance.Get("SessionId");
+            return (long)retObjectSessionId;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSessionId_ToString = retObjectSessionId == null ? "null" : retObjectSessionId.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectSessionIdNumber = (java.lang.Number)retObjectSessionId;
+                return retObjectSessionIdNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectSessionId != null ? retObjectSessionId.getClass() : "null", retObjectSessionId_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

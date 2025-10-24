@@ -189,9 +189,13 @@ public class Stroke extends NetObject  {
     
     public boolean ContainsPropertyData(Guid propertyDataId) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContainsPropertyData = null;
         try {
-            return (boolean)classInstance.Invoke("ContainsPropertyData", propertyDataId == null ? null : propertyDataId.getJCOInstance());
+            retObjectContainsPropertyData = classInstance.Invoke("ContainsPropertyData", propertyDataId == null ? null : propertyDataId.getJCOInstance());
+            return (boolean)retObjectContainsPropertyData;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectContainsPropertyData != null ? retObjectContainsPropertyData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -199,9 +203,13 @@ public class Stroke extends NetObject  {
 
     public boolean HitTest(Point point) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException, system.NotSupportedException, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHitTest = null;
         try {
-            return (boolean)classInstance.Invoke("HitTest", point == null ? null : point.getJCOInstance());
+            retObjectHitTest = classInstance.Invoke("HitTest", point == null ? null : point.getJCOInstance());
+            return (boolean)retObjectHitTest;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectHitTest != null ? retObjectHitTest.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -209,9 +217,13 @@ public class Stroke extends NetObject  {
 
     public boolean HitTest(Point point, double diameter) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHitTest = null;
         try {
-            return (boolean)classInstance.Invoke("HitTest", point == null ? null : point.getJCOInstance(), diameter);
+            retObjectHitTest = classInstance.Invoke("HitTest", point == null ? null : point.getJCOInstance(), diameter);
+            return (boolean)retObjectHitTest;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectHitTest != null ? retObjectHitTest.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -219,9 +231,13 @@ public class Stroke extends NetObject  {
 
     public boolean HitTest(Rect bounds, int percentageWithinBounds) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHitTest = null;
         try {
-            return (boolean)classInstance.Invoke("HitTest", bounds == null ? null : bounds.getJCOInstance(), percentageWithinBounds);
+            retObjectHitTest = classInstance.Invoke("HitTest", bounds == null ? null : bounds.getJCOInstance(), percentageWithinBounds);
+            return (boolean)retObjectHitTest;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectHitTest != null ? retObjectHitTest.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -229,16 +245,20 @@ public class Stroke extends NetObject  {
 
     public Guid[] GetPropertyDataIds() throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPropertyDataIds = null;
         try {
             ArrayList<Guid> resultingArrayList = new ArrayList<Guid>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetPropertyDataIds");
+            retObjectGetPropertyDataIds = classInstance.Invoke("GetPropertyDataIds");
+            JCObject resultingObjects = (JCObject)retObjectGetPropertyDataIds;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new Guid(resultingObject));
             }
             Guid[] resultingArray = new Guid[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetPropertyDataIds != null ? retObjectGetPropertyDataIds.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -246,10 +266,14 @@ public class Stroke extends NetObject  {
 
     public NetObject GetPropertyData(Guid propertyDataId) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPropertyData = null;
         try {
-            JCObject objGetPropertyData = (JCObject)classInstance.Invoke("GetPropertyData", propertyDataId == null ? null : propertyDataId.getJCOInstance());
+            retObjectGetPropertyData = classInstance.Invoke("GetPropertyData", propertyDataId == null ? null : propertyDataId.getJCOInstance());
+            JCObject objGetPropertyData = (JCObject)retObjectGetPropertyData;
             return new NetObject(objGetPropertyData);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetPropertyData != null ? retObjectGetPropertyData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -257,10 +281,14 @@ public class Stroke extends NetObject  {
 
     public Stroke Clone() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.NotSupportedException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClone = null;
         try {
-            JCObject objClone = (JCObject)classInstance.Invoke("Clone");
+            retObjectClone = classInstance.Invoke("Clone");
+            JCObject objClone = (JCObject)retObjectClone;
             return new Stroke(objClone);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClone != null ? retObjectClone.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -268,10 +296,14 @@ public class Stroke extends NetObject  {
 
     public StrokeCollection GetClipResult(Rect bounds) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetClipResult = null;
         try {
-            JCObject objGetClipResult = (JCObject)classInstance.Invoke("GetClipResult", bounds == null ? null : bounds.getJCOInstance());
+            retObjectGetClipResult = classInstance.Invoke("GetClipResult", bounds == null ? null : bounds.getJCOInstance());
+            JCObject objGetClipResult = (JCObject)retObjectGetClipResult;
             return new StrokeCollection(objGetClipResult);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetClipResult != null ? retObjectGetClipResult.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -279,10 +311,14 @@ public class Stroke extends NetObject  {
 
     public StrokeCollection GetEraseResult(Rect bounds) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetEraseResult = null;
         try {
-            JCObject objGetEraseResult = (JCObject)classInstance.Invoke("GetEraseResult", bounds == null ? null : bounds.getJCOInstance());
+            retObjectGetEraseResult = classInstance.Invoke("GetEraseResult", bounds == null ? null : bounds.getJCOInstance());
+            JCObject objGetEraseResult = (JCObject)retObjectGetEraseResult;
             return new StrokeCollection(objGetEraseResult);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetEraseResult != null ? retObjectGetEraseResult.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -290,10 +326,14 @@ public class Stroke extends NetObject  {
 
     public StylusPointCollection GetBezierStylusPoints() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetBezierStylusPoints = null;
         try {
-            JCObject objGetBezierStylusPoints = (JCObject)classInstance.Invoke("GetBezierStylusPoints");
+            retObjectGetBezierStylusPoints = classInstance.Invoke("GetBezierStylusPoints");
+            JCObject objGetBezierStylusPoints = (JCObject)retObjectGetBezierStylusPoints;
             return new StylusPointCollection(objGetBezierStylusPoints);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetBezierStylusPoints != null ? retObjectGetBezierStylusPoints.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -301,10 +341,14 @@ public class Stroke extends NetObject  {
 
     public Geometry GetGeometry() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetGeometry = null;
         try {
-            JCObject objGetGeometry = (JCObject)classInstance.Invoke("GetGeometry");
+            retObjectGetGeometry = classInstance.Invoke("GetGeometry");
+            JCObject objGetGeometry = (JCObject)retObjectGetGeometry;
             return new Geometry(objGetGeometry);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetGeometry != null ? retObjectGetGeometry.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -312,10 +356,14 @@ public class Stroke extends NetObject  {
 
     public Geometry GetGeometry(DrawingAttributes drawingAttributes) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetGeometry = null;
         try {
-            JCObject objGetGeometry = (JCObject)classInstance.Invoke("GetGeometry", drawingAttributes == null ? null : drawingAttributes.getJCOInstance());
+            retObjectGetGeometry = classInstance.Invoke("GetGeometry", drawingAttributes == null ? null : drawingAttributes.getJCOInstance());
+            JCObject objGetGeometry = (JCObject)retObjectGetGeometry;
             return new Geometry(objGetGeometry);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetGeometry != null ? retObjectGetGeometry.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -323,10 +371,14 @@ public class Stroke extends NetObject  {
 
     public Rect GetBounds() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetBounds = null;
         try {
-            JCObject objGetBounds = (JCObject)classInstance.Invoke("GetBounds");
+            retObjectGetBounds = classInstance.Invoke("GetBounds");
+            JCObject objGetBounds = (JCObject)retObjectGetBounds;
             return new Rect(objGetBounds);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetBounds != null ? retObjectGetBounds.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -334,7 +386,7 @@ public class Stroke extends NetObject  {
 
     public void AddPropertyData(Guid propertyDataId, NetObject propertyData) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddPropertyData", propertyDataId == null ? null : propertyDataId.getJCOInstance(), propertyData == null ? null : propertyData.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -344,7 +396,7 @@ public class Stroke extends NetObject  {
 
     public void Draw(DrawingContext context) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentException, system.NotSupportedException, system.MulticastNotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Draw", context == null ? null : context.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -354,7 +406,7 @@ public class Stroke extends NetObject  {
 
     public void Draw(DrawingContext drawingContext, DrawingAttributes drawingAttributes) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.NotSupportedException, system.MulticastNotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Draw", drawingContext == null ? null : drawingContext.getJCOInstance(), drawingAttributes == null ? null : drawingAttributes.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -364,7 +416,7 @@ public class Stroke extends NetObject  {
 
     public void RemovePropertyData(Guid propertyDataId) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RemovePropertyData", propertyDataId == null ? null : propertyDataId.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -374,7 +426,7 @@ public class Stroke extends NetObject  {
 
     public void Transform(Matrix transformMatrix, boolean applyToStylusTip) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Transform", transformMatrix == null ? null : transformMatrix.getJCOInstance(), applyToStylusTip);
         } catch (JCNativeException jcne) {
@@ -388,10 +440,14 @@ public class Stroke extends NetObject  {
     
     public DrawingAttributes getDrawingAttributes() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDrawingAttributes = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DrawingAttributes");
+            retObjectDrawingAttributes = classInstance.Get("DrawingAttributes");
+            JCObject val = (JCObject)retObjectDrawingAttributes;
             return new DrawingAttributes(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDrawingAttributes != null ? retObjectDrawingAttributes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -399,7 +455,7 @@ public class Stroke extends NetObject  {
 
     public void setDrawingAttributes(DrawingAttributes DrawingAttributes) throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DrawingAttributes", DrawingAttributes == null ? null : DrawingAttributes.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -409,10 +465,14 @@ public class Stroke extends NetObject  {
 
     public StylusPointCollection getStylusPoints() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStylusPoints = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("StylusPoints");
+            retObjectStylusPoints = classInstance.Get("StylusPoints");
+            JCObject val = (JCObject)retObjectStylusPoints;
             return new StylusPointCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStylusPoints != null ? retObjectStylusPoints.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -420,7 +480,7 @@ public class Stroke extends NetObject  {
 
     public void setStylusPoints(StylusPointCollection StylusPoints) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("StylusPoints", StylusPoints == null ? null : StylusPoints.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -435,7 +495,7 @@ public class Stroke extends NetObject  {
 
     public void addInvalidated(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Invalidated", handler);
         } catch (JCNativeException jcne) {
@@ -445,7 +505,7 @@ public class Stroke extends NetObject  {
 
     public void removeInvalidated(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Invalidated", handler);
         } catch (JCNativeException jcne) {
@@ -455,7 +515,7 @@ public class Stroke extends NetObject  {
 
     public void addStylusPointsChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("StylusPointsChanged", handler);
         } catch (JCNativeException jcne) {
@@ -465,7 +525,7 @@ public class Stroke extends NetObject  {
 
     public void removeStylusPointsChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("StylusPointsChanged", handler);
         } catch (JCNativeException jcne) {
@@ -475,7 +535,7 @@ public class Stroke extends NetObject  {
 
     public void addDrawingAttributesReplaced(DrawingAttributesReplacedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("DrawingAttributesReplaced", handler);
         } catch (JCNativeException jcne) {
@@ -485,7 +545,7 @@ public class Stroke extends NetObject  {
 
     public void removeDrawingAttributesReplaced(DrawingAttributesReplacedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("DrawingAttributesReplaced", handler);
         } catch (JCNativeException jcne) {
@@ -495,7 +555,7 @@ public class Stroke extends NetObject  {
 
     public void addDrawingAttributesChanged(PropertyDataChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("DrawingAttributesChanged", handler);
         } catch (JCNativeException jcne) {
@@ -505,7 +565,7 @@ public class Stroke extends NetObject  {
 
     public void removeDrawingAttributesChanged(PropertyDataChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("DrawingAttributesChanged", handler);
         } catch (JCNativeException jcne) {
@@ -515,7 +575,7 @@ public class Stroke extends NetObject  {
 
     public void addPropertyDataChanged(PropertyDataChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("PropertyDataChanged", handler);
         } catch (JCNativeException jcne) {
@@ -525,7 +585,7 @@ public class Stroke extends NetObject  {
 
     public void removePropertyDataChanged(PropertyDataChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("PropertyDataChanged", handler);
         } catch (JCNativeException jcne) {
@@ -535,7 +595,7 @@ public class Stroke extends NetObject  {
 
     public void addStylusPointsReplaced(StylusPointsReplacedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("StylusPointsReplaced", handler);
         } catch (JCNativeException jcne) {
@@ -545,7 +605,7 @@ public class Stroke extends NetObject  {
 
     public void removeStylusPointsReplaced(StylusPointsReplacedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("StylusPointsReplaced", handler);
         } catch (JCNativeException jcne) {

@@ -162,9 +162,20 @@ public class SecurityPackageContextConnectionInformation extends NetObject  {
     
     public int getCipherStrength() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCipherStrength = null;
         try {
-            return (int)classInstance.Get("CipherStrength");
+            retObjectCipherStrength = classInstance.Get("CipherStrength");
+            return (int)retObjectCipherStrength;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCipherStrength_ToString = retObjectCipherStrength == null ? "null" : retObjectCipherStrength.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectCipherStrengthNumber = (java.lang.Number)retObjectCipherStrength;
+                return retObjectCipherStrengthNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCipherStrength != null ? retObjectCipherStrength.getClass() : "null", retObjectCipherStrength_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,9 +183,20 @@ public class SecurityPackageContextConnectionInformation extends NetObject  {
 
     public int getExchangeStrength() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExchangeStrength = null;
         try {
-            return (int)classInstance.Get("ExchangeStrength");
+            retObjectExchangeStrength = classInstance.Get("ExchangeStrength");
+            return (int)retObjectExchangeStrength;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectExchangeStrength_ToString = retObjectExchangeStrength == null ? "null" : retObjectExchangeStrength.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectExchangeStrengthNumber = (java.lang.Number)retObjectExchangeStrength;
+                return retObjectExchangeStrengthNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectExchangeStrength != null ? retObjectExchangeStrength.getClass() : "null", retObjectExchangeStrength_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,9 +204,20 @@ public class SecurityPackageContextConnectionInformation extends NetObject  {
 
     public int getHashStrength() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHashStrength = null;
         try {
-            return (int)classInstance.Get("HashStrength");
+            retObjectHashStrength = classInstance.Get("HashStrength");
+            return (int)retObjectHashStrength;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectHashStrength_ToString = retObjectHashStrength == null ? "null" : retObjectHashStrength.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectHashStrengthNumber = (java.lang.Number)retObjectHashStrength;
+                return retObjectHashStrengthNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectHashStrength != null ? retObjectHashStrength.getClass() : "null", retObjectHashStrength_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,9 +225,20 @@ public class SecurityPackageContextConnectionInformation extends NetObject  {
 
     public int getKeyExchangeAlgorithm() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectKeyExchangeAlgorithm = null;
         try {
-            return (int)classInstance.Get("KeyExchangeAlgorithm");
+            retObjectKeyExchangeAlgorithm = classInstance.Get("KeyExchangeAlgorithm");
+            return (int)retObjectKeyExchangeAlgorithm;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectKeyExchangeAlgorithm_ToString = retObjectKeyExchangeAlgorithm == null ? "null" : retObjectKeyExchangeAlgorithm.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectKeyExchangeAlgorithmNumber = (java.lang.Number)retObjectKeyExchangeAlgorithm;
+                return retObjectKeyExchangeAlgorithmNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectKeyExchangeAlgorithm != null ? retObjectKeyExchangeAlgorithm.getClass() : "null", retObjectKeyExchangeAlgorithm_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,10 +246,14 @@ public class SecurityPackageContextConnectionInformation extends NetObject  {
 
     public SecurityProtocol getProtocol() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProtocol = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Protocol");
+            retObjectProtocol = classInstance.Get("Protocol");
+            JCObject val = (JCObject)retObjectProtocol;
             return new SecurityProtocol(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectProtocol != null ? retObjectProtocol.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,10 +261,14 @@ public class SecurityPackageContextConnectionInformation extends NetObject  {
 
     public CipherAlgorithmType getAlgorithmIdentifier() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAlgorithmIdentifier = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AlgorithmIdentifier");
+            retObjectAlgorithmIdentifier = classInstance.Get("AlgorithmIdentifier");
+            JCObject val = (JCObject)retObjectAlgorithmIdentifier;
             return new CipherAlgorithmType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAlgorithmIdentifier != null ? retObjectAlgorithmIdentifier.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -224,10 +276,14 @@ public class SecurityPackageContextConnectionInformation extends NetObject  {
 
     public HashAlgorithmType getHash() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHash = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Hash");
+            retObjectHash = classInstance.Get("Hash");
+            JCObject val = (JCObject)retObjectHash;
             return new HashAlgorithmType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHash != null ? retObjectHash.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

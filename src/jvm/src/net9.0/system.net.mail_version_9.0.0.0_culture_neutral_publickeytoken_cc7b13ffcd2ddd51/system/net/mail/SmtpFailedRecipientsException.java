@@ -182,7 +182,7 @@ public class SmtpFailedRecipientsException extends SmtpFailedRecipientException 
     
     public void GetObjectData(SerializationInfo serializationInfo, StreamingContext streamingContext) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.runtime.serialization.SerializationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetObjectData", serializationInfo == null ? null : serializationInfo.getJCOInstance(), streamingContext == null ? null : streamingContext.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -196,16 +196,20 @@ public class SmtpFailedRecipientsException extends SmtpFailedRecipientException 
     
     public final SmtpFailedRecipientException[] getInnerExceptions() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInnerExceptions = null;
         try {
             ArrayList<SmtpFailedRecipientException> resultingArrayList = new ArrayList<SmtpFailedRecipientException>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("InnerExceptions");
+            retObjectInnerExceptions = classInstance.Get("InnerExceptions");
+            JCObject resultingObjects = (JCObject)retObjectInnerExceptions;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new SmtpFailedRecipientException(resultingObject));
             }
             SmtpFailedRecipientException[] resultingArray = new SmtpFailedRecipientException[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInnerExceptions != null ? retObjectInnerExceptions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

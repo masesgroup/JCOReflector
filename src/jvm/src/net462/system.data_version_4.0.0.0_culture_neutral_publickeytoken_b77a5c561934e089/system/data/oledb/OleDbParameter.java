@@ -228,7 +228,7 @@ public class OleDbParameter extends DbParameter implements system.ICloneable {
     
     public void ResetDbType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ResetDbType");
         } catch (JCNativeException jcne) {
@@ -238,7 +238,7 @@ public class OleDbParameter extends DbParameter implements system.ICloneable {
 
     public void ResetOleDbType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ResetOleDbType");
         } catch (JCNativeException jcne) {
@@ -252,7 +252,7 @@ public class OleDbParameter extends DbParameter implements system.ICloneable {
      */
     @Deprecated 
     public NetObject Clone() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICloneable to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICloneable to obtain the full interface.");
     }
 
 
@@ -261,9 +261,20 @@ public class OleDbParameter extends DbParameter implements system.ICloneable {
     
     public byte getPrecision() throws Throwable, system.data.sqltypes.SqlNullValueException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPrecision = null;
         try {
-            return (byte)classInstance.Get("Precision");
+            retObjectPrecision = classInstance.Get("Precision");
+            return (byte)retObjectPrecision;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectPrecision_ToString = retObjectPrecision == null ? "null" : retObjectPrecision.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectPrecisionNumber = (java.lang.Number)retObjectPrecision;
+                return retObjectPrecisionNumber.byteValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into byte and, as fallback solution, into java.lang.Number", retObjectPrecision != null ? retObjectPrecision.getClass() : "null", retObjectPrecision_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -271,7 +282,7 @@ public class OleDbParameter extends DbParameter implements system.ICloneable {
 
     public void setPrecision(byte Precision) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Precision", Precision);
         } catch (JCNativeException jcne) {
@@ -281,9 +292,20 @@ public class OleDbParameter extends DbParameter implements system.ICloneable {
 
     public byte getScale() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectScale = null;
         try {
-            return (byte)classInstance.Get("Scale");
+            retObjectScale = classInstance.Get("Scale");
+            return (byte)retObjectScale;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectScale_ToString = retObjectScale == null ? "null" : retObjectScale.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectScaleNumber = (java.lang.Number)retObjectScale;
+                return retObjectScaleNumber.byteValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into byte and, as fallback solution, into java.lang.Number", retObjectScale != null ? retObjectScale.getClass() : "null", retObjectScale_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -291,7 +313,7 @@ public class OleDbParameter extends DbParameter implements system.ICloneable {
 
     public void setScale(byte Scale) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Scale", Scale);
         } catch (JCNativeException jcne) {
@@ -301,10 +323,14 @@ public class OleDbParameter extends DbParameter implements system.ICloneable {
 
     public OleDbType getOleDbType() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOleDbType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("OleDbType");
+            retObjectOleDbType = classInstance.Get("OleDbType");
+            JCObject val = (JCObject)retObjectOleDbType;
             return new OleDbType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOleDbType != null ? retObjectOleDbType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -312,7 +338,7 @@ public class OleDbParameter extends DbParameter implements system.ICloneable {
 
     public void setOleDbType(OleDbType OleDbType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("OleDbType", OleDbType == null ? null : OleDbType.getJCOInstance());
         } catch (JCNativeException jcne) {

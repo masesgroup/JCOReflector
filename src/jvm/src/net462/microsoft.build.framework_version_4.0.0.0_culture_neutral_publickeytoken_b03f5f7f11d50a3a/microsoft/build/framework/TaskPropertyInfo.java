@@ -169,9 +169,13 @@ public class TaskPropertyInfo extends NetObject  {
     
     public boolean getOutput() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOutput = null;
         try {
-            return (boolean)classInstance.Get("Output");
+            retObjectOutput = classInstance.Get("Output");
+            return (boolean)retObjectOutput;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectOutput != null ? retObjectOutput.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,7 +183,7 @@ public class TaskPropertyInfo extends NetObject  {
 
     public void setOutput(boolean Output) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Output", Output);
         } catch (JCNativeException jcne) {
@@ -189,9 +193,13 @@ public class TaskPropertyInfo extends NetObject  {
 
     public boolean getRequired() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRequired = null;
         try {
-            return (boolean)classInstance.Get("Required");
+            retObjectRequired = classInstance.Get("Required");
+            return (boolean)retObjectRequired;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectRequired != null ? retObjectRequired.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -199,7 +207,7 @@ public class TaskPropertyInfo extends NetObject  {
 
     public void setRequired(boolean Required) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Required", Required);
         } catch (JCNativeException jcne) {
@@ -209,9 +217,13 @@ public class TaskPropertyInfo extends NetObject  {
 
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectName = null;
         try {
-            return (java.lang.String)classInstance.Get("Name");
+            retObjectName = classInstance.Get("Name");
+            return (java.lang.String)retObjectName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectName != null ? retObjectName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -219,7 +231,7 @@ public class TaskPropertyInfo extends NetObject  {
 
     public void setName(java.lang.String Name) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Name", Name);
         } catch (JCNativeException jcne) {
@@ -229,10 +241,14 @@ public class TaskPropertyInfo extends NetObject  {
 
     public NetType getPropertyType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPropertyType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PropertyType");
+            retObjectPropertyType = classInstance.Get("PropertyType");
+            JCObject val = (JCObject)retObjectPropertyType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPropertyType != null ? retObjectPropertyType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -240,7 +256,7 @@ public class TaskPropertyInfo extends NetObject  {
 
     public void setPropertyType(NetType PropertyType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PropertyType", PropertyType == null ? null : PropertyType.getJCOInstance());
         } catch (JCNativeException jcne) {

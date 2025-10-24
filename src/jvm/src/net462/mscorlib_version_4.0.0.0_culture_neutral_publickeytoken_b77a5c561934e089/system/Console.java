@@ -163,9 +163,20 @@ public class Console extends NetObject  {
     
     public static int Read() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ObjectDisposedException, system.NotSupportedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectRead = null;
         try {
-            return (int)classType.Invoke("Read");
+            retObjectRead = classType.Invoke("Read");
+            return (int)retObjectRead;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectRead_ToString = retObjectRead == null ? "null" : retObjectRead.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectReadNumber = (java.lang.Number)retObjectRead;
+                return retObjectReadNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectRead != null ? retObjectRead.getClass() : "null", retObjectRead_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -173,10 +184,14 @@ public class Console extends NetObject  {
 
     public static ConsoleKeyInfo ReadKey() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.NotSupportedException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectReadKey = null;
         try {
-            JCObject objReadKey = (JCObject)classType.Invoke("ReadKey");
+            retObjectReadKey = classType.Invoke("ReadKey");
+            JCObject objReadKey = (JCObject)retObjectReadKey;
             return new ConsoleKeyInfo(objReadKey);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadKey != null ? retObjectReadKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -184,10 +199,14 @@ public class Console extends NetObject  {
 
     public static ConsoleKeyInfo ReadKey(boolean intercept) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.NotSupportedException, system.FormatException, system.IndexOutOfRangeException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectReadKey = null;
         try {
-            JCObject objReadKey = (JCObject)classType.Invoke("ReadKey", intercept);
+            retObjectReadKey = classType.Invoke("ReadKey", intercept);
+            JCObject objReadKey = (JCObject)retObjectReadKey;
             return new ConsoleKeyInfo(objReadKey);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadKey != null ? retObjectReadKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,10 +214,14 @@ public class Console extends NetObject  {
 
     public static Stream OpenStandardError() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotSupportedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOpenStandardError = null;
         try {
-            JCObject objOpenStandardError = (JCObject)classType.Invoke("OpenStandardError");
+            retObjectOpenStandardError = classType.Invoke("OpenStandardError");
+            JCObject objOpenStandardError = (JCObject)retObjectOpenStandardError;
             return new Stream(objOpenStandardError);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOpenStandardError != null ? retObjectOpenStandardError.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -206,10 +229,14 @@ public class Console extends NetObject  {
 
     public static Stream OpenStandardError(int bufferSize) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotSupportedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOpenStandardError = null;
         try {
-            JCObject objOpenStandardError = (JCObject)classType.Invoke("OpenStandardError", bufferSize);
+            retObjectOpenStandardError = classType.Invoke("OpenStandardError", bufferSize);
+            JCObject objOpenStandardError = (JCObject)retObjectOpenStandardError;
             return new Stream(objOpenStandardError);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOpenStandardError != null ? retObjectOpenStandardError.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -217,10 +244,14 @@ public class Console extends NetObject  {
 
     public static Stream OpenStandardInput() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotSupportedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOpenStandardInput = null;
         try {
-            JCObject objOpenStandardInput = (JCObject)classType.Invoke("OpenStandardInput");
+            retObjectOpenStandardInput = classType.Invoke("OpenStandardInput");
+            JCObject objOpenStandardInput = (JCObject)retObjectOpenStandardInput;
             return new Stream(objOpenStandardInput);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOpenStandardInput != null ? retObjectOpenStandardInput.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -228,10 +259,14 @@ public class Console extends NetObject  {
 
     public static Stream OpenStandardInput(int bufferSize) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotSupportedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOpenStandardInput = null;
         try {
-            JCObject objOpenStandardInput = (JCObject)classType.Invoke("OpenStandardInput", bufferSize);
+            retObjectOpenStandardInput = classType.Invoke("OpenStandardInput", bufferSize);
+            JCObject objOpenStandardInput = (JCObject)retObjectOpenStandardInput;
             return new Stream(objOpenStandardInput);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOpenStandardInput != null ? retObjectOpenStandardInput.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -239,10 +274,14 @@ public class Console extends NetObject  {
 
     public static Stream OpenStandardOutput() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotSupportedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOpenStandardOutput = null;
         try {
-            JCObject objOpenStandardOutput = (JCObject)classType.Invoke("OpenStandardOutput");
+            retObjectOpenStandardOutput = classType.Invoke("OpenStandardOutput");
+            JCObject objOpenStandardOutput = (JCObject)retObjectOpenStandardOutput;
             return new Stream(objOpenStandardOutput);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOpenStandardOutput != null ? retObjectOpenStandardOutput.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -250,10 +289,14 @@ public class Console extends NetObject  {
 
     public static Stream OpenStandardOutput(int bufferSize) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotSupportedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOpenStandardOutput = null;
         try {
-            JCObject objOpenStandardOutput = (JCObject)classType.Invoke("OpenStandardOutput", bufferSize);
+            retObjectOpenStandardOutput = classType.Invoke("OpenStandardOutput", bufferSize);
+            JCObject objOpenStandardOutput = (JCObject)retObjectOpenStandardOutput;
             return new Stream(objOpenStandardOutput);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOpenStandardOutput != null ? retObjectOpenStandardOutput.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -261,9 +304,13 @@ public class Console extends NetObject  {
 
     public static java.lang.String ReadLine() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ObjectDisposedException, system.NotSupportedException, system.InvalidOperationException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectReadLine = null;
         try {
-            return (java.lang.String)classType.Invoke("ReadLine");
+            retObjectReadLine = classType.Invoke("ReadLine");
+            return (java.lang.String)retObjectReadLine;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectReadLine != null ? retObjectReadLine.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -271,7 +318,7 @@ public class Console extends NetObject  {
 
     public static void Beep() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Beep");
         } catch (JCNativeException jcne) {
@@ -281,7 +328,7 @@ public class Console extends NetObject  {
 
     public static void Beep(int frequency, int duration) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Beep", frequency, duration);
         } catch (JCNativeException jcne) {
@@ -291,7 +338,7 @@ public class Console extends NetObject  {
 
     public static void Clear() throws Throwable, system.io.IOException, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.OperationCanceledException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Clear");
         } catch (JCNativeException jcne) {
@@ -301,7 +348,7 @@ public class Console extends NetObject  {
 
     public static void MoveBufferArea(int sourceLeft, int sourceTop, int sourceWidth, int sourceHeight, int targetLeft, int targetTop) throws Throwable, system.io.IOException, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.OperationCanceledException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("MoveBufferArea", sourceLeft, sourceTop, sourceWidth, sourceHeight, targetLeft, targetTop);
         } catch (JCNativeException jcne) {
@@ -311,7 +358,7 @@ public class Console extends NetObject  {
 
     public static void MoveBufferArea(int sourceLeft, int sourceTop, int sourceWidth, int sourceHeight, int targetLeft, int targetTop, char sourceChar, ConsoleColor sourceForeColor, ConsoleColor sourceBackColor) throws Throwable, system.ArgumentException, system.io.IOException, system.ArgumentNullException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.OperationCanceledException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("MoveBufferArea", sourceLeft, sourceTop, sourceWidth, sourceHeight, targetLeft, targetTop, sourceChar, sourceForeColor == null ? null : sourceForeColor.getJCOInstance(), sourceBackColor == null ? null : sourceBackColor.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -321,7 +368,7 @@ public class Console extends NetObject  {
 
     public static void ResetColor() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.io.IOException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("ResetColor");
         } catch (JCNativeException jcne) {
@@ -331,7 +378,7 @@ public class Console extends NetObject  {
 
     public static void SetBufferSize(int width, int height) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.io.IOException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetBufferSize", width, height);
         } catch (JCNativeException jcne) {
@@ -341,7 +388,7 @@ public class Console extends NetObject  {
 
     public static void SetCursorPosition(int left, int top) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.io.IOException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetCursorPosition", left, top);
         } catch (JCNativeException jcne) {
@@ -351,7 +398,7 @@ public class Console extends NetObject  {
 
     public static void SetError(TextWriter newError) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetError", newError == null ? null : newError.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -361,7 +408,7 @@ public class Console extends NetObject  {
 
     public static void SetIn(TextReader newIn) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetIn", newIn == null ? null : newIn.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -371,7 +418,7 @@ public class Console extends NetObject  {
 
     public static void SetOut(TextWriter newOut) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetOut", newOut == null ? null : newOut.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -381,7 +428,7 @@ public class Console extends NetObject  {
 
     public static void SetWindowPosition(int left, int top) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.io.IOException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetWindowPosition", left, top);
         } catch (JCNativeException jcne) {
@@ -391,7 +438,7 @@ public class Console extends NetObject  {
 
     public static void SetWindowSize(int width, int height) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.io.IOException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetWindowSize", width, height);
         } catch (JCNativeException jcne) {
@@ -401,7 +448,7 @@ public class Console extends NetObject  {
 
     public static void Write(boolean value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.FormatException, system.IndexOutOfRangeException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Write", value);
         } catch (JCNativeException jcne) {
@@ -411,7 +458,7 @@ public class Console extends NetObject  {
 
     public static void Write(char value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.FormatException, system.IndexOutOfRangeException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Write", value);
         } catch (JCNativeException jcne) {
@@ -421,7 +468,7 @@ public class Console extends NetObject  {
 
     public static void Write(char[] buffer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.FormatException, system.IndexOutOfRangeException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Write", (java.lang.Object)buffer);
         } catch (JCNativeException jcne) {
@@ -431,7 +478,7 @@ public class Console extends NetObject  {
 
     public static void Write(JCORefOut dupParam0) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.FormatException, system.IndexOutOfRangeException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Write", (java.lang.Object)dupParam0.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -441,7 +488,7 @@ public class Console extends NetObject  {
 
     public static void Write(char[] buffer, int index, int count) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.FormatException, system.IndexOutOfRangeException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Write", buffer, index, count);
         } catch (JCNativeException jcne) {
@@ -451,7 +498,7 @@ public class Console extends NetObject  {
 
     public static void Write(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.FormatException, system.IndexOutOfRangeException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Write", dupParam0.getJCRefOut(), dupParam1, dupParam2);
         } catch (JCNativeException jcne) {
@@ -461,7 +508,7 @@ public class Console extends NetObject  {
 
     public static void Write(double value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.FormatException, system.IndexOutOfRangeException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Write", value);
         } catch (JCNativeException jcne) {
@@ -471,7 +518,7 @@ public class Console extends NetObject  {
 
     public static void Write(int value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.FormatException, system.IndexOutOfRangeException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Write", value);
         } catch (JCNativeException jcne) {
@@ -481,7 +528,7 @@ public class Console extends NetObject  {
 
     public static void Write(long value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.FormatException, system.IndexOutOfRangeException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Write", value);
         } catch (JCNativeException jcne) {
@@ -491,7 +538,7 @@ public class Console extends NetObject  {
 
     public static void Write(Single value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.FormatException, system.IndexOutOfRangeException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Write", value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -501,7 +548,7 @@ public class Console extends NetObject  {
 
     public static void Write(Decimal value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.FormatException, system.IndexOutOfRangeException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Write", value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -511,7 +558,7 @@ public class Console extends NetObject  {
 
     public static void Write(NetObject value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.FormatException, system.IndexOutOfRangeException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Write", value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -521,7 +568,7 @@ public class Console extends NetObject  {
 
     public static void Write(java.lang.String value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.FormatException, system.IndexOutOfRangeException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Write", value);
         } catch (JCNativeException jcne) {
@@ -531,7 +578,7 @@ public class Console extends NetObject  {
 
     public static void Write(java.lang.String format, NetObject arg0) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.FormatException, system.IndexOutOfRangeException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Write", format, arg0 == null ? null : arg0.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -541,7 +588,7 @@ public class Console extends NetObject  {
 
     public static void Write(java.lang.String format, NetObject arg0, NetObject arg1) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.FormatException, system.IndexOutOfRangeException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Write", format, arg0 == null ? null : arg0.getJCOInstance(), arg1 == null ? null : arg1.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -551,7 +598,7 @@ public class Console extends NetObject  {
 
     public static void Write(java.lang.String format, NetObject arg0, NetObject arg1, NetObject arg2) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.FormatException, system.IndexOutOfRangeException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Write", format, arg0 == null ? null : arg0.getJCOInstance(), arg1 == null ? null : arg1.getJCOInstance(), arg2 == null ? null : arg2.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -561,7 +608,7 @@ public class Console extends NetObject  {
 
     public static void Write(java.lang.String format, NetObject arg0, NetObject arg1, NetObject arg2, NetObject arg3) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.FormatException, system.IndexOutOfRangeException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Write", format, arg0 == null ? null : arg0.getJCOInstance(), arg1 == null ? null : arg1.getJCOInstance(), arg2 == null ? null : arg2.getJCOInstance(), arg3 == null ? null : arg3.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -571,7 +618,7 @@ public class Console extends NetObject  {
 
     public static void Write(java.lang.String format, NetObject... arg) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.FormatException, system.IndexOutOfRangeException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Write", format, toObjectFromArray(arg));
         } catch (JCNativeException jcne) {
@@ -581,7 +628,7 @@ public class Console extends NetObject  {
 
     public static void Write(UInt32 value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.FormatException, system.IndexOutOfRangeException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Write", value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -591,7 +638,7 @@ public class Console extends NetObject  {
 
     public static void Write(UInt64 value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.FormatException, system.IndexOutOfRangeException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Write", value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -601,7 +648,7 @@ public class Console extends NetObject  {
 
     public static void WriteLine() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.FormatException, system.IndexOutOfRangeException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("WriteLine");
         } catch (JCNativeException jcne) {
@@ -611,7 +658,7 @@ public class Console extends NetObject  {
 
     public static void WriteLine(boolean value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.FormatException, system.IndexOutOfRangeException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("WriteLine", value);
         } catch (JCNativeException jcne) {
@@ -621,7 +668,7 @@ public class Console extends NetObject  {
 
     public static void WriteLine(char value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.FormatException, system.IndexOutOfRangeException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("WriteLine", value);
         } catch (JCNativeException jcne) {
@@ -631,7 +678,7 @@ public class Console extends NetObject  {
 
     public static void WriteLine(char[] buffer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.FormatException, system.IndexOutOfRangeException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("WriteLine", (java.lang.Object)buffer);
         } catch (JCNativeException jcne) {
@@ -641,7 +688,7 @@ public class Console extends NetObject  {
 
     public static void WriteLine(JCORefOut dupParam0) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.FormatException, system.IndexOutOfRangeException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("WriteLine", (java.lang.Object)dupParam0.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -651,7 +698,7 @@ public class Console extends NetObject  {
 
     public static void WriteLine(char[] buffer, int index, int count) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.FormatException, system.IndexOutOfRangeException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("WriteLine", buffer, index, count);
         } catch (JCNativeException jcne) {
@@ -661,7 +708,7 @@ public class Console extends NetObject  {
 
     public static void WriteLine(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.FormatException, system.IndexOutOfRangeException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("WriteLine", dupParam0.getJCRefOut(), dupParam1, dupParam2);
         } catch (JCNativeException jcne) {
@@ -671,7 +718,7 @@ public class Console extends NetObject  {
 
     public static void WriteLine(double value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.FormatException, system.IndexOutOfRangeException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("WriteLine", value);
         } catch (JCNativeException jcne) {
@@ -681,7 +728,7 @@ public class Console extends NetObject  {
 
     public static void WriteLine(int value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.FormatException, system.IndexOutOfRangeException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("WriteLine", value);
         } catch (JCNativeException jcne) {
@@ -691,7 +738,7 @@ public class Console extends NetObject  {
 
     public static void WriteLine(long value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.FormatException, system.IndexOutOfRangeException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("WriteLine", value);
         } catch (JCNativeException jcne) {
@@ -701,7 +748,7 @@ public class Console extends NetObject  {
 
     public static void WriteLine(Single value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.FormatException, system.IndexOutOfRangeException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("WriteLine", value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -711,7 +758,7 @@ public class Console extends NetObject  {
 
     public static void WriteLine(Decimal value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.FormatException, system.IndexOutOfRangeException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("WriteLine", value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -721,7 +768,7 @@ public class Console extends NetObject  {
 
     public static void WriteLine(NetObject value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.FormatException, system.IndexOutOfRangeException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("WriteLine", value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -731,7 +778,7 @@ public class Console extends NetObject  {
 
     public static void WriteLine(java.lang.String value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.FormatException, system.IndexOutOfRangeException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("WriteLine", value);
         } catch (JCNativeException jcne) {
@@ -741,7 +788,7 @@ public class Console extends NetObject  {
 
     public static void WriteLine(java.lang.String format, NetObject arg0) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.FormatException, system.IndexOutOfRangeException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("WriteLine", format, arg0 == null ? null : arg0.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -751,7 +798,7 @@ public class Console extends NetObject  {
 
     public static void WriteLine(java.lang.String format, NetObject arg0, NetObject arg1) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.FormatException, system.IndexOutOfRangeException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("WriteLine", format, arg0 == null ? null : arg0.getJCOInstance(), arg1 == null ? null : arg1.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -761,7 +808,7 @@ public class Console extends NetObject  {
 
     public static void WriteLine(java.lang.String format, NetObject arg0, NetObject arg1, NetObject arg2) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.FormatException, system.IndexOutOfRangeException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("WriteLine", format, arg0 == null ? null : arg0.getJCOInstance(), arg1 == null ? null : arg1.getJCOInstance(), arg2 == null ? null : arg2.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -771,7 +818,7 @@ public class Console extends NetObject  {
 
     public static void WriteLine(java.lang.String format, NetObject arg0, NetObject arg1, NetObject arg2, NetObject arg3) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.FormatException, system.IndexOutOfRangeException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("WriteLine", format, arg0 == null ? null : arg0.getJCOInstance(), arg1 == null ? null : arg1.getJCOInstance(), arg2 == null ? null : arg2.getJCOInstance(), arg3 == null ? null : arg3.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -781,7 +828,7 @@ public class Console extends NetObject  {
 
     public static void WriteLine(java.lang.String format, NetObject... arg) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.FormatException, system.IndexOutOfRangeException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("WriteLine", format, toObjectFromArray(arg));
         } catch (JCNativeException jcne) {
@@ -791,7 +838,7 @@ public class Console extends NetObject  {
 
     public static void WriteLine(UInt32 value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.FormatException, system.IndexOutOfRangeException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("WriteLine", value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -801,7 +848,7 @@ public class Console extends NetObject  {
 
     public static void WriteLine(UInt64 value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.FormatException, system.IndexOutOfRangeException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("WriteLine", value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -815,9 +862,13 @@ public class Console extends NetObject  {
     
     public static boolean getCapsLock() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCapsLock = null;
         try {
-            return (boolean)classType.Get("CapsLock");
+            retObjectCapsLock = classType.Get("CapsLock");
+            return (boolean)retObjectCapsLock;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCapsLock != null ? retObjectCapsLock.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -825,9 +876,13 @@ public class Console extends NetObject  {
 
     public static boolean getCursorVisible() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCursorVisible = null;
         try {
-            return (boolean)classType.Get("CursorVisible");
+            retObjectCursorVisible = classType.Get("CursorVisible");
+            return (boolean)retObjectCursorVisible;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCursorVisible != null ? retObjectCursorVisible.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -835,7 +890,7 @@ public class Console extends NetObject  {
 
     public static void setCursorVisible(boolean CursorVisible) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Set("CursorVisible", CursorVisible);
         } catch (JCNativeException jcne) {
@@ -845,9 +900,13 @@ public class Console extends NetObject  {
 
     public static boolean getIsErrorRedirected() throws Throwable, system.ArgumentException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsErrorRedirected = null;
         try {
-            return (boolean)classType.Get("IsErrorRedirected");
+            retObjectIsErrorRedirected = classType.Get("IsErrorRedirected");
+            return (boolean)retObjectIsErrorRedirected;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsErrorRedirected != null ? retObjectIsErrorRedirected.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -855,9 +914,13 @@ public class Console extends NetObject  {
 
     public static boolean getIsInputRedirected() throws Throwable, system.ArgumentException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsInputRedirected = null;
         try {
-            return (boolean)classType.Get("IsInputRedirected");
+            retObjectIsInputRedirected = classType.Get("IsInputRedirected");
+            return (boolean)retObjectIsInputRedirected;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsInputRedirected != null ? retObjectIsInputRedirected.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -865,9 +928,13 @@ public class Console extends NetObject  {
 
     public static boolean getIsOutputRedirected() throws Throwable, system.ArgumentException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsOutputRedirected = null;
         try {
-            return (boolean)classType.Get("IsOutputRedirected");
+            retObjectIsOutputRedirected = classType.Get("IsOutputRedirected");
+            return (boolean)retObjectIsOutputRedirected;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsOutputRedirected != null ? retObjectIsOutputRedirected.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -875,9 +942,13 @@ public class Console extends NetObject  {
 
     public static boolean getKeyAvailable() throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectKeyAvailable = null;
         try {
-            return (boolean)classType.Get("KeyAvailable");
+            retObjectKeyAvailable = classType.Get("KeyAvailable");
+            return (boolean)retObjectKeyAvailable;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectKeyAvailable != null ? retObjectKeyAvailable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -885,9 +956,13 @@ public class Console extends NetObject  {
 
     public static boolean getNumberLock() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectNumberLock = null;
         try {
-            return (boolean)classType.Get("NumberLock");
+            retObjectNumberLock = classType.Get("NumberLock");
+            return (boolean)retObjectNumberLock;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectNumberLock != null ? retObjectNumberLock.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -895,9 +970,13 @@ public class Console extends NetObject  {
 
     public static boolean getTreatControlCAsInput() throws Throwable, system.io.IOException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTreatControlCAsInput = null;
         try {
-            return (boolean)classType.Get("TreatControlCAsInput");
+            retObjectTreatControlCAsInput = classType.Get("TreatControlCAsInput");
+            return (boolean)retObjectTreatControlCAsInput;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectTreatControlCAsInput != null ? retObjectTreatControlCAsInput.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -905,7 +984,7 @@ public class Console extends NetObject  {
 
     public static void setTreatControlCAsInput(boolean TreatControlCAsInput) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.io.IOException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Set("TreatControlCAsInput", TreatControlCAsInput);
         } catch (JCNativeException jcne) {
@@ -915,9 +994,20 @@ public class Console extends NetObject  {
 
     public static int getBufferHeight() throws Throwable, system.io.IOException, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.OperationCanceledException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectBufferHeight = null;
         try {
-            return (int)classType.Get("BufferHeight");
+            retObjectBufferHeight = classType.Get("BufferHeight");
+            return (int)retObjectBufferHeight;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectBufferHeight_ToString = retObjectBufferHeight == null ? "null" : retObjectBufferHeight.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectBufferHeightNumber = (java.lang.Number)retObjectBufferHeight;
+                return retObjectBufferHeightNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectBufferHeight != null ? retObjectBufferHeight.getClass() : "null", retObjectBufferHeight_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -925,7 +1015,7 @@ public class Console extends NetObject  {
 
     public static void setBufferHeight(int BufferHeight) throws Throwable, system.io.IOException, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Set("BufferHeight", BufferHeight);
         } catch (JCNativeException jcne) {
@@ -935,9 +1025,20 @@ public class Console extends NetObject  {
 
     public static int getBufferWidth() throws Throwable, system.io.IOException, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.OperationCanceledException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectBufferWidth = null;
         try {
-            return (int)classType.Get("BufferWidth");
+            retObjectBufferWidth = classType.Get("BufferWidth");
+            return (int)retObjectBufferWidth;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectBufferWidth_ToString = retObjectBufferWidth == null ? "null" : retObjectBufferWidth.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectBufferWidthNumber = (java.lang.Number)retObjectBufferWidth;
+                return retObjectBufferWidthNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectBufferWidth != null ? retObjectBufferWidth.getClass() : "null", retObjectBufferWidth_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -945,7 +1046,7 @@ public class Console extends NetObject  {
 
     public static void setBufferWidth(int BufferWidth) throws Throwable, system.io.IOException, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Set("BufferWidth", BufferWidth);
         } catch (JCNativeException jcne) {
@@ -955,9 +1056,20 @@ public class Console extends NetObject  {
 
     public static int getCursorLeft() throws Throwable, system.io.IOException, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.OperationCanceledException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCursorLeft = null;
         try {
-            return (int)classType.Get("CursorLeft");
+            retObjectCursorLeft = classType.Get("CursorLeft");
+            return (int)retObjectCursorLeft;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCursorLeft_ToString = retObjectCursorLeft == null ? "null" : retObjectCursorLeft.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectCursorLeftNumber = (java.lang.Number)retObjectCursorLeft;
+                return retObjectCursorLeftNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCursorLeft != null ? retObjectCursorLeft.getClass() : "null", retObjectCursorLeft_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -965,7 +1077,7 @@ public class Console extends NetObject  {
 
     public static void setCursorLeft(int CursorLeft) throws Throwable, system.io.IOException, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Set("CursorLeft", CursorLeft);
         } catch (JCNativeException jcne) {
@@ -975,9 +1087,20 @@ public class Console extends NetObject  {
 
     public static int getCursorSize() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCursorSize = null;
         try {
-            return (int)classType.Get("CursorSize");
+            retObjectCursorSize = classType.Get("CursorSize");
+            return (int)retObjectCursorSize;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCursorSize_ToString = retObjectCursorSize == null ? "null" : retObjectCursorSize.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectCursorSizeNumber = (java.lang.Number)retObjectCursorSize;
+                return retObjectCursorSizeNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCursorSize != null ? retObjectCursorSize.getClass() : "null", retObjectCursorSize_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -985,7 +1108,7 @@ public class Console extends NetObject  {
 
     public static void setCursorSize(int CursorSize) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Set("CursorSize", CursorSize);
         } catch (JCNativeException jcne) {
@@ -995,9 +1118,20 @@ public class Console extends NetObject  {
 
     public static int getCursorTop() throws Throwable, system.io.IOException, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.OperationCanceledException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCursorTop = null;
         try {
-            return (int)classType.Get("CursorTop");
+            retObjectCursorTop = classType.Get("CursorTop");
+            return (int)retObjectCursorTop;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCursorTop_ToString = retObjectCursorTop == null ? "null" : retObjectCursorTop.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectCursorTopNumber = (java.lang.Number)retObjectCursorTop;
+                return retObjectCursorTopNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCursorTop != null ? retObjectCursorTop.getClass() : "null", retObjectCursorTop_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1005,7 +1139,7 @@ public class Console extends NetObject  {
 
     public static void setCursorTop(int CursorTop) throws Throwable, system.io.IOException, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Set("CursorTop", CursorTop);
         } catch (JCNativeException jcne) {
@@ -1015,9 +1149,20 @@ public class Console extends NetObject  {
 
     public static int getLargestWindowHeight() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLargestWindowHeight = null;
         try {
-            return (int)classType.Get("LargestWindowHeight");
+            retObjectLargestWindowHeight = classType.Get("LargestWindowHeight");
+            return (int)retObjectLargestWindowHeight;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectLargestWindowHeight_ToString = retObjectLargestWindowHeight == null ? "null" : retObjectLargestWindowHeight.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectLargestWindowHeightNumber = (java.lang.Number)retObjectLargestWindowHeight;
+                return retObjectLargestWindowHeightNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectLargestWindowHeight != null ? retObjectLargestWindowHeight.getClass() : "null", retObjectLargestWindowHeight_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1025,9 +1170,20 @@ public class Console extends NetObject  {
 
     public static int getLargestWindowWidth() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLargestWindowWidth = null;
         try {
-            return (int)classType.Get("LargestWindowWidth");
+            retObjectLargestWindowWidth = classType.Get("LargestWindowWidth");
+            return (int)retObjectLargestWindowWidth;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectLargestWindowWidth_ToString = retObjectLargestWindowWidth == null ? "null" : retObjectLargestWindowWidth.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectLargestWindowWidthNumber = (java.lang.Number)retObjectLargestWindowWidth;
+                return retObjectLargestWindowWidthNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectLargestWindowWidth != null ? retObjectLargestWindowWidth.getClass() : "null", retObjectLargestWindowWidth_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1035,9 +1191,20 @@ public class Console extends NetObject  {
 
     public static int getWindowHeight() throws Throwable, system.io.IOException, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.OperationCanceledException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectWindowHeight = null;
         try {
-            return (int)classType.Get("WindowHeight");
+            retObjectWindowHeight = classType.Get("WindowHeight");
+            return (int)retObjectWindowHeight;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectWindowHeight_ToString = retObjectWindowHeight == null ? "null" : retObjectWindowHeight.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectWindowHeightNumber = (java.lang.Number)retObjectWindowHeight;
+                return retObjectWindowHeightNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectWindowHeight != null ? retObjectWindowHeight.getClass() : "null", retObjectWindowHeight_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1045,7 +1212,7 @@ public class Console extends NetObject  {
 
     public static void setWindowHeight(int WindowHeight) throws Throwable, system.io.IOException, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Set("WindowHeight", WindowHeight);
         } catch (JCNativeException jcne) {
@@ -1055,9 +1222,20 @@ public class Console extends NetObject  {
 
     public static int getWindowLeft() throws Throwable, system.io.IOException, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.OperationCanceledException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectWindowLeft = null;
         try {
-            return (int)classType.Get("WindowLeft");
+            retObjectWindowLeft = classType.Get("WindowLeft");
+            return (int)retObjectWindowLeft;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectWindowLeft_ToString = retObjectWindowLeft == null ? "null" : retObjectWindowLeft.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectWindowLeftNumber = (java.lang.Number)retObjectWindowLeft;
+                return retObjectWindowLeftNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectWindowLeft != null ? retObjectWindowLeft.getClass() : "null", retObjectWindowLeft_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1065,7 +1243,7 @@ public class Console extends NetObject  {
 
     public static void setWindowLeft(int WindowLeft) throws Throwable, system.io.IOException, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Set("WindowLeft", WindowLeft);
         } catch (JCNativeException jcne) {
@@ -1075,9 +1253,20 @@ public class Console extends NetObject  {
 
     public static int getWindowTop() throws Throwable, system.io.IOException, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.OperationCanceledException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectWindowTop = null;
         try {
-            return (int)classType.Get("WindowTop");
+            retObjectWindowTop = classType.Get("WindowTop");
+            return (int)retObjectWindowTop;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectWindowTop_ToString = retObjectWindowTop == null ? "null" : retObjectWindowTop.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectWindowTopNumber = (java.lang.Number)retObjectWindowTop;
+                return retObjectWindowTopNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectWindowTop != null ? retObjectWindowTop.getClass() : "null", retObjectWindowTop_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1085,7 +1274,7 @@ public class Console extends NetObject  {
 
     public static void setWindowTop(int WindowTop) throws Throwable, system.io.IOException, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Set("WindowTop", WindowTop);
         } catch (JCNativeException jcne) {
@@ -1095,9 +1284,20 @@ public class Console extends NetObject  {
 
     public static int getWindowWidth() throws Throwable, system.io.IOException, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.OperationCanceledException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectWindowWidth = null;
         try {
-            return (int)classType.Get("WindowWidth");
+            retObjectWindowWidth = classType.Get("WindowWidth");
+            return (int)retObjectWindowWidth;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectWindowWidth_ToString = retObjectWindowWidth == null ? "null" : retObjectWindowWidth.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectWindowWidthNumber = (java.lang.Number)retObjectWindowWidth;
+                return retObjectWindowWidthNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectWindowWidth != null ? retObjectWindowWidth.getClass() : "null", retObjectWindowWidth_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1105,7 +1305,7 @@ public class Console extends NetObject  {
 
     public static void setWindowWidth(int WindowWidth) throws Throwable, system.io.IOException, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Set("WindowWidth", WindowWidth);
         } catch (JCNativeException jcne) {
@@ -1115,10 +1315,14 @@ public class Console extends NetObject  {
 
     public static ConsoleColor getBackgroundColor() throws Throwable, system.io.IOException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectBackgroundColor = null;
         try {
-            JCObject val = (JCObject)classType.Get("BackgroundColor");
+            retObjectBackgroundColor = classType.Get("BackgroundColor");
+            JCObject val = (JCObject)retObjectBackgroundColor;
             return new ConsoleColor(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBackgroundColor != null ? retObjectBackgroundColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1126,7 +1330,7 @@ public class Console extends NetObject  {
 
     public static void setBackgroundColor(ConsoleColor BackgroundColor) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.io.IOException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Set("BackgroundColor", BackgroundColor == null ? null : BackgroundColor.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1136,10 +1340,14 @@ public class Console extends NetObject  {
 
     public static ConsoleColor getForegroundColor() throws Throwable, system.io.IOException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectForegroundColor = null;
         try {
-            JCObject val = (JCObject)classType.Get("ForegroundColor");
+            retObjectForegroundColor = classType.Get("ForegroundColor");
+            JCObject val = (JCObject)retObjectForegroundColor;
             return new ConsoleColor(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectForegroundColor != null ? retObjectForegroundColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1147,7 +1355,7 @@ public class Console extends NetObject  {
 
     public static void setForegroundColor(ConsoleColor ForegroundColor) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.io.IOException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Set("ForegroundColor", ForegroundColor == null ? null : ForegroundColor.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1157,10 +1365,14 @@ public class Console extends NetObject  {
 
     public static TextReader getIn() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotSupportedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIn = null;
         try {
-            JCObject val = (JCObject)classType.Get("In");
+            retObjectIn = classType.Get("In");
+            JCObject val = (JCObject)retObjectIn;
             return new TextReader(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIn != null ? retObjectIn.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1168,10 +1380,14 @@ public class Console extends NetObject  {
 
     public static TextWriter getError() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ObjectDisposedException, system.NotSupportedException, system.InvalidOperationException, system.security.SecurityException, system.OutOfMemoryException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectError = null;
         try {
-            JCObject val = (JCObject)classType.Get("Error");
+            retObjectError = classType.Get("Error");
+            JCObject val = (JCObject)retObjectError;
             return new TextWriter(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectError != null ? retObjectError.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1179,10 +1395,14 @@ public class Console extends NetObject  {
 
     public static TextWriter getOut() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ObjectDisposedException, system.NotSupportedException, system.InvalidOperationException, system.security.SecurityException, system.OutOfMemoryException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOut = null;
         try {
-            JCObject val = (JCObject)classType.Get("Out");
+            retObjectOut = classType.Get("Out");
+            JCObject val = (JCObject)retObjectOut;
             return new TextWriter(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOut != null ? retObjectOut.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1190,9 +1410,13 @@ public class Console extends NetObject  {
 
     public static java.lang.String getTitle() throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTitle = null;
         try {
-            return (java.lang.String)classType.Get("Title");
+            retObjectTitle = classType.Get("Title");
+            return (java.lang.String)retObjectTitle;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectTitle != null ? retObjectTitle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1200,7 +1424,7 @@ public class Console extends NetObject  {
 
     public static void setTitle(java.lang.String Title) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Set("Title", Title);
         } catch (JCNativeException jcne) {
@@ -1210,10 +1434,14 @@ public class Console extends NetObject  {
 
     public static Encoding getInputEncoding() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectInputEncoding = null;
         try {
-            JCObject val = (JCObject)classType.Get("InputEncoding");
+            retObjectInputEncoding = classType.Get("InputEncoding");
+            JCObject val = (JCObject)retObjectInputEncoding;
             return new Encoding(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInputEncoding != null ? retObjectInputEncoding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1221,7 +1449,7 @@ public class Console extends NetObject  {
 
     public static void setInputEncoding(Encoding InputEncoding) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Set("InputEncoding", InputEncoding == null ? null : InputEncoding.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1231,10 +1459,14 @@ public class Console extends NetObject  {
 
     public static Encoding getOutputEncoding() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOutputEncoding = null;
         try {
-            JCObject val = (JCObject)classType.Get("OutputEncoding");
+            retObjectOutputEncoding = classType.Get("OutputEncoding");
+            JCObject val = (JCObject)retObjectOutputEncoding;
             return new Encoding(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOutputEncoding != null ? retObjectOutputEncoding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1242,7 +1474,7 @@ public class Console extends NetObject  {
 
     public static void setOutputEncoding(Encoding OutputEncoding) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Set("OutputEncoding", OutputEncoding == null ? null : OutputEncoding.getJCOInstance());
         } catch (JCNativeException jcne) {

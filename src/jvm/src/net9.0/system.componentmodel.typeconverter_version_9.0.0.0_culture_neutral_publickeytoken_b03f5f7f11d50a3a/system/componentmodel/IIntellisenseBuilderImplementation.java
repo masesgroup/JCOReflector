@@ -142,9 +142,13 @@ public class IIntellisenseBuilderImplementation extends NetObject implements IIn
     
     public boolean Show(java.lang.String language, java.lang.String value, JCORefOut newValue) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShow = null;
         try {
-            return (boolean)classInstance.Invoke("Show", language, value, newValue.getJCRefOut());
+            retObjectShow = classInstance.Invoke("Show", language, value, newValue.getJCRefOut());
+            return (boolean)retObjectShow;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectShow != null ? retObjectShow.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -156,9 +160,13 @@ public class IIntellisenseBuilderImplementation extends NetObject implements IIn
     
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectName = null;
         try {
-            return (java.lang.String)classInstance.Get("Name");
+            retObjectName = classInstance.Get("Name");
+            return (java.lang.String)retObjectName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectName != null ? retObjectName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

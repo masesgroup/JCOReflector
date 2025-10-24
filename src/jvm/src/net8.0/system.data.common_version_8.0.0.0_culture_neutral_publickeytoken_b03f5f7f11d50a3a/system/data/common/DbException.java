@@ -175,9 +175,13 @@ public class DbException extends ExternalException {
     
     public boolean getIsTransient() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsTransient = null;
         try {
-            return (boolean)classInstance.Get("IsTransient");
+            retObjectIsTransient = classInstance.Get("IsTransient");
+            return (boolean)retObjectIsTransient;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsTransient != null ? retObjectIsTransient.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -185,10 +189,14 @@ public class DbException extends ExternalException {
 
     public DbBatchCommand getBatchCommand() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBatchCommand = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("BatchCommand");
+            retObjectBatchCommand = classInstance.Get("BatchCommand");
+            JCObject val = (JCObject)retObjectBatchCommand;
             return new DbBatchCommand(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBatchCommand != null ? retObjectBatchCommand.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,9 +204,13 @@ public class DbException extends ExternalException {
 
     public java.lang.String getSqlState() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSqlState = null;
         try {
-            return (java.lang.String)classInstance.Get("SqlState");
+            retObjectSqlState = classInstance.Get("SqlState");
+            return (java.lang.String)retObjectSqlState;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSqlState != null ? retObjectSqlState.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

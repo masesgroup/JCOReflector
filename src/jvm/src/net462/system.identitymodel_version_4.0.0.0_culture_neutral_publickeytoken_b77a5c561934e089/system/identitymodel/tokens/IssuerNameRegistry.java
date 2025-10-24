@@ -155,9 +155,13 @@ public class IssuerNameRegistry extends NetObject  {
     
     public java.lang.String GetIssuerName(SecurityToken securityToken) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetIssuerName = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetIssuerName", securityToken == null ? null : securityToken.getJCOInstance());
+            retObjectGetIssuerName = classInstance.Invoke("GetIssuerName", securityToken == null ? null : securityToken.getJCOInstance());
+            return (java.lang.String)retObjectGetIssuerName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetIssuerName != null ? retObjectGetIssuerName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -165,9 +169,13 @@ public class IssuerNameRegistry extends NetObject  {
 
     public java.lang.String GetIssuerName(SecurityToken securityToken, java.lang.String requestedIssuerName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetIssuerName = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetIssuerName", securityToken == null ? null : securityToken.getJCOInstance(), requestedIssuerName);
+            retObjectGetIssuerName = classInstance.Invoke("GetIssuerName", securityToken == null ? null : securityToken.getJCOInstance(), requestedIssuerName);
+            return (java.lang.String)retObjectGetIssuerName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetIssuerName != null ? retObjectGetIssuerName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -175,9 +183,13 @@ public class IssuerNameRegistry extends NetObject  {
 
     public java.lang.String GetWindowsIssuerName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetWindowsIssuerName = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetWindowsIssuerName");
+            retObjectGetWindowsIssuerName = classInstance.Invoke("GetWindowsIssuerName");
+            return (java.lang.String)retObjectGetWindowsIssuerName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetWindowsIssuerName != null ? retObjectGetWindowsIssuerName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -185,7 +197,7 @@ public class IssuerNameRegistry extends NetObject  {
 
     public void LoadCustomConfiguration(XmlNodeList nodelist) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("LoadCustomConfiguration", nodelist == null ? null : nodelist.getJCOInstance());
         } catch (JCNativeException jcne) {

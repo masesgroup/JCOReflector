@@ -160,9 +160,20 @@ public class DataGridViewCellValidatingEventArgs extends CancelEventArgs  {
     
     public int getColumnIndex() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectColumnIndex = null;
         try {
-            return (int)classInstance.Get("ColumnIndex");
+            retObjectColumnIndex = classInstance.Get("ColumnIndex");
+            return (int)retObjectColumnIndex;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectColumnIndex_ToString = retObjectColumnIndex == null ? "null" : retObjectColumnIndex.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectColumnIndexNumber = (java.lang.Number)retObjectColumnIndex;
+                return retObjectColumnIndexNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectColumnIndex != null ? retObjectColumnIndex.getClass() : "null", retObjectColumnIndex_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,9 +181,20 @@ public class DataGridViewCellValidatingEventArgs extends CancelEventArgs  {
 
     public int getRowIndex() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRowIndex = null;
         try {
-            return (int)classInstance.Get("RowIndex");
+            retObjectRowIndex = classInstance.Get("RowIndex");
+            return (int)retObjectRowIndex;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectRowIndex_ToString = retObjectRowIndex == null ? "null" : retObjectRowIndex.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectRowIndexNumber = (java.lang.Number)retObjectRowIndex;
+                return retObjectRowIndexNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectRowIndex != null ? retObjectRowIndex.getClass() : "null", retObjectRowIndex_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,10 +202,14 @@ public class DataGridViewCellValidatingEventArgs extends CancelEventArgs  {
 
     public NetObject getFormattedValue() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFormattedValue = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("FormattedValue");
+            retObjectFormattedValue = classInstance.Get("FormattedValue");
+            JCObject val = (JCObject)retObjectFormattedValue;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFormattedValue != null ? retObjectFormattedValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

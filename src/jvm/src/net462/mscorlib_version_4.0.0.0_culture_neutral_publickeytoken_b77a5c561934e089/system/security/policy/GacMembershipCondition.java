@@ -166,9 +166,13 @@ public class GacMembershipCondition extends NetObject  {
     
     public boolean Check(Evidence evidence) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCheck = null;
         try {
-            return (boolean)classInstance.Invoke("Check", evidence == null ? null : evidence.getJCOInstance());
+            retObjectCheck = classInstance.Invoke("Check", evidence == null ? null : evidence.getJCOInstance());
+            return (boolean)retObjectCheck;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCheck != null ? retObjectCheck.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,10 +180,14 @@ public class GacMembershipCondition extends NetObject  {
 
     public IMembershipCondition Copy() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCopy = null;
         try {
-            JCObject objCopy = (JCObject)classInstance.Invoke("Copy");
+            retObjectCopy = classInstance.Invoke("Copy");
+            JCObject objCopy = (JCObject)retObjectCopy;
             return new IMembershipConditionImplementation(objCopy);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCopy != null ? retObjectCopy.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,10 +195,14 @@ public class GacMembershipCondition extends NetObject  {
 
     public SecurityElement ToXml() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.NotImplementedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToXml = null;
         try {
-            JCObject objToXml = (JCObject)classInstance.Invoke("ToXml");
+            retObjectToXml = classInstance.Invoke("ToXml");
+            JCObject objToXml = (JCObject)retObjectToXml;
             return new SecurityElement(objToXml);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToXml != null ? retObjectToXml.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,10 +210,14 @@ public class GacMembershipCondition extends NetObject  {
 
     public SecurityElement ToXml(PolicyLevel level) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToXml = null;
         try {
-            JCObject objToXml = (JCObject)classInstance.Invoke("ToXml", level == null ? null : level.getJCOInstance());
+            retObjectToXml = classInstance.Invoke("ToXml", level == null ? null : level.getJCOInstance());
+            JCObject objToXml = (JCObject)retObjectToXml;
             return new SecurityElement(objToXml);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToXml != null ? retObjectToXml.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -209,7 +225,7 @@ public class GacMembershipCondition extends NetObject  {
 
     public void FromXml(SecurityElement e) throws Throwable, system.ArgumentNullException, system.NullReferenceException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("FromXml", e == null ? null : e.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -219,7 +235,7 @@ public class GacMembershipCondition extends NetObject  {
 
     public void FromXml(SecurityElement e, PolicyLevel level) throws Throwable, system.ArgumentNullException, system.NullReferenceException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("FromXml", e == null ? null : e.getJCOInstance(), level == null ? null : level.getJCOInstance());
         } catch (JCNativeException jcne) {

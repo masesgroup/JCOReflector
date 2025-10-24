@@ -161,10 +161,14 @@ public class DbUpdateCommandTree extends DbModificationCommandTree  {
     
     public DbExpression getPredicate() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPredicate = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Predicate");
+            retObjectPredicate = classInstance.Get("Predicate");
+            JCObject val = (JCObject)retObjectPredicate;
             return new DbExpression(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPredicate != null ? retObjectPredicate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,10 +176,14 @@ public class DbUpdateCommandTree extends DbModificationCommandTree  {
 
     public DbExpression getReturning() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReturning = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Returning");
+            retObjectReturning = classInstance.Get("Returning");
+            JCObject val = (JCObject)retObjectReturning;
             return new DbExpression(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReturning != null ? retObjectReturning.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

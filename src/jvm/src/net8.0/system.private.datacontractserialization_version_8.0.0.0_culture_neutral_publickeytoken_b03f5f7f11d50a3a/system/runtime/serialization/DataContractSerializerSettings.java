@@ -167,9 +167,13 @@ public class DataContractSerializerSettings extends NetObject  {
     
     public boolean getIgnoreExtensionDataObject() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIgnoreExtensionDataObject = null;
         try {
-            return (boolean)classInstance.Get("IgnoreExtensionDataObject");
+            retObjectIgnoreExtensionDataObject = classInstance.Get("IgnoreExtensionDataObject");
+            return (boolean)retObjectIgnoreExtensionDataObject;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIgnoreExtensionDataObject != null ? retObjectIgnoreExtensionDataObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,7 +181,7 @@ public class DataContractSerializerSettings extends NetObject  {
 
     public void setIgnoreExtensionDataObject(boolean IgnoreExtensionDataObject) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IgnoreExtensionDataObject", IgnoreExtensionDataObject);
         } catch (JCNativeException jcne) {
@@ -187,9 +191,13 @@ public class DataContractSerializerSettings extends NetObject  {
 
     public boolean getPreserveObjectReferences() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPreserveObjectReferences = null;
         try {
-            return (boolean)classInstance.Get("PreserveObjectReferences");
+            retObjectPreserveObjectReferences = classInstance.Get("PreserveObjectReferences");
+            return (boolean)retObjectPreserveObjectReferences;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectPreserveObjectReferences != null ? retObjectPreserveObjectReferences.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,7 +205,7 @@ public class DataContractSerializerSettings extends NetObject  {
 
     public void setPreserveObjectReferences(boolean PreserveObjectReferences) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PreserveObjectReferences", PreserveObjectReferences);
         } catch (JCNativeException jcne) {
@@ -207,9 +215,13 @@ public class DataContractSerializerSettings extends NetObject  {
 
     public boolean getSerializeReadOnlyTypes() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSerializeReadOnlyTypes = null;
         try {
-            return (boolean)classInstance.Get("SerializeReadOnlyTypes");
+            retObjectSerializeReadOnlyTypes = classInstance.Get("SerializeReadOnlyTypes");
+            return (boolean)retObjectSerializeReadOnlyTypes;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectSerializeReadOnlyTypes != null ? retObjectSerializeReadOnlyTypes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -217,7 +229,7 @@ public class DataContractSerializerSettings extends NetObject  {
 
     public void setSerializeReadOnlyTypes(boolean SerializeReadOnlyTypes) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SerializeReadOnlyTypes", SerializeReadOnlyTypes);
         } catch (JCNativeException jcne) {
@@ -227,9 +239,20 @@ public class DataContractSerializerSettings extends NetObject  {
 
     public int getMaxItemsInObjectGraph() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxItemsInObjectGraph = null;
         try {
-            return (int)classInstance.Get("MaxItemsInObjectGraph");
+            retObjectMaxItemsInObjectGraph = classInstance.Get("MaxItemsInObjectGraph");
+            return (int)retObjectMaxItemsInObjectGraph;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaxItemsInObjectGraph_ToString = retObjectMaxItemsInObjectGraph == null ? "null" : retObjectMaxItemsInObjectGraph.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMaxItemsInObjectGraphNumber = (java.lang.Number)retObjectMaxItemsInObjectGraph;
+                return retObjectMaxItemsInObjectGraphNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxItemsInObjectGraph != null ? retObjectMaxItemsInObjectGraph.getClass() : "null", retObjectMaxItemsInObjectGraph_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -237,7 +260,7 @@ public class DataContractSerializerSettings extends NetObject  {
 
     public void setMaxItemsInObjectGraph(int MaxItemsInObjectGraph) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaxItemsInObjectGraph", MaxItemsInObjectGraph);
         } catch (JCNativeException jcne) {
@@ -247,10 +270,14 @@ public class DataContractSerializerSettings extends NetObject  {
 
     public DataContractResolver getDataContractResolver() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDataContractResolver = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DataContractResolver");
+            retObjectDataContractResolver = classInstance.Get("DataContractResolver");
+            JCObject val = (JCObject)retObjectDataContractResolver;
             return new DataContractResolver(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDataContractResolver != null ? retObjectDataContractResolver.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -258,7 +285,7 @@ public class DataContractSerializerSettings extends NetObject  {
 
     public void setDataContractResolver(DataContractResolver DataContractResolver) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DataContractResolver", DataContractResolver == null ? null : DataContractResolver.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -268,10 +295,14 @@ public class DataContractSerializerSettings extends NetObject  {
 
     public XmlDictionaryString getRootName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRootName = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RootName");
+            retObjectRootName = classInstance.Get("RootName");
+            JCObject val = (JCObject)retObjectRootName;
             return new XmlDictionaryString(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRootName != null ? retObjectRootName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -279,7 +310,7 @@ public class DataContractSerializerSettings extends NetObject  {
 
     public void setRootName(XmlDictionaryString RootName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RootName", RootName == null ? null : RootName.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -289,10 +320,14 @@ public class DataContractSerializerSettings extends NetObject  {
 
     public XmlDictionaryString getRootNamespace() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRootNamespace = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RootNamespace");
+            retObjectRootNamespace = classInstance.Get("RootNamespace");
+            JCObject val = (JCObject)retObjectRootNamespace;
             return new XmlDictionaryString(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRootNamespace != null ? retObjectRootNamespace.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -300,7 +335,7 @@ public class DataContractSerializerSettings extends NetObject  {
 
     public void setRootNamespace(XmlDictionaryString RootNamespace) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RootNamespace", RootNamespace == null ? null : RootNamespace.getJCOInstance());
         } catch (JCNativeException jcne) {

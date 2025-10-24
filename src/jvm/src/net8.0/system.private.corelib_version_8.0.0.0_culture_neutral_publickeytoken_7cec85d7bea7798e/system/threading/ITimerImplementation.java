@@ -148,9 +148,13 @@ public class ITimerImplementation extends NetObject implements ITimer {
     
     public boolean Change(TimeSpan dueTime, TimeSpan period) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectChange = null;
         try {
-            return (boolean)classInstance.Invoke("Change", dueTime == null ? null : dueTime.getJCOInstance(), period == null ? null : period.getJCOInstance());
+            retObjectChange = classInstance.Invoke("Change", dueTime == null ? null : dueTime.getJCOInstance(), period == null ? null : period.getJCOInstance());
+            return (boolean)retObjectChange;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectChange != null ? retObjectChange.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -158,10 +162,14 @@ public class ITimerImplementation extends NetObject implements ITimer {
 
     public ValueTask DisposeAsync() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDisposeAsync = null;
         try {
-            JCObject objDisposeAsync = (JCObject)classInstance.Invoke("DisposeAsync");
+            retObjectDisposeAsync = classInstance.Invoke("DisposeAsync");
+            JCObject objDisposeAsync = (JCObject)retObjectDisposeAsync;
             return new ValueTask(objDisposeAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDisposeAsync != null ? retObjectDisposeAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,7 +177,7 @@ public class ITimerImplementation extends NetObject implements ITimer {
 
     public void Dispose() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {

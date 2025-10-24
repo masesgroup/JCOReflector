@@ -156,9 +156,13 @@ public class StrictEquality extends BinaryOp  {
     
     public static boolean JScriptStrictEquals(NetObject v1, NetObject v2) throws Throwable, system.NullReferenceException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectJScriptStrictEquals = null;
         try {
-            return (boolean)classType.Invoke("JScriptStrictEquals", v1 == null ? null : v1.getJCOInstance(), v2 == null ? null : v2.getJCOInstance());
+            retObjectJScriptStrictEquals = classType.Invoke("JScriptStrictEquals", v1 == null ? null : v1.getJCOInstance(), v2 == null ? null : v2.getJCOInstance());
+            return (boolean)retObjectJScriptStrictEquals;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectJScriptStrictEquals != null ? retObjectJScriptStrictEquals.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

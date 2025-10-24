@@ -162,10 +162,14 @@ public class TaskDialogRadioButtonCollection extends NetObjectEnumerable  {
     
     public TaskDialogRadioButton Add(java.lang.String text) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAdd = null;
         try {
-            JCObject objAdd = (JCObject)classInstance.Invoke("Add", text);
+            retObjectAdd = classInstance.Invoke("Add", text);
+            JCObject objAdd = (JCObject)retObjectAdd;
             return new TaskDialogRadioButton(objAdd);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAdd != null ? retObjectAdd.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

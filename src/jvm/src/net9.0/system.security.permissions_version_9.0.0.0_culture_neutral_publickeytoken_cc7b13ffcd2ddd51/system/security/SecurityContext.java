@@ -158,9 +158,13 @@ public class SecurityContext extends NetObject implements AutoCloseable {
     
     public static boolean IsFlowSuppressed() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsFlowSuppressed = null;
         try {
-            return (boolean)classType.Invoke("IsFlowSuppressed");
+            retObjectIsFlowSuppressed = classType.Invoke("IsFlowSuppressed");
+            return (boolean)retObjectIsFlowSuppressed;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsFlowSuppressed != null ? retObjectIsFlowSuppressed.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -168,9 +172,13 @@ public class SecurityContext extends NetObject implements AutoCloseable {
 
     public static boolean IsWindowsIdentityFlowSuppressed() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsWindowsIdentityFlowSuppressed = null;
         try {
-            return (boolean)classType.Invoke("IsWindowsIdentityFlowSuppressed");
+            retObjectIsWindowsIdentityFlowSuppressed = classType.Invoke("IsWindowsIdentityFlowSuppressed");
+            return (boolean)retObjectIsWindowsIdentityFlowSuppressed;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsWindowsIdentityFlowSuppressed != null ? retObjectIsWindowsIdentityFlowSuppressed.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,10 +186,14 @@ public class SecurityContext extends NetObject implements AutoCloseable {
 
     public static SecurityContext Capture() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCapture = null;
         try {
-            JCObject objCapture = (JCObject)classType.Invoke("Capture");
+            retObjectCapture = classType.Invoke("Capture");
+            JCObject objCapture = (JCObject)retObjectCapture;
             return new SecurityContext(objCapture);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCapture != null ? retObjectCapture.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -189,10 +201,14 @@ public class SecurityContext extends NetObject implements AutoCloseable {
 
     public SecurityContext CreateCopy() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateCopy = null;
         try {
-            JCObject objCreateCopy = (JCObject)classInstance.Invoke("CreateCopy");
+            retObjectCreateCopy = classInstance.Invoke("CreateCopy");
+            JCObject objCreateCopy = (JCObject)retObjectCreateCopy;
             return new SecurityContext(objCreateCopy);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateCopy != null ? retObjectCreateCopy.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,10 +216,14 @@ public class SecurityContext extends NetObject implements AutoCloseable {
 
     public static AsyncFlowControl SuppressFlow() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSuppressFlow = null;
         try {
-            JCObject objSuppressFlow = (JCObject)classType.Invoke("SuppressFlow");
+            retObjectSuppressFlow = classType.Invoke("SuppressFlow");
+            JCObject objSuppressFlow = (JCObject)retObjectSuppressFlow;
             return new AsyncFlowControl(objSuppressFlow);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSuppressFlow != null ? retObjectSuppressFlow.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -211,10 +231,14 @@ public class SecurityContext extends NetObject implements AutoCloseable {
 
     public static AsyncFlowControl SuppressFlowWindowsIdentity() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSuppressFlowWindowsIdentity = null;
         try {
-            JCObject objSuppressFlowWindowsIdentity = (JCObject)classType.Invoke("SuppressFlowWindowsIdentity");
+            retObjectSuppressFlowWindowsIdentity = classType.Invoke("SuppressFlowWindowsIdentity");
+            JCObject objSuppressFlowWindowsIdentity = (JCObject)retObjectSuppressFlowWindowsIdentity;
             return new AsyncFlowControl(objSuppressFlowWindowsIdentity);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSuppressFlowWindowsIdentity != null ? retObjectSuppressFlowWindowsIdentity.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -222,7 +246,7 @@ public class SecurityContext extends NetObject implements AutoCloseable {
 
     public void Dispose() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
@@ -232,7 +256,7 @@ public class SecurityContext extends NetObject implements AutoCloseable {
 
     public static void RestoreFlow() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("RestoreFlow");
         } catch (JCNativeException jcne) {
@@ -242,7 +266,7 @@ public class SecurityContext extends NetObject implements AutoCloseable {
 
     public static void Run(SecurityContext securityContext, ContextCallback callback, NetObject state) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Run", securityContext == null ? null : securityContext.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -253,7 +277,7 @@ public class SecurityContext extends NetObject implements AutoCloseable {
     public void close() throws Exception {
         try {
             if (classInstance == null)
-                throw new UnsupportedOperationException("classInstance is null.");
+                throw new java.lang.UnsupportedOperationException("classInstance is null.");
             try {
                 classInstance.Invoke("Dispose");
             }

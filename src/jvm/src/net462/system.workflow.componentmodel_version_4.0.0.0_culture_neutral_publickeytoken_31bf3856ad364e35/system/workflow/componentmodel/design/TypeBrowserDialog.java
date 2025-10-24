@@ -187,7 +187,7 @@ public class TypeBrowserDialog extends Form implements system.IServiceProvider {
      */
     @Deprecated 
     public NetObject GetService(NetType serviceType) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIServiceProvider to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIServiceProvider to obtain the full interface.");
     }
 
 
@@ -196,10 +196,14 @@ public class TypeBrowserDialog extends Form implements system.IServiceProvider {
     
     public NetType getSelectedType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectedType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SelectedType");
+            retObjectSelectedType = classInstance.Get("SelectedType");
+            JCObject val = (JCObject)retObjectSelectedType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelectedType != null ? retObjectSelectedType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

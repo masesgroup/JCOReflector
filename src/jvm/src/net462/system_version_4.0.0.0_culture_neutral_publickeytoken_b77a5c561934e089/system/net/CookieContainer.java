@@ -184,10 +184,14 @@ public class CookieContainer extends NetObject  {
     
     public CookieCollection GetCookies(Uri uri) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.UriFormatException, system.OutOfMemoryException, system.OverflowException, system.RankException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetCookies = null;
         try {
-            JCObject objGetCookies = (JCObject)classInstance.Invoke("GetCookies", uri == null ? null : uri.getJCOInstance());
+            retObjectGetCookies = classInstance.Invoke("GetCookies", uri == null ? null : uri.getJCOInstance());
+            JCObject objGetCookies = (JCObject)retObjectGetCookies;
             return new CookieCollection(objGetCookies);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCookies != null ? retObjectGetCookies.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,9 +199,13 @@ public class CookieContainer extends NetObject  {
 
     public java.lang.String GetCookieHeader(Uri uri) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.OutOfMemoryException, system.OverflowException, system.RankException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetCookieHeader = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetCookieHeader", uri == null ? null : uri.getJCOInstance());
+            retObjectGetCookieHeader = classInstance.Invoke("GetCookieHeader", uri == null ? null : uri.getJCOInstance());
+            return (java.lang.String)retObjectGetCookieHeader;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetCookieHeader != null ? retObjectGetCookieHeader.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -205,7 +213,7 @@ public class CookieContainer extends NetObject  {
 
     public void Add(Cookie cookie) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.security.SecurityException, system.MemberAccessException, system.IndexOutOfRangeException, system.NullReferenceException, system.configuration.ConfigurationException, system.UriFormatException, system.OutOfMemoryException, system.net.CookieException, system.InvalidTimeZoneException, system.RankException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Add", cookie == null ? null : cookie.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -215,7 +223,7 @@ public class CookieContainer extends NetObject  {
 
     public void Add(CookieCollection cookies) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException, system.MemberAccessException, system.NullReferenceException, system.UriFormatException, system.OutOfMemoryException, system.net.CookieException, system.OverflowException, system.RankException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Add", cookies == null ? null : cookies.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -225,7 +233,7 @@ public class CookieContainer extends NetObject  {
 
     public void Add(Uri uri, Cookie cookie) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidTimeZoneException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException, system.net.CookieException, system.UriFormatException, system.OutOfMemoryException, system.NotSupportedException, system.RankException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Add", uri == null ? null : uri.getJCOInstance(), cookie == null ? null : cookie.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -235,7 +243,7 @@ public class CookieContainer extends NetObject  {
 
     public void Add(Uri uri, CookieCollection cookies) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.UriFormatException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.InvalidTimeZoneException, system.net.CookieException, system.RankException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Add", uri == null ? null : uri.getJCOInstance(), cookies == null ? null : cookies.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -245,7 +253,7 @@ public class CookieContainer extends NetObject  {
 
     public void SetCookies(Uri uri, java.lang.String cookieHeader) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.UriFormatException, system.OutOfMemoryException, system.OverflowException, system.TypeInitializationException, system.net.CookieException, system.RankException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetCookies", uri == null ? null : uri.getJCOInstance(), cookieHeader);
         } catch (JCNativeException jcne) {
@@ -259,9 +267,20 @@ public class CookieContainer extends NetObject  {
     
     public int getCapacity() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCapacity = null;
         try {
-            return (int)classInstance.Get("Capacity");
+            retObjectCapacity = classInstance.Get("Capacity");
+            return (int)retObjectCapacity;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCapacity_ToString = retObjectCapacity == null ? "null" : retObjectCapacity.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectCapacityNumber = (java.lang.Number)retObjectCapacity;
+                return retObjectCapacityNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCapacity != null ? retObjectCapacity.getClass() : "null", retObjectCapacity_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -269,7 +288,7 @@ public class CookieContainer extends NetObject  {
 
     public void setCapacity(int Capacity) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.RankException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Capacity", Capacity);
         } catch (JCNativeException jcne) {
@@ -279,9 +298,20 @@ public class CookieContainer extends NetObject  {
 
     public int getCount() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCount = null;
         try {
-            return (int)classInstance.Get("Count");
+            retObjectCount = classInstance.Get("Count");
+            return (int)retObjectCount;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCount_ToString = retObjectCount == null ? "null" : retObjectCount.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectCountNumber = (java.lang.Number)retObjectCount;
+                return retObjectCountNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCount != null ? retObjectCount.getClass() : "null", retObjectCount_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -289,9 +319,20 @@ public class CookieContainer extends NetObject  {
 
     public int getMaxCookieSize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxCookieSize = null;
         try {
-            return (int)classInstance.Get("MaxCookieSize");
+            retObjectMaxCookieSize = classInstance.Get("MaxCookieSize");
+            return (int)retObjectMaxCookieSize;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaxCookieSize_ToString = retObjectMaxCookieSize == null ? "null" : retObjectMaxCookieSize.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMaxCookieSizeNumber = (java.lang.Number)retObjectMaxCookieSize;
+                return retObjectMaxCookieSizeNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxCookieSize != null ? retObjectMaxCookieSize.getClass() : "null", retObjectMaxCookieSize_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -299,7 +340,7 @@ public class CookieContainer extends NetObject  {
 
     public void setMaxCookieSize(int MaxCookieSize) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaxCookieSize", MaxCookieSize);
         } catch (JCNativeException jcne) {
@@ -309,9 +350,20 @@ public class CookieContainer extends NetObject  {
 
     public int getPerDomainCapacity() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPerDomainCapacity = null;
         try {
-            return (int)classInstance.Get("PerDomainCapacity");
+            retObjectPerDomainCapacity = classInstance.Get("PerDomainCapacity");
+            return (int)retObjectPerDomainCapacity;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectPerDomainCapacity_ToString = retObjectPerDomainCapacity == null ? "null" : retObjectPerDomainCapacity.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectPerDomainCapacityNumber = (java.lang.Number)retObjectPerDomainCapacity;
+                return retObjectPerDomainCapacityNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectPerDomainCapacity != null ? retObjectPerDomainCapacity.getClass() : "null", retObjectPerDomainCapacity_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -319,7 +371,7 @@ public class CookieContainer extends NetObject  {
 
     public void setPerDomainCapacity(int PerDomainCapacity) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.OverflowException, system.NotSupportedException, system.RankException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PerDomainCapacity", PerDomainCapacity);
         } catch (JCNativeException jcne) {

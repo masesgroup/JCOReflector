@@ -166,9 +166,13 @@ public class ObjectItemCollection extends ItemCollection  {
     
     public boolean TryGetClrType(EnumType objectSpaceType, JCORefOut<NetType> clrType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryGetClrType = null;
         try {
-            return (boolean)classInstance.Invoke("TryGetClrType", objectSpaceType == null ? null : objectSpaceType.getJCOInstance(), clrType.getJCRefOut());
+            retObjectTryGetClrType = classInstance.Invoke("TryGetClrType", objectSpaceType == null ? null : objectSpaceType.getJCOInstance(), clrType.getJCRefOut());
+            return (boolean)retObjectTryGetClrType;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryGetClrType != null ? retObjectTryGetClrType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,9 +180,13 @@ public class ObjectItemCollection extends ItemCollection  {
 
     public boolean TryGetClrType(StructuralType objectSpaceType, JCORefOut<NetType> clrType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryGetClrType = null;
         try {
-            return (boolean)classInstance.Invoke("TryGetClrType", objectSpaceType == null ? null : objectSpaceType.getJCOInstance(), clrType.getJCRefOut());
+            retObjectTryGetClrType = classInstance.Invoke("TryGetClrType", objectSpaceType == null ? null : objectSpaceType.getJCOInstance(), clrType.getJCRefOut());
+            return (boolean)retObjectTryGetClrType;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryGetClrType != null ? retObjectTryGetClrType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,10 +194,14 @@ public class ObjectItemCollection extends ItemCollection  {
 
     public NetType GetClrType(EnumType objectSpaceType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetClrType = null;
         try {
-            JCObject objGetClrType = (JCObject)classInstance.Invoke("GetClrType", objectSpaceType == null ? null : objectSpaceType.getJCOInstance());
+            retObjectGetClrType = classInstance.Invoke("GetClrType", objectSpaceType == null ? null : objectSpaceType.getJCOInstance());
+            JCObject objGetClrType = (JCObject)retObjectGetClrType;
             return new NetType(objGetClrType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetClrType != null ? retObjectGetClrType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,10 +209,14 @@ public class ObjectItemCollection extends ItemCollection  {
 
     public NetType GetClrType(StructuralType objectSpaceType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetClrType = null;
         try {
-            JCObject objGetClrType = (JCObject)classInstance.Invoke("GetClrType", objectSpaceType == null ? null : objectSpaceType.getJCOInstance());
+            retObjectGetClrType = classInstance.Invoke("GetClrType", objectSpaceType == null ? null : objectSpaceType.getJCOInstance());
+            JCObject objGetClrType = (JCObject)retObjectGetClrType;
             return new NetType(objGetClrType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetClrType != null ? retObjectGetClrType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -208,7 +224,7 @@ public class ObjectItemCollection extends ItemCollection  {
 
     public void LoadFromAssembly(Assembly assembly) throws Throwable, system.ArgumentNullException, system.NotImplementedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.data.MetadataException, system.data.MappingException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("LoadFromAssembly", assembly == null ? null : assembly.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -218,7 +234,7 @@ public class ObjectItemCollection extends ItemCollection  {
 
     public void LoadFromAssembly(Assembly assembly, EdmItemCollection edmItemCollection) throws Throwable, system.ArgumentNullException, system.NotImplementedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.data.MetadataException, system.data.MappingException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("LoadFromAssembly", assembly == null ? null : assembly.getJCOInstance(), edmItemCollection == null ? null : edmItemCollection.getJCOInstance());
         } catch (JCNativeException jcne) {

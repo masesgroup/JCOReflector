@@ -167,10 +167,14 @@ public class JsonIgnoreAttribute extends JsonAttribute  {
     
     public JsonIgnoreCondition getCondition() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCondition = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Condition");
+            retObjectCondition = classInstance.Get("Condition");
+            JCObject val = (JCObject)retObjectCondition;
             return new JsonIgnoreCondition(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCondition != null ? retObjectCondition.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,7 +182,7 @@ public class JsonIgnoreAttribute extends JsonAttribute  {
 
     public void setCondition(JsonIgnoreCondition Condition) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Condition", Condition == null ? null : Condition.getJCOInstance());
         } catch (JCNativeException jcne) {

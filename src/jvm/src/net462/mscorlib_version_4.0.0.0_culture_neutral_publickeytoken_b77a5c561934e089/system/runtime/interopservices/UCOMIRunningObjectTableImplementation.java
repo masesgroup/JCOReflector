@@ -147,7 +147,7 @@ public class UCOMIRunningObjectTableImplementation extends NetObject implements 
     
     public void EnumRunning(JCORefOut<UCOMIEnumMoniker> ppenumMoniker) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EnumRunning", ppenumMoniker.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -157,7 +157,7 @@ public class UCOMIRunningObjectTableImplementation extends NetObject implements 
 
     public void GetObject(UCOMIMoniker pmkObjectName, JCORefOut<NetObject> ppunkObject) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetObject", pmkObjectName == null ? null : pmkObjectName.getJCOInstance(), ppunkObject.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -167,7 +167,7 @@ public class UCOMIRunningObjectTableImplementation extends NetObject implements 
 
     public void GetTimeOfLastChange(UCOMIMoniker pmkObjectName, JCORefOut<FILETIME> pfiletime) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetTimeOfLastChange", pmkObjectName == null ? null : pmkObjectName.getJCOInstance(), pfiletime.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -177,7 +177,7 @@ public class UCOMIRunningObjectTableImplementation extends NetObject implements 
 
     public void IsRunning(UCOMIMoniker pmkObjectName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("IsRunning", pmkObjectName == null ? null : pmkObjectName.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -187,7 +187,7 @@ public class UCOMIRunningObjectTableImplementation extends NetObject implements 
 
     public void NoteChangeTime(int dwRegister, JCORefOut<FILETIME> pfiletime) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("NoteChangeTime", dwRegister, pfiletime.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -197,7 +197,7 @@ public class UCOMIRunningObjectTableImplementation extends NetObject implements 
 
     public void Register(int grfFlags, NetObject punkObject, UCOMIMoniker pmkObjectName, JCORefOut<java.util.concurrent.atomic.AtomicInteger> pdwRegister) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Register", grfFlags, punkObject == null ? null : punkObject.getJCOInstance(), pmkObjectName == null ? null : pmkObjectName.getJCOInstance(), pdwRegister.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -207,7 +207,7 @@ public class UCOMIRunningObjectTableImplementation extends NetObject implements 
 
     public void Revoke(int dwRegister) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Revoke", dwRegister);
         } catch (JCNativeException jcne) {

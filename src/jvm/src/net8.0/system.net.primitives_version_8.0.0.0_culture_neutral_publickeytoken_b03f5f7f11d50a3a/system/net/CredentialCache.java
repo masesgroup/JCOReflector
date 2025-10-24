@@ -165,10 +165,14 @@ public class CredentialCache extends NetObjectEnumerable  {
     
     public NetworkCredential GetCredential(java.lang.String host, int port, java.lang.String authenticationType) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.FormatException, system.diagnostics.tracing.EventSourceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetCredential = null;
         try {
-            JCObject objGetCredential = (JCObject)classInstance.Invoke("GetCredential", host, port, authenticationType);
+            retObjectGetCredential = classInstance.Invoke("GetCredential", host, port, authenticationType);
+            JCObject objGetCredential = (JCObject)retObjectGetCredential;
             return new NetworkCredential(objGetCredential);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCredential != null ? retObjectGetCredential.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,10 +180,14 @@ public class CredentialCache extends NetObjectEnumerable  {
 
     public NetworkCredential GetCredential(Uri uriPrefix, java.lang.String authType) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.UriFormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetCredential = null;
         try {
-            JCObject objGetCredential = (JCObject)classInstance.Invoke("GetCredential", uriPrefix == null ? null : uriPrefix.getJCOInstance(), authType);
+            retObjectGetCredential = classInstance.Invoke("GetCredential", uriPrefix == null ? null : uriPrefix.getJCOInstance(), authType);
+            JCObject objGetCredential = (JCObject)retObjectGetCredential;
             return new NetworkCredential(objGetCredential);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCredential != null ? retObjectGetCredential.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,7 +195,7 @@ public class CredentialCache extends NetObjectEnumerable  {
 
     public void Add(java.lang.String host, int port, java.lang.String authenticationType, NetworkCredential credential) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.RankException, system.ArrayTypeMismatchException, system.FormatException, system.diagnostics.tracing.EventSourceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Add", host, port, authenticationType, credential == null ? null : credential.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -197,7 +205,7 @@ public class CredentialCache extends NetObjectEnumerable  {
 
     public void Add(Uri uriPrefix, java.lang.String authType, NetworkCredential cred) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.FormatException, system.diagnostics.tracing.EventSourceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Add", uriPrefix == null ? null : uriPrefix.getJCOInstance(), authType, cred == null ? null : cred.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -207,7 +215,7 @@ public class CredentialCache extends NetObjectEnumerable  {
 
     public void Remove(java.lang.String host, int port, java.lang.String authenticationType) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Remove", host, port, authenticationType);
         } catch (JCNativeException jcne) {
@@ -217,7 +225,7 @@ public class CredentialCache extends NetObjectEnumerable  {
 
     public void Remove(Uri uriPrefix, java.lang.String authType) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Remove", uriPrefix == null ? null : uriPrefix.getJCOInstance(), authType);
         } catch (JCNativeException jcne) {
@@ -231,10 +239,14 @@ public class CredentialCache extends NetObjectEnumerable  {
     
     public static ICredentials getDefaultCredentials() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDefaultCredentials = null;
         try {
-            JCObject val = (JCObject)classType.Get("DefaultCredentials");
+            retObjectDefaultCredentials = classType.Get("DefaultCredentials");
+            JCObject val = (JCObject)retObjectDefaultCredentials;
             return new ICredentialsImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefaultCredentials != null ? retObjectDefaultCredentials.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -242,10 +254,14 @@ public class CredentialCache extends NetObjectEnumerable  {
 
     public static NetworkCredential getDefaultNetworkCredentials() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDefaultNetworkCredentials = null;
         try {
-            JCObject val = (JCObject)classType.Get("DefaultNetworkCredentials");
+            retObjectDefaultNetworkCredentials = classType.Get("DefaultNetworkCredentials");
+            JCObject val = (JCObject)retObjectDefaultNetworkCredentials;
             return new NetworkCredential(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefaultNetworkCredentials != null ? retObjectDefaultNetworkCredentials.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -165,10 +165,14 @@ public class GacInstalled extends EvidenceBase  {
     
     public NetObject Copy() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.NotSupportedException, system.runtime.serialization.SerializationException, system.InvalidOperationException, system.security.SecurityException, system.NullReferenceException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCopy = null;
         try {
-            JCObject objCopy = (JCObject)classInstance.Invoke("Copy");
+            retObjectCopy = classInstance.Invoke("Copy");
+            JCObject objCopy = (JCObject)retObjectCopy;
             return new NetObject(objCopy);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCopy != null ? retObjectCopy.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,10 +180,14 @@ public class GacInstalled extends EvidenceBase  {
 
     public IPermission CreateIdentityPermission(Evidence evidence) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateIdentityPermission = null;
         try {
-            JCObject objCreateIdentityPermission = (JCObject)classInstance.Invoke("CreateIdentityPermission", evidence == null ? null : evidence.getJCOInstance());
+            retObjectCreateIdentityPermission = classInstance.Invoke("CreateIdentityPermission", evidence == null ? null : evidence.getJCOInstance());
+            JCObject objCreateIdentityPermission = (JCObject)retObjectCreateIdentityPermission;
             return new IPermissionImplementation(objCreateIdentityPermission);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateIdentityPermission != null ? retObjectCreateIdentityPermission.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,10 +195,14 @@ public class GacInstalled extends EvidenceBase  {
 
     public EvidenceBase Clone() throws Throwable, system.InvalidOperationException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClone = null;
         try {
-            JCObject objClone = (JCObject)classInstance.Invoke("Clone");
+            retObjectClone = classInstance.Invoke("Clone");
+            JCObject objClone = (JCObject)retObjectClone;
             return new EvidenceBase(objClone);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClone != null ? retObjectClone.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

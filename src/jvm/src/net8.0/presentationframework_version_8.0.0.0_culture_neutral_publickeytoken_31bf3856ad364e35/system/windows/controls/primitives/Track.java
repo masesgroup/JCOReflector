@@ -166,9 +166,20 @@ public class Track extends FrameworkElement  {
     
     public double ValueFromDistance(double horizontal, double vertical) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValueFromDistance = null;
         try {
-            return (double)classInstance.Invoke("ValueFromDistance", horizontal, vertical);
+            retObjectValueFromDistance = classInstance.Invoke("ValueFromDistance", horizontal, vertical);
+            return (double)retObjectValueFromDistance;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectValueFromDistance_ToString = retObjectValueFromDistance == null ? "null" : retObjectValueFromDistance.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectValueFromDistanceNumber = (java.lang.Number)retObjectValueFromDistance;
+                return retObjectValueFromDistanceNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectValueFromDistance != null ? retObjectValueFromDistance.getClass() : "null", retObjectValueFromDistance_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,9 +187,20 @@ public class Track extends FrameworkElement  {
 
     public double ValueFromPoint(Point pt) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValueFromPoint = null;
         try {
-            return (double)classInstance.Invoke("ValueFromPoint", pt == null ? null : pt.getJCOInstance());
+            retObjectValueFromPoint = classInstance.Invoke("ValueFromPoint", pt == null ? null : pt.getJCOInstance());
+            return (double)retObjectValueFromPoint;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectValueFromPoint_ToString = retObjectValueFromPoint == null ? "null" : retObjectValueFromPoint.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectValueFromPointNumber = (java.lang.Number)retObjectValueFromPoint;
+                return retObjectValueFromPointNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectValueFromPoint != null ? retObjectValueFromPoint.getClass() : "null", retObjectValueFromPoint_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,9 +212,13 @@ public class Track extends FrameworkElement  {
     
     public boolean getIsDirectionReversed() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsDirectionReversed = null;
         try {
-            return (boolean)classInstance.Get("IsDirectionReversed");
+            retObjectIsDirectionReversed = classInstance.Get("IsDirectionReversed");
+            return (boolean)retObjectIsDirectionReversed;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsDirectionReversed != null ? retObjectIsDirectionReversed.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,7 +226,7 @@ public class Track extends FrameworkElement  {
 
     public void setIsDirectionReversed(boolean IsDirectionReversed) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsDirectionReversed", IsDirectionReversed);
         } catch (JCNativeException jcne) {
@@ -210,9 +236,20 @@ public class Track extends FrameworkElement  {
 
     public double getMaximum() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaximum = null;
         try {
-            return (double)classInstance.Get("Maximum");
+            retObjectMaximum = classInstance.Get("Maximum");
+            return (double)retObjectMaximum;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaximum_ToString = retObjectMaximum == null ? "null" : retObjectMaximum.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMaximumNumber = (java.lang.Number)retObjectMaximum;
+                return retObjectMaximumNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectMaximum != null ? retObjectMaximum.getClass() : "null", retObjectMaximum_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -220,7 +257,7 @@ public class Track extends FrameworkElement  {
 
     public void setMaximum(double Maximum) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Maximum", Maximum);
         } catch (JCNativeException jcne) {
@@ -230,9 +267,20 @@ public class Track extends FrameworkElement  {
 
     public double getMinimum() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMinimum = null;
         try {
-            return (double)classInstance.Get("Minimum");
+            retObjectMinimum = classInstance.Get("Minimum");
+            return (double)retObjectMinimum;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMinimum_ToString = retObjectMinimum == null ? "null" : retObjectMinimum.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMinimumNumber = (java.lang.Number)retObjectMinimum;
+                return retObjectMinimumNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectMinimum != null ? retObjectMinimum.getClass() : "null", retObjectMinimum_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -240,7 +288,7 @@ public class Track extends FrameworkElement  {
 
     public void setMinimum(double Minimum) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Minimum", Minimum);
         } catch (JCNativeException jcne) {
@@ -250,9 +298,20 @@ public class Track extends FrameworkElement  {
 
     public double getValue() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValue = null;
         try {
-            return (double)classInstance.Get("Value");
+            retObjectValue = classInstance.Get("Value");
+            return (double)retObjectValue;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectValue_ToString = retObjectValue == null ? "null" : retObjectValue.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectValueNumber = (java.lang.Number)retObjectValue;
+                return retObjectValueNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectValue != null ? retObjectValue.getClass() : "null", retObjectValue_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -260,7 +319,7 @@ public class Track extends FrameworkElement  {
 
     public void setValue(double Value) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Value", Value);
         } catch (JCNativeException jcne) {
@@ -270,9 +329,20 @@ public class Track extends FrameworkElement  {
 
     public double getViewportSize() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectViewportSize = null;
         try {
-            return (double)classInstance.Get("ViewportSize");
+            retObjectViewportSize = classInstance.Get("ViewportSize");
+            return (double)retObjectViewportSize;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectViewportSize_ToString = retObjectViewportSize == null ? "null" : retObjectViewportSize.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectViewportSizeNumber = (java.lang.Number)retObjectViewportSize;
+                return retObjectViewportSizeNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectViewportSize != null ? retObjectViewportSize.getClass() : "null", retObjectViewportSize_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -280,7 +350,7 @@ public class Track extends FrameworkElement  {
 
     public void setViewportSize(double ViewportSize) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ViewportSize", ViewportSize);
         } catch (JCNativeException jcne) {
@@ -290,10 +360,14 @@ public class Track extends FrameworkElement  {
 
     public Orientation getOrientation() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOrientation = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Orientation");
+            retObjectOrientation = classInstance.Get("Orientation");
+            JCObject val = (JCObject)retObjectOrientation;
             return new Orientation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOrientation != null ? retObjectOrientation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -301,7 +375,7 @@ public class Track extends FrameworkElement  {
 
     public void setOrientation(Orientation Orientation) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Orientation", Orientation == null ? null : Orientation.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -311,10 +385,14 @@ public class Track extends FrameworkElement  {
 
     public RepeatButton getDecreaseRepeatButton() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDecreaseRepeatButton = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DecreaseRepeatButton");
+            retObjectDecreaseRepeatButton = classInstance.Get("DecreaseRepeatButton");
+            JCObject val = (JCObject)retObjectDecreaseRepeatButton;
             return new RepeatButton(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDecreaseRepeatButton != null ? retObjectDecreaseRepeatButton.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -322,7 +400,7 @@ public class Track extends FrameworkElement  {
 
     public void setDecreaseRepeatButton(RepeatButton DecreaseRepeatButton) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.NotSupportedException, system.OverflowException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.MulticastNotSupportedException, system.InvalidCastException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DecreaseRepeatButton", DecreaseRepeatButton == null ? null : DecreaseRepeatButton.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -332,10 +410,14 @@ public class Track extends FrameworkElement  {
 
     public RepeatButton getIncreaseRepeatButton() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIncreaseRepeatButton = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("IncreaseRepeatButton");
+            retObjectIncreaseRepeatButton = classInstance.Get("IncreaseRepeatButton");
+            JCObject val = (JCObject)retObjectIncreaseRepeatButton;
             return new RepeatButton(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIncreaseRepeatButton != null ? retObjectIncreaseRepeatButton.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -343,7 +425,7 @@ public class Track extends FrameworkElement  {
 
     public void setIncreaseRepeatButton(RepeatButton IncreaseRepeatButton) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.NotSupportedException, system.OverflowException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.MulticastNotSupportedException, system.InvalidCastException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IncreaseRepeatButton", IncreaseRepeatButton == null ? null : IncreaseRepeatButton.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -353,10 +435,14 @@ public class Track extends FrameworkElement  {
 
     public Thumb getThumb() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectThumb = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Thumb");
+            retObjectThumb = classInstance.Get("Thumb");
+            JCObject val = (JCObject)retObjectThumb;
             return new Thumb(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectThumb != null ? retObjectThumb.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -364,7 +450,7 @@ public class Track extends FrameworkElement  {
 
     public void setThumb(Thumb Thumb) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.OverflowException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.InvalidCastException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Thumb", Thumb == null ? null : Thumb.getJCOInstance());
         } catch (JCNativeException jcne) {

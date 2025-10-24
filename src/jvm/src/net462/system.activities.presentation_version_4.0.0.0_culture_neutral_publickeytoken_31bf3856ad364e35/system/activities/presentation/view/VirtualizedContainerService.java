@@ -171,10 +171,14 @@ public class VirtualizedContainerService extends NetObject  {
     
     public WorkflowViewElement GetViewElement(ModelItem modelItem, ICompositeView sourceContainer) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetViewElement = null;
         try {
-            JCObject objGetViewElement = (JCObject)classInstance.Invoke("GetViewElement", modelItem == null ? null : modelItem.getJCOInstance(), sourceContainer == null ? null : sourceContainer.getJCOInstance());
+            retObjectGetViewElement = classInstance.Invoke("GetViewElement", modelItem == null ? null : modelItem.getJCOInstance(), sourceContainer == null ? null : sourceContainer.getJCOInstance());
+            JCObject objGetViewElement = (JCObject)retObjectGetViewElement;
             return new WorkflowViewElement(objGetViewElement);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetViewElement != null ? retObjectGetViewElement.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,10 +186,14 @@ public class VirtualizedContainerService extends NetObject  {
 
     public static NetObject GetHintSize(NetObject instance) throws Throwable, system.ArgumentException, system.threading.ThreadAbortException, system.InvalidOperationException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetHintSize = null;
         try {
-            JCObject objGetHintSize = (JCObject)classType.Invoke("GetHintSize", instance == null ? null : instance.getJCOInstance());
+            retObjectGetHintSize = classType.Invoke("GetHintSize", instance == null ? null : instance.getJCOInstance());
+            JCObject objGetHintSize = (JCObject)retObjectGetHintSize;
             return new NetObject(objGetHintSize);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetHintSize != null ? retObjectGetHintSize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,10 +201,14 @@ public class VirtualizedContainerService extends NetObject  {
 
     public UIElement GetContainer(ModelItem modelItem, ICompositeView sourceContainer) throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.threading.ThreadAbortException, system.NullReferenceException, system.OverflowException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetContainer = null;
         try {
-            JCObject objGetContainer = (JCObject)classInstance.Invoke("GetContainer", modelItem == null ? null : modelItem.getJCOInstance(), sourceContainer == null ? null : sourceContainer.getJCOInstance());
+            retObjectGetContainer = classInstance.Invoke("GetContainer", modelItem == null ? null : modelItem.getJCOInstance(), sourceContainer == null ? null : sourceContainer.getJCOInstance());
+            JCObject objGetContainer = (JCObject)retObjectGetContainer;
             return new UIElement(objGetContainer);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetContainer != null ? retObjectGetContainer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -204,7 +216,7 @@ public class VirtualizedContainerService extends NetObject  {
 
     public static void SetHintSize(NetObject instance, NetObject value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.threading.ThreadAbortException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetHintSize", instance == null ? null : instance.getJCOInstance(), value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {

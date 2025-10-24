@@ -164,10 +164,14 @@ public class AuthenticationManager extends NetObject  {
     
     public static Authorization Authenticate(java.lang.String challenge, WebRequest request, ICredentials credentials) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAuthenticate = null;
         try {
-            JCObject objAuthenticate = (JCObject)classType.Invoke("Authenticate", challenge, request == null ? null : request.getJCOInstance(), credentials == null ? null : credentials.getJCOInstance());
+            retObjectAuthenticate = classType.Invoke("Authenticate", challenge, request == null ? null : request.getJCOInstance(), credentials == null ? null : credentials.getJCOInstance());
+            JCObject objAuthenticate = (JCObject)retObjectAuthenticate;
             return new Authorization(objAuthenticate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAuthenticate != null ? retObjectAuthenticate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -175,10 +179,14 @@ public class AuthenticationManager extends NetObject  {
 
     public static Authorization PreAuthenticate(WebRequest request, ICredentials credentials) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectPreAuthenticate = null;
         try {
-            JCObject objPreAuthenticate = (JCObject)classType.Invoke("PreAuthenticate", request == null ? null : request.getJCOInstance(), credentials == null ? null : credentials.getJCOInstance());
+            retObjectPreAuthenticate = classType.Invoke("PreAuthenticate", request == null ? null : request.getJCOInstance(), credentials == null ? null : credentials.getJCOInstance());
+            JCObject objPreAuthenticate = (JCObject)retObjectPreAuthenticate;
             return new Authorization(objPreAuthenticate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPreAuthenticate != null ? retObjectPreAuthenticate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,7 +194,7 @@ public class AuthenticationManager extends NetObject  {
 
     public static void Register(IAuthenticationModule authenticationModule) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Register", authenticationModule == null ? null : authenticationModule.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -196,7 +204,7 @@ public class AuthenticationManager extends NetObject  {
 
     public static void Unregister(IAuthenticationModule authenticationModule) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Unregister", authenticationModule == null ? null : authenticationModule.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -206,7 +214,7 @@ public class AuthenticationManager extends NetObject  {
 
     public static void Unregister(java.lang.String authenticationScheme) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Unregister", authenticationScheme);
         } catch (JCNativeException jcne) {
@@ -220,10 +228,14 @@ public class AuthenticationManager extends NetObject  {
     
     public static IEnumerator getRegisteredModules() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectRegisteredModules = null;
         try {
-            JCObject val = (JCObject)classType.Get("RegisteredModules");
+            retObjectRegisteredModules = classType.Get("RegisteredModules");
+            JCObject val = (JCObject)retObjectRegisteredModules;
             return new IEnumeratorImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRegisteredModules != null ? retObjectRegisteredModules.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -231,10 +243,14 @@ public class AuthenticationManager extends NetObject  {
 
     public static StringDictionary getCustomTargetNameDictionary() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCustomTargetNameDictionary = null;
         try {
-            JCObject val = (JCObject)classType.Get("CustomTargetNameDictionary");
+            retObjectCustomTargetNameDictionary = classType.Get("CustomTargetNameDictionary");
+            JCObject val = (JCObject)retObjectCustomTargetNameDictionary;
             return new StringDictionary(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCustomTargetNameDictionary != null ? retObjectCustomTargetNameDictionary.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -242,10 +258,14 @@ public class AuthenticationManager extends NetObject  {
 
     public static ICredentialPolicy getCredentialPolicy() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCredentialPolicy = null;
         try {
-            JCObject val = (JCObject)classType.Get("CredentialPolicy");
+            retObjectCredentialPolicy = classType.Get("CredentialPolicy");
+            JCObject val = (JCObject)retObjectCredentialPolicy;
             return new ICredentialPolicyImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCredentialPolicy != null ? retObjectCredentialPolicy.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -253,7 +273,7 @@ public class AuthenticationManager extends NetObject  {
 
     public static void setCredentialPolicy(ICredentialPolicy CredentialPolicy) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Set("CredentialPolicy", CredentialPolicy == null ? null : CredentialPolicy.getJCOInstance());
         } catch (JCNativeException jcne) {

@@ -164,9 +164,13 @@ public class ActiveDirectoryRole extends WorkflowRole implements system.runtime.
     
     public boolean IncludesIdentity(java.lang.String identity) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIncludesIdentity = null;
         try {
-            return (boolean)classInstance.Invoke("IncludesIdentity", identity);
+            retObjectIncludesIdentity = classInstance.Invoke("IncludesIdentity", identity);
+            return (boolean)retObjectIncludesIdentity;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIncludesIdentity != null ? retObjectIncludesIdentity.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -174,10 +178,14 @@ public class ActiveDirectoryRole extends WorkflowRole implements system.runtime.
 
     public ActiveDirectoryRole GetAllReports() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetAllReports = null;
         try {
-            JCObject objGetAllReports = (JCObject)classInstance.Invoke("GetAllReports");
+            retObjectGetAllReports = classInstance.Invoke("GetAllReports");
+            JCObject objGetAllReports = (JCObject)retObjectGetAllReports;
             return new ActiveDirectoryRole(objGetAllReports);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetAllReports != null ? retObjectGetAllReports.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -185,10 +193,14 @@ public class ActiveDirectoryRole extends WorkflowRole implements system.runtime.
 
     public ActiveDirectoryRole GetDirectReports() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDirectReports = null;
         try {
-            JCObject objGetDirectReports = (JCObject)classInstance.Invoke("GetDirectReports");
+            retObjectGetDirectReports = classInstance.Invoke("GetDirectReports");
+            JCObject objGetDirectReports = (JCObject)retObjectGetDirectReports;
             return new ActiveDirectoryRole(objGetDirectReports);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetDirectReports != null ? retObjectGetDirectReports.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,10 +208,14 @@ public class ActiveDirectoryRole extends WorkflowRole implements system.runtime.
 
     public ActiveDirectoryRole GetManager() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetManager = null;
         try {
-            JCObject objGetManager = (JCObject)classInstance.Invoke("GetManager");
+            retObjectGetManager = classInstance.Invoke("GetManager");
+            JCObject objGetManager = (JCObject)retObjectGetManager;
             return new ActiveDirectoryRole(objGetManager);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetManager != null ? retObjectGetManager.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -207,10 +223,14 @@ public class ActiveDirectoryRole extends WorkflowRole implements system.runtime.
 
     public ActiveDirectoryRole GetManagerialChain() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetManagerialChain = null;
         try {
-            JCObject objGetManagerialChain = (JCObject)classInstance.Invoke("GetManagerialChain");
+            retObjectGetManagerialChain = classInstance.Invoke("GetManagerialChain");
+            JCObject objGetManagerialChain = (JCObject)retObjectGetManagerialChain;
             return new ActiveDirectoryRole(objGetManagerialChain);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetManagerialChain != null ? retObjectGetManagerialChain.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -218,10 +238,14 @@ public class ActiveDirectoryRole extends WorkflowRole implements system.runtime.
 
     public ActiveDirectoryRole GetPeers() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ObjectDisposedException, system.ArgumentNullException, system.IndexOutOfRangeException, system.InvalidOperationException, system.OverflowException, system.reflection.AmbiguousMatchException, system.NotSupportedException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPeers = null;
         try {
-            JCObject objGetPeers = (JCObject)classInstance.Invoke("GetPeers");
+            retObjectGetPeers = classInstance.Invoke("GetPeers");
+            JCObject objGetPeers = (JCObject)retObjectGetPeers;
             return new ActiveDirectoryRole(objGetPeers);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetPeers != null ? retObjectGetPeers.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -233,7 +257,7 @@ public class ActiveDirectoryRole extends WorkflowRole implements system.runtime.
      */
     @Deprecated 
     public void GetObjectData(SerializationInfo info, StreamingContext context) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToISerializable to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToISerializable to obtain the full interface.");
     }
 
     /**
@@ -242,13 +266,13 @@ public class ActiveDirectoryRole extends WorkflowRole implements system.runtime.
      */
     @Deprecated 
     public void Dispose() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDisposable to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDisposable to obtain the full interface.");
     }
 
     public void close() throws Exception {
         try {
             if (classInstance == null)
-                throw new UnsupportedOperationException("classInstance is null.");
+                throw new java.lang.UnsupportedOperationException("classInstance is null.");
             try {
                 classInstance.Invoke("Dispose");
             }
@@ -264,10 +288,14 @@ public class ActiveDirectoryRole extends WorkflowRole implements system.runtime.
     
     public DirectoryEntry getRootEntry() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRootEntry = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RootEntry");
+            retObjectRootEntry = classInstance.Get("RootEntry");
+            JCObject val = (JCObject)retObjectRootEntry;
             return new DirectoryEntry(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRootEntry != null ? retObjectRootEntry.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

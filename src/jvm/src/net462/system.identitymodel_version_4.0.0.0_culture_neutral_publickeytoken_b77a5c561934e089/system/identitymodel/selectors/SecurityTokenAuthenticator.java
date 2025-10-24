@@ -154,9 +154,13 @@ public class SecurityTokenAuthenticator extends NetObject  {
     
     public boolean CanValidateToken(SecurityToken token) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanValidateToken = null;
         try {
-            return (boolean)classInstance.Invoke("CanValidateToken", token == null ? null : token.getJCOInstance());
+            retObjectCanValidateToken = classInstance.Invoke("CanValidateToken", token == null ? null : token.getJCOInstance());
+            return (boolean)retObjectCanValidateToken;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCanValidateToken != null ? retObjectCanValidateToken.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -178,9 +178,13 @@ public class CommandLineToolSwitch extends NetObject  {
     
     public boolean getAllowMultipleValues() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAllowMultipleValues = null;
         try {
-            return (boolean)classInstance.Get("AllowMultipleValues");
+            retObjectAllowMultipleValues = classInstance.Get("AllowMultipleValues");
+            return (boolean)retObjectAllowMultipleValues;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAllowMultipleValues != null ? retObjectAllowMultipleValues.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,7 +192,7 @@ public class CommandLineToolSwitch extends NetObject  {
 
     public void setAllowMultipleValues(boolean AllowMultipleValues) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AllowMultipleValues", AllowMultipleValues);
         } catch (JCNativeException jcne) {
@@ -198,9 +202,13 @@ public class CommandLineToolSwitch extends NetObject  {
 
     public boolean getArgumentRequired() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectArgumentRequired = null;
         try {
-            return (boolean)classInstance.Get("ArgumentRequired");
+            retObjectArgumentRequired = classInstance.Get("ArgumentRequired");
+            return (boolean)retObjectArgumentRequired;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectArgumentRequired != null ? retObjectArgumentRequired.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -208,7 +216,7 @@ public class CommandLineToolSwitch extends NetObject  {
 
     public void setArgumentRequired(boolean ArgumentRequired) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ArgumentRequired", ArgumentRequired);
         } catch (JCNativeException jcne) {
@@ -218,9 +226,13 @@ public class CommandLineToolSwitch extends NetObject  {
 
     public boolean getBooleanValue() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBooleanValue = null;
         try {
-            return (boolean)classInstance.Get("BooleanValue");
+            retObjectBooleanValue = classInstance.Get("BooleanValue");
+            return (boolean)retObjectBooleanValue;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectBooleanValue != null ? retObjectBooleanValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -228,7 +240,7 @@ public class CommandLineToolSwitch extends NetObject  {
 
     public void setBooleanValue(boolean BooleanValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BooleanValue", BooleanValue);
         } catch (JCNativeException jcne) {
@@ -238,9 +250,13 @@ public class CommandLineToolSwitch extends NetObject  {
 
     public boolean getIncludeInCommandLine() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIncludeInCommandLine = null;
         try {
-            return (boolean)classInstance.Get("IncludeInCommandLine");
+            retObjectIncludeInCommandLine = classInstance.Get("IncludeInCommandLine");
+            return (boolean)retObjectIncludeInCommandLine;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIncludeInCommandLine != null ? retObjectIncludeInCommandLine.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -248,7 +264,7 @@ public class CommandLineToolSwitch extends NetObject  {
 
     public void setIncludeInCommandLine(boolean IncludeInCommandLine) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IncludeInCommandLine", IncludeInCommandLine);
         } catch (JCNativeException jcne) {
@@ -258,9 +274,13 @@ public class CommandLineToolSwitch extends NetObject  {
 
     public boolean getIsValid() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsValid = null;
         try {
-            return (boolean)classInstance.Get("IsValid");
+            retObjectIsValid = classInstance.Get("IsValid");
+            return (boolean)retObjectIsValid;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsValid != null ? retObjectIsValid.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -268,7 +288,7 @@ public class CommandLineToolSwitch extends NetObject  {
 
     public void setIsValid(boolean IsValid) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsValid", IsValid);
         } catch (JCNativeException jcne) {
@@ -278,9 +298,13 @@ public class CommandLineToolSwitch extends NetObject  {
 
     public boolean getRequired() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRequired = null;
         try {
-            return (boolean)classInstance.Get("Required");
+            retObjectRequired = classInstance.Get("Required");
+            return (boolean)retObjectRequired;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectRequired != null ? retObjectRequired.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -288,7 +312,7 @@ public class CommandLineToolSwitch extends NetObject  {
 
     public void setRequired(boolean Required) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Required", Required);
         } catch (JCNativeException jcne) {
@@ -298,9 +322,13 @@ public class CommandLineToolSwitch extends NetObject  {
 
     public boolean getReversible() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReversible = null;
         try {
-            return (boolean)classInstance.Get("Reversible");
+            retObjectReversible = classInstance.Get("Reversible");
+            return (boolean)retObjectReversible;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectReversible != null ? retObjectReversible.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -308,7 +336,7 @@ public class CommandLineToolSwitch extends NetObject  {
 
     public void setReversible(boolean Reversible) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Reversible", Reversible);
         } catch (JCNativeException jcne) {
@@ -318,9 +346,20 @@ public class CommandLineToolSwitch extends NetObject  {
 
     public int getNumber() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNumber = null;
         try {
-            return (int)classInstance.Get("Number");
+            retObjectNumber = classInstance.Get("Number");
+            return (int)retObjectNumber;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectNumber_ToString = retObjectNumber == null ? "null" : retObjectNumber.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectNumberNumber = (java.lang.Number)retObjectNumber;
+                return retObjectNumberNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectNumber != null ? retObjectNumber.getClass() : "null", retObjectNumber_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -328,7 +367,7 @@ public class CommandLineToolSwitch extends NetObject  {
 
     public void setNumber(int Number) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Number", Number);
         } catch (JCNativeException jcne) {
@@ -338,16 +377,20 @@ public class CommandLineToolSwitch extends NetObject  {
 
     public final ITaskItem[] getTaskItemArray() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTaskItemArray = null;
         try {
             ArrayList<ITaskItem> resultingArrayList = new ArrayList<ITaskItem>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("TaskItemArray");
+            retObjectTaskItemArray = classInstance.Get("TaskItemArray");
+            JCObject resultingObjects = (JCObject)retObjectTaskItemArray;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ITaskItemImplementation(resultingObject));
             }
             ITaskItem[] resultingArray = new ITaskItem[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTaskItemArray != null ? retObjectTaskItemArray.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -355,7 +398,7 @@ public class CommandLineToolSwitch extends NetObject  {
 
     public void setTaskItemArray(ITaskItem[] TaskItemArray) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TaskItemArray", toObjectFromArray(TaskItemArray));
         } catch (JCNativeException jcne) {
@@ -365,10 +408,14 @@ public class CommandLineToolSwitch extends NetObject  {
 
     public CommandLineToolSwitchType getType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Type");
+            retObjectType = classInstance.Get("Type");
+            JCObject val = (JCObject)retObjectType;
             return new CommandLineToolSwitchType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectType != null ? retObjectType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -376,7 +423,7 @@ public class CommandLineToolSwitch extends NetObject  {
 
     public void setType(CommandLineToolSwitchType Type) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Type", Type == null ? null : Type.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -386,9 +433,13 @@ public class CommandLineToolSwitch extends NetObject  {
 
     public java.lang.String getDescription() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDescription = null;
         try {
-            return (java.lang.String)classInstance.Get("Description");
+            retObjectDescription = classInstance.Get("Description");
+            return (java.lang.String)retObjectDescription;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDescription != null ? retObjectDescription.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -396,7 +447,7 @@ public class CommandLineToolSwitch extends NetObject  {
 
     public void setDescription(java.lang.String Description) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Description", Description);
         } catch (JCNativeException jcne) {
@@ -406,9 +457,13 @@ public class CommandLineToolSwitch extends NetObject  {
 
     public java.lang.String getDisplayName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDisplayName = null;
         try {
-            return (java.lang.String)classInstance.Get("DisplayName");
+            retObjectDisplayName = classInstance.Get("DisplayName");
+            return (java.lang.String)retObjectDisplayName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDisplayName != null ? retObjectDisplayName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -416,7 +471,7 @@ public class CommandLineToolSwitch extends NetObject  {
 
     public void setDisplayName(java.lang.String DisplayName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DisplayName", DisplayName);
         } catch (JCNativeException jcne) {
@@ -426,9 +481,13 @@ public class CommandLineToolSwitch extends NetObject  {
 
     public java.lang.String getFallbackArgumentParameter() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFallbackArgumentParameter = null;
         try {
-            return (java.lang.String)classInstance.Get("FallbackArgumentParameter");
+            retObjectFallbackArgumentParameter = classInstance.Get("FallbackArgumentParameter");
+            return (java.lang.String)retObjectFallbackArgumentParameter;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectFallbackArgumentParameter != null ? retObjectFallbackArgumentParameter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -436,7 +495,7 @@ public class CommandLineToolSwitch extends NetObject  {
 
     public void setFallbackArgumentParameter(java.lang.String FallbackArgumentParameter) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FallbackArgumentParameter", FallbackArgumentParameter);
         } catch (JCNativeException jcne) {
@@ -446,9 +505,13 @@ public class CommandLineToolSwitch extends NetObject  {
 
     public java.lang.String getFalseSuffix() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFalseSuffix = null;
         try {
-            return (java.lang.String)classInstance.Get("FalseSuffix");
+            retObjectFalseSuffix = classInstance.Get("FalseSuffix");
+            return (java.lang.String)retObjectFalseSuffix;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectFalseSuffix != null ? retObjectFalseSuffix.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -456,7 +519,7 @@ public class CommandLineToolSwitch extends NetObject  {
 
     public void setFalseSuffix(java.lang.String FalseSuffix) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FalseSuffix", FalseSuffix);
         } catch (JCNativeException jcne) {
@@ -466,9 +529,13 @@ public class CommandLineToolSwitch extends NetObject  {
 
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectName = null;
         try {
-            return (java.lang.String)classInstance.Get("Name");
+            retObjectName = classInstance.Get("Name");
+            return (java.lang.String)retObjectName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectName != null ? retObjectName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -476,7 +543,7 @@ public class CommandLineToolSwitch extends NetObject  {
 
     public void setName(java.lang.String Name) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Name", Name);
         } catch (JCNativeException jcne) {
@@ -486,9 +553,13 @@ public class CommandLineToolSwitch extends NetObject  {
 
     public java.lang.String getReverseSwitchValue() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReverseSwitchValue = null;
         try {
-            return (java.lang.String)classInstance.Get("ReverseSwitchValue");
+            retObjectReverseSwitchValue = classInstance.Get("ReverseSwitchValue");
+            return (java.lang.String)retObjectReverseSwitchValue;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectReverseSwitchValue != null ? retObjectReverseSwitchValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -496,7 +567,7 @@ public class CommandLineToolSwitch extends NetObject  {
 
     public void setReverseSwitchValue(java.lang.String ReverseSwitchValue) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ReverseSwitchValue", ReverseSwitchValue);
         } catch (JCNativeException jcne) {
@@ -506,9 +577,13 @@ public class CommandLineToolSwitch extends NetObject  {
 
     public java.lang.String getSeparator() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSeparator = null;
         try {
-            return (java.lang.String)classInstance.Get("Separator");
+            retObjectSeparator = classInstance.Get("Separator");
+            return (java.lang.String)retObjectSeparator;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSeparator != null ? retObjectSeparator.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -516,7 +591,7 @@ public class CommandLineToolSwitch extends NetObject  {
 
     public void setSeparator(java.lang.String Separator) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Separator", Separator);
         } catch (JCNativeException jcne) {
@@ -526,9 +601,13 @@ public class CommandLineToolSwitch extends NetObject  {
 
     public java.lang.String getSwitchValue() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSwitchValue = null;
         try {
-            return (java.lang.String)classInstance.Get("SwitchValue");
+            retObjectSwitchValue = classInstance.Get("SwitchValue");
+            return (java.lang.String)retObjectSwitchValue;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSwitchValue != null ? retObjectSwitchValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -536,7 +615,7 @@ public class CommandLineToolSwitch extends NetObject  {
 
     public void setSwitchValue(java.lang.String SwitchValue) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SwitchValue", SwitchValue);
         } catch (JCNativeException jcne) {
@@ -546,9 +625,13 @@ public class CommandLineToolSwitch extends NetObject  {
 
     public java.lang.String getTrueSuffix() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTrueSuffix = null;
         try {
-            return (java.lang.String)classInstance.Get("TrueSuffix");
+            retObjectTrueSuffix = classInstance.Get("TrueSuffix");
+            return (java.lang.String)retObjectTrueSuffix;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectTrueSuffix != null ? retObjectTrueSuffix.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -556,7 +639,7 @@ public class CommandLineToolSwitch extends NetObject  {
 
     public void setTrueSuffix(java.lang.String TrueSuffix) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TrueSuffix", TrueSuffix);
         } catch (JCNativeException jcne) {
@@ -566,9 +649,13 @@ public class CommandLineToolSwitch extends NetObject  {
 
     public java.lang.String getValue() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValue = null;
         try {
-            return (java.lang.String)classInstance.Get("Value");
+            retObjectValue = classInstance.Get("Value");
+            return (java.lang.String)retObjectValue;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectValue != null ? retObjectValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -576,7 +663,7 @@ public class CommandLineToolSwitch extends NetObject  {
 
     public void setValue(java.lang.String Value) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Value", Value);
         } catch (JCNativeException jcne) {
@@ -586,10 +673,12 @@ public class CommandLineToolSwitch extends NetObject  {
 
     public java.lang.String[] getStringList() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStringList = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("StringList");
+            retObjectStringList = classInstance.Get("StringList");
+            JCObject resultingObjects = (JCObject)retObjectStringList;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -598,6 +687,8 @@ public class CommandLineToolSwitch extends NetObject  {
 				resultingArray[indexStringList] = (java.lang.String)resultingArrayList.get(indexStringList);
 			}
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into JCObject", retObjectStringList != null ? retObjectStringList.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -605,7 +696,7 @@ public class CommandLineToolSwitch extends NetObject  {
 
     public void setStringList(java.lang.String[] StringList) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("StringList", StringList);
         } catch (JCNativeException jcne) {

@@ -225,9 +225,20 @@ public class MetadataBuilder extends NetObject  {
     
     public int GetRowCount(TableIndex table) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetRowCount = null;
         try {
-            return (int)classInstance.Invoke("GetRowCount", table == null ? null : table.getJCOInstance());
+            retObjectGetRowCount = classInstance.Invoke("GetRowCount", table == null ? null : table.getJCOInstance());
+            return (int)retObjectGetRowCount;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetRowCount_ToString = retObjectGetRowCount == null ? "null" : retObjectGetRowCount.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetRowCountNumber = (java.lang.Number)retObjectGetRowCount;
+                return retObjectGetRowCountNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetRowCount != null ? retObjectGetRowCount.getClass() : "null", retObjectGetRowCount_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -235,10 +246,14 @@ public class MetadataBuilder extends NetObject  {
 
     public AssemblyDefinitionHandle AddAssembly(StringHandle name, Version version, StringHandle culture, BlobHandle publicKey, AssemblyFlags flags, AssemblyHashAlgorithm hashAlgorithm) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddAssembly = null;
         try {
-            JCObject objAddAssembly = (JCObject)classInstance.Invoke("AddAssembly", name == null ? null : name.getJCOInstance(), version == null ? null : version.getJCOInstance(), culture == null ? null : culture.getJCOInstance(), publicKey == null ? null : publicKey.getJCOInstance(), flags == null ? null : flags.getJCOInstance(), hashAlgorithm == null ? null : hashAlgorithm.getJCOInstance());
+            retObjectAddAssembly = classInstance.Invoke("AddAssembly", name == null ? null : name.getJCOInstance(), version == null ? null : version.getJCOInstance(), culture == null ? null : culture.getJCOInstance(), publicKey == null ? null : publicKey.getJCOInstance(), flags == null ? null : flags.getJCOInstance(), hashAlgorithm == null ? null : hashAlgorithm.getJCOInstance());
+            JCObject objAddAssembly = (JCObject)retObjectAddAssembly;
             return new AssemblyDefinitionHandle(objAddAssembly);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddAssembly != null ? retObjectAddAssembly.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -246,10 +261,14 @@ public class MetadataBuilder extends NetObject  {
 
     public AssemblyFileHandle AddAssemblyFile(StringHandle name, BlobHandle hashValue, boolean containsMetadata) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArgumentException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddAssemblyFile = null;
         try {
-            JCObject objAddAssemblyFile = (JCObject)classInstance.Invoke("AddAssemblyFile", name == null ? null : name.getJCOInstance(), hashValue == null ? null : hashValue.getJCOInstance(), containsMetadata);
+            retObjectAddAssemblyFile = classInstance.Invoke("AddAssemblyFile", name == null ? null : name.getJCOInstance(), hashValue == null ? null : hashValue.getJCOInstance(), containsMetadata);
+            JCObject objAddAssemblyFile = (JCObject)retObjectAddAssemblyFile;
             return new AssemblyFileHandle(objAddAssemblyFile);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddAssemblyFile != null ? retObjectAddAssemblyFile.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -257,10 +276,14 @@ public class MetadataBuilder extends NetObject  {
 
     public AssemblyReferenceHandle AddAssemblyReference(StringHandle name, Version version, StringHandle culture, BlobHandle publicKeyOrToken, AssemblyFlags flags, BlobHandle hashValue) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddAssemblyReference = null;
         try {
-            JCObject objAddAssemblyReference = (JCObject)classInstance.Invoke("AddAssemblyReference", name == null ? null : name.getJCOInstance(), version == null ? null : version.getJCOInstance(), culture == null ? null : culture.getJCOInstance(), publicKeyOrToken == null ? null : publicKeyOrToken.getJCOInstance(), flags == null ? null : flags.getJCOInstance(), hashValue == null ? null : hashValue.getJCOInstance());
+            retObjectAddAssemblyReference = classInstance.Invoke("AddAssemblyReference", name == null ? null : name.getJCOInstance(), version == null ? null : version.getJCOInstance(), culture == null ? null : culture.getJCOInstance(), publicKeyOrToken == null ? null : publicKeyOrToken.getJCOInstance(), flags == null ? null : flags.getJCOInstance(), hashValue == null ? null : hashValue.getJCOInstance());
+            JCObject objAddAssemblyReference = (JCObject)retObjectAddAssemblyReference;
             return new AssemblyReferenceHandle(objAddAssemblyReference);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddAssemblyReference != null ? retObjectAddAssemblyReference.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -268,10 +291,14 @@ public class MetadataBuilder extends NetObject  {
 
     public BlobHandle GetOrAddBlob(byte[] value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetOrAddBlob = null;
         try {
-            JCObject objGetOrAddBlob = (JCObject)classInstance.Invoke("GetOrAddBlob", (java.lang.Object)value);
+            retObjectGetOrAddBlob = classInstance.Invoke("GetOrAddBlob", (java.lang.Object)value);
+            JCObject objGetOrAddBlob = (JCObject)retObjectGetOrAddBlob;
             return new BlobHandle(objGetOrAddBlob);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetOrAddBlob != null ? retObjectGetOrAddBlob.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -279,10 +306,14 @@ public class MetadataBuilder extends NetObject  {
 
     public BlobHandle GetOrAddBlob(JCORefOut dupParam0) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetOrAddBlob = null;
         try {
-            JCObject objGetOrAddBlob = (JCObject)classInstance.Invoke("GetOrAddBlob", (java.lang.Object)dupParam0.getJCRefOut());
+            retObjectGetOrAddBlob = classInstance.Invoke("GetOrAddBlob", (java.lang.Object)dupParam0.getJCRefOut());
+            JCObject objGetOrAddBlob = (JCObject)retObjectGetOrAddBlob;
             return new BlobHandle(objGetOrAddBlob);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetOrAddBlob != null ? retObjectGetOrAddBlob.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -290,10 +321,14 @@ public class MetadataBuilder extends NetObject  {
 
     public BlobHandle GetOrAddBlob(BlobBuilder value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetOrAddBlob = null;
         try {
-            JCObject objGetOrAddBlob = (JCObject)classInstance.Invoke("GetOrAddBlob", value == null ? null : value.getJCOInstance());
+            retObjectGetOrAddBlob = classInstance.Invoke("GetOrAddBlob", value == null ? null : value.getJCOInstance());
+            JCObject objGetOrAddBlob = (JCObject)retObjectGetOrAddBlob;
             return new BlobHandle(objGetOrAddBlob);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetOrAddBlob != null ? retObjectGetOrAddBlob.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -301,10 +336,14 @@ public class MetadataBuilder extends NetObject  {
 
     public BlobHandle GetOrAddBlobUTF16(java.lang.String value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.NullReferenceException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetOrAddBlobUTF16 = null;
         try {
-            JCObject objGetOrAddBlobUTF16 = (JCObject)classInstance.Invoke("GetOrAddBlobUTF16", value);
+            retObjectGetOrAddBlobUTF16 = classInstance.Invoke("GetOrAddBlobUTF16", value);
+            JCObject objGetOrAddBlobUTF16 = (JCObject)retObjectGetOrAddBlobUTF16;
             return new BlobHandle(objGetOrAddBlobUTF16);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetOrAddBlobUTF16 != null ? retObjectGetOrAddBlobUTF16.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -312,10 +351,14 @@ public class MetadataBuilder extends NetObject  {
 
     public BlobHandle GetOrAddBlobUTF8(java.lang.String value, boolean allowUnpairedSurrogates) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.NullReferenceException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetOrAddBlobUTF8 = null;
         try {
-            JCObject objGetOrAddBlobUTF8 = (JCObject)classInstance.Invoke("GetOrAddBlobUTF8", value, allowUnpairedSurrogates);
+            retObjectGetOrAddBlobUTF8 = classInstance.Invoke("GetOrAddBlobUTF8", value, allowUnpairedSurrogates);
+            JCObject objGetOrAddBlobUTF8 = (JCObject)retObjectGetOrAddBlobUTF8;
             return new BlobHandle(objGetOrAddBlobUTF8);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetOrAddBlobUTF8 != null ? retObjectGetOrAddBlobUTF8.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -323,10 +366,14 @@ public class MetadataBuilder extends NetObject  {
 
     public BlobHandle GetOrAddConstantBlob(NetObject value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetOrAddConstantBlob = null;
         try {
-            JCObject objGetOrAddConstantBlob = (JCObject)classInstance.Invoke("GetOrAddConstantBlob", value == null ? null : value.getJCOInstance());
+            retObjectGetOrAddConstantBlob = classInstance.Invoke("GetOrAddConstantBlob", value == null ? null : value.getJCOInstance());
+            JCObject objGetOrAddConstantBlob = (JCObject)retObjectGetOrAddConstantBlob;
             return new BlobHandle(objGetOrAddConstantBlob);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetOrAddConstantBlob != null ? retObjectGetOrAddConstantBlob.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -334,10 +381,14 @@ public class MetadataBuilder extends NetObject  {
 
     public BlobHandle GetOrAddDocumentName(java.lang.String value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.NullReferenceException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetOrAddDocumentName = null;
         try {
-            JCObject objGetOrAddDocumentName = (JCObject)classInstance.Invoke("GetOrAddDocumentName", value);
+            retObjectGetOrAddDocumentName = classInstance.Invoke("GetOrAddDocumentName", value);
+            JCObject objGetOrAddDocumentName = (JCObject)retObjectGetOrAddDocumentName;
             return new BlobHandle(objGetOrAddDocumentName);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetOrAddDocumentName != null ? retObjectGetOrAddDocumentName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -345,10 +396,14 @@ public class MetadataBuilder extends NetObject  {
 
     public ConstantHandle AddConstant(EntityHandle parent, NetObject value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.NullReferenceException, system.NotSupportedException, system.ArrayTypeMismatchException, system.RankException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddConstant = null;
         try {
-            JCObject objAddConstant = (JCObject)classInstance.Invoke("AddConstant", parent == null ? null : parent.getJCOInstance(), value == null ? null : value.getJCOInstance());
+            retObjectAddConstant = classInstance.Invoke("AddConstant", parent == null ? null : parent.getJCOInstance(), value == null ? null : value.getJCOInstance());
+            JCObject objAddConstant = (JCObject)retObjectAddConstant;
             return new ConstantHandle(objAddConstant);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddConstant != null ? retObjectAddConstant.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -356,10 +411,14 @@ public class MetadataBuilder extends NetObject  {
 
     public CustomAttributeHandle AddCustomAttribute(EntityHandle parent, EntityHandle constructor, BlobHandle value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddCustomAttribute = null;
         try {
-            JCObject objAddCustomAttribute = (JCObject)classInstance.Invoke("AddCustomAttribute", parent == null ? null : parent.getJCOInstance(), constructor == null ? null : constructor.getJCOInstance(), value == null ? null : value.getJCOInstance());
+            retObjectAddCustomAttribute = classInstance.Invoke("AddCustomAttribute", parent == null ? null : parent.getJCOInstance(), constructor == null ? null : constructor.getJCOInstance(), value == null ? null : value.getJCOInstance());
+            JCObject objAddCustomAttribute = (JCObject)retObjectAddCustomAttribute;
             return new CustomAttributeHandle(objAddCustomAttribute);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddCustomAttribute != null ? retObjectAddCustomAttribute.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -367,10 +426,14 @@ public class MetadataBuilder extends NetObject  {
 
     public CustomDebugInformationHandle AddCustomDebugInformation(EntityHandle parent, GuidHandle kind, BlobHandle value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddCustomDebugInformation = null;
         try {
-            JCObject objAddCustomDebugInformation = (JCObject)classInstance.Invoke("AddCustomDebugInformation", parent == null ? null : parent.getJCOInstance(), kind == null ? null : kind.getJCOInstance(), value == null ? null : value.getJCOInstance());
+            retObjectAddCustomDebugInformation = classInstance.Invoke("AddCustomDebugInformation", parent == null ? null : parent.getJCOInstance(), kind == null ? null : kind.getJCOInstance(), value == null ? null : value.getJCOInstance());
+            JCObject objAddCustomDebugInformation = (JCObject)retObjectAddCustomDebugInformation;
             return new CustomDebugInformationHandle(objAddCustomDebugInformation);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddCustomDebugInformation != null ? retObjectAddCustomDebugInformation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -378,10 +441,14 @@ public class MetadataBuilder extends NetObject  {
 
     public DeclarativeSecurityAttributeHandle AddDeclarativeSecurityAttribute(EntityHandle parent, DeclarativeSecurityAction action, BlobHandle permissionSet) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddDeclarativeSecurityAttribute = null;
         try {
-            JCObject objAddDeclarativeSecurityAttribute = (JCObject)classInstance.Invoke("AddDeclarativeSecurityAttribute", parent == null ? null : parent.getJCOInstance(), action == null ? null : action.getJCOInstance(), permissionSet == null ? null : permissionSet.getJCOInstance());
+            retObjectAddDeclarativeSecurityAttribute = classInstance.Invoke("AddDeclarativeSecurityAttribute", parent == null ? null : parent.getJCOInstance(), action == null ? null : action.getJCOInstance(), permissionSet == null ? null : permissionSet.getJCOInstance());
+            JCObject objAddDeclarativeSecurityAttribute = (JCObject)retObjectAddDeclarativeSecurityAttribute;
             return new DeclarativeSecurityAttributeHandle(objAddDeclarativeSecurityAttribute);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddDeclarativeSecurityAttribute != null ? retObjectAddDeclarativeSecurityAttribute.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -389,10 +456,14 @@ public class MetadataBuilder extends NetObject  {
 
     public DocumentHandle AddDocument(BlobHandle name, GuidHandle hashAlgorithm, BlobHandle hash, GuidHandle language) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArgumentException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddDocument = null;
         try {
-            JCObject objAddDocument = (JCObject)classInstance.Invoke("AddDocument", name == null ? null : name.getJCOInstance(), hashAlgorithm == null ? null : hashAlgorithm.getJCOInstance(), hash == null ? null : hash.getJCOInstance(), language == null ? null : language.getJCOInstance());
+            retObjectAddDocument = classInstance.Invoke("AddDocument", name == null ? null : name.getJCOInstance(), hashAlgorithm == null ? null : hashAlgorithm.getJCOInstance(), hash == null ? null : hash.getJCOInstance(), language == null ? null : language.getJCOInstance());
+            JCObject objAddDocument = (JCObject)retObjectAddDocument;
             return new DocumentHandle(objAddDocument);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddDocument != null ? retObjectAddDocument.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -400,10 +471,14 @@ public class MetadataBuilder extends NetObject  {
 
     public EventDefinitionHandle AddEvent(EventAttributes attributes, StringHandle name, EntityHandle type) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddEvent = null;
         try {
-            JCObject objAddEvent = (JCObject)classInstance.Invoke("AddEvent", attributes == null ? null : attributes.getJCOInstance(), name == null ? null : name.getJCOInstance(), type == null ? null : type.getJCOInstance());
+            retObjectAddEvent = classInstance.Invoke("AddEvent", attributes == null ? null : attributes.getJCOInstance(), name == null ? null : name.getJCOInstance(), type == null ? null : type.getJCOInstance());
+            JCObject objAddEvent = (JCObject)retObjectAddEvent;
             return new EventDefinitionHandle(objAddEvent);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddEvent != null ? retObjectAddEvent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -411,10 +486,14 @@ public class MetadataBuilder extends NetObject  {
 
     public ExportedTypeHandle AddExportedType(TypeAttributes attributes, StringHandle namespace, StringHandle name, EntityHandle implementation, int typeDefinitionId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddExportedType = null;
         try {
-            JCObject objAddExportedType = (JCObject)classInstance.Invoke("AddExportedType", attributes == null ? null : attributes.getJCOInstance(), namespace == null ? null : namespace.getJCOInstance(), name == null ? null : name.getJCOInstance(), implementation == null ? null : implementation.getJCOInstance(), typeDefinitionId);
+            retObjectAddExportedType = classInstance.Invoke("AddExportedType", attributes == null ? null : attributes.getJCOInstance(), namespace == null ? null : namespace.getJCOInstance(), name == null ? null : name.getJCOInstance(), implementation == null ? null : implementation.getJCOInstance(), typeDefinitionId);
+            JCObject objAddExportedType = (JCObject)retObjectAddExportedType;
             return new ExportedTypeHandle(objAddExportedType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddExportedType != null ? retObjectAddExportedType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -422,10 +501,14 @@ public class MetadataBuilder extends NetObject  {
 
     public FieldDefinitionHandle AddFieldDefinition(FieldAttributes attributes, StringHandle name, BlobHandle signature) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArgumentException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddFieldDefinition = null;
         try {
-            JCObject objAddFieldDefinition = (JCObject)classInstance.Invoke("AddFieldDefinition", attributes == null ? null : attributes.getJCOInstance(), name == null ? null : name.getJCOInstance(), signature == null ? null : signature.getJCOInstance());
+            retObjectAddFieldDefinition = classInstance.Invoke("AddFieldDefinition", attributes == null ? null : attributes.getJCOInstance(), name == null ? null : name.getJCOInstance(), signature == null ? null : signature.getJCOInstance());
+            JCObject objAddFieldDefinition = (JCObject)retObjectAddFieldDefinition;
             return new FieldDefinitionHandle(objAddFieldDefinition);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddFieldDefinition != null ? retObjectAddFieldDefinition.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -433,10 +516,14 @@ public class MetadataBuilder extends NetObject  {
 
     public GenericParameterConstraintHandle AddGenericParameterConstraint(GenericParameterHandle genericParameter, EntityHandle constraint) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddGenericParameterConstraint = null;
         try {
-            JCObject objAddGenericParameterConstraint = (JCObject)classInstance.Invoke("AddGenericParameterConstraint", genericParameter == null ? null : genericParameter.getJCOInstance(), constraint == null ? null : constraint.getJCOInstance());
+            retObjectAddGenericParameterConstraint = classInstance.Invoke("AddGenericParameterConstraint", genericParameter == null ? null : genericParameter.getJCOInstance(), constraint == null ? null : constraint.getJCOInstance());
+            JCObject objAddGenericParameterConstraint = (JCObject)retObjectAddGenericParameterConstraint;
             return new GenericParameterConstraintHandle(objAddGenericParameterConstraint);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddGenericParameterConstraint != null ? retObjectAddGenericParameterConstraint.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -444,10 +531,14 @@ public class MetadataBuilder extends NetObject  {
 
     public GenericParameterHandle AddGenericParameter(EntityHandle parent, GenericParameterAttributes attributes, StringHandle name, int index) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddGenericParameter = null;
         try {
-            JCObject objAddGenericParameter = (JCObject)classInstance.Invoke("AddGenericParameter", parent == null ? null : parent.getJCOInstance(), attributes == null ? null : attributes.getJCOInstance(), name == null ? null : name.getJCOInstance(), index);
+            retObjectAddGenericParameter = classInstance.Invoke("AddGenericParameter", parent == null ? null : parent.getJCOInstance(), attributes == null ? null : attributes.getJCOInstance(), name == null ? null : name.getJCOInstance(), index);
+            JCObject objAddGenericParameter = (JCObject)retObjectAddGenericParameter;
             return new GenericParameterHandle(objAddGenericParameter);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddGenericParameter != null ? retObjectAddGenericParameter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -455,10 +546,14 @@ public class MetadataBuilder extends NetObject  {
 
     public GuidHandle GetOrAddGuid(Guid guid) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetOrAddGuid = null;
         try {
-            JCObject objGetOrAddGuid = (JCObject)classInstance.Invoke("GetOrAddGuid", guid == null ? null : guid.getJCOInstance());
+            retObjectGetOrAddGuid = classInstance.Invoke("GetOrAddGuid", guid == null ? null : guid.getJCOInstance());
+            JCObject objGetOrAddGuid = (JCObject)retObjectGetOrAddGuid;
             return new GuidHandle(objGetOrAddGuid);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetOrAddGuid != null ? retObjectGetOrAddGuid.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -466,10 +561,14 @@ public class MetadataBuilder extends NetObject  {
 
     public ImportScopeHandle AddImportScope(ImportScopeHandle parentScope, BlobHandle imports) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArgumentException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddImportScope = null;
         try {
-            JCObject objAddImportScope = (JCObject)classInstance.Invoke("AddImportScope", parentScope == null ? null : parentScope.getJCOInstance(), imports == null ? null : imports.getJCOInstance());
+            retObjectAddImportScope = classInstance.Invoke("AddImportScope", parentScope == null ? null : parentScope.getJCOInstance(), imports == null ? null : imports.getJCOInstance());
+            JCObject objAddImportScope = (JCObject)retObjectAddImportScope;
             return new ImportScopeHandle(objAddImportScope);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddImportScope != null ? retObjectAddImportScope.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -477,10 +576,14 @@ public class MetadataBuilder extends NetObject  {
 
     public InterfaceImplementationHandle AddInterfaceImplementation(TypeDefinitionHandle type, EntityHandle implementedInterface) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddInterfaceImplementation = null;
         try {
-            JCObject objAddInterfaceImplementation = (JCObject)classInstance.Invoke("AddInterfaceImplementation", type == null ? null : type.getJCOInstance(), implementedInterface == null ? null : implementedInterface.getJCOInstance());
+            retObjectAddInterfaceImplementation = classInstance.Invoke("AddInterfaceImplementation", type == null ? null : type.getJCOInstance(), implementedInterface == null ? null : implementedInterface.getJCOInstance());
+            JCObject objAddInterfaceImplementation = (JCObject)retObjectAddInterfaceImplementation;
             return new InterfaceImplementationHandle(objAddInterfaceImplementation);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddInterfaceImplementation != null ? retObjectAddInterfaceImplementation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -488,10 +591,14 @@ public class MetadataBuilder extends NetObject  {
 
     public LocalConstantHandle AddLocalConstant(StringHandle name, BlobHandle signature) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArgumentException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddLocalConstant = null;
         try {
-            JCObject objAddLocalConstant = (JCObject)classInstance.Invoke("AddLocalConstant", name == null ? null : name.getJCOInstance(), signature == null ? null : signature.getJCOInstance());
+            retObjectAddLocalConstant = classInstance.Invoke("AddLocalConstant", name == null ? null : name.getJCOInstance(), signature == null ? null : signature.getJCOInstance());
+            JCObject objAddLocalConstant = (JCObject)retObjectAddLocalConstant;
             return new LocalConstantHandle(objAddLocalConstant);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddLocalConstant != null ? retObjectAddLocalConstant.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -499,10 +606,14 @@ public class MetadataBuilder extends NetObject  {
 
     public LocalScopeHandle AddLocalScope(MethodDefinitionHandle method, ImportScopeHandle importScope, LocalVariableHandle variableList, LocalConstantHandle constantList, int startOffset, int length) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArgumentException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddLocalScope = null;
         try {
-            JCObject objAddLocalScope = (JCObject)classInstance.Invoke("AddLocalScope", method == null ? null : method.getJCOInstance(), importScope == null ? null : importScope.getJCOInstance(), variableList == null ? null : variableList.getJCOInstance(), constantList == null ? null : constantList.getJCOInstance(), startOffset, length);
+            retObjectAddLocalScope = classInstance.Invoke("AddLocalScope", method == null ? null : method.getJCOInstance(), importScope == null ? null : importScope.getJCOInstance(), variableList == null ? null : variableList.getJCOInstance(), constantList == null ? null : constantList.getJCOInstance(), startOffset, length);
+            JCObject objAddLocalScope = (JCObject)retObjectAddLocalScope;
             return new LocalScopeHandle(objAddLocalScope);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddLocalScope != null ? retObjectAddLocalScope.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -510,10 +621,14 @@ public class MetadataBuilder extends NetObject  {
 
     public LocalVariableHandle AddLocalVariable(LocalVariableAttributes attributes, int index, StringHandle name) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddLocalVariable = null;
         try {
-            JCObject objAddLocalVariable = (JCObject)classInstance.Invoke("AddLocalVariable", attributes == null ? null : attributes.getJCOInstance(), index, name == null ? null : name.getJCOInstance());
+            retObjectAddLocalVariable = classInstance.Invoke("AddLocalVariable", attributes == null ? null : attributes.getJCOInstance(), index, name == null ? null : name.getJCOInstance());
+            JCObject objAddLocalVariable = (JCObject)retObjectAddLocalVariable;
             return new LocalVariableHandle(objAddLocalVariable);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddLocalVariable != null ? retObjectAddLocalVariable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -521,10 +636,14 @@ public class MetadataBuilder extends NetObject  {
 
     public ManifestResourceHandle AddManifestResource(ManifestResourceAttributes attributes, StringHandle name, EntityHandle implementation, UInt32 offset) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddManifestResource = null;
         try {
-            JCObject objAddManifestResource = (JCObject)classInstance.Invoke("AddManifestResource", attributes == null ? null : attributes.getJCOInstance(), name == null ? null : name.getJCOInstance(), implementation == null ? null : implementation.getJCOInstance(), offset == null ? null : offset.getJCOInstance());
+            retObjectAddManifestResource = classInstance.Invoke("AddManifestResource", attributes == null ? null : attributes.getJCOInstance(), name == null ? null : name.getJCOInstance(), implementation == null ? null : implementation.getJCOInstance(), offset == null ? null : offset.getJCOInstance());
+            JCObject objAddManifestResource = (JCObject)retObjectAddManifestResource;
             return new ManifestResourceHandle(objAddManifestResource);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddManifestResource != null ? retObjectAddManifestResource.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -532,10 +651,14 @@ public class MetadataBuilder extends NetObject  {
 
     public MemberReferenceHandle AddMemberReference(EntityHandle parent, StringHandle name, BlobHandle signature) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddMemberReference = null;
         try {
-            JCObject objAddMemberReference = (JCObject)classInstance.Invoke("AddMemberReference", parent == null ? null : parent.getJCOInstance(), name == null ? null : name.getJCOInstance(), signature == null ? null : signature.getJCOInstance());
+            retObjectAddMemberReference = classInstance.Invoke("AddMemberReference", parent == null ? null : parent.getJCOInstance(), name == null ? null : name.getJCOInstance(), signature == null ? null : signature.getJCOInstance());
+            JCObject objAddMemberReference = (JCObject)retObjectAddMemberReference;
             return new MemberReferenceHandle(objAddMemberReference);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddMemberReference != null ? retObjectAddMemberReference.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -543,10 +666,14 @@ public class MetadataBuilder extends NetObject  {
 
     public MethodDebugInformationHandle AddMethodDebugInformation(DocumentHandle document, BlobHandle sequencePoints) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArgumentException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddMethodDebugInformation = null;
         try {
-            JCObject objAddMethodDebugInformation = (JCObject)classInstance.Invoke("AddMethodDebugInformation", document == null ? null : document.getJCOInstance(), sequencePoints == null ? null : sequencePoints.getJCOInstance());
+            retObjectAddMethodDebugInformation = classInstance.Invoke("AddMethodDebugInformation", document == null ? null : document.getJCOInstance(), sequencePoints == null ? null : sequencePoints.getJCOInstance());
+            JCObject objAddMethodDebugInformation = (JCObject)retObjectAddMethodDebugInformation;
             return new MethodDebugInformationHandle(objAddMethodDebugInformation);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddMethodDebugInformation != null ? retObjectAddMethodDebugInformation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -554,10 +681,14 @@ public class MetadataBuilder extends NetObject  {
 
     public MethodDefinitionHandle AddMethodDefinition(MethodAttributes attributes, MethodImplAttributes implAttributes, StringHandle name, BlobHandle signature, int bodyOffset, ParameterHandle parameterList) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddMethodDefinition = null;
         try {
-            JCObject objAddMethodDefinition = (JCObject)classInstance.Invoke("AddMethodDefinition", attributes == null ? null : attributes.getJCOInstance(), implAttributes == null ? null : implAttributes.getJCOInstance(), name == null ? null : name.getJCOInstance(), signature == null ? null : signature.getJCOInstance(), bodyOffset, parameterList == null ? null : parameterList.getJCOInstance());
+            retObjectAddMethodDefinition = classInstance.Invoke("AddMethodDefinition", attributes == null ? null : attributes.getJCOInstance(), implAttributes == null ? null : implAttributes.getJCOInstance(), name == null ? null : name.getJCOInstance(), signature == null ? null : signature.getJCOInstance(), bodyOffset, parameterList == null ? null : parameterList.getJCOInstance());
+            JCObject objAddMethodDefinition = (JCObject)retObjectAddMethodDefinition;
             return new MethodDefinitionHandle(objAddMethodDefinition);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddMethodDefinition != null ? retObjectAddMethodDefinition.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -565,10 +696,14 @@ public class MetadataBuilder extends NetObject  {
 
     public MethodImplementationHandle AddMethodImplementation(TypeDefinitionHandle type, EntityHandle methodBody, EntityHandle methodDeclaration) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddMethodImplementation = null;
         try {
-            JCObject objAddMethodImplementation = (JCObject)classInstance.Invoke("AddMethodImplementation", type == null ? null : type.getJCOInstance(), methodBody == null ? null : methodBody.getJCOInstance(), methodDeclaration == null ? null : methodDeclaration.getJCOInstance());
+            retObjectAddMethodImplementation = classInstance.Invoke("AddMethodImplementation", type == null ? null : type.getJCOInstance(), methodBody == null ? null : methodBody.getJCOInstance(), methodDeclaration == null ? null : methodDeclaration.getJCOInstance());
+            JCObject objAddMethodImplementation = (JCObject)retObjectAddMethodImplementation;
             return new MethodImplementationHandle(objAddMethodImplementation);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddMethodImplementation != null ? retObjectAddMethodImplementation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -576,10 +711,14 @@ public class MetadataBuilder extends NetObject  {
 
     public MethodSpecificationHandle AddMethodSpecification(EntityHandle method, BlobHandle instantiation) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddMethodSpecification = null;
         try {
-            JCObject objAddMethodSpecification = (JCObject)classInstance.Invoke("AddMethodSpecification", method == null ? null : method.getJCOInstance(), instantiation == null ? null : instantiation.getJCOInstance());
+            retObjectAddMethodSpecification = classInstance.Invoke("AddMethodSpecification", method == null ? null : method.getJCOInstance(), instantiation == null ? null : instantiation.getJCOInstance());
+            JCObject objAddMethodSpecification = (JCObject)retObjectAddMethodSpecification;
             return new MethodSpecificationHandle(objAddMethodSpecification);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddMethodSpecification != null ? retObjectAddMethodSpecification.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -587,10 +726,14 @@ public class MetadataBuilder extends NetObject  {
 
     public ModuleDefinitionHandle AddModule(int generation, StringHandle moduleName, GuidHandle mvid, GuidHandle encId, GuidHandle encBaseId) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddModule = null;
         try {
-            JCObject objAddModule = (JCObject)classInstance.Invoke("AddModule", generation, moduleName == null ? null : moduleName.getJCOInstance(), mvid == null ? null : mvid.getJCOInstance(), encId == null ? null : encId.getJCOInstance(), encBaseId == null ? null : encBaseId.getJCOInstance());
+            retObjectAddModule = classInstance.Invoke("AddModule", generation, moduleName == null ? null : moduleName.getJCOInstance(), mvid == null ? null : mvid.getJCOInstance(), encId == null ? null : encId.getJCOInstance(), encBaseId == null ? null : encBaseId.getJCOInstance());
+            JCObject objAddModule = (JCObject)retObjectAddModule;
             return new ModuleDefinitionHandle(objAddModule);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddModule != null ? retObjectAddModule.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -598,10 +741,14 @@ public class MetadataBuilder extends NetObject  {
 
     public ModuleReferenceHandle AddModuleReference(StringHandle moduleName) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArgumentException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddModuleReference = null;
         try {
-            JCObject objAddModuleReference = (JCObject)classInstance.Invoke("AddModuleReference", moduleName == null ? null : moduleName.getJCOInstance());
+            retObjectAddModuleReference = classInstance.Invoke("AddModuleReference", moduleName == null ? null : moduleName.getJCOInstance());
+            JCObject objAddModuleReference = (JCObject)retObjectAddModuleReference;
             return new ModuleReferenceHandle(objAddModuleReference);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddModuleReference != null ? retObjectAddModuleReference.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -609,10 +756,14 @@ public class MetadataBuilder extends NetObject  {
 
     public ParameterHandle AddParameter(ParameterAttributes attributes, StringHandle name, int sequenceNumber) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddParameter = null;
         try {
-            JCObject objAddParameter = (JCObject)classInstance.Invoke("AddParameter", attributes == null ? null : attributes.getJCOInstance(), name == null ? null : name.getJCOInstance(), sequenceNumber);
+            retObjectAddParameter = classInstance.Invoke("AddParameter", attributes == null ? null : attributes.getJCOInstance(), name == null ? null : name.getJCOInstance(), sequenceNumber);
+            JCObject objAddParameter = (JCObject)retObjectAddParameter;
             return new ParameterHandle(objAddParameter);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddParameter != null ? retObjectAddParameter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -620,10 +771,14 @@ public class MetadataBuilder extends NetObject  {
 
     public PropertyDefinitionHandle AddProperty(PropertyAttributes attributes, StringHandle name, BlobHandle signature) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArgumentException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddProperty = null;
         try {
-            JCObject objAddProperty = (JCObject)classInstance.Invoke("AddProperty", attributes == null ? null : attributes.getJCOInstance(), name == null ? null : name.getJCOInstance(), signature == null ? null : signature.getJCOInstance());
+            retObjectAddProperty = classInstance.Invoke("AddProperty", attributes == null ? null : attributes.getJCOInstance(), name == null ? null : name.getJCOInstance(), signature == null ? null : signature.getJCOInstance());
+            JCObject objAddProperty = (JCObject)retObjectAddProperty;
             return new PropertyDefinitionHandle(objAddProperty);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddProperty != null ? retObjectAddProperty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -631,10 +786,14 @@ public class MetadataBuilder extends NetObject  {
 
     public StandaloneSignatureHandle AddStandaloneSignature(BlobHandle signature) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArgumentException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddStandaloneSignature = null;
         try {
-            JCObject objAddStandaloneSignature = (JCObject)classInstance.Invoke("AddStandaloneSignature", signature == null ? null : signature.getJCOInstance());
+            retObjectAddStandaloneSignature = classInstance.Invoke("AddStandaloneSignature", signature == null ? null : signature.getJCOInstance());
+            JCObject objAddStandaloneSignature = (JCObject)retObjectAddStandaloneSignature;
             return new StandaloneSignatureHandle(objAddStandaloneSignature);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddStandaloneSignature != null ? retObjectAddStandaloneSignature.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -642,10 +801,14 @@ public class MetadataBuilder extends NetObject  {
 
     public StringHandle GetOrAddString(java.lang.String value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetOrAddString = null;
         try {
-            JCObject objGetOrAddString = (JCObject)classInstance.Invoke("GetOrAddString", value);
+            retObjectGetOrAddString = classInstance.Invoke("GetOrAddString", value);
+            JCObject objGetOrAddString = (JCObject)retObjectGetOrAddString;
             return new StringHandle(objGetOrAddString);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetOrAddString != null ? retObjectGetOrAddString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -653,10 +816,14 @@ public class MetadataBuilder extends NetObject  {
 
     public TypeDefinitionHandle AddTypeDefinition(TypeAttributes attributes, StringHandle namespace, StringHandle name, EntityHandle baseType, FieldDefinitionHandle fieldList, MethodDefinitionHandle methodList) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddTypeDefinition = null;
         try {
-            JCObject objAddTypeDefinition = (JCObject)classInstance.Invoke("AddTypeDefinition", attributes == null ? null : attributes.getJCOInstance(), namespace == null ? null : namespace.getJCOInstance(), name == null ? null : name.getJCOInstance(), baseType == null ? null : baseType.getJCOInstance(), fieldList == null ? null : fieldList.getJCOInstance(), methodList == null ? null : methodList.getJCOInstance());
+            retObjectAddTypeDefinition = classInstance.Invoke("AddTypeDefinition", attributes == null ? null : attributes.getJCOInstance(), namespace == null ? null : namespace.getJCOInstance(), name == null ? null : name.getJCOInstance(), baseType == null ? null : baseType.getJCOInstance(), fieldList == null ? null : fieldList.getJCOInstance(), methodList == null ? null : methodList.getJCOInstance());
+            JCObject objAddTypeDefinition = (JCObject)retObjectAddTypeDefinition;
             return new TypeDefinitionHandle(objAddTypeDefinition);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddTypeDefinition != null ? retObjectAddTypeDefinition.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -664,10 +831,14 @@ public class MetadataBuilder extends NetObject  {
 
     public TypeReferenceHandle AddTypeReference(EntityHandle resolutionScope, StringHandle namespace, StringHandle name) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddTypeReference = null;
         try {
-            JCObject objAddTypeReference = (JCObject)classInstance.Invoke("AddTypeReference", resolutionScope == null ? null : resolutionScope.getJCOInstance(), namespace == null ? null : namespace.getJCOInstance(), name == null ? null : name.getJCOInstance());
+            retObjectAddTypeReference = classInstance.Invoke("AddTypeReference", resolutionScope == null ? null : resolutionScope.getJCOInstance(), namespace == null ? null : namespace.getJCOInstance(), name == null ? null : name.getJCOInstance());
+            JCObject objAddTypeReference = (JCObject)retObjectAddTypeReference;
             return new TypeReferenceHandle(objAddTypeReference);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddTypeReference != null ? retObjectAddTypeReference.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -675,10 +846,14 @@ public class MetadataBuilder extends NetObject  {
 
     public TypeSpecificationHandle AddTypeSpecification(BlobHandle signature) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArgumentException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddTypeSpecification = null;
         try {
-            JCObject objAddTypeSpecification = (JCObject)classInstance.Invoke("AddTypeSpecification", signature == null ? null : signature.getJCOInstance());
+            retObjectAddTypeSpecification = classInstance.Invoke("AddTypeSpecification", signature == null ? null : signature.getJCOInstance());
+            JCObject objAddTypeSpecification = (JCObject)retObjectAddTypeSpecification;
             return new TypeSpecificationHandle(objAddTypeSpecification);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddTypeSpecification != null ? retObjectAddTypeSpecification.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -686,10 +861,14 @@ public class MetadataBuilder extends NetObject  {
 
     public UserStringHandle GetOrAddUserString(java.lang.String value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException, system.reflection.metadata.ImageFormatLimitationException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetOrAddUserString = null;
         try {
-            JCObject objGetOrAddUserString = (JCObject)classInstance.Invoke("GetOrAddUserString", value);
+            retObjectGetOrAddUserString = classInstance.Invoke("GetOrAddUserString", value);
+            JCObject objGetOrAddUserString = (JCObject)retObjectGetOrAddUserString;
             return new UserStringHandle(objGetOrAddUserString);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetOrAddUserString != null ? retObjectGetOrAddUserString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -697,7 +876,7 @@ public class MetadataBuilder extends NetObject  {
 
     public void AddEncLogEntry(EntityHandle entity, EditAndContinueOperation code) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArgumentException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddEncLogEntry", entity == null ? null : entity.getJCOInstance(), code == null ? null : code.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -707,7 +886,7 @@ public class MetadataBuilder extends NetObject  {
 
     public void AddEncMapEntry(EntityHandle entity) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArgumentException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddEncMapEntry", entity == null ? null : entity.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -717,7 +896,7 @@ public class MetadataBuilder extends NetObject  {
 
     public void AddEventMap(TypeDefinitionHandle declaringType, EventDefinitionHandle eventList) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArgumentException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddEventMap", declaringType == null ? null : declaringType.getJCOInstance(), eventList == null ? null : eventList.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -727,7 +906,7 @@ public class MetadataBuilder extends NetObject  {
 
     public void AddFieldLayout(FieldDefinitionHandle field, int offset) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArgumentException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddFieldLayout", field == null ? null : field.getJCOInstance(), offset);
         } catch (JCNativeException jcne) {
@@ -737,7 +916,7 @@ public class MetadataBuilder extends NetObject  {
 
     public void AddFieldRelativeVirtualAddress(FieldDefinitionHandle field, int offset) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddFieldRelativeVirtualAddress", field == null ? null : field.getJCOInstance(), offset);
         } catch (JCNativeException jcne) {
@@ -747,7 +926,7 @@ public class MetadataBuilder extends NetObject  {
 
     public void AddMarshallingDescriptor(EntityHandle parent, BlobHandle descriptor) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddMarshallingDescriptor", parent == null ? null : parent.getJCOInstance(), descriptor == null ? null : descriptor.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -757,7 +936,7 @@ public class MetadataBuilder extends NetObject  {
 
     public void AddMethodImport(MethodDefinitionHandle method, MethodImportAttributes attributes, StringHandle name, ModuleReferenceHandle module) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddMethodImport", method == null ? null : method.getJCOInstance(), attributes == null ? null : attributes.getJCOInstance(), name == null ? null : name.getJCOInstance(), module == null ? null : module.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -767,7 +946,7 @@ public class MetadataBuilder extends NetObject  {
 
     public void AddMethodSemantics(EntityHandle association, MethodSemanticsAttributes semantics, MethodDefinitionHandle methodDefinition) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddMethodSemantics", association == null ? null : association.getJCOInstance(), semantics == null ? null : semantics.getJCOInstance(), methodDefinition == null ? null : methodDefinition.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -777,7 +956,7 @@ public class MetadataBuilder extends NetObject  {
 
     public void AddNestedType(TypeDefinitionHandle type, TypeDefinitionHandle enclosingType) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArgumentException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddNestedType", type == null ? null : type.getJCOInstance(), enclosingType == null ? null : enclosingType.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -787,7 +966,7 @@ public class MetadataBuilder extends NetObject  {
 
     public void AddPropertyMap(TypeDefinitionHandle declaringType, PropertyDefinitionHandle propertyList) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArgumentException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddPropertyMap", declaringType == null ? null : declaringType.getJCOInstance(), propertyList == null ? null : propertyList.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -797,7 +976,7 @@ public class MetadataBuilder extends NetObject  {
 
     public void AddStateMachineMethod(MethodDefinitionHandle moveNextMethod, MethodDefinitionHandle kickoffMethod) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArgumentException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddStateMachineMethod", moveNextMethod == null ? null : moveNextMethod.getJCOInstance(), kickoffMethod == null ? null : kickoffMethod.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -807,7 +986,7 @@ public class MetadataBuilder extends NetObject  {
 
     public void AddTypeLayout(TypeDefinitionHandle type, UInt16 packingSize, UInt32 size) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArgumentException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddTypeLayout", type == null ? null : type.getJCOInstance(), packingSize == null ? null : packingSize.getJCOInstance(), size == null ? null : size.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -817,7 +996,7 @@ public class MetadataBuilder extends NetObject  {
 
     public void SetCapacity(HeapIndex heap, int byteCount) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetCapacity", heap == null ? null : heap.getJCOInstance(), byteCount);
         } catch (JCNativeException jcne) {
@@ -827,7 +1006,7 @@ public class MetadataBuilder extends NetObject  {
 
     public void SetCapacity(TableIndex table, int rowCount) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetCapacity", table == null ? null : table.getJCOInstance(), rowCount);
         } catch (JCNativeException jcne) {

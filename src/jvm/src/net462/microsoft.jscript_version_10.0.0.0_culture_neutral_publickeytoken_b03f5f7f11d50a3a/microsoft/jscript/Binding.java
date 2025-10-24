@@ -154,9 +154,13 @@ public class Binding extends AST  {
     
     public static boolean IsMissing(NetObject value) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsMissing = null;
         try {
-            return (boolean)classType.Invoke("IsMissing", value == null ? null : value.getJCOInstance());
+            retObjectIsMissing = classType.Invoke("IsMissing", value == null ? null : value.getJCOInstance());
+            return (boolean)retObjectIsMissing;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsMissing != null ? retObjectIsMissing.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

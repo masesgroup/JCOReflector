@@ -266,9 +266,13 @@ public class Control extends Component implements system.windows.forms.IDropTarg
     
     public boolean Contains(Control ctl) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContains = null;
         try {
-            return (boolean)classInstance.Invoke("Contains", ctl == null ? null : ctl.getJCOInstance());
+            retObjectContains = classInstance.Invoke("Contains", ctl == null ? null : ctl.getJCOInstance());
+            return (boolean)retObjectContains;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectContains != null ? retObjectContains.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -276,9 +280,13 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public boolean Focus() throws Throwable, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFocus = null;
         try {
-            return (boolean)classInstance.Invoke("Focus");
+            retObjectFocus = classInstance.Invoke("Focus");
+            return (boolean)retObjectFocus;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectFocus != null ? retObjectFocus.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -286,9 +294,13 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public static boolean IsKeyLocked(Keys keyVal) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsKeyLocked = null;
         try {
-            return (boolean)classType.Invoke("IsKeyLocked", keyVal == null ? null : keyVal.getJCOInstance());
+            retObjectIsKeyLocked = classType.Invoke("IsKeyLocked", keyVal == null ? null : keyVal.getJCOInstance());
+            return (boolean)retObjectIsKeyLocked;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsKeyLocked != null ? retObjectIsKeyLocked.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -296,9 +308,13 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public static boolean IsMnemonic(char charCode, java.lang.String text) throws Throwable, system.ArgumentNullException, system.OutOfMemoryException, system.ArgumentException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.runtime.interopservices.ExternalException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsMnemonic = null;
         try {
-            return (boolean)classType.Invoke("IsMnemonic", charCode, text);
+            retObjectIsMnemonic = classType.Invoke("IsMnemonic", charCode, text);
+            return (boolean)retObjectIsMnemonic;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsMnemonic != null ? retObjectIsMnemonic.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -306,9 +322,13 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public boolean PreProcessMessage(JCORefOut<Message> msg) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPreProcessMessage = null;
         try {
-            return (boolean)classInstance.Invoke("PreProcessMessage", msg.getJCRefOut());
+            retObjectPreProcessMessage = classInstance.Invoke("PreProcessMessage", msg.getJCRefOut());
+            return (boolean)retObjectPreProcessMessage;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectPreProcessMessage != null ? retObjectPreProcessMessage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -316,9 +336,13 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public boolean SelectNextControl(Control ctl, boolean forward, boolean tabStopOnly, boolean nested, boolean wrap) throws Throwable, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectNextControl = null;
         try {
-            return (boolean)classInstance.Invoke("SelectNextControl", ctl == null ? null : ctl.getJCOInstance(), forward, tabStopOnly, nested, wrap);
+            retObjectSelectNextControl = classInstance.Invoke("SelectNextControl", ctl == null ? null : ctl.getJCOInstance(), forward, tabStopOnly, nested, wrap);
+            return (boolean)retObjectSelectNextControl;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectSelectNextControl != null ? retObjectSelectNextControl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -326,9 +350,20 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public int LogicalToDeviceUnits(int value) throws Throwable, system.InvalidOperationException, system.PlatformNotSupportedException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLogicalToDeviceUnits = null;
         try {
-            return (int)classInstance.Invoke("LogicalToDeviceUnits", value);
+            retObjectLogicalToDeviceUnits = classInstance.Invoke("LogicalToDeviceUnits", value);
+            return (int)retObjectLogicalToDeviceUnits;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectLogicalToDeviceUnits_ToString = retObjectLogicalToDeviceUnits == null ? "null" : retObjectLogicalToDeviceUnits.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectLogicalToDeviceUnitsNumber = (java.lang.Number)retObjectLogicalToDeviceUnits;
+                return retObjectLogicalToDeviceUnitsNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectLogicalToDeviceUnits != null ? retObjectLogicalToDeviceUnits.getClass() : "null", retObjectLogicalToDeviceUnits_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -336,10 +371,14 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public Graphics CreateGraphics() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.NotSupportedException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateGraphics = null;
         try {
-            JCObject objCreateGraphics = (JCObject)classInstance.Invoke("CreateGraphics");
+            retObjectCreateGraphics = classInstance.Invoke("CreateGraphics");
+            JCObject objCreateGraphics = (JCObject)retObjectCreateGraphics;
             return new Graphics(objCreateGraphics);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateGraphics != null ? retObjectCreateGraphics.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -347,10 +386,14 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public Point PointToClient(Point p) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPointToClient = null;
         try {
-            JCObject objPointToClient = (JCObject)classInstance.Invoke("PointToClient", p == null ? null : p.getJCOInstance());
+            retObjectPointToClient = classInstance.Invoke("PointToClient", p == null ? null : p.getJCOInstance());
+            JCObject objPointToClient = (JCObject)retObjectPointToClient;
             return new Point(objPointToClient);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPointToClient != null ? retObjectPointToClient.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -358,10 +401,14 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public Point PointToScreen(Point p) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPointToScreen = null;
         try {
-            JCObject objPointToScreen = (JCObject)classInstance.Invoke("PointToScreen", p == null ? null : p.getJCOInstance());
+            retObjectPointToScreen = classInstance.Invoke("PointToScreen", p == null ? null : p.getJCOInstance());
+            JCObject objPointToScreen = (JCObject)retObjectPointToScreen;
             return new Point(objPointToScreen);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPointToScreen != null ? retObjectPointToScreen.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -369,10 +416,14 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public Rectangle RectangleToClient(Rectangle r) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRectangleToClient = null;
         try {
-            JCObject objRectangleToClient = (JCObject)classInstance.Invoke("RectangleToClient", r == null ? null : r.getJCOInstance());
+            retObjectRectangleToClient = classInstance.Invoke("RectangleToClient", r == null ? null : r.getJCOInstance());
+            JCObject objRectangleToClient = (JCObject)retObjectRectangleToClient;
             return new Rectangle(objRectangleToClient);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRectangleToClient != null ? retObjectRectangleToClient.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -380,10 +431,14 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public Rectangle RectangleToScreen(Rectangle r) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRectangleToScreen = null;
         try {
-            JCObject objRectangleToScreen = (JCObject)classInstance.Invoke("RectangleToScreen", r == null ? null : r.getJCOInstance());
+            retObjectRectangleToScreen = classInstance.Invoke("RectangleToScreen", r == null ? null : r.getJCOInstance());
+            JCObject objRectangleToScreen = (JCObject)retObjectRectangleToScreen;
             return new Rectangle(objRectangleToScreen);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRectangleToScreen != null ? retObjectRectangleToScreen.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -391,10 +446,14 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public Size GetPreferredSize(Size proposedSize) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.NotSupportedException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPreferredSize = null;
         try {
-            JCObject objGetPreferredSize = (JCObject)classInstance.Invoke("GetPreferredSize", proposedSize == null ? null : proposedSize.getJCOInstance());
+            retObjectGetPreferredSize = classInstance.Invoke("GetPreferredSize", proposedSize == null ? null : proposedSize.getJCOInstance());
+            JCObject objGetPreferredSize = (JCObject)retObjectGetPreferredSize;
             return new Size(objGetPreferredSize);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetPreferredSize != null ? retObjectGetPreferredSize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -402,10 +461,14 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public Size LogicalToDeviceUnits(Size value) throws Throwable, system.InvalidOperationException, system.PlatformNotSupportedException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLogicalToDeviceUnits = null;
         try {
-            JCObject objLogicalToDeviceUnits = (JCObject)classInstance.Invoke("LogicalToDeviceUnits", value == null ? null : value.getJCOInstance());
+            retObjectLogicalToDeviceUnits = classInstance.Invoke("LogicalToDeviceUnits", value == null ? null : value.getJCOInstance());
+            JCObject objLogicalToDeviceUnits = (JCObject)retObjectLogicalToDeviceUnits;
             return new Size(objLogicalToDeviceUnits);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLogicalToDeviceUnits != null ? retObjectLogicalToDeviceUnits.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -413,10 +476,14 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public IAsyncResult BeginInvoke(Action method) throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.FormatException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.threading.WaitHandleCannotBeOpenedException, system.threading.AbandonedMutexException, system.componentmodel.InvalidAsynchronousStateException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginInvoke = null;
         try {
-            JCObject objBeginInvoke = (JCObject)classInstance.Invoke("BeginInvoke", method);
+            retObjectBeginInvoke = classInstance.Invoke("BeginInvoke", method);
+            JCObject objBeginInvoke = (JCObject)retObjectBeginInvoke;
             return new IAsyncResultImplementation(objBeginInvoke);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginInvoke != null ? retObjectBeginInvoke.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -424,10 +491,14 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public NetObject EndInvoke(IAsyncResult asyncResult) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.threading.AbandonedMutexException, system.componentmodel.InvalidAsynchronousStateException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEndInvoke = null;
         try {
-            JCObject objEndInvoke = (JCObject)classInstance.Invoke("EndInvoke", asyncResult == null ? null : asyncResult.getJCOInstance());
+            retObjectEndInvoke = classInstance.Invoke("EndInvoke", asyncResult == null ? null : asyncResult.getJCOInstance());
+            JCObject objEndInvoke = (JCObject)retObjectEndInvoke;
             return new NetObject(objEndInvoke);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEndInvoke != null ? retObjectEndInvoke.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -435,10 +506,14 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public Task InvokeAsync(Action callback, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInvokeAsync = null;
         try {
-            JCObject objInvokeAsync = (JCObject)classInstance.Invoke("InvokeAsync", callback, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            retObjectInvokeAsync = classInstance.Invoke("InvokeAsync", callback, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objInvokeAsync = (JCObject)retObjectInvokeAsync;
             return new Task(objInvokeAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInvokeAsync != null ? retObjectInvokeAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -446,10 +521,14 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public Control GetChildAtPoint(Point pt, GetChildAtPointSkip skipValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetChildAtPoint = null;
         try {
-            JCObject objGetChildAtPoint = (JCObject)classInstance.Invoke("GetChildAtPoint", pt == null ? null : pt.getJCOInstance(), skipValue == null ? null : skipValue.getJCOInstance());
+            retObjectGetChildAtPoint = classInstance.Invoke("GetChildAtPoint", pt == null ? null : pt.getJCOInstance(), skipValue == null ? null : skipValue.getJCOInstance());
+            JCObject objGetChildAtPoint = (JCObject)retObjectGetChildAtPoint;
             return new Control(objGetChildAtPoint);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetChildAtPoint != null ? retObjectGetChildAtPoint.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -457,10 +536,14 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public Control GetChildAtPoint(Point pt) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetChildAtPoint = null;
         try {
-            JCObject objGetChildAtPoint = (JCObject)classInstance.Invoke("GetChildAtPoint", pt == null ? null : pt.getJCOInstance());
+            retObjectGetChildAtPoint = classInstance.Invoke("GetChildAtPoint", pt == null ? null : pt.getJCOInstance());
+            JCObject objGetChildAtPoint = (JCObject)retObjectGetChildAtPoint;
             return new Control(objGetChildAtPoint);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetChildAtPoint != null ? retObjectGetChildAtPoint.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -468,10 +551,14 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public Control GetNextControl(Control ctl, boolean forward) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetNextControl = null;
         try {
-            JCObject objGetNextControl = (JCObject)classInstance.Invoke("GetNextControl", ctl == null ? null : ctl.getJCOInstance(), forward);
+            retObjectGetNextControl = classInstance.Invoke("GetNextControl", ctl == null ? null : ctl.getJCOInstance(), forward);
+            JCObject objGetNextControl = (JCObject)retObjectGetNextControl;
             return new Control(objGetNextControl);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetNextControl != null ? retObjectGetNextControl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -479,10 +566,14 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public DragDropEffects DoDragDrop(NetObject data, DragDropEffects allowedEffects, Bitmap dragImage, Point cursorOffset, boolean useDefaultDragImage) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.InvalidOperationException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDoDragDrop = null;
         try {
-            JCObject objDoDragDrop = (JCObject)classInstance.Invoke("DoDragDrop", data == null ? null : data.getJCOInstance(), allowedEffects == null ? null : allowedEffects.getJCOInstance(), dragImage == null ? null : dragImage.getJCOInstance(), cursorOffset == null ? null : cursorOffset.getJCOInstance(), useDefaultDragImage);
+            retObjectDoDragDrop = classInstance.Invoke("DoDragDrop", data == null ? null : data.getJCOInstance(), allowedEffects == null ? null : allowedEffects.getJCOInstance(), dragImage == null ? null : dragImage.getJCOInstance(), cursorOffset == null ? null : cursorOffset.getJCOInstance(), useDefaultDragImage);
+            JCObject objDoDragDrop = (JCObject)retObjectDoDragDrop;
             return new DragDropEffects(objDoDragDrop);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDoDragDrop != null ? retObjectDoDragDrop.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -490,10 +581,14 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public DragDropEffects DoDragDrop(NetObject data, DragDropEffects allowedEffects) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDoDragDrop = null;
         try {
-            JCObject objDoDragDrop = (JCObject)classInstance.Invoke("DoDragDrop", data == null ? null : data.getJCOInstance(), allowedEffects == null ? null : allowedEffects.getJCOInstance());
+            retObjectDoDragDrop = classInstance.Invoke("DoDragDrop", data == null ? null : data.getJCOInstance(), allowedEffects == null ? null : allowedEffects.getJCOInstance());
+            JCObject objDoDragDrop = (JCObject)retObjectDoDragDrop;
             return new DragDropEffects(objDoDragDrop);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDoDragDrop != null ? retObjectDoDragDrop.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -501,10 +596,14 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public Form FindForm() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFindForm = null;
         try {
-            JCObject objFindForm = (JCObject)classInstance.Invoke("FindForm");
+            retObjectFindForm = classInstance.Invoke("FindForm");
+            JCObject objFindForm = (JCObject)retObjectFindForm;
             return new Form(objFindForm);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFindForm != null ? retObjectFindForm.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -512,10 +611,14 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public IContainerControl GetContainerControl() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetContainerControl = null;
         try {
-            JCObject objGetContainerControl = (JCObject)classInstance.Invoke("GetContainerControl");
+            retObjectGetContainerControl = classInstance.Invoke("GetContainerControl");
+            JCObject objGetContainerControl = (JCObject)retObjectGetContainerControl;
             return new IContainerControlImplementation(objGetContainerControl);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetContainerControl != null ? retObjectGetContainerControl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -523,10 +626,14 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public PreProcessControlState PreProcessControlMessage(JCORefOut<Message> msg) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPreProcessControlMessage = null;
         try {
-            JCObject objPreProcessControlMessage = (JCObject)classInstance.Invoke("PreProcessControlMessage", msg.getJCRefOut());
+            retObjectPreProcessControlMessage = classInstance.Invoke("PreProcessControlMessage", msg.getJCRefOut());
+            JCObject objPreProcessControlMessage = (JCObject)retObjectPreProcessControlMessage;
             return new PreProcessControlState(objPreProcessControlMessage);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPreProcessControlMessage != null ? retObjectPreProcessControlMessage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -534,7 +641,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void BringToFront() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.RankException, system.IndexOutOfRangeException, system.ArgumentException, system.NotSupportedException, system.ArrayTypeMismatchException, system.InvalidCastException, system.ObjectDisposedException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("BringToFront");
         } catch (JCNativeException jcne) {
@@ -544,7 +651,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void CreateControl() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CreateControl");
         } catch (JCNativeException jcne) {
@@ -554,7 +661,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void DrawToBitmap(Bitmap bitmap, Rectangle targetBounds) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DrawToBitmap", bitmap == null ? null : bitmap.getJCOInstance(), targetBounds == null ? null : targetBounds.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -564,7 +671,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void Hide() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.FormatException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.NotSupportedException, system.OutOfMemoryException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.OverflowException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Hide");
         } catch (JCNativeException jcne) {
@@ -574,7 +681,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void Invalidate() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Invalidate");
         } catch (JCNativeException jcne) {
@@ -584,7 +691,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void Invalidate(boolean invalidateChildren) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Invalidate", invalidateChildren);
         } catch (JCNativeException jcne) {
@@ -594,7 +701,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void Invalidate(Rectangle rc, boolean invalidateChildren) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Invalidate", rc == null ? null : rc.getJCOInstance(), invalidateChildren);
         } catch (JCNativeException jcne) {
@@ -604,7 +711,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void Invalidate(Rectangle rc) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException, system.NotSupportedException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Invalidate", rc == null ? null : rc.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -614,7 +721,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void Invalidate(Region region, boolean invalidateChildren) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException, system.OutOfMemoryException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Invalidate", region == null ? null : region.getJCOInstance(), invalidateChildren);
         } catch (JCNativeException jcne) {
@@ -624,7 +731,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void Invalidate(Region region) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException, system.NotSupportedException, system.RankException, system.ArrayTypeMismatchException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Invalidate", region == null ? null : region.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -634,7 +741,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void Invoke(Action method) throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.FormatException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.threading.WaitHandleCannotBeOpenedException, system.threading.AbandonedMutexException, system.componentmodel.InvalidAsynchronousStateException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Invoke", method);
         } catch (JCNativeException jcne) {
@@ -644,7 +751,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void PerformLayout() throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.ArrayTypeMismatchException, system.InvalidCastException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("PerformLayout");
         } catch (JCNativeException jcne) {
@@ -654,7 +761,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void PerformLayout(Control affectedControl, java.lang.String affectedProperty) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.ArrayTypeMismatchException, system.InvalidCastException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("PerformLayout", affectedControl == null ? null : affectedControl.getJCOInstance(), affectedProperty);
         } catch (JCNativeException jcne) {
@@ -664,7 +771,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void Refresh() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Refresh");
         } catch (JCNativeException jcne) {
@@ -674,7 +781,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void ResetBackColor() throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ResetBackColor");
         } catch (JCNativeException jcne) {
@@ -684,7 +791,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void ResetBindings() throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ResetBindings");
         } catch (JCNativeException jcne) {
@@ -694,7 +801,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void ResetCursor() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.PlatformNotSupportedException, system.RankException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidCastException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ResetCursor");
         } catch (JCNativeException jcne) {
@@ -704,7 +811,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void ResetFont() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.NotSupportedException, system.PlatformNotSupportedException, system.ArgumentNullException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ResetFont");
         } catch (JCNativeException jcne) {
@@ -714,7 +821,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void ResetForeColor() throws Throwable, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.PlatformNotSupportedException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ResetForeColor");
         } catch (JCNativeException jcne) {
@@ -724,7 +831,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void ResetImeMode() throws Throwable, system.PlatformNotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.ArrayTypeMismatchException, system.InvalidCastException, system.InvalidOperationException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ResetImeMode");
         } catch (JCNativeException jcne) {
@@ -734,7 +841,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void ResetRightToLeft() throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.ArgumentNullException, system.RankException, system.NotSupportedException, system.ArrayTypeMismatchException, system.InvalidCastException, system.InvalidOperationException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ResetRightToLeft");
         } catch (JCNativeException jcne) {
@@ -744,7 +851,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void ResetText() throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ResetText");
         } catch (JCNativeException jcne) {
@@ -754,7 +861,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void ResumeLayout() throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.ArrayTypeMismatchException, system.InvalidCastException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ResumeLayout");
         } catch (JCNativeException jcne) {
@@ -764,7 +871,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void ResumeLayout(boolean performLayout) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.ArrayTypeMismatchException, system.InvalidCastException, system.InvalidOperationException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ResumeLayout", performLayout);
         } catch (JCNativeException jcne) {
@@ -774,7 +881,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void Scale(Single dx, Single dy) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.FormatException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Scale", dx == null ? null : dx.getJCOInstance(), dy == null ? null : dy.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -784,7 +891,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void Scale(Single ratio) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.FormatException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Scale", ratio == null ? null : ratio.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -794,7 +901,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void Scale(SizeF factor) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.ArrayTypeMismatchException, system.InvalidCastException, system.InvalidOperationException, system.NotSupportedException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Scale", factor == null ? null : factor.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -804,7 +911,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void ScaleBitmapLogicalToDevice(JCORefOut<Bitmap> logicalBitmap) throws Throwable, system.InvalidOperationException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ScaleBitmapLogicalToDevice", logicalBitmap.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -814,7 +921,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void Select() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Select");
         } catch (JCNativeException jcne) {
@@ -824,7 +931,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void SendToBack() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.RankException, system.IndexOutOfRangeException, system.ArgumentException, system.NotSupportedException, system.ArrayTypeMismatchException, system.InvalidCastException, system.ObjectDisposedException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SendToBack");
         } catch (JCNativeException jcne) {
@@ -834,7 +941,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void SetBounds(int x, int y, int width, int height, BoundsSpecified specified) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.NotSupportedException, system.RankException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidCastException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetBounds", x, y, width, height, specified == null ? null : specified.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -844,7 +951,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void SetBounds(int x, int y, int width, int height) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.NotSupportedException, system.RankException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidCastException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetBounds", x, y, width, height);
         } catch (JCNativeException jcne) {
@@ -854,7 +961,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void Show() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.FormatException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.NotSupportedException, system.OutOfMemoryException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.OverflowException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Show");
         } catch (JCNativeException jcne) {
@@ -864,7 +971,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void SuspendLayout() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SuspendLayout");
         } catch (JCNativeException jcne) {
@@ -874,7 +981,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void Update() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Update");
         } catch (JCNativeException jcne) {
@@ -888,7 +995,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
      */
     @Deprecated 
     public void OnDragDrop(DragEventArgs e) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDropTarget to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDropTarget to obtain the full interface.");
     }
 
     /**
@@ -897,7 +1004,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
      */
     @Deprecated 
     public void OnDragEnter(DragEventArgs e) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDropTarget to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDropTarget to obtain the full interface.");
     }
 
     /**
@@ -906,7 +1013,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
      */
     @Deprecated 
     public void OnDragLeave(EventArgs e) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDropTarget to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDropTarget to obtain the full interface.");
     }
 
     /**
@@ -915,7 +1022,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
      */
     @Deprecated 
     public void OnDragOver(DragEventArgs e) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDropTarget to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDropTarget to obtain the full interface.");
     }
 
 
@@ -924,9 +1031,13 @@ public class Control extends Component implements system.windows.forms.IDropTarg
     
     public boolean getAllowDrop() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAllowDrop = null;
         try {
-            return (boolean)classInstance.Get("AllowDrop");
+            retObjectAllowDrop = classInstance.Get("AllowDrop");
+            return (boolean)retObjectAllowDrop;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAllowDrop != null ? retObjectAllowDrop.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -934,7 +1045,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void setAllowDrop(boolean AllowDrop) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.NotSupportedException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.threading.ThreadStateException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AllowDrop", AllowDrop);
         } catch (JCNativeException jcne) {
@@ -944,9 +1055,13 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public boolean getAutoSize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAutoSize = null;
         try {
-            return (boolean)classInstance.Get("AutoSize");
+            retObjectAutoSize = classInstance.Get("AutoSize");
+            return (boolean)retObjectAutoSize;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAutoSize != null ? retObjectAutoSize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -954,7 +1069,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void setAutoSize(boolean AutoSize) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.ArrayTypeMismatchException, system.InvalidCastException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AutoSize", AutoSize);
         } catch (JCNativeException jcne) {
@@ -964,9 +1079,13 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public boolean getCanFocus() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanFocus = null;
         try {
-            return (boolean)classInstance.Get("CanFocus");
+            retObjectCanFocus = classInstance.Get("CanFocus");
+            return (boolean)retObjectCanFocus;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCanFocus != null ? retObjectCanFocus.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -974,9 +1093,13 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public boolean getCanSelect() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanSelect = null;
         try {
-            return (boolean)classInstance.Get("CanSelect");
+            retObjectCanSelect = classInstance.Get("CanSelect");
+            return (boolean)retObjectCanSelect;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCanSelect != null ? retObjectCanSelect.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -984,9 +1107,13 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public boolean getCapture() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.NotSupportedException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCapture = null;
         try {
-            return (boolean)classInstance.Get("Capture");
+            retObjectCapture = classInstance.Get("Capture");
+            return (boolean)retObjectCapture;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCapture != null ? retObjectCapture.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -994,7 +1121,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void setCapture(boolean Capture) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.Win32Exception, system.ArgumentOutOfRangeException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Capture", Capture);
         } catch (JCNativeException jcne) {
@@ -1004,9 +1131,13 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public boolean getCausesValidation() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCausesValidation = null;
         try {
-            return (boolean)classInstance.Get("CausesValidation");
+            retObjectCausesValidation = classInstance.Get("CausesValidation");
+            return (boolean)retObjectCausesValidation;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCausesValidation != null ? retObjectCausesValidation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1014,7 +1145,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void setCausesValidation(boolean CausesValidation) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CausesValidation", CausesValidation);
         } catch (JCNativeException jcne) {
@@ -1024,9 +1155,13 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public static boolean getCheckForIllegalCrossThreadCalls() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCheckForIllegalCrossThreadCalls = null;
         try {
-            return (boolean)classType.Get("CheckForIllegalCrossThreadCalls");
+            retObjectCheckForIllegalCrossThreadCalls = classType.Get("CheckForIllegalCrossThreadCalls");
+            return (boolean)retObjectCheckForIllegalCrossThreadCalls;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCheckForIllegalCrossThreadCalls != null ? retObjectCheckForIllegalCrossThreadCalls.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1034,7 +1169,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public static void setCheckForIllegalCrossThreadCalls(boolean CheckForIllegalCrossThreadCalls) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Set("CheckForIllegalCrossThreadCalls", CheckForIllegalCrossThreadCalls);
         } catch (JCNativeException jcne) {
@@ -1044,9 +1179,13 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public boolean getContainsFocus() throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ObjectDisposedException, system.ArgumentNullException, system.OutOfMemoryException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContainsFocus = null;
         try {
-            return (boolean)classInstance.Get("ContainsFocus");
+            retObjectContainsFocus = classInstance.Get("ContainsFocus");
+            return (boolean)retObjectContainsFocus;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectContainsFocus != null ? retObjectContainsFocus.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1054,9 +1193,13 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public boolean getCreated() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreated = null;
         try {
-            return (boolean)classInstance.Get("Created");
+            retObjectCreated = classInstance.Get("Created");
+            return (boolean)retObjectCreated;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCreated != null ? retObjectCreated.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1064,9 +1207,13 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public boolean getDisposing() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDisposing = null;
         try {
-            return (boolean)classInstance.Get("Disposing");
+            retObjectDisposing = classInstance.Get("Disposing");
+            return (boolean)retObjectDisposing;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectDisposing != null ? retObjectDisposing.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1074,9 +1221,13 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public boolean getEnabled() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEnabled = null;
         try {
-            return (boolean)classInstance.Get("Enabled");
+            retObjectEnabled = classInstance.Get("Enabled");
+            return (boolean)retObjectEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectEnabled != null ? retObjectEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1084,7 +1235,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void setEnabled(boolean Enabled) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.Win32Exception, system.ArgumentOutOfRangeException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Enabled", Enabled);
         } catch (JCNativeException jcne) {
@@ -1094,9 +1245,13 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public boolean getFocused() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.NotSupportedException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFocused = null;
         try {
-            return (boolean)classInstance.Get("Focused");
+            retObjectFocused = classInstance.Get("Focused");
+            return (boolean)retObjectFocused;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectFocused != null ? retObjectFocused.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1104,9 +1259,13 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public boolean getHasChildren() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHasChildren = null;
         try {
-            return (boolean)classInstance.Get("HasChildren");
+            retObjectHasChildren = classInstance.Get("HasChildren");
+            return (boolean)retObjectHasChildren;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectHasChildren != null ? retObjectHasChildren.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1114,9 +1273,13 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public boolean getInvokeRequired() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInvokeRequired = null;
         try {
-            return (boolean)classInstance.Get("InvokeRequired");
+            retObjectInvokeRequired = classInstance.Get("InvokeRequired");
+            return (boolean)retObjectInvokeRequired;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectInvokeRequired != null ? retObjectInvokeRequired.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1124,9 +1287,13 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public boolean getIsAccessible() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsAccessible = null;
         try {
-            return (boolean)classInstance.Get("IsAccessible");
+            retObjectIsAccessible = classInstance.Get("IsAccessible");
+            return (boolean)retObjectIsAccessible;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsAccessible != null ? retObjectIsAccessible.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1134,7 +1301,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void setIsAccessible(boolean IsAccessible) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsAccessible", IsAccessible);
         } catch (JCNativeException jcne) {
@@ -1144,9 +1311,13 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public boolean getIsAncestorSiteInDesignMode() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsAncestorSiteInDesignMode = null;
         try {
-            return (boolean)classInstance.Get("IsAncestorSiteInDesignMode");
+            retObjectIsAncestorSiteInDesignMode = classInstance.Get("IsAncestorSiteInDesignMode");
+            return (boolean)retObjectIsAncestorSiteInDesignMode;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsAncestorSiteInDesignMode != null ? retObjectIsAncestorSiteInDesignMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1154,9 +1325,13 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public boolean getIsDisposed() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsDisposed = null;
         try {
-            return (boolean)classInstance.Get("IsDisposed");
+            retObjectIsDisposed = classInstance.Get("IsDisposed");
+            return (boolean)retObjectIsDisposed;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsDisposed != null ? retObjectIsDisposed.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1164,9 +1339,13 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public boolean getIsHandleCreated() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsHandleCreated = null;
         try {
-            return (boolean)classInstance.Get("IsHandleCreated");
+            retObjectIsHandleCreated = classInstance.Get("IsHandleCreated");
+            return (boolean)retObjectIsHandleCreated;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsHandleCreated != null ? retObjectIsHandleCreated.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1174,9 +1353,13 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public boolean getIsMirrored() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsMirrored = null;
         try {
-            return (boolean)classInstance.Get("IsMirrored");
+            retObjectIsMirrored = classInstance.Get("IsMirrored");
+            return (boolean)retObjectIsMirrored;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsMirrored != null ? retObjectIsMirrored.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1184,9 +1367,13 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public boolean getRecreatingHandle() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRecreatingHandle = null;
         try {
-            return (boolean)classInstance.Get("RecreatingHandle");
+            retObjectRecreatingHandle = classInstance.Get("RecreatingHandle");
+            return (boolean)retObjectRecreatingHandle;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectRecreatingHandle != null ? retObjectRecreatingHandle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1194,9 +1381,13 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public boolean getTabStop() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTabStop = null;
         try {
-            return (boolean)classInstance.Get("TabStop");
+            retObjectTabStop = classInstance.Get("TabStop");
+            return (boolean)retObjectTabStop;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectTabStop != null ? retObjectTabStop.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1204,7 +1395,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void setTabStop(boolean TabStop) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TabStop", TabStop);
         } catch (JCNativeException jcne) {
@@ -1214,9 +1405,13 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public boolean getUseWaitCursor() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUseWaitCursor = null;
         try {
-            return (boolean)classInstance.Get("UseWaitCursor");
+            retObjectUseWaitCursor = classInstance.Get("UseWaitCursor");
+            return (boolean)retObjectUseWaitCursor;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectUseWaitCursor != null ? retObjectUseWaitCursor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1224,7 +1419,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void setUseWaitCursor(boolean UseWaitCursor) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UseWaitCursor", UseWaitCursor);
         } catch (JCNativeException jcne) {
@@ -1234,9 +1429,13 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public boolean getVisible() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVisible = null;
         try {
-            return (boolean)classInstance.Get("Visible");
+            retObjectVisible = classInstance.Get("Visible");
+            return (boolean)retObjectVisible;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectVisible != null ? retObjectVisible.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1244,7 +1443,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void setVisible(boolean Visible) throws Throwable, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.ArgumentNullException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.OverflowException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Visible", Visible);
         } catch (JCNativeException jcne) {
@@ -1254,9 +1453,20 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public int getBottom() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBottom = null;
         try {
-            return (int)classInstance.Get("Bottom");
+            retObjectBottom = classInstance.Get("Bottom");
+            return (int)retObjectBottom;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectBottom_ToString = retObjectBottom == null ? "null" : retObjectBottom.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectBottomNumber = (java.lang.Number)retObjectBottom;
+                return retObjectBottomNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectBottom != null ? retObjectBottom.getClass() : "null", retObjectBottom_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1264,9 +1474,20 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public int getDeviceDpi() throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDeviceDpi = null;
         try {
-            return (int)classInstance.Get("DeviceDpi");
+            retObjectDeviceDpi = classInstance.Get("DeviceDpi");
+            return (int)retObjectDeviceDpi;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDeviceDpi_ToString = retObjectDeviceDpi == null ? "null" : retObjectDeviceDpi.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectDeviceDpiNumber = (java.lang.Number)retObjectDeviceDpi;
+                return retObjectDeviceDpiNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectDeviceDpi != null ? retObjectDeviceDpi.getClass() : "null", retObjectDeviceDpi_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1274,9 +1495,20 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public int getHeight() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHeight = null;
         try {
-            return (int)classInstance.Get("Height");
+            retObjectHeight = classInstance.Get("Height");
+            return (int)retObjectHeight;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectHeight_ToString = retObjectHeight == null ? "null" : retObjectHeight.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectHeightNumber = (java.lang.Number)retObjectHeight;
+                return retObjectHeightNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectHeight != null ? retObjectHeight.getClass() : "null", retObjectHeight_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1284,7 +1516,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void setHeight(int Height) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidCastException, system.OutOfMemoryException, system.ObjectDisposedException, system.FormatException, system.componentmodel.Win32Exception, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Height", Height);
         } catch (JCNativeException jcne) {
@@ -1294,9 +1526,20 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public int getLeft() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLeft = null;
         try {
-            return (int)classInstance.Get("Left");
+            retObjectLeft = classInstance.Get("Left");
+            return (int)retObjectLeft;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectLeft_ToString = retObjectLeft == null ? "null" : retObjectLeft.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectLeftNumber = (java.lang.Number)retObjectLeft;
+                return retObjectLeftNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectLeft != null ? retObjectLeft.getClass() : "null", retObjectLeft_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1304,7 +1547,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void setLeft(int Left) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidCastException, system.OutOfMemoryException, system.ObjectDisposedException, system.FormatException, system.componentmodel.Win32Exception, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Left", Left);
         } catch (JCNativeException jcne) {
@@ -1314,9 +1557,20 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public int getRight() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRight = null;
         try {
-            return (int)classInstance.Get("Right");
+            retObjectRight = classInstance.Get("Right");
+            return (int)retObjectRight;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectRight_ToString = retObjectRight == null ? "null" : retObjectRight.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectRightNumber = (java.lang.Number)retObjectRight;
+                return retObjectRightNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectRight != null ? retObjectRight.getClass() : "null", retObjectRight_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1324,9 +1578,20 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public int getTabIndex() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTabIndex = null;
         try {
-            return (int)classInstance.Get("TabIndex");
+            retObjectTabIndex = classInstance.Get("TabIndex");
+            return (int)retObjectTabIndex;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectTabIndex_ToString = retObjectTabIndex == null ? "null" : retObjectTabIndex.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectTabIndexNumber = (java.lang.Number)retObjectTabIndex;
+                return retObjectTabIndexNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectTabIndex != null ? retObjectTabIndex.getClass() : "null", retObjectTabIndex_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1334,7 +1599,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void setTabIndex(int TabIndex) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TabIndex", TabIndex);
         } catch (JCNativeException jcne) {
@@ -1344,9 +1609,20 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public int getTop() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTop = null;
         try {
-            return (int)classInstance.Get("Top");
+            retObjectTop = classInstance.Get("Top");
+            return (int)retObjectTop;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectTop_ToString = retObjectTop == null ? "null" : retObjectTop.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectTopNumber = (java.lang.Number)retObjectTop;
+                return retObjectTopNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectTop != null ? retObjectTop.getClass() : "null", retObjectTop_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1354,7 +1630,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void setTop(int Top) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidCastException, system.OutOfMemoryException, system.ObjectDisposedException, system.FormatException, system.componentmodel.Win32Exception, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Top", Top);
         } catch (JCNativeException jcne) {
@@ -1364,9 +1640,20 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public int getWidth() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWidth = null;
         try {
-            return (int)classInstance.Get("Width");
+            retObjectWidth = classInstance.Get("Width");
+            return (int)retObjectWidth;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectWidth_ToString = retObjectWidth == null ? "null" : retObjectWidth.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectWidthNumber = (java.lang.Number)retObjectWidth;
+                return retObjectWidthNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectWidth != null ? retObjectWidth.getClass() : "null", retObjectWidth_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1374,7 +1661,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void setWidth(int Width) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidCastException, system.OutOfMemoryException, system.ObjectDisposedException, system.FormatException, system.componentmodel.Win32Exception, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Width", Width);
         } catch (JCNativeException jcne) {
@@ -1384,10 +1671,14 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public Color getBackColor() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBackColor = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("BackColor");
+            retObjectBackColor = classInstance.Get("BackColor");
+            JCObject val = (JCObject)retObjectBackColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBackColor != null ? retObjectBackColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1395,7 +1686,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void setBackColor(Color BackColor) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BackColor", BackColor == null ? null : BackColor.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1405,10 +1696,14 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public static Color getDefaultBackColor() throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDefaultBackColor = null;
         try {
-            JCObject val = (JCObject)classType.Get("DefaultBackColor");
+            retObjectDefaultBackColor = classType.Get("DefaultBackColor");
+            JCObject val = (JCObject)retObjectDefaultBackColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefaultBackColor != null ? retObjectDefaultBackColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1416,10 +1711,14 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public static Color getDefaultForeColor() throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDefaultForeColor = null;
         try {
-            JCObject val = (JCObject)classType.Get("DefaultForeColor");
+            retObjectDefaultForeColor = classType.Get("DefaultForeColor");
+            JCObject val = (JCObject)retObjectDefaultForeColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefaultForeColor != null ? retObjectDefaultForeColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1427,10 +1726,14 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public Color getForeColor() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.RankException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectForeColor = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ForeColor");
+            retObjectForeColor = classInstance.Get("ForeColor");
+            JCObject val = (JCObject)retObjectForeColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectForeColor != null ? retObjectForeColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1438,7 +1741,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void setForeColor(Color ForeColor) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.RankException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ForeColor", ForeColor == null ? null : ForeColor.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1448,10 +1751,14 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public static Font getDefaultFont() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDefaultFont = null;
         try {
-            JCObject val = (JCObject)classType.Get("DefaultFont");
+            retObjectDefaultFont = classType.Get("DefaultFont");
+            JCObject val = (JCObject)retObjectDefaultFont;
             return new Font(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefaultFont != null ? retObjectDefaultFont.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1459,10 +1766,14 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public Font getFont() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.RankException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFont = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Font");
+            retObjectFont = classInstance.Get("Font");
+            JCObject val = (JCObject)retObjectFont;
             return new Font(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFont != null ? retObjectFont.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1470,7 +1781,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void setFont(Font Font) throws Throwable, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.PlatformNotSupportedException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidCastException, system.componentmodel.Win32Exception, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Font", Font == null ? null : Font.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1480,10 +1791,14 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public Image getBackgroundImage() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBackgroundImage = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("BackgroundImage");
+            retObjectBackgroundImage = classInstance.Get("BackgroundImage");
+            JCObject val = (JCObject)retObjectBackgroundImage;
             return new Image(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBackgroundImage != null ? retObjectBackgroundImage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1491,7 +1806,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void setBackgroundImage(Image BackgroundImage) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.ArrayTypeMismatchException, system.InvalidCastException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BackgroundImage", BackgroundImage == null ? null : BackgroundImage.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1501,10 +1816,14 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public Point getAutoScrollOffset() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAutoScrollOffset = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AutoScrollOffset");
+            retObjectAutoScrollOffset = classInstance.Get("AutoScrollOffset");
+            JCObject val = (JCObject)retObjectAutoScrollOffset;
             return new Point(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAutoScrollOffset != null ? retObjectAutoScrollOffset.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1512,7 +1831,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void setAutoScrollOffset(Point AutoScrollOffset) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AutoScrollOffset", AutoScrollOffset == null ? null : AutoScrollOffset.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1522,10 +1841,14 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public Point getLocation() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLocation = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Location");
+            retObjectLocation = classInstance.Get("Location");
+            JCObject val = (JCObject)retObjectLocation;
             return new Point(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLocation != null ? retObjectLocation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1533,7 +1856,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void setLocation(Point Location) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidCastException, system.OutOfMemoryException, system.ObjectDisposedException, system.FormatException, system.componentmodel.Win32Exception, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Location", Location == null ? null : Location.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1543,10 +1866,14 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public static Point getMousePosition() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMousePosition = null;
         try {
-            JCObject val = (JCObject)classType.Get("MousePosition");
+            retObjectMousePosition = classType.Get("MousePosition");
+            JCObject val = (JCObject)retObjectMousePosition;
             return new Point(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMousePosition != null ? retObjectMousePosition.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1554,10 +1881,14 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public Rectangle getBounds() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBounds = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Bounds");
+            retObjectBounds = classInstance.Get("Bounds");
+            JCObject val = (JCObject)retObjectBounds;
             return new Rectangle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBounds != null ? retObjectBounds.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1565,7 +1896,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void setBounds(Rectangle Bounds) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidCastException, system.OutOfMemoryException, system.ObjectDisposedException, system.FormatException, system.componentmodel.Win32Exception, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Bounds", Bounds == null ? null : Bounds.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1575,10 +1906,14 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public Rectangle getClientRectangle() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClientRectangle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ClientRectangle");
+            retObjectClientRectangle = classInstance.Get("ClientRectangle");
+            JCObject val = (JCObject)retObjectClientRectangle;
             return new Rectangle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClientRectangle != null ? retObjectClientRectangle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1586,10 +1921,14 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public Rectangle getDisplayRectangle() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDisplayRectangle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DisplayRectangle");
+            retObjectDisplayRectangle = classInstance.Get("DisplayRectangle");
+            JCObject val = (JCObject)retObjectDisplayRectangle;
             return new Rectangle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDisplayRectangle != null ? retObjectDisplayRectangle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1597,10 +1936,14 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public Region getRegion() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRegion = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Region");
+            retObjectRegion = classInstance.Get("Region");
+            JCObject val = (JCObject)retObjectRegion;
             return new Region(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRegion != null ? retObjectRegion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1608,7 +1951,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void setRegion(Region Region) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.FormatException, system.InvalidOperationException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Region", Region == null ? null : Region.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1618,10 +1961,14 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public Size getClientSize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClientSize = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ClientSize");
+            retObjectClientSize = classInstance.Get("ClientSize");
+            JCObject val = (JCObject)retObjectClientSize;
             return new Size(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClientSize != null ? retObjectClientSize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1629,7 +1976,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void setClientSize(Size ClientSize) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.ObjectDisposedException, system.NotSupportedException, system.FormatException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ClientSize", ClientSize == null ? null : ClientSize.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1639,10 +1986,14 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public Size getMaximumSize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaximumSize = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MaximumSize");
+            retObjectMaximumSize = classInstance.Get("MaximumSize");
+            JCObject val = (JCObject)retObjectMaximumSize;
             return new Size(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMaximumSize != null ? retObjectMaximumSize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1650,7 +2001,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void setMaximumSize(Size MaximumSize) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.NotSupportedException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaximumSize", MaximumSize == null ? null : MaximumSize.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1660,10 +2011,14 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public Size getMinimumSize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMinimumSize = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MinimumSize");
+            retObjectMinimumSize = classInstance.Get("MinimumSize");
+            JCObject val = (JCObject)retObjectMinimumSize;
             return new Size(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMinimumSize != null ? retObjectMinimumSize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1671,7 +2026,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void setMinimumSize(Size MinimumSize) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.ArrayTypeMismatchException, system.InvalidCastException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MinimumSize", MinimumSize == null ? null : MinimumSize.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1681,10 +2036,14 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public Size getPreferredSize() throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPreferredSize = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PreferredSize");
+            retObjectPreferredSize = classInstance.Get("PreferredSize");
+            JCObject val = (JCObject)retObjectPreferredSize;
             return new Size(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPreferredSize != null ? retObjectPreferredSize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1692,10 +2051,14 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public Size getSize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSize = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Size");
+            retObjectSize = classInstance.Get("Size");
+            JCObject val = (JCObject)retObjectSize;
             return new Size(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSize != null ? retObjectSize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1703,7 +2066,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void setSize(Size Size) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidCastException, system.OutOfMemoryException, system.ObjectDisposedException, system.FormatException, system.componentmodel.Win32Exception, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Size", Size == null ? null : Size.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1713,10 +2076,14 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public NetObject getDataContext() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDataContext = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DataContext");
+            retObjectDataContext = classInstance.Get("DataContext");
+            JCObject val = (JCObject)retObjectDataContext;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDataContext != null ? retObjectDataContext.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1724,7 +2091,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void setDataContext(NetObject DataContext) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DataContext", DataContext == null ? null : DataContext.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1734,10 +2101,14 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public NetObject getTag() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTag = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Tag");
+            retObjectTag = classInstance.Get("Tag");
+            JCObject val = (JCObject)retObjectTag;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTag != null ? retObjectTag.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1745,7 +2116,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void setTag(NetObject Tag) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Tag", Tag == null ? null : Tag.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1755,9 +2126,13 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public java.lang.String getAccessibleDefaultActionDescription() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAccessibleDefaultActionDescription = null;
         try {
-            return (java.lang.String)classInstance.Get("AccessibleDefaultActionDescription");
+            retObjectAccessibleDefaultActionDescription = classInstance.Get("AccessibleDefaultActionDescription");
+            return (java.lang.String)retObjectAccessibleDefaultActionDescription;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectAccessibleDefaultActionDescription != null ? retObjectAccessibleDefaultActionDescription.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1765,7 +2140,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void setAccessibleDefaultActionDescription(java.lang.String AccessibleDefaultActionDescription) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AccessibleDefaultActionDescription", AccessibleDefaultActionDescription);
         } catch (JCNativeException jcne) {
@@ -1775,9 +2150,13 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public java.lang.String getAccessibleDescription() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAccessibleDescription = null;
         try {
-            return (java.lang.String)classInstance.Get("AccessibleDescription");
+            retObjectAccessibleDescription = classInstance.Get("AccessibleDescription");
+            return (java.lang.String)retObjectAccessibleDescription;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectAccessibleDescription != null ? retObjectAccessibleDescription.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1785,7 +2164,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void setAccessibleDescription(java.lang.String AccessibleDescription) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AccessibleDescription", AccessibleDescription);
         } catch (JCNativeException jcne) {
@@ -1795,9 +2174,13 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public java.lang.String getAccessibleName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAccessibleName = null;
         try {
-            return (java.lang.String)classInstance.Get("AccessibleName");
+            retObjectAccessibleName = classInstance.Get("AccessibleName");
+            return (java.lang.String)retObjectAccessibleName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectAccessibleName != null ? retObjectAccessibleName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1805,7 +2188,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void setAccessibleName(java.lang.String AccessibleName) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AccessibleName", AccessibleName);
         } catch (JCNativeException jcne) {
@@ -1815,9 +2198,13 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public java.lang.String getCompanyName() throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.NotSupportedException, system.ArrayTypeMismatchException, system.InvalidCastException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.io.FileNotFoundException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCompanyName = null;
         try {
-            return (java.lang.String)classInstance.Get("CompanyName");
+            retObjectCompanyName = classInstance.Get("CompanyName");
+            return (java.lang.String)retObjectCompanyName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectCompanyName != null ? retObjectCompanyName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1825,9 +2212,13 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectName = null;
         try {
-            return (java.lang.String)classInstance.Get("Name");
+            retObjectName = classInstance.Get("Name");
+            return (java.lang.String)retObjectName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectName != null ? retObjectName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1835,7 +2226,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void setName(java.lang.String Name) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Name", Name);
         } catch (JCNativeException jcne) {
@@ -1845,9 +2236,13 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public java.lang.String getProductName() throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.NotSupportedException, system.ArrayTypeMismatchException, system.InvalidCastException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.io.FileNotFoundException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProductName = null;
         try {
-            return (java.lang.String)classInstance.Get("ProductName");
+            retObjectProductName = classInstance.Get("ProductName");
+            return (java.lang.String)retObjectProductName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectProductName != null ? retObjectProductName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1855,9 +2250,13 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public java.lang.String getProductVersion() throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.NotSupportedException, system.ArrayTypeMismatchException, system.InvalidCastException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.io.FileNotFoundException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProductVersion = null;
         try {
-            return (java.lang.String)classInstance.Get("ProductVersion");
+            retObjectProductVersion = classInstance.Get("ProductVersion");
+            return (java.lang.String)retObjectProductVersion;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectProductVersion != null ? retObjectProductVersion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1865,9 +2264,13 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public java.lang.String getText() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectText = null;
         try {
-            return (java.lang.String)classInstance.Get("Text");
+            retObjectText = classInstance.Get("Text");
+            return (java.lang.String)retObjectText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectText != null ? retObjectText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1875,7 +2278,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void setText(java.lang.String Text) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Text", Text);
         } catch (JCNativeException jcne) {
@@ -1885,10 +2288,14 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public AccessibleObject getAccessibilityObject() throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAccessibilityObject = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AccessibilityObject");
+            retObjectAccessibilityObject = classInstance.Get("AccessibilityObject");
+            JCObject val = (JCObject)retObjectAccessibilityObject;
             return new AccessibleObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAccessibilityObject != null ? retObjectAccessibilityObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1896,10 +2303,14 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public AccessibleRole getAccessibleRole() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAccessibleRole = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AccessibleRole");
+            retObjectAccessibleRole = classInstance.Get("AccessibleRole");
+            JCObject val = (JCObject)retObjectAccessibleRole;
             return new AccessibleRole(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAccessibleRole != null ? retObjectAccessibleRole.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1907,7 +2318,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void setAccessibleRole(AccessibleRole AccessibleRole) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.ArgumentNullException, system.RankException, system.NotSupportedException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AccessibleRole", AccessibleRole == null ? null : AccessibleRole.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1917,10 +2328,14 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public AnchorStyles getAnchor() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAnchor = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Anchor");
+            retObjectAnchor = classInstance.Get("Anchor");
+            JCObject val = (JCObject)retObjectAnchor;
             return new AnchorStyles(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAnchor != null ? retObjectAnchor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1928,7 +2343,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void setAnchor(AnchorStyles Anchor) throws Throwable, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.PlatformNotSupportedException, system.RankException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.ArrayTypeMismatchException, system.InvalidCastException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Anchor", Anchor == null ? null : Anchor.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1938,10 +2353,14 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public BindingContext getBindingContext() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBindingContext = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("BindingContext");
+            retObjectBindingContext = classInstance.Get("BindingContext");
+            JCObject val = (JCObject)retObjectBindingContext;
             return new BindingContext(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBindingContext != null ? retObjectBindingContext.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1949,7 +2368,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void setBindingContext(BindingContext BindingContext) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.NotSupportedException, system.ArrayTypeMismatchException, system.InvalidCastException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException, system.MulticastNotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BindingContext", BindingContext == null ? null : BindingContext.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1959,10 +2378,14 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public ContextMenuStrip getContextMenuStrip() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContextMenuStrip = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ContextMenuStrip");
+            retObjectContextMenuStrip = classInstance.Get("ContextMenuStrip");
+            JCObject val = (JCObject)retObjectContextMenuStrip;
             return new ContextMenuStrip(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContextMenuStrip != null ? retObjectContextMenuStrip.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1970,7 +2393,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void setContextMenuStrip(ContextMenuStrip ContextMenuStrip) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ContextMenuStrip", ContextMenuStrip == null ? null : ContextMenuStrip.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1980,10 +2403,14 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public Control getParent() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectParent = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Parent");
+            retObjectParent = classInstance.Get("Parent");
+            JCObject val = (JCObject)retObjectParent;
             return new Control(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParent != null ? retObjectParent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1991,7 +2418,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void setParent(Control Parent) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.RankException, system.IndexOutOfRangeException, system.ArgumentException, system.ArrayTypeMismatchException, system.InvalidCastException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Parent", Parent == null ? null : Parent.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -2001,10 +2428,14 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public Control getTopLevelControl() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTopLevelControl = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TopLevelControl");
+            retObjectTopLevelControl = classInstance.Get("TopLevelControl");
+            JCObject val = (JCObject)retObjectTopLevelControl;
             return new Control(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTopLevelControl != null ? retObjectTopLevelControl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2012,10 +2443,14 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public ControlBindingsCollection getDataBindings() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDataBindings = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DataBindings");
+            retObjectDataBindings = classInstance.Get("DataBindings");
+            JCObject val = (JCObject)retObjectDataBindings;
             return new ControlBindingsCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDataBindings != null ? retObjectDataBindings.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2023,10 +2458,14 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public Cursor getCursor() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.componentmodel.Win32Exception, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCursor = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Cursor");
+            retObjectCursor = classInstance.Get("Cursor");
+            JCObject val = (JCObject)retObjectCursor;
             return new Cursor(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCursor != null ? retObjectCursor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2034,7 +2473,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void setCursor(Cursor Cursor) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.Win32Exception, system.RankException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidCastException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Cursor", Cursor == null ? null : Cursor.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -2044,10 +2483,14 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public DockStyle getDock() throws Throwable, system.PlatformNotSupportedException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDock = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Dock");
+            retObjectDock = classInstance.Get("Dock");
+            JCObject val = (JCObject)retObjectDock;
             return new DockStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDock != null ? retObjectDock.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2055,7 +2498,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void setDock(DockStyle Dock) throws Throwable, system.PlatformNotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.ArrayTypeMismatchException, system.InvalidCastException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Dock", Dock == null ? null : Dock.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -2065,10 +2508,14 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public ImageLayout getBackgroundImageLayout() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBackgroundImageLayout = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("BackgroundImageLayout");
+            retObjectBackgroundImageLayout = classInstance.Get("BackgroundImageLayout");
+            JCObject val = (JCObject)retObjectBackgroundImageLayout;
             return new ImageLayout(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBackgroundImageLayout != null ? retObjectBackgroundImageLayout.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2076,7 +2523,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void setBackgroundImageLayout(ImageLayout BackgroundImageLayout) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.ArgumentNullException, system.RankException, system.NotSupportedException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BackgroundImageLayout", BackgroundImageLayout == null ? null : BackgroundImageLayout.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -2086,10 +2533,14 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public ImeMode getImeMode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectImeMode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ImeMode");
+            retObjectImeMode = classInstance.Get("ImeMode");
+            JCObject val = (JCObject)retObjectImeMode;
             return new ImeMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectImeMode != null ? retObjectImeMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2097,7 +2548,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void setImeMode(ImeMode ImeMode) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.ArgumentNullException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException, system.InvalidOperationException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ImeMode", ImeMode == null ? null : ImeMode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -2107,10 +2558,14 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public IWindowTarget getWindowTarget() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWindowTarget = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("WindowTarget");
+            retObjectWindowTarget = classInstance.Get("WindowTarget");
+            JCObject val = (JCObject)retObjectWindowTarget;
             return new IWindowTargetImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWindowTarget != null ? retObjectWindowTarget.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2118,7 +2573,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void setWindowTarget(IWindowTarget WindowTarget) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("WindowTarget", WindowTarget == null ? null : WindowTarget.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -2128,10 +2583,14 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public static Keys getModifierKeys() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectModifierKeys = null;
         try {
-            JCObject val = (JCObject)classType.Get("ModifierKeys");
+            retObjectModifierKeys = classType.Get("ModifierKeys");
+            JCObject val = (JCObject)retObjectModifierKeys;
             return new Keys(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectModifierKeys != null ? retObjectModifierKeys.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2139,10 +2598,14 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public LayoutEngine getLayoutEngine() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLayoutEngine = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("LayoutEngine");
+            retObjectLayoutEngine = classInstance.Get("LayoutEngine");
+            JCObject val = (JCObject)retObjectLayoutEngine;
             return new LayoutEngine(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLayoutEngine != null ? retObjectLayoutEngine.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2150,10 +2613,14 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public static MouseButtons getMouseButtons() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMouseButtons = null;
         try {
-            JCObject val = (JCObject)classType.Get("MouseButtons");
+            retObjectMouseButtons = classType.Get("MouseButtons");
+            JCObject val = (JCObject)retObjectMouseButtons;
             return new MouseButtons(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMouseButtons != null ? retObjectMouseButtons.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2161,10 +2628,14 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public Padding getMargin() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMargin = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Margin");
+            retObjectMargin = classInstance.Get("Margin");
+            JCObject val = (JCObject)retObjectMargin;
             return new Padding(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMargin != null ? retObjectMargin.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2172,7 +2643,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void setMargin(Padding Margin) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Margin", Margin == null ? null : Margin.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -2182,10 +2653,14 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public Padding getPadding() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPadding = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Padding");
+            retObjectPadding = classInstance.Get("Padding");
+            JCObject val = (JCObject)retObjectPadding;
             return new Padding(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPadding != null ? retObjectPadding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2193,7 +2668,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void setPadding(Padding Padding) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.ArrayTypeMismatchException, system.InvalidCastException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Padding", Padding == null ? null : Padding.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -2203,10 +2678,14 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public RightToLeft getRightToLeft() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRightToLeft = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RightToLeft");
+            retObjectRightToLeft = classInstance.Get("RightToLeft");
+            JCObject val = (JCObject)retObjectRightToLeft;
             return new RightToLeft(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRightToLeft != null ? retObjectRightToLeft.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2214,7 +2693,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void setRightToLeft(RightToLeft RightToLeft) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.ArgumentNullException, system.RankException, system.NotSupportedException, system.ArrayTypeMismatchException, system.InvalidCastException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RightToLeft", RightToLeft == null ? null : RightToLeft.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -2229,7 +2708,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void addValidating(CancelEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Validating", handler);
         } catch (JCNativeException jcne) {
@@ -2239,7 +2718,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void removeValidating(CancelEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Validating", handler);
         } catch (JCNativeException jcne) {
@@ -2249,7 +2728,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void addAutoSizeChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("AutoSizeChanged", handler);
         } catch (JCNativeException jcne) {
@@ -2259,7 +2738,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void removeAutoSizeChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("AutoSizeChanged", handler);
         } catch (JCNativeException jcne) {
@@ -2269,7 +2748,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void addBackColorChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("BackColorChanged", handler);
         } catch (JCNativeException jcne) {
@@ -2279,7 +2758,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void removeBackColorChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("BackColorChanged", handler);
         } catch (JCNativeException jcne) {
@@ -2289,7 +2768,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void addBackgroundImageChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("BackgroundImageChanged", handler);
         } catch (JCNativeException jcne) {
@@ -2299,7 +2778,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void removeBackgroundImageChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("BackgroundImageChanged", handler);
         } catch (JCNativeException jcne) {
@@ -2309,7 +2788,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void addBackgroundImageLayoutChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("BackgroundImageLayoutChanged", handler);
         } catch (JCNativeException jcne) {
@@ -2319,7 +2798,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void removeBackgroundImageLayoutChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("BackgroundImageLayoutChanged", handler);
         } catch (JCNativeException jcne) {
@@ -2329,7 +2808,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void addBindingContextChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("BindingContextChanged", handler);
         } catch (JCNativeException jcne) {
@@ -2339,7 +2818,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void removeBindingContextChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("BindingContextChanged", handler);
         } catch (JCNativeException jcne) {
@@ -2349,7 +2828,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void addCausesValidationChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("CausesValidationChanged", handler);
         } catch (JCNativeException jcne) {
@@ -2359,7 +2838,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void removeCausesValidationChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("CausesValidationChanged", handler);
         } catch (JCNativeException jcne) {
@@ -2369,7 +2848,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void addClick(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Click", handler);
         } catch (JCNativeException jcne) {
@@ -2379,7 +2858,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void removeClick(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Click", handler);
         } catch (JCNativeException jcne) {
@@ -2389,7 +2868,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void addClientSizeChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ClientSizeChanged", handler);
         } catch (JCNativeException jcne) {
@@ -2399,7 +2878,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void removeClientSizeChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ClientSizeChanged", handler);
         } catch (JCNativeException jcne) {
@@ -2409,7 +2888,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void addContextMenuStripChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ContextMenuStripChanged", handler);
         } catch (JCNativeException jcne) {
@@ -2419,7 +2898,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void removeContextMenuStripChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ContextMenuStripChanged", handler);
         } catch (JCNativeException jcne) {
@@ -2429,7 +2908,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void addCursorChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("CursorChanged", handler);
         } catch (JCNativeException jcne) {
@@ -2439,7 +2918,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void removeCursorChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("CursorChanged", handler);
         } catch (JCNativeException jcne) {
@@ -2449,7 +2928,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void addDataContextChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("DataContextChanged", handler);
         } catch (JCNativeException jcne) {
@@ -2459,7 +2938,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void removeDataContextChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("DataContextChanged", handler);
         } catch (JCNativeException jcne) {
@@ -2469,7 +2948,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void addDockChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("DockChanged", handler);
         } catch (JCNativeException jcne) {
@@ -2479,7 +2958,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void removeDockChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("DockChanged", handler);
         } catch (JCNativeException jcne) {
@@ -2489,7 +2968,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void addDoubleClick(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("DoubleClick", handler);
         } catch (JCNativeException jcne) {
@@ -2499,7 +2978,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void removeDoubleClick(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("DoubleClick", handler);
         } catch (JCNativeException jcne) {
@@ -2509,7 +2988,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void addDpiChangedAfterParent(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("DpiChangedAfterParent", handler);
         } catch (JCNativeException jcne) {
@@ -2519,7 +2998,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void removeDpiChangedAfterParent(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("DpiChangedAfterParent", handler);
         } catch (JCNativeException jcne) {
@@ -2529,7 +3008,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void addDpiChangedBeforeParent(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("DpiChangedBeforeParent", handler);
         } catch (JCNativeException jcne) {
@@ -2539,7 +3018,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void removeDpiChangedBeforeParent(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("DpiChangedBeforeParent", handler);
         } catch (JCNativeException jcne) {
@@ -2549,7 +3028,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void addDragLeave(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("DragLeave", handler);
         } catch (JCNativeException jcne) {
@@ -2559,7 +3038,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void removeDragLeave(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("DragLeave", handler);
         } catch (JCNativeException jcne) {
@@ -2569,7 +3048,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void addEnabledChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("EnabledChanged", handler);
         } catch (JCNativeException jcne) {
@@ -2579,7 +3058,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void removeEnabledChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("EnabledChanged", handler);
         } catch (JCNativeException jcne) {
@@ -2589,7 +3068,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void addEnter(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Enter", handler);
         } catch (JCNativeException jcne) {
@@ -2599,7 +3078,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void removeEnter(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Enter", handler);
         } catch (JCNativeException jcne) {
@@ -2609,7 +3088,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void addFontChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("FontChanged", handler);
         } catch (JCNativeException jcne) {
@@ -2619,7 +3098,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void removeFontChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("FontChanged", handler);
         } catch (JCNativeException jcne) {
@@ -2629,7 +3108,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void addForeColorChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ForeColorChanged", handler);
         } catch (JCNativeException jcne) {
@@ -2639,7 +3118,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void removeForeColorChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ForeColorChanged", handler);
         } catch (JCNativeException jcne) {
@@ -2649,7 +3128,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void addGotFocus(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("GotFocus", handler);
         } catch (JCNativeException jcne) {
@@ -2659,7 +3138,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void removeGotFocus(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("GotFocus", handler);
         } catch (JCNativeException jcne) {
@@ -2669,7 +3148,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void addHandleCreated(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("HandleCreated", handler);
         } catch (JCNativeException jcne) {
@@ -2679,7 +3158,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void removeHandleCreated(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("HandleCreated", handler);
         } catch (JCNativeException jcne) {
@@ -2689,7 +3168,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void addHandleDestroyed(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("HandleDestroyed", handler);
         } catch (JCNativeException jcne) {
@@ -2699,7 +3178,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void removeHandleDestroyed(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("HandleDestroyed", handler);
         } catch (JCNativeException jcne) {
@@ -2709,7 +3188,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void addImeModeChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ImeModeChanged", handler);
         } catch (JCNativeException jcne) {
@@ -2719,7 +3198,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void removeImeModeChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ImeModeChanged", handler);
         } catch (JCNativeException jcne) {
@@ -2729,7 +3208,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void addLeave(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Leave", handler);
         } catch (JCNativeException jcne) {
@@ -2739,7 +3218,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void removeLeave(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Leave", handler);
         } catch (JCNativeException jcne) {
@@ -2749,7 +3228,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void addLocationChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("LocationChanged", handler);
         } catch (JCNativeException jcne) {
@@ -2759,7 +3238,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void removeLocationChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("LocationChanged", handler);
         } catch (JCNativeException jcne) {
@@ -2769,7 +3248,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void addLostFocus(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("LostFocus", handler);
         } catch (JCNativeException jcne) {
@@ -2779,7 +3258,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void removeLostFocus(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("LostFocus", handler);
         } catch (JCNativeException jcne) {
@@ -2789,7 +3268,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void addMarginChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("MarginChanged", handler);
         } catch (JCNativeException jcne) {
@@ -2799,7 +3278,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void removeMarginChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("MarginChanged", handler);
         } catch (JCNativeException jcne) {
@@ -2809,7 +3288,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void addMouseCaptureChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("MouseCaptureChanged", handler);
         } catch (JCNativeException jcne) {
@@ -2819,7 +3298,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void removeMouseCaptureChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("MouseCaptureChanged", handler);
         } catch (JCNativeException jcne) {
@@ -2829,7 +3308,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void addMouseEnter(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("MouseEnter", handler);
         } catch (JCNativeException jcne) {
@@ -2839,7 +3318,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void removeMouseEnter(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("MouseEnter", handler);
         } catch (JCNativeException jcne) {
@@ -2849,7 +3328,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void addMouseHover(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("MouseHover", handler);
         } catch (JCNativeException jcne) {
@@ -2859,7 +3338,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void removeMouseHover(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("MouseHover", handler);
         } catch (JCNativeException jcne) {
@@ -2869,7 +3348,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void addMouseLeave(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("MouseLeave", handler);
         } catch (JCNativeException jcne) {
@@ -2879,7 +3358,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void removeMouseLeave(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("MouseLeave", handler);
         } catch (JCNativeException jcne) {
@@ -2889,7 +3368,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void addMove(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Move", handler);
         } catch (JCNativeException jcne) {
@@ -2899,7 +3378,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void removeMove(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Move", handler);
         } catch (JCNativeException jcne) {
@@ -2909,7 +3388,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void addPaddingChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("PaddingChanged", handler);
         } catch (JCNativeException jcne) {
@@ -2919,7 +3398,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void removePaddingChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("PaddingChanged", handler);
         } catch (JCNativeException jcne) {
@@ -2929,7 +3408,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void addParentChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ParentChanged", handler);
         } catch (JCNativeException jcne) {
@@ -2939,7 +3418,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void removeParentChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ParentChanged", handler);
         } catch (JCNativeException jcne) {
@@ -2949,7 +3428,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void addRegionChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("RegionChanged", handler);
         } catch (JCNativeException jcne) {
@@ -2959,7 +3438,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void removeRegionChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("RegionChanged", handler);
         } catch (JCNativeException jcne) {
@@ -2969,7 +3448,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void addResize(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Resize", handler);
         } catch (JCNativeException jcne) {
@@ -2979,7 +3458,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void removeResize(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Resize", handler);
         } catch (JCNativeException jcne) {
@@ -2989,7 +3468,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void addRightToLeftChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("RightToLeftChanged", handler);
         } catch (JCNativeException jcne) {
@@ -2999,7 +3478,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void removeRightToLeftChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("RightToLeftChanged", handler);
         } catch (JCNativeException jcne) {
@@ -3009,7 +3488,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void addSizeChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("SizeChanged", handler);
         } catch (JCNativeException jcne) {
@@ -3019,7 +3498,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void removeSizeChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("SizeChanged", handler);
         } catch (JCNativeException jcne) {
@@ -3029,7 +3508,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void addStyleChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("StyleChanged", handler);
         } catch (JCNativeException jcne) {
@@ -3039,7 +3518,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void removeStyleChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("StyleChanged", handler);
         } catch (JCNativeException jcne) {
@@ -3049,7 +3528,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void addSystemColorsChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("SystemColorsChanged", handler);
         } catch (JCNativeException jcne) {
@@ -3059,7 +3538,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void removeSystemColorsChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("SystemColorsChanged", handler);
         } catch (JCNativeException jcne) {
@@ -3069,7 +3548,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void addTabIndexChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("TabIndexChanged", handler);
         } catch (JCNativeException jcne) {
@@ -3079,7 +3558,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void removeTabIndexChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("TabIndexChanged", handler);
         } catch (JCNativeException jcne) {
@@ -3089,7 +3568,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void addTabStopChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("TabStopChanged", handler);
         } catch (JCNativeException jcne) {
@@ -3099,7 +3578,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void removeTabStopChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("TabStopChanged", handler);
         } catch (JCNativeException jcne) {
@@ -3109,7 +3588,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void addTextChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("TextChanged", handler);
         } catch (JCNativeException jcne) {
@@ -3119,7 +3598,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void removeTextChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("TextChanged", handler);
         } catch (JCNativeException jcne) {
@@ -3129,7 +3608,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void addValidated(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Validated", handler);
         } catch (JCNativeException jcne) {
@@ -3139,7 +3618,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void removeValidated(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Validated", handler);
         } catch (JCNativeException jcne) {
@@ -3149,7 +3628,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void addVisibleChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("VisibleChanged", handler);
         } catch (JCNativeException jcne) {
@@ -3159,7 +3638,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void removeVisibleChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("VisibleChanged", handler);
         } catch (JCNativeException jcne) {
@@ -3169,7 +3648,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void addControlAdded(ControlEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ControlAdded", handler);
         } catch (JCNativeException jcne) {
@@ -3179,7 +3658,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void removeControlAdded(ControlEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ControlAdded", handler);
         } catch (JCNativeException jcne) {
@@ -3189,7 +3668,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void addControlRemoved(ControlEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ControlRemoved", handler);
         } catch (JCNativeException jcne) {
@@ -3199,7 +3678,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void removeControlRemoved(ControlEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ControlRemoved", handler);
         } catch (JCNativeException jcne) {
@@ -3209,7 +3688,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void addDragDrop(DragEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("DragDrop", handler);
         } catch (JCNativeException jcne) {
@@ -3219,7 +3698,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void removeDragDrop(DragEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("DragDrop", handler);
         } catch (JCNativeException jcne) {
@@ -3229,7 +3708,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void addDragEnter(DragEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("DragEnter", handler);
         } catch (JCNativeException jcne) {
@@ -3239,7 +3718,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void removeDragEnter(DragEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("DragEnter", handler);
         } catch (JCNativeException jcne) {
@@ -3249,7 +3728,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void addDragOver(DragEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("DragOver", handler);
         } catch (JCNativeException jcne) {
@@ -3259,7 +3738,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void removeDragOver(DragEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("DragOver", handler);
         } catch (JCNativeException jcne) {
@@ -3269,7 +3748,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void addGiveFeedback(GiveFeedbackEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("GiveFeedback", handler);
         } catch (JCNativeException jcne) {
@@ -3279,7 +3758,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void removeGiveFeedback(GiveFeedbackEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("GiveFeedback", handler);
         } catch (JCNativeException jcne) {
@@ -3289,7 +3768,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void addHelpRequested(HelpEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("HelpRequested", handler);
         } catch (JCNativeException jcne) {
@@ -3299,7 +3778,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void removeHelpRequested(HelpEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("HelpRequested", handler);
         } catch (JCNativeException jcne) {
@@ -3309,7 +3788,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void addInvalidated(InvalidateEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Invalidated", handler);
         } catch (JCNativeException jcne) {
@@ -3319,7 +3798,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void removeInvalidated(InvalidateEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Invalidated", handler);
         } catch (JCNativeException jcne) {
@@ -3329,7 +3808,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void addKeyDown(KeyEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("KeyDown", handler);
         } catch (JCNativeException jcne) {
@@ -3339,7 +3818,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void removeKeyDown(KeyEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("KeyDown", handler);
         } catch (JCNativeException jcne) {
@@ -3349,7 +3828,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void addKeyUp(KeyEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("KeyUp", handler);
         } catch (JCNativeException jcne) {
@@ -3359,7 +3838,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void removeKeyUp(KeyEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("KeyUp", handler);
         } catch (JCNativeException jcne) {
@@ -3369,7 +3848,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void addKeyPress(KeyPressEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("KeyPress", handler);
         } catch (JCNativeException jcne) {
@@ -3379,7 +3858,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void removeKeyPress(KeyPressEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("KeyPress", handler);
         } catch (JCNativeException jcne) {
@@ -3389,7 +3868,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void addLayout(LayoutEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Layout", handler);
         } catch (JCNativeException jcne) {
@@ -3399,7 +3878,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void removeLayout(LayoutEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Layout", handler);
         } catch (JCNativeException jcne) {
@@ -3409,7 +3888,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void addMouseClick(MouseEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("MouseClick", handler);
         } catch (JCNativeException jcne) {
@@ -3419,7 +3898,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void removeMouseClick(MouseEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("MouseClick", handler);
         } catch (JCNativeException jcne) {
@@ -3429,7 +3908,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void addMouseDoubleClick(MouseEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("MouseDoubleClick", handler);
         } catch (JCNativeException jcne) {
@@ -3439,7 +3918,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void removeMouseDoubleClick(MouseEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("MouseDoubleClick", handler);
         } catch (JCNativeException jcne) {
@@ -3449,7 +3928,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void addMouseDown(MouseEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("MouseDown", handler);
         } catch (JCNativeException jcne) {
@@ -3459,7 +3938,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void removeMouseDown(MouseEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("MouseDown", handler);
         } catch (JCNativeException jcne) {
@@ -3469,7 +3948,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void addMouseMove(MouseEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("MouseMove", handler);
         } catch (JCNativeException jcne) {
@@ -3479,7 +3958,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void removeMouseMove(MouseEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("MouseMove", handler);
         } catch (JCNativeException jcne) {
@@ -3489,7 +3968,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void addMouseUp(MouseEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("MouseUp", handler);
         } catch (JCNativeException jcne) {
@@ -3499,7 +3978,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void removeMouseUp(MouseEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("MouseUp", handler);
         } catch (JCNativeException jcne) {
@@ -3509,7 +3988,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void addMouseWheel(MouseEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("MouseWheel", handler);
         } catch (JCNativeException jcne) {
@@ -3519,7 +3998,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void removeMouseWheel(MouseEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("MouseWheel", handler);
         } catch (JCNativeException jcne) {
@@ -3529,7 +4008,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void addPaint(PaintEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Paint", handler);
         } catch (JCNativeException jcne) {
@@ -3539,7 +4018,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void removePaint(PaintEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Paint", handler);
         } catch (JCNativeException jcne) {
@@ -3549,7 +4028,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void addPreviewKeyDown(PreviewKeyDownEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("PreviewKeyDown", handler);
         } catch (JCNativeException jcne) {
@@ -3559,7 +4038,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void removePreviewKeyDown(PreviewKeyDownEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("PreviewKeyDown", handler);
         } catch (JCNativeException jcne) {
@@ -3569,7 +4048,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void addQueryAccessibilityHelp(QueryAccessibilityHelpEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("QueryAccessibilityHelp", handler);
         } catch (JCNativeException jcne) {
@@ -3579,7 +4058,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void removeQueryAccessibilityHelp(QueryAccessibilityHelpEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("QueryAccessibilityHelp", handler);
         } catch (JCNativeException jcne) {
@@ -3589,7 +4068,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void addQueryContinueDrag(QueryContinueDragEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("QueryContinueDrag", handler);
         } catch (JCNativeException jcne) {
@@ -3599,7 +4078,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void removeQueryContinueDrag(QueryContinueDragEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("QueryContinueDrag", handler);
         } catch (JCNativeException jcne) {
@@ -3609,7 +4088,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void addChangeUICues(UICuesEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ChangeUICues", handler);
         } catch (JCNativeException jcne) {
@@ -3619,7 +4098,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
 
     public void removeChangeUICues(UICuesEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ChangeUICues", handler);
         } catch (JCNativeException jcne) {

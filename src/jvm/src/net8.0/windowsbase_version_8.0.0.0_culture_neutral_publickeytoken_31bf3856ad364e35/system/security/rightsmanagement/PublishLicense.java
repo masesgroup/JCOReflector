@@ -171,10 +171,14 @@ public class PublishLicense extends NetObject  {
     
     public UnsignedPublishLicense DecryptUnsignedPublishLicense(CryptoProvider cryptoProvider) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.security.rightsmanagement.RightsManagementException, system.FormatException, system.OverflowException, system.diagnostics.UnreachableException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDecryptUnsignedPublishLicense = null;
         try {
-            JCObject objDecryptUnsignedPublishLicense = (JCObject)classInstance.Invoke("DecryptUnsignedPublishLicense", cryptoProvider == null ? null : cryptoProvider.getJCOInstance());
+            retObjectDecryptUnsignedPublishLicense = classInstance.Invoke("DecryptUnsignedPublishLicense", cryptoProvider == null ? null : cryptoProvider.getJCOInstance());
+            JCObject objDecryptUnsignedPublishLicense = (JCObject)retObjectDecryptUnsignedPublishLicense;
             return new UnsignedPublishLicense(objDecryptUnsignedPublishLicense);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDecryptUnsignedPublishLicense != null ? retObjectDecryptUnsignedPublishLicense.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,10 +186,14 @@ public class PublishLicense extends NetObject  {
 
     public UseLicense AcquireUseLicense(SecureEnvironment secureEnvironment) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.security.rightsmanagement.RightsManagementException, system.threading.AbandonedMutexException, system.OverflowException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAcquireUseLicense = null;
         try {
-            JCObject objAcquireUseLicense = (JCObject)classInstance.Invoke("AcquireUseLicense", secureEnvironment == null ? null : secureEnvironment.getJCOInstance());
+            retObjectAcquireUseLicense = classInstance.Invoke("AcquireUseLicense", secureEnvironment == null ? null : secureEnvironment.getJCOInstance());
+            JCObject objAcquireUseLicense = (JCObject)retObjectAcquireUseLicense;
             return new UseLicense(objAcquireUseLicense);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAcquireUseLicense != null ? retObjectAcquireUseLicense.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,10 +201,14 @@ public class PublishLicense extends NetObject  {
 
     public UseLicense AcquireUseLicenseNoUI(SecureEnvironment secureEnvironment) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.security.rightsmanagement.RightsManagementException, system.threading.AbandonedMutexException, system.OverflowException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAcquireUseLicenseNoUI = null;
         try {
-            JCObject objAcquireUseLicenseNoUI = (JCObject)classInstance.Invoke("AcquireUseLicenseNoUI", secureEnvironment == null ? null : secureEnvironment.getJCOInstance());
+            retObjectAcquireUseLicenseNoUI = classInstance.Invoke("AcquireUseLicenseNoUI", secureEnvironment == null ? null : secureEnvironment.getJCOInstance());
+            JCObject objAcquireUseLicenseNoUI = (JCObject)retObjectAcquireUseLicenseNoUI;
             return new UseLicense(objAcquireUseLicenseNoUI);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAcquireUseLicenseNoUI != null ? retObjectAcquireUseLicenseNoUI.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -208,10 +220,14 @@ public class PublishLicense extends NetObject  {
     
     public Guid getContentId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContentId = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ContentId");
+            retObjectContentId = classInstance.Get("ContentId");
+            JCObject val = (JCObject)retObjectContentId;
             return new Guid(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContentId != null ? retObjectContentId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -219,9 +235,13 @@ public class PublishLicense extends NetObject  {
 
     public java.lang.String getReferralInfoName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReferralInfoName = null;
         try {
-            return (java.lang.String)classInstance.Get("ReferralInfoName");
+            retObjectReferralInfoName = classInstance.Get("ReferralInfoName");
+            return (java.lang.String)retObjectReferralInfoName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectReferralInfoName != null ? retObjectReferralInfoName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -229,10 +249,14 @@ public class PublishLicense extends NetObject  {
 
     public Uri getReferralInfoUri() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReferralInfoUri = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ReferralInfoUri");
+            retObjectReferralInfoUri = classInstance.Get("ReferralInfoUri");
+            JCObject val = (JCObject)retObjectReferralInfoUri;
             return new Uri(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReferralInfoUri != null ? retObjectReferralInfoUri.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -240,10 +264,14 @@ public class PublishLicense extends NetObject  {
 
     public Uri getUseLicenseAcquisitionUrl() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUseLicenseAcquisitionUrl = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("UseLicenseAcquisitionUrl");
+            retObjectUseLicenseAcquisitionUrl = classInstance.Get("UseLicenseAcquisitionUrl");
+            JCObject val = (JCObject)retObjectUseLicenseAcquisitionUrl;
             return new Uri(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUseLicenseAcquisitionUrl != null ? retObjectUseLicenseAcquisitionUrl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

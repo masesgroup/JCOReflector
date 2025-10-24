@@ -165,10 +165,14 @@ public class NopReturnReader extends MimeReturnReader  {
     
     public NetObject GetInitializer(LogicalMethodInfo methodInfo) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetInitializer = null;
         try {
-            JCObject objGetInitializer = (JCObject)classInstance.Invoke("GetInitializer", methodInfo == null ? null : methodInfo.getJCOInstance());
+            retObjectGetInitializer = classInstance.Invoke("GetInitializer", methodInfo == null ? null : methodInfo.getJCOInstance());
+            JCObject objGetInitializer = (JCObject)retObjectGetInitializer;
             return new NetObject(objGetInitializer);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetInitializer != null ? retObjectGetInitializer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,10 +180,14 @@ public class NopReturnReader extends MimeReturnReader  {
 
     public NetObject Read(WebResponse response, Stream responseStream) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRead = null;
         try {
-            JCObject objRead = (JCObject)classInstance.Invoke("Read", response == null ? null : response.getJCOInstance(), responseStream == null ? null : responseStream.getJCOInstance());
+            retObjectRead = classInstance.Invoke("Read", response == null ? null : response.getJCOInstance(), responseStream == null ? null : responseStream.getJCOInstance());
+            JCObject objRead = (JCObject)retObjectRead;
             return new NetObject(objRead);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRead != null ? retObjectRead.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,7 +195,7 @@ public class NopReturnReader extends MimeReturnReader  {
 
     public void Initialize(NetObject initializer) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Initialize", initializer == null ? null : initializer.getJCOInstance());
         } catch (JCNativeException jcne) {

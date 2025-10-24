@@ -155,9 +155,13 @@ public class RuntimeInformation extends NetObject  {
     
     public static boolean IsOSPlatform(OSPlatform osPlatform) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsOSPlatform = null;
         try {
-            return (boolean)classType.Invoke("IsOSPlatform", osPlatform == null ? null : osPlatform.getJCOInstance());
+            retObjectIsOSPlatform = classType.Invoke("IsOSPlatform", osPlatform == null ? null : osPlatform.getJCOInstance());
+            return (boolean)retObjectIsOSPlatform;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsOSPlatform != null ? retObjectIsOSPlatform.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,10 +173,14 @@ public class RuntimeInformation extends NetObject  {
     
     public static Architecture getOSArchitecture() throws Throwable, system.ArgumentException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOSArchitecture = null;
         try {
-            JCObject val = (JCObject)classType.Get("OSArchitecture");
+            retObjectOSArchitecture = classType.Get("OSArchitecture");
+            JCObject val = (JCObject)retObjectOSArchitecture;
             return new Architecture(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOSArchitecture != null ? retObjectOSArchitecture.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,10 +188,14 @@ public class RuntimeInformation extends NetObject  {
 
     public static Architecture getProcessArchitecture() throws Throwable, system.ArgumentException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectProcessArchitecture = null;
         try {
-            JCObject val = (JCObject)classType.Get("ProcessArchitecture");
+            retObjectProcessArchitecture = classType.Get("ProcessArchitecture");
+            JCObject val = (JCObject)retObjectProcessArchitecture;
             return new Architecture(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectProcessArchitecture != null ? retObjectProcessArchitecture.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,9 +203,13 @@ public class RuntimeInformation extends NetObject  {
 
     public static java.lang.String getFrameworkDescription() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.reflection.AmbiguousMatchException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFrameworkDescription = null;
         try {
-            return (java.lang.String)classType.Get("FrameworkDescription");
+            retObjectFrameworkDescription = classType.Get("FrameworkDescription");
+            return (java.lang.String)retObjectFrameworkDescription;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectFrameworkDescription != null ? retObjectFrameworkDescription.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,9 +217,13 @@ public class RuntimeInformation extends NetObject  {
 
     public static java.lang.String getOSDescription() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOSDescription = null;
         try {
-            return (java.lang.String)classType.Get("OSDescription");
+            retObjectOSDescription = classType.Get("OSDescription");
+            return (java.lang.String)retObjectOSDescription;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectOSDescription != null ? retObjectOSDescription.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

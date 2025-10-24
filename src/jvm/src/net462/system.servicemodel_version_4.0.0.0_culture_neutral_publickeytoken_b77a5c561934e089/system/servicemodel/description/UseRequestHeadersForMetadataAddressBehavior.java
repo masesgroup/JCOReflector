@@ -167,7 +167,7 @@ public class UseRequestHeadersForMetadataAddressBehavior extends NetObject  {
      */
     @Deprecated 
     public void ApplyDispatchBehavior(ServiceDescription serviceDescription, ServiceHostBase serviceHostBase) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIServiceBehavior to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIServiceBehavior to obtain the full interface.");
     }
 
     /**
@@ -176,7 +176,7 @@ public class UseRequestHeadersForMetadataAddressBehavior extends NetObject  {
      */
     @Deprecated 
     public void Validate(ServiceDescription serviceDescription, ServiceHostBase serviceHostBase) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIServiceBehavior to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIServiceBehavior to obtain the full interface.");
     }
 
 

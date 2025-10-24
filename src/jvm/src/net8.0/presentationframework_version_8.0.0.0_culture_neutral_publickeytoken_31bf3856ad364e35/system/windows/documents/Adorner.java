@@ -156,10 +156,14 @@ public class Adorner extends FrameworkElement  {
     
     public GeneralTransform GetDesiredTransform(GeneralTransform transform) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDesiredTransform = null;
         try {
-            JCObject objGetDesiredTransform = (JCObject)classInstance.Invoke("GetDesiredTransform", transform == null ? null : transform.getJCOInstance());
+            retObjectGetDesiredTransform = classInstance.Invoke("GetDesiredTransform", transform == null ? null : transform.getJCOInstance());
+            JCObject objGetDesiredTransform = (JCObject)retObjectGetDesiredTransform;
             return new GeneralTransform(objGetDesiredTransform);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetDesiredTransform != null ? retObjectGetDesiredTransform.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,9 +175,13 @@ public class Adorner extends FrameworkElement  {
     
     public boolean getIsClipEnabled() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsClipEnabled = null;
         try {
-            return (boolean)classInstance.Get("IsClipEnabled");
+            retObjectIsClipEnabled = classInstance.Get("IsClipEnabled");
+            return (boolean)retObjectIsClipEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsClipEnabled != null ? retObjectIsClipEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,7 +189,7 @@ public class Adorner extends FrameworkElement  {
 
     public void setIsClipEnabled(boolean IsClipEnabled) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.MulticastNotSupportedException, system.ObjectDisposedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsClipEnabled", IsClipEnabled);
         } catch (JCNativeException jcne) {
@@ -191,10 +199,14 @@ public class Adorner extends FrameworkElement  {
 
     public UIElement getAdornedElement() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAdornedElement = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AdornedElement");
+            retObjectAdornedElement = classInstance.Get("AdornedElement");
+            JCObject val = (JCObject)retObjectAdornedElement;
             return new UIElement(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAdornedElement != null ? retObjectAdornedElement.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

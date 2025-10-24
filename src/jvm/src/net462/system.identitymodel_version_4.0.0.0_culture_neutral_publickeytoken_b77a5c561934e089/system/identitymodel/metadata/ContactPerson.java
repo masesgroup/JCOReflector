@@ -176,10 +176,14 @@ public class ContactPerson extends NetObject  {
     
     public ContactType getType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Type");
+            retObjectType = classInstance.Get("Type");
+            JCObject val = (JCObject)retObjectType;
             return new ContactType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectType != null ? retObjectType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,7 +191,7 @@ public class ContactPerson extends NetObject  {
 
     public void setType(ContactType Type) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Type", Type == null ? null : Type.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -197,9 +201,13 @@ public class ContactPerson extends NetObject  {
 
     public java.lang.String getCompany() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCompany = null;
         try {
-            return (java.lang.String)classInstance.Get("Company");
+            retObjectCompany = classInstance.Get("Company");
+            return (java.lang.String)retObjectCompany;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectCompany != null ? retObjectCompany.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -207,7 +215,7 @@ public class ContactPerson extends NetObject  {
 
     public void setCompany(java.lang.String Company) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Company", Company);
         } catch (JCNativeException jcne) {
@@ -217,9 +225,13 @@ public class ContactPerson extends NetObject  {
 
     public java.lang.String getGivenName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGivenName = null;
         try {
-            return (java.lang.String)classInstance.Get("GivenName");
+            retObjectGivenName = classInstance.Get("GivenName");
+            return (java.lang.String)retObjectGivenName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectGivenName != null ? retObjectGivenName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -227,7 +239,7 @@ public class ContactPerson extends NetObject  {
 
     public void setGivenName(java.lang.String GivenName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("GivenName", GivenName);
         } catch (JCNativeException jcne) {
@@ -237,9 +249,13 @@ public class ContactPerson extends NetObject  {
 
     public java.lang.String getSurname() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSurname = null;
         try {
-            return (java.lang.String)classInstance.Get("Surname");
+            retObjectSurname = classInstance.Get("Surname");
+            return (java.lang.String)retObjectSurname;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSurname != null ? retObjectSurname.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -247,7 +263,7 @@ public class ContactPerson extends NetObject  {
 
     public void setSurname(java.lang.String Surname) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Surname", Surname);
         } catch (JCNativeException jcne) {

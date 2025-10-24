@@ -159,10 +159,14 @@ public class TypedReference extends ValueType  {
     
     public static NetObject ToObject(TypedReference value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectToObject = null;
         try {
-            JCObject objToObject = (JCObject)classType.Invoke("ToObject", value == null ? null : value.getJCOInstance());
+            retObjectToObject = classType.Invoke("ToObject", value == null ? null : value.getJCOInstance());
+            JCObject objToObject = (JCObject)retObjectToObject;
             return new NetObject(objToObject);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToObject != null ? retObjectToObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,10 +174,14 @@ public class TypedReference extends ValueType  {
 
     public static RuntimeTypeHandle TargetTypeToken(TypedReference value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTargetTypeToken = null;
         try {
-            JCObject objTargetTypeToken = (JCObject)classType.Invoke("TargetTypeToken", value == null ? null : value.getJCOInstance());
+            retObjectTargetTypeToken = classType.Invoke("TargetTypeToken", value == null ? null : value.getJCOInstance());
+            JCObject objTargetTypeToken = (JCObject)retObjectTargetTypeToken;
             return new RuntimeTypeHandle(objTargetTypeToken);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTargetTypeToken != null ? retObjectTargetTypeToken.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,10 +189,14 @@ public class TypedReference extends ValueType  {
 
     public static NetType GetTargetType(TypedReference value) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetTargetType = null;
         try {
-            JCObject objGetTargetType = (JCObject)classType.Invoke("GetTargetType", value == null ? null : value.getJCOInstance());
+            retObjectGetTargetType = classType.Invoke("GetTargetType", value == null ? null : value.getJCOInstance());
+            JCObject objGetTargetType = (JCObject)retObjectGetTargetType;
             return new NetType(objGetTargetType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetTargetType != null ? retObjectGetTargetType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,10 +204,14 @@ public class TypedReference extends ValueType  {
 
     public static TypedReference MakeTypedReference(NetObject target, FieldInfo[] flds) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.MissingMemberException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMakeTypedReference = null;
         try {
-            JCObject objMakeTypedReference = (JCObject)classType.Invoke("MakeTypedReference", target == null ? null : target.getJCOInstance(), toObjectFromArray(flds));
+            retObjectMakeTypedReference = classType.Invoke("MakeTypedReference", target == null ? null : target.getJCOInstance(), toObjectFromArray(flds));
+            JCObject objMakeTypedReference = (JCObject)retObjectMakeTypedReference;
             return new TypedReference(objMakeTypedReference);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMakeTypedReference != null ? retObjectMakeTypedReference.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,7 +219,7 @@ public class TypedReference extends ValueType  {
 
     public static void SetTypedReference(TypedReference target, NetObject value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetTypedReference", target == null ? null : target.getJCOInstance(), value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {

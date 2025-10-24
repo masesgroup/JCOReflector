@@ -143,9 +143,20 @@ public class UCOMIPersistFileImplementation extends NetObject implements UCOMIPe
     
     public int IsDirty() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsDirty = null;
         try {
-            return (int)classInstance.Invoke("IsDirty");
+            retObjectIsDirty = classInstance.Invoke("IsDirty");
+            return (int)retObjectIsDirty;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectIsDirty_ToString = retObjectIsDirty == null ? "null" : retObjectIsDirty.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectIsDirtyNumber = (java.lang.Number)retObjectIsDirty;
+                return retObjectIsDirtyNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectIsDirty != null ? retObjectIsDirty.getClass() : "null", retObjectIsDirty_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -153,7 +164,7 @@ public class UCOMIPersistFileImplementation extends NetObject implements UCOMIPe
 
     public void GetClassID(JCORefOut<Guid> pClassID) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetClassID", pClassID.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -163,7 +174,7 @@ public class UCOMIPersistFileImplementation extends NetObject implements UCOMIPe
 
     public void GetCurFile(JCORefOut ppszFileName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetCurFile", ppszFileName.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -173,7 +184,7 @@ public class UCOMIPersistFileImplementation extends NetObject implements UCOMIPe
 
     public void Load(java.lang.String pszFileName, int dwMode) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Load", pszFileName, dwMode);
         } catch (JCNativeException jcne) {
@@ -183,7 +194,7 @@ public class UCOMIPersistFileImplementation extends NetObject implements UCOMIPe
 
     public void Save(java.lang.String pszFileName, boolean fRemember) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Save", pszFileName, fRemember);
         } catch (JCNativeException jcne) {
@@ -193,7 +204,7 @@ public class UCOMIPersistFileImplementation extends NetObject implements UCOMIPe
 
     public void SaveCompleted(java.lang.String pszFileName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SaveCompleted", pszFileName);
         } catch (JCNativeException jcne) {

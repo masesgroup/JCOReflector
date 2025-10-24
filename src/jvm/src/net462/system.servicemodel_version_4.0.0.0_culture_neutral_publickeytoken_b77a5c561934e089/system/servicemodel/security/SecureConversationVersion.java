@@ -159,10 +159,14 @@ public class SecureConversationVersion extends NetObject  {
     
     public static SecureConversationVersion getDefault() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDefault = null;
         try {
-            JCObject val = (JCObject)classType.Get("Default");
+            retObjectDefault = classType.Get("Default");
+            JCObject val = (JCObject)retObjectDefault;
             return new SecureConversationVersion(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefault != null ? retObjectDefault.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,10 +174,14 @@ public class SecureConversationVersion extends NetObject  {
 
     public static SecureConversationVersion getWSSecureConversation13() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectWSSecureConversation13 = null;
         try {
-            JCObject val = (JCObject)classType.Get("WSSecureConversation13");
+            retObjectWSSecureConversation13 = classType.Get("WSSecureConversation13");
+            JCObject val = (JCObject)retObjectWSSecureConversation13;
             return new SecureConversationVersion(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWSSecureConversation13 != null ? retObjectWSSecureConversation13.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,10 +189,14 @@ public class SecureConversationVersion extends NetObject  {
 
     public static SecureConversationVersion getWSSecureConversationFeb2005() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectWSSecureConversationFeb2005 = null;
         try {
-            JCObject val = (JCObject)classType.Get("WSSecureConversationFeb2005");
+            retObjectWSSecureConversationFeb2005 = classType.Get("WSSecureConversationFeb2005");
+            JCObject val = (JCObject)retObjectWSSecureConversationFeb2005;
             return new SecureConversationVersion(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWSSecureConversationFeb2005 != null ? retObjectWSSecureConversationFeb2005.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,10 +204,14 @@ public class SecureConversationVersion extends NetObject  {
 
     public XmlDictionaryString getNamespace() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNamespace = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Namespace");
+            retObjectNamespace = classInstance.Get("Namespace");
+            JCObject val = (JCObject)retObjectNamespace;
             return new XmlDictionaryString(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNamespace != null ? retObjectNamespace.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,10 +219,14 @@ public class SecureConversationVersion extends NetObject  {
 
     public XmlDictionaryString getPrefix() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPrefix = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Prefix");
+            retObjectPrefix = classInstance.Get("Prefix");
+            JCObject val = (JCObject)retObjectPrefix;
             return new XmlDictionaryString(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPrefix != null ? retObjectPrefix.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

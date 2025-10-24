@@ -180,7 +180,7 @@ public class ToolStripProgressBar extends ToolStripControlHost  {
     
     public void Increment(int value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Increment", value);
         } catch (JCNativeException jcne) {
@@ -190,7 +190,7 @@ public class ToolStripProgressBar extends ToolStripControlHost  {
 
     public void PerformStep() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("PerformStep");
         } catch (JCNativeException jcne) {
@@ -204,9 +204,13 @@ public class ToolStripProgressBar extends ToolStripControlHost  {
     
     public boolean getRightToLeftLayout() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRightToLeftLayout = null;
         try {
-            return (boolean)classInstance.Get("RightToLeftLayout");
+            retObjectRightToLeftLayout = classInstance.Get("RightToLeftLayout");
+            return (boolean)retObjectRightToLeftLayout;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectRightToLeftLayout != null ? retObjectRightToLeftLayout.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -214,7 +218,7 @@ public class ToolStripProgressBar extends ToolStripControlHost  {
 
     public void setRightToLeftLayout(boolean RightToLeftLayout) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.RankException, system.IndexOutOfRangeException, system.ArgumentException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RightToLeftLayout", RightToLeftLayout);
         } catch (JCNativeException jcne) {
@@ -224,9 +228,20 @@ public class ToolStripProgressBar extends ToolStripControlHost  {
 
     public int getMarqueeAnimationSpeed() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMarqueeAnimationSpeed = null;
         try {
-            return (int)classInstance.Get("MarqueeAnimationSpeed");
+            retObjectMarqueeAnimationSpeed = classInstance.Get("MarqueeAnimationSpeed");
+            return (int)retObjectMarqueeAnimationSpeed;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMarqueeAnimationSpeed_ToString = retObjectMarqueeAnimationSpeed == null ? "null" : retObjectMarqueeAnimationSpeed.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMarqueeAnimationSpeedNumber = (java.lang.Number)retObjectMarqueeAnimationSpeed;
+                return retObjectMarqueeAnimationSpeedNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMarqueeAnimationSpeed != null ? retObjectMarqueeAnimationSpeed.getClass() : "null", retObjectMarqueeAnimationSpeed_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -234,7 +249,7 @@ public class ToolStripProgressBar extends ToolStripControlHost  {
 
     public void setMarqueeAnimationSpeed(int MarqueeAnimationSpeed) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MarqueeAnimationSpeed", MarqueeAnimationSpeed);
         } catch (JCNativeException jcne) {
@@ -244,9 +259,20 @@ public class ToolStripProgressBar extends ToolStripControlHost  {
 
     public int getMaximum() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaximum = null;
         try {
-            return (int)classInstance.Get("Maximum");
+            retObjectMaximum = classInstance.Get("Maximum");
+            return (int)retObjectMaximum;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaximum_ToString = retObjectMaximum == null ? "null" : retObjectMaximum.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMaximumNumber = (java.lang.Number)retObjectMaximum;
+                return retObjectMaximumNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaximum != null ? retObjectMaximum.getClass() : "null", retObjectMaximum_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -254,7 +280,7 @@ public class ToolStripProgressBar extends ToolStripControlHost  {
 
     public void setMaximum(int Maximum) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Maximum", Maximum);
         } catch (JCNativeException jcne) {
@@ -264,9 +290,20 @@ public class ToolStripProgressBar extends ToolStripControlHost  {
 
     public int getMinimum() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMinimum = null;
         try {
-            return (int)classInstance.Get("Minimum");
+            retObjectMinimum = classInstance.Get("Minimum");
+            return (int)retObjectMinimum;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMinimum_ToString = retObjectMinimum == null ? "null" : retObjectMinimum.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMinimumNumber = (java.lang.Number)retObjectMinimum;
+                return retObjectMinimumNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMinimum != null ? retObjectMinimum.getClass() : "null", retObjectMinimum_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -274,7 +311,7 @@ public class ToolStripProgressBar extends ToolStripControlHost  {
 
     public void setMinimum(int Minimum) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Minimum", Minimum);
         } catch (JCNativeException jcne) {
@@ -284,9 +321,20 @@ public class ToolStripProgressBar extends ToolStripControlHost  {
 
     public int getStep() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStep = null;
         try {
-            return (int)classInstance.Get("Step");
+            retObjectStep = classInstance.Get("Step");
+            return (int)retObjectStep;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectStep_ToString = retObjectStep == null ? "null" : retObjectStep.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectStepNumber = (java.lang.Number)retObjectStep;
+                return retObjectStepNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectStep != null ? retObjectStep.getClass() : "null", retObjectStep_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -294,7 +342,7 @@ public class ToolStripProgressBar extends ToolStripControlHost  {
 
     public void setStep(int Step) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Step", Step);
         } catch (JCNativeException jcne) {
@@ -304,9 +352,20 @@ public class ToolStripProgressBar extends ToolStripControlHost  {
 
     public int getValue() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValue = null;
         try {
-            return (int)classInstance.Get("Value");
+            retObjectValue = classInstance.Get("Value");
+            return (int)retObjectValue;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectValue_ToString = retObjectValue == null ? "null" : retObjectValue.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectValueNumber = (java.lang.Number)retObjectValue;
+                return retObjectValueNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectValue != null ? retObjectValue.getClass() : "null", retObjectValue_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -314,7 +373,7 @@ public class ToolStripProgressBar extends ToolStripControlHost  {
 
     public void setValue(int Value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Value", Value);
         } catch (JCNativeException jcne) {
@@ -324,10 +383,14 @@ public class ToolStripProgressBar extends ToolStripControlHost  {
 
     public ProgressBar getProgressBar() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProgressBar = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ProgressBar");
+            retObjectProgressBar = classInstance.Get("ProgressBar");
+            JCObject val = (JCObject)retObjectProgressBar;
             return new ProgressBar(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectProgressBar != null ? retObjectProgressBar.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -335,10 +398,14 @@ public class ToolStripProgressBar extends ToolStripControlHost  {
 
     public ProgressBarStyle getStyle() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Style");
+            retObjectStyle = classInstance.Get("Style");
+            JCObject val = (JCObject)retObjectStyle;
             return new ProgressBarStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStyle != null ? retObjectStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -346,7 +413,7 @@ public class ToolStripProgressBar extends ToolStripControlHost  {
 
     public void setStyle(ProgressBarStyle Style) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Style", Style == null ? null : Style.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -361,7 +428,7 @@ public class ToolStripProgressBar extends ToolStripControlHost  {
 
     public void addValidating(CancelEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Validating", handler);
         } catch (JCNativeException jcne) {
@@ -371,7 +438,7 @@ public class ToolStripProgressBar extends ToolStripControlHost  {
 
     public void removeValidating(CancelEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Validating", handler);
         } catch (JCNativeException jcne) {
@@ -381,7 +448,7 @@ public class ToolStripProgressBar extends ToolStripControlHost  {
 
     public void addLocationChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("LocationChanged", handler);
         } catch (JCNativeException jcne) {
@@ -391,7 +458,7 @@ public class ToolStripProgressBar extends ToolStripControlHost  {
 
     public void removeLocationChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("LocationChanged", handler);
         } catch (JCNativeException jcne) {
@@ -401,7 +468,7 @@ public class ToolStripProgressBar extends ToolStripControlHost  {
 
     public void addOwnerChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("OwnerChanged", handler);
         } catch (JCNativeException jcne) {
@@ -411,7 +478,7 @@ public class ToolStripProgressBar extends ToolStripControlHost  {
 
     public void removeOwnerChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("OwnerChanged", handler);
         } catch (JCNativeException jcne) {
@@ -421,7 +488,7 @@ public class ToolStripProgressBar extends ToolStripControlHost  {
 
     public void addRightToLeftLayoutChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("RightToLeftLayoutChanged", handler);
         } catch (JCNativeException jcne) {
@@ -431,7 +498,7 @@ public class ToolStripProgressBar extends ToolStripControlHost  {
 
     public void removeRightToLeftLayoutChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("RightToLeftLayoutChanged", handler);
         } catch (JCNativeException jcne) {
@@ -441,7 +508,7 @@ public class ToolStripProgressBar extends ToolStripControlHost  {
 
     public void addTextChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("TextChanged", handler);
         } catch (JCNativeException jcne) {
@@ -451,7 +518,7 @@ public class ToolStripProgressBar extends ToolStripControlHost  {
 
     public void removeTextChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("TextChanged", handler);
         } catch (JCNativeException jcne) {
@@ -461,7 +528,7 @@ public class ToolStripProgressBar extends ToolStripControlHost  {
 
     public void addValidated(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Validated", handler);
         } catch (JCNativeException jcne) {
@@ -471,7 +538,7 @@ public class ToolStripProgressBar extends ToolStripControlHost  {
 
     public void removeValidated(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Validated", handler);
         } catch (JCNativeException jcne) {
@@ -481,7 +548,7 @@ public class ToolStripProgressBar extends ToolStripControlHost  {
 
     public void addKeyDown(KeyEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("KeyDown", handler);
         } catch (JCNativeException jcne) {
@@ -491,7 +558,7 @@ public class ToolStripProgressBar extends ToolStripControlHost  {
 
     public void removeKeyDown(KeyEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("KeyDown", handler);
         } catch (JCNativeException jcne) {
@@ -501,7 +568,7 @@ public class ToolStripProgressBar extends ToolStripControlHost  {
 
     public void addKeyUp(KeyEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("KeyUp", handler);
         } catch (JCNativeException jcne) {
@@ -511,7 +578,7 @@ public class ToolStripProgressBar extends ToolStripControlHost  {
 
     public void removeKeyUp(KeyEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("KeyUp", handler);
         } catch (JCNativeException jcne) {
@@ -521,7 +588,7 @@ public class ToolStripProgressBar extends ToolStripControlHost  {
 
     public void addKeyPress(KeyPressEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("KeyPress", handler);
         } catch (JCNativeException jcne) {
@@ -531,7 +598,7 @@ public class ToolStripProgressBar extends ToolStripControlHost  {
 
     public void removeKeyPress(KeyPressEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("KeyPress", handler);
         } catch (JCNativeException jcne) {

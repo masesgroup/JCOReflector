@@ -178,9 +178,13 @@ public class AssemblyReference extends BaseReference  {
     
     public boolean getIsPrerequisite() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsPrerequisite = null;
         try {
-            return (boolean)classInstance.Get("IsPrerequisite");
+            retObjectIsPrerequisite = classInstance.Get("IsPrerequisite");
+            return (boolean)retObjectIsPrerequisite;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsPrerequisite != null ? retObjectIsPrerequisite.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,7 +192,7 @@ public class AssemblyReference extends BaseReference  {
 
     public void setIsPrerequisite(boolean IsPrerequisite) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsPrerequisite", IsPrerequisite);
         } catch (JCNativeException jcne) {
@@ -198,10 +202,14 @@ public class AssemblyReference extends BaseReference  {
 
     public AssemblyIdentity getAssemblyIdentity() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAssemblyIdentity = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AssemblyIdentity");
+            retObjectAssemblyIdentity = classInstance.Get("AssemblyIdentity");
+            JCObject val = (JCObject)retObjectAssemblyIdentity;
             return new AssemblyIdentity(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAssemblyIdentity != null ? retObjectAssemblyIdentity.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -209,7 +217,7 @@ public class AssemblyReference extends BaseReference  {
 
     public void setAssemblyIdentity(AssemblyIdentity AssemblyIdentity) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AssemblyIdentity", AssemblyIdentity == null ? null : AssemblyIdentity.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -219,10 +227,14 @@ public class AssemblyReference extends BaseReference  {
 
     public AssemblyIdentity getXmlAssemblyIdentity() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectXmlAssemblyIdentity = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("XmlAssemblyIdentity");
+            retObjectXmlAssemblyIdentity = classInstance.Get("XmlAssemblyIdentity");
+            JCObject val = (JCObject)retObjectXmlAssemblyIdentity;
             return new AssemblyIdentity(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectXmlAssemblyIdentity != null ? retObjectXmlAssemblyIdentity.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -230,7 +242,7 @@ public class AssemblyReference extends BaseReference  {
 
     public void setXmlAssemblyIdentity(AssemblyIdentity XmlAssemblyIdentity) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("XmlAssemblyIdentity", XmlAssemblyIdentity == null ? null : XmlAssemblyIdentity.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -240,10 +252,14 @@ public class AssemblyReference extends BaseReference  {
 
     public AssemblyReferenceType getReferenceType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReferenceType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ReferenceType");
+            retObjectReferenceType = classInstance.Get("ReferenceType");
+            JCObject val = (JCObject)retObjectReferenceType;
             return new AssemblyReferenceType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReferenceType != null ? retObjectReferenceType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -251,7 +267,7 @@ public class AssemblyReference extends BaseReference  {
 
     public void setReferenceType(AssemblyReferenceType ReferenceType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ReferenceType", ReferenceType == null ? null : ReferenceType.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -261,9 +277,13 @@ public class AssemblyReference extends BaseReference  {
 
     public java.lang.String getXmlIsNative() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectXmlIsNative = null;
         try {
-            return (java.lang.String)classInstance.Get("XmlIsNative");
+            retObjectXmlIsNative = classInstance.Get("XmlIsNative");
+            return (java.lang.String)retObjectXmlIsNative;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectXmlIsNative != null ? retObjectXmlIsNative.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -271,7 +291,7 @@ public class AssemblyReference extends BaseReference  {
 
     public void setXmlIsNative(java.lang.String XmlIsNative) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("XmlIsNative", XmlIsNative);
         } catch (JCNativeException jcne) {
@@ -281,9 +301,13 @@ public class AssemblyReference extends BaseReference  {
 
     public java.lang.String getXmlIsPrerequisite() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectXmlIsPrerequisite = null;
         try {
-            return (java.lang.String)classInstance.Get("XmlIsPrerequisite");
+            retObjectXmlIsPrerequisite = classInstance.Get("XmlIsPrerequisite");
+            return (java.lang.String)retObjectXmlIsPrerequisite;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectXmlIsPrerequisite != null ? retObjectXmlIsPrerequisite.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -291,7 +315,7 @@ public class AssemblyReference extends BaseReference  {
 
     public void setXmlIsPrerequisite(java.lang.String XmlIsPrerequisite) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("XmlIsPrerequisite", XmlIsPrerequisite);
         } catch (JCNativeException jcne) {

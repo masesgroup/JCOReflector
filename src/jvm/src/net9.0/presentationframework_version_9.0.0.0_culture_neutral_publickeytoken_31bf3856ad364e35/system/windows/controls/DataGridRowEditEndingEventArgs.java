@@ -172,9 +172,13 @@ public class DataGridRowEditEndingEventArgs extends EventArgs  {
     
     public boolean getCancel() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCancel = null;
         try {
-            return (boolean)classInstance.Get("Cancel");
+            retObjectCancel = classInstance.Get("Cancel");
+            return (boolean)retObjectCancel;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCancel != null ? retObjectCancel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,7 +186,7 @@ public class DataGridRowEditEndingEventArgs extends EventArgs  {
 
     public void setCancel(boolean Cancel) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Cancel", Cancel);
         } catch (JCNativeException jcne) {
@@ -192,10 +196,14 @@ public class DataGridRowEditEndingEventArgs extends EventArgs  {
 
     public DataGridEditAction getEditAction() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEditAction = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("EditAction");
+            retObjectEditAction = classInstance.Get("EditAction");
+            JCObject val = (JCObject)retObjectEditAction;
             return new DataGridEditAction(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEditAction != null ? retObjectEditAction.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,10 +211,14 @@ public class DataGridRowEditEndingEventArgs extends EventArgs  {
 
     public DataGridRow getRow() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRow = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Row");
+            retObjectRow = classInstance.Get("Row");
+            JCObject val = (JCObject)retObjectRow;
             return new DataGridRow(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRow != null ? retObjectRow.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -158,10 +158,14 @@ public class Dns extends NetObject  {
     
     public static IAsyncResult BeginGetHostAddresses(java.lang.String hostNameOrAddress, AsyncCallback requestCallback, NetObject state) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.MulticastNotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.net.sockets.SocketException, system.IndexOutOfRangeException, system.FormatException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.security.SecurityException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectBeginGetHostAddresses = null;
         try {
-            JCObject objBeginGetHostAddresses = (JCObject)classType.Invoke("BeginGetHostAddresses", hostNameOrAddress, requestCallback, state == null ? null : state.getJCOInstance());
+            retObjectBeginGetHostAddresses = classType.Invoke("BeginGetHostAddresses", hostNameOrAddress, requestCallback, state == null ? null : state.getJCOInstance());
+            JCObject objBeginGetHostAddresses = (JCObject)retObjectBeginGetHostAddresses;
             return new IAsyncResultImplementation(objBeginGetHostAddresses);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginGetHostAddresses != null ? retObjectBeginGetHostAddresses.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,10 +173,14 @@ public class Dns extends NetObject  {
 
     public static IAsyncResult BeginGetHostByName(java.lang.String hostName, AsyncCallback requestCallback, NetObject stateObject) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.MulticastNotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.net.sockets.SocketException, system.IndexOutOfRangeException, system.FormatException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.security.SecurityException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectBeginGetHostByName = null;
         try {
-            JCObject objBeginGetHostByName = (JCObject)classType.Invoke("BeginGetHostByName", hostName, requestCallback, stateObject == null ? null : stateObject.getJCOInstance());
+            retObjectBeginGetHostByName = classType.Invoke("BeginGetHostByName", hostName, requestCallback, stateObject == null ? null : stateObject.getJCOInstance());
+            JCObject objBeginGetHostByName = (JCObject)retObjectBeginGetHostByName;
             return new IAsyncResultImplementation(objBeginGetHostByName);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginGetHostByName != null ? retObjectBeginGetHostByName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,10 +188,14 @@ public class Dns extends NetObject  {
 
     public static IAsyncResult BeginGetHostEntry(IPAddress address, AsyncCallback requestCallback, NetObject stateObject) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.MulticastNotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.threading.LockRecursionException, system.threading.SynchronizationLockException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectBeginGetHostEntry = null;
         try {
-            JCObject objBeginGetHostEntry = (JCObject)classType.Invoke("BeginGetHostEntry", address == null ? null : address.getJCOInstance(), requestCallback, stateObject == null ? null : stateObject.getJCOInstance());
+            retObjectBeginGetHostEntry = classType.Invoke("BeginGetHostEntry", address == null ? null : address.getJCOInstance(), requestCallback, stateObject == null ? null : stateObject.getJCOInstance());
+            JCObject objBeginGetHostEntry = (JCObject)retObjectBeginGetHostEntry;
             return new IAsyncResultImplementation(objBeginGetHostEntry);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginGetHostEntry != null ? retObjectBeginGetHostEntry.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,10 +203,14 @@ public class Dns extends NetObject  {
 
     public static IAsyncResult BeginGetHostEntry(java.lang.String hostNameOrAddress, AsyncCallback requestCallback, NetObject stateObject) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.MulticastNotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.net.sockets.SocketException, system.IndexOutOfRangeException, system.FormatException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.security.SecurityException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectBeginGetHostEntry = null;
         try {
-            JCObject objBeginGetHostEntry = (JCObject)classType.Invoke("BeginGetHostEntry", hostNameOrAddress, requestCallback, stateObject == null ? null : stateObject.getJCOInstance());
+            retObjectBeginGetHostEntry = classType.Invoke("BeginGetHostEntry", hostNameOrAddress, requestCallback, stateObject == null ? null : stateObject.getJCOInstance());
+            JCObject objBeginGetHostEntry = (JCObject)retObjectBeginGetHostEntry;
             return new IAsyncResultImplementation(objBeginGetHostEntry);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginGetHostEntry != null ? retObjectBeginGetHostEntry.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,10 +218,14 @@ public class Dns extends NetObject  {
 
     public static IAsyncResult BeginResolve(java.lang.String hostName, AsyncCallback requestCallback, NetObject stateObject) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.MulticastNotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.net.sockets.SocketException, system.IndexOutOfRangeException, system.FormatException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.security.SecurityException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectBeginResolve = null;
         try {
-            JCObject objBeginResolve = (JCObject)classType.Invoke("BeginResolve", hostName, requestCallback, stateObject == null ? null : stateObject.getJCOInstance());
+            retObjectBeginResolve = classType.Invoke("BeginResolve", hostName, requestCallback, stateObject == null ? null : stateObject.getJCOInstance());
+            JCObject objBeginResolve = (JCObject)retObjectBeginResolve;
             return new IAsyncResultImplementation(objBeginResolve);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginResolve != null ? retObjectBeginResolve.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,16 +233,20 @@ public class Dns extends NetObject  {
 
     public static IPAddress[] EndGetHostAddresses(IAsyncResult asyncResult) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.MulticastNotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectEndGetHostAddresses = null;
         try {
             ArrayList<IPAddress> resultingArrayList = new ArrayList<IPAddress>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("EndGetHostAddresses", asyncResult == null ? null : asyncResult.getJCOInstance());
+            retObjectEndGetHostAddresses = classType.Invoke("EndGetHostAddresses", asyncResult == null ? null : asyncResult.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectEndGetHostAddresses;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new IPAddress(resultingObject));
             }
             IPAddress[] resultingArray = new IPAddress[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEndGetHostAddresses != null ? retObjectEndGetHostAddresses.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -230,16 +254,20 @@ public class Dns extends NetObject  {
 
     public static IPAddress[] GetHostAddresses(java.lang.String hostNameOrAddress) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.MulticastNotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.net.sockets.SocketException, system.security.SecurityException, system.FormatException, system.NotImplementedException, system.AccessViolationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetHostAddresses = null;
         try {
             ArrayList<IPAddress> resultingArrayList = new ArrayList<IPAddress>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("GetHostAddresses", hostNameOrAddress);
+            retObjectGetHostAddresses = classType.Invoke("GetHostAddresses", hostNameOrAddress);
+            JCObject resultingObjects = (JCObject)retObjectGetHostAddresses;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new IPAddress(resultingObject));
             }
             IPAddress[] resultingArray = new IPAddress[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetHostAddresses != null ? retObjectGetHostAddresses.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -247,10 +275,14 @@ public class Dns extends NetObject  {
 
     public static IPHostEntry EndGetHostByName(IAsyncResult asyncResult) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.MulticastNotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectEndGetHostByName = null;
         try {
-            JCObject objEndGetHostByName = (JCObject)classType.Invoke("EndGetHostByName", asyncResult == null ? null : asyncResult.getJCOInstance());
+            retObjectEndGetHostByName = classType.Invoke("EndGetHostByName", asyncResult == null ? null : asyncResult.getJCOInstance());
+            JCObject objEndGetHostByName = (JCObject)retObjectEndGetHostByName;
             return new IPHostEntry(objEndGetHostByName);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEndGetHostByName != null ? retObjectEndGetHostByName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -258,10 +290,14 @@ public class Dns extends NetObject  {
 
     public static IPHostEntry EndGetHostEntry(IAsyncResult asyncResult) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.MulticastNotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectEndGetHostEntry = null;
         try {
-            JCObject objEndGetHostEntry = (JCObject)classType.Invoke("EndGetHostEntry", asyncResult == null ? null : asyncResult.getJCOInstance());
+            retObjectEndGetHostEntry = classType.Invoke("EndGetHostEntry", asyncResult == null ? null : asyncResult.getJCOInstance());
+            JCObject objEndGetHostEntry = (JCObject)retObjectEndGetHostEntry;
             return new IPHostEntry(objEndGetHostEntry);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEndGetHostEntry != null ? retObjectEndGetHostEntry.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -269,10 +305,14 @@ public class Dns extends NetObject  {
 
     public static IPHostEntry EndResolve(IAsyncResult asyncResult) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.MulticastNotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectEndResolve = null;
         try {
-            JCObject objEndResolve = (JCObject)classType.Invoke("EndResolve", asyncResult == null ? null : asyncResult.getJCOInstance());
+            retObjectEndResolve = classType.Invoke("EndResolve", asyncResult == null ? null : asyncResult.getJCOInstance());
+            JCObject objEndResolve = (JCObject)retObjectEndResolve;
             return new IPHostEntry(objEndResolve);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEndResolve != null ? retObjectEndResolve.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -280,10 +320,14 @@ public class Dns extends NetObject  {
 
     public static IPHostEntry GetHostByAddress(IPAddress address) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.MulticastNotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.net.sockets.SocketException, system.security.SecurityException, system.NotImplementedException, system.AccessViolationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetHostByAddress = null;
         try {
-            JCObject objGetHostByAddress = (JCObject)classType.Invoke("GetHostByAddress", address == null ? null : address.getJCOInstance());
+            retObjectGetHostByAddress = classType.Invoke("GetHostByAddress", address == null ? null : address.getJCOInstance());
+            JCObject objGetHostByAddress = (JCObject)retObjectGetHostByAddress;
             return new IPHostEntry(objGetHostByAddress);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetHostByAddress != null ? retObjectGetHostByAddress.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -291,10 +335,14 @@ public class Dns extends NetObject  {
 
     public static IPHostEntry GetHostByAddress(java.lang.String address) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.MulticastNotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.net.sockets.SocketException, system.security.SecurityException, system.FormatException, system.NotImplementedException, system.AccessViolationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetHostByAddress = null;
         try {
-            JCObject objGetHostByAddress = (JCObject)classType.Invoke("GetHostByAddress", address);
+            retObjectGetHostByAddress = classType.Invoke("GetHostByAddress", address);
+            JCObject objGetHostByAddress = (JCObject)retObjectGetHostByAddress;
             return new IPHostEntry(objGetHostByAddress);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetHostByAddress != null ? retObjectGetHostByAddress.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -302,10 +350,14 @@ public class Dns extends NetObject  {
 
     public static IPHostEntry GetHostByName(java.lang.String hostName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.net.sockets.SocketException, system.configuration.ConfigurationException, system.resources.MissingManifestResourceException, system.security.SecurityException, system.InvalidOperationException, system.NotSupportedException, system.FormatException, system.NotImplementedException, system.AccessViolationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetHostByName = null;
         try {
-            JCObject objGetHostByName = (JCObject)classType.Invoke("GetHostByName", hostName);
+            retObjectGetHostByName = classType.Invoke("GetHostByName", hostName);
+            JCObject objGetHostByName = (JCObject)retObjectGetHostByName;
             return new IPHostEntry(objGetHostByName);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetHostByName != null ? retObjectGetHostByName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -313,10 +365,14 @@ public class Dns extends NetObject  {
 
     public static IPHostEntry GetHostEntry(IPAddress address) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.MulticastNotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.net.sockets.SocketException, system.security.SecurityException, system.NotImplementedException, system.AccessViolationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetHostEntry = null;
         try {
-            JCObject objGetHostEntry = (JCObject)classType.Invoke("GetHostEntry", address == null ? null : address.getJCOInstance());
+            retObjectGetHostEntry = classType.Invoke("GetHostEntry", address == null ? null : address.getJCOInstance());
+            JCObject objGetHostEntry = (JCObject)retObjectGetHostEntry;
             return new IPHostEntry(objGetHostEntry);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetHostEntry != null ? retObjectGetHostEntry.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -324,10 +380,14 @@ public class Dns extends NetObject  {
 
     public static IPHostEntry GetHostEntry(java.lang.String hostNameOrAddress) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.MulticastNotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.net.sockets.SocketException, system.security.SecurityException, system.FormatException, system.NotImplementedException, system.AccessViolationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetHostEntry = null;
         try {
-            JCObject objGetHostEntry = (JCObject)classType.Invoke("GetHostEntry", hostNameOrAddress);
+            retObjectGetHostEntry = classType.Invoke("GetHostEntry", hostNameOrAddress);
+            JCObject objGetHostEntry = (JCObject)retObjectGetHostEntry;
             return new IPHostEntry(objGetHostEntry);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetHostEntry != null ? retObjectGetHostEntry.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -335,10 +395,14 @@ public class Dns extends NetObject  {
 
     public static IPHostEntry Resolve(java.lang.String hostName) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.MulticastNotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.net.sockets.SocketException, system.security.SecurityException, system.FormatException, system.NotImplementedException, system.AccessViolationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectResolve = null;
         try {
-            JCObject objResolve = (JCObject)classType.Invoke("Resolve", hostName);
+            retObjectResolve = classType.Invoke("Resolve", hostName);
+            JCObject objResolve = (JCObject)retObjectResolve;
             return new IPHostEntry(objResolve);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectResolve != null ? retObjectResolve.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -346,9 +410,13 @@ public class Dns extends NetObject  {
 
     public static java.lang.String GetHostName() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.net.sockets.SocketException, system.configuration.ConfigurationErrorsException, system.collections.generic.KeyNotFoundException, system.NotSupportedException, system.configuration.ConfigurationException, system.MulticastNotSupportedException, system.security.SecurityException, system.NullReferenceException, system.InvalidOperationException, system.PlatformNotSupportedException, system.NotImplementedException, system.componentmodel.Win32Exception, system.threading.SynchronizationLockException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetHostName = null;
         try {
-            return (java.lang.String)classType.Invoke("GetHostName");
+            retObjectGetHostName = classType.Invoke("GetHostName");
+            return (java.lang.String)retObjectGetHostName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetHostName != null ? retObjectGetHostName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

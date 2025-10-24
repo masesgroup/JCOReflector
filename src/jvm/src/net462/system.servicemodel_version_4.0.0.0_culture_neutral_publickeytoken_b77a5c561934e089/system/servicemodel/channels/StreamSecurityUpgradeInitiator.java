@@ -155,10 +155,14 @@ public class StreamSecurityUpgradeInitiator extends StreamUpgradeInitiator  {
     
     public SecurityMessageProperty GetRemoteSecurity() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetRemoteSecurity = null;
         try {
-            JCObject objGetRemoteSecurity = (JCObject)classInstance.Invoke("GetRemoteSecurity");
+            retObjectGetRemoteSecurity = classInstance.Invoke("GetRemoteSecurity");
+            JCObject objGetRemoteSecurity = (JCObject)retObjectGetRemoteSecurity;
             return new SecurityMessageProperty(objGetRemoteSecurity);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetRemoteSecurity != null ? retObjectGetRemoteSecurity.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

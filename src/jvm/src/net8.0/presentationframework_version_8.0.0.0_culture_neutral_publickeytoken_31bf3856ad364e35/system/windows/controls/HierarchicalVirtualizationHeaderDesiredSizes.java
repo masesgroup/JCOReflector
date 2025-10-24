@@ -168,9 +168,13 @@ public class HierarchicalVirtualizationHeaderDesiredSizes extends ValueType  {
     
     public boolean Equals(HierarchicalVirtualizationHeaderDesiredSizes comparisonHeaderSizes) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEquals = null;
         try {
-            return (boolean)classInstance.Invoke("Equals", comparisonHeaderSizes == null ? null : comparisonHeaderSizes.getJCOInstance());
+            retObjectEquals = classInstance.Invoke("Equals", comparisonHeaderSizes == null ? null : comparisonHeaderSizes.getJCOInstance());
+            return (boolean)retObjectEquals;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectEquals != null ? retObjectEquals.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,10 +186,14 @@ public class HierarchicalVirtualizationHeaderDesiredSizes extends ValueType  {
     
     public Size getLogicalSize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLogicalSize = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("LogicalSize");
+            retObjectLogicalSize = classInstance.Get("LogicalSize");
+            JCObject val = (JCObject)retObjectLogicalSize;
             return new Size(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLogicalSize != null ? retObjectLogicalSize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,10 +201,14 @@ public class HierarchicalVirtualizationHeaderDesiredSizes extends ValueType  {
 
     public Size getPixelSize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPixelSize = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PixelSize");
+            retObjectPixelSize = classInstance.Get("PixelSize");
+            JCObject val = (JCObject)retObjectPixelSize;
             return new Size(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPixelSize != null ? retObjectPixelSize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

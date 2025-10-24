@@ -167,10 +167,14 @@ public class ServiceMetadataExtension extends NetObject  {
     
     public MetadataSet getMetadata() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.xml.schema.XmlSchemaException, system.xml.XmlException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMetadata = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Metadata");
+            retObjectMetadata = classInstance.Get("Metadata");
+            JCObject val = (JCObject)retObjectMetadata;
             return new MetadataSet(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMetadata != null ? retObjectMetadata.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,10 +182,14 @@ public class ServiceMetadataExtension extends NetObject  {
 
     public ServiceDescription getSingleWsdl() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException, system.OutOfMemoryException, system.xml.XmlException, system.globalization.CultureNotFoundException, system.io.FileNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSingleWsdl = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SingleWsdl");
+            retObjectSingleWsdl = classInstance.Get("SingleWsdl");
+            JCObject val = (JCObject)retObjectSingleWsdl;
             return new ServiceDescription(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSingleWsdl != null ? retObjectSingleWsdl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

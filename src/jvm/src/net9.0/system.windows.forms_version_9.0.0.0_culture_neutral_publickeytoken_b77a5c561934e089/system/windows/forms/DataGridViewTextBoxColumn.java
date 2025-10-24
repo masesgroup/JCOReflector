@@ -168,9 +168,20 @@ public class DataGridViewTextBoxColumn extends DataGridViewColumn  {
     
     public int getMaxInputLength() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxInputLength = null;
         try {
-            return (int)classInstance.Get("MaxInputLength");
+            retObjectMaxInputLength = classInstance.Get("MaxInputLength");
+            return (int)retObjectMaxInputLength;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaxInputLength_ToString = retObjectMaxInputLength == null ? "null" : retObjectMaxInputLength.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMaxInputLengthNumber = (java.lang.Number)retObjectMaxInputLength;
+                return retObjectMaxInputLengthNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxInputLength != null ? retObjectMaxInputLength.getClass() : "null", retObjectMaxInputLength_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,7 +189,7 @@ public class DataGridViewTextBoxColumn extends DataGridViewColumn  {
 
     public void setMaxInputLength(int MaxInputLength) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaxInputLength", MaxInputLength);
         } catch (JCNativeException jcne) {
@@ -188,10 +199,14 @@ public class DataGridViewTextBoxColumn extends DataGridViewColumn  {
 
     public DataGridViewColumnSortMode getSortMode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSortMode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SortMode");
+            retObjectSortMode = classInstance.Get("SortMode");
+            JCObject val = (JCObject)retObjectSortMode;
             return new DataGridViewColumnSortMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSortMode != null ? retObjectSortMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -199,7 +214,7 @@ public class DataGridViewTextBoxColumn extends DataGridViewColumn  {
 
     public void setSortMode(DataGridViewColumnSortMode SortMode) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SortMode", SortMode == null ? null : SortMode.getJCOInstance());
         } catch (JCNativeException jcne) {

@@ -164,9 +164,13 @@ public class CheckBoxRenderer extends NetObject  {
     
     public static boolean IsBackgroundPartiallyTransparent(CheckBoxState state) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.NotSupportedException, system.NullReferenceException, system.runtime.interopservices.ExternalException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsBackgroundPartiallyTransparent = null;
         try {
-            return (boolean)classType.Invoke("IsBackgroundPartiallyTransparent", state == null ? null : state.getJCOInstance());
+            retObjectIsBackgroundPartiallyTransparent = classType.Invoke("IsBackgroundPartiallyTransparent", state == null ? null : state.getJCOInstance());
+            return (boolean)retObjectIsBackgroundPartiallyTransparent;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsBackgroundPartiallyTransparent != null ? retObjectIsBackgroundPartiallyTransparent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -174,10 +178,14 @@ public class CheckBoxRenderer extends NetObject  {
 
     public static Size GetGlyphSize(Graphics g, CheckBoxState state) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.NullReferenceException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException, system.IndexOutOfRangeException, system.componentmodel.InvalidEnumArgumentException, system.OutOfMemoryException, system.configuration.ConfigurationErrorsException, system.globalization.CultureNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetGlyphSize = null;
         try {
-            JCObject objGetGlyphSize = (JCObject)classType.Invoke("GetGlyphSize", g == null ? null : g.getJCOInstance(), state == null ? null : state.getJCOInstance());
+            retObjectGetGlyphSize = classType.Invoke("GetGlyphSize", g == null ? null : g.getJCOInstance(), state == null ? null : state.getJCOInstance());
+            JCObject objGetGlyphSize = (JCObject)retObjectGetGlyphSize;
             return new Size(objGetGlyphSize);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetGlyphSize != null ? retObjectGetGlyphSize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -185,7 +193,7 @@ public class CheckBoxRenderer extends NetObject  {
 
     public static void DrawCheckBox(Graphics g, Point glyphLocation, Rectangle textBounds, java.lang.String checkBoxText, Font font, boolean focused, CheckBoxState state) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.NotSupportedException, system.runtime.interopservices.ExternalException, system.ArgumentException, system.IndexOutOfRangeException, system.componentmodel.InvalidEnumArgumentException, system.configuration.ConfigurationErrorsException, system.NullReferenceException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("DrawCheckBox", g == null ? null : g.getJCOInstance(), glyphLocation == null ? null : glyphLocation.getJCOInstance(), textBounds == null ? null : textBounds.getJCOInstance(), checkBoxText, font == null ? null : font.getJCOInstance(), focused, state == null ? null : state.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -195,7 +203,7 @@ public class CheckBoxRenderer extends NetObject  {
 
     public static void DrawCheckBox(Graphics g, Point glyphLocation, Rectangle textBounds, java.lang.String checkBoxText, Font font, Image image, Rectangle imageBounds, boolean focused, CheckBoxState state) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.NotSupportedException, system.runtime.interopservices.ExternalException, system.ArgumentException, system.IndexOutOfRangeException, system.componentmodel.InvalidEnumArgumentException, system.configuration.ConfigurationErrorsException, system.NullReferenceException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("DrawCheckBox", g == null ? null : g.getJCOInstance(), glyphLocation == null ? null : glyphLocation.getJCOInstance(), textBounds == null ? null : textBounds.getJCOInstance(), checkBoxText, font == null ? null : font.getJCOInstance(), image == null ? null : image.getJCOInstance(), imageBounds == null ? null : imageBounds.getJCOInstance(), focused, state == null ? null : state.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -205,7 +213,7 @@ public class CheckBoxRenderer extends NetObject  {
 
     public static void DrawCheckBox(Graphics g, Point glyphLocation, Rectangle textBounds, java.lang.String checkBoxText, Font font, TextFormatFlags flags, boolean focused, CheckBoxState state) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.OutOfMemoryException, system.configuration.ConfigurationErrorsException, system.globalization.CultureNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("DrawCheckBox", g == null ? null : g.getJCOInstance(), glyphLocation == null ? null : glyphLocation.getJCOInstance(), textBounds == null ? null : textBounds.getJCOInstance(), checkBoxText, font == null ? null : font.getJCOInstance(), flags == null ? null : flags.getJCOInstance(), focused, state == null ? null : state.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -215,7 +223,7 @@ public class CheckBoxRenderer extends NetObject  {
 
     public static void DrawCheckBox(Graphics g, Point glyphLocation, Rectangle textBounds, java.lang.String checkBoxText, Font font, TextFormatFlags flags, Image image, Rectangle imageBounds, boolean focused, CheckBoxState state) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.OutOfMemoryException, system.configuration.ConfigurationErrorsException, system.globalization.CultureNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("DrawCheckBox", g == null ? null : g.getJCOInstance(), glyphLocation == null ? null : glyphLocation.getJCOInstance(), textBounds == null ? null : textBounds.getJCOInstance(), checkBoxText, font == null ? null : font.getJCOInstance(), flags == null ? null : flags.getJCOInstance(), image == null ? null : image.getJCOInstance(), imageBounds == null ? null : imageBounds.getJCOInstance(), focused, state == null ? null : state.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -225,7 +233,7 @@ public class CheckBoxRenderer extends NetObject  {
 
     public static void DrawCheckBox(Graphics g, Point glyphLocation, CheckBoxState state) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.OutOfMemoryException, system.configuration.ConfigurationErrorsException, system.globalization.CultureNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("DrawCheckBox", g == null ? null : g.getJCOInstance(), glyphLocation == null ? null : glyphLocation.getJCOInstance(), state == null ? null : state.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -235,7 +243,7 @@ public class CheckBoxRenderer extends NetObject  {
 
     public static void DrawParentBackground(Graphics g, Rectangle bounds, Control childControl) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.NotSupportedException, system.NullReferenceException, system.runtime.interopservices.ExternalException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.security.SecurityException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("DrawParentBackground", g == null ? null : g.getJCOInstance(), bounds == null ? null : bounds.getJCOInstance(), childControl == null ? null : childControl.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -249,9 +257,13 @@ public class CheckBoxRenderer extends NetObject  {
     
     public static boolean getRenderMatchingApplicationState() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectRenderMatchingApplicationState = null;
         try {
-            return (boolean)classType.Get("RenderMatchingApplicationState");
+            retObjectRenderMatchingApplicationState = classType.Get("RenderMatchingApplicationState");
+            return (boolean)retObjectRenderMatchingApplicationState;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectRenderMatchingApplicationState != null ? retObjectRenderMatchingApplicationState.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -259,7 +271,7 @@ public class CheckBoxRenderer extends NetObject  {
 
     public static void setRenderMatchingApplicationState(boolean RenderMatchingApplicationState) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Set("RenderMatchingApplicationState", RenderMatchingApplicationState);
         } catch (JCNativeException jcne) {

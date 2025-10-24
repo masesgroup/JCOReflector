@@ -224,7 +224,7 @@ public class XamlXmlWriter extends XamlWriter  {
     
     public void Flush() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Flush");
         } catch (JCNativeException jcne) {
@@ -234,7 +234,7 @@ public class XamlXmlWriter extends XamlWriter  {
 
     public void WriteEndMember() throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.xaml.XamlXmlWriterException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteEndMember");
         } catch (JCNativeException jcne) {
@@ -244,7 +244,7 @@ public class XamlXmlWriter extends XamlWriter  {
 
     public void WriteEndObject() throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.xaml.XamlXmlWriterException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteEndObject");
         } catch (JCNativeException jcne) {
@@ -254,7 +254,7 @@ public class XamlXmlWriter extends XamlWriter  {
 
     public void WriteGetObject() throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.threading.ThreadAbortException, system.NotSupportedException, system.collections.generic.KeyNotFoundException, system.xaml.XamlXmlWriterException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteGetObject");
         } catch (JCNativeException jcne) {
@@ -264,7 +264,7 @@ public class XamlXmlWriter extends XamlWriter  {
 
     public void WriteNamespace(NamespaceDeclaration namespaceDeclaration) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.threading.AbandonedMutexException, system.xaml.XamlXmlWriterException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteNamespace", namespaceDeclaration == null ? null : namespaceDeclaration.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -274,7 +274,7 @@ public class XamlXmlWriter extends XamlWriter  {
 
     public void WriteStartMember(XamlMember property) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.threading.AbandonedMutexException, system.xaml.XamlXmlWriterException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteStartMember", property == null ? null : property.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -284,7 +284,7 @@ public class XamlXmlWriter extends XamlWriter  {
 
     public void WriteStartObject(XamlType type) throws Throwable, system.ObjectDisposedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.threading.AbandonedMutexException, system.xaml.XamlXmlWriterException, system.collections.generic.KeyNotFoundException, system.xaml.XamlSchemaException, system.OutOfMemoryException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteStartObject", type == null ? null : type.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -294,7 +294,7 @@ public class XamlXmlWriter extends XamlWriter  {
 
     public void WriteValue(NetObject value) throws Throwable, system.ObjectDisposedException, system.ArgumentException, system.InvalidOperationException, system.threading.ThreadAbortException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.threading.AbandonedMutexException, system.OutOfMemoryException, system.FormatException, system.xaml.XamlXmlWriterException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteValue", value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -308,10 +308,14 @@ public class XamlXmlWriter extends XamlWriter  {
     
     public XamlXmlWriterSettings getSettings() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSettings = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Settings");
+            retObjectSettings = classInstance.Get("Settings");
+            JCObject val = (JCObject)retObjectSettings;
             return new XamlXmlWriterSettings(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSettings != null ? retObjectSettings.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

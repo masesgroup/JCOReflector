@@ -159,10 +159,14 @@ public class TransactionManager extends NetObject  {
     
     public static Enlistment Reenlist(Guid resourceManagerIdentifier, byte[] recoveryInformation, IEnlistmentNotification enlistmentNotification) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.configuration.ConfigurationErrorsException, system.collections.generic.KeyNotFoundException, system.io.EndOfStreamException, system.FormatException, system.io.IOException, system.reflection.AmbiguousMatchException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.transactions.TransactionException, system.OverflowException, system.transactions.TransactionManagerCommunicationException, system.runtime.interopservices.COMException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectReenlist = null;
         try {
-            JCObject objReenlist = (JCObject)classType.Invoke("Reenlist", resourceManagerIdentifier == null ? null : resourceManagerIdentifier.getJCOInstance(), recoveryInformation, enlistmentNotification == null ? null : enlistmentNotification.getJCOInstance());
+            retObjectReenlist = classType.Invoke("Reenlist", resourceManagerIdentifier == null ? null : resourceManagerIdentifier.getJCOInstance(), recoveryInformation, enlistmentNotification == null ? null : enlistmentNotification.getJCOInstance());
+            JCObject objReenlist = (JCObject)retObjectReenlist;
             return new Enlistment(objReenlist);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReenlist != null ? retObjectReenlist.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,10 +174,14 @@ public class TransactionManager extends NetObject  {
 
     public static Enlistment Reenlist(Guid dupParam0, JCORefOut dupParam1, IEnlistmentNotification dupParam2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.configuration.ConfigurationErrorsException, system.collections.generic.KeyNotFoundException, system.io.EndOfStreamException, system.FormatException, system.io.IOException, system.reflection.AmbiguousMatchException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.transactions.TransactionException, system.OverflowException, system.transactions.TransactionManagerCommunicationException, system.runtime.interopservices.COMException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectReenlist = null;
         try {
-            JCObject objReenlist = (JCObject)classType.Invoke("Reenlist", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1.getJCRefOut(), dupParam2 == null ? null : dupParam2.getJCOInstance());
+            retObjectReenlist = classType.Invoke("Reenlist", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1.getJCRefOut(), dupParam2 == null ? null : dupParam2.getJCOInstance());
+            JCObject objReenlist = (JCObject)retObjectReenlist;
             return new Enlistment(objReenlist);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReenlist != null ? retObjectReenlist.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,7 +189,7 @@ public class TransactionManager extends NetObject  {
 
     public static void RecoveryComplete(Guid resourceManagerIdentifier) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.collections.generic.KeyNotFoundException, system.reflection.AmbiguousMatchException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.transactions.TransactionException, system.OverflowException, system.transactions.TransactionManagerCommunicationException, system.RankException, system.PlatformNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("RecoveryComplete", resourceManagerIdentifier == null ? null : resourceManagerIdentifier.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -195,10 +203,14 @@ public class TransactionManager extends NetObject  {
     
     public static TimeSpan getDefaultTimeout() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.configuration.ConfigurationErrorsException, system.collections.generic.KeyNotFoundException, system.reflection.AmbiguousMatchException, system.NotSupportedException, system.TypeLoadException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDefaultTimeout = null;
         try {
-            JCObject val = (JCObject)classType.Get("DefaultTimeout");
+            retObjectDefaultTimeout = classType.Get("DefaultTimeout");
+            JCObject val = (JCObject)retObjectDefaultTimeout;
             return new TimeSpan(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefaultTimeout != null ? retObjectDefaultTimeout.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -206,10 +218,14 @@ public class TransactionManager extends NetObject  {
 
     public static TimeSpan getMaximumTimeout() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.configuration.ConfigurationErrorsException, system.collections.generic.KeyNotFoundException, system.reflection.AmbiguousMatchException, system.NotSupportedException, system.TypeLoadException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMaximumTimeout = null;
         try {
-            JCObject val = (JCObject)classType.Get("MaximumTimeout");
+            retObjectMaximumTimeout = classType.Get("MaximumTimeout");
+            JCObject val = (JCObject)retObjectMaximumTimeout;
             return new TimeSpan(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMaximumTimeout != null ? retObjectMaximumTimeout.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -217,9 +233,13 @@ public class TransactionManager extends NetObject  {
 
     public static HostCurrentTransactionCallback getHostCurrentCallback() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectHostCurrentCallback = null;
         try {
-            return (HostCurrentTransactionCallback)classType.Get("HostCurrentCallback");
+            retObjectHostCurrentCallback = classType.Get("HostCurrentCallback");
+            return (HostCurrentTransactionCallback)retObjectHostCurrentCallback;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into HostCurrentTransactionCallback", retObjectHostCurrentCallback != null ? retObjectHostCurrentCallback.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -227,7 +247,7 @@ public class TransactionManager extends NetObject  {
 
     public static void setHostCurrentCallback(HostCurrentTransactionCallback HostCurrentCallback) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Set("HostCurrentCallback", HostCurrentCallback);
         } catch (JCNativeException jcne) {

@@ -184,10 +184,14 @@ public class SoapServerFormatterSinkProvider extends NetObject  {
     
     public IServerChannelSink CreateSink(IChannelReceiver channel) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateSink = null;
         try {
-            JCObject objCreateSink = (JCObject)classInstance.Invoke("CreateSink", channel == null ? null : channel.getJCOInstance());
+            retObjectCreateSink = classInstance.Invoke("CreateSink", channel == null ? null : channel.getJCOInstance());
+            JCObject objCreateSink = (JCObject)retObjectCreateSink;
             return new IServerChannelSinkImplementation(objCreateSink);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateSink != null ? retObjectCreateSink.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,7 +199,7 @@ public class SoapServerFormatterSinkProvider extends NetObject  {
 
     public void GetChannelData(IChannelDataStore channelData) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetChannelData", channelData == null ? null : channelData.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -209,10 +213,14 @@ public class SoapServerFormatterSinkProvider extends NetObject  {
     
     public IServerChannelSinkProvider getNext() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNext = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Next");
+            retObjectNext = classInstance.Get("Next");
+            JCObject val = (JCObject)retObjectNext;
             return new IServerChannelSinkProviderImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNext != null ? retObjectNext.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -220,7 +228,7 @@ public class SoapServerFormatterSinkProvider extends NetObject  {
 
     public void setNext(IServerChannelSinkProvider Next) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Next", Next == null ? null : Next.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -230,10 +238,14 @@ public class SoapServerFormatterSinkProvider extends NetObject  {
 
     public TypeFilterLevel getTypeFilterLevel() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTypeFilterLevel = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TypeFilterLevel");
+            retObjectTypeFilterLevel = classInstance.Get("TypeFilterLevel");
+            JCObject val = (JCObject)retObjectTypeFilterLevel;
             return new TypeFilterLevel(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTypeFilterLevel != null ? retObjectTypeFilterLevel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -241,7 +253,7 @@ public class SoapServerFormatterSinkProvider extends NetObject  {
 
     public void setTypeFilterLevel(TypeFilterLevel TypeFilterLevel) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TypeFilterLevel", TypeFilterLevel == null ? null : TypeFilterLevel.getJCOInstance());
         } catch (JCNativeException jcne) {

@@ -163,10 +163,12 @@ public class ObjectDataSourceDesigner extends DataSourceDesigner  {
     
     public java.lang.String[] GetViewNames() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.OverflowException, system.data.DataException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetViewNames = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetViewNames");
+            retObjectGetViewNames = classInstance.Invoke("GetViewNames");
+            JCObject resultingObjects = (JCObject)retObjectGetViewNames;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -175,6 +177,8 @@ public class ObjectDataSourceDesigner extends DataSourceDesigner  {
 				resultingArray[indexGetViewNames] = (java.lang.String)resultingArrayList.get(indexGetViewNames);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectGetViewNames != null ? retObjectGetViewNames.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,10 +186,14 @@ public class ObjectDataSourceDesigner extends DataSourceDesigner  {
 
     public DesignerDataSourceView GetView(java.lang.String viewName) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetView = null;
         try {
-            JCObject objGetView = (JCObject)classInstance.Invoke("GetView", viewName);
+            retObjectGetView = classInstance.Invoke("GetView", viewName);
+            JCObject objGetView = (JCObject)retObjectGetView;
             return new DesignerDataSourceView(objGetView);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetView != null ? retObjectGetView.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,7 +201,7 @@ public class ObjectDataSourceDesigner extends DataSourceDesigner  {
 
     public void Configure() throws Throwable, system.componentmodel.InvalidEnumArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.NotSupportedException, system.MulticastNotSupportedException, system.RankException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.configuration.ConfigurationException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException, system.io.IOException, system.configuration.ConfigurationErrorsException, system.threading.ThreadStateException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Configure");
         } catch (JCNativeException jcne) {
@@ -203,7 +211,7 @@ public class ObjectDataSourceDesigner extends DataSourceDesigner  {
 
     public void RefreshSchema(boolean preferSilent) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.security.SecurityException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OverflowException, system.data.DataException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RefreshSchema", preferSilent);
         } catch (JCNativeException jcne) {
@@ -217,9 +225,13 @@ public class ObjectDataSourceDesigner extends DataSourceDesigner  {
     
     public java.lang.String getSelectMethod() throws Throwable, system.ArgumentNullException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectMethod = null;
         try {
-            return (java.lang.String)classInstance.Get("SelectMethod");
+            retObjectSelectMethod = classInstance.Get("SelectMethod");
+            return (java.lang.String)retObjectSelectMethod;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSelectMethod != null ? retObjectSelectMethod.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -227,7 +239,7 @@ public class ObjectDataSourceDesigner extends DataSourceDesigner  {
 
     public void setSelectMethod(java.lang.String SelectMethod) throws Throwable, system.ArgumentNullException, system.MulticastNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.configuration.ConfigurationException, system.NullReferenceException, system.NotImplementedException, system.web.HttpException, system.OverflowException, system.web.HttpRequestValidationException, system.PlatformNotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SelectMethod", SelectMethod);
         } catch (JCNativeException jcne) {
@@ -237,9 +249,13 @@ public class ObjectDataSourceDesigner extends DataSourceDesigner  {
 
     public java.lang.String getTypeName() throws Throwable, system.ArgumentNullException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTypeName = null;
         try {
-            return (java.lang.String)classInstance.Get("TypeName");
+            retObjectTypeName = classInstance.Get("TypeName");
+            return (java.lang.String)retObjectTypeName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectTypeName != null ? retObjectTypeName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -247,7 +263,7 @@ public class ObjectDataSourceDesigner extends DataSourceDesigner  {
 
     public void setTypeName(java.lang.String TypeName) throws Throwable, system.ArgumentNullException, system.MulticastNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.configuration.ConfigurationException, system.NullReferenceException, system.NotImplementedException, system.web.HttpException, system.OverflowException, system.web.HttpRequestValidationException, system.PlatformNotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TypeName", TypeName);
         } catch (JCNativeException jcne) {

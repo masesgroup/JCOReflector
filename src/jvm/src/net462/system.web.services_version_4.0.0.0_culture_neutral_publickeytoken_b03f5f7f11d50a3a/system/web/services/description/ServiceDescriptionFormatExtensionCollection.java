@@ -167,9 +167,13 @@ public class ServiceDescriptionFormatExtensionCollection extends ServiceDescript
     
     public boolean Contains(NetObject extension) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContains = null;
         try {
-            return (boolean)classInstance.Invoke("Contains", extension == null ? null : extension.getJCOInstance());
+            retObjectContains = classInstance.Invoke("Contains", extension == null ? null : extension.getJCOInstance());
+            return (boolean)retObjectContains;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectContains != null ? retObjectContains.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,9 +181,13 @@ public class ServiceDescriptionFormatExtensionCollection extends ServiceDescript
 
     public boolean IsHandled(NetObject item) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsHandled = null;
         try {
-            return (boolean)classInstance.Invoke("IsHandled", item == null ? null : item.getJCOInstance());
+            retObjectIsHandled = classInstance.Invoke("IsHandled", item == null ? null : item.getJCOInstance());
+            return (boolean)retObjectIsHandled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsHandled != null ? retObjectIsHandled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,9 +195,13 @@ public class ServiceDescriptionFormatExtensionCollection extends ServiceDescript
 
     public boolean IsRequired(NetObject item) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsRequired = null;
         try {
-            return (boolean)classInstance.Invoke("IsRequired", item == null ? null : item.getJCOInstance());
+            retObjectIsRequired = classInstance.Invoke("IsRequired", item == null ? null : item.getJCOInstance());
+            return (boolean)retObjectIsRequired;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsRequired != null ? retObjectIsRequired.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,9 +209,20 @@ public class ServiceDescriptionFormatExtensionCollection extends ServiceDescript
 
     public int Add(NetObject extension) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAdd = null;
         try {
-            return (int)classInstance.Invoke("Add", extension == null ? null : extension.getJCOInstance());
+            retObjectAdd = classInstance.Invoke("Add", extension == null ? null : extension.getJCOInstance());
+            return (int)retObjectAdd;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectAdd_ToString = retObjectAdd == null ? "null" : retObjectAdd.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectAddNumber = (java.lang.Number)retObjectAdd;
+                return retObjectAddNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectAdd != null ? retObjectAdd.getClass() : "null", retObjectAdd_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -207,9 +230,20 @@ public class ServiceDescriptionFormatExtensionCollection extends ServiceDescript
 
     public int IndexOf(NetObject extension) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIndexOf = null;
         try {
-            return (int)classInstance.Invoke("IndexOf", extension == null ? null : extension.getJCOInstance());
+            retObjectIndexOf = classInstance.Invoke("IndexOf", extension == null ? null : extension.getJCOInstance());
+            return (int)retObjectIndexOf;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectIndexOf_ToString = retObjectIndexOf == null ? "null" : retObjectIndexOf.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectIndexOfNumber = (java.lang.Number)retObjectIndexOf;
+                return retObjectIndexOfNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectIndexOf != null ? retObjectIndexOf.getClass() : "null", retObjectIndexOf_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -217,10 +251,14 @@ public class ServiceDescriptionFormatExtensionCollection extends ServiceDescript
 
     public NetObject Find(NetType type) throws Throwable, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFind = null;
         try {
-            JCObject objFind = (JCObject)classInstance.Invoke("Find", type == null ? null : type.getJCOInstance());
+            retObjectFind = classInstance.Invoke("Find", type == null ? null : type.getJCOInstance());
+            JCObject objFind = (JCObject)retObjectFind;
             return new NetObject(objFind);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFind != null ? retObjectFind.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -228,16 +266,20 @@ public class ServiceDescriptionFormatExtensionCollection extends ServiceDescript
 
     public NetObject[] FindAll(NetType type) throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFindAll = null;
         try {
             ArrayList<NetObject> resultingArrayList = new ArrayList<NetObject>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("FindAll", type == null ? null : type.getJCOInstance());
+            retObjectFindAll = classInstance.Invoke("FindAll", type == null ? null : type.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectFindAll;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new NetObject(resultingObject));
             }
             NetObject[] resultingArray = new NetObject[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFindAll != null ? retObjectFindAll.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -245,10 +287,14 @@ public class ServiceDescriptionFormatExtensionCollection extends ServiceDescript
 
     public XmlElement Find(java.lang.String name, java.lang.String ns) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFind = null;
         try {
-            JCObject objFind = (JCObject)classInstance.Invoke("Find", name, ns);
+            retObjectFind = classInstance.Invoke("Find", name, ns);
+            JCObject objFind = (JCObject)retObjectFind;
             return new XmlElement(objFind);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFind != null ? retObjectFind.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -256,16 +302,20 @@ public class ServiceDescriptionFormatExtensionCollection extends ServiceDescript
 
     public XmlElement[] FindAll(java.lang.String name, java.lang.String ns) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFindAll = null;
         try {
             ArrayList<XmlElement> resultingArrayList = new ArrayList<XmlElement>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("FindAll", name, ns);
+            retObjectFindAll = classInstance.Invoke("FindAll", name, ns);
+            JCObject resultingObjects = (JCObject)retObjectFindAll;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new XmlElement(resultingObject));
             }
             XmlElement[] resultingArray = new XmlElement[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFindAll != null ? retObjectFindAll.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -273,7 +323,7 @@ public class ServiceDescriptionFormatExtensionCollection extends ServiceDescript
 
     public void CopyTo(NetObject[] array, int index) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CopyTo", toObjectFromArray(array), index);
         } catch (JCNativeException jcne) {
@@ -283,7 +333,7 @@ public class ServiceDescriptionFormatExtensionCollection extends ServiceDescript
 
     public void Insert(int index, NetObject extension) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Insert", index, extension == null ? null : extension.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -293,7 +343,7 @@ public class ServiceDescriptionFormatExtensionCollection extends ServiceDescript
 
     public void Remove(NetObject extension) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Remove", extension == null ? null : extension.getJCOInstance());
         } catch (JCNativeException jcne) {

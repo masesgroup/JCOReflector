@@ -144,10 +144,14 @@ public class ICollectionViewFactoryImplementation extends NetObject implements I
     
     public ICollectionView CreateView() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateView = null;
         try {
-            JCObject objCreateView = (JCObject)classInstance.Invoke("CreateView");
+            retObjectCreateView = classInstance.Invoke("CreateView");
+            JCObject objCreateView = (JCObject)retObjectCreateView;
             return new ICollectionViewImplementation(objCreateView);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateView != null ? retObjectCreateView.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

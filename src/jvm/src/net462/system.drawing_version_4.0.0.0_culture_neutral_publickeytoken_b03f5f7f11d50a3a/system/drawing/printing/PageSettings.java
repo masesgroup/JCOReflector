@@ -179,10 +179,14 @@ public class PageSettings extends NetObject  {
     
     public NetObject Clone() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClone = null;
         try {
-            JCObject objClone = (JCObject)classInstance.Invoke("Clone");
+            retObjectClone = classInstance.Invoke("Clone");
+            JCObject objClone = (JCObject)retObjectClone;
             return new NetObject(objClone);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClone != null ? retObjectClone.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -194,9 +198,13 @@ public class PageSettings extends NetObject  {
     
     public boolean getColor() throws Throwable, system.security.SecurityException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.componentmodel.Win32Exception, system.AccessViolationException, system.IndexOutOfRangeException, system.drawing.printing.InvalidPrinterException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectColor = null;
         try {
-            return (boolean)classInstance.Get("Color");
+            retObjectColor = classInstance.Get("Color");
+            return (boolean)retObjectColor;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectColor != null ? retObjectColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -204,7 +212,7 @@ public class PageSettings extends NetObject  {
 
     public void setColor(boolean Color) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Color", Color);
         } catch (JCNativeException jcne) {
@@ -214,9 +222,13 @@ public class PageSettings extends NetObject  {
 
     public boolean getLandscape() throws Throwable, system.security.SecurityException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.componentmodel.Win32Exception, system.AccessViolationException, system.IndexOutOfRangeException, system.drawing.printing.InvalidPrinterException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLandscape = null;
         try {
-            return (boolean)classInstance.Get("Landscape");
+            retObjectLandscape = classInstance.Get("Landscape");
+            return (boolean)retObjectLandscape;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectLandscape != null ? retObjectLandscape.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -224,7 +236,7 @@ public class PageSettings extends NetObject  {
 
     public void setLandscape(boolean Landscape) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Landscape", Landscape);
         } catch (JCNativeException jcne) {
@@ -234,10 +246,14 @@ public class PageSettings extends NetObject  {
 
     public Single getHardMarginX() throws Throwable, system.ArgumentException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NullReferenceException, system.security.SecurityException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.AccessViolationException, system.drawing.printing.InvalidPrinterException, system.MissingMethodException, system.reflection.TargetInvocationException, system.InvalidCastException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHardMarginX = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("HardMarginX");
+            retObjectHardMarginX = classInstance.Get("HardMarginX");
+            JCObject val = (JCObject)retObjectHardMarginX;
             return new Single(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHardMarginX != null ? retObjectHardMarginX.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -245,10 +261,14 @@ public class PageSettings extends NetObject  {
 
     public Single getHardMarginY() throws Throwable, system.security.SecurityException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.componentmodel.Win32Exception, system.AccessViolationException, system.drawing.printing.InvalidPrinterException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.InvalidCastException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHardMarginY = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("HardMarginY");
+            retObjectHardMarginY = classInstance.Get("HardMarginY");
+            JCObject val = (JCObject)retObjectHardMarginY;
             return new Single(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHardMarginY != null ? retObjectHardMarginY.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -256,10 +276,14 @@ public class PageSettings extends NetObject  {
 
     public Margins getMargins() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMargins = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Margins");
+            retObjectMargins = classInstance.Get("Margins");
+            JCObject val = (JCObject)retObjectMargins;
             return new Margins(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMargins != null ? retObjectMargins.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -267,7 +291,7 @@ public class PageSettings extends NetObject  {
 
     public void setMargins(Margins Margins) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Margins", Margins == null ? null : Margins.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -277,10 +301,14 @@ public class PageSettings extends NetObject  {
 
     public PaperSize getPaperSize() throws Throwable, system.ArgumentException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NullReferenceException, system.security.SecurityException, system.resources.MissingManifestResourceException, system.componentmodel.Win32Exception, system.AccessViolationException, system.IndexOutOfRangeException, system.drawing.printing.InvalidPrinterException, system.MissingMethodException, system.reflection.TargetInvocationException, system.InvalidCastException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPaperSize = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PaperSize");
+            retObjectPaperSize = classInstance.Get("PaperSize");
+            JCObject val = (JCObject)retObjectPaperSize;
             return new PaperSize(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPaperSize != null ? retObjectPaperSize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -288,7 +316,7 @@ public class PageSettings extends NetObject  {
 
     public void setPaperSize(PaperSize PaperSize) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PaperSize", PaperSize == null ? null : PaperSize.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -298,10 +326,14 @@ public class PageSettings extends NetObject  {
 
     public PaperSource getPaperSource() throws Throwable, system.ArgumentException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NullReferenceException, system.security.SecurityException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.AccessViolationException, system.drawing.printing.InvalidPrinterException, system.MissingMethodException, system.reflection.TargetInvocationException, system.InvalidCastException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPaperSource = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PaperSource");
+            retObjectPaperSource = classInstance.Get("PaperSource");
+            JCObject val = (JCObject)retObjectPaperSource;
             return new PaperSource(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPaperSource != null ? retObjectPaperSource.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -309,7 +341,7 @@ public class PageSettings extends NetObject  {
 
     public void setPaperSource(PaperSource PaperSource) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PaperSource", PaperSource == null ? null : PaperSource.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -319,10 +351,14 @@ public class PageSettings extends NetObject  {
 
     public PrinterResolution getPrinterResolution() throws Throwable, system.ArgumentException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NullReferenceException, system.security.SecurityException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.AccessViolationException, system.drawing.printing.InvalidPrinterException, system.MissingMethodException, system.reflection.TargetInvocationException, system.InvalidCastException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPrinterResolution = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PrinterResolution");
+            retObjectPrinterResolution = classInstance.Get("PrinterResolution");
+            JCObject val = (JCObject)retObjectPrinterResolution;
             return new PrinterResolution(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPrinterResolution != null ? retObjectPrinterResolution.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -330,7 +366,7 @@ public class PageSettings extends NetObject  {
 
     public void setPrinterResolution(PrinterResolution PrinterResolution) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PrinterResolution", PrinterResolution == null ? null : PrinterResolution.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -340,10 +376,14 @@ public class PageSettings extends NetObject  {
 
     public PrinterSettings getPrinterSettings() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPrinterSettings = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PrinterSettings");
+            retObjectPrinterSettings = classInstance.Get("PrinterSettings");
+            JCObject val = (JCObject)retObjectPrinterSettings;
             return new PrinterSettings(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPrinterSettings != null ? retObjectPrinterSettings.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -351,7 +391,7 @@ public class PageSettings extends NetObject  {
 
     public void setPrinterSettings(PrinterSettings PrinterSettings) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PrinterSettings", PrinterSettings == null ? null : PrinterSettings.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -361,10 +401,14 @@ public class PageSettings extends NetObject  {
 
     public Rectangle getBounds() throws Throwable, system.ArgumentException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NullReferenceException, system.security.SecurityException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.AccessViolationException, system.drawing.printing.InvalidPrinterException, system.MissingMethodException, system.reflection.TargetInvocationException, system.InvalidCastException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBounds = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Bounds");
+            retObjectBounds = classInstance.Get("Bounds");
+            JCObject val = (JCObject)retObjectBounds;
             return new Rectangle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBounds != null ? retObjectBounds.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -372,10 +416,14 @@ public class PageSettings extends NetObject  {
 
     public RectangleF getPrintableArea() throws Throwable, system.security.SecurityException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.componentmodel.Win32Exception, system.AccessViolationException, system.drawing.printing.InvalidPrinterException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.InvalidCastException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPrintableArea = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PrintableArea");
+            retObjectPrintableArea = classInstance.Get("PrintableArea");
+            JCObject val = (JCObject)retObjectPrintableArea;
             return new RectangleF(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPrintableArea != null ? retObjectPrintableArea.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

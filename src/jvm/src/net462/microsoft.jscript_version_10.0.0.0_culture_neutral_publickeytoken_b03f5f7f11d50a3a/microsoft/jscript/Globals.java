@@ -156,10 +156,14 @@ public class Globals extends NetObject  {
     
     public static ArrayObject ConstructArray(NetObject... args) throws Throwable, system.NotImplementedException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.NullReferenceException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectConstructArray = null;
         try {
-            JCObject objConstructArray = (JCObject)classType.Invoke("ConstructArray", (java.lang.Object)toObjectFromArray(args));
+            retObjectConstructArray = classType.Invoke("ConstructArray", (java.lang.Object)toObjectFromArray(args));
+            JCObject objConstructArray = (JCObject)retObjectConstructArray;
             return new ArrayObject(objConstructArray);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConstructArray != null ? retObjectConstructArray.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -167,10 +171,14 @@ public class Globals extends NetObject  {
 
     public static ArrayObject ConstructArrayLiteral(NetObject[] args) throws Throwable, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.ArithmeticException, system.OverflowException, microsoft.jscript.JScriptException, system.MissingMethodException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectConstructArrayLiteral = null;
         try {
-            JCObject objConstructArrayLiteral = (JCObject)classType.Invoke("ConstructArrayLiteral", (java.lang.Object)toObjectFromArray(args));
+            retObjectConstructArrayLiteral = classType.Invoke("ConstructArrayLiteral", (java.lang.Object)toObjectFromArray(args));
+            JCObject objConstructArrayLiteral = (JCObject)retObjectConstructArrayLiteral;
             return new ArrayObject(objConstructArrayLiteral);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConstructArrayLiteral != null ? retObjectConstructArrayLiteral.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

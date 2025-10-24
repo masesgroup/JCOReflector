@@ -166,10 +166,14 @@ public class XamlTaskFactory extends NetObject  {
     
     public ITask CreateTask(IBuildEngine taskFactoryLoggingHost) throws Throwable, system.IndexOutOfRangeException, system.NotImplementedException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentException, system.FormatException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateTask = null;
         try {
-            JCObject objCreateTask = (JCObject)classInstance.Invoke("CreateTask", taskFactoryLoggingHost == null ? null : taskFactoryLoggingHost.getJCOInstance());
+            retObjectCreateTask = classInstance.Invoke("CreateTask", taskFactoryLoggingHost == null ? null : taskFactoryLoggingHost.getJCOInstance());
+            JCObject objCreateTask = (JCObject)retObjectCreateTask;
             return new ITaskImplementation(objCreateTask);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateTask != null ? retObjectCreateTask.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,16 +181,20 @@ public class XamlTaskFactory extends NetObject  {
 
     public TaskPropertyInfo[] GetTaskParameters() throws Throwable, system.IndexOutOfRangeException, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetTaskParameters = null;
         try {
             ArrayList<TaskPropertyInfo> resultingArrayList = new ArrayList<TaskPropertyInfo>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetTaskParameters");
+            retObjectGetTaskParameters = classInstance.Invoke("GetTaskParameters");
+            JCObject resultingObjects = (JCObject)retObjectGetTaskParameters;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new TaskPropertyInfo(resultingObject));
             }
             TaskPropertyInfo[] resultingArray = new TaskPropertyInfo[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetTaskParameters != null ? retObjectGetTaskParameters.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -194,7 +202,7 @@ public class XamlTaskFactory extends NetObject  {
 
     public void CleanupTask(ITask task) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CleanupTask", task == null ? null : task.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -208,9 +216,13 @@ public class XamlTaskFactory extends NetObject  {
     
     public java.lang.String getFactoryName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFactoryName = null;
         try {
-            return (java.lang.String)classInstance.Get("FactoryName");
+            retObjectFactoryName = classInstance.Get("FactoryName");
+            return (java.lang.String)retObjectFactoryName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectFactoryName != null ? retObjectFactoryName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -218,9 +230,13 @@ public class XamlTaskFactory extends NetObject  {
 
     public java.lang.String getTaskElementContents() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTaskElementContents = null;
         try {
-            return (java.lang.String)classInstance.Get("TaskElementContents");
+            retObjectTaskElementContents = classInstance.Get("TaskElementContents");
+            return (java.lang.String)retObjectTaskElementContents;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectTaskElementContents != null ? retObjectTaskElementContents.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -228,7 +244,7 @@ public class XamlTaskFactory extends NetObject  {
 
     public void setTaskElementContents(java.lang.String TaskElementContents) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TaskElementContents", TaskElementContents);
         } catch (JCNativeException jcne) {
@@ -238,9 +254,13 @@ public class XamlTaskFactory extends NetObject  {
 
     public java.lang.String getTaskName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTaskName = null;
         try {
-            return (java.lang.String)classInstance.Get("TaskName");
+            retObjectTaskName = classInstance.Get("TaskName");
+            return (java.lang.String)retObjectTaskName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectTaskName != null ? retObjectTaskName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -248,7 +268,7 @@ public class XamlTaskFactory extends NetObject  {
 
     public void setTaskName(java.lang.String TaskName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TaskName", TaskName);
         } catch (JCNativeException jcne) {
@@ -258,9 +278,13 @@ public class XamlTaskFactory extends NetObject  {
 
     public java.lang.String getTaskNamespace() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTaskNamespace = null;
         try {
-            return (java.lang.String)classInstance.Get("TaskNamespace");
+            retObjectTaskNamespace = classInstance.Get("TaskNamespace");
+            return (java.lang.String)retObjectTaskNamespace;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectTaskNamespace != null ? retObjectTaskNamespace.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -268,7 +292,7 @@ public class XamlTaskFactory extends NetObject  {
 
     public void setTaskNamespace(java.lang.String TaskNamespace) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TaskNamespace", TaskNamespace);
         } catch (JCNativeException jcne) {
@@ -278,10 +302,14 @@ public class XamlTaskFactory extends NetObject  {
 
     public NetType getTaskType() throws Throwable, system.IndexOutOfRangeException, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTaskType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TaskType");
+            retObjectTaskType = classInstance.Get("TaskType");
+            JCObject val = (JCObject)retObjectTaskType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTaskType != null ? retObjectTaskType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

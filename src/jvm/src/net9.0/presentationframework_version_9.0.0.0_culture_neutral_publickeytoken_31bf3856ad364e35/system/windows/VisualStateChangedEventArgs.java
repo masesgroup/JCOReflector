@@ -162,10 +162,14 @@ public class VisualStateChangedEventArgs extends EventArgs  {
     
     public FrameworkElement getControl() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectControl = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Control");
+            retObjectControl = classInstance.Get("Control");
+            JCObject val = (JCObject)retObjectControl;
             return new FrameworkElement(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectControl != null ? retObjectControl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -173,10 +177,14 @@ public class VisualStateChangedEventArgs extends EventArgs  {
 
     public FrameworkElement getStateGroupsRoot() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStateGroupsRoot = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("StateGroupsRoot");
+            retObjectStateGroupsRoot = classInstance.Get("StateGroupsRoot");
+            JCObject val = (JCObject)retObjectStateGroupsRoot;
             return new FrameworkElement(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStateGroupsRoot != null ? retObjectStateGroupsRoot.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -184,10 +192,14 @@ public class VisualStateChangedEventArgs extends EventArgs  {
 
     public VisualState getNewState() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNewState = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("NewState");
+            retObjectNewState = classInstance.Get("NewState");
+            JCObject val = (JCObject)retObjectNewState;
             return new VisualState(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNewState != null ? retObjectNewState.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,10 +207,14 @@ public class VisualStateChangedEventArgs extends EventArgs  {
 
     public VisualState getOldState() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOldState = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("OldState");
+            retObjectOldState = classInstance.Get("OldState");
+            JCObject val = (JCObject)retObjectOldState;
             return new VisualState(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOldState != null ? retObjectOldState.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

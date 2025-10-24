@@ -144,7 +144,7 @@ public class IPolicyExportExtensionImplementation extends NetObject implements I
     
     public void ExportPolicy(MetadataExporter exporter, PolicyConversionContext context) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ExportPolicy", exporter == null ? null : exporter.getJCOInstance(), context == null ? null : context.getJCOInstance());
         } catch (JCNativeException jcne) {

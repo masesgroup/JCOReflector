@@ -157,9 +157,13 @@ public class UpdateMapMetadata extends NetObject  {
     
     public boolean IsReferenceToImportedChild(Activity childActivity) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsReferenceToImportedChild = null;
         try {
-            return (boolean)classInstance.Invoke("IsReferenceToImportedChild", childActivity == null ? null : childActivity.getJCOInstance());
+            retObjectIsReferenceToImportedChild = classInstance.Invoke("IsReferenceToImportedChild", childActivity == null ? null : childActivity.getJCOInstance());
+            return (boolean)retObjectIsReferenceToImportedChild;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsReferenceToImportedChild != null ? retObjectIsReferenceToImportedChild.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -167,10 +171,14 @@ public class UpdateMapMetadata extends NetObject  {
 
     public Activity GetMatch(Activity updatedChild) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetMatch = null;
         try {
-            JCObject objGetMatch = (JCObject)classInstance.Invoke("GetMatch", updatedChild == null ? null : updatedChild.getJCOInstance());
+            retObjectGetMatch = classInstance.Invoke("GetMatch", updatedChild == null ? null : updatedChild.getJCOInstance());
+            JCObject objGetMatch = (JCObject)retObjectGetMatch;
             return new Activity(objGetMatch);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetMatch != null ? retObjectGetMatch.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,10 +186,14 @@ public class UpdateMapMetadata extends NetObject  {
 
     public Variable GetMatch(Variable updatedVariable) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetMatch = null;
         try {
-            JCObject objGetMatch = (JCObject)classInstance.Invoke("GetMatch", updatedVariable == null ? null : updatedVariable.getJCOInstance());
+            retObjectGetMatch = classInstance.Invoke("GetMatch", updatedVariable == null ? null : updatedVariable.getJCOInstance());
+            JCObject objGetMatch = (JCObject)retObjectGetMatch;
             return new Variable(objGetMatch);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetMatch != null ? retObjectGetMatch.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -189,7 +201,7 @@ public class UpdateMapMetadata extends NetObject  {
 
     public void AddMatch(Activity updatedChild, Activity originalChild) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddMatch", updatedChild == null ? null : updatedChild.getJCOInstance(), originalChild == null ? null : originalChild.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -199,7 +211,7 @@ public class UpdateMapMetadata extends NetObject  {
 
     public void AddMatch(Variable updatedVariable, Variable originalVariable) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddMatch", updatedVariable == null ? null : updatedVariable.getJCOInstance(), originalVariable == null ? null : originalVariable.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -209,7 +221,7 @@ public class UpdateMapMetadata extends NetObject  {
 
     public void AllowUpdateInsideThisActivity() throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AllowUpdateInsideThisActivity");
         } catch (JCNativeException jcne) {
@@ -219,7 +231,7 @@ public class UpdateMapMetadata extends NetObject  {
 
     public void DisallowUpdateInsideThisActivity(java.lang.String reason) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DisallowUpdateInsideThisActivity", reason);
         } catch (JCNativeException jcne) {

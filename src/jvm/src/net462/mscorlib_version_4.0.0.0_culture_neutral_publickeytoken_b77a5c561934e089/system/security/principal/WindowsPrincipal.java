@@ -171,9 +171,13 @@ public class WindowsPrincipal extends ClaimsPrincipal  {
     
     public boolean IsInRole(int rid) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsInRole = null;
         try {
-            return (boolean)classInstance.Invoke("IsInRole", rid);
+            retObjectIsInRole = classInstance.Invoke("IsInRole", rid);
+            return (boolean)retObjectIsInRole;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsInRole != null ? retObjectIsInRole.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,9 +185,13 @@ public class WindowsPrincipal extends ClaimsPrincipal  {
 
     public boolean IsInRole(SecurityIdentifier sid) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsInRole = null;
         try {
-            return (boolean)classInstance.Invoke("IsInRole", sid == null ? null : sid.getJCOInstance());
+            retObjectIsInRole = classInstance.Invoke("IsInRole", sid == null ? null : sid.getJCOInstance());
+            return (boolean)retObjectIsInRole;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsInRole != null ? retObjectIsInRole.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,9 +199,13 @@ public class WindowsPrincipal extends ClaimsPrincipal  {
 
     public boolean IsInRole(WindowsBuiltInRole role) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsInRole = null;
         try {
-            return (boolean)classInstance.Invoke("IsInRole", role == null ? null : role.getJCOInstance());
+            retObjectIsInRole = classInstance.Invoke("IsInRole", role == null ? null : role.getJCOInstance());
+            return (boolean)retObjectIsInRole;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsInRole != null ? retObjectIsInRole.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,9 +213,13 @@ public class WindowsPrincipal extends ClaimsPrincipal  {
 
     public boolean IsInRole(java.lang.String role) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.SystemException, system.UnauthorizedAccessException, system.InvalidOperationException, system.OutOfMemoryException, system.FormatException, system.AccessViolationException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.principal.IdentityNotMappedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsInRole = null;
         try {
-            return (boolean)classInstance.Invoke("IsInRole", role);
+            retObjectIsInRole = classInstance.Invoke("IsInRole", role);
+            return (boolean)retObjectIsInRole;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsInRole != null ? retObjectIsInRole.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

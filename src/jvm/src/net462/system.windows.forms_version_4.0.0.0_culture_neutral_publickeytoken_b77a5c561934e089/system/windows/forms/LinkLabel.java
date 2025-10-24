@@ -173,7 +173,7 @@ public class LinkLabel extends Label  {
      */
     @Deprecated 
     public void NotifyDefault(boolean value) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIButtonControl to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIButtonControl to obtain the full interface.");
     }
 
     /**
@@ -182,7 +182,7 @@ public class LinkLabel extends Label  {
      */
     @Deprecated 
     public void PerformClick() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIButtonControl to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIButtonControl to obtain the full interface.");
     }
 
 
@@ -191,9 +191,13 @@ public class LinkLabel extends Label  {
     
     public boolean getLinkVisited() throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLinkVisited = null;
         try {
-            return (boolean)classInstance.Get("LinkVisited");
+            retObjectLinkVisited = classInstance.Get("LinkVisited");
+            return (boolean)retObjectLinkVisited;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectLinkVisited != null ? retObjectLinkVisited.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,7 +205,7 @@ public class LinkLabel extends Label  {
 
     public void setLinkVisited(boolean LinkVisited) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.NotSupportedException, system.NullReferenceException, system.OutOfMemoryException, system.RankException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("LinkVisited", LinkVisited);
         } catch (JCNativeException jcne) {
@@ -211,9 +215,13 @@ public class LinkLabel extends Label  {
 
     public boolean getTabStop() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTabStop = null;
         try {
-            return (boolean)classInstance.Get("TabStop");
+            retObjectTabStop = classInstance.Get("TabStop");
+            return (boolean)retObjectTabStop;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectTabStop != null ? retObjectTabStop.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -221,7 +229,7 @@ public class LinkLabel extends Label  {
 
     public void setTabStop(boolean TabStop) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.NotSupportedException, system.security.SecurityException, system.NullReferenceException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TabStop", TabStop);
         } catch (JCNativeException jcne) {
@@ -231,9 +239,13 @@ public class LinkLabel extends Label  {
 
     public boolean getUseCompatibleTextRendering() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUseCompatibleTextRendering = null;
         try {
-            return (boolean)classInstance.Get("UseCompatibleTextRendering");
+            retObjectUseCompatibleTextRendering = classInstance.Get("UseCompatibleTextRendering");
+            return (boolean)retObjectUseCompatibleTextRendering;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectUseCompatibleTextRendering != null ? retObjectUseCompatibleTextRendering.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -241,7 +253,7 @@ public class LinkLabel extends Label  {
 
     public void setUseCompatibleTextRendering(boolean UseCompatibleTextRendering) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.NotSupportedException, system.NullReferenceException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UseCompatibleTextRendering", UseCompatibleTextRendering);
         } catch (JCNativeException jcne) {
@@ -251,10 +263,14 @@ public class LinkLabel extends Label  {
 
     public Color getActiveLinkColor() throws Throwable, system.ArgumentException, system.security.SecurityException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.UnauthorizedAccessException, system.io.IOException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectActiveLinkColor = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ActiveLinkColor");
+            retObjectActiveLinkColor = classInstance.Get("ActiveLinkColor");
+            JCObject val = (JCObject)retObjectActiveLinkColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectActiveLinkColor != null ? retObjectActiveLinkColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -262,7 +278,7 @@ public class LinkLabel extends Label  {
 
     public void setActiveLinkColor(Color ActiveLinkColor) throws Throwable, system.NullReferenceException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ActiveLinkColor", ActiveLinkColor == null ? null : ActiveLinkColor.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -272,10 +288,14 @@ public class LinkLabel extends Label  {
 
     public Color getDisabledLinkColor() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDisabledLinkColor = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DisabledLinkColor");
+            retObjectDisabledLinkColor = classInstance.Get("DisabledLinkColor");
+            JCObject val = (JCObject)retObjectDisabledLinkColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDisabledLinkColor != null ? retObjectDisabledLinkColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -283,7 +303,7 @@ public class LinkLabel extends Label  {
 
     public void setDisabledLinkColor(Color DisabledLinkColor) throws Throwable, system.NullReferenceException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DisabledLinkColor", DisabledLinkColor == null ? null : DisabledLinkColor.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -293,10 +313,14 @@ public class LinkLabel extends Label  {
 
     public Color getLinkColor() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.NullReferenceException, system.MemberAccessException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.MulticastNotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.threading.AbandonedMutexException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException, system.security.SecurityException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLinkColor = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("LinkColor");
+            retObjectLinkColor = classInstance.Get("LinkColor");
+            JCObject val = (JCObject)retObjectLinkColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLinkColor != null ? retObjectLinkColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -304,7 +328,7 @@ public class LinkLabel extends Label  {
 
     public void setLinkColor(Color LinkColor) throws Throwable, system.NullReferenceException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("LinkColor", LinkColor == null ? null : LinkColor.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -314,10 +338,14 @@ public class LinkLabel extends Label  {
 
     public Color getVisitedLinkColor() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.NullReferenceException, system.MemberAccessException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.MulticastNotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.threading.AbandonedMutexException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException, system.IndexOutOfRangeException, system.security.SecurityException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVisitedLinkColor = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("VisitedLinkColor");
+            retObjectVisitedLinkColor = classInstance.Get("VisitedLinkColor");
+            JCObject val = (JCObject)retObjectVisitedLinkColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVisitedLinkColor != null ? retObjectVisitedLinkColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -325,7 +353,7 @@ public class LinkLabel extends Label  {
 
     public void setVisitedLinkColor(Color VisitedLinkColor) throws Throwable, system.NullReferenceException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("VisitedLinkColor", VisitedLinkColor == null ? null : VisitedLinkColor.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -335,10 +363,14 @@ public class LinkLabel extends Label  {
 
     public FlatStyle getFlatStyle() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFlatStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("FlatStyle");
+            retObjectFlatStyle = classInstance.Get("FlatStyle");
+            JCObject val = (JCObject)retObjectFlatStyle;
             return new FlatStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFlatStyle != null ? retObjectFlatStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -346,7 +378,7 @@ public class LinkLabel extends Label  {
 
     public void setFlatStyle(FlatStyle FlatStyle) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.security.SecurityException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FlatStyle", FlatStyle == null ? null : FlatStyle.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -356,10 +388,14 @@ public class LinkLabel extends Label  {
 
     public LinkArea getLinkArea() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.NotSupportedException, system.security.SecurityException, system.NullReferenceException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLinkArea = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("LinkArea");
+            retObjectLinkArea = classInstance.Get("LinkArea");
+            JCObject val = (JCObject)retObjectLinkArea;
             return new LinkArea(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLinkArea != null ? retObjectLinkArea.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -367,7 +403,7 @@ public class LinkLabel extends Label  {
 
     public void setLinkArea(LinkArea LinkArea) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.NotSupportedException, system.NullReferenceException, system.OutOfMemoryException, system.RankException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("LinkArea", LinkArea == null ? null : LinkArea.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -377,10 +413,14 @@ public class LinkLabel extends Label  {
 
     public LinkBehavior getLinkBehavior() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLinkBehavior = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("LinkBehavior");
+            retObjectLinkBehavior = classInstance.Get("LinkBehavior");
+            JCObject val = (JCObject)retObjectLinkBehavior;
             return new LinkBehavior(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLinkBehavior != null ? retObjectLinkBehavior.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -388,7 +428,7 @@ public class LinkLabel extends Label  {
 
     public void setLinkBehavior(LinkBehavior LinkBehavior) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NullReferenceException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("LinkBehavior", LinkBehavior == null ? null : LinkBehavior.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -398,10 +438,14 @@ public class LinkLabel extends Label  {
 
     public Padding getPadding() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPadding = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Padding");
+            retObjectPadding = classInstance.Get("Padding");
+            JCObject val = (JCObject)retObjectPadding;
             return new Padding(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPadding != null ? retObjectPadding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -409,7 +453,7 @@ public class LinkLabel extends Label  {
 
     public void setPadding(Padding Padding) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Padding", Padding == null ? null : Padding.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -424,7 +468,7 @@ public class LinkLabel extends Label  {
 
     public void addTabStopChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("TabStopChanged", handler);
         } catch (JCNativeException jcne) {
@@ -434,7 +478,7 @@ public class LinkLabel extends Label  {
 
     public void removeTabStopChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("TabStopChanged", handler);
         } catch (JCNativeException jcne) {
@@ -444,7 +488,7 @@ public class LinkLabel extends Label  {
 
     public void addLinkClicked(LinkLabelLinkClickedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("LinkClicked", handler);
         } catch (JCNativeException jcne) {
@@ -454,7 +498,7 @@ public class LinkLabel extends Label  {
 
     public void removeLinkClicked(LinkLabelLinkClickedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("LinkClicked", handler);
         } catch (JCNativeException jcne) {

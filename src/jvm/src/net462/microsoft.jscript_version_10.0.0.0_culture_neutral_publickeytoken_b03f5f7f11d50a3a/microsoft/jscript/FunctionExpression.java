@@ -160,10 +160,14 @@ public class FunctionExpression extends AST  {
     
     public static FunctionObject JScriptFunctionExpression(RuntimeTypeHandle handle, java.lang.String name, java.lang.String method_name, java.lang.String[] formal_params, JSLocalField[] fields, boolean must_save_stack_locals, boolean hasArgumentsObject, java.lang.String text, VsaEngine engine) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.NotImplementedException, system.InvalidOperationException, system.ArgumentException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectJScriptFunctionExpression = null;
         try {
-            JCObject objJScriptFunctionExpression = (JCObject)classType.Invoke("JScriptFunctionExpression", handle == null ? null : handle.getJCOInstance(), name, method_name, formal_params, toObjectFromArray(fields), must_save_stack_locals, hasArgumentsObject, text, engine == null ? null : engine.getJCOInstance());
+            retObjectJScriptFunctionExpression = classType.Invoke("JScriptFunctionExpression", handle == null ? null : handle.getJCOInstance(), name, method_name, formal_params, toObjectFromArray(fields), must_save_stack_locals, hasArgumentsObject, text, engine == null ? null : engine.getJCOInstance());
+            JCObject objJScriptFunctionExpression = (JCObject)retObjectJScriptFunctionExpression;
             return new FunctionObject(objJScriptFunctionExpression);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectJScriptFunctionExpression != null ? retObjectJScriptFunctionExpression.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,10 +175,14 @@ public class FunctionExpression extends AST  {
 
     public static FunctionObject JScriptFunctionExpression(RuntimeTypeHandle dupParam0, java.lang.String dupParam1, java.lang.String dupParam2, JCORefOut dupParam3, JSLocalField[] dupParam4, boolean dupParam5, boolean dupParam6, java.lang.String dupParam7, VsaEngine dupParam8) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.NotImplementedException, system.InvalidOperationException, system.ArgumentException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectJScriptFunctionExpression = null;
         try {
-            JCObject objJScriptFunctionExpression = (JCObject)classType.Invoke("JScriptFunctionExpression", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1, dupParam2, dupParam3.getJCRefOut(), toObjectFromArray(dupParam4), dupParam5, dupParam6, dupParam7, dupParam8 == null ? null : dupParam8.getJCOInstance());
+            retObjectJScriptFunctionExpression = classType.Invoke("JScriptFunctionExpression", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1, dupParam2, dupParam3.getJCRefOut(), toObjectFromArray(dupParam4), dupParam5, dupParam6, dupParam7, dupParam8 == null ? null : dupParam8.getJCOInstance());
+            JCObject objJScriptFunctionExpression = (JCObject)retObjectJScriptFunctionExpression;
             return new FunctionObject(objJScriptFunctionExpression);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectJScriptFunctionExpression != null ? retObjectJScriptFunctionExpression.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

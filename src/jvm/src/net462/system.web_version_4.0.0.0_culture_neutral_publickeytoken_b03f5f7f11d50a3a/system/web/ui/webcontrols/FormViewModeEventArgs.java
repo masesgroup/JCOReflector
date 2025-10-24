@@ -171,9 +171,13 @@ public class FormViewModeEventArgs extends CancelEventArgs  {
     
     public boolean getCancelingEdit() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCancelingEdit = null;
         try {
-            return (boolean)classInstance.Get("CancelingEdit");
+            retObjectCancelingEdit = classInstance.Get("CancelingEdit");
+            return (boolean)retObjectCancelingEdit;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCancelingEdit != null ? retObjectCancelingEdit.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,10 +185,14 @@ public class FormViewModeEventArgs extends CancelEventArgs  {
 
     public FormViewMode getNewMode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNewMode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("NewMode");
+            retObjectNewMode = classInstance.Get("NewMode");
+            JCObject val = (JCObject)retObjectNewMode;
             return new FormViewMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNewMode != null ? retObjectNewMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,7 +200,7 @@ public class FormViewModeEventArgs extends CancelEventArgs  {
 
     public void setNewMode(FormViewMode NewMode) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("NewMode", NewMode == null ? null : NewMode.getJCOInstance());
         } catch (JCNativeException jcne) {

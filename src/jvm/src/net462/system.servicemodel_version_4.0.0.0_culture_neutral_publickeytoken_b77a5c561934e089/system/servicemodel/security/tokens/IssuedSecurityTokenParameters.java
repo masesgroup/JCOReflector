@@ -199,9 +199,13 @@ public class IssuedSecurityTokenParameters extends SecurityTokenParameters  {
     
     public boolean getUseStrTransform() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUseStrTransform = null;
         try {
-            return (boolean)classInstance.Get("UseStrTransform");
+            retObjectUseStrTransform = classInstance.Get("UseStrTransform");
+            return (boolean)retObjectUseStrTransform;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectUseStrTransform != null ? retObjectUseStrTransform.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -209,7 +213,7 @@ public class IssuedSecurityTokenParameters extends SecurityTokenParameters  {
 
     public void setUseStrTransform(boolean UseStrTransform) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UseStrTransform", UseStrTransform);
         } catch (JCNativeException jcne) {
@@ -219,9 +223,20 @@ public class IssuedSecurityTokenParameters extends SecurityTokenParameters  {
 
     public int getKeySize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectKeySize = null;
         try {
-            return (int)classInstance.Get("KeySize");
+            retObjectKeySize = classInstance.Get("KeySize");
+            return (int)retObjectKeySize;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectKeySize_ToString = retObjectKeySize == null ? "null" : retObjectKeySize.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectKeySizeNumber = (java.lang.Number)retObjectKeySize;
+                return retObjectKeySizeNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectKeySize != null ? retObjectKeySize.getClass() : "null", retObjectKeySize_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -229,7 +244,7 @@ public class IssuedSecurityTokenParameters extends SecurityTokenParameters  {
 
     public void setKeySize(int KeySize) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("KeySize", KeySize);
         } catch (JCNativeException jcne) {
@@ -239,10 +254,14 @@ public class IssuedSecurityTokenParameters extends SecurityTokenParameters  {
 
     public SecurityKeyType getKeyType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectKeyType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("KeyType");
+            retObjectKeyType = classInstance.Get("KeyType");
+            JCObject val = (JCObject)retObjectKeyType;
             return new SecurityKeyType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectKeyType != null ? retObjectKeyType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -250,7 +269,7 @@ public class IssuedSecurityTokenParameters extends SecurityTokenParameters  {
 
     public void setKeyType(SecurityKeyType KeyType) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("KeyType", KeyType == null ? null : KeyType.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -260,10 +279,14 @@ public class IssuedSecurityTokenParameters extends SecurityTokenParameters  {
 
     public system.servicemodel.channels.Binding getIssuerBinding() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIssuerBinding = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("IssuerBinding");
+            retObjectIssuerBinding = classInstance.Get("IssuerBinding");
+            JCObject val = (JCObject)retObjectIssuerBinding;
             return new system.servicemodel.channels.Binding(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIssuerBinding != null ? retObjectIssuerBinding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -271,7 +294,7 @@ public class IssuedSecurityTokenParameters extends SecurityTokenParameters  {
 
     public void setIssuerBinding(system.servicemodel.channels.Binding IssuerBinding) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IssuerBinding", IssuerBinding == null ? null : IssuerBinding.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -281,10 +304,14 @@ public class IssuedSecurityTokenParameters extends SecurityTokenParameters  {
 
     public EndpointAddress getIssuerAddress() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIssuerAddress = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("IssuerAddress");
+            retObjectIssuerAddress = classInstance.Get("IssuerAddress");
+            JCObject val = (JCObject)retObjectIssuerAddress;
             return new EndpointAddress(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIssuerAddress != null ? retObjectIssuerAddress.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -292,7 +319,7 @@ public class IssuedSecurityTokenParameters extends SecurityTokenParameters  {
 
     public void setIssuerAddress(EndpointAddress IssuerAddress) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IssuerAddress", IssuerAddress == null ? null : IssuerAddress.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -302,10 +329,14 @@ public class IssuedSecurityTokenParameters extends SecurityTokenParameters  {
 
     public EndpointAddress getIssuerMetadataAddress() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIssuerMetadataAddress = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("IssuerMetadataAddress");
+            retObjectIssuerMetadataAddress = classInstance.Get("IssuerMetadataAddress");
+            JCObject val = (JCObject)retObjectIssuerMetadataAddress;
             return new EndpointAddress(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIssuerMetadataAddress != null ? retObjectIssuerMetadataAddress.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -313,7 +344,7 @@ public class IssuedSecurityTokenParameters extends SecurityTokenParameters  {
 
     public void setIssuerMetadataAddress(EndpointAddress IssuerMetadataAddress) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IssuerMetadataAddress", IssuerMetadataAddress == null ? null : IssuerMetadataAddress.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -323,10 +354,14 @@ public class IssuedSecurityTokenParameters extends SecurityTokenParameters  {
 
     public MessageSecurityVersion getDefaultMessageSecurityVersion() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDefaultMessageSecurityVersion = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DefaultMessageSecurityVersion");
+            retObjectDefaultMessageSecurityVersion = classInstance.Get("DefaultMessageSecurityVersion");
+            JCObject val = (JCObject)retObjectDefaultMessageSecurityVersion;
             return new MessageSecurityVersion(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefaultMessageSecurityVersion != null ? retObjectDefaultMessageSecurityVersion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -334,7 +369,7 @@ public class IssuedSecurityTokenParameters extends SecurityTokenParameters  {
 
     public void setDefaultMessageSecurityVersion(MessageSecurityVersion DefaultMessageSecurityVersion) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DefaultMessageSecurityVersion", DefaultMessageSecurityVersion == null ? null : DefaultMessageSecurityVersion.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -344,9 +379,13 @@ public class IssuedSecurityTokenParameters extends SecurityTokenParameters  {
 
     public java.lang.String getTokenType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTokenType = null;
         try {
-            return (java.lang.String)classInstance.Get("TokenType");
+            retObjectTokenType = classInstance.Get("TokenType");
+            return (java.lang.String)retObjectTokenType;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectTokenType != null ? retObjectTokenType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -354,7 +393,7 @@ public class IssuedSecurityTokenParameters extends SecurityTokenParameters  {
 
     public void setTokenType(java.lang.String TokenType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TokenType", TokenType);
         } catch (JCNativeException jcne) {

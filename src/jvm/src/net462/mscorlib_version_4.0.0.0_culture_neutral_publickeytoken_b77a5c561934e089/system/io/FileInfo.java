@@ -176,10 +176,14 @@ public class FileInfo extends FileSystemInfo  {
     
     public FileInfo CopyTo(java.lang.String destFileName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.io.PathTooLongException, system.ArgumentOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.InvalidOperationException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCopyTo = null;
         try {
-            JCObject objCopyTo = (JCObject)classInstance.Invoke("CopyTo", destFileName);
+            retObjectCopyTo = classInstance.Invoke("CopyTo", destFileName);
+            JCObject objCopyTo = (JCObject)retObjectCopyTo;
             return new FileInfo(objCopyTo);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCopyTo != null ? retObjectCopyTo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,10 +191,14 @@ public class FileInfo extends FileSystemInfo  {
 
     public FileInfo CopyTo(java.lang.String destFileName, boolean overwrite) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.io.PathTooLongException, system.ArgumentOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.InvalidOperationException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCopyTo = null;
         try {
-            JCObject objCopyTo = (JCObject)classInstance.Invoke("CopyTo", destFileName, overwrite);
+            retObjectCopyTo = classInstance.Invoke("CopyTo", destFileName, overwrite);
+            JCObject objCopyTo = (JCObject)retObjectCopyTo;
             return new FileInfo(objCopyTo);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCopyTo != null ? retObjectCopyTo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,10 +206,14 @@ public class FileInfo extends FileSystemInfo  {
 
     public FileInfo Replace(java.lang.String destinationFileName, java.lang.String destinationBackupFileName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NotSupportedException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReplace = null;
         try {
-            JCObject objReplace = (JCObject)classInstance.Invoke("Replace", destinationFileName, destinationBackupFileName);
+            retObjectReplace = classInstance.Invoke("Replace", destinationFileName, destinationBackupFileName);
+            JCObject objReplace = (JCObject)retObjectReplace;
             return new FileInfo(objReplace);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReplace != null ? retObjectReplace.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -209,10 +221,14 @@ public class FileInfo extends FileSystemInfo  {
 
     public FileInfo Replace(java.lang.String destinationFileName, java.lang.String destinationBackupFileName, boolean ignoreMetadataErrors) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.io.PathTooLongException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReplace = null;
         try {
-            JCObject objReplace = (JCObject)classInstance.Invoke("Replace", destinationFileName, destinationBackupFileName, ignoreMetadataErrors);
+            retObjectReplace = classInstance.Invoke("Replace", destinationFileName, destinationBackupFileName, ignoreMetadataErrors);
+            JCObject objReplace = (JCObject)retObjectReplace;
             return new FileInfo(objReplace);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReplace != null ? retObjectReplace.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -220,10 +236,14 @@ public class FileInfo extends FileSystemInfo  {
 
     public FileStream Create() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NotSupportedException, system.InvalidOperationException, system.NullReferenceException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreate = null;
         try {
-            JCObject objCreate = (JCObject)classInstance.Invoke("Create");
+            retObjectCreate = classInstance.Invoke("Create");
+            JCObject objCreate = (JCObject)retObjectCreate;
             return new FileStream(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -231,10 +251,14 @@ public class FileInfo extends FileSystemInfo  {
 
     public FileStream Open(FileMode mode) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.io.PathTooLongException, system.IndexOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.NullReferenceException, system.security.SecurityException, system.io.IOException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOpen = null;
         try {
-            JCObject objOpen = (JCObject)classInstance.Invoke("Open", mode == null ? null : mode.getJCOInstance());
+            retObjectOpen = classInstance.Invoke("Open", mode == null ? null : mode.getJCOInstance());
+            JCObject objOpen = (JCObject)retObjectOpen;
             return new FileStream(objOpen);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOpen != null ? retObjectOpen.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -242,10 +266,14 @@ public class FileInfo extends FileSystemInfo  {
 
     public FileStream Open(FileMode mode, FileAccess access) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.io.PathTooLongException, system.IndexOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.NullReferenceException, system.security.SecurityException, system.io.IOException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOpen = null;
         try {
-            JCObject objOpen = (JCObject)classInstance.Invoke("Open", mode == null ? null : mode.getJCOInstance(), access == null ? null : access.getJCOInstance());
+            retObjectOpen = classInstance.Invoke("Open", mode == null ? null : mode.getJCOInstance(), access == null ? null : access.getJCOInstance());
+            JCObject objOpen = (JCObject)retObjectOpen;
             return new FileStream(objOpen);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOpen != null ? retObjectOpen.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -253,10 +281,14 @@ public class FileInfo extends FileSystemInfo  {
 
     public FileStream Open(FileMode mode, FileAccess access, FileShare share) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NotSupportedException, system.InvalidOperationException, system.NullReferenceException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOpen = null;
         try {
-            JCObject objOpen = (JCObject)classInstance.Invoke("Open", mode == null ? null : mode.getJCOInstance(), access == null ? null : access.getJCOInstance(), share == null ? null : share.getJCOInstance());
+            retObjectOpen = classInstance.Invoke("Open", mode == null ? null : mode.getJCOInstance(), access == null ? null : access.getJCOInstance(), share == null ? null : share.getJCOInstance());
+            JCObject objOpen = (JCObject)retObjectOpen;
             return new FileStream(objOpen);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOpen != null ? retObjectOpen.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -264,10 +296,14 @@ public class FileInfo extends FileSystemInfo  {
 
     public FileStream OpenRead() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NotSupportedException, system.InvalidOperationException, system.NullReferenceException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOpenRead = null;
         try {
-            JCObject objOpenRead = (JCObject)classInstance.Invoke("OpenRead");
+            retObjectOpenRead = classInstance.Invoke("OpenRead");
+            JCObject objOpenRead = (JCObject)retObjectOpenRead;
             return new FileStream(objOpenRead);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOpenRead != null ? retObjectOpenRead.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -275,10 +311,14 @@ public class FileInfo extends FileSystemInfo  {
 
     public FileStream OpenWrite() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NotSupportedException, system.InvalidOperationException, system.NullReferenceException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOpenWrite = null;
         try {
-            JCObject objOpenWrite = (JCObject)classInstance.Invoke("OpenWrite");
+            retObjectOpenWrite = classInstance.Invoke("OpenWrite");
+            JCObject objOpenWrite = (JCObject)retObjectOpenWrite;
             return new FileStream(objOpenWrite);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOpenWrite != null ? retObjectOpenWrite.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -286,10 +326,14 @@ public class FileInfo extends FileSystemInfo  {
 
     public StreamReader OpenText() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NotSupportedException, system.InvalidOperationException, system.NullReferenceException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOpenText = null;
         try {
-            JCObject objOpenText = (JCObject)classInstance.Invoke("OpenText");
+            retObjectOpenText = classInstance.Invoke("OpenText");
+            JCObject objOpenText = (JCObject)retObjectOpenText;
             return new StreamReader(objOpenText);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOpenText != null ? retObjectOpenText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -297,10 +341,14 @@ public class FileInfo extends FileSystemInfo  {
 
     public StreamWriter AppendText() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.io.PathTooLongException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.NullReferenceException, system.security.SecurityException, system.io.IOException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAppendText = null;
         try {
-            JCObject objAppendText = (JCObject)classInstance.Invoke("AppendText");
+            retObjectAppendText = classInstance.Invoke("AppendText");
+            JCObject objAppendText = (JCObject)retObjectAppendText;
             return new StreamWriter(objAppendText);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAppendText != null ? retObjectAppendText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -308,10 +356,14 @@ public class FileInfo extends FileSystemInfo  {
 
     public StreamWriter CreateText() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.io.PathTooLongException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.NullReferenceException, system.security.SecurityException, system.io.IOException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateText = null;
         try {
-            JCObject objCreateText = (JCObject)classInstance.Invoke("CreateText");
+            retObjectCreateText = classInstance.Invoke("CreateText");
+            JCObject objCreateText = (JCObject)retObjectCreateText;
             return new StreamWriter(objCreateText);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateText != null ? retObjectCreateText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -319,10 +371,14 @@ public class FileInfo extends FileSystemInfo  {
 
     public FileSecurity GetAccessControl() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.OutOfMemoryException, system.UnauthorizedAccessException, system.InvalidOperationException, system.security.accesscontrol.PrivilegeNotHeldException, system.SystemException, system.ArgumentOutOfRangeException, system.OverflowException, system.io.PathTooLongException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetAccessControl = null;
         try {
-            JCObject objGetAccessControl = (JCObject)classInstance.Invoke("GetAccessControl");
+            retObjectGetAccessControl = classInstance.Invoke("GetAccessControl");
+            JCObject objGetAccessControl = (JCObject)retObjectGetAccessControl;
             return new FileSecurity(objGetAccessControl);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetAccessControl != null ? retObjectGetAccessControl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -330,10 +386,14 @@ public class FileInfo extends FileSystemInfo  {
 
     public FileSecurity GetAccessControl(AccessControlSections includeSections) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.OutOfMemoryException, system.UnauthorizedAccessException, system.InvalidOperationException, system.security.accesscontrol.PrivilegeNotHeldException, system.SystemException, system.ArgumentOutOfRangeException, system.OverflowException, system.io.PathTooLongException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetAccessControl = null;
         try {
-            JCObject objGetAccessControl = (JCObject)classInstance.Invoke("GetAccessControl", includeSections == null ? null : includeSections.getJCOInstance());
+            retObjectGetAccessControl = classInstance.Invoke("GetAccessControl", includeSections == null ? null : includeSections.getJCOInstance());
+            JCObject objGetAccessControl = (JCObject)retObjectGetAccessControl;
             return new FileSecurity(objGetAccessControl);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetAccessControl != null ? retObjectGetAccessControl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -341,7 +401,7 @@ public class FileInfo extends FileSystemInfo  {
 
     public void Decrypt() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.io.PathTooLongException, system.ArgumentOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.InvalidOperationException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Decrypt");
         } catch (JCNativeException jcne) {
@@ -351,7 +411,7 @@ public class FileInfo extends FileSystemInfo  {
 
     public void Delete() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Delete");
         } catch (JCNativeException jcne) {
@@ -361,7 +421,7 @@ public class FileInfo extends FileSystemInfo  {
 
     public void Encrypt() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.io.PathTooLongException, system.ArgumentOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.InvalidOperationException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Encrypt");
         } catch (JCNativeException jcne) {
@@ -371,7 +431,7 @@ public class FileInfo extends FileSystemInfo  {
 
     public void MoveTo(java.lang.String destFileName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.io.PathTooLongException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("MoveTo", destFileName);
         } catch (JCNativeException jcne) {
@@ -381,7 +441,7 @@ public class FileInfo extends FileSystemInfo  {
 
     public void SetAccessControl(FileSecurity fileSecurity) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.io.PathTooLongException, system.ArgumentOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.InvalidOperationException, system.NotSupportedException, system.OutOfMemoryException, system.security.accesscontrol.PrivilegeNotHeldException, system.InvalidProgramException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetAccessControl", fileSecurity == null ? null : fileSecurity.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -395,9 +455,13 @@ public class FileInfo extends FileSystemInfo  {
     
     public boolean getIsReadOnly() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsReadOnly = null;
         try {
-            return (boolean)classInstance.Get("IsReadOnly");
+            retObjectIsReadOnly = classInstance.Get("IsReadOnly");
+            return (boolean)retObjectIsReadOnly;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsReadOnly != null ? retObjectIsReadOnly.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -405,7 +469,7 @@ public class FileInfo extends FileSystemInfo  {
 
     public void setIsReadOnly(boolean IsReadOnly) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsReadOnly", IsReadOnly);
         } catch (JCNativeException jcne) {
@@ -415,9 +479,20 @@ public class FileInfo extends FileSystemInfo  {
 
     public long getLength() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.ArgumentException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLength = null;
         try {
-            return (long)classInstance.Get("Length");
+            retObjectLength = classInstance.Get("Length");
+            return (long)retObjectLength;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectLength_ToString = retObjectLength == null ? "null" : retObjectLength.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectLengthNumber = (java.lang.Number)retObjectLength;
+                return retObjectLengthNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectLength != null ? retObjectLength.getClass() : "null", retObjectLength_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -425,10 +500,14 @@ public class FileInfo extends FileSystemInfo  {
 
     public DirectoryInfo getDirectory() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.io.PathTooLongException, system.ArgumentOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDirectory = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Directory");
+            retObjectDirectory = classInstance.Get("Directory");
+            JCObject val = (JCObject)retObjectDirectory;
             return new DirectoryInfo(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDirectory != null ? retObjectDirectory.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -436,9 +515,13 @@ public class FileInfo extends FileSystemInfo  {
 
     public java.lang.String getDirectoryName() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.io.PathTooLongException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDirectoryName = null;
         try {
-            return (java.lang.String)classInstance.Get("DirectoryName");
+            retObjectDirectoryName = classInstance.Get("DirectoryName");
+            return (java.lang.String)retObjectDirectoryName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDirectoryName != null ? retObjectDirectoryName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

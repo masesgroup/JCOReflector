@@ -155,10 +155,14 @@ public class ProtectedConfigurationProvider extends ProviderBase  {
     
     public XmlNode Decrypt(XmlNode encryptedNode) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDecrypt = null;
         try {
-            JCObject objDecrypt = (JCObject)classInstance.Invoke("Decrypt", encryptedNode == null ? null : encryptedNode.getJCOInstance());
+            retObjectDecrypt = classInstance.Invoke("Decrypt", encryptedNode == null ? null : encryptedNode.getJCOInstance());
+            JCObject objDecrypt = (JCObject)retObjectDecrypt;
             return new XmlNode(objDecrypt);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDecrypt != null ? retObjectDecrypt.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -166,10 +170,14 @@ public class ProtectedConfigurationProvider extends ProviderBase  {
 
     public XmlNode Encrypt(XmlNode node) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEncrypt = null;
         try {
-            JCObject objEncrypt = (JCObject)classInstance.Invoke("Encrypt", node == null ? null : node.getJCOInstance());
+            retObjectEncrypt = classInstance.Invoke("Encrypt", node == null ? null : node.getJCOInstance());
+            JCObject objEncrypt = (JCObject)retObjectEncrypt;
             return new XmlNode(objEncrypt);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEncrypt != null ? retObjectEncrypt.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -153,9 +153,13 @@ public class IExtendedDataRecordImplementation extends NetObject implements IExt
     
     public boolean GetBoolean(int i) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetBoolean = null;
         try {
-            return (boolean)classInstance.Invoke("GetBoolean", i);
+            retObjectGetBoolean = classInstance.Invoke("GetBoolean", i);
+            return (boolean)retObjectGetBoolean;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectGetBoolean != null ? retObjectGetBoolean.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -163,9 +167,13 @@ public class IExtendedDataRecordImplementation extends NetObject implements IExt
 
     public boolean IsDBNull(int i) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsDBNull = null;
         try {
-            return (boolean)classInstance.Invoke("IsDBNull", i);
+            retObjectIsDBNull = classInstance.Invoke("IsDBNull", i);
+            return (boolean)retObjectIsDBNull;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsDBNull != null ? retObjectIsDBNull.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -173,9 +181,20 @@ public class IExtendedDataRecordImplementation extends NetObject implements IExt
 
     public byte GetByte(int i) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetByte = null;
         try {
-            return (byte)classInstance.Invoke("GetByte", i);
+            retObjectGetByte = classInstance.Invoke("GetByte", i);
+            return (byte)retObjectGetByte;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetByte_ToString = retObjectGetByte == null ? "null" : retObjectGetByte.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetByteNumber = (java.lang.Number)retObjectGetByte;
+                return retObjectGetByteNumber.byteValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into byte and, as fallback solution, into java.lang.Number", retObjectGetByte != null ? retObjectGetByte.getClass() : "null", retObjectGetByte_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,9 +202,13 @@ public class IExtendedDataRecordImplementation extends NetObject implements IExt
 
     public char GetChar(int i) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetChar = null;
         try {
-            return (char)classInstance.Invoke("GetChar", i);
+            retObjectGetChar = classInstance.Invoke("GetChar", i);
+            return (char)retObjectGetChar;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into char", retObjectGetChar != null ? retObjectGetChar.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,9 +216,20 @@ public class IExtendedDataRecordImplementation extends NetObject implements IExt
 
     public double GetDouble(int i) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDouble = null;
         try {
-            return (double)classInstance.Invoke("GetDouble", i);
+            retObjectGetDouble = classInstance.Invoke("GetDouble", i);
+            return (double)retObjectGetDouble;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetDouble_ToString = retObjectGetDouble == null ? "null" : retObjectGetDouble.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetDoubleNumber = (java.lang.Number)retObjectGetDouble;
+                return retObjectGetDoubleNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectGetDouble != null ? retObjectGetDouble.getClass() : "null", retObjectGetDouble_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,9 +237,20 @@ public class IExtendedDataRecordImplementation extends NetObject implements IExt
 
     public short GetInt16(int i) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetInt16 = null;
         try {
-            return (short)classInstance.Invoke("GetInt16", i);
+            retObjectGetInt16 = classInstance.Invoke("GetInt16", i);
+            return (short)retObjectGetInt16;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetInt16_ToString = retObjectGetInt16 == null ? "null" : retObjectGetInt16.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetInt16Number = (java.lang.Number)retObjectGetInt16;
+                return retObjectGetInt16Number.shortValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into short and, as fallback solution, into java.lang.Number", retObjectGetInt16 != null ? retObjectGetInt16.getClass() : "null", retObjectGetInt16_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,9 +258,20 @@ public class IExtendedDataRecordImplementation extends NetObject implements IExt
 
     public int GetInt32(int i) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetInt32 = null;
         try {
-            return (int)classInstance.Invoke("GetInt32", i);
+            retObjectGetInt32 = classInstance.Invoke("GetInt32", i);
+            return (int)retObjectGetInt32;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetInt32_ToString = retObjectGetInt32 == null ? "null" : retObjectGetInt32.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetInt32Number = (java.lang.Number)retObjectGetInt32;
+                return retObjectGetInt32Number.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetInt32 != null ? retObjectGetInt32.getClass() : "null", retObjectGetInt32_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -223,9 +279,20 @@ public class IExtendedDataRecordImplementation extends NetObject implements IExt
 
     public int GetOrdinal(java.lang.String name) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetOrdinal = null;
         try {
-            return (int)classInstance.Invoke("GetOrdinal", name);
+            retObjectGetOrdinal = classInstance.Invoke("GetOrdinal", name);
+            return (int)retObjectGetOrdinal;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetOrdinal_ToString = retObjectGetOrdinal == null ? "null" : retObjectGetOrdinal.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetOrdinalNumber = (java.lang.Number)retObjectGetOrdinal;
+                return retObjectGetOrdinalNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetOrdinal != null ? retObjectGetOrdinal.getClass() : "null", retObjectGetOrdinal_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -233,9 +300,20 @@ public class IExtendedDataRecordImplementation extends NetObject implements IExt
 
     public int GetValues(NetObject[] values) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetValues = null;
         try {
-            return (int)classInstance.Invoke("GetValues", (java.lang.Object)toObjectFromArray(values));
+            retObjectGetValues = classInstance.Invoke("GetValues", (java.lang.Object)toObjectFromArray(values));
+            return (int)retObjectGetValues;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetValues_ToString = retObjectGetValues == null ? "null" : retObjectGetValues.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetValuesNumber = (java.lang.Number)retObjectGetValues;
+                return retObjectGetValuesNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetValues != null ? retObjectGetValues.getClass() : "null", retObjectGetValues_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -243,9 +321,20 @@ public class IExtendedDataRecordImplementation extends NetObject implements IExt
 
     public long GetBytes(int i, long fieldOffset, byte[] buffer, int bufferoffset, int length) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetBytes = null;
         try {
-            return (long)classInstance.Invoke("GetBytes", i, fieldOffset, buffer, bufferoffset, length);
+            retObjectGetBytes = classInstance.Invoke("GetBytes", i, fieldOffset, buffer, bufferoffset, length);
+            return (long)retObjectGetBytes;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetBytes_ToString = retObjectGetBytes == null ? "null" : retObjectGetBytes.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetBytesNumber = (java.lang.Number)retObjectGetBytes;
+                return retObjectGetBytesNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectGetBytes != null ? retObjectGetBytes.getClass() : "null", retObjectGetBytes_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -253,9 +342,20 @@ public class IExtendedDataRecordImplementation extends NetObject implements IExt
 
     public long GetBytes(int dupParam0, long dupParam1, JCORefOut dupParam2, int dupParam3, int dupParam4) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetBytes = null;
         try {
-            return (long)classInstance.Invoke("GetBytes", dupParam0, dupParam1, dupParam2.getJCRefOut(), dupParam3, dupParam4);
+            retObjectGetBytes = classInstance.Invoke("GetBytes", dupParam0, dupParam1, dupParam2.getJCRefOut(), dupParam3, dupParam4);
+            return (long)retObjectGetBytes;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetBytes_ToString = retObjectGetBytes == null ? "null" : retObjectGetBytes.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetBytesNumber = (java.lang.Number)retObjectGetBytes;
+                return retObjectGetBytesNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectGetBytes != null ? retObjectGetBytes.getClass() : "null", retObjectGetBytes_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -263,9 +363,20 @@ public class IExtendedDataRecordImplementation extends NetObject implements IExt
 
     public long GetChars(int i, long fieldoffset, char[] buffer, int bufferoffset, int length) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetChars = null;
         try {
-            return (long)classInstance.Invoke("GetChars", i, fieldoffset, buffer, bufferoffset, length);
+            retObjectGetChars = classInstance.Invoke("GetChars", i, fieldoffset, buffer, bufferoffset, length);
+            return (long)retObjectGetChars;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetChars_ToString = retObjectGetChars == null ? "null" : retObjectGetChars.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetCharsNumber = (java.lang.Number)retObjectGetChars;
+                return retObjectGetCharsNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectGetChars != null ? retObjectGetChars.getClass() : "null", retObjectGetChars_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -273,9 +384,20 @@ public class IExtendedDataRecordImplementation extends NetObject implements IExt
 
     public long GetChars(int dupParam0, long dupParam1, JCORefOut dupParam2, int dupParam3, int dupParam4) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetChars = null;
         try {
-            return (long)classInstance.Invoke("GetChars", dupParam0, dupParam1, dupParam2.getJCRefOut(), dupParam3, dupParam4);
+            retObjectGetChars = classInstance.Invoke("GetChars", dupParam0, dupParam1, dupParam2.getJCRefOut(), dupParam3, dupParam4);
+            return (long)retObjectGetChars;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetChars_ToString = retObjectGetChars == null ? "null" : retObjectGetChars.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetCharsNumber = (java.lang.Number)retObjectGetChars;
+                return retObjectGetCharsNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectGetChars != null ? retObjectGetChars.getClass() : "null", retObjectGetChars_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -283,9 +405,20 @@ public class IExtendedDataRecordImplementation extends NetObject implements IExt
 
     public long GetInt64(int i) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetInt64 = null;
         try {
-            return (long)classInstance.Invoke("GetInt64", i);
+            retObjectGetInt64 = classInstance.Invoke("GetInt64", i);
+            return (long)retObjectGetInt64;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetInt64_ToString = retObjectGetInt64 == null ? "null" : retObjectGetInt64.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetInt64Number = (java.lang.Number)retObjectGetInt64;
+                return retObjectGetInt64Number.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectGetInt64 != null ? retObjectGetInt64.getClass() : "null", retObjectGetInt64_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -293,10 +426,14 @@ public class IExtendedDataRecordImplementation extends NetObject implements IExt
 
     public Single GetFloat(int i) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetFloat = null;
         try {
-            JCObject objGetFloat = (JCObject)classInstance.Invoke("GetFloat", i);
+            retObjectGetFloat = classInstance.Invoke("GetFloat", i);
+            JCObject objGetFloat = (JCObject)retObjectGetFloat;
             return new Single(objGetFloat);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetFloat != null ? retObjectGetFloat.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -304,10 +441,14 @@ public class IExtendedDataRecordImplementation extends NetObject implements IExt
 
     public DbDataReader GetDataReader(int i) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDataReader = null;
         try {
-            JCObject objGetDataReader = (JCObject)classInstance.Invoke("GetDataReader", i);
+            retObjectGetDataReader = classInstance.Invoke("GetDataReader", i);
+            JCObject objGetDataReader = (JCObject)retObjectGetDataReader;
             return new DbDataReader(objGetDataReader);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetDataReader != null ? retObjectGetDataReader.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -315,10 +456,14 @@ public class IExtendedDataRecordImplementation extends NetObject implements IExt
 
     public DbDataRecord GetDataRecord(int i) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDataRecord = null;
         try {
-            JCObject objGetDataRecord = (JCObject)classInstance.Invoke("GetDataRecord", i);
+            retObjectGetDataRecord = classInstance.Invoke("GetDataRecord", i);
+            JCObject objGetDataRecord = (JCObject)retObjectGetDataRecord;
             return new DbDataRecord(objGetDataRecord);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetDataRecord != null ? retObjectGetDataRecord.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -326,10 +471,14 @@ public class IExtendedDataRecordImplementation extends NetObject implements IExt
 
     public IDataReader GetData(int i) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetData = null;
         try {
-            JCObject objGetData = (JCObject)classInstance.Invoke("GetData", i);
+            retObjectGetData = classInstance.Invoke("GetData", i);
+            JCObject objGetData = (JCObject)retObjectGetData;
             return new IDataReaderImplementation(objGetData);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetData != null ? retObjectGetData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -337,10 +486,14 @@ public class IExtendedDataRecordImplementation extends NetObject implements IExt
 
     public DateTime GetDateTime(int i) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDateTime = null;
         try {
-            JCObject objGetDateTime = (JCObject)classInstance.Invoke("GetDateTime", i);
+            retObjectGetDateTime = classInstance.Invoke("GetDateTime", i);
+            JCObject objGetDateTime = (JCObject)retObjectGetDateTime;
             return new DateTime(objGetDateTime);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetDateTime != null ? retObjectGetDateTime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -348,10 +501,14 @@ public class IExtendedDataRecordImplementation extends NetObject implements IExt
 
     public Decimal GetDecimal(int i) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDecimal = null;
         try {
-            JCObject objGetDecimal = (JCObject)classInstance.Invoke("GetDecimal", i);
+            retObjectGetDecimal = classInstance.Invoke("GetDecimal", i);
+            JCObject objGetDecimal = (JCObject)retObjectGetDecimal;
             return new Decimal(objGetDecimal);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetDecimal != null ? retObjectGetDecimal.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -359,10 +516,14 @@ public class IExtendedDataRecordImplementation extends NetObject implements IExt
 
     public Guid GetGuid(int i) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetGuid = null;
         try {
-            JCObject objGetGuid = (JCObject)classInstance.Invoke("GetGuid", i);
+            retObjectGetGuid = classInstance.Invoke("GetGuid", i);
+            JCObject objGetGuid = (JCObject)retObjectGetGuid;
             return new Guid(objGetGuid);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetGuid != null ? retObjectGetGuid.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -370,10 +531,14 @@ public class IExtendedDataRecordImplementation extends NetObject implements IExt
 
     public NetObject GetValue(int i) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetValue = null;
         try {
-            JCObject objGetValue = (JCObject)classInstance.Invoke("GetValue", i);
+            retObjectGetValue = classInstance.Invoke("GetValue", i);
+            JCObject objGetValue = (JCObject)retObjectGetValue;
             return new NetObject(objGetValue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetValue != null ? retObjectGetValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -381,9 +546,13 @@ public class IExtendedDataRecordImplementation extends NetObject implements IExt
 
     public java.lang.String GetDataTypeName(int i) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDataTypeName = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetDataTypeName", i);
+            retObjectGetDataTypeName = classInstance.Invoke("GetDataTypeName", i);
+            return (java.lang.String)retObjectGetDataTypeName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetDataTypeName != null ? retObjectGetDataTypeName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -391,9 +560,13 @@ public class IExtendedDataRecordImplementation extends NetObject implements IExt
 
     public java.lang.String GetName(int i) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetName = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetName", i);
+            retObjectGetName = classInstance.Invoke("GetName", i);
+            return (java.lang.String)retObjectGetName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetName != null ? retObjectGetName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -401,9 +574,13 @@ public class IExtendedDataRecordImplementation extends NetObject implements IExt
 
     public java.lang.String GetString(int i) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetString = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetString", i);
+            retObjectGetString = classInstance.Invoke("GetString", i);
+            return (java.lang.String)retObjectGetString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetString != null ? retObjectGetString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -411,10 +588,14 @@ public class IExtendedDataRecordImplementation extends NetObject implements IExt
 
     public NetType GetFieldType(int i) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetFieldType = null;
         try {
-            JCObject objGetFieldType = (JCObject)classInstance.Invoke("GetFieldType", i);
+            retObjectGetFieldType = classInstance.Invoke("GetFieldType", i);
+            JCObject objGetFieldType = (JCObject)retObjectGetFieldType;
             return new NetType(objGetFieldType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetFieldType != null ? retObjectGetFieldType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -426,9 +607,20 @@ public class IExtendedDataRecordImplementation extends NetObject implements IExt
     
     public int getFieldCount() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFieldCount = null;
         try {
-            return (int)classInstance.Get("FieldCount");
+            retObjectFieldCount = classInstance.Get("FieldCount");
+            return (int)retObjectFieldCount;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectFieldCount_ToString = retObjectFieldCount == null ? "null" : retObjectFieldCount.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectFieldCountNumber = (java.lang.Number)retObjectFieldCount;
+                return retObjectFieldCountNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectFieldCount != null ? retObjectFieldCount.getClass() : "null", retObjectFieldCount_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -436,10 +628,14 @@ public class IExtendedDataRecordImplementation extends NetObject implements IExt
 
     public DataRecordInfo getDataRecordInfo() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDataRecordInfo = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DataRecordInfo");
+            retObjectDataRecordInfo = classInstance.Get("DataRecordInfo");
+            JCObject val = (JCObject)retObjectDataRecordInfo;
             return new DataRecordInfo(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDataRecordInfo != null ? retObjectDataRecordInfo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -188,9 +188,13 @@ public class Atom10FeedFormatter extends SyndicationFeedFormatter implements sys
     
     public boolean CanRead(XmlReader reader) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanRead = null;
         try {
-            return (boolean)classInstance.Invoke("CanRead", reader == null ? null : reader.getJCOInstance());
+            retObjectCanRead = classInstance.Invoke("CanRead", reader == null ? null : reader.getJCOInstance());
+            return (boolean)retObjectCanRead;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCanRead != null ? retObjectCanRead.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,7 +202,7 @@ public class Atom10FeedFormatter extends SyndicationFeedFormatter implements sys
 
     public void ReadFrom(XmlReader reader) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationErrorsException, system.IndexOutOfRangeException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException, system.UriFormatException, system.xml.XmlException, system.NotSupportedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ReadFrom", reader == null ? null : reader.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -208,7 +212,7 @@ public class Atom10FeedFormatter extends SyndicationFeedFormatter implements sys
 
     public void WriteTo(XmlWriter writer) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.UriFormatException, system.xml.XmlException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteTo", writer == null ? null : writer.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -222,7 +226,7 @@ public class Atom10FeedFormatter extends SyndicationFeedFormatter implements sys
      */
     @Deprecated 
     public XmlSchema GetSchema() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIXmlSerializable to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIXmlSerializable to obtain the full interface.");
     }
 
     /**
@@ -231,7 +235,7 @@ public class Atom10FeedFormatter extends SyndicationFeedFormatter implements sys
      */
     @Deprecated 
     public void ReadXml(XmlReader reader) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIXmlSerializable to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIXmlSerializable to obtain the full interface.");
     }
 
     /**
@@ -240,7 +244,7 @@ public class Atom10FeedFormatter extends SyndicationFeedFormatter implements sys
      */
     @Deprecated 
     public void WriteXml(XmlWriter writer) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIXmlSerializable to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIXmlSerializable to obtain the full interface.");
     }
 
 
@@ -249,9 +253,13 @@ public class Atom10FeedFormatter extends SyndicationFeedFormatter implements sys
     
     public boolean getPreserveAttributeExtensions() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPreserveAttributeExtensions = null;
         try {
-            return (boolean)classInstance.Get("PreserveAttributeExtensions");
+            retObjectPreserveAttributeExtensions = classInstance.Get("PreserveAttributeExtensions");
+            return (boolean)retObjectPreserveAttributeExtensions;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectPreserveAttributeExtensions != null ? retObjectPreserveAttributeExtensions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -259,7 +267,7 @@ public class Atom10FeedFormatter extends SyndicationFeedFormatter implements sys
 
     public void setPreserveAttributeExtensions(boolean PreserveAttributeExtensions) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PreserveAttributeExtensions", PreserveAttributeExtensions);
         } catch (JCNativeException jcne) {
@@ -269,9 +277,13 @@ public class Atom10FeedFormatter extends SyndicationFeedFormatter implements sys
 
     public boolean getPreserveElementExtensions() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPreserveElementExtensions = null;
         try {
-            return (boolean)classInstance.Get("PreserveElementExtensions");
+            retObjectPreserveElementExtensions = classInstance.Get("PreserveElementExtensions");
+            return (boolean)retObjectPreserveElementExtensions;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectPreserveElementExtensions != null ? retObjectPreserveElementExtensions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -279,7 +291,7 @@ public class Atom10FeedFormatter extends SyndicationFeedFormatter implements sys
 
     public void setPreserveElementExtensions(boolean PreserveElementExtensions) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PreserveElementExtensions", PreserveElementExtensions);
         } catch (JCNativeException jcne) {

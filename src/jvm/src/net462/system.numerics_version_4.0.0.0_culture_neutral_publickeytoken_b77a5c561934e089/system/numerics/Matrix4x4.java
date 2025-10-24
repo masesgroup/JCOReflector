@@ -182,9 +182,13 @@ public class Matrix4x4 extends ValueType  {
     
     public static boolean Decompose(Matrix4x4 matrix, JCORefOut<Vector3> scale, JCORefOut<Quaternion> rotation, JCORefOut<Vector3> translation) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDecompose = null;
         try {
-            return (boolean)classType.Invoke("Decompose", matrix == null ? null : matrix.getJCOInstance(), scale.getJCRefOut(), rotation.getJCRefOut(), translation.getJCRefOut());
+            retObjectDecompose = classType.Invoke("Decompose", matrix == null ? null : matrix.getJCOInstance(), scale.getJCRefOut(), rotation.getJCRefOut(), translation.getJCRefOut());
+            return (boolean)retObjectDecompose;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectDecompose != null ? retObjectDecompose.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,9 +196,13 @@ public class Matrix4x4 extends ValueType  {
 
     public boolean Equals(Matrix4x4 other) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEquals = null;
         try {
-            return (boolean)classInstance.Invoke("Equals", other == null ? null : other.getJCOInstance());
+            retObjectEquals = classInstance.Invoke("Equals", other == null ? null : other.getJCOInstance());
+            return (boolean)retObjectEquals;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectEquals != null ? retObjectEquals.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,9 +210,13 @@ public class Matrix4x4 extends ValueType  {
 
     public static boolean Invert(Matrix4x4 matrix, JCORefOut<Matrix4x4> result) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectInvert = null;
         try {
-            return (boolean)classType.Invoke("Invert", matrix == null ? null : matrix.getJCOInstance(), result.getJCRefOut());
+            retObjectInvert = classType.Invoke("Invert", matrix == null ? null : matrix.getJCOInstance(), result.getJCRefOut());
+            return (boolean)retObjectInvert;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectInvert != null ? retObjectInvert.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -212,10 +224,14 @@ public class Matrix4x4 extends ValueType  {
 
     public Single GetDeterminant() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDeterminant = null;
         try {
-            JCObject objGetDeterminant = (JCObject)classInstance.Invoke("GetDeterminant");
+            retObjectGetDeterminant = classInstance.Invoke("GetDeterminant");
+            JCObject objGetDeterminant = (JCObject)retObjectGetDeterminant;
             return new Single(objGetDeterminant);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetDeterminant != null ? retObjectGetDeterminant.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -223,10 +239,14 @@ public class Matrix4x4 extends ValueType  {
 
     public static Matrix4x4 Add(Matrix4x4 value1, Matrix4x4 value2) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAdd = null;
         try {
-            JCObject objAdd = (JCObject)classType.Invoke("Add", value1 == null ? null : value1.getJCOInstance(), value2 == null ? null : value2.getJCOInstance());
+            retObjectAdd = classType.Invoke("Add", value1 == null ? null : value1.getJCOInstance(), value2 == null ? null : value2.getJCOInstance());
+            JCObject objAdd = (JCObject)retObjectAdd;
             return new Matrix4x4(objAdd);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAdd != null ? retObjectAdd.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -234,10 +254,14 @@ public class Matrix4x4 extends ValueType  {
 
     public static Matrix4x4 CreateBillboard(Vector3 objectPosition, Vector3 cameraPosition, Vector3 cameraUpVector, Vector3 cameraForwardVector) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateBillboard = null;
         try {
-            JCObject objCreateBillboard = (JCObject)classType.Invoke("CreateBillboard", objectPosition == null ? null : objectPosition.getJCOInstance(), cameraPosition == null ? null : cameraPosition.getJCOInstance(), cameraUpVector == null ? null : cameraUpVector.getJCOInstance(), cameraForwardVector == null ? null : cameraForwardVector.getJCOInstance());
+            retObjectCreateBillboard = classType.Invoke("CreateBillboard", objectPosition == null ? null : objectPosition.getJCOInstance(), cameraPosition == null ? null : cameraPosition.getJCOInstance(), cameraUpVector == null ? null : cameraUpVector.getJCOInstance(), cameraForwardVector == null ? null : cameraForwardVector.getJCOInstance());
+            JCObject objCreateBillboard = (JCObject)retObjectCreateBillboard;
             return new Matrix4x4(objCreateBillboard);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateBillboard != null ? retObjectCreateBillboard.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -245,10 +269,14 @@ public class Matrix4x4 extends ValueType  {
 
     public static Matrix4x4 CreateConstrainedBillboard(Vector3 objectPosition, Vector3 cameraPosition, Vector3 rotateAxis, Vector3 cameraForwardVector, Vector3 objectForwardVector) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateConstrainedBillboard = null;
         try {
-            JCObject objCreateConstrainedBillboard = (JCObject)classType.Invoke("CreateConstrainedBillboard", objectPosition == null ? null : objectPosition.getJCOInstance(), cameraPosition == null ? null : cameraPosition.getJCOInstance(), rotateAxis == null ? null : rotateAxis.getJCOInstance(), cameraForwardVector == null ? null : cameraForwardVector.getJCOInstance(), objectForwardVector == null ? null : objectForwardVector.getJCOInstance());
+            retObjectCreateConstrainedBillboard = classType.Invoke("CreateConstrainedBillboard", objectPosition == null ? null : objectPosition.getJCOInstance(), cameraPosition == null ? null : cameraPosition.getJCOInstance(), rotateAxis == null ? null : rotateAxis.getJCOInstance(), cameraForwardVector == null ? null : cameraForwardVector.getJCOInstance(), objectForwardVector == null ? null : objectForwardVector.getJCOInstance());
+            JCObject objCreateConstrainedBillboard = (JCObject)retObjectCreateConstrainedBillboard;
             return new Matrix4x4(objCreateConstrainedBillboard);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateConstrainedBillboard != null ? retObjectCreateConstrainedBillboard.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -256,10 +284,14 @@ public class Matrix4x4 extends ValueType  {
 
     public static Matrix4x4 CreateFromAxisAngle(Vector3 axis, Single angle) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateFromAxisAngle = null;
         try {
-            JCObject objCreateFromAxisAngle = (JCObject)classType.Invoke("CreateFromAxisAngle", axis == null ? null : axis.getJCOInstance(), angle == null ? null : angle.getJCOInstance());
+            retObjectCreateFromAxisAngle = classType.Invoke("CreateFromAxisAngle", axis == null ? null : axis.getJCOInstance(), angle == null ? null : angle.getJCOInstance());
+            JCObject objCreateFromAxisAngle = (JCObject)retObjectCreateFromAxisAngle;
             return new Matrix4x4(objCreateFromAxisAngle);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateFromAxisAngle != null ? retObjectCreateFromAxisAngle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -267,10 +299,14 @@ public class Matrix4x4 extends ValueType  {
 
     public static Matrix4x4 CreateFromQuaternion(Quaternion quaternion) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateFromQuaternion = null;
         try {
-            JCObject objCreateFromQuaternion = (JCObject)classType.Invoke("CreateFromQuaternion", quaternion == null ? null : quaternion.getJCOInstance());
+            retObjectCreateFromQuaternion = classType.Invoke("CreateFromQuaternion", quaternion == null ? null : quaternion.getJCOInstance());
+            JCObject objCreateFromQuaternion = (JCObject)retObjectCreateFromQuaternion;
             return new Matrix4x4(objCreateFromQuaternion);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateFromQuaternion != null ? retObjectCreateFromQuaternion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -278,10 +314,14 @@ public class Matrix4x4 extends ValueType  {
 
     public static Matrix4x4 CreateFromYawPitchRoll(Single yaw, Single pitch, Single roll) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateFromYawPitchRoll = null;
         try {
-            JCObject objCreateFromYawPitchRoll = (JCObject)classType.Invoke("CreateFromYawPitchRoll", yaw == null ? null : yaw.getJCOInstance(), pitch == null ? null : pitch.getJCOInstance(), roll == null ? null : roll.getJCOInstance());
+            retObjectCreateFromYawPitchRoll = classType.Invoke("CreateFromYawPitchRoll", yaw == null ? null : yaw.getJCOInstance(), pitch == null ? null : pitch.getJCOInstance(), roll == null ? null : roll.getJCOInstance());
+            JCObject objCreateFromYawPitchRoll = (JCObject)retObjectCreateFromYawPitchRoll;
             return new Matrix4x4(objCreateFromYawPitchRoll);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateFromYawPitchRoll != null ? retObjectCreateFromYawPitchRoll.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -289,10 +329,14 @@ public class Matrix4x4 extends ValueType  {
 
     public static Matrix4x4 CreateLookAt(Vector3 cameraPosition, Vector3 cameraTarget, Vector3 cameraUpVector) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateLookAt = null;
         try {
-            JCObject objCreateLookAt = (JCObject)classType.Invoke("CreateLookAt", cameraPosition == null ? null : cameraPosition.getJCOInstance(), cameraTarget == null ? null : cameraTarget.getJCOInstance(), cameraUpVector == null ? null : cameraUpVector.getJCOInstance());
+            retObjectCreateLookAt = classType.Invoke("CreateLookAt", cameraPosition == null ? null : cameraPosition.getJCOInstance(), cameraTarget == null ? null : cameraTarget.getJCOInstance(), cameraUpVector == null ? null : cameraUpVector.getJCOInstance());
+            JCObject objCreateLookAt = (JCObject)retObjectCreateLookAt;
             return new Matrix4x4(objCreateLookAt);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateLookAt != null ? retObjectCreateLookAt.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -300,10 +344,14 @@ public class Matrix4x4 extends ValueType  {
 
     public static Matrix4x4 CreateOrthographic(Single width, Single height, Single zNearPlane, Single zFarPlane) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateOrthographic = null;
         try {
-            JCObject objCreateOrthographic = (JCObject)classType.Invoke("CreateOrthographic", width == null ? null : width.getJCOInstance(), height == null ? null : height.getJCOInstance(), zNearPlane == null ? null : zNearPlane.getJCOInstance(), zFarPlane == null ? null : zFarPlane.getJCOInstance());
+            retObjectCreateOrthographic = classType.Invoke("CreateOrthographic", width == null ? null : width.getJCOInstance(), height == null ? null : height.getJCOInstance(), zNearPlane == null ? null : zNearPlane.getJCOInstance(), zFarPlane == null ? null : zFarPlane.getJCOInstance());
+            JCObject objCreateOrthographic = (JCObject)retObjectCreateOrthographic;
             return new Matrix4x4(objCreateOrthographic);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateOrthographic != null ? retObjectCreateOrthographic.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -311,10 +359,14 @@ public class Matrix4x4 extends ValueType  {
 
     public static Matrix4x4 CreateOrthographicOffCenter(Single left, Single right, Single bottom, Single top, Single zNearPlane, Single zFarPlane) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateOrthographicOffCenter = null;
         try {
-            JCObject objCreateOrthographicOffCenter = (JCObject)classType.Invoke("CreateOrthographicOffCenter", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), bottom == null ? null : bottom.getJCOInstance(), top == null ? null : top.getJCOInstance(), zNearPlane == null ? null : zNearPlane.getJCOInstance(), zFarPlane == null ? null : zFarPlane.getJCOInstance());
+            retObjectCreateOrthographicOffCenter = classType.Invoke("CreateOrthographicOffCenter", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), bottom == null ? null : bottom.getJCOInstance(), top == null ? null : top.getJCOInstance(), zNearPlane == null ? null : zNearPlane.getJCOInstance(), zFarPlane == null ? null : zFarPlane.getJCOInstance());
+            JCObject objCreateOrthographicOffCenter = (JCObject)retObjectCreateOrthographicOffCenter;
             return new Matrix4x4(objCreateOrthographicOffCenter);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateOrthographicOffCenter != null ? retObjectCreateOrthographicOffCenter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -322,10 +374,14 @@ public class Matrix4x4 extends ValueType  {
 
     public static Matrix4x4 CreatePerspective(Single width, Single height, Single nearPlaneDistance, Single farPlaneDistance) throws Throwable, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreatePerspective = null;
         try {
-            JCObject objCreatePerspective = (JCObject)classType.Invoke("CreatePerspective", width == null ? null : width.getJCOInstance(), height == null ? null : height.getJCOInstance(), nearPlaneDistance == null ? null : nearPlaneDistance.getJCOInstance(), farPlaneDistance == null ? null : farPlaneDistance.getJCOInstance());
+            retObjectCreatePerspective = classType.Invoke("CreatePerspective", width == null ? null : width.getJCOInstance(), height == null ? null : height.getJCOInstance(), nearPlaneDistance == null ? null : nearPlaneDistance.getJCOInstance(), farPlaneDistance == null ? null : farPlaneDistance.getJCOInstance());
+            JCObject objCreatePerspective = (JCObject)retObjectCreatePerspective;
             return new Matrix4x4(objCreatePerspective);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreatePerspective != null ? retObjectCreatePerspective.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -333,10 +389,14 @@ public class Matrix4x4 extends ValueType  {
 
     public static Matrix4x4 CreatePerspectiveFieldOfView(Single fieldOfView, Single aspectRatio, Single nearPlaneDistance, Single farPlaneDistance) throws Throwable, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreatePerspectiveFieldOfView = null;
         try {
-            JCObject objCreatePerspectiveFieldOfView = (JCObject)classType.Invoke("CreatePerspectiveFieldOfView", fieldOfView == null ? null : fieldOfView.getJCOInstance(), aspectRatio == null ? null : aspectRatio.getJCOInstance(), nearPlaneDistance == null ? null : nearPlaneDistance.getJCOInstance(), farPlaneDistance == null ? null : farPlaneDistance.getJCOInstance());
+            retObjectCreatePerspectiveFieldOfView = classType.Invoke("CreatePerspectiveFieldOfView", fieldOfView == null ? null : fieldOfView.getJCOInstance(), aspectRatio == null ? null : aspectRatio.getJCOInstance(), nearPlaneDistance == null ? null : nearPlaneDistance.getJCOInstance(), farPlaneDistance == null ? null : farPlaneDistance.getJCOInstance());
+            JCObject objCreatePerspectiveFieldOfView = (JCObject)retObjectCreatePerspectiveFieldOfView;
             return new Matrix4x4(objCreatePerspectiveFieldOfView);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreatePerspectiveFieldOfView != null ? retObjectCreatePerspectiveFieldOfView.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -344,10 +404,14 @@ public class Matrix4x4 extends ValueType  {
 
     public static Matrix4x4 CreatePerspectiveOffCenter(Single left, Single right, Single bottom, Single top, Single nearPlaneDistance, Single farPlaneDistance) throws Throwable, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreatePerspectiveOffCenter = null;
         try {
-            JCObject objCreatePerspectiveOffCenter = (JCObject)classType.Invoke("CreatePerspectiveOffCenter", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), bottom == null ? null : bottom.getJCOInstance(), top == null ? null : top.getJCOInstance(), nearPlaneDistance == null ? null : nearPlaneDistance.getJCOInstance(), farPlaneDistance == null ? null : farPlaneDistance.getJCOInstance());
+            retObjectCreatePerspectiveOffCenter = classType.Invoke("CreatePerspectiveOffCenter", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), bottom == null ? null : bottom.getJCOInstance(), top == null ? null : top.getJCOInstance(), nearPlaneDistance == null ? null : nearPlaneDistance.getJCOInstance(), farPlaneDistance == null ? null : farPlaneDistance.getJCOInstance());
+            JCObject objCreatePerspectiveOffCenter = (JCObject)retObjectCreatePerspectiveOffCenter;
             return new Matrix4x4(objCreatePerspectiveOffCenter);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreatePerspectiveOffCenter != null ? retObjectCreatePerspectiveOffCenter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -355,10 +419,14 @@ public class Matrix4x4 extends ValueType  {
 
     public static Matrix4x4 CreateReflection(Plane value) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateReflection = null;
         try {
-            JCObject objCreateReflection = (JCObject)classType.Invoke("CreateReflection", value == null ? null : value.getJCOInstance());
+            retObjectCreateReflection = classType.Invoke("CreateReflection", value == null ? null : value.getJCOInstance());
+            JCObject objCreateReflection = (JCObject)retObjectCreateReflection;
             return new Matrix4x4(objCreateReflection);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateReflection != null ? retObjectCreateReflection.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -366,10 +434,14 @@ public class Matrix4x4 extends ValueType  {
 
     public static Matrix4x4 CreateRotationX(Single radians) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateRotationX = null;
         try {
-            JCObject objCreateRotationX = (JCObject)classType.Invoke("CreateRotationX", radians == null ? null : radians.getJCOInstance());
+            retObjectCreateRotationX = classType.Invoke("CreateRotationX", radians == null ? null : radians.getJCOInstance());
+            JCObject objCreateRotationX = (JCObject)retObjectCreateRotationX;
             return new Matrix4x4(objCreateRotationX);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateRotationX != null ? retObjectCreateRotationX.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -377,10 +449,14 @@ public class Matrix4x4 extends ValueType  {
 
     public static Matrix4x4 CreateRotationX(Single radians, Vector3 centerPoint) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateRotationX = null;
         try {
-            JCObject objCreateRotationX = (JCObject)classType.Invoke("CreateRotationX", radians == null ? null : radians.getJCOInstance(), centerPoint == null ? null : centerPoint.getJCOInstance());
+            retObjectCreateRotationX = classType.Invoke("CreateRotationX", radians == null ? null : radians.getJCOInstance(), centerPoint == null ? null : centerPoint.getJCOInstance());
+            JCObject objCreateRotationX = (JCObject)retObjectCreateRotationX;
             return new Matrix4x4(objCreateRotationX);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateRotationX != null ? retObjectCreateRotationX.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -388,10 +464,14 @@ public class Matrix4x4 extends ValueType  {
 
     public static Matrix4x4 CreateRotationY(Single radians) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateRotationY = null;
         try {
-            JCObject objCreateRotationY = (JCObject)classType.Invoke("CreateRotationY", radians == null ? null : radians.getJCOInstance());
+            retObjectCreateRotationY = classType.Invoke("CreateRotationY", radians == null ? null : radians.getJCOInstance());
+            JCObject objCreateRotationY = (JCObject)retObjectCreateRotationY;
             return new Matrix4x4(objCreateRotationY);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateRotationY != null ? retObjectCreateRotationY.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -399,10 +479,14 @@ public class Matrix4x4 extends ValueType  {
 
     public static Matrix4x4 CreateRotationY(Single radians, Vector3 centerPoint) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateRotationY = null;
         try {
-            JCObject objCreateRotationY = (JCObject)classType.Invoke("CreateRotationY", radians == null ? null : radians.getJCOInstance(), centerPoint == null ? null : centerPoint.getJCOInstance());
+            retObjectCreateRotationY = classType.Invoke("CreateRotationY", radians == null ? null : radians.getJCOInstance(), centerPoint == null ? null : centerPoint.getJCOInstance());
+            JCObject objCreateRotationY = (JCObject)retObjectCreateRotationY;
             return new Matrix4x4(objCreateRotationY);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateRotationY != null ? retObjectCreateRotationY.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -410,10 +494,14 @@ public class Matrix4x4 extends ValueType  {
 
     public static Matrix4x4 CreateRotationZ(Single radians) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateRotationZ = null;
         try {
-            JCObject objCreateRotationZ = (JCObject)classType.Invoke("CreateRotationZ", radians == null ? null : radians.getJCOInstance());
+            retObjectCreateRotationZ = classType.Invoke("CreateRotationZ", radians == null ? null : radians.getJCOInstance());
+            JCObject objCreateRotationZ = (JCObject)retObjectCreateRotationZ;
             return new Matrix4x4(objCreateRotationZ);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateRotationZ != null ? retObjectCreateRotationZ.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -421,10 +509,14 @@ public class Matrix4x4 extends ValueType  {
 
     public static Matrix4x4 CreateRotationZ(Single radians, Vector3 centerPoint) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateRotationZ = null;
         try {
-            JCObject objCreateRotationZ = (JCObject)classType.Invoke("CreateRotationZ", radians == null ? null : radians.getJCOInstance(), centerPoint == null ? null : centerPoint.getJCOInstance());
+            retObjectCreateRotationZ = classType.Invoke("CreateRotationZ", radians == null ? null : radians.getJCOInstance(), centerPoint == null ? null : centerPoint.getJCOInstance());
+            JCObject objCreateRotationZ = (JCObject)retObjectCreateRotationZ;
             return new Matrix4x4(objCreateRotationZ);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateRotationZ != null ? retObjectCreateRotationZ.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -432,10 +524,14 @@ public class Matrix4x4 extends ValueType  {
 
     public static Matrix4x4 CreateScale(Single scale) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateScale = null;
         try {
-            JCObject objCreateScale = (JCObject)classType.Invoke("CreateScale", scale == null ? null : scale.getJCOInstance());
+            retObjectCreateScale = classType.Invoke("CreateScale", scale == null ? null : scale.getJCOInstance());
+            JCObject objCreateScale = (JCObject)retObjectCreateScale;
             return new Matrix4x4(objCreateScale);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateScale != null ? retObjectCreateScale.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -443,10 +539,14 @@ public class Matrix4x4 extends ValueType  {
 
     public static Matrix4x4 CreateScale(Single xScale, Single yScale, Single zScale) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateScale = null;
         try {
-            JCObject objCreateScale = (JCObject)classType.Invoke("CreateScale", xScale == null ? null : xScale.getJCOInstance(), yScale == null ? null : yScale.getJCOInstance(), zScale == null ? null : zScale.getJCOInstance());
+            retObjectCreateScale = classType.Invoke("CreateScale", xScale == null ? null : xScale.getJCOInstance(), yScale == null ? null : yScale.getJCOInstance(), zScale == null ? null : zScale.getJCOInstance());
+            JCObject objCreateScale = (JCObject)retObjectCreateScale;
             return new Matrix4x4(objCreateScale);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateScale != null ? retObjectCreateScale.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -454,10 +554,14 @@ public class Matrix4x4 extends ValueType  {
 
     public static Matrix4x4 CreateScale(Single xScale, Single yScale, Single zScale, Vector3 centerPoint) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateScale = null;
         try {
-            JCObject objCreateScale = (JCObject)classType.Invoke("CreateScale", xScale == null ? null : xScale.getJCOInstance(), yScale == null ? null : yScale.getJCOInstance(), zScale == null ? null : zScale.getJCOInstance(), centerPoint == null ? null : centerPoint.getJCOInstance());
+            retObjectCreateScale = classType.Invoke("CreateScale", xScale == null ? null : xScale.getJCOInstance(), yScale == null ? null : yScale.getJCOInstance(), zScale == null ? null : zScale.getJCOInstance(), centerPoint == null ? null : centerPoint.getJCOInstance());
+            JCObject objCreateScale = (JCObject)retObjectCreateScale;
             return new Matrix4x4(objCreateScale);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateScale != null ? retObjectCreateScale.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -465,10 +569,14 @@ public class Matrix4x4 extends ValueType  {
 
     public static Matrix4x4 CreateScale(Single scale, Vector3 centerPoint) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateScale = null;
         try {
-            JCObject objCreateScale = (JCObject)classType.Invoke("CreateScale", scale == null ? null : scale.getJCOInstance(), centerPoint == null ? null : centerPoint.getJCOInstance());
+            retObjectCreateScale = classType.Invoke("CreateScale", scale == null ? null : scale.getJCOInstance(), centerPoint == null ? null : centerPoint.getJCOInstance());
+            JCObject objCreateScale = (JCObject)retObjectCreateScale;
             return new Matrix4x4(objCreateScale);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateScale != null ? retObjectCreateScale.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -476,10 +584,14 @@ public class Matrix4x4 extends ValueType  {
 
     public static Matrix4x4 CreateScale(Vector3 scales) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateScale = null;
         try {
-            JCObject objCreateScale = (JCObject)classType.Invoke("CreateScale", scales == null ? null : scales.getJCOInstance());
+            retObjectCreateScale = classType.Invoke("CreateScale", scales == null ? null : scales.getJCOInstance());
+            JCObject objCreateScale = (JCObject)retObjectCreateScale;
             return new Matrix4x4(objCreateScale);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateScale != null ? retObjectCreateScale.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -487,10 +599,14 @@ public class Matrix4x4 extends ValueType  {
 
     public static Matrix4x4 CreateScale(Vector3 scales, Vector3 centerPoint) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateScale = null;
         try {
-            JCObject objCreateScale = (JCObject)classType.Invoke("CreateScale", scales == null ? null : scales.getJCOInstance(), centerPoint == null ? null : centerPoint.getJCOInstance());
+            retObjectCreateScale = classType.Invoke("CreateScale", scales == null ? null : scales.getJCOInstance(), centerPoint == null ? null : centerPoint.getJCOInstance());
+            JCObject objCreateScale = (JCObject)retObjectCreateScale;
             return new Matrix4x4(objCreateScale);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateScale != null ? retObjectCreateScale.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -498,10 +614,14 @@ public class Matrix4x4 extends ValueType  {
 
     public static Matrix4x4 CreateShadow(Vector3 lightDirection, Plane plane) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateShadow = null;
         try {
-            JCObject objCreateShadow = (JCObject)classType.Invoke("CreateShadow", lightDirection == null ? null : lightDirection.getJCOInstance(), plane == null ? null : plane.getJCOInstance());
+            retObjectCreateShadow = classType.Invoke("CreateShadow", lightDirection == null ? null : lightDirection.getJCOInstance(), plane == null ? null : plane.getJCOInstance());
+            JCObject objCreateShadow = (JCObject)retObjectCreateShadow;
             return new Matrix4x4(objCreateShadow);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateShadow != null ? retObjectCreateShadow.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -509,10 +629,14 @@ public class Matrix4x4 extends ValueType  {
 
     public static Matrix4x4 CreateTranslation(Single xPosition, Single yPosition, Single zPosition) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateTranslation = null;
         try {
-            JCObject objCreateTranslation = (JCObject)classType.Invoke("CreateTranslation", xPosition == null ? null : xPosition.getJCOInstance(), yPosition == null ? null : yPosition.getJCOInstance(), zPosition == null ? null : zPosition.getJCOInstance());
+            retObjectCreateTranslation = classType.Invoke("CreateTranslation", xPosition == null ? null : xPosition.getJCOInstance(), yPosition == null ? null : yPosition.getJCOInstance(), zPosition == null ? null : zPosition.getJCOInstance());
+            JCObject objCreateTranslation = (JCObject)retObjectCreateTranslation;
             return new Matrix4x4(objCreateTranslation);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateTranslation != null ? retObjectCreateTranslation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -520,10 +644,14 @@ public class Matrix4x4 extends ValueType  {
 
     public static Matrix4x4 CreateTranslation(Vector3 position) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateTranslation = null;
         try {
-            JCObject objCreateTranslation = (JCObject)classType.Invoke("CreateTranslation", position == null ? null : position.getJCOInstance());
+            retObjectCreateTranslation = classType.Invoke("CreateTranslation", position == null ? null : position.getJCOInstance());
+            JCObject objCreateTranslation = (JCObject)retObjectCreateTranslation;
             return new Matrix4x4(objCreateTranslation);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateTranslation != null ? retObjectCreateTranslation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -531,10 +659,14 @@ public class Matrix4x4 extends ValueType  {
 
     public static Matrix4x4 CreateWorld(Vector3 position, Vector3 forward, Vector3 up) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateWorld = null;
         try {
-            JCObject objCreateWorld = (JCObject)classType.Invoke("CreateWorld", position == null ? null : position.getJCOInstance(), forward == null ? null : forward.getJCOInstance(), up == null ? null : up.getJCOInstance());
+            retObjectCreateWorld = classType.Invoke("CreateWorld", position == null ? null : position.getJCOInstance(), forward == null ? null : forward.getJCOInstance(), up == null ? null : up.getJCOInstance());
+            JCObject objCreateWorld = (JCObject)retObjectCreateWorld;
             return new Matrix4x4(objCreateWorld);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateWorld != null ? retObjectCreateWorld.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -542,10 +674,14 @@ public class Matrix4x4 extends ValueType  {
 
     public static Matrix4x4 Lerp(Matrix4x4 matrix1, Matrix4x4 matrix2, Single amount) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLerp = null;
         try {
-            JCObject objLerp = (JCObject)classType.Invoke("Lerp", matrix1 == null ? null : matrix1.getJCOInstance(), matrix2 == null ? null : matrix2.getJCOInstance(), amount == null ? null : amount.getJCOInstance());
+            retObjectLerp = classType.Invoke("Lerp", matrix1 == null ? null : matrix1.getJCOInstance(), matrix2 == null ? null : matrix2.getJCOInstance(), amount == null ? null : amount.getJCOInstance());
+            JCObject objLerp = (JCObject)retObjectLerp;
             return new Matrix4x4(objLerp);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLerp != null ? retObjectLerp.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -553,10 +689,14 @@ public class Matrix4x4 extends ValueType  {
 
     public static Matrix4x4 Multiply(Matrix4x4 value1, Single value2) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMultiply = null;
         try {
-            JCObject objMultiply = (JCObject)classType.Invoke("Multiply", value1 == null ? null : value1.getJCOInstance(), value2 == null ? null : value2.getJCOInstance());
+            retObjectMultiply = classType.Invoke("Multiply", value1 == null ? null : value1.getJCOInstance(), value2 == null ? null : value2.getJCOInstance());
+            JCObject objMultiply = (JCObject)retObjectMultiply;
             return new Matrix4x4(objMultiply);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMultiply != null ? retObjectMultiply.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -564,10 +704,14 @@ public class Matrix4x4 extends ValueType  {
 
     public static Matrix4x4 Multiply(Matrix4x4 value1, Matrix4x4 value2) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMultiply = null;
         try {
-            JCObject objMultiply = (JCObject)classType.Invoke("Multiply", value1 == null ? null : value1.getJCOInstance(), value2 == null ? null : value2.getJCOInstance());
+            retObjectMultiply = classType.Invoke("Multiply", value1 == null ? null : value1.getJCOInstance(), value2 == null ? null : value2.getJCOInstance());
+            JCObject objMultiply = (JCObject)retObjectMultiply;
             return new Matrix4x4(objMultiply);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMultiply != null ? retObjectMultiply.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -575,10 +719,14 @@ public class Matrix4x4 extends ValueType  {
 
     public static Matrix4x4 Negate(Matrix4x4 value) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectNegate = null;
         try {
-            JCObject objNegate = (JCObject)classType.Invoke("Negate", value == null ? null : value.getJCOInstance());
+            retObjectNegate = classType.Invoke("Negate", value == null ? null : value.getJCOInstance());
+            JCObject objNegate = (JCObject)retObjectNegate;
             return new Matrix4x4(objNegate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNegate != null ? retObjectNegate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -586,10 +734,14 @@ public class Matrix4x4 extends ValueType  {
 
     public static Matrix4x4 Subtract(Matrix4x4 value1, Matrix4x4 value2) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSubtract = null;
         try {
-            JCObject objSubtract = (JCObject)classType.Invoke("Subtract", value1 == null ? null : value1.getJCOInstance(), value2 == null ? null : value2.getJCOInstance());
+            retObjectSubtract = classType.Invoke("Subtract", value1 == null ? null : value1.getJCOInstance(), value2 == null ? null : value2.getJCOInstance());
+            JCObject objSubtract = (JCObject)retObjectSubtract;
             return new Matrix4x4(objSubtract);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSubtract != null ? retObjectSubtract.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -597,10 +749,14 @@ public class Matrix4x4 extends ValueType  {
 
     public static Matrix4x4 Transform(Matrix4x4 value, Quaternion rotation) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTransform = null;
         try {
-            JCObject objTransform = (JCObject)classType.Invoke("Transform", value == null ? null : value.getJCOInstance(), rotation == null ? null : rotation.getJCOInstance());
+            retObjectTransform = classType.Invoke("Transform", value == null ? null : value.getJCOInstance(), rotation == null ? null : rotation.getJCOInstance());
+            JCObject objTransform = (JCObject)retObjectTransform;
             return new Matrix4x4(objTransform);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTransform != null ? retObjectTransform.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -608,10 +764,14 @@ public class Matrix4x4 extends ValueType  {
 
     public static Matrix4x4 Transpose(Matrix4x4 matrix) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTranspose = null;
         try {
-            JCObject objTranspose = (JCObject)classType.Invoke("Transpose", matrix == null ? null : matrix.getJCOInstance());
+            retObjectTranspose = classType.Invoke("Transpose", matrix == null ? null : matrix.getJCOInstance());
+            JCObject objTranspose = (JCObject)retObjectTranspose;
             return new Matrix4x4(objTranspose);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTranspose != null ? retObjectTranspose.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -623,9 +783,13 @@ public class Matrix4x4 extends ValueType  {
     
     public boolean getIsIdentity() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsIdentity = null;
         try {
-            return (boolean)classInstance.Get("IsIdentity");
+            retObjectIsIdentity = classInstance.Get("IsIdentity");
+            return (boolean)retObjectIsIdentity;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsIdentity != null ? retObjectIsIdentity.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -633,10 +797,14 @@ public class Matrix4x4 extends ValueType  {
 
     public static Matrix4x4 getIdentity() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIdentity = null;
         try {
-            JCObject val = (JCObject)classType.Get("Identity");
+            retObjectIdentity = classType.Get("Identity");
+            JCObject val = (JCObject)retObjectIdentity;
             return new Matrix4x4(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIdentity != null ? retObjectIdentity.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -644,10 +812,14 @@ public class Matrix4x4 extends ValueType  {
 
     public Vector3 getTranslation() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTranslation = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Translation");
+            retObjectTranslation = classInstance.Get("Translation");
+            JCObject val = (JCObject)retObjectTranslation;
             return new Vector3(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTranslation != null ? retObjectTranslation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -655,7 +827,7 @@ public class Matrix4x4 extends ValueType  {
 
     public void setTranslation(Vector3 Translation) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Translation", Translation == null ? null : Translation.getJCOInstance());
         } catch (JCNativeException jcne) {

@@ -160,9 +160,13 @@ public class DataReaderExtensions extends NetObject  {
     
     public static boolean GetBoolean(DbDataReader reader, java.lang.String name) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetBoolean = null;
         try {
-            return (boolean)classType.Invoke("GetBoolean", reader == null ? null : reader.getJCOInstance(), name);
+            retObjectGetBoolean = classType.Invoke("GetBoolean", reader == null ? null : reader.getJCOInstance(), name);
+            return (boolean)retObjectGetBoolean;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectGetBoolean != null ? retObjectGetBoolean.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,9 +174,13 @@ public class DataReaderExtensions extends NetObject  {
 
     public static boolean IsDBNull(DbDataReader reader, java.lang.String name) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsDBNull = null;
         try {
-            return (boolean)classType.Invoke("IsDBNull", reader == null ? null : reader.getJCOInstance(), name);
+            retObjectIsDBNull = classType.Invoke("IsDBNull", reader == null ? null : reader.getJCOInstance(), name);
+            return (boolean)retObjectIsDBNull;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsDBNull != null ? retObjectIsDBNull.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,9 +188,20 @@ public class DataReaderExtensions extends NetObject  {
 
     public static byte GetByte(DbDataReader reader, java.lang.String name) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetByte = null;
         try {
-            return (byte)classType.Invoke("GetByte", reader == null ? null : reader.getJCOInstance(), name);
+            retObjectGetByte = classType.Invoke("GetByte", reader == null ? null : reader.getJCOInstance(), name);
+            return (byte)retObjectGetByte;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetByte_ToString = retObjectGetByte == null ? "null" : retObjectGetByte.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetByteNumber = (java.lang.Number)retObjectGetByte;
+                return retObjectGetByteNumber.byteValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into byte and, as fallback solution, into java.lang.Number", retObjectGetByte != null ? retObjectGetByte.getClass() : "null", retObjectGetByte_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,9 +209,13 @@ public class DataReaderExtensions extends NetObject  {
 
     public static char GetChar(DbDataReader reader, java.lang.String name) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetChar = null;
         try {
-            return (char)classType.Invoke("GetChar", reader == null ? null : reader.getJCOInstance(), name);
+            retObjectGetChar = classType.Invoke("GetChar", reader == null ? null : reader.getJCOInstance(), name);
+            return (char)retObjectGetChar;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into char", retObjectGetChar != null ? retObjectGetChar.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,9 +223,20 @@ public class DataReaderExtensions extends NetObject  {
 
     public static double GetDouble(DbDataReader reader, java.lang.String name) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetDouble = null;
         try {
-            return (double)classType.Invoke("GetDouble", reader == null ? null : reader.getJCOInstance(), name);
+            retObjectGetDouble = classType.Invoke("GetDouble", reader == null ? null : reader.getJCOInstance(), name);
+            return (double)retObjectGetDouble;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetDouble_ToString = retObjectGetDouble == null ? "null" : retObjectGetDouble.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetDoubleNumber = (java.lang.Number)retObjectGetDouble;
+                return retObjectGetDoubleNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectGetDouble != null ? retObjectGetDouble.getClass() : "null", retObjectGetDouble_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -210,9 +244,20 @@ public class DataReaderExtensions extends NetObject  {
 
     public static short GetInt16(DbDataReader reader, java.lang.String name) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetInt16 = null;
         try {
-            return (short)classType.Invoke("GetInt16", reader == null ? null : reader.getJCOInstance(), name);
+            retObjectGetInt16 = classType.Invoke("GetInt16", reader == null ? null : reader.getJCOInstance(), name);
+            return (short)retObjectGetInt16;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetInt16_ToString = retObjectGetInt16 == null ? "null" : retObjectGetInt16.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetInt16Number = (java.lang.Number)retObjectGetInt16;
+                return retObjectGetInt16Number.shortValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into short and, as fallback solution, into java.lang.Number", retObjectGetInt16 != null ? retObjectGetInt16.getClass() : "null", retObjectGetInt16_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -220,9 +265,20 @@ public class DataReaderExtensions extends NetObject  {
 
     public static int GetInt32(DbDataReader reader, java.lang.String name) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetInt32 = null;
         try {
-            return (int)classType.Invoke("GetInt32", reader == null ? null : reader.getJCOInstance(), name);
+            retObjectGetInt32 = classType.Invoke("GetInt32", reader == null ? null : reader.getJCOInstance(), name);
+            return (int)retObjectGetInt32;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetInt32_ToString = retObjectGetInt32 == null ? "null" : retObjectGetInt32.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetInt32Number = (java.lang.Number)retObjectGetInt32;
+                return retObjectGetInt32Number.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetInt32 != null ? retObjectGetInt32.getClass() : "null", retObjectGetInt32_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -230,9 +286,20 @@ public class DataReaderExtensions extends NetObject  {
 
     public static long GetBytes(DbDataReader reader, java.lang.String name, long dataOffset, byte[] buffer, int bufferOffset, int length) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetBytes = null;
         try {
-            return (long)classType.Invoke("GetBytes", reader == null ? null : reader.getJCOInstance(), name, dataOffset, buffer, bufferOffset, length);
+            retObjectGetBytes = classType.Invoke("GetBytes", reader == null ? null : reader.getJCOInstance(), name, dataOffset, buffer, bufferOffset, length);
+            return (long)retObjectGetBytes;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetBytes_ToString = retObjectGetBytes == null ? "null" : retObjectGetBytes.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetBytesNumber = (java.lang.Number)retObjectGetBytes;
+                return retObjectGetBytesNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectGetBytes != null ? retObjectGetBytes.getClass() : "null", retObjectGetBytes_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -240,9 +307,20 @@ public class DataReaderExtensions extends NetObject  {
 
     public static long GetBytes(DbDataReader dupParam0, java.lang.String dupParam1, long dupParam2, JCORefOut dupParam3, int dupParam4, int dupParam5) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetBytes = null;
         try {
-            return (long)classType.Invoke("GetBytes", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1, dupParam2, dupParam3.getJCRefOut(), dupParam4, dupParam5);
+            retObjectGetBytes = classType.Invoke("GetBytes", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1, dupParam2, dupParam3.getJCRefOut(), dupParam4, dupParam5);
+            return (long)retObjectGetBytes;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetBytes_ToString = retObjectGetBytes == null ? "null" : retObjectGetBytes.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetBytesNumber = (java.lang.Number)retObjectGetBytes;
+                return retObjectGetBytesNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectGetBytes != null ? retObjectGetBytes.getClass() : "null", retObjectGetBytes_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -250,9 +328,20 @@ public class DataReaderExtensions extends NetObject  {
 
     public static long GetChars(DbDataReader reader, java.lang.String name, long dataOffset, char[] buffer, int bufferOffset, int length) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetChars = null;
         try {
-            return (long)classType.Invoke("GetChars", reader == null ? null : reader.getJCOInstance(), name, dataOffset, buffer, bufferOffset, length);
+            retObjectGetChars = classType.Invoke("GetChars", reader == null ? null : reader.getJCOInstance(), name, dataOffset, buffer, bufferOffset, length);
+            return (long)retObjectGetChars;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetChars_ToString = retObjectGetChars == null ? "null" : retObjectGetChars.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetCharsNumber = (java.lang.Number)retObjectGetChars;
+                return retObjectGetCharsNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectGetChars != null ? retObjectGetChars.getClass() : "null", retObjectGetChars_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -260,9 +349,20 @@ public class DataReaderExtensions extends NetObject  {
 
     public static long GetChars(DbDataReader dupParam0, java.lang.String dupParam1, long dupParam2, JCORefOut dupParam3, int dupParam4, int dupParam5) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetChars = null;
         try {
-            return (long)classType.Invoke("GetChars", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1, dupParam2, dupParam3.getJCRefOut(), dupParam4, dupParam5);
+            retObjectGetChars = classType.Invoke("GetChars", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1, dupParam2, dupParam3.getJCRefOut(), dupParam4, dupParam5);
+            return (long)retObjectGetChars;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetChars_ToString = retObjectGetChars == null ? "null" : retObjectGetChars.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetCharsNumber = (java.lang.Number)retObjectGetChars;
+                return retObjectGetCharsNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectGetChars != null ? retObjectGetChars.getClass() : "null", retObjectGetChars_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -270,9 +370,20 @@ public class DataReaderExtensions extends NetObject  {
 
     public static long GetInt64(DbDataReader reader, java.lang.String name) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetInt64 = null;
         try {
-            return (long)classType.Invoke("GetInt64", reader == null ? null : reader.getJCOInstance(), name);
+            retObjectGetInt64 = classType.Invoke("GetInt64", reader == null ? null : reader.getJCOInstance(), name);
+            return (long)retObjectGetInt64;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetInt64_ToString = retObjectGetInt64 == null ? "null" : retObjectGetInt64.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetInt64Number = (java.lang.Number)retObjectGetInt64;
+                return retObjectGetInt64Number.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectGetInt64 != null ? retObjectGetInt64.getClass() : "null", retObjectGetInt64_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -280,10 +391,14 @@ public class DataReaderExtensions extends NetObject  {
 
     public static Single GetFloat(DbDataReader reader, java.lang.String name) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetFloat = null;
         try {
-            JCObject objGetFloat = (JCObject)classType.Invoke("GetFloat", reader == null ? null : reader.getJCOInstance(), name);
+            retObjectGetFloat = classType.Invoke("GetFloat", reader == null ? null : reader.getJCOInstance(), name);
+            JCObject objGetFloat = (JCObject)retObjectGetFloat;
             return new Single(objGetFloat);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetFloat != null ? retObjectGetFloat.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -291,10 +406,14 @@ public class DataReaderExtensions extends NetObject  {
 
     public static DbDataReader GetData(DbDataReader reader, java.lang.String name) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetData = null;
         try {
-            JCObject objGetData = (JCObject)classType.Invoke("GetData", reader == null ? null : reader.getJCOInstance(), name);
+            retObjectGetData = classType.Invoke("GetData", reader == null ? null : reader.getJCOInstance(), name);
+            JCObject objGetData = (JCObject)retObjectGetData;
             return new DbDataReader(objGetData);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetData != null ? retObjectGetData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -302,10 +421,14 @@ public class DataReaderExtensions extends NetObject  {
 
     public static DateTime GetDateTime(DbDataReader reader, java.lang.String name) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetDateTime = null;
         try {
-            JCObject objGetDateTime = (JCObject)classType.Invoke("GetDateTime", reader == null ? null : reader.getJCOInstance(), name);
+            retObjectGetDateTime = classType.Invoke("GetDateTime", reader == null ? null : reader.getJCOInstance(), name);
+            JCObject objGetDateTime = (JCObject)retObjectGetDateTime;
             return new DateTime(objGetDateTime);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetDateTime != null ? retObjectGetDateTime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -313,10 +436,14 @@ public class DataReaderExtensions extends NetObject  {
 
     public static Decimal GetDecimal(DbDataReader reader, java.lang.String name) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetDecimal = null;
         try {
-            JCObject objGetDecimal = (JCObject)classType.Invoke("GetDecimal", reader == null ? null : reader.getJCOInstance(), name);
+            retObjectGetDecimal = classType.Invoke("GetDecimal", reader == null ? null : reader.getJCOInstance(), name);
+            JCObject objGetDecimal = (JCObject)retObjectGetDecimal;
             return new Decimal(objGetDecimal);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetDecimal != null ? retObjectGetDecimal.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -324,10 +451,14 @@ public class DataReaderExtensions extends NetObject  {
 
     public static Guid GetGuid(DbDataReader reader, java.lang.String name) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetGuid = null;
         try {
-            JCObject objGetGuid = (JCObject)classType.Invoke("GetGuid", reader == null ? null : reader.getJCOInstance(), name);
+            retObjectGetGuid = classType.Invoke("GetGuid", reader == null ? null : reader.getJCOInstance(), name);
+            JCObject objGetGuid = (JCObject)retObjectGetGuid;
             return new Guid(objGetGuid);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetGuid != null ? retObjectGetGuid.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -335,10 +466,14 @@ public class DataReaderExtensions extends NetObject  {
 
     public static Stream GetStream(DbDataReader reader, java.lang.String name) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetStream = null;
         try {
-            JCObject objGetStream = (JCObject)classType.Invoke("GetStream", reader == null ? null : reader.getJCOInstance(), name);
+            retObjectGetStream = classType.Invoke("GetStream", reader == null ? null : reader.getJCOInstance(), name);
+            JCObject objGetStream = (JCObject)retObjectGetStream;
             return new Stream(objGetStream);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetStream != null ? retObjectGetStream.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -346,10 +481,14 @@ public class DataReaderExtensions extends NetObject  {
 
     public static TextReader GetTextReader(DbDataReader reader, java.lang.String name) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetTextReader = null;
         try {
-            JCObject objGetTextReader = (JCObject)classType.Invoke("GetTextReader", reader == null ? null : reader.getJCOInstance(), name);
+            retObjectGetTextReader = classType.Invoke("GetTextReader", reader == null ? null : reader.getJCOInstance(), name);
+            JCObject objGetTextReader = (JCObject)retObjectGetTextReader;
             return new TextReader(objGetTextReader);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetTextReader != null ? retObjectGetTextReader.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -357,10 +496,14 @@ public class DataReaderExtensions extends NetObject  {
 
     public static NetObject GetProviderSpecificValue(DbDataReader reader, java.lang.String name) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetProviderSpecificValue = null;
         try {
-            JCObject objGetProviderSpecificValue = (JCObject)classType.Invoke("GetProviderSpecificValue", reader == null ? null : reader.getJCOInstance(), name);
+            retObjectGetProviderSpecificValue = classType.Invoke("GetProviderSpecificValue", reader == null ? null : reader.getJCOInstance(), name);
+            JCObject objGetProviderSpecificValue = (JCObject)retObjectGetProviderSpecificValue;
             return new NetObject(objGetProviderSpecificValue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetProviderSpecificValue != null ? retObjectGetProviderSpecificValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -368,10 +511,14 @@ public class DataReaderExtensions extends NetObject  {
 
     public static NetObject GetValue(DbDataReader reader, java.lang.String name) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetValue = null;
         try {
-            JCObject objGetValue = (JCObject)classType.Invoke("GetValue", reader == null ? null : reader.getJCOInstance(), name);
+            retObjectGetValue = classType.Invoke("GetValue", reader == null ? null : reader.getJCOInstance(), name);
+            JCObject objGetValue = (JCObject)retObjectGetValue;
             return new NetObject(objGetValue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetValue != null ? retObjectGetValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -379,9 +526,13 @@ public class DataReaderExtensions extends NetObject  {
 
     public static java.lang.String GetDataTypeName(DbDataReader reader, java.lang.String name) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetDataTypeName = null;
         try {
-            return (java.lang.String)classType.Invoke("GetDataTypeName", reader == null ? null : reader.getJCOInstance(), name);
+            retObjectGetDataTypeName = classType.Invoke("GetDataTypeName", reader == null ? null : reader.getJCOInstance(), name);
+            return (java.lang.String)retObjectGetDataTypeName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetDataTypeName != null ? retObjectGetDataTypeName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -389,9 +540,13 @@ public class DataReaderExtensions extends NetObject  {
 
     public static java.lang.String GetString(DbDataReader reader, java.lang.String name) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetString = null;
         try {
-            return (java.lang.String)classType.Invoke("GetString", reader == null ? null : reader.getJCOInstance(), name);
+            retObjectGetString = classType.Invoke("GetString", reader == null ? null : reader.getJCOInstance(), name);
+            return (java.lang.String)retObjectGetString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetString != null ? retObjectGetString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -399,10 +554,14 @@ public class DataReaderExtensions extends NetObject  {
 
     public static NetType GetFieldType(DbDataReader reader, java.lang.String name) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetFieldType = null;
         try {
-            JCObject objGetFieldType = (JCObject)classType.Invoke("GetFieldType", reader == null ? null : reader.getJCOInstance(), name);
+            retObjectGetFieldType = classType.Invoke("GetFieldType", reader == null ? null : reader.getJCOInstance(), name);
+            JCObject objGetFieldType = (JCObject)retObjectGetFieldType;
             return new NetType(objGetFieldType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetFieldType != null ? retObjectGetFieldType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -410,10 +569,14 @@ public class DataReaderExtensions extends NetObject  {
 
     public static NetType GetProviderSpecificFieldType(DbDataReader reader, java.lang.String name) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetProviderSpecificFieldType = null;
         try {
-            JCObject objGetProviderSpecificFieldType = (JCObject)classType.Invoke("GetProviderSpecificFieldType", reader == null ? null : reader.getJCOInstance(), name);
+            retObjectGetProviderSpecificFieldType = classType.Invoke("GetProviderSpecificFieldType", reader == null ? null : reader.getJCOInstance(), name);
+            JCObject objGetProviderSpecificFieldType = (JCObject)retObjectGetProviderSpecificFieldType;
             return new NetType(objGetProviderSpecificFieldType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetProviderSpecificFieldType != null ? retObjectGetProviderSpecificFieldType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -182,10 +182,14 @@ public class ServiceContractGenerationContext extends NetObject  {
     
     public CodeTypeDeclaration getContractType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContractType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ContractType");
+            retObjectContractType = classInstance.Get("ContractType");
+            JCObject val = (JCObject)retObjectContractType;
             return new CodeTypeDeclaration(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContractType != null ? retObjectContractType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,10 +197,14 @@ public class ServiceContractGenerationContext extends NetObject  {
 
     public CodeTypeDeclaration getDuplexCallbackType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDuplexCallbackType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DuplexCallbackType");
+            retObjectDuplexCallbackType = classInstance.Get("DuplexCallbackType");
+            JCObject val = (JCObject)retObjectDuplexCallbackType;
             return new CodeTypeDeclaration(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDuplexCallbackType != null ? retObjectDuplexCallbackType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -204,10 +212,14 @@ public class ServiceContractGenerationContext extends NetObject  {
 
     public ContractDescription getContract() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContract = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Contract");
+            retObjectContract = classInstance.Get("Contract");
+            JCObject val = (JCObject)retObjectContract;
             return new ContractDescription(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContract != null ? retObjectContract.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -215,10 +227,14 @@ public class ServiceContractGenerationContext extends NetObject  {
 
     public ServiceContractGenerator getServiceContractGenerator() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectServiceContractGenerator = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ServiceContractGenerator");
+            retObjectServiceContractGenerator = classInstance.Get("ServiceContractGenerator");
+            JCObject val = (JCObject)retObjectServiceContractGenerator;
             return new ServiceContractGenerator(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectServiceContractGenerator != null ? retObjectServiceContractGenerator.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

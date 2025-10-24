@@ -171,9 +171,13 @@ public class ImportContext extends NetObject  {
     
     public boolean getShareTypes() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShareTypes = null;
         try {
-            return (boolean)classInstance.Get("ShareTypes");
+            retObjectShareTypes = classInstance.Get("ShareTypes");
+            return (boolean)retObjectShareTypes;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectShareTypes != null ? retObjectShareTypes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,10 +185,14 @@ public class ImportContext extends NetObject  {
 
     public StringCollection getWarnings() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWarnings = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Warnings");
+            retObjectWarnings = classInstance.Get("Warnings");
+            JCObject val = (JCObject)retObjectWarnings;
             return new StringCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWarnings != null ? retObjectWarnings.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,10 +200,14 @@ public class ImportContext extends NetObject  {
 
     public CodeIdentifiers getTypeIdentifiers() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTypeIdentifiers = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TypeIdentifiers");
+            retObjectTypeIdentifiers = classInstance.Get("TypeIdentifiers");
+            JCObject val = (JCObject)retObjectTypeIdentifiers;
             return new CodeIdentifiers(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTypeIdentifiers != null ? retObjectTypeIdentifiers.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -177,10 +177,14 @@ public class AccessKeyPressedEventArgs extends RoutedEventArgs  {
     
     public NetObject getScope() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectScope = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Scope");
+            retObjectScope = classInstance.Get("Scope");
+            JCObject val = (JCObject)retObjectScope;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectScope != null ? retObjectScope.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,7 +192,7 @@ public class AccessKeyPressedEventArgs extends RoutedEventArgs  {
 
     public void setScope(NetObject Scope) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Scope", Scope == null ? null : Scope.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -198,9 +202,13 @@ public class AccessKeyPressedEventArgs extends RoutedEventArgs  {
 
     public java.lang.String getKey() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectKey = null;
         try {
-            return (java.lang.String)classInstance.Get("Key");
+            retObjectKey = classInstance.Get("Key");
+            return (java.lang.String)retObjectKey;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectKey != null ? retObjectKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -208,10 +216,14 @@ public class AccessKeyPressedEventArgs extends RoutedEventArgs  {
 
     public UIElement getTarget() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTarget = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Target");
+            retObjectTarget = classInstance.Get("Target");
+            JCObject val = (JCObject)retObjectTarget;
             return new UIElement(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTarget != null ? retObjectTarget.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -219,7 +231,7 @@ public class AccessKeyPressedEventArgs extends RoutedEventArgs  {
 
     public void setTarget(UIElement Target) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Target", Target == null ? null : Target.getJCOInstance());
         } catch (JCNativeException jcne) {

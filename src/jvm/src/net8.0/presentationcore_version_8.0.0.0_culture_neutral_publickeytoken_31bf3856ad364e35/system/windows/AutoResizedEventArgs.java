@@ -171,10 +171,14 @@ public class AutoResizedEventArgs extends EventArgs  {
     
     public Size getSize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSize = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Size");
+            retObjectSize = classInstance.Get("Size");
+            JCObject val = (JCObject)retObjectSize;
             return new Size(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSize != null ? retObjectSize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

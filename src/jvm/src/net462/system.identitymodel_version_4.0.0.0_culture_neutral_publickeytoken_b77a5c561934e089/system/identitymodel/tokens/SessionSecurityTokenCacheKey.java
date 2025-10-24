@@ -170,9 +170,13 @@ public class SessionSecurityTokenCacheKey extends NetObject  {
     
     public boolean getIgnoreKeyGeneration() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIgnoreKeyGeneration = null;
         try {
-            return (boolean)classInstance.Get("IgnoreKeyGeneration");
+            retObjectIgnoreKeyGeneration = classInstance.Get("IgnoreKeyGeneration");
+            return (boolean)retObjectIgnoreKeyGeneration;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIgnoreKeyGeneration != null ? retObjectIgnoreKeyGeneration.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,7 +184,7 @@ public class SessionSecurityTokenCacheKey extends NetObject  {
 
     public void setIgnoreKeyGeneration(boolean IgnoreKeyGeneration) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IgnoreKeyGeneration", IgnoreKeyGeneration);
         } catch (JCNativeException jcne) {
@@ -190,9 +194,13 @@ public class SessionSecurityTokenCacheKey extends NetObject  {
 
     public java.lang.String getEndpointId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEndpointId = null;
         try {
-            return (java.lang.String)classInstance.Get("EndpointId");
+            retObjectEndpointId = classInstance.Get("EndpointId");
+            return (java.lang.String)retObjectEndpointId;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectEndpointId != null ? retObjectEndpointId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,10 +208,14 @@ public class SessionSecurityTokenCacheKey extends NetObject  {
 
     public UniqueId getContextId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContextId = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ContextId");
+            retObjectContextId = classInstance.Get("ContextId");
+            JCObject val = (JCObject)retObjectContextId;
             return new UniqueId(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContextId != null ? retObjectContextId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -211,10 +223,14 @@ public class SessionSecurityTokenCacheKey extends NetObject  {
 
     public UniqueId getKeyGeneration() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectKeyGeneration = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("KeyGeneration");
+            retObjectKeyGeneration = classInstance.Get("KeyGeneration");
+            JCObject val = (JCObject)retObjectKeyGeneration;
             return new UniqueId(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectKeyGeneration != null ? retObjectKeyGeneration.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

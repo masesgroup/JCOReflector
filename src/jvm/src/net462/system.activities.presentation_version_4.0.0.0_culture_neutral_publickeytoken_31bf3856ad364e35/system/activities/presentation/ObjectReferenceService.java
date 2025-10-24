@@ -167,9 +167,13 @@ public class ObjectReferenceService extends NetObject  {
     
     public boolean TryGetObject(Guid objectReferenceId, JCORefOut<NetObject> obj) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryGetObject = null;
         try {
-            return (boolean)classInstance.Invoke("TryGetObject", objectReferenceId == null ? null : objectReferenceId.getJCOInstance(), obj.getJCRefOut());
+            retObjectTryGetObject = classInstance.Invoke("TryGetObject", objectReferenceId == null ? null : objectReferenceId.getJCOInstance(), obj.getJCRefOut());
+            return (boolean)retObjectTryGetObject;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryGetObject != null ? retObjectTryGetObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,10 +181,14 @@ public class ObjectReferenceService extends NetObject  {
 
     public Guid AcquireObjectReference(int startLine, int startColumn, int endLine, int endColumn) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.MulticastNotSupportedException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAcquireObjectReference = null;
         try {
-            JCObject objAcquireObjectReference = (JCObject)classInstance.Invoke("AcquireObjectReference", startLine, startColumn, endLine, endColumn);
+            retObjectAcquireObjectReference = classInstance.Invoke("AcquireObjectReference", startLine, startColumn, endLine, endColumn);
+            JCObject objAcquireObjectReference = (JCObject)retObjectAcquireObjectReference;
             return new Guid(objAcquireObjectReference);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAcquireObjectReference != null ? retObjectAcquireObjectReference.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,10 +196,14 @@ public class ObjectReferenceService extends NetObject  {
 
     public Guid AcquireObjectReference(NetObject obj) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAcquireObjectReference = null;
         try {
-            JCObject objAcquireObjectReference = (JCObject)classInstance.Invoke("AcquireObjectReference", obj == null ? null : obj.getJCOInstance());
+            retObjectAcquireObjectReference = classInstance.Invoke("AcquireObjectReference", obj == null ? null : obj.getJCOInstance());
+            JCObject objAcquireObjectReference = (JCObject)retObjectAcquireObjectReference;
             return new Guid(objAcquireObjectReference);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAcquireObjectReference != null ? retObjectAcquireObjectReference.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -199,7 +211,7 @@ public class ObjectReferenceService extends NetObject  {
 
     public void ReleaseObjectReference(Guid objectReferenceId) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ReleaseObjectReference", objectReferenceId == null ? null : objectReferenceId.getJCOInstance());
         } catch (JCNativeException jcne) {

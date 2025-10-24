@@ -170,9 +170,13 @@ public class DoesNotReturnIfAttribute extends Attribute  {
     
     public boolean getParameterValue() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectParameterValue = null;
         try {
-            return (boolean)classInstance.Get("ParameterValue");
+            retObjectParameterValue = classInstance.Get("ParameterValue");
+            return (boolean)retObjectParameterValue;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectParameterValue != null ? retObjectParameterValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

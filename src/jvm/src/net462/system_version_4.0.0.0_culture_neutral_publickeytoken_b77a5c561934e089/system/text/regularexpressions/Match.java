@@ -158,9 +158,13 @@ public class Match extends Group  {
     
     public java.lang.String Result(java.lang.String replacement) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NullReferenceException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResult = null;
         try {
-            return (java.lang.String)classInstance.Invoke("Result", replacement);
+            retObjectResult = classInstance.Invoke("Result", replacement);
+            return (java.lang.String)retObjectResult;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectResult != null ? retObjectResult.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -168,10 +172,14 @@ public class Match extends Group  {
 
     public Match NextMatch() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OverflowException, system.text.regularexpressions.RegexMatchTimeoutException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNextMatch = null;
         try {
-            JCObject objNextMatch = (JCObject)classInstance.Invoke("NextMatch");
+            retObjectNextMatch = classInstance.Invoke("NextMatch");
+            JCObject objNextMatch = (JCObject)retObjectNextMatch;
             return new Match(objNextMatch);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNextMatch != null ? retObjectNextMatch.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,10 +187,14 @@ public class Match extends Group  {
 
     public static Match Synchronized(Match inner) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSynchronized = null;
         try {
-            JCObject objSynchronized = (JCObject)classType.Invoke("Synchronized", inner == null ? null : inner.getJCOInstance());
+            retObjectSynchronized = classType.Invoke("Synchronized", inner == null ? null : inner.getJCOInstance());
+            JCObject objSynchronized = (JCObject)retObjectSynchronized;
             return new Match(objSynchronized);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSynchronized != null ? retObjectSynchronized.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -194,10 +206,14 @@ public class Match extends Group  {
     
     public GroupCollection getGroups() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGroups = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Groups");
+            retObjectGroups = classInstance.Get("Groups");
+            JCObject val = (JCObject)retObjectGroups;
             return new GroupCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGroups != null ? retObjectGroups.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -205,10 +221,14 @@ public class Match extends Group  {
 
     public static Match getEmpty() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectEmpty = null;
         try {
-            JCObject val = (JCObject)classType.Get("Empty");
+            retObjectEmpty = classType.Get("Empty");
+            JCObject val = (JCObject)retObjectEmpty;
             return new Match(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEmpty != null ? retObjectEmpty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

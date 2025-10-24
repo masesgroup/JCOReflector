@@ -165,9 +165,13 @@ public class ExtenderProvidedPropertyAttribute extends Attribute  {
     
     public boolean IsDefaultAttribute() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsDefaultAttribute = null;
         try {
-            return (boolean)classInstance.Invoke("IsDefaultAttribute");
+            retObjectIsDefaultAttribute = classInstance.Invoke("IsDefaultAttribute");
+            return (boolean)retObjectIsDefaultAttribute;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsDefaultAttribute != null ? retObjectIsDefaultAttribute.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,10 +183,14 @@ public class ExtenderProvidedPropertyAttribute extends Attribute  {
     
     public IExtenderProvider getProvider() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProvider = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Provider");
+            retObjectProvider = classInstance.Get("Provider");
+            JCObject val = (JCObject)retObjectProvider;
             return new IExtenderProviderImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectProvider != null ? retObjectProvider.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,10 +198,14 @@ public class ExtenderProvidedPropertyAttribute extends Attribute  {
 
     public PropertyDescriptor getExtenderProperty() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExtenderProperty = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ExtenderProperty");
+            retObjectExtenderProperty = classInstance.Get("ExtenderProperty");
+            JCObject val = (JCObject)retObjectExtenderProperty;
             return new PropertyDescriptor(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExtenderProperty != null ? retObjectExtenderProperty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,10 +213,14 @@ public class ExtenderProvidedPropertyAttribute extends Attribute  {
 
     public NetType getReceiverType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReceiverType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ReceiverType");
+            retObjectReceiverType = classInstance.Get("ReceiverType");
+            JCObject val = (JCObject)retObjectReceiverType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReceiverType != null ? retObjectReceiverType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -173,7 +173,7 @@ public class MultipartFormDataContent extends MultipartContent  {
     
     public void Add(HttpContent content) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Add", content == null ? null : content.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -183,7 +183,7 @@ public class MultipartFormDataContent extends MultipartContent  {
 
     public void Add(HttpContent content, java.lang.String name) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Add", content == null ? null : content.getJCOInstance(), name);
         } catch (JCNativeException jcne) {
@@ -193,7 +193,7 @@ public class MultipartFormDataContent extends MultipartContent  {
 
     public void Add(HttpContent content, java.lang.String name, java.lang.String fileName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Add", content == null ? null : content.getJCOInstance(), name, fileName);
         } catch (JCNativeException jcne) {

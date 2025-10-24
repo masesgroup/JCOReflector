@@ -165,9 +165,13 @@ public class AuthenticationContext extends NetObject  {
     
     public java.lang.String getContextClass() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContextClass = null;
         try {
-            return (java.lang.String)classInstance.Get("ContextClass");
+            retObjectContextClass = classInstance.Get("ContextClass");
+            return (java.lang.String)retObjectContextClass;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectContextClass != null ? retObjectContextClass.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -175,7 +179,7 @@ public class AuthenticationContext extends NetObject  {
 
     public void setContextClass(java.lang.String ContextClass) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ContextClass", ContextClass);
         } catch (JCNativeException jcne) {
@@ -185,9 +189,13 @@ public class AuthenticationContext extends NetObject  {
 
     public java.lang.String getContextDeclaration() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContextDeclaration = null;
         try {
-            return (java.lang.String)classInstance.Get("ContextDeclaration");
+            retObjectContextDeclaration = classInstance.Get("ContextDeclaration");
+            return (java.lang.String)retObjectContextDeclaration;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectContextDeclaration != null ? retObjectContextDeclaration.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,7 +203,7 @@ public class AuthenticationContext extends NetObject  {
 
     public void setContextDeclaration(java.lang.String ContextDeclaration) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ContextDeclaration", ContextDeclaration);
         } catch (JCNativeException jcne) {

@@ -167,10 +167,14 @@ public class MessageContext extends NetObject  {
     
     public Guid getEndToEndTracingId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEndToEndTracingId = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("EndToEndTracingId");
+            retObjectEndToEndTracingId = classInstance.Get("EndToEndTracingId");
+            JCObject val = (JCObject)retObjectEndToEndTracingId;
             return new Guid(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEndToEndTracingId != null ? retObjectEndToEndTracingId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,7 +182,7 @@ public class MessageContext extends NetObject  {
 
     public void setEndToEndTracingId(Guid EndToEndTracingId) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EndToEndTracingId", EndToEndTracingId == null ? null : EndToEndTracingId.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -188,10 +192,14 @@ public class MessageContext extends NetObject  {
 
     public Message getMessage() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMessage = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Message");
+            retObjectMessage = classInstance.Get("Message");
+            JCObject val = (JCObject)retObjectMessage;
             return new Message(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMessage != null ? retObjectMessage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -199,7 +207,7 @@ public class MessageContext extends NetObject  {
 
     public void setMessage(Message Message) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Message", Message == null ? null : Message.getJCOInstance());
         } catch (JCNativeException jcne) {

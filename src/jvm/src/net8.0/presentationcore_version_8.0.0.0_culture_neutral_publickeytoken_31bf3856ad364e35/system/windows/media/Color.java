@@ -164,9 +164,13 @@ public class Color extends ValueType implements system.IFormattable {
     
     public static boolean AreClose(Color color1, Color color2) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAreClose = null;
         try {
-            return (boolean)classType.Invoke("AreClose", color1 == null ? null : color1.getJCOInstance(), color2 == null ? null : color2.getJCOInstance());
+            retObjectAreClose = classType.Invoke("AreClose", color1 == null ? null : color1.getJCOInstance(), color2 == null ? null : color2.getJCOInstance());
+            return (boolean)retObjectAreClose;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectAreClose != null ? retObjectAreClose.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -174,9 +178,13 @@ public class Color extends ValueType implements system.IFormattable {
 
     public static boolean Equals(Color color1, Color color2) throws Throwable, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectEquals = null;
         try {
-            return (boolean)classType.Invoke("Equals", color1 == null ? null : color1.getJCOInstance(), color2 == null ? null : color2.getJCOInstance());
+            retObjectEquals = classType.Invoke("Equals", color1 == null ? null : color1.getJCOInstance(), color2 == null ? null : color2.getJCOInstance());
+            return (boolean)retObjectEquals;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectEquals != null ? retObjectEquals.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -184,9 +192,13 @@ public class Color extends ValueType implements system.IFormattable {
 
     public boolean Equals(Color color) throws Throwable, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEquals = null;
         try {
-            return (boolean)classInstance.Invoke("Equals", color == null ? null : color.getJCOInstance());
+            retObjectEquals = classInstance.Invoke("Equals", color == null ? null : color.getJCOInstance());
+            return (boolean)retObjectEquals;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectEquals != null ? retObjectEquals.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -194,16 +206,20 @@ public class Color extends ValueType implements system.IFormattable {
 
     public Single[] GetNativeColorValues() throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetNativeColorValues = null;
         try {
             ArrayList<Single> resultingArrayList = new ArrayList<Single>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetNativeColorValues");
+            retObjectGetNativeColorValues = classInstance.Invoke("GetNativeColorValues");
+            JCObject resultingObjects = (JCObject)retObjectGetNativeColorValues;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new Single(resultingObject));
             }
             Single[] resultingArray = new Single[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetNativeColorValues != null ? retObjectGetNativeColorValues.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -211,9 +227,13 @@ public class Color extends ValueType implements system.IFormattable {
 
     public java.lang.String ToString(IFormatProvider provider) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.OverflowException, system.IndexOutOfRangeException, system.FormatException, system.ArgumentNullException, system.ObjectDisposedException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.diagnostics.UnreachableException, system.UriFormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToString = null;
         try {
-            return (java.lang.String)classInstance.Invoke("ToString", provider == null ? null : provider.getJCOInstance());
+            retObjectToString = classInstance.Invoke("ToString", provider == null ? null : provider.getJCOInstance());
+            return (java.lang.String)retObjectToString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectToString != null ? retObjectToString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -221,10 +241,14 @@ public class Color extends ValueType implements system.IFormattable {
 
     public static Color Add(Color color1, Color color2) throws Throwable, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.diagnostics.UnreachableException, system.net.WebException, system.componentmodel.Win32Exception, system.net.CookieException, system.io.IOException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.FileNotFoundException, system.RankException, system.ArrayTypeMismatchException, system.AccessViolationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAdd = null;
         try {
-            JCObject objAdd = (JCObject)classType.Invoke("Add", color1 == null ? null : color1.getJCOInstance(), color2 == null ? null : color2.getJCOInstance());
+            retObjectAdd = classType.Invoke("Add", color1 == null ? null : color1.getJCOInstance(), color2 == null ? null : color2.getJCOInstance());
+            JCObject objAdd = (JCObject)retObjectAdd;
             return new Color(objAdd);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAdd != null ? retObjectAdd.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -232,10 +256,14 @@ public class Color extends ValueType implements system.IFormattable {
 
     public static Color FromArgb(byte a, byte r, byte g, byte b) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFromArgb = null;
         try {
-            JCObject objFromArgb = (JCObject)classType.Invoke("FromArgb", a, r, g, b);
+            retObjectFromArgb = classType.Invoke("FromArgb", a, r, g, b);
+            JCObject objFromArgb = (JCObject)retObjectFromArgb;
             return new Color(objFromArgb);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFromArgb != null ? retObjectFromArgb.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -243,10 +271,14 @@ public class Color extends ValueType implements system.IFormattable {
 
     public static Color FromAValues(Single a, Single[] values, Uri profileUri) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.net.WebException, system.componentmodel.Win32Exception, system.net.CookieException, system.io.IOException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.FileNotFoundException, system.IndexOutOfRangeException, system.AccessViolationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFromAValues = null;
         try {
-            JCObject objFromAValues = (JCObject)classType.Invoke("FromAValues", a == null ? null : a.getJCOInstance(), toObjectFromArray(values), profileUri == null ? null : profileUri.getJCOInstance());
+            retObjectFromAValues = classType.Invoke("FromAValues", a == null ? null : a.getJCOInstance(), toObjectFromArray(values), profileUri == null ? null : profileUri.getJCOInstance());
+            JCObject objFromAValues = (JCObject)retObjectFromAValues;
             return new Color(objFromAValues);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFromAValues != null ? retObjectFromAValues.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -254,10 +286,14 @@ public class Color extends ValueType implements system.IFormattable {
 
     public static Color FromRgb(byte r, byte g, byte b) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFromRgb = null;
         try {
-            JCObject objFromRgb = (JCObject)classType.Invoke("FromRgb", r, g, b);
+            retObjectFromRgb = classType.Invoke("FromRgb", r, g, b);
+            JCObject objFromRgb = (JCObject)retObjectFromRgb;
             return new Color(objFromRgb);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFromRgb != null ? retObjectFromRgb.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -265,10 +301,14 @@ public class Color extends ValueType implements system.IFormattable {
 
     public static Color FromScRgb(Single a, Single r, Single g, Single b) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFromScRgb = null;
         try {
-            JCObject objFromScRgb = (JCObject)classType.Invoke("FromScRgb", a == null ? null : a.getJCOInstance(), r == null ? null : r.getJCOInstance(), g == null ? null : g.getJCOInstance(), b == null ? null : b.getJCOInstance());
+            retObjectFromScRgb = classType.Invoke("FromScRgb", a == null ? null : a.getJCOInstance(), r == null ? null : r.getJCOInstance(), g == null ? null : g.getJCOInstance(), b == null ? null : b.getJCOInstance());
+            JCObject objFromScRgb = (JCObject)retObjectFromScRgb;
             return new Color(objFromScRgb);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFromScRgb != null ? retObjectFromScRgb.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -276,10 +316,14 @@ public class Color extends ValueType implements system.IFormattable {
 
     public static Color FromValues(Single[] values, Uri profileUri) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.net.WebException, system.componentmodel.Win32Exception, system.net.CookieException, system.io.IOException, system.ObjectDisposedException, system.security.SecurityException, system.io.FileNotFoundException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.AccessViolationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFromValues = null;
         try {
-            JCObject objFromValues = (JCObject)classType.Invoke("FromValues", toObjectFromArray(values), profileUri == null ? null : profileUri.getJCOInstance());
+            retObjectFromValues = classType.Invoke("FromValues", toObjectFromArray(values), profileUri == null ? null : profileUri.getJCOInstance());
+            JCObject objFromValues = (JCObject)retObjectFromValues;
             return new Color(objFromValues);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFromValues != null ? retObjectFromValues.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -287,10 +331,14 @@ public class Color extends ValueType implements system.IFormattable {
 
     public static Color Multiply(Color color, Single coefficient) throws Throwable, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException, system.InvalidOperationException, system.net.WebException, system.componentmodel.Win32Exception, system.net.CookieException, system.io.IOException, system.ObjectDisposedException, system.security.SecurityException, system.io.FileNotFoundException, system.RankException, system.ArrayTypeMismatchException, system.AccessViolationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMultiply = null;
         try {
-            JCObject objMultiply = (JCObject)classType.Invoke("Multiply", color == null ? null : color.getJCOInstance(), coefficient == null ? null : coefficient.getJCOInstance());
+            retObjectMultiply = classType.Invoke("Multiply", color == null ? null : color.getJCOInstance(), coefficient == null ? null : coefficient.getJCOInstance());
+            JCObject objMultiply = (JCObject)retObjectMultiply;
             return new Color(objMultiply);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMultiply != null ? retObjectMultiply.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -298,10 +346,14 @@ public class Color extends ValueType implements system.IFormattable {
 
     public static Color Subtract(Color color1, Color color2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.NotSupportedException, system.diagnostics.UnreachableException, system.net.WebException, system.componentmodel.Win32Exception, system.net.CookieException, system.io.IOException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.FileNotFoundException, system.RankException, system.ArrayTypeMismatchException, system.AccessViolationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSubtract = null;
         try {
-            JCObject objSubtract = (JCObject)classType.Invoke("Subtract", color1 == null ? null : color1.getJCOInstance(), color2 == null ? null : color2.getJCOInstance());
+            retObjectSubtract = classType.Invoke("Subtract", color1 == null ? null : color1.getJCOInstance(), color2 == null ? null : color2.getJCOInstance());
+            JCObject objSubtract = (JCObject)retObjectSubtract;
             return new Color(objSubtract);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSubtract != null ? retObjectSubtract.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -309,7 +361,7 @@ public class Color extends ValueType implements system.IFormattable {
 
     public void Clamp() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Clamp");
         } catch (JCNativeException jcne) {
@@ -323,7 +375,7 @@ public class Color extends ValueType implements system.IFormattable {
      */
     @Deprecated 
     public java.lang.String ToString(java.lang.String format, IFormatProvider formatProvider) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIFormattable to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIFormattable to obtain the full interface.");
     }
 
 
@@ -332,9 +384,20 @@ public class Color extends ValueType implements system.IFormattable {
     
     public byte getA() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectA = null;
         try {
-            return (byte)classInstance.Get("A");
+            retObjectA = classInstance.Get("A");
+            return (byte)retObjectA;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectA_ToString = retObjectA == null ? "null" : retObjectA.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectANumber = (java.lang.Number)retObjectA;
+                return retObjectANumber.byteValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into byte and, as fallback solution, into java.lang.Number", retObjectA != null ? retObjectA.getClass() : "null", retObjectA_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -342,7 +405,7 @@ public class Color extends ValueType implements system.IFormattable {
 
     public void setA(byte A) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("A", A);
         } catch (JCNativeException jcne) {
@@ -352,9 +415,20 @@ public class Color extends ValueType implements system.IFormattable {
 
     public byte getB() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectB = null;
         try {
-            return (byte)classInstance.Get("B");
+            retObjectB = classInstance.Get("B");
+            return (byte)retObjectB;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectB_ToString = retObjectB == null ? "null" : retObjectB.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectBNumber = (java.lang.Number)retObjectB;
+                return retObjectBNumber.byteValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into byte and, as fallback solution, into java.lang.Number", retObjectB != null ? retObjectB.getClass() : "null", retObjectB_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -362,7 +436,7 @@ public class Color extends ValueType implements system.IFormattable {
 
     public void setB(byte B) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("B", B);
         } catch (JCNativeException jcne) {
@@ -372,9 +446,20 @@ public class Color extends ValueType implements system.IFormattable {
 
     public byte getG() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectG = null;
         try {
-            return (byte)classInstance.Get("G");
+            retObjectG = classInstance.Get("G");
+            return (byte)retObjectG;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectG_ToString = retObjectG == null ? "null" : retObjectG.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGNumber = (java.lang.Number)retObjectG;
+                return retObjectGNumber.byteValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into byte and, as fallback solution, into java.lang.Number", retObjectG != null ? retObjectG.getClass() : "null", retObjectG_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -382,7 +467,7 @@ public class Color extends ValueType implements system.IFormattable {
 
     public void setG(byte G) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("G", G);
         } catch (JCNativeException jcne) {
@@ -392,9 +477,20 @@ public class Color extends ValueType implements system.IFormattable {
 
     public byte getR() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectR = null;
         try {
-            return (byte)classInstance.Get("R");
+            retObjectR = classInstance.Get("R");
+            return (byte)retObjectR;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectR_ToString = retObjectR == null ? "null" : retObjectR.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectRNumber = (java.lang.Number)retObjectR;
+                return retObjectRNumber.byteValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into byte and, as fallback solution, into java.lang.Number", retObjectR != null ? retObjectR.getClass() : "null", retObjectR_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -402,7 +498,7 @@ public class Color extends ValueType implements system.IFormattable {
 
     public void setR(byte R) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("R", R);
         } catch (JCNativeException jcne) {
@@ -412,10 +508,14 @@ public class Color extends ValueType implements system.IFormattable {
 
     public Single getScA() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectScA = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ScA");
+            retObjectScA = classInstance.Get("ScA");
+            JCObject val = (JCObject)retObjectScA;
             return new Single(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectScA != null ? retObjectScA.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -423,7 +523,7 @@ public class Color extends ValueType implements system.IFormattable {
 
     public void setScA(Single ScA) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ScA", ScA == null ? null : ScA.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -433,10 +533,14 @@ public class Color extends ValueType implements system.IFormattable {
 
     public Single getScB() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectScB = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ScB");
+            retObjectScB = classInstance.Get("ScB");
+            JCObject val = (JCObject)retObjectScB;
             return new Single(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectScB != null ? retObjectScB.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -444,7 +548,7 @@ public class Color extends ValueType implements system.IFormattable {
 
     public void setScB(Single ScB) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ScB", ScB == null ? null : ScB.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -454,10 +558,14 @@ public class Color extends ValueType implements system.IFormattable {
 
     public Single getScG() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectScG = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ScG");
+            retObjectScG = classInstance.Get("ScG");
+            JCObject val = (JCObject)retObjectScG;
             return new Single(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectScG != null ? retObjectScG.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -465,7 +573,7 @@ public class Color extends ValueType implements system.IFormattable {
 
     public void setScG(Single ScG) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ScG", ScG == null ? null : ScG.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -475,10 +583,14 @@ public class Color extends ValueType implements system.IFormattable {
 
     public Single getScR() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectScR = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ScR");
+            retObjectScR = classInstance.Get("ScR");
+            JCObject val = (JCObject)retObjectScR;
             return new Single(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectScR != null ? retObjectScR.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -486,7 +598,7 @@ public class Color extends ValueType implements system.IFormattable {
 
     public void setScR(Single ScR) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ScR", ScR == null ? null : ScR.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -496,10 +608,14 @@ public class Color extends ValueType implements system.IFormattable {
 
     public ColorContext getColorContext() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectColorContext = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ColorContext");
+            retObjectColorContext = classInstance.Get("ColorContext");
+            JCObject val = (JCObject)retObjectColorContext;
             return new ColorContext(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectColorContext != null ? retObjectColorContext.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

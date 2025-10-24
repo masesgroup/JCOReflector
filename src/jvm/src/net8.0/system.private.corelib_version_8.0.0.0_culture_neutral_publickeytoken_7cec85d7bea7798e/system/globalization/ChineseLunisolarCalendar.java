@@ -163,9 +163,20 @@ public class ChineseLunisolarCalendar extends EastAsianLunisolarCalendar  {
     
     public int GetEra(DateTime time) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetEra = null;
         try {
-            return (int)classInstance.Invoke("GetEra", time == null ? null : time.getJCOInstance());
+            retObjectGetEra = classInstance.Invoke("GetEra", time == null ? null : time.getJCOInstance());
+            return (int)retObjectGetEra;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetEra_ToString = retObjectGetEra == null ? "null" : retObjectGetEra.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetEraNumber = (java.lang.Number)retObjectGetEra;
+                return retObjectGetEraNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetEra != null ? retObjectGetEra.getClass() : "null", retObjectGetEra_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

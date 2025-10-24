@@ -168,9 +168,20 @@ public class Rectangle extends Shape  {
     
     public double getRadiusX() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRadiusX = null;
         try {
-            return (double)classInstance.Get("RadiusX");
+            retObjectRadiusX = classInstance.Get("RadiusX");
+            return (double)retObjectRadiusX;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectRadiusX_ToString = retObjectRadiusX == null ? "null" : retObjectRadiusX.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectRadiusXNumber = (java.lang.Number)retObjectRadiusX;
+                return retObjectRadiusXNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectRadiusX != null ? retObjectRadiusX.getClass() : "null", retObjectRadiusX_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,7 +189,7 @@ public class Rectangle extends Shape  {
 
     public void setRadiusX(double RadiusX) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RadiusX", RadiusX);
         } catch (JCNativeException jcne) {
@@ -188,9 +199,20 @@ public class Rectangle extends Shape  {
 
     public double getRadiusY() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRadiusY = null;
         try {
-            return (double)classInstance.Get("RadiusY");
+            retObjectRadiusY = classInstance.Get("RadiusY");
+            return (double)retObjectRadiusY;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectRadiusY_ToString = retObjectRadiusY == null ? "null" : retObjectRadiusY.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectRadiusYNumber = (java.lang.Number)retObjectRadiusY;
+                return retObjectRadiusYNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectRadiusY != null ? retObjectRadiusY.getClass() : "null", retObjectRadiusY_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,7 +220,7 @@ public class Rectangle extends Shape  {
 
     public void setRadiusY(double RadiusY) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RadiusY", RadiusY);
         } catch (JCNativeException jcne) {

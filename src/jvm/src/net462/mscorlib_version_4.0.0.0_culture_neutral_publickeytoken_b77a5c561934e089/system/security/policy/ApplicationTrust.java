@@ -176,10 +176,14 @@ public class ApplicationTrust extends EvidenceBase  {
     
     public EvidenceBase Clone() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.NotSupportedException, system.runtime.serialization.SerializationException, system.InvalidOperationException, system.security.SecurityException, system.NullReferenceException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClone = null;
         try {
-            JCObject objClone = (JCObject)classInstance.Invoke("Clone");
+            retObjectClone = classInstance.Invoke("Clone");
+            JCObject objClone = (JCObject)retObjectClone;
             return new EvidenceBase(objClone);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClone != null ? retObjectClone.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,10 +191,14 @@ public class ApplicationTrust extends EvidenceBase  {
 
     public SecurityElement ToXml() throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.security.SecurityException, system.NullReferenceException, system.runtime.serialization.SerializationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToXml = null;
         try {
-            JCObject objToXml = (JCObject)classInstance.Invoke("ToXml");
+            retObjectToXml = classInstance.Invoke("ToXml");
+            JCObject objToXml = (JCObject)retObjectToXml;
             return new SecurityElement(objToXml);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToXml != null ? retObjectToXml.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,7 +206,7 @@ public class ApplicationTrust extends EvidenceBase  {
 
     public void FromXml(SecurityElement element) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.NullReferenceException, system.FormatException, system.InvalidCastException, system.security.SecurityException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("FromXml", element == null ? null : element.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -212,9 +220,13 @@ public class ApplicationTrust extends EvidenceBase  {
     
     public boolean getIsApplicationTrustedToRun() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsApplicationTrustedToRun = null;
         try {
-            return (boolean)classInstance.Get("IsApplicationTrustedToRun");
+            retObjectIsApplicationTrustedToRun = classInstance.Get("IsApplicationTrustedToRun");
+            return (boolean)retObjectIsApplicationTrustedToRun;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsApplicationTrustedToRun != null ? retObjectIsApplicationTrustedToRun.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -222,7 +234,7 @@ public class ApplicationTrust extends EvidenceBase  {
 
     public void setIsApplicationTrustedToRun(boolean IsApplicationTrustedToRun) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsApplicationTrustedToRun", IsApplicationTrustedToRun);
         } catch (JCNativeException jcne) {
@@ -232,9 +244,13 @@ public class ApplicationTrust extends EvidenceBase  {
 
     public boolean getPersist() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPersist = null;
         try {
-            return (boolean)classInstance.Get("Persist");
+            retObjectPersist = classInstance.Get("Persist");
+            return (boolean)retObjectPersist;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectPersist != null ? retObjectPersist.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -242,7 +258,7 @@ public class ApplicationTrust extends EvidenceBase  {
 
     public void setPersist(boolean Persist) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Persist", Persist);
         } catch (JCNativeException jcne) {
@@ -252,10 +268,14 @@ public class ApplicationTrust extends EvidenceBase  {
 
     public ApplicationIdentity getApplicationIdentity() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectApplicationIdentity = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ApplicationIdentity");
+            retObjectApplicationIdentity = classInstance.Get("ApplicationIdentity");
+            JCObject val = (JCObject)retObjectApplicationIdentity;
             return new ApplicationIdentity(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectApplicationIdentity != null ? retObjectApplicationIdentity.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -263,7 +283,7 @@ public class ApplicationTrust extends EvidenceBase  {
 
     public void setApplicationIdentity(ApplicationIdentity ApplicationIdentity) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ApplicationIdentity", ApplicationIdentity == null ? null : ApplicationIdentity.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -273,10 +293,14 @@ public class ApplicationTrust extends EvidenceBase  {
 
     public NetObject getExtraInfo() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.security.SecurityException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.runtime.serialization.SerializationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExtraInfo = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ExtraInfo");
+            retObjectExtraInfo = classInstance.Get("ExtraInfo");
+            JCObject val = (JCObject)retObjectExtraInfo;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExtraInfo != null ? retObjectExtraInfo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -284,7 +308,7 @@ public class ApplicationTrust extends EvidenceBase  {
 
     public void setExtraInfo(NetObject ExtraInfo) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ExtraInfo", ExtraInfo == null ? null : ExtraInfo.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -294,10 +318,14 @@ public class ApplicationTrust extends EvidenceBase  {
 
     public PolicyStatement getDefaultGrantSet() throws Throwable, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDefaultGrantSet = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DefaultGrantSet");
+            retObjectDefaultGrantSet = classInstance.Get("DefaultGrantSet");
+            JCObject val = (JCObject)retObjectDefaultGrantSet;
             return new PolicyStatement(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefaultGrantSet != null ? retObjectDefaultGrantSet.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -305,7 +333,7 @@ public class ApplicationTrust extends EvidenceBase  {
 
     public void setDefaultGrantSet(PolicyStatement DefaultGrantSet) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.NullReferenceException, system.security.SecurityException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DefaultGrantSet", DefaultGrantSet == null ? null : DefaultGrantSet.getJCOInstance());
         } catch (JCNativeException jcne) {

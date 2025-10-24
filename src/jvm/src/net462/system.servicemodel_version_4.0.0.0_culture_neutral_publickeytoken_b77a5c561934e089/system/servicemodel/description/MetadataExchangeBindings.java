@@ -153,10 +153,14 @@ public class MetadataExchangeBindings extends NetObject  {
     
     public static system.servicemodel.channels.Binding CreateMexHttpBinding() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.OutOfMemoryException, system.UriFormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateMexHttpBinding = null;
         try {
-            JCObject objCreateMexHttpBinding = (JCObject)classType.Invoke("CreateMexHttpBinding");
+            retObjectCreateMexHttpBinding = classType.Invoke("CreateMexHttpBinding");
+            JCObject objCreateMexHttpBinding = (JCObject)retObjectCreateMexHttpBinding;
             return new system.servicemodel.channels.Binding(objCreateMexHttpBinding);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateMexHttpBinding != null ? retObjectCreateMexHttpBinding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -164,10 +168,14 @@ public class MetadataExchangeBindings extends NetObject  {
 
     public static system.servicemodel.channels.Binding CreateMexHttpsBinding() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.OutOfMemoryException, system.UriFormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateMexHttpsBinding = null;
         try {
-            JCObject objCreateMexHttpsBinding = (JCObject)classType.Invoke("CreateMexHttpsBinding");
+            retObjectCreateMexHttpsBinding = classType.Invoke("CreateMexHttpsBinding");
+            JCObject objCreateMexHttpsBinding = (JCObject)retObjectCreateMexHttpsBinding;
             return new system.servicemodel.channels.Binding(objCreateMexHttpsBinding);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateMexHttpsBinding != null ? retObjectCreateMexHttpsBinding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -175,10 +183,14 @@ public class MetadataExchangeBindings extends NetObject  {
 
     public static system.servicemodel.channels.Binding CreateMexNamedPipeBinding() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateMexNamedPipeBinding = null;
         try {
-            JCObject objCreateMexNamedPipeBinding = (JCObject)classType.Invoke("CreateMexNamedPipeBinding");
+            retObjectCreateMexNamedPipeBinding = classType.Invoke("CreateMexNamedPipeBinding");
+            JCObject objCreateMexNamedPipeBinding = (JCObject)retObjectCreateMexNamedPipeBinding;
             return new system.servicemodel.channels.Binding(objCreateMexNamedPipeBinding);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateMexNamedPipeBinding != null ? retObjectCreateMexNamedPipeBinding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,10 +198,14 @@ public class MetadataExchangeBindings extends NetObject  {
 
     public static system.servicemodel.channels.Binding CreateMexTcpBinding() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateMexTcpBinding = null;
         try {
-            JCObject objCreateMexTcpBinding = (JCObject)classType.Invoke("CreateMexTcpBinding");
+            retObjectCreateMexTcpBinding = classType.Invoke("CreateMexTcpBinding");
+            JCObject objCreateMexTcpBinding = (JCObject)retObjectCreateMexTcpBinding;
             return new system.servicemodel.channels.Binding(objCreateMexTcpBinding);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateMexTcpBinding != null ? retObjectCreateMexTcpBinding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

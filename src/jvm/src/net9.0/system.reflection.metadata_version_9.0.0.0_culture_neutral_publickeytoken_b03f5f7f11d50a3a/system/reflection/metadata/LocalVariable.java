@@ -162,9 +162,20 @@ public class LocalVariable extends ValueType  {
     
     public int getIndex() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.BadImageFormatException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIndex = null;
         try {
-            return (int)classInstance.Get("Index");
+            retObjectIndex = classInstance.Get("Index");
+            return (int)retObjectIndex;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectIndex_ToString = retObjectIndex == null ? "null" : retObjectIndex.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectIndexNumber = (java.lang.Number)retObjectIndex;
+                return retObjectIndexNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectIndex != null ? retObjectIndex.getClass() : "null", retObjectIndex_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,10 +183,14 @@ public class LocalVariable extends ValueType  {
 
     public LocalVariableAttributes getAttributes() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.BadImageFormatException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAttributes = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Attributes");
+            retObjectAttributes = classInstance.Get("Attributes");
+            JCObject val = (JCObject)retObjectAttributes;
             return new LocalVariableAttributes(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAttributes != null ? retObjectAttributes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,10 +198,14 @@ public class LocalVariable extends ValueType  {
 
     public StringHandle getName() throws Throwable, system.ArgumentException, system.BadImageFormatException, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectName = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Name");
+            retObjectName = classInstance.Get("Name");
+            JCObject val = (JCObject)retObjectName;
             return new StringHandle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectName != null ? retObjectName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

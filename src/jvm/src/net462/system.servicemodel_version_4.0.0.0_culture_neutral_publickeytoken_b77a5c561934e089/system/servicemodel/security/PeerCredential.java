@@ -160,7 +160,7 @@ public class PeerCredential extends NetObject  {
     
     public void SetCertificate(StoreLocation storeLocation, StoreName storeName, X509FindType findType, NetObject findValue) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.componentmodel.InvalidEnumArgumentException, system.security.cryptography.CryptographicException, system.security.SecurityException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.RankException, system.AccessViolationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetCertificate", storeLocation == null ? null : storeLocation.getJCOInstance(), storeName == null ? null : storeName.getJCOInstance(), findType == null ? null : findType.getJCOInstance(), findValue == null ? null : findValue.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -170,7 +170,7 @@ public class PeerCredential extends NetObject  {
 
     public void SetCertificate(java.lang.String subjectName, StoreLocation storeLocation, StoreName storeName) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.componentmodel.InvalidEnumArgumentException, system.security.cryptography.CryptographicException, system.security.SecurityException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.RankException, system.AccessViolationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetCertificate", subjectName, storeLocation == null ? null : storeLocation.getJCOInstance(), storeName == null ? null : storeName.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -184,10 +184,14 @@ public class PeerCredential extends NetObject  {
     
     public X509Certificate2 getCertificate() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCertificate = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Certificate");
+            retObjectCertificate = classInstance.Get("Certificate");
+            JCObject val = (JCObject)retObjectCertificate;
             return new X509Certificate2(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCertificate != null ? retObjectCertificate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,7 +199,7 @@ public class PeerCredential extends NetObject  {
 
     public void setCertificate(X509Certificate2 Certificate) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Certificate", Certificate == null ? null : Certificate.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -205,10 +209,14 @@ public class PeerCredential extends NetObject  {
 
     public X509PeerCertificateAuthentication getMessageSenderAuthentication() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMessageSenderAuthentication = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MessageSenderAuthentication");
+            retObjectMessageSenderAuthentication = classInstance.Get("MessageSenderAuthentication");
+            JCObject val = (JCObject)retObjectMessageSenderAuthentication;
             return new X509PeerCertificateAuthentication(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMessageSenderAuthentication != null ? retObjectMessageSenderAuthentication.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -216,7 +224,7 @@ public class PeerCredential extends NetObject  {
 
     public void setMessageSenderAuthentication(X509PeerCertificateAuthentication MessageSenderAuthentication) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MessageSenderAuthentication", MessageSenderAuthentication == null ? null : MessageSenderAuthentication.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -226,10 +234,14 @@ public class PeerCredential extends NetObject  {
 
     public X509PeerCertificateAuthentication getPeerAuthentication() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPeerAuthentication = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PeerAuthentication");
+            retObjectPeerAuthentication = classInstance.Get("PeerAuthentication");
+            JCObject val = (JCObject)retObjectPeerAuthentication;
             return new X509PeerCertificateAuthentication(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPeerAuthentication != null ? retObjectPeerAuthentication.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -237,7 +249,7 @@ public class PeerCredential extends NetObject  {
 
     public void setPeerAuthentication(X509PeerCertificateAuthentication PeerAuthentication) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PeerAuthentication", PeerAuthentication == null ? null : PeerAuthentication.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -247,9 +259,13 @@ public class PeerCredential extends NetObject  {
 
     public java.lang.String getMeshPassword() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMeshPassword = null;
         try {
-            return (java.lang.String)classInstance.Get("MeshPassword");
+            retObjectMeshPassword = classInstance.Get("MeshPassword");
+            return (java.lang.String)retObjectMeshPassword;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectMeshPassword != null ? retObjectMeshPassword.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -257,7 +273,7 @@ public class PeerCredential extends NetObject  {
 
     public void setMeshPassword(java.lang.String MeshPassword) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MeshPassword", MeshPassword);
         } catch (JCNativeException jcne) {

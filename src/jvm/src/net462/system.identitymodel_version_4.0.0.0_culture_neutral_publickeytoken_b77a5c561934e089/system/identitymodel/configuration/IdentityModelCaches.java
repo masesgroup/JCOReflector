@@ -167,10 +167,14 @@ public class IdentityModelCaches extends NetObject  {
     
     public SessionSecurityTokenCache getSessionSecurityTokenCache() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSessionSecurityTokenCache = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SessionSecurityTokenCache");
+            retObjectSessionSecurityTokenCache = classInstance.Get("SessionSecurityTokenCache");
+            JCObject val = (JCObject)retObjectSessionSecurityTokenCache;
             return new SessionSecurityTokenCache(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSessionSecurityTokenCache != null ? retObjectSessionSecurityTokenCache.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,7 +182,7 @@ public class IdentityModelCaches extends NetObject  {
 
     public void setSessionSecurityTokenCache(SessionSecurityTokenCache SessionSecurityTokenCache) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SessionSecurityTokenCache", SessionSecurityTokenCache == null ? null : SessionSecurityTokenCache.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -188,10 +192,14 @@ public class IdentityModelCaches extends NetObject  {
 
     public TokenReplayCache getTokenReplayCache() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTokenReplayCache = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TokenReplayCache");
+            retObjectTokenReplayCache = classInstance.Get("TokenReplayCache");
+            JCObject val = (JCObject)retObjectTokenReplayCache;
             return new TokenReplayCache(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTokenReplayCache != null ? retObjectTokenReplayCache.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -199,7 +207,7 @@ public class IdentityModelCaches extends NetObject  {
 
     public void setTokenReplayCache(TokenReplayCache TokenReplayCache) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TokenReplayCache", TokenReplayCache == null ? null : TokenReplayCache.getJCOInstance());
         } catch (JCNativeException jcne) {

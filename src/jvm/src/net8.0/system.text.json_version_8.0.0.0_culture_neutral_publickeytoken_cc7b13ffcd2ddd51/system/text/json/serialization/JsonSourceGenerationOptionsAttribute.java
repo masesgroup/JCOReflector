@@ -185,9 +185,13 @@ public class JsonSourceGenerationOptionsAttribute extends JsonAttribute  {
     
     public boolean getAllowTrailingCommas() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAllowTrailingCommas = null;
         try {
-            return (boolean)classInstance.Get("AllowTrailingCommas");
+            retObjectAllowTrailingCommas = classInstance.Get("AllowTrailingCommas");
+            return (boolean)retObjectAllowTrailingCommas;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAllowTrailingCommas != null ? retObjectAllowTrailingCommas.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,7 +199,7 @@ public class JsonSourceGenerationOptionsAttribute extends JsonAttribute  {
 
     public void setAllowTrailingCommas(boolean AllowTrailingCommas) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AllowTrailingCommas", AllowTrailingCommas);
         } catch (JCNativeException jcne) {
@@ -205,9 +209,13 @@ public class JsonSourceGenerationOptionsAttribute extends JsonAttribute  {
 
     public boolean getIgnoreReadOnlyFields() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIgnoreReadOnlyFields = null;
         try {
-            return (boolean)classInstance.Get("IgnoreReadOnlyFields");
+            retObjectIgnoreReadOnlyFields = classInstance.Get("IgnoreReadOnlyFields");
+            return (boolean)retObjectIgnoreReadOnlyFields;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIgnoreReadOnlyFields != null ? retObjectIgnoreReadOnlyFields.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -215,7 +223,7 @@ public class JsonSourceGenerationOptionsAttribute extends JsonAttribute  {
 
     public void setIgnoreReadOnlyFields(boolean IgnoreReadOnlyFields) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IgnoreReadOnlyFields", IgnoreReadOnlyFields);
         } catch (JCNativeException jcne) {
@@ -225,9 +233,13 @@ public class JsonSourceGenerationOptionsAttribute extends JsonAttribute  {
 
     public boolean getIgnoreReadOnlyProperties() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIgnoreReadOnlyProperties = null;
         try {
-            return (boolean)classInstance.Get("IgnoreReadOnlyProperties");
+            retObjectIgnoreReadOnlyProperties = classInstance.Get("IgnoreReadOnlyProperties");
+            return (boolean)retObjectIgnoreReadOnlyProperties;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIgnoreReadOnlyProperties != null ? retObjectIgnoreReadOnlyProperties.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -235,7 +247,7 @@ public class JsonSourceGenerationOptionsAttribute extends JsonAttribute  {
 
     public void setIgnoreReadOnlyProperties(boolean IgnoreReadOnlyProperties) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IgnoreReadOnlyProperties", IgnoreReadOnlyProperties);
         } catch (JCNativeException jcne) {
@@ -245,9 +257,13 @@ public class JsonSourceGenerationOptionsAttribute extends JsonAttribute  {
 
     public boolean getIncludeFields() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIncludeFields = null;
         try {
-            return (boolean)classInstance.Get("IncludeFields");
+            retObjectIncludeFields = classInstance.Get("IncludeFields");
+            return (boolean)retObjectIncludeFields;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIncludeFields != null ? retObjectIncludeFields.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -255,7 +271,7 @@ public class JsonSourceGenerationOptionsAttribute extends JsonAttribute  {
 
     public void setIncludeFields(boolean IncludeFields) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IncludeFields", IncludeFields);
         } catch (JCNativeException jcne) {
@@ -265,9 +281,13 @@ public class JsonSourceGenerationOptionsAttribute extends JsonAttribute  {
 
     public boolean getPropertyNameCaseInsensitive() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPropertyNameCaseInsensitive = null;
         try {
-            return (boolean)classInstance.Get("PropertyNameCaseInsensitive");
+            retObjectPropertyNameCaseInsensitive = classInstance.Get("PropertyNameCaseInsensitive");
+            return (boolean)retObjectPropertyNameCaseInsensitive;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectPropertyNameCaseInsensitive != null ? retObjectPropertyNameCaseInsensitive.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -275,7 +295,7 @@ public class JsonSourceGenerationOptionsAttribute extends JsonAttribute  {
 
     public void setPropertyNameCaseInsensitive(boolean PropertyNameCaseInsensitive) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PropertyNameCaseInsensitive", PropertyNameCaseInsensitive);
         } catch (JCNativeException jcne) {
@@ -285,9 +305,13 @@ public class JsonSourceGenerationOptionsAttribute extends JsonAttribute  {
 
     public boolean getUseStringEnumConverter() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUseStringEnumConverter = null;
         try {
-            return (boolean)classInstance.Get("UseStringEnumConverter");
+            retObjectUseStringEnumConverter = classInstance.Get("UseStringEnumConverter");
+            return (boolean)retObjectUseStringEnumConverter;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectUseStringEnumConverter != null ? retObjectUseStringEnumConverter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -295,7 +319,7 @@ public class JsonSourceGenerationOptionsAttribute extends JsonAttribute  {
 
     public void setUseStringEnumConverter(boolean UseStringEnumConverter) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UseStringEnumConverter", UseStringEnumConverter);
         } catch (JCNativeException jcne) {
@@ -305,9 +329,13 @@ public class JsonSourceGenerationOptionsAttribute extends JsonAttribute  {
 
     public boolean getWriteIndented() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWriteIndented = null;
         try {
-            return (boolean)classInstance.Get("WriteIndented");
+            retObjectWriteIndented = classInstance.Get("WriteIndented");
+            return (boolean)retObjectWriteIndented;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectWriteIndented != null ? retObjectWriteIndented.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -315,7 +343,7 @@ public class JsonSourceGenerationOptionsAttribute extends JsonAttribute  {
 
     public void setWriteIndented(boolean WriteIndented) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("WriteIndented", WriteIndented);
         } catch (JCNativeException jcne) {
@@ -325,9 +353,20 @@ public class JsonSourceGenerationOptionsAttribute extends JsonAttribute  {
 
     public int getDefaultBufferSize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDefaultBufferSize = null;
         try {
-            return (int)classInstance.Get("DefaultBufferSize");
+            retObjectDefaultBufferSize = classInstance.Get("DefaultBufferSize");
+            return (int)retObjectDefaultBufferSize;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDefaultBufferSize_ToString = retObjectDefaultBufferSize == null ? "null" : retObjectDefaultBufferSize.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectDefaultBufferSizeNumber = (java.lang.Number)retObjectDefaultBufferSize;
+                return retObjectDefaultBufferSizeNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectDefaultBufferSize != null ? retObjectDefaultBufferSize.getClass() : "null", retObjectDefaultBufferSize_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -335,7 +374,7 @@ public class JsonSourceGenerationOptionsAttribute extends JsonAttribute  {
 
     public void setDefaultBufferSize(int DefaultBufferSize) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DefaultBufferSize", DefaultBufferSize);
         } catch (JCNativeException jcne) {
@@ -345,9 +384,20 @@ public class JsonSourceGenerationOptionsAttribute extends JsonAttribute  {
 
     public int getMaxDepth() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxDepth = null;
         try {
-            return (int)classInstance.Get("MaxDepth");
+            retObjectMaxDepth = classInstance.Get("MaxDepth");
+            return (int)retObjectMaxDepth;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaxDepth_ToString = retObjectMaxDepth == null ? "null" : retObjectMaxDepth.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMaxDepthNumber = (java.lang.Number)retObjectMaxDepth;
+                return retObjectMaxDepthNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxDepth != null ? retObjectMaxDepth.getClass() : "null", retObjectMaxDepth_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -355,7 +405,7 @@ public class JsonSourceGenerationOptionsAttribute extends JsonAttribute  {
 
     public void setMaxDepth(int MaxDepth) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaxDepth", MaxDepth);
         } catch (JCNativeException jcne) {
@@ -365,10 +415,14 @@ public class JsonSourceGenerationOptionsAttribute extends JsonAttribute  {
 
     public JsonCommentHandling getReadCommentHandling() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadCommentHandling = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ReadCommentHandling");
+            retObjectReadCommentHandling = classInstance.Get("ReadCommentHandling");
+            JCObject val = (JCObject)retObjectReadCommentHandling;
             return new JsonCommentHandling(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadCommentHandling != null ? retObjectReadCommentHandling.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -376,7 +430,7 @@ public class JsonSourceGenerationOptionsAttribute extends JsonAttribute  {
 
     public void setReadCommentHandling(JsonCommentHandling ReadCommentHandling) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ReadCommentHandling", ReadCommentHandling == null ? null : ReadCommentHandling.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -386,10 +440,14 @@ public class JsonSourceGenerationOptionsAttribute extends JsonAttribute  {
 
     public JsonIgnoreCondition getDefaultIgnoreCondition() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDefaultIgnoreCondition = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DefaultIgnoreCondition");
+            retObjectDefaultIgnoreCondition = classInstance.Get("DefaultIgnoreCondition");
+            JCObject val = (JCObject)retObjectDefaultIgnoreCondition;
             return new JsonIgnoreCondition(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefaultIgnoreCondition != null ? retObjectDefaultIgnoreCondition.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -397,7 +455,7 @@ public class JsonSourceGenerationOptionsAttribute extends JsonAttribute  {
 
     public void setDefaultIgnoreCondition(JsonIgnoreCondition DefaultIgnoreCondition) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DefaultIgnoreCondition", DefaultIgnoreCondition == null ? null : DefaultIgnoreCondition.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -407,10 +465,14 @@ public class JsonSourceGenerationOptionsAttribute extends JsonAttribute  {
 
     public JsonKnownNamingPolicy getDictionaryKeyPolicy() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDictionaryKeyPolicy = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DictionaryKeyPolicy");
+            retObjectDictionaryKeyPolicy = classInstance.Get("DictionaryKeyPolicy");
+            JCObject val = (JCObject)retObjectDictionaryKeyPolicy;
             return new JsonKnownNamingPolicy(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDictionaryKeyPolicy != null ? retObjectDictionaryKeyPolicy.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -418,7 +480,7 @@ public class JsonSourceGenerationOptionsAttribute extends JsonAttribute  {
 
     public void setDictionaryKeyPolicy(JsonKnownNamingPolicy DictionaryKeyPolicy) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DictionaryKeyPolicy", DictionaryKeyPolicy == null ? null : DictionaryKeyPolicy.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -428,10 +490,14 @@ public class JsonSourceGenerationOptionsAttribute extends JsonAttribute  {
 
     public JsonKnownNamingPolicy getPropertyNamingPolicy() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPropertyNamingPolicy = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PropertyNamingPolicy");
+            retObjectPropertyNamingPolicy = classInstance.Get("PropertyNamingPolicy");
+            JCObject val = (JCObject)retObjectPropertyNamingPolicy;
             return new JsonKnownNamingPolicy(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPropertyNamingPolicy != null ? retObjectPropertyNamingPolicy.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -439,7 +505,7 @@ public class JsonSourceGenerationOptionsAttribute extends JsonAttribute  {
 
     public void setPropertyNamingPolicy(JsonKnownNamingPolicy PropertyNamingPolicy) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PropertyNamingPolicy", PropertyNamingPolicy == null ? null : PropertyNamingPolicy.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -449,10 +515,14 @@ public class JsonSourceGenerationOptionsAttribute extends JsonAttribute  {
 
     public JsonNumberHandling getNumberHandling() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNumberHandling = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("NumberHandling");
+            retObjectNumberHandling = classInstance.Get("NumberHandling");
+            JCObject val = (JCObject)retObjectNumberHandling;
             return new JsonNumberHandling(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNumberHandling != null ? retObjectNumberHandling.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -460,7 +530,7 @@ public class JsonSourceGenerationOptionsAttribute extends JsonAttribute  {
 
     public void setNumberHandling(JsonNumberHandling NumberHandling) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("NumberHandling", NumberHandling == null ? null : NumberHandling.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -470,10 +540,14 @@ public class JsonSourceGenerationOptionsAttribute extends JsonAttribute  {
 
     public JsonObjectCreationHandling getPreferredObjectCreationHandling() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPreferredObjectCreationHandling = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PreferredObjectCreationHandling");
+            retObjectPreferredObjectCreationHandling = classInstance.Get("PreferredObjectCreationHandling");
+            JCObject val = (JCObject)retObjectPreferredObjectCreationHandling;
             return new JsonObjectCreationHandling(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPreferredObjectCreationHandling != null ? retObjectPreferredObjectCreationHandling.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -481,7 +555,7 @@ public class JsonSourceGenerationOptionsAttribute extends JsonAttribute  {
 
     public void setPreferredObjectCreationHandling(JsonObjectCreationHandling PreferredObjectCreationHandling) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PreferredObjectCreationHandling", PreferredObjectCreationHandling == null ? null : PreferredObjectCreationHandling.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -491,10 +565,14 @@ public class JsonSourceGenerationOptionsAttribute extends JsonAttribute  {
 
     public JsonSourceGenerationMode getGenerationMode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGenerationMode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("GenerationMode");
+            retObjectGenerationMode = classInstance.Get("GenerationMode");
+            JCObject val = (JCObject)retObjectGenerationMode;
             return new JsonSourceGenerationMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGenerationMode != null ? retObjectGenerationMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -502,7 +580,7 @@ public class JsonSourceGenerationOptionsAttribute extends JsonAttribute  {
 
     public void setGenerationMode(JsonSourceGenerationMode GenerationMode) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("GenerationMode", GenerationMode == null ? null : GenerationMode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -512,10 +590,14 @@ public class JsonSourceGenerationOptionsAttribute extends JsonAttribute  {
 
     public JsonUnknownTypeHandling getUnknownTypeHandling() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUnknownTypeHandling = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("UnknownTypeHandling");
+            retObjectUnknownTypeHandling = classInstance.Get("UnknownTypeHandling");
+            JCObject val = (JCObject)retObjectUnknownTypeHandling;
             return new JsonUnknownTypeHandling(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUnknownTypeHandling != null ? retObjectUnknownTypeHandling.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -523,7 +605,7 @@ public class JsonSourceGenerationOptionsAttribute extends JsonAttribute  {
 
     public void setUnknownTypeHandling(JsonUnknownTypeHandling UnknownTypeHandling) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UnknownTypeHandling", UnknownTypeHandling == null ? null : UnknownTypeHandling.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -533,10 +615,14 @@ public class JsonSourceGenerationOptionsAttribute extends JsonAttribute  {
 
     public JsonUnmappedMemberHandling getUnmappedMemberHandling() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUnmappedMemberHandling = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("UnmappedMemberHandling");
+            retObjectUnmappedMemberHandling = classInstance.Get("UnmappedMemberHandling");
+            JCObject val = (JCObject)retObjectUnmappedMemberHandling;
             return new JsonUnmappedMemberHandling(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUnmappedMemberHandling != null ? retObjectUnmappedMemberHandling.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -544,7 +630,7 @@ public class JsonSourceGenerationOptionsAttribute extends JsonAttribute  {
 
     public void setUnmappedMemberHandling(JsonUnmappedMemberHandling UnmappedMemberHandling) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UnmappedMemberHandling", UnmappedMemberHandling == null ? null : UnmappedMemberHandling.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -554,16 +640,20 @@ public class JsonSourceGenerationOptionsAttribute extends JsonAttribute  {
 
     public final NetType[] getConverters() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConverters = null;
         try {
             ArrayList<NetType> resultingArrayList = new ArrayList<NetType>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("Converters");
+            retObjectConverters = classInstance.Get("Converters");
+            JCObject resultingObjects = (JCObject)retObjectConverters;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new NetType(resultingObject));
             }
             NetType[] resultingArray = new NetType[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConverters != null ? retObjectConverters.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -571,7 +661,7 @@ public class JsonSourceGenerationOptionsAttribute extends JsonAttribute  {
 
     public void setConverters(NetType[] Converters) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Converters", toObjectFromArray(Converters));
         } catch (JCNativeException jcne) {

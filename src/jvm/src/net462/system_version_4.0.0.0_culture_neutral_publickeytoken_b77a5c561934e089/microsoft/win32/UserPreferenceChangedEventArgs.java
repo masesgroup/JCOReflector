@@ -171,10 +171,14 @@ public class UserPreferenceChangedEventArgs extends EventArgs  {
     
     public UserPreferenceCategory getCategory() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCategory = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Category");
+            retObjectCategory = classInstance.Get("Category");
+            JCObject val = (JCObject)retObjectCategory;
             return new UserPreferenceCategory(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCategory != null ? retObjectCategory.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

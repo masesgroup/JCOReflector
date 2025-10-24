@@ -179,10 +179,14 @@ public class ContextMenuStrip extends ToolStripDropDownMenu  {
     
     public Control getSourceControl() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSourceControl = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SourceControl");
+            retObjectSourceControl = classInstance.Get("SourceControl");
+            JCObject val = (JCObject)retObjectSourceControl;
             return new Control(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSourceControl != null ? retObjectSourceControl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

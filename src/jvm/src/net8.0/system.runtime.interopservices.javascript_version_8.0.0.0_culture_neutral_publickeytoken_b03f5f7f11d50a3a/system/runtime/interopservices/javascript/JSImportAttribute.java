@@ -180,9 +180,13 @@ public class JSImportAttribute extends Attribute  {
     
     public java.lang.String getFunctionName() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFunctionName = null;
         try {
-            return (java.lang.String)classInstance.Get("FunctionName");
+            retObjectFunctionName = classInstance.Get("FunctionName");
+            return (java.lang.String)retObjectFunctionName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectFunctionName != null ? retObjectFunctionName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,9 +194,13 @@ public class JSImportAttribute extends Attribute  {
 
     public java.lang.String getModuleName() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectModuleName = null;
         try {
-            return (java.lang.String)classInstance.Get("ModuleName");
+            retObjectModuleName = classInstance.Get("ModuleName");
+            return (java.lang.String)retObjectModuleName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectModuleName != null ? retObjectModuleName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

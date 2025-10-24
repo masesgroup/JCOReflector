@@ -194,9 +194,13 @@ public class DSAOpenSsl extends DSA  {
     
     public boolean VerifySignature(byte[] rgbHash, byte[] rgbSignature) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVerifySignature = null;
         try {
-            return (boolean)classInstance.Invoke("VerifySignature", rgbHash, rgbSignature);
+            retObjectVerifySignature = classInstance.Invoke("VerifySignature", rgbHash, rgbSignature);
+            return (boolean)retObjectVerifySignature;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectVerifySignature != null ? retObjectVerifySignature.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -204,9 +208,13 @@ public class DSAOpenSsl extends DSA  {
 
     public boolean VerifySignature(JCORefOut dupParam0, JCORefOut dupParam1) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVerifySignature = null;
         try {
-            return (boolean)classInstance.Invoke("VerifySignature", dupParam0.getJCRefOut(), dupParam1.getJCRefOut());
+            retObjectVerifySignature = classInstance.Invoke("VerifySignature", dupParam0.getJCRefOut(), dupParam1.getJCRefOut());
+            return (boolean)retObjectVerifySignature;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectVerifySignature != null ? retObjectVerifySignature.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -214,10 +222,12 @@ public class DSAOpenSsl extends DSA  {
 
     public byte[] CreateSignature(byte[] rgbHash) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateSignature = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("CreateSignature", (java.lang.Object)rgbHash);
+            retObjectCreateSignature = classInstance.Invoke("CreateSignature", (java.lang.Object)rgbHash);
+            JCObject resultingObjects = (JCObject)retObjectCreateSignature;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -226,6 +236,8 @@ public class DSAOpenSsl extends DSA  {
 				resultingArray[indexCreateSignature] = (byte)resultingArrayList.get(indexCreateSignature);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectCreateSignature != null ? retObjectCreateSignature.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -233,10 +245,12 @@ public class DSAOpenSsl extends DSA  {
 
     public byte[] CreateSignature(JCORefOut dupParam0) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateSignature = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("CreateSignature", (java.lang.Object)dupParam0.getJCRefOut());
+            retObjectCreateSignature = classInstance.Invoke("CreateSignature", (java.lang.Object)dupParam0.getJCRefOut());
+            JCObject resultingObjects = (JCObject)retObjectCreateSignature;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -245,6 +259,8 @@ public class DSAOpenSsl extends DSA  {
 				resultingArray[indexCreateSignature] = (byte)resultingArrayList.get(indexCreateSignature);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectCreateSignature != null ? retObjectCreateSignature.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -252,10 +268,14 @@ public class DSAOpenSsl extends DSA  {
 
     public DSAParameters ExportParameters(boolean includePrivateParameters) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExportParameters = null;
         try {
-            JCObject objExportParameters = (JCObject)classInstance.Invoke("ExportParameters", includePrivateParameters);
+            retObjectExportParameters = classInstance.Invoke("ExportParameters", includePrivateParameters);
+            JCObject objExportParameters = (JCObject)retObjectExportParameters;
             return new DSAParameters(objExportParameters);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExportParameters != null ? retObjectExportParameters.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -263,10 +283,14 @@ public class DSAOpenSsl extends DSA  {
 
     public SafeEvpPKeyHandle DuplicateKeyHandle() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDuplicateKeyHandle = null;
         try {
-            JCObject objDuplicateKeyHandle = (JCObject)classInstance.Invoke("DuplicateKeyHandle");
+            retObjectDuplicateKeyHandle = classInstance.Invoke("DuplicateKeyHandle");
+            JCObject objDuplicateKeyHandle = (JCObject)retObjectDuplicateKeyHandle;
             return new SafeEvpPKeyHandle(objDuplicateKeyHandle);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDuplicateKeyHandle != null ? retObjectDuplicateKeyHandle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -274,7 +298,7 @@ public class DSAOpenSsl extends DSA  {
 
     public void ImportParameters(DSAParameters parameters) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ImportParameters", parameters == null ? null : parameters.getJCOInstance());
         } catch (JCNativeException jcne) {

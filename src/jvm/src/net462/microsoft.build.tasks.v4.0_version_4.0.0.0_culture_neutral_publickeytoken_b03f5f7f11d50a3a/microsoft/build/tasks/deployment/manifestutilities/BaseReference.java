@@ -157,9 +157,13 @@ public class BaseReference extends NetObject  {
     
     public boolean getIsOptional() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsOptional = null;
         try {
-            return (boolean)classInstance.Get("IsOptional");
+            retObjectIsOptional = classInstance.Get("IsOptional");
+            return (boolean)retObjectIsOptional;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsOptional != null ? retObjectIsOptional.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -167,7 +171,7 @@ public class BaseReference extends NetObject  {
 
     public void setIsOptional(boolean IsOptional) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsOptional", IsOptional);
         } catch (JCNativeException jcne) {
@@ -177,9 +181,20 @@ public class BaseReference extends NetObject  {
 
     public long getSize() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSize = null;
         try {
-            return (long)classInstance.Get("Size");
+            retObjectSize = classInstance.Get("Size");
+            return (long)retObjectSize;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSize_ToString = retObjectSize == null ? "null" : retObjectSize.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectSizeNumber = (java.lang.Number)retObjectSize;
+                return retObjectSizeNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectSize != null ? retObjectSize.getClass() : "null", retObjectSize_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,7 +202,7 @@ public class BaseReference extends NetObject  {
 
     public void setSize(long Size) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Size", Size);
         } catch (JCNativeException jcne) {
@@ -197,9 +212,13 @@ public class BaseReference extends NetObject  {
 
     public java.lang.String getGroup() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGroup = null;
         try {
-            return (java.lang.String)classInstance.Get("Group");
+            retObjectGroup = classInstance.Get("Group");
+            return (java.lang.String)retObjectGroup;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectGroup != null ? retObjectGroup.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -207,7 +226,7 @@ public class BaseReference extends NetObject  {
 
     public void setGroup(java.lang.String Group) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Group", Group);
         } catch (JCNativeException jcne) {
@@ -217,9 +236,13 @@ public class BaseReference extends NetObject  {
 
     public java.lang.String getHash() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHash = null;
         try {
-            return (java.lang.String)classInstance.Get("Hash");
+            retObjectHash = classInstance.Get("Hash");
+            return (java.lang.String)retObjectHash;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectHash != null ? retObjectHash.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -227,7 +250,7 @@ public class BaseReference extends NetObject  {
 
     public void setHash(java.lang.String Hash) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Hash", Hash);
         } catch (JCNativeException jcne) {
@@ -237,9 +260,13 @@ public class BaseReference extends NetObject  {
 
     public java.lang.String getResolvedPath() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResolvedPath = null;
         try {
-            return (java.lang.String)classInstance.Get("ResolvedPath");
+            retObjectResolvedPath = classInstance.Get("ResolvedPath");
+            return (java.lang.String)retObjectResolvedPath;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectResolvedPath != null ? retObjectResolvedPath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -247,7 +274,7 @@ public class BaseReference extends NetObject  {
 
     public void setResolvedPath(java.lang.String ResolvedPath) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ResolvedPath", ResolvedPath);
         } catch (JCNativeException jcne) {
@@ -257,9 +284,13 @@ public class BaseReference extends NetObject  {
 
     public java.lang.String getSourcePath() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSourcePath = null;
         try {
-            return (java.lang.String)classInstance.Get("SourcePath");
+            retObjectSourcePath = classInstance.Get("SourcePath");
+            return (java.lang.String)retObjectSourcePath;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSourcePath != null ? retObjectSourcePath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -267,7 +298,7 @@ public class BaseReference extends NetObject  {
 
     public void setSourcePath(java.lang.String SourcePath) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SourcePath", SourcePath);
         } catch (JCNativeException jcne) {
@@ -277,9 +308,13 @@ public class BaseReference extends NetObject  {
 
     public java.lang.String getTargetPath() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTargetPath = null;
         try {
-            return (java.lang.String)classInstance.Get("TargetPath");
+            retObjectTargetPath = classInstance.Get("TargetPath");
+            return (java.lang.String)retObjectTargetPath;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectTargetPath != null ? retObjectTargetPath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -287,7 +322,7 @@ public class BaseReference extends NetObject  {
 
     public void setTargetPath(java.lang.String TargetPath) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TargetPath", TargetPath);
         } catch (JCNativeException jcne) {
@@ -297,9 +332,13 @@ public class BaseReference extends NetObject  {
 
     public java.lang.String getXmlGroup() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectXmlGroup = null;
         try {
-            return (java.lang.String)classInstance.Get("XmlGroup");
+            retObjectXmlGroup = classInstance.Get("XmlGroup");
+            return (java.lang.String)retObjectXmlGroup;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectXmlGroup != null ? retObjectXmlGroup.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -307,7 +346,7 @@ public class BaseReference extends NetObject  {
 
     public void setXmlGroup(java.lang.String XmlGroup) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("XmlGroup", XmlGroup);
         } catch (JCNativeException jcne) {
@@ -317,9 +356,13 @@ public class BaseReference extends NetObject  {
 
     public java.lang.String getXmlHash() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectXmlHash = null;
         try {
-            return (java.lang.String)classInstance.Get("XmlHash");
+            retObjectXmlHash = classInstance.Get("XmlHash");
+            return (java.lang.String)retObjectXmlHash;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectXmlHash != null ? retObjectXmlHash.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -327,7 +370,7 @@ public class BaseReference extends NetObject  {
 
     public void setXmlHash(java.lang.String XmlHash) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("XmlHash", XmlHash);
         } catch (JCNativeException jcne) {
@@ -337,9 +380,13 @@ public class BaseReference extends NetObject  {
 
     public java.lang.String getXmlHashAlgorithm() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectXmlHashAlgorithm = null;
         try {
-            return (java.lang.String)classInstance.Get("XmlHashAlgorithm");
+            retObjectXmlHashAlgorithm = classInstance.Get("XmlHashAlgorithm");
+            return (java.lang.String)retObjectXmlHashAlgorithm;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectXmlHashAlgorithm != null ? retObjectXmlHashAlgorithm.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -347,7 +394,7 @@ public class BaseReference extends NetObject  {
 
     public void setXmlHashAlgorithm(java.lang.String XmlHashAlgorithm) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("XmlHashAlgorithm", XmlHashAlgorithm);
         } catch (JCNativeException jcne) {
@@ -357,9 +404,13 @@ public class BaseReference extends NetObject  {
 
     public java.lang.String getXmlIsOptional() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectXmlIsOptional = null;
         try {
-            return (java.lang.String)classInstance.Get("XmlIsOptional");
+            retObjectXmlIsOptional = classInstance.Get("XmlIsOptional");
+            return (java.lang.String)retObjectXmlIsOptional;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectXmlIsOptional != null ? retObjectXmlIsOptional.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -367,7 +418,7 @@ public class BaseReference extends NetObject  {
 
     public void setXmlIsOptional(java.lang.String XmlIsOptional) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("XmlIsOptional", XmlIsOptional);
         } catch (JCNativeException jcne) {
@@ -377,9 +428,13 @@ public class BaseReference extends NetObject  {
 
     public java.lang.String getXmlPath() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectXmlPath = null;
         try {
-            return (java.lang.String)classInstance.Get("XmlPath");
+            retObjectXmlPath = classInstance.Get("XmlPath");
+            return (java.lang.String)retObjectXmlPath;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectXmlPath != null ? retObjectXmlPath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -387,7 +442,7 @@ public class BaseReference extends NetObject  {
 
     public void setXmlPath(java.lang.String XmlPath) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("XmlPath", XmlPath);
         } catch (JCNativeException jcne) {
@@ -397,9 +452,13 @@ public class BaseReference extends NetObject  {
 
     public java.lang.String getXmlSize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectXmlSize = null;
         try {
-            return (java.lang.String)classInstance.Get("XmlSize");
+            retObjectXmlSize = classInstance.Get("XmlSize");
+            return (java.lang.String)retObjectXmlSize;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectXmlSize != null ? retObjectXmlSize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -407,7 +466,7 @@ public class BaseReference extends NetObject  {
 
     public void setXmlSize(java.lang.String XmlSize) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("XmlSize", XmlSize);
         } catch (JCNativeException jcne) {

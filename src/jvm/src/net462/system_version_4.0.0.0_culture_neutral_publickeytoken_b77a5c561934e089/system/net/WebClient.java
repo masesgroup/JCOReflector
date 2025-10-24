@@ -185,10 +185,12 @@ public class WebClient extends Component  {
     
     public byte[] DownloadData(java.lang.String address) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.security.SecurityException, system.UriFormatException, system.OutOfMemoryException, system.io.PathTooLongException, system.NotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.InvalidCastException, system.MulticastNotSupportedException, system.MissingMethodException, system.net.WebException, system.threading.SemaphoreFullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDownloadData = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("DownloadData", address);
+            retObjectDownloadData = classInstance.Invoke("DownloadData", address);
+            JCObject resultingObjects = (JCObject)retObjectDownloadData;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -197,6 +199,8 @@ public class WebClient extends Component  {
 				resultingArray[indexDownloadData] = (byte)resultingArrayList.get(indexDownloadData);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectDownloadData != null ? retObjectDownloadData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -204,10 +208,12 @@ public class WebClient extends Component  {
 
     public byte[] DownloadData(Uri address) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.MulticastNotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.UriFormatException, system.security.SecurityException, system.InvalidCastException, system.globalization.CultureNotFoundException, system.MissingMethodException, system.NotImplementedException, system.net.WebException, system.ObjectDisposedException, system.threading.SemaphoreFullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDownloadData = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("DownloadData", address == null ? null : address.getJCOInstance());
+            retObjectDownloadData = classInstance.Invoke("DownloadData", address == null ? null : address.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectDownloadData;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -216,6 +222,8 @@ public class WebClient extends Component  {
 				resultingArray[indexDownloadData] = (byte)resultingArrayList.get(indexDownloadData);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectDownloadData != null ? retObjectDownloadData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -223,10 +231,12 @@ public class WebClient extends Component  {
 
     public byte[] UploadData(java.lang.String address, byte[] data) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.security.SecurityException, system.UriFormatException, system.OutOfMemoryException, system.io.PathTooLongException, system.NotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.InvalidCastException, system.MulticastNotSupportedException, system.MissingMethodException, system.threading.SemaphoreFullException, system.net.WebException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUploadData = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("UploadData", address, data);
+            retObjectUploadData = classInstance.Invoke("UploadData", address, data);
+            JCObject resultingObjects = (JCObject)retObjectUploadData;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -235,6 +245,8 @@ public class WebClient extends Component  {
 				resultingArray[indexUploadData] = (byte)resultingArrayList.get(indexUploadData);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectUploadData != null ? retObjectUploadData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -242,10 +254,12 @@ public class WebClient extends Component  {
 
     public byte[] UploadData(java.lang.String dupParam0, JCORefOut dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.security.SecurityException, system.UriFormatException, system.OutOfMemoryException, system.io.PathTooLongException, system.NotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.InvalidCastException, system.MulticastNotSupportedException, system.MissingMethodException, system.threading.SemaphoreFullException, system.net.WebException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUploadData = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("UploadData", dupParam0, dupParam1.getJCRefOut());
+            retObjectUploadData = classInstance.Invoke("UploadData", dupParam0, dupParam1.getJCRefOut());
+            JCObject resultingObjects = (JCObject)retObjectUploadData;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -254,6 +268,8 @@ public class WebClient extends Component  {
 				resultingArray[indexUploadData] = (byte)resultingArrayList.get(indexUploadData);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectUploadData != null ? retObjectUploadData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -261,10 +277,12 @@ public class WebClient extends Component  {
 
     public byte[] UploadData(java.lang.String address, java.lang.String method, byte[] data) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.security.SecurityException, system.UriFormatException, system.OutOfMemoryException, system.io.PathTooLongException, system.NotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.InvalidCastException, system.MulticastNotSupportedException, system.MissingMethodException, system.threading.SemaphoreFullException, system.net.WebException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUploadData = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("UploadData", address, method, data);
+            retObjectUploadData = classInstance.Invoke("UploadData", address, method, data);
+            JCObject resultingObjects = (JCObject)retObjectUploadData;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -273,6 +291,8 @@ public class WebClient extends Component  {
 				resultingArray[indexUploadData] = (byte)resultingArrayList.get(indexUploadData);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectUploadData != null ? retObjectUploadData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -280,10 +300,12 @@ public class WebClient extends Component  {
 
     public byte[] UploadData(java.lang.String dupParam0, java.lang.String dupParam1, JCORefOut dupParam2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.security.SecurityException, system.UriFormatException, system.OutOfMemoryException, system.io.PathTooLongException, system.NotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.InvalidCastException, system.MulticastNotSupportedException, system.MissingMethodException, system.threading.SemaphoreFullException, system.net.WebException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUploadData = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("UploadData", dupParam0, dupParam1, dupParam2.getJCRefOut());
+            retObjectUploadData = classInstance.Invoke("UploadData", dupParam0, dupParam1, dupParam2.getJCRefOut());
+            JCObject resultingObjects = (JCObject)retObjectUploadData;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -292,6 +314,8 @@ public class WebClient extends Component  {
 				resultingArray[indexUploadData] = (byte)resultingArrayList.get(indexUploadData);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectUploadData != null ? retObjectUploadData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -299,10 +323,12 @@ public class WebClient extends Component  {
 
     public byte[] UploadData(Uri address, byte[] data) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.resources.MissingManifestResourceException, system.InvalidCastException, system.MulticastNotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.UriFormatException, system.security.SecurityException, system.NotSupportedException, system.MissingMethodException, system.NotImplementedException, system.threading.SemaphoreFullException, system.net.WebException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUploadData = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("UploadData", address == null ? null : address.getJCOInstance(), data);
+            retObjectUploadData = classInstance.Invoke("UploadData", address == null ? null : address.getJCOInstance(), data);
+            JCObject resultingObjects = (JCObject)retObjectUploadData;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -311,6 +337,8 @@ public class WebClient extends Component  {
 				resultingArray[indexUploadData] = (byte)resultingArrayList.get(indexUploadData);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectUploadData != null ? retObjectUploadData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -318,10 +346,12 @@ public class WebClient extends Component  {
 
     public byte[] UploadData(Uri dupParam0, JCORefOut dupParam1) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.resources.MissingManifestResourceException, system.InvalidCastException, system.MulticastNotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.UriFormatException, system.security.SecurityException, system.NotSupportedException, system.MissingMethodException, system.NotImplementedException, system.threading.SemaphoreFullException, system.net.WebException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUploadData = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("UploadData", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1.getJCRefOut());
+            retObjectUploadData = classInstance.Invoke("UploadData", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1.getJCRefOut());
+            JCObject resultingObjects = (JCObject)retObjectUploadData;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -330,6 +360,8 @@ public class WebClient extends Component  {
 				resultingArray[indexUploadData] = (byte)resultingArrayList.get(indexUploadData);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectUploadData != null ? retObjectUploadData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -337,10 +369,12 @@ public class WebClient extends Component  {
 
     public byte[] UploadData(Uri address, java.lang.String method, byte[] data) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.MulticastNotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.UriFormatException, system.security.SecurityException, system.MemberAccessException, system.globalization.CultureNotFoundException, system.InvalidCastException, system.MissingMethodException, system.NotImplementedException, system.ObjectDisposedException, system.threading.SemaphoreFullException, system.net.WebException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUploadData = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("UploadData", address == null ? null : address.getJCOInstance(), method, data);
+            retObjectUploadData = classInstance.Invoke("UploadData", address == null ? null : address.getJCOInstance(), method, data);
+            JCObject resultingObjects = (JCObject)retObjectUploadData;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -349,6 +383,8 @@ public class WebClient extends Component  {
 				resultingArray[indexUploadData] = (byte)resultingArrayList.get(indexUploadData);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectUploadData != null ? retObjectUploadData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -356,10 +392,12 @@ public class WebClient extends Component  {
 
     public byte[] UploadData(Uri dupParam0, java.lang.String dupParam1, JCORefOut dupParam2) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.MulticastNotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.UriFormatException, system.security.SecurityException, system.MemberAccessException, system.globalization.CultureNotFoundException, system.InvalidCastException, system.MissingMethodException, system.NotImplementedException, system.ObjectDisposedException, system.threading.SemaphoreFullException, system.net.WebException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUploadData = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("UploadData", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1, dupParam2.getJCRefOut());
+            retObjectUploadData = classInstance.Invoke("UploadData", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1, dupParam2.getJCRefOut());
+            JCObject resultingObjects = (JCObject)retObjectUploadData;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -368,6 +406,8 @@ public class WebClient extends Component  {
 				resultingArray[indexUploadData] = (byte)resultingArrayList.get(indexUploadData);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectUploadData != null ? retObjectUploadData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -375,10 +415,12 @@ public class WebClient extends Component  {
 
     public byte[] UploadFile(java.lang.String address, java.lang.String fileName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.security.SecurityException, system.UriFormatException, system.OutOfMemoryException, system.io.PathTooLongException, system.NotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.MulticastNotSupportedException, system.net.WebException, system.io.IOException, system.OverflowException, system.InvalidCastException, system.MissingMethodException, system.threading.SemaphoreFullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUploadFile = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("UploadFile", address, fileName);
+            retObjectUploadFile = classInstance.Invoke("UploadFile", address, fileName);
+            JCObject resultingObjects = (JCObject)retObjectUploadFile;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -387,6 +429,8 @@ public class WebClient extends Component  {
 				resultingArray[indexUploadFile] = (byte)resultingArrayList.get(indexUploadFile);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectUploadFile != null ? retObjectUploadFile.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -394,10 +438,12 @@ public class WebClient extends Component  {
 
     public byte[] UploadFile(java.lang.String address, java.lang.String method, java.lang.String fileName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.security.SecurityException, system.UriFormatException, system.OutOfMemoryException, system.io.PathTooLongException, system.NotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.InvalidCastException, system.MulticastNotSupportedException, system.net.WebException, system.io.IOException, system.InvalidTimeZoneException, system.MissingMethodException, system.reflection.TargetInvocationException, system.threading.SemaphoreFullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUploadFile = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("UploadFile", address, method, fileName);
+            retObjectUploadFile = classInstance.Invoke("UploadFile", address, method, fileName);
+            JCObject resultingObjects = (JCObject)retObjectUploadFile;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -406,6 +452,8 @@ public class WebClient extends Component  {
 				resultingArray[indexUploadFile] = (byte)resultingArrayList.get(indexUploadFile);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectUploadFile != null ? retObjectUploadFile.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -413,10 +461,12 @@ public class WebClient extends Component  {
 
     public byte[] UploadFile(Uri address, java.lang.String fileName) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.resources.MissingManifestResourceException, system.InvalidCastException, system.MulticastNotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.UriFormatException, system.security.SecurityException, system.NotSupportedException, system.net.WebException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.InvalidTimeZoneException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ObjectDisposedException, system.threading.SemaphoreFullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUploadFile = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("UploadFile", address == null ? null : address.getJCOInstance(), fileName);
+            retObjectUploadFile = classInstance.Invoke("UploadFile", address == null ? null : address.getJCOInstance(), fileName);
+            JCObject resultingObjects = (JCObject)retObjectUploadFile;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -425,6 +475,8 @@ public class WebClient extends Component  {
 				resultingArray[indexUploadFile] = (byte)resultingArrayList.get(indexUploadFile);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectUploadFile != null ? retObjectUploadFile.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -432,10 +484,12 @@ public class WebClient extends Component  {
 
     public byte[] UploadFile(Uri address, java.lang.String method, java.lang.String fileName) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.MulticastNotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.UriFormatException, system.security.SecurityException, system.MemberAccessException, system.globalization.CultureNotFoundException, system.net.WebException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.InvalidTimeZoneException, system.InvalidCastException, system.MissingMethodException, system.NotImplementedException, system.threading.tasks.TaskCanceledException, system.AggregateException, system.ObjectDisposedException, system.threading.SemaphoreFullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUploadFile = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("UploadFile", address == null ? null : address.getJCOInstance(), method, fileName);
+            retObjectUploadFile = classInstance.Invoke("UploadFile", address == null ? null : address.getJCOInstance(), method, fileName);
+            JCObject resultingObjects = (JCObject)retObjectUploadFile;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -444,6 +498,8 @@ public class WebClient extends Component  {
 				resultingArray[indexUploadFile] = (byte)resultingArrayList.get(indexUploadFile);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectUploadFile != null ? retObjectUploadFile.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -451,10 +507,12 @@ public class WebClient extends Component  {
 
     public byte[] UploadValues(java.lang.String address, NameValueCollection data) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.security.SecurityException, system.UriFormatException, system.OutOfMemoryException, system.io.PathTooLongException, system.NotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.InvalidCastException, system.MulticastNotSupportedException, system.net.WebException, system.MissingMethodException, system.reflection.TargetInvocationException, system.threading.SemaphoreFullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUploadValues = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("UploadValues", address, data == null ? null : data.getJCOInstance());
+            retObjectUploadValues = classInstance.Invoke("UploadValues", address, data == null ? null : data.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectUploadValues;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -463,6 +521,8 @@ public class WebClient extends Component  {
 				resultingArray[indexUploadValues] = (byte)resultingArrayList.get(indexUploadValues);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectUploadValues != null ? retObjectUploadValues.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -470,10 +530,12 @@ public class WebClient extends Component  {
 
     public byte[] UploadValues(java.lang.String address, java.lang.String method, NameValueCollection data) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.security.SecurityException, system.UriFormatException, system.OutOfMemoryException, system.io.PathTooLongException, system.NotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.InvalidCastException, system.MulticastNotSupportedException, system.net.WebException, system.MissingMethodException, system.reflection.TargetInvocationException, system.threading.SemaphoreFullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUploadValues = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("UploadValues", address, method, data == null ? null : data.getJCOInstance());
+            retObjectUploadValues = classInstance.Invoke("UploadValues", address, method, data == null ? null : data.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectUploadValues;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -482,6 +544,8 @@ public class WebClient extends Component  {
 				resultingArray[indexUploadValues] = (byte)resultingArrayList.get(indexUploadValues);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectUploadValues != null ? retObjectUploadValues.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -489,10 +553,12 @@ public class WebClient extends Component  {
 
     public byte[] UploadValues(Uri address, NameValueCollection data) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.resources.MissingManifestResourceException, system.InvalidCastException, system.MulticastNotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.UriFormatException, system.security.SecurityException, system.NotSupportedException, system.net.WebException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ObjectDisposedException, system.threading.SemaphoreFullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUploadValues = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("UploadValues", address == null ? null : address.getJCOInstance(), data == null ? null : data.getJCOInstance());
+            retObjectUploadValues = classInstance.Invoke("UploadValues", address == null ? null : address.getJCOInstance(), data == null ? null : data.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectUploadValues;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -501,6 +567,8 @@ public class WebClient extends Component  {
 				resultingArray[indexUploadValues] = (byte)resultingArrayList.get(indexUploadValues);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectUploadValues != null ? retObjectUploadValues.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -508,10 +576,12 @@ public class WebClient extends Component  {
 
     public byte[] UploadValues(Uri address, java.lang.String method, NameValueCollection data) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.MulticastNotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.UriFormatException, system.security.SecurityException, system.MemberAccessException, system.globalization.CultureNotFoundException, system.net.WebException, system.InvalidCastException, system.MissingMethodException, system.NotImplementedException, system.threading.tasks.TaskCanceledException, system.AggregateException, system.ObjectDisposedException, system.threading.SemaphoreFullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUploadValues = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("UploadValues", address == null ? null : address.getJCOInstance(), method, data == null ? null : data.getJCOInstance());
+            retObjectUploadValues = classInstance.Invoke("UploadValues", address == null ? null : address.getJCOInstance(), method, data == null ? null : data.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectUploadValues;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -520,6 +590,8 @@ public class WebClient extends Component  {
 				resultingArray[indexUploadValues] = (byte)resultingArrayList.get(indexUploadValues);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectUploadValues != null ? retObjectUploadValues.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -527,10 +599,14 @@ public class WebClient extends Component  {
 
     public Stream OpenRead(java.lang.String address) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.security.SecurityException, system.UriFormatException, system.OutOfMemoryException, system.io.PathTooLongException, system.NotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.InvalidCastException, system.MulticastNotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOpenRead = null;
         try {
-            JCObject objOpenRead = (JCObject)classInstance.Invoke("OpenRead", address);
+            retObjectOpenRead = classInstance.Invoke("OpenRead", address);
+            JCObject objOpenRead = (JCObject)retObjectOpenRead;
             return new Stream(objOpenRead);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOpenRead != null ? retObjectOpenRead.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -538,10 +614,14 @@ public class WebClient extends Component  {
 
     public Stream OpenRead(Uri address) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.MulticastNotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.UriFormatException, system.security.SecurityException, system.MemberAccessException, system.InvalidCastException, system.MissingMethodException, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOpenRead = null;
         try {
-            JCObject objOpenRead = (JCObject)classInstance.Invoke("OpenRead", address == null ? null : address.getJCOInstance());
+            retObjectOpenRead = classInstance.Invoke("OpenRead", address == null ? null : address.getJCOInstance());
+            JCObject objOpenRead = (JCObject)retObjectOpenRead;
             return new Stream(objOpenRead);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOpenRead != null ? retObjectOpenRead.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -549,10 +629,14 @@ public class WebClient extends Component  {
 
     public Stream OpenWrite(java.lang.String address) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.security.SecurityException, system.UriFormatException, system.OutOfMemoryException, system.io.PathTooLongException, system.NotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.InvalidCastException, system.MulticastNotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOpenWrite = null;
         try {
-            JCObject objOpenWrite = (JCObject)classInstance.Invoke("OpenWrite", address);
+            retObjectOpenWrite = classInstance.Invoke("OpenWrite", address);
+            JCObject objOpenWrite = (JCObject)retObjectOpenWrite;
             return new Stream(objOpenWrite);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOpenWrite != null ? retObjectOpenWrite.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -560,10 +644,14 @@ public class WebClient extends Component  {
 
     public Stream OpenWrite(java.lang.String address, java.lang.String method) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.security.SecurityException, system.UriFormatException, system.OutOfMemoryException, system.io.PathTooLongException, system.NotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.InvalidCastException, system.MulticastNotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOpenWrite = null;
         try {
-            JCObject objOpenWrite = (JCObject)classInstance.Invoke("OpenWrite", address, method);
+            retObjectOpenWrite = classInstance.Invoke("OpenWrite", address, method);
+            JCObject objOpenWrite = (JCObject)retObjectOpenWrite;
             return new Stream(objOpenWrite);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOpenWrite != null ? retObjectOpenWrite.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -571,10 +659,14 @@ public class WebClient extends Component  {
 
     public Stream OpenWrite(Uri address) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.resources.MissingManifestResourceException, system.InvalidCastException, system.MulticastNotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.UriFormatException, system.security.SecurityException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOpenWrite = null;
         try {
-            JCObject objOpenWrite = (JCObject)classInstance.Invoke("OpenWrite", address == null ? null : address.getJCOInstance());
+            retObjectOpenWrite = classInstance.Invoke("OpenWrite", address == null ? null : address.getJCOInstance());
+            JCObject objOpenWrite = (JCObject)retObjectOpenWrite;
             return new Stream(objOpenWrite);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOpenWrite != null ? retObjectOpenWrite.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -582,10 +674,14 @@ public class WebClient extends Component  {
 
     public Stream OpenWrite(Uri address, java.lang.String method) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.MulticastNotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.UriFormatException, system.security.SecurityException, system.MemberAccessException, system.globalization.CultureNotFoundException, system.InvalidCastException, system.MissingMethodException, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOpenWrite = null;
         try {
-            JCObject objOpenWrite = (JCObject)classInstance.Invoke("OpenWrite", address == null ? null : address.getJCOInstance(), method);
+            retObjectOpenWrite = classInstance.Invoke("OpenWrite", address == null ? null : address.getJCOInstance(), method);
+            JCObject objOpenWrite = (JCObject)retObjectOpenWrite;
             return new Stream(objOpenWrite);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOpenWrite != null ? retObjectOpenWrite.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -593,9 +689,13 @@ public class WebClient extends Component  {
 
     public java.lang.String DownloadString(java.lang.String address) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.security.SecurityException, system.UriFormatException, system.OutOfMemoryException, system.io.PathTooLongException, system.NotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.InvalidCastException, system.MulticastNotSupportedException, system.MissingMethodException, system.net.WebException, system.threading.SemaphoreFullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDownloadString = null;
         try {
-            return (java.lang.String)classInstance.Invoke("DownloadString", address);
+            retObjectDownloadString = classInstance.Invoke("DownloadString", address);
+            return (java.lang.String)retObjectDownloadString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectDownloadString != null ? retObjectDownloadString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -603,9 +703,13 @@ public class WebClient extends Component  {
 
     public java.lang.String DownloadString(Uri address) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.MulticastNotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.UriFormatException, system.security.SecurityException, system.InvalidCastException, system.globalization.CultureNotFoundException, system.MissingMethodException, system.NotImplementedException, system.net.WebException, system.ObjectDisposedException, system.threading.SemaphoreFullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDownloadString = null;
         try {
-            return (java.lang.String)classInstance.Invoke("DownloadString", address == null ? null : address.getJCOInstance());
+            retObjectDownloadString = classInstance.Invoke("DownloadString", address == null ? null : address.getJCOInstance());
+            return (java.lang.String)retObjectDownloadString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectDownloadString != null ? retObjectDownloadString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -613,9 +717,13 @@ public class WebClient extends Component  {
 
     public java.lang.String UploadString(java.lang.String address, java.lang.String data) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.security.SecurityException, system.UriFormatException, system.OutOfMemoryException, system.io.PathTooLongException, system.NotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.InvalidCastException, system.MulticastNotSupportedException, system.MissingMethodException, system.threading.SemaphoreFullException, system.net.WebException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUploadString = null;
         try {
-            return (java.lang.String)classInstance.Invoke("UploadString", address, data);
+            retObjectUploadString = classInstance.Invoke("UploadString", address, data);
+            return (java.lang.String)retObjectUploadString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectUploadString != null ? retObjectUploadString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -623,9 +731,13 @@ public class WebClient extends Component  {
 
     public java.lang.String UploadString(java.lang.String address, java.lang.String method, java.lang.String data) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.security.SecurityException, system.UriFormatException, system.OutOfMemoryException, system.io.PathTooLongException, system.NotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.InvalidCastException, system.MulticastNotSupportedException, system.MissingMethodException, system.threading.SemaphoreFullException, system.net.WebException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUploadString = null;
         try {
-            return (java.lang.String)classInstance.Invoke("UploadString", address, method, data);
+            retObjectUploadString = classInstance.Invoke("UploadString", address, method, data);
+            return (java.lang.String)retObjectUploadString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectUploadString != null ? retObjectUploadString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -633,9 +745,13 @@ public class WebClient extends Component  {
 
     public java.lang.String UploadString(Uri address, java.lang.String data) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.resources.MissingManifestResourceException, system.InvalidCastException, system.MulticastNotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.UriFormatException, system.security.SecurityException, system.NotSupportedException, system.MissingMethodException, system.NotImplementedException, system.threading.SemaphoreFullException, system.net.WebException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUploadString = null;
         try {
-            return (java.lang.String)classInstance.Invoke("UploadString", address == null ? null : address.getJCOInstance(), data);
+            retObjectUploadString = classInstance.Invoke("UploadString", address == null ? null : address.getJCOInstance(), data);
+            return (java.lang.String)retObjectUploadString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectUploadString != null ? retObjectUploadString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -643,9 +759,13 @@ public class WebClient extends Component  {
 
     public java.lang.String UploadString(Uri address, java.lang.String method, java.lang.String data) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.MulticastNotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.UriFormatException, system.security.SecurityException, system.MemberAccessException, system.globalization.CultureNotFoundException, system.InvalidCastException, system.MissingMethodException, system.NotImplementedException, system.ObjectDisposedException, system.threading.SemaphoreFullException, system.net.WebException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUploadString = null;
         try {
-            return (java.lang.String)classInstance.Invoke("UploadString", address == null ? null : address.getJCOInstance(), method, data);
+            retObjectUploadString = classInstance.Invoke("UploadString", address == null ? null : address.getJCOInstance(), method, data);
+            return (java.lang.String)retObjectUploadString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectUploadString != null ? retObjectUploadString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -653,10 +773,14 @@ public class WebClient extends Component  {
 
     public Task DownloadFileTaskAsync(java.lang.String address, java.lang.String fileName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.security.SecurityException, system.UriFormatException, system.OutOfMemoryException, system.io.PathTooLongException, system.NotSupportedException, system.threading.tasks.TaskSchedulerException, system.MulticastNotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.io.IOException, system.InvalidCastException, system.MissingMethodException, system.net.WebException, system.threading.SemaphoreFullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDownloadFileTaskAsync = null;
         try {
-            JCObject objDownloadFileTaskAsync = (JCObject)classInstance.Invoke("DownloadFileTaskAsync", address, fileName);
+            retObjectDownloadFileTaskAsync = classInstance.Invoke("DownloadFileTaskAsync", address, fileName);
+            JCObject objDownloadFileTaskAsync = (JCObject)retObjectDownloadFileTaskAsync;
             return new Task(objDownloadFileTaskAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDownloadFileTaskAsync != null ? retObjectDownloadFileTaskAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -664,10 +788,14 @@ public class WebClient extends Component  {
 
     public Task DownloadFileTaskAsync(Uri address, java.lang.String fileName) throws Throwable, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.tasks.TaskSchedulerException, system.ArgumentNullException, system.ArgumentException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.resources.MissingManifestResourceException, system.InvalidCastException, system.OutOfMemoryException, system.NotSupportedException, system.NullReferenceException, system.io.PathTooLongException, system.IndexOutOfRangeException, system.security.SecurityException, system.io.IOException, system.UriFormatException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.net.WebException, system.threading.SemaphoreFullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDownloadFileTaskAsync = null;
         try {
-            JCObject objDownloadFileTaskAsync = (JCObject)classInstance.Invoke("DownloadFileTaskAsync", address == null ? null : address.getJCOInstance(), fileName);
+            retObjectDownloadFileTaskAsync = classInstance.Invoke("DownloadFileTaskAsync", address == null ? null : address.getJCOInstance(), fileName);
+            JCObject objDownloadFileTaskAsync = (JCObject)retObjectDownloadFileTaskAsync;
             return new Task(objDownloadFileTaskAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDownloadFileTaskAsync != null ? retObjectDownloadFileTaskAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -675,7 +803,7 @@ public class WebClient extends Component  {
 
     public void CancelAsync() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CancelAsync");
         } catch (JCNativeException jcne) {
@@ -685,7 +813,7 @@ public class WebClient extends Component  {
 
     public void DownloadDataAsync(Uri address) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.resources.MissingManifestResourceException, system.InvalidCastException, system.MulticastNotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.NotSupportedException, system.NullReferenceException, system.UriFormatException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.net.WebException, system.ObjectDisposedException, system.threading.SemaphoreFullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DownloadDataAsync", address == null ? null : address.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -695,7 +823,7 @@ public class WebClient extends Component  {
 
     public void DownloadDataAsync(Uri address, NetObject userToken) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.MulticastNotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.security.SecurityException, system.UriFormatException, system.MemberAccessException, system.InvalidCastException, system.MissingMethodException, system.NotImplementedException, system.net.WebException, system.threading.tasks.TaskCanceledException, system.AggregateException, system.ObjectDisposedException, system.threading.SemaphoreFullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DownloadDataAsync", address == null ? null : address.getJCOInstance(), userToken == null ? null : userToken.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -705,7 +833,7 @@ public class WebClient extends Component  {
 
     public void DownloadFile(java.lang.String address, java.lang.String fileName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.security.SecurityException, system.UriFormatException, system.OutOfMemoryException, system.io.PathTooLongException, system.NotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.InvalidCastException, system.MulticastNotSupportedException, system.io.IOException, system.MissingMethodException, system.reflection.TargetInvocationException, system.net.WebException, system.threading.SemaphoreFullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DownloadFile", address, fileName);
         } catch (JCNativeException jcne) {
@@ -715,7 +843,7 @@ public class WebClient extends Component  {
 
     public void DownloadFile(Uri address, java.lang.String fileName) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.MulticastNotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.security.SecurityException, system.UriFormatException, system.MemberAccessException, system.InvalidCastException, system.MissingMethodException, system.NotImplementedException, system.net.WebException, system.threading.tasks.TaskCanceledException, system.AggregateException, system.ObjectDisposedException, system.threading.SemaphoreFullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DownloadFile", address == null ? null : address.getJCOInstance(), fileName);
         } catch (JCNativeException jcne) {
@@ -725,7 +853,7 @@ public class WebClient extends Component  {
 
     public void DownloadFileAsync(Uri address, java.lang.String fileName) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.resources.MissingManifestResourceException, system.InvalidCastException, system.MulticastNotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.NotSupportedException, system.NullReferenceException, system.io.PathTooLongException, system.IndexOutOfRangeException, system.security.SecurityException, system.io.IOException, system.UriFormatException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.net.WebException, system.ObjectDisposedException, system.threading.SemaphoreFullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DownloadFileAsync", address == null ? null : address.getJCOInstance(), fileName);
         } catch (JCNativeException jcne) {
@@ -735,7 +863,7 @@ public class WebClient extends Component  {
 
     public void DownloadFileAsync(Uri address, java.lang.String fileName, NetObject userToken) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.MulticastNotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.security.SecurityException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.UriFormatException, system.MemberAccessException, system.InvalidCastException, system.MissingMethodException, system.NotImplementedException, system.net.WebException, system.threading.tasks.TaskCanceledException, system.AggregateException, system.ObjectDisposedException, system.threading.SemaphoreFullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DownloadFileAsync", address == null ? null : address.getJCOInstance(), fileName, userToken == null ? null : userToken.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -745,7 +873,7 @@ public class WebClient extends Component  {
 
     public void DownloadStringAsync(Uri address) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.resources.MissingManifestResourceException, system.InvalidCastException, system.MulticastNotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.NotSupportedException, system.NullReferenceException, system.UriFormatException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.net.WebException, system.threading.SemaphoreFullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DownloadStringAsync", address == null ? null : address.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -755,7 +883,7 @@ public class WebClient extends Component  {
 
     public void DownloadStringAsync(Uri address, NetObject userToken) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.MulticastNotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.security.SecurityException, system.UriFormatException, system.MemberAccessException, system.InvalidCastException, system.MissingMethodException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.net.WebException, system.threading.tasks.TaskCanceledException, system.AggregateException, system.threading.SemaphoreFullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DownloadStringAsync", address == null ? null : address.getJCOInstance(), userToken == null ? null : userToken.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -765,7 +893,7 @@ public class WebClient extends Component  {
 
     public void OpenReadAsync(Uri address) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.resources.MissingManifestResourceException, system.InvalidCastException, system.MulticastNotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.NotSupportedException, system.NullReferenceException, system.UriFormatException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("OpenReadAsync", address == null ? null : address.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -775,7 +903,7 @@ public class WebClient extends Component  {
 
     public void OpenReadAsync(Uri address, NetObject userToken) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.MulticastNotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.security.SecurityException, system.UriFormatException, system.MemberAccessException, system.InvalidCastException, system.MissingMethodException, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("OpenReadAsync", address == null ? null : address.getJCOInstance(), userToken == null ? null : userToken.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -785,7 +913,7 @@ public class WebClient extends Component  {
 
     public void OpenWriteAsync(Uri address) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.resources.MissingManifestResourceException, system.InvalidCastException, system.MulticastNotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.UriFormatException, system.security.SecurityException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("OpenWriteAsync", address == null ? null : address.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -795,7 +923,7 @@ public class WebClient extends Component  {
 
     public void OpenWriteAsync(Uri address, java.lang.String method) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.resources.MissingManifestResourceException, system.InvalidCastException, system.MulticastNotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.UriFormatException, system.security.SecurityException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("OpenWriteAsync", address == null ? null : address.getJCOInstance(), method);
         } catch (JCNativeException jcne) {
@@ -805,7 +933,7 @@ public class WebClient extends Component  {
 
     public void OpenWriteAsync(Uri address, java.lang.String method, NetObject userToken) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.MulticastNotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.UriFormatException, system.security.SecurityException, system.MemberAccessException, system.globalization.CultureNotFoundException, system.InvalidCastException, system.MissingMethodException, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("OpenWriteAsync", address == null ? null : address.getJCOInstance(), method, userToken == null ? null : userToken.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -815,7 +943,7 @@ public class WebClient extends Component  {
 
     public void UploadDataAsync(Uri address, byte[] data) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.resources.MissingManifestResourceException, system.InvalidCastException, system.MulticastNotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.UriFormatException, system.security.SecurityException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.net.WebException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("UploadDataAsync", address == null ? null : address.getJCOInstance(), data);
         } catch (JCNativeException jcne) {
@@ -825,7 +953,7 @@ public class WebClient extends Component  {
 
     public void UploadDataAsync(Uri dupParam0, JCORefOut dupParam1) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.resources.MissingManifestResourceException, system.InvalidCastException, system.MulticastNotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.UriFormatException, system.security.SecurityException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.net.WebException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("UploadDataAsync", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -835,7 +963,7 @@ public class WebClient extends Component  {
 
     public void UploadDataAsync(Uri address, java.lang.String method, byte[] data) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.resources.MissingManifestResourceException, system.InvalidCastException, system.MulticastNotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.UriFormatException, system.security.SecurityException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.net.WebException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("UploadDataAsync", address == null ? null : address.getJCOInstance(), method, data);
         } catch (JCNativeException jcne) {
@@ -845,7 +973,7 @@ public class WebClient extends Component  {
 
     public void UploadDataAsync(Uri dupParam0, java.lang.String dupParam1, JCORefOut dupParam2) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.resources.MissingManifestResourceException, system.InvalidCastException, system.MulticastNotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.UriFormatException, system.security.SecurityException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.net.WebException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("UploadDataAsync", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1, dupParam2.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -855,7 +983,7 @@ public class WebClient extends Component  {
 
     public void UploadDataAsync(Uri address, java.lang.String method, byte[] data, NetObject userToken) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.MulticastNotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.UriFormatException, system.security.SecurityException, system.MemberAccessException, system.globalization.CultureNotFoundException, system.InvalidCastException, system.MissingMethodException, system.NotImplementedException, system.net.WebException, system.threading.SemaphoreFullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("UploadDataAsync", address == null ? null : address.getJCOInstance(), method, data, userToken == null ? null : userToken.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -865,7 +993,7 @@ public class WebClient extends Component  {
 
     public void UploadDataAsync(Uri dupParam0, java.lang.String dupParam1, JCORefOut dupParam2, NetObject dupParam3) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.MulticastNotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.UriFormatException, system.security.SecurityException, system.MemberAccessException, system.globalization.CultureNotFoundException, system.InvalidCastException, system.MissingMethodException, system.NotImplementedException, system.net.WebException, system.threading.SemaphoreFullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("UploadDataAsync", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1, dupParam2.getJCRefOut(), dupParam3 == null ? null : dupParam3.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -875,7 +1003,7 @@ public class WebClient extends Component  {
 
     public void UploadFileAsync(Uri address, java.lang.String fileName) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.resources.MissingManifestResourceException, system.InvalidCastException, system.MulticastNotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.UriFormatException, system.security.SecurityException, system.NotSupportedException, system.net.WebException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.InvalidTimeZoneException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("UploadFileAsync", address == null ? null : address.getJCOInstance(), fileName);
         } catch (JCNativeException jcne) {
@@ -885,7 +1013,7 @@ public class WebClient extends Component  {
 
     public void UploadFileAsync(Uri address, java.lang.String method, java.lang.String fileName) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.resources.MissingManifestResourceException, system.InvalidCastException, system.MulticastNotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.UriFormatException, system.security.SecurityException, system.NotSupportedException, system.net.WebException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.InvalidTimeZoneException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("UploadFileAsync", address == null ? null : address.getJCOInstance(), method, fileName);
         } catch (JCNativeException jcne) {
@@ -895,7 +1023,7 @@ public class WebClient extends Component  {
 
     public void UploadFileAsync(Uri address, java.lang.String method, java.lang.String fileName, NetObject userToken) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.MulticastNotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.UriFormatException, system.security.SecurityException, system.MemberAccessException, system.globalization.CultureNotFoundException, system.net.WebException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.InvalidTimeZoneException, system.InvalidCastException, system.MissingMethodException, system.NotImplementedException, system.threading.SemaphoreFullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("UploadFileAsync", address == null ? null : address.getJCOInstance(), method, fileName, userToken == null ? null : userToken.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -905,7 +1033,7 @@ public class WebClient extends Component  {
 
     public void UploadStringAsync(Uri address, java.lang.String data) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.resources.MissingManifestResourceException, system.InvalidCastException, system.MulticastNotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.UriFormatException, system.security.SecurityException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.net.WebException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("UploadStringAsync", address == null ? null : address.getJCOInstance(), data);
         } catch (JCNativeException jcne) {
@@ -915,7 +1043,7 @@ public class WebClient extends Component  {
 
     public void UploadStringAsync(Uri address, java.lang.String method, java.lang.String data) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.resources.MissingManifestResourceException, system.InvalidCastException, system.MulticastNotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.UriFormatException, system.security.SecurityException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.net.WebException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("UploadStringAsync", address == null ? null : address.getJCOInstance(), method, data);
         } catch (JCNativeException jcne) {
@@ -925,7 +1053,7 @@ public class WebClient extends Component  {
 
     public void UploadStringAsync(Uri address, java.lang.String method, java.lang.String data, NetObject userToken) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.MulticastNotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.UriFormatException, system.security.SecurityException, system.MemberAccessException, system.globalization.CultureNotFoundException, system.InvalidCastException, system.MissingMethodException, system.NotImplementedException, system.net.WebException, system.threading.SemaphoreFullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("UploadStringAsync", address == null ? null : address.getJCOInstance(), method, data, userToken == null ? null : userToken.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -935,7 +1063,7 @@ public class WebClient extends Component  {
 
     public void UploadValuesAsync(Uri address, NameValueCollection data) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.resources.MissingManifestResourceException, system.InvalidCastException, system.MulticastNotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.UriFormatException, system.security.SecurityException, system.NotSupportedException, system.net.WebException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("UploadValuesAsync", address == null ? null : address.getJCOInstance(), data == null ? null : data.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -945,7 +1073,7 @@ public class WebClient extends Component  {
 
     public void UploadValuesAsync(Uri address, java.lang.String method, NameValueCollection data) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.resources.MissingManifestResourceException, system.InvalidCastException, system.MulticastNotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.UriFormatException, system.security.SecurityException, system.NotSupportedException, system.net.WebException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("UploadValuesAsync", address == null ? null : address.getJCOInstance(), method, data == null ? null : data.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -955,7 +1083,7 @@ public class WebClient extends Component  {
 
     public void UploadValuesAsync(Uri address, java.lang.String method, NameValueCollection data, NetObject userToken) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.MulticastNotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.UriFormatException, system.security.SecurityException, system.MemberAccessException, system.globalization.CultureNotFoundException, system.net.WebException, system.InvalidCastException, system.MissingMethodException, system.NotImplementedException, system.threading.SemaphoreFullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("UploadValuesAsync", address == null ? null : address.getJCOInstance(), method, data == null ? null : data.getJCOInstance(), userToken == null ? null : userToken.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -969,9 +1097,13 @@ public class WebClient extends Component  {
     
     public boolean getAllowReadStreamBuffering() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAllowReadStreamBuffering = null;
         try {
-            return (boolean)classInstance.Get("AllowReadStreamBuffering");
+            retObjectAllowReadStreamBuffering = classInstance.Get("AllowReadStreamBuffering");
+            return (boolean)retObjectAllowReadStreamBuffering;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAllowReadStreamBuffering != null ? retObjectAllowReadStreamBuffering.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -979,7 +1111,7 @@ public class WebClient extends Component  {
 
     public void setAllowReadStreamBuffering(boolean AllowReadStreamBuffering) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AllowReadStreamBuffering", AllowReadStreamBuffering);
         } catch (JCNativeException jcne) {
@@ -989,9 +1121,13 @@ public class WebClient extends Component  {
 
     public boolean getAllowWriteStreamBuffering() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAllowWriteStreamBuffering = null;
         try {
-            return (boolean)classInstance.Get("AllowWriteStreamBuffering");
+            retObjectAllowWriteStreamBuffering = classInstance.Get("AllowWriteStreamBuffering");
+            return (boolean)retObjectAllowWriteStreamBuffering;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAllowWriteStreamBuffering != null ? retObjectAllowWriteStreamBuffering.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -999,7 +1135,7 @@ public class WebClient extends Component  {
 
     public void setAllowWriteStreamBuffering(boolean AllowWriteStreamBuffering) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AllowWriteStreamBuffering", AllowWriteStreamBuffering);
         } catch (JCNativeException jcne) {
@@ -1009,9 +1145,13 @@ public class WebClient extends Component  {
 
     public boolean getIsBusy() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsBusy = null;
         try {
-            return (boolean)classInstance.Get("IsBusy");
+            retObjectIsBusy = classInstance.Get("IsBusy");
+            return (boolean)retObjectIsBusy;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsBusy != null ? retObjectIsBusy.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1019,9 +1159,13 @@ public class WebClient extends Component  {
 
     public boolean getUseDefaultCredentials() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUseDefaultCredentials = null;
         try {
-            return (boolean)classInstance.Get("UseDefaultCredentials");
+            retObjectUseDefaultCredentials = classInstance.Get("UseDefaultCredentials");
+            return (boolean)retObjectUseDefaultCredentials;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectUseDefaultCredentials != null ? retObjectUseDefaultCredentials.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1029,7 +1173,7 @@ public class WebClient extends Component  {
 
     public void setUseDefaultCredentials(boolean UseDefaultCredentials) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.IndexOutOfRangeException, system.NullReferenceException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UseDefaultCredentials", UseDefaultCredentials);
         } catch (JCNativeException jcne) {
@@ -1039,10 +1183,14 @@ public class WebClient extends Component  {
 
     public NameValueCollection getQueryString() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectQueryString = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("QueryString");
+            retObjectQueryString = classInstance.Get("QueryString");
+            JCObject val = (JCObject)retObjectQueryString;
             return new NameValueCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectQueryString != null ? retObjectQueryString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1050,7 +1198,7 @@ public class WebClient extends Component  {
 
     public void setQueryString(NameValueCollection QueryString) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("QueryString", QueryString == null ? null : QueryString.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1060,10 +1208,14 @@ public class WebClient extends Component  {
 
     public RequestCachePolicy getCachePolicy() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCachePolicy = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CachePolicy");
+            retObjectCachePolicy = classInstance.Get("CachePolicy");
+            JCObject val = (JCObject)retObjectCachePolicy;
             return new RequestCachePolicy(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCachePolicy != null ? retObjectCachePolicy.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1071,7 +1223,7 @@ public class WebClient extends Component  {
 
     public void setCachePolicy(RequestCachePolicy CachePolicy) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CachePolicy", CachePolicy == null ? null : CachePolicy.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1081,10 +1233,14 @@ public class WebClient extends Component  {
 
     public ICredentials getCredentials() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCredentials = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Credentials");
+            retObjectCredentials = classInstance.Get("Credentials");
+            JCObject val = (JCObject)retObjectCredentials;
             return new ICredentialsImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCredentials != null ? retObjectCredentials.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1092,7 +1248,7 @@ public class WebClient extends Component  {
 
     public void setCredentials(ICredentials Credentials) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Credentials", Credentials == null ? null : Credentials.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1102,10 +1258,14 @@ public class WebClient extends Component  {
 
     public IWebProxy getProxy() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.configuration.ConfigurationException, system.security.SecurityException, system.OutOfMemoryException, system.TypeLoadException, system.configuration.ConfigurationErrorsException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProxy = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Proxy");
+            retObjectProxy = classInstance.Get("Proxy");
+            JCObject val = (JCObject)retObjectProxy;
             return new IWebProxyImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectProxy != null ? retObjectProxy.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1113,7 +1273,7 @@ public class WebClient extends Component  {
 
     public void setProxy(IWebProxy Proxy) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Proxy", Proxy == null ? null : Proxy.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1123,10 +1283,14 @@ public class WebClient extends Component  {
 
     public WebHeaderCollection getHeaders() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHeaders = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Headers");
+            retObjectHeaders = classInstance.Get("Headers");
+            JCObject val = (JCObject)retObjectHeaders;
             return new WebHeaderCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHeaders != null ? retObjectHeaders.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1134,7 +1298,7 @@ public class WebClient extends Component  {
 
     public void setHeaders(WebHeaderCollection Headers) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Headers", Headers == null ? null : Headers.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1144,10 +1308,14 @@ public class WebClient extends Component  {
 
     public WebHeaderCollection getResponseHeaders() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResponseHeaders = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ResponseHeaders");
+            retObjectResponseHeaders = classInstance.Get("ResponseHeaders");
+            JCObject val = (JCObject)retObjectResponseHeaders;
             return new WebHeaderCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectResponseHeaders != null ? retObjectResponseHeaders.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1155,9 +1323,13 @@ public class WebClient extends Component  {
 
     public java.lang.String getBaseAddress() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBaseAddress = null;
         try {
-            return (java.lang.String)classInstance.Get("BaseAddress");
+            retObjectBaseAddress = classInstance.Get("BaseAddress");
+            return (java.lang.String)retObjectBaseAddress;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectBaseAddress != null ? retObjectBaseAddress.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1165,7 +1337,7 @@ public class WebClient extends Component  {
 
     public void setBaseAddress(java.lang.String BaseAddress) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.MemberAccessException, system.NullReferenceException, system.configuration.ConfigurationException, system.UriFormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BaseAddress", BaseAddress);
         } catch (JCNativeException jcne) {
@@ -1175,10 +1347,14 @@ public class WebClient extends Component  {
 
     public Encoding getEncoding() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEncoding = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Encoding");
+            retObjectEncoding = classInstance.Get("Encoding");
+            JCObject val = (JCObject)retObjectEncoding;
             return new Encoding(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEncoding != null ? retObjectEncoding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1186,7 +1362,7 @@ public class WebClient extends Component  {
 
     public void setEncoding(Encoding Encoding) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Encoding", Encoding == null ? null : Encoding.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1201,7 +1377,7 @@ public class WebClient extends Component  {
 
     public void addDownloadFileCompleted(AsyncCompletedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("DownloadFileCompleted", handler);
         } catch (JCNativeException jcne) {
@@ -1211,7 +1387,7 @@ public class WebClient extends Component  {
 
     public void removeDownloadFileCompleted(AsyncCompletedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("DownloadFileCompleted", handler);
         } catch (JCNativeException jcne) {
@@ -1221,7 +1397,7 @@ public class WebClient extends Component  {
 
     public void addDownloadDataCompleted(DownloadDataCompletedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("DownloadDataCompleted", handler);
         } catch (JCNativeException jcne) {
@@ -1231,7 +1407,7 @@ public class WebClient extends Component  {
 
     public void removeDownloadDataCompleted(DownloadDataCompletedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("DownloadDataCompleted", handler);
         } catch (JCNativeException jcne) {
@@ -1241,7 +1417,7 @@ public class WebClient extends Component  {
 
     public void addDownloadProgressChanged(DownloadProgressChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("DownloadProgressChanged", handler);
         } catch (JCNativeException jcne) {
@@ -1251,7 +1427,7 @@ public class WebClient extends Component  {
 
     public void removeDownloadProgressChanged(DownloadProgressChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("DownloadProgressChanged", handler);
         } catch (JCNativeException jcne) {
@@ -1261,7 +1437,7 @@ public class WebClient extends Component  {
 
     public void addDownloadStringCompleted(DownloadStringCompletedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("DownloadStringCompleted", handler);
         } catch (JCNativeException jcne) {
@@ -1271,7 +1447,7 @@ public class WebClient extends Component  {
 
     public void removeDownloadStringCompleted(DownloadStringCompletedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("DownloadStringCompleted", handler);
         } catch (JCNativeException jcne) {
@@ -1281,7 +1457,7 @@ public class WebClient extends Component  {
 
     public void addOpenReadCompleted(OpenReadCompletedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("OpenReadCompleted", handler);
         } catch (JCNativeException jcne) {
@@ -1291,7 +1467,7 @@ public class WebClient extends Component  {
 
     public void removeOpenReadCompleted(OpenReadCompletedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("OpenReadCompleted", handler);
         } catch (JCNativeException jcne) {
@@ -1301,7 +1477,7 @@ public class WebClient extends Component  {
 
     public void addOpenWriteCompleted(OpenWriteCompletedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("OpenWriteCompleted", handler);
         } catch (JCNativeException jcne) {
@@ -1311,7 +1487,7 @@ public class WebClient extends Component  {
 
     public void removeOpenWriteCompleted(OpenWriteCompletedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("OpenWriteCompleted", handler);
         } catch (JCNativeException jcne) {
@@ -1321,7 +1497,7 @@ public class WebClient extends Component  {
 
     public void addUploadDataCompleted(UploadDataCompletedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("UploadDataCompleted", handler);
         } catch (JCNativeException jcne) {
@@ -1331,7 +1507,7 @@ public class WebClient extends Component  {
 
     public void removeUploadDataCompleted(UploadDataCompletedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("UploadDataCompleted", handler);
         } catch (JCNativeException jcne) {
@@ -1341,7 +1517,7 @@ public class WebClient extends Component  {
 
     public void addUploadFileCompleted(UploadFileCompletedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("UploadFileCompleted", handler);
         } catch (JCNativeException jcne) {
@@ -1351,7 +1527,7 @@ public class WebClient extends Component  {
 
     public void removeUploadFileCompleted(UploadFileCompletedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("UploadFileCompleted", handler);
         } catch (JCNativeException jcne) {
@@ -1361,7 +1537,7 @@ public class WebClient extends Component  {
 
     public void addUploadProgressChanged(UploadProgressChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("UploadProgressChanged", handler);
         } catch (JCNativeException jcne) {
@@ -1371,7 +1547,7 @@ public class WebClient extends Component  {
 
     public void removeUploadProgressChanged(UploadProgressChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("UploadProgressChanged", handler);
         } catch (JCNativeException jcne) {
@@ -1381,7 +1557,7 @@ public class WebClient extends Component  {
 
     public void addUploadStringCompleted(UploadStringCompletedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("UploadStringCompleted", handler);
         } catch (JCNativeException jcne) {
@@ -1391,7 +1567,7 @@ public class WebClient extends Component  {
 
     public void removeUploadStringCompleted(UploadStringCompletedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("UploadStringCompleted", handler);
         } catch (JCNativeException jcne) {
@@ -1401,7 +1577,7 @@ public class WebClient extends Component  {
 
     public void addUploadValuesCompleted(UploadValuesCompletedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("UploadValuesCompleted", handler);
         } catch (JCNativeException jcne) {
@@ -1411,7 +1587,7 @@ public class WebClient extends Component  {
 
     public void removeUploadValuesCompleted(UploadValuesCompletedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("UploadValuesCompleted", handler);
         } catch (JCNativeException jcne) {
@@ -1421,7 +1597,7 @@ public class WebClient extends Component  {
 
     public void addWriteStreamClosed(WriteStreamClosedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("WriteStreamClosed", handler);
         } catch (JCNativeException jcne) {
@@ -1431,7 +1607,7 @@ public class WebClient extends Component  {
 
     public void removeWriteStreamClosed(WriteStreamClosedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("WriteStreamClosed", handler);
         } catch (JCNativeException jcne) {

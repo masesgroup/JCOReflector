@@ -161,10 +161,14 @@ public class ResourceDictionaryLoadedEventArgs extends EventArgs  {
     
     public ResourceDictionaryInfo getResourceDictionaryInfo() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResourceDictionaryInfo = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ResourceDictionaryInfo");
+            retObjectResourceDictionaryInfo = classInstance.Get("ResourceDictionaryInfo");
+            JCObject val = (JCObject)retObjectResourceDictionaryInfo;
             return new ResourceDictionaryInfo(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectResourceDictionaryInfo != null ? retObjectResourceDictionaryInfo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,7 +176,7 @@ public class ResourceDictionaryLoadedEventArgs extends EventArgs  {
 
     public void setResourceDictionaryInfo(ResourceDictionaryInfo ResourceDictionaryInfo) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ResourceDictionaryInfo", ResourceDictionaryInfo == null ? null : ResourceDictionaryInfo.getJCOInstance());
         } catch (JCNativeException jcne) {

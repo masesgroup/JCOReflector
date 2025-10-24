@@ -183,16 +183,20 @@ public class WellKnownServiceTypeEntry extends TypeEntry  {
     
     public final IContextAttribute[] getContextAttributes() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContextAttributes = null;
         try {
             ArrayList<IContextAttribute> resultingArrayList = new ArrayList<IContextAttribute>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("ContextAttributes");
+            retObjectContextAttributes = classInstance.Get("ContextAttributes");
+            JCObject resultingObjects = (JCObject)retObjectContextAttributes;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new IContextAttributeImplementation(resultingObject));
             }
             IContextAttribute[] resultingArray = new IContextAttribute[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContextAttributes != null ? retObjectContextAttributes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,7 +204,7 @@ public class WellKnownServiceTypeEntry extends TypeEntry  {
 
     public void setContextAttributes(IContextAttribute[] ContextAttributes) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ContextAttributes", toObjectFromArray(ContextAttributes));
         } catch (JCNativeException jcne) {
@@ -210,10 +214,14 @@ public class WellKnownServiceTypeEntry extends TypeEntry  {
 
     public WellKnownObjectMode getMode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Mode");
+            retObjectMode = classInstance.Get("Mode");
+            JCObject val = (JCObject)retObjectMode;
             return new WellKnownObjectMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMode != null ? retObjectMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -221,9 +229,13 @@ public class WellKnownServiceTypeEntry extends TypeEntry  {
 
     public java.lang.String getObjectUri() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectObjectUri = null;
         try {
-            return (java.lang.String)classInstance.Get("ObjectUri");
+            retObjectObjectUri = classInstance.Get("ObjectUri");
+            return (java.lang.String)retObjectObjectUri;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectObjectUri != null ? retObjectObjectUri.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -231,10 +243,14 @@ public class WellKnownServiceTypeEntry extends TypeEntry  {
 
     public NetType getObjectType() throws Throwable, system.IndexOutOfRangeException, system.TypeLoadException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectObjectType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ObjectType");
+            retObjectObjectType = classInstance.Get("ObjectType");
+            JCObject val = (JCObject)retObjectObjectType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectObjectType != null ? retObjectObjectType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

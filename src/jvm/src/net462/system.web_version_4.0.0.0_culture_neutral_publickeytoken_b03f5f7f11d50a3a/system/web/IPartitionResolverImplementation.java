@@ -142,9 +142,13 @@ public class IPartitionResolverImplementation extends NetObject implements IPart
     
     public java.lang.String ResolvePartition(NetObject key) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResolvePartition = null;
         try {
-            return (java.lang.String)classInstance.Invoke("ResolvePartition", key == null ? null : key.getJCOInstance());
+            retObjectResolvePartition = classInstance.Invoke("ResolvePartition", key == null ? null : key.getJCOInstance());
+            return (java.lang.String)retObjectResolvePartition;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectResolvePartition != null ? retObjectResolvePartition.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -152,7 +156,7 @@ public class IPartitionResolverImplementation extends NetObject implements IPart
 
     public void Initialize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Initialize");
         } catch (JCNativeException jcne) {

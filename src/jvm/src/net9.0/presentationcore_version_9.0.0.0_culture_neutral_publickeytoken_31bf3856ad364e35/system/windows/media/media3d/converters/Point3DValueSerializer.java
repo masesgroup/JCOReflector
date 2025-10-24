@@ -164,9 +164,13 @@ public class Point3DValueSerializer extends ValueSerializer  {
     
     public boolean CanConvertFromString(java.lang.String value, IValueSerializerContext context) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanConvertFromString = null;
         try {
-            return (boolean)classInstance.Invoke("CanConvertFromString", value, context == null ? null : context.getJCOInstance());
+            retObjectCanConvertFromString = classInstance.Invoke("CanConvertFromString", value, context == null ? null : context.getJCOInstance());
+            return (boolean)retObjectCanConvertFromString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCanConvertFromString != null ? retObjectCanConvertFromString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -174,9 +178,13 @@ public class Point3DValueSerializer extends ValueSerializer  {
 
     public boolean CanConvertToString(NetObject value, IValueSerializerContext context) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanConvertToString = null;
         try {
-            return (boolean)classInstance.Invoke("CanConvertToString", value == null ? null : value.getJCOInstance(), context == null ? null : context.getJCOInstance());
+            retObjectCanConvertToString = classInstance.Invoke("CanConvertToString", value == null ? null : value.getJCOInstance(), context == null ? null : context.getJCOInstance());
+            return (boolean)retObjectCanConvertToString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCanConvertToString != null ? retObjectCanConvertToString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -184,10 +192,14 @@ public class Point3DValueSerializer extends ValueSerializer  {
 
     public NetObject ConvertFromString(java.lang.String value, IValueSerializerContext context) throws Throwable, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConvertFromString = null;
         try {
-            JCObject objConvertFromString = (JCObject)classInstance.Invoke("ConvertFromString", value, context == null ? null : context.getJCOInstance());
+            retObjectConvertFromString = classInstance.Invoke("ConvertFromString", value, context == null ? null : context.getJCOInstance());
+            JCObject objConvertFromString = (JCObject)retObjectConvertFromString;
             return new NetObject(objConvertFromString);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConvertFromString != null ? retObjectConvertFromString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,9 +207,13 @@ public class Point3DValueSerializer extends ValueSerializer  {
 
     public java.lang.String ConvertToString(NetObject value, IValueSerializerContext context) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.OutOfMemoryException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConvertToString = null;
         try {
-            return (java.lang.String)classInstance.Invoke("ConvertToString", value == null ? null : value.getJCOInstance(), context == null ? null : context.getJCOInstance());
+            retObjectConvertToString = classInstance.Invoke("ConvertToString", value == null ? null : value.getJCOInstance(), context == null ? null : context.getJCOInstance());
+            return (java.lang.String)retObjectConvertToString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectConvertToString != null ? retObjectConvertToString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

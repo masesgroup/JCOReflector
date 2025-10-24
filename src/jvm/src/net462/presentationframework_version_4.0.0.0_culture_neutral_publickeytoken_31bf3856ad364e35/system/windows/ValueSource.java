@@ -161,9 +161,13 @@ public class ValueSource extends ValueType  {
     
     public boolean getIsAnimated() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsAnimated = null;
         try {
-            return (boolean)classInstance.Get("IsAnimated");
+            retObjectIsAnimated = classInstance.Get("IsAnimated");
+            return (boolean)retObjectIsAnimated;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsAnimated != null ? retObjectIsAnimated.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,9 +175,13 @@ public class ValueSource extends ValueType  {
 
     public boolean getIsCoerced() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsCoerced = null;
         try {
-            return (boolean)classInstance.Get("IsCoerced");
+            retObjectIsCoerced = classInstance.Get("IsCoerced");
+            return (boolean)retObjectIsCoerced;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsCoerced != null ? retObjectIsCoerced.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,9 +189,13 @@ public class ValueSource extends ValueType  {
 
     public boolean getIsCurrent() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsCurrent = null;
         try {
-            return (boolean)classInstance.Get("IsCurrent");
+            retObjectIsCurrent = classInstance.Get("IsCurrent");
+            return (boolean)retObjectIsCurrent;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsCurrent != null ? retObjectIsCurrent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,9 +203,13 @@ public class ValueSource extends ValueType  {
 
     public boolean getIsExpression() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsExpression = null;
         try {
-            return (boolean)classInstance.Get("IsExpression");
+            retObjectIsExpression = classInstance.Get("IsExpression");
+            return (boolean)retObjectIsExpression;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsExpression != null ? retObjectIsExpression.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,10 +217,14 @@ public class ValueSource extends ValueType  {
 
     public BaseValueSource getBaseValueSource() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBaseValueSource = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("BaseValueSource");
+            retObjectBaseValueSource = classInstance.Get("BaseValueSource");
+            JCObject val = (JCObject)retObjectBaseValueSource;
             return new BaseValueSource(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBaseValueSource != null ? retObjectBaseValueSource.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

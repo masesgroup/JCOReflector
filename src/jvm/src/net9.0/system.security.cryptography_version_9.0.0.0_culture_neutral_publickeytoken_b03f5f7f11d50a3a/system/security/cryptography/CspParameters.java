@@ -197,10 +197,14 @@ public class CspParameters extends NetObject  {
     
     public CspProviderFlags getFlags() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFlags = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Flags");
+            retObjectFlags = classInstance.Get("Flags");
+            JCObject val = (JCObject)retObjectFlags;
             return new CspProviderFlags(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFlags != null ? retObjectFlags.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -208,7 +212,7 @@ public class CspParameters extends NetObject  {
 
     public void setFlags(CspProviderFlags Flags) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Flags", Flags == null ? null : Flags.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -218,10 +222,14 @@ public class CspParameters extends NetObject  {
 
     public SecureString getKeyPassword() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectKeyPassword = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("KeyPassword");
+            retObjectKeyPassword = classInstance.Get("KeyPassword");
+            JCObject val = (JCObject)retObjectKeyPassword;
             return new SecureString(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectKeyPassword != null ? retObjectKeyPassword.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -229,7 +237,7 @@ public class CspParameters extends NetObject  {
 
     public void setKeyPassword(SecureString KeyPassword) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("KeyPassword", KeyPassword == null ? null : KeyPassword.getJCOInstance());
         } catch (JCNativeException jcne) {

@@ -157,9 +157,13 @@ public class XmlResolver extends NetObject  {
     
     public boolean SupportsType(Uri absoluteUri, NetType type) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSupportsType = null;
         try {
-            return (boolean)classInstance.Invoke("SupportsType", absoluteUri == null ? null : absoluteUri.getJCOInstance(), type == null ? null : type.getJCOInstance());
+            retObjectSupportsType = classInstance.Invoke("SupportsType", absoluteUri == null ? null : absoluteUri.getJCOInstance(), type == null ? null : type.getJCOInstance());
+            return (boolean)retObjectSupportsType;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectSupportsType != null ? retObjectSupportsType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -167,10 +171,14 @@ public class XmlResolver extends NetObject  {
 
     public NetObject GetEntity(Uri absoluteUri, java.lang.String role, NetType ofObjectToReturn) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetEntity = null;
         try {
-            JCObject objGetEntity = (JCObject)classInstance.Invoke("GetEntity", absoluteUri == null ? null : absoluteUri.getJCOInstance(), role, ofObjectToReturn == null ? null : ofObjectToReturn.getJCOInstance());
+            retObjectGetEntity = classInstance.Invoke("GetEntity", absoluteUri == null ? null : absoluteUri.getJCOInstance(), role, ofObjectToReturn == null ? null : ofObjectToReturn.getJCOInstance());
+            JCObject objGetEntity = (JCObject)retObjectGetEntity;
             return new NetObject(objGetEntity);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetEntity != null ? retObjectGetEntity.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,10 +186,14 @@ public class XmlResolver extends NetObject  {
 
     public Uri ResolveUri(Uri baseUri, java.lang.String relativeUri) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.UriFormatException, system.diagnostics.UnreachableException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResolveUri = null;
         try {
-            JCObject objResolveUri = (JCObject)classInstance.Invoke("ResolveUri", baseUri == null ? null : baseUri.getJCOInstance(), relativeUri);
+            retObjectResolveUri = classInstance.Invoke("ResolveUri", baseUri == null ? null : baseUri.getJCOInstance(), relativeUri);
+            JCObject objResolveUri = (JCObject)retObjectResolveUri;
             return new Uri(objResolveUri);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectResolveUri != null ? retObjectResolveUri.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,7 +205,7 @@ public class XmlResolver extends NetObject  {
     
     public void setCredentials(ICredentials Credentials) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Credentials", Credentials == null ? null : Credentials.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -203,10 +215,14 @@ public class XmlResolver extends NetObject  {
 
     public static XmlResolver getFileSystemResolver() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFileSystemResolver = null;
         try {
-            JCObject val = (JCObject)classType.Get("FileSystemResolver");
+            retObjectFileSystemResolver = classType.Get("FileSystemResolver");
+            JCObject val = (JCObject)retObjectFileSystemResolver;
             return new XmlResolver(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFileSystemResolver != null ? retObjectFileSystemResolver.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -214,10 +230,14 @@ public class XmlResolver extends NetObject  {
 
     public static XmlResolver getThrowingResolver() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectThrowingResolver = null;
         try {
-            JCObject val = (JCObject)classType.Get("ThrowingResolver");
+            retObjectThrowingResolver = classType.Get("ThrowingResolver");
+            JCObject val = (JCObject)retObjectThrowingResolver;
             return new XmlResolver(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectThrowingResolver != null ? retObjectThrowingResolver.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

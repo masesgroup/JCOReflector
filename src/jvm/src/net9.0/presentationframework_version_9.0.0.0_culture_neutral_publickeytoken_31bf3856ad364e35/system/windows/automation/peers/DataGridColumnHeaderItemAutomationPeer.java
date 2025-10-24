@@ -173,10 +173,14 @@ public class DataGridColumnHeaderItemAutomationPeer extends ItemAutomationPeer i
     
     public NetObject GetPattern(PatternInterface patternInterface) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPattern = null;
         try {
-            JCObject objGetPattern = (JCObject)classInstance.Invoke("GetPattern", patternInterface == null ? null : patternInterface.getJCOInstance());
+            retObjectGetPattern = classInstance.Invoke("GetPattern", patternInterface == null ? null : patternInterface.getJCOInstance());
+            JCObject objGetPattern = (JCObject)retObjectGetPattern;
             return new NetObject(objGetPattern);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetPattern != null ? retObjectGetPattern.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,7 +192,7 @@ public class DataGridColumnHeaderItemAutomationPeer extends ItemAutomationPeer i
      */
     @Deprecated 
     public void Invoke() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIInvokeProvider to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIInvokeProvider to obtain the full interface.");
     }
 
     /**
@@ -197,7 +201,7 @@ public class DataGridColumnHeaderItemAutomationPeer extends ItemAutomationPeer i
      */
     @Deprecated 
     public void ScrollIntoView() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIScrollItemProvider to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIScrollItemProvider to obtain the full interface.");
     }
 
     /**
@@ -206,7 +210,7 @@ public class DataGridColumnHeaderItemAutomationPeer extends ItemAutomationPeer i
      */
     @Deprecated 
     public void Move(double x, double y) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToITransformProvider to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToITransformProvider to obtain the full interface.");
     }
 
     /**
@@ -215,7 +219,7 @@ public class DataGridColumnHeaderItemAutomationPeer extends ItemAutomationPeer i
      */
     @Deprecated 
     public void Resize(double width, double height) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToITransformProvider to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToITransformProvider to obtain the full interface.");
     }
 
     /**
@@ -224,7 +228,7 @@ public class DataGridColumnHeaderItemAutomationPeer extends ItemAutomationPeer i
      */
     @Deprecated 
     public void Rotate(double degrees) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToITransformProvider to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToITransformProvider to obtain the full interface.");
     }
 
 

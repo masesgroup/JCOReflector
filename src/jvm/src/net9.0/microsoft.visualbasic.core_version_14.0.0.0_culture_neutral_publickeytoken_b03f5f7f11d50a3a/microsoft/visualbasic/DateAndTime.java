@@ -159,9 +159,20 @@ public class DateAndTime extends NetObject  {
     
     public static int DatePart(DateInterval Interval, DateTime DateValue, FirstDayOfWeek FirstDayOfWeekValue, FirstWeekOfYear FirstWeekOfYearValue) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.IndexOutOfRangeException, system.TypeInitializationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDatePart = null;
         try {
-            return (int)classType.Invoke("DatePart", Interval == null ? null : Interval.getJCOInstance(), DateValue == null ? null : DateValue.getJCOInstance(), FirstDayOfWeekValue == null ? null : FirstDayOfWeekValue.getJCOInstance(), FirstWeekOfYearValue == null ? null : FirstWeekOfYearValue.getJCOInstance());
+            retObjectDatePart = classType.Invoke("DatePart", Interval == null ? null : Interval.getJCOInstance(), DateValue == null ? null : DateValue.getJCOInstance(), FirstDayOfWeekValue == null ? null : FirstDayOfWeekValue.getJCOInstance(), FirstWeekOfYearValue == null ? null : FirstWeekOfYearValue.getJCOInstance());
+            return (int)retObjectDatePart;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDatePart_ToString = retObjectDatePart == null ? "null" : retObjectDatePart.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectDatePartNumber = (java.lang.Number)retObjectDatePart;
+                return retObjectDatePartNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectDatePart != null ? retObjectDatePart.getClass() : "null", retObjectDatePart_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,9 +180,20 @@ public class DateAndTime extends NetObject  {
 
     public static int DatePart(java.lang.String Interval, NetObject DateValue, FirstDayOfWeek DayOfWeek, FirstWeekOfYear WeekOfYear) throws Throwable, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.ArgumentException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.TypeInitializationException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.InvalidCastException, system.OutOfMemoryException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDatePart = null;
         try {
-            return (int)classType.Invoke("DatePart", Interval, DateValue == null ? null : DateValue.getJCOInstance(), DayOfWeek == null ? null : DayOfWeek.getJCOInstance(), WeekOfYear == null ? null : WeekOfYear.getJCOInstance());
+            retObjectDatePart = classType.Invoke("DatePart", Interval, DateValue == null ? null : DateValue.getJCOInstance(), DayOfWeek == null ? null : DayOfWeek.getJCOInstance(), WeekOfYear == null ? null : WeekOfYear.getJCOInstance());
+            return (int)retObjectDatePart;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDatePart_ToString = retObjectDatePart == null ? "null" : retObjectDatePart.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectDatePartNumber = (java.lang.Number)retObjectDatePart;
+                return retObjectDatePartNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectDatePart != null ? retObjectDatePart.getClass() : "null", retObjectDatePart_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,9 +201,20 @@ public class DateAndTime extends NetObject  {
 
     public static int Day(DateTime DateValue) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.IndexOutOfRangeException, system.TypeInitializationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDay = null;
         try {
-            return (int)classType.Invoke("Day", DateValue == null ? null : DateValue.getJCOInstance());
+            retObjectDay = classType.Invoke("Day", DateValue == null ? null : DateValue.getJCOInstance());
+            return (int)retObjectDay;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDay_ToString = retObjectDay == null ? "null" : retObjectDay.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectDayNumber = (java.lang.Number)retObjectDay;
+                return retObjectDayNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectDay != null ? retObjectDay.getClass() : "null", retObjectDay_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -189,9 +222,20 @@ public class DateAndTime extends NetObject  {
 
     public static int Hour(DateTime TimeValue) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.IndexOutOfRangeException, system.TypeInitializationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectHour = null;
         try {
-            return (int)classType.Invoke("Hour", TimeValue == null ? null : TimeValue.getJCOInstance());
+            retObjectHour = classType.Invoke("Hour", TimeValue == null ? null : TimeValue.getJCOInstance());
+            return (int)retObjectHour;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectHour_ToString = retObjectHour == null ? "null" : retObjectHour.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectHourNumber = (java.lang.Number)retObjectHour;
+                return retObjectHourNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectHour != null ? retObjectHour.getClass() : "null", retObjectHour_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -199,9 +243,20 @@ public class DateAndTime extends NetObject  {
 
     public static int Minute(DateTime TimeValue) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.IndexOutOfRangeException, system.TypeInitializationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMinute = null;
         try {
-            return (int)classType.Invoke("Minute", TimeValue == null ? null : TimeValue.getJCOInstance());
+            retObjectMinute = classType.Invoke("Minute", TimeValue == null ? null : TimeValue.getJCOInstance());
+            return (int)retObjectMinute;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMinute_ToString = retObjectMinute == null ? "null" : retObjectMinute.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMinuteNumber = (java.lang.Number)retObjectMinute;
+                return retObjectMinuteNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMinute != null ? retObjectMinute.getClass() : "null", retObjectMinute_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -209,9 +264,20 @@ public class DateAndTime extends NetObject  {
 
     public static int Month(DateTime DateValue) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.IndexOutOfRangeException, system.TypeInitializationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMonth = null;
         try {
-            return (int)classType.Invoke("Month", DateValue == null ? null : DateValue.getJCOInstance());
+            retObjectMonth = classType.Invoke("Month", DateValue == null ? null : DateValue.getJCOInstance());
+            return (int)retObjectMonth;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMonth_ToString = retObjectMonth == null ? "null" : retObjectMonth.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMonthNumber = (java.lang.Number)retObjectMonth;
+                return retObjectMonthNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMonth != null ? retObjectMonth.getClass() : "null", retObjectMonth_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -219,9 +285,20 @@ public class DateAndTime extends NetObject  {
 
     public static int Second(DateTime TimeValue) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.IndexOutOfRangeException, system.TypeInitializationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSecond = null;
         try {
-            return (int)classType.Invoke("Second", TimeValue == null ? null : TimeValue.getJCOInstance());
+            retObjectSecond = classType.Invoke("Second", TimeValue == null ? null : TimeValue.getJCOInstance());
+            return (int)retObjectSecond;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSecond_ToString = retObjectSecond == null ? "null" : retObjectSecond.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectSecondNumber = (java.lang.Number)retObjectSecond;
+                return retObjectSecondNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectSecond != null ? retObjectSecond.getClass() : "null", retObjectSecond_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -229,9 +306,20 @@ public class DateAndTime extends NetObject  {
 
     public static int Weekday(DateTime DateValue, FirstDayOfWeek DayOfWeek) throws Throwable, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.TypeInitializationException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectWeekday = null;
         try {
-            return (int)classType.Invoke("Weekday", DateValue == null ? null : DateValue.getJCOInstance(), DayOfWeek == null ? null : DayOfWeek.getJCOInstance());
+            retObjectWeekday = classType.Invoke("Weekday", DateValue == null ? null : DateValue.getJCOInstance(), DayOfWeek == null ? null : DayOfWeek.getJCOInstance());
+            return (int)retObjectWeekday;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectWeekday_ToString = retObjectWeekday == null ? "null" : retObjectWeekday.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectWeekdayNumber = (java.lang.Number)retObjectWeekday;
+                return retObjectWeekdayNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectWeekday != null ? retObjectWeekday.getClass() : "null", retObjectWeekday_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -239,9 +327,20 @@ public class DateAndTime extends NetObject  {
 
     public static int Year(DateTime DateValue) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.IndexOutOfRangeException, system.TypeInitializationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectYear = null;
         try {
-            return (int)classType.Invoke("Year", DateValue == null ? null : DateValue.getJCOInstance());
+            retObjectYear = classType.Invoke("Year", DateValue == null ? null : DateValue.getJCOInstance());
+            return (int)retObjectYear;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectYear_ToString = retObjectYear == null ? "null" : retObjectYear.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectYearNumber = (java.lang.Number)retObjectYear;
+                return retObjectYearNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectYear != null ? retObjectYear.getClass() : "null", retObjectYear_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -249,9 +348,20 @@ public class DateAndTime extends NetObject  {
 
     public static long DateDiff(DateInterval Interval, DateTime Date1, DateTime Date2, FirstDayOfWeek DayOfWeek, FirstWeekOfYear WeekOfYear) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.IndexOutOfRangeException, system.TypeInitializationException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDateDiff = null;
         try {
-            return (long)classType.Invoke("DateDiff", Interval == null ? null : Interval.getJCOInstance(), Date1 == null ? null : Date1.getJCOInstance(), Date2 == null ? null : Date2.getJCOInstance(), DayOfWeek == null ? null : DayOfWeek.getJCOInstance(), WeekOfYear == null ? null : WeekOfYear.getJCOInstance());
+            retObjectDateDiff = classType.Invoke("DateDiff", Interval == null ? null : Interval.getJCOInstance(), Date1 == null ? null : Date1.getJCOInstance(), Date2 == null ? null : Date2.getJCOInstance(), DayOfWeek == null ? null : DayOfWeek.getJCOInstance(), WeekOfYear == null ? null : WeekOfYear.getJCOInstance());
+            return (long)retObjectDateDiff;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDateDiff_ToString = retObjectDateDiff == null ? "null" : retObjectDateDiff.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectDateDiffNumber = (java.lang.Number)retObjectDateDiff;
+                return retObjectDateDiffNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectDateDiff != null ? retObjectDateDiff.getClass() : "null", retObjectDateDiff_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -259,9 +369,20 @@ public class DateAndTime extends NetObject  {
 
     public static long DateDiff(java.lang.String Interval, NetObject Date1, NetObject Date2, FirstDayOfWeek DayOfWeek, FirstWeekOfYear WeekOfYear) throws Throwable, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.ArgumentException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.TypeInitializationException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.InvalidCastException, system.OutOfMemoryException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDateDiff = null;
         try {
-            return (long)classType.Invoke("DateDiff", Interval, Date1 == null ? null : Date1.getJCOInstance(), Date2 == null ? null : Date2.getJCOInstance(), DayOfWeek == null ? null : DayOfWeek.getJCOInstance(), WeekOfYear == null ? null : WeekOfYear.getJCOInstance());
+            retObjectDateDiff = classType.Invoke("DateDiff", Interval, Date1 == null ? null : Date1.getJCOInstance(), Date2 == null ? null : Date2.getJCOInstance(), DayOfWeek == null ? null : DayOfWeek.getJCOInstance(), WeekOfYear == null ? null : WeekOfYear.getJCOInstance());
+            return (long)retObjectDateDiff;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDateDiff_ToString = retObjectDateDiff == null ? "null" : retObjectDateDiff.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectDateDiffNumber = (java.lang.Number)retObjectDateDiff;
+                return retObjectDateDiffNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectDateDiff != null ? retObjectDateDiff.getClass() : "null", retObjectDateDiff_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -269,10 +390,14 @@ public class DateAndTime extends NetObject  {
 
     public static DateTime DateAdd(DateInterval Interval, double Number, DateTime DateValue) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.IndexOutOfRangeException, system.TypeInitializationException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDateAdd = null;
         try {
-            JCObject objDateAdd = (JCObject)classType.Invoke("DateAdd", Interval == null ? null : Interval.getJCOInstance(), Number, DateValue == null ? null : DateValue.getJCOInstance());
+            retObjectDateAdd = classType.Invoke("DateAdd", Interval == null ? null : Interval.getJCOInstance(), Number, DateValue == null ? null : DateValue.getJCOInstance());
+            JCObject objDateAdd = (JCObject)retObjectDateAdd;
             return new DateTime(objDateAdd);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDateAdd != null ? retObjectDateAdd.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -280,10 +405,14 @@ public class DateAndTime extends NetObject  {
 
     public static DateTime DateAdd(java.lang.String Interval, double Number, NetObject DateValue) throws Throwable, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.ArgumentException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.TypeInitializationException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.InvalidCastException, system.OutOfMemoryException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDateAdd = null;
         try {
-            JCObject objDateAdd = (JCObject)classType.Invoke("DateAdd", Interval, Number, DateValue == null ? null : DateValue.getJCOInstance());
+            retObjectDateAdd = classType.Invoke("DateAdd", Interval, Number, DateValue == null ? null : DateValue.getJCOInstance());
+            JCObject objDateAdd = (JCObject)retObjectDateAdd;
             return new DateTime(objDateAdd);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDateAdd != null ? retObjectDateAdd.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -291,10 +420,14 @@ public class DateAndTime extends NetObject  {
 
     public static DateTime DateSerial(int Year, int Month, int Day) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.IndexOutOfRangeException, system.TypeInitializationException, system.InvalidTimeZoneException, system.OverflowException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDateSerial = null;
         try {
-            JCObject objDateSerial = (JCObject)classType.Invoke("DateSerial", Year, Month, Day);
+            retObjectDateSerial = classType.Invoke("DateSerial", Year, Month, Day);
+            JCObject objDateSerial = (JCObject)retObjectDateSerial;
             return new DateTime(objDateSerial);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDateSerial != null ? retObjectDateSerial.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -302,10 +435,14 @@ public class DateAndTime extends NetObject  {
 
     public static DateTime DateValue(java.lang.String StringDate) throws Throwable, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.TypeInitializationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.ObjectDisposedException, system.InvalidCastException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDateValue = null;
         try {
-            JCObject objDateValue = (JCObject)classType.Invoke("DateValue", StringDate);
+            retObjectDateValue = classType.Invoke("DateValue", StringDate);
+            JCObject objDateValue = (JCObject)retObjectDateValue;
             return new DateTime(objDateValue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDateValue != null ? retObjectDateValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -313,10 +450,14 @@ public class DateAndTime extends NetObject  {
 
     public static DateTime TimeSerial(int Hour, int Minute, int Second) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTimeSerial = null;
         try {
-            JCObject objTimeSerial = (JCObject)classType.Invoke("TimeSerial", Hour, Minute, Second);
+            retObjectTimeSerial = classType.Invoke("TimeSerial", Hour, Minute, Second);
+            JCObject objTimeSerial = (JCObject)retObjectTimeSerial;
             return new DateTime(objTimeSerial);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTimeSerial != null ? retObjectTimeSerial.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -324,10 +465,14 @@ public class DateAndTime extends NetObject  {
 
     public static DateTime TimeValue(java.lang.String StringTime) throws Throwable, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.TypeInitializationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.ObjectDisposedException, system.InvalidCastException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTimeValue = null;
         try {
-            JCObject objTimeValue = (JCObject)classType.Invoke("TimeValue", StringTime);
+            retObjectTimeValue = classType.Invoke("TimeValue", StringTime);
+            JCObject objTimeValue = (JCObject)retObjectTimeValue;
             return new DateTime(objTimeValue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTimeValue != null ? retObjectTimeValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -335,9 +480,13 @@ public class DateAndTime extends NetObject  {
 
     public static java.lang.String MonthName(int Month, boolean Abbreviate) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArrayTypeMismatchException, system.RankException, system.IndexOutOfRangeException, system.InvalidCastException, system.TypeInitializationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMonthName = null;
         try {
-            return (java.lang.String)classType.Invoke("MonthName", Month, Abbreviate);
+            retObjectMonthName = classType.Invoke("MonthName", Month, Abbreviate);
+            return (java.lang.String)retObjectMonthName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectMonthName != null ? retObjectMonthName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -345,9 +494,13 @@ public class DateAndTime extends NetObject  {
 
     public static java.lang.String WeekdayName(int Weekday, boolean Abbreviate, FirstDayOfWeek FirstDayOfWeekValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArrayTypeMismatchException, system.RankException, system.IndexOutOfRangeException, system.InvalidCastException, system.TypeInitializationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectWeekdayName = null;
         try {
-            return (java.lang.String)classType.Invoke("WeekdayName", Weekday, Abbreviate, FirstDayOfWeekValue == null ? null : FirstDayOfWeekValue.getJCOInstance());
+            retObjectWeekdayName = classType.Invoke("WeekdayName", Weekday, Abbreviate, FirstDayOfWeekValue == null ? null : FirstDayOfWeekValue.getJCOInstance());
+            return (java.lang.String)retObjectWeekdayName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectWeekdayName != null ? retObjectWeekdayName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -359,9 +512,20 @@ public class DateAndTime extends NetObject  {
     
     public static double getTimer() throws Throwable, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.InvalidTimeZoneException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.NullReferenceException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTimer = null;
         try {
-            return (double)classType.Get("Timer");
+            retObjectTimer = classType.Get("Timer");
+            return (double)retObjectTimer;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectTimer_ToString = retObjectTimer == null ? "null" : retObjectTimer.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectTimerNumber = (java.lang.Number)retObjectTimer;
+                return retObjectTimerNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectTimer != null ? retObjectTimer.getClass() : "null", retObjectTimer_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -369,10 +533,14 @@ public class DateAndTime extends NetObject  {
 
     public static DateTime getNow() throws Throwable, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.InvalidTimeZoneException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.NullReferenceException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectNow = null;
         try {
-            JCObject val = (JCObject)classType.Get("Now");
+            retObjectNow = classType.Get("Now");
+            JCObject val = (JCObject)retObjectNow;
             return new DateTime(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNow != null ? retObjectNow.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -380,10 +548,14 @@ public class DateAndTime extends NetObject  {
 
     public static DateTime getTimeOfDay() throws Throwable, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.InvalidTimeZoneException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.NullReferenceException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTimeOfDay = null;
         try {
-            JCObject val = (JCObject)classType.Get("TimeOfDay");
+            retObjectTimeOfDay = classType.Get("TimeOfDay");
+            JCObject val = (JCObject)retObjectTimeOfDay;
             return new DateTime(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTimeOfDay != null ? retObjectTimeOfDay.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -391,7 +563,7 @@ public class DateAndTime extends NetObject  {
 
     public static void setTimeOfDay(DateTime TimeOfDay) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.security.SecurityException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Set("TimeOfDay", TimeOfDay == null ? null : TimeOfDay.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -401,10 +573,14 @@ public class DateAndTime extends NetObject  {
 
     public static DateTime getToday() throws Throwable, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.InvalidTimeZoneException, system.OverflowException, system.security.SecurityException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectToday = null;
         try {
-            JCObject val = (JCObject)classType.Get("Today");
+            retObjectToday = classType.Get("Today");
+            JCObject val = (JCObject)retObjectToday;
             return new DateTime(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToday != null ? retObjectToday.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -412,7 +588,7 @@ public class DateAndTime extends NetObject  {
 
     public static void setToday(DateTime Today) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.security.SecurityException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Set("Today", Today == null ? null : Today.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -422,9 +598,13 @@ public class DateAndTime extends NetObject  {
 
     public static java.lang.String getDateString() throws Throwable, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.InvalidTimeZoneException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException, system.FormatException, system.InvalidOperationException, system.globalization.CultureNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDateString = null;
         try {
-            return (java.lang.String)classType.Get("DateString");
+            retObjectDateString = classType.Get("DateString");
+            return (java.lang.String)retObjectDateString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDateString != null ? retObjectDateString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -432,7 +612,7 @@ public class DateAndTime extends NetObject  {
 
     public static void setDateString(java.lang.String DateString) throws Throwable, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OverflowException, system.InvalidOperationException, system.FormatException, system.ArrayTypeMismatchException, system.ObjectDisposedException, system.security.SecurityException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Set("DateString", DateString);
         } catch (JCNativeException jcne) {
@@ -442,9 +622,13 @@ public class DateAndTime extends NetObject  {
 
     public static java.lang.String getTimeString() throws Throwable, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.InvalidTimeZoneException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.NullReferenceException, system.FormatException, system.InvalidOperationException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTimeString = null;
         try {
-            return (java.lang.String)classType.Get("TimeString");
+            retObjectTimeString = classType.Get("TimeString");
+            return (java.lang.String)retObjectTimeString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectTimeString != null ? retObjectTimeString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -452,7 +636,7 @@ public class DateAndTime extends NetObject  {
 
     public static void setTimeString(java.lang.String TimeString) throws Throwable, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.TypeInitializationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.ObjectDisposedException, system.InvalidCastException, system.security.SecurityException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Set("TimeString", TimeString);
         } catch (JCNativeException jcne) {

@@ -152,9 +152,13 @@ public class IDataBoundListControlImplementation extends NetObject implements ID
     
     public boolean getEnablePersistedSelection() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEnablePersistedSelection = null;
         try {
-            return (boolean)classInstance.Get("EnablePersistedSelection");
+            retObjectEnablePersistedSelection = classInstance.Get("EnablePersistedSelection");
+            return (boolean)retObjectEnablePersistedSelection;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectEnablePersistedSelection != null ? retObjectEnablePersistedSelection.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -162,7 +166,7 @@ public class IDataBoundListControlImplementation extends NetObject implements ID
 
     public void setEnablePersistedSelection(boolean EnablePersistedSelection) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EnablePersistedSelection", EnablePersistedSelection);
         } catch (JCNativeException jcne) {
@@ -172,9 +176,20 @@ public class IDataBoundListControlImplementation extends NetObject implements ID
 
     public int getSelectedIndex() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectedIndex = null;
         try {
-            return (int)classInstance.Get("SelectedIndex");
+            retObjectSelectedIndex = classInstance.Get("SelectedIndex");
+            return (int)retObjectSelectedIndex;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSelectedIndex_ToString = retObjectSelectedIndex == null ? "null" : retObjectSelectedIndex.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectSelectedIndexNumber = (java.lang.Number)retObjectSelectedIndex;
+                return retObjectSelectedIndexNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectSelectedIndex != null ? retObjectSelectedIndex.getClass() : "null", retObjectSelectedIndex_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,7 +197,7 @@ public class IDataBoundListControlImplementation extends NetObject implements ID
 
     public void setSelectedIndex(int SelectedIndex) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SelectedIndex", SelectedIndex);
         } catch (JCNativeException jcne) {
@@ -192,10 +207,14 @@ public class IDataBoundListControlImplementation extends NetObject implements ID
 
     public NetObject getDataSource() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDataSource = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DataSource");
+            retObjectDataSource = classInstance.Get("DataSource");
+            JCObject val = (JCObject)retObjectDataSource;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDataSource != null ? retObjectDataSource.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,7 +222,7 @@ public class IDataBoundListControlImplementation extends NetObject implements ID
 
     public void setDataSource(NetObject DataSource) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DataSource", DataSource == null ? null : DataSource.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -213,9 +232,13 @@ public class IDataBoundListControlImplementation extends NetObject implements ID
 
     public java.lang.String getDataMember() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDataMember = null;
         try {
-            return (java.lang.String)classInstance.Get("DataMember");
+            retObjectDataMember = classInstance.Get("DataMember");
+            return (java.lang.String)retObjectDataMember;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDataMember != null ? retObjectDataMember.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -223,7 +246,7 @@ public class IDataBoundListControlImplementation extends NetObject implements ID
 
     public void setDataMember(java.lang.String DataMember) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DataMember", DataMember);
         } catch (JCNativeException jcne) {
@@ -233,9 +256,13 @@ public class IDataBoundListControlImplementation extends NetObject implements ID
 
     public java.lang.String getDataSourceID() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDataSourceID = null;
         try {
-            return (java.lang.String)classInstance.Get("DataSourceID");
+            retObjectDataSourceID = classInstance.Get("DataSourceID");
+            return (java.lang.String)retObjectDataSourceID;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDataSourceID != null ? retObjectDataSourceID.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -243,7 +270,7 @@ public class IDataBoundListControlImplementation extends NetObject implements ID
 
     public void setDataSourceID(java.lang.String DataSourceID) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DataSourceID", DataSourceID);
         } catch (JCNativeException jcne) {
@@ -253,10 +280,12 @@ public class IDataBoundListControlImplementation extends NetObject implements ID
 
     public java.lang.String[] getClientIDRowSuffix() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClientIDRowSuffix = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("ClientIDRowSuffix");
+            retObjectClientIDRowSuffix = classInstance.Get("ClientIDRowSuffix");
+            JCObject resultingObjects = (JCObject)retObjectClientIDRowSuffix;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -265,6 +294,8 @@ public class IDataBoundListControlImplementation extends NetObject implements ID
 				resultingArray[indexClientIDRowSuffix] = (java.lang.String)resultingArrayList.get(indexClientIDRowSuffix);
 			}
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into JCObject", retObjectClientIDRowSuffix != null ? retObjectClientIDRowSuffix.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -272,7 +303,7 @@ public class IDataBoundListControlImplementation extends NetObject implements ID
 
     public void setClientIDRowSuffix(java.lang.String[] ClientIDRowSuffix) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ClientIDRowSuffix", ClientIDRowSuffix);
         } catch (JCNativeException jcne) {
@@ -282,10 +313,12 @@ public class IDataBoundListControlImplementation extends NetObject implements ID
 
     public java.lang.String[] getDataKeyNames() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDataKeyNames = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("DataKeyNames");
+            retObjectDataKeyNames = classInstance.Get("DataKeyNames");
+            JCObject resultingObjects = (JCObject)retObjectDataKeyNames;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -294,6 +327,8 @@ public class IDataBoundListControlImplementation extends NetObject implements ID
 				resultingArray[indexDataKeyNames] = (java.lang.String)resultingArrayList.get(indexDataKeyNames);
 			}
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into JCObject", retObjectDataKeyNames != null ? retObjectDataKeyNames.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -301,7 +336,7 @@ public class IDataBoundListControlImplementation extends NetObject implements ID
 
     public void setDataKeyNames(java.lang.String[] DataKeyNames) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DataKeyNames", DataKeyNames);
         } catch (JCNativeException jcne) {
@@ -311,10 +346,14 @@ public class IDataBoundListControlImplementation extends NetObject implements ID
 
     public IDataSource getDataSourceObject() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDataSourceObject = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DataSourceObject");
+            retObjectDataSourceObject = classInstance.Get("DataSourceObject");
+            JCObject val = (JCObject)retObjectDataSourceObject;
             return new IDataSourceImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDataSourceObject != null ? retObjectDataSourceObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -322,10 +361,14 @@ public class IDataBoundListControlImplementation extends NetObject implements ID
 
     public DataKey getSelectedDataKey() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectedDataKey = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SelectedDataKey");
+            retObjectSelectedDataKey = classInstance.Get("SelectedDataKey");
+            JCObject val = (JCObject)retObjectSelectedDataKey;
             return new DataKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelectedDataKey != null ? retObjectSelectedDataKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -333,10 +376,14 @@ public class IDataBoundListControlImplementation extends NetObject implements ID
 
     public DataKeyArray getDataKeys() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDataKeys = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DataKeys");
+            retObjectDataKeys = classInstance.Get("DataKeys");
+            JCObject val = (JCObject)retObjectDataKeys;
             return new DataKeyArray(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDataKeys != null ? retObjectDataKeys.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

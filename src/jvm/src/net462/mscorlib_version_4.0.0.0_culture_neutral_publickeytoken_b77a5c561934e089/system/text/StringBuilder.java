@@ -224,9 +224,13 @@ public class StringBuilder extends NetObject implements system.runtime.serializa
     
     public boolean Equals(StringBuilder sb) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEquals = null;
         try {
-            return (boolean)classInstance.Invoke("Equals", sb == null ? null : sb.getJCOInstance());
+            retObjectEquals = classInstance.Invoke("Equals", sb == null ? null : sb.getJCOInstance());
+            return (boolean)retObjectEquals;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectEquals != null ? retObjectEquals.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -234,9 +238,20 @@ public class StringBuilder extends NetObject implements system.runtime.serializa
 
     public int EnsureCapacity(int capacity) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEnsureCapacity = null;
         try {
-            return (int)classInstance.Invoke("EnsureCapacity", capacity);
+            retObjectEnsureCapacity = classInstance.Invoke("EnsureCapacity", capacity);
+            return (int)retObjectEnsureCapacity;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectEnsureCapacity_ToString = retObjectEnsureCapacity == null ? "null" : retObjectEnsureCapacity.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectEnsureCapacityNumber = (java.lang.Number)retObjectEnsureCapacity;
+                return retObjectEnsureCapacityNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectEnsureCapacity != null ? retObjectEnsureCapacity.getClass() : "null", retObjectEnsureCapacity_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -244,9 +259,13 @@ public class StringBuilder extends NetObject implements system.runtime.serializa
 
     public java.lang.String ToString(int startIndex, int length) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToString = null;
         try {
-            return (java.lang.String)classInstance.Invoke("ToString", startIndex, length);
+            retObjectToString = classInstance.Invoke("ToString", startIndex, length);
+            return (java.lang.String)retObjectToString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectToString != null ? retObjectToString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -254,10 +273,14 @@ public class StringBuilder extends NetObject implements system.runtime.serializa
 
     public StringBuilder Append(boolean value) throws Throwable, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAppend = null;
         try {
-            JCObject objAppend = (JCObject)classInstance.Invoke("Append", value);
+            retObjectAppend = classInstance.Invoke("Append", value);
+            JCObject objAppend = (JCObject)retObjectAppend;
             return new StringBuilder(objAppend);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAppend != null ? retObjectAppend.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -265,10 +288,14 @@ public class StringBuilder extends NetObject implements system.runtime.serializa
 
     public StringBuilder Append(byte value) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAppend = null;
         try {
-            JCObject objAppend = (JCObject)classInstance.Invoke("Append", value);
+            retObjectAppend = classInstance.Invoke("Append", value);
+            JCObject objAppend = (JCObject)retObjectAppend;
             return new StringBuilder(objAppend);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAppend != null ? retObjectAppend.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -276,10 +303,14 @@ public class StringBuilder extends NetObject implements system.runtime.serializa
 
     public StringBuilder Append(char value) throws Throwable, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAppend = null;
         try {
-            JCObject objAppend = (JCObject)classInstance.Invoke("Append", value);
+            retObjectAppend = classInstance.Invoke("Append", value);
+            JCObject objAppend = (JCObject)retObjectAppend;
             return new StringBuilder(objAppend);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAppend != null ? retObjectAppend.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -287,10 +318,14 @@ public class StringBuilder extends NetObject implements system.runtime.serializa
 
     public StringBuilder Append(char value, int repeatCount) throws Throwable, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAppend = null;
         try {
-            JCObject objAppend = (JCObject)classInstance.Invoke("Append", value, repeatCount);
+            retObjectAppend = classInstance.Invoke("Append", value, repeatCount);
+            JCObject objAppend = (JCObject)retObjectAppend;
             return new StringBuilder(objAppend);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAppend != null ? retObjectAppend.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -298,10 +333,14 @@ public class StringBuilder extends NetObject implements system.runtime.serializa
 
     public StringBuilder Append(char[] value) throws Throwable, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAppend = null;
         try {
-            JCObject objAppend = (JCObject)classInstance.Invoke("Append", (java.lang.Object)value);
+            retObjectAppend = classInstance.Invoke("Append", (java.lang.Object)value);
+            JCObject objAppend = (JCObject)retObjectAppend;
             return new StringBuilder(objAppend);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAppend != null ? retObjectAppend.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -309,10 +348,14 @@ public class StringBuilder extends NetObject implements system.runtime.serializa
 
     public StringBuilder Append(JCORefOut dupParam0) throws Throwable, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAppend = null;
         try {
-            JCObject objAppend = (JCObject)classInstance.Invoke("Append", (java.lang.Object)dupParam0.getJCRefOut());
+            retObjectAppend = classInstance.Invoke("Append", (java.lang.Object)dupParam0.getJCRefOut());
+            JCObject objAppend = (JCObject)retObjectAppend;
             return new StringBuilder(objAppend);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAppend != null ? retObjectAppend.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -320,10 +363,14 @@ public class StringBuilder extends NetObject implements system.runtime.serializa
 
     public StringBuilder Append(char[] value, int startIndex, int charCount) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAppend = null;
         try {
-            JCObject objAppend = (JCObject)classInstance.Invoke("Append", value, startIndex, charCount);
+            retObjectAppend = classInstance.Invoke("Append", value, startIndex, charCount);
+            JCObject objAppend = (JCObject)retObjectAppend;
             return new StringBuilder(objAppend);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAppend != null ? retObjectAppend.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -331,10 +378,14 @@ public class StringBuilder extends NetObject implements system.runtime.serializa
 
     public StringBuilder Append(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAppend = null;
         try {
-            JCObject objAppend = (JCObject)classInstance.Invoke("Append", dupParam0.getJCRefOut(), dupParam1, dupParam2);
+            retObjectAppend = classInstance.Invoke("Append", dupParam0.getJCRefOut(), dupParam1, dupParam2);
+            JCObject objAppend = (JCObject)retObjectAppend;
             return new StringBuilder(objAppend);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAppend != null ? retObjectAppend.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -342,10 +393,14 @@ public class StringBuilder extends NetObject implements system.runtime.serializa
 
     public StringBuilder Append(double value) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAppend = null;
         try {
-            JCObject objAppend = (JCObject)classInstance.Invoke("Append", value);
+            retObjectAppend = classInstance.Invoke("Append", value);
+            JCObject objAppend = (JCObject)retObjectAppend;
             return new StringBuilder(objAppend);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAppend != null ? retObjectAppend.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -353,10 +408,14 @@ public class StringBuilder extends NetObject implements system.runtime.serializa
 
     public StringBuilder Append(short value) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAppend = null;
         try {
-            JCObject objAppend = (JCObject)classInstance.Invoke("Append", value);
+            retObjectAppend = classInstance.Invoke("Append", value);
+            JCObject objAppend = (JCObject)retObjectAppend;
             return new StringBuilder(objAppend);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAppend != null ? retObjectAppend.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -364,10 +423,14 @@ public class StringBuilder extends NetObject implements system.runtime.serializa
 
     public StringBuilder Append(int value) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAppend = null;
         try {
-            JCObject objAppend = (JCObject)classInstance.Invoke("Append", value);
+            retObjectAppend = classInstance.Invoke("Append", value);
+            JCObject objAppend = (JCObject)retObjectAppend;
             return new StringBuilder(objAppend);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAppend != null ? retObjectAppend.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -375,10 +438,14 @@ public class StringBuilder extends NetObject implements system.runtime.serializa
 
     public StringBuilder Append(long value) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAppend = null;
         try {
-            JCObject objAppend = (JCObject)classInstance.Invoke("Append", value);
+            retObjectAppend = classInstance.Invoke("Append", value);
+            JCObject objAppend = (JCObject)retObjectAppend;
             return new StringBuilder(objAppend);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAppend != null ? retObjectAppend.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -386,10 +453,14 @@ public class StringBuilder extends NetObject implements system.runtime.serializa
 
     public StringBuilder Append(SByte value) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAppend = null;
         try {
-            JCObject objAppend = (JCObject)classInstance.Invoke("Append", value == null ? null : value.getJCOInstance());
+            retObjectAppend = classInstance.Invoke("Append", value == null ? null : value.getJCOInstance());
+            JCObject objAppend = (JCObject)retObjectAppend;
             return new StringBuilder(objAppend);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAppend != null ? retObjectAppend.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -397,10 +468,14 @@ public class StringBuilder extends NetObject implements system.runtime.serializa
 
     public StringBuilder Append(Single value) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAppend = null;
         try {
-            JCObject objAppend = (JCObject)classInstance.Invoke("Append", value == null ? null : value.getJCOInstance());
+            retObjectAppend = classInstance.Invoke("Append", value == null ? null : value.getJCOInstance());
+            JCObject objAppend = (JCObject)retObjectAppend;
             return new StringBuilder(objAppend);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAppend != null ? retObjectAppend.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -408,10 +483,14 @@ public class StringBuilder extends NetObject implements system.runtime.serializa
 
     public StringBuilder Append(Decimal value) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAppend = null;
         try {
-            JCObject objAppend = (JCObject)classInstance.Invoke("Append", value == null ? null : value.getJCOInstance());
+            retObjectAppend = classInstance.Invoke("Append", value == null ? null : value.getJCOInstance());
+            JCObject objAppend = (JCObject)retObjectAppend;
             return new StringBuilder(objAppend);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAppend != null ? retObjectAppend.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -419,10 +498,14 @@ public class StringBuilder extends NetObject implements system.runtime.serializa
 
     public StringBuilder Append(NetObject value) throws Throwable, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAppend = null;
         try {
-            JCObject objAppend = (JCObject)classInstance.Invoke("Append", value == null ? null : value.getJCOInstance());
+            retObjectAppend = classInstance.Invoke("Append", value == null ? null : value.getJCOInstance());
+            JCObject objAppend = (JCObject)retObjectAppend;
             return new StringBuilder(objAppend);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAppend != null ? retObjectAppend.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -430,10 +513,14 @@ public class StringBuilder extends NetObject implements system.runtime.serializa
 
     public StringBuilder Append(java.lang.String value) throws Throwable, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAppend = null;
         try {
-            JCObject objAppend = (JCObject)classInstance.Invoke("Append", value);
+            retObjectAppend = classInstance.Invoke("Append", value);
+            JCObject objAppend = (JCObject)retObjectAppend;
             return new StringBuilder(objAppend);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAppend != null ? retObjectAppend.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -441,10 +528,14 @@ public class StringBuilder extends NetObject implements system.runtime.serializa
 
     public StringBuilder Append(java.lang.String value, int startIndex, int count) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAppend = null;
         try {
-            JCObject objAppend = (JCObject)classInstance.Invoke("Append", value, startIndex, count);
+            retObjectAppend = classInstance.Invoke("Append", value, startIndex, count);
+            JCObject objAppend = (JCObject)retObjectAppend;
             return new StringBuilder(objAppend);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAppend != null ? retObjectAppend.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -452,10 +543,14 @@ public class StringBuilder extends NetObject implements system.runtime.serializa
 
     public StringBuilder Append(UInt16 value) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAppend = null;
         try {
-            JCObject objAppend = (JCObject)classInstance.Invoke("Append", value == null ? null : value.getJCOInstance());
+            retObjectAppend = classInstance.Invoke("Append", value == null ? null : value.getJCOInstance());
+            JCObject objAppend = (JCObject)retObjectAppend;
             return new StringBuilder(objAppend);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAppend != null ? retObjectAppend.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -463,10 +558,14 @@ public class StringBuilder extends NetObject implements system.runtime.serializa
 
     public StringBuilder Append(UInt32 value) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAppend = null;
         try {
-            JCObject objAppend = (JCObject)classInstance.Invoke("Append", value == null ? null : value.getJCOInstance());
+            retObjectAppend = classInstance.Invoke("Append", value == null ? null : value.getJCOInstance());
+            JCObject objAppend = (JCObject)retObjectAppend;
             return new StringBuilder(objAppend);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAppend != null ? retObjectAppend.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -474,10 +573,14 @@ public class StringBuilder extends NetObject implements system.runtime.serializa
 
     public StringBuilder Append(UInt64 value) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAppend = null;
         try {
-            JCObject objAppend = (JCObject)classInstance.Invoke("Append", value == null ? null : value.getJCOInstance());
+            retObjectAppend = classInstance.Invoke("Append", value == null ? null : value.getJCOInstance());
+            JCObject objAppend = (JCObject)retObjectAppend;
             return new StringBuilder(objAppend);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAppend != null ? retObjectAppend.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -485,10 +588,14 @@ public class StringBuilder extends NetObject implements system.runtime.serializa
 
     public StringBuilder AppendFormat(IFormatProvider provider, java.lang.String format, NetObject arg0) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAppendFormat = null;
         try {
-            JCObject objAppendFormat = (JCObject)classInstance.Invoke("AppendFormat", provider == null ? null : provider.getJCOInstance(), format, arg0 == null ? null : arg0.getJCOInstance());
+            retObjectAppendFormat = classInstance.Invoke("AppendFormat", provider == null ? null : provider.getJCOInstance(), format, arg0 == null ? null : arg0.getJCOInstance());
+            JCObject objAppendFormat = (JCObject)retObjectAppendFormat;
             return new StringBuilder(objAppendFormat);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAppendFormat != null ? retObjectAppendFormat.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -496,10 +603,14 @@ public class StringBuilder extends NetObject implements system.runtime.serializa
 
     public StringBuilder AppendFormat(IFormatProvider provider, java.lang.String format, NetObject arg0, NetObject arg1) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAppendFormat = null;
         try {
-            JCObject objAppendFormat = (JCObject)classInstance.Invoke("AppendFormat", provider == null ? null : provider.getJCOInstance(), format, arg0 == null ? null : arg0.getJCOInstance(), arg1 == null ? null : arg1.getJCOInstance());
+            retObjectAppendFormat = classInstance.Invoke("AppendFormat", provider == null ? null : provider.getJCOInstance(), format, arg0 == null ? null : arg0.getJCOInstance(), arg1 == null ? null : arg1.getJCOInstance());
+            JCObject objAppendFormat = (JCObject)retObjectAppendFormat;
             return new StringBuilder(objAppendFormat);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAppendFormat != null ? retObjectAppendFormat.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -507,10 +618,14 @@ public class StringBuilder extends NetObject implements system.runtime.serializa
 
     public StringBuilder AppendFormat(IFormatProvider provider, java.lang.String format, NetObject arg0, NetObject arg1, NetObject arg2) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAppendFormat = null;
         try {
-            JCObject objAppendFormat = (JCObject)classInstance.Invoke("AppendFormat", provider == null ? null : provider.getJCOInstance(), format, arg0 == null ? null : arg0.getJCOInstance(), arg1 == null ? null : arg1.getJCOInstance(), arg2 == null ? null : arg2.getJCOInstance());
+            retObjectAppendFormat = classInstance.Invoke("AppendFormat", provider == null ? null : provider.getJCOInstance(), format, arg0 == null ? null : arg0.getJCOInstance(), arg1 == null ? null : arg1.getJCOInstance(), arg2 == null ? null : arg2.getJCOInstance());
+            JCObject objAppendFormat = (JCObject)retObjectAppendFormat;
             return new StringBuilder(objAppendFormat);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAppendFormat != null ? retObjectAppendFormat.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -518,10 +633,14 @@ public class StringBuilder extends NetObject implements system.runtime.serializa
 
     public StringBuilder AppendFormat(IFormatProvider provider, java.lang.String format, NetObject... args) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAppendFormat = null;
         try {
-            JCObject objAppendFormat = (JCObject)classInstance.Invoke("AppendFormat", provider == null ? null : provider.getJCOInstance(), format, toObjectFromArray(args));
+            retObjectAppendFormat = classInstance.Invoke("AppendFormat", provider == null ? null : provider.getJCOInstance(), format, toObjectFromArray(args));
+            JCObject objAppendFormat = (JCObject)retObjectAppendFormat;
             return new StringBuilder(objAppendFormat);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAppendFormat != null ? retObjectAppendFormat.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -529,10 +648,14 @@ public class StringBuilder extends NetObject implements system.runtime.serializa
 
     public StringBuilder AppendFormat(java.lang.String format, NetObject arg0) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAppendFormat = null;
         try {
-            JCObject objAppendFormat = (JCObject)classInstance.Invoke("AppendFormat", format, arg0 == null ? null : arg0.getJCOInstance());
+            retObjectAppendFormat = classInstance.Invoke("AppendFormat", format, arg0 == null ? null : arg0.getJCOInstance());
+            JCObject objAppendFormat = (JCObject)retObjectAppendFormat;
             return new StringBuilder(objAppendFormat);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAppendFormat != null ? retObjectAppendFormat.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -540,10 +663,14 @@ public class StringBuilder extends NetObject implements system.runtime.serializa
 
     public StringBuilder AppendFormat(java.lang.String format, NetObject arg0, NetObject arg1) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAppendFormat = null;
         try {
-            JCObject objAppendFormat = (JCObject)classInstance.Invoke("AppendFormat", format, arg0 == null ? null : arg0.getJCOInstance(), arg1 == null ? null : arg1.getJCOInstance());
+            retObjectAppendFormat = classInstance.Invoke("AppendFormat", format, arg0 == null ? null : arg0.getJCOInstance(), arg1 == null ? null : arg1.getJCOInstance());
+            JCObject objAppendFormat = (JCObject)retObjectAppendFormat;
             return new StringBuilder(objAppendFormat);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAppendFormat != null ? retObjectAppendFormat.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -551,10 +678,14 @@ public class StringBuilder extends NetObject implements system.runtime.serializa
 
     public StringBuilder AppendFormat(java.lang.String format, NetObject arg0, NetObject arg1, NetObject arg2) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAppendFormat = null;
         try {
-            JCObject objAppendFormat = (JCObject)classInstance.Invoke("AppendFormat", format, arg0 == null ? null : arg0.getJCOInstance(), arg1 == null ? null : arg1.getJCOInstance(), arg2 == null ? null : arg2.getJCOInstance());
+            retObjectAppendFormat = classInstance.Invoke("AppendFormat", format, arg0 == null ? null : arg0.getJCOInstance(), arg1 == null ? null : arg1.getJCOInstance(), arg2 == null ? null : arg2.getJCOInstance());
+            JCObject objAppendFormat = (JCObject)retObjectAppendFormat;
             return new StringBuilder(objAppendFormat);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAppendFormat != null ? retObjectAppendFormat.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -562,10 +693,14 @@ public class StringBuilder extends NetObject implements system.runtime.serializa
 
     public StringBuilder AppendFormat(java.lang.String format, NetObject... args) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAppendFormat = null;
         try {
-            JCObject objAppendFormat = (JCObject)classInstance.Invoke("AppendFormat", format, toObjectFromArray(args));
+            retObjectAppendFormat = classInstance.Invoke("AppendFormat", format, toObjectFromArray(args));
+            JCObject objAppendFormat = (JCObject)retObjectAppendFormat;
             return new StringBuilder(objAppendFormat);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAppendFormat != null ? retObjectAppendFormat.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -573,10 +708,14 @@ public class StringBuilder extends NetObject implements system.runtime.serializa
 
     public StringBuilder AppendLine() throws Throwable, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAppendLine = null;
         try {
-            JCObject objAppendLine = (JCObject)classInstance.Invoke("AppendLine");
+            retObjectAppendLine = classInstance.Invoke("AppendLine");
+            JCObject objAppendLine = (JCObject)retObjectAppendLine;
             return new StringBuilder(objAppendLine);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAppendLine != null ? retObjectAppendLine.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -584,10 +723,14 @@ public class StringBuilder extends NetObject implements system.runtime.serializa
 
     public StringBuilder AppendLine(java.lang.String value) throws Throwable, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAppendLine = null;
         try {
-            JCObject objAppendLine = (JCObject)classInstance.Invoke("AppendLine", value);
+            retObjectAppendLine = classInstance.Invoke("AppendLine", value);
+            JCObject objAppendLine = (JCObject)retObjectAppendLine;
             return new StringBuilder(objAppendLine);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAppendLine != null ? retObjectAppendLine.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -595,10 +738,14 @@ public class StringBuilder extends NetObject implements system.runtime.serializa
 
     public StringBuilder Clear() throws Throwable, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClear = null;
         try {
-            JCObject objClear = (JCObject)classInstance.Invoke("Clear");
+            retObjectClear = classInstance.Invoke("Clear");
+            JCObject objClear = (JCObject)retObjectClear;
             return new StringBuilder(objClear);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClear != null ? retObjectClear.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -606,10 +753,14 @@ public class StringBuilder extends NetObject implements system.runtime.serializa
 
     public StringBuilder Insert(int index, boolean value) throws Throwable, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInsert = null;
         try {
-            JCObject objInsert = (JCObject)classInstance.Invoke("Insert", index, value);
+            retObjectInsert = classInstance.Invoke("Insert", index, value);
+            JCObject objInsert = (JCObject)retObjectInsert;
             return new StringBuilder(objInsert);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInsert != null ? retObjectInsert.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -617,10 +768,14 @@ public class StringBuilder extends NetObject implements system.runtime.serializa
 
     public StringBuilder Insert(int index, byte value) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInsert = null;
         try {
-            JCObject objInsert = (JCObject)classInstance.Invoke("Insert", index, value);
+            retObjectInsert = classInstance.Invoke("Insert", index, value);
+            JCObject objInsert = (JCObject)retObjectInsert;
             return new StringBuilder(objInsert);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInsert != null ? retObjectInsert.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -628,10 +783,14 @@ public class StringBuilder extends NetObject implements system.runtime.serializa
 
     public StringBuilder Insert(int index, char value) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInsert = null;
         try {
-            JCObject objInsert = (JCObject)classInstance.Invoke("Insert", index, value);
+            retObjectInsert = classInstance.Invoke("Insert", index, value);
+            JCObject objInsert = (JCObject)retObjectInsert;
             return new StringBuilder(objInsert);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInsert != null ? retObjectInsert.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -639,10 +798,14 @@ public class StringBuilder extends NetObject implements system.runtime.serializa
 
     public StringBuilder Insert(int index, char[] value) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInsert = null;
         try {
-            JCObject objInsert = (JCObject)classInstance.Invoke("Insert", index, value);
+            retObjectInsert = classInstance.Invoke("Insert", index, value);
+            JCObject objInsert = (JCObject)retObjectInsert;
             return new StringBuilder(objInsert);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInsert != null ? retObjectInsert.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -650,10 +813,14 @@ public class StringBuilder extends NetObject implements system.runtime.serializa
 
     public StringBuilder Insert(int dupParam0, JCORefOut dupParam1) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInsert = null;
         try {
-            JCObject objInsert = (JCObject)classInstance.Invoke("Insert", dupParam0, dupParam1.getJCRefOut());
+            retObjectInsert = classInstance.Invoke("Insert", dupParam0, dupParam1.getJCRefOut());
+            JCObject objInsert = (JCObject)retObjectInsert;
             return new StringBuilder(objInsert);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInsert != null ? retObjectInsert.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -661,10 +828,14 @@ public class StringBuilder extends NetObject implements system.runtime.serializa
 
     public StringBuilder Insert(int index, char[] value, int startIndex, int charCount) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInsert = null;
         try {
-            JCObject objInsert = (JCObject)classInstance.Invoke("Insert", index, value, startIndex, charCount);
+            retObjectInsert = classInstance.Invoke("Insert", index, value, startIndex, charCount);
+            JCObject objInsert = (JCObject)retObjectInsert;
             return new StringBuilder(objInsert);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInsert != null ? retObjectInsert.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -672,10 +843,14 @@ public class StringBuilder extends NetObject implements system.runtime.serializa
 
     public StringBuilder Insert(int dupParam0, JCORefOut dupParam1, int dupParam2, int dupParam3) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInsert = null;
         try {
-            JCObject objInsert = (JCObject)classInstance.Invoke("Insert", dupParam0, dupParam1.getJCRefOut(), dupParam2, dupParam3);
+            retObjectInsert = classInstance.Invoke("Insert", dupParam0, dupParam1.getJCRefOut(), dupParam2, dupParam3);
+            JCObject objInsert = (JCObject)retObjectInsert;
             return new StringBuilder(objInsert);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInsert != null ? retObjectInsert.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -683,10 +858,14 @@ public class StringBuilder extends NetObject implements system.runtime.serializa
 
     public StringBuilder Insert(int index, double value) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInsert = null;
         try {
-            JCObject objInsert = (JCObject)classInstance.Invoke("Insert", index, value);
+            retObjectInsert = classInstance.Invoke("Insert", index, value);
+            JCObject objInsert = (JCObject)retObjectInsert;
             return new StringBuilder(objInsert);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInsert != null ? retObjectInsert.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -694,10 +873,14 @@ public class StringBuilder extends NetObject implements system.runtime.serializa
 
     public StringBuilder Insert(int index, short value) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInsert = null;
         try {
-            JCObject objInsert = (JCObject)classInstance.Invoke("Insert", index, value);
+            retObjectInsert = classInstance.Invoke("Insert", index, value);
+            JCObject objInsert = (JCObject)retObjectInsert;
             return new StringBuilder(objInsert);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInsert != null ? retObjectInsert.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -705,10 +888,14 @@ public class StringBuilder extends NetObject implements system.runtime.serializa
 
     public StringBuilder Insert(int index, int value) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInsert = null;
         try {
-            JCObject objInsert = (JCObject)classInstance.Invoke("Insert", index, value);
+            retObjectInsert = classInstance.Invoke("Insert", index, value);
+            JCObject objInsert = (JCObject)retObjectInsert;
             return new StringBuilder(objInsert);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInsert != null ? retObjectInsert.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -716,10 +903,14 @@ public class StringBuilder extends NetObject implements system.runtime.serializa
 
     public StringBuilder Insert(int index, long value) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInsert = null;
         try {
-            JCObject objInsert = (JCObject)classInstance.Invoke("Insert", index, value);
+            retObjectInsert = classInstance.Invoke("Insert", index, value);
+            JCObject objInsert = (JCObject)retObjectInsert;
             return new StringBuilder(objInsert);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInsert != null ? retObjectInsert.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -727,10 +918,14 @@ public class StringBuilder extends NetObject implements system.runtime.serializa
 
     public StringBuilder Insert(int index, SByte value) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInsert = null;
         try {
-            JCObject objInsert = (JCObject)classInstance.Invoke("Insert", index, value == null ? null : value.getJCOInstance());
+            retObjectInsert = classInstance.Invoke("Insert", index, value == null ? null : value.getJCOInstance());
+            JCObject objInsert = (JCObject)retObjectInsert;
             return new StringBuilder(objInsert);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInsert != null ? retObjectInsert.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -738,10 +933,14 @@ public class StringBuilder extends NetObject implements system.runtime.serializa
 
     public StringBuilder Insert(int index, Single value) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInsert = null;
         try {
-            JCObject objInsert = (JCObject)classInstance.Invoke("Insert", index, value == null ? null : value.getJCOInstance());
+            retObjectInsert = classInstance.Invoke("Insert", index, value == null ? null : value.getJCOInstance());
+            JCObject objInsert = (JCObject)retObjectInsert;
             return new StringBuilder(objInsert);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInsert != null ? retObjectInsert.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -749,10 +948,14 @@ public class StringBuilder extends NetObject implements system.runtime.serializa
 
     public StringBuilder Insert(int index, Decimal value) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInsert = null;
         try {
-            JCObject objInsert = (JCObject)classInstance.Invoke("Insert", index, value == null ? null : value.getJCOInstance());
+            retObjectInsert = classInstance.Invoke("Insert", index, value == null ? null : value.getJCOInstance());
+            JCObject objInsert = (JCObject)retObjectInsert;
             return new StringBuilder(objInsert);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInsert != null ? retObjectInsert.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -760,10 +963,14 @@ public class StringBuilder extends NetObject implements system.runtime.serializa
 
     public StringBuilder Insert(int index, NetObject value) throws Throwable, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInsert = null;
         try {
-            JCObject objInsert = (JCObject)classInstance.Invoke("Insert", index, value == null ? null : value.getJCOInstance());
+            retObjectInsert = classInstance.Invoke("Insert", index, value == null ? null : value.getJCOInstance());
+            JCObject objInsert = (JCObject)retObjectInsert;
             return new StringBuilder(objInsert);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInsert != null ? retObjectInsert.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -771,10 +978,14 @@ public class StringBuilder extends NetObject implements system.runtime.serializa
 
     public StringBuilder Insert(int index, java.lang.String value) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInsert = null;
         try {
-            JCObject objInsert = (JCObject)classInstance.Invoke("Insert", index, value);
+            retObjectInsert = classInstance.Invoke("Insert", index, value);
+            JCObject objInsert = (JCObject)retObjectInsert;
             return new StringBuilder(objInsert);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInsert != null ? retObjectInsert.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -782,10 +993,14 @@ public class StringBuilder extends NetObject implements system.runtime.serializa
 
     public StringBuilder Insert(int index, java.lang.String value, int count) throws Throwable, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInsert = null;
         try {
-            JCObject objInsert = (JCObject)classInstance.Invoke("Insert", index, value, count);
+            retObjectInsert = classInstance.Invoke("Insert", index, value, count);
+            JCObject objInsert = (JCObject)retObjectInsert;
             return new StringBuilder(objInsert);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInsert != null ? retObjectInsert.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -793,10 +1008,14 @@ public class StringBuilder extends NetObject implements system.runtime.serializa
 
     public StringBuilder Insert(int index, UInt16 value) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInsert = null;
         try {
-            JCObject objInsert = (JCObject)classInstance.Invoke("Insert", index, value == null ? null : value.getJCOInstance());
+            retObjectInsert = classInstance.Invoke("Insert", index, value == null ? null : value.getJCOInstance());
+            JCObject objInsert = (JCObject)retObjectInsert;
             return new StringBuilder(objInsert);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInsert != null ? retObjectInsert.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -804,10 +1023,14 @@ public class StringBuilder extends NetObject implements system.runtime.serializa
 
     public StringBuilder Insert(int index, UInt32 value) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInsert = null;
         try {
-            JCObject objInsert = (JCObject)classInstance.Invoke("Insert", index, value == null ? null : value.getJCOInstance());
+            retObjectInsert = classInstance.Invoke("Insert", index, value == null ? null : value.getJCOInstance());
+            JCObject objInsert = (JCObject)retObjectInsert;
             return new StringBuilder(objInsert);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInsert != null ? retObjectInsert.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -815,10 +1038,14 @@ public class StringBuilder extends NetObject implements system.runtime.serializa
 
     public StringBuilder Insert(int index, UInt64 value) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInsert = null;
         try {
-            JCObject objInsert = (JCObject)classInstance.Invoke("Insert", index, value == null ? null : value.getJCOInstance());
+            retObjectInsert = classInstance.Invoke("Insert", index, value == null ? null : value.getJCOInstance());
+            JCObject objInsert = (JCObject)retObjectInsert;
             return new StringBuilder(objInsert);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInsert != null ? retObjectInsert.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -826,10 +1053,14 @@ public class StringBuilder extends NetObject implements system.runtime.serializa
 
     public StringBuilder Remove(int startIndex, int length) throws Throwable, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRemove = null;
         try {
-            JCObject objRemove = (JCObject)classInstance.Invoke("Remove", startIndex, length);
+            retObjectRemove = classInstance.Invoke("Remove", startIndex, length);
+            JCObject objRemove = (JCObject)retObjectRemove;
             return new StringBuilder(objRemove);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRemove != null ? retObjectRemove.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -837,10 +1068,14 @@ public class StringBuilder extends NetObject implements system.runtime.serializa
 
     public StringBuilder Replace(char oldChar, char newChar) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReplace = null;
         try {
-            JCObject objReplace = (JCObject)classInstance.Invoke("Replace", oldChar, newChar);
+            retObjectReplace = classInstance.Invoke("Replace", oldChar, newChar);
+            JCObject objReplace = (JCObject)retObjectReplace;
             return new StringBuilder(objReplace);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReplace != null ? retObjectReplace.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -848,10 +1083,14 @@ public class StringBuilder extends NetObject implements system.runtime.serializa
 
     public StringBuilder Replace(char oldChar, char newChar, int startIndex, int count) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReplace = null;
         try {
-            JCObject objReplace = (JCObject)classInstance.Invoke("Replace", oldChar, newChar, startIndex, count);
+            retObjectReplace = classInstance.Invoke("Replace", oldChar, newChar, startIndex, count);
+            JCObject objReplace = (JCObject)retObjectReplace;
             return new StringBuilder(objReplace);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReplace != null ? retObjectReplace.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -859,10 +1098,14 @@ public class StringBuilder extends NetObject implements system.runtime.serializa
 
     public StringBuilder Replace(java.lang.String oldValue, java.lang.String newValue) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReplace = null;
         try {
-            JCObject objReplace = (JCObject)classInstance.Invoke("Replace", oldValue, newValue);
+            retObjectReplace = classInstance.Invoke("Replace", oldValue, newValue);
+            JCObject objReplace = (JCObject)retObjectReplace;
             return new StringBuilder(objReplace);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReplace != null ? retObjectReplace.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -870,10 +1113,14 @@ public class StringBuilder extends NetObject implements system.runtime.serializa
 
     public StringBuilder Replace(java.lang.String oldValue, java.lang.String newValue, int startIndex, int count) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReplace = null;
         try {
-            JCObject objReplace = (JCObject)classInstance.Invoke("Replace", oldValue, newValue, startIndex, count);
+            retObjectReplace = classInstance.Invoke("Replace", oldValue, newValue, startIndex, count);
+            JCObject objReplace = (JCObject)retObjectReplace;
             return new StringBuilder(objReplace);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReplace != null ? retObjectReplace.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -881,7 +1128,7 @@ public class StringBuilder extends NetObject implements system.runtime.serializa
 
     public void CopyTo(int sourceIndex, char[] destination, int destinationIndex, int count) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CopyTo", sourceIndex, destination, destinationIndex, count);
         } catch (JCNativeException jcne) {
@@ -891,7 +1138,7 @@ public class StringBuilder extends NetObject implements system.runtime.serializa
 
     public void CopyTo(int dupParam0, JCORefOut dupParam1, int dupParam2, int dupParam3) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CopyTo", dupParam0, dupParam1.getJCRefOut(), dupParam2, dupParam3);
         } catch (JCNativeException jcne) {
@@ -905,7 +1152,7 @@ public class StringBuilder extends NetObject implements system.runtime.serializa
      */
     @Deprecated 
     public void GetObjectData(SerializationInfo info, StreamingContext context) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToISerializable to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToISerializable to obtain the full interface.");
     }
 
 
@@ -914,9 +1161,20 @@ public class StringBuilder extends NetObject implements system.runtime.serializa
     
     public int getCapacity() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCapacity = null;
         try {
-            return (int)classInstance.Get("Capacity");
+            retObjectCapacity = classInstance.Get("Capacity");
+            return (int)retObjectCapacity;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCapacity_ToString = retObjectCapacity == null ? "null" : retObjectCapacity.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectCapacityNumber = (java.lang.Number)retObjectCapacity;
+                return retObjectCapacityNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCapacity != null ? retObjectCapacity.getClass() : "null", retObjectCapacity_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -924,7 +1182,7 @@ public class StringBuilder extends NetObject implements system.runtime.serializa
 
     public void setCapacity(int Capacity) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Capacity", Capacity);
         } catch (JCNativeException jcne) {
@@ -934,9 +1192,20 @@ public class StringBuilder extends NetObject implements system.runtime.serializa
 
     public int getLength() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLength = null;
         try {
-            return (int)classInstance.Get("Length");
+            retObjectLength = classInstance.Get("Length");
+            return (int)retObjectLength;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectLength_ToString = retObjectLength == null ? "null" : retObjectLength.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectLengthNumber = (java.lang.Number)retObjectLength;
+                return retObjectLengthNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectLength != null ? retObjectLength.getClass() : "null", retObjectLength_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -944,7 +1213,7 @@ public class StringBuilder extends NetObject implements system.runtime.serializa
 
     public void setLength(int Length) throws Throwable, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Length", Length);
         } catch (JCNativeException jcne) {
@@ -954,9 +1223,20 @@ public class StringBuilder extends NetObject implements system.runtime.serializa
 
     public int getMaxCapacity() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxCapacity = null;
         try {
-            return (int)classInstance.Get("MaxCapacity");
+            retObjectMaxCapacity = classInstance.Get("MaxCapacity");
+            return (int)retObjectMaxCapacity;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaxCapacity_ToString = retObjectMaxCapacity == null ? "null" : retObjectMaxCapacity.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMaxCapacityNumber = (java.lang.Number)retObjectMaxCapacity;
+                return retObjectMaxCapacityNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxCapacity != null ? retObjectMaxCapacity.getClass() : "null", retObjectMaxCapacity_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

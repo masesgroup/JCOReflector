@@ -160,10 +160,14 @@ public class DocumentPaginator extends NetObject  {
     
     public DocumentPage GetPage(int pageNumber) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPage = null;
         try {
-            JCObject objGetPage = (JCObject)classInstance.Invoke("GetPage", pageNumber);
+            retObjectGetPage = classInstance.Invoke("GetPage", pageNumber);
+            JCObject objGetPage = (JCObject)retObjectGetPage;
             return new DocumentPage(objGetPage);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetPage != null ? retObjectGetPage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,7 +175,7 @@ public class DocumentPaginator extends NetObject  {
 
     public void CancelAsync(NetObject userState) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CancelAsync", userState == null ? null : userState.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -181,7 +185,7 @@ public class DocumentPaginator extends NetObject  {
 
     public void ComputePageCount() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ComputePageCount");
         } catch (JCNativeException jcne) {
@@ -191,7 +195,7 @@ public class DocumentPaginator extends NetObject  {
 
     public void ComputePageCountAsync() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ComputePageCountAsync");
         } catch (JCNativeException jcne) {
@@ -201,7 +205,7 @@ public class DocumentPaginator extends NetObject  {
 
     public void ComputePageCountAsync(NetObject userState) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ComputePageCountAsync", userState == null ? null : userState.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -211,7 +215,7 @@ public class DocumentPaginator extends NetObject  {
 
     public void GetPageAsync(int pageNumber, NetObject userState) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetPageAsync", pageNumber, userState == null ? null : userState.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -221,7 +225,7 @@ public class DocumentPaginator extends NetObject  {
 
     public void GetPageAsync(int pageNumber) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetPageAsync", pageNumber);
         } catch (JCNativeException jcne) {
@@ -235,9 +239,13 @@ public class DocumentPaginator extends NetObject  {
     
     public boolean getIsPageCountValid() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsPageCountValid = null;
         try {
-            return (boolean)classInstance.Get("IsPageCountValid");
+            retObjectIsPageCountValid = classInstance.Get("IsPageCountValid");
+            return (boolean)retObjectIsPageCountValid;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsPageCountValid != null ? retObjectIsPageCountValid.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -245,9 +253,20 @@ public class DocumentPaginator extends NetObject  {
 
     public int getPageCount() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPageCount = null;
         try {
-            return (int)classInstance.Get("PageCount");
+            retObjectPageCount = classInstance.Get("PageCount");
+            return (int)retObjectPageCount;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectPageCount_ToString = retObjectPageCount == null ? "null" : retObjectPageCount.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectPageCountNumber = (java.lang.Number)retObjectPageCount;
+                return retObjectPageCountNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectPageCount != null ? retObjectPageCount.getClass() : "null", retObjectPageCount_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -255,10 +274,14 @@ public class DocumentPaginator extends NetObject  {
 
     public IDocumentPaginatorSource getSource() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSource = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Source");
+            retObjectSource = classInstance.Get("Source");
+            JCObject val = (JCObject)retObjectSource;
             return new IDocumentPaginatorSourceImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSource != null ? retObjectSource.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -266,10 +289,14 @@ public class DocumentPaginator extends NetObject  {
 
     public Size getPageSize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPageSize = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PageSize");
+            retObjectPageSize = classInstance.Get("PageSize");
+            JCObject val = (JCObject)retObjectPageSize;
             return new Size(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPageSize != null ? retObjectPageSize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -277,7 +304,7 @@ public class DocumentPaginator extends NetObject  {
 
     public void setPageSize(Size PageSize) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PageSize", PageSize == null ? null : PageSize.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -292,7 +319,7 @@ public class DocumentPaginator extends NetObject  {
 
     public void addComputePageCountCompleted(AsyncCompletedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ComputePageCountCompleted", handler);
         } catch (JCNativeException jcne) {
@@ -302,7 +329,7 @@ public class DocumentPaginator extends NetObject  {
 
     public void removeComputePageCountCompleted(AsyncCompletedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ComputePageCountCompleted", handler);
         } catch (JCNativeException jcne) {
@@ -312,7 +339,7 @@ public class DocumentPaginator extends NetObject  {
 
     public void addGetPageCompleted(GetPageCompletedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("GetPageCompleted", handler);
         } catch (JCNativeException jcne) {
@@ -322,7 +349,7 @@ public class DocumentPaginator extends NetObject  {
 
     public void removeGetPageCompleted(GetPageCompletedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("GetPageCompleted", handler);
         } catch (JCNativeException jcne) {
@@ -332,7 +359,7 @@ public class DocumentPaginator extends NetObject  {
 
     public void addPagesChanged(PagesChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("PagesChanged", handler);
         } catch (JCNativeException jcne) {
@@ -342,7 +369,7 @@ public class DocumentPaginator extends NetObject  {
 
     public void removePagesChanged(PagesChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("PagesChanged", handler);
         } catch (JCNativeException jcne) {

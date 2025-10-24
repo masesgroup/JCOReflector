@@ -152,7 +152,7 @@ public class INotifyPropertyChangedImplementation extends NetObject implements I
 
     public void addPropertyChanged(PropertyChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("PropertyChanged", handler);
         } catch (JCNativeException jcne) {
@@ -162,7 +162,7 @@ public class INotifyPropertyChangedImplementation extends NetObject implements I
 
     public void removePropertyChanged(PropertyChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("PropertyChanged", handler);
         } catch (JCNativeException jcne) {

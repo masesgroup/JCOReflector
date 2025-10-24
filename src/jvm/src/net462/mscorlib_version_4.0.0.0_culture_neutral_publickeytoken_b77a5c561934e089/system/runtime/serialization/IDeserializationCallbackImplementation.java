@@ -142,7 +142,7 @@ public class IDeserializationCallbackImplementation extends NetObject implements
     
     public void OnDeserialization(NetObject sender) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("OnDeserialization", sender == null ? null : sender.getJCOInstance());
         } catch (JCNativeException jcne) {

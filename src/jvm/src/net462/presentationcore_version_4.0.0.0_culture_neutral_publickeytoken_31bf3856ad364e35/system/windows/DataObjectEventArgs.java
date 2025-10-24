@@ -154,7 +154,7 @@ public class DataObjectEventArgs extends RoutedEventArgs  {
     
     public void CancelCommand() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CancelCommand");
         } catch (JCNativeException jcne) {
@@ -168,9 +168,13 @@ public class DataObjectEventArgs extends RoutedEventArgs  {
     
     public boolean getCommandCancelled() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCommandCancelled = null;
         try {
-            return (boolean)classInstance.Get("CommandCancelled");
+            retObjectCommandCancelled = classInstance.Get("CommandCancelled");
+            return (boolean)retObjectCommandCancelled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCommandCancelled != null ? retObjectCommandCancelled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,9 +182,13 @@ public class DataObjectEventArgs extends RoutedEventArgs  {
 
     public boolean getIsDragDrop() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsDragDrop = null;
         try {
-            return (boolean)classInstance.Get("IsDragDrop");
+            retObjectIsDragDrop = classInstance.Get("IsDragDrop");
+            return (boolean)retObjectIsDragDrop;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsDragDrop != null ? retObjectIsDragDrop.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

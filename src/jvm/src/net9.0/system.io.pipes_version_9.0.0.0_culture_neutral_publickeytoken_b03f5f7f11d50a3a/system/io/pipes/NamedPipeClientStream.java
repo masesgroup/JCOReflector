@@ -245,10 +245,14 @@ public class NamedPipeClientStream extends PipeStream  {
     
     public Task ConnectAsync() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException, system.OperationCanceledException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OutOfMemoryException, system.threading.SynchronizationLockException, system.security.SecurityException, system.AccessViolationException, system.UnauthorizedAccessException, system.TimeoutException, system.NotSupportedException, system.diagnostics.tracing.EventSourceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConnectAsync = null;
         try {
-            JCObject objConnectAsync = (JCObject)classInstance.Invoke("ConnectAsync");
+            retObjectConnectAsync = classInstance.Invoke("ConnectAsync");
+            JCObject objConnectAsync = (JCObject)retObjectConnectAsync;
             return new Task(objConnectAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConnectAsync != null ? retObjectConnectAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -256,10 +260,14 @@ public class NamedPipeClientStream extends PipeStream  {
 
     public Task ConnectAsync(int timeout, CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.OperationCanceledException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OutOfMemoryException, system.threading.SynchronizationLockException, system.security.SecurityException, system.AccessViolationException, system.UnauthorizedAccessException, system.TimeoutException, system.diagnostics.tracing.EventSourceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConnectAsync = null;
         try {
-            JCObject objConnectAsync = (JCObject)classInstance.Invoke("ConnectAsync", timeout, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            retObjectConnectAsync = classInstance.Invoke("ConnectAsync", timeout, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objConnectAsync = (JCObject)retObjectConnectAsync;
             return new Task(objConnectAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConnectAsync != null ? retObjectConnectAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -267,10 +275,14 @@ public class NamedPipeClientStream extends PipeStream  {
 
     public Task ConnectAsync(int timeout) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException, system.OperationCanceledException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OutOfMemoryException, system.threading.SynchronizationLockException, system.security.SecurityException, system.AccessViolationException, system.UnauthorizedAccessException, system.TimeoutException, system.NotSupportedException, system.diagnostics.tracing.EventSourceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConnectAsync = null;
         try {
-            JCObject objConnectAsync = (JCObject)classInstance.Invoke("ConnectAsync", timeout);
+            retObjectConnectAsync = classInstance.Invoke("ConnectAsync", timeout);
+            JCObject objConnectAsync = (JCObject)retObjectConnectAsync;
             return new Task(objConnectAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConnectAsync != null ? retObjectConnectAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -278,10 +290,14 @@ public class NamedPipeClientStream extends PipeStream  {
 
     public Task ConnectAsync(CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException, system.OperationCanceledException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OutOfMemoryException, system.threading.SynchronizationLockException, system.security.SecurityException, system.AccessViolationException, system.UnauthorizedAccessException, system.TimeoutException, system.NotSupportedException, system.diagnostics.tracing.EventSourceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConnectAsync = null;
         try {
-            JCObject objConnectAsync = (JCObject)classInstance.Invoke("ConnectAsync", cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            retObjectConnectAsync = classInstance.Invoke("ConnectAsync", cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objConnectAsync = (JCObject)retObjectConnectAsync;
             return new Task(objConnectAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConnectAsync != null ? retObjectConnectAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -289,10 +305,14 @@ public class NamedPipeClientStream extends PipeStream  {
 
     public Task ConnectAsync(TimeSpan timeout, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.OperationCanceledException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OutOfMemoryException, system.threading.SynchronizationLockException, system.security.SecurityException, system.AccessViolationException, system.UnauthorizedAccessException, system.TimeoutException, system.diagnostics.tracing.EventSourceException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConnectAsync = null;
         try {
-            JCObject objConnectAsync = (JCObject)classInstance.Invoke("ConnectAsync", timeout == null ? null : timeout.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            retObjectConnectAsync = classInstance.Invoke("ConnectAsync", timeout == null ? null : timeout.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objConnectAsync = (JCObject)retObjectConnectAsync;
             return new Task(objConnectAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConnectAsync != null ? retObjectConnectAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -300,7 +320,7 @@ public class NamedPipeClientStream extends PipeStream  {
 
     public void Connect() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException, system.OperationCanceledException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OutOfMemoryException, system.threading.SynchronizationLockException, system.security.SecurityException, system.AccessViolationException, system.UnauthorizedAccessException, system.TimeoutException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Connect");
         } catch (JCNativeException jcne) {
@@ -310,7 +330,7 @@ public class NamedPipeClientStream extends PipeStream  {
 
     public void Connect(int timeout) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.OperationCanceledException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OutOfMemoryException, system.security.accesscontrol.PrivilegeNotHeldException, system.UnauthorizedAccessException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.security.SecurityException, system.AccessViolationException, system.TimeoutException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Connect", timeout);
         } catch (JCNativeException jcne) {
@@ -320,7 +340,7 @@ public class NamedPipeClientStream extends PipeStream  {
 
     public void Connect(TimeSpan timeout) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.OperationCanceledException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OutOfMemoryException, system.ArgumentNullException, system.threading.SynchronizationLockException, system.security.SecurityException, system.AccessViolationException, system.UnauthorizedAccessException, system.TimeoutException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Connect", timeout == null ? null : timeout.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -334,9 +354,20 @@ public class NamedPipeClientStream extends PipeStream  {
     
     public int getNumberOfServerInstances() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNumberOfServerInstances = null;
         try {
-            return (int)classInstance.Get("NumberOfServerInstances");
+            retObjectNumberOfServerInstances = classInstance.Get("NumberOfServerInstances");
+            return (int)retObjectNumberOfServerInstances;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectNumberOfServerInstances_ToString = retObjectNumberOfServerInstances == null ? "null" : retObjectNumberOfServerInstances.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectNumberOfServerInstancesNumber = (java.lang.Number)retObjectNumberOfServerInstances;
+                return retObjectNumberOfServerInstancesNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectNumberOfServerInstances != null ? retObjectNumberOfServerInstances.getClass() : "null", retObjectNumberOfServerInstances_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -166,10 +166,14 @@ public class ColorMap extends NetObject  {
     
     public Color getNewColor() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNewColor = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("NewColor");
+            retObjectNewColor = classInstance.Get("NewColor");
+            JCObject val = (JCObject)retObjectNewColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNewColor != null ? retObjectNewColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,7 +181,7 @@ public class ColorMap extends NetObject  {
 
     public void setNewColor(Color NewColor) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("NewColor", NewColor == null ? null : NewColor.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -187,10 +191,14 @@ public class ColorMap extends NetObject  {
 
     public Color getOldColor() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOldColor = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("OldColor");
+            retObjectOldColor = classInstance.Get("OldColor");
+            JCObject val = (JCObject)retObjectOldColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOldColor != null ? retObjectOldColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,7 +206,7 @@ public class ColorMap extends NetObject  {
 
     public void setOldColor(Color OldColor) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("OldColor", OldColor == null ? null : OldColor.getJCOInstance());
         } catch (JCNativeException jcne) {

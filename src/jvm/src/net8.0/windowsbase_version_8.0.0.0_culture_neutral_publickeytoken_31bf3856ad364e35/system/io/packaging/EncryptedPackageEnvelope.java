@@ -165,9 +165,13 @@ public class EncryptedPackageEnvelope extends NetObject implements AutoCloseable
     
     public static boolean IsEncryptedPackageEnvelope(Stream stream) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.IndexOutOfRangeException, system.io.FileFormatException, system.FormatException, system.SystemException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsEncryptedPackageEnvelope = null;
         try {
-            return (boolean)classType.Invoke("IsEncryptedPackageEnvelope", stream == null ? null : stream.getJCOInstance());
+            retObjectIsEncryptedPackageEnvelope = classType.Invoke("IsEncryptedPackageEnvelope", stream == null ? null : stream.getJCOInstance());
+            return (boolean)retObjectIsEncryptedPackageEnvelope;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsEncryptedPackageEnvelope != null ? retObjectIsEncryptedPackageEnvelope.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -175,9 +179,13 @@ public class EncryptedPackageEnvelope extends NetObject implements AutoCloseable
 
     public static boolean IsEncryptedPackageEnvelope(java.lang.String fileName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.io.IOException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.FileNotFoundException, system.io.FileFormatException, system.FormatException, system.SystemException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsEncryptedPackageEnvelope = null;
         try {
-            return (boolean)classType.Invoke("IsEncryptedPackageEnvelope", fileName);
+            retObjectIsEncryptedPackageEnvelope = classType.Invoke("IsEncryptedPackageEnvelope", fileName);
+            return (boolean)retObjectIsEncryptedPackageEnvelope;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsEncryptedPackageEnvelope != null ? retObjectIsEncryptedPackageEnvelope.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -185,10 +193,14 @@ public class EncryptedPackageEnvelope extends NetObject implements AutoCloseable
 
     public static EncryptedPackageEnvelope Create(Stream envelopeStream, PublishLicense publishLicense, CryptoProvider cryptoProvider) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.io.FileFormatException, system.io.InvalidDataException, system.xml.XmlException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
         try {
-            JCObject objCreate = (JCObject)classType.Invoke("Create", envelopeStream == null ? null : envelopeStream.getJCOInstance(), publishLicense == null ? null : publishLicense.getJCOInstance(), cryptoProvider == null ? null : cryptoProvider.getJCOInstance());
+            retObjectCreate = classType.Invoke("Create", envelopeStream == null ? null : envelopeStream.getJCOInstance(), publishLicense == null ? null : publishLicense.getJCOInstance(), cryptoProvider == null ? null : cryptoProvider.getJCOInstance());
+            JCObject objCreate = (JCObject)retObjectCreate;
             return new EncryptedPackageEnvelope(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,10 +208,14 @@ public class EncryptedPackageEnvelope extends NetObject implements AutoCloseable
 
     public static EncryptedPackageEnvelope Create(java.lang.String envelopeFileName, PublishLicense publishLicense, CryptoProvider cryptoProvider) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.io.IOException, system.security.SecurityException, system.io.FileNotFoundException, system.io.FileFormatException, system.io.InvalidDataException, system.xml.XmlException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
         try {
-            JCObject objCreate = (JCObject)classType.Invoke("Create", envelopeFileName, publishLicense == null ? null : publishLicense.getJCOInstance(), cryptoProvider == null ? null : cryptoProvider.getJCOInstance());
+            retObjectCreate = classType.Invoke("Create", envelopeFileName, publishLicense == null ? null : publishLicense.getJCOInstance(), cryptoProvider == null ? null : cryptoProvider.getJCOInstance());
+            JCObject objCreate = (JCObject)retObjectCreate;
             return new EncryptedPackageEnvelope(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -207,10 +223,14 @@ public class EncryptedPackageEnvelope extends NetObject implements AutoCloseable
 
     public static EncryptedPackageEnvelope CreateFromPackage(Stream envelopeStream, Stream packageStream, PublishLicense publishLicense, CryptoProvider cryptoProvider) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.io.FileFormatException, system.io.InvalidDataException, system.xml.XmlException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateFromPackage = null;
         try {
-            JCObject objCreateFromPackage = (JCObject)classType.Invoke("CreateFromPackage", envelopeStream == null ? null : envelopeStream.getJCOInstance(), packageStream == null ? null : packageStream.getJCOInstance(), publishLicense == null ? null : publishLicense.getJCOInstance(), cryptoProvider == null ? null : cryptoProvider.getJCOInstance());
+            retObjectCreateFromPackage = classType.Invoke("CreateFromPackage", envelopeStream == null ? null : envelopeStream.getJCOInstance(), packageStream == null ? null : packageStream.getJCOInstance(), publishLicense == null ? null : publishLicense.getJCOInstance(), cryptoProvider == null ? null : cryptoProvider.getJCOInstance());
+            JCObject objCreateFromPackage = (JCObject)retObjectCreateFromPackage;
             return new EncryptedPackageEnvelope(objCreateFromPackage);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateFromPackage != null ? retObjectCreateFromPackage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -218,10 +238,14 @@ public class EncryptedPackageEnvelope extends NetObject implements AutoCloseable
 
     public static EncryptedPackageEnvelope CreateFromPackage(java.lang.String envelopeFileName, Stream packageStream, PublishLicense publishLicense, CryptoProvider cryptoProvider) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.io.IOException, system.security.SecurityException, system.io.FileNotFoundException, system.io.FileFormatException, system.io.InvalidDataException, system.xml.XmlException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateFromPackage = null;
         try {
-            JCObject objCreateFromPackage = (JCObject)classType.Invoke("CreateFromPackage", envelopeFileName, packageStream == null ? null : packageStream.getJCOInstance(), publishLicense == null ? null : publishLicense.getJCOInstance(), cryptoProvider == null ? null : cryptoProvider.getJCOInstance());
+            retObjectCreateFromPackage = classType.Invoke("CreateFromPackage", envelopeFileName, packageStream == null ? null : packageStream.getJCOInstance(), publishLicense == null ? null : publishLicense.getJCOInstance(), cryptoProvider == null ? null : cryptoProvider.getJCOInstance());
+            JCObject objCreateFromPackage = (JCObject)retObjectCreateFromPackage;
             return new EncryptedPackageEnvelope(objCreateFromPackage);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateFromPackage != null ? retObjectCreateFromPackage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -229,10 +253,14 @@ public class EncryptedPackageEnvelope extends NetObject implements AutoCloseable
 
     public static EncryptedPackageEnvelope Open(Stream envelopeStream) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.io.FileFormatException, system.io.DirectoryNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOpen = null;
         try {
-            JCObject objOpen = (JCObject)classType.Invoke("Open", envelopeStream == null ? null : envelopeStream.getJCOInstance());
+            retObjectOpen = classType.Invoke("Open", envelopeStream == null ? null : envelopeStream.getJCOInstance());
+            JCObject objOpen = (JCObject)retObjectOpen;
             return new EncryptedPackageEnvelope(objOpen);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOpen != null ? retObjectOpen.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -240,10 +268,14 @@ public class EncryptedPackageEnvelope extends NetObject implements AutoCloseable
 
     public static EncryptedPackageEnvelope Open(java.lang.String envelopeFileName, FileAccess access, FileShare sharing) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.io.IOException, system.security.SecurityException, system.io.FileNotFoundException, system.io.FileFormatException, system.io.DirectoryNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOpen = null;
         try {
-            JCObject objOpen = (JCObject)classType.Invoke("Open", envelopeFileName, access == null ? null : access.getJCOInstance(), sharing == null ? null : sharing.getJCOInstance());
+            retObjectOpen = classType.Invoke("Open", envelopeFileName, access == null ? null : access.getJCOInstance(), sharing == null ? null : sharing.getJCOInstance());
+            JCObject objOpen = (JCObject)retObjectOpen;
             return new EncryptedPackageEnvelope(objOpen);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOpen != null ? retObjectOpen.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -251,10 +283,14 @@ public class EncryptedPackageEnvelope extends NetObject implements AutoCloseable
 
     public static EncryptedPackageEnvelope Open(java.lang.String envelopeFileName, FileAccess access) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.io.IOException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.io.FileFormatException, system.globalization.CultureNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOpen = null;
         try {
-            JCObject objOpen = (JCObject)classType.Invoke("Open", envelopeFileName, access == null ? null : access.getJCOInstance());
+            retObjectOpen = classType.Invoke("Open", envelopeFileName, access == null ? null : access.getJCOInstance());
+            JCObject objOpen = (JCObject)retObjectOpen;
             return new EncryptedPackageEnvelope(objOpen);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOpen != null ? retObjectOpen.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -262,10 +298,14 @@ public class EncryptedPackageEnvelope extends NetObject implements AutoCloseable
 
     public static EncryptedPackageEnvelope Open(java.lang.String envelopeFileName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.io.IOException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.io.FileFormatException, system.globalization.CultureNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOpen = null;
         try {
-            JCObject objOpen = (JCObject)classType.Invoke("Open", envelopeFileName);
+            retObjectOpen = classType.Invoke("Open", envelopeFileName);
+            JCObject objOpen = (JCObject)retObjectOpen;
             return new EncryptedPackageEnvelope(objOpen);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOpen != null ? retObjectOpen.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -273,10 +313,14 @@ public class EncryptedPackageEnvelope extends NetObject implements AutoCloseable
 
     public Package GetPackage() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OutOfMemoryException, system.security.SecurityException, system.ArrayTypeMismatchException, system.io.IOException, system.UnauthorizedAccessException, system.io.FileFormatException, system.FormatException, system.NotSupportedException, system.io.InvalidDataException, system.xml.XmlException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPackage = null;
         try {
-            JCObject objGetPackage = (JCObject)classInstance.Invoke("GetPackage");
+            retObjectGetPackage = classInstance.Invoke("GetPackage");
+            JCObject objGetPackage = (JCObject)retObjectGetPackage;
             return new Package(objGetPackage);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetPackage != null ? retObjectGetPackage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -284,7 +328,7 @@ public class EncryptedPackageEnvelope extends NetObject implements AutoCloseable
 
     public void Close() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentException, system.io.FileFormatException, system.InvalidOperationException, system.io.DirectoryNotFoundException, system.io.IOException, system.NotSupportedException, system.SystemException, system.UnauthorizedAccessException, system.ArgumentOutOfRangeException, system.RankException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Close");
         } catch (JCNativeException jcne) {
@@ -294,7 +338,7 @@ public class EncryptedPackageEnvelope extends NetObject implements AutoCloseable
 
     public void Dispose() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.io.FileFormatException, system.InvalidOperationException, system.io.DirectoryNotFoundException, system.io.IOException, system.NotSupportedException, system.SystemException, system.UnauthorizedAccessException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
@@ -304,7 +348,7 @@ public class EncryptedPackageEnvelope extends NetObject implements AutoCloseable
 
     public void Flush() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.io.IOException, system.io.FileFormatException, system.FormatException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.xml.XmlException, system.NotSupportedException, system.OverflowException, system.collections.generic.KeyNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.SecurityException, system.UnauthorizedAccessException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Flush");
         } catch (JCNativeException jcne) {
@@ -315,7 +359,7 @@ public class EncryptedPackageEnvelope extends NetObject implements AutoCloseable
     public void close() throws Exception {
         try {
             if (classInstance == null)
-                throw new UnsupportedOperationException("classInstance is null.");
+                throw new java.lang.UnsupportedOperationException("classInstance is null.");
             try {
                 classInstance.Invoke("Dispose");
             }
@@ -331,10 +375,14 @@ public class EncryptedPackageEnvelope extends NetObject implements AutoCloseable
     
     public FileAccess getFileOpenAccess() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFileOpenAccess = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("FileOpenAccess");
+            retObjectFileOpenAccess = classInstance.Get("FileOpenAccess");
+            JCObject val = (JCObject)retObjectFileOpenAccess;
             return new FileAccess(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFileOpenAccess != null ? retObjectFileOpenAccess.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -342,10 +390,14 @@ public class EncryptedPackageEnvelope extends NetObject implements AutoCloseable
 
     public PackageProperties getPackageProperties() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPackageProperties = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PackageProperties");
+            retObjectPackageProperties = classInstance.Get("PackageProperties");
+            JCObject val = (JCObject)retObjectPackageProperties;
             return new PackageProperties(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPackageProperties != null ? retObjectPackageProperties.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -353,10 +405,14 @@ public class EncryptedPackageEnvelope extends NetObject implements AutoCloseable
 
     public RightsManagementInformation getRightsManagementInformation() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRightsManagementInformation = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RightsManagementInformation");
+            retObjectRightsManagementInformation = classInstance.Get("RightsManagementInformation");
+            JCObject val = (JCObject)retObjectRightsManagementInformation;
             return new RightsManagementInformation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRightsManagementInformation != null ? retObjectRightsManagementInformation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -364,10 +420,14 @@ public class EncryptedPackageEnvelope extends NetObject implements AutoCloseable
 
     public StorageInfo getStorageInfo() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStorageInfo = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("StorageInfo");
+            retObjectStorageInfo = classInstance.Get("StorageInfo");
+            JCObject val = (JCObject)retObjectStorageInfo;
             return new StorageInfo(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStorageInfo != null ? retObjectStorageInfo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

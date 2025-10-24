@@ -157,10 +157,14 @@ public class ProjectionCamera extends Camera  {
     
     public ProjectionCamera CloneNewProjectionCamera() throws Throwable, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClone = null;
         try {
-            JCObject objClone = (JCObject)classInstance.Invoke("Clone");
+            retObjectClone = classInstance.Invoke("Clone");
+            JCObject objClone = (JCObject)retObjectClone;
             return new ProjectionCamera(objClone);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClone != null ? retObjectClone.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -168,10 +172,14 @@ public class ProjectionCamera extends Camera  {
 
     public ProjectionCamera CloneCurrentValueNewProjectionCamera() throws Throwable, system.InvalidOperationException, system.security.SecurityException, system.io.IOException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCloneCurrentValue = null;
         try {
-            JCObject objCloneCurrentValue = (JCObject)classInstance.Invoke("CloneCurrentValue");
+            retObjectCloneCurrentValue = classInstance.Invoke("CloneCurrentValue");
+            JCObject objCloneCurrentValue = (JCObject)retObjectCloneCurrentValue;
             return new ProjectionCamera(objCloneCurrentValue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCloneCurrentValue != null ? retObjectCloneCurrentValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,9 +191,20 @@ public class ProjectionCamera extends Camera  {
     
     public double getFarPlaneDistance() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFarPlaneDistance = null;
         try {
-            return (double)classInstance.Get("FarPlaneDistance");
+            retObjectFarPlaneDistance = classInstance.Get("FarPlaneDistance");
+            return (double)retObjectFarPlaneDistance;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectFarPlaneDistance_ToString = retObjectFarPlaneDistance == null ? "null" : retObjectFarPlaneDistance.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectFarPlaneDistanceNumber = (java.lang.Number)retObjectFarPlaneDistance;
+                return retObjectFarPlaneDistanceNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectFarPlaneDistance != null ? retObjectFarPlaneDistance.getClass() : "null", retObjectFarPlaneDistance_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,7 +212,7 @@ public class ProjectionCamera extends Camera  {
 
     public void setFarPlaneDistance(double FarPlaneDistance) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FarPlaneDistance", FarPlaneDistance);
         } catch (JCNativeException jcne) {
@@ -203,9 +222,20 @@ public class ProjectionCamera extends Camera  {
 
     public double getNearPlaneDistance() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNearPlaneDistance = null;
         try {
-            return (double)classInstance.Get("NearPlaneDistance");
+            retObjectNearPlaneDistance = classInstance.Get("NearPlaneDistance");
+            return (double)retObjectNearPlaneDistance;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectNearPlaneDistance_ToString = retObjectNearPlaneDistance == null ? "null" : retObjectNearPlaneDistance.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectNearPlaneDistanceNumber = (java.lang.Number)retObjectNearPlaneDistance;
+                return retObjectNearPlaneDistanceNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectNearPlaneDistance != null ? retObjectNearPlaneDistance.getClass() : "null", retObjectNearPlaneDistance_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,7 +243,7 @@ public class ProjectionCamera extends Camera  {
 
     public void setNearPlaneDistance(double NearPlaneDistance) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("NearPlaneDistance", NearPlaneDistance);
         } catch (JCNativeException jcne) {
@@ -223,10 +253,14 @@ public class ProjectionCamera extends Camera  {
 
     public Point3D getPosition() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPosition = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Position");
+            retObjectPosition = classInstance.Get("Position");
+            JCObject val = (JCObject)retObjectPosition;
             return new Point3D(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPosition != null ? retObjectPosition.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -234,7 +268,7 @@ public class ProjectionCamera extends Camera  {
 
     public void setPosition(Point3D Position) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Position", Position == null ? null : Position.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -244,10 +278,14 @@ public class ProjectionCamera extends Camera  {
 
     public Vector3D getLookDirection() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLookDirection = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("LookDirection");
+            retObjectLookDirection = classInstance.Get("LookDirection");
+            JCObject val = (JCObject)retObjectLookDirection;
             return new Vector3D(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLookDirection != null ? retObjectLookDirection.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -255,7 +293,7 @@ public class ProjectionCamera extends Camera  {
 
     public void setLookDirection(Vector3D LookDirection) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("LookDirection", LookDirection == null ? null : LookDirection.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -265,10 +303,14 @@ public class ProjectionCamera extends Camera  {
 
     public Vector3D getUpDirection() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUpDirection = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("UpDirection");
+            retObjectUpDirection = classInstance.Get("UpDirection");
+            JCObject val = (JCObject)retObjectUpDirection;
             return new Vector3D(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUpDirection != null ? retObjectUpDirection.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -276,7 +318,7 @@ public class ProjectionCamera extends Camera  {
 
     public void setUpDirection(Vector3D UpDirection) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UpDirection", UpDirection == null ? null : UpDirection.getJCOInstance());
         } catch (JCNativeException jcne) {

@@ -179,7 +179,7 @@ public class IndentedTextWriter extends TextWriter  {
     
     public void Close() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Close");
         } catch (JCNativeException jcne) {
@@ -189,7 +189,7 @@ public class IndentedTextWriter extends TextWriter  {
 
     public void Flush() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Flush");
         } catch (JCNativeException jcne) {
@@ -199,7 +199,7 @@ public class IndentedTextWriter extends TextWriter  {
 
     public void Write(boolean value) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Write", value);
         } catch (JCNativeException jcne) {
@@ -209,7 +209,7 @@ public class IndentedTextWriter extends TextWriter  {
 
     public void Write(char value) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Write", value);
         } catch (JCNativeException jcne) {
@@ -219,7 +219,7 @@ public class IndentedTextWriter extends TextWriter  {
 
     public void Write(char[] buffer) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Write", (java.lang.Object)buffer);
         } catch (JCNativeException jcne) {
@@ -229,7 +229,7 @@ public class IndentedTextWriter extends TextWriter  {
 
     public void Write(JCORefOut dupParam0) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Write", (java.lang.Object)dupParam0.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -239,7 +239,7 @@ public class IndentedTextWriter extends TextWriter  {
 
     public void Write(char[] buffer, int index, int count) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Write", buffer, index, count);
         } catch (JCNativeException jcne) {
@@ -249,7 +249,7 @@ public class IndentedTextWriter extends TextWriter  {
 
     public void Write(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Write", dupParam0.getJCRefOut(), dupParam1, dupParam2);
         } catch (JCNativeException jcne) {
@@ -259,7 +259,7 @@ public class IndentedTextWriter extends TextWriter  {
 
     public void Write(double value) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Write", value);
         } catch (JCNativeException jcne) {
@@ -269,7 +269,7 @@ public class IndentedTextWriter extends TextWriter  {
 
     public void Write(int value) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Write", value);
         } catch (JCNativeException jcne) {
@@ -279,7 +279,7 @@ public class IndentedTextWriter extends TextWriter  {
 
     public void Write(long value) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Write", value);
         } catch (JCNativeException jcne) {
@@ -289,7 +289,7 @@ public class IndentedTextWriter extends TextWriter  {
 
     public void Write(Single value) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Write", value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -299,7 +299,7 @@ public class IndentedTextWriter extends TextWriter  {
 
     public void Write(NetObject value) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Write", value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -309,7 +309,7 @@ public class IndentedTextWriter extends TextWriter  {
 
     public void Write(java.lang.String s) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Write", s);
         } catch (JCNativeException jcne) {
@@ -319,7 +319,7 @@ public class IndentedTextWriter extends TextWriter  {
 
     public void Write(java.lang.String format, NetObject arg0) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Write", format, arg0 == null ? null : arg0.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -329,7 +329,7 @@ public class IndentedTextWriter extends TextWriter  {
 
     public void Write(java.lang.String format, NetObject arg0, NetObject arg1) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Write", format, arg0 == null ? null : arg0.getJCOInstance(), arg1 == null ? null : arg1.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -339,7 +339,7 @@ public class IndentedTextWriter extends TextWriter  {
 
     public void Write(java.lang.String format, NetObject... arg) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Write", format, toObjectFromArray(arg));
         } catch (JCNativeException jcne) {
@@ -349,7 +349,7 @@ public class IndentedTextWriter extends TextWriter  {
 
     public void WriteLine() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteLine");
         } catch (JCNativeException jcne) {
@@ -359,7 +359,7 @@ public class IndentedTextWriter extends TextWriter  {
 
     public void WriteLine(boolean value) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteLine", value);
         } catch (JCNativeException jcne) {
@@ -369,7 +369,7 @@ public class IndentedTextWriter extends TextWriter  {
 
     public void WriteLine(char value) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteLine", value);
         } catch (JCNativeException jcne) {
@@ -379,7 +379,7 @@ public class IndentedTextWriter extends TextWriter  {
 
     public void WriteLine(char[] buffer) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteLine", (java.lang.Object)buffer);
         } catch (JCNativeException jcne) {
@@ -389,7 +389,7 @@ public class IndentedTextWriter extends TextWriter  {
 
     public void WriteLine(JCORefOut dupParam0) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteLine", (java.lang.Object)dupParam0.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -399,7 +399,7 @@ public class IndentedTextWriter extends TextWriter  {
 
     public void WriteLine(char[] buffer, int index, int count) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteLine", buffer, index, count);
         } catch (JCNativeException jcne) {
@@ -409,7 +409,7 @@ public class IndentedTextWriter extends TextWriter  {
 
     public void WriteLine(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteLine", dupParam0.getJCRefOut(), dupParam1, dupParam2);
         } catch (JCNativeException jcne) {
@@ -419,7 +419,7 @@ public class IndentedTextWriter extends TextWriter  {
 
     public void WriteLine(double value) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteLine", value);
         } catch (JCNativeException jcne) {
@@ -429,7 +429,7 @@ public class IndentedTextWriter extends TextWriter  {
 
     public void WriteLine(int value) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteLine", value);
         } catch (JCNativeException jcne) {
@@ -439,7 +439,7 @@ public class IndentedTextWriter extends TextWriter  {
 
     public void WriteLine(long value) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteLine", value);
         } catch (JCNativeException jcne) {
@@ -449,7 +449,7 @@ public class IndentedTextWriter extends TextWriter  {
 
     public void WriteLine(Single value) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteLine", value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -459,7 +459,7 @@ public class IndentedTextWriter extends TextWriter  {
 
     public void WriteLine(NetObject value) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteLine", value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -469,7 +469,7 @@ public class IndentedTextWriter extends TextWriter  {
 
     public void WriteLine(java.lang.String s) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteLine", s);
         } catch (JCNativeException jcne) {
@@ -479,7 +479,7 @@ public class IndentedTextWriter extends TextWriter  {
 
     public void WriteLine(java.lang.String format, NetObject arg0) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteLine", format, arg0 == null ? null : arg0.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -489,7 +489,7 @@ public class IndentedTextWriter extends TextWriter  {
 
     public void WriteLine(java.lang.String format, NetObject arg0, NetObject arg1) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteLine", format, arg0 == null ? null : arg0.getJCOInstance(), arg1 == null ? null : arg1.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -499,7 +499,7 @@ public class IndentedTextWriter extends TextWriter  {
 
     public void WriteLine(java.lang.String format, NetObject... arg) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteLine", format, toObjectFromArray(arg));
         } catch (JCNativeException jcne) {
@@ -509,7 +509,7 @@ public class IndentedTextWriter extends TextWriter  {
 
     public void WriteLine(UInt32 value) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteLine", value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -519,7 +519,7 @@ public class IndentedTextWriter extends TextWriter  {
 
     public void WriteLineNoTabs(java.lang.String s) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteLineNoTabs", s);
         } catch (JCNativeException jcne) {
@@ -533,9 +533,20 @@ public class IndentedTextWriter extends TextWriter  {
     
     public int getIndent() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIndent = null;
         try {
-            return (int)classInstance.Get("Indent");
+            retObjectIndent = classInstance.Get("Indent");
+            return (int)retObjectIndent;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectIndent_ToString = retObjectIndent == null ? "null" : retObjectIndent.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectIndentNumber = (java.lang.Number)retObjectIndent;
+                return retObjectIndentNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectIndent != null ? retObjectIndent.getClass() : "null", retObjectIndent_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -543,7 +554,7 @@ public class IndentedTextWriter extends TextWriter  {
 
     public void setIndent(int Indent) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Indent", Indent);
         } catch (JCNativeException jcne) {
@@ -553,10 +564,14 @@ public class IndentedTextWriter extends TextWriter  {
 
     public TextWriter getInnerWriter() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInnerWriter = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("InnerWriter");
+            retObjectInnerWriter = classInstance.Get("InnerWriter");
+            JCObject val = (JCObject)retObjectInnerWriter;
             return new TextWriter(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInnerWriter != null ? retObjectInnerWriter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -157,7 +157,7 @@ public class SwitchInstructionEncoder extends ValueType  {
     
     public void Branch(LabelHandle label) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Branch", label == null ? null : label.getJCOInstance());
         } catch (JCNativeException jcne) {

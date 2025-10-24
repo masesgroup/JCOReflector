@@ -177,9 +177,20 @@ public class OracleBoolean extends ValueType  {
     
     public int CompareTo(NetObject obj) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCompareTo = null;
         try {
-            return (int)classInstance.Invoke("CompareTo", obj == null ? null : obj.getJCOInstance());
+            retObjectCompareTo = classInstance.Invoke("CompareTo", obj == null ? null : obj.getJCOInstance());
+            return (int)retObjectCompareTo;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCompareTo_ToString = retObjectCompareTo == null ? "null" : retObjectCompareTo.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectCompareToNumber = (java.lang.Number)retObjectCompareTo;
+                return retObjectCompareToNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCompareTo != null ? retObjectCompareTo.getClass() : "null", retObjectCompareTo_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,10 +198,14 @@ public class OracleBoolean extends ValueType  {
 
     public static OracleBoolean And(OracleBoolean x, OracleBoolean y) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAnd = null;
         try {
-            JCObject objAnd = (JCObject)classType.Invoke("And", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            retObjectAnd = classType.Invoke("And", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            JCObject objAnd = (JCObject)retObjectAnd;
             return new OracleBoolean(objAnd);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAnd != null ? retObjectAnd.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,10 +213,14 @@ public class OracleBoolean extends ValueType  {
 
     public static OracleBoolean Equals(OracleBoolean x, OracleBoolean y) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectEquals = null;
         try {
-            JCObject objEquals = (JCObject)classType.Invoke("Equals", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            retObjectEquals = classType.Invoke("Equals", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            JCObject objEquals = (JCObject)retObjectEquals;
             return new OracleBoolean(objEquals);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEquals != null ? retObjectEquals.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -209,10 +228,14 @@ public class OracleBoolean extends ValueType  {
 
     public static OracleBoolean NotEquals(OracleBoolean x, OracleBoolean y) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectNotEquals = null;
         try {
-            JCObject objNotEquals = (JCObject)classType.Invoke("NotEquals", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            retObjectNotEquals = classType.Invoke("NotEquals", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            JCObject objNotEquals = (JCObject)retObjectNotEquals;
             return new OracleBoolean(objNotEquals);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNotEquals != null ? retObjectNotEquals.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -220,10 +243,14 @@ public class OracleBoolean extends ValueType  {
 
     public static OracleBoolean OnesComplement(OracleBoolean x) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOnesComplement = null;
         try {
-            JCObject objOnesComplement = (JCObject)classType.Invoke("OnesComplement", x == null ? null : x.getJCOInstance());
+            retObjectOnesComplement = classType.Invoke("OnesComplement", x == null ? null : x.getJCOInstance());
+            JCObject objOnesComplement = (JCObject)retObjectOnesComplement;
             return new OracleBoolean(objOnesComplement);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOnesComplement != null ? retObjectOnesComplement.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -231,10 +258,14 @@ public class OracleBoolean extends ValueType  {
 
     public static OracleBoolean Or(OracleBoolean x, OracleBoolean y) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOr = null;
         try {
-            JCObject objOr = (JCObject)classType.Invoke("Or", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            retObjectOr = classType.Invoke("Or", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            JCObject objOr = (JCObject)retObjectOr;
             return new OracleBoolean(objOr);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOr != null ? retObjectOr.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -242,10 +273,14 @@ public class OracleBoolean extends ValueType  {
 
     public static OracleBoolean Parse(java.lang.String s) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.OverflowException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectParse = null;
         try {
-            JCObject objParse = (JCObject)classType.Invoke("Parse", s);
+            retObjectParse = classType.Invoke("Parse", s);
+            JCObject objParse = (JCObject)retObjectParse;
             return new OracleBoolean(objParse);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParse != null ? retObjectParse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -253,10 +288,14 @@ public class OracleBoolean extends ValueType  {
 
     public static OracleBoolean Xor(OracleBoolean x, OracleBoolean y) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectXor = null;
         try {
-            JCObject objXor = (JCObject)classType.Invoke("Xor", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            retObjectXor = classType.Invoke("Xor", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            JCObject objXor = (JCObject)retObjectXor;
             return new OracleBoolean(objXor);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectXor != null ? retObjectXor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -268,9 +307,13 @@ public class OracleBoolean extends ValueType  {
     
     public boolean getIsFalse() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsFalse = null;
         try {
-            return (boolean)classInstance.Get("IsFalse");
+            retObjectIsFalse = classInstance.Get("IsFalse");
+            return (boolean)retObjectIsFalse;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsFalse != null ? retObjectIsFalse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -278,9 +321,13 @@ public class OracleBoolean extends ValueType  {
 
     public boolean getIsNull() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsNull = null;
         try {
-            return (boolean)classInstance.Get("IsNull");
+            retObjectIsNull = classInstance.Get("IsNull");
+            return (boolean)retObjectIsNull;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsNull != null ? retObjectIsNull.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -288,9 +335,13 @@ public class OracleBoolean extends ValueType  {
 
     public boolean getIsTrue() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsTrue = null;
         try {
-            return (boolean)classInstance.Get("IsTrue");
+            retObjectIsTrue = classInstance.Get("IsTrue");
+            return (boolean)retObjectIsTrue;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsTrue != null ? retObjectIsTrue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -298,9 +349,13 @@ public class OracleBoolean extends ValueType  {
 
     public boolean getValue() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValue = null;
         try {
-            return (boolean)classInstance.Get("Value");
+            retObjectValue = classInstance.Get("Value");
+            return (boolean)retObjectValue;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectValue != null ? retObjectValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

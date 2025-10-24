@@ -158,9 +158,13 @@ public class DataColumnCollection extends InternalDataCollectionBase  {
     
     public boolean CanRemove(DataColumn column) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException, system.ObjectDisposedException, system.threading.LockRecursionException, system.RankException, system.ArrayTypeMismatchException, system.threading.SynchronizationLockException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanRemove = null;
         try {
-            return (boolean)classInstance.Invoke("CanRemove", column == null ? null : column.getJCOInstance());
+            retObjectCanRemove = classInstance.Invoke("CanRemove", column == null ? null : column.getJCOInstance());
+            return (boolean)retObjectCanRemove;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCanRemove != null ? retObjectCanRemove.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -168,9 +172,13 @@ public class DataColumnCollection extends InternalDataCollectionBase  {
 
     public boolean Contains(java.lang.String name) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContains = null;
         try {
-            return (boolean)classInstance.Invoke("Contains", name);
+            retObjectContains = classInstance.Invoke("Contains", name);
+            return (boolean)retObjectContains;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectContains != null ? retObjectContains.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,9 +186,20 @@ public class DataColumnCollection extends InternalDataCollectionBase  {
 
     public int IndexOf(DataColumn column) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIndexOf = null;
         try {
-            return (int)classInstance.Invoke("IndexOf", column == null ? null : column.getJCOInstance());
+            retObjectIndexOf = classInstance.Invoke("IndexOf", column == null ? null : column.getJCOInstance());
+            return (int)retObjectIndexOf;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectIndexOf_ToString = retObjectIndexOf == null ? "null" : retObjectIndexOf.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectIndexOfNumber = (java.lang.Number)retObjectIndexOf;
+                return retObjectIndexOfNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectIndexOf != null ? retObjectIndexOf.getClass() : "null", retObjectIndexOf_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,9 +207,20 @@ public class DataColumnCollection extends InternalDataCollectionBase  {
 
     public int IndexOf(java.lang.String columnName) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIndexOf = null;
         try {
-            return (int)classInstance.Invoke("IndexOf", columnName);
+            retObjectIndexOf = classInstance.Invoke("IndexOf", columnName);
+            return (int)retObjectIndexOf;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectIndexOf_ToString = retObjectIndexOf == null ? "null" : retObjectIndexOf.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectIndexOfNumber = (java.lang.Number)retObjectIndexOf;
+                return retObjectIndexOfNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectIndexOf != null ? retObjectIndexOf.getClass() : "null", retObjectIndexOf_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,10 +228,14 @@ public class DataColumnCollection extends InternalDataCollectionBase  {
 
     public DataColumn Add() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.NotSupportedException, system.RankException, system.ArrayTypeMismatchException, system.OverflowException, system.InvalidCastException, system.threading.SynchronizationLockException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAdd = null;
         try {
-            JCObject objAdd = (JCObject)classInstance.Invoke("Add");
+            retObjectAdd = classInstance.Invoke("Add");
+            JCObject objAdd = (JCObject)retObjectAdd;
             return new DataColumn(objAdd);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAdd != null ? retObjectAdd.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -209,10 +243,14 @@ public class DataColumnCollection extends InternalDataCollectionBase  {
 
     public DataColumn Add(java.lang.String columnName, NetType type, java.lang.String expression) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.NotSupportedException, system.RankException, system.ArrayTypeMismatchException, system.OverflowException, system.InvalidCastException, system.threading.SynchronizationLockException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAdd = null;
         try {
-            JCObject objAdd = (JCObject)classInstance.Invoke("Add", columnName, type == null ? null : type.getJCOInstance(), expression);
+            retObjectAdd = classInstance.Invoke("Add", columnName, type == null ? null : type.getJCOInstance(), expression);
+            JCObject objAdd = (JCObject)retObjectAdd;
             return new DataColumn(objAdd);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAdd != null ? retObjectAdd.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -220,10 +258,14 @@ public class DataColumnCollection extends InternalDataCollectionBase  {
 
     public DataColumn Add(java.lang.String columnName, NetType type) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.NotSupportedException, system.RankException, system.ArrayTypeMismatchException, system.OverflowException, system.InvalidCastException, system.threading.SynchronizationLockException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAdd = null;
         try {
-            JCObject objAdd = (JCObject)classInstance.Invoke("Add", columnName, type == null ? null : type.getJCOInstance());
+            retObjectAdd = classInstance.Invoke("Add", columnName, type == null ? null : type.getJCOInstance());
+            JCObject objAdd = (JCObject)retObjectAdd;
             return new DataColumn(objAdd);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAdd != null ? retObjectAdd.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -231,10 +273,14 @@ public class DataColumnCollection extends InternalDataCollectionBase  {
 
     public DataColumn Add(java.lang.String columnName) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.NotSupportedException, system.RankException, system.ArrayTypeMismatchException, system.OverflowException, system.InvalidCastException, system.threading.SynchronizationLockException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAdd = null;
         try {
-            JCObject objAdd = (JCObject)classInstance.Invoke("Add", columnName);
+            retObjectAdd = classInstance.Invoke("Add", columnName);
+            JCObject objAdd = (JCObject)retObjectAdd;
             return new DataColumn(objAdd);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAdd != null ? retObjectAdd.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -242,7 +288,7 @@ public class DataColumnCollection extends InternalDataCollectionBase  {
 
     public void Add(DataColumn column) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.InvalidOperationException, system.collections.generic.KeyNotFoundException, system.ArrayTypeMismatchException, system.OverflowException, system.data.sqltypes.SqlNullValueException, system.InvalidCastException, system.threading.SynchronizationLockException, system.RankException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Add", column == null ? null : column.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -252,7 +298,7 @@ public class DataColumnCollection extends InternalDataCollectionBase  {
 
     public void AddRange(DataColumn[] columns) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.ArgumentOutOfRangeException, system.OverflowException, system.FormatException, system.InvalidCastException, system.RankException, system.ArrayTypeMismatchException, system.threading.SynchronizationLockException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddRange", (java.lang.Object)toObjectFromArray(columns));
         } catch (JCNativeException jcne) {
@@ -262,7 +308,7 @@ public class DataColumnCollection extends InternalDataCollectionBase  {
 
     public void Clear() throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.collections.generic.KeyNotFoundException, system.FormatException, system.OverflowException, system.data.sqltypes.SqlNullValueException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Clear");
         } catch (JCNativeException jcne) {
@@ -272,7 +318,7 @@ public class DataColumnCollection extends InternalDataCollectionBase  {
 
     public void CopyTo(DataColumn[] array, int index) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CopyTo", toObjectFromArray(array), index);
         } catch (JCNativeException jcne) {
@@ -282,7 +328,7 @@ public class DataColumnCollection extends InternalDataCollectionBase  {
 
     public void Remove(DataColumn column) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.threading.LockRecursionException, system.RankException, system.ArrayTypeMismatchException, system.threading.SynchronizationLockException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Remove", column == null ? null : column.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -292,7 +338,7 @@ public class DataColumnCollection extends InternalDataCollectionBase  {
 
     public void Remove(java.lang.String name) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.IndexOutOfRangeException, system.threading.LockRecursionException, system.RankException, system.ArrayTypeMismatchException, system.threading.SynchronizationLockException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Remove", name);
         } catch (JCNativeException jcne) {
@@ -302,7 +348,7 @@ public class DataColumnCollection extends InternalDataCollectionBase  {
 
     public void RemoveAt(int index) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RemoveAt", index);
         } catch (JCNativeException jcne) {
@@ -321,7 +367,7 @@ public class DataColumnCollection extends InternalDataCollectionBase  {
 
     public void addCollectionChanged(CollectionChangeEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("CollectionChanged", handler);
         } catch (JCNativeException jcne) {
@@ -331,7 +377,7 @@ public class DataColumnCollection extends InternalDataCollectionBase  {
 
     public void removeCollectionChanged(CollectionChangeEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("CollectionChanged", handler);
         } catch (JCNativeException jcne) {

@@ -182,7 +182,7 @@ public class DataList extends BaseDataList implements system.web.ui.INamingConta
      */
     @Deprecated 
     public Style GetItemStyle(ListItemType itemType, int repeatIndex) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIRepeatInfoUser to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIRepeatInfoUser to obtain the full interface.");
     }
 
     /**
@@ -191,7 +191,7 @@ public class DataList extends BaseDataList implements system.web.ui.INamingConta
      */
     @Deprecated 
     public void RenderItem(ListItemType itemType, int repeatIndex, RepeatInfo repeatInfo, HtmlTextWriter writer) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIRepeatInfoUser to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIRepeatInfoUser to obtain the full interface.");
     }
 
 
@@ -200,9 +200,13 @@ public class DataList extends BaseDataList implements system.web.ui.INamingConta
     
     public boolean getExtractTemplateRows() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExtractTemplateRows = null;
         try {
-            return (boolean)classInstance.Get("ExtractTemplateRows");
+            retObjectExtractTemplateRows = classInstance.Get("ExtractTemplateRows");
+            return (boolean)retObjectExtractTemplateRows;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectExtractTemplateRows != null ? retObjectExtractTemplateRows.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -210,7 +214,7 @@ public class DataList extends BaseDataList implements system.web.ui.INamingConta
 
     public void setExtractTemplateRows(boolean ExtractTemplateRows) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ExtractTemplateRows", ExtractTemplateRows);
         } catch (JCNativeException jcne) {
@@ -220,9 +224,13 @@ public class DataList extends BaseDataList implements system.web.ui.INamingConta
 
     public boolean getShowFooter() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShowFooter = null;
         try {
-            return (boolean)classInstance.Get("ShowFooter");
+            retObjectShowFooter = classInstance.Get("ShowFooter");
+            return (boolean)retObjectShowFooter;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectShowFooter != null ? retObjectShowFooter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -230,7 +238,7 @@ public class DataList extends BaseDataList implements system.web.ui.INamingConta
 
     public void setShowFooter(boolean ShowFooter) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ShowFooter", ShowFooter);
         } catch (JCNativeException jcne) {
@@ -240,9 +248,13 @@ public class DataList extends BaseDataList implements system.web.ui.INamingConta
 
     public boolean getShowHeader() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShowHeader = null;
         try {
-            return (boolean)classInstance.Get("ShowHeader");
+            retObjectShowHeader = classInstance.Get("ShowHeader");
+            return (boolean)retObjectShowHeader;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectShowHeader != null ? retObjectShowHeader.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -250,7 +262,7 @@ public class DataList extends BaseDataList implements system.web.ui.INamingConta
 
     public void setShowHeader(boolean ShowHeader) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ShowHeader", ShowHeader);
         } catch (JCNativeException jcne) {
@@ -260,9 +272,20 @@ public class DataList extends BaseDataList implements system.web.ui.INamingConta
 
     public int getEditItemIndex() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEditItemIndex = null;
         try {
-            return (int)classInstance.Get("EditItemIndex");
+            retObjectEditItemIndex = classInstance.Get("EditItemIndex");
+            return (int)retObjectEditItemIndex;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectEditItemIndex_ToString = retObjectEditItemIndex == null ? "null" : retObjectEditItemIndex.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectEditItemIndexNumber = (java.lang.Number)retObjectEditItemIndex;
+                return retObjectEditItemIndexNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectEditItemIndex != null ? retObjectEditItemIndex.getClass() : "null", retObjectEditItemIndex_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -270,7 +293,7 @@ public class DataList extends BaseDataList implements system.web.ui.INamingConta
 
     public void setEditItemIndex(int EditItemIndex) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EditItemIndex", EditItemIndex);
         } catch (JCNativeException jcne) {
@@ -280,9 +303,20 @@ public class DataList extends BaseDataList implements system.web.ui.INamingConta
 
     public int getRepeatColumns() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRepeatColumns = null;
         try {
-            return (int)classInstance.Get("RepeatColumns");
+            retObjectRepeatColumns = classInstance.Get("RepeatColumns");
+            return (int)retObjectRepeatColumns;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectRepeatColumns_ToString = retObjectRepeatColumns == null ? "null" : retObjectRepeatColumns.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectRepeatColumnsNumber = (java.lang.Number)retObjectRepeatColumns;
+                return retObjectRepeatColumnsNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectRepeatColumns != null ? retObjectRepeatColumns.getClass() : "null", retObjectRepeatColumns_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -290,7 +324,7 @@ public class DataList extends BaseDataList implements system.web.ui.INamingConta
 
     public void setRepeatColumns(int RepeatColumns) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RepeatColumns", RepeatColumns);
         } catch (JCNativeException jcne) {
@@ -300,9 +334,20 @@ public class DataList extends BaseDataList implements system.web.ui.INamingConta
 
     public int getSelectedIndex() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectedIndex = null;
         try {
-            return (int)classInstance.Get("SelectedIndex");
+            retObjectSelectedIndex = classInstance.Get("SelectedIndex");
+            return (int)retObjectSelectedIndex;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSelectedIndex_ToString = retObjectSelectedIndex == null ? "null" : retObjectSelectedIndex.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectSelectedIndexNumber = (java.lang.Number)retObjectSelectedIndex;
+                return retObjectSelectedIndexNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectSelectedIndex != null ? retObjectSelectedIndex.getClass() : "null", retObjectSelectedIndex_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -310,7 +355,7 @@ public class DataList extends BaseDataList implements system.web.ui.INamingConta
 
     public void setSelectedIndex(int SelectedIndex) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SelectedIndex", SelectedIndex);
         } catch (JCNativeException jcne) {
@@ -320,10 +365,14 @@ public class DataList extends BaseDataList implements system.web.ui.INamingConta
 
     public NetObject getSelectedValue() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectedValue = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SelectedValue");
+            retObjectSelectedValue = classInstance.Get("SelectedValue");
+            JCObject val = (JCObject)retObjectSelectedValue;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelectedValue != null ? retObjectSelectedValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -331,10 +380,14 @@ public class DataList extends BaseDataList implements system.web.ui.INamingConta
 
     public ITemplate getAlternatingItemTemplate() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAlternatingItemTemplate = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AlternatingItemTemplate");
+            retObjectAlternatingItemTemplate = classInstance.Get("AlternatingItemTemplate");
+            JCObject val = (JCObject)retObjectAlternatingItemTemplate;
             return new ITemplateImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAlternatingItemTemplate != null ? retObjectAlternatingItemTemplate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -342,7 +395,7 @@ public class DataList extends BaseDataList implements system.web.ui.INamingConta
 
     public void setAlternatingItemTemplate(ITemplate AlternatingItemTemplate) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AlternatingItemTemplate", AlternatingItemTemplate == null ? null : AlternatingItemTemplate.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -352,10 +405,14 @@ public class DataList extends BaseDataList implements system.web.ui.INamingConta
 
     public ITemplate getEditItemTemplate() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEditItemTemplate = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("EditItemTemplate");
+            retObjectEditItemTemplate = classInstance.Get("EditItemTemplate");
+            JCObject val = (JCObject)retObjectEditItemTemplate;
             return new ITemplateImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEditItemTemplate != null ? retObjectEditItemTemplate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -363,7 +420,7 @@ public class DataList extends BaseDataList implements system.web.ui.INamingConta
 
     public void setEditItemTemplate(ITemplate EditItemTemplate) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EditItemTemplate", EditItemTemplate == null ? null : EditItemTemplate.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -373,10 +430,14 @@ public class DataList extends BaseDataList implements system.web.ui.INamingConta
 
     public ITemplate getFooterTemplate() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFooterTemplate = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("FooterTemplate");
+            retObjectFooterTemplate = classInstance.Get("FooterTemplate");
+            JCObject val = (JCObject)retObjectFooterTemplate;
             return new ITemplateImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFooterTemplate != null ? retObjectFooterTemplate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -384,7 +445,7 @@ public class DataList extends BaseDataList implements system.web.ui.INamingConta
 
     public void setFooterTemplate(ITemplate FooterTemplate) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FooterTemplate", FooterTemplate == null ? null : FooterTemplate.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -394,10 +455,14 @@ public class DataList extends BaseDataList implements system.web.ui.INamingConta
 
     public ITemplate getHeaderTemplate() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHeaderTemplate = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("HeaderTemplate");
+            retObjectHeaderTemplate = classInstance.Get("HeaderTemplate");
+            JCObject val = (JCObject)retObjectHeaderTemplate;
             return new ITemplateImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHeaderTemplate != null ? retObjectHeaderTemplate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -405,7 +470,7 @@ public class DataList extends BaseDataList implements system.web.ui.INamingConta
 
     public void setHeaderTemplate(ITemplate HeaderTemplate) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("HeaderTemplate", HeaderTemplate == null ? null : HeaderTemplate.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -415,10 +480,14 @@ public class DataList extends BaseDataList implements system.web.ui.INamingConta
 
     public ITemplate getItemTemplate() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectItemTemplate = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ItemTemplate");
+            retObjectItemTemplate = classInstance.Get("ItemTemplate");
+            JCObject val = (JCObject)retObjectItemTemplate;
             return new ITemplateImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectItemTemplate != null ? retObjectItemTemplate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -426,7 +495,7 @@ public class DataList extends BaseDataList implements system.web.ui.INamingConta
 
     public void setItemTemplate(ITemplate ItemTemplate) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ItemTemplate", ItemTemplate == null ? null : ItemTemplate.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -436,10 +505,14 @@ public class DataList extends BaseDataList implements system.web.ui.INamingConta
 
     public ITemplate getSelectedItemTemplate() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectedItemTemplate = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SelectedItemTemplate");
+            retObjectSelectedItemTemplate = classInstance.Get("SelectedItemTemplate");
+            JCObject val = (JCObject)retObjectSelectedItemTemplate;
             return new ITemplateImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelectedItemTemplate != null ? retObjectSelectedItemTemplate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -447,7 +520,7 @@ public class DataList extends BaseDataList implements system.web.ui.INamingConta
 
     public void setSelectedItemTemplate(ITemplate SelectedItemTemplate) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SelectedItemTemplate", SelectedItemTemplate == null ? null : SelectedItemTemplate.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -457,10 +530,14 @@ public class DataList extends BaseDataList implements system.web.ui.INamingConta
 
     public ITemplate getSeparatorTemplate() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSeparatorTemplate = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SeparatorTemplate");
+            retObjectSeparatorTemplate = classInstance.Get("SeparatorTemplate");
+            JCObject val = (JCObject)retObjectSeparatorTemplate;
             return new ITemplateImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSeparatorTemplate != null ? retObjectSeparatorTemplate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -468,7 +545,7 @@ public class DataList extends BaseDataList implements system.web.ui.INamingConta
 
     public void setSeparatorTemplate(ITemplate SeparatorTemplate) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SeparatorTemplate", SeparatorTemplate == null ? null : SeparatorTemplate.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -478,10 +555,14 @@ public class DataList extends BaseDataList implements system.web.ui.INamingConta
 
     public DataListItem getSelectedItem() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.configuration.provider.ProviderException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectedItem = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SelectedItem");
+            retObjectSelectedItem = classInstance.Get("SelectedItem");
+            JCObject val = (JCObject)retObjectSelectedItem;
             return new DataListItem(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelectedItem != null ? retObjectSelectedItem.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -489,10 +570,14 @@ public class DataList extends BaseDataList implements system.web.ui.INamingConta
 
     public DataListItemCollection getItems() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.configuration.provider.ProviderException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectItems = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Items");
+            retObjectItems = classInstance.Get("Items");
+            JCObject val = (JCObject)retObjectItems;
             return new DataListItemCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectItems != null ? retObjectItems.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -500,10 +585,14 @@ public class DataList extends BaseDataList implements system.web.ui.INamingConta
 
     public RepeatDirection getRepeatDirection() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRepeatDirection = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RepeatDirection");
+            retObjectRepeatDirection = classInstance.Get("RepeatDirection");
+            JCObject val = (JCObject)retObjectRepeatDirection;
             return new RepeatDirection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRepeatDirection != null ? retObjectRepeatDirection.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -511,7 +600,7 @@ public class DataList extends BaseDataList implements system.web.ui.INamingConta
 
     public void setRepeatDirection(RepeatDirection RepeatDirection) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RepeatDirection", RepeatDirection == null ? null : RepeatDirection.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -521,10 +610,14 @@ public class DataList extends BaseDataList implements system.web.ui.INamingConta
 
     public RepeatLayout getRepeatLayout() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRepeatLayout = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RepeatLayout");
+            retObjectRepeatLayout = classInstance.Get("RepeatLayout");
+            JCObject val = (JCObject)retObjectRepeatLayout;
             return new RepeatLayout(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRepeatLayout != null ? retObjectRepeatLayout.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -532,7 +625,7 @@ public class DataList extends BaseDataList implements system.web.ui.INamingConta
 
     public void setRepeatLayout(RepeatLayout RepeatLayout) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RepeatLayout", RepeatLayout == null ? null : RepeatLayout.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -542,10 +635,14 @@ public class DataList extends BaseDataList implements system.web.ui.INamingConta
 
     public TableItemStyle getAlternatingItemStyle() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAlternatingItemStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AlternatingItemStyle");
+            retObjectAlternatingItemStyle = classInstance.Get("AlternatingItemStyle");
+            JCObject val = (JCObject)retObjectAlternatingItemStyle;
             return new TableItemStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAlternatingItemStyle != null ? retObjectAlternatingItemStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -553,10 +650,14 @@ public class DataList extends BaseDataList implements system.web.ui.INamingConta
 
     public TableItemStyle getEditItemStyle() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEditItemStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("EditItemStyle");
+            retObjectEditItemStyle = classInstance.Get("EditItemStyle");
+            JCObject val = (JCObject)retObjectEditItemStyle;
             return new TableItemStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEditItemStyle != null ? retObjectEditItemStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -564,10 +665,14 @@ public class DataList extends BaseDataList implements system.web.ui.INamingConta
 
     public TableItemStyle getFooterStyle() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFooterStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("FooterStyle");
+            retObjectFooterStyle = classInstance.Get("FooterStyle");
+            JCObject val = (JCObject)retObjectFooterStyle;
             return new TableItemStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFooterStyle != null ? retObjectFooterStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -575,10 +680,14 @@ public class DataList extends BaseDataList implements system.web.ui.INamingConta
 
     public TableItemStyle getHeaderStyle() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHeaderStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("HeaderStyle");
+            retObjectHeaderStyle = classInstance.Get("HeaderStyle");
+            JCObject val = (JCObject)retObjectHeaderStyle;
             return new TableItemStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHeaderStyle != null ? retObjectHeaderStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -586,10 +695,14 @@ public class DataList extends BaseDataList implements system.web.ui.INamingConta
 
     public TableItemStyle getItemStyle() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectItemStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ItemStyle");
+            retObjectItemStyle = classInstance.Get("ItemStyle");
+            JCObject val = (JCObject)retObjectItemStyle;
             return new TableItemStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectItemStyle != null ? retObjectItemStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -597,10 +710,14 @@ public class DataList extends BaseDataList implements system.web.ui.INamingConta
 
     public TableItemStyle getSelectedItemStyle() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectedItemStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SelectedItemStyle");
+            retObjectSelectedItemStyle = classInstance.Get("SelectedItemStyle");
+            JCObject val = (JCObject)retObjectSelectedItemStyle;
             return new TableItemStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelectedItemStyle != null ? retObjectSelectedItemStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -608,10 +725,14 @@ public class DataList extends BaseDataList implements system.web.ui.INamingConta
 
     public TableItemStyle getSeparatorStyle() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSeparatorStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SeparatorStyle");
+            retObjectSeparatorStyle = classInstance.Get("SeparatorStyle");
+            JCObject val = (JCObject)retObjectSeparatorStyle;
             return new TableItemStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSeparatorStyle != null ? retObjectSeparatorStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -624,7 +745,7 @@ public class DataList extends BaseDataList implements system.web.ui.INamingConta
 
     public void addCancelCommand(DataListCommandEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("CancelCommand", handler);
         } catch (JCNativeException jcne) {
@@ -634,7 +755,7 @@ public class DataList extends BaseDataList implements system.web.ui.INamingConta
 
     public void removeCancelCommand(DataListCommandEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("CancelCommand", handler);
         } catch (JCNativeException jcne) {
@@ -644,7 +765,7 @@ public class DataList extends BaseDataList implements system.web.ui.INamingConta
 
     public void addDeleteCommand(DataListCommandEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("DeleteCommand", handler);
         } catch (JCNativeException jcne) {
@@ -654,7 +775,7 @@ public class DataList extends BaseDataList implements system.web.ui.INamingConta
 
     public void removeDeleteCommand(DataListCommandEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("DeleteCommand", handler);
         } catch (JCNativeException jcne) {
@@ -664,7 +785,7 @@ public class DataList extends BaseDataList implements system.web.ui.INamingConta
 
     public void addEditCommand(DataListCommandEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("EditCommand", handler);
         } catch (JCNativeException jcne) {
@@ -674,7 +795,7 @@ public class DataList extends BaseDataList implements system.web.ui.INamingConta
 
     public void removeEditCommand(DataListCommandEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("EditCommand", handler);
         } catch (JCNativeException jcne) {
@@ -684,7 +805,7 @@ public class DataList extends BaseDataList implements system.web.ui.INamingConta
 
     public void addItemCommand(DataListCommandEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ItemCommand", handler);
         } catch (JCNativeException jcne) {
@@ -694,7 +815,7 @@ public class DataList extends BaseDataList implements system.web.ui.INamingConta
 
     public void removeItemCommand(DataListCommandEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ItemCommand", handler);
         } catch (JCNativeException jcne) {
@@ -704,7 +825,7 @@ public class DataList extends BaseDataList implements system.web.ui.INamingConta
 
     public void addUpdateCommand(DataListCommandEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("UpdateCommand", handler);
         } catch (JCNativeException jcne) {
@@ -714,7 +835,7 @@ public class DataList extends BaseDataList implements system.web.ui.INamingConta
 
     public void removeUpdateCommand(DataListCommandEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("UpdateCommand", handler);
         } catch (JCNativeException jcne) {
@@ -724,7 +845,7 @@ public class DataList extends BaseDataList implements system.web.ui.INamingConta
 
     public void addItemCreated(DataListItemEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ItemCreated", handler);
         } catch (JCNativeException jcne) {
@@ -734,7 +855,7 @@ public class DataList extends BaseDataList implements system.web.ui.INamingConta
 
     public void removeItemCreated(DataListItemEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ItemCreated", handler);
         } catch (JCNativeException jcne) {
@@ -744,7 +865,7 @@ public class DataList extends BaseDataList implements system.web.ui.INamingConta
 
     public void addItemDataBound(DataListItemEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ItemDataBound", handler);
         } catch (JCNativeException jcne) {
@@ -754,7 +875,7 @@ public class DataList extends BaseDataList implements system.web.ui.INamingConta
 
     public void removeItemDataBound(DataListItemEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ItemDataBound", handler);
         } catch (JCNativeException jcne) {

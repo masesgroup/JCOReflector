@@ -161,10 +161,14 @@ public class PackageDigitalSignature extends NetObject  {
     
     public VerifyResult Verify() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.io.IOException, system.IndexOutOfRangeException, system.io.FileFormatException, system.xml.XmlException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.xml.schema.XmlSchemaException, system.RankException, system.ArrayTypeMismatchException, system.xml.xpath.XPathException, system.FormatException, system.OverflowException, system.TypeLoadException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVerify = null;
         try {
-            JCObject objVerify = (JCObject)classInstance.Invoke("Verify");
+            retObjectVerify = classInstance.Invoke("Verify");
+            JCObject objVerify = (JCObject)retObjectVerify;
             return new VerifyResult(objVerify);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVerify != null ? retObjectVerify.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,10 +176,14 @@ public class PackageDigitalSignature extends NetObject  {
 
     public VerifyResult Verify(X509Certificate signingCertificate) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.io.IOException, system.io.FileFormatException, system.xml.XmlException, system.security.cryptography.CryptographicException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.xml.xpath.XPathException, system.OverflowException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.TypeLoadException, system.io.FileLoadException, system.security.cryptography.CryptographicUnexpectedOperationException, system.UriFormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVerify = null;
         try {
-            JCObject objVerify = (JCObject)classInstance.Invoke("Verify", signingCertificate == null ? null : signingCertificate.getJCOInstance());
+            retObjectVerify = classInstance.Invoke("Verify", signingCertificate == null ? null : signingCertificate.getJCOInstance());
+            JCObject objVerify = (JCObject)retObjectVerify;
             return new VerifyResult(objVerify);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVerify != null ? retObjectVerify.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,10 +195,12 @@ public class PackageDigitalSignature extends NetObject  {
     
     public byte[] getSignatureValue() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.io.IOException, system.RankException, system.ArrayTypeMismatchException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.FileFormatException, system.xml.schema.XmlSchemaException, system.xml.XmlException, system.security.cryptography.CryptographicException, system.xml.xpath.XPathException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSignatureValue = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("SignatureValue");
+            retObjectSignatureValue = classInstance.Get("SignatureValue");
+            JCObject resultingObjects = (JCObject)retObjectSignatureValue;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -199,6 +209,8 @@ public class PackageDigitalSignature extends NetObject  {
 				resultingArray[indexSignatureValue] = (byte)resultingArrayList.get(indexSignatureValue);
 			}
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into JCObject", retObjectSignatureValue != null ? retObjectSignatureValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -206,10 +218,14 @@ public class PackageDigitalSignature extends NetObject  {
 
     public DateTime getSigningTime() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.io.IOException, system.security.SecurityException, system.io.FileFormatException, system.xml.schema.XmlSchemaException, system.xml.XmlException, system.security.cryptography.CryptographicException, system.IndexOutOfRangeException, system.xml.xpath.XPathException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSigningTime = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SigningTime");
+            retObjectSigningTime = classInstance.Get("SigningTime");
+            JCObject val = (JCObject)retObjectSigningTime;
             return new DateTime(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSigningTime != null ? retObjectSigningTime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -217,10 +233,14 @@ public class PackageDigitalSignature extends NetObject  {
 
     public CertificateEmbeddingOption getCertificateEmbeddingOption() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.io.IOException, system.IndexOutOfRangeException, system.io.FileFormatException, system.xml.XmlException, system.diagnostics.UnreachableException, system.UriFormatException, system.security.cryptography.CryptographicException, system.xml.schema.XmlSchemaException, system.xml.xpath.XPathException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCertificateEmbeddingOption = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CertificateEmbeddingOption");
+            retObjectCertificateEmbeddingOption = classInstance.Get("CertificateEmbeddingOption");
+            JCObject val = (JCObject)retObjectCertificateEmbeddingOption;
             return new CertificateEmbeddingOption(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCertificateEmbeddingOption != null ? retObjectCertificateEmbeddingOption.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -228,10 +248,14 @@ public class PackageDigitalSignature extends NetObject  {
 
     public PackagePart getSignaturePart() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSignaturePart = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SignaturePart");
+            retObjectSignaturePart = classInstance.Get("SignaturePart");
+            JCObject val = (JCObject)retObjectSignaturePart;
             return new PackagePart(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSignaturePart != null ? retObjectSignaturePart.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -239,10 +263,14 @@ public class PackageDigitalSignature extends NetObject  {
 
     public X509Certificate getSigner() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.io.IOException, system.IndexOutOfRangeException, system.io.FileFormatException, system.xml.XmlException, system.OutOfMemoryException, system.diagnostics.UnreachableException, system.RankException, system.ArrayTypeMismatchException, system.security.SecurityException, system.security.cryptography.CryptographicException, system.xml.schema.XmlSchemaException, system.xml.xpath.XPathException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSigner = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Signer");
+            retObjectSigner = classInstance.Get("Signer");
+            JCObject val = (JCObject)retObjectSigner;
             return new X509Certificate(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSigner != null ? retObjectSigner.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -250,10 +278,14 @@ public class PackageDigitalSignature extends NetObject  {
 
     public Signature getSignature() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.io.IOException, system.RankException, system.ArrayTypeMismatchException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.FileFormatException, system.xml.schema.XmlSchemaException, system.xml.XmlException, system.security.cryptography.CryptographicException, system.xml.xpath.XPathException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSignature = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Signature");
+            retObjectSignature = classInstance.Get("Signature");
+            JCObject val = (JCObject)retObjectSignature;
             return new Signature(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSignature != null ? retObjectSignature.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -261,7 +293,7 @@ public class PackageDigitalSignature extends NetObject  {
 
     public void setSignature(Signature Signature) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.io.IOException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.xml.XmlException, system.security.cryptography.CryptographicException, system.security.cryptography.CryptographicUnexpectedOperationException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Signature", Signature == null ? null : Signature.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -271,9 +303,13 @@ public class PackageDigitalSignature extends NetObject  {
 
     public java.lang.String getSignatureType() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSignatureType = null;
         try {
-            return (java.lang.String)classInstance.Get("SignatureType");
+            retObjectSignatureType = classInstance.Get("SignatureType");
+            return (java.lang.String)retObjectSignatureType;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSignatureType != null ? retObjectSignatureType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -281,9 +317,13 @@ public class PackageDigitalSignature extends NetObject  {
 
     public java.lang.String getTimeFormat() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.io.IOException, system.security.SecurityException, system.io.FileFormatException, system.xml.schema.XmlSchemaException, system.xml.XmlException, system.security.cryptography.CryptographicException, system.IndexOutOfRangeException, system.xml.xpath.XPathException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTimeFormat = null;
         try {
-            return (java.lang.String)classInstance.Get("TimeFormat");
+            retObjectTimeFormat = classInstance.Get("TimeFormat");
+            return (java.lang.String)retObjectTimeFormat;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectTimeFormat != null ? retObjectTimeFormat.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

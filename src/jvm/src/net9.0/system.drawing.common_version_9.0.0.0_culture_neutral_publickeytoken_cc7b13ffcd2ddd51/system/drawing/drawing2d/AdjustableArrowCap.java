@@ -181,9 +181,13 @@ public class AdjustableArrowCap extends CustomLineCap  {
     
     public boolean getFilled() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.NotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFilled = null;
         try {
-            return (boolean)classInstance.Get("Filled");
+            retObjectFilled = classInstance.Get("Filled");
+            return (boolean)retObjectFilled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectFilled != null ? retObjectFilled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,7 +195,7 @@ public class AdjustableArrowCap extends CustomLineCap  {
 
     public void setFilled(boolean Filled) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.NotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Filled", Filled);
         } catch (JCNativeException jcne) {
@@ -201,10 +205,14 @@ public class AdjustableArrowCap extends CustomLineCap  {
 
     public Single getHeight() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.NotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHeight = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Height");
+            retObjectHeight = classInstance.Get("Height");
+            JCObject val = (JCObject)retObjectHeight;
             return new Single(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHeight != null ? retObjectHeight.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -212,7 +220,7 @@ public class AdjustableArrowCap extends CustomLineCap  {
 
     public void setHeight(Single Height) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.NotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Height", Height == null ? null : Height.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -222,10 +230,14 @@ public class AdjustableArrowCap extends CustomLineCap  {
 
     public Single getMiddleInset() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.NotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMiddleInset = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MiddleInset");
+            retObjectMiddleInset = classInstance.Get("MiddleInset");
+            JCObject val = (JCObject)retObjectMiddleInset;
             return new Single(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMiddleInset != null ? retObjectMiddleInset.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -233,7 +245,7 @@ public class AdjustableArrowCap extends CustomLineCap  {
 
     public void setMiddleInset(Single MiddleInset) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.NotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MiddleInset", MiddleInset == null ? null : MiddleInset.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -243,10 +255,14 @@ public class AdjustableArrowCap extends CustomLineCap  {
 
     public Single getWidth() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.NotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWidth = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Width");
+            retObjectWidth = classInstance.Get("Width");
+            JCObject val = (JCObject)retObjectWidth;
             return new Single(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWidth != null ? retObjectWidth.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -254,7 +270,7 @@ public class AdjustableArrowCap extends CustomLineCap  {
 
     public void setWidth(Single Width) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.NotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Width", Width == null ? null : Width.getJCOInstance());
         } catch (JCNativeException jcne) {

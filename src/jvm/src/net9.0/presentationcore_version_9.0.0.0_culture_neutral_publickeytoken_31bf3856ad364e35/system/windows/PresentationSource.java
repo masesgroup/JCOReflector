@@ -162,10 +162,14 @@ public class PresentationSource extends DispatcherObject  {
     
     public static PresentationSource FromDependencyObject(DependencyObject dependencyObject) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFromDependencyObject = null;
         try {
-            JCObject objFromDependencyObject = (JCObject)classType.Invoke("FromDependencyObject", dependencyObject == null ? null : dependencyObject.getJCOInstance());
+            retObjectFromDependencyObject = classType.Invoke("FromDependencyObject", dependencyObject == null ? null : dependencyObject.getJCOInstance());
+            JCObject objFromDependencyObject = (JCObject)retObjectFromDependencyObject;
             return new PresentationSource(objFromDependencyObject);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFromDependencyObject != null ? retObjectFromDependencyObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -173,10 +177,14 @@ public class PresentationSource extends DispatcherObject  {
 
     public static PresentationSource FromVisual(Visual visual) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFromVisual = null;
         try {
-            JCObject objFromVisual = (JCObject)classType.Invoke("FromVisual", visual == null ? null : visual.getJCOInstance());
+            retObjectFromVisual = classType.Invoke("FromVisual", visual == null ? null : visual.getJCOInstance());
+            JCObject objFromVisual = (JCObject)retObjectFromVisual;
             return new PresentationSource(objFromVisual);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFromVisual != null ? retObjectFromVisual.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -184,7 +192,7 @@ public class PresentationSource extends DispatcherObject  {
 
     public static void AddSourceChangedHandler(IInputElement element, SourceChangedEventHandler handler) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.MulticastNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("AddSourceChangedHandler", element == null ? null : element.getJCOInstance(), handler);
         } catch (JCNativeException jcne) {
@@ -194,7 +202,7 @@ public class PresentationSource extends DispatcherObject  {
 
     public static void RemoveSourceChangedHandler(IInputElement e, SourceChangedEventHandler handler) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("RemoveSourceChangedHandler", e == null ? null : e.getJCOInstance(), handler);
         } catch (JCNativeException jcne) {
@@ -208,9 +216,13 @@ public class PresentationSource extends DispatcherObject  {
     
     public boolean getIsDisposed() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsDisposed = null;
         try {
-            return (boolean)classInstance.Get("IsDisposed");
+            retObjectIsDisposed = classInstance.Get("IsDisposed");
+            return (boolean)retObjectIsDisposed;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsDisposed != null ? retObjectIsDisposed.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -218,10 +230,14 @@ public class PresentationSource extends DispatcherObject  {
 
     public static IEnumerable getCurrentSources() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCurrentSources = null;
         try {
-            JCObject val = (JCObject)classType.Get("CurrentSources");
+            retObjectCurrentSources = classType.Get("CurrentSources");
+            JCObject val = (JCObject)retObjectCurrentSources;
             return new IEnumerableImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCurrentSources != null ? retObjectCurrentSources.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -229,10 +245,14 @@ public class PresentationSource extends DispatcherObject  {
 
     public CompositionTarget getCompositionTarget() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCompositionTarget = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CompositionTarget");
+            retObjectCompositionTarget = classInstance.Get("CompositionTarget");
+            JCObject val = (JCObject)retObjectCompositionTarget;
             return new CompositionTarget(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCompositionTarget != null ? retObjectCompositionTarget.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -240,10 +260,14 @@ public class PresentationSource extends DispatcherObject  {
 
     public Visual getRootVisual() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRootVisual = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RootVisual");
+            retObjectRootVisual = classInstance.Get("RootVisual");
+            JCObject val = (JCObject)retObjectRootVisual;
             return new Visual(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRootVisual != null ? retObjectRootVisual.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -251,7 +275,7 @@ public class PresentationSource extends DispatcherObject  {
 
     public void setRootVisual(Visual RootVisual) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RootVisual", RootVisual == null ? null : RootVisual.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -266,7 +290,7 @@ public class PresentationSource extends DispatcherObject  {
 
     public void addContentRendered(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ContentRendered", handler);
         } catch (JCNativeException jcne) {
@@ -276,7 +300,7 @@ public class PresentationSource extends DispatcherObject  {
 
     public void removeContentRendered(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ContentRendered", handler);
         } catch (JCNativeException jcne) {

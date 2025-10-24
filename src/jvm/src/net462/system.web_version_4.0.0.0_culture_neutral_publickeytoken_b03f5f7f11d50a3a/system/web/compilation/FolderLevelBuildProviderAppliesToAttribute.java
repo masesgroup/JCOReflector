@@ -171,10 +171,14 @@ public class FolderLevelBuildProviderAppliesToAttribute extends Attribute  {
     
     public FolderLevelBuildProviderAppliesTo getAppliesTo() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAppliesTo = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AppliesTo");
+            retObjectAppliesTo = classInstance.Get("AppliesTo");
+            JCObject val = (JCObject)retObjectAppliesTo;
             return new FolderLevelBuildProviderAppliesTo(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAppliesTo != null ? retObjectAppliesTo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

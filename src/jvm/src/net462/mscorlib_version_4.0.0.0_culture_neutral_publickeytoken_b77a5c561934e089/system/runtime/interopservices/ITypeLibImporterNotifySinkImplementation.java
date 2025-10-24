@@ -144,10 +144,14 @@ public class ITypeLibImporterNotifySinkImplementation extends NetObject implemen
     
     public Assembly ResolveRef(NetObject typeLib) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResolveRef = null;
         try {
-            JCObject objResolveRef = (JCObject)classInstance.Invoke("ResolveRef", typeLib == null ? null : typeLib.getJCOInstance());
+            retObjectResolveRef = classInstance.Invoke("ResolveRef", typeLib == null ? null : typeLib.getJCOInstance());
+            JCObject objResolveRef = (JCObject)retObjectResolveRef;
             return new Assembly(objResolveRef);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectResolveRef != null ? retObjectResolveRef.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -155,7 +159,7 @@ public class ITypeLibImporterNotifySinkImplementation extends NetObject implemen
 
     public void ReportEvent(ImporterEventKind eventKind, int eventCode, java.lang.String eventMsg) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ReportEvent", eventKind == null ? null : eventKind.getJCOInstance(), eventCode, eventMsg);
         } catch (JCNativeException jcne) {

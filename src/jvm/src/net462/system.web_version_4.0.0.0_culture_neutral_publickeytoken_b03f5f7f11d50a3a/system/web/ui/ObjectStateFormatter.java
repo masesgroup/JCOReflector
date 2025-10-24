@@ -162,10 +162,14 @@ public class ObjectStateFormatter extends NetObject  {
     
     public NetObject Deserialize(Stream inputStream) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ObjectDisposedException, system.io.EndOfStreamException, system.FormatException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.io.IOException, system.InvalidTimeZoneException, system.NotSupportedException, system.OverflowException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException, system.web.HttpException, system.NullReferenceException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDeserialize = null;
         try {
-            JCObject objDeserialize = (JCObject)classInstance.Invoke("Deserialize", inputStream == null ? null : inputStream.getJCOInstance());
+            retObjectDeserialize = classInstance.Invoke("Deserialize", inputStream == null ? null : inputStream.getJCOInstance());
+            JCObject objDeserialize = (JCObject)retObjectDeserialize;
             return new NetObject(objDeserialize);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDeserialize != null ? retObjectDeserialize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -173,10 +177,14 @@ public class ObjectStateFormatter extends NetObject  {
 
     public NetObject Deserialize(java.lang.String inputString) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.InvalidOperationException, system.threading.ThreadAbortException, system.MissingMethodException, system.reflection.TargetInvocationException, system.web.HttpException, system.web.HttpRequestValidationException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.security.cryptography.CryptographicException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.io.EndOfStreamException, system.io.IOException, system.OutOfMemoryException, system.NotImplementedException, system.TypeLoadException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDeserialize = null;
         try {
-            JCObject objDeserialize = (JCObject)classInstance.Invoke("Deserialize", inputString);
+            retObjectDeserialize = classInstance.Invoke("Deserialize", inputString);
+            JCObject objDeserialize = (JCObject)retObjectDeserialize;
             return new NetObject(objDeserialize);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDeserialize != null ? retObjectDeserialize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -184,9 +192,13 @@ public class ObjectStateFormatter extends NetObject  {
 
     public java.lang.String Serialize(NetObject stateGraph) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.UnauthorizedAccessException, system.threading.ThreadAbortException, system.web.HttpException, system.web.HttpRequestValidationException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.security.cryptography.CryptographicException, system.PlatformNotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSerialize = null;
         try {
-            return (java.lang.String)classInstance.Invoke("Serialize", stateGraph == null ? null : stateGraph.getJCOInstance());
+            retObjectSerialize = classInstance.Invoke("Serialize", stateGraph == null ? null : stateGraph.getJCOInstance());
+            return (java.lang.String)retObjectSerialize;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectSerialize != null ? retObjectSerialize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -194,7 +206,7 @@ public class ObjectStateFormatter extends NetObject  {
 
     public void Serialize(Stream outputStream, NetObject stateGraph) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.ArgumentException, system.InvalidOperationException, system.InvalidTimeZoneException, system.NotSupportedException, system.OverflowException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.runtime.interopservices.ExternalException, system.security.SecurityException, system.UnauthorizedAccessException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Serialize", outputStream == null ? null : outputStream.getJCOInstance(), stateGraph == null ? null : stateGraph.getJCOInstance());
         } catch (JCNativeException jcne) {

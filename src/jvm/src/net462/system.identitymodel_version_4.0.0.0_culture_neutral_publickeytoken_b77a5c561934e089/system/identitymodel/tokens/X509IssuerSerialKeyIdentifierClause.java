@@ -177,9 +177,13 @@ public class X509IssuerSerialKeyIdentifierClause extends SecurityKeyIdentifierCl
     
     public boolean Matches(SecurityKeyIdentifierClause keyIdentifierClause) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.security.cryptography.CryptographicException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMatches = null;
         try {
-            return (boolean)classInstance.Invoke("Matches", keyIdentifierClause == null ? null : keyIdentifierClause.getJCOInstance());
+            retObjectMatches = classInstance.Invoke("Matches", keyIdentifierClause == null ? null : keyIdentifierClause.getJCOInstance());
+            return (boolean)retObjectMatches;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectMatches != null ? retObjectMatches.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,9 +191,13 @@ public class X509IssuerSerialKeyIdentifierClause extends SecurityKeyIdentifierCl
 
     public boolean Matches(X509Certificate2 certificate) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.security.cryptography.CryptographicException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMatches = null;
         try {
-            return (boolean)classInstance.Invoke("Matches", certificate == null ? null : certificate.getJCOInstance());
+            retObjectMatches = classInstance.Invoke("Matches", certificate == null ? null : certificate.getJCOInstance());
+            return (boolean)retObjectMatches;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectMatches != null ? retObjectMatches.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,9 +205,13 @@ public class X509IssuerSerialKeyIdentifierClause extends SecurityKeyIdentifierCl
 
     public boolean Matches(java.lang.String issuerName, java.lang.String issuerSerialNumber) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMatches = null;
         try {
-            return (boolean)classInstance.Invoke("Matches", issuerName, issuerSerialNumber);
+            retObjectMatches = classInstance.Invoke("Matches", issuerName, issuerSerialNumber);
+            return (boolean)retObjectMatches;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectMatches != null ? retObjectMatches.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -211,9 +223,13 @@ public class X509IssuerSerialKeyIdentifierClause extends SecurityKeyIdentifierCl
     
     public java.lang.String getIssuerName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIssuerName = null;
         try {
-            return (java.lang.String)classInstance.Get("IssuerName");
+            retObjectIssuerName = classInstance.Get("IssuerName");
+            return (java.lang.String)retObjectIssuerName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectIssuerName != null ? retObjectIssuerName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -221,9 +237,13 @@ public class X509IssuerSerialKeyIdentifierClause extends SecurityKeyIdentifierCl
 
     public java.lang.String getIssuerSerialNumber() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIssuerSerialNumber = null;
         try {
-            return (java.lang.String)classInstance.Get("IssuerSerialNumber");
+            retObjectIssuerSerialNumber = classInstance.Get("IssuerSerialNumber");
+            return (java.lang.String)retObjectIssuerSerialNumber;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectIssuerSerialNumber != null ? retObjectIssuerSerialNumber.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -158,10 +158,14 @@ public class DragDrop extends NetObject  {
     
     public static DragDropEffects DoDragDrop(DependencyObject dragSource, NetObject data, DragDropEffects allowedEffects) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.threading.ThreadStateException, system.SystemException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.MulticastNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDoDragDrop = null;
         try {
-            JCObject objDoDragDrop = (JCObject)classType.Invoke("DoDragDrop", dragSource == null ? null : dragSource.getJCOInstance(), data == null ? null : data.getJCOInstance(), allowedEffects == null ? null : allowedEffects.getJCOInstance());
+            retObjectDoDragDrop = classType.Invoke("DoDragDrop", dragSource == null ? null : dragSource.getJCOInstance(), data == null ? null : data.getJCOInstance(), allowedEffects == null ? null : allowedEffects.getJCOInstance());
+            JCObject objDoDragDrop = (JCObject)retObjectDoDragDrop;
             return new DragDropEffects(objDoDragDrop);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDoDragDrop != null ? retObjectDoDragDrop.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,7 +173,7 @@ public class DragDrop extends NetObject  {
 
     public static void AddDragEnterHandler(DependencyObject element, DragEventHandler handler) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("AddDragEnterHandler", element == null ? null : element.getJCOInstance(), handler);
         } catch (JCNativeException jcne) {
@@ -179,7 +183,7 @@ public class DragDrop extends NetObject  {
 
     public static void AddDragLeaveHandler(DependencyObject element, DragEventHandler handler) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("AddDragLeaveHandler", element == null ? null : element.getJCOInstance(), handler);
         } catch (JCNativeException jcne) {
@@ -189,7 +193,7 @@ public class DragDrop extends NetObject  {
 
     public static void AddDragOverHandler(DependencyObject element, DragEventHandler handler) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("AddDragOverHandler", element == null ? null : element.getJCOInstance(), handler);
         } catch (JCNativeException jcne) {
@@ -199,7 +203,7 @@ public class DragDrop extends NetObject  {
 
     public static void AddDropHandler(DependencyObject element, DragEventHandler handler) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("AddDropHandler", element == null ? null : element.getJCOInstance(), handler);
         } catch (JCNativeException jcne) {
@@ -209,7 +213,7 @@ public class DragDrop extends NetObject  {
 
     public static void AddGiveFeedbackHandler(DependencyObject element, GiveFeedbackEventHandler handler) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("AddGiveFeedbackHandler", element == null ? null : element.getJCOInstance(), handler);
         } catch (JCNativeException jcne) {
@@ -219,7 +223,7 @@ public class DragDrop extends NetObject  {
 
     public static void AddPreviewDragEnterHandler(DependencyObject element, DragEventHandler handler) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("AddPreviewDragEnterHandler", element == null ? null : element.getJCOInstance(), handler);
         } catch (JCNativeException jcne) {
@@ -229,7 +233,7 @@ public class DragDrop extends NetObject  {
 
     public static void AddPreviewDragLeaveHandler(DependencyObject element, DragEventHandler handler) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("AddPreviewDragLeaveHandler", element == null ? null : element.getJCOInstance(), handler);
         } catch (JCNativeException jcne) {
@@ -239,7 +243,7 @@ public class DragDrop extends NetObject  {
 
     public static void AddPreviewDragOverHandler(DependencyObject element, DragEventHandler handler) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("AddPreviewDragOverHandler", element == null ? null : element.getJCOInstance(), handler);
         } catch (JCNativeException jcne) {
@@ -249,7 +253,7 @@ public class DragDrop extends NetObject  {
 
     public static void AddPreviewDropHandler(DependencyObject element, DragEventHandler handler) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("AddPreviewDropHandler", element == null ? null : element.getJCOInstance(), handler);
         } catch (JCNativeException jcne) {
@@ -259,7 +263,7 @@ public class DragDrop extends NetObject  {
 
     public static void AddPreviewGiveFeedbackHandler(DependencyObject element, GiveFeedbackEventHandler handler) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("AddPreviewGiveFeedbackHandler", element == null ? null : element.getJCOInstance(), handler);
         } catch (JCNativeException jcne) {
@@ -269,7 +273,7 @@ public class DragDrop extends NetObject  {
 
     public static void AddPreviewQueryContinueDragHandler(DependencyObject element, QueryContinueDragEventHandler handler) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("AddPreviewQueryContinueDragHandler", element == null ? null : element.getJCOInstance(), handler);
         } catch (JCNativeException jcne) {
@@ -279,7 +283,7 @@ public class DragDrop extends NetObject  {
 
     public static void AddQueryContinueDragHandler(DependencyObject element, QueryContinueDragEventHandler handler) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("AddQueryContinueDragHandler", element == null ? null : element.getJCOInstance(), handler);
         } catch (JCNativeException jcne) {
@@ -289,7 +293,7 @@ public class DragDrop extends NetObject  {
 
     public static void RemoveDragEnterHandler(DependencyObject element, DragEventHandler handler) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("RemoveDragEnterHandler", element == null ? null : element.getJCOInstance(), handler);
         } catch (JCNativeException jcne) {
@@ -299,7 +303,7 @@ public class DragDrop extends NetObject  {
 
     public static void RemoveDragLeaveHandler(DependencyObject element, DragEventHandler handler) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("RemoveDragLeaveHandler", element == null ? null : element.getJCOInstance(), handler);
         } catch (JCNativeException jcne) {
@@ -309,7 +313,7 @@ public class DragDrop extends NetObject  {
 
     public static void RemoveDragOverHandler(DependencyObject element, DragEventHandler handler) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("RemoveDragOverHandler", element == null ? null : element.getJCOInstance(), handler);
         } catch (JCNativeException jcne) {
@@ -319,7 +323,7 @@ public class DragDrop extends NetObject  {
 
     public static void RemoveDropHandler(DependencyObject element, DragEventHandler handler) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("RemoveDropHandler", element == null ? null : element.getJCOInstance(), handler);
         } catch (JCNativeException jcne) {
@@ -329,7 +333,7 @@ public class DragDrop extends NetObject  {
 
     public static void RemoveGiveFeedbackHandler(DependencyObject element, GiveFeedbackEventHandler handler) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("RemoveGiveFeedbackHandler", element == null ? null : element.getJCOInstance(), handler);
         } catch (JCNativeException jcne) {
@@ -339,7 +343,7 @@ public class DragDrop extends NetObject  {
 
     public static void RemovePreviewDragEnterHandler(DependencyObject element, DragEventHandler handler) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("RemovePreviewDragEnterHandler", element == null ? null : element.getJCOInstance(), handler);
         } catch (JCNativeException jcne) {
@@ -349,7 +353,7 @@ public class DragDrop extends NetObject  {
 
     public static void RemovePreviewDragLeaveHandler(DependencyObject element, DragEventHandler handler) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("RemovePreviewDragLeaveHandler", element == null ? null : element.getJCOInstance(), handler);
         } catch (JCNativeException jcne) {
@@ -359,7 +363,7 @@ public class DragDrop extends NetObject  {
 
     public static void RemovePreviewDragOverHandler(DependencyObject element, DragEventHandler handler) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("RemovePreviewDragOverHandler", element == null ? null : element.getJCOInstance(), handler);
         } catch (JCNativeException jcne) {
@@ -369,7 +373,7 @@ public class DragDrop extends NetObject  {
 
     public static void RemovePreviewDropHandler(DependencyObject element, DragEventHandler handler) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("RemovePreviewDropHandler", element == null ? null : element.getJCOInstance(), handler);
         } catch (JCNativeException jcne) {
@@ -379,7 +383,7 @@ public class DragDrop extends NetObject  {
 
     public static void RemovePreviewGiveFeedbackHandler(DependencyObject element, GiveFeedbackEventHandler handler) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("RemovePreviewGiveFeedbackHandler", element == null ? null : element.getJCOInstance(), handler);
         } catch (JCNativeException jcne) {
@@ -389,7 +393,7 @@ public class DragDrop extends NetObject  {
 
     public static void RemovePreviewQueryContinueDragHandler(DependencyObject element, QueryContinueDragEventHandler handler) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("RemovePreviewQueryContinueDragHandler", element == null ? null : element.getJCOInstance(), handler);
         } catch (JCNativeException jcne) {
@@ -399,7 +403,7 @@ public class DragDrop extends NetObject  {
 
     public static void RemoveQueryContinueDragHandler(DependencyObject element, QueryContinueDragEventHandler handler) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("RemoveQueryContinueDragHandler", element == null ? null : element.getJCOInstance(), handler);
         } catch (JCNativeException jcne) {

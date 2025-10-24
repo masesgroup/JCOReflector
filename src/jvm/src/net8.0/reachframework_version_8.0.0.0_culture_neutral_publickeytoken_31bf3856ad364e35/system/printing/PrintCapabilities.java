@@ -172,10 +172,14 @@ public class PrintCapabilities extends NetObject  {
     
     public PageImageableArea getPageImageableArea() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPageImageableArea = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PageImageableArea");
+            retObjectPageImageableArea = classInstance.Get("PageImageableArea");
+            JCObject val = (JCObject)retObjectPageImageableArea;
             return new PageImageableArea(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPageImageableArea != null ? retObjectPageImageableArea.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,10 +187,14 @@ public class PrintCapabilities extends NetObject  {
 
     public PageScalingFactorRange getPageScalingFactorRange() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPageScalingFactorRange = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PageScalingFactorRange");
+            retObjectPageScalingFactorRange = classInstance.Get("PageScalingFactorRange");
+            JCObject val = (JCObject)retObjectPageScalingFactorRange;
             return new PageScalingFactorRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPageScalingFactorRange != null ? retObjectPageScalingFactorRange.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -145,9 +145,13 @@ public class ISecurityContextSecurityTokenCacheImplementation extends NetObject 
     
     public boolean TryAddContext(SecurityContextSecurityToken token) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryAddContext = null;
         try {
-            return (boolean)classInstance.Invoke("TryAddContext", token == null ? null : token.getJCOInstance());
+            retObjectTryAddContext = classInstance.Invoke("TryAddContext", token == null ? null : token.getJCOInstance());
+            return (boolean)retObjectTryAddContext;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryAddContext != null ? retObjectTryAddContext.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -155,10 +159,14 @@ public class ISecurityContextSecurityTokenCacheImplementation extends NetObject 
 
     public SecurityContextSecurityToken GetContext(UniqueId contextId, UniqueId generation) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetContext = null;
         try {
-            JCObject objGetContext = (JCObject)classInstance.Invoke("GetContext", contextId == null ? null : contextId.getJCOInstance(), generation == null ? null : generation.getJCOInstance());
+            retObjectGetContext = classInstance.Invoke("GetContext", contextId == null ? null : contextId.getJCOInstance(), generation == null ? null : generation.getJCOInstance());
+            JCObject objGetContext = (JCObject)retObjectGetContext;
             return new SecurityContextSecurityToken(objGetContext);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetContext != null ? retObjectGetContext.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -166,7 +174,7 @@ public class ISecurityContextSecurityTokenCacheImplementation extends NetObject 
 
     public void AddContext(SecurityContextSecurityToken token) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddContext", token == null ? null : token.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -176,7 +184,7 @@ public class ISecurityContextSecurityTokenCacheImplementation extends NetObject 
 
     public void ClearContexts() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ClearContexts");
         } catch (JCNativeException jcne) {
@@ -186,7 +194,7 @@ public class ISecurityContextSecurityTokenCacheImplementation extends NetObject 
 
     public void RemoveAllContexts(UniqueId contextId) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RemoveAllContexts", contextId == null ? null : contextId.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -196,7 +204,7 @@ public class ISecurityContextSecurityTokenCacheImplementation extends NetObject 
 
     public void RemoveContext(UniqueId contextId, UniqueId generation) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RemoveContext", contextId == null ? null : contextId.getJCOInstance(), generation == null ? null : generation.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -206,7 +214,7 @@ public class ISecurityContextSecurityTokenCacheImplementation extends NetObject 
 
     public void UpdateContextCachingTime(SecurityContextSecurityToken context, DateTime expirationTime) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("UpdateContextCachingTime", context == null ? null : context.getJCOInstance(), expirationTime == null ? null : expirationTime.getJCOInstance());
         } catch (JCNativeException jcne) {

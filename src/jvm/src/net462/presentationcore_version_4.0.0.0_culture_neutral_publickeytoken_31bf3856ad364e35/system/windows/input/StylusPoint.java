@@ -191,9 +191,13 @@ public class StylusPoint extends ValueType  {
     
     public boolean Equals(StylusPoint value) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEquals = null;
         try {
-            return (boolean)classInstance.Invoke("Equals", value == null ? null : value.getJCOInstance());
+            retObjectEquals = classInstance.Invoke("Equals", value == null ? null : value.getJCOInstance());
+            return (boolean)retObjectEquals;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectEquals != null ? retObjectEquals.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,9 +205,13 @@ public class StylusPoint extends ValueType  {
 
     public static boolean Equals(StylusPoint stylusPoint1, StylusPoint stylusPoint2) throws Throwable, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectEquals = null;
         try {
-            return (boolean)classType.Invoke("Equals", stylusPoint1 == null ? null : stylusPoint1.getJCOInstance(), stylusPoint2 == null ? null : stylusPoint2.getJCOInstance());
+            retObjectEquals = classType.Invoke("Equals", stylusPoint1 == null ? null : stylusPoint1.getJCOInstance(), stylusPoint2 == null ? null : stylusPoint2.getJCOInstance());
+            return (boolean)retObjectEquals;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectEquals != null ? retObjectEquals.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -211,9 +219,13 @@ public class StylusPoint extends ValueType  {
 
     public boolean HasProperty(StylusPointProperty stylusPointProperty) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHasProperty = null;
         try {
-            return (boolean)classInstance.Invoke("HasProperty", stylusPointProperty == null ? null : stylusPointProperty.getJCOInstance());
+            retObjectHasProperty = classInstance.Invoke("HasProperty", stylusPointProperty == null ? null : stylusPointProperty.getJCOInstance());
+            return (boolean)retObjectHasProperty;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectHasProperty != null ? retObjectHasProperty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -221,9 +233,20 @@ public class StylusPoint extends ValueType  {
 
     public int GetPropertyValue(StylusPointProperty stylusPointProperty) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPropertyValue = null;
         try {
-            return (int)classInstance.Invoke("GetPropertyValue", stylusPointProperty == null ? null : stylusPointProperty.getJCOInstance());
+            retObjectGetPropertyValue = classInstance.Invoke("GetPropertyValue", stylusPointProperty == null ? null : stylusPointProperty.getJCOInstance());
+            return (int)retObjectGetPropertyValue;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetPropertyValue_ToString = retObjectGetPropertyValue == null ? "null" : retObjectGetPropertyValue.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetPropertyValueNumber = (java.lang.Number)retObjectGetPropertyValue;
+                return retObjectGetPropertyValueNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetPropertyValue != null ? retObjectGetPropertyValue.getClass() : "null", retObjectGetPropertyValue_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -231,10 +254,14 @@ public class StylusPoint extends ValueType  {
 
     public Point ToPoint() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToPoint = null;
         try {
-            JCObject objToPoint = (JCObject)classInstance.Invoke("ToPoint");
+            retObjectToPoint = classInstance.Invoke("ToPoint");
+            JCObject objToPoint = (JCObject)retObjectToPoint;
             return new Point(objToPoint);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToPoint != null ? retObjectToPoint.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -242,7 +269,7 @@ public class StylusPoint extends ValueType  {
 
     public void SetPropertyValue(StylusPointProperty stylusPointProperty, int value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetPropertyValue", stylusPointProperty == null ? null : stylusPointProperty.getJCOInstance(), value);
         } catch (JCNativeException jcne) {
@@ -256,9 +283,20 @@ public class StylusPoint extends ValueType  {
     
     public double getX() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectX = null;
         try {
-            return (double)classInstance.Get("X");
+            retObjectX = classInstance.Get("X");
+            return (double)retObjectX;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectX_ToString = retObjectX == null ? "null" : retObjectX.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectXNumber = (java.lang.Number)retObjectX;
+                return retObjectXNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectX != null ? retObjectX.getClass() : "null", retObjectX_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -266,7 +304,7 @@ public class StylusPoint extends ValueType  {
 
     public void setX(double X) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("X", X);
         } catch (JCNativeException jcne) {
@@ -276,9 +314,20 @@ public class StylusPoint extends ValueType  {
 
     public double getY() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectY = null;
         try {
-            return (double)classInstance.Get("Y");
+            retObjectY = classInstance.Get("Y");
+            return (double)retObjectY;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectY_ToString = retObjectY == null ? "null" : retObjectY.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectYNumber = (java.lang.Number)retObjectY;
+                return retObjectYNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectY != null ? retObjectY.getClass() : "null", retObjectY_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -286,7 +335,7 @@ public class StylusPoint extends ValueType  {
 
     public void setY(double Y) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Y", Y);
         } catch (JCNativeException jcne) {
@@ -296,10 +345,14 @@ public class StylusPoint extends ValueType  {
 
     public Single getPressureFactor() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPressureFactor = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PressureFactor");
+            retObjectPressureFactor = classInstance.Get("PressureFactor");
+            JCObject val = (JCObject)retObjectPressureFactor;
             return new Single(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPressureFactor != null ? retObjectPressureFactor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -307,7 +360,7 @@ public class StylusPoint extends ValueType  {
 
     public void setPressureFactor(Single PressureFactor) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PressureFactor", PressureFactor == null ? null : PressureFactor.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -317,10 +370,14 @@ public class StylusPoint extends ValueType  {
 
     public StylusPointDescription getDescription() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDescription = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Description");
+            retObjectDescription = classInstance.Get("Description");
+            JCObject val = (JCObject)retObjectDescription;
             return new StylusPointDescription(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDescription != null ? retObjectDescription.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -328,7 +385,7 @@ public class StylusPoint extends ValueType  {
 
     public void setDescription(StylusPointDescription Description) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Description", Description == null ? null : Description.getJCOInstance());
         } catch (JCNativeException jcne) {

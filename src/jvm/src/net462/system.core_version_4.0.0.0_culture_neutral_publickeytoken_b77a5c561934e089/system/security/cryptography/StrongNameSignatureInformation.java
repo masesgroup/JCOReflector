@@ -161,9 +161,13 @@ public class StrongNameSignatureInformation extends NetObject  {
     
     public boolean getIsValid() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsValid = null;
         try {
-            return (boolean)classInstance.Get("IsValid");
+            retObjectIsValid = classInstance.Get("IsValid");
+            return (boolean)retObjectIsValid;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsValid != null ? retObjectIsValid.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,9 +175,20 @@ public class StrongNameSignatureInformation extends NetObject  {
 
     public int getHResult() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHResult = null;
         try {
-            return (int)classInstance.Get("HResult");
+            retObjectHResult = classInstance.Get("HResult");
+            return (int)retObjectHResult;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectHResult_ToString = retObjectHResult == null ? "null" : retObjectHResult.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectHResultNumber = (java.lang.Number)retObjectHResult;
+                return retObjectHResultNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectHResult != null ? retObjectHResult.getClass() : "null", retObjectHResult_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,10 +196,14 @@ public class StrongNameSignatureInformation extends NetObject  {
 
     public AsymmetricAlgorithm getPublicKey() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPublicKey = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PublicKey");
+            retObjectPublicKey = classInstance.Get("PublicKey");
+            JCObject val = (JCObject)retObjectPublicKey;
             return new AsymmetricAlgorithm(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPublicKey != null ? retObjectPublicKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,10 +211,14 @@ public class StrongNameSignatureInformation extends NetObject  {
 
     public SignatureVerificationResult getVerificationResult() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVerificationResult = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("VerificationResult");
+            retObjectVerificationResult = classInstance.Get("VerificationResult");
+            JCObject val = (JCObject)retObjectVerificationResult;
             return new SignatureVerificationResult(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVerificationResult != null ? retObjectVerificationResult.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,9 +226,13 @@ public class StrongNameSignatureInformation extends NetObject  {
 
     public java.lang.String getHashAlgorithm() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHashAlgorithm = null;
         try {
-            return (java.lang.String)classInstance.Get("HashAlgorithm");
+            retObjectHashAlgorithm = classInstance.Get("HashAlgorithm");
+            return (java.lang.String)retObjectHashAlgorithm;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectHashAlgorithm != null ? retObjectHashAlgorithm.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

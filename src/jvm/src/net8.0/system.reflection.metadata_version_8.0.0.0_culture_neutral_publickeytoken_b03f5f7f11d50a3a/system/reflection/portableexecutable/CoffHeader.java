@@ -161,9 +161,20 @@ public class CoffHeader extends NetObject  {
     
     public short getNumberOfSections() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNumberOfSections = null;
         try {
-            return (short)classInstance.Get("NumberOfSections");
+            retObjectNumberOfSections = classInstance.Get("NumberOfSections");
+            return (short)retObjectNumberOfSections;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectNumberOfSections_ToString = retObjectNumberOfSections == null ? "null" : retObjectNumberOfSections.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectNumberOfSectionsNumber = (java.lang.Number)retObjectNumberOfSections;
+                return retObjectNumberOfSectionsNumber.shortValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into short and, as fallback solution, into java.lang.Number", retObjectNumberOfSections != null ? retObjectNumberOfSections.getClass() : "null", retObjectNumberOfSections_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,9 +182,20 @@ public class CoffHeader extends NetObject  {
 
     public short getSizeOfOptionalHeader() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSizeOfOptionalHeader = null;
         try {
-            return (short)classInstance.Get("SizeOfOptionalHeader");
+            retObjectSizeOfOptionalHeader = classInstance.Get("SizeOfOptionalHeader");
+            return (short)retObjectSizeOfOptionalHeader;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSizeOfOptionalHeader_ToString = retObjectSizeOfOptionalHeader == null ? "null" : retObjectSizeOfOptionalHeader.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectSizeOfOptionalHeaderNumber = (java.lang.Number)retObjectSizeOfOptionalHeader;
+                return retObjectSizeOfOptionalHeaderNumber.shortValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into short and, as fallback solution, into java.lang.Number", retObjectSizeOfOptionalHeader != null ? retObjectSizeOfOptionalHeader.getClass() : "null", retObjectSizeOfOptionalHeader_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,9 +203,20 @@ public class CoffHeader extends NetObject  {
 
     public int getNumberOfSymbols() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNumberOfSymbols = null;
         try {
-            return (int)classInstance.Get("NumberOfSymbols");
+            retObjectNumberOfSymbols = classInstance.Get("NumberOfSymbols");
+            return (int)retObjectNumberOfSymbols;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectNumberOfSymbols_ToString = retObjectNumberOfSymbols == null ? "null" : retObjectNumberOfSymbols.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectNumberOfSymbolsNumber = (java.lang.Number)retObjectNumberOfSymbols;
+                return retObjectNumberOfSymbolsNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectNumberOfSymbols != null ? retObjectNumberOfSymbols.getClass() : "null", retObjectNumberOfSymbols_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,9 +224,20 @@ public class CoffHeader extends NetObject  {
 
     public int getPointerToSymbolTable() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPointerToSymbolTable = null;
         try {
-            return (int)classInstance.Get("PointerToSymbolTable");
+            retObjectPointerToSymbolTable = classInstance.Get("PointerToSymbolTable");
+            return (int)retObjectPointerToSymbolTable;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectPointerToSymbolTable_ToString = retObjectPointerToSymbolTable == null ? "null" : retObjectPointerToSymbolTable.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectPointerToSymbolTableNumber = (java.lang.Number)retObjectPointerToSymbolTable;
+                return retObjectPointerToSymbolTableNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectPointerToSymbolTable != null ? retObjectPointerToSymbolTable.getClass() : "null", retObjectPointerToSymbolTable_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,9 +245,20 @@ public class CoffHeader extends NetObject  {
 
     public int getTimeDateStamp() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTimeDateStamp = null;
         try {
-            return (int)classInstance.Get("TimeDateStamp");
+            retObjectTimeDateStamp = classInstance.Get("TimeDateStamp");
+            return (int)retObjectTimeDateStamp;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectTimeDateStamp_ToString = retObjectTimeDateStamp == null ? "null" : retObjectTimeDateStamp.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectTimeDateStampNumber = (java.lang.Number)retObjectTimeDateStamp;
+                return retObjectTimeDateStampNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectTimeDateStamp != null ? retObjectTimeDateStamp.getClass() : "null", retObjectTimeDateStamp_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -211,10 +266,14 @@ public class CoffHeader extends NetObject  {
 
     public Characteristics getCharacteristics() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCharacteristics = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Characteristics");
+            retObjectCharacteristics = classInstance.Get("Characteristics");
+            JCObject val = (JCObject)retObjectCharacteristics;
             return new Characteristics(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCharacteristics != null ? retObjectCharacteristics.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -222,10 +281,14 @@ public class CoffHeader extends NetObject  {
 
     public Machine getMachine() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMachine = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Machine");
+            retObjectMachine = classInstance.Get("Machine");
+            JCObject val = (JCObject)retObjectMachine;
             return new Machine(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMachine != null ? retObjectMachine.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

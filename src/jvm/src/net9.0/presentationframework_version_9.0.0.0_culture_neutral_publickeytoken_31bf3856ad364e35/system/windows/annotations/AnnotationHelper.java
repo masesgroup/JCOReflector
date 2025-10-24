@@ -158,10 +158,14 @@ public class AnnotationHelper extends NetObject  {
     
     public static Annotation CreateHighlightForSelection(AnnotationService service, java.lang.String author, Brush highlightBrush) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidCastException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.IndexOutOfRangeException, system.NotSupportedException, system.collections.generic.KeyNotFoundException, system.OverflowException, system.componentmodel.InvalidEnumArgumentException, system.xml.XmlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateHighlightForSelection = null;
         try {
-            JCObject objCreateHighlightForSelection = (JCObject)classType.Invoke("CreateHighlightForSelection", service == null ? null : service.getJCOInstance(), author, highlightBrush == null ? null : highlightBrush.getJCOInstance());
+            retObjectCreateHighlightForSelection = classType.Invoke("CreateHighlightForSelection", service == null ? null : service.getJCOInstance(), author, highlightBrush == null ? null : highlightBrush.getJCOInstance());
+            JCObject objCreateHighlightForSelection = (JCObject)retObjectCreateHighlightForSelection;
             return new Annotation(objCreateHighlightForSelection);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateHighlightForSelection != null ? retObjectCreateHighlightForSelection.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,10 +173,14 @@ public class AnnotationHelper extends NetObject  {
 
     public static Annotation CreateInkStickyNoteForSelection(AnnotationService service, java.lang.String author) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ObjectDisposedException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.io.IOException, system.UnauthorizedAccessException, system.IndexOutOfRangeException, system.InvalidOperationException, system.InvalidCastException, system.OverflowException, system.componentmodel.InvalidEnumArgumentException, system.MulticastNotSupportedException, system.NullReferenceException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateInkStickyNoteForSelection = null;
         try {
-            JCObject objCreateInkStickyNoteForSelection = (JCObject)classType.Invoke("CreateInkStickyNoteForSelection", service == null ? null : service.getJCOInstance(), author);
+            retObjectCreateInkStickyNoteForSelection = classType.Invoke("CreateInkStickyNoteForSelection", service == null ? null : service.getJCOInstance(), author);
+            JCObject objCreateInkStickyNoteForSelection = (JCObject)retObjectCreateInkStickyNoteForSelection;
             return new Annotation(objCreateInkStickyNoteForSelection);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateInkStickyNoteForSelection != null ? retObjectCreateInkStickyNoteForSelection.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,10 +188,14 @@ public class AnnotationHelper extends NetObject  {
 
     public static Annotation CreateTextStickyNoteForSelection(AnnotationService service, java.lang.String author) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ObjectDisposedException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.io.IOException, system.UnauthorizedAccessException, system.IndexOutOfRangeException, system.InvalidOperationException, system.InvalidCastException, system.OverflowException, system.componentmodel.InvalidEnumArgumentException, system.MulticastNotSupportedException, system.NullReferenceException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateTextStickyNoteForSelection = null;
         try {
-            JCObject objCreateTextStickyNoteForSelection = (JCObject)classType.Invoke("CreateTextStickyNoteForSelection", service == null ? null : service.getJCOInstance(), author);
+            retObjectCreateTextStickyNoteForSelection = classType.Invoke("CreateTextStickyNoteForSelection", service == null ? null : service.getJCOInstance(), author);
+            JCObject objCreateTextStickyNoteForSelection = (JCObject)retObjectCreateTextStickyNoteForSelection;
             return new Annotation(objCreateTextStickyNoteForSelection);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateTextStickyNoteForSelection != null ? retObjectCreateTextStickyNoteForSelection.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,10 +203,14 @@ public class AnnotationHelper extends NetObject  {
 
     public static IAnchorInfo GetAnchorInfo(AnnotationService service, Annotation annotation) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.security.SecurityException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.io.IOException, system.UnauthorizedAccessException, system.MulticastNotSupportedException, system.NullReferenceException, system.globalization.CultureNotFoundException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetAnchorInfo = null;
         try {
-            JCObject objGetAnchorInfo = (JCObject)classType.Invoke("GetAnchorInfo", service == null ? null : service.getJCOInstance(), annotation == null ? null : annotation.getJCOInstance());
+            retObjectGetAnchorInfo = classType.Invoke("GetAnchorInfo", service == null ? null : service.getJCOInstance(), annotation == null ? null : annotation.getJCOInstance());
+            JCObject objGetAnchorInfo = (JCObject)retObjectGetAnchorInfo;
             return new IAnchorInfoImplementation(objGetAnchorInfo);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetAnchorInfo != null ? retObjectGetAnchorInfo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,7 +218,7 @@ public class AnnotationHelper extends NetObject  {
 
     public static void ClearHighlightsForSelection(AnnotationService service) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidCastException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.IndexOutOfRangeException, system.NotSupportedException, system.collections.generic.KeyNotFoundException, system.OverflowException, system.componentmodel.InvalidEnumArgumentException, system.xml.XmlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("ClearHighlightsForSelection", service == null ? null : service.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -212,7 +228,7 @@ public class AnnotationHelper extends NetObject  {
 
     public static void DeleteInkStickyNotesForSelection(AnnotationService service) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidCastException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException, system.RankException, system.ArrayTypeMismatchException, system.NotSupportedException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("DeleteInkStickyNotesForSelection", service == null ? null : service.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -222,7 +238,7 @@ public class AnnotationHelper extends NetObject  {
 
     public static void DeleteTextStickyNotesForSelection(AnnotationService service) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidCastException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException, system.RankException, system.ArrayTypeMismatchException, system.NotSupportedException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("DeleteTextStickyNotesForSelection", service == null ? null : service.getJCOInstance());
         } catch (JCNativeException jcne) {

@@ -164,9 +164,20 @@ public class ServiceHostBase extends CommunicationObject implements system.IDisp
     
     public int IncrementManualFlowControlLimit(int incrementBy) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIncrementManualFlowControlLimit = null;
         try {
-            return (int)classInstance.Invoke("IncrementManualFlowControlLimit", incrementBy);
+            retObjectIncrementManualFlowControlLimit = classInstance.Invoke("IncrementManualFlowControlLimit", incrementBy);
+            return (int)retObjectIncrementManualFlowControlLimit;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectIncrementManualFlowControlLimit_ToString = retObjectIncrementManualFlowControlLimit == null ? "null" : retObjectIncrementManualFlowControlLimit.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectIncrementManualFlowControlLimitNumber = (java.lang.Number)retObjectIncrementManualFlowControlLimit;
+                return retObjectIncrementManualFlowControlLimitNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectIncrementManualFlowControlLimit != null ? retObjectIncrementManualFlowControlLimit.getClass() : "null", retObjectIncrementManualFlowControlLimit_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -174,10 +185,14 @@ public class ServiceHostBase extends CommunicationObject implements system.IDisp
 
     public ServiceEndpoint AddServiceEndpoint(java.lang.String implementedContract, system.servicemodel.channels.Binding binding, java.lang.String address) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException, system.MemberAccessException, system.NullReferenceException, system.UriFormatException, system.collections.generic.KeyNotFoundException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddServiceEndpoint = null;
         try {
-            JCObject objAddServiceEndpoint = (JCObject)classInstance.Invoke("AddServiceEndpoint", implementedContract, binding == null ? null : binding.getJCOInstance(), address);
+            retObjectAddServiceEndpoint = classInstance.Invoke("AddServiceEndpoint", implementedContract, binding == null ? null : binding.getJCOInstance(), address);
+            JCObject objAddServiceEndpoint = (JCObject)retObjectAddServiceEndpoint;
             return new ServiceEndpoint(objAddServiceEndpoint);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddServiceEndpoint != null ? retObjectAddServiceEndpoint.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -185,10 +200,14 @@ public class ServiceHostBase extends CommunicationObject implements system.IDisp
 
     public ServiceEndpoint AddServiceEndpoint(java.lang.String implementedContract, system.servicemodel.channels.Binding binding, java.lang.String address, Uri listenUri) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException, system.security.SecurityException, system.MemberAccessException, system.UriFormatException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddServiceEndpoint = null;
         try {
-            JCObject objAddServiceEndpoint = (JCObject)classInstance.Invoke("AddServiceEndpoint", implementedContract, binding == null ? null : binding.getJCOInstance(), address, listenUri == null ? null : listenUri.getJCOInstance());
+            retObjectAddServiceEndpoint = classInstance.Invoke("AddServiceEndpoint", implementedContract, binding == null ? null : binding.getJCOInstance(), address, listenUri == null ? null : listenUri.getJCOInstance());
+            JCObject objAddServiceEndpoint = (JCObject)retObjectAddServiceEndpoint;
             return new ServiceEndpoint(objAddServiceEndpoint);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddServiceEndpoint != null ? retObjectAddServiceEndpoint.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,10 +215,14 @@ public class ServiceHostBase extends CommunicationObject implements system.IDisp
 
     public ServiceEndpoint AddServiceEndpoint(java.lang.String implementedContract, system.servicemodel.channels.Binding binding, Uri address) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddServiceEndpoint = null;
         try {
-            JCObject objAddServiceEndpoint = (JCObject)classInstance.Invoke("AddServiceEndpoint", implementedContract, binding == null ? null : binding.getJCOInstance(), address == null ? null : address.getJCOInstance());
+            retObjectAddServiceEndpoint = classInstance.Invoke("AddServiceEndpoint", implementedContract, binding == null ? null : binding.getJCOInstance(), address == null ? null : address.getJCOInstance());
+            JCObject objAddServiceEndpoint = (JCObject)retObjectAddServiceEndpoint;
             return new ServiceEndpoint(objAddServiceEndpoint);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddServiceEndpoint != null ? retObjectAddServiceEndpoint.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -207,10 +230,14 @@ public class ServiceHostBase extends CommunicationObject implements system.IDisp
 
     public ServiceEndpoint AddServiceEndpoint(java.lang.String implementedContract, system.servicemodel.channels.Binding binding, Uri address, Uri listenUri) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddServiceEndpoint = null;
         try {
-            JCObject objAddServiceEndpoint = (JCObject)classInstance.Invoke("AddServiceEndpoint", implementedContract, binding == null ? null : binding.getJCOInstance(), address == null ? null : address.getJCOInstance(), listenUri == null ? null : listenUri.getJCOInstance());
+            retObjectAddServiceEndpoint = classInstance.Invoke("AddServiceEndpoint", implementedContract, binding == null ? null : binding.getJCOInstance(), address == null ? null : address.getJCOInstance(), listenUri == null ? null : listenUri.getJCOInstance());
+            JCObject objAddServiceEndpoint = (JCObject)retObjectAddServiceEndpoint;
             return new ServiceEndpoint(objAddServiceEndpoint);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddServiceEndpoint != null ? retObjectAddServiceEndpoint.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -218,7 +245,7 @@ public class ServiceHostBase extends CommunicationObject implements system.IDisp
 
     public void AddServiceEndpoint(ServiceEndpoint endpoint) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddServiceEndpoint", endpoint == null ? null : endpoint.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -228,7 +255,7 @@ public class ServiceHostBase extends CommunicationObject implements system.IDisp
 
     public void SetEndpointAddress(ServiceEndpoint endpoint, java.lang.String relativeAddress) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.security.SecurityException, system.MemberAccessException, system.NullReferenceException, system.configuration.ConfigurationException, system.UriFormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetEndpointAddress", endpoint == null ? null : endpoint.getJCOInstance(), relativeAddress);
         } catch (JCNativeException jcne) {
@@ -242,13 +269,13 @@ public class ServiceHostBase extends CommunicationObject implements system.IDisp
      */
     @Deprecated 
     public void Dispose() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDisposable to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDisposable to obtain the full interface.");
     }
 
     public void close() throws Exception {
         try {
             if (classInstance == null)
-                throw new UnsupportedOperationException("classInstance is null.");
+                throw new java.lang.UnsupportedOperationException("classInstance is null.");
             try {
                 classInstance.Invoke("Dispose");
             }
@@ -264,9 +291,20 @@ public class ServiceHostBase extends CommunicationObject implements system.IDisp
     
     public int getManualFlowControlLimit() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectManualFlowControlLimit = null;
         try {
-            return (int)classInstance.Get("ManualFlowControlLimit");
+            retObjectManualFlowControlLimit = classInstance.Get("ManualFlowControlLimit");
+            return (int)retObjectManualFlowControlLimit;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectManualFlowControlLimit_ToString = retObjectManualFlowControlLimit == null ? "null" : retObjectManualFlowControlLimit.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectManualFlowControlLimitNumber = (java.lang.Number)retObjectManualFlowControlLimit;
+                return retObjectManualFlowControlLimitNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectManualFlowControlLimit != null ? retObjectManualFlowControlLimit.getClass() : "null", retObjectManualFlowControlLimit_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -274,7 +312,7 @@ public class ServiceHostBase extends CommunicationObject implements system.IDisp
 
     public void setManualFlowControlLimit(int ManualFlowControlLimit) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ManualFlowControlLimit", ManualFlowControlLimit);
         } catch (JCNativeException jcne) {
@@ -284,10 +322,14 @@ public class ServiceHostBase extends CommunicationObject implements system.IDisp
 
     public ServiceAuthenticationBehavior getAuthentication() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAuthentication = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Authentication");
+            retObjectAuthentication = classInstance.Get("Authentication");
+            JCObject val = (JCObject)retObjectAuthentication;
             return new ServiceAuthenticationBehavior(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAuthentication != null ? retObjectAuthentication.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -295,10 +337,14 @@ public class ServiceHostBase extends CommunicationObject implements system.IDisp
 
     public ServiceAuthorizationBehavior getAuthorization() throws Throwable, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAuthorization = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Authorization");
+            retObjectAuthorization = classInstance.Get("Authorization");
+            JCObject val = (JCObject)retObjectAuthorization;
             return new ServiceAuthorizationBehavior(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAuthorization != null ? retObjectAuthorization.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -306,10 +352,14 @@ public class ServiceHostBase extends CommunicationObject implements system.IDisp
 
     public ServiceCredentials getCredentials() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.OutOfMemoryException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCredentials = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Credentials");
+            retObjectCredentials = classInstance.Get("Credentials");
+            JCObject val = (JCObject)retObjectCredentials;
             return new ServiceCredentials(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCredentials != null ? retObjectCredentials.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -317,10 +367,14 @@ public class ServiceHostBase extends CommunicationObject implements system.IDisp
 
     public ServiceDescription getDescription() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDescription = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Description");
+            retObjectDescription = classInstance.Get("Description");
+            JCObject val = (JCObject)retObjectDescription;
             return new ServiceDescription(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDescription != null ? retObjectDescription.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -328,10 +382,14 @@ public class ServiceHostBase extends CommunicationObject implements system.IDisp
 
     public ChannelDispatcherCollection getChannelDispatchers() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectChannelDispatchers = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ChannelDispatchers");
+            retObjectChannelDispatchers = classInstance.Get("ChannelDispatchers");
+            JCObject val = (JCObject)retObjectChannelDispatchers;
             return new ChannelDispatcherCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectChannelDispatchers != null ? retObjectChannelDispatchers.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -339,10 +397,14 @@ public class ServiceHostBase extends CommunicationObject implements system.IDisp
 
     public TimeSpan getCloseTimeout() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCloseTimeout = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CloseTimeout");
+            retObjectCloseTimeout = classInstance.Get("CloseTimeout");
+            JCObject val = (JCObject)retObjectCloseTimeout;
             return new TimeSpan(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCloseTimeout != null ? retObjectCloseTimeout.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -350,7 +412,7 @@ public class ServiceHostBase extends CommunicationObject implements system.IDisp
 
     public void setCloseTimeout(TimeSpan CloseTimeout) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CloseTimeout", CloseTimeout == null ? null : CloseTimeout.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -360,10 +422,14 @@ public class ServiceHostBase extends CommunicationObject implements system.IDisp
 
     public TimeSpan getOpenTimeout() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOpenTimeout = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("OpenTimeout");
+            retObjectOpenTimeout = classInstance.Get("OpenTimeout");
+            JCObject val = (JCObject)retObjectOpenTimeout;
             return new TimeSpan(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOpenTimeout != null ? retObjectOpenTimeout.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -371,7 +437,7 @@ public class ServiceHostBase extends CommunicationObject implements system.IDisp
 
     public void setOpenTimeout(TimeSpan OpenTimeout) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("OpenTimeout", OpenTimeout == null ? null : OpenTimeout.getJCOInstance());
         } catch (JCNativeException jcne) {

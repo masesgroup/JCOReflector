@@ -176,9 +176,13 @@ public class EventTrigger extends TriggerBase implements system.windows.markup.I
     
     public boolean ShouldSerializeActions() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShouldSerializeActions = null;
         try {
-            return (boolean)classInstance.Invoke("ShouldSerializeActions");
+            retObjectShouldSerializeActions = classInstance.Invoke("ShouldSerializeActions");
+            return (boolean)retObjectShouldSerializeActions;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectShouldSerializeActions != null ? retObjectShouldSerializeActions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,7 +194,7 @@ public class EventTrigger extends TriggerBase implements system.windows.markup.I
      */
     @Deprecated 
     public void AddChild(NetObject value) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAddChild to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAddChild to obtain the full interface.");
     }
 
     /**
@@ -199,7 +203,7 @@ public class EventTrigger extends TriggerBase implements system.windows.markup.I
      */
     @Deprecated 
     public void AddText(java.lang.String text) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAddChild to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAddChild to obtain the full interface.");
     }
 
 
@@ -208,9 +212,13 @@ public class EventTrigger extends TriggerBase implements system.windows.markup.I
     
     public java.lang.String getSourceName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSourceName = null;
         try {
-            return (java.lang.String)classInstance.Get("SourceName");
+            retObjectSourceName = classInstance.Get("SourceName");
+            return (java.lang.String)retObjectSourceName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSourceName != null ? retObjectSourceName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -218,7 +226,7 @@ public class EventTrigger extends TriggerBase implements system.windows.markup.I
 
     public void setSourceName(java.lang.String SourceName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SourceName", SourceName);
         } catch (JCNativeException jcne) {
@@ -228,10 +236,14 @@ public class EventTrigger extends TriggerBase implements system.windows.markup.I
 
     public RoutedEvent getRoutedEvent() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRoutedEvent = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RoutedEvent");
+            retObjectRoutedEvent = classInstance.Get("RoutedEvent");
+            JCObject val = (JCObject)retObjectRoutedEvent;
             return new RoutedEvent(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRoutedEvent != null ? retObjectRoutedEvent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -239,7 +251,7 @@ public class EventTrigger extends TriggerBase implements system.windows.markup.I
 
     public void setRoutedEvent(RoutedEvent RoutedEvent) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RoutedEvent", RoutedEvent == null ? null : RoutedEvent.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -249,10 +261,14 @@ public class EventTrigger extends TriggerBase implements system.windows.markup.I
 
     public TriggerActionCollection getActions() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectActions = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Actions");
+            retObjectActions = classInstance.Get("Actions");
+            JCObject val = (JCObject)retObjectActions;
             return new TriggerActionCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectActions != null ? retObjectActions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

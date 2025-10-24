@@ -173,8 +173,8 @@ public class TypeFilter extends JCDelegate implements IJCEventEmit, IJCOBridgeRe
         } else if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
         } else
-            throw new UnsupportedOperationException(
-                    String.format("Class %s is not supported.", instance.getClass().getTypeName()));
+            throw new java.lang.UnsupportedOperationException(
+                    java.lang.String.format("Class %s is not supported.", instance.getClass().getTypeName()));
     }
 
     protected final static <T extends IJCOBridgeReflected> java.lang.Object toObjectFromArray(T[] input) {
@@ -187,9 +187,13 @@ public class TypeFilter extends JCDelegate implements IJCEventEmit, IJCOBridgeRe
 
     public boolean DynamicInvoke(NetType m, NetObject filterCriteria) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDynamicInvoke = null;
         try {
-            return (boolean)classInstance.Invoke("DynamicInvoke", m == null ? null : m.getJCOInstance(), filterCriteria == null ? null : filterCriteria.getJCOInstance());
+            retObjectDynamicInvoke = classInstance.Invoke("DynamicInvoke", m == null ? null : m.getJCOInstance(), filterCriteria == null ? null : filterCriteria.getJCOInstance());
+            return (boolean)retObjectDynamicInvoke;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectDynamicInvoke != null ? retObjectDynamicInvoke.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

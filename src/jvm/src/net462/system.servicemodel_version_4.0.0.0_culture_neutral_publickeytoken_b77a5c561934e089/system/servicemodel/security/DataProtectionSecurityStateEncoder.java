@@ -182,10 +182,12 @@ public class DataProtectionSecurityStateEncoder extends SecurityStateEncoder  {
     
     public byte[] GetEntropy() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetEntropy = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetEntropy");
+            retObjectGetEntropy = classInstance.Invoke("GetEntropy");
+            JCObject resultingObjects = (JCObject)retObjectGetEntropy;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -194,6 +196,8 @@ public class DataProtectionSecurityStateEncoder extends SecurityStateEncoder  {
 				resultingArray[indexGetEntropy] = (byte)resultingArrayList.get(indexGetEntropy);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectGetEntropy != null ? retObjectGetEntropy.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -205,9 +209,13 @@ public class DataProtectionSecurityStateEncoder extends SecurityStateEncoder  {
     
     public boolean getUseCurrentUserProtectionScope() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUseCurrentUserProtectionScope = null;
         try {
-            return (boolean)classInstance.Get("UseCurrentUserProtectionScope");
+            retObjectUseCurrentUserProtectionScope = classInstance.Get("UseCurrentUserProtectionScope");
+            return (boolean)retObjectUseCurrentUserProtectionScope;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectUseCurrentUserProtectionScope != null ? retObjectUseCurrentUserProtectionScope.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -171,9 +171,13 @@ public class ListViewItemSelectionChangedEventArgs extends EventArgs  {
     
     public boolean getIsSelected() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsSelected = null;
         try {
-            return (boolean)classInstance.Get("IsSelected");
+            retObjectIsSelected = classInstance.Get("IsSelected");
+            return (boolean)retObjectIsSelected;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsSelected != null ? retObjectIsSelected.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,9 +185,20 @@ public class ListViewItemSelectionChangedEventArgs extends EventArgs  {
 
     public int getItemIndex() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectItemIndex = null;
         try {
-            return (int)classInstance.Get("ItemIndex");
+            retObjectItemIndex = classInstance.Get("ItemIndex");
+            return (int)retObjectItemIndex;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectItemIndex_ToString = retObjectItemIndex == null ? "null" : retObjectItemIndex.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectItemIndexNumber = (java.lang.Number)retObjectItemIndex;
+                return retObjectItemIndexNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectItemIndex != null ? retObjectItemIndex.getClass() : "null", retObjectItemIndex_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,10 +206,14 @@ public class ListViewItemSelectionChangedEventArgs extends EventArgs  {
 
     public ListViewItem getItem() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectItem = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Item");
+            retObjectItem = classInstance.Get("Item");
+            JCObject val = (JCObject)retObjectItem;
             return new ListViewItem(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectItem != null ? retObjectItem.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

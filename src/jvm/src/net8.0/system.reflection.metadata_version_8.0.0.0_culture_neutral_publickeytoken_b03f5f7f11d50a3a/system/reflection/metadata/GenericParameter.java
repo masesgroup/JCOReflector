@@ -161,10 +161,14 @@ public class GenericParameter extends ValueType  {
     
     public CustomAttributeHandleCollection GetCustomAttributes() throws Throwable, system.BadImageFormatException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetCustomAttributes = null;
         try {
-            JCObject objGetCustomAttributes = (JCObject)classInstance.Invoke("GetCustomAttributes");
+            retObjectGetCustomAttributes = classInstance.Invoke("GetCustomAttributes");
+            JCObject objGetCustomAttributes = (JCObject)retObjectGetCustomAttributes;
             return new CustomAttributeHandleCollection(objGetCustomAttributes);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCustomAttributes != null ? retObjectGetCustomAttributes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,10 +176,14 @@ public class GenericParameter extends ValueType  {
 
     public GenericParameterConstraintHandleCollection GetConstraints() throws Throwable, system.BadImageFormatException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetConstraints = null;
         try {
-            JCObject objGetConstraints = (JCObject)classInstance.Invoke("GetConstraints");
+            retObjectGetConstraints = classInstance.Invoke("GetConstraints");
+            JCObject objGetConstraints = (JCObject)retObjectGetConstraints;
             return new GenericParameterConstraintHandleCollection(objGetConstraints);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetConstraints != null ? retObjectGetConstraints.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,9 +195,20 @@ public class GenericParameter extends ValueType  {
     
     public int getIndex() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.BadImageFormatException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIndex = null;
         try {
-            return (int)classInstance.Get("Index");
+            retObjectIndex = classInstance.Get("Index");
+            return (int)retObjectIndex;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectIndex_ToString = retObjectIndex == null ? "null" : retObjectIndex.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectIndexNumber = (java.lang.Number)retObjectIndex;
+                return retObjectIndexNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectIndex != null ? retObjectIndex.getClass() : "null", retObjectIndex_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,10 +216,14 @@ public class GenericParameter extends ValueType  {
 
     public GenericParameterAttributes getAttributes() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.BadImageFormatException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAttributes = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Attributes");
+            retObjectAttributes = classInstance.Get("Attributes");
+            JCObject val = (JCObject)retObjectAttributes;
             return new GenericParameterAttributes(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAttributes != null ? retObjectAttributes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -208,10 +231,14 @@ public class GenericParameter extends ValueType  {
 
     public EntityHandle getParent() throws Throwable, system.BadImageFormatException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectParent = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Parent");
+            retObjectParent = classInstance.Get("Parent");
+            JCObject val = (JCObject)retObjectParent;
             return new EntityHandle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParent != null ? retObjectParent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -219,10 +246,14 @@ public class GenericParameter extends ValueType  {
 
     public StringHandle getName() throws Throwable, system.ArgumentException, system.BadImageFormatException, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectName = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Name");
+            retObjectName = classInstance.Get("Name");
+            JCObject val = (JCObject)retObjectName;
             return new StringHandle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectName != null ? retObjectName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

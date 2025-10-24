@@ -142,7 +142,7 @@ public class IVirtualizedItemProviderImplementation extends NetObject implements
     
     public void Realize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Realize");
         } catch (JCNativeException jcne) {

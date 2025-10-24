@@ -157,10 +157,14 @@ public class RegExpConstructor extends ScriptFunction  {
     
     public RegExpObject CreateInstanceNewRegExpConstructor(NetObject... args) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, microsoft.jscript.JScriptException, system.NotImplementedException, system.MissingMethodException, system.OverflowException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateInstance = null;
         try {
-            JCObject objCreateInstance = (JCObject)classInstance.Invoke("CreateInstance", (java.lang.Object)toObjectFromArray(args));
+            retObjectCreateInstance = classInstance.Invoke("CreateInstance", (java.lang.Object)toObjectFromArray(args));
+            JCObject objCreateInstance = (JCObject)retObjectCreateInstance;
             return new RegExpObject(objCreateInstance);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateInstance != null ? retObjectCreateInstance.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -168,10 +172,14 @@ public class RegExpConstructor extends ScriptFunction  {
 
     public RegExpObject Invoke(NetObject... args) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, microsoft.jscript.JScriptException, system.NotImplementedException, system.MissingMethodException, system.OverflowException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInvoke = null;
         try {
-            JCObject objInvoke = (JCObject)classInstance.Invoke("Invoke", (java.lang.Object)toObjectFromArray(args));
+            retObjectInvoke = classInstance.Invoke("Invoke", (java.lang.Object)toObjectFromArray(args));
+            JCObject objInvoke = (JCObject)retObjectInvoke;
             return new RegExpObject(objInvoke);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInvoke != null ? retObjectInvoke.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,10 +187,14 @@ public class RegExpConstructor extends ScriptFunction  {
 
     public NetObject Construct(java.lang.String pattern, boolean ignoreCase, boolean global, boolean multiline) throws Throwable, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NullReferenceException, system.ObjectDisposedException, system.RankException, system.security.SecurityException, microsoft.jscript.JScriptException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConstruct = null;
         try {
-            JCObject objConstruct = (JCObject)classInstance.Invoke("Construct", pattern, ignoreCase, global, multiline);
+            retObjectConstruct = classInstance.Invoke("Construct", pattern, ignoreCase, global, multiline);
+            JCObject objConstruct = (JCObject)retObjectConstruct;
             return new NetObject(objConstruct);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConstruct != null ? retObjectConstruct.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -194,10 +206,14 @@ public class RegExpConstructor extends ScriptFunction  {
     
     public NetObject getindex() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectindex = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("index");
+            retObjectindex = classInstance.Get("index");
+            JCObject val = (JCObject)retObjectindex;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectindex != null ? retObjectindex.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -205,10 +221,14 @@ public class RegExpConstructor extends ScriptFunction  {
 
     public NetObject getinput() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectinput = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("input");
+            retObjectinput = classInstance.Get("input");
+            JCObject val = (JCObject)retObjectinput;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectinput != null ? retObjectinput.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -216,7 +236,7 @@ public class RegExpConstructor extends ScriptFunction  {
 
     public void setinput(NetObject input) throws Throwable, microsoft.jscript.JScriptException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("input", input == null ? null : input.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -226,10 +246,14 @@ public class RegExpConstructor extends ScriptFunction  {
 
     public NetObject getlastIndex() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectlastIndex = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("lastIndex");
+            retObjectlastIndex = classInstance.Get("lastIndex");
+            JCObject val = (JCObject)retObjectlastIndex;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectlastIndex != null ? retObjectlastIndex.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -237,10 +261,14 @@ public class RegExpConstructor extends ScriptFunction  {
 
     public NetObject getlastMatch() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectlastMatch = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("lastMatch");
+            retObjectlastMatch = classInstance.Get("lastMatch");
+            JCObject val = (JCObject)retObjectlastMatch;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectlastMatch != null ? retObjectlastMatch.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -248,10 +276,14 @@ public class RegExpConstructor extends ScriptFunction  {
 
     public NetObject getlastParen() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectlastParen = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("lastParen");
+            retObjectlastParen = classInstance.Get("lastParen");
+            JCObject val = (JCObject)retObjectlastParen;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectlastParen != null ? retObjectlastParen.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -259,10 +291,14 @@ public class RegExpConstructor extends ScriptFunction  {
 
     public NetObject getleftContext() throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectleftContext = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("leftContext");
+            retObjectleftContext = classInstance.Get("leftContext");
+            JCObject val = (JCObject)retObjectleftContext;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectleftContext != null ? retObjectleftContext.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -270,10 +306,14 @@ public class RegExpConstructor extends ScriptFunction  {
 
     public NetObject getrightContext() throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectrightContext = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("rightContext");
+            retObjectrightContext = classInstance.Get("rightContext");
+            JCObject val = (JCObject)retObjectrightContext;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectrightContext != null ? retObjectrightContext.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

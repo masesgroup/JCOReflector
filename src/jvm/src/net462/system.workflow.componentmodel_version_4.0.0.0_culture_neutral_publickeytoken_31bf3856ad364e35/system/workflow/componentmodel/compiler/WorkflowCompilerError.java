@@ -189,10 +189,14 @@ public class WorkflowCompilerError extends CompilerError  {
     
     public IDictionary getUserData() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUserData = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("UserData");
+            retObjectUserData = classInstance.Get("UserData");
+            JCObject val = (JCObject)retObjectUserData;
             return new IDictionaryImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUserData != null ? retObjectUserData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,9 +204,13 @@ public class WorkflowCompilerError extends CompilerError  {
 
     public java.lang.String getPropertyName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPropertyName = null;
         try {
-            return (java.lang.String)classInstance.Get("PropertyName");
+            retObjectPropertyName = classInstance.Get("PropertyName");
+            return (java.lang.String)retObjectPropertyName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectPropertyName != null ? retObjectPropertyName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -210,7 +218,7 @@ public class WorkflowCompilerError extends CompilerError  {
 
     public void setPropertyName(java.lang.String PropertyName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PropertyName", PropertyName);
         } catch (JCNativeException jcne) {

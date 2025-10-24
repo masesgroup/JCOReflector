@@ -159,10 +159,14 @@ public class LabelExpression extends Expression  {
     
     public LabelExpression Update(LabelTarget target, Expression defaultValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUpdate = null;
         try {
-            JCObject objUpdate = (JCObject)classInstance.Invoke("Update", target == null ? null : target.getJCOInstance(), defaultValue == null ? null : defaultValue.getJCOInstance());
+            retObjectUpdate = classInstance.Invoke("Update", target == null ? null : target.getJCOInstance(), defaultValue == null ? null : defaultValue.getJCOInstance());
+            JCObject objUpdate = (JCObject)retObjectUpdate;
             return new LabelExpression(objUpdate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUpdate != null ? retObjectUpdate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -174,10 +178,14 @@ public class LabelExpression extends Expression  {
     
     public Expression getDefaultValue() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDefaultValue = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DefaultValue");
+            retObjectDefaultValue = classInstance.Get("DefaultValue");
+            JCObject val = (JCObject)retObjectDefaultValue;
             return new Expression(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefaultValue != null ? retObjectDefaultValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -185,10 +193,14 @@ public class LabelExpression extends Expression  {
 
     public LabelTarget getTarget() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTarget = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Target");
+            retObjectTarget = classInstance.Get("Target");
+            JCObject val = (JCObject)retObjectTarget;
             return new LabelTarget(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTarget != null ? retObjectTarget.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

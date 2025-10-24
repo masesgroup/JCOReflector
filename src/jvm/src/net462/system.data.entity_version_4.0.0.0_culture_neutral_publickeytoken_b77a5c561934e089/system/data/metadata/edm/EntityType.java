@@ -158,10 +158,14 @@ public class EntityType extends EntityTypeBase  {
     
     public RefType GetReferenceType() throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetReferenceType = null;
         try {
-            JCObject objGetReferenceType = (JCObject)classInstance.Invoke("GetReferenceType");
+            retObjectGetReferenceType = classInstance.Invoke("GetReferenceType");
+            JCObject objGetReferenceType = (JCObject)retObjectGetReferenceType;
             return new RefType(objGetReferenceType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetReferenceType != null ? retObjectGetReferenceType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

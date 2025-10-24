@@ -163,7 +163,7 @@ public class WebProcessStatistics extends NetObject  {
     
     public void FormatToString(WebEventFormatter formatter) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidTimeZoneException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.NotSupportedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.AccessViolationException, system.TypeInitializationException, system.OverflowException, system.FormatException, system.web.HttpException, system.configuration.ConfigurationException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException, system.MemberAccessException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("FormatToString", formatter == null ? null : formatter.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -177,9 +177,20 @@ public class WebProcessStatistics extends NetObject  {
     
     public int getAppDomainCount() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidTimeZoneException, system.InvalidOperationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.NullReferenceException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.componentmodel.Win32Exception, system.AccessViolationException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAppDomainCount = null;
         try {
-            return (int)classInstance.Get("AppDomainCount");
+            retObjectAppDomainCount = classInstance.Get("AppDomainCount");
+            return (int)retObjectAppDomainCount;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectAppDomainCount_ToString = retObjectAppDomainCount == null ? "null" : retObjectAppDomainCount.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectAppDomainCountNumber = (java.lang.Number)retObjectAppDomainCount;
+                return retObjectAppDomainCountNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectAppDomainCount != null ? retObjectAppDomainCount.getClass() : "null", retObjectAppDomainCount_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,9 +198,20 @@ public class WebProcessStatistics extends NetObject  {
 
     public int getRequestsExecuting() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidTimeZoneException, system.InvalidOperationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.NullReferenceException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.componentmodel.Win32Exception, system.AccessViolationException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRequestsExecuting = null;
         try {
-            return (int)classInstance.Get("RequestsExecuting");
+            retObjectRequestsExecuting = classInstance.Get("RequestsExecuting");
+            return (int)retObjectRequestsExecuting;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectRequestsExecuting_ToString = retObjectRequestsExecuting == null ? "null" : retObjectRequestsExecuting.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectRequestsExecutingNumber = (java.lang.Number)retObjectRequestsExecuting;
+                return retObjectRequestsExecutingNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectRequestsExecuting != null ? retObjectRequestsExecuting.getClass() : "null", retObjectRequestsExecuting_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,9 +219,20 @@ public class WebProcessStatistics extends NetObject  {
 
     public int getRequestsQueued() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidTimeZoneException, system.InvalidOperationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.NullReferenceException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.componentmodel.Win32Exception, system.AccessViolationException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRequestsQueued = null;
         try {
-            return (int)classInstance.Get("RequestsQueued");
+            retObjectRequestsQueued = classInstance.Get("RequestsQueued");
+            return (int)retObjectRequestsQueued;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectRequestsQueued_ToString = retObjectRequestsQueued == null ? "null" : retObjectRequestsQueued.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectRequestsQueuedNumber = (java.lang.Number)retObjectRequestsQueued;
+                return retObjectRequestsQueuedNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectRequestsQueued != null ? retObjectRequestsQueued.getClass() : "null", retObjectRequestsQueued_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -207,9 +240,20 @@ public class WebProcessStatistics extends NetObject  {
 
     public int getRequestsRejected() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidTimeZoneException, system.InvalidOperationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.NullReferenceException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.componentmodel.Win32Exception, system.AccessViolationException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRequestsRejected = null;
         try {
-            return (int)classInstance.Get("RequestsRejected");
+            retObjectRequestsRejected = classInstance.Get("RequestsRejected");
+            return (int)retObjectRequestsRejected;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectRequestsRejected_ToString = retObjectRequestsRejected == null ? "null" : retObjectRequestsRejected.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectRequestsRejectedNumber = (java.lang.Number)retObjectRequestsRejected;
+                return retObjectRequestsRejectedNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectRequestsRejected != null ? retObjectRequestsRejected.getClass() : "null", retObjectRequestsRejected_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -217,9 +261,20 @@ public class WebProcessStatistics extends NetObject  {
 
     public int getThreadCount() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidTimeZoneException, system.InvalidOperationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.NullReferenceException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.componentmodel.Win32Exception, system.AccessViolationException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectThreadCount = null;
         try {
-            return (int)classInstance.Get("ThreadCount");
+            retObjectThreadCount = classInstance.Get("ThreadCount");
+            return (int)retObjectThreadCount;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectThreadCount_ToString = retObjectThreadCount == null ? "null" : retObjectThreadCount.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectThreadCountNumber = (java.lang.Number)retObjectThreadCount;
+                return retObjectThreadCountNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectThreadCount != null ? retObjectThreadCount.getClass() : "null", retObjectThreadCount_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -227,9 +282,20 @@ public class WebProcessStatistics extends NetObject  {
 
     public long getManagedHeapSize() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidTimeZoneException, system.InvalidOperationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.NullReferenceException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.componentmodel.Win32Exception, system.AccessViolationException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectManagedHeapSize = null;
         try {
-            return (long)classInstance.Get("ManagedHeapSize");
+            retObjectManagedHeapSize = classInstance.Get("ManagedHeapSize");
+            return (long)retObjectManagedHeapSize;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectManagedHeapSize_ToString = retObjectManagedHeapSize == null ? "null" : retObjectManagedHeapSize.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectManagedHeapSizeNumber = (java.lang.Number)retObjectManagedHeapSize;
+                return retObjectManagedHeapSizeNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectManagedHeapSize != null ? retObjectManagedHeapSize.getClass() : "null", retObjectManagedHeapSize_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -237,9 +303,20 @@ public class WebProcessStatistics extends NetObject  {
 
     public long getPeakWorkingSet() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidTimeZoneException, system.InvalidOperationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.NullReferenceException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.componentmodel.Win32Exception, system.AccessViolationException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPeakWorkingSet = null;
         try {
-            return (long)classInstance.Get("PeakWorkingSet");
+            retObjectPeakWorkingSet = classInstance.Get("PeakWorkingSet");
+            return (long)retObjectPeakWorkingSet;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectPeakWorkingSet_ToString = retObjectPeakWorkingSet == null ? "null" : retObjectPeakWorkingSet.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectPeakWorkingSetNumber = (java.lang.Number)retObjectPeakWorkingSet;
+                return retObjectPeakWorkingSetNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectPeakWorkingSet != null ? retObjectPeakWorkingSet.getClass() : "null", retObjectPeakWorkingSet_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -247,9 +324,20 @@ public class WebProcessStatistics extends NetObject  {
 
     public long getWorkingSet() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidTimeZoneException, system.InvalidOperationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.NullReferenceException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.componentmodel.Win32Exception, system.AccessViolationException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWorkingSet = null;
         try {
-            return (long)classInstance.Get("WorkingSet");
+            retObjectWorkingSet = classInstance.Get("WorkingSet");
+            return (long)retObjectWorkingSet;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectWorkingSet_ToString = retObjectWorkingSet == null ? "null" : retObjectWorkingSet.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectWorkingSetNumber = (java.lang.Number)retObjectWorkingSet;
+                return retObjectWorkingSetNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectWorkingSet != null ? retObjectWorkingSet.getClass() : "null", retObjectWorkingSet_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -257,10 +345,14 @@ public class WebProcessStatistics extends NetObject  {
 
     public DateTime getProcessStartTime() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidTimeZoneException, system.InvalidOperationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.NullReferenceException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.componentmodel.Win32Exception, system.AccessViolationException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProcessStartTime = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ProcessStartTime");
+            retObjectProcessStartTime = classInstance.Get("ProcessStartTime");
+            JCObject val = (JCObject)retObjectProcessStartTime;
             return new DateTime(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectProcessStartTime != null ? retObjectProcessStartTime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

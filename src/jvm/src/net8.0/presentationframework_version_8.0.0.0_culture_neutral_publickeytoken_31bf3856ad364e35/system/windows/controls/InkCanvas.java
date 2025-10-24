@@ -184,9 +184,13 @@ public class InkCanvas extends FrameworkElement implements system.windows.markup
     
     public boolean CanPaste() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.threading.ThreadStateException, system.SystemException, system.MulticastNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanPaste = null;
         try {
-            return (boolean)classInstance.Invoke("CanPaste");
+            retObjectCanPaste = classInstance.Invoke("CanPaste");
+            return (boolean)retObjectCanPaste;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCanPaste != null ? retObjectCanPaste.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -194,9 +198,20 @@ public class InkCanvas extends FrameworkElement implements system.windows.markup
 
     public static double GetBottom(UIElement element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetBottom = null;
         try {
-            return (double)classType.Invoke("GetBottom", element == null ? null : element.getJCOInstance());
+            retObjectGetBottom = classType.Invoke("GetBottom", element == null ? null : element.getJCOInstance());
+            return (double)retObjectGetBottom;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetBottom_ToString = retObjectGetBottom == null ? "null" : retObjectGetBottom.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetBottomNumber = (java.lang.Number)retObjectGetBottom;
+                return retObjectGetBottomNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectGetBottom != null ? retObjectGetBottom.getClass() : "null", retObjectGetBottom_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -204,9 +219,20 @@ public class InkCanvas extends FrameworkElement implements system.windows.markup
 
     public static double GetLeft(UIElement element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetLeft = null;
         try {
-            return (double)classType.Invoke("GetLeft", element == null ? null : element.getJCOInstance());
+            retObjectGetLeft = classType.Invoke("GetLeft", element == null ? null : element.getJCOInstance());
+            return (double)retObjectGetLeft;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetLeft_ToString = retObjectGetLeft == null ? "null" : retObjectGetLeft.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetLeftNumber = (java.lang.Number)retObjectGetLeft;
+                return retObjectGetLeftNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectGetLeft != null ? retObjectGetLeft.getClass() : "null", retObjectGetLeft_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -214,9 +240,20 @@ public class InkCanvas extends FrameworkElement implements system.windows.markup
 
     public static double GetRight(UIElement element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetRight = null;
         try {
-            return (double)classType.Invoke("GetRight", element == null ? null : element.getJCOInstance());
+            retObjectGetRight = classType.Invoke("GetRight", element == null ? null : element.getJCOInstance());
+            return (double)retObjectGetRight;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetRight_ToString = retObjectGetRight == null ? "null" : retObjectGetRight.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetRightNumber = (java.lang.Number)retObjectGetRight;
+                return retObjectGetRightNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectGetRight != null ? retObjectGetRight.getClass() : "null", retObjectGetRight_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -224,9 +261,20 @@ public class InkCanvas extends FrameworkElement implements system.windows.markup
 
     public static double GetTop(UIElement element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetTop = null;
         try {
-            return (double)classType.Invoke("GetTop", element == null ? null : element.getJCOInstance());
+            retObjectGetTop = classType.Invoke("GetTop", element == null ? null : element.getJCOInstance());
+            return (double)retObjectGetTop;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetTop_ToString = retObjectGetTop == null ? "null" : retObjectGetTop.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetTopNumber = (java.lang.Number)retObjectGetTop;
+                return retObjectGetTopNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectGetTop != null ? retObjectGetTop.getClass() : "null", retObjectGetTop_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -234,10 +282,14 @@ public class InkCanvas extends FrameworkElement implements system.windows.markup
 
     public InkCanvasSelectionHitResult HitTestSelection(Point point) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException, system.MissingMethodException, system.reflection.TargetInvocationException, system.componentmodel.Win32Exception, system.NotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.xaml.XamlException, system.NotImplementedException, system.windows.markup.XamlParseException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHitTestSelection = null;
         try {
-            JCObject objHitTestSelection = (JCObject)classInstance.Invoke("HitTestSelection", point == null ? null : point.getJCOInstance());
+            retObjectHitTestSelection = classInstance.Invoke("HitTestSelection", point == null ? null : point.getJCOInstance());
+            JCObject objHitTestSelection = (JCObject)retObjectHitTestSelection;
             return new InkCanvasSelectionHitResult(objHitTestSelection);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHitTestSelection != null ? retObjectHitTestSelection.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -245,10 +297,14 @@ public class InkCanvas extends FrameworkElement implements system.windows.markup
 
     public StrokeCollection GetSelectedStrokes() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSelectedStrokes = null;
         try {
-            JCObject objGetSelectedStrokes = (JCObject)classInstance.Invoke("GetSelectedStrokes");
+            retObjectGetSelectedStrokes = classInstance.Invoke("GetSelectedStrokes");
+            JCObject objGetSelectedStrokes = (JCObject)retObjectGetSelectedStrokes;
             return new StrokeCollection(objGetSelectedStrokes);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSelectedStrokes != null ? retObjectGetSelectedStrokes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -256,10 +312,14 @@ public class InkCanvas extends FrameworkElement implements system.windows.markup
 
     public Rect GetSelectionBounds() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSelectionBounds = null;
         try {
-            JCObject objGetSelectionBounds = (JCObject)classInstance.Invoke("GetSelectionBounds");
+            retObjectGetSelectionBounds = classInstance.Invoke("GetSelectionBounds");
+            JCObject objGetSelectionBounds = (JCObject)retObjectGetSelectionBounds;
             return new Rect(objGetSelectionBounds);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSelectionBounds != null ? retObjectGetSelectionBounds.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -267,7 +327,7 @@ public class InkCanvas extends FrameworkElement implements system.windows.markup
 
     public void CopySelection() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.InvalidCastException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.componentmodel.Win32Exception, system.threading.ThreadStateException, system.SystemException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CopySelection");
         } catch (JCNativeException jcne) {
@@ -277,7 +337,7 @@ public class InkCanvas extends FrameworkElement implements system.windows.markup
 
     public void CutSelection() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.InvalidCastException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.componentmodel.Win32Exception, system.threading.ThreadStateException, system.SystemException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CutSelection");
         } catch (JCNativeException jcne) {
@@ -287,7 +347,7 @@ public class InkCanvas extends FrameworkElement implements system.windows.markup
 
     public void Paste() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.NotSupportedException, system.PlatformNotSupportedException, system.threading.ThreadStateException, system.SystemException, system.MulticastNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Paste");
         } catch (JCNativeException jcne) {
@@ -297,7 +357,7 @@ public class InkCanvas extends FrameworkElement implements system.windows.markup
 
     public void Paste(Point point) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.threading.ThreadStateException, system.SystemException, system.ArgumentOutOfRangeException, system.componentmodel.Win32Exception, system.MulticastNotSupportedException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Paste", point == null ? null : point.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -307,7 +367,7 @@ public class InkCanvas extends FrameworkElement implements system.windows.markup
 
     public void Select(StrokeCollection selectedStrokes) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.componentmodel.InvalidEnumArgumentException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Select", selectedStrokes == null ? null : selectedStrokes.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -317,7 +377,7 @@ public class InkCanvas extends FrameworkElement implements system.windows.markup
 
     public static void SetBottom(UIElement element, double length) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetBottom", element == null ? null : element.getJCOInstance(), length);
         } catch (JCNativeException jcne) {
@@ -327,7 +387,7 @@ public class InkCanvas extends FrameworkElement implements system.windows.markup
 
     public static void SetLeft(UIElement element, double length) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetLeft", element == null ? null : element.getJCOInstance(), length);
         } catch (JCNativeException jcne) {
@@ -337,7 +397,7 @@ public class InkCanvas extends FrameworkElement implements system.windows.markup
 
     public static void SetRight(UIElement element, double length) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetRight", element == null ? null : element.getJCOInstance(), length);
         } catch (JCNativeException jcne) {
@@ -347,7 +407,7 @@ public class InkCanvas extends FrameworkElement implements system.windows.markup
 
     public static void SetTop(UIElement element, double length) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetTop", element == null ? null : element.getJCOInstance(), length);
         } catch (JCNativeException jcne) {
@@ -361,7 +421,7 @@ public class InkCanvas extends FrameworkElement implements system.windows.markup
      */
     @Deprecated 
     public void AddChild(NetObject value) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAddChild to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAddChild to obtain the full interface.");
     }
 
     /**
@@ -370,7 +430,7 @@ public class InkCanvas extends FrameworkElement implements system.windows.markup
      */
     @Deprecated 
     public void AddText(java.lang.String text) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAddChild to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAddChild to obtain the full interface.");
     }
 
 
@@ -379,9 +439,13 @@ public class InkCanvas extends FrameworkElement implements system.windows.markup
     
     public boolean getIsGestureRecognizerAvailable() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentNullException, system.componentmodel.Win32Exception, system.PlatformNotSupportedException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsGestureRecognizerAvailable = null;
         try {
-            return (boolean)classInstance.Get("IsGestureRecognizerAvailable");
+            retObjectIsGestureRecognizerAvailable = classInstance.Get("IsGestureRecognizerAvailable");
+            return (boolean)retObjectIsGestureRecognizerAvailable;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsGestureRecognizerAvailable != null ? retObjectIsGestureRecognizerAvailable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -389,9 +453,13 @@ public class InkCanvas extends FrameworkElement implements system.windows.markup
 
     public boolean getMoveEnabled() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMoveEnabled = null;
         try {
-            return (boolean)classInstance.Get("MoveEnabled");
+            retObjectMoveEnabled = classInstance.Get("MoveEnabled");
+            return (boolean)retObjectMoveEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectMoveEnabled != null ? retObjectMoveEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -399,7 +467,7 @@ public class InkCanvas extends FrameworkElement implements system.windows.markup
 
     public void setMoveEnabled(boolean MoveEnabled) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MoveEnabled", MoveEnabled);
         } catch (JCNativeException jcne) {
@@ -409,9 +477,13 @@ public class InkCanvas extends FrameworkElement implements system.windows.markup
 
     public boolean getResizeEnabled() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResizeEnabled = null;
         try {
-            return (boolean)classInstance.Get("ResizeEnabled");
+            retObjectResizeEnabled = classInstance.Get("ResizeEnabled");
+            return (boolean)retObjectResizeEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectResizeEnabled != null ? retObjectResizeEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -419,7 +491,7 @@ public class InkCanvas extends FrameworkElement implements system.windows.markup
 
     public void setResizeEnabled(boolean ResizeEnabled) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ResizeEnabled", ResizeEnabled);
         } catch (JCNativeException jcne) {
@@ -429,9 +501,13 @@ public class InkCanvas extends FrameworkElement implements system.windows.markup
 
     public boolean getUseCustomCursor() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUseCustomCursor = null;
         try {
-            return (boolean)classInstance.Get("UseCustomCursor");
+            retObjectUseCustomCursor = classInstance.Get("UseCustomCursor");
+            return (boolean)retObjectUseCustomCursor;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectUseCustomCursor != null ? retObjectUseCustomCursor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -439,7 +515,7 @@ public class InkCanvas extends FrameworkElement implements system.windows.markup
 
     public void setUseCustomCursor(boolean UseCustomCursor) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UseCustomCursor", UseCustomCursor);
         } catch (JCNativeException jcne) {
@@ -449,10 +525,14 @@ public class InkCanvas extends FrameworkElement implements system.windows.markup
 
     public InkCanvasEditingMode getActiveEditingMode() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectActiveEditingMode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ActiveEditingMode");
+            retObjectActiveEditingMode = classInstance.Get("ActiveEditingMode");
+            JCObject val = (JCObject)retObjectActiveEditingMode;
             return new InkCanvasEditingMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectActiveEditingMode != null ? retObjectActiveEditingMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -460,10 +540,14 @@ public class InkCanvas extends FrameworkElement implements system.windows.markup
 
     public InkCanvasEditingMode getEditingMode() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEditingMode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("EditingMode");
+            retObjectEditingMode = classInstance.Get("EditingMode");
+            JCObject val = (JCObject)retObjectEditingMode;
             return new InkCanvasEditingMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEditingMode != null ? retObjectEditingMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -471,7 +555,7 @@ public class InkCanvas extends FrameworkElement implements system.windows.markup
 
     public void setEditingMode(InkCanvasEditingMode EditingMode) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EditingMode", EditingMode == null ? null : EditingMode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -481,10 +565,14 @@ public class InkCanvas extends FrameworkElement implements system.windows.markup
 
     public InkCanvasEditingMode getEditingModeInverted() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEditingModeInverted = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("EditingModeInverted");
+            retObjectEditingModeInverted = classInstance.Get("EditingModeInverted");
+            JCObject val = (JCObject)retObjectEditingModeInverted;
             return new InkCanvasEditingMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEditingModeInverted != null ? retObjectEditingModeInverted.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -492,7 +580,7 @@ public class InkCanvas extends FrameworkElement implements system.windows.markup
 
     public void setEditingModeInverted(InkCanvasEditingMode EditingModeInverted) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EditingModeInverted", EditingModeInverted == null ? null : EditingModeInverted.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -502,10 +590,14 @@ public class InkCanvas extends FrameworkElement implements system.windows.markup
 
     public UIElementCollection getChildren() throws Throwable, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.InvalidCastException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectChildren = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Children");
+            retObjectChildren = classInstance.Get("Children");
+            JCObject val = (JCObject)retObjectChildren;
             return new UIElementCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectChildren != null ? retObjectChildren.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -513,10 +605,14 @@ public class InkCanvas extends FrameworkElement implements system.windows.markup
 
     public DrawingAttributes getDefaultDrawingAttributes() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDefaultDrawingAttributes = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DefaultDrawingAttributes");
+            retObjectDefaultDrawingAttributes = classInstance.Get("DefaultDrawingAttributes");
+            JCObject val = (JCObject)retObjectDefaultDrawingAttributes;
             return new DrawingAttributes(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefaultDrawingAttributes != null ? retObjectDefaultDrawingAttributes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -524,7 +620,7 @@ public class InkCanvas extends FrameworkElement implements system.windows.markup
 
     public void setDefaultDrawingAttributes(DrawingAttributes DefaultDrawingAttributes) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DefaultDrawingAttributes", DefaultDrawingAttributes == null ? null : DefaultDrawingAttributes.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -534,10 +630,14 @@ public class InkCanvas extends FrameworkElement implements system.windows.markup
 
     public StrokeCollection getStrokes() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStrokes = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Strokes");
+            retObjectStrokes = classInstance.Get("Strokes");
+            JCObject val = (JCObject)retObjectStrokes;
             return new StrokeCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStrokes != null ? retObjectStrokes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -545,7 +645,7 @@ public class InkCanvas extends FrameworkElement implements system.windows.markup
 
     public void setStrokes(StrokeCollection Strokes) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Strokes", Strokes == null ? null : Strokes.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -555,10 +655,14 @@ public class InkCanvas extends FrameworkElement implements system.windows.markup
 
     public StylusShape getEraserShape() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEraserShape = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("EraserShape");
+            retObjectEraserShape = classInstance.Get("EraserShape");
+            JCObject val = (JCObject)retObjectEraserShape;
             return new StylusShape(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEraserShape != null ? retObjectEraserShape.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -566,7 +670,7 @@ public class InkCanvas extends FrameworkElement implements system.windows.markup
 
     public void setEraserShape(StylusShape EraserShape) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EraserShape", EraserShape == null ? null : EraserShape.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -576,10 +680,14 @@ public class InkCanvas extends FrameworkElement implements system.windows.markup
 
     public StylusPointDescription getDefaultStylusPointDescription() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDefaultStylusPointDescription = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DefaultStylusPointDescription");
+            retObjectDefaultStylusPointDescription = classInstance.Get("DefaultStylusPointDescription");
+            JCObject val = (JCObject)retObjectDefaultStylusPointDescription;
             return new StylusPointDescription(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefaultStylusPointDescription != null ? retObjectDefaultStylusPointDescription.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -587,7 +695,7 @@ public class InkCanvas extends FrameworkElement implements system.windows.markup
 
     public void setDefaultStylusPointDescription(StylusPointDescription DefaultStylusPointDescription) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DefaultStylusPointDescription", DefaultStylusPointDescription == null ? null : DefaultStylusPointDescription.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -597,10 +705,14 @@ public class InkCanvas extends FrameworkElement implements system.windows.markup
 
     public Brush getBackground() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBackground = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Background");
+            retObjectBackground = classInstance.Get("Background");
+            JCObject val = (JCObject)retObjectBackground;
             return new Brush(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBackground != null ? retObjectBackground.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -608,7 +720,7 @@ public class InkCanvas extends FrameworkElement implements system.windows.markup
 
     public void setBackground(Brush Background) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Background", Background == null ? null : Background.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -623,7 +735,7 @@ public class InkCanvas extends FrameworkElement implements system.windows.markup
 
     public void addSelectionChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("SelectionChanged", handler);
         } catch (JCNativeException jcne) {
@@ -633,7 +745,7 @@ public class InkCanvas extends FrameworkElement implements system.windows.markup
 
     public void removeSelectionChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("SelectionChanged", handler);
         } catch (JCNativeException jcne) {
@@ -643,7 +755,7 @@ public class InkCanvas extends FrameworkElement implements system.windows.markup
 
     public void addSelectionMoved(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("SelectionMoved", handler);
         } catch (JCNativeException jcne) {
@@ -653,7 +765,7 @@ public class InkCanvas extends FrameworkElement implements system.windows.markup
 
     public void removeSelectionMoved(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("SelectionMoved", handler);
         } catch (JCNativeException jcne) {
@@ -663,7 +775,7 @@ public class InkCanvas extends FrameworkElement implements system.windows.markup
 
     public void addSelectionResized(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("SelectionResized", handler);
         } catch (JCNativeException jcne) {
@@ -673,7 +785,7 @@ public class InkCanvas extends FrameworkElement implements system.windows.markup
 
     public void removeSelectionResized(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("SelectionResized", handler);
         } catch (JCNativeException jcne) {
@@ -683,7 +795,7 @@ public class InkCanvas extends FrameworkElement implements system.windows.markup
 
     public void addGesture(InkCanvasGestureEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Gesture", handler);
         } catch (JCNativeException jcne) {
@@ -693,7 +805,7 @@ public class InkCanvas extends FrameworkElement implements system.windows.markup
 
     public void removeGesture(InkCanvasGestureEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Gesture", handler);
         } catch (JCNativeException jcne) {
@@ -703,7 +815,7 @@ public class InkCanvas extends FrameworkElement implements system.windows.markup
 
     public void addSelectionChanging(InkCanvasSelectionChangingEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("SelectionChanging", handler);
         } catch (JCNativeException jcne) {
@@ -713,7 +825,7 @@ public class InkCanvas extends FrameworkElement implements system.windows.markup
 
     public void removeSelectionChanging(InkCanvasSelectionChangingEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("SelectionChanging", handler);
         } catch (JCNativeException jcne) {
@@ -723,7 +835,7 @@ public class InkCanvas extends FrameworkElement implements system.windows.markup
 
     public void addSelectionMoving(InkCanvasSelectionEditingEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("SelectionMoving", handler);
         } catch (JCNativeException jcne) {
@@ -733,7 +845,7 @@ public class InkCanvas extends FrameworkElement implements system.windows.markup
 
     public void removeSelectionMoving(InkCanvasSelectionEditingEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("SelectionMoving", handler);
         } catch (JCNativeException jcne) {
@@ -743,7 +855,7 @@ public class InkCanvas extends FrameworkElement implements system.windows.markup
 
     public void addSelectionResizing(InkCanvasSelectionEditingEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("SelectionResizing", handler);
         } catch (JCNativeException jcne) {
@@ -753,7 +865,7 @@ public class InkCanvas extends FrameworkElement implements system.windows.markup
 
     public void removeSelectionResizing(InkCanvasSelectionEditingEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("SelectionResizing", handler);
         } catch (JCNativeException jcne) {
@@ -763,7 +875,7 @@ public class InkCanvas extends FrameworkElement implements system.windows.markup
 
     public void addStrokeCollected(InkCanvasStrokeCollectedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("StrokeCollected", handler);
         } catch (JCNativeException jcne) {
@@ -773,7 +885,7 @@ public class InkCanvas extends FrameworkElement implements system.windows.markup
 
     public void removeStrokeCollected(InkCanvasStrokeCollectedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("StrokeCollected", handler);
         } catch (JCNativeException jcne) {
@@ -783,7 +895,7 @@ public class InkCanvas extends FrameworkElement implements system.windows.markup
 
     public void addStrokeErasing(InkCanvasStrokeErasingEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("StrokeErasing", handler);
         } catch (JCNativeException jcne) {
@@ -793,7 +905,7 @@ public class InkCanvas extends FrameworkElement implements system.windows.markup
 
     public void removeStrokeErasing(InkCanvasStrokeErasingEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("StrokeErasing", handler);
         } catch (JCNativeException jcne) {
@@ -803,7 +915,7 @@ public class InkCanvas extends FrameworkElement implements system.windows.markup
 
     public void addStrokesReplaced(InkCanvasStrokesReplacedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("StrokesReplaced", handler);
         } catch (JCNativeException jcne) {
@@ -813,7 +925,7 @@ public class InkCanvas extends FrameworkElement implements system.windows.markup
 
     public void removeStrokesReplaced(InkCanvasStrokesReplacedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("StrokesReplaced", handler);
         } catch (JCNativeException jcne) {
@@ -823,7 +935,7 @@ public class InkCanvas extends FrameworkElement implements system.windows.markup
 
     public void addDefaultDrawingAttributesReplaced(DrawingAttributesReplacedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("DefaultDrawingAttributesReplaced", handler);
         } catch (JCNativeException jcne) {
@@ -833,7 +945,7 @@ public class InkCanvas extends FrameworkElement implements system.windows.markup
 
     public void removeDefaultDrawingAttributesReplaced(DrawingAttributesReplacedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("DefaultDrawingAttributesReplaced", handler);
         } catch (JCNativeException jcne) {
@@ -843,7 +955,7 @@ public class InkCanvas extends FrameworkElement implements system.windows.markup
 
     public void addActiveEditingModeChanged(RoutedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ActiveEditingModeChanged", handler);
         } catch (JCNativeException jcne) {
@@ -853,7 +965,7 @@ public class InkCanvas extends FrameworkElement implements system.windows.markup
 
     public void removeActiveEditingModeChanged(RoutedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ActiveEditingModeChanged", handler);
         } catch (JCNativeException jcne) {
@@ -863,7 +975,7 @@ public class InkCanvas extends FrameworkElement implements system.windows.markup
 
     public void addEditingModeChanged(RoutedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("EditingModeChanged", handler);
         } catch (JCNativeException jcne) {
@@ -873,7 +985,7 @@ public class InkCanvas extends FrameworkElement implements system.windows.markup
 
     public void removeEditingModeChanged(RoutedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("EditingModeChanged", handler);
         } catch (JCNativeException jcne) {
@@ -883,7 +995,7 @@ public class InkCanvas extends FrameworkElement implements system.windows.markup
 
     public void addEditingModeInvertedChanged(RoutedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("EditingModeInvertedChanged", handler);
         } catch (JCNativeException jcne) {
@@ -893,7 +1005,7 @@ public class InkCanvas extends FrameworkElement implements system.windows.markup
 
     public void removeEditingModeInvertedChanged(RoutedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("EditingModeInvertedChanged", handler);
         } catch (JCNativeException jcne) {
@@ -903,7 +1015,7 @@ public class InkCanvas extends FrameworkElement implements system.windows.markup
 
     public void addStrokeErased(RoutedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("StrokeErased", handler);
         } catch (JCNativeException jcne) {
@@ -913,7 +1025,7 @@ public class InkCanvas extends FrameworkElement implements system.windows.markup
 
     public void removeStrokeErased(RoutedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("StrokeErased", handler);
         } catch (JCNativeException jcne) {

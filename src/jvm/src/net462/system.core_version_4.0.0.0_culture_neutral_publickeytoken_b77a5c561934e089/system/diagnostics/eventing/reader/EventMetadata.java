@@ -163,9 +163,20 @@ public class EventMetadata extends NetObject  {
     
     public byte getVersion() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVersion = null;
         try {
-            return (byte)classInstance.Get("Version");
+            retObjectVersion = classInstance.Get("Version");
+            return (byte)retObjectVersion;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectVersion_ToString = retObjectVersion == null ? "null" : retObjectVersion.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectVersionNumber = (java.lang.Number)retObjectVersion;
+                return retObjectVersionNumber.byteValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into byte and, as fallback solution, into java.lang.Number", retObjectVersion != null ? retObjectVersion.getClass() : "null", retObjectVersion_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -173,9 +184,20 @@ public class EventMetadata extends NetObject  {
 
     public long getId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectId = null;
         try {
-            return (long)classInstance.Get("Id");
+            retObjectId = classInstance.Get("Id");
+            return (long)retObjectId;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectId_ToString = retObjectId == null ? "null" : retObjectId.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectIdNumber = (java.lang.Number)retObjectId;
+                return retObjectIdNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectId != null ? retObjectId.getClass() : "null", retObjectId_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,10 +205,14 @@ public class EventMetadata extends NetObject  {
 
     public EventLevel getLevel() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLevel = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Level");
+            retObjectLevel = classInstance.Get("Level");
+            JCObject val = (JCObject)retObjectLevel;
             return new EventLevel(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLevel != null ? retObjectLevel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -194,10 +220,14 @@ public class EventMetadata extends NetObject  {
 
     public EventLogLink getLogLink() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLogLink = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("LogLink");
+            retObjectLogLink = classInstance.Get("LogLink");
+            JCObject val = (JCObject)retObjectLogLink;
             return new EventLogLink(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLogLink != null ? retObjectLogLink.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -205,10 +235,14 @@ public class EventMetadata extends NetObject  {
 
     public EventOpcode getOpcode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOpcode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Opcode");
+            retObjectOpcode = classInstance.Get("Opcode");
+            JCObject val = (JCObject)retObjectOpcode;
             return new EventOpcode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOpcode != null ? retObjectOpcode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -216,10 +250,14 @@ public class EventMetadata extends NetObject  {
 
     public EventTask getTask() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTask = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Task");
+            retObjectTask = classInstance.Get("Task");
+            JCObject val = (JCObject)retObjectTask;
             return new EventTask(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTask != null ? retObjectTask.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -227,9 +265,13 @@ public class EventMetadata extends NetObject  {
 
     public java.lang.String getDescription() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDescription = null;
         try {
-            return (java.lang.String)classInstance.Get("Description");
+            retObjectDescription = classInstance.Get("Description");
+            return (java.lang.String)retObjectDescription;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDescription != null ? retObjectDescription.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -237,9 +279,13 @@ public class EventMetadata extends NetObject  {
 
     public java.lang.String getTemplate() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTemplate = null;
         try {
-            return (java.lang.String)classInstance.Get("Template");
+            retObjectTemplate = classInstance.Get("Template");
+            return (java.lang.String)retObjectTemplate;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectTemplate != null ? retObjectTemplate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

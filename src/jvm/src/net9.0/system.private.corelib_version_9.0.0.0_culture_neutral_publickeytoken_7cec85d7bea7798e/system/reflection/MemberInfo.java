@@ -156,9 +156,13 @@ public class MemberInfo extends NetObject  {
     
     public boolean HasSameMetadataDefinitionAs(MemberInfo other) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHasSameMetadataDefinitionAs = null;
         try {
-            return (boolean)classInstance.Invoke("HasSameMetadataDefinitionAs", other == null ? null : other.getJCOInstance());
+            retObjectHasSameMetadataDefinitionAs = classInstance.Invoke("HasSameMetadataDefinitionAs", other == null ? null : other.getJCOInstance());
+            return (boolean)retObjectHasSameMetadataDefinitionAs;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectHasSameMetadataDefinitionAs != null ? retObjectHasSameMetadataDefinitionAs.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -166,9 +170,13 @@ public class MemberInfo extends NetObject  {
 
     public boolean IsDefined(NetType attributeType, boolean inherit) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsDefined = null;
         try {
-            return (boolean)classInstance.Invoke("IsDefined", attributeType == null ? null : attributeType.getJCOInstance(), inherit);
+            retObjectIsDefined = classInstance.Invoke("IsDefined", attributeType == null ? null : attributeType.getJCOInstance(), inherit);
+            return (boolean)retObjectIsDefined;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsDefined != null ? retObjectIsDefined.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,16 +184,20 @@ public class MemberInfo extends NetObject  {
 
     public NetObject[] GetCustomAttributes(boolean inherit) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetCustomAttributes = null;
         try {
             ArrayList<NetObject> resultingArrayList = new ArrayList<NetObject>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetCustomAttributes", inherit);
+            retObjectGetCustomAttributes = classInstance.Invoke("GetCustomAttributes", inherit);
+            JCObject resultingObjects = (JCObject)retObjectGetCustomAttributes;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new NetObject(resultingObject));
             }
             NetObject[] resultingArray = new NetObject[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCustomAttributes != null ? retObjectGetCustomAttributes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,16 +205,20 @@ public class MemberInfo extends NetObject  {
 
     public NetObject[] GetCustomAttributes(NetType attributeType, boolean inherit) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetCustomAttributes = null;
         try {
             ArrayList<NetObject> resultingArrayList = new ArrayList<NetObject>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetCustomAttributes", attributeType == null ? null : attributeType.getJCOInstance(), inherit);
+            retObjectGetCustomAttributes = classInstance.Invoke("GetCustomAttributes", attributeType == null ? null : attributeType.getJCOInstance(), inherit);
+            JCObject resultingObjects = (JCObject)retObjectGetCustomAttributes;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new NetObject(resultingObject));
             }
             NetObject[] resultingArray = new NetObject[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCustomAttributes != null ? retObjectGetCustomAttributes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -214,9 +230,13 @@ public class MemberInfo extends NetObject  {
     
     public boolean getIsCollectible() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsCollectible = null;
         try {
-            return (boolean)classInstance.Get("IsCollectible");
+            retObjectIsCollectible = classInstance.Get("IsCollectible");
+            return (boolean)retObjectIsCollectible;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsCollectible != null ? retObjectIsCollectible.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -224,9 +244,20 @@ public class MemberInfo extends NetObject  {
 
     public int getMetadataToken() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMetadataToken = null;
         try {
-            return (int)classInstance.Get("MetadataToken");
+            retObjectMetadataToken = classInstance.Get("MetadataToken");
+            return (int)retObjectMetadataToken;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMetadataToken_ToString = retObjectMetadataToken == null ? "null" : retObjectMetadataToken.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMetadataTokenNumber = (java.lang.Number)retObjectMetadataToken;
+                return retObjectMetadataTokenNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMetadataToken != null ? retObjectMetadataToken.getClass() : "null", retObjectMetadataToken_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -234,10 +265,14 @@ public class MemberInfo extends NetObject  {
 
     public MemberTypes getMemberType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMemberType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MemberType");
+            retObjectMemberType = classInstance.Get("MemberType");
+            JCObject val = (JCObject)retObjectMemberType;
             return new MemberTypes(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMemberType != null ? retObjectMemberType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -245,10 +280,14 @@ public class MemberInfo extends NetObject  {
 
     public Module getModule() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectModule = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Module");
+            retObjectModule = classInstance.Get("Module");
+            JCObject val = (JCObject)retObjectModule;
             return new Module(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectModule != null ? retObjectModule.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -256,9 +295,13 @@ public class MemberInfo extends NetObject  {
 
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectName = null;
         try {
-            return (java.lang.String)classInstance.Get("Name");
+            retObjectName = classInstance.Get("Name");
+            return (java.lang.String)retObjectName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectName != null ? retObjectName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -266,10 +309,14 @@ public class MemberInfo extends NetObject  {
 
     public NetType getDeclaringType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDeclaringType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DeclaringType");
+            retObjectDeclaringType = classInstance.Get("DeclaringType");
+            JCObject val = (JCObject)retObjectDeclaringType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDeclaringType != null ? retObjectDeclaringType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -277,10 +324,14 @@ public class MemberInfo extends NetObject  {
 
     public NetType getReflectedType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReflectedType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ReflectedType");
+            retObjectReflectedType = classInstance.Get("ReflectedType");
+            JCObject val = (JCObject)retObjectReflectedType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReflectedType != null ? retObjectReflectedType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

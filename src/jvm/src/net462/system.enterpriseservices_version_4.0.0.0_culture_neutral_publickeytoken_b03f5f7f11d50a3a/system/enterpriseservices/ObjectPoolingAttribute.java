@@ -193,9 +193,13 @@ public class ObjectPoolingAttribute extends Attribute  {
     
     public boolean AfterSaveChanges(Hashtable info) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAfterSaveChanges = null;
         try {
-            return (boolean)classInstance.Invoke("AfterSaveChanges", info == null ? null : info.getJCOInstance());
+            retObjectAfterSaveChanges = classInstance.Invoke("AfterSaveChanges", info == null ? null : info.getJCOInstance());
+            return (boolean)retObjectAfterSaveChanges;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectAfterSaveChanges != null ? retObjectAfterSaveChanges.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,9 +207,13 @@ public class ObjectPoolingAttribute extends Attribute  {
 
     public boolean Apply(Hashtable info) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectApply = null;
         try {
-            return (boolean)classInstance.Invoke("Apply", info == null ? null : info.getJCOInstance());
+            retObjectApply = classInstance.Invoke("Apply", info == null ? null : info.getJCOInstance());
+            return (boolean)retObjectApply;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectApply != null ? retObjectApply.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,9 +221,13 @@ public class ObjectPoolingAttribute extends Attribute  {
 
     public boolean IsValidTarget(java.lang.String s) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsValidTarget = null;
         try {
-            return (boolean)classInstance.Invoke("IsValidTarget", s);
+            retObjectIsValidTarget = classInstance.Invoke("IsValidTarget", s);
+            return (boolean)retObjectIsValidTarget;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsValidTarget != null ? retObjectIsValidTarget.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -227,9 +239,13 @@ public class ObjectPoolingAttribute extends Attribute  {
     
     public boolean getEnabled() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEnabled = null;
         try {
-            return (boolean)classInstance.Get("Enabled");
+            retObjectEnabled = classInstance.Get("Enabled");
+            return (boolean)retObjectEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectEnabled != null ? retObjectEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -237,7 +253,7 @@ public class ObjectPoolingAttribute extends Attribute  {
 
     public void setEnabled(boolean Enabled) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Enabled", Enabled);
         } catch (JCNativeException jcne) {
@@ -247,9 +263,20 @@ public class ObjectPoolingAttribute extends Attribute  {
 
     public int getCreationTimeout() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreationTimeout = null;
         try {
-            return (int)classInstance.Get("CreationTimeout");
+            retObjectCreationTimeout = classInstance.Get("CreationTimeout");
+            return (int)retObjectCreationTimeout;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCreationTimeout_ToString = retObjectCreationTimeout == null ? "null" : retObjectCreationTimeout.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectCreationTimeoutNumber = (java.lang.Number)retObjectCreationTimeout;
+                return retObjectCreationTimeoutNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCreationTimeout != null ? retObjectCreationTimeout.getClass() : "null", retObjectCreationTimeout_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -257,7 +284,7 @@ public class ObjectPoolingAttribute extends Attribute  {
 
     public void setCreationTimeout(int CreationTimeout) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CreationTimeout", CreationTimeout);
         } catch (JCNativeException jcne) {
@@ -267,9 +294,20 @@ public class ObjectPoolingAttribute extends Attribute  {
 
     public int getMaxPoolSize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxPoolSize = null;
         try {
-            return (int)classInstance.Get("MaxPoolSize");
+            retObjectMaxPoolSize = classInstance.Get("MaxPoolSize");
+            return (int)retObjectMaxPoolSize;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaxPoolSize_ToString = retObjectMaxPoolSize == null ? "null" : retObjectMaxPoolSize.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMaxPoolSizeNumber = (java.lang.Number)retObjectMaxPoolSize;
+                return retObjectMaxPoolSizeNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxPoolSize != null ? retObjectMaxPoolSize.getClass() : "null", retObjectMaxPoolSize_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -277,7 +315,7 @@ public class ObjectPoolingAttribute extends Attribute  {
 
     public void setMaxPoolSize(int MaxPoolSize) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaxPoolSize", MaxPoolSize);
         } catch (JCNativeException jcne) {
@@ -287,9 +325,20 @@ public class ObjectPoolingAttribute extends Attribute  {
 
     public int getMinPoolSize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMinPoolSize = null;
         try {
-            return (int)classInstance.Get("MinPoolSize");
+            retObjectMinPoolSize = classInstance.Get("MinPoolSize");
+            return (int)retObjectMinPoolSize;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMinPoolSize_ToString = retObjectMinPoolSize == null ? "null" : retObjectMinPoolSize.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMinPoolSizeNumber = (java.lang.Number)retObjectMinPoolSize;
+                return retObjectMinPoolSizeNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMinPoolSize != null ? retObjectMinPoolSize.getClass() : "null", retObjectMinPoolSize_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -297,7 +346,7 @@ public class ObjectPoolingAttribute extends Attribute  {
 
     public void setMinPoolSize(int MinPoolSize) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MinPoolSize", MinPoolSize);
         } catch (JCNativeException jcne) {

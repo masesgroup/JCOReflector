@@ -179,7 +179,7 @@ public class DesignerAction extends NetObject  {
     
     public void Invoke() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Invoke");
         } catch (JCNativeException jcne) {
@@ -193,9 +193,20 @@ public class DesignerAction extends NetObject  {
     
     public int getActionId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectActionId = null;
         try {
-            return (int)classInstance.Get("ActionId");
+            retObjectActionId = classInstance.Get("ActionId");
+            return (int)retObjectActionId;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectActionId_ToString = retObjectActionId == null ? "null" : retObjectActionId.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectActionIdNumber = (java.lang.Number)retObjectActionId;
+                return retObjectActionIdNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectActionId != null ? retObjectActionId.getClass() : "null", retObjectActionId_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,10 +214,14 @@ public class DesignerAction extends NetObject  {
 
     public IDictionary getUserData() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUserData = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("UserData");
+            retObjectUserData = classInstance.Get("UserData");
+            JCObject val = (JCObject)retObjectUserData;
             return new IDictionaryImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUserData != null ? retObjectUserData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -214,10 +229,14 @@ public class DesignerAction extends NetObject  {
 
     public Image getImage() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectImage = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Image");
+            retObjectImage = classInstance.Get("Image");
+            JCObject val = (JCObject)retObjectImage;
             return new Image(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectImage != null ? retObjectImage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -225,9 +244,13 @@ public class DesignerAction extends NetObject  {
 
     public java.lang.String getPropertyName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPropertyName = null;
         try {
-            return (java.lang.String)classInstance.Get("PropertyName");
+            retObjectPropertyName = classInstance.Get("PropertyName");
+            return (java.lang.String)retObjectPropertyName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectPropertyName != null ? retObjectPropertyName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -235,7 +258,7 @@ public class DesignerAction extends NetObject  {
 
     public void setPropertyName(java.lang.String PropertyName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PropertyName", PropertyName);
         } catch (JCNativeException jcne) {
@@ -245,9 +268,13 @@ public class DesignerAction extends NetObject  {
 
     public java.lang.String getText() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectText = null;
         try {
-            return (java.lang.String)classInstance.Get("Text");
+            retObjectText = classInstance.Get("Text");
+            return (java.lang.String)retObjectText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectText != null ? retObjectText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

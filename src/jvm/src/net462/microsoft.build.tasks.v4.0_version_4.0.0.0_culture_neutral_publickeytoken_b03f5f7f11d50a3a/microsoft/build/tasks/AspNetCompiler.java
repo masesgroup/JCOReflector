@@ -162,9 +162,13 @@ public class AspNetCompiler extends ToolTaskExtension  {
     
     public boolean Execute() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentOutOfRangeException, system.FormatException, system.ArgumentException, system.InvalidOperationException, system.InvalidCastException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.NullReferenceException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.threading.WaitHandleCannotBeOpenedException, system.OutOfMemoryException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception, system.MulticastNotSupportedException, system.RankException, system.security.cryptography.CryptographicException, system.collections.generic.KeyNotFoundException, system.IndexOutOfRangeException, system.threading.SemaphoreFullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExecute = null;
         try {
-            return (boolean)classInstance.Invoke("Execute");
+            retObjectExecute = classInstance.Invoke("Execute");
+            return (boolean)retObjectExecute;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectExecute != null ? retObjectExecute.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,9 +180,13 @@ public class AspNetCompiler extends ToolTaskExtension  {
     
     public boolean getAllowPartiallyTrustedCallers() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAllowPartiallyTrustedCallers = null;
         try {
-            return (boolean)classInstance.Get("AllowPartiallyTrustedCallers");
+            retObjectAllowPartiallyTrustedCallers = classInstance.Get("AllowPartiallyTrustedCallers");
+            return (boolean)retObjectAllowPartiallyTrustedCallers;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAllowPartiallyTrustedCallers != null ? retObjectAllowPartiallyTrustedCallers.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,7 +194,7 @@ public class AspNetCompiler extends ToolTaskExtension  {
 
     public void setAllowPartiallyTrustedCallers(boolean AllowPartiallyTrustedCallers) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AllowPartiallyTrustedCallers", AllowPartiallyTrustedCallers);
         } catch (JCNativeException jcne) {
@@ -196,9 +204,13 @@ public class AspNetCompiler extends ToolTaskExtension  {
 
     public boolean getClean() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClean = null;
         try {
-            return (boolean)classInstance.Get("Clean");
+            retObjectClean = classInstance.Get("Clean");
+            return (boolean)retObjectClean;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectClean != null ? retObjectClean.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -206,7 +218,7 @@ public class AspNetCompiler extends ToolTaskExtension  {
 
     public void setClean(boolean Clean) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Clean", Clean);
         } catch (JCNativeException jcne) {
@@ -216,9 +228,13 @@ public class AspNetCompiler extends ToolTaskExtension  {
 
     public boolean getDebug() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDebug = null;
         try {
-            return (boolean)classInstance.Get("Debug");
+            retObjectDebug = classInstance.Get("Debug");
+            return (boolean)retObjectDebug;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectDebug != null ? retObjectDebug.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -226,7 +242,7 @@ public class AspNetCompiler extends ToolTaskExtension  {
 
     public void setDebug(boolean Debug) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Debug", Debug);
         } catch (JCNativeException jcne) {
@@ -236,9 +252,13 @@ public class AspNetCompiler extends ToolTaskExtension  {
 
     public boolean getDelaySign() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDelaySign = null;
         try {
-            return (boolean)classInstance.Get("DelaySign");
+            retObjectDelaySign = classInstance.Get("DelaySign");
+            return (boolean)retObjectDelaySign;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectDelaySign != null ? retObjectDelaySign.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -246,7 +266,7 @@ public class AspNetCompiler extends ToolTaskExtension  {
 
     public void setDelaySign(boolean DelaySign) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DelaySign", DelaySign);
         } catch (JCNativeException jcne) {
@@ -256,9 +276,13 @@ public class AspNetCompiler extends ToolTaskExtension  {
 
     public boolean getFixedNames() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFixedNames = null;
         try {
-            return (boolean)classInstance.Get("FixedNames");
+            retObjectFixedNames = classInstance.Get("FixedNames");
+            return (boolean)retObjectFixedNames;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectFixedNames != null ? retObjectFixedNames.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -266,7 +290,7 @@ public class AspNetCompiler extends ToolTaskExtension  {
 
     public void setFixedNames(boolean FixedNames) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FixedNames", FixedNames);
         } catch (JCNativeException jcne) {
@@ -276,9 +300,13 @@ public class AspNetCompiler extends ToolTaskExtension  {
 
     public boolean getForce() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectForce = null;
         try {
-            return (boolean)classInstance.Get("Force");
+            retObjectForce = classInstance.Get("Force");
+            return (boolean)retObjectForce;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectForce != null ? retObjectForce.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -286,7 +314,7 @@ public class AspNetCompiler extends ToolTaskExtension  {
 
     public void setForce(boolean Force) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Force", Force);
         } catch (JCNativeException jcne) {
@@ -296,9 +324,13 @@ public class AspNetCompiler extends ToolTaskExtension  {
 
     public boolean getUpdateable() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUpdateable = null;
         try {
-            return (boolean)classInstance.Get("Updateable");
+            retObjectUpdateable = classInstance.Get("Updateable");
+            return (boolean)retObjectUpdateable;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectUpdateable != null ? retObjectUpdateable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -306,7 +338,7 @@ public class AspNetCompiler extends ToolTaskExtension  {
 
     public void setUpdateable(boolean Updateable) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Updateable", Updateable);
         } catch (JCNativeException jcne) {
@@ -316,9 +348,13 @@ public class AspNetCompiler extends ToolTaskExtension  {
 
     public java.lang.String getKeyContainer() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectKeyContainer = null;
         try {
-            return (java.lang.String)classInstance.Get("KeyContainer");
+            retObjectKeyContainer = classInstance.Get("KeyContainer");
+            return (java.lang.String)retObjectKeyContainer;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectKeyContainer != null ? retObjectKeyContainer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -326,7 +362,7 @@ public class AspNetCompiler extends ToolTaskExtension  {
 
     public void setKeyContainer(java.lang.String KeyContainer) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("KeyContainer", KeyContainer);
         } catch (JCNativeException jcne) {
@@ -336,9 +372,13 @@ public class AspNetCompiler extends ToolTaskExtension  {
 
     public java.lang.String getKeyFile() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectKeyFile = null;
         try {
-            return (java.lang.String)classInstance.Get("KeyFile");
+            retObjectKeyFile = classInstance.Get("KeyFile");
+            return (java.lang.String)retObjectKeyFile;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectKeyFile != null ? retObjectKeyFile.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -346,7 +386,7 @@ public class AspNetCompiler extends ToolTaskExtension  {
 
     public void setKeyFile(java.lang.String KeyFile) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("KeyFile", KeyFile);
         } catch (JCNativeException jcne) {
@@ -356,9 +396,13 @@ public class AspNetCompiler extends ToolTaskExtension  {
 
     public java.lang.String getMetabasePath() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMetabasePath = null;
         try {
-            return (java.lang.String)classInstance.Get("MetabasePath");
+            retObjectMetabasePath = classInstance.Get("MetabasePath");
+            return (java.lang.String)retObjectMetabasePath;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectMetabasePath != null ? retObjectMetabasePath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -366,7 +410,7 @@ public class AspNetCompiler extends ToolTaskExtension  {
 
     public void setMetabasePath(java.lang.String MetabasePath) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MetabasePath", MetabasePath);
         } catch (JCNativeException jcne) {
@@ -376,9 +420,13 @@ public class AspNetCompiler extends ToolTaskExtension  {
 
     public java.lang.String getPhysicalPath() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPhysicalPath = null;
         try {
-            return (java.lang.String)classInstance.Get("PhysicalPath");
+            retObjectPhysicalPath = classInstance.Get("PhysicalPath");
+            return (java.lang.String)retObjectPhysicalPath;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectPhysicalPath != null ? retObjectPhysicalPath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -386,7 +434,7 @@ public class AspNetCompiler extends ToolTaskExtension  {
 
     public void setPhysicalPath(java.lang.String PhysicalPath) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PhysicalPath", PhysicalPath);
         } catch (JCNativeException jcne) {
@@ -396,9 +444,13 @@ public class AspNetCompiler extends ToolTaskExtension  {
 
     public java.lang.String getTargetFrameworkMoniker() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTargetFrameworkMoniker = null;
         try {
-            return (java.lang.String)classInstance.Get("TargetFrameworkMoniker");
+            retObjectTargetFrameworkMoniker = classInstance.Get("TargetFrameworkMoniker");
+            return (java.lang.String)retObjectTargetFrameworkMoniker;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectTargetFrameworkMoniker != null ? retObjectTargetFrameworkMoniker.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -406,7 +458,7 @@ public class AspNetCompiler extends ToolTaskExtension  {
 
     public void setTargetFrameworkMoniker(java.lang.String TargetFrameworkMoniker) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TargetFrameworkMoniker", TargetFrameworkMoniker);
         } catch (JCNativeException jcne) {
@@ -416,9 +468,13 @@ public class AspNetCompiler extends ToolTaskExtension  {
 
     public java.lang.String getTargetPath() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTargetPath = null;
         try {
-            return (java.lang.String)classInstance.Get("TargetPath");
+            retObjectTargetPath = classInstance.Get("TargetPath");
+            return (java.lang.String)retObjectTargetPath;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectTargetPath != null ? retObjectTargetPath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -426,7 +482,7 @@ public class AspNetCompiler extends ToolTaskExtension  {
 
     public void setTargetPath(java.lang.String TargetPath) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TargetPath", TargetPath);
         } catch (JCNativeException jcne) {
@@ -436,9 +492,13 @@ public class AspNetCompiler extends ToolTaskExtension  {
 
     public java.lang.String getVirtualPath() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVirtualPath = null;
         try {
-            return (java.lang.String)classInstance.Get("VirtualPath");
+            retObjectVirtualPath = classInstance.Get("VirtualPath");
+            return (java.lang.String)retObjectVirtualPath;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectVirtualPath != null ? retObjectVirtualPath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -446,7 +506,7 @@ public class AspNetCompiler extends ToolTaskExtension  {
 
     public void setVirtualPath(java.lang.String VirtualPath) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("VirtualPath", VirtualPath);
         } catch (JCNativeException jcne) {

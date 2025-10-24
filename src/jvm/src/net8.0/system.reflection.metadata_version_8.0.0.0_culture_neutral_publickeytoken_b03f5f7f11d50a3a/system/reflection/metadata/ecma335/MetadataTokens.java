@@ -194,9 +194,13 @@ public class MetadataTokens extends NetObject  {
     
     public static boolean TryGetHeapIndex(HandleKind type, JCORefOut<HeapIndex> index) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTryGetHeapIndex = null;
         try {
-            return (boolean)classType.Invoke("TryGetHeapIndex", type == null ? null : type.getJCOInstance(), index.getJCRefOut());
+            retObjectTryGetHeapIndex = classType.Invoke("TryGetHeapIndex", type == null ? null : type.getJCOInstance(), index.getJCRefOut());
+            return (boolean)retObjectTryGetHeapIndex;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryGetHeapIndex != null ? retObjectTryGetHeapIndex.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -204,9 +208,13 @@ public class MetadataTokens extends NetObject  {
 
     public static boolean TryGetTableIndex(HandleKind type, JCORefOut<TableIndex> index) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTryGetTableIndex = null;
         try {
-            return (boolean)classType.Invoke("TryGetTableIndex", type == null ? null : type.getJCOInstance(), index.getJCRefOut());
+            retObjectTryGetTableIndex = classType.Invoke("TryGetTableIndex", type == null ? null : type.getJCOInstance(), index.getJCRefOut());
+            return (boolean)retObjectTryGetTableIndex;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryGetTableIndex != null ? retObjectTryGetTableIndex.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -214,9 +222,20 @@ public class MetadataTokens extends NetObject  {
 
     public static int GetHeapOffset(BlobHandle handle) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetHeapOffset = null;
         try {
-            return (int)classType.Invoke("GetHeapOffset", handle == null ? null : handle.getJCOInstance());
+            retObjectGetHeapOffset = classType.Invoke("GetHeapOffset", handle == null ? null : handle.getJCOInstance());
+            return (int)retObjectGetHeapOffset;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetHeapOffset_ToString = retObjectGetHeapOffset == null ? "null" : retObjectGetHeapOffset.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetHeapOffsetNumber = (java.lang.Number)retObjectGetHeapOffset;
+                return retObjectGetHeapOffsetNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetHeapOffset != null ? retObjectGetHeapOffset.getClass() : "null", retObjectGetHeapOffset_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -224,9 +243,20 @@ public class MetadataTokens extends NetObject  {
 
     public static int GetHeapOffset(GuidHandle handle) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetHeapOffset = null;
         try {
-            return (int)classType.Invoke("GetHeapOffset", handle == null ? null : handle.getJCOInstance());
+            retObjectGetHeapOffset = classType.Invoke("GetHeapOffset", handle == null ? null : handle.getJCOInstance());
+            return (int)retObjectGetHeapOffset;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetHeapOffset_ToString = retObjectGetHeapOffset == null ? "null" : retObjectGetHeapOffset.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetHeapOffsetNumber = (java.lang.Number)retObjectGetHeapOffset;
+                return retObjectGetHeapOffsetNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetHeapOffset != null ? retObjectGetHeapOffset.getClass() : "null", retObjectGetHeapOffset_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -234,9 +264,20 @@ public class MetadataTokens extends NetObject  {
 
     public static int GetHeapOffset(Handle handle) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetHeapOffset = null;
         try {
-            return (int)classType.Invoke("GetHeapOffset", handle == null ? null : handle.getJCOInstance());
+            retObjectGetHeapOffset = classType.Invoke("GetHeapOffset", handle == null ? null : handle.getJCOInstance());
+            return (int)retObjectGetHeapOffset;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetHeapOffset_ToString = retObjectGetHeapOffset == null ? "null" : retObjectGetHeapOffset.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetHeapOffsetNumber = (java.lang.Number)retObjectGetHeapOffset;
+                return retObjectGetHeapOffsetNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetHeapOffset != null ? retObjectGetHeapOffset.getClass() : "null", retObjectGetHeapOffset_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -244,9 +285,20 @@ public class MetadataTokens extends NetObject  {
 
     public static int GetHeapOffset(MetadataReader reader, Handle handle) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetHeapOffset = null;
         try {
-            return (int)classType.Invoke("GetHeapOffset", reader == null ? null : reader.getJCOInstance(), handle == null ? null : handle.getJCOInstance());
+            retObjectGetHeapOffset = classType.Invoke("GetHeapOffset", reader == null ? null : reader.getJCOInstance(), handle == null ? null : handle.getJCOInstance());
+            return (int)retObjectGetHeapOffset;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetHeapOffset_ToString = retObjectGetHeapOffset == null ? "null" : retObjectGetHeapOffset.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetHeapOffsetNumber = (java.lang.Number)retObjectGetHeapOffset;
+                return retObjectGetHeapOffsetNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetHeapOffset != null ? retObjectGetHeapOffset.getClass() : "null", retObjectGetHeapOffset_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -254,9 +306,20 @@ public class MetadataTokens extends NetObject  {
 
     public static int GetHeapOffset(StringHandle handle) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetHeapOffset = null;
         try {
-            return (int)classType.Invoke("GetHeapOffset", handle == null ? null : handle.getJCOInstance());
+            retObjectGetHeapOffset = classType.Invoke("GetHeapOffset", handle == null ? null : handle.getJCOInstance());
+            return (int)retObjectGetHeapOffset;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetHeapOffset_ToString = retObjectGetHeapOffset == null ? "null" : retObjectGetHeapOffset.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetHeapOffsetNumber = (java.lang.Number)retObjectGetHeapOffset;
+                return retObjectGetHeapOffsetNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetHeapOffset != null ? retObjectGetHeapOffset.getClass() : "null", retObjectGetHeapOffset_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -264,9 +327,20 @@ public class MetadataTokens extends NetObject  {
 
     public static int GetHeapOffset(UserStringHandle handle) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetHeapOffset = null;
         try {
-            return (int)classType.Invoke("GetHeapOffset", handle == null ? null : handle.getJCOInstance());
+            retObjectGetHeapOffset = classType.Invoke("GetHeapOffset", handle == null ? null : handle.getJCOInstance());
+            return (int)retObjectGetHeapOffset;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetHeapOffset_ToString = retObjectGetHeapOffset == null ? "null" : retObjectGetHeapOffset.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetHeapOffsetNumber = (java.lang.Number)retObjectGetHeapOffset;
+                return retObjectGetHeapOffsetNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetHeapOffset != null ? retObjectGetHeapOffset.getClass() : "null", retObjectGetHeapOffset_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -274,9 +348,20 @@ public class MetadataTokens extends NetObject  {
 
     public static int GetRowNumber(EntityHandle handle) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetRowNumber = null;
         try {
-            return (int)classType.Invoke("GetRowNumber", handle == null ? null : handle.getJCOInstance());
+            retObjectGetRowNumber = classType.Invoke("GetRowNumber", handle == null ? null : handle.getJCOInstance());
+            return (int)retObjectGetRowNumber;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetRowNumber_ToString = retObjectGetRowNumber == null ? "null" : retObjectGetRowNumber.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetRowNumberNumber = (java.lang.Number)retObjectGetRowNumber;
+                return retObjectGetRowNumberNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetRowNumber != null ? retObjectGetRowNumber.getClass() : "null", retObjectGetRowNumber_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -284,9 +369,20 @@ public class MetadataTokens extends NetObject  {
 
     public static int GetRowNumber(MetadataReader reader, EntityHandle handle) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetRowNumber = null;
         try {
-            return (int)classType.Invoke("GetRowNumber", reader == null ? null : reader.getJCOInstance(), handle == null ? null : handle.getJCOInstance());
+            retObjectGetRowNumber = classType.Invoke("GetRowNumber", reader == null ? null : reader.getJCOInstance(), handle == null ? null : handle.getJCOInstance());
+            return (int)retObjectGetRowNumber;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetRowNumber_ToString = retObjectGetRowNumber == null ? "null" : retObjectGetRowNumber.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetRowNumberNumber = (java.lang.Number)retObjectGetRowNumber;
+                return retObjectGetRowNumberNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetRowNumber != null ? retObjectGetRowNumber.getClass() : "null", retObjectGetRowNumber_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -294,9 +390,20 @@ public class MetadataTokens extends NetObject  {
 
     public static int GetToken(EntityHandle handle) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetToken = null;
         try {
-            return (int)classType.Invoke("GetToken", handle == null ? null : handle.getJCOInstance());
+            retObjectGetToken = classType.Invoke("GetToken", handle == null ? null : handle.getJCOInstance());
+            return (int)retObjectGetToken;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetToken_ToString = retObjectGetToken == null ? "null" : retObjectGetToken.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetTokenNumber = (java.lang.Number)retObjectGetToken;
+                return retObjectGetTokenNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetToken != null ? retObjectGetToken.getClass() : "null", retObjectGetToken_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -304,9 +411,20 @@ public class MetadataTokens extends NetObject  {
 
     public static int GetToken(Handle handle) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetToken = null;
         try {
-            return (int)classType.Invoke("GetToken", handle == null ? null : handle.getJCOInstance());
+            retObjectGetToken = classType.Invoke("GetToken", handle == null ? null : handle.getJCOInstance());
+            return (int)retObjectGetToken;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetToken_ToString = retObjectGetToken == null ? "null" : retObjectGetToken.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetTokenNumber = (java.lang.Number)retObjectGetToken;
+                return retObjectGetTokenNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetToken != null ? retObjectGetToken.getClass() : "null", retObjectGetToken_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -314,9 +432,20 @@ public class MetadataTokens extends NetObject  {
 
     public static int GetToken(MetadataReader reader, EntityHandle handle) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetToken = null;
         try {
-            return (int)classType.Invoke("GetToken", reader == null ? null : reader.getJCOInstance(), handle == null ? null : handle.getJCOInstance());
+            retObjectGetToken = classType.Invoke("GetToken", reader == null ? null : reader.getJCOInstance(), handle == null ? null : handle.getJCOInstance());
+            return (int)retObjectGetToken;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetToken_ToString = retObjectGetToken == null ? "null" : retObjectGetToken.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetTokenNumber = (java.lang.Number)retObjectGetToken;
+                return retObjectGetTokenNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetToken != null ? retObjectGetToken.getClass() : "null", retObjectGetToken_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -324,9 +453,20 @@ public class MetadataTokens extends NetObject  {
 
     public static int GetToken(MetadataReader reader, Handle handle) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetToken = null;
         try {
-            return (int)classType.Invoke("GetToken", reader == null ? null : reader.getJCOInstance(), handle == null ? null : handle.getJCOInstance());
+            retObjectGetToken = classType.Invoke("GetToken", reader == null ? null : reader.getJCOInstance(), handle == null ? null : handle.getJCOInstance());
+            return (int)retObjectGetToken;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetToken_ToString = retObjectGetToken == null ? "null" : retObjectGetToken.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetTokenNumber = (java.lang.Number)retObjectGetToken;
+                return retObjectGetTokenNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetToken != null ? retObjectGetToken.getClass() : "null", retObjectGetToken_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -334,10 +474,14 @@ public class MetadataTokens extends NetObject  {
 
     public static AssemblyFileHandle AssemblyFileHandle(int rowNumber) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAssemblyFileHandle = null;
         try {
-            JCObject objAssemblyFileHandle = (JCObject)classType.Invoke("AssemblyFileHandle", rowNumber);
+            retObjectAssemblyFileHandle = classType.Invoke("AssemblyFileHandle", rowNumber);
+            JCObject objAssemblyFileHandle = (JCObject)retObjectAssemblyFileHandle;
             return new AssemblyFileHandle(objAssemblyFileHandle);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAssemblyFileHandle != null ? retObjectAssemblyFileHandle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -345,10 +489,14 @@ public class MetadataTokens extends NetObject  {
 
     public static AssemblyReferenceHandle AssemblyReferenceHandle(int rowNumber) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAssemblyReferenceHandle = null;
         try {
-            JCObject objAssemblyReferenceHandle = (JCObject)classType.Invoke("AssemblyReferenceHandle", rowNumber);
+            retObjectAssemblyReferenceHandle = classType.Invoke("AssemblyReferenceHandle", rowNumber);
+            JCObject objAssemblyReferenceHandle = (JCObject)retObjectAssemblyReferenceHandle;
             return new AssemblyReferenceHandle(objAssemblyReferenceHandle);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAssemblyReferenceHandle != null ? retObjectAssemblyReferenceHandle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -356,10 +504,14 @@ public class MetadataTokens extends NetObject  {
 
     public static BlobHandle BlobHandle(int offset) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectBlobHandle = null;
         try {
-            JCObject objBlobHandle = (JCObject)classType.Invoke("BlobHandle", offset);
+            retObjectBlobHandle = classType.Invoke("BlobHandle", offset);
+            JCObject objBlobHandle = (JCObject)retObjectBlobHandle;
             return new BlobHandle(objBlobHandle);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBlobHandle != null ? retObjectBlobHandle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -367,10 +519,14 @@ public class MetadataTokens extends NetObject  {
 
     public static ConstantHandle ConstantHandle(int rowNumber) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectConstantHandle = null;
         try {
-            JCObject objConstantHandle = (JCObject)classType.Invoke("ConstantHandle", rowNumber);
+            retObjectConstantHandle = classType.Invoke("ConstantHandle", rowNumber);
+            JCObject objConstantHandle = (JCObject)retObjectConstantHandle;
             return new ConstantHandle(objConstantHandle);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConstantHandle != null ? retObjectConstantHandle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -378,10 +534,14 @@ public class MetadataTokens extends NetObject  {
 
     public static CustomAttributeHandle CustomAttributeHandle(int rowNumber) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCustomAttributeHandle = null;
         try {
-            JCObject objCustomAttributeHandle = (JCObject)classType.Invoke("CustomAttributeHandle", rowNumber);
+            retObjectCustomAttributeHandle = classType.Invoke("CustomAttributeHandle", rowNumber);
+            JCObject objCustomAttributeHandle = (JCObject)retObjectCustomAttributeHandle;
             return new CustomAttributeHandle(objCustomAttributeHandle);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCustomAttributeHandle != null ? retObjectCustomAttributeHandle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -389,10 +549,14 @@ public class MetadataTokens extends NetObject  {
 
     public static CustomDebugInformationHandle CustomDebugInformationHandle(int rowNumber) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCustomDebugInformationHandle = null;
         try {
-            JCObject objCustomDebugInformationHandle = (JCObject)classType.Invoke("CustomDebugInformationHandle", rowNumber);
+            retObjectCustomDebugInformationHandle = classType.Invoke("CustomDebugInformationHandle", rowNumber);
+            JCObject objCustomDebugInformationHandle = (JCObject)retObjectCustomDebugInformationHandle;
             return new CustomDebugInformationHandle(objCustomDebugInformationHandle);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCustomDebugInformationHandle != null ? retObjectCustomDebugInformationHandle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -400,10 +564,14 @@ public class MetadataTokens extends NetObject  {
 
     public static DeclarativeSecurityAttributeHandle DeclarativeSecurityAttributeHandle(int rowNumber) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDeclarativeSecurityAttributeHandle = null;
         try {
-            JCObject objDeclarativeSecurityAttributeHandle = (JCObject)classType.Invoke("DeclarativeSecurityAttributeHandle", rowNumber);
+            retObjectDeclarativeSecurityAttributeHandle = classType.Invoke("DeclarativeSecurityAttributeHandle", rowNumber);
+            JCObject objDeclarativeSecurityAttributeHandle = (JCObject)retObjectDeclarativeSecurityAttributeHandle;
             return new DeclarativeSecurityAttributeHandle(objDeclarativeSecurityAttributeHandle);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDeclarativeSecurityAttributeHandle != null ? retObjectDeclarativeSecurityAttributeHandle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -411,10 +579,14 @@ public class MetadataTokens extends NetObject  {
 
     public static DocumentHandle DocumentHandle(int rowNumber) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDocumentHandle = null;
         try {
-            JCObject objDocumentHandle = (JCObject)classType.Invoke("DocumentHandle", rowNumber);
+            retObjectDocumentHandle = classType.Invoke("DocumentHandle", rowNumber);
+            JCObject objDocumentHandle = (JCObject)retObjectDocumentHandle;
             return new DocumentHandle(objDocumentHandle);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDocumentHandle != null ? retObjectDocumentHandle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -422,10 +594,14 @@ public class MetadataTokens extends NetObject  {
 
     public static DocumentNameBlobHandle DocumentNameBlobHandle(int offset) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDocumentNameBlobHandle = null;
         try {
-            JCObject objDocumentNameBlobHandle = (JCObject)classType.Invoke("DocumentNameBlobHandle", offset);
+            retObjectDocumentNameBlobHandle = classType.Invoke("DocumentNameBlobHandle", offset);
+            JCObject objDocumentNameBlobHandle = (JCObject)retObjectDocumentNameBlobHandle;
             return new DocumentNameBlobHandle(objDocumentNameBlobHandle);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDocumentNameBlobHandle != null ? retObjectDocumentNameBlobHandle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -433,10 +609,14 @@ public class MetadataTokens extends NetObject  {
 
     public static EntityHandle EntityHandle(int token) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectEntityHandle = null;
         try {
-            JCObject objEntityHandle = (JCObject)classType.Invoke("EntityHandle", token);
+            retObjectEntityHandle = classType.Invoke("EntityHandle", token);
+            JCObject objEntityHandle = (JCObject)retObjectEntityHandle;
             return new EntityHandle(objEntityHandle);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEntityHandle != null ? retObjectEntityHandle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -444,10 +624,14 @@ public class MetadataTokens extends NetObject  {
 
     public static EntityHandle EntityHandle(TableIndex tableIndex, int rowNumber) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectEntityHandle = null;
         try {
-            JCObject objEntityHandle = (JCObject)classType.Invoke("EntityHandle", tableIndex == null ? null : tableIndex.getJCOInstance(), rowNumber);
+            retObjectEntityHandle = classType.Invoke("EntityHandle", tableIndex == null ? null : tableIndex.getJCOInstance(), rowNumber);
+            JCObject objEntityHandle = (JCObject)retObjectEntityHandle;
             return new EntityHandle(objEntityHandle);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEntityHandle != null ? retObjectEntityHandle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -455,10 +639,14 @@ public class MetadataTokens extends NetObject  {
 
     public static EntityHandle Handle(TableIndex tableIndex, int rowNumber) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectHandle = null;
         try {
-            JCObject objHandle = (JCObject)classType.Invoke("Handle", tableIndex == null ? null : tableIndex.getJCOInstance(), rowNumber);
+            retObjectHandle = classType.Invoke("Handle", tableIndex == null ? null : tableIndex.getJCOInstance(), rowNumber);
+            JCObject objHandle = (JCObject)retObjectHandle;
             return new EntityHandle(objHandle);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHandle != null ? retObjectHandle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -466,10 +654,14 @@ public class MetadataTokens extends NetObject  {
 
     public static EventDefinitionHandle EventDefinitionHandle(int rowNumber) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectEventDefinitionHandle = null;
         try {
-            JCObject objEventDefinitionHandle = (JCObject)classType.Invoke("EventDefinitionHandle", rowNumber);
+            retObjectEventDefinitionHandle = classType.Invoke("EventDefinitionHandle", rowNumber);
+            JCObject objEventDefinitionHandle = (JCObject)retObjectEventDefinitionHandle;
             return new EventDefinitionHandle(objEventDefinitionHandle);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEventDefinitionHandle != null ? retObjectEventDefinitionHandle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -477,10 +669,14 @@ public class MetadataTokens extends NetObject  {
 
     public static ExportedTypeHandle ExportedTypeHandle(int rowNumber) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectExportedTypeHandle = null;
         try {
-            JCObject objExportedTypeHandle = (JCObject)classType.Invoke("ExportedTypeHandle", rowNumber);
+            retObjectExportedTypeHandle = classType.Invoke("ExportedTypeHandle", rowNumber);
+            JCObject objExportedTypeHandle = (JCObject)retObjectExportedTypeHandle;
             return new ExportedTypeHandle(objExportedTypeHandle);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExportedTypeHandle != null ? retObjectExportedTypeHandle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -488,10 +684,14 @@ public class MetadataTokens extends NetObject  {
 
     public static FieldDefinitionHandle FieldDefinitionHandle(int rowNumber) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFieldDefinitionHandle = null;
         try {
-            JCObject objFieldDefinitionHandle = (JCObject)classType.Invoke("FieldDefinitionHandle", rowNumber);
+            retObjectFieldDefinitionHandle = classType.Invoke("FieldDefinitionHandle", rowNumber);
+            JCObject objFieldDefinitionHandle = (JCObject)retObjectFieldDefinitionHandle;
             return new FieldDefinitionHandle(objFieldDefinitionHandle);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFieldDefinitionHandle != null ? retObjectFieldDefinitionHandle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -499,10 +699,14 @@ public class MetadataTokens extends NetObject  {
 
     public static GenericParameterConstraintHandle GenericParameterConstraintHandle(int rowNumber) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGenericParameterConstraintHandle = null;
         try {
-            JCObject objGenericParameterConstraintHandle = (JCObject)classType.Invoke("GenericParameterConstraintHandle", rowNumber);
+            retObjectGenericParameterConstraintHandle = classType.Invoke("GenericParameterConstraintHandle", rowNumber);
+            JCObject objGenericParameterConstraintHandle = (JCObject)retObjectGenericParameterConstraintHandle;
             return new GenericParameterConstraintHandle(objGenericParameterConstraintHandle);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGenericParameterConstraintHandle != null ? retObjectGenericParameterConstraintHandle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -510,10 +714,14 @@ public class MetadataTokens extends NetObject  {
 
     public static GenericParameterHandle GenericParameterHandle(int rowNumber) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGenericParameterHandle = null;
         try {
-            JCObject objGenericParameterHandle = (JCObject)classType.Invoke("GenericParameterHandle", rowNumber);
+            retObjectGenericParameterHandle = classType.Invoke("GenericParameterHandle", rowNumber);
+            JCObject objGenericParameterHandle = (JCObject)retObjectGenericParameterHandle;
             return new GenericParameterHandle(objGenericParameterHandle);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGenericParameterHandle != null ? retObjectGenericParameterHandle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -521,10 +729,14 @@ public class MetadataTokens extends NetObject  {
 
     public static GuidHandle GuidHandle(int offset) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGuidHandle = null;
         try {
-            JCObject objGuidHandle = (JCObject)classType.Invoke("GuidHandle", offset);
+            retObjectGuidHandle = classType.Invoke("GuidHandle", offset);
+            JCObject objGuidHandle = (JCObject)retObjectGuidHandle;
             return new GuidHandle(objGuidHandle);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGuidHandle != null ? retObjectGuidHandle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -532,10 +744,14 @@ public class MetadataTokens extends NetObject  {
 
     public static Handle Handle(int token) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectHandle = null;
         try {
-            JCObject objHandle = (JCObject)classType.Invoke("Handle", token);
+            retObjectHandle = classType.Invoke("Handle", token);
+            JCObject objHandle = (JCObject)retObjectHandle;
             return new Handle(objHandle);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHandle != null ? retObjectHandle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -543,10 +759,14 @@ public class MetadataTokens extends NetObject  {
 
     public static ImportScopeHandle ImportScopeHandle(int rowNumber) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectImportScopeHandle = null;
         try {
-            JCObject objImportScopeHandle = (JCObject)classType.Invoke("ImportScopeHandle", rowNumber);
+            retObjectImportScopeHandle = classType.Invoke("ImportScopeHandle", rowNumber);
+            JCObject objImportScopeHandle = (JCObject)retObjectImportScopeHandle;
             return new ImportScopeHandle(objImportScopeHandle);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectImportScopeHandle != null ? retObjectImportScopeHandle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -554,10 +774,14 @@ public class MetadataTokens extends NetObject  {
 
     public static InterfaceImplementationHandle InterfaceImplementationHandle(int rowNumber) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectInterfaceImplementationHandle = null;
         try {
-            JCObject objInterfaceImplementationHandle = (JCObject)classType.Invoke("InterfaceImplementationHandle", rowNumber);
+            retObjectInterfaceImplementationHandle = classType.Invoke("InterfaceImplementationHandle", rowNumber);
+            JCObject objInterfaceImplementationHandle = (JCObject)retObjectInterfaceImplementationHandle;
             return new InterfaceImplementationHandle(objInterfaceImplementationHandle);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInterfaceImplementationHandle != null ? retObjectInterfaceImplementationHandle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -565,10 +789,14 @@ public class MetadataTokens extends NetObject  {
 
     public static LocalConstantHandle LocalConstantHandle(int rowNumber) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLocalConstantHandle = null;
         try {
-            JCObject objLocalConstantHandle = (JCObject)classType.Invoke("LocalConstantHandle", rowNumber);
+            retObjectLocalConstantHandle = classType.Invoke("LocalConstantHandle", rowNumber);
+            JCObject objLocalConstantHandle = (JCObject)retObjectLocalConstantHandle;
             return new LocalConstantHandle(objLocalConstantHandle);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLocalConstantHandle != null ? retObjectLocalConstantHandle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -576,10 +804,14 @@ public class MetadataTokens extends NetObject  {
 
     public static LocalScopeHandle LocalScopeHandle(int rowNumber) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLocalScopeHandle = null;
         try {
-            JCObject objLocalScopeHandle = (JCObject)classType.Invoke("LocalScopeHandle", rowNumber);
+            retObjectLocalScopeHandle = classType.Invoke("LocalScopeHandle", rowNumber);
+            JCObject objLocalScopeHandle = (JCObject)retObjectLocalScopeHandle;
             return new LocalScopeHandle(objLocalScopeHandle);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLocalScopeHandle != null ? retObjectLocalScopeHandle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -587,10 +819,14 @@ public class MetadataTokens extends NetObject  {
 
     public static LocalVariableHandle LocalVariableHandle(int rowNumber) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLocalVariableHandle = null;
         try {
-            JCObject objLocalVariableHandle = (JCObject)classType.Invoke("LocalVariableHandle", rowNumber);
+            retObjectLocalVariableHandle = classType.Invoke("LocalVariableHandle", rowNumber);
+            JCObject objLocalVariableHandle = (JCObject)retObjectLocalVariableHandle;
             return new LocalVariableHandle(objLocalVariableHandle);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLocalVariableHandle != null ? retObjectLocalVariableHandle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -598,10 +834,14 @@ public class MetadataTokens extends NetObject  {
 
     public static ManifestResourceHandle ManifestResourceHandle(int rowNumber) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectManifestResourceHandle = null;
         try {
-            JCObject objManifestResourceHandle = (JCObject)classType.Invoke("ManifestResourceHandle", rowNumber);
+            retObjectManifestResourceHandle = classType.Invoke("ManifestResourceHandle", rowNumber);
+            JCObject objManifestResourceHandle = (JCObject)retObjectManifestResourceHandle;
             return new ManifestResourceHandle(objManifestResourceHandle);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectManifestResourceHandle != null ? retObjectManifestResourceHandle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -609,10 +849,14 @@ public class MetadataTokens extends NetObject  {
 
     public static MemberReferenceHandle MemberReferenceHandle(int rowNumber) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMemberReferenceHandle = null;
         try {
-            JCObject objMemberReferenceHandle = (JCObject)classType.Invoke("MemberReferenceHandle", rowNumber);
+            retObjectMemberReferenceHandle = classType.Invoke("MemberReferenceHandle", rowNumber);
+            JCObject objMemberReferenceHandle = (JCObject)retObjectMemberReferenceHandle;
             return new MemberReferenceHandle(objMemberReferenceHandle);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMemberReferenceHandle != null ? retObjectMemberReferenceHandle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -620,10 +864,14 @@ public class MetadataTokens extends NetObject  {
 
     public static MethodDebugInformationHandle MethodDebugInformationHandle(int rowNumber) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMethodDebugInformationHandle = null;
         try {
-            JCObject objMethodDebugInformationHandle = (JCObject)classType.Invoke("MethodDebugInformationHandle", rowNumber);
+            retObjectMethodDebugInformationHandle = classType.Invoke("MethodDebugInformationHandle", rowNumber);
+            JCObject objMethodDebugInformationHandle = (JCObject)retObjectMethodDebugInformationHandle;
             return new MethodDebugInformationHandle(objMethodDebugInformationHandle);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMethodDebugInformationHandle != null ? retObjectMethodDebugInformationHandle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -631,10 +879,14 @@ public class MetadataTokens extends NetObject  {
 
     public static MethodDefinitionHandle MethodDefinitionHandle(int rowNumber) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMethodDefinitionHandle = null;
         try {
-            JCObject objMethodDefinitionHandle = (JCObject)classType.Invoke("MethodDefinitionHandle", rowNumber);
+            retObjectMethodDefinitionHandle = classType.Invoke("MethodDefinitionHandle", rowNumber);
+            JCObject objMethodDefinitionHandle = (JCObject)retObjectMethodDefinitionHandle;
             return new MethodDefinitionHandle(objMethodDefinitionHandle);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMethodDefinitionHandle != null ? retObjectMethodDefinitionHandle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -642,10 +894,14 @@ public class MetadataTokens extends NetObject  {
 
     public static MethodImplementationHandle MethodImplementationHandle(int rowNumber) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMethodImplementationHandle = null;
         try {
-            JCObject objMethodImplementationHandle = (JCObject)classType.Invoke("MethodImplementationHandle", rowNumber);
+            retObjectMethodImplementationHandle = classType.Invoke("MethodImplementationHandle", rowNumber);
+            JCObject objMethodImplementationHandle = (JCObject)retObjectMethodImplementationHandle;
             return new MethodImplementationHandle(objMethodImplementationHandle);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMethodImplementationHandle != null ? retObjectMethodImplementationHandle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -653,10 +909,14 @@ public class MetadataTokens extends NetObject  {
 
     public static MethodSpecificationHandle MethodSpecificationHandle(int rowNumber) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMethodSpecificationHandle = null;
         try {
-            JCObject objMethodSpecificationHandle = (JCObject)classType.Invoke("MethodSpecificationHandle", rowNumber);
+            retObjectMethodSpecificationHandle = classType.Invoke("MethodSpecificationHandle", rowNumber);
+            JCObject objMethodSpecificationHandle = (JCObject)retObjectMethodSpecificationHandle;
             return new MethodSpecificationHandle(objMethodSpecificationHandle);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMethodSpecificationHandle != null ? retObjectMethodSpecificationHandle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -664,10 +924,14 @@ public class MetadataTokens extends NetObject  {
 
     public static ModuleReferenceHandle ModuleReferenceHandle(int rowNumber) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectModuleReferenceHandle = null;
         try {
-            JCObject objModuleReferenceHandle = (JCObject)classType.Invoke("ModuleReferenceHandle", rowNumber);
+            retObjectModuleReferenceHandle = classType.Invoke("ModuleReferenceHandle", rowNumber);
+            JCObject objModuleReferenceHandle = (JCObject)retObjectModuleReferenceHandle;
             return new ModuleReferenceHandle(objModuleReferenceHandle);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectModuleReferenceHandle != null ? retObjectModuleReferenceHandle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -675,10 +939,14 @@ public class MetadataTokens extends NetObject  {
 
     public static ParameterHandle ParameterHandle(int rowNumber) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectParameterHandle = null;
         try {
-            JCObject objParameterHandle = (JCObject)classType.Invoke("ParameterHandle", rowNumber);
+            retObjectParameterHandle = classType.Invoke("ParameterHandle", rowNumber);
+            JCObject objParameterHandle = (JCObject)retObjectParameterHandle;
             return new ParameterHandle(objParameterHandle);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParameterHandle != null ? retObjectParameterHandle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -686,10 +954,14 @@ public class MetadataTokens extends NetObject  {
 
     public static PropertyDefinitionHandle PropertyDefinitionHandle(int rowNumber) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectPropertyDefinitionHandle = null;
         try {
-            JCObject objPropertyDefinitionHandle = (JCObject)classType.Invoke("PropertyDefinitionHandle", rowNumber);
+            retObjectPropertyDefinitionHandle = classType.Invoke("PropertyDefinitionHandle", rowNumber);
+            JCObject objPropertyDefinitionHandle = (JCObject)retObjectPropertyDefinitionHandle;
             return new PropertyDefinitionHandle(objPropertyDefinitionHandle);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPropertyDefinitionHandle != null ? retObjectPropertyDefinitionHandle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -697,10 +969,14 @@ public class MetadataTokens extends NetObject  {
 
     public static StandaloneSignatureHandle StandaloneSignatureHandle(int rowNumber) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectStandaloneSignatureHandle = null;
         try {
-            JCObject objStandaloneSignatureHandle = (JCObject)classType.Invoke("StandaloneSignatureHandle", rowNumber);
+            retObjectStandaloneSignatureHandle = classType.Invoke("StandaloneSignatureHandle", rowNumber);
+            JCObject objStandaloneSignatureHandle = (JCObject)retObjectStandaloneSignatureHandle;
             return new StandaloneSignatureHandle(objStandaloneSignatureHandle);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStandaloneSignatureHandle != null ? retObjectStandaloneSignatureHandle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -708,10 +984,14 @@ public class MetadataTokens extends NetObject  {
 
     public static StringHandle StringHandle(int offset) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectStringHandle = null;
         try {
-            JCObject objStringHandle = (JCObject)classType.Invoke("StringHandle", offset);
+            retObjectStringHandle = classType.Invoke("StringHandle", offset);
+            JCObject objStringHandle = (JCObject)retObjectStringHandle;
             return new StringHandle(objStringHandle);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStringHandle != null ? retObjectStringHandle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -719,10 +999,14 @@ public class MetadataTokens extends NetObject  {
 
     public static TypeDefinitionHandle TypeDefinitionHandle(int rowNumber) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTypeDefinitionHandle = null;
         try {
-            JCObject objTypeDefinitionHandle = (JCObject)classType.Invoke("TypeDefinitionHandle", rowNumber);
+            retObjectTypeDefinitionHandle = classType.Invoke("TypeDefinitionHandle", rowNumber);
+            JCObject objTypeDefinitionHandle = (JCObject)retObjectTypeDefinitionHandle;
             return new TypeDefinitionHandle(objTypeDefinitionHandle);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTypeDefinitionHandle != null ? retObjectTypeDefinitionHandle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -730,10 +1014,14 @@ public class MetadataTokens extends NetObject  {
 
     public static TypeReferenceHandle TypeReferenceHandle(int rowNumber) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTypeReferenceHandle = null;
         try {
-            JCObject objTypeReferenceHandle = (JCObject)classType.Invoke("TypeReferenceHandle", rowNumber);
+            retObjectTypeReferenceHandle = classType.Invoke("TypeReferenceHandle", rowNumber);
+            JCObject objTypeReferenceHandle = (JCObject)retObjectTypeReferenceHandle;
             return new TypeReferenceHandle(objTypeReferenceHandle);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTypeReferenceHandle != null ? retObjectTypeReferenceHandle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -741,10 +1029,14 @@ public class MetadataTokens extends NetObject  {
 
     public static TypeSpecificationHandle TypeSpecificationHandle(int rowNumber) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTypeSpecificationHandle = null;
         try {
-            JCObject objTypeSpecificationHandle = (JCObject)classType.Invoke("TypeSpecificationHandle", rowNumber);
+            retObjectTypeSpecificationHandle = classType.Invoke("TypeSpecificationHandle", rowNumber);
+            JCObject objTypeSpecificationHandle = (JCObject)retObjectTypeSpecificationHandle;
             return new TypeSpecificationHandle(objTypeSpecificationHandle);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTypeSpecificationHandle != null ? retObjectTypeSpecificationHandle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -752,10 +1044,14 @@ public class MetadataTokens extends NetObject  {
 
     public static UserStringHandle UserStringHandle(int offset) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectUserStringHandle = null;
         try {
-            JCObject objUserStringHandle = (JCObject)classType.Invoke("UserStringHandle", offset);
+            retObjectUserStringHandle = classType.Invoke("UserStringHandle", offset);
+            JCObject objUserStringHandle = (JCObject)retObjectUserStringHandle;
             return new UserStringHandle(objUserStringHandle);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUserStringHandle != null ? retObjectUserStringHandle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

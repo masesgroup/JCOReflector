@@ -156,7 +156,7 @@ public class VirtualPathExtension extends NetObject  {
     
     public void Attach(ServiceHostBase owner) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Attach", owner == null ? null : owner.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -166,7 +166,7 @@ public class VirtualPathExtension extends NetObject  {
 
     public void Detach(ServiceHostBase owner) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Detach", owner == null ? null : owner.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -180,9 +180,13 @@ public class VirtualPathExtension extends NetObject  {
     
     public java.lang.String getApplicationVirtualPath() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectApplicationVirtualPath = null;
         try {
-            return (java.lang.String)classInstance.Get("ApplicationVirtualPath");
+            retObjectApplicationVirtualPath = classInstance.Get("ApplicationVirtualPath");
+            return (java.lang.String)retObjectApplicationVirtualPath;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectApplicationVirtualPath != null ? retObjectApplicationVirtualPath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,7 +194,7 @@ public class VirtualPathExtension extends NetObject  {
 
     public void setApplicationVirtualPath(java.lang.String ApplicationVirtualPath) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ApplicationVirtualPath", ApplicationVirtualPath);
         } catch (JCNativeException jcne) {
@@ -200,9 +204,13 @@ public class VirtualPathExtension extends NetObject  {
 
     public java.lang.String getSiteName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSiteName = null;
         try {
-            return (java.lang.String)classInstance.Get("SiteName");
+            retObjectSiteName = classInstance.Get("SiteName");
+            return (java.lang.String)retObjectSiteName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSiteName != null ? retObjectSiteName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -210,7 +218,7 @@ public class VirtualPathExtension extends NetObject  {
 
     public void setSiteName(java.lang.String SiteName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SiteName", SiteName);
         } catch (JCNativeException jcne) {
@@ -220,9 +228,13 @@ public class VirtualPathExtension extends NetObject  {
 
     public java.lang.String getVirtualPath() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVirtualPath = null;
         try {
-            return (java.lang.String)classInstance.Get("VirtualPath");
+            retObjectVirtualPath = classInstance.Get("VirtualPath");
+            return (java.lang.String)retObjectVirtualPath;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectVirtualPath != null ? retObjectVirtualPath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -230,7 +242,7 @@ public class VirtualPathExtension extends NetObject  {
 
     public void setVirtualPath(java.lang.String VirtualPath) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("VirtualPath", VirtualPath);
         } catch (JCNativeException jcne) {

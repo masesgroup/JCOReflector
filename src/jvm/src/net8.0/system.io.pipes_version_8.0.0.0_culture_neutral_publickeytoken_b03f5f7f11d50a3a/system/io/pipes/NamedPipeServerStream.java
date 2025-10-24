@@ -236,10 +236,14 @@ public class NamedPipeServerStream extends PipeStream  {
     
     public IAsyncResult BeginWaitForConnection(AsyncCallback callback, NetObject state) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.io.IOException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.threading.tasks.TaskCanceledException, system.AggregateException, system.diagnostics.tracing.EventSourceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginWaitForConnection = null;
         try {
-            JCObject objBeginWaitForConnection = (JCObject)classInstance.Invoke("BeginWaitForConnection", callback, state == null ? null : state.getJCOInstance());
+            retObjectBeginWaitForConnection = classInstance.Invoke("BeginWaitForConnection", callback, state == null ? null : state.getJCOInstance());
+            JCObject objBeginWaitForConnection = (JCObject)retObjectBeginWaitForConnection;
             return new IAsyncResultImplementation(objBeginWaitForConnection);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginWaitForConnection != null ? retObjectBeginWaitForConnection.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -247,9 +251,13 @@ public class NamedPipeServerStream extends PipeStream  {
 
     public java.lang.String GetImpersonationUserName() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.io.IOException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetImpersonationUserName = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetImpersonationUserName");
+            retObjectGetImpersonationUserName = classInstance.Invoke("GetImpersonationUserName");
+            return (java.lang.String)retObjectGetImpersonationUserName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetImpersonationUserName != null ? retObjectGetImpersonationUserName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -257,10 +265,14 @@ public class NamedPipeServerStream extends PipeStream  {
 
     public Task WaitForConnectionAsync() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.io.IOException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.OutOfMemoryException, system.threading.tasks.TaskSchedulerException, system.threading.tasks.TaskCanceledException, system.AggregateException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWaitForConnectionAsync = null;
         try {
-            JCObject objWaitForConnectionAsync = (JCObject)classInstance.Invoke("WaitForConnectionAsync");
+            retObjectWaitForConnectionAsync = classInstance.Invoke("WaitForConnectionAsync");
+            JCObject objWaitForConnectionAsync = (JCObject)retObjectWaitForConnectionAsync;
             return new Task(objWaitForConnectionAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWaitForConnectionAsync != null ? retObjectWaitForConnectionAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -268,10 +280,14 @@ public class NamedPipeServerStream extends PipeStream  {
 
     public Task WaitForConnectionAsync(CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.io.IOException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.FormatException, system.threading.tasks.TaskSchedulerException, system.threading.tasks.TaskCanceledException, system.AggregateException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWaitForConnectionAsync = null;
         try {
-            JCObject objWaitForConnectionAsync = (JCObject)classInstance.Invoke("WaitForConnectionAsync", cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            retObjectWaitForConnectionAsync = classInstance.Invoke("WaitForConnectionAsync", cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objWaitForConnectionAsync = (JCObject)retObjectWaitForConnectionAsync;
             return new Task(objWaitForConnectionAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWaitForConnectionAsync != null ? retObjectWaitForConnectionAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -279,7 +295,7 @@ public class NamedPipeServerStream extends PipeStream  {
 
     public void Disconnect() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Disconnect");
         } catch (JCNativeException jcne) {
@@ -289,7 +305,7 @@ public class NamedPipeServerStream extends PipeStream  {
 
     public void EndWaitForConnection(IAsyncResult asyncResult) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.diagnostics.tracing.EventSourceException, system.InvalidOperationException, system.threading.tasks.TaskSchedulerException, system.threading.tasks.TaskCanceledException, system.AggregateException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EndWaitForConnection", asyncResult == null ? null : asyncResult.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -299,7 +315,7 @@ public class NamedPipeServerStream extends PipeStream  {
 
     public void RunAsClient(PipeStreamImpersonationWorker impersonationWorker) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.io.IOException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RunAsClient", impersonationWorker);
         } catch (JCNativeException jcne) {
@@ -309,7 +325,7 @@ public class NamedPipeServerStream extends PipeStream  {
 
     public void WaitForConnection() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.io.IOException, system.OutOfMemoryException, system.NotSupportedException, system.FormatException, system.IndexOutOfRangeException, system.threading.tasks.TaskSchedulerException, system.OperationCanceledException, system.threading.tasks.TaskCanceledException, system.AggregateException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WaitForConnection");
         } catch (JCNativeException jcne) {

@@ -179,9 +179,13 @@ public class SplitterPanel extends Panel  {
     
     public boolean getAutoSize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAutoSize = null;
         try {
-            return (boolean)classInstance.Get("AutoSize");
+            retObjectAutoSize = classInstance.Get("AutoSize");
+            return (boolean)retObjectAutoSize;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAutoSize != null ? retObjectAutoSize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -189,7 +193,7 @@ public class SplitterPanel extends Panel  {
 
     public void setAutoSize(boolean AutoSize) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.ArrayTypeMismatchException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AutoSize", AutoSize);
         } catch (JCNativeException jcne) {
@@ -199,9 +203,13 @@ public class SplitterPanel extends Panel  {
 
     public boolean getTabStop() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTabStop = null;
         try {
-            return (boolean)classInstance.Get("TabStop");
+            retObjectTabStop = classInstance.Get("TabStop");
+            return (boolean)retObjectTabStop;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectTabStop != null ? retObjectTabStop.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -209,7 +217,7 @@ public class SplitterPanel extends Panel  {
 
     public void setTabStop(boolean TabStop) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TabStop", TabStop);
         } catch (JCNativeException jcne) {
@@ -219,9 +227,13 @@ public class SplitterPanel extends Panel  {
 
     public boolean getVisible() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVisible = null;
         try {
-            return (boolean)classInstance.Get("Visible");
+            retObjectVisible = classInstance.Get("Visible");
+            return (boolean)retObjectVisible;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectVisible != null ? retObjectVisible.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -229,7 +241,7 @@ public class SplitterPanel extends Panel  {
 
     public void setVisible(boolean Visible) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.FormatException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.NotSupportedException, system.OutOfMemoryException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Visible", Visible);
         } catch (JCNativeException jcne) {
@@ -239,9 +251,20 @@ public class SplitterPanel extends Panel  {
 
     public int getHeight() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHeight = null;
         try {
-            return (int)classInstance.Get("Height");
+            retObjectHeight = classInstance.Get("Height");
+            return (int)retObjectHeight;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectHeight_ToString = retObjectHeight == null ? "null" : retObjectHeight.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectHeightNumber = (java.lang.Number)retObjectHeight;
+                return retObjectHeightNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectHeight != null ? retObjectHeight.getClass() : "null", retObjectHeight_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -249,7 +272,7 @@ public class SplitterPanel extends Panel  {
 
     public void setHeight(int Height) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Height", Height);
         } catch (JCNativeException jcne) {
@@ -259,9 +282,20 @@ public class SplitterPanel extends Panel  {
 
     public int getTabIndex() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTabIndex = null;
         try {
-            return (int)classInstance.Get("TabIndex");
+            retObjectTabIndex = classInstance.Get("TabIndex");
+            return (int)retObjectTabIndex;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectTabIndex_ToString = retObjectTabIndex == null ? "null" : retObjectTabIndex.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectTabIndexNumber = (java.lang.Number)retObjectTabIndex;
+                return retObjectTabIndexNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectTabIndex != null ? retObjectTabIndex.getClass() : "null", retObjectTabIndex_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -269,7 +303,7 @@ public class SplitterPanel extends Panel  {
 
     public void setTabIndex(int TabIndex) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TabIndex", TabIndex);
         } catch (JCNativeException jcne) {
@@ -279,9 +313,20 @@ public class SplitterPanel extends Panel  {
 
     public int getWidth() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWidth = null;
         try {
-            return (int)classInstance.Get("Width");
+            retObjectWidth = classInstance.Get("Width");
+            return (int)retObjectWidth;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectWidth_ToString = retObjectWidth == null ? "null" : retObjectWidth.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectWidthNumber = (java.lang.Number)retObjectWidth;
+                return retObjectWidthNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectWidth != null ? retObjectWidth.getClass() : "null", retObjectWidth_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -289,7 +334,7 @@ public class SplitterPanel extends Panel  {
 
     public void setWidth(int Width) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Width", Width);
         } catch (JCNativeException jcne) {
@@ -299,10 +344,14 @@ public class SplitterPanel extends Panel  {
 
     public Point getLocation() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLocation = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Location");
+            retObjectLocation = classInstance.Get("Location");
+            JCObject val = (JCObject)retObjectLocation;
             return new Point(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLocation != null ? retObjectLocation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -310,7 +359,7 @@ public class SplitterPanel extends Panel  {
 
     public void setLocation(Point Location) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.FormatException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.NotSupportedException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Location", Location == null ? null : Location.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -320,10 +369,14 @@ public class SplitterPanel extends Panel  {
 
     public Size getMaximumSize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaximumSize = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MaximumSize");
+            retObjectMaximumSize = classInstance.Get("MaximumSize");
+            JCObject val = (JCObject)retObjectMaximumSize;
             return new Size(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMaximumSize != null ? retObjectMaximumSize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -331,7 +384,7 @@ public class SplitterPanel extends Panel  {
 
     public void setMaximumSize(Size MaximumSize) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaximumSize", MaximumSize == null ? null : MaximumSize.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -341,10 +394,14 @@ public class SplitterPanel extends Panel  {
 
     public Size getMinimumSize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMinimumSize = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MinimumSize");
+            retObjectMinimumSize = classInstance.Get("MinimumSize");
+            JCObject val = (JCObject)retObjectMinimumSize;
             return new Size(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMinimumSize != null ? retObjectMinimumSize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -352,7 +409,7 @@ public class SplitterPanel extends Panel  {
 
     public void setMinimumSize(Size MinimumSize) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.ArrayTypeMismatchException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MinimumSize", MinimumSize == null ? null : MinimumSize.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -362,10 +419,14 @@ public class SplitterPanel extends Panel  {
 
     public Size getSize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSize = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Size");
+            retObjectSize = classInstance.Get("Size");
+            JCObject val = (JCObject)retObjectSize;
             return new Size(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSize != null ? retObjectSize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -373,7 +434,7 @@ public class SplitterPanel extends Panel  {
 
     public void setSize(Size Size) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.FormatException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.NotSupportedException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Size", Size == null ? null : Size.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -383,9 +444,13 @@ public class SplitterPanel extends Panel  {
 
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectName = null;
         try {
-            return (java.lang.String)classInstance.Get("Name");
+            retObjectName = classInstance.Get("Name");
+            return (java.lang.String)retObjectName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectName != null ? retObjectName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -393,7 +458,7 @@ public class SplitterPanel extends Panel  {
 
     public void setName(java.lang.String Name) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Name", Name);
         } catch (JCNativeException jcne) {
@@ -403,10 +468,14 @@ public class SplitterPanel extends Panel  {
 
     public AnchorStyles getAnchor() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAnchor = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Anchor");
+            retObjectAnchor = classInstance.Get("Anchor");
+            JCObject val = (JCObject)retObjectAnchor;
             return new AnchorStyles(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAnchor != null ? retObjectAnchor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -414,7 +483,7 @@ public class SplitterPanel extends Panel  {
 
     public void setAnchor(AnchorStyles Anchor) throws Throwable, system.componentmodel.InvalidEnumArgumentException, system.PlatformNotSupportedException, system.ArgumentNullException, system.RankException, system.IndexOutOfRangeException, system.ArgumentException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Anchor", Anchor == null ? null : Anchor.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -424,10 +493,14 @@ public class SplitterPanel extends Panel  {
 
     public BorderStyle getBorderStyle() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBorderStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("BorderStyle");
+            retObjectBorderStyle = classInstance.Get("BorderStyle");
+            JCObject val = (JCObject)retObjectBorderStyle;
             return new BorderStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBorderStyle != null ? retObjectBorderStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -435,7 +508,7 @@ public class SplitterPanel extends Panel  {
 
     public void setBorderStyle(BorderStyle BorderStyle) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.NotSupportedException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BorderStyle", BorderStyle == null ? null : BorderStyle.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -445,10 +518,14 @@ public class SplitterPanel extends Panel  {
 
     public Control getParent() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectParent = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Parent");
+            retObjectParent = classInstance.Get("Parent");
+            JCObject val = (JCObject)retObjectParent;
             return new Control(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParent != null ? retObjectParent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -456,7 +533,7 @@ public class SplitterPanel extends Panel  {
 
     public void setParent(Control Parent) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.RankException, system.IndexOutOfRangeException, system.ArgumentException, system.ArrayTypeMismatchException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.InvalidOperationException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Parent", Parent == null ? null : Parent.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -466,10 +543,14 @@ public class SplitterPanel extends Panel  {
 
     public DockStyle getDock() throws Throwable, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDock = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Dock");
+            retObjectDock = classInstance.Get("Dock");
+            JCObject val = (JCObject)retObjectDock;
             return new DockStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDock != null ? retObjectDock.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -477,7 +558,7 @@ public class SplitterPanel extends Panel  {
 
     public void setDock(DockStyle Dock) throws Throwable, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.PlatformNotSupportedException, system.RankException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.ArrayTypeMismatchException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Dock", Dock == null ? null : Dock.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -492,7 +573,7 @@ public class SplitterPanel extends Panel  {
 
     public void addAutoSizeChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("AutoSizeChanged", handler);
         } catch (JCNativeException jcne) {
@@ -502,7 +583,7 @@ public class SplitterPanel extends Panel  {
 
     public void removeAutoSizeChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("AutoSizeChanged", handler);
         } catch (JCNativeException jcne) {
@@ -512,7 +593,7 @@ public class SplitterPanel extends Panel  {
 
     public void addDockChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("DockChanged", handler);
         } catch (JCNativeException jcne) {
@@ -522,7 +603,7 @@ public class SplitterPanel extends Panel  {
 
     public void removeDockChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("DockChanged", handler);
         } catch (JCNativeException jcne) {
@@ -532,7 +613,7 @@ public class SplitterPanel extends Panel  {
 
     public void addLocationChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("LocationChanged", handler);
         } catch (JCNativeException jcne) {
@@ -542,7 +623,7 @@ public class SplitterPanel extends Panel  {
 
     public void removeLocationChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("LocationChanged", handler);
         } catch (JCNativeException jcne) {
@@ -552,7 +633,7 @@ public class SplitterPanel extends Panel  {
 
     public void addTabIndexChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("TabIndexChanged", handler);
         } catch (JCNativeException jcne) {
@@ -562,7 +643,7 @@ public class SplitterPanel extends Panel  {
 
     public void removeTabIndexChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("TabIndexChanged", handler);
         } catch (JCNativeException jcne) {
@@ -572,7 +653,7 @@ public class SplitterPanel extends Panel  {
 
     public void addTabStopChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("TabStopChanged", handler);
         } catch (JCNativeException jcne) {
@@ -582,7 +663,7 @@ public class SplitterPanel extends Panel  {
 
     public void removeTabStopChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("TabStopChanged", handler);
         } catch (JCNativeException jcne) {
@@ -592,7 +673,7 @@ public class SplitterPanel extends Panel  {
 
     public void addVisibleChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("VisibleChanged", handler);
         } catch (JCNativeException jcne) {
@@ -602,7 +683,7 @@ public class SplitterPanel extends Panel  {
 
     public void removeVisibleChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("VisibleChanged", handler);
         } catch (JCNativeException jcne) {

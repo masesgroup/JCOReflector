@@ -145,10 +145,14 @@ public class IDynamicPropertyTypeProviderImplementation extends NetObject implem
     
     public NetType GetPropertyType(IServiceProvider serviceProvider, java.lang.String propertyName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPropertyType = null;
         try {
-            JCObject objGetPropertyType = (JCObject)classInstance.Invoke("GetPropertyType", serviceProvider == null ? null : serviceProvider.getJCOInstance(), propertyName);
+            retObjectGetPropertyType = classInstance.Invoke("GetPropertyType", serviceProvider == null ? null : serviceProvider.getJCOInstance(), propertyName);
+            JCObject objGetPropertyType = (JCObject)retObjectGetPropertyType;
             return new NetType(objGetPropertyType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetPropertyType != null ? retObjectGetPropertyType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -156,10 +160,14 @@ public class IDynamicPropertyTypeProviderImplementation extends NetObject implem
 
     public AccessTypes GetAccessType(IServiceProvider serviceProvider, java.lang.String propertyName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetAccessType = null;
         try {
-            JCObject objGetAccessType = (JCObject)classInstance.Invoke("GetAccessType", serviceProvider == null ? null : serviceProvider.getJCOInstance(), propertyName);
+            retObjectGetAccessType = classInstance.Invoke("GetAccessType", serviceProvider == null ? null : serviceProvider.getJCOInstance(), propertyName);
+            JCObject objGetAccessType = (JCObject)retObjectGetAccessType;
             return new AccessTypes(objGetAccessType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetAccessType != null ? retObjectGetAccessType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

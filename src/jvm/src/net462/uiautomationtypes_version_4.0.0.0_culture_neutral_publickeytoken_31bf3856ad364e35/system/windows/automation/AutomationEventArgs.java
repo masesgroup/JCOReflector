@@ -171,10 +171,14 @@ public class AutomationEventArgs extends EventArgs  {
     
     public AutomationEvent getEventId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEventId = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("EventId");
+            retObjectEventId = classInstance.Get("EventId");
+            JCObject val = (JCObject)retObjectEventId;
             return new AutomationEvent(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEventId != null ? retObjectEventId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

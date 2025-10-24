@@ -146,9 +146,13 @@ public class IContextPropertyActivatorImplementation extends NetObject implement
     
     public boolean DeliverClientContextToServerContext(IConstructionCallMessage msg) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDeliverClientContextToServerContext = null;
         try {
-            return (boolean)classInstance.Invoke("DeliverClientContextToServerContext", msg == null ? null : msg.getJCOInstance());
+            retObjectDeliverClientContextToServerContext = classInstance.Invoke("DeliverClientContextToServerContext", msg == null ? null : msg.getJCOInstance());
+            return (boolean)retObjectDeliverClientContextToServerContext;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectDeliverClientContextToServerContext != null ? retObjectDeliverClientContextToServerContext.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -156,9 +160,13 @@ public class IContextPropertyActivatorImplementation extends NetObject implement
 
     public boolean DeliverServerContextToClientContext(IConstructionReturnMessage msg) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDeliverServerContextToClientContext = null;
         try {
-            return (boolean)classInstance.Invoke("DeliverServerContextToClientContext", msg == null ? null : msg.getJCOInstance());
+            retObjectDeliverServerContextToClientContext = classInstance.Invoke("DeliverServerContextToClientContext", msg == null ? null : msg.getJCOInstance());
+            return (boolean)retObjectDeliverServerContextToClientContext;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectDeliverServerContextToClientContext != null ? retObjectDeliverServerContextToClientContext.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -166,9 +174,13 @@ public class IContextPropertyActivatorImplementation extends NetObject implement
 
     public boolean IsOKToActivate(IConstructionCallMessage msg) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsOKToActivate = null;
         try {
-            return (boolean)classInstance.Invoke("IsOKToActivate", msg == null ? null : msg.getJCOInstance());
+            retObjectIsOKToActivate = classInstance.Invoke("IsOKToActivate", msg == null ? null : msg.getJCOInstance());
+            return (boolean)retObjectIsOKToActivate;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsOKToActivate != null ? retObjectIsOKToActivate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,7 +188,7 @@ public class IContextPropertyActivatorImplementation extends NetObject implement
 
     public void CollectFromClientContext(IConstructionCallMessage msg) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CollectFromClientContext", msg == null ? null : msg.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -186,7 +198,7 @@ public class IContextPropertyActivatorImplementation extends NetObject implement
 
     public void CollectFromServerContext(IConstructionReturnMessage msg) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CollectFromServerContext", msg == null ? null : msg.getJCOInstance());
         } catch (JCNativeException jcne) {

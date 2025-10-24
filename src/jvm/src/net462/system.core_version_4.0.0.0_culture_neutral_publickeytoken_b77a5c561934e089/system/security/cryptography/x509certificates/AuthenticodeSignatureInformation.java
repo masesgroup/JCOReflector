@@ -165,9 +165,20 @@ public class AuthenticodeSignatureInformation extends NetObject  {
     
     public int getHResult() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHResult = null;
         try {
-            return (int)classInstance.Get("HResult");
+            retObjectHResult = classInstance.Get("HResult");
+            return (int)retObjectHResult;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectHResult_ToString = retObjectHResult == null ? "null" : retObjectHResult.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectHResultNumber = (java.lang.Number)retObjectHResult;
+                return retObjectHResultNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectHResult != null ? retObjectHResult.getClass() : "null", retObjectHResult_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -175,10 +186,14 @@ public class AuthenticodeSignatureInformation extends NetObject  {
 
     public SignatureVerificationResult getVerificationResult() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVerificationResult = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("VerificationResult");
+            retObjectVerificationResult = classInstance.Get("VerificationResult");
+            JCObject val = (JCObject)retObjectVerificationResult;
             return new SignatureVerificationResult(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVerificationResult != null ? retObjectVerificationResult.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,10 +201,14 @@ public class AuthenticodeSignatureInformation extends NetObject  {
 
     public TimestampInformation getTimestamp() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTimestamp = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Timestamp");
+            retObjectTimestamp = classInstance.Get("Timestamp");
+            JCObject val = (JCObject)retObjectTimestamp;
             return new TimestampInformation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTimestamp != null ? retObjectTimestamp.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,10 +216,14 @@ public class AuthenticodeSignatureInformation extends NetObject  {
 
     public TrustStatus getTrustStatus() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTrustStatus = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TrustStatus");
+            retObjectTrustStatus = classInstance.Get("TrustStatus");
+            JCObject val = (JCObject)retObjectTrustStatus;
             return new TrustStatus(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTrustStatus != null ? retObjectTrustStatus.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -208,10 +231,14 @@ public class AuthenticodeSignatureInformation extends NetObject  {
 
     public X509Certificate2 getSigningCertificate() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSigningCertificate = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SigningCertificate");
+            retObjectSigningCertificate = classInstance.Get("SigningCertificate");
+            JCObject val = (JCObject)retObjectSigningCertificate;
             return new X509Certificate2(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSigningCertificate != null ? retObjectSigningCertificate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -219,10 +246,14 @@ public class AuthenticodeSignatureInformation extends NetObject  {
 
     public X509Chain getSignatureChain() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSignatureChain = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SignatureChain");
+            retObjectSignatureChain = classInstance.Get("SignatureChain");
+            JCObject val = (JCObject)retObjectSignatureChain;
             return new X509Chain(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSignatureChain != null ? retObjectSignatureChain.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -230,9 +261,13 @@ public class AuthenticodeSignatureInformation extends NetObject  {
 
     public java.lang.String getDescription() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDescription = null;
         try {
-            return (java.lang.String)classInstance.Get("Description");
+            retObjectDescription = classInstance.Get("Description");
+            return (java.lang.String)retObjectDescription;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDescription != null ? retObjectDescription.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -240,9 +275,13 @@ public class AuthenticodeSignatureInformation extends NetObject  {
 
     public java.lang.String getHashAlgorithm() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHashAlgorithm = null;
         try {
-            return (java.lang.String)classInstance.Get("HashAlgorithm");
+            retObjectHashAlgorithm = classInstance.Get("HashAlgorithm");
+            return (java.lang.String)retObjectHashAlgorithm;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectHashAlgorithm != null ? retObjectHashAlgorithm.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -250,10 +289,14 @@ public class AuthenticodeSignatureInformation extends NetObject  {
 
     public Uri getDescriptionUrl() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDescriptionUrl = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DescriptionUrl");
+            retObjectDescriptionUrl = classInstance.Get("DescriptionUrl");
+            JCObject val = (JCObject)retObjectDescriptionUrl;
             return new Uri(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDescriptionUrl != null ? retObjectDescriptionUrl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

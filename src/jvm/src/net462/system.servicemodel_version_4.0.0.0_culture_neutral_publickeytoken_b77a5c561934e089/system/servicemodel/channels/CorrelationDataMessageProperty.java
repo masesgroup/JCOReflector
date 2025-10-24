@@ -166,9 +166,13 @@ public class CorrelationDataMessageProperty extends NetObject  {
     
     public boolean Remove(java.lang.String name) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRemove = null;
         try {
-            return (boolean)classInstance.Invoke("Remove", name);
+            retObjectRemove = classInstance.Invoke("Remove", name);
+            return (boolean)retObjectRemove;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectRemove != null ? retObjectRemove.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,9 +180,13 @@ public class CorrelationDataMessageProperty extends NetObject  {
 
     public static boolean TryGet(Message message, JCORefOut<CorrelationDataMessageProperty> property) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTryGet = null;
         try {
-            return (boolean)classType.Invoke("TryGet", message == null ? null : message.getJCOInstance(), property.getJCRefOut());
+            retObjectTryGet = classType.Invoke("TryGet", message == null ? null : message.getJCOInstance(), property.getJCRefOut());
+            return (boolean)retObjectTryGet;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryGet != null ? retObjectTryGet.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,9 +194,13 @@ public class CorrelationDataMessageProperty extends NetObject  {
 
     public static boolean TryGet(MessageProperties properties, JCORefOut<CorrelationDataMessageProperty> property) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTryGet = null;
         try {
-            return (boolean)classType.Invoke("TryGet", properties == null ? null : properties.getJCOInstance(), property.getJCRefOut());
+            retObjectTryGet = classType.Invoke("TryGet", properties == null ? null : properties.getJCOInstance(), property.getJCRefOut());
+            return (boolean)retObjectTryGet;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryGet != null ? retObjectTryGet.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,9 +208,13 @@ public class CorrelationDataMessageProperty extends NetObject  {
 
     public boolean TryGetValue(java.lang.String name, JCORefOut value) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryGetValue = null;
         try {
-            return (boolean)classInstance.Invoke("TryGetValue", name, value.getJCRefOut());
+            retObjectTryGetValue = classInstance.Invoke("TryGetValue", name, value.getJCRefOut());
+            return (boolean)retObjectTryGetValue;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryGetValue != null ? retObjectTryGetValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -206,10 +222,14 @@ public class CorrelationDataMessageProperty extends NetObject  {
 
     public IMessageProperty CreateCopy() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateCopy = null;
         try {
-            JCObject objCreateCopy = (JCObject)classInstance.Invoke("CreateCopy");
+            retObjectCreateCopy = classInstance.Invoke("CreateCopy");
+            JCObject objCreateCopy = (JCObject)retObjectCreateCopy;
             return new IMessagePropertyImplementation(objCreateCopy);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateCopy != null ? retObjectCreateCopy.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -221,9 +241,13 @@ public class CorrelationDataMessageProperty extends NetObject  {
     
     public static java.lang.String getName() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectName = null;
         try {
-            return (java.lang.String)classType.Get("Name");
+            retObjectName = classType.Get("Name");
+            return (java.lang.String)retObjectName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectName != null ? retObjectName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

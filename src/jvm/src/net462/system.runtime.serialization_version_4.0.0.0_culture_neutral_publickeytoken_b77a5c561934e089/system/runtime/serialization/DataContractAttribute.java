@@ -166,9 +166,13 @@ public class DataContractAttribute extends Attribute  {
     
     public boolean getIsNameSetExplicitly() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsNameSetExplicitly = null;
         try {
-            return (boolean)classInstance.Get("IsNameSetExplicitly");
+            retObjectIsNameSetExplicitly = classInstance.Get("IsNameSetExplicitly");
+            return (boolean)retObjectIsNameSetExplicitly;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsNameSetExplicitly != null ? retObjectIsNameSetExplicitly.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,9 +180,13 @@ public class DataContractAttribute extends Attribute  {
 
     public boolean getIsNamespaceSetExplicitly() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsNamespaceSetExplicitly = null;
         try {
-            return (boolean)classInstance.Get("IsNamespaceSetExplicitly");
+            retObjectIsNamespaceSetExplicitly = classInstance.Get("IsNamespaceSetExplicitly");
+            return (boolean)retObjectIsNamespaceSetExplicitly;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsNamespaceSetExplicitly != null ? retObjectIsNamespaceSetExplicitly.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,9 +194,13 @@ public class DataContractAttribute extends Attribute  {
 
     public boolean getIsReference() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsReference = null;
         try {
-            return (boolean)classInstance.Get("IsReference");
+            retObjectIsReference = classInstance.Get("IsReference");
+            return (boolean)retObjectIsReference;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsReference != null ? retObjectIsReference.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,7 +208,7 @@ public class DataContractAttribute extends Attribute  {
 
     public void setIsReference(boolean IsReference) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsReference", IsReference);
         } catch (JCNativeException jcne) {
@@ -206,9 +218,13 @@ public class DataContractAttribute extends Attribute  {
 
     public boolean getIsReferenceSetExplicitly() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsReferenceSetExplicitly = null;
         try {
-            return (boolean)classInstance.Get("IsReferenceSetExplicitly");
+            retObjectIsReferenceSetExplicitly = classInstance.Get("IsReferenceSetExplicitly");
+            return (boolean)retObjectIsReferenceSetExplicitly;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsReferenceSetExplicitly != null ? retObjectIsReferenceSetExplicitly.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -216,9 +232,13 @@ public class DataContractAttribute extends Attribute  {
 
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectName = null;
         try {
-            return (java.lang.String)classInstance.Get("Name");
+            retObjectName = classInstance.Get("Name");
+            return (java.lang.String)retObjectName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectName != null ? retObjectName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -226,7 +246,7 @@ public class DataContractAttribute extends Attribute  {
 
     public void setName(java.lang.String Name) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Name", Name);
         } catch (JCNativeException jcne) {
@@ -236,9 +256,13 @@ public class DataContractAttribute extends Attribute  {
 
     public java.lang.String getNamespace() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNamespace = null;
         try {
-            return (java.lang.String)classInstance.Get("Namespace");
+            retObjectNamespace = classInstance.Get("Namespace");
+            return (java.lang.String)retObjectNamespace;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectNamespace != null ? retObjectNamespace.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -246,7 +270,7 @@ public class DataContractAttribute extends Attribute  {
 
     public void setNamespace(java.lang.String Namespace) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Namespace", Namespace);
         } catch (JCNativeException jcne) {

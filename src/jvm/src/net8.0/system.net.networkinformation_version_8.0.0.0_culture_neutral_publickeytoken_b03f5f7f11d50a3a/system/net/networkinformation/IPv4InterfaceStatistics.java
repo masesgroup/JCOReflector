@@ -157,9 +157,20 @@ public class IPv4InterfaceStatistics extends NetObject  {
     
     public long getBytesReceived() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBytesReceived = null;
         try {
-            return (long)classInstance.Get("BytesReceived");
+            retObjectBytesReceived = classInstance.Get("BytesReceived");
+            return (long)retObjectBytesReceived;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectBytesReceived_ToString = retObjectBytesReceived == null ? "null" : retObjectBytesReceived.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectBytesReceivedNumber = (java.lang.Number)retObjectBytesReceived;
+                return retObjectBytesReceivedNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectBytesReceived != null ? retObjectBytesReceived.getClass() : "null", retObjectBytesReceived_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -167,9 +178,20 @@ public class IPv4InterfaceStatistics extends NetObject  {
 
     public long getBytesSent() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBytesSent = null;
         try {
-            return (long)classInstance.Get("BytesSent");
+            retObjectBytesSent = classInstance.Get("BytesSent");
+            return (long)retObjectBytesSent;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectBytesSent_ToString = retObjectBytesSent == null ? "null" : retObjectBytesSent.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectBytesSentNumber = (java.lang.Number)retObjectBytesSent;
+                return retObjectBytesSentNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectBytesSent != null ? retObjectBytesSent.getClass() : "null", retObjectBytesSent_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,9 +199,20 @@ public class IPv4InterfaceStatistics extends NetObject  {
 
     public long getIncomingPacketsDiscarded() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIncomingPacketsDiscarded = null;
         try {
-            return (long)classInstance.Get("IncomingPacketsDiscarded");
+            retObjectIncomingPacketsDiscarded = classInstance.Get("IncomingPacketsDiscarded");
+            return (long)retObjectIncomingPacketsDiscarded;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectIncomingPacketsDiscarded_ToString = retObjectIncomingPacketsDiscarded == null ? "null" : retObjectIncomingPacketsDiscarded.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectIncomingPacketsDiscardedNumber = (java.lang.Number)retObjectIncomingPacketsDiscarded;
+                return retObjectIncomingPacketsDiscardedNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectIncomingPacketsDiscarded != null ? retObjectIncomingPacketsDiscarded.getClass() : "null", retObjectIncomingPacketsDiscarded_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,9 +220,20 @@ public class IPv4InterfaceStatistics extends NetObject  {
 
     public long getIncomingPacketsWithErrors() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIncomingPacketsWithErrors = null;
         try {
-            return (long)classInstance.Get("IncomingPacketsWithErrors");
+            retObjectIncomingPacketsWithErrors = classInstance.Get("IncomingPacketsWithErrors");
+            return (long)retObjectIncomingPacketsWithErrors;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectIncomingPacketsWithErrors_ToString = retObjectIncomingPacketsWithErrors == null ? "null" : retObjectIncomingPacketsWithErrors.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectIncomingPacketsWithErrorsNumber = (java.lang.Number)retObjectIncomingPacketsWithErrors;
+                return retObjectIncomingPacketsWithErrorsNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectIncomingPacketsWithErrors != null ? retObjectIncomingPacketsWithErrors.getClass() : "null", retObjectIncomingPacketsWithErrors_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,9 +241,20 @@ public class IPv4InterfaceStatistics extends NetObject  {
 
     public long getIncomingUnknownProtocolPackets() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIncomingUnknownProtocolPackets = null;
         try {
-            return (long)classInstance.Get("IncomingUnknownProtocolPackets");
+            retObjectIncomingUnknownProtocolPackets = classInstance.Get("IncomingUnknownProtocolPackets");
+            return (long)retObjectIncomingUnknownProtocolPackets;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectIncomingUnknownProtocolPackets_ToString = retObjectIncomingUnknownProtocolPackets == null ? "null" : retObjectIncomingUnknownProtocolPackets.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectIncomingUnknownProtocolPacketsNumber = (java.lang.Number)retObjectIncomingUnknownProtocolPackets;
+                return retObjectIncomingUnknownProtocolPacketsNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectIncomingUnknownProtocolPackets != null ? retObjectIncomingUnknownProtocolPackets.getClass() : "null", retObjectIncomingUnknownProtocolPackets_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -207,9 +262,20 @@ public class IPv4InterfaceStatistics extends NetObject  {
 
     public long getNonUnicastPacketsReceived() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNonUnicastPacketsReceived = null;
         try {
-            return (long)classInstance.Get("NonUnicastPacketsReceived");
+            retObjectNonUnicastPacketsReceived = classInstance.Get("NonUnicastPacketsReceived");
+            return (long)retObjectNonUnicastPacketsReceived;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectNonUnicastPacketsReceived_ToString = retObjectNonUnicastPacketsReceived == null ? "null" : retObjectNonUnicastPacketsReceived.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectNonUnicastPacketsReceivedNumber = (java.lang.Number)retObjectNonUnicastPacketsReceived;
+                return retObjectNonUnicastPacketsReceivedNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectNonUnicastPacketsReceived != null ? retObjectNonUnicastPacketsReceived.getClass() : "null", retObjectNonUnicastPacketsReceived_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -217,9 +283,20 @@ public class IPv4InterfaceStatistics extends NetObject  {
 
     public long getNonUnicastPacketsSent() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNonUnicastPacketsSent = null;
         try {
-            return (long)classInstance.Get("NonUnicastPacketsSent");
+            retObjectNonUnicastPacketsSent = classInstance.Get("NonUnicastPacketsSent");
+            return (long)retObjectNonUnicastPacketsSent;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectNonUnicastPacketsSent_ToString = retObjectNonUnicastPacketsSent == null ? "null" : retObjectNonUnicastPacketsSent.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectNonUnicastPacketsSentNumber = (java.lang.Number)retObjectNonUnicastPacketsSent;
+                return retObjectNonUnicastPacketsSentNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectNonUnicastPacketsSent != null ? retObjectNonUnicastPacketsSent.getClass() : "null", retObjectNonUnicastPacketsSent_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -227,9 +304,20 @@ public class IPv4InterfaceStatistics extends NetObject  {
 
     public long getOutgoingPacketsDiscarded() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOutgoingPacketsDiscarded = null;
         try {
-            return (long)classInstance.Get("OutgoingPacketsDiscarded");
+            retObjectOutgoingPacketsDiscarded = classInstance.Get("OutgoingPacketsDiscarded");
+            return (long)retObjectOutgoingPacketsDiscarded;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectOutgoingPacketsDiscarded_ToString = retObjectOutgoingPacketsDiscarded == null ? "null" : retObjectOutgoingPacketsDiscarded.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectOutgoingPacketsDiscardedNumber = (java.lang.Number)retObjectOutgoingPacketsDiscarded;
+                return retObjectOutgoingPacketsDiscardedNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectOutgoingPacketsDiscarded != null ? retObjectOutgoingPacketsDiscarded.getClass() : "null", retObjectOutgoingPacketsDiscarded_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -237,9 +325,20 @@ public class IPv4InterfaceStatistics extends NetObject  {
 
     public long getOutgoingPacketsWithErrors() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOutgoingPacketsWithErrors = null;
         try {
-            return (long)classInstance.Get("OutgoingPacketsWithErrors");
+            retObjectOutgoingPacketsWithErrors = classInstance.Get("OutgoingPacketsWithErrors");
+            return (long)retObjectOutgoingPacketsWithErrors;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectOutgoingPacketsWithErrors_ToString = retObjectOutgoingPacketsWithErrors == null ? "null" : retObjectOutgoingPacketsWithErrors.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectOutgoingPacketsWithErrorsNumber = (java.lang.Number)retObjectOutgoingPacketsWithErrors;
+                return retObjectOutgoingPacketsWithErrorsNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectOutgoingPacketsWithErrors != null ? retObjectOutgoingPacketsWithErrors.getClass() : "null", retObjectOutgoingPacketsWithErrors_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -247,9 +346,20 @@ public class IPv4InterfaceStatistics extends NetObject  {
 
     public long getOutputQueueLength() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOutputQueueLength = null;
         try {
-            return (long)classInstance.Get("OutputQueueLength");
+            retObjectOutputQueueLength = classInstance.Get("OutputQueueLength");
+            return (long)retObjectOutputQueueLength;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectOutputQueueLength_ToString = retObjectOutputQueueLength == null ? "null" : retObjectOutputQueueLength.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectOutputQueueLengthNumber = (java.lang.Number)retObjectOutputQueueLength;
+                return retObjectOutputQueueLengthNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectOutputQueueLength != null ? retObjectOutputQueueLength.getClass() : "null", retObjectOutputQueueLength_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -257,9 +367,20 @@ public class IPv4InterfaceStatistics extends NetObject  {
 
     public long getUnicastPacketsReceived() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUnicastPacketsReceived = null;
         try {
-            return (long)classInstance.Get("UnicastPacketsReceived");
+            retObjectUnicastPacketsReceived = classInstance.Get("UnicastPacketsReceived");
+            return (long)retObjectUnicastPacketsReceived;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectUnicastPacketsReceived_ToString = retObjectUnicastPacketsReceived == null ? "null" : retObjectUnicastPacketsReceived.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectUnicastPacketsReceivedNumber = (java.lang.Number)retObjectUnicastPacketsReceived;
+                return retObjectUnicastPacketsReceivedNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectUnicastPacketsReceived != null ? retObjectUnicastPacketsReceived.getClass() : "null", retObjectUnicastPacketsReceived_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -267,9 +388,20 @@ public class IPv4InterfaceStatistics extends NetObject  {
 
     public long getUnicastPacketsSent() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUnicastPacketsSent = null;
         try {
-            return (long)classInstance.Get("UnicastPacketsSent");
+            retObjectUnicastPacketsSent = classInstance.Get("UnicastPacketsSent");
+            return (long)retObjectUnicastPacketsSent;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectUnicastPacketsSent_ToString = retObjectUnicastPacketsSent == null ? "null" : retObjectUnicastPacketsSent.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectUnicastPacketsSentNumber = (java.lang.Number)retObjectUnicastPacketsSent;
+                return retObjectUnicastPacketsSentNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectUnicastPacketsSent != null ? retObjectUnicastPacketsSent.getClass() : "null", retObjectUnicastPacketsSent_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

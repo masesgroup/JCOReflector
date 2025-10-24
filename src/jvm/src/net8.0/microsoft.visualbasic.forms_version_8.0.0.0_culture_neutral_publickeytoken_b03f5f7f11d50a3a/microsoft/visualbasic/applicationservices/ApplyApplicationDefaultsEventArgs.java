@@ -162,9 +162,20 @@ public class ApplyApplicationDefaultsEventArgs extends EventArgs  {
     
     public int getMinimumSplashScreenDisplayTime() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMinimumSplashScreenDisplayTime = null;
         try {
-            return (int)classInstance.Get("MinimumSplashScreenDisplayTime");
+            retObjectMinimumSplashScreenDisplayTime = classInstance.Get("MinimumSplashScreenDisplayTime");
+            return (int)retObjectMinimumSplashScreenDisplayTime;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMinimumSplashScreenDisplayTime_ToString = retObjectMinimumSplashScreenDisplayTime == null ? "null" : retObjectMinimumSplashScreenDisplayTime.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMinimumSplashScreenDisplayTimeNumber = (java.lang.Number)retObjectMinimumSplashScreenDisplayTime;
+                return retObjectMinimumSplashScreenDisplayTimeNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMinimumSplashScreenDisplayTime != null ? retObjectMinimumSplashScreenDisplayTime.getClass() : "null", retObjectMinimumSplashScreenDisplayTime_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,7 +183,7 @@ public class ApplyApplicationDefaultsEventArgs extends EventArgs  {
 
     public void setMinimumSplashScreenDisplayTime(int MinimumSplashScreenDisplayTime) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MinimumSplashScreenDisplayTime", MinimumSplashScreenDisplayTime);
         } catch (JCNativeException jcne) {
@@ -182,10 +193,14 @@ public class ApplyApplicationDefaultsEventArgs extends EventArgs  {
 
     public Font getFont() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFont = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Font");
+            retObjectFont = classInstance.Get("Font");
+            JCObject val = (JCObject)retObjectFont;
             return new Font(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFont != null ? retObjectFont.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,7 +208,7 @@ public class ApplyApplicationDefaultsEventArgs extends EventArgs  {
 
     public void setFont(Font Font) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Font", Font == null ? null : Font.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -203,10 +218,14 @@ public class ApplyApplicationDefaultsEventArgs extends EventArgs  {
 
     public HighDpiMode getHighDpiMode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHighDpiMode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("HighDpiMode");
+            retObjectHighDpiMode = classInstance.Get("HighDpiMode");
+            JCObject val = (JCObject)retObjectHighDpiMode;
             return new HighDpiMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHighDpiMode != null ? retObjectHighDpiMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -214,7 +233,7 @@ public class ApplyApplicationDefaultsEventArgs extends EventArgs  {
 
     public void setHighDpiMode(HighDpiMode HighDpiMode) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("HighDpiMode", HighDpiMode == null ? null : HighDpiMode.getJCOInstance());
         } catch (JCNativeException jcne) {

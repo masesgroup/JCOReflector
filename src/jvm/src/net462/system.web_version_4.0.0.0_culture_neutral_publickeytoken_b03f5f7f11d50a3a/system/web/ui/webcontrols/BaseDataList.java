@@ -160,9 +160,13 @@ public class BaseDataList extends WebControl  {
     
     public static boolean IsBindableType(NetType type) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsBindableType = null;
         try {
-            return (boolean)classType.Invoke("IsBindableType", type == null ? null : type.getJCOInstance());
+            retObjectIsBindableType = classType.Invoke("IsBindableType", type == null ? null : type.getJCOInstance());
+            return (boolean)retObjectIsBindableType;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsBindableType != null ? retObjectIsBindableType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,7 +174,7 @@ public class BaseDataList extends WebControl  {
 
     public void DataBind() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DataBind");
         } catch (JCNativeException jcne) {
@@ -184,9 +188,13 @@ public class BaseDataList extends WebControl  {
     
     public boolean getUseAccessibleHeader() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUseAccessibleHeader = null;
         try {
-            return (boolean)classInstance.Get("UseAccessibleHeader");
+            retObjectUseAccessibleHeader = classInstance.Get("UseAccessibleHeader");
+            return (boolean)retObjectUseAccessibleHeader;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectUseAccessibleHeader != null ? retObjectUseAccessibleHeader.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -194,7 +202,7 @@ public class BaseDataList extends WebControl  {
 
     public void setUseAccessibleHeader(boolean UseAccessibleHeader) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UseAccessibleHeader", UseAccessibleHeader);
         } catch (JCNativeException jcne) {
@@ -204,9 +212,20 @@ public class BaseDataList extends WebControl  {
 
     public int getCellPadding() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCellPadding = null;
         try {
-            return (int)classInstance.Get("CellPadding");
+            retObjectCellPadding = classInstance.Get("CellPadding");
+            return (int)retObjectCellPadding;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCellPadding_ToString = retObjectCellPadding == null ? "null" : retObjectCellPadding.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectCellPaddingNumber = (java.lang.Number)retObjectCellPadding;
+                return retObjectCellPaddingNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCellPadding != null ? retObjectCellPadding.getClass() : "null", retObjectCellPadding_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -214,7 +233,7 @@ public class BaseDataList extends WebControl  {
 
     public void setCellPadding(int CellPadding) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CellPadding", CellPadding);
         } catch (JCNativeException jcne) {
@@ -224,9 +243,20 @@ public class BaseDataList extends WebControl  {
 
     public int getCellSpacing() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCellSpacing = null;
         try {
-            return (int)classInstance.Get("CellSpacing");
+            retObjectCellSpacing = classInstance.Get("CellSpacing");
+            return (int)retObjectCellSpacing;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCellSpacing_ToString = retObjectCellSpacing == null ? "null" : retObjectCellSpacing.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectCellSpacingNumber = (java.lang.Number)retObjectCellSpacing;
+                return retObjectCellSpacingNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCellSpacing != null ? retObjectCellSpacing.getClass() : "null", retObjectCellSpacing_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -234,7 +264,7 @@ public class BaseDataList extends WebControl  {
 
     public void setCellSpacing(int CellSpacing) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CellSpacing", CellSpacing);
         } catch (JCNativeException jcne) {
@@ -244,10 +274,14 @@ public class BaseDataList extends WebControl  {
 
     public NetObject getDataSource() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDataSource = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DataSource");
+            retObjectDataSource = classInstance.Get("DataSource");
+            JCObject val = (JCObject)retObjectDataSource;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDataSource != null ? retObjectDataSource.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -255,7 +289,7 @@ public class BaseDataList extends WebControl  {
 
     public void setDataSource(NetObject DataSource) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.web.HttpException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DataSource", DataSource == null ? null : DataSource.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -265,9 +299,13 @@ public class BaseDataList extends WebControl  {
 
     public java.lang.String getCaption() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCaption = null;
         try {
-            return (java.lang.String)classInstance.Get("Caption");
+            retObjectCaption = classInstance.Get("Caption");
+            return (java.lang.String)retObjectCaption;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectCaption != null ? retObjectCaption.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -275,7 +313,7 @@ public class BaseDataList extends WebControl  {
 
     public void setCaption(java.lang.String Caption) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Caption", Caption);
         } catch (JCNativeException jcne) {
@@ -285,9 +323,13 @@ public class BaseDataList extends WebControl  {
 
     public java.lang.String getDataKeyField() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDataKeyField = null;
         try {
-            return (java.lang.String)classInstance.Get("DataKeyField");
+            retObjectDataKeyField = classInstance.Get("DataKeyField");
+            return (java.lang.String)retObjectDataKeyField;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDataKeyField != null ? retObjectDataKeyField.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -295,7 +337,7 @@ public class BaseDataList extends WebControl  {
 
     public void setDataKeyField(java.lang.String DataKeyField) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DataKeyField", DataKeyField);
         } catch (JCNativeException jcne) {
@@ -305,9 +347,13 @@ public class BaseDataList extends WebControl  {
 
     public java.lang.String getDataMember() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDataMember = null;
         try {
-            return (java.lang.String)classInstance.Get("DataMember");
+            retObjectDataMember = classInstance.Get("DataMember");
+            return (java.lang.String)retObjectDataMember;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDataMember != null ? retObjectDataMember.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -315,7 +361,7 @@ public class BaseDataList extends WebControl  {
 
     public void setDataMember(java.lang.String DataMember) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.web.HttpException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DataMember", DataMember);
         } catch (JCNativeException jcne) {
@@ -325,9 +371,13 @@ public class BaseDataList extends WebControl  {
 
     public java.lang.String getDataSourceID() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDataSourceID = null;
         try {
-            return (java.lang.String)classInstance.Get("DataSourceID");
+            retObjectDataSourceID = classInstance.Get("DataSourceID");
+            return (java.lang.String)retObjectDataSourceID;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDataSourceID != null ? retObjectDataSourceID.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -335,7 +385,7 @@ public class BaseDataList extends WebControl  {
 
     public void setDataSourceID(java.lang.String DataSourceID) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.web.HttpException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DataSourceID", DataSourceID);
         } catch (JCNativeException jcne) {
@@ -345,10 +395,14 @@ public class BaseDataList extends WebControl  {
 
     public DataKeyCollection getDataKeys() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDataKeys = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DataKeys");
+            retObjectDataKeys = classInstance.Get("DataKeys");
+            JCObject val = (JCObject)retObjectDataKeys;
             return new DataKeyCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDataKeys != null ? retObjectDataKeys.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -356,10 +410,14 @@ public class BaseDataList extends WebControl  {
 
     public GridLines getGridLines() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGridLines = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("GridLines");
+            retObjectGridLines = classInstance.Get("GridLines");
+            JCObject val = (JCObject)retObjectGridLines;
             return new GridLines(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGridLines != null ? retObjectGridLines.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -367,7 +425,7 @@ public class BaseDataList extends WebControl  {
 
     public void setGridLines(GridLines GridLines) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("GridLines", GridLines == null ? null : GridLines.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -377,10 +435,14 @@ public class BaseDataList extends WebControl  {
 
     public HorizontalAlign getHorizontalAlign() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHorizontalAlign = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("HorizontalAlign");
+            retObjectHorizontalAlign = classInstance.Get("HorizontalAlign");
+            JCObject val = (JCObject)retObjectHorizontalAlign;
             return new HorizontalAlign(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHorizontalAlign != null ? retObjectHorizontalAlign.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -388,7 +450,7 @@ public class BaseDataList extends WebControl  {
 
     public void setHorizontalAlign(HorizontalAlign HorizontalAlign) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("HorizontalAlign", HorizontalAlign == null ? null : HorizontalAlign.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -398,10 +460,14 @@ public class BaseDataList extends WebControl  {
 
     public TableCaptionAlign getCaptionAlign() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCaptionAlign = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CaptionAlign");
+            retObjectCaptionAlign = classInstance.Get("CaptionAlign");
+            JCObject val = (JCObject)retObjectCaptionAlign;
             return new TableCaptionAlign(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCaptionAlign != null ? retObjectCaptionAlign.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -409,7 +475,7 @@ public class BaseDataList extends WebControl  {
 
     public void setCaptionAlign(TableCaptionAlign CaptionAlign) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CaptionAlign", CaptionAlign == null ? null : CaptionAlign.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -424,7 +490,7 @@ public class BaseDataList extends WebControl  {
 
     public void addSelectedIndexChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("SelectedIndexChanged", handler);
         } catch (JCNativeException jcne) {
@@ -434,7 +500,7 @@ public class BaseDataList extends WebControl  {
 
     public void removeSelectedIndexChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("SelectedIndexChanged", handler);
         } catch (JCNativeException jcne) {

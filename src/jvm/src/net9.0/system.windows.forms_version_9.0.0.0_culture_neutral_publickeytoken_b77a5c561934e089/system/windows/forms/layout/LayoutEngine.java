@@ -155,9 +155,13 @@ public class LayoutEngine extends NetObject  {
     
     public boolean Layout(NetObject container, LayoutEventArgs layoutEventArgs) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLayout = null;
         try {
-            return (boolean)classInstance.Invoke("Layout", container == null ? null : container.getJCOInstance(), layoutEventArgs == null ? null : layoutEventArgs.getJCOInstance());
+            retObjectLayout = classInstance.Invoke("Layout", container == null ? null : container.getJCOInstance(), layoutEventArgs == null ? null : layoutEventArgs.getJCOInstance());
+            return (boolean)retObjectLayout;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectLayout != null ? retObjectLayout.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -165,7 +169,7 @@ public class LayoutEngine extends NetObject  {
 
     public void InitLayout(NetObject child, BoundsSpecified specified) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("InitLayout", child == null ? null : child.getJCOInstance(), specified == null ? null : specified.getJCOInstance());
         } catch (JCNativeException jcne) {

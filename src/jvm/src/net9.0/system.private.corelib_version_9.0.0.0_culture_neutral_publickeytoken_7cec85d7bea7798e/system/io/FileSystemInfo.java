@@ -160,10 +160,14 @@ public class FileSystemInfo extends MarshalByRefObject  {
     
     public FileSystemInfo ResolveLinkTarget(boolean returnFinalTarget) throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.InvalidOperationException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResolveLinkTarget = null;
         try {
-            JCObject objResolveLinkTarget = (JCObject)classInstance.Invoke("ResolveLinkTarget", returnFinalTarget);
+            retObjectResolveLinkTarget = classInstance.Invoke("ResolveLinkTarget", returnFinalTarget);
+            JCObject objResolveLinkTarget = (JCObject)retObjectResolveLinkTarget;
             return new FileSystemInfo(objResolveLinkTarget);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectResolveLinkTarget != null ? retObjectResolveLinkTarget.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,7 +175,7 @@ public class FileSystemInfo extends MarshalByRefObject  {
 
     public void CreateAsSymbolicLink(java.lang.String pathToTarget) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CreateAsSymbolicLink", pathToTarget);
         } catch (JCNativeException jcne) {
@@ -181,7 +185,7 @@ public class FileSystemInfo extends MarshalByRefObject  {
 
     public void Delete() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Delete");
         } catch (JCNativeException jcne) {
@@ -191,7 +195,7 @@ public class FileSystemInfo extends MarshalByRefObject  {
 
     public void GetObjectData(SerializationInfo info, StreamingContext context) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetObjectData", info == null ? null : info.getJCOInstance(), context == null ? null : context.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -201,7 +205,7 @@ public class FileSystemInfo extends MarshalByRefObject  {
 
     public void Refresh() throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Refresh");
         } catch (JCNativeException jcne) {
@@ -215,9 +219,13 @@ public class FileSystemInfo extends MarshalByRefObject  {
     
     public boolean getExists() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExists = null;
         try {
-            return (boolean)classInstance.Get("Exists");
+            retObjectExists = classInstance.Get("Exists");
+            return (boolean)retObjectExists;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectExists != null ? retObjectExists.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -225,10 +233,14 @@ public class FileSystemInfo extends MarshalByRefObject  {
 
     public DateTime getCreationTime() throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreationTime = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CreationTime");
+            retObjectCreationTime = classInstance.Get("CreationTime");
+            JCObject val = (JCObject)retObjectCreationTime;
             return new DateTime(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreationTime != null ? retObjectCreationTime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -236,7 +248,7 @@ public class FileSystemInfo extends MarshalByRefObject  {
 
     public void setCreationTime(DateTime CreationTime) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidTimeZoneException, system.InvalidOperationException, system.PlatformNotSupportedException, system.UnauthorizedAccessException, system.io.IOException, system.NullReferenceException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CreationTime", CreationTime == null ? null : CreationTime.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -246,10 +258,14 @@ public class FileSystemInfo extends MarshalByRefObject  {
 
     public DateTime getCreationTimeUtc() throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.InvalidOperationException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreationTimeUtc = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CreationTimeUtc");
+            retObjectCreationTimeUtc = classInstance.Get("CreationTimeUtc");
+            JCObject val = (JCObject)retObjectCreationTimeUtc;
             return new DateTime(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreationTimeUtc != null ? retObjectCreationTimeUtc.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -257,7 +273,7 @@ public class FileSystemInfo extends MarshalByRefObject  {
 
     public void setCreationTimeUtc(DateTime CreationTimeUtc) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidTimeZoneException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OverflowException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CreationTimeUtc", CreationTimeUtc == null ? null : CreationTimeUtc.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -267,10 +283,14 @@ public class FileSystemInfo extends MarshalByRefObject  {
 
     public DateTime getLastAccessTime() throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLastAccessTime = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("LastAccessTime");
+            retObjectLastAccessTime = classInstance.Get("LastAccessTime");
+            JCObject val = (JCObject)retObjectLastAccessTime;
             return new DateTime(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLastAccessTime != null ? retObjectLastAccessTime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -278,7 +298,7 @@ public class FileSystemInfo extends MarshalByRefObject  {
 
     public void setLastAccessTime(DateTime LastAccessTime) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidTimeZoneException, system.InvalidOperationException, system.PlatformNotSupportedException, system.UnauthorizedAccessException, system.io.IOException, system.NullReferenceException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("LastAccessTime", LastAccessTime == null ? null : LastAccessTime.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -288,10 +308,14 @@ public class FileSystemInfo extends MarshalByRefObject  {
 
     public DateTime getLastAccessTimeUtc() throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.InvalidOperationException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLastAccessTimeUtc = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("LastAccessTimeUtc");
+            retObjectLastAccessTimeUtc = classInstance.Get("LastAccessTimeUtc");
+            JCObject val = (JCObject)retObjectLastAccessTimeUtc;
             return new DateTime(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLastAccessTimeUtc != null ? retObjectLastAccessTimeUtc.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -299,7 +323,7 @@ public class FileSystemInfo extends MarshalByRefObject  {
 
     public void setLastAccessTimeUtc(DateTime LastAccessTimeUtc) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidTimeZoneException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OverflowException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("LastAccessTimeUtc", LastAccessTimeUtc == null ? null : LastAccessTimeUtc.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -309,10 +333,14 @@ public class FileSystemInfo extends MarshalByRefObject  {
 
     public DateTime getLastWriteTime() throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLastWriteTime = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("LastWriteTime");
+            retObjectLastWriteTime = classInstance.Get("LastWriteTime");
+            JCObject val = (JCObject)retObjectLastWriteTime;
             return new DateTime(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLastWriteTime != null ? retObjectLastWriteTime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -320,7 +348,7 @@ public class FileSystemInfo extends MarshalByRefObject  {
 
     public void setLastWriteTime(DateTime LastWriteTime) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidTimeZoneException, system.InvalidOperationException, system.PlatformNotSupportedException, system.UnauthorizedAccessException, system.io.IOException, system.NullReferenceException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("LastWriteTime", LastWriteTime == null ? null : LastWriteTime.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -330,10 +358,14 @@ public class FileSystemInfo extends MarshalByRefObject  {
 
     public DateTime getLastWriteTimeUtc() throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.InvalidOperationException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLastWriteTimeUtc = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("LastWriteTimeUtc");
+            retObjectLastWriteTimeUtc = classInstance.Get("LastWriteTimeUtc");
+            JCObject val = (JCObject)retObjectLastWriteTimeUtc;
             return new DateTime(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLastWriteTimeUtc != null ? retObjectLastWriteTimeUtc.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -341,7 +373,7 @@ public class FileSystemInfo extends MarshalByRefObject  {
 
     public void setLastWriteTimeUtc(DateTime LastWriteTimeUtc) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidTimeZoneException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OverflowException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("LastWriteTimeUtc", LastWriteTimeUtc == null ? null : LastWriteTimeUtc.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -351,10 +383,14 @@ public class FileSystemInfo extends MarshalByRefObject  {
 
     public FileAttributes getAttributes() throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAttributes = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Attributes");
+            retObjectAttributes = classInstance.Get("Attributes");
+            JCObject val = (JCObject)retObjectAttributes;
             return new FileAttributes(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAttributes != null ? retObjectAttributes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -362,7 +398,7 @@ public class FileSystemInfo extends MarshalByRefObject  {
 
     public void setAttributes(FileAttributes Attributes) throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Attributes", Attributes == null ? null : Attributes.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -372,10 +408,14 @@ public class FileSystemInfo extends MarshalByRefObject  {
 
     public UnixFileMode getUnixFileMode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUnixFileMode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("UnixFileMode");
+            retObjectUnixFileMode = classInstance.Get("UnixFileMode");
+            JCObject val = (JCObject)retObjectUnixFileMode;
             return new UnixFileMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUnixFileMode != null ? retObjectUnixFileMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -383,7 +423,7 @@ public class FileSystemInfo extends MarshalByRefObject  {
 
     public void setUnixFileMode(UnixFileMode UnixFileMode) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UnixFileMode", UnixFileMode == null ? null : UnixFileMode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -393,9 +433,13 @@ public class FileSystemInfo extends MarshalByRefObject  {
 
     public java.lang.String getExtension() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExtension = null;
         try {
-            return (java.lang.String)classInstance.Get("Extension");
+            retObjectExtension = classInstance.Get("Extension");
+            return (java.lang.String)retObjectExtension;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectExtension != null ? retObjectExtension.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -403,9 +447,13 @@ public class FileSystemInfo extends MarshalByRefObject  {
 
     public java.lang.String getFullName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFullName = null;
         try {
-            return (java.lang.String)classInstance.Get("FullName");
+            retObjectFullName = classInstance.Get("FullName");
+            return (java.lang.String)retObjectFullName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectFullName != null ? retObjectFullName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -413,9 +461,13 @@ public class FileSystemInfo extends MarshalByRefObject  {
 
     public java.lang.String getLinkTarget() throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLinkTarget = null;
         try {
-            return (java.lang.String)classInstance.Get("LinkTarget");
+            retObjectLinkTarget = classInstance.Get("LinkTarget");
+            return (java.lang.String)retObjectLinkTarget;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectLinkTarget != null ? retObjectLinkTarget.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -423,9 +475,13 @@ public class FileSystemInfo extends MarshalByRefObject  {
 
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectName = null;
         try {
-            return (java.lang.String)classInstance.Get("Name");
+            retObjectName = classInstance.Get("Name");
+            return (java.lang.String)retObjectName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectName != null ? retObjectName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

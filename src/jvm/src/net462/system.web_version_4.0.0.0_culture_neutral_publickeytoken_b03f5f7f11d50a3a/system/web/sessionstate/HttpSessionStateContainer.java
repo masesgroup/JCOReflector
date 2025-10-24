@@ -171,10 +171,14 @@ public class HttpSessionStateContainer extends NetObject  {
     
     public IEnumerator GetEnumerator() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetEnumerator = null;
         try {
-            JCObject objGetEnumerator = (JCObject)classInstance.Invoke("GetEnumerator");
+            retObjectGetEnumerator = classInstance.Invoke("GetEnumerator");
+            JCObject objGetEnumerator = (JCObject)retObjectGetEnumerator;
             return new IEnumeratorImplementation(objGetEnumerator);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetEnumerator != null ? retObjectGetEnumerator.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,7 +186,7 @@ public class HttpSessionStateContainer extends NetObject  {
 
     public void Abandon() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Abandon");
         } catch (JCNativeException jcne) {
@@ -192,7 +196,7 @@ public class HttpSessionStateContainer extends NetObject  {
 
     public void Add(java.lang.String name, NetObject value) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Add", name, value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -202,7 +206,7 @@ public class HttpSessionStateContainer extends NetObject  {
 
     public void Clear() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Clear");
         } catch (JCNativeException jcne) {
@@ -212,7 +216,7 @@ public class HttpSessionStateContainer extends NetObject  {
 
     public void CopyTo(Array array, int index) throws Throwable, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CopyTo", array == null ? null : array.getJCOInstance(), index);
         } catch (JCNativeException jcne) {
@@ -222,7 +226,7 @@ public class HttpSessionStateContainer extends NetObject  {
 
     public void Remove(java.lang.String name) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Remove", name);
         } catch (JCNativeException jcne) {
@@ -232,7 +236,7 @@ public class HttpSessionStateContainer extends NetObject  {
 
     public void RemoveAll() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RemoveAll");
         } catch (JCNativeException jcne) {
@@ -242,7 +246,7 @@ public class HttpSessionStateContainer extends NetObject  {
 
     public void RemoveAt(int index) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RemoveAt", index);
         } catch (JCNativeException jcne) {
@@ -256,9 +260,13 @@ public class HttpSessionStateContainer extends NetObject  {
     
     public boolean getIsAbandoned() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsAbandoned = null;
         try {
-            return (boolean)classInstance.Get("IsAbandoned");
+            retObjectIsAbandoned = classInstance.Get("IsAbandoned");
+            return (boolean)retObjectIsAbandoned;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsAbandoned != null ? retObjectIsAbandoned.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -266,9 +274,13 @@ public class HttpSessionStateContainer extends NetObject  {
 
     public boolean getIsCookieless() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.FormatException, system.configuration.ConfigurationException, system.InvalidCastException, system.NullReferenceException, system.configuration.ConfigurationErrorsException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsCookieless = null;
         try {
-            return (boolean)classInstance.Get("IsCookieless");
+            retObjectIsCookieless = classInstance.Get("IsCookieless");
+            return (boolean)retObjectIsCookieless;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsCookieless != null ? retObjectIsCookieless.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -276,9 +288,13 @@ public class HttpSessionStateContainer extends NetObject  {
 
     public boolean getIsNewSession() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsNewSession = null;
         try {
-            return (boolean)classInstance.Get("IsNewSession");
+            retObjectIsNewSession = classInstance.Get("IsNewSession");
+            return (boolean)retObjectIsNewSession;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsNewSession != null ? retObjectIsNewSession.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -286,9 +302,13 @@ public class HttpSessionStateContainer extends NetObject  {
 
     public boolean getIsReadOnly() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsReadOnly = null;
         try {
-            return (boolean)classInstance.Get("IsReadOnly");
+            retObjectIsReadOnly = classInstance.Get("IsReadOnly");
+            return (boolean)retObjectIsReadOnly;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsReadOnly != null ? retObjectIsReadOnly.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -296,9 +316,13 @@ public class HttpSessionStateContainer extends NetObject  {
 
     public boolean getIsSynchronized() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsSynchronized = null;
         try {
-            return (boolean)classInstance.Get("IsSynchronized");
+            retObjectIsSynchronized = classInstance.Get("IsSynchronized");
+            return (boolean)retObjectIsSynchronized;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsSynchronized != null ? retObjectIsSynchronized.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -306,9 +330,20 @@ public class HttpSessionStateContainer extends NetObject  {
 
     public int getCodePage() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.web.HttpException, system.web.HttpRequestValidationException, system.configuration.ConfigurationErrorsException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCodePage = null;
         try {
-            return (int)classInstance.Get("CodePage");
+            retObjectCodePage = classInstance.Get("CodePage");
+            return (int)retObjectCodePage;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCodePage_ToString = retObjectCodePage == null ? "null" : retObjectCodePage.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectCodePageNumber = (java.lang.Number)retObjectCodePage;
+                return retObjectCodePageNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCodePage != null ? retObjectCodePage.getClass() : "null", retObjectCodePage_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -316,7 +351,7 @@ public class HttpSessionStateContainer extends NetObject  {
 
     public void setCodePage(int CodePage) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.web.HttpException, system.NotSupportedException, system.OutOfMemoryException, system.configuration.ConfigurationErrorsException, system.IndexOutOfRangeException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CodePage", CodePage);
         } catch (JCNativeException jcne) {
@@ -326,9 +361,20 @@ public class HttpSessionStateContainer extends NetObject  {
 
     public int getCount() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCount = null;
         try {
-            return (int)classInstance.Get("Count");
+            retObjectCount = classInstance.Get("Count");
+            return (int)retObjectCount;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCount_ToString = retObjectCount == null ? "null" : retObjectCount.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectCountNumber = (java.lang.Number)retObjectCount;
+                return retObjectCountNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCount != null ? retObjectCount.getClass() : "null", retObjectCount_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -336,9 +382,20 @@ public class HttpSessionStateContainer extends NetObject  {
 
     public int getLCID() throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.ArgumentException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLCID = null;
         try {
-            return (int)classInstance.Get("LCID");
+            retObjectLCID = classInstance.Get("LCID");
+            return (int)retObjectLCID;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectLCID_ToString = retObjectLCID == null ? "null" : retObjectLCID.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectLCIDNumber = (java.lang.Number)retObjectLCID;
+                return retObjectLCIDNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectLCID != null ? retObjectLCID.getClass() : "null", retObjectLCID_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -346,7 +403,7 @@ public class HttpSessionStateContainer extends NetObject  {
 
     public void setLCID(int LCID) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArgumentNullException, system.NotSupportedException, system.IndexOutOfRangeException, system.TypeInitializationException, system.InvalidOperationException, system.FormatException, system.security.SecurityException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("LCID", LCID);
         } catch (JCNativeException jcne) {
@@ -356,9 +413,20 @@ public class HttpSessionStateContainer extends NetObject  {
 
     public int getTimeout() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTimeout = null;
         try {
-            return (int)classInstance.Get("Timeout");
+            retObjectTimeout = classInstance.Get("Timeout");
+            return (int)retObjectTimeout;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectTimeout_ToString = retObjectTimeout == null ? "null" : retObjectTimeout.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectTimeoutNumber = (java.lang.Number)retObjectTimeout;
+                return retObjectTimeoutNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectTimeout != null ? retObjectTimeout.getClass() : "null", retObjectTimeout_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -366,7 +434,7 @@ public class HttpSessionStateContainer extends NetObject  {
 
     public void setTimeout(int Timeout) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Timeout", Timeout);
         } catch (JCNativeException jcne) {
@@ -376,10 +444,14 @@ public class HttpSessionStateContainer extends NetObject  {
 
     public NetObject getSyncRoot() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSyncRoot = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SyncRoot");
+            retObjectSyncRoot = classInstance.Get("SyncRoot");
+            JCObject val = (JCObject)retObjectSyncRoot;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSyncRoot != null ? retObjectSyncRoot.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -387,9 +459,13 @@ public class HttpSessionStateContainer extends NetObject  {
 
     public java.lang.String getSessionID() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSessionID = null;
         try {
-            return (java.lang.String)classInstance.Get("SessionID");
+            retObjectSessionID = classInstance.Get("SessionID");
+            return (java.lang.String)retObjectSessionID;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSessionID != null ? retObjectSessionID.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -397,10 +473,14 @@ public class HttpSessionStateContainer extends NetObject  {
 
     public HttpCookieMode getCookieMode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCookieMode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CookieMode");
+            retObjectCookieMode = classInstance.Get("CookieMode");
+            JCObject val = (JCObject)retObjectCookieMode;
             return new HttpCookieMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCookieMode != null ? retObjectCookieMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -408,10 +488,14 @@ public class HttpSessionStateContainer extends NetObject  {
 
     public HttpStaticObjectsCollection getStaticObjects() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStaticObjects = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("StaticObjects");
+            retObjectStaticObjects = classInstance.Get("StaticObjects");
+            JCObject val = (JCObject)retObjectStaticObjects;
             return new HttpStaticObjectsCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStaticObjects != null ? retObjectStaticObjects.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -419,10 +503,14 @@ public class HttpSessionStateContainer extends NetObject  {
 
     public SessionStateMode getMode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Mode");
+            retObjectMode = classInstance.Get("Mode");
+            JCObject val = (JCObject)retObjectMode;
             return new SessionStateMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMode != null ? retObjectMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -177,7 +177,7 @@ public class WeakReference extends NetObject  {
     
     public void GetObjectData(SerializationInfo info, StreamingContext context) throws Throwable, system.ArgumentNullException, system.runtime.serialization.SerializationException, system.ArgumentException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetObjectData", info == null ? null : info.getJCOInstance(), context == null ? null : context.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -191,9 +191,13 @@ public class WeakReference extends NetObject  {
     
     public boolean getIsAlive() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsAlive = null;
         try {
-            return (boolean)classInstance.Get("IsAlive");
+            retObjectIsAlive = classInstance.Get("IsAlive");
+            return (boolean)retObjectIsAlive;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsAlive != null ? retObjectIsAlive.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,9 +205,13 @@ public class WeakReference extends NetObject  {
 
     public boolean getTrackResurrection() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTrackResurrection = null;
         try {
-            return (boolean)classInstance.Get("TrackResurrection");
+            retObjectTrackResurrection = classInstance.Get("TrackResurrection");
+            return (boolean)retObjectTrackResurrection;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectTrackResurrection != null ? retObjectTrackResurrection.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -211,10 +219,14 @@ public class WeakReference extends NetObject  {
 
     public NetObject getTarget() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTarget = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Target");
+            retObjectTarget = classInstance.Get("Target");
+            JCObject val = (JCObject)retObjectTarget;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTarget != null ? retObjectTarget.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -222,7 +234,7 @@ public class WeakReference extends NetObject  {
 
     public void setTarget(NetObject Target) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Target", Target == null ? null : Target.getJCOInstance());
         } catch (JCNativeException jcne) {

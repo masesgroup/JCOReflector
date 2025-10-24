@@ -171,7 +171,7 @@ public class ModelDataSource extends NetObject  {
     
     public void UpdateProperties(java.lang.String modelTypeName, java.lang.String selectMethod) throws Throwable, system.ArgumentNullException, system.MulticastNotSupportedException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.web.HttpException, system.collections.generic.KeyNotFoundException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("UpdateProperties", modelTypeName, selectMethod);
         } catch (JCNativeException jcne) {
@@ -181,7 +181,7 @@ public class ModelDataSource extends NetObject  {
 
     public void UpdateProperties(java.lang.String modelTypeName, java.lang.String selectMethod, java.lang.String updateMethod, java.lang.String insertMethod, java.lang.String deleteMethod, java.lang.String dataKeyName) throws Throwable, system.ArgumentNullException, system.MulticastNotSupportedException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.web.HttpException, system.collections.generic.KeyNotFoundException, system.threading.ThreadAbortException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("UpdateProperties", modelTypeName, selectMethod, updateMethod, insertMethod, deleteMethod, dataKeyName);
         } catch (JCNativeException jcne) {
@@ -195,7 +195,7 @@ public class ModelDataSource extends NetObject  {
      */
     @Deprecated 
     public ICollection GetViewNames() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDataSource to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDataSource to obtain the full interface.");
     }
 
     /**
@@ -204,7 +204,7 @@ public class ModelDataSource extends NetObject  {
      */
     @Deprecated 
     public DataSourceView GetView(java.lang.String viewName) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDataSource to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDataSource to obtain the full interface.");
     }
 
     /**
@@ -213,7 +213,7 @@ public class ModelDataSource extends NetObject  {
      */
     @Deprecated 
     public NetObject SaveViewState() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIStateManager to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIStateManager to obtain the full interface.");
     }
 
     /**
@@ -222,7 +222,7 @@ public class ModelDataSource extends NetObject  {
      */
     @Deprecated 
     public void LoadViewState(NetObject state) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIStateManager to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIStateManager to obtain the full interface.");
     }
 
     /**
@@ -231,7 +231,7 @@ public class ModelDataSource extends NetObject  {
      */
     @Deprecated 
     public void TrackViewState() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIStateManager to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIStateManager to obtain the full interface.");
     }
 
 
@@ -240,10 +240,14 @@ public class ModelDataSource extends NetObject  {
     
     public Control getDataControl() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDataControl = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DataControl");
+            retObjectDataControl = classInstance.Get("DataControl");
+            JCObject val = (JCObject)retObjectDataControl;
             return new Control(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDataControl != null ? retObjectDataControl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -251,7 +255,7 @@ public class ModelDataSource extends NetObject  {
 
     public void setDataControl(Control DataControl) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DataControl", DataControl == null ? null : DataControl.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -261,10 +265,14 @@ public class ModelDataSource extends NetObject  {
 
     public ModelDataSourceView getView() throws Throwable, system.ArgumentNullException, system.MulticastNotSupportedException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.web.HttpException, system.collections.generic.KeyNotFoundException, system.threading.ThreadAbortException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectView = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("View");
+            retObjectView = classInstance.Get("View");
+            JCObject val = (JCObject)retObjectView;
             return new ModelDataSourceView(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectView != null ? retObjectView.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -277,7 +285,7 @@ public class ModelDataSource extends NetObject  {
 
     public void addCallingDataMethods(CallingDataMethodsEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("CallingDataMethods", handler);
         } catch (JCNativeException jcne) {
@@ -287,7 +295,7 @@ public class ModelDataSource extends NetObject  {
 
     public void removeCallingDataMethods(CallingDataMethodsEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("CallingDataMethods", handler);
         } catch (JCNativeException jcne) {

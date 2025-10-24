@@ -216,9 +216,20 @@ public class DirectoryVirtualListView extends NetObject  {
     
     public int getAfterCount() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAfterCount = null;
         try {
-            return (int)classInstance.Get("AfterCount");
+            retObjectAfterCount = classInstance.Get("AfterCount");
+            return (int)retObjectAfterCount;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectAfterCount_ToString = retObjectAfterCount == null ? "null" : retObjectAfterCount.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectAfterCountNumber = (java.lang.Number)retObjectAfterCount;
+                return retObjectAfterCountNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectAfterCount != null ? retObjectAfterCount.getClass() : "null", retObjectAfterCount_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -226,7 +237,7 @@ public class DirectoryVirtualListView extends NetObject  {
 
     public void setAfterCount(int AfterCount) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AfterCount", AfterCount);
         } catch (JCNativeException jcne) {
@@ -236,9 +247,20 @@ public class DirectoryVirtualListView extends NetObject  {
 
     public int getApproximateTotal() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectApproximateTotal = null;
         try {
-            return (int)classInstance.Get("ApproximateTotal");
+            retObjectApproximateTotal = classInstance.Get("ApproximateTotal");
+            return (int)retObjectApproximateTotal;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectApproximateTotal_ToString = retObjectApproximateTotal == null ? "null" : retObjectApproximateTotal.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectApproximateTotalNumber = (java.lang.Number)retObjectApproximateTotal;
+                return retObjectApproximateTotalNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectApproximateTotal != null ? retObjectApproximateTotal.getClass() : "null", retObjectApproximateTotal_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -246,7 +268,7 @@ public class DirectoryVirtualListView extends NetObject  {
 
     public void setApproximateTotal(int ApproximateTotal) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ApproximateTotal", ApproximateTotal);
         } catch (JCNativeException jcne) {
@@ -256,9 +278,20 @@ public class DirectoryVirtualListView extends NetObject  {
 
     public int getBeforeCount() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeforeCount = null;
         try {
-            return (int)classInstance.Get("BeforeCount");
+            retObjectBeforeCount = classInstance.Get("BeforeCount");
+            return (int)retObjectBeforeCount;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectBeforeCount_ToString = retObjectBeforeCount == null ? "null" : retObjectBeforeCount.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectBeforeCountNumber = (java.lang.Number)retObjectBeforeCount;
+                return retObjectBeforeCountNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectBeforeCount != null ? retObjectBeforeCount.getClass() : "null", retObjectBeforeCount_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -266,7 +299,7 @@ public class DirectoryVirtualListView extends NetObject  {
 
     public void setBeforeCount(int BeforeCount) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BeforeCount", BeforeCount);
         } catch (JCNativeException jcne) {
@@ -276,9 +309,20 @@ public class DirectoryVirtualListView extends NetObject  {
 
     public int getOffset() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOffset = null;
         try {
-            return (int)classInstance.Get("Offset");
+            retObjectOffset = classInstance.Get("Offset");
+            return (int)retObjectOffset;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectOffset_ToString = retObjectOffset == null ? "null" : retObjectOffset.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectOffsetNumber = (java.lang.Number)retObjectOffset;
+                return retObjectOffsetNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectOffset != null ? retObjectOffset.getClass() : "null", retObjectOffset_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -286,7 +330,7 @@ public class DirectoryVirtualListView extends NetObject  {
 
     public void setOffset(int Offset) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Offset", Offset);
         } catch (JCNativeException jcne) {
@@ -296,9 +340,20 @@ public class DirectoryVirtualListView extends NetObject  {
 
     public int getTargetPercentage() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTargetPercentage = null;
         try {
-            return (int)classInstance.Get("TargetPercentage");
+            retObjectTargetPercentage = classInstance.Get("TargetPercentage");
+            return (int)retObjectTargetPercentage;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectTargetPercentage_ToString = retObjectTargetPercentage == null ? "null" : retObjectTargetPercentage.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectTargetPercentageNumber = (java.lang.Number)retObjectTargetPercentage;
+                return retObjectTargetPercentageNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectTargetPercentage != null ? retObjectTargetPercentage.getClass() : "null", retObjectTargetPercentage_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -306,7 +361,7 @@ public class DirectoryVirtualListView extends NetObject  {
 
     public void setTargetPercentage(int TargetPercentage) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TargetPercentage", TargetPercentage);
         } catch (JCNativeException jcne) {
@@ -316,10 +371,14 @@ public class DirectoryVirtualListView extends NetObject  {
 
     public DirectoryVirtualListViewContext getDirectoryVirtualListViewContext() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDirectoryVirtualListViewContext = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DirectoryVirtualListViewContext");
+            retObjectDirectoryVirtualListViewContext = classInstance.Get("DirectoryVirtualListViewContext");
+            JCObject val = (JCObject)retObjectDirectoryVirtualListViewContext;
             return new DirectoryVirtualListViewContext(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDirectoryVirtualListViewContext != null ? retObjectDirectoryVirtualListViewContext.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -327,7 +386,7 @@ public class DirectoryVirtualListView extends NetObject  {
 
     public void setDirectoryVirtualListViewContext(DirectoryVirtualListViewContext DirectoryVirtualListViewContext) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DirectoryVirtualListViewContext", DirectoryVirtualListViewContext == null ? null : DirectoryVirtualListViewContext.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -337,9 +396,13 @@ public class DirectoryVirtualListView extends NetObject  {
 
     public java.lang.String getTarget() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTarget = null;
         try {
-            return (java.lang.String)classInstance.Get("Target");
+            retObjectTarget = classInstance.Get("Target");
+            return (java.lang.String)retObjectTarget;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectTarget != null ? retObjectTarget.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -347,7 +410,7 @@ public class DirectoryVirtualListView extends NetObject  {
 
     public void setTarget(java.lang.String Target) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Target", Target);
         } catch (JCNativeException jcne) {

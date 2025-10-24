@@ -142,10 +142,14 @@ public class IDesignerOptionServiceImplementation extends NetObject implements I
     
     public NetObject GetOptionValue(java.lang.String pageName, java.lang.String valueName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetOptionValue = null;
         try {
-            JCObject objGetOptionValue = (JCObject)classInstance.Invoke("GetOptionValue", pageName, valueName);
+            retObjectGetOptionValue = classInstance.Invoke("GetOptionValue", pageName, valueName);
+            JCObject objGetOptionValue = (JCObject)retObjectGetOptionValue;
             return new NetObject(objGetOptionValue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetOptionValue != null ? retObjectGetOptionValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -153,7 +157,7 @@ public class IDesignerOptionServiceImplementation extends NetObject implements I
 
     public void SetOptionValue(java.lang.String pageName, java.lang.String valueName, NetObject value) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetOptionValue", pageName, valueName, value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {

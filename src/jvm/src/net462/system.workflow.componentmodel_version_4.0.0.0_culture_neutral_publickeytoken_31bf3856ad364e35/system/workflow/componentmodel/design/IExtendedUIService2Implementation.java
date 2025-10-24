@@ -144,9 +144,13 @@ public class IExtendedUIService2Implementation extends NetObject implements IExt
     
     public boolean IsSupportedType(NetType type) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsSupportedType = null;
         try {
-            return (boolean)classInstance.Invoke("IsSupportedType", type == null ? null : type.getJCOInstance());
+            retObjectIsSupportedType = classInstance.Invoke("IsSupportedType", type == null ? null : type.getJCOInstance());
+            return (boolean)retObjectIsSupportedType;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsSupportedType != null ? retObjectIsSupportedType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -154,9 +158,20 @@ public class IExtendedUIService2Implementation extends NetObject implements IExt
 
     public long GetTargetFrameworkVersion() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetTargetFrameworkVersion = null;
         try {
-            return (long)classInstance.Invoke("GetTargetFrameworkVersion");
+            retObjectGetTargetFrameworkVersion = classInstance.Invoke("GetTargetFrameworkVersion");
+            return (long)retObjectGetTargetFrameworkVersion;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetTargetFrameworkVersion_ToString = retObjectGetTargetFrameworkVersion == null ? "null" : retObjectGetTargetFrameworkVersion.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetTargetFrameworkVersionNumber = (java.lang.Number)retObjectGetTargetFrameworkVersion;
+                return retObjectGetTargetFrameworkVersionNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectGetTargetFrameworkVersion != null ? retObjectGetTargetFrameworkVersion.getClass() : "null", retObjectGetTargetFrameworkVersion_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -164,10 +179,14 @@ public class IExtendedUIService2Implementation extends NetObject implements IExt
 
     public Assembly GetReflectionAssembly(AssemblyName assemblyName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetReflectionAssembly = null;
         try {
-            JCObject objGetReflectionAssembly = (JCObject)classInstance.Invoke("GetReflectionAssembly", assemblyName == null ? null : assemblyName.getJCOInstance());
+            retObjectGetReflectionAssembly = classInstance.Invoke("GetReflectionAssembly", assemblyName == null ? null : assemblyName.getJCOInstance());
+            JCObject objGetReflectionAssembly = (JCObject)retObjectGetReflectionAssembly;
             return new Assembly(objGetReflectionAssembly);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetReflectionAssembly != null ? retObjectGetReflectionAssembly.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -175,10 +194,14 @@ public class IExtendedUIService2Implementation extends NetObject implements IExt
 
     public NetType GetRuntimeType(NetType reflectionType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetRuntimeType = null;
         try {
-            JCObject objGetRuntimeType = (JCObject)classInstance.Invoke("GetRuntimeType", reflectionType == null ? null : reflectionType.getJCOInstance());
+            retObjectGetRuntimeType = classInstance.Invoke("GetRuntimeType", reflectionType == null ? null : reflectionType.getJCOInstance());
+            JCObject objGetRuntimeType = (JCObject)retObjectGetRuntimeType;
             return new NetType(objGetRuntimeType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetRuntimeType != null ? retObjectGetRuntimeType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

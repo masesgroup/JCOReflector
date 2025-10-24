@@ -168,9 +168,13 @@ public class ContentDispositionHeaderValue extends NetObject implements system.I
     
     public static boolean TryParse(java.lang.String input, JCORefOut<ContentDispositionHeaderValue> parsedValue) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTryParse = null;
         try {
-            return (boolean)classType.Invoke("TryParse", input, parsedValue.getJCRefOut());
+            retObjectTryParse = classType.Invoke("TryParse", input, parsedValue.getJCRefOut());
+            return (boolean)retObjectTryParse;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryParse != null ? retObjectTryParse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,10 +182,14 @@ public class ContentDispositionHeaderValue extends NetObject implements system.I
 
     public static ContentDispositionHeaderValue Parse(java.lang.String input) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectParse = null;
         try {
-            JCObject objParse = (JCObject)classType.Invoke("Parse", input);
+            retObjectParse = classType.Invoke("Parse", input);
+            JCObject objParse = (JCObject)retObjectParse;
             return new ContentDispositionHeaderValue(objParse);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParse != null ? retObjectParse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,7 +201,7 @@ public class ContentDispositionHeaderValue extends NetObject implements system.I
      */
     @Deprecated 
     public NetObject Clone() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICloneable to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICloneable to obtain the full interface.");
     }
 
 
@@ -202,9 +210,13 @@ public class ContentDispositionHeaderValue extends NetObject implements system.I
     
     public java.lang.String getDispositionType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDispositionType = null;
         try {
-            return (java.lang.String)classInstance.Get("DispositionType");
+            retObjectDispositionType = classInstance.Get("DispositionType");
+            return (java.lang.String)retObjectDispositionType;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDispositionType != null ? retObjectDispositionType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -212,7 +224,7 @@ public class ContentDispositionHeaderValue extends NetObject implements system.I
 
     public void setDispositionType(java.lang.String DispositionType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.diagnostics.UnreachableException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DispositionType", DispositionType);
         } catch (JCNativeException jcne) {
@@ -222,9 +234,13 @@ public class ContentDispositionHeaderValue extends NetObject implements system.I
 
     public java.lang.String getFileName() throws Throwable, system.ArgumentException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFileName = null;
         try {
-            return (java.lang.String)classInstance.Get("FileName");
+            retObjectFileName = classInstance.Get("FileName");
+            return (java.lang.String)retObjectFileName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectFileName != null ? retObjectFileName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -232,7 +248,7 @@ public class ContentDispositionHeaderValue extends NetObject implements system.I
 
     public void setFileName(java.lang.String FileName) throws Throwable, system.ArgumentException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidCastException, system.diagnostics.UnreachableException, system.ObjectDisposedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FileName", FileName);
         } catch (JCNativeException jcne) {
@@ -242,9 +258,13 @@ public class ContentDispositionHeaderValue extends NetObject implements system.I
 
     public java.lang.String getFileNameStar() throws Throwable, system.ArgumentException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFileNameStar = null;
         try {
-            return (java.lang.String)classInstance.Get("FileNameStar");
+            retObjectFileNameStar = classInstance.Get("FileNameStar");
+            return (java.lang.String)retObjectFileNameStar;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectFileNameStar != null ? retObjectFileNameStar.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -252,7 +272,7 @@ public class ContentDispositionHeaderValue extends NetObject implements system.I
 
     public void setFileNameStar(java.lang.String FileNameStar) throws Throwable, system.ArgumentException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidCastException, system.diagnostics.UnreachableException, system.ObjectDisposedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FileNameStar", FileNameStar);
         } catch (JCNativeException jcne) {
@@ -262,9 +282,13 @@ public class ContentDispositionHeaderValue extends NetObject implements system.I
 
     public java.lang.String getName() throws Throwable, system.ArgumentException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectName = null;
         try {
-            return (java.lang.String)classInstance.Get("Name");
+            retObjectName = classInstance.Get("Name");
+            return (java.lang.String)retObjectName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectName != null ? retObjectName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -272,7 +296,7 @@ public class ContentDispositionHeaderValue extends NetObject implements system.I
 
     public void setName(java.lang.String Name) throws Throwable, system.ArgumentException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidCastException, system.diagnostics.UnreachableException, system.ObjectDisposedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Name", Name);
         } catch (JCNativeException jcne) {

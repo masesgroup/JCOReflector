@@ -146,9 +146,20 @@ public class IEnumMonikerImplementation extends NetObject implements IEnumMonike
     
     public int Skip(int celt) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSkip = null;
         try {
-            return (int)classInstance.Invoke("Skip", celt);
+            retObjectSkip = classInstance.Invoke("Skip", celt);
+            return (int)retObjectSkip;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSkip_ToString = retObjectSkip == null ? "null" : retObjectSkip.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectSkipNumber = (java.lang.Number)retObjectSkip;
+                return retObjectSkipNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectSkip != null ? retObjectSkip.getClass() : "null", retObjectSkip_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -156,7 +167,7 @@ public class IEnumMonikerImplementation extends NetObject implements IEnumMonike
 
     public void Clone(JCORefOut<IEnumMoniker> ppenum) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Clone", ppenum.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -166,7 +177,7 @@ public class IEnumMonikerImplementation extends NetObject implements IEnumMonike
 
     public void Reset() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Reset");
         } catch (JCNativeException jcne) {

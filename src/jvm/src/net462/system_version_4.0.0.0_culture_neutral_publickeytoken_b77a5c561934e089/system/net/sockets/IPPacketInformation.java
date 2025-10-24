@@ -161,9 +161,20 @@ public class IPPacketInformation extends ValueType  {
     
     public int getInterface() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInterface = null;
         try {
-            return (int)classInstance.Get("Interface");
+            retObjectInterface = classInstance.Get("Interface");
+            return (int)retObjectInterface;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectInterface_ToString = retObjectInterface == null ? "null" : retObjectInterface.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectInterfaceNumber = (java.lang.Number)retObjectInterface;
+                return retObjectInterfaceNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectInterface != null ? retObjectInterface.getClass() : "null", retObjectInterface_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,10 +182,14 @@ public class IPPacketInformation extends ValueType  {
 
     public IPAddress getAddress() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddress = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Address");
+            retObjectAddress = classInstance.Get("Address");
+            JCObject val = (JCObject)retObjectAddress;
             return new IPAddress(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddress != null ? retObjectAddress.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

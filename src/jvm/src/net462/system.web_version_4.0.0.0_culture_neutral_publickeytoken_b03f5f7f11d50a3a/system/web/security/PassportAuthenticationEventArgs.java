@@ -174,10 +174,14 @@ public class PassportAuthenticationEventArgs extends EventArgs  {
     
     public IPrincipal getUser() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUser = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("User");
+            retObjectUser = classInstance.Get("User");
+            JCObject val = (JCObject)retObjectUser;
             return new IPrincipalImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUser != null ? retObjectUser.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -185,7 +189,7 @@ public class PassportAuthenticationEventArgs extends EventArgs  {
 
     public void setUser(IPrincipal User) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("User", User == null ? null : User.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -195,10 +199,14 @@ public class PassportAuthenticationEventArgs extends EventArgs  {
 
     public HttpContext getContext() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContext = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Context");
+            retObjectContext = classInstance.Get("Context");
+            JCObject val = (JCObject)retObjectContext;
             return new HttpContext(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContext != null ? retObjectContext.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -206,10 +214,14 @@ public class PassportAuthenticationEventArgs extends EventArgs  {
 
     public PassportIdentity getIdentity() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIdentity = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Identity");
+            retObjectIdentity = classInstance.Get("Identity");
+            JCObject val = (JCObject)retObjectIdentity;
             return new PassportIdentity(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIdentity != null ? retObjectIdentity.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

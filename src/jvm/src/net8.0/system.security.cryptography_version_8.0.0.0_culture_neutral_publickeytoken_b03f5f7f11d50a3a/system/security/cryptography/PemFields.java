@@ -161,9 +161,20 @@ public class PemFields extends ValueType  {
     
     public int getDecodedDataLength() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDecodedDataLength = null;
         try {
-            return (int)classInstance.Get("DecodedDataLength");
+            retObjectDecodedDataLength = classInstance.Get("DecodedDataLength");
+            return (int)retObjectDecodedDataLength;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDecodedDataLength_ToString = retObjectDecodedDataLength == null ? "null" : retObjectDecodedDataLength.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectDecodedDataLengthNumber = (java.lang.Number)retObjectDecodedDataLength;
+                return retObjectDecodedDataLengthNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectDecodedDataLength != null ? retObjectDecodedDataLength.getClass() : "null", retObjectDecodedDataLength_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,10 +182,14 @@ public class PemFields extends ValueType  {
 
     public Range getBase64Data() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBase64Data = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Base64Data");
+            retObjectBase64Data = classInstance.Get("Base64Data");
+            JCObject val = (JCObject)retObjectBase64Data;
             return new Range(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBase64Data != null ? retObjectBase64Data.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,10 +197,14 @@ public class PemFields extends ValueType  {
 
     public Range getLabel() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLabel = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Label");
+            retObjectLabel = classInstance.Get("Label");
+            JCObject val = (JCObject)retObjectLabel;
             return new Range(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLabel != null ? retObjectLabel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,10 +212,14 @@ public class PemFields extends ValueType  {
 
     public Range getLocation() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLocation = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Location");
+            retObjectLocation = classInstance.Get("Location");
+            JCObject val = (JCObject)retObjectLocation;
             return new Range(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLocation != null ? retObjectLocation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

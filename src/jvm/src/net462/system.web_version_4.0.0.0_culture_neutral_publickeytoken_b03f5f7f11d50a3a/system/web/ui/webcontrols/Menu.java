@@ -182,10 +182,14 @@ public class Menu extends HierarchicalDataBoundControl implements system.web.ui.
     
     public MenuItem FindItem(java.lang.String valuePath) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFindItem = null;
         try {
-            JCObject objFindItem = (JCObject)classInstance.Invoke("FindItem", valuePath);
+            retObjectFindItem = classInstance.Invoke("FindItem", valuePath);
+            JCObject objFindItem = (JCObject)retObjectFindItem;
             return new MenuItem(objFindItem);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFindItem != null ? retObjectFindItem.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,7 +197,7 @@ public class Menu extends HierarchicalDataBoundControl implements system.web.ui.
 
     public void DataBind() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DataBind");
         } catch (JCNativeException jcne) {
@@ -203,7 +207,7 @@ public class Menu extends HierarchicalDataBoundControl implements system.web.ui.
 
     public void RenderBeginTag(HtmlTextWriter writer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationErrorsException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RenderBeginTag", writer == null ? null : writer.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -213,7 +217,7 @@ public class Menu extends HierarchicalDataBoundControl implements system.web.ui.
 
     public void RenderEndTag(HtmlTextWriter writer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationErrorsException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RenderEndTag", writer == null ? null : writer.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -227,7 +231,7 @@ public class Menu extends HierarchicalDataBoundControl implements system.web.ui.
      */
     @Deprecated 
     public void RaisePostBackEvent(java.lang.String eventArgument) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIPostBackEventHandler to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIPostBackEventHandler to obtain the full interface.");
     }
 
 
@@ -236,9 +240,13 @@ public class Menu extends HierarchicalDataBoundControl implements system.web.ui.
     
     public boolean getDynamicEnableDefaultPopOutImage() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDynamicEnableDefaultPopOutImage = null;
         try {
-            return (boolean)classInstance.Get("DynamicEnableDefaultPopOutImage");
+            retObjectDynamicEnableDefaultPopOutImage = classInstance.Get("DynamicEnableDefaultPopOutImage");
+            return (boolean)retObjectDynamicEnableDefaultPopOutImage;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectDynamicEnableDefaultPopOutImage != null ? retObjectDynamicEnableDefaultPopOutImage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -246,7 +254,7 @@ public class Menu extends HierarchicalDataBoundControl implements system.web.ui.
 
     public void setDynamicEnableDefaultPopOutImage(boolean DynamicEnableDefaultPopOutImage) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DynamicEnableDefaultPopOutImage", DynamicEnableDefaultPopOutImage);
         } catch (JCNativeException jcne) {
@@ -256,9 +264,13 @@ public class Menu extends HierarchicalDataBoundControl implements system.web.ui.
 
     public boolean getIncludeStyleBlock() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIncludeStyleBlock = null;
         try {
-            return (boolean)classInstance.Get("IncludeStyleBlock");
+            retObjectIncludeStyleBlock = classInstance.Get("IncludeStyleBlock");
+            return (boolean)retObjectIncludeStyleBlock;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIncludeStyleBlock != null ? retObjectIncludeStyleBlock.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -266,7 +278,7 @@ public class Menu extends HierarchicalDataBoundControl implements system.web.ui.
 
     public void setIncludeStyleBlock(boolean IncludeStyleBlock) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IncludeStyleBlock", IncludeStyleBlock);
         } catch (JCNativeException jcne) {
@@ -276,9 +288,13 @@ public class Menu extends HierarchicalDataBoundControl implements system.web.ui.
 
     public boolean getItemWrap() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectItemWrap = null;
         try {
-            return (boolean)classInstance.Get("ItemWrap");
+            retObjectItemWrap = classInstance.Get("ItemWrap");
+            return (boolean)retObjectItemWrap;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectItemWrap != null ? retObjectItemWrap.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -286,7 +302,7 @@ public class Menu extends HierarchicalDataBoundControl implements system.web.ui.
 
     public void setItemWrap(boolean ItemWrap) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ItemWrap", ItemWrap);
         } catch (JCNativeException jcne) {
@@ -296,9 +312,13 @@ public class Menu extends HierarchicalDataBoundControl implements system.web.ui.
 
     public boolean getStaticEnableDefaultPopOutImage() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStaticEnableDefaultPopOutImage = null;
         try {
-            return (boolean)classInstance.Get("StaticEnableDefaultPopOutImage");
+            retObjectStaticEnableDefaultPopOutImage = classInstance.Get("StaticEnableDefaultPopOutImage");
+            return (boolean)retObjectStaticEnableDefaultPopOutImage;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectStaticEnableDefaultPopOutImage != null ? retObjectStaticEnableDefaultPopOutImage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -306,7 +326,7 @@ public class Menu extends HierarchicalDataBoundControl implements system.web.ui.
 
     public void setStaticEnableDefaultPopOutImage(boolean StaticEnableDefaultPopOutImage) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("StaticEnableDefaultPopOutImage", StaticEnableDefaultPopOutImage);
         } catch (JCNativeException jcne) {
@@ -316,9 +336,13 @@ public class Menu extends HierarchicalDataBoundControl implements system.web.ui.
 
     public char getPathSeparator() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPathSeparator = null;
         try {
-            return (char)classInstance.Get("PathSeparator");
+            retObjectPathSeparator = classInstance.Get("PathSeparator");
+            return (char)retObjectPathSeparator;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into char", retObjectPathSeparator != null ? retObjectPathSeparator.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -326,7 +350,7 @@ public class Menu extends HierarchicalDataBoundControl implements system.web.ui.
 
     public void setPathSeparator(char PathSeparator) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PathSeparator", PathSeparator);
         } catch (JCNativeException jcne) {
@@ -336,9 +360,20 @@ public class Menu extends HierarchicalDataBoundControl implements system.web.ui.
 
     public int getDisappearAfter() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDisappearAfter = null;
         try {
-            return (int)classInstance.Get("DisappearAfter");
+            retObjectDisappearAfter = classInstance.Get("DisappearAfter");
+            return (int)retObjectDisappearAfter;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDisappearAfter_ToString = retObjectDisappearAfter == null ? "null" : retObjectDisappearAfter.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectDisappearAfterNumber = (java.lang.Number)retObjectDisappearAfter;
+                return retObjectDisappearAfterNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectDisappearAfter != null ? retObjectDisappearAfter.getClass() : "null", retObjectDisappearAfter_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -346,7 +381,7 @@ public class Menu extends HierarchicalDataBoundControl implements system.web.ui.
 
     public void setDisappearAfter(int DisappearAfter) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DisappearAfter", DisappearAfter);
         } catch (JCNativeException jcne) {
@@ -356,9 +391,20 @@ public class Menu extends HierarchicalDataBoundControl implements system.web.ui.
 
     public int getDynamicHorizontalOffset() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDynamicHorizontalOffset = null;
         try {
-            return (int)classInstance.Get("DynamicHorizontalOffset");
+            retObjectDynamicHorizontalOffset = classInstance.Get("DynamicHorizontalOffset");
+            return (int)retObjectDynamicHorizontalOffset;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDynamicHorizontalOffset_ToString = retObjectDynamicHorizontalOffset == null ? "null" : retObjectDynamicHorizontalOffset.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectDynamicHorizontalOffsetNumber = (java.lang.Number)retObjectDynamicHorizontalOffset;
+                return retObjectDynamicHorizontalOffsetNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectDynamicHorizontalOffset != null ? retObjectDynamicHorizontalOffset.getClass() : "null", retObjectDynamicHorizontalOffset_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -366,7 +412,7 @@ public class Menu extends HierarchicalDataBoundControl implements system.web.ui.
 
     public void setDynamicHorizontalOffset(int DynamicHorizontalOffset) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DynamicHorizontalOffset", DynamicHorizontalOffset);
         } catch (JCNativeException jcne) {
@@ -376,9 +422,20 @@ public class Menu extends HierarchicalDataBoundControl implements system.web.ui.
 
     public int getDynamicVerticalOffset() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDynamicVerticalOffset = null;
         try {
-            return (int)classInstance.Get("DynamicVerticalOffset");
+            retObjectDynamicVerticalOffset = classInstance.Get("DynamicVerticalOffset");
+            return (int)retObjectDynamicVerticalOffset;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDynamicVerticalOffset_ToString = retObjectDynamicVerticalOffset == null ? "null" : retObjectDynamicVerticalOffset.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectDynamicVerticalOffsetNumber = (java.lang.Number)retObjectDynamicVerticalOffset;
+                return retObjectDynamicVerticalOffsetNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectDynamicVerticalOffset != null ? retObjectDynamicVerticalOffset.getClass() : "null", retObjectDynamicVerticalOffset_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -386,7 +443,7 @@ public class Menu extends HierarchicalDataBoundControl implements system.web.ui.
 
     public void setDynamicVerticalOffset(int DynamicVerticalOffset) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DynamicVerticalOffset", DynamicVerticalOffset);
         } catch (JCNativeException jcne) {
@@ -396,9 +453,20 @@ public class Menu extends HierarchicalDataBoundControl implements system.web.ui.
 
     public int getMaximumDynamicDisplayLevels() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaximumDynamicDisplayLevels = null;
         try {
-            return (int)classInstance.Get("MaximumDynamicDisplayLevels");
+            retObjectMaximumDynamicDisplayLevels = classInstance.Get("MaximumDynamicDisplayLevels");
+            return (int)retObjectMaximumDynamicDisplayLevels;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaximumDynamicDisplayLevels_ToString = retObjectMaximumDynamicDisplayLevels == null ? "null" : retObjectMaximumDynamicDisplayLevels.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMaximumDynamicDisplayLevelsNumber = (java.lang.Number)retObjectMaximumDynamicDisplayLevels;
+                return retObjectMaximumDynamicDisplayLevelsNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaximumDynamicDisplayLevels != null ? retObjectMaximumDynamicDisplayLevels.getClass() : "null", retObjectMaximumDynamicDisplayLevels_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -406,7 +474,7 @@ public class Menu extends HierarchicalDataBoundControl implements system.web.ui.
 
     public void setMaximumDynamicDisplayLevels(int MaximumDynamicDisplayLevels) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaximumDynamicDisplayLevels", MaximumDynamicDisplayLevels);
         } catch (JCNativeException jcne) {
@@ -416,9 +484,20 @@ public class Menu extends HierarchicalDataBoundControl implements system.web.ui.
 
     public int getStaticDisplayLevels() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStaticDisplayLevels = null;
         try {
-            return (int)classInstance.Get("StaticDisplayLevels");
+            retObjectStaticDisplayLevels = classInstance.Get("StaticDisplayLevels");
+            return (int)retObjectStaticDisplayLevels;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectStaticDisplayLevels_ToString = retObjectStaticDisplayLevels == null ? "null" : retObjectStaticDisplayLevels.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectStaticDisplayLevelsNumber = (java.lang.Number)retObjectStaticDisplayLevels;
+                return retObjectStaticDisplayLevelsNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectStaticDisplayLevels != null ? retObjectStaticDisplayLevels.getClass() : "null", retObjectStaticDisplayLevels_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -426,7 +505,7 @@ public class Menu extends HierarchicalDataBoundControl implements system.web.ui.
 
     public void setStaticDisplayLevels(int StaticDisplayLevels) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("StaticDisplayLevels", StaticDisplayLevels);
         } catch (JCNativeException jcne) {
@@ -436,9 +515,13 @@ public class Menu extends HierarchicalDataBoundControl implements system.web.ui.
 
     public java.lang.String getDynamicBottomSeparatorImageUrl() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDynamicBottomSeparatorImageUrl = null;
         try {
-            return (java.lang.String)classInstance.Get("DynamicBottomSeparatorImageUrl");
+            retObjectDynamicBottomSeparatorImageUrl = classInstance.Get("DynamicBottomSeparatorImageUrl");
+            return (java.lang.String)retObjectDynamicBottomSeparatorImageUrl;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDynamicBottomSeparatorImageUrl != null ? retObjectDynamicBottomSeparatorImageUrl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -446,7 +529,7 @@ public class Menu extends HierarchicalDataBoundControl implements system.web.ui.
 
     public void setDynamicBottomSeparatorImageUrl(java.lang.String DynamicBottomSeparatorImageUrl) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DynamicBottomSeparatorImageUrl", DynamicBottomSeparatorImageUrl);
         } catch (JCNativeException jcne) {
@@ -456,9 +539,13 @@ public class Menu extends HierarchicalDataBoundControl implements system.web.ui.
 
     public java.lang.String getDynamicItemFormatString() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDynamicItemFormatString = null;
         try {
-            return (java.lang.String)classInstance.Get("DynamicItemFormatString");
+            retObjectDynamicItemFormatString = classInstance.Get("DynamicItemFormatString");
+            return (java.lang.String)retObjectDynamicItemFormatString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDynamicItemFormatString != null ? retObjectDynamicItemFormatString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -466,7 +553,7 @@ public class Menu extends HierarchicalDataBoundControl implements system.web.ui.
 
     public void setDynamicItemFormatString(java.lang.String DynamicItemFormatString) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DynamicItemFormatString", DynamicItemFormatString);
         } catch (JCNativeException jcne) {
@@ -476,9 +563,13 @@ public class Menu extends HierarchicalDataBoundControl implements system.web.ui.
 
     public java.lang.String getDynamicPopOutImageTextFormatString() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDynamicPopOutImageTextFormatString = null;
         try {
-            return (java.lang.String)classInstance.Get("DynamicPopOutImageTextFormatString");
+            retObjectDynamicPopOutImageTextFormatString = classInstance.Get("DynamicPopOutImageTextFormatString");
+            return (java.lang.String)retObjectDynamicPopOutImageTextFormatString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDynamicPopOutImageTextFormatString != null ? retObjectDynamicPopOutImageTextFormatString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -486,7 +577,7 @@ public class Menu extends HierarchicalDataBoundControl implements system.web.ui.
 
     public void setDynamicPopOutImageTextFormatString(java.lang.String DynamicPopOutImageTextFormatString) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DynamicPopOutImageTextFormatString", DynamicPopOutImageTextFormatString);
         } catch (JCNativeException jcne) {
@@ -496,9 +587,13 @@ public class Menu extends HierarchicalDataBoundControl implements system.web.ui.
 
     public java.lang.String getDynamicPopOutImageUrl() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDynamicPopOutImageUrl = null;
         try {
-            return (java.lang.String)classInstance.Get("DynamicPopOutImageUrl");
+            retObjectDynamicPopOutImageUrl = classInstance.Get("DynamicPopOutImageUrl");
+            return (java.lang.String)retObjectDynamicPopOutImageUrl;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDynamicPopOutImageUrl != null ? retObjectDynamicPopOutImageUrl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -506,7 +601,7 @@ public class Menu extends HierarchicalDataBoundControl implements system.web.ui.
 
     public void setDynamicPopOutImageUrl(java.lang.String DynamicPopOutImageUrl) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DynamicPopOutImageUrl", DynamicPopOutImageUrl);
         } catch (JCNativeException jcne) {
@@ -516,9 +611,13 @@ public class Menu extends HierarchicalDataBoundControl implements system.web.ui.
 
     public java.lang.String getDynamicTopSeparatorImageUrl() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDynamicTopSeparatorImageUrl = null;
         try {
-            return (java.lang.String)classInstance.Get("DynamicTopSeparatorImageUrl");
+            retObjectDynamicTopSeparatorImageUrl = classInstance.Get("DynamicTopSeparatorImageUrl");
+            return (java.lang.String)retObjectDynamicTopSeparatorImageUrl;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDynamicTopSeparatorImageUrl != null ? retObjectDynamicTopSeparatorImageUrl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -526,7 +625,7 @@ public class Menu extends HierarchicalDataBoundControl implements system.web.ui.
 
     public void setDynamicTopSeparatorImageUrl(java.lang.String DynamicTopSeparatorImageUrl) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DynamicTopSeparatorImageUrl", DynamicTopSeparatorImageUrl);
         } catch (JCNativeException jcne) {
@@ -536,9 +635,13 @@ public class Menu extends HierarchicalDataBoundControl implements system.web.ui.
 
     public java.lang.String getScrollDownImageUrl() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectScrollDownImageUrl = null;
         try {
-            return (java.lang.String)classInstance.Get("ScrollDownImageUrl");
+            retObjectScrollDownImageUrl = classInstance.Get("ScrollDownImageUrl");
+            return (java.lang.String)retObjectScrollDownImageUrl;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectScrollDownImageUrl != null ? retObjectScrollDownImageUrl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -546,7 +649,7 @@ public class Menu extends HierarchicalDataBoundControl implements system.web.ui.
 
     public void setScrollDownImageUrl(java.lang.String ScrollDownImageUrl) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ScrollDownImageUrl", ScrollDownImageUrl);
         } catch (JCNativeException jcne) {
@@ -556,9 +659,13 @@ public class Menu extends HierarchicalDataBoundControl implements system.web.ui.
 
     public java.lang.String getScrollDownText() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectScrollDownText = null;
         try {
-            return (java.lang.String)classInstance.Get("ScrollDownText");
+            retObjectScrollDownText = classInstance.Get("ScrollDownText");
+            return (java.lang.String)retObjectScrollDownText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectScrollDownText != null ? retObjectScrollDownText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -566,7 +673,7 @@ public class Menu extends HierarchicalDataBoundControl implements system.web.ui.
 
     public void setScrollDownText(java.lang.String ScrollDownText) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ScrollDownText", ScrollDownText);
         } catch (JCNativeException jcne) {
@@ -576,9 +683,13 @@ public class Menu extends HierarchicalDataBoundControl implements system.web.ui.
 
     public java.lang.String getScrollUpImageUrl() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectScrollUpImageUrl = null;
         try {
-            return (java.lang.String)classInstance.Get("ScrollUpImageUrl");
+            retObjectScrollUpImageUrl = classInstance.Get("ScrollUpImageUrl");
+            return (java.lang.String)retObjectScrollUpImageUrl;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectScrollUpImageUrl != null ? retObjectScrollUpImageUrl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -586,7 +697,7 @@ public class Menu extends HierarchicalDataBoundControl implements system.web.ui.
 
     public void setScrollUpImageUrl(java.lang.String ScrollUpImageUrl) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ScrollUpImageUrl", ScrollUpImageUrl);
         } catch (JCNativeException jcne) {
@@ -596,9 +707,13 @@ public class Menu extends HierarchicalDataBoundControl implements system.web.ui.
 
     public java.lang.String getScrollUpText() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectScrollUpText = null;
         try {
-            return (java.lang.String)classInstance.Get("ScrollUpText");
+            retObjectScrollUpText = classInstance.Get("ScrollUpText");
+            return (java.lang.String)retObjectScrollUpText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectScrollUpText != null ? retObjectScrollUpText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -606,7 +721,7 @@ public class Menu extends HierarchicalDataBoundControl implements system.web.ui.
 
     public void setScrollUpText(java.lang.String ScrollUpText) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ScrollUpText", ScrollUpText);
         } catch (JCNativeException jcne) {
@@ -616,9 +731,13 @@ public class Menu extends HierarchicalDataBoundControl implements system.web.ui.
 
     public java.lang.String getSelectedValue() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectedValue = null;
         try {
-            return (java.lang.String)classInstance.Get("SelectedValue");
+            retObjectSelectedValue = classInstance.Get("SelectedValue");
+            return (java.lang.String)retObjectSelectedValue;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSelectedValue != null ? retObjectSelectedValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -626,9 +745,13 @@ public class Menu extends HierarchicalDataBoundControl implements system.web.ui.
 
     public java.lang.String getSkipLinkText() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSkipLinkText = null;
         try {
-            return (java.lang.String)classInstance.Get("SkipLinkText");
+            retObjectSkipLinkText = classInstance.Get("SkipLinkText");
+            return (java.lang.String)retObjectSkipLinkText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSkipLinkText != null ? retObjectSkipLinkText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -636,7 +759,7 @@ public class Menu extends HierarchicalDataBoundControl implements system.web.ui.
 
     public void setSkipLinkText(java.lang.String SkipLinkText) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SkipLinkText", SkipLinkText);
         } catch (JCNativeException jcne) {
@@ -646,9 +769,13 @@ public class Menu extends HierarchicalDataBoundControl implements system.web.ui.
 
     public java.lang.String getStaticBottomSeparatorImageUrl() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStaticBottomSeparatorImageUrl = null;
         try {
-            return (java.lang.String)classInstance.Get("StaticBottomSeparatorImageUrl");
+            retObjectStaticBottomSeparatorImageUrl = classInstance.Get("StaticBottomSeparatorImageUrl");
+            return (java.lang.String)retObjectStaticBottomSeparatorImageUrl;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectStaticBottomSeparatorImageUrl != null ? retObjectStaticBottomSeparatorImageUrl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -656,7 +783,7 @@ public class Menu extends HierarchicalDataBoundControl implements system.web.ui.
 
     public void setStaticBottomSeparatorImageUrl(java.lang.String StaticBottomSeparatorImageUrl) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("StaticBottomSeparatorImageUrl", StaticBottomSeparatorImageUrl);
         } catch (JCNativeException jcne) {
@@ -666,9 +793,13 @@ public class Menu extends HierarchicalDataBoundControl implements system.web.ui.
 
     public java.lang.String getStaticItemFormatString() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStaticItemFormatString = null;
         try {
-            return (java.lang.String)classInstance.Get("StaticItemFormatString");
+            retObjectStaticItemFormatString = classInstance.Get("StaticItemFormatString");
+            return (java.lang.String)retObjectStaticItemFormatString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectStaticItemFormatString != null ? retObjectStaticItemFormatString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -676,7 +807,7 @@ public class Menu extends HierarchicalDataBoundControl implements system.web.ui.
 
     public void setStaticItemFormatString(java.lang.String StaticItemFormatString) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("StaticItemFormatString", StaticItemFormatString);
         } catch (JCNativeException jcne) {
@@ -686,9 +817,13 @@ public class Menu extends HierarchicalDataBoundControl implements system.web.ui.
 
     public java.lang.String getStaticPopOutImageTextFormatString() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStaticPopOutImageTextFormatString = null;
         try {
-            return (java.lang.String)classInstance.Get("StaticPopOutImageTextFormatString");
+            retObjectStaticPopOutImageTextFormatString = classInstance.Get("StaticPopOutImageTextFormatString");
+            return (java.lang.String)retObjectStaticPopOutImageTextFormatString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectStaticPopOutImageTextFormatString != null ? retObjectStaticPopOutImageTextFormatString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -696,7 +831,7 @@ public class Menu extends HierarchicalDataBoundControl implements system.web.ui.
 
     public void setStaticPopOutImageTextFormatString(java.lang.String StaticPopOutImageTextFormatString) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("StaticPopOutImageTextFormatString", StaticPopOutImageTextFormatString);
         } catch (JCNativeException jcne) {
@@ -706,9 +841,13 @@ public class Menu extends HierarchicalDataBoundControl implements system.web.ui.
 
     public java.lang.String getStaticPopOutImageUrl() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStaticPopOutImageUrl = null;
         try {
-            return (java.lang.String)classInstance.Get("StaticPopOutImageUrl");
+            retObjectStaticPopOutImageUrl = classInstance.Get("StaticPopOutImageUrl");
+            return (java.lang.String)retObjectStaticPopOutImageUrl;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectStaticPopOutImageUrl != null ? retObjectStaticPopOutImageUrl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -716,7 +855,7 @@ public class Menu extends HierarchicalDataBoundControl implements system.web.ui.
 
     public void setStaticPopOutImageUrl(java.lang.String StaticPopOutImageUrl) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("StaticPopOutImageUrl", StaticPopOutImageUrl);
         } catch (JCNativeException jcne) {
@@ -726,9 +865,13 @@ public class Menu extends HierarchicalDataBoundControl implements system.web.ui.
 
     public java.lang.String getStaticTopSeparatorImageUrl() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStaticTopSeparatorImageUrl = null;
         try {
-            return (java.lang.String)classInstance.Get("StaticTopSeparatorImageUrl");
+            retObjectStaticTopSeparatorImageUrl = classInstance.Get("StaticTopSeparatorImageUrl");
+            return (java.lang.String)retObjectStaticTopSeparatorImageUrl;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectStaticTopSeparatorImageUrl != null ? retObjectStaticTopSeparatorImageUrl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -736,7 +879,7 @@ public class Menu extends HierarchicalDataBoundControl implements system.web.ui.
 
     public void setStaticTopSeparatorImageUrl(java.lang.String StaticTopSeparatorImageUrl) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("StaticTopSeparatorImageUrl", StaticTopSeparatorImageUrl);
         } catch (JCNativeException jcne) {
@@ -746,9 +889,13 @@ public class Menu extends HierarchicalDataBoundControl implements system.web.ui.
 
     public java.lang.String getTarget() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTarget = null;
         try {
-            return (java.lang.String)classInstance.Get("Target");
+            retObjectTarget = classInstance.Get("Target");
+            return (java.lang.String)retObjectTarget;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectTarget != null ? retObjectTarget.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -756,7 +903,7 @@ public class Menu extends HierarchicalDataBoundControl implements system.web.ui.
 
     public void setTarget(java.lang.String Target) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Target", Target);
         } catch (JCNativeException jcne) {
@@ -766,10 +913,14 @@ public class Menu extends HierarchicalDataBoundControl implements system.web.ui.
 
     public ITemplate getDynamicItemTemplate() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDynamicItemTemplate = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DynamicItemTemplate");
+            retObjectDynamicItemTemplate = classInstance.Get("DynamicItemTemplate");
+            JCObject val = (JCObject)retObjectDynamicItemTemplate;
             return new ITemplateImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDynamicItemTemplate != null ? retObjectDynamicItemTemplate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -777,7 +928,7 @@ public class Menu extends HierarchicalDataBoundControl implements system.web.ui.
 
     public void setDynamicItemTemplate(ITemplate DynamicItemTemplate) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DynamicItemTemplate", DynamicItemTemplate == null ? null : DynamicItemTemplate.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -787,10 +938,14 @@ public class Menu extends HierarchicalDataBoundControl implements system.web.ui.
 
     public ITemplate getStaticItemTemplate() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStaticItemTemplate = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("StaticItemTemplate");
+            retObjectStaticItemTemplate = classInstance.Get("StaticItemTemplate");
+            JCObject val = (JCObject)retObjectStaticItemTemplate;
             return new ITemplateImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStaticItemTemplate != null ? retObjectStaticItemTemplate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -798,7 +953,7 @@ public class Menu extends HierarchicalDataBoundControl implements system.web.ui.
 
     public void setStaticItemTemplate(ITemplate StaticItemTemplate) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("StaticItemTemplate", StaticItemTemplate == null ? null : StaticItemTemplate.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -808,10 +963,14 @@ public class Menu extends HierarchicalDataBoundControl implements system.web.ui.
 
     public MenuItem getSelectedItem() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectedItem = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SelectedItem");
+            retObjectSelectedItem = classInstance.Get("SelectedItem");
+            JCObject val = (JCObject)retObjectSelectedItem;
             return new MenuItem(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelectedItem != null ? retObjectSelectedItem.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -819,10 +978,14 @@ public class Menu extends HierarchicalDataBoundControl implements system.web.ui.
 
     public MenuItemBindingCollection getDataBindings() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDataBindings = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DataBindings");
+            retObjectDataBindings = classInstance.Get("DataBindings");
+            JCObject val = (JCObject)retObjectDataBindings;
             return new MenuItemBindingCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDataBindings != null ? retObjectDataBindings.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -830,10 +993,14 @@ public class Menu extends HierarchicalDataBoundControl implements system.web.ui.
 
     public MenuItemCollection getItems() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectItems = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Items");
+            retObjectItems = classInstance.Get("Items");
+            JCObject val = (JCObject)retObjectItems;
             return new MenuItemCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectItems != null ? retObjectItems.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -841,10 +1008,14 @@ public class Menu extends HierarchicalDataBoundControl implements system.web.ui.
 
     public MenuItemStyle getDynamicMenuItemStyle() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDynamicMenuItemStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DynamicMenuItemStyle");
+            retObjectDynamicMenuItemStyle = classInstance.Get("DynamicMenuItemStyle");
+            JCObject val = (JCObject)retObjectDynamicMenuItemStyle;
             return new MenuItemStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDynamicMenuItemStyle != null ? retObjectDynamicMenuItemStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -852,10 +1023,14 @@ public class Menu extends HierarchicalDataBoundControl implements system.web.ui.
 
     public MenuItemStyle getDynamicSelectedStyle() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDynamicSelectedStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DynamicSelectedStyle");
+            retObjectDynamicSelectedStyle = classInstance.Get("DynamicSelectedStyle");
+            JCObject val = (JCObject)retObjectDynamicSelectedStyle;
             return new MenuItemStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDynamicSelectedStyle != null ? retObjectDynamicSelectedStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -863,10 +1038,14 @@ public class Menu extends HierarchicalDataBoundControl implements system.web.ui.
 
     public MenuItemStyle getStaticMenuItemStyle() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStaticMenuItemStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("StaticMenuItemStyle");
+            retObjectStaticMenuItemStyle = classInstance.Get("StaticMenuItemStyle");
+            JCObject val = (JCObject)retObjectStaticMenuItemStyle;
             return new MenuItemStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStaticMenuItemStyle != null ? retObjectStaticMenuItemStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -874,10 +1053,14 @@ public class Menu extends HierarchicalDataBoundControl implements system.web.ui.
 
     public MenuItemStyle getStaticSelectedStyle() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStaticSelectedStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("StaticSelectedStyle");
+            retObjectStaticSelectedStyle = classInstance.Get("StaticSelectedStyle");
+            JCObject val = (JCObject)retObjectStaticSelectedStyle;
             return new MenuItemStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStaticSelectedStyle != null ? retObjectStaticSelectedStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -885,10 +1068,14 @@ public class Menu extends HierarchicalDataBoundControl implements system.web.ui.
 
     public MenuItemStyleCollection getLevelMenuItemStyles() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLevelMenuItemStyles = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("LevelMenuItemStyles");
+            retObjectLevelMenuItemStyles = classInstance.Get("LevelMenuItemStyles");
+            JCObject val = (JCObject)retObjectLevelMenuItemStyles;
             return new MenuItemStyleCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLevelMenuItemStyles != null ? retObjectLevelMenuItemStyles.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -896,10 +1083,14 @@ public class Menu extends HierarchicalDataBoundControl implements system.web.ui.
 
     public MenuItemStyleCollection getLevelSelectedStyles() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLevelSelectedStyles = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("LevelSelectedStyles");
+            retObjectLevelSelectedStyles = classInstance.Get("LevelSelectedStyles");
+            JCObject val = (JCObject)retObjectLevelSelectedStyles;
             return new MenuItemStyleCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLevelSelectedStyles != null ? retObjectLevelSelectedStyles.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -907,10 +1098,14 @@ public class Menu extends HierarchicalDataBoundControl implements system.web.ui.
 
     public MenuRenderingMode getRenderingMode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRenderingMode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RenderingMode");
+            retObjectRenderingMode = classInstance.Get("RenderingMode");
+            JCObject val = (JCObject)retObjectRenderingMode;
             return new MenuRenderingMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRenderingMode != null ? retObjectRenderingMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -918,7 +1113,7 @@ public class Menu extends HierarchicalDataBoundControl implements system.web.ui.
 
     public void setRenderingMode(MenuRenderingMode RenderingMode) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RenderingMode", RenderingMode == null ? null : RenderingMode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -928,10 +1123,14 @@ public class Menu extends HierarchicalDataBoundControl implements system.web.ui.
 
     public Orientation getOrientation() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOrientation = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Orientation");
+            retObjectOrientation = classInstance.Get("Orientation");
+            JCObject val = (JCObject)retObjectOrientation;
             return new Orientation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOrientation != null ? retObjectOrientation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -939,7 +1138,7 @@ public class Menu extends HierarchicalDataBoundControl implements system.web.ui.
 
     public void setOrientation(Orientation Orientation) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Orientation", Orientation == null ? null : Orientation.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -949,10 +1148,14 @@ public class Menu extends HierarchicalDataBoundControl implements system.web.ui.
 
     public Style getDynamicHoverStyle() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDynamicHoverStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DynamicHoverStyle");
+            retObjectDynamicHoverStyle = classInstance.Get("DynamicHoverStyle");
+            JCObject val = (JCObject)retObjectDynamicHoverStyle;
             return new Style(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDynamicHoverStyle != null ? retObjectDynamicHoverStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -960,10 +1163,14 @@ public class Menu extends HierarchicalDataBoundControl implements system.web.ui.
 
     public Style getStaticHoverStyle() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStaticHoverStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("StaticHoverStyle");
+            retObjectStaticHoverStyle = classInstance.Get("StaticHoverStyle");
+            JCObject val = (JCObject)retObjectStaticHoverStyle;
             return new Style(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStaticHoverStyle != null ? retObjectStaticHoverStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -971,10 +1178,14 @@ public class Menu extends HierarchicalDataBoundControl implements system.web.ui.
 
     public SubMenuStyle getDynamicMenuStyle() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDynamicMenuStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DynamicMenuStyle");
+            retObjectDynamicMenuStyle = classInstance.Get("DynamicMenuStyle");
+            JCObject val = (JCObject)retObjectDynamicMenuStyle;
             return new SubMenuStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDynamicMenuStyle != null ? retObjectDynamicMenuStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -982,10 +1193,14 @@ public class Menu extends HierarchicalDataBoundControl implements system.web.ui.
 
     public SubMenuStyle getStaticMenuStyle() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStaticMenuStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("StaticMenuStyle");
+            retObjectStaticMenuStyle = classInstance.Get("StaticMenuStyle");
+            JCObject val = (JCObject)retObjectStaticMenuStyle;
             return new SubMenuStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStaticMenuStyle != null ? retObjectStaticMenuStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -993,10 +1208,14 @@ public class Menu extends HierarchicalDataBoundControl implements system.web.ui.
 
     public SubMenuStyleCollection getLevelSubMenuStyles() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLevelSubMenuStyles = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("LevelSubMenuStyles");
+            retObjectLevelSubMenuStyles = classInstance.Get("LevelSubMenuStyles");
+            JCObject val = (JCObject)retObjectLevelSubMenuStyles;
             return new SubMenuStyleCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLevelSubMenuStyles != null ? retObjectLevelSubMenuStyles.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1004,10 +1223,14 @@ public class Menu extends HierarchicalDataBoundControl implements system.web.ui.
 
     public Unit getStaticSubMenuIndent() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStaticSubMenuIndent = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("StaticSubMenuIndent");
+            retObjectStaticSubMenuIndent = classInstance.Get("StaticSubMenuIndent");
+            JCObject val = (JCObject)retObjectStaticSubMenuIndent;
             return new Unit(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStaticSubMenuIndent != null ? retObjectStaticSubMenuIndent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1015,7 +1238,7 @@ public class Menu extends HierarchicalDataBoundControl implements system.web.ui.
 
     public void setStaticSubMenuIndent(Unit StaticSubMenuIndent) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("StaticSubMenuIndent", StaticSubMenuIndent == null ? null : StaticSubMenuIndent.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1030,7 +1253,7 @@ public class Menu extends HierarchicalDataBoundControl implements system.web.ui.
 
     public void addMenuItemClick(MenuEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("MenuItemClick", handler);
         } catch (JCNativeException jcne) {
@@ -1040,7 +1263,7 @@ public class Menu extends HierarchicalDataBoundControl implements system.web.ui.
 
     public void removeMenuItemClick(MenuEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("MenuItemClick", handler);
         } catch (JCNativeException jcne) {
@@ -1050,7 +1273,7 @@ public class Menu extends HierarchicalDataBoundControl implements system.web.ui.
 
     public void addMenuItemDataBound(MenuEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("MenuItemDataBound", handler);
         } catch (JCNativeException jcne) {
@@ -1060,7 +1283,7 @@ public class Menu extends HierarchicalDataBoundControl implements system.web.ui.
 
     public void removeMenuItemDataBound(MenuEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("MenuItemDataBound", handler);
         } catch (JCNativeException jcne) {

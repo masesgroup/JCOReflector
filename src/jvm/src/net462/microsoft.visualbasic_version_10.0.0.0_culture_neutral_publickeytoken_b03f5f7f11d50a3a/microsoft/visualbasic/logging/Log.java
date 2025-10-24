@@ -174,7 +174,7 @@ public class Log extends NetObject  {
     
     public void WriteEntry(java.lang.String message) throws Throwable, system.ArgumentNullException, system.collections.generic.KeyNotFoundException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.NotImplementedException, system.InvalidCastException, system.NullReferenceException, system.OverflowException, system.PlatformNotSupportedException, system.FormatException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteEntry", message);
         } catch (JCNativeException jcne) {
@@ -184,7 +184,7 @@ public class Log extends NetObject  {
 
     public void WriteEntry(java.lang.String message, TraceEventType severity) throws Throwable, system.ArgumentNullException, system.collections.generic.KeyNotFoundException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.NotImplementedException, system.InvalidCastException, system.NullReferenceException, system.OverflowException, system.PlatformNotSupportedException, system.FormatException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteEntry", message, severity == null ? null : severity.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -194,7 +194,7 @@ public class Log extends NetObject  {
 
     public void WriteEntry(java.lang.String message, TraceEventType severity, int id) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.NotImplementedException, system.io.PathTooLongException, system.InvalidCastException, system.NullReferenceException, system.FormatException, system.OverflowException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteEntry", message, severity == null ? null : severity.getJCOInstance(), id);
         } catch (JCNativeException jcne) {
@@ -204,7 +204,7 @@ public class Log extends NetObject  {
 
     public void WriteException(NetException ex) throws Throwable, system.ArgumentNullException, system.collections.generic.KeyNotFoundException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.globalization.CultureNotFoundException, system.ArgumentException, system.InvalidOperationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.InvalidCastException, system.NullReferenceException, system.OverflowException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteException", ex == null ? null : ex.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -214,7 +214,7 @@ public class Log extends NetObject  {
 
     public void WriteException(NetException ex, TraceEventType severity, java.lang.String additionalInfo) throws Throwable, system.ArgumentNullException, system.collections.generic.KeyNotFoundException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.globalization.CultureNotFoundException, system.ArgumentException, system.InvalidOperationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.InvalidCastException, system.NullReferenceException, system.OverflowException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteException", ex == null ? null : ex.getJCOInstance(), severity == null ? null : severity.getJCOInstance(), additionalInfo);
         } catch (JCNativeException jcne) {
@@ -224,7 +224,7 @@ public class Log extends NetObject  {
 
     public void WriteException(NetException ex, TraceEventType severity, java.lang.String additionalInfo, int id) throws Throwable, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.io.PathTooLongException, system.InvalidCastException, system.NullReferenceException, system.OverflowException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteException", ex == null ? null : ex.getJCOInstance(), severity == null ? null : severity.getJCOInstance(), additionalInfo, id);
         } catch (JCNativeException jcne) {
@@ -238,10 +238,14 @@ public class Log extends NetObject  {
     
     public FileLogTraceListener getDefaultFileLogWriter() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.NotImplementedException, system.io.PathTooLongException, system.InvalidCastException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDefaultFileLogWriter = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DefaultFileLogWriter");
+            retObjectDefaultFileLogWriter = classInstance.Get("DefaultFileLogWriter");
+            JCObject val = (JCObject)retObjectDefaultFileLogWriter;
             return new FileLogTraceListener(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefaultFileLogWriter != null ? retObjectDefaultFileLogWriter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -249,10 +253,14 @@ public class Log extends NetObject  {
 
     public TraceSource getTraceSource() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTraceSource = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TraceSource");
+            retObjectTraceSource = classInstance.Get("TraceSource");
+            JCObject val = (JCObject)retObjectTraceSource;
             return new TraceSource(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTraceSource != null ? retObjectTraceSource.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -159,9 +159,13 @@ public class StreamPipeReaderOptions extends NetObject  {
     
     public boolean getLeaveOpen() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLeaveOpen = null;
         try {
-            return (boolean)classInstance.Get("LeaveOpen");
+            retObjectLeaveOpen = classInstance.Get("LeaveOpen");
+            return (boolean)retObjectLeaveOpen;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectLeaveOpen != null ? retObjectLeaveOpen.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,9 +173,13 @@ public class StreamPipeReaderOptions extends NetObject  {
 
     public boolean getUseZeroByteReads() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUseZeroByteReads = null;
         try {
-            return (boolean)classInstance.Get("UseZeroByteReads");
+            retObjectUseZeroByteReads = classInstance.Get("UseZeroByteReads");
+            return (boolean)retObjectUseZeroByteReads;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectUseZeroByteReads != null ? retObjectUseZeroByteReads.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,9 +187,20 @@ public class StreamPipeReaderOptions extends NetObject  {
 
     public int getBufferSize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBufferSize = null;
         try {
-            return (int)classInstance.Get("BufferSize");
+            retObjectBufferSize = classInstance.Get("BufferSize");
+            return (int)retObjectBufferSize;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectBufferSize_ToString = retObjectBufferSize == null ? "null" : retObjectBufferSize.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectBufferSizeNumber = (java.lang.Number)retObjectBufferSize;
+                return retObjectBufferSizeNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectBufferSize != null ? retObjectBufferSize.getClass() : "null", retObjectBufferSize_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -189,9 +208,20 @@ public class StreamPipeReaderOptions extends NetObject  {
 
     public int getMinimumReadSize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMinimumReadSize = null;
         try {
-            return (int)classInstance.Get("MinimumReadSize");
+            retObjectMinimumReadSize = classInstance.Get("MinimumReadSize");
+            return (int)retObjectMinimumReadSize;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMinimumReadSize_ToString = retObjectMinimumReadSize == null ? "null" : retObjectMinimumReadSize.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMinimumReadSizeNumber = (java.lang.Number)retObjectMinimumReadSize;
+                return retObjectMinimumReadSizeNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMinimumReadSize != null ? retObjectMinimumReadSize.getClass() : "null", retObjectMinimumReadSize_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

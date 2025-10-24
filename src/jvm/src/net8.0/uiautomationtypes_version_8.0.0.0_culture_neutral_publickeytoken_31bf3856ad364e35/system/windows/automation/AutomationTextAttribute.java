@@ -157,10 +157,14 @@ public class AutomationTextAttribute extends AutomationIdentifier  {
     
     public static AutomationTextAttribute LookupById(int id) throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLookupById = null;
         try {
-            JCObject objLookupById = (JCObject)classType.Invoke("LookupById", id);
+            retObjectLookupById = classType.Invoke("LookupById", id);
+            JCObject objLookupById = (JCObject)retObjectLookupById;
             return new AutomationTextAttribute(objLookupById);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLookupById != null ? retObjectLookupById.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

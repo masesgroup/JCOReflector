@@ -171,10 +171,14 @@ public class FileSystemEventArgs extends EventArgs  {
     
     public WatcherChangeTypes getChangeType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectChangeType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ChangeType");
+            retObjectChangeType = classInstance.Get("ChangeType");
+            JCObject val = (JCObject)retObjectChangeType;
             return new WatcherChangeTypes(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectChangeType != null ? retObjectChangeType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,9 +186,13 @@ public class FileSystemEventArgs extends EventArgs  {
 
     public java.lang.String getFullPath() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFullPath = null;
         try {
-            return (java.lang.String)classInstance.Get("FullPath");
+            retObjectFullPath = classInstance.Get("FullPath");
+            return (java.lang.String)retObjectFullPath;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectFullPath != null ? retObjectFullPath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,9 +200,13 @@ public class FileSystemEventArgs extends EventArgs  {
 
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectName = null;
         try {
-            return (java.lang.String)classInstance.Get("Name");
+            retObjectName = classInstance.Get("Name");
+            return (java.lang.String)retObjectName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectName != null ? retObjectName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

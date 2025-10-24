@@ -184,10 +184,14 @@ public class ActivityDesignerVerb extends DesignerVerb  {
     
     public DesignerVerbGroup getGroup() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGroup = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Group");
+            retObjectGroup = classInstance.Get("Group");
+            JCObject val = (JCObject)retObjectGroup;
             return new DesignerVerbGroup(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGroup != null ? retObjectGroup.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

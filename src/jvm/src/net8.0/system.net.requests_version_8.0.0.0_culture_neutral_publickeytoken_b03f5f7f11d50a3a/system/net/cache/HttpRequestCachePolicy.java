@@ -220,10 +220,14 @@ public class HttpRequestCachePolicy extends RequestCachePolicy  {
     
     public DateTime getCacheSyncDate() throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidTimeZoneException, system.InvalidOperationException, system.UnauthorizedAccessException, system.io.IOException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCacheSyncDate = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CacheSyncDate");
+            retObjectCacheSyncDate = classInstance.Get("CacheSyncDate");
+            JCObject val = (JCObject)retObjectCacheSyncDate;
             return new DateTime(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCacheSyncDate != null ? retObjectCacheSyncDate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -231,10 +235,14 @@ public class HttpRequestCachePolicy extends RequestCachePolicy  {
 
     public HttpRequestCacheLevel getLevelNewHttpRequestCachePolicy() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLevel = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Level");
+            retObjectLevel = classInstance.Get("Level");
+            JCObject val = (JCObject)retObjectLevel;
             return new HttpRequestCacheLevel(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLevel != null ? retObjectLevel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -242,10 +250,14 @@ public class HttpRequestCachePolicy extends RequestCachePolicy  {
 
     public TimeSpan getMaxAge() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxAge = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MaxAge");
+            retObjectMaxAge = classInstance.Get("MaxAge");
+            JCObject val = (JCObject)retObjectMaxAge;
             return new TimeSpan(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMaxAge != null ? retObjectMaxAge.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -253,10 +265,14 @@ public class HttpRequestCachePolicy extends RequestCachePolicy  {
 
     public TimeSpan getMaxStale() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxStale = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MaxStale");
+            retObjectMaxStale = classInstance.Get("MaxStale");
+            JCObject val = (JCObject)retObjectMaxStale;
             return new TimeSpan(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMaxStale != null ? retObjectMaxStale.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -264,10 +280,14 @@ public class HttpRequestCachePolicy extends RequestCachePolicy  {
 
     public TimeSpan getMinFresh() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMinFresh = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MinFresh");
+            retObjectMinFresh = classInstance.Get("MinFresh");
+            JCObject val = (JCObject)retObjectMinFresh;
             return new TimeSpan(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMinFresh != null ? retObjectMinFresh.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

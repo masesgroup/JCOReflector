@@ -164,9 +164,13 @@ public class Copy extends TaskExtension  {
     
     public boolean Execute() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.io.PathTooLongException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.io.IOException, system.NullReferenceException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExecute = null;
         try {
-            return (boolean)classInstance.Invoke("Execute");
+            retObjectExecute = classInstance.Invoke("Execute");
+            return (boolean)retObjectExecute;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectExecute != null ? retObjectExecute.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -174,7 +178,7 @@ public class Copy extends TaskExtension  {
 
     public void Cancel() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Cancel");
         } catch (JCNativeException jcne) {
@@ -188,9 +192,13 @@ public class Copy extends TaskExtension  {
     
     public boolean getOverwriteReadOnlyFiles() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOverwriteReadOnlyFiles = null;
         try {
-            return (boolean)classInstance.Get("OverwriteReadOnlyFiles");
+            retObjectOverwriteReadOnlyFiles = classInstance.Get("OverwriteReadOnlyFiles");
+            return (boolean)retObjectOverwriteReadOnlyFiles;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectOverwriteReadOnlyFiles != null ? retObjectOverwriteReadOnlyFiles.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,7 +206,7 @@ public class Copy extends TaskExtension  {
 
     public void setOverwriteReadOnlyFiles(boolean OverwriteReadOnlyFiles) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("OverwriteReadOnlyFiles", OverwriteReadOnlyFiles);
         } catch (JCNativeException jcne) {
@@ -208,9 +216,13 @@ public class Copy extends TaskExtension  {
 
     public boolean getSkipUnchangedFiles() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSkipUnchangedFiles = null;
         try {
-            return (boolean)classInstance.Get("SkipUnchangedFiles");
+            retObjectSkipUnchangedFiles = classInstance.Get("SkipUnchangedFiles");
+            return (boolean)retObjectSkipUnchangedFiles;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectSkipUnchangedFiles != null ? retObjectSkipUnchangedFiles.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -218,7 +230,7 @@ public class Copy extends TaskExtension  {
 
     public void setSkipUnchangedFiles(boolean SkipUnchangedFiles) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SkipUnchangedFiles", SkipUnchangedFiles);
         } catch (JCNativeException jcne) {
@@ -228,9 +240,13 @@ public class Copy extends TaskExtension  {
 
     public boolean getUseHardlinksIfPossible() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUseHardlinksIfPossible = null;
         try {
-            return (boolean)classInstance.Get("UseHardlinksIfPossible");
+            retObjectUseHardlinksIfPossible = classInstance.Get("UseHardlinksIfPossible");
+            return (boolean)retObjectUseHardlinksIfPossible;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectUseHardlinksIfPossible != null ? retObjectUseHardlinksIfPossible.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -238,7 +254,7 @@ public class Copy extends TaskExtension  {
 
     public void setUseHardlinksIfPossible(boolean UseHardlinksIfPossible) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UseHardlinksIfPossible", UseHardlinksIfPossible);
         } catch (JCNativeException jcne) {
@@ -248,9 +264,20 @@ public class Copy extends TaskExtension  {
 
     public int getRetries() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRetries = null;
         try {
-            return (int)classInstance.Get("Retries");
+            retObjectRetries = classInstance.Get("Retries");
+            return (int)retObjectRetries;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectRetries_ToString = retObjectRetries == null ? "null" : retObjectRetries.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectRetriesNumber = (java.lang.Number)retObjectRetries;
+                return retObjectRetriesNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectRetries != null ? retObjectRetries.getClass() : "null", retObjectRetries_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -258,7 +285,7 @@ public class Copy extends TaskExtension  {
 
     public void setRetries(int Retries) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Retries", Retries);
         } catch (JCNativeException jcne) {
@@ -268,9 +295,20 @@ public class Copy extends TaskExtension  {
 
     public int getRetryDelayMilliseconds() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRetryDelayMilliseconds = null;
         try {
-            return (int)classInstance.Get("RetryDelayMilliseconds");
+            retObjectRetryDelayMilliseconds = classInstance.Get("RetryDelayMilliseconds");
+            return (int)retObjectRetryDelayMilliseconds;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectRetryDelayMilliseconds_ToString = retObjectRetryDelayMilliseconds == null ? "null" : retObjectRetryDelayMilliseconds.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectRetryDelayMillisecondsNumber = (java.lang.Number)retObjectRetryDelayMilliseconds;
+                return retObjectRetryDelayMillisecondsNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectRetryDelayMilliseconds != null ? retObjectRetryDelayMilliseconds.getClass() : "null", retObjectRetryDelayMilliseconds_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -278,7 +316,7 @@ public class Copy extends TaskExtension  {
 
     public void setRetryDelayMilliseconds(int RetryDelayMilliseconds) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RetryDelayMilliseconds", RetryDelayMilliseconds);
         } catch (JCNativeException jcne) {
@@ -288,10 +326,14 @@ public class Copy extends TaskExtension  {
 
     public ITaskItem getDestinationFolder() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDestinationFolder = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DestinationFolder");
+            retObjectDestinationFolder = classInstance.Get("DestinationFolder");
+            JCObject val = (JCObject)retObjectDestinationFolder;
             return new ITaskItemImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDestinationFolder != null ? retObjectDestinationFolder.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -299,7 +341,7 @@ public class Copy extends TaskExtension  {
 
     public void setDestinationFolder(ITaskItem DestinationFolder) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DestinationFolder", DestinationFolder == null ? null : DestinationFolder.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -309,16 +351,20 @@ public class Copy extends TaskExtension  {
 
     public final ITaskItem[] getCopiedFiles() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCopiedFiles = null;
         try {
             ArrayList<ITaskItem> resultingArrayList = new ArrayList<ITaskItem>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("CopiedFiles");
+            retObjectCopiedFiles = classInstance.Get("CopiedFiles");
+            JCObject resultingObjects = (JCObject)retObjectCopiedFiles;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ITaskItemImplementation(resultingObject));
             }
             ITaskItem[] resultingArray = new ITaskItem[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCopiedFiles != null ? retObjectCopiedFiles.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -326,16 +372,20 @@ public class Copy extends TaskExtension  {
 
     public final ITaskItem[] getDestinationFiles() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDestinationFiles = null;
         try {
             ArrayList<ITaskItem> resultingArrayList = new ArrayList<ITaskItem>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("DestinationFiles");
+            retObjectDestinationFiles = classInstance.Get("DestinationFiles");
+            JCObject resultingObjects = (JCObject)retObjectDestinationFiles;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ITaskItemImplementation(resultingObject));
             }
             ITaskItem[] resultingArray = new ITaskItem[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDestinationFiles != null ? retObjectDestinationFiles.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -343,7 +393,7 @@ public class Copy extends TaskExtension  {
 
     public void setDestinationFiles(ITaskItem[] DestinationFiles) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DestinationFiles", toObjectFromArray(DestinationFiles));
         } catch (JCNativeException jcne) {
@@ -353,16 +403,20 @@ public class Copy extends TaskExtension  {
 
     public final ITaskItem[] getSourceFiles() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSourceFiles = null;
         try {
             ArrayList<ITaskItem> resultingArrayList = new ArrayList<ITaskItem>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("SourceFiles");
+            retObjectSourceFiles = classInstance.Get("SourceFiles");
+            JCObject resultingObjects = (JCObject)retObjectSourceFiles;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ITaskItemImplementation(resultingObject));
             }
             ITaskItem[] resultingArray = new ITaskItem[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSourceFiles != null ? retObjectSourceFiles.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -370,7 +424,7 @@ public class Copy extends TaskExtension  {
 
     public void setSourceFiles(ITaskItem[] SourceFiles) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SourceFiles", toObjectFromArray(SourceFiles));
         } catch (JCNativeException jcne) {

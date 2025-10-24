@@ -178,10 +178,14 @@ public class WSTrustServiceContract extends NetObject  {
     
     public IAsyncResult BeginTrust13Cancel(Message request, AsyncCallback callback, NetObject state) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginTrust13Cancel = null;
         try {
-            JCObject objBeginTrust13Cancel = (JCObject)classInstance.Invoke("BeginTrust13Cancel", request == null ? null : request.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            retObjectBeginTrust13Cancel = classInstance.Invoke("BeginTrust13Cancel", request == null ? null : request.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            JCObject objBeginTrust13Cancel = (JCObject)retObjectBeginTrust13Cancel;
             return new IAsyncResultImplementation(objBeginTrust13Cancel);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginTrust13Cancel != null ? retObjectBeginTrust13Cancel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -189,10 +193,14 @@ public class WSTrustServiceContract extends NetObject  {
 
     public IAsyncResult BeginTrust13CancelResponse(Message request, AsyncCallback callback, NetObject state) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginTrust13CancelResponse = null;
         try {
-            JCObject objBeginTrust13CancelResponse = (JCObject)classInstance.Invoke("BeginTrust13CancelResponse", request == null ? null : request.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            retObjectBeginTrust13CancelResponse = classInstance.Invoke("BeginTrust13CancelResponse", request == null ? null : request.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            JCObject objBeginTrust13CancelResponse = (JCObject)retObjectBeginTrust13CancelResponse;
             return new IAsyncResultImplementation(objBeginTrust13CancelResponse);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginTrust13CancelResponse != null ? retObjectBeginTrust13CancelResponse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,10 +208,14 @@ public class WSTrustServiceContract extends NetObject  {
 
     public IAsyncResult BeginTrust13Issue(Message request, AsyncCallback callback, NetObject state) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginTrust13Issue = null;
         try {
-            JCObject objBeginTrust13Issue = (JCObject)classInstance.Invoke("BeginTrust13Issue", request == null ? null : request.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            retObjectBeginTrust13Issue = classInstance.Invoke("BeginTrust13Issue", request == null ? null : request.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            JCObject objBeginTrust13Issue = (JCObject)retObjectBeginTrust13Issue;
             return new IAsyncResultImplementation(objBeginTrust13Issue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginTrust13Issue != null ? retObjectBeginTrust13Issue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -211,10 +223,14 @@ public class WSTrustServiceContract extends NetObject  {
 
     public IAsyncResult BeginTrust13IssueResponse(Message request, AsyncCallback callback, NetObject state) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginTrust13IssueResponse = null;
         try {
-            JCObject objBeginTrust13IssueResponse = (JCObject)classInstance.Invoke("BeginTrust13IssueResponse", request == null ? null : request.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            retObjectBeginTrust13IssueResponse = classInstance.Invoke("BeginTrust13IssueResponse", request == null ? null : request.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            JCObject objBeginTrust13IssueResponse = (JCObject)retObjectBeginTrust13IssueResponse;
             return new IAsyncResultImplementation(objBeginTrust13IssueResponse);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginTrust13IssueResponse != null ? retObjectBeginTrust13IssueResponse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -222,10 +238,14 @@ public class WSTrustServiceContract extends NetObject  {
 
     public IAsyncResult BeginTrust13Renew(Message request, AsyncCallback callback, NetObject state) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginTrust13Renew = null;
         try {
-            JCObject objBeginTrust13Renew = (JCObject)classInstance.Invoke("BeginTrust13Renew", request == null ? null : request.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            retObjectBeginTrust13Renew = classInstance.Invoke("BeginTrust13Renew", request == null ? null : request.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            JCObject objBeginTrust13Renew = (JCObject)retObjectBeginTrust13Renew;
             return new IAsyncResultImplementation(objBeginTrust13Renew);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginTrust13Renew != null ? retObjectBeginTrust13Renew.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -233,10 +253,14 @@ public class WSTrustServiceContract extends NetObject  {
 
     public IAsyncResult BeginTrust13RenewResponse(Message request, AsyncCallback callback, NetObject state) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginTrust13RenewResponse = null;
         try {
-            JCObject objBeginTrust13RenewResponse = (JCObject)classInstance.Invoke("BeginTrust13RenewResponse", request == null ? null : request.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            retObjectBeginTrust13RenewResponse = classInstance.Invoke("BeginTrust13RenewResponse", request == null ? null : request.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            JCObject objBeginTrust13RenewResponse = (JCObject)retObjectBeginTrust13RenewResponse;
             return new IAsyncResultImplementation(objBeginTrust13RenewResponse);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginTrust13RenewResponse != null ? retObjectBeginTrust13RenewResponse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -244,10 +268,14 @@ public class WSTrustServiceContract extends NetObject  {
 
     public IAsyncResult BeginTrust13Validate(Message request, AsyncCallback callback, NetObject state) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginTrust13Validate = null;
         try {
-            JCObject objBeginTrust13Validate = (JCObject)classInstance.Invoke("BeginTrust13Validate", request == null ? null : request.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            retObjectBeginTrust13Validate = classInstance.Invoke("BeginTrust13Validate", request == null ? null : request.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            JCObject objBeginTrust13Validate = (JCObject)retObjectBeginTrust13Validate;
             return new IAsyncResultImplementation(objBeginTrust13Validate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginTrust13Validate != null ? retObjectBeginTrust13Validate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -255,10 +283,14 @@ public class WSTrustServiceContract extends NetObject  {
 
     public IAsyncResult BeginTrust13ValidateResponse(Message request, AsyncCallback callback, NetObject state) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginTrust13ValidateResponse = null;
         try {
-            JCObject objBeginTrust13ValidateResponse = (JCObject)classInstance.Invoke("BeginTrust13ValidateResponse", request == null ? null : request.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            retObjectBeginTrust13ValidateResponse = classInstance.Invoke("BeginTrust13ValidateResponse", request == null ? null : request.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            JCObject objBeginTrust13ValidateResponse = (JCObject)retObjectBeginTrust13ValidateResponse;
             return new IAsyncResultImplementation(objBeginTrust13ValidateResponse);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginTrust13ValidateResponse != null ? retObjectBeginTrust13ValidateResponse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -266,10 +298,14 @@ public class WSTrustServiceContract extends NetObject  {
 
     public IAsyncResult BeginTrustFeb2005Cancel(Message request, AsyncCallback callback, NetObject state) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginTrustFeb2005Cancel = null;
         try {
-            JCObject objBeginTrustFeb2005Cancel = (JCObject)classInstance.Invoke("BeginTrustFeb2005Cancel", request == null ? null : request.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            retObjectBeginTrustFeb2005Cancel = classInstance.Invoke("BeginTrustFeb2005Cancel", request == null ? null : request.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            JCObject objBeginTrustFeb2005Cancel = (JCObject)retObjectBeginTrustFeb2005Cancel;
             return new IAsyncResultImplementation(objBeginTrustFeb2005Cancel);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginTrustFeb2005Cancel != null ? retObjectBeginTrustFeb2005Cancel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -277,10 +313,14 @@ public class WSTrustServiceContract extends NetObject  {
 
     public IAsyncResult BeginTrustFeb2005CancelResponse(Message request, AsyncCallback callback, NetObject state) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginTrustFeb2005CancelResponse = null;
         try {
-            JCObject objBeginTrustFeb2005CancelResponse = (JCObject)classInstance.Invoke("BeginTrustFeb2005CancelResponse", request == null ? null : request.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            retObjectBeginTrustFeb2005CancelResponse = classInstance.Invoke("BeginTrustFeb2005CancelResponse", request == null ? null : request.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            JCObject objBeginTrustFeb2005CancelResponse = (JCObject)retObjectBeginTrustFeb2005CancelResponse;
             return new IAsyncResultImplementation(objBeginTrustFeb2005CancelResponse);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginTrustFeb2005CancelResponse != null ? retObjectBeginTrustFeb2005CancelResponse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -288,10 +328,14 @@ public class WSTrustServiceContract extends NetObject  {
 
     public IAsyncResult BeginTrustFeb2005Issue(Message request, AsyncCallback callback, NetObject state) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginTrustFeb2005Issue = null;
         try {
-            JCObject objBeginTrustFeb2005Issue = (JCObject)classInstance.Invoke("BeginTrustFeb2005Issue", request == null ? null : request.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            retObjectBeginTrustFeb2005Issue = classInstance.Invoke("BeginTrustFeb2005Issue", request == null ? null : request.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            JCObject objBeginTrustFeb2005Issue = (JCObject)retObjectBeginTrustFeb2005Issue;
             return new IAsyncResultImplementation(objBeginTrustFeb2005Issue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginTrustFeb2005Issue != null ? retObjectBeginTrustFeb2005Issue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -299,10 +343,14 @@ public class WSTrustServiceContract extends NetObject  {
 
     public IAsyncResult BeginTrustFeb2005IssueResponse(Message request, AsyncCallback callback, NetObject state) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginTrustFeb2005IssueResponse = null;
         try {
-            JCObject objBeginTrustFeb2005IssueResponse = (JCObject)classInstance.Invoke("BeginTrustFeb2005IssueResponse", request == null ? null : request.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            retObjectBeginTrustFeb2005IssueResponse = classInstance.Invoke("BeginTrustFeb2005IssueResponse", request == null ? null : request.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            JCObject objBeginTrustFeb2005IssueResponse = (JCObject)retObjectBeginTrustFeb2005IssueResponse;
             return new IAsyncResultImplementation(objBeginTrustFeb2005IssueResponse);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginTrustFeb2005IssueResponse != null ? retObjectBeginTrustFeb2005IssueResponse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -310,10 +358,14 @@ public class WSTrustServiceContract extends NetObject  {
 
     public IAsyncResult BeginTrustFeb2005Renew(Message request, AsyncCallback callback, NetObject state) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginTrustFeb2005Renew = null;
         try {
-            JCObject objBeginTrustFeb2005Renew = (JCObject)classInstance.Invoke("BeginTrustFeb2005Renew", request == null ? null : request.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            retObjectBeginTrustFeb2005Renew = classInstance.Invoke("BeginTrustFeb2005Renew", request == null ? null : request.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            JCObject objBeginTrustFeb2005Renew = (JCObject)retObjectBeginTrustFeb2005Renew;
             return new IAsyncResultImplementation(objBeginTrustFeb2005Renew);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginTrustFeb2005Renew != null ? retObjectBeginTrustFeb2005Renew.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -321,10 +373,14 @@ public class WSTrustServiceContract extends NetObject  {
 
     public IAsyncResult BeginTrustFeb2005RenewResponse(Message request, AsyncCallback callback, NetObject state) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginTrustFeb2005RenewResponse = null;
         try {
-            JCObject objBeginTrustFeb2005RenewResponse = (JCObject)classInstance.Invoke("BeginTrustFeb2005RenewResponse", request == null ? null : request.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            retObjectBeginTrustFeb2005RenewResponse = classInstance.Invoke("BeginTrustFeb2005RenewResponse", request == null ? null : request.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            JCObject objBeginTrustFeb2005RenewResponse = (JCObject)retObjectBeginTrustFeb2005RenewResponse;
             return new IAsyncResultImplementation(objBeginTrustFeb2005RenewResponse);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginTrustFeb2005RenewResponse != null ? retObjectBeginTrustFeb2005RenewResponse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -332,10 +388,14 @@ public class WSTrustServiceContract extends NetObject  {
 
     public IAsyncResult BeginTrustFeb2005Validate(Message request, AsyncCallback callback, NetObject state) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginTrustFeb2005Validate = null;
         try {
-            JCObject objBeginTrustFeb2005Validate = (JCObject)classInstance.Invoke("BeginTrustFeb2005Validate", request == null ? null : request.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            retObjectBeginTrustFeb2005Validate = classInstance.Invoke("BeginTrustFeb2005Validate", request == null ? null : request.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            JCObject objBeginTrustFeb2005Validate = (JCObject)retObjectBeginTrustFeb2005Validate;
             return new IAsyncResultImplementation(objBeginTrustFeb2005Validate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginTrustFeb2005Validate != null ? retObjectBeginTrustFeb2005Validate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -343,10 +403,14 @@ public class WSTrustServiceContract extends NetObject  {
 
     public IAsyncResult BeginTrustFeb2005ValidateResponse(Message request, AsyncCallback callback, NetObject state) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginTrustFeb2005ValidateResponse = null;
         try {
-            JCObject objBeginTrustFeb2005ValidateResponse = (JCObject)classInstance.Invoke("BeginTrustFeb2005ValidateResponse", request == null ? null : request.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            retObjectBeginTrustFeb2005ValidateResponse = classInstance.Invoke("BeginTrustFeb2005ValidateResponse", request == null ? null : request.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            JCObject objBeginTrustFeb2005ValidateResponse = (JCObject)retObjectBeginTrustFeb2005ValidateResponse;
             return new IAsyncResultImplementation(objBeginTrustFeb2005ValidateResponse);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginTrustFeb2005ValidateResponse != null ? retObjectBeginTrustFeb2005ValidateResponse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -354,10 +418,14 @@ public class WSTrustServiceContract extends NetObject  {
 
     public Message EndTrust13Cancel(IAsyncResult ar) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.threading.AbandonedMutexException, system.collections.generic.KeyNotFoundException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEndTrust13Cancel = null;
         try {
-            JCObject objEndTrust13Cancel = (JCObject)classInstance.Invoke("EndTrust13Cancel", ar == null ? null : ar.getJCOInstance());
+            retObjectEndTrust13Cancel = classInstance.Invoke("EndTrust13Cancel", ar == null ? null : ar.getJCOInstance());
+            JCObject objEndTrust13Cancel = (JCObject)retObjectEndTrust13Cancel;
             return new Message(objEndTrust13Cancel);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEndTrust13Cancel != null ? retObjectEndTrust13Cancel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -365,10 +433,14 @@ public class WSTrustServiceContract extends NetObject  {
 
     public Message EndTrust13CancelResponse(IAsyncResult ar) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.threading.AbandonedMutexException, system.collections.generic.KeyNotFoundException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEndTrust13CancelResponse = null;
         try {
-            JCObject objEndTrust13CancelResponse = (JCObject)classInstance.Invoke("EndTrust13CancelResponse", ar == null ? null : ar.getJCOInstance());
+            retObjectEndTrust13CancelResponse = classInstance.Invoke("EndTrust13CancelResponse", ar == null ? null : ar.getJCOInstance());
+            JCObject objEndTrust13CancelResponse = (JCObject)retObjectEndTrust13CancelResponse;
             return new Message(objEndTrust13CancelResponse);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEndTrust13CancelResponse != null ? retObjectEndTrust13CancelResponse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -376,10 +448,14 @@ public class WSTrustServiceContract extends NetObject  {
 
     public Message EndTrust13Issue(IAsyncResult ar) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.threading.AbandonedMutexException, system.collections.generic.KeyNotFoundException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEndTrust13Issue = null;
         try {
-            JCObject objEndTrust13Issue = (JCObject)classInstance.Invoke("EndTrust13Issue", ar == null ? null : ar.getJCOInstance());
+            retObjectEndTrust13Issue = classInstance.Invoke("EndTrust13Issue", ar == null ? null : ar.getJCOInstance());
+            JCObject objEndTrust13Issue = (JCObject)retObjectEndTrust13Issue;
             return new Message(objEndTrust13Issue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEndTrust13Issue != null ? retObjectEndTrust13Issue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -387,10 +463,14 @@ public class WSTrustServiceContract extends NetObject  {
 
     public Message EndTrust13IssueResponse(IAsyncResult ar) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.threading.AbandonedMutexException, system.collections.generic.KeyNotFoundException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEndTrust13IssueResponse = null;
         try {
-            JCObject objEndTrust13IssueResponse = (JCObject)classInstance.Invoke("EndTrust13IssueResponse", ar == null ? null : ar.getJCOInstance());
+            retObjectEndTrust13IssueResponse = classInstance.Invoke("EndTrust13IssueResponse", ar == null ? null : ar.getJCOInstance());
+            JCObject objEndTrust13IssueResponse = (JCObject)retObjectEndTrust13IssueResponse;
             return new Message(objEndTrust13IssueResponse);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEndTrust13IssueResponse != null ? retObjectEndTrust13IssueResponse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -398,10 +478,14 @@ public class WSTrustServiceContract extends NetObject  {
 
     public Message EndTrust13Renew(IAsyncResult ar) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.threading.AbandonedMutexException, system.collections.generic.KeyNotFoundException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEndTrust13Renew = null;
         try {
-            JCObject objEndTrust13Renew = (JCObject)classInstance.Invoke("EndTrust13Renew", ar == null ? null : ar.getJCOInstance());
+            retObjectEndTrust13Renew = classInstance.Invoke("EndTrust13Renew", ar == null ? null : ar.getJCOInstance());
+            JCObject objEndTrust13Renew = (JCObject)retObjectEndTrust13Renew;
             return new Message(objEndTrust13Renew);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEndTrust13Renew != null ? retObjectEndTrust13Renew.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -409,10 +493,14 @@ public class WSTrustServiceContract extends NetObject  {
 
     public Message EndTrust13RenewResponse(IAsyncResult ar) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.threading.AbandonedMutexException, system.collections.generic.KeyNotFoundException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEndTrust13RenewResponse = null;
         try {
-            JCObject objEndTrust13RenewResponse = (JCObject)classInstance.Invoke("EndTrust13RenewResponse", ar == null ? null : ar.getJCOInstance());
+            retObjectEndTrust13RenewResponse = classInstance.Invoke("EndTrust13RenewResponse", ar == null ? null : ar.getJCOInstance());
+            JCObject objEndTrust13RenewResponse = (JCObject)retObjectEndTrust13RenewResponse;
             return new Message(objEndTrust13RenewResponse);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEndTrust13RenewResponse != null ? retObjectEndTrust13RenewResponse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -420,10 +508,14 @@ public class WSTrustServiceContract extends NetObject  {
 
     public Message EndTrust13Validate(IAsyncResult ar) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.threading.AbandonedMutexException, system.collections.generic.KeyNotFoundException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEndTrust13Validate = null;
         try {
-            JCObject objEndTrust13Validate = (JCObject)classInstance.Invoke("EndTrust13Validate", ar == null ? null : ar.getJCOInstance());
+            retObjectEndTrust13Validate = classInstance.Invoke("EndTrust13Validate", ar == null ? null : ar.getJCOInstance());
+            JCObject objEndTrust13Validate = (JCObject)retObjectEndTrust13Validate;
             return new Message(objEndTrust13Validate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEndTrust13Validate != null ? retObjectEndTrust13Validate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -431,10 +523,14 @@ public class WSTrustServiceContract extends NetObject  {
 
     public Message EndTrust13ValidateResponse(IAsyncResult ar) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.threading.AbandonedMutexException, system.collections.generic.KeyNotFoundException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEndTrust13ValidateResponse = null;
         try {
-            JCObject objEndTrust13ValidateResponse = (JCObject)classInstance.Invoke("EndTrust13ValidateResponse", ar == null ? null : ar.getJCOInstance());
+            retObjectEndTrust13ValidateResponse = classInstance.Invoke("EndTrust13ValidateResponse", ar == null ? null : ar.getJCOInstance());
+            JCObject objEndTrust13ValidateResponse = (JCObject)retObjectEndTrust13ValidateResponse;
             return new Message(objEndTrust13ValidateResponse);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEndTrust13ValidateResponse != null ? retObjectEndTrust13ValidateResponse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -442,10 +538,14 @@ public class WSTrustServiceContract extends NetObject  {
 
     public Message EndTrustFeb2005Cancel(IAsyncResult ar) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.threading.AbandonedMutexException, system.collections.generic.KeyNotFoundException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEndTrustFeb2005Cancel = null;
         try {
-            JCObject objEndTrustFeb2005Cancel = (JCObject)classInstance.Invoke("EndTrustFeb2005Cancel", ar == null ? null : ar.getJCOInstance());
+            retObjectEndTrustFeb2005Cancel = classInstance.Invoke("EndTrustFeb2005Cancel", ar == null ? null : ar.getJCOInstance());
+            JCObject objEndTrustFeb2005Cancel = (JCObject)retObjectEndTrustFeb2005Cancel;
             return new Message(objEndTrustFeb2005Cancel);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEndTrustFeb2005Cancel != null ? retObjectEndTrustFeb2005Cancel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -453,10 +553,14 @@ public class WSTrustServiceContract extends NetObject  {
 
     public Message EndTrustFeb2005CancelResponse(IAsyncResult ar) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.threading.AbandonedMutexException, system.collections.generic.KeyNotFoundException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEndTrustFeb2005CancelResponse = null;
         try {
-            JCObject objEndTrustFeb2005CancelResponse = (JCObject)classInstance.Invoke("EndTrustFeb2005CancelResponse", ar == null ? null : ar.getJCOInstance());
+            retObjectEndTrustFeb2005CancelResponse = classInstance.Invoke("EndTrustFeb2005CancelResponse", ar == null ? null : ar.getJCOInstance());
+            JCObject objEndTrustFeb2005CancelResponse = (JCObject)retObjectEndTrustFeb2005CancelResponse;
             return new Message(objEndTrustFeb2005CancelResponse);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEndTrustFeb2005CancelResponse != null ? retObjectEndTrustFeb2005CancelResponse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -464,10 +568,14 @@ public class WSTrustServiceContract extends NetObject  {
 
     public Message EndTrustFeb2005Issue(IAsyncResult ar) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.threading.AbandonedMutexException, system.collections.generic.KeyNotFoundException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEndTrustFeb2005Issue = null;
         try {
-            JCObject objEndTrustFeb2005Issue = (JCObject)classInstance.Invoke("EndTrustFeb2005Issue", ar == null ? null : ar.getJCOInstance());
+            retObjectEndTrustFeb2005Issue = classInstance.Invoke("EndTrustFeb2005Issue", ar == null ? null : ar.getJCOInstance());
+            JCObject objEndTrustFeb2005Issue = (JCObject)retObjectEndTrustFeb2005Issue;
             return new Message(objEndTrustFeb2005Issue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEndTrustFeb2005Issue != null ? retObjectEndTrustFeb2005Issue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -475,10 +583,14 @@ public class WSTrustServiceContract extends NetObject  {
 
     public Message EndTrustFeb2005IssueResponse(IAsyncResult ar) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.threading.AbandonedMutexException, system.collections.generic.KeyNotFoundException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEndTrustFeb2005IssueResponse = null;
         try {
-            JCObject objEndTrustFeb2005IssueResponse = (JCObject)classInstance.Invoke("EndTrustFeb2005IssueResponse", ar == null ? null : ar.getJCOInstance());
+            retObjectEndTrustFeb2005IssueResponse = classInstance.Invoke("EndTrustFeb2005IssueResponse", ar == null ? null : ar.getJCOInstance());
+            JCObject objEndTrustFeb2005IssueResponse = (JCObject)retObjectEndTrustFeb2005IssueResponse;
             return new Message(objEndTrustFeb2005IssueResponse);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEndTrustFeb2005IssueResponse != null ? retObjectEndTrustFeb2005IssueResponse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -486,10 +598,14 @@ public class WSTrustServiceContract extends NetObject  {
 
     public Message EndTrustFeb2005Renew(IAsyncResult ar) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.threading.AbandonedMutexException, system.collections.generic.KeyNotFoundException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEndTrustFeb2005Renew = null;
         try {
-            JCObject objEndTrustFeb2005Renew = (JCObject)classInstance.Invoke("EndTrustFeb2005Renew", ar == null ? null : ar.getJCOInstance());
+            retObjectEndTrustFeb2005Renew = classInstance.Invoke("EndTrustFeb2005Renew", ar == null ? null : ar.getJCOInstance());
+            JCObject objEndTrustFeb2005Renew = (JCObject)retObjectEndTrustFeb2005Renew;
             return new Message(objEndTrustFeb2005Renew);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEndTrustFeb2005Renew != null ? retObjectEndTrustFeb2005Renew.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -497,10 +613,14 @@ public class WSTrustServiceContract extends NetObject  {
 
     public Message EndTrustFeb2005RenewResponse(IAsyncResult ar) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.threading.AbandonedMutexException, system.collections.generic.KeyNotFoundException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEndTrustFeb2005RenewResponse = null;
         try {
-            JCObject objEndTrustFeb2005RenewResponse = (JCObject)classInstance.Invoke("EndTrustFeb2005RenewResponse", ar == null ? null : ar.getJCOInstance());
+            retObjectEndTrustFeb2005RenewResponse = classInstance.Invoke("EndTrustFeb2005RenewResponse", ar == null ? null : ar.getJCOInstance());
+            JCObject objEndTrustFeb2005RenewResponse = (JCObject)retObjectEndTrustFeb2005RenewResponse;
             return new Message(objEndTrustFeb2005RenewResponse);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEndTrustFeb2005RenewResponse != null ? retObjectEndTrustFeb2005RenewResponse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -508,10 +628,14 @@ public class WSTrustServiceContract extends NetObject  {
 
     public Message EndTrustFeb2005Validate(IAsyncResult ar) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.threading.AbandonedMutexException, system.collections.generic.KeyNotFoundException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEndTrustFeb2005Validate = null;
         try {
-            JCObject objEndTrustFeb2005Validate = (JCObject)classInstance.Invoke("EndTrustFeb2005Validate", ar == null ? null : ar.getJCOInstance());
+            retObjectEndTrustFeb2005Validate = classInstance.Invoke("EndTrustFeb2005Validate", ar == null ? null : ar.getJCOInstance());
+            JCObject objEndTrustFeb2005Validate = (JCObject)retObjectEndTrustFeb2005Validate;
             return new Message(objEndTrustFeb2005Validate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEndTrustFeb2005Validate != null ? retObjectEndTrustFeb2005Validate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -519,10 +643,14 @@ public class WSTrustServiceContract extends NetObject  {
 
     public Message EndTrustFeb2005ValidateResponse(IAsyncResult ar) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.threading.AbandonedMutexException, system.collections.generic.KeyNotFoundException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEndTrustFeb2005ValidateResponse = null;
         try {
-            JCObject objEndTrustFeb2005ValidateResponse = (JCObject)classInstance.Invoke("EndTrustFeb2005ValidateResponse", ar == null ? null : ar.getJCOInstance());
+            retObjectEndTrustFeb2005ValidateResponse = classInstance.Invoke("EndTrustFeb2005ValidateResponse", ar == null ? null : ar.getJCOInstance());
+            JCObject objEndTrustFeb2005ValidateResponse = (JCObject)retObjectEndTrustFeb2005ValidateResponse;
             return new Message(objEndTrustFeb2005ValidateResponse);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEndTrustFeb2005ValidateResponse != null ? retObjectEndTrustFeb2005ValidateResponse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -530,10 +658,14 @@ public class WSTrustServiceContract extends NetObject  {
 
     public Message ProcessTrust13Cancel(Message message) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProcessTrust13Cancel = null;
         try {
-            JCObject objProcessTrust13Cancel = (JCObject)classInstance.Invoke("ProcessTrust13Cancel", message == null ? null : message.getJCOInstance());
+            retObjectProcessTrust13Cancel = classInstance.Invoke("ProcessTrust13Cancel", message == null ? null : message.getJCOInstance());
+            JCObject objProcessTrust13Cancel = (JCObject)retObjectProcessTrust13Cancel;
             return new Message(objProcessTrust13Cancel);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectProcessTrust13Cancel != null ? retObjectProcessTrust13Cancel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -541,10 +673,14 @@ public class WSTrustServiceContract extends NetObject  {
 
     public Message ProcessTrust13CancelResponse(Message message) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProcessTrust13CancelResponse = null;
         try {
-            JCObject objProcessTrust13CancelResponse = (JCObject)classInstance.Invoke("ProcessTrust13CancelResponse", message == null ? null : message.getJCOInstance());
+            retObjectProcessTrust13CancelResponse = classInstance.Invoke("ProcessTrust13CancelResponse", message == null ? null : message.getJCOInstance());
+            JCObject objProcessTrust13CancelResponse = (JCObject)retObjectProcessTrust13CancelResponse;
             return new Message(objProcessTrust13CancelResponse);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectProcessTrust13CancelResponse != null ? retObjectProcessTrust13CancelResponse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -552,10 +688,14 @@ public class WSTrustServiceContract extends NetObject  {
 
     public Message ProcessTrust13Issue(Message message) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProcessTrust13Issue = null;
         try {
-            JCObject objProcessTrust13Issue = (JCObject)classInstance.Invoke("ProcessTrust13Issue", message == null ? null : message.getJCOInstance());
+            retObjectProcessTrust13Issue = classInstance.Invoke("ProcessTrust13Issue", message == null ? null : message.getJCOInstance());
+            JCObject objProcessTrust13Issue = (JCObject)retObjectProcessTrust13Issue;
             return new Message(objProcessTrust13Issue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectProcessTrust13Issue != null ? retObjectProcessTrust13Issue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -563,10 +703,14 @@ public class WSTrustServiceContract extends NetObject  {
 
     public Message ProcessTrust13IssueResponse(Message message) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProcessTrust13IssueResponse = null;
         try {
-            JCObject objProcessTrust13IssueResponse = (JCObject)classInstance.Invoke("ProcessTrust13IssueResponse", message == null ? null : message.getJCOInstance());
+            retObjectProcessTrust13IssueResponse = classInstance.Invoke("ProcessTrust13IssueResponse", message == null ? null : message.getJCOInstance());
+            JCObject objProcessTrust13IssueResponse = (JCObject)retObjectProcessTrust13IssueResponse;
             return new Message(objProcessTrust13IssueResponse);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectProcessTrust13IssueResponse != null ? retObjectProcessTrust13IssueResponse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -574,10 +718,14 @@ public class WSTrustServiceContract extends NetObject  {
 
     public Message ProcessTrust13Renew(Message message) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProcessTrust13Renew = null;
         try {
-            JCObject objProcessTrust13Renew = (JCObject)classInstance.Invoke("ProcessTrust13Renew", message == null ? null : message.getJCOInstance());
+            retObjectProcessTrust13Renew = classInstance.Invoke("ProcessTrust13Renew", message == null ? null : message.getJCOInstance());
+            JCObject objProcessTrust13Renew = (JCObject)retObjectProcessTrust13Renew;
             return new Message(objProcessTrust13Renew);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectProcessTrust13Renew != null ? retObjectProcessTrust13Renew.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -585,10 +733,14 @@ public class WSTrustServiceContract extends NetObject  {
 
     public Message ProcessTrust13RenewResponse(Message message) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProcessTrust13RenewResponse = null;
         try {
-            JCObject objProcessTrust13RenewResponse = (JCObject)classInstance.Invoke("ProcessTrust13RenewResponse", message == null ? null : message.getJCOInstance());
+            retObjectProcessTrust13RenewResponse = classInstance.Invoke("ProcessTrust13RenewResponse", message == null ? null : message.getJCOInstance());
+            JCObject objProcessTrust13RenewResponse = (JCObject)retObjectProcessTrust13RenewResponse;
             return new Message(objProcessTrust13RenewResponse);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectProcessTrust13RenewResponse != null ? retObjectProcessTrust13RenewResponse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -596,10 +748,14 @@ public class WSTrustServiceContract extends NetObject  {
 
     public Message ProcessTrust13Validate(Message message) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProcessTrust13Validate = null;
         try {
-            JCObject objProcessTrust13Validate = (JCObject)classInstance.Invoke("ProcessTrust13Validate", message == null ? null : message.getJCOInstance());
+            retObjectProcessTrust13Validate = classInstance.Invoke("ProcessTrust13Validate", message == null ? null : message.getJCOInstance());
+            JCObject objProcessTrust13Validate = (JCObject)retObjectProcessTrust13Validate;
             return new Message(objProcessTrust13Validate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectProcessTrust13Validate != null ? retObjectProcessTrust13Validate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -607,10 +763,14 @@ public class WSTrustServiceContract extends NetObject  {
 
     public Message ProcessTrust13ValidateResponse(Message message) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProcessTrust13ValidateResponse = null;
         try {
-            JCObject objProcessTrust13ValidateResponse = (JCObject)classInstance.Invoke("ProcessTrust13ValidateResponse", message == null ? null : message.getJCOInstance());
+            retObjectProcessTrust13ValidateResponse = classInstance.Invoke("ProcessTrust13ValidateResponse", message == null ? null : message.getJCOInstance());
+            JCObject objProcessTrust13ValidateResponse = (JCObject)retObjectProcessTrust13ValidateResponse;
             return new Message(objProcessTrust13ValidateResponse);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectProcessTrust13ValidateResponse != null ? retObjectProcessTrust13ValidateResponse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -618,10 +778,14 @@ public class WSTrustServiceContract extends NetObject  {
 
     public Message ProcessTrustFeb2005Cancel(Message message) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProcessTrustFeb2005Cancel = null;
         try {
-            JCObject objProcessTrustFeb2005Cancel = (JCObject)classInstance.Invoke("ProcessTrustFeb2005Cancel", message == null ? null : message.getJCOInstance());
+            retObjectProcessTrustFeb2005Cancel = classInstance.Invoke("ProcessTrustFeb2005Cancel", message == null ? null : message.getJCOInstance());
+            JCObject objProcessTrustFeb2005Cancel = (JCObject)retObjectProcessTrustFeb2005Cancel;
             return new Message(objProcessTrustFeb2005Cancel);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectProcessTrustFeb2005Cancel != null ? retObjectProcessTrustFeb2005Cancel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -629,10 +793,14 @@ public class WSTrustServiceContract extends NetObject  {
 
     public Message ProcessTrustFeb2005CancelResponse(Message message) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProcessTrustFeb2005CancelResponse = null;
         try {
-            JCObject objProcessTrustFeb2005CancelResponse = (JCObject)classInstance.Invoke("ProcessTrustFeb2005CancelResponse", message == null ? null : message.getJCOInstance());
+            retObjectProcessTrustFeb2005CancelResponse = classInstance.Invoke("ProcessTrustFeb2005CancelResponse", message == null ? null : message.getJCOInstance());
+            JCObject objProcessTrustFeb2005CancelResponse = (JCObject)retObjectProcessTrustFeb2005CancelResponse;
             return new Message(objProcessTrustFeb2005CancelResponse);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectProcessTrustFeb2005CancelResponse != null ? retObjectProcessTrustFeb2005CancelResponse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -640,10 +808,14 @@ public class WSTrustServiceContract extends NetObject  {
 
     public Message ProcessTrustFeb2005Issue(Message message) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProcessTrustFeb2005Issue = null;
         try {
-            JCObject objProcessTrustFeb2005Issue = (JCObject)classInstance.Invoke("ProcessTrustFeb2005Issue", message == null ? null : message.getJCOInstance());
+            retObjectProcessTrustFeb2005Issue = classInstance.Invoke("ProcessTrustFeb2005Issue", message == null ? null : message.getJCOInstance());
+            JCObject objProcessTrustFeb2005Issue = (JCObject)retObjectProcessTrustFeb2005Issue;
             return new Message(objProcessTrustFeb2005Issue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectProcessTrustFeb2005Issue != null ? retObjectProcessTrustFeb2005Issue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -651,10 +823,14 @@ public class WSTrustServiceContract extends NetObject  {
 
     public Message ProcessTrustFeb2005IssueResponse(Message message) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProcessTrustFeb2005IssueResponse = null;
         try {
-            JCObject objProcessTrustFeb2005IssueResponse = (JCObject)classInstance.Invoke("ProcessTrustFeb2005IssueResponse", message == null ? null : message.getJCOInstance());
+            retObjectProcessTrustFeb2005IssueResponse = classInstance.Invoke("ProcessTrustFeb2005IssueResponse", message == null ? null : message.getJCOInstance());
+            JCObject objProcessTrustFeb2005IssueResponse = (JCObject)retObjectProcessTrustFeb2005IssueResponse;
             return new Message(objProcessTrustFeb2005IssueResponse);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectProcessTrustFeb2005IssueResponse != null ? retObjectProcessTrustFeb2005IssueResponse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -662,10 +838,14 @@ public class WSTrustServiceContract extends NetObject  {
 
     public Message ProcessTrustFeb2005Renew(Message message) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProcessTrustFeb2005Renew = null;
         try {
-            JCObject objProcessTrustFeb2005Renew = (JCObject)classInstance.Invoke("ProcessTrustFeb2005Renew", message == null ? null : message.getJCOInstance());
+            retObjectProcessTrustFeb2005Renew = classInstance.Invoke("ProcessTrustFeb2005Renew", message == null ? null : message.getJCOInstance());
+            JCObject objProcessTrustFeb2005Renew = (JCObject)retObjectProcessTrustFeb2005Renew;
             return new Message(objProcessTrustFeb2005Renew);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectProcessTrustFeb2005Renew != null ? retObjectProcessTrustFeb2005Renew.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -673,10 +853,14 @@ public class WSTrustServiceContract extends NetObject  {
 
     public Message ProcessTrustFeb2005RenewResponse(Message message) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProcessTrustFeb2005RenewResponse = null;
         try {
-            JCObject objProcessTrustFeb2005RenewResponse = (JCObject)classInstance.Invoke("ProcessTrustFeb2005RenewResponse", message == null ? null : message.getJCOInstance());
+            retObjectProcessTrustFeb2005RenewResponse = classInstance.Invoke("ProcessTrustFeb2005RenewResponse", message == null ? null : message.getJCOInstance());
+            JCObject objProcessTrustFeb2005RenewResponse = (JCObject)retObjectProcessTrustFeb2005RenewResponse;
             return new Message(objProcessTrustFeb2005RenewResponse);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectProcessTrustFeb2005RenewResponse != null ? retObjectProcessTrustFeb2005RenewResponse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -684,10 +868,14 @@ public class WSTrustServiceContract extends NetObject  {
 
     public Message ProcessTrustFeb2005Validate(Message message) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProcessTrustFeb2005Validate = null;
         try {
-            JCObject objProcessTrustFeb2005Validate = (JCObject)classInstance.Invoke("ProcessTrustFeb2005Validate", message == null ? null : message.getJCOInstance());
+            retObjectProcessTrustFeb2005Validate = classInstance.Invoke("ProcessTrustFeb2005Validate", message == null ? null : message.getJCOInstance());
+            JCObject objProcessTrustFeb2005Validate = (JCObject)retObjectProcessTrustFeb2005Validate;
             return new Message(objProcessTrustFeb2005Validate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectProcessTrustFeb2005Validate != null ? retObjectProcessTrustFeb2005Validate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -695,10 +883,14 @@ public class WSTrustServiceContract extends NetObject  {
 
     public Message ProcessTrustFeb2005ValidateResponse(Message message) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProcessTrustFeb2005ValidateResponse = null;
         try {
-            JCObject objProcessTrustFeb2005ValidateResponse = (JCObject)classInstance.Invoke("ProcessTrustFeb2005ValidateResponse", message == null ? null : message.getJCOInstance());
+            retObjectProcessTrustFeb2005ValidateResponse = classInstance.Invoke("ProcessTrustFeb2005ValidateResponse", message == null ? null : message.getJCOInstance());
+            JCObject objProcessTrustFeb2005ValidateResponse = (JCObject)retObjectProcessTrustFeb2005ValidateResponse;
             return new Message(objProcessTrustFeb2005ValidateResponse);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectProcessTrustFeb2005ValidateResponse != null ? retObjectProcessTrustFeb2005ValidateResponse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -706,7 +898,7 @@ public class WSTrustServiceContract extends NetObject  {
 
     public void AddBindingParameters(ContractDescription contractDescription, ServiceEndpoint endpoint, BindingParameterCollection bindingParameters) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddBindingParameters", contractDescription == null ? null : contractDescription.getJCOInstance(), endpoint == null ? null : endpoint.getJCOInstance(), bindingParameters == null ? null : bindingParameters.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -716,7 +908,7 @@ public class WSTrustServiceContract extends NetObject  {
 
     public void ApplyClientBehavior(ContractDescription contractDescription, ServiceEndpoint endpoint, ClientRuntime clientRuntime) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ApplyClientBehavior", contractDescription == null ? null : contractDescription.getJCOInstance(), endpoint == null ? null : endpoint.getJCOInstance(), clientRuntime == null ? null : clientRuntime.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -726,7 +918,7 @@ public class WSTrustServiceContract extends NetObject  {
 
     public void ApplyDispatchBehavior(ContractDescription contractDescription, ServiceEndpoint endpoint, DispatchRuntime dispatchRuntime) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ApplyDispatchBehavior", contractDescription == null ? null : contractDescription.getJCOInstance(), endpoint == null ? null : endpoint.getJCOInstance(), dispatchRuntime == null ? null : dispatchRuntime.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -736,7 +928,7 @@ public class WSTrustServiceContract extends NetObject  {
 
     public void ExportContract(WsdlExporter exporter, WsdlContractConversionContext context) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ExportContract", exporter == null ? null : exporter.getJCOInstance(), context == null ? null : context.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -746,7 +938,7 @@ public class WSTrustServiceContract extends NetObject  {
 
     public void ExportEndpoint(WsdlExporter exporter, WsdlEndpointConversionContext context) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.UriFormatException, system.xml.schema.XmlSchemaException, system.NullReferenceException, system.RankException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ExportEndpoint", exporter == null ? null : exporter.getJCOInstance(), context == null ? null : context.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -756,7 +948,7 @@ public class WSTrustServiceContract extends NetObject  {
 
     public void Validate(ContractDescription contractDescription, ServiceEndpoint endpoint) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Validate", contractDescription == null ? null : contractDescription.getJCOInstance(), endpoint == null ? null : endpoint.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -770,10 +962,14 @@ public class WSTrustServiceContract extends NetObject  {
     
     public SecurityTokenServiceConfiguration getSecurityTokenServiceConfiguration() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSecurityTokenServiceConfiguration = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SecurityTokenServiceConfiguration");
+            retObjectSecurityTokenServiceConfiguration = classInstance.Get("SecurityTokenServiceConfiguration");
+            JCObject val = (JCObject)retObjectSecurityTokenServiceConfiguration;
             return new SecurityTokenServiceConfiguration(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSecurityTokenServiceConfiguration != null ? retObjectSecurityTokenServiceConfiguration.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

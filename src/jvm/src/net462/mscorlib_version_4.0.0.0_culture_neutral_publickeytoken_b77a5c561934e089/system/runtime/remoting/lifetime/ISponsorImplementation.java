@@ -145,10 +145,14 @@ public class ISponsorImplementation extends NetObject implements ISponsor {
     
     public TimeSpan Renewal(ILease lease) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRenewal = null;
         try {
-            JCObject objRenewal = (JCObject)classInstance.Invoke("Renewal", lease == null ? null : lease.getJCOInstance());
+            retObjectRenewal = classInstance.Invoke("Renewal", lease == null ? null : lease.getJCOInstance());
+            JCObject objRenewal = (JCObject)retObjectRenewal;
             return new TimeSpan(objRenewal);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRenewal != null ? retObjectRenewal.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

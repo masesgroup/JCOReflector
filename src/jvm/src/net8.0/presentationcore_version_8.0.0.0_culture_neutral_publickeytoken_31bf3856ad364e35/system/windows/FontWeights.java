@@ -158,10 +158,14 @@ public class FontWeights extends NetObject  {
     
     public static FontWeight getBlack() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectBlack = null;
         try {
-            JCObject val = (JCObject)classType.Get("Black");
+            retObjectBlack = classType.Get("Black");
+            JCObject val = (JCObject)retObjectBlack;
             return new FontWeight(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBlack != null ? retObjectBlack.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,10 +173,14 @@ public class FontWeights extends NetObject  {
 
     public static FontWeight getBold() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectBold = null;
         try {
-            JCObject val = (JCObject)classType.Get("Bold");
+            retObjectBold = classType.Get("Bold");
+            JCObject val = (JCObject)retObjectBold;
             return new FontWeight(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBold != null ? retObjectBold.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,10 +188,14 @@ public class FontWeights extends NetObject  {
 
     public static FontWeight getDemiBold() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDemiBold = null;
         try {
-            JCObject val = (JCObject)classType.Get("DemiBold");
+            retObjectDemiBold = classType.Get("DemiBold");
+            JCObject val = (JCObject)retObjectDemiBold;
             return new FontWeight(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDemiBold != null ? retObjectDemiBold.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,10 +203,14 @@ public class FontWeights extends NetObject  {
 
     public static FontWeight getExtraBlack() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectExtraBlack = null;
         try {
-            JCObject val = (JCObject)classType.Get("ExtraBlack");
+            retObjectExtraBlack = classType.Get("ExtraBlack");
+            JCObject val = (JCObject)retObjectExtraBlack;
             return new FontWeight(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExtraBlack != null ? retObjectExtraBlack.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,10 +218,14 @@ public class FontWeights extends NetObject  {
 
     public static FontWeight getExtraBold() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectExtraBold = null;
         try {
-            JCObject val = (JCObject)classType.Get("ExtraBold");
+            retObjectExtraBold = classType.Get("ExtraBold");
+            JCObject val = (JCObject)retObjectExtraBold;
             return new FontWeight(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExtraBold != null ? retObjectExtraBold.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,10 +233,14 @@ public class FontWeights extends NetObject  {
 
     public static FontWeight getExtraLight() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectExtraLight = null;
         try {
-            JCObject val = (JCObject)classType.Get("ExtraLight");
+            retObjectExtraLight = classType.Get("ExtraLight");
+            JCObject val = (JCObject)retObjectExtraLight;
             return new FontWeight(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExtraLight != null ? retObjectExtraLight.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -224,10 +248,14 @@ public class FontWeights extends NetObject  {
 
     public static FontWeight getHeavy() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectHeavy = null;
         try {
-            JCObject val = (JCObject)classType.Get("Heavy");
+            retObjectHeavy = classType.Get("Heavy");
+            JCObject val = (JCObject)retObjectHeavy;
             return new FontWeight(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHeavy != null ? retObjectHeavy.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -235,10 +263,14 @@ public class FontWeights extends NetObject  {
 
     public static FontWeight getLight() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLight = null;
         try {
-            JCObject val = (JCObject)classType.Get("Light");
+            retObjectLight = classType.Get("Light");
+            JCObject val = (JCObject)retObjectLight;
             return new FontWeight(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLight != null ? retObjectLight.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -246,10 +278,14 @@ public class FontWeights extends NetObject  {
 
     public static FontWeight getMedium() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMedium = null;
         try {
-            JCObject val = (JCObject)classType.Get("Medium");
+            retObjectMedium = classType.Get("Medium");
+            JCObject val = (JCObject)retObjectMedium;
             return new FontWeight(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMedium != null ? retObjectMedium.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -257,10 +293,14 @@ public class FontWeights extends NetObject  {
 
     public static FontWeight getNormal() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectNormal = null;
         try {
-            JCObject val = (JCObject)classType.Get("Normal");
+            retObjectNormal = classType.Get("Normal");
+            JCObject val = (JCObject)retObjectNormal;
             return new FontWeight(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNormal != null ? retObjectNormal.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -268,10 +308,14 @@ public class FontWeights extends NetObject  {
 
     public static FontWeight getRegular() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectRegular = null;
         try {
-            JCObject val = (JCObject)classType.Get("Regular");
+            retObjectRegular = classType.Get("Regular");
+            JCObject val = (JCObject)retObjectRegular;
             return new FontWeight(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRegular != null ? retObjectRegular.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -279,10 +323,14 @@ public class FontWeights extends NetObject  {
 
     public static FontWeight getSemiBold() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSemiBold = null;
         try {
-            JCObject val = (JCObject)classType.Get("SemiBold");
+            retObjectSemiBold = classType.Get("SemiBold");
+            JCObject val = (JCObject)retObjectSemiBold;
             return new FontWeight(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSemiBold != null ? retObjectSemiBold.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -290,10 +338,14 @@ public class FontWeights extends NetObject  {
 
     public static FontWeight getThin() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectThin = null;
         try {
-            JCObject val = (JCObject)classType.Get("Thin");
+            retObjectThin = classType.Get("Thin");
+            JCObject val = (JCObject)retObjectThin;
             return new FontWeight(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectThin != null ? retObjectThin.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -301,10 +353,14 @@ public class FontWeights extends NetObject  {
 
     public static FontWeight getUltraBlack() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectUltraBlack = null;
         try {
-            JCObject val = (JCObject)classType.Get("UltraBlack");
+            retObjectUltraBlack = classType.Get("UltraBlack");
+            JCObject val = (JCObject)retObjectUltraBlack;
             return new FontWeight(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUltraBlack != null ? retObjectUltraBlack.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -312,10 +368,14 @@ public class FontWeights extends NetObject  {
 
     public static FontWeight getUltraBold() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectUltraBold = null;
         try {
-            JCObject val = (JCObject)classType.Get("UltraBold");
+            retObjectUltraBold = classType.Get("UltraBold");
+            JCObject val = (JCObject)retObjectUltraBold;
             return new FontWeight(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUltraBold != null ? retObjectUltraBold.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -323,10 +383,14 @@ public class FontWeights extends NetObject  {
 
     public static FontWeight getUltraLight() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectUltraLight = null;
         try {
-            JCObject val = (JCObject)classType.Get("UltraLight");
+            retObjectUltraLight = classType.Get("UltraLight");
+            JCObject val = (JCObject)retObjectUltraLight;
             return new FontWeight(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUltraLight != null ? retObjectUltraLight.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

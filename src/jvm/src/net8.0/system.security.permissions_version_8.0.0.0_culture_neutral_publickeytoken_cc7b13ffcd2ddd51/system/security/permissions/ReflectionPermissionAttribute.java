@@ -170,10 +170,14 @@ public class ReflectionPermissionAttribute extends CodeAccessSecurityAttribute  
     
     public IPermission CreatePermission() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreatePermission = null;
         try {
-            JCObject objCreatePermission = (JCObject)classInstance.Invoke("CreatePermission");
+            retObjectCreatePermission = classInstance.Invoke("CreatePermission");
+            JCObject objCreatePermission = (JCObject)retObjectCreatePermission;
             return new IPermissionImplementation(objCreatePermission);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreatePermission != null ? retObjectCreatePermission.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -185,9 +189,13 @@ public class ReflectionPermissionAttribute extends CodeAccessSecurityAttribute  
     
     public boolean getMemberAccess() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMemberAccess = null;
         try {
-            return (boolean)classInstance.Get("MemberAccess");
+            retObjectMemberAccess = classInstance.Get("MemberAccess");
+            return (boolean)retObjectMemberAccess;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectMemberAccess != null ? retObjectMemberAccess.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,7 +203,7 @@ public class ReflectionPermissionAttribute extends CodeAccessSecurityAttribute  
 
     public void setMemberAccess(boolean MemberAccess) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MemberAccess", MemberAccess);
         } catch (JCNativeException jcne) {
@@ -205,9 +213,13 @@ public class ReflectionPermissionAttribute extends CodeAccessSecurityAttribute  
 
     public boolean getReflectionEmit() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReflectionEmit = null;
         try {
-            return (boolean)classInstance.Get("ReflectionEmit");
+            retObjectReflectionEmit = classInstance.Get("ReflectionEmit");
+            return (boolean)retObjectReflectionEmit;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectReflectionEmit != null ? retObjectReflectionEmit.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -215,7 +227,7 @@ public class ReflectionPermissionAttribute extends CodeAccessSecurityAttribute  
 
     public void setReflectionEmit(boolean ReflectionEmit) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ReflectionEmit", ReflectionEmit);
         } catch (JCNativeException jcne) {
@@ -225,9 +237,13 @@ public class ReflectionPermissionAttribute extends CodeAccessSecurityAttribute  
 
     public boolean getRestrictedMemberAccess() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRestrictedMemberAccess = null;
         try {
-            return (boolean)classInstance.Get("RestrictedMemberAccess");
+            retObjectRestrictedMemberAccess = classInstance.Get("RestrictedMemberAccess");
+            return (boolean)retObjectRestrictedMemberAccess;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectRestrictedMemberAccess != null ? retObjectRestrictedMemberAccess.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -235,7 +251,7 @@ public class ReflectionPermissionAttribute extends CodeAccessSecurityAttribute  
 
     public void setRestrictedMemberAccess(boolean RestrictedMemberAccess) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RestrictedMemberAccess", RestrictedMemberAccess);
         } catch (JCNativeException jcne) {
@@ -245,9 +261,13 @@ public class ReflectionPermissionAttribute extends CodeAccessSecurityAttribute  
 
     public boolean getTypeInformation() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTypeInformation = null;
         try {
-            return (boolean)classInstance.Get("TypeInformation");
+            retObjectTypeInformation = classInstance.Get("TypeInformation");
+            return (boolean)retObjectTypeInformation;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectTypeInformation != null ? retObjectTypeInformation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -255,7 +275,7 @@ public class ReflectionPermissionAttribute extends CodeAccessSecurityAttribute  
 
     public void setTypeInformation(boolean TypeInformation) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TypeInformation", TypeInformation);
         } catch (JCNativeException jcne) {
@@ -265,10 +285,14 @@ public class ReflectionPermissionAttribute extends CodeAccessSecurityAttribute  
 
     public ReflectionPermissionFlag getFlags() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFlags = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Flags");
+            retObjectFlags = classInstance.Get("Flags");
+            JCObject val = (JCObject)retObjectFlags;
             return new ReflectionPermissionFlag(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFlags != null ? retObjectFlags.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -276,7 +300,7 @@ public class ReflectionPermissionAttribute extends CodeAccessSecurityAttribute  
 
     public void setFlags(ReflectionPermissionFlag Flags) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Flags", Flags == null ? null : Flags.getJCOInstance());
         } catch (JCNativeException jcne) {

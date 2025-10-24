@@ -171,9 +171,13 @@ public class InputLanguageChangingEventArgs extends InputLanguageEventArgs  {
     
     public boolean getRejected() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRejected = null;
         try {
-            return (boolean)classInstance.Get("Rejected");
+            retObjectRejected = classInstance.Get("Rejected");
+            return (boolean)retObjectRejected;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectRejected != null ? retObjectRejected.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,7 +185,7 @@ public class InputLanguageChangingEventArgs extends InputLanguageEventArgs  {
 
     public void setRejected(boolean Rejected) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Rejected", Rejected);
         } catch (JCNativeException jcne) {

@@ -158,9 +158,20 @@ public class ChannelBinding extends SafeHandleZeroOrMinusOneIsInvalid  {
     
     public int getSize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSize = null;
         try {
-            return (int)classInstance.Get("Size");
+            retObjectSize = classInstance.Get("Size");
+            return (int)retObjectSize;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSize_ToString = retObjectSize == null ? "null" : retObjectSize.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectSizeNumber = (java.lang.Number)retObjectSize;
+                return retObjectSizeNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectSize != null ? retObjectSize.getClass() : "null", retObjectSize_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

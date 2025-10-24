@@ -165,9 +165,13 @@ public class CompositeActivityDesigner extends ActivityDesigner  {
     
     public boolean IsContainedDesignerVisible(ActivityDesigner containedDesigner) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsContainedDesignerVisible = null;
         try {
-            return (boolean)classInstance.Invoke("IsContainedDesignerVisible", containedDesigner == null ? null : containedDesigner.getJCOInstance());
+            retObjectIsContainedDesignerVisible = classInstance.Invoke("IsContainedDesignerVisible", containedDesigner == null ? null : containedDesigner.getJCOInstance());
+            return (boolean)retObjectIsContainedDesignerVisible;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsContainedDesignerVisible != null ? retObjectIsContainedDesignerVisible.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -175,10 +179,14 @@ public class CompositeActivityDesigner extends ActivityDesigner  {
 
     public NetObject GetNextSelectableObject(NetObject current, DesignerNavigationDirection direction) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetNextSelectableObject = null;
         try {
-            JCObject objGetNextSelectableObject = (JCObject)classInstance.Invoke("GetNextSelectableObject", current == null ? null : current.getJCOInstance(), direction == null ? null : direction.getJCOInstance());
+            retObjectGetNextSelectableObject = classInstance.Invoke("GetNextSelectableObject", current == null ? null : current.getJCOInstance(), direction == null ? null : direction.getJCOInstance());
+            JCObject objGetNextSelectableObject = (JCObject)retObjectGetNextSelectableObject;
             return new NetObject(objGetNextSelectableObject);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetNextSelectableObject != null ? retObjectGetNextSelectableObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,10 +194,14 @@ public class CompositeActivityDesigner extends ActivityDesigner  {
 
     public static IDataObject SerializeActivitiesToDataObject(IServiceProvider serviceProvider, Activity[] activities) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.runtime.serialization.SerializationException, system.security.SecurityException, system.reflection.TargetException, system.NullReferenceException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSerializeActivitiesToDataObject = null;
         try {
-            JCObject objSerializeActivitiesToDataObject = (JCObject)classType.Invoke("SerializeActivitiesToDataObject", serviceProvider == null ? null : serviceProvider.getJCOInstance(), toObjectFromArray(activities));
+            retObjectSerializeActivitiesToDataObject = classType.Invoke("SerializeActivitiesToDataObject", serviceProvider == null ? null : serviceProvider.getJCOInstance(), toObjectFromArray(activities));
+            JCObject objSerializeActivitiesToDataObject = (JCObject)retObjectSerializeActivitiesToDataObject;
             return new IDataObjectImplementation(objSerializeActivitiesToDataObject);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSerializeActivitiesToDataObject != null ? retObjectSerializeActivitiesToDataObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,16 +209,20 @@ public class CompositeActivityDesigner extends ActivityDesigner  {
 
     public static Activity[] DeserializeActivitiesFromDataObject(IServiceProvider serviceProvider, IDataObject dataObj) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.runtime.serialization.SerializationException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDeserializeActivitiesFromDataObject = null;
         try {
             ArrayList<Activity> resultingArrayList = new ArrayList<Activity>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("DeserializeActivitiesFromDataObject", serviceProvider == null ? null : serviceProvider.getJCOInstance(), dataObj == null ? null : dataObj.getJCOInstance());
+            retObjectDeserializeActivitiesFromDataObject = classType.Invoke("DeserializeActivitiesFromDataObject", serviceProvider == null ? null : serviceProvider.getJCOInstance(), dataObj == null ? null : dataObj.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectDeserializeActivitiesFromDataObject;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new Activity(resultingObject));
             }
             Activity[] resultingArray = new Activity[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDeserializeActivitiesFromDataObject != null ? retObjectDeserializeActivitiesFromDataObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -214,16 +230,20 @@ public class CompositeActivityDesigner extends ActivityDesigner  {
 
     public static ActivityDesigner[] GetIntersectingDesigners(ActivityDesigner topLevelDesigner, Rectangle rectangle) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetIntersectingDesigners = null;
         try {
             ArrayList<ActivityDesigner> resultingArrayList = new ArrayList<ActivityDesigner>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("GetIntersectingDesigners", topLevelDesigner == null ? null : topLevelDesigner.getJCOInstance(), rectangle == null ? null : rectangle.getJCOInstance());
+            retObjectGetIntersectingDesigners = classType.Invoke("GetIntersectingDesigners", topLevelDesigner == null ? null : topLevelDesigner.getJCOInstance(), rectangle == null ? null : rectangle.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectGetIntersectingDesigners;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ActivityDesigner(resultingObject));
             }
             ActivityDesigner[] resultingArray = new ActivityDesigner[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetIntersectingDesigners != null ? retObjectGetIntersectingDesigners.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -231,10 +251,14 @@ public class CompositeActivityDesigner extends ActivityDesigner  {
 
     public HitTestInfo HitTest(Point point) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotImplementedException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException, system.workflow.componentmodel.serialization.WorkflowMarkupSerializationException, system.NotSupportedException, system.MissingMethodException, system.runtime.interopservices.ExternalException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHitTest = null;
         try {
-            JCObject objHitTest = (JCObject)classInstance.Invoke("HitTest", point == null ? null : point.getJCOInstance());
+            retObjectHitTest = classInstance.Invoke("HitTest", point == null ? null : point.getJCOInstance());
+            JCObject objHitTest = (JCObject)retObjectHitTest;
             return new HitTestInfo(objHitTest);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHitTest != null ? retObjectHitTest.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -242,7 +266,7 @@ public class CompositeActivityDesigner extends ActivityDesigner  {
 
     public void EnsureVisibleContainedDesigner(ActivityDesigner containedDesigner) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.MulticastNotSupportedException, system.ObjectDisposedException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EnsureVisibleContainedDesigner", containedDesigner == null ? null : containedDesigner.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -252,7 +276,7 @@ public class CompositeActivityDesigner extends ActivityDesigner  {
 
     public static void MoveDesigners(ActivityDesigner activityDesigner, boolean moveBack) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.componentmodel.Win32Exception, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("MoveDesigners", activityDesigner == null ? null : activityDesigner.getJCOInstance(), moveBack);
         } catch (JCNativeException jcne) {
@@ -266,9 +290,13 @@ public class CompositeActivityDesigner extends ActivityDesigner  {
     
     public boolean getCanExpandCollapse() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanExpandCollapse = null;
         try {
-            return (boolean)classInstance.Get("CanExpandCollapse");
+            retObjectCanExpandCollapse = classInstance.Get("CanExpandCollapse");
+            return (boolean)retObjectCanExpandCollapse;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCanExpandCollapse != null ? retObjectCanExpandCollapse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -276,9 +304,13 @@ public class CompositeActivityDesigner extends ActivityDesigner  {
 
     public boolean getExpanded() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.MulticastNotSupportedException, system.ObjectDisposedException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExpanded = null;
         try {
-            return (boolean)classInstance.Get("Expanded");
+            retObjectExpanded = classInstance.Get("Expanded");
+            return (boolean)retObjectExpanded;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectExpanded != null ? retObjectExpanded.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -286,7 +318,7 @@ public class CompositeActivityDesigner extends ActivityDesigner  {
 
     public void setExpanded(boolean Expanded) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Expanded", Expanded);
         } catch (JCNativeException jcne) {
@@ -296,9 +328,13 @@ public class CompositeActivityDesigner extends ActivityDesigner  {
 
     public boolean getIsEditable() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsEditable = null;
         try {
-            return (boolean)classInstance.Get("IsEditable");
+            retObjectIsEditable = classInstance.Get("IsEditable");
+            return (boolean)retObjectIsEditable;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsEditable != null ? retObjectIsEditable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -306,10 +342,14 @@ public class CompositeActivityDesigner extends ActivityDesigner  {
 
     public NetObject getFirstSelectableObject() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFirstSelectableObject = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("FirstSelectableObject");
+            retObjectFirstSelectableObject = classInstance.Get("FirstSelectableObject");
+            JCObject val = (JCObject)retObjectFirstSelectableObject;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFirstSelectableObject != null ? retObjectFirstSelectableObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -317,10 +357,14 @@ public class CompositeActivityDesigner extends ActivityDesigner  {
 
     public NetObject getLastSelectableObject() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLastSelectableObject = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("LastSelectableObject");
+            retObjectLastSelectableObject = classInstance.Get("LastSelectableObject");
+            JCObject val = (JCObject)retObjectLastSelectableObject;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLastSelectableObject != null ? retObjectLastSelectableObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

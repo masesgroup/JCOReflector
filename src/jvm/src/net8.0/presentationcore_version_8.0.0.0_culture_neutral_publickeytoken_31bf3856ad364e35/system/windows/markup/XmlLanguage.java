@@ -157,10 +157,14 @@ public class XmlLanguage extends NetObject  {
     
     public CultureInfo GetEquivalentCulture() throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetEquivalentCulture = null;
         try {
-            JCObject objGetEquivalentCulture = (JCObject)classInstance.Invoke("GetEquivalentCulture");
+            retObjectGetEquivalentCulture = classInstance.Invoke("GetEquivalentCulture");
+            JCObject objGetEquivalentCulture = (JCObject)retObjectGetEquivalentCulture;
             return new CultureInfo(objGetEquivalentCulture);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetEquivalentCulture != null ? retObjectGetEquivalentCulture.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -168,10 +172,14 @@ public class XmlLanguage extends NetObject  {
 
     public CultureInfo GetSpecificCulture() throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSpecificCulture = null;
         try {
-            JCObject objGetSpecificCulture = (JCObject)classInstance.Invoke("GetSpecificCulture");
+            retObjectGetSpecificCulture = classInstance.Invoke("GetSpecificCulture");
+            JCObject objGetSpecificCulture = (JCObject)retObjectGetSpecificCulture;
             return new CultureInfo(objGetSpecificCulture);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSpecificCulture != null ? retObjectGetSpecificCulture.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,10 +187,14 @@ public class XmlLanguage extends NetObject  {
 
     public static XmlLanguage GetLanguage(java.lang.String ietfLanguageTag) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetLanguage = null;
         try {
-            JCObject objGetLanguage = (JCObject)classType.Invoke("GetLanguage", ietfLanguageTag);
+            retObjectGetLanguage = classType.Invoke("GetLanguage", ietfLanguageTag);
+            JCObject objGetLanguage = (JCObject)retObjectGetLanguage;
             return new XmlLanguage(objGetLanguage);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetLanguage != null ? retObjectGetLanguage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -194,9 +206,13 @@ public class XmlLanguage extends NetObject  {
     
     public java.lang.String getIetfLanguageTag() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIetfLanguageTag = null;
         try {
-            return (java.lang.String)classInstance.Get("IetfLanguageTag");
+            retObjectIetfLanguageTag = classInstance.Get("IetfLanguageTag");
+            return (java.lang.String)retObjectIetfLanguageTag;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectIetfLanguageTag != null ? retObjectIetfLanguageTag.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -204,10 +220,14 @@ public class XmlLanguage extends NetObject  {
 
     public static XmlLanguage getEmpty() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectEmpty = null;
         try {
-            JCObject val = (JCObject)classType.Get("Empty");
+            retObjectEmpty = classType.Get("Empty");
+            JCObject val = (JCObject)retObjectEmpty;
             return new XmlLanguage(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEmpty != null ? retObjectEmpty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

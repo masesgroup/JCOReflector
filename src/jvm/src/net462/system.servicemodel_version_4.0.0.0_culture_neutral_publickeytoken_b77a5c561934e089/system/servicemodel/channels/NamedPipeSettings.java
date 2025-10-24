@@ -160,10 +160,14 @@ public class NamedPipeSettings extends NetObject  {
     
     public ApplicationContainerSettings getApplicationContainerSettings() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectApplicationContainerSettings = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ApplicationContainerSettings");
+            retObjectApplicationContainerSettings = classInstance.Get("ApplicationContainerSettings");
+            JCObject val = (JCObject)retObjectApplicationContainerSettings;
             return new ApplicationContainerSettings(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectApplicationContainerSettings != null ? retObjectApplicationContainerSettings.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,7 +175,7 @@ public class NamedPipeSettings extends NetObject  {
 
     public void setApplicationContainerSettings(ApplicationContainerSettings ApplicationContainerSettings) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ApplicationContainerSettings", ApplicationContainerSettings == null ? null : ApplicationContainerSettings.getJCOInstance());
         } catch (JCNativeException jcne) {

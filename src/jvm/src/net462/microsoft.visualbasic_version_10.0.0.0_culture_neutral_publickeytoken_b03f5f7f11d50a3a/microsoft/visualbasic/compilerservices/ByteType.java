@@ -155,9 +155,20 @@ public class ByteType extends NetObject  {
     
     public static byte FromObject(NetObject Value) throws Throwable, system.OverflowException, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotSupportedException, system.InvalidOperationException, system.NullReferenceException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.InvalidCastException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFromObject = null;
         try {
-            return (byte)classType.Invoke("FromObject", Value == null ? null : Value.getJCOInstance());
+            retObjectFromObject = classType.Invoke("FromObject", Value == null ? null : Value.getJCOInstance());
+            return (byte)retObjectFromObject;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectFromObject_ToString = retObjectFromObject == null ? "null" : retObjectFromObject.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectFromObjectNumber = (java.lang.Number)retObjectFromObject;
+                return retObjectFromObjectNumber.byteValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into byte and, as fallback solution, into java.lang.Number", retObjectFromObject != null ? retObjectFromObject.getClass() : "null", retObjectFromObject_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -165,9 +176,20 @@ public class ByteType extends NetObject  {
 
     public static byte FromString(java.lang.String Value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.NullReferenceException, system.OverflowException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.InvalidCastException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFromString = null;
         try {
-            return (byte)classType.Invoke("FromString", Value);
+            retObjectFromString = classType.Invoke("FromString", Value);
+            return (byte)retObjectFromString;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectFromString_ToString = retObjectFromString == null ? "null" : retObjectFromString.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectFromStringNumber = (java.lang.Number)retObjectFromString;
+                return retObjectFromStringNumber.byteValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into byte and, as fallback solution, into java.lang.Number", retObjectFromString != null ? retObjectFromString.getClass() : "null", retObjectFromString_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

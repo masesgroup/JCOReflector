@@ -158,9 +158,13 @@ public class DirectoryEntryConfiguration extends NetObject  {
     
     public boolean IsMutuallyAuthenticated() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.ArgumentNullException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.OverflowException, system.FormatException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsMutuallyAuthenticated = null;
         try {
-            return (boolean)classInstance.Invoke("IsMutuallyAuthenticated");
+            retObjectIsMutuallyAuthenticated = classInstance.Invoke("IsMutuallyAuthenticated");
+            return (boolean)retObjectIsMutuallyAuthenticated;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsMutuallyAuthenticated != null ? retObjectIsMutuallyAuthenticated.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -168,9 +172,13 @@ public class DirectoryEntryConfiguration extends NetObject  {
 
     public java.lang.String GetCurrentServerName() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.ArgumentNullException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.OverflowException, system.FormatException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetCurrentServerName = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetCurrentServerName");
+            retObjectGetCurrentServerName = classInstance.Invoke("GetCurrentServerName");
+            return (java.lang.String)retObjectGetCurrentServerName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetCurrentServerName != null ? retObjectGetCurrentServerName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,7 +186,7 @@ public class DirectoryEntryConfiguration extends NetObject  {
 
     public void SetUserNameQueryQuota(java.lang.String accountName) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.ArgumentNullException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.OverflowException, system.FormatException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetUserNameQueryQuota", accountName);
         } catch (JCNativeException jcne) {
@@ -192,9 +200,20 @@ public class DirectoryEntryConfiguration extends NetObject  {
     
     public int getPageSize() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.ArgumentNullException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.OverflowException, system.FormatException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPageSize = null;
         try {
-            return (int)classInstance.Get("PageSize");
+            retObjectPageSize = classInstance.Get("PageSize");
+            return (int)retObjectPageSize;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectPageSize_ToString = retObjectPageSize == null ? "null" : retObjectPageSize.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectPageSizeNumber = (java.lang.Number)retObjectPageSize;
+                return retObjectPageSizeNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectPageSize != null ? retObjectPageSize.getClass() : "null", retObjectPageSize_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,7 +221,7 @@ public class DirectoryEntryConfiguration extends NetObject  {
 
     public void setPageSize(int PageSize) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.OverflowException, system.FormatException, system.security.cryptography.CryptographicException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PageSize", PageSize);
         } catch (JCNativeException jcne) {
@@ -212,9 +231,20 @@ public class DirectoryEntryConfiguration extends NetObject  {
 
     public int getPasswordPort() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.ArgumentNullException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.OverflowException, system.FormatException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPasswordPort = null;
         try {
-            return (int)classInstance.Get("PasswordPort");
+            retObjectPasswordPort = classInstance.Get("PasswordPort");
+            return (int)retObjectPasswordPort;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectPasswordPort_ToString = retObjectPasswordPort == null ? "null" : retObjectPasswordPort.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectPasswordPortNumber = (java.lang.Number)retObjectPasswordPort;
+                return retObjectPasswordPortNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectPasswordPort != null ? retObjectPasswordPort.getClass() : "null", retObjectPasswordPort_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -222,7 +252,7 @@ public class DirectoryEntryConfiguration extends NetObject  {
 
     public void setPasswordPort(int PasswordPort) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.ArgumentNullException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.OverflowException, system.FormatException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PasswordPort", PasswordPort);
         } catch (JCNativeException jcne) {
@@ -232,10 +262,14 @@ public class DirectoryEntryConfiguration extends NetObject  {
 
     public PasswordEncodingMethod getPasswordEncoding() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.ArgumentNullException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.OverflowException, system.FormatException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPasswordEncoding = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PasswordEncoding");
+            retObjectPasswordEncoding = classInstance.Get("PasswordEncoding");
+            JCObject val = (JCObject)retObjectPasswordEncoding;
             return new PasswordEncodingMethod(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPasswordEncoding != null ? retObjectPasswordEncoding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -243,7 +277,7 @@ public class DirectoryEntryConfiguration extends NetObject  {
 
     public void setPasswordEncoding(PasswordEncodingMethod PasswordEncoding) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.ObjectDisposedException, system.OutOfMemoryException, system.OverflowException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PasswordEncoding", PasswordEncoding == null ? null : PasswordEncoding.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -253,10 +287,14 @@ public class DirectoryEntryConfiguration extends NetObject  {
 
     public ReferralChasingOption getReferral() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.ArgumentNullException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.OverflowException, system.FormatException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReferral = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Referral");
+            retObjectReferral = classInstance.Get("Referral");
+            JCObject val = (JCObject)retObjectReferral;
             return new ReferralChasingOption(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReferral != null ? retObjectReferral.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -264,7 +302,7 @@ public class DirectoryEntryConfiguration extends NetObject  {
 
     public void setReferral(ReferralChasingOption Referral) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.ObjectDisposedException, system.OutOfMemoryException, system.OverflowException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Referral", Referral == null ? null : Referral.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -274,10 +312,14 @@ public class DirectoryEntryConfiguration extends NetObject  {
 
     public SecurityMasks getSecurityMasks() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.ArgumentNullException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.OverflowException, system.FormatException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSecurityMasks = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SecurityMasks");
+            retObjectSecurityMasks = classInstance.Get("SecurityMasks");
+            JCObject val = (JCObject)retObjectSecurityMasks;
             return new SecurityMasks(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSecurityMasks != null ? retObjectSecurityMasks.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -285,7 +327,7 @@ public class DirectoryEntryConfiguration extends NetObject  {
 
     public void setSecurityMasks(SecurityMasks SecurityMasks) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.ObjectDisposedException, system.OutOfMemoryException, system.OverflowException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SecurityMasks", SecurityMasks == null ? null : SecurityMasks.getJCOInstance());
         } catch (JCNativeException jcne) {

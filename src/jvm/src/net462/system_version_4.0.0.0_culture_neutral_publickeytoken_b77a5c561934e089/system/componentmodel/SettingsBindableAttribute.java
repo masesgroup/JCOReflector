@@ -170,9 +170,13 @@ public class SettingsBindableAttribute extends Attribute  {
     
     public boolean getBindable() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBindable = null;
         try {
-            return (boolean)classInstance.Get("Bindable");
+            retObjectBindable = classInstance.Get("Bindable");
+            return (boolean)retObjectBindable;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectBindable != null ? retObjectBindable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

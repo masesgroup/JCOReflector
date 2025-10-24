@@ -196,9 +196,13 @@ public class EditorAttribute extends Attribute  {
     
     public java.lang.String getEditorBaseTypeName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEditorBaseTypeName = null;
         try {
-            return (java.lang.String)classInstance.Get("EditorBaseTypeName");
+            retObjectEditorBaseTypeName = classInstance.Get("EditorBaseTypeName");
+            return (java.lang.String)retObjectEditorBaseTypeName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectEditorBaseTypeName != null ? retObjectEditorBaseTypeName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -206,9 +210,13 @@ public class EditorAttribute extends Attribute  {
 
     public java.lang.String getEditorTypeName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEditorTypeName = null;
         try {
-            return (java.lang.String)classInstance.Get("EditorTypeName");
+            retObjectEditorTypeName = classInstance.Get("EditorTypeName");
+            return (java.lang.String)retObjectEditorTypeName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectEditorTypeName != null ? retObjectEditorTypeName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

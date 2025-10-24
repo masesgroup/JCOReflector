@@ -164,9 +164,13 @@ public class CallTarget extends TaskExtension  {
     
     public boolean Execute() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NotSupportedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExecute = null;
         try {
-            return (boolean)classInstance.Invoke("Execute");
+            retObjectExecute = classInstance.Invoke("Execute");
+            return (boolean)retObjectExecute;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectExecute != null ? retObjectExecute.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,9 +182,13 @@ public class CallTarget extends TaskExtension  {
     
     public boolean getRunEachTargetSeparately() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRunEachTargetSeparately = null;
         try {
-            return (boolean)classInstance.Get("RunEachTargetSeparately");
+            retObjectRunEachTargetSeparately = classInstance.Get("RunEachTargetSeparately");
+            return (boolean)retObjectRunEachTargetSeparately;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectRunEachTargetSeparately != null ? retObjectRunEachTargetSeparately.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,7 +196,7 @@ public class CallTarget extends TaskExtension  {
 
     public void setRunEachTargetSeparately(boolean RunEachTargetSeparately) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RunEachTargetSeparately", RunEachTargetSeparately);
         } catch (JCNativeException jcne) {
@@ -198,9 +206,13 @@ public class CallTarget extends TaskExtension  {
 
     public boolean getUseResultsCache() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUseResultsCache = null;
         try {
-            return (boolean)classInstance.Get("UseResultsCache");
+            retObjectUseResultsCache = classInstance.Get("UseResultsCache");
+            return (boolean)retObjectUseResultsCache;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectUseResultsCache != null ? retObjectUseResultsCache.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -208,7 +220,7 @@ public class CallTarget extends TaskExtension  {
 
     public void setUseResultsCache(boolean UseResultsCache) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UseResultsCache", UseResultsCache);
         } catch (JCNativeException jcne) {
@@ -218,16 +230,20 @@ public class CallTarget extends TaskExtension  {
 
     public final ITaskItem[] getTargetOutputs() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTargetOutputs = null;
         try {
             ArrayList<ITaskItem> resultingArrayList = new ArrayList<ITaskItem>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("TargetOutputs");
+            retObjectTargetOutputs = classInstance.Get("TargetOutputs");
+            JCObject resultingObjects = (JCObject)retObjectTargetOutputs;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ITaskItemImplementation(resultingObject));
             }
             ITaskItem[] resultingArray = new ITaskItem[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTargetOutputs != null ? retObjectTargetOutputs.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -235,10 +251,12 @@ public class CallTarget extends TaskExtension  {
 
     public java.lang.String[] getTargets() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTargets = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("Targets");
+            retObjectTargets = classInstance.Get("Targets");
+            JCObject resultingObjects = (JCObject)retObjectTargets;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -247,6 +265,8 @@ public class CallTarget extends TaskExtension  {
 				resultingArray[indexTargets] = (java.lang.String)resultingArrayList.get(indexTargets);
 			}
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into JCObject", retObjectTargets != null ? retObjectTargets.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -254,7 +274,7 @@ public class CallTarget extends TaskExtension  {
 
     public void setTargets(java.lang.String[] Targets) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Targets", Targets);
         } catch (JCNativeException jcne) {

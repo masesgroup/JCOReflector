@@ -191,9 +191,13 @@ public class FontFamily extends MarshalByRefObject implements AutoCloseable {
     
     public boolean IsStyleAvailable(FontStyle style) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsStyleAvailable = null;
         try {
-            return (boolean)classInstance.Invoke("IsStyleAvailable", style == null ? null : style.getJCOInstance());
+            retObjectIsStyleAvailable = classInstance.Invoke("IsStyleAvailable", style == null ? null : style.getJCOInstance());
+            return (boolean)retObjectIsStyleAvailable;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsStyleAvailable != null ? retObjectIsStyleAvailable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,9 +205,20 @@ public class FontFamily extends MarshalByRefObject implements AutoCloseable {
 
     public int GetCellAscent(FontStyle style) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetCellAscent = null;
         try {
-            return (int)classInstance.Invoke("GetCellAscent", style == null ? null : style.getJCOInstance());
+            retObjectGetCellAscent = classInstance.Invoke("GetCellAscent", style == null ? null : style.getJCOInstance());
+            return (int)retObjectGetCellAscent;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetCellAscent_ToString = retObjectGetCellAscent == null ? "null" : retObjectGetCellAscent.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetCellAscentNumber = (java.lang.Number)retObjectGetCellAscent;
+                return retObjectGetCellAscentNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetCellAscent != null ? retObjectGetCellAscent.getClass() : "null", retObjectGetCellAscent_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -211,9 +226,20 @@ public class FontFamily extends MarshalByRefObject implements AutoCloseable {
 
     public int GetCellDescent(FontStyle style) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetCellDescent = null;
         try {
-            return (int)classInstance.Invoke("GetCellDescent", style == null ? null : style.getJCOInstance());
+            retObjectGetCellDescent = classInstance.Invoke("GetCellDescent", style == null ? null : style.getJCOInstance());
+            return (int)retObjectGetCellDescent;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetCellDescent_ToString = retObjectGetCellDescent == null ? "null" : retObjectGetCellDescent.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetCellDescentNumber = (java.lang.Number)retObjectGetCellDescent;
+                return retObjectGetCellDescentNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetCellDescent != null ? retObjectGetCellDescent.getClass() : "null", retObjectGetCellDescent_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -221,9 +247,20 @@ public class FontFamily extends MarshalByRefObject implements AutoCloseable {
 
     public int GetEmHeight(FontStyle style) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetEmHeight = null;
         try {
-            return (int)classInstance.Invoke("GetEmHeight", style == null ? null : style.getJCOInstance());
+            retObjectGetEmHeight = classInstance.Invoke("GetEmHeight", style == null ? null : style.getJCOInstance());
+            return (int)retObjectGetEmHeight;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetEmHeight_ToString = retObjectGetEmHeight == null ? "null" : retObjectGetEmHeight.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetEmHeightNumber = (java.lang.Number)retObjectGetEmHeight;
+                return retObjectGetEmHeightNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetEmHeight != null ? retObjectGetEmHeight.getClass() : "null", retObjectGetEmHeight_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -231,9 +268,20 @@ public class FontFamily extends MarshalByRefObject implements AutoCloseable {
 
     public int GetLineSpacing(FontStyle style) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetLineSpacing = null;
         try {
-            return (int)classInstance.Invoke("GetLineSpacing", style == null ? null : style.getJCOInstance());
+            retObjectGetLineSpacing = classInstance.Invoke("GetLineSpacing", style == null ? null : style.getJCOInstance());
+            return (int)retObjectGetLineSpacing;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetLineSpacing_ToString = retObjectGetLineSpacing == null ? "null" : retObjectGetLineSpacing.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetLineSpacingNumber = (java.lang.Number)retObjectGetLineSpacing;
+                return retObjectGetLineSpacingNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetLineSpacing != null ? retObjectGetLineSpacing.getClass() : "null", retObjectGetLineSpacing_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -241,16 +289,20 @@ public class FontFamily extends MarshalByRefObject implements AutoCloseable {
 
     public static FontFamily[] GetFamilies(Graphics graphics) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetFamilies = null;
         try {
             ArrayList<FontFamily> resultingArrayList = new ArrayList<FontFamily>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("GetFamilies", graphics == null ? null : graphics.getJCOInstance());
+            retObjectGetFamilies = classType.Invoke("GetFamilies", graphics == null ? null : graphics.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectGetFamilies;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new FontFamily(resultingObject));
             }
             FontFamily[] resultingArray = new FontFamily[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetFamilies != null ? retObjectGetFamilies.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -258,9 +310,13 @@ public class FontFamily extends MarshalByRefObject implements AutoCloseable {
 
     public java.lang.String GetName(int language) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.NotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetName = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetName", language);
+            retObjectGetName = classInstance.Invoke("GetName", language);
+            return (java.lang.String)retObjectGetName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetName != null ? retObjectGetName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -268,7 +324,7 @@ public class FontFamily extends MarshalByRefObject implements AutoCloseable {
 
     public void Dispose() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
@@ -279,7 +335,7 @@ public class FontFamily extends MarshalByRefObject implements AutoCloseable {
     public void close() throws Exception {
         try {
             if (classInstance == null)
-                throw new UnsupportedOperationException("classInstance is null.");
+                throw new java.lang.UnsupportedOperationException("classInstance is null.");
             try {
                 classInstance.Invoke("Dispose");
             }
@@ -295,10 +351,14 @@ public class FontFamily extends MarshalByRefObject implements AutoCloseable {
     
     public static FontFamily getGenericMonospace() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGenericMonospace = null;
         try {
-            JCObject val = (JCObject)classType.Get("GenericMonospace");
+            retObjectGenericMonospace = classType.Get("GenericMonospace");
+            JCObject val = (JCObject)retObjectGenericMonospace;
             return new FontFamily(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGenericMonospace != null ? retObjectGenericMonospace.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -306,10 +366,14 @@ public class FontFamily extends MarshalByRefObject implements AutoCloseable {
 
     public static FontFamily getGenericSansSerif() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGenericSansSerif = null;
         try {
-            JCObject val = (JCObject)classType.Get("GenericSansSerif");
+            retObjectGenericSansSerif = classType.Get("GenericSansSerif");
+            JCObject val = (JCObject)retObjectGenericSansSerif;
             return new FontFamily(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGenericSansSerif != null ? retObjectGenericSansSerif.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -317,10 +381,14 @@ public class FontFamily extends MarshalByRefObject implements AutoCloseable {
 
     public static FontFamily getGenericSerif() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGenericSerif = null;
         try {
-            JCObject val = (JCObject)classType.Get("GenericSerif");
+            retObjectGenericSerif = classType.Get("GenericSerif");
+            JCObject val = (JCObject)retObjectGenericSerif;
             return new FontFamily(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGenericSerif != null ? retObjectGenericSerif.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -328,16 +396,20 @@ public class FontFamily extends MarshalByRefObject implements AutoCloseable {
 
     public final static FontFamily[] getFamilies() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFamilies = null;
         try {
             ArrayList<FontFamily> resultingArrayList = new ArrayList<FontFamily>();
-            JCObject resultingObjects = (JCObject)classType.Get("Families");
+            retObjectFamilies = classType.Get("Families");
+            JCObject resultingObjects = (JCObject)retObjectFamilies;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new FontFamily(resultingObject));
             }
             FontFamily[] resultingArray = new FontFamily[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFamilies != null ? retObjectFamilies.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -345,9 +417,13 @@ public class FontFamily extends MarshalByRefObject implements AutoCloseable {
 
     public java.lang.String getName() throws Throwable, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.NotSupportedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectName = null;
         try {
-            return (java.lang.String)classInstance.Get("Name");
+            retObjectName = classInstance.Get("Name");
+            return (java.lang.String)retObjectName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectName != null ? retObjectName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

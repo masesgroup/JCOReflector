@@ -149,10 +149,14 @@ public class IComNativeDescriptorHandlerImplementation extends NetObject impleme
     
     public AttributeCollection GetAttributes(NetObject component) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetAttributes = null;
         try {
-            JCObject objGetAttributes = (JCObject)classInstance.Invoke("GetAttributes", component == null ? null : component.getJCOInstance());
+            retObjectGetAttributes = classInstance.Invoke("GetAttributes", component == null ? null : component.getJCOInstance());
+            JCObject objGetAttributes = (JCObject)retObjectGetAttributes;
             return new AttributeCollection(objGetAttributes);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetAttributes != null ? retObjectGetAttributes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -160,10 +164,14 @@ public class IComNativeDescriptorHandlerImplementation extends NetObject impleme
 
     public EventDescriptor GetDefaultEvent(NetObject component) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDefaultEvent = null;
         try {
-            JCObject objGetDefaultEvent = (JCObject)classInstance.Invoke("GetDefaultEvent", component == null ? null : component.getJCOInstance());
+            retObjectGetDefaultEvent = classInstance.Invoke("GetDefaultEvent", component == null ? null : component.getJCOInstance());
+            JCObject objGetDefaultEvent = (JCObject)retObjectGetDefaultEvent;
             return new EventDescriptor(objGetDefaultEvent);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetDefaultEvent != null ? retObjectGetDefaultEvent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,10 +179,14 @@ public class IComNativeDescriptorHandlerImplementation extends NetObject impleme
 
     public EventDescriptorCollection GetEvents(NetObject component) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetEvents = null;
         try {
-            JCObject objGetEvents = (JCObject)classInstance.Invoke("GetEvents", component == null ? null : component.getJCOInstance());
+            retObjectGetEvents = classInstance.Invoke("GetEvents", component == null ? null : component.getJCOInstance());
+            JCObject objGetEvents = (JCObject)retObjectGetEvents;
             return new EventDescriptorCollection(objGetEvents);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetEvents != null ? retObjectGetEvents.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,10 +194,14 @@ public class IComNativeDescriptorHandlerImplementation extends NetObject impleme
 
     public EventDescriptorCollection GetEvents(NetObject component, Attribute[] attributes) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetEvents = null;
         try {
-            JCObject objGetEvents = (JCObject)classInstance.Invoke("GetEvents", component == null ? null : component.getJCOInstance(), toObjectFromArray(attributes));
+            retObjectGetEvents = classInstance.Invoke("GetEvents", component == null ? null : component.getJCOInstance(), toObjectFromArray(attributes));
+            JCObject objGetEvents = (JCObject)retObjectGetEvents;
             return new EventDescriptorCollection(objGetEvents);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetEvents != null ? retObjectGetEvents.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,10 +209,14 @@ public class IComNativeDescriptorHandlerImplementation extends NetObject impleme
 
     public PropertyDescriptor GetDefaultProperty(NetObject component) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDefaultProperty = null;
         try {
-            JCObject objGetDefaultProperty = (JCObject)classInstance.Invoke("GetDefaultProperty", component == null ? null : component.getJCOInstance());
+            retObjectGetDefaultProperty = classInstance.Invoke("GetDefaultProperty", component == null ? null : component.getJCOInstance());
+            JCObject objGetDefaultProperty = (JCObject)retObjectGetDefaultProperty;
             return new PropertyDescriptor(objGetDefaultProperty);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetDefaultProperty != null ? retObjectGetDefaultProperty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -204,10 +224,14 @@ public class IComNativeDescriptorHandlerImplementation extends NetObject impleme
 
     public PropertyDescriptorCollection GetProperties(NetObject component, Attribute[] attributes) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetProperties = null;
         try {
-            JCObject objGetProperties = (JCObject)classInstance.Invoke("GetProperties", component == null ? null : component.getJCOInstance(), toObjectFromArray(attributes));
+            retObjectGetProperties = classInstance.Invoke("GetProperties", component == null ? null : component.getJCOInstance(), toObjectFromArray(attributes));
+            JCObject objGetProperties = (JCObject)retObjectGetProperties;
             return new PropertyDescriptorCollection(objGetProperties);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetProperties != null ? retObjectGetProperties.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -215,10 +239,14 @@ public class IComNativeDescriptorHandlerImplementation extends NetObject impleme
 
     public TypeConverter GetConverter(NetObject component) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetConverter = null;
         try {
-            JCObject objGetConverter = (JCObject)classInstance.Invoke("GetConverter", component == null ? null : component.getJCOInstance());
+            retObjectGetConverter = classInstance.Invoke("GetConverter", component == null ? null : component.getJCOInstance());
+            JCObject objGetConverter = (JCObject)retObjectGetConverter;
             return new TypeConverter(objGetConverter);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetConverter != null ? retObjectGetConverter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -226,10 +254,14 @@ public class IComNativeDescriptorHandlerImplementation extends NetObject impleme
 
     public NetObject GetEditor(NetObject component, NetType baseEditorType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetEditor = null;
         try {
-            JCObject objGetEditor = (JCObject)classInstance.Invoke("GetEditor", component == null ? null : component.getJCOInstance(), baseEditorType == null ? null : baseEditorType.getJCOInstance());
+            retObjectGetEditor = classInstance.Invoke("GetEditor", component == null ? null : component.getJCOInstance(), baseEditorType == null ? null : baseEditorType.getJCOInstance());
+            JCObject objGetEditor = (JCObject)retObjectGetEditor;
             return new NetObject(objGetEditor);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetEditor != null ? retObjectGetEditor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -237,10 +269,14 @@ public class IComNativeDescriptorHandlerImplementation extends NetObject impleme
 
     public NetObject GetPropertyValue(NetObject component, int dispid, JCORefOut<java.util.concurrent.atomic.AtomicBoolean> success) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPropertyValue = null;
         try {
-            JCObject objGetPropertyValue = (JCObject)classInstance.Invoke("GetPropertyValue", component == null ? null : component.getJCOInstance(), dispid, success.getJCRefOut());
+            retObjectGetPropertyValue = classInstance.Invoke("GetPropertyValue", component == null ? null : component.getJCOInstance(), dispid, success.getJCRefOut());
+            JCObject objGetPropertyValue = (JCObject)retObjectGetPropertyValue;
             return new NetObject(objGetPropertyValue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetPropertyValue != null ? retObjectGetPropertyValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -248,10 +284,14 @@ public class IComNativeDescriptorHandlerImplementation extends NetObject impleme
 
     public NetObject GetPropertyValue(NetObject component, java.lang.String propertyName, JCORefOut<java.util.concurrent.atomic.AtomicBoolean> success) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPropertyValue = null;
         try {
-            JCObject objGetPropertyValue = (JCObject)classInstance.Invoke("GetPropertyValue", component == null ? null : component.getJCOInstance(), propertyName, success.getJCRefOut());
+            retObjectGetPropertyValue = classInstance.Invoke("GetPropertyValue", component == null ? null : component.getJCOInstance(), propertyName, success.getJCRefOut());
+            JCObject objGetPropertyValue = (JCObject)retObjectGetPropertyValue;
             return new NetObject(objGetPropertyValue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetPropertyValue != null ? retObjectGetPropertyValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -259,9 +299,13 @@ public class IComNativeDescriptorHandlerImplementation extends NetObject impleme
 
     public java.lang.String GetClassName(NetObject component) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetClassName = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetClassName", component == null ? null : component.getJCOInstance());
+            retObjectGetClassName = classInstance.Invoke("GetClassName", component == null ? null : component.getJCOInstance());
+            return (java.lang.String)retObjectGetClassName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetClassName != null ? retObjectGetClassName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -269,9 +313,13 @@ public class IComNativeDescriptorHandlerImplementation extends NetObject impleme
 
     public java.lang.String GetName(NetObject component) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetName = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetName", component == null ? null : component.getJCOInstance());
+            retObjectGetName = classInstance.Invoke("GetName", component == null ? null : component.getJCOInstance());
+            return (java.lang.String)retObjectGetName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetName != null ? retObjectGetName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

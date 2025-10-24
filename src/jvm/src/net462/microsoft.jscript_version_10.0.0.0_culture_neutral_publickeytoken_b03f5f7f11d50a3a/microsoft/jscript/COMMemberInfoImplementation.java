@@ -145,10 +145,14 @@ public class COMMemberInfoImplementation extends NetObject implements COMMemberI
     
     public NetObject Call(BindingFlags invokeAttr, Binder binder, NetObject[] arguments, CultureInfo culture) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCall = null;
         try {
-            JCObject objCall = (JCObject)classInstance.Invoke("Call", invokeAttr == null ? null : invokeAttr.getJCOInstance(), binder == null ? null : binder.getJCOInstance(), toObjectFromArray(arguments), culture == null ? null : culture.getJCOInstance());
+            retObjectCall = classInstance.Invoke("Call", invokeAttr == null ? null : invokeAttr.getJCOInstance(), binder == null ? null : binder.getJCOInstance(), toObjectFromArray(arguments), culture == null ? null : culture.getJCOInstance());
+            JCObject objCall = (JCObject)retObjectCall;
             return new NetObject(objCall);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCall != null ? retObjectCall.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -156,10 +160,14 @@ public class COMMemberInfoImplementation extends NetObject implements COMMemberI
 
     public NetObject GetValue(BindingFlags invokeAttr, Binder binder, NetObject[] index, CultureInfo culture) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetValue = null;
         try {
-            JCObject objGetValue = (JCObject)classInstance.Invoke("GetValue", invokeAttr == null ? null : invokeAttr.getJCOInstance(), binder == null ? null : binder.getJCOInstance(), toObjectFromArray(index), culture == null ? null : culture.getJCOInstance());
+            retObjectGetValue = classInstance.Invoke("GetValue", invokeAttr == null ? null : invokeAttr.getJCOInstance(), binder == null ? null : binder.getJCOInstance(), toObjectFromArray(index), culture == null ? null : culture.getJCOInstance());
+            JCObject objGetValue = (JCObject)retObjectGetValue;
             return new NetObject(objGetValue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetValue != null ? retObjectGetValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -167,7 +175,7 @@ public class COMMemberInfoImplementation extends NetObject implements COMMemberI
 
     public void SetValue(NetObject value, BindingFlags invokeAttr, Binder binder, NetObject[] index, CultureInfo culture) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetValue", value == null ? null : value.getJCOInstance(), invokeAttr == null ? null : invokeAttr.getJCOInstance(), binder == null ? null : binder.getJCOInstance(), toObjectFromArray(index), culture == null ? null : culture.getJCOInstance());
         } catch (JCNativeException jcne) {

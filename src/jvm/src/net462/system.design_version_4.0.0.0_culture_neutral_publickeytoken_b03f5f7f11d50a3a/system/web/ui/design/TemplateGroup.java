@@ -177,7 +177,7 @@ public class TemplateGroup extends NetObject  {
     
     public void AddTemplateDefinition(TemplateDefinition templateDefinition) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddTemplateDefinition", templateDefinition == null ? null : templateDefinition.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -191,9 +191,13 @@ public class TemplateGroup extends NetObject  {
     
     public boolean getIsEmpty() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsEmpty = null;
         try {
-            return (boolean)classInstance.Get("IsEmpty");
+            retObjectIsEmpty = classInstance.Get("IsEmpty");
+            return (boolean)retObjectIsEmpty;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsEmpty != null ? retObjectIsEmpty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,9 +205,13 @@ public class TemplateGroup extends NetObject  {
 
     public java.lang.String getGroupName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGroupName = null;
         try {
-            return (java.lang.String)classInstance.Get("GroupName");
+            retObjectGroupName = classInstance.Get("GroupName");
+            return (java.lang.String)retObjectGroupName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectGroupName != null ? retObjectGroupName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -211,16 +219,20 @@ public class TemplateGroup extends NetObject  {
 
     public final TemplateDefinition[] getTemplates() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTemplates = null;
         try {
             ArrayList<TemplateDefinition> resultingArrayList = new ArrayList<TemplateDefinition>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("Templates");
+            retObjectTemplates = classInstance.Get("Templates");
+            JCObject resultingObjects = (JCObject)retObjectTemplates;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new TemplateDefinition(resultingObject));
             }
             TemplateDefinition[] resultingArray = new TemplateDefinition[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTemplates != null ? retObjectTemplates.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -228,10 +240,14 @@ public class TemplateGroup extends NetObject  {
 
     public Style getGroupStyle() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGroupStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("GroupStyle");
+            retObjectGroupStyle = classInstance.Get("GroupStyle");
+            JCObject val = (JCObject)retObjectGroupStyle;
             return new Style(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGroupStyle != null ? retObjectGroupStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

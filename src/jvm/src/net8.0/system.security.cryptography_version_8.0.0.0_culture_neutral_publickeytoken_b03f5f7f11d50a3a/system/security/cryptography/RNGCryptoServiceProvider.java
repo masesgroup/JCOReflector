@@ -193,7 +193,7 @@ public class RNGCryptoServiceProvider extends RandomNumberGenerator  {
     
     public void GetBytes(byte[] data, int offset, int count) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetBytes", data, offset, count);
         } catch (JCNativeException jcne) {
@@ -203,7 +203,7 @@ public class RNGCryptoServiceProvider extends RandomNumberGenerator  {
 
     public void GetBytes(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetBytes", dupParam0.getJCRefOut(), dupParam1, dupParam2);
         } catch (JCNativeException jcne) {
@@ -213,7 +213,7 @@ public class RNGCryptoServiceProvider extends RandomNumberGenerator  {
 
     public void GetBytes(byte[] data) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetBytes", (java.lang.Object)data);
         } catch (JCNativeException jcne) {
@@ -223,7 +223,7 @@ public class RNGCryptoServiceProvider extends RandomNumberGenerator  {
 
     public void GetBytes(JCORefOut dupParam0) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetBytes", (java.lang.Object)dupParam0.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -233,7 +233,7 @@ public class RNGCryptoServiceProvider extends RandomNumberGenerator  {
 
     public void GetNonZeroBytes(byte[] data) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetNonZeroBytes", (java.lang.Object)data);
         } catch (JCNativeException jcne) {
@@ -243,7 +243,7 @@ public class RNGCryptoServiceProvider extends RandomNumberGenerator  {
 
     public void GetNonZeroBytes(JCORefOut dupParam0) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetNonZeroBytes", (java.lang.Object)dupParam0.getJCRefOut());
         } catch (JCNativeException jcne) {

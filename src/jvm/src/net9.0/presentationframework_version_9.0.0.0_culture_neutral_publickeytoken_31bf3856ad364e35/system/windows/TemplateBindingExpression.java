@@ -161,10 +161,14 @@ public class TemplateBindingExpression extends Expression  {
     
     public TemplateBindingExtension getTemplateBindingExtension() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTemplateBindingExtension = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TemplateBindingExtension");
+            retObjectTemplateBindingExtension = classInstance.Get("TemplateBindingExtension");
+            JCObject val = (JCObject)retObjectTemplateBindingExtension;
             return new TemplateBindingExtension(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTemplateBindingExtension != null ? retObjectTemplateBindingExtension.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

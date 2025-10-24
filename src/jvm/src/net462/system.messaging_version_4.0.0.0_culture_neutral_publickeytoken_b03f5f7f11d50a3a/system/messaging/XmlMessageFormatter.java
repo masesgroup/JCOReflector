@@ -182,9 +182,13 @@ public class XmlMessageFormatter extends NetObject  {
     
     public boolean CanRead(Message message) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.ArgumentException, system.threading.ThreadAbortException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.security.SecurityException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.io.FileNotFoundException, system.collections.generic.KeyNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanRead = null;
         try {
-            return (boolean)classInstance.Invoke("CanRead", message == null ? null : message.getJCOInstance());
+            retObjectCanRead = classInstance.Invoke("CanRead", message == null ? null : message.getJCOInstance());
+            return (boolean)retObjectCanRead;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCanRead != null ? retObjectCanRead.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,10 +196,14 @@ public class XmlMessageFormatter extends NetObject  {
 
     public NetObject Clone() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.threading.ThreadAbortException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.MissingMethodException, system.security.SecurityException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.RankException, system.io.FileNotFoundException, system.TypeLoadException, system.UnauthorizedAccessException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClone = null;
         try {
-            JCObject objClone = (JCObject)classInstance.Invoke("Clone");
+            retObjectClone = classInstance.Invoke("Clone");
+            JCObject objClone = (JCObject)retObjectClone;
             return new NetObject(objClone);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClone != null ? retObjectClone.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,10 +211,14 @@ public class XmlMessageFormatter extends NetObject  {
 
     public NetObject Read(Message message) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.ArgumentException, system.threading.ThreadAbortException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.security.SecurityException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.io.FileNotFoundException, system.collections.generic.KeyNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.xml.XmlException, system.MulticastNotSupportedException, system.FormatException, system.OverflowException, system.MissingMethodException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRead = null;
         try {
-            JCObject objRead = (JCObject)classInstance.Invoke("Read", message == null ? null : message.getJCOInstance());
+            retObjectRead = classInstance.Invoke("Read", message == null ? null : message.getJCOInstance());
+            JCObject objRead = (JCObject)retObjectRead;
             return new NetObject(objRead);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRead != null ? retObjectRead.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -214,7 +226,7 @@ public class XmlMessageFormatter extends NetObject  {
 
     public void Write(Message message, NetObject obj) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.ArgumentException, system.threading.ThreadAbortException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.security.SecurityException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.RankException, system.io.FileNotFoundException, system.TypeLoadException, system.UnauthorizedAccessException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Write", message == null ? null : message.getJCOInstance(), obj == null ? null : obj.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -228,10 +240,12 @@ public class XmlMessageFormatter extends NetObject  {
     
     public java.lang.String[] getTargetTypeNames() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTargetTypeNames = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("TargetTypeNames");
+            retObjectTargetTypeNames = classInstance.Get("TargetTypeNames");
+            JCObject resultingObjects = (JCObject)retObjectTargetTypeNames;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -240,6 +254,8 @@ public class XmlMessageFormatter extends NetObject  {
 				resultingArray[indexTargetTypeNames] = (java.lang.String)resultingArrayList.get(indexTargetTypeNames);
 			}
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into JCObject", retObjectTargetTypeNames != null ? retObjectTargetTypeNames.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -247,7 +263,7 @@ public class XmlMessageFormatter extends NetObject  {
 
     public void setTargetTypeNames(java.lang.String[] TargetTypeNames) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TargetTypeNames", TargetTypeNames);
         } catch (JCNativeException jcne) {
@@ -257,16 +273,20 @@ public class XmlMessageFormatter extends NetObject  {
 
     public final NetType[] getTargetTypes() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTargetTypes = null;
         try {
             ArrayList<NetType> resultingArrayList = new ArrayList<NetType>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("TargetTypes");
+            retObjectTargetTypes = classInstance.Get("TargetTypes");
+            JCObject resultingObjects = (JCObject)retObjectTargetTypes;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new NetType(resultingObject));
             }
             NetType[] resultingArray = new NetType[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTargetTypes != null ? retObjectTargetTypes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -274,7 +294,7 @@ public class XmlMessageFormatter extends NetObject  {
 
     public void setTargetTypes(NetType[] TargetTypes) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TargetTypes", toObjectFromArray(TargetTypes));
         } catch (JCNativeException jcne) {

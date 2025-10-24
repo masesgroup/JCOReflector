@@ -170,10 +170,14 @@ public class JSLocalField extends JSVariableField  {
     
     public NetObject GetValue(NetObject obj) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetValue = null;
         try {
-            JCObject objGetValue = (JCObject)classInstance.Invoke("GetValue", obj == null ? null : obj.getJCOInstance());
+            retObjectGetValue = classInstance.Invoke("GetValue", obj == null ? null : obj.getJCOInstance());
+            JCObject objGetValue = (JCObject)retObjectGetValue;
             return new NetObject(objGetValue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetValue != null ? retObjectGetValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,7 +185,7 @@ public class JSLocalField extends JSVariableField  {
 
     public void SetValue(NetObject obj, NetObject value, BindingFlags invokeAttr, Binder binder, CultureInfo locale) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.NotImplementedException, system.NullReferenceException, system.NotSupportedException, system.InvalidOperationException, microsoft.jscript.vsa.JSVsaException, microsoft.jscript.EndOfFile, system.ArgumentOutOfRangeException, microsoft.jscript.JScriptException, system.MissingMethodException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetValue", obj == null ? null : obj.getJCOInstance(), value == null ? null : value.getJCOInstance(), invokeAttr == null ? null : invokeAttr.getJCOInstance(), binder == null ? null : binder.getJCOInstance(), locale == null ? null : locale.getJCOInstance());
         } catch (JCNativeException jcne) {

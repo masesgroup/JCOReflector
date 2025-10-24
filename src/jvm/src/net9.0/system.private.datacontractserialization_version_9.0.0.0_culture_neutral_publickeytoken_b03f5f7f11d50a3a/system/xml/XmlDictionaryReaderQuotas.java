@@ -163,7 +163,7 @@ public class XmlDictionaryReaderQuotas extends NetObject  {
     
     public void CopyTo(XmlDictionaryReaderQuotas quotas) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CopyTo", quotas == null ? null : quotas.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -177,9 +177,20 @@ public class XmlDictionaryReaderQuotas extends NetObject  {
     
     public int getMaxArrayLength() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxArrayLength = null;
         try {
-            return (int)classInstance.Get("MaxArrayLength");
+            retObjectMaxArrayLength = classInstance.Get("MaxArrayLength");
+            return (int)retObjectMaxArrayLength;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaxArrayLength_ToString = retObjectMaxArrayLength == null ? "null" : retObjectMaxArrayLength.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMaxArrayLengthNumber = (java.lang.Number)retObjectMaxArrayLength;
+                return retObjectMaxArrayLengthNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxArrayLength != null ? retObjectMaxArrayLength.getClass() : "null", retObjectMaxArrayLength_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,7 +198,7 @@ public class XmlDictionaryReaderQuotas extends NetObject  {
 
     public void setMaxArrayLength(int MaxArrayLength) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaxArrayLength", MaxArrayLength);
         } catch (JCNativeException jcne) {
@@ -197,9 +208,20 @@ public class XmlDictionaryReaderQuotas extends NetObject  {
 
     public int getMaxBytesPerRead() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxBytesPerRead = null;
         try {
-            return (int)classInstance.Get("MaxBytesPerRead");
+            retObjectMaxBytesPerRead = classInstance.Get("MaxBytesPerRead");
+            return (int)retObjectMaxBytesPerRead;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaxBytesPerRead_ToString = retObjectMaxBytesPerRead == null ? "null" : retObjectMaxBytesPerRead.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMaxBytesPerReadNumber = (java.lang.Number)retObjectMaxBytesPerRead;
+                return retObjectMaxBytesPerReadNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxBytesPerRead != null ? retObjectMaxBytesPerRead.getClass() : "null", retObjectMaxBytesPerRead_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -207,7 +229,7 @@ public class XmlDictionaryReaderQuotas extends NetObject  {
 
     public void setMaxBytesPerRead(int MaxBytesPerRead) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaxBytesPerRead", MaxBytesPerRead);
         } catch (JCNativeException jcne) {
@@ -217,9 +239,20 @@ public class XmlDictionaryReaderQuotas extends NetObject  {
 
     public int getMaxDepth() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxDepth = null;
         try {
-            return (int)classInstance.Get("MaxDepth");
+            retObjectMaxDepth = classInstance.Get("MaxDepth");
+            return (int)retObjectMaxDepth;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaxDepth_ToString = retObjectMaxDepth == null ? "null" : retObjectMaxDepth.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMaxDepthNumber = (java.lang.Number)retObjectMaxDepth;
+                return retObjectMaxDepthNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxDepth != null ? retObjectMaxDepth.getClass() : "null", retObjectMaxDepth_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -227,7 +260,7 @@ public class XmlDictionaryReaderQuotas extends NetObject  {
 
     public void setMaxDepth(int MaxDepth) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaxDepth", MaxDepth);
         } catch (JCNativeException jcne) {
@@ -237,9 +270,20 @@ public class XmlDictionaryReaderQuotas extends NetObject  {
 
     public int getMaxNameTableCharCount() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxNameTableCharCount = null;
         try {
-            return (int)classInstance.Get("MaxNameTableCharCount");
+            retObjectMaxNameTableCharCount = classInstance.Get("MaxNameTableCharCount");
+            return (int)retObjectMaxNameTableCharCount;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaxNameTableCharCount_ToString = retObjectMaxNameTableCharCount == null ? "null" : retObjectMaxNameTableCharCount.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMaxNameTableCharCountNumber = (java.lang.Number)retObjectMaxNameTableCharCount;
+                return retObjectMaxNameTableCharCountNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxNameTableCharCount != null ? retObjectMaxNameTableCharCount.getClass() : "null", retObjectMaxNameTableCharCount_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -247,7 +291,7 @@ public class XmlDictionaryReaderQuotas extends NetObject  {
 
     public void setMaxNameTableCharCount(int MaxNameTableCharCount) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaxNameTableCharCount", MaxNameTableCharCount);
         } catch (JCNativeException jcne) {
@@ -257,9 +301,20 @@ public class XmlDictionaryReaderQuotas extends NetObject  {
 
     public int getMaxStringContentLength() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxStringContentLength = null;
         try {
-            return (int)classInstance.Get("MaxStringContentLength");
+            retObjectMaxStringContentLength = classInstance.Get("MaxStringContentLength");
+            return (int)retObjectMaxStringContentLength;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaxStringContentLength_ToString = retObjectMaxStringContentLength == null ? "null" : retObjectMaxStringContentLength.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMaxStringContentLengthNumber = (java.lang.Number)retObjectMaxStringContentLength;
+                return retObjectMaxStringContentLengthNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxStringContentLength != null ? retObjectMaxStringContentLength.getClass() : "null", retObjectMaxStringContentLength_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -267,7 +322,7 @@ public class XmlDictionaryReaderQuotas extends NetObject  {
 
     public void setMaxStringContentLength(int MaxStringContentLength) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaxStringContentLength", MaxStringContentLength);
         } catch (JCNativeException jcne) {
@@ -277,10 +332,14 @@ public class XmlDictionaryReaderQuotas extends NetObject  {
 
     public static XmlDictionaryReaderQuotas getMax() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMax = null;
         try {
-            JCObject val = (JCObject)classType.Get("Max");
+            retObjectMax = classType.Get("Max");
+            JCObject val = (JCObject)retObjectMax;
             return new XmlDictionaryReaderQuotas(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMax != null ? retObjectMax.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -288,10 +347,14 @@ public class XmlDictionaryReaderQuotas extends NetObject  {
 
     public XmlDictionaryReaderQuotaTypes getModifiedQuotas() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectModifiedQuotas = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ModifiedQuotas");
+            retObjectModifiedQuotas = classInstance.Get("ModifiedQuotas");
+            JCObject val = (JCObject)retObjectModifiedQuotas;
             return new XmlDictionaryReaderQuotaTypes(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectModifiedQuotas != null ? retObjectModifiedQuotas.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

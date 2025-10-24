@@ -154,9 +154,20 @@ public class MemoryMarshal extends NetObject  {
     
     public static byte GetArrayDataReference(Array array) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetArrayDataReference = null;
         try {
-            return (byte)classType.Invoke("GetArrayDataReference", array == null ? null : array.getJCOInstance());
+            retObjectGetArrayDataReference = classType.Invoke("GetArrayDataReference", array == null ? null : array.getJCOInstance());
+            return (byte)retObjectGetArrayDataReference;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetArrayDataReference_ToString = retObjectGetArrayDataReference == null ? "null" : retObjectGetArrayDataReference.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetArrayDataReferenceNumber = (java.lang.Number)retObjectGetArrayDataReference;
+                return retObjectGetArrayDataReferenceNumber.byteValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into byte and, as fallback solution, into java.lang.Number", retObjectGetArrayDataReference != null ? retObjectGetArrayDataReference.getClass() : "null", retObjectGetArrayDataReference_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

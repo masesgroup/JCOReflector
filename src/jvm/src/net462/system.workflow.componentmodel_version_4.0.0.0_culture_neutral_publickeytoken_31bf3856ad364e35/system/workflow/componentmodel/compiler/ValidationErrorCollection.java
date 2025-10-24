@@ -173,16 +173,20 @@ public class ValidationErrorCollection extends NetObjectEnumerable  {
     
     public ValidationError[] ToArray() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToArray = null;
         try {
             ArrayList<ValidationError> resultingArrayList = new ArrayList<ValidationError>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("ToArray");
+            retObjectToArray = classInstance.Invoke("ToArray");
+            JCObject resultingObjects = (JCObject)retObjectToArray;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ValidationError(resultingObject));
             }
             ValidationError[] resultingArray = new ValidationError[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToArray != null ? retObjectToArray.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -194,9 +198,13 @@ public class ValidationErrorCollection extends NetObjectEnumerable  {
     
     public boolean getHasErrors() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHasErrors = null;
         try {
-            return (boolean)classInstance.Get("HasErrors");
+            retObjectHasErrors = classInstance.Get("HasErrors");
+            return (boolean)retObjectHasErrors;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectHasErrors != null ? retObjectHasErrors.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -204,9 +212,13 @@ public class ValidationErrorCollection extends NetObjectEnumerable  {
 
     public boolean getHasWarnings() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHasWarnings = null;
         try {
-            return (boolean)classInstance.Get("HasWarnings");
+            retObjectHasWarnings = classInstance.Get("HasWarnings");
+            return (boolean)retObjectHasWarnings;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectHasWarnings != null ? retObjectHasWarnings.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

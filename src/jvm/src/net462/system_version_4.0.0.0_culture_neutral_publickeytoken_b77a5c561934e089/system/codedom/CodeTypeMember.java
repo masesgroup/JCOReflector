@@ -171,10 +171,14 @@ public class CodeTypeMember extends CodeObject  {
     
     public CodeAttributeDeclarationCollection getCustomAttributes() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCustomAttributes = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CustomAttributes");
+            retObjectCustomAttributes = classInstance.Get("CustomAttributes");
+            JCObject val = (JCObject)retObjectCustomAttributes;
             return new CodeAttributeDeclarationCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCustomAttributes != null ? retObjectCustomAttributes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,7 +186,7 @@ public class CodeTypeMember extends CodeObject  {
 
     public void setCustomAttributes(CodeAttributeDeclarationCollection CustomAttributes) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CustomAttributes", CustomAttributes == null ? null : CustomAttributes.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -192,10 +196,14 @@ public class CodeTypeMember extends CodeObject  {
 
     public CodeCommentStatementCollection getComments() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectComments = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Comments");
+            retObjectComments = classInstance.Get("Comments");
+            JCObject val = (JCObject)retObjectComments;
             return new CodeCommentStatementCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectComments != null ? retObjectComments.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,10 +211,14 @@ public class CodeTypeMember extends CodeObject  {
 
     public CodeDirectiveCollection getEndDirectives() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEndDirectives = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("EndDirectives");
+            retObjectEndDirectives = classInstance.Get("EndDirectives");
+            JCObject val = (JCObject)retObjectEndDirectives;
             return new CodeDirectiveCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEndDirectives != null ? retObjectEndDirectives.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -214,10 +226,14 @@ public class CodeTypeMember extends CodeObject  {
 
     public CodeDirectiveCollection getStartDirectives() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStartDirectives = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("StartDirectives");
+            retObjectStartDirectives = classInstance.Get("StartDirectives");
+            JCObject val = (JCObject)retObjectStartDirectives;
             return new CodeDirectiveCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStartDirectives != null ? retObjectStartDirectives.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -225,10 +241,14 @@ public class CodeTypeMember extends CodeObject  {
 
     public CodeLinePragma getLinePragma() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLinePragma = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("LinePragma");
+            retObjectLinePragma = classInstance.Get("LinePragma");
+            JCObject val = (JCObject)retObjectLinePragma;
             return new CodeLinePragma(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLinePragma != null ? retObjectLinePragma.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -236,7 +256,7 @@ public class CodeTypeMember extends CodeObject  {
 
     public void setLinePragma(CodeLinePragma LinePragma) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("LinePragma", LinePragma == null ? null : LinePragma.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -246,10 +266,14 @@ public class CodeTypeMember extends CodeObject  {
 
     public MemberAttributes getAttributes() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAttributes = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Attributes");
+            retObjectAttributes = classInstance.Get("Attributes");
+            JCObject val = (JCObject)retObjectAttributes;
             return new MemberAttributes(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAttributes != null ? retObjectAttributes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -257,7 +281,7 @@ public class CodeTypeMember extends CodeObject  {
 
     public void setAttributes(MemberAttributes Attributes) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Attributes", Attributes == null ? null : Attributes.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -267,9 +291,13 @@ public class CodeTypeMember extends CodeObject  {
 
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectName = null;
         try {
-            return (java.lang.String)classInstance.Get("Name");
+            retObjectName = classInstance.Get("Name");
+            return (java.lang.String)retObjectName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectName != null ? retObjectName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -277,7 +305,7 @@ public class CodeTypeMember extends CodeObject  {
 
     public void setName(java.lang.String Name) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Name", Name);
         } catch (JCNativeException jcne) {

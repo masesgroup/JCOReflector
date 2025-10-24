@@ -189,9 +189,13 @@ public class ProcessStartInfo extends NetObject  {
     
     public boolean getCreateNoWindow() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateNoWindow = null;
         try {
-            return (boolean)classInstance.Get("CreateNoWindow");
+            retObjectCreateNoWindow = classInstance.Get("CreateNoWindow");
+            return (boolean)retObjectCreateNoWindow;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCreateNoWindow != null ? retObjectCreateNoWindow.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -199,7 +203,7 @@ public class ProcessStartInfo extends NetObject  {
 
     public void setCreateNoWindow(boolean CreateNoWindow) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CreateNoWindow", CreateNoWindow);
         } catch (JCNativeException jcne) {
@@ -209,9 +213,13 @@ public class ProcessStartInfo extends NetObject  {
 
     public boolean getErrorDialog() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectErrorDialog = null;
         try {
-            return (boolean)classInstance.Get("ErrorDialog");
+            retObjectErrorDialog = classInstance.Get("ErrorDialog");
+            return (boolean)retObjectErrorDialog;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectErrorDialog != null ? retObjectErrorDialog.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -219,7 +227,7 @@ public class ProcessStartInfo extends NetObject  {
 
     public void setErrorDialog(boolean ErrorDialog) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ErrorDialog", ErrorDialog);
         } catch (JCNativeException jcne) {
@@ -229,9 +237,13 @@ public class ProcessStartInfo extends NetObject  {
 
     public boolean getLoadUserProfile() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLoadUserProfile = null;
         try {
-            return (boolean)classInstance.Get("LoadUserProfile");
+            retObjectLoadUserProfile = classInstance.Get("LoadUserProfile");
+            return (boolean)retObjectLoadUserProfile;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectLoadUserProfile != null ? retObjectLoadUserProfile.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -239,7 +251,7 @@ public class ProcessStartInfo extends NetObject  {
 
     public void setLoadUserProfile(boolean LoadUserProfile) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("LoadUserProfile", LoadUserProfile);
         } catch (JCNativeException jcne) {
@@ -249,9 +261,13 @@ public class ProcessStartInfo extends NetObject  {
 
     public boolean getRedirectStandardError() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRedirectStandardError = null;
         try {
-            return (boolean)classInstance.Get("RedirectStandardError");
+            retObjectRedirectStandardError = classInstance.Get("RedirectStandardError");
+            return (boolean)retObjectRedirectStandardError;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectRedirectStandardError != null ? retObjectRedirectStandardError.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -259,7 +275,7 @@ public class ProcessStartInfo extends NetObject  {
 
     public void setRedirectStandardError(boolean RedirectStandardError) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RedirectStandardError", RedirectStandardError);
         } catch (JCNativeException jcne) {
@@ -269,9 +285,13 @@ public class ProcessStartInfo extends NetObject  {
 
     public boolean getRedirectStandardInput() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRedirectStandardInput = null;
         try {
-            return (boolean)classInstance.Get("RedirectStandardInput");
+            retObjectRedirectStandardInput = classInstance.Get("RedirectStandardInput");
+            return (boolean)retObjectRedirectStandardInput;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectRedirectStandardInput != null ? retObjectRedirectStandardInput.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -279,7 +299,7 @@ public class ProcessStartInfo extends NetObject  {
 
     public void setRedirectStandardInput(boolean RedirectStandardInput) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RedirectStandardInput", RedirectStandardInput);
         } catch (JCNativeException jcne) {
@@ -289,9 +309,13 @@ public class ProcessStartInfo extends NetObject  {
 
     public boolean getRedirectStandardOutput() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRedirectStandardOutput = null;
         try {
-            return (boolean)classInstance.Get("RedirectStandardOutput");
+            retObjectRedirectStandardOutput = classInstance.Get("RedirectStandardOutput");
+            return (boolean)retObjectRedirectStandardOutput;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectRedirectStandardOutput != null ? retObjectRedirectStandardOutput.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -299,7 +323,7 @@ public class ProcessStartInfo extends NetObject  {
 
     public void setRedirectStandardOutput(boolean RedirectStandardOutput) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RedirectStandardOutput", RedirectStandardOutput);
         } catch (JCNativeException jcne) {
@@ -309,9 +333,13 @@ public class ProcessStartInfo extends NetObject  {
 
     public boolean getUseCredentialsForNetworkingOnly() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUseCredentialsForNetworkingOnly = null;
         try {
-            return (boolean)classInstance.Get("UseCredentialsForNetworkingOnly");
+            retObjectUseCredentialsForNetworkingOnly = classInstance.Get("UseCredentialsForNetworkingOnly");
+            return (boolean)retObjectUseCredentialsForNetworkingOnly;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectUseCredentialsForNetworkingOnly != null ? retObjectUseCredentialsForNetworkingOnly.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -319,7 +347,7 @@ public class ProcessStartInfo extends NetObject  {
 
     public void setUseCredentialsForNetworkingOnly(boolean UseCredentialsForNetworkingOnly) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UseCredentialsForNetworkingOnly", UseCredentialsForNetworkingOnly);
         } catch (JCNativeException jcne) {
@@ -329,9 +357,13 @@ public class ProcessStartInfo extends NetObject  {
 
     public boolean getUseShellExecute() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUseShellExecute = null;
         try {
-            return (boolean)classInstance.Get("UseShellExecute");
+            retObjectUseShellExecute = classInstance.Get("UseShellExecute");
+            return (boolean)retObjectUseShellExecute;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectUseShellExecute != null ? retObjectUseShellExecute.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -339,7 +371,7 @@ public class ProcessStartInfo extends NetObject  {
 
     public void setUseShellExecute(boolean UseShellExecute) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UseShellExecute", UseShellExecute);
         } catch (JCNativeException jcne) {
@@ -349,10 +381,14 @@ public class ProcessStartInfo extends NetObject  {
 
     public StringDictionary getEnvironmentVariables() throws Throwable, system.PlatformNotSupportedException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.ArgumentNullException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEnvironmentVariables = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("EnvironmentVariables");
+            retObjectEnvironmentVariables = classInstance.Get("EnvironmentVariables");
+            JCObject val = (JCObject)retObjectEnvironmentVariables;
             return new StringDictionary(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEnvironmentVariables != null ? retObjectEnvironmentVariables.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -360,10 +396,14 @@ public class ProcessStartInfo extends NetObject  {
 
     public ProcessWindowStyle getWindowStyle() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWindowStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("WindowStyle");
+            retObjectWindowStyle = classInstance.Get("WindowStyle");
+            JCObject val = (JCObject)retObjectWindowStyle;
             return new ProcessWindowStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWindowStyle != null ? retObjectWindowStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -371,7 +411,7 @@ public class ProcessStartInfo extends NetObject  {
 
     public void setWindowStyle(ProcessWindowStyle WindowStyle) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("WindowStyle", WindowStyle == null ? null : WindowStyle.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -381,10 +421,14 @@ public class ProcessStartInfo extends NetObject  {
 
     public SecureString getPassword() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPassword = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Password");
+            retObjectPassword = classInstance.Get("Password");
+            JCObject val = (JCObject)retObjectPassword;
             return new SecureString(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPassword != null ? retObjectPassword.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -392,7 +436,7 @@ public class ProcessStartInfo extends NetObject  {
 
     public void setPassword(SecureString Password) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Password", Password == null ? null : Password.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -402,9 +446,13 @@ public class ProcessStartInfo extends NetObject  {
 
     public java.lang.String getArguments() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectArguments = null;
         try {
-            return (java.lang.String)classInstance.Get("Arguments");
+            retObjectArguments = classInstance.Get("Arguments");
+            return (java.lang.String)retObjectArguments;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectArguments != null ? retObjectArguments.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -412,7 +460,7 @@ public class ProcessStartInfo extends NetObject  {
 
     public void setArguments(java.lang.String Arguments) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Arguments", Arguments);
         } catch (JCNativeException jcne) {
@@ -422,9 +470,13 @@ public class ProcessStartInfo extends NetObject  {
 
     public java.lang.String getDomain() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDomain = null;
         try {
-            return (java.lang.String)classInstance.Get("Domain");
+            retObjectDomain = classInstance.Get("Domain");
+            return (java.lang.String)retObjectDomain;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDomain != null ? retObjectDomain.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -432,7 +484,7 @@ public class ProcessStartInfo extends NetObject  {
 
     public void setDomain(java.lang.String Domain) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Domain", Domain);
         } catch (JCNativeException jcne) {
@@ -442,9 +494,13 @@ public class ProcessStartInfo extends NetObject  {
 
     public java.lang.String getFileName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFileName = null;
         try {
-            return (java.lang.String)classInstance.Get("FileName");
+            retObjectFileName = classInstance.Get("FileName");
+            return (java.lang.String)retObjectFileName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectFileName != null ? retObjectFileName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -452,7 +508,7 @@ public class ProcessStartInfo extends NetObject  {
 
     public void setFileName(java.lang.String FileName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FileName", FileName);
         } catch (JCNativeException jcne) {
@@ -462,9 +518,13 @@ public class ProcessStartInfo extends NetObject  {
 
     public java.lang.String getPasswordInClearText() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPasswordInClearText = null;
         try {
-            return (java.lang.String)classInstance.Get("PasswordInClearText");
+            retObjectPasswordInClearText = classInstance.Get("PasswordInClearText");
+            return (java.lang.String)retObjectPasswordInClearText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectPasswordInClearText != null ? retObjectPasswordInClearText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -472,7 +532,7 @@ public class ProcessStartInfo extends NetObject  {
 
     public void setPasswordInClearText(java.lang.String PasswordInClearText) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PasswordInClearText", PasswordInClearText);
         } catch (JCNativeException jcne) {
@@ -482,9 +542,13 @@ public class ProcessStartInfo extends NetObject  {
 
     public java.lang.String getUserName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUserName = null;
         try {
-            return (java.lang.String)classInstance.Get("UserName");
+            retObjectUserName = classInstance.Get("UserName");
+            return (java.lang.String)retObjectUserName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectUserName != null ? retObjectUserName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -492,7 +556,7 @@ public class ProcessStartInfo extends NetObject  {
 
     public void setUserName(java.lang.String UserName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UserName", UserName);
         } catch (JCNativeException jcne) {
@@ -502,9 +566,13 @@ public class ProcessStartInfo extends NetObject  {
 
     public java.lang.String getVerb() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVerb = null;
         try {
-            return (java.lang.String)classInstance.Get("Verb");
+            retObjectVerb = classInstance.Get("Verb");
+            return (java.lang.String)retObjectVerb;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectVerb != null ? retObjectVerb.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -512,7 +580,7 @@ public class ProcessStartInfo extends NetObject  {
 
     public void setVerb(java.lang.String Verb) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Verb", Verb);
         } catch (JCNativeException jcne) {
@@ -522,9 +590,13 @@ public class ProcessStartInfo extends NetObject  {
 
     public java.lang.String getWorkingDirectory() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWorkingDirectory = null;
         try {
-            return (java.lang.String)classInstance.Get("WorkingDirectory");
+            retObjectWorkingDirectory = classInstance.Get("WorkingDirectory");
+            return (java.lang.String)retObjectWorkingDirectory;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectWorkingDirectory != null ? retObjectWorkingDirectory.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -532,7 +604,7 @@ public class ProcessStartInfo extends NetObject  {
 
     public void setWorkingDirectory(java.lang.String WorkingDirectory) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("WorkingDirectory", WorkingDirectory);
         } catch (JCNativeException jcne) {
@@ -542,10 +614,12 @@ public class ProcessStartInfo extends NetObject  {
 
     public java.lang.String[] getVerbs() throws Throwable, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.ArgumentNullException, system.RankException, system.InvalidCastException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.InvalidOperationException, system.FormatException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.runtime.interopservices.ExternalException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVerbs = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("Verbs");
+            retObjectVerbs = classInstance.Get("Verbs");
+            JCObject resultingObjects = (JCObject)retObjectVerbs;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -554,6 +628,8 @@ public class ProcessStartInfo extends NetObject  {
 				resultingArray[indexVerbs] = (java.lang.String)resultingArrayList.get(indexVerbs);
 			}
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into JCObject", retObjectVerbs != null ? retObjectVerbs.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -561,10 +637,14 @@ public class ProcessStartInfo extends NetObject  {
 
     public Encoding getStandardErrorEncoding() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStandardErrorEncoding = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("StandardErrorEncoding");
+            retObjectStandardErrorEncoding = classInstance.Get("StandardErrorEncoding");
+            JCObject val = (JCObject)retObjectStandardErrorEncoding;
             return new Encoding(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStandardErrorEncoding != null ? retObjectStandardErrorEncoding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -572,7 +652,7 @@ public class ProcessStartInfo extends NetObject  {
 
     public void setStandardErrorEncoding(Encoding StandardErrorEncoding) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("StandardErrorEncoding", StandardErrorEncoding == null ? null : StandardErrorEncoding.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -582,10 +662,14 @@ public class ProcessStartInfo extends NetObject  {
 
     public Encoding getStandardInputEncoding() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStandardInputEncoding = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("StandardInputEncoding");
+            retObjectStandardInputEncoding = classInstance.Get("StandardInputEncoding");
+            JCObject val = (JCObject)retObjectStandardInputEncoding;
             return new Encoding(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStandardInputEncoding != null ? retObjectStandardInputEncoding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -593,7 +677,7 @@ public class ProcessStartInfo extends NetObject  {
 
     public void setStandardInputEncoding(Encoding StandardInputEncoding) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("StandardInputEncoding", StandardInputEncoding == null ? null : StandardInputEncoding.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -603,10 +687,14 @@ public class ProcessStartInfo extends NetObject  {
 
     public Encoding getStandardOutputEncoding() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStandardOutputEncoding = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("StandardOutputEncoding");
+            retObjectStandardOutputEncoding = classInstance.Get("StandardOutputEncoding");
+            JCObject val = (JCObject)retObjectStandardOutputEncoding;
             return new Encoding(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStandardOutputEncoding != null ? retObjectStandardOutputEncoding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -614,7 +702,7 @@ public class ProcessStartInfo extends NetObject  {
 
     public void setStandardOutputEncoding(Encoding StandardOutputEncoding) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("StandardOutputEncoding", StandardOutputEncoding == null ? null : StandardOutputEncoding.getJCOInstance());
         } catch (JCNativeException jcne) {

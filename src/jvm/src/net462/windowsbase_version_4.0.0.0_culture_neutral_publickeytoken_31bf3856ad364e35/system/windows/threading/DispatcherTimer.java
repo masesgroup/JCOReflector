@@ -195,7 +195,7 @@ public class DispatcherTimer extends NetObject  {
     
     public void Start() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Start");
         } catch (JCNativeException jcne) {
@@ -205,7 +205,7 @@ public class DispatcherTimer extends NetObject  {
 
     public void Stop() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidCastException, system.componentmodel.Win32Exception, system.componentmodel.InvalidEnumArgumentException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Stop");
         } catch (JCNativeException jcne) {
@@ -219,9 +219,13 @@ public class DispatcherTimer extends NetObject  {
     
     public boolean getIsEnabled() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsEnabled = null;
         try {
-            return (boolean)classInstance.Get("IsEnabled");
+            retObjectIsEnabled = classInstance.Get("IsEnabled");
+            return (boolean)retObjectIsEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsEnabled != null ? retObjectIsEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -229,7 +233,7 @@ public class DispatcherTimer extends NetObject  {
 
     public void setIsEnabled(boolean IsEnabled) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidCastException, system.componentmodel.Win32Exception, system.componentmodel.InvalidEnumArgumentException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsEnabled", IsEnabled);
         } catch (JCNativeException jcne) {
@@ -239,10 +243,14 @@ public class DispatcherTimer extends NetObject  {
 
     public NetObject getTag() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTag = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Tag");
+            retObjectTag = classInstance.Get("Tag");
+            JCObject val = (JCObject)retObjectTag;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTag != null ? retObjectTag.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -250,7 +258,7 @@ public class DispatcherTimer extends NetObject  {
 
     public void setTag(NetObject Tag) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Tag", Tag == null ? null : Tag.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -260,10 +268,14 @@ public class DispatcherTimer extends NetObject  {
 
     public TimeSpan getInterval() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInterval = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Interval");
+            retObjectInterval = classInstance.Get("Interval");
+            JCObject val = (JCObject)retObjectInterval;
             return new TimeSpan(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInterval != null ? retObjectInterval.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -271,7 +283,7 @@ public class DispatcherTimer extends NetObject  {
 
     public void setInterval(TimeSpan Interval) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.componentmodel.InvalidEnumArgumentException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Interval", Interval == null ? null : Interval.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -281,10 +293,14 @@ public class DispatcherTimer extends NetObject  {
 
     public Dispatcher getDispatcher() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDispatcher = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Dispatcher");
+            retObjectDispatcher = classInstance.Get("Dispatcher");
+            JCObject val = (JCObject)retObjectDispatcher;
             return new Dispatcher(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDispatcher != null ? retObjectDispatcher.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -297,7 +313,7 @@ public class DispatcherTimer extends NetObject  {
 
     public void addTick(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Tick", handler);
         } catch (JCNativeException jcne) {
@@ -307,7 +323,7 @@ public class DispatcherTimer extends NetObject  {
 
     public void removeTick(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Tick", handler);
         } catch (JCNativeException jcne) {

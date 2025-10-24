@@ -168,10 +168,14 @@ public class TransactedReceiveScope extends NativeActivity  {
     
     public Activity getBody() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBody = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Body");
+            retObjectBody = classInstance.Get("Body");
+            JCObject val = (JCObject)retObjectBody;
             return new Activity(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBody != null ? retObjectBody.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,7 +183,7 @@ public class TransactedReceiveScope extends NativeActivity  {
 
     public void setBody(Activity Body) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Body", Body == null ? null : Body.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -189,10 +193,14 @@ public class TransactedReceiveScope extends NativeActivity  {
 
     public Receive getRequest() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRequest = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Request");
+            retObjectRequest = classInstance.Get("Request");
+            JCObject val = (JCObject)retObjectRequest;
             return new Receive(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRequest != null ? retObjectRequest.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,7 +208,7 @@ public class TransactedReceiveScope extends NativeActivity  {
 
     public void setRequest(Receive Request) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Request", Request == null ? null : Request.getJCOInstance());
         } catch (JCNativeException jcne) {

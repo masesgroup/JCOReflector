@@ -178,7 +178,7 @@ public class FileLogTraceListener extends TraceListener  {
     
     public void Close() throws Throwable, system.ArgumentException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Close");
         } catch (JCNativeException jcne) {
@@ -188,7 +188,7 @@ public class FileLogTraceListener extends TraceListener  {
 
     public void Flush() throws Throwable, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Flush");
         } catch (JCNativeException jcne) {
@@ -198,7 +198,7 @@ public class FileLogTraceListener extends TraceListener  {
 
     public void TraceData(TraceEventCache eventCache, java.lang.String source, TraceEventType eventType, int id, NetObject data) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotSupportedException, system.InvalidOperationException, system.security.SecurityException, system.NullReferenceException, system.OverflowException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception, system.componentmodel.InvalidEnumArgumentException, system.deployment.application.InvalidDeploymentException, system.NotImplementedException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("TraceData", eventCache == null ? null : eventCache.getJCOInstance(), source, eventType == null ? null : eventType.getJCOInstance(), id, data == null ? null : data.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -208,7 +208,7 @@ public class FileLogTraceListener extends TraceListener  {
 
     public void TraceData(TraceEventCache eventCache, java.lang.String source, TraceEventType eventType, int id, NetObject... data) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotSupportedException, system.InvalidOperationException, system.security.SecurityException, system.NullReferenceException, system.OverflowException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception, system.componentmodel.InvalidEnumArgumentException, system.deployment.application.InvalidDeploymentException, system.NotImplementedException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("TraceData", eventCache == null ? null : eventCache.getJCOInstance(), source, eventType == null ? null : eventType.getJCOInstance(), id, toObjectFromArray(data));
         } catch (JCNativeException jcne) {
@@ -218,7 +218,7 @@ public class FileLogTraceListener extends TraceListener  {
 
     public void TraceEvent(TraceEventCache eventCache, java.lang.String source, TraceEventType eventType, int id, java.lang.String message) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotSupportedException, system.InvalidOperationException, system.security.SecurityException, system.NullReferenceException, system.OverflowException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception, system.componentmodel.InvalidEnumArgumentException, system.deployment.application.InvalidDeploymentException, system.MemberAccessException, system.NotImplementedException, system.io.FileNotFoundException, system.io.IOException, system.io.PathTooLongException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("TraceEvent", eventCache == null ? null : eventCache.getJCOInstance(), source, eventType == null ? null : eventType.getJCOInstance(), id, message);
         } catch (JCNativeException jcne) {
@@ -228,7 +228,7 @@ public class FileLogTraceListener extends TraceListener  {
 
     public void TraceEvent(TraceEventCache eventCache, java.lang.String source, TraceEventType eventType, int id, java.lang.String format, NetObject... args) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotSupportedException, system.InvalidOperationException, system.security.SecurityException, system.NullReferenceException, system.OverflowException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception, system.componentmodel.InvalidEnumArgumentException, system.deployment.application.InvalidDeploymentException, system.NotImplementedException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("TraceEvent", eventCache == null ? null : eventCache.getJCOInstance(), source, eventType == null ? null : eventType.getJCOInstance(), id, format, toObjectFromArray(args));
         } catch (JCNativeException jcne) {
@@ -238,7 +238,7 @@ public class FileLogTraceListener extends TraceListener  {
 
     public void Write(java.lang.String message) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.NotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.ObjectDisposedException, system.OverflowException, system.deployment.application.InvalidDeploymentException, system.NullReferenceException, system.PlatformNotSupportedException, system.NotImplementedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.FormatException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Write", message);
         } catch (JCNativeException jcne) {
@@ -248,7 +248,7 @@ public class FileLogTraceListener extends TraceListener  {
 
     public void WriteLine(java.lang.String message) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.NotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.ObjectDisposedException, system.OverflowException, system.deployment.application.InvalidDeploymentException, system.NullReferenceException, system.PlatformNotSupportedException, system.NotImplementedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.FormatException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteLine", message);
         } catch (JCNativeException jcne) {
@@ -262,9 +262,13 @@ public class FileLogTraceListener extends TraceListener  {
     
     public boolean getAppend() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.deployment.application.InvalidDeploymentException, system.NullReferenceException, system.MemberAccessException, system.NotImplementedException, system.security.SecurityException, system.io.FileNotFoundException, system.io.PathTooLongException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAppend = null;
         try {
-            return (boolean)classInstance.Get("Append");
+            retObjectAppend = classInstance.Get("Append");
+            return (boolean)retObjectAppend;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAppend != null ? retObjectAppend.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -272,7 +276,7 @@ public class FileLogTraceListener extends TraceListener  {
 
     public void setAppend(boolean Append) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.ObjectDisposedException, system.NotImplementedException, system.deployment.application.InvalidDeploymentException, system.PlatformNotSupportedException, system.NullReferenceException, system.MemberAccessException, system.io.PathTooLongException, system.io.FileNotFoundException, system.OverflowException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Append", Append);
         } catch (JCNativeException jcne) {
@@ -282,9 +286,13 @@ public class FileLogTraceListener extends TraceListener  {
 
     public boolean getAutoFlush() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.deployment.application.InvalidDeploymentException, system.NullReferenceException, system.MemberAccessException, system.NotImplementedException, system.security.SecurityException, system.io.FileNotFoundException, system.io.PathTooLongException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAutoFlush = null;
         try {
-            return (boolean)classInstance.Get("AutoFlush");
+            retObjectAutoFlush = classInstance.Get("AutoFlush");
+            return (boolean)retObjectAutoFlush;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAutoFlush != null ? retObjectAutoFlush.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -292,7 +300,7 @@ public class FileLogTraceListener extends TraceListener  {
 
     public void setAutoFlush(boolean AutoFlush) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.ObjectDisposedException, system.NotImplementedException, system.deployment.application.InvalidDeploymentException, system.PlatformNotSupportedException, system.NullReferenceException, system.MemberAccessException, system.io.PathTooLongException, system.io.FileNotFoundException, system.OverflowException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AutoFlush", AutoFlush);
         } catch (JCNativeException jcne) {
@@ -302,9 +310,13 @@ public class FileLogTraceListener extends TraceListener  {
 
     public boolean getIncludeHostName() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.deployment.application.InvalidDeploymentException, system.NullReferenceException, system.MemberAccessException, system.NotImplementedException, system.security.SecurityException, system.io.FileNotFoundException, system.io.PathTooLongException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIncludeHostName = null;
         try {
-            return (boolean)classInstance.Get("IncludeHostName");
+            retObjectIncludeHostName = classInstance.Get("IncludeHostName");
+            return (boolean)retObjectIncludeHostName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIncludeHostName != null ? retObjectIncludeHostName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -312,7 +324,7 @@ public class FileLogTraceListener extends TraceListener  {
 
     public void setIncludeHostName(boolean IncludeHostName) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.ObjectDisposedException, system.NotImplementedException, system.deployment.application.InvalidDeploymentException, system.PlatformNotSupportedException, system.NullReferenceException, system.MemberAccessException, system.io.PathTooLongException, system.io.FileNotFoundException, system.OverflowException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IncludeHostName", IncludeHostName);
         } catch (JCNativeException jcne) {
@@ -322,9 +334,20 @@ public class FileLogTraceListener extends TraceListener  {
 
     public long getMaxFileSize() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.OverflowException, system.componentmodel.InvalidEnumArgumentException, system.deployment.application.InvalidDeploymentException, system.NullReferenceException, system.MemberAccessException, system.NotImplementedException, system.security.SecurityException, system.io.FileNotFoundException, system.io.PathTooLongException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxFileSize = null;
         try {
-            return (long)classInstance.Get("MaxFileSize");
+            retObjectMaxFileSize = classInstance.Get("MaxFileSize");
+            return (long)retObjectMaxFileSize;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaxFileSize_ToString = retObjectMaxFileSize == null ? "null" : retObjectMaxFileSize.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMaxFileSizeNumber = (java.lang.Number)retObjectMaxFileSize;
+                return retObjectMaxFileSizeNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectMaxFileSize != null ? retObjectMaxFileSize.getClass() : "null", retObjectMaxFileSize_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -332,7 +355,7 @@ public class FileLogTraceListener extends TraceListener  {
 
     public void setMaxFileSize(long MaxFileSize) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.ObjectDisposedException, system.NotImplementedException, system.deployment.application.InvalidDeploymentException, system.PlatformNotSupportedException, system.NullReferenceException, system.MemberAccessException, system.io.PathTooLongException, system.io.FileNotFoundException, system.OverflowException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaxFileSize", MaxFileSize);
         } catch (JCNativeException jcne) {
@@ -342,9 +365,20 @@ public class FileLogTraceListener extends TraceListener  {
 
     public long getReserveDiskSpace() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.OverflowException, system.componentmodel.InvalidEnumArgumentException, system.deployment.application.InvalidDeploymentException, system.NullReferenceException, system.MemberAccessException, system.NotImplementedException, system.security.SecurityException, system.io.FileNotFoundException, system.io.PathTooLongException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReserveDiskSpace = null;
         try {
-            return (long)classInstance.Get("ReserveDiskSpace");
+            retObjectReserveDiskSpace = classInstance.Get("ReserveDiskSpace");
+            return (long)retObjectReserveDiskSpace;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectReserveDiskSpace_ToString = retObjectReserveDiskSpace == null ? "null" : retObjectReserveDiskSpace.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectReserveDiskSpaceNumber = (java.lang.Number)retObjectReserveDiskSpace;
+                return retObjectReserveDiskSpaceNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectReserveDiskSpace != null ? retObjectReserveDiskSpace.getClass() : "null", retObjectReserveDiskSpace_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -352,7 +386,7 @@ public class FileLogTraceListener extends TraceListener  {
 
     public void setReserveDiskSpace(long ReserveDiskSpace) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.ObjectDisposedException, system.NotImplementedException, system.deployment.application.InvalidDeploymentException, system.PlatformNotSupportedException, system.NullReferenceException, system.MemberAccessException, system.io.PathTooLongException, system.io.FileNotFoundException, system.OverflowException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ReserveDiskSpace", ReserveDiskSpace);
         } catch (JCNativeException jcne) {
@@ -362,10 +396,14 @@ public class FileLogTraceListener extends TraceListener  {
 
     public DiskSpaceExhaustedOption getDiskSpaceExhaustedBehavior() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.security.SecurityException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.componentmodel.InvalidEnumArgumentException, system.deployment.application.InvalidDeploymentException, system.NullReferenceException, system.MemberAccessException, system.io.FileNotFoundException, system.io.PathTooLongException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDiskSpaceExhaustedBehavior = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DiskSpaceExhaustedBehavior");
+            retObjectDiskSpaceExhaustedBehavior = classInstance.Get("DiskSpaceExhaustedBehavior");
+            JCObject val = (JCObject)retObjectDiskSpaceExhaustedBehavior;
             return new DiskSpaceExhaustedOption(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDiskSpaceExhaustedBehavior != null ? retObjectDiskSpaceExhaustedBehavior.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -373,7 +411,7 @@ public class FileLogTraceListener extends TraceListener  {
 
     public void setDiskSpaceExhaustedBehavior(DiskSpaceExhaustedOption DiskSpaceExhaustedBehavior) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.ObjectDisposedException, system.NotImplementedException, system.deployment.application.InvalidDeploymentException, system.PlatformNotSupportedException, system.NullReferenceException, system.MemberAccessException, system.io.PathTooLongException, system.io.FileNotFoundException, system.OverflowException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DiskSpaceExhaustedBehavior", DiskSpaceExhaustedBehavior == null ? null : DiskSpaceExhaustedBehavior.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -383,10 +421,14 @@ public class FileLogTraceListener extends TraceListener  {
 
     public LogFileCreationScheduleOption getLogFileCreationSchedule() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.security.SecurityException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLogFileCreationSchedule = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("LogFileCreationSchedule");
+            retObjectLogFileCreationSchedule = classInstance.Get("LogFileCreationSchedule");
+            JCObject val = (JCObject)retObjectLogFileCreationSchedule;
             return new LogFileCreationScheduleOption(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLogFileCreationSchedule != null ? retObjectLogFileCreationSchedule.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -394,7 +436,7 @@ public class FileLogTraceListener extends TraceListener  {
 
     public void setLogFileCreationSchedule(LogFileCreationScheduleOption LogFileCreationSchedule) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("LogFileCreationSchedule", LogFileCreationSchedule == null ? null : LogFileCreationSchedule.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -404,10 +446,14 @@ public class FileLogTraceListener extends TraceListener  {
 
     public LogFileLocation getLocation() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.security.SecurityException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLocation = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Location");
+            retObjectLocation = classInstance.Get("Location");
+            JCObject val = (JCObject)retObjectLocation;
             return new LogFileLocation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLocation != null ? retObjectLocation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -415,7 +461,7 @@ public class FileLogTraceListener extends TraceListener  {
 
     public void setLocation(LogFileLocation Location) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Location", Location == null ? null : Location.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -425,9 +471,13 @@ public class FileLogTraceListener extends TraceListener  {
 
     public java.lang.String getBaseFileName() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.io.PathTooLongException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBaseFileName = null;
         try {
-            return (java.lang.String)classInstance.Get("BaseFileName");
+            retObjectBaseFileName = classInstance.Get("BaseFileName");
+            return (java.lang.String)retObjectBaseFileName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectBaseFileName != null ? retObjectBaseFileName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -435,7 +485,7 @@ public class FileLogTraceListener extends TraceListener  {
 
     public void setBaseFileName(java.lang.String BaseFileName) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BaseFileName", BaseFileName);
         } catch (JCNativeException jcne) {
@@ -445,9 +495,13 @@ public class FileLogTraceListener extends TraceListener  {
 
     public java.lang.String getCustomLocation() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.io.PathTooLongException, system.InvalidOperationException, system.io.IOException, system.resources.MissingManifestResourceException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCustomLocation = null;
         try {
-            return (java.lang.String)classInstance.Get("CustomLocation");
+            retObjectCustomLocation = classInstance.Get("CustomLocation");
+            return (java.lang.String)retObjectCustomLocation;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectCustomLocation != null ? retObjectCustomLocation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -455,7 +509,7 @@ public class FileLogTraceListener extends TraceListener  {
 
     public void setCustomLocation(java.lang.String CustomLocation) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.io.PathTooLongException, system.ArgumentOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.InvalidOperationException, system.NotSupportedException, system.security.SecurityException, system.ObjectDisposedException, system.resources.MissingManifestResourceException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CustomLocation", CustomLocation);
         } catch (JCNativeException jcne) {
@@ -465,9 +519,13 @@ public class FileLogTraceListener extends TraceListener  {
 
     public java.lang.String getDelimiter() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDelimiter = null;
         try {
-            return (java.lang.String)classInstance.Get("Delimiter");
+            retObjectDelimiter = classInstance.Get("Delimiter");
+            return (java.lang.String)retObjectDelimiter;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDelimiter != null ? retObjectDelimiter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -475,7 +533,7 @@ public class FileLogTraceListener extends TraceListener  {
 
     public void setDelimiter(java.lang.String Delimiter) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Delimiter", Delimiter);
         } catch (JCNativeException jcne) {
@@ -485,9 +543,13 @@ public class FileLogTraceListener extends TraceListener  {
 
     public java.lang.String getFullLogFileName() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.deployment.application.InvalidDeploymentException, system.NullReferenceException, system.MemberAccessException, system.IndexOutOfRangeException, system.NotImplementedException, system.security.SecurityException, system.io.FileNotFoundException, system.io.PathTooLongException, system.OverflowException, system.FormatException, system.collections.generic.KeyNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFullLogFileName = null;
         try {
-            return (java.lang.String)classInstance.Get("FullLogFileName");
+            retObjectFullLogFileName = classInstance.Get("FullLogFileName");
+            return (java.lang.String)retObjectFullLogFileName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectFullLogFileName != null ? retObjectFullLogFileName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -495,10 +557,14 @@ public class FileLogTraceListener extends TraceListener  {
 
     public Encoding getEncoding() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.NotImplementedException, system.resources.MissingManifestResourceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEncoding = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Encoding");
+            retObjectEncoding = classInstance.Get("Encoding");
+            JCObject val = (JCObject)retObjectEncoding;
             return new Encoding(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEncoding != null ? retObjectEncoding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -506,7 +572,7 @@ public class FileLogTraceListener extends TraceListener  {
 
     public void setEncoding(Encoding Encoding) throws Throwable, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Encoding", Encoding == null ? null : Encoding.getJCOInstance());
         } catch (JCNativeException jcne) {

@@ -170,9 +170,13 @@ public class Complex extends ValueType  {
     
     public boolean Equals(Complex value) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEquals = null;
         try {
-            return (boolean)classInstance.Invoke("Equals", value == null ? null : value.getJCOInstance());
+            retObjectEquals = classInstance.Invoke("Equals", value == null ? null : value.getJCOInstance());
+            return (boolean)retObjectEquals;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectEquals != null ? retObjectEquals.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,9 +184,13 @@ public class Complex extends ValueType  {
 
     public static boolean IsComplexNumber(Complex value) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsComplexNumber = null;
         try {
-            return (boolean)classType.Invoke("IsComplexNumber", value == null ? null : value.getJCOInstance());
+            retObjectIsComplexNumber = classType.Invoke("IsComplexNumber", value == null ? null : value.getJCOInstance());
+            return (boolean)retObjectIsComplexNumber;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsComplexNumber != null ? retObjectIsComplexNumber.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,9 +198,13 @@ public class Complex extends ValueType  {
 
     public static boolean IsEvenInteger(Complex value) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsEvenInteger = null;
         try {
-            return (boolean)classType.Invoke("IsEvenInteger", value == null ? null : value.getJCOInstance());
+            retObjectIsEvenInteger = classType.Invoke("IsEvenInteger", value == null ? null : value.getJCOInstance());
+            return (boolean)retObjectIsEvenInteger;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsEvenInteger != null ? retObjectIsEvenInteger.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,9 +212,13 @@ public class Complex extends ValueType  {
 
     public static boolean IsFinite(Complex value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsFinite = null;
         try {
-            return (boolean)classType.Invoke("IsFinite", value == null ? null : value.getJCOInstance());
+            retObjectIsFinite = classType.Invoke("IsFinite", value == null ? null : value.getJCOInstance());
+            return (boolean)retObjectIsFinite;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsFinite != null ? retObjectIsFinite.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -210,9 +226,13 @@ public class Complex extends ValueType  {
 
     public static boolean IsImaginaryNumber(Complex value) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsImaginaryNumber = null;
         try {
-            return (boolean)classType.Invoke("IsImaginaryNumber", value == null ? null : value.getJCOInstance());
+            retObjectIsImaginaryNumber = classType.Invoke("IsImaginaryNumber", value == null ? null : value.getJCOInstance());
+            return (boolean)retObjectIsImaginaryNumber;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsImaginaryNumber != null ? retObjectIsImaginaryNumber.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -220,9 +240,13 @@ public class Complex extends ValueType  {
 
     public static boolean IsInfinity(Complex value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsInfinity = null;
         try {
-            return (boolean)classType.Invoke("IsInfinity", value == null ? null : value.getJCOInstance());
+            retObjectIsInfinity = classType.Invoke("IsInfinity", value == null ? null : value.getJCOInstance());
+            return (boolean)retObjectIsInfinity;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsInfinity != null ? retObjectIsInfinity.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -230,9 +254,13 @@ public class Complex extends ValueType  {
 
     public static boolean IsInteger(Complex value) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsInteger = null;
         try {
-            return (boolean)classType.Invoke("IsInteger", value == null ? null : value.getJCOInstance());
+            retObjectIsInteger = classType.Invoke("IsInteger", value == null ? null : value.getJCOInstance());
+            return (boolean)retObjectIsInteger;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsInteger != null ? retObjectIsInteger.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -240,9 +268,13 @@ public class Complex extends ValueType  {
 
     public static boolean IsNaN(Complex value) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsNaN = null;
         try {
-            return (boolean)classType.Invoke("IsNaN", value == null ? null : value.getJCOInstance());
+            retObjectIsNaN = classType.Invoke("IsNaN", value == null ? null : value.getJCOInstance());
+            return (boolean)retObjectIsNaN;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsNaN != null ? retObjectIsNaN.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -250,9 +282,13 @@ public class Complex extends ValueType  {
 
     public static boolean IsNegative(Complex value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsNegative = null;
         try {
-            return (boolean)classType.Invoke("IsNegative", value == null ? null : value.getJCOInstance());
+            retObjectIsNegative = classType.Invoke("IsNegative", value == null ? null : value.getJCOInstance());
+            return (boolean)retObjectIsNegative;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsNegative != null ? retObjectIsNegative.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -260,9 +296,13 @@ public class Complex extends ValueType  {
 
     public static boolean IsNegativeInfinity(Complex value) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsNegativeInfinity = null;
         try {
-            return (boolean)classType.Invoke("IsNegativeInfinity", value == null ? null : value.getJCOInstance());
+            retObjectIsNegativeInfinity = classType.Invoke("IsNegativeInfinity", value == null ? null : value.getJCOInstance());
+            return (boolean)retObjectIsNegativeInfinity;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsNegativeInfinity != null ? retObjectIsNegativeInfinity.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -270,9 +310,13 @@ public class Complex extends ValueType  {
 
     public static boolean IsNormal(Complex value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsNormal = null;
         try {
-            return (boolean)classType.Invoke("IsNormal", value == null ? null : value.getJCOInstance());
+            retObjectIsNormal = classType.Invoke("IsNormal", value == null ? null : value.getJCOInstance());
+            return (boolean)retObjectIsNormal;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsNormal != null ? retObjectIsNormal.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -280,9 +324,13 @@ public class Complex extends ValueType  {
 
     public static boolean IsOddInteger(Complex value) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsOddInteger = null;
         try {
-            return (boolean)classType.Invoke("IsOddInteger", value == null ? null : value.getJCOInstance());
+            retObjectIsOddInteger = classType.Invoke("IsOddInteger", value == null ? null : value.getJCOInstance());
+            return (boolean)retObjectIsOddInteger;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsOddInteger != null ? retObjectIsOddInteger.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -290,9 +338,13 @@ public class Complex extends ValueType  {
 
     public static boolean IsPositive(Complex value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsPositive = null;
         try {
-            return (boolean)classType.Invoke("IsPositive", value == null ? null : value.getJCOInstance());
+            retObjectIsPositive = classType.Invoke("IsPositive", value == null ? null : value.getJCOInstance());
+            return (boolean)retObjectIsPositive;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsPositive != null ? retObjectIsPositive.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -300,9 +352,13 @@ public class Complex extends ValueType  {
 
     public static boolean IsPositiveInfinity(Complex value) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsPositiveInfinity = null;
         try {
-            return (boolean)classType.Invoke("IsPositiveInfinity", value == null ? null : value.getJCOInstance());
+            retObjectIsPositiveInfinity = classType.Invoke("IsPositiveInfinity", value == null ? null : value.getJCOInstance());
+            return (boolean)retObjectIsPositiveInfinity;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsPositiveInfinity != null ? retObjectIsPositiveInfinity.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -310,9 +366,13 @@ public class Complex extends ValueType  {
 
     public static boolean IsRealNumber(Complex value) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsRealNumber = null;
         try {
-            return (boolean)classType.Invoke("IsRealNumber", value == null ? null : value.getJCOInstance());
+            retObjectIsRealNumber = classType.Invoke("IsRealNumber", value == null ? null : value.getJCOInstance());
+            return (boolean)retObjectIsRealNumber;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsRealNumber != null ? retObjectIsRealNumber.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -320,9 +380,13 @@ public class Complex extends ValueType  {
 
     public static boolean IsSubnormal(Complex value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsSubnormal = null;
         try {
-            return (boolean)classType.Invoke("IsSubnormal", value == null ? null : value.getJCOInstance());
+            retObjectIsSubnormal = classType.Invoke("IsSubnormal", value == null ? null : value.getJCOInstance());
+            return (boolean)retObjectIsSubnormal;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsSubnormal != null ? retObjectIsSubnormal.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -330,9 +394,13 @@ public class Complex extends ValueType  {
 
     public static boolean TryParse(java.lang.String s, NumberStyles style, IFormatProvider provider, JCORefOut<Complex> result) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.NullReferenceException, system.OverflowException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTryParse = null;
         try {
-            return (boolean)classType.Invoke("TryParse", s, style == null ? null : style.getJCOInstance(), provider == null ? null : provider.getJCOInstance(), result.getJCRefOut());
+            retObjectTryParse = classType.Invoke("TryParse", s, style == null ? null : style.getJCOInstance(), provider == null ? null : provider.getJCOInstance(), result.getJCRefOut());
+            return (boolean)retObjectTryParse;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryParse != null ? retObjectTryParse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -340,9 +408,13 @@ public class Complex extends ValueType  {
 
     public static boolean TryParse(java.lang.String s, IFormatProvider provider, JCORefOut<Complex> result) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NullReferenceException, system.globalization.CultureNotFoundException, system.OverflowException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTryParse = null;
         try {
-            return (boolean)classType.Invoke("TryParse", s, provider == null ? null : provider.getJCOInstance(), result.getJCRefOut());
+            retObjectTryParse = classType.Invoke("TryParse", s, provider == null ? null : provider.getJCOInstance(), result.getJCRefOut());
+            return (boolean)retObjectTryParse;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryParse != null ? retObjectTryParse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -350,9 +422,20 @@ public class Complex extends ValueType  {
 
     public static double Abs(Complex value) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAbs = null;
         try {
-            return (double)classType.Invoke("Abs", value == null ? null : value.getJCOInstance());
+            retObjectAbs = classType.Invoke("Abs", value == null ? null : value.getJCOInstance());
+            return (double)retObjectAbs;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectAbs_ToString = retObjectAbs == null ? "null" : retObjectAbs.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectAbsNumber = (java.lang.Number)retObjectAbs;
+                return retObjectAbsNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectAbs != null ? retObjectAbs.getClass() : "null", retObjectAbs_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -360,10 +443,14 @@ public class Complex extends ValueType  {
 
     public static Complex Acos(Complex value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAcos = null;
         try {
-            JCObject objAcos = (JCObject)classType.Invoke("Acos", value == null ? null : value.getJCOInstance());
+            retObjectAcos = classType.Invoke("Acos", value == null ? null : value.getJCOInstance());
+            JCObject objAcos = (JCObject)retObjectAcos;
             return new Complex(objAcos);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAcos != null ? retObjectAcos.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -371,10 +458,14 @@ public class Complex extends ValueType  {
 
     public static Complex Add(double left, Complex right) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAdd = null;
         try {
-            JCObject objAdd = (JCObject)classType.Invoke("Add", left, right == null ? null : right.getJCOInstance());
+            retObjectAdd = classType.Invoke("Add", left, right == null ? null : right.getJCOInstance());
+            JCObject objAdd = (JCObject)retObjectAdd;
             return new Complex(objAdd);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAdd != null ? retObjectAdd.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -382,10 +473,14 @@ public class Complex extends ValueType  {
 
     public static Complex Add(Complex left, double right) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAdd = null;
         try {
-            JCObject objAdd = (JCObject)classType.Invoke("Add", left == null ? null : left.getJCOInstance(), right);
+            retObjectAdd = classType.Invoke("Add", left == null ? null : left.getJCOInstance(), right);
+            JCObject objAdd = (JCObject)retObjectAdd;
             return new Complex(objAdd);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAdd != null ? retObjectAdd.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -393,10 +488,14 @@ public class Complex extends ValueType  {
 
     public static Complex Add(Complex left, Complex right) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAdd = null;
         try {
-            JCObject objAdd = (JCObject)classType.Invoke("Add", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            retObjectAdd = classType.Invoke("Add", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            JCObject objAdd = (JCObject)retObjectAdd;
             return new Complex(objAdd);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAdd != null ? retObjectAdd.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -404,10 +503,14 @@ public class Complex extends ValueType  {
 
     public static Complex Asin(Complex value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAsin = null;
         try {
-            JCObject objAsin = (JCObject)classType.Invoke("Asin", value == null ? null : value.getJCOInstance());
+            retObjectAsin = classType.Invoke("Asin", value == null ? null : value.getJCOInstance());
+            JCObject objAsin = (JCObject)retObjectAsin;
             return new Complex(objAsin);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAsin != null ? retObjectAsin.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -415,10 +518,14 @@ public class Complex extends ValueType  {
 
     public static Complex Atan(Complex value) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAtan = null;
         try {
-            JCObject objAtan = (JCObject)classType.Invoke("Atan", value == null ? null : value.getJCOInstance());
+            retObjectAtan = classType.Invoke("Atan", value == null ? null : value.getJCOInstance());
+            JCObject objAtan = (JCObject)retObjectAtan;
             return new Complex(objAtan);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAtan != null ? retObjectAtan.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -426,10 +533,14 @@ public class Complex extends ValueType  {
 
     public static Complex Conjugate(Complex value) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectConjugate = null;
         try {
-            JCObject objConjugate = (JCObject)classType.Invoke("Conjugate", value == null ? null : value.getJCOInstance());
+            retObjectConjugate = classType.Invoke("Conjugate", value == null ? null : value.getJCOInstance());
+            JCObject objConjugate = (JCObject)retObjectConjugate;
             return new Complex(objConjugate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConjugate != null ? retObjectConjugate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -437,10 +548,14 @@ public class Complex extends ValueType  {
 
     public static Complex Cos(Complex value) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCos = null;
         try {
-            JCObject objCos = (JCObject)classType.Invoke("Cos", value == null ? null : value.getJCOInstance());
+            retObjectCos = classType.Invoke("Cos", value == null ? null : value.getJCOInstance());
+            JCObject objCos = (JCObject)retObjectCos;
             return new Complex(objCos);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCos != null ? retObjectCos.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -448,10 +563,14 @@ public class Complex extends ValueType  {
 
     public static Complex Cosh(Complex value) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCosh = null;
         try {
-            JCObject objCosh = (JCObject)classType.Invoke("Cosh", value == null ? null : value.getJCOInstance());
+            retObjectCosh = classType.Invoke("Cosh", value == null ? null : value.getJCOInstance());
+            JCObject objCosh = (JCObject)retObjectCosh;
             return new Complex(objCosh);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCosh != null ? retObjectCosh.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -459,10 +578,14 @@ public class Complex extends ValueType  {
 
     public static Complex Divide(double dividend, Complex divisor) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDivide = null;
         try {
-            JCObject objDivide = (JCObject)classType.Invoke("Divide", dividend, divisor == null ? null : divisor.getJCOInstance());
+            retObjectDivide = classType.Invoke("Divide", dividend, divisor == null ? null : divisor.getJCOInstance());
+            JCObject objDivide = (JCObject)retObjectDivide;
             return new Complex(objDivide);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDivide != null ? retObjectDivide.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -470,10 +593,14 @@ public class Complex extends ValueType  {
 
     public static Complex Divide(Complex dividend, double divisor) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDivide = null;
         try {
-            JCObject objDivide = (JCObject)classType.Invoke("Divide", dividend == null ? null : dividend.getJCOInstance(), divisor);
+            retObjectDivide = classType.Invoke("Divide", dividend == null ? null : dividend.getJCOInstance(), divisor);
+            JCObject objDivide = (JCObject)retObjectDivide;
             return new Complex(objDivide);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDivide != null ? retObjectDivide.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -481,10 +608,14 @@ public class Complex extends ValueType  {
 
     public static Complex Divide(Complex dividend, Complex divisor) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDivide = null;
         try {
-            JCObject objDivide = (JCObject)classType.Invoke("Divide", dividend == null ? null : dividend.getJCOInstance(), divisor == null ? null : divisor.getJCOInstance());
+            retObjectDivide = classType.Invoke("Divide", dividend == null ? null : dividend.getJCOInstance(), divisor == null ? null : divisor.getJCOInstance());
+            JCObject objDivide = (JCObject)retObjectDivide;
             return new Complex(objDivide);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDivide != null ? retObjectDivide.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -492,10 +623,14 @@ public class Complex extends ValueType  {
 
     public static Complex Exp(Complex value) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectExp = null;
         try {
-            JCObject objExp = (JCObject)classType.Invoke("Exp", value == null ? null : value.getJCOInstance());
+            retObjectExp = classType.Invoke("Exp", value == null ? null : value.getJCOInstance());
+            JCObject objExp = (JCObject)retObjectExp;
             return new Complex(objExp);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExp != null ? retObjectExp.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -503,10 +638,14 @@ public class Complex extends ValueType  {
 
     public static Complex FromPolarCoordinates(double magnitude, double phase) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFromPolarCoordinates = null;
         try {
-            JCObject objFromPolarCoordinates = (JCObject)classType.Invoke("FromPolarCoordinates", magnitude, phase);
+            retObjectFromPolarCoordinates = classType.Invoke("FromPolarCoordinates", magnitude, phase);
+            JCObject objFromPolarCoordinates = (JCObject)retObjectFromPolarCoordinates;
             return new Complex(objFromPolarCoordinates);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFromPolarCoordinates != null ? retObjectFromPolarCoordinates.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -514,10 +653,14 @@ public class Complex extends ValueType  {
 
     public static Complex Log(Complex value, double baseValue) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLog = null;
         try {
-            JCObject objLog = (JCObject)classType.Invoke("Log", value == null ? null : value.getJCOInstance(), baseValue);
+            retObjectLog = classType.Invoke("Log", value == null ? null : value.getJCOInstance(), baseValue);
+            JCObject objLog = (JCObject)retObjectLog;
             return new Complex(objLog);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLog != null ? retObjectLog.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -525,10 +668,14 @@ public class Complex extends ValueType  {
 
     public static Complex Log(Complex value) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLog = null;
         try {
-            JCObject objLog = (JCObject)classType.Invoke("Log", value == null ? null : value.getJCOInstance());
+            retObjectLog = classType.Invoke("Log", value == null ? null : value.getJCOInstance());
+            JCObject objLog = (JCObject)retObjectLog;
             return new Complex(objLog);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLog != null ? retObjectLog.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -536,10 +683,14 @@ public class Complex extends ValueType  {
 
     public static Complex Log10(Complex value) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLog10 = null;
         try {
-            JCObject objLog10 = (JCObject)classType.Invoke("Log10", value == null ? null : value.getJCOInstance());
+            retObjectLog10 = classType.Invoke("Log10", value == null ? null : value.getJCOInstance());
+            JCObject objLog10 = (JCObject)retObjectLog10;
             return new Complex(objLog10);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLog10 != null ? retObjectLog10.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -547,10 +698,14 @@ public class Complex extends ValueType  {
 
     public static Complex MaxMagnitude(Complex x, Complex y) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMaxMagnitude = null;
         try {
-            JCObject objMaxMagnitude = (JCObject)classType.Invoke("MaxMagnitude", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            retObjectMaxMagnitude = classType.Invoke("MaxMagnitude", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            JCObject objMaxMagnitude = (JCObject)retObjectMaxMagnitude;
             return new Complex(objMaxMagnitude);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMaxMagnitude != null ? retObjectMaxMagnitude.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -558,10 +713,14 @@ public class Complex extends ValueType  {
 
     public static Complex MinMagnitude(Complex x, Complex y) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMinMagnitude = null;
         try {
-            JCObject objMinMagnitude = (JCObject)classType.Invoke("MinMagnitude", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            retObjectMinMagnitude = classType.Invoke("MinMagnitude", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            JCObject objMinMagnitude = (JCObject)retObjectMinMagnitude;
             return new Complex(objMinMagnitude);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMinMagnitude != null ? retObjectMinMagnitude.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -569,10 +728,14 @@ public class Complex extends ValueType  {
 
     public static Complex Multiply(double left, Complex right) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMultiply = null;
         try {
-            JCObject objMultiply = (JCObject)classType.Invoke("Multiply", left, right == null ? null : right.getJCOInstance());
+            retObjectMultiply = classType.Invoke("Multiply", left, right == null ? null : right.getJCOInstance());
+            JCObject objMultiply = (JCObject)retObjectMultiply;
             return new Complex(objMultiply);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMultiply != null ? retObjectMultiply.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -580,10 +743,14 @@ public class Complex extends ValueType  {
 
     public static Complex Multiply(Complex left, double right) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMultiply = null;
         try {
-            JCObject objMultiply = (JCObject)classType.Invoke("Multiply", left == null ? null : left.getJCOInstance(), right);
+            retObjectMultiply = classType.Invoke("Multiply", left == null ? null : left.getJCOInstance(), right);
+            JCObject objMultiply = (JCObject)retObjectMultiply;
             return new Complex(objMultiply);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMultiply != null ? retObjectMultiply.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -591,10 +758,14 @@ public class Complex extends ValueType  {
 
     public static Complex Multiply(Complex left, Complex right) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMultiply = null;
         try {
-            JCObject objMultiply = (JCObject)classType.Invoke("Multiply", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            retObjectMultiply = classType.Invoke("Multiply", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            JCObject objMultiply = (JCObject)retObjectMultiply;
             return new Complex(objMultiply);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMultiply != null ? retObjectMultiply.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -602,10 +773,14 @@ public class Complex extends ValueType  {
 
     public static Complex Negate(Complex value) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectNegate = null;
         try {
-            JCObject objNegate = (JCObject)classType.Invoke("Negate", value == null ? null : value.getJCOInstance());
+            retObjectNegate = classType.Invoke("Negate", value == null ? null : value.getJCOInstance());
+            JCObject objNegate = (JCObject)retObjectNegate;
             return new Complex(objNegate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNegate != null ? retObjectNegate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -613,10 +788,14 @@ public class Complex extends ValueType  {
 
     public static Complex Parse(java.lang.String s, NumberStyles style, IFormatProvider provider) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.NullReferenceException, system.globalization.CultureNotFoundException, system.OverflowException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectParse = null;
         try {
-            JCObject objParse = (JCObject)classType.Invoke("Parse", s, style == null ? null : style.getJCOInstance(), provider == null ? null : provider.getJCOInstance());
+            retObjectParse = classType.Invoke("Parse", s, style == null ? null : style.getJCOInstance(), provider == null ? null : provider.getJCOInstance());
+            JCObject objParse = (JCObject)retObjectParse;
             return new Complex(objParse);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParse != null ? retObjectParse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -624,10 +803,14 @@ public class Complex extends ValueType  {
 
     public static Complex Parse(java.lang.String s, IFormatProvider provider) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.OverflowException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectParse = null;
         try {
-            JCObject objParse = (JCObject)classType.Invoke("Parse", s, provider == null ? null : provider.getJCOInstance());
+            retObjectParse = classType.Invoke("Parse", s, provider == null ? null : provider.getJCOInstance());
+            JCObject objParse = (JCObject)retObjectParse;
             return new Complex(objParse);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParse != null ? retObjectParse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -635,10 +818,14 @@ public class Complex extends ValueType  {
 
     public static Complex Pow(Complex value, double power) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectPow = null;
         try {
-            JCObject objPow = (JCObject)classType.Invoke("Pow", value == null ? null : value.getJCOInstance(), power);
+            retObjectPow = classType.Invoke("Pow", value == null ? null : value.getJCOInstance(), power);
+            JCObject objPow = (JCObject)retObjectPow;
             return new Complex(objPow);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPow != null ? retObjectPow.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -646,10 +833,14 @@ public class Complex extends ValueType  {
 
     public static Complex Pow(Complex value, Complex power) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectPow = null;
         try {
-            JCObject objPow = (JCObject)classType.Invoke("Pow", value == null ? null : value.getJCOInstance(), power == null ? null : power.getJCOInstance());
+            retObjectPow = classType.Invoke("Pow", value == null ? null : value.getJCOInstance(), power == null ? null : power.getJCOInstance());
+            JCObject objPow = (JCObject)retObjectPow;
             return new Complex(objPow);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPow != null ? retObjectPow.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -657,10 +848,14 @@ public class Complex extends ValueType  {
 
     public static Complex Reciprocal(Complex value) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectReciprocal = null;
         try {
-            JCObject objReciprocal = (JCObject)classType.Invoke("Reciprocal", value == null ? null : value.getJCOInstance());
+            retObjectReciprocal = classType.Invoke("Reciprocal", value == null ? null : value.getJCOInstance());
+            JCObject objReciprocal = (JCObject)retObjectReciprocal;
             return new Complex(objReciprocal);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReciprocal != null ? retObjectReciprocal.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -668,10 +863,14 @@ public class Complex extends ValueType  {
 
     public static Complex Sin(Complex value) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSin = null;
         try {
-            JCObject objSin = (JCObject)classType.Invoke("Sin", value == null ? null : value.getJCOInstance());
+            retObjectSin = classType.Invoke("Sin", value == null ? null : value.getJCOInstance());
+            JCObject objSin = (JCObject)retObjectSin;
             return new Complex(objSin);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSin != null ? retObjectSin.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -679,10 +878,14 @@ public class Complex extends ValueType  {
 
     public static Complex Sinh(Complex value) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSinh = null;
         try {
-            JCObject objSinh = (JCObject)classType.Invoke("Sinh", value == null ? null : value.getJCOInstance());
+            retObjectSinh = classType.Invoke("Sinh", value == null ? null : value.getJCOInstance());
+            JCObject objSinh = (JCObject)retObjectSinh;
             return new Complex(objSinh);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSinh != null ? retObjectSinh.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -690,10 +893,14 @@ public class Complex extends ValueType  {
 
     public static Complex Sqrt(Complex value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSqrt = null;
         try {
-            JCObject objSqrt = (JCObject)classType.Invoke("Sqrt", value == null ? null : value.getJCOInstance());
+            retObjectSqrt = classType.Invoke("Sqrt", value == null ? null : value.getJCOInstance());
+            JCObject objSqrt = (JCObject)retObjectSqrt;
             return new Complex(objSqrt);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSqrt != null ? retObjectSqrt.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -701,10 +908,14 @@ public class Complex extends ValueType  {
 
     public static Complex Subtract(double left, Complex right) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSubtract = null;
         try {
-            JCObject objSubtract = (JCObject)classType.Invoke("Subtract", left, right == null ? null : right.getJCOInstance());
+            retObjectSubtract = classType.Invoke("Subtract", left, right == null ? null : right.getJCOInstance());
+            JCObject objSubtract = (JCObject)retObjectSubtract;
             return new Complex(objSubtract);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSubtract != null ? retObjectSubtract.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -712,10 +923,14 @@ public class Complex extends ValueType  {
 
     public static Complex Subtract(Complex left, double right) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSubtract = null;
         try {
-            JCObject objSubtract = (JCObject)classType.Invoke("Subtract", left == null ? null : left.getJCOInstance(), right);
+            retObjectSubtract = classType.Invoke("Subtract", left == null ? null : left.getJCOInstance(), right);
+            JCObject objSubtract = (JCObject)retObjectSubtract;
             return new Complex(objSubtract);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSubtract != null ? retObjectSubtract.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -723,10 +938,14 @@ public class Complex extends ValueType  {
 
     public static Complex Subtract(Complex left, Complex right) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSubtract = null;
         try {
-            JCObject objSubtract = (JCObject)classType.Invoke("Subtract", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            retObjectSubtract = classType.Invoke("Subtract", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            JCObject objSubtract = (JCObject)retObjectSubtract;
             return new Complex(objSubtract);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSubtract != null ? retObjectSubtract.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -734,10 +953,14 @@ public class Complex extends ValueType  {
 
     public static Complex Tan(Complex value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTan = null;
         try {
-            JCObject objTan = (JCObject)classType.Invoke("Tan", value == null ? null : value.getJCOInstance());
+            retObjectTan = classType.Invoke("Tan", value == null ? null : value.getJCOInstance());
+            JCObject objTan = (JCObject)retObjectTan;
             return new Complex(objTan);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTan != null ? retObjectTan.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -745,10 +968,14 @@ public class Complex extends ValueType  {
 
     public static Complex Tanh(Complex value) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTanh = null;
         try {
-            JCObject objTanh = (JCObject)classType.Invoke("Tanh", value == null ? null : value.getJCOInstance());
+            retObjectTanh = classType.Invoke("Tanh", value == null ? null : value.getJCOInstance());
+            JCObject objTanh = (JCObject)retObjectTanh;
             return new Complex(objTanh);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTanh != null ? retObjectTanh.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -756,9 +983,13 @@ public class Complex extends ValueType  {
 
     public java.lang.String ToString(IFormatProvider provider) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.OverflowException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToString = null;
         try {
-            return (java.lang.String)classInstance.Invoke("ToString", provider == null ? null : provider.getJCOInstance());
+            retObjectToString = classInstance.Invoke("ToString", provider == null ? null : provider.getJCOInstance());
+            return (java.lang.String)retObjectToString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectToString != null ? retObjectToString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -766,9 +997,13 @@ public class Complex extends ValueType  {
 
     public java.lang.String ToString(java.lang.String format, IFormatProvider provider) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OverflowException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToString = null;
         try {
-            return (java.lang.String)classInstance.Invoke("ToString", format, provider == null ? null : provider.getJCOInstance());
+            retObjectToString = classInstance.Invoke("ToString", format, provider == null ? null : provider.getJCOInstance());
+            return (java.lang.String)retObjectToString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectToString != null ? retObjectToString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -776,9 +1011,13 @@ public class Complex extends ValueType  {
 
     public java.lang.String ToString(java.lang.String format) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.OverflowException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToString = null;
         try {
-            return (java.lang.String)classInstance.Invoke("ToString", format);
+            retObjectToString = classInstance.Invoke("ToString", format);
+            return (java.lang.String)retObjectToString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectToString != null ? retObjectToString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -790,9 +1029,20 @@ public class Complex extends ValueType  {
     
     public double getImaginary() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectImaginary = null;
         try {
-            return (double)classInstance.Get("Imaginary");
+            retObjectImaginary = classInstance.Get("Imaginary");
+            return (double)retObjectImaginary;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectImaginary_ToString = retObjectImaginary == null ? "null" : retObjectImaginary.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectImaginaryNumber = (java.lang.Number)retObjectImaginary;
+                return retObjectImaginaryNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectImaginary != null ? retObjectImaginary.getClass() : "null", retObjectImaginary_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -800,9 +1050,20 @@ public class Complex extends ValueType  {
 
     public double getMagnitude() throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMagnitude = null;
         try {
-            return (double)classInstance.Get("Magnitude");
+            retObjectMagnitude = classInstance.Get("Magnitude");
+            return (double)retObjectMagnitude;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMagnitude_ToString = retObjectMagnitude == null ? "null" : retObjectMagnitude.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMagnitudeNumber = (java.lang.Number)retObjectMagnitude;
+                return retObjectMagnitudeNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectMagnitude != null ? retObjectMagnitude.getClass() : "null", retObjectMagnitude_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -810,9 +1071,20 @@ public class Complex extends ValueType  {
 
     public double getPhase() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPhase = null;
         try {
-            return (double)classInstance.Get("Phase");
+            retObjectPhase = classInstance.Get("Phase");
+            return (double)retObjectPhase;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectPhase_ToString = retObjectPhase == null ? "null" : retObjectPhase.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectPhaseNumber = (java.lang.Number)retObjectPhase;
+                return retObjectPhaseNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectPhase != null ? retObjectPhase.getClass() : "null", retObjectPhase_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -820,9 +1092,20 @@ public class Complex extends ValueType  {
 
     public double getReal() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReal = null;
         try {
-            return (double)classInstance.Get("Real");
+            retObjectReal = classInstance.Get("Real");
+            return (double)retObjectReal;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectReal_ToString = retObjectReal == null ? "null" : retObjectReal.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectRealNumber = (java.lang.Number)retObjectReal;
+                return retObjectRealNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectReal != null ? retObjectReal.getClass() : "null", retObjectReal_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

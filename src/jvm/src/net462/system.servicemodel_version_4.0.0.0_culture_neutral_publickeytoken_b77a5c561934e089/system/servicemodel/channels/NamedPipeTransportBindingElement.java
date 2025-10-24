@@ -165,10 +165,14 @@ public class NamedPipeTransportBindingElement extends ConnectionOrientedTranspor
     
     public BindingElement Clone() throws Throwable, system.ArgumentOutOfRangeException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClone = null;
         try {
-            JCObject objClone = (JCObject)classInstance.Invoke("Clone");
+            retObjectClone = classInstance.Invoke("Clone");
+            JCObject objClone = (JCObject)retObjectClone;
             return new BindingElement(objClone);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClone != null ? retObjectClone.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,10 +184,14 @@ public class NamedPipeTransportBindingElement extends ConnectionOrientedTranspor
     
     public NamedPipeConnectionPoolSettings getConnectionPoolSettings() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConnectionPoolSettings = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ConnectionPoolSettings");
+            retObjectConnectionPoolSettings = classInstance.Get("ConnectionPoolSettings");
+            JCObject val = (JCObject)retObjectConnectionPoolSettings;
             return new NamedPipeConnectionPoolSettings(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConnectionPoolSettings != null ? retObjectConnectionPoolSettings.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,10 +199,14 @@ public class NamedPipeTransportBindingElement extends ConnectionOrientedTranspor
 
     public NamedPipeSettings getPipeSettings() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPipeSettings = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PipeSettings");
+            retObjectPipeSettings = classInstance.Get("PipeSettings");
+            JCObject val = (JCObject)retObjectPipeSettings;
             return new NamedPipeSettings(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPipeSettings != null ? retObjectPipeSettings.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

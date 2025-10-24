@@ -156,9 +156,13 @@ public class ExpressionActivityEditor extends UserControl  {
     
     public boolean CanCommit() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanCommit = null;
         try {
-            return (boolean)classInstance.Invoke("CanCommit");
+            retObjectCanCommit = classInstance.Invoke("CanCommit");
+            return (boolean)retObjectCanCommit;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCanCommit != null ? retObjectCanCommit.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -166,9 +170,13 @@ public class ExpressionActivityEditor extends UserControl  {
 
     public boolean Commit(boolean isExplicitCommit) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCommit = null;
         try {
-            return (boolean)classInstance.Invoke("Commit", isExplicitCommit);
+            retObjectCommit = classInstance.Invoke("Commit", isExplicitCommit);
+            return (boolean)retObjectCommit;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCommit != null ? retObjectCommit.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,9 +184,13 @@ public class ExpressionActivityEditor extends UserControl  {
 
     public static java.lang.String GetExpressionActivityEditor(NetObject target) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.threading.ThreadAbortException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetExpressionActivityEditor = null;
         try {
-            return (java.lang.String)classType.Invoke("GetExpressionActivityEditor", target == null ? null : target.getJCOInstance());
+            retObjectGetExpressionActivityEditor = classType.Invoke("GetExpressionActivityEditor", target == null ? null : target.getJCOInstance());
+            return (java.lang.String)retObjectGetExpressionActivityEditor;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetExpressionActivityEditor != null ? retObjectGetExpressionActivityEditor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,7 +198,7 @@ public class ExpressionActivityEditor extends UserControl  {
 
     public void BeginEdit() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("BeginEdit");
         } catch (JCNativeException jcne) {
@@ -196,7 +208,7 @@ public class ExpressionActivityEditor extends UserControl  {
 
     public static void SetExpressionActivityEditor(NetObject target, java.lang.String name) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.threading.ThreadAbortException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetExpressionActivityEditor", target == null ? null : target.getJCOInstance(), name);
         } catch (JCNativeException jcne) {
@@ -210,9 +222,13 @@ public class ExpressionActivityEditor extends UserControl  {
     
     public boolean getAcceptsReturn() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAcceptsReturn = null;
         try {
-            return (boolean)classInstance.Get("AcceptsReturn");
+            retObjectAcceptsReturn = classInstance.Get("AcceptsReturn");
+            return (boolean)retObjectAcceptsReturn;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAcceptsReturn != null ? retObjectAcceptsReturn.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -220,7 +236,7 @@ public class ExpressionActivityEditor extends UserControl  {
 
     public void setAcceptsReturn(boolean AcceptsReturn) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AcceptsReturn", AcceptsReturn);
         } catch (JCNativeException jcne) {
@@ -230,9 +246,13 @@ public class ExpressionActivityEditor extends UserControl  {
 
     public boolean getAcceptsTab() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAcceptsTab = null;
         try {
-            return (boolean)classInstance.Get("AcceptsTab");
+            retObjectAcceptsTab = classInstance.Get("AcceptsTab");
+            return (boolean)retObjectAcceptsTab;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAcceptsTab != null ? retObjectAcceptsTab.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -240,7 +260,7 @@ public class ExpressionActivityEditor extends UserControl  {
 
     public void setAcceptsTab(boolean AcceptsTab) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AcceptsTab", AcceptsTab);
         } catch (JCNativeException jcne) {
@@ -250,9 +270,13 @@ public class ExpressionActivityEditor extends UserControl  {
 
     public boolean getExplicitCommit() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExplicitCommit = null;
         try {
-            return (boolean)classInstance.Get("ExplicitCommit");
+            retObjectExplicitCommit = classInstance.Get("ExplicitCommit");
+            return (boolean)retObjectExplicitCommit;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectExplicitCommit != null ? retObjectExplicitCommit.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -260,7 +284,7 @@ public class ExpressionActivityEditor extends UserControl  {
 
     public void setExplicitCommit(boolean ExplicitCommit) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ExplicitCommit", ExplicitCommit);
         } catch (JCNativeException jcne) {
@@ -270,9 +294,13 @@ public class ExpressionActivityEditor extends UserControl  {
 
     public boolean getIsIndependentExpression() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsIndependentExpression = null;
         try {
-            return (boolean)classInstance.Get("IsIndependentExpression");
+            retObjectIsIndependentExpression = classInstance.Get("IsIndependentExpression");
+            return (boolean)retObjectIsIndependentExpression;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsIndependentExpression != null ? retObjectIsIndependentExpression.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -280,7 +308,7 @@ public class ExpressionActivityEditor extends UserControl  {
 
     public void setIsIndependentExpression(boolean IsIndependentExpression) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsIndependentExpression", IsIndependentExpression);
         } catch (JCNativeException jcne) {
@@ -290,9 +318,13 @@ public class ExpressionActivityEditor extends UserControl  {
 
     public boolean getIsReadOnly() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsReadOnly = null;
         try {
-            return (boolean)classInstance.Get("IsReadOnly");
+            retObjectIsReadOnly = classInstance.Get("IsReadOnly");
+            return (boolean)retObjectIsReadOnly;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsReadOnly != null ? retObjectIsReadOnly.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -300,7 +332,7 @@ public class ExpressionActivityEditor extends UserControl  {
 
     public void setIsReadOnly(boolean IsReadOnly) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsReadOnly", IsReadOnly);
         } catch (JCNativeException jcne) {
@@ -310,9 +342,13 @@ public class ExpressionActivityEditor extends UserControl  {
 
     public boolean getIsSupportedExpression() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsSupportedExpression = null;
         try {
-            return (boolean)classInstance.Get("IsSupportedExpression");
+            retObjectIsSupportedExpression = classInstance.Get("IsSupportedExpression");
+            return (boolean)retObjectIsSupportedExpression;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsSupportedExpression != null ? retObjectIsSupportedExpression.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -320,7 +356,7 @@ public class ExpressionActivityEditor extends UserControl  {
 
     public void setIsSupportedExpression(boolean IsSupportedExpression) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsSupportedExpression", IsSupportedExpression);
         } catch (JCNativeException jcne) {
@@ -330,9 +366,13 @@ public class ExpressionActivityEditor extends UserControl  {
 
     public boolean getUseLocationExpression() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUseLocationExpression = null;
         try {
-            return (boolean)classInstance.Get("UseLocationExpression");
+            retObjectUseLocationExpression = classInstance.Get("UseLocationExpression");
+            return (boolean)retObjectUseLocationExpression;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectUseLocationExpression != null ? retObjectUseLocationExpression.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -340,7 +380,7 @@ public class ExpressionActivityEditor extends UserControl  {
 
     public void setUseLocationExpression(boolean UseLocationExpression) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UseLocationExpression", UseLocationExpression);
         } catch (JCNativeException jcne) {
@@ -350,10 +390,14 @@ public class ExpressionActivityEditor extends UserControl  {
 
     public ModelItem getExpression() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExpression = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Expression");
+            retObjectExpression = classInstance.Get("Expression");
+            JCObject val = (JCObject)retObjectExpression;
             return new ModelItem(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExpression != null ? retObjectExpression.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -361,7 +405,7 @@ public class ExpressionActivityEditor extends UserControl  {
 
     public void setExpression(ModelItem Expression) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Expression", Expression == null ? null : Expression.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -371,10 +415,14 @@ public class ExpressionActivityEditor extends UserControl  {
 
     public ModelItem getOwnerActivity() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOwnerActivity = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("OwnerActivity");
+            retObjectOwnerActivity = classInstance.Get("OwnerActivity");
+            JCObject val = (JCObject)retObjectOwnerActivity;
             return new ModelItem(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOwnerActivity != null ? retObjectOwnerActivity.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -382,7 +430,7 @@ public class ExpressionActivityEditor extends UserControl  {
 
     public void setOwnerActivity(ModelItem OwnerActivity) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("OwnerActivity", OwnerActivity == null ? null : OwnerActivity.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -392,9 +440,13 @@ public class ExpressionActivityEditor extends UserControl  {
 
     public java.lang.String getHintText() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHintText = null;
         try {
-            return (java.lang.String)classInstance.Get("HintText");
+            retObjectHintText = classInstance.Get("HintText");
+            return (java.lang.String)retObjectHintText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectHintText != null ? retObjectHintText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -402,7 +454,7 @@ public class ExpressionActivityEditor extends UserControl  {
 
     public void setHintText(java.lang.String HintText) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("HintText", HintText);
         } catch (JCNativeException jcne) {
@@ -412,9 +464,13 @@ public class ExpressionActivityEditor extends UserControl  {
 
     public java.lang.String getPathToArgument() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPathToArgument = null;
         try {
-            return (java.lang.String)classInstance.Get("PathToArgument");
+            retObjectPathToArgument = classInstance.Get("PathToArgument");
+            return (java.lang.String)retObjectPathToArgument;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectPathToArgument != null ? retObjectPathToArgument.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -422,7 +478,7 @@ public class ExpressionActivityEditor extends UserControl  {
 
     public void setPathToArgument(java.lang.String PathToArgument) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PathToArgument", PathToArgument);
         } catch (JCNativeException jcne) {
@@ -432,10 +488,14 @@ public class ExpressionActivityEditor extends UserControl  {
 
     public NetType getExpressionType() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExpressionType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ExpressionType");
+            retObjectExpressionType = classInstance.Get("ExpressionType");
+            JCObject val = (JCObject)retObjectExpressionType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExpressionType != null ? retObjectExpressionType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -443,7 +503,7 @@ public class ExpressionActivityEditor extends UserControl  {
 
     public void setExpressionType(NetType ExpressionType) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ExpressionType", ExpressionType == null ? null : ExpressionType.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -453,10 +513,14 @@ public class ExpressionActivityEditor extends UserControl  {
 
     public ScrollBarVisibility getHorizontalScrollBarVisibility() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHorizontalScrollBarVisibility = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("HorizontalScrollBarVisibility");
+            retObjectHorizontalScrollBarVisibility = classInstance.Get("HorizontalScrollBarVisibility");
+            JCObject val = (JCObject)retObjectHorizontalScrollBarVisibility;
             return new ScrollBarVisibility(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHorizontalScrollBarVisibility != null ? retObjectHorizontalScrollBarVisibility.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -464,7 +528,7 @@ public class ExpressionActivityEditor extends UserControl  {
 
     public void setHorizontalScrollBarVisibility(ScrollBarVisibility HorizontalScrollBarVisibility) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("HorizontalScrollBarVisibility", HorizontalScrollBarVisibility == null ? null : HorizontalScrollBarVisibility.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -474,10 +538,14 @@ public class ExpressionActivityEditor extends UserControl  {
 
     public ScrollBarVisibility getVerticalScrollBarVisibility() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVerticalScrollBarVisibility = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("VerticalScrollBarVisibility");
+            retObjectVerticalScrollBarVisibility = classInstance.Get("VerticalScrollBarVisibility");
+            JCObject val = (JCObject)retObjectVerticalScrollBarVisibility;
             return new ScrollBarVisibility(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVerticalScrollBarVisibility != null ? retObjectVerticalScrollBarVisibility.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -485,7 +553,7 @@ public class ExpressionActivityEditor extends UserControl  {
 
     public void setVerticalScrollBarVisibility(ScrollBarVisibility VerticalScrollBarVisibility) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("VerticalScrollBarVisibility", VerticalScrollBarVisibility == null ? null : VerticalScrollBarVisibility.getJCOInstance());
         } catch (JCNativeException jcne) {

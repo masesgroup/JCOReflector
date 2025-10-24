@@ -163,9 +163,13 @@ public class RuntimeEnvironment extends NetObject  {
     
     public static boolean FromGlobalAccessCache(Assembly a) throws Throwable, system.NotImplementedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFromGlobalAccessCache = null;
         try {
-            return (boolean)classType.Invoke("FromGlobalAccessCache", a == null ? null : a.getJCOInstance());
+            retObjectFromGlobalAccessCache = classType.Invoke("FromGlobalAccessCache", a == null ? null : a.getJCOInstance());
+            return (boolean)retObjectFromGlobalAccessCache;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectFromGlobalAccessCache != null ? retObjectFromGlobalAccessCache.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -173,10 +177,14 @@ public class RuntimeEnvironment extends NetObject  {
 
     public static NetObject GetRuntimeInterfaceAsObject(Guid clsid, Guid riid) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetRuntimeInterfaceAsObject = null;
         try {
-            JCObject objGetRuntimeInterfaceAsObject = (JCObject)classType.Invoke("GetRuntimeInterfaceAsObject", clsid == null ? null : clsid.getJCOInstance(), riid == null ? null : riid.getJCOInstance());
+            retObjectGetRuntimeInterfaceAsObject = classType.Invoke("GetRuntimeInterfaceAsObject", clsid == null ? null : clsid.getJCOInstance(), riid == null ? null : riid.getJCOInstance());
+            JCObject objGetRuntimeInterfaceAsObject = (JCObject)retObjectGetRuntimeInterfaceAsObject;
             return new NetObject(objGetRuntimeInterfaceAsObject);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetRuntimeInterfaceAsObject != null ? retObjectGetRuntimeInterfaceAsObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -184,9 +192,13 @@ public class RuntimeEnvironment extends NetObject  {
 
     public static java.lang.String GetRuntimeDirectory() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.IndexOutOfRangeException, system.NotSupportedException, system.NullReferenceException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetRuntimeDirectory = null;
         try {
-            return (java.lang.String)classType.Invoke("GetRuntimeDirectory");
+            retObjectGetRuntimeDirectory = classType.Invoke("GetRuntimeDirectory");
+            return (java.lang.String)retObjectGetRuntimeDirectory;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetRuntimeDirectory != null ? retObjectGetRuntimeDirectory.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -194,9 +206,13 @@ public class RuntimeEnvironment extends NetObject  {
 
     public static java.lang.String GetSystemVersion() throws Throwable, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetSystemVersion = null;
         try {
-            return (java.lang.String)classType.Invoke("GetSystemVersion");
+            retObjectGetSystemVersion = classType.Invoke("GetSystemVersion");
+            return (java.lang.String)retObjectGetSystemVersion;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetSystemVersion != null ? retObjectGetSystemVersion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -208,9 +224,13 @@ public class RuntimeEnvironment extends NetObject  {
     
     public static java.lang.String getSystemConfigurationFile() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSystemConfigurationFile = null;
         try {
-            return (java.lang.String)classType.Get("SystemConfigurationFile");
+            retObjectSystemConfigurationFile = classType.Get("SystemConfigurationFile");
+            return (java.lang.String)retObjectSystemConfigurationFile;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSystemConfigurationFile != null ? retObjectSystemConfigurationFile.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

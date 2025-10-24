@@ -189,9 +189,13 @@ public class Authorization extends NetObject  {
     
     public boolean getComplete() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectComplete = null;
         try {
-            return (boolean)classInstance.Get("Complete");
+            retObjectComplete = classInstance.Get("Complete");
+            return (boolean)retObjectComplete;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectComplete != null ? retObjectComplete.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -199,7 +203,7 @@ public class Authorization extends NetObject  {
 
     public void setComplete(boolean Complete) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Complete", Complete);
         } catch (JCNativeException jcne) {
@@ -209,9 +213,13 @@ public class Authorization extends NetObject  {
 
     public boolean getMutuallyAuthenticated() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMutuallyAuthenticated = null;
         try {
-            return (boolean)classInstance.Get("MutuallyAuthenticated");
+            retObjectMutuallyAuthenticated = classInstance.Get("MutuallyAuthenticated");
+            return (boolean)retObjectMutuallyAuthenticated;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectMutuallyAuthenticated != null ? retObjectMutuallyAuthenticated.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -219,7 +227,7 @@ public class Authorization extends NetObject  {
 
     public void setMutuallyAuthenticated(boolean MutuallyAuthenticated) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MutuallyAuthenticated", MutuallyAuthenticated);
         } catch (JCNativeException jcne) {
@@ -229,9 +237,13 @@ public class Authorization extends NetObject  {
 
     public java.lang.String getConnectionGroupId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConnectionGroupId = null;
         try {
-            return (java.lang.String)classInstance.Get("ConnectionGroupId");
+            retObjectConnectionGroupId = classInstance.Get("ConnectionGroupId");
+            return (java.lang.String)retObjectConnectionGroupId;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectConnectionGroupId != null ? retObjectConnectionGroupId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -239,9 +251,13 @@ public class Authorization extends NetObject  {
 
     public java.lang.String getMessage() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMessage = null;
         try {
-            return (java.lang.String)classInstance.Get("Message");
+            retObjectMessage = classInstance.Get("Message");
+            return (java.lang.String)retObjectMessage;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectMessage != null ? retObjectMessage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -249,10 +265,12 @@ public class Authorization extends NetObject  {
 
     public java.lang.String[] getProtectionRealm() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProtectionRealm = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("ProtectionRealm");
+            retObjectProtectionRealm = classInstance.Get("ProtectionRealm");
+            JCObject resultingObjects = (JCObject)retObjectProtectionRealm;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -261,6 +279,8 @@ public class Authorization extends NetObject  {
 				resultingArray[indexProtectionRealm] = (java.lang.String)resultingArrayList.get(indexProtectionRealm);
 			}
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into JCObject", retObjectProtectionRealm != null ? retObjectProtectionRealm.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -268,7 +288,7 @@ public class Authorization extends NetObject  {
 
     public void setProtectionRealm(java.lang.String[] ProtectionRealm) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ProtectionRealm", ProtectionRealm);
         } catch (JCNativeException jcne) {

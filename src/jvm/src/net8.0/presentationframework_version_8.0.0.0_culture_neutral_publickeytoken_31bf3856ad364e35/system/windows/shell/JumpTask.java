@@ -166,9 +166,20 @@ public class JumpTask extends JumpItem  {
     
     public int getIconResourceIndex() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIconResourceIndex = null;
         try {
-            return (int)classInstance.Get("IconResourceIndex");
+            retObjectIconResourceIndex = classInstance.Get("IconResourceIndex");
+            return (int)retObjectIconResourceIndex;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectIconResourceIndex_ToString = retObjectIconResourceIndex == null ? "null" : retObjectIconResourceIndex.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectIconResourceIndexNumber = (java.lang.Number)retObjectIconResourceIndex;
+                return retObjectIconResourceIndexNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectIconResourceIndex != null ? retObjectIconResourceIndex.getClass() : "null", retObjectIconResourceIndex_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,7 +187,7 @@ public class JumpTask extends JumpItem  {
 
     public void setIconResourceIndex(int IconResourceIndex) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IconResourceIndex", IconResourceIndex);
         } catch (JCNativeException jcne) {
@@ -186,9 +197,13 @@ public class JumpTask extends JumpItem  {
 
     public java.lang.String getApplicationPath() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectApplicationPath = null;
         try {
-            return (java.lang.String)classInstance.Get("ApplicationPath");
+            retObjectApplicationPath = classInstance.Get("ApplicationPath");
+            return (java.lang.String)retObjectApplicationPath;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectApplicationPath != null ? retObjectApplicationPath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,7 +211,7 @@ public class JumpTask extends JumpItem  {
 
     public void setApplicationPath(java.lang.String ApplicationPath) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ApplicationPath", ApplicationPath);
         } catch (JCNativeException jcne) {
@@ -206,9 +221,13 @@ public class JumpTask extends JumpItem  {
 
     public java.lang.String getArguments() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectArguments = null;
         try {
-            return (java.lang.String)classInstance.Get("Arguments");
+            retObjectArguments = classInstance.Get("Arguments");
+            return (java.lang.String)retObjectArguments;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectArguments != null ? retObjectArguments.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -216,7 +235,7 @@ public class JumpTask extends JumpItem  {
 
     public void setArguments(java.lang.String Arguments) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Arguments", Arguments);
         } catch (JCNativeException jcne) {
@@ -226,9 +245,13 @@ public class JumpTask extends JumpItem  {
 
     public java.lang.String getDescription() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDescription = null;
         try {
-            return (java.lang.String)classInstance.Get("Description");
+            retObjectDescription = classInstance.Get("Description");
+            return (java.lang.String)retObjectDescription;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDescription != null ? retObjectDescription.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -236,7 +259,7 @@ public class JumpTask extends JumpItem  {
 
     public void setDescription(java.lang.String Description) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Description", Description);
         } catch (JCNativeException jcne) {
@@ -246,9 +269,13 @@ public class JumpTask extends JumpItem  {
 
     public java.lang.String getIconResourcePath() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIconResourcePath = null;
         try {
-            return (java.lang.String)classInstance.Get("IconResourcePath");
+            retObjectIconResourcePath = classInstance.Get("IconResourcePath");
+            return (java.lang.String)retObjectIconResourcePath;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectIconResourcePath != null ? retObjectIconResourcePath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -256,7 +283,7 @@ public class JumpTask extends JumpItem  {
 
     public void setIconResourcePath(java.lang.String IconResourcePath) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IconResourcePath", IconResourcePath);
         } catch (JCNativeException jcne) {
@@ -266,9 +293,13 @@ public class JumpTask extends JumpItem  {
 
     public java.lang.String getTitle() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTitle = null;
         try {
-            return (java.lang.String)classInstance.Get("Title");
+            retObjectTitle = classInstance.Get("Title");
+            return (java.lang.String)retObjectTitle;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectTitle != null ? retObjectTitle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -276,7 +307,7 @@ public class JumpTask extends JumpItem  {
 
     public void setTitle(java.lang.String Title) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Title", Title);
         } catch (JCNativeException jcne) {
@@ -286,9 +317,13 @@ public class JumpTask extends JumpItem  {
 
     public java.lang.String getWorkingDirectory() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWorkingDirectory = null;
         try {
-            return (java.lang.String)classInstance.Get("WorkingDirectory");
+            retObjectWorkingDirectory = classInstance.Get("WorkingDirectory");
+            return (java.lang.String)retObjectWorkingDirectory;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectWorkingDirectory != null ? retObjectWorkingDirectory.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -296,7 +331,7 @@ public class JumpTask extends JumpItem  {
 
     public void setWorkingDirectory(java.lang.String WorkingDirectory) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("WorkingDirectory", WorkingDirectory);
         } catch (JCNativeException jcne) {

@@ -145,9 +145,13 @@ public class IWebProxyImplementation extends NetObject implements IWebProxy {
     
     public boolean IsBypassed(Uri host) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsBypassed = null;
         try {
-            return (boolean)classInstance.Invoke("IsBypassed", host == null ? null : host.getJCOInstance());
+            retObjectIsBypassed = classInstance.Invoke("IsBypassed", host == null ? null : host.getJCOInstance());
+            return (boolean)retObjectIsBypassed;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsBypassed != null ? retObjectIsBypassed.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -155,10 +159,14 @@ public class IWebProxyImplementation extends NetObject implements IWebProxy {
 
     public Uri GetProxy(Uri destination) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetProxy = null;
         try {
-            JCObject objGetProxy = (JCObject)classInstance.Invoke("GetProxy", destination == null ? null : destination.getJCOInstance());
+            retObjectGetProxy = classInstance.Invoke("GetProxy", destination == null ? null : destination.getJCOInstance());
+            JCObject objGetProxy = (JCObject)retObjectGetProxy;
             return new Uri(objGetProxy);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetProxy != null ? retObjectGetProxy.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,10 +178,14 @@ public class IWebProxyImplementation extends NetObject implements IWebProxy {
     
     public ICredentials getCredentials() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCredentials = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Credentials");
+            retObjectCredentials = classInstance.Get("Credentials");
+            JCObject val = (JCObject)retObjectCredentials;
             return new ICredentialsImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCredentials != null ? retObjectCredentials.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,7 +193,7 @@ public class IWebProxyImplementation extends NetObject implements IWebProxy {
 
     public void setCredentials(ICredentials Credentials) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Credentials", Credentials == null ? null : Credentials.getJCOInstance());
         } catch (JCNativeException jcne) {

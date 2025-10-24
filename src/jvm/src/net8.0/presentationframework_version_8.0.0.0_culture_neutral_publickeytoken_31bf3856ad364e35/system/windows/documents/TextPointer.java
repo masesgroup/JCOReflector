@@ -162,9 +162,13 @@ public class TextPointer extends ContentPosition  {
     
     public boolean IsInSameDocument(TextPointer textPosition) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsInSameDocument = null;
         try {
-            return (boolean)classInstance.Invoke("IsInSameDocument", textPosition == null ? null : textPosition.getJCOInstance());
+            retObjectIsInSameDocument = classInstance.Invoke("IsInSameDocument", textPosition == null ? null : textPosition.getJCOInstance());
+            return (boolean)retObjectIsInSameDocument;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsInSameDocument != null ? retObjectIsInSameDocument.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,9 +176,20 @@ public class TextPointer extends ContentPosition  {
 
     public int CompareTo(TextPointer position) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCompareTo = null;
         try {
-            return (int)classInstance.Invoke("CompareTo", position == null ? null : position.getJCOInstance());
+            retObjectCompareTo = classInstance.Invoke("CompareTo", position == null ? null : position.getJCOInstance());
+            return (int)retObjectCompareTo;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCompareTo_ToString = retObjectCompareTo == null ? "null" : retObjectCompareTo.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectCompareToNumber = (java.lang.Number)retObjectCompareTo;
+                return retObjectCompareToNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCompareTo != null ? retObjectCompareTo.getClass() : "null", retObjectCompareTo_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,9 +197,20 @@ public class TextPointer extends ContentPosition  {
 
     public int DeleteTextInRun(int count) throws Throwable, system.ArgumentException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.security.SecurityException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.io.IOException, system.UnauthorizedAccessException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.ArgumentNullException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDeleteTextInRun = null;
         try {
-            return (int)classInstance.Invoke("DeleteTextInRun", count);
+            retObjectDeleteTextInRun = classInstance.Invoke("DeleteTextInRun", count);
+            return (int)retObjectDeleteTextInRun;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDeleteTextInRun_ToString = retObjectDeleteTextInRun == null ? "null" : retObjectDeleteTextInRun.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectDeleteTextInRunNumber = (java.lang.Number)retObjectDeleteTextInRun;
+                return retObjectDeleteTextInRunNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectDeleteTextInRun != null ? retObjectDeleteTextInRun.getClass() : "null", retObjectDeleteTextInRun_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,9 +218,20 @@ public class TextPointer extends ContentPosition  {
 
     public int GetOffsetToPosition(TextPointer position) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetOffsetToPosition = null;
         try {
-            return (int)classInstance.Invoke("GetOffsetToPosition", position == null ? null : position.getJCOInstance());
+            retObjectGetOffsetToPosition = classInstance.Invoke("GetOffsetToPosition", position == null ? null : position.getJCOInstance());
+            return (int)retObjectGetOffsetToPosition;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetOffsetToPosition_ToString = retObjectGetOffsetToPosition == null ? "null" : retObjectGetOffsetToPosition.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetOffsetToPositionNumber = (java.lang.Number)retObjectGetOffsetToPosition;
+                return retObjectGetOffsetToPositionNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetOffsetToPosition != null ? retObjectGetOffsetToPosition.getClass() : "null", retObjectGetOffsetToPosition_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,9 +239,20 @@ public class TextPointer extends ContentPosition  {
 
     public int GetTextInRun(LogicalDirection direction, char[] textBuffer, int startIndex, int count) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetTextInRun = null;
         try {
-            return (int)classInstance.Invoke("GetTextInRun", direction == null ? null : direction.getJCOInstance(), textBuffer, startIndex, count);
+            retObjectGetTextInRun = classInstance.Invoke("GetTextInRun", direction == null ? null : direction.getJCOInstance(), textBuffer, startIndex, count);
+            return (int)retObjectGetTextInRun;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetTextInRun_ToString = retObjectGetTextInRun == null ? "null" : retObjectGetTextInRun.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetTextInRunNumber = (java.lang.Number)retObjectGetTextInRun;
+                return retObjectGetTextInRunNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetTextInRun != null ? retObjectGetTextInRun.getClass() : "null", retObjectGetTextInRun_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -212,9 +260,20 @@ public class TextPointer extends ContentPosition  {
 
     public int GetTextInRun(LogicalDirection dupParam0, JCORefOut dupParam1, int dupParam2, int dupParam3) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetTextInRun = null;
         try {
-            return (int)classInstance.Invoke("GetTextInRun", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1.getJCRefOut(), dupParam2, dupParam3);
+            retObjectGetTextInRun = classInstance.Invoke("GetTextInRun", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1.getJCRefOut(), dupParam2, dupParam3);
+            return (int)retObjectGetTextInRun;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetTextInRun_ToString = retObjectGetTextInRun == null ? "null" : retObjectGetTextInRun.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetTextInRunNumber = (java.lang.Number)retObjectGetTextInRun;
+                return retObjectGetTextInRunNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetTextInRun != null ? retObjectGetTextInRun.getClass() : "null", retObjectGetTextInRun_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -222,9 +281,20 @@ public class TextPointer extends ContentPosition  {
 
     public int GetTextRunLength(LogicalDirection direction) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetTextRunLength = null;
         try {
-            return (int)classInstance.Invoke("GetTextRunLength", direction == null ? null : direction.getJCOInstance());
+            retObjectGetTextRunLength = classInstance.Invoke("GetTextRunLength", direction == null ? null : direction.getJCOInstance());
+            return (int)retObjectGetTextRunLength;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetTextRunLength_ToString = retObjectGetTextRunLength == null ? "null" : retObjectGetTextRunLength.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetTextRunLengthNumber = (java.lang.Number)retObjectGetTextRunLength;
+                return retObjectGetTextRunLengthNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetTextRunLength != null ? retObjectGetTextRunLength.getClass() : "null", retObjectGetTextRunLength_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -232,9 +302,13 @@ public class TextPointer extends ContentPosition  {
 
     public java.lang.String GetTextInRun(LogicalDirection direction) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.OutOfMemoryException, system.security.SecurityException, system.ArrayTypeMismatchException, system.io.IOException, system.UnauthorizedAccessException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetTextInRun = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetTextInRun", direction == null ? null : direction.getJCOInstance());
+            retObjectGetTextInRun = classInstance.Invoke("GetTextInRun", direction == null ? null : direction.getJCOInstance());
+            return (java.lang.String)retObjectGetTextInRun;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetTextInRun != null ? retObjectGetTextInRun.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -242,10 +316,14 @@ public class TextPointer extends ContentPosition  {
 
     public DependencyObject GetAdjacentElement(LogicalDirection direction) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetAdjacentElement = null;
         try {
-            JCObject objGetAdjacentElement = (JCObject)classInstance.Invoke("GetAdjacentElement", direction == null ? null : direction.getJCOInstance());
+            retObjectGetAdjacentElement = classInstance.Invoke("GetAdjacentElement", direction == null ? null : direction.getJCOInstance());
+            JCObject objGetAdjacentElement = (JCObject)retObjectGetAdjacentElement;
             return new DependencyObject(objGetAdjacentElement);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetAdjacentElement != null ? retObjectGetAdjacentElement.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -253,10 +331,14 @@ public class TextPointer extends ContentPosition  {
 
     public TextPointer GetInsertionPosition(LogicalDirection direction) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetInsertionPosition = null;
         try {
-            JCObject objGetInsertionPosition = (JCObject)classInstance.Invoke("GetInsertionPosition", direction == null ? null : direction.getJCOInstance());
+            retObjectGetInsertionPosition = classInstance.Invoke("GetInsertionPosition", direction == null ? null : direction.getJCOInstance());
+            JCObject objGetInsertionPosition = (JCObject)retObjectGetInsertionPosition;
             return new TextPointer(objGetInsertionPosition);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetInsertionPosition != null ? retObjectGetInsertionPosition.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -264,10 +346,14 @@ public class TextPointer extends ContentPosition  {
 
     public TextPointer GetLineStartPosition(int count, JCORefOut<java.util.concurrent.atomic.AtomicInteger> actualCount) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.security.SecurityException, system.io.IOException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetLineStartPosition = null;
         try {
-            JCObject objGetLineStartPosition = (JCObject)classInstance.Invoke("GetLineStartPosition", count, actualCount.getJCRefOut());
+            retObjectGetLineStartPosition = classInstance.Invoke("GetLineStartPosition", count, actualCount.getJCRefOut());
+            JCObject objGetLineStartPosition = (JCObject)retObjectGetLineStartPosition;
             return new TextPointer(objGetLineStartPosition);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetLineStartPosition != null ? retObjectGetLineStartPosition.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -275,10 +361,14 @@ public class TextPointer extends ContentPosition  {
 
     public TextPointer GetLineStartPosition(int count) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetLineStartPosition = null;
         try {
-            JCObject objGetLineStartPosition = (JCObject)classInstance.Invoke("GetLineStartPosition", count);
+            retObjectGetLineStartPosition = classInstance.Invoke("GetLineStartPosition", count);
+            JCObject objGetLineStartPosition = (JCObject)retObjectGetLineStartPosition;
             return new TextPointer(objGetLineStartPosition);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetLineStartPosition != null ? retObjectGetLineStartPosition.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -286,10 +376,14 @@ public class TextPointer extends ContentPosition  {
 
     public TextPointer GetNextContextPosition(LogicalDirection direction) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetNextContextPosition = null;
         try {
-            JCObject objGetNextContextPosition = (JCObject)classInstance.Invoke("GetNextContextPosition", direction == null ? null : direction.getJCOInstance());
+            retObjectGetNextContextPosition = classInstance.Invoke("GetNextContextPosition", direction == null ? null : direction.getJCOInstance());
+            JCObject objGetNextContextPosition = (JCObject)retObjectGetNextContextPosition;
             return new TextPointer(objGetNextContextPosition);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetNextContextPosition != null ? retObjectGetNextContextPosition.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -297,10 +391,14 @@ public class TextPointer extends ContentPosition  {
 
     public TextPointer GetNextInsertionPosition(LogicalDirection direction) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetNextInsertionPosition = null;
         try {
-            JCObject objGetNextInsertionPosition = (JCObject)classInstance.Invoke("GetNextInsertionPosition", direction == null ? null : direction.getJCOInstance());
+            retObjectGetNextInsertionPosition = classInstance.Invoke("GetNextInsertionPosition", direction == null ? null : direction.getJCOInstance());
+            JCObject objGetNextInsertionPosition = (JCObject)retObjectGetNextInsertionPosition;
             return new TextPointer(objGetNextInsertionPosition);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetNextInsertionPosition != null ? retObjectGetNextInsertionPosition.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -308,10 +406,14 @@ public class TextPointer extends ContentPosition  {
 
     public TextPointer GetPositionAtOffset(int offset, LogicalDirection direction) throws Throwable, system.security.SecurityException, system.io.IOException, system.ArgumentException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPositionAtOffset = null;
         try {
-            JCObject objGetPositionAtOffset = (JCObject)classInstance.Invoke("GetPositionAtOffset", offset, direction == null ? null : direction.getJCOInstance());
+            retObjectGetPositionAtOffset = classInstance.Invoke("GetPositionAtOffset", offset, direction == null ? null : direction.getJCOInstance());
+            JCObject objGetPositionAtOffset = (JCObject)retObjectGetPositionAtOffset;
             return new TextPointer(objGetPositionAtOffset);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetPositionAtOffset != null ? retObjectGetPositionAtOffset.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -319,10 +421,14 @@ public class TextPointer extends ContentPosition  {
 
     public TextPointer GetPositionAtOffset(int offset) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPositionAtOffset = null;
         try {
-            JCObject objGetPositionAtOffset = (JCObject)classInstance.Invoke("GetPositionAtOffset", offset);
+            retObjectGetPositionAtOffset = classInstance.Invoke("GetPositionAtOffset", offset);
+            JCObject objGetPositionAtOffset = (JCObject)retObjectGetPositionAtOffset;
             return new TextPointer(objGetPositionAtOffset);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetPositionAtOffset != null ? retObjectGetPositionAtOffset.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -330,10 +436,14 @@ public class TextPointer extends ContentPosition  {
 
     public TextPointer InsertLineBreak() throws Throwable, system.ArgumentException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.security.SecurityException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.io.IOException, system.UnauthorizedAccessException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInsertLineBreak = null;
         try {
-            JCObject objInsertLineBreak = (JCObject)classInstance.Invoke("InsertLineBreak");
+            retObjectInsertLineBreak = classInstance.Invoke("InsertLineBreak");
+            JCObject objInsertLineBreak = (JCObject)retObjectInsertLineBreak;
             return new TextPointer(objInsertLineBreak);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInsertLineBreak != null ? retObjectInsertLineBreak.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -341,10 +451,14 @@ public class TextPointer extends ContentPosition  {
 
     public TextPointer InsertParagraphBreak() throws Throwable, system.ArgumentException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.security.SecurityException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.io.IOException, system.UnauthorizedAccessException, system.IndexOutOfRangeException, system.FormatException, system.reflection.AmbiguousMatchException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInsertParagraphBreak = null;
         try {
-            JCObject objInsertParagraphBreak = (JCObject)classInstance.Invoke("InsertParagraphBreak");
+            retObjectInsertParagraphBreak = classInstance.Invoke("InsertParagraphBreak");
+            JCObject objInsertParagraphBreak = (JCObject)retObjectInsertParagraphBreak;
             return new TextPointer(objInsertParagraphBreak);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInsertParagraphBreak != null ? retObjectInsertParagraphBreak.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -352,10 +466,14 @@ public class TextPointer extends ContentPosition  {
 
     public TextPointerContext GetPointerContext(LogicalDirection direction) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPointerContext = null;
         try {
-            JCObject objGetPointerContext = (JCObject)classInstance.Invoke("GetPointerContext", direction == null ? null : direction.getJCOInstance());
+            retObjectGetPointerContext = classInstance.Invoke("GetPointerContext", direction == null ? null : direction.getJCOInstance());
+            JCObject objGetPointerContext = (JCObject)retObjectGetPointerContext;
             return new TextPointerContext(objGetPointerContext);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetPointerContext != null ? retObjectGetPointerContext.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -363,10 +481,14 @@ public class TextPointer extends ContentPosition  {
 
     public Rect GetCharacterRect(LogicalDirection direction) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetCharacterRect = null;
         try {
-            JCObject objGetCharacterRect = (JCObject)classInstance.Invoke("GetCharacterRect", direction == null ? null : direction.getJCOInstance());
+            retObjectGetCharacterRect = classInstance.Invoke("GetCharacterRect", direction == null ? null : direction.getJCOInstance());
+            JCObject objGetCharacterRect = (JCObject)retObjectGetCharacterRect;
             return new Rect(objGetCharacterRect);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCharacterRect != null ? retObjectGetCharacterRect.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -374,7 +496,7 @@ public class TextPointer extends ContentPosition  {
 
     public void InsertTextInRun(java.lang.String textData) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.IndexOutOfRangeException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("InsertTextInRun", textData);
         } catch (JCNativeException jcne) {
@@ -388,9 +510,13 @@ public class TextPointer extends ContentPosition  {
     
     public boolean getHasValidLayout() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHasValidLayout = null;
         try {
-            return (boolean)classInstance.Get("HasValidLayout");
+            retObjectHasValidLayout = classInstance.Get("HasValidLayout");
+            return (boolean)retObjectHasValidLayout;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectHasValidLayout != null ? retObjectHasValidLayout.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -398,9 +524,13 @@ public class TextPointer extends ContentPosition  {
 
     public boolean getIsAtInsertionPosition() throws Throwable, system.ArgumentException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.security.SecurityException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.io.IOException, system.UnauthorizedAccessException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsAtInsertionPosition = null;
         try {
-            return (boolean)classInstance.Get("IsAtInsertionPosition");
+            retObjectIsAtInsertionPosition = classInstance.Get("IsAtInsertionPosition");
+            return (boolean)retObjectIsAtInsertionPosition;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsAtInsertionPosition != null ? retObjectIsAtInsertionPosition.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -408,9 +538,13 @@ public class TextPointer extends ContentPosition  {
 
     public boolean getIsAtLineStartPosition() throws Throwable, system.ArgumentException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.security.SecurityException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.io.IOException, system.UnauthorizedAccessException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsAtLineStartPosition = null;
         try {
-            return (boolean)classInstance.Get("IsAtLineStartPosition");
+            retObjectIsAtLineStartPosition = classInstance.Get("IsAtLineStartPosition");
+            return (boolean)retObjectIsAtLineStartPosition;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsAtLineStartPosition != null ? retObjectIsAtLineStartPosition.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -418,10 +552,14 @@ public class TextPointer extends ContentPosition  {
 
     public DependencyObject getParent() throws Throwable, system.ArgumentException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.security.SecurityException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.io.IOException, system.UnauthorizedAccessException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectParent = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Parent");
+            retObjectParent = classInstance.Get("Parent");
+            JCObject val = (JCObject)retObjectParent;
             return new DependencyObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParent != null ? retObjectParent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -429,10 +567,14 @@ public class TextPointer extends ContentPosition  {
 
     public LogicalDirection getLogicalDirection() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLogicalDirection = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("LogicalDirection");
+            retObjectLogicalDirection = classInstance.Get("LogicalDirection");
+            JCObject val = (JCObject)retObjectLogicalDirection;
             return new LogicalDirection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLogicalDirection != null ? retObjectLogicalDirection.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -440,10 +582,14 @@ public class TextPointer extends ContentPosition  {
 
     public Paragraph getParagraph() throws Throwable, system.ArgumentException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.security.SecurityException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.io.IOException, system.UnauthorizedAccessException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectParagraph = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Paragraph");
+            retObjectParagraph = classInstance.Get("Paragraph");
+            JCObject val = (JCObject)retObjectParagraph;
             return new Paragraph(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParagraph != null ? retObjectParagraph.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -451,10 +597,14 @@ public class TextPointer extends ContentPosition  {
 
     public TextPointer getDocumentEnd() throws Throwable, system.ArgumentException, system.ObjectDisposedException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDocumentEnd = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DocumentEnd");
+            retObjectDocumentEnd = classInstance.Get("DocumentEnd");
+            JCObject val = (JCObject)retObjectDocumentEnd;
             return new TextPointer(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDocumentEnd != null ? retObjectDocumentEnd.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -462,10 +612,14 @@ public class TextPointer extends ContentPosition  {
 
     public TextPointer getDocumentStart() throws Throwable, system.ArgumentException, system.ObjectDisposedException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDocumentStart = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DocumentStart");
+            retObjectDocumentStart = classInstance.Get("DocumentStart");
+            JCObject val = (JCObject)retObjectDocumentStart;
             return new TextPointer(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDocumentStart != null ? retObjectDocumentStart.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

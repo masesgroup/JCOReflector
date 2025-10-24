@@ -171,10 +171,14 @@ public class FileCodeGroup extends CodeGroup  {
     
     public CodeGroup Copy() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NullReferenceException, system.ArgumentOutOfRangeException, system.FormatException, system.security.SecurityException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCopy = null;
         try {
-            JCObject objCopy = (JCObject)classInstance.Invoke("Copy");
+            retObjectCopy = classInstance.Invoke("Copy");
+            JCObject objCopy = (JCObject)retObjectCopy;
             return new CodeGroup(objCopy);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCopy != null ? retObjectCopy.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,10 +186,14 @@ public class FileCodeGroup extends CodeGroup  {
 
     public CodeGroup ResolveMatchingCodeGroups(Evidence evidence) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NullReferenceException, system.ArgumentOutOfRangeException, system.FormatException, system.security.SecurityException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResolveMatchingCodeGroups = null;
         try {
-            JCObject objResolveMatchingCodeGroups = (JCObject)classInstance.Invoke("ResolveMatchingCodeGroups", evidence == null ? null : evidence.getJCOInstance());
+            retObjectResolveMatchingCodeGroups = classInstance.Invoke("ResolveMatchingCodeGroups", evidence == null ? null : evidence.getJCOInstance());
+            JCObject objResolveMatchingCodeGroups = (JCObject)retObjectResolveMatchingCodeGroups;
             return new CodeGroup(objResolveMatchingCodeGroups);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectResolveMatchingCodeGroups != null ? retObjectResolveMatchingCodeGroups.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,10 +201,14 @@ public class FileCodeGroup extends CodeGroup  {
 
     public PolicyStatement Resolve(Evidence evidence) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NullReferenceException, system.ArgumentOutOfRangeException, system.FormatException, system.security.SecurityException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.io.PathTooLongException, system.OverflowException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ObjectDisposedException, system.security.policy.PolicyException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResolve = null;
         try {
-            JCObject objResolve = (JCObject)classInstance.Invoke("Resolve", evidence == null ? null : evidence.getJCOInstance());
+            retObjectResolve = classInstance.Invoke("Resolve", evidence == null ? null : evidence.getJCOInstance());
+            JCObject objResolve = (JCObject)retObjectResolve;
             return new PolicyStatement(objResolve);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectResolve != null ? retObjectResolve.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

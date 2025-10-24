@@ -160,9 +160,13 @@ public class OperationMessageCollection extends ServiceDescriptionBaseCollection
     
     public boolean Contains(OperationMessage operationMessage) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContains = null;
         try {
-            return (boolean)classInstance.Invoke("Contains", operationMessage == null ? null : operationMessage.getJCOInstance());
+            retObjectContains = classInstance.Invoke("Contains", operationMessage == null ? null : operationMessage.getJCOInstance());
+            return (boolean)retObjectContains;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectContains != null ? retObjectContains.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,9 +174,20 @@ public class OperationMessageCollection extends ServiceDescriptionBaseCollection
 
     public int Add(OperationMessage operationMessage) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAdd = null;
         try {
-            return (int)classInstance.Invoke("Add", operationMessage == null ? null : operationMessage.getJCOInstance());
+            retObjectAdd = classInstance.Invoke("Add", operationMessage == null ? null : operationMessage.getJCOInstance());
+            return (int)retObjectAdd;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectAdd_ToString = retObjectAdd == null ? "null" : retObjectAdd.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectAddNumber = (java.lang.Number)retObjectAdd;
+                return retObjectAddNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectAdd != null ? retObjectAdd.getClass() : "null", retObjectAdd_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,9 +195,20 @@ public class OperationMessageCollection extends ServiceDescriptionBaseCollection
 
     public int IndexOf(OperationMessage operationMessage) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIndexOf = null;
         try {
-            return (int)classInstance.Invoke("IndexOf", operationMessage == null ? null : operationMessage.getJCOInstance());
+            retObjectIndexOf = classInstance.Invoke("IndexOf", operationMessage == null ? null : operationMessage.getJCOInstance());
+            return (int)retObjectIndexOf;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectIndexOf_ToString = retObjectIndexOf == null ? "null" : retObjectIndexOf.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectIndexOfNumber = (java.lang.Number)retObjectIndexOf;
+                return retObjectIndexOfNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectIndexOf != null ? retObjectIndexOf.getClass() : "null", retObjectIndexOf_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,7 +216,7 @@ public class OperationMessageCollection extends ServiceDescriptionBaseCollection
 
     public void CopyTo(OperationMessage[] array, int index) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CopyTo", toObjectFromArray(array), index);
         } catch (JCNativeException jcne) {
@@ -200,7 +226,7 @@ public class OperationMessageCollection extends ServiceDescriptionBaseCollection
 
     public void Insert(int index, OperationMessage operationMessage) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Insert", index, operationMessage == null ? null : operationMessage.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -210,7 +236,7 @@ public class OperationMessageCollection extends ServiceDescriptionBaseCollection
 
     public void Remove(OperationMessage operationMessage) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Remove", operationMessage == null ? null : operationMessage.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -224,10 +250,14 @@ public class OperationMessageCollection extends ServiceDescriptionBaseCollection
     
     public OperationFlow getFlow() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFlow = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Flow");
+            retObjectFlow = classInstance.Get("Flow");
+            JCObject val = (JCObject)retObjectFlow;
             return new OperationFlow(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFlow != null ? retObjectFlow.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -235,10 +265,14 @@ public class OperationMessageCollection extends ServiceDescriptionBaseCollection
 
     public OperationInput getInput() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInput = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Input");
+            retObjectInput = classInstance.Get("Input");
+            JCObject val = (JCObject)retObjectInput;
             return new OperationInput(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInput != null ? retObjectInput.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -246,10 +280,14 @@ public class OperationMessageCollection extends ServiceDescriptionBaseCollection
 
     public OperationOutput getOutput() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOutput = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Output");
+            retObjectOutput = classInstance.Get("Output");
+            JCObject val = (JCObject)retObjectOutput;
             return new OperationOutput(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOutput != null ? retObjectOutput.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

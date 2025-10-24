@@ -190,10 +190,14 @@ public class SizeF extends ValueType  {
     
     public PointF ToPointF() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToPointF = null;
         try {
-            JCObject objToPointF = (JCObject)classInstance.Invoke("ToPointF");
+            retObjectToPointF = classInstance.Invoke("ToPointF");
+            JCObject objToPointF = (JCObject)retObjectToPointF;
             return new PointF(objToPointF);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToPointF != null ? retObjectToPointF.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,10 +205,14 @@ public class SizeF extends ValueType  {
 
     public Size ToSize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToSize = null;
         try {
-            JCObject objToSize = (JCObject)classInstance.Invoke("ToSize");
+            retObjectToSize = classInstance.Invoke("ToSize");
+            JCObject objToSize = (JCObject)retObjectToSize;
             return new Size(objToSize);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToSize != null ? retObjectToSize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -212,10 +220,14 @@ public class SizeF extends ValueType  {
 
     public static SizeF Add(SizeF sz1, SizeF sz2) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAdd = null;
         try {
-            JCObject objAdd = (JCObject)classType.Invoke("Add", sz1 == null ? null : sz1.getJCOInstance(), sz2 == null ? null : sz2.getJCOInstance());
+            retObjectAdd = classType.Invoke("Add", sz1 == null ? null : sz1.getJCOInstance(), sz2 == null ? null : sz2.getJCOInstance());
+            JCObject objAdd = (JCObject)retObjectAdd;
             return new SizeF(objAdd);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAdd != null ? retObjectAdd.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -223,10 +235,14 @@ public class SizeF extends ValueType  {
 
     public static SizeF Subtract(SizeF sz1, SizeF sz2) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSubtract = null;
         try {
-            JCObject objSubtract = (JCObject)classType.Invoke("Subtract", sz1 == null ? null : sz1.getJCOInstance(), sz2 == null ? null : sz2.getJCOInstance());
+            retObjectSubtract = classType.Invoke("Subtract", sz1 == null ? null : sz1.getJCOInstance(), sz2 == null ? null : sz2.getJCOInstance());
+            JCObject objSubtract = (JCObject)retObjectSubtract;
             return new SizeF(objSubtract);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSubtract != null ? retObjectSubtract.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -238,9 +254,13 @@ public class SizeF extends ValueType  {
     
     public boolean getIsEmpty() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsEmpty = null;
         try {
-            return (boolean)classInstance.Get("IsEmpty");
+            retObjectIsEmpty = classInstance.Get("IsEmpty");
+            return (boolean)retObjectIsEmpty;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsEmpty != null ? retObjectIsEmpty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -248,10 +268,14 @@ public class SizeF extends ValueType  {
 
     public Single getHeight() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHeight = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Height");
+            retObjectHeight = classInstance.Get("Height");
+            JCObject val = (JCObject)retObjectHeight;
             return new Single(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHeight != null ? retObjectHeight.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -259,7 +283,7 @@ public class SizeF extends ValueType  {
 
     public void setHeight(Single Height) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Height", Height == null ? null : Height.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -269,10 +293,14 @@ public class SizeF extends ValueType  {
 
     public Single getWidth() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWidth = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Width");
+            retObjectWidth = classInstance.Get("Width");
+            JCObject val = (JCObject)retObjectWidth;
             return new Single(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWidth != null ? retObjectWidth.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -280,7 +308,7 @@ public class SizeF extends ValueType  {
 
     public void setWidth(Single Width) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Width", Width == null ? null : Width.getJCOInstance());
         } catch (JCNativeException jcne) {

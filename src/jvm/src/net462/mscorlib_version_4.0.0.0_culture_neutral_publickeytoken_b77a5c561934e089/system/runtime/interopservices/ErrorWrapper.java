@@ -189,9 +189,20 @@ public class ErrorWrapper extends NetObject  {
     
     public int getErrorCode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectErrorCode = null;
         try {
-            return (int)classInstance.Get("ErrorCode");
+            retObjectErrorCode = classInstance.Get("ErrorCode");
+            return (int)retObjectErrorCode;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectErrorCode_ToString = retObjectErrorCode == null ? "null" : retObjectErrorCode.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectErrorCodeNumber = (java.lang.Number)retObjectErrorCode;
+                return retObjectErrorCodeNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectErrorCode != null ? retObjectErrorCode.getClass() : "null", retObjectErrorCode_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

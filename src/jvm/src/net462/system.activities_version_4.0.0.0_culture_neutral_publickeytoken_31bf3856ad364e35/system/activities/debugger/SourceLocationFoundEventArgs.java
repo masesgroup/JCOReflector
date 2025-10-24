@@ -171,10 +171,14 @@ public class SourceLocationFoundEventArgs extends EventArgs  {
     
     public SourceLocation getSourceLocation() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSourceLocation = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SourceLocation");
+            retObjectSourceLocation = classInstance.Get("SourceLocation");
+            JCObject val = (JCObject)retObjectSourceLocation;
             return new SourceLocation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSourceLocation != null ? retObjectSourceLocation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,10 +186,14 @@ public class SourceLocationFoundEventArgs extends EventArgs  {
 
     public NetObject getTarget() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTarget = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Target");
+            retObjectTarget = classInstance.Get("Target");
+            JCObject val = (JCObject)retObjectTarget;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTarget != null ? retObjectTarget.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

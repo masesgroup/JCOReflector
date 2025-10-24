@@ -165,9 +165,13 @@ public class TcpTransportSecurity extends NetObject  {
     
     public boolean ShouldSerializeExtendedProtectionPolicy() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShouldSerializeExtendedProtectionPolicy = null;
         try {
-            return (boolean)classInstance.Invoke("ShouldSerializeExtendedProtectionPolicy");
+            retObjectShouldSerializeExtendedProtectionPolicy = classInstance.Invoke("ShouldSerializeExtendedProtectionPolicy");
+            return (boolean)retObjectShouldSerializeExtendedProtectionPolicy;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectShouldSerializeExtendedProtectionPolicy != null ? retObjectShouldSerializeExtendedProtectionPolicy.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,10 +183,14 @@ public class TcpTransportSecurity extends NetObject  {
     
     public ProtectionLevel getProtectionLevel() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProtectionLevel = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ProtectionLevel");
+            retObjectProtectionLevel = classInstance.Get("ProtectionLevel");
+            JCObject val = (JCObject)retObjectProtectionLevel;
             return new ProtectionLevel(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectProtectionLevel != null ? retObjectProtectionLevel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,7 +198,7 @@ public class TcpTransportSecurity extends NetObject  {
 
     public void setProtectionLevel(ProtectionLevel ProtectionLevel) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ProtectionLevel", ProtectionLevel == null ? null : ProtectionLevel.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -200,10 +208,14 @@ public class TcpTransportSecurity extends NetObject  {
 
     public ExtendedProtectionPolicy getExtendedProtectionPolicy() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExtendedProtectionPolicy = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ExtendedProtectionPolicy");
+            retObjectExtendedProtectionPolicy = classInstance.Get("ExtendedProtectionPolicy");
+            JCObject val = (JCObject)retObjectExtendedProtectionPolicy;
             return new ExtendedProtectionPolicy(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExtendedProtectionPolicy != null ? retObjectExtendedProtectionPolicy.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -211,7 +223,7 @@ public class TcpTransportSecurity extends NetObject  {
 
     public void setExtendedProtectionPolicy(ExtendedProtectionPolicy ExtendedProtectionPolicy) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.PlatformNotSupportedException, system.NotSupportedException, system.componentmodel.Win32Exception, system.InvalidCastException, system.configuration.ConfigurationErrorsException, system.MissingMethodException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ExtendedProtectionPolicy", ExtendedProtectionPolicy == null ? null : ExtendedProtectionPolicy.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -221,10 +233,14 @@ public class TcpTransportSecurity extends NetObject  {
 
     public SslProtocols getSslProtocols() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSslProtocols = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SslProtocols");
+            retObjectSslProtocols = classInstance.Get("SslProtocols");
+            JCObject val = (JCObject)retObjectSslProtocols;
             return new SslProtocols(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSslProtocols != null ? retObjectSslProtocols.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -232,7 +248,7 @@ public class TcpTransportSecurity extends NetObject  {
 
     public void setSslProtocols(SslProtocols SslProtocols) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SslProtocols", SslProtocols == null ? null : SslProtocols.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -242,10 +258,14 @@ public class TcpTransportSecurity extends NetObject  {
 
     public TcpClientCredentialType getClientCredentialType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClientCredentialType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ClientCredentialType");
+            retObjectClientCredentialType = classInstance.Get("ClientCredentialType");
+            JCObject val = (JCObject)retObjectClientCredentialType;
             return new TcpClientCredentialType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClientCredentialType != null ? retObjectClientCredentialType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -253,7 +273,7 @@ public class TcpTransportSecurity extends NetObject  {
 
     public void setClientCredentialType(TcpClientCredentialType ClientCredentialType) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ClientCredentialType", ClientCredentialType == null ? null : ClientCredentialType.getJCOInstance());
         } catch (JCNativeException jcne) {

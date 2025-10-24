@@ -165,9 +165,13 @@ public class RsaSecurityTokenHandler extends SecurityTokenHandler  {
     
     public boolean CanReadToken(XmlReader reader) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanReadToken = null;
         try {
-            return (boolean)classInstance.Invoke("CanReadToken", reader == null ? null : reader.getJCOInstance());
+            retObjectCanReadToken = classInstance.Invoke("CanReadToken", reader == null ? null : reader.getJCOInstance());
+            return (boolean)retObjectCanReadToken;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCanReadToken != null ? retObjectCanReadToken.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -175,10 +179,14 @@ public class RsaSecurityTokenHandler extends SecurityTokenHandler  {
 
     public SecurityToken ReadToken(XmlReader reader) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.xml.XmlException, system.security.cryptography.CryptographicException, system.RankException, system.UnauthorizedAccessException, system.security.accesscontrol.PrivilegeNotHeldException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadToken = null;
         try {
-            JCObject objReadToken = (JCObject)classInstance.Invoke("ReadToken", reader == null ? null : reader.getJCOInstance());
+            retObjectReadToken = classInstance.Invoke("ReadToken", reader == null ? null : reader.getJCOInstance());
+            JCObject objReadToken = (JCObject)retObjectReadToken;
             return new SecurityToken(objReadToken);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadToken != null ? retObjectReadToken.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,10 +194,12 @@ public class RsaSecurityTokenHandler extends SecurityTokenHandler  {
 
     public java.lang.String[] GetTokenTypeIdentifiers() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetTokenTypeIdentifiers = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetTokenTypeIdentifiers");
+            retObjectGetTokenTypeIdentifiers = classInstance.Invoke("GetTokenTypeIdentifiers");
+            JCObject resultingObjects = (JCObject)retObjectGetTokenTypeIdentifiers;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -198,6 +208,8 @@ public class RsaSecurityTokenHandler extends SecurityTokenHandler  {
 				resultingArray[indexGetTokenTypeIdentifiers] = (java.lang.String)resultingArrayList.get(indexGetTokenTypeIdentifiers);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectGetTokenTypeIdentifiers != null ? retObjectGetTokenTypeIdentifiers.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -205,7 +217,7 @@ public class RsaSecurityTokenHandler extends SecurityTokenHandler  {
 
     public void WriteToken(XmlWriter writer, SecurityToken token) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteToken", writer == null ? null : writer.getJCOInstance(), token == null ? null : token.getJCOInstance());
         } catch (JCNativeException jcne) {

@@ -166,7 +166,7 @@ public class MdiClient extends Control  {
     
     public void LayoutMdi(MdiLayout value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ObjectDisposedException, system.ArgumentNullException, system.OutOfMemoryException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("LayoutMdi", value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -180,16 +180,20 @@ public class MdiClient extends Control  {
     
     public final Form[] getMdiChildren() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMdiChildren = null;
         try {
             ArrayList<Form> resultingArrayList = new ArrayList<Form>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("MdiChildren");
+            retObjectMdiChildren = classInstance.Get("MdiChildren");
+            JCObject resultingObjects = (JCObject)retObjectMdiChildren;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new Form(resultingObject));
             }
             Form[] resultingArray = new Form[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMdiChildren != null ? retObjectMdiChildren.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

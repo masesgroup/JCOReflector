@@ -170,9 +170,20 @@ public class CacheVirtualItemsEventArgs extends EventArgs  {
     
     public int getEndIndex() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEndIndex = null;
         try {
-            return (int)classInstance.Get("EndIndex");
+            retObjectEndIndex = classInstance.Get("EndIndex");
+            return (int)retObjectEndIndex;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectEndIndex_ToString = retObjectEndIndex == null ? "null" : retObjectEndIndex.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectEndIndexNumber = (java.lang.Number)retObjectEndIndex;
+                return retObjectEndIndexNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectEndIndex != null ? retObjectEndIndex.getClass() : "null", retObjectEndIndex_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,9 +191,20 @@ public class CacheVirtualItemsEventArgs extends EventArgs  {
 
     public int getStartIndex() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStartIndex = null;
         try {
-            return (int)classInstance.Get("StartIndex");
+            retObjectStartIndex = classInstance.Get("StartIndex");
+            return (int)retObjectStartIndex;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectStartIndex_ToString = retObjectStartIndex == null ? "null" : retObjectStartIndex.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectStartIndexNumber = (java.lang.Number)retObjectStartIndex;
+                return retObjectStartIndexNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectStartIndex != null ? retObjectStartIndex.getClass() : "null", retObjectStartIndex_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

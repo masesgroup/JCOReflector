@@ -159,10 +159,14 @@ public class TriggerBase extends DependencyObject  {
     
     public TriggerActionCollection getEnterActions() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEnterActions = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("EnterActions");
+            retObjectEnterActions = classInstance.Get("EnterActions");
+            JCObject val = (JCObject)retObjectEnterActions;
             return new TriggerActionCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEnterActions != null ? retObjectEnterActions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,10 +174,14 @@ public class TriggerBase extends DependencyObject  {
 
     public TriggerActionCollection getExitActions() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExitActions = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ExitActions");
+            retObjectExitActions = classInstance.Get("ExitActions");
+            JCObject val = (JCObject)retObjectExitActions;
             return new TriggerActionCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExitActions != null ? retObjectExitActions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

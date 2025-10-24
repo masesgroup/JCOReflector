@@ -157,10 +157,14 @@ public class CodePagesEncodingProvider extends EncodingProvider  {
     
     public Encoding GetEncoding(int codepage) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.LockRecursionException, system.NullReferenceException, system.threading.WaitHandleCannotBeOpenedException, system.threading.AbandonedMutexException, system.ArgumentNullException, system.InvalidOperationException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException, system.OutOfMemoryException, system.threading.SynchronizationLockException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetEncoding = null;
         try {
-            JCObject objGetEncoding = (JCObject)classInstance.Invoke("GetEncoding", codepage);
+            retObjectGetEncoding = classInstance.Invoke("GetEncoding", codepage);
+            JCObject objGetEncoding = (JCObject)retObjectGetEncoding;
             return new Encoding(objGetEncoding);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetEncoding != null ? retObjectGetEncoding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -168,10 +172,14 @@ public class CodePagesEncodingProvider extends EncodingProvider  {
 
     public Encoding GetEncoding(java.lang.String name) throws Throwable, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.LockRecursionException, system.NotSupportedException, system.ArgumentException, system.threading.WaitHandleCannotBeOpenedException, system.threading.AbandonedMutexException, system.ArgumentNullException, system.InvalidOperationException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException, system.threading.SynchronizationLockException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetEncoding = null;
         try {
-            JCObject objGetEncoding = (JCObject)classInstance.Invoke("GetEncoding", name);
+            retObjectGetEncoding = classInstance.Invoke("GetEncoding", name);
+            JCObject objGetEncoding = (JCObject)retObjectGetEncoding;
             return new Encoding(objGetEncoding);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetEncoding != null ? retObjectGetEncoding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,10 +191,14 @@ public class CodePagesEncodingProvider extends EncodingProvider  {
     
     public static EncodingProvider getInstance() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectInstance = null;
         try {
-            JCObject val = (JCObject)classType.Get("Instance");
+            retObjectInstance = classType.Get("Instance");
+            JCObject val = (JCObject)retObjectInstance;
             return new EncodingProvider(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInstance != null ? retObjectInstance.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

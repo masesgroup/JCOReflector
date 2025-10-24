@@ -158,10 +158,14 @@ public class InterfaceImplementation extends ValueType  {
     
     public CustomAttributeHandleCollection GetCustomAttributes() throws Throwable, system.BadImageFormatException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetCustomAttributes = null;
         try {
-            JCObject objGetCustomAttributes = (JCObject)classInstance.Invoke("GetCustomAttributes");
+            retObjectGetCustomAttributes = classInstance.Invoke("GetCustomAttributes");
+            JCObject objGetCustomAttributes = (JCObject)retObjectGetCustomAttributes;
             return new CustomAttributeHandleCollection(objGetCustomAttributes);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCustomAttributes != null ? retObjectGetCustomAttributes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -173,10 +177,14 @@ public class InterfaceImplementation extends ValueType  {
     
     public EntityHandle getInterface() throws Throwable, system.BadImageFormatException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInterface = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Interface");
+            retObjectInterface = classInstance.Get("Interface");
+            JCObject val = (JCObject)retObjectInterface;
             return new EntityHandle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInterface != null ? retObjectInterface.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

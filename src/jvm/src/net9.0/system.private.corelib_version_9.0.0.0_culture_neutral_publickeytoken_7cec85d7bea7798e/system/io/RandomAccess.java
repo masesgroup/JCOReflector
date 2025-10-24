@@ -155,9 +155,20 @@ public class RandomAccess extends NetObject  {
     
     public static long GetLength(SafeFileHandle handle) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetLength = null;
         try {
-            return (long)classType.Invoke("GetLength", handle == null ? null : handle.getJCOInstance());
+            retObjectGetLength = classType.Invoke("GetLength", handle == null ? null : handle.getJCOInstance());
+            return (long)retObjectGetLength;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetLength_ToString = retObjectGetLength == null ? "null" : retObjectGetLength.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetLengthNumber = (java.lang.Number)retObjectGetLength;
+                return retObjectGetLengthNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectGetLength != null ? retObjectGetLength.getClass() : "null", retObjectGetLength_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -165,7 +176,7 @@ public class RandomAccess extends NetObject  {
 
     public static void FlushToDisk(SafeFileHandle handle) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("FlushToDisk", handle == null ? null : handle.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -175,7 +186,7 @@ public class RandomAccess extends NetObject  {
 
     public static void SetLength(SafeFileHandle handle, long length) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetLength", handle == null ? null : handle.getJCOInstance(), length);
         } catch (JCNativeException jcne) {

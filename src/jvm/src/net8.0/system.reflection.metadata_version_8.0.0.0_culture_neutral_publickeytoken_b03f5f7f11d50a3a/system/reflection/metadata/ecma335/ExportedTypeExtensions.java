@@ -154,9 +154,20 @@ public class ExportedTypeExtensions extends NetObject  {
     
     public static int GetTypeDefinitionId(ExportedType exportedType) throws Throwable, system.ArgumentException, system.BadImageFormatException, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetTypeDefinitionId = null;
         try {
-            return (int)classType.Invoke("GetTypeDefinitionId", exportedType == null ? null : exportedType.getJCOInstance());
+            retObjectGetTypeDefinitionId = classType.Invoke("GetTypeDefinitionId", exportedType == null ? null : exportedType.getJCOInstance());
+            return (int)retObjectGetTypeDefinitionId;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetTypeDefinitionId_ToString = retObjectGetTypeDefinitionId == null ? "null" : retObjectGetTypeDefinitionId.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetTypeDefinitionIdNumber = (java.lang.Number)retObjectGetTypeDefinitionId;
+                return retObjectGetTypeDefinitionIdNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetTypeDefinitionId != null ? retObjectGetTypeDefinitionId.getClass() : "null", retObjectGetTypeDefinitionId_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

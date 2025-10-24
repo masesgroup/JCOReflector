@@ -179,9 +179,13 @@ public class Asn1Tag extends ValueType  {
     
     public boolean Equals(Asn1Tag other) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEquals = null;
         try {
-            return (boolean)classInstance.Invoke("Equals", other == null ? null : other.getJCOInstance());
+            retObjectEquals = classInstance.Invoke("Equals", other == null ? null : other.getJCOInstance());
+            return (boolean)retObjectEquals;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectEquals != null ? retObjectEquals.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -189,9 +193,13 @@ public class Asn1Tag extends ValueType  {
 
     public boolean HasSameClassAndValue(Asn1Tag other) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHasSameClassAndValue = null;
         try {
-            return (boolean)classInstance.Invoke("HasSameClassAndValue", other == null ? null : other.getJCOInstance());
+            retObjectHasSameClassAndValue = classInstance.Invoke("HasSameClassAndValue", other == null ? null : other.getJCOInstance());
+            return (boolean)retObjectHasSameClassAndValue;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectHasSameClassAndValue != null ? retObjectHasSameClassAndValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -199,9 +207,20 @@ public class Asn1Tag extends ValueType  {
 
     public int CalculateEncodedSize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCalculateEncodedSize = null;
         try {
-            return (int)classInstance.Invoke("CalculateEncodedSize");
+            retObjectCalculateEncodedSize = classInstance.Invoke("CalculateEncodedSize");
+            return (int)retObjectCalculateEncodedSize;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCalculateEncodedSize_ToString = retObjectCalculateEncodedSize == null ? "null" : retObjectCalculateEncodedSize.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectCalculateEncodedSizeNumber = (java.lang.Number)retObjectCalculateEncodedSize;
+                return retObjectCalculateEncodedSizeNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCalculateEncodedSize != null ? retObjectCalculateEncodedSize.getClass() : "null", retObjectCalculateEncodedSize_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -209,10 +228,14 @@ public class Asn1Tag extends ValueType  {
 
     public Asn1Tag AsConstructed() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAsConstructed = null;
         try {
-            JCObject objAsConstructed = (JCObject)classInstance.Invoke("AsConstructed");
+            retObjectAsConstructed = classInstance.Invoke("AsConstructed");
+            JCObject objAsConstructed = (JCObject)retObjectAsConstructed;
             return new Asn1Tag(objAsConstructed);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAsConstructed != null ? retObjectAsConstructed.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -220,10 +243,14 @@ public class Asn1Tag extends ValueType  {
 
     public Asn1Tag AsPrimitive() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAsPrimitive = null;
         try {
-            JCObject objAsPrimitive = (JCObject)classInstance.Invoke("AsPrimitive");
+            retObjectAsPrimitive = classInstance.Invoke("AsPrimitive");
+            JCObject objAsPrimitive = (JCObject)retObjectAsPrimitive;
             return new Asn1Tag(objAsPrimitive);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAsPrimitive != null ? retObjectAsPrimitive.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -235,9 +262,13 @@ public class Asn1Tag extends ValueType  {
     
     public boolean getIsConstructed() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsConstructed = null;
         try {
-            return (boolean)classInstance.Get("IsConstructed");
+            retObjectIsConstructed = classInstance.Get("IsConstructed");
+            return (boolean)retObjectIsConstructed;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsConstructed != null ? retObjectIsConstructed.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -245,9 +276,20 @@ public class Asn1Tag extends ValueType  {
 
     public int getTagValue() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTagValue = null;
         try {
-            return (int)classInstance.Get("TagValue");
+            retObjectTagValue = classInstance.Get("TagValue");
+            return (int)retObjectTagValue;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectTagValue_ToString = retObjectTagValue == null ? "null" : retObjectTagValue.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectTagValueNumber = (java.lang.Number)retObjectTagValue;
+                return retObjectTagValueNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectTagValue != null ? retObjectTagValue.getClass() : "null", retObjectTagValue_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -255,10 +297,14 @@ public class Asn1Tag extends ValueType  {
 
     public TagClass getTagClass() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTagClass = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TagClass");
+            retObjectTagClass = classInstance.Get("TagClass");
+            JCObject val = (JCObject)retObjectTagClass;
             return new TagClass(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTagClass != null ? retObjectTagClass.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

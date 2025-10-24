@@ -159,9 +159,13 @@ public class ConstraintCollection extends InternalDataCollectionBase  {
     
     public boolean CanRemove(Constraint constraint) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanRemove = null;
         try {
-            return (boolean)classInstance.Invoke("CanRemove", constraint == null ? null : constraint.getJCOInstance());
+            retObjectCanRemove = classInstance.Invoke("CanRemove", constraint == null ? null : constraint.getJCOInstance());
+            return (boolean)retObjectCanRemove;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCanRemove != null ? retObjectCanRemove.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,9 +173,13 @@ public class ConstraintCollection extends InternalDataCollectionBase  {
 
     public boolean Contains(java.lang.String name) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContains = null;
         try {
-            return (boolean)classInstance.Invoke("Contains", name);
+            retObjectContains = classInstance.Invoke("Contains", name);
+            return (boolean)retObjectContains;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectContains != null ? retObjectContains.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,9 +187,20 @@ public class ConstraintCollection extends InternalDataCollectionBase  {
 
     public int IndexOf(Constraint constraint) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIndexOf = null;
         try {
-            return (int)classInstance.Invoke("IndexOf", constraint == null ? null : constraint.getJCOInstance());
+            retObjectIndexOf = classInstance.Invoke("IndexOf", constraint == null ? null : constraint.getJCOInstance());
+            return (int)retObjectIndexOf;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectIndexOf_ToString = retObjectIndexOf == null ? "null" : retObjectIndexOf.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectIndexOfNumber = (java.lang.Number)retObjectIndexOf;
+                return retObjectIndexOfNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectIndexOf != null ? retObjectIndexOf.getClass() : "null", retObjectIndexOf_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -189,9 +208,20 @@ public class ConstraintCollection extends InternalDataCollectionBase  {
 
     public int IndexOf(java.lang.String constraintName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIndexOf = null;
         try {
-            return (int)classInstance.Invoke("IndexOf", constraintName);
+            retObjectIndexOf = classInstance.Invoke("IndexOf", constraintName);
+            return (int)retObjectIndexOf;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectIndexOf_ToString = retObjectIndexOf == null ? "null" : retObjectIndexOf.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectIndexOfNumber = (java.lang.Number)retObjectIndexOf;
+                return retObjectIndexOfNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectIndexOf != null ? retObjectIndexOf.getClass() : "null", retObjectIndexOf_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -199,10 +229,14 @@ public class ConstraintCollection extends InternalDataCollectionBase  {
 
     public Constraint Add(java.lang.String name, DataColumn column, boolean primaryKey) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.data.InvalidConstraintException, system.OutOfMemoryException, system.threading.SynchronizationLockException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAdd = null;
         try {
-            JCObject objAdd = (JCObject)classInstance.Invoke("Add", name, column == null ? null : column.getJCOInstance(), primaryKey);
+            retObjectAdd = classInstance.Invoke("Add", name, column == null ? null : column.getJCOInstance(), primaryKey);
+            JCObject objAdd = (JCObject)retObjectAdd;
             return new Constraint(objAdd);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAdd != null ? retObjectAdd.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -210,10 +244,14 @@ public class ConstraintCollection extends InternalDataCollectionBase  {
 
     public Constraint Add(java.lang.String name, DataColumn primaryKeyColumn, DataColumn foreignKeyColumn) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.data.InvalidConstraintException, system.FormatException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.threading.SynchronizationLockException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAdd = null;
         try {
-            JCObject objAdd = (JCObject)classInstance.Invoke("Add", name, primaryKeyColumn == null ? null : primaryKeyColumn.getJCOInstance(), foreignKeyColumn == null ? null : foreignKeyColumn.getJCOInstance());
+            retObjectAdd = classInstance.Invoke("Add", name, primaryKeyColumn == null ? null : primaryKeyColumn.getJCOInstance(), foreignKeyColumn == null ? null : foreignKeyColumn.getJCOInstance());
+            JCObject objAdd = (JCObject)retObjectAdd;
             return new Constraint(objAdd);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAdd != null ? retObjectAdd.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -221,10 +259,14 @@ public class ConstraintCollection extends InternalDataCollectionBase  {
 
     public Constraint Add(java.lang.String name, DataColumn[] columns, boolean primaryKey) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.data.InvalidConstraintException, system.OutOfMemoryException, system.threading.SynchronizationLockException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAdd = null;
         try {
-            JCObject objAdd = (JCObject)classInstance.Invoke("Add", name, toObjectFromArray(columns), primaryKey);
+            retObjectAdd = classInstance.Invoke("Add", name, toObjectFromArray(columns), primaryKey);
+            JCObject objAdd = (JCObject)retObjectAdd;
             return new Constraint(objAdd);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAdd != null ? retObjectAdd.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -232,10 +274,14 @@ public class ConstraintCollection extends InternalDataCollectionBase  {
 
     public Constraint Add(java.lang.String name, DataColumn[] primaryKeyColumns, DataColumn[] foreignKeyColumns) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.data.InvalidConstraintException, system.FormatException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.threading.SynchronizationLockException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAdd = null;
         try {
-            JCObject objAdd = (JCObject)classInstance.Invoke("Add", name, toObjectFromArray(primaryKeyColumns), toObjectFromArray(foreignKeyColumns));
+            retObjectAdd = classInstance.Invoke("Add", name, toObjectFromArray(primaryKeyColumns), toObjectFromArray(foreignKeyColumns));
+            JCObject objAdd = (JCObject)retObjectAdd;
             return new Constraint(objAdd);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAdd != null ? retObjectAdd.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -243,7 +289,7 @@ public class ConstraintCollection extends InternalDataCollectionBase  {
 
     public void Add(Constraint constraint) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.OutOfMemoryException, system.NotSupportedException, system.threading.SynchronizationLockException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Add", constraint == null ? null : constraint.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -253,7 +299,7 @@ public class ConstraintCollection extends InternalDataCollectionBase  {
 
     public void AddRange(Constraint[] constraints) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.NotSupportedException, system.threading.SynchronizationLockException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddRange", (java.lang.Object)toObjectFromArray(constraints));
         } catch (JCNativeException jcne) {
@@ -263,7 +309,7 @@ public class ConstraintCollection extends InternalDataCollectionBase  {
 
     public void Clear() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.ArgumentNullException, system.data.InvalidConstraintException, system.NullReferenceException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException, system.ObjectDisposedException, system.threading.LockRecursionException, system.threading.AbandonedMutexException, system.threading.SynchronizationLockException, system.diagnostics.tracing.EventSourceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Clear");
         } catch (JCNativeException jcne) {
@@ -273,7 +319,7 @@ public class ConstraintCollection extends InternalDataCollectionBase  {
 
     public void CopyTo(Constraint[] array, int index) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CopyTo", toObjectFromArray(array), index);
         } catch (JCNativeException jcne) {
@@ -283,7 +329,7 @@ public class ConstraintCollection extends InternalDataCollectionBase  {
 
     public void Remove(Constraint constraint) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.threading.LockRecursionException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException, system.threading.SynchronizationLockException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Remove", constraint == null ? null : constraint.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -293,7 +339,7 @@ public class ConstraintCollection extends InternalDataCollectionBase  {
 
     public void Remove(java.lang.String name) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.FormatException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Remove", name);
         } catch (JCNativeException jcne) {
@@ -303,7 +349,7 @@ public class ConstraintCollection extends InternalDataCollectionBase  {
 
     public void RemoveAt(int index) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.threading.LockRecursionException, system.threading.SynchronizationLockException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RemoveAt", index);
         } catch (JCNativeException jcne) {
@@ -322,7 +368,7 @@ public class ConstraintCollection extends InternalDataCollectionBase  {
 
     public void addCollectionChanged(CollectionChangeEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("CollectionChanged", handler);
         } catch (JCNativeException jcne) {
@@ -332,7 +378,7 @@ public class ConstraintCollection extends InternalDataCollectionBase  {
 
     public void removeCollectionChanged(CollectionChangeEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("CollectionChanged", handler);
         } catch (JCNativeException jcne) {

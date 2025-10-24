@@ -180,10 +180,12 @@ public class BinaryExchange extends NetObject  {
     
     public byte[] getBinaryData() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBinaryData = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("BinaryData");
+            retObjectBinaryData = classInstance.Get("BinaryData");
+            JCObject resultingObjects = (JCObject)retObjectBinaryData;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -192,6 +194,8 @@ public class BinaryExchange extends NetObject  {
 				resultingArray[indexBinaryData] = (byte)resultingArrayList.get(indexBinaryData);
 			}
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into JCObject", retObjectBinaryData != null ? retObjectBinaryData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -199,10 +203,14 @@ public class BinaryExchange extends NetObject  {
 
     public Uri getEncodingType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEncodingType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("EncodingType");
+            retObjectEncodingType = classInstance.Get("EncodingType");
+            JCObject val = (JCObject)retObjectEncodingType;
             return new Uri(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEncodingType != null ? retObjectEncodingType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -210,10 +218,14 @@ public class BinaryExchange extends NetObject  {
 
     public Uri getValueType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValueType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ValueType");
+            retObjectValueType = classInstance.Get("ValueType");
+            JCObject val = (JCObject)retObjectValueType;
             return new Uri(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectValueType != null ? retObjectValueType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

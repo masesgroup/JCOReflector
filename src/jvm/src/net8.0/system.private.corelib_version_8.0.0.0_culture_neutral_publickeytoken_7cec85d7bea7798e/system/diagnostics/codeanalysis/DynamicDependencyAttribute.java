@@ -211,10 +211,14 @@ public class DynamicDependencyAttribute extends Attribute  {
     
     public DynamicallyAccessedMemberTypes getMemberTypes() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMemberTypes = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MemberTypes");
+            retObjectMemberTypes = classInstance.Get("MemberTypes");
+            JCObject val = (JCObject)retObjectMemberTypes;
             return new DynamicallyAccessedMemberTypes(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMemberTypes != null ? retObjectMemberTypes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -222,9 +226,13 @@ public class DynamicDependencyAttribute extends Attribute  {
 
     public java.lang.String getAssemblyName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAssemblyName = null;
         try {
-            return (java.lang.String)classInstance.Get("AssemblyName");
+            retObjectAssemblyName = classInstance.Get("AssemblyName");
+            return (java.lang.String)retObjectAssemblyName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectAssemblyName != null ? retObjectAssemblyName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -232,9 +240,13 @@ public class DynamicDependencyAttribute extends Attribute  {
 
     public java.lang.String getCondition() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCondition = null;
         try {
-            return (java.lang.String)classInstance.Get("Condition");
+            retObjectCondition = classInstance.Get("Condition");
+            return (java.lang.String)retObjectCondition;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectCondition != null ? retObjectCondition.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -242,7 +254,7 @@ public class DynamicDependencyAttribute extends Attribute  {
 
     public void setCondition(java.lang.String Condition) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Condition", Condition);
         } catch (JCNativeException jcne) {
@@ -252,9 +264,13 @@ public class DynamicDependencyAttribute extends Attribute  {
 
     public java.lang.String getMemberSignature() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMemberSignature = null;
         try {
-            return (java.lang.String)classInstance.Get("MemberSignature");
+            retObjectMemberSignature = classInstance.Get("MemberSignature");
+            return (java.lang.String)retObjectMemberSignature;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectMemberSignature != null ? retObjectMemberSignature.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -262,9 +278,13 @@ public class DynamicDependencyAttribute extends Attribute  {
 
     public java.lang.String getTypeName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTypeName = null;
         try {
-            return (java.lang.String)classInstance.Get("TypeName");
+            retObjectTypeName = classInstance.Get("TypeName");
+            return (java.lang.String)retObjectTypeName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectTypeName != null ? retObjectTypeName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -272,10 +292,14 @@ public class DynamicDependencyAttribute extends Attribute  {
 
     public NetType getType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Type");
+            retObjectType = classInstance.Get("Type");
+            JCObject val = (JCObject)retObjectType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectType != null ? retObjectType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

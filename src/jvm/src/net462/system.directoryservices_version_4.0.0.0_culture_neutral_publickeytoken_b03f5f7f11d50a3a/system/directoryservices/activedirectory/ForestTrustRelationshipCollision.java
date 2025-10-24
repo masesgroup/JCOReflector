@@ -162,10 +162,14 @@ public class ForestTrustRelationshipCollision extends NetObject  {
     
     public DomainCollisionOptions getDomainCollisionOption() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDomainCollisionOption = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DomainCollisionOption");
+            retObjectDomainCollisionOption = classInstance.Get("DomainCollisionOption");
+            JCObject val = (JCObject)retObjectDomainCollisionOption;
             return new DomainCollisionOptions(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDomainCollisionOption != null ? retObjectDomainCollisionOption.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -173,10 +177,14 @@ public class ForestTrustRelationshipCollision extends NetObject  {
 
     public ForestTrustCollisionType getCollisionType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCollisionType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CollisionType");
+            retObjectCollisionType = classInstance.Get("CollisionType");
+            JCObject val = (JCObject)retObjectCollisionType;
             return new ForestTrustCollisionType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCollisionType != null ? retObjectCollisionType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -184,10 +192,14 @@ public class ForestTrustRelationshipCollision extends NetObject  {
 
     public TopLevelNameCollisionOptions getTopLevelNameCollisionOption() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTopLevelNameCollisionOption = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TopLevelNameCollisionOption");
+            retObjectTopLevelNameCollisionOption = classInstance.Get("TopLevelNameCollisionOption");
+            JCObject val = (JCObject)retObjectTopLevelNameCollisionOption;
             return new TopLevelNameCollisionOptions(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTopLevelNameCollisionOption != null ? retObjectTopLevelNameCollisionOption.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,9 +207,13 @@ public class ForestTrustRelationshipCollision extends NetObject  {
 
     public java.lang.String getCollisionRecord() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCollisionRecord = null;
         try {
-            return (java.lang.String)classInstance.Get("CollisionRecord");
+            retObjectCollisionRecord = classInstance.Get("CollisionRecord");
+            return (java.lang.String)retObjectCollisionRecord;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectCollisionRecord != null ? retObjectCollisionRecord.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

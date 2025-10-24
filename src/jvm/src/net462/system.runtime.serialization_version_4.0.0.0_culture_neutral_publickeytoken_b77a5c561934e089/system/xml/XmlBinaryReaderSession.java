@@ -162,9 +162,13 @@ public class XmlBinaryReaderSession extends NetObject  {
     
     public boolean TryLookup(int key, JCORefOut<XmlDictionaryString> result) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryLookup = null;
         try {
-            return (boolean)classInstance.Invoke("TryLookup", key, result.getJCRefOut());
+            retObjectTryLookup = classInstance.Invoke("TryLookup", key, result.getJCRefOut());
+            return (boolean)retObjectTryLookup;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryLookup != null ? retObjectTryLookup.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,9 +176,13 @@ public class XmlBinaryReaderSession extends NetObject  {
 
     public boolean TryLookup(java.lang.String value, JCORefOut<XmlDictionaryString> result) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryLookup = null;
         try {
-            return (boolean)classInstance.Invoke("TryLookup", value, result.getJCRefOut());
+            retObjectTryLookup = classInstance.Invoke("TryLookup", value, result.getJCRefOut());
+            return (boolean)retObjectTryLookup;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryLookup != null ? retObjectTryLookup.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,9 +190,13 @@ public class XmlBinaryReaderSession extends NetObject  {
 
     public boolean TryLookup(XmlDictionaryString value, JCORefOut<XmlDictionaryString> result) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryLookup = null;
         try {
-            return (boolean)classInstance.Invoke("TryLookup", value == null ? null : value.getJCOInstance(), result.getJCRefOut());
+            retObjectTryLookup = classInstance.Invoke("TryLookup", value == null ? null : value.getJCOInstance(), result.getJCRefOut());
+            return (boolean)retObjectTryLookup;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryLookup != null ? retObjectTryLookup.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,10 +204,14 @@ public class XmlBinaryReaderSession extends NetObject  {
 
     public XmlDictionaryString Add(int id, java.lang.String value) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAdd = null;
         try {
-            JCObject objAdd = (JCObject)classInstance.Invoke("Add", id, value);
+            retObjectAdd = classInstance.Invoke("Add", id, value);
+            JCObject objAdd = (JCObject)retObjectAdd;
             return new XmlDictionaryString(objAdd);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAdd != null ? retObjectAdd.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,7 +219,7 @@ public class XmlBinaryReaderSession extends NetObject  {
 
     public void Clear() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Clear");
         } catch (JCNativeException jcne) {

@@ -164,9 +164,13 @@ public class ButtonBase extends ContentControl  {
     
     public boolean getIsPressed() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsPressed = null;
         try {
-            return (boolean)classInstance.Get("IsPressed");
+            retObjectIsPressed = classInstance.Get("IsPressed");
+            return (boolean)retObjectIsPressed;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsPressed != null ? retObjectIsPressed.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -174,7 +178,7 @@ public class ButtonBase extends ContentControl  {
 
     public void setIsPressed(boolean IsPressed) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsPressed", IsPressed);
         } catch (JCNativeException jcne) {
@@ -184,10 +188,14 @@ public class ButtonBase extends ContentControl  {
 
     public NetObject getCommandParameter() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCommandParameter = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CommandParameter");
+            retObjectCommandParameter = classInstance.Get("CommandParameter");
+            JCObject val = (JCObject)retObjectCommandParameter;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCommandParameter != null ? retObjectCommandParameter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,7 +203,7 @@ public class ButtonBase extends ContentControl  {
 
     public void setCommandParameter(NetObject CommandParameter) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CommandParameter", CommandParameter == null ? null : CommandParameter.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -205,10 +213,14 @@ public class ButtonBase extends ContentControl  {
 
     public ClickMode getClickMode() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClickMode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ClickMode");
+            retObjectClickMode = classInstance.Get("ClickMode");
+            JCObject val = (JCObject)retObjectClickMode;
             return new ClickMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClickMode != null ? retObjectClickMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -216,7 +228,7 @@ public class ButtonBase extends ContentControl  {
 
     public void setClickMode(ClickMode ClickMode) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ClickMode", ClickMode == null ? null : ClickMode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -226,10 +238,14 @@ public class ButtonBase extends ContentControl  {
 
     public IInputElement getCommandTarget() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCommandTarget = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CommandTarget");
+            retObjectCommandTarget = classInstance.Get("CommandTarget");
+            JCObject val = (JCObject)retObjectCommandTarget;
             return new IInputElementImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCommandTarget != null ? retObjectCommandTarget.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -237,7 +253,7 @@ public class ButtonBase extends ContentControl  {
 
     public void setCommandTarget(IInputElement CommandTarget) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CommandTarget", CommandTarget == null ? null : CommandTarget.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -247,10 +263,14 @@ public class ButtonBase extends ContentControl  {
 
     public ICommand getCommand() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCommand = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Command");
+            retObjectCommand = classInstance.Get("Command");
+            JCObject val = (JCObject)retObjectCommand;
             return new ICommandImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCommand != null ? retObjectCommand.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -258,7 +278,7 @@ public class ButtonBase extends ContentControl  {
 
     public void setCommand(ICommand Command) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Command", Command == null ? null : Command.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -273,7 +293,7 @@ public class ButtonBase extends ContentControl  {
 
     public void addClick(RoutedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Click", handler);
         } catch (JCNativeException jcne) {
@@ -283,7 +303,7 @@ public class ButtonBase extends ContentControl  {
 
     public void removeClick(RoutedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Click", handler);
         } catch (JCNativeException jcne) {

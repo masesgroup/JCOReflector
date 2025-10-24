@@ -157,10 +157,14 @@ public class TaskToAsyncResult extends NetObject  {
     
     public static IAsyncResult Begin(Task task, AsyncCallback callback, NetObject state) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.NullReferenceException, system.diagnostics.tracing.EventSourceException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectBegin = null;
         try {
-            JCObject objBegin = (JCObject)classType.Invoke("Begin", task == null ? null : task.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            retObjectBegin = classType.Invoke("Begin", task == null ? null : task.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            JCObject objBegin = (JCObject)retObjectBegin;
             return new IAsyncResultImplementation(objBegin);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBegin != null ? retObjectBegin.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -168,10 +172,14 @@ public class TaskToAsyncResult extends NetObject  {
 
     public static Task Unwrap(IAsyncResult asyncResult) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectUnwrap = null;
         try {
-            JCObject objUnwrap = (JCObject)classType.Invoke("Unwrap", asyncResult == null ? null : asyncResult.getJCOInstance());
+            retObjectUnwrap = classType.Invoke("Unwrap", asyncResult == null ? null : asyncResult.getJCOInstance());
+            JCObject objUnwrap = (JCObject)retObjectUnwrap;
             return new Task(objUnwrap);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUnwrap != null ? retObjectUnwrap.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,7 +187,7 @@ public class TaskToAsyncResult extends NetObject  {
 
     public static void End(IAsyncResult asyncResult) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.diagnostics.tracing.EventSourceException, system.threading.tasks.TaskSchedulerException, system.ObjectDisposedException, system.OperationCanceledException, system.threading.tasks.TaskCanceledException, system.AggregateException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("End", asyncResult == null ? null : asyncResult.getJCOInstance());
         } catch (JCNativeException jcne) {

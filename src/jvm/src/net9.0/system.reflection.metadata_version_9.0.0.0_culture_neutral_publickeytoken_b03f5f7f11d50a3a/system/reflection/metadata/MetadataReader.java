@@ -253,10 +253,12 @@ public class MetadataReader extends NetObject  {
     
     public byte[] GetBlobBytes(BlobHandle handle) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.BadImageFormatException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetBlobBytes = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetBlobBytes", handle == null ? null : handle.getJCOInstance());
+            retObjectGetBlobBytes = classInstance.Invoke("GetBlobBytes", handle == null ? null : handle.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectGetBlobBytes;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -265,6 +267,8 @@ public class MetadataReader extends NetObject  {
 				resultingArray[indexGetBlobBytes] = (byte)resultingArrayList.get(indexGetBlobBytes);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectGetBlobBytes != null ? retObjectGetBlobBytes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -272,10 +276,14 @@ public class MetadataReader extends NetObject  {
 
     public Guid GetGuid(GuidHandle handle) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.BadImageFormatException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetGuid = null;
         try {
-            JCObject objGetGuid = (JCObject)classInstance.Invoke("GetGuid", handle == null ? null : handle.getJCOInstance());
+            retObjectGetGuid = classInstance.Invoke("GetGuid", handle == null ? null : handle.getJCOInstance());
+            JCObject objGetGuid = (JCObject)retObjectGetGuid;
             return new Guid(objGetGuid);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetGuid != null ? retObjectGetGuid.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -283,10 +291,14 @@ public class MetadataReader extends NetObject  {
 
     public static AssemblyName GetAssemblyName(java.lang.String assemblyFile) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.runtime.serialization.SerializationException, system.io.IOException, system.BadImageFormatException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.globalization.CultureNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetAssemblyName = null;
         try {
-            JCObject objGetAssemblyName = (JCObject)classType.Invoke("GetAssemblyName", assemblyFile);
+            retObjectGetAssemblyName = classType.Invoke("GetAssemblyName", assemblyFile);
+            JCObject objGetAssemblyName = (JCObject)retObjectGetAssemblyName;
             return new AssemblyName(objGetAssemblyName);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetAssemblyName != null ? retObjectGetAssemblyName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -294,10 +306,14 @@ public class MetadataReader extends NetObject  {
 
     public AssemblyDefinition GetAssemblyDefinition() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetAssemblyDefinition = null;
         try {
-            JCObject objGetAssemblyDefinition = (JCObject)classInstance.Invoke("GetAssemblyDefinition");
+            retObjectGetAssemblyDefinition = classInstance.Invoke("GetAssemblyDefinition");
+            JCObject objGetAssemblyDefinition = (JCObject)retObjectGetAssemblyDefinition;
             return new AssemblyDefinition(objGetAssemblyDefinition);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetAssemblyDefinition != null ? retObjectGetAssemblyDefinition.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -305,10 +321,14 @@ public class MetadataReader extends NetObject  {
 
     public AssemblyFile GetAssemblyFile(AssemblyFileHandle handle) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetAssemblyFile = null;
         try {
-            JCObject objGetAssemblyFile = (JCObject)classInstance.Invoke("GetAssemblyFile", handle == null ? null : handle.getJCOInstance());
+            retObjectGetAssemblyFile = classInstance.Invoke("GetAssemblyFile", handle == null ? null : handle.getJCOInstance());
+            JCObject objGetAssemblyFile = (JCObject)retObjectGetAssemblyFile;
             return new AssemblyFile(objGetAssemblyFile);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetAssemblyFile != null ? retObjectGetAssemblyFile.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -316,10 +336,14 @@ public class MetadataReader extends NetObject  {
 
     public AssemblyReference GetAssemblyReference(AssemblyReferenceHandle handle) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetAssemblyReference = null;
         try {
-            JCObject objGetAssemblyReference = (JCObject)classInstance.Invoke("GetAssemblyReference", handle == null ? null : handle.getJCOInstance());
+            retObjectGetAssemblyReference = classInstance.Invoke("GetAssemblyReference", handle == null ? null : handle.getJCOInstance());
+            JCObject objGetAssemblyReference = (JCObject)retObjectGetAssemblyReference;
             return new AssemblyReference(objGetAssemblyReference);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetAssemblyReference != null ? retObjectGetAssemblyReference.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -327,10 +351,14 @@ public class MetadataReader extends NetObject  {
 
     public BlobReader GetBlobReader(BlobHandle handle) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.ObjectDisposedException, system.ArgumentNullException, system.InvalidOperationException, system.BadImageFormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetBlobReader = null;
         try {
-            JCObject objGetBlobReader = (JCObject)classInstance.Invoke("GetBlobReader", handle == null ? null : handle.getJCOInstance());
+            retObjectGetBlobReader = classInstance.Invoke("GetBlobReader", handle == null ? null : handle.getJCOInstance());
+            JCObject objGetBlobReader = (JCObject)retObjectGetBlobReader;
             return new BlobReader(objGetBlobReader);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetBlobReader != null ? retObjectGetBlobReader.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -338,10 +366,14 @@ public class MetadataReader extends NetObject  {
 
     public BlobReader GetBlobReader(StringHandle handle) throws Throwable, system.BadImageFormatException, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.NullReferenceException, system.ObjectDisposedException, system.ArgumentNullException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetBlobReader = null;
         try {
-            JCObject objGetBlobReader = (JCObject)classInstance.Invoke("GetBlobReader", handle == null ? null : handle.getJCOInstance());
+            retObjectGetBlobReader = classInstance.Invoke("GetBlobReader", handle == null ? null : handle.getJCOInstance());
+            JCObject objGetBlobReader = (JCObject)retObjectGetBlobReader;
             return new BlobReader(objGetBlobReader);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetBlobReader != null ? retObjectGetBlobReader.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -349,10 +381,14 @@ public class MetadataReader extends NetObject  {
 
     public Constant GetConstant(ConstantHandle handle) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetConstant = null;
         try {
-            JCObject objGetConstant = (JCObject)classInstance.Invoke("GetConstant", handle == null ? null : handle.getJCOInstance());
+            retObjectGetConstant = classInstance.Invoke("GetConstant", handle == null ? null : handle.getJCOInstance());
+            JCObject objGetConstant = (JCObject)retObjectGetConstant;
             return new Constant(objGetConstant);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetConstant != null ? retObjectGetConstant.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -360,10 +396,14 @@ public class MetadataReader extends NetObject  {
 
     public CustomAttribute GetCustomAttribute(CustomAttributeHandle handle) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetCustomAttribute = null;
         try {
-            JCObject objGetCustomAttribute = (JCObject)classInstance.Invoke("GetCustomAttribute", handle == null ? null : handle.getJCOInstance());
+            retObjectGetCustomAttribute = classInstance.Invoke("GetCustomAttribute", handle == null ? null : handle.getJCOInstance());
+            JCObject objGetCustomAttribute = (JCObject)retObjectGetCustomAttribute;
             return new CustomAttribute(objGetCustomAttribute);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCustomAttribute != null ? retObjectGetCustomAttribute.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -371,10 +411,14 @@ public class MetadataReader extends NetObject  {
 
     public CustomAttributeHandleCollection GetCustomAttributes(EntityHandle handle) throws Throwable, system.BadImageFormatException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetCustomAttributes = null;
         try {
-            JCObject objGetCustomAttributes = (JCObject)classInstance.Invoke("GetCustomAttributes", handle == null ? null : handle.getJCOInstance());
+            retObjectGetCustomAttributes = classInstance.Invoke("GetCustomAttributes", handle == null ? null : handle.getJCOInstance());
+            JCObject objGetCustomAttributes = (JCObject)retObjectGetCustomAttributes;
             return new CustomAttributeHandleCollection(objGetCustomAttributes);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCustomAttributes != null ? retObjectGetCustomAttributes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -382,10 +426,14 @@ public class MetadataReader extends NetObject  {
 
     public CustomDebugInformation GetCustomDebugInformation(CustomDebugInformationHandle handle) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetCustomDebugInformation = null;
         try {
-            JCObject objGetCustomDebugInformation = (JCObject)classInstance.Invoke("GetCustomDebugInformation", handle == null ? null : handle.getJCOInstance());
+            retObjectGetCustomDebugInformation = classInstance.Invoke("GetCustomDebugInformation", handle == null ? null : handle.getJCOInstance());
+            JCObject objGetCustomDebugInformation = (JCObject)retObjectGetCustomDebugInformation;
             return new CustomDebugInformation(objGetCustomDebugInformation);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCustomDebugInformation != null ? retObjectGetCustomDebugInformation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -393,10 +441,14 @@ public class MetadataReader extends NetObject  {
 
     public CustomDebugInformationHandleCollection GetCustomDebugInformation(EntityHandle handle) throws Throwable, system.BadImageFormatException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetCustomDebugInformation = null;
         try {
-            JCObject objGetCustomDebugInformation = (JCObject)classInstance.Invoke("GetCustomDebugInformation", handle == null ? null : handle.getJCOInstance());
+            retObjectGetCustomDebugInformation = classInstance.Invoke("GetCustomDebugInformation", handle == null ? null : handle.getJCOInstance());
+            JCObject objGetCustomDebugInformation = (JCObject)retObjectGetCustomDebugInformation;
             return new CustomDebugInformationHandleCollection(objGetCustomDebugInformation);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCustomDebugInformation != null ? retObjectGetCustomDebugInformation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -404,10 +456,14 @@ public class MetadataReader extends NetObject  {
 
     public DeclarativeSecurityAttribute GetDeclarativeSecurityAttribute(DeclarativeSecurityAttributeHandle handle) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDeclarativeSecurityAttribute = null;
         try {
-            JCObject objGetDeclarativeSecurityAttribute = (JCObject)classInstance.Invoke("GetDeclarativeSecurityAttribute", handle == null ? null : handle.getJCOInstance());
+            retObjectGetDeclarativeSecurityAttribute = classInstance.Invoke("GetDeclarativeSecurityAttribute", handle == null ? null : handle.getJCOInstance());
+            JCObject objGetDeclarativeSecurityAttribute = (JCObject)retObjectGetDeclarativeSecurityAttribute;
             return new DeclarativeSecurityAttribute(objGetDeclarativeSecurityAttribute);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetDeclarativeSecurityAttribute != null ? retObjectGetDeclarativeSecurityAttribute.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -415,10 +471,14 @@ public class MetadataReader extends NetObject  {
 
     public Document GetDocument(DocumentHandle handle) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDocument = null;
         try {
-            JCObject objGetDocument = (JCObject)classInstance.Invoke("GetDocument", handle == null ? null : handle.getJCOInstance());
+            retObjectGetDocument = classInstance.Invoke("GetDocument", handle == null ? null : handle.getJCOInstance());
+            JCObject objGetDocument = (JCObject)retObjectGetDocument;
             return new Document(objGetDocument);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetDocument != null ? retObjectGetDocument.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -426,10 +486,14 @@ public class MetadataReader extends NetObject  {
 
     public EventDefinition GetEventDefinition(EventDefinitionHandle handle) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetEventDefinition = null;
         try {
-            JCObject objGetEventDefinition = (JCObject)classInstance.Invoke("GetEventDefinition", handle == null ? null : handle.getJCOInstance());
+            retObjectGetEventDefinition = classInstance.Invoke("GetEventDefinition", handle == null ? null : handle.getJCOInstance());
+            JCObject objGetEventDefinition = (JCObject)retObjectGetEventDefinition;
             return new EventDefinition(objGetEventDefinition);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetEventDefinition != null ? retObjectGetEventDefinition.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -437,10 +501,14 @@ public class MetadataReader extends NetObject  {
 
     public ExportedType GetExportedType(ExportedTypeHandle handle) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetExportedType = null;
         try {
-            JCObject objGetExportedType = (JCObject)classInstance.Invoke("GetExportedType", handle == null ? null : handle.getJCOInstance());
+            retObjectGetExportedType = classInstance.Invoke("GetExportedType", handle == null ? null : handle.getJCOInstance());
+            JCObject objGetExportedType = (JCObject)retObjectGetExportedType;
             return new ExportedType(objGetExportedType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetExportedType != null ? retObjectGetExportedType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -448,10 +516,14 @@ public class MetadataReader extends NetObject  {
 
     public FieldDefinition GetFieldDefinition(FieldDefinitionHandle handle) throws Throwable, system.BadImageFormatException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetFieldDefinition = null;
         try {
-            JCObject objGetFieldDefinition = (JCObject)classInstance.Invoke("GetFieldDefinition", handle == null ? null : handle.getJCOInstance());
+            retObjectGetFieldDefinition = classInstance.Invoke("GetFieldDefinition", handle == null ? null : handle.getJCOInstance());
+            JCObject objGetFieldDefinition = (JCObject)retObjectGetFieldDefinition;
             return new FieldDefinition(objGetFieldDefinition);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetFieldDefinition != null ? retObjectGetFieldDefinition.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -459,10 +531,14 @@ public class MetadataReader extends NetObject  {
 
     public GenericParameter GetGenericParameter(GenericParameterHandle handle) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetGenericParameter = null;
         try {
-            JCObject objGetGenericParameter = (JCObject)classInstance.Invoke("GetGenericParameter", handle == null ? null : handle.getJCOInstance());
+            retObjectGetGenericParameter = classInstance.Invoke("GetGenericParameter", handle == null ? null : handle.getJCOInstance());
+            JCObject objGetGenericParameter = (JCObject)retObjectGetGenericParameter;
             return new GenericParameter(objGetGenericParameter);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetGenericParameter != null ? retObjectGetGenericParameter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -470,10 +546,14 @@ public class MetadataReader extends NetObject  {
 
     public GenericParameterConstraint GetGenericParameterConstraint(GenericParameterConstraintHandle handle) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetGenericParameterConstraint = null;
         try {
-            JCObject objGetGenericParameterConstraint = (JCObject)classInstance.Invoke("GetGenericParameterConstraint", handle == null ? null : handle.getJCOInstance());
+            retObjectGetGenericParameterConstraint = classInstance.Invoke("GetGenericParameterConstraint", handle == null ? null : handle.getJCOInstance());
+            JCObject objGetGenericParameterConstraint = (JCObject)retObjectGetGenericParameterConstraint;
             return new GenericParameterConstraint(objGetGenericParameterConstraint);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetGenericParameterConstraint != null ? retObjectGetGenericParameterConstraint.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -481,10 +561,14 @@ public class MetadataReader extends NetObject  {
 
     public ImportScope GetImportScope(ImportScopeHandle handle) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetImportScope = null;
         try {
-            JCObject objGetImportScope = (JCObject)classInstance.Invoke("GetImportScope", handle == null ? null : handle.getJCOInstance());
+            retObjectGetImportScope = classInstance.Invoke("GetImportScope", handle == null ? null : handle.getJCOInstance());
+            JCObject objGetImportScope = (JCObject)retObjectGetImportScope;
             return new ImportScope(objGetImportScope);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetImportScope != null ? retObjectGetImportScope.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -492,10 +576,14 @@ public class MetadataReader extends NetObject  {
 
     public InterfaceImplementation GetInterfaceImplementation(InterfaceImplementationHandle handle) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetInterfaceImplementation = null;
         try {
-            JCObject objGetInterfaceImplementation = (JCObject)classInstance.Invoke("GetInterfaceImplementation", handle == null ? null : handle.getJCOInstance());
+            retObjectGetInterfaceImplementation = classInstance.Invoke("GetInterfaceImplementation", handle == null ? null : handle.getJCOInstance());
+            JCObject objGetInterfaceImplementation = (JCObject)retObjectGetInterfaceImplementation;
             return new InterfaceImplementation(objGetInterfaceImplementation);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetInterfaceImplementation != null ? retObjectGetInterfaceImplementation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -503,10 +591,14 @@ public class MetadataReader extends NetObject  {
 
     public LocalConstant GetLocalConstant(LocalConstantHandle handle) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetLocalConstant = null;
         try {
-            JCObject objGetLocalConstant = (JCObject)classInstance.Invoke("GetLocalConstant", handle == null ? null : handle.getJCOInstance());
+            retObjectGetLocalConstant = classInstance.Invoke("GetLocalConstant", handle == null ? null : handle.getJCOInstance());
+            JCObject objGetLocalConstant = (JCObject)retObjectGetLocalConstant;
             return new LocalConstant(objGetLocalConstant);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetLocalConstant != null ? retObjectGetLocalConstant.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -514,10 +606,14 @@ public class MetadataReader extends NetObject  {
 
     public LocalScope GetLocalScope(LocalScopeHandle handle) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetLocalScope = null;
         try {
-            JCObject objGetLocalScope = (JCObject)classInstance.Invoke("GetLocalScope", handle == null ? null : handle.getJCOInstance());
+            retObjectGetLocalScope = classInstance.Invoke("GetLocalScope", handle == null ? null : handle.getJCOInstance());
+            JCObject objGetLocalScope = (JCObject)retObjectGetLocalScope;
             return new LocalScope(objGetLocalScope);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetLocalScope != null ? retObjectGetLocalScope.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -525,10 +621,14 @@ public class MetadataReader extends NetObject  {
 
     public LocalScopeHandleCollection GetLocalScopes(MethodDebugInformationHandle handle) throws Throwable, system.BadImageFormatException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetLocalScopes = null;
         try {
-            JCObject objGetLocalScopes = (JCObject)classInstance.Invoke("GetLocalScopes", handle == null ? null : handle.getJCOInstance());
+            retObjectGetLocalScopes = classInstance.Invoke("GetLocalScopes", handle == null ? null : handle.getJCOInstance());
+            JCObject objGetLocalScopes = (JCObject)retObjectGetLocalScopes;
             return new LocalScopeHandleCollection(objGetLocalScopes);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetLocalScopes != null ? retObjectGetLocalScopes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -536,10 +636,14 @@ public class MetadataReader extends NetObject  {
 
     public LocalScopeHandleCollection GetLocalScopes(MethodDefinitionHandle handle) throws Throwable, system.BadImageFormatException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetLocalScopes = null;
         try {
-            JCObject objGetLocalScopes = (JCObject)classInstance.Invoke("GetLocalScopes", handle == null ? null : handle.getJCOInstance());
+            retObjectGetLocalScopes = classInstance.Invoke("GetLocalScopes", handle == null ? null : handle.getJCOInstance());
+            JCObject objGetLocalScopes = (JCObject)retObjectGetLocalScopes;
             return new LocalScopeHandleCollection(objGetLocalScopes);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetLocalScopes != null ? retObjectGetLocalScopes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -547,10 +651,14 @@ public class MetadataReader extends NetObject  {
 
     public LocalVariable GetLocalVariable(LocalVariableHandle handle) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetLocalVariable = null;
         try {
-            JCObject objGetLocalVariable = (JCObject)classInstance.Invoke("GetLocalVariable", handle == null ? null : handle.getJCOInstance());
+            retObjectGetLocalVariable = classInstance.Invoke("GetLocalVariable", handle == null ? null : handle.getJCOInstance());
+            JCObject objGetLocalVariable = (JCObject)retObjectGetLocalVariable;
             return new LocalVariable(objGetLocalVariable);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetLocalVariable != null ? retObjectGetLocalVariable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -558,10 +666,14 @@ public class MetadataReader extends NetObject  {
 
     public ManifestResource GetManifestResource(ManifestResourceHandle handle) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetManifestResource = null;
         try {
-            JCObject objGetManifestResource = (JCObject)classInstance.Invoke("GetManifestResource", handle == null ? null : handle.getJCOInstance());
+            retObjectGetManifestResource = classInstance.Invoke("GetManifestResource", handle == null ? null : handle.getJCOInstance());
+            JCObject objGetManifestResource = (JCObject)retObjectGetManifestResource;
             return new ManifestResource(objGetManifestResource);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetManifestResource != null ? retObjectGetManifestResource.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -569,10 +681,14 @@ public class MetadataReader extends NetObject  {
 
     public MemberReference GetMemberReference(MemberReferenceHandle handle) throws Throwable, system.BadImageFormatException, system.PlatformNotSupportedException, system.InvalidCastException, system.NullReferenceException, system.NotSupportedException, system.ObjectDisposedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetMemberReference = null;
         try {
-            JCObject objGetMemberReference = (JCObject)classInstance.Invoke("GetMemberReference", handle == null ? null : handle.getJCOInstance());
+            retObjectGetMemberReference = classInstance.Invoke("GetMemberReference", handle == null ? null : handle.getJCOInstance());
+            JCObject objGetMemberReference = (JCObject)retObjectGetMemberReference;
             return new MemberReference(objGetMemberReference);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetMemberReference != null ? retObjectGetMemberReference.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -580,10 +696,14 @@ public class MetadataReader extends NetObject  {
 
     public MethodDebugInformation GetMethodDebugInformation(MethodDebugInformationHandle handle) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetMethodDebugInformation = null;
         try {
-            JCObject objGetMethodDebugInformation = (JCObject)classInstance.Invoke("GetMethodDebugInformation", handle == null ? null : handle.getJCOInstance());
+            retObjectGetMethodDebugInformation = classInstance.Invoke("GetMethodDebugInformation", handle == null ? null : handle.getJCOInstance());
+            JCObject objGetMethodDebugInformation = (JCObject)retObjectGetMethodDebugInformation;
             return new MethodDebugInformation(objGetMethodDebugInformation);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetMethodDebugInformation != null ? retObjectGetMethodDebugInformation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -591,10 +711,14 @@ public class MetadataReader extends NetObject  {
 
     public MethodDebugInformation GetMethodDebugInformation(MethodDefinitionHandle handle) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetMethodDebugInformation = null;
         try {
-            JCObject objGetMethodDebugInformation = (JCObject)classInstance.Invoke("GetMethodDebugInformation", handle == null ? null : handle.getJCOInstance());
+            retObjectGetMethodDebugInformation = classInstance.Invoke("GetMethodDebugInformation", handle == null ? null : handle.getJCOInstance());
+            JCObject objGetMethodDebugInformation = (JCObject)retObjectGetMethodDebugInformation;
             return new MethodDebugInformation(objGetMethodDebugInformation);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetMethodDebugInformation != null ? retObjectGetMethodDebugInformation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -602,10 +726,14 @@ public class MetadataReader extends NetObject  {
 
     public MethodDefinition GetMethodDefinition(MethodDefinitionHandle handle) throws Throwable, system.BadImageFormatException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.InvalidCastException, system.NullReferenceException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetMethodDefinition = null;
         try {
-            JCObject objGetMethodDefinition = (JCObject)classInstance.Invoke("GetMethodDefinition", handle == null ? null : handle.getJCOInstance());
+            retObjectGetMethodDefinition = classInstance.Invoke("GetMethodDefinition", handle == null ? null : handle.getJCOInstance());
+            JCObject objGetMethodDefinition = (JCObject)retObjectGetMethodDefinition;
             return new MethodDefinition(objGetMethodDefinition);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetMethodDefinition != null ? retObjectGetMethodDefinition.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -613,10 +741,14 @@ public class MetadataReader extends NetObject  {
 
     public MethodImplementation GetMethodImplementation(MethodImplementationHandle handle) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetMethodImplementation = null;
         try {
-            JCObject objGetMethodImplementation = (JCObject)classInstance.Invoke("GetMethodImplementation", handle == null ? null : handle.getJCOInstance());
+            retObjectGetMethodImplementation = classInstance.Invoke("GetMethodImplementation", handle == null ? null : handle.getJCOInstance());
+            JCObject objGetMethodImplementation = (JCObject)retObjectGetMethodImplementation;
             return new MethodImplementation(objGetMethodImplementation);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetMethodImplementation != null ? retObjectGetMethodImplementation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -624,10 +756,14 @@ public class MetadataReader extends NetObject  {
 
     public MethodSpecification GetMethodSpecification(MethodSpecificationHandle handle) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetMethodSpecification = null;
         try {
-            JCObject objGetMethodSpecification = (JCObject)classInstance.Invoke("GetMethodSpecification", handle == null ? null : handle.getJCOInstance());
+            retObjectGetMethodSpecification = classInstance.Invoke("GetMethodSpecification", handle == null ? null : handle.getJCOInstance());
+            JCObject objGetMethodSpecification = (JCObject)retObjectGetMethodSpecification;
             return new MethodSpecification(objGetMethodSpecification);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetMethodSpecification != null ? retObjectGetMethodSpecification.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -635,10 +771,14 @@ public class MetadataReader extends NetObject  {
 
     public ModuleDefinition GetModuleDefinition() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetModuleDefinition = null;
         try {
-            JCObject objGetModuleDefinition = (JCObject)classInstance.Invoke("GetModuleDefinition");
+            retObjectGetModuleDefinition = classInstance.Invoke("GetModuleDefinition");
+            JCObject objGetModuleDefinition = (JCObject)retObjectGetModuleDefinition;
             return new ModuleDefinition(objGetModuleDefinition);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetModuleDefinition != null ? retObjectGetModuleDefinition.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -646,10 +786,14 @@ public class MetadataReader extends NetObject  {
 
     public ModuleReference GetModuleReference(ModuleReferenceHandle handle) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetModuleReference = null;
         try {
-            JCObject objGetModuleReference = (JCObject)classInstance.Invoke("GetModuleReference", handle == null ? null : handle.getJCOInstance());
+            retObjectGetModuleReference = classInstance.Invoke("GetModuleReference", handle == null ? null : handle.getJCOInstance());
+            JCObject objGetModuleReference = (JCObject)retObjectGetModuleReference;
             return new ModuleReference(objGetModuleReference);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetModuleReference != null ? retObjectGetModuleReference.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -657,10 +801,14 @@ public class MetadataReader extends NetObject  {
 
     public NamespaceDefinition GetNamespaceDefinition(NamespaceDefinitionHandle handle) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException, system.BadImageFormatException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetNamespaceDefinition = null;
         try {
-            JCObject objGetNamespaceDefinition = (JCObject)classInstance.Invoke("GetNamespaceDefinition", handle == null ? null : handle.getJCOInstance());
+            retObjectGetNamespaceDefinition = classInstance.Invoke("GetNamespaceDefinition", handle == null ? null : handle.getJCOInstance());
+            JCObject objGetNamespaceDefinition = (JCObject)retObjectGetNamespaceDefinition;
             return new NamespaceDefinition(objGetNamespaceDefinition);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetNamespaceDefinition != null ? retObjectGetNamespaceDefinition.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -668,10 +816,14 @@ public class MetadataReader extends NetObject  {
 
     public NamespaceDefinition GetNamespaceDefinitionRoot() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException, system.BadImageFormatException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetNamespaceDefinitionRoot = null;
         try {
-            JCObject objGetNamespaceDefinitionRoot = (JCObject)classInstance.Invoke("GetNamespaceDefinitionRoot");
+            retObjectGetNamespaceDefinitionRoot = classInstance.Invoke("GetNamespaceDefinitionRoot");
+            JCObject objGetNamespaceDefinitionRoot = (JCObject)retObjectGetNamespaceDefinitionRoot;
             return new NamespaceDefinition(objGetNamespaceDefinitionRoot);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetNamespaceDefinitionRoot != null ? retObjectGetNamespaceDefinitionRoot.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -679,10 +831,14 @@ public class MetadataReader extends NetObject  {
 
     public Parameter GetParameter(ParameterHandle handle) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetParameter = null;
         try {
-            JCObject objGetParameter = (JCObject)classInstance.Invoke("GetParameter", handle == null ? null : handle.getJCOInstance());
+            retObjectGetParameter = classInstance.Invoke("GetParameter", handle == null ? null : handle.getJCOInstance());
+            JCObject objGetParameter = (JCObject)retObjectGetParameter;
             return new Parameter(objGetParameter);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetParameter != null ? retObjectGetParameter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -690,10 +846,14 @@ public class MetadataReader extends NetObject  {
 
     public PropertyDefinition GetPropertyDefinition(PropertyDefinitionHandle handle) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPropertyDefinition = null;
         try {
-            JCObject objGetPropertyDefinition = (JCObject)classInstance.Invoke("GetPropertyDefinition", handle == null ? null : handle.getJCOInstance());
+            retObjectGetPropertyDefinition = classInstance.Invoke("GetPropertyDefinition", handle == null ? null : handle.getJCOInstance());
+            JCObject objGetPropertyDefinition = (JCObject)retObjectGetPropertyDefinition;
             return new PropertyDefinition(objGetPropertyDefinition);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetPropertyDefinition != null ? retObjectGetPropertyDefinition.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -701,10 +861,14 @@ public class MetadataReader extends NetObject  {
 
     public StandaloneSignature GetStandaloneSignature(StandaloneSignatureHandle handle) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetStandaloneSignature = null;
         try {
-            JCObject objGetStandaloneSignature = (JCObject)classInstance.Invoke("GetStandaloneSignature", handle == null ? null : handle.getJCOInstance());
+            retObjectGetStandaloneSignature = classInstance.Invoke("GetStandaloneSignature", handle == null ? null : handle.getJCOInstance());
+            JCObject objGetStandaloneSignature = (JCObject)retObjectGetStandaloneSignature;
             return new StandaloneSignature(objGetStandaloneSignature);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetStandaloneSignature != null ? retObjectGetStandaloneSignature.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -712,10 +876,14 @@ public class MetadataReader extends NetObject  {
 
     public TypeDefinition GetTypeDefinition(TypeDefinitionHandle handle) throws Throwable, system.BadImageFormatException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetTypeDefinition = null;
         try {
-            JCObject objGetTypeDefinition = (JCObject)classInstance.Invoke("GetTypeDefinition", handle == null ? null : handle.getJCOInstance());
+            retObjectGetTypeDefinition = classInstance.Invoke("GetTypeDefinition", handle == null ? null : handle.getJCOInstance());
+            JCObject objGetTypeDefinition = (JCObject)retObjectGetTypeDefinition;
             return new TypeDefinition(objGetTypeDefinition);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetTypeDefinition != null ? retObjectGetTypeDefinition.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -723,10 +891,14 @@ public class MetadataReader extends NetObject  {
 
     public TypeReference GetTypeReference(TypeReferenceHandle handle) throws Throwable, system.BadImageFormatException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetTypeReference = null;
         try {
-            JCObject objGetTypeReference = (JCObject)classInstance.Invoke("GetTypeReference", handle == null ? null : handle.getJCOInstance());
+            retObjectGetTypeReference = classInstance.Invoke("GetTypeReference", handle == null ? null : handle.getJCOInstance());
+            JCObject objGetTypeReference = (JCObject)retObjectGetTypeReference;
             return new TypeReference(objGetTypeReference);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetTypeReference != null ? retObjectGetTypeReference.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -734,10 +906,14 @@ public class MetadataReader extends NetObject  {
 
     public TypeSpecification GetTypeSpecification(TypeSpecificationHandle handle) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetTypeSpecification = null;
         try {
-            JCObject objGetTypeSpecification = (JCObject)classInstance.Invoke("GetTypeSpecification", handle == null ? null : handle.getJCOInstance());
+            retObjectGetTypeSpecification = classInstance.Invoke("GetTypeSpecification", handle == null ? null : handle.getJCOInstance());
+            JCObject objGetTypeSpecification = (JCObject)retObjectGetTypeSpecification;
             return new TypeSpecification(objGetTypeSpecification);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetTypeSpecification != null ? retObjectGetTypeSpecification.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -745,9 +921,13 @@ public class MetadataReader extends NetObject  {
 
     public java.lang.String GetString(DocumentNameBlobHandle handle) throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.ArgumentNullException, system.InvalidOperationException, system.BadImageFormatException, system.OutOfMemoryException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetString = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetString", handle == null ? null : handle.getJCOInstance());
+            retObjectGetString = classInstance.Invoke("GetString", handle == null ? null : handle.getJCOInstance());
+            return (java.lang.String)retObjectGetString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetString != null ? retObjectGetString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -755,9 +935,13 @@ public class MetadataReader extends NetObject  {
 
     public java.lang.String GetString(NamespaceDefinitionHandle handle) throws Throwable, system.ArgumentException, system.BadImageFormatException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.RankException, system.ArrayTypeMismatchException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetString = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetString", handle == null ? null : handle.getJCOInstance());
+            retObjectGetString = classInstance.Invoke("GetString", handle == null ? null : handle.getJCOInstance());
+            return (java.lang.String)retObjectGetString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetString != null ? retObjectGetString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -765,9 +949,13 @@ public class MetadataReader extends NetObject  {
 
     public java.lang.String GetString(StringHandle handle) throws Throwable, system.ArgumentException, system.BadImageFormatException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetString = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetString", handle == null ? null : handle.getJCOInstance());
+            retObjectGetString = classInstance.Invoke("GetString", handle == null ? null : handle.getJCOInstance());
+            return (java.lang.String)retObjectGetString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetString != null ? retObjectGetString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -775,9 +963,13 @@ public class MetadataReader extends NetObject  {
 
     public java.lang.String GetUserString(UserStringHandle handle) throws Throwable, system.ArgumentException, system.BadImageFormatException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetUserString = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetUserString", handle == null ? null : handle.getJCOInstance());
+            retObjectGetUserString = classInstance.Invoke("GetUserString", handle == null ? null : handle.getJCOInstance());
+            return (java.lang.String)retObjectGetUserString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetUserString != null ? retObjectGetUserString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -789,9 +981,13 @@ public class MetadataReader extends NetObject  {
     
     public boolean getIsAssembly() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsAssembly = null;
         try {
-            return (boolean)classInstance.Get("IsAssembly");
+            retObjectIsAssembly = classInstance.Get("IsAssembly");
+            return (boolean)retObjectIsAssembly;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsAssembly != null ? retObjectIsAssembly.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -799,9 +995,20 @@ public class MetadataReader extends NetObject  {
 
     public int getMetadataLength() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMetadataLength = null;
         try {
-            return (int)classInstance.Get("MetadataLength");
+            retObjectMetadataLength = classInstance.Get("MetadataLength");
+            return (int)retObjectMetadataLength;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMetadataLength_ToString = retObjectMetadataLength == null ? "null" : retObjectMetadataLength.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMetadataLengthNumber = (java.lang.Number)retObjectMetadataLength;
+                return retObjectMetadataLengthNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMetadataLength != null ? retObjectMetadataLength.getClass() : "null", retObjectMetadataLength_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -809,10 +1016,14 @@ public class MetadataReader extends NetObject  {
 
     public AssemblyFileHandleCollection getAssemblyFiles() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAssemblyFiles = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AssemblyFiles");
+            retObjectAssemblyFiles = classInstance.Get("AssemblyFiles");
+            JCObject val = (JCObject)retObjectAssemblyFiles;
             return new AssemblyFileHandleCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAssemblyFiles != null ? retObjectAssemblyFiles.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -820,10 +1031,14 @@ public class MetadataReader extends NetObject  {
 
     public AssemblyReferenceHandleCollection getAssemblyReferences() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAssemblyReferences = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AssemblyReferences");
+            retObjectAssemblyReferences = classInstance.Get("AssemblyReferences");
+            JCObject val = (JCObject)retObjectAssemblyReferences;
             return new AssemblyReferenceHandleCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAssemblyReferences != null ? retObjectAssemblyReferences.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -831,10 +1046,14 @@ public class MetadataReader extends NetObject  {
 
     public CustomAttributeHandleCollection getCustomAttributes() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCustomAttributes = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CustomAttributes");
+            retObjectCustomAttributes = classInstance.Get("CustomAttributes");
+            JCObject val = (JCObject)retObjectCustomAttributes;
             return new CustomAttributeHandleCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCustomAttributes != null ? retObjectCustomAttributes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -842,10 +1061,14 @@ public class MetadataReader extends NetObject  {
 
     public CustomDebugInformationHandleCollection getCustomDebugInformation() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCustomDebugInformation = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CustomDebugInformation");
+            retObjectCustomDebugInformation = classInstance.Get("CustomDebugInformation");
+            JCObject val = (JCObject)retObjectCustomDebugInformation;
             return new CustomDebugInformationHandleCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCustomDebugInformation != null ? retObjectCustomDebugInformation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -853,10 +1076,14 @@ public class MetadataReader extends NetObject  {
 
     public DebugMetadataHeader getDebugMetadataHeader() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDebugMetadataHeader = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DebugMetadataHeader");
+            retObjectDebugMetadataHeader = classInstance.Get("DebugMetadataHeader");
+            JCObject val = (JCObject)retObjectDebugMetadataHeader;
             return new DebugMetadataHeader(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDebugMetadataHeader != null ? retObjectDebugMetadataHeader.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -864,10 +1091,14 @@ public class MetadataReader extends NetObject  {
 
     public DeclarativeSecurityAttributeHandleCollection getDeclarativeSecurityAttributes() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDeclarativeSecurityAttributes = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DeclarativeSecurityAttributes");
+            retObjectDeclarativeSecurityAttributes = classInstance.Get("DeclarativeSecurityAttributes");
+            JCObject val = (JCObject)retObjectDeclarativeSecurityAttributes;
             return new DeclarativeSecurityAttributeHandleCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDeclarativeSecurityAttributes != null ? retObjectDeclarativeSecurityAttributes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -875,10 +1106,14 @@ public class MetadataReader extends NetObject  {
 
     public DocumentHandleCollection getDocuments() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDocuments = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Documents");
+            retObjectDocuments = classInstance.Get("Documents");
+            JCObject val = (JCObject)retObjectDocuments;
             return new DocumentHandleCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDocuments != null ? retObjectDocuments.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -886,10 +1121,14 @@ public class MetadataReader extends NetObject  {
 
     public EventDefinitionHandleCollection getEventDefinitions() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEventDefinitions = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("EventDefinitions");
+            retObjectEventDefinitions = classInstance.Get("EventDefinitions");
+            JCObject val = (JCObject)retObjectEventDefinitions;
             return new EventDefinitionHandleCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEventDefinitions != null ? retObjectEventDefinitions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -897,10 +1136,14 @@ public class MetadataReader extends NetObject  {
 
     public ExportedTypeHandleCollection getExportedTypes() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExportedTypes = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ExportedTypes");
+            retObjectExportedTypes = classInstance.Get("ExportedTypes");
+            JCObject val = (JCObject)retObjectExportedTypes;
             return new ExportedTypeHandleCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExportedTypes != null ? retObjectExportedTypes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -908,10 +1151,14 @@ public class MetadataReader extends NetObject  {
 
     public FieldDefinitionHandleCollection getFieldDefinitions() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFieldDefinitions = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("FieldDefinitions");
+            retObjectFieldDefinitions = classInstance.Get("FieldDefinitions");
+            JCObject val = (JCObject)retObjectFieldDefinitions;
             return new FieldDefinitionHandleCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFieldDefinitions != null ? retObjectFieldDefinitions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -919,10 +1166,14 @@ public class MetadataReader extends NetObject  {
 
     public ImportScopeCollection getImportScopes() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectImportScopes = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ImportScopes");
+            retObjectImportScopes = classInstance.Get("ImportScopes");
+            JCObject val = (JCObject)retObjectImportScopes;
             return new ImportScopeCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectImportScopes != null ? retObjectImportScopes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -930,10 +1181,14 @@ public class MetadataReader extends NetObject  {
 
     public LocalConstantHandleCollection getLocalConstants() throws Throwable, system.BadImageFormatException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLocalConstants = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("LocalConstants");
+            retObjectLocalConstants = classInstance.Get("LocalConstants");
+            JCObject val = (JCObject)retObjectLocalConstants;
             return new LocalConstantHandleCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLocalConstants != null ? retObjectLocalConstants.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -941,10 +1196,14 @@ public class MetadataReader extends NetObject  {
 
     public LocalScopeHandleCollection getLocalScopes() throws Throwable, system.BadImageFormatException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLocalScopes = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("LocalScopes");
+            retObjectLocalScopes = classInstance.Get("LocalScopes");
+            JCObject val = (JCObject)retObjectLocalScopes;
             return new LocalScopeHandleCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLocalScopes != null ? retObjectLocalScopes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -952,10 +1211,14 @@ public class MetadataReader extends NetObject  {
 
     public LocalVariableHandleCollection getLocalVariables() throws Throwable, system.BadImageFormatException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLocalVariables = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("LocalVariables");
+            retObjectLocalVariables = classInstance.Get("LocalVariables");
+            JCObject val = (JCObject)retObjectLocalVariables;
             return new LocalVariableHandleCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLocalVariables != null ? retObjectLocalVariables.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -963,10 +1226,14 @@ public class MetadataReader extends NetObject  {
 
     public ManifestResourceHandleCollection getManifestResources() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectManifestResources = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ManifestResources");
+            retObjectManifestResources = classInstance.Get("ManifestResources");
+            JCObject val = (JCObject)retObjectManifestResources;
             return new ManifestResourceHandleCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectManifestResources != null ? retObjectManifestResources.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -974,10 +1241,14 @@ public class MetadataReader extends NetObject  {
 
     public MemberReferenceHandleCollection getMemberReferences() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMemberReferences = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MemberReferences");
+            retObjectMemberReferences = classInstance.Get("MemberReferences");
+            JCObject val = (JCObject)retObjectMemberReferences;
             return new MemberReferenceHandleCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMemberReferences != null ? retObjectMemberReferences.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -985,10 +1256,14 @@ public class MetadataReader extends NetObject  {
 
     public MetadataKind getMetadataKind() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMetadataKind = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MetadataKind");
+            retObjectMetadataKind = classInstance.Get("MetadataKind");
+            JCObject val = (JCObject)retObjectMetadataKind;
             return new MetadataKind(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMetadataKind != null ? retObjectMetadataKind.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -996,10 +1271,14 @@ public class MetadataReader extends NetObject  {
 
     public MetadataReaderOptions getOptions() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOptions = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Options");
+            retObjectOptions = classInstance.Get("Options");
+            JCObject val = (JCObject)retObjectOptions;
             return new MetadataReaderOptions(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOptions != null ? retObjectOptions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1007,10 +1286,14 @@ public class MetadataReader extends NetObject  {
 
     public MetadataStringComparer getStringComparer() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStringComparer = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("StringComparer");
+            retObjectStringComparer = classInstance.Get("StringComparer");
+            JCObject val = (JCObject)retObjectStringComparer;
             return new MetadataStringComparer(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStringComparer != null ? retObjectStringComparer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1018,10 +1301,14 @@ public class MetadataReader extends NetObject  {
 
     public MetadataStringDecoder getUTF8Decoder() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUTF8Decoder = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("UTF8Decoder");
+            retObjectUTF8Decoder = classInstance.Get("UTF8Decoder");
+            JCObject val = (JCObject)retObjectUTF8Decoder;
             return new MetadataStringDecoder(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUTF8Decoder != null ? retObjectUTF8Decoder.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1029,10 +1316,14 @@ public class MetadataReader extends NetObject  {
 
     public MethodDebugInformationHandleCollection getMethodDebugInformation() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMethodDebugInformation = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MethodDebugInformation");
+            retObjectMethodDebugInformation = classInstance.Get("MethodDebugInformation");
+            JCObject val = (JCObject)retObjectMethodDebugInformation;
             return new MethodDebugInformationHandleCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMethodDebugInformation != null ? retObjectMethodDebugInformation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1040,10 +1331,14 @@ public class MetadataReader extends NetObject  {
 
     public MethodDefinitionHandleCollection getMethodDefinitions() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMethodDefinitions = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MethodDefinitions");
+            retObjectMethodDefinitions = classInstance.Get("MethodDefinitions");
+            JCObject val = (JCObject)retObjectMethodDefinitions;
             return new MethodDefinitionHandleCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMethodDefinitions != null ? retObjectMethodDefinitions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1051,10 +1346,14 @@ public class MetadataReader extends NetObject  {
 
     public PropertyDefinitionHandleCollection getPropertyDefinitions() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPropertyDefinitions = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PropertyDefinitions");
+            retObjectPropertyDefinitions = classInstance.Get("PropertyDefinitions");
+            JCObject val = (JCObject)retObjectPropertyDefinitions;
             return new PropertyDefinitionHandleCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPropertyDefinitions != null ? retObjectPropertyDefinitions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1062,10 +1361,14 @@ public class MetadataReader extends NetObject  {
 
     public TypeDefinitionHandleCollection getTypeDefinitions() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTypeDefinitions = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TypeDefinitions");
+            retObjectTypeDefinitions = classInstance.Get("TypeDefinitions");
+            JCObject val = (JCObject)retObjectTypeDefinitions;
             return new TypeDefinitionHandleCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTypeDefinitions != null ? retObjectTypeDefinitions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1073,10 +1376,14 @@ public class MetadataReader extends NetObject  {
 
     public TypeReferenceHandleCollection getTypeReferences() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTypeReferences = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TypeReferences");
+            retObjectTypeReferences = classInstance.Get("TypeReferences");
+            JCObject val = (JCObject)retObjectTypeReferences;
             return new TypeReferenceHandleCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTypeReferences != null ? retObjectTypeReferences.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1084,9 +1391,13 @@ public class MetadataReader extends NetObject  {
 
     public java.lang.String getMetadataVersion() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMetadataVersion = null;
         try {
-            return (java.lang.String)classInstance.Get("MetadataVersion");
+            retObjectMetadataVersion = classInstance.Get("MetadataVersion");
+            return (java.lang.String)retObjectMetadataVersion;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectMetadataVersion != null ? retObjectMetadataVersion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

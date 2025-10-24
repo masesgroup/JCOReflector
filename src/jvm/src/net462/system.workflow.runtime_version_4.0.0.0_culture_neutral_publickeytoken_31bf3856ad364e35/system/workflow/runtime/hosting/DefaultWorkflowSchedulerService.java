@@ -187,9 +187,20 @@ public class DefaultWorkflowSchedulerService extends WorkflowSchedulerService  {
     
     public int getMaxSimultaneousWorkflows() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxSimultaneousWorkflows = null;
         try {
-            return (int)classInstance.Get("MaxSimultaneousWorkflows");
+            retObjectMaxSimultaneousWorkflows = classInstance.Get("MaxSimultaneousWorkflows");
+            return (int)retObjectMaxSimultaneousWorkflows;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaxSimultaneousWorkflows_ToString = retObjectMaxSimultaneousWorkflows == null ? "null" : retObjectMaxSimultaneousWorkflows.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMaxSimultaneousWorkflowsNumber = (java.lang.Number)retObjectMaxSimultaneousWorkflows;
+                return retObjectMaxSimultaneousWorkflowsNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxSimultaneousWorkflows != null ? retObjectMaxSimultaneousWorkflows.getClass() : "null", retObjectMaxSimultaneousWorkflows_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -162,9 +162,20 @@ public class DbBatch extends NetObject implements AutoCloseable {
     
     public int ExecuteNonQuery() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExecuteNonQuery = null;
         try {
-            return (int)classInstance.Invoke("ExecuteNonQuery");
+            retObjectExecuteNonQuery = classInstance.Invoke("ExecuteNonQuery");
+            return (int)retObjectExecuteNonQuery;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectExecuteNonQuery_ToString = retObjectExecuteNonQuery == null ? "null" : retObjectExecuteNonQuery.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectExecuteNonQueryNumber = (java.lang.Number)retObjectExecuteNonQuery;
+                return retObjectExecuteNonQueryNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectExecuteNonQuery != null ? retObjectExecuteNonQuery.getClass() : "null", retObjectExecuteNonQuery_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,10 +183,14 @@ public class DbBatch extends NetObject implements AutoCloseable {
 
     public DbBatchCommand CreateBatchCommand() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateBatchCommand = null;
         try {
-            JCObject objCreateBatchCommand = (JCObject)classInstance.Invoke("CreateBatchCommand");
+            retObjectCreateBatchCommand = classInstance.Invoke("CreateBatchCommand");
+            JCObject objCreateBatchCommand = (JCObject)retObjectCreateBatchCommand;
             return new DbBatchCommand(objCreateBatchCommand);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateBatchCommand != null ? retObjectCreateBatchCommand.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,10 +198,14 @@ public class DbBatch extends NetObject implements AutoCloseable {
 
     public DbDataReader ExecuteReader(CommandBehavior behavior) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExecuteReader = null;
         try {
-            JCObject objExecuteReader = (JCObject)classInstance.Invoke("ExecuteReader", behavior == null ? null : behavior.getJCOInstance());
+            retObjectExecuteReader = classInstance.Invoke("ExecuteReader", behavior == null ? null : behavior.getJCOInstance());
+            JCObject objExecuteReader = (JCObject)retObjectExecuteReader;
             return new DbDataReader(objExecuteReader);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExecuteReader != null ? retObjectExecuteReader.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -194,10 +213,14 @@ public class DbBatch extends NetObject implements AutoCloseable {
 
     public NetObject ExecuteScalar() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExecuteScalar = null;
         try {
-            JCObject objExecuteScalar = (JCObject)classInstance.Invoke("ExecuteScalar");
+            retObjectExecuteScalar = classInstance.Invoke("ExecuteScalar");
+            JCObject objExecuteScalar = (JCObject)retObjectExecuteScalar;
             return new NetObject(objExecuteScalar);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExecuteScalar != null ? retObjectExecuteScalar.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -205,10 +228,14 @@ public class DbBatch extends NetObject implements AutoCloseable {
 
     public Task PrepareAsync(CancellationToken cancellationToken) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPrepareAsync = null;
         try {
-            JCObject objPrepareAsync = (JCObject)classInstance.Invoke("PrepareAsync", cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            retObjectPrepareAsync = classInstance.Invoke("PrepareAsync", cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objPrepareAsync = (JCObject)retObjectPrepareAsync;
             return new Task(objPrepareAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPrepareAsync != null ? retObjectPrepareAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -216,10 +243,14 @@ public class DbBatch extends NetObject implements AutoCloseable {
 
     public ValueTask DisposeAsync() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDisposeAsync = null;
         try {
-            JCObject objDisposeAsync = (JCObject)classInstance.Invoke("DisposeAsync");
+            retObjectDisposeAsync = classInstance.Invoke("DisposeAsync");
+            JCObject objDisposeAsync = (JCObject)retObjectDisposeAsync;
             return new ValueTask(objDisposeAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDisposeAsync != null ? retObjectDisposeAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -227,7 +258,7 @@ public class DbBatch extends NetObject implements AutoCloseable {
 
     public void Cancel() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Cancel");
         } catch (JCNativeException jcne) {
@@ -237,7 +268,7 @@ public class DbBatch extends NetObject implements AutoCloseable {
 
     public void Dispose() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
@@ -247,7 +278,7 @@ public class DbBatch extends NetObject implements AutoCloseable {
 
     public void Prepare() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Prepare");
         } catch (JCNativeException jcne) {
@@ -258,7 +289,7 @@ public class DbBatch extends NetObject implements AutoCloseable {
     public void close() throws Exception {
         try {
             if (classInstance == null)
-                throw new UnsupportedOperationException("classInstance is null.");
+                throw new java.lang.UnsupportedOperationException("classInstance is null.");
             try {
                 classInstance.Invoke("Dispose");
             }
@@ -274,9 +305,20 @@ public class DbBatch extends NetObject implements AutoCloseable {
     
     public int getTimeout() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTimeout = null;
         try {
-            return (int)classInstance.Get("Timeout");
+            retObjectTimeout = classInstance.Get("Timeout");
+            return (int)retObjectTimeout;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectTimeout_ToString = retObjectTimeout == null ? "null" : retObjectTimeout.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectTimeoutNumber = (java.lang.Number)retObjectTimeout;
+                return retObjectTimeoutNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectTimeout != null ? retObjectTimeout.getClass() : "null", retObjectTimeout_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -284,7 +326,7 @@ public class DbBatch extends NetObject implements AutoCloseable {
 
     public void setTimeout(int Timeout) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Timeout", Timeout);
         } catch (JCNativeException jcne) {
@@ -294,10 +336,14 @@ public class DbBatch extends NetObject implements AutoCloseable {
 
     public DbBatchCommandCollection getBatchCommands() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBatchCommands = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("BatchCommands");
+            retObjectBatchCommands = classInstance.Get("BatchCommands");
+            JCObject val = (JCObject)retObjectBatchCommands;
             return new DbBatchCommandCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBatchCommands != null ? retObjectBatchCommands.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -305,10 +351,14 @@ public class DbBatch extends NetObject implements AutoCloseable {
 
     public DbConnection getConnection() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConnection = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Connection");
+            retObjectConnection = classInstance.Get("Connection");
+            JCObject val = (JCObject)retObjectConnection;
             return new DbConnection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConnection != null ? retObjectConnection.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -316,7 +366,7 @@ public class DbBatch extends NetObject implements AutoCloseable {
 
     public void setConnection(DbConnection Connection) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Connection", Connection == null ? null : Connection.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -326,10 +376,14 @@ public class DbBatch extends NetObject implements AutoCloseable {
 
     public DbTransaction getTransaction() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTransaction = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Transaction");
+            retObjectTransaction = classInstance.Get("Transaction");
+            JCObject val = (JCObject)retObjectTransaction;
             return new DbTransaction(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTransaction != null ? retObjectTransaction.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -337,7 +391,7 @@ public class DbBatch extends NetObject implements AutoCloseable {
 
     public void setTransaction(DbTransaction Transaction) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Transaction", Transaction == null ? null : Transaction.getJCOInstance());
         } catch (JCNativeException jcne) {

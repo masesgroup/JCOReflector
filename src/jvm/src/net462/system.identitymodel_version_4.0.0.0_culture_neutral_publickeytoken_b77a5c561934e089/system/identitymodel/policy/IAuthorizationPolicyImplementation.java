@@ -146,9 +146,13 @@ public class IAuthorizationPolicyImplementation extends NetObject implements IAu
     
     public boolean Evaluate(EvaluationContext evaluationContext, JCORefOut<NetObject> state) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEvaluate = null;
         try {
-            return (boolean)classInstance.Invoke("Evaluate", evaluationContext == null ? null : evaluationContext.getJCOInstance(), state.getJCRefOut());
+            retObjectEvaluate = classInstance.Invoke("Evaluate", evaluationContext == null ? null : evaluationContext.getJCOInstance(), state.getJCRefOut());
+            return (boolean)retObjectEvaluate;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectEvaluate != null ? retObjectEvaluate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -160,10 +164,14 @@ public class IAuthorizationPolicyImplementation extends NetObject implements IAu
     
     public ClaimSet getIssuer() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIssuer = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Issuer");
+            retObjectIssuer = classInstance.Get("Issuer");
+            JCObject val = (JCObject)retObjectIssuer;
             return new ClaimSet(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIssuer != null ? retObjectIssuer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,9 +179,13 @@ public class IAuthorizationPolicyImplementation extends NetObject implements IAu
 
     public java.lang.String getId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectId = null;
         try {
-            return (java.lang.String)classInstance.Get("Id");
+            retObjectId = classInstance.Get("Id");
+            return (java.lang.String)retObjectId;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectId != null ? retObjectId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

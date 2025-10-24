@@ -159,9 +159,13 @@ public class MembershipProvider extends ProviderBase  {
     
     public boolean ChangePassword(java.lang.String username, java.lang.String oldPassword, java.lang.String newPassword) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectChangePassword = null;
         try {
-            return (boolean)classInstance.Invoke("ChangePassword", username, oldPassword, newPassword);
+            retObjectChangePassword = classInstance.Invoke("ChangePassword", username, oldPassword, newPassword);
+            return (boolean)retObjectChangePassword;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectChangePassword != null ? retObjectChangePassword.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,9 +173,13 @@ public class MembershipProvider extends ProviderBase  {
 
     public boolean ChangePasswordQuestionAndAnswer(java.lang.String username, java.lang.String password, java.lang.String newPasswordQuestion, java.lang.String newPasswordAnswer) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectChangePasswordQuestionAndAnswer = null;
         try {
-            return (boolean)classInstance.Invoke("ChangePasswordQuestionAndAnswer", username, password, newPasswordQuestion, newPasswordAnswer);
+            retObjectChangePasswordQuestionAndAnswer = classInstance.Invoke("ChangePasswordQuestionAndAnswer", username, password, newPasswordQuestion, newPasswordAnswer);
+            return (boolean)retObjectChangePasswordQuestionAndAnswer;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectChangePasswordQuestionAndAnswer != null ? retObjectChangePasswordQuestionAndAnswer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,9 +187,13 @@ public class MembershipProvider extends ProviderBase  {
 
     public boolean DeleteUser(java.lang.String username, boolean deleteAllRelatedData) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDeleteUser = null;
         try {
-            return (boolean)classInstance.Invoke("DeleteUser", username, deleteAllRelatedData);
+            retObjectDeleteUser = classInstance.Invoke("DeleteUser", username, deleteAllRelatedData);
+            return (boolean)retObjectDeleteUser;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectDeleteUser != null ? retObjectDeleteUser.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -189,9 +201,13 @@ public class MembershipProvider extends ProviderBase  {
 
     public boolean UnlockUser(java.lang.String userName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUnlockUser = null;
         try {
-            return (boolean)classInstance.Invoke("UnlockUser", userName);
+            retObjectUnlockUser = classInstance.Invoke("UnlockUser", userName);
+            return (boolean)retObjectUnlockUser;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectUnlockUser != null ? retObjectUnlockUser.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -199,9 +215,13 @@ public class MembershipProvider extends ProviderBase  {
 
     public boolean ValidateUser(java.lang.String username, java.lang.String password) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValidateUser = null;
         try {
-            return (boolean)classInstance.Invoke("ValidateUser", username, password);
+            retObjectValidateUser = classInstance.Invoke("ValidateUser", username, password);
+            return (boolean)retObjectValidateUser;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectValidateUser != null ? retObjectValidateUser.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -209,9 +229,20 @@ public class MembershipProvider extends ProviderBase  {
 
     public int GetNumberOfUsersOnline() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetNumberOfUsersOnline = null;
         try {
-            return (int)classInstance.Invoke("GetNumberOfUsersOnline");
+            retObjectGetNumberOfUsersOnline = classInstance.Invoke("GetNumberOfUsersOnline");
+            return (int)retObjectGetNumberOfUsersOnline;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetNumberOfUsersOnline_ToString = retObjectGetNumberOfUsersOnline == null ? "null" : retObjectGetNumberOfUsersOnline.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetNumberOfUsersOnlineNumber = (java.lang.Number)retObjectGetNumberOfUsersOnline;
+                return retObjectGetNumberOfUsersOnlineNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetNumberOfUsersOnline != null ? retObjectGetNumberOfUsersOnline.getClass() : "null", retObjectGetNumberOfUsersOnline_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -219,9 +250,13 @@ public class MembershipProvider extends ProviderBase  {
 
     public java.lang.String GetPassword(java.lang.String username, java.lang.String answer) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPassword = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetPassword", username, answer);
+            retObjectGetPassword = classInstance.Invoke("GetPassword", username, answer);
+            return (java.lang.String)retObjectGetPassword;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetPassword != null ? retObjectGetPassword.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -229,9 +264,13 @@ public class MembershipProvider extends ProviderBase  {
 
     public java.lang.String GetUserNameByEmail(java.lang.String email) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetUserNameByEmail = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetUserNameByEmail", email);
+            retObjectGetUserNameByEmail = classInstance.Invoke("GetUserNameByEmail", email);
+            return (java.lang.String)retObjectGetUserNameByEmail;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetUserNameByEmail != null ? retObjectGetUserNameByEmail.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -239,9 +278,13 @@ public class MembershipProvider extends ProviderBase  {
 
     public java.lang.String ResetPassword(java.lang.String username, java.lang.String answer) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResetPassword = null;
         try {
-            return (java.lang.String)classInstance.Invoke("ResetPassword", username, answer);
+            retObjectResetPassword = classInstance.Invoke("ResetPassword", username, answer);
+            return (java.lang.String)retObjectResetPassword;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectResetPassword != null ? retObjectResetPassword.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -249,10 +292,14 @@ public class MembershipProvider extends ProviderBase  {
 
     public MembershipUser CreateUser(java.lang.String username, java.lang.String password, java.lang.String email, java.lang.String passwordQuestion, java.lang.String passwordAnswer, boolean isApproved, NetObject providerUserKey, JCORefOut<MembershipCreateStatus> status) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateUser = null;
         try {
-            JCObject objCreateUser = (JCObject)classInstance.Invoke("CreateUser", username, password, email, passwordQuestion, passwordAnswer, isApproved, providerUserKey == null ? null : providerUserKey.getJCOInstance(), status.getJCRefOut());
+            retObjectCreateUser = classInstance.Invoke("CreateUser", username, password, email, passwordQuestion, passwordAnswer, isApproved, providerUserKey == null ? null : providerUserKey.getJCOInstance(), status.getJCRefOut());
+            JCObject objCreateUser = (JCObject)retObjectCreateUser;
             return new MembershipUser(objCreateUser);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateUser != null ? retObjectCreateUser.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -260,10 +307,14 @@ public class MembershipProvider extends ProviderBase  {
 
     public MembershipUser GetUser(NetObject providerUserKey, boolean userIsOnline) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetUser = null;
         try {
-            JCObject objGetUser = (JCObject)classInstance.Invoke("GetUser", providerUserKey == null ? null : providerUserKey.getJCOInstance(), userIsOnline);
+            retObjectGetUser = classInstance.Invoke("GetUser", providerUserKey == null ? null : providerUserKey.getJCOInstance(), userIsOnline);
+            JCObject objGetUser = (JCObject)retObjectGetUser;
             return new MembershipUser(objGetUser);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetUser != null ? retObjectGetUser.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -271,10 +322,14 @@ public class MembershipProvider extends ProviderBase  {
 
     public MembershipUser GetUser(java.lang.String username, boolean userIsOnline) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetUser = null;
         try {
-            JCObject objGetUser = (JCObject)classInstance.Invoke("GetUser", username, userIsOnline);
+            retObjectGetUser = classInstance.Invoke("GetUser", username, userIsOnline);
+            JCObject objGetUser = (JCObject)retObjectGetUser;
             return new MembershipUser(objGetUser);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetUser != null ? retObjectGetUser.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -282,10 +337,14 @@ public class MembershipProvider extends ProviderBase  {
 
     public MembershipUserCollection FindUsersByEmail(java.lang.String emailToMatch, int pageIndex, int pageSize, JCORefOut<java.util.concurrent.atomic.AtomicInteger> totalRecords) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFindUsersByEmail = null;
         try {
-            JCObject objFindUsersByEmail = (JCObject)classInstance.Invoke("FindUsersByEmail", emailToMatch, pageIndex, pageSize, totalRecords.getJCRefOut());
+            retObjectFindUsersByEmail = classInstance.Invoke("FindUsersByEmail", emailToMatch, pageIndex, pageSize, totalRecords.getJCRefOut());
+            JCObject objFindUsersByEmail = (JCObject)retObjectFindUsersByEmail;
             return new MembershipUserCollection(objFindUsersByEmail);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFindUsersByEmail != null ? retObjectFindUsersByEmail.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -293,10 +352,14 @@ public class MembershipProvider extends ProviderBase  {
 
     public MembershipUserCollection FindUsersByName(java.lang.String usernameToMatch, int pageIndex, int pageSize, JCORefOut<java.util.concurrent.atomic.AtomicInteger> totalRecords) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFindUsersByName = null;
         try {
-            JCObject objFindUsersByName = (JCObject)classInstance.Invoke("FindUsersByName", usernameToMatch, pageIndex, pageSize, totalRecords.getJCRefOut());
+            retObjectFindUsersByName = classInstance.Invoke("FindUsersByName", usernameToMatch, pageIndex, pageSize, totalRecords.getJCRefOut());
+            JCObject objFindUsersByName = (JCObject)retObjectFindUsersByName;
             return new MembershipUserCollection(objFindUsersByName);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFindUsersByName != null ? retObjectFindUsersByName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -304,10 +367,14 @@ public class MembershipProvider extends ProviderBase  {
 
     public MembershipUserCollection GetAllUsers(int pageIndex, int pageSize, JCORefOut<java.util.concurrent.atomic.AtomicInteger> totalRecords) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetAllUsers = null;
         try {
-            JCObject objGetAllUsers = (JCObject)classInstance.Invoke("GetAllUsers", pageIndex, pageSize, totalRecords.getJCRefOut());
+            retObjectGetAllUsers = classInstance.Invoke("GetAllUsers", pageIndex, pageSize, totalRecords.getJCRefOut());
+            JCObject objGetAllUsers = (JCObject)retObjectGetAllUsers;
             return new MembershipUserCollection(objGetAllUsers);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetAllUsers != null ? retObjectGetAllUsers.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -315,7 +382,7 @@ public class MembershipProvider extends ProviderBase  {
 
     public void UpdateUser(MembershipUser user) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("UpdateUser", user == null ? null : user.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -329,9 +396,13 @@ public class MembershipProvider extends ProviderBase  {
     
     public boolean getEnablePasswordReset() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEnablePasswordReset = null;
         try {
-            return (boolean)classInstance.Get("EnablePasswordReset");
+            retObjectEnablePasswordReset = classInstance.Get("EnablePasswordReset");
+            return (boolean)retObjectEnablePasswordReset;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectEnablePasswordReset != null ? retObjectEnablePasswordReset.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -339,9 +410,13 @@ public class MembershipProvider extends ProviderBase  {
 
     public boolean getEnablePasswordRetrieval() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEnablePasswordRetrieval = null;
         try {
-            return (boolean)classInstance.Get("EnablePasswordRetrieval");
+            retObjectEnablePasswordRetrieval = classInstance.Get("EnablePasswordRetrieval");
+            return (boolean)retObjectEnablePasswordRetrieval;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectEnablePasswordRetrieval != null ? retObjectEnablePasswordRetrieval.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -349,9 +424,13 @@ public class MembershipProvider extends ProviderBase  {
 
     public boolean getRequiresQuestionAndAnswer() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRequiresQuestionAndAnswer = null;
         try {
-            return (boolean)classInstance.Get("RequiresQuestionAndAnswer");
+            retObjectRequiresQuestionAndAnswer = classInstance.Get("RequiresQuestionAndAnswer");
+            return (boolean)retObjectRequiresQuestionAndAnswer;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectRequiresQuestionAndAnswer != null ? retObjectRequiresQuestionAndAnswer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -359,9 +438,13 @@ public class MembershipProvider extends ProviderBase  {
 
     public boolean getRequiresUniqueEmail() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRequiresUniqueEmail = null;
         try {
-            return (boolean)classInstance.Get("RequiresUniqueEmail");
+            retObjectRequiresUniqueEmail = classInstance.Get("RequiresUniqueEmail");
+            return (boolean)retObjectRequiresUniqueEmail;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectRequiresUniqueEmail != null ? retObjectRequiresUniqueEmail.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -369,9 +452,20 @@ public class MembershipProvider extends ProviderBase  {
 
     public int getMaxInvalidPasswordAttempts() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxInvalidPasswordAttempts = null;
         try {
-            return (int)classInstance.Get("MaxInvalidPasswordAttempts");
+            retObjectMaxInvalidPasswordAttempts = classInstance.Get("MaxInvalidPasswordAttempts");
+            return (int)retObjectMaxInvalidPasswordAttempts;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaxInvalidPasswordAttempts_ToString = retObjectMaxInvalidPasswordAttempts == null ? "null" : retObjectMaxInvalidPasswordAttempts.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMaxInvalidPasswordAttemptsNumber = (java.lang.Number)retObjectMaxInvalidPasswordAttempts;
+                return retObjectMaxInvalidPasswordAttemptsNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxInvalidPasswordAttempts != null ? retObjectMaxInvalidPasswordAttempts.getClass() : "null", retObjectMaxInvalidPasswordAttempts_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -379,9 +473,20 @@ public class MembershipProvider extends ProviderBase  {
 
     public int getMinRequiredNonAlphanumericCharacters() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMinRequiredNonAlphanumericCharacters = null;
         try {
-            return (int)classInstance.Get("MinRequiredNonAlphanumericCharacters");
+            retObjectMinRequiredNonAlphanumericCharacters = classInstance.Get("MinRequiredNonAlphanumericCharacters");
+            return (int)retObjectMinRequiredNonAlphanumericCharacters;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMinRequiredNonAlphanumericCharacters_ToString = retObjectMinRequiredNonAlphanumericCharacters == null ? "null" : retObjectMinRequiredNonAlphanumericCharacters.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMinRequiredNonAlphanumericCharactersNumber = (java.lang.Number)retObjectMinRequiredNonAlphanumericCharacters;
+                return retObjectMinRequiredNonAlphanumericCharactersNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMinRequiredNonAlphanumericCharacters != null ? retObjectMinRequiredNonAlphanumericCharacters.getClass() : "null", retObjectMinRequiredNonAlphanumericCharacters_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -389,9 +494,20 @@ public class MembershipProvider extends ProviderBase  {
 
     public int getMinRequiredPasswordLength() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMinRequiredPasswordLength = null;
         try {
-            return (int)classInstance.Get("MinRequiredPasswordLength");
+            retObjectMinRequiredPasswordLength = classInstance.Get("MinRequiredPasswordLength");
+            return (int)retObjectMinRequiredPasswordLength;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMinRequiredPasswordLength_ToString = retObjectMinRequiredPasswordLength == null ? "null" : retObjectMinRequiredPasswordLength.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMinRequiredPasswordLengthNumber = (java.lang.Number)retObjectMinRequiredPasswordLength;
+                return retObjectMinRequiredPasswordLengthNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMinRequiredPasswordLength != null ? retObjectMinRequiredPasswordLength.getClass() : "null", retObjectMinRequiredPasswordLength_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -399,9 +515,20 @@ public class MembershipProvider extends ProviderBase  {
 
     public int getPasswordAttemptWindow() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPasswordAttemptWindow = null;
         try {
-            return (int)classInstance.Get("PasswordAttemptWindow");
+            retObjectPasswordAttemptWindow = classInstance.Get("PasswordAttemptWindow");
+            return (int)retObjectPasswordAttemptWindow;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectPasswordAttemptWindow_ToString = retObjectPasswordAttemptWindow == null ? "null" : retObjectPasswordAttemptWindow.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectPasswordAttemptWindowNumber = (java.lang.Number)retObjectPasswordAttemptWindow;
+                return retObjectPasswordAttemptWindowNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectPasswordAttemptWindow != null ? retObjectPasswordAttemptWindow.getClass() : "null", retObjectPasswordAttemptWindow_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -409,9 +536,13 @@ public class MembershipProvider extends ProviderBase  {
 
     public java.lang.String getApplicationName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectApplicationName = null;
         try {
-            return (java.lang.String)classInstance.Get("ApplicationName");
+            retObjectApplicationName = classInstance.Get("ApplicationName");
+            return (java.lang.String)retObjectApplicationName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectApplicationName != null ? retObjectApplicationName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -419,7 +550,7 @@ public class MembershipProvider extends ProviderBase  {
 
     public void setApplicationName(java.lang.String ApplicationName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ApplicationName", ApplicationName);
         } catch (JCNativeException jcne) {
@@ -429,9 +560,13 @@ public class MembershipProvider extends ProviderBase  {
 
     public java.lang.String getPasswordStrengthRegularExpression() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPasswordStrengthRegularExpression = null;
         try {
-            return (java.lang.String)classInstance.Get("PasswordStrengthRegularExpression");
+            retObjectPasswordStrengthRegularExpression = classInstance.Get("PasswordStrengthRegularExpression");
+            return (java.lang.String)retObjectPasswordStrengthRegularExpression;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectPasswordStrengthRegularExpression != null ? retObjectPasswordStrengthRegularExpression.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -439,10 +574,14 @@ public class MembershipProvider extends ProviderBase  {
 
     public MembershipPasswordFormat getPasswordFormat() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPasswordFormat = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PasswordFormat");
+            retObjectPasswordFormat = classInstance.Get("PasswordFormat");
+            JCObject val = (JCObject)retObjectPasswordFormat;
             return new MembershipPasswordFormat(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPasswordFormat != null ? retObjectPasswordFormat.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -455,7 +594,7 @@ public class MembershipProvider extends ProviderBase  {
 
     public void addValidatingPassword(MembershipValidatePasswordEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ValidatingPassword", handler);
         } catch (JCNativeException jcne) {
@@ -465,7 +604,7 @@ public class MembershipProvider extends ProviderBase  {
 
     public void removeValidatingPassword(MembershipValidatePasswordEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ValidatingPassword", handler);
         } catch (JCNativeException jcne) {

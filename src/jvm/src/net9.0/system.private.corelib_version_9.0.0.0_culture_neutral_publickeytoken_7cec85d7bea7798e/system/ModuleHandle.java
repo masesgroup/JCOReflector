@@ -160,9 +160,13 @@ public class ModuleHandle extends ValueType  {
     
     public boolean Equals(ModuleHandle handle) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEquals = null;
         try {
-            return (boolean)classInstance.Invoke("Equals", handle == null ? null : handle.getJCOInstance());
+            retObjectEquals = classInstance.Invoke("Equals", handle == null ? null : handle.getJCOInstance());
+            return (boolean)retObjectEquals;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectEquals != null ? retObjectEquals.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,10 +174,14 @@ public class ModuleHandle extends ValueType  {
 
     public RuntimeFieldHandle GetRuntimeFieldHandleFromMetadataToken(int fieldToken) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetRuntimeFieldHandleFromMetadataToken = null;
         try {
-            JCObject objGetRuntimeFieldHandleFromMetadataToken = (JCObject)classInstance.Invoke("GetRuntimeFieldHandleFromMetadataToken", fieldToken);
+            retObjectGetRuntimeFieldHandleFromMetadataToken = classInstance.Invoke("GetRuntimeFieldHandleFromMetadataToken", fieldToken);
+            JCObject objGetRuntimeFieldHandleFromMetadataToken = (JCObject)retObjectGetRuntimeFieldHandleFromMetadataToken;
             return new RuntimeFieldHandle(objGetRuntimeFieldHandleFromMetadataToken);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetRuntimeFieldHandleFromMetadataToken != null ? retObjectGetRuntimeFieldHandleFromMetadataToken.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,10 +189,14 @@ public class ModuleHandle extends ValueType  {
 
     public RuntimeFieldHandle ResolveFieldHandle(int fieldToken, RuntimeTypeHandle[] typeInstantiationContext, RuntimeTypeHandle[] methodInstantiationContext) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResolveFieldHandle = null;
         try {
-            JCObject objResolveFieldHandle = (JCObject)classInstance.Invoke("ResolveFieldHandle", fieldToken, toObjectFromArray(typeInstantiationContext), toObjectFromArray(methodInstantiationContext));
+            retObjectResolveFieldHandle = classInstance.Invoke("ResolveFieldHandle", fieldToken, toObjectFromArray(typeInstantiationContext), toObjectFromArray(methodInstantiationContext));
+            JCObject objResolveFieldHandle = (JCObject)retObjectResolveFieldHandle;
             return new RuntimeFieldHandle(objResolveFieldHandle);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectResolveFieldHandle != null ? retObjectResolveFieldHandle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,10 +204,14 @@ public class ModuleHandle extends ValueType  {
 
     public RuntimeFieldHandle ResolveFieldHandle(int fieldToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResolveFieldHandle = null;
         try {
-            JCObject objResolveFieldHandle = (JCObject)classInstance.Invoke("ResolveFieldHandle", fieldToken);
+            retObjectResolveFieldHandle = classInstance.Invoke("ResolveFieldHandle", fieldToken);
+            JCObject objResolveFieldHandle = (JCObject)retObjectResolveFieldHandle;
             return new RuntimeFieldHandle(objResolveFieldHandle);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectResolveFieldHandle != null ? retObjectResolveFieldHandle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,10 +219,14 @@ public class ModuleHandle extends ValueType  {
 
     public RuntimeMethodHandle GetRuntimeMethodHandleFromMetadataToken(int methodToken) throws Throwable, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.ArrayTypeMismatchException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetRuntimeMethodHandleFromMetadataToken = null;
         try {
-            JCObject objGetRuntimeMethodHandleFromMetadataToken = (JCObject)classInstance.Invoke("GetRuntimeMethodHandleFromMetadataToken", methodToken);
+            retObjectGetRuntimeMethodHandleFromMetadataToken = classInstance.Invoke("GetRuntimeMethodHandleFromMetadataToken", methodToken);
+            JCObject objGetRuntimeMethodHandleFromMetadataToken = (JCObject)retObjectGetRuntimeMethodHandleFromMetadataToken;
             return new RuntimeMethodHandle(objGetRuntimeMethodHandleFromMetadataToken);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetRuntimeMethodHandleFromMetadataToken != null ? retObjectGetRuntimeMethodHandleFromMetadataToken.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -214,10 +234,14 @@ public class ModuleHandle extends ValueType  {
 
     public RuntimeMethodHandle ResolveMethodHandle(int methodToken, RuntimeTypeHandle[] typeInstantiationContext, RuntimeTypeHandle[] methodInstantiationContext) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResolveMethodHandle = null;
         try {
-            JCObject objResolveMethodHandle = (JCObject)classInstance.Invoke("ResolveMethodHandle", methodToken, toObjectFromArray(typeInstantiationContext), toObjectFromArray(methodInstantiationContext));
+            retObjectResolveMethodHandle = classInstance.Invoke("ResolveMethodHandle", methodToken, toObjectFromArray(typeInstantiationContext), toObjectFromArray(methodInstantiationContext));
+            JCObject objResolveMethodHandle = (JCObject)retObjectResolveMethodHandle;
             return new RuntimeMethodHandle(objResolveMethodHandle);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectResolveMethodHandle != null ? retObjectResolveMethodHandle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -225,10 +249,14 @@ public class ModuleHandle extends ValueType  {
 
     public RuntimeMethodHandle ResolveMethodHandle(int methodToken) throws Throwable, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.FormatException, system.ArgumentException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResolveMethodHandle = null;
         try {
-            JCObject objResolveMethodHandle = (JCObject)classInstance.Invoke("ResolveMethodHandle", methodToken);
+            retObjectResolveMethodHandle = classInstance.Invoke("ResolveMethodHandle", methodToken);
+            JCObject objResolveMethodHandle = (JCObject)retObjectResolveMethodHandle;
             return new RuntimeMethodHandle(objResolveMethodHandle);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectResolveMethodHandle != null ? retObjectResolveMethodHandle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -236,10 +264,14 @@ public class ModuleHandle extends ValueType  {
 
     public RuntimeTypeHandle GetRuntimeTypeHandleFromMetadataToken(int typeToken) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetRuntimeTypeHandleFromMetadataToken = null;
         try {
-            JCObject objGetRuntimeTypeHandleFromMetadataToken = (JCObject)classInstance.Invoke("GetRuntimeTypeHandleFromMetadataToken", typeToken);
+            retObjectGetRuntimeTypeHandleFromMetadataToken = classInstance.Invoke("GetRuntimeTypeHandleFromMetadataToken", typeToken);
+            JCObject objGetRuntimeTypeHandleFromMetadataToken = (JCObject)retObjectGetRuntimeTypeHandleFromMetadataToken;
             return new RuntimeTypeHandle(objGetRuntimeTypeHandleFromMetadataToken);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetRuntimeTypeHandleFromMetadataToken != null ? retObjectGetRuntimeTypeHandleFromMetadataToken.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -247,10 +279,14 @@ public class ModuleHandle extends ValueType  {
 
     public RuntimeTypeHandle ResolveTypeHandle(int typeToken, RuntimeTypeHandle[] typeInstantiationContext, RuntimeTypeHandle[] methodInstantiationContext) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResolveTypeHandle = null;
         try {
-            JCObject objResolveTypeHandle = (JCObject)classInstance.Invoke("ResolveTypeHandle", typeToken, toObjectFromArray(typeInstantiationContext), toObjectFromArray(methodInstantiationContext));
+            retObjectResolveTypeHandle = classInstance.Invoke("ResolveTypeHandle", typeToken, toObjectFromArray(typeInstantiationContext), toObjectFromArray(methodInstantiationContext));
+            JCObject objResolveTypeHandle = (JCObject)retObjectResolveTypeHandle;
             return new RuntimeTypeHandle(objResolveTypeHandle);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectResolveTypeHandle != null ? retObjectResolveTypeHandle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -258,10 +294,14 @@ public class ModuleHandle extends ValueType  {
 
     public RuntimeTypeHandle ResolveTypeHandle(int typeToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResolveTypeHandle = null;
         try {
-            JCObject objResolveTypeHandle = (JCObject)classInstance.Invoke("ResolveTypeHandle", typeToken);
+            retObjectResolveTypeHandle = classInstance.Invoke("ResolveTypeHandle", typeToken);
+            JCObject objResolveTypeHandle = (JCObject)retObjectResolveTypeHandle;
             return new RuntimeTypeHandle(objResolveTypeHandle);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectResolveTypeHandle != null ? retObjectResolveTypeHandle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -273,9 +313,20 @@ public class ModuleHandle extends ValueType  {
     
     public int getMDStreamVersion() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMDStreamVersion = null;
         try {
-            return (int)classInstance.Get("MDStreamVersion");
+            retObjectMDStreamVersion = classInstance.Get("MDStreamVersion");
+            return (int)retObjectMDStreamVersion;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMDStreamVersion_ToString = retObjectMDStreamVersion == null ? "null" : retObjectMDStreamVersion.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMDStreamVersionNumber = (java.lang.Number)retObjectMDStreamVersion;
+                return retObjectMDStreamVersionNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMDStreamVersion != null ? retObjectMDStreamVersion.getClass() : "null", retObjectMDStreamVersion_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

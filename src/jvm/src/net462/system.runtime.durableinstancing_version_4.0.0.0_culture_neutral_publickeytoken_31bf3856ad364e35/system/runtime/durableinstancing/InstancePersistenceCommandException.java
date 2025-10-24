@@ -234,7 +234,7 @@ public class InstancePersistenceCommandException extends InstancePersistenceExce
     
     public void GetObjectData(SerializationInfo info, StreamingContext context) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.security.SecurityException, system.NotSupportedException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.IndexOutOfRangeException, system.NotImplementedException, system.runtime.serialization.SerializationException, system.OverflowException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetObjectData", info == null ? null : info.getJCOInstance(), context == null ? null : context.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -248,10 +248,14 @@ public class InstancePersistenceCommandException extends InstancePersistenceExce
     
     public Guid getInstanceId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInstanceId = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("InstanceId");
+            retObjectInstanceId = classInstance.Get("InstanceId");
+            JCObject val = (JCObject)retObjectInstanceId;
             return new Guid(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInstanceId != null ? retObjectInstanceId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -259,7 +263,7 @@ public class InstancePersistenceCommandException extends InstancePersistenceExce
 
     public void setInstanceId(Guid InstanceId) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("InstanceId", InstanceId == null ? null : InstanceId.getJCOInstance());
         } catch (JCNativeException jcne) {

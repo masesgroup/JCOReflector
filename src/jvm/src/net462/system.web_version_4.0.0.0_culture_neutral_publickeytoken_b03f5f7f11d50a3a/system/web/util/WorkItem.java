@@ -162,7 +162,7 @@ public class WorkItem extends NetObject  {
     
     public static void Post(WorkItemCallback callback) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.PlatformNotSupportedException, system.NullReferenceException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.collections.generic.KeyNotFoundException, system.web.HttpException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Post", callback);
         } catch (JCNativeException jcne) {

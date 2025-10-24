@@ -152,9 +152,20 @@ public class IDataObjectImplementation extends NetObject implements IDataObject 
     
     public int DAdvise(JCORefOut<FORMATETC> pFormatetc, ADVF advf, IAdviseSink adviseSink, JCORefOut<java.util.concurrent.atomic.AtomicInteger> connection) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDAdvise = null;
         try {
-            return (int)classInstance.Invoke("DAdvise", pFormatetc.getJCRefOut(), advf == null ? null : advf.getJCOInstance(), adviseSink == null ? null : adviseSink.getJCOInstance(), connection.getJCRefOut());
+            retObjectDAdvise = classInstance.Invoke("DAdvise", pFormatetc.getJCRefOut(), advf == null ? null : advf.getJCOInstance(), adviseSink == null ? null : adviseSink.getJCOInstance(), connection.getJCRefOut());
+            return (int)retObjectDAdvise;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDAdvise_ToString = retObjectDAdvise == null ? "null" : retObjectDAdvise.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectDAdviseNumber = (java.lang.Number)retObjectDAdvise;
+                return retObjectDAdviseNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectDAdvise != null ? retObjectDAdvise.getClass() : "null", retObjectDAdvise_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -162,9 +173,20 @@ public class IDataObjectImplementation extends NetObject implements IDataObject 
 
     public int EnumDAdvise(JCORefOut<IEnumSTATDATA> enumAdvise) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEnumDAdvise = null;
         try {
-            return (int)classInstance.Invoke("EnumDAdvise", enumAdvise.getJCRefOut());
+            retObjectEnumDAdvise = classInstance.Invoke("EnumDAdvise", enumAdvise.getJCRefOut());
+            return (int)retObjectEnumDAdvise;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectEnumDAdvise_ToString = retObjectEnumDAdvise == null ? "null" : retObjectEnumDAdvise.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectEnumDAdviseNumber = (java.lang.Number)retObjectEnumDAdvise;
+                return retObjectEnumDAdviseNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectEnumDAdvise != null ? retObjectEnumDAdvise.getClass() : "null", retObjectEnumDAdvise_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,9 +194,20 @@ public class IDataObjectImplementation extends NetObject implements IDataObject 
 
     public int GetCanonicalFormatEtc(JCORefOut<FORMATETC> formatIn, JCORefOut<FORMATETC> formatOut) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetCanonicalFormatEtc = null;
         try {
-            return (int)classInstance.Invoke("GetCanonicalFormatEtc", formatIn.getJCRefOut(), formatOut.getJCRefOut());
+            retObjectGetCanonicalFormatEtc = classInstance.Invoke("GetCanonicalFormatEtc", formatIn.getJCRefOut(), formatOut.getJCRefOut());
+            return (int)retObjectGetCanonicalFormatEtc;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetCanonicalFormatEtc_ToString = retObjectGetCanonicalFormatEtc == null ? "null" : retObjectGetCanonicalFormatEtc.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetCanonicalFormatEtcNumber = (java.lang.Number)retObjectGetCanonicalFormatEtc;
+                return retObjectGetCanonicalFormatEtcNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetCanonicalFormatEtc != null ? retObjectGetCanonicalFormatEtc.getClass() : "null", retObjectGetCanonicalFormatEtc_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,9 +215,20 @@ public class IDataObjectImplementation extends NetObject implements IDataObject 
 
     public int QueryGetData(JCORefOut<FORMATETC> format) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectQueryGetData = null;
         try {
-            return (int)classInstance.Invoke("QueryGetData", format.getJCRefOut());
+            retObjectQueryGetData = classInstance.Invoke("QueryGetData", format.getJCRefOut());
+            return (int)retObjectQueryGetData;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectQueryGetData_ToString = retObjectQueryGetData == null ? "null" : retObjectQueryGetData.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectQueryGetDataNumber = (java.lang.Number)retObjectQueryGetData;
+                return retObjectQueryGetDataNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectQueryGetData != null ? retObjectQueryGetData.getClass() : "null", retObjectQueryGetData_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,10 +236,14 @@ public class IDataObjectImplementation extends NetObject implements IDataObject 
 
     public IEnumFORMATETC EnumFormatEtc(DATADIR direction) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEnumFormatEtc = null;
         try {
-            JCObject objEnumFormatEtc = (JCObject)classInstance.Invoke("EnumFormatEtc", direction == null ? null : direction.getJCOInstance());
+            retObjectEnumFormatEtc = classInstance.Invoke("EnumFormatEtc", direction == null ? null : direction.getJCOInstance());
+            JCObject objEnumFormatEtc = (JCObject)retObjectEnumFormatEtc;
             return new IEnumFORMATETCImplementation(objEnumFormatEtc);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEnumFormatEtc != null ? retObjectEnumFormatEtc.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,7 +251,7 @@ public class IDataObjectImplementation extends NetObject implements IDataObject 
 
     public void DUnadvise(int connection) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DUnadvise", connection);
         } catch (JCNativeException jcne) {
@@ -213,7 +261,7 @@ public class IDataObjectImplementation extends NetObject implements IDataObject 
 
     public void GetData(JCORefOut<FORMATETC> format, JCORefOut<STGMEDIUM> medium) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetData", format.getJCRefOut(), medium.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -223,7 +271,7 @@ public class IDataObjectImplementation extends NetObject implements IDataObject 
 
     public void GetDataHere(JCORefOut<FORMATETC> format, JCORefOut<STGMEDIUM> medium) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetDataHere", format.getJCRefOut(), medium.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -233,7 +281,7 @@ public class IDataObjectImplementation extends NetObject implements IDataObject 
 
     public void SetData(JCORefOut<FORMATETC> formatIn, JCORefOut<STGMEDIUM> medium, boolean release) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetData", formatIn.getJCRefOut(), medium.getJCRefOut(), release);
         } catch (JCNativeException jcne) {

@@ -161,9 +161,13 @@ public class JsonWriterOptions extends ValueType  {
     
     public boolean getIndented() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIndented = null;
         try {
-            return (boolean)classInstance.Get("Indented");
+            retObjectIndented = classInstance.Get("Indented");
+            return (boolean)retObjectIndented;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIndented != null ? retObjectIndented.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,7 +175,7 @@ public class JsonWriterOptions extends ValueType  {
 
     public void setIndented(boolean Indented) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Indented", Indented);
         } catch (JCNativeException jcne) {
@@ -181,9 +185,13 @@ public class JsonWriterOptions extends ValueType  {
 
     public boolean getSkipValidation() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSkipValidation = null;
         try {
-            return (boolean)classInstance.Get("SkipValidation");
+            retObjectSkipValidation = classInstance.Get("SkipValidation");
+            return (boolean)retObjectSkipValidation;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectSkipValidation != null ? retObjectSkipValidation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,7 +199,7 @@ public class JsonWriterOptions extends ValueType  {
 
     public void setSkipValidation(boolean SkipValidation) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SkipValidation", SkipValidation);
         } catch (JCNativeException jcne) {
@@ -201,9 +209,20 @@ public class JsonWriterOptions extends ValueType  {
 
     public int getMaxDepth() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxDepth = null;
         try {
-            return (int)classInstance.Get("MaxDepth");
+            retObjectMaxDepth = classInstance.Get("MaxDepth");
+            return (int)retObjectMaxDepth;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaxDepth_ToString = retObjectMaxDepth == null ? "null" : retObjectMaxDepth.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMaxDepthNumber = (java.lang.Number)retObjectMaxDepth;
+                return retObjectMaxDepthNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxDepth != null ? retObjectMaxDepth.getClass() : "null", retObjectMaxDepth_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -211,7 +230,7 @@ public class JsonWriterOptions extends ValueType  {
 
     public void setMaxDepth(int MaxDepth) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaxDepth", MaxDepth);
         } catch (JCNativeException jcne) {
@@ -221,10 +240,14 @@ public class JsonWriterOptions extends ValueType  {
 
     public JavaScriptEncoder getEncoder() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEncoder = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Encoder");
+            retObjectEncoder = classInstance.Get("Encoder");
+            JCObject val = (JCObject)retObjectEncoder;
             return new JavaScriptEncoder(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEncoder != null ? retObjectEncoder.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -232,7 +255,7 @@ public class JsonWriterOptions extends ValueType  {
 
     public void setEncoder(JavaScriptEncoder Encoder) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Encoder", Encoder == null ? null : Encoder.getJCOInstance());
         } catch (JCNativeException jcne) {

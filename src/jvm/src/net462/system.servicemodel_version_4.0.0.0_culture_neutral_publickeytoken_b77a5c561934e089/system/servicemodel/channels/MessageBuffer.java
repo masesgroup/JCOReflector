@@ -159,10 +159,14 @@ public class MessageBuffer extends NetObject implements system.IDisposable, Auto
     
     public Message CreateMessage() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateMessage = null;
         try {
-            JCObject objCreateMessage = (JCObject)classInstance.Invoke("CreateMessage");
+            retObjectCreateMessage = classInstance.Invoke("CreateMessage");
+            JCObject objCreateMessage = (JCObject)retObjectCreateMessage;
             return new Message(objCreateMessage);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateMessage != null ? retObjectCreateMessage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,10 +174,14 @@ public class MessageBuffer extends NetObject implements system.IDisposable, Auto
 
     public XPathNavigator CreateNavigator() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateNavigator = null;
         try {
-            JCObject objCreateNavigator = (JCObject)classInstance.Invoke("CreateNavigator");
+            retObjectCreateNavigator = classInstance.Invoke("CreateNavigator");
+            JCObject objCreateNavigator = (JCObject)retObjectCreateNavigator;
             return new XPathNavigator(objCreateNavigator);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateNavigator != null ? retObjectCreateNavigator.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,10 +189,14 @@ public class MessageBuffer extends NetObject implements system.IDisposable, Auto
 
     public XPathNavigator CreateNavigator(int nodeQuota) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateNavigator = null;
         try {
-            JCObject objCreateNavigator = (JCObject)classInstance.Invoke("CreateNavigator", nodeQuota);
+            retObjectCreateNavigator = classInstance.Invoke("CreateNavigator", nodeQuota);
+            JCObject objCreateNavigator = (JCObject)retObjectCreateNavigator;
             return new XPathNavigator(objCreateNavigator);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateNavigator != null ? retObjectCreateNavigator.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,10 +204,14 @@ public class MessageBuffer extends NetObject implements system.IDisposable, Auto
 
     public XPathNavigator CreateNavigator(int nodeQuota, XmlSpace space) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateNavigator = null;
         try {
-            JCObject objCreateNavigator = (JCObject)classInstance.Invoke("CreateNavigator", nodeQuota, space == null ? null : space.getJCOInstance());
+            retObjectCreateNavigator = classInstance.Invoke("CreateNavigator", nodeQuota, space == null ? null : space.getJCOInstance());
+            JCObject objCreateNavigator = (JCObject)retObjectCreateNavigator;
             return new XPathNavigator(objCreateNavigator);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateNavigator != null ? retObjectCreateNavigator.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,10 +219,14 @@ public class MessageBuffer extends NetObject implements system.IDisposable, Auto
 
     public XPathNavigator CreateNavigator(XmlSpace space) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateNavigator = null;
         try {
-            JCObject objCreateNavigator = (JCObject)classInstance.Invoke("CreateNavigator", space == null ? null : space.getJCOInstance());
+            retObjectCreateNavigator = classInstance.Invoke("CreateNavigator", space == null ? null : space.getJCOInstance());
+            JCObject objCreateNavigator = (JCObject)retObjectCreateNavigator;
             return new XPathNavigator(objCreateNavigator);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateNavigator != null ? retObjectCreateNavigator.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -214,7 +234,7 @@ public class MessageBuffer extends NetObject implements system.IDisposable, Auto
 
     public void Close() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Close");
         } catch (JCNativeException jcne) {
@@ -224,7 +244,7 @@ public class MessageBuffer extends NetObject implements system.IDisposable, Auto
 
     public void WriteMessage(Stream stream) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException, system.xml.XmlException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteMessage", stream == null ? null : stream.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -238,13 +258,13 @@ public class MessageBuffer extends NetObject implements system.IDisposable, Auto
      */
     @Deprecated 
     public void Dispose() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDisposable to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDisposable to obtain the full interface.");
     }
 
     public void close() throws Exception {
         try {
             if (classInstance == null)
-                throw new UnsupportedOperationException("classInstance is null.");
+                throw new java.lang.UnsupportedOperationException("classInstance is null.");
             try {
                 classInstance.Invoke("Dispose");
             }
@@ -260,9 +280,20 @@ public class MessageBuffer extends NetObject implements system.IDisposable, Auto
     
     public int getBufferSize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBufferSize = null;
         try {
-            return (int)classInstance.Get("BufferSize");
+            retObjectBufferSize = classInstance.Get("BufferSize");
+            return (int)retObjectBufferSize;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectBufferSize_ToString = retObjectBufferSize == null ? "null" : retObjectBufferSize.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectBufferSizeNumber = (java.lang.Number)retObjectBufferSize;
+                return retObjectBufferSizeNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectBufferSize != null ? retObjectBufferSize.getClass() : "null", retObjectBufferSize_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -270,9 +301,13 @@ public class MessageBuffer extends NetObject implements system.IDisposable, Auto
 
     public java.lang.String getMessageContentType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMessageContentType = null;
         try {
-            return (java.lang.String)classInstance.Get("MessageContentType");
+            retObjectMessageContentType = classInstance.Get("MessageContentType");
+            return (java.lang.String)retObjectMessageContentType;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectMessageContentType != null ? retObjectMessageContentType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

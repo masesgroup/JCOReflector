@@ -168,9 +168,13 @@ public class ServiceContractAttribute extends Attribute  {
     
     public boolean getHasProtectionLevel() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHasProtectionLevel = null;
         try {
-            return (boolean)classInstance.Get("HasProtectionLevel");
+            retObjectHasProtectionLevel = classInstance.Get("HasProtectionLevel");
+            return (boolean)retObjectHasProtectionLevel;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectHasProtectionLevel != null ? retObjectHasProtectionLevel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,10 +182,14 @@ public class ServiceContractAttribute extends Attribute  {
 
     public ProtectionLevel getProtectionLevel() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProtectionLevel = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ProtectionLevel");
+            retObjectProtectionLevel = classInstance.Get("ProtectionLevel");
+            JCObject val = (JCObject)retObjectProtectionLevel;
             return new ProtectionLevel(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectProtectionLevel != null ? retObjectProtectionLevel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -189,7 +197,7 @@ public class ServiceContractAttribute extends Attribute  {
 
     public void setProtectionLevel(ProtectionLevel ProtectionLevel) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ProtectionLevel", ProtectionLevel == null ? null : ProtectionLevel.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -199,10 +207,14 @@ public class ServiceContractAttribute extends Attribute  {
 
     public SessionMode getSessionMode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSessionMode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SessionMode");
+            retObjectSessionMode = classInstance.Get("SessionMode");
+            JCObject val = (JCObject)retObjectSessionMode;
             return new SessionMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSessionMode != null ? retObjectSessionMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -210,7 +222,7 @@ public class ServiceContractAttribute extends Attribute  {
 
     public void setSessionMode(SessionMode SessionMode) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SessionMode", SessionMode == null ? null : SessionMode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -220,9 +232,13 @@ public class ServiceContractAttribute extends Attribute  {
 
     public java.lang.String getConfigurationName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConfigurationName = null;
         try {
-            return (java.lang.String)classInstance.Get("ConfigurationName");
+            retObjectConfigurationName = classInstance.Get("ConfigurationName");
+            return (java.lang.String)retObjectConfigurationName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectConfigurationName != null ? retObjectConfigurationName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -230,7 +246,7 @@ public class ServiceContractAttribute extends Attribute  {
 
     public void setConfigurationName(java.lang.String ConfigurationName) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ConfigurationName", ConfigurationName);
         } catch (JCNativeException jcne) {
@@ -240,9 +256,13 @@ public class ServiceContractAttribute extends Attribute  {
 
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectName = null;
         try {
-            return (java.lang.String)classInstance.Get("Name");
+            retObjectName = classInstance.Get("Name");
+            return (java.lang.String)retObjectName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectName != null ? retObjectName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -250,7 +270,7 @@ public class ServiceContractAttribute extends Attribute  {
 
     public void setName(java.lang.String Name) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Name", Name);
         } catch (JCNativeException jcne) {
@@ -260,9 +280,13 @@ public class ServiceContractAttribute extends Attribute  {
 
     public java.lang.String getNamespace() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNamespace = null;
         try {
-            return (java.lang.String)classInstance.Get("Namespace");
+            retObjectNamespace = classInstance.Get("Namespace");
+            return (java.lang.String)retObjectNamespace;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectNamespace != null ? retObjectNamespace.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -270,7 +294,7 @@ public class ServiceContractAttribute extends Attribute  {
 
     public void setNamespace(java.lang.String Namespace) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.security.SecurityException, system.MemberAccessException, system.NullReferenceException, system.UriFormatException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.configuration.ConfigurationErrorsException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Namespace", Namespace);
         } catch (JCNativeException jcne) {
@@ -280,10 +304,14 @@ public class ServiceContractAttribute extends Attribute  {
 
     public NetType getCallbackContract() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCallbackContract = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CallbackContract");
+            retObjectCallbackContract = classInstance.Get("CallbackContract");
+            JCObject val = (JCObject)retObjectCallbackContract;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCallbackContract != null ? retObjectCallbackContract.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -291,7 +319,7 @@ public class ServiceContractAttribute extends Attribute  {
 
     public void setCallbackContract(NetType CallbackContract) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CallbackContract", CallbackContract == null ? null : CallbackContract.getJCOInstance());
         } catch (JCNativeException jcne) {

@@ -163,7 +163,7 @@ public class ToolZone extends WebZone implements system.web.ui.IPostBackEventHan
      */
     @Deprecated 
     public void RaisePostBackEvent(java.lang.String eventArgument) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIPostBackEventHandler to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIPostBackEventHandler to obtain the full interface.");
     }
 
 
@@ -172,9 +172,13 @@ public class ToolZone extends WebZone implements system.web.ui.IPostBackEventHan
     
     public java.lang.String getInstructionText() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInstructionText = null;
         try {
-            return (java.lang.String)classInstance.Get("InstructionText");
+            retObjectInstructionText = classInstance.Get("InstructionText");
+            return (java.lang.String)retObjectInstructionText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectInstructionText != null ? retObjectInstructionText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,7 +186,7 @@ public class ToolZone extends WebZone implements system.web.ui.IPostBackEventHan
 
     public void setInstructionText(java.lang.String InstructionText) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("InstructionText", InstructionText);
         } catch (JCNativeException jcne) {
@@ -192,10 +196,14 @@ public class ToolZone extends WebZone implements system.web.ui.IPostBackEventHan
 
     public Style getEditUIStyle() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEditUIStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("EditUIStyle");
+            retObjectEditUIStyle = classInstance.Get("EditUIStyle");
+            JCObject val = (JCObject)retObjectEditUIStyle;
             return new Style(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEditUIStyle != null ? retObjectEditUIStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,10 +211,14 @@ public class ToolZone extends WebZone implements system.web.ui.IPostBackEventHan
 
     public Style getHeaderVerbStyle() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHeaderVerbStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("HeaderVerbStyle");
+            retObjectHeaderVerbStyle = classInstance.Get("HeaderVerbStyle");
+            JCObject val = (JCObject)retObjectHeaderVerbStyle;
             return new Style(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHeaderVerbStyle != null ? retObjectHeaderVerbStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -214,10 +226,14 @@ public class ToolZone extends WebZone implements system.web.ui.IPostBackEventHan
 
     public Style getInstructionTextStyle() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInstructionTextStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("InstructionTextStyle");
+            retObjectInstructionTextStyle = classInstance.Get("InstructionTextStyle");
+            JCObject val = (JCObject)retObjectInstructionTextStyle;
             return new Style(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInstructionTextStyle != null ? retObjectInstructionTextStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -225,10 +241,14 @@ public class ToolZone extends WebZone implements system.web.ui.IPostBackEventHan
 
     public Style getLabelStyle() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLabelStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("LabelStyle");
+            retObjectLabelStyle = classInstance.Get("LabelStyle");
+            JCObject val = (JCObject)retObjectLabelStyle;
             return new Style(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLabelStyle != null ? retObjectLabelStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -236,10 +256,14 @@ public class ToolZone extends WebZone implements system.web.ui.IPostBackEventHan
 
     public WebPartDisplayModeCollection getAssociatedDisplayModes() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAssociatedDisplayModes = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AssociatedDisplayModes");
+            retObjectAssociatedDisplayModes = classInstance.Get("AssociatedDisplayModes");
+            JCObject val = (JCObject)retObjectAssociatedDisplayModes;
             return new WebPartDisplayModeCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAssociatedDisplayModes != null ? retObjectAssociatedDisplayModes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -247,10 +271,14 @@ public class ToolZone extends WebZone implements system.web.ui.IPostBackEventHan
 
     public WebPartVerb getHeaderCloseVerb() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHeaderCloseVerb = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("HeaderCloseVerb");
+            retObjectHeaderCloseVerb = classInstance.Get("HeaderCloseVerb");
+            JCObject val = (JCObject)retObjectHeaderCloseVerb;
             return new WebPartVerb(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHeaderCloseVerb != null ? retObjectHeaderCloseVerb.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

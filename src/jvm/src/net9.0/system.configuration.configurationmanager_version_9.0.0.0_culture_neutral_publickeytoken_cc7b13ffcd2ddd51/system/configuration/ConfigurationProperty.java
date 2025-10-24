@@ -212,9 +212,13 @@ public class ConfigurationProperty extends NetObject  {
     
     public boolean getIsAssemblyStringTransformationRequired() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsAssemblyStringTransformationRequired = null;
         try {
-            return (boolean)classInstance.Get("IsAssemblyStringTransformationRequired");
+            retObjectIsAssemblyStringTransformationRequired = classInstance.Get("IsAssemblyStringTransformationRequired");
+            return (boolean)retObjectIsAssemblyStringTransformationRequired;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsAssemblyStringTransformationRequired != null ? retObjectIsAssemblyStringTransformationRequired.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -222,9 +226,13 @@ public class ConfigurationProperty extends NetObject  {
 
     public boolean getIsDefaultCollection() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsDefaultCollection = null;
         try {
-            return (boolean)classInstance.Get("IsDefaultCollection");
+            retObjectIsDefaultCollection = classInstance.Get("IsDefaultCollection");
+            return (boolean)retObjectIsDefaultCollection;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsDefaultCollection != null ? retObjectIsDefaultCollection.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -232,9 +240,13 @@ public class ConfigurationProperty extends NetObject  {
 
     public boolean getIsKey() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsKey = null;
         try {
-            return (boolean)classInstance.Get("IsKey");
+            retObjectIsKey = classInstance.Get("IsKey");
+            return (boolean)retObjectIsKey;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsKey != null ? retObjectIsKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -242,9 +254,13 @@ public class ConfigurationProperty extends NetObject  {
 
     public boolean getIsRequired() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsRequired = null;
         try {
-            return (boolean)classInstance.Get("IsRequired");
+            retObjectIsRequired = classInstance.Get("IsRequired");
+            return (boolean)retObjectIsRequired;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsRequired != null ? retObjectIsRequired.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -252,9 +268,13 @@ public class ConfigurationProperty extends NetObject  {
 
     public boolean getIsTypeStringTransformationRequired() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsTypeStringTransformationRequired = null;
         try {
-            return (boolean)classInstance.Get("IsTypeStringTransformationRequired");
+            retObjectIsTypeStringTransformationRequired = classInstance.Get("IsTypeStringTransformationRequired");
+            return (boolean)retObjectIsTypeStringTransformationRequired;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsTypeStringTransformationRequired != null ? retObjectIsTypeStringTransformationRequired.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -262,9 +282,13 @@ public class ConfigurationProperty extends NetObject  {
 
     public boolean getIsVersionCheckRequired() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsVersionCheckRequired = null;
         try {
-            return (boolean)classInstance.Get("IsVersionCheckRequired");
+            retObjectIsVersionCheckRequired = classInstance.Get("IsVersionCheckRequired");
+            return (boolean)retObjectIsVersionCheckRequired;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsVersionCheckRequired != null ? retObjectIsVersionCheckRequired.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -272,10 +296,14 @@ public class ConfigurationProperty extends NetObject  {
 
     public TypeConverter getConverter() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationErrorsException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConverter = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Converter");
+            retObjectConverter = classInstance.Get("Converter");
+            JCObject val = (JCObject)retObjectConverter;
             return new TypeConverter(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConverter != null ? retObjectConverter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -283,10 +311,14 @@ public class ConfigurationProperty extends NetObject  {
 
     public ConfigurationValidatorBase getValidator() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValidator = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Validator");
+            retObjectValidator = classInstance.Get("Validator");
+            JCObject val = (JCObject)retObjectValidator;
             return new ConfigurationValidatorBase(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectValidator != null ? retObjectValidator.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -294,7 +326,7 @@ public class ConfigurationProperty extends NetObject  {
 
     public void setValidator(ConfigurationValidatorBase Validator) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Validator", Validator == null ? null : Validator.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -304,10 +336,14 @@ public class ConfigurationProperty extends NetObject  {
 
     public NetObject getDefaultValue() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDefaultValue = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DefaultValue");
+            retObjectDefaultValue = classInstance.Get("DefaultValue");
+            JCObject val = (JCObject)retObjectDefaultValue;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefaultValue != null ? retObjectDefaultValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -315,7 +351,7 @@ public class ConfigurationProperty extends NetObject  {
 
     public void setDefaultValue(NetObject DefaultValue) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DefaultValue", DefaultValue == null ? null : DefaultValue.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -325,9 +361,13 @@ public class ConfigurationProperty extends NetObject  {
 
     public java.lang.String getDescription() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDescription = null;
         try {
-            return (java.lang.String)classInstance.Get("Description");
+            retObjectDescription = classInstance.Get("Description");
+            return (java.lang.String)retObjectDescription;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDescription != null ? retObjectDescription.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -335,7 +375,7 @@ public class ConfigurationProperty extends NetObject  {
 
     public void setDescription(java.lang.String Description) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Description", Description);
         } catch (JCNativeException jcne) {
@@ -345,9 +385,13 @@ public class ConfigurationProperty extends NetObject  {
 
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectName = null;
         try {
-            return (java.lang.String)classInstance.Get("Name");
+            retObjectName = classInstance.Get("Name");
+            return (java.lang.String)retObjectName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectName != null ? retObjectName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -355,7 +399,7 @@ public class ConfigurationProperty extends NetObject  {
 
     public void setName(java.lang.String Name) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Name", Name);
         } catch (JCNativeException jcne) {
@@ -365,10 +409,14 @@ public class ConfigurationProperty extends NetObject  {
 
     public NetType getType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Type");
+            retObjectType = classInstance.Get("Type");
+            JCObject val = (JCObject)retObjectType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectType != null ? retObjectType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -376,7 +424,7 @@ public class ConfigurationProperty extends NetObject  {
 
     public void setType(NetType Type) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Type", Type == null ? null : Type.getJCOInstance());
         } catch (JCNativeException jcne) {

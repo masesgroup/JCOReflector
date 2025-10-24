@@ -150,16 +150,20 @@ public class ISymbolScopeImplementation extends NetObject implements ISymbolScop
     
     public ISymbolNamespace[] GetNamespaces() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetNamespaces = null;
         try {
             ArrayList<ISymbolNamespace> resultingArrayList = new ArrayList<ISymbolNamespace>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetNamespaces");
+            retObjectGetNamespaces = classInstance.Invoke("GetNamespaces");
+            JCObject resultingObjects = (JCObject)retObjectGetNamespaces;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ISymbolNamespaceImplementation(resultingObject));
             }
             ISymbolNamespace[] resultingArray = new ISymbolNamespace[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetNamespaces != null ? retObjectGetNamespaces.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -167,16 +171,20 @@ public class ISymbolScopeImplementation extends NetObject implements ISymbolScop
 
     public ISymbolScope[] GetChildren() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetChildren = null;
         try {
             ArrayList<ISymbolScope> resultingArrayList = new ArrayList<ISymbolScope>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetChildren");
+            retObjectGetChildren = classInstance.Invoke("GetChildren");
+            JCObject resultingObjects = (JCObject)retObjectGetChildren;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ISymbolScopeImplementation(resultingObject));
             }
             ISymbolScope[] resultingArray = new ISymbolScope[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetChildren != null ? retObjectGetChildren.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -184,16 +192,20 @@ public class ISymbolScopeImplementation extends NetObject implements ISymbolScop
 
     public ISymbolVariable[] GetLocals() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetLocals = null;
         try {
             ArrayList<ISymbolVariable> resultingArrayList = new ArrayList<ISymbolVariable>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetLocals");
+            retObjectGetLocals = classInstance.Invoke("GetLocals");
+            JCObject resultingObjects = (JCObject)retObjectGetLocals;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ISymbolVariableImplementation(resultingObject));
             }
             ISymbolVariable[] resultingArray = new ISymbolVariable[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetLocals != null ? retObjectGetLocals.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -205,9 +217,20 @@ public class ISymbolScopeImplementation extends NetObject implements ISymbolScop
     
     public int getEndOffset() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEndOffset = null;
         try {
-            return (int)classInstance.Get("EndOffset");
+            retObjectEndOffset = classInstance.Get("EndOffset");
+            return (int)retObjectEndOffset;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectEndOffset_ToString = retObjectEndOffset == null ? "null" : retObjectEndOffset.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectEndOffsetNumber = (java.lang.Number)retObjectEndOffset;
+                return retObjectEndOffsetNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectEndOffset != null ? retObjectEndOffset.getClass() : "null", retObjectEndOffset_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -215,9 +238,20 @@ public class ISymbolScopeImplementation extends NetObject implements ISymbolScop
 
     public int getStartOffset() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStartOffset = null;
         try {
-            return (int)classInstance.Get("StartOffset");
+            retObjectStartOffset = classInstance.Get("StartOffset");
+            return (int)retObjectStartOffset;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectStartOffset_ToString = retObjectStartOffset == null ? "null" : retObjectStartOffset.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectStartOffsetNumber = (java.lang.Number)retObjectStartOffset;
+                return retObjectStartOffsetNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectStartOffset != null ? retObjectStartOffset.getClass() : "null", retObjectStartOffset_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -225,10 +259,14 @@ public class ISymbolScopeImplementation extends NetObject implements ISymbolScop
 
     public ISymbolMethod getMethod() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMethod = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Method");
+            retObjectMethod = classInstance.Get("Method");
+            JCObject val = (JCObject)retObjectMethod;
             return new ISymbolMethodImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMethod != null ? retObjectMethod.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -236,10 +274,14 @@ public class ISymbolScopeImplementation extends NetObject implements ISymbolScop
 
     public ISymbolScope getParent() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectParent = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Parent");
+            retObjectParent = classInstance.Get("Parent");
+            JCObject val = (JCObject)retObjectParent;
             return new ISymbolScopeImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParent != null ? retObjectParent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

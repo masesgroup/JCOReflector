@@ -171,10 +171,14 @@ public class NetSectionGroup extends ConfigurationSectionGroup  {
     
     public static NetSectionGroup GetSectionGroup(Configuration config) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.configuration.ConfigurationErrorsException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.TypeLoadException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetSectionGroup = null;
         try {
-            JCObject objGetSectionGroup = (JCObject)classType.Invoke("GetSectionGroup", config == null ? null : config.getJCOInstance());
+            retObjectGetSectionGroup = classType.Invoke("GetSectionGroup", config == null ? null : config.getJCOInstance());
+            JCObject objGetSectionGroup = (JCObject)retObjectGetSectionGroup;
             return new NetSectionGroup(objGetSectionGroup);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSectionGroup != null ? retObjectGetSectionGroup.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,10 +190,14 @@ public class NetSectionGroup extends ConfigurationSectionGroup  {
     
     public AuthenticationModulesSection getAuthenticationModules() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAuthenticationModules = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AuthenticationModules");
+            retObjectAuthenticationModules = classInstance.Get("AuthenticationModules");
+            JCObject val = (JCObject)retObjectAuthenticationModules;
             return new AuthenticationModulesSection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAuthenticationModules != null ? retObjectAuthenticationModules.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,10 +205,14 @@ public class NetSectionGroup extends ConfigurationSectionGroup  {
 
     public ConnectionManagementSection getConnectionManagement() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConnectionManagement = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ConnectionManagement");
+            retObjectConnectionManagement = classInstance.Get("ConnectionManagement");
+            JCObject val = (JCObject)retObjectConnectionManagement;
             return new ConnectionManagementSection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConnectionManagement != null ? retObjectConnectionManagement.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -208,10 +220,14 @@ public class NetSectionGroup extends ConfigurationSectionGroup  {
 
     public DefaultProxySection getDefaultProxy() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDefaultProxy = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DefaultProxy");
+            retObjectDefaultProxy = classInstance.Get("DefaultProxy");
+            JCObject val = (JCObject)retObjectDefaultProxy;
             return new DefaultProxySection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefaultProxy != null ? retObjectDefaultProxy.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -219,10 +235,14 @@ public class NetSectionGroup extends ConfigurationSectionGroup  {
 
     public MailSettingsSectionGroup getMailSettings() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.configuration.ConfigurationErrorsException, system.TypeLoadException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMailSettings = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MailSettings");
+            retObjectMailSettings = classInstance.Get("MailSettings");
+            JCObject val = (JCObject)retObjectMailSettings;
             return new MailSettingsSectionGroup(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMailSettings != null ? retObjectMailSettings.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -230,10 +250,14 @@ public class NetSectionGroup extends ConfigurationSectionGroup  {
 
     public RequestCachingSection getRequestCaching() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRequestCaching = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RequestCaching");
+            retObjectRequestCaching = classInstance.Get("RequestCaching");
+            JCObject val = (JCObject)retObjectRequestCaching;
             return new RequestCachingSection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRequestCaching != null ? retObjectRequestCaching.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -241,10 +265,14 @@ public class NetSectionGroup extends ConfigurationSectionGroup  {
 
     public SettingsSection getSettings() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSettings = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Settings");
+            retObjectSettings = classInstance.Get("Settings");
+            JCObject val = (JCObject)retObjectSettings;
             return new SettingsSection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSettings != null ? retObjectSettings.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -252,10 +280,14 @@ public class NetSectionGroup extends ConfigurationSectionGroup  {
 
     public WebRequestModulesSection getWebRequestModules() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWebRequestModules = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("WebRequestModules");
+            retObjectWebRequestModules = classInstance.Get("WebRequestModules");
+            JCObject val = (JCObject)retObjectWebRequestModules;
             return new WebRequestModulesSection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWebRequestModules != null ? retObjectWebRequestModules.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

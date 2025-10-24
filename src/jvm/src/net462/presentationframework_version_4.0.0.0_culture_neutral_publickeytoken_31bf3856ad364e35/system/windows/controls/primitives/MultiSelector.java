@@ -156,7 +156,7 @@ public class MultiSelector extends Selector  {
     
     public void SelectAll() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.FormatException, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SelectAll");
         } catch (JCNativeException jcne) {
@@ -166,7 +166,7 @@ public class MultiSelector extends Selector  {
 
     public void UnselectAll() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("UnselectAll");
         } catch (JCNativeException jcne) {
@@ -180,10 +180,14 @@ public class MultiSelector extends Selector  {
     
     public IList getSelectedItems() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectedItems = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SelectedItems");
+            retObjectSelectedItems = classInstance.Get("SelectedItems");
+            JCObject val = (JCObject)retObjectSelectedItems;
             return new IListImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelectedItems != null ? retObjectSelectedItems.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

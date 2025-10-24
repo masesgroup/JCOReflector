@@ -168,9 +168,20 @@ public class Comparer extends NetObject  {
     
     public int Compare(NetObject a, NetObject b) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCompare = null;
         try {
-            return (int)classInstance.Invoke("Compare", a == null ? null : a.getJCOInstance(), b == null ? null : b.getJCOInstance());
+            retObjectCompare = classInstance.Invoke("Compare", a == null ? null : a.getJCOInstance(), b == null ? null : b.getJCOInstance());
+            return (int)retObjectCompare;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCompare_ToString = retObjectCompare == null ? "null" : retObjectCompare.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectCompareNumber = (java.lang.Number)retObjectCompare;
+                return retObjectCompareNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCompare != null ? retObjectCompare.getClass() : "null", retObjectCompare_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,7 +189,7 @@ public class Comparer extends NetObject  {
 
     public void GetObjectData(SerializationInfo info, StreamingContext context) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.runtime.serialization.SerializationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetObjectData", info == null ? null : info.getJCOInstance(), context == null ? null : context.getJCOInstance());
         } catch (JCNativeException jcne) {

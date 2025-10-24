@@ -157,9 +157,13 @@ public class ServiceDescriptionFormatExtension extends NetObject  {
     
     public boolean getHandled() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHandled = null;
         try {
-            return (boolean)classInstance.Get("Handled");
+            retObjectHandled = classInstance.Get("Handled");
+            return (boolean)retObjectHandled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectHandled != null ? retObjectHandled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -167,7 +171,7 @@ public class ServiceDescriptionFormatExtension extends NetObject  {
 
     public void setHandled(boolean Handled) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Handled", Handled);
         } catch (JCNativeException jcne) {
@@ -177,9 +181,13 @@ public class ServiceDescriptionFormatExtension extends NetObject  {
 
     public boolean getRequired() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRequired = null;
         try {
-            return (boolean)classInstance.Get("Required");
+            retObjectRequired = classInstance.Get("Required");
+            return (boolean)retObjectRequired;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectRequired != null ? retObjectRequired.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,7 +195,7 @@ public class ServiceDescriptionFormatExtension extends NetObject  {
 
     public void setRequired(boolean Required) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Required", Required);
         } catch (JCNativeException jcne) {
@@ -197,10 +205,14 @@ public class ServiceDescriptionFormatExtension extends NetObject  {
 
     public NetObject getParent() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectParent = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Parent");
+            retObjectParent = classInstance.Get("Parent");
+            JCObject val = (JCObject)retObjectParent;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParent != null ? retObjectParent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

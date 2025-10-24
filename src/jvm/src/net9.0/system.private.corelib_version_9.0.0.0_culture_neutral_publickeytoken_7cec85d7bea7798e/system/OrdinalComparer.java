@@ -156,9 +156,13 @@ public class OrdinalComparer extends StringComparer  {
     
     public boolean Equals(java.lang.String x, java.lang.String y) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEquals = null;
         try {
-            return (boolean)classInstance.Invoke("Equals", x, y);
+            retObjectEquals = classInstance.Invoke("Equals", x, y);
+            return (boolean)retObjectEquals;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectEquals != null ? retObjectEquals.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -166,9 +170,20 @@ public class OrdinalComparer extends StringComparer  {
 
     public int Compare(java.lang.String x, java.lang.String y) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCompare = null;
         try {
-            return (int)classInstance.Invoke("Compare", x, y);
+            retObjectCompare = classInstance.Invoke("Compare", x, y);
+            return (int)retObjectCompare;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCompare_ToString = retObjectCompare == null ? "null" : retObjectCompare.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectCompareNumber = (java.lang.Number)retObjectCompare;
+                return retObjectCompareNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCompare != null ? retObjectCompare.getClass() : "null", retObjectCompare_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,9 +191,20 @@ public class OrdinalComparer extends StringComparer  {
 
     public int GetHashCode(java.lang.String obj) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetHashCode = null;
         try {
-            return (int)classInstance.Invoke("GetHashCode", obj);
+            retObjectGetHashCode = classInstance.Invoke("GetHashCode", obj);
+            return (int)retObjectGetHashCode;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetHashCode_ToString = retObjectGetHashCode == null ? "null" : retObjectGetHashCode.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetHashCodeNumber = (java.lang.Number)retObjectGetHashCode;
+                return retObjectGetHashCodeNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetHashCode != null ? retObjectGetHashCode.getClass() : "null", retObjectGetHashCode_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -171,10 +171,14 @@ public class PackageRelationshipSelector extends NetObject  {
     
     public PackageRelationshipSelectorType getSelectorType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectorType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SelectorType");
+            retObjectSelectorType = classInstance.Get("SelectorType");
+            JCObject val = (JCObject)retObjectSelectorType;
             return new PackageRelationshipSelectorType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelectorType != null ? retObjectSelectorType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,9 +186,13 @@ public class PackageRelationshipSelector extends NetObject  {
 
     public java.lang.String getSelectionCriteria() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectionCriteria = null;
         try {
-            return (java.lang.String)classInstance.Get("SelectionCriteria");
+            retObjectSelectionCriteria = classInstance.Get("SelectionCriteria");
+            return (java.lang.String)retObjectSelectionCriteria;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSelectionCriteria != null ? retObjectSelectionCriteria.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,10 +200,14 @@ public class PackageRelationshipSelector extends NetObject  {
 
     public Uri getSourceUri() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSourceUri = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SourceUri");
+            retObjectSourceUri = classInstance.Get("SourceUri");
+            JCObject val = (JCObject)retObjectSourceUri;
             return new Uri(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSourceUri != null ? retObjectSourceUri.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

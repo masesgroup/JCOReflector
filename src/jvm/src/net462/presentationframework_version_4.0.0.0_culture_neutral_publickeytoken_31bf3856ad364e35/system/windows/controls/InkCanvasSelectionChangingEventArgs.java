@@ -157,10 +157,14 @@ public class InkCanvasSelectionChangingEventArgs extends CancelEventArgs  {
     
     public StrokeCollection GetSelectedStrokes() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSelectedStrokes = null;
         try {
-            JCObject objGetSelectedStrokes = (JCObject)classInstance.Invoke("GetSelectedStrokes");
+            retObjectGetSelectedStrokes = classInstance.Invoke("GetSelectedStrokes");
+            JCObject objGetSelectedStrokes = (JCObject)retObjectGetSelectedStrokes;
             return new StrokeCollection(objGetSelectedStrokes);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSelectedStrokes != null ? retObjectGetSelectedStrokes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -168,7 +172,7 @@ public class InkCanvasSelectionChangingEventArgs extends CancelEventArgs  {
 
     public void SetSelectedStrokes(StrokeCollection selectedStrokes) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetSelectedStrokes", selectedStrokes == null ? null : selectedStrokes.getJCOInstance());
         } catch (JCNativeException jcne) {

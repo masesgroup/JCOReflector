@@ -160,10 +160,14 @@ public class ComplexModel extends NetObject  {
     
     public ModelMetadata getModelMetadata() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectModelMetadata = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ModelMetadata");
+            retObjectModelMetadata = classInstance.Get("ModelMetadata");
+            JCObject val = (JCObject)retObjectModelMetadata;
             return new ModelMetadata(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectModelMetadata != null ? retObjectModelMetadata.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,7 +175,7 @@ public class ComplexModel extends NetObject  {
 
     public void setModelMetadata(ModelMetadata ModelMetadata) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ModelMetadata", ModelMetadata == null ? null : ModelMetadata.getJCOInstance());
         } catch (JCNativeException jcne) {

@@ -237,10 +237,12 @@ public class Rfc2898DeriveBytes extends DeriveBytes  {
     
     public byte[] CryptDeriveKey(java.lang.String algname, java.lang.String alghashname, int keySize, byte[] rgbIV) throws Throwable, system.security.cryptography.CryptographicException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.security.SecurityException, system.ApplicationException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCryptDeriveKey = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("CryptDeriveKey", algname, alghashname, keySize, rgbIV);
+            retObjectCryptDeriveKey = classInstance.Invoke("CryptDeriveKey", algname, alghashname, keySize, rgbIV);
+            JCObject resultingObjects = (JCObject)retObjectCryptDeriveKey;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -249,6 +251,8 @@ public class Rfc2898DeriveBytes extends DeriveBytes  {
 				resultingArray[indexCryptDeriveKey] = (byte)resultingArrayList.get(indexCryptDeriveKey);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectCryptDeriveKey != null ? retObjectCryptDeriveKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -256,10 +260,12 @@ public class Rfc2898DeriveBytes extends DeriveBytes  {
 
     public byte[] CryptDeriveKey(java.lang.String dupParam0, java.lang.String dupParam1, int dupParam2, JCORefOut dupParam3) throws Throwable, system.security.cryptography.CryptographicException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.security.SecurityException, system.ApplicationException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCryptDeriveKey = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("CryptDeriveKey", dupParam0, dupParam1, dupParam2, dupParam3.getJCRefOut());
+            retObjectCryptDeriveKey = classInstance.Invoke("CryptDeriveKey", dupParam0, dupParam1, dupParam2, dupParam3.getJCRefOut());
+            JCObject resultingObjects = (JCObject)retObjectCryptDeriveKey;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -268,6 +274,8 @@ public class Rfc2898DeriveBytes extends DeriveBytes  {
 				resultingArray[indexCryptDeriveKey] = (byte)resultingArrayList.get(indexCryptDeriveKey);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectCryptDeriveKey != null ? retObjectCryptDeriveKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -275,10 +283,12 @@ public class Rfc2898DeriveBytes extends DeriveBytes  {
 
     public byte[] GetBytes(int cb) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetBytes = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetBytes", cb);
+            retObjectGetBytes = classInstance.Invoke("GetBytes", cb);
+            JCObject resultingObjects = (JCObject)retObjectGetBytes;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -287,6 +297,8 @@ public class Rfc2898DeriveBytes extends DeriveBytes  {
 				resultingArray[indexGetBytes] = (byte)resultingArrayList.get(indexGetBytes);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectGetBytes != null ? retObjectGetBytes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -294,7 +306,7 @@ public class Rfc2898DeriveBytes extends DeriveBytes  {
 
     public void Reset() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Reset");
         } catch (JCNativeException jcne) {
@@ -308,10 +320,12 @@ public class Rfc2898DeriveBytes extends DeriveBytes  {
     
     public byte[] getSalt() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSalt = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("Salt");
+            retObjectSalt = classInstance.Get("Salt");
+            JCObject resultingObjects = (JCObject)retObjectSalt;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -320,6 +334,8 @@ public class Rfc2898DeriveBytes extends DeriveBytes  {
 				resultingArray[indexSalt] = (byte)resultingArrayList.get(indexSalt);
 			}
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into JCObject", retObjectSalt != null ? retObjectSalt.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -327,7 +343,7 @@ public class Rfc2898DeriveBytes extends DeriveBytes  {
 
     public void setSalt(byte[] Salt) throws Throwable, system.ArgumentNullException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Salt", Salt);
         } catch (JCNativeException jcne) {
@@ -337,9 +353,20 @@ public class Rfc2898DeriveBytes extends DeriveBytes  {
 
     public int getIterationCount() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIterationCount = null;
         try {
-            return (int)classInstance.Get("IterationCount");
+            retObjectIterationCount = classInstance.Get("IterationCount");
+            return (int)retObjectIterationCount;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectIterationCount_ToString = retObjectIterationCount == null ? "null" : retObjectIterationCount.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectIterationCountNumber = (java.lang.Number)retObjectIterationCount;
+                return retObjectIterationCountNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectIterationCount != null ? retObjectIterationCount.getClass() : "null", retObjectIterationCount_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -347,7 +374,7 @@ public class Rfc2898DeriveBytes extends DeriveBytes  {
 
     public void setIterationCount(int IterationCount) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IterationCount", IterationCount);
         } catch (JCNativeException jcne) {

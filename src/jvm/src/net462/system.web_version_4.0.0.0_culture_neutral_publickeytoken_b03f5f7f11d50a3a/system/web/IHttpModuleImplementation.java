@@ -143,7 +143,7 @@ public class IHttpModuleImplementation extends NetObject implements IHttpModule 
     
     public void Dispose() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
@@ -153,7 +153,7 @@ public class IHttpModuleImplementation extends NetObject implements IHttpModule 
 
     public void Init(HttpApplication context) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Init", context == null ? null : context.getJCOInstance());
         } catch (JCNativeException jcne) {

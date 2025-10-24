@@ -171,9 +171,13 @@ public class ParentControlDesigner extends ControlDesigner  {
     
     public boolean CanParent(Control control) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanParent = null;
         try {
-            return (boolean)classInstance.Invoke("CanParent", control == null ? null : control.getJCOInstance());
+            retObjectCanParent = classInstance.Invoke("CanParent", control == null ? null : control.getJCOInstance());
+            return (boolean)retObjectCanParent;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCanParent != null ? retObjectCanParent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,9 +185,13 @@ public class ParentControlDesigner extends ControlDesigner  {
 
     public boolean CanParent(ControlDesigner controlDesigner) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanParent = null;
         try {
-            return (boolean)classInstance.Invoke("CanParent", controlDesigner == null ? null : controlDesigner.getJCOInstance());
+            retObjectCanParent = classInstance.Invoke("CanParent", controlDesigner == null ? null : controlDesigner.getJCOInstance());
+            return (boolean)retObjectCanParent;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCanParent != null ? retObjectCanParent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,10 +199,14 @@ public class ParentControlDesigner extends ControlDesigner  {
 
     public GlyphCollection GetGlyphs(GlyphSelectionType selectionType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.NotSupportedException, system.security.SecurityException, system.NullReferenceException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.MulticastNotSupportedException, system.configuration.ConfigurationErrorsException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetGlyphs = null;
         try {
-            JCObject objGetGlyphs = (JCObject)classInstance.Invoke("GetGlyphs", selectionType == null ? null : selectionType.getJCOInstance());
+            retObjectGetGlyphs = classInstance.Invoke("GetGlyphs", selectionType == null ? null : selectionType.getJCOInstance());
+            JCObject objGetGlyphs = (JCObject)retObjectGetGlyphs;
             return new GlyphCollection(objGetGlyphs);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetGlyphs != null ? retObjectGetGlyphs.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,7 +214,7 @@ public class ParentControlDesigner extends ControlDesigner  {
 
     public void Initialize(IComponent component) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.security.SecurityException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.NullReferenceException, system.resources.MissingManifestResourceException, system.RankException, system.MulticastNotSupportedException, system.NotImplementedException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.threading.ThreadStateException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Initialize", component == null ? null : component.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -212,7 +224,7 @@ public class ParentControlDesigner extends ControlDesigner  {
 
     public void InitializeNewComponent(IDictionary defaultValues) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.RankException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("InitializeNewComponent", defaultValues == null ? null : defaultValues.getJCOInstance());
         } catch (JCNativeException jcne) {

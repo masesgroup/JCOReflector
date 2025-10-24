@@ -160,10 +160,14 @@ public class QuicConnection extends NetObject  {
     
     public ValueTask CloseAsync(long errorCode, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException, system.MissingMemberException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCloseAsync = null;
         try {
-            JCObject objCloseAsync = (JCObject)classInstance.Invoke("CloseAsync", errorCode, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            retObjectCloseAsync = classInstance.Invoke("CloseAsync", errorCode, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objCloseAsync = (JCObject)retObjectCloseAsync;
             return new ValueTask(objCloseAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCloseAsync != null ? retObjectCloseAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,10 +175,14 @@ public class QuicConnection extends NetObject  {
 
     public ValueTask DisposeAsync() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDisposeAsync = null;
         try {
-            JCObject objDisposeAsync = (JCObject)classInstance.Invoke("DisposeAsync");
+            retObjectDisposeAsync = classInstance.Invoke("DisposeAsync");
+            JCObject objDisposeAsync = (JCObject)retObjectDisposeAsync;
             return new ValueTask(objDisposeAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDisposeAsync != null ? retObjectDisposeAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,9 +194,13 @@ public class QuicConnection extends NetObject  {
     
     public static boolean getIsSupported() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsSupported = null;
         try {
-            return (boolean)classType.Get("IsSupported");
+            retObjectIsSupported = classType.Get("IsSupported");
+            return (boolean)retObjectIsSupported;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsSupported != null ? retObjectIsSupported.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,10 +208,14 @@ public class QuicConnection extends NetObject  {
 
     public IPEndPoint getLocalEndPoint() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLocalEndPoint = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("LocalEndPoint");
+            retObjectLocalEndPoint = classInstance.Get("LocalEndPoint");
+            JCObject val = (JCObject)retObjectLocalEndPoint;
             return new IPEndPoint(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLocalEndPoint != null ? retObjectLocalEndPoint.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -207,10 +223,14 @@ public class QuicConnection extends NetObject  {
 
     public IPEndPoint getRemoteEndPoint() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRemoteEndPoint = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RemoteEndPoint");
+            retObjectRemoteEndPoint = classInstance.Get("RemoteEndPoint");
+            JCObject val = (JCObject)retObjectRemoteEndPoint;
             return new IPEndPoint(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRemoteEndPoint != null ? retObjectRemoteEndPoint.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -218,10 +238,14 @@ public class QuicConnection extends NetObject  {
 
     public SslApplicationProtocol getNegotiatedApplicationProtocol() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNegotiatedApplicationProtocol = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("NegotiatedApplicationProtocol");
+            retObjectNegotiatedApplicationProtocol = classInstance.Get("NegotiatedApplicationProtocol");
+            JCObject val = (JCObject)retObjectNegotiatedApplicationProtocol;
             return new SslApplicationProtocol(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNegotiatedApplicationProtocol != null ? retObjectNegotiatedApplicationProtocol.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -229,10 +253,14 @@ public class QuicConnection extends NetObject  {
 
     public X509Certificate getRemoteCertificate() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRemoteCertificate = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RemoteCertificate");
+            retObjectRemoteCertificate = classInstance.Get("RemoteCertificate");
+            JCObject val = (JCObject)retObjectRemoteCertificate;
             return new X509Certificate(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRemoteCertificate != null ? retObjectRemoteCertificate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -240,9 +268,13 @@ public class QuicConnection extends NetObject  {
 
     public java.lang.String getTargetHostName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTargetHostName = null;
         try {
-            return (java.lang.String)classInstance.Get("TargetHostName");
+            retObjectTargetHostName = classInstance.Get("TargetHostName");
+            return (java.lang.String)retObjectTargetHostName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectTargetHostName != null ? retObjectTargetHostName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

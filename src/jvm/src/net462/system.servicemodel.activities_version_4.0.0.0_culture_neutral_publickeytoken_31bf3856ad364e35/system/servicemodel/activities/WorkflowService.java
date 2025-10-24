@@ -166,10 +166,14 @@ public class WorkflowService extends NetObject  {
     
     public Activity GetWorkflowRoot() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetWorkflowRoot = null;
         try {
-            JCObject objGetWorkflowRoot = (JCObject)classInstance.Invoke("GetWorkflowRoot");
+            retObjectGetWorkflowRoot = classInstance.Invoke("GetWorkflowRoot");
+            JCObject objGetWorkflowRoot = (JCObject)retObjectGetWorkflowRoot;
             return new Activity(objGetWorkflowRoot);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetWorkflowRoot != null ? retObjectGetWorkflowRoot.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,10 +181,14 @@ public class WorkflowService extends NetObject  {
 
     public ValidationResults Validate(ValidationSettings settings) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException, system.NotSupportedException, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValidate = null;
         try {
-            JCObject objValidate = (JCObject)classInstance.Invoke("Validate", settings == null ? null : settings.getJCOInstance());
+            retObjectValidate = classInstance.Invoke("Validate", settings == null ? null : settings.getJCOInstance());
+            JCObject objValidate = (JCObject)retObjectValidate;
             return new ValidationResults(objValidate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectValidate != null ? retObjectValidate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,9 +200,13 @@ public class WorkflowService extends NetObject  {
     
     public boolean getAllowBufferedReceive() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAllowBufferedReceive = null;
         try {
-            return (boolean)classInstance.Get("AllowBufferedReceive");
+            retObjectAllowBufferedReceive = classInstance.Get("AllowBufferedReceive");
+            return (boolean)retObjectAllowBufferedReceive;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAllowBufferedReceive != null ? retObjectAllowBufferedReceive.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,7 +214,7 @@ public class WorkflowService extends NetObject  {
 
     public void setAllowBufferedReceive(boolean AllowBufferedReceive) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AllowBufferedReceive", AllowBufferedReceive);
         } catch (JCNativeException jcne) {
@@ -212,10 +224,14 @@ public class WorkflowService extends NetObject  {
 
     public Activity getBody() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBody = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Body");
+            retObjectBody = classInstance.Get("Body");
+            JCObject val = (JCObject)retObjectBody;
             return new Activity(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBody != null ? retObjectBody.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -223,7 +239,7 @@ public class WorkflowService extends NetObject  {
 
     public void setBody(Activity Body) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Body", Body == null ? null : Body.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -233,10 +249,14 @@ public class WorkflowService extends NetObject  {
 
     public WorkflowIdentity getDefinitionIdentity() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDefinitionIdentity = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DefinitionIdentity");
+            retObjectDefinitionIdentity = classInstance.Get("DefinitionIdentity");
+            JCObject val = (JCObject)retObjectDefinitionIdentity;
             return new WorkflowIdentity(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefinitionIdentity != null ? retObjectDefinitionIdentity.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -244,7 +264,7 @@ public class WorkflowService extends NetObject  {
 
     public void setDefinitionIdentity(WorkflowIdentity DefinitionIdentity) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DefinitionIdentity", DefinitionIdentity == null ? null : DefinitionIdentity.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -254,9 +274,13 @@ public class WorkflowService extends NetObject  {
 
     public java.lang.String getConfigurationName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConfigurationName = null;
         try {
-            return (java.lang.String)classInstance.Get("ConfigurationName");
+            retObjectConfigurationName = classInstance.Get("ConfigurationName");
+            return (java.lang.String)retObjectConfigurationName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectConfigurationName != null ? retObjectConfigurationName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -264,7 +288,7 @@ public class WorkflowService extends NetObject  {
 
     public void setConfigurationName(java.lang.String ConfigurationName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ConfigurationName", ConfigurationName);
         } catch (JCNativeException jcne) {
@@ -274,10 +298,14 @@ public class WorkflowService extends NetObject  {
 
     public XName getName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectName = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Name");
+            retObjectName = classInstance.Get("Name");
+            JCObject val = (JCObject)retObjectName;
             return new XName(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectName != null ? retObjectName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -285,7 +313,7 @@ public class WorkflowService extends NetObject  {
 
     public void setName(XName Name) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Name", Name == null ? null : Name.getJCOInstance());
         } catch (JCNativeException jcne) {

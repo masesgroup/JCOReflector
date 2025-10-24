@@ -177,9 +177,13 @@ public class ReplicatorActivity extends CompositeActivity  {
     
     public boolean IsExecuting(int index) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsExecuting = null;
         try {
-            return (boolean)classInstance.Invoke("IsExecuting", index);
+            retObjectIsExecuting = classInstance.Invoke("IsExecuting", index);
+            return (boolean)retObjectIsExecuting;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsExecuting != null ? retObjectIsExecuting.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,9 +195,13 @@ public class ReplicatorActivity extends CompositeActivity  {
     
     public boolean getAllChildrenComplete() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAllChildrenComplete = null;
         try {
-            return (boolean)classInstance.Get("AllChildrenComplete");
+            retObjectAllChildrenComplete = classInstance.Get("AllChildrenComplete");
+            return (boolean)retObjectAllChildrenComplete;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAllChildrenComplete != null ? retObjectAllChildrenComplete.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,9 +209,20 @@ public class ReplicatorActivity extends CompositeActivity  {
 
     public int getCurrentIndex() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCurrentIndex = null;
         try {
-            return (int)classInstance.Get("CurrentIndex");
+            retObjectCurrentIndex = classInstance.Get("CurrentIndex");
+            return (int)retObjectCurrentIndex;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCurrentIndex_ToString = retObjectCurrentIndex == null ? "null" : retObjectCurrentIndex.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectCurrentIndexNumber = (java.lang.Number)retObjectCurrentIndex;
+                return retObjectCurrentIndexNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCurrentIndex != null ? retObjectCurrentIndex.getClass() : "null", retObjectCurrentIndex_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -211,10 +230,14 @@ public class ReplicatorActivity extends CompositeActivity  {
 
     public IList getCurrentChildData() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCurrentChildData = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CurrentChildData");
+            retObjectCurrentChildData = classInstance.Get("CurrentChildData");
+            JCObject val = (JCObject)retObjectCurrentChildData;
             return new IListImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCurrentChildData != null ? retObjectCurrentChildData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -222,10 +245,14 @@ public class ReplicatorActivity extends CompositeActivity  {
 
     public IList getInitialChildData() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInitialChildData = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("InitialChildData");
+            retObjectInitialChildData = classInstance.Get("InitialChildData");
+            JCObject val = (JCObject)retObjectInitialChildData;
             return new IListImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInitialChildData != null ? retObjectInitialChildData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -233,7 +260,7 @@ public class ReplicatorActivity extends CompositeActivity  {
 
     public void setInitialChildData(IList InitialChildData) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException, system.MulticastNotSupportedException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("InitialChildData", InitialChildData == null ? null : InitialChildData.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -243,10 +270,14 @@ public class ReplicatorActivity extends CompositeActivity  {
 
     public ExecutionType getExecutionType() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExecutionType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ExecutionType");
+            retObjectExecutionType = classInstance.Get("ExecutionType");
+            JCObject val = (JCObject)retObjectExecutionType;
             return new ExecutionType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExecutionType != null ? retObjectExecutionType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -254,7 +285,7 @@ public class ReplicatorActivity extends CompositeActivity  {
 
     public void setExecutionType(ExecutionType ExecutionType) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ExecutionType", ExecutionType == null ? null : ExecutionType.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -264,10 +295,14 @@ public class ReplicatorActivity extends CompositeActivity  {
 
     public ActivityCondition getUntilCondition() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUntilCondition = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("UntilCondition");
+            retObjectUntilCondition = classInstance.Get("UntilCondition");
+            JCObject val = (JCObject)retObjectUntilCondition;
             return new ActivityCondition(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUntilCondition != null ? retObjectUntilCondition.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -275,7 +310,7 @@ public class ReplicatorActivity extends CompositeActivity  {
 
     public void setUntilCondition(ActivityCondition UntilCondition) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException, system.MulticastNotSupportedException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UntilCondition", UntilCondition == null ? null : UntilCondition.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -290,7 +325,7 @@ public class ReplicatorActivity extends CompositeActivity  {
 
     public void addCompleted(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Completed", handler);
         } catch (JCNativeException jcne) {
@@ -300,7 +335,7 @@ public class ReplicatorActivity extends CompositeActivity  {
 
     public void removeCompleted(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Completed", handler);
         } catch (JCNativeException jcne) {
@@ -310,7 +345,7 @@ public class ReplicatorActivity extends CompositeActivity  {
 
     public void addInitialized(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Initialized", handler);
         } catch (JCNativeException jcne) {
@@ -320,7 +355,7 @@ public class ReplicatorActivity extends CompositeActivity  {
 
     public void removeInitialized(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Initialized", handler);
         } catch (JCNativeException jcne) {

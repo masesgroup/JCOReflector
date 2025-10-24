@@ -153,9 +153,13 @@ public class ConfigurationValidatorBase extends NetObject  {
     
     public boolean CanValidate(NetType type) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanValidate = null;
         try {
-            return (boolean)classInstance.Invoke("CanValidate", type == null ? null : type.getJCOInstance());
+            retObjectCanValidate = classInstance.Invoke("CanValidate", type == null ? null : type.getJCOInstance());
+            return (boolean)retObjectCanValidate;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCanValidate != null ? retObjectCanValidate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -163,7 +167,7 @@ public class ConfigurationValidatorBase extends NetObject  {
 
     public void Validate(NetObject value) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Validate", value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {

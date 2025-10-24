@@ -183,9 +183,20 @@ public class DataGridViewColumn extends DataGridViewBand  {
     
     public int GetPreferredWidth(DataGridViewAutoSizeColumnMode autoSizeColumnMode, boolean fixedHeight) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPreferredWidth = null;
         try {
-            return (int)classInstance.Invoke("GetPreferredWidth", autoSizeColumnMode == null ? null : autoSizeColumnMode.getJCOInstance(), fixedHeight);
+            retObjectGetPreferredWidth = classInstance.Invoke("GetPreferredWidth", autoSizeColumnMode == null ? null : autoSizeColumnMode.getJCOInstance(), fixedHeight);
+            return (int)retObjectGetPreferredWidth;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetPreferredWidth_ToString = retObjectGetPreferredWidth == null ? "null" : retObjectGetPreferredWidth.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetPreferredWidthNumber = (java.lang.Number)retObjectGetPreferredWidth;
+                return retObjectGetPreferredWidthNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetPreferredWidth != null ? retObjectGetPreferredWidth.getClass() : "null", retObjectGetPreferredWidth_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,10 +204,14 @@ public class DataGridViewColumn extends DataGridViewBand  {
 
     public NetObject Clone() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.componentmodel.InvalidEnumArgumentException, system.NullReferenceException, system.TypeLoadException, system.MulticastNotSupportedException, system.threading.ThreadStateException, system.componentmodel.Win32Exception, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClone = null;
         try {
-            JCObject objClone = (JCObject)classInstance.Invoke("Clone");
+            retObjectClone = classInstance.Invoke("Clone");
+            JCObject objClone = (JCObject)retObjectClone;
             return new NetObject(objClone);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClone != null ? retObjectClone.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -208,9 +223,13 @@ public class DataGridViewColumn extends DataGridViewBand  {
     
     public boolean getIsDataBound() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsDataBound = null;
         try {
-            return (boolean)classInstance.Get("IsDataBound");
+            retObjectIsDataBound = classInstance.Get("IsDataBound");
+            return (boolean)retObjectIsDataBound;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsDataBound != null ? retObjectIsDataBound.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -218,9 +237,20 @@ public class DataGridViewColumn extends DataGridViewBand  {
 
     public int getDisplayIndex() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDisplayIndex = null;
         try {
-            return (int)classInstance.Get("DisplayIndex");
+            retObjectDisplayIndex = classInstance.Get("DisplayIndex");
+            return (int)retObjectDisplayIndex;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDisplayIndex_ToString = retObjectDisplayIndex == null ? "null" : retObjectDisplayIndex.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectDisplayIndexNumber = (java.lang.Number)retObjectDisplayIndex;
+                return retObjectDisplayIndexNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectDisplayIndex != null ? retObjectDisplayIndex.getClass() : "null", retObjectDisplayIndex_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -228,7 +258,7 @@ public class DataGridViewColumn extends DataGridViewBand  {
 
     public void setDisplayIndex(int DisplayIndex) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.componentmodel.InvalidEnumArgumentException, system.ArithmeticException, system.RankException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DisplayIndex", DisplayIndex);
         } catch (JCNativeException jcne) {
@@ -238,9 +268,20 @@ public class DataGridViewColumn extends DataGridViewBand  {
 
     public int getDividerWidth() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDividerWidth = null;
         try {
-            return (int)classInstance.Get("DividerWidth");
+            retObjectDividerWidth = classInstance.Get("DividerWidth");
+            return (int)retObjectDividerWidth;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDividerWidth_ToString = retObjectDividerWidth == null ? "null" : retObjectDividerWidth.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectDividerWidthNumber = (java.lang.Number)retObjectDividerWidth;
+                return retObjectDividerWidthNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectDividerWidth != null ? retObjectDividerWidth.getClass() : "null", retObjectDividerWidth_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -248,7 +289,7 @@ public class DataGridViewColumn extends DataGridViewBand  {
 
     public void setDividerWidth(int DividerWidth) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DividerWidth", DividerWidth);
         } catch (JCNativeException jcne) {
@@ -258,9 +299,20 @@ public class DataGridViewColumn extends DataGridViewBand  {
 
     public int getMinimumWidth() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMinimumWidth = null;
         try {
-            return (int)classInstance.Get("MinimumWidth");
+            retObjectMinimumWidth = classInstance.Get("MinimumWidth");
+            return (int)retObjectMinimumWidth;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMinimumWidth_ToString = retObjectMinimumWidth == null ? "null" : retObjectMinimumWidth.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMinimumWidthNumber = (java.lang.Number)retObjectMinimumWidth;
+                return retObjectMinimumWidthNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMinimumWidth != null ? retObjectMinimumWidth.getClass() : "null", retObjectMinimumWidth_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -268,7 +320,7 @@ public class DataGridViewColumn extends DataGridViewBand  {
 
     public void setMinimumWidth(int MinimumWidth) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.ArithmeticException, system.RankException, system.OutOfMemoryException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MinimumWidth", MinimumWidth);
         } catch (JCNativeException jcne) {
@@ -278,9 +330,20 @@ public class DataGridViewColumn extends DataGridViewBand  {
 
     public int getWidth() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWidth = null;
         try {
-            return (int)classInstance.Get("Width");
+            retObjectWidth = classInstance.Get("Width");
+            return (int)retObjectWidth;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectWidth_ToString = retObjectWidth == null ? "null" : retObjectWidth.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectWidthNumber = (java.lang.Number)retObjectWidth;
+                return retObjectWidthNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectWidth != null ? retObjectWidth.getClass() : "null", retObjectWidth_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -288,7 +351,7 @@ public class DataGridViewColumn extends DataGridViewBand  {
 
     public void setWidth(int Width) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NullReferenceException, system.OutOfMemoryException, system.RankException, system.ArithmeticException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Width", Width);
         } catch (JCNativeException jcne) {
@@ -298,10 +361,14 @@ public class DataGridViewColumn extends DataGridViewBand  {
 
     public Single getFillWeight() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFillWeight = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("FillWeight");
+            retObjectFillWeight = classInstance.Get("FillWeight");
+            JCObject val = (JCObject)retObjectFillWeight;
             return new Single(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFillWeight != null ? retObjectFillWeight.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -309,7 +376,7 @@ public class DataGridViewColumn extends DataGridViewBand  {
 
     public void setFillWeight(Single FillWeight) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.componentmodel.InvalidEnumArgumentException, system.ArithmeticException, system.RankException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FillWeight", FillWeight == null ? null : FillWeight.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -319,10 +386,14 @@ public class DataGridViewColumn extends DataGridViewBand  {
 
     public ISite getSite() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSite = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Site");
+            retObjectSite = classInstance.Get("Site");
+            JCObject val = (JCObject)retObjectSite;
             return new ISiteImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSite != null ? retObjectSite.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -330,7 +401,7 @@ public class DataGridViewColumn extends DataGridViewBand  {
 
     public void setSite(ISite Site) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Site", Site == null ? null : Site.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -340,9 +411,13 @@ public class DataGridViewColumn extends DataGridViewBand  {
 
     public java.lang.String getDataPropertyName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDataPropertyName = null;
         try {
-            return (java.lang.String)classInstance.Get("DataPropertyName");
+            retObjectDataPropertyName = classInstance.Get("DataPropertyName");
+            return (java.lang.String)retObjectDataPropertyName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDataPropertyName != null ? retObjectDataPropertyName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -350,7 +425,7 @@ public class DataGridViewColumn extends DataGridViewBand  {
 
     public void setDataPropertyName(java.lang.String DataPropertyName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NullReferenceException, system.NotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DataPropertyName", DataPropertyName);
         } catch (JCNativeException jcne) {
@@ -360,9 +435,13 @@ public class DataGridViewColumn extends DataGridViewBand  {
 
     public java.lang.String getHeaderText() throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.componentmodel.InvalidEnumArgumentException, system.globalization.CultureNotFoundException, system.RankException, system.NullReferenceException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHeaderText = null;
         try {
-            return (java.lang.String)classInstance.Get("HeaderText");
+            retObjectHeaderText = classInstance.Get("HeaderText");
+            return (java.lang.String)retObjectHeaderText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectHeaderText != null ? retObjectHeaderText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -370,7 +449,7 @@ public class DataGridViewColumn extends DataGridViewBand  {
 
     public void setHeaderText(java.lang.String HeaderText) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.componentmodel.InvalidEnumArgumentException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("HeaderText", HeaderText);
         } catch (JCNativeException jcne) {
@@ -380,9 +459,13 @@ public class DataGridViewColumn extends DataGridViewBand  {
 
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectName = null;
         try {
-            return (java.lang.String)classInstance.Get("Name");
+            retObjectName = classInstance.Get("Name");
+            return (java.lang.String)retObjectName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectName != null ? retObjectName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -390,7 +473,7 @@ public class DataGridViewColumn extends DataGridViewBand  {
 
     public void setName(java.lang.String Name) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.componentmodel.InvalidEnumArgumentException, system.NullReferenceException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Name", Name);
         } catch (JCNativeException jcne) {
@@ -400,9 +483,13 @@ public class DataGridViewColumn extends DataGridViewBand  {
 
     public java.lang.String getToolTipText() throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.componentmodel.InvalidEnumArgumentException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToolTipText = null;
         try {
-            return (java.lang.String)classInstance.Get("ToolTipText");
+            retObjectToolTipText = classInstance.Get("ToolTipText");
+            return (java.lang.String)retObjectToolTipText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectToolTipText != null ? retObjectToolTipText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -410,7 +497,7 @@ public class DataGridViewColumn extends DataGridViewBand  {
 
     public void setToolTipText(java.lang.String ToolTipText) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.globalization.CultureNotFoundException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ToolTipText", ToolTipText);
         } catch (JCNativeException jcne) {
@@ -420,10 +507,14 @@ public class DataGridViewColumn extends DataGridViewBand  {
 
     public NetType getCellType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCellType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CellType");
+            retObjectCellType = classInstance.Get("CellType");
+            JCObject val = (JCObject)retObjectCellType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCellType != null ? retObjectCellType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -431,10 +522,14 @@ public class DataGridViewColumn extends DataGridViewBand  {
 
     public NetType getValueType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValueType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ValueType");
+            retObjectValueType = classInstance.Get("ValueType");
+            JCObject val = (JCObject)retObjectValueType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectValueType != null ? retObjectValueType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -442,7 +537,7 @@ public class DataGridViewColumn extends DataGridViewBand  {
 
     public void setValueType(NetType ValueType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ValueType", ValueType == null ? null : ValueType.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -452,10 +547,14 @@ public class DataGridViewColumn extends DataGridViewBand  {
 
     public DataGridViewAutoSizeColumnMode getAutoSizeMode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAutoSizeMode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AutoSizeMode");
+            retObjectAutoSizeMode = classInstance.Get("AutoSizeMode");
+            JCObject val = (JCObject)retObjectAutoSizeMode;
             return new DataGridViewAutoSizeColumnMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAutoSizeMode != null ? retObjectAutoSizeMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -463,7 +562,7 @@ public class DataGridViewColumn extends DataGridViewBand  {
 
     public void setAutoSizeMode(DataGridViewAutoSizeColumnMode AutoSizeMode) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.RankException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AutoSizeMode", AutoSizeMode == null ? null : AutoSizeMode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -473,10 +572,14 @@ public class DataGridViewColumn extends DataGridViewBand  {
 
     public DataGridViewAutoSizeColumnMode getInheritedAutoSizeMode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInheritedAutoSizeMode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("InheritedAutoSizeMode");
+            retObjectInheritedAutoSizeMode = classInstance.Get("InheritedAutoSizeMode");
+            JCObject val = (JCObject)retObjectInheritedAutoSizeMode;
             return new DataGridViewAutoSizeColumnMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInheritedAutoSizeMode != null ? retObjectInheritedAutoSizeMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -484,10 +587,14 @@ public class DataGridViewColumn extends DataGridViewBand  {
 
     public DataGridViewCell getCellTemplate() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCellTemplate = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CellTemplate");
+            retObjectCellTemplate = classInstance.Get("CellTemplate");
+            JCObject val = (JCObject)retObjectCellTemplate;
             return new DataGridViewCell(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCellTemplate != null ? retObjectCellTemplate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -495,7 +602,7 @@ public class DataGridViewColumn extends DataGridViewBand  {
 
     public void setCellTemplate(DataGridViewCell CellTemplate) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CellTemplate", CellTemplate == null ? null : CellTemplate.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -505,10 +612,14 @@ public class DataGridViewColumn extends DataGridViewBand  {
 
     public DataGridViewColumnHeaderCell getHeaderCell() throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHeaderCell = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("HeaderCell");
+            retObjectHeaderCell = classInstance.Get("HeaderCell");
+            JCObject val = (JCObject)retObjectHeaderCell;
             return new DataGridViewColumnHeaderCell(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHeaderCell != null ? retObjectHeaderCell.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -516,7 +627,7 @@ public class DataGridViewColumn extends DataGridViewBand  {
 
     public void setHeaderCell(DataGridViewColumnHeaderCell HeaderCell) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("HeaderCell", HeaderCell == null ? null : HeaderCell.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -526,10 +637,14 @@ public class DataGridViewColumn extends DataGridViewBand  {
 
     public DataGridViewColumnSortMode getSortMode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSortMode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SortMode");
+            retObjectSortMode = classInstance.Get("SortMode");
+            JCObject val = (JCObject)retObjectSortMode;
             return new DataGridViewColumnSortMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSortMode != null ? retObjectSortMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -537,7 +652,7 @@ public class DataGridViewColumn extends DataGridViewBand  {
 
     public void setSortMode(DataGridViewColumnSortMode SortMode) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SortMode", SortMode == null ? null : SortMode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -552,7 +667,7 @@ public class DataGridViewColumn extends DataGridViewBand  {
 
     public void addDisposed(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Disposed", handler);
         } catch (JCNativeException jcne) {
@@ -562,7 +677,7 @@ public class DataGridViewColumn extends DataGridViewBand  {
 
     public void removeDisposed(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Disposed", handler);
         } catch (JCNativeException jcne) {

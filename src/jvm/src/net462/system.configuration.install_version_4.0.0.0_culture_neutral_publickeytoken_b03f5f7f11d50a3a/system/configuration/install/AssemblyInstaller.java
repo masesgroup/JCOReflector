@@ -185,7 +185,7 @@ public class AssemblyInstaller extends Installer  {
     
     public static void CheckIfInstallable(java.lang.String assemblyName) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.InvalidCastException, system.NullReferenceException, system.MissingMethodException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.io.IOException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("CheckIfInstallable", assemblyName);
         } catch (JCNativeException jcne) {
@@ -195,7 +195,7 @@ public class AssemblyInstaller extends Installer  {
 
     public void Commit(IDictionary savedState) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.io.IOException, system.IndexOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.xml.XmlException, system.xml.schema.XmlSchemaException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.runtime.serialization.SerializationException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Commit", savedState == null ? null : savedState.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -205,7 +205,7 @@ public class AssemblyInstaller extends Installer  {
 
     public void Install(IDictionary savedState) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.io.IOException, system.xml.XmlException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Install", savedState == null ? null : savedState.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -215,7 +215,7 @@ public class AssemblyInstaller extends Installer  {
 
     public void Rollback(IDictionary savedState) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.io.IOException, system.IndexOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.xml.XmlException, system.xml.schema.XmlSchemaException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.runtime.serialization.SerializationException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Rollback", savedState == null ? null : savedState.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -225,7 +225,7 @@ public class AssemblyInstaller extends Installer  {
 
     public void Uninstall(IDictionary savedState) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.io.IOException, system.IndexOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.xml.XmlException, system.xml.schema.XmlSchemaException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.runtime.serialization.SerializationException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Uninstall", savedState == null ? null : savedState.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -239,9 +239,13 @@ public class AssemblyInstaller extends Installer  {
     
     public boolean getUseNewContext() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUseNewContext = null;
         try {
-            return (boolean)classInstance.Get("UseNewContext");
+            retObjectUseNewContext = classInstance.Get("UseNewContext");
+            return (boolean)retObjectUseNewContext;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectUseNewContext != null ? retObjectUseNewContext.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -249,7 +253,7 @@ public class AssemblyInstaller extends Installer  {
 
     public void setUseNewContext(boolean UseNewContext) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UseNewContext", UseNewContext);
         } catch (JCNativeException jcne) {
@@ -259,10 +263,14 @@ public class AssemblyInstaller extends Installer  {
 
     public Assembly getAssembly() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAssembly = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Assembly");
+            retObjectAssembly = classInstance.Get("Assembly");
+            JCObject val = (JCObject)retObjectAssembly;
             return new Assembly(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAssembly != null ? retObjectAssembly.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -270,7 +278,7 @@ public class AssemblyInstaller extends Installer  {
 
     public void setAssembly(Assembly Assembly) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Assembly", Assembly == null ? null : Assembly.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -280,9 +288,13 @@ public class AssemblyInstaller extends Installer  {
 
     public java.lang.String getPath() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPath = null;
         try {
-            return (java.lang.String)classInstance.Get("Path");
+            retObjectPath = classInstance.Get("Path");
+            return (java.lang.String)retObjectPath;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectPath != null ? retObjectPath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -290,7 +302,7 @@ public class AssemblyInstaller extends Installer  {
 
     public void setPath(java.lang.String Path) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException, system.FormatException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.InvalidCastException, system.NullReferenceException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Path", Path);
         } catch (JCNativeException jcne) {
@@ -300,10 +312,12 @@ public class AssemblyInstaller extends Installer  {
 
     public java.lang.String[] getCommandLine() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCommandLine = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("CommandLine");
+            retObjectCommandLine = classInstance.Get("CommandLine");
+            JCObject resultingObjects = (JCObject)retObjectCommandLine;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -312,6 +326,8 @@ public class AssemblyInstaller extends Installer  {
 				resultingArray[indexCommandLine] = (java.lang.String)resultingArrayList.get(indexCommandLine);
 			}
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into JCObject", retObjectCommandLine != null ? retObjectCommandLine.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -319,7 +335,7 @@ public class AssemblyInstaller extends Installer  {
 
     public void setCommandLine(java.lang.String[] CommandLine) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CommandLine", CommandLine);
         } catch (JCNativeException jcne) {

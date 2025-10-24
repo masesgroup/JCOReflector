@@ -195,10 +195,14 @@ public class XPathMessageQuery extends MessageQuery  {
     
     public MessageQueryCollection CreateMessageQueryCollection() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateMessageQueryCollection = null;
         try {
-            JCObject objCreateMessageQueryCollection = (JCObject)classInstance.Invoke("CreateMessageQueryCollection");
+            retObjectCreateMessageQueryCollection = classInstance.Invoke("CreateMessageQueryCollection");
+            JCObject objCreateMessageQueryCollection = (JCObject)retObjectCreateMessageQueryCollection;
             return new MessageQueryCollection(objCreateMessageQueryCollection);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateMessageQueryCollection != null ? retObjectCreateMessageQueryCollection.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -210,9 +214,13 @@ public class XPathMessageQuery extends MessageQuery  {
     
     public java.lang.String getExpression() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExpression = null;
         try {
-            return (java.lang.String)classInstance.Get("Expression");
+            retObjectExpression = classInstance.Get("Expression");
+            return (java.lang.String)retObjectExpression;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectExpression != null ? retObjectExpression.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -220,7 +228,7 @@ public class XPathMessageQuery extends MessageQuery  {
 
     public void setExpression(java.lang.String Expression) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Expression", Expression);
         } catch (JCNativeException jcne) {
@@ -230,10 +238,14 @@ public class XPathMessageQuery extends MessageQuery  {
 
     public XmlNamespaceManager getNamespaces() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNamespaces = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Namespaces");
+            retObjectNamespaces = classInstance.Get("Namespaces");
+            JCObject val = (JCObject)retObjectNamespaces;
             return new XmlNamespaceManager(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNamespaces != null ? retObjectNamespaces.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -241,7 +253,7 @@ public class XPathMessageQuery extends MessageQuery  {
 
     public void setNamespaces(XmlNamespaceManager Namespaces) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Namespaces", Namespaces == null ? null : Namespaces.getJCOInstance());
         } catch (JCNativeException jcne) {

@@ -160,9 +160,13 @@ public class ImeModeConversion extends ValueType  {
     
     public static boolean getIsCurrentConversionTableSupported() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsCurrentConversionTableSupported = null;
         try {
-            return (boolean)classType.Get("IsCurrentConversionTableSupported");
+            retObjectIsCurrentConversionTableSupported = classType.Get("IsCurrentConversionTableSupported");
+            return (boolean)retObjectIsCurrentConversionTableSupported;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsCurrentConversionTableSupported != null ? retObjectIsCurrentConversionTableSupported.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

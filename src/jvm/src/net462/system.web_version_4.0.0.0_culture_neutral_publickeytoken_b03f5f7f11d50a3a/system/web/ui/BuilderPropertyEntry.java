@@ -159,10 +159,14 @@ public class BuilderPropertyEntry extends PropertyEntry  {
     
     public ControlBuilder getBuilder() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBuilder = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Builder");
+            retObjectBuilder = classInstance.Get("Builder");
+            JCObject val = (JCObject)retObjectBuilder;
             return new ControlBuilder(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBuilder != null ? retObjectBuilder.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,7 +174,7 @@ public class BuilderPropertyEntry extends PropertyEntry  {
 
     public void setBuilder(ControlBuilder Builder) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Builder", Builder == null ? null : Builder.getJCOInstance());
         } catch (JCNativeException jcne) {

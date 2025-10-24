@@ -153,10 +153,12 @@ public class MaskGenerationMethod extends NetObject  {
     
     public byte[] GenerateMask(byte[] rgbSeed, int cbReturn) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGenerateMask = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GenerateMask", rgbSeed, cbReturn);
+            retObjectGenerateMask = classInstance.Invoke("GenerateMask", rgbSeed, cbReturn);
+            JCObject resultingObjects = (JCObject)retObjectGenerateMask;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -165,6 +167,8 @@ public class MaskGenerationMethod extends NetObject  {
 				resultingArray[indexGenerateMask] = (byte)resultingArrayList.get(indexGenerateMask);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectGenerateMask != null ? retObjectGenerateMask.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,10 +176,12 @@ public class MaskGenerationMethod extends NetObject  {
 
     public byte[] GenerateMask(JCORefOut dupParam0, int dupParam1) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGenerateMask = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GenerateMask", dupParam0.getJCRefOut(), dupParam1);
+            retObjectGenerateMask = classInstance.Invoke("GenerateMask", dupParam0.getJCRefOut(), dupParam1);
+            JCObject resultingObjects = (JCObject)retObjectGenerateMask;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -184,6 +190,8 @@ public class MaskGenerationMethod extends NetObject  {
 				resultingArray[indexGenerateMask] = (byte)resultingArrayList.get(indexGenerateMask);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectGenerateMask != null ? retObjectGenerateMask.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

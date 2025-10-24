@@ -164,9 +164,13 @@ public class Table extends Block  {
     
     public boolean ShouldSerializeColumns() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShouldSerializeColumns = null;
         try {
-            return (boolean)classInstance.Invoke("ShouldSerializeColumns");
+            retObjectShouldSerializeColumns = classInstance.Invoke("ShouldSerializeColumns");
+            return (boolean)retObjectShouldSerializeColumns;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectShouldSerializeColumns != null ? retObjectShouldSerializeColumns.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -174,7 +178,7 @@ public class Table extends Block  {
 
     public void BeginInit() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("BeginInit");
         } catch (JCNativeException jcne) {
@@ -184,7 +188,7 @@ public class Table extends Block  {
 
     public void EndInit() throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArgumentException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EndInit");
         } catch (JCNativeException jcne) {
@@ -198,9 +202,20 @@ public class Table extends Block  {
     
     public double getCellSpacing() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCellSpacing = null;
         try {
-            return (double)classInstance.Get("CellSpacing");
+            retObjectCellSpacing = classInstance.Get("CellSpacing");
+            return (double)retObjectCellSpacing;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCellSpacing_ToString = retObjectCellSpacing == null ? "null" : retObjectCellSpacing.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectCellSpacingNumber = (java.lang.Number)retObjectCellSpacing;
+                return retObjectCellSpacingNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectCellSpacing != null ? retObjectCellSpacing.getClass() : "null", retObjectCellSpacing_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -208,7 +223,7 @@ public class Table extends Block  {
 
     public void setCellSpacing(double CellSpacing) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CellSpacing", CellSpacing);
         } catch (JCNativeException jcne) {
@@ -218,10 +233,14 @@ public class Table extends Block  {
 
     public TableColumnCollection getColumns() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectColumns = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Columns");
+            retObjectColumns = classInstance.Get("Columns");
+            JCObject val = (JCObject)retObjectColumns;
             return new TableColumnCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectColumns != null ? retObjectColumns.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -229,10 +248,14 @@ public class Table extends Block  {
 
     public TableRowGroupCollection getRowGroups() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRowGroups = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RowGroups");
+            retObjectRowGroups = classInstance.Get("RowGroups");
+            JCObject val = (JCObject)retObjectRowGroups;
             return new TableRowGroupCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRowGroups != null ? retObjectRowGroups.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

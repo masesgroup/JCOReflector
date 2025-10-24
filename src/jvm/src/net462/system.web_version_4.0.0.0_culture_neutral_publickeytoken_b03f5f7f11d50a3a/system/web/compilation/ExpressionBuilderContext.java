@@ -180,9 +180,13 @@ public class ExpressionBuilderContext extends NetObject  {
     
     public java.lang.String getVirtualPath() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.web.HttpException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVirtualPath = null;
         try {
-            return (java.lang.String)classInstance.Get("VirtualPath");
+            retObjectVirtualPath = classInstance.Get("VirtualPath");
+            return (java.lang.String)retObjectVirtualPath;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectVirtualPath != null ? retObjectVirtualPath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,10 +194,14 @@ public class ExpressionBuilderContext extends NetObject  {
 
     public TemplateControl getTemplateControl() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTemplateControl = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TemplateControl");
+            retObjectTemplateControl = classInstance.Get("TemplateControl");
+            JCObject val = (JCObject)retObjectTemplateControl;
             return new TemplateControl(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTemplateControl != null ? retObjectTemplateControl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

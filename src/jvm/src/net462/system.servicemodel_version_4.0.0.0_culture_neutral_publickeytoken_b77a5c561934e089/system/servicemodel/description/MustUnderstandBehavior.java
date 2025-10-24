@@ -175,7 +175,7 @@ public class MustUnderstandBehavior extends NetObject implements system.servicem
      */
     @Deprecated 
     public void AddBindingParameters(ServiceEndpoint endpoint, BindingParameterCollection bindingParameters) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIEndpointBehavior to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIEndpointBehavior to obtain the full interface.");
     }
 
     /**
@@ -184,7 +184,7 @@ public class MustUnderstandBehavior extends NetObject implements system.servicem
      */
     @Deprecated 
     public void ApplyClientBehavior(ServiceEndpoint endpoint, ClientRuntime clientRuntime) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIEndpointBehavior to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIEndpointBehavior to obtain the full interface.");
     }
 
     /**
@@ -193,7 +193,7 @@ public class MustUnderstandBehavior extends NetObject implements system.servicem
      */
     @Deprecated 
     public void ApplyDispatchBehavior(ServiceEndpoint endpoint, EndpointDispatcher endpointDispatcher) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIEndpointBehavior to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIEndpointBehavior to obtain the full interface.");
     }
 
     /**
@@ -202,7 +202,7 @@ public class MustUnderstandBehavior extends NetObject implements system.servicem
      */
     @Deprecated 
     public void Validate(ServiceEndpoint endpoint) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIEndpointBehavior to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIEndpointBehavior to obtain the full interface.");
     }
 
 
@@ -211,9 +211,13 @@ public class MustUnderstandBehavior extends NetObject implements system.servicem
     
     public boolean getValidateMustUnderstand() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValidateMustUnderstand = null;
         try {
-            return (boolean)classInstance.Get("ValidateMustUnderstand");
+            retObjectValidateMustUnderstand = classInstance.Get("ValidateMustUnderstand");
+            return (boolean)retObjectValidateMustUnderstand;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectValidateMustUnderstand != null ? retObjectValidateMustUnderstand.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -221,7 +225,7 @@ public class MustUnderstandBehavior extends NetObject implements system.servicem
 
     public void setValidateMustUnderstand(boolean ValidateMustUnderstand) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ValidateMustUnderstand", ValidateMustUnderstand);
         } catch (JCNativeException jcne) {

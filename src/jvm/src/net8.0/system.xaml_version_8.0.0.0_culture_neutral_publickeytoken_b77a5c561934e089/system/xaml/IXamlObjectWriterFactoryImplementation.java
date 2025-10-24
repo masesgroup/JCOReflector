@@ -144,10 +144,14 @@ public class IXamlObjectWriterFactoryImplementation extends NetObject implements
     
     public XamlObjectWriter GetXamlObjectWriter(XamlObjectWriterSettings settings) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetXamlObjectWriter = null;
         try {
-            JCObject objGetXamlObjectWriter = (JCObject)classInstance.Invoke("GetXamlObjectWriter", settings == null ? null : settings.getJCOInstance());
+            retObjectGetXamlObjectWriter = classInstance.Invoke("GetXamlObjectWriter", settings == null ? null : settings.getJCOInstance());
+            JCObject objGetXamlObjectWriter = (JCObject)retObjectGetXamlObjectWriter;
             return new XamlObjectWriter(objGetXamlObjectWriter);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetXamlObjectWriter != null ? retObjectGetXamlObjectWriter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -155,10 +159,14 @@ public class IXamlObjectWriterFactoryImplementation extends NetObject implements
 
     public XamlObjectWriterSettings GetParentSettings() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetParentSettings = null;
         try {
-            JCObject objGetParentSettings = (JCObject)classInstance.Invoke("GetParentSettings");
+            retObjectGetParentSettings = classInstance.Invoke("GetParentSettings");
+            JCObject objGetParentSettings = (JCObject)retObjectGetParentSettings;
             return new XamlObjectWriterSettings(objGetParentSettings);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetParentSettings != null ? retObjectGetParentSettings.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

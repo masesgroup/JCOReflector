@@ -170,9 +170,20 @@ public class DataGridCell extends ValueType  {
     
     public int getColumnNumber() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectColumnNumber = null;
         try {
-            return (int)classInstance.Get("ColumnNumber");
+            retObjectColumnNumber = classInstance.Get("ColumnNumber");
+            return (int)retObjectColumnNumber;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectColumnNumber_ToString = retObjectColumnNumber == null ? "null" : retObjectColumnNumber.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectColumnNumberNumber = (java.lang.Number)retObjectColumnNumber;
+                return retObjectColumnNumberNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectColumnNumber != null ? retObjectColumnNumber.getClass() : "null", retObjectColumnNumber_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,7 +191,7 @@ public class DataGridCell extends ValueType  {
 
     public void setColumnNumber(int ColumnNumber) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ColumnNumber", ColumnNumber);
         } catch (JCNativeException jcne) {
@@ -190,9 +201,20 @@ public class DataGridCell extends ValueType  {
 
     public int getRowNumber() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRowNumber = null;
         try {
-            return (int)classInstance.Get("RowNumber");
+            retObjectRowNumber = classInstance.Get("RowNumber");
+            return (int)retObjectRowNumber;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectRowNumber_ToString = retObjectRowNumber == null ? "null" : retObjectRowNumber.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectRowNumberNumber = (java.lang.Number)retObjectRowNumber;
+                return retObjectRowNumberNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectRowNumber != null ? retObjectRowNumber.getClass() : "null", retObjectRowNumber_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,7 +222,7 @@ public class DataGridCell extends ValueType  {
 
     public void setRowNumber(int RowNumber) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RowNumber", RowNumber);
         } catch (JCNativeException jcne) {

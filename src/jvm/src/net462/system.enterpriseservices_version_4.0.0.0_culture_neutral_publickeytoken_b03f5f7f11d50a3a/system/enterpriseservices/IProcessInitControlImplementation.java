@@ -142,7 +142,7 @@ public class IProcessInitControlImplementation extends NetObject implements IPro
     
     public void ResetInitializerTimeout(int dwSecondsRemaining) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ResetInitializerTimeout", dwSecondsRemaining);
         } catch (JCNativeException jcne) {

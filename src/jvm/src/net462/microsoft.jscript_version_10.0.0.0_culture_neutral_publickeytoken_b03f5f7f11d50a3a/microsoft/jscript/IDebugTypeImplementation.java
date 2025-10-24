@@ -142,9 +142,13 @@ public class IDebugTypeImplementation extends NetObject implements IDebugType {
     
     public boolean HasInstance(NetObject o) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHasInstance = null;
         try {
-            return (boolean)classInstance.Invoke("HasInstance", o == null ? null : o.getJCOInstance());
+            retObjectHasInstance = classInstance.Invoke("HasInstance", o == null ? null : o.getJCOInstance());
+            return (boolean)retObjectHasInstance;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectHasInstance != null ? retObjectHasInstance.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

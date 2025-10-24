@@ -164,10 +164,14 @@ public class ISAPIRuntime extends MarshalByRefObject implements system.web.hosti
     
     public NetObject InitializeLifetimeService() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInitializeLifetimeService = null;
         try {
-            JCObject objInitializeLifetimeService = (JCObject)classInstance.Invoke("InitializeLifetimeService");
+            retObjectInitializeLifetimeService = classInstance.Invoke("InitializeLifetimeService");
+            JCObject objInitializeLifetimeService = (JCObject)retObjectInitializeLifetimeService;
             return new NetObject(objInitializeLifetimeService);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInitializeLifetimeService != null ? retObjectInitializeLifetimeService.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -175,7 +179,7 @@ public class ISAPIRuntime extends MarshalByRefObject implements system.web.hosti
 
     public void DoGCCollect() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DoGCCollect");
         } catch (JCNativeException jcne) {
@@ -185,7 +189,7 @@ public class ISAPIRuntime extends MarshalByRefObject implements system.web.hosti
 
     public void StartProcessing() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("StartProcessing");
         } catch (JCNativeException jcne) {
@@ -195,7 +199,7 @@ public class ISAPIRuntime extends MarshalByRefObject implements system.web.hosti
 
     public void StopProcessing() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.IndexOutOfRangeException, system.security.SecurityException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("StopProcessing");
         } catch (JCNativeException jcne) {
@@ -209,7 +213,7 @@ public class ISAPIRuntime extends MarshalByRefObject implements system.web.hosti
      */
     @Deprecated 
     public void Stop(boolean immediate) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIRegisteredObject to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIRegisteredObject to obtain the full interface.");
     }
 
 

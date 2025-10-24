@@ -172,9 +172,13 @@ public class HttpBrowserCapabilitiesWrapper extends HttpBrowserCapabilitiesBase 
     
     public boolean EvaluateFilter(java.lang.String filterName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEvaluateFilter = null;
         try {
-            return (boolean)classInstance.Invoke("EvaluateFilter", filterName);
+            retObjectEvaluateFilter = classInstance.Invoke("EvaluateFilter", filterName);
+            return (boolean)retObjectEvaluateFilter;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectEvaluateFilter != null ? retObjectEvaluateFilter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,9 +186,13 @@ public class HttpBrowserCapabilitiesWrapper extends HttpBrowserCapabilitiesBase 
 
     public boolean IsBrowser(java.lang.String browserName) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsBrowser = null;
         try {
-            return (boolean)classInstance.Invoke("IsBrowser", browserName);
+            retObjectIsBrowser = classInstance.Invoke("IsBrowser", browserName);
+            return (boolean)retObjectIsBrowser;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsBrowser != null ? retObjectIsBrowser.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,9 +200,20 @@ public class HttpBrowserCapabilitiesWrapper extends HttpBrowserCapabilitiesBase 
 
     public int CompareFilters(java.lang.String filter1, java.lang.String filter2) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCompareFilters = null;
         try {
-            return (int)classInstance.Invoke("CompareFilters", filter1, filter2);
+            retObjectCompareFilters = classInstance.Invoke("CompareFilters", filter1, filter2);
+            return (int)retObjectCompareFilters;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCompareFilters_ToString = retObjectCompareFilters == null ? "null" : retObjectCompareFilters.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectCompareFiltersNumber = (java.lang.Number)retObjectCompareFilters;
+                return retObjectCompareFiltersNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCompareFilters != null ? retObjectCompareFilters.getClass() : "null", retObjectCompareFilters_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,16 +221,20 @@ public class HttpBrowserCapabilitiesWrapper extends HttpBrowserCapabilitiesBase 
 
     public Version[] GetClrVersions() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.web.HttpRequestValidationException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.configuration.ConfigurationException, system.NullReferenceException, system.MemberAccessException, system.OverflowException, system.OutOfMemoryException, system.security.SecurityException, system.text.regularexpressions.RegexMatchTimeoutException, system.RankException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetClrVersions = null;
         try {
             ArrayList<Version> resultingArrayList = new ArrayList<Version>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetClrVersions");
+            retObjectGetClrVersions = classInstance.Invoke("GetClrVersions");
+            JCObject resultingObjects = (JCObject)retObjectGetClrVersions;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new Version(resultingObject));
             }
             Version[] resultingArray = new Version[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetClrVersions != null ? retObjectGetClrVersions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -219,10 +242,14 @@ public class HttpBrowserCapabilitiesWrapper extends HttpBrowserCapabilitiesBase 
 
     public HtmlTextWriter CreateHtmlTextWriter(TextWriter w) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.FormatException, system.web.HttpException, system.ArgumentException, system.globalization.CultureNotFoundException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.threading.AbandonedMutexException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.NotImplementedException, system.web.HttpCompileException, system.web.HttpParseException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateHtmlTextWriter = null;
         try {
-            JCObject objCreateHtmlTextWriter = (JCObject)classInstance.Invoke("CreateHtmlTextWriter", w == null ? null : w.getJCOInstance());
+            retObjectCreateHtmlTextWriter = classInstance.Invoke("CreateHtmlTextWriter", w == null ? null : w.getJCOInstance());
+            JCObject objCreateHtmlTextWriter = (JCObject)retObjectCreateHtmlTextWriter;
             return new HtmlTextWriter(objCreateHtmlTextWriter);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateHtmlTextWriter != null ? retObjectCreateHtmlTextWriter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -230,7 +257,7 @@ public class HttpBrowserCapabilitiesWrapper extends HttpBrowserCapabilitiesBase 
 
     public void AddBrowser(java.lang.String browserName) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddBrowser", browserName);
         } catch (JCNativeException jcne) {
@@ -240,7 +267,7 @@ public class HttpBrowserCapabilitiesWrapper extends HttpBrowserCapabilitiesBase 
 
     public void DisableOptimizedCacheKey() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DisableOptimizedCacheKey");
         } catch (JCNativeException jcne) {

@@ -167,8 +167,8 @@ public class HttpContinueDelegate extends JCVoidDelegate implements IJCVoidEvent
         } else if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
         } else
-            throw new UnsupportedOperationException(
-                    String.format("Class %s is not supported.", instance.getClass().getTypeName()));
+            throw new java.lang.UnsupportedOperationException(
+                    java.lang.String.format("Class %s is not supported.", instance.getClass().getTypeName()));
     }
 
     protected final static <T extends IJCOBridgeReflected> java.lang.Object toObjectFromArray(T[] input) {
@@ -181,7 +181,7 @@ public class HttpContinueDelegate extends JCVoidDelegate implements IJCVoidEvent
 
     public void DynamicInvoke(int StatusCode, WebHeaderCollection httpHeaders) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DynamicInvoke", StatusCode, httpHeaders == null ? null : httpHeaders.getJCOInstance());
         } catch (JCNativeException jcne) {

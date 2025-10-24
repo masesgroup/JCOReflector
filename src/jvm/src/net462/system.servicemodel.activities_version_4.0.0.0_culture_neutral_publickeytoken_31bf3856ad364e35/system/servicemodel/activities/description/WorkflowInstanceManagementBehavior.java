@@ -163,7 +163,7 @@ public class WorkflowInstanceManagementBehavior extends NetObject  {
     
     public void ApplyDispatchBehavior(ServiceDescription serviceDescription, ServiceHostBase serviceHostBase) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OutOfMemoryException, system.security.SecurityException, system.MemberAccessException, system.NullReferenceException, system.UriFormatException, system.collections.generic.KeyNotFoundException, system.NotImplementedException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ApplyDispatchBehavior", serviceDescription == null ? null : serviceDescription.getJCOInstance(), serviceHostBase == null ? null : serviceHostBase.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -173,7 +173,7 @@ public class WorkflowInstanceManagementBehavior extends NetObject  {
 
     public void Validate(ServiceDescription serviceDescription, ServiceHostBase serviceHostBase) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Validate", serviceDescription == null ? null : serviceDescription.getJCOInstance(), serviceHostBase == null ? null : serviceHostBase.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -187,10 +187,14 @@ public class WorkflowInstanceManagementBehavior extends NetObject  {
     
     public static system.servicemodel.channels.Binding getHttpControlEndpointBinding() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectHttpControlEndpointBinding = null;
         try {
-            JCObject val = (JCObject)classType.Get("HttpControlEndpointBinding");
+            retObjectHttpControlEndpointBinding = classType.Get("HttpControlEndpointBinding");
+            JCObject val = (JCObject)retObjectHttpControlEndpointBinding;
             return new system.servicemodel.channels.Binding(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHttpControlEndpointBinding != null ? retObjectHttpControlEndpointBinding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,10 +202,14 @@ public class WorkflowInstanceManagementBehavior extends NetObject  {
 
     public static system.servicemodel.channels.Binding getNamedPipeControlEndpointBinding() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectNamedPipeControlEndpointBinding = null;
         try {
-            JCObject val = (JCObject)classType.Get("NamedPipeControlEndpointBinding");
+            retObjectNamedPipeControlEndpointBinding = classType.Get("NamedPipeControlEndpointBinding");
+            JCObject val = (JCObject)retObjectNamedPipeControlEndpointBinding;
             return new system.servicemodel.channels.Binding(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNamedPipeControlEndpointBinding != null ? retObjectNamedPipeControlEndpointBinding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -209,9 +217,13 @@ public class WorkflowInstanceManagementBehavior extends NetObject  {
 
     public java.lang.String getWindowsGroup() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWindowsGroup = null;
         try {
-            return (java.lang.String)classInstance.Get("WindowsGroup");
+            retObjectWindowsGroup = classInstance.Get("WindowsGroup");
+            return (java.lang.String)retObjectWindowsGroup;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectWindowsGroup != null ? retObjectWindowsGroup.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -219,7 +231,7 @@ public class WorkflowInstanceManagementBehavior extends NetObject  {
 
     public void setWindowsGroup(java.lang.String WindowsGroup) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("WindowsGroup", WindowsGroup);
         } catch (JCNativeException jcne) {

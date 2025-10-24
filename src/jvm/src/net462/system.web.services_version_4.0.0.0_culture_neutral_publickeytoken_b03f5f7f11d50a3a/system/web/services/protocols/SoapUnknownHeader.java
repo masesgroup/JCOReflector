@@ -167,10 +167,14 @@ public class SoapUnknownHeader extends SoapHeader  {
     
     public XmlElement getElement() throws Throwable, system.ArgumentOutOfRangeException, system.NullReferenceException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException, system.xml.XmlException, system.RankException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectElement = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Element");
+            retObjectElement = classInstance.Get("Element");
+            JCObject val = (JCObject)retObjectElement;
             return new XmlElement(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectElement != null ? retObjectElement.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,7 +182,7 @@ public class SoapUnknownHeader extends SoapHeader  {
 
     public void setElement(XmlElement Element) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Element", Element == null ? null : Element.getJCOInstance());
         } catch (JCNativeException jcne) {

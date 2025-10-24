@@ -161,10 +161,14 @@ public class ElapsedEventArgs extends EventArgs  {
     
     public DateTime getSignalTime() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSignalTime = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SignalTime");
+            retObjectSignalTime = classInstance.Get("SignalTime");
+            JCObject val = (JCObject)retObjectSignalTime;
             return new DateTime(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSignalTime != null ? retObjectSignalTime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

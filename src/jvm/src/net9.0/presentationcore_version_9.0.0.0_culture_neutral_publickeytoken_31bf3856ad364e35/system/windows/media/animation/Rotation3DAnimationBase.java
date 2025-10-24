@@ -157,10 +157,14 @@ public class Rotation3DAnimationBase extends AnimationTimeline  {
     
     public NetObject GetCurrentValue(NetObject defaultOriginValue, NetObject defaultDestinationValue, AnimationClock animationClock) throws Throwable, system.ArgumentException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetCurrentValue = null;
         try {
-            JCObject objGetCurrentValue = (JCObject)classInstance.Invoke("GetCurrentValue", defaultOriginValue == null ? null : defaultOriginValue.getJCOInstance(), defaultDestinationValue == null ? null : defaultDestinationValue.getJCOInstance(), animationClock == null ? null : animationClock.getJCOInstance());
+            retObjectGetCurrentValue = classInstance.Invoke("GetCurrentValue", defaultOriginValue == null ? null : defaultOriginValue.getJCOInstance(), defaultDestinationValue == null ? null : defaultDestinationValue.getJCOInstance(), animationClock == null ? null : animationClock.getJCOInstance());
+            JCObject objGetCurrentValue = (JCObject)retObjectGetCurrentValue;
             return new NetObject(objGetCurrentValue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCurrentValue != null ? retObjectGetCurrentValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -168,10 +172,14 @@ public class Rotation3DAnimationBase extends AnimationTimeline  {
 
     public Rotation3DAnimationBase CloneNewRotation3DAnimationBase() throws Throwable, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClone = null;
         try {
-            JCObject objClone = (JCObject)classInstance.Invoke("Clone");
+            retObjectClone = classInstance.Invoke("Clone");
+            JCObject objClone = (JCObject)retObjectClone;
             return new Rotation3DAnimationBase(objClone);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClone != null ? retObjectClone.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,10 +187,14 @@ public class Rotation3DAnimationBase extends AnimationTimeline  {
 
     public Rotation3D GetCurrentValue(Rotation3D defaultOriginValue, Rotation3D defaultDestinationValue, AnimationClock animationClock) throws Throwable, system.ArgumentException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetCurrentValue = null;
         try {
-            JCObject objGetCurrentValue = (JCObject)classInstance.Invoke("GetCurrentValue", defaultOriginValue == null ? null : defaultOriginValue.getJCOInstance(), defaultDestinationValue == null ? null : defaultDestinationValue.getJCOInstance(), animationClock == null ? null : animationClock.getJCOInstance());
+            retObjectGetCurrentValue = classInstance.Invoke("GetCurrentValue", defaultOriginValue == null ? null : defaultOriginValue.getJCOInstance(), defaultDestinationValue == null ? null : defaultDestinationValue.getJCOInstance(), animationClock == null ? null : animationClock.getJCOInstance());
+            JCObject objGetCurrentValue = (JCObject)retObjectGetCurrentValue;
             return new Rotation3D(objGetCurrentValue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCurrentValue != null ? retObjectGetCurrentValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

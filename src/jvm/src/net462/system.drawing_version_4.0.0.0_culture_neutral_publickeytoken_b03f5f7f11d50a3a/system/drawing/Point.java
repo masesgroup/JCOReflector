@@ -189,10 +189,14 @@ public class Point extends ValueType  {
     
     public static Point Add(Point pt, Size sz) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAdd = null;
         try {
-            JCObject objAdd = (JCObject)classType.Invoke("Add", pt == null ? null : pt.getJCOInstance(), sz == null ? null : sz.getJCOInstance());
+            retObjectAdd = classType.Invoke("Add", pt == null ? null : pt.getJCOInstance(), sz == null ? null : sz.getJCOInstance());
+            JCObject objAdd = (JCObject)retObjectAdd;
             return new Point(objAdd);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAdd != null ? retObjectAdd.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,10 +204,14 @@ public class Point extends ValueType  {
 
     public static Point Ceiling(PointF value) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCeiling = null;
         try {
-            JCObject objCeiling = (JCObject)classType.Invoke("Ceiling", value == null ? null : value.getJCOInstance());
+            retObjectCeiling = classType.Invoke("Ceiling", value == null ? null : value.getJCOInstance());
+            JCObject objCeiling = (JCObject)retObjectCeiling;
             return new Point(objCeiling);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCeiling != null ? retObjectCeiling.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -211,10 +219,14 @@ public class Point extends ValueType  {
 
     public static Point Round(PointF value) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectRound = null;
         try {
-            JCObject objRound = (JCObject)classType.Invoke("Round", value == null ? null : value.getJCOInstance());
+            retObjectRound = classType.Invoke("Round", value == null ? null : value.getJCOInstance());
+            JCObject objRound = (JCObject)retObjectRound;
             return new Point(objRound);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRound != null ? retObjectRound.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -222,10 +234,14 @@ public class Point extends ValueType  {
 
     public static Point Subtract(Point pt, Size sz) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSubtract = null;
         try {
-            JCObject objSubtract = (JCObject)classType.Invoke("Subtract", pt == null ? null : pt.getJCOInstance(), sz == null ? null : sz.getJCOInstance());
+            retObjectSubtract = classType.Invoke("Subtract", pt == null ? null : pt.getJCOInstance(), sz == null ? null : sz.getJCOInstance());
+            JCObject objSubtract = (JCObject)retObjectSubtract;
             return new Point(objSubtract);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSubtract != null ? retObjectSubtract.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -233,10 +249,14 @@ public class Point extends ValueType  {
 
     public static Point Truncate(PointF value) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTruncate = null;
         try {
-            JCObject objTruncate = (JCObject)classType.Invoke("Truncate", value == null ? null : value.getJCOInstance());
+            retObjectTruncate = classType.Invoke("Truncate", value == null ? null : value.getJCOInstance());
+            JCObject objTruncate = (JCObject)retObjectTruncate;
             return new Point(objTruncate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTruncate != null ? retObjectTruncate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -244,7 +264,7 @@ public class Point extends ValueType  {
 
     public void Offset(int dx, int dy) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Offset", dx, dy);
         } catch (JCNativeException jcne) {
@@ -254,7 +274,7 @@ public class Point extends ValueType  {
 
     public void Offset(Point p) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Offset", p == null ? null : p.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -268,9 +288,13 @@ public class Point extends ValueType  {
     
     public boolean getIsEmpty() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsEmpty = null;
         try {
-            return (boolean)classInstance.Get("IsEmpty");
+            retObjectIsEmpty = classInstance.Get("IsEmpty");
+            return (boolean)retObjectIsEmpty;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsEmpty != null ? retObjectIsEmpty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -278,9 +302,20 @@ public class Point extends ValueType  {
 
     public int getX() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectX = null;
         try {
-            return (int)classInstance.Get("X");
+            retObjectX = classInstance.Get("X");
+            return (int)retObjectX;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectX_ToString = retObjectX == null ? "null" : retObjectX.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectXNumber = (java.lang.Number)retObjectX;
+                return retObjectXNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectX != null ? retObjectX.getClass() : "null", retObjectX_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -288,7 +323,7 @@ public class Point extends ValueType  {
 
     public void setX(int X) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("X", X);
         } catch (JCNativeException jcne) {
@@ -298,9 +333,20 @@ public class Point extends ValueType  {
 
     public int getY() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectY = null;
         try {
-            return (int)classInstance.Get("Y");
+            retObjectY = classInstance.Get("Y");
+            return (int)retObjectY;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectY_ToString = retObjectY == null ? "null" : retObjectY.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectYNumber = (java.lang.Number)retObjectY;
+                return retObjectYNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectY != null ? retObjectY.getClass() : "null", retObjectY_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -308,7 +354,7 @@ public class Point extends ValueType  {
 
     public void setY(int Y) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Y", Y);
         } catch (JCNativeException jcne) {

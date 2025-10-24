@@ -157,7 +157,7 @@ public class PriorityBindingExpression extends BindingExpressionBase  {
     
     public void UpdateSource() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("UpdateSource");
         } catch (JCNativeException jcne) {
@@ -167,7 +167,7 @@ public class PriorityBindingExpression extends BindingExpressionBase  {
 
     public void UpdateTarget() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("UpdateTarget");
         } catch (JCNativeException jcne) {
@@ -181,10 +181,14 @@ public class PriorityBindingExpression extends BindingExpressionBase  {
     
     public BindingExpressionBase getActiveBindingExpression() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectActiveBindingExpression = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ActiveBindingExpression");
+            retObjectActiveBindingExpression = classInstance.Get("ActiveBindingExpression");
+            JCObject val = (JCObject)retObjectActiveBindingExpression;
             return new BindingExpressionBase(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectActiveBindingExpression != null ? retObjectActiveBindingExpression.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,10 +196,14 @@ public class PriorityBindingExpression extends BindingExpressionBase  {
 
     public PriorityBinding getParentPriorityBinding() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectParentPriorityBinding = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ParentPriorityBinding");
+            retObjectParentPriorityBinding = classInstance.Get("ParentPriorityBinding");
+            JCObject val = (JCObject)retObjectParentPriorityBinding;
             return new PriorityBinding(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParentPriorityBinding != null ? retObjectParentPriorityBinding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -166,9 +166,13 @@ public class DataAdapter extends Component  {
     
     public boolean ShouldSerializeAcceptChangesDuringFill() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShouldSerializeAcceptChangesDuringFill = null;
         try {
-            return (boolean)classInstance.Invoke("ShouldSerializeAcceptChangesDuringFill");
+            retObjectShouldSerializeAcceptChangesDuringFill = classInstance.Invoke("ShouldSerializeAcceptChangesDuringFill");
+            return (boolean)retObjectShouldSerializeAcceptChangesDuringFill;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectShouldSerializeAcceptChangesDuringFill != null ? retObjectShouldSerializeAcceptChangesDuringFill.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,9 +180,13 @@ public class DataAdapter extends Component  {
 
     public boolean ShouldSerializeFillLoadOption() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShouldSerializeFillLoadOption = null;
         try {
-            return (boolean)classInstance.Invoke("ShouldSerializeFillLoadOption");
+            retObjectShouldSerializeFillLoadOption = classInstance.Invoke("ShouldSerializeFillLoadOption");
+            return (boolean)retObjectShouldSerializeFillLoadOption;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectShouldSerializeFillLoadOption != null ? retObjectShouldSerializeFillLoadOption.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,9 +194,20 @@ public class DataAdapter extends Component  {
 
     public int Fill(DataSet dataSet) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException, system.diagnostics.tracing.EventSourceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFill = null;
         try {
-            return (int)classInstance.Invoke("Fill", dataSet == null ? null : dataSet.getJCOInstance());
+            retObjectFill = classInstance.Invoke("Fill", dataSet == null ? null : dataSet.getJCOInstance());
+            return (int)retObjectFill;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectFill_ToString = retObjectFill == null ? "null" : retObjectFill.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectFillNumber = (java.lang.Number)retObjectFill;
+                return retObjectFillNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectFill != null ? retObjectFill.getClass() : "null", retObjectFill_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,9 +215,20 @@ public class DataAdapter extends Component  {
 
     public int Update(DataSet dataSet) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException, system.diagnostics.tracing.EventSourceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUpdate = null;
         try {
-            return (int)classInstance.Invoke("Update", dataSet == null ? null : dataSet.getJCOInstance());
+            retObjectUpdate = classInstance.Invoke("Update", dataSet == null ? null : dataSet.getJCOInstance());
+            return (int)retObjectUpdate;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectUpdate_ToString = retObjectUpdate == null ? "null" : retObjectUpdate.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectUpdateNumber = (java.lang.Number)retObjectUpdate;
+                return retObjectUpdateNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectUpdate != null ? retObjectUpdate.getClass() : "null", retObjectUpdate_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -206,16 +236,20 @@ public class DataAdapter extends Component  {
 
     public DataTable[] FillSchema(DataSet dataSet, SchemaType schemaType) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException, system.diagnostics.tracing.EventSourceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFillSchema = null;
         try {
             ArrayList<DataTable> resultingArrayList = new ArrayList<DataTable>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("FillSchema", dataSet == null ? null : dataSet.getJCOInstance(), schemaType == null ? null : schemaType.getJCOInstance());
+            retObjectFillSchema = classInstance.Invoke("FillSchema", dataSet == null ? null : dataSet.getJCOInstance(), schemaType == null ? null : schemaType.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectFillSchema;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new DataTable(resultingObject));
             }
             DataTable[] resultingArray = new DataTable[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFillSchema != null ? retObjectFillSchema.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -223,16 +257,20 @@ public class DataAdapter extends Component  {
 
     public IDataParameter[] GetFillParameters() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetFillParameters = null;
         try {
             ArrayList<IDataParameter> resultingArrayList = new ArrayList<IDataParameter>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetFillParameters");
+            retObjectGetFillParameters = classInstance.Invoke("GetFillParameters");
+            JCObject resultingObjects = (JCObject)retObjectGetFillParameters;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new IDataParameterImplementation(resultingObject));
             }
             IDataParameter[] resultingArray = new IDataParameter[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetFillParameters != null ? retObjectGetFillParameters.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -240,7 +278,7 @@ public class DataAdapter extends Component  {
 
     public void ResetFillLoadOption() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ResetFillLoadOption");
         } catch (JCNativeException jcne) {
@@ -254,9 +292,13 @@ public class DataAdapter extends Component  {
     
     public boolean getAcceptChangesDuringFill() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAcceptChangesDuringFill = null;
         try {
-            return (boolean)classInstance.Get("AcceptChangesDuringFill");
+            retObjectAcceptChangesDuringFill = classInstance.Get("AcceptChangesDuringFill");
+            return (boolean)retObjectAcceptChangesDuringFill;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAcceptChangesDuringFill != null ? retObjectAcceptChangesDuringFill.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -264,7 +306,7 @@ public class DataAdapter extends Component  {
 
     public void setAcceptChangesDuringFill(boolean AcceptChangesDuringFill) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AcceptChangesDuringFill", AcceptChangesDuringFill);
         } catch (JCNativeException jcne) {
@@ -274,9 +316,13 @@ public class DataAdapter extends Component  {
 
     public boolean getAcceptChangesDuringUpdate() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAcceptChangesDuringUpdate = null;
         try {
-            return (boolean)classInstance.Get("AcceptChangesDuringUpdate");
+            retObjectAcceptChangesDuringUpdate = classInstance.Get("AcceptChangesDuringUpdate");
+            return (boolean)retObjectAcceptChangesDuringUpdate;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAcceptChangesDuringUpdate != null ? retObjectAcceptChangesDuringUpdate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -284,7 +330,7 @@ public class DataAdapter extends Component  {
 
     public void setAcceptChangesDuringUpdate(boolean AcceptChangesDuringUpdate) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AcceptChangesDuringUpdate", AcceptChangesDuringUpdate);
         } catch (JCNativeException jcne) {
@@ -294,9 +340,13 @@ public class DataAdapter extends Component  {
 
     public boolean getContinueUpdateOnError() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContinueUpdateOnError = null;
         try {
-            return (boolean)classInstance.Get("ContinueUpdateOnError");
+            retObjectContinueUpdateOnError = classInstance.Get("ContinueUpdateOnError");
+            return (boolean)retObjectContinueUpdateOnError;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectContinueUpdateOnError != null ? retObjectContinueUpdateOnError.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -304,7 +354,7 @@ public class DataAdapter extends Component  {
 
     public void setContinueUpdateOnError(boolean ContinueUpdateOnError) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ContinueUpdateOnError", ContinueUpdateOnError);
         } catch (JCNativeException jcne) {
@@ -314,9 +364,13 @@ public class DataAdapter extends Component  {
 
     public boolean getReturnProviderSpecificTypes() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReturnProviderSpecificTypes = null;
         try {
-            return (boolean)classInstance.Get("ReturnProviderSpecificTypes");
+            retObjectReturnProviderSpecificTypes = classInstance.Get("ReturnProviderSpecificTypes");
+            return (boolean)retObjectReturnProviderSpecificTypes;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectReturnProviderSpecificTypes != null ? retObjectReturnProviderSpecificTypes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -324,7 +378,7 @@ public class DataAdapter extends Component  {
 
     public void setReturnProviderSpecificTypes(boolean ReturnProviderSpecificTypes) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ReturnProviderSpecificTypes", ReturnProviderSpecificTypes);
         } catch (JCNativeException jcne) {
@@ -334,10 +388,14 @@ public class DataAdapter extends Component  {
 
     public DataTableMappingCollection getTableMappings() throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.diagnostics.tracing.EventSourceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTableMappings = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TableMappings");
+            retObjectTableMappings = classInstance.Get("TableMappings");
+            JCObject val = (JCObject)retObjectTableMappings;
             return new DataTableMappingCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTableMappings != null ? retObjectTableMappings.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -345,10 +403,14 @@ public class DataAdapter extends Component  {
 
     public LoadOption getFillLoadOption() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFillLoadOption = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("FillLoadOption");
+            retObjectFillLoadOption = classInstance.Get("FillLoadOption");
+            JCObject val = (JCObject)retObjectFillLoadOption;
             return new LoadOption(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFillLoadOption != null ? retObjectFillLoadOption.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -356,7 +418,7 @@ public class DataAdapter extends Component  {
 
     public void setFillLoadOption(LoadOption FillLoadOption) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FillLoadOption", FillLoadOption == null ? null : FillLoadOption.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -366,10 +428,14 @@ public class DataAdapter extends Component  {
 
     public MissingMappingAction getMissingMappingAction() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMissingMappingAction = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MissingMappingAction");
+            retObjectMissingMappingAction = classInstance.Get("MissingMappingAction");
+            JCObject val = (JCObject)retObjectMissingMappingAction;
             return new MissingMappingAction(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMissingMappingAction != null ? retObjectMissingMappingAction.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -377,7 +443,7 @@ public class DataAdapter extends Component  {
 
     public void setMissingMappingAction(MissingMappingAction MissingMappingAction) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MissingMappingAction", MissingMappingAction == null ? null : MissingMappingAction.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -387,10 +453,14 @@ public class DataAdapter extends Component  {
 
     public MissingSchemaAction getMissingSchemaAction() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMissingSchemaAction = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MissingSchemaAction");
+            retObjectMissingSchemaAction = classInstance.Get("MissingSchemaAction");
+            JCObject val = (JCObject)retObjectMissingSchemaAction;
             return new MissingSchemaAction(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMissingSchemaAction != null ? retObjectMissingSchemaAction.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -398,7 +468,7 @@ public class DataAdapter extends Component  {
 
     public void setMissingSchemaAction(MissingSchemaAction MissingSchemaAction) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MissingSchemaAction", MissingSchemaAction == null ? null : MissingSchemaAction.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -413,7 +483,7 @@ public class DataAdapter extends Component  {
 
     public void addFillError(FillErrorEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("FillError", handler);
         } catch (JCNativeException jcne) {
@@ -423,7 +493,7 @@ public class DataAdapter extends Component  {
 
     public void removeFillError(FillErrorEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("FillError", handler);
         } catch (JCNativeException jcne) {

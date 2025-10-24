@@ -146,7 +146,7 @@ public class IXmlBinaryWriterInitializerImplementation extends NetObject impleme
     
     public void SetOutput(Stream stream, IXmlDictionary dictionary, XmlBinaryWriterSession session, boolean ownsStream) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetOutput", stream == null ? null : stream.getJCOInstance(), dictionary == null ? null : dictionary.getJCOInstance(), session == null ? null : session.getJCOInstance(), ownsStream);
         } catch (JCNativeException jcne) {

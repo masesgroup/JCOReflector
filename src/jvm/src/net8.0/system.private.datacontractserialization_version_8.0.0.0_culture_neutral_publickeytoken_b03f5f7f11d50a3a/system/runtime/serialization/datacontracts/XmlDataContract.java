@@ -162,9 +162,13 @@ public class XmlDataContract extends DataContract  {
     
     public boolean getHasRoot() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHasRoot = null;
         try {
-            return (boolean)classInstance.Get("HasRoot");
+            retObjectHasRoot = classInstance.Get("HasRoot");
+            return (boolean)retObjectHasRoot;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectHasRoot != null ? retObjectHasRoot.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,7 +176,7 @@ public class XmlDataContract extends DataContract  {
 
     public void setHasRoot(boolean HasRoot) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("HasRoot", HasRoot);
         } catch (JCNativeException jcne) {
@@ -182,9 +186,13 @@ public class XmlDataContract extends DataContract  {
 
     public boolean getIsAnonymous() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsAnonymous = null;
         try {
-            return (boolean)classInstance.Get("IsAnonymous");
+            retObjectIsAnonymous = classInstance.Get("IsAnonymous");
+            return (boolean)retObjectIsAnonymous;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsAnonymous != null ? retObjectIsAnonymous.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,9 +200,13 @@ public class XmlDataContract extends DataContract  {
 
     public boolean getIsTopLevelElementNullable() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsTopLevelElementNullable = null;
         try {
-            return (boolean)classInstance.Get("IsTopLevelElementNullable");
+            retObjectIsTopLevelElementNullable = classInstance.Get("IsTopLevelElementNullable");
+            return (boolean)retObjectIsTopLevelElementNullable;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsTopLevelElementNullable != null ? retObjectIsTopLevelElementNullable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,7 +214,7 @@ public class XmlDataContract extends DataContract  {
 
     public void setIsTopLevelElementNullable(boolean IsTopLevelElementNullable) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsTopLevelElementNullable", IsTopLevelElementNullable);
         } catch (JCNativeException jcne) {
@@ -212,9 +224,13 @@ public class XmlDataContract extends DataContract  {
 
     public boolean getIsTypeDefinedOnImport() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsTypeDefinedOnImport = null;
         try {
-            return (boolean)classInstance.Get("IsTypeDefinedOnImport");
+            retObjectIsTypeDefinedOnImport = classInstance.Get("IsTypeDefinedOnImport");
+            return (boolean)retObjectIsTypeDefinedOnImport;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsTypeDefinedOnImport != null ? retObjectIsTypeDefinedOnImport.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -222,7 +238,7 @@ public class XmlDataContract extends DataContract  {
 
     public void setIsTypeDefinedOnImport(boolean IsTypeDefinedOnImport) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsTypeDefinedOnImport", IsTypeDefinedOnImport);
         } catch (JCNativeException jcne) {
@@ -232,9 +248,13 @@ public class XmlDataContract extends DataContract  {
 
     public boolean getIsValueType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsValueType = null;
         try {
-            return (boolean)classInstance.Get("IsValueType");
+            retObjectIsValueType = classInstance.Get("IsValueType");
+            return (boolean)retObjectIsValueType;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsValueType != null ? retObjectIsValueType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -242,7 +262,7 @@ public class XmlDataContract extends DataContract  {
 
     public void setIsValueType(boolean IsValueType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsValueType", IsValueType);
         } catch (JCNativeException jcne) {
@@ -252,10 +272,14 @@ public class XmlDataContract extends DataContract  {
 
     public XmlSchemaType getXsdType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectXsdType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("XsdType");
+            retObjectXsdType = classInstance.Get("XsdType");
+            JCObject val = (JCObject)retObjectXsdType;
             return new XmlSchemaType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectXsdType != null ? retObjectXsdType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -263,7 +287,7 @@ public class XmlDataContract extends DataContract  {
 
     public void setXsdType(XmlSchemaType XsdType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("XsdType", XsdType == null ? null : XsdType.getJCOInstance());
         } catch (JCNativeException jcne) {

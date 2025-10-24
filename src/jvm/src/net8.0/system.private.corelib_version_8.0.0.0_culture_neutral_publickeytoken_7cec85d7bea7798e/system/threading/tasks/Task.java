@@ -209,9 +209,13 @@ public class Task extends NetObject implements AutoCloseable {
     
     public boolean Wait(int millisecondsTimeout, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.diagnostics.tracing.EventSourceException, system.threading.tasks.TaskSchedulerException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.OutOfMemoryException, system.OperationCanceledException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWait = null;
         try {
-            return (boolean)classInstance.Invoke("Wait", millisecondsTimeout, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            retObjectWait = classInstance.Invoke("Wait", millisecondsTimeout, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            return (boolean)retObjectWait;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectWait != null ? retObjectWait.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -219,9 +223,13 @@ public class Task extends NetObject implements AutoCloseable {
 
     public boolean Wait(int millisecondsTimeout) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.threading.tasks.TaskSchedulerException, system.threading.SynchronizationLockException, system.OutOfMemoryException, system.OperationCanceledException, system.FormatException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWait = null;
         try {
-            return (boolean)classInstance.Invoke("Wait", millisecondsTimeout);
+            retObjectWait = classInstance.Invoke("Wait", millisecondsTimeout);
+            return (boolean)retObjectWait;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectWait != null ? retObjectWait.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -229,9 +237,13 @@ public class Task extends NetObject implements AutoCloseable {
 
     public boolean Wait(TimeSpan timeout, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OperationCanceledException, system.threading.tasks.TaskSchedulerException, system.threading.SynchronizationLockException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWait = null;
         try {
-            return (boolean)classInstance.Invoke("Wait", timeout == null ? null : timeout.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            retObjectWait = classInstance.Invoke("Wait", timeout == null ? null : timeout.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            return (boolean)retObjectWait;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectWait != null ? retObjectWait.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -239,9 +251,13 @@ public class Task extends NetObject implements AutoCloseable {
 
     public boolean Wait(TimeSpan timeout) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.OperationCanceledException, system.threading.tasks.TaskSchedulerException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.FormatException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWait = null;
         try {
-            return (boolean)classInstance.Invoke("Wait", timeout == null ? null : timeout.getJCOInstance());
+            retObjectWait = classInstance.Invoke("Wait", timeout == null ? null : timeout.getJCOInstance());
+            return (boolean)retObjectWait;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectWait != null ? retObjectWait.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -249,9 +265,13 @@ public class Task extends NetObject implements AutoCloseable {
 
     public static boolean WaitAll(Task[] tasks, int millisecondsTimeout, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OperationCanceledException, system.threading.tasks.TaskSchedulerException, system.IndexOutOfRangeException, system.FormatException, system.AggregateException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectWaitAll = null;
         try {
-            return (boolean)classType.Invoke("WaitAll", toObjectFromArray(tasks), millisecondsTimeout, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            retObjectWaitAll = classType.Invoke("WaitAll", toObjectFromArray(tasks), millisecondsTimeout, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            return (boolean)retObjectWaitAll;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectWaitAll != null ? retObjectWaitAll.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -259,9 +279,13 @@ public class Task extends NetObject implements AutoCloseable {
 
     public static boolean WaitAll(Task[] tasks, int millisecondsTimeout) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OperationCanceledException, system.threading.tasks.TaskSchedulerException, system.IndexOutOfRangeException, system.FormatException, system.AggregateException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectWaitAll = null;
         try {
-            return (boolean)classType.Invoke("WaitAll", toObjectFromArray(tasks), millisecondsTimeout);
+            retObjectWaitAll = classType.Invoke("WaitAll", toObjectFromArray(tasks), millisecondsTimeout);
+            return (boolean)retObjectWaitAll;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectWaitAll != null ? retObjectWaitAll.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -269,9 +293,13 @@ public class Task extends NetObject implements AutoCloseable {
 
     public static boolean WaitAll(Task[] tasks, TimeSpan timeout) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OperationCanceledException, system.threading.tasks.TaskSchedulerException, system.FormatException, system.AggregateException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectWaitAll = null;
         try {
-            return (boolean)classType.Invoke("WaitAll", toObjectFromArray(tasks), timeout == null ? null : timeout.getJCOInstance());
+            retObjectWaitAll = classType.Invoke("WaitAll", toObjectFromArray(tasks), timeout == null ? null : timeout.getJCOInstance());
+            return (boolean)retObjectWaitAll;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectWaitAll != null ? retObjectWaitAll.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -279,9 +307,20 @@ public class Task extends NetObject implements AutoCloseable {
 
     public static int WaitAny(Task[] tasks, int millisecondsTimeout, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OperationCanceledException, system.threading.tasks.TaskSchedulerException, system.OutOfMemoryException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectWaitAny = null;
         try {
-            return (int)classType.Invoke("WaitAny", toObjectFromArray(tasks), millisecondsTimeout, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            retObjectWaitAny = classType.Invoke("WaitAny", toObjectFromArray(tasks), millisecondsTimeout, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            return (int)retObjectWaitAny;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectWaitAny_ToString = retObjectWaitAny == null ? "null" : retObjectWaitAny.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectWaitAnyNumber = (java.lang.Number)retObjectWaitAny;
+                return retObjectWaitAnyNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectWaitAny != null ? retObjectWaitAny.getClass() : "null", retObjectWaitAny_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -289,9 +328,20 @@ public class Task extends NetObject implements AutoCloseable {
 
     public static int WaitAny(Task[] tasks, int millisecondsTimeout) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OperationCanceledException, system.threading.tasks.TaskSchedulerException, system.OutOfMemoryException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectWaitAny = null;
         try {
-            return (int)classType.Invoke("WaitAny", toObjectFromArray(tasks), millisecondsTimeout);
+            retObjectWaitAny = classType.Invoke("WaitAny", toObjectFromArray(tasks), millisecondsTimeout);
+            return (int)retObjectWaitAny;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectWaitAny_ToString = retObjectWaitAny == null ? "null" : retObjectWaitAny.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectWaitAnyNumber = (java.lang.Number)retObjectWaitAny;
+                return retObjectWaitAnyNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectWaitAny != null ? retObjectWaitAny.getClass() : "null", retObjectWaitAny_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -299,9 +349,20 @@ public class Task extends NetObject implements AutoCloseable {
 
     public static int WaitAny(Task[] tasks, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OperationCanceledException, system.threading.tasks.TaskSchedulerException, system.OutOfMemoryException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectWaitAny = null;
         try {
-            return (int)classType.Invoke("WaitAny", toObjectFromArray(tasks), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            retObjectWaitAny = classType.Invoke("WaitAny", toObjectFromArray(tasks), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            return (int)retObjectWaitAny;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectWaitAny_ToString = retObjectWaitAny == null ? "null" : retObjectWaitAny.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectWaitAnyNumber = (java.lang.Number)retObjectWaitAny;
+                return retObjectWaitAnyNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectWaitAny != null ? retObjectWaitAny.getClass() : "null", retObjectWaitAny_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -309,9 +370,20 @@ public class Task extends NetObject implements AutoCloseable {
 
     public static int WaitAny(Task[] tasks, TimeSpan timeout) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OperationCanceledException, system.threading.tasks.TaskSchedulerException, system.OutOfMemoryException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectWaitAny = null;
         try {
-            return (int)classType.Invoke("WaitAny", toObjectFromArray(tasks), timeout == null ? null : timeout.getJCOInstance());
+            retObjectWaitAny = classType.Invoke("WaitAny", toObjectFromArray(tasks), timeout == null ? null : timeout.getJCOInstance());
+            return (int)retObjectWaitAny;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectWaitAny_ToString = retObjectWaitAny == null ? "null" : retObjectWaitAny.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectWaitAnyNumber = (java.lang.Number)retObjectWaitAny;
+                return retObjectWaitAnyNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectWaitAny != null ? retObjectWaitAny.getClass() : "null", retObjectWaitAny_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -319,9 +391,20 @@ public class Task extends NetObject implements AutoCloseable {
 
     public static int WaitAny(Task... tasks) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OperationCanceledException, system.threading.tasks.TaskSchedulerException, system.OutOfMemoryException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectWaitAny = null;
         try {
-            return (int)classType.Invoke("WaitAny", (java.lang.Object)toObjectFromArray(tasks));
+            retObjectWaitAny = classType.Invoke("WaitAny", (java.lang.Object)toObjectFromArray(tasks));
+            return (int)retObjectWaitAny;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectWaitAny_ToString = retObjectWaitAny == null ? "null" : retObjectWaitAny.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectWaitAnyNumber = (java.lang.Number)retObjectWaitAny;
+                return retObjectWaitAnyNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectWaitAny != null ? retObjectWaitAny.getClass() : "null", retObjectWaitAny_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -329,10 +412,14 @@ public class Task extends NetObject implements AutoCloseable {
 
     public ConfiguredTaskAwaitable ConfigureAwait(boolean continueOnCapturedContext) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConfigureAwait = null;
         try {
-            JCObject objConfigureAwait = (JCObject)classInstance.Invoke("ConfigureAwait", continueOnCapturedContext);
+            retObjectConfigureAwait = classInstance.Invoke("ConfigureAwait", continueOnCapturedContext);
+            JCObject objConfigureAwait = (JCObject)retObjectConfigureAwait;
             return new ConfiguredTaskAwaitable(objConfigureAwait);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConfigureAwait != null ? retObjectConfigureAwait.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -340,10 +427,14 @@ public class Task extends NetObject implements AutoCloseable {
 
     public ConfiguredTaskAwaitable ConfigureAwait(ConfigureAwaitOptions options) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConfigureAwait = null;
         try {
-            JCObject objConfigureAwait = (JCObject)classInstance.Invoke("ConfigureAwait", options == null ? null : options.getJCOInstance());
+            retObjectConfigureAwait = classInstance.Invoke("ConfigureAwait", options == null ? null : options.getJCOInstance());
+            JCObject objConfigureAwait = (JCObject)retObjectConfigureAwait;
             return new ConfiguredTaskAwaitable(objConfigureAwait);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConfigureAwait != null ? retObjectConfigureAwait.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -351,10 +442,14 @@ public class Task extends NetObject implements AutoCloseable {
 
     public TaskAwaiter GetAwaiter() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetAwaiter = null;
         try {
-            JCObject objGetAwaiter = (JCObject)classInstance.Invoke("GetAwaiter");
+            retObjectGetAwaiter = classInstance.Invoke("GetAwaiter");
+            JCObject objGetAwaiter = (JCObject)retObjectGetAwaiter;
             return new TaskAwaiter(objGetAwaiter);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetAwaiter != null ? retObjectGetAwaiter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -362,10 +457,14 @@ public class Task extends NetObject implements AutoCloseable {
 
     public static YieldAwaitable Yield() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectYield = null;
         try {
-            JCObject objYield = (JCObject)classType.Invoke("Yield");
+            retObjectYield = classType.Invoke("Yield");
+            JCObject objYield = (JCObject)retObjectYield;
             return new YieldAwaitable(objYield);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectYield != null ? retObjectYield.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -373,10 +472,14 @@ public class Task extends NetObject implements AutoCloseable {
 
     public static Task Delay(int millisecondsDelay, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.diagnostics.tracing.EventSourceException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.OverflowException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDelay = null;
         try {
-            JCObject objDelay = (JCObject)classType.Invoke("Delay", millisecondsDelay, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            retObjectDelay = classType.Invoke("Delay", millisecondsDelay, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objDelay = (JCObject)retObjectDelay;
             return new Task(objDelay);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDelay != null ? retObjectDelay.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -384,10 +487,14 @@ public class Task extends NetObject implements AutoCloseable {
 
     public static Task Delay(int millisecondsDelay) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.OutOfMemoryException, system.OverflowException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDelay = null;
         try {
-            JCObject objDelay = (JCObject)classType.Invoke("Delay", millisecondsDelay);
+            retObjectDelay = classType.Invoke("Delay", millisecondsDelay);
+            JCObject objDelay = (JCObject)retObjectDelay;
             return new Task(objDelay);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDelay != null ? retObjectDelay.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -395,10 +502,14 @@ public class Task extends NetObject implements AutoCloseable {
 
     public static Task Delay(TimeSpan delay, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.OverflowException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDelay = null;
         try {
-            JCObject objDelay = (JCObject)classType.Invoke("Delay", delay == null ? null : delay.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            retObjectDelay = classType.Invoke("Delay", delay == null ? null : delay.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objDelay = (JCObject)retObjectDelay;
             return new Task(objDelay);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDelay != null ? retObjectDelay.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -406,10 +517,14 @@ public class Task extends NetObject implements AutoCloseable {
 
     public static Task Delay(TimeSpan delay, TimeProvider timeProvider, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.diagnostics.tracing.EventSourceException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.OverflowException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDelay = null;
         try {
-            JCObject objDelay = (JCObject)classType.Invoke("Delay", delay == null ? null : delay.getJCOInstance(), timeProvider == null ? null : timeProvider.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            retObjectDelay = classType.Invoke("Delay", delay == null ? null : delay.getJCOInstance(), timeProvider == null ? null : timeProvider.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objDelay = (JCObject)retObjectDelay;
             return new Task(objDelay);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDelay != null ? retObjectDelay.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -417,10 +532,14 @@ public class Task extends NetObject implements AutoCloseable {
 
     public static Task Delay(TimeSpan delay, TimeProvider timeProvider) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.OverflowException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDelay = null;
         try {
-            JCObject objDelay = (JCObject)classType.Invoke("Delay", delay == null ? null : delay.getJCOInstance(), timeProvider == null ? null : timeProvider.getJCOInstance());
+            retObjectDelay = classType.Invoke("Delay", delay == null ? null : delay.getJCOInstance(), timeProvider == null ? null : timeProvider.getJCOInstance());
+            JCObject objDelay = (JCObject)retObjectDelay;
             return new Task(objDelay);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDelay != null ? retObjectDelay.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -428,10 +547,14 @@ public class Task extends NetObject implements AutoCloseable {
 
     public static Task Delay(TimeSpan delay) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.OverflowException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDelay = null;
         try {
-            JCObject objDelay = (JCObject)classType.Invoke("Delay", delay == null ? null : delay.getJCOInstance());
+            retObjectDelay = classType.Invoke("Delay", delay == null ? null : delay.getJCOInstance());
+            JCObject objDelay = (JCObject)retObjectDelay;
             return new Task(objDelay);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDelay != null ? retObjectDelay.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -439,10 +562,14 @@ public class Task extends NetObject implements AutoCloseable {
 
     public static Task FromCanceled(CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFromCanceled = null;
         try {
-            JCObject objFromCanceled = (JCObject)classType.Invoke("FromCanceled", cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            retObjectFromCanceled = classType.Invoke("FromCanceled", cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objFromCanceled = (JCObject)retObjectFromCanceled;
             return new Task(objFromCanceled);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFromCanceled != null ? retObjectFromCanceled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -450,10 +577,14 @@ public class Task extends NetObject implements AutoCloseable {
 
     public static Task FromException(NetException exception) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFromException = null;
         try {
-            JCObject objFromException = (JCObject)classType.Invoke("FromException", exception == null ? null : exception.getJCOInstance());
+            retObjectFromException = classType.Invoke("FromException", exception == null ? null : exception.getJCOInstance());
+            JCObject objFromException = (JCObject)retObjectFromException;
             return new Task(objFromException);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFromException != null ? retObjectFromException.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -461,10 +592,14 @@ public class Task extends NetObject implements AutoCloseable {
 
     public static Task Run(Action action, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectRun = null;
         try {
-            JCObject objRun = (JCObject)classType.Invoke("Run", action, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            retObjectRun = classType.Invoke("Run", action, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objRun = (JCObject)retObjectRun;
             return new Task(objRun);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRun != null ? retObjectRun.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -472,10 +607,14 @@ public class Task extends NetObject implements AutoCloseable {
 
     public static Task Run(Action action) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectRun = null;
         try {
-            JCObject objRun = (JCObject)classType.Invoke("Run", action);
+            retObjectRun = classType.Invoke("Run", action);
+            JCObject objRun = (JCObject)retObjectRun;
             return new Task(objRun);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRun != null ? retObjectRun.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -483,10 +622,14 @@ public class Task extends NetObject implements AutoCloseable {
 
     public Task WaitAsync(CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWaitAsync = null;
         try {
-            JCObject objWaitAsync = (JCObject)classInstance.Invoke("WaitAsync", cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            retObjectWaitAsync = classInstance.Invoke("WaitAsync", cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objWaitAsync = (JCObject)retObjectWaitAsync;
             return new Task(objWaitAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWaitAsync != null ? retObjectWaitAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -494,10 +637,14 @@ public class Task extends NetObject implements AutoCloseable {
 
     public Task WaitAsync(TimeSpan timeout, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWaitAsync = null;
         try {
-            JCObject objWaitAsync = (JCObject)classInstance.Invoke("WaitAsync", timeout == null ? null : timeout.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            retObjectWaitAsync = classInstance.Invoke("WaitAsync", timeout == null ? null : timeout.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objWaitAsync = (JCObject)retObjectWaitAsync;
             return new Task(objWaitAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWaitAsync != null ? retObjectWaitAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -505,10 +652,14 @@ public class Task extends NetObject implements AutoCloseable {
 
     public Task WaitAsync(TimeSpan timeout, TimeProvider timeProvider, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWaitAsync = null;
         try {
-            JCObject objWaitAsync = (JCObject)classInstance.Invoke("WaitAsync", timeout == null ? null : timeout.getJCOInstance(), timeProvider == null ? null : timeProvider.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            retObjectWaitAsync = classInstance.Invoke("WaitAsync", timeout == null ? null : timeout.getJCOInstance(), timeProvider == null ? null : timeProvider.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objWaitAsync = (JCObject)retObjectWaitAsync;
             return new Task(objWaitAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWaitAsync != null ? retObjectWaitAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -516,10 +667,14 @@ public class Task extends NetObject implements AutoCloseable {
 
     public Task WaitAsync(TimeSpan timeout, TimeProvider timeProvider) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWaitAsync = null;
         try {
-            JCObject objWaitAsync = (JCObject)classInstance.Invoke("WaitAsync", timeout == null ? null : timeout.getJCOInstance(), timeProvider == null ? null : timeProvider.getJCOInstance());
+            retObjectWaitAsync = classInstance.Invoke("WaitAsync", timeout == null ? null : timeout.getJCOInstance(), timeProvider == null ? null : timeProvider.getJCOInstance());
+            JCObject objWaitAsync = (JCObject)retObjectWaitAsync;
             return new Task(objWaitAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWaitAsync != null ? retObjectWaitAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -527,10 +682,14 @@ public class Task extends NetObject implements AutoCloseable {
 
     public Task WaitAsync(TimeSpan timeout) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWaitAsync = null;
         try {
-            JCObject objWaitAsync = (JCObject)classInstance.Invoke("WaitAsync", timeout == null ? null : timeout.getJCOInstance());
+            retObjectWaitAsync = classInstance.Invoke("WaitAsync", timeout == null ? null : timeout.getJCOInstance());
+            JCObject objWaitAsync = (JCObject)retObjectWaitAsync;
             return new Task(objWaitAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWaitAsync != null ? retObjectWaitAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -538,10 +697,14 @@ public class Task extends NetObject implements AutoCloseable {
 
     public static Task WhenAll(Task... tasks) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.diagnostics.tracing.EventSourceException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectWhenAll = null;
         try {
-            JCObject objWhenAll = (JCObject)classType.Invoke("WhenAll", (java.lang.Object)toObjectFromArray(tasks));
+            retObjectWhenAll = classType.Invoke("WhenAll", (java.lang.Object)toObjectFromArray(tasks));
+            JCObject objWhenAll = (JCObject)retObjectWhenAll;
             return new Task(objWhenAll);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWhenAll != null ? retObjectWhenAll.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -549,7 +712,7 @@ public class Task extends NetObject implements AutoCloseable {
 
     public void Dispose() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
@@ -559,7 +722,7 @@ public class Task extends NetObject implements AutoCloseable {
 
     public void RunSynchronously() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.OperationCanceledException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RunSynchronously");
         } catch (JCNativeException jcne) {
@@ -569,7 +732,7 @@ public class Task extends NetObject implements AutoCloseable {
 
     public void RunSynchronously(TaskScheduler scheduler) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.OutOfMemoryException, system.OperationCanceledException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RunSynchronously", scheduler == null ? null : scheduler.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -579,7 +742,7 @@ public class Task extends NetObject implements AutoCloseable {
 
     public void Start() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Start");
         } catch (JCNativeException jcne) {
@@ -589,7 +752,7 @@ public class Task extends NetObject implements AutoCloseable {
 
     public void Start(TaskScheduler scheduler) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.diagnostics.tracing.EventSourceException, system.ArgumentNullException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Start", scheduler == null ? null : scheduler.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -599,7 +762,7 @@ public class Task extends NetObject implements AutoCloseable {
 
     public void Wait() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.threading.tasks.TaskSchedulerException, system.threading.SynchronizationLockException, system.OutOfMemoryException, system.OperationCanceledException, system.FormatException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Wait");
         } catch (JCNativeException jcne) {
@@ -609,7 +772,7 @@ public class Task extends NetObject implements AutoCloseable {
 
     public void Wait(CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.threading.tasks.TaskSchedulerException, system.threading.SynchronizationLockException, system.OutOfMemoryException, system.OperationCanceledException, system.FormatException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Wait", cancellationToken == null ? null : cancellationToken.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -619,7 +782,7 @@ public class Task extends NetObject implements AutoCloseable {
 
     public static void WaitAll(Task[] tasks, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OperationCanceledException, system.threading.tasks.TaskSchedulerException, system.IndexOutOfRangeException, system.FormatException, system.AggregateException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("WaitAll", toObjectFromArray(tasks), cancellationToken == null ? null : cancellationToken.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -629,7 +792,7 @@ public class Task extends NetObject implements AutoCloseable {
 
     public static void WaitAll(Task... tasks) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OperationCanceledException, system.threading.tasks.TaskSchedulerException, system.IndexOutOfRangeException, system.FormatException, system.AggregateException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("WaitAll", (java.lang.Object)toObjectFromArray(tasks));
         } catch (JCNativeException jcne) {
@@ -640,7 +803,7 @@ public class Task extends NetObject implements AutoCloseable {
     public void close() throws Exception {
         try {
             if (classInstance == null)
-                throw new UnsupportedOperationException("classInstance is null.");
+                throw new java.lang.UnsupportedOperationException("classInstance is null.");
             try {
                 classInstance.Invoke("Dispose");
             }
@@ -656,9 +819,13 @@ public class Task extends NetObject implements AutoCloseable {
     
     public boolean getIsCanceled() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsCanceled = null;
         try {
-            return (boolean)classInstance.Get("IsCanceled");
+            retObjectIsCanceled = classInstance.Get("IsCanceled");
+            return (boolean)retObjectIsCanceled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsCanceled != null ? retObjectIsCanceled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -666,9 +833,13 @@ public class Task extends NetObject implements AutoCloseable {
 
     public boolean getIsCompleted() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsCompleted = null;
         try {
-            return (boolean)classInstance.Get("IsCompleted");
+            retObjectIsCompleted = classInstance.Get("IsCompleted");
+            return (boolean)retObjectIsCompleted;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsCompleted != null ? retObjectIsCompleted.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -676,9 +847,13 @@ public class Task extends NetObject implements AutoCloseable {
 
     public boolean getIsCompletedSuccessfully() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsCompletedSuccessfully = null;
         try {
-            return (boolean)classInstance.Get("IsCompletedSuccessfully");
+            retObjectIsCompletedSuccessfully = classInstance.Get("IsCompletedSuccessfully");
+            return (boolean)retObjectIsCompletedSuccessfully;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsCompletedSuccessfully != null ? retObjectIsCompletedSuccessfully.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -686,9 +861,13 @@ public class Task extends NetObject implements AutoCloseable {
 
     public boolean getIsFaulted() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsFaulted = null;
         try {
-            return (boolean)classInstance.Get("IsFaulted");
+            retObjectIsFaulted = classInstance.Get("IsFaulted");
+            return (boolean)retObjectIsFaulted;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsFaulted != null ? retObjectIsFaulted.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -696,9 +875,20 @@ public class Task extends NetObject implements AutoCloseable {
 
     public int getId() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectId = null;
         try {
-            return (int)classInstance.Get("Id");
+            retObjectId = classInstance.Get("Id");
+            return (int)retObjectId;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectId_ToString = retObjectId == null ? "null" : retObjectId.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectIdNumber = (java.lang.Number)retObjectId;
+                return retObjectIdNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectId != null ? retObjectId.getClass() : "null", retObjectId_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -706,10 +896,14 @@ public class Task extends NetObject implements AutoCloseable {
 
     public AggregateException getException() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.TypeLoadException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectException = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Exception");
+            retObjectException = classInstance.Get("Exception");
+            JCObject val = (JCObject)retObjectException;
             return new AggregateException(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectException != null ? retObjectException.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -717,10 +911,14 @@ public class Task extends NetObject implements AutoCloseable {
 
     public NetObject getAsyncState() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAsyncState = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AsyncState");
+            retObjectAsyncState = classInstance.Get("AsyncState");
+            JCObject val = (JCObject)retObjectAsyncState;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAsyncState != null ? retObjectAsyncState.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -728,10 +926,14 @@ public class Task extends NetObject implements AutoCloseable {
 
     public static Task getCompletedTask() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCompletedTask = null;
         try {
-            JCObject val = (JCObject)classType.Get("CompletedTask");
+            retObjectCompletedTask = classType.Get("CompletedTask");
+            JCObject val = (JCObject)retObjectCompletedTask;
             return new Task(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCompletedTask != null ? retObjectCompletedTask.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -739,10 +941,14 @@ public class Task extends NetObject implements AutoCloseable {
 
     public TaskCreationOptions getCreationOptions() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreationOptions = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CreationOptions");
+            retObjectCreationOptions = classInstance.Get("CreationOptions");
+            JCObject val = (JCObject)retObjectCreationOptions;
             return new TaskCreationOptions(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreationOptions != null ? retObjectCreationOptions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -750,10 +956,14 @@ public class Task extends NetObject implements AutoCloseable {
 
     public static TaskFactory getFactory() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFactory = null;
         try {
-            JCObject val = (JCObject)classType.Get("Factory");
+            retObjectFactory = classType.Get("Factory");
+            JCObject val = (JCObject)retObjectFactory;
             return new TaskFactory(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFactory != null ? retObjectFactory.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -761,10 +971,14 @@ public class Task extends NetObject implements AutoCloseable {
 
     public TaskStatus getStatus() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStatus = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Status");
+            retObjectStatus = classInstance.Get("Status");
+            JCObject val = (JCObject)retObjectStatus;
             return new TaskStatus(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStatus != null ? retObjectStatus.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

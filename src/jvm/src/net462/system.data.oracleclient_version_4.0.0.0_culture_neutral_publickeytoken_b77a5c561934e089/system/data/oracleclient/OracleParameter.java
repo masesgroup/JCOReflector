@@ -228,7 +228,7 @@ public class OracleParameter extends DbParameter implements system.ICloneable {
     
     public void ResetDbType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ResetDbType");
         } catch (JCNativeException jcne) {
@@ -238,7 +238,7 @@ public class OracleParameter extends DbParameter implements system.ICloneable {
 
     public void ResetOracleType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ResetOracleType");
         } catch (JCNativeException jcne) {
@@ -252,7 +252,7 @@ public class OracleParameter extends DbParameter implements system.ICloneable {
      */
     @Deprecated 
     public NetObject Clone() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICloneable to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICloneable to obtain the full interface.");
     }
 
 
@@ -261,9 +261,20 @@ public class OracleParameter extends DbParameter implements system.ICloneable {
     
     public byte getPrecision() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPrecision = null;
         try {
-            return (byte)classInstance.Get("Precision");
+            retObjectPrecision = classInstance.Get("Precision");
+            return (byte)retObjectPrecision;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectPrecision_ToString = retObjectPrecision == null ? "null" : retObjectPrecision.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectPrecisionNumber = (java.lang.Number)retObjectPrecision;
+                return retObjectPrecisionNumber.byteValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into byte and, as fallback solution, into java.lang.Number", retObjectPrecision != null ? retObjectPrecision.getClass() : "null", retObjectPrecision_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -271,7 +282,7 @@ public class OracleParameter extends DbParameter implements system.ICloneable {
 
     public void setPrecision(byte Precision) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Precision", Precision);
         } catch (JCNativeException jcne) {
@@ -281,9 +292,20 @@ public class OracleParameter extends DbParameter implements system.ICloneable {
 
     public byte getScale() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectScale = null;
         try {
-            return (byte)classInstance.Get("Scale");
+            retObjectScale = classInstance.Get("Scale");
+            return (byte)retObjectScale;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectScale_ToString = retObjectScale == null ? "null" : retObjectScale.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectScaleNumber = (java.lang.Number)retObjectScale;
+                return retObjectScaleNumber.byteValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into byte and, as fallback solution, into java.lang.Number", retObjectScale != null ? retObjectScale.getClass() : "null", retObjectScale_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -291,7 +313,7 @@ public class OracleParameter extends DbParameter implements system.ICloneable {
 
     public void setScale(byte Scale) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Scale", Scale);
         } catch (JCNativeException jcne) {
@@ -301,9 +323,20 @@ public class OracleParameter extends DbParameter implements system.ICloneable {
 
     public int getOffset() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOffset = null;
         try {
-            return (int)classInstance.Get("Offset");
+            retObjectOffset = classInstance.Get("Offset");
+            return (int)retObjectOffset;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectOffset_ToString = retObjectOffset == null ? "null" : retObjectOffset.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectOffsetNumber = (java.lang.Number)retObjectOffset;
+                return retObjectOffsetNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectOffset != null ? retObjectOffset.getClass() : "null", retObjectOffset_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -311,7 +344,7 @@ public class OracleParameter extends DbParameter implements system.ICloneable {
 
     public void setOffset(int Offset) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Offset", Offset);
         } catch (JCNativeException jcne) {
@@ -321,10 +354,14 @@ public class OracleParameter extends DbParameter implements system.ICloneable {
 
     public OracleType getOracleType() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOracleType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("OracleType");
+            retObjectOracleType = classInstance.Get("OracleType");
+            JCObject val = (JCObject)retObjectOracleType;
             return new OracleType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOracleType != null ? retObjectOracleType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -332,7 +369,7 @@ public class OracleParameter extends DbParameter implements system.ICloneable {
 
     public void setOracleType(OracleType OracleType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("OracleType", OracleType == null ? null : OracleType.getJCOInstance());
         } catch (JCNativeException jcne) {

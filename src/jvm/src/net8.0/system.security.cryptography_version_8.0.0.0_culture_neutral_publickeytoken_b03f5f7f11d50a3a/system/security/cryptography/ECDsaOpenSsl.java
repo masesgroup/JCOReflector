@@ -194,9 +194,13 @@ public class ECDsaOpenSsl extends ECDsa  {
     
     public boolean VerifyHash(byte[] hash, byte[] signature) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVerifyHash = null;
         try {
-            return (boolean)classInstance.Invoke("VerifyHash", hash, signature);
+            retObjectVerifyHash = classInstance.Invoke("VerifyHash", hash, signature);
+            return (boolean)retObjectVerifyHash;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectVerifyHash != null ? retObjectVerifyHash.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -204,9 +208,13 @@ public class ECDsaOpenSsl extends ECDsa  {
 
     public boolean VerifyHash(JCORefOut dupParam0, JCORefOut dupParam1) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVerifyHash = null;
         try {
-            return (boolean)classInstance.Invoke("VerifyHash", dupParam0.getJCRefOut(), dupParam1.getJCRefOut());
+            retObjectVerifyHash = classInstance.Invoke("VerifyHash", dupParam0.getJCRefOut(), dupParam1.getJCRefOut());
+            return (boolean)retObjectVerifyHash;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectVerifyHash != null ? retObjectVerifyHash.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -214,10 +222,12 @@ public class ECDsaOpenSsl extends ECDsa  {
 
     public byte[] SignHash(byte[] hash) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSignHash = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("SignHash", (java.lang.Object)hash);
+            retObjectSignHash = classInstance.Invoke("SignHash", (java.lang.Object)hash);
+            JCObject resultingObjects = (JCObject)retObjectSignHash;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -226,6 +236,8 @@ public class ECDsaOpenSsl extends ECDsa  {
 				resultingArray[indexSignHash] = (byte)resultingArrayList.get(indexSignHash);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectSignHash != null ? retObjectSignHash.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -233,10 +245,12 @@ public class ECDsaOpenSsl extends ECDsa  {
 
     public byte[] SignHash(JCORefOut dupParam0) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSignHash = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("SignHash", (java.lang.Object)dupParam0.getJCRefOut());
+            retObjectSignHash = classInstance.Invoke("SignHash", (java.lang.Object)dupParam0.getJCRefOut());
+            JCObject resultingObjects = (JCObject)retObjectSignHash;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -245,6 +259,8 @@ public class ECDsaOpenSsl extends ECDsa  {
 				resultingArray[indexSignHash] = (byte)resultingArrayList.get(indexSignHash);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectSignHash != null ? retObjectSignHash.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -252,10 +268,14 @@ public class ECDsaOpenSsl extends ECDsa  {
 
     public SafeEvpPKeyHandle DuplicateKeyHandle() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDuplicateKeyHandle = null;
         try {
-            JCObject objDuplicateKeyHandle = (JCObject)classInstance.Invoke("DuplicateKeyHandle");
+            retObjectDuplicateKeyHandle = classInstance.Invoke("DuplicateKeyHandle");
+            JCObject objDuplicateKeyHandle = (JCObject)retObjectDuplicateKeyHandle;
             return new SafeEvpPKeyHandle(objDuplicateKeyHandle);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDuplicateKeyHandle != null ? retObjectDuplicateKeyHandle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

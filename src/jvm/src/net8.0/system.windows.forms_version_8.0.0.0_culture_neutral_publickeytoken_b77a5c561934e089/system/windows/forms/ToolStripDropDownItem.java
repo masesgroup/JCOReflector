@@ -159,7 +159,7 @@ public class ToolStripDropDownItem extends ToolStripItem  {
     
     public void HideDropDown() throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.componentmodel.Win32Exception, system.MulticastNotSupportedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("HideDropDown");
         } catch (JCNativeException jcne) {
@@ -169,7 +169,7 @@ public class ToolStripDropDownItem extends ToolStripItem  {
 
     public void ShowDropDown() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.MulticastNotSupportedException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.NotSupportedException, system.OutOfMemoryException, system.ArrayTypeMismatchException, system.FormatException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ShowDropDown");
         } catch (JCNativeException jcne) {
@@ -183,9 +183,13 @@ public class ToolStripDropDownItem extends ToolStripItem  {
     
     public boolean getHasDropDown() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHasDropDown = null;
         try {
-            return (boolean)classInstance.Get("HasDropDown");
+            retObjectHasDropDown = classInstance.Get("HasDropDown");
+            return (boolean)retObjectHasDropDown;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectHasDropDown != null ? retObjectHasDropDown.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,9 +197,13 @@ public class ToolStripDropDownItem extends ToolStripItem  {
 
     public boolean getHasDropDownItems() throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHasDropDownItems = null;
         try {
-            return (boolean)classInstance.Get("HasDropDownItems");
+            retObjectHasDropDownItems = classInstance.Get("HasDropDownItems");
+            return (boolean)retObjectHasDropDownItems;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectHasDropDownItems != null ? retObjectHasDropDownItems.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,10 +211,14 @@ public class ToolStripDropDownItem extends ToolStripItem  {
 
     public ToolStripDropDown getDropDown() throws Throwable, system.ArgumentOutOfRangeException, system.componentmodel.Win32Exception, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDropDown = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DropDown");
+            retObjectDropDown = classInstance.Get("DropDown");
+            JCObject val = (JCObject)retObjectDropDown;
             return new ToolStripDropDown(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDropDown != null ? retObjectDropDown.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -214,7 +226,7 @@ public class ToolStripDropDownItem extends ToolStripItem  {
 
     public void setDropDown(ToolStripDropDown DropDown) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DropDown", DropDown == null ? null : DropDown.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -224,10 +236,14 @@ public class ToolStripDropDownItem extends ToolStripItem  {
 
     public ToolStripDropDownDirection getDropDownDirection() throws Throwable, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.ArgumentOutOfRangeException, system.ArgumentException, system.componentmodel.Win32Exception, system.PlatformNotSupportedException, system.RankException, system.ArrayTypeMismatchException, system.MulticastNotSupportedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDropDownDirection = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DropDownDirection");
+            retObjectDropDownDirection = classInstance.Get("DropDownDirection");
+            JCObject val = (JCObject)retObjectDropDownDirection;
             return new ToolStripDropDownDirection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDropDownDirection != null ? retObjectDropDownDirection.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -235,7 +251,7 @@ public class ToolStripDropDownItem extends ToolStripItem  {
 
     public void setDropDownDirection(ToolStripDropDownDirection DropDownDirection) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DropDownDirection", DropDownDirection == null ? null : DropDownDirection.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -245,10 +261,14 @@ public class ToolStripDropDownItem extends ToolStripItem  {
 
     public ToolStripItemCollection getDropDownItems() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.componentmodel.Win32Exception, system.PlatformNotSupportedException, system.NotSupportedException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDropDownItems = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DropDownItems");
+            retObjectDropDownItems = classInstance.Get("DropDownItems");
+            JCObject val = (JCObject)retObjectDropDownItems;
             return new ToolStripItemCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDropDownItems != null ? retObjectDropDownItems.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -261,7 +281,7 @@ public class ToolStripDropDownItem extends ToolStripItem  {
 
     public void addDropDownClosed(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("DropDownClosed", handler);
         } catch (JCNativeException jcne) {
@@ -271,7 +291,7 @@ public class ToolStripDropDownItem extends ToolStripItem  {
 
     public void removeDropDownClosed(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("DropDownClosed", handler);
         } catch (JCNativeException jcne) {
@@ -281,7 +301,7 @@ public class ToolStripDropDownItem extends ToolStripItem  {
 
     public void addDropDownOpened(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("DropDownOpened", handler);
         } catch (JCNativeException jcne) {
@@ -291,7 +311,7 @@ public class ToolStripDropDownItem extends ToolStripItem  {
 
     public void removeDropDownOpened(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("DropDownOpened", handler);
         } catch (JCNativeException jcne) {
@@ -301,7 +321,7 @@ public class ToolStripDropDownItem extends ToolStripItem  {
 
     public void addDropDownOpening(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("DropDownOpening", handler);
         } catch (JCNativeException jcne) {
@@ -311,7 +331,7 @@ public class ToolStripDropDownItem extends ToolStripItem  {
 
     public void removeDropDownOpening(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("DropDownOpening", handler);
         } catch (JCNativeException jcne) {
@@ -321,7 +341,7 @@ public class ToolStripDropDownItem extends ToolStripItem  {
 
     public void addDropDownItemClicked(ToolStripItemClickedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("DropDownItemClicked", handler);
         } catch (JCNativeException jcne) {
@@ -331,7 +351,7 @@ public class ToolStripDropDownItem extends ToolStripItem  {
 
     public void removeDropDownItemClicked(ToolStripItemClickedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("DropDownItemClicked", handler);
         } catch (JCNativeException jcne) {

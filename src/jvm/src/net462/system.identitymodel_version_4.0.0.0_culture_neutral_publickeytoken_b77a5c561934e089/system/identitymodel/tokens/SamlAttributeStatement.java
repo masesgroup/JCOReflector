@@ -168,7 +168,7 @@ public class SamlAttributeStatement extends SamlSubjectStatement  {
     
     public void MakeReadOnly() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("MakeReadOnly");
         } catch (JCNativeException jcne) {
@@ -178,7 +178,7 @@ public class SamlAttributeStatement extends SamlSubjectStatement  {
 
     public void ReadXml(XmlDictionaryReader reader, SamlSerializer samlSerializer, SecurityTokenSerializer keyInfoSerializer, SecurityTokenResolver outOfBandTokenResolver) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException, system.xml.XmlException, system.NotSupportedException, system.security.cryptography.CryptographicException, system.AccessViolationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ReadXml", reader == null ? null : reader.getJCOInstance(), samlSerializer == null ? null : samlSerializer.getJCOInstance(), keyInfoSerializer == null ? null : keyInfoSerializer.getJCOInstance(), outOfBandTokenResolver == null ? null : outOfBandTokenResolver.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -188,7 +188,7 @@ public class SamlAttributeStatement extends SamlSubjectStatement  {
 
     public void WriteXml(XmlDictionaryWriter writer, SamlSerializer samlSerializer, SecurityTokenSerializer keyInfoSerializer) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteXml", writer == null ? null : writer.getJCOInstance(), samlSerializer == null ? null : samlSerializer.getJCOInstance(), keyInfoSerializer == null ? null : keyInfoSerializer.getJCOInstance());
         } catch (JCNativeException jcne) {

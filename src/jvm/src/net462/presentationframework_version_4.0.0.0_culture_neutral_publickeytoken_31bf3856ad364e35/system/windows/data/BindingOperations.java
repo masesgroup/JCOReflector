@@ -164,9 +164,13 @@ public class BindingOperations extends NetObject  {
     
     public static boolean IsDataBound(DependencyObject target, DependencyProperty dp) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsDataBound = null;
         try {
-            return (boolean)classType.Invoke("IsDataBound", target == null ? null : target.getJCOInstance(), dp == null ? null : dp.getJCOInstance());
+            retObjectIsDataBound = classType.Invoke("IsDataBound", target == null ? null : target.getJCOInstance(), dp == null ? null : dp.getJCOInstance());
+            return (boolean)retObjectIsDataBound;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsDataBound != null ? retObjectIsDataBound.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -174,10 +178,14 @@ public class BindingOperations extends NetObject  {
 
     public static system.windows.data.Binding GetBinding(DependencyObject target, DependencyProperty dp) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetBinding = null;
         try {
-            JCObject objGetBinding = (JCObject)classType.Invoke("GetBinding", target == null ? null : target.getJCOInstance(), dp == null ? null : dp.getJCOInstance());
+            retObjectGetBinding = classType.Invoke("GetBinding", target == null ? null : target.getJCOInstance(), dp == null ? null : dp.getJCOInstance());
+            JCObject objGetBinding = (JCObject)retObjectGetBinding;
             return new system.windows.data.Binding(objGetBinding);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetBinding != null ? retObjectGetBinding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -185,10 +193,14 @@ public class BindingOperations extends NetObject  {
 
     public static BindingBase GetBindingBase(DependencyObject target, DependencyProperty dp) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetBindingBase = null;
         try {
-            JCObject objGetBindingBase = (JCObject)classType.Invoke("GetBindingBase", target == null ? null : target.getJCOInstance(), dp == null ? null : dp.getJCOInstance());
+            retObjectGetBindingBase = classType.Invoke("GetBindingBase", target == null ? null : target.getJCOInstance(), dp == null ? null : dp.getJCOInstance());
+            JCObject objGetBindingBase = (JCObject)retObjectGetBindingBase;
             return new BindingBase(objGetBindingBase);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetBindingBase != null ? retObjectGetBindingBase.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,10 +208,14 @@ public class BindingOperations extends NetObject  {
 
     public static BindingExpression GetBindingExpression(DependencyObject target, DependencyProperty dp) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetBindingExpression = null;
         try {
-            JCObject objGetBindingExpression = (JCObject)classType.Invoke("GetBindingExpression", target == null ? null : target.getJCOInstance(), dp == null ? null : dp.getJCOInstance());
+            retObjectGetBindingExpression = classType.Invoke("GetBindingExpression", target == null ? null : target.getJCOInstance(), dp == null ? null : dp.getJCOInstance());
+            JCObject objGetBindingExpression = (JCObject)retObjectGetBindingExpression;
             return new BindingExpression(objGetBindingExpression);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetBindingExpression != null ? retObjectGetBindingExpression.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -207,10 +223,14 @@ public class BindingOperations extends NetObject  {
 
     public static BindingExpressionBase GetBindingExpressionBase(DependencyObject target, DependencyProperty dp) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetBindingExpressionBase = null;
         try {
-            JCObject objGetBindingExpressionBase = (JCObject)classType.Invoke("GetBindingExpressionBase", target == null ? null : target.getJCOInstance(), dp == null ? null : dp.getJCOInstance());
+            retObjectGetBindingExpressionBase = classType.Invoke("GetBindingExpressionBase", target == null ? null : target.getJCOInstance(), dp == null ? null : dp.getJCOInstance());
+            JCObject objGetBindingExpressionBase = (JCObject)retObjectGetBindingExpressionBase;
             return new BindingExpressionBase(objGetBindingExpressionBase);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetBindingExpressionBase != null ? retObjectGetBindingExpressionBase.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -218,10 +238,14 @@ public class BindingOperations extends NetObject  {
 
     public static BindingExpressionBase SetBinding(DependencyObject target, DependencyProperty dp, BindingBase binding) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSetBinding = null;
         try {
-            JCObject objSetBinding = (JCObject)classType.Invoke("SetBinding", target == null ? null : target.getJCOInstance(), dp == null ? null : dp.getJCOInstance(), binding == null ? null : binding.getJCOInstance());
+            retObjectSetBinding = classType.Invoke("SetBinding", target == null ? null : target.getJCOInstance(), dp == null ? null : dp.getJCOInstance(), binding == null ? null : binding.getJCOInstance());
+            JCObject objSetBinding = (JCObject)retObjectSetBinding;
             return new BindingExpressionBase(objSetBinding);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSetBinding != null ? retObjectSetBinding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -229,10 +253,14 @@ public class BindingOperations extends NetObject  {
 
     public static MultiBinding GetMultiBinding(DependencyObject target, DependencyProperty dp) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetMultiBinding = null;
         try {
-            JCObject objGetMultiBinding = (JCObject)classType.Invoke("GetMultiBinding", target == null ? null : target.getJCOInstance(), dp == null ? null : dp.getJCOInstance());
+            retObjectGetMultiBinding = classType.Invoke("GetMultiBinding", target == null ? null : target.getJCOInstance(), dp == null ? null : dp.getJCOInstance());
+            JCObject objGetMultiBinding = (JCObject)retObjectGetMultiBinding;
             return new MultiBinding(objGetMultiBinding);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetMultiBinding != null ? retObjectGetMultiBinding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -240,10 +268,14 @@ public class BindingOperations extends NetObject  {
 
     public static MultiBindingExpression GetMultiBindingExpression(DependencyObject target, DependencyProperty dp) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetMultiBindingExpression = null;
         try {
-            JCObject objGetMultiBindingExpression = (JCObject)classType.Invoke("GetMultiBindingExpression", target == null ? null : target.getJCOInstance(), dp == null ? null : dp.getJCOInstance());
+            retObjectGetMultiBindingExpression = classType.Invoke("GetMultiBindingExpression", target == null ? null : target.getJCOInstance(), dp == null ? null : dp.getJCOInstance());
+            JCObject objGetMultiBindingExpression = (JCObject)retObjectGetMultiBindingExpression;
             return new MultiBindingExpression(objGetMultiBindingExpression);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetMultiBindingExpression != null ? retObjectGetMultiBindingExpression.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -251,10 +283,14 @@ public class BindingOperations extends NetObject  {
 
     public static PriorityBinding GetPriorityBinding(DependencyObject target, DependencyProperty dp) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetPriorityBinding = null;
         try {
-            JCObject objGetPriorityBinding = (JCObject)classType.Invoke("GetPriorityBinding", target == null ? null : target.getJCOInstance(), dp == null ? null : dp.getJCOInstance());
+            retObjectGetPriorityBinding = classType.Invoke("GetPriorityBinding", target == null ? null : target.getJCOInstance(), dp == null ? null : dp.getJCOInstance());
+            JCObject objGetPriorityBinding = (JCObject)retObjectGetPriorityBinding;
             return new PriorityBinding(objGetPriorityBinding);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetPriorityBinding != null ? retObjectGetPriorityBinding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -262,10 +298,14 @@ public class BindingOperations extends NetObject  {
 
     public static PriorityBindingExpression GetPriorityBindingExpression(DependencyObject target, DependencyProperty dp) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetPriorityBindingExpression = null;
         try {
-            JCObject objGetPriorityBindingExpression = (JCObject)classType.Invoke("GetPriorityBindingExpression", target == null ? null : target.getJCOInstance(), dp == null ? null : dp.getJCOInstance());
+            retObjectGetPriorityBindingExpression = classType.Invoke("GetPriorityBindingExpression", target == null ? null : target.getJCOInstance(), dp == null ? null : dp.getJCOInstance());
+            JCObject objGetPriorityBindingExpression = (JCObject)retObjectGetPriorityBindingExpression;
             return new PriorityBindingExpression(objGetPriorityBindingExpression);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetPriorityBindingExpression != null ? retObjectGetPriorityBindingExpression.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -273,7 +313,7 @@ public class BindingOperations extends NetObject  {
 
     public static void AccessCollection(IEnumerable collection, Action accessMethod, boolean writeAccess) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.InvalidOperationException, system.MulticastNotSupportedException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("AccessCollection", collection == null ? null : collection.getJCOInstance(), accessMethod, writeAccess);
         } catch (JCNativeException jcne) {
@@ -283,7 +323,7 @@ public class BindingOperations extends NetObject  {
 
     public static void ClearAllBindings(DependencyObject target) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("ClearAllBindings", target == null ? null : target.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -293,7 +333,7 @@ public class BindingOperations extends NetObject  {
 
     public static void ClearBinding(DependencyObject target, DependencyProperty dp) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("ClearBinding", target == null ? null : target.getJCOInstance(), dp == null ? null : dp.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -303,7 +343,7 @@ public class BindingOperations extends NetObject  {
 
     public static void DisableCollectionSynchronization(IEnumerable collection) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.InvalidOperationException, system.MulticastNotSupportedException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("DisableCollectionSynchronization", collection == null ? null : collection.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -313,7 +353,7 @@ public class BindingOperations extends NetObject  {
 
     public static void EnableCollectionSynchronization(IEnumerable collection, NetObject lockObject) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.InvalidOperationException, system.MulticastNotSupportedException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("EnableCollectionSynchronization", collection == null ? null : collection.getJCOInstance(), lockObject == null ? null : lockObject.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -323,7 +363,7 @@ public class BindingOperations extends NetObject  {
 
     public static void EnableCollectionSynchronization(IEnumerable collection, NetObject context, CollectionSynchronizationCallback synchronizationCallback) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.InvalidOperationException, system.MulticastNotSupportedException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("EnableCollectionSynchronization", collection == null ? null : collection.getJCOInstance(), context == null ? null : context.getJCOInstance(), synchronizationCallback);
         } catch (JCNativeException jcne) {
@@ -337,10 +377,14 @@ public class BindingOperations extends NetObject  {
     
     public static NetObject getDisconnectedSource() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDisconnectedSource = null;
         try {
-            JCObject val = (JCObject)classType.Get("DisconnectedSource");
+            retObjectDisconnectedSource = classType.Get("DisconnectedSource");
+            JCObject val = (JCObject)retObjectDisconnectedSource;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDisconnectedSource != null ? retObjectDisconnectedSource.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

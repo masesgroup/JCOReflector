@@ -156,10 +156,14 @@ public class ActiveDirectoryRoleFactory extends NetObject  {
     
     public static ActiveDirectoryRole CreateFromAlias(java.lang.String alias) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationErrorsException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationException, system.OutOfMemoryException, system.OverflowException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateFromAlias = null;
         try {
-            JCObject objCreateFromAlias = (JCObject)classType.Invoke("CreateFromAlias", alias);
+            retObjectCreateFromAlias = classType.Invoke("CreateFromAlias", alias);
+            JCObject objCreateFromAlias = (JCObject)retObjectCreateFromAlias;
             return new ActiveDirectoryRole(objCreateFromAlias);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateFromAlias != null ? retObjectCreateFromAlias.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -167,10 +171,14 @@ public class ActiveDirectoryRoleFactory extends NetObject  {
 
     public static ActiveDirectoryRole CreateFromEmailAddress(java.lang.String emailAddress) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationErrorsException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationException, system.OutOfMemoryException, system.OverflowException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateFromEmailAddress = null;
         try {
-            JCObject objCreateFromEmailAddress = (JCObject)classType.Invoke("CreateFromEmailAddress", emailAddress);
+            retObjectCreateFromEmailAddress = classType.Invoke("CreateFromEmailAddress", emailAddress);
+            JCObject objCreateFromEmailAddress = (JCObject)retObjectCreateFromEmailAddress;
             return new ActiveDirectoryRole(objCreateFromEmailAddress);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateFromEmailAddress != null ? retObjectCreateFromEmailAddress.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,10 +186,14 @@ public class ActiveDirectoryRoleFactory extends NetObject  {
 
     public static ActiveDirectoryRole CreateFromSecurityIdentifier(SecurityIdentifier sid) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationErrorsException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationException, system.OutOfMemoryException, system.OverflowException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateFromSecurityIdentifier = null;
         try {
-            JCObject objCreateFromSecurityIdentifier = (JCObject)classType.Invoke("CreateFromSecurityIdentifier", sid == null ? null : sid.getJCOInstance());
+            retObjectCreateFromSecurityIdentifier = classType.Invoke("CreateFromSecurityIdentifier", sid == null ? null : sid.getJCOInstance());
+            JCObject objCreateFromSecurityIdentifier = (JCObject)retObjectCreateFromSecurityIdentifier;
             return new ActiveDirectoryRole(objCreateFromSecurityIdentifier);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateFromSecurityIdentifier != null ? retObjectCreateFromSecurityIdentifier.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,10 +205,14 @@ public class ActiveDirectoryRoleFactory extends NetObject  {
     
     public static ActiveDirectoryRoleFactoryConfiguration getConfiguration() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectConfiguration = null;
         try {
-            JCObject val = (JCObject)classType.Get("Configuration");
+            retObjectConfiguration = classType.Get("Configuration");
+            JCObject val = (JCObject)retObjectConfiguration;
             return new ActiveDirectoryRoleFactoryConfiguration(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConfiguration != null ? retObjectConfiguration.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

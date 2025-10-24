@@ -168,7 +168,7 @@ public class CAccPropServicesClass extends __ComObject  {
     
     public void ClearHmenuProps(JCORefOut<_RemotableHandle> hmenu, UInt32 idChild, JCORefOut<Guid> paProps, int cProps) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ClearHmenuProps", hmenu.getJCRefOut(), idChild == null ? null : idChild.getJCOInstance(), paProps.getJCRefOut(), cProps);
         } catch (JCNativeException jcne) {
@@ -178,7 +178,7 @@ public class CAccPropServicesClass extends __ComObject  {
 
     public void ClearHwndProps(JCORefOut<_RemotableHandle> hwnd, UInt32 idObject, UInt32 idChild, JCORefOut<Guid> paProps, int cProps) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ClearHwndProps", hwnd.getJCRefOut(), idObject == null ? null : idObject.getJCOInstance(), idChild == null ? null : idChild.getJCOInstance(), paProps.getJCRefOut(), cProps);
         } catch (JCNativeException jcne) {
@@ -188,7 +188,7 @@ public class CAccPropServicesClass extends __ComObject  {
 
     public void ClearProps(JCORefOut<java.util.concurrent.atomic.AtomicReference<java.lang.Byte>> pIDString, UInt32 dwIDStringLen, JCORefOut<Guid> paProps, int cProps) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ClearProps", pIDString.getJCRefOut(), dwIDStringLen == null ? null : dwIDStringLen.getJCOInstance(), paProps.getJCRefOut(), cProps);
         } catch (JCNativeException jcne) {
@@ -198,7 +198,7 @@ public class CAccPropServicesClass extends __ComObject  {
 
     public void SetHmenuProp(JCORefOut<_RemotableHandle> hmenu, UInt32 idChild, Guid idProp, NetObject var) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetHmenuProp", hmenu.getJCRefOut(), idChild == null ? null : idChild.getJCOInstance(), idProp == null ? null : idProp.getJCOInstance(), var == null ? null : var.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -208,7 +208,7 @@ public class CAccPropServicesClass extends __ComObject  {
 
     public void SetHmenuPropServer(JCORefOut<_RemotableHandle> hmenu, UInt32 idChild, JCORefOut<Guid> paProps, int cProps, IAccPropServer pServer, AnnoScope AnnoScope) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetHmenuPropServer", hmenu.getJCRefOut(), idChild == null ? null : idChild.getJCOInstance(), paProps.getJCRefOut(), cProps, pServer == null ? null : pServer.getJCOInstance(), AnnoScope == null ? null : AnnoScope.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -218,7 +218,7 @@ public class CAccPropServicesClass extends __ComObject  {
 
     public void SetHmenuPropStr(JCORefOut<_RemotableHandle> hmenu, UInt32 idChild, Guid idProp, java.lang.String str) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetHmenuPropStr", hmenu.getJCRefOut(), idChild == null ? null : idChild.getJCOInstance(), idProp == null ? null : idProp.getJCOInstance(), str);
         } catch (JCNativeException jcne) {
@@ -228,7 +228,7 @@ public class CAccPropServicesClass extends __ComObject  {
 
     public void SetHwndProp(JCORefOut<_RemotableHandle> hwnd, UInt32 idObject, UInt32 idChild, Guid idProp, NetObject var) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetHwndProp", hwnd.getJCRefOut(), idObject == null ? null : idObject.getJCOInstance(), idChild == null ? null : idChild.getJCOInstance(), idProp == null ? null : idProp.getJCOInstance(), var == null ? null : var.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -238,7 +238,7 @@ public class CAccPropServicesClass extends __ComObject  {
 
     public void SetHwndPropServer(JCORefOut<_RemotableHandle> hwnd, UInt32 idObject, UInt32 idChild, JCORefOut<Guid> paProps, int cProps, IAccPropServer pServer, AnnoScope AnnoScope) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetHwndPropServer", hwnd.getJCRefOut(), idObject == null ? null : idObject.getJCOInstance(), idChild == null ? null : idChild.getJCOInstance(), paProps.getJCRefOut(), cProps, pServer == null ? null : pServer.getJCOInstance(), AnnoScope == null ? null : AnnoScope.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -248,7 +248,7 @@ public class CAccPropServicesClass extends __ComObject  {
 
     public void SetHwndPropStr(JCORefOut<_RemotableHandle> hwnd, UInt32 idObject, UInt32 idChild, Guid idProp, java.lang.String str) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetHwndPropStr", hwnd.getJCRefOut(), idObject == null ? null : idObject.getJCOInstance(), idChild == null ? null : idChild.getJCOInstance(), idProp == null ? null : idProp.getJCOInstance(), str);
         } catch (JCNativeException jcne) {
@@ -258,7 +258,7 @@ public class CAccPropServicesClass extends __ComObject  {
 
     public void SetPropServer(JCORefOut<java.util.concurrent.atomic.AtomicReference<java.lang.Byte>> pIDString, UInt32 dwIDStringLen, JCORefOut<Guid> paProps, int cProps, IAccPropServer pServer, AnnoScope AnnoScope) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetPropServer", pIDString.getJCRefOut(), dwIDStringLen == null ? null : dwIDStringLen.getJCOInstance(), paProps.getJCRefOut(), cProps, pServer == null ? null : pServer.getJCOInstance(), AnnoScope == null ? null : AnnoScope.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -268,7 +268,7 @@ public class CAccPropServicesClass extends __ComObject  {
 
     public void SetPropValue(JCORefOut<java.util.concurrent.atomic.AtomicReference<java.lang.Byte>> pIDString, UInt32 dwIDStringLen, Guid idProp, NetObject var) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetPropValue", pIDString.getJCRefOut(), dwIDStringLen == null ? null : dwIDStringLen.getJCOInstance(), idProp == null ? null : idProp.getJCOInstance(), var == null ? null : var.getJCOInstance());
         } catch (JCNativeException jcne) {

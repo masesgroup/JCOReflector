@@ -197,7 +197,7 @@ public class Condition extends NetObject implements system.componentmodel.ISuppo
     
     public static void ReceiveMarkupExtension(NetObject targetObject, XamlSetMarkupExtensionEventArgs eventArgs) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("ReceiveMarkupExtension", targetObject == null ? null : targetObject.getJCOInstance(), eventArgs == null ? null : eventArgs.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -207,7 +207,7 @@ public class Condition extends NetObject implements system.componentmodel.ISuppo
 
     public static void ReceiveTypeConverter(NetObject targetObject, XamlSetTypeConverterEventArgs eventArgs) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("ReceiveTypeConverter", targetObject == null ? null : targetObject.getJCOInstance(), eventArgs == null ? null : eventArgs.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -221,7 +221,7 @@ public class Condition extends NetObject implements system.componentmodel.ISuppo
      */
     @Deprecated 
     public void BeginInit() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToISupportInitialize to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToISupportInitialize to obtain the full interface.");
     }
 
     /**
@@ -230,7 +230,7 @@ public class Condition extends NetObject implements system.componentmodel.ISuppo
      */
     @Deprecated 
     public void EndInit() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToISupportInitialize to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToISupportInitialize to obtain the full interface.");
     }
 
 
@@ -239,10 +239,14 @@ public class Condition extends NetObject implements system.componentmodel.ISuppo
     
     public NetObject getValue() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValue = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Value");
+            retObjectValue = classInstance.Get("Value");
+            JCObject val = (JCObject)retObjectValue;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectValue != null ? retObjectValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -250,7 +254,7 @@ public class Condition extends NetObject implements system.componentmodel.ISuppo
 
     public void setValue(NetObject Value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Value", Value == null ? null : Value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -260,9 +264,13 @@ public class Condition extends NetObject implements system.componentmodel.ISuppo
 
     public java.lang.String getSourceName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSourceName = null;
         try {
-            return (java.lang.String)classInstance.Get("SourceName");
+            retObjectSourceName = classInstance.Get("SourceName");
+            return (java.lang.String)retObjectSourceName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSourceName != null ? retObjectSourceName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -270,7 +278,7 @@ public class Condition extends NetObject implements system.componentmodel.ISuppo
 
     public void setSourceName(java.lang.String SourceName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SourceName", SourceName);
         } catch (JCNativeException jcne) {
@@ -280,10 +288,14 @@ public class Condition extends NetObject implements system.componentmodel.ISuppo
 
     public BindingBase getBinding() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBinding = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Binding");
+            retObjectBinding = classInstance.Get("Binding");
+            JCObject val = (JCObject)retObjectBinding;
             return new BindingBase(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBinding != null ? retObjectBinding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -291,7 +303,7 @@ public class Condition extends NetObject implements system.componentmodel.ISuppo
 
     public void setBinding(BindingBase Binding) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Binding", Binding == null ? null : Binding.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -301,10 +313,14 @@ public class Condition extends NetObject implements system.componentmodel.ISuppo
 
     public DependencyProperty getProperty() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProperty = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Property");
+            retObjectProperty = classInstance.Get("Property");
+            JCObject val = (JCObject)retObjectProperty;
             return new DependencyProperty(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectProperty != null ? retObjectProperty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -312,7 +328,7 @@ public class Condition extends NetObject implements system.componentmodel.ISuppo
 
     public void setProperty(DependencyProperty Property) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Property", Property == null ? null : Property.getJCOInstance());
         } catch (JCNativeException jcne) {

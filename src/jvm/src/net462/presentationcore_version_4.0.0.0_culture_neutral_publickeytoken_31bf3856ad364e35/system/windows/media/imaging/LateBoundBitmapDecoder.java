@@ -163,10 +163,14 @@ public class LateBoundBitmapDecoder extends BitmapDecoder  {
     
     public BitmapDecoder getDecoder() throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.UnauthorizedAccessException, system.io.IOException, system.UriFormatException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.deployment.application.InvalidDeploymentException, system.NotSupportedException, system.net.WebException, system.net.CookieException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDecoder = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Decoder");
+            retObjectDecoder = classInstance.Get("Decoder");
+            JCObject val = (JCObject)retObjectDecoder;
             return new BitmapDecoder(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDecoder != null ? retObjectDecoder.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

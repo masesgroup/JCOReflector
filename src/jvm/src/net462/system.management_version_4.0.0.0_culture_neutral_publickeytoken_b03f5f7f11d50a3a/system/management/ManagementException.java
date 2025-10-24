@@ -174,7 +174,7 @@ public class ManagementException extends SystemException {
     
     public void GetObjectData(SerializationInfo info, StreamingContext context) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.security.SecurityException, system.TypeLoadException, system.NotSupportedException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.NotImplementedException, system.runtime.serialization.SerializationException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetObjectData", info == null ? null : info.getJCOInstance(), context == null ? null : context.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -188,10 +188,14 @@ public class ManagementException extends SystemException {
     
     public ManagementBaseObject getErrorInformation() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectErrorInformation = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ErrorInformation");
+            retObjectErrorInformation = classInstance.Get("ErrorInformation");
+            JCObject val = (JCObject)retObjectErrorInformation;
             return new ManagementBaseObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectErrorInformation != null ? retObjectErrorInformation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -199,10 +203,14 @@ public class ManagementException extends SystemException {
 
     public ManagementStatus getErrorCode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectErrorCode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ErrorCode");
+            retObjectErrorCode = classInstance.Get("ErrorCode");
+            JCObject val = (JCObject)retObjectErrorCode;
             return new ManagementStatus(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectErrorCode != null ? retObjectErrorCode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

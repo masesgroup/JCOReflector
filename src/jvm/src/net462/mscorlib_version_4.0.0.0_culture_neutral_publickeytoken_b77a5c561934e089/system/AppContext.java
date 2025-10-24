@@ -153,9 +153,13 @@ public class AppContext extends NetObject  {
     
     public static boolean TryGetSwitch(java.lang.String switchName, JCORefOut<java.util.concurrent.atomic.AtomicBoolean> isEnabled) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTryGetSwitch = null;
         try {
-            return (boolean)classType.Invoke("TryGetSwitch", switchName, isEnabled.getJCRefOut());
+            retObjectTryGetSwitch = classType.Invoke("TryGetSwitch", switchName, isEnabled.getJCRefOut());
+            return (boolean)retObjectTryGetSwitch;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryGetSwitch != null ? retObjectTryGetSwitch.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -163,10 +167,14 @@ public class AppContext extends NetObject  {
 
     public static NetObject GetData(java.lang.String name) throws Throwable, system.ArgumentNullException, system.NullReferenceException, system.ArgumentOutOfRangeException, system.ArgumentException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.io.PathTooLongException, system.MemberAccessException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetData = null;
         try {
-            JCObject objGetData = (JCObject)classType.Invoke("GetData", name);
+            retObjectGetData = classType.Invoke("GetData", name);
+            JCObject objGetData = (JCObject)retObjectGetData;
             return new NetObject(objGetData);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetData != null ? retObjectGetData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -174,7 +182,7 @@ public class AppContext extends NetObject  {
 
     public static void SetSwitch(java.lang.String switchName, boolean isEnabled) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetSwitch", switchName, isEnabled);
         } catch (JCNativeException jcne) {
@@ -188,9 +196,13 @@ public class AppContext extends NetObject  {
     
     public static java.lang.String getBaseDirectory() throws Throwable, system.ArgumentNullException, system.NullReferenceException, system.ArgumentOutOfRangeException, system.ArgumentException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.io.PathTooLongException, system.MemberAccessException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectBaseDirectory = null;
         try {
-            return (java.lang.String)classType.Get("BaseDirectory");
+            retObjectBaseDirectory = classType.Get("BaseDirectory");
+            return (java.lang.String)retObjectBaseDirectory;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectBaseDirectory != null ? retObjectBaseDirectory.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,9 +210,13 @@ public class AppContext extends NetObject  {
 
     public static java.lang.String getTargetFrameworkName() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTargetFrameworkName = null;
         try {
-            return (java.lang.String)classType.Get("TargetFrameworkName");
+            retObjectTargetFrameworkName = classType.Get("TargetFrameworkName");
+            return (java.lang.String)retObjectTargetFrameworkName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectTargetFrameworkName != null ? retObjectTargetFrameworkName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

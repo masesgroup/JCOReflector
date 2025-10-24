@@ -184,9 +184,13 @@ public class ManualResetEventSlim extends NetObject implements AutoCloseable {
     
     public boolean Wait(int millisecondsTimeout) throws Throwable, system.ObjectDisposedException, system.OperationCanceledException, system.ArgumentOutOfRangeException, system.threading.AbandonedMutexException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.SecurityException, system.NullReferenceException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWait = null;
         try {
-            return (boolean)classInstance.Invoke("Wait", millisecondsTimeout);
+            retObjectWait = classInstance.Invoke("Wait", millisecondsTimeout);
+            return (boolean)retObjectWait;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectWait != null ? retObjectWait.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -194,9 +198,13 @@ public class ManualResetEventSlim extends NetObject implements AutoCloseable {
 
     public boolean Wait(int millisecondsTimeout, CancellationToken cancellationToken) throws Throwable, system.ObjectDisposedException, system.OperationCanceledException, system.ArgumentOutOfRangeException, system.threading.AbandonedMutexException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.SecurityException, system.NullReferenceException, system.diagnostics.tracing.EventSourceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWait = null;
         try {
-            return (boolean)classInstance.Invoke("Wait", millisecondsTimeout, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            retObjectWait = classInstance.Invoke("Wait", millisecondsTimeout, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            return (boolean)retObjectWait;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectWait != null ? retObjectWait.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -204,9 +212,13 @@ public class ManualResetEventSlim extends NetObject implements AutoCloseable {
 
     public boolean Wait(TimeSpan timeout) throws Throwable, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.OperationCanceledException, system.threading.AbandonedMutexException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.SecurityException, system.NullReferenceException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWait = null;
         try {
-            return (boolean)classInstance.Invoke("Wait", timeout == null ? null : timeout.getJCOInstance());
+            retObjectWait = classInstance.Invoke("Wait", timeout == null ? null : timeout.getJCOInstance());
+            return (boolean)retObjectWait;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectWait != null ? retObjectWait.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -214,9 +226,13 @@ public class ManualResetEventSlim extends NetObject implements AutoCloseable {
 
     public boolean Wait(TimeSpan timeout, CancellationToken cancellationToken) throws Throwable, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.OperationCanceledException, system.threading.AbandonedMutexException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.SecurityException, system.NullReferenceException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWait = null;
         try {
-            return (boolean)classInstance.Invoke("Wait", timeout == null ? null : timeout.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            retObjectWait = classInstance.Invoke("Wait", timeout == null ? null : timeout.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            return (boolean)retObjectWait;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectWait != null ? retObjectWait.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -224,7 +240,7 @@ public class ManualResetEventSlim extends NetObject implements AutoCloseable {
 
     public void Dispose() throws Throwable, system.ArgumentException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
@@ -234,7 +250,7 @@ public class ManualResetEventSlim extends NetObject implements AutoCloseable {
 
     public void Reset() throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.OperationCanceledException, system.diagnostics.tracing.EventSourceException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Reset");
         } catch (JCNativeException jcne) {
@@ -244,7 +260,7 @@ public class ManualResetEventSlim extends NetObject implements AutoCloseable {
 
     public void Set() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Set");
         } catch (JCNativeException jcne) {
@@ -254,7 +270,7 @@ public class ManualResetEventSlim extends NetObject implements AutoCloseable {
 
     public void Wait() throws Throwable, system.ObjectDisposedException, system.OperationCanceledException, system.ArgumentOutOfRangeException, system.threading.AbandonedMutexException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.SecurityException, system.NullReferenceException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Wait");
         } catch (JCNativeException jcne) {
@@ -264,7 +280,7 @@ public class ManualResetEventSlim extends NetObject implements AutoCloseable {
 
     public void Wait(CancellationToken cancellationToken) throws Throwable, system.ObjectDisposedException, system.OperationCanceledException, system.ArgumentOutOfRangeException, system.threading.AbandonedMutexException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.SecurityException, system.NullReferenceException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Wait", cancellationToken == null ? null : cancellationToken.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -275,7 +291,7 @@ public class ManualResetEventSlim extends NetObject implements AutoCloseable {
     public void close() throws Exception {
         try {
             if (classInstance == null)
-                throw new UnsupportedOperationException("classInstance is null.");
+                throw new java.lang.UnsupportedOperationException("classInstance is null.");
             try {
                 classInstance.Invoke("Dispose");
             }
@@ -291,9 +307,13 @@ public class ManualResetEventSlim extends NetObject implements AutoCloseable {
     
     public boolean getIsSet() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsSet = null;
         try {
-            return (boolean)classInstance.Get("IsSet");
+            retObjectIsSet = classInstance.Get("IsSet");
+            return (boolean)retObjectIsSet;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsSet != null ? retObjectIsSet.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -301,7 +321,7 @@ public class ManualResetEventSlim extends NetObject implements AutoCloseable {
 
     public void setIsSet(boolean IsSet) throws Throwable, system.diagnostics.tracing.EventSourceException, system.ArgumentNullException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsSet", IsSet);
         } catch (JCNativeException jcne) {
@@ -311,9 +331,20 @@ public class ManualResetEventSlim extends NetObject implements AutoCloseable {
 
     public int getSpinCount() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSpinCount = null;
         try {
-            return (int)classInstance.Get("SpinCount");
+            retObjectSpinCount = classInstance.Get("SpinCount");
+            return (int)retObjectSpinCount;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSpinCount_ToString = retObjectSpinCount == null ? "null" : retObjectSpinCount.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectSpinCountNumber = (java.lang.Number)retObjectSpinCount;
+                return retObjectSpinCountNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectSpinCount != null ? retObjectSpinCount.getClass() : "null", retObjectSpinCount_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -321,7 +352,7 @@ public class ManualResetEventSlim extends NetObject implements AutoCloseable {
 
     public void setSpinCount(int SpinCount) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SpinCount", SpinCount);
         } catch (JCNativeException jcne) {
@@ -331,10 +362,14 @@ public class ManualResetEventSlim extends NetObject implements AutoCloseable {
 
     public WaitHandle getWaitHandle() throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.threading.WaitHandleCannotBeOpenedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWaitHandle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("WaitHandle");
+            retObjectWaitHandle = classInstance.Get("WaitHandle");
+            JCObject val = (JCObject)retObjectWaitHandle;
             return new WaitHandle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWaitHandle != null ? retObjectWaitHandle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -156,10 +156,14 @@ public class DbBatchCommand extends NetObject  {
     
     public DbParameter CreateParameter() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateParameter = null;
         try {
-            JCObject objCreateParameter = (JCObject)classInstance.Invoke("CreateParameter");
+            retObjectCreateParameter = classInstance.Invoke("CreateParameter");
+            JCObject objCreateParameter = (JCObject)retObjectCreateParameter;
             return new DbParameter(objCreateParameter);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateParameter != null ? retObjectCreateParameter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,9 +175,13 @@ public class DbBatchCommand extends NetObject  {
     
     public boolean getCanCreateParameter() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanCreateParameter = null;
         try {
-            return (boolean)classInstance.Get("CanCreateParameter");
+            retObjectCanCreateParameter = classInstance.Get("CanCreateParameter");
+            return (boolean)retObjectCanCreateParameter;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCanCreateParameter != null ? retObjectCanCreateParameter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,9 +189,20 @@ public class DbBatchCommand extends NetObject  {
 
     public int getRecordsAffected() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRecordsAffected = null;
         try {
-            return (int)classInstance.Get("RecordsAffected");
+            retObjectRecordsAffected = classInstance.Get("RecordsAffected");
+            return (int)retObjectRecordsAffected;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectRecordsAffected_ToString = retObjectRecordsAffected == null ? "null" : retObjectRecordsAffected.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectRecordsAffectedNumber = (java.lang.Number)retObjectRecordsAffected;
+                return retObjectRecordsAffectedNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectRecordsAffected != null ? retObjectRecordsAffected.getClass() : "null", retObjectRecordsAffected_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,10 +210,14 @@ public class DbBatchCommand extends NetObject  {
 
     public CommandType getCommandType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCommandType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CommandType");
+            retObjectCommandType = classInstance.Get("CommandType");
+            JCObject val = (JCObject)retObjectCommandType;
             return new CommandType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCommandType != null ? retObjectCommandType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,7 +225,7 @@ public class DbBatchCommand extends NetObject  {
 
     public void setCommandType(CommandType CommandType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CommandType", CommandType == null ? null : CommandType.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -212,10 +235,14 @@ public class DbBatchCommand extends NetObject  {
 
     public DbParameterCollection getParameters() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectParameters = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Parameters");
+            retObjectParameters = classInstance.Get("Parameters");
+            JCObject val = (JCObject)retObjectParameters;
             return new DbParameterCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParameters != null ? retObjectParameters.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -223,9 +250,13 @@ public class DbBatchCommand extends NetObject  {
 
     public java.lang.String getCommandText() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCommandText = null;
         try {
-            return (java.lang.String)classInstance.Get("CommandText");
+            retObjectCommandText = classInstance.Get("CommandText");
+            return (java.lang.String)retObjectCommandText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectCommandText != null ? retObjectCommandText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -233,7 +264,7 @@ public class DbBatchCommand extends NetObject  {
 
     public void setCommandText(java.lang.String CommandText) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CommandText", CommandText);
         } catch (JCNativeException jcne) {

@@ -159,10 +159,14 @@ public class EntityReference extends RelatedEnd  {
     
     public EntityKey getEntityKey() throws Throwable, system.NullReferenceException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentException, system.collections.generic.KeyNotFoundException, system.ArgumentOutOfRangeException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEntityKey = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("EntityKey");
+            retObjectEntityKey = classInstance.Get("EntityKey");
+            JCObject val = (JCObject)retObjectEntityKey;
             return new EntityKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEntityKey != null ? retObjectEntityKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,7 +174,7 @@ public class EntityReference extends RelatedEnd  {
 
     public void setEntityKey(EntityKey EntityKey) throws Throwable, system.NullReferenceException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.data.MappingException, system.data.MetadataException, system.resources.MissingManifestResourceException, system.threading.SynchronizationLockException, system.NotImplementedException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EntityKey", EntityKey == null ? null : EntityKey.getJCOInstance());
         } catch (JCNativeException jcne) {

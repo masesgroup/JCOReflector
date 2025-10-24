@@ -163,9 +163,20 @@ public class Canvas extends Panel  {
     
     public static double GetBottom(UIElement element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetBottom = null;
         try {
-            return (double)classType.Invoke("GetBottom", element == null ? null : element.getJCOInstance());
+            retObjectGetBottom = classType.Invoke("GetBottom", element == null ? null : element.getJCOInstance());
+            return (double)retObjectGetBottom;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetBottom_ToString = retObjectGetBottom == null ? "null" : retObjectGetBottom.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetBottomNumber = (java.lang.Number)retObjectGetBottom;
+                return retObjectGetBottomNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectGetBottom != null ? retObjectGetBottom.getClass() : "null", retObjectGetBottom_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -173,9 +184,20 @@ public class Canvas extends Panel  {
 
     public static double GetLeft(UIElement element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetLeft = null;
         try {
-            return (double)classType.Invoke("GetLeft", element == null ? null : element.getJCOInstance());
+            retObjectGetLeft = classType.Invoke("GetLeft", element == null ? null : element.getJCOInstance());
+            return (double)retObjectGetLeft;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetLeft_ToString = retObjectGetLeft == null ? "null" : retObjectGetLeft.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetLeftNumber = (java.lang.Number)retObjectGetLeft;
+                return retObjectGetLeftNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectGetLeft != null ? retObjectGetLeft.getClass() : "null", retObjectGetLeft_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,9 +205,20 @@ public class Canvas extends Panel  {
 
     public static double GetRight(UIElement element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetRight = null;
         try {
-            return (double)classType.Invoke("GetRight", element == null ? null : element.getJCOInstance());
+            retObjectGetRight = classType.Invoke("GetRight", element == null ? null : element.getJCOInstance());
+            return (double)retObjectGetRight;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetRight_ToString = retObjectGetRight == null ? "null" : retObjectGetRight.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetRightNumber = (java.lang.Number)retObjectGetRight;
+                return retObjectGetRightNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectGetRight != null ? retObjectGetRight.getClass() : "null", retObjectGetRight_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,9 +226,20 @@ public class Canvas extends Panel  {
 
     public static double GetTop(UIElement element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetTop = null;
         try {
-            return (double)classType.Invoke("GetTop", element == null ? null : element.getJCOInstance());
+            retObjectGetTop = classType.Invoke("GetTop", element == null ? null : element.getJCOInstance());
+            return (double)retObjectGetTop;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetTop_ToString = retObjectGetTop == null ? "null" : retObjectGetTop.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetTopNumber = (java.lang.Number)retObjectGetTop;
+                return retObjectGetTopNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectGetTop != null ? retObjectGetTop.getClass() : "null", retObjectGetTop_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,7 +247,7 @@ public class Canvas extends Panel  {
 
     public static void SetBottom(UIElement element, double length) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetBottom", element == null ? null : element.getJCOInstance(), length);
         } catch (JCNativeException jcne) {
@@ -213,7 +257,7 @@ public class Canvas extends Panel  {
 
     public static void SetLeft(UIElement element, double length) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetLeft", element == null ? null : element.getJCOInstance(), length);
         } catch (JCNativeException jcne) {
@@ -223,7 +267,7 @@ public class Canvas extends Panel  {
 
     public static void SetRight(UIElement element, double length) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetRight", element == null ? null : element.getJCOInstance(), length);
         } catch (JCNativeException jcne) {
@@ -233,7 +277,7 @@ public class Canvas extends Panel  {
 
     public static void SetTop(UIElement element, double length) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetTop", element == null ? null : element.getJCOInstance(), length);
         } catch (JCNativeException jcne) {

@@ -163,9 +163,13 @@ public class Typography extends NetObject  {
     
     public static boolean GetCapitalSpacing(DependencyObject element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetCapitalSpacing = null;
         try {
-            return (boolean)classType.Invoke("GetCapitalSpacing", element == null ? null : element.getJCOInstance());
+            retObjectGetCapitalSpacing = classType.Invoke("GetCapitalSpacing", element == null ? null : element.getJCOInstance());
+            return (boolean)retObjectGetCapitalSpacing;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectGetCapitalSpacing != null ? retObjectGetCapitalSpacing.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -173,9 +177,13 @@ public class Typography extends NetObject  {
 
     public static boolean GetCaseSensitiveForms(DependencyObject element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetCaseSensitiveForms = null;
         try {
-            return (boolean)classType.Invoke("GetCaseSensitiveForms", element == null ? null : element.getJCOInstance());
+            retObjectGetCaseSensitiveForms = classType.Invoke("GetCaseSensitiveForms", element == null ? null : element.getJCOInstance());
+            return (boolean)retObjectGetCaseSensitiveForms;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectGetCaseSensitiveForms != null ? retObjectGetCaseSensitiveForms.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,9 +191,13 @@ public class Typography extends NetObject  {
 
     public static boolean GetContextualAlternates(DependencyObject element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetContextualAlternates = null;
         try {
-            return (boolean)classType.Invoke("GetContextualAlternates", element == null ? null : element.getJCOInstance());
+            retObjectGetContextualAlternates = classType.Invoke("GetContextualAlternates", element == null ? null : element.getJCOInstance());
+            return (boolean)retObjectGetContextualAlternates;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectGetContextualAlternates != null ? retObjectGetContextualAlternates.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,9 +205,13 @@ public class Typography extends NetObject  {
 
     public static boolean GetContextualLigatures(DependencyObject element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetContextualLigatures = null;
         try {
-            return (boolean)classType.Invoke("GetContextualLigatures", element == null ? null : element.getJCOInstance());
+            retObjectGetContextualLigatures = classType.Invoke("GetContextualLigatures", element == null ? null : element.getJCOInstance());
+            return (boolean)retObjectGetContextualLigatures;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectGetContextualLigatures != null ? retObjectGetContextualLigatures.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,9 +219,13 @@ public class Typography extends NetObject  {
 
     public static boolean GetDiscretionaryLigatures(DependencyObject element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetDiscretionaryLigatures = null;
         try {
-            return (boolean)classType.Invoke("GetDiscretionaryLigatures", element == null ? null : element.getJCOInstance());
+            retObjectGetDiscretionaryLigatures = classType.Invoke("GetDiscretionaryLigatures", element == null ? null : element.getJCOInstance());
+            return (boolean)retObjectGetDiscretionaryLigatures;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectGetDiscretionaryLigatures != null ? retObjectGetDiscretionaryLigatures.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,9 +233,13 @@ public class Typography extends NetObject  {
 
     public static boolean GetEastAsianExpertForms(DependencyObject element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetEastAsianExpertForms = null;
         try {
-            return (boolean)classType.Invoke("GetEastAsianExpertForms", element == null ? null : element.getJCOInstance());
+            retObjectGetEastAsianExpertForms = classType.Invoke("GetEastAsianExpertForms", element == null ? null : element.getJCOInstance());
+            return (boolean)retObjectGetEastAsianExpertForms;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectGetEastAsianExpertForms != null ? retObjectGetEastAsianExpertForms.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -223,9 +247,13 @@ public class Typography extends NetObject  {
 
     public static boolean GetHistoricalForms(DependencyObject element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetHistoricalForms = null;
         try {
-            return (boolean)classType.Invoke("GetHistoricalForms", element == null ? null : element.getJCOInstance());
+            retObjectGetHistoricalForms = classType.Invoke("GetHistoricalForms", element == null ? null : element.getJCOInstance());
+            return (boolean)retObjectGetHistoricalForms;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectGetHistoricalForms != null ? retObjectGetHistoricalForms.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -233,9 +261,13 @@ public class Typography extends NetObject  {
 
     public static boolean GetHistoricalLigatures(DependencyObject element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetHistoricalLigatures = null;
         try {
-            return (boolean)classType.Invoke("GetHistoricalLigatures", element == null ? null : element.getJCOInstance());
+            retObjectGetHistoricalLigatures = classType.Invoke("GetHistoricalLigatures", element == null ? null : element.getJCOInstance());
+            return (boolean)retObjectGetHistoricalLigatures;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectGetHistoricalLigatures != null ? retObjectGetHistoricalLigatures.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -243,9 +275,13 @@ public class Typography extends NetObject  {
 
     public static boolean GetKerning(DependencyObject element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetKerning = null;
         try {
-            return (boolean)classType.Invoke("GetKerning", element == null ? null : element.getJCOInstance());
+            retObjectGetKerning = classType.Invoke("GetKerning", element == null ? null : element.getJCOInstance());
+            return (boolean)retObjectGetKerning;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectGetKerning != null ? retObjectGetKerning.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -253,9 +289,13 @@ public class Typography extends NetObject  {
 
     public static boolean GetMathematicalGreek(DependencyObject element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetMathematicalGreek = null;
         try {
-            return (boolean)classType.Invoke("GetMathematicalGreek", element == null ? null : element.getJCOInstance());
+            retObjectGetMathematicalGreek = classType.Invoke("GetMathematicalGreek", element == null ? null : element.getJCOInstance());
+            return (boolean)retObjectGetMathematicalGreek;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectGetMathematicalGreek != null ? retObjectGetMathematicalGreek.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -263,9 +303,13 @@ public class Typography extends NetObject  {
 
     public static boolean GetSlashedZero(DependencyObject element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetSlashedZero = null;
         try {
-            return (boolean)classType.Invoke("GetSlashedZero", element == null ? null : element.getJCOInstance());
+            retObjectGetSlashedZero = classType.Invoke("GetSlashedZero", element == null ? null : element.getJCOInstance());
+            return (boolean)retObjectGetSlashedZero;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectGetSlashedZero != null ? retObjectGetSlashedZero.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -273,9 +317,13 @@ public class Typography extends NetObject  {
 
     public static boolean GetStandardLigatures(DependencyObject element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetStandardLigatures = null;
         try {
-            return (boolean)classType.Invoke("GetStandardLigatures", element == null ? null : element.getJCOInstance());
+            retObjectGetStandardLigatures = classType.Invoke("GetStandardLigatures", element == null ? null : element.getJCOInstance());
+            return (boolean)retObjectGetStandardLigatures;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectGetStandardLigatures != null ? retObjectGetStandardLigatures.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -283,9 +331,13 @@ public class Typography extends NetObject  {
 
     public static boolean GetStylisticSet1(DependencyObject element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetStylisticSet1 = null;
         try {
-            return (boolean)classType.Invoke("GetStylisticSet1", element == null ? null : element.getJCOInstance());
+            retObjectGetStylisticSet1 = classType.Invoke("GetStylisticSet1", element == null ? null : element.getJCOInstance());
+            return (boolean)retObjectGetStylisticSet1;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectGetStylisticSet1 != null ? retObjectGetStylisticSet1.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -293,9 +345,13 @@ public class Typography extends NetObject  {
 
     public static boolean GetStylisticSet10(DependencyObject element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetStylisticSet10 = null;
         try {
-            return (boolean)classType.Invoke("GetStylisticSet10", element == null ? null : element.getJCOInstance());
+            retObjectGetStylisticSet10 = classType.Invoke("GetStylisticSet10", element == null ? null : element.getJCOInstance());
+            return (boolean)retObjectGetStylisticSet10;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectGetStylisticSet10 != null ? retObjectGetStylisticSet10.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -303,9 +359,13 @@ public class Typography extends NetObject  {
 
     public static boolean GetStylisticSet11(DependencyObject element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetStylisticSet11 = null;
         try {
-            return (boolean)classType.Invoke("GetStylisticSet11", element == null ? null : element.getJCOInstance());
+            retObjectGetStylisticSet11 = classType.Invoke("GetStylisticSet11", element == null ? null : element.getJCOInstance());
+            return (boolean)retObjectGetStylisticSet11;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectGetStylisticSet11 != null ? retObjectGetStylisticSet11.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -313,9 +373,13 @@ public class Typography extends NetObject  {
 
     public static boolean GetStylisticSet12(DependencyObject element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetStylisticSet12 = null;
         try {
-            return (boolean)classType.Invoke("GetStylisticSet12", element == null ? null : element.getJCOInstance());
+            retObjectGetStylisticSet12 = classType.Invoke("GetStylisticSet12", element == null ? null : element.getJCOInstance());
+            return (boolean)retObjectGetStylisticSet12;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectGetStylisticSet12 != null ? retObjectGetStylisticSet12.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -323,9 +387,13 @@ public class Typography extends NetObject  {
 
     public static boolean GetStylisticSet13(DependencyObject element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetStylisticSet13 = null;
         try {
-            return (boolean)classType.Invoke("GetStylisticSet13", element == null ? null : element.getJCOInstance());
+            retObjectGetStylisticSet13 = classType.Invoke("GetStylisticSet13", element == null ? null : element.getJCOInstance());
+            return (boolean)retObjectGetStylisticSet13;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectGetStylisticSet13 != null ? retObjectGetStylisticSet13.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -333,9 +401,13 @@ public class Typography extends NetObject  {
 
     public static boolean GetStylisticSet14(DependencyObject element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetStylisticSet14 = null;
         try {
-            return (boolean)classType.Invoke("GetStylisticSet14", element == null ? null : element.getJCOInstance());
+            retObjectGetStylisticSet14 = classType.Invoke("GetStylisticSet14", element == null ? null : element.getJCOInstance());
+            return (boolean)retObjectGetStylisticSet14;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectGetStylisticSet14 != null ? retObjectGetStylisticSet14.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -343,9 +415,13 @@ public class Typography extends NetObject  {
 
     public static boolean GetStylisticSet15(DependencyObject element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetStylisticSet15 = null;
         try {
-            return (boolean)classType.Invoke("GetStylisticSet15", element == null ? null : element.getJCOInstance());
+            retObjectGetStylisticSet15 = classType.Invoke("GetStylisticSet15", element == null ? null : element.getJCOInstance());
+            return (boolean)retObjectGetStylisticSet15;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectGetStylisticSet15 != null ? retObjectGetStylisticSet15.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -353,9 +429,13 @@ public class Typography extends NetObject  {
 
     public static boolean GetStylisticSet16(DependencyObject element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetStylisticSet16 = null;
         try {
-            return (boolean)classType.Invoke("GetStylisticSet16", element == null ? null : element.getJCOInstance());
+            retObjectGetStylisticSet16 = classType.Invoke("GetStylisticSet16", element == null ? null : element.getJCOInstance());
+            return (boolean)retObjectGetStylisticSet16;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectGetStylisticSet16 != null ? retObjectGetStylisticSet16.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -363,9 +443,13 @@ public class Typography extends NetObject  {
 
     public static boolean GetStylisticSet17(DependencyObject element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetStylisticSet17 = null;
         try {
-            return (boolean)classType.Invoke("GetStylisticSet17", element == null ? null : element.getJCOInstance());
+            retObjectGetStylisticSet17 = classType.Invoke("GetStylisticSet17", element == null ? null : element.getJCOInstance());
+            return (boolean)retObjectGetStylisticSet17;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectGetStylisticSet17 != null ? retObjectGetStylisticSet17.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -373,9 +457,13 @@ public class Typography extends NetObject  {
 
     public static boolean GetStylisticSet18(DependencyObject element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetStylisticSet18 = null;
         try {
-            return (boolean)classType.Invoke("GetStylisticSet18", element == null ? null : element.getJCOInstance());
+            retObjectGetStylisticSet18 = classType.Invoke("GetStylisticSet18", element == null ? null : element.getJCOInstance());
+            return (boolean)retObjectGetStylisticSet18;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectGetStylisticSet18 != null ? retObjectGetStylisticSet18.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -383,9 +471,13 @@ public class Typography extends NetObject  {
 
     public static boolean GetStylisticSet19(DependencyObject element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetStylisticSet19 = null;
         try {
-            return (boolean)classType.Invoke("GetStylisticSet19", element == null ? null : element.getJCOInstance());
+            retObjectGetStylisticSet19 = classType.Invoke("GetStylisticSet19", element == null ? null : element.getJCOInstance());
+            return (boolean)retObjectGetStylisticSet19;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectGetStylisticSet19 != null ? retObjectGetStylisticSet19.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -393,9 +485,13 @@ public class Typography extends NetObject  {
 
     public static boolean GetStylisticSet2(DependencyObject element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetStylisticSet2 = null;
         try {
-            return (boolean)classType.Invoke("GetStylisticSet2", element == null ? null : element.getJCOInstance());
+            retObjectGetStylisticSet2 = classType.Invoke("GetStylisticSet2", element == null ? null : element.getJCOInstance());
+            return (boolean)retObjectGetStylisticSet2;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectGetStylisticSet2 != null ? retObjectGetStylisticSet2.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -403,9 +499,13 @@ public class Typography extends NetObject  {
 
     public static boolean GetStylisticSet20(DependencyObject element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetStylisticSet20 = null;
         try {
-            return (boolean)classType.Invoke("GetStylisticSet20", element == null ? null : element.getJCOInstance());
+            retObjectGetStylisticSet20 = classType.Invoke("GetStylisticSet20", element == null ? null : element.getJCOInstance());
+            return (boolean)retObjectGetStylisticSet20;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectGetStylisticSet20 != null ? retObjectGetStylisticSet20.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -413,9 +513,13 @@ public class Typography extends NetObject  {
 
     public static boolean GetStylisticSet3(DependencyObject element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetStylisticSet3 = null;
         try {
-            return (boolean)classType.Invoke("GetStylisticSet3", element == null ? null : element.getJCOInstance());
+            retObjectGetStylisticSet3 = classType.Invoke("GetStylisticSet3", element == null ? null : element.getJCOInstance());
+            return (boolean)retObjectGetStylisticSet3;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectGetStylisticSet3 != null ? retObjectGetStylisticSet3.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -423,9 +527,13 @@ public class Typography extends NetObject  {
 
     public static boolean GetStylisticSet4(DependencyObject element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetStylisticSet4 = null;
         try {
-            return (boolean)classType.Invoke("GetStylisticSet4", element == null ? null : element.getJCOInstance());
+            retObjectGetStylisticSet4 = classType.Invoke("GetStylisticSet4", element == null ? null : element.getJCOInstance());
+            return (boolean)retObjectGetStylisticSet4;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectGetStylisticSet4 != null ? retObjectGetStylisticSet4.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -433,9 +541,13 @@ public class Typography extends NetObject  {
 
     public static boolean GetStylisticSet5(DependencyObject element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetStylisticSet5 = null;
         try {
-            return (boolean)classType.Invoke("GetStylisticSet5", element == null ? null : element.getJCOInstance());
+            retObjectGetStylisticSet5 = classType.Invoke("GetStylisticSet5", element == null ? null : element.getJCOInstance());
+            return (boolean)retObjectGetStylisticSet5;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectGetStylisticSet5 != null ? retObjectGetStylisticSet5.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -443,9 +555,13 @@ public class Typography extends NetObject  {
 
     public static boolean GetStylisticSet6(DependencyObject element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetStylisticSet6 = null;
         try {
-            return (boolean)classType.Invoke("GetStylisticSet6", element == null ? null : element.getJCOInstance());
+            retObjectGetStylisticSet6 = classType.Invoke("GetStylisticSet6", element == null ? null : element.getJCOInstance());
+            return (boolean)retObjectGetStylisticSet6;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectGetStylisticSet6 != null ? retObjectGetStylisticSet6.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -453,9 +569,13 @@ public class Typography extends NetObject  {
 
     public static boolean GetStylisticSet7(DependencyObject element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetStylisticSet7 = null;
         try {
-            return (boolean)classType.Invoke("GetStylisticSet7", element == null ? null : element.getJCOInstance());
+            retObjectGetStylisticSet7 = classType.Invoke("GetStylisticSet7", element == null ? null : element.getJCOInstance());
+            return (boolean)retObjectGetStylisticSet7;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectGetStylisticSet7 != null ? retObjectGetStylisticSet7.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -463,9 +583,13 @@ public class Typography extends NetObject  {
 
     public static boolean GetStylisticSet8(DependencyObject element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetStylisticSet8 = null;
         try {
-            return (boolean)classType.Invoke("GetStylisticSet8", element == null ? null : element.getJCOInstance());
+            retObjectGetStylisticSet8 = classType.Invoke("GetStylisticSet8", element == null ? null : element.getJCOInstance());
+            return (boolean)retObjectGetStylisticSet8;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectGetStylisticSet8 != null ? retObjectGetStylisticSet8.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -473,9 +597,13 @@ public class Typography extends NetObject  {
 
     public static boolean GetStylisticSet9(DependencyObject element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetStylisticSet9 = null;
         try {
-            return (boolean)classType.Invoke("GetStylisticSet9", element == null ? null : element.getJCOInstance());
+            retObjectGetStylisticSet9 = classType.Invoke("GetStylisticSet9", element == null ? null : element.getJCOInstance());
+            return (boolean)retObjectGetStylisticSet9;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectGetStylisticSet9 != null ? retObjectGetStylisticSet9.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -483,9 +611,20 @@ public class Typography extends NetObject  {
 
     public static int GetAnnotationAlternates(DependencyObject element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetAnnotationAlternates = null;
         try {
-            return (int)classType.Invoke("GetAnnotationAlternates", element == null ? null : element.getJCOInstance());
+            retObjectGetAnnotationAlternates = classType.Invoke("GetAnnotationAlternates", element == null ? null : element.getJCOInstance());
+            return (int)retObjectGetAnnotationAlternates;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetAnnotationAlternates_ToString = retObjectGetAnnotationAlternates == null ? "null" : retObjectGetAnnotationAlternates.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetAnnotationAlternatesNumber = (java.lang.Number)retObjectGetAnnotationAlternates;
+                return retObjectGetAnnotationAlternatesNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetAnnotationAlternates != null ? retObjectGetAnnotationAlternates.getClass() : "null", retObjectGetAnnotationAlternates_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -493,9 +632,20 @@ public class Typography extends NetObject  {
 
     public static int GetContextualSwashes(DependencyObject element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetContextualSwashes = null;
         try {
-            return (int)classType.Invoke("GetContextualSwashes", element == null ? null : element.getJCOInstance());
+            retObjectGetContextualSwashes = classType.Invoke("GetContextualSwashes", element == null ? null : element.getJCOInstance());
+            return (int)retObjectGetContextualSwashes;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetContextualSwashes_ToString = retObjectGetContextualSwashes == null ? "null" : retObjectGetContextualSwashes.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetContextualSwashesNumber = (java.lang.Number)retObjectGetContextualSwashes;
+                return retObjectGetContextualSwashesNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetContextualSwashes != null ? retObjectGetContextualSwashes.getClass() : "null", retObjectGetContextualSwashes_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -503,9 +653,20 @@ public class Typography extends NetObject  {
 
     public static int GetStandardSwashes(DependencyObject element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetStandardSwashes = null;
         try {
-            return (int)classType.Invoke("GetStandardSwashes", element == null ? null : element.getJCOInstance());
+            retObjectGetStandardSwashes = classType.Invoke("GetStandardSwashes", element == null ? null : element.getJCOInstance());
+            return (int)retObjectGetStandardSwashes;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetStandardSwashes_ToString = retObjectGetStandardSwashes == null ? "null" : retObjectGetStandardSwashes.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetStandardSwashesNumber = (java.lang.Number)retObjectGetStandardSwashes;
+                return retObjectGetStandardSwashesNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetStandardSwashes != null ? retObjectGetStandardSwashes.getClass() : "null", retObjectGetStandardSwashes_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -513,9 +674,20 @@ public class Typography extends NetObject  {
 
     public static int GetStylisticAlternates(DependencyObject element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetStylisticAlternates = null;
         try {
-            return (int)classType.Invoke("GetStylisticAlternates", element == null ? null : element.getJCOInstance());
+            retObjectGetStylisticAlternates = classType.Invoke("GetStylisticAlternates", element == null ? null : element.getJCOInstance());
+            return (int)retObjectGetStylisticAlternates;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetStylisticAlternates_ToString = retObjectGetStylisticAlternates == null ? "null" : retObjectGetStylisticAlternates.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetStylisticAlternatesNumber = (java.lang.Number)retObjectGetStylisticAlternates;
+                return retObjectGetStylisticAlternatesNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetStylisticAlternates != null ? retObjectGetStylisticAlternates.getClass() : "null", retObjectGetStylisticAlternates_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -523,10 +695,14 @@ public class Typography extends NetObject  {
 
     public static FontCapitals GetCapitals(DependencyObject element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetCapitals = null;
         try {
-            JCObject objGetCapitals = (JCObject)classType.Invoke("GetCapitals", element == null ? null : element.getJCOInstance());
+            retObjectGetCapitals = classType.Invoke("GetCapitals", element == null ? null : element.getJCOInstance());
+            JCObject objGetCapitals = (JCObject)retObjectGetCapitals;
             return new FontCapitals(objGetCapitals);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCapitals != null ? retObjectGetCapitals.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -534,10 +710,14 @@ public class Typography extends NetObject  {
 
     public static FontEastAsianLanguage GetEastAsianLanguage(DependencyObject element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetEastAsianLanguage = null;
         try {
-            JCObject objGetEastAsianLanguage = (JCObject)classType.Invoke("GetEastAsianLanguage", element == null ? null : element.getJCOInstance());
+            retObjectGetEastAsianLanguage = classType.Invoke("GetEastAsianLanguage", element == null ? null : element.getJCOInstance());
+            JCObject objGetEastAsianLanguage = (JCObject)retObjectGetEastAsianLanguage;
             return new FontEastAsianLanguage(objGetEastAsianLanguage);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetEastAsianLanguage != null ? retObjectGetEastAsianLanguage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -545,10 +725,14 @@ public class Typography extends NetObject  {
 
     public static FontEastAsianWidths GetEastAsianWidths(DependencyObject element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetEastAsianWidths = null;
         try {
-            JCObject objGetEastAsianWidths = (JCObject)classType.Invoke("GetEastAsianWidths", element == null ? null : element.getJCOInstance());
+            retObjectGetEastAsianWidths = classType.Invoke("GetEastAsianWidths", element == null ? null : element.getJCOInstance());
+            JCObject objGetEastAsianWidths = (JCObject)retObjectGetEastAsianWidths;
             return new FontEastAsianWidths(objGetEastAsianWidths);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetEastAsianWidths != null ? retObjectGetEastAsianWidths.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -556,10 +740,14 @@ public class Typography extends NetObject  {
 
     public static FontFraction GetFraction(DependencyObject element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetFraction = null;
         try {
-            JCObject objGetFraction = (JCObject)classType.Invoke("GetFraction", element == null ? null : element.getJCOInstance());
+            retObjectGetFraction = classType.Invoke("GetFraction", element == null ? null : element.getJCOInstance());
+            JCObject objGetFraction = (JCObject)retObjectGetFraction;
             return new FontFraction(objGetFraction);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetFraction != null ? retObjectGetFraction.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -567,10 +755,14 @@ public class Typography extends NetObject  {
 
     public static FontNumeralAlignment GetNumeralAlignment(DependencyObject element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetNumeralAlignment = null;
         try {
-            JCObject objGetNumeralAlignment = (JCObject)classType.Invoke("GetNumeralAlignment", element == null ? null : element.getJCOInstance());
+            retObjectGetNumeralAlignment = classType.Invoke("GetNumeralAlignment", element == null ? null : element.getJCOInstance());
+            JCObject objGetNumeralAlignment = (JCObject)retObjectGetNumeralAlignment;
             return new FontNumeralAlignment(objGetNumeralAlignment);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetNumeralAlignment != null ? retObjectGetNumeralAlignment.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -578,10 +770,14 @@ public class Typography extends NetObject  {
 
     public static FontNumeralStyle GetNumeralStyle(DependencyObject element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetNumeralStyle = null;
         try {
-            JCObject objGetNumeralStyle = (JCObject)classType.Invoke("GetNumeralStyle", element == null ? null : element.getJCOInstance());
+            retObjectGetNumeralStyle = classType.Invoke("GetNumeralStyle", element == null ? null : element.getJCOInstance());
+            JCObject objGetNumeralStyle = (JCObject)retObjectGetNumeralStyle;
             return new FontNumeralStyle(objGetNumeralStyle);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetNumeralStyle != null ? retObjectGetNumeralStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -589,10 +785,14 @@ public class Typography extends NetObject  {
 
     public static FontVariants GetVariants(DependencyObject element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetVariants = null;
         try {
-            JCObject objGetVariants = (JCObject)classType.Invoke("GetVariants", element == null ? null : element.getJCOInstance());
+            retObjectGetVariants = classType.Invoke("GetVariants", element == null ? null : element.getJCOInstance());
+            JCObject objGetVariants = (JCObject)retObjectGetVariants;
             return new FontVariants(objGetVariants);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetVariants != null ? retObjectGetVariants.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -600,7 +800,7 @@ public class Typography extends NetObject  {
 
     public static void SetAnnotationAlternates(DependencyObject element, int value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetAnnotationAlternates", element == null ? null : element.getJCOInstance(), value);
         } catch (JCNativeException jcne) {
@@ -610,7 +810,7 @@ public class Typography extends NetObject  {
 
     public static void SetCapitals(DependencyObject element, FontCapitals value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetCapitals", element == null ? null : element.getJCOInstance(), value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -620,7 +820,7 @@ public class Typography extends NetObject  {
 
     public static void SetCapitalSpacing(DependencyObject element, boolean value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetCapitalSpacing", element == null ? null : element.getJCOInstance(), value);
         } catch (JCNativeException jcne) {
@@ -630,7 +830,7 @@ public class Typography extends NetObject  {
 
     public static void SetCaseSensitiveForms(DependencyObject element, boolean value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetCaseSensitiveForms", element == null ? null : element.getJCOInstance(), value);
         } catch (JCNativeException jcne) {
@@ -640,7 +840,7 @@ public class Typography extends NetObject  {
 
     public static void SetContextualAlternates(DependencyObject element, boolean value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetContextualAlternates", element == null ? null : element.getJCOInstance(), value);
         } catch (JCNativeException jcne) {
@@ -650,7 +850,7 @@ public class Typography extends NetObject  {
 
     public static void SetContextualLigatures(DependencyObject element, boolean value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetContextualLigatures", element == null ? null : element.getJCOInstance(), value);
         } catch (JCNativeException jcne) {
@@ -660,7 +860,7 @@ public class Typography extends NetObject  {
 
     public static void SetContextualSwashes(DependencyObject element, int value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetContextualSwashes", element == null ? null : element.getJCOInstance(), value);
         } catch (JCNativeException jcne) {
@@ -670,7 +870,7 @@ public class Typography extends NetObject  {
 
     public static void SetDiscretionaryLigatures(DependencyObject element, boolean value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetDiscretionaryLigatures", element == null ? null : element.getJCOInstance(), value);
         } catch (JCNativeException jcne) {
@@ -680,7 +880,7 @@ public class Typography extends NetObject  {
 
     public static void SetEastAsianExpertForms(DependencyObject element, boolean value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetEastAsianExpertForms", element == null ? null : element.getJCOInstance(), value);
         } catch (JCNativeException jcne) {
@@ -690,7 +890,7 @@ public class Typography extends NetObject  {
 
     public static void SetEastAsianLanguage(DependencyObject element, FontEastAsianLanguage value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetEastAsianLanguage", element == null ? null : element.getJCOInstance(), value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -700,7 +900,7 @@ public class Typography extends NetObject  {
 
     public static void SetEastAsianWidths(DependencyObject element, FontEastAsianWidths value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetEastAsianWidths", element == null ? null : element.getJCOInstance(), value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -710,7 +910,7 @@ public class Typography extends NetObject  {
 
     public static void SetFraction(DependencyObject element, FontFraction value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetFraction", element == null ? null : element.getJCOInstance(), value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -720,7 +920,7 @@ public class Typography extends NetObject  {
 
     public static void SetHistoricalForms(DependencyObject element, boolean value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetHistoricalForms", element == null ? null : element.getJCOInstance(), value);
         } catch (JCNativeException jcne) {
@@ -730,7 +930,7 @@ public class Typography extends NetObject  {
 
     public static void SetHistoricalLigatures(DependencyObject element, boolean value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetHistoricalLigatures", element == null ? null : element.getJCOInstance(), value);
         } catch (JCNativeException jcne) {
@@ -740,7 +940,7 @@ public class Typography extends NetObject  {
 
     public static void SetKerning(DependencyObject element, boolean value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetKerning", element == null ? null : element.getJCOInstance(), value);
         } catch (JCNativeException jcne) {
@@ -750,7 +950,7 @@ public class Typography extends NetObject  {
 
     public static void SetMathematicalGreek(DependencyObject element, boolean value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetMathematicalGreek", element == null ? null : element.getJCOInstance(), value);
         } catch (JCNativeException jcne) {
@@ -760,7 +960,7 @@ public class Typography extends NetObject  {
 
     public static void SetNumeralAlignment(DependencyObject element, FontNumeralAlignment value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetNumeralAlignment", element == null ? null : element.getJCOInstance(), value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -770,7 +970,7 @@ public class Typography extends NetObject  {
 
     public static void SetNumeralStyle(DependencyObject element, FontNumeralStyle value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetNumeralStyle", element == null ? null : element.getJCOInstance(), value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -780,7 +980,7 @@ public class Typography extends NetObject  {
 
     public static void SetSlashedZero(DependencyObject element, boolean value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetSlashedZero", element == null ? null : element.getJCOInstance(), value);
         } catch (JCNativeException jcne) {
@@ -790,7 +990,7 @@ public class Typography extends NetObject  {
 
     public static void SetStandardLigatures(DependencyObject element, boolean value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetStandardLigatures", element == null ? null : element.getJCOInstance(), value);
         } catch (JCNativeException jcne) {
@@ -800,7 +1000,7 @@ public class Typography extends NetObject  {
 
     public static void SetStandardSwashes(DependencyObject element, int value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetStandardSwashes", element == null ? null : element.getJCOInstance(), value);
         } catch (JCNativeException jcne) {
@@ -810,7 +1010,7 @@ public class Typography extends NetObject  {
 
     public static void SetStylisticAlternates(DependencyObject element, int value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetStylisticAlternates", element == null ? null : element.getJCOInstance(), value);
         } catch (JCNativeException jcne) {
@@ -820,7 +1020,7 @@ public class Typography extends NetObject  {
 
     public static void SetStylisticSet1(DependencyObject element, boolean value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetStylisticSet1", element == null ? null : element.getJCOInstance(), value);
         } catch (JCNativeException jcne) {
@@ -830,7 +1030,7 @@ public class Typography extends NetObject  {
 
     public static void SetStylisticSet10(DependencyObject element, boolean value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetStylisticSet10", element == null ? null : element.getJCOInstance(), value);
         } catch (JCNativeException jcne) {
@@ -840,7 +1040,7 @@ public class Typography extends NetObject  {
 
     public static void SetStylisticSet11(DependencyObject element, boolean value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetStylisticSet11", element == null ? null : element.getJCOInstance(), value);
         } catch (JCNativeException jcne) {
@@ -850,7 +1050,7 @@ public class Typography extends NetObject  {
 
     public static void SetStylisticSet12(DependencyObject element, boolean value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetStylisticSet12", element == null ? null : element.getJCOInstance(), value);
         } catch (JCNativeException jcne) {
@@ -860,7 +1060,7 @@ public class Typography extends NetObject  {
 
     public static void SetStylisticSet13(DependencyObject element, boolean value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetStylisticSet13", element == null ? null : element.getJCOInstance(), value);
         } catch (JCNativeException jcne) {
@@ -870,7 +1070,7 @@ public class Typography extends NetObject  {
 
     public static void SetStylisticSet14(DependencyObject element, boolean value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetStylisticSet14", element == null ? null : element.getJCOInstance(), value);
         } catch (JCNativeException jcne) {
@@ -880,7 +1080,7 @@ public class Typography extends NetObject  {
 
     public static void SetStylisticSet15(DependencyObject element, boolean value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetStylisticSet15", element == null ? null : element.getJCOInstance(), value);
         } catch (JCNativeException jcne) {
@@ -890,7 +1090,7 @@ public class Typography extends NetObject  {
 
     public static void SetStylisticSet16(DependencyObject element, boolean value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetStylisticSet16", element == null ? null : element.getJCOInstance(), value);
         } catch (JCNativeException jcne) {
@@ -900,7 +1100,7 @@ public class Typography extends NetObject  {
 
     public static void SetStylisticSet17(DependencyObject element, boolean value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetStylisticSet17", element == null ? null : element.getJCOInstance(), value);
         } catch (JCNativeException jcne) {
@@ -910,7 +1110,7 @@ public class Typography extends NetObject  {
 
     public static void SetStylisticSet18(DependencyObject element, boolean value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetStylisticSet18", element == null ? null : element.getJCOInstance(), value);
         } catch (JCNativeException jcne) {
@@ -920,7 +1120,7 @@ public class Typography extends NetObject  {
 
     public static void SetStylisticSet19(DependencyObject element, boolean value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetStylisticSet19", element == null ? null : element.getJCOInstance(), value);
         } catch (JCNativeException jcne) {
@@ -930,7 +1130,7 @@ public class Typography extends NetObject  {
 
     public static void SetStylisticSet2(DependencyObject element, boolean value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetStylisticSet2", element == null ? null : element.getJCOInstance(), value);
         } catch (JCNativeException jcne) {
@@ -940,7 +1140,7 @@ public class Typography extends NetObject  {
 
     public static void SetStylisticSet20(DependencyObject element, boolean value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetStylisticSet20", element == null ? null : element.getJCOInstance(), value);
         } catch (JCNativeException jcne) {
@@ -950,7 +1150,7 @@ public class Typography extends NetObject  {
 
     public static void SetStylisticSet3(DependencyObject element, boolean value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetStylisticSet3", element == null ? null : element.getJCOInstance(), value);
         } catch (JCNativeException jcne) {
@@ -960,7 +1160,7 @@ public class Typography extends NetObject  {
 
     public static void SetStylisticSet4(DependencyObject element, boolean value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetStylisticSet4", element == null ? null : element.getJCOInstance(), value);
         } catch (JCNativeException jcne) {
@@ -970,7 +1170,7 @@ public class Typography extends NetObject  {
 
     public static void SetStylisticSet5(DependencyObject element, boolean value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetStylisticSet5", element == null ? null : element.getJCOInstance(), value);
         } catch (JCNativeException jcne) {
@@ -980,7 +1180,7 @@ public class Typography extends NetObject  {
 
     public static void SetStylisticSet6(DependencyObject element, boolean value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetStylisticSet6", element == null ? null : element.getJCOInstance(), value);
         } catch (JCNativeException jcne) {
@@ -990,7 +1190,7 @@ public class Typography extends NetObject  {
 
     public static void SetStylisticSet7(DependencyObject element, boolean value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetStylisticSet7", element == null ? null : element.getJCOInstance(), value);
         } catch (JCNativeException jcne) {
@@ -1000,7 +1200,7 @@ public class Typography extends NetObject  {
 
     public static void SetStylisticSet8(DependencyObject element, boolean value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetStylisticSet8", element == null ? null : element.getJCOInstance(), value);
         } catch (JCNativeException jcne) {
@@ -1010,7 +1210,7 @@ public class Typography extends NetObject  {
 
     public static void SetStylisticSet9(DependencyObject element, boolean value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetStylisticSet9", element == null ? null : element.getJCOInstance(), value);
         } catch (JCNativeException jcne) {
@@ -1020,7 +1220,7 @@ public class Typography extends NetObject  {
 
     public static void SetVariants(DependencyObject element, FontVariants value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetVariants", element == null ? null : element.getJCOInstance(), value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1034,9 +1234,13 @@ public class Typography extends NetObject  {
     
     public boolean getCapitalSpacing() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCapitalSpacing = null;
         try {
-            return (boolean)classInstance.Get("CapitalSpacing");
+            retObjectCapitalSpacing = classInstance.Get("CapitalSpacing");
+            return (boolean)retObjectCapitalSpacing;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCapitalSpacing != null ? retObjectCapitalSpacing.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1044,7 +1248,7 @@ public class Typography extends NetObject  {
 
     public void setCapitalSpacing(boolean CapitalSpacing) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CapitalSpacing", CapitalSpacing);
         } catch (JCNativeException jcne) {
@@ -1054,9 +1258,13 @@ public class Typography extends NetObject  {
 
     public boolean getCaseSensitiveForms() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCaseSensitiveForms = null;
         try {
-            return (boolean)classInstance.Get("CaseSensitiveForms");
+            retObjectCaseSensitiveForms = classInstance.Get("CaseSensitiveForms");
+            return (boolean)retObjectCaseSensitiveForms;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCaseSensitiveForms != null ? retObjectCaseSensitiveForms.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1064,7 +1272,7 @@ public class Typography extends NetObject  {
 
     public void setCaseSensitiveForms(boolean CaseSensitiveForms) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CaseSensitiveForms", CaseSensitiveForms);
         } catch (JCNativeException jcne) {
@@ -1074,9 +1282,13 @@ public class Typography extends NetObject  {
 
     public boolean getContextualAlternates() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContextualAlternates = null;
         try {
-            return (boolean)classInstance.Get("ContextualAlternates");
+            retObjectContextualAlternates = classInstance.Get("ContextualAlternates");
+            return (boolean)retObjectContextualAlternates;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectContextualAlternates != null ? retObjectContextualAlternates.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1084,7 +1296,7 @@ public class Typography extends NetObject  {
 
     public void setContextualAlternates(boolean ContextualAlternates) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ContextualAlternates", ContextualAlternates);
         } catch (JCNativeException jcne) {
@@ -1094,9 +1306,13 @@ public class Typography extends NetObject  {
 
     public boolean getContextualLigatures() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContextualLigatures = null;
         try {
-            return (boolean)classInstance.Get("ContextualLigatures");
+            retObjectContextualLigatures = classInstance.Get("ContextualLigatures");
+            return (boolean)retObjectContextualLigatures;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectContextualLigatures != null ? retObjectContextualLigatures.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1104,7 +1320,7 @@ public class Typography extends NetObject  {
 
     public void setContextualLigatures(boolean ContextualLigatures) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ContextualLigatures", ContextualLigatures);
         } catch (JCNativeException jcne) {
@@ -1114,9 +1330,13 @@ public class Typography extends NetObject  {
 
     public boolean getDiscretionaryLigatures() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDiscretionaryLigatures = null;
         try {
-            return (boolean)classInstance.Get("DiscretionaryLigatures");
+            retObjectDiscretionaryLigatures = classInstance.Get("DiscretionaryLigatures");
+            return (boolean)retObjectDiscretionaryLigatures;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectDiscretionaryLigatures != null ? retObjectDiscretionaryLigatures.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1124,7 +1344,7 @@ public class Typography extends NetObject  {
 
     public void setDiscretionaryLigatures(boolean DiscretionaryLigatures) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DiscretionaryLigatures", DiscretionaryLigatures);
         } catch (JCNativeException jcne) {
@@ -1134,9 +1354,13 @@ public class Typography extends NetObject  {
 
     public boolean getEastAsianExpertForms() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEastAsianExpertForms = null;
         try {
-            return (boolean)classInstance.Get("EastAsianExpertForms");
+            retObjectEastAsianExpertForms = classInstance.Get("EastAsianExpertForms");
+            return (boolean)retObjectEastAsianExpertForms;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectEastAsianExpertForms != null ? retObjectEastAsianExpertForms.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1144,7 +1368,7 @@ public class Typography extends NetObject  {
 
     public void setEastAsianExpertForms(boolean EastAsianExpertForms) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EastAsianExpertForms", EastAsianExpertForms);
         } catch (JCNativeException jcne) {
@@ -1154,9 +1378,13 @@ public class Typography extends NetObject  {
 
     public boolean getHistoricalForms() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHistoricalForms = null;
         try {
-            return (boolean)classInstance.Get("HistoricalForms");
+            retObjectHistoricalForms = classInstance.Get("HistoricalForms");
+            return (boolean)retObjectHistoricalForms;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectHistoricalForms != null ? retObjectHistoricalForms.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1164,7 +1392,7 @@ public class Typography extends NetObject  {
 
     public void setHistoricalForms(boolean HistoricalForms) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("HistoricalForms", HistoricalForms);
         } catch (JCNativeException jcne) {
@@ -1174,9 +1402,13 @@ public class Typography extends NetObject  {
 
     public boolean getHistoricalLigatures() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHistoricalLigatures = null;
         try {
-            return (boolean)classInstance.Get("HistoricalLigatures");
+            retObjectHistoricalLigatures = classInstance.Get("HistoricalLigatures");
+            return (boolean)retObjectHistoricalLigatures;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectHistoricalLigatures != null ? retObjectHistoricalLigatures.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1184,7 +1416,7 @@ public class Typography extends NetObject  {
 
     public void setHistoricalLigatures(boolean HistoricalLigatures) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("HistoricalLigatures", HistoricalLigatures);
         } catch (JCNativeException jcne) {
@@ -1194,9 +1426,13 @@ public class Typography extends NetObject  {
 
     public boolean getKerning() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectKerning = null;
         try {
-            return (boolean)classInstance.Get("Kerning");
+            retObjectKerning = classInstance.Get("Kerning");
+            return (boolean)retObjectKerning;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectKerning != null ? retObjectKerning.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1204,7 +1440,7 @@ public class Typography extends NetObject  {
 
     public void setKerning(boolean Kerning) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Kerning", Kerning);
         } catch (JCNativeException jcne) {
@@ -1214,9 +1450,13 @@ public class Typography extends NetObject  {
 
     public boolean getMathematicalGreek() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMathematicalGreek = null;
         try {
-            return (boolean)classInstance.Get("MathematicalGreek");
+            retObjectMathematicalGreek = classInstance.Get("MathematicalGreek");
+            return (boolean)retObjectMathematicalGreek;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectMathematicalGreek != null ? retObjectMathematicalGreek.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1224,7 +1464,7 @@ public class Typography extends NetObject  {
 
     public void setMathematicalGreek(boolean MathematicalGreek) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MathematicalGreek", MathematicalGreek);
         } catch (JCNativeException jcne) {
@@ -1234,9 +1474,13 @@ public class Typography extends NetObject  {
 
     public boolean getSlashedZero() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSlashedZero = null;
         try {
-            return (boolean)classInstance.Get("SlashedZero");
+            retObjectSlashedZero = classInstance.Get("SlashedZero");
+            return (boolean)retObjectSlashedZero;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectSlashedZero != null ? retObjectSlashedZero.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1244,7 +1488,7 @@ public class Typography extends NetObject  {
 
     public void setSlashedZero(boolean SlashedZero) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SlashedZero", SlashedZero);
         } catch (JCNativeException jcne) {
@@ -1254,9 +1498,13 @@ public class Typography extends NetObject  {
 
     public boolean getStandardLigatures() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStandardLigatures = null;
         try {
-            return (boolean)classInstance.Get("StandardLigatures");
+            retObjectStandardLigatures = classInstance.Get("StandardLigatures");
+            return (boolean)retObjectStandardLigatures;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectStandardLigatures != null ? retObjectStandardLigatures.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1264,7 +1512,7 @@ public class Typography extends NetObject  {
 
     public void setStandardLigatures(boolean StandardLigatures) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("StandardLigatures", StandardLigatures);
         } catch (JCNativeException jcne) {
@@ -1274,9 +1522,13 @@ public class Typography extends NetObject  {
 
     public boolean getStylisticSet1() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStylisticSet1 = null;
         try {
-            return (boolean)classInstance.Get("StylisticSet1");
+            retObjectStylisticSet1 = classInstance.Get("StylisticSet1");
+            return (boolean)retObjectStylisticSet1;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectStylisticSet1 != null ? retObjectStylisticSet1.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1284,7 +1536,7 @@ public class Typography extends NetObject  {
 
     public void setStylisticSet1(boolean StylisticSet1) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("StylisticSet1", StylisticSet1);
         } catch (JCNativeException jcne) {
@@ -1294,9 +1546,13 @@ public class Typography extends NetObject  {
 
     public boolean getStylisticSet10() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStylisticSet10 = null;
         try {
-            return (boolean)classInstance.Get("StylisticSet10");
+            retObjectStylisticSet10 = classInstance.Get("StylisticSet10");
+            return (boolean)retObjectStylisticSet10;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectStylisticSet10 != null ? retObjectStylisticSet10.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1304,7 +1560,7 @@ public class Typography extends NetObject  {
 
     public void setStylisticSet10(boolean StylisticSet10) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("StylisticSet10", StylisticSet10);
         } catch (JCNativeException jcne) {
@@ -1314,9 +1570,13 @@ public class Typography extends NetObject  {
 
     public boolean getStylisticSet11() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStylisticSet11 = null;
         try {
-            return (boolean)classInstance.Get("StylisticSet11");
+            retObjectStylisticSet11 = classInstance.Get("StylisticSet11");
+            return (boolean)retObjectStylisticSet11;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectStylisticSet11 != null ? retObjectStylisticSet11.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1324,7 +1584,7 @@ public class Typography extends NetObject  {
 
     public void setStylisticSet11(boolean StylisticSet11) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("StylisticSet11", StylisticSet11);
         } catch (JCNativeException jcne) {
@@ -1334,9 +1594,13 @@ public class Typography extends NetObject  {
 
     public boolean getStylisticSet12() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStylisticSet12 = null;
         try {
-            return (boolean)classInstance.Get("StylisticSet12");
+            retObjectStylisticSet12 = classInstance.Get("StylisticSet12");
+            return (boolean)retObjectStylisticSet12;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectStylisticSet12 != null ? retObjectStylisticSet12.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1344,7 +1608,7 @@ public class Typography extends NetObject  {
 
     public void setStylisticSet12(boolean StylisticSet12) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("StylisticSet12", StylisticSet12);
         } catch (JCNativeException jcne) {
@@ -1354,9 +1618,13 @@ public class Typography extends NetObject  {
 
     public boolean getStylisticSet13() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStylisticSet13 = null;
         try {
-            return (boolean)classInstance.Get("StylisticSet13");
+            retObjectStylisticSet13 = classInstance.Get("StylisticSet13");
+            return (boolean)retObjectStylisticSet13;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectStylisticSet13 != null ? retObjectStylisticSet13.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1364,7 +1632,7 @@ public class Typography extends NetObject  {
 
     public void setStylisticSet13(boolean StylisticSet13) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("StylisticSet13", StylisticSet13);
         } catch (JCNativeException jcne) {
@@ -1374,9 +1642,13 @@ public class Typography extends NetObject  {
 
     public boolean getStylisticSet14() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStylisticSet14 = null;
         try {
-            return (boolean)classInstance.Get("StylisticSet14");
+            retObjectStylisticSet14 = classInstance.Get("StylisticSet14");
+            return (boolean)retObjectStylisticSet14;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectStylisticSet14 != null ? retObjectStylisticSet14.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1384,7 +1656,7 @@ public class Typography extends NetObject  {
 
     public void setStylisticSet14(boolean StylisticSet14) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("StylisticSet14", StylisticSet14);
         } catch (JCNativeException jcne) {
@@ -1394,9 +1666,13 @@ public class Typography extends NetObject  {
 
     public boolean getStylisticSet15() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStylisticSet15 = null;
         try {
-            return (boolean)classInstance.Get("StylisticSet15");
+            retObjectStylisticSet15 = classInstance.Get("StylisticSet15");
+            return (boolean)retObjectStylisticSet15;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectStylisticSet15 != null ? retObjectStylisticSet15.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1404,7 +1680,7 @@ public class Typography extends NetObject  {
 
     public void setStylisticSet15(boolean StylisticSet15) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("StylisticSet15", StylisticSet15);
         } catch (JCNativeException jcne) {
@@ -1414,9 +1690,13 @@ public class Typography extends NetObject  {
 
     public boolean getStylisticSet16() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStylisticSet16 = null;
         try {
-            return (boolean)classInstance.Get("StylisticSet16");
+            retObjectStylisticSet16 = classInstance.Get("StylisticSet16");
+            return (boolean)retObjectStylisticSet16;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectStylisticSet16 != null ? retObjectStylisticSet16.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1424,7 +1704,7 @@ public class Typography extends NetObject  {
 
     public void setStylisticSet16(boolean StylisticSet16) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("StylisticSet16", StylisticSet16);
         } catch (JCNativeException jcne) {
@@ -1434,9 +1714,13 @@ public class Typography extends NetObject  {
 
     public boolean getStylisticSet17() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStylisticSet17 = null;
         try {
-            return (boolean)classInstance.Get("StylisticSet17");
+            retObjectStylisticSet17 = classInstance.Get("StylisticSet17");
+            return (boolean)retObjectStylisticSet17;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectStylisticSet17 != null ? retObjectStylisticSet17.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1444,7 +1728,7 @@ public class Typography extends NetObject  {
 
     public void setStylisticSet17(boolean StylisticSet17) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("StylisticSet17", StylisticSet17);
         } catch (JCNativeException jcne) {
@@ -1454,9 +1738,13 @@ public class Typography extends NetObject  {
 
     public boolean getStylisticSet18() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStylisticSet18 = null;
         try {
-            return (boolean)classInstance.Get("StylisticSet18");
+            retObjectStylisticSet18 = classInstance.Get("StylisticSet18");
+            return (boolean)retObjectStylisticSet18;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectStylisticSet18 != null ? retObjectStylisticSet18.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1464,7 +1752,7 @@ public class Typography extends NetObject  {
 
     public void setStylisticSet18(boolean StylisticSet18) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("StylisticSet18", StylisticSet18);
         } catch (JCNativeException jcne) {
@@ -1474,9 +1762,13 @@ public class Typography extends NetObject  {
 
     public boolean getStylisticSet19() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStylisticSet19 = null;
         try {
-            return (boolean)classInstance.Get("StylisticSet19");
+            retObjectStylisticSet19 = classInstance.Get("StylisticSet19");
+            return (boolean)retObjectStylisticSet19;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectStylisticSet19 != null ? retObjectStylisticSet19.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1484,7 +1776,7 @@ public class Typography extends NetObject  {
 
     public void setStylisticSet19(boolean StylisticSet19) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("StylisticSet19", StylisticSet19);
         } catch (JCNativeException jcne) {
@@ -1494,9 +1786,13 @@ public class Typography extends NetObject  {
 
     public boolean getStylisticSet2() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStylisticSet2 = null;
         try {
-            return (boolean)classInstance.Get("StylisticSet2");
+            retObjectStylisticSet2 = classInstance.Get("StylisticSet2");
+            return (boolean)retObjectStylisticSet2;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectStylisticSet2 != null ? retObjectStylisticSet2.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1504,7 +1800,7 @@ public class Typography extends NetObject  {
 
     public void setStylisticSet2(boolean StylisticSet2) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("StylisticSet2", StylisticSet2);
         } catch (JCNativeException jcne) {
@@ -1514,9 +1810,13 @@ public class Typography extends NetObject  {
 
     public boolean getStylisticSet20() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStylisticSet20 = null;
         try {
-            return (boolean)classInstance.Get("StylisticSet20");
+            retObjectStylisticSet20 = classInstance.Get("StylisticSet20");
+            return (boolean)retObjectStylisticSet20;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectStylisticSet20 != null ? retObjectStylisticSet20.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1524,7 +1824,7 @@ public class Typography extends NetObject  {
 
     public void setStylisticSet20(boolean StylisticSet20) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("StylisticSet20", StylisticSet20);
         } catch (JCNativeException jcne) {
@@ -1534,9 +1834,13 @@ public class Typography extends NetObject  {
 
     public boolean getStylisticSet3() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStylisticSet3 = null;
         try {
-            return (boolean)classInstance.Get("StylisticSet3");
+            retObjectStylisticSet3 = classInstance.Get("StylisticSet3");
+            return (boolean)retObjectStylisticSet3;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectStylisticSet3 != null ? retObjectStylisticSet3.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1544,7 +1848,7 @@ public class Typography extends NetObject  {
 
     public void setStylisticSet3(boolean StylisticSet3) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("StylisticSet3", StylisticSet3);
         } catch (JCNativeException jcne) {
@@ -1554,9 +1858,13 @@ public class Typography extends NetObject  {
 
     public boolean getStylisticSet4() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStylisticSet4 = null;
         try {
-            return (boolean)classInstance.Get("StylisticSet4");
+            retObjectStylisticSet4 = classInstance.Get("StylisticSet4");
+            return (boolean)retObjectStylisticSet4;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectStylisticSet4 != null ? retObjectStylisticSet4.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1564,7 +1872,7 @@ public class Typography extends NetObject  {
 
     public void setStylisticSet4(boolean StylisticSet4) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("StylisticSet4", StylisticSet4);
         } catch (JCNativeException jcne) {
@@ -1574,9 +1882,13 @@ public class Typography extends NetObject  {
 
     public boolean getStylisticSet5() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStylisticSet5 = null;
         try {
-            return (boolean)classInstance.Get("StylisticSet5");
+            retObjectStylisticSet5 = classInstance.Get("StylisticSet5");
+            return (boolean)retObjectStylisticSet5;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectStylisticSet5 != null ? retObjectStylisticSet5.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1584,7 +1896,7 @@ public class Typography extends NetObject  {
 
     public void setStylisticSet5(boolean StylisticSet5) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("StylisticSet5", StylisticSet5);
         } catch (JCNativeException jcne) {
@@ -1594,9 +1906,13 @@ public class Typography extends NetObject  {
 
     public boolean getStylisticSet6() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStylisticSet6 = null;
         try {
-            return (boolean)classInstance.Get("StylisticSet6");
+            retObjectStylisticSet6 = classInstance.Get("StylisticSet6");
+            return (boolean)retObjectStylisticSet6;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectStylisticSet6 != null ? retObjectStylisticSet6.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1604,7 +1920,7 @@ public class Typography extends NetObject  {
 
     public void setStylisticSet6(boolean StylisticSet6) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("StylisticSet6", StylisticSet6);
         } catch (JCNativeException jcne) {
@@ -1614,9 +1930,13 @@ public class Typography extends NetObject  {
 
     public boolean getStylisticSet7() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStylisticSet7 = null;
         try {
-            return (boolean)classInstance.Get("StylisticSet7");
+            retObjectStylisticSet7 = classInstance.Get("StylisticSet7");
+            return (boolean)retObjectStylisticSet7;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectStylisticSet7 != null ? retObjectStylisticSet7.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1624,7 +1944,7 @@ public class Typography extends NetObject  {
 
     public void setStylisticSet7(boolean StylisticSet7) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("StylisticSet7", StylisticSet7);
         } catch (JCNativeException jcne) {
@@ -1634,9 +1954,13 @@ public class Typography extends NetObject  {
 
     public boolean getStylisticSet8() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStylisticSet8 = null;
         try {
-            return (boolean)classInstance.Get("StylisticSet8");
+            retObjectStylisticSet8 = classInstance.Get("StylisticSet8");
+            return (boolean)retObjectStylisticSet8;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectStylisticSet8 != null ? retObjectStylisticSet8.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1644,7 +1968,7 @@ public class Typography extends NetObject  {
 
     public void setStylisticSet8(boolean StylisticSet8) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("StylisticSet8", StylisticSet8);
         } catch (JCNativeException jcne) {
@@ -1654,9 +1978,13 @@ public class Typography extends NetObject  {
 
     public boolean getStylisticSet9() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStylisticSet9 = null;
         try {
-            return (boolean)classInstance.Get("StylisticSet9");
+            retObjectStylisticSet9 = classInstance.Get("StylisticSet9");
+            return (boolean)retObjectStylisticSet9;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectStylisticSet9 != null ? retObjectStylisticSet9.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1664,7 +1992,7 @@ public class Typography extends NetObject  {
 
     public void setStylisticSet9(boolean StylisticSet9) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("StylisticSet9", StylisticSet9);
         } catch (JCNativeException jcne) {
@@ -1674,9 +2002,20 @@ public class Typography extends NetObject  {
 
     public int getAnnotationAlternates() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAnnotationAlternates = null;
         try {
-            return (int)classInstance.Get("AnnotationAlternates");
+            retObjectAnnotationAlternates = classInstance.Get("AnnotationAlternates");
+            return (int)retObjectAnnotationAlternates;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectAnnotationAlternates_ToString = retObjectAnnotationAlternates == null ? "null" : retObjectAnnotationAlternates.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectAnnotationAlternatesNumber = (java.lang.Number)retObjectAnnotationAlternates;
+                return retObjectAnnotationAlternatesNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectAnnotationAlternates != null ? retObjectAnnotationAlternates.getClass() : "null", retObjectAnnotationAlternates_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1684,7 +2023,7 @@ public class Typography extends NetObject  {
 
     public void setAnnotationAlternates(int AnnotationAlternates) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AnnotationAlternates", AnnotationAlternates);
         } catch (JCNativeException jcne) {
@@ -1694,9 +2033,20 @@ public class Typography extends NetObject  {
 
     public int getContextualSwashes() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContextualSwashes = null;
         try {
-            return (int)classInstance.Get("ContextualSwashes");
+            retObjectContextualSwashes = classInstance.Get("ContextualSwashes");
+            return (int)retObjectContextualSwashes;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectContextualSwashes_ToString = retObjectContextualSwashes == null ? "null" : retObjectContextualSwashes.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectContextualSwashesNumber = (java.lang.Number)retObjectContextualSwashes;
+                return retObjectContextualSwashesNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectContextualSwashes != null ? retObjectContextualSwashes.getClass() : "null", retObjectContextualSwashes_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1704,7 +2054,7 @@ public class Typography extends NetObject  {
 
     public void setContextualSwashes(int ContextualSwashes) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ContextualSwashes", ContextualSwashes);
         } catch (JCNativeException jcne) {
@@ -1714,9 +2064,20 @@ public class Typography extends NetObject  {
 
     public int getStandardSwashes() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStandardSwashes = null;
         try {
-            return (int)classInstance.Get("StandardSwashes");
+            retObjectStandardSwashes = classInstance.Get("StandardSwashes");
+            return (int)retObjectStandardSwashes;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectStandardSwashes_ToString = retObjectStandardSwashes == null ? "null" : retObjectStandardSwashes.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectStandardSwashesNumber = (java.lang.Number)retObjectStandardSwashes;
+                return retObjectStandardSwashesNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectStandardSwashes != null ? retObjectStandardSwashes.getClass() : "null", retObjectStandardSwashes_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1724,7 +2085,7 @@ public class Typography extends NetObject  {
 
     public void setStandardSwashes(int StandardSwashes) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("StandardSwashes", StandardSwashes);
         } catch (JCNativeException jcne) {
@@ -1734,9 +2095,20 @@ public class Typography extends NetObject  {
 
     public int getStylisticAlternates() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStylisticAlternates = null;
         try {
-            return (int)classInstance.Get("StylisticAlternates");
+            retObjectStylisticAlternates = classInstance.Get("StylisticAlternates");
+            return (int)retObjectStylisticAlternates;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectStylisticAlternates_ToString = retObjectStylisticAlternates == null ? "null" : retObjectStylisticAlternates.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectStylisticAlternatesNumber = (java.lang.Number)retObjectStylisticAlternates;
+                return retObjectStylisticAlternatesNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectStylisticAlternates != null ? retObjectStylisticAlternates.getClass() : "null", retObjectStylisticAlternates_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1744,7 +2116,7 @@ public class Typography extends NetObject  {
 
     public void setStylisticAlternates(int StylisticAlternates) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("StylisticAlternates", StylisticAlternates);
         } catch (JCNativeException jcne) {
@@ -1754,10 +2126,14 @@ public class Typography extends NetObject  {
 
     public FontCapitals getCapitals() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCapitals = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Capitals");
+            retObjectCapitals = classInstance.Get("Capitals");
+            JCObject val = (JCObject)retObjectCapitals;
             return new FontCapitals(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCapitals != null ? retObjectCapitals.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1765,7 +2141,7 @@ public class Typography extends NetObject  {
 
     public void setCapitals(FontCapitals Capitals) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Capitals", Capitals == null ? null : Capitals.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1775,10 +2151,14 @@ public class Typography extends NetObject  {
 
     public FontEastAsianLanguage getEastAsianLanguage() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEastAsianLanguage = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("EastAsianLanguage");
+            retObjectEastAsianLanguage = classInstance.Get("EastAsianLanguage");
+            JCObject val = (JCObject)retObjectEastAsianLanguage;
             return new FontEastAsianLanguage(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEastAsianLanguage != null ? retObjectEastAsianLanguage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1786,7 +2166,7 @@ public class Typography extends NetObject  {
 
     public void setEastAsianLanguage(FontEastAsianLanguage EastAsianLanguage) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EastAsianLanguage", EastAsianLanguage == null ? null : EastAsianLanguage.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1796,10 +2176,14 @@ public class Typography extends NetObject  {
 
     public FontEastAsianWidths getEastAsianWidths() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEastAsianWidths = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("EastAsianWidths");
+            retObjectEastAsianWidths = classInstance.Get("EastAsianWidths");
+            JCObject val = (JCObject)retObjectEastAsianWidths;
             return new FontEastAsianWidths(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEastAsianWidths != null ? retObjectEastAsianWidths.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1807,7 +2191,7 @@ public class Typography extends NetObject  {
 
     public void setEastAsianWidths(FontEastAsianWidths EastAsianWidths) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EastAsianWidths", EastAsianWidths == null ? null : EastAsianWidths.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1817,10 +2201,14 @@ public class Typography extends NetObject  {
 
     public FontFraction getFraction() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFraction = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Fraction");
+            retObjectFraction = classInstance.Get("Fraction");
+            JCObject val = (JCObject)retObjectFraction;
             return new FontFraction(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFraction != null ? retObjectFraction.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1828,7 +2216,7 @@ public class Typography extends NetObject  {
 
     public void setFraction(FontFraction Fraction) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Fraction", Fraction == null ? null : Fraction.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1838,10 +2226,14 @@ public class Typography extends NetObject  {
 
     public FontNumeralAlignment getNumeralAlignment() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNumeralAlignment = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("NumeralAlignment");
+            retObjectNumeralAlignment = classInstance.Get("NumeralAlignment");
+            JCObject val = (JCObject)retObjectNumeralAlignment;
             return new FontNumeralAlignment(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNumeralAlignment != null ? retObjectNumeralAlignment.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1849,7 +2241,7 @@ public class Typography extends NetObject  {
 
     public void setNumeralAlignment(FontNumeralAlignment NumeralAlignment) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("NumeralAlignment", NumeralAlignment == null ? null : NumeralAlignment.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1859,10 +2251,14 @@ public class Typography extends NetObject  {
 
     public FontNumeralStyle getNumeralStyle() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNumeralStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("NumeralStyle");
+            retObjectNumeralStyle = classInstance.Get("NumeralStyle");
+            JCObject val = (JCObject)retObjectNumeralStyle;
             return new FontNumeralStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNumeralStyle != null ? retObjectNumeralStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1870,7 +2266,7 @@ public class Typography extends NetObject  {
 
     public void setNumeralStyle(FontNumeralStyle NumeralStyle) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("NumeralStyle", NumeralStyle == null ? null : NumeralStyle.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1880,10 +2276,14 @@ public class Typography extends NetObject  {
 
     public FontVariants getVariants() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVariants = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Variants");
+            retObjectVariants = classInstance.Get("Variants");
+            JCObject val = (JCObject)retObjectVariants;
             return new FontVariants(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVariants != null ? retObjectVariants.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1891,7 +2291,7 @@ public class Typography extends NetObject  {
 
     public void setVariants(FontVariants Variants) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Variants", Variants == null ? null : Variants.getJCOInstance());
         } catch (JCNativeException jcne) {

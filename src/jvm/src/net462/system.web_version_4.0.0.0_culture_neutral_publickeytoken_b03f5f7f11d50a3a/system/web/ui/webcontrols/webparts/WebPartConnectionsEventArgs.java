@@ -184,10 +184,14 @@ public class WebPartConnectionsEventArgs extends EventArgs  {
     
     public ConsumerConnectionPoint getConsumerConnectionPoint() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConsumerConnectionPoint = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ConsumerConnectionPoint");
+            retObjectConsumerConnectionPoint = classInstance.Get("ConsumerConnectionPoint");
+            JCObject val = (JCObject)retObjectConsumerConnectionPoint;
             return new ConsumerConnectionPoint(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConsumerConnectionPoint != null ? retObjectConsumerConnectionPoint.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,10 +199,14 @@ public class WebPartConnectionsEventArgs extends EventArgs  {
 
     public ProviderConnectionPoint getProviderConnectionPoint() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProviderConnectionPoint = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ProviderConnectionPoint");
+            retObjectProviderConnectionPoint = classInstance.Get("ProviderConnectionPoint");
+            JCObject val = (JCObject)retObjectProviderConnectionPoint;
             return new ProviderConnectionPoint(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectProviderConnectionPoint != null ? retObjectProviderConnectionPoint.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -206,10 +214,14 @@ public class WebPartConnectionsEventArgs extends EventArgs  {
 
     public WebPart getConsumer() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConsumer = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Consumer");
+            retObjectConsumer = classInstance.Get("Consumer");
+            JCObject val = (JCObject)retObjectConsumer;
             return new WebPart(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConsumer != null ? retObjectConsumer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -217,10 +229,14 @@ public class WebPartConnectionsEventArgs extends EventArgs  {
 
     public WebPart getProvider() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProvider = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Provider");
+            retObjectProvider = classInstance.Get("Provider");
+            JCObject val = (JCObject)retObjectProvider;
             return new WebPart(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectProvider != null ? retObjectProvider.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -228,10 +244,14 @@ public class WebPartConnectionsEventArgs extends EventArgs  {
 
     public WebPartConnection getConnection() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConnection = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Connection");
+            retObjectConnection = classInstance.Get("Connection");
+            JCObject val = (JCObject)retObjectConnection;
             return new WebPartConnection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConnection != null ? retObjectConnection.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -167,10 +167,14 @@ public class ServiceModelActivationSectionGroup extends ConfigurationSectionGrou
     
     public static ServiceModelActivationSectionGroup GetSectionGroup(Configuration config) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException, system.configuration.ConfigurationErrorsException, system.TypeLoadException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetSectionGroup = null;
         try {
-            JCObject objGetSectionGroup = (JCObject)classType.Invoke("GetSectionGroup", config == null ? null : config.getJCOInstance());
+            retObjectGetSectionGroup = classType.Invoke("GetSectionGroup", config == null ? null : config.getJCOInstance());
+            JCObject objGetSectionGroup = (JCObject)retObjectGetSectionGroup;
             return new ServiceModelActivationSectionGroup(objGetSectionGroup);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSectionGroup != null ? retObjectGetSectionGroup.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,10 +186,14 @@ public class ServiceModelActivationSectionGroup extends ConfigurationSectionGrou
     
     public DiagnosticSection getDiagnostics() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDiagnostics = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Diagnostics");
+            retObjectDiagnostics = classInstance.Get("Diagnostics");
+            JCObject val = (JCObject)retObjectDiagnostics;
             return new DiagnosticSection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDiagnostics != null ? retObjectDiagnostics.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,10 +201,14 @@ public class ServiceModelActivationSectionGroup extends ConfigurationSectionGrou
 
     public NetPipeSection getNetPipe() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNetPipe = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("NetPipe");
+            retObjectNetPipe = classInstance.Get("NetPipe");
+            JCObject val = (JCObject)retObjectNetPipe;
             return new NetPipeSection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNetPipe != null ? retObjectNetPipe.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -204,10 +216,14 @@ public class ServiceModelActivationSectionGroup extends ConfigurationSectionGrou
 
     public NetTcpSection getNetTcp() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNetTcp = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("NetTcp");
+            retObjectNetTcp = classInstance.Get("NetTcp");
+            JCObject val = (JCObject)retObjectNetTcp;
             return new NetTcpSection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNetTcp != null ? retObjectNetTcp.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

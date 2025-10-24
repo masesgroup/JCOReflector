@@ -174,10 +174,14 @@ public class DiscoveryDocumentReference extends DiscoveryReference  {
     
     public NetObject ReadDocument(Stream stream) throws Throwable, system.ArgumentNullException, system.NullReferenceException, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.io.PathTooLongException, system.MemberAccessException, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.SecurityException, system.web.HttpException, system.web.HttpRequestValidationException, system.UnauthorizedAccessException, system.io.IOException, system.xml.XmlException, system.MulticastNotSupportedException, system.FormatException, system.OutOfMemoryException, system.OverflowException, system.MissingMethodException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadDocument = null;
         try {
-            JCObject objReadDocument = (JCObject)classInstance.Invoke("ReadDocument", stream == null ? null : stream.getJCOInstance());
+            retObjectReadDocument = classInstance.Invoke("ReadDocument", stream == null ? null : stream.getJCOInstance());
+            JCObject objReadDocument = (JCObject)retObjectReadDocument;
             return new NetObject(objReadDocument);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadDocument != null ? retObjectReadDocument.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -185,7 +189,7 @@ public class DiscoveryDocumentReference extends DiscoveryReference  {
 
     public void ResolveAll() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.UriFormatException, system.OutOfMemoryException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.FormatException, system.net.WebException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ResolveAll");
         } catch (JCNativeException jcne) {
@@ -195,7 +199,7 @@ public class DiscoveryDocumentReference extends DiscoveryReference  {
 
     public void WriteDocument(NetObject document, Stream stream) throws Throwable, system.ArgumentNullException, system.NullReferenceException, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.io.PathTooLongException, system.MemberAccessException, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.SecurityException, system.web.HttpException, system.web.HttpRequestValidationException, system.MissingMethodException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteDocument", document == null ? null : document.getJCOInstance(), stream == null ? null : stream.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -209,9 +213,13 @@ public class DiscoveryDocumentReference extends DiscoveryReference  {
     
     public java.lang.String getRef() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRef = null;
         try {
-            return (java.lang.String)classInstance.Get("Ref");
+            retObjectRef = classInstance.Get("Ref");
+            return (java.lang.String)retObjectRef;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectRef != null ? retObjectRef.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -219,7 +227,7 @@ public class DiscoveryDocumentReference extends DiscoveryReference  {
 
     public void setRef(java.lang.String Ref) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Ref", Ref);
         } catch (JCNativeException jcne) {
@@ -229,10 +237,14 @@ public class DiscoveryDocumentReference extends DiscoveryReference  {
 
     public DiscoveryDocument getDocument() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.security.SecurityException, system.UriFormatException, system.OutOfMemoryException, system.InvalidCastException, system.configuration.ConfigurationErrorsException, system.net.WebException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDocument = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Document");
+            retObjectDocument = classInstance.Get("Document");
+            JCObject val = (JCObject)retObjectDocument;
             return new DiscoveryDocument(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDocument != null ? retObjectDocument.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

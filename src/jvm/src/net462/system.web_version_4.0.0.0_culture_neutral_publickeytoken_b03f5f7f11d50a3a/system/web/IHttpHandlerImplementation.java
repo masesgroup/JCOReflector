@@ -143,7 +143,7 @@ public class IHttpHandlerImplementation extends NetObject implements IHttpHandle
     
     public void ProcessRequest(HttpContext context) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ProcessRequest", context == null ? null : context.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -157,9 +157,13 @@ public class IHttpHandlerImplementation extends NetObject implements IHttpHandle
     
     public boolean getIsReusable() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsReusable = null;
         try {
-            return (boolean)classInstance.Get("IsReusable");
+            retObjectIsReusable = classInstance.Get("IsReusable");
+            return (boolean)retObjectIsReusable;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsReusable != null ? retObjectIsReusable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

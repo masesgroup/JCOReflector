@@ -146,9 +146,13 @@ public class ITypeDescriptorFilterServiceImplementation extends NetObject implem
     
     public boolean FilterAttributes(IComponent component, IDictionary attributes) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFilterAttributes = null;
         try {
-            return (boolean)classInstance.Invoke("FilterAttributes", component == null ? null : component.getJCOInstance(), attributes == null ? null : attributes.getJCOInstance());
+            retObjectFilterAttributes = classInstance.Invoke("FilterAttributes", component == null ? null : component.getJCOInstance(), attributes == null ? null : attributes.getJCOInstance());
+            return (boolean)retObjectFilterAttributes;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectFilterAttributes != null ? retObjectFilterAttributes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -156,9 +160,13 @@ public class ITypeDescriptorFilterServiceImplementation extends NetObject implem
 
     public boolean FilterEvents(IComponent component, IDictionary events) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFilterEvents = null;
         try {
-            return (boolean)classInstance.Invoke("FilterEvents", component == null ? null : component.getJCOInstance(), events == null ? null : events.getJCOInstance());
+            retObjectFilterEvents = classInstance.Invoke("FilterEvents", component == null ? null : component.getJCOInstance(), events == null ? null : events.getJCOInstance());
+            return (boolean)retObjectFilterEvents;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectFilterEvents != null ? retObjectFilterEvents.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -166,9 +174,13 @@ public class ITypeDescriptorFilterServiceImplementation extends NetObject implem
 
     public boolean FilterProperties(IComponent component, IDictionary properties) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFilterProperties = null;
         try {
-            return (boolean)classInstance.Invoke("FilterProperties", component == null ? null : component.getJCOInstance(), properties == null ? null : properties.getJCOInstance());
+            retObjectFilterProperties = classInstance.Invoke("FilterProperties", component == null ? null : component.getJCOInstance(), properties == null ? null : properties.getJCOInstance());
+            return (boolean)retObjectFilterProperties;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectFilterProperties != null ? retObjectFilterProperties.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

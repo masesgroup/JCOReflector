@@ -162,9 +162,20 @@ public class SystemFonts extends NetObject  {
     
     public static double getCaptionFontSize() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.OverflowException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCaptionFontSize = null;
         try {
-            return (double)classType.Get("CaptionFontSize");
+            retObjectCaptionFontSize = classType.Get("CaptionFontSize");
+            return (double)retObjectCaptionFontSize;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCaptionFontSize_ToString = retObjectCaptionFontSize == null ? "null" : retObjectCaptionFontSize.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectCaptionFontSizeNumber = (java.lang.Number)retObjectCaptionFontSize;
+                return retObjectCaptionFontSizeNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectCaptionFontSize != null ? retObjectCaptionFontSize.getClass() : "null", retObjectCaptionFontSize_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,9 +183,20 @@ public class SystemFonts extends NetObject  {
 
     public static double getIconFontSize() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.OverflowException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIconFontSize = null;
         try {
-            return (double)classType.Get("IconFontSize");
+            retObjectIconFontSize = classType.Get("IconFontSize");
+            return (double)retObjectIconFontSize;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectIconFontSize_ToString = retObjectIconFontSize == null ? "null" : retObjectIconFontSize.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectIconFontSizeNumber = (java.lang.Number)retObjectIconFontSize;
+                return retObjectIconFontSizeNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectIconFontSize != null ? retObjectIconFontSize.getClass() : "null", retObjectIconFontSize_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,9 +204,20 @@ public class SystemFonts extends NetObject  {
 
     public static double getMenuFontSize() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.OverflowException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMenuFontSize = null;
         try {
-            return (double)classType.Get("MenuFontSize");
+            retObjectMenuFontSize = classType.Get("MenuFontSize");
+            return (double)retObjectMenuFontSize;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMenuFontSize_ToString = retObjectMenuFontSize == null ? "null" : retObjectMenuFontSize.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMenuFontSizeNumber = (java.lang.Number)retObjectMenuFontSize;
+                return retObjectMenuFontSizeNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectMenuFontSize != null ? retObjectMenuFontSize.getClass() : "null", retObjectMenuFontSize_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,9 +225,20 @@ public class SystemFonts extends NetObject  {
 
     public static double getMessageFontSize() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.OverflowException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMessageFontSize = null;
         try {
-            return (double)classType.Get("MessageFontSize");
+            retObjectMessageFontSize = classType.Get("MessageFontSize");
+            return (double)retObjectMessageFontSize;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMessageFontSize_ToString = retObjectMessageFontSize == null ? "null" : retObjectMessageFontSize.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMessageFontSizeNumber = (java.lang.Number)retObjectMessageFontSize;
+                return retObjectMessageFontSizeNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectMessageFontSize != null ? retObjectMessageFontSize.getClass() : "null", retObjectMessageFontSize_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,9 +246,20 @@ public class SystemFonts extends NetObject  {
 
     public static double getSmallCaptionFontSize() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.OverflowException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSmallCaptionFontSize = null;
         try {
-            return (double)classType.Get("SmallCaptionFontSize");
+            retObjectSmallCaptionFontSize = classType.Get("SmallCaptionFontSize");
+            return (double)retObjectSmallCaptionFontSize;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSmallCaptionFontSize_ToString = retObjectSmallCaptionFontSize == null ? "null" : retObjectSmallCaptionFontSize.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectSmallCaptionFontSizeNumber = (java.lang.Number)retObjectSmallCaptionFontSize;
+                return retObjectSmallCaptionFontSizeNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectSmallCaptionFontSize != null ? retObjectSmallCaptionFontSize.getClass() : "null", retObjectSmallCaptionFontSize_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -212,9 +267,20 @@ public class SystemFonts extends NetObject  {
 
     public static double getStatusFontSize() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.OverflowException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectStatusFontSize = null;
         try {
-            return (double)classType.Get("StatusFontSize");
+            retObjectStatusFontSize = classType.Get("StatusFontSize");
+            return (double)retObjectStatusFontSize;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectStatusFontSize_ToString = retObjectStatusFontSize == null ? "null" : retObjectStatusFontSize.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectStatusFontSizeNumber = (java.lang.Number)retObjectStatusFontSize;
+                return retObjectStatusFontSizeNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectStatusFontSize != null ? retObjectStatusFontSize.getClass() : "null", retObjectStatusFontSize_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -222,10 +288,14 @@ public class SystemFonts extends NetObject  {
 
     public static FontStyle getCaptionFontStyle() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCaptionFontStyle = null;
         try {
-            JCObject val = (JCObject)classType.Get("CaptionFontStyle");
+            retObjectCaptionFontStyle = classType.Get("CaptionFontStyle");
+            JCObject val = (JCObject)retObjectCaptionFontStyle;
             return new FontStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCaptionFontStyle != null ? retObjectCaptionFontStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -233,10 +303,14 @@ public class SystemFonts extends NetObject  {
 
     public static FontStyle getIconFontStyle() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIconFontStyle = null;
         try {
-            JCObject val = (JCObject)classType.Get("IconFontStyle");
+            retObjectIconFontStyle = classType.Get("IconFontStyle");
+            JCObject val = (JCObject)retObjectIconFontStyle;
             return new FontStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIconFontStyle != null ? retObjectIconFontStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -244,10 +318,14 @@ public class SystemFonts extends NetObject  {
 
     public static FontStyle getMenuFontStyle() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMenuFontStyle = null;
         try {
-            JCObject val = (JCObject)classType.Get("MenuFontStyle");
+            retObjectMenuFontStyle = classType.Get("MenuFontStyle");
+            JCObject val = (JCObject)retObjectMenuFontStyle;
             return new FontStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMenuFontStyle != null ? retObjectMenuFontStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -255,10 +333,14 @@ public class SystemFonts extends NetObject  {
 
     public static FontStyle getMessageFontStyle() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMessageFontStyle = null;
         try {
-            JCObject val = (JCObject)classType.Get("MessageFontStyle");
+            retObjectMessageFontStyle = classType.Get("MessageFontStyle");
+            JCObject val = (JCObject)retObjectMessageFontStyle;
             return new FontStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMessageFontStyle != null ? retObjectMessageFontStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -266,10 +348,14 @@ public class SystemFonts extends NetObject  {
 
     public static FontStyle getSmallCaptionFontStyle() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSmallCaptionFontStyle = null;
         try {
-            JCObject val = (JCObject)classType.Get("SmallCaptionFontStyle");
+            retObjectSmallCaptionFontStyle = classType.Get("SmallCaptionFontStyle");
+            JCObject val = (JCObject)retObjectSmallCaptionFontStyle;
             return new FontStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSmallCaptionFontStyle != null ? retObjectSmallCaptionFontStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -277,10 +363,14 @@ public class SystemFonts extends NetObject  {
 
     public static FontStyle getStatusFontStyle() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectStatusFontStyle = null;
         try {
-            JCObject val = (JCObject)classType.Get("StatusFontStyle");
+            retObjectStatusFontStyle = classType.Get("StatusFontStyle");
+            JCObject val = (JCObject)retObjectStatusFontStyle;
             return new FontStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStatusFontStyle != null ? retObjectStatusFontStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -288,10 +378,14 @@ public class SystemFonts extends NetObject  {
 
     public static FontWeight getCaptionFontWeight() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCaptionFontWeight = null;
         try {
-            JCObject val = (JCObject)classType.Get("CaptionFontWeight");
+            retObjectCaptionFontWeight = classType.Get("CaptionFontWeight");
+            JCObject val = (JCObject)retObjectCaptionFontWeight;
             return new FontWeight(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCaptionFontWeight != null ? retObjectCaptionFontWeight.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -299,10 +393,14 @@ public class SystemFonts extends NetObject  {
 
     public static FontWeight getIconFontWeight() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIconFontWeight = null;
         try {
-            JCObject val = (JCObject)classType.Get("IconFontWeight");
+            retObjectIconFontWeight = classType.Get("IconFontWeight");
+            JCObject val = (JCObject)retObjectIconFontWeight;
             return new FontWeight(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIconFontWeight != null ? retObjectIconFontWeight.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -310,10 +408,14 @@ public class SystemFonts extends NetObject  {
 
     public static FontWeight getMenuFontWeight() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMenuFontWeight = null;
         try {
-            JCObject val = (JCObject)classType.Get("MenuFontWeight");
+            retObjectMenuFontWeight = classType.Get("MenuFontWeight");
+            JCObject val = (JCObject)retObjectMenuFontWeight;
             return new FontWeight(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMenuFontWeight != null ? retObjectMenuFontWeight.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -321,10 +423,14 @@ public class SystemFonts extends NetObject  {
 
     public static FontWeight getMessageFontWeight() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMessageFontWeight = null;
         try {
-            JCObject val = (JCObject)classType.Get("MessageFontWeight");
+            retObjectMessageFontWeight = classType.Get("MessageFontWeight");
+            JCObject val = (JCObject)retObjectMessageFontWeight;
             return new FontWeight(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMessageFontWeight != null ? retObjectMessageFontWeight.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -332,10 +438,14 @@ public class SystemFonts extends NetObject  {
 
     public static FontWeight getSmallCaptionFontWeight() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSmallCaptionFontWeight = null;
         try {
-            JCObject val = (JCObject)classType.Get("SmallCaptionFontWeight");
+            retObjectSmallCaptionFontWeight = classType.Get("SmallCaptionFontWeight");
+            JCObject val = (JCObject)retObjectSmallCaptionFontWeight;
             return new FontWeight(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSmallCaptionFontWeight != null ? retObjectSmallCaptionFontWeight.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -343,10 +453,14 @@ public class SystemFonts extends NetObject  {
 
     public static FontWeight getStatusFontWeight() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectStatusFontWeight = null;
         try {
-            JCObject val = (JCObject)classType.Get("StatusFontWeight");
+            retObjectStatusFontWeight = classType.Get("StatusFontWeight");
+            JCObject val = (JCObject)retObjectStatusFontWeight;
             return new FontWeight(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStatusFontWeight != null ? retObjectStatusFontWeight.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -354,10 +468,14 @@ public class SystemFonts extends NetObject  {
 
     public static FontFamily getCaptionFontFamily() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCaptionFontFamily = null;
         try {
-            JCObject val = (JCObject)classType.Get("CaptionFontFamily");
+            retObjectCaptionFontFamily = classType.Get("CaptionFontFamily");
+            JCObject val = (JCObject)retObjectCaptionFontFamily;
             return new FontFamily(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCaptionFontFamily != null ? retObjectCaptionFontFamily.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -365,10 +483,14 @@ public class SystemFonts extends NetObject  {
 
     public static FontFamily getIconFontFamily() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIconFontFamily = null;
         try {
-            JCObject val = (JCObject)classType.Get("IconFontFamily");
+            retObjectIconFontFamily = classType.Get("IconFontFamily");
+            JCObject val = (JCObject)retObjectIconFontFamily;
             return new FontFamily(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIconFontFamily != null ? retObjectIconFontFamily.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -376,10 +498,14 @@ public class SystemFonts extends NetObject  {
 
     public static FontFamily getMenuFontFamily() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMenuFontFamily = null;
         try {
-            JCObject val = (JCObject)classType.Get("MenuFontFamily");
+            retObjectMenuFontFamily = classType.Get("MenuFontFamily");
+            JCObject val = (JCObject)retObjectMenuFontFamily;
             return new FontFamily(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMenuFontFamily != null ? retObjectMenuFontFamily.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -387,10 +513,14 @@ public class SystemFonts extends NetObject  {
 
     public static FontFamily getMessageFontFamily() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMessageFontFamily = null;
         try {
-            JCObject val = (JCObject)classType.Get("MessageFontFamily");
+            retObjectMessageFontFamily = classType.Get("MessageFontFamily");
+            JCObject val = (JCObject)retObjectMessageFontFamily;
             return new FontFamily(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMessageFontFamily != null ? retObjectMessageFontFamily.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -398,10 +528,14 @@ public class SystemFonts extends NetObject  {
 
     public static FontFamily getSmallCaptionFontFamily() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSmallCaptionFontFamily = null;
         try {
-            JCObject val = (JCObject)classType.Get("SmallCaptionFontFamily");
+            retObjectSmallCaptionFontFamily = classType.Get("SmallCaptionFontFamily");
+            JCObject val = (JCObject)retObjectSmallCaptionFontFamily;
             return new FontFamily(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSmallCaptionFontFamily != null ? retObjectSmallCaptionFontFamily.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -409,10 +543,14 @@ public class SystemFonts extends NetObject  {
 
     public static FontFamily getStatusFontFamily() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectStatusFontFamily = null;
         try {
-            JCObject val = (JCObject)classType.Get("StatusFontFamily");
+            retObjectStatusFontFamily = classType.Get("StatusFontFamily");
+            JCObject val = (JCObject)retObjectStatusFontFamily;
             return new FontFamily(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStatusFontFamily != null ? retObjectStatusFontFamily.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -420,10 +558,14 @@ public class SystemFonts extends NetObject  {
 
     public static ResourceKey getCaptionFontFamilyKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCaptionFontFamilyKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("CaptionFontFamilyKey");
+            retObjectCaptionFontFamilyKey = classType.Get("CaptionFontFamilyKey");
+            JCObject val = (JCObject)retObjectCaptionFontFamilyKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCaptionFontFamilyKey != null ? retObjectCaptionFontFamilyKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -431,10 +573,14 @@ public class SystemFonts extends NetObject  {
 
     public static ResourceKey getCaptionFontSizeKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCaptionFontSizeKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("CaptionFontSizeKey");
+            retObjectCaptionFontSizeKey = classType.Get("CaptionFontSizeKey");
+            JCObject val = (JCObject)retObjectCaptionFontSizeKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCaptionFontSizeKey != null ? retObjectCaptionFontSizeKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -442,10 +588,14 @@ public class SystemFonts extends NetObject  {
 
     public static ResourceKey getCaptionFontStyleKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCaptionFontStyleKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("CaptionFontStyleKey");
+            retObjectCaptionFontStyleKey = classType.Get("CaptionFontStyleKey");
+            JCObject val = (JCObject)retObjectCaptionFontStyleKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCaptionFontStyleKey != null ? retObjectCaptionFontStyleKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -453,10 +603,14 @@ public class SystemFonts extends NetObject  {
 
     public static ResourceKey getCaptionFontTextDecorationsKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCaptionFontTextDecorationsKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("CaptionFontTextDecorationsKey");
+            retObjectCaptionFontTextDecorationsKey = classType.Get("CaptionFontTextDecorationsKey");
+            JCObject val = (JCObject)retObjectCaptionFontTextDecorationsKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCaptionFontTextDecorationsKey != null ? retObjectCaptionFontTextDecorationsKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -464,10 +618,14 @@ public class SystemFonts extends NetObject  {
 
     public static ResourceKey getCaptionFontWeightKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCaptionFontWeightKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("CaptionFontWeightKey");
+            retObjectCaptionFontWeightKey = classType.Get("CaptionFontWeightKey");
+            JCObject val = (JCObject)retObjectCaptionFontWeightKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCaptionFontWeightKey != null ? retObjectCaptionFontWeightKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -475,10 +633,14 @@ public class SystemFonts extends NetObject  {
 
     public static ResourceKey getIconFontFamilyKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIconFontFamilyKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("IconFontFamilyKey");
+            retObjectIconFontFamilyKey = classType.Get("IconFontFamilyKey");
+            JCObject val = (JCObject)retObjectIconFontFamilyKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIconFontFamilyKey != null ? retObjectIconFontFamilyKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -486,10 +648,14 @@ public class SystemFonts extends NetObject  {
 
     public static ResourceKey getIconFontSizeKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIconFontSizeKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("IconFontSizeKey");
+            retObjectIconFontSizeKey = classType.Get("IconFontSizeKey");
+            JCObject val = (JCObject)retObjectIconFontSizeKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIconFontSizeKey != null ? retObjectIconFontSizeKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -497,10 +663,14 @@ public class SystemFonts extends NetObject  {
 
     public static ResourceKey getIconFontStyleKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIconFontStyleKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("IconFontStyleKey");
+            retObjectIconFontStyleKey = classType.Get("IconFontStyleKey");
+            JCObject val = (JCObject)retObjectIconFontStyleKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIconFontStyleKey != null ? retObjectIconFontStyleKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -508,10 +678,14 @@ public class SystemFonts extends NetObject  {
 
     public static ResourceKey getIconFontTextDecorationsKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIconFontTextDecorationsKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("IconFontTextDecorationsKey");
+            retObjectIconFontTextDecorationsKey = classType.Get("IconFontTextDecorationsKey");
+            JCObject val = (JCObject)retObjectIconFontTextDecorationsKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIconFontTextDecorationsKey != null ? retObjectIconFontTextDecorationsKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -519,10 +693,14 @@ public class SystemFonts extends NetObject  {
 
     public static ResourceKey getIconFontWeightKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIconFontWeightKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("IconFontWeightKey");
+            retObjectIconFontWeightKey = classType.Get("IconFontWeightKey");
+            JCObject val = (JCObject)retObjectIconFontWeightKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIconFontWeightKey != null ? retObjectIconFontWeightKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -530,10 +708,14 @@ public class SystemFonts extends NetObject  {
 
     public static ResourceKey getMenuFontFamilyKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMenuFontFamilyKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("MenuFontFamilyKey");
+            retObjectMenuFontFamilyKey = classType.Get("MenuFontFamilyKey");
+            JCObject val = (JCObject)retObjectMenuFontFamilyKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMenuFontFamilyKey != null ? retObjectMenuFontFamilyKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -541,10 +723,14 @@ public class SystemFonts extends NetObject  {
 
     public static ResourceKey getMenuFontSizeKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMenuFontSizeKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("MenuFontSizeKey");
+            retObjectMenuFontSizeKey = classType.Get("MenuFontSizeKey");
+            JCObject val = (JCObject)retObjectMenuFontSizeKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMenuFontSizeKey != null ? retObjectMenuFontSizeKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -552,10 +738,14 @@ public class SystemFonts extends NetObject  {
 
     public static ResourceKey getMenuFontStyleKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMenuFontStyleKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("MenuFontStyleKey");
+            retObjectMenuFontStyleKey = classType.Get("MenuFontStyleKey");
+            JCObject val = (JCObject)retObjectMenuFontStyleKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMenuFontStyleKey != null ? retObjectMenuFontStyleKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -563,10 +753,14 @@ public class SystemFonts extends NetObject  {
 
     public static ResourceKey getMenuFontTextDecorationsKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMenuFontTextDecorationsKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("MenuFontTextDecorationsKey");
+            retObjectMenuFontTextDecorationsKey = classType.Get("MenuFontTextDecorationsKey");
+            JCObject val = (JCObject)retObjectMenuFontTextDecorationsKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMenuFontTextDecorationsKey != null ? retObjectMenuFontTextDecorationsKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -574,10 +768,14 @@ public class SystemFonts extends NetObject  {
 
     public static ResourceKey getMenuFontWeightKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMenuFontWeightKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("MenuFontWeightKey");
+            retObjectMenuFontWeightKey = classType.Get("MenuFontWeightKey");
+            JCObject val = (JCObject)retObjectMenuFontWeightKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMenuFontWeightKey != null ? retObjectMenuFontWeightKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -585,10 +783,14 @@ public class SystemFonts extends NetObject  {
 
     public static ResourceKey getMessageFontFamilyKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMessageFontFamilyKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("MessageFontFamilyKey");
+            retObjectMessageFontFamilyKey = classType.Get("MessageFontFamilyKey");
+            JCObject val = (JCObject)retObjectMessageFontFamilyKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMessageFontFamilyKey != null ? retObjectMessageFontFamilyKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -596,10 +798,14 @@ public class SystemFonts extends NetObject  {
 
     public static ResourceKey getMessageFontSizeKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMessageFontSizeKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("MessageFontSizeKey");
+            retObjectMessageFontSizeKey = classType.Get("MessageFontSizeKey");
+            JCObject val = (JCObject)retObjectMessageFontSizeKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMessageFontSizeKey != null ? retObjectMessageFontSizeKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -607,10 +813,14 @@ public class SystemFonts extends NetObject  {
 
     public static ResourceKey getMessageFontStyleKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMessageFontStyleKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("MessageFontStyleKey");
+            retObjectMessageFontStyleKey = classType.Get("MessageFontStyleKey");
+            JCObject val = (JCObject)retObjectMessageFontStyleKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMessageFontStyleKey != null ? retObjectMessageFontStyleKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -618,10 +828,14 @@ public class SystemFonts extends NetObject  {
 
     public static ResourceKey getMessageFontTextDecorationsKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMessageFontTextDecorationsKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("MessageFontTextDecorationsKey");
+            retObjectMessageFontTextDecorationsKey = classType.Get("MessageFontTextDecorationsKey");
+            JCObject val = (JCObject)retObjectMessageFontTextDecorationsKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMessageFontTextDecorationsKey != null ? retObjectMessageFontTextDecorationsKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -629,10 +843,14 @@ public class SystemFonts extends NetObject  {
 
     public static ResourceKey getMessageFontWeightKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMessageFontWeightKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("MessageFontWeightKey");
+            retObjectMessageFontWeightKey = classType.Get("MessageFontWeightKey");
+            JCObject val = (JCObject)retObjectMessageFontWeightKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMessageFontWeightKey != null ? retObjectMessageFontWeightKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -640,10 +858,14 @@ public class SystemFonts extends NetObject  {
 
     public static ResourceKey getSmallCaptionFontFamilyKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSmallCaptionFontFamilyKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("SmallCaptionFontFamilyKey");
+            retObjectSmallCaptionFontFamilyKey = classType.Get("SmallCaptionFontFamilyKey");
+            JCObject val = (JCObject)retObjectSmallCaptionFontFamilyKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSmallCaptionFontFamilyKey != null ? retObjectSmallCaptionFontFamilyKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -651,10 +873,14 @@ public class SystemFonts extends NetObject  {
 
     public static ResourceKey getSmallCaptionFontSizeKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSmallCaptionFontSizeKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("SmallCaptionFontSizeKey");
+            retObjectSmallCaptionFontSizeKey = classType.Get("SmallCaptionFontSizeKey");
+            JCObject val = (JCObject)retObjectSmallCaptionFontSizeKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSmallCaptionFontSizeKey != null ? retObjectSmallCaptionFontSizeKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -662,10 +888,14 @@ public class SystemFonts extends NetObject  {
 
     public static ResourceKey getSmallCaptionFontStyleKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSmallCaptionFontStyleKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("SmallCaptionFontStyleKey");
+            retObjectSmallCaptionFontStyleKey = classType.Get("SmallCaptionFontStyleKey");
+            JCObject val = (JCObject)retObjectSmallCaptionFontStyleKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSmallCaptionFontStyleKey != null ? retObjectSmallCaptionFontStyleKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -673,10 +903,14 @@ public class SystemFonts extends NetObject  {
 
     public static ResourceKey getSmallCaptionFontTextDecorationsKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSmallCaptionFontTextDecorationsKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("SmallCaptionFontTextDecorationsKey");
+            retObjectSmallCaptionFontTextDecorationsKey = classType.Get("SmallCaptionFontTextDecorationsKey");
+            JCObject val = (JCObject)retObjectSmallCaptionFontTextDecorationsKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSmallCaptionFontTextDecorationsKey != null ? retObjectSmallCaptionFontTextDecorationsKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -684,10 +918,14 @@ public class SystemFonts extends NetObject  {
 
     public static ResourceKey getSmallCaptionFontWeightKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSmallCaptionFontWeightKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("SmallCaptionFontWeightKey");
+            retObjectSmallCaptionFontWeightKey = classType.Get("SmallCaptionFontWeightKey");
+            JCObject val = (JCObject)retObjectSmallCaptionFontWeightKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSmallCaptionFontWeightKey != null ? retObjectSmallCaptionFontWeightKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -695,10 +933,14 @@ public class SystemFonts extends NetObject  {
 
     public static ResourceKey getStatusFontFamilyKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectStatusFontFamilyKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("StatusFontFamilyKey");
+            retObjectStatusFontFamilyKey = classType.Get("StatusFontFamilyKey");
+            JCObject val = (JCObject)retObjectStatusFontFamilyKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStatusFontFamilyKey != null ? retObjectStatusFontFamilyKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -706,10 +948,14 @@ public class SystemFonts extends NetObject  {
 
     public static ResourceKey getStatusFontSizeKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectStatusFontSizeKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("StatusFontSizeKey");
+            retObjectStatusFontSizeKey = classType.Get("StatusFontSizeKey");
+            JCObject val = (JCObject)retObjectStatusFontSizeKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStatusFontSizeKey != null ? retObjectStatusFontSizeKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -717,10 +963,14 @@ public class SystemFonts extends NetObject  {
 
     public static ResourceKey getStatusFontStyleKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectStatusFontStyleKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("StatusFontStyleKey");
+            retObjectStatusFontStyleKey = classType.Get("StatusFontStyleKey");
+            JCObject val = (JCObject)retObjectStatusFontStyleKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStatusFontStyleKey != null ? retObjectStatusFontStyleKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -728,10 +978,14 @@ public class SystemFonts extends NetObject  {
 
     public static ResourceKey getStatusFontTextDecorationsKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectStatusFontTextDecorationsKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("StatusFontTextDecorationsKey");
+            retObjectStatusFontTextDecorationsKey = classType.Get("StatusFontTextDecorationsKey");
+            JCObject val = (JCObject)retObjectStatusFontTextDecorationsKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStatusFontTextDecorationsKey != null ? retObjectStatusFontTextDecorationsKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -739,10 +993,14 @@ public class SystemFonts extends NetObject  {
 
     public static ResourceKey getStatusFontWeightKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectStatusFontWeightKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("StatusFontWeightKey");
+            retObjectStatusFontWeightKey = classType.Get("StatusFontWeightKey");
+            JCObject val = (JCObject)retObjectStatusFontWeightKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStatusFontWeightKey != null ? retObjectStatusFontWeightKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -750,10 +1008,14 @@ public class SystemFonts extends NetObject  {
 
     public static TextDecorationCollection getCaptionFontTextDecorations() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.componentmodel.Win32Exception, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCaptionFontTextDecorations = null;
         try {
-            JCObject val = (JCObject)classType.Get("CaptionFontTextDecorations");
+            retObjectCaptionFontTextDecorations = classType.Get("CaptionFontTextDecorations");
+            JCObject val = (JCObject)retObjectCaptionFontTextDecorations;
             return new TextDecorationCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCaptionFontTextDecorations != null ? retObjectCaptionFontTextDecorations.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -761,10 +1023,14 @@ public class SystemFonts extends NetObject  {
 
     public static TextDecorationCollection getIconFontTextDecorations() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.componentmodel.Win32Exception, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIconFontTextDecorations = null;
         try {
-            JCObject val = (JCObject)classType.Get("IconFontTextDecorations");
+            retObjectIconFontTextDecorations = classType.Get("IconFontTextDecorations");
+            JCObject val = (JCObject)retObjectIconFontTextDecorations;
             return new TextDecorationCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIconFontTextDecorations != null ? retObjectIconFontTextDecorations.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -772,10 +1038,14 @@ public class SystemFonts extends NetObject  {
 
     public static TextDecorationCollection getMenuFontTextDecorations() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.componentmodel.Win32Exception, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMenuFontTextDecorations = null;
         try {
-            JCObject val = (JCObject)classType.Get("MenuFontTextDecorations");
+            retObjectMenuFontTextDecorations = classType.Get("MenuFontTextDecorations");
+            JCObject val = (JCObject)retObjectMenuFontTextDecorations;
             return new TextDecorationCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMenuFontTextDecorations != null ? retObjectMenuFontTextDecorations.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -783,10 +1053,14 @@ public class SystemFonts extends NetObject  {
 
     public static TextDecorationCollection getMessageFontTextDecorations() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.componentmodel.Win32Exception, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMessageFontTextDecorations = null;
         try {
-            JCObject val = (JCObject)classType.Get("MessageFontTextDecorations");
+            retObjectMessageFontTextDecorations = classType.Get("MessageFontTextDecorations");
+            JCObject val = (JCObject)retObjectMessageFontTextDecorations;
             return new TextDecorationCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMessageFontTextDecorations != null ? retObjectMessageFontTextDecorations.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -794,10 +1068,14 @@ public class SystemFonts extends NetObject  {
 
     public static TextDecorationCollection getSmallCaptionFontTextDecorations() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.componentmodel.Win32Exception, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSmallCaptionFontTextDecorations = null;
         try {
-            JCObject val = (JCObject)classType.Get("SmallCaptionFontTextDecorations");
+            retObjectSmallCaptionFontTextDecorations = classType.Get("SmallCaptionFontTextDecorations");
+            JCObject val = (JCObject)retObjectSmallCaptionFontTextDecorations;
             return new TextDecorationCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSmallCaptionFontTextDecorations != null ? retObjectSmallCaptionFontTextDecorations.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -805,10 +1083,14 @@ public class SystemFonts extends NetObject  {
 
     public static TextDecorationCollection getStatusFontTextDecorations() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.componentmodel.Win32Exception, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectStatusFontTextDecorations = null;
         try {
-            JCObject val = (JCObject)classType.Get("StatusFontTextDecorations");
+            retObjectStatusFontTextDecorations = classType.Get("StatusFontTextDecorations");
+            JCObject val = (JCObject)retObjectStatusFontTextDecorations;
             return new TextDecorationCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStatusFontTextDecorations != null ? retObjectStatusFontTextDecorations.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

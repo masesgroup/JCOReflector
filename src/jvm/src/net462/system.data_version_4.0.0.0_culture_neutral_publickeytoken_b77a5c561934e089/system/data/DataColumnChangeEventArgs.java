@@ -172,10 +172,14 @@ public class DataColumnChangeEventArgs extends EventArgs  {
     
     public DataColumn getColumn() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectColumn = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Column");
+            retObjectColumn = classInstance.Get("Column");
+            JCObject val = (JCObject)retObjectColumn;
             return new DataColumn(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectColumn != null ? retObjectColumn.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,10 +187,14 @@ public class DataColumnChangeEventArgs extends EventArgs  {
 
     public DataRow getRow() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRow = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Row");
+            retObjectRow = classInstance.Get("Row");
+            JCObject val = (JCObject)retObjectRow;
             return new DataRow(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRow != null ? retObjectRow.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -194,10 +202,14 @@ public class DataColumnChangeEventArgs extends EventArgs  {
 
     public NetObject getProposedValue() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProposedValue = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ProposedValue");
+            retObjectProposedValue = classInstance.Get("ProposedValue");
+            JCObject val = (JCObject)retObjectProposedValue;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectProposedValue != null ? retObjectProposedValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -205,7 +217,7 @@ public class DataColumnChangeEventArgs extends EventArgs  {
 
     public void setProposedValue(NetObject ProposedValue) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ProposedValue", ProposedValue == null ? null : ProposedValue.getJCOInstance());
         } catch (JCNativeException jcne) {

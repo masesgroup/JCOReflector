@@ -190,10 +190,14 @@ public class WorkflowView extends UserControl implements system.IServiceProvider
     
     public Point ClientPointToLogical(Point clientPoint) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClientPointToLogical = null;
         try {
-            JCObject objClientPointToLogical = (JCObject)classInstance.Invoke("ClientPointToLogical", clientPoint == null ? null : clientPoint.getJCOInstance());
+            retObjectClientPointToLogical = classInstance.Invoke("ClientPointToLogical", clientPoint == null ? null : clientPoint.getJCOInstance());
+            JCObject objClientPointToLogical = (JCObject)retObjectClientPointToLogical;
             return new Point(objClientPointToLogical);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClientPointToLogical != null ? retObjectClientPointToLogical.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,10 +205,14 @@ public class WorkflowView extends UserControl implements system.IServiceProvider
 
     public Point LogicalPointToClient(Point logicalPoint) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLogicalPointToClient = null;
         try {
-            JCObject objLogicalPointToClient = (JCObject)classInstance.Invoke("LogicalPointToClient", logicalPoint == null ? null : logicalPoint.getJCOInstance());
+            retObjectLogicalPointToClient = classInstance.Invoke("LogicalPointToClient", logicalPoint == null ? null : logicalPoint.getJCOInstance());
+            JCObject objLogicalPointToClient = (JCObject)retObjectLogicalPointToClient;
             return new Point(objLogicalPointToClient);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLogicalPointToClient != null ? retObjectLogicalPointToClient.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -212,10 +220,14 @@ public class WorkflowView extends UserControl implements system.IServiceProvider
 
     public Point LogicalPointToScreen(Point logicalPoint) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLogicalPointToScreen = null;
         try {
-            JCObject objLogicalPointToScreen = (JCObject)classInstance.Invoke("LogicalPointToScreen", logicalPoint == null ? null : logicalPoint.getJCOInstance());
+            retObjectLogicalPointToScreen = classInstance.Invoke("LogicalPointToScreen", logicalPoint == null ? null : logicalPoint.getJCOInstance());
+            JCObject objLogicalPointToScreen = (JCObject)retObjectLogicalPointToScreen;
             return new Point(objLogicalPointToScreen);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLogicalPointToScreen != null ? retObjectLogicalPointToScreen.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -223,10 +235,14 @@ public class WorkflowView extends UserControl implements system.IServiceProvider
 
     public Point ScreenPointToLogical(Point screenPoint) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.Win32Exception, system.NotSupportedException, system.security.SecurityException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectScreenPointToLogical = null;
         try {
-            JCObject objScreenPointToLogical = (JCObject)classInstance.Invoke("ScreenPointToLogical", screenPoint == null ? null : screenPoint.getJCOInstance());
+            retObjectScreenPointToLogical = classInstance.Invoke("ScreenPointToLogical", screenPoint == null ? null : screenPoint.getJCOInstance());
+            JCObject objScreenPointToLogical = (JCObject)retObjectScreenPointToLogical;
             return new Point(objScreenPointToLogical);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectScreenPointToLogical != null ? retObjectScreenPointToLogical.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -234,10 +250,14 @@ public class WorkflowView extends UserControl implements system.IServiceProvider
 
     public Rectangle ClientRectangleToLogical(Rectangle rectangle) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClientRectangleToLogical = null;
         try {
-            JCObject objClientRectangleToLogical = (JCObject)classInstance.Invoke("ClientRectangleToLogical", rectangle == null ? null : rectangle.getJCOInstance());
+            retObjectClientRectangleToLogical = classInstance.Invoke("ClientRectangleToLogical", rectangle == null ? null : rectangle.getJCOInstance());
+            JCObject objClientRectangleToLogical = (JCObject)retObjectClientRectangleToLogical;
             return new Rectangle(objClientRectangleToLogical);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClientRectangleToLogical != null ? retObjectClientRectangleToLogical.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -245,10 +265,14 @@ public class WorkflowView extends UserControl implements system.IServiceProvider
 
     public Rectangle LogicalRectangleToClient(Rectangle rectangle) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLogicalRectangleToClient = null;
         try {
-            JCObject objLogicalRectangleToClient = (JCObject)classInstance.Invoke("LogicalRectangleToClient", rectangle == null ? null : rectangle.getJCOInstance());
+            retObjectLogicalRectangleToClient = classInstance.Invoke("LogicalRectangleToClient", rectangle == null ? null : rectangle.getJCOInstance());
+            JCObject objLogicalRectangleToClient = (JCObject)retObjectLogicalRectangleToClient;
             return new Rectangle(objLogicalRectangleToClient);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLogicalRectangleToClient != null ? retObjectLogicalRectangleToClient.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -256,10 +280,14 @@ public class WorkflowView extends UserControl implements system.IServiceProvider
 
     public Size ClientSizeToLogical(Size clientSize) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClientSizeToLogical = null;
         try {
-            JCObject objClientSizeToLogical = (JCObject)classInstance.Invoke("ClientSizeToLogical", clientSize == null ? null : clientSize.getJCOInstance());
+            retObjectClientSizeToLogical = classInstance.Invoke("ClientSizeToLogical", clientSize == null ? null : clientSize.getJCOInstance());
+            JCObject objClientSizeToLogical = (JCObject)retObjectClientSizeToLogical;
             return new Size(objClientSizeToLogical);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClientSizeToLogical != null ? retObjectClientSizeToLogical.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -267,10 +295,14 @@ public class WorkflowView extends UserControl implements system.IServiceProvider
 
     public Size LogicalSizeToClient(Size logicalSize) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLogicalSizeToClient = null;
         try {
-            JCObject objLogicalSizeToClient = (JCObject)classInstance.Invoke("LogicalSizeToClient", logicalSize == null ? null : logicalSize.getJCOInstance());
+            retObjectLogicalSizeToClient = classInstance.Invoke("LogicalSizeToClient", logicalSize == null ? null : logicalSize.getJCOInstance());
+            JCObject objLogicalSizeToClient = (JCObject)retObjectLogicalSizeToClient;
             return new Size(objLogicalSizeToClient);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLogicalSizeToClient != null ? retObjectLogicalSizeToClient.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -278,7 +310,7 @@ public class WorkflowView extends UserControl implements system.IServiceProvider
 
     public void AddDesignerMessageFilter(WorkflowDesignerMessageFilter designerMessageFilter) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.Win32Exception, system.NotSupportedException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddDesignerMessageFilter", designerMessageFilter == null ? null : designerMessageFilter.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -288,7 +320,7 @@ public class WorkflowView extends UserControl implements system.IServiceProvider
 
     public void EnsureVisible(NetObject selectableObject) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationErrorsException, system.workflow.componentmodel.serialization.WorkflowMarkupSerializationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.runtime.interopservices.ExternalException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EnsureVisible", selectableObject == null ? null : selectableObject.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -298,7 +330,7 @@ public class WorkflowView extends UserControl implements system.IServiceProvider
 
     public void FitToScreenSize() throws Throwable, system.OverflowException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.workflow.componentmodel.serialization.WorkflowMarkupSerializationException, system.runtime.interopservices.ExternalException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("FitToScreenSize");
         } catch (JCNativeException jcne) {
@@ -308,7 +340,7 @@ public class WorkflowView extends UserControl implements system.IServiceProvider
 
     public void FitToWorkflowSize() throws Throwable, system.OverflowException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.workflow.componentmodel.serialization.WorkflowMarkupSerializationException, system.runtime.interopservices.ExternalException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("FitToWorkflowSize");
         } catch (JCNativeException jcne) {
@@ -318,7 +350,7 @@ public class WorkflowView extends UserControl implements system.IServiceProvider
 
     public void InvalidateClientRectangle(Rectangle clientRectangle) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.NotSupportedException, system.security.SecurityException, system.NullReferenceException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("InvalidateClientRectangle", clientRectangle == null ? null : clientRectangle.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -328,7 +360,7 @@ public class WorkflowView extends UserControl implements system.IServiceProvider
 
     public void InvalidateLogicalRectangle(Rectangle logicalRectangle) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.componentmodel.Win32Exception, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("InvalidateLogicalRectangle", logicalRectangle == null ? null : logicalRectangle.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -338,7 +370,7 @@ public class WorkflowView extends UserControl implements system.IServiceProvider
 
     public void LoadViewState(Stream viewState) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.io.EndOfStreamException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.InvalidCastException, system.OverflowException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.AccessViolationException, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("LoadViewState", viewState == null ? null : viewState.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -348,7 +380,7 @@ public class WorkflowView extends UserControl implements system.IServiceProvider
 
     public void PerformLayout(boolean immediateUpdate) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.security.SecurityException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.MulticastNotSupportedException, system.collections.generic.KeyNotFoundException, system.NotSupportedException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("PerformLayout", immediateUpdate);
         } catch (JCNativeException jcne) {
@@ -358,7 +390,7 @@ public class WorkflowView extends UserControl implements system.IServiceProvider
 
     public void RemoveDesignerMessageFilter(WorkflowDesignerMessageFilter designerMessageFilter) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.Win32Exception, system.NotSupportedException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RemoveDesignerMessageFilter", designerMessageFilter == null ? null : designerMessageFilter.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -368,7 +400,7 @@ public class WorkflowView extends UserControl implements system.IServiceProvider
 
     public void SaveViewState(Stream viewState) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.drawing.printing.InvalidPrinterException, system.componentmodel.Win32Exception, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SaveViewState", viewState == null ? null : viewState.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -378,7 +410,7 @@ public class WorkflowView extends UserControl implements system.IServiceProvider
 
     public void SaveWorkflowImage(Stream stream, ImageFormat imageFormat) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.NotSupportedException, system.security.SecurityException, system.NullReferenceException, system.OutOfMemoryException, system.componentmodel.InvalidEnumArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.AccessViolationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SaveWorkflowImage", stream == null ? null : stream.getJCOInstance(), imageFormat == null ? null : imageFormat.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -388,7 +420,7 @@ public class WorkflowView extends UserControl implements system.IServiceProvider
 
     public void SaveWorkflowImage(java.lang.String imageFile, ImageFormat imageFormat) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.NotSupportedException, system.security.SecurityException, system.NullReferenceException, system.OutOfMemoryException, system.componentmodel.InvalidEnumArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.AccessViolationException, system.globalization.CultureNotFoundException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SaveWorkflowImage", imageFile, imageFormat == null ? null : imageFormat.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -398,7 +430,7 @@ public class WorkflowView extends UserControl implements system.IServiceProvider
 
     public void SaveWorkflowImageToClipboard() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.NotSupportedException, system.security.SecurityException, system.NullReferenceException, system.OutOfMemoryException, system.componentmodel.InvalidEnumArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.threading.ThreadStateException, system.runtime.interopservices.ExternalException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SaveWorkflowImageToClipboard");
         } catch (JCNativeException jcne) {
@@ -408,7 +440,7 @@ public class WorkflowView extends UserControl implements system.IServiceProvider
 
     public void ShowInfoTip(java.lang.String text) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ShowInfoTip", text);
         } catch (JCNativeException jcne) {
@@ -418,7 +450,7 @@ public class WorkflowView extends UserControl implements system.IServiceProvider
 
     public void ShowInfoTip(java.lang.String title, java.lang.String text) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ShowInfoTip", title, text);
         } catch (JCNativeException jcne) {
@@ -428,7 +460,7 @@ public class WorkflowView extends UserControl implements system.IServiceProvider
 
     public void ShowInPlaceToolTip(java.lang.String toolTipText, Rectangle toolTipRectangle) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ShowInPlaceToolTip", toolTipText, toolTipRectangle == null ? null : toolTipRectangle.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -442,7 +474,7 @@ public class WorkflowView extends UserControl implements system.IServiceProvider
      */
     @Deprecated 
     public NetObject GetService(NetType serviceType) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIServiceProvider to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIServiceProvider to obtain the full interface.");
     }
 
     /**
@@ -451,7 +483,7 @@ public class WorkflowView extends UserControl implements system.IServiceProvider
      */
     @Deprecated 
     public boolean PreFilterMessage(JCORefOut<Message> m) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIMessageFilter to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIMessageFilter to obtain the full interface.");
     }
 
 
@@ -460,9 +492,13 @@ public class WorkflowView extends UserControl implements system.IServiceProvider
     
     public boolean getEnableFitToScreen() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEnableFitToScreen = null;
         try {
-            return (boolean)classInstance.Get("EnableFitToScreen");
+            retObjectEnableFitToScreen = classInstance.Get("EnableFitToScreen");
+            return (boolean)retObjectEnableFitToScreen;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectEnableFitToScreen != null ? retObjectEnableFitToScreen.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -470,7 +506,7 @@ public class WorkflowView extends UserControl implements system.IServiceProvider
 
     public void setEnableFitToScreen(boolean EnableFitToScreen) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException, system.NotSupportedException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EnableFitToScreen", EnableFitToScreen);
         } catch (JCNativeException jcne) {
@@ -480,9 +516,13 @@ public class WorkflowView extends UserControl implements system.IServiceProvider
 
     public boolean getPrintPreviewMode() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.componentmodel.Win32Exception, system.drawing.printing.InvalidPrinterException, system.InvalidCastException, system.OverflowException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPrintPreviewMode = null;
         try {
-            return (boolean)classInstance.Get("PrintPreviewMode");
+            retObjectPrintPreviewMode = classInstance.Get("PrintPreviewMode");
+            return (boolean)retObjectPrintPreviewMode;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectPrintPreviewMode != null ? retObjectPrintPreviewMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -490,7 +530,7 @@ public class WorkflowView extends UserControl implements system.IServiceProvider
 
     public void setPrintPreviewMode(boolean PrintPreviewMode) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.drawing.printing.InvalidPrinterException, system.componentmodel.Win32Exception, system.OverflowException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.NotSupportedException, system.OutOfMemoryException, system.AccessViolationException, system.componentmodel.InvalidEnumArgumentException, system.NotImplementedException, system.workflow.componentmodel.serialization.WorkflowMarkupSerializationException, system.runtime.interopservices.ExternalException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PrintPreviewMode", PrintPreviewMode);
         } catch (JCNativeException jcne) {
@@ -500,9 +540,20 @@ public class WorkflowView extends UserControl implements system.IServiceProvider
 
     public int getShadowDepth() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShadowDepth = null;
         try {
-            return (int)classInstance.Get("ShadowDepth");
+            retObjectShadowDepth = classInstance.Get("ShadowDepth");
+            return (int)retObjectShadowDepth;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectShadowDepth_ToString = retObjectShadowDepth == null ? "null" : retObjectShadowDepth.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectShadowDepthNumber = (java.lang.Number)retObjectShadowDepth;
+                return retObjectShadowDepthNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectShadowDepth != null ? retObjectShadowDepth.getClass() : "null", retObjectShadowDepth_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -510,7 +561,7 @@ public class WorkflowView extends UserControl implements system.IServiceProvider
 
     public void setShadowDepth(int ShadowDepth) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.OutOfMemoryException, system.FormatException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ShadowDepth", ShadowDepth);
         } catch (JCNativeException jcne) {
@@ -520,9 +571,20 @@ public class WorkflowView extends UserControl implements system.IServiceProvider
 
     public int getZoom() throws Throwable, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectZoom = null;
         try {
-            return (int)classInstance.Get("Zoom");
+            retObjectZoom = classInstance.Get("Zoom");
+            return (int)retObjectZoom;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectZoom_ToString = retObjectZoom == null ? "null" : retObjectZoom.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectZoomNumber = (java.lang.Number)retObjectZoom;
+                return retObjectZoomNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectZoom != null ? retObjectZoom.getClass() : "null", retObjectZoom_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -530,7 +592,7 @@ public class WorkflowView extends UserControl implements system.IServiceProvider
 
     public void setZoom(int Zoom) throws Throwable, system.OverflowException, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.OutOfMemoryException, system.FormatException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.NullReferenceException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException, system.workflow.componentmodel.serialization.WorkflowMarkupSerializationException, system.runtime.interopservices.ExternalException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Zoom", Zoom);
         } catch (JCNativeException jcne) {
@@ -540,10 +602,14 @@ public class WorkflowView extends UserControl implements system.IServiceProvider
 
     public Point getScrollPosition() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectScrollPosition = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ScrollPosition");
+            retObjectScrollPosition = classInstance.Get("ScrollPosition");
+            JCObject val = (JCObject)retObjectScrollPosition;
             return new Point(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectScrollPosition != null ? retObjectScrollPosition.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -551,7 +617,7 @@ public class WorkflowView extends UserControl implements system.IServiceProvider
 
     public void setScrollPosition(Point ScrollPosition) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.Win32Exception, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ScrollPosition", ScrollPosition == null ? null : ScrollPosition.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -561,10 +627,14 @@ public class WorkflowView extends UserControl implements system.IServiceProvider
 
     public PrintDocument getPrintDocument() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.componentmodel.Win32Exception, system.drawing.printing.InvalidPrinterException, system.InvalidCastException, system.InvalidTimeZoneException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPrintDocument = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PrintDocument");
+            retObjectPrintDocument = classInstance.Get("PrintDocument");
+            JCObject val = (JCObject)retObjectPrintDocument;
             return new PrintDocument(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPrintDocument != null ? retObjectPrintDocument.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -572,10 +642,14 @@ public class WorkflowView extends UserControl implements system.IServiceProvider
 
     public Rectangle getViewPortRectangle() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectViewPortRectangle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ViewPortRectangle");
+            retObjectViewPortRectangle = classInstance.Get("ViewPortRectangle");
+            JCObject val = (JCObject)retObjectViewPortRectangle;
             return new Rectangle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectViewPortRectangle != null ? retObjectViewPortRectangle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -583,10 +657,14 @@ public class WorkflowView extends UserControl implements system.IServiceProvider
 
     public Size getViewPortSize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectViewPortSize = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ViewPortSize");
+            retObjectViewPortSize = classInstance.Get("ViewPortSize");
+            JCObject val = (JCObject)retObjectViewPortSize;
             return new Size(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectViewPortSize != null ? retObjectViewPortSize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -594,10 +672,14 @@ public class WorkflowView extends UserControl implements system.IServiceProvider
 
     public HScrollBar getHScrollBar() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHScrollBar = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("HScrollBar");
+            retObjectHScrollBar = classInstance.Get("HScrollBar");
+            JCObject val = (JCObject)retObjectHScrollBar;
             return new HScrollBar(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHScrollBar != null ? retObjectHScrollBar.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -605,10 +687,14 @@ public class WorkflowView extends UserControl implements system.IServiceProvider
 
     public VScrollBar getVScrollBar() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVScrollBar = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("VScrollBar");
+            retObjectVScrollBar = classInstance.Get("VScrollBar");
+            JCObject val = (JCObject)retObjectVScrollBar;
             return new VScrollBar(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVScrollBar != null ? retObjectVScrollBar.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -616,10 +702,14 @@ public class WorkflowView extends UserControl implements system.IServiceProvider
 
     public ActivityDesigner getRootDesigner() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRootDesigner = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RootDesigner");
+            retObjectRootDesigner = classInstance.Get("RootDesigner");
+            JCObject val = (JCObject)retObjectRootDesigner;
             return new ActivityDesigner(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRootDesigner != null ? retObjectRootDesigner.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -627,7 +717,7 @@ public class WorkflowView extends UserControl implements system.IServiceProvider
 
     public void setRootDesigner(ActivityDesigner RootDesigner) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.NotSupportedException, system.security.SecurityException, system.NullReferenceException, system.OutOfMemoryException, system.UnauthorizedAccessException, system.io.IOException, system.drawing.printing.InvalidPrinterException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RootDesigner", RootDesigner == null ? null : RootDesigner.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -642,7 +732,7 @@ public class WorkflowView extends UserControl implements system.IServiceProvider
 
     public void addIdle(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Idle", handler);
         } catch (JCNativeException jcne) {
@@ -652,7 +742,7 @@ public class WorkflowView extends UserControl implements system.IServiceProvider
 
     public void removeIdle(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Idle", handler);
         } catch (JCNativeException jcne) {
@@ -662,7 +752,7 @@ public class WorkflowView extends UserControl implements system.IServiceProvider
 
     public void addRootDesignerChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("RootDesignerChanged", handler);
         } catch (JCNativeException jcne) {
@@ -672,7 +762,7 @@ public class WorkflowView extends UserControl implements system.IServiceProvider
 
     public void removeRootDesignerChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("RootDesignerChanged", handler);
         } catch (JCNativeException jcne) {
@@ -682,7 +772,7 @@ public class WorkflowView extends UserControl implements system.IServiceProvider
 
     public void addZoomChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ZoomChanged", handler);
         } catch (JCNativeException jcne) {
@@ -692,7 +782,7 @@ public class WorkflowView extends UserControl implements system.IServiceProvider
 
     public void removeZoomChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ZoomChanged", handler);
         } catch (JCNativeException jcne) {

@@ -160,9 +160,13 @@ public class TypeExtensions extends NetObject  {
     
     public static boolean IsAssignableFrom(NetType type, NetType c) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsAssignableFrom = null;
         try {
-            return (boolean)classType.Invoke("IsAssignableFrom", type == null ? null : type.getJCOInstance(), c == null ? null : c.getJCOInstance());
+            retObjectIsAssignableFrom = classType.Invoke("IsAssignableFrom", type == null ? null : type.getJCOInstance(), c == null ? null : c.getJCOInstance());
+            return (boolean)retObjectIsAssignableFrom;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsAssignableFrom != null ? retObjectIsAssignableFrom.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,9 +174,13 @@ public class TypeExtensions extends NetObject  {
 
     public static boolean IsInstanceOfType(NetType type, NetObject o) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsInstanceOfType = null;
         try {
-            return (boolean)classType.Invoke("IsInstanceOfType", type == null ? null : type.getJCOInstance(), o == null ? null : o.getJCOInstance());
+            retObjectIsInstanceOfType = classType.Invoke("IsInstanceOfType", type == null ? null : type.getJCOInstance(), o == null ? null : o.getJCOInstance());
+            return (boolean)retObjectIsInstanceOfType;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsInstanceOfType != null ? retObjectIsInstanceOfType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,10 +188,14 @@ public class TypeExtensions extends NetObject  {
 
     public static ConstructorInfo GetConstructor(NetType type, NetType[] types) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetConstructor = null;
         try {
-            JCObject objGetConstructor = (JCObject)classType.Invoke("GetConstructor", type == null ? null : type.getJCOInstance(), toObjectFromArray(types));
+            retObjectGetConstructor = classType.Invoke("GetConstructor", type == null ? null : type.getJCOInstance(), toObjectFromArray(types));
+            JCObject objGetConstructor = (JCObject)retObjectGetConstructor;
             return new ConstructorInfo(objGetConstructor);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetConstructor != null ? retObjectGetConstructor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,16 +203,20 @@ public class TypeExtensions extends NetObject  {
 
     public static ConstructorInfo[] GetConstructors(NetType type, BindingFlags bindingAttr) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetConstructors = null;
         try {
             ArrayList<ConstructorInfo> resultingArrayList = new ArrayList<ConstructorInfo>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("GetConstructors", type == null ? null : type.getJCOInstance(), bindingAttr == null ? null : bindingAttr.getJCOInstance());
+            retObjectGetConstructors = classType.Invoke("GetConstructors", type == null ? null : type.getJCOInstance(), bindingAttr == null ? null : bindingAttr.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectGetConstructors;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ConstructorInfo(resultingObject));
             }
             ConstructorInfo[] resultingArray = new ConstructorInfo[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetConstructors != null ? retObjectGetConstructors.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -208,16 +224,20 @@ public class TypeExtensions extends NetObject  {
 
     public static ConstructorInfo[] GetConstructors(NetType type) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetConstructors = null;
         try {
             ArrayList<ConstructorInfo> resultingArrayList = new ArrayList<ConstructorInfo>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("GetConstructors", type == null ? null : type.getJCOInstance());
+            retObjectGetConstructors = classType.Invoke("GetConstructors", type == null ? null : type.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectGetConstructors;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ConstructorInfo(resultingObject));
             }
             ConstructorInfo[] resultingArray = new ConstructorInfo[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetConstructors != null ? retObjectGetConstructors.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -225,10 +245,14 @@ public class TypeExtensions extends NetObject  {
 
     public static EventInfo GetEvent(NetType type, java.lang.String name, BindingFlags bindingAttr) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetEvent = null;
         try {
-            JCObject objGetEvent = (JCObject)classType.Invoke("GetEvent", type == null ? null : type.getJCOInstance(), name, bindingAttr == null ? null : bindingAttr.getJCOInstance());
+            retObjectGetEvent = classType.Invoke("GetEvent", type == null ? null : type.getJCOInstance(), name, bindingAttr == null ? null : bindingAttr.getJCOInstance());
+            JCObject objGetEvent = (JCObject)retObjectGetEvent;
             return new EventInfo(objGetEvent);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetEvent != null ? retObjectGetEvent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -236,10 +260,14 @@ public class TypeExtensions extends NetObject  {
 
     public static EventInfo GetEvent(NetType type, java.lang.String name) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetEvent = null;
         try {
-            JCObject objGetEvent = (JCObject)classType.Invoke("GetEvent", type == null ? null : type.getJCOInstance(), name);
+            retObjectGetEvent = classType.Invoke("GetEvent", type == null ? null : type.getJCOInstance(), name);
+            JCObject objGetEvent = (JCObject)retObjectGetEvent;
             return new EventInfo(objGetEvent);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetEvent != null ? retObjectGetEvent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -247,16 +275,20 @@ public class TypeExtensions extends NetObject  {
 
     public static EventInfo[] GetEvents(NetType type, BindingFlags bindingAttr) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetEvents = null;
         try {
             ArrayList<EventInfo> resultingArrayList = new ArrayList<EventInfo>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("GetEvents", type == null ? null : type.getJCOInstance(), bindingAttr == null ? null : bindingAttr.getJCOInstance());
+            retObjectGetEvents = classType.Invoke("GetEvents", type == null ? null : type.getJCOInstance(), bindingAttr == null ? null : bindingAttr.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectGetEvents;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new EventInfo(resultingObject));
             }
             EventInfo[] resultingArray = new EventInfo[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetEvents != null ? retObjectGetEvents.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -264,16 +296,20 @@ public class TypeExtensions extends NetObject  {
 
     public static EventInfo[] GetEvents(NetType type) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetEvents = null;
         try {
             ArrayList<EventInfo> resultingArrayList = new ArrayList<EventInfo>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("GetEvents", type == null ? null : type.getJCOInstance());
+            retObjectGetEvents = classType.Invoke("GetEvents", type == null ? null : type.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectGetEvents;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new EventInfo(resultingObject));
             }
             EventInfo[] resultingArray = new EventInfo[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetEvents != null ? retObjectGetEvents.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -281,10 +317,14 @@ public class TypeExtensions extends NetObject  {
 
     public static FieldInfo GetField(NetType type, java.lang.String name, BindingFlags bindingAttr) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetField = null;
         try {
-            JCObject objGetField = (JCObject)classType.Invoke("GetField", type == null ? null : type.getJCOInstance(), name, bindingAttr == null ? null : bindingAttr.getJCOInstance());
+            retObjectGetField = classType.Invoke("GetField", type == null ? null : type.getJCOInstance(), name, bindingAttr == null ? null : bindingAttr.getJCOInstance());
+            JCObject objGetField = (JCObject)retObjectGetField;
             return new FieldInfo(objGetField);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetField != null ? retObjectGetField.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -292,10 +332,14 @@ public class TypeExtensions extends NetObject  {
 
     public static FieldInfo GetField(NetType type, java.lang.String name) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetField = null;
         try {
-            JCObject objGetField = (JCObject)classType.Invoke("GetField", type == null ? null : type.getJCOInstance(), name);
+            retObjectGetField = classType.Invoke("GetField", type == null ? null : type.getJCOInstance(), name);
+            JCObject objGetField = (JCObject)retObjectGetField;
             return new FieldInfo(objGetField);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetField != null ? retObjectGetField.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -303,16 +347,20 @@ public class TypeExtensions extends NetObject  {
 
     public static FieldInfo[] GetFields(NetType type, BindingFlags bindingAttr) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetFields = null;
         try {
             ArrayList<FieldInfo> resultingArrayList = new ArrayList<FieldInfo>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("GetFields", type == null ? null : type.getJCOInstance(), bindingAttr == null ? null : bindingAttr.getJCOInstance());
+            retObjectGetFields = classType.Invoke("GetFields", type == null ? null : type.getJCOInstance(), bindingAttr == null ? null : bindingAttr.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectGetFields;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new FieldInfo(resultingObject));
             }
             FieldInfo[] resultingArray = new FieldInfo[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetFields != null ? retObjectGetFields.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -320,16 +368,20 @@ public class TypeExtensions extends NetObject  {
 
     public static FieldInfo[] GetFields(NetType type) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetFields = null;
         try {
             ArrayList<FieldInfo> resultingArrayList = new ArrayList<FieldInfo>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("GetFields", type == null ? null : type.getJCOInstance());
+            retObjectGetFields = classType.Invoke("GetFields", type == null ? null : type.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectGetFields;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new FieldInfo(resultingObject));
             }
             FieldInfo[] resultingArray = new FieldInfo[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetFields != null ? retObjectGetFields.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -337,16 +389,20 @@ public class TypeExtensions extends NetObject  {
 
     public static MemberInfo[] GetDefaultMembers(NetType type) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetDefaultMembers = null;
         try {
             ArrayList<MemberInfo> resultingArrayList = new ArrayList<MemberInfo>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("GetDefaultMembers", type == null ? null : type.getJCOInstance());
+            retObjectGetDefaultMembers = classType.Invoke("GetDefaultMembers", type == null ? null : type.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectGetDefaultMembers;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new MemberInfo(resultingObject));
             }
             MemberInfo[] resultingArray = new MemberInfo[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetDefaultMembers != null ? retObjectGetDefaultMembers.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -354,16 +410,20 @@ public class TypeExtensions extends NetObject  {
 
     public static MemberInfo[] GetMember(NetType type, java.lang.String name, BindingFlags bindingAttr) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetMember = null;
         try {
             ArrayList<MemberInfo> resultingArrayList = new ArrayList<MemberInfo>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("GetMember", type == null ? null : type.getJCOInstance(), name, bindingAttr == null ? null : bindingAttr.getJCOInstance());
+            retObjectGetMember = classType.Invoke("GetMember", type == null ? null : type.getJCOInstance(), name, bindingAttr == null ? null : bindingAttr.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectGetMember;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new MemberInfo(resultingObject));
             }
             MemberInfo[] resultingArray = new MemberInfo[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetMember != null ? retObjectGetMember.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -371,16 +431,20 @@ public class TypeExtensions extends NetObject  {
 
     public static MemberInfo[] GetMember(NetType type, java.lang.String name) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetMember = null;
         try {
             ArrayList<MemberInfo> resultingArrayList = new ArrayList<MemberInfo>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("GetMember", type == null ? null : type.getJCOInstance(), name);
+            retObjectGetMember = classType.Invoke("GetMember", type == null ? null : type.getJCOInstance(), name);
+            JCObject resultingObjects = (JCObject)retObjectGetMember;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new MemberInfo(resultingObject));
             }
             MemberInfo[] resultingArray = new MemberInfo[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetMember != null ? retObjectGetMember.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -388,16 +452,20 @@ public class TypeExtensions extends NetObject  {
 
     public static MemberInfo[] GetMembers(NetType type, BindingFlags bindingAttr) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetMembers = null;
         try {
             ArrayList<MemberInfo> resultingArrayList = new ArrayList<MemberInfo>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("GetMembers", type == null ? null : type.getJCOInstance(), bindingAttr == null ? null : bindingAttr.getJCOInstance());
+            retObjectGetMembers = classType.Invoke("GetMembers", type == null ? null : type.getJCOInstance(), bindingAttr == null ? null : bindingAttr.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectGetMembers;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new MemberInfo(resultingObject));
             }
             MemberInfo[] resultingArray = new MemberInfo[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetMembers != null ? retObjectGetMembers.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -405,16 +473,20 @@ public class TypeExtensions extends NetObject  {
 
     public static MemberInfo[] GetMembers(NetType type) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetMembers = null;
         try {
             ArrayList<MemberInfo> resultingArrayList = new ArrayList<MemberInfo>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("GetMembers", type == null ? null : type.getJCOInstance());
+            retObjectGetMembers = classType.Invoke("GetMembers", type == null ? null : type.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectGetMembers;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new MemberInfo(resultingObject));
             }
             MemberInfo[] resultingArray = new MemberInfo[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetMembers != null ? retObjectGetMembers.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -422,10 +494,14 @@ public class TypeExtensions extends NetObject  {
 
     public static MethodInfo GetMethod(NetType type, java.lang.String name, BindingFlags bindingAttr) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetMethod = null;
         try {
-            JCObject objGetMethod = (JCObject)classType.Invoke("GetMethod", type == null ? null : type.getJCOInstance(), name, bindingAttr == null ? null : bindingAttr.getJCOInstance());
+            retObjectGetMethod = classType.Invoke("GetMethod", type == null ? null : type.getJCOInstance(), name, bindingAttr == null ? null : bindingAttr.getJCOInstance());
+            JCObject objGetMethod = (JCObject)retObjectGetMethod;
             return new MethodInfo(objGetMethod);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetMethod != null ? retObjectGetMethod.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -433,10 +509,14 @@ public class TypeExtensions extends NetObject  {
 
     public static MethodInfo GetMethod(NetType type, java.lang.String name, NetType[] types) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetMethod = null;
         try {
-            JCObject objGetMethod = (JCObject)classType.Invoke("GetMethod", type == null ? null : type.getJCOInstance(), name, toObjectFromArray(types));
+            retObjectGetMethod = classType.Invoke("GetMethod", type == null ? null : type.getJCOInstance(), name, toObjectFromArray(types));
+            JCObject objGetMethod = (JCObject)retObjectGetMethod;
             return new MethodInfo(objGetMethod);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetMethod != null ? retObjectGetMethod.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -444,10 +524,14 @@ public class TypeExtensions extends NetObject  {
 
     public static MethodInfo GetMethod(NetType type, java.lang.String name) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetMethod = null;
         try {
-            JCObject objGetMethod = (JCObject)classType.Invoke("GetMethod", type == null ? null : type.getJCOInstance(), name);
+            retObjectGetMethod = classType.Invoke("GetMethod", type == null ? null : type.getJCOInstance(), name);
+            JCObject objGetMethod = (JCObject)retObjectGetMethod;
             return new MethodInfo(objGetMethod);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetMethod != null ? retObjectGetMethod.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -455,16 +539,20 @@ public class TypeExtensions extends NetObject  {
 
     public static MethodInfo[] GetMethods(NetType type, BindingFlags bindingAttr) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetMethods = null;
         try {
             ArrayList<MethodInfo> resultingArrayList = new ArrayList<MethodInfo>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("GetMethods", type == null ? null : type.getJCOInstance(), bindingAttr == null ? null : bindingAttr.getJCOInstance());
+            retObjectGetMethods = classType.Invoke("GetMethods", type == null ? null : type.getJCOInstance(), bindingAttr == null ? null : bindingAttr.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectGetMethods;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new MethodInfo(resultingObject));
             }
             MethodInfo[] resultingArray = new MethodInfo[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetMethods != null ? retObjectGetMethods.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -472,16 +560,20 @@ public class TypeExtensions extends NetObject  {
 
     public static MethodInfo[] GetMethods(NetType type) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetMethods = null;
         try {
             ArrayList<MethodInfo> resultingArrayList = new ArrayList<MethodInfo>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("GetMethods", type == null ? null : type.getJCOInstance());
+            retObjectGetMethods = classType.Invoke("GetMethods", type == null ? null : type.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectGetMethods;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new MethodInfo(resultingObject));
             }
             MethodInfo[] resultingArray = new MethodInfo[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetMethods != null ? retObjectGetMethods.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -489,10 +581,14 @@ public class TypeExtensions extends NetObject  {
 
     public static PropertyInfo GetProperty(NetType type, java.lang.String name, BindingFlags bindingAttr) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetProperty = null;
         try {
-            JCObject objGetProperty = (JCObject)classType.Invoke("GetProperty", type == null ? null : type.getJCOInstance(), name, bindingAttr == null ? null : bindingAttr.getJCOInstance());
+            retObjectGetProperty = classType.Invoke("GetProperty", type == null ? null : type.getJCOInstance(), name, bindingAttr == null ? null : bindingAttr.getJCOInstance());
+            JCObject objGetProperty = (JCObject)retObjectGetProperty;
             return new PropertyInfo(objGetProperty);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetProperty != null ? retObjectGetProperty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -500,10 +596,14 @@ public class TypeExtensions extends NetObject  {
 
     public static PropertyInfo GetProperty(NetType type, java.lang.String name, NetType returnType, NetType[] types) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetProperty = null;
         try {
-            JCObject objGetProperty = (JCObject)classType.Invoke("GetProperty", type == null ? null : type.getJCOInstance(), name, returnType == null ? null : returnType.getJCOInstance(), toObjectFromArray(types));
+            retObjectGetProperty = classType.Invoke("GetProperty", type == null ? null : type.getJCOInstance(), name, returnType == null ? null : returnType.getJCOInstance(), toObjectFromArray(types));
+            JCObject objGetProperty = (JCObject)retObjectGetProperty;
             return new PropertyInfo(objGetProperty);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetProperty != null ? retObjectGetProperty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -511,10 +611,14 @@ public class TypeExtensions extends NetObject  {
 
     public static PropertyInfo GetProperty(NetType type, java.lang.String name, NetType returnType) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetProperty = null;
         try {
-            JCObject objGetProperty = (JCObject)classType.Invoke("GetProperty", type == null ? null : type.getJCOInstance(), name, returnType == null ? null : returnType.getJCOInstance());
+            retObjectGetProperty = classType.Invoke("GetProperty", type == null ? null : type.getJCOInstance(), name, returnType == null ? null : returnType.getJCOInstance());
+            JCObject objGetProperty = (JCObject)retObjectGetProperty;
             return new PropertyInfo(objGetProperty);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetProperty != null ? retObjectGetProperty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -522,10 +626,14 @@ public class TypeExtensions extends NetObject  {
 
     public static PropertyInfo GetProperty(NetType type, java.lang.String name) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetProperty = null;
         try {
-            JCObject objGetProperty = (JCObject)classType.Invoke("GetProperty", type == null ? null : type.getJCOInstance(), name);
+            retObjectGetProperty = classType.Invoke("GetProperty", type == null ? null : type.getJCOInstance(), name);
+            JCObject objGetProperty = (JCObject)retObjectGetProperty;
             return new PropertyInfo(objGetProperty);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetProperty != null ? retObjectGetProperty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -533,16 +641,20 @@ public class TypeExtensions extends NetObject  {
 
     public static PropertyInfo[] GetProperties(NetType type, BindingFlags bindingAttr) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetProperties = null;
         try {
             ArrayList<PropertyInfo> resultingArrayList = new ArrayList<PropertyInfo>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("GetProperties", type == null ? null : type.getJCOInstance(), bindingAttr == null ? null : bindingAttr.getJCOInstance());
+            retObjectGetProperties = classType.Invoke("GetProperties", type == null ? null : type.getJCOInstance(), bindingAttr == null ? null : bindingAttr.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectGetProperties;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new PropertyInfo(resultingObject));
             }
             PropertyInfo[] resultingArray = new PropertyInfo[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetProperties != null ? retObjectGetProperties.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -550,16 +662,20 @@ public class TypeExtensions extends NetObject  {
 
     public static PropertyInfo[] GetProperties(NetType type) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetProperties = null;
         try {
             ArrayList<PropertyInfo> resultingArrayList = new ArrayList<PropertyInfo>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("GetProperties", type == null ? null : type.getJCOInstance());
+            retObjectGetProperties = classType.Invoke("GetProperties", type == null ? null : type.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectGetProperties;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new PropertyInfo(resultingObject));
             }
             PropertyInfo[] resultingArray = new PropertyInfo[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetProperties != null ? retObjectGetProperties.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -567,10 +683,14 @@ public class TypeExtensions extends NetObject  {
 
     public static NetType GetNestedType(NetType type, java.lang.String name, BindingFlags bindingAttr) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetNestedType = null;
         try {
-            JCObject objGetNestedType = (JCObject)classType.Invoke("GetNestedType", type == null ? null : type.getJCOInstance(), name, bindingAttr == null ? null : bindingAttr.getJCOInstance());
+            retObjectGetNestedType = classType.Invoke("GetNestedType", type == null ? null : type.getJCOInstance(), name, bindingAttr == null ? null : bindingAttr.getJCOInstance());
+            JCObject objGetNestedType = (JCObject)retObjectGetNestedType;
             return new NetType(objGetNestedType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetNestedType != null ? retObjectGetNestedType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -578,16 +698,20 @@ public class TypeExtensions extends NetObject  {
 
     public static NetType[] GetGenericArguments(NetType type) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetGenericArguments = null;
         try {
             ArrayList<NetType> resultingArrayList = new ArrayList<NetType>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("GetGenericArguments", type == null ? null : type.getJCOInstance());
+            retObjectGetGenericArguments = classType.Invoke("GetGenericArguments", type == null ? null : type.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectGetGenericArguments;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new NetType(resultingObject));
             }
             NetType[] resultingArray = new NetType[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetGenericArguments != null ? retObjectGetGenericArguments.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -595,16 +719,20 @@ public class TypeExtensions extends NetObject  {
 
     public static NetType[] GetInterfaces(NetType type) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetInterfaces = null;
         try {
             ArrayList<NetType> resultingArrayList = new ArrayList<NetType>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("GetInterfaces", type == null ? null : type.getJCOInstance());
+            retObjectGetInterfaces = classType.Invoke("GetInterfaces", type == null ? null : type.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectGetInterfaces;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new NetType(resultingObject));
             }
             NetType[] resultingArray = new NetType[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetInterfaces != null ? retObjectGetInterfaces.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -612,16 +740,20 @@ public class TypeExtensions extends NetObject  {
 
     public static NetType[] GetNestedTypes(NetType type, BindingFlags bindingAttr) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetNestedTypes = null;
         try {
             ArrayList<NetType> resultingArrayList = new ArrayList<NetType>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("GetNestedTypes", type == null ? null : type.getJCOInstance(), bindingAttr == null ? null : bindingAttr.getJCOInstance());
+            retObjectGetNestedTypes = classType.Invoke("GetNestedTypes", type == null ? null : type.getJCOInstance(), bindingAttr == null ? null : bindingAttr.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectGetNestedTypes;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new NetType(resultingObject));
             }
             NetType[] resultingArray = new NetType[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetNestedTypes != null ? retObjectGetNestedTypes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

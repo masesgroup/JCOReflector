@@ -173,9 +173,13 @@ public class Vector extends ValueType implements system.IFormattable {
     
     public static boolean Equals(Vector vector1, Vector vector2) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectEquals = null;
         try {
-            return (boolean)classType.Invoke("Equals", vector1 == null ? null : vector1.getJCOInstance(), vector2 == null ? null : vector2.getJCOInstance());
+            retObjectEquals = classType.Invoke("Equals", vector1 == null ? null : vector1.getJCOInstance(), vector2 == null ? null : vector2.getJCOInstance());
+            return (boolean)retObjectEquals;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectEquals != null ? retObjectEquals.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,9 +187,13 @@ public class Vector extends ValueType implements system.IFormattable {
 
     public boolean Equals(Vector value) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEquals = null;
         try {
-            return (boolean)classInstance.Invoke("Equals", value == null ? null : value.getJCOInstance());
+            retObjectEquals = classInstance.Invoke("Equals", value == null ? null : value.getJCOInstance());
+            return (boolean)retObjectEquals;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectEquals != null ? retObjectEquals.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,9 +201,20 @@ public class Vector extends ValueType implements system.IFormattable {
 
     public static double AngleBetween(Vector vector1, Vector vector2) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAngleBetween = null;
         try {
-            return (double)classType.Invoke("AngleBetween", vector1 == null ? null : vector1.getJCOInstance(), vector2 == null ? null : vector2.getJCOInstance());
+            retObjectAngleBetween = classType.Invoke("AngleBetween", vector1 == null ? null : vector1.getJCOInstance(), vector2 == null ? null : vector2.getJCOInstance());
+            return (double)retObjectAngleBetween;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectAngleBetween_ToString = retObjectAngleBetween == null ? "null" : retObjectAngleBetween.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectAngleBetweenNumber = (java.lang.Number)retObjectAngleBetween;
+                return retObjectAngleBetweenNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectAngleBetween != null ? retObjectAngleBetween.getClass() : "null", retObjectAngleBetween_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,9 +222,20 @@ public class Vector extends ValueType implements system.IFormattable {
 
     public static double CrossProduct(Vector vector1, Vector vector2) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCrossProduct = null;
         try {
-            return (double)classType.Invoke("CrossProduct", vector1 == null ? null : vector1.getJCOInstance(), vector2 == null ? null : vector2.getJCOInstance());
+            retObjectCrossProduct = classType.Invoke("CrossProduct", vector1 == null ? null : vector1.getJCOInstance(), vector2 == null ? null : vector2.getJCOInstance());
+            return (double)retObjectCrossProduct;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCrossProduct_ToString = retObjectCrossProduct == null ? "null" : retObjectCrossProduct.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectCrossProductNumber = (java.lang.Number)retObjectCrossProduct;
+                return retObjectCrossProductNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectCrossProduct != null ? retObjectCrossProduct.getClass() : "null", retObjectCrossProduct_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,9 +243,20 @@ public class Vector extends ValueType implements system.IFormattable {
 
     public static double Determinant(Vector vector1, Vector vector2) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDeterminant = null;
         try {
-            return (double)classType.Invoke("Determinant", vector1 == null ? null : vector1.getJCOInstance(), vector2 == null ? null : vector2.getJCOInstance());
+            retObjectDeterminant = classType.Invoke("Determinant", vector1 == null ? null : vector1.getJCOInstance(), vector2 == null ? null : vector2.getJCOInstance());
+            return (double)retObjectDeterminant;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDeterminant_ToString = retObjectDeterminant == null ? "null" : retObjectDeterminant.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectDeterminantNumber = (java.lang.Number)retObjectDeterminant;
+                return retObjectDeterminantNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectDeterminant != null ? retObjectDeterminant.getClass() : "null", retObjectDeterminant_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -223,9 +264,20 @@ public class Vector extends ValueType implements system.IFormattable {
 
     public static double Multiply(Vector vector1, Vector vector2) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMultiply = null;
         try {
-            return (double)classType.Invoke("Multiply", vector1 == null ? null : vector1.getJCOInstance(), vector2 == null ? null : vector2.getJCOInstance());
+            retObjectMultiply = classType.Invoke("Multiply", vector1 == null ? null : vector1.getJCOInstance(), vector2 == null ? null : vector2.getJCOInstance());
+            return (double)retObjectMultiply;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMultiply_ToString = retObjectMultiply == null ? "null" : retObjectMultiply.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMultiplyNumber = (java.lang.Number)retObjectMultiply;
+                return retObjectMultiplyNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectMultiply != null ? retObjectMultiply.getClass() : "null", retObjectMultiply_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -233,9 +285,13 @@ public class Vector extends ValueType implements system.IFormattable {
 
     public java.lang.String ToString(IFormatProvider provider) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToString = null;
         try {
-            return (java.lang.String)classInstance.Invoke("ToString", provider == null ? null : provider.getJCOInstance());
+            retObjectToString = classInstance.Invoke("ToString", provider == null ? null : provider.getJCOInstance());
+            return (java.lang.String)retObjectToString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectToString != null ? retObjectToString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -243,10 +299,14 @@ public class Vector extends ValueType implements system.IFormattable {
 
     public static Point Add(Vector vector, Point point) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAdd = null;
         try {
-            JCObject objAdd = (JCObject)classType.Invoke("Add", vector == null ? null : vector.getJCOInstance(), point == null ? null : point.getJCOInstance());
+            retObjectAdd = classType.Invoke("Add", vector == null ? null : vector.getJCOInstance(), point == null ? null : point.getJCOInstance());
+            JCObject objAdd = (JCObject)retObjectAdd;
             return new Point(objAdd);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAdd != null ? retObjectAdd.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -254,10 +314,14 @@ public class Vector extends ValueType implements system.IFormattable {
 
     public static Vector Add(Vector vector1, Vector vector2) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAdd = null;
         try {
-            JCObject objAdd = (JCObject)classType.Invoke("Add", vector1 == null ? null : vector1.getJCOInstance(), vector2 == null ? null : vector2.getJCOInstance());
+            retObjectAdd = classType.Invoke("Add", vector1 == null ? null : vector1.getJCOInstance(), vector2 == null ? null : vector2.getJCOInstance());
+            JCObject objAdd = (JCObject)retObjectAdd;
             return new Vector(objAdd);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAdd != null ? retObjectAdd.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -265,10 +329,14 @@ public class Vector extends ValueType implements system.IFormattable {
 
     public static Vector Divide(Vector vector, double scalar) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDivide = null;
         try {
-            JCObject objDivide = (JCObject)classType.Invoke("Divide", vector == null ? null : vector.getJCOInstance(), scalar);
+            retObjectDivide = classType.Invoke("Divide", vector == null ? null : vector.getJCOInstance(), scalar);
+            JCObject objDivide = (JCObject)retObjectDivide;
             return new Vector(objDivide);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDivide != null ? retObjectDivide.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -276,10 +344,14 @@ public class Vector extends ValueType implements system.IFormattable {
 
     public static Vector Multiply(double scalar, Vector vector) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMultiply = null;
         try {
-            JCObject objMultiply = (JCObject)classType.Invoke("Multiply", scalar, vector == null ? null : vector.getJCOInstance());
+            retObjectMultiply = classType.Invoke("Multiply", scalar, vector == null ? null : vector.getJCOInstance());
+            JCObject objMultiply = (JCObject)retObjectMultiply;
             return new Vector(objMultiply);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMultiply != null ? retObjectMultiply.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -287,10 +359,14 @@ public class Vector extends ValueType implements system.IFormattable {
 
     public static Vector Multiply(Vector vector, double scalar) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMultiply = null;
         try {
-            JCObject objMultiply = (JCObject)classType.Invoke("Multiply", vector == null ? null : vector.getJCOInstance(), scalar);
+            retObjectMultiply = classType.Invoke("Multiply", vector == null ? null : vector.getJCOInstance(), scalar);
+            JCObject objMultiply = (JCObject)retObjectMultiply;
             return new Vector(objMultiply);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMultiply != null ? retObjectMultiply.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -298,10 +374,14 @@ public class Vector extends ValueType implements system.IFormattable {
 
     public static Vector Multiply(Vector vector, Matrix matrix) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMultiply = null;
         try {
-            JCObject objMultiply = (JCObject)classType.Invoke("Multiply", vector == null ? null : vector.getJCOInstance(), matrix == null ? null : matrix.getJCOInstance());
+            retObjectMultiply = classType.Invoke("Multiply", vector == null ? null : vector.getJCOInstance(), matrix == null ? null : matrix.getJCOInstance());
+            JCObject objMultiply = (JCObject)retObjectMultiply;
             return new Vector(objMultiply);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMultiply != null ? retObjectMultiply.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -309,10 +389,14 @@ public class Vector extends ValueType implements system.IFormattable {
 
     public static Vector Parse(java.lang.String source) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectParse = null;
         try {
-            JCObject objParse = (JCObject)classType.Invoke("Parse", source);
+            retObjectParse = classType.Invoke("Parse", source);
+            JCObject objParse = (JCObject)retObjectParse;
             return new Vector(objParse);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParse != null ? retObjectParse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -320,10 +404,14 @@ public class Vector extends ValueType implements system.IFormattable {
 
     public static Vector Subtract(Vector vector1, Vector vector2) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSubtract = null;
         try {
-            JCObject objSubtract = (JCObject)classType.Invoke("Subtract", vector1 == null ? null : vector1.getJCOInstance(), vector2 == null ? null : vector2.getJCOInstance());
+            retObjectSubtract = classType.Invoke("Subtract", vector1 == null ? null : vector1.getJCOInstance(), vector2 == null ? null : vector2.getJCOInstance());
+            JCObject objSubtract = (JCObject)retObjectSubtract;
             return new Vector(objSubtract);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSubtract != null ? retObjectSubtract.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -331,7 +419,7 @@ public class Vector extends ValueType implements system.IFormattable {
 
     public void Negate() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Negate");
         } catch (JCNativeException jcne) {
@@ -341,7 +429,7 @@ public class Vector extends ValueType implements system.IFormattable {
 
     public void Normalize() throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Normalize");
         } catch (JCNativeException jcne) {
@@ -355,7 +443,7 @@ public class Vector extends ValueType implements system.IFormattable {
      */
     @Deprecated 
     public java.lang.String ToString(java.lang.String format, IFormatProvider formatProvider) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIFormattable to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIFormattable to obtain the full interface.");
     }
 
 
@@ -364,9 +452,20 @@ public class Vector extends ValueType implements system.IFormattable {
     
     public double getLength() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLength = null;
         try {
-            return (double)classInstance.Get("Length");
+            retObjectLength = classInstance.Get("Length");
+            return (double)retObjectLength;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectLength_ToString = retObjectLength == null ? "null" : retObjectLength.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectLengthNumber = (java.lang.Number)retObjectLength;
+                return retObjectLengthNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectLength != null ? retObjectLength.getClass() : "null", retObjectLength_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -374,9 +473,20 @@ public class Vector extends ValueType implements system.IFormattable {
 
     public double getLengthSquared() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLengthSquared = null;
         try {
-            return (double)classInstance.Get("LengthSquared");
+            retObjectLengthSquared = classInstance.Get("LengthSquared");
+            return (double)retObjectLengthSquared;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectLengthSquared_ToString = retObjectLengthSquared == null ? "null" : retObjectLengthSquared.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectLengthSquaredNumber = (java.lang.Number)retObjectLengthSquared;
+                return retObjectLengthSquaredNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectLengthSquared != null ? retObjectLengthSquared.getClass() : "null", retObjectLengthSquared_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -384,9 +494,20 @@ public class Vector extends ValueType implements system.IFormattable {
 
     public double getX() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectX = null;
         try {
-            return (double)classInstance.Get("X");
+            retObjectX = classInstance.Get("X");
+            return (double)retObjectX;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectX_ToString = retObjectX == null ? "null" : retObjectX.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectXNumber = (java.lang.Number)retObjectX;
+                return retObjectXNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectX != null ? retObjectX.getClass() : "null", retObjectX_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -394,7 +515,7 @@ public class Vector extends ValueType implements system.IFormattable {
 
     public void setX(double X) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("X", X);
         } catch (JCNativeException jcne) {
@@ -404,9 +525,20 @@ public class Vector extends ValueType implements system.IFormattable {
 
     public double getY() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectY = null;
         try {
-            return (double)classInstance.Get("Y");
+            retObjectY = classInstance.Get("Y");
+            return (double)retObjectY;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectY_ToString = retObjectY == null ? "null" : retObjectY.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectYNumber = (java.lang.Number)retObjectY;
+                return retObjectYNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectY != null ? retObjectY.getClass() : "null", retObjectY_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -414,7 +546,7 @@ public class Vector extends ValueType implements system.IFormattable {
 
     public void setY(double Y) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Y", Y);
         } catch (JCNativeException jcne) {

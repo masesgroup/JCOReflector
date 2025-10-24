@@ -148,9 +148,13 @@ public class IBuildSettingsImplementation extends NetObject implements IBuildSet
     
     public boolean getApplicationRequiresElevation() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectApplicationRequiresElevation = null;
         try {
-            return (boolean)classInstance.Get("ApplicationRequiresElevation");
+            retObjectApplicationRequiresElevation = classInstance.Get("ApplicationRequiresElevation");
+            return (boolean)retObjectApplicationRequiresElevation;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectApplicationRequiresElevation != null ? retObjectApplicationRequiresElevation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -158,7 +162,7 @@ public class IBuildSettingsImplementation extends NetObject implements IBuildSet
 
     public void setApplicationRequiresElevation(boolean ApplicationRequiresElevation) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ApplicationRequiresElevation", ApplicationRequiresElevation);
         } catch (JCNativeException jcne) {
@@ -168,9 +172,13 @@ public class IBuildSettingsImplementation extends NetObject implements IBuildSet
 
     public boolean getCopyComponents() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCopyComponents = null;
         try {
-            return (boolean)classInstance.Get("CopyComponents");
+            retObjectCopyComponents = classInstance.Get("CopyComponents");
+            return (boolean)retObjectCopyComponents;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCopyComponents != null ? retObjectCopyComponents.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,7 +186,7 @@ public class IBuildSettingsImplementation extends NetObject implements IBuildSet
 
     public void setCopyComponents(boolean CopyComponents) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CopyComponents", CopyComponents);
         } catch (JCNativeException jcne) {
@@ -188,9 +196,13 @@ public class IBuildSettingsImplementation extends NetObject implements IBuildSet
 
     public boolean getValidate() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValidate = null;
         try {
-            return (boolean)classInstance.Get("Validate");
+            retObjectValidate = classInstance.Get("Validate");
+            return (boolean)retObjectValidate;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectValidate != null ? retObjectValidate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,7 +210,7 @@ public class IBuildSettingsImplementation extends NetObject implements IBuildSet
 
     public void setValidate(boolean Validate) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Validate", Validate);
         } catch (JCNativeException jcne) {
@@ -208,9 +220,20 @@ public class IBuildSettingsImplementation extends NetObject implements IBuildSet
 
     public int getFallbackLCID() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFallbackLCID = null;
         try {
-            return (int)classInstance.Get("FallbackLCID");
+            retObjectFallbackLCID = classInstance.Get("FallbackLCID");
+            return (int)retObjectFallbackLCID;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectFallbackLCID_ToString = retObjectFallbackLCID == null ? "null" : retObjectFallbackLCID.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectFallbackLCIDNumber = (java.lang.Number)retObjectFallbackLCID;
+                return retObjectFallbackLCIDNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectFallbackLCID != null ? retObjectFallbackLCID.getClass() : "null", retObjectFallbackLCID_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -218,7 +241,7 @@ public class IBuildSettingsImplementation extends NetObject implements IBuildSet
 
     public void setFallbackLCID(int FallbackLCID) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FallbackLCID", FallbackLCID);
         } catch (JCNativeException jcne) {
@@ -228,9 +251,20 @@ public class IBuildSettingsImplementation extends NetObject implements IBuildSet
 
     public int getLCID() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLCID = null;
         try {
-            return (int)classInstance.Get("LCID");
+            retObjectLCID = classInstance.Get("LCID");
+            return (int)retObjectLCID;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectLCID_ToString = retObjectLCID == null ? "null" : retObjectLCID.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectLCIDNumber = (java.lang.Number)retObjectLCID;
+                return retObjectLCIDNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectLCID != null ? retObjectLCID.getClass() : "null", retObjectLCID_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -238,7 +272,7 @@ public class IBuildSettingsImplementation extends NetObject implements IBuildSet
 
     public void setLCID(int LCID) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("LCID", LCID);
         } catch (JCNativeException jcne) {
@@ -248,10 +282,14 @@ public class IBuildSettingsImplementation extends NetObject implements IBuildSet
 
     public ComponentsLocation getComponentsLocation() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectComponentsLocation = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ComponentsLocation");
+            retObjectComponentsLocation = classInstance.Get("ComponentsLocation");
+            JCObject val = (JCObject)retObjectComponentsLocation;
             return new ComponentsLocation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectComponentsLocation != null ? retObjectComponentsLocation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -259,7 +297,7 @@ public class IBuildSettingsImplementation extends NetObject implements IBuildSet
 
     public void setComponentsLocation(ComponentsLocation ComponentsLocation) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ComponentsLocation", ComponentsLocation == null ? null : ComponentsLocation.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -269,10 +307,14 @@ public class IBuildSettingsImplementation extends NetObject implements IBuildSet
 
     public ProductBuilderCollection getProductBuilders() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProductBuilders = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ProductBuilders");
+            retObjectProductBuilders = classInstance.Get("ProductBuilders");
+            JCObject val = (JCObject)retObjectProductBuilders;
             return new ProductBuilderCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectProductBuilders != null ? retObjectProductBuilders.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -280,9 +322,13 @@ public class IBuildSettingsImplementation extends NetObject implements IBuildSet
 
     public java.lang.String getApplicationFile() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectApplicationFile = null;
         try {
-            return (java.lang.String)classInstance.Get("ApplicationFile");
+            retObjectApplicationFile = classInstance.Get("ApplicationFile");
+            return (java.lang.String)retObjectApplicationFile;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectApplicationFile != null ? retObjectApplicationFile.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -290,7 +336,7 @@ public class IBuildSettingsImplementation extends NetObject implements IBuildSet
 
     public void setApplicationFile(java.lang.String ApplicationFile) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ApplicationFile", ApplicationFile);
         } catch (JCNativeException jcne) {
@@ -300,9 +346,13 @@ public class IBuildSettingsImplementation extends NetObject implements IBuildSet
 
     public java.lang.String getApplicationName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectApplicationName = null;
         try {
-            return (java.lang.String)classInstance.Get("ApplicationName");
+            retObjectApplicationName = classInstance.Get("ApplicationName");
+            return (java.lang.String)retObjectApplicationName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectApplicationName != null ? retObjectApplicationName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -310,7 +360,7 @@ public class IBuildSettingsImplementation extends NetObject implements IBuildSet
 
     public void setApplicationName(java.lang.String ApplicationName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ApplicationName", ApplicationName);
         } catch (JCNativeException jcne) {
@@ -320,9 +370,13 @@ public class IBuildSettingsImplementation extends NetObject implements IBuildSet
 
     public java.lang.String getApplicationUrl() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectApplicationUrl = null;
         try {
-            return (java.lang.String)classInstance.Get("ApplicationUrl");
+            retObjectApplicationUrl = classInstance.Get("ApplicationUrl");
+            return (java.lang.String)retObjectApplicationUrl;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectApplicationUrl != null ? retObjectApplicationUrl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -330,7 +384,7 @@ public class IBuildSettingsImplementation extends NetObject implements IBuildSet
 
     public void setApplicationUrl(java.lang.String ApplicationUrl) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ApplicationUrl", ApplicationUrl);
         } catch (JCNativeException jcne) {
@@ -340,9 +394,13 @@ public class IBuildSettingsImplementation extends NetObject implements IBuildSet
 
     public java.lang.String getComponentsUrl() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectComponentsUrl = null;
         try {
-            return (java.lang.String)classInstance.Get("ComponentsUrl");
+            retObjectComponentsUrl = classInstance.Get("ComponentsUrl");
+            return (java.lang.String)retObjectComponentsUrl;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectComponentsUrl != null ? retObjectComponentsUrl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -350,7 +408,7 @@ public class IBuildSettingsImplementation extends NetObject implements IBuildSet
 
     public void setComponentsUrl(java.lang.String ComponentsUrl) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ComponentsUrl", ComponentsUrl);
         } catch (JCNativeException jcne) {
@@ -360,9 +418,13 @@ public class IBuildSettingsImplementation extends NetObject implements IBuildSet
 
     public java.lang.String getOutputPath() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOutputPath = null;
         try {
-            return (java.lang.String)classInstance.Get("OutputPath");
+            retObjectOutputPath = classInstance.Get("OutputPath");
+            return (java.lang.String)retObjectOutputPath;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectOutputPath != null ? retObjectOutputPath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -370,7 +432,7 @@ public class IBuildSettingsImplementation extends NetObject implements IBuildSet
 
     public void setOutputPath(java.lang.String OutputPath) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("OutputPath", OutputPath);
         } catch (JCNativeException jcne) {
@@ -380,9 +442,13 @@ public class IBuildSettingsImplementation extends NetObject implements IBuildSet
 
     public java.lang.String getSupportUrl() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSupportUrl = null;
         try {
-            return (java.lang.String)classInstance.Get("SupportUrl");
+            retObjectSupportUrl = classInstance.Get("SupportUrl");
+            return (java.lang.String)retObjectSupportUrl;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSupportUrl != null ? retObjectSupportUrl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -390,7 +456,7 @@ public class IBuildSettingsImplementation extends NetObject implements IBuildSet
 
     public void setSupportUrl(java.lang.String SupportUrl) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SupportUrl", SupportUrl);
         } catch (JCNativeException jcne) {

@@ -182,9 +182,13 @@ public class TypeDelegator extends TypeInfo  {
     
     public boolean IsAssignableFrom(TypeInfo typeInfo) throws Throwable, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsAssignableFrom = null;
         try {
-            return (boolean)classInstance.Invoke("IsAssignableFrom", typeInfo == null ? null : typeInfo.getJCOInstance());
+            retObjectIsAssignableFrom = classInstance.Invoke("IsAssignableFrom", typeInfo == null ? null : typeInfo.getJCOInstance());
+            return (boolean)retObjectIsAssignableFrom;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsAssignableFrom != null ? retObjectIsAssignableFrom.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,9 +196,13 @@ public class TypeDelegator extends TypeInfo  {
 
     public boolean IsDefined(NetType attributeType, boolean inherit) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsDefined = null;
         try {
-            return (boolean)classInstance.Invoke("IsDefined", attributeType == null ? null : attributeType.getJCOInstance(), inherit);
+            retObjectIsDefined = classInstance.Invoke("IsDefined", attributeType == null ? null : attributeType.getJCOInstance(), inherit);
+            return (boolean)retObjectIsDefined;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsDefined != null ? retObjectIsDefined.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,10 +210,14 @@ public class TypeDelegator extends TypeInfo  {
 
     public NetObject InvokeMember(java.lang.String name, BindingFlags invokeAttr, Binder binder, NetObject target, NetObject[] args, ParameterModifier[] modifiers, CultureInfo culture, java.lang.String[] namedParameters) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInvokeMember = null;
         try {
-            JCObject objInvokeMember = (JCObject)classInstance.Invoke("InvokeMember", name, invokeAttr == null ? null : invokeAttr.getJCOInstance(), binder == null ? null : binder.getJCOInstance(), target == null ? null : target.getJCOInstance(), toObjectFromArray(args), toObjectFromArray(modifiers), culture == null ? null : culture.getJCOInstance(), namedParameters);
+            retObjectInvokeMember = classInstance.Invoke("InvokeMember", name, invokeAttr == null ? null : invokeAttr.getJCOInstance(), binder == null ? null : binder.getJCOInstance(), target == null ? null : target.getJCOInstance(), toObjectFromArray(args), toObjectFromArray(modifiers), culture == null ? null : culture.getJCOInstance(), namedParameters);
+            JCObject objInvokeMember = (JCObject)retObjectInvokeMember;
             return new NetObject(objInvokeMember);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInvokeMember != null ? retObjectInvokeMember.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,10 +225,14 @@ public class TypeDelegator extends TypeInfo  {
 
     public NetObject InvokeMember(java.lang.String dupParam0, BindingFlags dupParam1, Binder dupParam2, NetObject dupParam3, NetObject[] dupParam4, ParameterModifier[] dupParam5, CultureInfo dupParam6, JCORefOut dupParam7) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInvokeMember = null;
         try {
-            JCObject objInvokeMember = (JCObject)classInstance.Invoke("InvokeMember", dupParam0, dupParam1 == null ? null : dupParam1.getJCOInstance(), dupParam2 == null ? null : dupParam2.getJCOInstance(), dupParam3 == null ? null : dupParam3.getJCOInstance(), toObjectFromArray(dupParam4), toObjectFromArray(dupParam5), dupParam6 == null ? null : dupParam6.getJCOInstance(), dupParam7.getJCRefOut());
+            retObjectInvokeMember = classInstance.Invoke("InvokeMember", dupParam0, dupParam1 == null ? null : dupParam1.getJCOInstance(), dupParam2 == null ? null : dupParam2.getJCOInstance(), dupParam3 == null ? null : dupParam3.getJCOInstance(), toObjectFromArray(dupParam4), toObjectFromArray(dupParam5), dupParam6 == null ? null : dupParam6.getJCOInstance(), dupParam7.getJCRefOut());
+            JCObject objInvokeMember = (JCObject)retObjectInvokeMember;
             return new NetObject(objInvokeMember);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInvokeMember != null ? retObjectInvokeMember.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -224,16 +240,20 @@ public class TypeDelegator extends TypeInfo  {
 
     public NetObject[] GetCustomAttributes(boolean inherit) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetCustomAttributes = null;
         try {
             ArrayList<NetObject> resultingArrayList = new ArrayList<NetObject>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetCustomAttributes", inherit);
+            retObjectGetCustomAttributes = classInstance.Invoke("GetCustomAttributes", inherit);
+            JCObject resultingObjects = (JCObject)retObjectGetCustomAttributes;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new NetObject(resultingObject));
             }
             NetObject[] resultingArray = new NetObject[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCustomAttributes != null ? retObjectGetCustomAttributes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -241,16 +261,20 @@ public class TypeDelegator extends TypeInfo  {
 
     public NetObject[] GetCustomAttributes(NetType attributeType, boolean inherit) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetCustomAttributes = null;
         try {
             ArrayList<NetObject> resultingArrayList = new ArrayList<NetObject>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetCustomAttributes", attributeType == null ? null : attributeType.getJCOInstance(), inherit);
+            retObjectGetCustomAttributes = classInstance.Invoke("GetCustomAttributes", attributeType == null ? null : attributeType.getJCOInstance(), inherit);
+            JCObject resultingObjects = (JCObject)retObjectGetCustomAttributes;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new NetObject(resultingObject));
             }
             NetObject[] resultingArray = new NetObject[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCustomAttributes != null ? retObjectGetCustomAttributes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -258,16 +282,20 @@ public class TypeDelegator extends TypeInfo  {
 
     public ConstructorInfo[] GetConstructors(BindingFlags bindingAttr) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetConstructors = null;
         try {
             ArrayList<ConstructorInfo> resultingArrayList = new ArrayList<ConstructorInfo>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetConstructors", bindingAttr == null ? null : bindingAttr.getJCOInstance());
+            retObjectGetConstructors = classInstance.Invoke("GetConstructors", bindingAttr == null ? null : bindingAttr.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectGetConstructors;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ConstructorInfo(resultingObject));
             }
             ConstructorInfo[] resultingArray = new ConstructorInfo[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetConstructors != null ? retObjectGetConstructors.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -275,10 +303,14 @@ public class TypeDelegator extends TypeInfo  {
 
     public EventInfo GetEvent(java.lang.String name, BindingFlags bindingAttr) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetEvent = null;
         try {
-            JCObject objGetEvent = (JCObject)classInstance.Invoke("GetEvent", name, bindingAttr == null ? null : bindingAttr.getJCOInstance());
+            retObjectGetEvent = classInstance.Invoke("GetEvent", name, bindingAttr == null ? null : bindingAttr.getJCOInstance());
+            JCObject objGetEvent = (JCObject)retObjectGetEvent;
             return new EventInfo(objGetEvent);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetEvent != null ? retObjectGetEvent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -286,16 +318,20 @@ public class TypeDelegator extends TypeInfo  {
 
     public EventInfo[] GetEvents() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetEvents = null;
         try {
             ArrayList<EventInfo> resultingArrayList = new ArrayList<EventInfo>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetEvents");
+            retObjectGetEvents = classInstance.Invoke("GetEvents");
+            JCObject resultingObjects = (JCObject)retObjectGetEvents;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new EventInfo(resultingObject));
             }
             EventInfo[] resultingArray = new EventInfo[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetEvents != null ? retObjectGetEvents.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -303,16 +339,20 @@ public class TypeDelegator extends TypeInfo  {
 
     public EventInfo[] GetEvents(BindingFlags bindingAttr) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetEvents = null;
         try {
             ArrayList<EventInfo> resultingArrayList = new ArrayList<EventInfo>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetEvents", bindingAttr == null ? null : bindingAttr.getJCOInstance());
+            retObjectGetEvents = classInstance.Invoke("GetEvents", bindingAttr == null ? null : bindingAttr.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectGetEvents;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new EventInfo(resultingObject));
             }
             EventInfo[] resultingArray = new EventInfo[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetEvents != null ? retObjectGetEvents.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -320,10 +360,14 @@ public class TypeDelegator extends TypeInfo  {
 
     public FieldInfo GetField(java.lang.String name, BindingFlags bindingAttr) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetField = null;
         try {
-            JCObject objGetField = (JCObject)classInstance.Invoke("GetField", name, bindingAttr == null ? null : bindingAttr.getJCOInstance());
+            retObjectGetField = classInstance.Invoke("GetField", name, bindingAttr == null ? null : bindingAttr.getJCOInstance());
+            JCObject objGetField = (JCObject)retObjectGetField;
             return new FieldInfo(objGetField);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetField != null ? retObjectGetField.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -331,16 +375,20 @@ public class TypeDelegator extends TypeInfo  {
 
     public FieldInfo[] GetFields(BindingFlags bindingAttr) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetFields = null;
         try {
             ArrayList<FieldInfo> resultingArrayList = new ArrayList<FieldInfo>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetFields", bindingAttr == null ? null : bindingAttr.getJCOInstance());
+            retObjectGetFields = classInstance.Invoke("GetFields", bindingAttr == null ? null : bindingAttr.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectGetFields;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new FieldInfo(resultingObject));
             }
             FieldInfo[] resultingArray = new FieldInfo[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetFields != null ? retObjectGetFields.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -348,10 +396,14 @@ public class TypeDelegator extends TypeInfo  {
 
     public InterfaceMapping GetInterfaceMap(NetType interfaceType) throws Throwable, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetInterfaceMap = null;
         try {
-            JCObject objGetInterfaceMap = (JCObject)classInstance.Invoke("GetInterfaceMap", interfaceType == null ? null : interfaceType.getJCOInstance());
+            retObjectGetInterfaceMap = classInstance.Invoke("GetInterfaceMap", interfaceType == null ? null : interfaceType.getJCOInstance());
+            JCObject objGetInterfaceMap = (JCObject)retObjectGetInterfaceMap;
             return new InterfaceMapping(objGetInterfaceMap);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetInterfaceMap != null ? retObjectGetInterfaceMap.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -359,16 +411,20 @@ public class TypeDelegator extends TypeInfo  {
 
     public MemberInfo[] GetMember(java.lang.String name, MemberTypes type, BindingFlags bindingAttr) throws Throwable, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetMember = null;
         try {
             ArrayList<MemberInfo> resultingArrayList = new ArrayList<MemberInfo>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetMember", name, type == null ? null : type.getJCOInstance(), bindingAttr == null ? null : bindingAttr.getJCOInstance());
+            retObjectGetMember = classInstance.Invoke("GetMember", name, type == null ? null : type.getJCOInstance(), bindingAttr == null ? null : bindingAttr.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectGetMember;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new MemberInfo(resultingObject));
             }
             MemberInfo[] resultingArray = new MemberInfo[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetMember != null ? retObjectGetMember.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -376,16 +432,20 @@ public class TypeDelegator extends TypeInfo  {
 
     public MemberInfo[] GetMembers(BindingFlags bindingAttr) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetMembers = null;
         try {
             ArrayList<MemberInfo> resultingArrayList = new ArrayList<MemberInfo>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetMembers", bindingAttr == null ? null : bindingAttr.getJCOInstance());
+            retObjectGetMembers = classInstance.Invoke("GetMembers", bindingAttr == null ? null : bindingAttr.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectGetMembers;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new MemberInfo(resultingObject));
             }
             MemberInfo[] resultingArray = new MemberInfo[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetMembers != null ? retObjectGetMembers.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -393,16 +453,20 @@ public class TypeDelegator extends TypeInfo  {
 
     public MethodInfo[] GetMethods(BindingFlags bindingAttr) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetMethods = null;
         try {
             ArrayList<MethodInfo> resultingArrayList = new ArrayList<MethodInfo>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetMethods", bindingAttr == null ? null : bindingAttr.getJCOInstance());
+            retObjectGetMethods = classInstance.Invoke("GetMethods", bindingAttr == null ? null : bindingAttr.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectGetMethods;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new MethodInfo(resultingObject));
             }
             MethodInfo[] resultingArray = new MethodInfo[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetMethods != null ? retObjectGetMethods.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -410,16 +474,20 @@ public class TypeDelegator extends TypeInfo  {
 
     public PropertyInfo[] GetProperties(BindingFlags bindingAttr) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetProperties = null;
         try {
             ArrayList<PropertyInfo> resultingArrayList = new ArrayList<PropertyInfo>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetProperties", bindingAttr == null ? null : bindingAttr.getJCOInstance());
+            retObjectGetProperties = classInstance.Invoke("GetProperties", bindingAttr == null ? null : bindingAttr.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectGetProperties;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new PropertyInfo(resultingObject));
             }
             PropertyInfo[] resultingArray = new PropertyInfo[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetProperties != null ? retObjectGetProperties.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -427,10 +495,14 @@ public class TypeDelegator extends TypeInfo  {
 
     public NetType GetElementType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetElementType = null;
         try {
-            JCObject objGetElementType = (JCObject)classInstance.Invoke("GetElementType");
+            retObjectGetElementType = classInstance.Invoke("GetElementType");
+            JCObject objGetElementType = (JCObject)retObjectGetElementType;
             return new NetType(objGetElementType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetElementType != null ? retObjectGetElementType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -438,10 +510,14 @@ public class TypeDelegator extends TypeInfo  {
 
     public NetType GetInterface(java.lang.String name, boolean ignoreCase) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetInterface = null;
         try {
-            JCObject objGetInterface = (JCObject)classInstance.Invoke("GetInterface", name, ignoreCase);
+            retObjectGetInterface = classInstance.Invoke("GetInterface", name, ignoreCase);
+            JCObject objGetInterface = (JCObject)retObjectGetInterface;
             return new NetType(objGetInterface);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetInterface != null ? retObjectGetInterface.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -449,10 +525,14 @@ public class TypeDelegator extends TypeInfo  {
 
     public NetType GetNestedType(java.lang.String name, BindingFlags bindingAttr) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetNestedType = null;
         try {
-            JCObject objGetNestedType = (JCObject)classInstance.Invoke("GetNestedType", name, bindingAttr == null ? null : bindingAttr.getJCOInstance());
+            retObjectGetNestedType = classInstance.Invoke("GetNestedType", name, bindingAttr == null ? null : bindingAttr.getJCOInstance());
+            JCObject objGetNestedType = (JCObject)retObjectGetNestedType;
             return new NetType(objGetNestedType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetNestedType != null ? retObjectGetNestedType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -460,16 +540,20 @@ public class TypeDelegator extends TypeInfo  {
 
     public NetType[] GetInterfaces() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetInterfaces = null;
         try {
             ArrayList<NetType> resultingArrayList = new ArrayList<NetType>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetInterfaces");
+            retObjectGetInterfaces = classInstance.Invoke("GetInterfaces");
+            JCObject resultingObjects = (JCObject)retObjectGetInterfaces;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new NetType(resultingObject));
             }
             NetType[] resultingArray = new NetType[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetInterfaces != null ? retObjectGetInterfaces.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -477,16 +561,20 @@ public class TypeDelegator extends TypeInfo  {
 
     public NetType[] GetNestedTypes(BindingFlags bindingAttr) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetNestedTypes = null;
         try {
             ArrayList<NetType> resultingArrayList = new ArrayList<NetType>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetNestedTypes", bindingAttr == null ? null : bindingAttr.getJCOInstance());
+            retObjectGetNestedTypes = classInstance.Invoke("GetNestedTypes", bindingAttr == null ? null : bindingAttr.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectGetNestedTypes;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new NetType(resultingObject));
             }
             NetType[] resultingArray = new NetType[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetNestedTypes != null ? retObjectGetNestedTypes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -173,9 +173,13 @@ public class NullableConverter extends TypeConverter  {
     
     public boolean CanConvertFrom(ITypeDescriptorContext context, NetType sourceType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanConvertFrom = null;
         try {
-            return (boolean)classInstance.Invoke("CanConvertFrom", context == null ? null : context.getJCOInstance(), sourceType == null ? null : sourceType.getJCOInstance());
+            retObjectCanConvertFrom = classInstance.Invoke("CanConvertFrom", context == null ? null : context.getJCOInstance(), sourceType == null ? null : sourceType.getJCOInstance());
+            return (boolean)retObjectCanConvertFrom;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCanConvertFrom != null ? retObjectCanConvertFrom.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,9 +187,13 @@ public class NullableConverter extends TypeConverter  {
 
     public boolean CanConvertTo(ITypeDescriptorContext context, NetType destinationType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanConvertTo = null;
         try {
-            return (boolean)classInstance.Invoke("CanConvertTo", context == null ? null : context.getJCOInstance(), destinationType == null ? null : destinationType.getJCOInstance());
+            retObjectCanConvertTo = classInstance.Invoke("CanConvertTo", context == null ? null : context.getJCOInstance(), destinationType == null ? null : destinationType.getJCOInstance());
+            return (boolean)retObjectCanConvertTo;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCanConvertTo != null ? retObjectCanConvertTo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,9 +201,13 @@ public class NullableConverter extends TypeConverter  {
 
     public boolean GetCreateInstanceSupported(ITypeDescriptorContext context) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetCreateInstanceSupported = null;
         try {
-            return (boolean)classInstance.Invoke("GetCreateInstanceSupported", context == null ? null : context.getJCOInstance());
+            retObjectGetCreateInstanceSupported = classInstance.Invoke("GetCreateInstanceSupported", context == null ? null : context.getJCOInstance());
+            return (boolean)retObjectGetCreateInstanceSupported;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectGetCreateInstanceSupported != null ? retObjectGetCreateInstanceSupported.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,9 +215,13 @@ public class NullableConverter extends TypeConverter  {
 
     public boolean GetPropertiesSupported(ITypeDescriptorContext context) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPropertiesSupported = null;
         try {
-            return (boolean)classInstance.Invoke("GetPropertiesSupported", context == null ? null : context.getJCOInstance());
+            retObjectGetPropertiesSupported = classInstance.Invoke("GetPropertiesSupported", context == null ? null : context.getJCOInstance());
+            return (boolean)retObjectGetPropertiesSupported;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectGetPropertiesSupported != null ? retObjectGetPropertiesSupported.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,9 +229,13 @@ public class NullableConverter extends TypeConverter  {
 
     public boolean GetStandardValuesExclusive(ITypeDescriptorContext context) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetStandardValuesExclusive = null;
         try {
-            return (boolean)classInstance.Invoke("GetStandardValuesExclusive", context == null ? null : context.getJCOInstance());
+            retObjectGetStandardValuesExclusive = classInstance.Invoke("GetStandardValuesExclusive", context == null ? null : context.getJCOInstance());
+            return (boolean)retObjectGetStandardValuesExclusive;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectGetStandardValuesExclusive != null ? retObjectGetStandardValuesExclusive.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -223,9 +243,13 @@ public class NullableConverter extends TypeConverter  {
 
     public boolean GetStandardValuesSupported(ITypeDescriptorContext context) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetStandardValuesSupported = null;
         try {
-            return (boolean)classInstance.Invoke("GetStandardValuesSupported", context == null ? null : context.getJCOInstance());
+            retObjectGetStandardValuesSupported = classInstance.Invoke("GetStandardValuesSupported", context == null ? null : context.getJCOInstance());
+            return (boolean)retObjectGetStandardValuesSupported;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectGetStandardValuesSupported != null ? retObjectGetStandardValuesSupported.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -233,9 +257,13 @@ public class NullableConverter extends TypeConverter  {
 
     public boolean IsValid(ITypeDescriptorContext context, NetObject value) throws Throwable, system.ArgumentException, system.configuration.ConfigurationErrorsException, system.ArgumentNullException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.FormatException, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsValid = null;
         try {
-            return (boolean)classInstance.Invoke("IsValid", context == null ? null : context.getJCOInstance(), value == null ? null : value.getJCOInstance());
+            retObjectIsValid = classInstance.Invoke("IsValid", context == null ? null : context.getJCOInstance(), value == null ? null : value.getJCOInstance());
+            return (boolean)retObjectIsValid;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsValid != null ? retObjectIsValid.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -243,10 +271,14 @@ public class NullableConverter extends TypeConverter  {
 
     public PropertyDescriptorCollection GetProperties(ITypeDescriptorContext context, NetObject value, Attribute[] attributes) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetProperties = null;
         try {
-            JCObject objGetProperties = (JCObject)classInstance.Invoke("GetProperties", context == null ? null : context.getJCOInstance(), value == null ? null : value.getJCOInstance(), toObjectFromArray(attributes));
+            retObjectGetProperties = classInstance.Invoke("GetProperties", context == null ? null : context.getJCOInstance(), value == null ? null : value.getJCOInstance(), toObjectFromArray(attributes));
+            JCObject objGetProperties = (JCObject)retObjectGetProperties;
             return new PropertyDescriptorCollection(objGetProperties);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetProperties != null ? retObjectGetProperties.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -254,10 +286,14 @@ public class NullableConverter extends TypeConverter  {
 
     public NetObject ConvertFrom(ITypeDescriptorContext context, CultureInfo culture, NetObject value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConvertFrom = null;
         try {
-            JCObject objConvertFrom = (JCObject)classInstance.Invoke("ConvertFrom", context == null ? null : context.getJCOInstance(), culture == null ? null : culture.getJCOInstance(), value == null ? null : value.getJCOInstance());
+            retObjectConvertFrom = classInstance.Invoke("ConvertFrom", context == null ? null : context.getJCOInstance(), culture == null ? null : culture.getJCOInstance(), value == null ? null : value.getJCOInstance());
+            JCObject objConvertFrom = (JCObject)retObjectConvertFrom;
             return new NetObject(objConvertFrom);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConvertFrom != null ? retObjectConvertFrom.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -265,10 +301,14 @@ public class NullableConverter extends TypeConverter  {
 
     public NetObject ConvertTo(ITypeDescriptorContext context, CultureInfo culture, NetObject value, NetType destinationType) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConvertTo = null;
         try {
-            JCObject objConvertTo = (JCObject)classInstance.Invoke("ConvertTo", context == null ? null : context.getJCOInstance(), culture == null ? null : culture.getJCOInstance(), value == null ? null : value.getJCOInstance(), destinationType == null ? null : destinationType.getJCOInstance());
+            retObjectConvertTo = classInstance.Invoke("ConvertTo", context == null ? null : context.getJCOInstance(), culture == null ? null : culture.getJCOInstance(), value == null ? null : value.getJCOInstance(), destinationType == null ? null : destinationType.getJCOInstance());
+            JCObject objConvertTo = (JCObject)retObjectConvertTo;
             return new NetObject(objConvertTo);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConvertTo != null ? retObjectConvertTo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -276,10 +316,14 @@ public class NullableConverter extends TypeConverter  {
 
     public NetObject CreateInstance(ITypeDescriptorContext context, IDictionary propertyValues) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateInstance = null;
         try {
-            JCObject objCreateInstance = (JCObject)classInstance.Invoke("CreateInstance", context == null ? null : context.getJCOInstance(), propertyValues == null ? null : propertyValues.getJCOInstance());
+            retObjectCreateInstance = classInstance.Invoke("CreateInstance", context == null ? null : context.getJCOInstance(), propertyValues == null ? null : propertyValues.getJCOInstance());
+            JCObject objCreateInstance = (JCObject)retObjectCreateInstance;
             return new NetObject(objCreateInstance);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateInstance != null ? retObjectCreateInstance.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -291,10 +335,14 @@ public class NullableConverter extends TypeConverter  {
     
     public TypeConverter getUnderlyingTypeConverter() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUnderlyingTypeConverter = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("UnderlyingTypeConverter");
+            retObjectUnderlyingTypeConverter = classInstance.Get("UnderlyingTypeConverter");
+            JCObject val = (JCObject)retObjectUnderlyingTypeConverter;
             return new TypeConverter(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUnderlyingTypeConverter != null ? retObjectUnderlyingTypeConverter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -302,10 +350,14 @@ public class NullableConverter extends TypeConverter  {
 
     public NetType getNullableType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNullableType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("NullableType");
+            retObjectNullableType = classInstance.Get("NullableType");
+            JCObject val = (JCObject)retObjectNullableType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNullableType != null ? retObjectNullableType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -313,10 +365,14 @@ public class NullableConverter extends TypeConverter  {
 
     public NetType getUnderlyingType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUnderlyingType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("UnderlyingType");
+            retObjectUnderlyingType = classInstance.Get("UnderlyingType");
+            JCObject val = (JCObject)retObjectUnderlyingType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUnderlyingType != null ? retObjectUnderlyingType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

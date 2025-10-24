@@ -175,10 +175,14 @@ public class ServiceModelSectionGroup extends ConfigurationSectionGroup  {
     
     public static ServiceModelSectionGroup GetSectionGroup(Configuration config) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException, system.configuration.ConfigurationErrorsException, system.TypeLoadException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetSectionGroup = null;
         try {
-            JCObject objGetSectionGroup = (JCObject)classType.Invoke("GetSectionGroup", config == null ? null : config.getJCOInstance());
+            retObjectGetSectionGroup = classType.Invoke("GetSectionGroup", config == null ? null : config.getJCOInstance());
+            JCObject objGetSectionGroup = (JCObject)retObjectGetSectionGroup;
             return new ServiceModelSectionGroup(objGetSectionGroup);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSectionGroup != null ? retObjectGetSectionGroup.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,10 +194,14 @@ public class ServiceModelSectionGroup extends ConfigurationSectionGroup  {
     
     public BehaviorsSection getBehaviors() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBehaviors = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Behaviors");
+            retObjectBehaviors = classInstance.Get("Behaviors");
+            JCObject val = (JCObject)retObjectBehaviors;
             return new BehaviorsSection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBehaviors != null ? retObjectBehaviors.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,10 +209,14 @@ public class ServiceModelSectionGroup extends ConfigurationSectionGroup  {
 
     public BindingsSection getBindings() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBindings = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Bindings");
+            retObjectBindings = classInstance.Get("Bindings");
+            JCObject val = (JCObject)retObjectBindings;
             return new BindingsSection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBindings != null ? retObjectBindings.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -212,10 +224,14 @@ public class ServiceModelSectionGroup extends ConfigurationSectionGroup  {
 
     public ClientSection getClient() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClient = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Client");
+            retObjectClient = classInstance.Get("Client");
+            JCObject val = (JCObject)retObjectClient;
             return new ClientSection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClient != null ? retObjectClient.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -223,10 +239,14 @@ public class ServiceModelSectionGroup extends ConfigurationSectionGroup  {
 
     public ComContractsSection getComContracts() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectComContracts = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ComContracts");
+            retObjectComContracts = classInstance.Get("ComContracts");
+            JCObject val = (JCObject)retObjectComContracts;
             return new ComContractsSection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectComContracts != null ? retObjectComContracts.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -234,10 +254,14 @@ public class ServiceModelSectionGroup extends ConfigurationSectionGroup  {
 
     public CommonBehaviorsSection getCommonBehaviors() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCommonBehaviors = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CommonBehaviors");
+            retObjectCommonBehaviors = classInstance.Get("CommonBehaviors");
+            JCObject val = (JCObject)retObjectCommonBehaviors;
             return new CommonBehaviorsSection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCommonBehaviors != null ? retObjectCommonBehaviors.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -245,10 +269,14 @@ public class ServiceModelSectionGroup extends ConfigurationSectionGroup  {
 
     public DiagnosticSection getDiagnostic() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDiagnostic = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Diagnostic");
+            retObjectDiagnostic = classInstance.Get("Diagnostic");
+            JCObject val = (JCObject)retObjectDiagnostic;
             return new DiagnosticSection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDiagnostic != null ? retObjectDiagnostic.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -256,10 +284,14 @@ public class ServiceModelSectionGroup extends ConfigurationSectionGroup  {
 
     public ExtensionsSection getExtensions() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExtensions = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Extensions");
+            retObjectExtensions = classInstance.Get("Extensions");
+            JCObject val = (JCObject)retObjectExtensions;
             return new ExtensionsSection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExtensions != null ? retObjectExtensions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -267,10 +299,14 @@ public class ServiceModelSectionGroup extends ConfigurationSectionGroup  {
 
     public ProtocolMappingSection getProtocolMapping() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProtocolMapping = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ProtocolMapping");
+            retObjectProtocolMapping = classInstance.Get("ProtocolMapping");
+            JCObject val = (JCObject)retObjectProtocolMapping;
             return new ProtocolMappingSection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectProtocolMapping != null ? retObjectProtocolMapping.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -278,10 +314,14 @@ public class ServiceModelSectionGroup extends ConfigurationSectionGroup  {
 
     public ServiceHostingEnvironmentSection getServiceHostingEnvironment() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectServiceHostingEnvironment = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ServiceHostingEnvironment");
+            retObjectServiceHostingEnvironment = classInstance.Get("ServiceHostingEnvironment");
+            JCObject val = (JCObject)retObjectServiceHostingEnvironment;
             return new ServiceHostingEnvironmentSection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectServiceHostingEnvironment != null ? retObjectServiceHostingEnvironment.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -289,10 +329,14 @@ public class ServiceModelSectionGroup extends ConfigurationSectionGroup  {
 
     public ServicesSection getServices() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectServices = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Services");
+            retObjectServices = classInstance.Get("Services");
+            JCObject val = (JCObject)retObjectServices;
             return new ServicesSection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectServices != null ? retObjectServices.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -300,10 +344,14 @@ public class ServiceModelSectionGroup extends ConfigurationSectionGroup  {
 
     public StandardEndpointsSection getStandardEndpoints() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStandardEndpoints = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("StandardEndpoints");
+            retObjectStandardEndpoints = classInstance.Get("StandardEndpoints");
+            JCObject val = (JCObject)retObjectStandardEndpoints;
             return new StandardEndpointsSection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStandardEndpoints != null ? retObjectStandardEndpoints.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

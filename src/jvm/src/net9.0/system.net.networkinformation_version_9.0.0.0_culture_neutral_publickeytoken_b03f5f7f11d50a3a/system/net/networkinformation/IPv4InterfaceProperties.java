@@ -157,9 +157,13 @@ public class IPv4InterfaceProperties extends NetObject  {
     
     public boolean getIsAutomaticPrivateAddressingActive() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsAutomaticPrivateAddressingActive = null;
         try {
-            return (boolean)classInstance.Get("IsAutomaticPrivateAddressingActive");
+            retObjectIsAutomaticPrivateAddressingActive = classInstance.Get("IsAutomaticPrivateAddressingActive");
+            return (boolean)retObjectIsAutomaticPrivateAddressingActive;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsAutomaticPrivateAddressingActive != null ? retObjectIsAutomaticPrivateAddressingActive.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -167,9 +171,13 @@ public class IPv4InterfaceProperties extends NetObject  {
 
     public boolean getIsAutomaticPrivateAddressingEnabled() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsAutomaticPrivateAddressingEnabled = null;
         try {
-            return (boolean)classInstance.Get("IsAutomaticPrivateAddressingEnabled");
+            retObjectIsAutomaticPrivateAddressingEnabled = classInstance.Get("IsAutomaticPrivateAddressingEnabled");
+            return (boolean)retObjectIsAutomaticPrivateAddressingEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsAutomaticPrivateAddressingEnabled != null ? retObjectIsAutomaticPrivateAddressingEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,9 +185,13 @@ public class IPv4InterfaceProperties extends NetObject  {
 
     public boolean getIsDhcpEnabled() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsDhcpEnabled = null;
         try {
-            return (boolean)classInstance.Get("IsDhcpEnabled");
+            retObjectIsDhcpEnabled = classInstance.Get("IsDhcpEnabled");
+            return (boolean)retObjectIsDhcpEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsDhcpEnabled != null ? retObjectIsDhcpEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,9 +199,13 @@ public class IPv4InterfaceProperties extends NetObject  {
 
     public boolean getIsForwardingEnabled() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsForwardingEnabled = null;
         try {
-            return (boolean)classInstance.Get("IsForwardingEnabled");
+            retObjectIsForwardingEnabled = classInstance.Get("IsForwardingEnabled");
+            return (boolean)retObjectIsForwardingEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsForwardingEnabled != null ? retObjectIsForwardingEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,9 +213,13 @@ public class IPv4InterfaceProperties extends NetObject  {
 
     public boolean getUsesWins() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUsesWins = null;
         try {
-            return (boolean)classInstance.Get("UsesWins");
+            retObjectUsesWins = classInstance.Get("UsesWins");
+            return (boolean)retObjectUsesWins;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectUsesWins != null ? retObjectUsesWins.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -207,9 +227,20 @@ public class IPv4InterfaceProperties extends NetObject  {
 
     public int getIndex() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIndex = null;
         try {
-            return (int)classInstance.Get("Index");
+            retObjectIndex = classInstance.Get("Index");
+            return (int)retObjectIndex;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectIndex_ToString = retObjectIndex == null ? "null" : retObjectIndex.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectIndexNumber = (java.lang.Number)retObjectIndex;
+                return retObjectIndexNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectIndex != null ? retObjectIndex.getClass() : "null", retObjectIndex_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -217,9 +248,20 @@ public class IPv4InterfaceProperties extends NetObject  {
 
     public int getMtu() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMtu = null;
         try {
-            return (int)classInstance.Get("Mtu");
+            retObjectMtu = classInstance.Get("Mtu");
+            return (int)retObjectMtu;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMtu_ToString = retObjectMtu == null ? "null" : retObjectMtu.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMtuNumber = (java.lang.Number)retObjectMtu;
+                return retObjectMtuNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMtu != null ? retObjectMtu.getClass() : "null", retObjectMtu_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

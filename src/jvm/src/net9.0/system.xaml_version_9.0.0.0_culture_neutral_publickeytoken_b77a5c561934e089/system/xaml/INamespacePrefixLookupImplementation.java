@@ -142,9 +142,13 @@ public class INamespacePrefixLookupImplementation extends NetObject implements I
     
     public java.lang.String LookupPrefix(java.lang.String ns) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLookupPrefix = null;
         try {
-            return (java.lang.String)classInstance.Invoke("LookupPrefix", ns);
+            retObjectLookupPrefix = classInstance.Invoke("LookupPrefix", ns);
+            return (java.lang.String)retObjectLookupPrefix;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectLookupPrefix != null ? retObjectLookupPrefix.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -212,9 +212,13 @@ public class UniqueId extends NetObject  {
     
     public boolean TryGetGuid(byte[] buffer, int offset) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryGetGuid = null;
         try {
-            return (boolean)classInstance.Invoke("TryGetGuid", buffer, offset);
+            retObjectTryGetGuid = classInstance.Invoke("TryGetGuid", buffer, offset);
+            return (boolean)retObjectTryGetGuid;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryGetGuid != null ? retObjectTryGetGuid.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -222,9 +226,13 @@ public class UniqueId extends NetObject  {
 
     public boolean TryGetGuid(JCORefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryGetGuid = null;
         try {
-            return (boolean)classInstance.Invoke("TryGetGuid", dupParam0.getJCRefOut(), dupParam1);
+            retObjectTryGetGuid = classInstance.Invoke("TryGetGuid", dupParam0.getJCRefOut(), dupParam1);
+            return (boolean)retObjectTryGetGuid;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryGetGuid != null ? retObjectTryGetGuid.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -232,9 +240,13 @@ public class UniqueId extends NetObject  {
 
     public boolean TryGetGuid(JCORefOut<Guid> guid) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryGetGuid = null;
         try {
-            return (boolean)classInstance.Invoke("TryGetGuid", guid.getJCRefOut());
+            retObjectTryGetGuid = classInstance.Invoke("TryGetGuid", guid.getJCRefOut());
+            return (boolean)retObjectTryGetGuid;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryGetGuid != null ? retObjectTryGetGuid.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -242,9 +254,20 @@ public class UniqueId extends NetObject  {
 
     public int ToCharArray(char[] chars, int offset) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToCharArray = null;
         try {
-            return (int)classInstance.Invoke("ToCharArray", chars, offset);
+            retObjectToCharArray = classInstance.Invoke("ToCharArray", chars, offset);
+            return (int)retObjectToCharArray;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectToCharArray_ToString = retObjectToCharArray == null ? "null" : retObjectToCharArray.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectToCharArrayNumber = (java.lang.Number)retObjectToCharArray;
+                return retObjectToCharArrayNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectToCharArray != null ? retObjectToCharArray.getClass() : "null", retObjectToCharArray_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -252,9 +275,20 @@ public class UniqueId extends NetObject  {
 
     public int ToCharArray(JCORefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToCharArray = null;
         try {
-            return (int)classInstance.Invoke("ToCharArray", dupParam0.getJCRefOut(), dupParam1);
+            retObjectToCharArray = classInstance.Invoke("ToCharArray", dupParam0.getJCRefOut(), dupParam1);
+            return (int)retObjectToCharArray;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectToCharArray_ToString = retObjectToCharArray == null ? "null" : retObjectToCharArray.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectToCharArrayNumber = (java.lang.Number)retObjectToCharArray;
+                return retObjectToCharArrayNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectToCharArray != null ? retObjectToCharArray.getClass() : "null", retObjectToCharArray_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -266,9 +300,13 @@ public class UniqueId extends NetObject  {
     
     public boolean getIsGuid() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsGuid = null;
         try {
-            return (boolean)classInstance.Get("IsGuid");
+            retObjectIsGuid = classInstance.Get("IsGuid");
+            return (boolean)retObjectIsGuid;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsGuid != null ? retObjectIsGuid.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -276,9 +314,20 @@ public class UniqueId extends NetObject  {
 
     public int getCharArrayLength() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCharArrayLength = null;
         try {
-            return (int)classInstance.Get("CharArrayLength");
+            retObjectCharArrayLength = classInstance.Get("CharArrayLength");
+            return (int)retObjectCharArrayLength;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCharArrayLength_ToString = retObjectCharArrayLength == null ? "null" : retObjectCharArrayLength.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectCharArrayLengthNumber = (java.lang.Number)retObjectCharArrayLength;
+                return retObjectCharArrayLengthNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCharArrayLength != null ? retObjectCharArrayLength.getClass() : "null", retObjectCharArrayLength_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

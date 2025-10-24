@@ -157,10 +157,14 @@ public class DirectoryEntries extends NetObjectEnumerable  {
     
     public DirectoryEntry Add(java.lang.String name, java.lang.String schemaClassName) throws Throwable, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.threading.AbandonedMutexException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAdd = null;
         try {
-            JCObject objAdd = (JCObject)classInstance.Invoke("Add", name, schemaClassName);
+            retObjectAdd = classInstance.Invoke("Add", name, schemaClassName);
+            JCObject objAdd = (JCObject)retObjectAdd;
             return new DirectoryEntry(objAdd);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAdd != null ? retObjectAdd.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -168,10 +172,14 @@ public class DirectoryEntries extends NetObjectEnumerable  {
 
     public DirectoryEntry Find(java.lang.String name) throws Throwable, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFind = null;
         try {
-            JCObject objFind = (JCObject)classInstance.Invoke("Find", name);
+            retObjectFind = classInstance.Invoke("Find", name);
+            JCObject objFind = (JCObject)retObjectFind;
             return new DirectoryEntry(objFind);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFind != null ? retObjectFind.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,10 +187,14 @@ public class DirectoryEntries extends NetObjectEnumerable  {
 
     public DirectoryEntry Find(java.lang.String name, java.lang.String schemaClassName) throws Throwable, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.threading.AbandonedMutexException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFind = null;
         try {
-            JCObject objFind = (JCObject)classInstance.Invoke("Find", name, schemaClassName);
+            retObjectFind = classInstance.Invoke("Find", name, schemaClassName);
+            JCObject objFind = (JCObject)retObjectFind;
             return new DirectoryEntry(objFind);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFind != null ? retObjectFind.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,7 +202,7 @@ public class DirectoryEntries extends NetObjectEnumerable  {
 
     public void Remove(DirectoryEntry entry) throws Throwable, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.threading.AbandonedMutexException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Remove", entry == null ? null : entry.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -204,10 +216,14 @@ public class DirectoryEntries extends NetObjectEnumerable  {
     
     public SchemaNameCollection getSchemaFilter() throws Throwable, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.threading.AbandonedMutexException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSchemaFilter = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SchemaFilter");
+            retObjectSchemaFilter = classInstance.Get("SchemaFilter");
+            JCObject val = (JCObject)retObjectSchemaFilter;
             return new SchemaNameCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSchemaFilter != null ? retObjectSchemaFilter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

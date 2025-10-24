@@ -206,10 +206,14 @@ public class ScaleTransform3D extends AffineTransform3D  {
     
     public ScaleTransform3D CloneNewScaleTransform3D() throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClone = null;
         try {
-            JCObject objClone = (JCObject)classInstance.Invoke("Clone");
+            retObjectClone = classInstance.Invoke("Clone");
+            JCObject objClone = (JCObject)retObjectClone;
             return new ScaleTransform3D(objClone);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClone != null ? retObjectClone.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -217,10 +221,14 @@ public class ScaleTransform3D extends AffineTransform3D  {
 
     public ScaleTransform3D CloneCurrentValueNewScaleTransform3D() throws Throwable, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCloneCurrentValue = null;
         try {
-            JCObject objCloneCurrentValue = (JCObject)classInstance.Invoke("CloneCurrentValue");
+            retObjectCloneCurrentValue = classInstance.Invoke("CloneCurrentValue");
+            JCObject objCloneCurrentValue = (JCObject)retObjectCloneCurrentValue;
             return new ScaleTransform3D(objCloneCurrentValue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCloneCurrentValue != null ? retObjectCloneCurrentValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -232,9 +240,20 @@ public class ScaleTransform3D extends AffineTransform3D  {
     
     public double getCenterX() throws Throwable, system.ArgumentException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCenterX = null;
         try {
-            return (double)classInstance.Get("CenterX");
+            retObjectCenterX = classInstance.Get("CenterX");
+            return (double)retObjectCenterX;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCenterX_ToString = retObjectCenterX == null ? "null" : retObjectCenterX.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectCenterXNumber = (java.lang.Number)retObjectCenterX;
+                return retObjectCenterXNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectCenterX != null ? retObjectCenterX.getClass() : "null", retObjectCenterX_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -242,7 +261,7 @@ public class ScaleTransform3D extends AffineTransform3D  {
 
     public void setCenterX(double CenterX) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CenterX", CenterX);
         } catch (JCNativeException jcne) {
@@ -252,9 +271,20 @@ public class ScaleTransform3D extends AffineTransform3D  {
 
     public double getCenterY() throws Throwable, system.ArgumentException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCenterY = null;
         try {
-            return (double)classInstance.Get("CenterY");
+            retObjectCenterY = classInstance.Get("CenterY");
+            return (double)retObjectCenterY;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCenterY_ToString = retObjectCenterY == null ? "null" : retObjectCenterY.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectCenterYNumber = (java.lang.Number)retObjectCenterY;
+                return retObjectCenterYNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectCenterY != null ? retObjectCenterY.getClass() : "null", retObjectCenterY_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -262,7 +292,7 @@ public class ScaleTransform3D extends AffineTransform3D  {
 
     public void setCenterY(double CenterY) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CenterY", CenterY);
         } catch (JCNativeException jcne) {
@@ -272,9 +302,20 @@ public class ScaleTransform3D extends AffineTransform3D  {
 
     public double getCenterZ() throws Throwable, system.ArgumentException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCenterZ = null;
         try {
-            return (double)classInstance.Get("CenterZ");
+            retObjectCenterZ = classInstance.Get("CenterZ");
+            return (double)retObjectCenterZ;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCenterZ_ToString = retObjectCenterZ == null ? "null" : retObjectCenterZ.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectCenterZNumber = (java.lang.Number)retObjectCenterZ;
+                return retObjectCenterZNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectCenterZ != null ? retObjectCenterZ.getClass() : "null", retObjectCenterZ_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -282,7 +323,7 @@ public class ScaleTransform3D extends AffineTransform3D  {
 
     public void setCenterZ(double CenterZ) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CenterZ", CenterZ);
         } catch (JCNativeException jcne) {
@@ -292,9 +333,20 @@ public class ScaleTransform3D extends AffineTransform3D  {
 
     public double getScaleX() throws Throwable, system.ArgumentException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectScaleX = null;
         try {
-            return (double)classInstance.Get("ScaleX");
+            retObjectScaleX = classInstance.Get("ScaleX");
+            return (double)retObjectScaleX;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectScaleX_ToString = retObjectScaleX == null ? "null" : retObjectScaleX.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectScaleXNumber = (java.lang.Number)retObjectScaleX;
+                return retObjectScaleXNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectScaleX != null ? retObjectScaleX.getClass() : "null", retObjectScaleX_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -302,7 +354,7 @@ public class ScaleTransform3D extends AffineTransform3D  {
 
     public void setScaleX(double ScaleX) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ScaleX", ScaleX);
         } catch (JCNativeException jcne) {
@@ -312,9 +364,20 @@ public class ScaleTransform3D extends AffineTransform3D  {
 
     public double getScaleY() throws Throwable, system.ArgumentException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectScaleY = null;
         try {
-            return (double)classInstance.Get("ScaleY");
+            retObjectScaleY = classInstance.Get("ScaleY");
+            return (double)retObjectScaleY;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectScaleY_ToString = retObjectScaleY == null ? "null" : retObjectScaleY.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectScaleYNumber = (java.lang.Number)retObjectScaleY;
+                return retObjectScaleYNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectScaleY != null ? retObjectScaleY.getClass() : "null", retObjectScaleY_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -322,7 +385,7 @@ public class ScaleTransform3D extends AffineTransform3D  {
 
     public void setScaleY(double ScaleY) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ScaleY", ScaleY);
         } catch (JCNativeException jcne) {
@@ -332,9 +395,20 @@ public class ScaleTransform3D extends AffineTransform3D  {
 
     public double getScaleZ() throws Throwable, system.ArgumentException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectScaleZ = null;
         try {
-            return (double)classInstance.Get("ScaleZ");
+            retObjectScaleZ = classInstance.Get("ScaleZ");
+            return (double)retObjectScaleZ;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectScaleZ_ToString = retObjectScaleZ == null ? "null" : retObjectScaleZ.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectScaleZNumber = (java.lang.Number)retObjectScaleZ;
+                return retObjectScaleZNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectScaleZ != null ? retObjectScaleZ.getClass() : "null", retObjectScaleZ_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -342,7 +416,7 @@ public class ScaleTransform3D extends AffineTransform3D  {
 
     public void setScaleZ(double ScaleZ) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ScaleZ", ScaleZ);
         } catch (JCNativeException jcne) {

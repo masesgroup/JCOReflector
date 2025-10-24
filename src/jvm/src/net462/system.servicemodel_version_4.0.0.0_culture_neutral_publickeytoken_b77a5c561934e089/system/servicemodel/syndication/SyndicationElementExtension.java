@@ -219,10 +219,14 @@ public class SyndicationElementExtension extends NetObject  {
     
     public XmlReader GetReader() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException, system.MissingMethodException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetReader = null;
         try {
-            JCObject objGetReader = (JCObject)classInstance.Invoke("GetReader");
+            retObjectGetReader = classInstance.Invoke("GetReader");
+            JCObject objGetReader = (JCObject)retObjectGetReader;
             return new XmlReader(objGetReader);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetReader != null ? retObjectGetReader.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -230,7 +234,7 @@ public class SyndicationElementExtension extends NetObject  {
 
     public void WriteTo(XmlWriter writer) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException, system.MissingMethodException, system.collections.generic.KeyNotFoundException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteTo", writer == null ? null : writer.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -244,9 +248,13 @@ public class SyndicationElementExtension extends NetObject  {
     
     public java.lang.String getOuterName() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOuterName = null;
         try {
-            return (java.lang.String)classInstance.Get("OuterName");
+            retObjectOuterName = classInstance.Get("OuterName");
+            return (java.lang.String)retObjectOuterName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectOuterName != null ? retObjectOuterName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -254,9 +262,13 @@ public class SyndicationElementExtension extends NetObject  {
 
     public java.lang.String getOuterNamespace() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOuterNamespace = null;
         try {
-            return (java.lang.String)classInstance.Get("OuterNamespace");
+            retObjectOuterNamespace = classInstance.Get("OuterNamespace");
+            return (java.lang.String)retObjectOuterNamespace;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectOuterNamespace != null ? retObjectOuterNamespace.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -170,7 +170,7 @@ public class HtmlInputFile extends HtmlInputControl implements system.web.ui.IPo
      */
     @Deprecated 
     public boolean LoadPostData(java.lang.String postDataKey, NameValueCollection postCollection) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIPostBackDataHandler to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIPostBackDataHandler to obtain the full interface.");
     }
 
     /**
@@ -179,7 +179,7 @@ public class HtmlInputFile extends HtmlInputControl implements system.web.ui.IPo
      */
     @Deprecated 
     public void RaisePostDataChangedEvent() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIPostBackDataHandler to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIPostBackDataHandler to obtain the full interface.");
     }
 
 
@@ -188,9 +188,20 @@ public class HtmlInputFile extends HtmlInputControl implements system.web.ui.IPo
     
     public int getMaxLength() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ObjectDisposedException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxLength = null;
         try {
-            return (int)classInstance.Get("MaxLength");
+            retObjectMaxLength = classInstance.Get("MaxLength");
+            return (int)retObjectMaxLength;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaxLength_ToString = retObjectMaxLength == null ? "null" : retObjectMaxLength.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMaxLengthNumber = (java.lang.Number)retObjectMaxLength;
+                return retObjectMaxLengthNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxLength != null ? retObjectMaxLength.getClass() : "null", retObjectMaxLength_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,7 +209,7 @@ public class HtmlInputFile extends HtmlInputControl implements system.web.ui.IPo
 
     public void setMaxLength(int MaxLength) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaxLength", MaxLength);
         } catch (JCNativeException jcne) {
@@ -208,9 +219,20 @@ public class HtmlInputFile extends HtmlInputControl implements system.web.ui.IPo
 
     public int getSize() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ObjectDisposedException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSize = null;
         try {
-            return (int)classInstance.Get("Size");
+            retObjectSize = classInstance.Get("Size");
+            return (int)retObjectSize;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSize_ToString = retObjectSize == null ? "null" : retObjectSize.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectSizeNumber = (java.lang.Number)retObjectSize;
+                return retObjectSizeNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectSize != null ? retObjectSize.getClass() : "null", retObjectSize_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -218,7 +240,7 @@ public class HtmlInputFile extends HtmlInputControl implements system.web.ui.IPo
 
     public void setSize(int Size) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Size", Size);
         } catch (JCNativeException jcne) {
@@ -228,9 +250,13 @@ public class HtmlInputFile extends HtmlInputControl implements system.web.ui.IPo
 
     public java.lang.String getAccept() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ObjectDisposedException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAccept = null;
         try {
-            return (java.lang.String)classInstance.Get("Accept");
+            retObjectAccept = classInstance.Get("Accept");
+            return (java.lang.String)retObjectAccept;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectAccept != null ? retObjectAccept.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -238,7 +264,7 @@ public class HtmlInputFile extends HtmlInputControl implements system.web.ui.IPo
 
     public void setAccept(java.lang.String Accept) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.resources.MissingManifestResourceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Accept", Accept);
         } catch (JCNativeException jcne) {
@@ -248,10 +274,14 @@ public class HtmlInputFile extends HtmlInputControl implements system.web.ui.IPo
 
     public HttpPostedFile getPostedFile() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.web.HttpException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPostedFile = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PostedFile");
+            retObjectPostedFile = classInstance.Get("PostedFile");
+            JCObject val = (JCObject)retObjectPostedFile;
             return new HttpPostedFile(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPostedFile != null ? retObjectPostedFile.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

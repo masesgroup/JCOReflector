@@ -157,9 +157,13 @@ public class DynamicUpdateMapQuery extends NetObject  {
     
     public boolean CanApplyUpdateWhileRunning(Activity activity) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanApplyUpdateWhileRunning = null;
         try {
-            return (boolean)classInstance.Invoke("CanApplyUpdateWhileRunning", activity == null ? null : activity.getJCOInstance());
+            retObjectCanApplyUpdateWhileRunning = classInstance.Invoke("CanApplyUpdateWhileRunning", activity == null ? null : activity.getJCOInstance());
+            return (boolean)retObjectCanApplyUpdateWhileRunning;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCanApplyUpdateWhileRunning != null ? retObjectCanApplyUpdateWhileRunning.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -167,10 +171,14 @@ public class DynamicUpdateMapQuery extends NetObject  {
 
     public Activity FindMatch(Activity activity) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFindMatch = null;
         try {
-            JCObject objFindMatch = (JCObject)classInstance.Invoke("FindMatch", activity == null ? null : activity.getJCOInstance());
+            retObjectFindMatch = classInstance.Invoke("FindMatch", activity == null ? null : activity.getJCOInstance());
+            JCObject objFindMatch = (JCObject)retObjectFindMatch;
             return new Activity(objFindMatch);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFindMatch != null ? retObjectFindMatch.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,10 +186,14 @@ public class DynamicUpdateMapQuery extends NetObject  {
 
     public Variable FindMatch(Variable variable) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFindMatch = null;
         try {
-            JCObject objFindMatch = (JCObject)classInstance.Invoke("FindMatch", variable == null ? null : variable.getJCOInstance());
+            retObjectFindMatch = classInstance.Invoke("FindMatch", variable == null ? null : variable.getJCOInstance());
+            JCObject objFindMatch = (JCObject)retObjectFindMatch;
             return new Variable(objFindMatch);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFindMatch != null ? retObjectFindMatch.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

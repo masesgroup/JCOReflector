@@ -170,10 +170,14 @@ public class MetadataTypeAttribute extends Attribute  {
     
     public NetType getMetadataClassType() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMetadataClassType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MetadataClassType");
+            retObjectMetadataClassType = classInstance.Get("MetadataClassType");
+            JCObject val = (JCObject)retObjectMetadataClassType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMetadataClassType != null ? retObjectMetadataClassType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

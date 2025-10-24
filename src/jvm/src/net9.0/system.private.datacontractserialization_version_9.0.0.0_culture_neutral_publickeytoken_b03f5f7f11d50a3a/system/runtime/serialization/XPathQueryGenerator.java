@@ -156,9 +156,13 @@ public class XPathQueryGenerator extends NetObject  {
     
     public static java.lang.String CreateFromDataContractSerializer(NetType type, MemberInfo[] pathToMember, StringBuilder rootElementXpath, JCORefOut<XmlNamespaceManager> namespaces) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.runtime.serialization.SerializationException, system.runtime.serialization.InvalidDataContractException, system.NullReferenceException, system.FormatException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateFromDataContractSerializer = null;
         try {
-            return (java.lang.String)classType.Invoke("CreateFromDataContractSerializer", type == null ? null : type.getJCOInstance(), toObjectFromArray(pathToMember), rootElementXpath == null ? null : rootElementXpath.getJCOInstance(), namespaces.getJCRefOut());
+            retObjectCreateFromDataContractSerializer = classType.Invoke("CreateFromDataContractSerializer", type == null ? null : type.getJCOInstance(), toObjectFromArray(pathToMember), rootElementXpath == null ? null : rootElementXpath.getJCOInstance(), namespaces.getJCRefOut());
+            return (java.lang.String)retObjectCreateFromDataContractSerializer;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectCreateFromDataContractSerializer != null ? retObjectCreateFromDataContractSerializer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -166,9 +170,13 @@ public class XPathQueryGenerator extends NetObject  {
 
     public static java.lang.String CreateFromDataContractSerializer(NetType type, MemberInfo[] pathToMember, JCORefOut<XmlNamespaceManager> namespaces) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.runtime.serialization.SerializationException, system.PlatformNotSupportedException, system.runtime.serialization.InvalidDataContractException, system.NullReferenceException, system.FormatException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateFromDataContractSerializer = null;
         try {
-            return (java.lang.String)classType.Invoke("CreateFromDataContractSerializer", type == null ? null : type.getJCOInstance(), toObjectFromArray(pathToMember), namespaces.getJCRefOut());
+            retObjectCreateFromDataContractSerializer = classType.Invoke("CreateFromDataContractSerializer", type == null ? null : type.getJCOInstance(), toObjectFromArray(pathToMember), namespaces.getJCRefOut());
+            return (java.lang.String)retObjectCreateFromDataContractSerializer;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectCreateFromDataContractSerializer != null ? retObjectCreateFromDataContractSerializer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

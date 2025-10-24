@@ -157,7 +157,7 @@ public class ChannelDispatcherBase extends CommunicationObject  {
     
     public void CloseInput() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CloseInput");
         } catch (JCNativeException jcne) {
@@ -171,10 +171,14 @@ public class ChannelDispatcherBase extends CommunicationObject  {
     
     public IChannelListener getListener() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectListener = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Listener");
+            retObjectListener = classInstance.Get("Listener");
+            JCObject val = (JCObject)retObjectListener;
             return new IChannelListenerImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectListener != null ? retObjectListener.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,10 +186,14 @@ public class ChannelDispatcherBase extends CommunicationObject  {
 
     public ServiceHostBase getHost() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHost = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Host");
+            retObjectHost = classInstance.Get("Host");
+            JCObject val = (JCObject)retObjectHost;
             return new ServiceHostBase(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHost != null ? retObjectHost.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -166,7 +166,7 @@ public class NamedPipeTransportElement extends ConnectionOrientedTransportElemen
     
     public void ApplyConfiguration(BindingElement bindingElement) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.OutOfMemoryException, system.ObjectDisposedException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.configuration.ConfigurationErrorsException, system.collections.generic.KeyNotFoundException, system.NotSupportedException, system.configuration.ConfigurationException, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ApplyConfiguration", bindingElement == null ? null : bindingElement.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -176,7 +176,7 @@ public class NamedPipeTransportElement extends ConnectionOrientedTransportElemen
 
     public void CopyFrom(ServiceModelExtensionElement from) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.reflection.AmbiguousMatchException, system.configuration.ConfigurationErrorsException, system.collections.generic.KeyNotFoundException, system.NotSupportedException, system.configuration.ConfigurationException, system.NullReferenceException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CopyFrom", from == null ? null : from.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -190,10 +190,14 @@ public class NamedPipeTransportElement extends ConnectionOrientedTransportElemen
     
     public NamedPipeConnectionPoolSettingsElement getConnectionPoolSettings() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConnectionPoolSettings = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ConnectionPoolSettings");
+            retObjectConnectionPoolSettings = classInstance.Get("ConnectionPoolSettings");
+            JCObject val = (JCObject)retObjectConnectionPoolSettings;
             return new NamedPipeConnectionPoolSettingsElement(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConnectionPoolSettings != null ? retObjectConnectionPoolSettings.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,7 +205,7 @@ public class NamedPipeTransportElement extends ConnectionOrientedTransportElemen
 
     public void setConnectionPoolSettings(NamedPipeConnectionPoolSettingsElement ConnectionPoolSettings) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.NullReferenceException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ConnectionPoolSettings", ConnectionPoolSettings == null ? null : ConnectionPoolSettings.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -211,10 +215,14 @@ public class NamedPipeTransportElement extends ConnectionOrientedTransportElemen
 
     public NamedPipeSettingsElement getPipeSettings() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPipeSettings = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PipeSettings");
+            retObjectPipeSettings = classInstance.Get("PipeSettings");
+            JCObject val = (JCObject)retObjectPipeSettings;
             return new NamedPipeSettingsElement(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPipeSettings != null ? retObjectPipeSettings.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -222,7 +230,7 @@ public class NamedPipeTransportElement extends ConnectionOrientedTransportElemen
 
     public void setPipeSettings(NamedPipeSettingsElement PipeSettings) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.NullReferenceException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PipeSettings", PipeSettings == null ? null : PipeSettings.getJCOInstance());
         } catch (JCNativeException jcne) {

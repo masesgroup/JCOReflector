@@ -164,7 +164,7 @@ public class SettingsProviderCollection extends ProviderCollection  {
     
     public void Add(ProviderBase provider) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Add", provider == null ? null : provider.getJCOInstance());
         } catch (JCNativeException jcne) {

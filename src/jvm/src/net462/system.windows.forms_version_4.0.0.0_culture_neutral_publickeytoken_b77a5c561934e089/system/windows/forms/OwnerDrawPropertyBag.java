@@ -163,9 +163,13 @@ public class OwnerDrawPropertyBag extends MarshalByRefObject implements system.r
     
     public boolean IsEmpty() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsEmpty = null;
         try {
-            return (boolean)classInstance.Invoke("IsEmpty");
+            retObjectIsEmpty = classInstance.Invoke("IsEmpty");
+            return (boolean)retObjectIsEmpty;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsEmpty != null ? retObjectIsEmpty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -173,10 +177,14 @@ public class OwnerDrawPropertyBag extends MarshalByRefObject implements system.r
 
     public static OwnerDrawPropertyBag Copy(OwnerDrawPropertyBag value) throws Throwable, system.ArgumentException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCopy = null;
         try {
-            JCObject objCopy = (JCObject)classType.Invoke("Copy", value == null ? null : value.getJCOInstance());
+            retObjectCopy = classType.Invoke("Copy", value == null ? null : value.getJCOInstance());
+            JCObject objCopy = (JCObject)retObjectCopy;
             return new OwnerDrawPropertyBag(objCopy);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCopy != null ? retObjectCopy.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,7 +196,7 @@ public class OwnerDrawPropertyBag extends MarshalByRefObject implements system.r
      */
     @Deprecated 
     public void GetObjectData(SerializationInfo info, StreamingContext context) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToISerializable to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToISerializable to obtain the full interface.");
     }
 
 
@@ -197,10 +205,14 @@ public class OwnerDrawPropertyBag extends MarshalByRefObject implements system.r
     
     public Color getBackColor() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBackColor = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("BackColor");
+            retObjectBackColor = classInstance.Get("BackColor");
+            JCObject val = (JCObject)retObjectBackColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBackColor != null ? retObjectBackColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -208,7 +220,7 @@ public class OwnerDrawPropertyBag extends MarshalByRefObject implements system.r
 
     public void setBackColor(Color BackColor) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BackColor", BackColor == null ? null : BackColor.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -218,10 +230,14 @@ public class OwnerDrawPropertyBag extends MarshalByRefObject implements system.r
 
     public Color getForeColor() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectForeColor = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ForeColor");
+            retObjectForeColor = classInstance.Get("ForeColor");
+            JCObject val = (JCObject)retObjectForeColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectForeColor != null ? retObjectForeColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -229,7 +245,7 @@ public class OwnerDrawPropertyBag extends MarshalByRefObject implements system.r
 
     public void setForeColor(Color ForeColor) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ForeColor", ForeColor == null ? null : ForeColor.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -239,10 +255,14 @@ public class OwnerDrawPropertyBag extends MarshalByRefObject implements system.r
 
     public Font getFont() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFont = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Font");
+            retObjectFont = classInstance.Get("Font");
+            JCObject val = (JCObject)retObjectFont;
             return new Font(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFont != null ? retObjectFont.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -250,7 +270,7 @@ public class OwnerDrawPropertyBag extends MarshalByRefObject implements system.r
 
     public void setFont(Font Font) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Font", Font == null ? null : Font.getJCOInstance());
         } catch (JCNativeException jcne) {

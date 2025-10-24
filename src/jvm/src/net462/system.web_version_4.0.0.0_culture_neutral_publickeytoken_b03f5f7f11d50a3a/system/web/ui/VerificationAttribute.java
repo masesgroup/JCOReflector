@@ -193,9 +193,20 @@ public class VerificationAttribute extends Attribute  {
     
     public int getPriority() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPriority = null;
         try {
-            return (int)classInstance.Get("Priority");
+            retObjectPriority = classInstance.Get("Priority");
+            return (int)retObjectPriority;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectPriority_ToString = retObjectPriority == null ? "null" : retObjectPriority.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectPriorityNumber = (java.lang.Number)retObjectPriority;
+                return retObjectPriorityNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectPriority != null ? retObjectPriority.getClass() : "null", retObjectPriority_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,9 +214,13 @@ public class VerificationAttribute extends Attribute  {
 
     public java.lang.String getCheckpoint() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCheckpoint = null;
         try {
-            return (java.lang.String)classInstance.Get("Checkpoint");
+            retObjectCheckpoint = classInstance.Get("Checkpoint");
+            return (java.lang.String)retObjectCheckpoint;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectCheckpoint != null ? retObjectCheckpoint.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,9 +228,13 @@ public class VerificationAttribute extends Attribute  {
 
     public java.lang.String getConditionalProperty() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConditionalProperty = null;
         try {
-            return (java.lang.String)classInstance.Get("ConditionalProperty");
+            retObjectConditionalProperty = classInstance.Get("ConditionalProperty");
+            return (java.lang.String)retObjectConditionalProperty;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectConditionalProperty != null ? retObjectConditionalProperty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -223,9 +242,13 @@ public class VerificationAttribute extends Attribute  {
 
     public java.lang.String getConditionalValue() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConditionalValue = null;
         try {
-            return (java.lang.String)classInstance.Get("ConditionalValue");
+            retObjectConditionalValue = classInstance.Get("ConditionalValue");
+            return (java.lang.String)retObjectConditionalValue;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectConditionalValue != null ? retObjectConditionalValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -233,9 +256,13 @@ public class VerificationAttribute extends Attribute  {
 
     public java.lang.String getGuideline() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGuideline = null;
         try {
-            return (java.lang.String)classInstance.Get("Guideline");
+            retObjectGuideline = classInstance.Get("Guideline");
+            return (java.lang.String)retObjectGuideline;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectGuideline != null ? retObjectGuideline.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -243,9 +270,13 @@ public class VerificationAttribute extends Attribute  {
 
     public java.lang.String getGuidelineUrl() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGuidelineUrl = null;
         try {
-            return (java.lang.String)classInstance.Get("GuidelineUrl");
+            retObjectGuidelineUrl = classInstance.Get("GuidelineUrl");
+            return (java.lang.String)retObjectGuidelineUrl;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectGuidelineUrl != null ? retObjectGuidelineUrl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -253,9 +284,13 @@ public class VerificationAttribute extends Attribute  {
 
     public java.lang.String getMessage() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMessage = null;
         try {
-            return (java.lang.String)classInstance.Get("Message");
+            retObjectMessage = classInstance.Get("Message");
+            return (java.lang.String)retObjectMessage;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectMessage != null ? retObjectMessage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -263,10 +298,14 @@ public class VerificationAttribute extends Attribute  {
 
     public VerificationConditionalOperator getVerificationConditionalOperator() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVerificationConditionalOperator = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("VerificationConditionalOperator");
+            retObjectVerificationConditionalOperator = classInstance.Get("VerificationConditionalOperator");
+            JCObject val = (JCObject)retObjectVerificationConditionalOperator;
             return new VerificationConditionalOperator(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVerificationConditionalOperator != null ? retObjectVerificationConditionalOperator.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -274,10 +313,14 @@ public class VerificationAttribute extends Attribute  {
 
     public VerificationReportLevel getVerificationReportLevel() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVerificationReportLevel = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("VerificationReportLevel");
+            retObjectVerificationReportLevel = classInstance.Get("VerificationReportLevel");
+            JCObject val = (JCObject)retObjectVerificationReportLevel;
             return new VerificationReportLevel(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVerificationReportLevel != null ? retObjectVerificationReportLevel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -285,10 +328,14 @@ public class VerificationAttribute extends Attribute  {
 
     public VerificationRule getVerificationRule() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVerificationRule = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("VerificationRule");
+            retObjectVerificationRule = classInstance.Get("VerificationRule");
+            JCObject val = (JCObject)retObjectVerificationRule;
             return new VerificationRule(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVerificationRule != null ? retObjectVerificationRule.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

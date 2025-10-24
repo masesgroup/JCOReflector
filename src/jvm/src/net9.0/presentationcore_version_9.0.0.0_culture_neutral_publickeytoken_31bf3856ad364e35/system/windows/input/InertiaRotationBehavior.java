@@ -165,9 +165,20 @@ public class InertiaRotationBehavior extends NetObject  {
     
     public double getDesiredDeceleration() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDesiredDeceleration = null;
         try {
-            return (double)classInstance.Get("DesiredDeceleration");
+            retObjectDesiredDeceleration = classInstance.Get("DesiredDeceleration");
+            return (double)retObjectDesiredDeceleration;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDesiredDeceleration_ToString = retObjectDesiredDeceleration == null ? "null" : retObjectDesiredDeceleration.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectDesiredDecelerationNumber = (java.lang.Number)retObjectDesiredDeceleration;
+                return retObjectDesiredDecelerationNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectDesiredDeceleration != null ? retObjectDesiredDeceleration.getClass() : "null", retObjectDesiredDeceleration_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -175,7 +186,7 @@ public class InertiaRotationBehavior extends NetObject  {
 
     public void setDesiredDeceleration(double DesiredDeceleration) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DesiredDeceleration", DesiredDeceleration);
         } catch (JCNativeException jcne) {
@@ -185,9 +196,20 @@ public class InertiaRotationBehavior extends NetObject  {
 
     public double getDesiredRotation() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDesiredRotation = null;
         try {
-            return (double)classInstance.Get("DesiredRotation");
+            retObjectDesiredRotation = classInstance.Get("DesiredRotation");
+            return (double)retObjectDesiredRotation;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDesiredRotation_ToString = retObjectDesiredRotation == null ? "null" : retObjectDesiredRotation.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectDesiredRotationNumber = (java.lang.Number)retObjectDesiredRotation;
+                return retObjectDesiredRotationNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectDesiredRotation != null ? retObjectDesiredRotation.getClass() : "null", retObjectDesiredRotation_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,7 +217,7 @@ public class InertiaRotationBehavior extends NetObject  {
 
     public void setDesiredRotation(double DesiredRotation) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DesiredRotation", DesiredRotation);
         } catch (JCNativeException jcne) {
@@ -205,9 +227,20 @@ public class InertiaRotationBehavior extends NetObject  {
 
     public double getInitialVelocity() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInitialVelocity = null;
         try {
-            return (double)classInstance.Get("InitialVelocity");
+            retObjectInitialVelocity = classInstance.Get("InitialVelocity");
+            return (double)retObjectInitialVelocity;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectInitialVelocity_ToString = retObjectInitialVelocity == null ? "null" : retObjectInitialVelocity.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectInitialVelocityNumber = (java.lang.Number)retObjectInitialVelocity;
+                return retObjectInitialVelocityNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectInitialVelocity != null ? retObjectInitialVelocity.getClass() : "null", retObjectInitialVelocity_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -215,7 +248,7 @@ public class InertiaRotationBehavior extends NetObject  {
 
     public void setInitialVelocity(double InitialVelocity) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("InitialVelocity", InitialVelocity);
         } catch (JCNativeException jcne) {

@@ -156,9 +156,13 @@ public class IsolatedStorage extends MarshalByRefObject  {
     
     public boolean IncreaseQuotaTo(long newQuotaSize) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIncreaseQuotaTo = null;
         try {
-            return (boolean)classInstance.Invoke("IncreaseQuotaTo", newQuotaSize);
+            retObjectIncreaseQuotaTo = classInstance.Invoke("IncreaseQuotaTo", newQuotaSize);
+            return (boolean)retObjectIncreaseQuotaTo;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIncreaseQuotaTo != null ? retObjectIncreaseQuotaTo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -166,7 +170,7 @@ public class IsolatedStorage extends MarshalByRefObject  {
 
     public void Remove() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Remove");
         } catch (JCNativeException jcne) {
@@ -180,9 +184,20 @@ public class IsolatedStorage extends MarshalByRefObject  {
     
     public long getAvailableFreeSpace() throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAvailableFreeSpace = null;
         try {
-            return (long)classInstance.Get("AvailableFreeSpace");
+            retObjectAvailableFreeSpace = classInstance.Get("AvailableFreeSpace");
+            return (long)retObjectAvailableFreeSpace;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectAvailableFreeSpace_ToString = retObjectAvailableFreeSpace == null ? "null" : retObjectAvailableFreeSpace.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectAvailableFreeSpaceNumber = (java.lang.Number)retObjectAvailableFreeSpace;
+                return retObjectAvailableFreeSpaceNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectAvailableFreeSpace != null ? retObjectAvailableFreeSpace.getClass() : "null", retObjectAvailableFreeSpace_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,9 +205,20 @@ public class IsolatedStorage extends MarshalByRefObject  {
 
     public long getQuota() throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectQuota = null;
         try {
-            return (long)classInstance.Get("Quota");
+            retObjectQuota = classInstance.Get("Quota");
+            return (long)retObjectQuota;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectQuota_ToString = retObjectQuota == null ? "null" : retObjectQuota.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectQuotaNumber = (java.lang.Number)retObjectQuota;
+                return retObjectQuotaNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectQuota != null ? retObjectQuota.getClass() : "null", retObjectQuota_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,7 +226,7 @@ public class IsolatedStorage extends MarshalByRefObject  {
 
     public void setQuota(long Quota) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Quota", Quota);
         } catch (JCNativeException jcne) {
@@ -210,9 +236,20 @@ public class IsolatedStorage extends MarshalByRefObject  {
 
     public long getUsedSize() throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUsedSize = null;
         try {
-            return (long)classInstance.Get("UsedSize");
+            retObjectUsedSize = classInstance.Get("UsedSize");
+            return (long)retObjectUsedSize;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectUsedSize_ToString = retObjectUsedSize == null ? "null" : retObjectUsedSize.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectUsedSizeNumber = (java.lang.Number)retObjectUsedSize;
+                return retObjectUsedSizeNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectUsedSize != null ? retObjectUsedSize.getClass() : "null", retObjectUsedSize_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -220,10 +257,14 @@ public class IsolatedStorage extends MarshalByRefObject  {
 
     public IsolatedStorageScope getScope() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectScope = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Scope");
+            retObjectScope = classInstance.Get("Scope");
+            JCObject val = (JCObject)retObjectScope;
             return new IsolatedStorageScope(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectScope != null ? retObjectScope.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -231,10 +272,14 @@ public class IsolatedStorage extends MarshalByRefObject  {
 
     public NetObject getApplicationIdentity() throws Throwable, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectApplicationIdentity = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ApplicationIdentity");
+            retObjectApplicationIdentity = classInstance.Get("ApplicationIdentity");
+            JCObject val = (JCObject)retObjectApplicationIdentity;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectApplicationIdentity != null ? retObjectApplicationIdentity.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -242,10 +287,14 @@ public class IsolatedStorage extends MarshalByRefObject  {
 
     public NetObject getAssemblyIdentity() throws Throwable, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAssemblyIdentity = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AssemblyIdentity");
+            retObjectAssemblyIdentity = classInstance.Get("AssemblyIdentity");
+            JCObject val = (JCObject)retObjectAssemblyIdentity;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAssemblyIdentity != null ? retObjectAssemblyIdentity.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -253,10 +302,14 @@ public class IsolatedStorage extends MarshalByRefObject  {
 
     public NetObject getDomainIdentity() throws Throwable, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDomainIdentity = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DomainIdentity");
+            retObjectDomainIdentity = classInstance.Get("DomainIdentity");
+            JCObject val = (JCObject)retObjectDomainIdentity;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDomainIdentity != null ? retObjectDomainIdentity.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -264,10 +317,14 @@ public class IsolatedStorage extends MarshalByRefObject  {
 
     public UInt64 getCurrentSize() throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCurrentSize = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CurrentSize");
+            retObjectCurrentSize = classInstance.Get("CurrentSize");
+            JCObject val = (JCObject)retObjectCurrentSize;
             return new UInt64(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCurrentSize != null ? retObjectCurrentSize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -275,10 +332,14 @@ public class IsolatedStorage extends MarshalByRefObject  {
 
     public UInt64 getMaximumSize() throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaximumSize = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MaximumSize");
+            retObjectMaximumSize = classInstance.Get("MaximumSize");
+            JCObject val = (JCObject)retObjectMaximumSize;
             return new UInt64(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMaximumSize != null ? retObjectMaximumSize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

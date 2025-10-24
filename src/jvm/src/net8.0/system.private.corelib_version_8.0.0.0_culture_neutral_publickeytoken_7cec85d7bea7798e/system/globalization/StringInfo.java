@@ -172,9 +172,20 @@ public class StringInfo extends NetObject  {
     
     public static int GetNextTextElementLength(java.lang.String str, int index) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetNextTextElementLength = null;
         try {
-            return (int)classType.Invoke("GetNextTextElementLength", str, index);
+            retObjectGetNextTextElementLength = classType.Invoke("GetNextTextElementLength", str, index);
+            return (int)retObjectGetNextTextElementLength;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetNextTextElementLength_ToString = retObjectGetNextTextElementLength == null ? "null" : retObjectGetNextTextElementLength.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetNextTextElementLengthNumber = (java.lang.Number)retObjectGetNextTextElementLength;
+                return retObjectGetNextTextElementLengthNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetNextTextElementLength != null ? retObjectGetNextTextElementLength.getClass() : "null", retObjectGetNextTextElementLength_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,9 +193,20 @@ public class StringInfo extends NetObject  {
 
     public static int GetNextTextElementLength(java.lang.String str) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetNextTextElementLength = null;
         try {
-            return (int)classType.Invoke("GetNextTextElementLength", str);
+            retObjectGetNextTextElementLength = classType.Invoke("GetNextTextElementLength", str);
+            return (int)retObjectGetNextTextElementLength;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetNextTextElementLength_ToString = retObjectGetNextTextElementLength == null ? "null" : retObjectGetNextTextElementLength.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetNextTextElementLengthNumber = (java.lang.Number)retObjectGetNextTextElementLength;
+                return retObjectGetNextTextElementLengthNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetNextTextElementLength != null ? retObjectGetNextTextElementLength.getClass() : "null", retObjectGetNextTextElementLength_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,10 +214,12 @@ public class StringInfo extends NetObject  {
 
     public static int[] ParseCombiningCharacters(java.lang.String str) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectParseCombiningCharacters = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("ParseCombiningCharacters", str);
+            retObjectParseCombiningCharacters = classType.Invoke("ParseCombiningCharacters", str);
+            JCObject resultingObjects = (JCObject)retObjectParseCombiningCharacters;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -204,6 +228,8 @@ public class StringInfo extends NetObject  {
 				resultingArray[indexParseCombiningCharacters] = (int)resultingArrayList.get(indexParseCombiningCharacters);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectParseCombiningCharacters != null ? retObjectParseCombiningCharacters.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -211,10 +237,14 @@ public class StringInfo extends NetObject  {
 
     public static TextElementEnumerator GetTextElementEnumerator(java.lang.String str, int index) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetTextElementEnumerator = null;
         try {
-            JCObject objGetTextElementEnumerator = (JCObject)classType.Invoke("GetTextElementEnumerator", str, index);
+            retObjectGetTextElementEnumerator = classType.Invoke("GetTextElementEnumerator", str, index);
+            JCObject objGetTextElementEnumerator = (JCObject)retObjectGetTextElementEnumerator;
             return new TextElementEnumerator(objGetTextElementEnumerator);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetTextElementEnumerator != null ? retObjectGetTextElementEnumerator.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -222,10 +252,14 @@ public class StringInfo extends NetObject  {
 
     public static TextElementEnumerator GetTextElementEnumerator(java.lang.String str) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetTextElementEnumerator = null;
         try {
-            JCObject objGetTextElementEnumerator = (JCObject)classType.Invoke("GetTextElementEnumerator", str);
+            retObjectGetTextElementEnumerator = classType.Invoke("GetTextElementEnumerator", str);
+            JCObject objGetTextElementEnumerator = (JCObject)retObjectGetTextElementEnumerator;
             return new TextElementEnumerator(objGetTextElementEnumerator);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetTextElementEnumerator != null ? retObjectGetTextElementEnumerator.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -233,9 +267,13 @@ public class StringInfo extends NetObject  {
 
     public static java.lang.String GetNextTextElement(java.lang.String str, int index) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetNextTextElement = null;
         try {
-            return (java.lang.String)classType.Invoke("GetNextTextElement", str, index);
+            retObjectGetNextTextElement = classType.Invoke("GetNextTextElement", str, index);
+            return (java.lang.String)retObjectGetNextTextElement;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetNextTextElement != null ? retObjectGetNextTextElement.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -243,9 +281,13 @@ public class StringInfo extends NetObject  {
 
     public static java.lang.String GetNextTextElement(java.lang.String str) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetNextTextElement = null;
         try {
-            return (java.lang.String)classType.Invoke("GetNextTextElement", str);
+            retObjectGetNextTextElement = classType.Invoke("GetNextTextElement", str);
+            return (java.lang.String)retObjectGetNextTextElement;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetNextTextElement != null ? retObjectGetNextTextElement.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -253,9 +295,13 @@ public class StringInfo extends NetObject  {
 
     public java.lang.String SubstringByTextElements(int startingTextElement, int lengthInTextElements) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSubstringByTextElements = null;
         try {
-            return (java.lang.String)classInstance.Invoke("SubstringByTextElements", startingTextElement, lengthInTextElements);
+            retObjectSubstringByTextElements = classInstance.Invoke("SubstringByTextElements", startingTextElement, lengthInTextElements);
+            return (java.lang.String)retObjectSubstringByTextElements;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectSubstringByTextElements != null ? retObjectSubstringByTextElements.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -263,9 +309,13 @@ public class StringInfo extends NetObject  {
 
     public java.lang.String SubstringByTextElements(int startingTextElement) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSubstringByTextElements = null;
         try {
-            return (java.lang.String)classInstance.Invoke("SubstringByTextElements", startingTextElement);
+            retObjectSubstringByTextElements = classInstance.Invoke("SubstringByTextElements", startingTextElement);
+            return (java.lang.String)retObjectSubstringByTextElements;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectSubstringByTextElements != null ? retObjectSubstringByTextElements.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -277,9 +327,20 @@ public class StringInfo extends NetObject  {
     
     public int getLengthInTextElements() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLengthInTextElements = null;
         try {
-            return (int)classInstance.Get("LengthInTextElements");
+            retObjectLengthInTextElements = classInstance.Get("LengthInTextElements");
+            return (int)retObjectLengthInTextElements;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectLengthInTextElements_ToString = retObjectLengthInTextElements == null ? "null" : retObjectLengthInTextElements.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectLengthInTextElementsNumber = (java.lang.Number)retObjectLengthInTextElements;
+                return retObjectLengthInTextElementsNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectLengthInTextElements != null ? retObjectLengthInTextElements.getClass() : "null", retObjectLengthInTextElements_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -287,9 +348,13 @@ public class StringInfo extends NetObject  {
 
     public java.lang.String getString() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectString = null;
         try {
-            return (java.lang.String)classInstance.Get("String");
+            retObjectString = classInstance.Get("String");
+            return (java.lang.String)retObjectString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectString != null ? retObjectString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -297,7 +362,7 @@ public class StringInfo extends NetObject  {
 
     public void setString(java.lang.String String) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("String", String);
         } catch (JCNativeException jcne) {

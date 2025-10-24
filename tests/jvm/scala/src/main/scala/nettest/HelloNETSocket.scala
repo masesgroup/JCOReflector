@@ -42,44 +42,50 @@ object HelloNETSocket {
   @throws[Throwable]
   def main(args: Array[String]): Unit = {
     JCOReflector.setCommandLineArgs(args)
-    var x = 0
-    while ( {
-      x < args.length
-    }) {
-      val arg = args(x)
-      if (arg eq "-async") asyncMode = true
-      if (arg eq "-server") {
-        serverAddress = args(x + 1)
-        x += 1
-      }
+    try {
+        var x = 0
+        while ( {
+          x < args.length
+        }) {
+          val arg = args(x)
+          if (arg eq "-async") asyncMode = true
+          if (arg eq "-server") {
+            serverAddress = args(x + 1)
+            x += 1
+          }
 
-      x += 1
+          x += 1
+        }
+        // create the server thread
+        val threadServer = new Thread(new ThreadStart() {
+          override def Invoke(): Unit = {
+            HelloNETSocketServer.StartListening(asyncMode, serverAddress, 11000)
+          }
+        })
+        // create the client thread
+        val threadClient = new Thread(new ThreadStart() {
+          override def Invoke(): Unit = {
+            HelloNETSocketClient.StartClient(asyncMode, "localhost", 11000)
+          }
+        })
+        // start threads
+        threadServer.Start()
+        Thread.Sleep(5000)
+        threadClient.Start()
+        // let it communicate
+        Thread.Sleep(5000)
+        // trigger the thread closing procedure
+        HelloNETSocketClient.run = false
+        Thread.Sleep(1000)
+        // wait for thread join, if not, close the test
+        threadServer.Join(5000)
+        threadClient.Join(5000)
+        // close the application
+        Environment.Exit(0)
+    } catch {
+      case tre: Throwable =>
+        tre.printStackTrace()
+        System.exit(-1)
     }
-    // create the server thread
-    val threadServer = new Thread(new ThreadStart() {
-      override def Invoke(): Unit = {
-        HelloNETSocketServer.StartListening(asyncMode, serverAddress, 11000)
-      }
-    })
-    // create the client thread
-    val threadClient = new Thread(new ThreadStart() {
-      override def Invoke(): Unit = {
-        HelloNETSocketClient.StartClient(asyncMode, "localhost", 11000)
-      }
-    })
-    // start threads
-    threadServer.Start()
-    Thread.Sleep(5000)
-    threadClient.Start()
-    // let it communicate
-    Thread.Sleep(5000)
-    // trigger the thread closing procedure
-    HelloNETSocketClient.run = false
-    Thread.Sleep(1000)
-    // wait for thread join, if not, close the test
-    threadServer.Join(5000)
-    threadClient.Join(5000)
-    // close the application
-    Environment.Exit(0)
   }
 }

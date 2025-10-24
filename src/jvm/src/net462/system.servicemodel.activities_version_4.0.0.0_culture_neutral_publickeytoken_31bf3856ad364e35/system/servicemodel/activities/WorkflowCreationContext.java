@@ -165,9 +165,13 @@ public class WorkflowCreationContext extends NetObject  {
     
     public boolean getCreateOnly() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateOnly = null;
         try {
-            return (boolean)classInstance.Get("CreateOnly");
+            retObjectCreateOnly = classInstance.Get("CreateOnly");
+            return (boolean)retObjectCreateOnly;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCreateOnly != null ? retObjectCreateOnly.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -175,7 +179,7 @@ public class WorkflowCreationContext extends NetObject  {
 
     public void setCreateOnly(boolean CreateOnly) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CreateOnly", CreateOnly);
         } catch (JCNativeException jcne) {
@@ -185,9 +189,13 @@ public class WorkflowCreationContext extends NetObject  {
 
     public boolean getIsCompletionTransactionRequired() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsCompletionTransactionRequired = null;
         try {
-            return (boolean)classInstance.Get("IsCompletionTransactionRequired");
+            retObjectIsCompletionTransactionRequired = classInstance.Get("IsCompletionTransactionRequired");
+            return (boolean)retObjectIsCompletionTransactionRequired;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsCompletionTransactionRequired != null ? retObjectIsCompletionTransactionRequired.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,7 +203,7 @@ public class WorkflowCreationContext extends NetObject  {
 
     public void setIsCompletionTransactionRequired(boolean IsCompletionTransactionRequired) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsCompletionTransactionRequired", IsCompletionTransactionRequired);
         } catch (JCNativeException jcne) {

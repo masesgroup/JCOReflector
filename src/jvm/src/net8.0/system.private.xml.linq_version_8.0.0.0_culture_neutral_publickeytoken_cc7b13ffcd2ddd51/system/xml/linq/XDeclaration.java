@@ -180,9 +180,13 @@ public class XDeclaration extends NetObject  {
     
     public java.lang.String getEncoding() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEncoding = null;
         try {
-            return (java.lang.String)classInstance.Get("Encoding");
+            retObjectEncoding = classInstance.Get("Encoding");
+            return (java.lang.String)retObjectEncoding;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectEncoding != null ? retObjectEncoding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,7 +194,7 @@ public class XDeclaration extends NetObject  {
 
     public void setEncoding(java.lang.String Encoding) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Encoding", Encoding);
         } catch (JCNativeException jcne) {
@@ -200,9 +204,13 @@ public class XDeclaration extends NetObject  {
 
     public java.lang.String getStandalone() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStandalone = null;
         try {
-            return (java.lang.String)classInstance.Get("Standalone");
+            retObjectStandalone = classInstance.Get("Standalone");
+            return (java.lang.String)retObjectStandalone;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectStandalone != null ? retObjectStandalone.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -210,7 +218,7 @@ public class XDeclaration extends NetObject  {
 
     public void setStandalone(java.lang.String Standalone) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Standalone", Standalone);
         } catch (JCNativeException jcne) {
@@ -220,9 +228,13 @@ public class XDeclaration extends NetObject  {
 
     public java.lang.String getVersion() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVersion = null;
         try {
-            return (java.lang.String)classInstance.Get("Version");
+            retObjectVersion = classInstance.Get("Version");
+            return (java.lang.String)retObjectVersion;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectVersion != null ? retObjectVersion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -230,7 +242,7 @@ public class XDeclaration extends NetObject  {
 
     public void setVersion(java.lang.String Version) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Version", Version);
         } catch (JCNativeException jcne) {

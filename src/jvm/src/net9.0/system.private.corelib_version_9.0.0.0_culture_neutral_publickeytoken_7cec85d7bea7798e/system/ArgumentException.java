@@ -192,7 +192,7 @@ public class ArgumentException extends SystemException {
     
     public void GetObjectData(SerializationInfo info, StreamingContext context) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.runtime.serialization.SerializationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetObjectData", info == null ? null : info.getJCOInstance(), context == null ? null : context.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -202,7 +202,7 @@ public class ArgumentException extends SystemException {
 
     public static void ThrowIfNullOrEmpty(java.lang.String argument, java.lang.String paramName) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("ThrowIfNullOrEmpty", argument, paramName);
         } catch (JCNativeException jcne) {
@@ -212,7 +212,7 @@ public class ArgumentException extends SystemException {
 
     public static void ThrowIfNullOrWhiteSpace(java.lang.String argument, java.lang.String paramName) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("ThrowIfNullOrWhiteSpace", argument, paramName);
         } catch (JCNativeException jcne) {
@@ -226,9 +226,13 @@ public class ArgumentException extends SystemException {
     
     public java.lang.String getParamName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectParamName = null;
         try {
-            return (java.lang.String)classInstance.Get("ParamName");
+            retObjectParamName = classInstance.Get("ParamName");
+            return (java.lang.String)retObjectParamName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectParamName != null ? retObjectParamName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

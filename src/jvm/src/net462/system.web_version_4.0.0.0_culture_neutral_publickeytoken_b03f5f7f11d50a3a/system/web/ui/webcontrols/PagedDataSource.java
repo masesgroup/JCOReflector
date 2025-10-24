@@ -164,10 +164,14 @@ public class PagedDataSource extends NetObjectEnumerable  {
     
     public PropertyDescriptorCollection GetItemProperties(PropertyDescriptor[] listAccessors) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetItemProperties = null;
         try {
-            JCObject objGetItemProperties = (JCObject)classInstance.Invoke("GetItemProperties", (java.lang.Object)toObjectFromArray(listAccessors));
+            retObjectGetItemProperties = classInstance.Invoke("GetItemProperties", (java.lang.Object)toObjectFromArray(listAccessors));
+            JCObject objGetItemProperties = (JCObject)retObjectGetItemProperties;
             return new PropertyDescriptorCollection(objGetItemProperties);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetItemProperties != null ? retObjectGetItemProperties.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -175,9 +179,13 @@ public class PagedDataSource extends NetObjectEnumerable  {
 
     public java.lang.String GetListName(PropertyDescriptor[] listAccessors) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetListName = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetListName", (java.lang.Object)toObjectFromArray(listAccessors));
+            retObjectGetListName = classInstance.Invoke("GetListName", (java.lang.Object)toObjectFromArray(listAccessors));
+            return (java.lang.String)retObjectGetListName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetListName != null ? retObjectGetListName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -185,7 +193,7 @@ public class PagedDataSource extends NetObjectEnumerable  {
 
     public void CopyTo(Array array, int index) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CopyTo", array == null ? null : array.getJCOInstance(), index);
         } catch (JCNativeException jcne) {
@@ -199,9 +207,13 @@ public class PagedDataSource extends NetObjectEnumerable  {
     
     public boolean getAllowCustomPaging() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAllowCustomPaging = null;
         try {
-            return (boolean)classInstance.Get("AllowCustomPaging");
+            retObjectAllowCustomPaging = classInstance.Get("AllowCustomPaging");
+            return (boolean)retObjectAllowCustomPaging;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAllowCustomPaging != null ? retObjectAllowCustomPaging.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -209,7 +221,7 @@ public class PagedDataSource extends NetObjectEnumerable  {
 
     public void setAllowCustomPaging(boolean AllowCustomPaging) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AllowCustomPaging", AllowCustomPaging);
         } catch (JCNativeException jcne) {
@@ -219,9 +231,13 @@ public class PagedDataSource extends NetObjectEnumerable  {
 
     public boolean getAllowPaging() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAllowPaging = null;
         try {
-            return (boolean)classInstance.Get("AllowPaging");
+            retObjectAllowPaging = classInstance.Get("AllowPaging");
+            return (boolean)retObjectAllowPaging;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAllowPaging != null ? retObjectAllowPaging.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -229,7 +245,7 @@ public class PagedDataSource extends NetObjectEnumerable  {
 
     public void setAllowPaging(boolean AllowPaging) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AllowPaging", AllowPaging);
         } catch (JCNativeException jcne) {
@@ -239,9 +255,13 @@ public class PagedDataSource extends NetObjectEnumerable  {
 
     public boolean getAllowServerPaging() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAllowServerPaging = null;
         try {
-            return (boolean)classInstance.Get("AllowServerPaging");
+            retObjectAllowServerPaging = classInstance.Get("AllowServerPaging");
+            return (boolean)retObjectAllowServerPaging;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAllowServerPaging != null ? retObjectAllowServerPaging.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -249,7 +269,7 @@ public class PagedDataSource extends NetObjectEnumerable  {
 
     public void setAllowServerPaging(boolean AllowServerPaging) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AllowServerPaging", AllowServerPaging);
         } catch (JCNativeException jcne) {
@@ -259,9 +279,13 @@ public class PagedDataSource extends NetObjectEnumerable  {
 
     public boolean getIsCustomPagingEnabled() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsCustomPagingEnabled = null;
         try {
-            return (boolean)classInstance.Get("IsCustomPagingEnabled");
+            retObjectIsCustomPagingEnabled = classInstance.Get("IsCustomPagingEnabled");
+            return (boolean)retObjectIsCustomPagingEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsCustomPagingEnabled != null ? retObjectIsCustomPagingEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -269,9 +293,13 @@ public class PagedDataSource extends NetObjectEnumerable  {
 
     public boolean getIsFirstPage() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsFirstPage = null;
         try {
-            return (boolean)classInstance.Get("IsFirstPage");
+            retObjectIsFirstPage = classInstance.Get("IsFirstPage");
+            return (boolean)retObjectIsFirstPage;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsFirstPage != null ? retObjectIsFirstPage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -279,9 +307,13 @@ public class PagedDataSource extends NetObjectEnumerable  {
 
     public boolean getIsLastPage() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsLastPage = null;
         try {
-            return (boolean)classInstance.Get("IsLastPage");
+            retObjectIsLastPage = classInstance.Get("IsLastPage");
+            return (boolean)retObjectIsLastPage;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsLastPage != null ? retObjectIsLastPage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -289,9 +321,13 @@ public class PagedDataSource extends NetObjectEnumerable  {
 
     public boolean getIsPagingEnabled() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsPagingEnabled = null;
         try {
-            return (boolean)classInstance.Get("IsPagingEnabled");
+            retObjectIsPagingEnabled = classInstance.Get("IsPagingEnabled");
+            return (boolean)retObjectIsPagingEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsPagingEnabled != null ? retObjectIsPagingEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -299,9 +335,13 @@ public class PagedDataSource extends NetObjectEnumerable  {
 
     public boolean getIsReadOnly() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsReadOnly = null;
         try {
-            return (boolean)classInstance.Get("IsReadOnly");
+            retObjectIsReadOnly = classInstance.Get("IsReadOnly");
+            return (boolean)retObjectIsReadOnly;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsReadOnly != null ? retObjectIsReadOnly.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -309,9 +349,13 @@ public class PagedDataSource extends NetObjectEnumerable  {
 
     public boolean getIsServerPagingEnabled() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsServerPagingEnabled = null;
         try {
-            return (boolean)classInstance.Get("IsServerPagingEnabled");
+            retObjectIsServerPagingEnabled = classInstance.Get("IsServerPagingEnabled");
+            return (boolean)retObjectIsServerPagingEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsServerPagingEnabled != null ? retObjectIsServerPagingEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -319,9 +363,13 @@ public class PagedDataSource extends NetObjectEnumerable  {
 
     public boolean getIsSynchronized() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsSynchronized = null;
         try {
-            return (boolean)classInstance.Get("IsSynchronized");
+            retObjectIsSynchronized = classInstance.Get("IsSynchronized");
+            return (boolean)retObjectIsSynchronized;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsSynchronized != null ? retObjectIsSynchronized.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -329,9 +377,20 @@ public class PagedDataSource extends NetObjectEnumerable  {
 
     public int getCount() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCount = null;
         try {
-            return (int)classInstance.Get("Count");
+            retObjectCount = classInstance.Get("Count");
+            return (int)retObjectCount;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCount_ToString = retObjectCount == null ? "null" : retObjectCount.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectCountNumber = (java.lang.Number)retObjectCount;
+                return retObjectCountNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCount != null ? retObjectCount.getClass() : "null", retObjectCount_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -339,9 +398,20 @@ public class PagedDataSource extends NetObjectEnumerable  {
 
     public int getCurrentPageIndex() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCurrentPageIndex = null;
         try {
-            return (int)classInstance.Get("CurrentPageIndex");
+            retObjectCurrentPageIndex = classInstance.Get("CurrentPageIndex");
+            return (int)retObjectCurrentPageIndex;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCurrentPageIndex_ToString = retObjectCurrentPageIndex == null ? "null" : retObjectCurrentPageIndex.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectCurrentPageIndexNumber = (java.lang.Number)retObjectCurrentPageIndex;
+                return retObjectCurrentPageIndexNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCurrentPageIndex != null ? retObjectCurrentPageIndex.getClass() : "null", retObjectCurrentPageIndex_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -349,7 +419,7 @@ public class PagedDataSource extends NetObjectEnumerable  {
 
     public void setCurrentPageIndex(int CurrentPageIndex) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CurrentPageIndex", CurrentPageIndex);
         } catch (JCNativeException jcne) {
@@ -359,9 +429,20 @@ public class PagedDataSource extends NetObjectEnumerable  {
 
     public int getDataSourceCount() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.web.HttpException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDataSourceCount = null;
         try {
-            return (int)classInstance.Get("DataSourceCount");
+            retObjectDataSourceCount = classInstance.Get("DataSourceCount");
+            return (int)retObjectDataSourceCount;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDataSourceCount_ToString = retObjectDataSourceCount == null ? "null" : retObjectDataSourceCount.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectDataSourceCountNumber = (java.lang.Number)retObjectDataSourceCount;
+                return retObjectDataSourceCountNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectDataSourceCount != null ? retObjectDataSourceCount.getClass() : "null", retObjectDataSourceCount_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -369,9 +450,20 @@ public class PagedDataSource extends NetObjectEnumerable  {
 
     public int getFirstIndexInPage() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFirstIndexInPage = null;
         try {
-            return (int)classInstance.Get("FirstIndexInPage");
+            retObjectFirstIndexInPage = classInstance.Get("FirstIndexInPage");
+            return (int)retObjectFirstIndexInPage;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectFirstIndexInPage_ToString = retObjectFirstIndexInPage == null ? "null" : retObjectFirstIndexInPage.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectFirstIndexInPageNumber = (java.lang.Number)retObjectFirstIndexInPage;
+                return retObjectFirstIndexInPageNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectFirstIndexInPage != null ? retObjectFirstIndexInPage.getClass() : "null", retObjectFirstIndexInPage_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -379,9 +471,20 @@ public class PagedDataSource extends NetObjectEnumerable  {
 
     public int getPageCount() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.web.HttpException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPageCount = null;
         try {
-            return (int)classInstance.Get("PageCount");
+            retObjectPageCount = classInstance.Get("PageCount");
+            return (int)retObjectPageCount;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectPageCount_ToString = retObjectPageCount == null ? "null" : retObjectPageCount.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectPageCountNumber = (java.lang.Number)retObjectPageCount;
+                return retObjectPageCountNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectPageCount != null ? retObjectPageCount.getClass() : "null", retObjectPageCount_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -389,9 +492,20 @@ public class PagedDataSource extends NetObjectEnumerable  {
 
     public int getPageSize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPageSize = null;
         try {
-            return (int)classInstance.Get("PageSize");
+            retObjectPageSize = classInstance.Get("PageSize");
+            return (int)retObjectPageSize;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectPageSize_ToString = retObjectPageSize == null ? "null" : retObjectPageSize.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectPageSizeNumber = (java.lang.Number)retObjectPageSize;
+                return retObjectPageSizeNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectPageSize != null ? retObjectPageSize.getClass() : "null", retObjectPageSize_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -399,7 +513,7 @@ public class PagedDataSource extends NetObjectEnumerable  {
 
     public void setPageSize(int PageSize) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PageSize", PageSize);
         } catch (JCNativeException jcne) {
@@ -409,9 +523,20 @@ public class PagedDataSource extends NetObjectEnumerable  {
 
     public int getVirtualCount() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVirtualCount = null;
         try {
-            return (int)classInstance.Get("VirtualCount");
+            retObjectVirtualCount = classInstance.Get("VirtualCount");
+            return (int)retObjectVirtualCount;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectVirtualCount_ToString = retObjectVirtualCount == null ? "null" : retObjectVirtualCount.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectVirtualCountNumber = (java.lang.Number)retObjectVirtualCount;
+                return retObjectVirtualCountNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectVirtualCount != null ? retObjectVirtualCount.getClass() : "null", retObjectVirtualCount_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -419,7 +544,7 @@ public class PagedDataSource extends NetObjectEnumerable  {
 
     public void setVirtualCount(int VirtualCount) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("VirtualCount", VirtualCount);
         } catch (JCNativeException jcne) {
@@ -429,10 +554,14 @@ public class PagedDataSource extends NetObjectEnumerable  {
 
     public IEnumerable getDataSource() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDataSource = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DataSource");
+            retObjectDataSource = classInstance.Get("DataSource");
+            JCObject val = (JCObject)retObjectDataSource;
             return new IEnumerableImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDataSource != null ? retObjectDataSource.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -440,7 +569,7 @@ public class PagedDataSource extends NetObjectEnumerable  {
 
     public void setDataSource(IEnumerable DataSource) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DataSource", DataSource == null ? null : DataSource.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -450,10 +579,14 @@ public class PagedDataSource extends NetObjectEnumerable  {
 
     public NetObject getSyncRoot() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSyncRoot = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SyncRoot");
+            retObjectSyncRoot = classInstance.Get("SyncRoot");
+            JCObject val = (JCObject)retObjectSyncRoot;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSyncRoot != null ? retObjectSyncRoot.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -166,9 +166,13 @@ public class XmlNamespaceManager extends NetObjectEnumerable  {
     
     public boolean HasNamespace(java.lang.String prefix) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHasNamespace = null;
         try {
-            return (boolean)classInstance.Invoke("HasNamespace", prefix);
+            retObjectHasNamespace = classInstance.Invoke("HasNamespace", prefix);
+            return (boolean)retObjectHasNamespace;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectHasNamespace != null ? retObjectHasNamespace.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,9 +180,13 @@ public class XmlNamespaceManager extends NetObjectEnumerable  {
 
     public boolean PopScope() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPopScope = null;
         try {
-            return (boolean)classInstance.Invoke("PopScope");
+            retObjectPopScope = classInstance.Invoke("PopScope");
+            return (boolean)retObjectPopScope;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectPopScope != null ? retObjectPopScope.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,9 +194,13 @@ public class XmlNamespaceManager extends NetObjectEnumerable  {
 
     public java.lang.String LookupNamespace(java.lang.String prefix) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLookupNamespace = null;
         try {
-            return (java.lang.String)classInstance.Invoke("LookupNamespace", prefix);
+            retObjectLookupNamespace = classInstance.Invoke("LookupNamespace", prefix);
+            return (java.lang.String)retObjectLookupNamespace;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectLookupNamespace != null ? retObjectLookupNamespace.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,9 +208,13 @@ public class XmlNamespaceManager extends NetObjectEnumerable  {
 
     public java.lang.String LookupPrefix(java.lang.String uri) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLookupPrefix = null;
         try {
-            return (java.lang.String)classInstance.Invoke("LookupPrefix", uri);
+            retObjectLookupPrefix = classInstance.Invoke("LookupPrefix", uri);
+            return (java.lang.String)retObjectLookupPrefix;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectLookupPrefix != null ? retObjectLookupPrefix.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -206,7 +222,7 @@ public class XmlNamespaceManager extends NetObjectEnumerable  {
 
     public void AddNamespace(java.lang.String prefix, java.lang.String uri) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddNamespace", prefix, uri);
         } catch (JCNativeException jcne) {
@@ -216,7 +232,7 @@ public class XmlNamespaceManager extends NetObjectEnumerable  {
 
     public void PushScope() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("PushScope");
         } catch (JCNativeException jcne) {
@@ -226,7 +242,7 @@ public class XmlNamespaceManager extends NetObjectEnumerable  {
 
     public void RemoveNamespace(java.lang.String prefix, java.lang.String uri) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RemoveNamespace", prefix, uri);
         } catch (JCNativeException jcne) {
@@ -240,9 +256,13 @@ public class XmlNamespaceManager extends NetObjectEnumerable  {
     
     public java.lang.String getDefaultNamespace() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDefaultNamespace = null;
         try {
-            return (java.lang.String)classInstance.Get("DefaultNamespace");
+            retObjectDefaultNamespace = classInstance.Get("DefaultNamespace");
+            return (java.lang.String)retObjectDefaultNamespace;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDefaultNamespace != null ? retObjectDefaultNamespace.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -250,10 +270,14 @@ public class XmlNamespaceManager extends NetObjectEnumerable  {
 
     public XmlNameTable getNameTable() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNameTable = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("NameTable");
+            retObjectNameTable = classInstance.Get("NameTable");
+            JCObject val = (JCObject)retObjectNameTable;
             return new XmlNameTable(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNameTable != null ? retObjectNameTable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

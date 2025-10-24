@@ -171,10 +171,14 @@ public class SslClientHelloInfo extends ValueType  {
     
     public SslProtocols getSslProtocols() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSslProtocols = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SslProtocols");
+            retObjectSslProtocols = classInstance.Get("SslProtocols");
+            JCObject val = (JCObject)retObjectSslProtocols;
             return new SslProtocols(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSslProtocols != null ? retObjectSslProtocols.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,9 +186,13 @@ public class SslClientHelloInfo extends ValueType  {
 
     public java.lang.String getServerName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectServerName = null;
         try {
-            return (java.lang.String)classInstance.Get("ServerName");
+            retObjectServerName = classInstance.Get("ServerName");
+            return (java.lang.String)retObjectServerName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectServerName != null ? retObjectServerName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

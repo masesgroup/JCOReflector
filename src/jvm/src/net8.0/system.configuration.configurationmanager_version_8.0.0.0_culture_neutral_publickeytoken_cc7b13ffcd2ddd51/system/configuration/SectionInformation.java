@@ -160,10 +160,14 @@ public class SectionInformation extends NetObject  {
     
     public ConfigurationSection GetParentSection() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetParentSection = null;
         try {
-            JCObject objGetParentSection = (JCObject)classInstance.Invoke("GetParentSection");
+            retObjectGetParentSection = classInstance.Invoke("GetParentSection");
+            JCObject objGetParentSection = (JCObject)retObjectGetParentSection;
             return new ConfigurationSection(objGetParentSection);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetParentSection != null ? retObjectGetParentSection.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,9 +175,13 @@ public class SectionInformation extends NetObject  {
 
     public java.lang.String GetRawXml() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.IndexOutOfRangeException, system.NotSupportedException, system.xml.XmlException, system.OutOfMemoryException, system.RankException, system.ArrayTypeMismatchException, system.configuration.ConfigurationException, system.TypeLoadException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetRawXml = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetRawXml");
+            retObjectGetRawXml = classInstance.Invoke("GetRawXml");
+            return (java.lang.String)retObjectGetRawXml;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetRawXml != null ? retObjectGetRawXml.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,7 +189,7 @@ public class SectionInformation extends NetObject  {
 
     public void ForceDeclaration() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.FormatException, system.configuration.ConfigurationErrorsException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ForceDeclaration");
         } catch (JCNativeException jcne) {
@@ -191,7 +199,7 @@ public class SectionInformation extends NetObject  {
 
     public void ForceDeclaration(boolean force) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.NotSupportedException, system.configuration.ConfigurationErrorsException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ForceDeclaration", force);
         } catch (JCNativeException jcne) {
@@ -201,7 +209,7 @@ public class SectionInformation extends NetObject  {
 
     public void ProtectSection(java.lang.String protectionProvider) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.NotSupportedException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ProtectSection", protectionProvider);
         } catch (JCNativeException jcne) {
@@ -211,7 +219,7 @@ public class SectionInformation extends NetObject  {
 
     public void RevertToParent() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.OutOfMemoryException, system.reflection.AmbiguousMatchException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RevertToParent");
         } catch (JCNativeException jcne) {
@@ -221,7 +229,7 @@ public class SectionInformation extends NetObject  {
 
     public void SetRawXml(java.lang.String rawXml) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.OutOfMemoryException, system.reflection.AmbiguousMatchException, system.configuration.ConfigurationException, system.xml.XmlException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetRawXml", rawXml);
         } catch (JCNativeException jcne) {
@@ -231,7 +239,7 @@ public class SectionInformation extends NetObject  {
 
     public void UnprotectSection() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("UnprotectSection");
         } catch (JCNativeException jcne) {
@@ -245,9 +253,13 @@ public class SectionInformation extends NetObject  {
     
     public boolean getAllowLocation() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAllowLocation = null;
         try {
-            return (boolean)classInstance.Get("AllowLocation");
+            retObjectAllowLocation = classInstance.Get("AllowLocation");
+            return (boolean)retObjectAllowLocation;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAllowLocation != null ? retObjectAllowLocation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -255,7 +267,7 @@ public class SectionInformation extends NetObject  {
 
     public void setAllowLocation(boolean AllowLocation) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.configuration.ConfigurationErrorsException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AllowLocation", AllowLocation);
         } catch (JCNativeException jcne) {
@@ -265,9 +277,13 @@ public class SectionInformation extends NetObject  {
 
     public boolean getAllowOverride() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAllowOverride = null;
         try {
-            return (boolean)classInstance.Get("AllowOverride");
+            retObjectAllowOverride = classInstance.Get("AllowOverride");
+            return (boolean)retObjectAllowOverride;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAllowOverride != null ? retObjectAllowOverride.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -275,7 +291,7 @@ public class SectionInformation extends NetObject  {
 
     public void setAllowOverride(boolean AllowOverride) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AllowOverride", AllowOverride);
         } catch (JCNativeException jcne) {
@@ -285,9 +301,13 @@ public class SectionInformation extends NetObject  {
 
     public boolean getForceSave() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectForceSave = null;
         try {
-            return (boolean)classInstance.Get("ForceSave");
+            retObjectForceSave = classInstance.Get("ForceSave");
+            return (boolean)retObjectForceSave;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectForceSave != null ? retObjectForceSave.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -295,7 +315,7 @@ public class SectionInformation extends NetObject  {
 
     public void setForceSave(boolean ForceSave) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ForceSave", ForceSave);
         } catch (JCNativeException jcne) {
@@ -305,9 +325,13 @@ public class SectionInformation extends NetObject  {
 
     public boolean getInheritInChildApplications() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInheritInChildApplications = null;
         try {
-            return (boolean)classInstance.Get("InheritInChildApplications");
+            retObjectInheritInChildApplications = classInstance.Get("InheritInChildApplications");
+            return (boolean)retObjectInheritInChildApplications;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectInheritInChildApplications != null ? retObjectInheritInChildApplications.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -315,7 +339,7 @@ public class SectionInformation extends NetObject  {
 
     public void setInheritInChildApplications(boolean InheritInChildApplications) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("InheritInChildApplications", InheritInChildApplications);
         } catch (JCNativeException jcne) {
@@ -325,9 +349,13 @@ public class SectionInformation extends NetObject  {
 
     public boolean getIsDeclarationRequired() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsDeclarationRequired = null;
         try {
-            return (boolean)classInstance.Get("IsDeclarationRequired");
+            retObjectIsDeclarationRequired = classInstance.Get("IsDeclarationRequired");
+            return (boolean)retObjectIsDeclarationRequired;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsDeclarationRequired != null ? retObjectIsDeclarationRequired.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -335,9 +363,13 @@ public class SectionInformation extends NetObject  {
 
     public boolean getIsDeclared() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsDeclared = null;
         try {
-            return (boolean)classInstance.Get("IsDeclared");
+            retObjectIsDeclared = classInstance.Get("IsDeclared");
+            return (boolean)retObjectIsDeclared;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsDeclared != null ? retObjectIsDeclared.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -345,9 +377,13 @@ public class SectionInformation extends NetObject  {
 
     public boolean getIsLocked() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsLocked = null;
         try {
-            return (boolean)classInstance.Get("IsLocked");
+            retObjectIsLocked = classInstance.Get("IsLocked");
+            return (boolean)retObjectIsLocked;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsLocked != null ? retObjectIsLocked.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -355,9 +391,13 @@ public class SectionInformation extends NetObject  {
 
     public boolean getIsProtected() throws Throwable, system.configuration.ConfigurationErrorsException, system.ArgumentException, system.InvalidOperationException, system.OverflowException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.configuration.ConfigurationException, system.PlatformNotSupportedException, system.TypeLoadException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsProtected = null;
         try {
-            return (boolean)classInstance.Get("IsProtected");
+            retObjectIsProtected = classInstance.Get("IsProtected");
+            return (boolean)retObjectIsProtected;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsProtected != null ? retObjectIsProtected.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -365,9 +405,13 @@ public class SectionInformation extends NetObject  {
 
     public boolean getRequirePermission() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRequirePermission = null;
         try {
-            return (boolean)classInstance.Get("RequirePermission");
+            retObjectRequirePermission = classInstance.Get("RequirePermission");
+            return (boolean)retObjectRequirePermission;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectRequirePermission != null ? retObjectRequirePermission.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -375,7 +419,7 @@ public class SectionInformation extends NetObject  {
 
     public void setRequirePermission(boolean RequirePermission) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.configuration.ConfigurationErrorsException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RequirePermission", RequirePermission);
         } catch (JCNativeException jcne) {
@@ -385,9 +429,13 @@ public class SectionInformation extends NetObject  {
 
     public boolean getRestartOnExternalChanges() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRestartOnExternalChanges = null;
         try {
-            return (boolean)classInstance.Get("RestartOnExternalChanges");
+            retObjectRestartOnExternalChanges = classInstance.Get("RestartOnExternalChanges");
+            return (boolean)retObjectRestartOnExternalChanges;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectRestartOnExternalChanges != null ? retObjectRestartOnExternalChanges.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -395,7 +443,7 @@ public class SectionInformation extends NetObject  {
 
     public void setRestartOnExternalChanges(boolean RestartOnExternalChanges) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.configuration.ConfigurationErrorsException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RestartOnExternalChanges", RestartOnExternalChanges);
         } catch (JCNativeException jcne) {
@@ -405,10 +453,14 @@ public class SectionInformation extends NetObject  {
 
     public ConfigurationAllowDefinition getAllowDefinition() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAllowDefinition = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AllowDefinition");
+            retObjectAllowDefinition = classInstance.Get("AllowDefinition");
+            JCObject val = (JCObject)retObjectAllowDefinition;
             return new ConfigurationAllowDefinition(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAllowDefinition != null ? retObjectAllowDefinition.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -416,7 +468,7 @@ public class SectionInformation extends NetObject  {
 
     public void setAllowDefinition(ConfigurationAllowDefinition AllowDefinition) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.configuration.ConfigurationErrorsException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AllowDefinition", AllowDefinition == null ? null : AllowDefinition.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -426,10 +478,14 @@ public class SectionInformation extends NetObject  {
 
     public ConfigurationAllowExeDefinition getAllowExeDefinition() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAllowExeDefinition = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AllowExeDefinition");
+            retObjectAllowExeDefinition = classInstance.Get("AllowExeDefinition");
+            JCObject val = (JCObject)retObjectAllowExeDefinition;
             return new ConfigurationAllowExeDefinition(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAllowExeDefinition != null ? retObjectAllowExeDefinition.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -437,7 +493,7 @@ public class SectionInformation extends NetObject  {
 
     public void setAllowExeDefinition(ConfigurationAllowExeDefinition AllowExeDefinition) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.configuration.ConfigurationErrorsException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AllowExeDefinition", AllowExeDefinition == null ? null : AllowExeDefinition.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -447,10 +503,14 @@ public class SectionInformation extends NetObject  {
 
     public OverrideMode getOverrideMode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOverrideMode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("OverrideMode");
+            retObjectOverrideMode = classInstance.Get("OverrideMode");
+            JCObject val = (JCObject)retObjectOverrideMode;
             return new OverrideMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOverrideMode != null ? retObjectOverrideMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -458,7 +518,7 @@ public class SectionInformation extends NetObject  {
 
     public void setOverrideMode(OverrideMode OverrideMode) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("OverrideMode", OverrideMode == null ? null : OverrideMode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -468,10 +528,14 @@ public class SectionInformation extends NetObject  {
 
     public OverrideMode getOverrideModeDefault() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOverrideModeDefault = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("OverrideModeDefault");
+            retObjectOverrideModeDefault = classInstance.Get("OverrideModeDefault");
+            JCObject val = (JCObject)retObjectOverrideModeDefault;
             return new OverrideMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOverrideModeDefault != null ? retObjectOverrideModeDefault.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -479,7 +543,7 @@ public class SectionInformation extends NetObject  {
 
     public void setOverrideModeDefault(OverrideMode OverrideModeDefault) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.configuration.ConfigurationErrorsException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("OverrideModeDefault", OverrideModeDefault == null ? null : OverrideModeDefault.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -489,10 +553,14 @@ public class SectionInformation extends NetObject  {
 
     public OverrideMode getOverrideModeEffective() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOverrideModeEffective = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("OverrideModeEffective");
+            retObjectOverrideModeEffective = classInstance.Get("OverrideModeEffective");
+            JCObject val = (JCObject)retObjectOverrideModeEffective;
             return new OverrideMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOverrideModeEffective != null ? retObjectOverrideModeEffective.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -500,10 +568,14 @@ public class SectionInformation extends NetObject  {
 
     public ProtectedConfigurationProvider getProtectionProvider() throws Throwable, system.configuration.ConfigurationErrorsException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.OverflowException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.configuration.ConfigurationException, system.PlatformNotSupportedException, system.TypeLoadException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProtectionProvider = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ProtectionProvider");
+            retObjectProtectionProvider = classInstance.Get("ProtectionProvider");
+            JCObject val = (JCObject)retObjectProtectionProvider;
             return new ProtectedConfigurationProvider(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectProtectionProvider != null ? retObjectProtectionProvider.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -511,9 +583,13 @@ public class SectionInformation extends NetObject  {
 
     public java.lang.String getConfigSource() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConfigSource = null;
         try {
-            return (java.lang.String)classInstance.Get("ConfigSource");
+            retObjectConfigSource = classInstance.Get("ConfigSource");
+            return (java.lang.String)retObjectConfigSource;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectConfigSource != null ? retObjectConfigSource.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -521,7 +597,7 @@ public class SectionInformation extends NetObject  {
 
     public void setConfigSource(java.lang.String ConfigSource) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.IndexOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ConfigSource", ConfigSource);
         } catch (JCNativeException jcne) {
@@ -531,9 +607,13 @@ public class SectionInformation extends NetObject  {
 
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectName = null;
         try {
-            return (java.lang.String)classInstance.Get("Name");
+            retObjectName = classInstance.Get("Name");
+            return (java.lang.String)retObjectName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectName != null ? retObjectName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -541,7 +621,7 @@ public class SectionInformation extends NetObject  {
 
     public void setName(java.lang.String Name) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Name", Name);
         } catch (JCNativeException jcne) {
@@ -551,9 +631,13 @@ public class SectionInformation extends NetObject  {
 
     public java.lang.String getSectionName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSectionName = null;
         try {
-            return (java.lang.String)classInstance.Get("SectionName");
+            retObjectSectionName = classInstance.Get("SectionName");
+            return (java.lang.String)retObjectSectionName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSectionName != null ? retObjectSectionName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -561,9 +645,13 @@ public class SectionInformation extends NetObject  {
 
     public java.lang.String getType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectType = null;
         try {
-            return (java.lang.String)classInstance.Get("Type");
+            retObjectType = classInstance.Get("Type");
+            return (java.lang.String)retObjectType;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectType != null ? retObjectType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -571,7 +659,7 @@ public class SectionInformation extends NetObject  {
 
     public void setType(java.lang.String Type) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.configuration.ConfigurationErrorsException, system.TypeLoadException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Type", Type);
         } catch (JCNativeException jcne) {

@@ -180,9 +180,13 @@ public class SqlWorkflowInstanceStore extends InstanceStore  {
     
     public boolean getEnqueueRunCommands() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEnqueueRunCommands = null;
         try {
-            return (boolean)classInstance.Get("EnqueueRunCommands");
+            retObjectEnqueueRunCommands = classInstance.Get("EnqueueRunCommands");
+            return (boolean)retObjectEnqueueRunCommands;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectEnqueueRunCommands != null ? retObjectEnqueueRunCommands.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,7 +194,7 @@ public class SqlWorkflowInstanceStore extends InstanceStore  {
 
     public void setEnqueueRunCommands(boolean EnqueueRunCommands) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EnqueueRunCommands", EnqueueRunCommands);
         } catch (JCNativeException jcne) {
@@ -200,9 +204,20 @@ public class SqlWorkflowInstanceStore extends InstanceStore  {
 
     public int getMaxConnectionRetries() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxConnectionRetries = null;
         try {
-            return (int)classInstance.Get("MaxConnectionRetries");
+            retObjectMaxConnectionRetries = classInstance.Get("MaxConnectionRetries");
+            return (int)retObjectMaxConnectionRetries;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaxConnectionRetries_ToString = retObjectMaxConnectionRetries == null ? "null" : retObjectMaxConnectionRetries.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMaxConnectionRetriesNumber = (java.lang.Number)retObjectMaxConnectionRetries;
+                return retObjectMaxConnectionRetriesNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxConnectionRetries != null ? retObjectMaxConnectionRetries.getClass() : "null", retObjectMaxConnectionRetries_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -210,7 +225,7 @@ public class SqlWorkflowInstanceStore extends InstanceStore  {
 
     public void setMaxConnectionRetries(int MaxConnectionRetries) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaxConnectionRetries", MaxConnectionRetries);
         } catch (JCNativeException jcne) {
@@ -220,10 +235,14 @@ public class SqlWorkflowInstanceStore extends InstanceStore  {
 
     public InstanceCompletionAction getInstanceCompletionAction() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInstanceCompletionAction = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("InstanceCompletionAction");
+            retObjectInstanceCompletionAction = classInstance.Get("InstanceCompletionAction");
+            JCObject val = (JCObject)retObjectInstanceCompletionAction;
             return new InstanceCompletionAction(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInstanceCompletionAction != null ? retObjectInstanceCompletionAction.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -231,7 +250,7 @@ public class SqlWorkflowInstanceStore extends InstanceStore  {
 
     public void setInstanceCompletionAction(InstanceCompletionAction InstanceCompletionAction) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("InstanceCompletionAction", InstanceCompletionAction == null ? null : InstanceCompletionAction.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -241,10 +260,14 @@ public class SqlWorkflowInstanceStore extends InstanceStore  {
 
     public InstanceEncodingOption getInstanceEncodingOption() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInstanceEncodingOption = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("InstanceEncodingOption");
+            retObjectInstanceEncodingOption = classInstance.Get("InstanceEncodingOption");
+            JCObject val = (JCObject)retObjectInstanceEncodingOption;
             return new InstanceEncodingOption(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInstanceEncodingOption != null ? retObjectInstanceEncodingOption.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -252,7 +275,7 @@ public class SqlWorkflowInstanceStore extends InstanceStore  {
 
     public void setInstanceEncodingOption(InstanceEncodingOption InstanceEncodingOption) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("InstanceEncodingOption", InstanceEncodingOption == null ? null : InstanceEncodingOption.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -262,10 +285,14 @@ public class SqlWorkflowInstanceStore extends InstanceStore  {
 
     public InstanceLockedExceptionAction getInstanceLockedExceptionAction() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInstanceLockedExceptionAction = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("InstanceLockedExceptionAction");
+            retObjectInstanceLockedExceptionAction = classInstance.Get("InstanceLockedExceptionAction");
+            JCObject val = (JCObject)retObjectInstanceLockedExceptionAction;
             return new InstanceLockedExceptionAction(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInstanceLockedExceptionAction != null ? retObjectInstanceLockedExceptionAction.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -273,7 +300,7 @@ public class SqlWorkflowInstanceStore extends InstanceStore  {
 
     public void setInstanceLockedExceptionAction(InstanceLockedExceptionAction InstanceLockedExceptionAction) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("InstanceLockedExceptionAction", InstanceLockedExceptionAction == null ? null : InstanceLockedExceptionAction.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -283,9 +310,13 @@ public class SqlWorkflowInstanceStore extends InstanceStore  {
 
     public java.lang.String getConnectionString() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConnectionString = null;
         try {
-            return (java.lang.String)classInstance.Get("ConnectionString");
+            retObjectConnectionString = classInstance.Get("ConnectionString");
+            return (java.lang.String)retObjectConnectionString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectConnectionString != null ? retObjectConnectionString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -293,7 +324,7 @@ public class SqlWorkflowInstanceStore extends InstanceStore  {
 
     public void setConnectionString(java.lang.String ConnectionString) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ConnectionString", ConnectionString);
         } catch (JCNativeException jcne) {
@@ -303,10 +334,14 @@ public class SqlWorkflowInstanceStore extends InstanceStore  {
 
     public TimeSpan getHostLockRenewalPeriod() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHostLockRenewalPeriod = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("HostLockRenewalPeriod");
+            retObjectHostLockRenewalPeriod = classInstance.Get("HostLockRenewalPeriod");
+            JCObject val = (JCObject)retObjectHostLockRenewalPeriod;
             return new TimeSpan(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHostLockRenewalPeriod != null ? retObjectHostLockRenewalPeriod.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -314,7 +349,7 @@ public class SqlWorkflowInstanceStore extends InstanceStore  {
 
     public void setHostLockRenewalPeriod(TimeSpan HostLockRenewalPeriod) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("HostLockRenewalPeriod", HostLockRenewalPeriod == null ? null : HostLockRenewalPeriod.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -324,10 +359,14 @@ public class SqlWorkflowInstanceStore extends InstanceStore  {
 
     public TimeSpan getRunnableInstancesDetectionPeriod() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRunnableInstancesDetectionPeriod = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RunnableInstancesDetectionPeriod");
+            retObjectRunnableInstancesDetectionPeriod = classInstance.Get("RunnableInstancesDetectionPeriod");
+            JCObject val = (JCObject)retObjectRunnableInstancesDetectionPeriod;
             return new TimeSpan(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRunnableInstancesDetectionPeriod != null ? retObjectRunnableInstancesDetectionPeriod.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -335,7 +374,7 @@ public class SqlWorkflowInstanceStore extends InstanceStore  {
 
     public void setRunnableInstancesDetectionPeriod(TimeSpan RunnableInstancesDetectionPeriod) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RunnableInstancesDetectionPeriod", RunnableInstancesDetectionPeriod == null ? null : RunnableInstancesDetectionPeriod.getJCOInstance());
         } catch (JCNativeException jcne) {

@@ -142,10 +142,14 @@ public class IStateFormatterImplementation extends NetObject implements IStateFo
     
     public NetObject Deserialize(java.lang.String serializedState) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDeserialize = null;
         try {
-            JCObject objDeserialize = (JCObject)classInstance.Invoke("Deserialize", serializedState);
+            retObjectDeserialize = classInstance.Invoke("Deserialize", serializedState);
+            JCObject objDeserialize = (JCObject)retObjectDeserialize;
             return new NetObject(objDeserialize);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDeserialize != null ? retObjectDeserialize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -153,9 +157,13 @@ public class IStateFormatterImplementation extends NetObject implements IStateFo
 
     public java.lang.String Serialize(NetObject state) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSerialize = null;
         try {
-            return (java.lang.String)classInstance.Invoke("Serialize", state == null ? null : state.getJCOInstance());
+            retObjectSerialize = classInstance.Invoke("Serialize", state == null ? null : state.getJCOInstance());
+            return (java.lang.String)retObjectSerialize;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectSerialize != null ? retObjectSerialize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

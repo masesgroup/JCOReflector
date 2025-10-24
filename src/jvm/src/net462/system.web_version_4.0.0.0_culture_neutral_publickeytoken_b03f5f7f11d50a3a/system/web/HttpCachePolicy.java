@@ -163,9 +163,13 @@ public class HttpCachePolicy extends NetObject  {
     
     public boolean GetETagFromFileDependencies() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetETagFromFileDependencies = null;
         try {
-            return (boolean)classInstance.Invoke("GetETagFromFileDependencies");
+            retObjectGetETagFromFileDependencies = classInstance.Invoke("GetETagFromFileDependencies");
+            return (boolean)retObjectGetETagFromFileDependencies;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectGetETagFromFileDependencies != null ? retObjectGetETagFromFileDependencies.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -173,9 +177,13 @@ public class HttpCachePolicy extends NetObject  {
 
     public boolean GetIgnoreRangeRequests() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetIgnoreRangeRequests = null;
         try {
-            return (boolean)classInstance.Invoke("GetIgnoreRangeRequests");
+            retObjectGetIgnoreRangeRequests = classInstance.Invoke("GetIgnoreRangeRequests");
+            return (boolean)retObjectGetIgnoreRangeRequests;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectGetIgnoreRangeRequests != null ? retObjectGetIgnoreRangeRequests.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,9 +191,13 @@ public class HttpCachePolicy extends NetObject  {
 
     public boolean GetLastModifiedFromFileDependencies() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetLastModifiedFromFileDependencies = null;
         try {
-            return (boolean)classInstance.Invoke("GetLastModifiedFromFileDependencies");
+            retObjectGetLastModifiedFromFileDependencies = classInstance.Invoke("GetLastModifiedFromFileDependencies");
+            return (boolean)retObjectGetLastModifiedFromFileDependencies;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectGetLastModifiedFromFileDependencies != null ? retObjectGetLastModifiedFromFileDependencies.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,9 +205,13 @@ public class HttpCachePolicy extends NetObject  {
 
     public boolean GetNoServerCaching() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetNoServerCaching = null;
         try {
-            return (boolean)classInstance.Invoke("GetNoServerCaching");
+            retObjectGetNoServerCaching = classInstance.Invoke("GetNoServerCaching");
+            return (boolean)retObjectGetNoServerCaching;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectGetNoServerCaching != null ? retObjectGetNoServerCaching.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,9 +219,13 @@ public class HttpCachePolicy extends NetObject  {
 
     public boolean GetNoStore() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetNoStore = null;
         try {
-            return (boolean)classInstance.Invoke("GetNoStore");
+            retObjectGetNoStore = classInstance.Invoke("GetNoStore");
+            return (boolean)retObjectGetNoStore;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectGetNoStore != null ? retObjectGetNoStore.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,9 +233,13 @@ public class HttpCachePolicy extends NetObject  {
 
     public boolean GetNoTransforms() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetNoTransforms = null;
         try {
-            return (boolean)classInstance.Invoke("GetNoTransforms");
+            retObjectGetNoTransforms = classInstance.Invoke("GetNoTransforms");
+            return (boolean)retObjectGetNoTransforms;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectGetNoTransforms != null ? retObjectGetNoTransforms.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -223,9 +247,13 @@ public class HttpCachePolicy extends NetObject  {
 
     public boolean HasSlidingExpiration() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHasSlidingExpiration = null;
         try {
-            return (boolean)classInstance.Invoke("HasSlidingExpiration");
+            retObjectHasSlidingExpiration = classInstance.Invoke("HasSlidingExpiration");
+            return (boolean)retObjectHasSlidingExpiration;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectHasSlidingExpiration != null ? retObjectHasSlidingExpiration.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -233,9 +261,13 @@ public class HttpCachePolicy extends NetObject  {
 
     public boolean IsModified() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsModified = null;
         try {
-            return (boolean)classInstance.Invoke("IsModified");
+            retObjectIsModified = classInstance.Invoke("IsModified");
+            return (boolean)retObjectIsModified;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsModified != null ? retObjectIsModified.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -243,9 +275,13 @@ public class HttpCachePolicy extends NetObject  {
 
     public boolean IsValidUntilExpires() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsValidUntilExpires = null;
         try {
-            return (boolean)classInstance.Invoke("IsValidUntilExpires");
+            retObjectIsValidUntilExpires = classInstance.Invoke("IsValidUntilExpires");
+            return (boolean)retObjectIsValidUntilExpires;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsValidUntilExpires != null ? retObjectIsValidUntilExpires.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -253,9 +289,20 @@ public class HttpCachePolicy extends NetObject  {
 
     public int GetOmitVaryStar() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetOmitVaryStar = null;
         try {
-            return (int)classInstance.Invoke("GetOmitVaryStar");
+            retObjectGetOmitVaryStar = classInstance.Invoke("GetOmitVaryStar");
+            return (int)retObjectGetOmitVaryStar;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetOmitVaryStar_ToString = retObjectGetOmitVaryStar == null ? "null" : retObjectGetOmitVaryStar.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetOmitVaryStarNumber = (java.lang.Number)retObjectGetOmitVaryStar;
+                return retObjectGetOmitVaryStarNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetOmitVaryStar != null ? retObjectGetOmitVaryStar.getClass() : "null", retObjectGetOmitVaryStar_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -263,10 +310,14 @@ public class HttpCachePolicy extends NetObject  {
 
     public DateTime GetExpires() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetExpires = null;
         try {
-            JCObject objGetExpires = (JCObject)classInstance.Invoke("GetExpires");
+            retObjectGetExpires = classInstance.Invoke("GetExpires");
+            JCObject objGetExpires = (JCObject)retObjectGetExpires;
             return new DateTime(objGetExpires);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetExpires != null ? retObjectGetExpires.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -274,10 +325,14 @@ public class HttpCachePolicy extends NetObject  {
 
     public DateTime GetUtcLastModified() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetUtcLastModified = null;
         try {
-            JCObject objGetUtcLastModified = (JCObject)classInstance.Invoke("GetUtcLastModified");
+            retObjectGetUtcLastModified = classInstance.Invoke("GetUtcLastModified");
+            JCObject objGetUtcLastModified = (JCObject)retObjectGetUtcLastModified;
             return new DateTime(objGetUtcLastModified);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetUtcLastModified != null ? retObjectGetUtcLastModified.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -285,9 +340,13 @@ public class HttpCachePolicy extends NetObject  {
 
     public java.lang.String GetCacheExtensions() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetCacheExtensions = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetCacheExtensions");
+            retObjectGetCacheExtensions = classInstance.Invoke("GetCacheExtensions");
+            return (java.lang.String)retObjectGetCacheExtensions;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetCacheExtensions != null ? retObjectGetCacheExtensions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -295,9 +354,13 @@ public class HttpCachePolicy extends NetObject  {
 
     public java.lang.String GetETag() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetETag = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetETag");
+            retObjectGetETag = classInstance.Invoke("GetETag");
+            return (java.lang.String)retObjectGetETag;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetETag != null ? retObjectGetETag.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -305,9 +368,13 @@ public class HttpCachePolicy extends NetObject  {
 
     public java.lang.String GetVaryByCustom() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetVaryByCustom = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetVaryByCustom");
+            retObjectGetVaryByCustom = classInstance.Invoke("GetVaryByCustom");
+            return (java.lang.String)retObjectGetVaryByCustom;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetVaryByCustom != null ? retObjectGetVaryByCustom.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -315,10 +382,14 @@ public class HttpCachePolicy extends NetObject  {
 
     public TimeSpan GetMaxAge() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetMaxAge = null;
         try {
-            JCObject objGetMaxAge = (JCObject)classInstance.Invoke("GetMaxAge");
+            retObjectGetMaxAge = classInstance.Invoke("GetMaxAge");
+            JCObject objGetMaxAge = (JCObject)retObjectGetMaxAge;
             return new TimeSpan(objGetMaxAge);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetMaxAge != null ? retObjectGetMaxAge.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -326,10 +397,14 @@ public class HttpCachePolicy extends NetObject  {
 
     public TimeSpan GetProxyMaxAge() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetProxyMaxAge = null;
         try {
-            JCObject objGetProxyMaxAge = (JCObject)classInstance.Invoke("GetProxyMaxAge");
+            retObjectGetProxyMaxAge = classInstance.Invoke("GetProxyMaxAge");
+            JCObject objGetProxyMaxAge = (JCObject)retObjectGetProxyMaxAge;
             return new TimeSpan(objGetProxyMaxAge);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetProxyMaxAge != null ? retObjectGetProxyMaxAge.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -337,10 +412,14 @@ public class HttpCachePolicy extends NetObject  {
 
     public HttpCacheability GetCacheability() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetCacheability = null;
         try {
-            JCObject objGetCacheability = (JCObject)classInstance.Invoke("GetCacheability");
+            retObjectGetCacheability = classInstance.Invoke("GetCacheability");
+            JCObject objGetCacheability = (JCObject)retObjectGetCacheability;
             return new HttpCacheability(objGetCacheability);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCacheability != null ? retObjectGetCacheability.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -348,10 +427,14 @@ public class HttpCachePolicy extends NetObject  {
 
     public HttpCacheRevalidation GetRevalidation() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetRevalidation = null;
         try {
-            JCObject objGetRevalidation = (JCObject)classInstance.Invoke("GetRevalidation");
+            retObjectGetRevalidation = classInstance.Invoke("GetRevalidation");
+            JCObject objGetRevalidation = (JCObject)retObjectGetRevalidation;
             return new HttpCacheRevalidation(objGetRevalidation);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetRevalidation != null ? retObjectGetRevalidation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -359,7 +442,7 @@ public class HttpCachePolicy extends NetObject  {
 
     public void AddValidationCallback(HttpCacheValidateHandler handler, NetObject data) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddValidationCallback", handler, data == null ? null : data.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -369,7 +452,7 @@ public class HttpCachePolicy extends NetObject  {
 
     public void AppendCacheExtension(java.lang.String extension) throws Throwable, system.ArgumentNullException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AppendCacheExtension", extension);
         } catch (JCNativeException jcne) {
@@ -379,7 +462,7 @@ public class HttpCachePolicy extends NetObject  {
 
     public void SetAllowResponseInBrowserHistory(boolean allow) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetAllowResponseInBrowserHistory", allow);
         } catch (JCNativeException jcne) {
@@ -389,7 +472,7 @@ public class HttpCachePolicy extends NetObject  {
 
     public void SetCacheability(HttpCacheability cacheability) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetCacheability", cacheability == null ? null : cacheability.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -399,7 +482,7 @@ public class HttpCachePolicy extends NetObject  {
 
     public void SetCacheability(HttpCacheability cacheability, java.lang.String field) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetCacheability", cacheability == null ? null : cacheability.getJCOInstance(), field);
         } catch (JCNativeException jcne) {
@@ -409,7 +492,7 @@ public class HttpCachePolicy extends NetObject  {
 
     public void SetETag(java.lang.String etag) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetETag", etag);
         } catch (JCNativeException jcne) {
@@ -419,7 +502,7 @@ public class HttpCachePolicy extends NetObject  {
 
     public void SetETagFromFileDependencies() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetETagFromFileDependencies");
         } catch (JCNativeException jcne) {
@@ -429,7 +512,7 @@ public class HttpCachePolicy extends NetObject  {
 
     public void SetExpires(DateTime date) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidTimeZoneException, system.NotSupportedException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetExpires", date == null ? null : date.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -439,7 +522,7 @@ public class HttpCachePolicy extends NetObject  {
 
     public void SetLastModified(DateTime date) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidTimeZoneException, system.NotSupportedException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetLastModified", date == null ? null : date.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -449,7 +532,7 @@ public class HttpCachePolicy extends NetObject  {
 
     public void SetLastModifiedFromFileDependencies() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetLastModifiedFromFileDependencies");
         } catch (JCNativeException jcne) {
@@ -459,7 +542,7 @@ public class HttpCachePolicy extends NetObject  {
 
     public void SetMaxAge(TimeSpan delta) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetMaxAge", delta == null ? null : delta.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -469,7 +552,7 @@ public class HttpCachePolicy extends NetObject  {
 
     public void SetNoServerCaching() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetNoServerCaching");
         } catch (JCNativeException jcne) {
@@ -479,7 +562,7 @@ public class HttpCachePolicy extends NetObject  {
 
     public void SetNoStore() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetNoStore");
         } catch (JCNativeException jcne) {
@@ -489,7 +572,7 @@ public class HttpCachePolicy extends NetObject  {
 
     public void SetNoTransforms() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetNoTransforms");
         } catch (JCNativeException jcne) {
@@ -499,7 +582,7 @@ public class HttpCachePolicy extends NetObject  {
 
     public void SetOmitVaryStar(boolean omit) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetOmitVaryStar", omit);
         } catch (JCNativeException jcne) {
@@ -509,7 +592,7 @@ public class HttpCachePolicy extends NetObject  {
 
     public void SetProxyMaxAge(TimeSpan delta) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetProxyMaxAge", delta == null ? null : delta.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -519,7 +602,7 @@ public class HttpCachePolicy extends NetObject  {
 
     public void SetRevalidation(HttpCacheRevalidation revalidation) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetRevalidation", revalidation == null ? null : revalidation.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -529,7 +612,7 @@ public class HttpCachePolicy extends NetObject  {
 
     public void SetSlidingExpiration(boolean slide) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetSlidingExpiration", slide);
         } catch (JCNativeException jcne) {
@@ -539,7 +622,7 @@ public class HttpCachePolicy extends NetObject  {
 
     public void SetValidUntilExpires(boolean validUntilExpires) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetValidUntilExpires", validUntilExpires);
         } catch (JCNativeException jcne) {
@@ -549,7 +632,7 @@ public class HttpCachePolicy extends NetObject  {
 
     public void SetVaryByCustom(java.lang.String custom) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetVaryByCustom", custom);
         } catch (JCNativeException jcne) {
@@ -563,10 +646,14 @@ public class HttpCachePolicy extends NetObject  {
     
     public DateTime getUtcTimestampCreated() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUtcTimestampCreated = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("UtcTimestampCreated");
+            retObjectUtcTimestampCreated = classInstance.Get("UtcTimestampCreated");
+            JCObject val = (JCObject)retObjectUtcTimestampCreated;
             return new DateTime(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUtcTimestampCreated != null ? retObjectUtcTimestampCreated.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -574,7 +661,7 @@ public class HttpCachePolicy extends NetObject  {
 
     public void setUtcTimestampCreated(DateTime UtcTimestampCreated) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UtcTimestampCreated", UtcTimestampCreated == null ? null : UtcTimestampCreated.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -584,10 +671,14 @@ public class HttpCachePolicy extends NetObject  {
 
     public HttpCacheVaryByContentEncodings getVaryByContentEncodings() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVaryByContentEncodings = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("VaryByContentEncodings");
+            retObjectVaryByContentEncodings = classInstance.Get("VaryByContentEncodings");
+            JCObject val = (JCObject)retObjectVaryByContentEncodings;
             return new HttpCacheVaryByContentEncodings(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVaryByContentEncodings != null ? retObjectVaryByContentEncodings.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -595,10 +686,14 @@ public class HttpCachePolicy extends NetObject  {
 
     public HttpCacheVaryByHeaders getVaryByHeaders() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVaryByHeaders = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("VaryByHeaders");
+            retObjectVaryByHeaders = classInstance.Get("VaryByHeaders");
+            JCObject val = (JCObject)retObjectVaryByHeaders;
             return new HttpCacheVaryByHeaders(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVaryByHeaders != null ? retObjectVaryByHeaders.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -606,10 +701,14 @@ public class HttpCachePolicy extends NetObject  {
 
     public HttpCacheVaryByParams getVaryByParams() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVaryByParams = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("VaryByParams");
+            retObjectVaryByParams = classInstance.Get("VaryByParams");
+            JCObject val = (JCObject)retObjectVaryByParams;
             return new HttpCacheVaryByParams(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVaryByParams != null ? retObjectVaryByParams.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

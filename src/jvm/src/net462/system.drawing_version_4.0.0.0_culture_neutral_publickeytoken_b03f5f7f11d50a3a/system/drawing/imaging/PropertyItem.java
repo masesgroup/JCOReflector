@@ -159,10 +159,12 @@ public class PropertyItem extends NetObject  {
     
     public byte[] getValue() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValue = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("Value");
+            retObjectValue = classInstance.Get("Value");
+            JCObject resultingObjects = (JCObject)retObjectValue;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -171,6 +173,8 @@ public class PropertyItem extends NetObject  {
 				resultingArray[indexValue] = (byte)resultingArrayList.get(indexValue);
 			}
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into JCObject", retObjectValue != null ? retObjectValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,7 +182,7 @@ public class PropertyItem extends NetObject  {
 
     public void setValue(byte[] Value) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Value", Value);
         } catch (JCNativeException jcne) {
@@ -188,9 +192,20 @@ public class PropertyItem extends NetObject  {
 
     public short getType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectType = null;
         try {
-            return (short)classInstance.Get("Type");
+            retObjectType = classInstance.Get("Type");
+            return (short)retObjectType;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectType_ToString = retObjectType == null ? "null" : retObjectType.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectTypeNumber = (java.lang.Number)retObjectType;
+                return retObjectTypeNumber.shortValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into short and, as fallback solution, into java.lang.Number", retObjectType != null ? retObjectType.getClass() : "null", retObjectType_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,7 +213,7 @@ public class PropertyItem extends NetObject  {
 
     public void setType(short Type) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Type", Type);
         } catch (JCNativeException jcne) {
@@ -208,9 +223,20 @@ public class PropertyItem extends NetObject  {
 
     public int getId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectId = null;
         try {
-            return (int)classInstance.Get("Id");
+            retObjectId = classInstance.Get("Id");
+            return (int)retObjectId;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectId_ToString = retObjectId == null ? "null" : retObjectId.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectIdNumber = (java.lang.Number)retObjectId;
+                return retObjectIdNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectId != null ? retObjectId.getClass() : "null", retObjectId_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -218,7 +244,7 @@ public class PropertyItem extends NetObject  {
 
     public void setId(int Id) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Id", Id);
         } catch (JCNativeException jcne) {
@@ -228,9 +254,20 @@ public class PropertyItem extends NetObject  {
 
     public int getLen() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLen = null;
         try {
-            return (int)classInstance.Get("Len");
+            retObjectLen = classInstance.Get("Len");
+            return (int)retObjectLen;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectLen_ToString = retObjectLen == null ? "null" : retObjectLen.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectLenNumber = (java.lang.Number)retObjectLen;
+                return retObjectLenNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectLen != null ? retObjectLen.getClass() : "null", retObjectLen_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -238,7 +275,7 @@ public class PropertyItem extends NetObject  {
 
     public void setLen(int Len) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Len", Len);
         } catch (JCNativeException jcne) {

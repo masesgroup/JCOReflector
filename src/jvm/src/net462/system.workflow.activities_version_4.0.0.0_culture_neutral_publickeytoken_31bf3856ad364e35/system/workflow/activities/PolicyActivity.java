@@ -177,10 +177,14 @@ public class PolicyActivity extends Activity  {
     
     public RuleSetReference getRuleSetReference() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRuleSetReference = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RuleSetReference");
+            retObjectRuleSetReference = classInstance.Get("RuleSetReference");
+            JCObject val = (JCObject)retObjectRuleSetReference;
             return new RuleSetReference(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRuleSetReference != null ? retObjectRuleSetReference.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,7 +192,7 @@ public class PolicyActivity extends Activity  {
 
     public void setRuleSetReference(RuleSetReference RuleSetReference) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException, system.MulticastNotSupportedException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RuleSetReference", RuleSetReference == null ? null : RuleSetReference.getJCOInstance());
         } catch (JCNativeException jcne) {

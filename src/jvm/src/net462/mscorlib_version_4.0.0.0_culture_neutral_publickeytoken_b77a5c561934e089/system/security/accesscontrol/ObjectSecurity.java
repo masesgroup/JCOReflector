@@ -162,9 +162,13 @@ public class ObjectSecurity extends NetObject  {
     
     public static boolean IsSddlConversionSupported() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsSddlConversionSupported = null;
         try {
-            return (boolean)classType.Invoke("IsSddlConversionSupported");
+            retObjectIsSddlConversionSupported = classType.Invoke("IsSddlConversionSupported");
+            return (boolean)retObjectIsSddlConversionSupported;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsSddlConversionSupported != null ? retObjectIsSddlConversionSupported.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,9 +176,13 @@ public class ObjectSecurity extends NetObject  {
 
     public boolean ModifyAccessRule(AccessControlModification modification, AccessRule rule, JCORefOut<java.util.concurrent.atomic.AtomicBoolean> modified) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectModifyAccessRule = null;
         try {
-            return (boolean)classInstance.Invoke("ModifyAccessRule", modification == null ? null : modification.getJCOInstance(), rule == null ? null : rule.getJCOInstance(), modified.getJCRefOut());
+            retObjectModifyAccessRule = classInstance.Invoke("ModifyAccessRule", modification == null ? null : modification.getJCOInstance(), rule == null ? null : rule.getJCOInstance(), modified.getJCRefOut());
+            return (boolean)retObjectModifyAccessRule;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectModifyAccessRule != null ? retObjectModifyAccessRule.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,9 +190,13 @@ public class ObjectSecurity extends NetObject  {
 
     public boolean ModifyAuditRule(AccessControlModification modification, AuditRule rule, JCORefOut<java.util.concurrent.atomic.AtomicBoolean> modified) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectModifyAuditRule = null;
         try {
-            return (boolean)classInstance.Invoke("ModifyAuditRule", modification == null ? null : modification.getJCOInstance(), rule == null ? null : rule.getJCOInstance(), modified.getJCRefOut());
+            retObjectModifyAuditRule = classInstance.Invoke("ModifyAuditRule", modification == null ? null : modification.getJCOInstance(), rule == null ? null : rule.getJCOInstance(), modified.getJCRefOut());
+            return (boolean)retObjectModifyAuditRule;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectModifyAuditRule != null ? retObjectModifyAuditRule.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,10 +204,12 @@ public class ObjectSecurity extends NetObject  {
 
     public byte[] GetSecurityDescriptorBinaryForm() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSecurityDescriptorBinaryForm = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetSecurityDescriptorBinaryForm");
+            retObjectGetSecurityDescriptorBinaryForm = classInstance.Invoke("GetSecurityDescriptorBinaryForm");
+            JCObject resultingObjects = (JCObject)retObjectGetSecurityDescriptorBinaryForm;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -204,6 +218,8 @@ public class ObjectSecurity extends NetObject  {
 				resultingArray[indexGetSecurityDescriptorBinaryForm] = (byte)resultingArrayList.get(indexGetSecurityDescriptorBinaryForm);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectGetSecurityDescriptorBinaryForm != null ? retObjectGetSecurityDescriptorBinaryForm.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -211,10 +227,14 @@ public class ObjectSecurity extends NetObject  {
 
     public AccessRule AccessRuleFactory(IdentityReference identityReference, int accessMask, boolean isInherited, InheritanceFlags inheritanceFlags, PropagationFlags propagationFlags, AccessControlType type) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAccessRuleFactory = null;
         try {
-            JCObject objAccessRuleFactory = (JCObject)classInstance.Invoke("AccessRuleFactory", identityReference == null ? null : identityReference.getJCOInstance(), accessMask, isInherited, inheritanceFlags == null ? null : inheritanceFlags.getJCOInstance(), propagationFlags == null ? null : propagationFlags.getJCOInstance(), type == null ? null : type.getJCOInstance());
+            retObjectAccessRuleFactory = classInstance.Invoke("AccessRuleFactory", identityReference == null ? null : identityReference.getJCOInstance(), accessMask, isInherited, inheritanceFlags == null ? null : inheritanceFlags.getJCOInstance(), propagationFlags == null ? null : propagationFlags.getJCOInstance(), type == null ? null : type.getJCOInstance());
+            JCObject objAccessRuleFactory = (JCObject)retObjectAccessRuleFactory;
             return new AccessRule(objAccessRuleFactory);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAccessRuleFactory != null ? retObjectAccessRuleFactory.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -222,10 +242,14 @@ public class ObjectSecurity extends NetObject  {
 
     public AuditRule AuditRuleFactory(IdentityReference identityReference, int accessMask, boolean isInherited, InheritanceFlags inheritanceFlags, PropagationFlags propagationFlags, AuditFlags flags) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAuditRuleFactory = null;
         try {
-            JCObject objAuditRuleFactory = (JCObject)classInstance.Invoke("AuditRuleFactory", identityReference == null ? null : identityReference.getJCOInstance(), accessMask, isInherited, inheritanceFlags == null ? null : inheritanceFlags.getJCOInstance(), propagationFlags == null ? null : propagationFlags.getJCOInstance(), flags == null ? null : flags.getJCOInstance());
+            retObjectAuditRuleFactory = classInstance.Invoke("AuditRuleFactory", identityReference == null ? null : identityReference.getJCOInstance(), accessMask, isInherited, inheritanceFlags == null ? null : inheritanceFlags.getJCOInstance(), propagationFlags == null ? null : propagationFlags.getJCOInstance(), flags == null ? null : flags.getJCOInstance());
+            JCObject objAuditRuleFactory = (JCObject)retObjectAuditRuleFactory;
             return new AuditRule(objAuditRuleFactory);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAuditRuleFactory != null ? retObjectAuditRuleFactory.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -233,10 +257,14 @@ public class ObjectSecurity extends NetObject  {
 
     public IdentityReference GetGroup(NetType targetType) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetGroup = null;
         try {
-            JCObject objGetGroup = (JCObject)classInstance.Invoke("GetGroup", targetType == null ? null : targetType.getJCOInstance());
+            retObjectGetGroup = classInstance.Invoke("GetGroup", targetType == null ? null : targetType.getJCOInstance());
+            JCObject objGetGroup = (JCObject)retObjectGetGroup;
             return new IdentityReference(objGetGroup);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetGroup != null ? retObjectGetGroup.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -244,10 +272,14 @@ public class ObjectSecurity extends NetObject  {
 
     public IdentityReference GetOwner(NetType targetType) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetOwner = null;
         try {
-            JCObject objGetOwner = (JCObject)classInstance.Invoke("GetOwner", targetType == null ? null : targetType.getJCOInstance());
+            retObjectGetOwner = classInstance.Invoke("GetOwner", targetType == null ? null : targetType.getJCOInstance());
+            JCObject objGetOwner = (JCObject)retObjectGetOwner;
             return new IdentityReference(objGetOwner);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetOwner != null ? retObjectGetOwner.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -255,9 +287,13 @@ public class ObjectSecurity extends NetObject  {
 
     public java.lang.String GetSecurityDescriptorSddlForm(AccessControlSections includeSections) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSecurityDescriptorSddlForm = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetSecurityDescriptorSddlForm", includeSections == null ? null : includeSections.getJCOInstance());
+            retObjectGetSecurityDescriptorSddlForm = classInstance.Invoke("GetSecurityDescriptorSddlForm", includeSections == null ? null : includeSections.getJCOInstance());
+            return (java.lang.String)retObjectGetSecurityDescriptorSddlForm;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetSecurityDescriptorSddlForm != null ? retObjectGetSecurityDescriptorSddlForm.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -265,7 +301,7 @@ public class ObjectSecurity extends NetObject  {
 
     public void PurgeAccessRules(IdentityReference identity) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("PurgeAccessRules", identity == null ? null : identity.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -275,7 +311,7 @@ public class ObjectSecurity extends NetObject  {
 
     public void PurgeAuditRules(IdentityReference identity) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("PurgeAuditRules", identity == null ? null : identity.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -285,7 +321,7 @@ public class ObjectSecurity extends NetObject  {
 
     public void SetAccessRuleProtection(boolean isProtected, boolean preserveInheritance) throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetAccessRuleProtection", isProtected, preserveInheritance);
         } catch (JCNativeException jcne) {
@@ -295,7 +331,7 @@ public class ObjectSecurity extends NetObject  {
 
     public void SetAuditRuleProtection(boolean isProtected, boolean preserveInheritance) throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetAuditRuleProtection", isProtected, preserveInheritance);
         } catch (JCNativeException jcne) {
@@ -305,7 +341,7 @@ public class ObjectSecurity extends NetObject  {
 
     public void SetGroup(IdentityReference identity) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetGroup", identity == null ? null : identity.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -315,7 +351,7 @@ public class ObjectSecurity extends NetObject  {
 
     public void SetOwner(IdentityReference identity) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetOwner", identity == null ? null : identity.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -325,7 +361,7 @@ public class ObjectSecurity extends NetObject  {
 
     public void SetSecurityDescriptorBinaryForm(byte[] binaryForm) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.SystemException, system.OverflowException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetSecurityDescriptorBinaryForm", (java.lang.Object)binaryForm);
         } catch (JCNativeException jcne) {
@@ -335,7 +371,7 @@ public class ObjectSecurity extends NetObject  {
 
     public void SetSecurityDescriptorBinaryForm(JCORefOut dupParam0) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.SystemException, system.OverflowException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetSecurityDescriptorBinaryForm", (java.lang.Object)dupParam0.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -345,7 +381,7 @@ public class ObjectSecurity extends NetObject  {
 
     public void SetSecurityDescriptorBinaryForm(byte[] binaryForm, AccessControlSections includeSections) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.SystemException, system.OverflowException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetSecurityDescriptorBinaryForm", binaryForm, includeSections == null ? null : includeSections.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -355,7 +391,7 @@ public class ObjectSecurity extends NetObject  {
 
     public void SetSecurityDescriptorBinaryForm(JCORefOut dupParam0, AccessControlSections dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.SystemException, system.OverflowException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetSecurityDescriptorBinaryForm", dupParam0.getJCRefOut(), dupParam1 == null ? null : dupParam1.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -365,7 +401,7 @@ public class ObjectSecurity extends NetObject  {
 
     public void SetSecurityDescriptorSddlForm(java.lang.String sddlForm) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.OutOfMemoryException, system.SystemException, system.ArgumentOutOfRangeException, system.FormatException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetSecurityDescriptorSddlForm", sddlForm);
         } catch (JCNativeException jcne) {
@@ -375,7 +411,7 @@ public class ObjectSecurity extends NetObject  {
 
     public void SetSecurityDescriptorSddlForm(java.lang.String sddlForm, AccessControlSections includeSections) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.OutOfMemoryException, system.SystemException, system.ArgumentOutOfRangeException, system.FormatException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetSecurityDescriptorSddlForm", sddlForm, includeSections == null ? null : includeSections.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -389,9 +425,13 @@ public class ObjectSecurity extends NetObject  {
     
     public boolean getAreAccessRulesCanonical() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAreAccessRulesCanonical = null;
         try {
-            return (boolean)classInstance.Get("AreAccessRulesCanonical");
+            retObjectAreAccessRulesCanonical = classInstance.Get("AreAccessRulesCanonical");
+            return (boolean)retObjectAreAccessRulesCanonical;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAreAccessRulesCanonical != null ? retObjectAreAccessRulesCanonical.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -399,9 +439,13 @@ public class ObjectSecurity extends NetObject  {
 
     public boolean getAreAccessRulesProtected() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAreAccessRulesProtected = null;
         try {
-            return (boolean)classInstance.Get("AreAccessRulesProtected");
+            retObjectAreAccessRulesProtected = classInstance.Get("AreAccessRulesProtected");
+            return (boolean)retObjectAreAccessRulesProtected;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAreAccessRulesProtected != null ? retObjectAreAccessRulesProtected.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -409,9 +453,13 @@ public class ObjectSecurity extends NetObject  {
 
     public boolean getAreAuditRulesCanonical() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAreAuditRulesCanonical = null;
         try {
-            return (boolean)classInstance.Get("AreAuditRulesCanonical");
+            retObjectAreAuditRulesCanonical = classInstance.Get("AreAuditRulesCanonical");
+            return (boolean)retObjectAreAuditRulesCanonical;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAreAuditRulesCanonical != null ? retObjectAreAuditRulesCanonical.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -419,9 +467,13 @@ public class ObjectSecurity extends NetObject  {
 
     public boolean getAreAuditRulesProtected() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAreAuditRulesProtected = null;
         try {
-            return (boolean)classInstance.Get("AreAuditRulesProtected");
+            retObjectAreAuditRulesProtected = classInstance.Get("AreAuditRulesProtected");
+            return (boolean)retObjectAreAuditRulesProtected;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAreAuditRulesProtected != null ? retObjectAreAuditRulesProtected.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -429,10 +481,14 @@ public class ObjectSecurity extends NetObject  {
 
     public NetType getAccessRightType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAccessRightType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AccessRightType");
+            retObjectAccessRightType = classInstance.Get("AccessRightType");
+            JCObject val = (JCObject)retObjectAccessRightType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAccessRightType != null ? retObjectAccessRightType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -440,10 +496,14 @@ public class ObjectSecurity extends NetObject  {
 
     public NetType getAccessRuleType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAccessRuleType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AccessRuleType");
+            retObjectAccessRuleType = classInstance.Get("AccessRuleType");
+            JCObject val = (JCObject)retObjectAccessRuleType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAccessRuleType != null ? retObjectAccessRuleType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -451,10 +511,14 @@ public class ObjectSecurity extends NetObject  {
 
     public NetType getAuditRuleType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAuditRuleType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AuditRuleType");
+            retObjectAuditRuleType = classInstance.Get("AuditRuleType");
+            JCObject val = (JCObject)retObjectAuditRuleType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAuditRuleType != null ? retObjectAuditRuleType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

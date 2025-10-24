@@ -169,9 +169,13 @@ public class ServiceNameCollection extends ReadOnlyCollectionBase  {
     
     public boolean Contains(java.lang.String searchServiceName) throws Throwable, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.diagnostics.UnreachableException, system.InvalidOperationException, system.OutOfMemoryException, system.NullReferenceException, system.UriFormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContains = null;
         try {
-            return (boolean)classInstance.Invoke("Contains", searchServiceName);
+            retObjectContains = classInstance.Invoke("Contains", searchServiceName);
+            return (boolean)retObjectContains;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectContains != null ? retObjectContains.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,10 +183,14 @@ public class ServiceNameCollection extends ReadOnlyCollectionBase  {
 
     public ServiceNameCollection Merge(IEnumerable serviceNames) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException, system.diagnostics.UnreachableException, system.InvalidOperationException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMerge = null;
         try {
-            JCObject objMerge = (JCObject)classInstance.Invoke("Merge", serviceNames == null ? null : serviceNames.getJCOInstance());
+            retObjectMerge = classInstance.Invoke("Merge", serviceNames == null ? null : serviceNames.getJCOInstance());
+            JCObject objMerge = (JCObject)retObjectMerge;
             return new ServiceNameCollection(objMerge);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMerge != null ? retObjectMerge.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,10 +198,14 @@ public class ServiceNameCollection extends ReadOnlyCollectionBase  {
 
     public ServiceNameCollection Merge(java.lang.String serviceName) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException, system.diagnostics.UnreachableException, system.InvalidOperationException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.UriFormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMerge = null;
         try {
-            JCObject objMerge = (JCObject)classInstance.Invoke("Merge", serviceName);
+            retObjectMerge = classInstance.Invoke("Merge", serviceName);
+            JCObject objMerge = (JCObject)retObjectMerge;
             return new ServiceNameCollection(objMerge);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMerge != null ? retObjectMerge.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

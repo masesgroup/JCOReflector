@@ -166,7 +166,7 @@ public class NumericUpDown extends UpDownBase  {
     
     public void BeginInit() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("BeginInit");
         } catch (JCNativeException jcne) {
@@ -176,7 +176,7 @@ public class NumericUpDown extends UpDownBase  {
 
     public void DownButton() throws Throwable, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.InvalidTimeZoneException, system.OverflowException, system.security.SecurityException, system.ArrayTypeMismatchException, system.FormatException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DownButton");
         } catch (JCNativeException jcne) {
@@ -186,7 +186,7 @@ public class NumericUpDown extends UpDownBase  {
 
     public void EndInit() throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EndInit");
         } catch (JCNativeException jcne) {
@@ -196,7 +196,7 @@ public class NumericUpDown extends UpDownBase  {
 
     public void UpButton() throws Throwable, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.InvalidTimeZoneException, system.OverflowException, system.security.SecurityException, system.ArrayTypeMismatchException, system.FormatException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("UpButton");
         } catch (JCNativeException jcne) {
@@ -210,9 +210,13 @@ public class NumericUpDown extends UpDownBase  {
     
     public boolean getHexadecimal() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHexadecimal = null;
         try {
-            return (boolean)classInstance.Get("Hexadecimal");
+            retObjectHexadecimal = classInstance.Get("Hexadecimal");
+            return (boolean)retObjectHexadecimal;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectHexadecimal != null ? retObjectHexadecimal.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -220,7 +224,7 @@ public class NumericUpDown extends UpDownBase  {
 
     public void setHexadecimal(boolean Hexadecimal) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Hexadecimal", Hexadecimal);
         } catch (JCNativeException jcne) {
@@ -230,9 +234,13 @@ public class NumericUpDown extends UpDownBase  {
 
     public boolean getThousandsSeparator() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectThousandsSeparator = null;
         try {
-            return (boolean)classInstance.Get("ThousandsSeparator");
+            retObjectThousandsSeparator = classInstance.Get("ThousandsSeparator");
+            return (boolean)retObjectThousandsSeparator;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectThousandsSeparator != null ? retObjectThousandsSeparator.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -240,7 +248,7 @@ public class NumericUpDown extends UpDownBase  {
 
     public void setThousandsSeparator(boolean ThousandsSeparator) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ThousandsSeparator", ThousandsSeparator);
         } catch (JCNativeException jcne) {
@@ -250,9 +258,20 @@ public class NumericUpDown extends UpDownBase  {
 
     public int getDecimalPlaces() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDecimalPlaces = null;
         try {
-            return (int)classInstance.Get("DecimalPlaces");
+            retObjectDecimalPlaces = classInstance.Get("DecimalPlaces");
+            return (int)retObjectDecimalPlaces;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDecimalPlaces_ToString = retObjectDecimalPlaces == null ? "null" : retObjectDecimalPlaces.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectDecimalPlacesNumber = (java.lang.Number)retObjectDecimalPlaces;
+                return retObjectDecimalPlacesNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectDecimalPlaces != null ? retObjectDecimalPlaces.getClass() : "null", retObjectDecimalPlaces_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -260,7 +279,7 @@ public class NumericUpDown extends UpDownBase  {
 
     public void setDecimalPlaces(int DecimalPlaces) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DecimalPlaces", DecimalPlaces);
         } catch (JCNativeException jcne) {
@@ -270,10 +289,14 @@ public class NumericUpDown extends UpDownBase  {
 
     public Decimal getIncrement() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIncrement = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Increment");
+            retObjectIncrement = classInstance.Get("Increment");
+            JCObject val = (JCObject)retObjectIncrement;
             return new Decimal(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIncrement != null ? retObjectIncrement.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -281,7 +304,7 @@ public class NumericUpDown extends UpDownBase  {
 
     public void setIncrement(Decimal Increment) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Increment", Increment == null ? null : Increment.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -291,10 +314,14 @@ public class NumericUpDown extends UpDownBase  {
 
     public Decimal getMaximum() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaximum = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Maximum");
+            retObjectMaximum = classInstance.Get("Maximum");
+            JCObject val = (JCObject)retObjectMaximum;
             return new Decimal(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMaximum != null ? retObjectMaximum.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -302,7 +329,7 @@ public class NumericUpDown extends UpDownBase  {
 
     public void setMaximum(Decimal Maximum) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Maximum", Maximum == null ? null : Maximum.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -312,10 +339,14 @@ public class NumericUpDown extends UpDownBase  {
 
     public Decimal getMinimum() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMinimum = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Minimum");
+            retObjectMinimum = classInstance.Get("Minimum");
+            JCObject val = (JCObject)retObjectMinimum;
             return new Decimal(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMinimum != null ? retObjectMinimum.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -323,7 +354,7 @@ public class NumericUpDown extends UpDownBase  {
 
     public void setMinimum(Decimal Minimum) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Minimum", Minimum == null ? null : Minimum.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -333,10 +364,14 @@ public class NumericUpDown extends UpDownBase  {
 
     public Decimal getValue() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValue = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Value");
+            retObjectValue = classInstance.Get("Value");
+            JCObject val = (JCObject)retObjectValue;
             return new Decimal(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectValue != null ? retObjectValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -344,7 +379,7 @@ public class NumericUpDown extends UpDownBase  {
 
     public void setValue(Decimal Value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Value", Value == null ? null : Value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -354,10 +389,14 @@ public class NumericUpDown extends UpDownBase  {
 
     public NumericUpDownAccelerationCollection getAccelerations() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAccelerations = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Accelerations");
+            retObjectAccelerations = classInstance.Get("Accelerations");
+            JCObject val = (JCObject)retObjectAccelerations;
             return new NumericUpDownAccelerationCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAccelerations != null ? retObjectAccelerations.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -365,10 +404,14 @@ public class NumericUpDown extends UpDownBase  {
 
     public Padding getPadding() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPadding = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Padding");
+            retObjectPadding = classInstance.Get("Padding");
+            JCObject val = (JCObject)retObjectPadding;
             return new Padding(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPadding != null ? retObjectPadding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -376,7 +419,7 @@ public class NumericUpDown extends UpDownBase  {
 
     public void setPadding(Padding Padding) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.ArrayTypeMismatchException, system.InvalidCastException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Padding", Padding == null ? null : Padding.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -391,7 +434,7 @@ public class NumericUpDown extends UpDownBase  {
 
     public void addPaddingChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("PaddingChanged", handler);
         } catch (JCNativeException jcne) {
@@ -401,7 +444,7 @@ public class NumericUpDown extends UpDownBase  {
 
     public void removePaddingChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("PaddingChanged", handler);
         } catch (JCNativeException jcne) {
@@ -411,7 +454,7 @@ public class NumericUpDown extends UpDownBase  {
 
     public void addTextChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("TextChanged", handler);
         } catch (JCNativeException jcne) {
@@ -421,7 +464,7 @@ public class NumericUpDown extends UpDownBase  {
 
     public void removeTextChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("TextChanged", handler);
         } catch (JCNativeException jcne) {
@@ -431,7 +474,7 @@ public class NumericUpDown extends UpDownBase  {
 
     public void addValueChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ValueChanged", handler);
         } catch (JCNativeException jcne) {
@@ -441,7 +484,7 @@ public class NumericUpDown extends UpDownBase  {
 
     public void removeValueChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ValueChanged", handler);
         } catch (JCNativeException jcne) {

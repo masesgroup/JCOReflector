@@ -158,9 +158,13 @@ public class WebServiceDescriptor extends RoleDescriptor  {
     
     public java.lang.String getServiceDescription() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectServiceDescription = null;
         try {
-            return (java.lang.String)classInstance.Get("ServiceDescription");
+            retObjectServiceDescription = classInstance.Get("ServiceDescription");
+            return (java.lang.String)retObjectServiceDescription;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectServiceDescription != null ? retObjectServiceDescription.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -168,7 +172,7 @@ public class WebServiceDescriptor extends RoleDescriptor  {
 
     public void setServiceDescription(java.lang.String ServiceDescription) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ServiceDescription", ServiceDescription);
         } catch (JCNativeException jcne) {
@@ -178,9 +182,13 @@ public class WebServiceDescriptor extends RoleDescriptor  {
 
     public java.lang.String getServiceDisplayName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectServiceDisplayName = null;
         try {
-            return (java.lang.String)classInstance.Get("ServiceDisplayName");
+            retObjectServiceDisplayName = classInstance.Get("ServiceDisplayName");
+            return (java.lang.String)retObjectServiceDisplayName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectServiceDisplayName != null ? retObjectServiceDisplayName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,7 +196,7 @@ public class WebServiceDescriptor extends RoleDescriptor  {
 
     public void setServiceDisplayName(java.lang.String ServiceDisplayName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ServiceDisplayName", ServiceDisplayName);
         } catch (JCNativeException jcne) {

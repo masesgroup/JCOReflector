@@ -167,9 +167,13 @@ public class IntegerValidatorAttribute extends ConfigurationValidatorAttribute  
     
     public boolean getExcludeRange() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExcludeRange = null;
         try {
-            return (boolean)classInstance.Get("ExcludeRange");
+            retObjectExcludeRange = classInstance.Get("ExcludeRange");
+            return (boolean)retObjectExcludeRange;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectExcludeRange != null ? retObjectExcludeRange.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,7 +181,7 @@ public class IntegerValidatorAttribute extends ConfigurationValidatorAttribute  
 
     public void setExcludeRange(boolean ExcludeRange) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ExcludeRange", ExcludeRange);
         } catch (JCNativeException jcne) {
@@ -187,9 +191,20 @@ public class IntegerValidatorAttribute extends ConfigurationValidatorAttribute  
 
     public int getMaxValue() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxValue = null;
         try {
-            return (int)classInstance.Get("MaxValue");
+            retObjectMaxValue = classInstance.Get("MaxValue");
+            return (int)retObjectMaxValue;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaxValue_ToString = retObjectMaxValue == null ? "null" : retObjectMaxValue.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMaxValueNumber = (java.lang.Number)retObjectMaxValue;
+                return retObjectMaxValueNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxValue != null ? retObjectMaxValue.getClass() : "null", retObjectMaxValue_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,7 +212,7 @@ public class IntegerValidatorAttribute extends ConfigurationValidatorAttribute  
 
     public void setMaxValue(int MaxValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaxValue", MaxValue);
         } catch (JCNativeException jcne) {
@@ -207,9 +222,20 @@ public class IntegerValidatorAttribute extends ConfigurationValidatorAttribute  
 
     public int getMinValue() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMinValue = null;
         try {
-            return (int)classInstance.Get("MinValue");
+            retObjectMinValue = classInstance.Get("MinValue");
+            return (int)retObjectMinValue;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMinValue_ToString = retObjectMinValue == null ? "null" : retObjectMinValue.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMinValueNumber = (java.lang.Number)retObjectMinValue;
+                return retObjectMinValueNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMinValue != null ? retObjectMinValue.getClass() : "null", retObjectMinValue_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -217,7 +243,7 @@ public class IntegerValidatorAttribute extends ConfigurationValidatorAttribute  
 
     public void setMinValue(int MinValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MinValue", MinValue);
         } catch (JCNativeException jcne) {

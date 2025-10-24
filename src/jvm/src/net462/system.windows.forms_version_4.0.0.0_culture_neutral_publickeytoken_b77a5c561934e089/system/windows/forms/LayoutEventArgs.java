@@ -183,10 +183,14 @@ public class LayoutEventArgs extends EventArgs  {
     
     public IComponent getAffectedComponent() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAffectedComponent = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AffectedComponent");
+            retObjectAffectedComponent = classInstance.Get("AffectedComponent");
+            JCObject val = (JCObject)retObjectAffectedComponent;
             return new IComponentImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAffectedComponent != null ? retObjectAffectedComponent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -194,9 +198,13 @@ public class LayoutEventArgs extends EventArgs  {
 
     public java.lang.String getAffectedProperty() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAffectedProperty = null;
         try {
-            return (java.lang.String)classInstance.Get("AffectedProperty");
+            retObjectAffectedProperty = classInstance.Get("AffectedProperty");
+            return (java.lang.String)retObjectAffectedProperty;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectAffectedProperty != null ? retObjectAffectedProperty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -204,10 +212,14 @@ public class LayoutEventArgs extends EventArgs  {
 
     public Control getAffectedControl() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAffectedControl = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AffectedControl");
+            retObjectAffectedControl = classInstance.Get("AffectedControl");
+            JCObject val = (JCObject)retObjectAffectedControl;
             return new Control(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAffectedControl != null ? retObjectAffectedControl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

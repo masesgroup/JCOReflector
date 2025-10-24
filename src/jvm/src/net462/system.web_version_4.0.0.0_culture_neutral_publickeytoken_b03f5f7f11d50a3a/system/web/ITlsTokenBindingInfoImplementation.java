@@ -142,10 +142,12 @@ public class ITlsTokenBindingInfoImplementation extends NetObject implements ITl
     
     public byte[] GetProvidedTokenBindingId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetProvidedTokenBindingId = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetProvidedTokenBindingId");
+            retObjectGetProvidedTokenBindingId = classInstance.Invoke("GetProvidedTokenBindingId");
+            JCObject resultingObjects = (JCObject)retObjectGetProvidedTokenBindingId;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -154,6 +156,8 @@ public class ITlsTokenBindingInfoImplementation extends NetObject implements ITl
 				resultingArray[indexGetProvidedTokenBindingId] = (byte)resultingArrayList.get(indexGetProvidedTokenBindingId);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectGetProvidedTokenBindingId != null ? retObjectGetProvidedTokenBindingId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -161,10 +165,12 @@ public class ITlsTokenBindingInfoImplementation extends NetObject implements ITl
 
     public byte[] GetReferredTokenBindingId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetReferredTokenBindingId = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetReferredTokenBindingId");
+            retObjectGetReferredTokenBindingId = classInstance.Invoke("GetReferredTokenBindingId");
+            JCObject resultingObjects = (JCObject)retObjectGetReferredTokenBindingId;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -173,6 +179,8 @@ public class ITlsTokenBindingInfoImplementation extends NetObject implements ITl
 				resultingArray[indexGetReferredTokenBindingId] = (byte)resultingArrayList.get(indexGetReferredTokenBindingId);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectGetReferredTokenBindingId != null ? retObjectGetReferredTokenBindingId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

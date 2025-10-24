@@ -170,10 +170,14 @@ public class SystemWebCachingSectionGroup extends ConfigurationSectionGroup  {
     
     public CacheSection getCache() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCache = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Cache");
+            retObjectCache = classInstance.Get("Cache");
+            JCObject val = (JCObject)retObjectCache;
             return new CacheSection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCache != null ? retObjectCache.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,10 +185,14 @@ public class SystemWebCachingSectionGroup extends ConfigurationSectionGroup  {
 
     public OutputCacheSection getOutputCache() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOutputCache = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("OutputCache");
+            retObjectOutputCache = classInstance.Get("OutputCache");
+            JCObject val = (JCObject)retObjectOutputCache;
             return new OutputCacheSection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOutputCache != null ? retObjectOutputCache.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,10 +200,14 @@ public class SystemWebCachingSectionGroup extends ConfigurationSectionGroup  {
 
     public OutputCacheSettingsSection getOutputCacheSettings() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOutputCacheSettings = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("OutputCacheSettings");
+            retObjectOutputCacheSettings = classInstance.Get("OutputCacheSettings");
+            JCObject val = (JCObject)retObjectOutputCacheSettings;
             return new OutputCacheSettingsSection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOutputCacheSettings != null ? retObjectOutputCacheSettings.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,10 +215,14 @@ public class SystemWebCachingSectionGroup extends ConfigurationSectionGroup  {
 
     public SqlCacheDependencySection getSqlCacheDependency() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSqlCacheDependency = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SqlCacheDependency");
+            retObjectSqlCacheDependency = classInstance.Get("SqlCacheDependency");
+            JCObject val = (JCObject)retObjectSqlCacheDependency;
             return new SqlCacheDependencySection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSqlCacheDependency != null ? retObjectSqlCacheDependency.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

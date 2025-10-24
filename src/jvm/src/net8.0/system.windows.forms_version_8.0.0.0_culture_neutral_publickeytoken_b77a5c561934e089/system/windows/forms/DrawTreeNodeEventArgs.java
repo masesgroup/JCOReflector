@@ -174,9 +174,13 @@ public class DrawTreeNodeEventArgs extends EventArgs  {
     
     public boolean getDrawDefault() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDrawDefault = null;
         try {
-            return (boolean)classInstance.Get("DrawDefault");
+            retObjectDrawDefault = classInstance.Get("DrawDefault");
+            return (boolean)retObjectDrawDefault;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectDrawDefault != null ? retObjectDrawDefault.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -184,7 +188,7 @@ public class DrawTreeNodeEventArgs extends EventArgs  {
 
     public void setDrawDefault(boolean DrawDefault) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DrawDefault", DrawDefault);
         } catch (JCNativeException jcne) {
@@ -194,10 +198,14 @@ public class DrawTreeNodeEventArgs extends EventArgs  {
 
     public Graphics getGraphics() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGraphics = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Graphics");
+            retObjectGraphics = classInstance.Get("Graphics");
+            JCObject val = (JCObject)retObjectGraphics;
             return new Graphics(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGraphics != null ? retObjectGraphics.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -205,10 +213,14 @@ public class DrawTreeNodeEventArgs extends EventArgs  {
 
     public Rectangle getBounds() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBounds = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Bounds");
+            retObjectBounds = classInstance.Get("Bounds");
+            JCObject val = (JCObject)retObjectBounds;
             return new Rectangle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBounds != null ? retObjectBounds.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -216,10 +228,14 @@ public class DrawTreeNodeEventArgs extends EventArgs  {
 
     public TreeNode getNode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Node");
+            retObjectNode = classInstance.Get("Node");
+            JCObject val = (JCObject)retObjectNode;
             return new TreeNode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNode != null ? retObjectNode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -227,10 +243,14 @@ public class DrawTreeNodeEventArgs extends EventArgs  {
 
     public TreeNodeStates getState() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectState = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("State");
+            retObjectState = classInstance.Get("State");
+            JCObject val = (JCObject)retObjectState;
             return new TreeNodeStates(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectState != null ? retObjectState.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

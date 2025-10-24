@@ -162,7 +162,7 @@ public class PropertyManager extends BindingManagerBase  {
     
     public void AddNew() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddNew");
         } catch (JCNativeException jcne) {
@@ -172,7 +172,7 @@ public class PropertyManager extends BindingManagerBase  {
 
     public void CancelCurrentEdit() throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.MulticastNotSupportedException, system.InvalidOperationException, system.InvalidCastException, system.TypeLoadException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CancelCurrentEdit");
         } catch (JCNativeException jcne) {
@@ -182,7 +182,7 @@ public class PropertyManager extends BindingManagerBase  {
 
     public void EndCurrentEdit() throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.MulticastNotSupportedException, system.InvalidOperationException, system.InvalidCastException, system.TypeLoadException, system.ArgumentOutOfRangeException, system.FormatException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EndCurrentEdit");
         } catch (JCNativeException jcne) {
@@ -192,7 +192,7 @@ public class PropertyManager extends BindingManagerBase  {
 
     public void RemoveAt(int index) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RemoveAt", index);
         } catch (JCNativeException jcne) {
@@ -202,7 +202,7 @@ public class PropertyManager extends BindingManagerBase  {
 
     public void ResumeBinding() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ResumeBinding");
         } catch (JCNativeException jcne) {
@@ -212,7 +212,7 @@ public class PropertyManager extends BindingManagerBase  {
 
     public void SuspendBinding() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SuspendBinding");
         } catch (JCNativeException jcne) {

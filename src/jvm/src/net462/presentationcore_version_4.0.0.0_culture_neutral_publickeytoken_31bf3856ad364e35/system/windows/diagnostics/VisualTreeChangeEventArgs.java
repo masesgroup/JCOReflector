@@ -172,9 +172,20 @@ public class VisualTreeChangeEventArgs extends EventArgs  {
     
     public int getChildIndex() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectChildIndex = null;
         try {
-            return (int)classInstance.Get("ChildIndex");
+            retObjectChildIndex = classInstance.Get("ChildIndex");
+            return (int)retObjectChildIndex;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectChildIndex_ToString = retObjectChildIndex == null ? "null" : retObjectChildIndex.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectChildIndexNumber = (java.lang.Number)retObjectChildIndex;
+                return retObjectChildIndexNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectChildIndex != null ? retObjectChildIndex.getClass() : "null", retObjectChildIndex_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,7 +193,7 @@ public class VisualTreeChangeEventArgs extends EventArgs  {
 
     public void setChildIndex(int ChildIndex) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ChildIndex", ChildIndex);
         } catch (JCNativeException jcne) {
@@ -192,10 +203,14 @@ public class VisualTreeChangeEventArgs extends EventArgs  {
 
     public DependencyObject getChild() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectChild = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Child");
+            retObjectChild = classInstance.Get("Child");
+            JCObject val = (JCObject)retObjectChild;
             return new DependencyObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectChild != null ? retObjectChild.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,7 +218,7 @@ public class VisualTreeChangeEventArgs extends EventArgs  {
 
     public void setChild(DependencyObject Child) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Child", Child == null ? null : Child.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -213,10 +228,14 @@ public class VisualTreeChangeEventArgs extends EventArgs  {
 
     public DependencyObject getParent() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectParent = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Parent");
+            retObjectParent = classInstance.Get("Parent");
+            JCObject val = (JCObject)retObjectParent;
             return new DependencyObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParent != null ? retObjectParent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -224,7 +243,7 @@ public class VisualTreeChangeEventArgs extends EventArgs  {
 
     public void setParent(DependencyObject Parent) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Parent", Parent == null ? null : Parent.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -234,10 +253,14 @@ public class VisualTreeChangeEventArgs extends EventArgs  {
 
     public VisualTreeChangeType getChangeType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectChangeType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ChangeType");
+            retObjectChangeType = classInstance.Get("ChangeType");
+            JCObject val = (JCObject)retObjectChangeType;
             return new VisualTreeChangeType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectChangeType != null ? retObjectChangeType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -245,7 +268,7 @@ public class VisualTreeChangeEventArgs extends EventArgs  {
 
     public void setChangeType(VisualTreeChangeType ChangeType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ChangeType", ChangeType == null ? null : ChangeType.getJCOInstance());
         } catch (JCNativeException jcne) {

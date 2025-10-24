@@ -142,9 +142,13 @@ public class IWorkflowDesignerStorageServiceImplementation extends NetObject imp
     
     public boolean ContainsKey(java.lang.String key) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContainsKey = null;
         try {
-            return (boolean)classInstance.Invoke("ContainsKey", key);
+            retObjectContainsKey = classInstance.Invoke("ContainsKey", key);
+            return (boolean)retObjectContainsKey;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectContainsKey != null ? retObjectContainsKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -152,10 +156,14 @@ public class IWorkflowDesignerStorageServiceImplementation extends NetObject imp
 
     public NetObject GetData(java.lang.String key) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetData = null;
         try {
-            JCObject objGetData = (JCObject)classInstance.Invoke("GetData", key);
+            retObjectGetData = classInstance.Invoke("GetData", key);
+            JCObject objGetData = (JCObject)retObjectGetData;
             return new NetObject(objGetData);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetData != null ? retObjectGetData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -163,7 +171,7 @@ public class IWorkflowDesignerStorageServiceImplementation extends NetObject imp
 
     public void AddData(java.lang.String key, NetObject value) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddData", key, value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -173,7 +181,7 @@ public class IWorkflowDesignerStorageServiceImplementation extends NetObject imp
 
     public void RemoveData(java.lang.String key) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RemoveData", key);
         } catch (JCNativeException jcne) {
@@ -183,7 +191,7 @@ public class IWorkflowDesignerStorageServiceImplementation extends NetObject imp
 
     public void SetData(java.lang.String key, NetObject value) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetData", key, value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {

@@ -147,10 +147,14 @@ public class IResourceServiceImplementation extends NetObject implements IResour
     
     public IResourceReader GetResourceReader(CultureInfo info) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetResourceReader = null;
         try {
-            JCObject objGetResourceReader = (JCObject)classInstance.Invoke("GetResourceReader", info == null ? null : info.getJCOInstance());
+            retObjectGetResourceReader = classInstance.Invoke("GetResourceReader", info == null ? null : info.getJCOInstance());
+            JCObject objGetResourceReader = (JCObject)retObjectGetResourceReader;
             return new IResourceReaderImplementation(objGetResourceReader);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetResourceReader != null ? retObjectGetResourceReader.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -158,10 +162,14 @@ public class IResourceServiceImplementation extends NetObject implements IResour
 
     public IResourceWriter GetResourceWriter(CultureInfo info) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetResourceWriter = null;
         try {
-            JCObject objGetResourceWriter = (JCObject)classInstance.Invoke("GetResourceWriter", info == null ? null : info.getJCOInstance());
+            retObjectGetResourceWriter = classInstance.Invoke("GetResourceWriter", info == null ? null : info.getJCOInstance());
+            JCObject objGetResourceWriter = (JCObject)retObjectGetResourceWriter;
             return new IResourceWriterImplementation(objGetResourceWriter);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetResourceWriter != null ? retObjectGetResourceWriter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

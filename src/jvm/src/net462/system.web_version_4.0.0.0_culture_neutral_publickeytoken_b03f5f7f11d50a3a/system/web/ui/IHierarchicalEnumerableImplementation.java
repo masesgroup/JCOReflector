@@ -144,10 +144,14 @@ public class IHierarchicalEnumerableImplementation extends IEnumerableImplementa
     
     public IHierarchyData GetHierarchyData(NetObject enumeratedItem) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetHierarchyData = null;
         try {
-            JCObject objGetHierarchyData = (JCObject)classInstance.Invoke("GetHierarchyData", enumeratedItem == null ? null : enumeratedItem.getJCOInstance());
+            retObjectGetHierarchyData = classInstance.Invoke("GetHierarchyData", enumeratedItem == null ? null : enumeratedItem.getJCOInstance());
+            JCObject objGetHierarchyData = (JCObject)retObjectGetHierarchyData;
             return new IHierarchyDataImplementation(objGetHierarchyData);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetHierarchyData != null ? retObjectGetHierarchyData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

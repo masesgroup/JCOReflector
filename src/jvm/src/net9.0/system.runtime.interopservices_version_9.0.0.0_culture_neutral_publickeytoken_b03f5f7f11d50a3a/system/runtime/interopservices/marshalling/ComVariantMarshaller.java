@@ -154,10 +154,14 @@ public class ComVariantMarshaller extends NetObject  {
     
     public static NetObject ConvertToManaged(ComVariant unmanaged) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.ArrayTypeMismatchException, system.NullReferenceException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectConvertToManaged = null;
         try {
-            JCObject objConvertToManaged = (JCObject)classType.Invoke("ConvertToManaged", unmanaged == null ? null : unmanaged.getJCOInstance());
+            retObjectConvertToManaged = classType.Invoke("ConvertToManaged", unmanaged == null ? null : unmanaged.getJCOInstance());
+            JCObject objConvertToManaged = (JCObject)retObjectConvertToManaged;
             return new NetObject(objConvertToManaged);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConvertToManaged != null ? retObjectConvertToManaged.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -165,10 +169,14 @@ public class ComVariantMarshaller extends NetObject  {
 
     public static ComVariant ConvertToUnmanaged(NetObject managed) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectConvertToUnmanaged = null;
         try {
-            JCObject objConvertToUnmanaged = (JCObject)classType.Invoke("ConvertToUnmanaged", managed == null ? null : managed.getJCOInstance());
+            retObjectConvertToUnmanaged = classType.Invoke("ConvertToUnmanaged", managed == null ? null : managed.getJCOInstance());
+            JCObject objConvertToUnmanaged = (JCObject)retObjectConvertToUnmanaged;
             return new ComVariant(objConvertToUnmanaged);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConvertToUnmanaged != null ? retObjectConvertToUnmanaged.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,7 +184,7 @@ public class ComVariantMarshaller extends NetObject  {
 
     public static void Free(ComVariant unmanaged) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Free", unmanaged == null ? null : unmanaged.getJCOInstance());
         } catch (JCNativeException jcne) {

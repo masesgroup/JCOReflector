@@ -144,9 +144,13 @@ public class ICustomFormatterImplementation extends NetObject implements ICustom
     
     public java.lang.String Format(java.lang.String format, NetObject arg, IFormatProvider formatProvider) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFormat = null;
         try {
-            return (java.lang.String)classInstance.Invoke("Format", format, arg == null ? null : arg.getJCOInstance(), formatProvider == null ? null : formatProvider.getJCOInstance());
+            retObjectFormat = classInstance.Invoke("Format", format, arg == null ? null : arg.getJCOInstance(), formatProvider == null ? null : formatProvider.getJCOInstance());
+            return (java.lang.String)retObjectFormat;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectFormat != null ? retObjectFormat.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

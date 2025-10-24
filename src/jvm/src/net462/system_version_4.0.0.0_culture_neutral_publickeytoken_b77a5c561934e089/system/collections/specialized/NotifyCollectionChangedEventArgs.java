@@ -273,9 +273,20 @@ public class NotifyCollectionChangedEventArgs extends EventArgs  {
     
     public int getNewStartingIndex() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNewStartingIndex = null;
         try {
-            return (int)classInstance.Get("NewStartingIndex");
+            retObjectNewStartingIndex = classInstance.Get("NewStartingIndex");
+            return (int)retObjectNewStartingIndex;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectNewStartingIndex_ToString = retObjectNewStartingIndex == null ? "null" : retObjectNewStartingIndex.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectNewStartingIndexNumber = (java.lang.Number)retObjectNewStartingIndex;
+                return retObjectNewStartingIndexNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectNewStartingIndex != null ? retObjectNewStartingIndex.getClass() : "null", retObjectNewStartingIndex_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -283,9 +294,20 @@ public class NotifyCollectionChangedEventArgs extends EventArgs  {
 
     public int getOldStartingIndex() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOldStartingIndex = null;
         try {
-            return (int)classInstance.Get("OldStartingIndex");
+            retObjectOldStartingIndex = classInstance.Get("OldStartingIndex");
+            return (int)retObjectOldStartingIndex;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectOldStartingIndex_ToString = retObjectOldStartingIndex == null ? "null" : retObjectOldStartingIndex.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectOldStartingIndexNumber = (java.lang.Number)retObjectOldStartingIndex;
+                return retObjectOldStartingIndexNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectOldStartingIndex != null ? retObjectOldStartingIndex.getClass() : "null", retObjectOldStartingIndex_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -293,10 +315,14 @@ public class NotifyCollectionChangedEventArgs extends EventArgs  {
 
     public IList getNewItems() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNewItems = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("NewItems");
+            retObjectNewItems = classInstance.Get("NewItems");
+            JCObject val = (JCObject)retObjectNewItems;
             return new IListImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNewItems != null ? retObjectNewItems.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -304,10 +330,14 @@ public class NotifyCollectionChangedEventArgs extends EventArgs  {
 
     public IList getOldItems() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOldItems = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("OldItems");
+            retObjectOldItems = classInstance.Get("OldItems");
+            JCObject val = (JCObject)retObjectOldItems;
             return new IListImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOldItems != null ? retObjectOldItems.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -315,10 +345,14 @@ public class NotifyCollectionChangedEventArgs extends EventArgs  {
 
     public NotifyCollectionChangedAction getAction() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAction = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Action");
+            retObjectAction = classInstance.Get("Action");
+            JCObject val = (JCObject)retObjectAction;
             return new NotifyCollectionChangedAction(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAction != null ? retObjectAction.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

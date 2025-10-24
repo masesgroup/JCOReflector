@@ -165,10 +165,14 @@ public class DropShadowEffect extends Effect  {
     
     public DropShadowEffect CloneNewDropShadowEffect() throws Throwable, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClone = null;
         try {
-            JCObject objClone = (JCObject)classInstance.Invoke("Clone");
+            retObjectClone = classInstance.Invoke("Clone");
+            JCObject objClone = (JCObject)retObjectClone;
             return new DropShadowEffect(objClone);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClone != null ? retObjectClone.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,10 +180,14 @@ public class DropShadowEffect extends Effect  {
 
     public DropShadowEffect CloneCurrentValueNewDropShadowEffect() throws Throwable, system.InvalidOperationException, system.security.SecurityException, system.io.IOException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCloneCurrentValue = null;
         try {
-            JCObject objCloneCurrentValue = (JCObject)classInstance.Invoke("CloneCurrentValue");
+            retObjectCloneCurrentValue = classInstance.Invoke("CloneCurrentValue");
+            JCObject objCloneCurrentValue = (JCObject)retObjectCloneCurrentValue;
             return new DropShadowEffect(objCloneCurrentValue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCloneCurrentValue != null ? retObjectCloneCurrentValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,9 +199,20 @@ public class DropShadowEffect extends Effect  {
     
     public double getBlurRadius() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBlurRadius = null;
         try {
-            return (double)classInstance.Get("BlurRadius");
+            retObjectBlurRadius = classInstance.Get("BlurRadius");
+            return (double)retObjectBlurRadius;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectBlurRadius_ToString = retObjectBlurRadius == null ? "null" : retObjectBlurRadius.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectBlurRadiusNumber = (java.lang.Number)retObjectBlurRadius;
+                return retObjectBlurRadiusNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectBlurRadius != null ? retObjectBlurRadius.getClass() : "null", retObjectBlurRadius_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,7 +220,7 @@ public class DropShadowEffect extends Effect  {
 
     public void setBlurRadius(double BlurRadius) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BlurRadius", BlurRadius);
         } catch (JCNativeException jcne) {
@@ -211,9 +230,20 @@ public class DropShadowEffect extends Effect  {
 
     public double getDirection() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDirection = null;
         try {
-            return (double)classInstance.Get("Direction");
+            retObjectDirection = classInstance.Get("Direction");
+            return (double)retObjectDirection;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDirection_ToString = retObjectDirection == null ? "null" : retObjectDirection.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectDirectionNumber = (java.lang.Number)retObjectDirection;
+                return retObjectDirectionNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectDirection != null ? retObjectDirection.getClass() : "null", retObjectDirection_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -221,7 +251,7 @@ public class DropShadowEffect extends Effect  {
 
     public void setDirection(double Direction) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Direction", Direction);
         } catch (JCNativeException jcne) {
@@ -231,9 +261,20 @@ public class DropShadowEffect extends Effect  {
 
     public double getOpacity() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOpacity = null;
         try {
-            return (double)classInstance.Get("Opacity");
+            retObjectOpacity = classInstance.Get("Opacity");
+            return (double)retObjectOpacity;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectOpacity_ToString = retObjectOpacity == null ? "null" : retObjectOpacity.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectOpacityNumber = (java.lang.Number)retObjectOpacity;
+                return retObjectOpacityNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectOpacity != null ? retObjectOpacity.getClass() : "null", retObjectOpacity_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -241,7 +282,7 @@ public class DropShadowEffect extends Effect  {
 
     public void setOpacity(double Opacity) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Opacity", Opacity);
         } catch (JCNativeException jcne) {
@@ -251,9 +292,20 @@ public class DropShadowEffect extends Effect  {
 
     public double getShadowDepth() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShadowDepth = null;
         try {
-            return (double)classInstance.Get("ShadowDepth");
+            retObjectShadowDepth = classInstance.Get("ShadowDepth");
+            return (double)retObjectShadowDepth;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectShadowDepth_ToString = retObjectShadowDepth == null ? "null" : retObjectShadowDepth.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectShadowDepthNumber = (java.lang.Number)retObjectShadowDepth;
+                return retObjectShadowDepthNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectShadowDepth != null ? retObjectShadowDepth.getClass() : "null", retObjectShadowDepth_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -261,7 +313,7 @@ public class DropShadowEffect extends Effect  {
 
     public void setShadowDepth(double ShadowDepth) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ShadowDepth", ShadowDepth);
         } catch (JCNativeException jcne) {
@@ -271,10 +323,14 @@ public class DropShadowEffect extends Effect  {
 
     public Color getColor() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectColor = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Color");
+            retObjectColor = classInstance.Get("Color");
+            JCObject val = (JCObject)retObjectColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectColor != null ? retObjectColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -282,7 +338,7 @@ public class DropShadowEffect extends Effect  {
 
     public void setColor(Color Color) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Color", Color == null ? null : Color.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -292,10 +348,14 @@ public class DropShadowEffect extends Effect  {
 
     public RenderingBias getRenderingBias() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRenderingBias = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RenderingBias");
+            retObjectRenderingBias = classInstance.Get("RenderingBias");
+            JCObject val = (JCObject)retObjectRenderingBias;
             return new RenderingBias(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRenderingBias != null ? retObjectRenderingBias.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -303,7 +363,7 @@ public class DropShadowEffect extends Effect  {
 
     public void setRenderingBias(RenderingBias RenderingBias) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RenderingBias", RenderingBias == null ? null : RenderingBias.getJCOInstance());
         } catch (JCNativeException jcne) {

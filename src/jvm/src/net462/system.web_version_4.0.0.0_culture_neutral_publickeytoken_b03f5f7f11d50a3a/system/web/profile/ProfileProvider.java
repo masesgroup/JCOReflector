@@ -157,9 +157,20 @@ public class ProfileProvider extends SettingsProvider  {
     
     public int DeleteInactiveProfiles(ProfileAuthenticationOption authenticationOption, DateTime userInactiveSinceDate) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDeleteInactiveProfiles = null;
         try {
-            return (int)classInstance.Invoke("DeleteInactiveProfiles", authenticationOption == null ? null : authenticationOption.getJCOInstance(), userInactiveSinceDate == null ? null : userInactiveSinceDate.getJCOInstance());
+            retObjectDeleteInactiveProfiles = classInstance.Invoke("DeleteInactiveProfiles", authenticationOption == null ? null : authenticationOption.getJCOInstance(), userInactiveSinceDate == null ? null : userInactiveSinceDate.getJCOInstance());
+            return (int)retObjectDeleteInactiveProfiles;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDeleteInactiveProfiles_ToString = retObjectDeleteInactiveProfiles == null ? "null" : retObjectDeleteInactiveProfiles.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectDeleteInactiveProfilesNumber = (java.lang.Number)retObjectDeleteInactiveProfiles;
+                return retObjectDeleteInactiveProfilesNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectDeleteInactiveProfiles != null ? retObjectDeleteInactiveProfiles.getClass() : "null", retObjectDeleteInactiveProfiles_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -167,9 +178,20 @@ public class ProfileProvider extends SettingsProvider  {
 
     public int DeleteProfiles(java.lang.String[] usernames) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDeleteProfiles = null;
         try {
-            return (int)classInstance.Invoke("DeleteProfiles", (java.lang.Object)usernames);
+            retObjectDeleteProfiles = classInstance.Invoke("DeleteProfiles", (java.lang.Object)usernames);
+            return (int)retObjectDeleteProfiles;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDeleteProfiles_ToString = retObjectDeleteProfiles == null ? "null" : retObjectDeleteProfiles.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectDeleteProfilesNumber = (java.lang.Number)retObjectDeleteProfiles;
+                return retObjectDeleteProfilesNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectDeleteProfiles != null ? retObjectDeleteProfiles.getClass() : "null", retObjectDeleteProfiles_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,9 +199,20 @@ public class ProfileProvider extends SettingsProvider  {
 
     public int DeleteProfiles(JCORefOut dupParam0) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDeleteProfiles = null;
         try {
-            return (int)classInstance.Invoke("DeleteProfiles", (java.lang.Object)dupParam0.getJCRefOut());
+            retObjectDeleteProfiles = classInstance.Invoke("DeleteProfiles", (java.lang.Object)dupParam0.getJCRefOut());
+            return (int)retObjectDeleteProfiles;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDeleteProfiles_ToString = retObjectDeleteProfiles == null ? "null" : retObjectDeleteProfiles.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectDeleteProfilesNumber = (java.lang.Number)retObjectDeleteProfiles;
+                return retObjectDeleteProfilesNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectDeleteProfiles != null ? retObjectDeleteProfiles.getClass() : "null", retObjectDeleteProfiles_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,9 +220,20 @@ public class ProfileProvider extends SettingsProvider  {
 
     public int DeleteProfiles(ProfileInfoCollection profiles) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDeleteProfiles = null;
         try {
-            return (int)classInstance.Invoke("DeleteProfiles", profiles == null ? null : profiles.getJCOInstance());
+            retObjectDeleteProfiles = classInstance.Invoke("DeleteProfiles", profiles == null ? null : profiles.getJCOInstance());
+            return (int)retObjectDeleteProfiles;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDeleteProfiles_ToString = retObjectDeleteProfiles == null ? "null" : retObjectDeleteProfiles.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectDeleteProfilesNumber = (java.lang.Number)retObjectDeleteProfiles;
+                return retObjectDeleteProfilesNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectDeleteProfiles != null ? retObjectDeleteProfiles.getClass() : "null", retObjectDeleteProfiles_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,9 +241,20 @@ public class ProfileProvider extends SettingsProvider  {
 
     public int GetNumberOfInactiveProfiles(ProfileAuthenticationOption authenticationOption, DateTime userInactiveSinceDate) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetNumberOfInactiveProfiles = null;
         try {
-            return (int)classInstance.Invoke("GetNumberOfInactiveProfiles", authenticationOption == null ? null : authenticationOption.getJCOInstance(), userInactiveSinceDate == null ? null : userInactiveSinceDate.getJCOInstance());
+            retObjectGetNumberOfInactiveProfiles = classInstance.Invoke("GetNumberOfInactiveProfiles", authenticationOption == null ? null : authenticationOption.getJCOInstance(), userInactiveSinceDate == null ? null : userInactiveSinceDate.getJCOInstance());
+            return (int)retObjectGetNumberOfInactiveProfiles;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetNumberOfInactiveProfiles_ToString = retObjectGetNumberOfInactiveProfiles == null ? "null" : retObjectGetNumberOfInactiveProfiles.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetNumberOfInactiveProfilesNumber = (java.lang.Number)retObjectGetNumberOfInactiveProfiles;
+                return retObjectGetNumberOfInactiveProfilesNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetNumberOfInactiveProfiles != null ? retObjectGetNumberOfInactiveProfiles.getClass() : "null", retObjectGetNumberOfInactiveProfiles_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -207,10 +262,14 @@ public class ProfileProvider extends SettingsProvider  {
 
     public ProfileInfoCollection FindInactiveProfilesByUserName(ProfileAuthenticationOption authenticationOption, java.lang.String usernameToMatch, DateTime userInactiveSinceDate, int pageIndex, int pageSize, JCORefOut<java.util.concurrent.atomic.AtomicInteger> totalRecords) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFindInactiveProfilesByUserName = null;
         try {
-            JCObject objFindInactiveProfilesByUserName = (JCObject)classInstance.Invoke("FindInactiveProfilesByUserName", authenticationOption == null ? null : authenticationOption.getJCOInstance(), usernameToMatch, userInactiveSinceDate == null ? null : userInactiveSinceDate.getJCOInstance(), pageIndex, pageSize, totalRecords.getJCRefOut());
+            retObjectFindInactiveProfilesByUserName = classInstance.Invoke("FindInactiveProfilesByUserName", authenticationOption == null ? null : authenticationOption.getJCOInstance(), usernameToMatch, userInactiveSinceDate == null ? null : userInactiveSinceDate.getJCOInstance(), pageIndex, pageSize, totalRecords.getJCRefOut());
+            JCObject objFindInactiveProfilesByUserName = (JCObject)retObjectFindInactiveProfilesByUserName;
             return new ProfileInfoCollection(objFindInactiveProfilesByUserName);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFindInactiveProfilesByUserName != null ? retObjectFindInactiveProfilesByUserName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -218,10 +277,14 @@ public class ProfileProvider extends SettingsProvider  {
 
     public ProfileInfoCollection FindProfilesByUserName(ProfileAuthenticationOption authenticationOption, java.lang.String usernameToMatch, int pageIndex, int pageSize, JCORefOut<java.util.concurrent.atomic.AtomicInteger> totalRecords) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFindProfilesByUserName = null;
         try {
-            JCObject objFindProfilesByUserName = (JCObject)classInstance.Invoke("FindProfilesByUserName", authenticationOption == null ? null : authenticationOption.getJCOInstance(), usernameToMatch, pageIndex, pageSize, totalRecords.getJCRefOut());
+            retObjectFindProfilesByUserName = classInstance.Invoke("FindProfilesByUserName", authenticationOption == null ? null : authenticationOption.getJCOInstance(), usernameToMatch, pageIndex, pageSize, totalRecords.getJCRefOut());
+            JCObject objFindProfilesByUserName = (JCObject)retObjectFindProfilesByUserName;
             return new ProfileInfoCollection(objFindProfilesByUserName);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFindProfilesByUserName != null ? retObjectFindProfilesByUserName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -229,10 +292,14 @@ public class ProfileProvider extends SettingsProvider  {
 
     public ProfileInfoCollection GetAllInactiveProfiles(ProfileAuthenticationOption authenticationOption, DateTime userInactiveSinceDate, int pageIndex, int pageSize, JCORefOut<java.util.concurrent.atomic.AtomicInteger> totalRecords) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetAllInactiveProfiles = null;
         try {
-            JCObject objGetAllInactiveProfiles = (JCObject)classInstance.Invoke("GetAllInactiveProfiles", authenticationOption == null ? null : authenticationOption.getJCOInstance(), userInactiveSinceDate == null ? null : userInactiveSinceDate.getJCOInstance(), pageIndex, pageSize, totalRecords.getJCRefOut());
+            retObjectGetAllInactiveProfiles = classInstance.Invoke("GetAllInactiveProfiles", authenticationOption == null ? null : authenticationOption.getJCOInstance(), userInactiveSinceDate == null ? null : userInactiveSinceDate.getJCOInstance(), pageIndex, pageSize, totalRecords.getJCRefOut());
+            JCObject objGetAllInactiveProfiles = (JCObject)retObjectGetAllInactiveProfiles;
             return new ProfileInfoCollection(objGetAllInactiveProfiles);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetAllInactiveProfiles != null ? retObjectGetAllInactiveProfiles.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -240,10 +307,14 @@ public class ProfileProvider extends SettingsProvider  {
 
     public ProfileInfoCollection GetAllProfiles(ProfileAuthenticationOption authenticationOption, int pageIndex, int pageSize, JCORefOut<java.util.concurrent.atomic.AtomicInteger> totalRecords) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetAllProfiles = null;
         try {
-            JCObject objGetAllProfiles = (JCObject)classInstance.Invoke("GetAllProfiles", authenticationOption == null ? null : authenticationOption.getJCOInstance(), pageIndex, pageSize, totalRecords.getJCRefOut());
+            retObjectGetAllProfiles = classInstance.Invoke("GetAllProfiles", authenticationOption == null ? null : authenticationOption.getJCOInstance(), pageIndex, pageSize, totalRecords.getJCRefOut());
+            JCObject objGetAllProfiles = (JCObject)retObjectGetAllProfiles;
             return new ProfileInfoCollection(objGetAllProfiles);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetAllProfiles != null ? retObjectGetAllProfiles.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -208,9 +208,13 @@ public class BlobWriter extends ValueType  {
     
     public boolean ContentEquals(BlobWriter other) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContentEquals = null;
         try {
-            return (boolean)classInstance.Invoke("ContentEquals", other == null ? null : other.getJCOInstance());
+            retObjectContentEquals = classInstance.Invoke("ContentEquals", other == null ? null : other.getJCOInstance());
+            return (boolean)retObjectContentEquals;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectContentEquals != null ? retObjectContentEquals.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -218,10 +222,12 @@ public class BlobWriter extends ValueType  {
 
     public byte[] ToArray() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToArray = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("ToArray");
+            retObjectToArray = classInstance.Invoke("ToArray");
+            JCObject resultingObjects = (JCObject)retObjectToArray;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -230,6 +236,8 @@ public class BlobWriter extends ValueType  {
 				resultingArray[indexToArray] = (byte)resultingArrayList.get(indexToArray);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectToArray != null ? retObjectToArray.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -237,10 +245,12 @@ public class BlobWriter extends ValueType  {
 
     public byte[] ToArray(int start, int byteCount) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToArray = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("ToArray", start, byteCount);
+            retObjectToArray = classInstance.Invoke("ToArray", start, byteCount);
+            JCObject resultingObjects = (JCObject)retObjectToArray;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -249,6 +259,8 @@ public class BlobWriter extends ValueType  {
 				resultingArray[indexToArray] = (byte)resultingArrayList.get(indexToArray);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectToArray != null ? retObjectToArray.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -256,9 +268,20 @@ public class BlobWriter extends ValueType  {
 
     public int WriteBytes(Stream source, int byteCount) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.BadImageFormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWriteBytes = null;
         try {
-            return (int)classInstance.Invoke("WriteBytes", source == null ? null : source.getJCOInstance(), byteCount);
+            retObjectWriteBytes = classInstance.Invoke("WriteBytes", source == null ? null : source.getJCOInstance(), byteCount);
+            return (int)retObjectWriteBytes;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectWriteBytes_ToString = retObjectWriteBytes == null ? "null" : retObjectWriteBytes.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectWriteBytesNumber = (java.lang.Number)retObjectWriteBytes;
+                return retObjectWriteBytesNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectWriteBytes != null ? retObjectWriteBytes.getClass() : "null", retObjectWriteBytes_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -266,7 +289,7 @@ public class BlobWriter extends ValueType  {
 
     public void Align(int alignment) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.BadImageFormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Align", alignment);
         } catch (JCNativeException jcne) {
@@ -276,7 +299,7 @@ public class BlobWriter extends ValueType  {
 
     public void Clear() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Clear");
         } catch (JCNativeException jcne) {
@@ -286,7 +309,7 @@ public class BlobWriter extends ValueType  {
 
     public void PadTo(int offset) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.BadImageFormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("PadTo", offset);
         } catch (JCNativeException jcne) {
@@ -296,7 +319,7 @@ public class BlobWriter extends ValueType  {
 
     public void WriteBoolean(boolean value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.BadImageFormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteBoolean", value);
         } catch (JCNativeException jcne) {
@@ -306,7 +329,7 @@ public class BlobWriter extends ValueType  {
 
     public void WriteByte(byte value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.BadImageFormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteByte", value);
         } catch (JCNativeException jcne) {
@@ -316,7 +339,7 @@ public class BlobWriter extends ValueType  {
 
     public void WriteBytes(byte value, int byteCount) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.BadImageFormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteBytes", value, byteCount);
         } catch (JCNativeException jcne) {
@@ -326,7 +349,7 @@ public class BlobWriter extends ValueType  {
 
     public void WriteBytes(byte[] buffer, int start, int byteCount) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.BadImageFormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteBytes", buffer, start, byteCount);
         } catch (JCNativeException jcne) {
@@ -336,7 +359,7 @@ public class BlobWriter extends ValueType  {
 
     public void WriteBytes(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.BadImageFormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteBytes", dupParam0.getJCRefOut(), dupParam1, dupParam2);
         } catch (JCNativeException jcne) {
@@ -346,7 +369,7 @@ public class BlobWriter extends ValueType  {
 
     public void WriteBytes(byte[] buffer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.BadImageFormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteBytes", (java.lang.Object)buffer);
         } catch (JCNativeException jcne) {
@@ -356,7 +379,7 @@ public class BlobWriter extends ValueType  {
 
     public void WriteBytes(JCORefOut dupParam0) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.BadImageFormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteBytes", (java.lang.Object)dupParam0.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -366,7 +389,7 @@ public class BlobWriter extends ValueType  {
 
     public void WriteBytes(BlobBuilder source) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.BadImageFormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteBytes", source == null ? null : source.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -376,7 +399,7 @@ public class BlobWriter extends ValueType  {
 
     public void WriteCompressedInteger(int value) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.BadImageFormatException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteCompressedInteger", value);
         } catch (JCNativeException jcne) {
@@ -386,7 +409,7 @@ public class BlobWriter extends ValueType  {
 
     public void WriteCompressedSignedInteger(int value) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.BadImageFormatException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteCompressedSignedInteger", value);
         } catch (JCNativeException jcne) {
@@ -396,7 +419,7 @@ public class BlobWriter extends ValueType  {
 
     public void WriteConstant(NetObject value) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.BadImageFormatException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteConstant", value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -406,7 +429,7 @@ public class BlobWriter extends ValueType  {
 
     public void WriteDateTime(DateTime value) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.BadImageFormatException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteDateTime", value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -416,7 +439,7 @@ public class BlobWriter extends ValueType  {
 
     public void WriteDecimal(Decimal value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.BadImageFormatException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteDecimal", value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -426,7 +449,7 @@ public class BlobWriter extends ValueType  {
 
     public void WriteDouble(double value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.BadImageFormatException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteDouble", value);
         } catch (JCNativeException jcne) {
@@ -436,7 +459,7 @@ public class BlobWriter extends ValueType  {
 
     public void WriteGuid(Guid value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.BadImageFormatException, system.ArrayTypeMismatchException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteGuid", value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -446,7 +469,7 @@ public class BlobWriter extends ValueType  {
 
     public void WriteInt16(short value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.BadImageFormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteInt16", value);
         } catch (JCNativeException jcne) {
@@ -456,7 +479,7 @@ public class BlobWriter extends ValueType  {
 
     public void WriteInt16BE(short value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.BadImageFormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteInt16BE", value);
         } catch (JCNativeException jcne) {
@@ -466,7 +489,7 @@ public class BlobWriter extends ValueType  {
 
     public void WriteInt32(int value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.BadImageFormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteInt32", value);
         } catch (JCNativeException jcne) {
@@ -476,7 +499,7 @@ public class BlobWriter extends ValueType  {
 
     public void WriteInt32BE(int value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.BadImageFormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteInt32BE", value);
         } catch (JCNativeException jcne) {
@@ -486,7 +509,7 @@ public class BlobWriter extends ValueType  {
 
     public void WriteInt64(long value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.BadImageFormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteInt64", value);
         } catch (JCNativeException jcne) {
@@ -496,7 +519,7 @@ public class BlobWriter extends ValueType  {
 
     public void WriteReference(int reference, boolean isSmall) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.BadImageFormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteReference", reference, isSmall);
         } catch (JCNativeException jcne) {
@@ -506,7 +529,7 @@ public class BlobWriter extends ValueType  {
 
     public void WriteSByte(SByte value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.BadImageFormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteSByte", value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -516,7 +539,7 @@ public class BlobWriter extends ValueType  {
 
     public void WriteSerializedString(java.lang.String str) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.BadImageFormatException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteSerializedString", str);
         } catch (JCNativeException jcne) {
@@ -526,7 +549,7 @@ public class BlobWriter extends ValueType  {
 
     public void WriteSingle(Single value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.BadImageFormatException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteSingle", value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -536,7 +559,7 @@ public class BlobWriter extends ValueType  {
 
     public void WriteUInt16(UInt16 value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.BadImageFormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteUInt16", value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -546,7 +569,7 @@ public class BlobWriter extends ValueType  {
 
     public void WriteUInt16BE(UInt16 value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.BadImageFormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteUInt16BE", value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -556,7 +579,7 @@ public class BlobWriter extends ValueType  {
 
     public void WriteUInt32(UInt32 value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.BadImageFormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteUInt32", value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -566,7 +589,7 @@ public class BlobWriter extends ValueType  {
 
     public void WriteUInt32BE(UInt32 value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.BadImageFormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteUInt32BE", value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -576,7 +599,7 @@ public class BlobWriter extends ValueType  {
 
     public void WriteUInt64(UInt64 value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.BadImageFormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteUInt64", value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -586,7 +609,7 @@ public class BlobWriter extends ValueType  {
 
     public void WriteUserString(java.lang.String value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.BadImageFormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteUserString", value);
         } catch (JCNativeException jcne) {
@@ -596,7 +619,7 @@ public class BlobWriter extends ValueType  {
 
     public void WriteUTF16(char[] value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.BadImageFormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteUTF16", (java.lang.Object)value);
         } catch (JCNativeException jcne) {
@@ -606,7 +629,7 @@ public class BlobWriter extends ValueType  {
 
     public void WriteUTF16(JCORefOut dupParam0) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.BadImageFormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteUTF16", (java.lang.Object)dupParam0.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -616,7 +639,7 @@ public class BlobWriter extends ValueType  {
 
     public void WriteUTF16(java.lang.String value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.BadImageFormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteUTF16", value);
         } catch (JCNativeException jcne) {
@@ -626,7 +649,7 @@ public class BlobWriter extends ValueType  {
 
     public void WriteUTF8(java.lang.String value, boolean allowUnpairedSurrogates) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.BadImageFormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteUTF8", value, allowUnpairedSurrogates);
         } catch (JCNativeException jcne) {
@@ -640,9 +663,20 @@ public class BlobWriter extends ValueType  {
     
     public int getLength() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLength = null;
         try {
-            return (int)classInstance.Get("Length");
+            retObjectLength = classInstance.Get("Length");
+            return (int)retObjectLength;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectLength_ToString = retObjectLength == null ? "null" : retObjectLength.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectLengthNumber = (java.lang.Number)retObjectLength;
+                return retObjectLengthNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectLength != null ? retObjectLength.getClass() : "null", retObjectLength_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -650,9 +684,20 @@ public class BlobWriter extends ValueType  {
 
     public int getOffset() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOffset = null;
         try {
-            return (int)classInstance.Get("Offset");
+            retObjectOffset = classInstance.Get("Offset");
+            return (int)retObjectOffset;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectOffset_ToString = retObjectOffset == null ? "null" : retObjectOffset.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectOffsetNumber = (java.lang.Number)retObjectOffset;
+                return retObjectOffsetNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectOffset != null ? retObjectOffset.getClass() : "null", retObjectOffset_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -660,7 +705,7 @@ public class BlobWriter extends ValueType  {
 
     public void setOffset(int Offset) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Offset", Offset);
         } catch (JCNativeException jcne) {
@@ -670,9 +715,20 @@ public class BlobWriter extends ValueType  {
 
     public int getRemainingBytes() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRemainingBytes = null;
         try {
-            return (int)classInstance.Get("RemainingBytes");
+            retObjectRemainingBytes = classInstance.Get("RemainingBytes");
+            return (int)retObjectRemainingBytes;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectRemainingBytes_ToString = retObjectRemainingBytes == null ? "null" : retObjectRemainingBytes.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectRemainingBytesNumber = (java.lang.Number)retObjectRemainingBytes;
+                return retObjectRemainingBytesNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectRemainingBytes != null ? retObjectRemainingBytes.getClass() : "null", retObjectRemainingBytes_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -680,10 +736,14 @@ public class BlobWriter extends ValueType  {
 
     public Blob getBlob() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBlob = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Blob");
+            retObjectBlob = classInstance.Get("Blob");
+            JCObject val = (JCObject)retObjectBlob;
             return new Blob(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBlob != null ? retObjectBlob.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

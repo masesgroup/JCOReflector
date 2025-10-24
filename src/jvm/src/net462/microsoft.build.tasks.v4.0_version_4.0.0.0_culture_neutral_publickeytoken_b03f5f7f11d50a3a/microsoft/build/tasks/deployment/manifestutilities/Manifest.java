@@ -160,7 +160,7 @@ public class Manifest extends NetObject  {
     
     public void ResolveFiles() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.io.PathTooLongException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ResolveFiles");
         } catch (JCNativeException jcne) {
@@ -170,7 +170,7 @@ public class Manifest extends NetObject  {
 
     public void ResolveFiles(java.lang.String[] searchPaths) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ResolveFiles", (java.lang.Object)searchPaths);
         } catch (JCNativeException jcne) {
@@ -180,7 +180,7 @@ public class Manifest extends NetObject  {
 
     public void ResolveFiles(JCORefOut dupParam0) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ResolveFiles", (java.lang.Object)dupParam0.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -190,7 +190,7 @@ public class Manifest extends NetObject  {
 
     public void UpdateFileInfo() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.resources.MissingManifestResourceException, system.xml.XmlException, system.NullReferenceException, system.xml.xpath.XPathException, system.FormatException, system.PlatformNotSupportedException, system.security.cryptography.CryptographicException, system.ObjectDisposedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("UpdateFileInfo");
         } catch (JCNativeException jcne) {
@@ -200,7 +200,7 @@ public class Manifest extends NetObject  {
 
     public void UpdateFileInfo(java.lang.String targetFrameworkVersion) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.resources.MissingManifestResourceException, system.xml.XmlException, system.NullReferenceException, system.xml.xpath.XPathException, system.FormatException, system.PlatformNotSupportedException, system.security.cryptography.CryptographicException, system.ObjectDisposedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("UpdateFileInfo", targetFrameworkVersion);
         } catch (JCNativeException jcne) {
@@ -210,7 +210,7 @@ public class Manifest extends NetObject  {
 
     public void Validate() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Validate");
         } catch (JCNativeException jcne) {
@@ -224,9 +224,13 @@ public class Manifest extends NetObject  {
     
     public boolean getReadOnly() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadOnly = null;
         try {
-            return (boolean)classInstance.Get("ReadOnly");
+            retObjectReadOnly = classInstance.Get("ReadOnly");
+            return (boolean)retObjectReadOnly;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectReadOnly != null ? retObjectReadOnly.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -234,7 +238,7 @@ public class Manifest extends NetObject  {
 
     public void setReadOnly(boolean ReadOnly) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ReadOnly", ReadOnly);
         } catch (JCNativeException jcne) {
@@ -244,10 +248,14 @@ public class Manifest extends NetObject  {
 
     public AssemblyIdentity getAssemblyIdentity() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAssemblyIdentity = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AssemblyIdentity");
+            retObjectAssemblyIdentity = classInstance.Get("AssemblyIdentity");
+            JCObject val = (JCObject)retObjectAssemblyIdentity;
             return new AssemblyIdentity(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAssemblyIdentity != null ? retObjectAssemblyIdentity.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -255,7 +263,7 @@ public class Manifest extends NetObject  {
 
     public void setAssemblyIdentity(AssemblyIdentity AssemblyIdentity) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AssemblyIdentity", AssemblyIdentity == null ? null : AssemblyIdentity.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -265,10 +273,14 @@ public class Manifest extends NetObject  {
 
     public AssemblyIdentity getXmlAssemblyIdentity() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectXmlAssemblyIdentity = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("XmlAssemblyIdentity");
+            retObjectXmlAssemblyIdentity = classInstance.Get("XmlAssemblyIdentity");
+            JCObject val = (JCObject)retObjectXmlAssemblyIdentity;
             return new AssemblyIdentity(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectXmlAssemblyIdentity != null ? retObjectXmlAssemblyIdentity.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -276,7 +288,7 @@ public class Manifest extends NetObject  {
 
     public void setXmlAssemblyIdentity(AssemblyIdentity XmlAssemblyIdentity) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("XmlAssemblyIdentity", XmlAssemblyIdentity == null ? null : XmlAssemblyIdentity.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -286,10 +298,14 @@ public class Manifest extends NetObject  {
 
     public AssemblyReference getEntryPoint() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEntryPoint = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("EntryPoint");
+            retObjectEntryPoint = classInstance.Get("EntryPoint");
+            JCObject val = (JCObject)retObjectEntryPoint;
             return new AssemblyReference(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEntryPoint != null ? retObjectEntryPoint.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -297,7 +313,7 @@ public class Manifest extends NetObject  {
 
     public void setEntryPoint(AssemblyReference EntryPoint) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EntryPoint", EntryPoint == null ? null : EntryPoint.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -307,16 +323,20 @@ public class Manifest extends NetObject  {
 
     public final AssemblyReference[] getXmlAssemblyReferences() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectXmlAssemblyReferences = null;
         try {
             ArrayList<AssemblyReference> resultingArrayList = new ArrayList<AssemblyReference>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("XmlAssemblyReferences");
+            retObjectXmlAssemblyReferences = classInstance.Get("XmlAssemblyReferences");
+            JCObject resultingObjects = (JCObject)retObjectXmlAssemblyReferences;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new AssemblyReference(resultingObject));
             }
             AssemblyReference[] resultingArray = new AssemblyReference[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectXmlAssemblyReferences != null ? retObjectXmlAssemblyReferences.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -324,7 +344,7 @@ public class Manifest extends NetObject  {
 
     public void setXmlAssemblyReferences(AssemblyReference[] XmlAssemblyReferences) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("XmlAssemblyReferences", toObjectFromArray(XmlAssemblyReferences));
         } catch (JCNativeException jcne) {
@@ -334,10 +354,14 @@ public class Manifest extends NetObject  {
 
     public AssemblyReferenceCollection getAssemblyReferences() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAssemblyReferences = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AssemblyReferences");
+            retObjectAssemblyReferences = classInstance.Get("AssemblyReferences");
+            JCObject val = (JCObject)retObjectAssemblyReferences;
             return new AssemblyReferenceCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAssemblyReferences != null ? retObjectAssemblyReferences.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -345,16 +369,20 @@ public class Manifest extends NetObject  {
 
     public final FileReference[] getXmlFileReferences() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectXmlFileReferences = null;
         try {
             ArrayList<FileReference> resultingArrayList = new ArrayList<FileReference>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("XmlFileReferences");
+            retObjectXmlFileReferences = classInstance.Get("XmlFileReferences");
+            JCObject resultingObjects = (JCObject)retObjectXmlFileReferences;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new FileReference(resultingObject));
             }
             FileReference[] resultingArray = new FileReference[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectXmlFileReferences != null ? retObjectXmlFileReferences.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -362,7 +390,7 @@ public class Manifest extends NetObject  {
 
     public void setXmlFileReferences(FileReference[] XmlFileReferences) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("XmlFileReferences", toObjectFromArray(XmlFileReferences));
         } catch (JCNativeException jcne) {
@@ -372,10 +400,14 @@ public class Manifest extends NetObject  {
 
     public FileReferenceCollection getFileReferences() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFileReferences = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("FileReferences");
+            retObjectFileReferences = classInstance.Get("FileReferences");
+            JCObject val = (JCObject)retObjectFileReferences;
             return new FileReferenceCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFileReferences != null ? retObjectFileReferences.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -383,10 +415,14 @@ public class Manifest extends NetObject  {
 
     public OutputMessageCollection getOutputMessages() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOutputMessages = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("OutputMessages");
+            retObjectOutputMessages = classInstance.Get("OutputMessages");
+            JCObject val = (JCObject)retObjectOutputMessages;
             return new OutputMessageCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOutputMessages != null ? retObjectOutputMessages.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -394,10 +430,14 @@ public class Manifest extends NetObject  {
 
     public Stream getInputStream() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInputStream = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("InputStream");
+            retObjectInputStream = classInstance.Get("InputStream");
+            JCObject val = (JCObject)retObjectInputStream;
             return new Stream(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInputStream != null ? retObjectInputStream.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -405,7 +445,7 @@ public class Manifest extends NetObject  {
 
     public void setInputStream(Stream InputStream) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("InputStream", InputStream == null ? null : InputStream.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -415,9 +455,13 @@ public class Manifest extends NetObject  {
 
     public java.lang.String getDescription() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDescription = null;
         try {
-            return (java.lang.String)classInstance.Get("Description");
+            retObjectDescription = classInstance.Get("Description");
+            return (java.lang.String)retObjectDescription;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDescription != null ? retObjectDescription.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -425,7 +469,7 @@ public class Manifest extends NetObject  {
 
     public void setDescription(java.lang.String Description) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Description", Description);
         } catch (JCNativeException jcne) {
@@ -435,9 +479,13 @@ public class Manifest extends NetObject  {
 
     public java.lang.String getSourcePath() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSourcePath = null;
         try {
-            return (java.lang.String)classInstance.Get("SourcePath");
+            retObjectSourcePath = classInstance.Get("SourcePath");
+            return (java.lang.String)retObjectSourcePath;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSourcePath != null ? retObjectSourcePath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -445,7 +493,7 @@ public class Manifest extends NetObject  {
 
     public void setSourcePath(java.lang.String SourcePath) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SourcePath", SourcePath);
         } catch (JCNativeException jcne) {
@@ -455,9 +503,13 @@ public class Manifest extends NetObject  {
 
     public java.lang.String getXmlDescription() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectXmlDescription = null;
         try {
-            return (java.lang.String)classInstance.Get("XmlDescription");
+            retObjectXmlDescription = classInstance.Get("XmlDescription");
+            return (java.lang.String)retObjectXmlDescription;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectXmlDescription != null ? retObjectXmlDescription.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -465,7 +517,7 @@ public class Manifest extends NetObject  {
 
     public void setXmlDescription(java.lang.String XmlDescription) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("XmlDescription", XmlDescription);
         } catch (JCNativeException jcne) {
@@ -475,9 +527,13 @@ public class Manifest extends NetObject  {
 
     public java.lang.String getXmlSchema() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectXmlSchema = null;
         try {
-            return (java.lang.String)classInstance.Get("XmlSchema");
+            retObjectXmlSchema = classInstance.Get("XmlSchema");
+            return (java.lang.String)retObjectXmlSchema;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectXmlSchema != null ? retObjectXmlSchema.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -485,7 +541,7 @@ public class Manifest extends NetObject  {
 
     public void setXmlSchema(java.lang.String XmlSchema) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("XmlSchema", XmlSchema);
         } catch (JCNativeException jcne) {

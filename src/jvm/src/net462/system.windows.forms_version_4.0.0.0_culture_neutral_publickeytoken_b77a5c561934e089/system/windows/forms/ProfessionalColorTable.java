@@ -166,9 +166,13 @@ public class ProfessionalColorTable extends NetObject  {
     
     public boolean getUseSystemColors() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUseSystemColors = null;
         try {
-            return (boolean)classInstance.Get("UseSystemColors");
+            retObjectUseSystemColors = classInstance.Get("UseSystemColors");
+            return (boolean)retObjectUseSystemColors;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectUseSystemColors != null ? retObjectUseSystemColors.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,7 +180,7 @@ public class ProfessionalColorTable extends NetObject  {
 
     public void setUseSystemColors(boolean UseSystemColors) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UseSystemColors", UseSystemColors);
         } catch (JCNativeException jcne) {
@@ -186,10 +190,14 @@ public class ProfessionalColorTable extends NetObject  {
 
     public Color getButtonCheckedGradientBegin() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectButtonCheckedGradientBegin = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ButtonCheckedGradientBegin");
+            retObjectButtonCheckedGradientBegin = classInstance.Get("ButtonCheckedGradientBegin");
+            JCObject val = (JCObject)retObjectButtonCheckedGradientBegin;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectButtonCheckedGradientBegin != null ? retObjectButtonCheckedGradientBegin.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,10 +205,14 @@ public class ProfessionalColorTable extends NetObject  {
 
     public Color getButtonCheckedGradientEnd() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectButtonCheckedGradientEnd = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ButtonCheckedGradientEnd");
+            retObjectButtonCheckedGradientEnd = classInstance.Get("ButtonCheckedGradientEnd");
+            JCObject val = (JCObject)retObjectButtonCheckedGradientEnd;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectButtonCheckedGradientEnd != null ? retObjectButtonCheckedGradientEnd.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -208,10 +220,14 @@ public class ProfessionalColorTable extends NetObject  {
 
     public Color getButtonCheckedGradientMiddle() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectButtonCheckedGradientMiddle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ButtonCheckedGradientMiddle");
+            retObjectButtonCheckedGradientMiddle = classInstance.Get("ButtonCheckedGradientMiddle");
+            JCObject val = (JCObject)retObjectButtonCheckedGradientMiddle;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectButtonCheckedGradientMiddle != null ? retObjectButtonCheckedGradientMiddle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -219,10 +235,14 @@ public class ProfessionalColorTable extends NetObject  {
 
     public Color getButtonCheckedHighlight() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectButtonCheckedHighlight = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ButtonCheckedHighlight");
+            retObjectButtonCheckedHighlight = classInstance.Get("ButtonCheckedHighlight");
+            JCObject val = (JCObject)retObjectButtonCheckedHighlight;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectButtonCheckedHighlight != null ? retObjectButtonCheckedHighlight.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -230,10 +250,14 @@ public class ProfessionalColorTable extends NetObject  {
 
     public Color getButtonCheckedHighlightBorder() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectButtonCheckedHighlightBorder = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ButtonCheckedHighlightBorder");
+            retObjectButtonCheckedHighlightBorder = classInstance.Get("ButtonCheckedHighlightBorder");
+            JCObject val = (JCObject)retObjectButtonCheckedHighlightBorder;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectButtonCheckedHighlightBorder != null ? retObjectButtonCheckedHighlightBorder.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -241,10 +265,14 @@ public class ProfessionalColorTable extends NetObject  {
 
     public Color getButtonPressedBorder() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectButtonPressedBorder = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ButtonPressedBorder");
+            retObjectButtonPressedBorder = classInstance.Get("ButtonPressedBorder");
+            JCObject val = (JCObject)retObjectButtonPressedBorder;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectButtonPressedBorder != null ? retObjectButtonPressedBorder.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -252,10 +280,14 @@ public class ProfessionalColorTable extends NetObject  {
 
     public Color getButtonPressedGradientBegin() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectButtonPressedGradientBegin = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ButtonPressedGradientBegin");
+            retObjectButtonPressedGradientBegin = classInstance.Get("ButtonPressedGradientBegin");
+            JCObject val = (JCObject)retObjectButtonPressedGradientBegin;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectButtonPressedGradientBegin != null ? retObjectButtonPressedGradientBegin.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -263,10 +295,14 @@ public class ProfessionalColorTable extends NetObject  {
 
     public Color getButtonPressedGradientEnd() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectButtonPressedGradientEnd = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ButtonPressedGradientEnd");
+            retObjectButtonPressedGradientEnd = classInstance.Get("ButtonPressedGradientEnd");
+            JCObject val = (JCObject)retObjectButtonPressedGradientEnd;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectButtonPressedGradientEnd != null ? retObjectButtonPressedGradientEnd.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -274,10 +310,14 @@ public class ProfessionalColorTable extends NetObject  {
 
     public Color getButtonPressedGradientMiddle() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectButtonPressedGradientMiddle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ButtonPressedGradientMiddle");
+            retObjectButtonPressedGradientMiddle = classInstance.Get("ButtonPressedGradientMiddle");
+            JCObject val = (JCObject)retObjectButtonPressedGradientMiddle;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectButtonPressedGradientMiddle != null ? retObjectButtonPressedGradientMiddle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -285,10 +325,14 @@ public class ProfessionalColorTable extends NetObject  {
 
     public Color getButtonPressedHighlight() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectButtonPressedHighlight = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ButtonPressedHighlight");
+            retObjectButtonPressedHighlight = classInstance.Get("ButtonPressedHighlight");
+            JCObject val = (JCObject)retObjectButtonPressedHighlight;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectButtonPressedHighlight != null ? retObjectButtonPressedHighlight.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -296,10 +340,14 @@ public class ProfessionalColorTable extends NetObject  {
 
     public Color getButtonPressedHighlightBorder() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectButtonPressedHighlightBorder = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ButtonPressedHighlightBorder");
+            retObjectButtonPressedHighlightBorder = classInstance.Get("ButtonPressedHighlightBorder");
+            JCObject val = (JCObject)retObjectButtonPressedHighlightBorder;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectButtonPressedHighlightBorder != null ? retObjectButtonPressedHighlightBorder.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -307,10 +355,14 @@ public class ProfessionalColorTable extends NetObject  {
 
     public Color getButtonSelectedBorder() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectButtonSelectedBorder = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ButtonSelectedBorder");
+            retObjectButtonSelectedBorder = classInstance.Get("ButtonSelectedBorder");
+            JCObject val = (JCObject)retObjectButtonSelectedBorder;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectButtonSelectedBorder != null ? retObjectButtonSelectedBorder.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -318,10 +370,14 @@ public class ProfessionalColorTable extends NetObject  {
 
     public Color getButtonSelectedGradientBegin() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectButtonSelectedGradientBegin = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ButtonSelectedGradientBegin");
+            retObjectButtonSelectedGradientBegin = classInstance.Get("ButtonSelectedGradientBegin");
+            JCObject val = (JCObject)retObjectButtonSelectedGradientBegin;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectButtonSelectedGradientBegin != null ? retObjectButtonSelectedGradientBegin.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -329,10 +385,14 @@ public class ProfessionalColorTable extends NetObject  {
 
     public Color getButtonSelectedGradientEnd() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectButtonSelectedGradientEnd = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ButtonSelectedGradientEnd");
+            retObjectButtonSelectedGradientEnd = classInstance.Get("ButtonSelectedGradientEnd");
+            JCObject val = (JCObject)retObjectButtonSelectedGradientEnd;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectButtonSelectedGradientEnd != null ? retObjectButtonSelectedGradientEnd.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -340,10 +400,14 @@ public class ProfessionalColorTable extends NetObject  {
 
     public Color getButtonSelectedGradientMiddle() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectButtonSelectedGradientMiddle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ButtonSelectedGradientMiddle");
+            retObjectButtonSelectedGradientMiddle = classInstance.Get("ButtonSelectedGradientMiddle");
+            JCObject val = (JCObject)retObjectButtonSelectedGradientMiddle;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectButtonSelectedGradientMiddle != null ? retObjectButtonSelectedGradientMiddle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -351,10 +415,14 @@ public class ProfessionalColorTable extends NetObject  {
 
     public Color getButtonSelectedHighlight() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectButtonSelectedHighlight = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ButtonSelectedHighlight");
+            retObjectButtonSelectedHighlight = classInstance.Get("ButtonSelectedHighlight");
+            JCObject val = (JCObject)retObjectButtonSelectedHighlight;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectButtonSelectedHighlight != null ? retObjectButtonSelectedHighlight.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -362,10 +430,14 @@ public class ProfessionalColorTable extends NetObject  {
 
     public Color getButtonSelectedHighlightBorder() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.collections.generic.KeyNotFoundException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectButtonSelectedHighlightBorder = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ButtonSelectedHighlightBorder");
+            retObjectButtonSelectedHighlightBorder = classInstance.Get("ButtonSelectedHighlightBorder");
+            JCObject val = (JCObject)retObjectButtonSelectedHighlightBorder;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectButtonSelectedHighlightBorder != null ? retObjectButtonSelectedHighlightBorder.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -373,10 +445,14 @@ public class ProfessionalColorTable extends NetObject  {
 
     public Color getCheckBackground() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCheckBackground = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CheckBackground");
+            retObjectCheckBackground = classInstance.Get("CheckBackground");
+            JCObject val = (JCObject)retObjectCheckBackground;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCheckBackground != null ? retObjectCheckBackground.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -384,10 +460,14 @@ public class ProfessionalColorTable extends NetObject  {
 
     public Color getCheckPressedBackground() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCheckPressedBackground = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CheckPressedBackground");
+            retObjectCheckPressedBackground = classInstance.Get("CheckPressedBackground");
+            JCObject val = (JCObject)retObjectCheckPressedBackground;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCheckPressedBackground != null ? retObjectCheckPressedBackground.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -395,10 +475,14 @@ public class ProfessionalColorTable extends NetObject  {
 
     public Color getCheckSelectedBackground() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCheckSelectedBackground = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CheckSelectedBackground");
+            retObjectCheckSelectedBackground = classInstance.Get("CheckSelectedBackground");
+            JCObject val = (JCObject)retObjectCheckSelectedBackground;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCheckSelectedBackground != null ? retObjectCheckSelectedBackground.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -406,10 +490,14 @@ public class ProfessionalColorTable extends NetObject  {
 
     public Color getGripDark() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGripDark = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("GripDark");
+            retObjectGripDark = classInstance.Get("GripDark");
+            JCObject val = (JCObject)retObjectGripDark;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGripDark != null ? retObjectGripDark.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -417,10 +505,14 @@ public class ProfessionalColorTable extends NetObject  {
 
     public Color getGripLight() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGripLight = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("GripLight");
+            retObjectGripLight = classInstance.Get("GripLight");
+            JCObject val = (JCObject)retObjectGripLight;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGripLight != null ? retObjectGripLight.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -428,10 +520,14 @@ public class ProfessionalColorTable extends NetObject  {
 
     public Color getImageMarginGradientBegin() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectImageMarginGradientBegin = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ImageMarginGradientBegin");
+            retObjectImageMarginGradientBegin = classInstance.Get("ImageMarginGradientBegin");
+            JCObject val = (JCObject)retObjectImageMarginGradientBegin;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectImageMarginGradientBegin != null ? retObjectImageMarginGradientBegin.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -439,10 +535,14 @@ public class ProfessionalColorTable extends NetObject  {
 
     public Color getImageMarginGradientEnd() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectImageMarginGradientEnd = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ImageMarginGradientEnd");
+            retObjectImageMarginGradientEnd = classInstance.Get("ImageMarginGradientEnd");
+            JCObject val = (JCObject)retObjectImageMarginGradientEnd;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectImageMarginGradientEnd != null ? retObjectImageMarginGradientEnd.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -450,10 +550,14 @@ public class ProfessionalColorTable extends NetObject  {
 
     public Color getImageMarginGradientMiddle() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectImageMarginGradientMiddle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ImageMarginGradientMiddle");
+            retObjectImageMarginGradientMiddle = classInstance.Get("ImageMarginGradientMiddle");
+            JCObject val = (JCObject)retObjectImageMarginGradientMiddle;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectImageMarginGradientMiddle != null ? retObjectImageMarginGradientMiddle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -461,10 +565,14 @@ public class ProfessionalColorTable extends NetObject  {
 
     public Color getImageMarginRevealedGradientBegin() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectImageMarginRevealedGradientBegin = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ImageMarginRevealedGradientBegin");
+            retObjectImageMarginRevealedGradientBegin = classInstance.Get("ImageMarginRevealedGradientBegin");
+            JCObject val = (JCObject)retObjectImageMarginRevealedGradientBegin;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectImageMarginRevealedGradientBegin != null ? retObjectImageMarginRevealedGradientBegin.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -472,10 +580,14 @@ public class ProfessionalColorTable extends NetObject  {
 
     public Color getImageMarginRevealedGradientEnd() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectImageMarginRevealedGradientEnd = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ImageMarginRevealedGradientEnd");
+            retObjectImageMarginRevealedGradientEnd = classInstance.Get("ImageMarginRevealedGradientEnd");
+            JCObject val = (JCObject)retObjectImageMarginRevealedGradientEnd;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectImageMarginRevealedGradientEnd != null ? retObjectImageMarginRevealedGradientEnd.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -483,10 +595,14 @@ public class ProfessionalColorTable extends NetObject  {
 
     public Color getImageMarginRevealedGradientMiddle() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectImageMarginRevealedGradientMiddle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ImageMarginRevealedGradientMiddle");
+            retObjectImageMarginRevealedGradientMiddle = classInstance.Get("ImageMarginRevealedGradientMiddle");
+            JCObject val = (JCObject)retObjectImageMarginRevealedGradientMiddle;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectImageMarginRevealedGradientMiddle != null ? retObjectImageMarginRevealedGradientMiddle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -494,10 +610,14 @@ public class ProfessionalColorTable extends NetObject  {
 
     public Color getMenuBorder() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMenuBorder = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MenuBorder");
+            retObjectMenuBorder = classInstance.Get("MenuBorder");
+            JCObject val = (JCObject)retObjectMenuBorder;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMenuBorder != null ? retObjectMenuBorder.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -505,10 +625,14 @@ public class ProfessionalColorTable extends NetObject  {
 
     public Color getMenuItemBorder() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMenuItemBorder = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MenuItemBorder");
+            retObjectMenuItemBorder = classInstance.Get("MenuItemBorder");
+            JCObject val = (JCObject)retObjectMenuItemBorder;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMenuItemBorder != null ? retObjectMenuItemBorder.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -516,10 +640,14 @@ public class ProfessionalColorTable extends NetObject  {
 
     public Color getMenuItemPressedGradientBegin() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMenuItemPressedGradientBegin = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MenuItemPressedGradientBegin");
+            retObjectMenuItemPressedGradientBegin = classInstance.Get("MenuItemPressedGradientBegin");
+            JCObject val = (JCObject)retObjectMenuItemPressedGradientBegin;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMenuItemPressedGradientBegin != null ? retObjectMenuItemPressedGradientBegin.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -527,10 +655,14 @@ public class ProfessionalColorTable extends NetObject  {
 
     public Color getMenuItemPressedGradientEnd() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMenuItemPressedGradientEnd = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MenuItemPressedGradientEnd");
+            retObjectMenuItemPressedGradientEnd = classInstance.Get("MenuItemPressedGradientEnd");
+            JCObject val = (JCObject)retObjectMenuItemPressedGradientEnd;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMenuItemPressedGradientEnd != null ? retObjectMenuItemPressedGradientEnd.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -538,10 +670,14 @@ public class ProfessionalColorTable extends NetObject  {
 
     public Color getMenuItemPressedGradientMiddle() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMenuItemPressedGradientMiddle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MenuItemPressedGradientMiddle");
+            retObjectMenuItemPressedGradientMiddle = classInstance.Get("MenuItemPressedGradientMiddle");
+            JCObject val = (JCObject)retObjectMenuItemPressedGradientMiddle;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMenuItemPressedGradientMiddle != null ? retObjectMenuItemPressedGradientMiddle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -549,10 +685,14 @@ public class ProfessionalColorTable extends NetObject  {
 
     public Color getMenuItemSelected() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMenuItemSelected = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MenuItemSelected");
+            retObjectMenuItemSelected = classInstance.Get("MenuItemSelected");
+            JCObject val = (JCObject)retObjectMenuItemSelected;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMenuItemSelected != null ? retObjectMenuItemSelected.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -560,10 +700,14 @@ public class ProfessionalColorTable extends NetObject  {
 
     public Color getMenuItemSelectedGradientBegin() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMenuItemSelectedGradientBegin = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MenuItemSelectedGradientBegin");
+            retObjectMenuItemSelectedGradientBegin = classInstance.Get("MenuItemSelectedGradientBegin");
+            JCObject val = (JCObject)retObjectMenuItemSelectedGradientBegin;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMenuItemSelectedGradientBegin != null ? retObjectMenuItemSelectedGradientBegin.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -571,10 +715,14 @@ public class ProfessionalColorTable extends NetObject  {
 
     public Color getMenuItemSelectedGradientEnd() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMenuItemSelectedGradientEnd = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MenuItemSelectedGradientEnd");
+            retObjectMenuItemSelectedGradientEnd = classInstance.Get("MenuItemSelectedGradientEnd");
+            JCObject val = (JCObject)retObjectMenuItemSelectedGradientEnd;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMenuItemSelectedGradientEnd != null ? retObjectMenuItemSelectedGradientEnd.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -582,10 +730,14 @@ public class ProfessionalColorTable extends NetObject  {
 
     public Color getMenuStripGradientBegin() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMenuStripGradientBegin = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MenuStripGradientBegin");
+            retObjectMenuStripGradientBegin = classInstance.Get("MenuStripGradientBegin");
+            JCObject val = (JCObject)retObjectMenuStripGradientBegin;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMenuStripGradientBegin != null ? retObjectMenuStripGradientBegin.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -593,10 +745,14 @@ public class ProfessionalColorTable extends NetObject  {
 
     public Color getMenuStripGradientEnd() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMenuStripGradientEnd = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MenuStripGradientEnd");
+            retObjectMenuStripGradientEnd = classInstance.Get("MenuStripGradientEnd");
+            JCObject val = (JCObject)retObjectMenuStripGradientEnd;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMenuStripGradientEnd != null ? retObjectMenuStripGradientEnd.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -604,10 +760,14 @@ public class ProfessionalColorTable extends NetObject  {
 
     public Color getOverflowButtonGradientBegin() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOverflowButtonGradientBegin = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("OverflowButtonGradientBegin");
+            retObjectOverflowButtonGradientBegin = classInstance.Get("OverflowButtonGradientBegin");
+            JCObject val = (JCObject)retObjectOverflowButtonGradientBegin;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOverflowButtonGradientBegin != null ? retObjectOverflowButtonGradientBegin.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -615,10 +775,14 @@ public class ProfessionalColorTable extends NetObject  {
 
     public Color getOverflowButtonGradientEnd() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOverflowButtonGradientEnd = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("OverflowButtonGradientEnd");
+            retObjectOverflowButtonGradientEnd = classInstance.Get("OverflowButtonGradientEnd");
+            JCObject val = (JCObject)retObjectOverflowButtonGradientEnd;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOverflowButtonGradientEnd != null ? retObjectOverflowButtonGradientEnd.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -626,10 +790,14 @@ public class ProfessionalColorTable extends NetObject  {
 
     public Color getOverflowButtonGradientMiddle() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOverflowButtonGradientMiddle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("OverflowButtonGradientMiddle");
+            retObjectOverflowButtonGradientMiddle = classInstance.Get("OverflowButtonGradientMiddle");
+            JCObject val = (JCObject)retObjectOverflowButtonGradientMiddle;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOverflowButtonGradientMiddle != null ? retObjectOverflowButtonGradientMiddle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -637,10 +805,14 @@ public class ProfessionalColorTable extends NetObject  {
 
     public Color getRaftingContainerGradientBegin() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRaftingContainerGradientBegin = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RaftingContainerGradientBegin");
+            retObjectRaftingContainerGradientBegin = classInstance.Get("RaftingContainerGradientBegin");
+            JCObject val = (JCObject)retObjectRaftingContainerGradientBegin;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRaftingContainerGradientBegin != null ? retObjectRaftingContainerGradientBegin.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -648,10 +820,14 @@ public class ProfessionalColorTable extends NetObject  {
 
     public Color getRaftingContainerGradientEnd() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRaftingContainerGradientEnd = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RaftingContainerGradientEnd");
+            retObjectRaftingContainerGradientEnd = classInstance.Get("RaftingContainerGradientEnd");
+            JCObject val = (JCObject)retObjectRaftingContainerGradientEnd;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRaftingContainerGradientEnd != null ? retObjectRaftingContainerGradientEnd.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -659,10 +835,14 @@ public class ProfessionalColorTable extends NetObject  {
 
     public Color getSeparatorDark() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSeparatorDark = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SeparatorDark");
+            retObjectSeparatorDark = classInstance.Get("SeparatorDark");
+            JCObject val = (JCObject)retObjectSeparatorDark;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSeparatorDark != null ? retObjectSeparatorDark.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -670,10 +850,14 @@ public class ProfessionalColorTable extends NetObject  {
 
     public Color getSeparatorLight() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSeparatorLight = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SeparatorLight");
+            retObjectSeparatorLight = classInstance.Get("SeparatorLight");
+            JCObject val = (JCObject)retObjectSeparatorLight;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSeparatorLight != null ? retObjectSeparatorLight.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -681,10 +865,14 @@ public class ProfessionalColorTable extends NetObject  {
 
     public Color getStatusStripGradientBegin() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStatusStripGradientBegin = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("StatusStripGradientBegin");
+            retObjectStatusStripGradientBegin = classInstance.Get("StatusStripGradientBegin");
+            JCObject val = (JCObject)retObjectStatusStripGradientBegin;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStatusStripGradientBegin != null ? retObjectStatusStripGradientBegin.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -692,10 +880,14 @@ public class ProfessionalColorTable extends NetObject  {
 
     public Color getStatusStripGradientEnd() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStatusStripGradientEnd = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("StatusStripGradientEnd");
+            retObjectStatusStripGradientEnd = classInstance.Get("StatusStripGradientEnd");
+            JCObject val = (JCObject)retObjectStatusStripGradientEnd;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStatusStripGradientEnd != null ? retObjectStatusStripGradientEnd.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -703,10 +895,14 @@ public class ProfessionalColorTable extends NetObject  {
 
     public Color getToolStripBorder() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToolStripBorder = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ToolStripBorder");
+            retObjectToolStripBorder = classInstance.Get("ToolStripBorder");
+            JCObject val = (JCObject)retObjectToolStripBorder;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToolStripBorder != null ? retObjectToolStripBorder.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -714,10 +910,14 @@ public class ProfessionalColorTable extends NetObject  {
 
     public Color getToolStripContentPanelGradientBegin() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToolStripContentPanelGradientBegin = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ToolStripContentPanelGradientBegin");
+            retObjectToolStripContentPanelGradientBegin = classInstance.Get("ToolStripContentPanelGradientBegin");
+            JCObject val = (JCObject)retObjectToolStripContentPanelGradientBegin;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToolStripContentPanelGradientBegin != null ? retObjectToolStripContentPanelGradientBegin.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -725,10 +925,14 @@ public class ProfessionalColorTable extends NetObject  {
 
     public Color getToolStripContentPanelGradientEnd() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToolStripContentPanelGradientEnd = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ToolStripContentPanelGradientEnd");
+            retObjectToolStripContentPanelGradientEnd = classInstance.Get("ToolStripContentPanelGradientEnd");
+            JCObject val = (JCObject)retObjectToolStripContentPanelGradientEnd;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToolStripContentPanelGradientEnd != null ? retObjectToolStripContentPanelGradientEnd.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -736,10 +940,14 @@ public class ProfessionalColorTable extends NetObject  {
 
     public Color getToolStripDropDownBackground() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToolStripDropDownBackground = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ToolStripDropDownBackground");
+            retObjectToolStripDropDownBackground = classInstance.Get("ToolStripDropDownBackground");
+            JCObject val = (JCObject)retObjectToolStripDropDownBackground;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToolStripDropDownBackground != null ? retObjectToolStripDropDownBackground.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -747,10 +955,14 @@ public class ProfessionalColorTable extends NetObject  {
 
     public Color getToolStripGradientBegin() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToolStripGradientBegin = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ToolStripGradientBegin");
+            retObjectToolStripGradientBegin = classInstance.Get("ToolStripGradientBegin");
+            JCObject val = (JCObject)retObjectToolStripGradientBegin;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToolStripGradientBegin != null ? retObjectToolStripGradientBegin.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -758,10 +970,14 @@ public class ProfessionalColorTable extends NetObject  {
 
     public Color getToolStripGradientEnd() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToolStripGradientEnd = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ToolStripGradientEnd");
+            retObjectToolStripGradientEnd = classInstance.Get("ToolStripGradientEnd");
+            JCObject val = (JCObject)retObjectToolStripGradientEnd;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToolStripGradientEnd != null ? retObjectToolStripGradientEnd.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -769,10 +985,14 @@ public class ProfessionalColorTable extends NetObject  {
 
     public Color getToolStripGradientMiddle() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToolStripGradientMiddle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ToolStripGradientMiddle");
+            retObjectToolStripGradientMiddle = classInstance.Get("ToolStripGradientMiddle");
+            JCObject val = (JCObject)retObjectToolStripGradientMiddle;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToolStripGradientMiddle != null ? retObjectToolStripGradientMiddle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -780,10 +1000,14 @@ public class ProfessionalColorTable extends NetObject  {
 
     public Color getToolStripPanelGradientBegin() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToolStripPanelGradientBegin = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ToolStripPanelGradientBegin");
+            retObjectToolStripPanelGradientBegin = classInstance.Get("ToolStripPanelGradientBegin");
+            JCObject val = (JCObject)retObjectToolStripPanelGradientBegin;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToolStripPanelGradientBegin != null ? retObjectToolStripPanelGradientBegin.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -791,10 +1015,14 @@ public class ProfessionalColorTable extends NetObject  {
 
     public Color getToolStripPanelGradientEnd() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToolStripPanelGradientEnd = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ToolStripPanelGradientEnd");
+            retObjectToolStripPanelGradientEnd = classInstance.Get("ToolStripPanelGradientEnd");
+            JCObject val = (JCObject)retObjectToolStripPanelGradientEnd;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToolStripPanelGradientEnd != null ? retObjectToolStripPanelGradientEnd.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

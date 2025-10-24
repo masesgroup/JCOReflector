@@ -142,10 +142,14 @@ public class IDestinationTypeProviderImplementation extends NetObject implements
     
     public NetType GetDestinationType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDestinationType = null;
         try {
-            JCObject objGetDestinationType = (JCObject)classInstance.Invoke("GetDestinationType");
+            retObjectGetDestinationType = classInstance.Invoke("GetDestinationType");
+            JCObject objGetDestinationType = (JCObject)retObjectGetDestinationType;
             return new NetType(objGetDestinationType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetDestinationType != null ? retObjectGetDestinationType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

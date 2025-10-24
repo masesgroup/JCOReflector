@@ -170,9 +170,20 @@ public class ModuleBuilder extends Module  {
     
     public int GetFieldMetadataToken(FieldInfo field) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetFieldMetadataToken = null;
         try {
-            return (int)classInstance.Invoke("GetFieldMetadataToken", field == null ? null : field.getJCOInstance());
+            retObjectGetFieldMetadataToken = classInstance.Invoke("GetFieldMetadataToken", field == null ? null : field.getJCOInstance());
+            return (int)retObjectGetFieldMetadataToken;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetFieldMetadataToken_ToString = retObjectGetFieldMetadataToken == null ? "null" : retObjectGetFieldMetadataToken.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetFieldMetadataTokenNumber = (java.lang.Number)retObjectGetFieldMetadataToken;
+                return retObjectGetFieldMetadataTokenNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetFieldMetadataToken != null ? retObjectGetFieldMetadataToken.getClass() : "null", retObjectGetFieldMetadataToken_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,9 +191,20 @@ public class ModuleBuilder extends Module  {
 
     public int GetMethodMetadataToken(ConstructorInfo constructor) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetMethodMetadataToken = null;
         try {
-            return (int)classInstance.Invoke("GetMethodMetadataToken", constructor == null ? null : constructor.getJCOInstance());
+            retObjectGetMethodMetadataToken = classInstance.Invoke("GetMethodMetadataToken", constructor == null ? null : constructor.getJCOInstance());
+            return (int)retObjectGetMethodMetadataToken;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetMethodMetadataToken_ToString = retObjectGetMethodMetadataToken == null ? "null" : retObjectGetMethodMetadataToken.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetMethodMetadataTokenNumber = (java.lang.Number)retObjectGetMethodMetadataToken;
+                return retObjectGetMethodMetadataTokenNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetMethodMetadataToken != null ? retObjectGetMethodMetadataToken.getClass() : "null", retObjectGetMethodMetadataToken_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,9 +212,20 @@ public class ModuleBuilder extends Module  {
 
     public int GetMethodMetadataToken(MethodInfo method) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetMethodMetadataToken = null;
         try {
-            return (int)classInstance.Invoke("GetMethodMetadataToken", method == null ? null : method.getJCOInstance());
+            retObjectGetMethodMetadataToken = classInstance.Invoke("GetMethodMetadataToken", method == null ? null : method.getJCOInstance());
+            return (int)retObjectGetMethodMetadataToken;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetMethodMetadataToken_ToString = retObjectGetMethodMetadataToken == null ? "null" : retObjectGetMethodMetadataToken.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetMethodMetadataTokenNumber = (java.lang.Number)retObjectGetMethodMetadataToken;
+                return retObjectGetMethodMetadataTokenNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetMethodMetadataToken != null ? retObjectGetMethodMetadataToken.getClass() : "null", retObjectGetMethodMetadataToken_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,9 +233,20 @@ public class ModuleBuilder extends Module  {
 
     public int GetSignatureMetadataToken(SignatureHelper signature) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSignatureMetadataToken = null;
         try {
-            return (int)classInstance.Invoke("GetSignatureMetadataToken", signature == null ? null : signature.getJCOInstance());
+            retObjectGetSignatureMetadataToken = classInstance.Invoke("GetSignatureMetadataToken", signature == null ? null : signature.getJCOInstance());
+            return (int)retObjectGetSignatureMetadataToken;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetSignatureMetadataToken_ToString = retObjectGetSignatureMetadataToken == null ? "null" : retObjectGetSignatureMetadataToken.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetSignatureMetadataTokenNumber = (java.lang.Number)retObjectGetSignatureMetadataToken;
+                return retObjectGetSignatureMetadataTokenNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetSignatureMetadataToken != null ? retObjectGetSignatureMetadataToken.getClass() : "null", retObjectGetSignatureMetadataToken_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -210,9 +254,20 @@ public class ModuleBuilder extends Module  {
 
     public int GetStringMetadataToken(java.lang.String stringConstant) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetStringMetadataToken = null;
         try {
-            return (int)classInstance.Invoke("GetStringMetadataToken", stringConstant);
+            retObjectGetStringMetadataToken = classInstance.Invoke("GetStringMetadataToken", stringConstant);
+            return (int)retObjectGetStringMetadataToken;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetStringMetadataToken_ToString = retObjectGetStringMetadataToken == null ? "null" : retObjectGetStringMetadataToken.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetStringMetadataTokenNumber = (java.lang.Number)retObjectGetStringMetadataToken;
+                return retObjectGetStringMetadataTokenNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetStringMetadataToken != null ? retObjectGetStringMetadataToken.getClass() : "null", retObjectGetStringMetadataToken_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -220,9 +275,20 @@ public class ModuleBuilder extends Module  {
 
     public int GetTypeMetadataToken(NetType type) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetTypeMetadataToken = null;
         try {
-            return (int)classInstance.Invoke("GetTypeMetadataToken", type == null ? null : type.getJCOInstance());
+            retObjectGetTypeMetadataToken = classInstance.Invoke("GetTypeMetadataToken", type == null ? null : type.getJCOInstance());
+            return (int)retObjectGetTypeMetadataToken;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetTypeMetadataToken_ToString = retObjectGetTypeMetadataToken == null ? "null" : retObjectGetTypeMetadataToken.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetTypeMetadataTokenNumber = (java.lang.Number)retObjectGetTypeMetadataToken;
+                return retObjectGetTypeMetadataTokenNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetTypeMetadataToken != null ? retObjectGetTypeMetadataToken.getClass() : "null", retObjectGetTypeMetadataToken_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -230,10 +296,14 @@ public class ModuleBuilder extends Module  {
 
     public EnumBuilder DefineEnum(java.lang.String name, TypeAttributes visibility, NetType underlyingType) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDefineEnum = null;
         try {
-            JCObject objDefineEnum = (JCObject)classInstance.Invoke("DefineEnum", name, visibility == null ? null : visibility.getJCOInstance(), underlyingType == null ? null : underlyingType.getJCOInstance());
+            retObjectDefineEnum = classInstance.Invoke("DefineEnum", name, visibility == null ? null : visibility.getJCOInstance(), underlyingType == null ? null : underlyingType.getJCOInstance());
+            JCObject objDefineEnum = (JCObject)retObjectDefineEnum;
             return new EnumBuilder(objDefineEnum);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefineEnum != null ? retObjectDefineEnum.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -241,10 +311,14 @@ public class ModuleBuilder extends Module  {
 
     public FieldBuilder DefineInitializedData(java.lang.String name, byte[] data, FieldAttributes attributes) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDefineInitializedData = null;
         try {
-            JCObject objDefineInitializedData = (JCObject)classInstance.Invoke("DefineInitializedData", name, data, attributes == null ? null : attributes.getJCOInstance());
+            retObjectDefineInitializedData = classInstance.Invoke("DefineInitializedData", name, data, attributes == null ? null : attributes.getJCOInstance());
+            JCObject objDefineInitializedData = (JCObject)retObjectDefineInitializedData;
             return new FieldBuilder(objDefineInitializedData);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefineInitializedData != null ? retObjectDefineInitializedData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -252,10 +326,14 @@ public class ModuleBuilder extends Module  {
 
     public FieldBuilder DefineInitializedData(java.lang.String dupParam0, JCORefOut dupParam1, FieldAttributes dupParam2) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDefineInitializedData = null;
         try {
-            JCObject objDefineInitializedData = (JCObject)classInstance.Invoke("DefineInitializedData", dupParam0, dupParam1.getJCRefOut(), dupParam2 == null ? null : dupParam2.getJCOInstance());
+            retObjectDefineInitializedData = classInstance.Invoke("DefineInitializedData", dupParam0, dupParam1.getJCRefOut(), dupParam2 == null ? null : dupParam2.getJCOInstance());
+            JCObject objDefineInitializedData = (JCObject)retObjectDefineInitializedData;
             return new FieldBuilder(objDefineInitializedData);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefineInitializedData != null ? retObjectDefineInitializedData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -263,10 +341,14 @@ public class ModuleBuilder extends Module  {
 
     public FieldBuilder DefineUninitializedData(java.lang.String name, int size, FieldAttributes attributes) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDefineUninitializedData = null;
         try {
-            JCObject objDefineUninitializedData = (JCObject)classInstance.Invoke("DefineUninitializedData", name, size, attributes == null ? null : attributes.getJCOInstance());
+            retObjectDefineUninitializedData = classInstance.Invoke("DefineUninitializedData", name, size, attributes == null ? null : attributes.getJCOInstance());
+            JCObject objDefineUninitializedData = (JCObject)retObjectDefineUninitializedData;
             return new FieldBuilder(objDefineUninitializedData);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefineUninitializedData != null ? retObjectDefineUninitializedData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -274,10 +356,14 @@ public class ModuleBuilder extends Module  {
 
     public MethodBuilder DefineGlobalMethod(java.lang.String name, MethodAttributes attributes, CallingConventions callingConvention, NetType returnType, NetType[] parameterTypes) throws Throwable, system.ArgumentNullException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDefineGlobalMethod = null;
         try {
-            JCObject objDefineGlobalMethod = (JCObject)classInstance.Invoke("DefineGlobalMethod", name, attributes == null ? null : attributes.getJCOInstance(), callingConvention == null ? null : callingConvention.getJCOInstance(), returnType == null ? null : returnType.getJCOInstance(), toObjectFromArray(parameterTypes));
+            retObjectDefineGlobalMethod = classInstance.Invoke("DefineGlobalMethod", name, attributes == null ? null : attributes.getJCOInstance(), callingConvention == null ? null : callingConvention.getJCOInstance(), returnType == null ? null : returnType.getJCOInstance(), toObjectFromArray(parameterTypes));
+            JCObject objDefineGlobalMethod = (JCObject)retObjectDefineGlobalMethod;
             return new MethodBuilder(objDefineGlobalMethod);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefineGlobalMethod != null ? retObjectDefineGlobalMethod.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -285,10 +371,14 @@ public class ModuleBuilder extends Module  {
 
     public MethodBuilder DefineGlobalMethod(java.lang.String name, MethodAttributes attributes, NetType returnType, NetType[] parameterTypes) throws Throwable, system.ArgumentNullException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDefineGlobalMethod = null;
         try {
-            JCObject objDefineGlobalMethod = (JCObject)classInstance.Invoke("DefineGlobalMethod", name, attributes == null ? null : attributes.getJCOInstance(), returnType == null ? null : returnType.getJCOInstance(), toObjectFromArray(parameterTypes));
+            retObjectDefineGlobalMethod = classInstance.Invoke("DefineGlobalMethod", name, attributes == null ? null : attributes.getJCOInstance(), returnType == null ? null : returnType.getJCOInstance(), toObjectFromArray(parameterTypes));
+            JCObject objDefineGlobalMethod = (JCObject)retObjectDefineGlobalMethod;
             return new MethodBuilder(objDefineGlobalMethod);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefineGlobalMethod != null ? retObjectDefineGlobalMethod.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -296,10 +386,14 @@ public class ModuleBuilder extends Module  {
 
     public MethodBuilder DefinePInvokeMethod(java.lang.String name, java.lang.String dllName, MethodAttributes attributes, CallingConventions callingConvention, NetType returnType, NetType[] parameterTypes, CallingConvention nativeCallConv, CharSet nativeCharSet) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDefinePInvokeMethod = null;
         try {
-            JCObject objDefinePInvokeMethod = (JCObject)classInstance.Invoke("DefinePInvokeMethod", name, dllName, attributes == null ? null : attributes.getJCOInstance(), callingConvention == null ? null : callingConvention.getJCOInstance(), returnType == null ? null : returnType.getJCOInstance(), toObjectFromArray(parameterTypes), nativeCallConv == null ? null : nativeCallConv.getJCOInstance(), nativeCharSet == null ? null : nativeCharSet.getJCOInstance());
+            retObjectDefinePInvokeMethod = classInstance.Invoke("DefinePInvokeMethod", name, dllName, attributes == null ? null : attributes.getJCOInstance(), callingConvention == null ? null : callingConvention.getJCOInstance(), returnType == null ? null : returnType.getJCOInstance(), toObjectFromArray(parameterTypes), nativeCallConv == null ? null : nativeCallConv.getJCOInstance(), nativeCharSet == null ? null : nativeCharSet.getJCOInstance());
+            JCObject objDefinePInvokeMethod = (JCObject)retObjectDefinePInvokeMethod;
             return new MethodBuilder(objDefinePInvokeMethod);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefinePInvokeMethod != null ? retObjectDefinePInvokeMethod.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -307,10 +401,14 @@ public class ModuleBuilder extends Module  {
 
     public MethodBuilder DefinePInvokeMethod(java.lang.String name, java.lang.String dllName, java.lang.String entryName, MethodAttributes attributes, CallingConventions callingConvention, NetType returnType, NetType[] parameterTypes, CallingConvention nativeCallConv, CharSet nativeCharSet) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDefinePInvokeMethod = null;
         try {
-            JCObject objDefinePInvokeMethod = (JCObject)classInstance.Invoke("DefinePInvokeMethod", name, dllName, entryName, attributes == null ? null : attributes.getJCOInstance(), callingConvention == null ? null : callingConvention.getJCOInstance(), returnType == null ? null : returnType.getJCOInstance(), toObjectFromArray(parameterTypes), nativeCallConv == null ? null : nativeCallConv.getJCOInstance(), nativeCharSet == null ? null : nativeCharSet.getJCOInstance());
+            retObjectDefinePInvokeMethod = classInstance.Invoke("DefinePInvokeMethod", name, dllName, entryName, attributes == null ? null : attributes.getJCOInstance(), callingConvention == null ? null : callingConvention.getJCOInstance(), returnType == null ? null : returnType.getJCOInstance(), toObjectFromArray(parameterTypes), nativeCallConv == null ? null : nativeCallConv.getJCOInstance(), nativeCharSet == null ? null : nativeCharSet.getJCOInstance());
+            JCObject objDefinePInvokeMethod = (JCObject)retObjectDefinePInvokeMethod;
             return new MethodBuilder(objDefinePInvokeMethod);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefinePInvokeMethod != null ? retObjectDefinePInvokeMethod.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -318,10 +416,14 @@ public class ModuleBuilder extends Module  {
 
     public TypeBuilder DefineType(java.lang.String name, TypeAttributes attr, NetType parent, int typesize) throws Throwable, system.ArgumentNullException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDefineType = null;
         try {
-            JCObject objDefineType = (JCObject)classInstance.Invoke("DefineType", name, attr == null ? null : attr.getJCOInstance(), parent == null ? null : parent.getJCOInstance(), typesize);
+            retObjectDefineType = classInstance.Invoke("DefineType", name, attr == null ? null : attr.getJCOInstance(), parent == null ? null : parent.getJCOInstance(), typesize);
+            JCObject objDefineType = (JCObject)retObjectDefineType;
             return new TypeBuilder(objDefineType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefineType != null ? retObjectDefineType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -329,10 +431,14 @@ public class ModuleBuilder extends Module  {
 
     public TypeBuilder DefineType(java.lang.String name, TypeAttributes attr, NetType parent, PackingSize packingSize, int typesize) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDefineType = null;
         try {
-            JCObject objDefineType = (JCObject)classInstance.Invoke("DefineType", name, attr == null ? null : attr.getJCOInstance(), parent == null ? null : parent.getJCOInstance(), packingSize == null ? null : packingSize.getJCOInstance(), typesize);
+            retObjectDefineType = classInstance.Invoke("DefineType", name, attr == null ? null : attr.getJCOInstance(), parent == null ? null : parent.getJCOInstance(), packingSize == null ? null : packingSize.getJCOInstance(), typesize);
+            JCObject objDefineType = (JCObject)retObjectDefineType;
             return new TypeBuilder(objDefineType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefineType != null ? retObjectDefineType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -340,10 +446,14 @@ public class ModuleBuilder extends Module  {
 
     public TypeBuilder DefineType(java.lang.String name, TypeAttributes attr, NetType parent, PackingSize packsize) throws Throwable, system.ArgumentNullException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDefineType = null;
         try {
-            JCObject objDefineType = (JCObject)classInstance.Invoke("DefineType", name, attr == null ? null : attr.getJCOInstance(), parent == null ? null : parent.getJCOInstance(), packsize == null ? null : packsize.getJCOInstance());
+            retObjectDefineType = classInstance.Invoke("DefineType", name, attr == null ? null : attr.getJCOInstance(), parent == null ? null : parent.getJCOInstance(), packsize == null ? null : packsize.getJCOInstance());
+            JCObject objDefineType = (JCObject)retObjectDefineType;
             return new TypeBuilder(objDefineType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefineType != null ? retObjectDefineType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -351,10 +461,14 @@ public class ModuleBuilder extends Module  {
 
     public TypeBuilder DefineType(java.lang.String name, TypeAttributes attr, NetType parent, NetType[] interfaces) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDefineType = null;
         try {
-            JCObject objDefineType = (JCObject)classInstance.Invoke("DefineType", name, attr == null ? null : attr.getJCOInstance(), parent == null ? null : parent.getJCOInstance(), toObjectFromArray(interfaces));
+            retObjectDefineType = classInstance.Invoke("DefineType", name, attr == null ? null : attr.getJCOInstance(), parent == null ? null : parent.getJCOInstance(), toObjectFromArray(interfaces));
+            JCObject objDefineType = (JCObject)retObjectDefineType;
             return new TypeBuilder(objDefineType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefineType != null ? retObjectDefineType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -362,10 +476,14 @@ public class ModuleBuilder extends Module  {
 
     public TypeBuilder DefineType(java.lang.String name, TypeAttributes attr, NetType parent) throws Throwable, system.ArgumentNullException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDefineType = null;
         try {
-            JCObject objDefineType = (JCObject)classInstance.Invoke("DefineType", name, attr == null ? null : attr.getJCOInstance(), parent == null ? null : parent.getJCOInstance());
+            retObjectDefineType = classInstance.Invoke("DefineType", name, attr == null ? null : attr.getJCOInstance(), parent == null ? null : parent.getJCOInstance());
+            JCObject objDefineType = (JCObject)retObjectDefineType;
             return new TypeBuilder(objDefineType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefineType != null ? retObjectDefineType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -373,10 +491,14 @@ public class ModuleBuilder extends Module  {
 
     public TypeBuilder DefineType(java.lang.String name, TypeAttributes attr) throws Throwable, system.ArgumentNullException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDefineType = null;
         try {
-            JCObject objDefineType = (JCObject)classInstance.Invoke("DefineType", name, attr == null ? null : attr.getJCOInstance());
+            retObjectDefineType = classInstance.Invoke("DefineType", name, attr == null ? null : attr.getJCOInstance());
+            JCObject objDefineType = (JCObject)retObjectDefineType;
             return new TypeBuilder(objDefineType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefineType != null ? retObjectDefineType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -384,10 +506,14 @@ public class ModuleBuilder extends Module  {
 
     public TypeBuilder DefineType(java.lang.String name) throws Throwable, system.ArgumentNullException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDefineType = null;
         try {
-            JCObject objDefineType = (JCObject)classInstance.Invoke("DefineType", name);
+            retObjectDefineType = classInstance.Invoke("DefineType", name);
+            JCObject objDefineType = (JCObject)retObjectDefineType;
             return new TypeBuilder(objDefineType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefineType != null ? retObjectDefineType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -395,10 +521,14 @@ public class ModuleBuilder extends Module  {
 
     public MethodInfo GetArrayMethod(NetType arrayClass, java.lang.String methodName, CallingConventions callingConvention, NetType returnType, NetType[] parameterTypes) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetArrayMethod = null;
         try {
-            JCObject objGetArrayMethod = (JCObject)classInstance.Invoke("GetArrayMethod", arrayClass == null ? null : arrayClass.getJCOInstance(), methodName, callingConvention == null ? null : callingConvention.getJCOInstance(), returnType == null ? null : returnType.getJCOInstance(), toObjectFromArray(parameterTypes));
+            retObjectGetArrayMethod = classInstance.Invoke("GetArrayMethod", arrayClass == null ? null : arrayClass.getJCOInstance(), methodName, callingConvention == null ? null : callingConvention.getJCOInstance(), returnType == null ? null : returnType.getJCOInstance(), toObjectFromArray(parameterTypes));
+            JCObject objGetArrayMethod = (JCObject)retObjectGetArrayMethod;
             return new MethodInfo(objGetArrayMethod);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetArrayMethod != null ? retObjectGetArrayMethod.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -406,7 +536,7 @@ public class ModuleBuilder extends Module  {
 
     public void CreateGlobalFunctions() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CreateGlobalFunctions");
         } catch (JCNativeException jcne) {
@@ -416,7 +546,7 @@ public class ModuleBuilder extends Module  {
 
     public void SetCustomAttribute(ConstructorInfo con, byte[] binaryAttribute) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetCustomAttribute", con == null ? null : con.getJCOInstance(), binaryAttribute);
         } catch (JCNativeException jcne) {
@@ -426,7 +556,7 @@ public class ModuleBuilder extends Module  {
 
     public void SetCustomAttribute(ConstructorInfo dupParam0, JCORefOut dupParam1) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetCustomAttribute", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -436,7 +566,7 @@ public class ModuleBuilder extends Module  {
 
     public void SetCustomAttribute(CustomAttributeBuilder customBuilder) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetCustomAttribute", customBuilder == null ? null : customBuilder.getJCOInstance());
         } catch (JCNativeException jcne) {

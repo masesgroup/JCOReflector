@@ -178,10 +178,14 @@ public class ActivityDesignerTheme extends DesignerTheme  {
     
     public Brush GetBackgroundBrush(Rectangle rectangle) throws Throwable, system.ArgumentNullException, system.NullReferenceException, system.InvalidOperationException, system.runtime.interopservices.ExternalException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetBackgroundBrush = null;
         try {
-            JCObject objGetBackgroundBrush = (JCObject)classInstance.Invoke("GetBackgroundBrush", rectangle == null ? null : rectangle.getJCOInstance());
+            retObjectGetBackgroundBrush = classInstance.Invoke("GetBackgroundBrush", rectangle == null ? null : rectangle.getJCOInstance());
+            JCObject objGetBackgroundBrush = (JCObject)retObjectGetBackgroundBrush;
             return new Brush(objGetBackgroundBrush);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetBackgroundBrush != null ? retObjectGetBackgroundBrush.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -189,7 +193,7 @@ public class ActivityDesignerTheme extends DesignerTheme  {
 
     public void Initialize() throws Throwable, system.ArgumentNullException, system.collections.generic.KeyNotFoundException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.xml.XmlException, system.NotSupportedException, system.configuration.ConfigurationErrorsException, system.FormatException, system.OutOfMemoryException, system.NullReferenceException, system.InvalidCastException, system.workflow.componentmodel.serialization.WorkflowMarkupSerializationException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Initialize");
         } catch (JCNativeException jcne) {
@@ -199,7 +203,7 @@ public class ActivityDesignerTheme extends DesignerTheme  {
 
     public void OnAmbientPropertyChanged(AmbientProperty ambientProperty) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("OnAmbientPropertyChanged", ambientProperty == null ? null : ambientProperty.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -213,9 +217,20 @@ public class ActivityDesignerTheme extends DesignerTheme  {
     
     public int getBorderWidth() throws Throwable, system.ArgumentNullException, system.collections.generic.KeyNotFoundException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.xml.XmlException, system.NotSupportedException, system.configuration.ConfigurationErrorsException, system.FormatException, system.OutOfMemoryException, system.NullReferenceException, system.InvalidCastException, system.workflow.componentmodel.serialization.WorkflowMarkupSerializationException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBorderWidth = null;
         try {
-            return (int)classInstance.Get("BorderWidth");
+            retObjectBorderWidth = classInstance.Get("BorderWidth");
+            return (int)retObjectBorderWidth;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectBorderWidth_ToString = retObjectBorderWidth == null ? "null" : retObjectBorderWidth.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectBorderWidthNumber = (java.lang.Number)retObjectBorderWidth;
+                return retObjectBorderWidthNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectBorderWidth != null ? retObjectBorderWidth.getClass() : "null", retObjectBorderWidth_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -223,10 +238,14 @@ public class ActivityDesignerTheme extends DesignerTheme  {
 
     public Brush getForegroundBrush() throws Throwable, system.InvalidOperationException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectForegroundBrush = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ForegroundBrush");
+            retObjectForegroundBrush = classInstance.Get("ForegroundBrush");
+            JCObject val = (JCObject)retObjectForegroundBrush;
             return new Brush(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectForegroundBrush != null ? retObjectForegroundBrush.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -234,10 +253,14 @@ public class ActivityDesignerTheme extends DesignerTheme  {
 
     public Color getBackColorEnd() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBackColorEnd = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("BackColorEnd");
+            retObjectBackColorEnd = classInstance.Get("BackColorEnd");
+            JCObject val = (JCObject)retObjectBackColorEnd;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBackColorEnd != null ? retObjectBackColorEnd.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -245,7 +268,7 @@ public class ActivityDesignerTheme extends DesignerTheme  {
 
     public void setBackColorEnd(Color BackColorEnd) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BackColorEnd", BackColorEnd == null ? null : BackColorEnd.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -255,10 +278,14 @@ public class ActivityDesignerTheme extends DesignerTheme  {
 
     public Color getBackColorStart() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBackColorStart = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("BackColorStart");
+            retObjectBackColorStart = classInstance.Get("BackColorStart");
+            JCObject val = (JCObject)retObjectBackColorStart;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBackColorStart != null ? retObjectBackColorStart.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -266,7 +293,7 @@ public class ActivityDesignerTheme extends DesignerTheme  {
 
     public void setBackColorStart(Color BackColorStart) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BackColorStart", BackColorStart == null ? null : BackColorStart.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -276,10 +303,14 @@ public class ActivityDesignerTheme extends DesignerTheme  {
 
     public Color getBorderColor() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBorderColor = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("BorderColor");
+            retObjectBorderColor = classInstance.Get("BorderColor");
+            JCObject val = (JCObject)retObjectBorderColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBorderColor != null ? retObjectBorderColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -287,7 +318,7 @@ public class ActivityDesignerTheme extends DesignerTheme  {
 
     public void setBorderColor(Color BorderColor) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.OutOfMemoryException, system.FormatException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BorderColor", BorderColor == null ? null : BorderColor.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -297,10 +328,14 @@ public class ActivityDesignerTheme extends DesignerTheme  {
 
     public Color getForeColor() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectForeColor = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ForeColor");
+            retObjectForeColor = classInstance.Get("ForeColor");
+            JCObject val = (JCObject)retObjectForeColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectForeColor != null ? retObjectForeColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -308,7 +343,7 @@ public class ActivityDesignerTheme extends DesignerTheme  {
 
     public void setForeColor(Color ForeColor) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.OutOfMemoryException, system.FormatException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ForeColor", ForeColor == null ? null : ForeColor.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -318,10 +353,14 @@ public class ActivityDesignerTheme extends DesignerTheme  {
 
     public DashStyle getBorderStyle() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBorderStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("BorderStyle");
+            retObjectBorderStyle = classInstance.Get("BorderStyle");
+            JCObject val = (JCObject)retObjectBorderStyle;
             return new DashStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBorderStyle != null ? retObjectBorderStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -329,7 +368,7 @@ public class ActivityDesignerTheme extends DesignerTheme  {
 
     public void setBorderStyle(DashStyle BorderStyle) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.OutOfMemoryException, system.FormatException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BorderStyle", BorderStyle == null ? null : BorderStyle.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -339,10 +378,14 @@ public class ActivityDesignerTheme extends DesignerTheme  {
 
     public LinearGradientMode getBackgroundStyle() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBackgroundStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("BackgroundStyle");
+            retObjectBackgroundStyle = classInstance.Get("BackgroundStyle");
+            JCObject val = (JCObject)retObjectBackgroundStyle;
             return new LinearGradientMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBackgroundStyle != null ? retObjectBackgroundStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -350,7 +393,7 @@ public class ActivityDesignerTheme extends DesignerTheme  {
 
     public void setBackgroundStyle(LinearGradientMode BackgroundStyle) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BackgroundStyle", BackgroundStyle == null ? null : BackgroundStyle.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -360,10 +403,14 @@ public class ActivityDesignerTheme extends DesignerTheme  {
 
     public Font getBoldFont() throws Throwable, system.ArgumentNullException, system.collections.generic.KeyNotFoundException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.xml.XmlException, system.NotSupportedException, system.configuration.ConfigurationErrorsException, system.FormatException, system.OutOfMemoryException, system.NullReferenceException, system.InvalidCastException, system.workflow.componentmodel.serialization.WorkflowMarkupSerializationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.RankException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBoldFont = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("BoldFont");
+            retObjectBoldFont = classInstance.Get("BoldFont");
+            JCObject val = (JCObject)retObjectBoldFont;
             return new Font(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBoldFont != null ? retObjectBoldFont.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -371,10 +418,14 @@ public class ActivityDesignerTheme extends DesignerTheme  {
 
     public Font getFont() throws Throwable, system.ArgumentNullException, system.collections.generic.KeyNotFoundException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.xml.XmlException, system.NotSupportedException, system.configuration.ConfigurationErrorsException, system.FormatException, system.OutOfMemoryException, system.NullReferenceException, system.InvalidCastException, system.workflow.componentmodel.serialization.WorkflowMarkupSerializationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.RankException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFont = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Font");
+            retObjectFont = classInstance.Get("Font");
+            JCObject val = (JCObject)retObjectFont;
             return new Font(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFont != null ? retObjectFont.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -382,10 +433,14 @@ public class ActivityDesignerTheme extends DesignerTheme  {
 
     public Image getDesignerImage() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.io.PathTooLongException, system.ArgumentOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NotSupportedException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException, system.security.SecurityException, system.MemberAccessException, system.NullReferenceException, system.UriFormatException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDesignerImage = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DesignerImage");
+            retObjectDesignerImage = classInstance.Get("DesignerImage");
+            JCObject val = (JCObject)retObjectDesignerImage;
             return new Image(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDesignerImage != null ? retObjectDesignerImage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -393,10 +448,14 @@ public class ActivityDesignerTheme extends DesignerTheme  {
 
     public Pen getBorderPen() throws Throwable, system.ArgumentNullException, system.collections.generic.KeyNotFoundException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.xml.XmlException, system.NotSupportedException, system.configuration.ConfigurationErrorsException, system.FormatException, system.MulticastNotSupportedException, system.NullReferenceException, system.InvalidCastException, system.workflow.componentmodel.serialization.WorkflowMarkupSerializationException, system.MissingMethodException, system.runtime.interopservices.ExternalException, system.componentmodel.InvalidEnumArgumentException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBorderPen = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("BorderPen");
+            retObjectBorderPen = classInstance.Get("BorderPen");
+            JCObject val = (JCObject)retObjectBorderPen;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBorderPen != null ? retObjectBorderPen.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -404,10 +463,14 @@ public class ActivityDesignerTheme extends DesignerTheme  {
 
     public Pen getForegroundPen() throws Throwable, system.ArgumentNullException, system.collections.generic.KeyNotFoundException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.xml.XmlException, system.NotSupportedException, system.configuration.ConfigurationErrorsException, system.FormatException, system.MulticastNotSupportedException, system.NullReferenceException, system.InvalidCastException, system.workflow.componentmodel.serialization.WorkflowMarkupSerializationException, system.MissingMethodException, system.runtime.interopservices.ExternalException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectForegroundPen = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ForegroundPen");
+            retObjectForegroundPen = classInstance.Get("ForegroundPen");
+            JCObject val = (JCObject)retObjectForegroundPen;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectForegroundPen != null ? retObjectForegroundPen.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -415,10 +478,14 @@ public class ActivityDesignerTheme extends DesignerTheme  {
 
     public Size getImageSize() throws Throwable, system.ArgumentNullException, system.collections.generic.KeyNotFoundException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.xml.XmlException, system.NotSupportedException, system.configuration.ConfigurationErrorsException, system.FormatException, system.OutOfMemoryException, system.NullReferenceException, system.InvalidCastException, system.workflow.componentmodel.serialization.WorkflowMarkupSerializationException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectImageSize = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ImageSize");
+            retObjectImageSize = classInstance.Get("ImageSize");
+            JCObject val = (JCObject)retObjectImageSize;
             return new Size(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectImageSize != null ? retObjectImageSize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -426,10 +493,14 @@ public class ActivityDesignerTheme extends DesignerTheme  {
 
     public Size getSize() throws Throwable, system.ArgumentNullException, system.collections.generic.KeyNotFoundException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.xml.XmlException, system.NotSupportedException, system.configuration.ConfigurationErrorsException, system.FormatException, system.OutOfMemoryException, system.NullReferenceException, system.InvalidCastException, system.workflow.componentmodel.serialization.WorkflowMarkupSerializationException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSize = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Size");
+            retObjectSize = classInstance.Get("Size");
+            JCObject val = (JCObject)retObjectSize;
             return new Size(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSize != null ? retObjectSize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -437,9 +508,13 @@ public class ActivityDesignerTheme extends DesignerTheme  {
 
     public java.lang.String getDesignerImagePath() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDesignerImagePath = null;
         try {
-            return (java.lang.String)classInstance.Get("DesignerImagePath");
+            retObjectDesignerImagePath = classInstance.Get("DesignerImagePath");
+            return (java.lang.String)retObjectDesignerImagePath;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDesignerImagePath != null ? retObjectDesignerImagePath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -447,7 +522,7 @@ public class ActivityDesignerTheme extends DesignerTheme  {
 
     public void setDesignerImagePath(java.lang.String DesignerImagePath) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.OutOfMemoryException, system.FormatException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.security.SecurityException, system.MemberAccessException, system.NullReferenceException, system.UriFormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DesignerImagePath", DesignerImagePath);
         } catch (JCNativeException jcne) {
@@ -457,10 +532,14 @@ public class ActivityDesignerTheme extends DesignerTheme  {
 
     public DesignerGeometry getDesignerGeometry() throws Throwable, system.ArgumentNullException, system.collections.generic.KeyNotFoundException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.xml.XmlException, system.NotSupportedException, system.configuration.ConfigurationErrorsException, system.FormatException, system.OutOfMemoryException, system.NullReferenceException, system.InvalidCastException, system.workflow.componentmodel.serialization.WorkflowMarkupSerializationException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDesignerGeometry = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DesignerGeometry");
+            retObjectDesignerGeometry = classInstance.Get("DesignerGeometry");
+            JCObject val = (JCObject)retObjectDesignerGeometry;
             return new DesignerGeometry(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDesignerGeometry != null ? retObjectDesignerGeometry.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

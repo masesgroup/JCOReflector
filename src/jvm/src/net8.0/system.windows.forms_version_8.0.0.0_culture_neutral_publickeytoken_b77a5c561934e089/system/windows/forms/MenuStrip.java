@@ -169,9 +169,13 @@ public class MenuStrip extends ToolStrip  {
     
     public boolean getCanOverflow() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanOverflow = null;
         try {
-            return (boolean)classInstance.Get("CanOverflow");
+            retObjectCanOverflow = classInstance.Get("CanOverflow");
+            return (boolean)retObjectCanOverflow;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCanOverflow != null ? retObjectCanOverflow.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,7 +183,7 @@ public class MenuStrip extends ToolStrip  {
 
     public void setCanOverflow(boolean CanOverflow) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.RankException, system.IndexOutOfRangeException, system.ArgumentException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CanOverflow", CanOverflow);
         } catch (JCNativeException jcne) {
@@ -189,9 +193,13 @@ public class MenuStrip extends ToolStrip  {
 
     public boolean getShowItemToolTips() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShowItemToolTips = null;
         try {
-            return (boolean)classInstance.Get("ShowItemToolTips");
+            retObjectShowItemToolTips = classInstance.Get("ShowItemToolTips");
+            return (boolean)retObjectShowItemToolTips;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectShowItemToolTips != null ? retObjectShowItemToolTips.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -199,7 +207,7 @@ public class MenuStrip extends ToolStrip  {
 
     public void setShowItemToolTips(boolean ShowItemToolTips) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.InvalidOperationException, system.NotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.threading.ThreadStateException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ShowItemToolTips", ShowItemToolTips);
         } catch (JCNativeException jcne) {
@@ -209,9 +217,13 @@ public class MenuStrip extends ToolStrip  {
 
     public boolean getStretch() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStretch = null;
         try {
-            return (boolean)classInstance.Get("Stretch");
+            retObjectStretch = classInstance.Get("Stretch");
+            return (boolean)retObjectStretch;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectStretch != null ? retObjectStretch.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -219,7 +231,7 @@ public class MenuStrip extends ToolStrip  {
 
     public void setStretch(boolean Stretch) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Stretch", Stretch);
         } catch (JCNativeException jcne) {
@@ -229,10 +241,14 @@ public class MenuStrip extends ToolStrip  {
 
     public ToolStripGripStyle getGripStyle() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGripStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("GripStyle");
+            retObjectGripStyle = classInstance.Get("GripStyle");
+            JCObject val = (JCObject)retObjectGripStyle;
             return new ToolStripGripStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGripStyle != null ? retObjectGripStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -240,7 +256,7 @@ public class MenuStrip extends ToolStrip  {
 
     public void setGripStyle(ToolStripGripStyle GripStyle) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.collections.generic.KeyNotFoundException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("GripStyle", GripStyle == null ? null : GripStyle.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -250,10 +266,14 @@ public class MenuStrip extends ToolStrip  {
 
     public ToolStripMenuItem getMdiWindowListItem() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMdiWindowListItem = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MdiWindowListItem");
+            retObjectMdiWindowListItem = classInstance.Get("MdiWindowListItem");
+            JCObject val = (JCObject)retObjectMdiWindowListItem;
             return new ToolStripMenuItem(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMdiWindowListItem != null ? retObjectMdiWindowListItem.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -261,7 +281,7 @@ public class MenuStrip extends ToolStrip  {
 
     public void setMdiWindowListItem(ToolStripMenuItem MdiWindowListItem) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MdiWindowListItem", MdiWindowListItem == null ? null : MdiWindowListItem.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -276,7 +296,7 @@ public class MenuStrip extends ToolStrip  {
 
     public void addMenuActivate(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("MenuActivate", handler);
         } catch (JCNativeException jcne) {
@@ -286,7 +306,7 @@ public class MenuStrip extends ToolStrip  {
 
     public void removeMenuActivate(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("MenuActivate", handler);
         } catch (JCNativeException jcne) {
@@ -296,7 +316,7 @@ public class MenuStrip extends ToolStrip  {
 
     public void addMenuDeactivate(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("MenuDeactivate", handler);
         } catch (JCNativeException jcne) {
@@ -306,7 +326,7 @@ public class MenuStrip extends ToolStrip  {
 
     public void removeMenuDeactivate(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("MenuDeactivate", handler);
         } catch (JCNativeException jcne) {

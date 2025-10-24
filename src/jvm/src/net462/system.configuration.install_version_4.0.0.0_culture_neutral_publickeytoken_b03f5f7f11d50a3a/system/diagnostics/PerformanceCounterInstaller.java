@@ -169,7 +169,7 @@ public class PerformanceCounterInstaller extends ComponentInstaller  {
     
     public void CopyFromComponent(IComponent component) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NullReferenceException, system.FormatException, system.PlatformNotSupportedException, system.security.SecurityException, system.IndexOutOfRangeException, system.UnauthorizedAccessException, system.io.IOException, system.componentmodel.Win32Exception, system.configuration.ConfigurationException, system.OutOfMemoryException, system.SystemException, system.threading.WaitHandleCannotBeOpenedException, system.ApplicationException, system.AccessViolationException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CopyFromComponent", component == null ? null : component.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -179,7 +179,7 @@ public class PerformanceCounterInstaller extends ComponentInstaller  {
 
     public void Install(IDictionary stateSaver) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.security.SecurityException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.SystemException, system.threading.WaitHandleCannotBeOpenedException, system.configuration.ConfigurationException, system.ApplicationException, system.componentmodel.InvalidEnumArgumentException, system.RankException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Install", stateSaver == null ? null : stateSaver.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -189,7 +189,7 @@ public class PerformanceCounterInstaller extends ComponentInstaller  {
 
     public void Rollback(IDictionary savedState) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.runtime.serialization.SerializationException, system.FormatException, system.OverflowException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Rollback", savedState == null ? null : savedState.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -199,7 +199,7 @@ public class PerformanceCounterInstaller extends ComponentInstaller  {
 
     public void Uninstall(IDictionary savedState) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.runtime.serialization.SerializationException, system.FormatException, system.OverflowException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.SystemException, system.threading.WaitHandleCannotBeOpenedException, system.threading.AbandonedMutexException, system.security.SecurityException, system.configuration.ConfigurationException, system.ApplicationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.RankException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Uninstall", savedState == null ? null : savedState.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -213,10 +213,14 @@ public class PerformanceCounterInstaller extends ComponentInstaller  {
     
     public UninstallAction getUninstallAction() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUninstallAction = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("UninstallAction");
+            retObjectUninstallAction = classInstance.Get("UninstallAction");
+            JCObject val = (JCObject)retObjectUninstallAction;
             return new UninstallAction(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUninstallAction != null ? retObjectUninstallAction.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -224,7 +228,7 @@ public class PerformanceCounterInstaller extends ComponentInstaller  {
 
     public void setUninstallAction(UninstallAction UninstallAction) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UninstallAction", UninstallAction == null ? null : UninstallAction.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -234,10 +238,14 @@ public class PerformanceCounterInstaller extends ComponentInstaller  {
 
     public CounterCreationDataCollection getCounters() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCounters = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Counters");
+            retObjectCounters = classInstance.Get("Counters");
+            JCObject val = (JCObject)retObjectCounters;
             return new CounterCreationDataCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCounters != null ? retObjectCounters.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -245,10 +253,14 @@ public class PerformanceCounterInstaller extends ComponentInstaller  {
 
     public PerformanceCounterCategoryType getCategoryType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCategoryType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CategoryType");
+            retObjectCategoryType = classInstance.Get("CategoryType");
+            JCObject val = (JCObject)retObjectCategoryType;
             return new PerformanceCounterCategoryType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCategoryType != null ? retObjectCategoryType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -256,7 +268,7 @@ public class PerformanceCounterInstaller extends ComponentInstaller  {
 
     public void setCategoryType(PerformanceCounterCategoryType CategoryType) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CategoryType", CategoryType == null ? null : CategoryType.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -266,9 +278,13 @@ public class PerformanceCounterInstaller extends ComponentInstaller  {
 
     public java.lang.String getCategoryHelp() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCategoryHelp = null;
         try {
-            return (java.lang.String)classInstance.Get("CategoryHelp");
+            retObjectCategoryHelp = classInstance.Get("CategoryHelp");
+            return (java.lang.String)retObjectCategoryHelp;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectCategoryHelp != null ? retObjectCategoryHelp.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -276,7 +292,7 @@ public class PerformanceCounterInstaller extends ComponentInstaller  {
 
     public void setCategoryHelp(java.lang.String CategoryHelp) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CategoryHelp", CategoryHelp);
         } catch (JCNativeException jcne) {
@@ -286,9 +302,13 @@ public class PerformanceCounterInstaller extends ComponentInstaller  {
 
     public java.lang.String getCategoryName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCategoryName = null;
         try {
-            return (java.lang.String)classInstance.Get("CategoryName");
+            retObjectCategoryName = classInstance.Get("CategoryName");
+            return (java.lang.String)retObjectCategoryName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectCategoryName != null ? retObjectCategoryName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -296,7 +316,7 @@ public class PerformanceCounterInstaller extends ComponentInstaller  {
 
     public void setCategoryName(java.lang.String CategoryName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CategoryName", CategoryName);
         } catch (JCNativeException jcne) {

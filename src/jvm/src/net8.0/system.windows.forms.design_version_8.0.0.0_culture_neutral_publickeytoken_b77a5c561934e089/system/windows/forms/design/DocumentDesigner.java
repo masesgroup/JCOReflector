@@ -171,10 +171,14 @@ public class DocumentDesigner extends ScrollableControlDesigner implements syste
     
     public GlyphCollection GetGlyphs(GlyphSelectionType selectionType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.ObjectDisposedException, system.FormatException, system.componentmodel.Win32Exception, system.NotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.runtime.interopservices.ExternalException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetGlyphs = null;
         try {
-            JCObject objGetGlyphs = (JCObject)classInstance.Invoke("GetGlyphs", selectionType == null ? null : selectionType.getJCOInstance());
+            retObjectGetGlyphs = classInstance.Invoke("GetGlyphs", selectionType == null ? null : selectionType.getJCOInstance());
+            JCObject objGetGlyphs = (JCObject)retObjectGetGlyphs;
             return new GlyphCollection(objGetGlyphs);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetGlyphs != null ? retObjectGetGlyphs.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,7 +186,7 @@ public class DocumentDesigner extends ScrollableControlDesigner implements syste
 
     public void Initialize(IComponent component) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.FormatException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.threading.ThreadStateException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.InvalidAsynchronousStateException, system.IndexOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.diagnostics.tracing.EventSourceException, system.runtime.serialization.SerializationException, system.runtime.interopservices.ExternalException, system.io.EndOfStreamException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Initialize", component == null ? null : component.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -196,7 +200,7 @@ public class DocumentDesigner extends ScrollableControlDesigner implements syste
      */
     @Deprecated 
     public NetObject GetView(ViewTechnology technology) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIRootDesigner to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIRootDesigner to obtain the full interface.");
     }
 
     /**
@@ -205,7 +209,7 @@ public class DocumentDesigner extends ScrollableControlDesigner implements syste
      */
     @Deprecated 
     public boolean GetToolSupported(ToolboxItem tool) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIToolboxUser to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIToolboxUser to obtain the full interface.");
     }
 
     /**
@@ -214,7 +218,7 @@ public class DocumentDesigner extends ScrollableControlDesigner implements syste
      */
     @Deprecated 
     public void ToolPicked(ToolboxItem tool) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIToolboxUser to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIToolboxUser to obtain the full interface.");
     }
 
 

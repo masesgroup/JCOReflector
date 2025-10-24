@@ -182,10 +182,14 @@ public class Saml2SubjectConfirmation extends NetObject  {
     
     public Saml2NameIdentifier getNameIdentifier() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNameIdentifier = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("NameIdentifier");
+            retObjectNameIdentifier = classInstance.Get("NameIdentifier");
+            JCObject val = (JCObject)retObjectNameIdentifier;
             return new Saml2NameIdentifier(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNameIdentifier != null ? retObjectNameIdentifier.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,7 +197,7 @@ public class Saml2SubjectConfirmation extends NetObject  {
 
     public void setNameIdentifier(Saml2NameIdentifier NameIdentifier) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("NameIdentifier", NameIdentifier == null ? null : NameIdentifier.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -203,10 +207,14 @@ public class Saml2SubjectConfirmation extends NetObject  {
 
     public Saml2SubjectConfirmationData getSubjectConfirmationData() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSubjectConfirmationData = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SubjectConfirmationData");
+            retObjectSubjectConfirmationData = classInstance.Get("SubjectConfirmationData");
+            JCObject val = (JCObject)retObjectSubjectConfirmationData;
             return new Saml2SubjectConfirmationData(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSubjectConfirmationData != null ? retObjectSubjectConfirmationData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -214,7 +222,7 @@ public class Saml2SubjectConfirmation extends NetObject  {
 
     public void setSubjectConfirmationData(Saml2SubjectConfirmationData SubjectConfirmationData) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SubjectConfirmationData", SubjectConfirmationData == null ? null : SubjectConfirmationData.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -224,10 +232,14 @@ public class Saml2SubjectConfirmation extends NetObject  {
 
     public Uri getMethod() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMethod = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Method");
+            retObjectMethod = classInstance.Get("Method");
+            JCObject val = (JCObject)retObjectMethod;
             return new Uri(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMethod != null ? retObjectMethod.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -235,7 +247,7 @@ public class Saml2SubjectConfirmation extends NetObject  {
 
     public void setMethod(Uri Method) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Method", Method == null ? null : Method.getJCOInstance());
         } catch (JCNativeException jcne) {

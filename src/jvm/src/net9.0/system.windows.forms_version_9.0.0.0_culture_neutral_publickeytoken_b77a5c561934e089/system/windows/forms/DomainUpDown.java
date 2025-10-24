@@ -164,7 +164,7 @@ public class DomainUpDown extends UpDownBase  {
     
     public void DownButton() throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DownButton");
         } catch (JCNativeException jcne) {
@@ -174,7 +174,7 @@ public class DomainUpDown extends UpDownBase  {
 
     public void UpButton() throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("UpButton");
         } catch (JCNativeException jcne) {
@@ -188,9 +188,13 @@ public class DomainUpDown extends UpDownBase  {
     
     public boolean getSorted() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSorted = null;
         try {
-            return (boolean)classInstance.Get("Sorted");
+            retObjectSorted = classInstance.Get("Sorted");
+            return (boolean)retObjectSorted;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectSorted != null ? retObjectSorted.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,7 +202,7 @@ public class DomainUpDown extends UpDownBase  {
 
     public void setSorted(boolean Sorted) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.RankException, system.IndexOutOfRangeException, system.InvalidOperationException, system.NullReferenceException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Sorted", Sorted);
         } catch (JCNativeException jcne) {
@@ -208,9 +212,13 @@ public class DomainUpDown extends UpDownBase  {
 
     public boolean getWrap() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWrap = null;
         try {
-            return (boolean)classInstance.Get("Wrap");
+            retObjectWrap = classInstance.Get("Wrap");
+            return (boolean)retObjectWrap;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectWrap != null ? retObjectWrap.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -218,7 +226,7 @@ public class DomainUpDown extends UpDownBase  {
 
     public void setWrap(boolean Wrap) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Wrap", Wrap);
         } catch (JCNativeException jcne) {
@@ -228,9 +236,20 @@ public class DomainUpDown extends UpDownBase  {
 
     public int getSelectedIndex() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectedIndex = null;
         try {
-            return (int)classInstance.Get("SelectedIndex");
+            retObjectSelectedIndex = classInstance.Get("SelectedIndex");
+            return (int)retObjectSelectedIndex;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSelectedIndex_ToString = retObjectSelectedIndex == null ? "null" : retObjectSelectedIndex.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectSelectedIndexNumber = (java.lang.Number)retObjectSelectedIndex;
+                return retObjectSelectedIndexNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectSelectedIndex != null ? retObjectSelectedIndex.getClass() : "null", retObjectSelectedIndex_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -238,7 +257,7 @@ public class DomainUpDown extends UpDownBase  {
 
     public void setSelectedIndex(int SelectedIndex) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SelectedIndex", SelectedIndex);
         } catch (JCNativeException jcne) {
@@ -248,10 +267,14 @@ public class DomainUpDown extends UpDownBase  {
 
     public NetObject getSelectedItem() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectedItem = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SelectedItem");
+            retObjectSelectedItem = classInstance.Get("SelectedItem");
+            JCObject val = (JCObject)retObjectSelectedItem;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelectedItem != null ? retObjectSelectedItem.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -259,7 +282,7 @@ public class DomainUpDown extends UpDownBase  {
 
     public void setSelectedItem(NetObject SelectedItem) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SelectedItem", SelectedItem == null ? null : SelectedItem.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -269,10 +292,14 @@ public class DomainUpDown extends UpDownBase  {
 
     public Padding getPadding() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPadding = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Padding");
+            retObjectPadding = classInstance.Get("Padding");
+            JCObject val = (JCObject)retObjectPadding;
             return new Padding(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPadding != null ? retObjectPadding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -280,7 +307,7 @@ public class DomainUpDown extends UpDownBase  {
 
     public void setPadding(Padding Padding) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.ArrayTypeMismatchException, system.InvalidCastException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Padding", Padding == null ? null : Padding.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -295,7 +322,7 @@ public class DomainUpDown extends UpDownBase  {
 
     public void addPaddingChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("PaddingChanged", handler);
         } catch (JCNativeException jcne) {
@@ -305,7 +332,7 @@ public class DomainUpDown extends UpDownBase  {
 
     public void removePaddingChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("PaddingChanged", handler);
         } catch (JCNativeException jcne) {
@@ -315,7 +342,7 @@ public class DomainUpDown extends UpDownBase  {
 
     public void addSelectedItemChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("SelectedItemChanged", handler);
         } catch (JCNativeException jcne) {
@@ -325,7 +352,7 @@ public class DomainUpDown extends UpDownBase  {
 
     public void removeSelectedItemChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("SelectedItemChanged", handler);
         } catch (JCNativeException jcne) {

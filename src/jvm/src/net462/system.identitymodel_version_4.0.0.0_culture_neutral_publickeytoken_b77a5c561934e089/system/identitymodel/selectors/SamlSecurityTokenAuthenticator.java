@@ -162,10 +162,14 @@ public class SamlSecurityTokenAuthenticator extends SecurityTokenAuthenticator  
     
     public ClaimSet ResolveClaimSet(SecurityKeyIdentifier keyIdentifier) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResolveClaimSet = null;
         try {
-            JCObject objResolveClaimSet = (JCObject)classInstance.Invoke("ResolveClaimSet", keyIdentifier == null ? null : keyIdentifier.getJCOInstance());
+            retObjectResolveClaimSet = classInstance.Invoke("ResolveClaimSet", keyIdentifier == null ? null : keyIdentifier.getJCOInstance());
+            JCObject objResolveClaimSet = (JCObject)retObjectResolveClaimSet;
             return new ClaimSet(objResolveClaimSet);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectResolveClaimSet != null ? retObjectResolveClaimSet.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -173,10 +177,14 @@ public class SamlSecurityTokenAuthenticator extends SecurityTokenAuthenticator  
 
     public ClaimSet ResolveClaimSet(SecurityToken token) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResolveClaimSet = null;
         try {
-            JCObject objResolveClaimSet = (JCObject)classInstance.Invoke("ResolveClaimSet", token == null ? null : token.getJCOInstance());
+            retObjectResolveClaimSet = classInstance.Invoke("ResolveClaimSet", token == null ? null : token.getJCOInstance());
+            JCObject objResolveClaimSet = (JCObject)retObjectResolveClaimSet;
             return new ClaimSet(objResolveClaimSet);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectResolveClaimSet != null ? retObjectResolveClaimSet.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -184,10 +192,14 @@ public class SamlSecurityTokenAuthenticator extends SecurityTokenAuthenticator  
 
     public IIdentity ResolveIdentity(SecurityKeyIdentifier keyIdentifier) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResolveIdentity = null;
         try {
-            JCObject objResolveIdentity = (JCObject)classInstance.Invoke("ResolveIdentity", keyIdentifier == null ? null : keyIdentifier.getJCOInstance());
+            retObjectResolveIdentity = classInstance.Invoke("ResolveIdentity", keyIdentifier == null ? null : keyIdentifier.getJCOInstance());
+            JCObject objResolveIdentity = (JCObject)retObjectResolveIdentity;
             return new IIdentityImplementation(objResolveIdentity);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectResolveIdentity != null ? retObjectResolveIdentity.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,10 +207,14 @@ public class SamlSecurityTokenAuthenticator extends SecurityTokenAuthenticator  
 
     public IIdentity ResolveIdentity(SecurityToken token) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResolveIdentity = null;
         try {
-            JCObject objResolveIdentity = (JCObject)classInstance.Invoke("ResolveIdentity", token == null ? null : token.getJCOInstance());
+            retObjectResolveIdentity = classInstance.Invoke("ResolveIdentity", token == null ? null : token.getJCOInstance());
+            JCObject objResolveIdentity = (JCObject)retObjectResolveIdentity;
             return new IIdentityImplementation(objResolveIdentity);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectResolveIdentity != null ? retObjectResolveIdentity.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -210,10 +226,14 @@ public class SamlSecurityTokenAuthenticator extends SecurityTokenAuthenticator  
     
     public AudienceUriMode getAudienceUriMode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAudienceUriMode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AudienceUriMode");
+            retObjectAudienceUriMode = classInstance.Get("AudienceUriMode");
+            JCObject val = (JCObject)retObjectAudienceUriMode;
             return new AudienceUriMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAudienceUriMode != null ? retObjectAudienceUriMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -221,7 +241,7 @@ public class SamlSecurityTokenAuthenticator extends SecurityTokenAuthenticator  
 
     public void setAudienceUriMode(AudienceUriMode AudienceUriMode) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AudienceUriMode", AudienceUriMode == null ? null : AudienceUriMode.getJCOInstance());
         } catch (JCNativeException jcne) {

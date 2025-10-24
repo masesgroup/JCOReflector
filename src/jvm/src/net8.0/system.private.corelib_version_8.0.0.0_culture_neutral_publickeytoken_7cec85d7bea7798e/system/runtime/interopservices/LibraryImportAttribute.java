@@ -171,9 +171,13 @@ public class LibraryImportAttribute extends Attribute  {
     
     public boolean getSetLastError() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSetLastError = null;
         try {
-            return (boolean)classInstance.Get("SetLastError");
+            retObjectSetLastError = classInstance.Get("SetLastError");
+            return (boolean)retObjectSetLastError;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectSetLastError != null ? retObjectSetLastError.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,7 +185,7 @@ public class LibraryImportAttribute extends Attribute  {
 
     public void setSetLastError(boolean SetLastError) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SetLastError", SetLastError);
         } catch (JCNativeException jcne) {
@@ -191,10 +195,14 @@ public class LibraryImportAttribute extends Attribute  {
 
     public StringMarshalling getStringMarshalling() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStringMarshalling = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("StringMarshalling");
+            retObjectStringMarshalling = classInstance.Get("StringMarshalling");
+            JCObject val = (JCObject)retObjectStringMarshalling;
             return new StringMarshalling(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStringMarshalling != null ? retObjectStringMarshalling.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,7 +210,7 @@ public class LibraryImportAttribute extends Attribute  {
 
     public void setStringMarshalling(StringMarshalling StringMarshalling) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("StringMarshalling", StringMarshalling == null ? null : StringMarshalling.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -212,9 +220,13 @@ public class LibraryImportAttribute extends Attribute  {
 
     public java.lang.String getEntryPoint() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEntryPoint = null;
         try {
-            return (java.lang.String)classInstance.Get("EntryPoint");
+            retObjectEntryPoint = classInstance.Get("EntryPoint");
+            return (java.lang.String)retObjectEntryPoint;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectEntryPoint != null ? retObjectEntryPoint.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -222,7 +234,7 @@ public class LibraryImportAttribute extends Attribute  {
 
     public void setEntryPoint(java.lang.String EntryPoint) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EntryPoint", EntryPoint);
         } catch (JCNativeException jcne) {
@@ -232,9 +244,13 @@ public class LibraryImportAttribute extends Attribute  {
 
     public java.lang.String getLibraryName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLibraryName = null;
         try {
-            return (java.lang.String)classInstance.Get("LibraryName");
+            retObjectLibraryName = classInstance.Get("LibraryName");
+            return (java.lang.String)retObjectLibraryName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectLibraryName != null ? retObjectLibraryName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -242,10 +258,14 @@ public class LibraryImportAttribute extends Attribute  {
 
     public NetType getStringMarshallingCustomType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStringMarshallingCustomType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("StringMarshallingCustomType");
+            retObjectStringMarshallingCustomType = classInstance.Get("StringMarshallingCustomType");
+            JCObject val = (JCObject)retObjectStringMarshallingCustomType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStringMarshallingCustomType != null ? retObjectStringMarshallingCustomType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -253,7 +273,7 @@ public class LibraryImportAttribute extends Attribute  {
 
     public void setStringMarshallingCustomType(NetType StringMarshallingCustomType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("StringMarshallingCustomType", StringMarshallingCustomType == null ? null : StringMarshallingCustomType.getJCOInstance());
         } catch (JCNativeException jcne) {

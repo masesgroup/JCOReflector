@@ -144,7 +144,7 @@ public class IBinarySerializeImplementation extends NetObject implements IBinary
     
     public void Read(BinaryReader r) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Read", r == null ? null : r.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -154,7 +154,7 @@ public class IBinarySerializeImplementation extends NetObject implements IBinary
 
     public void Write(BinaryWriter w) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Write", w == null ? null : w.getJCOInstance());
         } catch (JCNativeException jcne) {

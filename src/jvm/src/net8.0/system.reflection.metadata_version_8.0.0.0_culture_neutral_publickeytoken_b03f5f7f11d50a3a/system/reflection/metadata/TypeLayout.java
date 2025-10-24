@@ -170,9 +170,13 @@ public class TypeLayout extends ValueType  {
     
     public boolean getIsDefault() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsDefault = null;
         try {
-            return (boolean)classInstance.Get("IsDefault");
+            retObjectIsDefault = classInstance.Get("IsDefault");
+            return (boolean)retObjectIsDefault;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsDefault != null ? retObjectIsDefault.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,9 +184,20 @@ public class TypeLayout extends ValueType  {
 
     public int getPackingSize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPackingSize = null;
         try {
-            return (int)classInstance.Get("PackingSize");
+            retObjectPackingSize = classInstance.Get("PackingSize");
+            return (int)retObjectPackingSize;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectPackingSize_ToString = retObjectPackingSize == null ? "null" : retObjectPackingSize.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectPackingSizeNumber = (java.lang.Number)retObjectPackingSize;
+                return retObjectPackingSizeNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectPackingSize != null ? retObjectPackingSize.getClass() : "null", retObjectPackingSize_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,9 +205,20 @@ public class TypeLayout extends ValueType  {
 
     public int getSize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSize = null;
         try {
-            return (int)classInstance.Get("Size");
+            retObjectSize = classInstance.Get("Size");
+            return (int)retObjectSize;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSize_ToString = retObjectSize == null ? "null" : retObjectSize.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectSizeNumber = (java.lang.Number)retObjectSize;
+                return retObjectSizeNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectSize != null ? retObjectSize.getClass() : "null", retObjectSize_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

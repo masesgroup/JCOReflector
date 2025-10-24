@@ -142,7 +142,7 @@ public class IStackWalkImplementation extends NetObject implements IStackWalk {
     
     public void Assert() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Assert");
         } catch (JCNativeException jcne) {
@@ -152,7 +152,7 @@ public class IStackWalkImplementation extends NetObject implements IStackWalk {
 
     public void Demand() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Demand");
         } catch (JCNativeException jcne) {
@@ -162,7 +162,7 @@ public class IStackWalkImplementation extends NetObject implements IStackWalk {
 
     public void Deny() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Deny");
         } catch (JCNativeException jcne) {
@@ -172,7 +172,7 @@ public class IStackWalkImplementation extends NetObject implements IStackWalk {
 
     public void PermitOnly() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("PermitOnly");
         } catch (JCNativeException jcne) {

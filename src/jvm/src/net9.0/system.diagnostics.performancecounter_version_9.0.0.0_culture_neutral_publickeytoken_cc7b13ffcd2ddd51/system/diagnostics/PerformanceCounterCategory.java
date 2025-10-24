@@ -186,9 +186,13 @@ public class PerformanceCounterCategory extends NetObject  {
     
     public static boolean CounterExists(java.lang.String counterName, java.lang.String categoryName, java.lang.String machineName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.NullReferenceException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCounterExists = null;
         try {
-            return (boolean)classType.Invoke("CounterExists", counterName, categoryName, machineName);
+            retObjectCounterExists = classType.Invoke("CounterExists", counterName, categoryName, machineName);
+            return (boolean)retObjectCounterExists;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCounterExists != null ? retObjectCounterExists.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,9 +200,13 @@ public class PerformanceCounterCategory extends NetObject  {
 
     public static boolean CounterExists(java.lang.String counterName, java.lang.String categoryName) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.NullReferenceException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.componentmodel.Win32Exception, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCounterExists = null;
         try {
-            return (boolean)classType.Invoke("CounterExists", counterName, categoryName);
+            retObjectCounterExists = classType.Invoke("CounterExists", counterName, categoryName);
+            return (boolean)retObjectCounterExists;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCounterExists != null ? retObjectCounterExists.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -206,9 +214,13 @@ public class PerformanceCounterCategory extends NetObject  {
 
     public boolean CounterExists(java.lang.String counterName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.NullReferenceException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.FormatException, system.UnauthorizedAccessException, system.io.IOException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCounterExists = null;
         try {
-            return (boolean)classInstance.Invoke("CounterExists", counterName);
+            retObjectCounterExists = classInstance.Invoke("CounterExists", counterName);
+            return (boolean)retObjectCounterExists;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCounterExists != null ? retObjectCounterExists.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -216,9 +228,13 @@ public class PerformanceCounterCategory extends NetObject  {
 
     public static boolean Exists(java.lang.String categoryName, java.lang.String machineName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.NullReferenceException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectExists = null;
         try {
-            return (boolean)classType.Invoke("Exists", categoryName, machineName);
+            retObjectExists = classType.Invoke("Exists", categoryName, machineName);
+            return (boolean)retObjectExists;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectExists != null ? retObjectExists.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -226,9 +242,13 @@ public class PerformanceCounterCategory extends NetObject  {
 
     public static boolean Exists(java.lang.String categoryName) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.NullReferenceException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectExists = null;
         try {
-            return (boolean)classType.Invoke("Exists", categoryName);
+            retObjectExists = classType.Invoke("Exists", categoryName);
+            return (boolean)retObjectExists;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectExists != null ? retObjectExists.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -236,9 +256,13 @@ public class PerformanceCounterCategory extends NetObject  {
 
     public static boolean InstanceExists(java.lang.String instanceName, java.lang.String categoryName, java.lang.String machineName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.NullReferenceException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectInstanceExists = null;
         try {
-            return (boolean)classType.Invoke("InstanceExists", instanceName, categoryName, machineName);
+            retObjectInstanceExists = classType.Invoke("InstanceExists", instanceName, categoryName, machineName);
+            return (boolean)retObjectInstanceExists;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectInstanceExists != null ? retObjectInstanceExists.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -246,9 +270,13 @@ public class PerformanceCounterCategory extends NetObject  {
 
     public static boolean InstanceExists(java.lang.String instanceName, java.lang.String categoryName) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.NullReferenceException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.componentmodel.Win32Exception, system.io.IOException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectInstanceExists = null;
         try {
-            return (boolean)classType.Invoke("InstanceExists", instanceName, categoryName);
+            retObjectInstanceExists = classType.Invoke("InstanceExists", instanceName, categoryName);
+            return (boolean)retObjectInstanceExists;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectInstanceExists != null ? retObjectInstanceExists.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -256,9 +284,13 @@ public class PerformanceCounterCategory extends NetObject  {
 
     public boolean InstanceExists(java.lang.String instanceName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.NullReferenceException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.FormatException, system.UnauthorizedAccessException, system.io.IOException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInstanceExists = null;
         try {
-            return (boolean)classInstance.Invoke("InstanceExists", instanceName);
+            retObjectInstanceExists = classInstance.Invoke("InstanceExists", instanceName);
+            return (boolean)retObjectInstanceExists;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectInstanceExists != null ? retObjectInstanceExists.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -266,10 +298,14 @@ public class PerformanceCounterCategory extends NetObject  {
 
     public InstanceDataCollectionCollection ReadCategory() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.UnauthorizedAccessException, system.io.IOException, system.componentmodel.Win32Exception, system.RankException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadCategory = null;
         try {
-            JCObject objReadCategory = (JCObject)classInstance.Invoke("ReadCategory");
+            retObjectReadCategory = classInstance.Invoke("ReadCategory");
+            JCObject objReadCategory = (JCObject)retObjectReadCategory;
             return new InstanceDataCollectionCollection(objReadCategory);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadCategory != null ? retObjectReadCategory.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -277,16 +313,20 @@ public class PerformanceCounterCategory extends NetObject  {
 
     public PerformanceCounter[] GetCounters() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.FormatException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException, system.io.IOException, system.security.SecurityException, system.threading.WaitHandleCannotBeOpenedException, system.ApplicationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetCounters = null;
         try {
             ArrayList<PerformanceCounter> resultingArrayList = new ArrayList<PerformanceCounter>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetCounters");
+            retObjectGetCounters = classInstance.Invoke("GetCounters");
+            JCObject resultingObjects = (JCObject)retObjectGetCounters;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new PerformanceCounter(resultingObject));
             }
             PerformanceCounter[] resultingArray = new PerformanceCounter[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCounters != null ? retObjectGetCounters.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -294,16 +334,20 @@ public class PerformanceCounterCategory extends NetObject  {
 
     public PerformanceCounter[] GetCounters(java.lang.String instanceName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.NullReferenceException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.FormatException, system.UnauthorizedAccessException, system.io.IOException, system.componentmodel.Win32Exception, system.security.SecurityException, system.threading.WaitHandleCannotBeOpenedException, system.ApplicationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetCounters = null;
         try {
             ArrayList<PerformanceCounter> resultingArrayList = new ArrayList<PerformanceCounter>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetCounters", instanceName);
+            retObjectGetCounters = classInstance.Invoke("GetCounters", instanceName);
+            JCObject resultingObjects = (JCObject)retObjectGetCounters;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new PerformanceCounter(resultingObject));
             }
             PerformanceCounter[] resultingArray = new PerformanceCounter[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCounters != null ? retObjectGetCounters.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -311,10 +355,14 @@ public class PerformanceCounterCategory extends NetObject  {
 
     public static PerformanceCounterCategory Create(java.lang.String categoryName, java.lang.String categoryHelp, CounterCreationDataCollection counterData) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException, system.threading.WaitHandleCannotBeOpenedException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.componentmodel.Win32Exception, system.runtime.serialization.SerializationException, system.componentmodel.InvalidEnumArgumentException, system.threading.AbandonedMutexException, system.ApplicationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
         try {
-            JCObject objCreate = (JCObject)classType.Invoke("Create", categoryName, categoryHelp, counterData == null ? null : counterData.getJCOInstance());
+            retObjectCreate = classType.Invoke("Create", categoryName, categoryHelp, counterData == null ? null : counterData.getJCOInstance());
+            JCObject objCreate = (JCObject)retObjectCreate;
             return new PerformanceCounterCategory(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -322,10 +370,14 @@ public class PerformanceCounterCategory extends NetObject  {
 
     public static PerformanceCounterCategory Create(java.lang.String categoryName, java.lang.String categoryHelp, PerformanceCounterCategoryType categoryType, CounterCreationDataCollection counterData) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException, system.threading.WaitHandleCannotBeOpenedException, system.FormatException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.componentmodel.Win32Exception, system.runtime.serialization.SerializationException, system.componentmodel.InvalidEnumArgumentException, system.security.cryptography.CryptographicException, system.threading.AbandonedMutexException, system.threading.tasks.TaskCanceledException, system.AggregateException, system.ApplicationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
         try {
-            JCObject objCreate = (JCObject)classType.Invoke("Create", categoryName, categoryHelp, categoryType == null ? null : categoryType.getJCOInstance(), counterData == null ? null : counterData.getJCOInstance());
+            retObjectCreate = classType.Invoke("Create", categoryName, categoryHelp, categoryType == null ? null : categoryType.getJCOInstance(), counterData == null ? null : counterData.getJCOInstance());
+            JCObject objCreate = (JCObject)retObjectCreate;
             return new PerformanceCounterCategory(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -333,10 +385,14 @@ public class PerformanceCounterCategory extends NetObject  {
 
     public static PerformanceCounterCategory Create(java.lang.String categoryName, java.lang.String categoryHelp, PerformanceCounterCategoryType categoryType, java.lang.String counterName, java.lang.String counterHelp) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.ArgumentNullException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException, system.threading.WaitHandleCannotBeOpenedException, system.NullReferenceException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.componentmodel.Win32Exception, system.runtime.serialization.SerializationException, system.threading.AbandonedMutexException, system.ApplicationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
         try {
-            JCObject objCreate = (JCObject)classType.Invoke("Create", categoryName, categoryHelp, categoryType == null ? null : categoryType.getJCOInstance(), counterName, counterHelp);
+            retObjectCreate = classType.Invoke("Create", categoryName, categoryHelp, categoryType == null ? null : categoryType.getJCOInstance(), counterName, counterHelp);
+            JCObject objCreate = (JCObject)retObjectCreate;
             return new PerformanceCounterCategory(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -344,10 +400,14 @@ public class PerformanceCounterCategory extends NetObject  {
 
     public static PerformanceCounterCategory Create(java.lang.String categoryName, java.lang.String categoryHelp, java.lang.String counterName, java.lang.String counterHelp) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.ArgumentNullException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException, system.threading.WaitHandleCannotBeOpenedException, system.NullReferenceException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.componentmodel.Win32Exception, system.runtime.serialization.SerializationException, system.threading.AbandonedMutexException, system.ApplicationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
         try {
-            JCObject objCreate = (JCObject)classType.Invoke("Create", categoryName, categoryHelp, counterName, counterHelp);
+            retObjectCreate = classType.Invoke("Create", categoryName, categoryHelp, counterName, counterHelp);
+            JCObject objCreate = (JCObject)retObjectCreate;
             return new PerformanceCounterCategory(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -355,16 +415,20 @@ public class PerformanceCounterCategory extends NetObject  {
 
     public static PerformanceCounterCategory[] GetCategories() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException, system.FormatException, system.OutOfMemoryException, system.UnauthorizedAccessException, system.io.IOException, system.componentmodel.Win32Exception, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetCategories = null;
         try {
             ArrayList<PerformanceCounterCategory> resultingArrayList = new ArrayList<PerformanceCounterCategory>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("GetCategories");
+            retObjectGetCategories = classType.Invoke("GetCategories");
+            JCObject resultingObjects = (JCObject)retObjectGetCategories;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new PerformanceCounterCategory(resultingObject));
             }
             PerformanceCounterCategory[] resultingArray = new PerformanceCounterCategory[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCategories != null ? retObjectGetCategories.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -372,16 +436,20 @@ public class PerformanceCounterCategory extends NetObject  {
 
     public static PerformanceCounterCategory[] GetCategories(java.lang.String machineName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.UnauthorizedAccessException, system.io.IOException, system.componentmodel.Win32Exception, system.RankException, system.InvalidCastException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetCategories = null;
         try {
             ArrayList<PerformanceCounterCategory> resultingArrayList = new ArrayList<PerformanceCounterCategory>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("GetCategories", machineName);
+            retObjectGetCategories = classType.Invoke("GetCategories", machineName);
+            JCObject resultingObjects = (JCObject)retObjectGetCategories;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new PerformanceCounterCategory(resultingObject));
             }
             PerformanceCounterCategory[] resultingArray = new PerformanceCounterCategory[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCategories != null ? retObjectGetCategories.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -389,10 +457,12 @@ public class PerformanceCounterCategory extends NetObject  {
 
     public java.lang.String[] GetInstanceNames() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException, system.OutOfMemoryException, system.UnauthorizedAccessException, system.io.IOException, system.componentmodel.Win32Exception, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetInstanceNames = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetInstanceNames");
+            retObjectGetInstanceNames = classInstance.Invoke("GetInstanceNames");
+            JCObject resultingObjects = (JCObject)retObjectGetInstanceNames;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -401,6 +471,8 @@ public class PerformanceCounterCategory extends NetObject  {
 				resultingArray[indexGetInstanceNames] = (java.lang.String)resultingArrayList.get(indexGetInstanceNames);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectGetInstanceNames != null ? retObjectGetInstanceNames.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -408,7 +480,7 @@ public class PerformanceCounterCategory extends NetObject  {
 
     public static void Delete(java.lang.String categoryName) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.globalization.CultureNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException, system.threading.WaitHandleCannotBeOpenedException, system.ArrayTypeMismatchException, system.ObjectDisposedException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.ApplicationException, system.OverflowException, system.threading.AbandonedMutexException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.security.cryptography.CryptographicException, system.OutOfMemoryException, system.threading.tasks.TaskCanceledException, system.AggregateException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Delete", categoryName);
         } catch (JCNativeException jcne) {
@@ -422,10 +494,14 @@ public class PerformanceCounterCategory extends NetObject  {
     
     public PerformanceCounterCategoryType getCategoryType() throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NullReferenceException, system.InvalidOperationException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.FormatException, system.ArrayTypeMismatchException, system.UnauthorizedAccessException, system.io.IOException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCategoryType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CategoryType");
+            retObjectCategoryType = classInstance.Get("CategoryType");
+            JCObject val = (JCObject)retObjectCategoryType;
             return new PerformanceCounterCategoryType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCategoryType != null ? retObjectCategoryType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -433,9 +509,13 @@ public class PerformanceCounterCategory extends NetObject  {
 
     public java.lang.String getCategoryHelp() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.UnauthorizedAccessException, system.io.IOException, system.componentmodel.Win32Exception, system.RankException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCategoryHelp = null;
         try {
-            return (java.lang.String)classInstance.Get("CategoryHelp");
+            retObjectCategoryHelp = classInstance.Get("CategoryHelp");
+            return (java.lang.String)retObjectCategoryHelp;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectCategoryHelp != null ? retObjectCategoryHelp.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -443,9 +523,13 @@ public class PerformanceCounterCategory extends NetObject  {
 
     public java.lang.String getCategoryName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCategoryName = null;
         try {
-            return (java.lang.String)classInstance.Get("CategoryName");
+            retObjectCategoryName = classInstance.Get("CategoryName");
+            return (java.lang.String)retObjectCategoryName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectCategoryName != null ? retObjectCategoryName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -453,7 +537,7 @@ public class PerformanceCounterCategory extends NetObject  {
 
     public void setCategoryName(java.lang.String CategoryName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CategoryName", CategoryName);
         } catch (JCNativeException jcne) {
@@ -463,9 +547,13 @@ public class PerformanceCounterCategory extends NetObject  {
 
     public java.lang.String getMachineName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMachineName = null;
         try {
-            return (java.lang.String)classInstance.Get("MachineName");
+            retObjectMachineName = classInstance.Get("MachineName");
+            return (java.lang.String)retObjectMachineName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectMachineName != null ? retObjectMachineName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -473,7 +561,7 @@ public class PerformanceCounterCategory extends NetObject  {
 
     public void setMachineName(java.lang.String MachineName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MachineName", MachineName);
         } catch (JCNativeException jcne) {

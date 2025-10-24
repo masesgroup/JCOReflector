@@ -164,10 +164,14 @@ public class DbProviderServices extends NetObject  {
     
     public DbCommandDefinition CreateCommandDefinition(DbCommandTree commandTree) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.data.ProviderIncompatibleException, system.data.MappingException, system.data.MetadataException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateCommandDefinition = null;
         try {
-            JCObject objCreateCommandDefinition = (JCObject)classInstance.Invoke("CreateCommandDefinition", commandTree == null ? null : commandTree.getJCOInstance());
+            retObjectCreateCommandDefinition = classInstance.Invoke("CreateCommandDefinition", commandTree == null ? null : commandTree.getJCOInstance());
+            JCObject objCreateCommandDefinition = (JCObject)retObjectCreateCommandDefinition;
             return new DbCommandDefinition(objCreateCommandDefinition);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateCommandDefinition != null ? retObjectCreateCommandDefinition.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -175,10 +179,14 @@ public class DbProviderServices extends NetObject  {
 
     public DbCommandDefinition CreateCommandDefinition(DbCommand prototype) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.data.ProviderIncompatibleException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateCommandDefinition = null;
         try {
-            JCObject objCreateCommandDefinition = (JCObject)classInstance.Invoke("CreateCommandDefinition", prototype == null ? null : prototype.getJCOInstance());
+            retObjectCreateCommandDefinition = classInstance.Invoke("CreateCommandDefinition", prototype == null ? null : prototype.getJCOInstance());
+            JCObject objCreateCommandDefinition = (JCObject)retObjectCreateCommandDefinition;
             return new DbCommandDefinition(objCreateCommandDefinition);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateCommandDefinition != null ? retObjectCreateCommandDefinition.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,10 +194,14 @@ public class DbProviderServices extends NetObject  {
 
     public DbCommandDefinition CreateCommandDefinition(DbProviderManifest providerManifest, DbCommandTree commandTree) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.data.ProviderIncompatibleException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateCommandDefinition = null;
         try {
-            JCObject objCreateCommandDefinition = (JCObject)classInstance.Invoke("CreateCommandDefinition", providerManifest == null ? null : providerManifest.getJCOInstance(), commandTree == null ? null : commandTree.getJCOInstance());
+            retObjectCreateCommandDefinition = classInstance.Invoke("CreateCommandDefinition", providerManifest == null ? null : providerManifest.getJCOInstance(), commandTree == null ? null : commandTree.getJCOInstance());
+            JCObject objCreateCommandDefinition = (JCObject)retObjectCreateCommandDefinition;
             return new DbCommandDefinition(objCreateCommandDefinition);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateCommandDefinition != null ? retObjectCreateCommandDefinition.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,10 +209,14 @@ public class DbProviderServices extends NetObject  {
 
     public static DbProviderFactory GetProviderFactory(DbConnection connection) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.data.ProviderIncompatibleException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetProviderFactory = null;
         try {
-            JCObject objGetProviderFactory = (JCObject)classType.Invoke("GetProviderFactory", connection == null ? null : connection.getJCOInstance());
+            retObjectGetProviderFactory = classType.Invoke("GetProviderFactory", connection == null ? null : connection.getJCOInstance());
+            JCObject objGetProviderFactory = (JCObject)retObjectGetProviderFactory;
             return new DbProviderFactory(objGetProviderFactory);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetProviderFactory != null ? retObjectGetProviderFactory.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -208,10 +224,14 @@ public class DbProviderServices extends NetObject  {
 
     public DbProviderManifest GetProviderManifest(java.lang.String manifestToken) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.data.ProviderIncompatibleException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetProviderManifest = null;
         try {
-            JCObject objGetProviderManifest = (JCObject)classInstance.Invoke("GetProviderManifest", manifestToken);
+            retObjectGetProviderManifest = classInstance.Invoke("GetProviderManifest", manifestToken);
+            JCObject objGetProviderManifest = (JCObject)retObjectGetProviderManifest;
             return new DbProviderManifest(objGetProviderManifest);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetProviderManifest != null ? retObjectGetProviderManifest.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -219,10 +239,14 @@ public class DbProviderServices extends NetObject  {
 
     public static DbProviderServices GetProviderServices(DbConnection connection) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.data.ProviderIncompatibleException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetProviderServices = null;
         try {
-            JCObject objGetProviderServices = (JCObject)classType.Invoke("GetProviderServices", connection == null ? null : connection.getJCOInstance());
+            retObjectGetProviderServices = classType.Invoke("GetProviderServices", connection == null ? null : connection.getJCOInstance());
+            JCObject objGetProviderServices = (JCObject)retObjectGetProviderServices;
             return new DbProviderServices(objGetProviderServices);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetProviderServices != null ? retObjectGetProviderServices.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -230,10 +254,14 @@ public class DbProviderServices extends NetObject  {
 
     public DbSpatialDataReader GetSpatialDataReader(DbDataReader fromReader, java.lang.String manifestToken) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.data.ProviderIncompatibleException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSpatialDataReader = null;
         try {
-            JCObject objGetSpatialDataReader = (JCObject)classInstance.Invoke("GetSpatialDataReader", fromReader == null ? null : fromReader.getJCOInstance(), manifestToken);
+            retObjectGetSpatialDataReader = classInstance.Invoke("GetSpatialDataReader", fromReader == null ? null : fromReader.getJCOInstance(), manifestToken);
+            JCObject objGetSpatialDataReader = (JCObject)retObjectGetSpatialDataReader;
             return new DbSpatialDataReader(objGetSpatialDataReader);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSpatialDataReader != null ? retObjectGetSpatialDataReader.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -241,10 +269,14 @@ public class DbProviderServices extends NetObject  {
 
     public DbSpatialServices GetSpatialServices(java.lang.String manifestToken) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.data.ProviderIncompatibleException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSpatialServices = null;
         try {
-            JCObject objGetSpatialServices = (JCObject)classInstance.Invoke("GetSpatialServices", manifestToken);
+            retObjectGetSpatialServices = classInstance.Invoke("GetSpatialServices", manifestToken);
+            JCObject objGetSpatialServices = (JCObject)retObjectGetSpatialServices;
             return new DbSpatialServices(objGetSpatialServices);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSpatialServices != null ? retObjectGetSpatialServices.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -252,9 +284,13 @@ public class DbProviderServices extends NetObject  {
 
     public java.lang.String CreateDatabaseScript(java.lang.String providerManifestToken, StoreItemCollection storeItemCollection) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.data.ProviderIncompatibleException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateDatabaseScript = null;
         try {
-            return (java.lang.String)classInstance.Invoke("CreateDatabaseScript", providerManifestToken, storeItemCollection == null ? null : storeItemCollection.getJCOInstance());
+            retObjectCreateDatabaseScript = classInstance.Invoke("CreateDatabaseScript", providerManifestToken, storeItemCollection == null ? null : storeItemCollection.getJCOInstance());
+            return (java.lang.String)retObjectCreateDatabaseScript;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectCreateDatabaseScript != null ? retObjectCreateDatabaseScript.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -262,9 +298,13 @@ public class DbProviderServices extends NetObject  {
 
     public java.lang.String GetProviderManifestToken(DbConnection connection) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.data.ProviderIncompatibleException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetProviderManifestToken = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetProviderManifestToken", connection == null ? null : connection.getJCOInstance());
+            retObjectGetProviderManifestToken = classInstance.Invoke("GetProviderManifestToken", connection == null ? null : connection.getJCOInstance());
+            return (java.lang.String)retObjectGetProviderManifestToken;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetProviderManifestToken != null ? retObjectGetProviderManifestToken.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

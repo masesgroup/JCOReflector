@@ -155,7 +155,7 @@ public class BaseProperty extends NetObject  {
     
     public void BeginInit() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("BeginInit");
         } catch (JCNativeException jcne) {
@@ -165,7 +165,7 @@ public class BaseProperty extends NetObject  {
 
     public void EndInit() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EndInit");
         } catch (JCNativeException jcne) {
@@ -179,9 +179,13 @@ public class BaseProperty extends NetObject  {
     
     public boolean getIncludeInCommandLine() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIncludeInCommandLine = null;
         try {
-            return (boolean)classInstance.Get("IncludeInCommandLine");
+            retObjectIncludeInCommandLine = classInstance.Get("IncludeInCommandLine");
+            return (boolean)retObjectIncludeInCommandLine;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIncludeInCommandLine != null ? retObjectIncludeInCommandLine.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -189,7 +193,7 @@ public class BaseProperty extends NetObject  {
 
     public void setIncludeInCommandLine(boolean IncludeInCommandLine) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IncludeInCommandLine", IncludeInCommandLine);
         } catch (JCNativeException jcne) {
@@ -199,9 +203,13 @@ public class BaseProperty extends NetObject  {
 
     public boolean getIsRequired() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsRequired = null;
         try {
-            return (boolean)classInstance.Get("IsRequired");
+            retObjectIsRequired = classInstance.Get("IsRequired");
+            return (boolean)retObjectIsRequired;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsRequired != null ? retObjectIsRequired.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -209,7 +217,7 @@ public class BaseProperty extends NetObject  {
 
     public void setIsRequired(boolean IsRequired) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsRequired", IsRequired);
         } catch (JCNativeException jcne) {
@@ -219,9 +227,13 @@ public class BaseProperty extends NetObject  {
 
     public boolean getMultipleValuesAllowed() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMultipleValuesAllowed = null;
         try {
-            return (boolean)classInstance.Get("MultipleValuesAllowed");
+            retObjectMultipleValuesAllowed = classInstance.Get("MultipleValuesAllowed");
+            return (boolean)retObjectMultipleValuesAllowed;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectMultipleValuesAllowed != null ? retObjectMultipleValuesAllowed.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -229,7 +241,7 @@ public class BaseProperty extends NetObject  {
 
     public void setMultipleValuesAllowed(boolean MultipleValuesAllowed) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MultipleValuesAllowed", MultipleValuesAllowed);
         } catch (JCNativeException jcne) {
@@ -239,9 +251,13 @@ public class BaseProperty extends NetObject  {
 
     public boolean getReadOnly() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadOnly = null;
         try {
-            return (boolean)classInstance.Get("ReadOnly");
+            retObjectReadOnly = classInstance.Get("ReadOnly");
+            return (boolean)retObjectReadOnly;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectReadOnly != null ? retObjectReadOnly.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -249,7 +265,7 @@ public class BaseProperty extends NetObject  {
 
     public void setReadOnly(boolean ReadOnly) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ReadOnly", ReadOnly);
         } catch (JCNativeException jcne) {
@@ -259,9 +275,13 @@ public class BaseProperty extends NetObject  {
 
     public boolean getVisible() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVisible = null;
         try {
-            return (boolean)classInstance.Get("Visible");
+            retObjectVisible = classInstance.Get("Visible");
+            return (boolean)retObjectVisible;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectVisible != null ? retObjectVisible.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -269,7 +289,7 @@ public class BaseProperty extends NetObject  {
 
     public void setVisible(boolean Visible) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Visible", Visible);
         } catch (JCNativeException jcne) {
@@ -279,9 +299,20 @@ public class BaseProperty extends NetObject  {
 
     public int getHelpContext() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHelpContext = null;
         try {
-            return (int)classInstance.Get("HelpContext");
+            retObjectHelpContext = classInstance.Get("HelpContext");
+            return (int)retObjectHelpContext;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectHelpContext_ToString = retObjectHelpContext == null ? "null" : retObjectHelpContext.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectHelpContextNumber = (java.lang.Number)retObjectHelpContext;
+                return retObjectHelpContextNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectHelpContext != null ? retObjectHelpContext.getClass() : "null", retObjectHelpContext_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -289,7 +320,7 @@ public class BaseProperty extends NetObject  {
 
     public void setHelpContext(int HelpContext) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("HelpContext", HelpContext);
         } catch (JCNativeException jcne) {
@@ -299,10 +330,14 @@ public class BaseProperty extends NetObject  {
 
     public DataSource getDataSource() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDataSource = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DataSource");
+            retObjectDataSource = classInstance.Get("DataSource");
+            JCObject val = (JCObject)retObjectDataSource;
             return new DataSource(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDataSource != null ? retObjectDataSource.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -310,7 +345,7 @@ public class BaseProperty extends NetObject  {
 
     public void setDataSource(DataSource DataSource) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DataSource", DataSource == null ? null : DataSource.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -320,10 +355,14 @@ public class BaseProperty extends NetObject  {
 
     public Rule getContainingRule() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContainingRule = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ContainingRule");
+            retObjectContainingRule = classInstance.Get("ContainingRule");
+            JCObject val = (JCObject)retObjectContainingRule;
             return new Rule(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContainingRule != null ? retObjectContainingRule.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -331,7 +370,7 @@ public class BaseProperty extends NetObject  {
 
     public void setContainingRule(Rule ContainingRule) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ContainingRule", ContainingRule == null ? null : ContainingRule.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -341,9 +380,13 @@ public class BaseProperty extends NetObject  {
 
     public java.lang.String getCategory() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCategory = null;
         try {
-            return (java.lang.String)classInstance.Get("Category");
+            retObjectCategory = classInstance.Get("Category");
+            return (java.lang.String)retObjectCategory;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectCategory != null ? retObjectCategory.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -351,7 +394,7 @@ public class BaseProperty extends NetObject  {
 
     public void setCategory(java.lang.String Category) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Category", Category);
         } catch (JCNativeException jcne) {
@@ -361,9 +404,13 @@ public class BaseProperty extends NetObject  {
 
     public java.lang.String getDefault() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDefault = null;
         try {
-            return (java.lang.String)classInstance.Get("Default");
+            retObjectDefault = classInstance.Get("Default");
+            return (java.lang.String)retObjectDefault;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDefault != null ? retObjectDefault.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -371,7 +418,7 @@ public class BaseProperty extends NetObject  {
 
     public void setDefault(java.lang.String Default) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Default", Default);
         } catch (JCNativeException jcne) {
@@ -381,9 +428,13 @@ public class BaseProperty extends NetObject  {
 
     public java.lang.String getDescription() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDescription = null;
         try {
-            return (java.lang.String)classInstance.Get("Description");
+            retObjectDescription = classInstance.Get("Description");
+            return (java.lang.String)retObjectDescription;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDescription != null ? retObjectDescription.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -391,7 +442,7 @@ public class BaseProperty extends NetObject  {
 
     public void setDescription(java.lang.String Description) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Description", Description);
         } catch (JCNativeException jcne) {
@@ -401,9 +452,13 @@ public class BaseProperty extends NetObject  {
 
     public java.lang.String getDisplayName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDisplayName = null;
         try {
-            return (java.lang.String)classInstance.Get("DisplayName");
+            retObjectDisplayName = classInstance.Get("DisplayName");
+            return (java.lang.String)retObjectDisplayName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDisplayName != null ? retObjectDisplayName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -411,7 +466,7 @@ public class BaseProperty extends NetObject  {
 
     public void setDisplayName(java.lang.String DisplayName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DisplayName", DisplayName);
         } catch (JCNativeException jcne) {
@@ -421,9 +476,13 @@ public class BaseProperty extends NetObject  {
 
     public java.lang.String getF1Keyword() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectF1Keyword = null;
         try {
-            return (java.lang.String)classInstance.Get("F1Keyword");
+            retObjectF1Keyword = classInstance.Get("F1Keyword");
+            return (java.lang.String)retObjectF1Keyword;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectF1Keyword != null ? retObjectF1Keyword.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -431,7 +490,7 @@ public class BaseProperty extends NetObject  {
 
     public void setF1Keyword(java.lang.String F1Keyword) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("F1Keyword", F1Keyword);
         } catch (JCNativeException jcne) {
@@ -441,9 +500,13 @@ public class BaseProperty extends NetObject  {
 
     public java.lang.String getHelpFile() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHelpFile = null;
         try {
-            return (java.lang.String)classInstance.Get("HelpFile");
+            retObjectHelpFile = classInstance.Get("HelpFile");
+            return (java.lang.String)retObjectHelpFile;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectHelpFile != null ? retObjectHelpFile.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -451,7 +514,7 @@ public class BaseProperty extends NetObject  {
 
     public void setHelpFile(java.lang.String HelpFile) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("HelpFile", HelpFile);
         } catch (JCNativeException jcne) {
@@ -461,9 +524,13 @@ public class BaseProperty extends NetObject  {
 
     public java.lang.String getHelpUrl() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHelpUrl = null;
         try {
-            return (java.lang.String)classInstance.Get("HelpUrl");
+            retObjectHelpUrl = classInstance.Get("HelpUrl");
+            return (java.lang.String)retObjectHelpUrl;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectHelpUrl != null ? retObjectHelpUrl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -471,7 +538,7 @@ public class BaseProperty extends NetObject  {
 
     public void setHelpUrl(java.lang.String HelpUrl) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("HelpUrl", HelpUrl);
         } catch (JCNativeException jcne) {
@@ -481,9 +548,13 @@ public class BaseProperty extends NetObject  {
 
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectName = null;
         try {
-            return (java.lang.String)classInstance.Get("Name");
+            retObjectName = classInstance.Get("Name");
+            return (java.lang.String)retObjectName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectName != null ? retObjectName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -491,7 +562,7 @@ public class BaseProperty extends NetObject  {
 
     public void setName(java.lang.String Name) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Name", Name);
         } catch (JCNativeException jcne) {
@@ -501,9 +572,13 @@ public class BaseProperty extends NetObject  {
 
     public java.lang.String getSeparator() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSeparator = null;
         try {
-            return (java.lang.String)classInstance.Get("Separator");
+            retObjectSeparator = classInstance.Get("Separator");
+            return (java.lang.String)retObjectSeparator;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSeparator != null ? retObjectSeparator.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -511,7 +586,7 @@ public class BaseProperty extends NetObject  {
 
     public void setSeparator(java.lang.String Separator) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Separator", Separator);
         } catch (JCNativeException jcne) {
@@ -521,9 +596,13 @@ public class BaseProperty extends NetObject  {
 
     public java.lang.String getSubcategory() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSubcategory = null;
         try {
-            return (java.lang.String)classInstance.Get("Subcategory");
+            retObjectSubcategory = classInstance.Get("Subcategory");
+            return (java.lang.String)retObjectSubcategory;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSubcategory != null ? retObjectSubcategory.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -531,7 +610,7 @@ public class BaseProperty extends NetObject  {
 
     public void setSubcategory(java.lang.String Subcategory) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Subcategory", Subcategory);
         } catch (JCNativeException jcne) {
@@ -541,9 +620,13 @@ public class BaseProperty extends NetObject  {
 
     public java.lang.String getSwitch() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSwitch = null;
         try {
-            return (java.lang.String)classInstance.Get("Switch");
+            retObjectSwitch = classInstance.Get("Switch");
+            return (java.lang.String)retObjectSwitch;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSwitch != null ? retObjectSwitch.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -551,7 +634,7 @@ public class BaseProperty extends NetObject  {
 
     public void setSwitch(java.lang.String Switch) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Switch", Switch);
         } catch (JCNativeException jcne) {
@@ -561,9 +644,13 @@ public class BaseProperty extends NetObject  {
 
     public java.lang.String getSwitchPrefix() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSwitchPrefix = null;
         try {
-            return (java.lang.String)classInstance.Get("SwitchPrefix");
+            retObjectSwitchPrefix = classInstance.Get("SwitchPrefix");
+            return (java.lang.String)retObjectSwitchPrefix;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSwitchPrefix != null ? retObjectSwitchPrefix.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -571,7 +658,7 @@ public class BaseProperty extends NetObject  {
 
     public void setSwitchPrefix(java.lang.String SwitchPrefix) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SwitchPrefix", SwitchPrefix);
         } catch (JCNativeException jcne) {

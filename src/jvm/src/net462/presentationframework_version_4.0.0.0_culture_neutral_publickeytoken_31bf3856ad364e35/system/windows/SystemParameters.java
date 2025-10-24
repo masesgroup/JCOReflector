@@ -166,9 +166,13 @@ public class SystemParameters extends NetObject  {
     
     public static boolean getClientAreaAnimation() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectClientAreaAnimation = null;
         try {
-            return (boolean)classType.Get("ClientAreaAnimation");
+            retObjectClientAreaAnimation = classType.Get("ClientAreaAnimation");
+            return (boolean)retObjectClientAreaAnimation;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectClientAreaAnimation != null ? retObjectClientAreaAnimation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,9 +180,13 @@ public class SystemParameters extends NetObject  {
 
     public static boolean getComboBoxAnimation() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectComboBoxAnimation = null;
         try {
-            return (boolean)classType.Get("ComboBoxAnimation");
+            retObjectComboBoxAnimation = classType.Get("ComboBoxAnimation");
+            return (boolean)retObjectComboBoxAnimation;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectComboBoxAnimation != null ? retObjectComboBoxAnimation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,9 +194,13 @@ public class SystemParameters extends NetObject  {
 
     public static boolean getCursorShadow() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCursorShadow = null;
         try {
-            return (boolean)classType.Get("CursorShadow");
+            retObjectCursorShadow = classType.Get("CursorShadow");
+            return (boolean)retObjectCursorShadow;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCursorShadow != null ? retObjectCursorShadow.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,9 +208,13 @@ public class SystemParameters extends NetObject  {
 
     public static boolean getDragFullWindows() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDragFullWindows = null;
         try {
-            return (boolean)classType.Get("DragFullWindows");
+            retObjectDragFullWindows = classType.Get("DragFullWindows");
+            return (boolean)retObjectDragFullWindows;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectDragFullWindows != null ? retObjectDragFullWindows.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -206,9 +222,13 @@ public class SystemParameters extends NetObject  {
 
     public static boolean getDropShadow() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDropShadow = null;
         try {
-            return (boolean)classType.Get("DropShadow");
+            retObjectDropShadow = classType.Get("DropShadow");
+            return (boolean)retObjectDropShadow;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectDropShadow != null ? retObjectDropShadow.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -216,9 +236,13 @@ public class SystemParameters extends NetObject  {
 
     public static boolean getFlatMenu() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFlatMenu = null;
         try {
-            return (boolean)classType.Get("FlatMenu");
+            retObjectFlatMenu = classType.Get("FlatMenu");
+            return (boolean)retObjectFlatMenu;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectFlatMenu != null ? retObjectFlatMenu.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -226,9 +250,13 @@ public class SystemParameters extends NetObject  {
 
     public static boolean getGradientCaptions() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGradientCaptions = null;
         try {
-            return (boolean)classType.Get("GradientCaptions");
+            retObjectGradientCaptions = classType.Get("GradientCaptions");
+            return (boolean)retObjectGradientCaptions;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectGradientCaptions != null ? retObjectGradientCaptions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -236,9 +264,13 @@ public class SystemParameters extends NetObject  {
 
     public static boolean getHighContrast() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectHighContrast = null;
         try {
-            return (boolean)classType.Get("HighContrast");
+            retObjectHighContrast = classType.Get("HighContrast");
+            return (boolean)retObjectHighContrast;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectHighContrast != null ? retObjectHighContrast.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -246,9 +278,13 @@ public class SystemParameters extends NetObject  {
 
     public static boolean getHotTracking() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectHotTracking = null;
         try {
-            return (boolean)classType.Get("HotTracking");
+            retObjectHotTracking = classType.Get("HotTracking");
+            return (boolean)retObjectHotTracking;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectHotTracking != null ? retObjectHotTracking.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -256,9 +292,13 @@ public class SystemParameters extends NetObject  {
 
     public static boolean getIconTitleWrap() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIconTitleWrap = null;
         try {
-            return (boolean)classType.Get("IconTitleWrap");
+            retObjectIconTitleWrap = classType.Get("IconTitleWrap");
+            return (boolean)retObjectIconTitleWrap;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIconTitleWrap != null ? retObjectIconTitleWrap.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -266,9 +306,13 @@ public class SystemParameters extends NetObject  {
 
     public static boolean getIsGlassEnabled() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsGlassEnabled = null;
         try {
-            return (boolean)classType.Get("IsGlassEnabled");
+            retObjectIsGlassEnabled = classType.Get("IsGlassEnabled");
+            return (boolean)retObjectIsGlassEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsGlassEnabled != null ? retObjectIsGlassEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -276,9 +320,13 @@ public class SystemParameters extends NetObject  {
 
     public static boolean getIsImmEnabled() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsImmEnabled = null;
         try {
-            return (boolean)classType.Get("IsImmEnabled");
+            retObjectIsImmEnabled = classType.Get("IsImmEnabled");
+            return (boolean)retObjectIsImmEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsImmEnabled != null ? retObjectIsImmEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -286,9 +334,13 @@ public class SystemParameters extends NetObject  {
 
     public static boolean getIsMediaCenter() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsMediaCenter = null;
         try {
-            return (boolean)classType.Get("IsMediaCenter");
+            retObjectIsMediaCenter = classType.Get("IsMediaCenter");
+            return (boolean)retObjectIsMediaCenter;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsMediaCenter != null ? retObjectIsMediaCenter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -296,9 +348,13 @@ public class SystemParameters extends NetObject  {
 
     public static boolean getIsMenuDropRightAligned() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsMenuDropRightAligned = null;
         try {
-            return (boolean)classType.Get("IsMenuDropRightAligned");
+            retObjectIsMenuDropRightAligned = classType.Get("IsMenuDropRightAligned");
+            return (boolean)retObjectIsMenuDropRightAligned;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsMenuDropRightAligned != null ? retObjectIsMenuDropRightAligned.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -306,9 +362,13 @@ public class SystemParameters extends NetObject  {
 
     public static boolean getIsMiddleEastEnabled() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsMiddleEastEnabled = null;
         try {
-            return (boolean)classType.Get("IsMiddleEastEnabled");
+            retObjectIsMiddleEastEnabled = classType.Get("IsMiddleEastEnabled");
+            return (boolean)retObjectIsMiddleEastEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsMiddleEastEnabled != null ? retObjectIsMiddleEastEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -316,9 +376,13 @@ public class SystemParameters extends NetObject  {
 
     public static boolean getIsMousePresent() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsMousePresent = null;
         try {
-            return (boolean)classType.Get("IsMousePresent");
+            retObjectIsMousePresent = classType.Get("IsMousePresent");
+            return (boolean)retObjectIsMousePresent;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsMousePresent != null ? retObjectIsMousePresent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -326,9 +390,13 @@ public class SystemParameters extends NetObject  {
 
     public static boolean getIsMouseWheelPresent() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsMouseWheelPresent = null;
         try {
-            return (boolean)classType.Get("IsMouseWheelPresent");
+            retObjectIsMouseWheelPresent = classType.Get("IsMouseWheelPresent");
+            return (boolean)retObjectIsMouseWheelPresent;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsMouseWheelPresent != null ? retObjectIsMouseWheelPresent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -336,9 +404,13 @@ public class SystemParameters extends NetObject  {
 
     public static boolean getIsPenWindows() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsPenWindows = null;
         try {
-            return (boolean)classType.Get("IsPenWindows");
+            retObjectIsPenWindows = classType.Get("IsPenWindows");
+            return (boolean)retObjectIsPenWindows;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsPenWindows != null ? retObjectIsPenWindows.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -346,9 +418,13 @@ public class SystemParameters extends NetObject  {
 
     public static boolean getIsRemotelyControlled() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsRemotelyControlled = null;
         try {
-            return (boolean)classType.Get("IsRemotelyControlled");
+            retObjectIsRemotelyControlled = classType.Get("IsRemotelyControlled");
+            return (boolean)retObjectIsRemotelyControlled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsRemotelyControlled != null ? retObjectIsRemotelyControlled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -356,9 +432,13 @@ public class SystemParameters extends NetObject  {
 
     public static boolean getIsRemoteSession() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsRemoteSession = null;
         try {
-            return (boolean)classType.Get("IsRemoteSession");
+            retObjectIsRemoteSession = classType.Get("IsRemoteSession");
+            return (boolean)retObjectIsRemoteSession;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsRemoteSession != null ? retObjectIsRemoteSession.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -366,9 +446,13 @@ public class SystemParameters extends NetObject  {
 
     public static boolean getIsSlowMachine() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsSlowMachine = null;
         try {
-            return (boolean)classType.Get("IsSlowMachine");
+            retObjectIsSlowMachine = classType.Get("IsSlowMachine");
+            return (boolean)retObjectIsSlowMachine;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsSlowMachine != null ? retObjectIsSlowMachine.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -376,9 +460,13 @@ public class SystemParameters extends NetObject  {
 
     public static boolean getIsTabletPC() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsTabletPC = null;
         try {
-            return (boolean)classType.Get("IsTabletPC");
+            retObjectIsTabletPC = classType.Get("IsTabletPC");
+            return (boolean)retObjectIsTabletPC;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsTabletPC != null ? retObjectIsTabletPC.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -386,9 +474,13 @@ public class SystemParameters extends NetObject  {
 
     public static boolean getKeyboardCues() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectKeyboardCues = null;
         try {
-            return (boolean)classType.Get("KeyboardCues");
+            retObjectKeyboardCues = classType.Get("KeyboardCues");
+            return (boolean)retObjectKeyboardCues;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectKeyboardCues != null ? retObjectKeyboardCues.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -396,9 +488,13 @@ public class SystemParameters extends NetObject  {
 
     public static boolean getKeyboardPreference() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectKeyboardPreference = null;
         try {
-            return (boolean)classType.Get("KeyboardPreference");
+            retObjectKeyboardPreference = classType.Get("KeyboardPreference");
+            return (boolean)retObjectKeyboardPreference;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectKeyboardPreference != null ? retObjectKeyboardPreference.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -406,9 +502,13 @@ public class SystemParameters extends NetObject  {
 
     public static boolean getListBoxSmoothScrolling() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectListBoxSmoothScrolling = null;
         try {
-            return (boolean)classType.Get("ListBoxSmoothScrolling");
+            retObjectListBoxSmoothScrolling = classType.Get("ListBoxSmoothScrolling");
+            return (boolean)retObjectListBoxSmoothScrolling;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectListBoxSmoothScrolling != null ? retObjectListBoxSmoothScrolling.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -416,9 +516,13 @@ public class SystemParameters extends NetObject  {
 
     public static boolean getMenuAnimation() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMenuAnimation = null;
         try {
-            return (boolean)classType.Get("MenuAnimation");
+            retObjectMenuAnimation = classType.Get("MenuAnimation");
+            return (boolean)retObjectMenuAnimation;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectMenuAnimation != null ? retObjectMenuAnimation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -426,9 +530,13 @@ public class SystemParameters extends NetObject  {
 
     public static boolean getMenuDropAlignment() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMenuDropAlignment = null;
         try {
-            return (boolean)classType.Get("MenuDropAlignment");
+            retObjectMenuDropAlignment = classType.Get("MenuDropAlignment");
+            return (boolean)retObjectMenuDropAlignment;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectMenuDropAlignment != null ? retObjectMenuDropAlignment.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -436,9 +544,13 @@ public class SystemParameters extends NetObject  {
 
     public static boolean getMenuFade() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMenuFade = null;
         try {
-            return (boolean)classType.Get("MenuFade");
+            retObjectMenuFade = classType.Get("MenuFade");
+            return (boolean)retObjectMenuFade;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectMenuFade != null ? retObjectMenuFade.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -446,9 +558,13 @@ public class SystemParameters extends NetObject  {
 
     public static boolean getMinimizeAnimation() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMinimizeAnimation = null;
         try {
-            return (boolean)classType.Get("MinimizeAnimation");
+            retObjectMinimizeAnimation = classType.Get("MinimizeAnimation");
+            return (boolean)retObjectMinimizeAnimation;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectMinimizeAnimation != null ? retObjectMinimizeAnimation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -456,9 +572,13 @@ public class SystemParameters extends NetObject  {
 
     public static boolean getSelectionFade() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSelectionFade = null;
         try {
-            return (boolean)classType.Get("SelectionFade");
+            retObjectSelectionFade = classType.Get("SelectionFade");
+            return (boolean)retObjectSelectionFade;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectSelectionFade != null ? retObjectSelectionFade.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -466,9 +586,13 @@ public class SystemParameters extends NetObject  {
 
     public static boolean getShowSounds() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectShowSounds = null;
         try {
-            return (boolean)classType.Get("ShowSounds");
+            retObjectShowSounds = classType.Get("ShowSounds");
+            return (boolean)retObjectShowSounds;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectShowSounds != null ? retObjectShowSounds.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -476,9 +600,13 @@ public class SystemParameters extends NetObject  {
 
     public static boolean getSnapToDefaultButton() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSnapToDefaultButton = null;
         try {
-            return (boolean)classType.Get("SnapToDefaultButton");
+            retObjectSnapToDefaultButton = classType.Get("SnapToDefaultButton");
+            return (boolean)retObjectSnapToDefaultButton;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectSnapToDefaultButton != null ? retObjectSnapToDefaultButton.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -486,9 +614,13 @@ public class SystemParameters extends NetObject  {
 
     public static boolean getStylusHotTracking() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectStylusHotTracking = null;
         try {
-            return (boolean)classType.Get("StylusHotTracking");
+            retObjectStylusHotTracking = classType.Get("StylusHotTracking");
+            return (boolean)retObjectStylusHotTracking;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectStylusHotTracking != null ? retObjectStylusHotTracking.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -496,9 +628,13 @@ public class SystemParameters extends NetObject  {
 
     public static boolean getSwapButtons() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSwapButtons = null;
         try {
-            return (boolean)classType.Get("SwapButtons");
+            retObjectSwapButtons = classType.Get("SwapButtons");
+            return (boolean)retObjectSwapButtons;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectSwapButtons != null ? retObjectSwapButtons.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -506,9 +642,13 @@ public class SystemParameters extends NetObject  {
 
     public static boolean getToolTipAnimation() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectToolTipAnimation = null;
         try {
-            return (boolean)classType.Get("ToolTipAnimation");
+            retObjectToolTipAnimation = classType.Get("ToolTipAnimation");
+            return (boolean)retObjectToolTipAnimation;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectToolTipAnimation != null ? retObjectToolTipAnimation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -516,9 +656,13 @@ public class SystemParameters extends NetObject  {
 
     public static boolean getToolTipFade() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectToolTipFade = null;
         try {
-            return (boolean)classType.Get("ToolTipFade");
+            retObjectToolTipFade = classType.Get("ToolTipFade");
+            return (boolean)retObjectToolTipFade;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectToolTipFade != null ? retObjectToolTipFade.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -526,9 +670,13 @@ public class SystemParameters extends NetObject  {
 
     public static boolean getUIEffects() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectUIEffects = null;
         try {
-            return (boolean)classType.Get("UIEffects");
+            retObjectUIEffects = classType.Get("UIEffects");
+            return (boolean)retObjectUIEffects;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectUIEffects != null ? retObjectUIEffects.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -536,9 +684,20 @@ public class SystemParameters extends NetObject  {
 
     public static double getBorderWidth() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectBorderWidth = null;
         try {
-            return (double)classType.Get("BorderWidth");
+            retObjectBorderWidth = classType.Get("BorderWidth");
+            return (double)retObjectBorderWidth;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectBorderWidth_ToString = retObjectBorderWidth == null ? "null" : retObjectBorderWidth.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectBorderWidthNumber = (java.lang.Number)retObjectBorderWidth;
+                return retObjectBorderWidthNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectBorderWidth != null ? retObjectBorderWidth.getClass() : "null", retObjectBorderWidth_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -546,9 +705,20 @@ public class SystemParameters extends NetObject  {
 
     public static double getCaptionHeight() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCaptionHeight = null;
         try {
-            return (double)classType.Get("CaptionHeight");
+            retObjectCaptionHeight = classType.Get("CaptionHeight");
+            return (double)retObjectCaptionHeight;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCaptionHeight_ToString = retObjectCaptionHeight == null ? "null" : retObjectCaptionHeight.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectCaptionHeightNumber = (java.lang.Number)retObjectCaptionHeight;
+                return retObjectCaptionHeightNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectCaptionHeight != null ? retObjectCaptionHeight.getClass() : "null", retObjectCaptionHeight_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -556,9 +726,20 @@ public class SystemParameters extends NetObject  {
 
     public static double getCaptionWidth() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCaptionWidth = null;
         try {
-            return (double)classType.Get("CaptionWidth");
+            retObjectCaptionWidth = classType.Get("CaptionWidth");
+            return (double)retObjectCaptionWidth;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCaptionWidth_ToString = retObjectCaptionWidth == null ? "null" : retObjectCaptionWidth.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectCaptionWidthNumber = (java.lang.Number)retObjectCaptionWidth;
+                return retObjectCaptionWidthNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectCaptionWidth != null ? retObjectCaptionWidth.getClass() : "null", retObjectCaptionWidth_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -566,9 +747,20 @@ public class SystemParameters extends NetObject  {
 
     public static double getCaretWidth() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.collections.generic.KeyNotFoundException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCaretWidth = null;
         try {
-            return (double)classType.Get("CaretWidth");
+            retObjectCaretWidth = classType.Get("CaretWidth");
+            return (double)retObjectCaretWidth;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCaretWidth_ToString = retObjectCaretWidth == null ? "null" : retObjectCaretWidth.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectCaretWidthNumber = (java.lang.Number)retObjectCaretWidth;
+                return retObjectCaretWidthNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectCaretWidth != null ? retObjectCaretWidth.getClass() : "null", retObjectCaretWidth_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -576,9 +768,20 @@ public class SystemParameters extends NetObject  {
 
     public static double getCursorHeight() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentNullException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCursorHeight = null;
         try {
-            return (double)classType.Get("CursorHeight");
+            retObjectCursorHeight = classType.Get("CursorHeight");
+            return (double)retObjectCursorHeight;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCursorHeight_ToString = retObjectCursorHeight == null ? "null" : retObjectCursorHeight.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectCursorHeightNumber = (java.lang.Number)retObjectCursorHeight;
+                return retObjectCursorHeightNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectCursorHeight != null ? retObjectCursorHeight.getClass() : "null", retObjectCursorHeight_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -586,9 +789,20 @@ public class SystemParameters extends NetObject  {
 
     public static double getCursorWidth() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentNullException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCursorWidth = null;
         try {
-            return (double)classType.Get("CursorWidth");
+            retObjectCursorWidth = classType.Get("CursorWidth");
+            return (double)retObjectCursorWidth;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCursorWidth_ToString = retObjectCursorWidth == null ? "null" : retObjectCursorWidth.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectCursorWidthNumber = (java.lang.Number)retObjectCursorWidth;
+                return retObjectCursorWidthNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectCursorWidth != null ? retObjectCursorWidth.getClass() : "null", retObjectCursorWidth_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -596,9 +810,20 @@ public class SystemParameters extends NetObject  {
 
     public static double getFixedFrameHorizontalBorderHeight() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentNullException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFixedFrameHorizontalBorderHeight = null;
         try {
-            return (double)classType.Get("FixedFrameHorizontalBorderHeight");
+            retObjectFixedFrameHorizontalBorderHeight = classType.Get("FixedFrameHorizontalBorderHeight");
+            return (double)retObjectFixedFrameHorizontalBorderHeight;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectFixedFrameHorizontalBorderHeight_ToString = retObjectFixedFrameHorizontalBorderHeight == null ? "null" : retObjectFixedFrameHorizontalBorderHeight.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectFixedFrameHorizontalBorderHeightNumber = (java.lang.Number)retObjectFixedFrameHorizontalBorderHeight;
+                return retObjectFixedFrameHorizontalBorderHeightNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectFixedFrameHorizontalBorderHeight != null ? retObjectFixedFrameHorizontalBorderHeight.getClass() : "null", retObjectFixedFrameHorizontalBorderHeight_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -606,9 +831,20 @@ public class SystemParameters extends NetObject  {
 
     public static double getFixedFrameVerticalBorderWidth() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentNullException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFixedFrameVerticalBorderWidth = null;
         try {
-            return (double)classType.Get("FixedFrameVerticalBorderWidth");
+            retObjectFixedFrameVerticalBorderWidth = classType.Get("FixedFrameVerticalBorderWidth");
+            return (double)retObjectFixedFrameVerticalBorderWidth;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectFixedFrameVerticalBorderWidth_ToString = retObjectFixedFrameVerticalBorderWidth == null ? "null" : retObjectFixedFrameVerticalBorderWidth.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectFixedFrameVerticalBorderWidthNumber = (java.lang.Number)retObjectFixedFrameVerticalBorderWidth;
+                return retObjectFixedFrameVerticalBorderWidthNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectFixedFrameVerticalBorderWidth != null ? retObjectFixedFrameVerticalBorderWidth.getClass() : "null", retObjectFixedFrameVerticalBorderWidth_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -616,9 +852,20 @@ public class SystemParameters extends NetObject  {
 
     public static double getFocusBorderHeight() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentNullException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFocusBorderHeight = null;
         try {
-            return (double)classType.Get("FocusBorderHeight");
+            retObjectFocusBorderHeight = classType.Get("FocusBorderHeight");
+            return (double)retObjectFocusBorderHeight;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectFocusBorderHeight_ToString = retObjectFocusBorderHeight == null ? "null" : retObjectFocusBorderHeight.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectFocusBorderHeightNumber = (java.lang.Number)retObjectFocusBorderHeight;
+                return retObjectFocusBorderHeightNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectFocusBorderHeight != null ? retObjectFocusBorderHeight.getClass() : "null", retObjectFocusBorderHeight_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -626,9 +873,20 @@ public class SystemParameters extends NetObject  {
 
     public static double getFocusBorderWidth() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentNullException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFocusBorderWidth = null;
         try {
-            return (double)classType.Get("FocusBorderWidth");
+            retObjectFocusBorderWidth = classType.Get("FocusBorderWidth");
+            return (double)retObjectFocusBorderWidth;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectFocusBorderWidth_ToString = retObjectFocusBorderWidth == null ? "null" : retObjectFocusBorderWidth.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectFocusBorderWidthNumber = (java.lang.Number)retObjectFocusBorderWidth;
+                return retObjectFocusBorderWidthNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectFocusBorderWidth != null ? retObjectFocusBorderWidth.getClass() : "null", retObjectFocusBorderWidth_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -636,9 +894,20 @@ public class SystemParameters extends NetObject  {
 
     public static double getFocusHorizontalBorderHeight() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentNullException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFocusHorizontalBorderHeight = null;
         try {
-            return (double)classType.Get("FocusHorizontalBorderHeight");
+            retObjectFocusHorizontalBorderHeight = classType.Get("FocusHorizontalBorderHeight");
+            return (double)retObjectFocusHorizontalBorderHeight;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectFocusHorizontalBorderHeight_ToString = retObjectFocusHorizontalBorderHeight == null ? "null" : retObjectFocusHorizontalBorderHeight.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectFocusHorizontalBorderHeightNumber = (java.lang.Number)retObjectFocusHorizontalBorderHeight;
+                return retObjectFocusHorizontalBorderHeightNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectFocusHorizontalBorderHeight != null ? retObjectFocusHorizontalBorderHeight.getClass() : "null", retObjectFocusHorizontalBorderHeight_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -646,9 +915,20 @@ public class SystemParameters extends NetObject  {
 
     public static double getFocusVerticalBorderWidth() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentNullException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFocusVerticalBorderWidth = null;
         try {
-            return (double)classType.Get("FocusVerticalBorderWidth");
+            retObjectFocusVerticalBorderWidth = classType.Get("FocusVerticalBorderWidth");
+            return (double)retObjectFocusVerticalBorderWidth;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectFocusVerticalBorderWidth_ToString = retObjectFocusVerticalBorderWidth == null ? "null" : retObjectFocusVerticalBorderWidth.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectFocusVerticalBorderWidthNumber = (java.lang.Number)retObjectFocusVerticalBorderWidth;
+                return retObjectFocusVerticalBorderWidthNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectFocusVerticalBorderWidth != null ? retObjectFocusVerticalBorderWidth.getClass() : "null", retObjectFocusVerticalBorderWidth_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -656,9 +936,20 @@ public class SystemParameters extends NetObject  {
 
     public static double getFullPrimaryScreenHeight() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFullPrimaryScreenHeight = null;
         try {
-            return (double)classType.Get("FullPrimaryScreenHeight");
+            retObjectFullPrimaryScreenHeight = classType.Get("FullPrimaryScreenHeight");
+            return (double)retObjectFullPrimaryScreenHeight;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectFullPrimaryScreenHeight_ToString = retObjectFullPrimaryScreenHeight == null ? "null" : retObjectFullPrimaryScreenHeight.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectFullPrimaryScreenHeightNumber = (java.lang.Number)retObjectFullPrimaryScreenHeight;
+                return retObjectFullPrimaryScreenHeightNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectFullPrimaryScreenHeight != null ? retObjectFullPrimaryScreenHeight.getClass() : "null", retObjectFullPrimaryScreenHeight_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -666,9 +957,20 @@ public class SystemParameters extends NetObject  {
 
     public static double getFullPrimaryScreenWidth() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFullPrimaryScreenWidth = null;
         try {
-            return (double)classType.Get("FullPrimaryScreenWidth");
+            retObjectFullPrimaryScreenWidth = classType.Get("FullPrimaryScreenWidth");
+            return (double)retObjectFullPrimaryScreenWidth;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectFullPrimaryScreenWidth_ToString = retObjectFullPrimaryScreenWidth == null ? "null" : retObjectFullPrimaryScreenWidth.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectFullPrimaryScreenWidthNumber = (java.lang.Number)retObjectFullPrimaryScreenWidth;
+                return retObjectFullPrimaryScreenWidthNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectFullPrimaryScreenWidth != null ? retObjectFullPrimaryScreenWidth.getClass() : "null", retObjectFullPrimaryScreenWidth_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -676,9 +978,20 @@ public class SystemParameters extends NetObject  {
 
     public static double getHorizontalScrollBarButtonWidth() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentNullException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectHorizontalScrollBarButtonWidth = null;
         try {
-            return (double)classType.Get("HorizontalScrollBarButtonWidth");
+            retObjectHorizontalScrollBarButtonWidth = classType.Get("HorizontalScrollBarButtonWidth");
+            return (double)retObjectHorizontalScrollBarButtonWidth;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectHorizontalScrollBarButtonWidth_ToString = retObjectHorizontalScrollBarButtonWidth == null ? "null" : retObjectHorizontalScrollBarButtonWidth.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectHorizontalScrollBarButtonWidthNumber = (java.lang.Number)retObjectHorizontalScrollBarButtonWidth;
+                return retObjectHorizontalScrollBarButtonWidthNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectHorizontalScrollBarButtonWidth != null ? retObjectHorizontalScrollBarButtonWidth.getClass() : "null", retObjectHorizontalScrollBarButtonWidth_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -686,9 +999,20 @@ public class SystemParameters extends NetObject  {
 
     public static double getHorizontalScrollBarHeight() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentNullException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectHorizontalScrollBarHeight = null;
         try {
-            return (double)classType.Get("HorizontalScrollBarHeight");
+            retObjectHorizontalScrollBarHeight = classType.Get("HorizontalScrollBarHeight");
+            return (double)retObjectHorizontalScrollBarHeight;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectHorizontalScrollBarHeight_ToString = retObjectHorizontalScrollBarHeight == null ? "null" : retObjectHorizontalScrollBarHeight.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectHorizontalScrollBarHeightNumber = (java.lang.Number)retObjectHorizontalScrollBarHeight;
+                return retObjectHorizontalScrollBarHeightNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectHorizontalScrollBarHeight != null ? retObjectHorizontalScrollBarHeight.getClass() : "null", retObjectHorizontalScrollBarHeight_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -696,9 +1020,20 @@ public class SystemParameters extends NetObject  {
 
     public static double getHorizontalScrollBarThumbWidth() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentNullException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectHorizontalScrollBarThumbWidth = null;
         try {
-            return (double)classType.Get("HorizontalScrollBarThumbWidth");
+            retObjectHorizontalScrollBarThumbWidth = classType.Get("HorizontalScrollBarThumbWidth");
+            return (double)retObjectHorizontalScrollBarThumbWidth;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectHorizontalScrollBarThumbWidth_ToString = retObjectHorizontalScrollBarThumbWidth == null ? "null" : retObjectHorizontalScrollBarThumbWidth.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectHorizontalScrollBarThumbWidthNumber = (java.lang.Number)retObjectHorizontalScrollBarThumbWidth;
+                return retObjectHorizontalScrollBarThumbWidthNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectHorizontalScrollBarThumbWidth != null ? retObjectHorizontalScrollBarThumbWidth.getClass() : "null", retObjectHorizontalScrollBarThumbWidth_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -706,9 +1041,20 @@ public class SystemParameters extends NetObject  {
 
     public static double getIconGridHeight() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentNullException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIconGridHeight = null;
         try {
-            return (double)classType.Get("IconGridHeight");
+            retObjectIconGridHeight = classType.Get("IconGridHeight");
+            return (double)retObjectIconGridHeight;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectIconGridHeight_ToString = retObjectIconGridHeight == null ? "null" : retObjectIconGridHeight.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectIconGridHeightNumber = (java.lang.Number)retObjectIconGridHeight;
+                return retObjectIconGridHeightNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectIconGridHeight != null ? retObjectIconGridHeight.getClass() : "null", retObjectIconGridHeight_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -716,9 +1062,20 @@ public class SystemParameters extends NetObject  {
 
     public static double getIconGridWidth() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentNullException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIconGridWidth = null;
         try {
-            return (double)classType.Get("IconGridWidth");
+            retObjectIconGridWidth = classType.Get("IconGridWidth");
+            return (double)retObjectIconGridWidth;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectIconGridWidth_ToString = retObjectIconGridWidth == null ? "null" : retObjectIconGridWidth.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectIconGridWidthNumber = (java.lang.Number)retObjectIconGridWidth;
+                return retObjectIconGridWidthNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectIconGridWidth != null ? retObjectIconGridWidth.getClass() : "null", retObjectIconGridWidth_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -726,9 +1083,20 @@ public class SystemParameters extends NetObject  {
 
     public static double getIconHeight() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentNullException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIconHeight = null;
         try {
-            return (double)classType.Get("IconHeight");
+            retObjectIconHeight = classType.Get("IconHeight");
+            return (double)retObjectIconHeight;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectIconHeight_ToString = retObjectIconHeight == null ? "null" : retObjectIconHeight.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectIconHeightNumber = (java.lang.Number)retObjectIconHeight;
+                return retObjectIconHeightNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectIconHeight != null ? retObjectIconHeight.getClass() : "null", retObjectIconHeight_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -736,9 +1104,20 @@ public class SystemParameters extends NetObject  {
 
     public static double getIconHorizontalSpacing() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIconHorizontalSpacing = null;
         try {
-            return (double)classType.Get("IconHorizontalSpacing");
+            retObjectIconHorizontalSpacing = classType.Get("IconHorizontalSpacing");
+            return (double)retObjectIconHorizontalSpacing;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectIconHorizontalSpacing_ToString = retObjectIconHorizontalSpacing == null ? "null" : retObjectIconHorizontalSpacing.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectIconHorizontalSpacingNumber = (java.lang.Number)retObjectIconHorizontalSpacing;
+                return retObjectIconHorizontalSpacingNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectIconHorizontalSpacing != null ? retObjectIconHorizontalSpacing.getClass() : "null", retObjectIconHorizontalSpacing_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -746,9 +1125,20 @@ public class SystemParameters extends NetObject  {
 
     public static double getIconVerticalSpacing() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIconVerticalSpacing = null;
         try {
-            return (double)classType.Get("IconVerticalSpacing");
+            retObjectIconVerticalSpacing = classType.Get("IconVerticalSpacing");
+            return (double)retObjectIconVerticalSpacing;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectIconVerticalSpacing_ToString = retObjectIconVerticalSpacing == null ? "null" : retObjectIconVerticalSpacing.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectIconVerticalSpacingNumber = (java.lang.Number)retObjectIconVerticalSpacing;
+                return retObjectIconVerticalSpacingNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectIconVerticalSpacing != null ? retObjectIconVerticalSpacing.getClass() : "null", retObjectIconVerticalSpacing_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -756,9 +1146,20 @@ public class SystemParameters extends NetObject  {
 
     public static double getIconWidth() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentNullException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIconWidth = null;
         try {
-            return (double)classType.Get("IconWidth");
+            retObjectIconWidth = classType.Get("IconWidth");
+            return (double)retObjectIconWidth;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectIconWidth_ToString = retObjectIconWidth == null ? "null" : retObjectIconWidth.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectIconWidthNumber = (java.lang.Number)retObjectIconWidth;
+                return retObjectIconWidthNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectIconWidth != null ? retObjectIconWidth.getClass() : "null", retObjectIconWidth_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -766,9 +1167,20 @@ public class SystemParameters extends NetObject  {
 
     public static double getKanjiWindowHeight() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectKanjiWindowHeight = null;
         try {
-            return (double)classType.Get("KanjiWindowHeight");
+            retObjectKanjiWindowHeight = classType.Get("KanjiWindowHeight");
+            return (double)retObjectKanjiWindowHeight;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectKanjiWindowHeight_ToString = retObjectKanjiWindowHeight == null ? "null" : retObjectKanjiWindowHeight.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectKanjiWindowHeightNumber = (java.lang.Number)retObjectKanjiWindowHeight;
+                return retObjectKanjiWindowHeightNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectKanjiWindowHeight != null ? retObjectKanjiWindowHeight.getClass() : "null", retObjectKanjiWindowHeight_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -776,9 +1188,20 @@ public class SystemParameters extends NetObject  {
 
     public static double getMaximizedPrimaryScreenHeight() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMaximizedPrimaryScreenHeight = null;
         try {
-            return (double)classType.Get("MaximizedPrimaryScreenHeight");
+            retObjectMaximizedPrimaryScreenHeight = classType.Get("MaximizedPrimaryScreenHeight");
+            return (double)retObjectMaximizedPrimaryScreenHeight;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaximizedPrimaryScreenHeight_ToString = retObjectMaximizedPrimaryScreenHeight == null ? "null" : retObjectMaximizedPrimaryScreenHeight.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMaximizedPrimaryScreenHeightNumber = (java.lang.Number)retObjectMaximizedPrimaryScreenHeight;
+                return retObjectMaximizedPrimaryScreenHeightNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectMaximizedPrimaryScreenHeight != null ? retObjectMaximizedPrimaryScreenHeight.getClass() : "null", retObjectMaximizedPrimaryScreenHeight_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -786,9 +1209,20 @@ public class SystemParameters extends NetObject  {
 
     public static double getMaximizedPrimaryScreenWidth() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMaximizedPrimaryScreenWidth = null;
         try {
-            return (double)classType.Get("MaximizedPrimaryScreenWidth");
+            retObjectMaximizedPrimaryScreenWidth = classType.Get("MaximizedPrimaryScreenWidth");
+            return (double)retObjectMaximizedPrimaryScreenWidth;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaximizedPrimaryScreenWidth_ToString = retObjectMaximizedPrimaryScreenWidth == null ? "null" : retObjectMaximizedPrimaryScreenWidth.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMaximizedPrimaryScreenWidthNumber = (java.lang.Number)retObjectMaximizedPrimaryScreenWidth;
+                return retObjectMaximizedPrimaryScreenWidthNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectMaximizedPrimaryScreenWidth != null ? retObjectMaximizedPrimaryScreenWidth.getClass() : "null", retObjectMaximizedPrimaryScreenWidth_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -796,9 +1230,20 @@ public class SystemParameters extends NetObject  {
 
     public static double getMaximumWindowTrackHeight() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMaximumWindowTrackHeight = null;
         try {
-            return (double)classType.Get("MaximumWindowTrackHeight");
+            retObjectMaximumWindowTrackHeight = classType.Get("MaximumWindowTrackHeight");
+            return (double)retObjectMaximumWindowTrackHeight;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaximumWindowTrackHeight_ToString = retObjectMaximumWindowTrackHeight == null ? "null" : retObjectMaximumWindowTrackHeight.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMaximumWindowTrackHeightNumber = (java.lang.Number)retObjectMaximumWindowTrackHeight;
+                return retObjectMaximumWindowTrackHeightNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectMaximumWindowTrackHeight != null ? retObjectMaximumWindowTrackHeight.getClass() : "null", retObjectMaximumWindowTrackHeight_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -806,9 +1251,20 @@ public class SystemParameters extends NetObject  {
 
     public static double getMaximumWindowTrackWidth() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMaximumWindowTrackWidth = null;
         try {
-            return (double)classType.Get("MaximumWindowTrackWidth");
+            retObjectMaximumWindowTrackWidth = classType.Get("MaximumWindowTrackWidth");
+            return (double)retObjectMaximumWindowTrackWidth;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaximumWindowTrackWidth_ToString = retObjectMaximumWindowTrackWidth == null ? "null" : retObjectMaximumWindowTrackWidth.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMaximumWindowTrackWidthNumber = (java.lang.Number)retObjectMaximumWindowTrackWidth;
+                return retObjectMaximumWindowTrackWidthNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectMaximumWindowTrackWidth != null ? retObjectMaximumWindowTrackWidth.getClass() : "null", retObjectMaximumWindowTrackWidth_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -816,9 +1272,20 @@ public class SystemParameters extends NetObject  {
 
     public static double getMenuBarHeight() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMenuBarHeight = null;
         try {
-            return (double)classType.Get("MenuBarHeight");
+            retObjectMenuBarHeight = classType.Get("MenuBarHeight");
+            return (double)retObjectMenuBarHeight;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMenuBarHeight_ToString = retObjectMenuBarHeight == null ? "null" : retObjectMenuBarHeight.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMenuBarHeightNumber = (java.lang.Number)retObjectMenuBarHeight;
+                return retObjectMenuBarHeightNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectMenuBarHeight != null ? retObjectMenuBarHeight.getClass() : "null", retObjectMenuBarHeight_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -826,9 +1293,20 @@ public class SystemParameters extends NetObject  {
 
     public static double getMenuButtonHeight() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentNullException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMenuButtonHeight = null;
         try {
-            return (double)classType.Get("MenuButtonHeight");
+            retObjectMenuButtonHeight = classType.Get("MenuButtonHeight");
+            return (double)retObjectMenuButtonHeight;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMenuButtonHeight_ToString = retObjectMenuButtonHeight == null ? "null" : retObjectMenuButtonHeight.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMenuButtonHeightNumber = (java.lang.Number)retObjectMenuButtonHeight;
+                return retObjectMenuButtonHeightNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectMenuButtonHeight != null ? retObjectMenuButtonHeight.getClass() : "null", retObjectMenuButtonHeight_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -836,9 +1314,20 @@ public class SystemParameters extends NetObject  {
 
     public static double getMenuButtonWidth() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentNullException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMenuButtonWidth = null;
         try {
-            return (double)classType.Get("MenuButtonWidth");
+            retObjectMenuButtonWidth = classType.Get("MenuButtonWidth");
+            return (double)retObjectMenuButtonWidth;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMenuButtonWidth_ToString = retObjectMenuButtonWidth == null ? "null" : retObjectMenuButtonWidth.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMenuButtonWidthNumber = (java.lang.Number)retObjectMenuButtonWidth;
+                return retObjectMenuButtonWidthNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectMenuButtonWidth != null ? retObjectMenuButtonWidth.getClass() : "null", retObjectMenuButtonWidth_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -846,9 +1335,20 @@ public class SystemParameters extends NetObject  {
 
     public static double getMenuCheckmarkHeight() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentNullException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMenuCheckmarkHeight = null;
         try {
-            return (double)classType.Get("MenuCheckmarkHeight");
+            retObjectMenuCheckmarkHeight = classType.Get("MenuCheckmarkHeight");
+            return (double)retObjectMenuCheckmarkHeight;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMenuCheckmarkHeight_ToString = retObjectMenuCheckmarkHeight == null ? "null" : retObjectMenuCheckmarkHeight.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMenuCheckmarkHeightNumber = (java.lang.Number)retObjectMenuCheckmarkHeight;
+                return retObjectMenuCheckmarkHeightNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectMenuCheckmarkHeight != null ? retObjectMenuCheckmarkHeight.getClass() : "null", retObjectMenuCheckmarkHeight_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -856,9 +1356,20 @@ public class SystemParameters extends NetObject  {
 
     public static double getMenuCheckmarkWidth() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentNullException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMenuCheckmarkWidth = null;
         try {
-            return (double)classType.Get("MenuCheckmarkWidth");
+            retObjectMenuCheckmarkWidth = classType.Get("MenuCheckmarkWidth");
+            return (double)retObjectMenuCheckmarkWidth;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMenuCheckmarkWidth_ToString = retObjectMenuCheckmarkWidth == null ? "null" : retObjectMenuCheckmarkWidth.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMenuCheckmarkWidthNumber = (java.lang.Number)retObjectMenuCheckmarkWidth;
+                return retObjectMenuCheckmarkWidthNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectMenuCheckmarkWidth != null ? retObjectMenuCheckmarkWidth.getClass() : "null", retObjectMenuCheckmarkWidth_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -866,9 +1377,20 @@ public class SystemParameters extends NetObject  {
 
     public static double getMenuHeight() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMenuHeight = null;
         try {
-            return (double)classType.Get("MenuHeight");
+            retObjectMenuHeight = classType.Get("MenuHeight");
+            return (double)retObjectMenuHeight;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMenuHeight_ToString = retObjectMenuHeight == null ? "null" : retObjectMenuHeight.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMenuHeightNumber = (java.lang.Number)retObjectMenuHeight;
+                return retObjectMenuHeightNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectMenuHeight != null ? retObjectMenuHeight.getClass() : "null", retObjectMenuHeight_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -876,9 +1398,20 @@ public class SystemParameters extends NetObject  {
 
     public static double getMenuWidth() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMenuWidth = null;
         try {
-            return (double)classType.Get("MenuWidth");
+            retObjectMenuWidth = classType.Get("MenuWidth");
+            return (double)retObjectMenuWidth;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMenuWidth_ToString = retObjectMenuWidth == null ? "null" : retObjectMenuWidth.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMenuWidthNumber = (java.lang.Number)retObjectMenuWidth;
+                return retObjectMenuWidthNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectMenuWidth != null ? retObjectMenuWidth.getClass() : "null", retObjectMenuWidth_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -886,9 +1419,20 @@ public class SystemParameters extends NetObject  {
 
     public static double getMinimizedGridHeight() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentNullException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMinimizedGridHeight = null;
         try {
-            return (double)classType.Get("MinimizedGridHeight");
+            retObjectMinimizedGridHeight = classType.Get("MinimizedGridHeight");
+            return (double)retObjectMinimizedGridHeight;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMinimizedGridHeight_ToString = retObjectMinimizedGridHeight == null ? "null" : retObjectMinimizedGridHeight.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMinimizedGridHeightNumber = (java.lang.Number)retObjectMinimizedGridHeight;
+                return retObjectMinimizedGridHeightNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectMinimizedGridHeight != null ? retObjectMinimizedGridHeight.getClass() : "null", retObjectMinimizedGridHeight_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -896,9 +1440,20 @@ public class SystemParameters extends NetObject  {
 
     public static double getMinimizedGridWidth() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentNullException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMinimizedGridWidth = null;
         try {
-            return (double)classType.Get("MinimizedGridWidth");
+            retObjectMinimizedGridWidth = classType.Get("MinimizedGridWidth");
+            return (double)retObjectMinimizedGridWidth;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMinimizedGridWidth_ToString = retObjectMinimizedGridWidth == null ? "null" : retObjectMinimizedGridWidth.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMinimizedGridWidthNumber = (java.lang.Number)retObjectMinimizedGridWidth;
+                return retObjectMinimizedGridWidthNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectMinimizedGridWidth != null ? retObjectMinimizedGridWidth.getClass() : "null", retObjectMinimizedGridWidth_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -906,9 +1461,20 @@ public class SystemParameters extends NetObject  {
 
     public static double getMinimizedWindowHeight() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMinimizedWindowHeight = null;
         try {
-            return (double)classType.Get("MinimizedWindowHeight");
+            retObjectMinimizedWindowHeight = classType.Get("MinimizedWindowHeight");
+            return (double)retObjectMinimizedWindowHeight;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMinimizedWindowHeight_ToString = retObjectMinimizedWindowHeight == null ? "null" : retObjectMinimizedWindowHeight.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMinimizedWindowHeightNumber = (java.lang.Number)retObjectMinimizedWindowHeight;
+                return retObjectMinimizedWindowHeightNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectMinimizedWindowHeight != null ? retObjectMinimizedWindowHeight.getClass() : "null", retObjectMinimizedWindowHeight_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -916,9 +1482,20 @@ public class SystemParameters extends NetObject  {
 
     public static double getMinimizedWindowWidth() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMinimizedWindowWidth = null;
         try {
-            return (double)classType.Get("MinimizedWindowWidth");
+            retObjectMinimizedWindowWidth = classType.Get("MinimizedWindowWidth");
+            return (double)retObjectMinimizedWindowWidth;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMinimizedWindowWidth_ToString = retObjectMinimizedWindowWidth == null ? "null" : retObjectMinimizedWindowWidth.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMinimizedWindowWidthNumber = (java.lang.Number)retObjectMinimizedWindowWidth;
+                return retObjectMinimizedWindowWidthNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectMinimizedWindowWidth != null ? retObjectMinimizedWindowWidth.getClass() : "null", retObjectMinimizedWindowWidth_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -926,9 +1503,20 @@ public class SystemParameters extends NetObject  {
 
     public static double getMinimumHorizontalDragDistance() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentNullException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMinimumHorizontalDragDistance = null;
         try {
-            return (double)classType.Get("MinimumHorizontalDragDistance");
+            retObjectMinimumHorizontalDragDistance = classType.Get("MinimumHorizontalDragDistance");
+            return (double)retObjectMinimumHorizontalDragDistance;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMinimumHorizontalDragDistance_ToString = retObjectMinimumHorizontalDragDistance == null ? "null" : retObjectMinimumHorizontalDragDistance.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMinimumHorizontalDragDistanceNumber = (java.lang.Number)retObjectMinimumHorizontalDragDistance;
+                return retObjectMinimumHorizontalDragDistanceNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectMinimumHorizontalDragDistance != null ? retObjectMinimumHorizontalDragDistance.getClass() : "null", retObjectMinimumHorizontalDragDistance_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -936,9 +1524,20 @@ public class SystemParameters extends NetObject  {
 
     public static double getMinimumVerticalDragDistance() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentNullException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMinimumVerticalDragDistance = null;
         try {
-            return (double)classType.Get("MinimumVerticalDragDistance");
+            retObjectMinimumVerticalDragDistance = classType.Get("MinimumVerticalDragDistance");
+            return (double)retObjectMinimumVerticalDragDistance;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMinimumVerticalDragDistance_ToString = retObjectMinimumVerticalDragDistance == null ? "null" : retObjectMinimumVerticalDragDistance.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMinimumVerticalDragDistanceNumber = (java.lang.Number)retObjectMinimumVerticalDragDistance;
+                return retObjectMinimumVerticalDragDistanceNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectMinimumVerticalDragDistance != null ? retObjectMinimumVerticalDragDistance.getClass() : "null", retObjectMinimumVerticalDragDistance_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -946,9 +1545,20 @@ public class SystemParameters extends NetObject  {
 
     public static double getMinimumWindowHeight() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMinimumWindowHeight = null;
         try {
-            return (double)classType.Get("MinimumWindowHeight");
+            retObjectMinimumWindowHeight = classType.Get("MinimumWindowHeight");
+            return (double)retObjectMinimumWindowHeight;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMinimumWindowHeight_ToString = retObjectMinimumWindowHeight == null ? "null" : retObjectMinimumWindowHeight.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMinimumWindowHeightNumber = (java.lang.Number)retObjectMinimumWindowHeight;
+                return retObjectMinimumWindowHeightNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectMinimumWindowHeight != null ? retObjectMinimumWindowHeight.getClass() : "null", retObjectMinimumWindowHeight_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -956,9 +1566,20 @@ public class SystemParameters extends NetObject  {
 
     public static double getMinimumWindowTrackHeight() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMinimumWindowTrackHeight = null;
         try {
-            return (double)classType.Get("MinimumWindowTrackHeight");
+            retObjectMinimumWindowTrackHeight = classType.Get("MinimumWindowTrackHeight");
+            return (double)retObjectMinimumWindowTrackHeight;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMinimumWindowTrackHeight_ToString = retObjectMinimumWindowTrackHeight == null ? "null" : retObjectMinimumWindowTrackHeight.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMinimumWindowTrackHeightNumber = (java.lang.Number)retObjectMinimumWindowTrackHeight;
+                return retObjectMinimumWindowTrackHeightNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectMinimumWindowTrackHeight != null ? retObjectMinimumWindowTrackHeight.getClass() : "null", retObjectMinimumWindowTrackHeight_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -966,9 +1587,20 @@ public class SystemParameters extends NetObject  {
 
     public static double getMinimumWindowTrackWidth() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMinimumWindowTrackWidth = null;
         try {
-            return (double)classType.Get("MinimumWindowTrackWidth");
+            retObjectMinimumWindowTrackWidth = classType.Get("MinimumWindowTrackWidth");
+            return (double)retObjectMinimumWindowTrackWidth;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMinimumWindowTrackWidth_ToString = retObjectMinimumWindowTrackWidth == null ? "null" : retObjectMinimumWindowTrackWidth.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMinimumWindowTrackWidthNumber = (java.lang.Number)retObjectMinimumWindowTrackWidth;
+                return retObjectMinimumWindowTrackWidthNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectMinimumWindowTrackWidth != null ? retObjectMinimumWindowTrackWidth.getClass() : "null", retObjectMinimumWindowTrackWidth_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -976,9 +1608,20 @@ public class SystemParameters extends NetObject  {
 
     public static double getMinimumWindowWidth() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMinimumWindowWidth = null;
         try {
-            return (double)classType.Get("MinimumWindowWidth");
+            retObjectMinimumWindowWidth = classType.Get("MinimumWindowWidth");
+            return (double)retObjectMinimumWindowWidth;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMinimumWindowWidth_ToString = retObjectMinimumWindowWidth == null ? "null" : retObjectMinimumWindowWidth.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMinimumWindowWidthNumber = (java.lang.Number)retObjectMinimumWindowWidth;
+                return retObjectMinimumWindowWidthNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectMinimumWindowWidth != null ? retObjectMinimumWindowWidth.getClass() : "null", retObjectMinimumWindowWidth_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -986,9 +1629,20 @@ public class SystemParameters extends NetObject  {
 
     public static double getMouseHoverHeight() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentNullException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMouseHoverHeight = null;
         try {
-            return (double)classType.Get("MouseHoverHeight");
+            retObjectMouseHoverHeight = classType.Get("MouseHoverHeight");
+            return (double)retObjectMouseHoverHeight;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMouseHoverHeight_ToString = retObjectMouseHoverHeight == null ? "null" : retObjectMouseHoverHeight.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMouseHoverHeightNumber = (java.lang.Number)retObjectMouseHoverHeight;
+                return retObjectMouseHoverHeightNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectMouseHoverHeight != null ? retObjectMouseHoverHeight.getClass() : "null", retObjectMouseHoverHeight_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -996,9 +1650,20 @@ public class SystemParameters extends NetObject  {
 
     public static double getMouseHoverWidth() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentNullException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMouseHoverWidth = null;
         try {
-            return (double)classType.Get("MouseHoverWidth");
+            retObjectMouseHoverWidth = classType.Get("MouseHoverWidth");
+            return (double)retObjectMouseHoverWidth;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMouseHoverWidth_ToString = retObjectMouseHoverWidth == null ? "null" : retObjectMouseHoverWidth.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMouseHoverWidthNumber = (java.lang.Number)retObjectMouseHoverWidth;
+                return retObjectMouseHoverWidthNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectMouseHoverWidth != null ? retObjectMouseHoverWidth.getClass() : "null", retObjectMouseHoverWidth_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1006,9 +1671,20 @@ public class SystemParameters extends NetObject  {
 
     public static double getPrimaryScreenHeight() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentNullException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectPrimaryScreenHeight = null;
         try {
-            return (double)classType.Get("PrimaryScreenHeight");
+            retObjectPrimaryScreenHeight = classType.Get("PrimaryScreenHeight");
+            return (double)retObjectPrimaryScreenHeight;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectPrimaryScreenHeight_ToString = retObjectPrimaryScreenHeight == null ? "null" : retObjectPrimaryScreenHeight.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectPrimaryScreenHeightNumber = (java.lang.Number)retObjectPrimaryScreenHeight;
+                return retObjectPrimaryScreenHeightNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectPrimaryScreenHeight != null ? retObjectPrimaryScreenHeight.getClass() : "null", retObjectPrimaryScreenHeight_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1016,9 +1692,20 @@ public class SystemParameters extends NetObject  {
 
     public static double getPrimaryScreenWidth() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentNullException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectPrimaryScreenWidth = null;
         try {
-            return (double)classType.Get("PrimaryScreenWidth");
+            retObjectPrimaryScreenWidth = classType.Get("PrimaryScreenWidth");
+            return (double)retObjectPrimaryScreenWidth;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectPrimaryScreenWidth_ToString = retObjectPrimaryScreenWidth == null ? "null" : retObjectPrimaryScreenWidth.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectPrimaryScreenWidthNumber = (java.lang.Number)retObjectPrimaryScreenWidth;
+                return retObjectPrimaryScreenWidthNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectPrimaryScreenWidth != null ? retObjectPrimaryScreenWidth.getClass() : "null", retObjectPrimaryScreenWidth_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1026,9 +1713,20 @@ public class SystemParameters extends NetObject  {
 
     public static double getResizeFrameHorizontalBorderHeight() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentNullException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectResizeFrameHorizontalBorderHeight = null;
         try {
-            return (double)classType.Get("ResizeFrameHorizontalBorderHeight");
+            retObjectResizeFrameHorizontalBorderHeight = classType.Get("ResizeFrameHorizontalBorderHeight");
+            return (double)retObjectResizeFrameHorizontalBorderHeight;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectResizeFrameHorizontalBorderHeight_ToString = retObjectResizeFrameHorizontalBorderHeight == null ? "null" : retObjectResizeFrameHorizontalBorderHeight.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectResizeFrameHorizontalBorderHeightNumber = (java.lang.Number)retObjectResizeFrameHorizontalBorderHeight;
+                return retObjectResizeFrameHorizontalBorderHeightNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectResizeFrameHorizontalBorderHeight != null ? retObjectResizeFrameHorizontalBorderHeight.getClass() : "null", retObjectResizeFrameHorizontalBorderHeight_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1036,9 +1734,20 @@ public class SystemParameters extends NetObject  {
 
     public static double getResizeFrameVerticalBorderWidth() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentNullException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectResizeFrameVerticalBorderWidth = null;
         try {
-            return (double)classType.Get("ResizeFrameVerticalBorderWidth");
+            retObjectResizeFrameVerticalBorderWidth = classType.Get("ResizeFrameVerticalBorderWidth");
+            return (double)retObjectResizeFrameVerticalBorderWidth;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectResizeFrameVerticalBorderWidth_ToString = retObjectResizeFrameVerticalBorderWidth == null ? "null" : retObjectResizeFrameVerticalBorderWidth.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectResizeFrameVerticalBorderWidthNumber = (java.lang.Number)retObjectResizeFrameVerticalBorderWidth;
+                return retObjectResizeFrameVerticalBorderWidthNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectResizeFrameVerticalBorderWidth != null ? retObjectResizeFrameVerticalBorderWidth.getClass() : "null", retObjectResizeFrameVerticalBorderWidth_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1046,9 +1755,20 @@ public class SystemParameters extends NetObject  {
 
     public static double getScrollHeight() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectScrollHeight = null;
         try {
-            return (double)classType.Get("ScrollHeight");
+            retObjectScrollHeight = classType.Get("ScrollHeight");
+            return (double)retObjectScrollHeight;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectScrollHeight_ToString = retObjectScrollHeight == null ? "null" : retObjectScrollHeight.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectScrollHeightNumber = (java.lang.Number)retObjectScrollHeight;
+                return retObjectScrollHeightNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectScrollHeight != null ? retObjectScrollHeight.getClass() : "null", retObjectScrollHeight_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1056,9 +1776,20 @@ public class SystemParameters extends NetObject  {
 
     public static double getScrollWidth() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectScrollWidth = null;
         try {
-            return (double)classType.Get("ScrollWidth");
+            retObjectScrollWidth = classType.Get("ScrollWidth");
+            return (double)retObjectScrollWidth;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectScrollWidth_ToString = retObjectScrollWidth == null ? "null" : retObjectScrollWidth.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectScrollWidthNumber = (java.lang.Number)retObjectScrollWidth;
+                return retObjectScrollWidthNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectScrollWidth != null ? retObjectScrollWidth.getClass() : "null", retObjectScrollWidth_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1066,9 +1797,20 @@ public class SystemParameters extends NetObject  {
 
     public static double getSmallCaptionHeight() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSmallCaptionHeight = null;
         try {
-            return (double)classType.Get("SmallCaptionHeight");
+            retObjectSmallCaptionHeight = classType.Get("SmallCaptionHeight");
+            return (double)retObjectSmallCaptionHeight;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSmallCaptionHeight_ToString = retObjectSmallCaptionHeight == null ? "null" : retObjectSmallCaptionHeight.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectSmallCaptionHeightNumber = (java.lang.Number)retObjectSmallCaptionHeight;
+                return retObjectSmallCaptionHeightNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectSmallCaptionHeight != null ? retObjectSmallCaptionHeight.getClass() : "null", retObjectSmallCaptionHeight_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1076,9 +1818,20 @@ public class SystemParameters extends NetObject  {
 
     public static double getSmallCaptionWidth() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSmallCaptionWidth = null;
         try {
-            return (double)classType.Get("SmallCaptionWidth");
+            retObjectSmallCaptionWidth = classType.Get("SmallCaptionWidth");
+            return (double)retObjectSmallCaptionWidth;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSmallCaptionWidth_ToString = retObjectSmallCaptionWidth == null ? "null" : retObjectSmallCaptionWidth.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectSmallCaptionWidthNumber = (java.lang.Number)retObjectSmallCaptionWidth;
+                return retObjectSmallCaptionWidthNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectSmallCaptionWidth != null ? retObjectSmallCaptionWidth.getClass() : "null", retObjectSmallCaptionWidth_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1086,9 +1839,20 @@ public class SystemParameters extends NetObject  {
 
     public static double getSmallIconHeight() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentNullException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSmallIconHeight = null;
         try {
-            return (double)classType.Get("SmallIconHeight");
+            retObjectSmallIconHeight = classType.Get("SmallIconHeight");
+            return (double)retObjectSmallIconHeight;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSmallIconHeight_ToString = retObjectSmallIconHeight == null ? "null" : retObjectSmallIconHeight.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectSmallIconHeightNumber = (java.lang.Number)retObjectSmallIconHeight;
+                return retObjectSmallIconHeightNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectSmallIconHeight != null ? retObjectSmallIconHeight.getClass() : "null", retObjectSmallIconHeight_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1096,9 +1860,20 @@ public class SystemParameters extends NetObject  {
 
     public static double getSmallIconWidth() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentNullException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSmallIconWidth = null;
         try {
-            return (double)classType.Get("SmallIconWidth");
+            retObjectSmallIconWidth = classType.Get("SmallIconWidth");
+            return (double)retObjectSmallIconWidth;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSmallIconWidth_ToString = retObjectSmallIconWidth == null ? "null" : retObjectSmallIconWidth.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectSmallIconWidthNumber = (java.lang.Number)retObjectSmallIconWidth;
+                return retObjectSmallIconWidthNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectSmallIconWidth != null ? retObjectSmallIconWidth.getClass() : "null", retObjectSmallIconWidth_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1106,9 +1881,20 @@ public class SystemParameters extends NetObject  {
 
     public static double getSmallWindowCaptionButtonHeight() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentNullException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSmallWindowCaptionButtonHeight = null;
         try {
-            return (double)classType.Get("SmallWindowCaptionButtonHeight");
+            retObjectSmallWindowCaptionButtonHeight = classType.Get("SmallWindowCaptionButtonHeight");
+            return (double)retObjectSmallWindowCaptionButtonHeight;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSmallWindowCaptionButtonHeight_ToString = retObjectSmallWindowCaptionButtonHeight == null ? "null" : retObjectSmallWindowCaptionButtonHeight.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectSmallWindowCaptionButtonHeightNumber = (java.lang.Number)retObjectSmallWindowCaptionButtonHeight;
+                return retObjectSmallWindowCaptionButtonHeightNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectSmallWindowCaptionButtonHeight != null ? retObjectSmallWindowCaptionButtonHeight.getClass() : "null", retObjectSmallWindowCaptionButtonHeight_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1116,9 +1902,20 @@ public class SystemParameters extends NetObject  {
 
     public static double getSmallWindowCaptionButtonWidth() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentNullException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSmallWindowCaptionButtonWidth = null;
         try {
-            return (double)classType.Get("SmallWindowCaptionButtonWidth");
+            retObjectSmallWindowCaptionButtonWidth = classType.Get("SmallWindowCaptionButtonWidth");
+            return (double)retObjectSmallWindowCaptionButtonWidth;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSmallWindowCaptionButtonWidth_ToString = retObjectSmallWindowCaptionButtonWidth == null ? "null" : retObjectSmallWindowCaptionButtonWidth.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectSmallWindowCaptionButtonWidthNumber = (java.lang.Number)retObjectSmallWindowCaptionButtonWidth;
+                return retObjectSmallWindowCaptionButtonWidthNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectSmallWindowCaptionButtonWidth != null ? retObjectSmallWindowCaptionButtonWidth.getClass() : "null", retObjectSmallWindowCaptionButtonWidth_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1126,9 +1923,20 @@ public class SystemParameters extends NetObject  {
 
     public static double getThickHorizontalBorderHeight() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentNullException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectThickHorizontalBorderHeight = null;
         try {
-            return (double)classType.Get("ThickHorizontalBorderHeight");
+            retObjectThickHorizontalBorderHeight = classType.Get("ThickHorizontalBorderHeight");
+            return (double)retObjectThickHorizontalBorderHeight;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectThickHorizontalBorderHeight_ToString = retObjectThickHorizontalBorderHeight == null ? "null" : retObjectThickHorizontalBorderHeight.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectThickHorizontalBorderHeightNumber = (java.lang.Number)retObjectThickHorizontalBorderHeight;
+                return retObjectThickHorizontalBorderHeightNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectThickHorizontalBorderHeight != null ? retObjectThickHorizontalBorderHeight.getClass() : "null", retObjectThickHorizontalBorderHeight_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1136,9 +1944,20 @@ public class SystemParameters extends NetObject  {
 
     public static double getThickVerticalBorderWidth() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentNullException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectThickVerticalBorderWidth = null;
         try {
-            return (double)classType.Get("ThickVerticalBorderWidth");
+            retObjectThickVerticalBorderWidth = classType.Get("ThickVerticalBorderWidth");
+            return (double)retObjectThickVerticalBorderWidth;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectThickVerticalBorderWidth_ToString = retObjectThickVerticalBorderWidth == null ? "null" : retObjectThickVerticalBorderWidth.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectThickVerticalBorderWidthNumber = (java.lang.Number)retObjectThickVerticalBorderWidth;
+                return retObjectThickVerticalBorderWidthNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectThickVerticalBorderWidth != null ? retObjectThickVerticalBorderWidth.getClass() : "null", retObjectThickVerticalBorderWidth_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1146,9 +1965,20 @@ public class SystemParameters extends NetObject  {
 
     public static double getThinHorizontalBorderHeight() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentNullException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectThinHorizontalBorderHeight = null;
         try {
-            return (double)classType.Get("ThinHorizontalBorderHeight");
+            retObjectThinHorizontalBorderHeight = classType.Get("ThinHorizontalBorderHeight");
+            return (double)retObjectThinHorizontalBorderHeight;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectThinHorizontalBorderHeight_ToString = retObjectThinHorizontalBorderHeight == null ? "null" : retObjectThinHorizontalBorderHeight.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectThinHorizontalBorderHeightNumber = (java.lang.Number)retObjectThinHorizontalBorderHeight;
+                return retObjectThinHorizontalBorderHeightNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectThinHorizontalBorderHeight != null ? retObjectThinHorizontalBorderHeight.getClass() : "null", retObjectThinHorizontalBorderHeight_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1156,9 +1986,20 @@ public class SystemParameters extends NetObject  {
 
     public static double getThinVerticalBorderWidth() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentNullException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectThinVerticalBorderWidth = null;
         try {
-            return (double)classType.Get("ThinVerticalBorderWidth");
+            retObjectThinVerticalBorderWidth = classType.Get("ThinVerticalBorderWidth");
+            return (double)retObjectThinVerticalBorderWidth;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectThinVerticalBorderWidth_ToString = retObjectThinVerticalBorderWidth == null ? "null" : retObjectThinVerticalBorderWidth.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectThinVerticalBorderWidthNumber = (java.lang.Number)retObjectThinVerticalBorderWidth;
+                return retObjectThinVerticalBorderWidthNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectThinVerticalBorderWidth != null ? retObjectThinVerticalBorderWidth.getClass() : "null", retObjectThinVerticalBorderWidth_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1166,9 +2007,20 @@ public class SystemParameters extends NetObject  {
 
     public static double getVerticalScrollBarButtonHeight() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentNullException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectVerticalScrollBarButtonHeight = null;
         try {
-            return (double)classType.Get("VerticalScrollBarButtonHeight");
+            retObjectVerticalScrollBarButtonHeight = classType.Get("VerticalScrollBarButtonHeight");
+            return (double)retObjectVerticalScrollBarButtonHeight;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectVerticalScrollBarButtonHeight_ToString = retObjectVerticalScrollBarButtonHeight == null ? "null" : retObjectVerticalScrollBarButtonHeight.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectVerticalScrollBarButtonHeightNumber = (java.lang.Number)retObjectVerticalScrollBarButtonHeight;
+                return retObjectVerticalScrollBarButtonHeightNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectVerticalScrollBarButtonHeight != null ? retObjectVerticalScrollBarButtonHeight.getClass() : "null", retObjectVerticalScrollBarButtonHeight_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1176,9 +2028,20 @@ public class SystemParameters extends NetObject  {
 
     public static double getVerticalScrollBarThumbHeight() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentNullException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectVerticalScrollBarThumbHeight = null;
         try {
-            return (double)classType.Get("VerticalScrollBarThumbHeight");
+            retObjectVerticalScrollBarThumbHeight = classType.Get("VerticalScrollBarThumbHeight");
+            return (double)retObjectVerticalScrollBarThumbHeight;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectVerticalScrollBarThumbHeight_ToString = retObjectVerticalScrollBarThumbHeight == null ? "null" : retObjectVerticalScrollBarThumbHeight.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectVerticalScrollBarThumbHeightNumber = (java.lang.Number)retObjectVerticalScrollBarThumbHeight;
+                return retObjectVerticalScrollBarThumbHeightNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectVerticalScrollBarThumbHeight != null ? retObjectVerticalScrollBarThumbHeight.getClass() : "null", retObjectVerticalScrollBarThumbHeight_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1186,9 +2049,20 @@ public class SystemParameters extends NetObject  {
 
     public static double getVerticalScrollBarWidth() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentNullException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectVerticalScrollBarWidth = null;
         try {
-            return (double)classType.Get("VerticalScrollBarWidth");
+            retObjectVerticalScrollBarWidth = classType.Get("VerticalScrollBarWidth");
+            return (double)retObjectVerticalScrollBarWidth;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectVerticalScrollBarWidth_ToString = retObjectVerticalScrollBarWidth == null ? "null" : retObjectVerticalScrollBarWidth.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectVerticalScrollBarWidthNumber = (java.lang.Number)retObjectVerticalScrollBarWidth;
+                return retObjectVerticalScrollBarWidthNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectVerticalScrollBarWidth != null ? retObjectVerticalScrollBarWidth.getClass() : "null", retObjectVerticalScrollBarWidth_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1196,9 +2070,20 @@ public class SystemParameters extends NetObject  {
 
     public static double getVirtualScreenHeight() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectVirtualScreenHeight = null;
         try {
-            return (double)classType.Get("VirtualScreenHeight");
+            retObjectVirtualScreenHeight = classType.Get("VirtualScreenHeight");
+            return (double)retObjectVirtualScreenHeight;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectVirtualScreenHeight_ToString = retObjectVirtualScreenHeight == null ? "null" : retObjectVirtualScreenHeight.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectVirtualScreenHeightNumber = (java.lang.Number)retObjectVirtualScreenHeight;
+                return retObjectVirtualScreenHeightNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectVirtualScreenHeight != null ? retObjectVirtualScreenHeight.getClass() : "null", retObjectVirtualScreenHeight_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1206,9 +2091,20 @@ public class SystemParameters extends NetObject  {
 
     public static double getVirtualScreenLeft() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectVirtualScreenLeft = null;
         try {
-            return (double)classType.Get("VirtualScreenLeft");
+            retObjectVirtualScreenLeft = classType.Get("VirtualScreenLeft");
+            return (double)retObjectVirtualScreenLeft;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectVirtualScreenLeft_ToString = retObjectVirtualScreenLeft == null ? "null" : retObjectVirtualScreenLeft.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectVirtualScreenLeftNumber = (java.lang.Number)retObjectVirtualScreenLeft;
+                return retObjectVirtualScreenLeftNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectVirtualScreenLeft != null ? retObjectVirtualScreenLeft.getClass() : "null", retObjectVirtualScreenLeft_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1216,9 +2112,20 @@ public class SystemParameters extends NetObject  {
 
     public static double getVirtualScreenTop() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectVirtualScreenTop = null;
         try {
-            return (double)classType.Get("VirtualScreenTop");
+            retObjectVirtualScreenTop = classType.Get("VirtualScreenTop");
+            return (double)retObjectVirtualScreenTop;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectVirtualScreenTop_ToString = retObjectVirtualScreenTop == null ? "null" : retObjectVirtualScreenTop.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectVirtualScreenTopNumber = (java.lang.Number)retObjectVirtualScreenTop;
+                return retObjectVirtualScreenTopNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectVirtualScreenTop != null ? retObjectVirtualScreenTop.getClass() : "null", retObjectVirtualScreenTop_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1226,9 +2133,20 @@ public class SystemParameters extends NetObject  {
 
     public static double getVirtualScreenWidth() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectVirtualScreenWidth = null;
         try {
-            return (double)classType.Get("VirtualScreenWidth");
+            retObjectVirtualScreenWidth = classType.Get("VirtualScreenWidth");
+            return (double)retObjectVirtualScreenWidth;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectVirtualScreenWidth_ToString = retObjectVirtualScreenWidth == null ? "null" : retObjectVirtualScreenWidth.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectVirtualScreenWidthNumber = (java.lang.Number)retObjectVirtualScreenWidth;
+                return retObjectVirtualScreenWidthNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectVirtualScreenWidth != null ? retObjectVirtualScreenWidth.getClass() : "null", retObjectVirtualScreenWidth_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1236,9 +2154,20 @@ public class SystemParameters extends NetObject  {
 
     public static double getWindowCaptionButtonHeight() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentNullException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectWindowCaptionButtonHeight = null;
         try {
-            return (double)classType.Get("WindowCaptionButtonHeight");
+            retObjectWindowCaptionButtonHeight = classType.Get("WindowCaptionButtonHeight");
+            return (double)retObjectWindowCaptionButtonHeight;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectWindowCaptionButtonHeight_ToString = retObjectWindowCaptionButtonHeight == null ? "null" : retObjectWindowCaptionButtonHeight.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectWindowCaptionButtonHeightNumber = (java.lang.Number)retObjectWindowCaptionButtonHeight;
+                return retObjectWindowCaptionButtonHeightNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectWindowCaptionButtonHeight != null ? retObjectWindowCaptionButtonHeight.getClass() : "null", retObjectWindowCaptionButtonHeight_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1246,9 +2175,20 @@ public class SystemParameters extends NetObject  {
 
     public static double getWindowCaptionButtonWidth() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectWindowCaptionButtonWidth = null;
         try {
-            return (double)classType.Get("WindowCaptionButtonWidth");
+            retObjectWindowCaptionButtonWidth = classType.Get("WindowCaptionButtonWidth");
+            return (double)retObjectWindowCaptionButtonWidth;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectWindowCaptionButtonWidth_ToString = retObjectWindowCaptionButtonWidth == null ? "null" : retObjectWindowCaptionButtonWidth.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectWindowCaptionButtonWidthNumber = (java.lang.Number)retObjectWindowCaptionButtonWidth;
+                return retObjectWindowCaptionButtonWidthNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectWindowCaptionButtonWidth != null ? retObjectWindowCaptionButtonWidth.getClass() : "null", retObjectWindowCaptionButtonWidth_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1256,9 +2196,20 @@ public class SystemParameters extends NetObject  {
 
     public static double getWindowCaptionHeight() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectWindowCaptionHeight = null;
         try {
-            return (double)classType.Get("WindowCaptionHeight");
+            retObjectWindowCaptionHeight = classType.Get("WindowCaptionHeight");
+            return (double)retObjectWindowCaptionHeight;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectWindowCaptionHeight_ToString = retObjectWindowCaptionHeight == null ? "null" : retObjectWindowCaptionHeight.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectWindowCaptionHeightNumber = (java.lang.Number)retObjectWindowCaptionHeight;
+                return retObjectWindowCaptionHeightNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectWindowCaptionHeight != null ? retObjectWindowCaptionHeight.getClass() : "null", retObjectWindowCaptionHeight_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1266,9 +2217,20 @@ public class SystemParameters extends NetObject  {
 
     public static int getBorder() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectBorder = null;
         try {
-            return (int)classType.Get("Border");
+            retObjectBorder = classType.Get("Border");
+            return (int)retObjectBorder;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectBorder_ToString = retObjectBorder == null ? "null" : retObjectBorder.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectBorderNumber = (java.lang.Number)retObjectBorder;
+                return retObjectBorderNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectBorder != null ? retObjectBorder.getClass() : "null", retObjectBorder_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1276,9 +2238,20 @@ public class SystemParameters extends NetObject  {
 
     public static int getForegroundFlashCount() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectForegroundFlashCount = null;
         try {
-            return (int)classType.Get("ForegroundFlashCount");
+            retObjectForegroundFlashCount = classType.Get("ForegroundFlashCount");
+            return (int)retObjectForegroundFlashCount;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectForegroundFlashCount_ToString = retObjectForegroundFlashCount == null ? "null" : retObjectForegroundFlashCount.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectForegroundFlashCountNumber = (java.lang.Number)retObjectForegroundFlashCount;
+                return retObjectForegroundFlashCountNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectForegroundFlashCount != null ? retObjectForegroundFlashCount.getClass() : "null", retObjectForegroundFlashCount_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1286,9 +2259,20 @@ public class SystemParameters extends NetObject  {
 
     public static int getKeyboardDelay() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectKeyboardDelay = null;
         try {
-            return (int)classType.Get("KeyboardDelay");
+            retObjectKeyboardDelay = classType.Get("KeyboardDelay");
+            return (int)retObjectKeyboardDelay;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectKeyboardDelay_ToString = retObjectKeyboardDelay == null ? "null" : retObjectKeyboardDelay.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectKeyboardDelayNumber = (java.lang.Number)retObjectKeyboardDelay;
+                return retObjectKeyboardDelayNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectKeyboardDelay != null ? retObjectKeyboardDelay.getClass() : "null", retObjectKeyboardDelay_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1296,9 +2280,20 @@ public class SystemParameters extends NetObject  {
 
     public static int getKeyboardSpeed() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectKeyboardSpeed = null;
         try {
-            return (int)classType.Get("KeyboardSpeed");
+            retObjectKeyboardSpeed = classType.Get("KeyboardSpeed");
+            return (int)retObjectKeyboardSpeed;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectKeyboardSpeed_ToString = retObjectKeyboardSpeed == null ? "null" : retObjectKeyboardSpeed.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectKeyboardSpeedNumber = (java.lang.Number)retObjectKeyboardSpeed;
+                return retObjectKeyboardSpeedNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectKeyboardSpeed != null ? retObjectKeyboardSpeed.getClass() : "null", retObjectKeyboardSpeed_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1306,9 +2301,20 @@ public class SystemParameters extends NetObject  {
 
     public static int getMenuShowDelay() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMenuShowDelay = null;
         try {
-            return (int)classType.Get("MenuShowDelay");
+            retObjectMenuShowDelay = classType.Get("MenuShowDelay");
+            return (int)retObjectMenuShowDelay;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMenuShowDelay_ToString = retObjectMenuShowDelay == null ? "null" : retObjectMenuShowDelay.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMenuShowDelayNumber = (java.lang.Number)retObjectMenuShowDelay;
+                return retObjectMenuShowDelayNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMenuShowDelay != null ? retObjectMenuShowDelay.getClass() : "null", retObjectMenuShowDelay_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1316,9 +2322,20 @@ public class SystemParameters extends NetObject  {
 
     public static int getWheelScrollLines() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectWheelScrollLines = null;
         try {
-            return (int)classType.Get("WheelScrollLines");
+            retObjectWheelScrollLines = classType.Get("WheelScrollLines");
+            return (int)retObjectWheelScrollLines;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectWheelScrollLines_ToString = retObjectWheelScrollLines == null ? "null" : retObjectWheelScrollLines.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectWheelScrollLinesNumber = (java.lang.Number)retObjectWheelScrollLines;
+                return retObjectWheelScrollLinesNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectWheelScrollLines != null ? retObjectWheelScrollLines.getClass() : "null", retObjectWheelScrollLines_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1326,9 +2343,13 @@ public class SystemParameters extends NetObject  {
 
     public static java.lang.String getUxThemeColor() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectUxThemeColor = null;
         try {
-            return (java.lang.String)classType.Get("UxThemeColor");
+            retObjectUxThemeColor = classType.Get("UxThemeColor");
+            return (java.lang.String)retObjectUxThemeColor;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectUxThemeColor != null ? retObjectUxThemeColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1336,9 +2357,13 @@ public class SystemParameters extends NetObject  {
 
     public static java.lang.String getUxThemeName() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectUxThemeName = null;
         try {
-            return (java.lang.String)classType.Get("UxThemeName");
+            retObjectUxThemeName = classType.Get("UxThemeName");
+            return (java.lang.String)retObjectUxThemeName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectUxThemeName != null ? retObjectUxThemeName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1346,10 +2371,14 @@ public class SystemParameters extends NetObject  {
 
     public static TimeSpan getMouseHoverTime() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.OverflowException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMouseHoverTime = null;
         try {
-            JCObject val = (JCObject)classType.Get("MouseHoverTime");
+            retObjectMouseHoverTime = classType.Get("MouseHoverTime");
+            JCObject val = (JCObject)retObjectMouseHoverTime;
             return new TimeSpan(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMouseHoverTime != null ? retObjectMouseHoverTime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1357,10 +2386,14 @@ public class SystemParameters extends NetObject  {
 
     public static PopupAnimation getComboBoxPopupAnimation() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectComboBoxPopupAnimation = null;
         try {
-            JCObject val = (JCObject)classType.Get("ComboBoxPopupAnimation");
+            retObjectComboBoxPopupAnimation = classType.Get("ComboBoxPopupAnimation");
+            JCObject val = (JCObject)retObjectComboBoxPopupAnimation;
             return new PopupAnimation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectComboBoxPopupAnimation != null ? retObjectComboBoxPopupAnimation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1368,10 +2401,14 @@ public class SystemParameters extends NetObject  {
 
     public static PopupAnimation getMenuPopupAnimation() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMenuPopupAnimation = null;
         try {
-            JCObject val = (JCObject)classType.Get("MenuPopupAnimation");
+            retObjectMenuPopupAnimation = classType.Get("MenuPopupAnimation");
+            JCObject val = (JCObject)retObjectMenuPopupAnimation;
             return new PopupAnimation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMenuPopupAnimation != null ? retObjectMenuPopupAnimation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1379,10 +2416,14 @@ public class SystemParameters extends NetObject  {
 
     public static PopupAnimation getToolTipPopupAnimation() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectToolTipPopupAnimation = null;
         try {
-            JCObject val = (JCObject)classType.Get("ToolTipPopupAnimation");
+            retObjectToolTipPopupAnimation = classType.Get("ToolTipPopupAnimation");
+            JCObject val = (JCObject)retObjectToolTipPopupAnimation;
             return new PopupAnimation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToolTipPopupAnimation != null ? retObjectToolTipPopupAnimation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1390,10 +2431,14 @@ public class SystemParameters extends NetObject  {
 
     public static CornerRadius getWindowCornerRadius() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectWindowCornerRadius = null;
         try {
-            JCObject val = (JCObject)classType.Get("WindowCornerRadius");
+            retObjectWindowCornerRadius = classType.Get("WindowCornerRadius");
+            JCObject val = (JCObject)retObjectWindowCornerRadius;
             return new CornerRadius(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWindowCornerRadius != null ? retObjectWindowCornerRadius.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1401,10 +2446,14 @@ public class SystemParameters extends NetObject  {
 
     public static Brush getWindowGlassBrush() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectWindowGlassBrush = null;
         try {
-            JCObject val = (JCObject)classType.Get("WindowGlassBrush");
+            retObjectWindowGlassBrush = classType.Get("WindowGlassBrush");
+            JCObject val = (JCObject)retObjectWindowGlassBrush;
             return new Brush(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWindowGlassBrush != null ? retObjectWindowGlassBrush.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1412,10 +2461,14 @@ public class SystemParameters extends NetObject  {
 
     public static Color getWindowGlassColor() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectWindowGlassColor = null;
         try {
-            JCObject val = (JCObject)classType.Get("WindowGlassColor");
+            retObjectWindowGlassColor = classType.Get("WindowGlassColor");
+            JCObject val = (JCObject)retObjectWindowGlassColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWindowGlassColor != null ? retObjectWindowGlassColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1423,10 +2476,14 @@ public class SystemParameters extends NetObject  {
 
     public static PowerLineStatus getPowerLineStatus() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectPowerLineStatus = null;
         try {
-            JCObject val = (JCObject)classType.Get("PowerLineStatus");
+            retObjectPowerLineStatus = classType.Get("PowerLineStatus");
+            JCObject val = (JCObject)retObjectPowerLineStatus;
             return new PowerLineStatus(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPowerLineStatus != null ? retObjectPowerLineStatus.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1434,10 +2491,14 @@ public class SystemParameters extends NetObject  {
 
     public static Rect getWorkArea() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectWorkArea = null;
         try {
-            JCObject val = (JCObject)classType.Get("WorkArea");
+            retObjectWorkArea = classType.Get("WorkArea");
+            JCObject val = (JCObject)retObjectWorkArea;
             return new Rect(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWorkArea != null ? retObjectWorkArea.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1445,10 +2506,14 @@ public class SystemParameters extends NetObject  {
 
     public static ResourceKey getBorderKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectBorderKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("BorderKey");
+            retObjectBorderKey = classType.Get("BorderKey");
+            JCObject val = (JCObject)retObjectBorderKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBorderKey != null ? retObjectBorderKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1456,10 +2521,14 @@ public class SystemParameters extends NetObject  {
 
     public static ResourceKey getBorderWidthKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectBorderWidthKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("BorderWidthKey");
+            retObjectBorderWidthKey = classType.Get("BorderWidthKey");
+            JCObject val = (JCObject)retObjectBorderWidthKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBorderWidthKey != null ? retObjectBorderWidthKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1467,10 +2536,14 @@ public class SystemParameters extends NetObject  {
 
     public static ResourceKey getCaptionHeightKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCaptionHeightKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("CaptionHeightKey");
+            retObjectCaptionHeightKey = classType.Get("CaptionHeightKey");
+            JCObject val = (JCObject)retObjectCaptionHeightKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCaptionHeightKey != null ? retObjectCaptionHeightKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1478,10 +2551,14 @@ public class SystemParameters extends NetObject  {
 
     public static ResourceKey getCaptionWidthKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCaptionWidthKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("CaptionWidthKey");
+            retObjectCaptionWidthKey = classType.Get("CaptionWidthKey");
+            JCObject val = (JCObject)retObjectCaptionWidthKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCaptionWidthKey != null ? retObjectCaptionWidthKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1489,10 +2566,14 @@ public class SystemParameters extends NetObject  {
 
     public static ResourceKey getCaretWidthKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCaretWidthKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("CaretWidthKey");
+            retObjectCaretWidthKey = classType.Get("CaretWidthKey");
+            JCObject val = (JCObject)retObjectCaretWidthKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCaretWidthKey != null ? retObjectCaretWidthKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1500,10 +2581,14 @@ public class SystemParameters extends NetObject  {
 
     public static ResourceKey getClientAreaAnimationKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectClientAreaAnimationKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("ClientAreaAnimationKey");
+            retObjectClientAreaAnimationKey = classType.Get("ClientAreaAnimationKey");
+            JCObject val = (JCObject)retObjectClientAreaAnimationKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClientAreaAnimationKey != null ? retObjectClientAreaAnimationKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1511,10 +2596,14 @@ public class SystemParameters extends NetObject  {
 
     public static ResourceKey getComboBoxAnimationKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectComboBoxAnimationKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("ComboBoxAnimationKey");
+            retObjectComboBoxAnimationKey = classType.Get("ComboBoxAnimationKey");
+            JCObject val = (JCObject)retObjectComboBoxAnimationKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectComboBoxAnimationKey != null ? retObjectComboBoxAnimationKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1522,10 +2611,14 @@ public class SystemParameters extends NetObject  {
 
     public static ResourceKey getComboBoxPopupAnimationKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectComboBoxPopupAnimationKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("ComboBoxPopupAnimationKey");
+            retObjectComboBoxPopupAnimationKey = classType.Get("ComboBoxPopupAnimationKey");
+            JCObject val = (JCObject)retObjectComboBoxPopupAnimationKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectComboBoxPopupAnimationKey != null ? retObjectComboBoxPopupAnimationKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1533,10 +2626,14 @@ public class SystemParameters extends NetObject  {
 
     public static ResourceKey getCursorHeightKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCursorHeightKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("CursorHeightKey");
+            retObjectCursorHeightKey = classType.Get("CursorHeightKey");
+            JCObject val = (JCObject)retObjectCursorHeightKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCursorHeightKey != null ? retObjectCursorHeightKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1544,10 +2641,14 @@ public class SystemParameters extends NetObject  {
 
     public static ResourceKey getCursorShadowKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCursorShadowKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("CursorShadowKey");
+            retObjectCursorShadowKey = classType.Get("CursorShadowKey");
+            JCObject val = (JCObject)retObjectCursorShadowKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCursorShadowKey != null ? retObjectCursorShadowKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1555,10 +2656,14 @@ public class SystemParameters extends NetObject  {
 
     public static ResourceKey getCursorWidthKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCursorWidthKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("CursorWidthKey");
+            retObjectCursorWidthKey = classType.Get("CursorWidthKey");
+            JCObject val = (JCObject)retObjectCursorWidthKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCursorWidthKey != null ? retObjectCursorWidthKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1566,10 +2671,14 @@ public class SystemParameters extends NetObject  {
 
     public static ResourceKey getDragFullWindowsKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDragFullWindowsKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("DragFullWindowsKey");
+            retObjectDragFullWindowsKey = classType.Get("DragFullWindowsKey");
+            JCObject val = (JCObject)retObjectDragFullWindowsKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDragFullWindowsKey != null ? retObjectDragFullWindowsKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1577,10 +2686,14 @@ public class SystemParameters extends NetObject  {
 
     public static ResourceKey getDropShadowKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDropShadowKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("DropShadowKey");
+            retObjectDropShadowKey = classType.Get("DropShadowKey");
+            JCObject val = (JCObject)retObjectDropShadowKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDropShadowKey != null ? retObjectDropShadowKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1588,10 +2701,14 @@ public class SystemParameters extends NetObject  {
 
     public static ResourceKey getFixedFrameHorizontalBorderHeightKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFixedFrameHorizontalBorderHeightKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("FixedFrameHorizontalBorderHeightKey");
+            retObjectFixedFrameHorizontalBorderHeightKey = classType.Get("FixedFrameHorizontalBorderHeightKey");
+            JCObject val = (JCObject)retObjectFixedFrameHorizontalBorderHeightKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFixedFrameHorizontalBorderHeightKey != null ? retObjectFixedFrameHorizontalBorderHeightKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1599,10 +2716,14 @@ public class SystemParameters extends NetObject  {
 
     public static ResourceKey getFixedFrameVerticalBorderWidthKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFixedFrameVerticalBorderWidthKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("FixedFrameVerticalBorderWidthKey");
+            retObjectFixedFrameVerticalBorderWidthKey = classType.Get("FixedFrameVerticalBorderWidthKey");
+            JCObject val = (JCObject)retObjectFixedFrameVerticalBorderWidthKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFixedFrameVerticalBorderWidthKey != null ? retObjectFixedFrameVerticalBorderWidthKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1610,10 +2731,14 @@ public class SystemParameters extends NetObject  {
 
     public static ResourceKey getFlatMenuKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFlatMenuKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("FlatMenuKey");
+            retObjectFlatMenuKey = classType.Get("FlatMenuKey");
+            JCObject val = (JCObject)retObjectFlatMenuKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFlatMenuKey != null ? retObjectFlatMenuKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1621,10 +2746,14 @@ public class SystemParameters extends NetObject  {
 
     public static ResourceKey getFocusBorderHeightKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFocusBorderHeightKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("FocusBorderHeightKey");
+            retObjectFocusBorderHeightKey = classType.Get("FocusBorderHeightKey");
+            JCObject val = (JCObject)retObjectFocusBorderHeightKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFocusBorderHeightKey != null ? retObjectFocusBorderHeightKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1632,10 +2761,14 @@ public class SystemParameters extends NetObject  {
 
     public static ResourceKey getFocusBorderWidthKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFocusBorderWidthKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("FocusBorderWidthKey");
+            retObjectFocusBorderWidthKey = classType.Get("FocusBorderWidthKey");
+            JCObject val = (JCObject)retObjectFocusBorderWidthKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFocusBorderWidthKey != null ? retObjectFocusBorderWidthKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1643,10 +2776,14 @@ public class SystemParameters extends NetObject  {
 
     public static ResourceKey getFocusHorizontalBorderHeightKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFocusHorizontalBorderHeightKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("FocusHorizontalBorderHeightKey");
+            retObjectFocusHorizontalBorderHeightKey = classType.Get("FocusHorizontalBorderHeightKey");
+            JCObject val = (JCObject)retObjectFocusHorizontalBorderHeightKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFocusHorizontalBorderHeightKey != null ? retObjectFocusHorizontalBorderHeightKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1654,10 +2791,14 @@ public class SystemParameters extends NetObject  {
 
     public static ResourceKey getFocusVerticalBorderWidthKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFocusVerticalBorderWidthKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("FocusVerticalBorderWidthKey");
+            retObjectFocusVerticalBorderWidthKey = classType.Get("FocusVerticalBorderWidthKey");
+            JCObject val = (JCObject)retObjectFocusVerticalBorderWidthKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFocusVerticalBorderWidthKey != null ? retObjectFocusVerticalBorderWidthKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1665,10 +2806,14 @@ public class SystemParameters extends NetObject  {
 
     public static ResourceKey getFocusVisualStyleKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFocusVisualStyleKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("FocusVisualStyleKey");
+            retObjectFocusVisualStyleKey = classType.Get("FocusVisualStyleKey");
+            JCObject val = (JCObject)retObjectFocusVisualStyleKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFocusVisualStyleKey != null ? retObjectFocusVisualStyleKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1676,10 +2821,14 @@ public class SystemParameters extends NetObject  {
 
     public static ResourceKey getForegroundFlashCountKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectForegroundFlashCountKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("ForegroundFlashCountKey");
+            retObjectForegroundFlashCountKey = classType.Get("ForegroundFlashCountKey");
+            JCObject val = (JCObject)retObjectForegroundFlashCountKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectForegroundFlashCountKey != null ? retObjectForegroundFlashCountKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1687,10 +2836,14 @@ public class SystemParameters extends NetObject  {
 
     public static ResourceKey getFullPrimaryScreenHeightKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFullPrimaryScreenHeightKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("FullPrimaryScreenHeightKey");
+            retObjectFullPrimaryScreenHeightKey = classType.Get("FullPrimaryScreenHeightKey");
+            JCObject val = (JCObject)retObjectFullPrimaryScreenHeightKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFullPrimaryScreenHeightKey != null ? retObjectFullPrimaryScreenHeightKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1698,10 +2851,14 @@ public class SystemParameters extends NetObject  {
 
     public static ResourceKey getFullPrimaryScreenWidthKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFullPrimaryScreenWidthKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("FullPrimaryScreenWidthKey");
+            retObjectFullPrimaryScreenWidthKey = classType.Get("FullPrimaryScreenWidthKey");
+            JCObject val = (JCObject)retObjectFullPrimaryScreenWidthKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFullPrimaryScreenWidthKey != null ? retObjectFullPrimaryScreenWidthKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1709,10 +2866,14 @@ public class SystemParameters extends NetObject  {
 
     public static ResourceKey getGradientCaptionsKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGradientCaptionsKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("GradientCaptionsKey");
+            retObjectGradientCaptionsKey = classType.Get("GradientCaptionsKey");
+            JCObject val = (JCObject)retObjectGradientCaptionsKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGradientCaptionsKey != null ? retObjectGradientCaptionsKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1720,10 +2881,14 @@ public class SystemParameters extends NetObject  {
 
     public static ResourceKey getHighContrastKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectHighContrastKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("HighContrastKey");
+            retObjectHighContrastKey = classType.Get("HighContrastKey");
+            JCObject val = (JCObject)retObjectHighContrastKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHighContrastKey != null ? retObjectHighContrastKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1731,10 +2896,14 @@ public class SystemParameters extends NetObject  {
 
     public static ResourceKey getHorizontalScrollBarButtonWidthKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectHorizontalScrollBarButtonWidthKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("HorizontalScrollBarButtonWidthKey");
+            retObjectHorizontalScrollBarButtonWidthKey = classType.Get("HorizontalScrollBarButtonWidthKey");
+            JCObject val = (JCObject)retObjectHorizontalScrollBarButtonWidthKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHorizontalScrollBarButtonWidthKey != null ? retObjectHorizontalScrollBarButtonWidthKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1742,10 +2911,14 @@ public class SystemParameters extends NetObject  {
 
     public static ResourceKey getHorizontalScrollBarHeightKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectHorizontalScrollBarHeightKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("HorizontalScrollBarHeightKey");
+            retObjectHorizontalScrollBarHeightKey = classType.Get("HorizontalScrollBarHeightKey");
+            JCObject val = (JCObject)retObjectHorizontalScrollBarHeightKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHorizontalScrollBarHeightKey != null ? retObjectHorizontalScrollBarHeightKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1753,10 +2926,14 @@ public class SystemParameters extends NetObject  {
 
     public static ResourceKey getHorizontalScrollBarThumbWidthKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectHorizontalScrollBarThumbWidthKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("HorizontalScrollBarThumbWidthKey");
+            retObjectHorizontalScrollBarThumbWidthKey = classType.Get("HorizontalScrollBarThumbWidthKey");
+            JCObject val = (JCObject)retObjectHorizontalScrollBarThumbWidthKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHorizontalScrollBarThumbWidthKey != null ? retObjectHorizontalScrollBarThumbWidthKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1764,10 +2941,14 @@ public class SystemParameters extends NetObject  {
 
     public static ResourceKey getHotTrackingKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectHotTrackingKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("HotTrackingKey");
+            retObjectHotTrackingKey = classType.Get("HotTrackingKey");
+            JCObject val = (JCObject)retObjectHotTrackingKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHotTrackingKey != null ? retObjectHotTrackingKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1775,10 +2956,14 @@ public class SystemParameters extends NetObject  {
 
     public static ResourceKey getIconGridHeightKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIconGridHeightKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("IconGridHeightKey");
+            retObjectIconGridHeightKey = classType.Get("IconGridHeightKey");
+            JCObject val = (JCObject)retObjectIconGridHeightKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIconGridHeightKey != null ? retObjectIconGridHeightKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1786,10 +2971,14 @@ public class SystemParameters extends NetObject  {
 
     public static ResourceKey getIconGridWidthKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIconGridWidthKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("IconGridWidthKey");
+            retObjectIconGridWidthKey = classType.Get("IconGridWidthKey");
+            JCObject val = (JCObject)retObjectIconGridWidthKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIconGridWidthKey != null ? retObjectIconGridWidthKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1797,10 +2986,14 @@ public class SystemParameters extends NetObject  {
 
     public static ResourceKey getIconHeightKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIconHeightKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("IconHeightKey");
+            retObjectIconHeightKey = classType.Get("IconHeightKey");
+            JCObject val = (JCObject)retObjectIconHeightKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIconHeightKey != null ? retObjectIconHeightKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1808,10 +3001,14 @@ public class SystemParameters extends NetObject  {
 
     public static ResourceKey getIconHorizontalSpacingKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIconHorizontalSpacingKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("IconHorizontalSpacingKey");
+            retObjectIconHorizontalSpacingKey = classType.Get("IconHorizontalSpacingKey");
+            JCObject val = (JCObject)retObjectIconHorizontalSpacingKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIconHorizontalSpacingKey != null ? retObjectIconHorizontalSpacingKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1819,10 +3016,14 @@ public class SystemParameters extends NetObject  {
 
     public static ResourceKey getIconTitleWrapKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIconTitleWrapKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("IconTitleWrapKey");
+            retObjectIconTitleWrapKey = classType.Get("IconTitleWrapKey");
+            JCObject val = (JCObject)retObjectIconTitleWrapKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIconTitleWrapKey != null ? retObjectIconTitleWrapKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1830,10 +3031,14 @@ public class SystemParameters extends NetObject  {
 
     public static ResourceKey getIconVerticalSpacingKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIconVerticalSpacingKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("IconVerticalSpacingKey");
+            retObjectIconVerticalSpacingKey = classType.Get("IconVerticalSpacingKey");
+            JCObject val = (JCObject)retObjectIconVerticalSpacingKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIconVerticalSpacingKey != null ? retObjectIconVerticalSpacingKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1841,10 +3046,14 @@ public class SystemParameters extends NetObject  {
 
     public static ResourceKey getIconWidthKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIconWidthKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("IconWidthKey");
+            retObjectIconWidthKey = classType.Get("IconWidthKey");
+            JCObject val = (JCObject)retObjectIconWidthKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIconWidthKey != null ? retObjectIconWidthKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1852,10 +3061,14 @@ public class SystemParameters extends NetObject  {
 
     public static ResourceKey getIsImmEnabledKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsImmEnabledKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("IsImmEnabledKey");
+            retObjectIsImmEnabledKey = classType.Get("IsImmEnabledKey");
+            JCObject val = (JCObject)retObjectIsImmEnabledKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIsImmEnabledKey != null ? retObjectIsImmEnabledKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1863,10 +3076,14 @@ public class SystemParameters extends NetObject  {
 
     public static ResourceKey getIsMediaCenterKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsMediaCenterKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("IsMediaCenterKey");
+            retObjectIsMediaCenterKey = classType.Get("IsMediaCenterKey");
+            JCObject val = (JCObject)retObjectIsMediaCenterKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIsMediaCenterKey != null ? retObjectIsMediaCenterKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1874,10 +3091,14 @@ public class SystemParameters extends NetObject  {
 
     public static ResourceKey getIsMenuDropRightAlignedKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsMenuDropRightAlignedKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("IsMenuDropRightAlignedKey");
+            retObjectIsMenuDropRightAlignedKey = classType.Get("IsMenuDropRightAlignedKey");
+            JCObject val = (JCObject)retObjectIsMenuDropRightAlignedKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIsMenuDropRightAlignedKey != null ? retObjectIsMenuDropRightAlignedKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1885,10 +3106,14 @@ public class SystemParameters extends NetObject  {
 
     public static ResourceKey getIsMiddleEastEnabledKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsMiddleEastEnabledKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("IsMiddleEastEnabledKey");
+            retObjectIsMiddleEastEnabledKey = classType.Get("IsMiddleEastEnabledKey");
+            JCObject val = (JCObject)retObjectIsMiddleEastEnabledKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIsMiddleEastEnabledKey != null ? retObjectIsMiddleEastEnabledKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1896,10 +3121,14 @@ public class SystemParameters extends NetObject  {
 
     public static ResourceKey getIsMousePresentKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsMousePresentKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("IsMousePresentKey");
+            retObjectIsMousePresentKey = classType.Get("IsMousePresentKey");
+            JCObject val = (JCObject)retObjectIsMousePresentKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIsMousePresentKey != null ? retObjectIsMousePresentKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1907,10 +3136,14 @@ public class SystemParameters extends NetObject  {
 
     public static ResourceKey getIsMouseWheelPresentKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsMouseWheelPresentKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("IsMouseWheelPresentKey");
+            retObjectIsMouseWheelPresentKey = classType.Get("IsMouseWheelPresentKey");
+            JCObject val = (JCObject)retObjectIsMouseWheelPresentKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIsMouseWheelPresentKey != null ? retObjectIsMouseWheelPresentKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1918,10 +3151,14 @@ public class SystemParameters extends NetObject  {
 
     public static ResourceKey getIsPenWindowsKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsPenWindowsKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("IsPenWindowsKey");
+            retObjectIsPenWindowsKey = classType.Get("IsPenWindowsKey");
+            JCObject val = (JCObject)retObjectIsPenWindowsKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIsPenWindowsKey != null ? retObjectIsPenWindowsKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1929,10 +3166,14 @@ public class SystemParameters extends NetObject  {
 
     public static ResourceKey getIsRemotelyControlledKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsRemotelyControlledKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("IsRemotelyControlledKey");
+            retObjectIsRemotelyControlledKey = classType.Get("IsRemotelyControlledKey");
+            JCObject val = (JCObject)retObjectIsRemotelyControlledKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIsRemotelyControlledKey != null ? retObjectIsRemotelyControlledKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1940,10 +3181,14 @@ public class SystemParameters extends NetObject  {
 
     public static ResourceKey getIsRemoteSessionKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsRemoteSessionKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("IsRemoteSessionKey");
+            retObjectIsRemoteSessionKey = classType.Get("IsRemoteSessionKey");
+            JCObject val = (JCObject)retObjectIsRemoteSessionKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIsRemoteSessionKey != null ? retObjectIsRemoteSessionKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1951,10 +3196,14 @@ public class SystemParameters extends NetObject  {
 
     public static ResourceKey getIsSlowMachineKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsSlowMachineKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("IsSlowMachineKey");
+            retObjectIsSlowMachineKey = classType.Get("IsSlowMachineKey");
+            JCObject val = (JCObject)retObjectIsSlowMachineKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIsSlowMachineKey != null ? retObjectIsSlowMachineKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1962,10 +3211,14 @@ public class SystemParameters extends NetObject  {
 
     public static ResourceKey getIsTabletPCKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsTabletPCKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("IsTabletPCKey");
+            retObjectIsTabletPCKey = classType.Get("IsTabletPCKey");
+            JCObject val = (JCObject)retObjectIsTabletPCKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIsTabletPCKey != null ? retObjectIsTabletPCKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1973,10 +3226,14 @@ public class SystemParameters extends NetObject  {
 
     public static ResourceKey getKanjiWindowHeightKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectKanjiWindowHeightKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("KanjiWindowHeightKey");
+            retObjectKanjiWindowHeightKey = classType.Get("KanjiWindowHeightKey");
+            JCObject val = (JCObject)retObjectKanjiWindowHeightKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectKanjiWindowHeightKey != null ? retObjectKanjiWindowHeightKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1984,10 +3241,14 @@ public class SystemParameters extends NetObject  {
 
     public static ResourceKey getKeyboardCuesKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectKeyboardCuesKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("KeyboardCuesKey");
+            retObjectKeyboardCuesKey = classType.Get("KeyboardCuesKey");
+            JCObject val = (JCObject)retObjectKeyboardCuesKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectKeyboardCuesKey != null ? retObjectKeyboardCuesKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1995,10 +3256,14 @@ public class SystemParameters extends NetObject  {
 
     public static ResourceKey getKeyboardDelayKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectKeyboardDelayKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("KeyboardDelayKey");
+            retObjectKeyboardDelayKey = classType.Get("KeyboardDelayKey");
+            JCObject val = (JCObject)retObjectKeyboardDelayKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectKeyboardDelayKey != null ? retObjectKeyboardDelayKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2006,10 +3271,14 @@ public class SystemParameters extends NetObject  {
 
     public static ResourceKey getKeyboardPreferenceKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectKeyboardPreferenceKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("KeyboardPreferenceKey");
+            retObjectKeyboardPreferenceKey = classType.Get("KeyboardPreferenceKey");
+            JCObject val = (JCObject)retObjectKeyboardPreferenceKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectKeyboardPreferenceKey != null ? retObjectKeyboardPreferenceKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2017,10 +3286,14 @@ public class SystemParameters extends NetObject  {
 
     public static ResourceKey getKeyboardSpeedKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectKeyboardSpeedKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("KeyboardSpeedKey");
+            retObjectKeyboardSpeedKey = classType.Get("KeyboardSpeedKey");
+            JCObject val = (JCObject)retObjectKeyboardSpeedKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectKeyboardSpeedKey != null ? retObjectKeyboardSpeedKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2028,10 +3301,14 @@ public class SystemParameters extends NetObject  {
 
     public static ResourceKey getListBoxSmoothScrollingKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectListBoxSmoothScrollingKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("ListBoxSmoothScrollingKey");
+            retObjectListBoxSmoothScrollingKey = classType.Get("ListBoxSmoothScrollingKey");
+            JCObject val = (JCObject)retObjectListBoxSmoothScrollingKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectListBoxSmoothScrollingKey != null ? retObjectListBoxSmoothScrollingKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2039,10 +3316,14 @@ public class SystemParameters extends NetObject  {
 
     public static ResourceKey getMaximizedPrimaryScreenHeightKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMaximizedPrimaryScreenHeightKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("MaximizedPrimaryScreenHeightKey");
+            retObjectMaximizedPrimaryScreenHeightKey = classType.Get("MaximizedPrimaryScreenHeightKey");
+            JCObject val = (JCObject)retObjectMaximizedPrimaryScreenHeightKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMaximizedPrimaryScreenHeightKey != null ? retObjectMaximizedPrimaryScreenHeightKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2050,10 +3331,14 @@ public class SystemParameters extends NetObject  {
 
     public static ResourceKey getMaximizedPrimaryScreenWidthKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMaximizedPrimaryScreenWidthKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("MaximizedPrimaryScreenWidthKey");
+            retObjectMaximizedPrimaryScreenWidthKey = classType.Get("MaximizedPrimaryScreenWidthKey");
+            JCObject val = (JCObject)retObjectMaximizedPrimaryScreenWidthKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMaximizedPrimaryScreenWidthKey != null ? retObjectMaximizedPrimaryScreenWidthKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2061,10 +3346,14 @@ public class SystemParameters extends NetObject  {
 
     public static ResourceKey getMaximumWindowTrackHeightKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMaximumWindowTrackHeightKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("MaximumWindowTrackHeightKey");
+            retObjectMaximumWindowTrackHeightKey = classType.Get("MaximumWindowTrackHeightKey");
+            JCObject val = (JCObject)retObjectMaximumWindowTrackHeightKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMaximumWindowTrackHeightKey != null ? retObjectMaximumWindowTrackHeightKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2072,10 +3361,14 @@ public class SystemParameters extends NetObject  {
 
     public static ResourceKey getMaximumWindowTrackWidthKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMaximumWindowTrackWidthKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("MaximumWindowTrackWidthKey");
+            retObjectMaximumWindowTrackWidthKey = classType.Get("MaximumWindowTrackWidthKey");
+            JCObject val = (JCObject)retObjectMaximumWindowTrackWidthKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMaximumWindowTrackWidthKey != null ? retObjectMaximumWindowTrackWidthKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2083,10 +3376,14 @@ public class SystemParameters extends NetObject  {
 
     public static ResourceKey getMenuAnimationKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMenuAnimationKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("MenuAnimationKey");
+            retObjectMenuAnimationKey = classType.Get("MenuAnimationKey");
+            JCObject val = (JCObject)retObjectMenuAnimationKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMenuAnimationKey != null ? retObjectMenuAnimationKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2094,10 +3391,14 @@ public class SystemParameters extends NetObject  {
 
     public static ResourceKey getMenuBarHeightKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMenuBarHeightKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("MenuBarHeightKey");
+            retObjectMenuBarHeightKey = classType.Get("MenuBarHeightKey");
+            JCObject val = (JCObject)retObjectMenuBarHeightKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMenuBarHeightKey != null ? retObjectMenuBarHeightKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2105,10 +3406,14 @@ public class SystemParameters extends NetObject  {
 
     public static ResourceKey getMenuButtonHeightKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMenuButtonHeightKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("MenuButtonHeightKey");
+            retObjectMenuButtonHeightKey = classType.Get("MenuButtonHeightKey");
+            JCObject val = (JCObject)retObjectMenuButtonHeightKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMenuButtonHeightKey != null ? retObjectMenuButtonHeightKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2116,10 +3421,14 @@ public class SystemParameters extends NetObject  {
 
     public static ResourceKey getMenuButtonWidthKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMenuButtonWidthKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("MenuButtonWidthKey");
+            retObjectMenuButtonWidthKey = classType.Get("MenuButtonWidthKey");
+            JCObject val = (JCObject)retObjectMenuButtonWidthKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMenuButtonWidthKey != null ? retObjectMenuButtonWidthKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2127,10 +3436,14 @@ public class SystemParameters extends NetObject  {
 
     public static ResourceKey getMenuCheckmarkHeightKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMenuCheckmarkHeightKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("MenuCheckmarkHeightKey");
+            retObjectMenuCheckmarkHeightKey = classType.Get("MenuCheckmarkHeightKey");
+            JCObject val = (JCObject)retObjectMenuCheckmarkHeightKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMenuCheckmarkHeightKey != null ? retObjectMenuCheckmarkHeightKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2138,10 +3451,14 @@ public class SystemParameters extends NetObject  {
 
     public static ResourceKey getMenuCheckmarkWidthKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMenuCheckmarkWidthKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("MenuCheckmarkWidthKey");
+            retObjectMenuCheckmarkWidthKey = classType.Get("MenuCheckmarkWidthKey");
+            JCObject val = (JCObject)retObjectMenuCheckmarkWidthKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMenuCheckmarkWidthKey != null ? retObjectMenuCheckmarkWidthKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2149,10 +3466,14 @@ public class SystemParameters extends NetObject  {
 
     public static ResourceKey getMenuDropAlignmentKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMenuDropAlignmentKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("MenuDropAlignmentKey");
+            retObjectMenuDropAlignmentKey = classType.Get("MenuDropAlignmentKey");
+            JCObject val = (JCObject)retObjectMenuDropAlignmentKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMenuDropAlignmentKey != null ? retObjectMenuDropAlignmentKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2160,10 +3481,14 @@ public class SystemParameters extends NetObject  {
 
     public static ResourceKey getMenuFadeKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMenuFadeKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("MenuFadeKey");
+            retObjectMenuFadeKey = classType.Get("MenuFadeKey");
+            JCObject val = (JCObject)retObjectMenuFadeKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMenuFadeKey != null ? retObjectMenuFadeKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2171,10 +3496,14 @@ public class SystemParameters extends NetObject  {
 
     public static ResourceKey getMenuHeightKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMenuHeightKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("MenuHeightKey");
+            retObjectMenuHeightKey = classType.Get("MenuHeightKey");
+            JCObject val = (JCObject)retObjectMenuHeightKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMenuHeightKey != null ? retObjectMenuHeightKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2182,10 +3511,14 @@ public class SystemParameters extends NetObject  {
 
     public static ResourceKey getMenuPopupAnimationKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMenuPopupAnimationKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("MenuPopupAnimationKey");
+            retObjectMenuPopupAnimationKey = classType.Get("MenuPopupAnimationKey");
+            JCObject val = (JCObject)retObjectMenuPopupAnimationKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMenuPopupAnimationKey != null ? retObjectMenuPopupAnimationKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2193,10 +3526,14 @@ public class SystemParameters extends NetObject  {
 
     public static ResourceKey getMenuShowDelayKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMenuShowDelayKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("MenuShowDelayKey");
+            retObjectMenuShowDelayKey = classType.Get("MenuShowDelayKey");
+            JCObject val = (JCObject)retObjectMenuShowDelayKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMenuShowDelayKey != null ? retObjectMenuShowDelayKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2204,10 +3541,14 @@ public class SystemParameters extends NetObject  {
 
     public static ResourceKey getMenuWidthKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMenuWidthKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("MenuWidthKey");
+            retObjectMenuWidthKey = classType.Get("MenuWidthKey");
+            JCObject val = (JCObject)retObjectMenuWidthKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMenuWidthKey != null ? retObjectMenuWidthKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2215,10 +3556,14 @@ public class SystemParameters extends NetObject  {
 
     public static ResourceKey getMinimizeAnimationKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMinimizeAnimationKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("MinimizeAnimationKey");
+            retObjectMinimizeAnimationKey = classType.Get("MinimizeAnimationKey");
+            JCObject val = (JCObject)retObjectMinimizeAnimationKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMinimizeAnimationKey != null ? retObjectMinimizeAnimationKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2226,10 +3571,14 @@ public class SystemParameters extends NetObject  {
 
     public static ResourceKey getMinimizedGridHeightKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMinimizedGridHeightKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("MinimizedGridHeightKey");
+            retObjectMinimizedGridHeightKey = classType.Get("MinimizedGridHeightKey");
+            JCObject val = (JCObject)retObjectMinimizedGridHeightKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMinimizedGridHeightKey != null ? retObjectMinimizedGridHeightKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2237,10 +3586,14 @@ public class SystemParameters extends NetObject  {
 
     public static ResourceKey getMinimizedGridWidthKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMinimizedGridWidthKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("MinimizedGridWidthKey");
+            retObjectMinimizedGridWidthKey = classType.Get("MinimizedGridWidthKey");
+            JCObject val = (JCObject)retObjectMinimizedGridWidthKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMinimizedGridWidthKey != null ? retObjectMinimizedGridWidthKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2248,10 +3601,14 @@ public class SystemParameters extends NetObject  {
 
     public static ResourceKey getMinimizedWindowHeightKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMinimizedWindowHeightKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("MinimizedWindowHeightKey");
+            retObjectMinimizedWindowHeightKey = classType.Get("MinimizedWindowHeightKey");
+            JCObject val = (JCObject)retObjectMinimizedWindowHeightKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMinimizedWindowHeightKey != null ? retObjectMinimizedWindowHeightKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2259,10 +3616,14 @@ public class SystemParameters extends NetObject  {
 
     public static ResourceKey getMinimizedWindowWidthKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMinimizedWindowWidthKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("MinimizedWindowWidthKey");
+            retObjectMinimizedWindowWidthKey = classType.Get("MinimizedWindowWidthKey");
+            JCObject val = (JCObject)retObjectMinimizedWindowWidthKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMinimizedWindowWidthKey != null ? retObjectMinimizedWindowWidthKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2270,10 +3631,14 @@ public class SystemParameters extends NetObject  {
 
     public static ResourceKey getMinimumWindowHeightKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMinimumWindowHeightKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("MinimumWindowHeightKey");
+            retObjectMinimumWindowHeightKey = classType.Get("MinimumWindowHeightKey");
+            JCObject val = (JCObject)retObjectMinimumWindowHeightKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMinimumWindowHeightKey != null ? retObjectMinimumWindowHeightKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2281,10 +3646,14 @@ public class SystemParameters extends NetObject  {
 
     public static ResourceKey getMinimumWindowTrackHeightKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMinimumWindowTrackHeightKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("MinimumWindowTrackHeightKey");
+            retObjectMinimumWindowTrackHeightKey = classType.Get("MinimumWindowTrackHeightKey");
+            JCObject val = (JCObject)retObjectMinimumWindowTrackHeightKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMinimumWindowTrackHeightKey != null ? retObjectMinimumWindowTrackHeightKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2292,10 +3661,14 @@ public class SystemParameters extends NetObject  {
 
     public static ResourceKey getMinimumWindowTrackWidthKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMinimumWindowTrackWidthKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("MinimumWindowTrackWidthKey");
+            retObjectMinimumWindowTrackWidthKey = classType.Get("MinimumWindowTrackWidthKey");
+            JCObject val = (JCObject)retObjectMinimumWindowTrackWidthKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMinimumWindowTrackWidthKey != null ? retObjectMinimumWindowTrackWidthKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2303,10 +3676,14 @@ public class SystemParameters extends NetObject  {
 
     public static ResourceKey getMinimumWindowWidthKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMinimumWindowWidthKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("MinimumWindowWidthKey");
+            retObjectMinimumWindowWidthKey = classType.Get("MinimumWindowWidthKey");
+            JCObject val = (JCObject)retObjectMinimumWindowWidthKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMinimumWindowWidthKey != null ? retObjectMinimumWindowWidthKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2314,10 +3691,14 @@ public class SystemParameters extends NetObject  {
 
     public static ResourceKey getMouseHoverHeightKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMouseHoverHeightKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("MouseHoverHeightKey");
+            retObjectMouseHoverHeightKey = classType.Get("MouseHoverHeightKey");
+            JCObject val = (JCObject)retObjectMouseHoverHeightKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMouseHoverHeightKey != null ? retObjectMouseHoverHeightKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2325,10 +3706,14 @@ public class SystemParameters extends NetObject  {
 
     public static ResourceKey getMouseHoverTimeKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMouseHoverTimeKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("MouseHoverTimeKey");
+            retObjectMouseHoverTimeKey = classType.Get("MouseHoverTimeKey");
+            JCObject val = (JCObject)retObjectMouseHoverTimeKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMouseHoverTimeKey != null ? retObjectMouseHoverTimeKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2336,10 +3721,14 @@ public class SystemParameters extends NetObject  {
 
     public static ResourceKey getMouseHoverWidthKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMouseHoverWidthKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("MouseHoverWidthKey");
+            retObjectMouseHoverWidthKey = classType.Get("MouseHoverWidthKey");
+            JCObject val = (JCObject)retObjectMouseHoverWidthKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMouseHoverWidthKey != null ? retObjectMouseHoverWidthKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2347,10 +3736,14 @@ public class SystemParameters extends NetObject  {
 
     public static ResourceKey getNavigationChromeDownLevelStyleKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectNavigationChromeDownLevelStyleKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("NavigationChromeDownLevelStyleKey");
+            retObjectNavigationChromeDownLevelStyleKey = classType.Get("NavigationChromeDownLevelStyleKey");
+            JCObject val = (JCObject)retObjectNavigationChromeDownLevelStyleKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNavigationChromeDownLevelStyleKey != null ? retObjectNavigationChromeDownLevelStyleKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2358,10 +3751,14 @@ public class SystemParameters extends NetObject  {
 
     public static ResourceKey getNavigationChromeStyleKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectNavigationChromeStyleKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("NavigationChromeStyleKey");
+            retObjectNavigationChromeStyleKey = classType.Get("NavigationChromeStyleKey");
+            JCObject val = (JCObject)retObjectNavigationChromeStyleKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNavigationChromeStyleKey != null ? retObjectNavigationChromeStyleKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2369,10 +3766,14 @@ public class SystemParameters extends NetObject  {
 
     public static ResourceKey getPowerLineStatusKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectPowerLineStatusKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("PowerLineStatusKey");
+            retObjectPowerLineStatusKey = classType.Get("PowerLineStatusKey");
+            JCObject val = (JCObject)retObjectPowerLineStatusKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPowerLineStatusKey != null ? retObjectPowerLineStatusKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2380,10 +3781,14 @@ public class SystemParameters extends NetObject  {
 
     public static ResourceKey getPrimaryScreenHeightKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectPrimaryScreenHeightKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("PrimaryScreenHeightKey");
+            retObjectPrimaryScreenHeightKey = classType.Get("PrimaryScreenHeightKey");
+            JCObject val = (JCObject)retObjectPrimaryScreenHeightKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPrimaryScreenHeightKey != null ? retObjectPrimaryScreenHeightKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2391,10 +3796,14 @@ public class SystemParameters extends NetObject  {
 
     public static ResourceKey getPrimaryScreenWidthKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectPrimaryScreenWidthKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("PrimaryScreenWidthKey");
+            retObjectPrimaryScreenWidthKey = classType.Get("PrimaryScreenWidthKey");
+            JCObject val = (JCObject)retObjectPrimaryScreenWidthKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPrimaryScreenWidthKey != null ? retObjectPrimaryScreenWidthKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2402,10 +3811,14 @@ public class SystemParameters extends NetObject  {
 
     public static ResourceKey getResizeFrameHorizontalBorderHeightKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectResizeFrameHorizontalBorderHeightKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("ResizeFrameHorizontalBorderHeightKey");
+            retObjectResizeFrameHorizontalBorderHeightKey = classType.Get("ResizeFrameHorizontalBorderHeightKey");
+            JCObject val = (JCObject)retObjectResizeFrameHorizontalBorderHeightKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectResizeFrameHorizontalBorderHeightKey != null ? retObjectResizeFrameHorizontalBorderHeightKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2413,10 +3826,14 @@ public class SystemParameters extends NetObject  {
 
     public static ResourceKey getResizeFrameVerticalBorderWidthKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectResizeFrameVerticalBorderWidthKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("ResizeFrameVerticalBorderWidthKey");
+            retObjectResizeFrameVerticalBorderWidthKey = classType.Get("ResizeFrameVerticalBorderWidthKey");
+            JCObject val = (JCObject)retObjectResizeFrameVerticalBorderWidthKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectResizeFrameVerticalBorderWidthKey != null ? retObjectResizeFrameVerticalBorderWidthKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2424,10 +3841,14 @@ public class SystemParameters extends NetObject  {
 
     public static ResourceKey getScrollHeightKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectScrollHeightKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("ScrollHeightKey");
+            retObjectScrollHeightKey = classType.Get("ScrollHeightKey");
+            JCObject val = (JCObject)retObjectScrollHeightKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectScrollHeightKey != null ? retObjectScrollHeightKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2435,10 +3856,14 @@ public class SystemParameters extends NetObject  {
 
     public static ResourceKey getScrollWidthKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectScrollWidthKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("ScrollWidthKey");
+            retObjectScrollWidthKey = classType.Get("ScrollWidthKey");
+            JCObject val = (JCObject)retObjectScrollWidthKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectScrollWidthKey != null ? retObjectScrollWidthKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2446,10 +3871,14 @@ public class SystemParameters extends NetObject  {
 
     public static ResourceKey getSelectionFadeKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSelectionFadeKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("SelectionFadeKey");
+            retObjectSelectionFadeKey = classType.Get("SelectionFadeKey");
+            JCObject val = (JCObject)retObjectSelectionFadeKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelectionFadeKey != null ? retObjectSelectionFadeKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2457,10 +3886,14 @@ public class SystemParameters extends NetObject  {
 
     public static ResourceKey getShowSoundsKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectShowSoundsKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("ShowSoundsKey");
+            retObjectShowSoundsKey = classType.Get("ShowSoundsKey");
+            JCObject val = (JCObject)retObjectShowSoundsKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectShowSoundsKey != null ? retObjectShowSoundsKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2468,10 +3901,14 @@ public class SystemParameters extends NetObject  {
 
     public static ResourceKey getSmallCaptionHeightKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSmallCaptionHeightKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("SmallCaptionHeightKey");
+            retObjectSmallCaptionHeightKey = classType.Get("SmallCaptionHeightKey");
+            JCObject val = (JCObject)retObjectSmallCaptionHeightKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSmallCaptionHeightKey != null ? retObjectSmallCaptionHeightKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2479,10 +3916,14 @@ public class SystemParameters extends NetObject  {
 
     public static ResourceKey getSmallCaptionWidthKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSmallCaptionWidthKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("SmallCaptionWidthKey");
+            retObjectSmallCaptionWidthKey = classType.Get("SmallCaptionWidthKey");
+            JCObject val = (JCObject)retObjectSmallCaptionWidthKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSmallCaptionWidthKey != null ? retObjectSmallCaptionWidthKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2490,10 +3931,14 @@ public class SystemParameters extends NetObject  {
 
     public static ResourceKey getSmallIconHeightKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSmallIconHeightKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("SmallIconHeightKey");
+            retObjectSmallIconHeightKey = classType.Get("SmallIconHeightKey");
+            JCObject val = (JCObject)retObjectSmallIconHeightKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSmallIconHeightKey != null ? retObjectSmallIconHeightKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2501,10 +3946,14 @@ public class SystemParameters extends NetObject  {
 
     public static ResourceKey getSmallIconWidthKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSmallIconWidthKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("SmallIconWidthKey");
+            retObjectSmallIconWidthKey = classType.Get("SmallIconWidthKey");
+            JCObject val = (JCObject)retObjectSmallIconWidthKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSmallIconWidthKey != null ? retObjectSmallIconWidthKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2512,10 +3961,14 @@ public class SystemParameters extends NetObject  {
 
     public static ResourceKey getSmallWindowCaptionButtonHeightKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSmallWindowCaptionButtonHeightKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("SmallWindowCaptionButtonHeightKey");
+            retObjectSmallWindowCaptionButtonHeightKey = classType.Get("SmallWindowCaptionButtonHeightKey");
+            JCObject val = (JCObject)retObjectSmallWindowCaptionButtonHeightKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSmallWindowCaptionButtonHeightKey != null ? retObjectSmallWindowCaptionButtonHeightKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2523,10 +3976,14 @@ public class SystemParameters extends NetObject  {
 
     public static ResourceKey getSmallWindowCaptionButtonWidthKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSmallWindowCaptionButtonWidthKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("SmallWindowCaptionButtonWidthKey");
+            retObjectSmallWindowCaptionButtonWidthKey = classType.Get("SmallWindowCaptionButtonWidthKey");
+            JCObject val = (JCObject)retObjectSmallWindowCaptionButtonWidthKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSmallWindowCaptionButtonWidthKey != null ? retObjectSmallWindowCaptionButtonWidthKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2534,10 +3991,14 @@ public class SystemParameters extends NetObject  {
 
     public static ResourceKey getSnapToDefaultButtonKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSnapToDefaultButtonKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("SnapToDefaultButtonKey");
+            retObjectSnapToDefaultButtonKey = classType.Get("SnapToDefaultButtonKey");
+            JCObject val = (JCObject)retObjectSnapToDefaultButtonKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSnapToDefaultButtonKey != null ? retObjectSnapToDefaultButtonKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2545,10 +4006,14 @@ public class SystemParameters extends NetObject  {
 
     public static ResourceKey getStylusHotTrackingKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectStylusHotTrackingKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("StylusHotTrackingKey");
+            retObjectStylusHotTrackingKey = classType.Get("StylusHotTrackingKey");
+            JCObject val = (JCObject)retObjectStylusHotTrackingKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStylusHotTrackingKey != null ? retObjectStylusHotTrackingKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2556,10 +4021,14 @@ public class SystemParameters extends NetObject  {
 
     public static ResourceKey getSwapButtonsKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSwapButtonsKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("SwapButtonsKey");
+            retObjectSwapButtonsKey = classType.Get("SwapButtonsKey");
+            JCObject val = (JCObject)retObjectSwapButtonsKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSwapButtonsKey != null ? retObjectSwapButtonsKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2567,10 +4036,14 @@ public class SystemParameters extends NetObject  {
 
     public static ResourceKey getThickHorizontalBorderHeightKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectThickHorizontalBorderHeightKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("ThickHorizontalBorderHeightKey");
+            retObjectThickHorizontalBorderHeightKey = classType.Get("ThickHorizontalBorderHeightKey");
+            JCObject val = (JCObject)retObjectThickHorizontalBorderHeightKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectThickHorizontalBorderHeightKey != null ? retObjectThickHorizontalBorderHeightKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2578,10 +4051,14 @@ public class SystemParameters extends NetObject  {
 
     public static ResourceKey getThickVerticalBorderWidthKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectThickVerticalBorderWidthKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("ThickVerticalBorderWidthKey");
+            retObjectThickVerticalBorderWidthKey = classType.Get("ThickVerticalBorderWidthKey");
+            JCObject val = (JCObject)retObjectThickVerticalBorderWidthKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectThickVerticalBorderWidthKey != null ? retObjectThickVerticalBorderWidthKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2589,10 +4066,14 @@ public class SystemParameters extends NetObject  {
 
     public static ResourceKey getThinHorizontalBorderHeightKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectThinHorizontalBorderHeightKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("ThinHorizontalBorderHeightKey");
+            retObjectThinHorizontalBorderHeightKey = classType.Get("ThinHorizontalBorderHeightKey");
+            JCObject val = (JCObject)retObjectThinHorizontalBorderHeightKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectThinHorizontalBorderHeightKey != null ? retObjectThinHorizontalBorderHeightKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2600,10 +4081,14 @@ public class SystemParameters extends NetObject  {
 
     public static ResourceKey getThinVerticalBorderWidthKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectThinVerticalBorderWidthKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("ThinVerticalBorderWidthKey");
+            retObjectThinVerticalBorderWidthKey = classType.Get("ThinVerticalBorderWidthKey");
+            JCObject val = (JCObject)retObjectThinVerticalBorderWidthKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectThinVerticalBorderWidthKey != null ? retObjectThinVerticalBorderWidthKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2611,10 +4096,14 @@ public class SystemParameters extends NetObject  {
 
     public static ResourceKey getToolTipAnimationKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectToolTipAnimationKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("ToolTipAnimationKey");
+            retObjectToolTipAnimationKey = classType.Get("ToolTipAnimationKey");
+            JCObject val = (JCObject)retObjectToolTipAnimationKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToolTipAnimationKey != null ? retObjectToolTipAnimationKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2622,10 +4111,14 @@ public class SystemParameters extends NetObject  {
 
     public static ResourceKey getToolTipFadeKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectToolTipFadeKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("ToolTipFadeKey");
+            retObjectToolTipFadeKey = classType.Get("ToolTipFadeKey");
+            JCObject val = (JCObject)retObjectToolTipFadeKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToolTipFadeKey != null ? retObjectToolTipFadeKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2633,10 +4126,14 @@ public class SystemParameters extends NetObject  {
 
     public static ResourceKey getToolTipPopupAnimationKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectToolTipPopupAnimationKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("ToolTipPopupAnimationKey");
+            retObjectToolTipPopupAnimationKey = classType.Get("ToolTipPopupAnimationKey");
+            JCObject val = (JCObject)retObjectToolTipPopupAnimationKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToolTipPopupAnimationKey != null ? retObjectToolTipPopupAnimationKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2644,10 +4141,14 @@ public class SystemParameters extends NetObject  {
 
     public static ResourceKey getUIEffectsKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectUIEffectsKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("UIEffectsKey");
+            retObjectUIEffectsKey = classType.Get("UIEffectsKey");
+            JCObject val = (JCObject)retObjectUIEffectsKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUIEffectsKey != null ? retObjectUIEffectsKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2655,10 +4156,14 @@ public class SystemParameters extends NetObject  {
 
     public static ResourceKey getVerticalScrollBarButtonHeightKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectVerticalScrollBarButtonHeightKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("VerticalScrollBarButtonHeightKey");
+            retObjectVerticalScrollBarButtonHeightKey = classType.Get("VerticalScrollBarButtonHeightKey");
+            JCObject val = (JCObject)retObjectVerticalScrollBarButtonHeightKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVerticalScrollBarButtonHeightKey != null ? retObjectVerticalScrollBarButtonHeightKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2666,10 +4171,14 @@ public class SystemParameters extends NetObject  {
 
     public static ResourceKey getVerticalScrollBarThumbHeightKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectVerticalScrollBarThumbHeightKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("VerticalScrollBarThumbHeightKey");
+            retObjectVerticalScrollBarThumbHeightKey = classType.Get("VerticalScrollBarThumbHeightKey");
+            JCObject val = (JCObject)retObjectVerticalScrollBarThumbHeightKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVerticalScrollBarThumbHeightKey != null ? retObjectVerticalScrollBarThumbHeightKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2677,10 +4186,14 @@ public class SystemParameters extends NetObject  {
 
     public static ResourceKey getVerticalScrollBarWidthKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectVerticalScrollBarWidthKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("VerticalScrollBarWidthKey");
+            retObjectVerticalScrollBarWidthKey = classType.Get("VerticalScrollBarWidthKey");
+            JCObject val = (JCObject)retObjectVerticalScrollBarWidthKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVerticalScrollBarWidthKey != null ? retObjectVerticalScrollBarWidthKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2688,10 +4201,14 @@ public class SystemParameters extends NetObject  {
 
     public static ResourceKey getVirtualScreenHeightKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectVirtualScreenHeightKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("VirtualScreenHeightKey");
+            retObjectVirtualScreenHeightKey = classType.Get("VirtualScreenHeightKey");
+            JCObject val = (JCObject)retObjectVirtualScreenHeightKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVirtualScreenHeightKey != null ? retObjectVirtualScreenHeightKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2699,10 +4216,14 @@ public class SystemParameters extends NetObject  {
 
     public static ResourceKey getVirtualScreenLeftKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectVirtualScreenLeftKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("VirtualScreenLeftKey");
+            retObjectVirtualScreenLeftKey = classType.Get("VirtualScreenLeftKey");
+            JCObject val = (JCObject)retObjectVirtualScreenLeftKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVirtualScreenLeftKey != null ? retObjectVirtualScreenLeftKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2710,10 +4231,14 @@ public class SystemParameters extends NetObject  {
 
     public static ResourceKey getVirtualScreenTopKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectVirtualScreenTopKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("VirtualScreenTopKey");
+            retObjectVirtualScreenTopKey = classType.Get("VirtualScreenTopKey");
+            JCObject val = (JCObject)retObjectVirtualScreenTopKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVirtualScreenTopKey != null ? retObjectVirtualScreenTopKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2721,10 +4246,14 @@ public class SystemParameters extends NetObject  {
 
     public static ResourceKey getVirtualScreenWidthKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectVirtualScreenWidthKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("VirtualScreenWidthKey");
+            retObjectVirtualScreenWidthKey = classType.Get("VirtualScreenWidthKey");
+            JCObject val = (JCObject)retObjectVirtualScreenWidthKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVirtualScreenWidthKey != null ? retObjectVirtualScreenWidthKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2732,10 +4261,14 @@ public class SystemParameters extends NetObject  {
 
     public static ResourceKey getWheelScrollLinesKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectWheelScrollLinesKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("WheelScrollLinesKey");
+            retObjectWheelScrollLinesKey = classType.Get("WheelScrollLinesKey");
+            JCObject val = (JCObject)retObjectWheelScrollLinesKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWheelScrollLinesKey != null ? retObjectWheelScrollLinesKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2743,10 +4276,14 @@ public class SystemParameters extends NetObject  {
 
     public static ResourceKey getWindowCaptionButtonHeightKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectWindowCaptionButtonHeightKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("WindowCaptionButtonHeightKey");
+            retObjectWindowCaptionButtonHeightKey = classType.Get("WindowCaptionButtonHeightKey");
+            JCObject val = (JCObject)retObjectWindowCaptionButtonHeightKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWindowCaptionButtonHeightKey != null ? retObjectWindowCaptionButtonHeightKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2754,10 +4291,14 @@ public class SystemParameters extends NetObject  {
 
     public static ResourceKey getWindowCaptionButtonWidthKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectWindowCaptionButtonWidthKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("WindowCaptionButtonWidthKey");
+            retObjectWindowCaptionButtonWidthKey = classType.Get("WindowCaptionButtonWidthKey");
+            JCObject val = (JCObject)retObjectWindowCaptionButtonWidthKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWindowCaptionButtonWidthKey != null ? retObjectWindowCaptionButtonWidthKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2765,10 +4306,14 @@ public class SystemParameters extends NetObject  {
 
     public static ResourceKey getWindowCaptionHeightKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectWindowCaptionHeightKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("WindowCaptionHeightKey");
+            retObjectWindowCaptionHeightKey = classType.Get("WindowCaptionHeightKey");
+            JCObject val = (JCObject)retObjectWindowCaptionHeightKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWindowCaptionHeightKey != null ? retObjectWindowCaptionHeightKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2776,10 +4321,14 @@ public class SystemParameters extends NetObject  {
 
     public static ResourceKey getWorkAreaKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectWorkAreaKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("WorkAreaKey");
+            retObjectWorkAreaKey = classType.Get("WorkAreaKey");
+            JCObject val = (JCObject)retObjectWorkAreaKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWorkAreaKey != null ? retObjectWorkAreaKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2787,10 +4336,14 @@ public class SystemParameters extends NetObject  {
 
     public static Thickness getWindowNonClientFrameThickness() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectWindowNonClientFrameThickness = null;
         try {
-            JCObject val = (JCObject)classType.Get("WindowNonClientFrameThickness");
+            retObjectWindowNonClientFrameThickness = classType.Get("WindowNonClientFrameThickness");
+            JCObject val = (JCObject)retObjectWindowNonClientFrameThickness;
             return new Thickness(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWindowNonClientFrameThickness != null ? retObjectWindowNonClientFrameThickness.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2798,10 +4351,14 @@ public class SystemParameters extends NetObject  {
 
     public static Thickness getWindowResizeBorderThickness() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectWindowResizeBorderThickness = null;
         try {
-            JCObject val = (JCObject)classType.Get("WindowResizeBorderThickness");
+            retObjectWindowResizeBorderThickness = classType.Get("WindowResizeBorderThickness");
+            JCObject val = (JCObject)retObjectWindowResizeBorderThickness;
             return new Thickness(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWindowResizeBorderThickness != null ? retObjectWindowResizeBorderThickness.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

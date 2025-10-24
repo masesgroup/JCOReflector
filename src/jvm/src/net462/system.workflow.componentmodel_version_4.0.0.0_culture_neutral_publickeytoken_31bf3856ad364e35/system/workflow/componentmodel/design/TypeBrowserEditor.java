@@ -167,10 +167,14 @@ public class TypeBrowserEditor extends UITypeEditor  {
     
     public UITypeEditorEditStyle GetEditStyle(ITypeDescriptorContext typeDescriptorContext) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetEditStyle = null;
         try {
-            JCObject objGetEditStyle = (JCObject)classInstance.Invoke("GetEditStyle", typeDescriptorContext == null ? null : typeDescriptorContext.getJCOInstance());
+            retObjectGetEditStyle = classInstance.Invoke("GetEditStyle", typeDescriptorContext == null ? null : typeDescriptorContext.getJCOInstance());
+            JCObject objGetEditStyle = (JCObject)retObjectGetEditStyle;
             return new UITypeEditorEditStyle(objGetEditStyle);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetEditStyle != null ? retObjectGetEditStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,10 +182,14 @@ public class TypeBrowserEditor extends UITypeEditor  {
 
     public NetObject EditValue(ITypeDescriptorContext typeDescriptorContext, IServiceProvider serviceProvider, NetObject value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.security.SecurityException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.NotSupportedException, system.MissingMethodException, system.NullReferenceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.componentmodel.Win32Exception, system.componentmodel.InvalidEnumArgumentException, system.TypeLoadException, system.InvalidCastException, system.io.IOException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.UnauthorizedAccessException, system.AccessViolationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEditValue = null;
         try {
-            JCObject objEditValue = (JCObject)classInstance.Invoke("EditValue", typeDescriptorContext == null ? null : typeDescriptorContext.getJCOInstance(), serviceProvider == null ? null : serviceProvider.getJCOInstance(), value == null ? null : value.getJCOInstance());
+            retObjectEditValue = classInstance.Invoke("EditValue", typeDescriptorContext == null ? null : typeDescriptorContext.getJCOInstance(), serviceProvider == null ? null : serviceProvider.getJCOInstance(), value == null ? null : value.getJCOInstance());
+            JCObject objEditValue = (JCObject)retObjectEditValue;
             return new NetObject(objEditValue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEditValue != null ? retObjectEditValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

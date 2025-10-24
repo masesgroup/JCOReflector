@@ -142,7 +142,7 @@ public class ISafeSerializationDataImplementation extends NetObject implements I
     
     public void CompleteDeserialization(NetObject deserialized) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CompleteDeserialization", deserialized == null ? null : deserialized.getJCOInstance());
         } catch (JCNativeException jcne) {

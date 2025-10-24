@@ -164,9 +164,13 @@ public class WriteCodeFragment extends TaskExtension  {
     
     public boolean Execute() throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotImplementedException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.InvalidTimeZoneException, system.OverflowException, system.FormatException, system.OutOfMemoryException, system.NullReferenceException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExecute = null;
         try {
-            return (boolean)classInstance.Invoke("Execute");
+            retObjectExecute = classInstance.Invoke("Execute");
+            return (boolean)retObjectExecute;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectExecute != null ? retObjectExecute.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,10 +182,14 @@ public class WriteCodeFragment extends TaskExtension  {
     
     public ITaskItem getOutputDirectory() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOutputDirectory = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("OutputDirectory");
+            retObjectOutputDirectory = classInstance.Get("OutputDirectory");
+            JCObject val = (JCObject)retObjectOutputDirectory;
             return new ITaskItemImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOutputDirectory != null ? retObjectOutputDirectory.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -189,7 +197,7 @@ public class WriteCodeFragment extends TaskExtension  {
 
     public void setOutputDirectory(ITaskItem OutputDirectory) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("OutputDirectory", OutputDirectory == null ? null : OutputDirectory.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -199,10 +207,14 @@ public class WriteCodeFragment extends TaskExtension  {
 
     public ITaskItem getOutputFile() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOutputFile = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("OutputFile");
+            retObjectOutputFile = classInstance.Get("OutputFile");
+            JCObject val = (JCObject)retObjectOutputFile;
             return new ITaskItemImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOutputFile != null ? retObjectOutputFile.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -210,7 +222,7 @@ public class WriteCodeFragment extends TaskExtension  {
 
     public void setOutputFile(ITaskItem OutputFile) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("OutputFile", OutputFile == null ? null : OutputFile.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -220,16 +232,20 @@ public class WriteCodeFragment extends TaskExtension  {
 
     public final ITaskItem[] getAssemblyAttributes() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAssemblyAttributes = null;
         try {
             ArrayList<ITaskItem> resultingArrayList = new ArrayList<ITaskItem>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("AssemblyAttributes");
+            retObjectAssemblyAttributes = classInstance.Get("AssemblyAttributes");
+            JCObject resultingObjects = (JCObject)retObjectAssemblyAttributes;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ITaskItemImplementation(resultingObject));
             }
             ITaskItem[] resultingArray = new ITaskItem[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAssemblyAttributes != null ? retObjectAssemblyAttributes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -237,7 +253,7 @@ public class WriteCodeFragment extends TaskExtension  {
 
     public void setAssemblyAttributes(ITaskItem[] AssemblyAttributes) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AssemblyAttributes", toObjectFromArray(AssemblyAttributes));
         } catch (JCNativeException jcne) {
@@ -247,9 +263,13 @@ public class WriteCodeFragment extends TaskExtension  {
 
     public java.lang.String getLanguage() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLanguage = null;
         try {
-            return (java.lang.String)classInstance.Get("Language");
+            retObjectLanguage = classInstance.Get("Language");
+            return (java.lang.String)retObjectLanguage;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectLanguage != null ? retObjectLanguage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -257,7 +277,7 @@ public class WriteCodeFragment extends TaskExtension  {
 
     public void setLanguage(java.lang.String Language) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Language", Language);
         } catch (JCNativeException jcne) {

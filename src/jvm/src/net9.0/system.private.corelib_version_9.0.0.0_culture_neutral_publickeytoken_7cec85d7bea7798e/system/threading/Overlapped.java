@@ -178,9 +178,20 @@ public class Overlapped extends NetObject  {
     
     public int getEventHandle() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEventHandle = null;
         try {
-            return (int)classInstance.Get("EventHandle");
+            retObjectEventHandle = classInstance.Get("EventHandle");
+            return (int)retObjectEventHandle;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectEventHandle_ToString = retObjectEventHandle == null ? "null" : retObjectEventHandle.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectEventHandleNumber = (java.lang.Number)retObjectEventHandle;
+                return retObjectEventHandleNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectEventHandle != null ? retObjectEventHandle.getClass() : "null", retObjectEventHandle_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,7 +199,7 @@ public class Overlapped extends NetObject  {
 
     public void setEventHandle(int EventHandle) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EventHandle", EventHandle);
         } catch (JCNativeException jcne) {
@@ -198,9 +209,20 @@ public class Overlapped extends NetObject  {
 
     public int getOffsetHigh() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOffsetHigh = null;
         try {
-            return (int)classInstance.Get("OffsetHigh");
+            retObjectOffsetHigh = classInstance.Get("OffsetHigh");
+            return (int)retObjectOffsetHigh;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectOffsetHigh_ToString = retObjectOffsetHigh == null ? "null" : retObjectOffsetHigh.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectOffsetHighNumber = (java.lang.Number)retObjectOffsetHigh;
+                return retObjectOffsetHighNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectOffsetHigh != null ? retObjectOffsetHigh.getClass() : "null", retObjectOffsetHigh_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -208,7 +230,7 @@ public class Overlapped extends NetObject  {
 
     public void setOffsetHigh(int OffsetHigh) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("OffsetHigh", OffsetHigh);
         } catch (JCNativeException jcne) {
@@ -218,9 +240,20 @@ public class Overlapped extends NetObject  {
 
     public int getOffsetLow() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOffsetLow = null;
         try {
-            return (int)classInstance.Get("OffsetLow");
+            retObjectOffsetLow = classInstance.Get("OffsetLow");
+            return (int)retObjectOffsetLow;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectOffsetLow_ToString = retObjectOffsetLow == null ? "null" : retObjectOffsetLow.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectOffsetLowNumber = (java.lang.Number)retObjectOffsetLow;
+                return retObjectOffsetLowNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectOffsetLow != null ? retObjectOffsetLow.getClass() : "null", retObjectOffsetLow_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -228,7 +261,7 @@ public class Overlapped extends NetObject  {
 
     public void setOffsetLow(int OffsetLow) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("OffsetLow", OffsetLow);
         } catch (JCNativeException jcne) {
@@ -238,10 +271,14 @@ public class Overlapped extends NetObject  {
 
     public IAsyncResult getAsyncResult() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAsyncResult = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AsyncResult");
+            retObjectAsyncResult = classInstance.Get("AsyncResult");
+            JCObject val = (JCObject)retObjectAsyncResult;
             return new IAsyncResultImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAsyncResult != null ? retObjectAsyncResult.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -249,7 +286,7 @@ public class Overlapped extends NetObject  {
 
     public void setAsyncResult(IAsyncResult AsyncResult) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AsyncResult", AsyncResult == null ? null : AsyncResult.getJCOInstance());
         } catch (JCNativeException jcne) {

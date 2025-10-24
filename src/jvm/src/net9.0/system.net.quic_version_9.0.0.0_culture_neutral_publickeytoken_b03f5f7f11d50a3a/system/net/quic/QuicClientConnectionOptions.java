@@ -169,10 +169,14 @@ public class QuicClientConnectionOptions extends QuicConnectionOptions  {
     
     public EndPoint getRemoteEndPoint() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRemoteEndPoint = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RemoteEndPoint");
+            retObjectRemoteEndPoint = classInstance.Get("RemoteEndPoint");
+            JCObject val = (JCObject)retObjectRemoteEndPoint;
             return new EndPoint(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRemoteEndPoint != null ? retObjectRemoteEndPoint.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,7 +184,7 @@ public class QuicClientConnectionOptions extends QuicConnectionOptions  {
 
     public void setRemoteEndPoint(EndPoint RemoteEndPoint) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RemoteEndPoint", RemoteEndPoint == null ? null : RemoteEndPoint.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -190,10 +194,14 @@ public class QuicClientConnectionOptions extends QuicConnectionOptions  {
 
     public IPEndPoint getLocalEndPoint() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLocalEndPoint = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("LocalEndPoint");
+            retObjectLocalEndPoint = classInstance.Get("LocalEndPoint");
+            JCObject val = (JCObject)retObjectLocalEndPoint;
             return new IPEndPoint(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLocalEndPoint != null ? retObjectLocalEndPoint.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,7 +209,7 @@ public class QuicClientConnectionOptions extends QuicConnectionOptions  {
 
     public void setLocalEndPoint(IPEndPoint LocalEndPoint) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("LocalEndPoint", LocalEndPoint == null ? null : LocalEndPoint.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -211,10 +219,14 @@ public class QuicClientConnectionOptions extends QuicConnectionOptions  {
 
     public SslClientAuthenticationOptions getClientAuthenticationOptions() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClientAuthenticationOptions = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ClientAuthenticationOptions");
+            retObjectClientAuthenticationOptions = classInstance.Get("ClientAuthenticationOptions");
+            JCObject val = (JCObject)retObjectClientAuthenticationOptions;
             return new SslClientAuthenticationOptions(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClientAuthenticationOptions != null ? retObjectClientAuthenticationOptions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -222,7 +234,7 @@ public class QuicClientConnectionOptions extends QuicConnectionOptions  {
 
     public void setClientAuthenticationOptions(SslClientAuthenticationOptions ClientAuthenticationOptions) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ClientAuthenticationOptions", ClientAuthenticationOptions == null ? null : ClientAuthenticationOptions.getJCOInstance());
         } catch (JCNativeException jcne) {

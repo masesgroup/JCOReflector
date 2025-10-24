@@ -162,9 +162,13 @@ public class ResolveKeySource extends TaskExtension  {
     
     public boolean Execute() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.NotSupportedException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.security.SecurityException, system.NotImplementedException, system.security.cryptography.CryptographicException, system.AccessViolationException, system.OutOfMemoryException, system.RankException, system.OverflowException, system.collections.generic.KeyNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExecute = null;
         try {
-            return (boolean)classInstance.Invoke("Execute");
+            retObjectExecute = classInstance.Invoke("Execute");
+            return (boolean)retObjectExecute;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectExecute != null ? retObjectExecute.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,9 +180,13 @@ public class ResolveKeySource extends TaskExtension  {
     
     public boolean getShowImportDialogDespitePreviousFailures() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShowImportDialogDespitePreviousFailures = null;
         try {
-            return (boolean)classInstance.Get("ShowImportDialogDespitePreviousFailures");
+            retObjectShowImportDialogDespitePreviousFailures = classInstance.Get("ShowImportDialogDespitePreviousFailures");
+            return (boolean)retObjectShowImportDialogDespitePreviousFailures;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectShowImportDialogDespitePreviousFailures != null ? retObjectShowImportDialogDespitePreviousFailures.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,7 +194,7 @@ public class ResolveKeySource extends TaskExtension  {
 
     public void setShowImportDialogDespitePreviousFailures(boolean ShowImportDialogDespitePreviousFailures) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ShowImportDialogDespitePreviousFailures", ShowImportDialogDespitePreviousFailures);
         } catch (JCNativeException jcne) {
@@ -196,9 +204,13 @@ public class ResolveKeySource extends TaskExtension  {
 
     public boolean getSuppressAutoClosePasswordPrompt() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSuppressAutoClosePasswordPrompt = null;
         try {
-            return (boolean)classInstance.Get("SuppressAutoClosePasswordPrompt");
+            retObjectSuppressAutoClosePasswordPrompt = classInstance.Get("SuppressAutoClosePasswordPrompt");
+            return (boolean)retObjectSuppressAutoClosePasswordPrompt;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectSuppressAutoClosePasswordPrompt != null ? retObjectSuppressAutoClosePasswordPrompt.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -206,7 +218,7 @@ public class ResolveKeySource extends TaskExtension  {
 
     public void setSuppressAutoClosePasswordPrompt(boolean SuppressAutoClosePasswordPrompt) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SuppressAutoClosePasswordPrompt", SuppressAutoClosePasswordPrompt);
         } catch (JCNativeException jcne) {
@@ -216,9 +228,20 @@ public class ResolveKeySource extends TaskExtension  {
 
     public int getAutoClosePasswordPromptShow() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAutoClosePasswordPromptShow = null;
         try {
-            return (int)classInstance.Get("AutoClosePasswordPromptShow");
+            retObjectAutoClosePasswordPromptShow = classInstance.Get("AutoClosePasswordPromptShow");
+            return (int)retObjectAutoClosePasswordPromptShow;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectAutoClosePasswordPromptShow_ToString = retObjectAutoClosePasswordPromptShow == null ? "null" : retObjectAutoClosePasswordPromptShow.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectAutoClosePasswordPromptShowNumber = (java.lang.Number)retObjectAutoClosePasswordPromptShow;
+                return retObjectAutoClosePasswordPromptShowNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectAutoClosePasswordPromptShow != null ? retObjectAutoClosePasswordPromptShow.getClass() : "null", retObjectAutoClosePasswordPromptShow_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -226,7 +249,7 @@ public class ResolveKeySource extends TaskExtension  {
 
     public void setAutoClosePasswordPromptShow(int AutoClosePasswordPromptShow) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AutoClosePasswordPromptShow", AutoClosePasswordPromptShow);
         } catch (JCNativeException jcne) {
@@ -236,9 +259,20 @@ public class ResolveKeySource extends TaskExtension  {
 
     public int getAutoClosePasswordPromptTimeout() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAutoClosePasswordPromptTimeout = null;
         try {
-            return (int)classInstance.Get("AutoClosePasswordPromptTimeout");
+            retObjectAutoClosePasswordPromptTimeout = classInstance.Get("AutoClosePasswordPromptTimeout");
+            return (int)retObjectAutoClosePasswordPromptTimeout;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectAutoClosePasswordPromptTimeout_ToString = retObjectAutoClosePasswordPromptTimeout == null ? "null" : retObjectAutoClosePasswordPromptTimeout.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectAutoClosePasswordPromptTimeoutNumber = (java.lang.Number)retObjectAutoClosePasswordPromptTimeout;
+                return retObjectAutoClosePasswordPromptTimeoutNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectAutoClosePasswordPromptTimeout != null ? retObjectAutoClosePasswordPromptTimeout.getClass() : "null", retObjectAutoClosePasswordPromptTimeout_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -246,7 +280,7 @@ public class ResolveKeySource extends TaskExtension  {
 
     public void setAutoClosePasswordPromptTimeout(int AutoClosePasswordPromptTimeout) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AutoClosePasswordPromptTimeout", AutoClosePasswordPromptTimeout);
         } catch (JCNativeException jcne) {
@@ -256,9 +290,13 @@ public class ResolveKeySource extends TaskExtension  {
 
     public java.lang.String getCertificateFile() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCertificateFile = null;
         try {
-            return (java.lang.String)classInstance.Get("CertificateFile");
+            retObjectCertificateFile = classInstance.Get("CertificateFile");
+            return (java.lang.String)retObjectCertificateFile;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectCertificateFile != null ? retObjectCertificateFile.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -266,7 +304,7 @@ public class ResolveKeySource extends TaskExtension  {
 
     public void setCertificateFile(java.lang.String CertificateFile) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CertificateFile", CertificateFile);
         } catch (JCNativeException jcne) {
@@ -276,9 +314,13 @@ public class ResolveKeySource extends TaskExtension  {
 
     public java.lang.String getCertificateThumbprint() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCertificateThumbprint = null;
         try {
-            return (java.lang.String)classInstance.Get("CertificateThumbprint");
+            retObjectCertificateThumbprint = classInstance.Get("CertificateThumbprint");
+            return (java.lang.String)retObjectCertificateThumbprint;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectCertificateThumbprint != null ? retObjectCertificateThumbprint.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -286,7 +328,7 @@ public class ResolveKeySource extends TaskExtension  {
 
     public void setCertificateThumbprint(java.lang.String CertificateThumbprint) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CertificateThumbprint", CertificateThumbprint);
         } catch (JCNativeException jcne) {
@@ -296,9 +338,13 @@ public class ResolveKeySource extends TaskExtension  {
 
     public java.lang.String getKeyFile() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectKeyFile = null;
         try {
-            return (java.lang.String)classInstance.Get("KeyFile");
+            retObjectKeyFile = classInstance.Get("KeyFile");
+            return (java.lang.String)retObjectKeyFile;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectKeyFile != null ? retObjectKeyFile.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -306,7 +352,7 @@ public class ResolveKeySource extends TaskExtension  {
 
     public void setKeyFile(java.lang.String KeyFile) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("KeyFile", KeyFile);
         } catch (JCNativeException jcne) {
@@ -316,9 +362,13 @@ public class ResolveKeySource extends TaskExtension  {
 
     public java.lang.String getResolvedKeyContainer() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResolvedKeyContainer = null;
         try {
-            return (java.lang.String)classInstance.Get("ResolvedKeyContainer");
+            retObjectResolvedKeyContainer = classInstance.Get("ResolvedKeyContainer");
+            return (java.lang.String)retObjectResolvedKeyContainer;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectResolvedKeyContainer != null ? retObjectResolvedKeyContainer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -326,7 +376,7 @@ public class ResolveKeySource extends TaskExtension  {
 
     public void setResolvedKeyContainer(java.lang.String ResolvedKeyContainer) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ResolvedKeyContainer", ResolvedKeyContainer);
         } catch (JCNativeException jcne) {
@@ -336,9 +386,13 @@ public class ResolveKeySource extends TaskExtension  {
 
     public java.lang.String getResolvedKeyFile() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResolvedKeyFile = null;
         try {
-            return (java.lang.String)classInstance.Get("ResolvedKeyFile");
+            retObjectResolvedKeyFile = classInstance.Get("ResolvedKeyFile");
+            return (java.lang.String)retObjectResolvedKeyFile;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectResolvedKeyFile != null ? retObjectResolvedKeyFile.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -346,7 +400,7 @@ public class ResolveKeySource extends TaskExtension  {
 
     public void setResolvedKeyFile(java.lang.String ResolvedKeyFile) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ResolvedKeyFile", ResolvedKeyFile);
         } catch (JCNativeException jcne) {
@@ -356,9 +410,13 @@ public class ResolveKeySource extends TaskExtension  {
 
     public java.lang.String getResolvedThumbprint() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResolvedThumbprint = null;
         try {
-            return (java.lang.String)classInstance.Get("ResolvedThumbprint");
+            retObjectResolvedThumbprint = classInstance.Get("ResolvedThumbprint");
+            return (java.lang.String)retObjectResolvedThumbprint;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectResolvedThumbprint != null ? retObjectResolvedThumbprint.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -366,7 +424,7 @@ public class ResolveKeySource extends TaskExtension  {
 
     public void setResolvedThumbprint(java.lang.String ResolvedThumbprint) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ResolvedThumbprint", ResolvedThumbprint);
         } catch (JCNativeException jcne) {

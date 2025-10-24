@@ -181,9 +181,13 @@ public class RichTextBox extends TextBoxBase implements system.windows.markup.IA
     
     public boolean ShouldSerializeDocument() throws Throwable, system.ArgumentException, system.ObjectDisposedException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.PlatformNotSupportedException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShouldSerializeDocument = null;
         try {
-            return (boolean)classInstance.Invoke("ShouldSerializeDocument");
+            retObjectShouldSerializeDocument = classInstance.Invoke("ShouldSerializeDocument");
+            return (boolean)retObjectShouldSerializeDocument;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectShouldSerializeDocument != null ? retObjectShouldSerializeDocument.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,10 +195,14 @@ public class RichTextBox extends TextBoxBase implements system.windows.markup.IA
 
     public SpellingError GetSpellingError(TextPointer position) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.security.SecurityException, system.io.IOException, system.NullReferenceException, system.runtime.interopservices.COMException, system.threading.SynchronizationLockException, system.globalization.CultureNotFoundException, system.collections.generic.KeyNotFoundException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSpellingError = null;
         try {
-            JCObject objGetSpellingError = (JCObject)classInstance.Invoke("GetSpellingError", position == null ? null : position.getJCOInstance());
+            retObjectGetSpellingError = classInstance.Invoke("GetSpellingError", position == null ? null : position.getJCOInstance());
+            JCObject objGetSpellingError = (JCObject)retObjectGetSpellingError;
             return new SpellingError(objGetSpellingError);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSpellingError != null ? retObjectGetSpellingError.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,10 +210,14 @@ public class RichTextBox extends TextBoxBase implements system.windows.markup.IA
 
     public TextPointer GetNextSpellingErrorPosition(TextPointer position, LogicalDirection direction) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.security.SecurityException, system.io.IOException, system.NullReferenceException, system.runtime.interopservices.COMException, system.threading.SynchronizationLockException, system.globalization.CultureNotFoundException, system.collections.generic.KeyNotFoundException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetNextSpellingErrorPosition = null;
         try {
-            JCObject objGetNextSpellingErrorPosition = (JCObject)classInstance.Invoke("GetNextSpellingErrorPosition", position == null ? null : position.getJCOInstance(), direction == null ? null : direction.getJCOInstance());
+            retObjectGetNextSpellingErrorPosition = classInstance.Invoke("GetNextSpellingErrorPosition", position == null ? null : position.getJCOInstance(), direction == null ? null : direction.getJCOInstance());
+            JCObject objGetNextSpellingErrorPosition = (JCObject)retObjectGetNextSpellingErrorPosition;
             return new TextPointer(objGetNextSpellingErrorPosition);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetNextSpellingErrorPosition != null ? retObjectGetNextSpellingErrorPosition.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,10 +225,14 @@ public class RichTextBox extends TextBoxBase implements system.windows.markup.IA
 
     public TextPointer GetPositionFromPoint(Point point, boolean snapToText) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPositionFromPoint = null;
         try {
-            JCObject objGetPositionFromPoint = (JCObject)classInstance.Invoke("GetPositionFromPoint", point == null ? null : point.getJCOInstance(), snapToText);
+            retObjectGetPositionFromPoint = classInstance.Invoke("GetPositionFromPoint", point == null ? null : point.getJCOInstance(), snapToText);
+            JCObject objGetPositionFromPoint = (JCObject)retObjectGetPositionFromPoint;
             return new TextPointer(objGetPositionFromPoint);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetPositionFromPoint != null ? retObjectGetPositionFromPoint.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -224,10 +240,14 @@ public class RichTextBox extends TextBoxBase implements system.windows.markup.IA
 
     public TextRange GetSpellingErrorRange(TextPointer position) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.security.SecurityException, system.io.IOException, system.NullReferenceException, system.runtime.interopservices.COMException, system.threading.SynchronizationLockException, system.globalization.CultureNotFoundException, system.collections.generic.KeyNotFoundException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSpellingErrorRange = null;
         try {
-            JCObject objGetSpellingErrorRange = (JCObject)classInstance.Invoke("GetSpellingErrorRange", position == null ? null : position.getJCOInstance());
+            retObjectGetSpellingErrorRange = classInstance.Invoke("GetSpellingErrorRange", position == null ? null : position.getJCOInstance());
+            JCObject objGetSpellingErrorRange = (JCObject)retObjectGetSpellingErrorRange;
             return new TextRange(objGetSpellingErrorRange);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSpellingErrorRange != null ? retObjectGetSpellingErrorRange.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -239,7 +259,7 @@ public class RichTextBox extends TextBoxBase implements system.windows.markup.IA
      */
     @Deprecated 
     public void AddChild(NetObject value) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAddChild to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAddChild to obtain the full interface.");
     }
 
     /**
@@ -248,7 +268,7 @@ public class RichTextBox extends TextBoxBase implements system.windows.markup.IA
      */
     @Deprecated 
     public void AddText(java.lang.String text) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAddChild to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAddChild to obtain the full interface.");
     }
 
 
@@ -257,9 +277,13 @@ public class RichTextBox extends TextBoxBase implements system.windows.markup.IA
     
     public boolean getIsDocumentEnabled() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsDocumentEnabled = null;
         try {
-            return (boolean)classInstance.Get("IsDocumentEnabled");
+            retObjectIsDocumentEnabled = classInstance.Get("IsDocumentEnabled");
+            return (boolean)retObjectIsDocumentEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsDocumentEnabled != null ? retObjectIsDocumentEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -267,7 +291,7 @@ public class RichTextBox extends TextBoxBase implements system.windows.markup.IA
 
     public void setIsDocumentEnabled(boolean IsDocumentEnabled) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsDocumentEnabled", IsDocumentEnabled);
         } catch (JCNativeException jcne) {
@@ -277,10 +301,14 @@ public class RichTextBox extends TextBoxBase implements system.windows.markup.IA
 
     public FlowDocument getDocument() throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OutOfMemoryException, system.security.SecurityException, system.ArrayTypeMismatchException, system.io.IOException, system.UnauthorizedAccessException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDocument = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Document");
+            retObjectDocument = classInstance.Get("Document");
+            JCObject val = (JCObject)retObjectDocument;
             return new FlowDocument(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDocument != null ? retObjectDocument.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -288,7 +316,7 @@ public class RichTextBox extends TextBoxBase implements system.windows.markup.IA
 
     public void setDocument(FlowDocument Document) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.IndexOutOfRangeException, system.NullReferenceException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.globalization.CultureNotFoundException, system.collections.generic.KeyNotFoundException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Document", Document == null ? null : Document.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -298,10 +326,14 @@ public class RichTextBox extends TextBoxBase implements system.windows.markup.IA
 
     public TextPointer getCaretPosition() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCaretPosition = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CaretPosition");
+            retObjectCaretPosition = classInstance.Get("CaretPosition");
+            JCObject val = (JCObject)retObjectCaretPosition;
             return new TextPointer(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCaretPosition != null ? retObjectCaretPosition.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -309,7 +341,7 @@ public class RichTextBox extends TextBoxBase implements system.windows.markup.IA
 
     public void setCaretPosition(TextPointer CaretPosition) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CaretPosition", CaretPosition == null ? null : CaretPosition.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -319,10 +351,14 @@ public class RichTextBox extends TextBoxBase implements system.windows.markup.IA
 
     public TextSelection getSelection() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelection = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Selection");
+            retObjectSelection = classInstance.Get("Selection");
+            JCObject val = (JCObject)retObjectSelection;
             return new TextSelection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelection != null ? retObjectSelection.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

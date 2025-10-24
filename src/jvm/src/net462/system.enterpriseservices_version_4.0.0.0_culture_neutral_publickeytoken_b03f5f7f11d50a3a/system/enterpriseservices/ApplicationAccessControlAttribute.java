@@ -179,9 +179,13 @@ public class ApplicationAccessControlAttribute extends Attribute  {
     
     public boolean getValue() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValue = null;
         try {
-            return (boolean)classInstance.Get("Value");
+            retObjectValue = classInstance.Get("Value");
+            return (boolean)retObjectValue;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectValue != null ? retObjectValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -189,7 +193,7 @@ public class ApplicationAccessControlAttribute extends Attribute  {
 
     public void setValue(boolean Value) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Value", Value);
         } catch (JCNativeException jcne) {
@@ -199,10 +203,14 @@ public class ApplicationAccessControlAttribute extends Attribute  {
 
     public AccessChecksLevelOption getAccessChecksLevel() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAccessChecksLevel = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AccessChecksLevel");
+            retObjectAccessChecksLevel = classInstance.Get("AccessChecksLevel");
+            JCObject val = (JCObject)retObjectAccessChecksLevel;
             return new AccessChecksLevelOption(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAccessChecksLevel != null ? retObjectAccessChecksLevel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -210,7 +218,7 @@ public class ApplicationAccessControlAttribute extends Attribute  {
 
     public void setAccessChecksLevel(AccessChecksLevelOption AccessChecksLevel) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AccessChecksLevel", AccessChecksLevel == null ? null : AccessChecksLevel.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -220,10 +228,14 @@ public class ApplicationAccessControlAttribute extends Attribute  {
 
     public AuthenticationOption getAuthentication() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAuthentication = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Authentication");
+            retObjectAuthentication = classInstance.Get("Authentication");
+            JCObject val = (JCObject)retObjectAuthentication;
             return new AuthenticationOption(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAuthentication != null ? retObjectAuthentication.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -231,7 +243,7 @@ public class ApplicationAccessControlAttribute extends Attribute  {
 
     public void setAuthentication(AuthenticationOption Authentication) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Authentication", Authentication == null ? null : Authentication.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -241,10 +253,14 @@ public class ApplicationAccessControlAttribute extends Attribute  {
 
     public ImpersonationLevelOption getImpersonationLevel() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectImpersonationLevel = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ImpersonationLevel");
+            retObjectImpersonationLevel = classInstance.Get("ImpersonationLevel");
+            JCObject val = (JCObject)retObjectImpersonationLevel;
             return new ImpersonationLevelOption(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectImpersonationLevel != null ? retObjectImpersonationLevel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -252,7 +268,7 @@ public class ApplicationAccessControlAttribute extends Attribute  {
 
     public void setImpersonationLevel(ImpersonationLevelOption ImpersonationLevel) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ImpersonationLevel", ImpersonationLevel == null ? null : ImpersonationLevel.getJCOInstance());
         } catch (JCNativeException jcne) {

@@ -157,9 +157,13 @@ public class EnumeratorPrototype extends JSObject  {
     
     public static boolean atEnd(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectatEnd = null;
         try {
-            return (boolean)classType.Invoke("atEnd", thisob == null ? null : thisob.getJCOInstance());
+            retObjectatEnd = classType.Invoke("atEnd", thisob == null ? null : thisob.getJCOInstance());
+            return (boolean)retObjectatEnd;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectatEnd != null ? retObjectatEnd.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -167,10 +171,14 @@ public class EnumeratorPrototype extends JSObject  {
 
     public static NetObject item(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectitem = null;
         try {
-            JCObject objitem = (JCObject)classType.Invoke("item", thisob == null ? null : thisob.getJCOInstance());
+            retObjectitem = classType.Invoke("item", thisob == null ? null : thisob.getJCOInstance());
+            JCObject objitem = (JCObject)retObjectitem;
             return new NetObject(objitem);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectitem != null ? retObjectitem.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,7 +186,7 @@ public class EnumeratorPrototype extends JSObject  {
 
     public static void moveFirst(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("moveFirst", thisob == null ? null : thisob.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -188,7 +196,7 @@ public class EnumeratorPrototype extends JSObject  {
 
     public static void moveNext(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("moveNext", thisob == null ? null : thisob.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -202,10 +210,14 @@ public class EnumeratorPrototype extends JSObject  {
     
     public static EnumeratorConstructor getconstructor() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectconstructor = null;
         try {
-            JCObject val = (JCObject)classType.Get("constructor");
+            retObjectconstructor = classType.Get("constructor");
+            JCObject val = (JCObject)retObjectconstructor;
             return new EnumeratorConstructor(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectconstructor != null ? retObjectconstructor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

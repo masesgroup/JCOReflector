@@ -166,9 +166,13 @@ public class HyperLinkField extends DataControlField  {
     
     public boolean Initialize(boolean enableSorting, Control control) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInitialize = null;
         try {
-            return (boolean)classInstance.Invoke("Initialize", enableSorting, control == null ? null : control.getJCOInstance());
+            retObjectInitialize = classInstance.Invoke("Initialize", enableSorting, control == null ? null : control.getJCOInstance());
+            return (boolean)retObjectInitialize;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectInitialize != null ? retObjectInitialize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,7 +180,7 @@ public class HyperLinkField extends DataControlField  {
 
     public void InitializeCell(DataControlFieldCell cell, DataControlCellType cellType, DataControlRowState rowState, int rowIndex) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.reflection.AmbiguousMatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("InitializeCell", cell == null ? null : cell.getJCOInstance(), cellType == null ? null : cellType.getJCOInstance(), rowState == null ? null : rowState.getJCOInstance(), rowIndex);
         } catch (JCNativeException jcne) {
@@ -186,7 +190,7 @@ public class HyperLinkField extends DataControlField  {
 
     public void ValidateSupportsCallback() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ValidateSupportsCallback");
         } catch (JCNativeException jcne) {
@@ -200,9 +204,13 @@ public class HyperLinkField extends DataControlField  {
     
     public java.lang.String getDataNavigateUrlFormatString() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDataNavigateUrlFormatString = null;
         try {
-            return (java.lang.String)classInstance.Get("DataNavigateUrlFormatString");
+            retObjectDataNavigateUrlFormatString = classInstance.Get("DataNavigateUrlFormatString");
+            return (java.lang.String)retObjectDataNavigateUrlFormatString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDataNavigateUrlFormatString != null ? retObjectDataNavigateUrlFormatString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -210,7 +218,7 @@ public class HyperLinkField extends DataControlField  {
 
     public void setDataNavigateUrlFormatString(java.lang.String DataNavigateUrlFormatString) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DataNavigateUrlFormatString", DataNavigateUrlFormatString);
         } catch (JCNativeException jcne) {
@@ -220,9 +228,13 @@ public class HyperLinkField extends DataControlField  {
 
     public java.lang.String getDataTextField() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDataTextField = null;
         try {
-            return (java.lang.String)classInstance.Get("DataTextField");
+            retObjectDataTextField = classInstance.Get("DataTextField");
+            return (java.lang.String)retObjectDataTextField;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDataTextField != null ? retObjectDataTextField.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -230,7 +242,7 @@ public class HyperLinkField extends DataControlField  {
 
     public void setDataTextField(java.lang.String DataTextField) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DataTextField", DataTextField);
         } catch (JCNativeException jcne) {
@@ -240,9 +252,13 @@ public class HyperLinkField extends DataControlField  {
 
     public java.lang.String getDataTextFormatString() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDataTextFormatString = null;
         try {
-            return (java.lang.String)classInstance.Get("DataTextFormatString");
+            retObjectDataTextFormatString = classInstance.Get("DataTextFormatString");
+            return (java.lang.String)retObjectDataTextFormatString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDataTextFormatString != null ? retObjectDataTextFormatString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -250,7 +266,7 @@ public class HyperLinkField extends DataControlField  {
 
     public void setDataTextFormatString(java.lang.String DataTextFormatString) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DataTextFormatString", DataTextFormatString);
         } catch (JCNativeException jcne) {
@@ -260,9 +276,13 @@ public class HyperLinkField extends DataControlField  {
 
     public java.lang.String getNavigateUrl() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNavigateUrl = null;
         try {
-            return (java.lang.String)classInstance.Get("NavigateUrl");
+            retObjectNavigateUrl = classInstance.Get("NavigateUrl");
+            return (java.lang.String)retObjectNavigateUrl;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectNavigateUrl != null ? retObjectNavigateUrl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -270,7 +290,7 @@ public class HyperLinkField extends DataControlField  {
 
     public void setNavigateUrl(java.lang.String NavigateUrl) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("NavigateUrl", NavigateUrl);
         } catch (JCNativeException jcne) {
@@ -280,9 +300,13 @@ public class HyperLinkField extends DataControlField  {
 
     public java.lang.String getTarget() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTarget = null;
         try {
-            return (java.lang.String)classInstance.Get("Target");
+            retObjectTarget = classInstance.Get("Target");
+            return (java.lang.String)retObjectTarget;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectTarget != null ? retObjectTarget.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -290,7 +314,7 @@ public class HyperLinkField extends DataControlField  {
 
     public void setTarget(java.lang.String Target) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Target", Target);
         } catch (JCNativeException jcne) {
@@ -300,9 +324,13 @@ public class HyperLinkField extends DataControlField  {
 
     public java.lang.String getText() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectText = null;
         try {
-            return (java.lang.String)classInstance.Get("Text");
+            retObjectText = classInstance.Get("Text");
+            return (java.lang.String)retObjectText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectText != null ? retObjectText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -310,7 +338,7 @@ public class HyperLinkField extends DataControlField  {
 
     public void setText(java.lang.String Text) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Text", Text);
         } catch (JCNativeException jcne) {
@@ -320,10 +348,12 @@ public class HyperLinkField extends DataControlField  {
 
     public java.lang.String[] getDataNavigateUrlFields() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDataNavigateUrlFields = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("DataNavigateUrlFields");
+            retObjectDataNavigateUrlFields = classInstance.Get("DataNavigateUrlFields");
+            JCObject resultingObjects = (JCObject)retObjectDataNavigateUrlFields;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -332,6 +362,8 @@ public class HyperLinkField extends DataControlField  {
 				resultingArray[indexDataNavigateUrlFields] = (java.lang.String)resultingArrayList.get(indexDataNavigateUrlFields);
 			}
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into JCObject", retObjectDataNavigateUrlFields != null ? retObjectDataNavigateUrlFields.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -339,7 +371,7 @@ public class HyperLinkField extends DataControlField  {
 
     public void setDataNavigateUrlFields(java.lang.String[] DataNavigateUrlFields) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DataNavigateUrlFields", DataNavigateUrlFields);
         } catch (JCNativeException jcne) {

@@ -158,9 +158,13 @@ public class FlowLayoutSettings extends LayoutSettings  {
     
     public boolean GetFlowBreak(NetObject child) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetFlowBreak = null;
         try {
-            return (boolean)classInstance.Invoke("GetFlowBreak", child == null ? null : child.getJCOInstance());
+            retObjectGetFlowBreak = classInstance.Invoke("GetFlowBreak", child == null ? null : child.getJCOInstance());
+            return (boolean)retObjectGetFlowBreak;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectGetFlowBreak != null ? retObjectGetFlowBreak.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -168,7 +172,7 @@ public class FlowLayoutSettings extends LayoutSettings  {
 
     public void SetFlowBreak(NetObject child, boolean value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetFlowBreak", child == null ? null : child.getJCOInstance(), value);
         } catch (JCNativeException jcne) {
@@ -182,9 +186,13 @@ public class FlowLayoutSettings extends LayoutSettings  {
     
     public boolean getWrapContents() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWrapContents = null;
         try {
-            return (boolean)classInstance.Get("WrapContents");
+            retObjectWrapContents = classInstance.Get("WrapContents");
+            return (boolean)retObjectWrapContents;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectWrapContents != null ? retObjectWrapContents.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,7 +200,7 @@ public class FlowLayoutSettings extends LayoutSettings  {
 
     public void setWrapContents(boolean WrapContents) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("WrapContents", WrapContents);
         } catch (JCNativeException jcne) {
@@ -202,10 +210,14 @@ public class FlowLayoutSettings extends LayoutSettings  {
 
     public FlowDirection getFlowDirection() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFlowDirection = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("FlowDirection");
+            retObjectFlowDirection = classInstance.Get("FlowDirection");
+            JCObject val = (JCObject)retObjectFlowDirection;
             return new FlowDirection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFlowDirection != null ? retObjectFlowDirection.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,7 +225,7 @@ public class FlowLayoutSettings extends LayoutSettings  {
 
     public void setFlowDirection(FlowDirection FlowDirection) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FlowDirection", FlowDirection == null ? null : FlowDirection.getJCOInstance());
         } catch (JCNativeException jcne) {

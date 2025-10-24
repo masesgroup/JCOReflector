@@ -162,9 +162,13 @@ public class SoapFieldAttribute extends SoapAttribute  {
     
     public boolean IsInteropXmlElement() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsInteropXmlElement = null;
         try {
-            return (boolean)classInstance.Invoke("IsInteropXmlElement");
+            retObjectIsInteropXmlElement = classInstance.Invoke("IsInteropXmlElement");
+            return (boolean)retObjectIsInteropXmlElement;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsInteropXmlElement != null ? retObjectIsInteropXmlElement.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,9 +180,20 @@ public class SoapFieldAttribute extends SoapAttribute  {
     
     public int getOrder() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOrder = null;
         try {
-            return (int)classInstance.Get("Order");
+            retObjectOrder = classInstance.Get("Order");
+            return (int)retObjectOrder;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectOrder_ToString = retObjectOrder == null ? "null" : retObjectOrder.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectOrderNumber = (java.lang.Number)retObjectOrder;
+                return retObjectOrderNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectOrder != null ? retObjectOrder.getClass() : "null", retObjectOrder_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,7 +201,7 @@ public class SoapFieldAttribute extends SoapAttribute  {
 
     public void setOrder(int Order) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Order", Order);
         } catch (JCNativeException jcne) {
@@ -196,9 +211,13 @@ public class SoapFieldAttribute extends SoapAttribute  {
 
     public java.lang.String getXmlElementName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectXmlElementName = null;
         try {
-            return (java.lang.String)classInstance.Get("XmlElementName");
+            retObjectXmlElementName = classInstance.Get("XmlElementName");
+            return (java.lang.String)retObjectXmlElementName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectXmlElementName != null ? retObjectXmlElementName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -206,7 +225,7 @@ public class SoapFieldAttribute extends SoapAttribute  {
 
     public void setXmlElementName(java.lang.String XmlElementName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("XmlElementName", XmlElementName);
         } catch (JCNativeException jcne) {

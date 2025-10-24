@@ -193,9 +193,13 @@ public class SignedXml extends NetObject  {
     
     public boolean CheckSignature() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.RankException, system.security.cryptography.CryptographicUnexpectedOperationException, system.xml.XmlException, system.xml.xpath.XPathException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCheckSignature = null;
         try {
-            return (boolean)classInstance.Invoke("CheckSignature");
+            retObjectCheckSignature = classInstance.Invoke("CheckSignature");
+            return (boolean)retObjectCheckSignature;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCheckSignature != null ? retObjectCheckSignature.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,9 +207,13 @@ public class SignedXml extends NetObject  {
 
     public boolean CheckSignature(AsymmetricAlgorithm key) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.NotSupportedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.TypeLoadException, system.security.cryptography.CryptographicException, system.xml.XmlException, system.ObjectDisposedException, system.security.cryptography.CryptographicUnexpectedOperationException, system.xml.schema.XmlSchemaException, system.runtime.interopservices.ExternalException, system.xml.xpath.XPathException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCheckSignature = null;
         try {
-            return (boolean)classInstance.Invoke("CheckSignature", key == null ? null : key.getJCOInstance());
+            retObjectCheckSignature = classInstance.Invoke("CheckSignature", key == null ? null : key.getJCOInstance());
+            return (boolean)retObjectCheckSignature;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCheckSignature != null ? retObjectCheckSignature.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,9 +221,13 @@ public class SignedXml extends NetObject  {
 
     public boolean CheckSignature(KeyedHashAlgorithm macAlg) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.NotSupportedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.xml.XmlException, system.ObjectDisposedException, system.security.cryptography.CryptographicUnexpectedOperationException, system.xml.schema.XmlSchemaException, system.runtime.interopservices.ExternalException, system.xml.xpath.XPathException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCheckSignature = null;
         try {
-            return (boolean)classInstance.Invoke("CheckSignature", macAlg == null ? null : macAlg.getJCOInstance());
+            retObjectCheckSignature = classInstance.Invoke("CheckSignature", macAlg == null ? null : macAlg.getJCOInstance());
+            return (boolean)retObjectCheckSignature;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCheckSignature != null ? retObjectCheckSignature.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -223,9 +235,13 @@ public class SignedXml extends NetObject  {
 
     public boolean CheckSignature(X509Certificate2 certificate, boolean verifySignatureOnly) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.security.cryptography.CryptographicException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.FormatException, system.NotSupportedException, system.OverflowException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ObjectDisposedException, system.TypeLoadException, system.xml.XmlException, system.security.cryptography.CryptographicUnexpectedOperationException, system.xml.xpath.XPathException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCheckSignature = null;
         try {
-            return (boolean)classInstance.Invoke("CheckSignature", certificate == null ? null : certificate.getJCOInstance(), verifySignatureOnly);
+            retObjectCheckSignature = classInstance.Invoke("CheckSignature", certificate == null ? null : certificate.getJCOInstance(), verifySignatureOnly);
+            return (boolean)retObjectCheckSignature;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCheckSignature != null ? retObjectCheckSignature.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -233,9 +249,13 @@ public class SignedXml extends NetObject  {
 
     public boolean CheckSignatureReturningKey(JCORefOut<AsymmetricAlgorithm> signingKey) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.IndexOutOfRangeException, system.RankException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ObjectDisposedException, system.TypeLoadException, system.xml.XmlException, system.security.cryptography.CryptographicUnexpectedOperationException, system.xml.xpath.XPathException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCheckSignatureReturningKey = null;
         try {
-            return (boolean)classInstance.Invoke("CheckSignatureReturningKey", signingKey.getJCRefOut());
+            retObjectCheckSignatureReturningKey = classInstance.Invoke("CheckSignatureReturningKey", signingKey.getJCRefOut());
+            return (boolean)retObjectCheckSignatureReturningKey;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCheckSignatureReturningKey != null ? retObjectCheckSignatureReturningKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -243,10 +263,14 @@ public class SignedXml extends NetObject  {
 
     public XmlElement GetIdElement(XmlDocument document, java.lang.String idValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.security.cryptography.CryptographicException, system.OutOfMemoryException, system.xml.xpath.XPathException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetIdElement = null;
         try {
-            JCObject objGetIdElement = (JCObject)classInstance.Invoke("GetIdElement", document == null ? null : document.getJCOInstance(), idValue);
+            retObjectGetIdElement = classInstance.Invoke("GetIdElement", document == null ? null : document.getJCOInstance(), idValue);
+            JCObject objGetIdElement = (JCObject)retObjectGetIdElement;
             return new XmlElement(objGetIdElement);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetIdElement != null ? retObjectGetIdElement.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -254,10 +278,14 @@ public class SignedXml extends NetObject  {
 
     public XmlElement GetXml() throws Throwable, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.IndexOutOfRangeException, system.xml.XmlException, system.ArgumentNullException, system.security.cryptography.CryptographicException, system.TypeLoadException, system.NotSupportedException, system.ObjectDisposedException, system.security.cryptography.CryptographicUnexpectedOperationException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetXml = null;
         try {
-            JCObject objGetXml = (JCObject)classInstance.Invoke("GetXml");
+            retObjectGetXml = classInstance.Invoke("GetXml");
+            JCObject objGetXml = (JCObject)retObjectGetXml;
             return new XmlElement(objGetXml);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetXml != null ? retObjectGetXml.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -265,7 +293,7 @@ public class SignedXml extends NetObject  {
 
     public void AddObject(DataObject dataObject) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddObject", dataObject == null ? null : dataObject.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -275,7 +303,7 @@ public class SignedXml extends NetObject  {
 
     public void AddReference(Reference reference) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddReference", reference == null ? null : reference.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -285,7 +313,7 @@ public class SignedXml extends NetObject  {
 
     public void ComputeSignature() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.RankException, system.xml.XmlException, system.TypeLoadException, system.security.cryptography.CryptographicException, system.globalization.CultureNotFoundException, system.xml.xpath.XPathException, system.ObjectDisposedException, system.security.cryptography.CryptographicUnexpectedOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ComputeSignature");
         } catch (JCNativeException jcne) {
@@ -295,7 +323,7 @@ public class SignedXml extends NetObject  {
 
     public void ComputeSignature(KeyedHashAlgorithm macAlg) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.security.cryptography.CryptographicException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException, system.RankException, system.xml.XmlException, system.TypeLoadException, system.OutOfMemoryException, system.xml.xpath.XPathException, system.security.cryptography.CryptographicUnexpectedOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ComputeSignature", macAlg == null ? null : macAlg.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -305,7 +333,7 @@ public class SignedXml extends NetObject  {
 
     public void LoadXml(XmlElement value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.security.cryptography.CryptographicException, system.IndexOutOfRangeException, system.xml.xpath.XPathException, system.TypeLoadException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("LoadXml", value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -319,10 +347,12 @@ public class SignedXml extends NetObject  {
     
     public byte[] getSignatureValue() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSignatureValue = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("SignatureValue");
+            retObjectSignatureValue = classInstance.Get("SignatureValue");
+            JCObject resultingObjects = (JCObject)retObjectSignatureValue;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -331,6 +361,8 @@ public class SignedXml extends NetObject  {
 				resultingArray[indexSignatureValue] = (byte)resultingArrayList.get(indexSignatureValue);
 			}
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into JCObject", retObjectSignatureValue != null ? retObjectSignatureValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -338,10 +370,14 @@ public class SignedXml extends NetObject  {
 
     public AsymmetricAlgorithm getSigningKey() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSigningKey = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SigningKey");
+            retObjectSigningKey = classInstance.Get("SigningKey");
+            JCObject val = (JCObject)retObjectSigningKey;
             return new AsymmetricAlgorithm(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSigningKey != null ? retObjectSigningKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -349,7 +385,7 @@ public class SignedXml extends NetObject  {
 
     public void setSigningKey(AsymmetricAlgorithm SigningKey) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SigningKey", SigningKey == null ? null : SigningKey.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -359,10 +395,14 @@ public class SignedXml extends NetObject  {
 
     public EncryptedXml getEncryptedXml() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEncryptedXml = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("EncryptedXml");
+            retObjectEncryptedXml = classInstance.Get("EncryptedXml");
+            JCObject val = (JCObject)retObjectEncryptedXml;
             return new EncryptedXml(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEncryptedXml != null ? retObjectEncryptedXml.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -370,7 +410,7 @@ public class SignedXml extends NetObject  {
 
     public void setEncryptedXml(EncryptedXml EncryptedXml) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EncryptedXml", EncryptedXml == null ? null : EncryptedXml.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -380,10 +420,14 @@ public class SignedXml extends NetObject  {
 
     public KeyInfo getKeyInfo() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectKeyInfo = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("KeyInfo");
+            retObjectKeyInfo = classInstance.Get("KeyInfo");
+            JCObject val = (JCObject)retObjectKeyInfo;
             return new KeyInfo(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectKeyInfo != null ? retObjectKeyInfo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -391,7 +435,7 @@ public class SignedXml extends NetObject  {
 
     public void setKeyInfo(KeyInfo KeyInfo) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("KeyInfo", KeyInfo == null ? null : KeyInfo.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -401,10 +445,14 @@ public class SignedXml extends NetObject  {
 
     public Signature getSignature() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSignature = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Signature");
+            retObjectSignature = classInstance.Get("Signature");
+            JCObject val = (JCObject)retObjectSignature;
             return new Signature(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSignature != null ? retObjectSignature.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -412,10 +460,14 @@ public class SignedXml extends NetObject  {
 
     public SignedInfo getSignedInfo() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSignedInfo = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SignedInfo");
+            retObjectSignedInfo = classInstance.Get("SignedInfo");
+            JCObject val = (JCObject)retObjectSignedInfo;
             return new SignedInfo(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSignedInfo != null ? retObjectSignedInfo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -423,9 +475,13 @@ public class SignedXml extends NetObject  {
 
     public java.lang.String getSignatureLength() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSignatureLength = null;
         try {
-            return (java.lang.String)classInstance.Get("SignatureLength");
+            retObjectSignatureLength = classInstance.Get("SignatureLength");
+            return (java.lang.String)retObjectSignatureLength;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSignatureLength != null ? retObjectSignatureLength.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -433,9 +489,13 @@ public class SignedXml extends NetObject  {
 
     public java.lang.String getSignatureMethod() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSignatureMethod = null;
         try {
-            return (java.lang.String)classInstance.Get("SignatureMethod");
+            retObjectSignatureMethod = classInstance.Get("SignatureMethod");
+            return (java.lang.String)retObjectSignatureMethod;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSignatureMethod != null ? retObjectSignatureMethod.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -443,9 +503,13 @@ public class SignedXml extends NetObject  {
 
     public java.lang.String getSigningKeyName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSigningKeyName = null;
         try {
-            return (java.lang.String)classInstance.Get("SigningKeyName");
+            retObjectSigningKeyName = classInstance.Get("SigningKeyName");
+            return (java.lang.String)retObjectSigningKeyName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSigningKeyName != null ? retObjectSigningKeyName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -453,7 +517,7 @@ public class SignedXml extends NetObject  {
 
     public void setSigningKeyName(java.lang.String SigningKeyName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SigningKeyName", SigningKeyName);
         } catch (JCNativeException jcne) {
@@ -463,7 +527,7 @@ public class SignedXml extends NetObject  {
 
     public void setResolver(XmlResolver Resolver) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Resolver", Resolver == null ? null : Resolver.getJCOInstance());
         } catch (JCNativeException jcne) {

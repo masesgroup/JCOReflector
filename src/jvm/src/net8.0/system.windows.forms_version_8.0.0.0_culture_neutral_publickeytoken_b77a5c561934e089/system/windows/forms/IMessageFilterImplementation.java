@@ -143,9 +143,13 @@ public class IMessageFilterImplementation extends NetObject implements IMessageF
     
     public boolean PreFilterMessage(JCORefOut<Message> m) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPreFilterMessage = null;
         try {
-            return (boolean)classInstance.Invoke("PreFilterMessage", m.getJCRefOut());
+            retObjectPreFilterMessage = classInstance.Invoke("PreFilterMessage", m.getJCRefOut());
+            return (boolean)retObjectPreFilterMessage;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectPreFilterMessage != null ? retObjectPreFilterMessage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

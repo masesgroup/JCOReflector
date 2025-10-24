@@ -154,9 +154,13 @@ public class BindingCollectionElement extends ConfigurationElement  {
     
     public boolean ContainsKey(java.lang.String name) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContainsKey = null;
         try {
-            return (boolean)classInstance.Invoke("ContainsKey", name);
+            retObjectContainsKey = classInstance.Invoke("ContainsKey", name);
+            return (boolean)retObjectContainsKey;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectContainsKey != null ? retObjectContainsKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -168,9 +172,13 @@ public class BindingCollectionElement extends ConfigurationElement  {
     
     public java.lang.String getBindingName() throws Throwable, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.ArgumentException, system.security.SecurityException, system.ArgumentNullException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.collections.generic.KeyNotFoundException, system.FormatException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException, system.reflection.AmbiguousMatchException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBindingName = null;
         try {
-            return (java.lang.String)classInstance.Get("BindingName");
+            retObjectBindingName = classInstance.Get("BindingName");
+            return (java.lang.String)retObjectBindingName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectBindingName != null ? retObjectBindingName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,10 +186,14 @@ public class BindingCollectionElement extends ConfigurationElement  {
 
     public NetType getBindingType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBindingType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("BindingType");
+            retObjectBindingType = classInstance.Get("BindingType");
+            JCObject val = (JCObject)retObjectBindingType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBindingType != null ? retObjectBindingType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

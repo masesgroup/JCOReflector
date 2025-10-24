@@ -158,10 +158,14 @@ public class Pens extends NetObject  {
     
     public static Pen getAliceBlue() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAliceBlue = null;
         try {
-            JCObject val = (JCObject)classType.Get("AliceBlue");
+            retObjectAliceBlue = classType.Get("AliceBlue");
+            JCObject val = (JCObject)retObjectAliceBlue;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAliceBlue != null ? retObjectAliceBlue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,10 +173,14 @@ public class Pens extends NetObject  {
 
     public static Pen getAntiqueWhite() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAntiqueWhite = null;
         try {
-            JCObject val = (JCObject)classType.Get("AntiqueWhite");
+            retObjectAntiqueWhite = classType.Get("AntiqueWhite");
+            JCObject val = (JCObject)retObjectAntiqueWhite;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAntiqueWhite != null ? retObjectAntiqueWhite.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,10 +188,14 @@ public class Pens extends NetObject  {
 
     public static Pen getAqua() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAqua = null;
         try {
-            JCObject val = (JCObject)classType.Get("Aqua");
+            retObjectAqua = classType.Get("Aqua");
+            JCObject val = (JCObject)retObjectAqua;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAqua != null ? retObjectAqua.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,10 +203,14 @@ public class Pens extends NetObject  {
 
     public static Pen getAquamarine() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAquamarine = null;
         try {
-            JCObject val = (JCObject)classType.Get("Aquamarine");
+            retObjectAquamarine = classType.Get("Aquamarine");
+            JCObject val = (JCObject)retObjectAquamarine;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAquamarine != null ? retObjectAquamarine.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,10 +218,14 @@ public class Pens extends NetObject  {
 
     public static Pen getAzure() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAzure = null;
         try {
-            JCObject val = (JCObject)classType.Get("Azure");
+            retObjectAzure = classType.Get("Azure");
+            JCObject val = (JCObject)retObjectAzure;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAzure != null ? retObjectAzure.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,10 +233,14 @@ public class Pens extends NetObject  {
 
     public static Pen getBeige() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectBeige = null;
         try {
-            JCObject val = (JCObject)classType.Get("Beige");
+            retObjectBeige = classType.Get("Beige");
+            JCObject val = (JCObject)retObjectBeige;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeige != null ? retObjectBeige.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -224,10 +248,14 @@ public class Pens extends NetObject  {
 
     public static Pen getBisque() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectBisque = null;
         try {
-            JCObject val = (JCObject)classType.Get("Bisque");
+            retObjectBisque = classType.Get("Bisque");
+            JCObject val = (JCObject)retObjectBisque;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBisque != null ? retObjectBisque.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -235,10 +263,14 @@ public class Pens extends NetObject  {
 
     public static Pen getBlack() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectBlack = null;
         try {
-            JCObject val = (JCObject)classType.Get("Black");
+            retObjectBlack = classType.Get("Black");
+            JCObject val = (JCObject)retObjectBlack;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBlack != null ? retObjectBlack.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -246,10 +278,14 @@ public class Pens extends NetObject  {
 
     public static Pen getBlanchedAlmond() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectBlanchedAlmond = null;
         try {
-            JCObject val = (JCObject)classType.Get("BlanchedAlmond");
+            retObjectBlanchedAlmond = classType.Get("BlanchedAlmond");
+            JCObject val = (JCObject)retObjectBlanchedAlmond;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBlanchedAlmond != null ? retObjectBlanchedAlmond.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -257,10 +293,14 @@ public class Pens extends NetObject  {
 
     public static Pen getBlue() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectBlue = null;
         try {
-            JCObject val = (JCObject)classType.Get("Blue");
+            retObjectBlue = classType.Get("Blue");
+            JCObject val = (JCObject)retObjectBlue;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBlue != null ? retObjectBlue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -268,10 +308,14 @@ public class Pens extends NetObject  {
 
     public static Pen getBlueViolet() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectBlueViolet = null;
         try {
-            JCObject val = (JCObject)classType.Get("BlueViolet");
+            retObjectBlueViolet = classType.Get("BlueViolet");
+            JCObject val = (JCObject)retObjectBlueViolet;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBlueViolet != null ? retObjectBlueViolet.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -279,10 +323,14 @@ public class Pens extends NetObject  {
 
     public static Pen getBrown() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectBrown = null;
         try {
-            JCObject val = (JCObject)classType.Get("Brown");
+            retObjectBrown = classType.Get("Brown");
+            JCObject val = (JCObject)retObjectBrown;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBrown != null ? retObjectBrown.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -290,10 +338,14 @@ public class Pens extends NetObject  {
 
     public static Pen getBurlyWood() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectBurlyWood = null;
         try {
-            JCObject val = (JCObject)classType.Get("BurlyWood");
+            retObjectBurlyWood = classType.Get("BurlyWood");
+            JCObject val = (JCObject)retObjectBurlyWood;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBurlyWood != null ? retObjectBurlyWood.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -301,10 +353,14 @@ public class Pens extends NetObject  {
 
     public static Pen getCadetBlue() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCadetBlue = null;
         try {
-            JCObject val = (JCObject)classType.Get("CadetBlue");
+            retObjectCadetBlue = classType.Get("CadetBlue");
+            JCObject val = (JCObject)retObjectCadetBlue;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCadetBlue != null ? retObjectCadetBlue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -312,10 +368,14 @@ public class Pens extends NetObject  {
 
     public static Pen getChartreuse() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectChartreuse = null;
         try {
-            JCObject val = (JCObject)classType.Get("Chartreuse");
+            retObjectChartreuse = classType.Get("Chartreuse");
+            JCObject val = (JCObject)retObjectChartreuse;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectChartreuse != null ? retObjectChartreuse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -323,10 +383,14 @@ public class Pens extends NetObject  {
 
     public static Pen getChocolate() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectChocolate = null;
         try {
-            JCObject val = (JCObject)classType.Get("Chocolate");
+            retObjectChocolate = classType.Get("Chocolate");
+            JCObject val = (JCObject)retObjectChocolate;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectChocolate != null ? retObjectChocolate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -334,10 +398,14 @@ public class Pens extends NetObject  {
 
     public static Pen getCoral() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCoral = null;
         try {
-            JCObject val = (JCObject)classType.Get("Coral");
+            retObjectCoral = classType.Get("Coral");
+            JCObject val = (JCObject)retObjectCoral;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCoral != null ? retObjectCoral.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -345,10 +413,14 @@ public class Pens extends NetObject  {
 
     public static Pen getCornflowerBlue() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCornflowerBlue = null;
         try {
-            JCObject val = (JCObject)classType.Get("CornflowerBlue");
+            retObjectCornflowerBlue = classType.Get("CornflowerBlue");
+            JCObject val = (JCObject)retObjectCornflowerBlue;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCornflowerBlue != null ? retObjectCornflowerBlue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -356,10 +428,14 @@ public class Pens extends NetObject  {
 
     public static Pen getCornsilk() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCornsilk = null;
         try {
-            JCObject val = (JCObject)classType.Get("Cornsilk");
+            retObjectCornsilk = classType.Get("Cornsilk");
+            JCObject val = (JCObject)retObjectCornsilk;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCornsilk != null ? retObjectCornsilk.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -367,10 +443,14 @@ public class Pens extends NetObject  {
 
     public static Pen getCrimson() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCrimson = null;
         try {
-            JCObject val = (JCObject)classType.Get("Crimson");
+            retObjectCrimson = classType.Get("Crimson");
+            JCObject val = (JCObject)retObjectCrimson;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCrimson != null ? retObjectCrimson.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -378,10 +458,14 @@ public class Pens extends NetObject  {
 
     public static Pen getCyan() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCyan = null;
         try {
-            JCObject val = (JCObject)classType.Get("Cyan");
+            retObjectCyan = classType.Get("Cyan");
+            JCObject val = (JCObject)retObjectCyan;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCyan != null ? retObjectCyan.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -389,10 +473,14 @@ public class Pens extends NetObject  {
 
     public static Pen getDarkBlue() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDarkBlue = null;
         try {
-            JCObject val = (JCObject)classType.Get("DarkBlue");
+            retObjectDarkBlue = classType.Get("DarkBlue");
+            JCObject val = (JCObject)retObjectDarkBlue;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDarkBlue != null ? retObjectDarkBlue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -400,10 +488,14 @@ public class Pens extends NetObject  {
 
     public static Pen getDarkCyan() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDarkCyan = null;
         try {
-            JCObject val = (JCObject)classType.Get("DarkCyan");
+            retObjectDarkCyan = classType.Get("DarkCyan");
+            JCObject val = (JCObject)retObjectDarkCyan;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDarkCyan != null ? retObjectDarkCyan.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -411,10 +503,14 @@ public class Pens extends NetObject  {
 
     public static Pen getDarkGoldenrod() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDarkGoldenrod = null;
         try {
-            JCObject val = (JCObject)classType.Get("DarkGoldenrod");
+            retObjectDarkGoldenrod = classType.Get("DarkGoldenrod");
+            JCObject val = (JCObject)retObjectDarkGoldenrod;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDarkGoldenrod != null ? retObjectDarkGoldenrod.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -422,10 +518,14 @@ public class Pens extends NetObject  {
 
     public static Pen getDarkGray() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDarkGray = null;
         try {
-            JCObject val = (JCObject)classType.Get("DarkGray");
+            retObjectDarkGray = classType.Get("DarkGray");
+            JCObject val = (JCObject)retObjectDarkGray;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDarkGray != null ? retObjectDarkGray.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -433,10 +533,14 @@ public class Pens extends NetObject  {
 
     public static Pen getDarkGreen() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDarkGreen = null;
         try {
-            JCObject val = (JCObject)classType.Get("DarkGreen");
+            retObjectDarkGreen = classType.Get("DarkGreen");
+            JCObject val = (JCObject)retObjectDarkGreen;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDarkGreen != null ? retObjectDarkGreen.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -444,10 +548,14 @@ public class Pens extends NetObject  {
 
     public static Pen getDarkKhaki() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDarkKhaki = null;
         try {
-            JCObject val = (JCObject)classType.Get("DarkKhaki");
+            retObjectDarkKhaki = classType.Get("DarkKhaki");
+            JCObject val = (JCObject)retObjectDarkKhaki;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDarkKhaki != null ? retObjectDarkKhaki.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -455,10 +563,14 @@ public class Pens extends NetObject  {
 
     public static Pen getDarkMagenta() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDarkMagenta = null;
         try {
-            JCObject val = (JCObject)classType.Get("DarkMagenta");
+            retObjectDarkMagenta = classType.Get("DarkMagenta");
+            JCObject val = (JCObject)retObjectDarkMagenta;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDarkMagenta != null ? retObjectDarkMagenta.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -466,10 +578,14 @@ public class Pens extends NetObject  {
 
     public static Pen getDarkOliveGreen() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDarkOliveGreen = null;
         try {
-            JCObject val = (JCObject)classType.Get("DarkOliveGreen");
+            retObjectDarkOliveGreen = classType.Get("DarkOliveGreen");
+            JCObject val = (JCObject)retObjectDarkOliveGreen;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDarkOliveGreen != null ? retObjectDarkOliveGreen.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -477,10 +593,14 @@ public class Pens extends NetObject  {
 
     public static Pen getDarkOrange() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDarkOrange = null;
         try {
-            JCObject val = (JCObject)classType.Get("DarkOrange");
+            retObjectDarkOrange = classType.Get("DarkOrange");
+            JCObject val = (JCObject)retObjectDarkOrange;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDarkOrange != null ? retObjectDarkOrange.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -488,10 +608,14 @@ public class Pens extends NetObject  {
 
     public static Pen getDarkOrchid() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDarkOrchid = null;
         try {
-            JCObject val = (JCObject)classType.Get("DarkOrchid");
+            retObjectDarkOrchid = classType.Get("DarkOrchid");
+            JCObject val = (JCObject)retObjectDarkOrchid;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDarkOrchid != null ? retObjectDarkOrchid.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -499,10 +623,14 @@ public class Pens extends NetObject  {
 
     public static Pen getDarkRed() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDarkRed = null;
         try {
-            JCObject val = (JCObject)classType.Get("DarkRed");
+            retObjectDarkRed = classType.Get("DarkRed");
+            JCObject val = (JCObject)retObjectDarkRed;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDarkRed != null ? retObjectDarkRed.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -510,10 +638,14 @@ public class Pens extends NetObject  {
 
     public static Pen getDarkSalmon() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDarkSalmon = null;
         try {
-            JCObject val = (JCObject)classType.Get("DarkSalmon");
+            retObjectDarkSalmon = classType.Get("DarkSalmon");
+            JCObject val = (JCObject)retObjectDarkSalmon;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDarkSalmon != null ? retObjectDarkSalmon.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -521,10 +653,14 @@ public class Pens extends NetObject  {
 
     public static Pen getDarkSeaGreen() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDarkSeaGreen = null;
         try {
-            JCObject val = (JCObject)classType.Get("DarkSeaGreen");
+            retObjectDarkSeaGreen = classType.Get("DarkSeaGreen");
+            JCObject val = (JCObject)retObjectDarkSeaGreen;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDarkSeaGreen != null ? retObjectDarkSeaGreen.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -532,10 +668,14 @@ public class Pens extends NetObject  {
 
     public static Pen getDarkSlateBlue() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDarkSlateBlue = null;
         try {
-            JCObject val = (JCObject)classType.Get("DarkSlateBlue");
+            retObjectDarkSlateBlue = classType.Get("DarkSlateBlue");
+            JCObject val = (JCObject)retObjectDarkSlateBlue;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDarkSlateBlue != null ? retObjectDarkSlateBlue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -543,10 +683,14 @@ public class Pens extends NetObject  {
 
     public static Pen getDarkSlateGray() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDarkSlateGray = null;
         try {
-            JCObject val = (JCObject)classType.Get("DarkSlateGray");
+            retObjectDarkSlateGray = classType.Get("DarkSlateGray");
+            JCObject val = (JCObject)retObjectDarkSlateGray;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDarkSlateGray != null ? retObjectDarkSlateGray.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -554,10 +698,14 @@ public class Pens extends NetObject  {
 
     public static Pen getDarkTurquoise() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDarkTurquoise = null;
         try {
-            JCObject val = (JCObject)classType.Get("DarkTurquoise");
+            retObjectDarkTurquoise = classType.Get("DarkTurquoise");
+            JCObject val = (JCObject)retObjectDarkTurquoise;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDarkTurquoise != null ? retObjectDarkTurquoise.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -565,10 +713,14 @@ public class Pens extends NetObject  {
 
     public static Pen getDarkViolet() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDarkViolet = null;
         try {
-            JCObject val = (JCObject)classType.Get("DarkViolet");
+            retObjectDarkViolet = classType.Get("DarkViolet");
+            JCObject val = (JCObject)retObjectDarkViolet;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDarkViolet != null ? retObjectDarkViolet.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -576,10 +728,14 @@ public class Pens extends NetObject  {
 
     public static Pen getDeepPink() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDeepPink = null;
         try {
-            JCObject val = (JCObject)classType.Get("DeepPink");
+            retObjectDeepPink = classType.Get("DeepPink");
+            JCObject val = (JCObject)retObjectDeepPink;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDeepPink != null ? retObjectDeepPink.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -587,10 +743,14 @@ public class Pens extends NetObject  {
 
     public static Pen getDeepSkyBlue() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDeepSkyBlue = null;
         try {
-            JCObject val = (JCObject)classType.Get("DeepSkyBlue");
+            retObjectDeepSkyBlue = classType.Get("DeepSkyBlue");
+            JCObject val = (JCObject)retObjectDeepSkyBlue;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDeepSkyBlue != null ? retObjectDeepSkyBlue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -598,10 +758,14 @@ public class Pens extends NetObject  {
 
     public static Pen getDimGray() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDimGray = null;
         try {
-            JCObject val = (JCObject)classType.Get("DimGray");
+            retObjectDimGray = classType.Get("DimGray");
+            JCObject val = (JCObject)retObjectDimGray;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDimGray != null ? retObjectDimGray.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -609,10 +773,14 @@ public class Pens extends NetObject  {
 
     public static Pen getDodgerBlue() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDodgerBlue = null;
         try {
-            JCObject val = (JCObject)classType.Get("DodgerBlue");
+            retObjectDodgerBlue = classType.Get("DodgerBlue");
+            JCObject val = (JCObject)retObjectDodgerBlue;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDodgerBlue != null ? retObjectDodgerBlue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -620,10 +788,14 @@ public class Pens extends NetObject  {
 
     public static Pen getFirebrick() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFirebrick = null;
         try {
-            JCObject val = (JCObject)classType.Get("Firebrick");
+            retObjectFirebrick = classType.Get("Firebrick");
+            JCObject val = (JCObject)retObjectFirebrick;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFirebrick != null ? retObjectFirebrick.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -631,10 +803,14 @@ public class Pens extends NetObject  {
 
     public static Pen getFloralWhite() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFloralWhite = null;
         try {
-            JCObject val = (JCObject)classType.Get("FloralWhite");
+            retObjectFloralWhite = classType.Get("FloralWhite");
+            JCObject val = (JCObject)retObjectFloralWhite;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFloralWhite != null ? retObjectFloralWhite.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -642,10 +818,14 @@ public class Pens extends NetObject  {
 
     public static Pen getForestGreen() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectForestGreen = null;
         try {
-            JCObject val = (JCObject)classType.Get("ForestGreen");
+            retObjectForestGreen = classType.Get("ForestGreen");
+            JCObject val = (JCObject)retObjectForestGreen;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectForestGreen != null ? retObjectForestGreen.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -653,10 +833,14 @@ public class Pens extends NetObject  {
 
     public static Pen getFuchsia() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFuchsia = null;
         try {
-            JCObject val = (JCObject)classType.Get("Fuchsia");
+            retObjectFuchsia = classType.Get("Fuchsia");
+            JCObject val = (JCObject)retObjectFuchsia;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFuchsia != null ? retObjectFuchsia.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -664,10 +848,14 @@ public class Pens extends NetObject  {
 
     public static Pen getGainsboro() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGainsboro = null;
         try {
-            JCObject val = (JCObject)classType.Get("Gainsboro");
+            retObjectGainsboro = classType.Get("Gainsboro");
+            JCObject val = (JCObject)retObjectGainsboro;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGainsboro != null ? retObjectGainsboro.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -675,10 +863,14 @@ public class Pens extends NetObject  {
 
     public static Pen getGhostWhite() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGhostWhite = null;
         try {
-            JCObject val = (JCObject)classType.Get("GhostWhite");
+            retObjectGhostWhite = classType.Get("GhostWhite");
+            JCObject val = (JCObject)retObjectGhostWhite;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGhostWhite != null ? retObjectGhostWhite.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -686,10 +878,14 @@ public class Pens extends NetObject  {
 
     public static Pen getGold() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGold = null;
         try {
-            JCObject val = (JCObject)classType.Get("Gold");
+            retObjectGold = classType.Get("Gold");
+            JCObject val = (JCObject)retObjectGold;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGold != null ? retObjectGold.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -697,10 +893,14 @@ public class Pens extends NetObject  {
 
     public static Pen getGoldenrod() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGoldenrod = null;
         try {
-            JCObject val = (JCObject)classType.Get("Goldenrod");
+            retObjectGoldenrod = classType.Get("Goldenrod");
+            JCObject val = (JCObject)retObjectGoldenrod;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGoldenrod != null ? retObjectGoldenrod.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -708,10 +908,14 @@ public class Pens extends NetObject  {
 
     public static Pen getGray() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGray = null;
         try {
-            JCObject val = (JCObject)classType.Get("Gray");
+            retObjectGray = classType.Get("Gray");
+            JCObject val = (JCObject)retObjectGray;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGray != null ? retObjectGray.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -719,10 +923,14 @@ public class Pens extends NetObject  {
 
     public static Pen getGreen() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGreen = null;
         try {
-            JCObject val = (JCObject)classType.Get("Green");
+            retObjectGreen = classType.Get("Green");
+            JCObject val = (JCObject)retObjectGreen;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGreen != null ? retObjectGreen.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -730,10 +938,14 @@ public class Pens extends NetObject  {
 
     public static Pen getGreenYellow() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGreenYellow = null;
         try {
-            JCObject val = (JCObject)classType.Get("GreenYellow");
+            retObjectGreenYellow = classType.Get("GreenYellow");
+            JCObject val = (JCObject)retObjectGreenYellow;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGreenYellow != null ? retObjectGreenYellow.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -741,10 +953,14 @@ public class Pens extends NetObject  {
 
     public static Pen getHoneydew() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectHoneydew = null;
         try {
-            JCObject val = (JCObject)classType.Get("Honeydew");
+            retObjectHoneydew = classType.Get("Honeydew");
+            JCObject val = (JCObject)retObjectHoneydew;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHoneydew != null ? retObjectHoneydew.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -752,10 +968,14 @@ public class Pens extends NetObject  {
 
     public static Pen getHotPink() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectHotPink = null;
         try {
-            JCObject val = (JCObject)classType.Get("HotPink");
+            retObjectHotPink = classType.Get("HotPink");
+            JCObject val = (JCObject)retObjectHotPink;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHotPink != null ? retObjectHotPink.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -763,10 +983,14 @@ public class Pens extends NetObject  {
 
     public static Pen getIndianRed() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIndianRed = null;
         try {
-            JCObject val = (JCObject)classType.Get("IndianRed");
+            retObjectIndianRed = classType.Get("IndianRed");
+            JCObject val = (JCObject)retObjectIndianRed;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIndianRed != null ? retObjectIndianRed.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -774,10 +998,14 @@ public class Pens extends NetObject  {
 
     public static Pen getIndigo() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIndigo = null;
         try {
-            JCObject val = (JCObject)classType.Get("Indigo");
+            retObjectIndigo = classType.Get("Indigo");
+            JCObject val = (JCObject)retObjectIndigo;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIndigo != null ? retObjectIndigo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -785,10 +1013,14 @@ public class Pens extends NetObject  {
 
     public static Pen getIvory() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIvory = null;
         try {
-            JCObject val = (JCObject)classType.Get("Ivory");
+            retObjectIvory = classType.Get("Ivory");
+            JCObject val = (JCObject)retObjectIvory;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIvory != null ? retObjectIvory.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -796,10 +1028,14 @@ public class Pens extends NetObject  {
 
     public static Pen getKhaki() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectKhaki = null;
         try {
-            JCObject val = (JCObject)classType.Get("Khaki");
+            retObjectKhaki = classType.Get("Khaki");
+            JCObject val = (JCObject)retObjectKhaki;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectKhaki != null ? retObjectKhaki.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -807,10 +1043,14 @@ public class Pens extends NetObject  {
 
     public static Pen getLavender() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLavender = null;
         try {
-            JCObject val = (JCObject)classType.Get("Lavender");
+            retObjectLavender = classType.Get("Lavender");
+            JCObject val = (JCObject)retObjectLavender;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLavender != null ? retObjectLavender.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -818,10 +1058,14 @@ public class Pens extends NetObject  {
 
     public static Pen getLavenderBlush() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLavenderBlush = null;
         try {
-            JCObject val = (JCObject)classType.Get("LavenderBlush");
+            retObjectLavenderBlush = classType.Get("LavenderBlush");
+            JCObject val = (JCObject)retObjectLavenderBlush;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLavenderBlush != null ? retObjectLavenderBlush.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -829,10 +1073,14 @@ public class Pens extends NetObject  {
 
     public static Pen getLawnGreen() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLawnGreen = null;
         try {
-            JCObject val = (JCObject)classType.Get("LawnGreen");
+            retObjectLawnGreen = classType.Get("LawnGreen");
+            JCObject val = (JCObject)retObjectLawnGreen;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLawnGreen != null ? retObjectLawnGreen.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -840,10 +1088,14 @@ public class Pens extends NetObject  {
 
     public static Pen getLemonChiffon() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLemonChiffon = null;
         try {
-            JCObject val = (JCObject)classType.Get("LemonChiffon");
+            retObjectLemonChiffon = classType.Get("LemonChiffon");
+            JCObject val = (JCObject)retObjectLemonChiffon;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLemonChiffon != null ? retObjectLemonChiffon.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -851,10 +1103,14 @@ public class Pens extends NetObject  {
 
     public static Pen getLightBlue() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLightBlue = null;
         try {
-            JCObject val = (JCObject)classType.Get("LightBlue");
+            retObjectLightBlue = classType.Get("LightBlue");
+            JCObject val = (JCObject)retObjectLightBlue;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLightBlue != null ? retObjectLightBlue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -862,10 +1118,14 @@ public class Pens extends NetObject  {
 
     public static Pen getLightCoral() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLightCoral = null;
         try {
-            JCObject val = (JCObject)classType.Get("LightCoral");
+            retObjectLightCoral = classType.Get("LightCoral");
+            JCObject val = (JCObject)retObjectLightCoral;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLightCoral != null ? retObjectLightCoral.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -873,10 +1133,14 @@ public class Pens extends NetObject  {
 
     public static Pen getLightCyan() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLightCyan = null;
         try {
-            JCObject val = (JCObject)classType.Get("LightCyan");
+            retObjectLightCyan = classType.Get("LightCyan");
+            JCObject val = (JCObject)retObjectLightCyan;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLightCyan != null ? retObjectLightCyan.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -884,10 +1148,14 @@ public class Pens extends NetObject  {
 
     public static Pen getLightGoldenrodYellow() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLightGoldenrodYellow = null;
         try {
-            JCObject val = (JCObject)classType.Get("LightGoldenrodYellow");
+            retObjectLightGoldenrodYellow = classType.Get("LightGoldenrodYellow");
+            JCObject val = (JCObject)retObjectLightGoldenrodYellow;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLightGoldenrodYellow != null ? retObjectLightGoldenrodYellow.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -895,10 +1163,14 @@ public class Pens extends NetObject  {
 
     public static Pen getLightGray() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLightGray = null;
         try {
-            JCObject val = (JCObject)classType.Get("LightGray");
+            retObjectLightGray = classType.Get("LightGray");
+            JCObject val = (JCObject)retObjectLightGray;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLightGray != null ? retObjectLightGray.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -906,10 +1178,14 @@ public class Pens extends NetObject  {
 
     public static Pen getLightGreen() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLightGreen = null;
         try {
-            JCObject val = (JCObject)classType.Get("LightGreen");
+            retObjectLightGreen = classType.Get("LightGreen");
+            JCObject val = (JCObject)retObjectLightGreen;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLightGreen != null ? retObjectLightGreen.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -917,10 +1193,14 @@ public class Pens extends NetObject  {
 
     public static Pen getLightPink() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLightPink = null;
         try {
-            JCObject val = (JCObject)classType.Get("LightPink");
+            retObjectLightPink = classType.Get("LightPink");
+            JCObject val = (JCObject)retObjectLightPink;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLightPink != null ? retObjectLightPink.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -928,10 +1208,14 @@ public class Pens extends NetObject  {
 
     public static Pen getLightSalmon() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLightSalmon = null;
         try {
-            JCObject val = (JCObject)classType.Get("LightSalmon");
+            retObjectLightSalmon = classType.Get("LightSalmon");
+            JCObject val = (JCObject)retObjectLightSalmon;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLightSalmon != null ? retObjectLightSalmon.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -939,10 +1223,14 @@ public class Pens extends NetObject  {
 
     public static Pen getLightSeaGreen() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLightSeaGreen = null;
         try {
-            JCObject val = (JCObject)classType.Get("LightSeaGreen");
+            retObjectLightSeaGreen = classType.Get("LightSeaGreen");
+            JCObject val = (JCObject)retObjectLightSeaGreen;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLightSeaGreen != null ? retObjectLightSeaGreen.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -950,10 +1238,14 @@ public class Pens extends NetObject  {
 
     public static Pen getLightSkyBlue() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLightSkyBlue = null;
         try {
-            JCObject val = (JCObject)classType.Get("LightSkyBlue");
+            retObjectLightSkyBlue = classType.Get("LightSkyBlue");
+            JCObject val = (JCObject)retObjectLightSkyBlue;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLightSkyBlue != null ? retObjectLightSkyBlue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -961,10 +1253,14 @@ public class Pens extends NetObject  {
 
     public static Pen getLightSlateGray() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLightSlateGray = null;
         try {
-            JCObject val = (JCObject)classType.Get("LightSlateGray");
+            retObjectLightSlateGray = classType.Get("LightSlateGray");
+            JCObject val = (JCObject)retObjectLightSlateGray;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLightSlateGray != null ? retObjectLightSlateGray.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -972,10 +1268,14 @@ public class Pens extends NetObject  {
 
     public static Pen getLightSteelBlue() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLightSteelBlue = null;
         try {
-            JCObject val = (JCObject)classType.Get("LightSteelBlue");
+            retObjectLightSteelBlue = classType.Get("LightSteelBlue");
+            JCObject val = (JCObject)retObjectLightSteelBlue;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLightSteelBlue != null ? retObjectLightSteelBlue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -983,10 +1283,14 @@ public class Pens extends NetObject  {
 
     public static Pen getLightYellow() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLightYellow = null;
         try {
-            JCObject val = (JCObject)classType.Get("LightYellow");
+            retObjectLightYellow = classType.Get("LightYellow");
+            JCObject val = (JCObject)retObjectLightYellow;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLightYellow != null ? retObjectLightYellow.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -994,10 +1298,14 @@ public class Pens extends NetObject  {
 
     public static Pen getLime() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLime = null;
         try {
-            JCObject val = (JCObject)classType.Get("Lime");
+            retObjectLime = classType.Get("Lime");
+            JCObject val = (JCObject)retObjectLime;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLime != null ? retObjectLime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1005,10 +1313,14 @@ public class Pens extends NetObject  {
 
     public static Pen getLimeGreen() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLimeGreen = null;
         try {
-            JCObject val = (JCObject)classType.Get("LimeGreen");
+            retObjectLimeGreen = classType.Get("LimeGreen");
+            JCObject val = (JCObject)retObjectLimeGreen;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLimeGreen != null ? retObjectLimeGreen.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1016,10 +1328,14 @@ public class Pens extends NetObject  {
 
     public static Pen getLinen() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLinen = null;
         try {
-            JCObject val = (JCObject)classType.Get("Linen");
+            retObjectLinen = classType.Get("Linen");
+            JCObject val = (JCObject)retObjectLinen;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLinen != null ? retObjectLinen.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1027,10 +1343,14 @@ public class Pens extends NetObject  {
 
     public static Pen getMagenta() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMagenta = null;
         try {
-            JCObject val = (JCObject)classType.Get("Magenta");
+            retObjectMagenta = classType.Get("Magenta");
+            JCObject val = (JCObject)retObjectMagenta;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMagenta != null ? retObjectMagenta.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1038,10 +1358,14 @@ public class Pens extends NetObject  {
 
     public static Pen getMaroon() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMaroon = null;
         try {
-            JCObject val = (JCObject)classType.Get("Maroon");
+            retObjectMaroon = classType.Get("Maroon");
+            JCObject val = (JCObject)retObjectMaroon;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMaroon != null ? retObjectMaroon.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1049,10 +1373,14 @@ public class Pens extends NetObject  {
 
     public static Pen getMediumAquamarine() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMediumAquamarine = null;
         try {
-            JCObject val = (JCObject)classType.Get("MediumAquamarine");
+            retObjectMediumAquamarine = classType.Get("MediumAquamarine");
+            JCObject val = (JCObject)retObjectMediumAquamarine;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMediumAquamarine != null ? retObjectMediumAquamarine.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1060,10 +1388,14 @@ public class Pens extends NetObject  {
 
     public static Pen getMediumBlue() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMediumBlue = null;
         try {
-            JCObject val = (JCObject)classType.Get("MediumBlue");
+            retObjectMediumBlue = classType.Get("MediumBlue");
+            JCObject val = (JCObject)retObjectMediumBlue;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMediumBlue != null ? retObjectMediumBlue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1071,10 +1403,14 @@ public class Pens extends NetObject  {
 
     public static Pen getMediumOrchid() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMediumOrchid = null;
         try {
-            JCObject val = (JCObject)classType.Get("MediumOrchid");
+            retObjectMediumOrchid = classType.Get("MediumOrchid");
+            JCObject val = (JCObject)retObjectMediumOrchid;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMediumOrchid != null ? retObjectMediumOrchid.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1082,10 +1418,14 @@ public class Pens extends NetObject  {
 
     public static Pen getMediumPurple() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMediumPurple = null;
         try {
-            JCObject val = (JCObject)classType.Get("MediumPurple");
+            retObjectMediumPurple = classType.Get("MediumPurple");
+            JCObject val = (JCObject)retObjectMediumPurple;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMediumPurple != null ? retObjectMediumPurple.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1093,10 +1433,14 @@ public class Pens extends NetObject  {
 
     public static Pen getMediumSeaGreen() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMediumSeaGreen = null;
         try {
-            JCObject val = (JCObject)classType.Get("MediumSeaGreen");
+            retObjectMediumSeaGreen = classType.Get("MediumSeaGreen");
+            JCObject val = (JCObject)retObjectMediumSeaGreen;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMediumSeaGreen != null ? retObjectMediumSeaGreen.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1104,10 +1448,14 @@ public class Pens extends NetObject  {
 
     public static Pen getMediumSlateBlue() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMediumSlateBlue = null;
         try {
-            JCObject val = (JCObject)classType.Get("MediumSlateBlue");
+            retObjectMediumSlateBlue = classType.Get("MediumSlateBlue");
+            JCObject val = (JCObject)retObjectMediumSlateBlue;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMediumSlateBlue != null ? retObjectMediumSlateBlue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1115,10 +1463,14 @@ public class Pens extends NetObject  {
 
     public static Pen getMediumSpringGreen() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMediumSpringGreen = null;
         try {
-            JCObject val = (JCObject)classType.Get("MediumSpringGreen");
+            retObjectMediumSpringGreen = classType.Get("MediumSpringGreen");
+            JCObject val = (JCObject)retObjectMediumSpringGreen;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMediumSpringGreen != null ? retObjectMediumSpringGreen.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1126,10 +1478,14 @@ public class Pens extends NetObject  {
 
     public static Pen getMediumTurquoise() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMediumTurquoise = null;
         try {
-            JCObject val = (JCObject)classType.Get("MediumTurquoise");
+            retObjectMediumTurquoise = classType.Get("MediumTurquoise");
+            JCObject val = (JCObject)retObjectMediumTurquoise;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMediumTurquoise != null ? retObjectMediumTurquoise.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1137,10 +1493,14 @@ public class Pens extends NetObject  {
 
     public static Pen getMediumVioletRed() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMediumVioletRed = null;
         try {
-            JCObject val = (JCObject)classType.Get("MediumVioletRed");
+            retObjectMediumVioletRed = classType.Get("MediumVioletRed");
+            JCObject val = (JCObject)retObjectMediumVioletRed;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMediumVioletRed != null ? retObjectMediumVioletRed.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1148,10 +1508,14 @@ public class Pens extends NetObject  {
 
     public static Pen getMidnightBlue() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMidnightBlue = null;
         try {
-            JCObject val = (JCObject)classType.Get("MidnightBlue");
+            retObjectMidnightBlue = classType.Get("MidnightBlue");
+            JCObject val = (JCObject)retObjectMidnightBlue;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMidnightBlue != null ? retObjectMidnightBlue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1159,10 +1523,14 @@ public class Pens extends NetObject  {
 
     public static Pen getMintCream() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMintCream = null;
         try {
-            JCObject val = (JCObject)classType.Get("MintCream");
+            retObjectMintCream = classType.Get("MintCream");
+            JCObject val = (JCObject)retObjectMintCream;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMintCream != null ? retObjectMintCream.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1170,10 +1538,14 @@ public class Pens extends NetObject  {
 
     public static Pen getMistyRose() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMistyRose = null;
         try {
-            JCObject val = (JCObject)classType.Get("MistyRose");
+            retObjectMistyRose = classType.Get("MistyRose");
+            JCObject val = (JCObject)retObjectMistyRose;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMistyRose != null ? retObjectMistyRose.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1181,10 +1553,14 @@ public class Pens extends NetObject  {
 
     public static Pen getMoccasin() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMoccasin = null;
         try {
-            JCObject val = (JCObject)classType.Get("Moccasin");
+            retObjectMoccasin = classType.Get("Moccasin");
+            JCObject val = (JCObject)retObjectMoccasin;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMoccasin != null ? retObjectMoccasin.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1192,10 +1568,14 @@ public class Pens extends NetObject  {
 
     public static Pen getNavajoWhite() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectNavajoWhite = null;
         try {
-            JCObject val = (JCObject)classType.Get("NavajoWhite");
+            retObjectNavajoWhite = classType.Get("NavajoWhite");
+            JCObject val = (JCObject)retObjectNavajoWhite;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNavajoWhite != null ? retObjectNavajoWhite.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1203,10 +1583,14 @@ public class Pens extends NetObject  {
 
     public static Pen getNavy() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectNavy = null;
         try {
-            JCObject val = (JCObject)classType.Get("Navy");
+            retObjectNavy = classType.Get("Navy");
+            JCObject val = (JCObject)retObjectNavy;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNavy != null ? retObjectNavy.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1214,10 +1598,14 @@ public class Pens extends NetObject  {
 
     public static Pen getOldLace() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOldLace = null;
         try {
-            JCObject val = (JCObject)classType.Get("OldLace");
+            retObjectOldLace = classType.Get("OldLace");
+            JCObject val = (JCObject)retObjectOldLace;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOldLace != null ? retObjectOldLace.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1225,10 +1613,14 @@ public class Pens extends NetObject  {
 
     public static Pen getOlive() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOlive = null;
         try {
-            JCObject val = (JCObject)classType.Get("Olive");
+            retObjectOlive = classType.Get("Olive");
+            JCObject val = (JCObject)retObjectOlive;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOlive != null ? retObjectOlive.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1236,10 +1628,14 @@ public class Pens extends NetObject  {
 
     public static Pen getOliveDrab() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOliveDrab = null;
         try {
-            JCObject val = (JCObject)classType.Get("OliveDrab");
+            retObjectOliveDrab = classType.Get("OliveDrab");
+            JCObject val = (JCObject)retObjectOliveDrab;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOliveDrab != null ? retObjectOliveDrab.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1247,10 +1643,14 @@ public class Pens extends NetObject  {
 
     public static Pen getOrange() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOrange = null;
         try {
-            JCObject val = (JCObject)classType.Get("Orange");
+            retObjectOrange = classType.Get("Orange");
+            JCObject val = (JCObject)retObjectOrange;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOrange != null ? retObjectOrange.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1258,10 +1658,14 @@ public class Pens extends NetObject  {
 
     public static Pen getOrangeRed() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOrangeRed = null;
         try {
-            JCObject val = (JCObject)classType.Get("OrangeRed");
+            retObjectOrangeRed = classType.Get("OrangeRed");
+            JCObject val = (JCObject)retObjectOrangeRed;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOrangeRed != null ? retObjectOrangeRed.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1269,10 +1673,14 @@ public class Pens extends NetObject  {
 
     public static Pen getOrchid() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOrchid = null;
         try {
-            JCObject val = (JCObject)classType.Get("Orchid");
+            retObjectOrchid = classType.Get("Orchid");
+            JCObject val = (JCObject)retObjectOrchid;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOrchid != null ? retObjectOrchid.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1280,10 +1688,14 @@ public class Pens extends NetObject  {
 
     public static Pen getPaleGoldenrod() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectPaleGoldenrod = null;
         try {
-            JCObject val = (JCObject)classType.Get("PaleGoldenrod");
+            retObjectPaleGoldenrod = classType.Get("PaleGoldenrod");
+            JCObject val = (JCObject)retObjectPaleGoldenrod;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPaleGoldenrod != null ? retObjectPaleGoldenrod.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1291,10 +1703,14 @@ public class Pens extends NetObject  {
 
     public static Pen getPaleGreen() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectPaleGreen = null;
         try {
-            JCObject val = (JCObject)classType.Get("PaleGreen");
+            retObjectPaleGreen = classType.Get("PaleGreen");
+            JCObject val = (JCObject)retObjectPaleGreen;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPaleGreen != null ? retObjectPaleGreen.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1302,10 +1718,14 @@ public class Pens extends NetObject  {
 
     public static Pen getPaleTurquoise() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectPaleTurquoise = null;
         try {
-            JCObject val = (JCObject)classType.Get("PaleTurquoise");
+            retObjectPaleTurquoise = classType.Get("PaleTurquoise");
+            JCObject val = (JCObject)retObjectPaleTurquoise;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPaleTurquoise != null ? retObjectPaleTurquoise.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1313,10 +1733,14 @@ public class Pens extends NetObject  {
 
     public static Pen getPaleVioletRed() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectPaleVioletRed = null;
         try {
-            JCObject val = (JCObject)classType.Get("PaleVioletRed");
+            retObjectPaleVioletRed = classType.Get("PaleVioletRed");
+            JCObject val = (JCObject)retObjectPaleVioletRed;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPaleVioletRed != null ? retObjectPaleVioletRed.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1324,10 +1748,14 @@ public class Pens extends NetObject  {
 
     public static Pen getPapayaWhip() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectPapayaWhip = null;
         try {
-            JCObject val = (JCObject)classType.Get("PapayaWhip");
+            retObjectPapayaWhip = classType.Get("PapayaWhip");
+            JCObject val = (JCObject)retObjectPapayaWhip;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPapayaWhip != null ? retObjectPapayaWhip.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1335,10 +1763,14 @@ public class Pens extends NetObject  {
 
     public static Pen getPeachPuff() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectPeachPuff = null;
         try {
-            JCObject val = (JCObject)classType.Get("PeachPuff");
+            retObjectPeachPuff = classType.Get("PeachPuff");
+            JCObject val = (JCObject)retObjectPeachPuff;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPeachPuff != null ? retObjectPeachPuff.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1346,10 +1778,14 @@ public class Pens extends NetObject  {
 
     public static Pen getPeru() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectPeru = null;
         try {
-            JCObject val = (JCObject)classType.Get("Peru");
+            retObjectPeru = classType.Get("Peru");
+            JCObject val = (JCObject)retObjectPeru;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPeru != null ? retObjectPeru.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1357,10 +1793,14 @@ public class Pens extends NetObject  {
 
     public static Pen getPink() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectPink = null;
         try {
-            JCObject val = (JCObject)classType.Get("Pink");
+            retObjectPink = classType.Get("Pink");
+            JCObject val = (JCObject)retObjectPink;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPink != null ? retObjectPink.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1368,10 +1808,14 @@ public class Pens extends NetObject  {
 
     public static Pen getPlum() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectPlum = null;
         try {
-            JCObject val = (JCObject)classType.Get("Plum");
+            retObjectPlum = classType.Get("Plum");
+            JCObject val = (JCObject)retObjectPlum;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPlum != null ? retObjectPlum.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1379,10 +1823,14 @@ public class Pens extends NetObject  {
 
     public static Pen getPowderBlue() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectPowderBlue = null;
         try {
-            JCObject val = (JCObject)classType.Get("PowderBlue");
+            retObjectPowderBlue = classType.Get("PowderBlue");
+            JCObject val = (JCObject)retObjectPowderBlue;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPowderBlue != null ? retObjectPowderBlue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1390,10 +1838,14 @@ public class Pens extends NetObject  {
 
     public static Pen getPurple() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectPurple = null;
         try {
-            JCObject val = (JCObject)classType.Get("Purple");
+            retObjectPurple = classType.Get("Purple");
+            JCObject val = (JCObject)retObjectPurple;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPurple != null ? retObjectPurple.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1401,10 +1853,14 @@ public class Pens extends NetObject  {
 
     public static Pen getRed() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectRed = null;
         try {
-            JCObject val = (JCObject)classType.Get("Red");
+            retObjectRed = classType.Get("Red");
+            JCObject val = (JCObject)retObjectRed;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRed != null ? retObjectRed.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1412,10 +1868,14 @@ public class Pens extends NetObject  {
 
     public static Pen getRosyBrown() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectRosyBrown = null;
         try {
-            JCObject val = (JCObject)classType.Get("RosyBrown");
+            retObjectRosyBrown = classType.Get("RosyBrown");
+            JCObject val = (JCObject)retObjectRosyBrown;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRosyBrown != null ? retObjectRosyBrown.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1423,10 +1883,14 @@ public class Pens extends NetObject  {
 
     public static Pen getRoyalBlue() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectRoyalBlue = null;
         try {
-            JCObject val = (JCObject)classType.Get("RoyalBlue");
+            retObjectRoyalBlue = classType.Get("RoyalBlue");
+            JCObject val = (JCObject)retObjectRoyalBlue;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRoyalBlue != null ? retObjectRoyalBlue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1434,10 +1898,14 @@ public class Pens extends NetObject  {
 
     public static Pen getSaddleBrown() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSaddleBrown = null;
         try {
-            JCObject val = (JCObject)classType.Get("SaddleBrown");
+            retObjectSaddleBrown = classType.Get("SaddleBrown");
+            JCObject val = (JCObject)retObjectSaddleBrown;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSaddleBrown != null ? retObjectSaddleBrown.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1445,10 +1913,14 @@ public class Pens extends NetObject  {
 
     public static Pen getSalmon() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSalmon = null;
         try {
-            JCObject val = (JCObject)classType.Get("Salmon");
+            retObjectSalmon = classType.Get("Salmon");
+            JCObject val = (JCObject)retObjectSalmon;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSalmon != null ? retObjectSalmon.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1456,10 +1928,14 @@ public class Pens extends NetObject  {
 
     public static Pen getSandyBrown() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSandyBrown = null;
         try {
-            JCObject val = (JCObject)classType.Get("SandyBrown");
+            retObjectSandyBrown = classType.Get("SandyBrown");
+            JCObject val = (JCObject)retObjectSandyBrown;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSandyBrown != null ? retObjectSandyBrown.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1467,10 +1943,14 @@ public class Pens extends NetObject  {
 
     public static Pen getSeaGreen() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSeaGreen = null;
         try {
-            JCObject val = (JCObject)classType.Get("SeaGreen");
+            retObjectSeaGreen = classType.Get("SeaGreen");
+            JCObject val = (JCObject)retObjectSeaGreen;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSeaGreen != null ? retObjectSeaGreen.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1478,10 +1958,14 @@ public class Pens extends NetObject  {
 
     public static Pen getSeaShell() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSeaShell = null;
         try {
-            JCObject val = (JCObject)classType.Get("SeaShell");
+            retObjectSeaShell = classType.Get("SeaShell");
+            JCObject val = (JCObject)retObjectSeaShell;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSeaShell != null ? retObjectSeaShell.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1489,10 +1973,14 @@ public class Pens extends NetObject  {
 
     public static Pen getSienna() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSienna = null;
         try {
-            JCObject val = (JCObject)classType.Get("Sienna");
+            retObjectSienna = classType.Get("Sienna");
+            JCObject val = (JCObject)retObjectSienna;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSienna != null ? retObjectSienna.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1500,10 +1988,14 @@ public class Pens extends NetObject  {
 
     public static Pen getSilver() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSilver = null;
         try {
-            JCObject val = (JCObject)classType.Get("Silver");
+            retObjectSilver = classType.Get("Silver");
+            JCObject val = (JCObject)retObjectSilver;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSilver != null ? retObjectSilver.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1511,10 +2003,14 @@ public class Pens extends NetObject  {
 
     public static Pen getSkyBlue() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSkyBlue = null;
         try {
-            JCObject val = (JCObject)classType.Get("SkyBlue");
+            retObjectSkyBlue = classType.Get("SkyBlue");
+            JCObject val = (JCObject)retObjectSkyBlue;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSkyBlue != null ? retObjectSkyBlue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1522,10 +2018,14 @@ public class Pens extends NetObject  {
 
     public static Pen getSlateBlue() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSlateBlue = null;
         try {
-            JCObject val = (JCObject)classType.Get("SlateBlue");
+            retObjectSlateBlue = classType.Get("SlateBlue");
+            JCObject val = (JCObject)retObjectSlateBlue;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSlateBlue != null ? retObjectSlateBlue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1533,10 +2033,14 @@ public class Pens extends NetObject  {
 
     public static Pen getSlateGray() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSlateGray = null;
         try {
-            JCObject val = (JCObject)classType.Get("SlateGray");
+            retObjectSlateGray = classType.Get("SlateGray");
+            JCObject val = (JCObject)retObjectSlateGray;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSlateGray != null ? retObjectSlateGray.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1544,10 +2048,14 @@ public class Pens extends NetObject  {
 
     public static Pen getSnow() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSnow = null;
         try {
-            JCObject val = (JCObject)classType.Get("Snow");
+            retObjectSnow = classType.Get("Snow");
+            JCObject val = (JCObject)retObjectSnow;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSnow != null ? retObjectSnow.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1555,10 +2063,14 @@ public class Pens extends NetObject  {
 
     public static Pen getSpringGreen() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSpringGreen = null;
         try {
-            JCObject val = (JCObject)classType.Get("SpringGreen");
+            retObjectSpringGreen = classType.Get("SpringGreen");
+            JCObject val = (JCObject)retObjectSpringGreen;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSpringGreen != null ? retObjectSpringGreen.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1566,10 +2078,14 @@ public class Pens extends NetObject  {
 
     public static Pen getSteelBlue() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSteelBlue = null;
         try {
-            JCObject val = (JCObject)classType.Get("SteelBlue");
+            retObjectSteelBlue = classType.Get("SteelBlue");
+            JCObject val = (JCObject)retObjectSteelBlue;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSteelBlue != null ? retObjectSteelBlue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1577,10 +2093,14 @@ public class Pens extends NetObject  {
 
     public static Pen getTan() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTan = null;
         try {
-            JCObject val = (JCObject)classType.Get("Tan");
+            retObjectTan = classType.Get("Tan");
+            JCObject val = (JCObject)retObjectTan;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTan != null ? retObjectTan.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1588,10 +2108,14 @@ public class Pens extends NetObject  {
 
     public static Pen getTeal() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTeal = null;
         try {
-            JCObject val = (JCObject)classType.Get("Teal");
+            retObjectTeal = classType.Get("Teal");
+            JCObject val = (JCObject)retObjectTeal;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTeal != null ? retObjectTeal.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1599,10 +2123,14 @@ public class Pens extends NetObject  {
 
     public static Pen getThistle() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectThistle = null;
         try {
-            JCObject val = (JCObject)classType.Get("Thistle");
+            retObjectThistle = classType.Get("Thistle");
+            JCObject val = (JCObject)retObjectThistle;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectThistle != null ? retObjectThistle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1610,10 +2138,14 @@ public class Pens extends NetObject  {
 
     public static Pen getTomato() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTomato = null;
         try {
-            JCObject val = (JCObject)classType.Get("Tomato");
+            retObjectTomato = classType.Get("Tomato");
+            JCObject val = (JCObject)retObjectTomato;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTomato != null ? retObjectTomato.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1621,10 +2153,14 @@ public class Pens extends NetObject  {
 
     public static Pen getTransparent() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTransparent = null;
         try {
-            JCObject val = (JCObject)classType.Get("Transparent");
+            retObjectTransparent = classType.Get("Transparent");
+            JCObject val = (JCObject)retObjectTransparent;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTransparent != null ? retObjectTransparent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1632,10 +2168,14 @@ public class Pens extends NetObject  {
 
     public static Pen getTurquoise() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTurquoise = null;
         try {
-            JCObject val = (JCObject)classType.Get("Turquoise");
+            retObjectTurquoise = classType.Get("Turquoise");
+            JCObject val = (JCObject)retObjectTurquoise;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTurquoise != null ? retObjectTurquoise.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1643,10 +2183,14 @@ public class Pens extends NetObject  {
 
     public static Pen getViolet() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectViolet = null;
         try {
-            JCObject val = (JCObject)classType.Get("Violet");
+            retObjectViolet = classType.Get("Violet");
+            JCObject val = (JCObject)retObjectViolet;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectViolet != null ? retObjectViolet.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1654,10 +2198,14 @@ public class Pens extends NetObject  {
 
     public static Pen getWheat() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectWheat = null;
         try {
-            JCObject val = (JCObject)classType.Get("Wheat");
+            retObjectWheat = classType.Get("Wheat");
+            JCObject val = (JCObject)retObjectWheat;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWheat != null ? retObjectWheat.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1665,10 +2213,14 @@ public class Pens extends NetObject  {
 
     public static Pen getWhite() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectWhite = null;
         try {
-            JCObject val = (JCObject)classType.Get("White");
+            retObjectWhite = classType.Get("White");
+            JCObject val = (JCObject)retObjectWhite;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWhite != null ? retObjectWhite.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1676,10 +2228,14 @@ public class Pens extends NetObject  {
 
     public static Pen getWhiteSmoke() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectWhiteSmoke = null;
         try {
-            JCObject val = (JCObject)classType.Get("WhiteSmoke");
+            retObjectWhiteSmoke = classType.Get("WhiteSmoke");
+            JCObject val = (JCObject)retObjectWhiteSmoke;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWhiteSmoke != null ? retObjectWhiteSmoke.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1687,10 +2243,14 @@ public class Pens extends NetObject  {
 
     public static Pen getYellow() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectYellow = null;
         try {
-            JCObject val = (JCObject)classType.Get("Yellow");
+            retObjectYellow = classType.Get("Yellow");
+            JCObject val = (JCObject)retObjectYellow;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectYellow != null ? retObjectYellow.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1698,10 +2258,14 @@ public class Pens extends NetObject  {
 
     public static Pen getYellowGreen() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectYellowGreen = null;
         try {
-            JCObject val = (JCObject)classType.Get("YellowGreen");
+            retObjectYellowGreen = classType.Get("YellowGreen");
+            JCObject val = (JCObject)retObjectYellowGreen;
             return new Pen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectYellowGreen != null ? retObjectYellowGreen.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

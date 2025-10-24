@@ -159,9 +159,13 @@ public class DataSourceView extends NetObject  {
     
     public boolean CanExecute(java.lang.String commandName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanExecute = null;
         try {
-            return (boolean)classInstance.Invoke("CanExecute", commandName);
+            retObjectCanExecute = classInstance.Invoke("CanExecute", commandName);
+            return (boolean)retObjectCanExecute;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCanExecute != null ? retObjectCanExecute.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,7 +173,7 @@ public class DataSourceView extends NetObject  {
 
     public void Delete(IDictionary keys, IDictionary oldValues, DataSourceViewOperationCallback callback) throws Throwable, system.ArgumentNullException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Delete", keys == null ? null : keys.getJCOInstance(), oldValues == null ? null : oldValues.getJCOInstance(), callback);
         } catch (JCNativeException jcne) {
@@ -179,7 +183,7 @@ public class DataSourceView extends NetObject  {
 
     public void ExecuteCommand(java.lang.String commandName, IDictionary keys, IDictionary values, DataSourceViewOperationCallback callback) throws Throwable, system.ArgumentNullException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ExecuteCommand", commandName, keys == null ? null : keys.getJCOInstance(), values == null ? null : values.getJCOInstance(), callback);
         } catch (JCNativeException jcne) {
@@ -189,7 +193,7 @@ public class DataSourceView extends NetObject  {
 
     public void Insert(IDictionary values, DataSourceViewOperationCallback callback) throws Throwable, system.ArgumentNullException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Insert", values == null ? null : values.getJCOInstance(), callback);
         } catch (JCNativeException jcne) {
@@ -199,7 +203,7 @@ public class DataSourceView extends NetObject  {
 
     public void Select(DataSourceSelectArguments arguments, DataSourceViewSelectCallback callback) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Select", arguments == null ? null : arguments.getJCOInstance(), callback);
         } catch (JCNativeException jcne) {
@@ -209,7 +213,7 @@ public class DataSourceView extends NetObject  {
 
     public void Update(IDictionary keys, IDictionary values, IDictionary oldValues, DataSourceViewOperationCallback callback) throws Throwable, system.ArgumentNullException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Update", keys == null ? null : keys.getJCOInstance(), values == null ? null : values.getJCOInstance(), oldValues == null ? null : oldValues.getJCOInstance(), callback);
         } catch (JCNativeException jcne) {
@@ -223,9 +227,13 @@ public class DataSourceView extends NetObject  {
     
     public boolean getCanDelete() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanDelete = null;
         try {
-            return (boolean)classInstance.Get("CanDelete");
+            retObjectCanDelete = classInstance.Get("CanDelete");
+            return (boolean)retObjectCanDelete;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCanDelete != null ? retObjectCanDelete.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -233,9 +241,13 @@ public class DataSourceView extends NetObject  {
 
     public boolean getCanInsert() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanInsert = null;
         try {
-            return (boolean)classInstance.Get("CanInsert");
+            retObjectCanInsert = classInstance.Get("CanInsert");
+            return (boolean)retObjectCanInsert;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCanInsert != null ? retObjectCanInsert.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -243,9 +255,13 @@ public class DataSourceView extends NetObject  {
 
     public boolean getCanPage() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanPage = null;
         try {
-            return (boolean)classInstance.Get("CanPage");
+            retObjectCanPage = classInstance.Get("CanPage");
+            return (boolean)retObjectCanPage;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCanPage != null ? retObjectCanPage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -253,9 +269,13 @@ public class DataSourceView extends NetObject  {
 
     public boolean getCanRetrieveTotalRowCount() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanRetrieveTotalRowCount = null;
         try {
-            return (boolean)classInstance.Get("CanRetrieveTotalRowCount");
+            retObjectCanRetrieveTotalRowCount = classInstance.Get("CanRetrieveTotalRowCount");
+            return (boolean)retObjectCanRetrieveTotalRowCount;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCanRetrieveTotalRowCount != null ? retObjectCanRetrieveTotalRowCount.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -263,9 +283,13 @@ public class DataSourceView extends NetObject  {
 
     public boolean getCanSort() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanSort = null;
         try {
-            return (boolean)classInstance.Get("CanSort");
+            retObjectCanSort = classInstance.Get("CanSort");
+            return (boolean)retObjectCanSort;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCanSort != null ? retObjectCanSort.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -273,9 +297,13 @@ public class DataSourceView extends NetObject  {
 
     public boolean getCanUpdate() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanUpdate = null;
         try {
-            return (boolean)classInstance.Get("CanUpdate");
+            retObjectCanUpdate = classInstance.Get("CanUpdate");
+            return (boolean)retObjectCanUpdate;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCanUpdate != null ? retObjectCanUpdate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -283,9 +311,13 @@ public class DataSourceView extends NetObject  {
 
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectName = null;
         try {
-            return (java.lang.String)classInstance.Get("Name");
+            retObjectName = classInstance.Get("Name");
+            return (java.lang.String)retObjectName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectName != null ? retObjectName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -298,7 +330,7 @@ public class DataSourceView extends NetObject  {
 
     public void addDataSourceViewChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("DataSourceViewChanged", handler);
         } catch (JCNativeException jcne) {
@@ -308,7 +340,7 @@ public class DataSourceView extends NetObject  {
 
     public void removeDataSourceViewChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("DataSourceViewChanged", handler);
         } catch (JCNativeException jcne) {

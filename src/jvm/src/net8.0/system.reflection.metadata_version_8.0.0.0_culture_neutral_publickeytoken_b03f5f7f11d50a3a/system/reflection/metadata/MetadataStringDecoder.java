@@ -171,10 +171,14 @@ public class MetadataStringDecoder extends NetObject  {
     
     public static MetadataStringDecoder getDefaultUTF8() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDefaultUTF8 = null;
         try {
-            JCObject val = (JCObject)classType.Get("DefaultUTF8");
+            retObjectDefaultUTF8 = classType.Get("DefaultUTF8");
+            JCObject val = (JCObject)retObjectDefaultUTF8;
             return new MetadataStringDecoder(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefaultUTF8 != null ? retObjectDefaultUTF8.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,10 +186,14 @@ public class MetadataStringDecoder extends NetObject  {
 
     public Encoding getEncoding() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEncoding = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Encoding");
+            retObjectEncoding = classInstance.Get("Encoding");
+            JCObject val = (JCObject)retObjectEncoding;
             return new Encoding(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEncoding != null ? retObjectEncoding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

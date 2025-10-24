@@ -175,7 +175,7 @@ public class Interop extends NativeActivity implements system.componentmodel.ICu
      */
     @Deprecated 
     public AttributeCollection GetAttributes() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICustomTypeDescriptor to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICustomTypeDescriptor to obtain the full interface.");
     }
 
     /**
@@ -184,7 +184,7 @@ public class Interop extends NativeActivity implements system.componentmodel.ICu
      */
     @Deprecated 
     public EventDescriptor GetDefaultEvent() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICustomTypeDescriptor to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICustomTypeDescriptor to obtain the full interface.");
     }
 
     /**
@@ -193,7 +193,7 @@ public class Interop extends NativeActivity implements system.componentmodel.ICu
      */
     @Deprecated 
     public EventDescriptorCollection GetEvents() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICustomTypeDescriptor to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICustomTypeDescriptor to obtain the full interface.");
     }
 
     /**
@@ -202,7 +202,7 @@ public class Interop extends NativeActivity implements system.componentmodel.ICu
      */
     @Deprecated 
     public EventDescriptorCollection GetEvents(Attribute[] attributes) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICustomTypeDescriptor to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICustomTypeDescriptor to obtain the full interface.");
     }
 
     /**
@@ -211,7 +211,7 @@ public class Interop extends NativeActivity implements system.componentmodel.ICu
      */
     @Deprecated 
     public PropertyDescriptor GetDefaultProperty() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICustomTypeDescriptor to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICustomTypeDescriptor to obtain the full interface.");
     }
 
     /**
@@ -220,7 +220,7 @@ public class Interop extends NativeActivity implements system.componentmodel.ICu
      */
     @Deprecated 
     public PropertyDescriptorCollection GetProperties() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICustomTypeDescriptor to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICustomTypeDescriptor to obtain the full interface.");
     }
 
     /**
@@ -229,7 +229,7 @@ public class Interop extends NativeActivity implements system.componentmodel.ICu
      */
     @Deprecated 
     public PropertyDescriptorCollection GetProperties(Attribute[] attributes) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICustomTypeDescriptor to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICustomTypeDescriptor to obtain the full interface.");
     }
 
     /**
@@ -238,7 +238,7 @@ public class Interop extends NativeActivity implements system.componentmodel.ICu
      */
     @Deprecated 
     public TypeConverter GetConverter() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICustomTypeDescriptor to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICustomTypeDescriptor to obtain the full interface.");
     }
 
     /**
@@ -247,7 +247,7 @@ public class Interop extends NativeActivity implements system.componentmodel.ICu
      */
     @Deprecated 
     public NetObject GetEditor(NetType editorBaseType) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICustomTypeDescriptor to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICustomTypeDescriptor to obtain the full interface.");
     }
 
     /**
@@ -256,7 +256,7 @@ public class Interop extends NativeActivity implements system.componentmodel.ICu
      */
     @Deprecated 
     public NetObject GetPropertyOwner(PropertyDescriptor pd) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICustomTypeDescriptor to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICustomTypeDescriptor to obtain the full interface.");
     }
 
     /**
@@ -265,7 +265,7 @@ public class Interop extends NativeActivity implements system.componentmodel.ICu
      */
     @Deprecated 
     public java.lang.String GetClassName() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICustomTypeDescriptor to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICustomTypeDescriptor to obtain the full interface.");
     }
 
     /**
@@ -274,7 +274,7 @@ public class Interop extends NativeActivity implements system.componentmodel.ICu
      */
     @Deprecated 
     public java.lang.String GetComponentName() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICustomTypeDescriptor to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICustomTypeDescriptor to obtain the full interface.");
     }
 
 
@@ -283,10 +283,14 @@ public class Interop extends NativeActivity implements system.componentmodel.ICu
     
     public NetType getActivityType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectActivityType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ActivityType");
+            retObjectActivityType = classInstance.Get("ActivityType");
+            JCObject val = (JCObject)retObjectActivityType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectActivityType != null ? retObjectActivityType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -294,7 +298,7 @@ public class Interop extends NativeActivity implements system.componentmodel.ICu
 
     public void setActivityType(NetType ActivityType) throws Throwable, system.InvalidOperationException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ActivityType", ActivityType == null ? null : ActivityType.getJCOInstance());
         } catch (JCNativeException jcne) {

@@ -160,9 +160,13 @@ public class TypeInfo extends NetObject implements system.reflection.IReflectabl
     
     public boolean IsAssignableFrom(TypeInfo typeInfo) throws Throwable, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsAssignableFrom = null;
         try {
-            return (boolean)classInstance.Invoke("IsAssignableFrom", typeInfo == null ? null : typeInfo.getJCOInstance());
+            retObjectIsAssignableFrom = classInstance.Invoke("IsAssignableFrom", typeInfo == null ? null : typeInfo.getJCOInstance());
+            return (boolean)retObjectIsAssignableFrom;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsAssignableFrom != null ? retObjectIsAssignableFrom.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,10 +174,14 @@ public class TypeInfo extends NetObject implements system.reflection.IReflectabl
 
     public EventInfo GetDeclaredEvent(java.lang.String name) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDeclaredEvent = null;
         try {
-            JCObject objGetDeclaredEvent = (JCObject)classInstance.Invoke("GetDeclaredEvent", name);
+            retObjectGetDeclaredEvent = classInstance.Invoke("GetDeclaredEvent", name);
+            JCObject objGetDeclaredEvent = (JCObject)retObjectGetDeclaredEvent;
             return new EventInfo(objGetDeclaredEvent);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetDeclaredEvent != null ? retObjectGetDeclaredEvent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,10 +189,14 @@ public class TypeInfo extends NetObject implements system.reflection.IReflectabl
 
     public FieldInfo GetDeclaredField(java.lang.String name) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDeclaredField = null;
         try {
-            JCObject objGetDeclaredField = (JCObject)classInstance.Invoke("GetDeclaredField", name);
+            retObjectGetDeclaredField = classInstance.Invoke("GetDeclaredField", name);
+            JCObject objGetDeclaredField = (JCObject)retObjectGetDeclaredField;
             return new FieldInfo(objGetDeclaredField);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetDeclaredField != null ? retObjectGetDeclaredField.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,10 +204,14 @@ public class TypeInfo extends NetObject implements system.reflection.IReflectabl
 
     public MethodInfo GetDeclaredMethod(java.lang.String name) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDeclaredMethod = null;
         try {
-            JCObject objGetDeclaredMethod = (JCObject)classInstance.Invoke("GetDeclaredMethod", name);
+            retObjectGetDeclaredMethod = classInstance.Invoke("GetDeclaredMethod", name);
+            JCObject objGetDeclaredMethod = (JCObject)retObjectGetDeclaredMethod;
             return new MethodInfo(objGetDeclaredMethod);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetDeclaredMethod != null ? retObjectGetDeclaredMethod.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,10 +219,14 @@ public class TypeInfo extends NetObject implements system.reflection.IReflectabl
 
     public PropertyInfo GetDeclaredProperty(java.lang.String name) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDeclaredProperty = null;
         try {
-            JCObject objGetDeclaredProperty = (JCObject)classInstance.Invoke("GetDeclaredProperty", name);
+            retObjectGetDeclaredProperty = classInstance.Invoke("GetDeclaredProperty", name);
+            JCObject objGetDeclaredProperty = (JCObject)retObjectGetDeclaredProperty;
             return new PropertyInfo(objGetDeclaredProperty);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetDeclaredProperty != null ? retObjectGetDeclaredProperty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -214,10 +234,14 @@ public class TypeInfo extends NetObject implements system.reflection.IReflectabl
 
     public TypeInfo GetDeclaredNestedType(java.lang.String name) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDeclaredNestedType = null;
         try {
-            JCObject objGetDeclaredNestedType = (JCObject)classInstance.Invoke("GetDeclaredNestedType", name);
+            retObjectGetDeclaredNestedType = classInstance.Invoke("GetDeclaredNestedType", name);
+            JCObject objGetDeclaredNestedType = (JCObject)retObjectGetDeclaredNestedType;
             return new TypeInfo(objGetDeclaredNestedType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetDeclaredNestedType != null ? retObjectGetDeclaredNestedType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -225,10 +249,14 @@ public class TypeInfo extends NetObject implements system.reflection.IReflectabl
 
     public NetType AsType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAsType = null;
         try {
-            JCObject objAsType = (JCObject)classInstance.Invoke("AsType");
+            retObjectAsType = classInstance.Invoke("AsType");
+            JCObject objAsType = (JCObject)retObjectAsType;
             return new NetType(objAsType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAsType != null ? retObjectAsType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -240,7 +268,7 @@ public class TypeInfo extends NetObject implements system.reflection.IReflectabl
      */
     @Deprecated 
     public TypeInfo GetTypeInfo() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIReflectableType to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIReflectableType to obtain the full interface.");
     }
 
 
@@ -249,16 +277,20 @@ public class TypeInfo extends NetObject implements system.reflection.IReflectabl
     
     public final NetType[] getGenericTypeParameters() throws Throwable, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGenericTypeParameters = null;
         try {
             ArrayList<NetType> resultingArrayList = new ArrayList<NetType>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("GenericTypeParameters");
+            retObjectGenericTypeParameters = classInstance.Get("GenericTypeParameters");
+            JCObject resultingObjects = (JCObject)retObjectGenericTypeParameters;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new NetType(resultingObject));
             }
             NetType[] resultingArray = new NetType[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGenericTypeParameters != null ? retObjectGenericTypeParameters.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

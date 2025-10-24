@@ -181,9 +181,13 @@ public class XamlObjectWriterSettings extends XamlWriterSettings  {
     
     public boolean getIgnoreCanConvert() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIgnoreCanConvert = null;
         try {
-            return (boolean)classInstance.Get("IgnoreCanConvert");
+            retObjectIgnoreCanConvert = classInstance.Get("IgnoreCanConvert");
+            return (boolean)retObjectIgnoreCanConvert;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIgnoreCanConvert != null ? retObjectIgnoreCanConvert.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,7 +195,7 @@ public class XamlObjectWriterSettings extends XamlWriterSettings  {
 
     public void setIgnoreCanConvert(boolean IgnoreCanConvert) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IgnoreCanConvert", IgnoreCanConvert);
         } catch (JCNativeException jcne) {
@@ -201,9 +205,13 @@ public class XamlObjectWriterSettings extends XamlWriterSettings  {
 
     public boolean getPreferUnconvertedDictionaryKeys() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPreferUnconvertedDictionaryKeys = null;
         try {
-            return (boolean)classInstance.Get("PreferUnconvertedDictionaryKeys");
+            retObjectPreferUnconvertedDictionaryKeys = classInstance.Get("PreferUnconvertedDictionaryKeys");
+            return (boolean)retObjectPreferUnconvertedDictionaryKeys;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectPreferUnconvertedDictionaryKeys != null ? retObjectPreferUnconvertedDictionaryKeys.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -211,7 +219,7 @@ public class XamlObjectWriterSettings extends XamlWriterSettings  {
 
     public void setPreferUnconvertedDictionaryKeys(boolean PreferUnconvertedDictionaryKeys) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PreferUnconvertedDictionaryKeys", PreferUnconvertedDictionaryKeys);
         } catch (JCNativeException jcne) {
@@ -221,9 +229,13 @@ public class XamlObjectWriterSettings extends XamlWriterSettings  {
 
     public boolean getRegisterNamesOnExternalNamescope() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRegisterNamesOnExternalNamescope = null;
         try {
-            return (boolean)classInstance.Get("RegisterNamesOnExternalNamescope");
+            retObjectRegisterNamesOnExternalNamescope = classInstance.Get("RegisterNamesOnExternalNamescope");
+            return (boolean)retObjectRegisterNamesOnExternalNamescope;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectRegisterNamesOnExternalNamescope != null ? retObjectRegisterNamesOnExternalNamescope.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -231,7 +243,7 @@ public class XamlObjectWriterSettings extends XamlWriterSettings  {
 
     public void setRegisterNamesOnExternalNamescope(boolean RegisterNamesOnExternalNamescope) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RegisterNamesOnExternalNamescope", RegisterNamesOnExternalNamescope);
         } catch (JCNativeException jcne) {
@@ -241,9 +253,13 @@ public class XamlObjectWriterSettings extends XamlWriterSettings  {
 
     public boolean getSkipDuplicatePropertyCheck() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSkipDuplicatePropertyCheck = null;
         try {
-            return (boolean)classInstance.Get("SkipDuplicatePropertyCheck");
+            retObjectSkipDuplicatePropertyCheck = classInstance.Get("SkipDuplicatePropertyCheck");
+            return (boolean)retObjectSkipDuplicatePropertyCheck;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectSkipDuplicatePropertyCheck != null ? retObjectSkipDuplicatePropertyCheck.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -251,7 +267,7 @@ public class XamlObjectWriterSettings extends XamlWriterSettings  {
 
     public void setSkipDuplicatePropertyCheck(boolean SkipDuplicatePropertyCheck) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SkipDuplicatePropertyCheck", SkipDuplicatePropertyCheck);
         } catch (JCNativeException jcne) {
@@ -261,9 +277,13 @@ public class XamlObjectWriterSettings extends XamlWriterSettings  {
 
     public boolean getSkipProvideValueOnRoot() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSkipProvideValueOnRoot = null;
         try {
-            return (boolean)classInstance.Get("SkipProvideValueOnRoot");
+            retObjectSkipProvideValueOnRoot = classInstance.Get("SkipProvideValueOnRoot");
+            return (boolean)retObjectSkipProvideValueOnRoot;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectSkipProvideValueOnRoot != null ? retObjectSkipProvideValueOnRoot.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -271,7 +291,7 @@ public class XamlObjectWriterSettings extends XamlWriterSettings  {
 
     public void setSkipProvideValueOnRoot(boolean SkipProvideValueOnRoot) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SkipProvideValueOnRoot", SkipProvideValueOnRoot);
         } catch (JCNativeException jcne) {
@@ -281,10 +301,14 @@ public class XamlObjectWriterSettings extends XamlWriterSettings  {
 
     public NetObject getRootObjectInstance() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRootObjectInstance = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RootObjectInstance");
+            retObjectRootObjectInstance = classInstance.Get("RootObjectInstance");
+            JCObject val = (JCObject)retObjectRootObjectInstance;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRootObjectInstance != null ? retObjectRootObjectInstance.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -292,7 +316,7 @@ public class XamlObjectWriterSettings extends XamlWriterSettings  {
 
     public void setRootObjectInstance(NetObject RootObjectInstance) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RootObjectInstance", RootObjectInstance == null ? null : RootObjectInstance.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -302,10 +326,14 @@ public class XamlObjectWriterSettings extends XamlWriterSettings  {
 
     public Uri getSourceBamlUri() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSourceBamlUri = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SourceBamlUri");
+            retObjectSourceBamlUri = classInstance.Get("SourceBamlUri");
+            JCObject val = (JCObject)retObjectSourceBamlUri;
             return new Uri(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSourceBamlUri != null ? retObjectSourceBamlUri.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -313,7 +341,7 @@ public class XamlObjectWriterSettings extends XamlWriterSettings  {
 
     public void setSourceBamlUri(Uri SourceBamlUri) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SourceBamlUri", SourceBamlUri == null ? null : SourceBamlUri.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -323,10 +351,14 @@ public class XamlObjectWriterSettings extends XamlWriterSettings  {
 
     public INameScope getExternalNameScope() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExternalNameScope = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ExternalNameScope");
+            retObjectExternalNameScope = classInstance.Get("ExternalNameScope");
+            JCObject val = (JCObject)retObjectExternalNameScope;
             return new INameScopeImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExternalNameScope != null ? retObjectExternalNameScope.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -334,7 +366,7 @@ public class XamlObjectWriterSettings extends XamlWriterSettings  {
 
     public void setExternalNameScope(INameScope ExternalNameScope) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ExternalNameScope", ExternalNameScope == null ? null : ExternalNameScope.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -344,10 +376,14 @@ public class XamlObjectWriterSettings extends XamlWriterSettings  {
 
     public XamlAccessLevel getAccessLevel() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAccessLevel = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AccessLevel");
+            retObjectAccessLevel = classInstance.Get("AccessLevel");
+            JCObject val = (JCObject)retObjectAccessLevel;
             return new XamlAccessLevel(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAccessLevel != null ? retObjectAccessLevel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -355,7 +391,7 @@ public class XamlObjectWriterSettings extends XamlWriterSettings  {
 
     public void setAccessLevel(XamlAccessLevel AccessLevel) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AccessLevel", AccessLevel == null ? null : AccessLevel.getJCOInstance());
         } catch (JCNativeException jcne) {

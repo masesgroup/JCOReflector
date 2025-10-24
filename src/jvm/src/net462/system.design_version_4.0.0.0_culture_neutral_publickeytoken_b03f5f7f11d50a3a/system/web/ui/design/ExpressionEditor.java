@@ -157,10 +157,14 @@ public class ExpressionEditor extends NetObject  {
     
     public NetObject EvaluateExpression(java.lang.String expression, NetObject parseTimeData, NetType propertyType, IServiceProvider serviceProvider) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEvaluateExpression = null;
         try {
-            JCObject objEvaluateExpression = (JCObject)classInstance.Invoke("EvaluateExpression", expression, parseTimeData == null ? null : parseTimeData.getJCOInstance(), propertyType == null ? null : propertyType.getJCOInstance(), serviceProvider == null ? null : serviceProvider.getJCOInstance());
+            retObjectEvaluateExpression = classInstance.Invoke("EvaluateExpression", expression, parseTimeData == null ? null : parseTimeData.getJCOInstance(), propertyType == null ? null : propertyType.getJCOInstance(), serviceProvider == null ? null : serviceProvider.getJCOInstance());
+            JCObject objEvaluateExpression = (JCObject)retObjectEvaluateExpression;
             return new NetObject(objEvaluateExpression);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEvaluateExpression != null ? retObjectEvaluateExpression.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -168,10 +172,14 @@ public class ExpressionEditor extends NetObject  {
 
     public static ExpressionEditor GetExpressionEditor(java.lang.String expressionPrefix, IServiceProvider serviceProvider) throws Throwable, system.ArgumentNullException, system.configuration.ConfigurationErrorsException, system.ObjectDisposedException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.OutOfMemoryException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.configuration.ConfigurationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetExpressionEditor = null;
         try {
-            JCObject objGetExpressionEditor = (JCObject)classType.Invoke("GetExpressionEditor", expressionPrefix, serviceProvider == null ? null : serviceProvider.getJCOInstance());
+            retObjectGetExpressionEditor = classType.Invoke("GetExpressionEditor", expressionPrefix, serviceProvider == null ? null : serviceProvider.getJCOInstance());
+            JCObject objGetExpressionEditor = (JCObject)retObjectGetExpressionEditor;
             return new ExpressionEditor(objGetExpressionEditor);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetExpressionEditor != null ? retObjectGetExpressionEditor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,10 +187,14 @@ public class ExpressionEditor extends NetObject  {
 
     public static ExpressionEditor GetExpressionEditor(NetType expressionBuilderType, IServiceProvider serviceProvider) throws Throwable, system.ArgumentNullException, system.configuration.ConfigurationErrorsException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotImplementedException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.configuration.ConfigurationException, system.NullReferenceException, system.TypeLoadException, system.xml.XmlException, system.io.IOException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetExpressionEditor = null;
         try {
-            JCObject objGetExpressionEditor = (JCObject)classType.Invoke("GetExpressionEditor", expressionBuilderType == null ? null : expressionBuilderType.getJCOInstance(), serviceProvider == null ? null : serviceProvider.getJCOInstance());
+            retObjectGetExpressionEditor = classType.Invoke("GetExpressionEditor", expressionBuilderType == null ? null : expressionBuilderType.getJCOInstance(), serviceProvider == null ? null : serviceProvider.getJCOInstance());
+            JCObject objGetExpressionEditor = (JCObject)retObjectGetExpressionEditor;
             return new ExpressionEditor(objGetExpressionEditor);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetExpressionEditor != null ? retObjectGetExpressionEditor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,10 +202,14 @@ public class ExpressionEditor extends NetObject  {
 
     public ExpressionEditorSheet GetExpressionEditorSheet(java.lang.String expression, IServiceProvider serviceProvider) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetExpressionEditorSheet = null;
         try {
-            JCObject objGetExpressionEditorSheet = (JCObject)classInstance.Invoke("GetExpressionEditorSheet", expression, serviceProvider == null ? null : serviceProvider.getJCOInstance());
+            retObjectGetExpressionEditorSheet = classInstance.Invoke("GetExpressionEditorSheet", expression, serviceProvider == null ? null : serviceProvider.getJCOInstance());
+            JCObject objGetExpressionEditorSheet = (JCObject)retObjectGetExpressionEditorSheet;
             return new ExpressionEditorSheet(objGetExpressionEditorSheet);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetExpressionEditorSheet != null ? retObjectGetExpressionEditorSheet.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -205,9 +221,13 @@ public class ExpressionEditor extends NetObject  {
     
     public java.lang.String getExpressionPrefix() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExpressionPrefix = null;
         try {
-            return (java.lang.String)classInstance.Get("ExpressionPrefix");
+            retObjectExpressionPrefix = classInstance.Get("ExpressionPrefix");
+            return (java.lang.String)retObjectExpressionPrefix;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectExpressionPrefix != null ? retObjectExpressionPrefix.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

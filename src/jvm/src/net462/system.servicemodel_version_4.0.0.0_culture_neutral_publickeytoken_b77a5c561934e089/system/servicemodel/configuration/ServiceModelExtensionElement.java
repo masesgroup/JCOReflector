@@ -155,7 +155,7 @@ public class ServiceModelExtensionElement extends ServiceModelConfigurationEleme
     
     public void CopyFrom(ServiceModelExtensionElement from) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CopyFrom", from == null ? null : from.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -169,9 +169,13 @@ public class ServiceModelExtensionElement extends ServiceModelConfigurationEleme
     
     public java.lang.String getConfigurationElementName() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationErrorsException, system.IndexOutOfRangeException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConfigurationElementName = null;
         try {
-            return (java.lang.String)classInstance.Get("ConfigurationElementName");
+            retObjectConfigurationElementName = classInstance.Get("ConfigurationElementName");
+            return (java.lang.String)retObjectConfigurationElementName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectConfigurationElementName != null ? retObjectConfigurationElementName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,7 +183,7 @@ public class ServiceModelExtensionElement extends ServiceModelConfigurationEleme
 
     public void setConfigurationElementName(java.lang.String ConfigurationElementName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ConfigurationElementName", ConfigurationElementName);
         } catch (JCNativeException jcne) {

@@ -161,10 +161,14 @@ public class BitmapSource extends ImageSource  {
     
     public BitmapSource CloneNewBitmapSource() throws Throwable, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClone = null;
         try {
-            JCObject objClone = (JCObject)classInstance.Invoke("Clone");
+            retObjectClone = classInstance.Invoke("Clone");
+            JCObject objClone = (JCObject)retObjectClone;
             return new BitmapSource(objClone);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClone != null ? retObjectClone.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,10 +176,14 @@ public class BitmapSource extends ImageSource  {
 
     public BitmapSource CloneCurrentValueNewBitmapSource() throws Throwable, system.InvalidOperationException, system.security.SecurityException, system.io.IOException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCloneCurrentValue = null;
         try {
-            JCObject objCloneCurrentValue = (JCObject)classInstance.Invoke("CloneCurrentValue");
+            retObjectCloneCurrentValue = classInstance.Invoke("CloneCurrentValue");
+            JCObject objCloneCurrentValue = (JCObject)retObjectCloneCurrentValue;
             return new BitmapSource(objCloneCurrentValue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCloneCurrentValue != null ? retObjectCloneCurrentValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,10 +191,14 @@ public class BitmapSource extends ImageSource  {
 
     public static BitmapSource Create(int pixelWidth, int pixelHeight, double dpiX, double dpiY, PixelFormat pixelFormat, BitmapPalette palette, Array pixels, int stride) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.InvalidOperationException, system.NotSupportedException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.NotImplementedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
         try {
-            JCObject objCreate = (JCObject)classType.Invoke("Create", pixelWidth, pixelHeight, dpiX, dpiY, pixelFormat == null ? null : pixelFormat.getJCOInstance(), palette == null ? null : palette.getJCOInstance(), pixels == null ? null : pixels.getJCOInstance(), stride);
+            retObjectCreate = classType.Invoke("Create", pixelWidth, pixelHeight, dpiX, dpiY, pixelFormat == null ? null : pixelFormat.getJCOInstance(), palette == null ? null : palette.getJCOInstance(), pixels == null ? null : pixels.getJCOInstance(), stride);
+            JCObject objCreate = (JCObject)retObjectCreate;
             return new BitmapSource(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -194,7 +206,7 @@ public class BitmapSource extends ImageSource  {
 
     public void CopyPixels(Array pixels, int stride, int offset) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.NotImplementedException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CopyPixels", pixels == null ? null : pixels.getJCOInstance(), stride, offset);
         } catch (JCNativeException jcne) {
@@ -204,7 +216,7 @@ public class BitmapSource extends ImageSource  {
 
     public void CopyPixels(Int32Rect sourceRect, Array pixels, int stride, int offset) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.NotImplementedException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CopyPixels", sourceRect == null ? null : sourceRect.getJCOInstance(), pixels == null ? null : pixels.getJCOInstance(), stride, offset);
         } catch (JCNativeException jcne) {
@@ -218,9 +230,13 @@ public class BitmapSource extends ImageSource  {
     
     public boolean getIsDownloading() throws Throwable, system.ArgumentException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsDownloading = null;
         try {
-            return (boolean)classInstance.Get("IsDownloading");
+            retObjectIsDownloading = classInstance.Get("IsDownloading");
+            return (boolean)retObjectIsDownloading;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsDownloading != null ? retObjectIsDownloading.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -228,9 +244,20 @@ public class BitmapSource extends ImageSource  {
 
     public double getDpiX() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.NotImplementedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDpiX = null;
         try {
-            return (double)classInstance.Get("DpiX");
+            retObjectDpiX = classInstance.Get("DpiX");
+            return (double)retObjectDpiX;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDpiX_ToString = retObjectDpiX == null ? "null" : retObjectDpiX.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectDpiXNumber = (java.lang.Number)retObjectDpiX;
+                return retObjectDpiXNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectDpiX != null ? retObjectDpiX.getClass() : "null", retObjectDpiX_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -238,9 +265,20 @@ public class BitmapSource extends ImageSource  {
 
     public double getDpiY() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.NotImplementedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDpiY = null;
         try {
-            return (double)classInstance.Get("DpiY");
+            retObjectDpiY = classInstance.Get("DpiY");
+            return (double)retObjectDpiY;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDpiY_ToString = retObjectDpiY == null ? "null" : retObjectDpiY.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectDpiYNumber = (java.lang.Number)retObjectDpiY;
+                return retObjectDpiYNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectDpiY != null ? retObjectDpiY.getClass() : "null", retObjectDpiY_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -248,9 +286,20 @@ public class BitmapSource extends ImageSource  {
 
     public int getPixelHeight() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.NotImplementedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPixelHeight = null;
         try {
-            return (int)classInstance.Get("PixelHeight");
+            retObjectPixelHeight = classInstance.Get("PixelHeight");
+            return (int)retObjectPixelHeight;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectPixelHeight_ToString = retObjectPixelHeight == null ? "null" : retObjectPixelHeight.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectPixelHeightNumber = (java.lang.Number)retObjectPixelHeight;
+                return retObjectPixelHeightNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectPixelHeight != null ? retObjectPixelHeight.getClass() : "null", retObjectPixelHeight_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -258,9 +307,20 @@ public class BitmapSource extends ImageSource  {
 
     public int getPixelWidth() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.NotImplementedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPixelWidth = null;
         try {
-            return (int)classInstance.Get("PixelWidth");
+            retObjectPixelWidth = classInstance.Get("PixelWidth");
+            return (int)retObjectPixelWidth;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectPixelWidth_ToString = retObjectPixelWidth == null ? "null" : retObjectPixelWidth.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectPixelWidthNumber = (java.lang.Number)retObjectPixelWidth;
+                return retObjectPixelWidthNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectPixelWidth != null ? retObjectPixelWidth.getClass() : "null", retObjectPixelWidth_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -268,10 +328,14 @@ public class BitmapSource extends ImageSource  {
 
     public BitmapPalette getPalette() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.NotImplementedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPalette = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Palette");
+            retObjectPalette = classInstance.Get("Palette");
+            JCObject val = (JCObject)retObjectPalette;
             return new BitmapPalette(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPalette != null ? retObjectPalette.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -279,10 +343,14 @@ public class BitmapSource extends ImageSource  {
 
     public PixelFormat getFormat() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.NotImplementedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFormat = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Format");
+            retObjectFormat = classInstance.Get("Format");
+            JCObject val = (JCObject)retObjectFormat;
             return new PixelFormat(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFormat != null ? retObjectFormat.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -295,7 +363,7 @@ public class BitmapSource extends ImageSource  {
 
     public void addDownloadCompleted(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("DownloadCompleted", handler);
         } catch (JCNativeException jcne) {
@@ -305,7 +373,7 @@ public class BitmapSource extends ImageSource  {
 
     public void removeDownloadCompleted(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("DownloadCompleted", handler);
         } catch (JCNativeException jcne) {

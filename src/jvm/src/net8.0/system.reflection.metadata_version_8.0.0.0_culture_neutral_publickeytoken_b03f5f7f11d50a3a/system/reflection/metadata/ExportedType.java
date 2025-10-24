@@ -161,10 +161,14 @@ public class ExportedType extends ValueType  {
     
     public CustomAttributeHandleCollection GetCustomAttributes() throws Throwable, system.BadImageFormatException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetCustomAttributes = null;
         try {
-            JCObject objGetCustomAttributes = (JCObject)classInstance.Invoke("GetCustomAttributes");
+            retObjectGetCustomAttributes = classInstance.Invoke("GetCustomAttributes");
+            JCObject objGetCustomAttributes = (JCObject)retObjectGetCustomAttributes;
             return new CustomAttributeHandleCollection(objGetCustomAttributes);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCustomAttributes != null ? retObjectGetCustomAttributes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,9 +180,13 @@ public class ExportedType extends ValueType  {
     
     public boolean getIsForwarder() throws Throwable, system.ArgumentException, system.BadImageFormatException, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsForwarder = null;
         try {
-            return (boolean)classInstance.Get("IsForwarder");
+            retObjectIsForwarder = classInstance.Get("IsForwarder");
+            return (boolean)retObjectIsForwarder;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsForwarder != null ? retObjectIsForwarder.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,10 +194,14 @@ public class ExportedType extends ValueType  {
 
     public EntityHandle getImplementation() throws Throwable, system.BadImageFormatException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectImplementation = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Implementation");
+            retObjectImplementation = classInstance.Get("Implementation");
+            JCObject val = (JCObject)retObjectImplementation;
             return new EntityHandle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectImplementation != null ? retObjectImplementation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,10 +209,14 @@ public class ExportedType extends ValueType  {
 
     public NamespaceDefinitionHandle getNamespaceDefinition() throws Throwable, system.ArgumentException, system.BadImageFormatException, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNamespaceDefinition = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("NamespaceDefinition");
+            retObjectNamespaceDefinition = classInstance.Get("NamespaceDefinition");
+            JCObject val = (JCObject)retObjectNamespaceDefinition;
             return new NamespaceDefinitionHandle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNamespaceDefinition != null ? retObjectNamespaceDefinition.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -208,10 +224,14 @@ public class ExportedType extends ValueType  {
 
     public StringHandle getName() throws Throwable, system.ArgumentException, system.BadImageFormatException, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectName = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Name");
+            retObjectName = classInstance.Get("Name");
+            JCObject val = (JCObject)retObjectName;
             return new StringHandle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectName != null ? retObjectName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -219,10 +239,14 @@ public class ExportedType extends ValueType  {
 
     public StringHandle getNamespace() throws Throwable, system.ArgumentException, system.BadImageFormatException, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNamespace = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Namespace");
+            retObjectNamespace = classInstance.Get("Namespace");
+            JCObject val = (JCObject)retObjectNamespace;
             return new StringHandle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNamespace != null ? retObjectNamespace.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -230,10 +254,14 @@ public class ExportedType extends ValueType  {
 
     public TypeAttributes getAttributes() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.BadImageFormatException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAttributes = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Attributes");
+            retObjectAttributes = classInstance.Get("Attributes");
+            JCObject val = (JCObject)retObjectAttributes;
             return new TypeAttributes(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAttributes != null ? retObjectAttributes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

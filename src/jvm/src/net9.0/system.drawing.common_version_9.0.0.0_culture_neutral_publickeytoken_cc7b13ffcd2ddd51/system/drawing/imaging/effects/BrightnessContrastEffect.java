@@ -170,9 +170,20 @@ public class BrightnessContrastEffect extends Effect  {
     
     public int getBrightnessLevel() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBrightnessLevel = null;
         try {
-            return (int)classInstance.Get("BrightnessLevel");
+            retObjectBrightnessLevel = classInstance.Get("BrightnessLevel");
+            return (int)retObjectBrightnessLevel;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectBrightnessLevel_ToString = retObjectBrightnessLevel == null ? "null" : retObjectBrightnessLevel.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectBrightnessLevelNumber = (java.lang.Number)retObjectBrightnessLevel;
+                return retObjectBrightnessLevelNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectBrightnessLevel != null ? retObjectBrightnessLevel.getClass() : "null", retObjectBrightnessLevel_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,9 +191,20 @@ public class BrightnessContrastEffect extends Effect  {
 
     public int getContrastLevel() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContrastLevel = null;
         try {
-            return (int)classInstance.Get("ContrastLevel");
+            retObjectContrastLevel = classInstance.Get("ContrastLevel");
+            return (int)retObjectContrastLevel;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectContrastLevel_ToString = retObjectContrastLevel == null ? "null" : retObjectContrastLevel.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectContrastLevelNumber = (java.lang.Number)retObjectContrastLevel;
+                return retObjectContrastLevelNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectContrastLevel != null ? retObjectContrastLevel.getClass() : "null", retObjectContrastLevel_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

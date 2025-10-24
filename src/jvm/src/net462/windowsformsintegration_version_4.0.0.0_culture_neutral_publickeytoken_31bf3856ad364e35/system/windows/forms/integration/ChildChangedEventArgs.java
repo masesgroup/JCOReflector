@@ -170,10 +170,14 @@ public class ChildChangedEventArgs extends EventArgs  {
     
     public NetObject getPreviousChild() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPreviousChild = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PreviousChild");
+            retObjectPreviousChild = classInstance.Get("PreviousChild");
+            JCObject val = (JCObject)retObjectPreviousChild;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPreviousChild != null ? retObjectPreviousChild.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

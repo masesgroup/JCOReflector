@@ -177,9 +177,13 @@ public class XamlXmlReaderSettings extends XamlReaderSettings  {
     
     public boolean getCloseInput() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCloseInput = null;
         try {
-            return (boolean)classInstance.Get("CloseInput");
+            retObjectCloseInput = classInstance.Get("CloseInput");
+            return (boolean)retObjectCloseInput;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCloseInput != null ? retObjectCloseInput.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,7 +191,7 @@ public class XamlXmlReaderSettings extends XamlReaderSettings  {
 
     public void setCloseInput(boolean CloseInput) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CloseInput", CloseInput);
         } catch (JCNativeException jcne) {
@@ -197,9 +201,13 @@ public class XamlXmlReaderSettings extends XamlReaderSettings  {
 
     public boolean getSkipXmlCompatibilityProcessing() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSkipXmlCompatibilityProcessing = null;
         try {
-            return (boolean)classInstance.Get("SkipXmlCompatibilityProcessing");
+            retObjectSkipXmlCompatibilityProcessing = classInstance.Get("SkipXmlCompatibilityProcessing");
+            return (boolean)retObjectSkipXmlCompatibilityProcessing;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectSkipXmlCompatibilityProcessing != null ? retObjectSkipXmlCompatibilityProcessing.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -207,7 +215,7 @@ public class XamlXmlReaderSettings extends XamlReaderSettings  {
 
     public void setSkipXmlCompatibilityProcessing(boolean SkipXmlCompatibilityProcessing) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SkipXmlCompatibilityProcessing", SkipXmlCompatibilityProcessing);
         } catch (JCNativeException jcne) {
@@ -217,9 +225,13 @@ public class XamlXmlReaderSettings extends XamlReaderSettings  {
 
     public boolean getXmlSpacePreserve() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectXmlSpacePreserve = null;
         try {
-            return (boolean)classInstance.Get("XmlSpacePreserve");
+            retObjectXmlSpacePreserve = classInstance.Get("XmlSpacePreserve");
+            return (boolean)retObjectXmlSpacePreserve;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectXmlSpacePreserve != null ? retObjectXmlSpacePreserve.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -227,7 +239,7 @@ public class XamlXmlReaderSettings extends XamlReaderSettings  {
 
     public void setXmlSpacePreserve(boolean XmlSpacePreserve) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("XmlSpacePreserve", XmlSpacePreserve);
         } catch (JCNativeException jcne) {
@@ -237,9 +249,13 @@ public class XamlXmlReaderSettings extends XamlReaderSettings  {
 
     public java.lang.String getXmlLang() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectXmlLang = null;
         try {
-            return (java.lang.String)classInstance.Get("XmlLang");
+            retObjectXmlLang = classInstance.Get("XmlLang");
+            return (java.lang.String)retObjectXmlLang;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectXmlLang != null ? retObjectXmlLang.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -247,7 +263,7 @@ public class XamlXmlReaderSettings extends XamlReaderSettings  {
 
     public void setXmlLang(java.lang.String XmlLang) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("XmlLang", XmlLang);
         } catch (JCNativeException jcne) {

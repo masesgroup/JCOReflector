@@ -168,9 +168,13 @@ public class WinMDExp extends ToolTaskExtension  {
     
     public boolean getTreatWarningsAsErrors() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTreatWarningsAsErrors = null;
         try {
-            return (boolean)classInstance.Get("TreatWarningsAsErrors");
+            retObjectTreatWarningsAsErrors = classInstance.Get("TreatWarningsAsErrors");
+            return (boolean)retObjectTreatWarningsAsErrors;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectTreatWarningsAsErrors != null ? retObjectTreatWarningsAsErrors.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,7 +182,7 @@ public class WinMDExp extends ToolTaskExtension  {
 
     public void setTreatWarningsAsErrors(boolean TreatWarningsAsErrors) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TreatWarningsAsErrors", TreatWarningsAsErrors);
         } catch (JCNativeException jcne) {
@@ -188,9 +192,13 @@ public class WinMDExp extends ToolTaskExtension  {
 
     public boolean getUTF8Output() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUTF8Output = null;
         try {
-            return (boolean)classInstance.Get("UTF8Output");
+            retObjectUTF8Output = classInstance.Get("UTF8Output");
+            return (boolean)retObjectUTF8Output;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectUTF8Output != null ? retObjectUTF8Output.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,7 +206,7 @@ public class WinMDExp extends ToolTaskExtension  {
 
     public void setUTF8Output(boolean UTF8Output) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UTF8Output", UTF8Output);
         } catch (JCNativeException jcne) {
@@ -208,16 +216,20 @@ public class WinMDExp extends ToolTaskExtension  {
 
     public final ITaskItem[] getReferences() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReferences = null;
         try {
             ArrayList<ITaskItem> resultingArrayList = new ArrayList<ITaskItem>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("References");
+            retObjectReferences = classInstance.Get("References");
+            JCObject resultingObjects = (JCObject)retObjectReferences;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ITaskItemImplementation(resultingObject));
             }
             ITaskItem[] resultingArray = new ITaskItem[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReferences != null ? retObjectReferences.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -225,7 +237,7 @@ public class WinMDExp extends ToolTaskExtension  {
 
     public void setReferences(ITaskItem[] References) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("References", toObjectFromArray(References));
         } catch (JCNativeException jcne) {
@@ -235,9 +247,13 @@ public class WinMDExp extends ToolTaskExtension  {
 
     public java.lang.String getDisabledWarnings() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDisabledWarnings = null;
         try {
-            return (java.lang.String)classInstance.Get("DisabledWarnings");
+            retObjectDisabledWarnings = classInstance.Get("DisabledWarnings");
+            return (java.lang.String)retObjectDisabledWarnings;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDisabledWarnings != null ? retObjectDisabledWarnings.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -245,7 +261,7 @@ public class WinMDExp extends ToolTaskExtension  {
 
     public void setDisabledWarnings(java.lang.String DisabledWarnings) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DisabledWarnings", DisabledWarnings);
         } catch (JCNativeException jcne) {
@@ -255,9 +271,13 @@ public class WinMDExp extends ToolTaskExtension  {
 
     public java.lang.String getInputDocumentationFile() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInputDocumentationFile = null;
         try {
-            return (java.lang.String)classInstance.Get("InputDocumentationFile");
+            retObjectInputDocumentationFile = classInstance.Get("InputDocumentationFile");
+            return (java.lang.String)retObjectInputDocumentationFile;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectInputDocumentationFile != null ? retObjectInputDocumentationFile.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -265,7 +285,7 @@ public class WinMDExp extends ToolTaskExtension  {
 
     public void setInputDocumentationFile(java.lang.String InputDocumentationFile) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("InputDocumentationFile", InputDocumentationFile);
         } catch (JCNativeException jcne) {
@@ -275,9 +295,13 @@ public class WinMDExp extends ToolTaskExtension  {
 
     public java.lang.String getInputPDBFile() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInputPDBFile = null;
         try {
-            return (java.lang.String)classInstance.Get("InputPDBFile");
+            retObjectInputPDBFile = classInstance.Get("InputPDBFile");
+            return (java.lang.String)retObjectInputPDBFile;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectInputPDBFile != null ? retObjectInputPDBFile.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -285,7 +309,7 @@ public class WinMDExp extends ToolTaskExtension  {
 
     public void setInputPDBFile(java.lang.String InputPDBFile) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("InputPDBFile", InputPDBFile);
         } catch (JCNativeException jcne) {
@@ -295,9 +319,13 @@ public class WinMDExp extends ToolTaskExtension  {
 
     public java.lang.String getOutputDocumentationFile() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOutputDocumentationFile = null;
         try {
-            return (java.lang.String)classInstance.Get("OutputDocumentationFile");
+            retObjectOutputDocumentationFile = classInstance.Get("OutputDocumentationFile");
+            return (java.lang.String)retObjectOutputDocumentationFile;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectOutputDocumentationFile != null ? retObjectOutputDocumentationFile.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -305,7 +333,7 @@ public class WinMDExp extends ToolTaskExtension  {
 
     public void setOutputDocumentationFile(java.lang.String OutputDocumentationFile) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("OutputDocumentationFile", OutputDocumentationFile);
         } catch (JCNativeException jcne) {
@@ -315,9 +343,13 @@ public class WinMDExp extends ToolTaskExtension  {
 
     public java.lang.String getOutputPDBFile() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOutputPDBFile = null;
         try {
-            return (java.lang.String)classInstance.Get("OutputPDBFile");
+            retObjectOutputPDBFile = classInstance.Get("OutputPDBFile");
+            return (java.lang.String)retObjectOutputPDBFile;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectOutputPDBFile != null ? retObjectOutputPDBFile.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -325,7 +357,7 @@ public class WinMDExp extends ToolTaskExtension  {
 
     public void setOutputPDBFile(java.lang.String OutputPDBFile) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("OutputPDBFile", OutputPDBFile);
         } catch (JCNativeException jcne) {
@@ -335,9 +367,13 @@ public class WinMDExp extends ToolTaskExtension  {
 
     public java.lang.String getOutputWindowsMetadataFile() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOutputWindowsMetadataFile = null;
         try {
-            return (java.lang.String)classInstance.Get("OutputWindowsMetadataFile");
+            retObjectOutputWindowsMetadataFile = classInstance.Get("OutputWindowsMetadataFile");
+            return (java.lang.String)retObjectOutputWindowsMetadataFile;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectOutputWindowsMetadataFile != null ? retObjectOutputWindowsMetadataFile.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -345,7 +381,7 @@ public class WinMDExp extends ToolTaskExtension  {
 
     public void setOutputWindowsMetadataFile(java.lang.String OutputWindowsMetadataFile) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("OutputWindowsMetadataFile", OutputWindowsMetadataFile);
         } catch (JCNativeException jcne) {
@@ -355,9 +391,13 @@ public class WinMDExp extends ToolTaskExtension  {
 
     public java.lang.String getSdkToolsPath() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSdkToolsPath = null;
         try {
-            return (java.lang.String)classInstance.Get("SdkToolsPath");
+            retObjectSdkToolsPath = classInstance.Get("SdkToolsPath");
+            return (java.lang.String)retObjectSdkToolsPath;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSdkToolsPath != null ? retObjectSdkToolsPath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -365,7 +405,7 @@ public class WinMDExp extends ToolTaskExtension  {
 
     public void setSdkToolsPath(java.lang.String SdkToolsPath) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SdkToolsPath", SdkToolsPath);
         } catch (JCNativeException jcne) {
@@ -375,9 +415,13 @@ public class WinMDExp extends ToolTaskExtension  {
 
     public java.lang.String getWinMDModule() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWinMDModule = null;
         try {
-            return (java.lang.String)classInstance.Get("WinMDModule");
+            retObjectWinMDModule = classInstance.Get("WinMDModule");
+            return (java.lang.String)retObjectWinMDModule;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectWinMDModule != null ? retObjectWinMDModule.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -385,7 +429,7 @@ public class WinMDExp extends ToolTaskExtension  {
 
     public void setWinMDModule(java.lang.String WinMDModule) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("WinMDModule", WinMDModule);
         } catch (JCNativeException jcne) {

@@ -169,9 +169,20 @@ public class CommonAce extends QualifiedAce  {
     
     public static int MaxOpaqueLength(boolean isCallback) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMaxOpaqueLength = null;
         try {
-            return (int)classType.Invoke("MaxOpaqueLength", isCallback);
+            retObjectMaxOpaqueLength = classType.Invoke("MaxOpaqueLength", isCallback);
+            return (int)retObjectMaxOpaqueLength;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaxOpaqueLength_ToString = retObjectMaxOpaqueLength == null ? "null" : retObjectMaxOpaqueLength.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMaxOpaqueLengthNumber = (java.lang.Number)retObjectMaxOpaqueLength;
+                return retObjectMaxOpaqueLengthNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxOpaqueLength != null ? retObjectMaxOpaqueLength.getClass() : "null", retObjectMaxOpaqueLength_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,7 +190,7 @@ public class CommonAce extends QualifiedAce  {
 
     public void GetBinaryForm(byte[] binaryForm, int offset) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetBinaryForm", binaryForm, offset);
         } catch (JCNativeException jcne) {
@@ -189,7 +200,7 @@ public class CommonAce extends QualifiedAce  {
 
     public void GetBinaryForm(JCORefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetBinaryForm", dupParam0.getJCRefOut(), dupParam1);
         } catch (JCNativeException jcne) {

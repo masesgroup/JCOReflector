@@ -166,9 +166,13 @@ public class ThemeableAttribute extends Attribute  {
     
     public boolean IsDefaultAttribute() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsDefaultAttribute = null;
         try {
-            return (boolean)classInstance.Invoke("IsDefaultAttribute");
+            retObjectIsDefaultAttribute = classInstance.Invoke("IsDefaultAttribute");
+            return (boolean)retObjectIsDefaultAttribute;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsDefaultAttribute != null ? retObjectIsDefaultAttribute.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,9 +180,13 @@ public class ThemeableAttribute extends Attribute  {
 
     public static boolean IsObjectThemeable(NetObject instance) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException, system.reflection.AmbiguousMatchException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsObjectThemeable = null;
         try {
-            return (boolean)classType.Invoke("IsObjectThemeable", instance == null ? null : instance.getJCOInstance());
+            retObjectIsObjectThemeable = classType.Invoke("IsObjectThemeable", instance == null ? null : instance.getJCOInstance());
+            return (boolean)retObjectIsObjectThemeable;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsObjectThemeable != null ? retObjectIsObjectThemeable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,9 +194,13 @@ public class ThemeableAttribute extends Attribute  {
 
     public static boolean IsTypeThemeable(NetType type) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException, system.InvalidOperationException, system.reflection.AmbiguousMatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsTypeThemeable = null;
         try {
-            return (boolean)classType.Invoke("IsTypeThemeable", type == null ? null : type.getJCOInstance());
+            retObjectIsTypeThemeable = classType.Invoke("IsTypeThemeable", type == null ? null : type.getJCOInstance());
+            return (boolean)retObjectIsTypeThemeable;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsTypeThemeable != null ? retObjectIsTypeThemeable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,9 +212,13 @@ public class ThemeableAttribute extends Attribute  {
     
     public boolean getThemeable() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectThemeable = null;
         try {
-            return (boolean)classInstance.Get("Themeable");
+            retObjectThemeable = classInstance.Get("Themeable");
+            return (boolean)retObjectThemeable;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectThemeable != null ? retObjectThemeable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

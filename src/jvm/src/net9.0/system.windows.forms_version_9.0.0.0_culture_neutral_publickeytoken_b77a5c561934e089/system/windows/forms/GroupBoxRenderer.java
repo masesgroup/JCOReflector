@@ -160,9 +160,13 @@ public class GroupBoxRenderer extends NetObject  {
     
     public static boolean IsBackgroundPartiallyTransparent(GroupBoxState state) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsBackgroundPartiallyTransparent = null;
         try {
-            return (boolean)classType.Invoke("IsBackgroundPartiallyTransparent", state == null ? null : state.getJCOInstance());
+            retObjectIsBackgroundPartiallyTransparent = classType.Invoke("IsBackgroundPartiallyTransparent", state == null ? null : state.getJCOInstance());
+            return (boolean)retObjectIsBackgroundPartiallyTransparent;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsBackgroundPartiallyTransparent != null ? retObjectIsBackgroundPartiallyTransparent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,7 +174,7 @@ public class GroupBoxRenderer extends NetObject  {
 
     public static void DrawGroupBox(Graphics g, Rectangle bounds, java.lang.String groupBoxText, Font font, Color textColor, TextFormatFlags flags, GroupBoxState state) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("DrawGroupBox", g == null ? null : g.getJCOInstance(), bounds == null ? null : bounds.getJCOInstance(), groupBoxText, font == null ? null : font.getJCOInstance(), textColor == null ? null : textColor.getJCOInstance(), flags == null ? null : flags.getJCOInstance(), state == null ? null : state.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -180,7 +184,7 @@ public class GroupBoxRenderer extends NetObject  {
 
     public static void DrawGroupBox(Graphics g, Rectangle bounds, java.lang.String groupBoxText, Font font, Color textColor, GroupBoxState state) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("DrawGroupBox", g == null ? null : g.getJCOInstance(), bounds == null ? null : bounds.getJCOInstance(), groupBoxText, font == null ? null : font.getJCOInstance(), textColor == null ? null : textColor.getJCOInstance(), state == null ? null : state.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -190,7 +194,7 @@ public class GroupBoxRenderer extends NetObject  {
 
     public static void DrawGroupBox(Graphics g, Rectangle bounds, java.lang.String groupBoxText, Font font, TextFormatFlags flags, GroupBoxState state) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.collections.generic.KeyNotFoundException, system.componentmodel.InvalidEnumArgumentException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("DrawGroupBox", g == null ? null : g.getJCOInstance(), bounds == null ? null : bounds.getJCOInstance(), groupBoxText, font == null ? null : font.getJCOInstance(), flags == null ? null : flags.getJCOInstance(), state == null ? null : state.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -200,7 +204,7 @@ public class GroupBoxRenderer extends NetObject  {
 
     public static void DrawGroupBox(Graphics g, Rectangle bounds, java.lang.String groupBoxText, Font font, GroupBoxState state) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException, system.PlatformNotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("DrawGroupBox", g == null ? null : g.getJCOInstance(), bounds == null ? null : bounds.getJCOInstance(), groupBoxText, font == null ? null : font.getJCOInstance(), state == null ? null : state.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -210,7 +214,7 @@ public class GroupBoxRenderer extends NetObject  {
 
     public static void DrawGroupBox(Graphics g, Rectangle bounds, GroupBoxState state) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("DrawGroupBox", g == null ? null : g.getJCOInstance(), bounds == null ? null : bounds.getJCOInstance(), state == null ? null : state.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -220,7 +224,7 @@ public class GroupBoxRenderer extends NetObject  {
 
     public static void DrawParentBackground(Graphics g, Rectangle bounds, Control childControl) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.NotSupportedException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("DrawParentBackground", g == null ? null : g.getJCOInstance(), bounds == null ? null : bounds.getJCOInstance(), childControl == null ? null : childControl.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -234,9 +238,13 @@ public class GroupBoxRenderer extends NetObject  {
     
     public static boolean getRenderMatchingApplicationState() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectRenderMatchingApplicationState = null;
         try {
-            return (boolean)classType.Get("RenderMatchingApplicationState");
+            retObjectRenderMatchingApplicationState = classType.Get("RenderMatchingApplicationState");
+            return (boolean)retObjectRenderMatchingApplicationState;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectRenderMatchingApplicationState != null ? retObjectRenderMatchingApplicationState.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -244,7 +252,7 @@ public class GroupBoxRenderer extends NetObject  {
 
     public static void setRenderMatchingApplicationState(boolean RenderMatchingApplicationState) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Set("RenderMatchingApplicationState", RenderMatchingApplicationState);
         } catch (JCNativeException jcne) {

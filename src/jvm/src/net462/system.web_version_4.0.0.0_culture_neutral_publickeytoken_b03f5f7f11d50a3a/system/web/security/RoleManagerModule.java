@@ -163,7 +163,7 @@ public class RoleManagerModule extends NetObject  {
     
     public void Dispose() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
@@ -173,7 +173,7 @@ public class RoleManagerModule extends NetObject  {
 
     public void Init(HttpApplication app) throws Throwable, system.ArgumentException, system.security.SecurityException, system.ArgumentNullException, system.NotImplementedException, system.NotSupportedException, system.InvalidOperationException, system.MemberAccessException, system.reflection.TargetException, system.reflection.TargetParameterCountException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.web.HttpException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.threading.ThreadAbortException, system.runtime.serialization.SerializationException, system.MulticastNotSupportedException, system.OutOfMemoryException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Init", app == null ? null : app.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -192,7 +192,7 @@ public class RoleManagerModule extends NetObject  {
 
     public void addGetRoles(RoleManagerEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("GetRoles", handler);
         } catch (JCNativeException jcne) {
@@ -202,7 +202,7 @@ public class RoleManagerModule extends NetObject  {
 
     public void removeGetRoles(RoleManagerEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("GetRoles", handler);
         } catch (JCNativeException jcne) {

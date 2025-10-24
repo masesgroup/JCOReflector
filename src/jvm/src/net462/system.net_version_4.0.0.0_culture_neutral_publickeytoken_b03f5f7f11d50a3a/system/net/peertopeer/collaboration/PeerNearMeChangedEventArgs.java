@@ -162,10 +162,14 @@ public class PeerNearMeChangedEventArgs extends EventArgs  {
     
     public PeerChangeType getPeerChangeType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPeerChangeType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PeerChangeType");
+            retObjectPeerChangeType = classInstance.Get("PeerChangeType");
+            JCObject val = (JCObject)retObjectPeerChangeType;
             return new PeerChangeType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPeerChangeType != null ? retObjectPeerChangeType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -173,10 +177,14 @@ public class PeerNearMeChangedEventArgs extends EventArgs  {
 
     public PeerNearMe getPeerNearMe() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPeerNearMe = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PeerNearMe");
+            retObjectPeerNearMe = classInstance.Get("PeerNearMe");
+            JCObject val = (JCObject)retObjectPeerNearMe;
             return new PeerNearMe(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPeerNearMe != null ? retObjectPeerNearMe.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

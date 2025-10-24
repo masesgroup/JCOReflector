@@ -166,9 +166,13 @@ public class ActivityXamlServicesSettings extends NetObject  {
     
     public boolean getCompileExpressions() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCompileExpressions = null;
         try {
-            return (boolean)classInstance.Get("CompileExpressions");
+            retObjectCompileExpressions = classInstance.Get("CompileExpressions");
+            return (boolean)retObjectCompileExpressions;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCompileExpressions != null ? retObjectCompileExpressions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,7 +180,7 @@ public class ActivityXamlServicesSettings extends NetObject  {
 
     public void setCompileExpressions(boolean CompileExpressions) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CompileExpressions", CompileExpressions);
         } catch (JCNativeException jcne) {
@@ -186,10 +190,14 @@ public class ActivityXamlServicesSettings extends NetObject  {
 
     public LocationReferenceEnvironment getLocationReferenceEnvironment() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLocationReferenceEnvironment = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("LocationReferenceEnvironment");
+            retObjectLocationReferenceEnvironment = classInstance.Get("LocationReferenceEnvironment");
+            JCObject val = (JCObject)retObjectLocationReferenceEnvironment;
             return new LocationReferenceEnvironment(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLocationReferenceEnvironment != null ? retObjectLocationReferenceEnvironment.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,7 +205,7 @@ public class ActivityXamlServicesSettings extends NetObject  {
 
     public void setLocationReferenceEnvironment(LocationReferenceEnvironment LocationReferenceEnvironment) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("LocationReferenceEnvironment", LocationReferenceEnvironment == null ? null : LocationReferenceEnvironment.getJCOInstance());
         } catch (JCNativeException jcne) {

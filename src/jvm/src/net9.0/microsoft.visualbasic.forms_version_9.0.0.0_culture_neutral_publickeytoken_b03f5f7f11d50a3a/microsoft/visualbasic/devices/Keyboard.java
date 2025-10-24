@@ -161,7 +161,7 @@ public class Keyboard extends NetObject  {
     
     public void SendKeys(java.lang.String keys, boolean wait) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.Win32Exception, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.OverflowException, system.configuration.ConfigurationErrorsException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SendKeys", keys, wait);
         } catch (JCNativeException jcne) {
@@ -171,7 +171,7 @@ public class Keyboard extends NetObject  {
 
     public void SendKeys(java.lang.String keys) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.configuration.ConfigurationErrorsException, system.IndexOutOfRangeException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SendKeys", keys);
         } catch (JCNativeException jcne) {
@@ -185,9 +185,13 @@ public class Keyboard extends NetObject  {
     
     public boolean getAltKeyDown() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAltKeyDown = null;
         try {
-            return (boolean)classInstance.Get("AltKeyDown");
+            retObjectAltKeyDown = classInstance.Get("AltKeyDown");
+            return (boolean)retObjectAltKeyDown;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAltKeyDown != null ? retObjectAltKeyDown.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,9 +199,13 @@ public class Keyboard extends NetObject  {
 
     public boolean getCapsLock() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCapsLock = null;
         try {
-            return (boolean)classInstance.Get("CapsLock");
+            retObjectCapsLock = classInstance.Get("CapsLock");
+            return (boolean)retObjectCapsLock;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCapsLock != null ? retObjectCapsLock.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -205,9 +213,13 @@ public class Keyboard extends NetObject  {
 
     public boolean getCtrlKeyDown() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCtrlKeyDown = null;
         try {
-            return (boolean)classInstance.Get("CtrlKeyDown");
+            retObjectCtrlKeyDown = classInstance.Get("CtrlKeyDown");
+            return (boolean)retObjectCtrlKeyDown;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCtrlKeyDown != null ? retObjectCtrlKeyDown.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -215,9 +227,13 @@ public class Keyboard extends NetObject  {
 
     public boolean getNumLock() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNumLock = null;
         try {
-            return (boolean)classInstance.Get("NumLock");
+            retObjectNumLock = classInstance.Get("NumLock");
+            return (boolean)retObjectNumLock;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectNumLock != null ? retObjectNumLock.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -225,9 +241,13 @@ public class Keyboard extends NetObject  {
 
     public boolean getScrollLock() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectScrollLock = null;
         try {
-            return (boolean)classInstance.Get("ScrollLock");
+            retObjectScrollLock = classInstance.Get("ScrollLock");
+            return (boolean)retObjectScrollLock;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectScrollLock != null ? retObjectScrollLock.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -235,9 +255,13 @@ public class Keyboard extends NetObject  {
 
     public boolean getShiftKeyDown() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShiftKeyDown = null;
         try {
-            return (boolean)classInstance.Get("ShiftKeyDown");
+            retObjectShiftKeyDown = classInstance.Get("ShiftKeyDown");
+            return (boolean)retObjectShiftKeyDown;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectShiftKeyDown != null ? retObjectShiftKeyDown.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

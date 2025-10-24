@@ -184,10 +184,14 @@ public class ToolStripRenderEventArgs extends EventArgs  {
     
     public Color getBackColor() throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBackColor = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("BackColor");
+            retObjectBackColor = classInstance.Get("BackColor");
+            JCObject val = (JCObject)retObjectBackColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBackColor != null ? retObjectBackColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,10 +199,14 @@ public class ToolStripRenderEventArgs extends EventArgs  {
 
     public Graphics getGraphics() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGraphics = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Graphics");
+            retObjectGraphics = classInstance.Get("Graphics");
+            JCObject val = (JCObject)retObjectGraphics;
             return new Graphics(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGraphics != null ? retObjectGraphics.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -206,10 +214,14 @@ public class ToolStripRenderEventArgs extends EventArgs  {
 
     public Rectangle getAffectedBounds() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAffectedBounds = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AffectedBounds");
+            retObjectAffectedBounds = classInstance.Get("AffectedBounds");
+            JCObject val = (JCObject)retObjectAffectedBounds;
             return new Rectangle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAffectedBounds != null ? retObjectAffectedBounds.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -217,10 +229,14 @@ public class ToolStripRenderEventArgs extends EventArgs  {
 
     public Rectangle getConnectedArea() throws Throwable, system.componentmodel.InvalidEnumArgumentException, system.ArgumentOutOfRangeException, system.threading.ThreadStateException, system.InvalidOperationException, system.OverflowException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.componentmodel.Win32Exception, system.PlatformNotSupportedException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConnectedArea = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ConnectedArea");
+            retObjectConnectedArea = classInstance.Get("ConnectedArea");
+            JCObject val = (JCObject)retObjectConnectedArea;
             return new Rectangle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConnectedArea != null ? retObjectConnectedArea.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -228,10 +244,14 @@ public class ToolStripRenderEventArgs extends EventArgs  {
 
     public ToolStrip getToolStrip() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToolStrip = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ToolStrip");
+            retObjectToolStrip = classInstance.Get("ToolStrip");
+            JCObject val = (JCObject)retObjectToolStrip;
             return new ToolStrip(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToolStrip != null ? retObjectToolStrip.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

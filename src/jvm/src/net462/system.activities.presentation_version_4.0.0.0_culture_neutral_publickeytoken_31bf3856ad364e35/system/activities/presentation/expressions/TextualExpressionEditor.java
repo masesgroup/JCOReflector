@@ -158,7 +158,7 @@ public class TextualExpressionEditor extends ExpressionActivityEditor  {
     
     public void OnCompleteWordCommandCanExecute(CanExecuteRoutedEventArgs e) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("OnCompleteWordCommandCanExecute", e == null ? null : e.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -168,7 +168,7 @@ public class TextualExpressionEditor extends ExpressionActivityEditor  {
 
     public void OnCompleteWordCommandExecute(ExecutedRoutedEventArgs e) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("OnCompleteWordCommandExecute", e == null ? null : e.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -178,7 +178,7 @@ public class TextualExpressionEditor extends ExpressionActivityEditor  {
 
     public void OnDecreaseFilterLevelCommandCanExecute(CanExecuteRoutedEventArgs e) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("OnDecreaseFilterLevelCommandCanExecute", e == null ? null : e.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -188,7 +188,7 @@ public class TextualExpressionEditor extends ExpressionActivityEditor  {
 
     public void OnDecreaseFilterLevelCommandExecute(ExecutedRoutedEventArgs e) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("OnDecreaseFilterLevelCommandExecute", e == null ? null : e.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -198,7 +198,7 @@ public class TextualExpressionEditor extends ExpressionActivityEditor  {
 
     public void OnGlobalIntellisenseCommandCanExecute(CanExecuteRoutedEventArgs e) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("OnGlobalIntellisenseCommandCanExecute", e == null ? null : e.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -208,7 +208,7 @@ public class TextualExpressionEditor extends ExpressionActivityEditor  {
 
     public void OnGlobalIntellisenseCommandExecute(ExecutedRoutedEventArgs e) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("OnGlobalIntellisenseCommandExecute", e == null ? null : e.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -218,7 +218,7 @@ public class TextualExpressionEditor extends ExpressionActivityEditor  {
 
     public void OnIncreaseFilterLevelCommandCanExecute(CanExecuteRoutedEventArgs e) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("OnIncreaseFilterLevelCommandCanExecute", e == null ? null : e.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -228,7 +228,7 @@ public class TextualExpressionEditor extends ExpressionActivityEditor  {
 
     public void OnIncreaseFilterLevelCommandExecute(ExecutedRoutedEventArgs e) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("OnIncreaseFilterLevelCommandExecute", e == null ? null : e.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -238,7 +238,7 @@ public class TextualExpressionEditor extends ExpressionActivityEditor  {
 
     public void OnParameterInfoCommandCanExecute(CanExecuteRoutedEventArgs e) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("OnParameterInfoCommandCanExecute", e == null ? null : e.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -248,7 +248,7 @@ public class TextualExpressionEditor extends ExpressionActivityEditor  {
 
     public void OnParameterInfoCommandExecute(ExecutedRoutedEventArgs e) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("OnParameterInfoCommandExecute", e == null ? null : e.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -258,7 +258,7 @@ public class TextualExpressionEditor extends ExpressionActivityEditor  {
 
     public void OnQuickInfoCommandCanExecute(CanExecuteRoutedEventArgs e) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("OnQuickInfoCommandCanExecute", e == null ? null : e.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -268,7 +268,7 @@ public class TextualExpressionEditor extends ExpressionActivityEditor  {
 
     public void OnQuickInfoCommandExecute(ExecutedRoutedEventArgs e) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("OnQuickInfoCommandExecute", e == null ? null : e.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -282,9 +282,20 @@ public class TextualExpressionEditor extends ExpressionActivityEditor  {
     
     public int getMaxLines() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxLines = null;
         try {
-            return (int)classInstance.Get("MaxLines");
+            retObjectMaxLines = classInstance.Get("MaxLines");
+            return (int)retObjectMaxLines;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaxLines_ToString = retObjectMaxLines == null ? "null" : retObjectMaxLines.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMaxLinesNumber = (java.lang.Number)retObjectMaxLines;
+                return retObjectMaxLinesNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxLines != null ? retObjectMaxLines.getClass() : "null", retObjectMaxLines_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -292,7 +303,7 @@ public class TextualExpressionEditor extends ExpressionActivityEditor  {
 
     public void setMaxLines(int MaxLines) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaxLines", MaxLines);
         } catch (JCNativeException jcne) {
@@ -302,9 +313,20 @@ public class TextualExpressionEditor extends ExpressionActivityEditor  {
 
     public int getMinLines() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMinLines = null;
         try {
-            return (int)classInstance.Get("MinLines");
+            retObjectMinLines = classInstance.Get("MinLines");
+            return (int)retObjectMinLines;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMinLines_ToString = retObjectMinLines == null ? "null" : retObjectMinLines.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMinLinesNumber = (java.lang.Number)retObjectMinLines;
+                return retObjectMinLinesNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMinLines != null ? retObjectMinLines.getClass() : "null", retObjectMinLines_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -312,7 +334,7 @@ public class TextualExpressionEditor extends ExpressionActivityEditor  {
 
     public void setMinLines(int MinLines) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MinLines", MinLines);
         } catch (JCNativeException jcne) {
@@ -322,10 +344,14 @@ public class TextualExpressionEditor extends ExpressionActivityEditor  {
 
     public IExpressionEditorService getExpressionEditorService() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExpressionEditorService = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ExpressionEditorService");
+            retObjectExpressionEditorService = classInstance.Get("ExpressionEditorService");
+            JCObject val = (JCObject)retObjectExpressionEditorService;
             return new IExpressionEditorServiceImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExpressionEditorService != null ? retObjectExpressionEditorService.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -333,9 +359,13 @@ public class TextualExpressionEditor extends ExpressionActivityEditor  {
 
     public java.lang.String getDefaultValue() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDefaultValue = null;
         try {
-            return (java.lang.String)classInstance.Get("DefaultValue");
+            retObjectDefaultValue = classInstance.Get("DefaultValue");
+            return (java.lang.String)retObjectDefaultValue;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDefaultValue != null ? retObjectDefaultValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -343,7 +373,7 @@ public class TextualExpressionEditor extends ExpressionActivityEditor  {
 
     public void setDefaultValue(java.lang.String DefaultValue) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DefaultValue", DefaultValue);
         } catch (JCNativeException jcne) {

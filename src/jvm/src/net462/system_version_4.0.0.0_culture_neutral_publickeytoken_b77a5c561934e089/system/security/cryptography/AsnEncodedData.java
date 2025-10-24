@@ -197,9 +197,13 @@ public class AsnEncodedData extends NetObject  {
     
     public java.lang.String Format(boolean multiLine) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFormat = null;
         try {
-            return (java.lang.String)classInstance.Invoke("Format", multiLine);
+            retObjectFormat = classInstance.Invoke("Format", multiLine);
+            return (java.lang.String)retObjectFormat;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectFormat != null ? retObjectFormat.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -207,7 +211,7 @@ public class AsnEncodedData extends NetObject  {
 
     public void CopyFrom(AsnEncodedData asnEncodedData) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CopyFrom", asnEncodedData == null ? null : asnEncodedData.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -221,10 +225,12 @@ public class AsnEncodedData extends NetObject  {
     
     public byte[] getRawData() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRawData = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("RawData");
+            retObjectRawData = classInstance.Get("RawData");
+            JCObject resultingObjects = (JCObject)retObjectRawData;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -233,6 +239,8 @@ public class AsnEncodedData extends NetObject  {
 				resultingArray[indexRawData] = (byte)resultingArrayList.get(indexRawData);
 			}
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into JCObject", retObjectRawData != null ? retObjectRawData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -240,7 +248,7 @@ public class AsnEncodedData extends NetObject  {
 
     public void setRawData(byte[] RawData) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RawData", RawData);
         } catch (JCNativeException jcne) {
@@ -250,10 +258,14 @@ public class AsnEncodedData extends NetObject  {
 
     public Oid getOid() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOid = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Oid");
+            retObjectOid = classInstance.Get("Oid");
+            JCObject val = (JCObject)retObjectOid;
             return new Oid(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOid != null ? retObjectOid.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -261,7 +273,7 @@ public class AsnEncodedData extends NetObject  {
 
     public void setOid(Oid Oid) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Oid", Oid == null ? null : Oid.getJCOInstance());
         } catch (JCNativeException jcne) {

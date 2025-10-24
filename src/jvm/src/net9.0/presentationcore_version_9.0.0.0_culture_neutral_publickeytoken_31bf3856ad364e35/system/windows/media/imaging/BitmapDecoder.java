@@ -166,10 +166,14 @@ public class BitmapDecoder extends DispatcherObject  {
     
     public static BitmapDecoder Create(Stream bitmapStream, BitmapCreateOptions createOptions, BitmapCacheOption cacheOption) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.NullReferenceException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.UriFormatException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.io.IOException, system.net.WebException, system.net.CookieException, system.security.SecurityException, system.runtime.serialization.SerializationException, system.IndexOutOfRangeException, system.NotImplementedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
         try {
-            JCObject objCreate = (JCObject)classType.Invoke("Create", bitmapStream == null ? null : bitmapStream.getJCOInstance(), createOptions == null ? null : createOptions.getJCOInstance(), cacheOption == null ? null : cacheOption.getJCOInstance());
+            retObjectCreate = classType.Invoke("Create", bitmapStream == null ? null : bitmapStream.getJCOInstance(), createOptions == null ? null : createOptions.getJCOInstance(), cacheOption == null ? null : cacheOption.getJCOInstance());
+            JCObject objCreate = (JCObject)retObjectCreate;
             return new BitmapDecoder(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,10 +181,14 @@ public class BitmapDecoder extends DispatcherObject  {
 
     public static BitmapDecoder Create(Uri bitmapUri, BitmapCreateOptions createOptions, BitmapCacheOption cacheOption, RequestCachePolicy uriCachePolicy) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.NullReferenceException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.UriFormatException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.io.IOException, system.net.WebException, system.net.CookieException, system.security.SecurityException, system.runtime.serialization.SerializationException, system.IndexOutOfRangeException, system.NotImplementedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
         try {
-            JCObject objCreate = (JCObject)classType.Invoke("Create", bitmapUri == null ? null : bitmapUri.getJCOInstance(), createOptions == null ? null : createOptions.getJCOInstance(), cacheOption == null ? null : cacheOption.getJCOInstance(), uriCachePolicy == null ? null : uriCachePolicy.getJCOInstance());
+            retObjectCreate = classType.Invoke("Create", bitmapUri == null ? null : bitmapUri.getJCOInstance(), createOptions == null ? null : createOptions.getJCOInstance(), cacheOption == null ? null : cacheOption.getJCOInstance(), uriCachePolicy == null ? null : uriCachePolicy.getJCOInstance());
+            JCObject objCreate = (JCObject)retObjectCreate;
             return new BitmapDecoder(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,10 +196,14 @@ public class BitmapDecoder extends DispatcherObject  {
 
     public static BitmapDecoder Create(Uri bitmapUri, BitmapCreateOptions createOptions, BitmapCacheOption cacheOption) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.UriFormatException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.io.IOException, system.net.WebException, system.net.CookieException, system.security.SecurityException, system.NotImplementedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
         try {
-            JCObject objCreate = (JCObject)classType.Invoke("Create", bitmapUri == null ? null : bitmapUri.getJCOInstance(), createOptions == null ? null : createOptions.getJCOInstance(), cacheOption == null ? null : cacheOption.getJCOInstance());
+            retObjectCreate = classType.Invoke("Create", bitmapUri == null ? null : bitmapUri.getJCOInstance(), createOptions == null ? null : createOptions.getJCOInstance(), cacheOption == null ? null : cacheOption.getJCOInstance());
+            JCObject objCreate = (JCObject)retObjectCreate;
             return new BitmapDecoder(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -199,10 +211,14 @@ public class BitmapDecoder extends DispatcherObject  {
 
     public InPlaceBitmapMetadataWriter CreateInPlaceBitmapMetadataWriter() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.security.SecurityException, system.ArrayTypeMismatchException, system.io.IOException, system.UnauthorizedAccessException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateInPlaceBitmapMetadataWriter = null;
         try {
-            JCObject objCreateInPlaceBitmapMetadataWriter = (JCObject)classInstance.Invoke("CreateInPlaceBitmapMetadataWriter");
+            retObjectCreateInPlaceBitmapMetadataWriter = classInstance.Invoke("CreateInPlaceBitmapMetadataWriter");
+            JCObject objCreateInPlaceBitmapMetadataWriter = (JCObject)retObjectCreateInPlaceBitmapMetadataWriter;
             return new InPlaceBitmapMetadataWriter(objCreateInPlaceBitmapMetadataWriter);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateInPlaceBitmapMetadataWriter != null ? retObjectCreateInPlaceBitmapMetadataWriter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -214,9 +230,13 @@ public class BitmapDecoder extends DispatcherObject  {
     
     public boolean getIsDownloading() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsDownloading = null;
         try {
-            return (boolean)classInstance.Get("IsDownloading");
+            retObjectIsDownloading = classInstance.Get("IsDownloading");
+            return (boolean)retObjectIsDownloading;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsDownloading != null ? retObjectIsDownloading.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -224,10 +244,14 @@ public class BitmapDecoder extends DispatcherObject  {
 
     public BitmapCodecInfo getCodecInfo() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.NotImplementedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCodecInfo = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CodecInfo");
+            retObjectCodecInfo = classInstance.Get("CodecInfo");
+            JCObject val = (JCObject)retObjectCodecInfo;
             return new BitmapCodecInfo(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCodecInfo != null ? retObjectCodecInfo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -235,10 +259,14 @@ public class BitmapDecoder extends DispatcherObject  {
 
     public BitmapMetadata getMetadata() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.NotImplementedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.FormatException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMetadata = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Metadata");
+            retObjectMetadata = classInstance.Get("Metadata");
+            JCObject val = (JCObject)retObjectMetadata;
             return new BitmapMetadata(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMetadata != null ? retObjectMetadata.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -246,10 +274,14 @@ public class BitmapDecoder extends DispatcherObject  {
 
     public BitmapPalette getPalette() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.NotImplementedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.ArgumentOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPalette = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Palette");
+            retObjectPalette = classInstance.Get("Palette");
+            JCObject val = (JCObject)retObjectPalette;
             return new BitmapPalette(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPalette != null ? retObjectPalette.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -257,10 +289,14 @@ public class BitmapDecoder extends DispatcherObject  {
 
     public BitmapSource getPreview() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.NotImplementedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.diagnostics.UnreachableException, system.UriFormatException, system.net.WebException, system.net.CookieException, system.io.IOException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.FileNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPreview = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Preview");
+            retObjectPreview = classInstance.Get("Preview");
+            JCObject val = (JCObject)retObjectPreview;
             return new BitmapSource(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPreview != null ? retObjectPreview.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -268,10 +304,14 @@ public class BitmapDecoder extends DispatcherObject  {
 
     public BitmapSource getThumbnail() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.NotImplementedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.diagnostics.UnreachableException, system.UriFormatException, system.net.WebException, system.net.CookieException, system.io.IOException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.FileNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectThumbnail = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Thumbnail");
+            retObjectThumbnail = classInstance.Get("Thumbnail");
+            JCObject val = (JCObject)retObjectThumbnail;
             return new BitmapSource(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectThumbnail != null ? retObjectThumbnail.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -284,7 +324,7 @@ public class BitmapDecoder extends DispatcherObject  {
 
     public void addDownloadCompleted(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("DownloadCompleted", handler);
         } catch (JCNativeException jcne) {
@@ -294,7 +334,7 @@ public class BitmapDecoder extends DispatcherObject  {
 
     public void removeDownloadCompleted(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("DownloadCompleted", handler);
         } catch (JCNativeException jcne) {

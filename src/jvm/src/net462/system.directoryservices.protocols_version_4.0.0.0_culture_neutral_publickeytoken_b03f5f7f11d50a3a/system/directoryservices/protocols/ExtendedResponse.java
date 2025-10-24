@@ -160,10 +160,12 @@ public class ExtendedResponse extends DirectoryResponse  {
     
     public byte[] getResponseValue() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.xml.xpath.XPathException, system.OutOfMemoryException, system.FormatException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.directoryservices.protocols.DsmlInvalidDocumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResponseValue = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("ResponseValue");
+            retObjectResponseValue = classInstance.Get("ResponseValue");
+            JCObject resultingObjects = (JCObject)retObjectResponseValue;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -172,6 +174,8 @@ public class ExtendedResponse extends DirectoryResponse  {
 				resultingArray[indexResponseValue] = (byte)resultingArrayList.get(indexResponseValue);
 			}
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into JCObject", retObjectResponseValue != null ? retObjectResponseValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,9 +183,13 @@ public class ExtendedResponse extends DirectoryResponse  {
 
     public java.lang.String getResponseName() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.xml.xpath.XPathException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResponseName = null;
         try {
-            return (java.lang.String)classInstance.Get("ResponseName");
+            retObjectResponseName = classInstance.Get("ResponseName");
+            return (java.lang.String)retObjectResponseName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectResponseName != null ? retObjectResponseName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -169,9 +169,13 @@ public class XmlQueryRuntime extends NetObject  {
     
     public boolean EarlyBoundFunctionExists(java.lang.String name, java.lang.String namespaceUri) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEarlyBoundFunctionExists = null;
         try {
-            return (boolean)classInstance.Invoke("EarlyBoundFunctionExists", name, namespaceUri);
+            retObjectEarlyBoundFunctionExists = classInstance.Invoke("EarlyBoundFunctionExists", name, namespaceUri);
+            return (boolean)retObjectEarlyBoundFunctionExists;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectEarlyBoundFunctionExists != null ? retObjectEarlyBoundFunctionExists.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,9 +183,13 @@ public class XmlQueryRuntime extends NetObject  {
 
     public boolean FindIndex(XPathNavigator context, int indexId, JCORefOut<XmlILIndex> index) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFindIndex = null;
         try {
-            return (boolean)classInstance.Invoke("FindIndex", context == null ? null : context.getJCOInstance(), indexId, index.getJCRefOut());
+            retObjectFindIndex = classInstance.Invoke("FindIndex", context == null ? null : context.getJCOInstance(), indexId, index.getJCRefOut());
+            return (boolean)retObjectFindIndex;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectFindIndex != null ? retObjectFindIndex.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -189,9 +197,13 @@ public class XmlQueryRuntime extends NetObject  {
 
     public boolean IsGlobalComputed(int index) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsGlobalComputed = null;
         try {
-            return (boolean)classInstance.Invoke("IsGlobalComputed", index);
+            retObjectIsGlobalComputed = classInstance.Invoke("IsGlobalComputed", index);
+            return (boolean)retObjectIsGlobalComputed;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsGlobalComputed != null ? retObjectIsGlobalComputed.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -199,9 +211,13 @@ public class XmlQueryRuntime extends NetObject  {
 
     public boolean IsQNameEqual(XPathNavigator navigator, int indexLocalName, int indexNamespaceUri) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsQNameEqual = null;
         try {
-            return (boolean)classInstance.Invoke("IsQNameEqual", navigator == null ? null : navigator.getJCOInstance(), indexLocalName, indexNamespaceUri);
+            retObjectIsQNameEqual = classInstance.Invoke("IsQNameEqual", navigator == null ? null : navigator.getJCOInstance(), indexLocalName, indexNamespaceUri);
+            return (boolean)retObjectIsQNameEqual;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsQNameEqual != null ? retObjectIsQNameEqual.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -209,9 +225,13 @@ public class XmlQueryRuntime extends NetObject  {
 
     public boolean IsQNameEqual(XPathNavigator n1, XPathNavigator n2) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsQNameEqual = null;
         try {
-            return (boolean)classInstance.Invoke("IsQNameEqual", n1 == null ? null : n1.getJCOInstance(), n2 == null ? null : n2.getJCOInstance());
+            retObjectIsQNameEqual = classInstance.Invoke("IsQNameEqual", n1 == null ? null : n1.getJCOInstance(), n2 == null ? null : n2.getJCOInstance());
+            return (boolean)retObjectIsQNameEqual;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsQNameEqual != null ? retObjectIsQNameEqual.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -219,9 +239,13 @@ public class XmlQueryRuntime extends NetObject  {
 
     public boolean MatchesXmlType(XPathItem item, int indexType) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMatchesXmlType = null;
         try {
-            return (boolean)classInstance.Invoke("MatchesXmlType", item == null ? null : item.getJCOInstance(), indexType);
+            retObjectMatchesXmlType = classInstance.Invoke("MatchesXmlType", item == null ? null : item.getJCOInstance(), indexType);
+            return (boolean)retObjectMatchesXmlType;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectMatchesXmlType != null ? retObjectMatchesXmlType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -229,9 +253,13 @@ public class XmlQueryRuntime extends NetObject  {
 
     public boolean MatchesXmlType(XPathItem item, XmlTypeCode code) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMatchesXmlType = null;
         try {
-            return (boolean)classInstance.Invoke("MatchesXmlType", item == null ? null : item.getJCOInstance(), code == null ? null : code.getJCOInstance());
+            retObjectMatchesXmlType = classInstance.Invoke("MatchesXmlType", item == null ? null : item.getJCOInstance(), code == null ? null : code.getJCOInstance());
+            return (boolean)retObjectMatchesXmlType;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectMatchesXmlType != null ? retObjectMatchesXmlType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -239,9 +267,20 @@ public class XmlQueryRuntime extends NetObject  {
 
     public int ComparePosition(XPathNavigator navigatorThis, XPathNavigator navigatorThat) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.RankException, system.ArgumentException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectComparePosition = null;
         try {
-            return (int)classInstance.Invoke("ComparePosition", navigatorThis == null ? null : navigatorThis.getJCOInstance(), navigatorThat == null ? null : navigatorThat.getJCOInstance());
+            retObjectComparePosition = classInstance.Invoke("ComparePosition", navigatorThis == null ? null : navigatorThis.getJCOInstance(), navigatorThat == null ? null : navigatorThat.getJCOInstance());
+            return (int)retObjectComparePosition;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectComparePosition_ToString = retObjectComparePosition == null ? "null" : retObjectComparePosition.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectComparePositionNumber = (java.lang.Number)retObjectComparePosition;
+                return retObjectComparePositionNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectComparePosition != null ? retObjectComparePosition.getClass() : "null", retObjectComparePosition_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -249,9 +288,20 @@ public class XmlQueryRuntime extends NetObject  {
 
     public static int OnCurrentNodeChanged(XPathNavigator currentNode) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOnCurrentNodeChanged = null;
         try {
-            return (int)classType.Invoke("OnCurrentNodeChanged", currentNode == null ? null : currentNode.getJCOInstance());
+            retObjectOnCurrentNodeChanged = classType.Invoke("OnCurrentNodeChanged", currentNode == null ? null : currentNode.getJCOInstance());
+            return (int)retObjectOnCurrentNodeChanged;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectOnCurrentNodeChanged_ToString = retObjectOnCurrentNodeChanged == null ? "null" : retObjectOnCurrentNodeChanged.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectOnCurrentNodeChangedNumber = (java.lang.Number)retObjectOnCurrentNodeChanged;
+                return retObjectOnCurrentNodeChangedNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectOnCurrentNodeChanged != null ? retObjectOnCurrentNodeChanged.getClass() : "null", retObjectOnCurrentNodeChanged_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -259,10 +309,14 @@ public class XmlQueryRuntime extends NetObject  {
 
     public IList DebugGetGlobalValue(java.lang.String name) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDebugGetGlobalValue = null;
         try {
-            JCObject objDebugGetGlobalValue = (JCObject)classInstance.Invoke("DebugGetGlobalValue", name);
+            retObjectDebugGetGlobalValue = classInstance.Invoke("DebugGetGlobalValue", name);
+            JCObject objDebugGetGlobalValue = (JCObject)retObjectDebugGetGlobalValue;
             return new IListImplementation(objDebugGetGlobalValue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDebugGetGlobalValue != null ? retObjectDebugGetGlobalValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -270,10 +324,14 @@ public class XmlQueryRuntime extends NetObject  {
 
     public NetObject ChangeTypeXsltArgument(int indexType, NetObject value, NetType destinationType) throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException, system.OverflowException, system.InvalidCastException, system.OutOfMemoryException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectChangeTypeXsltArgument = null;
         try {
-            JCObject objChangeTypeXsltArgument = (JCObject)classInstance.Invoke("ChangeTypeXsltArgument", indexType, value == null ? null : value.getJCOInstance(), destinationType == null ? null : destinationType.getJCOInstance());
+            retObjectChangeTypeXsltArgument = classInstance.Invoke("ChangeTypeXsltArgument", indexType, value == null ? null : value.getJCOInstance(), destinationType == null ? null : destinationType.getJCOInstance());
+            JCObject objChangeTypeXsltArgument = (JCObject)retObjectChangeTypeXsltArgument;
             return new NetObject(objChangeTypeXsltArgument);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectChangeTypeXsltArgument != null ? retObjectChangeTypeXsltArgument.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -281,10 +339,14 @@ public class XmlQueryRuntime extends NetObject  {
 
     public NetObject ChangeTypeXsltResult(int indexType, NetObject value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.OutOfMemoryException, system.ArrayTypeMismatchException, system.security.SecurityException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectChangeTypeXsltResult = null;
         try {
-            JCObject objChangeTypeXsltResult = (JCObject)classInstance.Invoke("ChangeTypeXsltResult", indexType, value == null ? null : value.getJCOInstance());
+            retObjectChangeTypeXsltResult = classInstance.Invoke("ChangeTypeXsltResult", indexType, value == null ? null : value.getJCOInstance());
+            JCObject objChangeTypeXsltResult = (JCObject)retObjectChangeTypeXsltResult;
             return new NetObject(objChangeTypeXsltResult);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectChangeTypeXsltResult != null ? retObjectChangeTypeXsltResult.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -292,10 +354,14 @@ public class XmlQueryRuntime extends NetObject  {
 
     public NetObject DebugGetXsltValue(IList seq) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDebugGetXsltValue = null;
         try {
-            JCObject objDebugGetXsltValue = (JCObject)classInstance.Invoke("DebugGetXsltValue", seq == null ? null : seq.getJCOInstance());
+            retObjectDebugGetXsltValue = classInstance.Invoke("DebugGetXsltValue", seq == null ? null : seq.getJCOInstance());
+            JCObject objDebugGetXsltValue = (JCObject)retObjectDebugGetXsltValue;
             return new NetObject(objDebugGetXsltValue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDebugGetXsltValue != null ? retObjectDebugGetXsltValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -303,10 +369,14 @@ public class XmlQueryRuntime extends NetObject  {
 
     public NetObject GetEarlyBoundObject(int index) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetEarlyBoundObject = null;
         try {
-            JCObject objGetEarlyBoundObject = (JCObject)classInstance.Invoke("GetEarlyBoundObject", index);
+            retObjectGetEarlyBoundObject = classInstance.Invoke("GetEarlyBoundObject", index);
+            JCObject objGetEarlyBoundObject = (JCObject)retObjectGetEarlyBoundObject;
             return new NetObject(objGetEarlyBoundObject);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetEarlyBoundObject != null ? retObjectGetEarlyBoundObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -314,10 +384,14 @@ public class XmlQueryRuntime extends NetObject  {
 
     public NetObject GetGlobalValue(int index) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetGlobalValue = null;
         try {
-            JCObject objGetGlobalValue = (JCObject)classInstance.Invoke("GetGlobalValue", index);
+            retObjectGetGlobalValue = classInstance.Invoke("GetGlobalValue", index);
+            JCObject objGetGlobalValue = (JCObject)retObjectGetGlobalValue;
             return new NetObject(objGetGlobalValue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetGlobalValue != null ? retObjectGetGlobalValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -325,9 +399,13 @@ public class XmlQueryRuntime extends NetObject  {
 
     public java.lang.String GenerateId(XPathNavigator navigator) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.RankException, system.InvalidCastException, system.OverflowException, system.InvalidOperationException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGenerateId = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GenerateId", navigator == null ? null : navigator.getJCOInstance());
+            retObjectGenerateId = classInstance.Invoke("GenerateId", navigator == null ? null : navigator.getJCOInstance());
+            return (java.lang.String)retObjectGenerateId;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGenerateId != null ? retObjectGenerateId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -335,9 +413,13 @@ public class XmlQueryRuntime extends NetObject  {
 
     public java.lang.String GetAtomizedName(int index) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetAtomizedName = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetAtomizedName", index);
+            retObjectGetAtomizedName = classInstance.Invoke("GetAtomizedName", index);
+            return (java.lang.String)retObjectGetAtomizedName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetAtomizedName != null ? retObjectGetAtomizedName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -345,10 +427,12 @@ public class XmlQueryRuntime extends NetObject  {
 
     public java.lang.String[] DebugGetGlobalNames() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDebugGetGlobalNames = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("DebugGetGlobalNames");
+            retObjectDebugGetGlobalNames = classInstance.Invoke("DebugGetGlobalNames");
+            JCObject resultingObjects = (JCObject)retObjectDebugGetGlobalNames;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -357,6 +441,8 @@ public class XmlQueryRuntime extends NetObject  {
 				resultingArray[indexDebugGetGlobalNames] = (java.lang.String)resultingArrayList.get(indexDebugGetGlobalNames);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDebugGetGlobalNames != null ? retObjectDebugGetGlobalNames.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -364,10 +450,14 @@ public class XmlQueryRuntime extends NetObject  {
 
     public XmlQualifiedName ParseTagName(java.lang.String tagName, int indexPrefixMappings) throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.xml.XmlException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectParseTagName = null;
         try {
-            JCObject objParseTagName = (JCObject)classInstance.Invoke("ParseTagName", tagName, indexPrefixMappings);
+            retObjectParseTagName = classInstance.Invoke("ParseTagName", tagName, indexPrefixMappings);
+            JCObject objParseTagName = (JCObject)retObjectParseTagName;
             return new XmlQualifiedName(objParseTagName);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParseTagName != null ? retObjectParseTagName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -375,10 +465,14 @@ public class XmlQueryRuntime extends NetObject  {
 
     public XmlQualifiedName ParseTagName(java.lang.String tagName, java.lang.String ns) throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectParseTagName = null;
         try {
-            JCObject objParseTagName = (JCObject)classInstance.Invoke("ParseTagName", tagName, ns);
+            retObjectParseTagName = classInstance.Invoke("ParseTagName", tagName, ns);
+            JCObject objParseTagName = (JCObject)retObjectParseTagName;
             return new XmlQualifiedName(objParseTagName);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParseTagName != null ? retObjectParseTagName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -386,10 +480,14 @@ public class XmlQueryRuntime extends NetObject  {
 
     public XPathNavigator EndRtfConstruction(JCORefOut<XmlQueryOutput> output) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEndRtfConstruction = null;
         try {
-            JCObject objEndRtfConstruction = (JCObject)classInstance.Invoke("EndRtfConstruction", output.getJCRefOut());
+            retObjectEndRtfConstruction = classInstance.Invoke("EndRtfConstruction", output.getJCRefOut());
+            JCObject objEndRtfConstruction = (JCObject)retObjectEndRtfConstruction;
             return new XPathNavigator(objEndRtfConstruction);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEndRtfConstruction != null ? retObjectEndRtfConstruction.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -397,10 +495,14 @@ public class XmlQueryRuntime extends NetObject  {
 
     public XPathNavigator TextRtfConstruction(java.lang.String text, java.lang.String baseUri) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTextRtfConstruction = null;
         try {
-            JCObject objTextRtfConstruction = (JCObject)classInstance.Invoke("TextRtfConstruction", text, baseUri);
+            retObjectTextRtfConstruction = classInstance.Invoke("TextRtfConstruction", text, baseUri);
+            JCObject objTextRtfConstruction = (JCObject)retObjectTextRtfConstruction;
             return new XPathNavigator(objTextRtfConstruction);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTextRtfConstruction != null ? retObjectTextRtfConstruction.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -408,10 +510,14 @@ public class XmlQueryRuntime extends NetObject  {
 
     public XmlCollation CreateCollation(java.lang.String collation) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.globalization.CultureNotFoundException, system.diagnostics.UnreachableException, system.OutOfMemoryException, system.UriFormatException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateCollation = null;
         try {
-            JCObject objCreateCollation = (JCObject)classInstance.Invoke("CreateCollation", collation);
+            retObjectCreateCollation = classInstance.Invoke("CreateCollation", collation);
+            JCObject objCreateCollation = (JCObject)retObjectCreateCollation;
             return new XmlCollation(objCreateCollation);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateCollation != null ? retObjectCreateCollation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -419,10 +525,14 @@ public class XmlQueryRuntime extends NetObject  {
 
     public XmlCollation GetCollation(int index) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetCollation = null;
         try {
-            JCObject objGetCollation = (JCObject)classInstance.Invoke("GetCollation", index);
+            retObjectGetCollation = classInstance.Invoke("GetCollation", index);
+            JCObject objGetCollation = (JCObject)retObjectGetCollation;
             return new XmlCollation(objGetCollation);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCollation != null ? retObjectGetCollation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -430,10 +540,14 @@ public class XmlQueryRuntime extends NetObject  {
 
     public XmlNavigatorFilter GetNameFilter(int index) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetNameFilter = null;
         try {
-            JCObject objGetNameFilter = (JCObject)classInstance.Invoke("GetNameFilter", index);
+            retObjectGetNameFilter = classInstance.Invoke("GetNameFilter", index);
+            JCObject objGetNameFilter = (JCObject)retObjectGetNameFilter;
             return new XmlNavigatorFilter(objGetNameFilter);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetNameFilter != null ? retObjectGetNameFilter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -441,10 +555,14 @@ public class XmlQueryRuntime extends NetObject  {
 
     public XmlNavigatorFilter GetTypeFilter(XPathNodeType nodeType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetTypeFilter = null;
         try {
-            JCObject objGetTypeFilter = (JCObject)classInstance.Invoke("GetTypeFilter", nodeType == null ? null : nodeType.getJCOInstance());
+            retObjectGetTypeFilter = classInstance.Invoke("GetTypeFilter", nodeType == null ? null : nodeType.getJCOInstance());
+            JCObject objGetTypeFilter = (JCObject)retObjectGetTypeFilter;
             return new XmlNavigatorFilter(objGetTypeFilter);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetTypeFilter != null ? retObjectGetTypeFilter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -452,7 +570,7 @@ public class XmlQueryRuntime extends NetObject  {
 
     public void AddNewIndex(XPathNavigator context, int indexId, XmlILIndex index) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddNewIndex", context == null ? null : context.getJCOInstance(), indexId, index == null ? null : index.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -462,7 +580,7 @@ public class XmlQueryRuntime extends NetObject  {
 
     public void DebugSetGlobalValue(java.lang.String name, NetObject value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DebugSetGlobalValue", name, value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -472,7 +590,7 @@ public class XmlQueryRuntime extends NetObject  {
 
     public void SendMessage(java.lang.String message) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SendMessage", message);
         } catch (JCNativeException jcne) {
@@ -482,7 +600,7 @@ public class XmlQueryRuntime extends NetObject  {
 
     public void SetGlobalValue(int index, NetObject value) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetGlobalValue", index, value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -492,7 +610,7 @@ public class XmlQueryRuntime extends NetObject  {
 
     public void StartRtfConstruction(java.lang.String baseUri, JCORefOut<XmlQueryOutput> output) throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("StartRtfConstruction", baseUri, output.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -502,7 +620,7 @@ public class XmlQueryRuntime extends NetObject  {
 
     public void StartSequenceConstruction(JCORefOut<XmlQueryOutput> output) throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("StartSequenceConstruction", output.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -512,7 +630,7 @@ public class XmlQueryRuntime extends NetObject  {
 
     public void ThrowException(java.lang.String text) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ThrowException", text);
         } catch (JCNativeException jcne) {
@@ -526,10 +644,14 @@ public class XmlQueryRuntime extends NetObject  {
     
     public XmlNameTable getNameTable() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNameTable = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("NameTable");
+            retObjectNameTable = classInstance.Get("NameTable");
+            JCObject val = (JCObject)retObjectNameTable;
             return new XmlNameTable(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNameTable != null ? retObjectNameTable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -537,10 +659,14 @@ public class XmlQueryRuntime extends NetObject  {
 
     public XmlQueryContext getExternalContext() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExternalContext = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ExternalContext");
+            retObjectExternalContext = classInstance.Get("ExternalContext");
+            JCObject val = (JCObject)retObjectExternalContext;
             return new XmlQueryContext(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExternalContext != null ? retObjectExternalContext.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -548,10 +674,14 @@ public class XmlQueryRuntime extends NetObject  {
 
     public XmlQueryOutput getOutput() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOutput = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Output");
+            retObjectOutput = classInstance.Get("Output");
+            JCObject val = (JCObject)retObjectOutput;
             return new XmlQueryOutput(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOutput != null ? retObjectOutput.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -559,10 +689,14 @@ public class XmlQueryRuntime extends NetObject  {
 
     public XsltLibrary getXsltFunctions() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectXsltFunctions = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("XsltFunctions");
+            retObjectXsltFunctions = classInstance.Get("XsltFunctions");
+            JCObject val = (JCObject)retObjectXsltFunctions;
             return new XsltLibrary(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectXsltFunctions != null ? retObjectXsltFunctions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

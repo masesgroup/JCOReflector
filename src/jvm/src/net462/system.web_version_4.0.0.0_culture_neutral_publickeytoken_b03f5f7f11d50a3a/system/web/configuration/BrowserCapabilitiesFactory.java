@@ -164,7 +164,7 @@ public class BrowserCapabilitiesFactory extends BrowserCapabilitiesFactoryBase  
     
     public void ConfigureBrowserCapabilities(NameValueCollection headers, HttpBrowserCapabilities browserCaps) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.IndexOutOfRangeException, system.InvalidOperationException, system.NullReferenceException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException, system.text.regularexpressions.RegexMatchTimeoutException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ConfigureBrowserCapabilities", headers == null ? null : headers.getJCOInstance(), browserCaps == null ? null : browserCaps.getJCOInstance());
         } catch (JCNativeException jcne) {

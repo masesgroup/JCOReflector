@@ -158,10 +158,14 @@ public class EditingCommands extends NetObject  {
     
     public static RoutedUICommand getAlignCenter() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAlignCenter = null;
         try {
-            JCObject val = (JCObject)classType.Get("AlignCenter");
+            retObjectAlignCenter = classType.Get("AlignCenter");
+            JCObject val = (JCObject)retObjectAlignCenter;
             return new RoutedUICommand(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAlignCenter != null ? retObjectAlignCenter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,10 +173,14 @@ public class EditingCommands extends NetObject  {
 
     public static RoutedUICommand getAlignJustify() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAlignJustify = null;
         try {
-            JCObject val = (JCObject)classType.Get("AlignJustify");
+            retObjectAlignJustify = classType.Get("AlignJustify");
+            JCObject val = (JCObject)retObjectAlignJustify;
             return new RoutedUICommand(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAlignJustify != null ? retObjectAlignJustify.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,10 +188,14 @@ public class EditingCommands extends NetObject  {
 
     public static RoutedUICommand getAlignLeft() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAlignLeft = null;
         try {
-            JCObject val = (JCObject)classType.Get("AlignLeft");
+            retObjectAlignLeft = classType.Get("AlignLeft");
+            JCObject val = (JCObject)retObjectAlignLeft;
             return new RoutedUICommand(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAlignLeft != null ? retObjectAlignLeft.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,10 +203,14 @@ public class EditingCommands extends NetObject  {
 
     public static RoutedUICommand getAlignRight() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAlignRight = null;
         try {
-            JCObject val = (JCObject)classType.Get("AlignRight");
+            retObjectAlignRight = classType.Get("AlignRight");
+            JCObject val = (JCObject)retObjectAlignRight;
             return new RoutedUICommand(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAlignRight != null ? retObjectAlignRight.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,10 +218,14 @@ public class EditingCommands extends NetObject  {
 
     public static RoutedUICommand getBackspace() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectBackspace = null;
         try {
-            JCObject val = (JCObject)classType.Get("Backspace");
+            retObjectBackspace = classType.Get("Backspace");
+            JCObject val = (JCObject)retObjectBackspace;
             return new RoutedUICommand(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBackspace != null ? retObjectBackspace.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,10 +233,14 @@ public class EditingCommands extends NetObject  {
 
     public static RoutedUICommand getCorrectSpellingError() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCorrectSpellingError = null;
         try {
-            JCObject val = (JCObject)classType.Get("CorrectSpellingError");
+            retObjectCorrectSpellingError = classType.Get("CorrectSpellingError");
+            JCObject val = (JCObject)retObjectCorrectSpellingError;
             return new RoutedUICommand(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCorrectSpellingError != null ? retObjectCorrectSpellingError.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -224,10 +248,14 @@ public class EditingCommands extends NetObject  {
 
     public static RoutedUICommand getDecreaseFontSize() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDecreaseFontSize = null;
         try {
-            JCObject val = (JCObject)classType.Get("DecreaseFontSize");
+            retObjectDecreaseFontSize = classType.Get("DecreaseFontSize");
+            JCObject val = (JCObject)retObjectDecreaseFontSize;
             return new RoutedUICommand(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDecreaseFontSize != null ? retObjectDecreaseFontSize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -235,10 +263,14 @@ public class EditingCommands extends NetObject  {
 
     public static RoutedUICommand getDecreaseIndentation() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDecreaseIndentation = null;
         try {
-            JCObject val = (JCObject)classType.Get("DecreaseIndentation");
+            retObjectDecreaseIndentation = classType.Get("DecreaseIndentation");
+            JCObject val = (JCObject)retObjectDecreaseIndentation;
             return new RoutedUICommand(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDecreaseIndentation != null ? retObjectDecreaseIndentation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -246,10 +278,14 @@ public class EditingCommands extends NetObject  {
 
     public static RoutedUICommand getDelete() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDelete = null;
         try {
-            JCObject val = (JCObject)classType.Get("Delete");
+            retObjectDelete = classType.Get("Delete");
+            JCObject val = (JCObject)retObjectDelete;
             return new RoutedUICommand(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDelete != null ? retObjectDelete.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -257,10 +293,14 @@ public class EditingCommands extends NetObject  {
 
     public static RoutedUICommand getDeleteNextWord() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDeleteNextWord = null;
         try {
-            JCObject val = (JCObject)classType.Get("DeleteNextWord");
+            retObjectDeleteNextWord = classType.Get("DeleteNextWord");
+            JCObject val = (JCObject)retObjectDeleteNextWord;
             return new RoutedUICommand(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDeleteNextWord != null ? retObjectDeleteNextWord.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -268,10 +308,14 @@ public class EditingCommands extends NetObject  {
 
     public static RoutedUICommand getDeletePreviousWord() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDeletePreviousWord = null;
         try {
-            JCObject val = (JCObject)classType.Get("DeletePreviousWord");
+            retObjectDeletePreviousWord = classType.Get("DeletePreviousWord");
+            JCObject val = (JCObject)retObjectDeletePreviousWord;
             return new RoutedUICommand(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDeletePreviousWord != null ? retObjectDeletePreviousWord.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -279,10 +323,14 @@ public class EditingCommands extends NetObject  {
 
     public static RoutedUICommand getEnterLineBreak() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectEnterLineBreak = null;
         try {
-            JCObject val = (JCObject)classType.Get("EnterLineBreak");
+            retObjectEnterLineBreak = classType.Get("EnterLineBreak");
+            JCObject val = (JCObject)retObjectEnterLineBreak;
             return new RoutedUICommand(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEnterLineBreak != null ? retObjectEnterLineBreak.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -290,10 +338,14 @@ public class EditingCommands extends NetObject  {
 
     public static RoutedUICommand getEnterParagraphBreak() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectEnterParagraphBreak = null;
         try {
-            JCObject val = (JCObject)classType.Get("EnterParagraphBreak");
+            retObjectEnterParagraphBreak = classType.Get("EnterParagraphBreak");
+            JCObject val = (JCObject)retObjectEnterParagraphBreak;
             return new RoutedUICommand(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEnterParagraphBreak != null ? retObjectEnterParagraphBreak.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -301,10 +353,14 @@ public class EditingCommands extends NetObject  {
 
     public static RoutedUICommand getIgnoreSpellingError() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIgnoreSpellingError = null;
         try {
-            JCObject val = (JCObject)classType.Get("IgnoreSpellingError");
+            retObjectIgnoreSpellingError = classType.Get("IgnoreSpellingError");
+            JCObject val = (JCObject)retObjectIgnoreSpellingError;
             return new RoutedUICommand(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIgnoreSpellingError != null ? retObjectIgnoreSpellingError.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -312,10 +368,14 @@ public class EditingCommands extends NetObject  {
 
     public static RoutedUICommand getIncreaseFontSize() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIncreaseFontSize = null;
         try {
-            JCObject val = (JCObject)classType.Get("IncreaseFontSize");
+            retObjectIncreaseFontSize = classType.Get("IncreaseFontSize");
+            JCObject val = (JCObject)retObjectIncreaseFontSize;
             return new RoutedUICommand(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIncreaseFontSize != null ? retObjectIncreaseFontSize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -323,10 +383,14 @@ public class EditingCommands extends NetObject  {
 
     public static RoutedUICommand getIncreaseIndentation() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIncreaseIndentation = null;
         try {
-            JCObject val = (JCObject)classType.Get("IncreaseIndentation");
+            retObjectIncreaseIndentation = classType.Get("IncreaseIndentation");
+            JCObject val = (JCObject)retObjectIncreaseIndentation;
             return new RoutedUICommand(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIncreaseIndentation != null ? retObjectIncreaseIndentation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -334,10 +398,14 @@ public class EditingCommands extends NetObject  {
 
     public static RoutedUICommand getMoveDownByLine() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMoveDownByLine = null;
         try {
-            JCObject val = (JCObject)classType.Get("MoveDownByLine");
+            retObjectMoveDownByLine = classType.Get("MoveDownByLine");
+            JCObject val = (JCObject)retObjectMoveDownByLine;
             return new RoutedUICommand(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMoveDownByLine != null ? retObjectMoveDownByLine.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -345,10 +413,14 @@ public class EditingCommands extends NetObject  {
 
     public static RoutedUICommand getMoveDownByPage() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMoveDownByPage = null;
         try {
-            JCObject val = (JCObject)classType.Get("MoveDownByPage");
+            retObjectMoveDownByPage = classType.Get("MoveDownByPage");
+            JCObject val = (JCObject)retObjectMoveDownByPage;
             return new RoutedUICommand(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMoveDownByPage != null ? retObjectMoveDownByPage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -356,10 +428,14 @@ public class EditingCommands extends NetObject  {
 
     public static RoutedUICommand getMoveDownByParagraph() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMoveDownByParagraph = null;
         try {
-            JCObject val = (JCObject)classType.Get("MoveDownByParagraph");
+            retObjectMoveDownByParagraph = classType.Get("MoveDownByParagraph");
+            JCObject val = (JCObject)retObjectMoveDownByParagraph;
             return new RoutedUICommand(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMoveDownByParagraph != null ? retObjectMoveDownByParagraph.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -367,10 +443,14 @@ public class EditingCommands extends NetObject  {
 
     public static RoutedUICommand getMoveLeftByCharacter() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMoveLeftByCharacter = null;
         try {
-            JCObject val = (JCObject)classType.Get("MoveLeftByCharacter");
+            retObjectMoveLeftByCharacter = classType.Get("MoveLeftByCharacter");
+            JCObject val = (JCObject)retObjectMoveLeftByCharacter;
             return new RoutedUICommand(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMoveLeftByCharacter != null ? retObjectMoveLeftByCharacter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -378,10 +458,14 @@ public class EditingCommands extends NetObject  {
 
     public static RoutedUICommand getMoveLeftByWord() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMoveLeftByWord = null;
         try {
-            JCObject val = (JCObject)classType.Get("MoveLeftByWord");
+            retObjectMoveLeftByWord = classType.Get("MoveLeftByWord");
+            JCObject val = (JCObject)retObjectMoveLeftByWord;
             return new RoutedUICommand(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMoveLeftByWord != null ? retObjectMoveLeftByWord.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -389,10 +473,14 @@ public class EditingCommands extends NetObject  {
 
     public static RoutedUICommand getMoveRightByCharacter() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMoveRightByCharacter = null;
         try {
-            JCObject val = (JCObject)classType.Get("MoveRightByCharacter");
+            retObjectMoveRightByCharacter = classType.Get("MoveRightByCharacter");
+            JCObject val = (JCObject)retObjectMoveRightByCharacter;
             return new RoutedUICommand(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMoveRightByCharacter != null ? retObjectMoveRightByCharacter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -400,10 +488,14 @@ public class EditingCommands extends NetObject  {
 
     public static RoutedUICommand getMoveRightByWord() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMoveRightByWord = null;
         try {
-            JCObject val = (JCObject)classType.Get("MoveRightByWord");
+            retObjectMoveRightByWord = classType.Get("MoveRightByWord");
+            JCObject val = (JCObject)retObjectMoveRightByWord;
             return new RoutedUICommand(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMoveRightByWord != null ? retObjectMoveRightByWord.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -411,10 +503,14 @@ public class EditingCommands extends NetObject  {
 
     public static RoutedUICommand getMoveToDocumentEnd() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMoveToDocumentEnd = null;
         try {
-            JCObject val = (JCObject)classType.Get("MoveToDocumentEnd");
+            retObjectMoveToDocumentEnd = classType.Get("MoveToDocumentEnd");
+            JCObject val = (JCObject)retObjectMoveToDocumentEnd;
             return new RoutedUICommand(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMoveToDocumentEnd != null ? retObjectMoveToDocumentEnd.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -422,10 +518,14 @@ public class EditingCommands extends NetObject  {
 
     public static RoutedUICommand getMoveToDocumentStart() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMoveToDocumentStart = null;
         try {
-            JCObject val = (JCObject)classType.Get("MoveToDocumentStart");
+            retObjectMoveToDocumentStart = classType.Get("MoveToDocumentStart");
+            JCObject val = (JCObject)retObjectMoveToDocumentStart;
             return new RoutedUICommand(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMoveToDocumentStart != null ? retObjectMoveToDocumentStart.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -433,10 +533,14 @@ public class EditingCommands extends NetObject  {
 
     public static RoutedUICommand getMoveToLineEnd() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMoveToLineEnd = null;
         try {
-            JCObject val = (JCObject)classType.Get("MoveToLineEnd");
+            retObjectMoveToLineEnd = classType.Get("MoveToLineEnd");
+            JCObject val = (JCObject)retObjectMoveToLineEnd;
             return new RoutedUICommand(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMoveToLineEnd != null ? retObjectMoveToLineEnd.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -444,10 +548,14 @@ public class EditingCommands extends NetObject  {
 
     public static RoutedUICommand getMoveToLineStart() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMoveToLineStart = null;
         try {
-            JCObject val = (JCObject)classType.Get("MoveToLineStart");
+            retObjectMoveToLineStart = classType.Get("MoveToLineStart");
+            JCObject val = (JCObject)retObjectMoveToLineStart;
             return new RoutedUICommand(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMoveToLineStart != null ? retObjectMoveToLineStart.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -455,10 +563,14 @@ public class EditingCommands extends NetObject  {
 
     public static RoutedUICommand getMoveUpByLine() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMoveUpByLine = null;
         try {
-            JCObject val = (JCObject)classType.Get("MoveUpByLine");
+            retObjectMoveUpByLine = classType.Get("MoveUpByLine");
+            JCObject val = (JCObject)retObjectMoveUpByLine;
             return new RoutedUICommand(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMoveUpByLine != null ? retObjectMoveUpByLine.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -466,10 +578,14 @@ public class EditingCommands extends NetObject  {
 
     public static RoutedUICommand getMoveUpByPage() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMoveUpByPage = null;
         try {
-            JCObject val = (JCObject)classType.Get("MoveUpByPage");
+            retObjectMoveUpByPage = classType.Get("MoveUpByPage");
+            JCObject val = (JCObject)retObjectMoveUpByPage;
             return new RoutedUICommand(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMoveUpByPage != null ? retObjectMoveUpByPage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -477,10 +593,14 @@ public class EditingCommands extends NetObject  {
 
     public static RoutedUICommand getMoveUpByParagraph() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMoveUpByParagraph = null;
         try {
-            JCObject val = (JCObject)classType.Get("MoveUpByParagraph");
+            retObjectMoveUpByParagraph = classType.Get("MoveUpByParagraph");
+            JCObject val = (JCObject)retObjectMoveUpByParagraph;
             return new RoutedUICommand(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMoveUpByParagraph != null ? retObjectMoveUpByParagraph.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -488,10 +608,14 @@ public class EditingCommands extends NetObject  {
 
     public static RoutedUICommand getSelectDownByLine() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSelectDownByLine = null;
         try {
-            JCObject val = (JCObject)classType.Get("SelectDownByLine");
+            retObjectSelectDownByLine = classType.Get("SelectDownByLine");
+            JCObject val = (JCObject)retObjectSelectDownByLine;
             return new RoutedUICommand(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelectDownByLine != null ? retObjectSelectDownByLine.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -499,10 +623,14 @@ public class EditingCommands extends NetObject  {
 
     public static RoutedUICommand getSelectDownByPage() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSelectDownByPage = null;
         try {
-            JCObject val = (JCObject)classType.Get("SelectDownByPage");
+            retObjectSelectDownByPage = classType.Get("SelectDownByPage");
+            JCObject val = (JCObject)retObjectSelectDownByPage;
             return new RoutedUICommand(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelectDownByPage != null ? retObjectSelectDownByPage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -510,10 +638,14 @@ public class EditingCommands extends NetObject  {
 
     public static RoutedUICommand getSelectDownByParagraph() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSelectDownByParagraph = null;
         try {
-            JCObject val = (JCObject)classType.Get("SelectDownByParagraph");
+            retObjectSelectDownByParagraph = classType.Get("SelectDownByParagraph");
+            JCObject val = (JCObject)retObjectSelectDownByParagraph;
             return new RoutedUICommand(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelectDownByParagraph != null ? retObjectSelectDownByParagraph.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -521,10 +653,14 @@ public class EditingCommands extends NetObject  {
 
     public static RoutedUICommand getSelectLeftByCharacter() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSelectLeftByCharacter = null;
         try {
-            JCObject val = (JCObject)classType.Get("SelectLeftByCharacter");
+            retObjectSelectLeftByCharacter = classType.Get("SelectLeftByCharacter");
+            JCObject val = (JCObject)retObjectSelectLeftByCharacter;
             return new RoutedUICommand(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelectLeftByCharacter != null ? retObjectSelectLeftByCharacter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -532,10 +668,14 @@ public class EditingCommands extends NetObject  {
 
     public static RoutedUICommand getSelectLeftByWord() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSelectLeftByWord = null;
         try {
-            JCObject val = (JCObject)classType.Get("SelectLeftByWord");
+            retObjectSelectLeftByWord = classType.Get("SelectLeftByWord");
+            JCObject val = (JCObject)retObjectSelectLeftByWord;
             return new RoutedUICommand(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelectLeftByWord != null ? retObjectSelectLeftByWord.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -543,10 +683,14 @@ public class EditingCommands extends NetObject  {
 
     public static RoutedUICommand getSelectRightByCharacter() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSelectRightByCharacter = null;
         try {
-            JCObject val = (JCObject)classType.Get("SelectRightByCharacter");
+            retObjectSelectRightByCharacter = classType.Get("SelectRightByCharacter");
+            JCObject val = (JCObject)retObjectSelectRightByCharacter;
             return new RoutedUICommand(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelectRightByCharacter != null ? retObjectSelectRightByCharacter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -554,10 +698,14 @@ public class EditingCommands extends NetObject  {
 
     public static RoutedUICommand getSelectRightByWord() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSelectRightByWord = null;
         try {
-            JCObject val = (JCObject)classType.Get("SelectRightByWord");
+            retObjectSelectRightByWord = classType.Get("SelectRightByWord");
+            JCObject val = (JCObject)retObjectSelectRightByWord;
             return new RoutedUICommand(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelectRightByWord != null ? retObjectSelectRightByWord.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -565,10 +713,14 @@ public class EditingCommands extends NetObject  {
 
     public static RoutedUICommand getSelectToDocumentEnd() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSelectToDocumentEnd = null;
         try {
-            JCObject val = (JCObject)classType.Get("SelectToDocumentEnd");
+            retObjectSelectToDocumentEnd = classType.Get("SelectToDocumentEnd");
+            JCObject val = (JCObject)retObjectSelectToDocumentEnd;
             return new RoutedUICommand(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelectToDocumentEnd != null ? retObjectSelectToDocumentEnd.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -576,10 +728,14 @@ public class EditingCommands extends NetObject  {
 
     public static RoutedUICommand getSelectToDocumentStart() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSelectToDocumentStart = null;
         try {
-            JCObject val = (JCObject)classType.Get("SelectToDocumentStart");
+            retObjectSelectToDocumentStart = classType.Get("SelectToDocumentStart");
+            JCObject val = (JCObject)retObjectSelectToDocumentStart;
             return new RoutedUICommand(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelectToDocumentStart != null ? retObjectSelectToDocumentStart.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -587,10 +743,14 @@ public class EditingCommands extends NetObject  {
 
     public static RoutedUICommand getSelectToLineEnd() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSelectToLineEnd = null;
         try {
-            JCObject val = (JCObject)classType.Get("SelectToLineEnd");
+            retObjectSelectToLineEnd = classType.Get("SelectToLineEnd");
+            JCObject val = (JCObject)retObjectSelectToLineEnd;
             return new RoutedUICommand(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelectToLineEnd != null ? retObjectSelectToLineEnd.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -598,10 +758,14 @@ public class EditingCommands extends NetObject  {
 
     public static RoutedUICommand getSelectToLineStart() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSelectToLineStart = null;
         try {
-            JCObject val = (JCObject)classType.Get("SelectToLineStart");
+            retObjectSelectToLineStart = classType.Get("SelectToLineStart");
+            JCObject val = (JCObject)retObjectSelectToLineStart;
             return new RoutedUICommand(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelectToLineStart != null ? retObjectSelectToLineStart.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -609,10 +773,14 @@ public class EditingCommands extends NetObject  {
 
     public static RoutedUICommand getSelectUpByLine() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSelectUpByLine = null;
         try {
-            JCObject val = (JCObject)classType.Get("SelectUpByLine");
+            retObjectSelectUpByLine = classType.Get("SelectUpByLine");
+            JCObject val = (JCObject)retObjectSelectUpByLine;
             return new RoutedUICommand(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelectUpByLine != null ? retObjectSelectUpByLine.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -620,10 +788,14 @@ public class EditingCommands extends NetObject  {
 
     public static RoutedUICommand getSelectUpByPage() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSelectUpByPage = null;
         try {
-            JCObject val = (JCObject)classType.Get("SelectUpByPage");
+            retObjectSelectUpByPage = classType.Get("SelectUpByPage");
+            JCObject val = (JCObject)retObjectSelectUpByPage;
             return new RoutedUICommand(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelectUpByPage != null ? retObjectSelectUpByPage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -631,10 +803,14 @@ public class EditingCommands extends NetObject  {
 
     public static RoutedUICommand getSelectUpByParagraph() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSelectUpByParagraph = null;
         try {
-            JCObject val = (JCObject)classType.Get("SelectUpByParagraph");
+            retObjectSelectUpByParagraph = classType.Get("SelectUpByParagraph");
+            JCObject val = (JCObject)retObjectSelectUpByParagraph;
             return new RoutedUICommand(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelectUpByParagraph != null ? retObjectSelectUpByParagraph.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -642,10 +818,14 @@ public class EditingCommands extends NetObject  {
 
     public static RoutedUICommand getTabBackward() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTabBackward = null;
         try {
-            JCObject val = (JCObject)classType.Get("TabBackward");
+            retObjectTabBackward = classType.Get("TabBackward");
+            JCObject val = (JCObject)retObjectTabBackward;
             return new RoutedUICommand(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTabBackward != null ? retObjectTabBackward.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -653,10 +833,14 @@ public class EditingCommands extends NetObject  {
 
     public static RoutedUICommand getTabForward() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTabForward = null;
         try {
-            JCObject val = (JCObject)classType.Get("TabForward");
+            retObjectTabForward = classType.Get("TabForward");
+            JCObject val = (JCObject)retObjectTabForward;
             return new RoutedUICommand(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTabForward != null ? retObjectTabForward.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -664,10 +848,14 @@ public class EditingCommands extends NetObject  {
 
     public static RoutedUICommand getToggleBold() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectToggleBold = null;
         try {
-            JCObject val = (JCObject)classType.Get("ToggleBold");
+            retObjectToggleBold = classType.Get("ToggleBold");
+            JCObject val = (JCObject)retObjectToggleBold;
             return new RoutedUICommand(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToggleBold != null ? retObjectToggleBold.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -675,10 +863,14 @@ public class EditingCommands extends NetObject  {
 
     public static RoutedUICommand getToggleBullets() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectToggleBullets = null;
         try {
-            JCObject val = (JCObject)classType.Get("ToggleBullets");
+            retObjectToggleBullets = classType.Get("ToggleBullets");
+            JCObject val = (JCObject)retObjectToggleBullets;
             return new RoutedUICommand(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToggleBullets != null ? retObjectToggleBullets.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -686,10 +878,14 @@ public class EditingCommands extends NetObject  {
 
     public static RoutedUICommand getToggleInsert() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectToggleInsert = null;
         try {
-            JCObject val = (JCObject)classType.Get("ToggleInsert");
+            retObjectToggleInsert = classType.Get("ToggleInsert");
+            JCObject val = (JCObject)retObjectToggleInsert;
             return new RoutedUICommand(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToggleInsert != null ? retObjectToggleInsert.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -697,10 +893,14 @@ public class EditingCommands extends NetObject  {
 
     public static RoutedUICommand getToggleItalic() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectToggleItalic = null;
         try {
-            JCObject val = (JCObject)classType.Get("ToggleItalic");
+            retObjectToggleItalic = classType.Get("ToggleItalic");
+            JCObject val = (JCObject)retObjectToggleItalic;
             return new RoutedUICommand(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToggleItalic != null ? retObjectToggleItalic.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -708,10 +908,14 @@ public class EditingCommands extends NetObject  {
 
     public static RoutedUICommand getToggleNumbering() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectToggleNumbering = null;
         try {
-            JCObject val = (JCObject)classType.Get("ToggleNumbering");
+            retObjectToggleNumbering = classType.Get("ToggleNumbering");
+            JCObject val = (JCObject)retObjectToggleNumbering;
             return new RoutedUICommand(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToggleNumbering != null ? retObjectToggleNumbering.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -719,10 +923,14 @@ public class EditingCommands extends NetObject  {
 
     public static RoutedUICommand getToggleSubscript() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectToggleSubscript = null;
         try {
-            JCObject val = (JCObject)classType.Get("ToggleSubscript");
+            retObjectToggleSubscript = classType.Get("ToggleSubscript");
+            JCObject val = (JCObject)retObjectToggleSubscript;
             return new RoutedUICommand(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToggleSubscript != null ? retObjectToggleSubscript.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -730,10 +938,14 @@ public class EditingCommands extends NetObject  {
 
     public static RoutedUICommand getToggleSuperscript() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectToggleSuperscript = null;
         try {
-            JCObject val = (JCObject)classType.Get("ToggleSuperscript");
+            retObjectToggleSuperscript = classType.Get("ToggleSuperscript");
+            JCObject val = (JCObject)retObjectToggleSuperscript;
             return new RoutedUICommand(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToggleSuperscript != null ? retObjectToggleSuperscript.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -741,10 +953,14 @@ public class EditingCommands extends NetObject  {
 
     public static RoutedUICommand getToggleUnderline() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectToggleUnderline = null;
         try {
-            JCObject val = (JCObject)classType.Get("ToggleUnderline");
+            retObjectToggleUnderline = classType.Get("ToggleUnderline");
+            JCObject val = (JCObject)retObjectToggleUnderline;
             return new RoutedUICommand(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToggleUnderline != null ? retObjectToggleUnderline.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

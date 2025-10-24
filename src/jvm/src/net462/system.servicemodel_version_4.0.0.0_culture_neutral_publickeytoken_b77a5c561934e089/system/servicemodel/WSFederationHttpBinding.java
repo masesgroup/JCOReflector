@@ -196,9 +196,13 @@ public class WSFederationHttpBinding extends WSHttpBindingBase  {
     
     public boolean ShouldSerializeSecurity() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShouldSerializeSecurity = null;
         try {
-            return (boolean)classInstance.Invoke("ShouldSerializeSecurity");
+            retObjectShouldSerializeSecurity = classInstance.Invoke("ShouldSerializeSecurity");
+            return (boolean)retObjectShouldSerializeSecurity;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectShouldSerializeSecurity != null ? retObjectShouldSerializeSecurity.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -206,10 +210,14 @@ public class WSFederationHttpBinding extends WSHttpBindingBase  {
 
     public BindingElementCollection CreateBindingElements() throws Throwable, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateBindingElements = null;
         try {
-            JCObject objCreateBindingElements = (JCObject)classInstance.Invoke("CreateBindingElements");
+            retObjectCreateBindingElements = classInstance.Invoke("CreateBindingElements");
+            JCObject objCreateBindingElements = (JCObject)retObjectCreateBindingElements;
             return new BindingElementCollection(objCreateBindingElements);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateBindingElements != null ? retObjectCreateBindingElements.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -221,9 +229,20 @@ public class WSFederationHttpBinding extends WSHttpBindingBase  {
     
     public int getPrivacyNoticeVersion() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPrivacyNoticeVersion = null;
         try {
-            return (int)classInstance.Get("PrivacyNoticeVersion");
+            retObjectPrivacyNoticeVersion = classInstance.Get("PrivacyNoticeVersion");
+            return (int)retObjectPrivacyNoticeVersion;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectPrivacyNoticeVersion_ToString = retObjectPrivacyNoticeVersion == null ? "null" : retObjectPrivacyNoticeVersion.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectPrivacyNoticeVersionNumber = (java.lang.Number)retObjectPrivacyNoticeVersion;
+                return retObjectPrivacyNoticeVersionNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectPrivacyNoticeVersion != null ? retObjectPrivacyNoticeVersion.getClass() : "null", retObjectPrivacyNoticeVersion_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -231,7 +250,7 @@ public class WSFederationHttpBinding extends WSHttpBindingBase  {
 
     public void setPrivacyNoticeVersion(int PrivacyNoticeVersion) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PrivacyNoticeVersion", PrivacyNoticeVersion);
         } catch (JCNativeException jcne) {
@@ -241,10 +260,14 @@ public class WSFederationHttpBinding extends WSHttpBindingBase  {
 
     public WSFederationHttpSecurity getSecurity() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSecurity = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Security");
+            retObjectSecurity = classInstance.Get("Security");
+            JCObject val = (JCObject)retObjectSecurity;
             return new WSFederationHttpSecurity(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSecurity != null ? retObjectSecurity.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -252,7 +275,7 @@ public class WSFederationHttpBinding extends WSHttpBindingBase  {
 
     public void setSecurity(WSFederationHttpSecurity Security) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Security", Security == null ? null : Security.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -262,10 +285,14 @@ public class WSFederationHttpBinding extends WSHttpBindingBase  {
 
     public Uri getPrivacyNoticeAt() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPrivacyNoticeAt = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PrivacyNoticeAt");
+            retObjectPrivacyNoticeAt = classInstance.Get("PrivacyNoticeAt");
+            JCObject val = (JCObject)retObjectPrivacyNoticeAt;
             return new Uri(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPrivacyNoticeAt != null ? retObjectPrivacyNoticeAt.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -273,7 +300,7 @@ public class WSFederationHttpBinding extends WSHttpBindingBase  {
 
     public void setPrivacyNoticeAt(Uri PrivacyNoticeAt) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PrivacyNoticeAt", PrivacyNoticeAt == null ? null : PrivacyNoticeAt.getJCOInstance());
         } catch (JCNativeException jcne) {

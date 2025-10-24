@@ -159,9 +159,13 @@ public class EntityContainer extends GlobalItem  {
     
     public boolean TryGetEntitySetByName(java.lang.String name, boolean ignoreCase, JCORefOut<EntitySet> entitySet) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryGetEntitySetByName = null;
         try {
-            return (boolean)classInstance.Invoke("TryGetEntitySetByName", name, ignoreCase, entitySet.getJCRefOut());
+            retObjectTryGetEntitySetByName = classInstance.Invoke("TryGetEntitySetByName", name, ignoreCase, entitySet.getJCRefOut());
+            return (boolean)retObjectTryGetEntitySetByName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryGetEntitySetByName != null ? retObjectTryGetEntitySetByName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,9 +173,13 @@ public class EntityContainer extends GlobalItem  {
 
     public boolean TryGetRelationshipSetByName(java.lang.String name, boolean ignoreCase, JCORefOut<RelationshipSet> relationshipSet) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryGetRelationshipSetByName = null;
         try {
-            return (boolean)classInstance.Invoke("TryGetRelationshipSetByName", name, ignoreCase, relationshipSet.getJCRefOut());
+            retObjectTryGetRelationshipSetByName = classInstance.Invoke("TryGetRelationshipSetByName", name, ignoreCase, relationshipSet.getJCRefOut());
+            return (boolean)retObjectTryGetRelationshipSetByName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryGetRelationshipSetByName != null ? retObjectTryGetRelationshipSetByName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,10 +187,14 @@ public class EntityContainer extends GlobalItem  {
 
     public EntitySet GetEntitySetByName(java.lang.String name, boolean ignoreCase) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetEntitySetByName = null;
         try {
-            JCObject objGetEntitySetByName = (JCObject)classInstance.Invoke("GetEntitySetByName", name, ignoreCase);
+            retObjectGetEntitySetByName = classInstance.Invoke("GetEntitySetByName", name, ignoreCase);
+            JCObject objGetEntitySetByName = (JCObject)retObjectGetEntitySetByName;
             return new EntitySet(objGetEntitySetByName);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetEntitySetByName != null ? retObjectGetEntitySetByName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,10 +202,14 @@ public class EntityContainer extends GlobalItem  {
 
     public RelationshipSet GetRelationshipSetByName(java.lang.String name, boolean ignoreCase) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetRelationshipSetByName = null;
         try {
-            JCObject objGetRelationshipSetByName = (JCObject)classInstance.Invoke("GetRelationshipSetByName", name, ignoreCase);
+            retObjectGetRelationshipSetByName = classInstance.Invoke("GetRelationshipSetByName", name, ignoreCase);
+            JCObject objGetRelationshipSetByName = (JCObject)retObjectGetRelationshipSetByName;
             return new RelationshipSet(objGetRelationshipSetByName);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetRelationshipSetByName != null ? retObjectGetRelationshipSetByName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -205,9 +221,13 @@ public class EntityContainer extends GlobalItem  {
     
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectName = null;
         try {
-            return (java.lang.String)classInstance.Get("Name");
+            retObjectName = classInstance.Get("Name");
+            return (java.lang.String)retObjectName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectName != null ? retObjectName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

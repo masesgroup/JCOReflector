@@ -164,9 +164,13 @@ public class ConfigurationBasedIssuerNameRegistry extends IssuerNameRegistry  {
     
     public java.lang.String GetIssuerName(SecurityToken securityToken) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetIssuerName = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetIssuerName", securityToken == null ? null : securityToken.getJCOInstance());
+            retObjectGetIssuerName = classInstance.Invoke("GetIssuerName", securityToken == null ? null : securityToken.getJCOInstance());
+            return (java.lang.String)retObjectGetIssuerName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetIssuerName != null ? retObjectGetIssuerName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -174,7 +178,7 @@ public class ConfigurationBasedIssuerNameRegistry extends IssuerNameRegistry  {
 
     public void AddTrustedIssuer(java.lang.String certificateThumbprint, java.lang.String name) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddTrustedIssuer", certificateThumbprint, name);
         } catch (JCNativeException jcne) {
@@ -184,7 +188,7 @@ public class ConfigurationBasedIssuerNameRegistry extends IssuerNameRegistry  {
 
     public void LoadCustomConfiguration(XmlNodeList customConfiguration) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("LoadCustomConfiguration", customConfiguration == null ? null : customConfiguration.getJCOInstance());
         } catch (JCNativeException jcne) {

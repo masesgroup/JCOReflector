@@ -166,9 +166,13 @@ public class SoapMethodAttribute extends SoapAttribute  {
     
     public java.lang.String getResponseXmlElementName() throws Throwable, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResponseXmlElementName = null;
         try {
-            return (java.lang.String)classInstance.Get("ResponseXmlElementName");
+            retObjectResponseXmlElementName = classInstance.Get("ResponseXmlElementName");
+            return (java.lang.String)retObjectResponseXmlElementName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectResponseXmlElementName != null ? retObjectResponseXmlElementName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,7 +180,7 @@ public class SoapMethodAttribute extends SoapAttribute  {
 
     public void setResponseXmlElementName(java.lang.String ResponseXmlElementName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ResponseXmlElementName", ResponseXmlElementName);
         } catch (JCNativeException jcne) {
@@ -186,9 +190,13 @@ public class SoapMethodAttribute extends SoapAttribute  {
 
     public java.lang.String getResponseXmlNamespace() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResponseXmlNamespace = null;
         try {
-            return (java.lang.String)classInstance.Get("ResponseXmlNamespace");
+            retObjectResponseXmlNamespace = classInstance.Get("ResponseXmlNamespace");
+            return (java.lang.String)retObjectResponseXmlNamespace;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectResponseXmlNamespace != null ? retObjectResponseXmlNamespace.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,7 +204,7 @@ public class SoapMethodAttribute extends SoapAttribute  {
 
     public void setResponseXmlNamespace(java.lang.String ResponseXmlNamespace) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ResponseXmlNamespace", ResponseXmlNamespace);
         } catch (JCNativeException jcne) {
@@ -206,9 +214,13 @@ public class SoapMethodAttribute extends SoapAttribute  {
 
     public java.lang.String getReturnXmlElementName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReturnXmlElementName = null;
         try {
-            return (java.lang.String)classInstance.Get("ReturnXmlElementName");
+            retObjectReturnXmlElementName = classInstance.Get("ReturnXmlElementName");
+            return (java.lang.String)retObjectReturnXmlElementName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectReturnXmlElementName != null ? retObjectReturnXmlElementName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -216,7 +228,7 @@ public class SoapMethodAttribute extends SoapAttribute  {
 
     public void setReturnXmlElementName(java.lang.String ReturnXmlElementName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ReturnXmlElementName", ReturnXmlElementName);
         } catch (JCNativeException jcne) {
@@ -226,9 +238,13 @@ public class SoapMethodAttribute extends SoapAttribute  {
 
     public java.lang.String getSoapAction() throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSoapAction = null;
         try {
-            return (java.lang.String)classInstance.Get("SoapAction");
+            retObjectSoapAction = classInstance.Get("SoapAction");
+            return (java.lang.String)retObjectSoapAction;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSoapAction != null ? retObjectSoapAction.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -236,7 +252,7 @@ public class SoapMethodAttribute extends SoapAttribute  {
 
     public void setSoapAction(java.lang.String SoapAction) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SoapAction", SoapAction);
         } catch (JCNativeException jcne) {

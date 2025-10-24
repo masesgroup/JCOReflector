@@ -161,7 +161,7 @@ public class ComObject extends NetObject implements system.runtime.interopservic
     
     public void FinalRelease() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("FinalRelease");
         } catch (JCNativeException jcne) {
@@ -175,7 +175,7 @@ public class ComObject extends NetObject implements system.runtime.interopservic
      */
     @Deprecated 
     public boolean IsInterfaceImplemented(RuntimeTypeHandle interfaceType, boolean throwIfNotImplemented) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDynamicInterfaceCastable to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDynamicInterfaceCastable to obtain the full interface.");
     }
 
     /**
@@ -184,7 +184,7 @@ public class ComObject extends NetObject implements system.runtime.interopservic
      */
     @Deprecated 
     public RuntimeTypeHandle GetInterfaceImplementation(RuntimeTypeHandle interfaceType) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDynamicInterfaceCastable to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDynamicInterfaceCastable to obtain the full interface.");
     }
 
     /**
@@ -193,7 +193,7 @@ public class ComObject extends NetObject implements system.runtime.interopservic
      */
     @Deprecated 
     public VirtualMethodTableInfo GetVirtualMethodTableInfoForKey(NetType type) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIUnmanagedVirtualMethodTableProvider to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIUnmanagedVirtualMethodTableProvider to obtain the full interface.");
     }
 
 

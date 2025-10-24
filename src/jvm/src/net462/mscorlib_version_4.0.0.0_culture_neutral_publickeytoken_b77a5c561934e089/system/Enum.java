@@ -166,9 +166,13 @@ public class Enum extends ValueType  {
     
     public boolean HasFlag(Enum flag) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHasFlag = null;
         try {
-            return (boolean)classInstance.Invoke("HasFlag", flag == null ? null : flag.getJCOInstance());
+            retObjectHasFlag = classInstance.Invoke("HasFlag", flag == null ? null : flag.getJCOInstance());
+            return (boolean)retObjectHasFlag;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectHasFlag != null ? retObjectHasFlag.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,9 +180,13 @@ public class Enum extends ValueType  {
 
     public static boolean IsDefined(NetType enumType, NetObject value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsDefined = null;
         try {
-            return (boolean)classType.Invoke("IsDefined", enumType == null ? null : enumType.getJCOInstance(), value == null ? null : value.getJCOInstance());
+            retObjectIsDefined = classType.Invoke("IsDefined", enumType == null ? null : enumType.getJCOInstance(), value == null ? null : value.getJCOInstance());
+            return (boolean)retObjectIsDefined;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsDefined != null ? retObjectIsDefined.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,9 +194,20 @@ public class Enum extends ValueType  {
 
     public int CompareTo(NetObject target) throws Throwable, system.NullReferenceException, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCompareTo = null;
         try {
-            return (int)classInstance.Invoke("CompareTo", target == null ? null : target.getJCOInstance());
+            retObjectCompareTo = classInstance.Invoke("CompareTo", target == null ? null : target.getJCOInstance());
+            return (int)retObjectCompareTo;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCompareTo_ToString = retObjectCompareTo == null ? "null" : retObjectCompareTo.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectCompareToNumber = (java.lang.Number)retObjectCompareTo;
+                return retObjectCompareToNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCompareTo != null ? retObjectCompareTo.getClass() : "null", retObjectCompareTo_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,10 +215,14 @@ public class Enum extends ValueType  {
 
     public static Array GetValues(NetType enumType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetValues = null;
         try {
-            JCObject objGetValues = (JCObject)classType.Invoke("GetValues", enumType == null ? null : enumType.getJCOInstance());
+            retObjectGetValues = classType.Invoke("GetValues", enumType == null ? null : enumType.getJCOInstance());
+            JCObject objGetValues = (JCObject)retObjectGetValues;
             return new Array(objGetValues);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetValues != null ? retObjectGetValues.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -207,10 +230,14 @@ public class Enum extends ValueType  {
 
     public static NetObject Parse(NetType enumType, java.lang.String value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.InvalidCastException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.globalization.CultureNotFoundException, system.NullReferenceException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectParse = null;
         try {
-            JCObject objParse = (JCObject)classType.Invoke("Parse", enumType == null ? null : enumType.getJCOInstance(), value);
+            retObjectParse = classType.Invoke("Parse", enumType == null ? null : enumType.getJCOInstance(), value);
+            JCObject objParse = (JCObject)retObjectParse;
             return new NetObject(objParse);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParse != null ? retObjectParse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -218,10 +245,14 @@ public class Enum extends ValueType  {
 
     public static NetObject Parse(NetType enumType, java.lang.String value, boolean ignoreCase) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidCastException, system.NotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.globalization.CultureNotFoundException, system.NullReferenceException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectParse = null;
         try {
-            JCObject objParse = (JCObject)classType.Invoke("Parse", enumType == null ? null : enumType.getJCOInstance(), value, ignoreCase);
+            retObjectParse = classType.Invoke("Parse", enumType == null ? null : enumType.getJCOInstance(), value, ignoreCase);
+            JCObject objParse = (JCObject)retObjectParse;
             return new NetObject(objParse);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParse != null ? retObjectParse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -229,10 +260,14 @@ public class Enum extends ValueType  {
 
     public static NetObject ToObject(NetType enumType, byte value) throws Throwable, system.ArgumentNullException, system.ArgumentException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectToObject = null;
         try {
-            JCObject objToObject = (JCObject)classType.Invoke("ToObject", enumType == null ? null : enumType.getJCOInstance(), value);
+            retObjectToObject = classType.Invoke("ToObject", enumType == null ? null : enumType.getJCOInstance(), value);
+            JCObject objToObject = (JCObject)retObjectToObject;
             return new NetObject(objToObject);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToObject != null ? retObjectToObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -240,10 +275,14 @@ public class Enum extends ValueType  {
 
     public static NetObject ToObject(NetType enumType, short value) throws Throwable, system.ArgumentNullException, system.ArgumentException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectToObject = null;
         try {
-            JCObject objToObject = (JCObject)classType.Invoke("ToObject", enumType == null ? null : enumType.getJCOInstance(), value);
+            retObjectToObject = classType.Invoke("ToObject", enumType == null ? null : enumType.getJCOInstance(), value);
+            JCObject objToObject = (JCObject)retObjectToObject;
             return new NetObject(objToObject);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToObject != null ? retObjectToObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -251,10 +290,14 @@ public class Enum extends ValueType  {
 
     public static NetObject ToObject(NetType enumType, int value) throws Throwable, system.ArgumentNullException, system.ArgumentException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectToObject = null;
         try {
-            JCObject objToObject = (JCObject)classType.Invoke("ToObject", enumType == null ? null : enumType.getJCOInstance(), value);
+            retObjectToObject = classType.Invoke("ToObject", enumType == null ? null : enumType.getJCOInstance(), value);
+            JCObject objToObject = (JCObject)retObjectToObject;
             return new NetObject(objToObject);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToObject != null ? retObjectToObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -262,10 +305,14 @@ public class Enum extends ValueType  {
 
     public static NetObject ToObject(NetType enumType, long value) throws Throwable, system.ArgumentNullException, system.ArgumentException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectToObject = null;
         try {
-            JCObject objToObject = (JCObject)classType.Invoke("ToObject", enumType == null ? null : enumType.getJCOInstance(), value);
+            retObjectToObject = classType.Invoke("ToObject", enumType == null ? null : enumType.getJCOInstance(), value);
+            JCObject objToObject = (JCObject)retObjectToObject;
             return new NetObject(objToObject);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToObject != null ? retObjectToObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -273,10 +320,14 @@ public class Enum extends ValueType  {
 
     public static NetObject ToObject(NetType enumType, SByte value) throws Throwable, system.ArgumentNullException, system.ArgumentException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectToObject = null;
         try {
-            JCObject objToObject = (JCObject)classType.Invoke("ToObject", enumType == null ? null : enumType.getJCOInstance(), value == null ? null : value.getJCOInstance());
+            retObjectToObject = classType.Invoke("ToObject", enumType == null ? null : enumType.getJCOInstance(), value == null ? null : value.getJCOInstance());
+            JCObject objToObject = (JCObject)retObjectToObject;
             return new NetObject(objToObject);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToObject != null ? retObjectToObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -284,10 +335,14 @@ public class Enum extends ValueType  {
 
     public static NetObject ToObject(NetType enumType, NetObject value) throws Throwable, system.ArgumentNullException, system.ArgumentException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectToObject = null;
         try {
-            JCObject objToObject = (JCObject)classType.Invoke("ToObject", enumType == null ? null : enumType.getJCOInstance(), value == null ? null : value.getJCOInstance());
+            retObjectToObject = classType.Invoke("ToObject", enumType == null ? null : enumType.getJCOInstance(), value == null ? null : value.getJCOInstance());
+            JCObject objToObject = (JCObject)retObjectToObject;
             return new NetObject(objToObject);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToObject != null ? retObjectToObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -295,10 +350,14 @@ public class Enum extends ValueType  {
 
     public static NetObject ToObject(NetType enumType, UInt16 value) throws Throwable, system.ArgumentNullException, system.ArgumentException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectToObject = null;
         try {
-            JCObject objToObject = (JCObject)classType.Invoke("ToObject", enumType == null ? null : enumType.getJCOInstance(), value == null ? null : value.getJCOInstance());
+            retObjectToObject = classType.Invoke("ToObject", enumType == null ? null : enumType.getJCOInstance(), value == null ? null : value.getJCOInstance());
+            JCObject objToObject = (JCObject)retObjectToObject;
             return new NetObject(objToObject);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToObject != null ? retObjectToObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -306,10 +365,14 @@ public class Enum extends ValueType  {
 
     public static NetObject ToObject(NetType enumType, UInt32 value) throws Throwable, system.ArgumentNullException, system.ArgumentException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectToObject = null;
         try {
-            JCObject objToObject = (JCObject)classType.Invoke("ToObject", enumType == null ? null : enumType.getJCOInstance(), value == null ? null : value.getJCOInstance());
+            retObjectToObject = classType.Invoke("ToObject", enumType == null ? null : enumType.getJCOInstance(), value == null ? null : value.getJCOInstance());
+            JCObject objToObject = (JCObject)retObjectToObject;
             return new NetObject(objToObject);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToObject != null ? retObjectToObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -317,10 +380,14 @@ public class Enum extends ValueType  {
 
     public static NetObject ToObject(NetType enumType, UInt64 value) throws Throwable, system.ArgumentNullException, system.ArgumentException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectToObject = null;
         try {
-            JCObject objToObject = (JCObject)classType.Invoke("ToObject", enumType == null ? null : enumType.getJCOInstance(), value == null ? null : value.getJCOInstance());
+            retObjectToObject = classType.Invoke("ToObject", enumType == null ? null : enumType.getJCOInstance(), value == null ? null : value.getJCOInstance());
+            JCObject objToObject = (JCObject)retObjectToObject;
             return new NetObject(objToObject);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToObject != null ? retObjectToObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -328,9 +395,13 @@ public class Enum extends ValueType  {
 
     public static java.lang.String Format(NetType enumType, NetObject value, java.lang.String format) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFormat = null;
         try {
-            return (java.lang.String)classType.Invoke("Format", enumType == null ? null : enumType.getJCOInstance(), value == null ? null : value.getJCOInstance(), format);
+            retObjectFormat = classType.Invoke("Format", enumType == null ? null : enumType.getJCOInstance(), value == null ? null : value.getJCOInstance(), format);
+            return (java.lang.String)retObjectFormat;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectFormat != null ? retObjectFormat.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -338,9 +409,13 @@ public class Enum extends ValueType  {
 
     public static java.lang.String GetName(NetType enumType, NetObject value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetName = null;
         try {
-            return (java.lang.String)classType.Invoke("GetName", enumType == null ? null : enumType.getJCOInstance(), value == null ? null : value.getJCOInstance());
+            retObjectGetName = classType.Invoke("GetName", enumType == null ? null : enumType.getJCOInstance(), value == null ? null : value.getJCOInstance());
+            return (java.lang.String)retObjectGetName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetName != null ? retObjectGetName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -348,9 +423,13 @@ public class Enum extends ValueType  {
 
     public java.lang.String ToString(IFormatProvider provider) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToString = null;
         try {
-            return (java.lang.String)classInstance.Invoke("ToString", provider == null ? null : provider.getJCOInstance());
+            retObjectToString = classInstance.Invoke("ToString", provider == null ? null : provider.getJCOInstance());
+            return (java.lang.String)retObjectToString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectToString != null ? retObjectToString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -358,9 +437,13 @@ public class Enum extends ValueType  {
 
     public java.lang.String ToString(java.lang.String format) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToString = null;
         try {
-            return (java.lang.String)classInstance.Invoke("ToString", format);
+            retObjectToString = classInstance.Invoke("ToString", format);
+            return (java.lang.String)retObjectToString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectToString != null ? retObjectToString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -368,9 +451,13 @@ public class Enum extends ValueType  {
 
     public java.lang.String ToString(java.lang.String format, IFormatProvider provider) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToString = null;
         try {
-            return (java.lang.String)classInstance.Invoke("ToString", format, provider == null ? null : provider.getJCOInstance());
+            retObjectToString = classInstance.Invoke("ToString", format, provider == null ? null : provider.getJCOInstance());
+            return (java.lang.String)retObjectToString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectToString != null ? retObjectToString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -378,10 +465,12 @@ public class Enum extends ValueType  {
 
     public static java.lang.String[] GetNames(NetType enumType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetNames = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("GetNames", enumType == null ? null : enumType.getJCOInstance());
+            retObjectGetNames = classType.Invoke("GetNames", enumType == null ? null : enumType.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectGetNames;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -390,6 +479,8 @@ public class Enum extends ValueType  {
 				resultingArray[indexGetNames] = (java.lang.String)resultingArrayList.get(indexGetNames);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectGetNames != null ? retObjectGetNames.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -397,10 +488,14 @@ public class Enum extends ValueType  {
 
     public static NetType GetUnderlyingType(NetType enumType) throws Throwable, system.ArgumentNullException, system.ArgumentException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetUnderlyingType = null;
         try {
-            JCObject objGetUnderlyingType = (JCObject)classType.Invoke("GetUnderlyingType", enumType == null ? null : enumType.getJCOInstance());
+            retObjectGetUnderlyingType = classType.Invoke("GetUnderlyingType", enumType == null ? null : enumType.getJCOInstance());
+            JCObject objGetUnderlyingType = (JCObject)retObjectGetUnderlyingType;
             return new NetType(objGetUnderlyingType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetUnderlyingType != null ? retObjectGetUnderlyingType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -408,10 +503,14 @@ public class Enum extends ValueType  {
 
     public TypeCode GetTypeCode() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetTypeCode = null;
         try {
-            JCObject objGetTypeCode = (JCObject)classInstance.Invoke("GetTypeCode");
+            retObjectGetTypeCode = classInstance.Invoke("GetTypeCode");
+            JCObject objGetTypeCode = (JCObject)retObjectGetTypeCode;
             return new TypeCode(objGetTypeCode);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetTypeCode != null ? retObjectGetTypeCode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -423,7 +522,7 @@ public class Enum extends ValueType  {
      */
     @Deprecated 
     public boolean ToBoolean(IFormatProvider provider) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIConvertible to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIConvertible to obtain the full interface.");
     }
 
     /**
@@ -432,7 +531,7 @@ public class Enum extends ValueType  {
      */
     @Deprecated 
     public byte ToByte(IFormatProvider provider) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIConvertible to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIConvertible to obtain the full interface.");
     }
 
     /**
@@ -441,7 +540,7 @@ public class Enum extends ValueType  {
      */
     @Deprecated 
     public char ToChar(IFormatProvider provider) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIConvertible to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIConvertible to obtain the full interface.");
     }
 
     /**
@@ -450,7 +549,7 @@ public class Enum extends ValueType  {
      */
     @Deprecated 
     public double ToDouble(IFormatProvider provider) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIConvertible to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIConvertible to obtain the full interface.");
     }
 
     /**
@@ -459,7 +558,7 @@ public class Enum extends ValueType  {
      */
     @Deprecated 
     public short ToInt16(IFormatProvider provider) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIConvertible to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIConvertible to obtain the full interface.");
     }
 
     /**
@@ -468,7 +567,7 @@ public class Enum extends ValueType  {
      */
     @Deprecated 
     public int ToInt32(IFormatProvider provider) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIConvertible to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIConvertible to obtain the full interface.");
     }
 
     /**
@@ -477,7 +576,7 @@ public class Enum extends ValueType  {
      */
     @Deprecated 
     public long ToInt64(IFormatProvider provider) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIConvertible to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIConvertible to obtain the full interface.");
     }
 
     /**
@@ -486,7 +585,7 @@ public class Enum extends ValueType  {
      */
     @Deprecated 
     public SByte ToSByte(IFormatProvider provider) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIConvertible to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIConvertible to obtain the full interface.");
     }
 
     /**
@@ -495,7 +594,7 @@ public class Enum extends ValueType  {
      */
     @Deprecated 
     public Single ToSingle(IFormatProvider provider) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIConvertible to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIConvertible to obtain the full interface.");
     }
 
     /**
@@ -504,7 +603,7 @@ public class Enum extends ValueType  {
      */
     @Deprecated 
     public DateTime ToDateTime(IFormatProvider provider) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIConvertible to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIConvertible to obtain the full interface.");
     }
 
     /**
@@ -513,7 +612,7 @@ public class Enum extends ValueType  {
      */
     @Deprecated 
     public Decimal ToDecimal(IFormatProvider provider) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIConvertible to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIConvertible to obtain the full interface.");
     }
 
     /**
@@ -522,7 +621,7 @@ public class Enum extends ValueType  {
      */
     @Deprecated 
     public NetObject ToType(NetType conversionType, IFormatProvider provider) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIConvertible to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIConvertible to obtain the full interface.");
     }
 
     /**
@@ -531,7 +630,7 @@ public class Enum extends ValueType  {
      */
     @Deprecated 
     public UInt16 ToUInt16(IFormatProvider provider) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIConvertible to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIConvertible to obtain the full interface.");
     }
 
     /**
@@ -540,7 +639,7 @@ public class Enum extends ValueType  {
      */
     @Deprecated 
     public UInt32 ToUInt32(IFormatProvider provider) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIConvertible to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIConvertible to obtain the full interface.");
     }
 
     /**
@@ -549,7 +648,7 @@ public class Enum extends ValueType  {
      */
     @Deprecated 
     public UInt64 ToUInt64(IFormatProvider provider) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIConvertible to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIConvertible to obtain the full interface.");
     }
 
 

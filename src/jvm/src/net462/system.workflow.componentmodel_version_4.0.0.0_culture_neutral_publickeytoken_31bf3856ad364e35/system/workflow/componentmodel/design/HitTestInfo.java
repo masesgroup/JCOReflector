@@ -171,9 +171,20 @@ public class HitTestInfo extends NetObject  {
     
     public int MapToIndex() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMapToIndex = null;
         try {
-            return (int)classInstance.Invoke("MapToIndex");
+            retObjectMapToIndex = classInstance.Invoke("MapToIndex");
+            return (int)retObjectMapToIndex;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMapToIndex_ToString = retObjectMapToIndex == null ? "null" : retObjectMapToIndex.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMapToIndexNumber = (java.lang.Number)retObjectMapToIndex;
+                return retObjectMapToIndexNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMapToIndex != null ? retObjectMapToIndex.getClass() : "null", retObjectMapToIndex_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -185,10 +196,14 @@ public class HitTestInfo extends NetObject  {
     
     public IDictionary getUserData() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUserData = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("UserData");
+            retObjectUserData = classInstance.Get("UserData");
+            JCObject val = (JCObject)retObjectUserData;
             return new IDictionaryImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUserData != null ? retObjectUserData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,10 +211,14 @@ public class HitTestInfo extends NetObject  {
 
     public Rectangle getBounds() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBounds = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Bounds");
+            retObjectBounds = classInstance.Get("Bounds");
+            JCObject val = (JCObject)retObjectBounds;
             return new Rectangle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBounds != null ? retObjectBounds.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -207,10 +226,14 @@ public class HitTestInfo extends NetObject  {
 
     public NetObject getSelectableObject() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectableObject = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SelectableObject");
+            retObjectSelectableObject = classInstance.Get("SelectableObject");
+            JCObject val = (JCObject)retObjectSelectableObject;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelectableObject != null ? retObjectSelectableObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -218,10 +241,14 @@ public class HitTestInfo extends NetObject  {
 
     public ActivityDesigner getAssociatedDesigner() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAssociatedDesigner = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AssociatedDesigner");
+            retObjectAssociatedDesigner = classInstance.Get("AssociatedDesigner");
+            JCObject val = (JCObject)retObjectAssociatedDesigner;
             return new ActivityDesigner(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAssociatedDesigner != null ? retObjectAssociatedDesigner.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -229,10 +256,14 @@ public class HitTestInfo extends NetObject  {
 
     public static HitTestInfo getNowhere() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectNowhere = null;
         try {
-            JCObject val = (JCObject)classType.Get("Nowhere");
+            retObjectNowhere = classType.Get("Nowhere");
+            JCObject val = (JCObject)retObjectNowhere;
             return new HitTestInfo(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNowhere != null ? retObjectNowhere.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -240,10 +271,14 @@ public class HitTestInfo extends NetObject  {
 
     public HitTestLocations getHitLocation() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHitLocation = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("HitLocation");
+            retObjectHitLocation = classInstance.Get("HitLocation");
+            JCObject val = (JCObject)retObjectHitLocation;
             return new HitTestLocations(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHitLocation != null ? retObjectHitLocation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

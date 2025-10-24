@@ -165,10 +165,14 @@ public class RouteValueExpressionEditor extends ExpressionEditor  {
     
     public NetObject EvaluateExpression(java.lang.String expression, NetObject parseTimeData, NetType propertyType, IServiceProvider serviceProvider) throws Throwable, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEvaluateExpression = null;
         try {
-            JCObject objEvaluateExpression = (JCObject)classInstance.Invoke("EvaluateExpression", expression, parseTimeData == null ? null : parseTimeData.getJCOInstance(), propertyType == null ? null : propertyType.getJCOInstance(), serviceProvider == null ? null : serviceProvider.getJCOInstance());
+            retObjectEvaluateExpression = classInstance.Invoke("EvaluateExpression", expression, parseTimeData == null ? null : parseTimeData.getJCOInstance(), propertyType == null ? null : propertyType.getJCOInstance(), serviceProvider == null ? null : serviceProvider.getJCOInstance());
+            JCObject objEvaluateExpression = (JCObject)retObjectEvaluateExpression;
             return new NetObject(objEvaluateExpression);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEvaluateExpression != null ? retObjectEvaluateExpression.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,10 +180,14 @@ public class RouteValueExpressionEditor extends ExpressionEditor  {
 
     public ExpressionEditorSheet GetExpressionEditorSheet(java.lang.String expression, IServiceProvider serviceProvider) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetExpressionEditorSheet = null;
         try {
-            JCObject objGetExpressionEditorSheet = (JCObject)classInstance.Invoke("GetExpressionEditorSheet", expression, serviceProvider == null ? null : serviceProvider.getJCOInstance());
+            retObjectGetExpressionEditorSheet = classInstance.Invoke("GetExpressionEditorSheet", expression, serviceProvider == null ? null : serviceProvider.getJCOInstance());
+            JCObject objGetExpressionEditorSheet = (JCObject)retObjectGetExpressionEditorSheet;
             return new ExpressionEditorSheet(objGetExpressionEditorSheet);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetExpressionEditorSheet != null ? retObjectGetExpressionEditorSheet.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

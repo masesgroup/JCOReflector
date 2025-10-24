@@ -144,10 +144,14 @@ public class IDispatchMessageFormatterImplementation extends NetObject implement
     
     public Message SerializeReply(MessageVersion messageVersion, NetObject[] parameters, NetObject result) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSerializeReply = null;
         try {
-            JCObject objSerializeReply = (JCObject)classInstance.Invoke("SerializeReply", messageVersion == null ? null : messageVersion.getJCOInstance(), toObjectFromArray(parameters), result == null ? null : result.getJCOInstance());
+            retObjectSerializeReply = classInstance.Invoke("SerializeReply", messageVersion == null ? null : messageVersion.getJCOInstance(), toObjectFromArray(parameters), result == null ? null : result.getJCOInstance());
+            JCObject objSerializeReply = (JCObject)retObjectSerializeReply;
             return new Message(objSerializeReply);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSerializeReply != null ? retObjectSerializeReply.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -155,7 +159,7 @@ public class IDispatchMessageFormatterImplementation extends NetObject implement
 
     public void DeserializeRequest(Message message, NetObject[] parameters) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DeserializeRequest", message == null ? null : message.getJCOInstance(), toObjectFromArray(parameters));
         } catch (JCNativeException jcne) {

@@ -157,9 +157,20 @@ public class SamlConstants extends NetObject  {
     
     public static int getMajorVersionValue() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMajorVersionValue = null;
         try {
-            return (int)classType.Get("MajorVersionValue");
+            retObjectMajorVersionValue = classType.Get("MajorVersionValue");
+            return (int)retObjectMajorVersionValue;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMajorVersionValue_ToString = retObjectMajorVersionValue == null ? "null" : retObjectMajorVersionValue.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMajorVersionValueNumber = (java.lang.Number)retObjectMajorVersionValue;
+                return retObjectMajorVersionValueNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMajorVersionValue != null ? retObjectMajorVersionValue.getClass() : "null", retObjectMajorVersionValue_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -167,9 +178,20 @@ public class SamlConstants extends NetObject  {
 
     public static int getMinorVersionValue() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMinorVersionValue = null;
         try {
-            return (int)classType.Get("MinorVersionValue");
+            retObjectMinorVersionValue = classType.Get("MinorVersionValue");
+            return (int)retObjectMinorVersionValue;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMinorVersionValue_ToString = retObjectMinorVersionValue == null ? "null" : retObjectMinorVersionValue.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMinorVersionValueNumber = (java.lang.Number)retObjectMinorVersionValue;
+                return retObjectMinorVersionValueNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMinorVersionValue != null ? retObjectMinorVersionValue.getClass() : "null", retObjectMinorVersionValue_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,9 +199,13 @@ public class SamlConstants extends NetObject  {
 
     public static java.lang.String getEmailName() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectEmailName = null;
         try {
-            return (java.lang.String)classType.Get("EmailName");
+            retObjectEmailName = classType.Get("EmailName");
+            return (java.lang.String)retObjectEmailName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectEmailName != null ? retObjectEmailName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,9 +213,13 @@ public class SamlConstants extends NetObject  {
 
     public static java.lang.String getEmailNamespace() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectEmailNamespace = null;
         try {
-            return (java.lang.String)classType.Get("EmailNamespace");
+            retObjectEmailNamespace = classType.Get("EmailNamespace");
+            return (java.lang.String)retObjectEmailNamespace;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectEmailNamespace != null ? retObjectEmailNamespace.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,9 +227,13 @@ public class SamlConstants extends NetObject  {
 
     public static java.lang.String getHolderOfKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectHolderOfKey = null;
         try {
-            return (java.lang.String)classType.Get("HolderOfKey");
+            retObjectHolderOfKey = classType.Get("HolderOfKey");
+            return (java.lang.String)retObjectHolderOfKey;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectHolderOfKey != null ? retObjectHolderOfKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -207,9 +241,13 @@ public class SamlConstants extends NetObject  {
 
     public static java.lang.String getNamespace() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectNamespace = null;
         try {
-            return (java.lang.String)classType.Get("Namespace");
+            retObjectNamespace = classType.Get("Namespace");
+            return (java.lang.String)retObjectNamespace;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectNamespace != null ? retObjectNamespace.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -217,9 +255,13 @@ public class SamlConstants extends NetObject  {
 
     public static java.lang.String getSenderVouches() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSenderVouches = null;
         try {
-            return (java.lang.String)classType.Get("SenderVouches");
+            retObjectSenderVouches = classType.Get("SenderVouches");
+            return (java.lang.String)retObjectSenderVouches;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSenderVouches != null ? retObjectSenderVouches.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -227,9 +269,13 @@ public class SamlConstants extends NetObject  {
 
     public static java.lang.String getUserName() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectUserName = null;
         try {
-            return (java.lang.String)classType.Get("UserName");
+            retObjectUserName = classType.Get("UserName");
+            return (java.lang.String)retObjectUserName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectUserName != null ? retObjectUserName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -237,9 +283,13 @@ public class SamlConstants extends NetObject  {
 
     public static java.lang.String getUserNameNamespace() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectUserNameNamespace = null;
         try {
-            return (java.lang.String)classType.Get("UserNameNamespace");
+            retObjectUserNameNamespace = classType.Get("UserNameNamespace");
+            return (java.lang.String)retObjectUserNameNamespace;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectUserNameNamespace != null ? retObjectUserNameNamespace.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

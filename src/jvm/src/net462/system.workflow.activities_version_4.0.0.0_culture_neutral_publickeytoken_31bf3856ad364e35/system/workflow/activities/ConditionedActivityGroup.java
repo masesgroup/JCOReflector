@@ -174,9 +174,20 @@ public class ConditionedActivityGroup extends CompositeActivity  {
     
     public int GetChildActivityExecutedCount(Activity child) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetChildActivityExecutedCount = null;
         try {
-            return (int)classInstance.Invoke("GetChildActivityExecutedCount", child == null ? null : child.getJCOInstance());
+            retObjectGetChildActivityExecutedCount = classInstance.Invoke("GetChildActivityExecutedCount", child == null ? null : child.getJCOInstance());
+            return (int)retObjectGetChildActivityExecutedCount;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetChildActivityExecutedCount_ToString = retObjectGetChildActivityExecutedCount == null ? "null" : retObjectGetChildActivityExecutedCount.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetChildActivityExecutedCountNumber = (java.lang.Number)retObjectGetChildActivityExecutedCount;
+                return retObjectGetChildActivityExecutedCountNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetChildActivityExecutedCount != null ? retObjectGetChildActivityExecutedCount.getClass() : "null", retObjectGetChildActivityExecutedCount_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -184,10 +195,14 @@ public class ConditionedActivityGroup extends CompositeActivity  {
 
     public static NetObject GetWhenCondition(NetObject dependencyObject) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.MulticastNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetWhenCondition = null;
         try {
-            JCObject objGetWhenCondition = (JCObject)classType.Invoke("GetWhenCondition", dependencyObject == null ? null : dependencyObject.getJCOInstance());
+            retObjectGetWhenCondition = classType.Invoke("GetWhenCondition", dependencyObject == null ? null : dependencyObject.getJCOInstance());
+            JCObject objGetWhenCondition = (JCObject)retObjectGetWhenCondition;
             return new NetObject(objGetWhenCondition);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetWhenCondition != null ? retObjectGetWhenCondition.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,10 +210,14 @@ public class ConditionedActivityGroup extends CompositeActivity  {
 
     public Activity GetDynamicActivity(java.lang.String childActivityName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDynamicActivity = null;
         try {
-            JCObject objGetDynamicActivity = (JCObject)classInstance.Invoke("GetDynamicActivity", childActivityName);
+            retObjectGetDynamicActivity = classInstance.Invoke("GetDynamicActivity", childActivityName);
+            JCObject objGetDynamicActivity = (JCObject)retObjectGetDynamicActivity;
             return new Activity(objGetDynamicActivity);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetDynamicActivity != null ? retObjectGetDynamicActivity.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -206,7 +225,7 @@ public class ConditionedActivityGroup extends CompositeActivity  {
 
     public static void SetWhenCondition(NetObject dependencyObject, NetObject value) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.MulticastNotSupportedException, system.NotSupportedException, system.InvalidCastException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetWhenCondition", dependencyObject == null ? null : dependencyObject.getJCOInstance(), value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -220,10 +239,14 @@ public class ConditionedActivityGroup extends CompositeActivity  {
     
     public ActivityCondition getUntilCondition() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUntilCondition = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("UntilCondition");
+            retObjectUntilCondition = classInstance.Get("UntilCondition");
+            JCObject val = (JCObject)retObjectUntilCondition;
             return new ActivityCondition(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUntilCondition != null ? retObjectUntilCondition.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -231,7 +254,7 @@ public class ConditionedActivityGroup extends CompositeActivity  {
 
     public void setUntilCondition(ActivityCondition UntilCondition) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException, system.MulticastNotSupportedException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UntilCondition", UntilCondition == null ? null : UntilCondition.getJCOInstance());
         } catch (JCNativeException jcne) {

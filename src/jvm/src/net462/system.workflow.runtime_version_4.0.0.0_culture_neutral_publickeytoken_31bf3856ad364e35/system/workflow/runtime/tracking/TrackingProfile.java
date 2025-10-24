@@ -169,10 +169,14 @@ public class TrackingProfile extends NetObject  {
     
     public Version getVersion() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVersion = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Version");
+            retObjectVersion = classInstance.Get("Version");
+            JCObject val = (JCObject)retObjectVersion;
             return new Version(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVersion != null ? retObjectVersion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,7 +184,7 @@ public class TrackingProfile extends NetObject  {
 
     public void setVersion(Version Version) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Version", Version == null ? null : Version.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -190,10 +194,14 @@ public class TrackingProfile extends NetObject  {
 
     public ActivityTrackPointCollection getActivityTrackPoints() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectActivityTrackPoints = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ActivityTrackPoints");
+            retObjectActivityTrackPoints = classInstance.Get("ActivityTrackPoints");
+            JCObject val = (JCObject)retObjectActivityTrackPoints;
             return new ActivityTrackPointCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectActivityTrackPoints != null ? retObjectActivityTrackPoints.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,10 +209,14 @@ public class TrackingProfile extends NetObject  {
 
     public UserTrackPointCollection getUserTrackPoints() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUserTrackPoints = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("UserTrackPoints");
+            retObjectUserTrackPoints = classInstance.Get("UserTrackPoints");
+            JCObject val = (JCObject)retObjectUserTrackPoints;
             return new UserTrackPointCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUserTrackPoints != null ? retObjectUserTrackPoints.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -212,10 +224,14 @@ public class TrackingProfile extends NetObject  {
 
     public WorkflowTrackPointCollection getWorkflowTrackPoints() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWorkflowTrackPoints = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("WorkflowTrackPoints");
+            retObjectWorkflowTrackPoints = classInstance.Get("WorkflowTrackPoints");
+            JCObject val = (JCObject)retObjectWorkflowTrackPoints;
             return new WorkflowTrackPointCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWorkflowTrackPoints != null ? retObjectWorkflowTrackPoints.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

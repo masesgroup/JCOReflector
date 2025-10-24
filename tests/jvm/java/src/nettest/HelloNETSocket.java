@@ -42,43 +42,47 @@ public class HelloNETSocket {
             throws ArgumentNullException, InvalidOperationException, SecurityException, Throwable {
 
         JCOReflector.setCommandLineArgs(args);
-
-        for (int x = 0; x < args.length; x++) {
-            String arg = args[x];
-            if (arg == "-async")
-                asyncMode = true;
-            if (arg == "-server") {
-                serverAddress = args[x + 1];
-                x++;
+        try {
+            for (int x = 0; x < args.length; x++) {
+                String arg = args[x];
+                if (arg.equals("-async"))
+                    asyncMode = true;
+                if (arg.equals("-server")) {
+                    serverAddress = args[x + 1];
+                    x++;
+                }
             }
+            // create the server thread
+            Thread threadServer = new Thread(new ThreadStart() {
+                public void Invoke() {
+                    HelloNETSocketServer.StartListening(asyncMode, serverAddress, 11000);
+                }
+            });
+            // create the client thread
+            Thread threadClient = new Thread(new ThreadStart() {
+                public void Invoke() {
+                    HelloNETSocketClient.StartClient(asyncMode, "localhost", 11000);
+                }
+            });
+            // start threads
+            threadServer.Start();
+            Thread.Sleep(5000);
+            threadClient.Start();
+            // let it communicate
+            Thread.Sleep(5000);
+            // trigger the thread closing procedure
+            HelloNETSocketClient.run = false;
+            Thread.Sleep(1000);
+            // wait for thread join, if not, close the test
+            threadServer.Join(5000);
+            threadClient.Join(5000);
+            // close the application
+            Console.WriteLine("Exiting with success");
+            Environment.Exit(0);
+            return;
+        } catch (Throwable e) {
+            e.printStackTrace();
+            System.exit(-1);
         }
-        // create the server thread
-        Thread threadServer = new Thread(new ThreadStart() {
-            public void Invoke() {
-                HelloNETSocketServer.StartListening(asyncMode, serverAddress, 11000);
-            }
-        });
-        // create the client thread
-        Thread threadClient = new Thread(new ThreadStart() {
-            public void Invoke() {
-                HelloNETSocketClient.StartClient(asyncMode, "localhost", 11000);
-            }
-        });
-        // start threads
-        threadServer.Start();
-        Thread.Sleep(5000);
-        threadClient.Start();
-        // let it communicate
-        Thread.Sleep(5000);
-        // trigger the thread closing procedure
-        HelloNETSocketClient.run = false;
-        Thread.Sleep(1000);
-        // wait for thread join, if not, close the test
-        threadServer.Join(5000);
-        threadClient.Join(5000);
-        // close the application
-        Console.WriteLine("Exiting with success");
-        Environment.Exit(0);
-        return;
     }
 }

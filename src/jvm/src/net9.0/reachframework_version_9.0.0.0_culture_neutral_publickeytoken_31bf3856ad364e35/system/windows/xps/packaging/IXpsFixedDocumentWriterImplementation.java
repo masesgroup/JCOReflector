@@ -151,10 +151,14 @@ public class IXpsFixedDocumentWriterImplementation extends NetObject implements 
     
     public IXpsFixedPageWriter AddFixedPage() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddFixedPage = null;
         try {
-            JCObject objAddFixedPage = (JCObject)classInstance.Invoke("AddFixedPage");
+            retObjectAddFixedPage = classInstance.Invoke("AddFixedPage");
+            JCObject objAddFixedPage = (JCObject)retObjectAddFixedPage;
             return new IXpsFixedPageWriterImplementation(objAddFixedPage);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddFixedPage != null ? retObjectAddFixedPage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -162,10 +166,14 @@ public class IXpsFixedDocumentWriterImplementation extends NetObject implements 
 
     public XpsStructure AddDocumentStructure() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddDocumentStructure = null;
         try {
-            JCObject objAddDocumentStructure = (JCObject)classInstance.Invoke("AddDocumentStructure");
+            retObjectAddDocumentStructure = classInstance.Invoke("AddDocumentStructure");
+            JCObject objAddDocumentStructure = (JCObject)retObjectAddDocumentStructure;
             return new XpsStructure(objAddDocumentStructure);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddDocumentStructure != null ? retObjectAddDocumentStructure.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -173,10 +181,14 @@ public class IXpsFixedDocumentWriterImplementation extends NetObject implements 
 
     public XpsThumbnail AddThumbnail(XpsImageType imageType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddThumbnail = null;
         try {
-            JCObject objAddThumbnail = (JCObject)classInstance.Invoke("AddThumbnail", imageType == null ? null : imageType.getJCOInstance());
+            retObjectAddThumbnail = classInstance.Invoke("AddThumbnail", imageType == null ? null : imageType.getJCOInstance());
+            JCObject objAddThumbnail = (JCObject)retObjectAddThumbnail;
             return new XpsThumbnail(objAddThumbnail);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddThumbnail != null ? retObjectAddThumbnail.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -184,7 +196,7 @@ public class IXpsFixedDocumentWriterImplementation extends NetObject implements 
 
     public void Commit() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Commit");
         } catch (JCNativeException jcne) {
@@ -198,9 +210,20 @@ public class IXpsFixedDocumentWriterImplementation extends NetObject implements 
     
     public int getDocumentNumber() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDocumentNumber = null;
         try {
-            return (int)classInstance.Get("DocumentNumber");
+            retObjectDocumentNumber = classInstance.Get("DocumentNumber");
+            return (int)retObjectDocumentNumber;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDocumentNumber_ToString = retObjectDocumentNumber == null ? "null" : retObjectDocumentNumber.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectDocumentNumberNumber = (java.lang.Number)retObjectDocumentNumber;
+                return retObjectDocumentNumberNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectDocumentNumber != null ? retObjectDocumentNumber.getClass() : "null", retObjectDocumentNumber_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -208,7 +231,7 @@ public class IXpsFixedDocumentWriterImplementation extends NetObject implements 
 
     public void setPrintTicket(PrintTicket PrintTicket) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PrintTicket", PrintTicket == null ? null : PrintTicket.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -218,10 +241,14 @@ public class IXpsFixedDocumentWriterImplementation extends NetObject implements 
 
     public Uri getUri() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUri = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Uri");
+            retObjectUri = classInstance.Get("Uri");
+            JCObject val = (JCObject)retObjectUri;
             return new Uri(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUri != null ? retObjectUri.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

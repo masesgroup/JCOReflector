@@ -159,10 +159,14 @@ public class ConfigurationManager extends NetObject  {
     
     public static Configuration OpenExeConfiguration(ConfigurationUserLevel userLevel) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOpenExeConfiguration = null;
         try {
-            JCObject objOpenExeConfiguration = (JCObject)classType.Invoke("OpenExeConfiguration", userLevel == null ? null : userLevel.getJCOInstance());
+            retObjectOpenExeConfiguration = classType.Invoke("OpenExeConfiguration", userLevel == null ? null : userLevel.getJCOInstance());
+            JCObject objOpenExeConfiguration = (JCObject)retObjectOpenExeConfiguration;
             return new Configuration(objOpenExeConfiguration);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOpenExeConfiguration != null ? retObjectOpenExeConfiguration.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,10 +174,14 @@ public class ConfigurationManager extends NetObject  {
 
     public static Configuration OpenExeConfiguration(java.lang.String exePath) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOpenExeConfiguration = null;
         try {
-            JCObject objOpenExeConfiguration = (JCObject)classType.Invoke("OpenExeConfiguration", exePath);
+            retObjectOpenExeConfiguration = classType.Invoke("OpenExeConfiguration", exePath);
+            JCObject objOpenExeConfiguration = (JCObject)retObjectOpenExeConfiguration;
             return new Configuration(objOpenExeConfiguration);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOpenExeConfiguration != null ? retObjectOpenExeConfiguration.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,10 +189,14 @@ public class ConfigurationManager extends NetObject  {
 
     public static Configuration OpenMachineConfiguration() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOpenMachineConfiguration = null;
         try {
-            JCObject objOpenMachineConfiguration = (JCObject)classType.Invoke("OpenMachineConfiguration");
+            retObjectOpenMachineConfiguration = classType.Invoke("OpenMachineConfiguration");
+            JCObject objOpenMachineConfiguration = (JCObject)retObjectOpenMachineConfiguration;
             return new Configuration(objOpenMachineConfiguration);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOpenMachineConfiguration != null ? retObjectOpenMachineConfiguration.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,10 +204,14 @@ public class ConfigurationManager extends NetObject  {
 
     public static Configuration OpenMappedExeConfiguration(ExeConfigurationFileMap fileMap, ConfigurationUserLevel userLevel) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOpenMappedExeConfiguration = null;
         try {
-            JCObject objOpenMappedExeConfiguration = (JCObject)classType.Invoke("OpenMappedExeConfiguration", fileMap == null ? null : fileMap.getJCOInstance(), userLevel == null ? null : userLevel.getJCOInstance());
+            retObjectOpenMappedExeConfiguration = classType.Invoke("OpenMappedExeConfiguration", fileMap == null ? null : fileMap.getJCOInstance(), userLevel == null ? null : userLevel.getJCOInstance());
+            JCObject objOpenMappedExeConfiguration = (JCObject)retObjectOpenMappedExeConfiguration;
             return new Configuration(objOpenMappedExeConfiguration);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOpenMappedExeConfiguration != null ? retObjectOpenMappedExeConfiguration.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,10 +219,14 @@ public class ConfigurationManager extends NetObject  {
 
     public static Configuration OpenMappedExeConfiguration(ExeConfigurationFileMap fileMap, ConfigurationUserLevel userLevel, boolean preLoad) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOpenMappedExeConfiguration = null;
         try {
-            JCObject objOpenMappedExeConfiguration = (JCObject)classType.Invoke("OpenMappedExeConfiguration", fileMap == null ? null : fileMap.getJCOInstance(), userLevel == null ? null : userLevel.getJCOInstance(), preLoad);
+            retObjectOpenMappedExeConfiguration = classType.Invoke("OpenMappedExeConfiguration", fileMap == null ? null : fileMap.getJCOInstance(), userLevel == null ? null : userLevel.getJCOInstance(), preLoad);
+            JCObject objOpenMappedExeConfiguration = (JCObject)retObjectOpenMappedExeConfiguration;
             return new Configuration(objOpenMappedExeConfiguration);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOpenMappedExeConfiguration != null ? retObjectOpenMappedExeConfiguration.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -214,10 +234,14 @@ public class ConfigurationManager extends NetObject  {
 
     public static Configuration OpenMappedMachineConfiguration(ConfigurationFileMap fileMap) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOpenMappedMachineConfiguration = null;
         try {
-            JCObject objOpenMappedMachineConfiguration = (JCObject)classType.Invoke("OpenMappedMachineConfiguration", fileMap == null ? null : fileMap.getJCOInstance());
+            retObjectOpenMappedMachineConfiguration = classType.Invoke("OpenMappedMachineConfiguration", fileMap == null ? null : fileMap.getJCOInstance());
+            JCObject objOpenMappedMachineConfiguration = (JCObject)retObjectOpenMappedMachineConfiguration;
             return new Configuration(objOpenMappedMachineConfiguration);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOpenMappedMachineConfiguration != null ? retObjectOpenMappedMachineConfiguration.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -225,10 +249,14 @@ public class ConfigurationManager extends NetObject  {
 
     public static NetObject GetSection(java.lang.String sectionName) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetSection = null;
         try {
-            JCObject objGetSection = (JCObject)classType.Invoke("GetSection", sectionName);
+            retObjectGetSection = classType.Invoke("GetSection", sectionName);
+            JCObject objGetSection = (JCObject)retObjectGetSection;
             return new NetObject(objGetSection);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSection != null ? retObjectGetSection.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -236,7 +264,7 @@ public class ConfigurationManager extends NetObject  {
 
     public static void RefreshSection(java.lang.String sectionName) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("RefreshSection", sectionName);
         } catch (JCNativeException jcne) {
@@ -250,10 +278,14 @@ public class ConfigurationManager extends NetObject  {
     
     public static NameValueCollection getAppSettings() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAppSettings = null;
         try {
-            JCObject val = (JCObject)classType.Get("AppSettings");
+            retObjectAppSettings = classType.Get("AppSettings");
+            JCObject val = (JCObject)retObjectAppSettings;
             return new NameValueCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAppSettings != null ? retObjectAppSettings.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -261,10 +293,14 @@ public class ConfigurationManager extends NetObject  {
 
     public static ConnectionStringSettingsCollection getConnectionStrings() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.configuration.ConfigurationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectConnectionStrings = null;
         try {
-            JCObject val = (JCObject)classType.Get("ConnectionStrings");
+            retObjectConnectionStrings = classType.Get("ConnectionStrings");
+            JCObject val = (JCObject)retObjectConnectionStrings;
             return new ConnectionStringSettingsCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConnectionStrings != null ? retObjectConnectionStrings.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

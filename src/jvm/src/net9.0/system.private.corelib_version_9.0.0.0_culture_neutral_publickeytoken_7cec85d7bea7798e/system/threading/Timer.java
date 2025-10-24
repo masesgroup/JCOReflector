@@ -211,9 +211,13 @@ public class Timer extends MarshalByRefObject implements AutoCloseable {
     
     public boolean Change(int dueTime, int period) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException, system.threading.LockRecursionException, system.NullReferenceException, system.OutOfMemoryException, system.threading.AbandonedMutexException, system.diagnostics.tracing.EventSourceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectChange = null;
         try {
-            return (boolean)classInstance.Invoke("Change", dueTime, period);
+            retObjectChange = classInstance.Invoke("Change", dueTime, period);
+            return (boolean)retObjectChange;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectChange != null ? retObjectChange.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -221,9 +225,13 @@ public class Timer extends MarshalByRefObject implements AutoCloseable {
 
     public boolean Change(long dueTime, long period) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException, system.threading.LockRecursionException, system.NullReferenceException, system.OutOfMemoryException, system.threading.AbandonedMutexException, system.diagnostics.tracing.EventSourceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectChange = null;
         try {
-            return (boolean)classInstance.Invoke("Change", dueTime, period);
+            retObjectChange = classInstance.Invoke("Change", dueTime, period);
+            return (boolean)retObjectChange;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectChange != null ? retObjectChange.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -231,9 +239,13 @@ public class Timer extends MarshalByRefObject implements AutoCloseable {
 
     public boolean Change(TimeSpan dueTime, TimeSpan period) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.threading.LockRecursionException, system.OutOfMemoryException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.diagnostics.tracing.EventSourceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectChange = null;
         try {
-            return (boolean)classInstance.Invoke("Change", dueTime == null ? null : dueTime.getJCOInstance(), period == null ? null : period.getJCOInstance());
+            retObjectChange = classInstance.Invoke("Change", dueTime == null ? null : dueTime.getJCOInstance(), period == null ? null : period.getJCOInstance());
+            return (boolean)retObjectChange;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectChange != null ? retObjectChange.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -241,9 +253,13 @@ public class Timer extends MarshalByRefObject implements AutoCloseable {
 
     public boolean Change(UInt32 dueTime, UInt32 period) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.threading.LockRecursionException, system.NullReferenceException, system.OutOfMemoryException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.diagnostics.tracing.EventSourceException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectChange = null;
         try {
-            return (boolean)classInstance.Invoke("Change", dueTime == null ? null : dueTime.getJCOInstance(), period == null ? null : period.getJCOInstance());
+            retObjectChange = classInstance.Invoke("Change", dueTime == null ? null : dueTime.getJCOInstance(), period == null ? null : period.getJCOInstance());
+            return (boolean)retObjectChange;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectChange != null ? retObjectChange.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -251,9 +267,13 @@ public class Timer extends MarshalByRefObject implements AutoCloseable {
 
     public boolean Dispose(WaitHandle notifyObject) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.threading.LockRecursionException, system.OutOfMemoryException, system.threading.AbandonedMutexException, system.threading.SynchronizationLockException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDispose = null;
         try {
-            return (boolean)classInstance.Invoke("Dispose", notifyObject == null ? null : notifyObject.getJCOInstance());
+            retObjectDispose = classInstance.Invoke("Dispose", notifyObject == null ? null : notifyObject.getJCOInstance());
+            return (boolean)retObjectDispose;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectDispose != null ? retObjectDispose.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -261,10 +281,14 @@ public class Timer extends MarshalByRefObject implements AutoCloseable {
 
     public ValueTask DisposeAsync() throws Throwable, system.PlatformNotSupportedException, system.threading.LockRecursionException, system.NotSupportedException, system.OutOfMemoryException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.FormatException, system.ArgumentNullException, system.threading.SynchronizationLockException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDisposeAsync = null;
         try {
-            JCObject objDisposeAsync = (JCObject)classInstance.Invoke("DisposeAsync");
+            retObjectDisposeAsync = classInstance.Invoke("DisposeAsync");
+            JCObject objDisposeAsync = (JCObject)retObjectDisposeAsync;
             return new ValueTask(objDisposeAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDisposeAsync != null ? retObjectDisposeAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -272,7 +296,7 @@ public class Timer extends MarshalByRefObject implements AutoCloseable {
 
     public void Dispose() throws Throwable, system.PlatformNotSupportedException, system.threading.LockRecursionException, system.NotSupportedException, system.OutOfMemoryException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.threading.SynchronizationLockException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
@@ -283,7 +307,7 @@ public class Timer extends MarshalByRefObject implements AutoCloseable {
     public void close() throws Exception {
         try {
             if (classInstance == null)
-                throw new UnsupportedOperationException("classInstance is null.");
+                throw new java.lang.UnsupportedOperationException("classInstance is null.");
             try {
                 classInstance.Invoke("Dispose");
             }
@@ -299,9 +323,20 @@ public class Timer extends MarshalByRefObject implements AutoCloseable {
     
     public static long getActiveCount() throws Throwable, system.PlatformNotSupportedException, system.threading.LockRecursionException, system.ArgumentException, system.threading.WaitHandleCannotBeOpenedException, system.NullReferenceException, system.NotSupportedException, system.OutOfMemoryException, system.ObjectDisposedException, system.ArgumentNullException, system.threading.AbandonedMutexException, system.threading.SynchronizationLockException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectActiveCount = null;
         try {
-            return (long)classType.Get("ActiveCount");
+            retObjectActiveCount = classType.Get("ActiveCount");
+            return (long)retObjectActiveCount;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectActiveCount_ToString = retObjectActiveCount == null ? "null" : retObjectActiveCount.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectActiveCountNumber = (java.lang.Number)retObjectActiveCount;
+                return retObjectActiveCountNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectActiveCount != null ? retObjectActiveCount.getClass() : "null", retObjectActiveCount_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -167,10 +167,14 @@ public class PolicyLevel extends NetObject  {
     
     public NamedPermissionSet ChangeNamedPermissionSet(java.lang.String name, PermissionSet pSet) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectChangeNamedPermissionSet = null;
         try {
-            JCObject objChangeNamedPermissionSet = (JCObject)classInstance.Invoke("ChangeNamedPermissionSet", name, pSet == null ? null : pSet.getJCOInstance());
+            retObjectChangeNamedPermissionSet = classInstance.Invoke("ChangeNamedPermissionSet", name, pSet == null ? null : pSet.getJCOInstance());
+            JCObject objChangeNamedPermissionSet = (JCObject)retObjectChangeNamedPermissionSet;
             return new NamedPermissionSet(objChangeNamedPermissionSet);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectChangeNamedPermissionSet != null ? retObjectChangeNamedPermissionSet.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,10 +182,14 @@ public class PolicyLevel extends NetObject  {
 
     public NamedPermissionSet GetNamedPermissionSet(java.lang.String name) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetNamedPermissionSet = null;
         try {
-            JCObject objGetNamedPermissionSet = (JCObject)classInstance.Invoke("GetNamedPermissionSet", name);
+            retObjectGetNamedPermissionSet = classInstance.Invoke("GetNamedPermissionSet", name);
+            JCObject objGetNamedPermissionSet = (JCObject)retObjectGetNamedPermissionSet;
             return new NamedPermissionSet(objGetNamedPermissionSet);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetNamedPermissionSet != null ? retObjectGetNamedPermissionSet.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -189,10 +197,14 @@ public class PolicyLevel extends NetObject  {
 
     public NamedPermissionSet RemoveNamedPermissionSet(NamedPermissionSet permSet) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRemoveNamedPermissionSet = null;
         try {
-            JCObject objRemoveNamedPermissionSet = (JCObject)classInstance.Invoke("RemoveNamedPermissionSet", permSet == null ? null : permSet.getJCOInstance());
+            retObjectRemoveNamedPermissionSet = classInstance.Invoke("RemoveNamedPermissionSet", permSet == null ? null : permSet.getJCOInstance());
+            JCObject objRemoveNamedPermissionSet = (JCObject)retObjectRemoveNamedPermissionSet;
             return new NamedPermissionSet(objRemoveNamedPermissionSet);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRemoveNamedPermissionSet != null ? retObjectRemoveNamedPermissionSet.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,10 +212,14 @@ public class PolicyLevel extends NetObject  {
 
     public NamedPermissionSet RemoveNamedPermissionSet(java.lang.String name) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRemoveNamedPermissionSet = null;
         try {
-            JCObject objRemoveNamedPermissionSet = (JCObject)classInstance.Invoke("RemoveNamedPermissionSet", name);
+            retObjectRemoveNamedPermissionSet = classInstance.Invoke("RemoveNamedPermissionSet", name);
+            JCObject objRemoveNamedPermissionSet = (JCObject)retObjectRemoveNamedPermissionSet;
             return new NamedPermissionSet(objRemoveNamedPermissionSet);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRemoveNamedPermissionSet != null ? retObjectRemoveNamedPermissionSet.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -211,10 +227,14 @@ public class PolicyLevel extends NetObject  {
 
     public CodeGroup ResolveMatchingCodeGroups(Evidence evidence) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResolveMatchingCodeGroups = null;
         try {
-            JCObject objResolveMatchingCodeGroups = (JCObject)classInstance.Invoke("ResolveMatchingCodeGroups", evidence == null ? null : evidence.getJCOInstance());
+            retObjectResolveMatchingCodeGroups = classInstance.Invoke("ResolveMatchingCodeGroups", evidence == null ? null : evidence.getJCOInstance());
+            JCObject objResolveMatchingCodeGroups = (JCObject)retObjectResolveMatchingCodeGroups;
             return new CodeGroup(objResolveMatchingCodeGroups);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectResolveMatchingCodeGroups != null ? retObjectResolveMatchingCodeGroups.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -222,10 +242,14 @@ public class PolicyLevel extends NetObject  {
 
     public static PolicyLevel CreateAppDomainLevel() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateAppDomainLevel = null;
         try {
-            JCObject objCreateAppDomainLevel = (JCObject)classType.Invoke("CreateAppDomainLevel");
+            retObjectCreateAppDomainLevel = classType.Invoke("CreateAppDomainLevel");
+            JCObject objCreateAppDomainLevel = (JCObject)retObjectCreateAppDomainLevel;
             return new PolicyLevel(objCreateAppDomainLevel);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateAppDomainLevel != null ? retObjectCreateAppDomainLevel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -233,10 +257,14 @@ public class PolicyLevel extends NetObject  {
 
     public PolicyStatement Resolve(Evidence evidence) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResolve = null;
         try {
-            JCObject objResolve = (JCObject)classInstance.Invoke("Resolve", evidence == null ? null : evidence.getJCOInstance());
+            retObjectResolve = classInstance.Invoke("Resolve", evidence == null ? null : evidence.getJCOInstance());
+            JCObject objResolve = (JCObject)retObjectResolve;
             return new PolicyStatement(objResolve);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectResolve != null ? retObjectResolve.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -244,10 +272,14 @@ public class PolicyLevel extends NetObject  {
 
     public SecurityElement ToXml() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToXml = null;
         try {
-            JCObject objToXml = (JCObject)classInstance.Invoke("ToXml");
+            retObjectToXml = classInstance.Invoke("ToXml");
+            JCObject objToXml = (JCObject)retObjectToXml;
             return new SecurityElement(objToXml);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToXml != null ? retObjectToXml.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -255,7 +287,7 @@ public class PolicyLevel extends NetObject  {
 
     public void AddFullTrustAssembly(StrongName sn) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddFullTrustAssembly", sn == null ? null : sn.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -265,7 +297,7 @@ public class PolicyLevel extends NetObject  {
 
     public void AddFullTrustAssembly(StrongNameMembershipCondition snMC) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddFullTrustAssembly", snMC == null ? null : snMC.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -275,7 +307,7 @@ public class PolicyLevel extends NetObject  {
 
     public void AddNamedPermissionSet(NamedPermissionSet permSet) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddNamedPermissionSet", permSet == null ? null : permSet.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -285,7 +317,7 @@ public class PolicyLevel extends NetObject  {
 
     public void FromXml(SecurityElement e) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("FromXml", e == null ? null : e.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -295,7 +327,7 @@ public class PolicyLevel extends NetObject  {
 
     public void Recover() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Recover");
         } catch (JCNativeException jcne) {
@@ -305,7 +337,7 @@ public class PolicyLevel extends NetObject  {
 
     public void RemoveFullTrustAssembly(StrongName sn) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RemoveFullTrustAssembly", sn == null ? null : sn.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -315,7 +347,7 @@ public class PolicyLevel extends NetObject  {
 
     public void RemoveFullTrustAssembly(StrongNameMembershipCondition snMC) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RemoveFullTrustAssembly", snMC == null ? null : snMC.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -325,7 +357,7 @@ public class PolicyLevel extends NetObject  {
 
     public void Reset() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Reset");
         } catch (JCNativeException jcne) {
@@ -339,10 +371,14 @@ public class PolicyLevel extends NetObject  {
     
     public IList getFullTrustAssemblies() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFullTrustAssemblies = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("FullTrustAssemblies");
+            retObjectFullTrustAssemblies = classInstance.Get("FullTrustAssemblies");
+            JCObject val = (JCObject)retObjectFullTrustAssemblies;
             return new IListImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFullTrustAssemblies != null ? retObjectFullTrustAssemblies.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -350,10 +386,14 @@ public class PolicyLevel extends NetObject  {
 
     public IList getNamedPermissionSets() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNamedPermissionSets = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("NamedPermissionSets");
+            retObjectNamedPermissionSets = classInstance.Get("NamedPermissionSets");
+            JCObject val = (JCObject)retObjectNamedPermissionSets;
             return new IListImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNamedPermissionSets != null ? retObjectNamedPermissionSets.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -361,10 +401,14 @@ public class PolicyLevel extends NetObject  {
 
     public CodeGroup getRootCodeGroup() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRootCodeGroup = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RootCodeGroup");
+            retObjectRootCodeGroup = classInstance.Get("RootCodeGroup");
+            JCObject val = (JCObject)retObjectRootCodeGroup;
             return new CodeGroup(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRootCodeGroup != null ? retObjectRootCodeGroup.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -372,7 +416,7 @@ public class PolicyLevel extends NetObject  {
 
     public void setRootCodeGroup(CodeGroup RootCodeGroup) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RootCodeGroup", RootCodeGroup == null ? null : RootCodeGroup.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -382,10 +426,14 @@ public class PolicyLevel extends NetObject  {
 
     public PolicyLevelType getType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Type");
+            retObjectType = classInstance.Get("Type");
+            JCObject val = (JCObject)retObjectType;
             return new PolicyLevelType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectType != null ? retObjectType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -393,9 +441,13 @@ public class PolicyLevel extends NetObject  {
 
     public java.lang.String getLabel() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLabel = null;
         try {
-            return (java.lang.String)classInstance.Get("Label");
+            retObjectLabel = classInstance.Get("Label");
+            return (java.lang.String)retObjectLabel;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectLabel != null ? retObjectLabel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -403,9 +455,13 @@ public class PolicyLevel extends NetObject  {
 
     public java.lang.String getStoreLocation() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStoreLocation = null;
         try {
-            return (java.lang.String)classInstance.Get("StoreLocation");
+            retObjectStoreLocation = classInstance.Get("StoreLocation");
+            return (java.lang.String)retObjectStoreLocation;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectStoreLocation != null ? retObjectStoreLocation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -152,10 +152,12 @@ public class ISymbolReaderImplementation extends NetObject implements ISymbolRea
     
     public byte[] GetSymAttribute(SymbolToken parent, java.lang.String name) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSymAttribute = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetSymAttribute", parent == null ? null : parent.getJCOInstance(), name);
+            retObjectGetSymAttribute = classInstance.Invoke("GetSymAttribute", parent == null ? null : parent.getJCOInstance(), name);
+            JCObject resultingObjects = (JCObject)retObjectGetSymAttribute;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -164,6 +166,8 @@ public class ISymbolReaderImplementation extends NetObject implements ISymbolRea
 				resultingArray[indexGetSymAttribute] = (byte)resultingArrayList.get(indexGetSymAttribute);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectGetSymAttribute != null ? retObjectGetSymAttribute.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,10 +175,14 @@ public class ISymbolReaderImplementation extends NetObject implements ISymbolRea
 
     public ISymbolDocument GetDocument(java.lang.String url, Guid language, Guid languageVendor, Guid documentType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDocument = null;
         try {
-            JCObject objGetDocument = (JCObject)classInstance.Invoke("GetDocument", url, language == null ? null : language.getJCOInstance(), languageVendor == null ? null : languageVendor.getJCOInstance(), documentType == null ? null : documentType.getJCOInstance());
+            retObjectGetDocument = classInstance.Invoke("GetDocument", url, language == null ? null : language.getJCOInstance(), languageVendor == null ? null : languageVendor.getJCOInstance(), documentType == null ? null : documentType.getJCOInstance());
+            JCObject objGetDocument = (JCObject)retObjectGetDocument;
             return new ISymbolDocumentImplementation(objGetDocument);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetDocument != null ? retObjectGetDocument.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,16 +190,20 @@ public class ISymbolReaderImplementation extends NetObject implements ISymbolRea
 
     public ISymbolDocument[] GetDocuments() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDocuments = null;
         try {
             ArrayList<ISymbolDocument> resultingArrayList = new ArrayList<ISymbolDocument>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetDocuments");
+            retObjectGetDocuments = classInstance.Invoke("GetDocuments");
+            JCObject resultingObjects = (JCObject)retObjectGetDocuments;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ISymbolDocumentImplementation(resultingObject));
             }
             ISymbolDocument[] resultingArray = new ISymbolDocument[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetDocuments != null ? retObjectGetDocuments.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -199,10 +211,14 @@ public class ISymbolReaderImplementation extends NetObject implements ISymbolRea
 
     public ISymbolMethod GetMethod(SymbolToken method) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetMethod = null;
         try {
-            JCObject objGetMethod = (JCObject)classInstance.Invoke("GetMethod", method == null ? null : method.getJCOInstance());
+            retObjectGetMethod = classInstance.Invoke("GetMethod", method == null ? null : method.getJCOInstance());
+            JCObject objGetMethod = (JCObject)retObjectGetMethod;
             return new ISymbolMethodImplementation(objGetMethod);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetMethod != null ? retObjectGetMethod.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -210,10 +226,14 @@ public class ISymbolReaderImplementation extends NetObject implements ISymbolRea
 
     public ISymbolMethod GetMethod(SymbolToken method, int version) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetMethod = null;
         try {
-            JCObject objGetMethod = (JCObject)classInstance.Invoke("GetMethod", method == null ? null : method.getJCOInstance(), version);
+            retObjectGetMethod = classInstance.Invoke("GetMethod", method == null ? null : method.getJCOInstance(), version);
+            JCObject objGetMethod = (JCObject)retObjectGetMethod;
             return new ISymbolMethodImplementation(objGetMethod);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetMethod != null ? retObjectGetMethod.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -221,10 +241,14 @@ public class ISymbolReaderImplementation extends NetObject implements ISymbolRea
 
     public ISymbolMethod GetMethodFromDocumentPosition(ISymbolDocument document, int line, int column) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetMethodFromDocumentPosition = null;
         try {
-            JCObject objGetMethodFromDocumentPosition = (JCObject)classInstance.Invoke("GetMethodFromDocumentPosition", document == null ? null : document.getJCOInstance(), line, column);
+            retObjectGetMethodFromDocumentPosition = classInstance.Invoke("GetMethodFromDocumentPosition", document == null ? null : document.getJCOInstance(), line, column);
+            JCObject objGetMethodFromDocumentPosition = (JCObject)retObjectGetMethodFromDocumentPosition;
             return new ISymbolMethodImplementation(objGetMethodFromDocumentPosition);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetMethodFromDocumentPosition != null ? retObjectGetMethodFromDocumentPosition.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -232,16 +256,20 @@ public class ISymbolReaderImplementation extends NetObject implements ISymbolRea
 
     public ISymbolNamespace[] GetNamespaces() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetNamespaces = null;
         try {
             ArrayList<ISymbolNamespace> resultingArrayList = new ArrayList<ISymbolNamespace>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetNamespaces");
+            retObjectGetNamespaces = classInstance.Invoke("GetNamespaces");
+            JCObject resultingObjects = (JCObject)retObjectGetNamespaces;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ISymbolNamespaceImplementation(resultingObject));
             }
             ISymbolNamespace[] resultingArray = new ISymbolNamespace[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetNamespaces != null ? retObjectGetNamespaces.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -249,16 +277,20 @@ public class ISymbolReaderImplementation extends NetObject implements ISymbolRea
 
     public ISymbolVariable[] GetGlobalVariables() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetGlobalVariables = null;
         try {
             ArrayList<ISymbolVariable> resultingArrayList = new ArrayList<ISymbolVariable>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetGlobalVariables");
+            retObjectGetGlobalVariables = classInstance.Invoke("GetGlobalVariables");
+            JCObject resultingObjects = (JCObject)retObjectGetGlobalVariables;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ISymbolVariableImplementation(resultingObject));
             }
             ISymbolVariable[] resultingArray = new ISymbolVariable[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetGlobalVariables != null ? retObjectGetGlobalVariables.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -266,16 +298,20 @@ public class ISymbolReaderImplementation extends NetObject implements ISymbolRea
 
     public ISymbolVariable[] GetVariables(SymbolToken parent) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetVariables = null;
         try {
             ArrayList<ISymbolVariable> resultingArrayList = new ArrayList<ISymbolVariable>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetVariables", parent == null ? null : parent.getJCOInstance());
+            retObjectGetVariables = classInstance.Invoke("GetVariables", parent == null ? null : parent.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectGetVariables;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ISymbolVariableImplementation(resultingObject));
             }
             ISymbolVariable[] resultingArray = new ISymbolVariable[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetVariables != null ? retObjectGetVariables.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -287,10 +323,14 @@ public class ISymbolReaderImplementation extends NetObject implements ISymbolRea
     
     public SymbolToken getUserEntryPoint() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUserEntryPoint = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("UserEntryPoint");
+            retObjectUserEntryPoint = classInstance.Get("UserEntryPoint");
+            JCObject val = (JCObject)retObjectUserEntryPoint;
             return new SymbolToken(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUserEntryPoint != null ? retObjectUserEntryPoint.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -162,9 +162,13 @@ public class DataBoundControl extends BaseDataBoundControl  {
     
     public java.lang.String getDataMember() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDataMember = null;
         try {
-            return (java.lang.String)classInstance.Get("DataMember");
+            retObjectDataMember = classInstance.Get("DataMember");
+            return (java.lang.String)retObjectDataMember;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDataMember != null ? retObjectDataMember.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,7 +176,7 @@ public class DataBoundControl extends BaseDataBoundControl  {
 
     public void setDataMember(java.lang.String DataMember) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.web.HttpException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DataMember", DataMember);
         } catch (JCNativeException jcne) {
@@ -182,9 +186,13 @@ public class DataBoundControl extends BaseDataBoundControl  {
 
     public java.lang.String getItemType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectItemType = null;
         try {
-            return (java.lang.String)classInstance.Get("ItemType");
+            retObjectItemType = classInstance.Get("ItemType");
+            return (java.lang.String)retObjectItemType;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectItemType != null ? retObjectItemType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,7 +200,7 @@ public class DataBoundControl extends BaseDataBoundControl  {
 
     public void setItemType(java.lang.String ItemType) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.web.HttpException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ItemType", ItemType);
         } catch (JCNativeException jcne) {
@@ -202,9 +210,13 @@ public class DataBoundControl extends BaseDataBoundControl  {
 
     public java.lang.String getSelectMethod() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectMethod = null;
         try {
-            return (java.lang.String)classInstance.Get("SelectMethod");
+            retObjectSelectMethod = classInstance.Get("SelectMethod");
+            return (java.lang.String)retObjectSelectMethod;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSelectMethod != null ? retObjectSelectMethod.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -212,7 +224,7 @@ public class DataBoundControl extends BaseDataBoundControl  {
 
     public void setSelectMethod(java.lang.String SelectMethod) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.web.HttpException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SelectMethod", SelectMethod);
         } catch (JCNativeException jcne) {
@@ -222,10 +234,14 @@ public class DataBoundControl extends BaseDataBoundControl  {
 
     public IDataSource getDataSourceObject() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.resources.MissingManifestResourceException, system.web.HttpException, system.NotImplementedException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDataSourceObject = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DataSourceObject");
+            retObjectDataSourceObject = classInstance.Get("DataSourceObject");
+            JCObject val = (JCObject)retObjectDataSourceObject;
             return new IDataSourceImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDataSourceObject != null ? retObjectDataSourceObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -238,7 +254,7 @@ public class DataBoundControl extends BaseDataBoundControl  {
 
     public void addCallingDataMethods(CallingDataMethodsEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("CallingDataMethods", handler);
         } catch (JCNativeException jcne) {
@@ -248,7 +264,7 @@ public class DataBoundControl extends BaseDataBoundControl  {
 
     public void removeCallingDataMethods(CallingDataMethodsEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("CallingDataMethods", handler);
         } catch (JCNativeException jcne) {
@@ -258,7 +274,7 @@ public class DataBoundControl extends BaseDataBoundControl  {
 
     public void addCreatingModelDataSource(CreatingModelDataSourceEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("CreatingModelDataSource", handler);
         } catch (JCNativeException jcne) {
@@ -268,7 +284,7 @@ public class DataBoundControl extends BaseDataBoundControl  {
 
     public void removeCreatingModelDataSource(CreatingModelDataSourceEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("CreatingModelDataSource", handler);
         } catch (JCNativeException jcne) {

@@ -155,10 +155,14 @@ public class BaseUriHelper extends NetObject  {
     
     public static Uri GetBaseUri(DependencyObject element) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.UriFormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetBaseUri = null;
         try {
-            JCObject objGetBaseUri = (JCObject)classType.Invoke("GetBaseUri", element == null ? null : element.getJCOInstance());
+            retObjectGetBaseUri = classType.Invoke("GetBaseUri", element == null ? null : element.getJCOInstance());
+            JCObject objGetBaseUri = (JCObject)retObjectGetBaseUri;
             return new Uri(objGetBaseUri);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetBaseUri != null ? retObjectGetBaseUri.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

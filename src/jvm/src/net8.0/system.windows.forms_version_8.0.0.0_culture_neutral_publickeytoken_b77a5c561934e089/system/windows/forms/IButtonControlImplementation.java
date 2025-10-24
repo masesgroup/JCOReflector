@@ -143,7 +143,7 @@ public class IButtonControlImplementation extends NetObject implements IButtonCo
     
     public void NotifyDefault(boolean value) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("NotifyDefault", value);
         } catch (JCNativeException jcne) {
@@ -153,7 +153,7 @@ public class IButtonControlImplementation extends NetObject implements IButtonCo
 
     public void PerformClick() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("PerformClick");
         } catch (JCNativeException jcne) {
@@ -167,10 +167,14 @@ public class IButtonControlImplementation extends NetObject implements IButtonCo
     
     public DialogResult getDialogResult() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDialogResult = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DialogResult");
+            retObjectDialogResult = classInstance.Get("DialogResult");
+            JCObject val = (JCObject)retObjectDialogResult;
             return new DialogResult(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDialogResult != null ? retObjectDialogResult.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,7 +182,7 @@ public class IButtonControlImplementation extends NetObject implements IButtonCo
 
     public void setDialogResult(DialogResult DialogResult) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DialogResult", DialogResult == null ? null : DialogResult.getJCOInstance());
         } catch (JCNativeException jcne) {

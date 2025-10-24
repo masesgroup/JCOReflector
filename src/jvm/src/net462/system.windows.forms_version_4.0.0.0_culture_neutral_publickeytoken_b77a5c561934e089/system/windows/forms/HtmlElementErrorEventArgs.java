@@ -161,9 +161,13 @@ public class HtmlElementErrorEventArgs extends EventArgs  {
     
     public boolean getHandled() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHandled = null;
         try {
-            return (boolean)classInstance.Get("Handled");
+            retObjectHandled = classInstance.Get("Handled");
+            return (boolean)retObjectHandled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectHandled != null ? retObjectHandled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,7 +175,7 @@ public class HtmlElementErrorEventArgs extends EventArgs  {
 
     public void setHandled(boolean Handled) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Handled", Handled);
         } catch (JCNativeException jcne) {
@@ -181,9 +185,20 @@ public class HtmlElementErrorEventArgs extends EventArgs  {
 
     public int getLineNumber() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLineNumber = null;
         try {
-            return (int)classInstance.Get("LineNumber");
+            retObjectLineNumber = classInstance.Get("LineNumber");
+            return (int)retObjectLineNumber;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectLineNumber_ToString = retObjectLineNumber == null ? "null" : retObjectLineNumber.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectLineNumberNumber = (java.lang.Number)retObjectLineNumber;
+                return retObjectLineNumberNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectLineNumber != null ? retObjectLineNumber.getClass() : "null", retObjectLineNumber_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,9 +206,13 @@ public class HtmlElementErrorEventArgs extends EventArgs  {
 
     public java.lang.String getDescription() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDescription = null;
         try {
-            return (java.lang.String)classInstance.Get("Description");
+            retObjectDescription = classInstance.Get("Description");
+            return (java.lang.String)retObjectDescription;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDescription != null ? retObjectDescription.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,10 +220,14 @@ public class HtmlElementErrorEventArgs extends EventArgs  {
 
     public Uri getUrl() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.MemberAccessException, system.NullReferenceException, system.configuration.ConfigurationException, system.UriFormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUrl = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Url");
+            retObjectUrl = classInstance.Get("Url");
+            JCObject val = (JCObject)retObjectUrl;
             return new Uri(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUrl != null ? retObjectUrl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

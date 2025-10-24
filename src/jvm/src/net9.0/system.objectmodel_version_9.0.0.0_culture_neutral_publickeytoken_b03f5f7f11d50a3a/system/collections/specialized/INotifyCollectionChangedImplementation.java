@@ -152,7 +152,7 @@ public class INotifyCollectionChangedImplementation extends NetObject implements
 
     public void addCollectionChanged(NotifyCollectionChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("CollectionChanged", handler);
         } catch (JCNativeException jcne) {
@@ -162,7 +162,7 @@ public class INotifyCollectionChangedImplementation extends NetObject implements
 
     public void removeCollectionChanged(NotifyCollectionChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("CollectionChanged", handler);
         } catch (JCNativeException jcne) {

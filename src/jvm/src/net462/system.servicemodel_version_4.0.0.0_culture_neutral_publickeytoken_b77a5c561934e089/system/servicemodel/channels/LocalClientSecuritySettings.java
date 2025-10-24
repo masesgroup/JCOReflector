@@ -165,10 +165,14 @@ public class LocalClientSecuritySettings extends NetObject  {
     
     public LocalClientSecuritySettings Clone() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClone = null;
         try {
-            JCObject objClone = (JCObject)classInstance.Invoke("Clone");
+            retObjectClone = classInstance.Invoke("Clone");
+            JCObject objClone = (JCObject)retObjectClone;
             return new LocalClientSecuritySettings(objClone);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClone != null ? retObjectClone.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,9 +184,13 @@ public class LocalClientSecuritySettings extends NetObject  {
     
     public boolean getCacheCookies() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCacheCookies = null;
         try {
-            return (boolean)classInstance.Get("CacheCookies");
+            retObjectCacheCookies = classInstance.Get("CacheCookies");
+            return (boolean)retObjectCacheCookies;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCacheCookies != null ? retObjectCacheCookies.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,7 +198,7 @@ public class LocalClientSecuritySettings extends NetObject  {
 
     public void setCacheCookies(boolean CacheCookies) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CacheCookies", CacheCookies);
         } catch (JCNativeException jcne) {
@@ -200,9 +208,13 @@ public class LocalClientSecuritySettings extends NetObject  {
 
     public boolean getDetectReplays() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDetectReplays = null;
         try {
-            return (boolean)classInstance.Get("DetectReplays");
+            retObjectDetectReplays = classInstance.Get("DetectReplays");
+            return (boolean)retObjectDetectReplays;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectDetectReplays != null ? retObjectDetectReplays.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -210,7 +222,7 @@ public class LocalClientSecuritySettings extends NetObject  {
 
     public void setDetectReplays(boolean DetectReplays) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DetectReplays", DetectReplays);
         } catch (JCNativeException jcne) {
@@ -220,9 +232,13 @@ public class LocalClientSecuritySettings extends NetObject  {
 
     public boolean getReconnectTransportOnFailure() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReconnectTransportOnFailure = null;
         try {
-            return (boolean)classInstance.Get("ReconnectTransportOnFailure");
+            retObjectReconnectTransportOnFailure = classInstance.Get("ReconnectTransportOnFailure");
+            return (boolean)retObjectReconnectTransportOnFailure;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectReconnectTransportOnFailure != null ? retObjectReconnectTransportOnFailure.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -230,7 +246,7 @@ public class LocalClientSecuritySettings extends NetObject  {
 
     public void setReconnectTransportOnFailure(boolean ReconnectTransportOnFailure) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ReconnectTransportOnFailure", ReconnectTransportOnFailure);
         } catch (JCNativeException jcne) {
@@ -240,9 +256,20 @@ public class LocalClientSecuritySettings extends NetObject  {
 
     public int getCookieRenewalThresholdPercentage() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCookieRenewalThresholdPercentage = null;
         try {
-            return (int)classInstance.Get("CookieRenewalThresholdPercentage");
+            retObjectCookieRenewalThresholdPercentage = classInstance.Get("CookieRenewalThresholdPercentage");
+            return (int)retObjectCookieRenewalThresholdPercentage;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCookieRenewalThresholdPercentage_ToString = retObjectCookieRenewalThresholdPercentage == null ? "null" : retObjectCookieRenewalThresholdPercentage.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectCookieRenewalThresholdPercentageNumber = (java.lang.Number)retObjectCookieRenewalThresholdPercentage;
+                return retObjectCookieRenewalThresholdPercentageNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCookieRenewalThresholdPercentage != null ? retObjectCookieRenewalThresholdPercentage.getClass() : "null", retObjectCookieRenewalThresholdPercentage_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -250,7 +277,7 @@ public class LocalClientSecuritySettings extends NetObject  {
 
     public void setCookieRenewalThresholdPercentage(int CookieRenewalThresholdPercentage) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CookieRenewalThresholdPercentage", CookieRenewalThresholdPercentage);
         } catch (JCNativeException jcne) {
@@ -260,9 +287,20 @@ public class LocalClientSecuritySettings extends NetObject  {
 
     public int getReplayCacheSize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReplayCacheSize = null;
         try {
-            return (int)classInstance.Get("ReplayCacheSize");
+            retObjectReplayCacheSize = classInstance.Get("ReplayCacheSize");
+            return (int)retObjectReplayCacheSize;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectReplayCacheSize_ToString = retObjectReplayCacheSize == null ? "null" : retObjectReplayCacheSize.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectReplayCacheSizeNumber = (java.lang.Number)retObjectReplayCacheSize;
+                return retObjectReplayCacheSizeNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectReplayCacheSize != null ? retObjectReplayCacheSize.getClass() : "null", retObjectReplayCacheSize_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -270,7 +308,7 @@ public class LocalClientSecuritySettings extends NetObject  {
 
     public void setReplayCacheSize(int ReplayCacheSize) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ReplayCacheSize", ReplayCacheSize);
         } catch (JCNativeException jcne) {
@@ -280,10 +318,14 @@ public class LocalClientSecuritySettings extends NetObject  {
 
     public IdentityVerifier getIdentityVerifier() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIdentityVerifier = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("IdentityVerifier");
+            retObjectIdentityVerifier = classInstance.Get("IdentityVerifier");
+            JCObject val = (JCObject)retObjectIdentityVerifier;
             return new IdentityVerifier(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIdentityVerifier != null ? retObjectIdentityVerifier.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -291,7 +333,7 @@ public class LocalClientSecuritySettings extends NetObject  {
 
     public void setIdentityVerifier(IdentityVerifier IdentityVerifier) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IdentityVerifier", IdentityVerifier == null ? null : IdentityVerifier.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -301,10 +343,14 @@ public class LocalClientSecuritySettings extends NetObject  {
 
     public NonceCache getNonceCache() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNonceCache = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("NonceCache");
+            retObjectNonceCache = classInstance.Get("NonceCache");
+            JCObject val = (JCObject)retObjectNonceCache;
             return new NonceCache(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNonceCache != null ? retObjectNonceCache.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -312,7 +358,7 @@ public class LocalClientSecuritySettings extends NetObject  {
 
     public void setNonceCache(NonceCache NonceCache) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("NonceCache", NonceCache == null ? null : NonceCache.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -322,10 +368,14 @@ public class LocalClientSecuritySettings extends NetObject  {
 
     public TimeSpan getMaxClockSkew() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxClockSkew = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MaxClockSkew");
+            retObjectMaxClockSkew = classInstance.Get("MaxClockSkew");
+            JCObject val = (JCObject)retObjectMaxClockSkew;
             return new TimeSpan(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMaxClockSkew != null ? retObjectMaxClockSkew.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -333,7 +383,7 @@ public class LocalClientSecuritySettings extends NetObject  {
 
     public void setMaxClockSkew(TimeSpan MaxClockSkew) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaxClockSkew", MaxClockSkew == null ? null : MaxClockSkew.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -343,10 +393,14 @@ public class LocalClientSecuritySettings extends NetObject  {
 
     public TimeSpan getMaxCookieCachingTime() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxCookieCachingTime = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MaxCookieCachingTime");
+            retObjectMaxCookieCachingTime = classInstance.Get("MaxCookieCachingTime");
+            JCObject val = (JCObject)retObjectMaxCookieCachingTime;
             return new TimeSpan(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMaxCookieCachingTime != null ? retObjectMaxCookieCachingTime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -354,7 +408,7 @@ public class LocalClientSecuritySettings extends NetObject  {
 
     public void setMaxCookieCachingTime(TimeSpan MaxCookieCachingTime) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaxCookieCachingTime", MaxCookieCachingTime == null ? null : MaxCookieCachingTime.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -364,10 +418,14 @@ public class LocalClientSecuritySettings extends NetObject  {
 
     public TimeSpan getReplayWindow() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReplayWindow = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ReplayWindow");
+            retObjectReplayWindow = classInstance.Get("ReplayWindow");
+            JCObject val = (JCObject)retObjectReplayWindow;
             return new TimeSpan(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReplayWindow != null ? retObjectReplayWindow.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -375,7 +433,7 @@ public class LocalClientSecuritySettings extends NetObject  {
 
     public void setReplayWindow(TimeSpan ReplayWindow) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ReplayWindow", ReplayWindow == null ? null : ReplayWindow.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -385,10 +443,14 @@ public class LocalClientSecuritySettings extends NetObject  {
 
     public TimeSpan getSessionKeyRenewalInterval() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSessionKeyRenewalInterval = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SessionKeyRenewalInterval");
+            retObjectSessionKeyRenewalInterval = classInstance.Get("SessionKeyRenewalInterval");
+            JCObject val = (JCObject)retObjectSessionKeyRenewalInterval;
             return new TimeSpan(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSessionKeyRenewalInterval != null ? retObjectSessionKeyRenewalInterval.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -396,7 +458,7 @@ public class LocalClientSecuritySettings extends NetObject  {
 
     public void setSessionKeyRenewalInterval(TimeSpan SessionKeyRenewalInterval) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SessionKeyRenewalInterval", SessionKeyRenewalInterval == null ? null : SessionKeyRenewalInterval.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -406,10 +468,14 @@ public class LocalClientSecuritySettings extends NetObject  {
 
     public TimeSpan getSessionKeyRolloverInterval() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSessionKeyRolloverInterval = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SessionKeyRolloverInterval");
+            retObjectSessionKeyRolloverInterval = classInstance.Get("SessionKeyRolloverInterval");
+            JCObject val = (JCObject)retObjectSessionKeyRolloverInterval;
             return new TimeSpan(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSessionKeyRolloverInterval != null ? retObjectSessionKeyRolloverInterval.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -417,7 +483,7 @@ public class LocalClientSecuritySettings extends NetObject  {
 
     public void setSessionKeyRolloverInterval(TimeSpan SessionKeyRolloverInterval) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SessionKeyRolloverInterval", SessionKeyRolloverInterval == null ? null : SessionKeyRolloverInterval.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -427,10 +493,14 @@ public class LocalClientSecuritySettings extends NetObject  {
 
     public TimeSpan getTimestampValidityDuration() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTimestampValidityDuration = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TimestampValidityDuration");
+            retObjectTimestampValidityDuration = classInstance.Get("TimestampValidityDuration");
+            JCObject val = (JCObject)retObjectTimestampValidityDuration;
             return new TimeSpan(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTimestampValidityDuration != null ? retObjectTimestampValidityDuration.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -438,7 +508,7 @@ public class LocalClientSecuritySettings extends NetObject  {
 
     public void setTimestampValidityDuration(TimeSpan TimestampValidityDuration) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TimestampValidityDuration", TimestampValidityDuration == null ? null : TimestampValidityDuration.getJCOInstance());
         } catch (JCNativeException jcne) {

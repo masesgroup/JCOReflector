@@ -166,9 +166,13 @@ public class Csc extends ManagedCompiler  {
     
     public boolean getAllowUnsafeBlocks() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAllowUnsafeBlocks = null;
         try {
-            return (boolean)classInstance.Get("AllowUnsafeBlocks");
+            retObjectAllowUnsafeBlocks = classInstance.Get("AllowUnsafeBlocks");
+            return (boolean)retObjectAllowUnsafeBlocks;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAllowUnsafeBlocks != null ? retObjectAllowUnsafeBlocks.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,7 +180,7 @@ public class Csc extends ManagedCompiler  {
 
     public void setAllowUnsafeBlocks(boolean AllowUnsafeBlocks) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AllowUnsafeBlocks", AllowUnsafeBlocks);
         } catch (JCNativeException jcne) {
@@ -186,9 +190,13 @@ public class Csc extends ManagedCompiler  {
 
     public boolean getCheckForOverflowUnderflow() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCheckForOverflowUnderflow = null;
         try {
-            return (boolean)classInstance.Get("CheckForOverflowUnderflow");
+            retObjectCheckForOverflowUnderflow = classInstance.Get("CheckForOverflowUnderflow");
+            return (boolean)retObjectCheckForOverflowUnderflow;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCheckForOverflowUnderflow != null ? retObjectCheckForOverflowUnderflow.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,7 +204,7 @@ public class Csc extends ManagedCompiler  {
 
     public void setCheckForOverflowUnderflow(boolean CheckForOverflowUnderflow) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CheckForOverflowUnderflow", CheckForOverflowUnderflow);
         } catch (JCNativeException jcne) {
@@ -206,9 +214,13 @@ public class Csc extends ManagedCompiler  {
 
     public boolean getErrorEndLocation() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectErrorEndLocation = null;
         try {
-            return (boolean)classInstance.Get("ErrorEndLocation");
+            retObjectErrorEndLocation = classInstance.Get("ErrorEndLocation");
+            return (boolean)retObjectErrorEndLocation;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectErrorEndLocation != null ? retObjectErrorEndLocation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -216,7 +228,7 @@ public class Csc extends ManagedCompiler  {
 
     public void setErrorEndLocation(boolean ErrorEndLocation) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ErrorEndLocation", ErrorEndLocation);
         } catch (JCNativeException jcne) {
@@ -226,9 +238,13 @@ public class Csc extends ManagedCompiler  {
 
     public boolean getGenerateFullPaths() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGenerateFullPaths = null;
         try {
-            return (boolean)classInstance.Get("GenerateFullPaths");
+            retObjectGenerateFullPaths = classInstance.Get("GenerateFullPaths");
+            return (boolean)retObjectGenerateFullPaths;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectGenerateFullPaths != null ? retObjectGenerateFullPaths.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -236,7 +252,7 @@ public class Csc extends ManagedCompiler  {
 
     public void setGenerateFullPaths(boolean GenerateFullPaths) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("GenerateFullPaths", GenerateFullPaths);
         } catch (JCNativeException jcne) {
@@ -246,9 +262,13 @@ public class Csc extends ManagedCompiler  {
 
     public boolean getNoStandardLib() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNoStandardLib = null;
         try {
-            return (boolean)classInstance.Get("NoStandardLib");
+            retObjectNoStandardLib = classInstance.Get("NoStandardLib");
+            return (boolean)retObjectNoStandardLib;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectNoStandardLib != null ? retObjectNoStandardLib.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -256,7 +276,7 @@ public class Csc extends ManagedCompiler  {
 
     public void setNoStandardLib(boolean NoStandardLib) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("NoStandardLib", NoStandardLib);
         } catch (JCNativeException jcne) {
@@ -266,9 +286,13 @@ public class Csc extends ManagedCompiler  {
 
     public boolean getUseHostCompilerIfAvailable() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUseHostCompilerIfAvailable = null;
         try {
-            return (boolean)classInstance.Get("UseHostCompilerIfAvailable");
+            retObjectUseHostCompilerIfAvailable = classInstance.Get("UseHostCompilerIfAvailable");
+            return (boolean)retObjectUseHostCompilerIfAvailable;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectUseHostCompilerIfAvailable != null ? retObjectUseHostCompilerIfAvailable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -276,7 +300,7 @@ public class Csc extends ManagedCompiler  {
 
     public void setUseHostCompilerIfAvailable(boolean UseHostCompilerIfAvailable) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UseHostCompilerIfAvailable", UseHostCompilerIfAvailable);
         } catch (JCNativeException jcne) {
@@ -286,9 +310,20 @@ public class Csc extends ManagedCompiler  {
 
     public int getWarningLevel() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWarningLevel = null;
         try {
-            return (int)classInstance.Get("WarningLevel");
+            retObjectWarningLevel = classInstance.Get("WarningLevel");
+            return (int)retObjectWarningLevel;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectWarningLevel_ToString = retObjectWarningLevel == null ? "null" : retObjectWarningLevel.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectWarningLevelNumber = (java.lang.Number)retObjectWarningLevel;
+                return retObjectWarningLevelNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectWarningLevel != null ? retObjectWarningLevel.getClass() : "null", retObjectWarningLevel_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -296,7 +331,7 @@ public class Csc extends ManagedCompiler  {
 
     public void setWarningLevel(int WarningLevel) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("WarningLevel", WarningLevel);
         } catch (JCNativeException jcne) {
@@ -306,9 +341,13 @@ public class Csc extends ManagedCompiler  {
 
     public java.lang.String getApplicationConfiguration() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectApplicationConfiguration = null;
         try {
-            return (java.lang.String)classInstance.Get("ApplicationConfiguration");
+            retObjectApplicationConfiguration = classInstance.Get("ApplicationConfiguration");
+            return (java.lang.String)retObjectApplicationConfiguration;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectApplicationConfiguration != null ? retObjectApplicationConfiguration.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -316,7 +355,7 @@ public class Csc extends ManagedCompiler  {
 
     public void setApplicationConfiguration(java.lang.String ApplicationConfiguration) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ApplicationConfiguration", ApplicationConfiguration);
         } catch (JCNativeException jcne) {
@@ -326,9 +365,13 @@ public class Csc extends ManagedCompiler  {
 
     public java.lang.String getBaseAddress() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBaseAddress = null;
         try {
-            return (java.lang.String)classInstance.Get("BaseAddress");
+            retObjectBaseAddress = classInstance.Get("BaseAddress");
+            return (java.lang.String)retObjectBaseAddress;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectBaseAddress != null ? retObjectBaseAddress.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -336,7 +379,7 @@ public class Csc extends ManagedCompiler  {
 
     public void setBaseAddress(java.lang.String BaseAddress) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BaseAddress", BaseAddress);
         } catch (JCNativeException jcne) {
@@ -346,9 +389,13 @@ public class Csc extends ManagedCompiler  {
 
     public java.lang.String getDisabledWarnings() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDisabledWarnings = null;
         try {
-            return (java.lang.String)classInstance.Get("DisabledWarnings");
+            retObjectDisabledWarnings = classInstance.Get("DisabledWarnings");
+            return (java.lang.String)retObjectDisabledWarnings;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDisabledWarnings != null ? retObjectDisabledWarnings.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -356,7 +403,7 @@ public class Csc extends ManagedCompiler  {
 
     public void setDisabledWarnings(java.lang.String DisabledWarnings) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DisabledWarnings", DisabledWarnings);
         } catch (JCNativeException jcne) {
@@ -366,9 +413,13 @@ public class Csc extends ManagedCompiler  {
 
     public java.lang.String getDocumentationFile() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDocumentationFile = null;
         try {
-            return (java.lang.String)classInstance.Get("DocumentationFile");
+            retObjectDocumentationFile = classInstance.Get("DocumentationFile");
+            return (java.lang.String)retObjectDocumentationFile;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDocumentationFile != null ? retObjectDocumentationFile.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -376,7 +427,7 @@ public class Csc extends ManagedCompiler  {
 
     public void setDocumentationFile(java.lang.String DocumentationFile) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DocumentationFile", DocumentationFile);
         } catch (JCNativeException jcne) {
@@ -386,9 +437,13 @@ public class Csc extends ManagedCompiler  {
 
     public java.lang.String getErrorReport() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectErrorReport = null;
         try {
-            return (java.lang.String)classInstance.Get("ErrorReport");
+            retObjectErrorReport = classInstance.Get("ErrorReport");
+            return (java.lang.String)retObjectErrorReport;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectErrorReport != null ? retObjectErrorReport.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -396,7 +451,7 @@ public class Csc extends ManagedCompiler  {
 
     public void setErrorReport(java.lang.String ErrorReport) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ErrorReport", ErrorReport);
         } catch (JCNativeException jcne) {
@@ -406,9 +461,13 @@ public class Csc extends ManagedCompiler  {
 
     public java.lang.String getLangVersion() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLangVersion = null;
         try {
-            return (java.lang.String)classInstance.Get("LangVersion");
+            retObjectLangVersion = classInstance.Get("LangVersion");
+            return (java.lang.String)retObjectLangVersion;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectLangVersion != null ? retObjectLangVersion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -416,7 +475,7 @@ public class Csc extends ManagedCompiler  {
 
     public void setLangVersion(java.lang.String LangVersion) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("LangVersion", LangVersion);
         } catch (JCNativeException jcne) {
@@ -426,9 +485,13 @@ public class Csc extends ManagedCompiler  {
 
     public java.lang.String getModuleAssemblyName() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectModuleAssemblyName = null;
         try {
-            return (java.lang.String)classInstance.Get("ModuleAssemblyName");
+            retObjectModuleAssemblyName = classInstance.Get("ModuleAssemblyName");
+            return (java.lang.String)retObjectModuleAssemblyName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectModuleAssemblyName != null ? retObjectModuleAssemblyName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -436,7 +499,7 @@ public class Csc extends ManagedCompiler  {
 
     public void setModuleAssemblyName(java.lang.String ModuleAssemblyName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ModuleAssemblyName", ModuleAssemblyName);
         } catch (JCNativeException jcne) {
@@ -446,9 +509,13 @@ public class Csc extends ManagedCompiler  {
 
     public java.lang.String getPdbFile() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPdbFile = null;
         try {
-            return (java.lang.String)classInstance.Get("PdbFile");
+            retObjectPdbFile = classInstance.Get("PdbFile");
+            return (java.lang.String)retObjectPdbFile;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectPdbFile != null ? retObjectPdbFile.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -456,7 +523,7 @@ public class Csc extends ManagedCompiler  {
 
     public void setPdbFile(java.lang.String PdbFile) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PdbFile", PdbFile);
         } catch (JCNativeException jcne) {
@@ -466,9 +533,13 @@ public class Csc extends ManagedCompiler  {
 
     public java.lang.String getPreferredUILang() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPreferredUILang = null;
         try {
-            return (java.lang.String)classInstance.Get("PreferredUILang");
+            retObjectPreferredUILang = classInstance.Get("PreferredUILang");
+            return (java.lang.String)retObjectPreferredUILang;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectPreferredUILang != null ? retObjectPreferredUILang.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -476,7 +547,7 @@ public class Csc extends ManagedCompiler  {
 
     public void setPreferredUILang(java.lang.String PreferredUILang) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PreferredUILang", PreferredUILang);
         } catch (JCNativeException jcne) {
@@ -486,9 +557,13 @@ public class Csc extends ManagedCompiler  {
 
     public java.lang.String getWarningsAsErrors() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWarningsAsErrors = null;
         try {
-            return (java.lang.String)classInstance.Get("WarningsAsErrors");
+            retObjectWarningsAsErrors = classInstance.Get("WarningsAsErrors");
+            return (java.lang.String)retObjectWarningsAsErrors;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectWarningsAsErrors != null ? retObjectWarningsAsErrors.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -496,7 +571,7 @@ public class Csc extends ManagedCompiler  {
 
     public void setWarningsAsErrors(java.lang.String WarningsAsErrors) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("WarningsAsErrors", WarningsAsErrors);
         } catch (JCNativeException jcne) {
@@ -506,9 +581,13 @@ public class Csc extends ManagedCompiler  {
 
     public java.lang.String getWarningsNotAsErrors() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWarningsNotAsErrors = null;
         try {
-            return (java.lang.String)classInstance.Get("WarningsNotAsErrors");
+            retObjectWarningsNotAsErrors = classInstance.Get("WarningsNotAsErrors");
+            return (java.lang.String)retObjectWarningsNotAsErrors;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectWarningsNotAsErrors != null ? retObjectWarningsNotAsErrors.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -516,7 +595,7 @@ public class Csc extends ManagedCompiler  {
 
     public void setWarningsNotAsErrors(java.lang.String WarningsNotAsErrors) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("WarningsNotAsErrors", WarningsNotAsErrors);
         } catch (JCNativeException jcne) {

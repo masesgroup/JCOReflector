@@ -161,9 +161,13 @@ public class BrowserCapabilitiesCodeGenerator extends NetObject  {
     
     public boolean Uninstall() throws Throwable, system.NullReferenceException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.security.SecurityException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.componentmodel.Win32Exception, system.NotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.serviceprocess.TimeoutException, system.collections.generic.KeyNotFoundException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUninstall = null;
         try {
-            return (boolean)classInstance.Invoke("Uninstall");
+            retObjectUninstall = classInstance.Invoke("Uninstall");
+            return (boolean)retObjectUninstall;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectUninstall != null ? retObjectUninstall.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,7 +175,7 @@ public class BrowserCapabilitiesCodeGenerator extends NetObject  {
 
     public void Create() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.RankException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.SecurityException, system.xml.XmlException, system.xml.schema.XmlSchemaException, system.web.HttpException, system.OutOfMemoryException, system.web.HttpParseException, system.configuration.ConfigurationErrorsException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception, system.componentmodel.InvalidEnumArgumentException, system.serviceprocess.TimeoutException, system.threading.AbandonedMutexException, system.collections.generic.KeyNotFoundException, system.FormatException, system.web.HttpCompileException, system.InvalidCastException, system.MissingMethodException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Create");
         } catch (JCNativeException jcne) {

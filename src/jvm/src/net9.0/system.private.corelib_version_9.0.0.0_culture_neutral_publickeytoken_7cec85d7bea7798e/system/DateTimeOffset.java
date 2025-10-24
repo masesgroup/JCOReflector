@@ -264,9 +264,13 @@ public class DateTimeOffset extends ValueType implements system.IComparable, sys
     
     public static boolean Equals(DateTimeOffset first, DateTimeOffset second) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectEquals = null;
         try {
-            return (boolean)classType.Invoke("Equals", first == null ? null : first.getJCOInstance(), second == null ? null : second.getJCOInstance());
+            retObjectEquals = classType.Invoke("Equals", first == null ? null : first.getJCOInstance(), second == null ? null : second.getJCOInstance());
+            return (boolean)retObjectEquals;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectEquals != null ? retObjectEquals.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -274,9 +278,13 @@ public class DateTimeOffset extends ValueType implements system.IComparable, sys
 
     public boolean Equals(DateTimeOffset other) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEquals = null;
         try {
-            return (boolean)classInstance.Invoke("Equals", other == null ? null : other.getJCOInstance());
+            retObjectEquals = classInstance.Invoke("Equals", other == null ? null : other.getJCOInstance());
+            return (boolean)retObjectEquals;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectEquals != null ? retObjectEquals.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -284,9 +292,13 @@ public class DateTimeOffset extends ValueType implements system.IComparable, sys
 
     public boolean EqualsExact(DateTimeOffset other) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEqualsExact = null;
         try {
-            return (boolean)classInstance.Invoke("EqualsExact", other == null ? null : other.getJCOInstance());
+            retObjectEqualsExact = classInstance.Invoke("EqualsExact", other == null ? null : other.getJCOInstance());
+            return (boolean)retObjectEqualsExact;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectEqualsExact != null ? retObjectEqualsExact.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -294,9 +306,13 @@ public class DateTimeOffset extends ValueType implements system.IComparable, sys
 
     public static boolean TryParse(java.lang.String input, JCORefOut<DateTimeOffset> result) throws Throwable, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.TypeInitializationException, system.InvalidOperationException, system.OverflowException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTryParse = null;
         try {
-            return (boolean)classType.Invoke("TryParse", input, result.getJCRefOut());
+            retObjectTryParse = classType.Invoke("TryParse", input, result.getJCRefOut());
+            return (boolean)retObjectTryParse;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryParse != null ? retObjectTryParse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -304,9 +320,13 @@ public class DateTimeOffset extends ValueType implements system.IComparable, sys
 
     public static boolean TryParse(java.lang.String s, IFormatProvider provider, JCORefOut<DateTimeOffset> result) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.OutOfMemoryException, system.OverflowException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTryParse = null;
         try {
-            return (boolean)classType.Invoke("TryParse", s, provider == null ? null : provider.getJCOInstance(), result.getJCRefOut());
+            retObjectTryParse = classType.Invoke("TryParse", s, provider == null ? null : provider.getJCOInstance(), result.getJCRefOut());
+            return (boolean)retObjectTryParse;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryParse != null ? retObjectTryParse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -314,9 +334,13 @@ public class DateTimeOffset extends ValueType implements system.IComparable, sys
 
     public static boolean TryParse(java.lang.String input, IFormatProvider formatProvider, DateTimeStyles styles, JCORefOut<DateTimeOffset> result) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.TypeInitializationException, system.OverflowException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTryParse = null;
         try {
-            return (boolean)classType.Invoke("TryParse", input, formatProvider == null ? null : formatProvider.getJCOInstance(), styles == null ? null : styles.getJCOInstance(), result.getJCRefOut());
+            retObjectTryParse = classType.Invoke("TryParse", input, formatProvider == null ? null : formatProvider.getJCOInstance(), styles == null ? null : styles.getJCOInstance(), result.getJCRefOut());
+            return (boolean)retObjectTryParse;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryParse != null ? retObjectTryParse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -324,9 +348,13 @@ public class DateTimeOffset extends ValueType implements system.IComparable, sys
 
     public static boolean TryParseExact(java.lang.String input, java.lang.String format, IFormatProvider formatProvider, DateTimeStyles styles, JCORefOut<DateTimeOffset> result) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.TypeInitializationException, system.OverflowException, system.OutOfMemoryException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTryParseExact = null;
         try {
-            return (boolean)classType.Invoke("TryParseExact", input, format, formatProvider == null ? null : formatProvider.getJCOInstance(), styles == null ? null : styles.getJCOInstance(), result.getJCRefOut());
+            retObjectTryParseExact = classType.Invoke("TryParseExact", input, format, formatProvider == null ? null : formatProvider.getJCOInstance(), styles == null ? null : styles.getJCOInstance(), result.getJCRefOut());
+            return (boolean)retObjectTryParseExact;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryParseExact != null ? retObjectTryParseExact.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -334,9 +362,13 @@ public class DateTimeOffset extends ValueType implements system.IComparable, sys
 
     public static boolean TryParseExact(java.lang.String input, java.lang.String[] formats, IFormatProvider formatProvider, DateTimeStyles styles, JCORefOut<DateTimeOffset> result) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.TypeInitializationException, system.OverflowException, system.OutOfMemoryException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTryParseExact = null;
         try {
-            return (boolean)classType.Invoke("TryParseExact", input, formats, formatProvider == null ? null : formatProvider.getJCOInstance(), styles == null ? null : styles.getJCOInstance(), result.getJCRefOut());
+            retObjectTryParseExact = classType.Invoke("TryParseExact", input, formats, formatProvider == null ? null : formatProvider.getJCOInstance(), styles == null ? null : styles.getJCOInstance(), result.getJCRefOut());
+            return (boolean)retObjectTryParseExact;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryParseExact != null ? retObjectTryParseExact.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -344,9 +376,20 @@ public class DateTimeOffset extends ValueType implements system.IComparable, sys
 
     public static int Compare(DateTimeOffset first, DateTimeOffset second) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCompare = null;
         try {
-            return (int)classType.Invoke("Compare", first == null ? null : first.getJCOInstance(), second == null ? null : second.getJCOInstance());
+            retObjectCompare = classType.Invoke("Compare", first == null ? null : first.getJCOInstance(), second == null ? null : second.getJCOInstance());
+            return (int)retObjectCompare;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCompare_ToString = retObjectCompare == null ? "null" : retObjectCompare.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectCompareNumber = (java.lang.Number)retObjectCompare;
+                return retObjectCompareNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCompare != null ? retObjectCompare.getClass() : "null", retObjectCompare_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -354,9 +397,20 @@ public class DateTimeOffset extends ValueType implements system.IComparable, sys
 
     public int CompareTo(DateTimeOffset other) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCompareTo = null;
         try {
-            return (int)classInstance.Invoke("CompareTo", other == null ? null : other.getJCOInstance());
+            retObjectCompareTo = classInstance.Invoke("CompareTo", other == null ? null : other.getJCOInstance());
+            return (int)retObjectCompareTo;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCompareTo_ToString = retObjectCompareTo == null ? "null" : retObjectCompareTo.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectCompareToNumber = (java.lang.Number)retObjectCompareTo;
+                return retObjectCompareToNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCompareTo != null ? retObjectCompareTo.getClass() : "null", retObjectCompareTo_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -364,9 +418,20 @@ public class DateTimeOffset extends ValueType implements system.IComparable, sys
 
     public long ToFileTime() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.InvalidTimeZoneException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.NullReferenceException, system.IndexOutOfRangeException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToFileTime = null;
         try {
-            return (long)classInstance.Invoke("ToFileTime");
+            retObjectToFileTime = classInstance.Invoke("ToFileTime");
+            return (long)retObjectToFileTime;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectToFileTime_ToString = retObjectToFileTime == null ? "null" : retObjectToFileTime.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectToFileTimeNumber = (java.lang.Number)retObjectToFileTime;
+                return retObjectToFileTimeNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectToFileTime != null ? retObjectToFileTime.getClass() : "null", retObjectToFileTime_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -374,9 +439,20 @@ public class DateTimeOffset extends ValueType implements system.IComparable, sys
 
     public long ToUnixTimeMilliseconds() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToUnixTimeMilliseconds = null;
         try {
-            return (long)classInstance.Invoke("ToUnixTimeMilliseconds");
+            retObjectToUnixTimeMilliseconds = classInstance.Invoke("ToUnixTimeMilliseconds");
+            return (long)retObjectToUnixTimeMilliseconds;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectToUnixTimeMilliseconds_ToString = retObjectToUnixTimeMilliseconds == null ? "null" : retObjectToUnixTimeMilliseconds.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectToUnixTimeMillisecondsNumber = (java.lang.Number)retObjectToUnixTimeMilliseconds;
+                return retObjectToUnixTimeMillisecondsNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectToUnixTimeMilliseconds != null ? retObjectToUnixTimeMilliseconds.getClass() : "null", retObjectToUnixTimeMilliseconds_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -384,9 +460,20 @@ public class DateTimeOffset extends ValueType implements system.IComparable, sys
 
     public long ToUnixTimeSeconds() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToUnixTimeSeconds = null;
         try {
-            return (long)classInstance.Invoke("ToUnixTimeSeconds");
+            retObjectToUnixTimeSeconds = classInstance.Invoke("ToUnixTimeSeconds");
+            return (long)retObjectToUnixTimeSeconds;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectToUnixTimeSeconds_ToString = retObjectToUnixTimeSeconds == null ? "null" : retObjectToUnixTimeSeconds.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectToUnixTimeSecondsNumber = (java.lang.Number)retObjectToUnixTimeSeconds;
+                return retObjectToUnixTimeSecondsNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectToUnixTimeSeconds != null ? retObjectToUnixTimeSeconds.getClass() : "null", retObjectToUnixTimeSeconds_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -394,10 +481,14 @@ public class DateTimeOffset extends ValueType implements system.IComparable, sys
 
     public DateTimeOffset Add(TimeSpan timeSpan) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidTimeZoneException, system.InvalidOperationException, system.PlatformNotSupportedException, system.UnauthorizedAccessException, system.io.IOException, system.NullReferenceException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAdd = null;
         try {
-            JCObject objAdd = (JCObject)classInstance.Invoke("Add", timeSpan == null ? null : timeSpan.getJCOInstance());
+            retObjectAdd = classInstance.Invoke("Add", timeSpan == null ? null : timeSpan.getJCOInstance());
+            JCObject objAdd = (JCObject)retObjectAdd;
             return new DateTimeOffset(objAdd);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAdd != null ? retObjectAdd.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -405,10 +496,14 @@ public class DateTimeOffset extends ValueType implements system.IComparable, sys
 
     public DateTimeOffset AddDays(double days) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.InvalidTimeZoneException, system.InvalidOperationException, system.UnauthorizedAccessException, system.io.IOException, system.NullReferenceException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddDays = null;
         try {
-            JCObject objAddDays = (JCObject)classInstance.Invoke("AddDays", days);
+            retObjectAddDays = classInstance.Invoke("AddDays", days);
+            JCObject objAddDays = (JCObject)retObjectAddDays;
             return new DateTimeOffset(objAddDays);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddDays != null ? retObjectAddDays.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -416,10 +511,14 @@ public class DateTimeOffset extends ValueType implements system.IComparable, sys
 
     public DateTimeOffset AddHours(double hours) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.InvalidTimeZoneException, system.InvalidOperationException, system.UnauthorizedAccessException, system.io.IOException, system.NullReferenceException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddHours = null;
         try {
-            JCObject objAddHours = (JCObject)classInstance.Invoke("AddHours", hours);
+            retObjectAddHours = classInstance.Invoke("AddHours", hours);
+            JCObject objAddHours = (JCObject)retObjectAddHours;
             return new DateTimeOffset(objAddHours);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddHours != null ? retObjectAddHours.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -427,10 +526,14 @@ public class DateTimeOffset extends ValueType implements system.IComparable, sys
 
     public DateTimeOffset AddMicroseconds(double microseconds) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.InvalidTimeZoneException, system.InvalidOperationException, system.UnauthorizedAccessException, system.io.IOException, system.NullReferenceException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddMicroseconds = null;
         try {
-            JCObject objAddMicroseconds = (JCObject)classInstance.Invoke("AddMicroseconds", microseconds);
+            retObjectAddMicroseconds = classInstance.Invoke("AddMicroseconds", microseconds);
+            JCObject objAddMicroseconds = (JCObject)retObjectAddMicroseconds;
             return new DateTimeOffset(objAddMicroseconds);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddMicroseconds != null ? retObjectAddMicroseconds.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -438,10 +541,14 @@ public class DateTimeOffset extends ValueType implements system.IComparable, sys
 
     public DateTimeOffset AddMilliseconds(double milliseconds) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.InvalidTimeZoneException, system.InvalidOperationException, system.UnauthorizedAccessException, system.io.IOException, system.NullReferenceException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddMilliseconds = null;
         try {
-            JCObject objAddMilliseconds = (JCObject)classInstance.Invoke("AddMilliseconds", milliseconds);
+            retObjectAddMilliseconds = classInstance.Invoke("AddMilliseconds", milliseconds);
+            JCObject objAddMilliseconds = (JCObject)retObjectAddMilliseconds;
             return new DateTimeOffset(objAddMilliseconds);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddMilliseconds != null ? retObjectAddMilliseconds.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -449,10 +556,14 @@ public class DateTimeOffset extends ValueType implements system.IComparable, sys
 
     public DateTimeOffset AddMinutes(double minutes) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.InvalidTimeZoneException, system.InvalidOperationException, system.UnauthorizedAccessException, system.io.IOException, system.NullReferenceException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddMinutes = null;
         try {
-            JCObject objAddMinutes = (JCObject)classInstance.Invoke("AddMinutes", minutes);
+            retObjectAddMinutes = classInstance.Invoke("AddMinutes", minutes);
+            JCObject objAddMinutes = (JCObject)retObjectAddMinutes;
             return new DateTimeOffset(objAddMinutes);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddMinutes != null ? retObjectAddMinutes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -460,10 +571,14 @@ public class DateTimeOffset extends ValueType implements system.IComparable, sys
 
     public DateTimeOffset AddMonths(int months) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.InvalidTimeZoneException, system.InvalidOperationException, system.UnauthorizedAccessException, system.io.IOException, system.NullReferenceException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddMonths = null;
         try {
-            JCObject objAddMonths = (JCObject)classInstance.Invoke("AddMonths", months);
+            retObjectAddMonths = classInstance.Invoke("AddMonths", months);
+            JCObject objAddMonths = (JCObject)retObjectAddMonths;
             return new DateTimeOffset(objAddMonths);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddMonths != null ? retObjectAddMonths.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -471,10 +586,14 @@ public class DateTimeOffset extends ValueType implements system.IComparable, sys
 
     public DateTimeOffset AddSeconds(double seconds) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.InvalidTimeZoneException, system.InvalidOperationException, system.UnauthorizedAccessException, system.io.IOException, system.NullReferenceException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddSeconds = null;
         try {
-            JCObject objAddSeconds = (JCObject)classInstance.Invoke("AddSeconds", seconds);
+            retObjectAddSeconds = classInstance.Invoke("AddSeconds", seconds);
+            JCObject objAddSeconds = (JCObject)retObjectAddSeconds;
             return new DateTimeOffset(objAddSeconds);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddSeconds != null ? retObjectAddSeconds.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -482,10 +601,14 @@ public class DateTimeOffset extends ValueType implements system.IComparable, sys
 
     public DateTimeOffset AddTicks(long ticks) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidTimeZoneException, system.InvalidOperationException, system.PlatformNotSupportedException, system.UnauthorizedAccessException, system.io.IOException, system.NullReferenceException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddTicks = null;
         try {
-            JCObject objAddTicks = (JCObject)classInstance.Invoke("AddTicks", ticks);
+            retObjectAddTicks = classInstance.Invoke("AddTicks", ticks);
+            JCObject objAddTicks = (JCObject)retObjectAddTicks;
             return new DateTimeOffset(objAddTicks);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddTicks != null ? retObjectAddTicks.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -493,10 +616,14 @@ public class DateTimeOffset extends ValueType implements system.IComparable, sys
 
     public DateTimeOffset AddYears(int years) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.InvalidTimeZoneException, system.InvalidOperationException, system.UnauthorizedAccessException, system.io.IOException, system.NullReferenceException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddYears = null;
         try {
-            JCObject objAddYears = (JCObject)classInstance.Invoke("AddYears", years);
+            retObjectAddYears = classInstance.Invoke("AddYears", years);
+            JCObject objAddYears = (JCObject)retObjectAddYears;
             return new DateTimeOffset(objAddYears);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddYears != null ? retObjectAddYears.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -504,10 +631,14 @@ public class DateTimeOffset extends ValueType implements system.IComparable, sys
 
     public static DateTimeOffset FromFileTime(long fileTime) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.InvalidTimeZoneException, system.UnauthorizedAccessException, system.io.IOException, system.OverflowException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFromFileTime = null;
         try {
-            JCObject objFromFileTime = (JCObject)classType.Invoke("FromFileTime", fileTime);
+            retObjectFromFileTime = classType.Invoke("FromFileTime", fileTime);
+            JCObject objFromFileTime = (JCObject)retObjectFromFileTime;
             return new DateTimeOffset(objFromFileTime);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFromFileTime != null ? retObjectFromFileTime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -515,10 +646,14 @@ public class DateTimeOffset extends ValueType implements system.IComparable, sys
 
     public static DateTimeOffset FromUnixTimeMilliseconds(long milliseconds) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.IndexOutOfRangeException, system.RankException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFromUnixTimeMilliseconds = null;
         try {
-            JCObject objFromUnixTimeMilliseconds = (JCObject)classType.Invoke("FromUnixTimeMilliseconds", milliseconds);
+            retObjectFromUnixTimeMilliseconds = classType.Invoke("FromUnixTimeMilliseconds", milliseconds);
+            JCObject objFromUnixTimeMilliseconds = (JCObject)retObjectFromUnixTimeMilliseconds;
             return new DateTimeOffset(objFromUnixTimeMilliseconds);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFromUnixTimeMilliseconds != null ? retObjectFromUnixTimeMilliseconds.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -526,10 +661,14 @@ public class DateTimeOffset extends ValueType implements system.IComparable, sys
 
     public static DateTimeOffset FromUnixTimeSeconds(long seconds) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.IndexOutOfRangeException, system.RankException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFromUnixTimeSeconds = null;
         try {
-            JCObject objFromUnixTimeSeconds = (JCObject)classType.Invoke("FromUnixTimeSeconds", seconds);
+            retObjectFromUnixTimeSeconds = classType.Invoke("FromUnixTimeSeconds", seconds);
+            JCObject objFromUnixTimeSeconds = (JCObject)retObjectFromUnixTimeSeconds;
             return new DateTimeOffset(objFromUnixTimeSeconds);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFromUnixTimeSeconds != null ? retObjectFromUnixTimeSeconds.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -537,10 +676,14 @@ public class DateTimeOffset extends ValueType implements system.IComparable, sys
 
     public static DateTimeOffset Parse(java.lang.String input, IFormatProvider formatProvider, DateTimeStyles styles) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.TypeInitializationException, system.OverflowException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectParse = null;
         try {
-            JCObject objParse = (JCObject)classType.Invoke("Parse", input, formatProvider == null ? null : formatProvider.getJCOInstance(), styles == null ? null : styles.getJCOInstance());
+            retObjectParse = classType.Invoke("Parse", input, formatProvider == null ? null : formatProvider.getJCOInstance(), styles == null ? null : styles.getJCOInstance());
+            JCObject objParse = (JCObject)retObjectParse;
             return new DateTimeOffset(objParse);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParse != null ? retObjectParse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -548,10 +691,14 @@ public class DateTimeOffset extends ValueType implements system.IComparable, sys
 
     public static DateTimeOffset Parse(java.lang.String input, IFormatProvider formatProvider) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.OutOfMemoryException, system.OverflowException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectParse = null;
         try {
-            JCObject objParse = (JCObject)classType.Invoke("Parse", input, formatProvider == null ? null : formatProvider.getJCOInstance());
+            retObjectParse = classType.Invoke("Parse", input, formatProvider == null ? null : formatProvider.getJCOInstance());
+            JCObject objParse = (JCObject)retObjectParse;
             return new DateTimeOffset(objParse);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParse != null ? retObjectParse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -559,10 +706,14 @@ public class DateTimeOffset extends ValueType implements system.IComparable, sys
 
     public static DateTimeOffset Parse(java.lang.String input) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.TypeInitializationException, system.OverflowException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectParse = null;
         try {
-            JCObject objParse = (JCObject)classType.Invoke("Parse", input);
+            retObjectParse = classType.Invoke("Parse", input);
+            JCObject objParse = (JCObject)retObjectParse;
             return new DateTimeOffset(objParse);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParse != null ? retObjectParse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -570,10 +721,14 @@ public class DateTimeOffset extends ValueType implements system.IComparable, sys
 
     public static DateTimeOffset ParseExact(java.lang.String input, java.lang.String format, IFormatProvider formatProvider, DateTimeStyles styles) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.TypeInitializationException, system.OverflowException, system.OutOfMemoryException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectParseExact = null;
         try {
-            JCObject objParseExact = (JCObject)classType.Invoke("ParseExact", input, format, formatProvider == null ? null : formatProvider.getJCOInstance(), styles == null ? null : styles.getJCOInstance());
+            retObjectParseExact = classType.Invoke("ParseExact", input, format, formatProvider == null ? null : formatProvider.getJCOInstance(), styles == null ? null : styles.getJCOInstance());
+            JCObject objParseExact = (JCObject)retObjectParseExact;
             return new DateTimeOffset(objParseExact);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParseExact != null ? retObjectParseExact.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -581,10 +736,14 @@ public class DateTimeOffset extends ValueType implements system.IComparable, sys
 
     public static DateTimeOffset ParseExact(java.lang.String input, java.lang.String format, IFormatProvider formatProvider) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.OverflowException, system.OutOfMemoryException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectParseExact = null;
         try {
-            JCObject objParseExact = (JCObject)classType.Invoke("ParseExact", input, format, formatProvider == null ? null : formatProvider.getJCOInstance());
+            retObjectParseExact = classType.Invoke("ParseExact", input, format, formatProvider == null ? null : formatProvider.getJCOInstance());
+            JCObject objParseExact = (JCObject)retObjectParseExact;
             return new DateTimeOffset(objParseExact);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParseExact != null ? retObjectParseExact.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -592,10 +751,14 @@ public class DateTimeOffset extends ValueType implements system.IComparable, sys
 
     public static DateTimeOffset ParseExact(java.lang.String input, java.lang.String[] formats, IFormatProvider formatProvider, DateTimeStyles styles) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.TypeInitializationException, system.OverflowException, system.OutOfMemoryException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectParseExact = null;
         try {
-            JCObject objParseExact = (JCObject)classType.Invoke("ParseExact", input, formats, formatProvider == null ? null : formatProvider.getJCOInstance(), styles == null ? null : styles.getJCOInstance());
+            retObjectParseExact = classType.Invoke("ParseExact", input, formats, formatProvider == null ? null : formatProvider.getJCOInstance(), styles == null ? null : styles.getJCOInstance());
+            JCObject objParseExact = (JCObject)retObjectParseExact;
             return new DateTimeOffset(objParseExact);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParseExact != null ? retObjectParseExact.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -603,10 +766,14 @@ public class DateTimeOffset extends ValueType implements system.IComparable, sys
 
     public static DateTimeOffset ParseExact(java.lang.String dupParam0, JCORefOut dupParam1, IFormatProvider dupParam2, DateTimeStyles dupParam3) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.TypeInitializationException, system.OverflowException, system.OutOfMemoryException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectParseExact = null;
         try {
-            JCObject objParseExact = (JCObject)classType.Invoke("ParseExact", dupParam0, dupParam1.getJCRefOut(), dupParam2 == null ? null : dupParam2.getJCOInstance(), dupParam3 == null ? null : dupParam3.getJCOInstance());
+            retObjectParseExact = classType.Invoke("ParseExact", dupParam0, dupParam1.getJCRefOut(), dupParam2 == null ? null : dupParam2.getJCOInstance(), dupParam3 == null ? null : dupParam3.getJCOInstance());
+            JCObject objParseExact = (JCObject)retObjectParseExact;
             return new DateTimeOffset(objParseExact);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParseExact != null ? retObjectParseExact.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -614,10 +781,14 @@ public class DateTimeOffset extends ValueType implements system.IComparable, sys
 
     public DateTimeOffset Subtract(TimeSpan value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidTimeZoneException, system.InvalidOperationException, system.PlatformNotSupportedException, system.UnauthorizedAccessException, system.io.IOException, system.NullReferenceException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSubtract = null;
         try {
-            JCObject objSubtract = (JCObject)classInstance.Invoke("Subtract", value == null ? null : value.getJCOInstance());
+            retObjectSubtract = classInstance.Invoke("Subtract", value == null ? null : value.getJCOInstance());
+            JCObject objSubtract = (JCObject)retObjectSubtract;
             return new DateTimeOffset(objSubtract);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSubtract != null ? retObjectSubtract.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -625,10 +796,14 @@ public class DateTimeOffset extends ValueType implements system.IComparable, sys
 
     public DateTimeOffset ToLocalTime() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.InvalidTimeZoneException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.PlatformNotSupportedException, system.NullReferenceException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToLocalTime = null;
         try {
-            JCObject objToLocalTime = (JCObject)classInstance.Invoke("ToLocalTime");
+            retObjectToLocalTime = classInstance.Invoke("ToLocalTime");
+            JCObject objToLocalTime = (JCObject)retObjectToLocalTime;
             return new DateTimeOffset(objToLocalTime);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToLocalTime != null ? retObjectToLocalTime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -636,10 +811,14 @@ public class DateTimeOffset extends ValueType implements system.IComparable, sys
 
     public DateTimeOffset ToOffset(TimeSpan offset) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToOffset = null;
         try {
-            JCObject objToOffset = (JCObject)classInstance.Invoke("ToOffset", offset == null ? null : offset.getJCOInstance());
+            retObjectToOffset = classInstance.Invoke("ToOffset", offset == null ? null : offset.getJCOInstance());
+            JCObject objToOffset = (JCObject)retObjectToOffset;
             return new DateTimeOffset(objToOffset);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToOffset != null ? retObjectToOffset.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -647,10 +826,14 @@ public class DateTimeOffset extends ValueType implements system.IComparable, sys
 
     public DateTimeOffset ToUniversalTime() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.InvalidTimeZoneException, system.UnauthorizedAccessException, system.io.IOException, system.NullReferenceException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToUniversalTime = null;
         try {
-            JCObject objToUniversalTime = (JCObject)classInstance.Invoke("ToUniversalTime");
+            retObjectToUniversalTime = classInstance.Invoke("ToUniversalTime");
+            JCObject objToUniversalTime = (JCObject)retObjectToUniversalTime;
             return new DateTimeOffset(objToUniversalTime);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToUniversalTime != null ? retObjectToUniversalTime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -658,9 +841,13 @@ public class DateTimeOffset extends ValueType implements system.IComparable, sys
 
     public java.lang.String ToString(IFormatProvider formatProvider) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.NullReferenceException, system.OutOfMemoryException, system.InvalidOperationException, system.FormatException, system.InvalidTimeZoneException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.OverflowException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToString = null;
         try {
-            return (java.lang.String)classInstance.Invoke("ToString", formatProvider == null ? null : formatProvider.getJCOInstance());
+            retObjectToString = classInstance.Invoke("ToString", formatProvider == null ? null : formatProvider.getJCOInstance());
+            return (java.lang.String)retObjectToString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectToString != null ? retObjectToString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -668,9 +855,13 @@ public class DateTimeOffset extends ValueType implements system.IComparable, sys
 
     public java.lang.String ToString(java.lang.String format, IFormatProvider formatProvider) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.NullReferenceException, system.OutOfMemoryException, system.InvalidOperationException, system.FormatException, system.InvalidTimeZoneException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.OverflowException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToString = null;
         try {
-            return (java.lang.String)classInstance.Invoke("ToString", format, formatProvider == null ? null : formatProvider.getJCOInstance());
+            retObjectToString = classInstance.Invoke("ToString", format, formatProvider == null ? null : formatProvider.getJCOInstance());
+            return (java.lang.String)retObjectToString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectToString != null ? retObjectToString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -678,9 +869,13 @@ public class DateTimeOffset extends ValueType implements system.IComparable, sys
 
     public java.lang.String ToString(java.lang.String format) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.NullReferenceException, system.OutOfMemoryException, system.InvalidOperationException, system.FormatException, system.InvalidTimeZoneException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.OverflowException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToString = null;
         try {
-            return (java.lang.String)classInstance.Invoke("ToString", format);
+            retObjectToString = classInstance.Invoke("ToString", format);
+            return (java.lang.String)retObjectToString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectToString != null ? retObjectToString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -688,10 +883,14 @@ public class DateTimeOffset extends ValueType implements system.IComparable, sys
 
     public TimeSpan Subtract(DateTimeOffset value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSubtract = null;
         try {
-            JCObject objSubtract = (JCObject)classInstance.Invoke("Subtract", value == null ? null : value.getJCOInstance());
+            retObjectSubtract = classInstance.Invoke("Subtract", value == null ? null : value.getJCOInstance());
+            JCObject objSubtract = (JCObject)retObjectSubtract;
             return new TimeSpan(objSubtract);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSubtract != null ? retObjectSubtract.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -699,7 +898,7 @@ public class DateTimeOffset extends ValueType implements system.IComparable, sys
 
     public void Deconstruct(JCORefOut<DateOnly> date, JCORefOut<TimeOnly> time, JCORefOut<TimeSpan> offset) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Deconstruct", date.getJCRefOut(), time.getJCRefOut(), offset.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -713,7 +912,7 @@ public class DateTimeOffset extends ValueType implements system.IComparable, sys
      */
     @Deprecated 
     public int CompareTo(NetObject obj) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIComparable to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIComparable to obtain the full interface.");
     }
 
     /**
@@ -722,7 +921,7 @@ public class DateTimeOffset extends ValueType implements system.IComparable, sys
      */
     @Deprecated 
     public void GetObjectData(SerializationInfo info, StreamingContext context) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToISerializable to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToISerializable to obtain the full interface.");
     }
 
     /**
@@ -731,7 +930,7 @@ public class DateTimeOffset extends ValueType implements system.IComparable, sys
      */
     @Deprecated 
     public void OnDeserialization(NetObject sender) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDeserializationCallback to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDeserializationCallback to obtain the full interface.");
     }
 
 
@@ -740,9 +939,20 @@ public class DateTimeOffset extends ValueType implements system.IComparable, sys
     
     public int getDay() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDay = null;
         try {
-            return (int)classInstance.Get("Day");
+            retObjectDay = classInstance.Get("Day");
+            return (int)retObjectDay;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDay_ToString = retObjectDay == null ? "null" : retObjectDay.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectDayNumber = (java.lang.Number)retObjectDay;
+                return retObjectDayNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectDay != null ? retObjectDay.getClass() : "null", retObjectDay_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -750,9 +960,20 @@ public class DateTimeOffset extends ValueType implements system.IComparable, sys
 
     public int getDayOfYear() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDayOfYear = null;
         try {
-            return (int)classInstance.Get("DayOfYear");
+            retObjectDayOfYear = classInstance.Get("DayOfYear");
+            return (int)retObjectDayOfYear;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDayOfYear_ToString = retObjectDayOfYear == null ? "null" : retObjectDayOfYear.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectDayOfYearNumber = (java.lang.Number)retObjectDayOfYear;
+                return retObjectDayOfYearNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectDayOfYear != null ? retObjectDayOfYear.getClass() : "null", retObjectDayOfYear_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -760,9 +981,20 @@ public class DateTimeOffset extends ValueType implements system.IComparable, sys
 
     public int getHour() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHour = null;
         try {
-            return (int)classInstance.Get("Hour");
+            retObjectHour = classInstance.Get("Hour");
+            return (int)retObjectHour;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectHour_ToString = retObjectHour == null ? "null" : retObjectHour.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectHourNumber = (java.lang.Number)retObjectHour;
+                return retObjectHourNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectHour != null ? retObjectHour.getClass() : "null", retObjectHour_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -770,9 +1002,20 @@ public class DateTimeOffset extends ValueType implements system.IComparable, sys
 
     public int getMicrosecond() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMicrosecond = null;
         try {
-            return (int)classInstance.Get("Microsecond");
+            retObjectMicrosecond = classInstance.Get("Microsecond");
+            return (int)retObjectMicrosecond;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMicrosecond_ToString = retObjectMicrosecond == null ? "null" : retObjectMicrosecond.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMicrosecondNumber = (java.lang.Number)retObjectMicrosecond;
+                return retObjectMicrosecondNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMicrosecond != null ? retObjectMicrosecond.getClass() : "null", retObjectMicrosecond_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -780,9 +1023,20 @@ public class DateTimeOffset extends ValueType implements system.IComparable, sys
 
     public int getMillisecond() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMillisecond = null;
         try {
-            return (int)classInstance.Get("Millisecond");
+            retObjectMillisecond = classInstance.Get("Millisecond");
+            return (int)retObjectMillisecond;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMillisecond_ToString = retObjectMillisecond == null ? "null" : retObjectMillisecond.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMillisecondNumber = (java.lang.Number)retObjectMillisecond;
+                return retObjectMillisecondNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMillisecond != null ? retObjectMillisecond.getClass() : "null", retObjectMillisecond_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -790,9 +1044,20 @@ public class DateTimeOffset extends ValueType implements system.IComparable, sys
 
     public int getMinute() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMinute = null;
         try {
-            return (int)classInstance.Get("Minute");
+            retObjectMinute = classInstance.Get("Minute");
+            return (int)retObjectMinute;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMinute_ToString = retObjectMinute == null ? "null" : retObjectMinute.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMinuteNumber = (java.lang.Number)retObjectMinute;
+                return retObjectMinuteNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMinute != null ? retObjectMinute.getClass() : "null", retObjectMinute_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -800,9 +1065,20 @@ public class DateTimeOffset extends ValueType implements system.IComparable, sys
 
     public int getMonth() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMonth = null;
         try {
-            return (int)classInstance.Get("Month");
+            retObjectMonth = classInstance.Get("Month");
+            return (int)retObjectMonth;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMonth_ToString = retObjectMonth == null ? "null" : retObjectMonth.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMonthNumber = (java.lang.Number)retObjectMonth;
+                return retObjectMonthNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMonth != null ? retObjectMonth.getClass() : "null", retObjectMonth_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -810,9 +1086,20 @@ public class DateTimeOffset extends ValueType implements system.IComparable, sys
 
     public int getNanosecond() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNanosecond = null;
         try {
-            return (int)classInstance.Get("Nanosecond");
+            retObjectNanosecond = classInstance.Get("Nanosecond");
+            return (int)retObjectNanosecond;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectNanosecond_ToString = retObjectNanosecond == null ? "null" : retObjectNanosecond.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectNanosecondNumber = (java.lang.Number)retObjectNanosecond;
+                return retObjectNanosecondNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectNanosecond != null ? retObjectNanosecond.getClass() : "null", retObjectNanosecond_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -820,9 +1107,20 @@ public class DateTimeOffset extends ValueType implements system.IComparable, sys
 
     public int getSecond() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSecond = null;
         try {
-            return (int)classInstance.Get("Second");
+            retObjectSecond = classInstance.Get("Second");
+            return (int)retObjectSecond;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSecond_ToString = retObjectSecond == null ? "null" : retObjectSecond.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectSecondNumber = (java.lang.Number)retObjectSecond;
+                return retObjectSecondNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectSecond != null ? retObjectSecond.getClass() : "null", retObjectSecond_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -830,9 +1128,20 @@ public class DateTimeOffset extends ValueType implements system.IComparable, sys
 
     public int getTotalOffsetMinutes() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTotalOffsetMinutes = null;
         try {
-            return (int)classInstance.Get("TotalOffsetMinutes");
+            retObjectTotalOffsetMinutes = classInstance.Get("TotalOffsetMinutes");
+            return (int)retObjectTotalOffsetMinutes;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectTotalOffsetMinutes_ToString = retObjectTotalOffsetMinutes == null ? "null" : retObjectTotalOffsetMinutes.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectTotalOffsetMinutesNumber = (java.lang.Number)retObjectTotalOffsetMinutes;
+                return retObjectTotalOffsetMinutesNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectTotalOffsetMinutes != null ? retObjectTotalOffsetMinutes.getClass() : "null", retObjectTotalOffsetMinutes_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -840,9 +1149,20 @@ public class DateTimeOffset extends ValueType implements system.IComparable, sys
 
     public int getYear() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectYear = null;
         try {
-            return (int)classInstance.Get("Year");
+            retObjectYear = classInstance.Get("Year");
+            return (int)retObjectYear;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectYear_ToString = retObjectYear == null ? "null" : retObjectYear.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectYearNumber = (java.lang.Number)retObjectYear;
+                return retObjectYearNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectYear != null ? retObjectYear.getClass() : "null", retObjectYear_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -850,9 +1170,20 @@ public class DateTimeOffset extends ValueType implements system.IComparable, sys
 
     public long getTicks() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTicks = null;
         try {
-            return (long)classInstance.Get("Ticks");
+            retObjectTicks = classInstance.Get("Ticks");
+            return (long)retObjectTicks;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectTicks_ToString = retObjectTicks == null ? "null" : retObjectTicks.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectTicksNumber = (java.lang.Number)retObjectTicks;
+                return retObjectTicksNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectTicks != null ? retObjectTicks.getClass() : "null", retObjectTicks_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -860,9 +1191,20 @@ public class DateTimeOffset extends ValueType implements system.IComparable, sys
 
     public long getUtcTicks() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUtcTicks = null;
         try {
-            return (long)classInstance.Get("UtcTicks");
+            retObjectUtcTicks = classInstance.Get("UtcTicks");
+            return (long)retObjectUtcTicks;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectUtcTicks_ToString = retObjectUtcTicks == null ? "null" : retObjectUtcTicks.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectUtcTicksNumber = (java.lang.Number)retObjectUtcTicks;
+                return retObjectUtcTicksNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectUtcTicks != null ? retObjectUtcTicks.getClass() : "null", retObjectUtcTicks_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -870,10 +1212,14 @@ public class DateTimeOffset extends ValueType implements system.IComparable, sys
 
     public DateTime getDate() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDate = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Date");
+            retObjectDate = classInstance.Get("Date");
+            JCObject val = (JCObject)retObjectDate;
             return new DateTime(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDate != null ? retObjectDate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -881,10 +1227,14 @@ public class DateTimeOffset extends ValueType implements system.IComparable, sys
 
     public DateTime getDateTime() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDateTime = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DateTime");
+            retObjectDateTime = classInstance.Get("DateTime");
+            JCObject val = (JCObject)retObjectDateTime;
             return new DateTime(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDateTime != null ? retObjectDateTime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -892,10 +1242,14 @@ public class DateTimeOffset extends ValueType implements system.IComparable, sys
 
     public DateTime getLocalDateTime() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.InvalidTimeZoneException, system.UnauthorizedAccessException, system.io.IOException, system.NullReferenceException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLocalDateTime = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("LocalDateTime");
+            retObjectLocalDateTime = classInstance.Get("LocalDateTime");
+            JCObject val = (JCObject)retObjectLocalDateTime;
             return new DateTime(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLocalDateTime != null ? retObjectLocalDateTime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -903,10 +1257,14 @@ public class DateTimeOffset extends ValueType implements system.IComparable, sys
 
     public DateTime getUtcDateTime() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUtcDateTime = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("UtcDateTime");
+            retObjectUtcDateTime = classInstance.Get("UtcDateTime");
+            JCObject val = (JCObject)retObjectUtcDateTime;
             return new DateTime(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUtcDateTime != null ? retObjectUtcDateTime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -914,10 +1272,14 @@ public class DateTimeOffset extends ValueType implements system.IComparable, sys
 
     public static DateTimeOffset getNow() throws Throwable, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.InvalidTimeZoneException, system.InvalidOperationException, system.UnauthorizedAccessException, system.io.IOException, system.NullReferenceException, system.OverflowException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectNow = null;
         try {
-            JCObject val = (JCObject)classType.Get("Now");
+            retObjectNow = classType.Get("Now");
+            JCObject val = (JCObject)retObjectNow;
             return new DateTimeOffset(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNow != null ? retObjectNow.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -925,10 +1287,14 @@ public class DateTimeOffset extends ValueType implements system.IComparable, sys
 
     public static DateTimeOffset getUtcNow() throws Throwable, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectUtcNow = null;
         try {
-            JCObject val = (JCObject)classType.Get("UtcNow");
+            retObjectUtcNow = classType.Get("UtcNow");
+            JCObject val = (JCObject)retObjectUtcNow;
             return new DateTimeOffset(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUtcNow != null ? retObjectUtcNow.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -936,10 +1302,14 @@ public class DateTimeOffset extends ValueType implements system.IComparable, sys
 
     public DayOfWeek getDayOfWeek() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDayOfWeek = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DayOfWeek");
+            retObjectDayOfWeek = classInstance.Get("DayOfWeek");
+            JCObject val = (JCObject)retObjectDayOfWeek;
             return new DayOfWeek(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDayOfWeek != null ? retObjectDayOfWeek.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -947,10 +1317,14 @@ public class DateTimeOffset extends ValueType implements system.IComparable, sys
 
     public TimeSpan getOffset() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOffset = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Offset");
+            retObjectOffset = classInstance.Get("Offset");
+            JCObject val = (JCObject)retObjectOffset;
             return new TimeSpan(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOffset != null ? retObjectOffset.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -958,10 +1332,14 @@ public class DateTimeOffset extends ValueType implements system.IComparable, sys
 
     public TimeSpan getTimeOfDay() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTimeOfDay = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TimeOfDay");
+            retObjectTimeOfDay = classInstance.Get("TimeOfDay");
+            JCObject val = (JCObject)retObjectTimeOfDay;
             return new TimeSpan(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTimeOfDay != null ? retObjectTimeOfDay.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -142,9 +142,13 @@ public class IApplicationIdentifierImplementation extends NetObject implements I
     
     public java.lang.String GetApplicationId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetApplicationId = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetApplicationId");
+            retObjectGetApplicationId = classInstance.Invoke("GetApplicationId");
+            return (java.lang.String)retObjectGetApplicationId;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetApplicationId != null ? retObjectGetApplicationId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

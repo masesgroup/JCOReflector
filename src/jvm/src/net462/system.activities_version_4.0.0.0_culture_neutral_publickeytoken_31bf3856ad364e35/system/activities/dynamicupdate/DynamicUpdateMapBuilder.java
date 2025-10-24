@@ -164,10 +164,14 @@ public class DynamicUpdateMapBuilder extends NetObject  {
     
     public DynamicUpdateMap CreateMap() throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.FormatException, system.collections.generic.KeyNotFoundException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateMap = null;
         try {
-            JCObject objCreateMap = (JCObject)classInstance.Invoke("CreateMap");
+            retObjectCreateMap = classInstance.Invoke("CreateMap");
+            JCObject objCreateMap = (JCObject)retObjectCreateMap;
             return new DynamicUpdateMap(objCreateMap);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateMap != null ? retObjectCreateMap.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,9 +183,13 @@ public class DynamicUpdateMapBuilder extends NetObject  {
     
     public boolean getForImplementation() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectForImplementation = null;
         try {
-            return (boolean)classInstance.Get("ForImplementation");
+            retObjectForImplementation = classInstance.Get("ForImplementation");
+            return (boolean)retObjectForImplementation;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectForImplementation != null ? retObjectForImplementation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -189,7 +197,7 @@ public class DynamicUpdateMapBuilder extends NetObject  {
 
     public void setForImplementation(boolean ForImplementation) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ForImplementation", ForImplementation);
         } catch (JCNativeException jcne) {
@@ -199,10 +207,14 @@ public class DynamicUpdateMapBuilder extends NetObject  {
 
     public Activity getOriginalWorkflowDefinition() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOriginalWorkflowDefinition = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("OriginalWorkflowDefinition");
+            retObjectOriginalWorkflowDefinition = classInstance.Get("OriginalWorkflowDefinition");
+            JCObject val = (JCObject)retObjectOriginalWorkflowDefinition;
             return new Activity(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOriginalWorkflowDefinition != null ? retObjectOriginalWorkflowDefinition.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -210,7 +222,7 @@ public class DynamicUpdateMapBuilder extends NetObject  {
 
     public void setOriginalWorkflowDefinition(Activity OriginalWorkflowDefinition) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("OriginalWorkflowDefinition", OriginalWorkflowDefinition == null ? null : OriginalWorkflowDefinition.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -220,10 +232,14 @@ public class DynamicUpdateMapBuilder extends NetObject  {
 
     public Activity getUpdatedWorkflowDefinition() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUpdatedWorkflowDefinition = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("UpdatedWorkflowDefinition");
+            retObjectUpdatedWorkflowDefinition = classInstance.Get("UpdatedWorkflowDefinition");
+            JCObject val = (JCObject)retObjectUpdatedWorkflowDefinition;
             return new Activity(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUpdatedWorkflowDefinition != null ? retObjectUpdatedWorkflowDefinition.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -231,7 +247,7 @@ public class DynamicUpdateMapBuilder extends NetObject  {
 
     public void setUpdatedWorkflowDefinition(Activity UpdatedWorkflowDefinition) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UpdatedWorkflowDefinition", UpdatedWorkflowDefinition == null ? null : UpdatedWorkflowDefinition.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -241,10 +257,14 @@ public class DynamicUpdateMapBuilder extends NetObject  {
 
     public LocationReferenceEnvironment getOriginalEnvironment() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOriginalEnvironment = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("OriginalEnvironment");
+            retObjectOriginalEnvironment = classInstance.Get("OriginalEnvironment");
+            JCObject val = (JCObject)retObjectOriginalEnvironment;
             return new LocationReferenceEnvironment(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOriginalEnvironment != null ? retObjectOriginalEnvironment.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -252,7 +272,7 @@ public class DynamicUpdateMapBuilder extends NetObject  {
 
     public void setOriginalEnvironment(LocationReferenceEnvironment OriginalEnvironment) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("OriginalEnvironment", OriginalEnvironment == null ? null : OriginalEnvironment.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -262,10 +282,14 @@ public class DynamicUpdateMapBuilder extends NetObject  {
 
     public LocationReferenceEnvironment getUpdatedEnvironment() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUpdatedEnvironment = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("UpdatedEnvironment");
+            retObjectUpdatedEnvironment = classInstance.Get("UpdatedEnvironment");
+            JCObject val = (JCObject)retObjectUpdatedEnvironment;
             return new LocationReferenceEnvironment(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUpdatedEnvironment != null ? retObjectUpdatedEnvironment.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -273,7 +297,7 @@ public class DynamicUpdateMapBuilder extends NetObject  {
 
     public void setUpdatedEnvironment(LocationReferenceEnvironment UpdatedEnvironment) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UpdatedEnvironment", UpdatedEnvironment == null ? null : UpdatedEnvironment.getJCOInstance());
         } catch (JCNativeException jcne) {

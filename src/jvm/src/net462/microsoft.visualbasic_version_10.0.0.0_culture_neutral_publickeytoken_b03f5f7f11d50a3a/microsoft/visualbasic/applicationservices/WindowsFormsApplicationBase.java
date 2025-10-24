@@ -181,7 +181,7 @@ public class WindowsFormsApplicationBase extends ConsoleApplicationBase  {
     
     public void DoEvents() throws Throwable, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentNullException, system.FormatException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.MulticastNotSupportedException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.NullReferenceException, system.componentmodel.InvalidAsynchronousStateException, system.security.SecurityException, system.io.FileNotFoundException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DoEvents");
         } catch (JCNativeException jcne) {
@@ -191,7 +191,7 @@ public class WindowsFormsApplicationBase extends ConsoleApplicationBase  {
 
     public void Run(java.lang.String[] commandLine) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.security.SecurityException, system.NotImplementedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.NotSupportedException, system.OutOfMemoryException, system.net.networkinformation.NetworkInformationException, system.globalization.CultureNotFoundException, system.net.sockets.SocketException, microsoft.visualbasic.applicationservices.NoStartupFormException, system.componentmodel.InvalidAsynchronousStateException, system.componentmodel.InvalidEnumArgumentException, system.AccessViolationException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.FormatException, system.InvalidCastException, system.TypeLoadException, system.runtime.remoting.RemotingException, system.componentmodel.Win32Exception, microsoft.visualbasic.applicationservices.CantStartSingleInstanceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Run", (java.lang.Object)commandLine);
         } catch (JCNativeException jcne) {
@@ -201,7 +201,7 @@ public class WindowsFormsApplicationBase extends ConsoleApplicationBase  {
 
     public void Run(JCORefOut dupParam0) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.security.SecurityException, system.NotImplementedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.NotSupportedException, system.OutOfMemoryException, system.net.networkinformation.NetworkInformationException, system.globalization.CultureNotFoundException, system.net.sockets.SocketException, microsoft.visualbasic.applicationservices.NoStartupFormException, system.componentmodel.InvalidAsynchronousStateException, system.componentmodel.InvalidEnumArgumentException, system.AccessViolationException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.FormatException, system.InvalidCastException, system.TypeLoadException, system.runtime.remoting.RemotingException, system.componentmodel.Win32Exception, microsoft.visualbasic.applicationservices.CantStartSingleInstanceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Run", (java.lang.Object)dupParam0.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -215,9 +215,13 @@ public class WindowsFormsApplicationBase extends ConsoleApplicationBase  {
     
     public boolean getSaveMySettingsOnExit() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSaveMySettingsOnExit = null;
         try {
-            return (boolean)classInstance.Get("SaveMySettingsOnExit");
+            retObjectSaveMySettingsOnExit = classInstance.Get("SaveMySettingsOnExit");
+            return (boolean)retObjectSaveMySettingsOnExit;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectSaveMySettingsOnExit != null ? retObjectSaveMySettingsOnExit.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -225,7 +229,7 @@ public class WindowsFormsApplicationBase extends ConsoleApplicationBase  {
 
     public void setSaveMySettingsOnExit(boolean SaveMySettingsOnExit) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SaveMySettingsOnExit", SaveMySettingsOnExit);
         } catch (JCNativeException jcne) {
@@ -235,9 +239,20 @@ public class WindowsFormsApplicationBase extends ConsoleApplicationBase  {
 
     public int getMinimumSplashScreenDisplayTime() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMinimumSplashScreenDisplayTime = null;
         try {
-            return (int)classInstance.Get("MinimumSplashScreenDisplayTime");
+            retObjectMinimumSplashScreenDisplayTime = classInstance.Get("MinimumSplashScreenDisplayTime");
+            return (int)retObjectMinimumSplashScreenDisplayTime;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMinimumSplashScreenDisplayTime_ToString = retObjectMinimumSplashScreenDisplayTime == null ? "null" : retObjectMinimumSplashScreenDisplayTime.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMinimumSplashScreenDisplayTimeNumber = (java.lang.Number)retObjectMinimumSplashScreenDisplayTime;
+                return retObjectMinimumSplashScreenDisplayTimeNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMinimumSplashScreenDisplayTime != null ? retObjectMinimumSplashScreenDisplayTime.getClass() : "null", retObjectMinimumSplashScreenDisplayTime_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -245,7 +260,7 @@ public class WindowsFormsApplicationBase extends ConsoleApplicationBase  {
 
     public void setMinimumSplashScreenDisplayTime(int MinimumSplashScreenDisplayTime) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MinimumSplashScreenDisplayTime", MinimumSplashScreenDisplayTime);
         } catch (JCNativeException jcne) {
@@ -255,10 +270,14 @@ public class WindowsFormsApplicationBase extends ConsoleApplicationBase  {
 
     public ApplicationContext getApplicationContext() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectApplicationContext = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ApplicationContext");
+            retObjectApplicationContext = classInstance.Get("ApplicationContext");
+            JCObject val = (JCObject)retObjectApplicationContext;
             return new ApplicationContext(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectApplicationContext != null ? retObjectApplicationContext.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -266,10 +285,14 @@ public class WindowsFormsApplicationBase extends ConsoleApplicationBase  {
 
     public Form getSplashScreen() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSplashScreen = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SplashScreen");
+            retObjectSplashScreen = classInstance.Get("SplashScreen");
+            JCObject val = (JCObject)retObjectSplashScreen;
             return new Form(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSplashScreen != null ? retObjectSplashScreen.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -277,7 +300,7 @@ public class WindowsFormsApplicationBase extends ConsoleApplicationBase  {
 
     public void setSplashScreen(Form SplashScreen) throws Throwable, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SplashScreen", SplashScreen == null ? null : SplashScreen.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -287,10 +310,14 @@ public class WindowsFormsApplicationBase extends ConsoleApplicationBase  {
 
     public FormCollection getOpenForms() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOpenForms = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("OpenForms");
+            retObjectOpenForms = classInstance.Get("OpenForms");
+            JCObject val = (JCObject)retObjectOpenForms;
             return new FormCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOpenForms != null ? retObjectOpenForms.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -303,7 +330,7 @@ public class WindowsFormsApplicationBase extends ConsoleApplicationBase  {
 
     public void addShutdown(ShutdownEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Shutdown", handler);
         } catch (JCNativeException jcne) {
@@ -313,7 +340,7 @@ public class WindowsFormsApplicationBase extends ConsoleApplicationBase  {
 
     public void removeShutdown(ShutdownEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Shutdown", handler);
         } catch (JCNativeException jcne) {
@@ -323,7 +350,7 @@ public class WindowsFormsApplicationBase extends ConsoleApplicationBase  {
 
     public void addStartup(StartupEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Startup", handler);
         } catch (JCNativeException jcne) {
@@ -333,7 +360,7 @@ public class WindowsFormsApplicationBase extends ConsoleApplicationBase  {
 
     public void removeStartup(StartupEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Startup", handler);
         } catch (JCNativeException jcne) {
@@ -343,7 +370,7 @@ public class WindowsFormsApplicationBase extends ConsoleApplicationBase  {
 
     public void addStartupNextInstance(StartupNextInstanceEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("StartupNextInstance", handler);
         } catch (JCNativeException jcne) {
@@ -353,7 +380,7 @@ public class WindowsFormsApplicationBase extends ConsoleApplicationBase  {
 
     public void removeStartupNextInstance(StartupNextInstanceEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("StartupNextInstance", handler);
         } catch (JCNativeException jcne) {
@@ -363,7 +390,7 @@ public class WindowsFormsApplicationBase extends ConsoleApplicationBase  {
 
     public void addUnhandledException(UnhandledExceptionEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("UnhandledException", handler);
         } catch (JCNativeException jcne) {
@@ -373,7 +400,7 @@ public class WindowsFormsApplicationBase extends ConsoleApplicationBase  {
 
     public void removeUnhandledException(UnhandledExceptionEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("UnhandledException", handler);
         } catch (JCNativeException jcne) {
@@ -383,7 +410,7 @@ public class WindowsFormsApplicationBase extends ConsoleApplicationBase  {
 
     public void addNetworkAvailabilityChanged(NetworkAvailableEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("NetworkAvailabilityChanged", handler);
         } catch (JCNativeException jcne) {
@@ -393,7 +420,7 @@ public class WindowsFormsApplicationBase extends ConsoleApplicationBase  {
 
     public void removeNetworkAvailabilityChanged(NetworkAvailableEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("NetworkAvailabilityChanged", handler);
         } catch (JCNativeException jcne) {

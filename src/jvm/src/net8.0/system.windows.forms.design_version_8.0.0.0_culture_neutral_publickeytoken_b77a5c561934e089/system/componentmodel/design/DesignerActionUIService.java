@@ -158,9 +158,13 @@ public class DesignerActionUIService extends NetObject implements AutoCloseable 
     
     public boolean ShouldAutoShow(IComponent component) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShouldAutoShow = null;
         try {
-            return (boolean)classInstance.Invoke("ShouldAutoShow", component == null ? null : component.getJCOInstance());
+            retObjectShouldAutoShow = classInstance.Invoke("ShouldAutoShow", component == null ? null : component.getJCOInstance());
+            return (boolean)retObjectShouldAutoShow;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectShouldAutoShow != null ? retObjectShouldAutoShow.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -168,7 +172,7 @@ public class DesignerActionUIService extends NetObject implements AutoCloseable 
 
     public void Dispose() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
@@ -178,7 +182,7 @@ public class DesignerActionUIService extends NetObject implements AutoCloseable 
 
     public void HideUI(IComponent component) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("HideUI", component == null ? null : component.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -188,7 +192,7 @@ public class DesignerActionUIService extends NetObject implements AutoCloseable 
 
     public void Refresh(IComponent component) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Refresh", component == null ? null : component.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -198,7 +202,7 @@ public class DesignerActionUIService extends NetObject implements AutoCloseable 
 
     public void ShowUI(IComponent component) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ShowUI", component == null ? null : component.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -209,7 +213,7 @@ public class DesignerActionUIService extends NetObject implements AutoCloseable 
     public void close() throws Exception {
         try {
             if (classInstance == null)
-                throw new UnsupportedOperationException("classInstance is null.");
+                throw new java.lang.UnsupportedOperationException("classInstance is null.");
             try {
                 classInstance.Invoke("Dispose");
             }
@@ -230,7 +234,7 @@ public class DesignerActionUIService extends NetObject implements AutoCloseable 
 
     public void addDesignerActionUIStateChange(DesignerActionUIStateChangeEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("DesignerActionUIStateChange", handler);
         } catch (JCNativeException jcne) {
@@ -240,7 +244,7 @@ public class DesignerActionUIService extends NetObject implements AutoCloseable 
 
     public void removeDesignerActionUIStateChange(DesignerActionUIStateChangeEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("DesignerActionUIStateChange", handler);
         } catch (JCNativeException jcne) {

@@ -222,9 +222,20 @@ public class SslStream extends AuthenticatedStream  {
     
     public int EndRead(IAsyncResult asyncResult) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEndRead = null;
         try {
-            return (int)classInstance.Invoke("EndRead", asyncResult == null ? null : asyncResult.getJCOInstance());
+            retObjectEndRead = classInstance.Invoke("EndRead", asyncResult == null ? null : asyncResult.getJCOInstance());
+            return (int)retObjectEndRead;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectEndRead_ToString = retObjectEndRead == null ? "null" : retObjectEndRead.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectEndReadNumber = (java.lang.Number)retObjectEndRead;
+                return retObjectEndReadNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectEndRead != null ? retObjectEndRead.getClass() : "null", retObjectEndRead_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -232,9 +243,20 @@ public class SslStream extends AuthenticatedStream  {
 
     public int Read(byte[] buffer, int offset, int count) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.threading.SemaphoreFullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRead = null;
         try {
-            return (int)classInstance.Invoke("Read", buffer, offset, count);
+            retObjectRead = classInstance.Invoke("Read", buffer, offset, count);
+            return (int)retObjectRead;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectRead_ToString = retObjectRead == null ? "null" : retObjectRead.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectReadNumber = (java.lang.Number)retObjectRead;
+                return retObjectReadNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectRead != null ? retObjectRead.getClass() : "null", retObjectRead_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -242,9 +264,20 @@ public class SslStream extends AuthenticatedStream  {
 
     public int Read(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.threading.SemaphoreFullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRead = null;
         try {
-            return (int)classInstance.Invoke("Read", dupParam0.getJCRefOut(), dupParam1, dupParam2);
+            retObjectRead = classInstance.Invoke("Read", dupParam0.getJCRefOut(), dupParam1, dupParam2);
+            return (int)retObjectRead;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectRead_ToString = retObjectRead == null ? "null" : retObjectRead.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectReadNumber = (java.lang.Number)retObjectRead;
+                return retObjectReadNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectRead != null ? retObjectRead.getClass() : "null", retObjectRead_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -252,9 +285,20 @@ public class SslStream extends AuthenticatedStream  {
 
     public long Seek(long offset, SeekOrigin origin) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSeek = null;
         try {
-            return (long)classInstance.Invoke("Seek", offset, origin == null ? null : origin.getJCOInstance());
+            retObjectSeek = classInstance.Invoke("Seek", offset, origin == null ? null : origin.getJCOInstance());
+            return (long)retObjectSeek;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSeek_ToString = retObjectSeek == null ? "null" : retObjectSeek.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectSeekNumber = (java.lang.Number)retObjectSeek;
+                return retObjectSeekNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectSeek != null ? retObjectSeek.getClass() : "null", retObjectSeek_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -262,10 +306,14 @@ public class SslStream extends AuthenticatedStream  {
 
     public IAsyncResult BeginAuthenticateAsClient(java.lang.String targetHost, AsyncCallback asyncCallback, NetObject asyncState) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.MulticastNotSupportedException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.OutOfMemoryException, system.PlatformNotSupportedException, system.NotSupportedException, system.componentmodel.Win32Exception, system.InvalidCastException, system.NullReferenceException, system.AccessViolationException, system.security.authentication.AuthenticationException, system.threading.SemaphoreFullException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginAuthenticateAsClient = null;
         try {
-            JCObject objBeginAuthenticateAsClient = (JCObject)classInstance.Invoke("BeginAuthenticateAsClient", targetHost, asyncCallback, asyncState == null ? null : asyncState.getJCOInstance());
+            retObjectBeginAuthenticateAsClient = classInstance.Invoke("BeginAuthenticateAsClient", targetHost, asyncCallback, asyncState == null ? null : asyncState.getJCOInstance());
+            JCObject objBeginAuthenticateAsClient = (JCObject)retObjectBeginAuthenticateAsClient;
             return new IAsyncResultImplementation(objBeginAuthenticateAsClient);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginAuthenticateAsClient != null ? retObjectBeginAuthenticateAsClient.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -273,10 +321,14 @@ public class SslStream extends AuthenticatedStream  {
 
     public IAsyncResult BeginAuthenticateAsClient(java.lang.String targetHost, X509CertificateCollection clientCertificates, boolean checkCertificateRevocation, AsyncCallback asyncCallback, NetObject asyncState) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.MulticastNotSupportedException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.OutOfMemoryException, system.PlatformNotSupportedException, system.NotSupportedException, system.componentmodel.Win32Exception, system.InvalidCastException, system.NullReferenceException, system.AccessViolationException, system.security.authentication.AuthenticationException, system.threading.SemaphoreFullException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginAuthenticateAsClient = null;
         try {
-            JCObject objBeginAuthenticateAsClient = (JCObject)classInstance.Invoke("BeginAuthenticateAsClient", targetHost, clientCertificates == null ? null : clientCertificates.getJCOInstance(), checkCertificateRevocation, asyncCallback, asyncState == null ? null : asyncState.getJCOInstance());
+            retObjectBeginAuthenticateAsClient = classInstance.Invoke("BeginAuthenticateAsClient", targetHost, clientCertificates == null ? null : clientCertificates.getJCOInstance(), checkCertificateRevocation, asyncCallback, asyncState == null ? null : asyncState.getJCOInstance());
+            JCObject objBeginAuthenticateAsClient = (JCObject)retObjectBeginAuthenticateAsClient;
             return new IAsyncResultImplementation(objBeginAuthenticateAsClient);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginAuthenticateAsClient != null ? retObjectBeginAuthenticateAsClient.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -284,10 +336,14 @@ public class SslStream extends AuthenticatedStream  {
 
     public IAsyncResult BeginAuthenticateAsClient(java.lang.String targetHost, X509CertificateCollection clientCertificates, SslProtocols enabledSslProtocols, boolean checkCertificateRevocation, AsyncCallback asyncCallback, NetObject asyncState) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.NotSupportedException, system.componentmodel.Win32Exception, system.AccessViolationException, system.security.authentication.AuthenticationException, system.threading.WaitHandleCannotBeOpenedException, system.threading.SemaphoreFullException, system.security.cryptography.CryptographicException, system.io.IOException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginAuthenticateAsClient = null;
         try {
-            JCObject objBeginAuthenticateAsClient = (JCObject)classInstance.Invoke("BeginAuthenticateAsClient", targetHost, clientCertificates == null ? null : clientCertificates.getJCOInstance(), enabledSslProtocols == null ? null : enabledSslProtocols.getJCOInstance(), checkCertificateRevocation, asyncCallback, asyncState == null ? null : asyncState.getJCOInstance());
+            retObjectBeginAuthenticateAsClient = classInstance.Invoke("BeginAuthenticateAsClient", targetHost, clientCertificates == null ? null : clientCertificates.getJCOInstance(), enabledSslProtocols == null ? null : enabledSslProtocols.getJCOInstance(), checkCertificateRevocation, asyncCallback, asyncState == null ? null : asyncState.getJCOInstance());
+            JCObject objBeginAuthenticateAsClient = (JCObject)retObjectBeginAuthenticateAsClient;
             return new IAsyncResultImplementation(objBeginAuthenticateAsClient);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginAuthenticateAsClient != null ? retObjectBeginAuthenticateAsClient.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -295,10 +351,14 @@ public class SslStream extends AuthenticatedStream  {
 
     public IAsyncResult BeginAuthenticateAsServer(X509Certificate serverCertificate, boolean clientCertificateRequired, boolean checkCertificateRevocation, AsyncCallback asyncCallback, NetObject asyncState) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.MulticastNotSupportedException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.OutOfMemoryException, system.PlatformNotSupportedException, system.NotSupportedException, system.componentmodel.Win32Exception, system.InvalidCastException, system.NullReferenceException, system.AccessViolationException, system.security.authentication.AuthenticationException, system.threading.SemaphoreFullException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginAuthenticateAsServer = null;
         try {
-            JCObject objBeginAuthenticateAsServer = (JCObject)classInstance.Invoke("BeginAuthenticateAsServer", serverCertificate == null ? null : serverCertificate.getJCOInstance(), clientCertificateRequired, checkCertificateRevocation, asyncCallback, asyncState == null ? null : asyncState.getJCOInstance());
+            retObjectBeginAuthenticateAsServer = classInstance.Invoke("BeginAuthenticateAsServer", serverCertificate == null ? null : serverCertificate.getJCOInstance(), clientCertificateRequired, checkCertificateRevocation, asyncCallback, asyncState == null ? null : asyncState.getJCOInstance());
+            JCObject objBeginAuthenticateAsServer = (JCObject)retObjectBeginAuthenticateAsServer;
             return new IAsyncResultImplementation(objBeginAuthenticateAsServer);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginAuthenticateAsServer != null ? retObjectBeginAuthenticateAsServer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -306,10 +366,14 @@ public class SslStream extends AuthenticatedStream  {
 
     public IAsyncResult BeginAuthenticateAsServer(X509Certificate serverCertificate, boolean clientCertificateRequired, SslProtocols enabledSslProtocols, boolean checkCertificateRevocation, AsyncCallback asyncCallback, NetObject asyncState) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.NotSupportedException, system.componentmodel.Win32Exception, system.AccessViolationException, system.security.authentication.AuthenticationException, system.threading.WaitHandleCannotBeOpenedException, system.threading.SemaphoreFullException, system.security.cryptography.CryptographicException, system.io.IOException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginAuthenticateAsServer = null;
         try {
-            JCObject objBeginAuthenticateAsServer = (JCObject)classInstance.Invoke("BeginAuthenticateAsServer", serverCertificate == null ? null : serverCertificate.getJCOInstance(), clientCertificateRequired, enabledSslProtocols == null ? null : enabledSslProtocols.getJCOInstance(), checkCertificateRevocation, asyncCallback, asyncState == null ? null : asyncState.getJCOInstance());
+            retObjectBeginAuthenticateAsServer = classInstance.Invoke("BeginAuthenticateAsServer", serverCertificate == null ? null : serverCertificate.getJCOInstance(), clientCertificateRequired, enabledSslProtocols == null ? null : enabledSslProtocols.getJCOInstance(), checkCertificateRevocation, asyncCallback, asyncState == null ? null : asyncState.getJCOInstance());
+            JCObject objBeginAuthenticateAsServer = (JCObject)retObjectBeginAuthenticateAsServer;
             return new IAsyncResultImplementation(objBeginAuthenticateAsServer);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginAuthenticateAsServer != null ? retObjectBeginAuthenticateAsServer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -317,10 +381,14 @@ public class SslStream extends AuthenticatedStream  {
 
     public IAsyncResult BeginAuthenticateAsServer(X509Certificate serverCertificate, AsyncCallback asyncCallback, NetObject asyncState) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.MulticastNotSupportedException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.OutOfMemoryException, system.PlatformNotSupportedException, system.NotSupportedException, system.componentmodel.Win32Exception, system.InvalidCastException, system.NullReferenceException, system.AccessViolationException, system.security.authentication.AuthenticationException, system.threading.SemaphoreFullException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginAuthenticateAsServer = null;
         try {
-            JCObject objBeginAuthenticateAsServer = (JCObject)classInstance.Invoke("BeginAuthenticateAsServer", serverCertificate == null ? null : serverCertificate.getJCOInstance(), asyncCallback, asyncState == null ? null : asyncState.getJCOInstance());
+            retObjectBeginAuthenticateAsServer = classInstance.Invoke("BeginAuthenticateAsServer", serverCertificate == null ? null : serverCertificate.getJCOInstance(), asyncCallback, asyncState == null ? null : asyncState.getJCOInstance());
+            JCObject objBeginAuthenticateAsServer = (JCObject)retObjectBeginAuthenticateAsServer;
             return new IAsyncResultImplementation(objBeginAuthenticateAsServer);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginAuthenticateAsServer != null ? retObjectBeginAuthenticateAsServer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -328,10 +396,14 @@ public class SslStream extends AuthenticatedStream  {
 
     public IAsyncResult BeginRead(byte[] buffer, int offset, int count, AsyncCallback asyncCallback, NetObject asyncState) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.threading.SemaphoreFullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginRead = null;
         try {
-            JCObject objBeginRead = (JCObject)classInstance.Invoke("BeginRead", buffer, offset, count, asyncCallback, asyncState == null ? null : asyncState.getJCOInstance());
+            retObjectBeginRead = classInstance.Invoke("BeginRead", buffer, offset, count, asyncCallback, asyncState == null ? null : asyncState.getJCOInstance());
+            JCObject objBeginRead = (JCObject)retObjectBeginRead;
             return new IAsyncResultImplementation(objBeginRead);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginRead != null ? retObjectBeginRead.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -339,10 +411,14 @@ public class SslStream extends AuthenticatedStream  {
 
     public IAsyncResult BeginRead(JCORefOut dupParam0, int dupParam1, int dupParam2, AsyncCallback dupParam3, NetObject dupParam4) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.threading.SemaphoreFullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginRead = null;
         try {
-            JCObject objBeginRead = (JCObject)classInstance.Invoke("BeginRead", dupParam0.getJCRefOut(), dupParam1, dupParam2, dupParam3, dupParam4 == null ? null : dupParam4.getJCOInstance());
+            retObjectBeginRead = classInstance.Invoke("BeginRead", dupParam0.getJCRefOut(), dupParam1, dupParam2, dupParam3, dupParam4 == null ? null : dupParam4.getJCOInstance());
+            JCObject objBeginRead = (JCObject)retObjectBeginRead;
             return new IAsyncResultImplementation(objBeginRead);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginRead != null ? retObjectBeginRead.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -350,10 +426,14 @@ public class SslStream extends AuthenticatedStream  {
 
     public IAsyncResult BeginWrite(byte[] buffer, int offset, int count, AsyncCallback asyncCallback, NetObject asyncState) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.NotSupportedException, system.io.IOException, system.net.sockets.SocketException, system.security.authentication.AuthenticationException, system.OperationCanceledException, system.threading.tasks.TaskSchedulerException, system.threading.SemaphoreFullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginWrite = null;
         try {
-            JCObject objBeginWrite = (JCObject)classInstance.Invoke("BeginWrite", buffer, offset, count, asyncCallback, asyncState == null ? null : asyncState.getJCOInstance());
+            retObjectBeginWrite = classInstance.Invoke("BeginWrite", buffer, offset, count, asyncCallback, asyncState == null ? null : asyncState.getJCOInstance());
+            JCObject objBeginWrite = (JCObject)retObjectBeginWrite;
             return new IAsyncResultImplementation(objBeginWrite);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginWrite != null ? retObjectBeginWrite.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -361,10 +441,14 @@ public class SslStream extends AuthenticatedStream  {
 
     public IAsyncResult BeginWrite(JCORefOut dupParam0, int dupParam1, int dupParam2, AsyncCallback dupParam3, NetObject dupParam4) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.NotSupportedException, system.io.IOException, system.net.sockets.SocketException, system.security.authentication.AuthenticationException, system.OperationCanceledException, system.threading.tasks.TaskSchedulerException, system.threading.SemaphoreFullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginWrite = null;
         try {
-            JCObject objBeginWrite = (JCObject)classInstance.Invoke("BeginWrite", dupParam0.getJCRefOut(), dupParam1, dupParam2, dupParam3, dupParam4 == null ? null : dupParam4.getJCOInstance());
+            retObjectBeginWrite = classInstance.Invoke("BeginWrite", dupParam0.getJCRefOut(), dupParam1, dupParam2, dupParam3, dupParam4 == null ? null : dupParam4.getJCOInstance());
+            JCObject objBeginWrite = (JCObject)retObjectBeginWrite;
             return new IAsyncResultImplementation(objBeginWrite);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginWrite != null ? retObjectBeginWrite.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -372,10 +456,14 @@ public class SslStream extends AuthenticatedStream  {
 
     public Task AuthenticateAsClientAsync(java.lang.String targetHost) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.io.IOException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.InvalidCastException, system.NullReferenceException, system.componentmodel.Win32Exception, system.AccessViolationException, system.security.authentication.AuthenticationException, system.threading.tasks.TaskSchedulerException, system.diagnostics.tracing.EventSourceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAuthenticateAsClientAsync = null;
         try {
-            JCObject objAuthenticateAsClientAsync = (JCObject)classInstance.Invoke("AuthenticateAsClientAsync", targetHost);
+            retObjectAuthenticateAsClientAsync = classInstance.Invoke("AuthenticateAsClientAsync", targetHost);
+            JCObject objAuthenticateAsClientAsync = (JCObject)retObjectAuthenticateAsClientAsync;
             return new Task(objAuthenticateAsClientAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAuthenticateAsClientAsync != null ? retObjectAuthenticateAsClientAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -383,10 +471,14 @@ public class SslStream extends AuthenticatedStream  {
 
     public Task AuthenticateAsClientAsync(java.lang.String targetHost, X509CertificateCollection clientCertificates, boolean checkCertificateRevocation) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.MulticastNotSupportedException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.OutOfMemoryException, system.PlatformNotSupportedException, system.NotSupportedException, system.componentmodel.Win32Exception, system.InvalidCastException, system.NullReferenceException, system.security.authentication.AuthenticationException, system.threading.tasks.TaskSchedulerException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAuthenticateAsClientAsync = null;
         try {
-            JCObject objAuthenticateAsClientAsync = (JCObject)classInstance.Invoke("AuthenticateAsClientAsync", targetHost, clientCertificates == null ? null : clientCertificates.getJCOInstance(), checkCertificateRevocation);
+            retObjectAuthenticateAsClientAsync = classInstance.Invoke("AuthenticateAsClientAsync", targetHost, clientCertificates == null ? null : clientCertificates.getJCOInstance(), checkCertificateRevocation);
+            JCObject objAuthenticateAsClientAsync = (JCObject)retObjectAuthenticateAsClientAsync;
             return new Task(objAuthenticateAsClientAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAuthenticateAsClientAsync != null ? retObjectAuthenticateAsClientAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -394,10 +486,14 @@ public class SslStream extends AuthenticatedStream  {
 
     public Task AuthenticateAsClientAsync(java.lang.String targetHost, X509CertificateCollection clientCertificates, SslProtocols enabledSslProtocols, boolean checkCertificateRevocation) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.AccessViolationException, system.globalization.CultureNotFoundException, system.security.authentication.AuthenticationException, system.io.IOException, system.threading.tasks.TaskSchedulerException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAuthenticateAsClientAsync = null;
         try {
-            JCObject objAuthenticateAsClientAsync = (JCObject)classInstance.Invoke("AuthenticateAsClientAsync", targetHost, clientCertificates == null ? null : clientCertificates.getJCOInstance(), enabledSslProtocols == null ? null : enabledSslProtocols.getJCOInstance(), checkCertificateRevocation);
+            retObjectAuthenticateAsClientAsync = classInstance.Invoke("AuthenticateAsClientAsync", targetHost, clientCertificates == null ? null : clientCertificates.getJCOInstance(), enabledSslProtocols == null ? null : enabledSslProtocols.getJCOInstance(), checkCertificateRevocation);
+            JCObject objAuthenticateAsClientAsync = (JCObject)retObjectAuthenticateAsClientAsync;
             return new Task(objAuthenticateAsClientAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAuthenticateAsClientAsync != null ? retObjectAuthenticateAsClientAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -405,10 +501,14 @@ public class SslStream extends AuthenticatedStream  {
 
     public Task AuthenticateAsServerAsync(X509Certificate serverCertificate) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.io.IOException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.InvalidCastException, system.NullReferenceException, system.componentmodel.Win32Exception, system.AccessViolationException, system.security.authentication.AuthenticationException, system.threading.tasks.TaskSchedulerException, system.diagnostics.tracing.EventSourceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAuthenticateAsServerAsync = null;
         try {
-            JCObject objAuthenticateAsServerAsync = (JCObject)classInstance.Invoke("AuthenticateAsServerAsync", serverCertificate == null ? null : serverCertificate.getJCOInstance());
+            retObjectAuthenticateAsServerAsync = classInstance.Invoke("AuthenticateAsServerAsync", serverCertificate == null ? null : serverCertificate.getJCOInstance());
+            JCObject objAuthenticateAsServerAsync = (JCObject)retObjectAuthenticateAsServerAsync;
             return new Task(objAuthenticateAsServerAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAuthenticateAsServerAsync != null ? retObjectAuthenticateAsServerAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -416,10 +516,14 @@ public class SslStream extends AuthenticatedStream  {
 
     public Task AuthenticateAsServerAsync(X509Certificate serverCertificate, boolean clientCertificateRequired, boolean checkCertificateRevocation) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.MulticastNotSupportedException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.OutOfMemoryException, system.PlatformNotSupportedException, system.NotSupportedException, system.componentmodel.Win32Exception, system.InvalidCastException, system.NullReferenceException, system.security.authentication.AuthenticationException, system.threading.tasks.TaskSchedulerException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAuthenticateAsServerAsync = null;
         try {
-            JCObject objAuthenticateAsServerAsync = (JCObject)classInstance.Invoke("AuthenticateAsServerAsync", serverCertificate == null ? null : serverCertificate.getJCOInstance(), clientCertificateRequired, checkCertificateRevocation);
+            retObjectAuthenticateAsServerAsync = classInstance.Invoke("AuthenticateAsServerAsync", serverCertificate == null ? null : serverCertificate.getJCOInstance(), clientCertificateRequired, checkCertificateRevocation);
+            JCObject objAuthenticateAsServerAsync = (JCObject)retObjectAuthenticateAsServerAsync;
             return new Task(objAuthenticateAsServerAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAuthenticateAsServerAsync != null ? retObjectAuthenticateAsServerAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -427,10 +531,14 @@ public class SslStream extends AuthenticatedStream  {
 
     public Task AuthenticateAsServerAsync(X509Certificate serverCertificate, boolean clientCertificateRequired, SslProtocols enabledSslProtocols, boolean checkCertificateRevocation) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.AccessViolationException, system.globalization.CultureNotFoundException, system.security.authentication.AuthenticationException, system.io.IOException, system.threading.tasks.TaskSchedulerException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAuthenticateAsServerAsync = null;
         try {
-            JCObject objAuthenticateAsServerAsync = (JCObject)classInstance.Invoke("AuthenticateAsServerAsync", serverCertificate == null ? null : serverCertificate.getJCOInstance(), clientCertificateRequired, enabledSslProtocols == null ? null : enabledSslProtocols.getJCOInstance(), checkCertificateRevocation);
+            retObjectAuthenticateAsServerAsync = classInstance.Invoke("AuthenticateAsServerAsync", serverCertificate == null ? null : serverCertificate.getJCOInstance(), clientCertificateRequired, enabledSslProtocols == null ? null : enabledSslProtocols.getJCOInstance(), checkCertificateRevocation);
+            JCObject objAuthenticateAsServerAsync = (JCObject)retObjectAuthenticateAsServerAsync;
             return new Task(objAuthenticateAsServerAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAuthenticateAsServerAsync != null ? retObjectAuthenticateAsServerAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -438,10 +546,14 @@ public class SslStream extends AuthenticatedStream  {
 
     public Task ShutdownAsync() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.security.cryptography.CryptographicException, system.NotSupportedException, system.threading.ThreadAbortException, system.OperationCanceledException, system.threading.tasks.TaskSchedulerException, system.threading.SemaphoreFullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShutdownAsync = null;
         try {
-            JCObject objShutdownAsync = (JCObject)classInstance.Invoke("ShutdownAsync");
+            retObjectShutdownAsync = classInstance.Invoke("ShutdownAsync");
+            JCObject objShutdownAsync = (JCObject)retObjectShutdownAsync;
             return new Task(objShutdownAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectShutdownAsync != null ? retObjectShutdownAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -449,7 +561,7 @@ public class SslStream extends AuthenticatedStream  {
 
     public void AuthenticateAsClient(java.lang.String targetHost) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.MulticastNotSupportedException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.OutOfMemoryException, system.PlatformNotSupportedException, system.NotSupportedException, system.componentmodel.Win32Exception, system.InvalidCastException, system.NullReferenceException, system.AccessViolationException, system.security.authentication.AuthenticationException, system.threading.SemaphoreFullException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AuthenticateAsClient", targetHost);
         } catch (JCNativeException jcne) {
@@ -459,7 +571,7 @@ public class SslStream extends AuthenticatedStream  {
 
     public void AuthenticateAsClient(java.lang.String targetHost, X509CertificateCollection clientCertificates, boolean checkCertificateRevocation) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.MulticastNotSupportedException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.OutOfMemoryException, system.PlatformNotSupportedException, system.NotSupportedException, system.componentmodel.Win32Exception, system.InvalidCastException, system.NullReferenceException, system.AccessViolationException, system.security.authentication.AuthenticationException, system.threading.SemaphoreFullException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AuthenticateAsClient", targetHost, clientCertificates == null ? null : clientCertificates.getJCOInstance(), checkCertificateRevocation);
         } catch (JCNativeException jcne) {
@@ -469,7 +581,7 @@ public class SslStream extends AuthenticatedStream  {
 
     public void AuthenticateAsClient(java.lang.String targetHost, X509CertificateCollection clientCertificates, SslProtocols enabledSslProtocols, boolean checkCertificateRevocation) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.NotSupportedException, system.componentmodel.Win32Exception, system.AccessViolationException, system.security.authentication.AuthenticationException, system.threading.WaitHandleCannotBeOpenedException, system.threading.SemaphoreFullException, system.security.cryptography.CryptographicException, system.io.IOException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AuthenticateAsClient", targetHost, clientCertificates == null ? null : clientCertificates.getJCOInstance(), enabledSslProtocols == null ? null : enabledSslProtocols.getJCOInstance(), checkCertificateRevocation);
         } catch (JCNativeException jcne) {
@@ -479,7 +591,7 @@ public class SslStream extends AuthenticatedStream  {
 
     public void AuthenticateAsServer(X509Certificate serverCertificate) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.MulticastNotSupportedException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.OutOfMemoryException, system.PlatformNotSupportedException, system.NotSupportedException, system.componentmodel.Win32Exception, system.InvalidCastException, system.NullReferenceException, system.AccessViolationException, system.security.authentication.AuthenticationException, system.threading.SemaphoreFullException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AuthenticateAsServer", serverCertificate == null ? null : serverCertificate.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -489,7 +601,7 @@ public class SslStream extends AuthenticatedStream  {
 
     public void AuthenticateAsServer(X509Certificate serverCertificate, boolean clientCertificateRequired, boolean checkCertificateRevocation) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.MulticastNotSupportedException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.OutOfMemoryException, system.PlatformNotSupportedException, system.NotSupportedException, system.componentmodel.Win32Exception, system.InvalidCastException, system.NullReferenceException, system.AccessViolationException, system.security.authentication.AuthenticationException, system.threading.SemaphoreFullException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AuthenticateAsServer", serverCertificate == null ? null : serverCertificate.getJCOInstance(), clientCertificateRequired, checkCertificateRevocation);
         } catch (JCNativeException jcne) {
@@ -499,7 +611,7 @@ public class SslStream extends AuthenticatedStream  {
 
     public void AuthenticateAsServer(X509Certificate serverCertificate, boolean clientCertificateRequired, SslProtocols enabledSslProtocols, boolean checkCertificateRevocation) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.NotSupportedException, system.componentmodel.Win32Exception, system.AccessViolationException, system.security.authentication.AuthenticationException, system.threading.WaitHandleCannotBeOpenedException, system.threading.SemaphoreFullException, system.security.cryptography.CryptographicException, system.io.IOException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AuthenticateAsServer", serverCertificate == null ? null : serverCertificate.getJCOInstance(), clientCertificateRequired, enabledSslProtocols == null ? null : enabledSslProtocols.getJCOInstance(), checkCertificateRevocation);
         } catch (JCNativeException jcne) {
@@ -509,7 +621,7 @@ public class SslStream extends AuthenticatedStream  {
 
     public void EndAuthenticateAsClient(IAsyncResult asyncResult) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.threading.AbandonedMutexException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.InvalidCastException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EndAuthenticateAsClient", asyncResult == null ? null : asyncResult.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -519,7 +631,7 @@ public class SslStream extends AuthenticatedStream  {
 
     public void EndAuthenticateAsServer(IAsyncResult asyncResult) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.threading.AbandonedMutexException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.InvalidCastException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EndAuthenticateAsServer", asyncResult == null ? null : asyncResult.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -529,7 +641,7 @@ public class SslStream extends AuthenticatedStream  {
 
     public void EndWrite(IAsyncResult asyncResult) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EndWrite", asyncResult == null ? null : asyncResult.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -539,7 +651,7 @@ public class SslStream extends AuthenticatedStream  {
 
     public void Flush() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Flush");
         } catch (JCNativeException jcne) {
@@ -549,7 +661,7 @@ public class SslStream extends AuthenticatedStream  {
 
     public void SetLength(long value) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetLength", value);
         } catch (JCNativeException jcne) {
@@ -559,7 +671,7 @@ public class SslStream extends AuthenticatedStream  {
 
     public void Write(byte[] buffer) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.NotSupportedException, system.io.IOException, system.net.sockets.SocketException, system.security.authentication.AuthenticationException, system.OperationCanceledException, system.threading.tasks.TaskSchedulerException, system.threading.SemaphoreFullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Write", (java.lang.Object)buffer);
         } catch (JCNativeException jcne) {
@@ -569,7 +681,7 @@ public class SslStream extends AuthenticatedStream  {
 
     public void Write(JCORefOut dupParam0) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.NotSupportedException, system.io.IOException, system.net.sockets.SocketException, system.security.authentication.AuthenticationException, system.OperationCanceledException, system.threading.tasks.TaskSchedulerException, system.threading.SemaphoreFullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Write", (java.lang.Object)dupParam0.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -579,7 +691,7 @@ public class SslStream extends AuthenticatedStream  {
 
     public void Write(byte[] buffer, int offset, int count) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.NotSupportedException, system.io.IOException, system.net.sockets.SocketException, system.security.authentication.AuthenticationException, system.OperationCanceledException, system.threading.tasks.TaskSchedulerException, system.threading.SemaphoreFullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Write", buffer, offset, count);
         } catch (JCNativeException jcne) {
@@ -589,7 +701,7 @@ public class SslStream extends AuthenticatedStream  {
 
     public void Write(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.NotSupportedException, system.io.IOException, system.net.sockets.SocketException, system.security.authentication.AuthenticationException, system.OperationCanceledException, system.threading.tasks.TaskSchedulerException, system.threading.SemaphoreFullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Write", dupParam0.getJCRefOut(), dupParam1, dupParam2);
         } catch (JCNativeException jcne) {
@@ -603,9 +715,13 @@ public class SslStream extends AuthenticatedStream  {
     
     public boolean getCheckCertRevocationStatus() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCheckCertRevocationStatus = null;
         try {
-            return (boolean)classInstance.Get("CheckCertRevocationStatus");
+            retObjectCheckCertRevocationStatus = classInstance.Get("CheckCertRevocationStatus");
+            return (boolean)retObjectCheckCertRevocationStatus;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCheckCertRevocationStatus != null ? retObjectCheckCertRevocationStatus.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -613,9 +729,20 @@ public class SslStream extends AuthenticatedStream  {
 
     public int getCipherStrength() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCipherStrength = null;
         try {
-            return (int)classInstance.Get("CipherStrength");
+            retObjectCipherStrength = classInstance.Get("CipherStrength");
+            return (int)retObjectCipherStrength;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCipherStrength_ToString = retObjectCipherStrength == null ? "null" : retObjectCipherStrength.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectCipherStrengthNumber = (java.lang.Number)retObjectCipherStrength;
+                return retObjectCipherStrengthNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCipherStrength != null ? retObjectCipherStrength.getClass() : "null", retObjectCipherStrength_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -623,9 +750,20 @@ public class SslStream extends AuthenticatedStream  {
 
     public int getHashStrength() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHashStrength = null;
         try {
-            return (int)classInstance.Get("HashStrength");
+            retObjectHashStrength = classInstance.Get("HashStrength");
+            return (int)retObjectHashStrength;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectHashStrength_ToString = retObjectHashStrength == null ? "null" : retObjectHashStrength.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectHashStrengthNumber = (java.lang.Number)retObjectHashStrength;
+                return retObjectHashStrengthNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectHashStrength != null ? retObjectHashStrength.getClass() : "null", retObjectHashStrength_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -633,9 +771,20 @@ public class SslStream extends AuthenticatedStream  {
 
     public int getKeyExchangeStrength() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectKeyExchangeStrength = null;
         try {
-            return (int)classInstance.Get("KeyExchangeStrength");
+            retObjectKeyExchangeStrength = classInstance.Get("KeyExchangeStrength");
+            return (int)retObjectKeyExchangeStrength;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectKeyExchangeStrength_ToString = retObjectKeyExchangeStrength == null ? "null" : retObjectKeyExchangeStrength.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectKeyExchangeStrengthNumber = (java.lang.Number)retObjectKeyExchangeStrength;
+                return retObjectKeyExchangeStrengthNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectKeyExchangeStrength != null ? retObjectKeyExchangeStrength.getClass() : "null", retObjectKeyExchangeStrength_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -643,10 +792,14 @@ public class SslStream extends AuthenticatedStream  {
 
     public TransportContext getTransportContext() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTransportContext = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TransportContext");
+            retObjectTransportContext = classInstance.Get("TransportContext");
+            JCObject val = (JCObject)retObjectTransportContext;
             return new TransportContext(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTransportContext != null ? retObjectTransportContext.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -654,10 +807,14 @@ public class SslStream extends AuthenticatedStream  {
 
     public CipherAlgorithmType getCipherAlgorithm() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCipherAlgorithm = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CipherAlgorithm");
+            retObjectCipherAlgorithm = classInstance.Get("CipherAlgorithm");
+            JCObject val = (JCObject)retObjectCipherAlgorithm;
             return new CipherAlgorithmType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCipherAlgorithm != null ? retObjectCipherAlgorithm.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -665,10 +822,14 @@ public class SslStream extends AuthenticatedStream  {
 
     public ExchangeAlgorithmType getKeyExchangeAlgorithm() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectKeyExchangeAlgorithm = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("KeyExchangeAlgorithm");
+            retObjectKeyExchangeAlgorithm = classInstance.Get("KeyExchangeAlgorithm");
+            JCObject val = (JCObject)retObjectKeyExchangeAlgorithm;
             return new ExchangeAlgorithmType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectKeyExchangeAlgorithm != null ? retObjectKeyExchangeAlgorithm.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -676,10 +837,14 @@ public class SslStream extends AuthenticatedStream  {
 
     public HashAlgorithmType getHashAlgorithm() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHashAlgorithm = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("HashAlgorithm");
+            retObjectHashAlgorithm = classInstance.Get("HashAlgorithm");
+            JCObject val = (JCObject)retObjectHashAlgorithm;
             return new HashAlgorithmType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHashAlgorithm != null ? retObjectHashAlgorithm.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -687,10 +852,14 @@ public class SslStream extends AuthenticatedStream  {
 
     public SslProtocols getSslProtocol() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSslProtocol = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SslProtocol");
+            retObjectSslProtocol = classInstance.Get("SslProtocol");
+            JCObject val = (JCObject)retObjectSslProtocol;
             return new SslProtocols(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSslProtocol != null ? retObjectSslProtocol.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -698,10 +867,14 @@ public class SslStream extends AuthenticatedStream  {
 
     public X509Certificate getLocalCertificate() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLocalCertificate = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("LocalCertificate");
+            retObjectLocalCertificate = classInstance.Get("LocalCertificate");
+            JCObject val = (JCObject)retObjectLocalCertificate;
             return new X509Certificate(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLocalCertificate != null ? retObjectLocalCertificate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -709,10 +882,14 @@ public class SslStream extends AuthenticatedStream  {
 
     public X509Certificate getRemoteCertificate() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.cryptography.CryptographicException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRemoteCertificate = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RemoteCertificate");
+            retObjectRemoteCertificate = classInstance.Get("RemoteCertificate");
+            JCObject val = (JCObject)retObjectRemoteCertificate;
             return new X509Certificate(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRemoteCertificate != null ? retObjectRemoteCertificate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

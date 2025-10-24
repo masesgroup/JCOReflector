@@ -158,10 +158,14 @@ public class ActivityExecutionContextManager extends NetObject  {
     
     public ActivityExecutionContext CreateExecutionContext(Activity activity) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateExecutionContext = null;
         try {
-            JCObject objCreateExecutionContext = (JCObject)classInstance.Invoke("CreateExecutionContext", activity == null ? null : activity.getJCOInstance());
+            retObjectCreateExecutionContext = classInstance.Invoke("CreateExecutionContext", activity == null ? null : activity.getJCOInstance());
+            JCObject objCreateExecutionContext = (JCObject)retObjectCreateExecutionContext;
             return new ActivityExecutionContext(objCreateExecutionContext);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateExecutionContext != null ? retObjectCreateExecutionContext.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,10 +173,14 @@ public class ActivityExecutionContextManager extends NetObject  {
 
     public ActivityExecutionContext GetExecutionContext(Activity activity) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.NotSupportedException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetExecutionContext = null;
         try {
-            JCObject objGetExecutionContext = (JCObject)classInstance.Invoke("GetExecutionContext", activity == null ? null : activity.getJCOInstance());
+            retObjectGetExecutionContext = classInstance.Invoke("GetExecutionContext", activity == null ? null : activity.getJCOInstance());
+            JCObject objGetExecutionContext = (JCObject)retObjectGetExecutionContext;
             return new ActivityExecutionContext(objGetExecutionContext);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetExecutionContext != null ? retObjectGetExecutionContext.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,10 +188,14 @@ public class ActivityExecutionContextManager extends NetObject  {
 
     public ActivityExecutionContext GetPersistedExecutionContext(Guid contextGuid) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.InvalidCastException, system.NullReferenceException, system.OverflowException, system.PlatformNotSupportedException, system.FormatException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPersistedExecutionContext = null;
         try {
-            JCObject objGetPersistedExecutionContext = (JCObject)classInstance.Invoke("GetPersistedExecutionContext", contextGuid == null ? null : contextGuid.getJCOInstance());
+            retObjectGetPersistedExecutionContext = classInstance.Invoke("GetPersistedExecutionContext", contextGuid == null ? null : contextGuid.getJCOInstance());
+            JCObject objGetPersistedExecutionContext = (JCObject)retObjectGetPersistedExecutionContext;
             return new ActivityExecutionContext(objGetPersistedExecutionContext);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetPersistedExecutionContext != null ? retObjectGetPersistedExecutionContext.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,7 +203,7 @@ public class ActivityExecutionContextManager extends NetObject  {
 
     public void CompleteExecutionContext(ActivityExecutionContext childContext) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CompleteExecutionContext", childContext == null ? null : childContext.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -201,7 +213,7 @@ public class ActivityExecutionContextManager extends NetObject  {
 
     public void CompleteExecutionContext(ActivityExecutionContext childContext, boolean forcePersist) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CompleteExecutionContext", childContext == null ? null : childContext.getJCOInstance(), forcePersist);
         } catch (JCNativeException jcne) {

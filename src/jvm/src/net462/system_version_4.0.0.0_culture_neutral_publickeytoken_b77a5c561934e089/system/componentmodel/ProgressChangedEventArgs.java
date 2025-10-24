@@ -170,9 +170,20 @@ public class ProgressChangedEventArgs extends EventArgs  {
     
     public int getProgressPercentage() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProgressPercentage = null;
         try {
-            return (int)classInstance.Get("ProgressPercentage");
+            retObjectProgressPercentage = classInstance.Get("ProgressPercentage");
+            return (int)retObjectProgressPercentage;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectProgressPercentage_ToString = retObjectProgressPercentage == null ? "null" : retObjectProgressPercentage.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectProgressPercentageNumber = (java.lang.Number)retObjectProgressPercentage;
+                return retObjectProgressPercentageNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectProgressPercentage != null ? retObjectProgressPercentage.getClass() : "null", retObjectProgressPercentage_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,10 +191,14 @@ public class ProgressChangedEventArgs extends EventArgs  {
 
     public NetObject getUserState() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUserState = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("UserState");
+            retObjectUserState = classInstance.Get("UserState");
+            JCObject val = (JCObject)retObjectUserState;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUserState != null ? retObjectUserState.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

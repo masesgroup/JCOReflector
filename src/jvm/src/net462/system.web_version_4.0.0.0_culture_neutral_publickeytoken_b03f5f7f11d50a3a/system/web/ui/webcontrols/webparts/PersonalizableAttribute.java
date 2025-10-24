@@ -195,9 +195,13 @@ public class PersonalizableAttribute extends Attribute  {
     
     public boolean IsDefaultAttribute() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsDefaultAttribute = null;
         try {
-            return (boolean)classInstance.Invoke("IsDefaultAttribute");
+            retObjectIsDefaultAttribute = classInstance.Invoke("IsDefaultAttribute");
+            return (boolean)retObjectIsDefaultAttribute;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsDefaultAttribute != null ? retObjectIsDefaultAttribute.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -205,9 +209,13 @@ public class PersonalizableAttribute extends Attribute  {
 
     public boolean Match(NetObject obj) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMatch = null;
         try {
-            return (boolean)classInstance.Invoke("Match", obj == null ? null : obj.getJCOInstance());
+            retObjectMatch = classInstance.Invoke("Match", obj == null ? null : obj.getJCOInstance());
+            return (boolean)retObjectMatch;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectMatch != null ? retObjectMatch.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -215,10 +223,14 @@ public class PersonalizableAttribute extends Attribute  {
 
     public static ICollection GetPersonalizableProperties(NetType type) throws Throwable, system.ArgumentNullException, system.RankException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException, system.NotSupportedException, system.reflection.AmbiguousMatchException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.web.HttpException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetPersonalizableProperties = null;
         try {
-            JCObject objGetPersonalizableProperties = (JCObject)classType.Invoke("GetPersonalizableProperties", type == null ? null : type.getJCOInstance());
+            retObjectGetPersonalizableProperties = classType.Invoke("GetPersonalizableProperties", type == null ? null : type.getJCOInstance());
+            JCObject objGetPersonalizableProperties = (JCObject)retObjectGetPersonalizableProperties;
             return new ICollectionImplementation(objGetPersonalizableProperties);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetPersonalizableProperties != null ? retObjectGetPersonalizableProperties.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -230,9 +242,13 @@ public class PersonalizableAttribute extends Attribute  {
     
     public boolean getIsPersonalizable() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsPersonalizable = null;
         try {
-            return (boolean)classInstance.Get("IsPersonalizable");
+            retObjectIsPersonalizable = classInstance.Get("IsPersonalizable");
+            return (boolean)retObjectIsPersonalizable;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsPersonalizable != null ? retObjectIsPersonalizable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -240,9 +256,13 @@ public class PersonalizableAttribute extends Attribute  {
 
     public boolean getIsSensitive() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsSensitive = null;
         try {
-            return (boolean)classInstance.Get("IsSensitive");
+            retObjectIsSensitive = classInstance.Get("IsSensitive");
+            return (boolean)retObjectIsSensitive;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsSensitive != null ? retObjectIsSensitive.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -250,10 +270,14 @@ public class PersonalizableAttribute extends Attribute  {
 
     public PersonalizationScope getScope() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectScope = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Scope");
+            retObjectScope = classInstance.Get("Scope");
+            JCObject val = (JCObject)retObjectScope;
             return new PersonalizationScope(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectScope != null ? retObjectScope.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

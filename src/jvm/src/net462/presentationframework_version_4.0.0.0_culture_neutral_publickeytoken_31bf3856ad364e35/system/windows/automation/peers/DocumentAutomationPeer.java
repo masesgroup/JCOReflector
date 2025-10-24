@@ -168,10 +168,14 @@ public class DocumentAutomationPeer extends ContentTextAutomationPeer  {
     
     public NetObject GetPattern(PatternInterface patternInterface) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.MissingMethodException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.UnauthorizedAccessException, system.io.IOException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPattern = null;
         try {
-            JCObject objGetPattern = (JCObject)classInstance.Invoke("GetPattern", patternInterface == null ? null : patternInterface.getJCOInstance());
+            retObjectGetPattern = classInstance.Invoke("GetPattern", patternInterface == null ? null : patternInterface.getJCOInstance());
+            JCObject objGetPattern = (JCObject)retObjectGetPattern;
             return new NetObject(objGetPattern);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetPattern != null ? retObjectGetPattern.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

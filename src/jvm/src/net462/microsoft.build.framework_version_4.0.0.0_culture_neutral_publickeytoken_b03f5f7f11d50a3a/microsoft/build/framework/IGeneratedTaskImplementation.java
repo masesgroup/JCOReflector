@@ -149,9 +149,13 @@ public class IGeneratedTaskImplementation extends NetObject implements IGenerate
     
     public boolean Execute() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExecute = null;
         try {
-            return (boolean)classInstance.Invoke("Execute");
+            retObjectExecute = classInstance.Invoke("Execute");
+            return (boolean)retObjectExecute;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectExecute != null ? retObjectExecute.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -159,10 +163,14 @@ public class IGeneratedTaskImplementation extends NetObject implements IGenerate
 
     public NetObject GetPropertyValue(TaskPropertyInfo property) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPropertyValue = null;
         try {
-            JCObject objGetPropertyValue = (JCObject)classInstance.Invoke("GetPropertyValue", property == null ? null : property.getJCOInstance());
+            retObjectGetPropertyValue = classInstance.Invoke("GetPropertyValue", property == null ? null : property.getJCOInstance());
+            JCObject objGetPropertyValue = (JCObject)retObjectGetPropertyValue;
             return new NetObject(objGetPropertyValue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetPropertyValue != null ? retObjectGetPropertyValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,7 +178,7 @@ public class IGeneratedTaskImplementation extends NetObject implements IGenerate
 
     public void SetPropertyValue(TaskPropertyInfo property, NetObject value) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetPropertyValue", property == null ? null : property.getJCOInstance(), value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -184,10 +192,14 @@ public class IGeneratedTaskImplementation extends NetObject implements IGenerate
     
     public IBuildEngine getBuildEngine() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBuildEngine = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("BuildEngine");
+            retObjectBuildEngine = classInstance.Get("BuildEngine");
+            JCObject val = (JCObject)retObjectBuildEngine;
             return new IBuildEngineImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBuildEngine != null ? retObjectBuildEngine.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,7 +207,7 @@ public class IGeneratedTaskImplementation extends NetObject implements IGenerate
 
     public void setBuildEngine(IBuildEngine BuildEngine) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BuildEngine", BuildEngine == null ? null : BuildEngine.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -205,10 +217,14 @@ public class IGeneratedTaskImplementation extends NetObject implements IGenerate
 
     public ITaskHost getHostObject() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHostObject = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("HostObject");
+            retObjectHostObject = classInstance.Get("HostObject");
+            JCObject val = (JCObject)retObjectHostObject;
             return new ITaskHostImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHostObject != null ? retObjectHostObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -216,7 +232,7 @@ public class IGeneratedTaskImplementation extends NetObject implements IGenerate
 
     public void setHostObject(ITaskHost HostObject) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("HostObject", HostObject == null ? null : HostObject.getJCOInstance());
         } catch (JCNativeException jcne) {

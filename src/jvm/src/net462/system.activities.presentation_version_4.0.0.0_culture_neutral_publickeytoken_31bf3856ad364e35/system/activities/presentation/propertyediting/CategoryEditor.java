@@ -158,9 +158,13 @@ public class CategoryEditor extends NetObject  {
     
     public boolean ConsumesProperty(PropertyEntry propertyEntry) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConsumesProperty = null;
         try {
-            return (boolean)classInstance.Invoke("ConsumesProperty", propertyEntry == null ? null : propertyEntry.getJCOInstance());
+            retObjectConsumesProperty = classInstance.Invoke("ConsumesProperty", propertyEntry == null ? null : propertyEntry.getJCOInstance());
+            return (boolean)retObjectConsumesProperty;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectConsumesProperty != null ? retObjectConsumesProperty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -168,10 +172,14 @@ public class CategoryEditor extends NetObject  {
 
     public static EditorAttribute CreateEditorAttribute(CategoryEditor editor) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateEditorAttribute = null;
         try {
-            JCObject objCreateEditorAttribute = (JCObject)classType.Invoke("CreateEditorAttribute", editor == null ? null : editor.getJCOInstance());
+            retObjectCreateEditorAttribute = classType.Invoke("CreateEditorAttribute", editor == null ? null : editor.getJCOInstance());
+            JCObject objCreateEditorAttribute = (JCObject)retObjectCreateEditorAttribute;
             return new EditorAttribute(objCreateEditorAttribute);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateEditorAttribute != null ? retObjectCreateEditorAttribute.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,10 +187,14 @@ public class CategoryEditor extends NetObject  {
 
     public static EditorAttribute CreateEditorAttribute(NetType categoryEditorType) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateEditorAttribute = null;
         try {
-            JCObject objCreateEditorAttribute = (JCObject)classType.Invoke("CreateEditorAttribute", categoryEditorType == null ? null : categoryEditorType.getJCOInstance());
+            retObjectCreateEditorAttribute = classType.Invoke("CreateEditorAttribute", categoryEditorType == null ? null : categoryEditorType.getJCOInstance());
+            JCObject objCreateEditorAttribute = (JCObject)retObjectCreateEditorAttribute;
             return new EditorAttribute(objCreateEditorAttribute);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateEditorAttribute != null ? retObjectCreateEditorAttribute.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,10 +202,14 @@ public class CategoryEditor extends NetObject  {
 
     public NetObject GetImage(Size desiredSize) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetImage = null;
         try {
-            JCObject objGetImage = (JCObject)classInstance.Invoke("GetImage", desiredSize == null ? null : desiredSize.getJCOInstance());
+            retObjectGetImage = classInstance.Invoke("GetImage", desiredSize == null ? null : desiredSize.getJCOInstance());
+            JCObject objGetImage = (JCObject)retObjectGetImage;
             return new NetObject(objGetImage);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetImage != null ? retObjectGetImage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -205,9 +221,13 @@ public class CategoryEditor extends NetObject  {
     
     public java.lang.String getTargetCategory() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTargetCategory = null;
         try {
-            return (java.lang.String)classInstance.Get("TargetCategory");
+            retObjectTargetCategory = classInstance.Get("TargetCategory");
+            return (java.lang.String)retObjectTargetCategory;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectTargetCategory != null ? retObjectTargetCategory.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -215,10 +235,14 @@ public class CategoryEditor extends NetObject  {
 
     public DataTemplate getEditorTemplate() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEditorTemplate = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("EditorTemplate");
+            retObjectEditorTemplate = classInstance.Get("EditorTemplate");
+            JCObject val = (JCObject)retObjectEditorTemplate;
             return new DataTemplate(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEditorTemplate != null ? retObjectEditorTemplate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

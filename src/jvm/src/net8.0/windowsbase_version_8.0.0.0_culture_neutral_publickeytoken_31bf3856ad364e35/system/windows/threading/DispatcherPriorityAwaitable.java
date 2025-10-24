@@ -157,10 +157,14 @@ public class DispatcherPriorityAwaitable extends ValueType  {
     
     public DispatcherPriorityAwaiter GetAwaiter() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetAwaiter = null;
         try {
-            JCObject objGetAwaiter = (JCObject)classInstance.Invoke("GetAwaiter");
+            retObjectGetAwaiter = classInstance.Invoke("GetAwaiter");
+            JCObject objGetAwaiter = (JCObject)retObjectGetAwaiter;
             return new DispatcherPriorityAwaiter(objGetAwaiter);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetAwaiter != null ? retObjectGetAwaiter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

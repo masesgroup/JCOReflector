@@ -180,10 +180,14 @@ public class TabPage extends Panel  {
     
     public static TabPage GetTabPageOfComponent(NetObject comp) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetTabPageOfComponent = null;
         try {
-            JCObject objGetTabPageOfComponent = (JCObject)classType.Invoke("GetTabPageOfComponent", comp == null ? null : comp.getJCOInstance());
+            retObjectGetTabPageOfComponent = classType.Invoke("GetTabPageOfComponent", comp == null ? null : comp.getJCOInstance());
+            JCObject objGetTabPageOfComponent = (JCObject)retObjectGetTabPageOfComponent;
             return new TabPage(objGetTabPageOfComponent);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetTabPageOfComponent != null ? retObjectGetTabPageOfComponent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,9 +199,13 @@ public class TabPage extends Panel  {
     
     public boolean getEnabled() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEnabled = null;
         try {
-            return (boolean)classInstance.Get("Enabled");
+            retObjectEnabled = classInstance.Get("Enabled");
+            return (boolean)retObjectEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectEnabled != null ? retObjectEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -205,7 +213,7 @@ public class TabPage extends Panel  {
 
     public void setEnabled(boolean Enabled) throws Throwable, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Enabled", Enabled);
         } catch (JCNativeException jcne) {
@@ -215,9 +223,13 @@ public class TabPage extends Panel  {
 
     public boolean getTabStop() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTabStop = null;
         try {
-            return (boolean)classInstance.Get("TabStop");
+            retObjectTabStop = classInstance.Get("TabStop");
+            return (boolean)retObjectTabStop;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectTabStop != null ? retObjectTabStop.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -225,7 +237,7 @@ public class TabPage extends Panel  {
 
     public void setTabStop(boolean TabStop) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TabStop", TabStop);
         } catch (JCNativeException jcne) {
@@ -235,9 +247,13 @@ public class TabPage extends Panel  {
 
     public boolean getUseVisualStyleBackColor() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUseVisualStyleBackColor = null;
         try {
-            return (boolean)classInstance.Get("UseVisualStyleBackColor");
+            retObjectUseVisualStyleBackColor = classInstance.Get("UseVisualStyleBackColor");
+            return (boolean)retObjectUseVisualStyleBackColor;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectUseVisualStyleBackColor != null ? retObjectUseVisualStyleBackColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -245,7 +261,7 @@ public class TabPage extends Panel  {
 
     public void setUseVisualStyleBackColor(boolean UseVisualStyleBackColor) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UseVisualStyleBackColor", UseVisualStyleBackColor);
         } catch (JCNativeException jcne) {
@@ -255,9 +271,13 @@ public class TabPage extends Panel  {
 
     public boolean getVisible() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVisible = null;
         try {
-            return (boolean)classInstance.Get("Visible");
+            retObjectVisible = classInstance.Get("Visible");
+            return (boolean)retObjectVisible;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectVisible != null ? retObjectVisible.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -265,7 +285,7 @@ public class TabPage extends Panel  {
 
     public void setVisible(boolean Visible) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.FormatException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.NotSupportedException, system.OutOfMemoryException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Visible", Visible);
         } catch (JCNativeException jcne) {
@@ -275,9 +295,20 @@ public class TabPage extends Panel  {
 
     public int getImageIndex() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectImageIndex = null;
         try {
-            return (int)classInstance.Get("ImageIndex");
+            retObjectImageIndex = classInstance.Get("ImageIndex");
+            return (int)retObjectImageIndex;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectImageIndex_ToString = retObjectImageIndex == null ? "null" : retObjectImageIndex.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectImageIndexNumber = (java.lang.Number)retObjectImageIndex;
+                return retObjectImageIndexNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectImageIndex != null ? retObjectImageIndex.getClass() : "null", retObjectImageIndex_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -285,7 +316,7 @@ public class TabPage extends Panel  {
 
     public void setImageIndex(int ImageIndex) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ImageIndex", ImageIndex);
         } catch (JCNativeException jcne) {
@@ -295,9 +326,20 @@ public class TabPage extends Panel  {
 
     public int getTabIndex() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTabIndex = null;
         try {
-            return (int)classInstance.Get("TabIndex");
+            retObjectTabIndex = classInstance.Get("TabIndex");
+            return (int)retObjectTabIndex;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectTabIndex_ToString = retObjectTabIndex == null ? "null" : retObjectTabIndex.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectTabIndexNumber = (java.lang.Number)retObjectTabIndex;
+                return retObjectTabIndexNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectTabIndex != null ? retObjectTabIndex.getClass() : "null", retObjectTabIndex_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -305,7 +347,7 @@ public class TabPage extends Panel  {
 
     public void setTabIndex(int TabIndex) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TabIndex", TabIndex);
         } catch (JCNativeException jcne) {
@@ -315,10 +357,14 @@ public class TabPage extends Panel  {
 
     public Point getLocation() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLocation = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Location");
+            retObjectLocation = classInstance.Get("Location");
+            JCObject val = (JCObject)retObjectLocation;
             return new Point(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLocation != null ? retObjectLocation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -326,7 +372,7 @@ public class TabPage extends Panel  {
 
     public void setLocation(Point Location) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.FormatException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.NotSupportedException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Location", Location == null ? null : Location.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -336,10 +382,14 @@ public class TabPage extends Panel  {
 
     public Size getPreferredSize() throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.ArrayTypeMismatchException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPreferredSize = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PreferredSize");
+            retObjectPreferredSize = classInstance.Get("PreferredSize");
+            JCObject val = (JCObject)retObjectPreferredSize;
             return new Size(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPreferredSize != null ? retObjectPreferredSize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -347,9 +397,13 @@ public class TabPage extends Panel  {
 
     public java.lang.String getImageKey() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectImageKey = null;
         try {
-            return (java.lang.String)classInstance.Get("ImageKey");
+            retObjectImageKey = classInstance.Get("ImageKey");
+            return (java.lang.String)retObjectImageKey;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectImageKey != null ? retObjectImageKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -357,7 +411,7 @@ public class TabPage extends Panel  {
 
     public void setImageKey(java.lang.String ImageKey) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.RankException, system.ArrayTypeMismatchException, system.componentmodel.Win32Exception, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ImageKey", ImageKey);
         } catch (JCNativeException jcne) {
@@ -367,9 +421,13 @@ public class TabPage extends Panel  {
 
     public java.lang.String getToolTipText() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToolTipText = null;
         try {
-            return (java.lang.String)classInstance.Get("ToolTipText");
+            retObjectToolTipText = classInstance.Get("ToolTipText");
+            return (java.lang.String)retObjectToolTipText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectToolTipText != null ? retObjectToolTipText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -377,7 +435,7 @@ public class TabPage extends Panel  {
 
     public void setToolTipText(java.lang.String ToolTipText) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.ArgumentNullException, system.RankException, system.ArrayTypeMismatchException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ToolTipText", ToolTipText);
         } catch (JCNativeException jcne) {
@@ -392,7 +450,7 @@ public class TabPage extends Panel  {
 
     public void addAutoSizeChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("AutoSizeChanged", handler);
         } catch (JCNativeException jcne) {
@@ -402,7 +460,7 @@ public class TabPage extends Panel  {
 
     public void removeAutoSizeChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("AutoSizeChanged", handler);
         } catch (JCNativeException jcne) {
@@ -412,7 +470,7 @@ public class TabPage extends Panel  {
 
     public void addDockChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("DockChanged", handler);
         } catch (JCNativeException jcne) {
@@ -422,7 +480,7 @@ public class TabPage extends Panel  {
 
     public void removeDockChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("DockChanged", handler);
         } catch (JCNativeException jcne) {
@@ -432,7 +490,7 @@ public class TabPage extends Panel  {
 
     public void addEnabledChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("EnabledChanged", handler);
         } catch (JCNativeException jcne) {
@@ -442,7 +500,7 @@ public class TabPage extends Panel  {
 
     public void removeEnabledChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("EnabledChanged", handler);
         } catch (JCNativeException jcne) {
@@ -452,7 +510,7 @@ public class TabPage extends Panel  {
 
     public void addLocationChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("LocationChanged", handler);
         } catch (JCNativeException jcne) {
@@ -462,7 +520,7 @@ public class TabPage extends Panel  {
 
     public void removeLocationChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("LocationChanged", handler);
         } catch (JCNativeException jcne) {
@@ -472,7 +530,7 @@ public class TabPage extends Panel  {
 
     public void addTabIndexChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("TabIndexChanged", handler);
         } catch (JCNativeException jcne) {
@@ -482,7 +540,7 @@ public class TabPage extends Panel  {
 
     public void removeTabIndexChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("TabIndexChanged", handler);
         } catch (JCNativeException jcne) {
@@ -492,7 +550,7 @@ public class TabPage extends Panel  {
 
     public void addTabStopChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("TabStopChanged", handler);
         } catch (JCNativeException jcne) {
@@ -502,7 +560,7 @@ public class TabPage extends Panel  {
 
     public void removeTabStopChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("TabStopChanged", handler);
         } catch (JCNativeException jcne) {
@@ -512,7 +570,7 @@ public class TabPage extends Panel  {
 
     public void addTextChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("TextChanged", handler);
         } catch (JCNativeException jcne) {
@@ -522,7 +580,7 @@ public class TabPage extends Panel  {
 
     public void removeTextChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("TextChanged", handler);
         } catch (JCNativeException jcne) {
@@ -532,7 +590,7 @@ public class TabPage extends Panel  {
 
     public void addVisibleChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("VisibleChanged", handler);
         } catch (JCNativeException jcne) {
@@ -542,7 +600,7 @@ public class TabPage extends Panel  {
 
     public void removeVisibleChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("VisibleChanged", handler);
         } catch (JCNativeException jcne) {

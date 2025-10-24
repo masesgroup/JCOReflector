@@ -156,10 +156,14 @@ public class ZipFileExtensions extends NetObject  {
     
     public static ZipArchiveEntry CreateEntryFromFile(ZipArchive destination, java.lang.String sourceFileName, java.lang.String entryName, CompressionLevel compressionLevel) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.runtime.serialization.SerializationException, system.ObjectDisposedException, system.io.IOException, system.io.InvalidDataException, system.io.compression.ZLibException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateEntryFromFile = null;
         try {
-            JCObject objCreateEntryFromFile = (JCObject)classType.Invoke("CreateEntryFromFile", destination == null ? null : destination.getJCOInstance(), sourceFileName, entryName, compressionLevel == null ? null : compressionLevel.getJCOInstance());
+            retObjectCreateEntryFromFile = classType.Invoke("CreateEntryFromFile", destination == null ? null : destination.getJCOInstance(), sourceFileName, entryName, compressionLevel == null ? null : compressionLevel.getJCOInstance());
+            JCObject objCreateEntryFromFile = (JCObject)retObjectCreateEntryFromFile;
             return new ZipArchiveEntry(objCreateEntryFromFile);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateEntryFromFile != null ? retObjectCreateEntryFromFile.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -167,10 +171,14 @@ public class ZipFileExtensions extends NetObject  {
 
     public static ZipArchiveEntry CreateEntryFromFile(ZipArchive destination, java.lang.String sourceFileName, java.lang.String entryName) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.runtime.serialization.SerializationException, system.ObjectDisposedException, system.io.IOException, system.io.InvalidDataException, system.io.compression.ZLibException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateEntryFromFile = null;
         try {
-            JCObject objCreateEntryFromFile = (JCObject)classType.Invoke("CreateEntryFromFile", destination == null ? null : destination.getJCOInstance(), sourceFileName, entryName);
+            retObjectCreateEntryFromFile = classType.Invoke("CreateEntryFromFile", destination == null ? null : destination.getJCOInstance(), sourceFileName, entryName);
+            JCObject objCreateEntryFromFile = (JCObject)retObjectCreateEntryFromFile;
             return new ZipArchiveEntry(objCreateEntryFromFile);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateEntryFromFile != null ? retObjectCreateEntryFromFile.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,7 +186,7 @@ public class ZipFileExtensions extends NetObject  {
 
     public static void ExtractToDirectory(ZipArchive source, java.lang.String destinationDirectoryName, boolean overwriteFiles) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.io.IOException, system.io.InvalidDataException, system.globalization.CultureNotFoundException, system.diagnostics.UnreachableException, system.runtime.serialization.SerializationException, system.io.compression.ZLibException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("ExtractToDirectory", source == null ? null : source.getJCOInstance(), destinationDirectoryName, overwriteFiles);
         } catch (JCNativeException jcne) {
@@ -188,7 +196,7 @@ public class ZipFileExtensions extends NetObject  {
 
     public static void ExtractToDirectory(ZipArchive source, java.lang.String destinationDirectoryName) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.io.InvalidDataException, system.IndexOutOfRangeException, system.io.IOException, system.FormatException, system.globalization.CultureNotFoundException, system.diagnostics.UnreachableException, system.runtime.serialization.SerializationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("ExtractToDirectory", source == null ? null : source.getJCOInstance(), destinationDirectoryName);
         } catch (JCNativeException jcne) {
@@ -198,7 +206,7 @@ public class ZipFileExtensions extends NetObject  {
 
     public static void ExtractToFile(ZipArchiveEntry source, java.lang.String destinationFileName, boolean overwrite) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.runtime.serialization.SerializationException, system.io.IOException, system.io.InvalidDataException, system.io.compression.ZLibException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("ExtractToFile", source == null ? null : source.getJCOInstance(), destinationFileName, overwrite);
         } catch (JCNativeException jcne) {
@@ -208,7 +216,7 @@ public class ZipFileExtensions extends NetObject  {
 
     public static void ExtractToFile(ZipArchiveEntry source, java.lang.String destinationFileName) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.runtime.serialization.SerializationException, system.io.IOException, system.ObjectDisposedException, system.io.InvalidDataException, system.io.compression.ZLibException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("ExtractToFile", source == null ? null : source.getJCOInstance(), destinationFileName);
         } catch (JCNativeException jcne) {

@@ -158,10 +158,14 @@ public class ProcessInputEventArgs extends NotifyInputEventArgs  {
     
     public StagingAreaInputItem PeekInput() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPeekInput = null;
         try {
-            JCObject objPeekInput = (JCObject)classInstance.Invoke("PeekInput");
+            retObjectPeekInput = classInstance.Invoke("PeekInput");
+            JCObject objPeekInput = (JCObject)retObjectPeekInput;
             return new StagingAreaInputItem(objPeekInput);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPeekInput != null ? retObjectPeekInput.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,10 +173,14 @@ public class ProcessInputEventArgs extends NotifyInputEventArgs  {
 
     public StagingAreaInputItem PopInput() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPopInput = null;
         try {
-            JCObject objPopInput = (JCObject)classInstance.Invoke("PopInput");
+            retObjectPopInput = classInstance.Invoke("PopInput");
+            JCObject objPopInput = (JCObject)retObjectPopInput;
             return new StagingAreaInputItem(objPopInput);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPopInput != null ? retObjectPopInput.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,10 +188,14 @@ public class ProcessInputEventArgs extends NotifyInputEventArgs  {
 
     public StagingAreaInputItem PushInput(InputEventArgs input, StagingAreaInputItem promote) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPushInput = null;
         try {
-            JCObject objPushInput = (JCObject)classInstance.Invoke("PushInput", input == null ? null : input.getJCOInstance(), promote == null ? null : promote.getJCOInstance());
+            retObjectPushInput = classInstance.Invoke("PushInput", input == null ? null : input.getJCOInstance(), promote == null ? null : promote.getJCOInstance());
+            JCObject objPushInput = (JCObject)retObjectPushInput;
             return new StagingAreaInputItem(objPushInput);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPushInput != null ? retObjectPushInput.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,10 +203,14 @@ public class ProcessInputEventArgs extends NotifyInputEventArgs  {
 
     public StagingAreaInputItem PushInput(StagingAreaInputItem input) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPushInput = null;
         try {
-            JCObject objPushInput = (JCObject)classInstance.Invoke("PushInput", input == null ? null : input.getJCOInstance());
+            retObjectPushInput = classInstance.Invoke("PushInput", input == null ? null : input.getJCOInstance());
+            JCObject objPushInput = (JCObject)retObjectPushInput;
             return new StagingAreaInputItem(objPushInput);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPushInput != null ? retObjectPushInput.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

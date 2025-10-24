@@ -168,10 +168,14 @@ public class LocalFileSettingsProvider extends SettingsProvider  {
     
     public SettingsPropertyValue GetPreviousVersion(SettingsContext context, SettingsProperty property) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationErrorsException, system.InvalidOperationException, system.PlatformNotSupportedException, system.FormatException, system.OverflowException, system.globalization.CultureNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.configuration.ConfigurationException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPreviousVersion = null;
         try {
-            JCObject objGetPreviousVersion = (JCObject)classInstance.Invoke("GetPreviousVersion", context == null ? null : context.getJCOInstance(), property == null ? null : property.getJCOInstance());
+            retObjectGetPreviousVersion = classInstance.Invoke("GetPreviousVersion", context == null ? null : context.getJCOInstance(), property == null ? null : property.getJCOInstance());
+            JCObject objGetPreviousVersion = (JCObject)retObjectGetPreviousVersion;
             return new SettingsPropertyValue(objGetPreviousVersion);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetPreviousVersion != null ? retObjectGetPreviousVersion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,10 +183,14 @@ public class LocalFileSettingsProvider extends SettingsProvider  {
 
     public SettingsPropertyValueCollection GetPropertyValues(SettingsContext context, SettingsPropertyCollection properties) throws Throwable, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArrayTypeMismatchException, system.FormatException, system.MissingMethodException, system.reflection.TargetInvocationException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.RankException, system.IndexOutOfRangeException, system.InvalidCastException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPropertyValues = null;
         try {
-            JCObject objGetPropertyValues = (JCObject)classInstance.Invoke("GetPropertyValues", context == null ? null : context.getJCOInstance(), properties == null ? null : properties.getJCOInstance());
+            retObjectGetPropertyValues = classInstance.Invoke("GetPropertyValues", context == null ? null : context.getJCOInstance(), properties == null ? null : properties.getJCOInstance());
+            JCObject objGetPropertyValues = (JCObject)retObjectGetPropertyValues;
             return new SettingsPropertyValueCollection(objGetPropertyValues);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetPropertyValues != null ? retObjectGetPropertyValues.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,7 +198,7 @@ public class LocalFileSettingsProvider extends SettingsProvider  {
 
     public void Initialize(java.lang.String name, NameValueCollection values) throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Initialize", name, values == null ? null : values.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -200,7 +208,7 @@ public class LocalFileSettingsProvider extends SettingsProvider  {
 
     public void Reset(SettingsContext context) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.FormatException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OverflowException, system.RankException, system.xml.XmlException, system.diagnostics.UnreachableException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Reset", context == null ? null : context.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -210,7 +218,7 @@ public class LocalFileSettingsProvider extends SettingsProvider  {
 
     public void SetPropertyValues(SettingsContext context, SettingsPropertyValueCollection values) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.FormatException, system.configuration.ConfigurationErrorsException, system.xml.XmlException, system.io.FileNotFoundException, system.io.FileLoadException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OverflowException, system.diagnostics.UnreachableException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetPropertyValues", context == null ? null : context.getJCOInstance(), values == null ? null : values.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -220,7 +228,7 @@ public class LocalFileSettingsProvider extends SettingsProvider  {
 
     public void Upgrade(SettingsContext context, SettingsPropertyCollection properties) throws Throwable, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.FormatException, system.OverflowException, system.ArrayTypeMismatchException, system.configuration.ConfigurationException, system.xml.XmlException, system.RankException, system.IndexOutOfRangeException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Upgrade", context == null ? null : context.getJCOInstance(), properties == null ? null : properties.getJCOInstance());
         } catch (JCNativeException jcne) {

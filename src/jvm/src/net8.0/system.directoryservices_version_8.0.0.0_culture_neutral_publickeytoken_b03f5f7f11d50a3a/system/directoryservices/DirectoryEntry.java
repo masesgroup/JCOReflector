@@ -209,9 +209,13 @@ public class DirectoryEntry extends Component  {
     
     public static boolean Exists(java.lang.String path) throws Throwable, system.ArgumentException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.InvalidOperationException, system.PlatformNotSupportedException, system.NotSupportedException, system.NullReferenceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.OverflowException, system.FormatException, system.ArrayTypeMismatchException, system.security.cryptography.CryptographicException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectExists = null;
         try {
-            return (boolean)classType.Invoke("Exists", path);
+            retObjectExists = classType.Invoke("Exists", path);
+            return (boolean)retObjectExists;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectExists != null ? retObjectExists.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -219,10 +223,14 @@ public class DirectoryEntry extends Component  {
 
     public DirectoryEntry CopyTo(DirectoryEntry newParent, java.lang.String newName) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.ArgumentNullException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.OverflowException, system.FormatException, system.security.cryptography.CryptographicException, system.threading.SynchronizationLockException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCopyTo = null;
         try {
-            JCObject objCopyTo = (JCObject)classInstance.Invoke("CopyTo", newParent == null ? null : newParent.getJCOInstance(), newName);
+            retObjectCopyTo = classInstance.Invoke("CopyTo", newParent == null ? null : newParent.getJCOInstance(), newName);
+            JCObject objCopyTo = (JCObject)retObjectCopyTo;
             return new DirectoryEntry(objCopyTo);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCopyTo != null ? retObjectCopyTo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -230,10 +238,14 @@ public class DirectoryEntry extends Component  {
 
     public DirectoryEntry CopyTo(DirectoryEntry newParent) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.OutOfMemoryException, system.OverflowException, system.FormatException, system.threading.SynchronizationLockException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCopyTo = null;
         try {
-            JCObject objCopyTo = (JCObject)classInstance.Invoke("CopyTo", newParent == null ? null : newParent.getJCOInstance());
+            retObjectCopyTo = classInstance.Invoke("CopyTo", newParent == null ? null : newParent.getJCOInstance());
+            JCObject objCopyTo = (JCObject)retObjectCopyTo;
             return new DirectoryEntry(objCopyTo);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCopyTo != null ? retObjectCopyTo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -241,10 +253,14 @@ public class DirectoryEntry extends Component  {
 
     public NetObject Invoke(java.lang.String methodName, NetObject... args) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.ArgumentNullException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.OverflowException, system.FormatException, system.security.cryptography.CryptographicException, system.reflection.TargetInvocationException, system.threading.SynchronizationLockException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInvoke = null;
         try {
-            JCObject objInvoke = (JCObject)classInstance.Invoke("Invoke", methodName, toObjectFromArray(args));
+            retObjectInvoke = classInstance.Invoke("Invoke", methodName, toObjectFromArray(args));
+            JCObject objInvoke = (JCObject)retObjectInvoke;
             return new NetObject(objInvoke);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInvoke != null ? retObjectInvoke.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -252,10 +268,14 @@ public class DirectoryEntry extends Component  {
 
     public NetObject InvokeGet(java.lang.String propertyName) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.ArgumentNullException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.OverflowException, system.FormatException, system.security.cryptography.CryptographicException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInvokeGet = null;
         try {
-            JCObject objInvokeGet = (JCObject)classInstance.Invoke("InvokeGet", propertyName);
+            retObjectInvokeGet = classInstance.Invoke("InvokeGet", propertyName);
+            JCObject objInvokeGet = (JCObject)retObjectInvokeGet;
             return new NetObject(objInvokeGet);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInvokeGet != null ? retObjectInvokeGet.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -263,7 +283,7 @@ public class DirectoryEntry extends Component  {
 
     public void Close() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Close");
         } catch (JCNativeException jcne) {
@@ -273,7 +293,7 @@ public class DirectoryEntry extends Component  {
 
     public void CommitChanges() throws Throwable, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.LockRecursionException, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.threading.SynchronizationLockException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.OverflowException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CommitChanges");
         } catch (JCNativeException jcne) {
@@ -283,7 +303,7 @@ public class DirectoryEntry extends Component  {
 
     public void DeleteTree() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.ArgumentNullException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.OverflowException, system.FormatException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DeleteTree");
         } catch (JCNativeException jcne) {
@@ -293,7 +313,7 @@ public class DirectoryEntry extends Component  {
 
     public void InvokeSet(java.lang.String propertyName, NetObject... args) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.ArgumentNullException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.OverflowException, system.FormatException, system.security.cryptography.CryptographicException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("InvokeSet", propertyName, toObjectFromArray(args));
         } catch (JCNativeException jcne) {
@@ -303,7 +323,7 @@ public class DirectoryEntry extends Component  {
 
     public void MoveTo(DirectoryEntry newParent, java.lang.String newName) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.ArgumentNullException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.OverflowException, system.FormatException, system.security.cryptography.CryptographicException, system.NullReferenceException, system.threading.LockRecursionException, system.threading.SynchronizationLockException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("MoveTo", newParent == null ? null : newParent.getJCOInstance(), newName);
         } catch (JCNativeException jcne) {
@@ -313,7 +333,7 @@ public class DirectoryEntry extends Component  {
 
     public void MoveTo(DirectoryEntry newParent) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.OutOfMemoryException, system.OverflowException, system.FormatException, system.NullReferenceException, system.threading.LockRecursionException, system.threading.SynchronizationLockException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("MoveTo", newParent == null ? null : newParent.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -323,7 +343,7 @@ public class DirectoryEntry extends Component  {
 
     public void RefreshCache() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.OverflowException, system.FormatException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RefreshCache");
         } catch (JCNativeException jcne) {
@@ -333,7 +353,7 @@ public class DirectoryEntry extends Component  {
 
     public void RefreshCache(java.lang.String[] propertyNames) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.OverflowException, system.FormatException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RefreshCache", (java.lang.Object)propertyNames);
         } catch (JCNativeException jcne) {
@@ -343,7 +363,7 @@ public class DirectoryEntry extends Component  {
 
     public void RefreshCache(JCORefOut dupParam0) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.OverflowException, system.FormatException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RefreshCache", (java.lang.Object)dupParam0.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -353,7 +373,7 @@ public class DirectoryEntry extends Component  {
 
     public void Rename(java.lang.String newName) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.ArgumentNullException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.OverflowException, system.FormatException, system.security.cryptography.CryptographicException, system.NullReferenceException, system.threading.LockRecursionException, system.threading.SynchronizationLockException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Rename", newName);
         } catch (JCNativeException jcne) {
@@ -367,9 +387,13 @@ public class DirectoryEntry extends Component  {
     
     public boolean getUsePropertyCache() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUsePropertyCache = null;
         try {
-            return (boolean)classInstance.Get("UsePropertyCache");
+            retObjectUsePropertyCache = classInstance.Get("UsePropertyCache");
+            return (boolean)retObjectUsePropertyCache;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectUsePropertyCache != null ? retObjectUsePropertyCache.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -377,7 +401,7 @@ public class DirectoryEntry extends Component  {
 
     public void setUsePropertyCache(boolean UsePropertyCache) throws Throwable, system.ArgumentOutOfRangeException, system.threading.LockRecursionException, system.ArgumentException, system.InvalidOperationException, system.threading.SynchronizationLockException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.RankException, system.ArrayTypeMismatchException, system.ObjectDisposedException, system.ArgumentNullException, system.OutOfMemoryException, system.OverflowException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UsePropertyCache", UsePropertyCache);
         } catch (JCNativeException jcne) {
@@ -387,10 +411,14 @@ public class DirectoryEntry extends Component  {
 
     public ActiveDirectorySecurity getObjectSecurity() throws Throwable, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.OverflowException, system.FormatException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectObjectSecurity = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ObjectSecurity");
+            retObjectObjectSecurity = classInstance.Get("ObjectSecurity");
+            JCObject val = (JCObject)retObjectObjectSecurity;
             return new ActiveDirectorySecurity(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectObjectSecurity != null ? retObjectObjectSecurity.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -398,7 +426,7 @@ public class DirectoryEntry extends Component  {
 
     public void setObjectSecurity(ActiveDirectorySecurity ObjectSecurity) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.OutOfMemoryException, system.OverflowException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ObjectSecurity", ObjectSecurity == null ? null : ObjectSecurity.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -408,10 +436,14 @@ public class DirectoryEntry extends Component  {
 
     public AuthenticationTypes getAuthenticationType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAuthenticationType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AuthenticationType");
+            retObjectAuthenticationType = classInstance.Get("AuthenticationType");
+            JCObject val = (JCObject)retObjectAuthenticationType;
             return new AuthenticationTypes(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAuthenticationType != null ? retObjectAuthenticationType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -419,7 +451,7 @@ public class DirectoryEntry extends Component  {
 
     public void setAuthenticationType(AuthenticationTypes AuthenticationType) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AuthenticationType", AuthenticationType == null ? null : AuthenticationType.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -429,10 +461,14 @@ public class DirectoryEntry extends Component  {
 
     public DirectoryEntries getChildren() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectChildren = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Children");
+            retObjectChildren = classInstance.Get("Children");
+            JCObject val = (JCObject)retObjectChildren;
             return new DirectoryEntries(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectChildren != null ? retObjectChildren.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -440,10 +476,14 @@ public class DirectoryEntry extends Component  {
 
     public DirectoryEntry getParent() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.OverflowException, system.FormatException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectParent = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Parent");
+            retObjectParent = classInstance.Get("Parent");
+            JCObject val = (JCObject)retObjectParent;
             return new DirectoryEntry(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParent != null ? retObjectParent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -451,10 +491,14 @@ public class DirectoryEntry extends Component  {
 
     public DirectoryEntry getSchemaEntry() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.OverflowException, system.FormatException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSchemaEntry = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SchemaEntry");
+            retObjectSchemaEntry = classInstance.Get("SchemaEntry");
+            JCObject val = (JCObject)retObjectSchemaEntry;
             return new DirectoryEntry(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSchemaEntry != null ? retObjectSchemaEntry.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -462,10 +506,14 @@ public class DirectoryEntry extends Component  {
 
     public DirectoryEntryConfiguration getOptions() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.ArgumentNullException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.OverflowException, system.FormatException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOptions = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Options");
+            retObjectOptions = classInstance.Get("Options");
+            JCObject val = (JCObject)retObjectOptions;
             return new DirectoryEntryConfiguration(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOptions != null ? retObjectOptions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -473,10 +521,14 @@ public class DirectoryEntry extends Component  {
 
     public PropertyCollection getProperties() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProperties = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Properties");
+            retObjectProperties = classInstance.Get("Properties");
+            JCObject val = (JCObject)retObjectProperties;
             return new PropertyCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectProperties != null ? retObjectProperties.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -484,10 +536,14 @@ public class DirectoryEntry extends Component  {
 
     public Guid getGuid() throws Throwable, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.OverflowException, system.FormatException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGuid = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Guid");
+            retObjectGuid = classInstance.Get("Guid");
+            JCObject val = (JCObject)retObjectGuid;
             return new Guid(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGuid != null ? retObjectGuid.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -495,10 +551,14 @@ public class DirectoryEntry extends Component  {
 
     public NetObject getNativeObject() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.OverflowException, system.FormatException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNativeObject = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("NativeObject");
+            retObjectNativeObject = classInstance.Get("NativeObject");
+            JCObject val = (JCObject)retObjectNativeObject;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNativeObject != null ? retObjectNativeObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -506,9 +566,13 @@ public class DirectoryEntry extends Component  {
 
     public java.lang.String getName() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.OverflowException, system.FormatException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectName = null;
         try {
-            return (java.lang.String)classInstance.Get("Name");
+            retObjectName = classInstance.Get("Name");
+            return (java.lang.String)retObjectName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectName != null ? retObjectName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -516,9 +580,13 @@ public class DirectoryEntry extends Component  {
 
     public java.lang.String getNativeGuid() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.OutOfMemoryException, system.OverflowException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNativeGuid = null;
         try {
-            return (java.lang.String)classInstance.Get("NativeGuid");
+            retObjectNativeGuid = classInstance.Get("NativeGuid");
+            return (java.lang.String)retObjectNativeGuid;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectNativeGuid != null ? retObjectNativeGuid.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -526,7 +594,7 @@ public class DirectoryEntry extends Component  {
 
     public void setPassword(java.lang.String Password) throws Throwable, system.ObjectDisposedException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.security.cryptography.CryptographicException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.NotSupportedException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Password", Password);
         } catch (JCNativeException jcne) {
@@ -536,9 +604,13 @@ public class DirectoryEntry extends Component  {
 
     public java.lang.String getPath() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPath = null;
         try {
-            return (java.lang.String)classInstance.Get("Path");
+            retObjectPath = classInstance.Get("Path");
+            return (java.lang.String)retObjectPath;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectPath != null ? retObjectPath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -546,7 +618,7 @@ public class DirectoryEntry extends Component  {
 
     public void setPath(java.lang.String Path) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Path", Path);
         } catch (JCNativeException jcne) {
@@ -556,9 +628,13 @@ public class DirectoryEntry extends Component  {
 
     public java.lang.String getSchemaClassName() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.OverflowException, system.FormatException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSchemaClassName = null;
         try {
-            return (java.lang.String)classInstance.Get("SchemaClassName");
+            retObjectSchemaClassName = classInstance.Get("SchemaClassName");
+            return (java.lang.String)retObjectSchemaClassName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSchemaClassName != null ? retObjectSchemaClassName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -566,9 +642,13 @@ public class DirectoryEntry extends Component  {
 
     public java.lang.String getUsername() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUsername = null;
         try {
-            return (java.lang.String)classInstance.Get("Username");
+            retObjectUsername = classInstance.Get("Username");
+            return (java.lang.String)retObjectUsername;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectUsername != null ? retObjectUsername.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -576,7 +656,7 @@ public class DirectoryEntry extends Component  {
 
     public void setUsername(java.lang.String Username) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Username", Username);
         } catch (JCNativeException jcne) {

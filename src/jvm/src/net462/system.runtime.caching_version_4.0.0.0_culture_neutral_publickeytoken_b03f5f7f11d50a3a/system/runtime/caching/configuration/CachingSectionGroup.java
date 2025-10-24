@@ -167,10 +167,14 @@ public class CachingSectionGroup extends ConfigurationSectionGroup  {
     
     public MemoryCacheSection getMemoryCaches() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMemoryCaches = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MemoryCaches");
+            retObjectMemoryCaches = classInstance.Get("MemoryCaches");
+            JCObject val = (JCObject)retObjectMemoryCaches;
             return new MemoryCacheSection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMemoryCaches != null ? retObjectMemoryCaches.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

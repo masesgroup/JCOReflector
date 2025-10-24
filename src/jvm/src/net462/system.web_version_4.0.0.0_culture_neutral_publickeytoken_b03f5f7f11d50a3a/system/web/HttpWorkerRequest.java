@@ -158,9 +158,13 @@ public class HttpWorkerRequest extends NetObject  {
     
     public boolean HasEntityBody() throws Throwable, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHasEntityBody = null;
         try {
-            return (boolean)classInstance.Invoke("HasEntityBody");
+            retObjectHasEntityBody = classInstance.Invoke("HasEntityBody");
+            return (boolean)retObjectHasEntityBody;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectHasEntityBody != null ? retObjectHasEntityBody.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -168,9 +172,13 @@ public class HttpWorkerRequest extends NetObject  {
 
     public boolean HeadersSent() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHeadersSent = null;
         try {
-            return (boolean)classInstance.Invoke("HeadersSent");
+            retObjectHeadersSent = classInstance.Invoke("HeadersSent");
+            return (boolean)retObjectHeadersSent;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectHeadersSent != null ? retObjectHeadersSent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,9 +186,13 @@ public class HttpWorkerRequest extends NetObject  {
 
     public boolean IsClientConnected() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsClientConnected = null;
         try {
-            return (boolean)classInstance.Invoke("IsClientConnected");
+            retObjectIsClientConnected = classInstance.Invoke("IsClientConnected");
+            return (boolean)retObjectIsClientConnected;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsClientConnected != null ? retObjectIsClientConnected.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,9 +200,13 @@ public class HttpWorkerRequest extends NetObject  {
 
     public boolean IsEntireEntityBodyIsPreloaded() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsEntireEntityBodyIsPreloaded = null;
         try {
-            return (boolean)classInstance.Invoke("IsEntireEntityBodyIsPreloaded");
+            retObjectIsEntireEntityBodyIsPreloaded = classInstance.Invoke("IsEntireEntityBodyIsPreloaded");
+            return (boolean)retObjectIsEntireEntityBodyIsPreloaded;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsEntireEntityBodyIsPreloaded != null ? retObjectIsEntireEntityBodyIsPreloaded.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,9 +214,13 @@ public class HttpWorkerRequest extends NetObject  {
 
     public boolean IsSecure() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsSecure = null;
         try {
-            return (boolean)classInstance.Invoke("IsSecure");
+            retObjectIsSecure = classInstance.Invoke("IsSecure");
+            return (boolean)retObjectIsSecure;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsSecure != null ? retObjectIsSecure.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -208,10 +228,12 @@ public class HttpWorkerRequest extends NetObject  {
 
     public byte[] GetClientCertificate() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetClientCertificate = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetClientCertificate");
+            retObjectGetClientCertificate = classInstance.Invoke("GetClientCertificate");
+            JCObject resultingObjects = (JCObject)retObjectGetClientCertificate;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -220,6 +242,8 @@ public class HttpWorkerRequest extends NetObject  {
 				resultingArray[indexGetClientCertificate] = (byte)resultingArrayList.get(indexGetClientCertificate);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectGetClientCertificate != null ? retObjectGetClientCertificate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -227,10 +251,12 @@ public class HttpWorkerRequest extends NetObject  {
 
     public byte[] GetClientCertificateBinaryIssuer() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetClientCertificateBinaryIssuer = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetClientCertificateBinaryIssuer");
+            retObjectGetClientCertificateBinaryIssuer = classInstance.Invoke("GetClientCertificateBinaryIssuer");
+            JCObject resultingObjects = (JCObject)retObjectGetClientCertificateBinaryIssuer;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -239,6 +265,8 @@ public class HttpWorkerRequest extends NetObject  {
 				resultingArray[indexGetClientCertificateBinaryIssuer] = (byte)resultingArrayList.get(indexGetClientCertificateBinaryIssuer);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectGetClientCertificateBinaryIssuer != null ? retObjectGetClientCertificateBinaryIssuer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -246,10 +274,12 @@ public class HttpWorkerRequest extends NetObject  {
 
     public byte[] GetClientCertificatePublicKey() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetClientCertificatePublicKey = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetClientCertificatePublicKey");
+            retObjectGetClientCertificatePublicKey = classInstance.Invoke("GetClientCertificatePublicKey");
+            JCObject resultingObjects = (JCObject)retObjectGetClientCertificatePublicKey;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -258,6 +288,8 @@ public class HttpWorkerRequest extends NetObject  {
 				resultingArray[indexGetClientCertificatePublicKey] = (byte)resultingArrayList.get(indexGetClientCertificatePublicKey);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectGetClientCertificatePublicKey != null ? retObjectGetClientCertificatePublicKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -265,10 +297,12 @@ public class HttpWorkerRequest extends NetObject  {
 
     public byte[] GetPreloadedEntityBody() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPreloadedEntityBody = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetPreloadedEntityBody");
+            retObjectGetPreloadedEntityBody = classInstance.Invoke("GetPreloadedEntityBody");
+            JCObject resultingObjects = (JCObject)retObjectGetPreloadedEntityBody;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -277,6 +311,8 @@ public class HttpWorkerRequest extends NetObject  {
 				resultingArray[indexGetPreloadedEntityBody] = (byte)resultingArrayList.get(indexGetPreloadedEntityBody);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectGetPreloadedEntityBody != null ? retObjectGetPreloadedEntityBody.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -284,10 +320,12 @@ public class HttpWorkerRequest extends NetObject  {
 
     public byte[] GetQueryStringRawBytes() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetQueryStringRawBytes = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetQueryStringRawBytes");
+            retObjectGetQueryStringRawBytes = classInstance.Invoke("GetQueryStringRawBytes");
+            JCObject resultingObjects = (JCObject)retObjectGetQueryStringRawBytes;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -296,6 +334,8 @@ public class HttpWorkerRequest extends NetObject  {
 				resultingArray[indexGetQueryStringRawBytes] = (byte)resultingArrayList.get(indexGetQueryStringRawBytes);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectGetQueryStringRawBytes != null ? retObjectGetQueryStringRawBytes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -303,9 +343,20 @@ public class HttpWorkerRequest extends NetObject  {
 
     public int EndRead(IAsyncResult asyncResult) throws Throwable, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEndRead = null;
         try {
-            return (int)classInstance.Invoke("EndRead", asyncResult == null ? null : asyncResult.getJCOInstance());
+            retObjectEndRead = classInstance.Invoke("EndRead", asyncResult == null ? null : asyncResult.getJCOInstance());
+            return (int)retObjectEndRead;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectEndRead_ToString = retObjectEndRead == null ? "null" : retObjectEndRead.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectEndReadNumber = (java.lang.Number)retObjectEndRead;
+                return retObjectEndReadNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectEndRead != null ? retObjectEndRead.getClass() : "null", retObjectEndRead_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -313,9 +364,20 @@ public class HttpWorkerRequest extends NetObject  {
 
     public int GetClientCertificateEncoding() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetClientCertificateEncoding = null;
         try {
-            return (int)classInstance.Invoke("GetClientCertificateEncoding");
+            retObjectGetClientCertificateEncoding = classInstance.Invoke("GetClientCertificateEncoding");
+            return (int)retObjectGetClientCertificateEncoding;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetClientCertificateEncoding_ToString = retObjectGetClientCertificateEncoding == null ? "null" : retObjectGetClientCertificateEncoding.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetClientCertificateEncodingNumber = (java.lang.Number)retObjectGetClientCertificateEncoding;
+                return retObjectGetClientCertificateEncodingNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetClientCertificateEncoding != null ? retObjectGetClientCertificateEncoding.getClass() : "null", retObjectGetClientCertificateEncoding_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -323,9 +385,20 @@ public class HttpWorkerRequest extends NetObject  {
 
     public static int GetKnownRequestHeaderIndex(java.lang.String header) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetKnownRequestHeaderIndex = null;
         try {
-            return (int)classType.Invoke("GetKnownRequestHeaderIndex", header);
+            retObjectGetKnownRequestHeaderIndex = classType.Invoke("GetKnownRequestHeaderIndex", header);
+            return (int)retObjectGetKnownRequestHeaderIndex;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetKnownRequestHeaderIndex_ToString = retObjectGetKnownRequestHeaderIndex == null ? "null" : retObjectGetKnownRequestHeaderIndex.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetKnownRequestHeaderIndexNumber = (java.lang.Number)retObjectGetKnownRequestHeaderIndex;
+                return retObjectGetKnownRequestHeaderIndexNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetKnownRequestHeaderIndex != null ? retObjectGetKnownRequestHeaderIndex.getClass() : "null", retObjectGetKnownRequestHeaderIndex_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -333,9 +406,20 @@ public class HttpWorkerRequest extends NetObject  {
 
     public static int GetKnownResponseHeaderIndex(java.lang.String header) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetKnownResponseHeaderIndex = null;
         try {
-            return (int)classType.Invoke("GetKnownResponseHeaderIndex", header);
+            retObjectGetKnownResponseHeaderIndex = classType.Invoke("GetKnownResponseHeaderIndex", header);
+            return (int)retObjectGetKnownResponseHeaderIndex;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetKnownResponseHeaderIndex_ToString = retObjectGetKnownResponseHeaderIndex == null ? "null" : retObjectGetKnownResponseHeaderIndex.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetKnownResponseHeaderIndexNumber = (java.lang.Number)retObjectGetKnownResponseHeaderIndex;
+                return retObjectGetKnownResponseHeaderIndexNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetKnownResponseHeaderIndex != null ? retObjectGetKnownResponseHeaderIndex.getClass() : "null", retObjectGetKnownResponseHeaderIndex_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -343,9 +427,20 @@ public class HttpWorkerRequest extends NetObject  {
 
     public int GetLocalPort() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetLocalPort = null;
         try {
-            return (int)classInstance.Invoke("GetLocalPort");
+            retObjectGetLocalPort = classInstance.Invoke("GetLocalPort");
+            return (int)retObjectGetLocalPort;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetLocalPort_ToString = retObjectGetLocalPort == null ? "null" : retObjectGetLocalPort.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetLocalPortNumber = (java.lang.Number)retObjectGetLocalPort;
+                return retObjectGetLocalPortNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetLocalPort != null ? retObjectGetLocalPort.getClass() : "null", retObjectGetLocalPort_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -353,9 +448,20 @@ public class HttpWorkerRequest extends NetObject  {
 
     public int GetPreloadedEntityBody(byte[] buffer, int offset) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPreloadedEntityBody = null;
         try {
-            return (int)classInstance.Invoke("GetPreloadedEntityBody", buffer, offset);
+            retObjectGetPreloadedEntityBody = classInstance.Invoke("GetPreloadedEntityBody", buffer, offset);
+            return (int)retObjectGetPreloadedEntityBody;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetPreloadedEntityBody_ToString = retObjectGetPreloadedEntityBody == null ? "null" : retObjectGetPreloadedEntityBody.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetPreloadedEntityBodyNumber = (java.lang.Number)retObjectGetPreloadedEntityBody;
+                return retObjectGetPreloadedEntityBodyNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetPreloadedEntityBody != null ? retObjectGetPreloadedEntityBody.getClass() : "null", retObjectGetPreloadedEntityBody_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -363,9 +469,20 @@ public class HttpWorkerRequest extends NetObject  {
 
     public int GetPreloadedEntityBody(JCORefOut dupParam0, int dupParam1) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPreloadedEntityBody = null;
         try {
-            return (int)classInstance.Invoke("GetPreloadedEntityBody", dupParam0.getJCRefOut(), dupParam1);
+            retObjectGetPreloadedEntityBody = classInstance.Invoke("GetPreloadedEntityBody", dupParam0.getJCRefOut(), dupParam1);
+            return (int)retObjectGetPreloadedEntityBody;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetPreloadedEntityBody_ToString = retObjectGetPreloadedEntityBody == null ? "null" : retObjectGetPreloadedEntityBody.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetPreloadedEntityBodyNumber = (java.lang.Number)retObjectGetPreloadedEntityBody;
+                return retObjectGetPreloadedEntityBodyNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetPreloadedEntityBody != null ? retObjectGetPreloadedEntityBody.getClass() : "null", retObjectGetPreloadedEntityBody_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -373,9 +490,20 @@ public class HttpWorkerRequest extends NetObject  {
 
     public int GetPreloadedEntityBodyLength() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPreloadedEntityBodyLength = null;
         try {
-            return (int)classInstance.Invoke("GetPreloadedEntityBodyLength");
+            retObjectGetPreloadedEntityBodyLength = classInstance.Invoke("GetPreloadedEntityBodyLength");
+            return (int)retObjectGetPreloadedEntityBodyLength;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetPreloadedEntityBodyLength_ToString = retObjectGetPreloadedEntityBodyLength == null ? "null" : retObjectGetPreloadedEntityBodyLength.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetPreloadedEntityBodyLengthNumber = (java.lang.Number)retObjectGetPreloadedEntityBodyLength;
+                return retObjectGetPreloadedEntityBodyLengthNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetPreloadedEntityBodyLength != null ? retObjectGetPreloadedEntityBodyLength.getClass() : "null", retObjectGetPreloadedEntityBodyLength_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -383,9 +511,20 @@ public class HttpWorkerRequest extends NetObject  {
 
     public int GetRemotePort() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetRemotePort = null;
         try {
-            return (int)classInstance.Invoke("GetRemotePort");
+            retObjectGetRemotePort = classInstance.Invoke("GetRemotePort");
+            return (int)retObjectGetRemotePort;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetRemotePort_ToString = retObjectGetRemotePort == null ? "null" : retObjectGetRemotePort.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetRemotePortNumber = (java.lang.Number)retObjectGetRemotePort;
+                return retObjectGetRemotePortNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetRemotePort != null ? retObjectGetRemotePort.getClass() : "null", retObjectGetRemotePort_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -393,9 +532,20 @@ public class HttpWorkerRequest extends NetObject  {
 
     public int GetRequestReason() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetRequestReason = null;
         try {
-            return (int)classInstance.Invoke("GetRequestReason");
+            retObjectGetRequestReason = classInstance.Invoke("GetRequestReason");
+            return (int)retObjectGetRequestReason;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetRequestReason_ToString = retObjectGetRequestReason == null ? "null" : retObjectGetRequestReason.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetRequestReasonNumber = (java.lang.Number)retObjectGetRequestReason;
+                return retObjectGetRequestReasonNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetRequestReason != null ? retObjectGetRequestReason.getClass() : "null", retObjectGetRequestReason_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -403,9 +553,20 @@ public class HttpWorkerRequest extends NetObject  {
 
     public int GetTotalEntityBodyLength() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetTotalEntityBodyLength = null;
         try {
-            return (int)classInstance.Invoke("GetTotalEntityBodyLength");
+            retObjectGetTotalEntityBodyLength = classInstance.Invoke("GetTotalEntityBodyLength");
+            return (int)retObjectGetTotalEntityBodyLength;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetTotalEntityBodyLength_ToString = retObjectGetTotalEntityBodyLength == null ? "null" : retObjectGetTotalEntityBodyLength.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetTotalEntityBodyLengthNumber = (java.lang.Number)retObjectGetTotalEntityBodyLength;
+                return retObjectGetTotalEntityBodyLengthNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetTotalEntityBodyLength != null ? retObjectGetTotalEntityBodyLength.getClass() : "null", retObjectGetTotalEntityBodyLength_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -413,9 +574,20 @@ public class HttpWorkerRequest extends NetObject  {
 
     public int ReadEntityBody(byte[] buffer, int size) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadEntityBody = null;
         try {
-            return (int)classInstance.Invoke("ReadEntityBody", buffer, size);
+            retObjectReadEntityBody = classInstance.Invoke("ReadEntityBody", buffer, size);
+            return (int)retObjectReadEntityBody;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectReadEntityBody_ToString = retObjectReadEntityBody == null ? "null" : retObjectReadEntityBody.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectReadEntityBodyNumber = (java.lang.Number)retObjectReadEntityBody;
+                return retObjectReadEntityBodyNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectReadEntityBody != null ? retObjectReadEntityBody.getClass() : "null", retObjectReadEntityBody_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -423,9 +595,20 @@ public class HttpWorkerRequest extends NetObject  {
 
     public int ReadEntityBody(JCORefOut dupParam0, int dupParam1) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadEntityBody = null;
         try {
-            return (int)classInstance.Invoke("ReadEntityBody", dupParam0.getJCRefOut(), dupParam1);
+            retObjectReadEntityBody = classInstance.Invoke("ReadEntityBody", dupParam0.getJCRefOut(), dupParam1);
+            return (int)retObjectReadEntityBody;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectReadEntityBody_ToString = retObjectReadEntityBody == null ? "null" : retObjectReadEntityBody.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectReadEntityBodyNumber = (java.lang.Number)retObjectReadEntityBody;
+                return retObjectReadEntityBodyNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectReadEntityBody != null ? retObjectReadEntityBody.getClass() : "null", retObjectReadEntityBody_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -433,9 +616,20 @@ public class HttpWorkerRequest extends NetObject  {
 
     public int ReadEntityBody(byte[] buffer, int offset, int size) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadEntityBody = null;
         try {
-            return (int)classInstance.Invoke("ReadEntityBody", buffer, offset, size);
+            retObjectReadEntityBody = classInstance.Invoke("ReadEntityBody", buffer, offset, size);
+            return (int)retObjectReadEntityBody;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectReadEntityBody_ToString = retObjectReadEntityBody == null ? "null" : retObjectReadEntityBody.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectReadEntityBodyNumber = (java.lang.Number)retObjectReadEntityBody;
+                return retObjectReadEntityBodyNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectReadEntityBody != null ? retObjectReadEntityBody.getClass() : "null", retObjectReadEntityBody_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -443,9 +637,20 @@ public class HttpWorkerRequest extends NetObject  {
 
     public int ReadEntityBody(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadEntityBody = null;
         try {
-            return (int)classInstance.Invoke("ReadEntityBody", dupParam0.getJCRefOut(), dupParam1, dupParam2);
+            retObjectReadEntityBody = classInstance.Invoke("ReadEntityBody", dupParam0.getJCRefOut(), dupParam1, dupParam2);
+            return (int)retObjectReadEntityBody;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectReadEntityBody_ToString = retObjectReadEntityBody == null ? "null" : retObjectReadEntityBody.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectReadEntityBodyNumber = (java.lang.Number)retObjectReadEntityBody;
+                return retObjectReadEntityBodyNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectReadEntityBody != null ? retObjectReadEntityBody.getClass() : "null", retObjectReadEntityBody_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -453,9 +658,20 @@ public class HttpWorkerRequest extends NetObject  {
 
     public long GetBytesRead() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetBytesRead = null;
         try {
-            return (long)classInstance.Invoke("GetBytesRead");
+            retObjectGetBytesRead = classInstance.Invoke("GetBytesRead");
+            return (long)retObjectGetBytesRead;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetBytesRead_ToString = retObjectGetBytesRead == null ? "null" : retObjectGetBytesRead.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetBytesReadNumber = (java.lang.Number)retObjectGetBytesRead;
+                return retObjectGetBytesReadNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectGetBytesRead != null ? retObjectGetBytesRead.getClass() : "null", retObjectGetBytesRead_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -463,9 +679,20 @@ public class HttpWorkerRequest extends NetObject  {
 
     public long GetConnectionID() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetConnectionID = null;
         try {
-            return (long)classInstance.Invoke("GetConnectionID");
+            retObjectGetConnectionID = classInstance.Invoke("GetConnectionID");
+            return (long)retObjectGetConnectionID;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetConnectionID_ToString = retObjectGetConnectionID == null ? "null" : retObjectGetConnectionID.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetConnectionIDNumber = (java.lang.Number)retObjectGetConnectionID;
+                return retObjectGetConnectionIDNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectGetConnectionID != null ? retObjectGetConnectionID.getClass() : "null", retObjectGetConnectionID_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -473,9 +700,20 @@ public class HttpWorkerRequest extends NetObject  {
 
     public long GetUrlContextID() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetUrlContextID = null;
         try {
-            return (long)classInstance.Invoke("GetUrlContextID");
+            retObjectGetUrlContextID = classInstance.Invoke("GetUrlContextID");
+            return (long)retObjectGetUrlContextID;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetUrlContextID_ToString = retObjectGetUrlContextID == null ? "null" : retObjectGetUrlContextID.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetUrlContextIDNumber = (java.lang.Number)retObjectGetUrlContextID;
+                return retObjectGetUrlContextIDNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectGetUrlContextID != null ? retObjectGetUrlContextID.getClass() : "null", retObjectGetUrlContextID_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -483,10 +721,14 @@ public class HttpWorkerRequest extends NetObject  {
 
     public DateTime GetClientCertificateValidFrom() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidTimeZoneException, system.OverflowException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetClientCertificateValidFrom = null;
         try {
-            JCObject objGetClientCertificateValidFrom = (JCObject)classInstance.Invoke("GetClientCertificateValidFrom");
+            retObjectGetClientCertificateValidFrom = classInstance.Invoke("GetClientCertificateValidFrom");
+            JCObject objGetClientCertificateValidFrom = (JCObject)retObjectGetClientCertificateValidFrom;
             return new DateTime(objGetClientCertificateValidFrom);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetClientCertificateValidFrom != null ? retObjectGetClientCertificateValidFrom.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -494,10 +736,14 @@ public class HttpWorkerRequest extends NetObject  {
 
     public DateTime GetClientCertificateValidUntil() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidTimeZoneException, system.OverflowException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetClientCertificateValidUntil = null;
         try {
-            JCObject objGetClientCertificateValidUntil = (JCObject)classInstance.Invoke("GetClientCertificateValidUntil");
+            retObjectGetClientCertificateValidUntil = classInstance.Invoke("GetClientCertificateValidUntil");
+            JCObject objGetClientCertificateValidUntil = (JCObject)retObjectGetClientCertificateValidUntil;
             return new DateTime(objGetClientCertificateValidUntil);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetClientCertificateValidUntil != null ? retObjectGetClientCertificateValidUntil.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -505,10 +751,14 @@ public class HttpWorkerRequest extends NetObject  {
 
     public IAsyncResult BeginFlush(AsyncCallback callback, NetObject state) throws Throwable, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginFlush = null;
         try {
-            JCObject objBeginFlush = (JCObject)classInstance.Invoke("BeginFlush", callback, state == null ? null : state.getJCOInstance());
+            retObjectBeginFlush = classInstance.Invoke("BeginFlush", callback, state == null ? null : state.getJCOInstance());
+            JCObject objBeginFlush = (JCObject)retObjectBeginFlush;
             return new IAsyncResultImplementation(objBeginFlush);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginFlush != null ? retObjectBeginFlush.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -516,10 +766,14 @@ public class HttpWorkerRequest extends NetObject  {
 
     public IAsyncResult BeginRead(byte[] buffer, int offset, int count, AsyncCallback callback, NetObject state) throws Throwable, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginRead = null;
         try {
-            JCObject objBeginRead = (JCObject)classInstance.Invoke("BeginRead", buffer, offset, count, callback, state == null ? null : state.getJCOInstance());
+            retObjectBeginRead = classInstance.Invoke("BeginRead", buffer, offset, count, callback, state == null ? null : state.getJCOInstance());
+            JCObject objBeginRead = (JCObject)retObjectBeginRead;
             return new IAsyncResultImplementation(objBeginRead);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginRead != null ? retObjectBeginRead.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -527,10 +781,14 @@ public class HttpWorkerRequest extends NetObject  {
 
     public IAsyncResult BeginRead(JCORefOut dupParam0, int dupParam1, int dupParam2, AsyncCallback dupParam3, NetObject dupParam4) throws Throwable, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginRead = null;
         try {
-            JCObject objBeginRead = (JCObject)classInstance.Invoke("BeginRead", dupParam0.getJCRefOut(), dupParam1, dupParam2, dupParam3, dupParam4 == null ? null : dupParam4.getJCOInstance());
+            retObjectBeginRead = classInstance.Invoke("BeginRead", dupParam0.getJCRefOut(), dupParam1, dupParam2, dupParam3, dupParam4 == null ? null : dupParam4.getJCOInstance());
+            JCObject objBeginRead = (JCObject)retObjectBeginRead;
             return new IAsyncResultImplementation(objBeginRead);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginRead != null ? retObjectBeginRead.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -538,9 +796,13 @@ public class HttpWorkerRequest extends NetObject  {
 
     public java.lang.String GetAppPath() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetAppPath = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetAppPath");
+            retObjectGetAppPath = classInstance.Invoke("GetAppPath");
+            return (java.lang.String)retObjectGetAppPath;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetAppPath != null ? retObjectGetAppPath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -548,9 +810,13 @@ public class HttpWorkerRequest extends NetObject  {
 
     public java.lang.String GetAppPathTranslated() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetAppPathTranslated = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetAppPathTranslated");
+            retObjectGetAppPathTranslated = classInstance.Invoke("GetAppPathTranslated");
+            return (java.lang.String)retObjectGetAppPathTranslated;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetAppPathTranslated != null ? retObjectGetAppPathTranslated.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -558,9 +824,13 @@ public class HttpWorkerRequest extends NetObject  {
 
     public java.lang.String GetAppPoolID() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetAppPoolID = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetAppPoolID");
+            retObjectGetAppPoolID = classInstance.Invoke("GetAppPoolID");
+            return (java.lang.String)retObjectGetAppPoolID;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetAppPoolID != null ? retObjectGetAppPoolID.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -568,9 +838,13 @@ public class HttpWorkerRequest extends NetObject  {
 
     public java.lang.String GetFilePath() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetFilePath = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetFilePath");
+            retObjectGetFilePath = classInstance.Invoke("GetFilePath");
+            return (java.lang.String)retObjectGetFilePath;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetFilePath != null ? retObjectGetFilePath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -578,9 +852,13 @@ public class HttpWorkerRequest extends NetObject  {
 
     public java.lang.String GetFilePathTranslated() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetFilePathTranslated = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetFilePathTranslated");
+            retObjectGetFilePathTranslated = classInstance.Invoke("GetFilePathTranslated");
+            return (java.lang.String)retObjectGetFilePathTranslated;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetFilePathTranslated != null ? retObjectGetFilePathTranslated.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -588,9 +866,13 @@ public class HttpWorkerRequest extends NetObject  {
 
     public java.lang.String GetHttpVerbName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetHttpVerbName = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetHttpVerbName");
+            retObjectGetHttpVerbName = classInstance.Invoke("GetHttpVerbName");
+            return (java.lang.String)retObjectGetHttpVerbName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetHttpVerbName != null ? retObjectGetHttpVerbName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -598,9 +880,13 @@ public class HttpWorkerRequest extends NetObject  {
 
     public java.lang.String GetHttpVersion() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetHttpVersion = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetHttpVersion");
+            retObjectGetHttpVersion = classInstance.Invoke("GetHttpVersion");
+            return (java.lang.String)retObjectGetHttpVersion;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetHttpVersion != null ? retObjectGetHttpVersion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -608,9 +894,13 @@ public class HttpWorkerRequest extends NetObject  {
 
     public java.lang.String GetKnownRequestHeader(int index) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetKnownRequestHeader = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetKnownRequestHeader", index);
+            retObjectGetKnownRequestHeader = classInstance.Invoke("GetKnownRequestHeader", index);
+            return (java.lang.String)retObjectGetKnownRequestHeader;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetKnownRequestHeader != null ? retObjectGetKnownRequestHeader.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -618,9 +908,13 @@ public class HttpWorkerRequest extends NetObject  {
 
     public static java.lang.String GetKnownRequestHeaderName(int index) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetKnownRequestHeaderName = null;
         try {
-            return (java.lang.String)classType.Invoke("GetKnownRequestHeaderName", index);
+            retObjectGetKnownRequestHeaderName = classType.Invoke("GetKnownRequestHeaderName", index);
+            return (java.lang.String)retObjectGetKnownRequestHeaderName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetKnownRequestHeaderName != null ? retObjectGetKnownRequestHeaderName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -628,9 +922,13 @@ public class HttpWorkerRequest extends NetObject  {
 
     public static java.lang.String GetKnownResponseHeaderName(int index) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetKnownResponseHeaderName = null;
         try {
-            return (java.lang.String)classType.Invoke("GetKnownResponseHeaderName", index);
+            retObjectGetKnownResponseHeaderName = classType.Invoke("GetKnownResponseHeaderName", index);
+            return (java.lang.String)retObjectGetKnownResponseHeaderName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetKnownResponseHeaderName != null ? retObjectGetKnownResponseHeaderName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -638,9 +936,13 @@ public class HttpWorkerRequest extends NetObject  {
 
     public java.lang.String GetLocalAddress() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetLocalAddress = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetLocalAddress");
+            retObjectGetLocalAddress = classInstance.Invoke("GetLocalAddress");
+            return (java.lang.String)retObjectGetLocalAddress;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetLocalAddress != null ? retObjectGetLocalAddress.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -648,9 +950,13 @@ public class HttpWorkerRequest extends NetObject  {
 
     public java.lang.String GetPathInfo() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPathInfo = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetPathInfo");
+            retObjectGetPathInfo = classInstance.Invoke("GetPathInfo");
+            return (java.lang.String)retObjectGetPathInfo;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetPathInfo != null ? retObjectGetPathInfo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -658,9 +964,13 @@ public class HttpWorkerRequest extends NetObject  {
 
     public java.lang.String GetProtocol() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetProtocol = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetProtocol");
+            retObjectGetProtocol = classInstance.Invoke("GetProtocol");
+            return (java.lang.String)retObjectGetProtocol;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetProtocol != null ? retObjectGetProtocol.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -668,9 +978,13 @@ public class HttpWorkerRequest extends NetObject  {
 
     public java.lang.String GetQueryString() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetQueryString = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetQueryString");
+            retObjectGetQueryString = classInstance.Invoke("GetQueryString");
+            return (java.lang.String)retObjectGetQueryString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetQueryString != null ? retObjectGetQueryString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -678,9 +992,13 @@ public class HttpWorkerRequest extends NetObject  {
 
     public java.lang.String GetRawUrl() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetRawUrl = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetRawUrl");
+            retObjectGetRawUrl = classInstance.Invoke("GetRawUrl");
+            return (java.lang.String)retObjectGetRawUrl;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetRawUrl != null ? retObjectGetRawUrl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -688,9 +1006,13 @@ public class HttpWorkerRequest extends NetObject  {
 
     public java.lang.String GetRemoteAddress() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetRemoteAddress = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetRemoteAddress");
+            retObjectGetRemoteAddress = classInstance.Invoke("GetRemoteAddress");
+            return (java.lang.String)retObjectGetRemoteAddress;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetRemoteAddress != null ? retObjectGetRemoteAddress.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -698,9 +1020,13 @@ public class HttpWorkerRequest extends NetObject  {
 
     public java.lang.String GetRemoteName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetRemoteName = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetRemoteName");
+            retObjectGetRemoteName = classInstance.Invoke("GetRemoteName");
+            return (java.lang.String)retObjectGetRemoteName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetRemoteName != null ? retObjectGetRemoteName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -708,9 +1034,13 @@ public class HttpWorkerRequest extends NetObject  {
 
     public java.lang.String GetServerName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetServerName = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetServerName");
+            retObjectGetServerName = classInstance.Invoke("GetServerName");
+            return (java.lang.String)retObjectGetServerName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetServerName != null ? retObjectGetServerName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -718,9 +1048,13 @@ public class HttpWorkerRequest extends NetObject  {
 
     public java.lang.String GetServerVariable(java.lang.String name) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetServerVariable = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetServerVariable", name);
+            retObjectGetServerVariable = classInstance.Invoke("GetServerVariable", name);
+            return (java.lang.String)retObjectGetServerVariable;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetServerVariable != null ? retObjectGetServerVariable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -728,9 +1062,13 @@ public class HttpWorkerRequest extends NetObject  {
 
     public static java.lang.String GetStatusDescription(int code) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetStatusDescription = null;
         try {
-            return (java.lang.String)classType.Invoke("GetStatusDescription", code);
+            retObjectGetStatusDescription = classType.Invoke("GetStatusDescription", code);
+            return (java.lang.String)retObjectGetStatusDescription;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetStatusDescription != null ? retObjectGetStatusDescription.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -738,9 +1076,13 @@ public class HttpWorkerRequest extends NetObject  {
 
     public java.lang.String GetUnknownRequestHeader(java.lang.String name) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetUnknownRequestHeader = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetUnknownRequestHeader", name);
+            retObjectGetUnknownRequestHeader = classInstance.Invoke("GetUnknownRequestHeader", name);
+            return (java.lang.String)retObjectGetUnknownRequestHeader;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetUnknownRequestHeader != null ? retObjectGetUnknownRequestHeader.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -748,9 +1090,13 @@ public class HttpWorkerRequest extends NetObject  {
 
     public java.lang.String GetUriPath() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetUriPath = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetUriPath");
+            retObjectGetUriPath = classInstance.Invoke("GetUriPath");
+            return (java.lang.String)retObjectGetUriPath;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetUriPath != null ? retObjectGetUriPath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -758,9 +1104,13 @@ public class HttpWorkerRequest extends NetObject  {
 
     public java.lang.String MapPath(java.lang.String virtualPath) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMapPath = null;
         try {
-            return (java.lang.String)classInstance.Invoke("MapPath", virtualPath);
+            retObjectMapPath = classInstance.Invoke("MapPath", virtualPath);
+            return (java.lang.String)retObjectMapPath;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectMapPath != null ? retObjectMapPath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -768,7 +1118,7 @@ public class HttpWorkerRequest extends NetObject  {
 
     public void CloseConnection() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CloseConnection");
         } catch (JCNativeException jcne) {
@@ -778,7 +1128,7 @@ public class HttpWorkerRequest extends NetObject  {
 
     public void EndFlush(IAsyncResult asyncResult) throws Throwable, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EndFlush", asyncResult == null ? null : asyncResult.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -788,7 +1138,7 @@ public class HttpWorkerRequest extends NetObject  {
 
     public void EndOfRequest() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EndOfRequest");
         } catch (JCNativeException jcne) {
@@ -798,7 +1148,7 @@ public class HttpWorkerRequest extends NetObject  {
 
     public void FlushResponse(boolean finalFlush) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("FlushResponse", finalFlush);
         } catch (JCNativeException jcne) {
@@ -808,7 +1158,7 @@ public class HttpWorkerRequest extends NetObject  {
 
     public void SendCalculatedContentLength(int contentLength) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SendCalculatedContentLength", contentLength);
         } catch (JCNativeException jcne) {
@@ -818,7 +1168,7 @@ public class HttpWorkerRequest extends NetObject  {
 
     public void SendCalculatedContentLength(long contentLength) throws Throwable, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SendCalculatedContentLength", contentLength);
         } catch (JCNativeException jcne) {
@@ -828,7 +1178,7 @@ public class HttpWorkerRequest extends NetObject  {
 
     public void SendKnownResponseHeader(int index, java.lang.String value) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SendKnownResponseHeader", index, value);
         } catch (JCNativeException jcne) {
@@ -838,7 +1188,7 @@ public class HttpWorkerRequest extends NetObject  {
 
     public void SendResponseFromFile(java.lang.String filename, long offset, long length) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SendResponseFromFile", filename, offset, length);
         } catch (JCNativeException jcne) {
@@ -848,7 +1198,7 @@ public class HttpWorkerRequest extends NetObject  {
 
     public void SendResponseFromMemory(byte[] data, int length) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SendResponseFromMemory", data, length);
         } catch (JCNativeException jcne) {
@@ -858,7 +1208,7 @@ public class HttpWorkerRequest extends NetObject  {
 
     public void SendResponseFromMemory(JCORefOut dupParam0, int dupParam1) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SendResponseFromMemory", dupParam0.getJCRefOut(), dupParam1);
         } catch (JCNativeException jcne) {
@@ -868,7 +1218,7 @@ public class HttpWorkerRequest extends NetObject  {
 
     public void SendStatus(int statusCode, java.lang.String statusDescription) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SendStatus", statusCode, statusDescription);
         } catch (JCNativeException jcne) {
@@ -878,7 +1228,7 @@ public class HttpWorkerRequest extends NetObject  {
 
     public void SendUnknownResponseHeader(java.lang.String name, java.lang.String value) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SendUnknownResponseHeader", name, value);
         } catch (JCNativeException jcne) {
@@ -892,9 +1242,13 @@ public class HttpWorkerRequest extends NetObject  {
     
     public boolean getSupportsAsyncFlush() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSupportsAsyncFlush = null;
         try {
-            return (boolean)classInstance.Get("SupportsAsyncFlush");
+            retObjectSupportsAsyncFlush = classInstance.Get("SupportsAsyncFlush");
+            return (boolean)retObjectSupportsAsyncFlush;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectSupportsAsyncFlush != null ? retObjectSupportsAsyncFlush.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -902,9 +1256,13 @@ public class HttpWorkerRequest extends NetObject  {
 
     public boolean getSupportsAsyncRead() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSupportsAsyncRead = null;
         try {
-            return (boolean)classInstance.Get("SupportsAsyncRead");
+            retObjectSupportsAsyncRead = classInstance.Get("SupportsAsyncRead");
+            return (boolean)retObjectSupportsAsyncRead;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectSupportsAsyncRead != null ? retObjectSupportsAsyncRead.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -912,10 +1270,14 @@ public class HttpWorkerRequest extends NetObject  {
 
     public Guid getRequestTraceIdentifier() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRequestTraceIdentifier = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RequestTraceIdentifier");
+            retObjectRequestTraceIdentifier = classInstance.Get("RequestTraceIdentifier");
+            JCObject val = (JCObject)retObjectRequestTraceIdentifier;
             return new Guid(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRequestTraceIdentifier != null ? retObjectRequestTraceIdentifier.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -923,9 +1285,13 @@ public class HttpWorkerRequest extends NetObject  {
 
     public java.lang.String getMachineConfigPath() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMachineConfigPath = null;
         try {
-            return (java.lang.String)classInstance.Get("MachineConfigPath");
+            retObjectMachineConfigPath = classInstance.Get("MachineConfigPath");
+            return (java.lang.String)retObjectMachineConfigPath;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectMachineConfigPath != null ? retObjectMachineConfigPath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -933,9 +1299,13 @@ public class HttpWorkerRequest extends NetObject  {
 
     public java.lang.String getMachineInstallDirectory() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMachineInstallDirectory = null;
         try {
-            return (java.lang.String)classInstance.Get("MachineInstallDirectory");
+            retObjectMachineInstallDirectory = classInstance.Get("MachineInstallDirectory");
+            return (java.lang.String)retObjectMachineInstallDirectory;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectMachineInstallDirectory != null ? retObjectMachineInstallDirectory.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -943,9 +1313,13 @@ public class HttpWorkerRequest extends NetObject  {
 
     public java.lang.String getRootWebConfigPath() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRootWebConfigPath = null;
         try {
-            return (java.lang.String)classInstance.Get("RootWebConfigPath");
+            retObjectRootWebConfigPath = classInstance.Get("RootWebConfigPath");
+            return (java.lang.String)retObjectRootWebConfigPath;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectRootWebConfigPath != null ? retObjectRootWebConfigPath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

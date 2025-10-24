@@ -165,9 +165,13 @@ public class ReceiveSettings extends NetObject  {
     
     public boolean getCanCreateInstance() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanCreateInstance = null;
         try {
-            return (boolean)classInstance.Get("CanCreateInstance");
+            retObjectCanCreateInstance = classInstance.Get("CanCreateInstance");
+            return (boolean)retObjectCanCreateInstance;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCanCreateInstance != null ? retObjectCanCreateInstance.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -175,7 +179,7 @@ public class ReceiveSettings extends NetObject  {
 
     public void setCanCreateInstance(boolean CanCreateInstance) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CanCreateInstance", CanCreateInstance);
         } catch (JCNativeException jcne) {
@@ -185,9 +189,13 @@ public class ReceiveSettings extends NetObject  {
 
     public java.lang.String getAction() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAction = null;
         try {
-            return (java.lang.String)classInstance.Get("Action");
+            retObjectAction = classInstance.Get("Action");
+            return (java.lang.String)retObjectAction;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectAction != null ? retObjectAction.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,7 +203,7 @@ public class ReceiveSettings extends NetObject  {
 
     public void setAction(java.lang.String Action) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Action", Action);
         } catch (JCNativeException jcne) {
@@ -205,9 +213,13 @@ public class ReceiveSettings extends NetObject  {
 
     public java.lang.String getOwnerDisplayName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOwnerDisplayName = null;
         try {
-            return (java.lang.String)classInstance.Get("OwnerDisplayName");
+            retObjectOwnerDisplayName = classInstance.Get("OwnerDisplayName");
+            return (java.lang.String)retObjectOwnerDisplayName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectOwnerDisplayName != null ? retObjectOwnerDisplayName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -215,7 +227,7 @@ public class ReceiveSettings extends NetObject  {
 
     public void setOwnerDisplayName(java.lang.String OwnerDisplayName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("OwnerDisplayName", OwnerDisplayName);
         } catch (JCNativeException jcne) {

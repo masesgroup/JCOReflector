@@ -158,10 +158,14 @@ public class DbCommandBuilder extends Component  {
     
     public DbCommand GetDeleteCommand() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.NotSupportedException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.threading.SynchronizationLockException, system.OutOfMemoryException, system.text.regularexpressions.RegexParseException, system.NullReferenceException, system.globalization.CultureNotFoundException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDeleteCommand = null;
         try {
-            JCObject objGetDeleteCommand = (JCObject)classInstance.Invoke("GetDeleteCommand");
+            retObjectGetDeleteCommand = classInstance.Invoke("GetDeleteCommand");
+            JCObject objGetDeleteCommand = (JCObject)retObjectGetDeleteCommand;
             return new DbCommand(objGetDeleteCommand);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetDeleteCommand != null ? retObjectGetDeleteCommand.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,10 +173,14 @@ public class DbCommandBuilder extends Component  {
 
     public DbCommand GetDeleteCommand(boolean useColumnsForParameterNames) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.NotSupportedException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.threading.SynchronizationLockException, system.OutOfMemoryException, system.text.regularexpressions.RegexParseException, system.NullReferenceException, system.globalization.CultureNotFoundException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDeleteCommand = null;
         try {
-            JCObject objGetDeleteCommand = (JCObject)classInstance.Invoke("GetDeleteCommand", useColumnsForParameterNames);
+            retObjectGetDeleteCommand = classInstance.Invoke("GetDeleteCommand", useColumnsForParameterNames);
+            JCObject objGetDeleteCommand = (JCObject)retObjectGetDeleteCommand;
             return new DbCommand(objGetDeleteCommand);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetDeleteCommand != null ? retObjectGetDeleteCommand.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,10 +188,14 @@ public class DbCommandBuilder extends Component  {
 
     public DbCommand GetInsertCommand() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.NotSupportedException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.threading.SynchronizationLockException, system.OutOfMemoryException, system.text.regularexpressions.RegexParseException, system.NullReferenceException, system.globalization.CultureNotFoundException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetInsertCommand = null;
         try {
-            JCObject objGetInsertCommand = (JCObject)classInstance.Invoke("GetInsertCommand");
+            retObjectGetInsertCommand = classInstance.Invoke("GetInsertCommand");
+            JCObject objGetInsertCommand = (JCObject)retObjectGetInsertCommand;
             return new DbCommand(objGetInsertCommand);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetInsertCommand != null ? retObjectGetInsertCommand.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,10 +203,14 @@ public class DbCommandBuilder extends Component  {
 
     public DbCommand GetInsertCommand(boolean useColumnsForParameterNames) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.NotSupportedException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.threading.SynchronizationLockException, system.OutOfMemoryException, system.text.regularexpressions.RegexParseException, system.NullReferenceException, system.globalization.CultureNotFoundException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetInsertCommand = null;
         try {
-            JCObject objGetInsertCommand = (JCObject)classInstance.Invoke("GetInsertCommand", useColumnsForParameterNames);
+            retObjectGetInsertCommand = classInstance.Invoke("GetInsertCommand", useColumnsForParameterNames);
+            JCObject objGetInsertCommand = (JCObject)retObjectGetInsertCommand;
             return new DbCommand(objGetInsertCommand);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetInsertCommand != null ? retObjectGetInsertCommand.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,10 +218,14 @@ public class DbCommandBuilder extends Component  {
 
     public DbCommand GetUpdateCommand() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.NotSupportedException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.threading.SynchronizationLockException, system.OutOfMemoryException, system.text.regularexpressions.RegexParseException, system.NullReferenceException, system.globalization.CultureNotFoundException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetUpdateCommand = null;
         try {
-            JCObject objGetUpdateCommand = (JCObject)classInstance.Invoke("GetUpdateCommand");
+            retObjectGetUpdateCommand = classInstance.Invoke("GetUpdateCommand");
+            JCObject objGetUpdateCommand = (JCObject)retObjectGetUpdateCommand;
             return new DbCommand(objGetUpdateCommand);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetUpdateCommand != null ? retObjectGetUpdateCommand.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,10 +233,14 @@ public class DbCommandBuilder extends Component  {
 
     public DbCommand GetUpdateCommand(boolean useColumnsForParameterNames) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.NotSupportedException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.threading.SynchronizationLockException, system.OutOfMemoryException, system.text.regularexpressions.RegexParseException, system.NullReferenceException, system.globalization.CultureNotFoundException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetUpdateCommand = null;
         try {
-            JCObject objGetUpdateCommand = (JCObject)classInstance.Invoke("GetUpdateCommand", useColumnsForParameterNames);
+            retObjectGetUpdateCommand = classInstance.Invoke("GetUpdateCommand", useColumnsForParameterNames);
+            JCObject objGetUpdateCommand = (JCObject)retObjectGetUpdateCommand;
             return new DbCommand(objGetUpdateCommand);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetUpdateCommand != null ? retObjectGetUpdateCommand.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -224,9 +248,13 @@ public class DbCommandBuilder extends Component  {
 
     public java.lang.String QuoteIdentifier(java.lang.String unquotedIdentifier) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException, system.diagnostics.tracing.EventSourceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectQuoteIdentifier = null;
         try {
-            return (java.lang.String)classInstance.Invoke("QuoteIdentifier", unquotedIdentifier);
+            retObjectQuoteIdentifier = classInstance.Invoke("QuoteIdentifier", unquotedIdentifier);
+            return (java.lang.String)retObjectQuoteIdentifier;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectQuoteIdentifier != null ? retObjectQuoteIdentifier.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -234,9 +262,13 @@ public class DbCommandBuilder extends Component  {
 
     public java.lang.String UnquoteIdentifier(java.lang.String quotedIdentifier) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException, system.diagnostics.tracing.EventSourceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUnquoteIdentifier = null;
         try {
-            return (java.lang.String)classInstance.Invoke("UnquoteIdentifier", quotedIdentifier);
+            retObjectUnquoteIdentifier = classInstance.Invoke("UnquoteIdentifier", quotedIdentifier);
+            return (java.lang.String)retObjectUnquoteIdentifier;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectUnquoteIdentifier != null ? retObjectUnquoteIdentifier.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -244,7 +276,7 @@ public class DbCommandBuilder extends Component  {
 
     public void RefreshSchema() throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RefreshSchema");
         } catch (JCNativeException jcne) {
@@ -258,9 +290,13 @@ public class DbCommandBuilder extends Component  {
     
     public boolean getSetAllValues() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSetAllValues = null;
         try {
-            return (boolean)classInstance.Get("SetAllValues");
+            retObjectSetAllValues = classInstance.Get("SetAllValues");
+            return (boolean)retObjectSetAllValues;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectSetAllValues != null ? retObjectSetAllValues.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -268,7 +304,7 @@ public class DbCommandBuilder extends Component  {
 
     public void setSetAllValues(boolean SetAllValues) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SetAllValues", SetAllValues);
         } catch (JCNativeException jcne) {
@@ -278,10 +314,14 @@ public class DbCommandBuilder extends Component  {
 
     public CatalogLocation getCatalogLocation() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCatalogLocation = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CatalogLocation");
+            retObjectCatalogLocation = classInstance.Get("CatalogLocation");
+            JCObject val = (JCObject)retObjectCatalogLocation;
             return new CatalogLocation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCatalogLocation != null ? retObjectCatalogLocation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -289,7 +329,7 @@ public class DbCommandBuilder extends Component  {
 
     public void setCatalogLocation(CatalogLocation CatalogLocation) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CatalogLocation", CatalogLocation == null ? null : CatalogLocation.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -299,10 +339,14 @@ public class DbCommandBuilder extends Component  {
 
     public DbDataAdapter getDataAdapter() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDataAdapter = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DataAdapter");
+            retObjectDataAdapter = classInstance.Get("DataAdapter");
+            JCObject val = (JCObject)retObjectDataAdapter;
             return new DbDataAdapter(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDataAdapter != null ? retObjectDataAdapter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -310,7 +354,7 @@ public class DbCommandBuilder extends Component  {
 
     public void setDataAdapter(DbDataAdapter DataAdapter) throws Throwable, system.NotSupportedException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DataAdapter", DataAdapter == null ? null : DataAdapter.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -320,10 +364,14 @@ public class DbCommandBuilder extends Component  {
 
     public ConflictOption getConflictOption() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConflictOption = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ConflictOption");
+            retObjectConflictOption = classInstance.Get("ConflictOption");
+            JCObject val = (JCObject)retObjectConflictOption;
             return new ConflictOption(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConflictOption != null ? retObjectConflictOption.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -331,7 +379,7 @@ public class DbCommandBuilder extends Component  {
 
     public void setConflictOption(ConflictOption ConflictOption) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ConflictOption", ConflictOption == null ? null : ConflictOption.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -341,9 +389,13 @@ public class DbCommandBuilder extends Component  {
 
     public java.lang.String getCatalogSeparator() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCatalogSeparator = null;
         try {
-            return (java.lang.String)classInstance.Get("CatalogSeparator");
+            retObjectCatalogSeparator = classInstance.Get("CatalogSeparator");
+            return (java.lang.String)retObjectCatalogSeparator;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectCatalogSeparator != null ? retObjectCatalogSeparator.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -351,7 +403,7 @@ public class DbCommandBuilder extends Component  {
 
     public void setCatalogSeparator(java.lang.String CatalogSeparator) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CatalogSeparator", CatalogSeparator);
         } catch (JCNativeException jcne) {
@@ -361,9 +413,13 @@ public class DbCommandBuilder extends Component  {
 
     public java.lang.String getQuotePrefix() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectQuotePrefix = null;
         try {
-            return (java.lang.String)classInstance.Get("QuotePrefix");
+            retObjectQuotePrefix = classInstance.Get("QuotePrefix");
+            return (java.lang.String)retObjectQuotePrefix;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectQuotePrefix != null ? retObjectQuotePrefix.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -371,7 +427,7 @@ public class DbCommandBuilder extends Component  {
 
     public void setQuotePrefix(java.lang.String QuotePrefix) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("QuotePrefix", QuotePrefix);
         } catch (JCNativeException jcne) {
@@ -381,9 +437,13 @@ public class DbCommandBuilder extends Component  {
 
     public java.lang.String getQuoteSuffix() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectQuoteSuffix = null;
         try {
-            return (java.lang.String)classInstance.Get("QuoteSuffix");
+            retObjectQuoteSuffix = classInstance.Get("QuoteSuffix");
+            return (java.lang.String)retObjectQuoteSuffix;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectQuoteSuffix != null ? retObjectQuoteSuffix.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -391,7 +451,7 @@ public class DbCommandBuilder extends Component  {
 
     public void setQuoteSuffix(java.lang.String QuoteSuffix) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("QuoteSuffix", QuoteSuffix);
         } catch (JCNativeException jcne) {
@@ -401,9 +461,13 @@ public class DbCommandBuilder extends Component  {
 
     public java.lang.String getSchemaSeparator() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSchemaSeparator = null;
         try {
-            return (java.lang.String)classInstance.Get("SchemaSeparator");
+            retObjectSchemaSeparator = classInstance.Get("SchemaSeparator");
+            return (java.lang.String)retObjectSchemaSeparator;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSchemaSeparator != null ? retObjectSchemaSeparator.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -411,7 +475,7 @@ public class DbCommandBuilder extends Component  {
 
     public void setSchemaSeparator(java.lang.String SchemaSeparator) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SchemaSeparator", SchemaSeparator);
         } catch (JCNativeException jcne) {

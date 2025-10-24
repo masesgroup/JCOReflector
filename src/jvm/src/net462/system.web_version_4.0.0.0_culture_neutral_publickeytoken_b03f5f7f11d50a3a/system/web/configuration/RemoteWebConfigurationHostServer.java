@@ -161,10 +161,12 @@ public class RemoteWebConfigurationHostServer extends NetObject  {
     
     public byte[] GetData(java.lang.String fileName, boolean getReadTimeOnly, JCORefOut<java.util.concurrent.atomic.AtomicLong> readTime) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.io.PathTooLongException, system.NullReferenceException, system.security.SecurityException, system.io.IOException, system.io.EndOfStreamException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetData = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetData", fileName, getReadTimeOnly, readTime.getJCRefOut());
+            retObjectGetData = classInstance.Invoke("GetData", fileName, getReadTimeOnly, readTime.getJCRefOut());
+            JCObject resultingObjects = (JCObject)retObjectGetData;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -173,6 +175,8 @@ public class RemoteWebConfigurationHostServer extends NetObject  {
 				resultingArray[indexGetData] = (byte)resultingArrayList.get(indexGetData);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectGetData != null ? retObjectGetData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,9 +184,13 @@ public class RemoteWebConfigurationHostServer extends NetObject  {
 
     public java.lang.String DoEncryptOrDecrypt(boolean doEncrypt, java.lang.String xmlString, java.lang.String protectionProviderName, java.lang.String protectionProviderType, java.lang.String[] paramKeys, java.lang.String[] paramValues) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.xml.XmlException, system.xml.schema.XmlSchemaException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDoEncryptOrDecrypt = null;
         try {
-            return (java.lang.String)classInstance.Invoke("DoEncryptOrDecrypt", doEncrypt, xmlString, protectionProviderName, protectionProviderType, paramKeys, paramValues);
+            retObjectDoEncryptOrDecrypt = classInstance.Invoke("DoEncryptOrDecrypt", doEncrypt, xmlString, protectionProviderName, protectionProviderType, paramKeys, paramValues);
+            return (java.lang.String)retObjectDoEncryptOrDecrypt;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectDoEncryptOrDecrypt != null ? retObjectDoEncryptOrDecrypt.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,9 +198,13 @@ public class RemoteWebConfigurationHostServer extends NetObject  {
 
     public java.lang.String DoEncryptOrDecrypt(boolean dupParam0, java.lang.String dupParam1, java.lang.String dupParam2, java.lang.String dupParam3, JCORefOut dupParam4, JCORefOut dupParam5) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.xml.XmlException, system.xml.schema.XmlSchemaException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDoEncryptOrDecrypt = null;
         try {
-            return (java.lang.String)classInstance.Invoke("DoEncryptOrDecrypt", dupParam0, dupParam1, dupParam2, dupParam3, dupParam4.getJCRefOut(), dupParam5.getJCRefOut());
+            retObjectDoEncryptOrDecrypt = classInstance.Invoke("DoEncryptOrDecrypt", dupParam0, dupParam1, dupParam2, dupParam3, dupParam4.getJCRefOut(), dupParam5.getJCRefOut());
+            return (java.lang.String)retObjectDoEncryptOrDecrypt;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectDoEncryptOrDecrypt != null ? retObjectDoEncryptOrDecrypt.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,9 +212,13 @@ public class RemoteWebConfigurationHostServer extends NetObject  {
 
     public java.lang.String GetFilePaths(int webLevelAsInt, java.lang.String path, java.lang.String site, java.lang.String locationSubPath) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.security.SecurityException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.UnauthorizedAccessException, system.io.IOException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.web.HttpException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetFilePaths = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetFilePaths", webLevelAsInt, path, site, locationSubPath);
+            retObjectGetFilePaths = classInstance.Invoke("GetFilePaths", webLevelAsInt, path, site, locationSubPath);
+            return (java.lang.String)retObjectGetFilePaths;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetFilePaths != null ? retObjectGetFilePaths.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -210,7 +226,7 @@ public class RemoteWebConfigurationHostServer extends NetObject  {
 
     public void GetFileDetails(java.lang.String name, JCORefOut<java.util.concurrent.atomic.AtomicBoolean> exists, JCORefOut<java.util.concurrent.atomic.AtomicLong> size, JCORefOut<java.util.concurrent.atomic.AtomicLong> createDate, JCORefOut<java.util.concurrent.atomic.AtomicLong> lastWriteDate) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetFileDetails", name, exists.getJCRefOut(), size.getJCRefOut(), createDate.getJCRefOut(), lastWriteDate.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -220,7 +236,7 @@ public class RemoteWebConfigurationHostServer extends NetObject  {
 
     public void WriteData(java.lang.String fileName, java.lang.String templateFileName, byte[] data, JCORefOut<java.util.concurrent.atomic.AtomicLong> readTime) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.io.PathTooLongException, system.FormatException, system.NullReferenceException, system.security.SecurityException, system.io.IOException, system.OverflowException, system.SystemException, system.security.accesscontrol.PrivilegeNotHeldException, system.UnauthorizedAccessException, system.OutOfMemoryException, system.InvalidProgramException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteData", fileName, templateFileName, data, readTime.getJCRefOut());
         } catch (JCNativeException jcne) {

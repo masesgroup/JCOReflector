@@ -184,9 +184,13 @@ public class StrokeCollection extends NetObjectEnumerable  {
     
     public boolean ContainsPropertyData(Guid propertyDataId) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContainsPropertyData = null;
         try {
-            return (boolean)classInstance.Invoke("ContainsPropertyData", propertyDataId == null ? null : propertyDataId.getJCOInstance());
+            retObjectContainsPropertyData = classInstance.Invoke("ContainsPropertyData", propertyDataId == null ? null : propertyDataId.getJCOInstance());
+            return (boolean)retObjectContainsPropertyData;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectContainsPropertyData != null ? retObjectContainsPropertyData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -194,9 +198,20 @@ public class StrokeCollection extends NetObjectEnumerable  {
 
     public int IndexOfNewStrokeCollection(Stroke stroke) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIndexOf = null;
         try {
-            return (int)classInstance.Invoke("IndexOf", stroke == null ? null : stroke.getJCOInstance());
+            retObjectIndexOf = classInstance.Invoke("IndexOf", stroke == null ? null : stroke.getJCOInstance());
+            return (int)retObjectIndexOf;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectIndexOf_ToString = retObjectIndexOf == null ? "null" : retObjectIndexOf.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectIndexOfNumber = (java.lang.Number)retObjectIndexOf;
+                return retObjectIndexOfNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectIndexOf != null ? retObjectIndexOf.getClass() : "null", retObjectIndexOf_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -204,16 +219,20 @@ public class StrokeCollection extends NetObjectEnumerable  {
 
     public Guid[] GetPropertyDataIds() throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPropertyDataIds = null;
         try {
             ArrayList<Guid> resultingArrayList = new ArrayList<Guid>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetPropertyDataIds");
+            retObjectGetPropertyDataIds = classInstance.Invoke("GetPropertyDataIds");
+            JCObject resultingObjects = (JCObject)retObjectGetPropertyDataIds;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new Guid(resultingObject));
             }
             Guid[] resultingArray = new Guid[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetPropertyDataIds != null ? retObjectGetPropertyDataIds.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -221,10 +240,14 @@ public class StrokeCollection extends NetObjectEnumerable  {
 
     public NetObject GetPropertyData(Guid propertyDataId) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPropertyData = null;
         try {
-            JCObject objGetPropertyData = (JCObject)classInstance.Invoke("GetPropertyData", propertyDataId == null ? null : propertyDataId.getJCOInstance());
+            retObjectGetPropertyData = classInstance.Invoke("GetPropertyData", propertyDataId == null ? null : propertyDataId.getJCOInstance());
+            JCObject objGetPropertyData = (JCObject)retObjectGetPropertyData;
             return new NetObject(objGetPropertyData);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetPropertyData != null ? retObjectGetPropertyData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -232,10 +255,14 @@ public class StrokeCollection extends NetObjectEnumerable  {
 
     public IncrementalLassoHitTester GetIncrementalLassoHitTester(int percentageWithinLasso) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetIncrementalLassoHitTester = null;
         try {
-            JCObject objGetIncrementalLassoHitTester = (JCObject)classInstance.Invoke("GetIncrementalLassoHitTester", percentageWithinLasso);
+            retObjectGetIncrementalLassoHitTester = classInstance.Invoke("GetIncrementalLassoHitTester", percentageWithinLasso);
+            JCObject objGetIncrementalLassoHitTester = (JCObject)retObjectGetIncrementalLassoHitTester;
             return new IncrementalLassoHitTester(objGetIncrementalLassoHitTester);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetIncrementalLassoHitTester != null ? retObjectGetIncrementalLassoHitTester.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -243,10 +270,14 @@ public class StrokeCollection extends NetObjectEnumerable  {
 
     public IncrementalStrokeHitTester GetIncrementalStrokeHitTester(StylusShape eraserShape) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetIncrementalStrokeHitTester = null;
         try {
-            JCObject objGetIncrementalStrokeHitTester = (JCObject)classInstance.Invoke("GetIncrementalStrokeHitTester", eraserShape == null ? null : eraserShape.getJCOInstance());
+            retObjectGetIncrementalStrokeHitTester = classInstance.Invoke("GetIncrementalStrokeHitTester", eraserShape == null ? null : eraserShape.getJCOInstance());
+            JCObject objGetIncrementalStrokeHitTester = (JCObject)retObjectGetIncrementalStrokeHitTester;
             return new IncrementalStrokeHitTester(objGetIncrementalStrokeHitTester);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetIncrementalStrokeHitTester != null ? retObjectGetIncrementalStrokeHitTester.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -254,10 +285,14 @@ public class StrokeCollection extends NetObjectEnumerable  {
 
     public StrokeCollection Clone() throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException, system.OverflowException, system.InvalidOperationException, system.MulticastNotSupportedException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClone = null;
         try {
-            JCObject objClone = (JCObject)classInstance.Invoke("Clone");
+            retObjectClone = classInstance.Invoke("Clone");
+            JCObject objClone = (JCObject)retObjectClone;
             return new StrokeCollection(objClone);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClone != null ? retObjectClone.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -265,10 +300,14 @@ public class StrokeCollection extends NetObjectEnumerable  {
 
     public StrokeCollection HitTest(Point point, double diameter) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHitTest = null;
         try {
-            JCObject objHitTest = (JCObject)classInstance.Invoke("HitTest", point == null ? null : point.getJCOInstance(), diameter);
+            retObjectHitTest = classInstance.Invoke("HitTest", point == null ? null : point.getJCOInstance(), diameter);
+            JCObject objHitTest = (JCObject)retObjectHitTest;
             return new StrokeCollection(objHitTest);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHitTest != null ? retObjectHitTest.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -276,10 +315,14 @@ public class StrokeCollection extends NetObjectEnumerable  {
 
     public StrokeCollection HitTest(Point point) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHitTest = null;
         try {
-            JCObject objHitTest = (JCObject)classInstance.Invoke("HitTest", point == null ? null : point.getJCOInstance());
+            retObjectHitTest = classInstance.Invoke("HitTest", point == null ? null : point.getJCOInstance());
+            JCObject objHitTest = (JCObject)retObjectHitTest;
             return new StrokeCollection(objHitTest);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHitTest != null ? retObjectHitTest.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -287,10 +330,14 @@ public class StrokeCollection extends NetObjectEnumerable  {
 
     public StrokeCollection HitTest(Rect bounds, int percentageWithinBounds) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHitTest = null;
         try {
-            JCObject objHitTest = (JCObject)classInstance.Invoke("HitTest", bounds == null ? null : bounds.getJCOInstance(), percentageWithinBounds);
+            retObjectHitTest = classInstance.Invoke("HitTest", bounds == null ? null : bounds.getJCOInstance(), percentageWithinBounds);
+            JCObject objHitTest = (JCObject)retObjectHitTest;
             return new StrokeCollection(objHitTest);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHitTest != null ? retObjectHitTest.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -298,10 +345,14 @@ public class StrokeCollection extends NetObjectEnumerable  {
 
     public Rect GetBounds() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetBounds = null;
         try {
-            JCObject objGetBounds = (JCObject)classInstance.Invoke("GetBounds");
+            retObjectGetBounds = classInstance.Invoke("GetBounds");
+            JCObject objGetBounds = (JCObject)retObjectGetBounds;
             return new Rect(objGetBounds);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetBounds != null ? retObjectGetBounds.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -309,7 +360,7 @@ public class StrokeCollection extends NetObjectEnumerable  {
 
     public void Add(StrokeCollection strokes) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Add", strokes == null ? null : strokes.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -319,7 +370,7 @@ public class StrokeCollection extends NetObjectEnumerable  {
 
     public void AddPropertyData(Guid propertyDataId, NetObject propertyData) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.ArrayTypeMismatchException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddPropertyData", propertyDataId == null ? null : propertyDataId.getJCOInstance(), propertyData == null ? null : propertyData.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -329,7 +380,7 @@ public class StrokeCollection extends NetObjectEnumerable  {
 
     public void Clip(Rect bounds) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Clip", bounds == null ? null : bounds.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -339,7 +390,7 @@ public class StrokeCollection extends NetObjectEnumerable  {
 
     public void Draw(DrawingContext context) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.OverflowException, system.MulticastNotSupportedException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Draw", context == null ? null : context.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -349,7 +400,7 @@ public class StrokeCollection extends NetObjectEnumerable  {
 
     public void Erase(Rect bounds) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Erase", bounds == null ? null : bounds.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -359,7 +410,7 @@ public class StrokeCollection extends NetObjectEnumerable  {
 
     public void Remove(StrokeCollection strokes) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Remove", strokes == null ? null : strokes.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -369,7 +420,7 @@ public class StrokeCollection extends NetObjectEnumerable  {
 
     public void RemovePropertyData(Guid propertyDataId) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RemovePropertyData", propertyDataId == null ? null : propertyDataId.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -379,7 +430,7 @@ public class StrokeCollection extends NetObjectEnumerable  {
 
     public void Replace(Stroke strokeToReplace, StrokeCollection strokesToReplaceWith) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Replace", strokeToReplace == null ? null : strokeToReplace.getJCOInstance(), strokesToReplaceWith == null ? null : strokesToReplaceWith.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -389,7 +440,7 @@ public class StrokeCollection extends NetObjectEnumerable  {
 
     public void Replace(StrokeCollection strokesToReplace, StrokeCollection strokesToReplaceWith) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Replace", strokesToReplace == null ? null : strokesToReplace.getJCOInstance(), strokesToReplaceWith == null ? null : strokesToReplaceWith.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -399,7 +450,7 @@ public class StrokeCollection extends NetObjectEnumerable  {
 
     public void Save(Stream stream, boolean compress) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException, system.OverflowException, system.UnauthorizedAccessException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Save", stream == null ? null : stream.getJCOInstance(), compress);
         } catch (JCNativeException jcne) {
@@ -409,7 +460,7 @@ public class StrokeCollection extends NetObjectEnumerable  {
 
     public void Save(Stream stream) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException, system.OverflowException, system.ArrayTypeMismatchException, system.UnauthorizedAccessException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Save", stream == null ? null : stream.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -419,7 +470,7 @@ public class StrokeCollection extends NetObjectEnumerable  {
 
     public void Transform(Matrix transformMatrix, boolean applyToStylusTip) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Transform", transformMatrix == null ? null : transformMatrix.getJCOInstance(), applyToStylusTip);
         } catch (JCNativeException jcne) {
@@ -438,7 +489,7 @@ public class StrokeCollection extends NetObjectEnumerable  {
 
     public void addPropertyDataChanged(PropertyDataChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("PropertyDataChanged", handler);
         } catch (JCNativeException jcne) {
@@ -448,7 +499,7 @@ public class StrokeCollection extends NetObjectEnumerable  {
 
     public void removePropertyDataChanged(PropertyDataChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("PropertyDataChanged", handler);
         } catch (JCNativeException jcne) {
@@ -458,7 +509,7 @@ public class StrokeCollection extends NetObjectEnumerable  {
 
     public void addStrokesChanged(StrokeCollectionChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("StrokesChanged", handler);
         } catch (JCNativeException jcne) {
@@ -468,7 +519,7 @@ public class StrokeCollection extends NetObjectEnumerable  {
 
     public void removeStrokesChanged(StrokeCollectionChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("StrokesChanged", handler);
         } catch (JCNativeException jcne) {

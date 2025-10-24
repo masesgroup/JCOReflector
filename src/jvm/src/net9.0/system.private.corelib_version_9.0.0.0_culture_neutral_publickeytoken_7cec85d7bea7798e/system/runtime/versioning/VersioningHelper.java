@@ -154,9 +154,13 @@ public class VersioningHelper extends NetObject  {
     
     public static java.lang.String MakeVersionSafeName(java.lang.String name, ResourceScope from, ResourceScope to, NetType type) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.IndexOutOfRangeException, system.RankException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException, system.NullReferenceException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMakeVersionSafeName = null;
         try {
-            return (java.lang.String)classType.Invoke("MakeVersionSafeName", name, from == null ? null : from.getJCOInstance(), to == null ? null : to.getJCOInstance(), type == null ? null : type.getJCOInstance());
+            retObjectMakeVersionSafeName = classType.Invoke("MakeVersionSafeName", name, from == null ? null : from.getJCOInstance(), to == null ? null : to.getJCOInstance(), type == null ? null : type.getJCOInstance());
+            return (java.lang.String)retObjectMakeVersionSafeName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectMakeVersionSafeName != null ? retObjectMakeVersionSafeName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -164,9 +168,13 @@ public class VersioningHelper extends NetObject  {
 
     public static java.lang.String MakeVersionSafeName(java.lang.String name, ResourceScope from, ResourceScope to) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMakeVersionSafeName = null;
         try {
-            return (java.lang.String)classType.Invoke("MakeVersionSafeName", name, from == null ? null : from.getJCOInstance(), to == null ? null : to.getJCOInstance());
+            retObjectMakeVersionSafeName = classType.Invoke("MakeVersionSafeName", name, from == null ? null : from.getJCOInstance(), to == null ? null : to.getJCOInstance());
+            return (java.lang.String)retObjectMakeVersionSafeName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectMakeVersionSafeName != null ? retObjectMakeVersionSafeName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

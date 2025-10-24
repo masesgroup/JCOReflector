@@ -155,7 +155,7 @@ public class SendKeys extends NetObject  {
     
     public static void Flush() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.NullReferenceException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception, system.OverflowException, system.FormatException, system.componentmodel.InvalidAsynchronousStateException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Flush");
         } catch (JCNativeException jcne) {
@@ -165,7 +165,7 @@ public class SendKeys extends NetObject  {
 
     public static void Send(java.lang.String keys) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.OverflowException, system.FormatException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.NotSupportedException, system.runtime.interopservices.ExternalException, system.configuration.ConfigurationErrorsException, system.security.SecurityException, system.NullReferenceException, system.MulticastNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Send", keys);
         } catch (JCNativeException jcne) {
@@ -175,7 +175,7 @@ public class SendKeys extends NetObject  {
 
     public static void SendWait(java.lang.String keys) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.componentmodel.Win32Exception, system.NotSupportedException, system.OutOfMemoryException, system.FormatException, system.OverflowException, system.configuration.ConfigurationErrorsException, system.security.SecurityException, system.MulticastNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SendWait", keys);
         } catch (JCNativeException jcne) {

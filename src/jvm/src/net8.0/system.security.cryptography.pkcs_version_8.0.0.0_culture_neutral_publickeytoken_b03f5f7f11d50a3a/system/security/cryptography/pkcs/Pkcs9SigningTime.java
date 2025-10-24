@@ -184,7 +184,7 @@ public class Pkcs9SigningTime extends Pkcs9AttributeObject  {
     
     public void CopyFrom(AsnEncodedData asnEncodedData) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CopyFrom", asnEncodedData == null ? null : asnEncodedData.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -198,10 +198,14 @@ public class Pkcs9SigningTime extends Pkcs9AttributeObject  {
     
     public DateTime getSigningTime() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.formats.asn1.AsnContentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.FormatException, system.OverflowException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSigningTime = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SigningTime");
+            retObjectSigningTime = classInstance.Get("SigningTime");
+            JCObject val = (JCObject)retObjectSigningTime;
             return new DateTime(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSigningTime != null ? retObjectSigningTime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

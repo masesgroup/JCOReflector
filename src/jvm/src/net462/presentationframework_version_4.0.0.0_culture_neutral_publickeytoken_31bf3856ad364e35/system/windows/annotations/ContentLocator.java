@@ -166,9 +166,13 @@ public class ContentLocator extends ContentLocatorBase  {
     
     public boolean StartsWith(ContentLocator locator) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.SecurityException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.UnauthorizedAccessException, system.io.IOException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.FormatException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStartsWith = null;
         try {
-            return (boolean)classInstance.Invoke("StartsWith", locator == null ? null : locator.getJCOInstance());
+            retObjectStartsWith = classInstance.Invoke("StartsWith", locator == null ? null : locator.getJCOInstance());
+            return (boolean)retObjectStartsWith;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectStartsWith != null ? retObjectStartsWith.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,10 +180,14 @@ public class ContentLocator extends ContentLocatorBase  {
 
     public NetObject Clone() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClone = null;
         try {
-            JCObject objClone = (JCObject)classInstance.Invoke("Clone");
+            retObjectClone = classInstance.Invoke("Clone");
+            JCObject objClone = (JCObject)retObjectClone;
             return new NetObject(objClone);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClone != null ? retObjectClone.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,10 +195,14 @@ public class ContentLocator extends ContentLocatorBase  {
 
     public XmlSchema GetSchema() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSchema = null;
         try {
-            JCObject objGetSchema = (JCObject)classInstance.Invoke("GetSchema");
+            retObjectGetSchema = classInstance.Invoke("GetSchema");
+            JCObject objGetSchema = (JCObject)retObjectGetSchema;
             return new XmlSchema(objGetSchema);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSchema != null ? retObjectGetSchema.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,7 +210,7 @@ public class ContentLocator extends ContentLocatorBase  {
 
     public void ReadXml(XmlReader reader) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.MissingMethodException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.UnauthorizedAccessException, system.io.IOException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.xml.XmlException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ReadXml", reader == null ? null : reader.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -208,7 +220,7 @@ public class ContentLocator extends ContentLocatorBase  {
 
     public void WriteXml(XmlWriter writer) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteXml", writer == null ? null : writer.getJCOInstance());
         } catch (JCNativeException jcne) {

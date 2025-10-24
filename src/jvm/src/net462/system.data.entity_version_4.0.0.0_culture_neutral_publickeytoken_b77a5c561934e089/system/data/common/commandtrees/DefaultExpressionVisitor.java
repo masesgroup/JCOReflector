@@ -198,10 +198,14 @@ public class DefaultExpressionVisitor extends NetObject  {
     
     public DbExpression Visit(DbAndExpression expression) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVisit = null;
         try {
-            JCObject objVisit = (JCObject)classInstance.Invoke("Visit", expression == null ? null : expression.getJCOInstance());
+            retObjectVisit = classInstance.Invoke("Visit", expression == null ? null : expression.getJCOInstance());
+            JCObject objVisit = (JCObject)retObjectVisit;
             return new DbExpression(objVisit);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVisit != null ? retObjectVisit.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -209,10 +213,14 @@ public class DefaultExpressionVisitor extends NetObject  {
 
     public DbExpression Visit(DbApplyExpression expression) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVisit = null;
         try {
-            JCObject objVisit = (JCObject)classInstance.Invoke("Visit", expression == null ? null : expression.getJCOInstance());
+            retObjectVisit = classInstance.Invoke("Visit", expression == null ? null : expression.getJCOInstance());
+            JCObject objVisit = (JCObject)retObjectVisit;
             return new DbExpression(objVisit);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVisit != null ? retObjectVisit.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -220,10 +228,14 @@ public class DefaultExpressionVisitor extends NetObject  {
 
     public DbExpression Visit(DbArithmeticExpression expression) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVisit = null;
         try {
-            JCObject objVisit = (JCObject)classInstance.Invoke("Visit", expression == null ? null : expression.getJCOInstance());
+            retObjectVisit = classInstance.Invoke("Visit", expression == null ? null : expression.getJCOInstance());
+            JCObject objVisit = (JCObject)retObjectVisit;
             return new DbExpression(objVisit);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVisit != null ? retObjectVisit.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -231,10 +243,14 @@ public class DefaultExpressionVisitor extends NetObject  {
 
     public DbExpression Visit(DbCaseExpression expression) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVisit = null;
         try {
-            JCObject objVisit = (JCObject)classInstance.Invoke("Visit", expression == null ? null : expression.getJCOInstance());
+            retObjectVisit = classInstance.Invoke("Visit", expression == null ? null : expression.getJCOInstance());
+            JCObject objVisit = (JCObject)retObjectVisit;
             return new DbExpression(objVisit);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVisit != null ? retObjectVisit.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -242,10 +258,14 @@ public class DefaultExpressionVisitor extends NetObject  {
 
     public DbExpression Visit(DbCastExpression expression) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVisit = null;
         try {
-            JCObject objVisit = (JCObject)classInstance.Invoke("Visit", expression == null ? null : expression.getJCOInstance());
+            retObjectVisit = classInstance.Invoke("Visit", expression == null ? null : expression.getJCOInstance());
+            JCObject objVisit = (JCObject)retObjectVisit;
             return new DbExpression(objVisit);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVisit != null ? retObjectVisit.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -253,10 +273,14 @@ public class DefaultExpressionVisitor extends NetObject  {
 
     public DbExpression Visit(DbComparisonExpression expression) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVisit = null;
         try {
-            JCObject objVisit = (JCObject)classInstance.Invoke("Visit", expression == null ? null : expression.getJCOInstance());
+            retObjectVisit = classInstance.Invoke("Visit", expression == null ? null : expression.getJCOInstance());
+            JCObject objVisit = (JCObject)retObjectVisit;
             return new DbExpression(objVisit);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVisit != null ? retObjectVisit.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -264,10 +288,14 @@ public class DefaultExpressionVisitor extends NetObject  {
 
     public DbExpression Visit(DbConstantExpression expression) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentException, system.NotSupportedException, system.InvalidCastException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVisit = null;
         try {
-            JCObject objVisit = (JCObject)classInstance.Invoke("Visit", expression == null ? null : expression.getJCOInstance());
+            retObjectVisit = classInstance.Invoke("Visit", expression == null ? null : expression.getJCOInstance());
+            JCObject objVisit = (JCObject)retObjectVisit;
             return new DbExpression(objVisit);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVisit != null ? retObjectVisit.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -275,10 +303,14 @@ public class DefaultExpressionVisitor extends NetObject  {
 
     public DbExpression Visit(DbCrossJoinExpression expression) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVisit = null;
         try {
-            JCObject objVisit = (JCObject)classInstance.Invoke("Visit", expression == null ? null : expression.getJCOInstance());
+            retObjectVisit = classInstance.Invoke("Visit", expression == null ? null : expression.getJCOInstance());
+            JCObject objVisit = (JCObject)retObjectVisit;
             return new DbExpression(objVisit);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVisit != null ? retObjectVisit.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -286,10 +318,14 @@ public class DefaultExpressionVisitor extends NetObject  {
 
     public DbExpression Visit(DbDerefExpression expression) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVisit = null;
         try {
-            JCObject objVisit = (JCObject)classInstance.Invoke("Visit", expression == null ? null : expression.getJCOInstance());
+            retObjectVisit = classInstance.Invoke("Visit", expression == null ? null : expression.getJCOInstance());
+            JCObject objVisit = (JCObject)retObjectVisit;
             return new DbExpression(objVisit);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVisit != null ? retObjectVisit.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -297,10 +333,14 @@ public class DefaultExpressionVisitor extends NetObject  {
 
     public DbExpression Visit(DbDistinctExpression expression) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVisit = null;
         try {
-            JCObject objVisit = (JCObject)classInstance.Invoke("Visit", expression == null ? null : expression.getJCOInstance());
+            retObjectVisit = classInstance.Invoke("Visit", expression == null ? null : expression.getJCOInstance());
+            JCObject objVisit = (JCObject)retObjectVisit;
             return new DbExpression(objVisit);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVisit != null ? retObjectVisit.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -308,10 +348,14 @@ public class DefaultExpressionVisitor extends NetObject  {
 
     public DbExpression Visit(DbElementExpression expression) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVisit = null;
         try {
-            JCObject objVisit = (JCObject)classInstance.Invoke("Visit", expression == null ? null : expression.getJCOInstance());
+            retObjectVisit = classInstance.Invoke("Visit", expression == null ? null : expression.getJCOInstance());
+            JCObject objVisit = (JCObject)retObjectVisit;
             return new DbExpression(objVisit);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVisit != null ? retObjectVisit.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -319,10 +363,14 @@ public class DefaultExpressionVisitor extends NetObject  {
 
     public DbExpression Visit(DbEntityRefExpression expression) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVisit = null;
         try {
-            JCObject objVisit = (JCObject)classInstance.Invoke("Visit", expression == null ? null : expression.getJCOInstance());
+            retObjectVisit = classInstance.Invoke("Visit", expression == null ? null : expression.getJCOInstance());
+            JCObject objVisit = (JCObject)retObjectVisit;
             return new DbExpression(objVisit);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVisit != null ? retObjectVisit.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -330,10 +378,14 @@ public class DefaultExpressionVisitor extends NetObject  {
 
     public DbExpression Visit(DbExceptExpression expression) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVisit = null;
         try {
-            JCObject objVisit = (JCObject)classInstance.Invoke("Visit", expression == null ? null : expression.getJCOInstance());
+            retObjectVisit = classInstance.Invoke("Visit", expression == null ? null : expression.getJCOInstance());
+            JCObject objVisit = (JCObject)retObjectVisit;
             return new DbExpression(objVisit);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVisit != null ? retObjectVisit.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -341,10 +393,14 @@ public class DefaultExpressionVisitor extends NetObject  {
 
     public DbExpression Visit(DbExpression expression) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVisit = null;
         try {
-            JCObject objVisit = (JCObject)classInstance.Invoke("Visit", expression == null ? null : expression.getJCOInstance());
+            retObjectVisit = classInstance.Invoke("Visit", expression == null ? null : expression.getJCOInstance());
+            JCObject objVisit = (JCObject)retObjectVisit;
             return new DbExpression(objVisit);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVisit != null ? retObjectVisit.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -352,10 +408,14 @@ public class DefaultExpressionVisitor extends NetObject  {
 
     public DbExpression Visit(DbFilterExpression expression) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVisit = null;
         try {
-            JCObject objVisit = (JCObject)classInstance.Invoke("Visit", expression == null ? null : expression.getJCOInstance());
+            retObjectVisit = classInstance.Invoke("Visit", expression == null ? null : expression.getJCOInstance());
+            JCObject objVisit = (JCObject)retObjectVisit;
             return new DbExpression(objVisit);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVisit != null ? retObjectVisit.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -363,10 +423,14 @@ public class DefaultExpressionVisitor extends NetObject  {
 
     public DbExpression Visit(DbFunctionExpression expression) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentException, system.OutOfMemoryException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVisit = null;
         try {
-            JCObject objVisit = (JCObject)classInstance.Invoke("Visit", expression == null ? null : expression.getJCOInstance());
+            retObjectVisit = classInstance.Invoke("Visit", expression == null ? null : expression.getJCOInstance());
+            JCObject objVisit = (JCObject)retObjectVisit;
             return new DbExpression(objVisit);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVisit != null ? retObjectVisit.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -374,10 +438,14 @@ public class DefaultExpressionVisitor extends NetObject  {
 
     public DbExpression Visit(DbGroupByExpression expression) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVisit = null;
         try {
-            JCObject objVisit = (JCObject)classInstance.Invoke("Visit", expression == null ? null : expression.getJCOInstance());
+            retObjectVisit = classInstance.Invoke("Visit", expression == null ? null : expression.getJCOInstance());
+            JCObject objVisit = (JCObject)retObjectVisit;
             return new DbExpression(objVisit);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVisit != null ? retObjectVisit.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -385,10 +453,14 @@ public class DefaultExpressionVisitor extends NetObject  {
 
     public DbExpression Visit(DbIntersectExpression expression) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVisit = null;
         try {
-            JCObject objVisit = (JCObject)classInstance.Invoke("Visit", expression == null ? null : expression.getJCOInstance());
+            retObjectVisit = classInstance.Invoke("Visit", expression == null ? null : expression.getJCOInstance());
+            JCObject objVisit = (JCObject)retObjectVisit;
             return new DbExpression(objVisit);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVisit != null ? retObjectVisit.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -396,10 +468,14 @@ public class DefaultExpressionVisitor extends NetObject  {
 
     public DbExpression Visit(DbIsEmptyExpression expression) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVisit = null;
         try {
-            JCObject objVisit = (JCObject)classInstance.Invoke("Visit", expression == null ? null : expression.getJCOInstance());
+            retObjectVisit = classInstance.Invoke("Visit", expression == null ? null : expression.getJCOInstance());
+            JCObject objVisit = (JCObject)retObjectVisit;
             return new DbExpression(objVisit);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVisit != null ? retObjectVisit.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -407,10 +483,14 @@ public class DefaultExpressionVisitor extends NetObject  {
 
     public DbExpression Visit(DbIsNullExpression expression) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVisit = null;
         try {
-            JCObject objVisit = (JCObject)classInstance.Invoke("Visit", expression == null ? null : expression.getJCOInstance());
+            retObjectVisit = classInstance.Invoke("Visit", expression == null ? null : expression.getJCOInstance());
+            JCObject objVisit = (JCObject)retObjectVisit;
             return new DbExpression(objVisit);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVisit != null ? retObjectVisit.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -418,10 +498,14 @@ public class DefaultExpressionVisitor extends NetObject  {
 
     public DbExpression Visit(DbIsOfExpression expression) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVisit = null;
         try {
-            JCObject objVisit = (JCObject)classInstance.Invoke("Visit", expression == null ? null : expression.getJCOInstance());
+            retObjectVisit = classInstance.Invoke("Visit", expression == null ? null : expression.getJCOInstance());
+            JCObject objVisit = (JCObject)retObjectVisit;
             return new DbExpression(objVisit);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVisit != null ? retObjectVisit.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -429,10 +513,14 @@ public class DefaultExpressionVisitor extends NetObject  {
 
     public DbExpression Visit(DbJoinExpression expression) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVisit = null;
         try {
-            JCObject objVisit = (JCObject)classInstance.Invoke("Visit", expression == null ? null : expression.getJCOInstance());
+            retObjectVisit = classInstance.Invoke("Visit", expression == null ? null : expression.getJCOInstance());
+            JCObject objVisit = (JCObject)retObjectVisit;
             return new DbExpression(objVisit);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVisit != null ? retObjectVisit.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -440,10 +528,14 @@ public class DefaultExpressionVisitor extends NetObject  {
 
     public DbExpression Visit(DbLambdaExpression expression) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVisit = null;
         try {
-            JCObject objVisit = (JCObject)classInstance.Invoke("Visit", expression == null ? null : expression.getJCOInstance());
+            retObjectVisit = classInstance.Invoke("Visit", expression == null ? null : expression.getJCOInstance());
+            JCObject objVisit = (JCObject)retObjectVisit;
             return new DbExpression(objVisit);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVisit != null ? retObjectVisit.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -451,10 +543,14 @@ public class DefaultExpressionVisitor extends NetObject  {
 
     public DbExpression Visit(DbLikeExpression expression) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVisit = null;
         try {
-            JCObject objVisit = (JCObject)classInstance.Invoke("Visit", expression == null ? null : expression.getJCOInstance());
+            retObjectVisit = classInstance.Invoke("Visit", expression == null ? null : expression.getJCOInstance());
+            JCObject objVisit = (JCObject)retObjectVisit;
             return new DbExpression(objVisit);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVisit != null ? retObjectVisit.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -462,10 +558,14 @@ public class DefaultExpressionVisitor extends NetObject  {
 
     public DbExpression Visit(DbLimitExpression expression) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVisit = null;
         try {
-            JCObject objVisit = (JCObject)classInstance.Invoke("Visit", expression == null ? null : expression.getJCOInstance());
+            retObjectVisit = classInstance.Invoke("Visit", expression == null ? null : expression.getJCOInstance());
+            JCObject objVisit = (JCObject)retObjectVisit;
             return new DbExpression(objVisit);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVisit != null ? retObjectVisit.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -473,10 +573,14 @@ public class DefaultExpressionVisitor extends NetObject  {
 
     public DbExpression Visit(DbNewInstanceExpression expression) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.data.ProviderIncompatibleException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVisit = null;
         try {
-            JCObject objVisit = (JCObject)classInstance.Invoke("Visit", expression == null ? null : expression.getJCOInstance());
+            retObjectVisit = classInstance.Invoke("Visit", expression == null ? null : expression.getJCOInstance());
+            JCObject objVisit = (JCObject)retObjectVisit;
             return new DbExpression(objVisit);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVisit != null ? retObjectVisit.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -484,10 +588,14 @@ public class DefaultExpressionVisitor extends NetObject  {
 
     public DbExpression Visit(DbNotExpression expression) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVisit = null;
         try {
-            JCObject objVisit = (JCObject)classInstance.Invoke("Visit", expression == null ? null : expression.getJCOInstance());
+            retObjectVisit = classInstance.Invoke("Visit", expression == null ? null : expression.getJCOInstance());
+            JCObject objVisit = (JCObject)retObjectVisit;
             return new DbExpression(objVisit);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVisit != null ? retObjectVisit.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -495,10 +603,14 @@ public class DefaultExpressionVisitor extends NetObject  {
 
     public DbExpression Visit(DbNullExpression expression) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVisit = null;
         try {
-            JCObject objVisit = (JCObject)classInstance.Invoke("Visit", expression == null ? null : expression.getJCOInstance());
+            retObjectVisit = classInstance.Invoke("Visit", expression == null ? null : expression.getJCOInstance());
+            JCObject objVisit = (JCObject)retObjectVisit;
             return new DbExpression(objVisit);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVisit != null ? retObjectVisit.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -506,10 +618,14 @@ public class DefaultExpressionVisitor extends NetObject  {
 
     public DbExpression Visit(DbOfTypeExpression expression) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVisit = null;
         try {
-            JCObject objVisit = (JCObject)classInstance.Invoke("Visit", expression == null ? null : expression.getJCOInstance());
+            retObjectVisit = classInstance.Invoke("Visit", expression == null ? null : expression.getJCOInstance());
+            JCObject objVisit = (JCObject)retObjectVisit;
             return new DbExpression(objVisit);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVisit != null ? retObjectVisit.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -517,10 +633,14 @@ public class DefaultExpressionVisitor extends NetObject  {
 
     public DbExpression Visit(DbOrExpression expression) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVisit = null;
         try {
-            JCObject objVisit = (JCObject)classInstance.Invoke("Visit", expression == null ? null : expression.getJCOInstance());
+            retObjectVisit = classInstance.Invoke("Visit", expression == null ? null : expression.getJCOInstance());
+            JCObject objVisit = (JCObject)retObjectVisit;
             return new DbExpression(objVisit);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVisit != null ? retObjectVisit.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -528,10 +648,14 @@ public class DefaultExpressionVisitor extends NetObject  {
 
     public DbExpression Visit(DbParameterReferenceExpression expression) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVisit = null;
         try {
-            JCObject objVisit = (JCObject)classInstance.Invoke("Visit", expression == null ? null : expression.getJCOInstance());
+            retObjectVisit = classInstance.Invoke("Visit", expression == null ? null : expression.getJCOInstance());
+            JCObject objVisit = (JCObject)retObjectVisit;
             return new DbExpression(objVisit);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVisit != null ? retObjectVisit.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -539,10 +663,14 @@ public class DefaultExpressionVisitor extends NetObject  {
 
     public DbExpression Visit(DbProjectExpression expression) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVisit = null;
         try {
-            JCObject objVisit = (JCObject)classInstance.Invoke("Visit", expression == null ? null : expression.getJCOInstance());
+            retObjectVisit = classInstance.Invoke("Visit", expression == null ? null : expression.getJCOInstance());
+            JCObject objVisit = (JCObject)retObjectVisit;
             return new DbExpression(objVisit);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVisit != null ? retObjectVisit.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -550,10 +678,14 @@ public class DefaultExpressionVisitor extends NetObject  {
 
     public DbExpression Visit(DbPropertyExpression expression) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.data.ProviderIncompatibleException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVisit = null;
         try {
-            JCObject objVisit = (JCObject)classInstance.Invoke("Visit", expression == null ? null : expression.getJCOInstance());
+            retObjectVisit = classInstance.Invoke("Visit", expression == null ? null : expression.getJCOInstance());
+            JCObject objVisit = (JCObject)retObjectVisit;
             return new DbExpression(objVisit);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVisit != null ? retObjectVisit.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -561,10 +693,14 @@ public class DefaultExpressionVisitor extends NetObject  {
 
     public DbExpression Visit(DbQuantifierExpression expression) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVisit = null;
         try {
-            JCObject objVisit = (JCObject)classInstance.Invoke("Visit", expression == null ? null : expression.getJCOInstance());
+            retObjectVisit = classInstance.Invoke("Visit", expression == null ? null : expression.getJCOInstance());
+            JCObject objVisit = (JCObject)retObjectVisit;
             return new DbExpression(objVisit);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVisit != null ? retObjectVisit.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -572,10 +708,14 @@ public class DefaultExpressionVisitor extends NetObject  {
 
     public DbExpression Visit(DbRefExpression expression) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.data.ProviderIncompatibleException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVisit = null;
         try {
-            JCObject objVisit = (JCObject)classInstance.Invoke("Visit", expression == null ? null : expression.getJCOInstance());
+            retObjectVisit = classInstance.Invoke("Visit", expression == null ? null : expression.getJCOInstance());
+            JCObject objVisit = (JCObject)retObjectVisit;
             return new DbExpression(objVisit);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVisit != null ? retObjectVisit.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -583,10 +723,14 @@ public class DefaultExpressionVisitor extends NetObject  {
 
     public DbExpression Visit(DbRefKeyExpression expression) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.data.ProviderIncompatibleException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVisit = null;
         try {
-            JCObject objVisit = (JCObject)classInstance.Invoke("Visit", expression == null ? null : expression.getJCOInstance());
+            retObjectVisit = classInstance.Invoke("Visit", expression == null ? null : expression.getJCOInstance());
+            JCObject objVisit = (JCObject)retObjectVisit;
             return new DbExpression(objVisit);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVisit != null ? retObjectVisit.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -594,10 +738,14 @@ public class DefaultExpressionVisitor extends NetObject  {
 
     public DbExpression Visit(DbRelationshipNavigationExpression expression) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVisit = null;
         try {
-            JCObject objVisit = (JCObject)classInstance.Invoke("Visit", expression == null ? null : expression.getJCOInstance());
+            retObjectVisit = classInstance.Invoke("Visit", expression == null ? null : expression.getJCOInstance());
+            JCObject objVisit = (JCObject)retObjectVisit;
             return new DbExpression(objVisit);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVisit != null ? retObjectVisit.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -605,10 +753,14 @@ public class DefaultExpressionVisitor extends NetObject  {
 
     public DbExpression Visit(DbScanExpression expression) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVisit = null;
         try {
-            JCObject objVisit = (JCObject)classInstance.Invoke("Visit", expression == null ? null : expression.getJCOInstance());
+            retObjectVisit = classInstance.Invoke("Visit", expression == null ? null : expression.getJCOInstance());
+            JCObject objVisit = (JCObject)retObjectVisit;
             return new DbExpression(objVisit);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVisit != null ? retObjectVisit.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -616,10 +768,14 @@ public class DefaultExpressionVisitor extends NetObject  {
 
     public DbExpression Visit(DbSkipExpression expression) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVisit = null;
         try {
-            JCObject objVisit = (JCObject)classInstance.Invoke("Visit", expression == null ? null : expression.getJCOInstance());
+            retObjectVisit = classInstance.Invoke("Visit", expression == null ? null : expression.getJCOInstance());
+            JCObject objVisit = (JCObject)retObjectVisit;
             return new DbExpression(objVisit);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVisit != null ? retObjectVisit.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -627,10 +783,14 @@ public class DefaultExpressionVisitor extends NetObject  {
 
     public DbExpression Visit(DbSortExpression expression) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVisit = null;
         try {
-            JCObject objVisit = (JCObject)classInstance.Invoke("Visit", expression == null ? null : expression.getJCOInstance());
+            retObjectVisit = classInstance.Invoke("Visit", expression == null ? null : expression.getJCOInstance());
+            JCObject objVisit = (JCObject)retObjectVisit;
             return new DbExpression(objVisit);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVisit != null ? retObjectVisit.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -638,10 +798,14 @@ public class DefaultExpressionVisitor extends NetObject  {
 
     public DbExpression Visit(DbTreatExpression expression) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVisit = null;
         try {
-            JCObject objVisit = (JCObject)classInstance.Invoke("Visit", expression == null ? null : expression.getJCOInstance());
+            retObjectVisit = classInstance.Invoke("Visit", expression == null ? null : expression.getJCOInstance());
+            JCObject objVisit = (JCObject)retObjectVisit;
             return new DbExpression(objVisit);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVisit != null ? retObjectVisit.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -649,10 +813,14 @@ public class DefaultExpressionVisitor extends NetObject  {
 
     public DbExpression Visit(DbUnionAllExpression expression) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVisit = null;
         try {
-            JCObject objVisit = (JCObject)classInstance.Invoke("Visit", expression == null ? null : expression.getJCOInstance());
+            retObjectVisit = classInstance.Invoke("Visit", expression == null ? null : expression.getJCOInstance());
+            JCObject objVisit = (JCObject)retObjectVisit;
             return new DbExpression(objVisit);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVisit != null ? retObjectVisit.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -660,10 +828,14 @@ public class DefaultExpressionVisitor extends NetObject  {
 
     public DbExpression Visit(DbVariableReferenceExpression expression) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVisit = null;
         try {
-            JCObject objVisit = (JCObject)classInstance.Invoke("Visit", expression == null ? null : expression.getJCOInstance());
+            retObjectVisit = classInstance.Invoke("Visit", expression == null ? null : expression.getJCOInstance());
+            JCObject objVisit = (JCObject)retObjectVisit;
             return new DbExpression(objVisit);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVisit != null ? retObjectVisit.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

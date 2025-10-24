@@ -161,10 +161,14 @@ public class PingCompletedEventArgs extends AsyncCompletedEventArgs  {
     
     public PingReply getReply() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReply = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Reply");
+            retObjectReply = classInstance.Get("Reply");
+            JCObject val = (JCObject)retObjectReply;
             return new PingReply(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReply != null ? retObjectReply.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

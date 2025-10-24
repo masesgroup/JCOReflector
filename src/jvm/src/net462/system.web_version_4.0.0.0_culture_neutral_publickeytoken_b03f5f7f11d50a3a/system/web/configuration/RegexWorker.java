@@ -166,9 +166,13 @@ public class RegexWorker extends NetObject  {
     
     public boolean ProcessRegex(java.lang.String target, java.lang.String regexExpression) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.NullReferenceException, system.ArgumentOutOfRangeException, system.ArgumentException, system.MemberAccessException, system.IndexOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.NotSupportedException, system.security.SecurityException, system.text.regularexpressions.RegexMatchTimeoutException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProcessRegex = null;
         try {
-            return (boolean)classInstance.Invoke("ProcessRegex", target, regexExpression);
+            retObjectProcessRegex = classInstance.Invoke("ProcessRegex", target, regexExpression);
+            return (boolean)retObjectProcessRegex;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectProcessRegex != null ? retObjectProcessRegex.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -162,7 +162,7 @@ public class AttachedPropertiesService extends NetObject  {
     
     public void AddProperty(AttachedProperty property) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddProperty", property == null ? null : property.getJCOInstance());
         } catch (JCNativeException jcne) {

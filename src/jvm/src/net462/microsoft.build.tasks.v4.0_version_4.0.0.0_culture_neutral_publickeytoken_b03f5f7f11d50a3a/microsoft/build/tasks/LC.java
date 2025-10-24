@@ -168,9 +168,13 @@ public class LC extends ToolTaskExtension  {
     
     public boolean getNoLogo() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNoLogo = null;
         try {
-            return (boolean)classInstance.Get("NoLogo");
+            retObjectNoLogo = classInstance.Get("NoLogo");
+            return (boolean)retObjectNoLogo;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectNoLogo != null ? retObjectNoLogo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,7 +182,7 @@ public class LC extends ToolTaskExtension  {
 
     public void setNoLogo(boolean NoLogo) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("NoLogo", NoLogo);
         } catch (JCNativeException jcne) {
@@ -188,10 +192,14 @@ public class LC extends ToolTaskExtension  {
 
     public ITaskItem getLicenseTarget() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLicenseTarget = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("LicenseTarget");
+            retObjectLicenseTarget = classInstance.Get("LicenseTarget");
+            JCObject val = (JCObject)retObjectLicenseTarget;
             return new ITaskItemImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLicenseTarget != null ? retObjectLicenseTarget.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -199,7 +207,7 @@ public class LC extends ToolTaskExtension  {
 
     public void setLicenseTarget(ITaskItem LicenseTarget) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("LicenseTarget", LicenseTarget == null ? null : LicenseTarget.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -209,10 +217,14 @@ public class LC extends ToolTaskExtension  {
 
     public ITaskItem getOutputLicense() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOutputLicense = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("OutputLicense");
+            retObjectOutputLicense = classInstance.Get("OutputLicense");
+            JCObject val = (JCObject)retObjectOutputLicense;
             return new ITaskItemImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOutputLicense != null ? retObjectOutputLicense.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -220,7 +232,7 @@ public class LC extends ToolTaskExtension  {
 
     public void setOutputLicense(ITaskItem OutputLicense) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("OutputLicense", OutputLicense == null ? null : OutputLicense.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -230,16 +242,20 @@ public class LC extends ToolTaskExtension  {
 
     public final ITaskItem[] getReferencedAssemblies() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReferencedAssemblies = null;
         try {
             ArrayList<ITaskItem> resultingArrayList = new ArrayList<ITaskItem>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("ReferencedAssemblies");
+            retObjectReferencedAssemblies = classInstance.Get("ReferencedAssemblies");
+            JCObject resultingObjects = (JCObject)retObjectReferencedAssemblies;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ITaskItemImplementation(resultingObject));
             }
             ITaskItem[] resultingArray = new ITaskItem[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReferencedAssemblies != null ? retObjectReferencedAssemblies.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -247,7 +263,7 @@ public class LC extends ToolTaskExtension  {
 
     public void setReferencedAssemblies(ITaskItem[] ReferencedAssemblies) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ReferencedAssemblies", toObjectFromArray(ReferencedAssemblies));
         } catch (JCNativeException jcne) {
@@ -257,16 +273,20 @@ public class LC extends ToolTaskExtension  {
 
     public final ITaskItem[] getSources() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSources = null;
         try {
             ArrayList<ITaskItem> resultingArrayList = new ArrayList<ITaskItem>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("Sources");
+            retObjectSources = classInstance.Get("Sources");
+            JCObject resultingObjects = (JCObject)retObjectSources;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ITaskItemImplementation(resultingObject));
             }
             ITaskItem[] resultingArray = new ITaskItem[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSources != null ? retObjectSources.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -274,7 +294,7 @@ public class LC extends ToolTaskExtension  {
 
     public void setSources(ITaskItem[] Sources) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Sources", toObjectFromArray(Sources));
         } catch (JCNativeException jcne) {
@@ -284,9 +304,13 @@ public class LC extends ToolTaskExtension  {
 
     public java.lang.String getOutputDirectory() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOutputDirectory = null;
         try {
-            return (java.lang.String)classInstance.Get("OutputDirectory");
+            retObjectOutputDirectory = classInstance.Get("OutputDirectory");
+            return (java.lang.String)retObjectOutputDirectory;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectOutputDirectory != null ? retObjectOutputDirectory.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -294,7 +318,7 @@ public class LC extends ToolTaskExtension  {
 
     public void setOutputDirectory(java.lang.String OutputDirectory) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("OutputDirectory", OutputDirectory);
         } catch (JCNativeException jcne) {
@@ -304,9 +328,13 @@ public class LC extends ToolTaskExtension  {
 
     public java.lang.String getSdkToolsPath() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSdkToolsPath = null;
         try {
-            return (java.lang.String)classInstance.Get("SdkToolsPath");
+            retObjectSdkToolsPath = classInstance.Get("SdkToolsPath");
+            return (java.lang.String)retObjectSdkToolsPath;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSdkToolsPath != null ? retObjectSdkToolsPath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -314,7 +342,7 @@ public class LC extends ToolTaskExtension  {
 
     public void setSdkToolsPath(java.lang.String SdkToolsPath) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SdkToolsPath", SdkToolsPath);
         } catch (JCNativeException jcne) {

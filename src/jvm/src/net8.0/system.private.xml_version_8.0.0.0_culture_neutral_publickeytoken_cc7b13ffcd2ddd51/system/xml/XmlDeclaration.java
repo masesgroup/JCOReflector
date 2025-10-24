@@ -159,10 +159,14 @@ public class XmlDeclaration extends XmlLinkedNode  {
     
     public XmlNode CloneNode(boolean deep) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.NotSupportedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCloneNode = null;
         try {
-            JCObject objCloneNode = (JCObject)classInstance.Invoke("CloneNode", deep);
+            retObjectCloneNode = classInstance.Invoke("CloneNode", deep);
+            JCObject objCloneNode = (JCObject)retObjectCloneNode;
             return new XmlNode(objCloneNode);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCloneNode != null ? retObjectCloneNode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,7 +174,7 @@ public class XmlDeclaration extends XmlLinkedNode  {
 
     public void WriteContentTo(XmlWriter w) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteContentTo", w == null ? null : w.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -180,7 +184,7 @@ public class XmlDeclaration extends XmlLinkedNode  {
 
     public void WriteTo(XmlWriter w) throws Throwable, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.RankException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteTo", w == null ? null : w.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -194,9 +198,13 @@ public class XmlDeclaration extends XmlLinkedNode  {
     
     public java.lang.String getEncoding() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEncoding = null;
         try {
-            return (java.lang.String)classInstance.Get("Encoding");
+            retObjectEncoding = classInstance.Get("Encoding");
+            return (java.lang.String)retObjectEncoding;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectEncoding != null ? retObjectEncoding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -204,7 +212,7 @@ public class XmlDeclaration extends XmlLinkedNode  {
 
     public void setEncoding(java.lang.String Encoding) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Encoding", Encoding);
         } catch (JCNativeException jcne) {
@@ -214,9 +222,13 @@ public class XmlDeclaration extends XmlLinkedNode  {
 
     public java.lang.String getStandalone() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStandalone = null;
         try {
-            return (java.lang.String)classInstance.Get("Standalone");
+            retObjectStandalone = classInstance.Get("Standalone");
+            return (java.lang.String)retObjectStandalone;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectStandalone != null ? retObjectStandalone.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -224,7 +236,7 @@ public class XmlDeclaration extends XmlLinkedNode  {
 
     public void setStandalone(java.lang.String Standalone) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Standalone", Standalone);
         } catch (JCNativeException jcne) {
@@ -234,9 +246,13 @@ public class XmlDeclaration extends XmlLinkedNode  {
 
     public java.lang.String getVersion() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVersion = null;
         try {
-            return (java.lang.String)classInstance.Get("Version");
+            retObjectVersion = classInstance.Get("Version");
+            return (java.lang.String)retObjectVersion;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectVersion != null ? retObjectVersion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -244,7 +260,7 @@ public class XmlDeclaration extends XmlLinkedNode  {
 
     public void setVersion(java.lang.String Version) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Version", Version);
         } catch (JCNativeException jcne) {

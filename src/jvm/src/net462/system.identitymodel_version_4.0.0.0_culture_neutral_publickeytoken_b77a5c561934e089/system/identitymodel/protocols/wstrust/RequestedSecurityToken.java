@@ -181,10 +181,14 @@ public class RequestedSecurityToken extends NetObject  {
     
     public SecurityToken getSecurityToken() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSecurityToken = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SecurityToken");
+            retObjectSecurityToken = classInstance.Get("SecurityToken");
+            JCObject val = (JCObject)retObjectSecurityToken;
             return new SecurityToken(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSecurityToken != null ? retObjectSecurityToken.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,10 +196,14 @@ public class RequestedSecurityToken extends NetObject  {
 
     public XmlElement getSecurityTokenXml() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSecurityTokenXml = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SecurityTokenXml");
+            retObjectSecurityTokenXml = classInstance.Get("SecurityTokenXml");
+            JCObject val = (JCObject)retObjectSecurityTokenXml;
             return new XmlElement(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSecurityTokenXml != null ? retObjectSecurityTokenXml.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

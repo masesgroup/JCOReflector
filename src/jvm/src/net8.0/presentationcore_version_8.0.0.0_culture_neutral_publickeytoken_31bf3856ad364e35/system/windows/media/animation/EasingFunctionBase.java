@@ -155,9 +155,20 @@ public class EasingFunctionBase extends Freezable  {
     
     public double Ease(double normalizedTime) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEase = null;
         try {
-            return (double)classInstance.Invoke("Ease", normalizedTime);
+            retObjectEase = classInstance.Invoke("Ease", normalizedTime);
+            return (double)retObjectEase;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectEase_ToString = retObjectEase == null ? "null" : retObjectEase.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectEaseNumber = (java.lang.Number)retObjectEase;
+                return retObjectEaseNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectEase != null ? retObjectEase.getClass() : "null", retObjectEase_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,10 +180,14 @@ public class EasingFunctionBase extends Freezable  {
     
     public EasingMode getEasingMode() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEasingMode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("EasingMode");
+            retObjectEasingMode = classInstance.Get("EasingMode");
+            JCObject val = (JCObject)retObjectEasingMode;
             return new EasingMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEasingMode != null ? retObjectEasingMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,7 +195,7 @@ public class EasingFunctionBase extends Freezable  {
 
     public void setEasingMode(EasingMode EasingMode) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EasingMode", EasingMode == null ? null : EasingMode.getJCOInstance());
         } catch (JCNativeException jcne) {

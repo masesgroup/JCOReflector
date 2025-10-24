@@ -167,9 +167,13 @@ public class AutomationPeer extends DispatcherObject  {
     
     public boolean HasKeyboardFocus() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHasKeyboardFocus = null;
         try {
-            return (boolean)classInstance.Invoke("HasKeyboardFocus");
+            retObjectHasKeyboardFocus = classInstance.Invoke("HasKeyboardFocus");
+            return (boolean)retObjectHasKeyboardFocus;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectHasKeyboardFocus != null ? retObjectHasKeyboardFocus.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,9 +181,13 @@ public class AutomationPeer extends DispatcherObject  {
 
     public boolean IsContentElement() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsContentElement = null;
         try {
-            return (boolean)classInstance.Invoke("IsContentElement");
+            retObjectIsContentElement = classInstance.Invoke("IsContentElement");
+            return (boolean)retObjectIsContentElement;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsContentElement != null ? retObjectIsContentElement.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,9 +195,13 @@ public class AutomationPeer extends DispatcherObject  {
 
     public boolean IsControlElement() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsControlElement = null;
         try {
-            return (boolean)classInstance.Invoke("IsControlElement");
+            retObjectIsControlElement = classInstance.Invoke("IsControlElement");
+            return (boolean)retObjectIsControlElement;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsControlElement != null ? retObjectIsControlElement.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,9 +209,13 @@ public class AutomationPeer extends DispatcherObject  {
 
     public boolean IsDialog() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsDialog = null;
         try {
-            return (boolean)classInstance.Invoke("IsDialog");
+            retObjectIsDialog = classInstance.Invoke("IsDialog");
+            return (boolean)retObjectIsDialog;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsDialog != null ? retObjectIsDialog.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -207,9 +223,13 @@ public class AutomationPeer extends DispatcherObject  {
 
     public boolean IsEnabled() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsEnabled = null;
         try {
-            return (boolean)classInstance.Invoke("IsEnabled");
+            retObjectIsEnabled = classInstance.Invoke("IsEnabled");
+            return (boolean)retObjectIsEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsEnabled != null ? retObjectIsEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -217,9 +237,13 @@ public class AutomationPeer extends DispatcherObject  {
 
     public boolean IsKeyboardFocusable() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsKeyboardFocusable = null;
         try {
-            return (boolean)classInstance.Invoke("IsKeyboardFocusable");
+            retObjectIsKeyboardFocusable = classInstance.Invoke("IsKeyboardFocusable");
+            return (boolean)retObjectIsKeyboardFocusable;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsKeyboardFocusable != null ? retObjectIsKeyboardFocusable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -227,9 +251,13 @@ public class AutomationPeer extends DispatcherObject  {
 
     public boolean IsOffscreen() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsOffscreen = null;
         try {
-            return (boolean)classInstance.Invoke("IsOffscreen");
+            retObjectIsOffscreen = classInstance.Invoke("IsOffscreen");
+            return (boolean)retObjectIsOffscreen;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsOffscreen != null ? retObjectIsOffscreen.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -237,9 +265,13 @@ public class AutomationPeer extends DispatcherObject  {
 
     public boolean IsPassword() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsPassword = null;
         try {
-            return (boolean)classInstance.Invoke("IsPassword");
+            retObjectIsPassword = classInstance.Invoke("IsPassword");
+            return (boolean)retObjectIsPassword;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsPassword != null ? retObjectIsPassword.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -247,9 +279,13 @@ public class AutomationPeer extends DispatcherObject  {
 
     public boolean IsRequiredForForm() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsRequiredForForm = null;
         try {
-            return (boolean)classInstance.Invoke("IsRequiredForForm");
+            retObjectIsRequiredForForm = classInstance.Invoke("IsRequiredForForm");
+            return (boolean)retObjectIsRequiredForForm;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsRequiredForForm != null ? retObjectIsRequiredForForm.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -257,9 +293,13 @@ public class AutomationPeer extends DispatcherObject  {
 
     public static boolean ListenerExists(AutomationEvents eventId) throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectListenerExists = null;
         try {
-            return (boolean)classType.Invoke("ListenerExists", eventId == null ? null : eventId.getJCOInstance());
+            retObjectListenerExists = classType.Invoke("ListenerExists", eventId == null ? null : eventId.getJCOInstance());
+            return (boolean)retObjectListenerExists;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectListenerExists != null ? retObjectListenerExists.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -267,9 +307,20 @@ public class AutomationPeer extends DispatcherObject  {
 
     public int GetPositionInSet() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPositionInSet = null;
         try {
-            return (int)classInstance.Invoke("GetPositionInSet");
+            retObjectGetPositionInSet = classInstance.Invoke("GetPositionInSet");
+            return (int)retObjectGetPositionInSet;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetPositionInSet_ToString = retObjectGetPositionInSet == null ? "null" : retObjectGetPositionInSet.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetPositionInSetNumber = (java.lang.Number)retObjectGetPositionInSet;
+                return retObjectGetPositionInSetNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetPositionInSet != null ? retObjectGetPositionInSet.getClass() : "null", retObjectGetPositionInSet_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -277,9 +328,20 @@ public class AutomationPeer extends DispatcherObject  {
 
     public int GetSizeOfSet() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSizeOfSet = null;
         try {
-            return (int)classInstance.Invoke("GetSizeOfSet");
+            retObjectGetSizeOfSet = classInstance.Invoke("GetSizeOfSet");
+            return (int)retObjectGetSizeOfSet;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetSizeOfSet_ToString = retObjectGetSizeOfSet == null ? "null" : retObjectGetSizeOfSet.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetSizeOfSetNumber = (java.lang.Number)retObjectGetSizeOfSet;
+                return retObjectGetSizeOfSetNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetSizeOfSet != null ? retObjectGetSizeOfSet.getClass() : "null", retObjectGetSizeOfSet_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -287,10 +349,14 @@ public class AutomationPeer extends DispatcherObject  {
 
     public NetObject GetPattern(PatternInterface patternInterface) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPattern = null;
         try {
-            JCObject objGetPattern = (JCObject)classInstance.Invoke("GetPattern", patternInterface == null ? null : patternInterface.getJCOInstance());
+            retObjectGetPattern = classInstance.Invoke("GetPattern", patternInterface == null ? null : patternInterface.getJCOInstance());
+            JCObject objGetPattern = (JCObject)retObjectGetPattern;
             return new NetObject(objGetPattern);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetPattern != null ? retObjectGetPattern.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -298,9 +364,13 @@ public class AutomationPeer extends DispatcherObject  {
 
     public java.lang.String GetAcceleratorKey() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetAcceleratorKey = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetAcceleratorKey");
+            retObjectGetAcceleratorKey = classInstance.Invoke("GetAcceleratorKey");
+            return (java.lang.String)retObjectGetAcceleratorKey;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetAcceleratorKey != null ? retObjectGetAcceleratorKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -308,9 +378,13 @@ public class AutomationPeer extends DispatcherObject  {
 
     public java.lang.String GetAccessKey() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetAccessKey = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetAccessKey");
+            retObjectGetAccessKey = classInstance.Invoke("GetAccessKey");
+            return (java.lang.String)retObjectGetAccessKey;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetAccessKey != null ? retObjectGetAccessKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -318,9 +392,13 @@ public class AutomationPeer extends DispatcherObject  {
 
     public java.lang.String GetAutomationId() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetAutomationId = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetAutomationId");
+            retObjectGetAutomationId = classInstance.Invoke("GetAutomationId");
+            return (java.lang.String)retObjectGetAutomationId;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetAutomationId != null ? retObjectGetAutomationId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -328,9 +406,13 @@ public class AutomationPeer extends DispatcherObject  {
 
     public java.lang.String GetClassName() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetClassName = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetClassName");
+            retObjectGetClassName = classInstance.Invoke("GetClassName");
+            return (java.lang.String)retObjectGetClassName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetClassName != null ? retObjectGetClassName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -338,9 +420,13 @@ public class AutomationPeer extends DispatcherObject  {
 
     public java.lang.String GetHelpText() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetHelpText = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetHelpText");
+            retObjectGetHelpText = classInstance.Invoke("GetHelpText");
+            return (java.lang.String)retObjectGetHelpText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetHelpText != null ? retObjectGetHelpText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -348,9 +434,13 @@ public class AutomationPeer extends DispatcherObject  {
 
     public java.lang.String GetItemStatus() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetItemStatus = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetItemStatus");
+            retObjectGetItemStatus = classInstance.Invoke("GetItemStatus");
+            return (java.lang.String)retObjectGetItemStatus;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetItemStatus != null ? retObjectGetItemStatus.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -358,9 +448,13 @@ public class AutomationPeer extends DispatcherObject  {
 
     public java.lang.String GetItemType() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetItemType = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetItemType");
+            retObjectGetItemType = classInstance.Invoke("GetItemType");
+            return (java.lang.String)retObjectGetItemType;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetItemType != null ? retObjectGetItemType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -368,9 +462,13 @@ public class AutomationPeer extends DispatcherObject  {
 
     public java.lang.String GetLocalizedControlType() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetLocalizedControlType = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetLocalizedControlType");
+            retObjectGetLocalizedControlType = classInstance.Invoke("GetLocalizedControlType");
+            return (java.lang.String)retObjectGetLocalizedControlType;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetLocalizedControlType != null ? retObjectGetLocalizedControlType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -378,9 +476,13 @@ public class AutomationPeer extends DispatcherObject  {
 
     public java.lang.String GetName() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetName = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetName");
+            retObjectGetName = classInstance.Invoke("GetName");
+            return (java.lang.String)retObjectGetName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetName != null ? retObjectGetName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -388,10 +490,14 @@ public class AutomationPeer extends DispatcherObject  {
 
     public AutomationHeadingLevel GetHeadingLevel() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetHeadingLevel = null;
         try {
-            JCObject objGetHeadingLevel = (JCObject)classInstance.Invoke("GetHeadingLevel");
+            retObjectGetHeadingLevel = classInstance.Invoke("GetHeadingLevel");
+            JCObject objGetHeadingLevel = (JCObject)retObjectGetHeadingLevel;
             return new AutomationHeadingLevel(objGetHeadingLevel);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetHeadingLevel != null ? retObjectGetHeadingLevel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -399,10 +505,14 @@ public class AutomationPeer extends DispatcherObject  {
 
     public AutomationLiveSetting GetLiveSetting() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetLiveSetting = null;
         try {
-            JCObject objGetLiveSetting = (JCObject)classInstance.Invoke("GetLiveSetting");
+            retObjectGetLiveSetting = classInstance.Invoke("GetLiveSetting");
+            JCObject objGetLiveSetting = (JCObject)retObjectGetLiveSetting;
             return new AutomationLiveSetting(objGetLiveSetting);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetLiveSetting != null ? retObjectGetLiveSetting.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -410,10 +520,14 @@ public class AutomationPeer extends DispatcherObject  {
 
     public AutomationControlType GetAutomationControlType() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetAutomationControlType = null;
         try {
-            JCObject objGetAutomationControlType = (JCObject)classInstance.Invoke("GetAutomationControlType");
+            retObjectGetAutomationControlType = classInstance.Invoke("GetAutomationControlType");
+            JCObject objGetAutomationControlType = (JCObject)retObjectGetAutomationControlType;
             return new AutomationControlType(objGetAutomationControlType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetAutomationControlType != null ? retObjectGetAutomationControlType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -421,10 +535,14 @@ public class AutomationPeer extends DispatcherObject  {
 
     public AutomationOrientation GetOrientation() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetOrientation = null;
         try {
-            JCObject objGetOrientation = (JCObject)classInstance.Invoke("GetOrientation");
+            retObjectGetOrientation = classInstance.Invoke("GetOrientation");
+            JCObject objGetOrientation = (JCObject)retObjectGetOrientation;
             return new AutomationOrientation(objGetOrientation);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetOrientation != null ? retObjectGetOrientation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -432,10 +550,14 @@ public class AutomationPeer extends DispatcherObject  {
 
     public AutomationPeer GetLabeledBy() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetLabeledBy = null;
         try {
-            JCObject objGetLabeledBy = (JCObject)classInstance.Invoke("GetLabeledBy");
+            retObjectGetLabeledBy = classInstance.Invoke("GetLabeledBy");
+            JCObject objGetLabeledBy = (JCObject)retObjectGetLabeledBy;
             return new AutomationPeer(objGetLabeledBy);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetLabeledBy != null ? retObjectGetLabeledBy.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -443,10 +565,14 @@ public class AutomationPeer extends DispatcherObject  {
 
     public AutomationPeer GetParent() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetParent = null;
         try {
-            JCObject objGetParent = (JCObject)classInstance.Invoke("GetParent");
+            retObjectGetParent = classInstance.Invoke("GetParent");
+            JCObject objGetParent = (JCObject)retObjectGetParent;
             return new AutomationPeer(objGetParent);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetParent != null ? retObjectGetParent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -454,10 +580,14 @@ public class AutomationPeer extends DispatcherObject  {
 
     public AutomationPeer GetPeerFromPoint(Point point) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPeerFromPoint = null;
         try {
-            JCObject objGetPeerFromPoint = (JCObject)classInstance.Invoke("GetPeerFromPoint", point == null ? null : point.getJCOInstance());
+            retObjectGetPeerFromPoint = classInstance.Invoke("GetPeerFromPoint", point == null ? null : point.getJCOInstance());
+            JCObject objGetPeerFromPoint = (JCObject)retObjectGetPeerFromPoint;
             return new AutomationPeer(objGetPeerFromPoint);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetPeerFromPoint != null ? retObjectGetPeerFromPoint.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -465,10 +595,14 @@ public class AutomationPeer extends DispatcherObject  {
 
     public Point GetClickablePoint() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetClickablePoint = null;
         try {
-            JCObject objGetClickablePoint = (JCObject)classInstance.Invoke("GetClickablePoint");
+            retObjectGetClickablePoint = classInstance.Invoke("GetClickablePoint");
+            JCObject objGetClickablePoint = (JCObject)retObjectGetClickablePoint;
             return new Point(objGetClickablePoint);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetClickablePoint != null ? retObjectGetClickablePoint.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -476,10 +610,14 @@ public class AutomationPeer extends DispatcherObject  {
 
     public Rect GetBoundingRectangle() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetBoundingRectangle = null;
         try {
-            JCObject objGetBoundingRectangle = (JCObject)classInstance.Invoke("GetBoundingRectangle");
+            retObjectGetBoundingRectangle = classInstance.Invoke("GetBoundingRectangle");
+            JCObject objGetBoundingRectangle = (JCObject)retObjectGetBoundingRectangle;
             return new Rect(objGetBoundingRectangle);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetBoundingRectangle != null ? retObjectGetBoundingRectangle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -487,7 +625,7 @@ public class AutomationPeer extends DispatcherObject  {
 
     public void InvalidatePeer() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.RankException, system.ArrayTypeMismatchException, system.componentmodel.Win32Exception, system.InvalidCastException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("InvalidatePeer");
         } catch (JCNativeException jcne) {
@@ -497,7 +635,7 @@ public class AutomationPeer extends DispatcherObject  {
 
     public void RaiseAsyncContentLoadedEvent(AsyncContentLoadedEventArgs args) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.MulticastNotSupportedException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RaiseAsyncContentLoadedEvent", args == null ? null : args.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -507,7 +645,7 @@ public class AutomationPeer extends DispatcherObject  {
 
     public void RaiseAutomationEvent(AutomationEvents eventId) throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.MulticastNotSupportedException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RaiseAutomationEvent", eventId == null ? null : eventId.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -517,7 +655,7 @@ public class AutomationPeer extends DispatcherObject  {
 
     public void RaiseNotificationEvent(AutomationNotificationKind notificationKind, AutomationNotificationProcessing notificationProcessing, java.lang.String displayString, java.lang.String activityId) throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.MulticastNotSupportedException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RaiseNotificationEvent", notificationKind == null ? null : notificationKind.getJCOInstance(), notificationProcessing == null ? null : notificationProcessing.getJCOInstance(), displayString, activityId);
         } catch (JCNativeException jcne) {
@@ -527,7 +665,7 @@ public class AutomationPeer extends DispatcherObject  {
 
     public void RaisePropertyChangedEvent(AutomationProperty property, NetObject oldValue, NetObject newValue) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.MulticastNotSupportedException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RaisePropertyChangedEvent", property == null ? null : property.getJCOInstance(), oldValue == null ? null : oldValue.getJCOInstance(), newValue == null ? null : newValue.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -537,7 +675,7 @@ public class AutomationPeer extends DispatcherObject  {
 
     public void ResetChildrenCache() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.NotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ResetChildrenCache");
         } catch (JCNativeException jcne) {
@@ -547,7 +685,7 @@ public class AutomationPeer extends DispatcherObject  {
 
     public void SetFocus() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetFocus");
         } catch (JCNativeException jcne) {
@@ -561,10 +699,14 @@ public class AutomationPeer extends DispatcherObject  {
     
     public AutomationPeer getEventsSource() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEventsSource = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("EventsSource");
+            retObjectEventsSource = classInstance.Get("EventsSource");
+            JCObject val = (JCObject)retObjectEventsSource;
             return new AutomationPeer(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEventsSource != null ? retObjectEventsSource.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -572,7 +714,7 @@ public class AutomationPeer extends DispatcherObject  {
 
     public void setEventsSource(AutomationPeer EventsSource) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EventsSource", EventsSource == null ? null : EventsSource.getJCOInstance());
         } catch (JCNativeException jcne) {

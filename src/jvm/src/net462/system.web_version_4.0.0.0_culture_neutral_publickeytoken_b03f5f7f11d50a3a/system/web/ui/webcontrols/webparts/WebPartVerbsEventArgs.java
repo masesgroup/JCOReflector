@@ -177,10 +177,14 @@ public class WebPartVerbsEventArgs extends EventArgs  {
     
     public WebPartVerbCollection getVerbs() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVerbs = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Verbs");
+            retObjectVerbs = classInstance.Get("Verbs");
+            JCObject val = (JCObject)retObjectVerbs;
             return new WebPartVerbCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVerbs != null ? retObjectVerbs.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,7 +192,7 @@ public class WebPartVerbsEventArgs extends EventArgs  {
 
     public void setVerbs(WebPartVerbCollection Verbs) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Verbs", Verbs == null ? null : Verbs.getJCOInstance());
         } catch (JCNativeException jcne) {

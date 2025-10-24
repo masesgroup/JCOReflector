@@ -159,7 +159,7 @@ public class SendReceiveExtension extends NetObject  {
     
     public void Cancel(Bookmark bookmark) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Cancel", bookmark == null ? null : bookmark.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -169,7 +169,7 @@ public class SendReceiveExtension extends NetObject  {
 
     public void OnUninitializeCorrelation(InstanceKey correlationKey) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("OnUninitializeCorrelation", correlationKey == null ? null : correlationKey.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -179,7 +179,7 @@ public class SendReceiveExtension extends NetObject  {
 
     public void RegisterReceive(ReceiveSettings settings, InstanceKey correlatesWith, Bookmark receiveBookmark) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RegisterReceive", settings == null ? null : settings.getJCOInstance(), correlatesWith == null ? null : correlatesWith.getJCOInstance(), receiveBookmark == null ? null : receiveBookmark.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -189,7 +189,7 @@ public class SendReceiveExtension extends NetObject  {
 
     public void Send(MessageContext message, SendSettings settings, InstanceKey correlatesWith, Bookmark sendCompleteBookmark) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Send", message == null ? null : message.getJCOInstance(), settings == null ? null : settings.getJCOInstance(), correlatesWith == null ? null : correlatesWith.getJCOInstance(), sendCompleteBookmark == null ? null : sendCompleteBookmark.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -203,10 +203,14 @@ public class SendReceiveExtension extends NetObject  {
     
     public HostSettings getHostSettings() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHostSettings = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("HostSettings");
+            retObjectHostSettings = classInstance.Get("HostSettings");
+            JCObject val = (JCObject)retObjectHostSettings;
             return new HostSettings(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHostSettings != null ? retObjectHostSettings.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

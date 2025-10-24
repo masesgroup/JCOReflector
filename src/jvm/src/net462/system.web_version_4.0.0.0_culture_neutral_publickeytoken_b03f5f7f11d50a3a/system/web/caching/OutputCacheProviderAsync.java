@@ -156,10 +156,14 @@ public class OutputCacheProviderAsync extends OutputCacheProvider  {
     
     public Task RemoveAsync(java.lang.String key) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRemoveAsync = null;
         try {
-            JCObject objRemoveAsync = (JCObject)classInstance.Invoke("RemoveAsync", key);
+            retObjectRemoveAsync = classInstance.Invoke("RemoveAsync", key);
+            JCObject objRemoveAsync = (JCObject)retObjectRemoveAsync;
             return new Task(objRemoveAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRemoveAsync != null ? retObjectRemoveAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -167,10 +171,14 @@ public class OutputCacheProviderAsync extends OutputCacheProvider  {
 
     public Task SetAsync(java.lang.String key, NetObject entry, DateTime utcExpiry) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSetAsync = null;
         try {
-            JCObject objSetAsync = (JCObject)classInstance.Invoke("SetAsync", key, entry == null ? null : entry.getJCOInstance(), utcExpiry == null ? null : utcExpiry.getJCOInstance());
+            retObjectSetAsync = classInstance.Invoke("SetAsync", key, entry == null ? null : entry.getJCOInstance(), utcExpiry == null ? null : utcExpiry.getJCOInstance());
+            JCObject objSetAsync = (JCObject)retObjectSetAsync;
             return new Task(objSetAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSetAsync != null ? retObjectSetAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

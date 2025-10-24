@@ -145,9 +145,13 @@ public class IAuthorizeRemotingConnectionImplementation extends NetObject implem
     
     public boolean IsConnectingEndPointAuthorized(EndPoint endPoint) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsConnectingEndPointAuthorized = null;
         try {
-            return (boolean)classInstance.Invoke("IsConnectingEndPointAuthorized", endPoint == null ? null : endPoint.getJCOInstance());
+            retObjectIsConnectingEndPointAuthorized = classInstance.Invoke("IsConnectingEndPointAuthorized", endPoint == null ? null : endPoint.getJCOInstance());
+            return (boolean)retObjectIsConnectingEndPointAuthorized;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsConnectingEndPointAuthorized != null ? retObjectIsConnectingEndPointAuthorized.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -155,9 +159,13 @@ public class IAuthorizeRemotingConnectionImplementation extends NetObject implem
 
     public boolean IsConnectingIdentityAuthorized(IIdentity identity) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsConnectingIdentityAuthorized = null;
         try {
-            return (boolean)classInstance.Invoke("IsConnectingIdentityAuthorized", identity == null ? null : identity.getJCOInstance());
+            retObjectIsConnectingIdentityAuthorized = classInstance.Invoke("IsConnectingIdentityAuthorized", identity == null ? null : identity.getJCOInstance());
+            return (boolean)retObjectIsConnectingIdentityAuthorized;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsConnectingIdentityAuthorized != null ? retObjectIsConnectingIdentityAuthorized.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

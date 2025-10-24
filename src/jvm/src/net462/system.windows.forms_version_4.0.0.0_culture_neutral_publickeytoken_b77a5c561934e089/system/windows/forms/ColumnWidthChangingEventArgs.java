@@ -180,9 +180,20 @@ public class ColumnWidthChangingEventArgs extends CancelEventArgs  {
     
     public int getColumnIndex() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectColumnIndex = null;
         try {
-            return (int)classInstance.Get("ColumnIndex");
+            retObjectColumnIndex = classInstance.Get("ColumnIndex");
+            return (int)retObjectColumnIndex;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectColumnIndex_ToString = retObjectColumnIndex == null ? "null" : retObjectColumnIndex.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectColumnIndexNumber = (java.lang.Number)retObjectColumnIndex;
+                return retObjectColumnIndexNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectColumnIndex != null ? retObjectColumnIndex.getClass() : "null", retObjectColumnIndex_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,9 +201,20 @@ public class ColumnWidthChangingEventArgs extends CancelEventArgs  {
 
     public int getNewWidth() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNewWidth = null;
         try {
-            return (int)classInstance.Get("NewWidth");
+            retObjectNewWidth = classInstance.Get("NewWidth");
+            return (int)retObjectNewWidth;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectNewWidth_ToString = retObjectNewWidth == null ? "null" : retObjectNewWidth.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectNewWidthNumber = (java.lang.Number)retObjectNewWidth;
+                return retObjectNewWidthNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectNewWidth != null ? retObjectNewWidth.getClass() : "null", retObjectNewWidth_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,7 +222,7 @@ public class ColumnWidthChangingEventArgs extends CancelEventArgs  {
 
     public void setNewWidth(int NewWidth) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("NewWidth", NewWidth);
         } catch (JCNativeException jcne) {

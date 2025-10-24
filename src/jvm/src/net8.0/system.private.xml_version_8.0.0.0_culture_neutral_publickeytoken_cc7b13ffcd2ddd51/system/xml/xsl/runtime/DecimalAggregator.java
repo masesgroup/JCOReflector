@@ -157,7 +157,7 @@ public class DecimalAggregator extends ValueType  {
     
     public void Average(Decimal value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Average", value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -167,7 +167,7 @@ public class DecimalAggregator extends ValueType  {
 
     public void Create() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Create");
         } catch (JCNativeException jcne) {
@@ -177,7 +177,7 @@ public class DecimalAggregator extends ValueType  {
 
     public void Maximum(Decimal value) throws Throwable, system.NotSupportedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Maximum", value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -187,7 +187,7 @@ public class DecimalAggregator extends ValueType  {
 
     public void Minimum(Decimal value) throws Throwable, system.NotSupportedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Minimum", value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -197,7 +197,7 @@ public class DecimalAggregator extends ValueType  {
 
     public void Sum(Decimal value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Sum", value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -211,9 +211,13 @@ public class DecimalAggregator extends ValueType  {
     
     public boolean getIsEmpty() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsEmpty = null;
         try {
-            return (boolean)classInstance.Get("IsEmpty");
+            retObjectIsEmpty = classInstance.Get("IsEmpty");
+            return (boolean)retObjectIsEmpty;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsEmpty != null ? retObjectIsEmpty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -221,10 +225,14 @@ public class DecimalAggregator extends ValueType  {
 
     public Decimal getAverageResult() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.DivideByZeroException, system.OverflowException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAverageResult = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AverageResult");
+            retObjectAverageResult = classInstance.Get("AverageResult");
+            JCObject val = (JCObject)retObjectAverageResult;
             return new Decimal(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAverageResult != null ? retObjectAverageResult.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -232,10 +240,14 @@ public class DecimalAggregator extends ValueType  {
 
     public Decimal getMaximumResult() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaximumResult = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MaximumResult");
+            retObjectMaximumResult = classInstance.Get("MaximumResult");
+            JCObject val = (JCObject)retObjectMaximumResult;
             return new Decimal(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMaximumResult != null ? retObjectMaximumResult.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -243,10 +255,14 @@ public class DecimalAggregator extends ValueType  {
 
     public Decimal getMinimumResult() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMinimumResult = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MinimumResult");
+            retObjectMinimumResult = classInstance.Get("MinimumResult");
+            JCObject val = (JCObject)retObjectMinimumResult;
             return new Decimal(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMinimumResult != null ? retObjectMinimumResult.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -254,10 +270,14 @@ public class DecimalAggregator extends ValueType  {
 
     public Decimal getSumResult() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSumResult = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SumResult");
+            retObjectSumResult = classInstance.Get("SumResult");
+            JCObject val = (JCObject)retObjectSumResult;
             return new Decimal(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSumResult != null ? retObjectSumResult.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

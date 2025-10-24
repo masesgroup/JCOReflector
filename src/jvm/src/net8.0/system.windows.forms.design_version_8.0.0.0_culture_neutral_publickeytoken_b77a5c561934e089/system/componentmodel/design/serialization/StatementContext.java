@@ -166,10 +166,14 @@ public class StatementContext extends NetObject  {
     
     public ObjectStatementCollection getStatementCollection() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStatementCollection = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("StatementCollection");
+            retObjectStatementCollection = classInstance.Get("StatementCollection");
+            JCObject val = (JCObject)retObjectStatementCollection;
             return new ObjectStatementCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStatementCollection != null ? retObjectStatementCollection.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

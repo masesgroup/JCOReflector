@@ -215,7 +215,7 @@ public class X509SubjectKeyIdentifierExtension extends X509Extension  {
     
     public void CopyFrom(AsnEncodedData asnEncodedData) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CopyFrom", asnEncodedData == null ? null : asnEncodedData.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -229,9 +229,13 @@ public class X509SubjectKeyIdentifierExtension extends X509Extension  {
     
     public java.lang.String getSubjectKeyIdentifier() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSubjectKeyIdentifier = null;
         try {
-            return (java.lang.String)classInstance.Get("SubjectKeyIdentifier");
+            retObjectSubjectKeyIdentifier = classInstance.Get("SubjectKeyIdentifier");
+            return (java.lang.String)retObjectSubjectKeyIdentifier;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSubjectKeyIdentifier != null ? retObjectSubjectKeyIdentifier.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

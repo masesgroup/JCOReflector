@@ -160,9 +160,20 @@ public class PrinterUnitConvert extends NetObject  {
     
     public static double Convert(double value, PrinterUnit fromUnit, PrinterUnit toUnit) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectConvert = null;
         try {
-            return (double)classType.Invoke("Convert", value, fromUnit == null ? null : fromUnit.getJCOInstance(), toUnit == null ? null : toUnit.getJCOInstance());
+            retObjectConvert = classType.Invoke("Convert", value, fromUnit == null ? null : fromUnit.getJCOInstance(), toUnit == null ? null : toUnit.getJCOInstance());
+            return (double)retObjectConvert;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectConvert_ToString = retObjectConvert == null ? "null" : retObjectConvert.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectConvertNumber = (java.lang.Number)retObjectConvert;
+                return retObjectConvertNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectConvert != null ? retObjectConvert.getClass() : "null", retObjectConvert_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,9 +181,20 @@ public class PrinterUnitConvert extends NetObject  {
 
     public static int Convert(int value, PrinterUnit fromUnit, PrinterUnit toUnit) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectConvert = null;
         try {
-            return (int)classType.Invoke("Convert", value, fromUnit == null ? null : fromUnit.getJCOInstance(), toUnit == null ? null : toUnit.getJCOInstance());
+            retObjectConvert = classType.Invoke("Convert", value, fromUnit == null ? null : fromUnit.getJCOInstance(), toUnit == null ? null : toUnit.getJCOInstance());
+            return (int)retObjectConvert;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectConvert_ToString = retObjectConvert == null ? "null" : retObjectConvert.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectConvertNumber = (java.lang.Number)retObjectConvert;
+                return retObjectConvertNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectConvert != null ? retObjectConvert.getClass() : "null", retObjectConvert_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,10 +202,14 @@ public class PrinterUnitConvert extends NetObject  {
 
     public static Point Convert(Point value, PrinterUnit fromUnit, PrinterUnit toUnit) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectConvert = null;
         try {
-            JCObject objConvert = (JCObject)classType.Invoke("Convert", value == null ? null : value.getJCOInstance(), fromUnit == null ? null : fromUnit.getJCOInstance(), toUnit == null ? null : toUnit.getJCOInstance());
+            retObjectConvert = classType.Invoke("Convert", value == null ? null : value.getJCOInstance(), fromUnit == null ? null : fromUnit.getJCOInstance(), toUnit == null ? null : toUnit.getJCOInstance());
+            JCObject objConvert = (JCObject)retObjectConvert;
             return new Point(objConvert);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConvert != null ? retObjectConvert.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,10 +217,14 @@ public class PrinterUnitConvert extends NetObject  {
 
     public static Margins Convert(Margins value, PrinterUnit fromUnit, PrinterUnit toUnit) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectConvert = null;
         try {
-            JCObject objConvert = (JCObject)classType.Invoke("Convert", value == null ? null : value.getJCOInstance(), fromUnit == null ? null : fromUnit.getJCOInstance(), toUnit == null ? null : toUnit.getJCOInstance());
+            retObjectConvert = classType.Invoke("Convert", value == null ? null : value.getJCOInstance(), fromUnit == null ? null : fromUnit.getJCOInstance(), toUnit == null ? null : toUnit.getJCOInstance());
+            JCObject objConvert = (JCObject)retObjectConvert;
             return new Margins(objConvert);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConvert != null ? retObjectConvert.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,10 +232,14 @@ public class PrinterUnitConvert extends NetObject  {
 
     public static Rectangle Convert(Rectangle value, PrinterUnit fromUnit, PrinterUnit toUnit) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectConvert = null;
         try {
-            JCObject objConvert = (JCObject)classType.Invoke("Convert", value == null ? null : value.getJCOInstance(), fromUnit == null ? null : fromUnit.getJCOInstance(), toUnit == null ? null : toUnit.getJCOInstance());
+            retObjectConvert = classType.Invoke("Convert", value == null ? null : value.getJCOInstance(), fromUnit == null ? null : fromUnit.getJCOInstance(), toUnit == null ? null : toUnit.getJCOInstance());
+            JCObject objConvert = (JCObject)retObjectConvert;
             return new Rectangle(objConvert);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConvert != null ? retObjectConvert.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,10 +247,14 @@ public class PrinterUnitConvert extends NetObject  {
 
     public static Size Convert(Size value, PrinterUnit fromUnit, PrinterUnit toUnit) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectConvert = null;
         try {
-            JCObject objConvert = (JCObject)classType.Invoke("Convert", value == null ? null : value.getJCOInstance(), fromUnit == null ? null : fromUnit.getJCOInstance(), toUnit == null ? null : toUnit.getJCOInstance());
+            retObjectConvert = classType.Invoke("Convert", value == null ? null : value.getJCOInstance(), fromUnit == null ? null : fromUnit.getJCOInstance(), toUnit == null ? null : toUnit.getJCOInstance());
+            JCObject objConvert = (JCObject)retObjectConvert;
             return new Size(objConvert);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConvert != null ? retObjectConvert.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

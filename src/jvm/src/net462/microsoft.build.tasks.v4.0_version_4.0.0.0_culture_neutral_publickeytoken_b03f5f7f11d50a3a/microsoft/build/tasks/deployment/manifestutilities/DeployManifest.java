@@ -177,7 +177,7 @@ public class DeployManifest extends Manifest  {
     
     public void Validate() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.UriFormatException, system.OverflowException, system.NotSupportedException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Validate");
         } catch (JCNativeException jcne) {
@@ -191,9 +191,13 @@ public class DeployManifest extends Manifest  {
     
     public boolean getCreateDesktopShortcut() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateDesktopShortcut = null;
         try {
-            return (boolean)classInstance.Get("CreateDesktopShortcut");
+            retObjectCreateDesktopShortcut = classInstance.Get("CreateDesktopShortcut");
+            return (boolean)retObjectCreateDesktopShortcut;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCreateDesktopShortcut != null ? retObjectCreateDesktopShortcut.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,7 +205,7 @@ public class DeployManifest extends Manifest  {
 
     public void setCreateDesktopShortcut(boolean CreateDesktopShortcut) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CreateDesktopShortcut", CreateDesktopShortcut);
         } catch (JCNativeException jcne) {
@@ -211,9 +215,13 @@ public class DeployManifest extends Manifest  {
 
     public boolean getDisallowUrlActivation() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDisallowUrlActivation = null;
         try {
-            return (boolean)classInstance.Get("DisallowUrlActivation");
+            retObjectDisallowUrlActivation = classInstance.Get("DisallowUrlActivation");
+            return (boolean)retObjectDisallowUrlActivation;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectDisallowUrlActivation != null ? retObjectDisallowUrlActivation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -221,7 +229,7 @@ public class DeployManifest extends Manifest  {
 
     public void setDisallowUrlActivation(boolean DisallowUrlActivation) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DisallowUrlActivation", DisallowUrlActivation);
         } catch (JCNativeException jcne) {
@@ -231,9 +239,13 @@ public class DeployManifest extends Manifest  {
 
     public boolean getInstall() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInstall = null;
         try {
-            return (boolean)classInstance.Get("Install");
+            retObjectInstall = classInstance.Get("Install");
+            return (boolean)retObjectInstall;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectInstall != null ? retObjectInstall.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -241,7 +253,7 @@ public class DeployManifest extends Manifest  {
 
     public void setInstall(boolean Install) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Install", Install);
         } catch (JCNativeException jcne) {
@@ -251,9 +263,13 @@ public class DeployManifest extends Manifest  {
 
     public boolean getMapFileExtensions() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMapFileExtensions = null;
         try {
-            return (boolean)classInstance.Get("MapFileExtensions");
+            retObjectMapFileExtensions = classInstance.Get("MapFileExtensions");
+            return (boolean)retObjectMapFileExtensions;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectMapFileExtensions != null ? retObjectMapFileExtensions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -261,7 +277,7 @@ public class DeployManifest extends Manifest  {
 
     public void setMapFileExtensions(boolean MapFileExtensions) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MapFileExtensions", MapFileExtensions);
         } catch (JCNativeException jcne) {
@@ -271,9 +287,13 @@ public class DeployManifest extends Manifest  {
 
     public boolean getTrustUrlParameters() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTrustUrlParameters = null;
         try {
-            return (boolean)classInstance.Get("TrustUrlParameters");
+            retObjectTrustUrlParameters = classInstance.Get("TrustUrlParameters");
+            return (boolean)retObjectTrustUrlParameters;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectTrustUrlParameters != null ? retObjectTrustUrlParameters.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -281,7 +301,7 @@ public class DeployManifest extends Manifest  {
 
     public void setTrustUrlParameters(boolean TrustUrlParameters) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TrustUrlParameters", TrustUrlParameters);
         } catch (JCNativeException jcne) {
@@ -291,9 +311,13 @@ public class DeployManifest extends Manifest  {
 
     public boolean getUpdateEnabled() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUpdateEnabled = null;
         try {
-            return (boolean)classInstance.Get("UpdateEnabled");
+            retObjectUpdateEnabled = classInstance.Get("UpdateEnabled");
+            return (boolean)retObjectUpdateEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectUpdateEnabled != null ? retObjectUpdateEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -301,7 +325,7 @@ public class DeployManifest extends Manifest  {
 
     public void setUpdateEnabled(boolean UpdateEnabled) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UpdateEnabled", UpdateEnabled);
         } catch (JCNativeException jcne) {
@@ -311,9 +335,20 @@ public class DeployManifest extends Manifest  {
 
     public int getUpdateInterval() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUpdateInterval = null;
         try {
-            return (int)classInstance.Get("UpdateInterval");
+            retObjectUpdateInterval = classInstance.Get("UpdateInterval");
+            return (int)retObjectUpdateInterval;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectUpdateInterval_ToString = retObjectUpdateInterval == null ? "null" : retObjectUpdateInterval.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectUpdateIntervalNumber = (java.lang.Number)retObjectUpdateInterval;
+                return retObjectUpdateIntervalNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectUpdateInterval != null ? retObjectUpdateInterval.getClass() : "null", retObjectUpdateInterval_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -321,7 +356,7 @@ public class DeployManifest extends Manifest  {
 
     public void setUpdateInterval(int UpdateInterval) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UpdateInterval", UpdateInterval);
         } catch (JCNativeException jcne) {
@@ -331,16 +366,20 @@ public class DeployManifest extends Manifest  {
 
     public final CompatibleFramework[] getXmlCompatibleFrameworks() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectXmlCompatibleFrameworks = null;
         try {
             ArrayList<CompatibleFramework> resultingArrayList = new ArrayList<CompatibleFramework>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("XmlCompatibleFrameworks");
+            retObjectXmlCompatibleFrameworks = classInstance.Get("XmlCompatibleFrameworks");
+            JCObject resultingObjects = (JCObject)retObjectXmlCompatibleFrameworks;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new CompatibleFramework(resultingObject));
             }
             CompatibleFramework[] resultingArray = new CompatibleFramework[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectXmlCompatibleFrameworks != null ? retObjectXmlCompatibleFrameworks.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -348,7 +387,7 @@ public class DeployManifest extends Manifest  {
 
     public void setXmlCompatibleFrameworks(CompatibleFramework[] XmlCompatibleFrameworks) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("XmlCompatibleFrameworks", toObjectFromArray(XmlCompatibleFrameworks));
         } catch (JCNativeException jcne) {
@@ -358,10 +397,14 @@ public class DeployManifest extends Manifest  {
 
     public CompatibleFrameworkCollection getCompatibleFrameworks() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCompatibleFrameworks = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CompatibleFrameworks");
+            retObjectCompatibleFrameworks = classInstance.Get("CompatibleFrameworks");
+            JCObject val = (JCObject)retObjectCompatibleFrameworks;
             return new CompatibleFrameworkCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCompatibleFrameworks != null ? retObjectCompatibleFrameworks.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -369,10 +412,14 @@ public class DeployManifest extends Manifest  {
 
     public UpdateMode getUpdateMode() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.InvalidCastException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.globalization.CultureNotFoundException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUpdateMode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("UpdateMode");
+            retObjectUpdateMode = classInstance.Get("UpdateMode");
+            JCObject val = (JCObject)retObjectUpdateMode;
             return new UpdateMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUpdateMode != null ? retObjectUpdateMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -380,7 +427,7 @@ public class DeployManifest extends Manifest  {
 
     public void setUpdateMode(UpdateMode UpdateMode) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UpdateMode", UpdateMode == null ? null : UpdateMode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -390,10 +437,14 @@ public class DeployManifest extends Manifest  {
 
     public UpdateUnit getUpdateUnit() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.InvalidCastException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.globalization.CultureNotFoundException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUpdateUnit = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("UpdateUnit");
+            retObjectUpdateUnit = classInstance.Get("UpdateUnit");
+            JCObject val = (JCObject)retObjectUpdateUnit;
             return new UpdateUnit(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUpdateUnit != null ? retObjectUpdateUnit.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -401,7 +452,7 @@ public class DeployManifest extends Manifest  {
 
     public void setUpdateUnit(UpdateUnit UpdateUnit) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UpdateUnit", UpdateUnit == null ? null : UpdateUnit.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -411,9 +462,13 @@ public class DeployManifest extends Manifest  {
 
     public java.lang.String getDeploymentUrl() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDeploymentUrl = null;
         try {
-            return (java.lang.String)classInstance.Get("DeploymentUrl");
+            retObjectDeploymentUrl = classInstance.Get("DeploymentUrl");
+            return (java.lang.String)retObjectDeploymentUrl;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDeploymentUrl != null ? retObjectDeploymentUrl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -421,7 +476,7 @@ public class DeployManifest extends Manifest  {
 
     public void setDeploymentUrl(java.lang.String DeploymentUrl) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DeploymentUrl", DeploymentUrl);
         } catch (JCNativeException jcne) {
@@ -431,9 +486,13 @@ public class DeployManifest extends Manifest  {
 
     public java.lang.String getErrorReportUrl() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectErrorReportUrl = null;
         try {
-            return (java.lang.String)classInstance.Get("ErrorReportUrl");
+            retObjectErrorReportUrl = classInstance.Get("ErrorReportUrl");
+            return (java.lang.String)retObjectErrorReportUrl;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectErrorReportUrl != null ? retObjectErrorReportUrl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -441,7 +500,7 @@ public class DeployManifest extends Manifest  {
 
     public void setErrorReportUrl(java.lang.String ErrorReportUrl) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ErrorReportUrl", ErrorReportUrl);
         } catch (JCNativeException jcne) {
@@ -451,9 +510,13 @@ public class DeployManifest extends Manifest  {
 
     public java.lang.String getMinimumRequiredVersion() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMinimumRequiredVersion = null;
         try {
-            return (java.lang.String)classInstance.Get("MinimumRequiredVersion");
+            retObjectMinimumRequiredVersion = classInstance.Get("MinimumRequiredVersion");
+            return (java.lang.String)retObjectMinimumRequiredVersion;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectMinimumRequiredVersion != null ? retObjectMinimumRequiredVersion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -461,7 +524,7 @@ public class DeployManifest extends Manifest  {
 
     public void setMinimumRequiredVersion(java.lang.String MinimumRequiredVersion) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MinimumRequiredVersion", MinimumRequiredVersion);
         } catch (JCNativeException jcne) {
@@ -471,9 +534,13 @@ public class DeployManifest extends Manifest  {
 
     public java.lang.String getProduct() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProduct = null;
         try {
-            return (java.lang.String)classInstance.Get("Product");
+            retObjectProduct = classInstance.Get("Product");
+            return (java.lang.String)retObjectProduct;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectProduct != null ? retObjectProduct.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -481,7 +548,7 @@ public class DeployManifest extends Manifest  {
 
     public void setProduct(java.lang.String Product) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Product", Product);
         } catch (JCNativeException jcne) {
@@ -491,9 +558,13 @@ public class DeployManifest extends Manifest  {
 
     public java.lang.String getPublisher() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPublisher = null;
         try {
-            return (java.lang.String)classInstance.Get("Publisher");
+            retObjectPublisher = classInstance.Get("Publisher");
+            return (java.lang.String)retObjectPublisher;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectPublisher != null ? retObjectPublisher.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -501,7 +572,7 @@ public class DeployManifest extends Manifest  {
 
     public void setPublisher(java.lang.String Publisher) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Publisher", Publisher);
         } catch (JCNativeException jcne) {
@@ -511,9 +582,13 @@ public class DeployManifest extends Manifest  {
 
     public java.lang.String getSuiteName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSuiteName = null;
         try {
-            return (java.lang.String)classInstance.Get("SuiteName");
+            retObjectSuiteName = classInstance.Get("SuiteName");
+            return (java.lang.String)retObjectSuiteName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSuiteName != null ? retObjectSuiteName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -521,7 +596,7 @@ public class DeployManifest extends Manifest  {
 
     public void setSuiteName(java.lang.String SuiteName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SuiteName", SuiteName);
         } catch (JCNativeException jcne) {
@@ -531,9 +606,13 @@ public class DeployManifest extends Manifest  {
 
     public java.lang.String getSupportUrl() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSupportUrl = null;
         try {
-            return (java.lang.String)classInstance.Get("SupportUrl");
+            retObjectSupportUrl = classInstance.Get("SupportUrl");
+            return (java.lang.String)retObjectSupportUrl;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSupportUrl != null ? retObjectSupportUrl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -541,7 +620,7 @@ public class DeployManifest extends Manifest  {
 
     public void setSupportUrl(java.lang.String SupportUrl) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SupportUrl", SupportUrl);
         } catch (JCNativeException jcne) {
@@ -551,9 +630,13 @@ public class DeployManifest extends Manifest  {
 
     public java.lang.String getTargetFrameworkMoniker() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTargetFrameworkMoniker = null;
         try {
-            return (java.lang.String)classInstance.Get("TargetFrameworkMoniker");
+            retObjectTargetFrameworkMoniker = classInstance.Get("TargetFrameworkMoniker");
+            return (java.lang.String)retObjectTargetFrameworkMoniker;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectTargetFrameworkMoniker != null ? retObjectTargetFrameworkMoniker.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -561,7 +644,7 @@ public class DeployManifest extends Manifest  {
 
     public void setTargetFrameworkMoniker(java.lang.String TargetFrameworkMoniker) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TargetFrameworkMoniker", TargetFrameworkMoniker);
         } catch (JCNativeException jcne) {
@@ -571,9 +654,13 @@ public class DeployManifest extends Manifest  {
 
     public java.lang.String getXmlCreateDesktopShortcut() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectXmlCreateDesktopShortcut = null;
         try {
-            return (java.lang.String)classInstance.Get("XmlCreateDesktopShortcut");
+            retObjectXmlCreateDesktopShortcut = classInstance.Get("XmlCreateDesktopShortcut");
+            return (java.lang.String)retObjectXmlCreateDesktopShortcut;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectXmlCreateDesktopShortcut != null ? retObjectXmlCreateDesktopShortcut.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -581,7 +668,7 @@ public class DeployManifest extends Manifest  {
 
     public void setXmlCreateDesktopShortcut(java.lang.String XmlCreateDesktopShortcut) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("XmlCreateDesktopShortcut", XmlCreateDesktopShortcut);
         } catch (JCNativeException jcne) {
@@ -591,9 +678,13 @@ public class DeployManifest extends Manifest  {
 
     public java.lang.String getXmlDeploymentUrl() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectXmlDeploymentUrl = null;
         try {
-            return (java.lang.String)classInstance.Get("XmlDeploymentUrl");
+            retObjectXmlDeploymentUrl = classInstance.Get("XmlDeploymentUrl");
+            return (java.lang.String)retObjectXmlDeploymentUrl;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectXmlDeploymentUrl != null ? retObjectXmlDeploymentUrl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -601,7 +692,7 @@ public class DeployManifest extends Manifest  {
 
     public void setXmlDeploymentUrl(java.lang.String XmlDeploymentUrl) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("XmlDeploymentUrl", XmlDeploymentUrl);
         } catch (JCNativeException jcne) {
@@ -611,9 +702,13 @@ public class DeployManifest extends Manifest  {
 
     public java.lang.String getXmlDisallowUrlActivation() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectXmlDisallowUrlActivation = null;
         try {
-            return (java.lang.String)classInstance.Get("XmlDisallowUrlActivation");
+            retObjectXmlDisallowUrlActivation = classInstance.Get("XmlDisallowUrlActivation");
+            return (java.lang.String)retObjectXmlDisallowUrlActivation;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectXmlDisallowUrlActivation != null ? retObjectXmlDisallowUrlActivation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -621,7 +716,7 @@ public class DeployManifest extends Manifest  {
 
     public void setXmlDisallowUrlActivation(java.lang.String XmlDisallowUrlActivation) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("XmlDisallowUrlActivation", XmlDisallowUrlActivation);
         } catch (JCNativeException jcne) {
@@ -631,9 +726,13 @@ public class DeployManifest extends Manifest  {
 
     public java.lang.String getXmlErrorReportUrl() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectXmlErrorReportUrl = null;
         try {
-            return (java.lang.String)classInstance.Get("XmlErrorReportUrl");
+            retObjectXmlErrorReportUrl = classInstance.Get("XmlErrorReportUrl");
+            return (java.lang.String)retObjectXmlErrorReportUrl;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectXmlErrorReportUrl != null ? retObjectXmlErrorReportUrl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -641,7 +740,7 @@ public class DeployManifest extends Manifest  {
 
     public void setXmlErrorReportUrl(java.lang.String XmlErrorReportUrl) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("XmlErrorReportUrl", XmlErrorReportUrl);
         } catch (JCNativeException jcne) {
@@ -651,9 +750,13 @@ public class DeployManifest extends Manifest  {
 
     public java.lang.String getXmlInstall() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectXmlInstall = null;
         try {
-            return (java.lang.String)classInstance.Get("XmlInstall");
+            retObjectXmlInstall = classInstance.Get("XmlInstall");
+            return (java.lang.String)retObjectXmlInstall;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectXmlInstall != null ? retObjectXmlInstall.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -661,7 +764,7 @@ public class DeployManifest extends Manifest  {
 
     public void setXmlInstall(java.lang.String XmlInstall) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("XmlInstall", XmlInstall);
         } catch (JCNativeException jcne) {
@@ -671,9 +774,13 @@ public class DeployManifest extends Manifest  {
 
     public java.lang.String getXmlMapFileExtensions() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectXmlMapFileExtensions = null;
         try {
-            return (java.lang.String)classInstance.Get("XmlMapFileExtensions");
+            retObjectXmlMapFileExtensions = classInstance.Get("XmlMapFileExtensions");
+            return (java.lang.String)retObjectXmlMapFileExtensions;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectXmlMapFileExtensions != null ? retObjectXmlMapFileExtensions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -681,7 +788,7 @@ public class DeployManifest extends Manifest  {
 
     public void setXmlMapFileExtensions(java.lang.String XmlMapFileExtensions) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("XmlMapFileExtensions", XmlMapFileExtensions);
         } catch (JCNativeException jcne) {
@@ -691,9 +798,13 @@ public class DeployManifest extends Manifest  {
 
     public java.lang.String getXmlMinimumRequiredVersion() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectXmlMinimumRequiredVersion = null;
         try {
-            return (java.lang.String)classInstance.Get("XmlMinimumRequiredVersion");
+            retObjectXmlMinimumRequiredVersion = classInstance.Get("XmlMinimumRequiredVersion");
+            return (java.lang.String)retObjectXmlMinimumRequiredVersion;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectXmlMinimumRequiredVersion != null ? retObjectXmlMinimumRequiredVersion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -701,7 +812,7 @@ public class DeployManifest extends Manifest  {
 
     public void setXmlMinimumRequiredVersion(java.lang.String XmlMinimumRequiredVersion) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("XmlMinimumRequiredVersion", XmlMinimumRequiredVersion);
         } catch (JCNativeException jcne) {
@@ -711,9 +822,13 @@ public class DeployManifest extends Manifest  {
 
     public java.lang.String getXmlProduct() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectXmlProduct = null;
         try {
-            return (java.lang.String)classInstance.Get("XmlProduct");
+            retObjectXmlProduct = classInstance.Get("XmlProduct");
+            return (java.lang.String)retObjectXmlProduct;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectXmlProduct != null ? retObjectXmlProduct.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -721,7 +836,7 @@ public class DeployManifest extends Manifest  {
 
     public void setXmlProduct(java.lang.String XmlProduct) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("XmlProduct", XmlProduct);
         } catch (JCNativeException jcne) {
@@ -731,9 +846,13 @@ public class DeployManifest extends Manifest  {
 
     public java.lang.String getXmlPublisher() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectXmlPublisher = null;
         try {
-            return (java.lang.String)classInstance.Get("XmlPublisher");
+            retObjectXmlPublisher = classInstance.Get("XmlPublisher");
+            return (java.lang.String)retObjectXmlPublisher;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectXmlPublisher != null ? retObjectXmlPublisher.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -741,7 +860,7 @@ public class DeployManifest extends Manifest  {
 
     public void setXmlPublisher(java.lang.String XmlPublisher) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("XmlPublisher", XmlPublisher);
         } catch (JCNativeException jcne) {
@@ -751,9 +870,13 @@ public class DeployManifest extends Manifest  {
 
     public java.lang.String getXmlSuiteName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectXmlSuiteName = null;
         try {
-            return (java.lang.String)classInstance.Get("XmlSuiteName");
+            retObjectXmlSuiteName = classInstance.Get("XmlSuiteName");
+            return (java.lang.String)retObjectXmlSuiteName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectXmlSuiteName != null ? retObjectXmlSuiteName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -761,7 +884,7 @@ public class DeployManifest extends Manifest  {
 
     public void setXmlSuiteName(java.lang.String XmlSuiteName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("XmlSuiteName", XmlSuiteName);
         } catch (JCNativeException jcne) {
@@ -771,9 +894,13 @@ public class DeployManifest extends Manifest  {
 
     public java.lang.String getXmlSupportUrl() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectXmlSupportUrl = null;
         try {
-            return (java.lang.String)classInstance.Get("XmlSupportUrl");
+            retObjectXmlSupportUrl = classInstance.Get("XmlSupportUrl");
+            return (java.lang.String)retObjectXmlSupportUrl;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectXmlSupportUrl != null ? retObjectXmlSupportUrl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -781,7 +908,7 @@ public class DeployManifest extends Manifest  {
 
     public void setXmlSupportUrl(java.lang.String XmlSupportUrl) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("XmlSupportUrl", XmlSupportUrl);
         } catch (JCNativeException jcne) {
@@ -791,9 +918,13 @@ public class DeployManifest extends Manifest  {
 
     public java.lang.String getXmlTrustUrlParameters() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectXmlTrustUrlParameters = null;
         try {
-            return (java.lang.String)classInstance.Get("XmlTrustUrlParameters");
+            retObjectXmlTrustUrlParameters = classInstance.Get("XmlTrustUrlParameters");
+            return (java.lang.String)retObjectXmlTrustUrlParameters;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectXmlTrustUrlParameters != null ? retObjectXmlTrustUrlParameters.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -801,7 +932,7 @@ public class DeployManifest extends Manifest  {
 
     public void setXmlTrustUrlParameters(java.lang.String XmlTrustUrlParameters) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("XmlTrustUrlParameters", XmlTrustUrlParameters);
         } catch (JCNativeException jcne) {
@@ -811,9 +942,13 @@ public class DeployManifest extends Manifest  {
 
     public java.lang.String getXmlUpdateEnabled() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectXmlUpdateEnabled = null;
         try {
-            return (java.lang.String)classInstance.Get("XmlUpdateEnabled");
+            retObjectXmlUpdateEnabled = classInstance.Get("XmlUpdateEnabled");
+            return (java.lang.String)retObjectXmlUpdateEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectXmlUpdateEnabled != null ? retObjectXmlUpdateEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -821,7 +956,7 @@ public class DeployManifest extends Manifest  {
 
     public void setXmlUpdateEnabled(java.lang.String XmlUpdateEnabled) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("XmlUpdateEnabled", XmlUpdateEnabled);
         } catch (JCNativeException jcne) {
@@ -831,9 +966,13 @@ public class DeployManifest extends Manifest  {
 
     public java.lang.String getXmlUpdateInterval() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectXmlUpdateInterval = null;
         try {
-            return (java.lang.String)classInstance.Get("XmlUpdateInterval");
+            retObjectXmlUpdateInterval = classInstance.Get("XmlUpdateInterval");
+            return (java.lang.String)retObjectXmlUpdateInterval;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectXmlUpdateInterval != null ? retObjectXmlUpdateInterval.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -841,7 +980,7 @@ public class DeployManifest extends Manifest  {
 
     public void setXmlUpdateInterval(java.lang.String XmlUpdateInterval) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("XmlUpdateInterval", XmlUpdateInterval);
         } catch (JCNativeException jcne) {
@@ -851,9 +990,13 @@ public class DeployManifest extends Manifest  {
 
     public java.lang.String getXmlUpdateMode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectXmlUpdateMode = null;
         try {
-            return (java.lang.String)classInstance.Get("XmlUpdateMode");
+            retObjectXmlUpdateMode = classInstance.Get("XmlUpdateMode");
+            return (java.lang.String)retObjectXmlUpdateMode;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectXmlUpdateMode != null ? retObjectXmlUpdateMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -861,7 +1004,7 @@ public class DeployManifest extends Manifest  {
 
     public void setXmlUpdateMode(java.lang.String XmlUpdateMode) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("XmlUpdateMode", XmlUpdateMode);
         } catch (JCNativeException jcne) {
@@ -871,9 +1014,13 @@ public class DeployManifest extends Manifest  {
 
     public java.lang.String getXmlUpdateUnit() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectXmlUpdateUnit = null;
         try {
-            return (java.lang.String)classInstance.Get("XmlUpdateUnit");
+            retObjectXmlUpdateUnit = classInstance.Get("XmlUpdateUnit");
+            return (java.lang.String)retObjectXmlUpdateUnit;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectXmlUpdateUnit != null ? retObjectXmlUpdateUnit.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -881,7 +1028,7 @@ public class DeployManifest extends Manifest  {
 
     public void setXmlUpdateUnit(java.lang.String XmlUpdateUnit) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("XmlUpdateUnit", XmlUpdateUnit);
         } catch (JCNativeException jcne) {

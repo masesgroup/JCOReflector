@@ -155,10 +155,14 @@ public class PipesAclExtensions extends NetObject  {
     
     public static PipeSecurity GetAccessControl(PipeStream stream) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.threading.SynchronizationLockException, system.OutOfMemoryException, system.UnauthorizedAccessException, system.collections.generic.KeyNotFoundException, system.security.accesscontrol.PrivilegeNotHeldException, system.ArrayTypeMismatchException, system.OverflowException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetAccessControl = null;
         try {
-            JCObject objGetAccessControl = (JCObject)classType.Invoke("GetAccessControl", stream == null ? null : stream.getJCOInstance());
+            retObjectGetAccessControl = classType.Invoke("GetAccessControl", stream == null ? null : stream.getJCOInstance());
+            JCObject objGetAccessControl = (JCObject)retObjectGetAccessControl;
             return new PipeSecurity(objGetAccessControl);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetAccessControl != null ? retObjectGetAccessControl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -166,7 +170,7 @@ public class PipesAclExtensions extends NetObject  {
 
     public static void SetAccessControl(PipeStream stream, PipeSecurity pipeSecurity) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.io.IOException, system.threading.LockRecursionException, system.threading.AbandonedMutexException, system.threading.SynchronizationLockException, system.OutOfMemoryException, system.UnauthorizedAccessException, system.collections.generic.KeyNotFoundException, system.security.accesscontrol.PrivilegeNotHeldException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetAccessControl", stream == null ? null : stream.getJCOInstance(), pipeSecurity == null ? null : pipeSecurity.getJCOInstance());
         } catch (JCNativeException jcne) {

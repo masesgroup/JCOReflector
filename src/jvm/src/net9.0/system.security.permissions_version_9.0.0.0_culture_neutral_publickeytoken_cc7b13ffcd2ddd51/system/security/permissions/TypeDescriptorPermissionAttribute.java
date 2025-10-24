@@ -170,10 +170,14 @@ public class TypeDescriptorPermissionAttribute extends CodeAccessSecurityAttribu
     
     public IPermission CreatePermission() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreatePermission = null;
         try {
-            JCObject objCreatePermission = (JCObject)classInstance.Invoke("CreatePermission");
+            retObjectCreatePermission = classInstance.Invoke("CreatePermission");
+            JCObject objCreatePermission = (JCObject)retObjectCreatePermission;
             return new IPermissionImplementation(objCreatePermission);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreatePermission != null ? retObjectCreatePermission.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -185,9 +189,13 @@ public class TypeDescriptorPermissionAttribute extends CodeAccessSecurityAttribu
     
     public boolean getRestrictedRegistrationAccess() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRestrictedRegistrationAccess = null;
         try {
-            return (boolean)classInstance.Get("RestrictedRegistrationAccess");
+            retObjectRestrictedRegistrationAccess = classInstance.Get("RestrictedRegistrationAccess");
+            return (boolean)retObjectRestrictedRegistrationAccess;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectRestrictedRegistrationAccess != null ? retObjectRestrictedRegistrationAccess.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,7 +203,7 @@ public class TypeDescriptorPermissionAttribute extends CodeAccessSecurityAttribu
 
     public void setRestrictedRegistrationAccess(boolean RestrictedRegistrationAccess) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RestrictedRegistrationAccess", RestrictedRegistrationAccess);
         } catch (JCNativeException jcne) {
@@ -205,10 +213,14 @@ public class TypeDescriptorPermissionAttribute extends CodeAccessSecurityAttribu
 
     public TypeDescriptorPermissionFlags getFlags() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFlags = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Flags");
+            retObjectFlags = classInstance.Get("Flags");
+            JCObject val = (JCObject)retObjectFlags;
             return new TypeDescriptorPermissionFlags(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFlags != null ? retObjectFlags.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -216,7 +228,7 @@ public class TypeDescriptorPermissionAttribute extends CodeAccessSecurityAttribu
 
     public void setFlags(TypeDescriptorPermissionFlags Flags) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Flags", Flags == null ? null : Flags.getJCOInstance());
         } catch (JCNativeException jcne) {

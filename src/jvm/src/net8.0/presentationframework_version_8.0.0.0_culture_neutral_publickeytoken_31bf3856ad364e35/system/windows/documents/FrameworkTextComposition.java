@@ -156,7 +156,7 @@ public class FrameworkTextComposition extends TextComposition  {
     
     public void Complete() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Complete");
         } catch (JCNativeException jcne) {
@@ -170,9 +170,20 @@ public class FrameworkTextComposition extends TextComposition  {
     
     public int getCompositionLength() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCompositionLength = null;
         try {
-            return (int)classInstance.Get("CompositionLength");
+            retObjectCompositionLength = classInstance.Get("CompositionLength");
+            return (int)retObjectCompositionLength;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCompositionLength_ToString = retObjectCompositionLength == null ? "null" : retObjectCompositionLength.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectCompositionLengthNumber = (java.lang.Number)retObjectCompositionLength;
+                return retObjectCompositionLengthNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCompositionLength != null ? retObjectCompositionLength.getClass() : "null", retObjectCompositionLength_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,9 +191,20 @@ public class FrameworkTextComposition extends TextComposition  {
 
     public int getCompositionOffset() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCompositionOffset = null;
         try {
-            return (int)classInstance.Get("CompositionOffset");
+            retObjectCompositionOffset = classInstance.Get("CompositionOffset");
+            return (int)retObjectCompositionOffset;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCompositionOffset_ToString = retObjectCompositionOffset == null ? "null" : retObjectCompositionOffset.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectCompositionOffsetNumber = (java.lang.Number)retObjectCompositionOffset;
+                return retObjectCompositionOffsetNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCompositionOffset != null ? retObjectCompositionOffset.getClass() : "null", retObjectCompositionOffset_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,9 +212,20 @@ public class FrameworkTextComposition extends TextComposition  {
 
     public int getResultLength() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResultLength = null;
         try {
-            return (int)classInstance.Get("ResultLength");
+            retObjectResultLength = classInstance.Get("ResultLength");
+            return (int)retObjectResultLength;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectResultLength_ToString = retObjectResultLength == null ? "null" : retObjectResultLength.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectResultLengthNumber = (java.lang.Number)retObjectResultLength;
+                return retObjectResultLengthNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectResultLength != null ? retObjectResultLength.getClass() : "null", retObjectResultLength_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,9 +233,20 @@ public class FrameworkTextComposition extends TextComposition  {
 
     public int getResultOffset() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResultOffset = null;
         try {
-            return (int)classInstance.Get("ResultOffset");
+            retObjectResultOffset = classInstance.Get("ResultOffset");
+            return (int)retObjectResultOffset;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectResultOffset_ToString = retObjectResultOffset == null ? "null" : retObjectResultOffset.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectResultOffsetNumber = (java.lang.Number)retObjectResultOffset;
+                return retObjectResultOffsetNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectResultOffset != null ? retObjectResultOffset.getClass() : "null", retObjectResultOffset_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

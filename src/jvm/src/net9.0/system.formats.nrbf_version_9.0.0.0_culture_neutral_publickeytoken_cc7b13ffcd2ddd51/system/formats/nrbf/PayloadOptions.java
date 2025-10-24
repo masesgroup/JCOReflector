@@ -166,9 +166,13 @@ public class PayloadOptions extends NetObject  {
     
     public boolean getUndoTruncatedTypeNames() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUndoTruncatedTypeNames = null;
         try {
-            return (boolean)classInstance.Get("UndoTruncatedTypeNames");
+            retObjectUndoTruncatedTypeNames = classInstance.Get("UndoTruncatedTypeNames");
+            return (boolean)retObjectUndoTruncatedTypeNames;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectUndoTruncatedTypeNames != null ? retObjectUndoTruncatedTypeNames.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,7 +180,7 @@ public class PayloadOptions extends NetObject  {
 
     public void setUndoTruncatedTypeNames(boolean UndoTruncatedTypeNames) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UndoTruncatedTypeNames", UndoTruncatedTypeNames);
         } catch (JCNativeException jcne) {
@@ -186,10 +190,14 @@ public class PayloadOptions extends NetObject  {
 
     public TypeNameParseOptions getTypeNameParseOptions() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTypeNameParseOptions = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TypeNameParseOptions");
+            retObjectTypeNameParseOptions = classInstance.Get("TypeNameParseOptions");
+            JCObject val = (JCObject)retObjectTypeNameParseOptions;
             return new TypeNameParseOptions(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTypeNameParseOptions != null ? retObjectTypeNameParseOptions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,7 +205,7 @@ public class PayloadOptions extends NetObject  {
 
     public void setTypeNameParseOptions(TypeNameParseOptions TypeNameParseOptions) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TypeNameParseOptions", TypeNameParseOptions == null ? null : TypeNameParseOptions.getJCOInstance());
         } catch (JCNativeException jcne) {

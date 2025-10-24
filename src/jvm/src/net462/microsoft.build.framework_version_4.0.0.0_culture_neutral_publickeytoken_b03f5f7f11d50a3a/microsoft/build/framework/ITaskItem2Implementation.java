@@ -148,10 +148,14 @@ public class ITaskItem2Implementation extends NetObject implements ITaskItem2 {
     
     public IDictionary CloneCustomMetadata() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCloneCustomMetadata = null;
         try {
-            JCObject objCloneCustomMetadata = (JCObject)classInstance.Invoke("CloneCustomMetadata");
+            retObjectCloneCustomMetadata = classInstance.Invoke("CloneCustomMetadata");
+            JCObject objCloneCustomMetadata = (JCObject)retObjectCloneCustomMetadata;
             return new IDictionaryImplementation(objCloneCustomMetadata);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCloneCustomMetadata != null ? retObjectCloneCustomMetadata.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -159,10 +163,14 @@ public class ITaskItem2Implementation extends NetObject implements ITaskItem2 {
 
     public IDictionary CloneCustomMetadataEscaped() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCloneCustomMetadataEscaped = null;
         try {
-            JCObject objCloneCustomMetadataEscaped = (JCObject)classInstance.Invoke("CloneCustomMetadataEscaped");
+            retObjectCloneCustomMetadataEscaped = classInstance.Invoke("CloneCustomMetadataEscaped");
+            JCObject objCloneCustomMetadataEscaped = (JCObject)retObjectCloneCustomMetadataEscaped;
             return new IDictionaryImplementation(objCloneCustomMetadataEscaped);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCloneCustomMetadataEscaped != null ? retObjectCloneCustomMetadataEscaped.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,9 +178,13 @@ public class ITaskItem2Implementation extends NetObject implements ITaskItem2 {
 
     public java.lang.String GetMetadata(java.lang.String metadataName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetMetadata = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetMetadata", metadataName);
+            retObjectGetMetadata = classInstance.Invoke("GetMetadata", metadataName);
+            return (java.lang.String)retObjectGetMetadata;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetMetadata != null ? retObjectGetMetadata.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,9 +192,13 @@ public class ITaskItem2Implementation extends NetObject implements ITaskItem2 {
 
     public java.lang.String GetMetadataValueEscaped(java.lang.String metadataName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetMetadataValueEscaped = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetMetadataValueEscaped", metadataName);
+            retObjectGetMetadataValueEscaped = classInstance.Invoke("GetMetadataValueEscaped", metadataName);
+            return (java.lang.String)retObjectGetMetadataValueEscaped;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetMetadataValueEscaped != null ? retObjectGetMetadataValueEscaped.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,7 +206,7 @@ public class ITaskItem2Implementation extends NetObject implements ITaskItem2 {
 
     public void CopyMetadataTo(ITaskItem destinationItem) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CopyMetadataTo", destinationItem == null ? null : destinationItem.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -200,7 +216,7 @@ public class ITaskItem2Implementation extends NetObject implements ITaskItem2 {
 
     public void RemoveMetadata(java.lang.String metadataName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RemoveMetadata", metadataName);
         } catch (JCNativeException jcne) {
@@ -210,7 +226,7 @@ public class ITaskItem2Implementation extends NetObject implements ITaskItem2 {
 
     public void SetMetadata(java.lang.String metadataName, java.lang.String metadataValue) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetMetadata", metadataName, metadataValue);
         } catch (JCNativeException jcne) {
@@ -220,7 +236,7 @@ public class ITaskItem2Implementation extends NetObject implements ITaskItem2 {
 
     public void SetMetadataValueLiteral(java.lang.String metadataName, java.lang.String metadataValue) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetMetadataValueLiteral", metadataName, metadataValue);
         } catch (JCNativeException jcne) {
@@ -234,9 +250,20 @@ public class ITaskItem2Implementation extends NetObject implements ITaskItem2 {
     
     public int getMetadataCount() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMetadataCount = null;
         try {
-            return (int)classInstance.Get("MetadataCount");
+            retObjectMetadataCount = classInstance.Get("MetadataCount");
+            return (int)retObjectMetadataCount;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMetadataCount_ToString = retObjectMetadataCount == null ? "null" : retObjectMetadataCount.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMetadataCountNumber = (java.lang.Number)retObjectMetadataCount;
+                return retObjectMetadataCountNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMetadataCount != null ? retObjectMetadataCount.getClass() : "null", retObjectMetadataCount_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -244,10 +271,14 @@ public class ITaskItem2Implementation extends NetObject implements ITaskItem2 {
 
     public ICollection getMetadataNames() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMetadataNames = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MetadataNames");
+            retObjectMetadataNames = classInstance.Get("MetadataNames");
+            JCObject val = (JCObject)retObjectMetadataNames;
             return new ICollectionImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMetadataNames != null ? retObjectMetadataNames.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -255,9 +286,13 @@ public class ITaskItem2Implementation extends NetObject implements ITaskItem2 {
 
     public java.lang.String getEvaluatedIncludeEscaped() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEvaluatedIncludeEscaped = null;
         try {
-            return (java.lang.String)classInstance.Get("EvaluatedIncludeEscaped");
+            retObjectEvaluatedIncludeEscaped = classInstance.Get("EvaluatedIncludeEscaped");
+            return (java.lang.String)retObjectEvaluatedIncludeEscaped;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectEvaluatedIncludeEscaped != null ? retObjectEvaluatedIncludeEscaped.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -265,7 +300,7 @@ public class ITaskItem2Implementation extends NetObject implements ITaskItem2 {
 
     public void setEvaluatedIncludeEscaped(java.lang.String EvaluatedIncludeEscaped) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EvaluatedIncludeEscaped", EvaluatedIncludeEscaped);
         } catch (JCNativeException jcne) {
@@ -275,9 +310,13 @@ public class ITaskItem2Implementation extends NetObject implements ITaskItem2 {
 
     public java.lang.String getItemSpec() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectItemSpec = null;
         try {
-            return (java.lang.String)classInstance.Get("ItemSpec");
+            retObjectItemSpec = classInstance.Get("ItemSpec");
+            return (java.lang.String)retObjectItemSpec;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectItemSpec != null ? retObjectItemSpec.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -285,7 +324,7 @@ public class ITaskItem2Implementation extends NetObject implements ITaskItem2 {
 
     public void setItemSpec(java.lang.String ItemSpec) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ItemSpec", ItemSpec);
         } catch (JCNativeException jcne) {

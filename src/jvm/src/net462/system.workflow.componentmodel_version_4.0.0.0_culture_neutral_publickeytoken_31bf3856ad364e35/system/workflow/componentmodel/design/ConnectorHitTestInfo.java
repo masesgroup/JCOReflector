@@ -169,9 +169,20 @@ public class ConnectorHitTestInfo extends HitTestInfo  {
     
     public int MapToIndex() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMapToIndex = null;
         try {
-            return (int)classInstance.Invoke("MapToIndex");
+            retObjectMapToIndex = classInstance.Invoke("MapToIndex");
+            return (int)retObjectMapToIndex;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMapToIndex_ToString = retObjectMapToIndex == null ? "null" : retObjectMapToIndex.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMapToIndexNumber = (java.lang.Number)retObjectMapToIndex;
+                return retObjectMapToIndexNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMapToIndex != null ? retObjectMapToIndex.getClass() : "null", retObjectMapToIndex_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

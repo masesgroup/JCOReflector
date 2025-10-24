@@ -162,7 +162,7 @@ public class XmlAttributeOverrides extends NetObject  {
     
     public void Add(NetType type, java.lang.String member, XmlAttributes attributes) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Add", type == null ? null : type.getJCOInstance(), member, attributes == null ? null : attributes.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -172,7 +172,7 @@ public class XmlAttributeOverrides extends NetObject  {
 
     public void Add(NetType type, XmlAttributes attributes) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Add", type == null ? null : type.getJCOInstance(), attributes == null ? null : attributes.getJCOInstance());
         } catch (JCNativeException jcne) {

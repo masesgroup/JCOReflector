@@ -156,9 +156,13 @@ public class Instanceof extends BinaryOp  {
     
     public static boolean JScriptInstanceof(NetObject v1, NetObject v2) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentNullException, system.ArgumentException, system.InvalidCastException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.NullReferenceException, system.NotImplementedException, system.MissingMethodException, system.FormatException, system.OverflowException, system.IndexOutOfRangeException, system.security.SecurityException, system.reflection.TargetInvocationException, microsoft.jscript.vsa.JSVsaException, microsoft.jscript.EndOfFile {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectJScriptInstanceof = null;
         try {
-            return (boolean)classType.Invoke("JScriptInstanceof", v1 == null ? null : v1.getJCOInstance(), v2 == null ? null : v2.getJCOInstance());
+            retObjectJScriptInstanceof = classType.Invoke("JScriptInstanceof", v1 == null ? null : v1.getJCOInstance(), v2 == null ? null : v2.getJCOInstance());
+            return (boolean)retObjectJScriptInstanceof;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectJScriptInstanceof != null ? retObjectJScriptInstanceof.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -157,10 +157,14 @@ public class EnumBuilder extends TypeInfo  {
     
     public FieldBuilder DefineLiteral(java.lang.String literalName, NetObject literalValue) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDefineLiteral = null;
         try {
-            JCObject objDefineLiteral = (JCObject)classInstance.Invoke("DefineLiteral", literalName, literalValue == null ? null : literalValue.getJCOInstance());
+            retObjectDefineLiteral = classInstance.Invoke("DefineLiteral", literalName, literalValue == null ? null : literalValue.getJCOInstance());
+            JCObject objDefineLiteral = (JCObject)retObjectDefineLiteral;
             return new FieldBuilder(objDefineLiteral);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefineLiteral != null ? retObjectDefineLiteral.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -168,10 +172,14 @@ public class EnumBuilder extends TypeInfo  {
 
     public TypeInfo CreateTypeInfo() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateTypeInfo = null;
         try {
-            JCObject objCreateTypeInfo = (JCObject)classInstance.Invoke("CreateTypeInfo");
+            retObjectCreateTypeInfo = classInstance.Invoke("CreateTypeInfo");
+            JCObject objCreateTypeInfo = (JCObject)retObjectCreateTypeInfo;
             return new TypeInfo(objCreateTypeInfo);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateTypeInfo != null ? retObjectCreateTypeInfo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,10 +187,14 @@ public class EnumBuilder extends TypeInfo  {
 
     public NetType CreateType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateType = null;
         try {
-            JCObject objCreateType = (JCObject)classInstance.Invoke("CreateType");
+            retObjectCreateType = classInstance.Invoke("CreateType");
+            JCObject objCreateType = (JCObject)retObjectCreateType;
             return new NetType(objCreateType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateType != null ? retObjectCreateType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,10 +202,14 @@ public class EnumBuilder extends TypeInfo  {
 
     public NetType MakeArrayType() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMakeArrayType = null;
         try {
-            JCObject objMakeArrayType = (JCObject)classInstance.Invoke("MakeArrayType");
+            retObjectMakeArrayType = classInstance.Invoke("MakeArrayType");
+            JCObject objMakeArrayType = (JCObject)retObjectMakeArrayType;
             return new NetType(objMakeArrayType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMakeArrayType != null ? retObjectMakeArrayType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,10 +217,14 @@ public class EnumBuilder extends TypeInfo  {
 
     public NetType MakeArrayType(int rank) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMakeArrayType = null;
         try {
-            JCObject objMakeArrayType = (JCObject)classInstance.Invoke("MakeArrayType", rank);
+            retObjectMakeArrayType = classInstance.Invoke("MakeArrayType", rank);
+            JCObject objMakeArrayType = (JCObject)retObjectMakeArrayType;
             return new NetType(objMakeArrayType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMakeArrayType != null ? retObjectMakeArrayType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -212,10 +232,14 @@ public class EnumBuilder extends TypeInfo  {
 
     public NetType MakeByRefType() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMakeByRefType = null;
         try {
-            JCObject objMakeByRefType = (JCObject)classInstance.Invoke("MakeByRefType");
+            retObjectMakeByRefType = classInstance.Invoke("MakeByRefType");
+            JCObject objMakeByRefType = (JCObject)retObjectMakeByRefType;
             return new NetType(objMakeByRefType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMakeByRefType != null ? retObjectMakeByRefType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -223,10 +247,14 @@ public class EnumBuilder extends TypeInfo  {
 
     public NetType MakePointerType() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMakePointerType = null;
         try {
-            JCObject objMakePointerType = (JCObject)classInstance.Invoke("MakePointerType");
+            retObjectMakePointerType = classInstance.Invoke("MakePointerType");
+            JCObject objMakePointerType = (JCObject)retObjectMakePointerType;
             return new NetType(objMakePointerType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMakePointerType != null ? retObjectMakePointerType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -234,7 +262,7 @@ public class EnumBuilder extends TypeInfo  {
 
     public void SetCustomAttribute(ConstructorInfo con, byte[] binaryAttribute) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetCustomAttribute", con == null ? null : con.getJCOInstance(), binaryAttribute);
         } catch (JCNativeException jcne) {
@@ -244,7 +272,7 @@ public class EnumBuilder extends TypeInfo  {
 
     public void SetCustomAttribute(ConstructorInfo dupParam0, JCORefOut dupParam1) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetCustomAttribute", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -254,7 +282,7 @@ public class EnumBuilder extends TypeInfo  {
 
     public void SetCustomAttribute(CustomAttributeBuilder customBuilder) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetCustomAttribute", customBuilder == null ? null : customBuilder.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -268,10 +296,14 @@ public class EnumBuilder extends TypeInfo  {
     
     public FieldBuilder getUnderlyingField() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUnderlyingField = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("UnderlyingField");
+            retObjectUnderlyingField = classInstance.Get("UnderlyingField");
+            JCObject val = (JCObject)retObjectUnderlyingField;
             return new FieldBuilder(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUnderlyingField != null ? retObjectUnderlyingField.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

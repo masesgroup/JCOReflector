@@ -153,10 +153,14 @@ public class SerializationBinder extends NetObject  {
     
     public NetType BindToType(java.lang.String assemblyName, java.lang.String typeName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBindToType = null;
         try {
-            JCObject objBindToType = (JCObject)classInstance.Invoke("BindToType", assemblyName, typeName);
+            retObjectBindToType = classInstance.Invoke("BindToType", assemblyName, typeName);
+            JCObject objBindToType = (JCObject)retObjectBindToType;
             return new NetType(objBindToType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBindToType != null ? retObjectBindToType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -164,7 +168,7 @@ public class SerializationBinder extends NetObject  {
 
     public void BindToName(NetType serializedType, JCORefOut assemblyName, JCORefOut typeName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("BindToName", serializedType == null ? null : serializedType.getJCOInstance(), assemblyName.getJCRefOut(), typeName.getJCRefOut());
         } catch (JCNativeException jcne) {

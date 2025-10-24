@@ -168,7 +168,7 @@ DELEGATE_RETURN_STATEMENT
         } else if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
         } else
-            throw new UnsupportedOperationException(
+            throw new java.lang.UnsupportedOperationException(
                     String.format("Class %s is not supported.", instance.getClass().getTypeName()));
     }
 

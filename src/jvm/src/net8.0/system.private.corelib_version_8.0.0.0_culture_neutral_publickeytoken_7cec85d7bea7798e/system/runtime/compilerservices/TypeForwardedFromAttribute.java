@@ -170,9 +170,13 @@ public class TypeForwardedFromAttribute extends Attribute  {
     
     public java.lang.String getAssemblyFullName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAssemblyFullName = null;
         try {
-            return (java.lang.String)classInstance.Get("AssemblyFullName");
+            retObjectAssemblyFullName = classInstance.Get("AssemblyFullName");
+            return (java.lang.String)retObjectAssemblyFullName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectAssemblyFullName != null ? retObjectAssemblyFullName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

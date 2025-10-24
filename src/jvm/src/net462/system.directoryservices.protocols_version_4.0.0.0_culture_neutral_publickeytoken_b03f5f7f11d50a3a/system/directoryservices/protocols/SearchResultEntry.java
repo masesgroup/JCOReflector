@@ -161,16 +161,20 @@ public class SearchResultEntry extends NetObject  {
     
     public final DirectoryControl[] getControls() throws Throwable, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.xml.xpath.XPathException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.directoryservices.protocols.DsmlInvalidDocumentException, system.FormatException, system.OutOfMemoryException, system.directoryservices.protocols.BerConversionException, system.AccessViolationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectControls = null;
         try {
             ArrayList<DirectoryControl> resultingArrayList = new ArrayList<DirectoryControl>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("Controls");
+            retObjectControls = classInstance.Get("Controls");
+            JCObject resultingObjects = (JCObject)retObjectControls;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new DirectoryControl(resultingObject));
             }
             DirectoryControl[] resultingArray = new DirectoryControl[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectControls != null ? retObjectControls.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,10 +182,14 @@ public class SearchResultEntry extends NetObject  {
 
     public SearchResultAttributeCollection getAttributes() throws Throwable, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.xml.xpath.XPathException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.directoryservices.protocols.DsmlInvalidDocumentException, system.NotSupportedException, system.FormatException, system.security.SecurityException, system.InvalidOperationException, system.UriFormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAttributes = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Attributes");
+            retObjectAttributes = classInstance.Get("Attributes");
+            JCObject val = (JCObject)retObjectAttributes;
             return new SearchResultAttributeCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAttributes != null ? retObjectAttributes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -189,9 +197,13 @@ public class SearchResultEntry extends NetObject  {
 
     public java.lang.String getDistinguishedName() throws Throwable, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.xml.xpath.XPathException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.directoryservices.protocols.DsmlInvalidDocumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDistinguishedName = null;
         try {
-            return (java.lang.String)classInstance.Get("DistinguishedName");
+            retObjectDistinguishedName = classInstance.Get("DistinguishedName");
+            return (java.lang.String)retObjectDistinguishedName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDistinguishedName != null ? retObjectDistinguishedName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

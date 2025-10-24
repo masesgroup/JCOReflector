@@ -155,9 +155,13 @@ public class DbProviderManifest extends NetObject  {
     
     public boolean SupportsEscapingLikeArgument(JCORefOut escapeCharacter) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSupportsEscapingLikeArgument = null;
         try {
-            return (boolean)classInstance.Invoke("SupportsEscapingLikeArgument", escapeCharacter.getJCRefOut());
+            retObjectSupportsEscapingLikeArgument = classInstance.Invoke("SupportsEscapingLikeArgument", escapeCharacter.getJCRefOut());
+            return (boolean)retObjectSupportsEscapingLikeArgument;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectSupportsEscapingLikeArgument != null ? retObjectSupportsEscapingLikeArgument.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -165,10 +169,14 @@ public class DbProviderManifest extends NetObject  {
 
     public TypeUsage GetEdmType(TypeUsage storeType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetEdmType = null;
         try {
-            JCObject objGetEdmType = (JCObject)classInstance.Invoke("GetEdmType", storeType == null ? null : storeType.getJCOInstance());
+            retObjectGetEdmType = classInstance.Invoke("GetEdmType", storeType == null ? null : storeType.getJCOInstance());
+            JCObject objGetEdmType = (JCObject)retObjectGetEdmType;
             return new TypeUsage(objGetEdmType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetEdmType != null ? retObjectGetEdmType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,10 +184,14 @@ public class DbProviderManifest extends NetObject  {
 
     public TypeUsage GetStoreType(TypeUsage edmType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetStoreType = null;
         try {
-            JCObject objGetStoreType = (JCObject)classInstance.Invoke("GetStoreType", edmType == null ? null : edmType.getJCOInstance());
+            retObjectGetStoreType = classInstance.Invoke("GetStoreType", edmType == null ? null : edmType.getJCOInstance());
+            JCObject objGetStoreType = (JCObject)retObjectGetStoreType;
             return new TypeUsage(objGetStoreType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetStoreType != null ? retObjectGetStoreType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,9 +199,13 @@ public class DbProviderManifest extends NetObject  {
 
     public java.lang.String EscapeLikeArgument(java.lang.String argument) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.data.ProviderIncompatibleException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEscapeLikeArgument = null;
         try {
-            return (java.lang.String)classInstance.Invoke("EscapeLikeArgument", argument);
+            retObjectEscapeLikeArgument = classInstance.Invoke("EscapeLikeArgument", argument);
+            return (java.lang.String)retObjectEscapeLikeArgument;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectEscapeLikeArgument != null ? retObjectEscapeLikeArgument.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,10 +213,14 @@ public class DbProviderManifest extends NetObject  {
 
     public XmlReader GetInformation(java.lang.String informationType) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.data.ProviderIncompatibleException, system.NotSupportedException, system.xml.XmlException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetInformation = null;
         try {
-            JCObject objGetInformation = (JCObject)classInstance.Invoke("GetInformation", informationType);
+            retObjectGetInformation = classInstance.Invoke("GetInformation", informationType);
+            JCObject objGetInformation = (JCObject)retObjectGetInformation;
             return new XmlReader(objGetInformation);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetInformation != null ? retObjectGetInformation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -212,9 +232,13 @@ public class DbProviderManifest extends NetObject  {
     
     public java.lang.String getNamespaceName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNamespaceName = null;
         try {
-            return (java.lang.String)classInstance.Get("NamespaceName");
+            retObjectNamespaceName = classInstance.Get("NamespaceName");
+            return (java.lang.String)retObjectNamespaceName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectNamespaceName != null ? retObjectNamespaceName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

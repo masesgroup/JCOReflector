@@ -171,10 +171,14 @@ public class PreviewPageInfo extends NetObject  {
     
     public Image getImage() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectImage = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Image");
+            retObjectImage = classInstance.Get("Image");
+            JCObject val = (JCObject)retObjectImage;
             return new Image(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectImage != null ? retObjectImage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,10 +186,14 @@ public class PreviewPageInfo extends NetObject  {
 
     public Size getPhysicalSize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPhysicalSize = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PhysicalSize");
+            retObjectPhysicalSize = classInstance.Get("PhysicalSize");
+            JCObject val = (JCObject)retObjectPhysicalSize;
             return new Size(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPhysicalSize != null ? retObjectPhysicalSize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

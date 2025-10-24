@@ -144,7 +144,7 @@ public class IExtenderProviderServiceImplementation extends NetObject implements
     
     public void AddExtenderProvider(IExtenderProvider provider) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddExtenderProvider", provider == null ? null : provider.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -154,7 +154,7 @@ public class IExtenderProviderServiceImplementation extends NetObject implements
 
     public void RemoveExtenderProvider(IExtenderProvider provider) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RemoveExtenderProvider", provider == null ? null : provider.getJCOInstance());
         } catch (JCNativeException jcne) {

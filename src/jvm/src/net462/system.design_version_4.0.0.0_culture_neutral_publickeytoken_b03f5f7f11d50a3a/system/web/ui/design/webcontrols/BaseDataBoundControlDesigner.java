@@ -157,9 +157,13 @@ public class BaseDataBoundControlDesigner extends ControlDesigner  {
     
     public java.lang.String GetDesignTimeHtml() throws Throwable, system.ArgumentNullException, system.IndexOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationException, system.NullReferenceException, system.TypeLoadException, system.NotImplementedException, system.web.HttpException, system.OutOfMemoryException, system.OverflowException, system.web.HttpRequestValidationException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDesignTimeHtml = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetDesignTimeHtml");
+            retObjectGetDesignTimeHtml = classInstance.Invoke("GetDesignTimeHtml");
+            return (java.lang.String)retObjectGetDesignTimeHtml;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetDesignTimeHtml != null ? retObjectGetDesignTimeHtml.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -167,10 +171,14 @@ public class BaseDataBoundControlDesigner extends ControlDesigner  {
 
     public static DialogResult ShowCreateDataSourceDialog(ControlDesigner controlDesigner, NetType dataSourceType, boolean configure, JCORefOut dataSourceID) throws Throwable, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.RankException, system.MulticastNotSupportedException, system.NotImplementedException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.NullReferenceException, system.configuration.ConfigurationException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationErrorsException, system.security.SecurityException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectShowCreateDataSourceDialog = null;
         try {
-            JCObject objShowCreateDataSourceDialog = (JCObject)classType.Invoke("ShowCreateDataSourceDialog", controlDesigner == null ? null : controlDesigner.getJCOInstance(), dataSourceType == null ? null : dataSourceType.getJCOInstance(), configure, dataSourceID.getJCRefOut());
+            retObjectShowCreateDataSourceDialog = classType.Invoke("ShowCreateDataSourceDialog", controlDesigner == null ? null : controlDesigner.getJCOInstance(), dataSourceType == null ? null : dataSourceType.getJCOInstance(), configure, dataSourceID.getJCRefOut());
+            JCObject objShowCreateDataSourceDialog = (JCObject)retObjectShowCreateDataSourceDialog;
             return new DialogResult(objShowCreateDataSourceDialog);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectShowCreateDataSourceDialog != null ? retObjectShowCreateDataSourceDialog.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,7 +186,7 @@ public class BaseDataBoundControlDesigner extends ControlDesigner  {
 
     public void Initialize(IComponent component) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.NullReferenceException, system.MulticastNotSupportedException, system.configuration.ConfigurationErrorsException, system.security.SecurityException, system.configuration.ConfigurationException, system.web.HttpException, system.OverflowException, system.OutOfMemoryException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Initialize", component == null ? null : component.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -192,9 +200,13 @@ public class BaseDataBoundControlDesigner extends ControlDesigner  {
     
     public java.lang.String getDataSource() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDataSource = null;
         try {
-            return (java.lang.String)classInstance.Get("DataSource");
+            retObjectDataSource = classInstance.Get("DataSource");
+            return (java.lang.String)retObjectDataSource;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDataSource != null ? retObjectDataSource.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,7 +214,7 @@ public class BaseDataBoundControlDesigner extends ControlDesigner  {
 
     public void setDataSource(java.lang.String DataSource) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.NotImplementedException, system.web.HttpException, system.OverflowException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DataSource", DataSource);
         } catch (JCNativeException jcne) {
@@ -212,9 +224,13 @@ public class BaseDataBoundControlDesigner extends ControlDesigner  {
 
     public java.lang.String getDataSourceID() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDataSourceID = null;
         try {
-            return (java.lang.String)classInstance.Get("DataSourceID");
+            retObjectDataSourceID = classInstance.Get("DataSourceID");
+            return (java.lang.String)retObjectDataSourceID;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDataSourceID != null ? retObjectDataSourceID.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -222,7 +238,7 @@ public class BaseDataBoundControlDesigner extends ControlDesigner  {
 
     public void setDataSourceID(java.lang.String DataSourceID) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.web.HttpException, system.OverflowException, system.PlatformNotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DataSourceID", DataSourceID);
         } catch (JCNativeException jcne) {

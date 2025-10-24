@@ -160,9 +160,13 @@ public class ManagedCompiler extends ToolTaskExtension  {
     
     public boolean getDelaySign() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDelaySign = null;
         try {
-            return (boolean)classInstance.Get("DelaySign");
+            retObjectDelaySign = classInstance.Get("DelaySign");
+            return (boolean)retObjectDelaySign;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectDelaySign != null ? retObjectDelaySign.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,7 +174,7 @@ public class ManagedCompiler extends ToolTaskExtension  {
 
     public void setDelaySign(boolean DelaySign) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DelaySign", DelaySign);
         } catch (JCNativeException jcne) {
@@ -180,9 +184,13 @@ public class ManagedCompiler extends ToolTaskExtension  {
 
     public boolean getEmitDebugInformation() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEmitDebugInformation = null;
         try {
-            return (boolean)classInstance.Get("EmitDebugInformation");
+            retObjectEmitDebugInformation = classInstance.Get("EmitDebugInformation");
+            return (boolean)retObjectEmitDebugInformation;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectEmitDebugInformation != null ? retObjectEmitDebugInformation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,7 +198,7 @@ public class ManagedCompiler extends ToolTaskExtension  {
 
     public void setEmitDebugInformation(boolean EmitDebugInformation) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EmitDebugInformation", EmitDebugInformation);
         } catch (JCNativeException jcne) {
@@ -200,9 +208,13 @@ public class ManagedCompiler extends ToolTaskExtension  {
 
     public boolean getHighEntropyVA() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHighEntropyVA = null;
         try {
-            return (boolean)classInstance.Get("HighEntropyVA");
+            retObjectHighEntropyVA = classInstance.Get("HighEntropyVA");
+            return (boolean)retObjectHighEntropyVA;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectHighEntropyVA != null ? retObjectHighEntropyVA.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -210,7 +222,7 @@ public class ManagedCompiler extends ToolTaskExtension  {
 
     public void setHighEntropyVA(boolean HighEntropyVA) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("HighEntropyVA", HighEntropyVA);
         } catch (JCNativeException jcne) {
@@ -220,9 +232,13 @@ public class ManagedCompiler extends ToolTaskExtension  {
 
     public boolean getNoConfig() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNoConfig = null;
         try {
-            return (boolean)classInstance.Get("NoConfig");
+            retObjectNoConfig = classInstance.Get("NoConfig");
+            return (boolean)retObjectNoConfig;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectNoConfig != null ? retObjectNoConfig.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -230,7 +246,7 @@ public class ManagedCompiler extends ToolTaskExtension  {
 
     public void setNoConfig(boolean NoConfig) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("NoConfig", NoConfig);
         } catch (JCNativeException jcne) {
@@ -240,9 +256,13 @@ public class ManagedCompiler extends ToolTaskExtension  {
 
     public boolean getNoLogo() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNoLogo = null;
         try {
-            return (boolean)classInstance.Get("NoLogo");
+            retObjectNoLogo = classInstance.Get("NoLogo");
+            return (boolean)retObjectNoLogo;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectNoLogo != null ? retObjectNoLogo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -250,7 +270,7 @@ public class ManagedCompiler extends ToolTaskExtension  {
 
     public void setNoLogo(boolean NoLogo) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("NoLogo", NoLogo);
         } catch (JCNativeException jcne) {
@@ -260,9 +280,13 @@ public class ManagedCompiler extends ToolTaskExtension  {
 
     public boolean getNoWin32Manifest() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNoWin32Manifest = null;
         try {
-            return (boolean)classInstance.Get("NoWin32Manifest");
+            retObjectNoWin32Manifest = classInstance.Get("NoWin32Manifest");
+            return (boolean)retObjectNoWin32Manifest;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectNoWin32Manifest != null ? retObjectNoWin32Manifest.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -270,7 +294,7 @@ public class ManagedCompiler extends ToolTaskExtension  {
 
     public void setNoWin32Manifest(boolean NoWin32Manifest) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("NoWin32Manifest", NoWin32Manifest);
         } catch (JCNativeException jcne) {
@@ -280,9 +304,13 @@ public class ManagedCompiler extends ToolTaskExtension  {
 
     public boolean getOptimize() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOptimize = null;
         try {
-            return (boolean)classInstance.Get("Optimize");
+            retObjectOptimize = classInstance.Get("Optimize");
+            return (boolean)retObjectOptimize;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectOptimize != null ? retObjectOptimize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -290,7 +318,7 @@ public class ManagedCompiler extends ToolTaskExtension  {
 
     public void setOptimize(boolean Optimize) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Optimize", Optimize);
         } catch (JCNativeException jcne) {
@@ -300,9 +328,13 @@ public class ManagedCompiler extends ToolTaskExtension  {
 
     public boolean getPrefer32Bit() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPrefer32Bit = null;
         try {
-            return (boolean)classInstance.Get("Prefer32Bit");
+            retObjectPrefer32Bit = classInstance.Get("Prefer32Bit");
+            return (boolean)retObjectPrefer32Bit;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectPrefer32Bit != null ? retObjectPrefer32Bit.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -310,7 +342,7 @@ public class ManagedCompiler extends ToolTaskExtension  {
 
     public void setPrefer32Bit(boolean Prefer32Bit) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Prefer32Bit", Prefer32Bit);
         } catch (JCNativeException jcne) {
@@ -320,9 +352,13 @@ public class ManagedCompiler extends ToolTaskExtension  {
 
     public boolean getTreatWarningsAsErrors() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTreatWarningsAsErrors = null;
         try {
-            return (boolean)classInstance.Get("TreatWarningsAsErrors");
+            retObjectTreatWarningsAsErrors = classInstance.Get("TreatWarningsAsErrors");
+            return (boolean)retObjectTreatWarningsAsErrors;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectTreatWarningsAsErrors != null ? retObjectTreatWarningsAsErrors.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -330,7 +366,7 @@ public class ManagedCompiler extends ToolTaskExtension  {
 
     public void setTreatWarningsAsErrors(boolean TreatWarningsAsErrors) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TreatWarningsAsErrors", TreatWarningsAsErrors);
         } catch (JCNativeException jcne) {
@@ -340,9 +376,13 @@ public class ManagedCompiler extends ToolTaskExtension  {
 
     public boolean getUtf8Output() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUtf8Output = null;
         try {
-            return (boolean)classInstance.Get("Utf8Output");
+            retObjectUtf8Output = classInstance.Get("Utf8Output");
+            return (boolean)retObjectUtf8Output;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectUtf8Output != null ? retObjectUtf8Output.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -350,7 +390,7 @@ public class ManagedCompiler extends ToolTaskExtension  {
 
     public void setUtf8Output(boolean Utf8Output) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Utf8Output", Utf8Output);
         } catch (JCNativeException jcne) {
@@ -360,9 +400,20 @@ public class ManagedCompiler extends ToolTaskExtension  {
 
     public int getCodePage() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCodePage = null;
         try {
-            return (int)classInstance.Get("CodePage");
+            retObjectCodePage = classInstance.Get("CodePage");
+            return (int)retObjectCodePage;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCodePage_ToString = retObjectCodePage == null ? "null" : retObjectCodePage.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectCodePageNumber = (java.lang.Number)retObjectCodePage;
+                return retObjectCodePageNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCodePage != null ? retObjectCodePage.getClass() : "null", retObjectCodePage_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -370,7 +421,7 @@ public class ManagedCompiler extends ToolTaskExtension  {
 
     public void setCodePage(int CodePage) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CodePage", CodePage);
         } catch (JCNativeException jcne) {
@@ -380,9 +431,20 @@ public class ManagedCompiler extends ToolTaskExtension  {
 
     public int getFileAlignment() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFileAlignment = null;
         try {
-            return (int)classInstance.Get("FileAlignment");
+            retObjectFileAlignment = classInstance.Get("FileAlignment");
+            return (int)retObjectFileAlignment;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectFileAlignment_ToString = retObjectFileAlignment == null ? "null" : retObjectFileAlignment.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectFileAlignmentNumber = (java.lang.Number)retObjectFileAlignment;
+                return retObjectFileAlignmentNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectFileAlignment != null ? retObjectFileAlignment.getClass() : "null", retObjectFileAlignment_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -390,7 +452,7 @@ public class ManagedCompiler extends ToolTaskExtension  {
 
     public void setFileAlignment(int FileAlignment) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FileAlignment", FileAlignment);
         } catch (JCNativeException jcne) {
@@ -400,10 +462,14 @@ public class ManagedCompiler extends ToolTaskExtension  {
 
     public ITaskItem getOutputAssembly() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOutputAssembly = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("OutputAssembly");
+            retObjectOutputAssembly = classInstance.Get("OutputAssembly");
+            JCObject val = (JCObject)retObjectOutputAssembly;
             return new ITaskItemImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOutputAssembly != null ? retObjectOutputAssembly.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -411,7 +477,7 @@ public class ManagedCompiler extends ToolTaskExtension  {
 
     public void setOutputAssembly(ITaskItem OutputAssembly) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("OutputAssembly", OutputAssembly == null ? null : OutputAssembly.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -421,16 +487,20 @@ public class ManagedCompiler extends ToolTaskExtension  {
 
     public final ITaskItem[] getLinkResources() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLinkResources = null;
         try {
             ArrayList<ITaskItem> resultingArrayList = new ArrayList<ITaskItem>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("LinkResources");
+            retObjectLinkResources = classInstance.Get("LinkResources");
+            JCObject resultingObjects = (JCObject)retObjectLinkResources;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ITaskItemImplementation(resultingObject));
             }
             ITaskItem[] resultingArray = new ITaskItem[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLinkResources != null ? retObjectLinkResources.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -438,7 +508,7 @@ public class ManagedCompiler extends ToolTaskExtension  {
 
     public void setLinkResources(ITaskItem[] LinkResources) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("LinkResources", toObjectFromArray(LinkResources));
         } catch (JCNativeException jcne) {
@@ -448,16 +518,20 @@ public class ManagedCompiler extends ToolTaskExtension  {
 
     public final ITaskItem[] getReferences() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReferences = null;
         try {
             ArrayList<ITaskItem> resultingArrayList = new ArrayList<ITaskItem>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("References");
+            retObjectReferences = classInstance.Get("References");
+            JCObject resultingObjects = (JCObject)retObjectReferences;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ITaskItemImplementation(resultingObject));
             }
             ITaskItem[] resultingArray = new ITaskItem[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReferences != null ? retObjectReferences.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -465,7 +539,7 @@ public class ManagedCompiler extends ToolTaskExtension  {
 
     public void setReferences(ITaskItem[] References) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("References", toObjectFromArray(References));
         } catch (JCNativeException jcne) {
@@ -475,16 +549,20 @@ public class ManagedCompiler extends ToolTaskExtension  {
 
     public final ITaskItem[] getResources() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResources = null;
         try {
             ArrayList<ITaskItem> resultingArrayList = new ArrayList<ITaskItem>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("Resources");
+            retObjectResources = classInstance.Get("Resources");
+            JCObject resultingObjects = (JCObject)retObjectResources;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ITaskItemImplementation(resultingObject));
             }
             ITaskItem[] resultingArray = new ITaskItem[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectResources != null ? retObjectResources.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -492,7 +570,7 @@ public class ManagedCompiler extends ToolTaskExtension  {
 
     public void setResources(ITaskItem[] Resources) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Resources", toObjectFromArray(Resources));
         } catch (JCNativeException jcne) {
@@ -502,16 +580,20 @@ public class ManagedCompiler extends ToolTaskExtension  {
 
     public final ITaskItem[] getResponseFiles() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResponseFiles = null;
         try {
             ArrayList<ITaskItem> resultingArrayList = new ArrayList<ITaskItem>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("ResponseFiles");
+            retObjectResponseFiles = classInstance.Get("ResponseFiles");
+            JCObject resultingObjects = (JCObject)retObjectResponseFiles;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ITaskItemImplementation(resultingObject));
             }
             ITaskItem[] resultingArray = new ITaskItem[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectResponseFiles != null ? retObjectResponseFiles.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -519,7 +601,7 @@ public class ManagedCompiler extends ToolTaskExtension  {
 
     public void setResponseFiles(ITaskItem[] ResponseFiles) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ResponseFiles", toObjectFromArray(ResponseFiles));
         } catch (JCNativeException jcne) {
@@ -529,16 +611,20 @@ public class ManagedCompiler extends ToolTaskExtension  {
 
     public final ITaskItem[] getSources() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSources = null;
         try {
             ArrayList<ITaskItem> resultingArrayList = new ArrayList<ITaskItem>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("Sources");
+            retObjectSources = classInstance.Get("Sources");
+            JCObject resultingObjects = (JCObject)retObjectSources;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ITaskItemImplementation(resultingObject));
             }
             ITaskItem[] resultingArray = new ITaskItem[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSources != null ? retObjectSources.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -546,7 +632,7 @@ public class ManagedCompiler extends ToolTaskExtension  {
 
     public void setSources(ITaskItem[] Sources) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Sources", toObjectFromArray(Sources));
         } catch (JCNativeException jcne) {
@@ -556,9 +642,13 @@ public class ManagedCompiler extends ToolTaskExtension  {
 
     public java.lang.String getDebugType() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDebugType = null;
         try {
-            return (java.lang.String)classInstance.Get("DebugType");
+            retObjectDebugType = classInstance.Get("DebugType");
+            return (java.lang.String)retObjectDebugType;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDebugType != null ? retObjectDebugType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -566,7 +656,7 @@ public class ManagedCompiler extends ToolTaskExtension  {
 
     public void setDebugType(java.lang.String DebugType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DebugType", DebugType);
         } catch (JCNativeException jcne) {
@@ -576,9 +666,13 @@ public class ManagedCompiler extends ToolTaskExtension  {
 
     public java.lang.String getDefineConstants() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDefineConstants = null;
         try {
-            return (java.lang.String)classInstance.Get("DefineConstants");
+            retObjectDefineConstants = classInstance.Get("DefineConstants");
+            return (java.lang.String)retObjectDefineConstants;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDefineConstants != null ? retObjectDefineConstants.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -586,7 +680,7 @@ public class ManagedCompiler extends ToolTaskExtension  {
 
     public void setDefineConstants(java.lang.String DefineConstants) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DefineConstants", DefineConstants);
         } catch (JCNativeException jcne) {
@@ -596,9 +690,13 @@ public class ManagedCompiler extends ToolTaskExtension  {
 
     public java.lang.String getKeyContainer() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectKeyContainer = null;
         try {
-            return (java.lang.String)classInstance.Get("KeyContainer");
+            retObjectKeyContainer = classInstance.Get("KeyContainer");
+            return (java.lang.String)retObjectKeyContainer;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectKeyContainer != null ? retObjectKeyContainer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -606,7 +704,7 @@ public class ManagedCompiler extends ToolTaskExtension  {
 
     public void setKeyContainer(java.lang.String KeyContainer) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("KeyContainer", KeyContainer);
         } catch (JCNativeException jcne) {
@@ -616,9 +714,13 @@ public class ManagedCompiler extends ToolTaskExtension  {
 
     public java.lang.String getKeyFile() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectKeyFile = null;
         try {
-            return (java.lang.String)classInstance.Get("KeyFile");
+            retObjectKeyFile = classInstance.Get("KeyFile");
+            return (java.lang.String)retObjectKeyFile;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectKeyFile != null ? retObjectKeyFile.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -626,7 +728,7 @@ public class ManagedCompiler extends ToolTaskExtension  {
 
     public void setKeyFile(java.lang.String KeyFile) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("KeyFile", KeyFile);
         } catch (JCNativeException jcne) {
@@ -636,9 +738,13 @@ public class ManagedCompiler extends ToolTaskExtension  {
 
     public java.lang.String getMainEntryPoint() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMainEntryPoint = null;
         try {
-            return (java.lang.String)classInstance.Get("MainEntryPoint");
+            retObjectMainEntryPoint = classInstance.Get("MainEntryPoint");
+            return (java.lang.String)retObjectMainEntryPoint;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectMainEntryPoint != null ? retObjectMainEntryPoint.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -646,7 +752,7 @@ public class ManagedCompiler extends ToolTaskExtension  {
 
     public void setMainEntryPoint(java.lang.String MainEntryPoint) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MainEntryPoint", MainEntryPoint);
         } catch (JCNativeException jcne) {
@@ -656,9 +762,13 @@ public class ManagedCompiler extends ToolTaskExtension  {
 
     public java.lang.String getPlatform() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPlatform = null;
         try {
-            return (java.lang.String)classInstance.Get("Platform");
+            retObjectPlatform = classInstance.Get("Platform");
+            return (java.lang.String)retObjectPlatform;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectPlatform != null ? retObjectPlatform.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -666,7 +776,7 @@ public class ManagedCompiler extends ToolTaskExtension  {
 
     public void setPlatform(java.lang.String Platform) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Platform", Platform);
         } catch (JCNativeException jcne) {
@@ -676,9 +786,13 @@ public class ManagedCompiler extends ToolTaskExtension  {
 
     public java.lang.String getSubsystemVersion() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSubsystemVersion = null;
         try {
-            return (java.lang.String)classInstance.Get("SubsystemVersion");
+            retObjectSubsystemVersion = classInstance.Get("SubsystemVersion");
+            return (java.lang.String)retObjectSubsystemVersion;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSubsystemVersion != null ? retObjectSubsystemVersion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -686,7 +800,7 @@ public class ManagedCompiler extends ToolTaskExtension  {
 
     public void setSubsystemVersion(java.lang.String SubsystemVersion) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SubsystemVersion", SubsystemVersion);
         } catch (JCNativeException jcne) {
@@ -696,9 +810,13 @@ public class ManagedCompiler extends ToolTaskExtension  {
 
     public java.lang.String getTargetType() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTargetType = null;
         try {
-            return (java.lang.String)classInstance.Get("TargetType");
+            retObjectTargetType = classInstance.Get("TargetType");
+            return (java.lang.String)retObjectTargetType;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectTargetType != null ? retObjectTargetType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -706,7 +824,7 @@ public class ManagedCompiler extends ToolTaskExtension  {
 
     public void setTargetType(java.lang.String TargetType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TargetType", TargetType);
         } catch (JCNativeException jcne) {
@@ -716,9 +834,13 @@ public class ManagedCompiler extends ToolTaskExtension  {
 
     public java.lang.String getWin32Icon() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWin32Icon = null;
         try {
-            return (java.lang.String)classInstance.Get("Win32Icon");
+            retObjectWin32Icon = classInstance.Get("Win32Icon");
+            return (java.lang.String)retObjectWin32Icon;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectWin32Icon != null ? retObjectWin32Icon.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -726,7 +848,7 @@ public class ManagedCompiler extends ToolTaskExtension  {
 
     public void setWin32Icon(java.lang.String Win32Icon) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Win32Icon", Win32Icon);
         } catch (JCNativeException jcne) {
@@ -736,9 +858,13 @@ public class ManagedCompiler extends ToolTaskExtension  {
 
     public java.lang.String getWin32Manifest() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWin32Manifest = null;
         try {
-            return (java.lang.String)classInstance.Get("Win32Manifest");
+            retObjectWin32Manifest = classInstance.Get("Win32Manifest");
+            return (java.lang.String)retObjectWin32Manifest;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectWin32Manifest != null ? retObjectWin32Manifest.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -746,7 +872,7 @@ public class ManagedCompiler extends ToolTaskExtension  {
 
     public void setWin32Manifest(java.lang.String Win32Manifest) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Win32Manifest", Win32Manifest);
         } catch (JCNativeException jcne) {
@@ -756,9 +882,13 @@ public class ManagedCompiler extends ToolTaskExtension  {
 
     public java.lang.String getWin32Resource() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWin32Resource = null;
         try {
-            return (java.lang.String)classInstance.Get("Win32Resource");
+            retObjectWin32Resource = classInstance.Get("Win32Resource");
+            return (java.lang.String)retObjectWin32Resource;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectWin32Resource != null ? retObjectWin32Resource.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -766,7 +896,7 @@ public class ManagedCompiler extends ToolTaskExtension  {
 
     public void setWin32Resource(java.lang.String Win32Resource) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Win32Resource", Win32Resource);
         } catch (JCNativeException jcne) {
@@ -776,10 +906,12 @@ public class ManagedCompiler extends ToolTaskExtension  {
 
     public java.lang.String[] getAdditionalLibPaths() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAdditionalLibPaths = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("AdditionalLibPaths");
+            retObjectAdditionalLibPaths = classInstance.Get("AdditionalLibPaths");
+            JCObject resultingObjects = (JCObject)retObjectAdditionalLibPaths;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -788,6 +920,8 @@ public class ManagedCompiler extends ToolTaskExtension  {
 				resultingArray[indexAdditionalLibPaths] = (java.lang.String)resultingArrayList.get(indexAdditionalLibPaths);
 			}
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into JCObject", retObjectAdditionalLibPaths != null ? retObjectAdditionalLibPaths.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -795,7 +929,7 @@ public class ManagedCompiler extends ToolTaskExtension  {
 
     public void setAdditionalLibPaths(java.lang.String[] AdditionalLibPaths) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AdditionalLibPaths", AdditionalLibPaths);
         } catch (JCNativeException jcne) {
@@ -805,10 +939,12 @@ public class ManagedCompiler extends ToolTaskExtension  {
 
     public java.lang.String[] getAddModules() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddModules = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("AddModules");
+            retObjectAddModules = classInstance.Get("AddModules");
+            JCObject resultingObjects = (JCObject)retObjectAddModules;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -817,6 +953,8 @@ public class ManagedCompiler extends ToolTaskExtension  {
 				resultingArray[indexAddModules] = (java.lang.String)resultingArrayList.get(indexAddModules);
 			}
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into JCObject", retObjectAddModules != null ? retObjectAddModules.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -824,7 +962,7 @@ public class ManagedCompiler extends ToolTaskExtension  {
 
     public void setAddModules(java.lang.String[] AddModules) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AddModules", AddModules);
         } catch (JCNativeException jcne) {

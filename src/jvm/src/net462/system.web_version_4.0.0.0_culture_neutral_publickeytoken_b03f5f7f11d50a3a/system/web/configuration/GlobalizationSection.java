@@ -167,9 +167,13 @@ public class GlobalizationSection extends ConfigurationSection  {
     
     public boolean getEnableBestFitResponseEncoding() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEnableBestFitResponseEncoding = null;
         try {
-            return (boolean)classInstance.Get("EnableBestFitResponseEncoding");
+            retObjectEnableBestFitResponseEncoding = classInstance.Get("EnableBestFitResponseEncoding");
+            return (boolean)retObjectEnableBestFitResponseEncoding;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectEnableBestFitResponseEncoding != null ? retObjectEnableBestFitResponseEncoding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,7 +181,7 @@ public class GlobalizationSection extends ConfigurationSection  {
 
     public void setEnableBestFitResponseEncoding(boolean EnableBestFitResponseEncoding) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.NullReferenceException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EnableBestFitResponseEncoding", EnableBestFitResponseEncoding);
         } catch (JCNativeException jcne) {
@@ -187,9 +191,13 @@ public class GlobalizationSection extends ConfigurationSection  {
 
     public boolean getEnableClientBasedCulture() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEnableClientBasedCulture = null;
         try {
-            return (boolean)classInstance.Get("EnableClientBasedCulture");
+            retObjectEnableClientBasedCulture = classInstance.Get("EnableClientBasedCulture");
+            return (boolean)retObjectEnableClientBasedCulture;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectEnableClientBasedCulture != null ? retObjectEnableClientBasedCulture.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,7 +205,7 @@ public class GlobalizationSection extends ConfigurationSection  {
 
     public void setEnableClientBasedCulture(boolean EnableClientBasedCulture) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.NullReferenceException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EnableClientBasedCulture", EnableClientBasedCulture);
         } catch (JCNativeException jcne) {
@@ -207,9 +215,13 @@ public class GlobalizationSection extends ConfigurationSection  {
 
     public java.lang.String getCulture() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCulture = null;
         try {
-            return (java.lang.String)classInstance.Get("Culture");
+            retObjectCulture = classInstance.Get("Culture");
+            return (java.lang.String)retObjectCulture;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectCulture != null ? retObjectCulture.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -217,7 +229,7 @@ public class GlobalizationSection extends ConfigurationSection  {
 
     public void setCulture(java.lang.String Culture) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.NullReferenceException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Culture", Culture);
         } catch (JCNativeException jcne) {
@@ -227,9 +239,13 @@ public class GlobalizationSection extends ConfigurationSection  {
 
     public java.lang.String getResourceProviderFactoryType() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResourceProviderFactoryType = null;
         try {
-            return (java.lang.String)classInstance.Get("ResourceProviderFactoryType");
+            retObjectResourceProviderFactoryType = classInstance.Get("ResourceProviderFactoryType");
+            return (java.lang.String)retObjectResourceProviderFactoryType;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectResourceProviderFactoryType != null ? retObjectResourceProviderFactoryType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -237,7 +253,7 @@ public class GlobalizationSection extends ConfigurationSection  {
 
     public void setResourceProviderFactoryType(java.lang.String ResourceProviderFactoryType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.NullReferenceException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ResourceProviderFactoryType", ResourceProviderFactoryType);
         } catch (JCNativeException jcne) {
@@ -247,9 +263,13 @@ public class GlobalizationSection extends ConfigurationSection  {
 
     public java.lang.String getUICulture() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUICulture = null;
         try {
-            return (java.lang.String)classInstance.Get("UICulture");
+            retObjectUICulture = classInstance.Get("UICulture");
+            return (java.lang.String)retObjectUICulture;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectUICulture != null ? retObjectUICulture.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -257,7 +277,7 @@ public class GlobalizationSection extends ConfigurationSection  {
 
     public void setUICulture(java.lang.String UICulture) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.NullReferenceException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UICulture", UICulture);
         } catch (JCNativeException jcne) {
@@ -267,10 +287,14 @@ public class GlobalizationSection extends ConfigurationSection  {
 
     public Encoding getFileEncoding() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.NotSupportedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFileEncoding = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("FileEncoding");
+            retObjectFileEncoding = classInstance.Get("FileEncoding");
+            JCObject val = (JCObject)retObjectFileEncoding;
             return new Encoding(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFileEncoding != null ? retObjectFileEncoding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -278,7 +302,7 @@ public class GlobalizationSection extends ConfigurationSection  {
 
     public void setFileEncoding(Encoding FileEncoding) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.FormatException, system.InvalidOperationException, system.NotSupportedException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationErrorsException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FileEncoding", FileEncoding == null ? null : FileEncoding.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -288,10 +312,14 @@ public class GlobalizationSection extends ConfigurationSection  {
 
     public Encoding getRequestEncoding() throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRequestEncoding = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RequestEncoding");
+            retObjectRequestEncoding = classInstance.Get("RequestEncoding");
+            JCObject val = (JCObject)retObjectRequestEncoding;
             return new Encoding(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRequestEncoding != null ? retObjectRequestEncoding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -299,7 +327,7 @@ public class GlobalizationSection extends ConfigurationSection  {
 
     public void setRequestEncoding(Encoding RequestEncoding) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.FormatException, system.InvalidOperationException, system.NotSupportedException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationErrorsException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RequestEncoding", RequestEncoding == null ? null : RequestEncoding.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -309,10 +337,14 @@ public class GlobalizationSection extends ConfigurationSection  {
 
     public Encoding getResponseEncoding() throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResponseEncoding = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ResponseEncoding");
+            retObjectResponseEncoding = classInstance.Get("ResponseEncoding");
+            JCObject val = (JCObject)retObjectResponseEncoding;
             return new Encoding(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectResponseEncoding != null ? retObjectResponseEncoding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -320,7 +352,7 @@ public class GlobalizationSection extends ConfigurationSection  {
 
     public void setResponseEncoding(Encoding ResponseEncoding) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.FormatException, system.InvalidOperationException, system.NotSupportedException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationErrorsException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ResponseEncoding", ResponseEncoding == null ? null : ResponseEncoding.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -330,10 +362,14 @@ public class GlobalizationSection extends ConfigurationSection  {
 
     public Encoding getResponseHeaderEncoding() throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResponseHeaderEncoding = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ResponseHeaderEncoding");
+            retObjectResponseHeaderEncoding = classInstance.Get("ResponseHeaderEncoding");
+            JCObject val = (JCObject)retObjectResponseHeaderEncoding;
             return new Encoding(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectResponseHeaderEncoding != null ? retObjectResponseHeaderEncoding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -341,7 +377,7 @@ public class GlobalizationSection extends ConfigurationSection  {
 
     public void setResponseHeaderEncoding(Encoding ResponseHeaderEncoding) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.FormatException, system.InvalidOperationException, system.NotSupportedException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationErrorsException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ResponseHeaderEncoding", ResponseHeaderEncoding == null ? null : ResponseHeaderEncoding.getJCOInstance());
         } catch (JCNativeException jcne) {

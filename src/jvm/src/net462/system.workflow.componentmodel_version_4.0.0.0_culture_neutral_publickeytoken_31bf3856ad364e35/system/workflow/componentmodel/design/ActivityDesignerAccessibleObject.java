@@ -172,10 +172,14 @@ public class ActivityDesignerAccessibleObject extends AccessibleObject  {
     
     public AccessibleObject Navigate(AccessibleNavigation navdir) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNavigate = null;
         try {
-            JCObject objNavigate = (JCObject)classInstance.Invoke("Navigate", navdir == null ? null : navdir.getJCOInstance());
+            retObjectNavigate = classInstance.Invoke("Navigate", navdir == null ? null : navdir.getJCOInstance());
+            JCObject objNavigate = (JCObject)retObjectNavigate;
             return new AccessibleObject(objNavigate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNavigate != null ? retObjectNavigate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,7 +187,7 @@ public class ActivityDesignerAccessibleObject extends AccessibleObject  {
 
     public void DoDefaultAction() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DoDefaultAction");
         } catch (JCNativeException jcne) {
@@ -193,7 +197,7 @@ public class ActivityDesignerAccessibleObject extends AccessibleObject  {
 
     public void Select(AccessibleSelection flags) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Select", flags == null ? null : flags.getJCOInstance());
         } catch (JCNativeException jcne) {

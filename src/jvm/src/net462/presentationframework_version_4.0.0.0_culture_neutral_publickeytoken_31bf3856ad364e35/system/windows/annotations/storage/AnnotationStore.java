@@ -158,10 +158,14 @@ public class AnnotationStore extends NetObject implements AutoCloseable {
     
     public Annotation DeleteAnnotation(Guid annotationId) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDeleteAnnotation = null;
         try {
-            JCObject objDeleteAnnotation = (JCObject)classInstance.Invoke("DeleteAnnotation", annotationId == null ? null : annotationId.getJCOInstance());
+            retObjectDeleteAnnotation = classInstance.Invoke("DeleteAnnotation", annotationId == null ? null : annotationId.getJCOInstance());
+            JCObject objDeleteAnnotation = (JCObject)retObjectDeleteAnnotation;
             return new Annotation(objDeleteAnnotation);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDeleteAnnotation != null ? retObjectDeleteAnnotation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,10 +173,14 @@ public class AnnotationStore extends NetObject implements AutoCloseable {
 
     public Annotation GetAnnotation(Guid annotationId) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetAnnotation = null;
         try {
-            JCObject objGetAnnotation = (JCObject)classInstance.Invoke("GetAnnotation", annotationId == null ? null : annotationId.getJCOInstance());
+            retObjectGetAnnotation = classInstance.Invoke("GetAnnotation", annotationId == null ? null : annotationId.getJCOInstance());
+            JCObject objGetAnnotation = (JCObject)retObjectGetAnnotation;
             return new Annotation(objGetAnnotation);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetAnnotation != null ? retObjectGetAnnotation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,7 +188,7 @@ public class AnnotationStore extends NetObject implements AutoCloseable {
 
     public void AddAnnotation(Annotation newAnnotation) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddAnnotation", newAnnotation == null ? null : newAnnotation.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -190,7 +198,7 @@ public class AnnotationStore extends NetObject implements AutoCloseable {
 
     public void Dispose() throws Throwable, system.ArgumentException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
@@ -200,7 +208,7 @@ public class AnnotationStore extends NetObject implements AutoCloseable {
 
     public void Flush() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Flush");
         } catch (JCNativeException jcne) {
@@ -211,7 +219,7 @@ public class AnnotationStore extends NetObject implements AutoCloseable {
     public void close() throws Exception {
         try {
             if (classInstance == null)
-                throw new UnsupportedOperationException("classInstance is null.");
+                throw new java.lang.UnsupportedOperationException("classInstance is null.");
             try {
                 classInstance.Invoke("Dispose");
             }
@@ -227,9 +235,13 @@ public class AnnotationStore extends NetObject implements AutoCloseable {
     
     public boolean getAutoFlush() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAutoFlush = null;
         try {
-            return (boolean)classInstance.Get("AutoFlush");
+            retObjectAutoFlush = classInstance.Get("AutoFlush");
+            return (boolean)retObjectAutoFlush;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAutoFlush != null ? retObjectAutoFlush.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -237,7 +249,7 @@ public class AnnotationStore extends NetObject implements AutoCloseable {
 
     public void setAutoFlush(boolean AutoFlush) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AutoFlush", AutoFlush);
         } catch (JCNativeException jcne) {
@@ -252,7 +264,7 @@ public class AnnotationStore extends NetObject implements AutoCloseable {
 
     public void addAuthorChanged(AnnotationAuthorChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("AuthorChanged", handler);
         } catch (JCNativeException jcne) {
@@ -262,7 +274,7 @@ public class AnnotationStore extends NetObject implements AutoCloseable {
 
     public void removeAuthorChanged(AnnotationAuthorChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("AuthorChanged", handler);
         } catch (JCNativeException jcne) {
@@ -272,7 +284,7 @@ public class AnnotationStore extends NetObject implements AutoCloseable {
 
     public void addAnchorChanged(AnnotationResourceChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("AnchorChanged", handler);
         } catch (JCNativeException jcne) {
@@ -282,7 +294,7 @@ public class AnnotationStore extends NetObject implements AutoCloseable {
 
     public void removeAnchorChanged(AnnotationResourceChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("AnchorChanged", handler);
         } catch (JCNativeException jcne) {
@@ -292,7 +304,7 @@ public class AnnotationStore extends NetObject implements AutoCloseable {
 
     public void addCargoChanged(AnnotationResourceChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("CargoChanged", handler);
         } catch (JCNativeException jcne) {
@@ -302,7 +314,7 @@ public class AnnotationStore extends NetObject implements AutoCloseable {
 
     public void removeCargoChanged(AnnotationResourceChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("CargoChanged", handler);
         } catch (JCNativeException jcne) {
@@ -312,7 +324,7 @@ public class AnnotationStore extends NetObject implements AutoCloseable {
 
     public void addStoreContentChanged(StoreContentChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("StoreContentChanged", handler);
         } catch (JCNativeException jcne) {
@@ -322,7 +334,7 @@ public class AnnotationStore extends NetObject implements AutoCloseable {
 
     public void removeStoreContentChanged(StoreContentChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("StoreContentChanged", handler);
         } catch (JCNativeException jcne) {

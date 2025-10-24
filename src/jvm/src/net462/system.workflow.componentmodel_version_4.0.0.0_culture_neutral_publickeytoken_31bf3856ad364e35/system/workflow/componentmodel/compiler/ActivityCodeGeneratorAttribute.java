@@ -180,9 +180,13 @@ public class ActivityCodeGeneratorAttribute extends Attribute  {
     
     public java.lang.String getCodeGeneratorTypeName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCodeGeneratorTypeName = null;
         try {
-            return (java.lang.String)classInstance.Get("CodeGeneratorTypeName");
+            retObjectCodeGeneratorTypeName = classInstance.Get("CodeGeneratorTypeName");
+            return (java.lang.String)retObjectCodeGeneratorTypeName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectCodeGeneratorTypeName != null ? retObjectCodeGeneratorTypeName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

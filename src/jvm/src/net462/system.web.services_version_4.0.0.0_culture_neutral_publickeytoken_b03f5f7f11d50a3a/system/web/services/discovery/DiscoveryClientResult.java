@@ -175,9 +175,13 @@ public class DiscoveryClientResult extends NetObject  {
     
     public java.lang.String getFilename() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFilename = null;
         try {
-            return (java.lang.String)classInstance.Get("Filename");
+            retObjectFilename = classInstance.Get("Filename");
+            return (java.lang.String)retObjectFilename;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectFilename != null ? retObjectFilename.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -185,7 +189,7 @@ public class DiscoveryClientResult extends NetObject  {
 
     public void setFilename(java.lang.String Filename) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Filename", Filename);
         } catch (JCNativeException jcne) {
@@ -195,9 +199,13 @@ public class DiscoveryClientResult extends NetObject  {
 
     public java.lang.String getReferenceTypeName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReferenceTypeName = null;
         try {
-            return (java.lang.String)classInstance.Get("ReferenceTypeName");
+            retObjectReferenceTypeName = classInstance.Get("ReferenceTypeName");
+            return (java.lang.String)retObjectReferenceTypeName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectReferenceTypeName != null ? retObjectReferenceTypeName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -205,7 +213,7 @@ public class DiscoveryClientResult extends NetObject  {
 
     public void setReferenceTypeName(java.lang.String ReferenceTypeName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ReferenceTypeName", ReferenceTypeName);
         } catch (JCNativeException jcne) {
@@ -215,9 +223,13 @@ public class DiscoveryClientResult extends NetObject  {
 
     public java.lang.String getUrl() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUrl = null;
         try {
-            return (java.lang.String)classInstance.Get("Url");
+            retObjectUrl = classInstance.Get("Url");
+            return (java.lang.String)retObjectUrl;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectUrl != null ? retObjectUrl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -225,7 +237,7 @@ public class DiscoveryClientResult extends NetObject  {
 
     public void setUrl(java.lang.String Url) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Url", Url);
         } catch (JCNativeException jcne) {

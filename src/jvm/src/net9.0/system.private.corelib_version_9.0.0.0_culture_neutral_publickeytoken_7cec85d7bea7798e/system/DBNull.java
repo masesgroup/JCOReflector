@@ -167,9 +167,13 @@ public class DBNull extends NetObject  {
     
     public java.lang.String ToString(IFormatProvider provider) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToString = null;
         try {
-            return (java.lang.String)classInstance.Invoke("ToString", provider == null ? null : provider.getJCOInstance());
+            retObjectToString = classInstance.Invoke("ToString", provider == null ? null : provider.getJCOInstance());
+            return (java.lang.String)retObjectToString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectToString != null ? retObjectToString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,10 +181,14 @@ public class DBNull extends NetObject  {
 
     public TypeCode GetTypeCode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetTypeCode = null;
         try {
-            JCObject objGetTypeCode = (JCObject)classInstance.Invoke("GetTypeCode");
+            retObjectGetTypeCode = classInstance.Invoke("GetTypeCode");
+            JCObject objGetTypeCode = (JCObject)retObjectGetTypeCode;
             return new TypeCode(objGetTypeCode);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetTypeCode != null ? retObjectGetTypeCode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,7 +196,7 @@ public class DBNull extends NetObject  {
 
     public void GetObjectData(SerializationInfo info, StreamingContext context) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.runtime.serialization.SerializationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetObjectData", info == null ? null : info.getJCOInstance(), context == null ? null : context.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -202,7 +210,7 @@ public class DBNull extends NetObject  {
      */
     @Deprecated 
     public boolean ToBoolean(IFormatProvider provider) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIConvertible to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIConvertible to obtain the full interface.");
     }
 
     /**
@@ -211,7 +219,7 @@ public class DBNull extends NetObject  {
      */
     @Deprecated 
     public byte ToByte(IFormatProvider provider) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIConvertible to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIConvertible to obtain the full interface.");
     }
 
     /**
@@ -220,7 +228,7 @@ public class DBNull extends NetObject  {
      */
     @Deprecated 
     public char ToChar(IFormatProvider provider) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIConvertible to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIConvertible to obtain the full interface.");
     }
 
     /**
@@ -229,7 +237,7 @@ public class DBNull extends NetObject  {
      */
     @Deprecated 
     public double ToDouble(IFormatProvider provider) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIConvertible to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIConvertible to obtain the full interface.");
     }
 
     /**
@@ -238,7 +246,7 @@ public class DBNull extends NetObject  {
      */
     @Deprecated 
     public short ToInt16(IFormatProvider provider) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIConvertible to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIConvertible to obtain the full interface.");
     }
 
     /**
@@ -247,7 +255,7 @@ public class DBNull extends NetObject  {
      */
     @Deprecated 
     public int ToInt32(IFormatProvider provider) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIConvertible to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIConvertible to obtain the full interface.");
     }
 
     /**
@@ -256,7 +264,7 @@ public class DBNull extends NetObject  {
      */
     @Deprecated 
     public long ToInt64(IFormatProvider provider) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIConvertible to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIConvertible to obtain the full interface.");
     }
 
     /**
@@ -265,7 +273,7 @@ public class DBNull extends NetObject  {
      */
     @Deprecated 
     public SByte ToSByte(IFormatProvider provider) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIConvertible to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIConvertible to obtain the full interface.");
     }
 
     /**
@@ -274,7 +282,7 @@ public class DBNull extends NetObject  {
      */
     @Deprecated 
     public Single ToSingle(IFormatProvider provider) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIConvertible to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIConvertible to obtain the full interface.");
     }
 
     /**
@@ -283,7 +291,7 @@ public class DBNull extends NetObject  {
      */
     @Deprecated 
     public DateTime ToDateTime(IFormatProvider provider) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIConvertible to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIConvertible to obtain the full interface.");
     }
 
     /**
@@ -292,7 +300,7 @@ public class DBNull extends NetObject  {
      */
     @Deprecated 
     public Decimal ToDecimal(IFormatProvider provider) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIConvertible to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIConvertible to obtain the full interface.");
     }
 
     /**
@@ -301,7 +309,7 @@ public class DBNull extends NetObject  {
      */
     @Deprecated 
     public NetObject ToType(NetType conversionType, IFormatProvider provider) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIConvertible to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIConvertible to obtain the full interface.");
     }
 
     /**
@@ -310,7 +318,7 @@ public class DBNull extends NetObject  {
      */
     @Deprecated 
     public UInt16 ToUInt16(IFormatProvider provider) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIConvertible to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIConvertible to obtain the full interface.");
     }
 
     /**
@@ -319,7 +327,7 @@ public class DBNull extends NetObject  {
      */
     @Deprecated 
     public UInt32 ToUInt32(IFormatProvider provider) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIConvertible to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIConvertible to obtain the full interface.");
     }
 
     /**
@@ -328,7 +336,7 @@ public class DBNull extends NetObject  {
      */
     @Deprecated 
     public UInt64 ToUInt64(IFormatProvider provider) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIConvertible to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIConvertible to obtain the full interface.");
     }
 
 

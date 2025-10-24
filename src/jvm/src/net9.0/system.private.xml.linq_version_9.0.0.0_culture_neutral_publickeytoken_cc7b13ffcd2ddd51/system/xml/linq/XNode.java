@@ -163,9 +163,13 @@ public class XNode extends XObject  {
     
     public static boolean DeepEquals(XNode n1, XNode n2) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDeepEquals = null;
         try {
-            return (boolean)classType.Invoke("DeepEquals", n1 == null ? null : n1.getJCOInstance(), n2 == null ? null : n2.getJCOInstance());
+            retObjectDeepEquals = classType.Invoke("DeepEquals", n1 == null ? null : n1.getJCOInstance(), n2 == null ? null : n2.getJCOInstance());
+            return (boolean)retObjectDeepEquals;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectDeepEquals != null ? retObjectDeepEquals.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -173,9 +177,13 @@ public class XNode extends XObject  {
 
     public boolean IsAfter(XNode node) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsAfter = null;
         try {
-            return (boolean)classInstance.Invoke("IsAfter", node == null ? null : node.getJCOInstance());
+            retObjectIsAfter = classInstance.Invoke("IsAfter", node == null ? null : node.getJCOInstance());
+            return (boolean)retObjectIsAfter;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsAfter != null ? retObjectIsAfter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,9 +191,13 @@ public class XNode extends XObject  {
 
     public boolean IsBefore(XNode node) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsBefore = null;
         try {
-            return (boolean)classInstance.Invoke("IsBefore", node == null ? null : node.getJCOInstance());
+            retObjectIsBefore = classInstance.Invoke("IsBefore", node == null ? null : node.getJCOInstance());
+            return (boolean)retObjectIsBefore;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsBefore != null ? retObjectIsBefore.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,9 +205,20 @@ public class XNode extends XObject  {
 
     public static int CompareDocumentOrder(XNode n1, XNode n2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCompareDocumentOrder = null;
         try {
-            return (int)classType.Invoke("CompareDocumentOrder", n1 == null ? null : n1.getJCOInstance(), n2 == null ? null : n2.getJCOInstance());
+            retObjectCompareDocumentOrder = classType.Invoke("CompareDocumentOrder", n1 == null ? null : n1.getJCOInstance(), n2 == null ? null : n2.getJCOInstance());
+            return (int)retObjectCompareDocumentOrder;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCompareDocumentOrder_ToString = retObjectCompareDocumentOrder == null ? "null" : retObjectCompareDocumentOrder.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectCompareDocumentOrderNumber = (java.lang.Number)retObjectCompareDocumentOrder;
+                return retObjectCompareDocumentOrderNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCompareDocumentOrder != null ? retObjectCompareDocumentOrder.getClass() : "null", retObjectCompareDocumentOrder_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,9 +226,13 @@ public class XNode extends XObject  {
 
     public java.lang.String ToString(SaveOptions options) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentException, system.OutOfMemoryException, system.xml.XmlException, system.ArgumentOutOfRangeException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToString = null;
         try {
-            return (java.lang.String)classInstance.Invoke("ToString", options == null ? null : options.getJCOInstance());
+            retObjectToString = classInstance.Invoke("ToString", options == null ? null : options.getJCOInstance());
+            return (java.lang.String)retObjectToString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectToString != null ? retObjectToString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,10 +240,14 @@ public class XNode extends XObject  {
 
     public Task WriteToAsync(XmlWriter writer, CancellationToken cancellationToken) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWriteToAsync = null;
         try {
-            JCObject objWriteToAsync = (JCObject)classInstance.Invoke("WriteToAsync", writer == null ? null : writer.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            retObjectWriteToAsync = classInstance.Invoke("WriteToAsync", writer == null ? null : writer.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objWriteToAsync = (JCObject)retObjectWriteToAsync;
             return new Task(objWriteToAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWriteToAsync != null ? retObjectWriteToAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -224,10 +255,14 @@ public class XNode extends XObject  {
 
     public static XNode ReadFrom(XmlReader reader) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OutOfMemoryException, system.OverflowException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectReadFrom = null;
         try {
-            JCObject objReadFrom = (JCObject)classType.Invoke("ReadFrom", reader == null ? null : reader.getJCOInstance());
+            retObjectReadFrom = classType.Invoke("ReadFrom", reader == null ? null : reader.getJCOInstance());
+            JCObject objReadFrom = (JCObject)retObjectReadFrom;
             return new XNode(objReadFrom);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadFrom != null ? retObjectReadFrom.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -235,10 +270,14 @@ public class XNode extends XObject  {
 
     public XmlReader CreateReader() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateReader = null;
         try {
-            JCObject objCreateReader = (JCObject)classInstance.Invoke("CreateReader");
+            retObjectCreateReader = classInstance.Invoke("CreateReader");
+            JCObject objCreateReader = (JCObject)retObjectCreateReader;
             return new XmlReader(objCreateReader);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateReader != null ? retObjectCreateReader.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -246,10 +285,14 @@ public class XNode extends XObject  {
 
     public XmlReader CreateReader(ReaderOptions readerOptions) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateReader = null;
         try {
-            JCObject objCreateReader = (JCObject)classInstance.Invoke("CreateReader", readerOptions == null ? null : readerOptions.getJCOInstance());
+            retObjectCreateReader = classInstance.Invoke("CreateReader", readerOptions == null ? null : readerOptions.getJCOInstance());
+            JCObject objCreateReader = (JCObject)retObjectCreateReader;
             return new XmlReader(objCreateReader);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateReader != null ? retObjectCreateReader.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -257,7 +300,7 @@ public class XNode extends XObject  {
 
     public void AddAfterSelf(NetObject content) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddAfterSelf", content == null ? null : content.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -267,7 +310,7 @@ public class XNode extends XObject  {
 
     public void AddAfterSelf(NetObject... content) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddAfterSelf", (java.lang.Object)toObjectFromArray(content));
         } catch (JCNativeException jcne) {
@@ -277,7 +320,7 @@ public class XNode extends XObject  {
 
     public void AddBeforeSelf(NetObject content) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddBeforeSelf", content == null ? null : content.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -287,7 +330,7 @@ public class XNode extends XObject  {
 
     public void AddBeforeSelf(NetObject... content) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddBeforeSelf", (java.lang.Object)toObjectFromArray(content));
         } catch (JCNativeException jcne) {
@@ -297,7 +340,7 @@ public class XNode extends XObject  {
 
     public void Remove() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Remove");
         } catch (JCNativeException jcne) {
@@ -307,7 +350,7 @@ public class XNode extends XObject  {
 
     public void ReplaceWith(NetObject content) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ReplaceWith", content == null ? null : content.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -317,7 +360,7 @@ public class XNode extends XObject  {
 
     public void ReplaceWith(NetObject... content) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ReplaceWith", (java.lang.Object)toObjectFromArray(content));
         } catch (JCNativeException jcne) {
@@ -327,7 +370,7 @@ public class XNode extends XObject  {
 
     public void WriteTo(XmlWriter writer) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteTo", writer == null ? null : writer.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -341,10 +384,14 @@ public class XNode extends XObject  {
     
     public XNode getNextNode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNextNode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("NextNode");
+            retObjectNextNode = classInstance.Get("NextNode");
+            JCObject val = (JCObject)retObjectNextNode;
             return new XNode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNextNode != null ? retObjectNextNode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -352,10 +399,14 @@ public class XNode extends XObject  {
 
     public XNode getPreviousNode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPreviousNode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PreviousNode");
+            retObjectPreviousNode = classInstance.Get("PreviousNode");
+            JCObject val = (JCObject)retObjectPreviousNode;
             return new XNode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPreviousNode != null ? retObjectPreviousNode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -363,10 +414,14 @@ public class XNode extends XObject  {
 
     public static XNodeDocumentOrderComparer getDocumentOrderComparer() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDocumentOrderComparer = null;
         try {
-            JCObject val = (JCObject)classType.Get("DocumentOrderComparer");
+            retObjectDocumentOrderComparer = classType.Get("DocumentOrderComparer");
+            JCObject val = (JCObject)retObjectDocumentOrderComparer;
             return new XNodeDocumentOrderComparer(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDocumentOrderComparer != null ? retObjectDocumentOrderComparer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -374,10 +429,14 @@ public class XNode extends XObject  {
 
     public static XNodeEqualityComparer getEqualityComparer() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectEqualityComparer = null;
         try {
-            JCObject val = (JCObject)classType.Get("EqualityComparer");
+            retObjectEqualityComparer = classType.Get("EqualityComparer");
+            JCObject val = (JCObject)retObjectEqualityComparer;
             return new XNodeEqualityComparer(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEqualityComparer != null ? retObjectEqualityComparer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

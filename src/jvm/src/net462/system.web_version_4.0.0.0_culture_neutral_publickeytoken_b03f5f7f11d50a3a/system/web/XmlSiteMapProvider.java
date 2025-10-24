@@ -165,10 +165,14 @@ public class XmlSiteMapProvider extends StaticSiteMapProvider implements AutoClo
     
     public SiteMapNode BuildSiteMap() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.web.HttpException, system.NotSupportedException, system.OverflowException, system.threading.AbandonedMutexException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.security.SecurityException, system.xml.schema.XmlSchemaException, system.xml.XmlException, system.NullReferenceException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.configuration.provider.ProviderException, system.threading.ThreadAbortException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBuildSiteMap = null;
         try {
-            JCObject objBuildSiteMap = (JCObject)classInstance.Invoke("BuildSiteMap");
+            retObjectBuildSiteMap = classInstance.Invoke("BuildSiteMap");
+            JCObject objBuildSiteMap = (JCObject)retObjectBuildSiteMap;
             return new SiteMapNode(objBuildSiteMap);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBuildSiteMap != null ? retObjectBuildSiteMap.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,10 +180,14 @@ public class XmlSiteMapProvider extends StaticSiteMapProvider implements AutoClo
 
     public SiteMapNode FindSiteMapNode(java.lang.String rawUrl) throws Throwable, system.ArgumentNullException, system.web.HttpException, system.ArgumentOutOfRangeException, system.ArgumentException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.configuration.provider.ProviderException, system.RankException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFindSiteMapNode = null;
         try {
-            JCObject objFindSiteMapNode = (JCObject)classInstance.Invoke("FindSiteMapNode", rawUrl);
+            retObjectFindSiteMapNode = classInstance.Invoke("FindSiteMapNode", rawUrl);
+            JCObject objFindSiteMapNode = (JCObject)retObjectFindSiteMapNode;
             return new SiteMapNode(objFindSiteMapNode);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFindSiteMapNode != null ? retObjectFindSiteMapNode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,10 +195,14 @@ public class XmlSiteMapProvider extends StaticSiteMapProvider implements AutoClo
 
     public SiteMapNode FindSiteMapNodeFromKey(java.lang.String key) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.configuration.provider.ProviderException, system.RankException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFindSiteMapNodeFromKey = null;
         try {
-            JCObject objFindSiteMapNodeFromKey = (JCObject)classInstance.Invoke("FindSiteMapNodeFromKey", key);
+            retObjectFindSiteMapNodeFromKey = classInstance.Invoke("FindSiteMapNodeFromKey", key);
+            JCObject objFindSiteMapNodeFromKey = (JCObject)retObjectFindSiteMapNodeFromKey;
             return new SiteMapNode(objFindSiteMapNodeFromKey);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFindSiteMapNodeFromKey != null ? retObjectFindSiteMapNodeFromKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,10 +210,14 @@ public class XmlSiteMapProvider extends StaticSiteMapProvider implements AutoClo
 
     public SiteMapNode GetParentNode(SiteMapNode node) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.NotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.web.HttpRequestValidationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetParentNode = null;
         try {
-            JCObject objGetParentNode = (JCObject)classInstance.Invoke("GetParentNode", node == null ? null : node.getJCOInstance());
+            retObjectGetParentNode = classInstance.Invoke("GetParentNode", node == null ? null : node.getJCOInstance());
+            JCObject objGetParentNode = (JCObject)retObjectGetParentNode;
             return new SiteMapNode(objGetParentNode);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetParentNode != null ? retObjectGetParentNode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -209,10 +225,14 @@ public class XmlSiteMapProvider extends StaticSiteMapProvider implements AutoClo
 
     public SiteMapNodeCollection GetChildNodes(SiteMapNode node) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.web.HttpException, system.globalization.CultureNotFoundException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.NotSupportedException, system.InvalidOperationException, system.web.HttpRequestValidationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetChildNodes = null;
         try {
-            JCObject objGetChildNodes = (JCObject)classInstance.Invoke("GetChildNodes", node == null ? null : node.getJCOInstance());
+            retObjectGetChildNodes = classInstance.Invoke("GetChildNodes", node == null ? null : node.getJCOInstance());
+            JCObject objGetChildNodes = (JCObject)retObjectGetChildNodes;
             return new SiteMapNodeCollection(objGetChildNodes);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetChildNodes != null ? retObjectGetChildNodes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -220,7 +240,7 @@ public class XmlSiteMapProvider extends StaticSiteMapProvider implements AutoClo
 
     public void Dispose() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.OverflowException, system.security.SecurityException, system.reflection.TargetParameterCountException, system.NotSupportedException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
@@ -230,7 +250,7 @@ public class XmlSiteMapProvider extends StaticSiteMapProvider implements AutoClo
 
     public void Initialize(java.lang.String name, NameValueCollection attributes) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.web.HttpException, system.configuration.ConfigurationErrorsException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Initialize", name, attributes == null ? null : attributes.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -241,7 +261,7 @@ public class XmlSiteMapProvider extends StaticSiteMapProvider implements AutoClo
     public void close() throws Exception {
         try {
             if (classInstance == null)
-                throw new UnsupportedOperationException("classInstance is null.");
+                throw new java.lang.UnsupportedOperationException("classInstance is null.");
             try {
                 classInstance.Invoke("Dispose");
             }

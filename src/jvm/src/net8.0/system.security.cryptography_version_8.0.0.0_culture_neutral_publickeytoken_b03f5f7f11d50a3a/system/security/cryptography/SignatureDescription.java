@@ -176,10 +176,14 @@ public class SignatureDescription extends NetObject  {
     
     public AsymmetricSignatureDeformatter CreateDeformatter(AsymmetricAlgorithm key) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.TypeLoadException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateDeformatter = null;
         try {
-            JCObject objCreateDeformatter = (JCObject)classInstance.Invoke("CreateDeformatter", key == null ? null : key.getJCOInstance());
+            retObjectCreateDeformatter = classInstance.Invoke("CreateDeformatter", key == null ? null : key.getJCOInstance());
+            JCObject objCreateDeformatter = (JCObject)retObjectCreateDeformatter;
             return new AsymmetricSignatureDeformatter(objCreateDeformatter);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateDeformatter != null ? retObjectCreateDeformatter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,10 +191,14 @@ public class SignatureDescription extends NetObject  {
 
     public AsymmetricSignatureFormatter CreateFormatter(AsymmetricAlgorithm key) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.TypeLoadException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateFormatter = null;
         try {
-            JCObject objCreateFormatter = (JCObject)classInstance.Invoke("CreateFormatter", key == null ? null : key.getJCOInstance());
+            retObjectCreateFormatter = classInstance.Invoke("CreateFormatter", key == null ? null : key.getJCOInstance());
+            JCObject objCreateFormatter = (JCObject)retObjectCreateFormatter;
             return new AsymmetricSignatureFormatter(objCreateFormatter);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateFormatter != null ? retObjectCreateFormatter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,10 +206,14 @@ public class SignatureDescription extends NetObject  {
 
     public HashAlgorithm CreateDigest() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.TypeLoadException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateDigest = null;
         try {
-            JCObject objCreateDigest = (JCObject)classInstance.Invoke("CreateDigest");
+            retObjectCreateDigest = classInstance.Invoke("CreateDigest");
+            JCObject objCreateDigest = (JCObject)retObjectCreateDigest;
             return new HashAlgorithm(objCreateDigest);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateDigest != null ? retObjectCreateDigest.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,9 +225,13 @@ public class SignatureDescription extends NetObject  {
     
     public java.lang.String getDeformatterAlgorithm() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDeformatterAlgorithm = null;
         try {
-            return (java.lang.String)classInstance.Get("DeformatterAlgorithm");
+            retObjectDeformatterAlgorithm = classInstance.Get("DeformatterAlgorithm");
+            return (java.lang.String)retObjectDeformatterAlgorithm;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDeformatterAlgorithm != null ? retObjectDeformatterAlgorithm.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -223,7 +239,7 @@ public class SignatureDescription extends NetObject  {
 
     public void setDeformatterAlgorithm(java.lang.String DeformatterAlgorithm) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DeformatterAlgorithm", DeformatterAlgorithm);
         } catch (JCNativeException jcne) {
@@ -233,9 +249,13 @@ public class SignatureDescription extends NetObject  {
 
     public java.lang.String getDigestAlgorithm() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDigestAlgorithm = null;
         try {
-            return (java.lang.String)classInstance.Get("DigestAlgorithm");
+            retObjectDigestAlgorithm = classInstance.Get("DigestAlgorithm");
+            return (java.lang.String)retObjectDigestAlgorithm;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDigestAlgorithm != null ? retObjectDigestAlgorithm.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -243,7 +263,7 @@ public class SignatureDescription extends NetObject  {
 
     public void setDigestAlgorithm(java.lang.String DigestAlgorithm) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DigestAlgorithm", DigestAlgorithm);
         } catch (JCNativeException jcne) {
@@ -253,9 +273,13 @@ public class SignatureDescription extends NetObject  {
 
     public java.lang.String getFormatterAlgorithm() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFormatterAlgorithm = null;
         try {
-            return (java.lang.String)classInstance.Get("FormatterAlgorithm");
+            retObjectFormatterAlgorithm = classInstance.Get("FormatterAlgorithm");
+            return (java.lang.String)retObjectFormatterAlgorithm;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectFormatterAlgorithm != null ? retObjectFormatterAlgorithm.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -263,7 +287,7 @@ public class SignatureDescription extends NetObject  {
 
     public void setFormatterAlgorithm(java.lang.String FormatterAlgorithm) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FormatterAlgorithm", FormatterAlgorithm);
         } catch (JCNativeException jcne) {
@@ -273,9 +297,13 @@ public class SignatureDescription extends NetObject  {
 
     public java.lang.String getKeyAlgorithm() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectKeyAlgorithm = null;
         try {
-            return (java.lang.String)classInstance.Get("KeyAlgorithm");
+            retObjectKeyAlgorithm = classInstance.Get("KeyAlgorithm");
+            return (java.lang.String)retObjectKeyAlgorithm;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectKeyAlgorithm != null ? retObjectKeyAlgorithm.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -283,7 +311,7 @@ public class SignatureDescription extends NetObject  {
 
     public void setKeyAlgorithm(java.lang.String KeyAlgorithm) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("KeyAlgorithm", KeyAlgorithm);
         } catch (JCNativeException jcne) {

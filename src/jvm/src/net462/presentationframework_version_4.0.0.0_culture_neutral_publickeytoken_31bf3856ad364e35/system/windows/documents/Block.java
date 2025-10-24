@@ -163,9 +163,13 @@ public class Block extends TextElement  {
     
     public static boolean GetIsHyphenationEnabled(DependencyObject element) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetIsHyphenationEnabled = null;
         try {
-            return (boolean)classType.Invoke("GetIsHyphenationEnabled", element == null ? null : element.getJCOInstance());
+            retObjectGetIsHyphenationEnabled = classType.Invoke("GetIsHyphenationEnabled", element == null ? null : element.getJCOInstance());
+            return (boolean)retObjectGetIsHyphenationEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectGetIsHyphenationEnabled != null ? retObjectGetIsHyphenationEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -173,9 +177,20 @@ public class Block extends TextElement  {
 
     public static double GetLineHeight(DependencyObject element) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetLineHeight = null;
         try {
-            return (double)classType.Invoke("GetLineHeight", element == null ? null : element.getJCOInstance());
+            retObjectGetLineHeight = classType.Invoke("GetLineHeight", element == null ? null : element.getJCOInstance());
+            return (double)retObjectGetLineHeight;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetLineHeight_ToString = retObjectGetLineHeight == null ? "null" : retObjectGetLineHeight.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetLineHeightNumber = (java.lang.Number)retObjectGetLineHeight;
+                return retObjectGetLineHeightNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectGetLineHeight != null ? retObjectGetLineHeight.getClass() : "null", retObjectGetLineHeight_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,10 +198,14 @@ public class Block extends TextElement  {
 
     public static LineStackingStrategy GetLineStackingStrategy(DependencyObject element) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetLineStackingStrategy = null;
         try {
-            JCObject objGetLineStackingStrategy = (JCObject)classType.Invoke("GetLineStackingStrategy", element == null ? null : element.getJCOInstance());
+            retObjectGetLineStackingStrategy = classType.Invoke("GetLineStackingStrategy", element == null ? null : element.getJCOInstance());
+            JCObject objGetLineStackingStrategy = (JCObject)retObjectGetLineStackingStrategy;
             return new LineStackingStrategy(objGetLineStackingStrategy);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetLineStackingStrategy != null ? retObjectGetLineStackingStrategy.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -194,10 +213,14 @@ public class Block extends TextElement  {
 
     public static TextAlignment GetTextAlignment(DependencyObject element) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetTextAlignment = null;
         try {
-            JCObject objGetTextAlignment = (JCObject)classType.Invoke("GetTextAlignment", element == null ? null : element.getJCOInstance());
+            retObjectGetTextAlignment = classType.Invoke("GetTextAlignment", element == null ? null : element.getJCOInstance());
+            JCObject objGetTextAlignment = (JCObject)retObjectGetTextAlignment;
             return new TextAlignment(objGetTextAlignment);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetTextAlignment != null ? retObjectGetTextAlignment.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -205,7 +228,7 @@ public class Block extends TextElement  {
 
     public static void SetIsHyphenationEnabled(DependencyObject element, boolean value) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetIsHyphenationEnabled", element == null ? null : element.getJCOInstance(), value);
         } catch (JCNativeException jcne) {
@@ -215,7 +238,7 @@ public class Block extends TextElement  {
 
     public static void SetLineHeight(DependencyObject element, double value) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetLineHeight", element == null ? null : element.getJCOInstance(), value);
         } catch (JCNativeException jcne) {
@@ -225,7 +248,7 @@ public class Block extends TextElement  {
 
     public static void SetLineStackingStrategy(DependencyObject element, LineStackingStrategy value) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetLineStackingStrategy", element == null ? null : element.getJCOInstance(), value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -235,7 +258,7 @@ public class Block extends TextElement  {
 
     public static void SetTextAlignment(DependencyObject element, TextAlignment value) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetTextAlignment", element == null ? null : element.getJCOInstance(), value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -249,9 +272,13 @@ public class Block extends TextElement  {
     
     public boolean getBreakColumnBefore() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBreakColumnBefore = null;
         try {
-            return (boolean)classInstance.Get("BreakColumnBefore");
+            retObjectBreakColumnBefore = classInstance.Get("BreakColumnBefore");
+            return (boolean)retObjectBreakColumnBefore;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectBreakColumnBefore != null ? retObjectBreakColumnBefore.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -259,7 +286,7 @@ public class Block extends TextElement  {
 
     public void setBreakColumnBefore(boolean BreakColumnBefore) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BreakColumnBefore", BreakColumnBefore);
         } catch (JCNativeException jcne) {
@@ -269,9 +296,13 @@ public class Block extends TextElement  {
 
     public boolean getBreakPageBefore() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBreakPageBefore = null;
         try {
-            return (boolean)classInstance.Get("BreakPageBefore");
+            retObjectBreakPageBefore = classInstance.Get("BreakPageBefore");
+            return (boolean)retObjectBreakPageBefore;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectBreakPageBefore != null ? retObjectBreakPageBefore.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -279,7 +310,7 @@ public class Block extends TextElement  {
 
     public void setBreakPageBefore(boolean BreakPageBefore) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BreakPageBefore", BreakPageBefore);
         } catch (JCNativeException jcne) {
@@ -289,9 +320,13 @@ public class Block extends TextElement  {
 
     public boolean getIsHyphenationEnabled() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsHyphenationEnabled = null;
         try {
-            return (boolean)classInstance.Get("IsHyphenationEnabled");
+            retObjectIsHyphenationEnabled = classInstance.Get("IsHyphenationEnabled");
+            return (boolean)retObjectIsHyphenationEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsHyphenationEnabled != null ? retObjectIsHyphenationEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -299,7 +334,7 @@ public class Block extends TextElement  {
 
     public void setIsHyphenationEnabled(boolean IsHyphenationEnabled) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsHyphenationEnabled", IsHyphenationEnabled);
         } catch (JCNativeException jcne) {
@@ -309,9 +344,20 @@ public class Block extends TextElement  {
 
     public double getLineHeight() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLineHeight = null;
         try {
-            return (double)classInstance.Get("LineHeight");
+            retObjectLineHeight = classInstance.Get("LineHeight");
+            return (double)retObjectLineHeight;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectLineHeight_ToString = retObjectLineHeight == null ? "null" : retObjectLineHeight.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectLineHeightNumber = (java.lang.Number)retObjectLineHeight;
+                return retObjectLineHeightNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectLineHeight != null ? retObjectLineHeight.getClass() : "null", retObjectLineHeight_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -319,7 +365,7 @@ public class Block extends TextElement  {
 
     public void setLineHeight(double LineHeight) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("LineHeight", LineHeight);
         } catch (JCNativeException jcne) {
@@ -329,10 +375,14 @@ public class Block extends TextElement  {
 
     public Block getNextBlock() throws Throwable, system.ArgumentException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.ArgumentNullException, system.InvalidOperationException, system.resources.MissingManifestResourceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNextBlock = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("NextBlock");
+            retObjectNextBlock = classInstance.Get("NextBlock");
+            JCObject val = (JCObject)retObjectNextBlock;
             return new Block(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNextBlock != null ? retObjectNextBlock.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -340,10 +390,14 @@ public class Block extends TextElement  {
 
     public Block getPreviousBlock() throws Throwable, system.ArgumentException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.ArgumentNullException, system.InvalidOperationException, system.resources.MissingManifestResourceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPreviousBlock = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PreviousBlock");
+            retObjectPreviousBlock = classInstance.Get("PreviousBlock");
+            JCObject val = (JCObject)retObjectPreviousBlock;
             return new Block(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPreviousBlock != null ? retObjectPreviousBlock.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -351,10 +405,14 @@ public class Block extends TextElement  {
 
     public BlockCollection getSiblingBlocks() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.security.SecurityException, system.ObjectDisposedException, system.UnauthorizedAccessException, system.io.IOException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSiblingBlocks = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SiblingBlocks");
+            retObjectSiblingBlocks = classInstance.Get("SiblingBlocks");
+            JCObject val = (JCObject)retObjectSiblingBlocks;
             return new BlockCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSiblingBlocks != null ? retObjectSiblingBlocks.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -362,10 +420,14 @@ public class Block extends TextElement  {
 
     public FlowDirection getFlowDirection() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFlowDirection = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("FlowDirection");
+            retObjectFlowDirection = classInstance.Get("FlowDirection");
+            JCObject val = (JCObject)retObjectFlowDirection;
             return new FlowDirection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFlowDirection != null ? retObjectFlowDirection.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -373,7 +435,7 @@ public class Block extends TextElement  {
 
     public void setFlowDirection(FlowDirection FlowDirection) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FlowDirection", FlowDirection == null ? null : FlowDirection.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -383,10 +445,14 @@ public class Block extends TextElement  {
 
     public LineStackingStrategy getLineStackingStrategy() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLineStackingStrategy = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("LineStackingStrategy");
+            retObjectLineStackingStrategy = classInstance.Get("LineStackingStrategy");
+            JCObject val = (JCObject)retObjectLineStackingStrategy;
             return new LineStackingStrategy(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLineStackingStrategy != null ? retObjectLineStackingStrategy.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -394,7 +460,7 @@ public class Block extends TextElement  {
 
     public void setLineStackingStrategy(LineStackingStrategy LineStackingStrategy) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("LineStackingStrategy", LineStackingStrategy == null ? null : LineStackingStrategy.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -404,10 +470,14 @@ public class Block extends TextElement  {
 
     public Brush getBorderBrush() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBorderBrush = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("BorderBrush");
+            retObjectBorderBrush = classInstance.Get("BorderBrush");
+            JCObject val = (JCObject)retObjectBorderBrush;
             return new Brush(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBorderBrush != null ? retObjectBorderBrush.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -415,7 +485,7 @@ public class Block extends TextElement  {
 
     public void setBorderBrush(Brush BorderBrush) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BorderBrush", BorderBrush == null ? null : BorderBrush.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -425,10 +495,14 @@ public class Block extends TextElement  {
 
     public TextAlignment getTextAlignment() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTextAlignment = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TextAlignment");
+            retObjectTextAlignment = classInstance.Get("TextAlignment");
+            JCObject val = (JCObject)retObjectTextAlignment;
             return new TextAlignment(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTextAlignment != null ? retObjectTextAlignment.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -436,7 +510,7 @@ public class Block extends TextElement  {
 
     public void setTextAlignment(TextAlignment TextAlignment) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TextAlignment", TextAlignment == null ? null : TextAlignment.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -446,10 +520,14 @@ public class Block extends TextElement  {
 
     public Thickness getBorderThickness() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBorderThickness = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("BorderThickness");
+            retObjectBorderThickness = classInstance.Get("BorderThickness");
+            JCObject val = (JCObject)retObjectBorderThickness;
             return new Thickness(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBorderThickness != null ? retObjectBorderThickness.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -457,7 +535,7 @@ public class Block extends TextElement  {
 
     public void setBorderThickness(Thickness BorderThickness) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BorderThickness", BorderThickness == null ? null : BorderThickness.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -467,10 +545,14 @@ public class Block extends TextElement  {
 
     public Thickness getMargin() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMargin = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Margin");
+            retObjectMargin = classInstance.Get("Margin");
+            JCObject val = (JCObject)retObjectMargin;
             return new Thickness(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMargin != null ? retObjectMargin.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -478,7 +560,7 @@ public class Block extends TextElement  {
 
     public void setMargin(Thickness Margin) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Margin", Margin == null ? null : Margin.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -488,10 +570,14 @@ public class Block extends TextElement  {
 
     public Thickness getPadding() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPadding = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Padding");
+            retObjectPadding = classInstance.Get("Padding");
+            JCObject val = (JCObject)retObjectPadding;
             return new Thickness(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPadding != null ? retObjectPadding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -499,7 +585,7 @@ public class Block extends TextElement  {
 
     public void setPadding(Thickness Padding) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Padding", Padding == null ? null : Padding.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -509,10 +595,14 @@ public class Block extends TextElement  {
 
     public WrapDirection getClearFloaters() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClearFloaters = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ClearFloaters");
+            retObjectClearFloaters = classInstance.Get("ClearFloaters");
+            JCObject val = (JCObject)retObjectClearFloaters;
             return new WrapDirection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClearFloaters != null ? retObjectClearFloaters.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -520,7 +610,7 @@ public class Block extends TextElement  {
 
     public void setClearFloaters(WrapDirection ClearFloaters) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ClearFloaters", ClearFloaters == null ? null : ClearFloaters.getJCOInstance());
         } catch (JCNativeException jcne) {

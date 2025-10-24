@@ -168,10 +168,14 @@ public class CodeMemberEvent extends CodeTypeMember  {
     
     public CodeTypeReference getPrivateImplementationType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPrivateImplementationType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PrivateImplementationType");
+            retObjectPrivateImplementationType = classInstance.Get("PrivateImplementationType");
+            JCObject val = (JCObject)retObjectPrivateImplementationType;
             return new CodeTypeReference(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPrivateImplementationType != null ? retObjectPrivateImplementationType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,7 +183,7 @@ public class CodeMemberEvent extends CodeTypeMember  {
 
     public void setPrivateImplementationType(CodeTypeReference PrivateImplementationType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PrivateImplementationType", PrivateImplementationType == null ? null : PrivateImplementationType.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -189,10 +193,14 @@ public class CodeMemberEvent extends CodeTypeMember  {
 
     public CodeTypeReference getType() throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Type");
+            retObjectType = classInstance.Get("Type");
+            JCObject val = (JCObject)retObjectType;
             return new CodeTypeReference(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectType != null ? retObjectType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,7 +208,7 @@ public class CodeMemberEvent extends CodeTypeMember  {
 
     public void setType(CodeTypeReference Type) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Type", Type == null ? null : Type.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -210,10 +218,14 @@ public class CodeMemberEvent extends CodeTypeMember  {
 
     public CodeTypeReferenceCollection getImplementationTypes() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectImplementationTypes = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ImplementationTypes");
+            retObjectImplementationTypes = classInstance.Get("ImplementationTypes");
+            JCObject val = (JCObject)retObjectImplementationTypes;
             return new CodeTypeReferenceCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectImplementationTypes != null ? retObjectImplementationTypes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -162,9 +162,13 @@ public class DispatcherOperation extends NetObject  {
     
     public boolean Abort() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAbort = null;
         try {
-            return (boolean)classInstance.Invoke("Abort");
+            retObjectAbort = classInstance.Invoke("Abort");
+            return (boolean)retObjectAbort;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectAbort != null ? retObjectAbort.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,10 +176,14 @@ public class DispatcherOperation extends NetObject  {
 
     public TaskAwaiter GetAwaiter() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetAwaiter = null;
         try {
-            JCObject objGetAwaiter = (JCObject)classInstance.Invoke("GetAwaiter");
+            retObjectGetAwaiter = classInstance.Invoke("GetAwaiter");
+            JCObject objGetAwaiter = (JCObject)retObjectGetAwaiter;
             return new TaskAwaiter(objGetAwaiter);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetAwaiter != null ? retObjectGetAwaiter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,10 +191,14 @@ public class DispatcherOperation extends NetObject  {
 
     public DispatcherOperationStatus Wait() throws Throwable, system.ArgumentException, system.OverflowException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.MulticastNotSupportedException, system.NullReferenceException, system.security.SecurityException, system.io.IOException, system.threading.WaitHandleCannotBeOpenedException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.threading.ThreadAbortException, system.threading.tasks.TaskSchedulerException, system.threading.tasks.TaskCanceledException, system.AggregateException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWait = null;
         try {
-            JCObject objWait = (JCObject)classInstance.Invoke("Wait");
+            retObjectWait = classInstance.Invoke("Wait");
+            JCObject objWait = (JCObject)retObjectWait;
             return new DispatcherOperationStatus(objWait);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWait != null ? retObjectWait.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -194,10 +206,14 @@ public class DispatcherOperation extends NetObject  {
 
     public DispatcherOperationStatus Wait(TimeSpan timeout) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.MulticastNotSupportedException, system.NullReferenceException, system.UnauthorizedAccessException, system.io.IOException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.threading.ThreadAbortException, system.threading.tasks.TaskSchedulerException, system.threading.tasks.TaskCanceledException, system.AggregateException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWait = null;
         try {
-            JCObject objWait = (JCObject)classInstance.Invoke("Wait", timeout == null ? null : timeout.getJCOInstance());
+            retObjectWait = classInstance.Invoke("Wait", timeout == null ? null : timeout.getJCOInstance());
+            JCObject objWait = (JCObject)retObjectWait;
             return new DispatcherOperationStatus(objWait);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWait != null ? retObjectWait.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -209,10 +225,14 @@ public class DispatcherOperation extends NetObject  {
     
     public NetObject getResult() throws Throwable, system.ArgumentException, system.OverflowException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.ArgumentOutOfRangeException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.threading.AbandonedMutexException, system.threading.ThreadAbortException, system.threading.tasks.TaskSchedulerException, system.threading.tasks.TaskCanceledException, system.AggregateException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResult = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Result");
+            retObjectResult = classInstance.Get("Result");
+            JCObject val = (JCObject)retObjectResult;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectResult != null ? retObjectResult.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -220,10 +240,14 @@ public class DispatcherOperation extends NetObject  {
 
     public Task getTask() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTask = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Task");
+            retObjectTask = classInstance.Get("Task");
+            JCObject val = (JCObject)retObjectTask;
             return new Task(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTask != null ? retObjectTask.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -231,10 +255,14 @@ public class DispatcherOperation extends NetObject  {
 
     public Dispatcher getDispatcher() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDispatcher = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Dispatcher");
+            retObjectDispatcher = classInstance.Get("Dispatcher");
+            JCObject val = (JCObject)retObjectDispatcher;
             return new Dispatcher(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDispatcher != null ? retObjectDispatcher.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -242,10 +270,14 @@ public class DispatcherOperation extends NetObject  {
 
     public DispatcherOperationStatus getStatus() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStatus = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Status");
+            retObjectStatus = classInstance.Get("Status");
+            JCObject val = (JCObject)retObjectStatus;
             return new DispatcherOperationStatus(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStatus != null ? retObjectStatus.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -253,10 +285,14 @@ public class DispatcherOperation extends NetObject  {
 
     public DispatcherPriority getPriority() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPriority = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Priority");
+            retObjectPriority = classInstance.Get("Priority");
+            JCObject val = (JCObject)retObjectPriority;
             return new DispatcherPriority(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPriority != null ? retObjectPriority.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -264,7 +300,7 @@ public class DispatcherOperation extends NetObject  {
 
     public void setPriority(DispatcherPriority Priority) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException, system.OverflowException, system.componentmodel.Win32Exception, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Priority", Priority == null ? null : Priority.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -279,7 +315,7 @@ public class DispatcherOperation extends NetObject  {
 
     public void addAborted(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Aborted", handler);
         } catch (JCNativeException jcne) {
@@ -289,7 +325,7 @@ public class DispatcherOperation extends NetObject  {
 
     public void removeAborted(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Aborted", handler);
         } catch (JCNativeException jcne) {
@@ -299,7 +335,7 @@ public class DispatcherOperation extends NetObject  {
 
     public void addCompleted(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Completed", handler);
         } catch (JCNativeException jcne) {
@@ -309,7 +345,7 @@ public class DispatcherOperation extends NetObject  {
 
     public void removeCompleted(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Completed", handler);
         } catch (JCNativeException jcne) {

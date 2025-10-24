@@ -158,10 +158,14 @@ public class ModelBinderProviders extends NetObject  {
     
     public static ModelBinderProviderCollection getProviders() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectProviders = null;
         try {
-            JCObject val = (JCObject)classType.Get("Providers");
+            retObjectProviders = classType.Get("Providers");
+            JCObject val = (JCObject)retObjectProviders;
             return new ModelBinderProviderCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectProviders != null ? retObjectProviders.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

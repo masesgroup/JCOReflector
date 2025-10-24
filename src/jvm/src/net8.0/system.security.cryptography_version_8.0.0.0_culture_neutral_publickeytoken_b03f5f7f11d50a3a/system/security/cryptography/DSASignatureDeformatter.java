@@ -173,9 +173,13 @@ public class DSASignatureDeformatter extends AsymmetricSignatureDeformatter  {
     
     public boolean VerifySignature(byte[] rgbHash, byte[] rgbSignature) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.security.cryptography.CryptographicUnexpectedOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVerifySignature = null;
         try {
-            return (boolean)classInstance.Invoke("VerifySignature", rgbHash, rgbSignature);
+            retObjectVerifySignature = classInstance.Invoke("VerifySignature", rgbHash, rgbSignature);
+            return (boolean)retObjectVerifySignature;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectVerifySignature != null ? retObjectVerifySignature.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,9 +187,13 @@ public class DSASignatureDeformatter extends AsymmetricSignatureDeformatter  {
 
     public boolean VerifySignature(JCORefOut dupParam0, JCORefOut dupParam1) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.security.cryptography.CryptographicUnexpectedOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVerifySignature = null;
         try {
-            return (boolean)classInstance.Invoke("VerifySignature", dupParam0.getJCRefOut(), dupParam1.getJCRefOut());
+            retObjectVerifySignature = classInstance.Invoke("VerifySignature", dupParam0.getJCRefOut(), dupParam1.getJCRefOut());
+            return (boolean)retObjectVerifySignature;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectVerifySignature != null ? retObjectVerifySignature.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,7 +201,7 @@ public class DSASignatureDeformatter extends AsymmetricSignatureDeformatter  {
 
     public void SetHashAlgorithm(java.lang.String strName) throws Throwable, system.NotSupportedException, system.ArgumentException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.security.cryptography.CryptographicUnexpectedOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetHashAlgorithm", strName);
         } catch (JCNativeException jcne) {
@@ -203,7 +211,7 @@ public class DSASignatureDeformatter extends AsymmetricSignatureDeformatter  {
 
     public void SetKey(AsymmetricAlgorithm key) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetKey", key == null ? null : key.getJCOInstance());
         } catch (JCNativeException jcne) {

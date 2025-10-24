@@ -174,9 +174,13 @@ public class UserControl extends TemplateControl implements system.web.ui.IAttri
     
     public java.lang.String MapPath(java.lang.String virtualPath) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.OutOfMemoryException, system.threading.ThreadAbortException, system.web.HttpRequestValidationException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMapPath = null;
         try {
-            return (java.lang.String)classInstance.Invoke("MapPath", virtualPath);
+            retObjectMapPath = classInstance.Invoke("MapPath", virtualPath);
+            return (java.lang.String)retObjectMapPath;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectMapPath != null ? retObjectMapPath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -184,7 +188,7 @@ public class UserControl extends TemplateControl implements system.web.ui.IAttri
 
     public void DesignerInitialize() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.configuration.provider.ProviderException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.FormatException, system.reflection.AmbiguousMatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DesignerInitialize");
         } catch (JCNativeException jcne) {
@@ -194,7 +198,7 @@ public class UserControl extends TemplateControl implements system.web.ui.IAttri
 
     public void InitializeAsUserControl(Page page) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.FormatException, system.MulticastNotSupportedException, system.security.SecurityException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.web.HttpException, system.web.HttpParseException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("InitializeAsUserControl", page == null ? null : page.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -208,7 +212,7 @@ public class UserControl extends TemplateControl implements system.web.ui.IAttri
      */
     @Deprecated 
     public java.lang.String GetAttribute(java.lang.String key) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAttributeAccessor to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAttributeAccessor to obtain the full interface.");
     }
 
     /**
@@ -217,7 +221,7 @@ public class UserControl extends TemplateControl implements system.web.ui.IAttri
      */
     @Deprecated 
     public void SetAttribute(java.lang.String key, java.lang.String value) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAttributeAccessor to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAttributeAccessor to obtain the full interface.");
     }
 
 
@@ -226,9 +230,13 @@ public class UserControl extends TemplateControl implements system.web.ui.IAttri
     
     public boolean getIsPostBack() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsPostBack = null;
         try {
-            return (boolean)classInstance.Get("IsPostBack");
+            retObjectIsPostBack = classInstance.Get("IsPostBack");
+            return (boolean)retObjectIsPostBack;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsPostBack != null ? retObjectIsPostBack.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -236,10 +244,14 @@ public class UserControl extends TemplateControl implements system.web.ui.IAttri
 
     public Cache getCache() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.web.HttpException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCache = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Cache");
+            retObjectCache = classInstance.Get("Cache");
+            JCObject val = (JCObject)retObjectCache;
             return new Cache(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCache != null ? retObjectCache.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -247,10 +259,14 @@ public class UserControl extends TemplateControl implements system.web.ui.IAttri
 
     public HttpApplicationState getApplication() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectApplication = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Application");
+            retObjectApplication = classInstance.Get("Application");
+            JCObject val = (JCObject)retObjectApplication;
             return new HttpApplicationState(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectApplication != null ? retObjectApplication.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -258,10 +274,14 @@ public class UserControl extends TemplateControl implements system.web.ui.IAttri
 
     public HttpRequest getRequest() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.web.HttpException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRequest = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Request");
+            retObjectRequest = classInstance.Get("Request");
+            JCObject val = (JCObject)retObjectRequest;
             return new HttpRequest(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRequest != null ? retObjectRequest.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -269,10 +289,14 @@ public class UserControl extends TemplateControl implements system.web.ui.IAttri
 
     public HttpResponse getResponse() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.web.HttpException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResponse = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Response");
+            retObjectResponse = classInstance.Get("Response");
+            JCObject val = (JCObject)retObjectResponse;
             return new HttpResponse(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectResponse != null ? retObjectResponse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -280,10 +304,14 @@ public class UserControl extends TemplateControl implements system.web.ui.IAttri
 
     public HttpServerUtility getServer() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectServer = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Server");
+            retObjectServer = classInstance.Get("Server");
+            JCObject val = (JCObject)retObjectServer;
             return new HttpServerUtility(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectServer != null ? retObjectServer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -291,10 +319,14 @@ public class UserControl extends TemplateControl implements system.web.ui.IAttri
 
     public HttpSessionState getSession() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSession = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Session");
+            retObjectSession = classInstance.Get("Session");
+            JCObject val = (JCObject)retObjectSession;
             return new HttpSessionState(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSession != null ? retObjectSession.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -302,10 +334,14 @@ public class UserControl extends TemplateControl implements system.web.ui.IAttri
 
     public TraceContext getTrace() throws Throwable, system.ArgumentException, system.web.HttpException, system.ArgumentNullException, system.configuration.ConfigurationErrorsException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTrace = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Trace");
+            retObjectTrace = classInstance.Get("Trace");
+            JCObject val = (JCObject)retObjectTrace;
             return new TraceContext(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTrace != null ? retObjectTrace.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -313,10 +349,14 @@ public class UserControl extends TemplateControl implements system.web.ui.IAttri
 
     public AttributeCollection getAttributes() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAttributes = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Attributes");
+            retObjectAttributes = classInstance.Get("Attributes");
+            JCObject val = (JCObject)retObjectAttributes;
             return new AttributeCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAttributes != null ? retObjectAttributes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -324,10 +364,14 @@ public class UserControl extends TemplateControl implements system.web.ui.IAttri
 
     public ControlCachePolicy getCachePolicy() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCachePolicy = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CachePolicy");
+            retObjectCachePolicy = classInstance.Get("CachePolicy");
+            JCObject val = (JCObject)retObjectCachePolicy;
             return new ControlCachePolicy(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCachePolicy != null ? retObjectCachePolicy.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

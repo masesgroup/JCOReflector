@@ -142,9 +142,13 @@ public class IModelNameProviderImplementation extends NetObject implements IMode
     
     public java.lang.String GetModelName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetModelName = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetModelName");
+            retObjectGetModelName = classInstance.Invoke("GetModelName");
+            return (java.lang.String)retObjectGetModelName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetModelName != null ? retObjectGetModelName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

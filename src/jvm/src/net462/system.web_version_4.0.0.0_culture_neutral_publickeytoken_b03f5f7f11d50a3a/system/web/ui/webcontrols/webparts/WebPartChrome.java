@@ -169,7 +169,7 @@ public class WebPartChrome extends NetObject  {
     
     public void PerformPreRender() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.configuration.provider.ProviderException, system.NotSupportedException, system.NullReferenceException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("PerformPreRender");
         } catch (JCNativeException jcne) {
@@ -179,7 +179,7 @@ public class WebPartChrome extends NetObject  {
 
     public void RenderWebPart(HtmlTextWriter writer, WebPart webPart) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.NullReferenceException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.threading.ThreadAbortException, system.web.HttpException, system.web.HttpRequestValidationException, system.NotSupportedException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RenderWebPart", writer == null ? null : writer.getJCOInstance(), webPart == null ? null : webPart.getJCOInstance());
         } catch (JCNativeException jcne) {

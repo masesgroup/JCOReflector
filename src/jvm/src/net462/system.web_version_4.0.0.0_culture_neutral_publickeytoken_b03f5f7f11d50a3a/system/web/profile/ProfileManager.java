@@ -159,9 +159,13 @@ public class ProfileManager extends NetObject  {
     
     public static boolean DeleteProfile(java.lang.String username) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException, system.NotSupportedException, system.MemberAccessException, system.reflection.TargetException, system.reflection.TargetParameterCountException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.configuration.provider.ProviderException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDeleteProfile = null;
         try {
-            return (boolean)classType.Invoke("DeleteProfile", username);
+            retObjectDeleteProfile = classType.Invoke("DeleteProfile", username);
+            return (boolean)retObjectDeleteProfile;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectDeleteProfile != null ? retObjectDeleteProfile.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,9 +173,20 @@ public class ProfileManager extends NetObject  {
 
     public static int DeleteInactiveProfiles(ProfileAuthenticationOption authenticationOption, DateTime userInactiveSinceDate) throws Throwable, system.ArgumentException, system.security.SecurityException, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException, system.MemberAccessException, system.reflection.TargetException, system.reflection.TargetParameterCountException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.configuration.provider.ProviderException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDeleteInactiveProfiles = null;
         try {
-            return (int)classType.Invoke("DeleteInactiveProfiles", authenticationOption == null ? null : authenticationOption.getJCOInstance(), userInactiveSinceDate == null ? null : userInactiveSinceDate.getJCOInstance());
+            retObjectDeleteInactiveProfiles = classType.Invoke("DeleteInactiveProfiles", authenticationOption == null ? null : authenticationOption.getJCOInstance(), userInactiveSinceDate == null ? null : userInactiveSinceDate.getJCOInstance());
+            return (int)retObjectDeleteInactiveProfiles;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDeleteInactiveProfiles_ToString = retObjectDeleteInactiveProfiles == null ? "null" : retObjectDeleteInactiveProfiles.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectDeleteInactiveProfilesNumber = (java.lang.Number)retObjectDeleteInactiveProfiles;
+                return retObjectDeleteInactiveProfilesNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectDeleteInactiveProfiles != null ? retObjectDeleteInactiveProfiles.getClass() : "null", retObjectDeleteInactiveProfiles_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,9 +194,20 @@ public class ProfileManager extends NetObject  {
 
     public static int DeleteProfiles(java.lang.String[] usernames) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException, system.NotSupportedException, system.MemberAccessException, system.reflection.TargetException, system.reflection.TargetParameterCountException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.configuration.provider.ProviderException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDeleteProfiles = null;
         try {
-            return (int)classType.Invoke("DeleteProfiles", (java.lang.Object)usernames);
+            retObjectDeleteProfiles = classType.Invoke("DeleteProfiles", (java.lang.Object)usernames);
+            return (int)retObjectDeleteProfiles;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDeleteProfiles_ToString = retObjectDeleteProfiles == null ? "null" : retObjectDeleteProfiles.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectDeleteProfilesNumber = (java.lang.Number)retObjectDeleteProfiles;
+                return retObjectDeleteProfilesNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectDeleteProfiles != null ? retObjectDeleteProfiles.getClass() : "null", retObjectDeleteProfiles_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -189,9 +215,20 @@ public class ProfileManager extends NetObject  {
 
     public static int DeleteProfiles(JCORefOut dupParam0) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException, system.NotSupportedException, system.MemberAccessException, system.reflection.TargetException, system.reflection.TargetParameterCountException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.configuration.provider.ProviderException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDeleteProfiles = null;
         try {
-            return (int)classType.Invoke("DeleteProfiles", (java.lang.Object)dupParam0.getJCRefOut());
+            retObjectDeleteProfiles = classType.Invoke("DeleteProfiles", (java.lang.Object)dupParam0.getJCRefOut());
+            return (int)retObjectDeleteProfiles;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDeleteProfiles_ToString = retObjectDeleteProfiles == null ? "null" : retObjectDeleteProfiles.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectDeleteProfilesNumber = (java.lang.Number)retObjectDeleteProfiles;
+                return retObjectDeleteProfilesNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectDeleteProfiles != null ? retObjectDeleteProfiles.getClass() : "null", retObjectDeleteProfiles_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -199,9 +236,20 @@ public class ProfileManager extends NetObject  {
 
     public static int DeleteProfiles(ProfileInfoCollection profiles) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.security.SecurityException, system.MemberAccessException, system.reflection.TargetException, system.reflection.TargetParameterCountException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.configuration.provider.ProviderException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDeleteProfiles = null;
         try {
-            return (int)classType.Invoke("DeleteProfiles", profiles == null ? null : profiles.getJCOInstance());
+            retObjectDeleteProfiles = classType.Invoke("DeleteProfiles", profiles == null ? null : profiles.getJCOInstance());
+            return (int)retObjectDeleteProfiles;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDeleteProfiles_ToString = retObjectDeleteProfiles == null ? "null" : retObjectDeleteProfiles.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectDeleteProfilesNumber = (java.lang.Number)retObjectDeleteProfiles;
+                return retObjectDeleteProfilesNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectDeleteProfiles != null ? retObjectDeleteProfiles.getClass() : "null", retObjectDeleteProfiles_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -209,9 +257,20 @@ public class ProfileManager extends NetObject  {
 
     public static int GetNumberOfInactiveProfiles(ProfileAuthenticationOption authenticationOption, DateTime userInactiveSinceDate) throws Throwable, system.ArgumentException, system.security.SecurityException, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException, system.MemberAccessException, system.reflection.TargetException, system.reflection.TargetParameterCountException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.configuration.provider.ProviderException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetNumberOfInactiveProfiles = null;
         try {
-            return (int)classType.Invoke("GetNumberOfInactiveProfiles", authenticationOption == null ? null : authenticationOption.getJCOInstance(), userInactiveSinceDate == null ? null : userInactiveSinceDate.getJCOInstance());
+            retObjectGetNumberOfInactiveProfiles = classType.Invoke("GetNumberOfInactiveProfiles", authenticationOption == null ? null : authenticationOption.getJCOInstance(), userInactiveSinceDate == null ? null : userInactiveSinceDate.getJCOInstance());
+            return (int)retObjectGetNumberOfInactiveProfiles;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetNumberOfInactiveProfiles_ToString = retObjectGetNumberOfInactiveProfiles == null ? "null" : retObjectGetNumberOfInactiveProfiles.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetNumberOfInactiveProfilesNumber = (java.lang.Number)retObjectGetNumberOfInactiveProfiles;
+                return retObjectGetNumberOfInactiveProfilesNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetNumberOfInactiveProfiles != null ? retObjectGetNumberOfInactiveProfiles.getClass() : "null", retObjectGetNumberOfInactiveProfiles_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -219,9 +278,20 @@ public class ProfileManager extends NetObject  {
 
     public static int GetNumberOfProfiles(ProfileAuthenticationOption authenticationOption) throws Throwable, system.ArgumentException, system.security.SecurityException, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException, system.MemberAccessException, system.reflection.TargetException, system.reflection.TargetParameterCountException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.configuration.provider.ProviderException, system.InvalidTimeZoneException, system.OverflowException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetNumberOfProfiles = null;
         try {
-            return (int)classType.Invoke("GetNumberOfProfiles", authenticationOption == null ? null : authenticationOption.getJCOInstance());
+            retObjectGetNumberOfProfiles = classType.Invoke("GetNumberOfProfiles", authenticationOption == null ? null : authenticationOption.getJCOInstance());
+            return (int)retObjectGetNumberOfProfiles;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetNumberOfProfiles_ToString = retObjectGetNumberOfProfiles == null ? "null" : retObjectGetNumberOfProfiles.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetNumberOfProfilesNumber = (java.lang.Number)retObjectGetNumberOfProfiles;
+                return retObjectGetNumberOfProfilesNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetNumberOfProfiles != null ? retObjectGetNumberOfProfiles.getClass() : "null", retObjectGetNumberOfProfiles_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -229,10 +299,14 @@ public class ProfileManager extends NetObject  {
 
     public static ProfileInfoCollection FindInactiveProfilesByUserName(ProfileAuthenticationOption authenticationOption, java.lang.String usernameToMatch, DateTime userInactiveSinceDate) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException, system.NotSupportedException, system.MemberAccessException, system.reflection.TargetException, system.reflection.TargetParameterCountException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.configuration.provider.ProviderException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFindInactiveProfilesByUserName = null;
         try {
-            JCObject objFindInactiveProfilesByUserName = (JCObject)classType.Invoke("FindInactiveProfilesByUserName", authenticationOption == null ? null : authenticationOption.getJCOInstance(), usernameToMatch, userInactiveSinceDate == null ? null : userInactiveSinceDate.getJCOInstance());
+            retObjectFindInactiveProfilesByUserName = classType.Invoke("FindInactiveProfilesByUserName", authenticationOption == null ? null : authenticationOption.getJCOInstance(), usernameToMatch, userInactiveSinceDate == null ? null : userInactiveSinceDate.getJCOInstance());
+            JCObject objFindInactiveProfilesByUserName = (JCObject)retObjectFindInactiveProfilesByUserName;
             return new ProfileInfoCollection(objFindInactiveProfilesByUserName);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFindInactiveProfilesByUserName != null ? retObjectFindInactiveProfilesByUserName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -240,10 +314,14 @@ public class ProfileManager extends NetObject  {
 
     public static ProfileInfoCollection FindInactiveProfilesByUserName(ProfileAuthenticationOption authenticationOption, java.lang.String usernameToMatch, DateTime userInactiveSinceDate, int pageIndex, int pageSize, JCORefOut<java.util.concurrent.atomic.AtomicInteger> totalRecords) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.security.SecurityException, system.MemberAccessException, system.reflection.TargetException, system.reflection.TargetParameterCountException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.configuration.provider.ProviderException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFindInactiveProfilesByUserName = null;
         try {
-            JCObject objFindInactiveProfilesByUserName = (JCObject)classType.Invoke("FindInactiveProfilesByUserName", authenticationOption == null ? null : authenticationOption.getJCOInstance(), usernameToMatch, userInactiveSinceDate == null ? null : userInactiveSinceDate.getJCOInstance(), pageIndex, pageSize, totalRecords.getJCRefOut());
+            retObjectFindInactiveProfilesByUserName = classType.Invoke("FindInactiveProfilesByUserName", authenticationOption == null ? null : authenticationOption.getJCOInstance(), usernameToMatch, userInactiveSinceDate == null ? null : userInactiveSinceDate.getJCOInstance(), pageIndex, pageSize, totalRecords.getJCRefOut());
+            JCObject objFindInactiveProfilesByUserName = (JCObject)retObjectFindInactiveProfilesByUserName;
             return new ProfileInfoCollection(objFindInactiveProfilesByUserName);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFindInactiveProfilesByUserName != null ? retObjectFindInactiveProfilesByUserName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -251,10 +329,14 @@ public class ProfileManager extends NetObject  {
 
     public static ProfileInfoCollection FindProfilesByUserName(ProfileAuthenticationOption authenticationOption, java.lang.String usernameToMatch) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException, system.NotSupportedException, system.MemberAccessException, system.reflection.TargetException, system.reflection.TargetParameterCountException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.configuration.provider.ProviderException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFindProfilesByUserName = null;
         try {
-            JCObject objFindProfilesByUserName = (JCObject)classType.Invoke("FindProfilesByUserName", authenticationOption == null ? null : authenticationOption.getJCOInstance(), usernameToMatch);
+            retObjectFindProfilesByUserName = classType.Invoke("FindProfilesByUserName", authenticationOption == null ? null : authenticationOption.getJCOInstance(), usernameToMatch);
+            JCObject objFindProfilesByUserName = (JCObject)retObjectFindProfilesByUserName;
             return new ProfileInfoCollection(objFindProfilesByUserName);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFindProfilesByUserName != null ? retObjectFindProfilesByUserName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -262,10 +344,14 @@ public class ProfileManager extends NetObject  {
 
     public static ProfileInfoCollection FindProfilesByUserName(ProfileAuthenticationOption authenticationOption, java.lang.String usernameToMatch, int pageIndex, int pageSize, JCORefOut<java.util.concurrent.atomic.AtomicInteger> totalRecords) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.security.SecurityException, system.MemberAccessException, system.reflection.TargetException, system.reflection.TargetParameterCountException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.configuration.provider.ProviderException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFindProfilesByUserName = null;
         try {
-            JCObject objFindProfilesByUserName = (JCObject)classType.Invoke("FindProfilesByUserName", authenticationOption == null ? null : authenticationOption.getJCOInstance(), usernameToMatch, pageIndex, pageSize, totalRecords.getJCRefOut());
+            retObjectFindProfilesByUserName = classType.Invoke("FindProfilesByUserName", authenticationOption == null ? null : authenticationOption.getJCOInstance(), usernameToMatch, pageIndex, pageSize, totalRecords.getJCRefOut());
+            JCObject objFindProfilesByUserName = (JCObject)retObjectFindProfilesByUserName;
             return new ProfileInfoCollection(objFindProfilesByUserName);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFindProfilesByUserName != null ? retObjectFindProfilesByUserName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -273,10 +359,14 @@ public class ProfileManager extends NetObject  {
 
     public static ProfileInfoCollection GetAllInactiveProfiles(ProfileAuthenticationOption authenticationOption, DateTime userInactiveSinceDate) throws Throwable, system.ArgumentException, system.security.SecurityException, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException, system.MemberAccessException, system.reflection.TargetException, system.reflection.TargetParameterCountException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.configuration.provider.ProviderException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetAllInactiveProfiles = null;
         try {
-            JCObject objGetAllInactiveProfiles = (JCObject)classType.Invoke("GetAllInactiveProfiles", authenticationOption == null ? null : authenticationOption.getJCOInstance(), userInactiveSinceDate == null ? null : userInactiveSinceDate.getJCOInstance());
+            retObjectGetAllInactiveProfiles = classType.Invoke("GetAllInactiveProfiles", authenticationOption == null ? null : authenticationOption.getJCOInstance(), userInactiveSinceDate == null ? null : userInactiveSinceDate.getJCOInstance());
+            JCObject objGetAllInactiveProfiles = (JCObject)retObjectGetAllInactiveProfiles;
             return new ProfileInfoCollection(objGetAllInactiveProfiles);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetAllInactiveProfiles != null ? retObjectGetAllInactiveProfiles.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -284,10 +374,14 @@ public class ProfileManager extends NetObject  {
 
     public static ProfileInfoCollection GetAllInactiveProfiles(ProfileAuthenticationOption authenticationOption, DateTime userInactiveSinceDate, int pageIndex, int pageSize, JCORefOut<java.util.concurrent.atomic.AtomicInteger> totalRecords) throws Throwable, system.ArgumentException, system.security.SecurityException, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException, system.MemberAccessException, system.reflection.TargetException, system.reflection.TargetParameterCountException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.configuration.provider.ProviderException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetAllInactiveProfiles = null;
         try {
-            JCObject objGetAllInactiveProfiles = (JCObject)classType.Invoke("GetAllInactiveProfiles", authenticationOption == null ? null : authenticationOption.getJCOInstance(), userInactiveSinceDate == null ? null : userInactiveSinceDate.getJCOInstance(), pageIndex, pageSize, totalRecords.getJCRefOut());
+            retObjectGetAllInactiveProfiles = classType.Invoke("GetAllInactiveProfiles", authenticationOption == null ? null : authenticationOption.getJCOInstance(), userInactiveSinceDate == null ? null : userInactiveSinceDate.getJCOInstance(), pageIndex, pageSize, totalRecords.getJCRefOut());
+            JCObject objGetAllInactiveProfiles = (JCObject)retObjectGetAllInactiveProfiles;
             return new ProfileInfoCollection(objGetAllInactiveProfiles);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetAllInactiveProfiles != null ? retObjectGetAllInactiveProfiles.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -295,10 +389,14 @@ public class ProfileManager extends NetObject  {
 
     public static ProfileInfoCollection GetAllProfiles(ProfileAuthenticationOption authenticationOption) throws Throwable, system.ArgumentException, system.security.SecurityException, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException, system.MemberAccessException, system.reflection.TargetException, system.reflection.TargetParameterCountException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.configuration.provider.ProviderException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetAllProfiles = null;
         try {
-            JCObject objGetAllProfiles = (JCObject)classType.Invoke("GetAllProfiles", authenticationOption == null ? null : authenticationOption.getJCOInstance());
+            retObjectGetAllProfiles = classType.Invoke("GetAllProfiles", authenticationOption == null ? null : authenticationOption.getJCOInstance());
+            JCObject objGetAllProfiles = (JCObject)retObjectGetAllProfiles;
             return new ProfileInfoCollection(objGetAllProfiles);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetAllProfiles != null ? retObjectGetAllProfiles.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -306,10 +404,14 @@ public class ProfileManager extends NetObject  {
 
     public static ProfileInfoCollection GetAllProfiles(ProfileAuthenticationOption authenticationOption, int pageIndex, int pageSize, JCORefOut<java.util.concurrent.atomic.AtomicInteger> totalRecords) throws Throwable, system.ArgumentException, system.security.SecurityException, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException, system.MemberAccessException, system.reflection.TargetException, system.reflection.TargetParameterCountException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.configuration.provider.ProviderException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetAllProfiles = null;
         try {
-            JCObject objGetAllProfiles = (JCObject)classType.Invoke("GetAllProfiles", authenticationOption == null ? null : authenticationOption.getJCOInstance(), pageIndex, pageSize, totalRecords.getJCRefOut());
+            retObjectGetAllProfiles = classType.Invoke("GetAllProfiles", authenticationOption == null ? null : authenticationOption.getJCOInstance(), pageIndex, pageSize, totalRecords.getJCRefOut());
+            JCObject objGetAllProfiles = (JCObject)retObjectGetAllProfiles;
             return new ProfileInfoCollection(objGetAllProfiles);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetAllProfiles != null ? retObjectGetAllProfiles.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -317,7 +419,7 @@ public class ProfileManager extends NetObject  {
 
     public static void AddDynamicProfileProperty(ProfilePropertySettings property) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.IndexOutOfRangeException, system.NotSupportedException, system.NullReferenceException, system.configuration.ConfigurationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("AddDynamicProfileProperty", property == null ? null : property.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -331,9 +433,13 @@ public class ProfileManager extends NetObject  {
     
     public static boolean getAutomaticSaveEnabled() throws Throwable, system.ArgumentException, system.security.SecurityException, system.ArgumentNullException, system.NotImplementedException, system.NotSupportedException, system.InvalidOperationException, system.MemberAccessException, system.reflection.TargetException, system.reflection.TargetParameterCountException, system.ObjectDisposedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException, system.configuration.provider.ProviderException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAutomaticSaveEnabled = null;
         try {
-            return (boolean)classType.Get("AutomaticSaveEnabled");
+            retObjectAutomaticSaveEnabled = classType.Get("AutomaticSaveEnabled");
+            return (boolean)retObjectAutomaticSaveEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAutomaticSaveEnabled != null ? retObjectAutomaticSaveEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -341,9 +447,13 @@ public class ProfileManager extends NetObject  {
 
     public static boolean getEnabled() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.configuration.ConfigurationErrorsException, system.InvalidOperationException, system.web.HttpException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.security.SecurityException, system.NotImplementedException, system.MemberAccessException, system.reflection.TargetException, system.reflection.TargetParameterCountException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ObjectDisposedException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException, system.configuration.provider.ProviderException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectEnabled = null;
         try {
-            return (boolean)classType.Get("Enabled");
+            retObjectEnabled = classType.Get("Enabled");
+            return (boolean)retObjectEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectEnabled != null ? retObjectEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -351,9 +461,13 @@ public class ProfileManager extends NetObject  {
 
     public static java.lang.String getApplicationName() throws Throwable, system.ArgumentException, system.security.SecurityException, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException, system.MemberAccessException, system.reflection.TargetException, system.reflection.TargetParameterCountException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.configuration.provider.ProviderException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectApplicationName = null;
         try {
-            return (java.lang.String)classType.Get("ApplicationName");
+            retObjectApplicationName = classType.Get("ApplicationName");
+            return (java.lang.String)retObjectApplicationName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectApplicationName != null ? retObjectApplicationName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -361,7 +475,7 @@ public class ProfileManager extends NetObject  {
 
     public static void setApplicationName(java.lang.String ApplicationName) throws Throwable, system.ArgumentException, system.security.SecurityException, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException, system.MemberAccessException, system.reflection.TargetException, system.reflection.TargetParameterCountException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.configuration.provider.ProviderException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Set("ApplicationName", ApplicationName);
         } catch (JCNativeException jcne) {
@@ -371,10 +485,14 @@ public class ProfileManager extends NetObject  {
 
     public static ProfileProvider getProvider() throws Throwable, system.ArgumentException, system.security.SecurityException, system.ArgumentNullException, system.NotImplementedException, system.NotSupportedException, system.InvalidOperationException, system.MemberAccessException, system.reflection.TargetException, system.reflection.TargetParameterCountException, system.ObjectDisposedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.configuration.provider.ProviderException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectProvider = null;
         try {
-            JCObject val = (JCObject)classType.Get("Provider");
+            retObjectProvider = classType.Get("Provider");
+            JCObject val = (JCObject)retObjectProvider;
             return new ProfileProvider(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectProvider != null ? retObjectProvider.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -382,10 +500,14 @@ public class ProfileManager extends NetObject  {
 
     public static ProfileProviderCollection getProviders() throws Throwable, system.ArgumentException, system.security.SecurityException, system.ArgumentNullException, system.NotImplementedException, system.NotSupportedException, system.InvalidOperationException, system.MemberAccessException, system.reflection.TargetException, system.reflection.TargetParameterCountException, system.ObjectDisposedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.configuration.provider.ProviderException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectProviders = null;
         try {
-            JCObject val = (JCObject)classType.Get("Providers");
+            retObjectProviders = classType.Get("Providers");
+            JCObject val = (JCObject)retObjectProviders;
             return new ProfileProviderCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectProviders != null ? retObjectProviders.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

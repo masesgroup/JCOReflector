@@ -173,10 +173,14 @@ public class ThemeProvider extends NetObject  {
     
     public ICollection GetSkinsForControl(NetType type) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSkinsForControl = null;
         try {
-            JCObject objGetSkinsForControl = (JCObject)classInstance.Invoke("GetSkinsForControl", type == null ? null : type.getJCOInstance());
+            retObjectGetSkinsForControl = classInstance.Invoke("GetSkinsForControl", type == null ? null : type.getJCOInstance());
+            JCObject objGetSkinsForControl = (JCObject)retObjectGetSkinsForControl;
             return new ICollectionImplementation(objGetSkinsForControl);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSkinsForControl != null ? retObjectGetSkinsForControl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -184,10 +188,14 @@ public class ThemeProvider extends NetObject  {
 
     public IDictionary GetSkinControlBuildersForControlType(NetType type) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSkinControlBuildersForControlType = null;
         try {
-            JCObject objGetSkinControlBuildersForControlType = (JCObject)classInstance.Invoke("GetSkinControlBuildersForControlType", type == null ? null : type.getJCOInstance());
+            retObjectGetSkinControlBuildersForControlType = classInstance.Invoke("GetSkinControlBuildersForControlType", type == null ? null : type.getJCOInstance());
+            JCObject objGetSkinControlBuildersForControlType = (JCObject)retObjectGetSkinControlBuildersForControlType;
             return new IDictionaryImplementation(objGetSkinControlBuildersForControlType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSkinControlBuildersForControlType != null ? retObjectGetSkinControlBuildersForControlType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,10 +203,14 @@ public class ThemeProvider extends NetObject  {
 
     public SkinBuilder GetSkinBuilder(Control control) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSkinBuilder = null;
         try {
-            JCObject objGetSkinBuilder = (JCObject)classInstance.Invoke("GetSkinBuilder", control == null ? null : control.getJCOInstance());
+            retObjectGetSkinBuilder = classInstance.Invoke("GetSkinBuilder", control == null ? null : control.getJCOInstance());
+            JCObject objGetSkinBuilder = (JCObject)retObjectGetSkinBuilder;
             return new SkinBuilder(objGetSkinBuilder);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSkinBuilder != null ? retObjectGetSkinBuilder.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -210,9 +222,20 @@ public class ThemeProvider extends NetObject  {
     
     public int getContentHashCode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContentHashCode = null;
         try {
-            return (int)classInstance.Get("ContentHashCode");
+            retObjectContentHashCode = classInstance.Get("ContentHashCode");
+            return (int)retObjectContentHashCode;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectContentHashCode_ToString = retObjectContentHashCode == null ? "null" : retObjectContentHashCode.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectContentHashCodeNumber = (java.lang.Number)retObjectContentHashCode;
+                return retObjectContentHashCodeNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectContentHashCode != null ? retObjectContentHashCode.getClass() : "null", retObjectContentHashCode_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -220,10 +243,14 @@ public class ThemeProvider extends NetObject  {
 
     public ICollection getCssFiles() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCssFiles = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CssFiles");
+            retObjectCssFiles = classInstance.Get("CssFiles");
+            JCObject val = (JCObject)retObjectCssFiles;
             return new ICollectionImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCssFiles != null ? retObjectCssFiles.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -231,10 +258,14 @@ public class ThemeProvider extends NetObject  {
 
     public IDesignerHost getDesignerHost() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDesignerHost = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DesignerHost");
+            retObjectDesignerHost = classInstance.Get("DesignerHost");
+            JCObject val = (JCObject)retObjectDesignerHost;
             return new IDesignerHostImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDesignerHost != null ? retObjectDesignerHost.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -242,9 +273,13 @@ public class ThemeProvider extends NetObject  {
 
     public java.lang.String getThemeName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectThemeName = null;
         try {
-            return (java.lang.String)classInstance.Get("ThemeName");
+            retObjectThemeName = classInstance.Get("ThemeName");
+            return (java.lang.String)retObjectThemeName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectThemeName != null ? retObjectThemeName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -200,10 +200,14 @@ public class ZipArchive extends NetObject implements AutoCloseable {
     
     public ZipArchiveEntry CreateEntry(java.lang.String entryName, CompressionLevel compressionLevel) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.io.IOException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateEntry = null;
         try {
-            JCObject objCreateEntry = (JCObject)classInstance.Invoke("CreateEntry", entryName, compressionLevel == null ? null : compressionLevel.getJCOInstance());
+            retObjectCreateEntry = classInstance.Invoke("CreateEntry", entryName, compressionLevel == null ? null : compressionLevel.getJCOInstance());
+            JCObject objCreateEntry = (JCObject)retObjectCreateEntry;
             return new ZipArchiveEntry(objCreateEntry);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateEntry != null ? retObjectCreateEntry.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -211,10 +215,14 @@ public class ZipArchive extends NetObject implements AutoCloseable {
 
     public ZipArchiveEntry CreateEntry(java.lang.String entryName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.io.IOException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateEntry = null;
         try {
-            JCObject objCreateEntry = (JCObject)classInstance.Invoke("CreateEntry", entryName);
+            retObjectCreateEntry = classInstance.Invoke("CreateEntry", entryName);
+            JCObject objCreateEntry = (JCObject)retObjectCreateEntry;
             return new ZipArchiveEntry(objCreateEntry);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateEntry != null ? retObjectCreateEntry.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -222,10 +230,14 @@ public class ZipArchive extends NetObject implements AutoCloseable {
 
     public ZipArchiveEntry GetEntry(java.lang.String entryName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.io.IOException, system.io.InvalidDataException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetEntry = null;
         try {
-            JCObject objGetEntry = (JCObject)classInstance.Invoke("GetEntry", entryName);
+            retObjectGetEntry = classInstance.Invoke("GetEntry", entryName);
+            JCObject objGetEntry = (JCObject)retObjectGetEntry;
             return new ZipArchiveEntry(objGetEntry);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetEntry != null ? retObjectGetEntry.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -233,7 +245,7 @@ public class ZipArchive extends NetObject implements AutoCloseable {
 
     public void Dispose() throws Throwable, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.io.IOException, system.InvalidOperationException, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.io.InvalidDataException, system.NotSupportedException, system.RankException, system.io.compression.ZLibException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
@@ -244,7 +256,7 @@ public class ZipArchive extends NetObject implements AutoCloseable {
     public void close() throws Exception {
         try {
             if (classInstance == null)
-                throw new UnsupportedOperationException("classInstance is null.");
+                throw new java.lang.UnsupportedOperationException("classInstance is null.");
             try {
                 classInstance.Invoke("Dispose");
             }
@@ -260,10 +272,14 @@ public class ZipArchive extends NetObject implements AutoCloseable {
     
     public ZipArchiveMode getMode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Mode");
+            retObjectMode = classInstance.Get("Mode");
+            JCObject val = (JCObject)retObjectMode;
             return new ZipArchiveMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMode != null ? retObjectMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -271,9 +287,13 @@ public class ZipArchive extends NetObject implements AutoCloseable {
 
     public java.lang.String getComment() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectComment = null;
         try {
-            return (java.lang.String)classInstance.Get("Comment");
+            retObjectComment = classInstance.Get("Comment");
+            return (java.lang.String)retObjectComment;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectComment != null ? retObjectComment.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -281,7 +301,7 @@ public class ZipArchive extends NetObject implements AutoCloseable {
 
     public void setComment(java.lang.String Comment) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Comment", Comment);
         } catch (JCNativeException jcne) {

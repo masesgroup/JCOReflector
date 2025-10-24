@@ -171,10 +171,14 @@ public class ReceiveMessageRecord extends CustomTrackingRecord  {
     
     public Guid getE2EActivityId() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectE2EActivityId = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("E2EActivityId");
+            retObjectE2EActivityId = classInstance.Get("E2EActivityId");
+            JCObject val = (JCObject)retObjectE2EActivityId;
             return new Guid(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectE2EActivityId != null ? retObjectE2EActivityId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,7 +186,7 @@ public class ReceiveMessageRecord extends CustomTrackingRecord  {
 
     public void setE2EActivityId(Guid E2EActivityId) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("E2EActivityId", E2EActivityId == null ? null : E2EActivityId.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -192,10 +196,14 @@ public class ReceiveMessageRecord extends CustomTrackingRecord  {
 
     public Guid getMessageId() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMessageId = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MessageId");
+            retObjectMessageId = classInstance.Get("MessageId");
+            JCObject val = (JCObject)retObjectMessageId;
             return new Guid(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMessageId != null ? retObjectMessageId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

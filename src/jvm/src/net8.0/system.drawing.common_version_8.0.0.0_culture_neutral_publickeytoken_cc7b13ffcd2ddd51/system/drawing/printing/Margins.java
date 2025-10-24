@@ -171,10 +171,14 @@ public class Margins extends NetObject  {
     
     public NetObject Clone() throws Throwable, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClone = null;
         try {
-            JCObject objClone = (JCObject)classInstance.Invoke("Clone");
+            retObjectClone = classInstance.Invoke("Clone");
+            JCObject objClone = (JCObject)retObjectClone;
             return new NetObject(objClone);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClone != null ? retObjectClone.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,9 +190,20 @@ public class Margins extends NetObject  {
     
     public int getBottom() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBottom = null;
         try {
-            return (int)classInstance.Get("Bottom");
+            retObjectBottom = classInstance.Get("Bottom");
+            return (int)retObjectBottom;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectBottom_ToString = retObjectBottom == null ? "null" : retObjectBottom.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectBottomNumber = (java.lang.Number)retObjectBottom;
+                return retObjectBottomNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectBottom != null ? retObjectBottom.getClass() : "null", retObjectBottom_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,7 +211,7 @@ public class Margins extends NetObject  {
 
     public void setBottom(int Bottom) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Bottom", Bottom);
         } catch (JCNativeException jcne) {
@@ -206,9 +221,20 @@ public class Margins extends NetObject  {
 
     public int getLeft() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLeft = null;
         try {
-            return (int)classInstance.Get("Left");
+            retObjectLeft = classInstance.Get("Left");
+            return (int)retObjectLeft;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectLeft_ToString = retObjectLeft == null ? "null" : retObjectLeft.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectLeftNumber = (java.lang.Number)retObjectLeft;
+                return retObjectLeftNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectLeft != null ? retObjectLeft.getClass() : "null", retObjectLeft_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -216,7 +242,7 @@ public class Margins extends NetObject  {
 
     public void setLeft(int Left) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Left", Left);
         } catch (JCNativeException jcne) {
@@ -226,9 +252,20 @@ public class Margins extends NetObject  {
 
     public int getRight() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRight = null;
         try {
-            return (int)classInstance.Get("Right");
+            retObjectRight = classInstance.Get("Right");
+            return (int)retObjectRight;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectRight_ToString = retObjectRight == null ? "null" : retObjectRight.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectRightNumber = (java.lang.Number)retObjectRight;
+                return retObjectRightNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectRight != null ? retObjectRight.getClass() : "null", retObjectRight_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -236,7 +273,7 @@ public class Margins extends NetObject  {
 
     public void setRight(int Right) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Right", Right);
         } catch (JCNativeException jcne) {
@@ -246,9 +283,20 @@ public class Margins extends NetObject  {
 
     public int getTop() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTop = null;
         try {
-            return (int)classInstance.Get("Top");
+            retObjectTop = classInstance.Get("Top");
+            return (int)retObjectTop;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectTop_ToString = retObjectTop == null ? "null" : retObjectTop.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectTopNumber = (java.lang.Number)retObjectTop;
+                return retObjectTopNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectTop != null ? retObjectTop.getClass() : "null", retObjectTop_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -256,7 +304,7 @@ public class Margins extends NetObject  {
 
     public void setTop(int Top) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Top", Top);
         } catch (JCNativeException jcne) {

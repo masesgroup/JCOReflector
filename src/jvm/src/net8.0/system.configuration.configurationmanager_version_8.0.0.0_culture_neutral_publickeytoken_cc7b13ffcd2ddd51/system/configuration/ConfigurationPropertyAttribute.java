@@ -171,9 +171,13 @@ public class ConfigurationPropertyAttribute extends Attribute  {
     
     public boolean getIsDefaultCollection() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsDefaultCollection = null;
         try {
-            return (boolean)classInstance.Get("IsDefaultCollection");
+            retObjectIsDefaultCollection = classInstance.Get("IsDefaultCollection");
+            return (boolean)retObjectIsDefaultCollection;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsDefaultCollection != null ? retObjectIsDefaultCollection.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,7 +185,7 @@ public class ConfigurationPropertyAttribute extends Attribute  {
 
     public void setIsDefaultCollection(boolean IsDefaultCollection) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsDefaultCollection", IsDefaultCollection);
         } catch (JCNativeException jcne) {
@@ -191,9 +195,13 @@ public class ConfigurationPropertyAttribute extends Attribute  {
 
     public boolean getIsKey() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsKey = null;
         try {
-            return (boolean)classInstance.Get("IsKey");
+            retObjectIsKey = classInstance.Get("IsKey");
+            return (boolean)retObjectIsKey;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsKey != null ? retObjectIsKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,7 +209,7 @@ public class ConfigurationPropertyAttribute extends Attribute  {
 
     public void setIsKey(boolean IsKey) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsKey", IsKey);
         } catch (JCNativeException jcne) {
@@ -211,9 +219,13 @@ public class ConfigurationPropertyAttribute extends Attribute  {
 
     public boolean getIsRequired() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsRequired = null;
         try {
-            return (boolean)classInstance.Get("IsRequired");
+            retObjectIsRequired = classInstance.Get("IsRequired");
+            return (boolean)retObjectIsRequired;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsRequired != null ? retObjectIsRequired.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -221,7 +233,7 @@ public class ConfigurationPropertyAttribute extends Attribute  {
 
     public void setIsRequired(boolean IsRequired) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsRequired", IsRequired);
         } catch (JCNativeException jcne) {
@@ -231,10 +243,14 @@ public class ConfigurationPropertyAttribute extends Attribute  {
 
     public ConfigurationPropertyOptions getOptions() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOptions = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Options");
+            retObjectOptions = classInstance.Get("Options");
+            JCObject val = (JCObject)retObjectOptions;
             return new ConfigurationPropertyOptions(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOptions != null ? retObjectOptions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -242,7 +258,7 @@ public class ConfigurationPropertyAttribute extends Attribute  {
 
     public void setOptions(ConfigurationPropertyOptions Options) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Options", Options == null ? null : Options.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -252,10 +268,14 @@ public class ConfigurationPropertyAttribute extends Attribute  {
 
     public NetObject getDefaultValue() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDefaultValue = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DefaultValue");
+            retObjectDefaultValue = classInstance.Get("DefaultValue");
+            JCObject val = (JCObject)retObjectDefaultValue;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefaultValue != null ? retObjectDefaultValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -263,7 +283,7 @@ public class ConfigurationPropertyAttribute extends Attribute  {
 
     public void setDefaultValue(NetObject DefaultValue) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DefaultValue", DefaultValue == null ? null : DefaultValue.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -273,9 +293,13 @@ public class ConfigurationPropertyAttribute extends Attribute  {
 
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectName = null;
         try {
-            return (java.lang.String)classInstance.Get("Name");
+            retObjectName = classInstance.Get("Name");
+            return (java.lang.String)retObjectName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectName != null ? retObjectName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

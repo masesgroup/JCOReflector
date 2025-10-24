@@ -145,7 +145,7 @@ public class IWsdlExportExtensionImplementation extends NetObject implements IWs
     
     public void ExportContract(WsdlExporter exporter, WsdlContractConversionContext context) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ExportContract", exporter == null ? null : exporter.getJCOInstance(), context == null ? null : context.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -155,7 +155,7 @@ public class IWsdlExportExtensionImplementation extends NetObject implements IWs
 
     public void ExportEndpoint(WsdlExporter exporter, WsdlEndpointConversionContext context) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ExportEndpoint", exporter == null ? null : exporter.getJCOInstance(), context == null ? null : context.getJCOInstance());
         } catch (JCNativeException jcne) {

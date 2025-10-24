@@ -171,9 +171,20 @@ public class MidtoneCurveEffect extends ColorCurveEffect  {
     
     public int getMidtone() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMidtone = null;
         try {
-            return (int)classInstance.Get("Midtone");
+            retObjectMidtone = classInstance.Get("Midtone");
+            return (int)retObjectMidtone;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMidtone_ToString = retObjectMidtone == null ? "null" : retObjectMidtone.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMidtoneNumber = (java.lang.Number)retObjectMidtone;
+                return retObjectMidtoneNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMidtone != null ? retObjectMidtone.getClass() : "null", retObjectMidtone_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

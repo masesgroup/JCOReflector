@@ -166,10 +166,14 @@ public class NumericUnary extends UnaryOp  {
     
     public NetObject EvaluateUnary(NetObject v) throws Throwable, microsoft.jscript.JScriptException, system.ArithmeticException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.OverflowException, system.NotSupportedException, system.MissingMethodException, system.NullReferenceException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEvaluateUnary = null;
         try {
-            JCObject objEvaluateUnary = (JCObject)classInstance.Invoke("EvaluateUnary", v == null ? null : v.getJCOInstance());
+            retObjectEvaluateUnary = classInstance.Invoke("EvaluateUnary", v == null ? null : v.getJCOInstance());
+            JCObject objEvaluateUnary = (JCObject)retObjectEvaluateUnary;
             return new NetObject(objEvaluateUnary);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEvaluateUnary != null ? retObjectEvaluateUnary.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

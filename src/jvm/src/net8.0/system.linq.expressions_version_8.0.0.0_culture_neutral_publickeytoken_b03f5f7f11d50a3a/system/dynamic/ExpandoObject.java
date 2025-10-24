@@ -169,7 +169,7 @@ public class ExpandoObject extends NetObjectEnumerable implements system.dynamic
      */
     @Deprecated 
     public DynamicMetaObject GetMetaObject(Expression parameter) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDynamicMetaObjectProvider to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDynamicMetaObjectProvider to obtain the full interface.");
     }
 
 

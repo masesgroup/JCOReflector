@@ -181,9 +181,13 @@ public class NetNamedPipeBindingElement extends StandardBindingElement  {
     
     public boolean getTransactionFlow() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTransactionFlow = null;
         try {
-            return (boolean)classInstance.Get("TransactionFlow");
+            retObjectTransactionFlow = classInstance.Get("TransactionFlow");
+            return (boolean)retObjectTransactionFlow;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectTransactionFlow != null ? retObjectTransactionFlow.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,7 +195,7 @@ public class NetNamedPipeBindingElement extends StandardBindingElement  {
 
     public void setTransactionFlow(boolean TransactionFlow) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.NullReferenceException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TransactionFlow", TransactionFlow);
         } catch (JCNativeException jcne) {
@@ -201,9 +205,20 @@ public class NetNamedPipeBindingElement extends StandardBindingElement  {
 
     public int getMaxBufferSize() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxBufferSize = null;
         try {
-            return (int)classInstance.Get("MaxBufferSize");
+            retObjectMaxBufferSize = classInstance.Get("MaxBufferSize");
+            return (int)retObjectMaxBufferSize;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaxBufferSize_ToString = retObjectMaxBufferSize == null ? "null" : retObjectMaxBufferSize.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMaxBufferSizeNumber = (java.lang.Number)retObjectMaxBufferSize;
+                return retObjectMaxBufferSizeNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxBufferSize != null ? retObjectMaxBufferSize.getClass() : "null", retObjectMaxBufferSize_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -211,7 +226,7 @@ public class NetNamedPipeBindingElement extends StandardBindingElement  {
 
     public void setMaxBufferSize(int MaxBufferSize) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.NullReferenceException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaxBufferSize", MaxBufferSize);
         } catch (JCNativeException jcne) {
@@ -221,9 +236,20 @@ public class NetNamedPipeBindingElement extends StandardBindingElement  {
 
     public int getMaxConnections() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxConnections = null;
         try {
-            return (int)classInstance.Get("MaxConnections");
+            retObjectMaxConnections = classInstance.Get("MaxConnections");
+            return (int)retObjectMaxConnections;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaxConnections_ToString = retObjectMaxConnections == null ? "null" : retObjectMaxConnections.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMaxConnectionsNumber = (java.lang.Number)retObjectMaxConnections;
+                return retObjectMaxConnectionsNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxConnections != null ? retObjectMaxConnections.getClass() : "null", retObjectMaxConnections_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -231,7 +257,7 @@ public class NetNamedPipeBindingElement extends StandardBindingElement  {
 
     public void setMaxConnections(int MaxConnections) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.NullReferenceException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaxConnections", MaxConnections);
         } catch (JCNativeException jcne) {
@@ -241,9 +267,20 @@ public class NetNamedPipeBindingElement extends StandardBindingElement  {
 
     public long getMaxBufferPoolSize() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxBufferPoolSize = null;
         try {
-            return (long)classInstance.Get("MaxBufferPoolSize");
+            retObjectMaxBufferPoolSize = classInstance.Get("MaxBufferPoolSize");
+            return (long)retObjectMaxBufferPoolSize;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaxBufferPoolSize_ToString = retObjectMaxBufferPoolSize == null ? "null" : retObjectMaxBufferPoolSize.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMaxBufferPoolSizeNumber = (java.lang.Number)retObjectMaxBufferPoolSize;
+                return retObjectMaxBufferPoolSizeNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectMaxBufferPoolSize != null ? retObjectMaxBufferPoolSize.getClass() : "null", retObjectMaxBufferPoolSize_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -251,7 +288,7 @@ public class NetNamedPipeBindingElement extends StandardBindingElement  {
 
     public void setMaxBufferPoolSize(long MaxBufferPoolSize) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.NullReferenceException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaxBufferPoolSize", MaxBufferPoolSize);
         } catch (JCNativeException jcne) {
@@ -261,9 +298,20 @@ public class NetNamedPipeBindingElement extends StandardBindingElement  {
 
     public long getMaxReceivedMessageSize() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxReceivedMessageSize = null;
         try {
-            return (long)classInstance.Get("MaxReceivedMessageSize");
+            retObjectMaxReceivedMessageSize = classInstance.Get("MaxReceivedMessageSize");
+            return (long)retObjectMaxReceivedMessageSize;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaxReceivedMessageSize_ToString = retObjectMaxReceivedMessageSize == null ? "null" : retObjectMaxReceivedMessageSize.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMaxReceivedMessageSizeNumber = (java.lang.Number)retObjectMaxReceivedMessageSize;
+                return retObjectMaxReceivedMessageSizeNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectMaxReceivedMessageSize != null ? retObjectMaxReceivedMessageSize.getClass() : "null", retObjectMaxReceivedMessageSize_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -271,7 +319,7 @@ public class NetNamedPipeBindingElement extends StandardBindingElement  {
 
     public void setMaxReceivedMessageSize(long MaxReceivedMessageSize) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.NullReferenceException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaxReceivedMessageSize", MaxReceivedMessageSize);
         } catch (JCNativeException jcne) {
@@ -281,10 +329,14 @@ public class NetNamedPipeBindingElement extends StandardBindingElement  {
 
     public NetNamedPipeSecurityElement getSecurity() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSecurity = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Security");
+            retObjectSecurity = classInstance.Get("Security");
+            JCObject val = (JCObject)retObjectSecurity;
             return new NetNamedPipeSecurityElement(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSecurity != null ? retObjectSecurity.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -292,10 +344,14 @@ public class NetNamedPipeBindingElement extends StandardBindingElement  {
 
     public XmlDictionaryReaderQuotasElement getReaderQuotas() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReaderQuotas = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ReaderQuotas");
+            retObjectReaderQuotas = classInstance.Get("ReaderQuotas");
+            JCObject val = (JCObject)retObjectReaderQuotas;
             return new XmlDictionaryReaderQuotasElement(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReaderQuotas != null ? retObjectReaderQuotas.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -303,10 +359,14 @@ public class NetNamedPipeBindingElement extends StandardBindingElement  {
 
     public HostNameComparisonMode getHostNameComparisonMode() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHostNameComparisonMode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("HostNameComparisonMode");
+            retObjectHostNameComparisonMode = classInstance.Get("HostNameComparisonMode");
+            JCObject val = (JCObject)retObjectHostNameComparisonMode;
             return new HostNameComparisonMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHostNameComparisonMode != null ? retObjectHostNameComparisonMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -314,7 +374,7 @@ public class NetNamedPipeBindingElement extends StandardBindingElement  {
 
     public void setHostNameComparisonMode(HostNameComparisonMode HostNameComparisonMode) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.NullReferenceException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("HostNameComparisonMode", HostNameComparisonMode == null ? null : HostNameComparisonMode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -324,10 +384,14 @@ public class NetNamedPipeBindingElement extends StandardBindingElement  {
 
     public TransactionProtocol getTransactionProtocol() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTransactionProtocol = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TransactionProtocol");
+            retObjectTransactionProtocol = classInstance.Get("TransactionProtocol");
+            JCObject val = (JCObject)retObjectTransactionProtocol;
             return new TransactionProtocol(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTransactionProtocol != null ? retObjectTransactionProtocol.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -335,7 +399,7 @@ public class NetNamedPipeBindingElement extends StandardBindingElement  {
 
     public void setTransactionProtocol(TransactionProtocol TransactionProtocol) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.NullReferenceException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TransactionProtocol", TransactionProtocol == null ? null : TransactionProtocol.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -345,10 +409,14 @@ public class NetNamedPipeBindingElement extends StandardBindingElement  {
 
     public TransferMode getTransferMode() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTransferMode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TransferMode");
+            retObjectTransferMode = classInstance.Get("TransferMode");
+            JCObject val = (JCObject)retObjectTransferMode;
             return new TransferMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTransferMode != null ? retObjectTransferMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -356,7 +424,7 @@ public class NetNamedPipeBindingElement extends StandardBindingElement  {
 
     public void setTransferMode(TransferMode TransferMode) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.NullReferenceException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TransferMode", TransferMode == null ? null : TransferMode.getJCOInstance());
         } catch (JCNativeException jcne) {

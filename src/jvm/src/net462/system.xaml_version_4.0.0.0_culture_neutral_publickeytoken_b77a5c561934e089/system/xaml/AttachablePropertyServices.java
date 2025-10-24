@@ -154,9 +154,13 @@ public class AttachablePropertyServices extends NetObject  {
     
     public static boolean RemoveProperty(NetObject instance, AttachableMemberIdentifier name) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.threading.ThreadAbortException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectRemoveProperty = null;
         try {
-            return (boolean)classType.Invoke("RemoveProperty", instance == null ? null : instance.getJCOInstance(), name == null ? null : name.getJCOInstance());
+            retObjectRemoveProperty = classType.Invoke("RemoveProperty", instance == null ? null : instance.getJCOInstance(), name == null ? null : name.getJCOInstance());
+            return (boolean)retObjectRemoveProperty;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectRemoveProperty != null ? retObjectRemoveProperty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -164,9 +168,13 @@ public class AttachablePropertyServices extends NetObject  {
 
     public static boolean TryGetProperty(NetObject instance, AttachableMemberIdentifier name, JCORefOut<NetObject> value) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.threading.ThreadAbortException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTryGetProperty = null;
         try {
-            return (boolean)classType.Invoke("TryGetProperty", instance == null ? null : instance.getJCOInstance(), name == null ? null : name.getJCOInstance(), value.getJCRefOut());
+            retObjectTryGetProperty = classType.Invoke("TryGetProperty", instance == null ? null : instance.getJCOInstance(), name == null ? null : name.getJCOInstance(), value.getJCRefOut());
+            return (boolean)retObjectTryGetProperty;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryGetProperty != null ? retObjectTryGetProperty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -174,9 +182,20 @@ public class AttachablePropertyServices extends NetObject  {
 
     public static int GetAttachedPropertyCount(NetObject instance) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.threading.ThreadAbortException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetAttachedPropertyCount = null;
         try {
-            return (int)classType.Invoke("GetAttachedPropertyCount", instance == null ? null : instance.getJCOInstance());
+            retObjectGetAttachedPropertyCount = classType.Invoke("GetAttachedPropertyCount", instance == null ? null : instance.getJCOInstance());
+            return (int)retObjectGetAttachedPropertyCount;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetAttachedPropertyCount_ToString = retObjectGetAttachedPropertyCount == null ? "null" : retObjectGetAttachedPropertyCount.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetAttachedPropertyCountNumber = (java.lang.Number)retObjectGetAttachedPropertyCount;
+                return retObjectGetAttachedPropertyCountNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetAttachedPropertyCount != null ? retObjectGetAttachedPropertyCount.getClass() : "null", retObjectGetAttachedPropertyCount_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -184,7 +203,7 @@ public class AttachablePropertyServices extends NetObject  {
 
     public static void SetProperty(NetObject instance, AttachableMemberIdentifier name, NetObject value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.threading.ThreadAbortException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetProperty", instance == null ? null : instance.getJCOInstance(), name == null ? null : name.getJCOInstance(), value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {

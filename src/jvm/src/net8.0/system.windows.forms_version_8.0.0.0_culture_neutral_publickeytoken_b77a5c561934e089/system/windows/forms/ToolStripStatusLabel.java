@@ -219,10 +219,14 @@ public class ToolStripStatusLabel extends ToolStripLabel  {
     
     public Size GetPreferredSize(Size constrainingSize) throws Throwable, system.ArgumentNullException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPreferredSize = null;
         try {
-            JCObject objGetPreferredSize = (JCObject)classInstance.Invoke("GetPreferredSize", constrainingSize == null ? null : constrainingSize.getJCOInstance());
+            retObjectGetPreferredSize = classInstance.Invoke("GetPreferredSize", constrainingSize == null ? null : constrainingSize.getJCOInstance());
+            JCObject objGetPreferredSize = (JCObject)retObjectGetPreferredSize;
             return new Size(objGetPreferredSize);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetPreferredSize != null ? retObjectGetPreferredSize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -234,9 +238,13 @@ public class ToolStripStatusLabel extends ToolStripLabel  {
     
     public boolean getSpring() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSpring = null;
         try {
-            return (boolean)classInstance.Get("Spring");
+            retObjectSpring = classInstance.Get("Spring");
+            return (boolean)retObjectSpring;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectSpring != null ? retObjectSpring.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -244,7 +252,7 @@ public class ToolStripStatusLabel extends ToolStripLabel  {
 
     public void setSpring(boolean Spring) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Spring", Spring);
         } catch (JCNativeException jcne) {
@@ -254,10 +262,14 @@ public class ToolStripStatusLabel extends ToolStripLabel  {
 
     public AutomationLiveSetting getLiveSetting() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLiveSetting = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("LiveSetting");
+            retObjectLiveSetting = classInstance.Get("LiveSetting");
+            JCObject val = (JCObject)retObjectLiveSetting;
             return new AutomationLiveSetting(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLiveSetting != null ? retObjectLiveSetting.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -265,7 +277,7 @@ public class ToolStripStatusLabel extends ToolStripLabel  {
 
     public void setLiveSetting(AutomationLiveSetting LiveSetting) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("LiveSetting", LiveSetting == null ? null : LiveSetting.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -275,10 +287,14 @@ public class ToolStripStatusLabel extends ToolStripLabel  {
 
     public Border3DStyle getBorderStyle() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBorderStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("BorderStyle");
+            retObjectBorderStyle = classInstance.Get("BorderStyle");
+            JCObject val = (JCObject)retObjectBorderStyle;
             return new Border3DStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBorderStyle != null ? retObjectBorderStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -286,7 +302,7 @@ public class ToolStripStatusLabel extends ToolStripLabel  {
 
     public void setBorderStyle(Border3DStyle BorderStyle) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BorderStyle", BorderStyle == null ? null : BorderStyle.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -296,10 +312,14 @@ public class ToolStripStatusLabel extends ToolStripLabel  {
 
     public ToolStripItemAlignment getAlignment() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAlignment = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Alignment");
+            retObjectAlignment = classInstance.Get("Alignment");
+            JCObject val = (JCObject)retObjectAlignment;
             return new ToolStripItemAlignment(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAlignment != null ? retObjectAlignment.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -307,7 +327,7 @@ public class ToolStripStatusLabel extends ToolStripLabel  {
 
     public void setAlignment(ToolStripItemAlignment Alignment) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Alignment", Alignment == null ? null : Alignment.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -317,10 +337,14 @@ public class ToolStripStatusLabel extends ToolStripLabel  {
 
     public ToolStripStatusLabelBorderSides getBorderSides() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBorderSides = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("BorderSides");
+            retObjectBorderSides = classInstance.Get("BorderSides");
+            JCObject val = (JCObject)retObjectBorderSides;
             return new ToolStripStatusLabelBorderSides(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBorderSides != null ? retObjectBorderSides.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -328,7 +352,7 @@ public class ToolStripStatusLabel extends ToolStripLabel  {
 
     public void setBorderSides(ToolStripStatusLabelBorderSides BorderSides) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.ArrayTypeMismatchException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BorderSides", BorderSides == null ? null : BorderSides.getJCOInstance());
         } catch (JCNativeException jcne) {

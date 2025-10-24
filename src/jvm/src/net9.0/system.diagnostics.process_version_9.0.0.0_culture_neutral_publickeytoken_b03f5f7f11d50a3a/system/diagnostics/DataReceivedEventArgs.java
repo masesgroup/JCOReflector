@@ -160,9 +160,13 @@ public class DataReceivedEventArgs extends EventArgs  {
     
     public java.lang.String getData() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectData = null;
         try {
-            return (java.lang.String)classInstance.Get("Data");
+            retObjectData = classInstance.Get("Data");
+            return (java.lang.String)retObjectData;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectData != null ? retObjectData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

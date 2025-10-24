@@ -41,6 +41,18 @@ public class HelloNETSocketServer {
     public static String data = null;
 
     public static void StartListening(boolean asyncMode, String address, int port) {
+        try {
+            IPHostEntry ipHostInfo = Dns.GetHostEntry(Dns.GetHostName());
+            IPAddress[] ipAddresses = ipHostInfo.getAddressList();
+            // print available endpoints
+            System.out.println("SERVER: List of available IP Endpoints:");
+            for (IPAddress ipAddressAvailable : ipAddresses) {
+                System.out.println(ipAddressAvailable);
+            }
+        } catch (Throwable e) {
+            e.printStackTrace();
+        }
+
         // Data buffer for incoming data.
         byte[] bytes = new byte[1024];
         IPAddress ipAddress = null;
@@ -48,13 +60,6 @@ public class HelloNETSocketServer {
         // Establish the local endpoint for the socket.
         // Dns.GetHostName returns the name of the host running the application.
         try {
-            IPHostEntry ipHostInfo = Dns.GetHostEntry(Dns.GetHostName());
-            IPAddress[] ipAddresses = ipHostInfo.getAddressList();
-            // print available endpoints
-            System.out.println("List of available IP Endpoints:");
-            for (IPAddress ipAddressAvailable : ipAddresses) {
-                System.out.println(ipAddressAvailable);
-            }
             // parse ip address
             ipAddress = IPAddress.Parse(address);
             IPEndPoint localEndPoint = new IPEndPoint(ipAddress, port);
@@ -68,10 +73,10 @@ public class HelloNETSocketServer {
             int x = 1;
             // Start listening for connections.
             while (run) {
-                Console.WriteLine("Waiting for a connection... Step {0}", new NetObject(x));
+                Console.WriteLine("SERVER: Waiting for a connection... Step {0}", new NetObject(x));
                 // Program is suspended while waiting for an incoming connection.
                 Socket handler = listener.Accept();
-                System.out.println("Server connected to client: " + handler.getRemoteEndPoint().ToString());
+                System.out.println("SERVER: Server connected to client: " + handler.getRemoteEndPoint().ToString());
                 data = "";
 
                 // An incoming connection needs to be processed.
@@ -97,23 +102,23 @@ public class HelloNETSocketServer {
                     }
 
                     data += dataNew;
-                    System.out.println("Received from Client " + dataNew);
+                    System.out.println("SERVER: Received from Client " + dataNew);
                     x++;
                     byte[] msg = dataNew.getBytes();
                     // echo received data
                     handler.Send(msg);
 
                     if (data.length() > 4 && data.indexOf("exit") > -1) {
-                        Console.WriteLine("Connection Closed by the client");
+                        Console.WriteLine("SERVER: Connection Closed by the client");
                         receive = false;
                     }
                     if (data.length() > 4 && data.indexOf("abort") > -1) {
-                        Console.WriteLine("Server shutdown requested by the client");
+                        Console.WriteLine("SERVER: Server shutdown requested by the client");
                         run = false;
                     }
                 }
                 // Show the data on the console.
-                if (data != null) Console.WriteLine("Text received : {0}", new NetObject(data));
+                if (data != null) Console.WriteLine("SERVER: Text received : {0}", new NetObject(data));
                 handler.Shutdown(SocketShutdown.Both);
                 handler.Close(10);
             }
@@ -126,6 +131,6 @@ public class HelloNETSocketServer {
             e.printStackTrace();
             System.exit(-1);
         }
-        System.out.println("Server exited correctly");
+        System.out.println("SERVER: Server exited correctly");
     }
 }

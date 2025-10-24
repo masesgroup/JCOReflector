@@ -166,9 +166,13 @@ public class UserMapPath extends NetObject  {
     
     public java.lang.String GetAppPathForPath(java.lang.String siteID, java.lang.String path) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetAppPathForPath = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetAppPathForPath", siteID, path);
+            retObjectGetAppPathForPath = classInstance.Invoke("GetAppPathForPath", siteID, path);
+            return (java.lang.String)retObjectGetAppPathForPath;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetAppPathForPath != null ? retObjectGetAppPathForPath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,9 +180,13 @@ public class UserMapPath extends NetObject  {
 
     public java.lang.String GetMachineConfigFilename() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetMachineConfigFilename = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetMachineConfigFilename");
+            retObjectGetMachineConfigFilename = classInstance.Invoke("GetMachineConfigFilename");
+            return (java.lang.String)retObjectGetMachineConfigFilename;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetMachineConfigFilename != null ? retObjectGetMachineConfigFilename.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,9 +194,13 @@ public class UserMapPath extends NetObject  {
 
     public java.lang.String GetRootWebConfigFilename() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetRootWebConfigFilename = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetRootWebConfigFilename");
+            retObjectGetRootWebConfigFilename = classInstance.Invoke("GetRootWebConfigFilename");
+            return (java.lang.String)retObjectGetRootWebConfigFilename;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetRootWebConfigFilename != null ? retObjectGetRootWebConfigFilename.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,9 +208,13 @@ public class UserMapPath extends NetObject  {
 
     public java.lang.String MapPath(java.lang.String siteID, java.lang.String path) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.OutOfMemoryException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMapPath = null;
         try {
-            return (java.lang.String)classInstance.Invoke("MapPath", siteID, path);
+            retObjectMapPath = classInstance.Invoke("MapPath", siteID, path);
+            return (java.lang.String)retObjectMapPath;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectMapPath != null ? retObjectMapPath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -206,7 +222,7 @@ public class UserMapPath extends NetObject  {
 
     public void GetDefaultSiteNameAndID(JCORefOut siteName, JCORefOut siteID) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetDefaultSiteNameAndID", siteName.getJCRefOut(), siteID.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -216,7 +232,7 @@ public class UserMapPath extends NetObject  {
 
     public void GetPathConfigFilename(java.lang.String siteID, java.lang.String path, JCORefOut directory, JCORefOut baseName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.OutOfMemoryException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetPathConfigFilename", siteID, path, directory.getJCRefOut(), baseName.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -226,7 +242,7 @@ public class UserMapPath extends NetObject  {
 
     public void ResolveSiteArgument(java.lang.String siteArgument, JCORefOut siteName, JCORefOut siteID) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ResolveSiteArgument", siteArgument, siteName.getJCRefOut(), siteID.getJCRefOut());
         } catch (JCNativeException jcne) {

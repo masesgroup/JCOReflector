@@ -312,6 +312,7 @@ namespace MASES.JCOReflector.Engine
                 ReflectorClassVoidMethodTemplate,
                 ReflectorClassNativeMethodTemplate,
                 ReflectorClassNativeArrayMethodTemplate,
+                ReflectorClassNativeMethodWithCastToNumberTemplate,
                 ReflectorClassObjectMethodTemplate,
                 ReflectorClassObjectArrayMethodTemplate,
 
@@ -323,6 +324,7 @@ namespace MASES.JCOReflector.Engine
 
                 ReflectorClassSetTemplate,
                 ReflectorClassNativeGetTemplate,
+                ReflectorClassNativeGetWithCastToNumberTemplate,
                 ReflectorClassNativeArrayGetTemplate,
                 ReflectorClassObjectGetTemplate,
                 ReflectorClassObjectArrayGetTemplate,
@@ -401,6 +403,7 @@ namespace MASES.JCOReflector.Engine
 
             public const string ReflectorClassVoidMethodTemplate = "JCObjectReflectorClassVoidMethod.template";
             public const string ReflectorClassNativeMethodTemplate = "JCObjectReflectorClassNativeMethod.template";
+            public const string ReflectorClassNativeMethodWithCastToNumberTemplate = "JCObjectReflectorClassNativeMethodWithCastToNumber.template";
             public const string ReflectorClassNativeArrayMethodTemplate = "JCObjectReflectorClassNativeMethodArray.template";
             public const string ReflectorClassObjectMethodTemplate = "JCObjectReflectorClassObjectMethod.template";
             public const string ReflectorClassObjectArrayMethodTemplate = "JCObjectReflectorClassObjectMethodArray.template";
@@ -413,6 +416,7 @@ namespace MASES.JCOReflector.Engine
 
             public const string ReflectorClassSetTemplate = "JCObjectReflectorClassSetProperty.template";
             public const string ReflectorClassNativeGetTemplate = "JCObjectReflectorClassNativeGetProperty.template";
+            public const string ReflectorClassNativeGetWithCastToNumberTemplate = "JCObjectReflectorClassNativeGetPropertyWithCastToNumber.template";
             public const string ReflectorClassNativeArrayGetTemplate = "JCObjectReflectorClassNativeGetPropertyArray.template";
             public const string ReflectorClassObjectGetTemplate = "JCObjectReflectorClassObjectGetProperty.template";
             public const string ReflectorClassObjectArrayGetTemplate = "JCObjectReflectorClassObjectGetPropertyArray.template";
@@ -521,7 +525,7 @@ namespace MASES.JCOReflector.Engine
             public static string AUTOCLOSEABLE_CLOSE_METHOD = "    public void close() throws Exception {" + Environment.NewLine +
                                                                 "        try {" + Environment.NewLine +
                                                                 "            if (classInstance == null)" + Environment.NewLine +
-                                                                "                throw new UnsupportedOperationException(\"classInstance is null.\");" + Environment.NewLine +
+                                                                "                throw new java.lang.UnsupportedOperationException(\"classInstance is null.\");" + Environment.NewLine +
                                                                 "            try {" + Environment.NewLine +
                                                                 "                classInstance.Invoke(\"Dispose\");" + Environment.NewLine +
                                                                 "            }" + Environment.NewLine +
@@ -682,7 +686,19 @@ namespace MASES.JCOReflector.Engine
         public class Report
         {
             public const string ASSEMBLIES_FILE_TO_WRITE = "assemblies.list";
-            public const string REPORT_FILE_TO_WRITE = "README.md";
+#if NET6_0
+            public const string REPORT_FILE_TO_WRITE = "net6.0.md";
+#elif NET7_0
+            public const string REPORT_FILE_TO_WRITE = "net7.0.md";
+#elif NET8_0
+            public const string REPORT_FILE_TO_WRITE = "net8.0.md";
+#elif NET9_0
+            public const string REPORT_FILE_TO_WRITE = "net9.0.md";
+#elif NETFRAMEWORK
+            public const string REPORT_FILE_TO_WRITE = "net462.md";
+#else
+#error Unable to identify .NET engine
+#endif
             public const string REPORT_BEGIN_PLACEHOLDER = "[//]: # \"BeginReport {0}\"";
             public const string REPORT_END_PLACEHOLDER = "[//]: # \"EndReport {0}\"";
         }

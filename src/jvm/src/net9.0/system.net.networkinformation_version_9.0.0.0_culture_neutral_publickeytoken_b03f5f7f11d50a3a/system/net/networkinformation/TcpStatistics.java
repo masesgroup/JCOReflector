@@ -157,9 +157,20 @@ public class TcpStatistics extends NetObject  {
     
     public long getConnectionsAccepted() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConnectionsAccepted = null;
         try {
-            return (long)classInstance.Get("ConnectionsAccepted");
+            retObjectConnectionsAccepted = classInstance.Get("ConnectionsAccepted");
+            return (long)retObjectConnectionsAccepted;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectConnectionsAccepted_ToString = retObjectConnectionsAccepted == null ? "null" : retObjectConnectionsAccepted.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectConnectionsAcceptedNumber = (java.lang.Number)retObjectConnectionsAccepted;
+                return retObjectConnectionsAcceptedNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectConnectionsAccepted != null ? retObjectConnectionsAccepted.getClass() : "null", retObjectConnectionsAccepted_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -167,9 +178,20 @@ public class TcpStatistics extends NetObject  {
 
     public long getConnectionsInitiated() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConnectionsInitiated = null;
         try {
-            return (long)classInstance.Get("ConnectionsInitiated");
+            retObjectConnectionsInitiated = classInstance.Get("ConnectionsInitiated");
+            return (long)retObjectConnectionsInitiated;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectConnectionsInitiated_ToString = retObjectConnectionsInitiated == null ? "null" : retObjectConnectionsInitiated.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectConnectionsInitiatedNumber = (java.lang.Number)retObjectConnectionsInitiated;
+                return retObjectConnectionsInitiatedNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectConnectionsInitiated != null ? retObjectConnectionsInitiated.getClass() : "null", retObjectConnectionsInitiated_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,9 +199,20 @@ public class TcpStatistics extends NetObject  {
 
     public long getCumulativeConnections() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCumulativeConnections = null;
         try {
-            return (long)classInstance.Get("CumulativeConnections");
+            retObjectCumulativeConnections = classInstance.Get("CumulativeConnections");
+            return (long)retObjectCumulativeConnections;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCumulativeConnections_ToString = retObjectCumulativeConnections == null ? "null" : retObjectCumulativeConnections.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectCumulativeConnectionsNumber = (java.lang.Number)retObjectCumulativeConnections;
+                return retObjectCumulativeConnectionsNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectCumulativeConnections != null ? retObjectCumulativeConnections.getClass() : "null", retObjectCumulativeConnections_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,9 +220,20 @@ public class TcpStatistics extends NetObject  {
 
     public long getCurrentConnections() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCurrentConnections = null;
         try {
-            return (long)classInstance.Get("CurrentConnections");
+            retObjectCurrentConnections = classInstance.Get("CurrentConnections");
+            return (long)retObjectCurrentConnections;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCurrentConnections_ToString = retObjectCurrentConnections == null ? "null" : retObjectCurrentConnections.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectCurrentConnectionsNumber = (java.lang.Number)retObjectCurrentConnections;
+                return retObjectCurrentConnectionsNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectCurrentConnections != null ? retObjectCurrentConnections.getClass() : "null", retObjectCurrentConnections_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,9 +241,20 @@ public class TcpStatistics extends NetObject  {
 
     public long getErrorsReceived() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectErrorsReceived = null;
         try {
-            return (long)classInstance.Get("ErrorsReceived");
+            retObjectErrorsReceived = classInstance.Get("ErrorsReceived");
+            return (long)retObjectErrorsReceived;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectErrorsReceived_ToString = retObjectErrorsReceived == null ? "null" : retObjectErrorsReceived.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectErrorsReceivedNumber = (java.lang.Number)retObjectErrorsReceived;
+                return retObjectErrorsReceivedNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectErrorsReceived != null ? retObjectErrorsReceived.getClass() : "null", retObjectErrorsReceived_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -207,9 +262,20 @@ public class TcpStatistics extends NetObject  {
 
     public long getFailedConnectionAttempts() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFailedConnectionAttempts = null;
         try {
-            return (long)classInstance.Get("FailedConnectionAttempts");
+            retObjectFailedConnectionAttempts = classInstance.Get("FailedConnectionAttempts");
+            return (long)retObjectFailedConnectionAttempts;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectFailedConnectionAttempts_ToString = retObjectFailedConnectionAttempts == null ? "null" : retObjectFailedConnectionAttempts.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectFailedConnectionAttemptsNumber = (java.lang.Number)retObjectFailedConnectionAttempts;
+                return retObjectFailedConnectionAttemptsNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectFailedConnectionAttempts != null ? retObjectFailedConnectionAttempts.getClass() : "null", retObjectFailedConnectionAttempts_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -217,9 +283,20 @@ public class TcpStatistics extends NetObject  {
 
     public long getMaximumConnections() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaximumConnections = null;
         try {
-            return (long)classInstance.Get("MaximumConnections");
+            retObjectMaximumConnections = classInstance.Get("MaximumConnections");
+            return (long)retObjectMaximumConnections;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaximumConnections_ToString = retObjectMaximumConnections == null ? "null" : retObjectMaximumConnections.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMaximumConnectionsNumber = (java.lang.Number)retObjectMaximumConnections;
+                return retObjectMaximumConnectionsNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectMaximumConnections != null ? retObjectMaximumConnections.getClass() : "null", retObjectMaximumConnections_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -227,9 +304,20 @@ public class TcpStatistics extends NetObject  {
 
     public long getMaximumTransmissionTimeout() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaximumTransmissionTimeout = null;
         try {
-            return (long)classInstance.Get("MaximumTransmissionTimeout");
+            retObjectMaximumTransmissionTimeout = classInstance.Get("MaximumTransmissionTimeout");
+            return (long)retObjectMaximumTransmissionTimeout;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaximumTransmissionTimeout_ToString = retObjectMaximumTransmissionTimeout == null ? "null" : retObjectMaximumTransmissionTimeout.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMaximumTransmissionTimeoutNumber = (java.lang.Number)retObjectMaximumTransmissionTimeout;
+                return retObjectMaximumTransmissionTimeoutNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectMaximumTransmissionTimeout != null ? retObjectMaximumTransmissionTimeout.getClass() : "null", retObjectMaximumTransmissionTimeout_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -237,9 +325,20 @@ public class TcpStatistics extends NetObject  {
 
     public long getMinimumTransmissionTimeout() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMinimumTransmissionTimeout = null;
         try {
-            return (long)classInstance.Get("MinimumTransmissionTimeout");
+            retObjectMinimumTransmissionTimeout = classInstance.Get("MinimumTransmissionTimeout");
+            return (long)retObjectMinimumTransmissionTimeout;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMinimumTransmissionTimeout_ToString = retObjectMinimumTransmissionTimeout == null ? "null" : retObjectMinimumTransmissionTimeout.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMinimumTransmissionTimeoutNumber = (java.lang.Number)retObjectMinimumTransmissionTimeout;
+                return retObjectMinimumTransmissionTimeoutNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectMinimumTransmissionTimeout != null ? retObjectMinimumTransmissionTimeout.getClass() : "null", retObjectMinimumTransmissionTimeout_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -247,9 +346,20 @@ public class TcpStatistics extends NetObject  {
 
     public long getResetConnections() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResetConnections = null;
         try {
-            return (long)classInstance.Get("ResetConnections");
+            retObjectResetConnections = classInstance.Get("ResetConnections");
+            return (long)retObjectResetConnections;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectResetConnections_ToString = retObjectResetConnections == null ? "null" : retObjectResetConnections.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectResetConnectionsNumber = (java.lang.Number)retObjectResetConnections;
+                return retObjectResetConnectionsNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectResetConnections != null ? retObjectResetConnections.getClass() : "null", retObjectResetConnections_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -257,9 +367,20 @@ public class TcpStatistics extends NetObject  {
 
     public long getResetsSent() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResetsSent = null;
         try {
-            return (long)classInstance.Get("ResetsSent");
+            retObjectResetsSent = classInstance.Get("ResetsSent");
+            return (long)retObjectResetsSent;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectResetsSent_ToString = retObjectResetsSent == null ? "null" : retObjectResetsSent.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectResetsSentNumber = (java.lang.Number)retObjectResetsSent;
+                return retObjectResetsSentNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectResetsSent != null ? retObjectResetsSent.getClass() : "null", retObjectResetsSent_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -267,9 +388,20 @@ public class TcpStatistics extends NetObject  {
 
     public long getSegmentsReceived() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSegmentsReceived = null;
         try {
-            return (long)classInstance.Get("SegmentsReceived");
+            retObjectSegmentsReceived = classInstance.Get("SegmentsReceived");
+            return (long)retObjectSegmentsReceived;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSegmentsReceived_ToString = retObjectSegmentsReceived == null ? "null" : retObjectSegmentsReceived.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectSegmentsReceivedNumber = (java.lang.Number)retObjectSegmentsReceived;
+                return retObjectSegmentsReceivedNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectSegmentsReceived != null ? retObjectSegmentsReceived.getClass() : "null", retObjectSegmentsReceived_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -277,9 +409,20 @@ public class TcpStatistics extends NetObject  {
 
     public long getSegmentsResent() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSegmentsResent = null;
         try {
-            return (long)classInstance.Get("SegmentsResent");
+            retObjectSegmentsResent = classInstance.Get("SegmentsResent");
+            return (long)retObjectSegmentsResent;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSegmentsResent_ToString = retObjectSegmentsResent == null ? "null" : retObjectSegmentsResent.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectSegmentsResentNumber = (java.lang.Number)retObjectSegmentsResent;
+                return retObjectSegmentsResentNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectSegmentsResent != null ? retObjectSegmentsResent.getClass() : "null", retObjectSegmentsResent_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -287,9 +430,20 @@ public class TcpStatistics extends NetObject  {
 
     public long getSegmentsSent() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSegmentsSent = null;
         try {
-            return (long)classInstance.Get("SegmentsSent");
+            retObjectSegmentsSent = classInstance.Get("SegmentsSent");
+            return (long)retObjectSegmentsSent;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSegmentsSent_ToString = retObjectSegmentsSent == null ? "null" : retObjectSegmentsSent.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectSegmentsSentNumber = (java.lang.Number)retObjectSegmentsSent;
+                return retObjectSegmentsSentNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectSegmentsSent != null ? retObjectSegmentsSent.getClass() : "null", retObjectSegmentsSent_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

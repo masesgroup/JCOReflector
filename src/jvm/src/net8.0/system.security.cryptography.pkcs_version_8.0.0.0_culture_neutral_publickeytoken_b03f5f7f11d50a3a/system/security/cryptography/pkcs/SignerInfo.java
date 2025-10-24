@@ -164,10 +164,12 @@ public class SignerInfo extends NetObject  {
     
     public byte[] GetSignature() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSignature = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetSignature");
+            retObjectGetSignature = classInstance.Invoke("GetSignature");
+            JCObject resultingObjects = (JCObject)retObjectGetSignature;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -176,6 +178,8 @@ public class SignerInfo extends NetObject  {
 				resultingArray[indexGetSignature] = (byte)resultingArrayList.get(indexGetSignature);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectGetSignature != null ? retObjectGetSignature.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,7 +187,7 @@ public class SignerInfo extends NetObject  {
 
     public void AddUnsignedAttribute(AsnEncodedData unsignedAttribute) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.ArgumentException, system.security.cryptography.CryptographicException, system.formats.asn1.AsnContentException, system.RankException, system.NotSupportedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddUnsignedAttribute", unsignedAttribute == null ? null : unsignedAttribute.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -193,7 +197,7 @@ public class SignerInfo extends NetObject  {
 
     public void CheckHash() throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.security.cryptography.CryptographicException, system.IndexOutOfRangeException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.ArgumentNullException, system.formats.asn1.AsnContentException, system.ArrayTypeMismatchException, system.OverflowException, system.OutOfMemoryException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CheckHash");
         } catch (JCNativeException jcne) {
@@ -203,7 +207,7 @@ public class SignerInfo extends NetObject  {
 
     public void CheckSignature(boolean verifySignatureOnly) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.io.IOException, system.collections.generic.KeyNotFoundException, system.formats.asn1.AsnContentException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CheckSignature", verifySignatureOnly);
         } catch (JCNativeException jcne) {
@@ -213,7 +217,7 @@ public class SignerInfo extends NetObject  {
 
     public void CheckSignature(X509Certificate2Collection extraStore, boolean verifySignatureOnly) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.io.IOException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException, system.formats.asn1.AsnContentException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CheckSignature", extraStore == null ? null : extraStore.getJCOInstance(), verifySignatureOnly);
         } catch (JCNativeException jcne) {
@@ -223,7 +227,7 @@ public class SignerInfo extends NetObject  {
 
     public void ComputeCounterSignature() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ComputeCounterSignature");
         } catch (JCNativeException jcne) {
@@ -233,7 +237,7 @@ public class SignerInfo extends NetObject  {
 
     public void ComputeCounterSignature(CmsSigner signer) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.security.cryptography.CryptographicException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.formats.asn1.AsnContentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OverflowException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.io.IOException, system.RankException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ComputeCounterSignature", signer == null ? null : signer.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -243,7 +247,7 @@ public class SignerInfo extends NetObject  {
 
     public void RemoveCounterSignature(int index) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.cryptography.CryptographicException, system.formats.asn1.AsnContentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RemoveCounterSignature", index);
         } catch (JCNativeException jcne) {
@@ -253,7 +257,7 @@ public class SignerInfo extends NetObject  {
 
     public void RemoveCounterSignature(SignerInfo counterSignerInfo) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.cryptography.CryptographicException, system.formats.asn1.AsnContentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RemoveCounterSignature", counterSignerInfo == null ? null : counterSignerInfo.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -263,7 +267,7 @@ public class SignerInfo extends NetObject  {
 
     public void RemoveUnsignedAttribute(AsnEncodedData unsignedAttribute) throws Throwable, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.security.cryptography.CryptographicException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.formats.asn1.AsnContentException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RemoveUnsignedAttribute", unsignedAttribute == null ? null : unsignedAttribute.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -277,9 +281,20 @@ public class SignerInfo extends NetObject  {
     
     public int getVersion() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVersion = null;
         try {
-            return (int)classInstance.Get("Version");
+            retObjectVersion = classInstance.Get("Version");
+            return (int)retObjectVersion;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectVersion_ToString = retObjectVersion == null ? "null" : retObjectVersion.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectVersionNumber = (java.lang.Number)retObjectVersion;
+                return retObjectVersionNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectVersion != null ? retObjectVersion.getClass() : "null", retObjectVersion_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -287,10 +302,14 @@ public class SignerInfo extends NetObject  {
 
     public CryptographicAttributeObjectCollection getSignedAttributes() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSignedAttributes = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SignedAttributes");
+            retObjectSignedAttributes = classInstance.Get("SignedAttributes");
+            JCObject val = (JCObject)retObjectSignedAttributes;
             return new CryptographicAttributeObjectCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSignedAttributes != null ? retObjectSignedAttributes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -298,10 +317,14 @@ public class SignerInfo extends NetObject  {
 
     public CryptographicAttributeObjectCollection getUnsignedAttributes() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUnsignedAttributes = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("UnsignedAttributes");
+            retObjectUnsignedAttributes = classInstance.Get("UnsignedAttributes");
+            JCObject val = (JCObject)retObjectUnsignedAttributes;
             return new CryptographicAttributeObjectCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUnsignedAttributes != null ? retObjectUnsignedAttributes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -309,10 +332,14 @@ public class SignerInfo extends NetObject  {
 
     public Oid getDigestAlgorithm() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDigestAlgorithm = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DigestAlgorithm");
+            retObjectDigestAlgorithm = classInstance.Get("DigestAlgorithm");
+            JCObject val = (JCObject)retObjectDigestAlgorithm;
             return new Oid(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDigestAlgorithm != null ? retObjectDigestAlgorithm.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -320,10 +347,14 @@ public class SignerInfo extends NetObject  {
 
     public Oid getSignatureAlgorithm() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSignatureAlgorithm = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SignatureAlgorithm");
+            retObjectSignatureAlgorithm = classInstance.Get("SignatureAlgorithm");
+            JCObject val = (JCObject)retObjectSignatureAlgorithm;
             return new Oid(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSignatureAlgorithm != null ? retObjectSignatureAlgorithm.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -331,10 +362,14 @@ public class SignerInfo extends NetObject  {
 
     public SignerInfoCollection getCounterSignerInfos() throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.formats.asn1.AsnContentException, system.ArgumentException, system.InvalidOperationException, system.security.cryptography.CryptographicException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCounterSignerInfos = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CounterSignerInfos");
+            retObjectCounterSignerInfos = classInstance.Get("CounterSignerInfos");
+            JCObject val = (JCObject)retObjectCounterSignerInfos;
             return new SignerInfoCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCounterSignerInfos != null ? retObjectCounterSignerInfos.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -342,10 +377,14 @@ public class SignerInfo extends NetObject  {
 
     public SubjectIdentifier getSignerIdentifier() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSignerIdentifier = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SignerIdentifier");
+            retObjectSignerIdentifier = classInstance.Get("SignerIdentifier");
+            JCObject val = (JCObject)retObjectSignerIdentifier;
             return new SubjectIdentifier(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSignerIdentifier != null ? retObjectSignerIdentifier.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -353,10 +392,14 @@ public class SignerInfo extends NetObject  {
 
     public X509Certificate2 getCertificate() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.io.IOException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCertificate = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Certificate");
+            retObjectCertificate = classInstance.Get("Certificate");
+            JCObject val = (JCObject)retObjectCertificate;
             return new X509Certificate2(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCertificate != null ? retObjectCertificate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

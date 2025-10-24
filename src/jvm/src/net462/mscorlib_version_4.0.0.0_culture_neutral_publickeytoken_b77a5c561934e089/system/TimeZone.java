@@ -157,9 +157,13 @@ public class TimeZone extends NetObject  {
     
     public boolean IsDaylightSavingTime(DateTime time) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsDaylightSavingTime = null;
         try {
-            return (boolean)classInstance.Invoke("IsDaylightSavingTime", time == null ? null : time.getJCOInstance());
+            retObjectIsDaylightSavingTime = classInstance.Invoke("IsDaylightSavingTime", time == null ? null : time.getJCOInstance());
+            return (boolean)retObjectIsDaylightSavingTime;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsDaylightSavingTime != null ? retObjectIsDaylightSavingTime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -167,9 +171,13 @@ public class TimeZone extends NetObject  {
 
     public static boolean IsDaylightSavingTime(DateTime time, DaylightTime daylightTimes) throws Throwable, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsDaylightSavingTime = null;
         try {
-            return (boolean)classType.Invoke("IsDaylightSavingTime", time == null ? null : time.getJCOInstance(), daylightTimes == null ? null : daylightTimes.getJCOInstance());
+            retObjectIsDaylightSavingTime = classType.Invoke("IsDaylightSavingTime", time == null ? null : time.getJCOInstance(), daylightTimes == null ? null : daylightTimes.getJCOInstance());
+            return (boolean)retObjectIsDaylightSavingTime;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsDaylightSavingTime != null ? retObjectIsDaylightSavingTime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,10 +185,14 @@ public class TimeZone extends NetObject  {
 
     public DateTime ToLocalTime(DateTime time) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToLocalTime = null;
         try {
-            JCObject objToLocalTime = (JCObject)classInstance.Invoke("ToLocalTime", time == null ? null : time.getJCOInstance());
+            retObjectToLocalTime = classInstance.Invoke("ToLocalTime", time == null ? null : time.getJCOInstance());
+            JCObject objToLocalTime = (JCObject)retObjectToLocalTime;
             return new DateTime(objToLocalTime);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToLocalTime != null ? retObjectToLocalTime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,10 +200,14 @@ public class TimeZone extends NetObject  {
 
     public DateTime ToUniversalTime(DateTime time) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToUniversalTime = null;
         try {
-            JCObject objToUniversalTime = (JCObject)classInstance.Invoke("ToUniversalTime", time == null ? null : time.getJCOInstance());
+            retObjectToUniversalTime = classInstance.Invoke("ToUniversalTime", time == null ? null : time.getJCOInstance());
+            JCObject objToUniversalTime = (JCObject)retObjectToUniversalTime;
             return new DateTime(objToUniversalTime);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToUniversalTime != null ? retObjectToUniversalTime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -199,10 +215,14 @@ public class TimeZone extends NetObject  {
 
     public DaylightTime GetDaylightChanges(int year) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDaylightChanges = null;
         try {
-            JCObject objGetDaylightChanges = (JCObject)classInstance.Invoke("GetDaylightChanges", year);
+            retObjectGetDaylightChanges = classInstance.Invoke("GetDaylightChanges", year);
+            JCObject objGetDaylightChanges = (JCObject)retObjectGetDaylightChanges;
             return new DaylightTime(objGetDaylightChanges);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetDaylightChanges != null ? retObjectGetDaylightChanges.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -210,10 +230,14 @@ public class TimeZone extends NetObject  {
 
     public TimeSpan GetUtcOffset(DateTime time) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetUtcOffset = null;
         try {
-            JCObject objGetUtcOffset = (JCObject)classInstance.Invoke("GetUtcOffset", time == null ? null : time.getJCOInstance());
+            retObjectGetUtcOffset = classInstance.Invoke("GetUtcOffset", time == null ? null : time.getJCOInstance());
+            JCObject objGetUtcOffset = (JCObject)retObjectGetUtcOffset;
             return new TimeSpan(objGetUtcOffset);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetUtcOffset != null ? retObjectGetUtcOffset.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -225,9 +249,13 @@ public class TimeZone extends NetObject  {
     
     public java.lang.String getDaylightName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDaylightName = null;
         try {
-            return (java.lang.String)classInstance.Get("DaylightName");
+            retObjectDaylightName = classInstance.Get("DaylightName");
+            return (java.lang.String)retObjectDaylightName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDaylightName != null ? retObjectDaylightName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -235,9 +263,13 @@ public class TimeZone extends NetObject  {
 
     public java.lang.String getStandardName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStandardName = null;
         try {
-            return (java.lang.String)classInstance.Get("StandardName");
+            retObjectStandardName = classInstance.Get("StandardName");
+            return (java.lang.String)retObjectStandardName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectStandardName != null ? retObjectStandardName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -245,10 +277,14 @@ public class TimeZone extends NetObject  {
 
     public static TimeZone getCurrentTimeZone() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCurrentTimeZone = null;
         try {
-            JCObject val = (JCObject)classType.Get("CurrentTimeZone");
+            retObjectCurrentTimeZone = classType.Get("CurrentTimeZone");
+            JCObject val = (JCObject)retObjectCurrentTimeZone;
             return new TimeZone(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCurrentTimeZone != null ? retObjectCurrentTimeZone.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

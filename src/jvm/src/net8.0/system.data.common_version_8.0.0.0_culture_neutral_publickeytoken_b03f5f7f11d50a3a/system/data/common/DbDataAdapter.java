@@ -163,9 +163,20 @@ public class DbDataAdapter extends DataAdapter implements system.ICloneable {
     
     public int Fill(int startRecord, int maxRecords, DataTable... dataTables) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.IndexOutOfRangeException, system.diagnostics.tracing.EventSourceException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.NotSupportedException, system.threading.SynchronizationLockException, system.data.sqltypes.SqlNullValueException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFill = null;
         try {
-            return (int)classInstance.Invoke("Fill", startRecord, maxRecords, toObjectFromArray(dataTables));
+            retObjectFill = classInstance.Invoke("Fill", startRecord, maxRecords, toObjectFromArray(dataTables));
+            return (int)retObjectFill;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectFill_ToString = retObjectFill == null ? "null" : retObjectFill.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectFillNumber = (java.lang.Number)retObjectFill;
+                return retObjectFillNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectFill != null ? retObjectFill.getClass() : "null", retObjectFill_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -173,9 +184,20 @@ public class DbDataAdapter extends DataAdapter implements system.ICloneable {
 
     public int Fill(DataSet dataSet, int startRecord, int maxRecords, java.lang.String srcTable) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.ArrayTypeMismatchException, system.threading.SynchronizationLockException, system.data.sqltypes.SqlNullValueException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFill = null;
         try {
-            return (int)classInstance.Invoke("Fill", dataSet == null ? null : dataSet.getJCOInstance(), startRecord, maxRecords, srcTable);
+            retObjectFill = classInstance.Invoke("Fill", dataSet == null ? null : dataSet.getJCOInstance(), startRecord, maxRecords, srcTable);
+            return (int)retObjectFill;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectFill_ToString = retObjectFill == null ? "null" : retObjectFill.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectFillNumber = (java.lang.Number)retObjectFill;
+                return retObjectFillNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectFill != null ? retObjectFill.getClass() : "null", retObjectFill_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,9 +205,20 @@ public class DbDataAdapter extends DataAdapter implements system.ICloneable {
 
     public int Fill(DataSet dataSet, java.lang.String srcTable) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.IndexOutOfRangeException, system.diagnostics.tracing.EventSourceException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.NotSupportedException, system.threading.SynchronizationLockException, system.data.sqltypes.SqlNullValueException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFill = null;
         try {
-            return (int)classInstance.Invoke("Fill", dataSet == null ? null : dataSet.getJCOInstance(), srcTable);
+            retObjectFill = classInstance.Invoke("Fill", dataSet == null ? null : dataSet.getJCOInstance(), srcTable);
+            return (int)retObjectFill;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectFill_ToString = retObjectFill == null ? "null" : retObjectFill.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectFillNumber = (java.lang.Number)retObjectFill;
+                return retObjectFillNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectFill != null ? retObjectFill.getClass() : "null", retObjectFill_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,9 +226,20 @@ public class DbDataAdapter extends DataAdapter implements system.ICloneable {
 
     public int Fill(DataSet dataSet) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.IndexOutOfRangeException, system.diagnostics.tracing.EventSourceException, system.ArrayTypeMismatchException, system.threading.SynchronizationLockException, system.data.sqltypes.SqlNullValueException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFill = null;
         try {
-            return (int)classInstance.Invoke("Fill", dataSet == null ? null : dataSet.getJCOInstance());
+            retObjectFill = classInstance.Invoke("Fill", dataSet == null ? null : dataSet.getJCOInstance());
+            return (int)retObjectFill;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectFill_ToString = retObjectFill == null ? "null" : retObjectFill.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectFillNumber = (java.lang.Number)retObjectFill;
+                return retObjectFillNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectFill != null ? retObjectFill.getClass() : "null", retObjectFill_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,9 +247,20 @@ public class DbDataAdapter extends DataAdapter implements system.ICloneable {
 
     public int Fill(DataTable dataTable) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.IndexOutOfRangeException, system.diagnostics.tracing.EventSourceException, system.ArrayTypeMismatchException, system.threading.SynchronizationLockException, system.data.sqltypes.SqlNullValueException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFill = null;
         try {
-            return (int)classInstance.Invoke("Fill", dataTable == null ? null : dataTable.getJCOInstance());
+            retObjectFill = classInstance.Invoke("Fill", dataTable == null ? null : dataTable.getJCOInstance());
+            return (int)retObjectFill;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectFill_ToString = retObjectFill == null ? "null" : retObjectFill.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectFillNumber = (java.lang.Number)retObjectFill;
+                return retObjectFillNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectFill != null ? retObjectFill.getClass() : "null", retObjectFill_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,9 +268,20 @@ public class DbDataAdapter extends DataAdapter implements system.ICloneable {
 
     public int Update(DataRow[] dataRows) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.IndexOutOfRangeException, system.diagnostics.tracing.EventSourceException, system.threading.SynchronizationLockException, system.data.DataException, system.collections.generic.KeyNotFoundException, system.OverflowException, system.InvalidCastException, system.data.sqltypes.SqlNullValueException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUpdate = null;
         try {
-            return (int)classInstance.Invoke("Update", (java.lang.Object)toObjectFromArray(dataRows));
+            retObjectUpdate = classInstance.Invoke("Update", (java.lang.Object)toObjectFromArray(dataRows));
+            return (int)retObjectUpdate;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectUpdate_ToString = retObjectUpdate == null ? "null" : retObjectUpdate.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectUpdateNumber = (java.lang.Number)retObjectUpdate;
+                return retObjectUpdateNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectUpdate != null ? retObjectUpdate.getClass() : "null", retObjectUpdate_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -223,9 +289,20 @@ public class DbDataAdapter extends DataAdapter implements system.ICloneable {
 
     public int Update(DataSet dataSet, java.lang.String srcTable) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.IndexOutOfRangeException, system.diagnostics.tracing.EventSourceException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.threading.SynchronizationLockException, system.data.DataException, system.collections.generic.KeyNotFoundException, system.OverflowException, system.data.sqltypes.SqlNullValueException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUpdate = null;
         try {
-            return (int)classInstance.Invoke("Update", dataSet == null ? null : dataSet.getJCOInstance(), srcTable);
+            retObjectUpdate = classInstance.Invoke("Update", dataSet == null ? null : dataSet.getJCOInstance(), srcTable);
+            return (int)retObjectUpdate;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectUpdate_ToString = retObjectUpdate == null ? "null" : retObjectUpdate.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectUpdateNumber = (java.lang.Number)retObjectUpdate;
+                return retObjectUpdateNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectUpdate != null ? retObjectUpdate.getClass() : "null", retObjectUpdate_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -233,9 +310,20 @@ public class DbDataAdapter extends DataAdapter implements system.ICloneable {
 
     public int Update(DataSet dataSet) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.NotSupportedException, system.data.DataException, system.collections.generic.KeyNotFoundException, system.data.sqltypes.SqlNullValueException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUpdate = null;
         try {
-            return (int)classInstance.Invoke("Update", dataSet == null ? null : dataSet.getJCOInstance());
+            retObjectUpdate = classInstance.Invoke("Update", dataSet == null ? null : dataSet.getJCOInstance());
+            return (int)retObjectUpdate;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectUpdate_ToString = retObjectUpdate == null ? "null" : retObjectUpdate.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectUpdateNumber = (java.lang.Number)retObjectUpdate;
+                return retObjectUpdateNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectUpdate != null ? retObjectUpdate.getClass() : "null", retObjectUpdate_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -243,9 +331,20 @@ public class DbDataAdapter extends DataAdapter implements system.ICloneable {
 
     public int Update(DataTable dataTable) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.IndexOutOfRangeException, system.diagnostics.tracing.EventSourceException, system.threading.SynchronizationLockException, system.data.DataException, system.collections.generic.KeyNotFoundException, system.OverflowException, system.data.sqltypes.SqlNullValueException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUpdate = null;
         try {
-            return (int)classInstance.Invoke("Update", dataTable == null ? null : dataTable.getJCOInstance());
+            retObjectUpdate = classInstance.Invoke("Update", dataTable == null ? null : dataTable.getJCOInstance());
+            return (int)retObjectUpdate;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectUpdate_ToString = retObjectUpdate == null ? "null" : retObjectUpdate.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectUpdateNumber = (java.lang.Number)retObjectUpdate;
+                return retObjectUpdateNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectUpdate != null ? retObjectUpdate.getClass() : "null", retObjectUpdate_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -253,10 +352,14 @@ public class DbDataAdapter extends DataAdapter implements system.ICloneable {
 
     public DataTable FillSchema(DataTable dataTable, SchemaType schemaType) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.IndexOutOfRangeException, system.diagnostics.tracing.EventSourceException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFillSchema = null;
         try {
-            JCObject objFillSchema = (JCObject)classInstance.Invoke("FillSchema", dataTable == null ? null : dataTable.getJCOInstance(), schemaType == null ? null : schemaType.getJCOInstance());
+            retObjectFillSchema = classInstance.Invoke("FillSchema", dataTable == null ? null : dataTable.getJCOInstance(), schemaType == null ? null : schemaType.getJCOInstance());
+            JCObject objFillSchema = (JCObject)retObjectFillSchema;
             return new DataTable(objFillSchema);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFillSchema != null ? retObjectFillSchema.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -264,16 +367,20 @@ public class DbDataAdapter extends DataAdapter implements system.ICloneable {
 
     public DataTable[] FillSchema(DataSet dataSet, SchemaType schemaType, java.lang.String srcTable) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.IndexOutOfRangeException, system.diagnostics.tracing.EventSourceException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFillSchema = null;
         try {
             ArrayList<DataTable> resultingArrayList = new ArrayList<DataTable>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("FillSchema", dataSet == null ? null : dataSet.getJCOInstance(), schemaType == null ? null : schemaType.getJCOInstance(), srcTable);
+            retObjectFillSchema = classInstance.Invoke("FillSchema", dataSet == null ? null : dataSet.getJCOInstance(), schemaType == null ? null : schemaType.getJCOInstance(), srcTable);
+            JCObject resultingObjects = (JCObject)retObjectFillSchema;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new DataTable(resultingObject));
             }
             DataTable[] resultingArray = new DataTable[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFillSchema != null ? retObjectFillSchema.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -281,16 +388,20 @@ public class DbDataAdapter extends DataAdapter implements system.ICloneable {
 
     public DataTable[] FillSchema(DataSet dataSet, SchemaType schemaType) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.IndexOutOfRangeException, system.diagnostics.tracing.EventSourceException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFillSchema = null;
         try {
             ArrayList<DataTable> resultingArrayList = new ArrayList<DataTable>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("FillSchema", dataSet == null ? null : dataSet.getJCOInstance(), schemaType == null ? null : schemaType.getJCOInstance());
+            retObjectFillSchema = classInstance.Invoke("FillSchema", dataSet == null ? null : dataSet.getJCOInstance(), schemaType == null ? null : schemaType.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectFillSchema;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new DataTable(resultingObject));
             }
             DataTable[] resultingArray = new DataTable[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFillSchema != null ? retObjectFillSchema.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -298,16 +409,20 @@ public class DbDataAdapter extends DataAdapter implements system.ICloneable {
 
     public IDataParameter[] GetFillParameters() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetFillParameters = null;
         try {
             ArrayList<IDataParameter> resultingArrayList = new ArrayList<IDataParameter>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetFillParameters");
+            retObjectGetFillParameters = classInstance.Invoke("GetFillParameters");
+            JCObject resultingObjects = (JCObject)retObjectGetFillParameters;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new IDataParameterImplementation(resultingObject));
             }
             IDataParameter[] resultingArray = new IDataParameter[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetFillParameters != null ? retObjectGetFillParameters.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -319,7 +434,7 @@ public class DbDataAdapter extends DataAdapter implements system.ICloneable {
      */
     @Deprecated 
     public NetObject Clone() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICloneable to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICloneable to obtain the full interface.");
     }
 
 
@@ -328,9 +443,20 @@ public class DbDataAdapter extends DataAdapter implements system.ICloneable {
     
     public int getUpdateBatchSize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUpdateBatchSize = null;
         try {
-            return (int)classInstance.Get("UpdateBatchSize");
+            retObjectUpdateBatchSize = classInstance.Get("UpdateBatchSize");
+            return (int)retObjectUpdateBatchSize;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectUpdateBatchSize_ToString = retObjectUpdateBatchSize == null ? "null" : retObjectUpdateBatchSize.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectUpdateBatchSizeNumber = (java.lang.Number)retObjectUpdateBatchSize;
+                return retObjectUpdateBatchSizeNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectUpdateBatchSize != null ? retObjectUpdateBatchSize.getClass() : "null", retObjectUpdateBatchSize_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -338,7 +464,7 @@ public class DbDataAdapter extends DataAdapter implements system.ICloneable {
 
     public void setUpdateBatchSize(int UpdateBatchSize) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException, system.diagnostics.tracing.EventSourceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UpdateBatchSize", UpdateBatchSize);
         } catch (JCNativeException jcne) {
@@ -348,10 +474,14 @@ public class DbDataAdapter extends DataAdapter implements system.ICloneable {
 
     public DbCommand getDeleteCommand() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDeleteCommand = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DeleteCommand");
+            retObjectDeleteCommand = classInstance.Get("DeleteCommand");
+            JCObject val = (JCObject)retObjectDeleteCommand;
             return new DbCommand(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDeleteCommand != null ? retObjectDeleteCommand.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -359,7 +489,7 @@ public class DbDataAdapter extends DataAdapter implements system.ICloneable {
 
     public void setDeleteCommand(DbCommand DeleteCommand) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DeleteCommand", DeleteCommand == null ? null : DeleteCommand.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -369,10 +499,14 @@ public class DbDataAdapter extends DataAdapter implements system.ICloneable {
 
     public DbCommand getInsertCommand() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInsertCommand = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("InsertCommand");
+            retObjectInsertCommand = classInstance.Get("InsertCommand");
+            JCObject val = (JCObject)retObjectInsertCommand;
             return new DbCommand(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInsertCommand != null ? retObjectInsertCommand.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -380,7 +514,7 @@ public class DbDataAdapter extends DataAdapter implements system.ICloneable {
 
     public void setInsertCommand(DbCommand InsertCommand) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("InsertCommand", InsertCommand == null ? null : InsertCommand.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -390,10 +524,14 @@ public class DbDataAdapter extends DataAdapter implements system.ICloneable {
 
     public DbCommand getSelectCommand() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectCommand = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SelectCommand");
+            retObjectSelectCommand = classInstance.Get("SelectCommand");
+            JCObject val = (JCObject)retObjectSelectCommand;
             return new DbCommand(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelectCommand != null ? retObjectSelectCommand.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -401,7 +539,7 @@ public class DbDataAdapter extends DataAdapter implements system.ICloneable {
 
     public void setSelectCommand(DbCommand SelectCommand) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SelectCommand", SelectCommand == null ? null : SelectCommand.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -411,10 +549,14 @@ public class DbDataAdapter extends DataAdapter implements system.ICloneable {
 
     public DbCommand getUpdateCommand() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUpdateCommand = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("UpdateCommand");
+            retObjectUpdateCommand = classInstance.Get("UpdateCommand");
+            JCObject val = (JCObject)retObjectUpdateCommand;
             return new DbCommand(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUpdateCommand != null ? retObjectUpdateCommand.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -422,7 +564,7 @@ public class DbDataAdapter extends DataAdapter implements system.ICloneable {
 
     public void setUpdateCommand(DbCommand UpdateCommand) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UpdateCommand", UpdateCommand == null ? null : UpdateCommand.getJCOInstance());
         } catch (JCNativeException jcne) {

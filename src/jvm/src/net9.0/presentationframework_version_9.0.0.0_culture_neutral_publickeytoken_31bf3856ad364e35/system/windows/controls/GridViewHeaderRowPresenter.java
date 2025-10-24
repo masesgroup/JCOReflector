@@ -170,9 +170,13 @@ public class GridViewHeaderRowPresenter extends GridViewRowPresenterBase  {
     
     public boolean getAllowsColumnReorder() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAllowsColumnReorder = null;
         try {
-            return (boolean)classInstance.Get("AllowsColumnReorder");
+            retObjectAllowsColumnReorder = classInstance.Get("AllowsColumnReorder");
+            return (boolean)retObjectAllowsColumnReorder;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAllowsColumnReorder != null ? retObjectAllowsColumnReorder.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,7 +184,7 @@ public class GridViewHeaderRowPresenter extends GridViewRowPresenterBase  {
 
     public void setAllowsColumnReorder(boolean AllowsColumnReorder) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AllowsColumnReorder", AllowsColumnReorder);
         } catch (JCNativeException jcne) {
@@ -190,10 +194,14 @@ public class GridViewHeaderRowPresenter extends GridViewRowPresenterBase  {
 
     public NetObject getColumnHeaderToolTip() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectColumnHeaderToolTip = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ColumnHeaderToolTip");
+            retObjectColumnHeaderToolTip = classInstance.Get("ColumnHeaderToolTip");
+            JCObject val = (JCObject)retObjectColumnHeaderToolTip;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectColumnHeaderToolTip != null ? retObjectColumnHeaderToolTip.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,7 +209,7 @@ public class GridViewHeaderRowPresenter extends GridViewRowPresenterBase  {
 
     public void setColumnHeaderToolTip(NetObject ColumnHeaderToolTip) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ColumnHeaderToolTip", ColumnHeaderToolTip == null ? null : ColumnHeaderToolTip.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -211,9 +219,13 @@ public class GridViewHeaderRowPresenter extends GridViewRowPresenterBase  {
 
     public java.lang.String getColumnHeaderStringFormat() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectColumnHeaderStringFormat = null;
         try {
-            return (java.lang.String)classInstance.Get("ColumnHeaderStringFormat");
+            retObjectColumnHeaderStringFormat = classInstance.Get("ColumnHeaderStringFormat");
+            return (java.lang.String)retObjectColumnHeaderStringFormat;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectColumnHeaderStringFormat != null ? retObjectColumnHeaderStringFormat.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -221,7 +233,7 @@ public class GridViewHeaderRowPresenter extends GridViewRowPresenterBase  {
 
     public void setColumnHeaderStringFormat(java.lang.String ColumnHeaderStringFormat) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ColumnHeaderStringFormat", ColumnHeaderStringFormat);
         } catch (JCNativeException jcne) {
@@ -231,10 +243,14 @@ public class GridViewHeaderRowPresenter extends GridViewRowPresenterBase  {
 
     public ContextMenu getColumnHeaderContextMenu() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectColumnHeaderContextMenu = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ColumnHeaderContextMenu");
+            retObjectColumnHeaderContextMenu = classInstance.Get("ColumnHeaderContextMenu");
+            JCObject val = (JCObject)retObjectColumnHeaderContextMenu;
             return new ContextMenu(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectColumnHeaderContextMenu != null ? retObjectColumnHeaderContextMenu.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -242,7 +258,7 @@ public class GridViewHeaderRowPresenter extends GridViewRowPresenterBase  {
 
     public void setColumnHeaderContextMenu(ContextMenu ColumnHeaderContextMenu) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ColumnHeaderContextMenu", ColumnHeaderContextMenu == null ? null : ColumnHeaderContextMenu.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -252,10 +268,14 @@ public class GridViewHeaderRowPresenter extends GridViewRowPresenterBase  {
 
     public DataTemplateSelector getColumnHeaderTemplateSelector() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectColumnHeaderTemplateSelector = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ColumnHeaderTemplateSelector");
+            retObjectColumnHeaderTemplateSelector = classInstance.Get("ColumnHeaderTemplateSelector");
+            JCObject val = (JCObject)retObjectColumnHeaderTemplateSelector;
             return new DataTemplateSelector(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectColumnHeaderTemplateSelector != null ? retObjectColumnHeaderTemplateSelector.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -263,7 +283,7 @@ public class GridViewHeaderRowPresenter extends GridViewRowPresenterBase  {
 
     public void setColumnHeaderTemplateSelector(DataTemplateSelector ColumnHeaderTemplateSelector) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ColumnHeaderTemplateSelector", ColumnHeaderTemplateSelector == null ? null : ColumnHeaderTemplateSelector.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -273,10 +293,14 @@ public class GridViewHeaderRowPresenter extends GridViewRowPresenterBase  {
 
     public DataTemplate getColumnHeaderTemplate() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectColumnHeaderTemplate = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ColumnHeaderTemplate");
+            retObjectColumnHeaderTemplate = classInstance.Get("ColumnHeaderTemplate");
+            JCObject val = (JCObject)retObjectColumnHeaderTemplate;
             return new DataTemplate(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectColumnHeaderTemplate != null ? retObjectColumnHeaderTemplate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -284,7 +308,7 @@ public class GridViewHeaderRowPresenter extends GridViewRowPresenterBase  {
 
     public void setColumnHeaderTemplate(DataTemplate ColumnHeaderTemplate) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ColumnHeaderTemplate", ColumnHeaderTemplate == null ? null : ColumnHeaderTemplate.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -294,10 +318,14 @@ public class GridViewHeaderRowPresenter extends GridViewRowPresenterBase  {
 
     public Style getColumnHeaderContainerStyle() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectColumnHeaderContainerStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ColumnHeaderContainerStyle");
+            retObjectColumnHeaderContainerStyle = classInstance.Get("ColumnHeaderContainerStyle");
+            JCObject val = (JCObject)retObjectColumnHeaderContainerStyle;
             return new Style(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectColumnHeaderContainerStyle != null ? retObjectColumnHeaderContainerStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -305,7 +333,7 @@ public class GridViewHeaderRowPresenter extends GridViewRowPresenterBase  {
 
     public void setColumnHeaderContainerStyle(Style ColumnHeaderContainerStyle) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ColumnHeaderContainerStyle", ColumnHeaderContainerStyle == null ? null : ColumnHeaderContainerStyle.getJCOInstance());
         } catch (JCNativeException jcne) {

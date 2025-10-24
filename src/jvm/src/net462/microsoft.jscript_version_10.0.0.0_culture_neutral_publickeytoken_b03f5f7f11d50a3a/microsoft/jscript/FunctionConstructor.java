@@ -156,10 +156,14 @@ public class FunctionConstructor extends ScriptFunction  {
     
     public ScriptFunction CreateInstanceNewFunctionConstructor(NetObject... args) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, microsoft.jscript.JScriptException, system.NotImplementedException, system.MissingMethodException, system.OverflowException, system.OutOfMemoryException, microsoft.jscript.vsa.JSVsaException, system.resources.MissingManifestResourceException, microsoft.jscript.EndOfFile {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateInstance = null;
         try {
-            JCObject objCreateInstance = (JCObject)classInstance.Invoke("CreateInstance", (java.lang.Object)toObjectFromArray(args));
+            retObjectCreateInstance = classInstance.Invoke("CreateInstance", (java.lang.Object)toObjectFromArray(args));
+            JCObject objCreateInstance = (JCObject)retObjectCreateInstance;
             return new ScriptFunction(objCreateInstance);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateInstance != null ? retObjectCreateInstance.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -167,10 +171,14 @@ public class FunctionConstructor extends ScriptFunction  {
 
     public ScriptFunction Invoke(NetObject... args) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, microsoft.jscript.JScriptException, system.NotImplementedException, system.MissingMethodException, system.OverflowException, system.OutOfMemoryException, microsoft.jscript.vsa.JSVsaException, system.resources.MissingManifestResourceException, microsoft.jscript.EndOfFile {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInvoke = null;
         try {
-            JCObject objInvoke = (JCObject)classInstance.Invoke("Invoke", (java.lang.Object)toObjectFromArray(args));
+            retObjectInvoke = classInstance.Invoke("Invoke", (java.lang.Object)toObjectFromArray(args));
+            JCObject objInvoke = (JCObject)retObjectInvoke;
             return new ScriptFunction(objInvoke);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInvoke != null ? retObjectInvoke.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

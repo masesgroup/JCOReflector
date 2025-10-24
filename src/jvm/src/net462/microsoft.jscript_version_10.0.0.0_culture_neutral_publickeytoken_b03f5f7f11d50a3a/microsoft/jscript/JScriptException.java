@@ -185,7 +185,7 @@ public class JScriptException extends ApplicationException {
     
     public void GetObjectData(SerializationInfo info, StreamingContext context) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.security.SecurityException, system.TypeLoadException, system.NotSupportedException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.NotImplementedException, system.runtime.serialization.SerializationException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetObjectData", info == null ? null : info.getJCOInstance(), context == null ? null : context.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -199,9 +199,20 @@ public class JScriptException extends ApplicationException {
     
     public int getColumn() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectColumn = null;
         try {
-            return (int)classInstance.Get("Column");
+            retObjectColumn = classInstance.Get("Column");
+            return (int)retObjectColumn;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectColumn_ToString = retObjectColumn == null ? "null" : retObjectColumn.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectColumnNumber = (java.lang.Number)retObjectColumn;
+                return retObjectColumnNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectColumn != null ? retObjectColumn.getClass() : "null", retObjectColumn_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -209,9 +220,20 @@ public class JScriptException extends ApplicationException {
 
     public int getEndColumn() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEndColumn = null;
         try {
-            return (int)classInstance.Get("EndColumn");
+            retObjectEndColumn = classInstance.Get("EndColumn");
+            return (int)retObjectEndColumn;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectEndColumn_ToString = retObjectEndColumn == null ? "null" : retObjectEndColumn.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectEndColumnNumber = (java.lang.Number)retObjectEndColumn;
+                return retObjectEndColumnNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectEndColumn != null ? retObjectEndColumn.getClass() : "null", retObjectEndColumn_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -219,9 +241,20 @@ public class JScriptException extends ApplicationException {
 
     public int getEndLine() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEndLine = null;
         try {
-            return (int)classInstance.Get("EndLine");
+            retObjectEndLine = classInstance.Get("EndLine");
+            return (int)retObjectEndLine;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectEndLine_ToString = retObjectEndLine == null ? "null" : retObjectEndLine.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectEndLineNumber = (java.lang.Number)retObjectEndLine;
+                return retObjectEndLineNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectEndLine != null ? retObjectEndLine.getClass() : "null", retObjectEndLine_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -229,9 +262,20 @@ public class JScriptException extends ApplicationException {
 
     public int getErrorNumber() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectErrorNumber = null;
         try {
-            return (int)classInstance.Get("ErrorNumber");
+            retObjectErrorNumber = classInstance.Get("ErrorNumber");
+            return (int)retObjectErrorNumber;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectErrorNumber_ToString = retObjectErrorNumber == null ? "null" : retObjectErrorNumber.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectErrorNumberNumber = (java.lang.Number)retObjectErrorNumber;
+                return retObjectErrorNumberNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectErrorNumber != null ? retObjectErrorNumber.getClass() : "null", retObjectErrorNumber_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -239,9 +283,20 @@ public class JScriptException extends ApplicationException {
 
     public int getLine() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLine = null;
         try {
-            return (int)classInstance.Get("Line");
+            retObjectLine = classInstance.Get("Line");
+            return (int)retObjectLine;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectLine_ToString = retObjectLine == null ? "null" : retObjectLine.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectLineNumber = (java.lang.Number)retObjectLine;
+                return retObjectLineNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectLine != null ? retObjectLine.getClass() : "null", retObjectLine_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -249,9 +304,20 @@ public class JScriptException extends ApplicationException {
 
     public int getNumber() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNumber = null;
         try {
-            return (int)classInstance.Get("Number");
+            retObjectNumber = classInstance.Get("Number");
+            return (int)retObjectNumber;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectNumber_ToString = retObjectNumber == null ? "null" : retObjectNumber.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectNumberNumber = (java.lang.Number)retObjectNumber;
+                return retObjectNumberNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectNumber != null ? retObjectNumber.getClass() : "null", retObjectNumber_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -259,9 +325,20 @@ public class JScriptException extends ApplicationException {
 
     public int getSeverity() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSeverity = null;
         try {
-            return (int)classInstance.Get("Severity");
+            retObjectSeverity = classInstance.Get("Severity");
+            return (int)retObjectSeverity;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSeverity_ToString = retObjectSeverity == null ? "null" : retObjectSeverity.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectSeverityNumber = (java.lang.Number)retObjectSeverity;
+                return retObjectSeverityNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectSeverity != null ? retObjectSeverity.getClass() : "null", retObjectSeverity_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -269,9 +346,20 @@ public class JScriptException extends ApplicationException {
 
     public int getStartColumn() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStartColumn = null;
         try {
-            return (int)classInstance.Get("StartColumn");
+            retObjectStartColumn = classInstance.Get("StartColumn");
+            return (int)retObjectStartColumn;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectStartColumn_ToString = retObjectStartColumn == null ? "null" : retObjectStartColumn.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectStartColumnNumber = (java.lang.Number)retObjectStartColumn;
+                return retObjectStartColumnNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectStartColumn != null ? retObjectStartColumn.getClass() : "null", retObjectStartColumn_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -279,10 +367,14 @@ public class JScriptException extends ApplicationException {
 
     public IJSVsaItem getSourceItem() throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, microsoft.jscript.NoContextException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSourceItem = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SourceItem");
+            retObjectSourceItem = classInstance.Get("SourceItem");
+            JCObject val = (JCObject)retObjectSourceItem;
             return new IJSVsaItemImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSourceItem != null ? retObjectSourceItem.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -290,9 +382,13 @@ public class JScriptException extends ApplicationException {
 
     public java.lang.String getDescription() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDescription = null;
         try {
-            return (java.lang.String)classInstance.Get("Description");
+            retObjectDescription = classInstance.Get("Description");
+            return (java.lang.String)retObjectDescription;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDescription != null ? retObjectDescription.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -300,9 +396,13 @@ public class JScriptException extends ApplicationException {
 
     public java.lang.String getLineText() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLineText = null;
         try {
-            return (java.lang.String)classInstance.Get("LineText");
+            retObjectLineText = classInstance.Get("LineText");
+            return (java.lang.String)retObjectLineText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectLineText != null ? retObjectLineText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -310,9 +410,13 @@ public class JScriptException extends ApplicationException {
 
     public java.lang.String getSourceMoniker() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSourceMoniker = null;
         try {
-            return (java.lang.String)classInstance.Get("SourceMoniker");
+            retObjectSourceMoniker = classInstance.Get("SourceMoniker");
+            return (java.lang.String)retObjectSourceMoniker;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSourceMoniker != null ? retObjectSourceMoniker.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

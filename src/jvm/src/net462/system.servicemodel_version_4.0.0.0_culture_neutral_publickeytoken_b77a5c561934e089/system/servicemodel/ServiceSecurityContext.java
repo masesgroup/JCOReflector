@@ -174,9 +174,13 @@ public class ServiceSecurityContext extends NetObject  {
     
     public boolean getIsAnonymous() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsAnonymous = null;
         try {
-            return (boolean)classInstance.Get("IsAnonymous");
+            retObjectIsAnonymous = classInstance.Get("IsAnonymous");
+            return (boolean)retObjectIsAnonymous;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsAnonymous != null ? retObjectIsAnonymous.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -184,10 +188,14 @@ public class ServiceSecurityContext extends NetObject  {
 
     public AuthorizationContext getAuthorizationContext() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.OutOfMemoryException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAuthorizationContext = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AuthorizationContext");
+            retObjectAuthorizationContext = classInstance.Get("AuthorizationContext");
+            JCObject val = (JCObject)retObjectAuthorizationContext;
             return new AuthorizationContext(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAuthorizationContext != null ? retObjectAuthorizationContext.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,10 +203,14 @@ public class ServiceSecurityContext extends NetObject  {
 
     public IIdentity getPrimaryIdentity() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPrimaryIdentity = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PrimaryIdentity");
+            retObjectPrimaryIdentity = classInstance.Get("PrimaryIdentity");
+            JCObject val = (JCObject)retObjectPrimaryIdentity;
             return new IIdentityImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPrimaryIdentity != null ? retObjectPrimaryIdentity.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -206,10 +218,14 @@ public class ServiceSecurityContext extends NetObject  {
 
     public WindowsIdentity getWindowsIdentity() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWindowsIdentity = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("WindowsIdentity");
+            retObjectWindowsIdentity = classInstance.Get("WindowsIdentity");
+            JCObject val = (JCObject)retObjectWindowsIdentity;
             return new WindowsIdentity(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWindowsIdentity != null ? retObjectWindowsIdentity.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -217,10 +233,14 @@ public class ServiceSecurityContext extends NetObject  {
 
     public static ServiceSecurityContext getAnonymous() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAnonymous = null;
         try {
-            JCObject val = (JCObject)classType.Get("Anonymous");
+            retObjectAnonymous = classType.Get("Anonymous");
+            JCObject val = (JCObject)retObjectAnonymous;
             return new ServiceSecurityContext(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAnonymous != null ? retObjectAnonymous.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -228,10 +248,14 @@ public class ServiceSecurityContext extends NetObject  {
 
     public static ServiceSecurityContext getCurrent() throws Throwable, system.ArgumentException, system.configuration.ConfigurationErrorsException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.NotImplementedException, system.IndexOutOfRangeException, system.OverflowException, system.InvalidOperationException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCurrent = null;
         try {
-            JCObject val = (JCObject)classType.Get("Current");
+            retObjectCurrent = classType.Get("Current");
+            JCObject val = (JCObject)retObjectCurrent;
             return new ServiceSecurityContext(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCurrent != null ? retObjectCurrent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

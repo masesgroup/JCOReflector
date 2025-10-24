@@ -180,10 +180,14 @@ public class ExpressionContext extends NetObject  {
     
     public CodeExpression getExpression() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExpression = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Expression");
+            retObjectExpression = classInstance.Get("Expression");
+            JCObject val = (JCObject)retObjectExpression;
             return new CodeExpression(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExpression != null ? retObjectExpression.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,10 +195,14 @@ public class ExpressionContext extends NetObject  {
 
     public NetObject getOwner() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOwner = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Owner");
+            retObjectOwner = classInstance.Get("Owner");
+            JCObject val = (JCObject)retObjectOwner;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOwner != null ? retObjectOwner.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,10 +210,14 @@ public class ExpressionContext extends NetObject  {
 
     public NetObject getPresetValue() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPresetValue = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PresetValue");
+            retObjectPresetValue = classInstance.Get("PresetValue");
+            JCObject val = (JCObject)retObjectPresetValue;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPresetValue != null ? retObjectPresetValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,10 +225,14 @@ public class ExpressionContext extends NetObject  {
 
     public NetType getExpressionType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExpressionType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ExpressionType");
+            retObjectExpressionType = classInstance.Get("ExpressionType");
+            JCObject val = (JCObject)retObjectExpressionType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExpressionType != null ? retObjectExpressionType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

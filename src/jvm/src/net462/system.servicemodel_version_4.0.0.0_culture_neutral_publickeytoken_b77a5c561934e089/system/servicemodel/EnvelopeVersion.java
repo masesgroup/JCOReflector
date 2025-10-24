@@ -156,10 +156,12 @@ public class EnvelopeVersion extends NetObject  {
     
     public java.lang.String[] GetUltimateDestinationActorValues() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetUltimateDestinationActorValues = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetUltimateDestinationActorValues");
+            retObjectGetUltimateDestinationActorValues = classInstance.Invoke("GetUltimateDestinationActorValues");
+            JCObject resultingObjects = (JCObject)retObjectGetUltimateDestinationActorValues;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -168,6 +170,8 @@ public class EnvelopeVersion extends NetObject  {
 				resultingArray[indexGetUltimateDestinationActorValues] = (java.lang.String)resultingArrayList.get(indexGetUltimateDestinationActorValues);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectGetUltimateDestinationActorValues != null ? retObjectGetUltimateDestinationActorValues.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,10 +183,14 @@ public class EnvelopeVersion extends NetObject  {
     
     public static EnvelopeVersion getNone() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectNone = null;
         try {
-            JCObject val = (JCObject)classType.Get("None");
+            retObjectNone = classType.Get("None");
+            JCObject val = (JCObject)retObjectNone;
             return new EnvelopeVersion(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNone != null ? retObjectNone.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,10 +198,14 @@ public class EnvelopeVersion extends NetObject  {
 
     public static EnvelopeVersion getSoap11() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSoap11 = null;
         try {
-            JCObject val = (JCObject)classType.Get("Soap11");
+            retObjectSoap11 = classType.Get("Soap11");
+            JCObject val = (JCObject)retObjectSoap11;
             return new EnvelopeVersion(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSoap11 != null ? retObjectSoap11.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,10 +213,14 @@ public class EnvelopeVersion extends NetObject  {
 
     public static EnvelopeVersion getSoap12() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSoap12 = null;
         try {
-            JCObject val = (JCObject)classType.Get("Soap12");
+            retObjectSoap12 = classType.Get("Soap12");
+            JCObject val = (JCObject)retObjectSoap12;
             return new EnvelopeVersion(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSoap12 != null ? retObjectSoap12.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -212,9 +228,13 @@ public class EnvelopeVersion extends NetObject  {
 
     public java.lang.String getNextDestinationActorValue() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNextDestinationActorValue = null;
         try {
-            return (java.lang.String)classInstance.Get("NextDestinationActorValue");
+            retObjectNextDestinationActorValue = classInstance.Get("NextDestinationActorValue");
+            return (java.lang.String)retObjectNextDestinationActorValue;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectNextDestinationActorValue != null ? retObjectNextDestinationActorValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

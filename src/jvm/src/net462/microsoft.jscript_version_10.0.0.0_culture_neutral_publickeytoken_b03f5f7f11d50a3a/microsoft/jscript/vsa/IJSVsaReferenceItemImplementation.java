@@ -145,10 +145,14 @@ public class IJSVsaReferenceItemImplementation extends NetObject implements IJSV
     
     public NetObject GetOption(java.lang.String name) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetOption = null;
         try {
-            JCObject objGetOption = (JCObject)classInstance.Invoke("GetOption", name);
+            retObjectGetOption = classInstance.Invoke("GetOption", name);
+            JCObject objGetOption = (JCObject)retObjectGetOption;
             return new NetObject(objGetOption);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetOption != null ? retObjectGetOption.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -156,7 +160,7 @@ public class IJSVsaReferenceItemImplementation extends NetObject implements IJSV
 
     public void SetOption(java.lang.String name, NetObject value) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetOption", name, value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -170,9 +174,13 @@ public class IJSVsaReferenceItemImplementation extends NetObject implements IJSV
     
     public boolean getIsDirty() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsDirty = null;
         try {
-            return (boolean)classInstance.Get("IsDirty");
+            retObjectIsDirty = classInstance.Get("IsDirty");
+            return (boolean)retObjectIsDirty;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsDirty != null ? retObjectIsDirty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,10 +188,14 @@ public class IJSVsaReferenceItemImplementation extends NetObject implements IJSV
 
     public JSVsaItemType getItemType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectItemType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ItemType");
+            retObjectItemType = classInstance.Get("ItemType");
+            JCObject val = (JCObject)retObjectItemType;
             return new JSVsaItemType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectItemType != null ? retObjectItemType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,9 +203,13 @@ public class IJSVsaReferenceItemImplementation extends NetObject implements IJSV
 
     public java.lang.String getAssemblyName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAssemblyName = null;
         try {
-            return (java.lang.String)classInstance.Get("AssemblyName");
+            retObjectAssemblyName = classInstance.Get("AssemblyName");
+            return (java.lang.String)retObjectAssemblyName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectAssemblyName != null ? retObjectAssemblyName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,7 +217,7 @@ public class IJSVsaReferenceItemImplementation extends NetObject implements IJSV
 
     public void setAssemblyName(java.lang.String AssemblyName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AssemblyName", AssemblyName);
         } catch (JCNativeException jcne) {
@@ -211,9 +227,13 @@ public class IJSVsaReferenceItemImplementation extends NetObject implements IJSV
 
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectName = null;
         try {
-            return (java.lang.String)classInstance.Get("Name");
+            retObjectName = classInstance.Get("Name");
+            return (java.lang.String)retObjectName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectName != null ? retObjectName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -221,7 +241,7 @@ public class IJSVsaReferenceItemImplementation extends NetObject implements IJSV
 
     public void setName(java.lang.String Name) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Name", Name);
         } catch (JCNativeException jcne) {

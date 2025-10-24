@@ -170,9 +170,13 @@ public class AssemblyKeyFileAttribute extends Attribute  {
     
     public java.lang.String getKeyFile() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectKeyFile = null;
         try {
-            return (java.lang.String)classInstance.Get("KeyFile");
+            retObjectKeyFile = classInstance.Get("KeyFile");
+            return (java.lang.String)retObjectKeyFile;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectKeyFile != null ? retObjectKeyFile.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

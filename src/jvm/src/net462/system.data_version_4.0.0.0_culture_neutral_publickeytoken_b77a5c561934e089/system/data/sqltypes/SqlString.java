@@ -249,10 +249,12 @@ public class SqlString extends ValueType implements system.xml.serialization.IXm
     
     public byte[] GetNonUnicodeBytes() throws Throwable, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetNonUnicodeBytes = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetNonUnicodeBytes");
+            retObjectGetNonUnicodeBytes = classInstance.Invoke("GetNonUnicodeBytes");
+            JCObject resultingObjects = (JCObject)retObjectGetNonUnicodeBytes;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -261,6 +263,8 @@ public class SqlString extends ValueType implements system.xml.serialization.IXm
 				resultingArray[indexGetNonUnicodeBytes] = (byte)resultingArrayList.get(indexGetNonUnicodeBytes);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectGetNonUnicodeBytes != null ? retObjectGetNonUnicodeBytes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -268,10 +272,12 @@ public class SqlString extends ValueType implements system.xml.serialization.IXm
 
     public byte[] GetUnicodeBytes() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetUnicodeBytes = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetUnicodeBytes");
+            retObjectGetUnicodeBytes = classInstance.Invoke("GetUnicodeBytes");
+            JCObject resultingObjects = (JCObject)retObjectGetUnicodeBytes;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -280,6 +286,8 @@ public class SqlString extends ValueType implements system.xml.serialization.IXm
 				resultingArray[indexGetUnicodeBytes] = (byte)resultingArrayList.get(indexGetUnicodeBytes);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectGetUnicodeBytes != null ? retObjectGetUnicodeBytes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -287,9 +295,20 @@ public class SqlString extends ValueType implements system.xml.serialization.IXm
 
     public int CompareTo(SqlString value) throws Throwable, system.data.sqltypes.SqlTypeException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCompareTo = null;
         try {
-            return (int)classInstance.Invoke("CompareTo", value == null ? null : value.getJCOInstance());
+            retObjectCompareTo = classInstance.Invoke("CompareTo", value == null ? null : value.getJCOInstance());
+            return (int)retObjectCompareTo;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCompareTo_ToString = retObjectCompareTo == null ? "null" : retObjectCompareTo.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectCompareToNumber = (java.lang.Number)retObjectCompareTo;
+                return retObjectCompareToNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCompareTo != null ? retObjectCompareTo.getClass() : "null", retObjectCompareTo_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -297,9 +316,20 @@ public class SqlString extends ValueType implements system.xml.serialization.IXm
 
     public int CompareTo(NetObject value) throws Throwable, system.data.sqltypes.SqlTypeException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCompareTo = null;
         try {
-            return (int)classInstance.Invoke("CompareTo", value == null ? null : value.getJCOInstance());
+            retObjectCompareTo = classInstance.Invoke("CompareTo", value == null ? null : value.getJCOInstance());
+            return (int)retObjectCompareTo;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCompareTo_ToString = retObjectCompareTo == null ? "null" : retObjectCompareTo.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectCompareToNumber = (java.lang.Number)retObjectCompareTo;
+                return retObjectCompareToNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCompareTo != null ? retObjectCompareTo.getClass() : "null", retObjectCompareTo_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -307,10 +337,14 @@ public class SqlString extends ValueType implements system.xml.serialization.IXm
 
     public static SqlBoolean Equals(SqlString x, SqlString y) throws Throwable, system.data.sqltypes.SqlTypeException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectEquals = null;
         try {
-            JCObject objEquals = (JCObject)classType.Invoke("Equals", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            retObjectEquals = classType.Invoke("Equals", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            JCObject objEquals = (JCObject)retObjectEquals;
             return new SqlBoolean(objEquals);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEquals != null ? retObjectEquals.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -318,10 +352,14 @@ public class SqlString extends ValueType implements system.xml.serialization.IXm
 
     public static SqlBoolean GreaterThan(SqlString x, SqlString y) throws Throwable, system.data.sqltypes.SqlTypeException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGreaterThan = null;
         try {
-            JCObject objGreaterThan = (JCObject)classType.Invoke("GreaterThan", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            retObjectGreaterThan = classType.Invoke("GreaterThan", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            JCObject objGreaterThan = (JCObject)retObjectGreaterThan;
             return new SqlBoolean(objGreaterThan);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGreaterThan != null ? retObjectGreaterThan.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -329,10 +367,14 @@ public class SqlString extends ValueType implements system.xml.serialization.IXm
 
     public static SqlBoolean GreaterThanOrEqual(SqlString x, SqlString y) throws Throwable, system.data.sqltypes.SqlTypeException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGreaterThanOrEqual = null;
         try {
-            JCObject objGreaterThanOrEqual = (JCObject)classType.Invoke("GreaterThanOrEqual", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            retObjectGreaterThanOrEqual = classType.Invoke("GreaterThanOrEqual", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            JCObject objGreaterThanOrEqual = (JCObject)retObjectGreaterThanOrEqual;
             return new SqlBoolean(objGreaterThanOrEqual);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGreaterThanOrEqual != null ? retObjectGreaterThanOrEqual.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -340,10 +382,14 @@ public class SqlString extends ValueType implements system.xml.serialization.IXm
 
     public static SqlBoolean LessThan(SqlString x, SqlString y) throws Throwable, system.data.sqltypes.SqlTypeException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLessThan = null;
         try {
-            JCObject objLessThan = (JCObject)classType.Invoke("LessThan", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            retObjectLessThan = classType.Invoke("LessThan", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            JCObject objLessThan = (JCObject)retObjectLessThan;
             return new SqlBoolean(objLessThan);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLessThan != null ? retObjectLessThan.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -351,10 +397,14 @@ public class SqlString extends ValueType implements system.xml.serialization.IXm
 
     public static SqlBoolean LessThanOrEqual(SqlString x, SqlString y) throws Throwable, system.data.sqltypes.SqlTypeException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLessThanOrEqual = null;
         try {
-            JCObject objLessThanOrEqual = (JCObject)classType.Invoke("LessThanOrEqual", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            retObjectLessThanOrEqual = classType.Invoke("LessThanOrEqual", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            JCObject objLessThanOrEqual = (JCObject)retObjectLessThanOrEqual;
             return new SqlBoolean(objLessThanOrEqual);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLessThanOrEqual != null ? retObjectLessThanOrEqual.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -362,10 +412,14 @@ public class SqlString extends ValueType implements system.xml.serialization.IXm
 
     public static SqlBoolean NotEquals(SqlString x, SqlString y) throws Throwable, system.data.sqltypes.SqlTypeException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectNotEquals = null;
         try {
-            JCObject objNotEquals = (JCObject)classType.Invoke("NotEquals", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            retObjectNotEquals = classType.Invoke("NotEquals", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            JCObject objNotEquals = (JCObject)retObjectNotEquals;
             return new SqlBoolean(objNotEquals);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNotEquals != null ? retObjectNotEquals.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -373,10 +427,14 @@ public class SqlString extends ValueType implements system.xml.serialization.IXm
 
     public SqlBoolean ToSqlBoolean() throws Throwable, system.data.sqltypes.SqlNullValueException, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.FormatException, system.InvalidOperationException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToSqlBoolean = null;
         try {
-            JCObject objToSqlBoolean = (JCObject)classInstance.Invoke("ToSqlBoolean");
+            retObjectToSqlBoolean = classInstance.Invoke("ToSqlBoolean");
+            JCObject objToSqlBoolean = (JCObject)retObjectToSqlBoolean;
             return new SqlBoolean(objToSqlBoolean);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToSqlBoolean != null ? retObjectToSqlBoolean.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -384,10 +442,14 @@ public class SqlString extends ValueType implements system.xml.serialization.IXm
 
     public SqlByte ToSqlByte() throws Throwable, system.data.sqltypes.SqlNullValueException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToSqlByte = null;
         try {
-            JCObject objToSqlByte = (JCObject)classInstance.Invoke("ToSqlByte");
+            retObjectToSqlByte = classInstance.Invoke("ToSqlByte");
+            JCObject objToSqlByte = (JCObject)retObjectToSqlByte;
             return new SqlByte(objToSqlByte);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToSqlByte != null ? retObjectToSqlByte.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -395,10 +457,14 @@ public class SqlString extends ValueType implements system.xml.serialization.IXm
 
     public SqlDateTime ToSqlDateTime() throws Throwable, system.data.sqltypes.SqlNullValueException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.OverflowException, system.FormatException, system.data.sqltypes.SqlTypeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToSqlDateTime = null;
         try {
-            JCObject objToSqlDateTime = (JCObject)classInstance.Invoke("ToSqlDateTime");
+            retObjectToSqlDateTime = classInstance.Invoke("ToSqlDateTime");
+            JCObject objToSqlDateTime = (JCObject)retObjectToSqlDateTime;
             return new SqlDateTime(objToSqlDateTime);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToSqlDateTime != null ? retObjectToSqlDateTime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -406,10 +472,14 @@ public class SqlString extends ValueType implements system.xml.serialization.IXm
 
     public SqlDecimal ToSqlDecimal() throws Throwable, system.data.sqltypes.SqlNullValueException, system.ArgumentNullException, system.FormatException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToSqlDecimal = null;
         try {
-            JCObject objToSqlDecimal = (JCObject)classInstance.Invoke("ToSqlDecimal");
+            retObjectToSqlDecimal = classInstance.Invoke("ToSqlDecimal");
+            JCObject objToSqlDecimal = (JCObject)retObjectToSqlDecimal;
             return new SqlDecimal(objToSqlDecimal);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToSqlDecimal != null ? retObjectToSqlDecimal.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -417,10 +487,14 @@ public class SqlString extends ValueType implements system.xml.serialization.IXm
 
     public SqlDouble ToSqlDouble() throws Throwable, system.data.sqltypes.SqlNullValueException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.FormatException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToSqlDouble = null;
         try {
-            JCObject objToSqlDouble = (JCObject)classInstance.Invoke("ToSqlDouble");
+            retObjectToSqlDouble = classInstance.Invoke("ToSqlDouble");
+            JCObject objToSqlDouble = (JCObject)retObjectToSqlDouble;
             return new SqlDouble(objToSqlDouble);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToSqlDouble != null ? retObjectToSqlDouble.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -428,10 +502,14 @@ public class SqlString extends ValueType implements system.xml.serialization.IXm
 
     public SqlGuid ToSqlGuid() throws Throwable, system.data.sqltypes.SqlNullValueException, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToSqlGuid = null;
         try {
-            JCObject objToSqlGuid = (JCObject)classInstance.Invoke("ToSqlGuid");
+            retObjectToSqlGuid = classInstance.Invoke("ToSqlGuid");
+            JCObject objToSqlGuid = (JCObject)retObjectToSqlGuid;
             return new SqlGuid(objToSqlGuid);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToSqlGuid != null ? retObjectToSqlGuid.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -439,10 +517,14 @@ public class SqlString extends ValueType implements system.xml.serialization.IXm
 
     public SqlInt16 ToSqlInt16() throws Throwable, system.data.sqltypes.SqlNullValueException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToSqlInt16 = null;
         try {
-            JCObject objToSqlInt16 = (JCObject)classInstance.Invoke("ToSqlInt16");
+            retObjectToSqlInt16 = classInstance.Invoke("ToSqlInt16");
+            JCObject objToSqlInt16 = (JCObject)retObjectToSqlInt16;
             return new SqlInt16(objToSqlInt16);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToSqlInt16 != null ? retObjectToSqlInt16.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -450,10 +532,14 @@ public class SqlString extends ValueType implements system.xml.serialization.IXm
 
     public SqlInt32 ToSqlInt32() throws Throwable, system.data.sqltypes.SqlNullValueException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToSqlInt32 = null;
         try {
-            JCObject objToSqlInt32 = (JCObject)classInstance.Invoke("ToSqlInt32");
+            retObjectToSqlInt32 = classInstance.Invoke("ToSqlInt32");
+            JCObject objToSqlInt32 = (JCObject)retObjectToSqlInt32;
             return new SqlInt32(objToSqlInt32);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToSqlInt32 != null ? retObjectToSqlInt32.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -461,10 +547,14 @@ public class SqlString extends ValueType implements system.xml.serialization.IXm
 
     public SqlInt64 ToSqlInt64() throws Throwable, system.data.sqltypes.SqlNullValueException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToSqlInt64 = null;
         try {
-            JCObject objToSqlInt64 = (JCObject)classInstance.Invoke("ToSqlInt64");
+            retObjectToSqlInt64 = classInstance.Invoke("ToSqlInt64");
+            JCObject objToSqlInt64 = (JCObject)retObjectToSqlInt64;
             return new SqlInt64(objToSqlInt64);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToSqlInt64 != null ? retObjectToSqlInt64.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -472,10 +562,14 @@ public class SqlString extends ValueType implements system.xml.serialization.IXm
 
     public SqlMoney ToSqlMoney() throws Throwable, system.data.sqltypes.SqlNullValueException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.OverflowException, system.data.sqltypes.SqlTruncateException, system.DivideByZeroException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToSqlMoney = null;
         try {
-            JCObject objToSqlMoney = (JCObject)classInstance.Invoke("ToSqlMoney");
+            retObjectToSqlMoney = classInstance.Invoke("ToSqlMoney");
+            JCObject objToSqlMoney = (JCObject)retObjectToSqlMoney;
             return new SqlMoney(objToSqlMoney);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToSqlMoney != null ? retObjectToSqlMoney.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -483,10 +577,14 @@ public class SqlString extends ValueType implements system.xml.serialization.IXm
 
     public SqlSingle ToSqlSingle() throws Throwable, system.data.sqltypes.SqlNullValueException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.FormatException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToSqlSingle = null;
         try {
-            JCObject objToSqlSingle = (JCObject)classInstance.Invoke("ToSqlSingle");
+            retObjectToSqlSingle = classInstance.Invoke("ToSqlSingle");
+            JCObject objToSqlSingle = (JCObject)retObjectToSqlSingle;
             return new SqlSingle(objToSqlSingle);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToSqlSingle != null ? retObjectToSqlSingle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -494,10 +592,14 @@ public class SqlString extends ValueType implements system.xml.serialization.IXm
 
     public static SqlString Add(SqlString x, SqlString y) throws Throwable, system.data.sqltypes.SqlTypeException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAdd = null;
         try {
-            JCObject objAdd = (JCObject)classType.Invoke("Add", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            retObjectAdd = classType.Invoke("Add", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            JCObject objAdd = (JCObject)retObjectAdd;
             return new SqlString(objAdd);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAdd != null ? retObjectAdd.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -505,10 +607,14 @@ public class SqlString extends ValueType implements system.xml.serialization.IXm
 
     public SqlString Clone() throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClone = null;
         try {
-            JCObject objClone = (JCObject)classInstance.Invoke("Clone");
+            retObjectClone = classInstance.Invoke("Clone");
+            JCObject objClone = (JCObject)retObjectClone;
             return new SqlString(objClone);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClone != null ? retObjectClone.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -516,10 +622,14 @@ public class SqlString extends ValueType implements system.xml.serialization.IXm
 
     public static SqlString Concat(SqlString x, SqlString y) throws Throwable, system.data.sqltypes.SqlTypeException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectConcat = null;
         try {
-            JCObject objConcat = (JCObject)classType.Invoke("Concat", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            retObjectConcat = classType.Invoke("Concat", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            JCObject objConcat = (JCObject)retObjectConcat;
             return new SqlString(objConcat);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConcat != null ? retObjectConcat.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -527,10 +637,14 @@ public class SqlString extends ValueType implements system.xml.serialization.IXm
 
     public static CompareOptions CompareOptionsFromSqlCompareOptions(SqlCompareOptions compareOptions) throws Throwable, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCompareOptionsFromSqlCompareOptions = null;
         try {
-            JCObject objCompareOptionsFromSqlCompareOptions = (JCObject)classType.Invoke("CompareOptionsFromSqlCompareOptions", compareOptions == null ? null : compareOptions.getJCOInstance());
+            retObjectCompareOptionsFromSqlCompareOptions = classType.Invoke("CompareOptionsFromSqlCompareOptions", compareOptions == null ? null : compareOptions.getJCOInstance());
+            JCObject objCompareOptionsFromSqlCompareOptions = (JCObject)retObjectCompareOptionsFromSqlCompareOptions;
             return new CompareOptions(objCompareOptionsFromSqlCompareOptions);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCompareOptionsFromSqlCompareOptions != null ? retObjectCompareOptionsFromSqlCompareOptions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -538,10 +652,14 @@ public class SqlString extends ValueType implements system.xml.serialization.IXm
 
     public static XmlQualifiedName GetXsdType(XmlSchemaSet schemaSet) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetXsdType = null;
         try {
-            JCObject objGetXsdType = (JCObject)classType.Invoke("GetXsdType", schemaSet == null ? null : schemaSet.getJCOInstance());
+            retObjectGetXsdType = classType.Invoke("GetXsdType", schemaSet == null ? null : schemaSet.getJCOInstance());
+            JCObject objGetXsdType = (JCObject)retObjectGetXsdType;
             return new XmlQualifiedName(objGetXsdType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetXsdType != null ? retObjectGetXsdType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -553,7 +671,7 @@ public class SqlString extends ValueType implements system.xml.serialization.IXm
      */
     @Deprecated 
     public XmlSchema GetSchema() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIXmlSerializable to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIXmlSerializable to obtain the full interface.");
     }
 
     /**
@@ -562,7 +680,7 @@ public class SqlString extends ValueType implements system.xml.serialization.IXm
      */
     @Deprecated 
     public void ReadXml(XmlReader reader) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIXmlSerializable to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIXmlSerializable to obtain the full interface.");
     }
 
     /**
@@ -571,7 +689,7 @@ public class SqlString extends ValueType implements system.xml.serialization.IXm
      */
     @Deprecated 
     public void WriteXml(XmlWriter writer) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIXmlSerializable to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIXmlSerializable to obtain the full interface.");
     }
 
 
@@ -580,9 +698,13 @@ public class SqlString extends ValueType implements system.xml.serialization.IXm
     
     public boolean getIsNull() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsNull = null;
         try {
-            return (boolean)classInstance.Get("IsNull");
+            retObjectIsNull = classInstance.Get("IsNull");
+            return (boolean)retObjectIsNull;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsNull != null ? retObjectIsNull.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -590,9 +712,20 @@ public class SqlString extends ValueType implements system.xml.serialization.IXm
 
     public int getLCID() throws Throwable, system.data.sqltypes.SqlNullValueException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLCID = null;
         try {
-            return (int)classInstance.Get("LCID");
+            retObjectLCID = classInstance.Get("LCID");
+            return (int)retObjectLCID;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectLCID_ToString = retObjectLCID == null ? "null" : retObjectLCID.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectLCIDNumber = (java.lang.Number)retObjectLCID;
+                return retObjectLCIDNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectLCID != null ? retObjectLCID.getClass() : "null", retObjectLCID_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -600,10 +733,14 @@ public class SqlString extends ValueType implements system.xml.serialization.IXm
 
     public SqlCompareOptions getSqlCompareOptions() throws Throwable, system.data.sqltypes.SqlNullValueException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSqlCompareOptions = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SqlCompareOptions");
+            retObjectSqlCompareOptions = classInstance.Get("SqlCompareOptions");
+            JCObject val = (JCObject)retObjectSqlCompareOptions;
             return new SqlCompareOptions(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSqlCompareOptions != null ? retObjectSqlCompareOptions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -611,10 +748,14 @@ public class SqlString extends ValueType implements system.xml.serialization.IXm
 
     public CompareInfo getCompareInfo() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.OutOfMemoryException, system.ArgumentException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.data.sqltypes.SqlNullValueException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCompareInfo = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CompareInfo");
+            retObjectCompareInfo = classInstance.Get("CompareInfo");
+            JCObject val = (JCObject)retObjectCompareInfo;
             return new CompareInfo(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCompareInfo != null ? retObjectCompareInfo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -622,10 +763,14 @@ public class SqlString extends ValueType implements system.xml.serialization.IXm
 
     public CultureInfo getCultureInfo() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.OutOfMemoryException, system.ArgumentException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.NullReferenceException, system.data.sqltypes.SqlNullValueException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCultureInfo = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CultureInfo");
+            retObjectCultureInfo = classInstance.Get("CultureInfo");
+            JCObject val = (JCObject)retObjectCultureInfo;
             return new CultureInfo(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCultureInfo != null ? retObjectCultureInfo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -633,9 +778,13 @@ public class SqlString extends ValueType implements system.xml.serialization.IXm
 
     public java.lang.String getValue() throws Throwable, system.data.sqltypes.SqlNullValueException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValue = null;
         try {
-            return (java.lang.String)classInstance.Get("Value");
+            retObjectValue = classInstance.Get("Value");
+            return (java.lang.String)retObjectValue;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectValue != null ? retObjectValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

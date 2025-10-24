@@ -159,9 +159,20 @@ public class SqlError extends NetObject  {
     
     public byte get_Class() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClass = null;
         try {
-            return (byte)classInstance.Get("Class");
+            retObjectClass = classInstance.Get("Class");
+            return (byte)retObjectClass;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectClass_ToString = retObjectClass == null ? "null" : retObjectClass.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectClassNumber = (java.lang.Number)retObjectClass;
+                return retObjectClassNumber.byteValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into byte and, as fallback solution, into java.lang.Number", retObjectClass != null ? retObjectClass.getClass() : "null", retObjectClass_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,9 +180,20 @@ public class SqlError extends NetObject  {
 
     public byte getState() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectState = null;
         try {
-            return (byte)classInstance.Get("State");
+            retObjectState = classInstance.Get("State");
+            return (byte)retObjectState;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectState_ToString = retObjectState == null ? "null" : retObjectState.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectStateNumber = (java.lang.Number)retObjectState;
+                return retObjectStateNumber.byteValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into byte and, as fallback solution, into java.lang.Number", retObjectState != null ? retObjectState.getClass() : "null", retObjectState_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,9 +201,20 @@ public class SqlError extends NetObject  {
 
     public int getLineNumber() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLineNumber = null;
         try {
-            return (int)classInstance.Get("LineNumber");
+            retObjectLineNumber = classInstance.Get("LineNumber");
+            return (int)retObjectLineNumber;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectLineNumber_ToString = retObjectLineNumber == null ? "null" : retObjectLineNumber.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectLineNumberNumber = (java.lang.Number)retObjectLineNumber;
+                return retObjectLineNumberNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectLineNumber != null ? retObjectLineNumber.getClass() : "null", retObjectLineNumber_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -189,9 +222,20 @@ public class SqlError extends NetObject  {
 
     public int getNumber() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNumber = null;
         try {
-            return (int)classInstance.Get("Number");
+            retObjectNumber = classInstance.Get("Number");
+            return (int)retObjectNumber;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectNumber_ToString = retObjectNumber == null ? "null" : retObjectNumber.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectNumberNumber = (java.lang.Number)retObjectNumber;
+                return retObjectNumberNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectNumber != null ? retObjectNumber.getClass() : "null", retObjectNumber_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -199,9 +243,13 @@ public class SqlError extends NetObject  {
 
     public java.lang.String getMessage() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMessage = null;
         try {
-            return (java.lang.String)classInstance.Get("Message");
+            retObjectMessage = classInstance.Get("Message");
+            return (java.lang.String)retObjectMessage;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectMessage != null ? retObjectMessage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -209,9 +257,13 @@ public class SqlError extends NetObject  {
 
     public java.lang.String getProcedure() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProcedure = null;
         try {
-            return (java.lang.String)classInstance.Get("Procedure");
+            retObjectProcedure = classInstance.Get("Procedure");
+            return (java.lang.String)retObjectProcedure;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectProcedure != null ? retObjectProcedure.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -219,9 +271,13 @@ public class SqlError extends NetObject  {
 
     public java.lang.String getServer() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectServer = null;
         try {
-            return (java.lang.String)classInstance.Get("Server");
+            retObjectServer = classInstance.Get("Server");
+            return (java.lang.String)retObjectServer;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectServer != null ? retObjectServer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -229,9 +285,13 @@ public class SqlError extends NetObject  {
 
     public java.lang.String getSource() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSource = null;
         try {
-            return (java.lang.String)classInstance.Get("Source");
+            retObjectSource = classInstance.Get("Source");
+            return (java.lang.String)retObjectSource;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSource != null ? retObjectSource.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

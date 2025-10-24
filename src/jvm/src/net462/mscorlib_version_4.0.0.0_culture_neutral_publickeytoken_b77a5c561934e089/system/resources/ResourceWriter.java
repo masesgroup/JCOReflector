@@ -176,7 +176,7 @@ public class ResourceWriter extends NetObject implements AutoCloseable {
     
     public void AddResource(java.lang.String name, byte[] value) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddResource", name, value);
         } catch (JCNativeException jcne) {
@@ -186,7 +186,7 @@ public class ResourceWriter extends NetObject implements AutoCloseable {
 
     public void AddResource(java.lang.String dupParam0, JCORefOut dupParam1) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddResource", dupParam0, dupParam1.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -196,7 +196,7 @@ public class ResourceWriter extends NetObject implements AutoCloseable {
 
     public void AddResource(java.lang.String name, Stream value) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddResource", name, value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -206,7 +206,7 @@ public class ResourceWriter extends NetObject implements AutoCloseable {
 
     public void AddResource(java.lang.String name, Stream value, boolean closeAfterWrite) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddResource", name, value == null ? null : value.getJCOInstance(), closeAfterWrite);
         } catch (JCNativeException jcne) {
@@ -216,7 +216,7 @@ public class ResourceWriter extends NetObject implements AutoCloseable {
 
     public void AddResource(java.lang.String name, NetObject value) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddResource", name, value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -226,7 +226,7 @@ public class ResourceWriter extends NetObject implements AutoCloseable {
 
     public void AddResource(java.lang.String name, java.lang.String value) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddResource", name, value);
         } catch (JCNativeException jcne) {
@@ -236,7 +236,7 @@ public class ResourceWriter extends NetObject implements AutoCloseable {
 
     public void AddResourceData(java.lang.String name, java.lang.String typeName, byte[] serializedData) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddResourceData", name, typeName, serializedData);
         } catch (JCNativeException jcne) {
@@ -246,7 +246,7 @@ public class ResourceWriter extends NetObject implements AutoCloseable {
 
     public void AddResourceData(java.lang.String dupParam0, java.lang.String dupParam1, JCORefOut dupParam2) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddResourceData", dupParam0, dupParam1, dupParam2.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -256,7 +256,7 @@ public class ResourceWriter extends NetObject implements AutoCloseable {
 
     public void Close() throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.UnauthorizedAccessException, system.NotSupportedException, system.ObjectDisposedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.SecurityException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.IndexOutOfRangeException, system.RankException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Close");
         } catch (JCNativeException jcne) {
@@ -266,7 +266,7 @@ public class ResourceWriter extends NetObject implements AutoCloseable {
 
     public void Dispose() throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.UnauthorizedAccessException, system.NotSupportedException, system.ObjectDisposedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.SecurityException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.IndexOutOfRangeException, system.RankException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
@@ -276,7 +276,7 @@ public class ResourceWriter extends NetObject implements AutoCloseable {
 
     public void Generate() throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.UnauthorizedAccessException, system.NotSupportedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.globalization.CultureNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NullReferenceException, system.security.SecurityException, system.OutOfMemoryException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.RankException, system.InvalidCastException, system.InvalidTimeZoneException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Generate");
         } catch (JCNativeException jcne) {
@@ -287,7 +287,7 @@ public class ResourceWriter extends NetObject implements AutoCloseable {
     public void close() throws Exception {
         try {
             if (classInstance == null)
-                throw new UnsupportedOperationException("classInstance is null.");
+                throw new java.lang.UnsupportedOperationException("classInstance is null.");
             try {
                 classInstance.Invoke("Dispose");
             }

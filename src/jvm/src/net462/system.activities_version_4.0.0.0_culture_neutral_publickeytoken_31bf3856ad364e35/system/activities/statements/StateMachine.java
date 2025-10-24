@@ -167,10 +167,14 @@ public class StateMachine extends NativeActivity  {
     
     public State getInitialState() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInitialState = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("InitialState");
+            retObjectInitialState = classInstance.Get("InitialState");
+            JCObject val = (JCObject)retObjectInitialState;
             return new State(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInitialState != null ? retObjectInitialState.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,7 +182,7 @@ public class StateMachine extends NativeActivity  {
 
     public void setInitialState(State InitialState) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("InitialState", InitialState == null ? null : InitialState.getJCOInstance());
         } catch (JCNativeException jcne) {

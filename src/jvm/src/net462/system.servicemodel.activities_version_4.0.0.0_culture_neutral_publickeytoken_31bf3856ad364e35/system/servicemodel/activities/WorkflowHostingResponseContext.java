@@ -155,7 +155,7 @@ public class WorkflowHostingResponseContext extends NetObject  {
     
     public void SendResponse(NetObject returnValue, NetObject[] outputs) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.transactions.TransactionException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SendResponse", returnValue == null ? null : returnValue.getJCOInstance(), toObjectFromArray(outputs));
         } catch (JCNativeException jcne) {

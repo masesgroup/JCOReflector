@@ -194,10 +194,12 @@ public class StylusPointCollection extends NetObjectEnumerable  {
     
     public int[] ToHiMetricArray() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToHiMetricArray = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("ToHiMetricArray");
+            retObjectToHiMetricArray = classInstance.Invoke("ToHiMetricArray");
+            JCObject resultingObjects = (JCObject)retObjectToHiMetricArray;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -206,6 +208,8 @@ public class StylusPointCollection extends NetObjectEnumerable  {
 				resultingArray[indexToHiMetricArray] = (int)resultingArrayList.get(indexToHiMetricArray);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectToHiMetricArray != null ? retObjectToHiMetricArray.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,10 +217,14 @@ public class StylusPointCollection extends NetObjectEnumerable  {
 
     public StylusPointCollection Clone() throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClone = null;
         try {
-            JCObject objClone = (JCObject)classInstance.Invoke("Clone");
+            retObjectClone = classInstance.Invoke("Clone");
+            JCObject objClone = (JCObject)retObjectClone;
             return new StylusPointCollection(objClone);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClone != null ? retObjectClone.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -224,10 +232,14 @@ public class StylusPointCollection extends NetObjectEnumerable  {
 
     public StylusPointCollection Reformat(StylusPointDescription subsetToReformatTo) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReformat = null;
         try {
-            JCObject objReformat = (JCObject)classInstance.Invoke("Reformat", subsetToReformatTo == null ? null : subsetToReformatTo.getJCOInstance());
+            retObjectReformat = classInstance.Invoke("Reformat", subsetToReformatTo == null ? null : subsetToReformatTo.getJCOInstance());
+            JCObject objReformat = (JCObject)retObjectReformat;
             return new StylusPointCollection(objReformat);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReformat != null ? retObjectReformat.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -235,7 +247,7 @@ public class StylusPointCollection extends NetObjectEnumerable  {
 
     public void Add(StylusPointCollection stylusPoints) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Add", stylusPoints == null ? null : stylusPoints.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -249,10 +261,14 @@ public class StylusPointCollection extends NetObjectEnumerable  {
     
     public StylusPointDescription getDescription() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDescription = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Description");
+            retObjectDescription = classInstance.Get("Description");
+            JCObject val = (JCObject)retObjectDescription;
             return new StylusPointDescription(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDescription != null ? retObjectDescription.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -265,7 +281,7 @@ public class StylusPointCollection extends NetObjectEnumerable  {
 
     public void addChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Changed", handler);
         } catch (JCNativeException jcne) {
@@ -275,7 +291,7 @@ public class StylusPointCollection extends NetObjectEnumerable  {
 
     public void removeChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Changed", handler);
         } catch (JCNativeException jcne) {

@@ -166,9 +166,20 @@ public class RepeatButton extends ButtonBase  {
     
     public int getDelay() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDelay = null;
         try {
-            return (int)classInstance.Get("Delay");
+            retObjectDelay = classInstance.Get("Delay");
+            return (int)retObjectDelay;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDelay_ToString = retObjectDelay == null ? "null" : retObjectDelay.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectDelayNumber = (java.lang.Number)retObjectDelay;
+                return retObjectDelayNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectDelay != null ? retObjectDelay.getClass() : "null", retObjectDelay_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,7 +187,7 @@ public class RepeatButton extends ButtonBase  {
 
     public void setDelay(int Delay) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Delay", Delay);
         } catch (JCNativeException jcne) {
@@ -186,9 +197,20 @@ public class RepeatButton extends ButtonBase  {
 
     public int getInterval() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInterval = null;
         try {
-            return (int)classInstance.Get("Interval");
+            retObjectInterval = classInstance.Get("Interval");
+            return (int)retObjectInterval;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectInterval_ToString = retObjectInterval == null ? "null" : retObjectInterval.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectIntervalNumber = (java.lang.Number)retObjectInterval;
+                return retObjectIntervalNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectInterval != null ? retObjectInterval.getClass() : "null", retObjectInterval_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,7 +218,7 @@ public class RepeatButton extends ButtonBase  {
 
     public void setInterval(int Interval) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Interval", Interval);
         } catch (JCNativeException jcne) {

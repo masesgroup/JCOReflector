@@ -170,10 +170,14 @@ public class SqlAuthenticationToken extends NetObject  {
     
     public DateTimeOffset getExpiresOn() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExpiresOn = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ExpiresOn");
+            retObjectExpiresOn = classInstance.Get("ExpiresOn");
+            JCObject val = (JCObject)retObjectExpiresOn;
             return new DateTimeOffset(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExpiresOn != null ? retObjectExpiresOn.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,9 +185,13 @@ public class SqlAuthenticationToken extends NetObject  {
 
     public java.lang.String getAccessToken() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAccessToken = null;
         try {
-            return (java.lang.String)classInstance.Get("AccessToken");
+            retObjectAccessToken = classInstance.Get("AccessToken");
+            return (java.lang.String)retObjectAccessToken;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectAccessToken != null ? retObjectAccessToken.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

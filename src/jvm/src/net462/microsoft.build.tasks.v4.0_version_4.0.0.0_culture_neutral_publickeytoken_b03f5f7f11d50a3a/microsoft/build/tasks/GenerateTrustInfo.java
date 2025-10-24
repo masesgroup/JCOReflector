@@ -164,9 +164,13 @@ public class GenerateTrustInfo extends TaskExtension  {
     
     public boolean Execute() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.OverflowException, system.io.PathTooLongException, system.NotSupportedException, system.NullReferenceException, system.security.SecurityException, system.io.IOException, system.xml.XmlException, system.xml.xpath.XPathException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExecute = null;
         try {
-            return (boolean)classInstance.Invoke("Execute");
+            retObjectExecute = classInstance.Invoke("Execute");
+            return (boolean)retObjectExecute;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectExecute != null ? retObjectExecute.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,10 +182,14 @@ public class GenerateTrustInfo extends TaskExtension  {
     
     public ITaskItem getBaseManifest() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBaseManifest = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("BaseManifest");
+            retObjectBaseManifest = classInstance.Get("BaseManifest");
+            JCObject val = (JCObject)retObjectBaseManifest;
             return new ITaskItemImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBaseManifest != null ? retObjectBaseManifest.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -189,7 +197,7 @@ public class GenerateTrustInfo extends TaskExtension  {
 
     public void setBaseManifest(ITaskItem BaseManifest) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BaseManifest", BaseManifest == null ? null : BaseManifest.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -199,10 +207,14 @@ public class GenerateTrustInfo extends TaskExtension  {
 
     public ITaskItem getTrustInfoFile() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTrustInfoFile = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TrustInfoFile");
+            retObjectTrustInfoFile = classInstance.Get("TrustInfoFile");
+            JCObject val = (JCObject)retObjectTrustInfoFile;
             return new ITaskItemImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTrustInfoFile != null ? retObjectTrustInfoFile.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -210,7 +222,7 @@ public class GenerateTrustInfo extends TaskExtension  {
 
     public void setTrustInfoFile(ITaskItem TrustInfoFile) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TrustInfoFile", TrustInfoFile == null ? null : TrustInfoFile.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -220,16 +232,20 @@ public class GenerateTrustInfo extends TaskExtension  {
 
     public final ITaskItem[] getApplicationDependencies() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectApplicationDependencies = null;
         try {
             ArrayList<ITaskItem> resultingArrayList = new ArrayList<ITaskItem>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("ApplicationDependencies");
+            retObjectApplicationDependencies = classInstance.Get("ApplicationDependencies");
+            JCObject resultingObjects = (JCObject)retObjectApplicationDependencies;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ITaskItemImplementation(resultingObject));
             }
             ITaskItem[] resultingArray = new ITaskItem[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectApplicationDependencies != null ? retObjectApplicationDependencies.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -237,7 +253,7 @@ public class GenerateTrustInfo extends TaskExtension  {
 
     public void setApplicationDependencies(ITaskItem[] ApplicationDependencies) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ApplicationDependencies", toObjectFromArray(ApplicationDependencies));
         } catch (JCNativeException jcne) {
@@ -247,9 +263,13 @@ public class GenerateTrustInfo extends TaskExtension  {
 
     public java.lang.String getExcludedPermissions() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExcludedPermissions = null;
         try {
-            return (java.lang.String)classInstance.Get("ExcludedPermissions");
+            retObjectExcludedPermissions = classInstance.Get("ExcludedPermissions");
+            return (java.lang.String)retObjectExcludedPermissions;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectExcludedPermissions != null ? retObjectExcludedPermissions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -257,7 +277,7 @@ public class GenerateTrustInfo extends TaskExtension  {
 
     public void setExcludedPermissions(java.lang.String ExcludedPermissions) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ExcludedPermissions", ExcludedPermissions);
         } catch (JCNativeException jcne) {
@@ -267,9 +287,13 @@ public class GenerateTrustInfo extends TaskExtension  {
 
     public java.lang.String getTargetFrameworkMoniker() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTargetFrameworkMoniker = null;
         try {
-            return (java.lang.String)classInstance.Get("TargetFrameworkMoniker");
+            retObjectTargetFrameworkMoniker = classInstance.Get("TargetFrameworkMoniker");
+            return (java.lang.String)retObjectTargetFrameworkMoniker;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectTargetFrameworkMoniker != null ? retObjectTargetFrameworkMoniker.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -277,7 +301,7 @@ public class GenerateTrustInfo extends TaskExtension  {
 
     public void setTargetFrameworkMoniker(java.lang.String TargetFrameworkMoniker) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TargetFrameworkMoniker", TargetFrameworkMoniker);
         } catch (JCNativeException jcne) {
@@ -287,9 +311,13 @@ public class GenerateTrustInfo extends TaskExtension  {
 
     public java.lang.String getTargetZone() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTargetZone = null;
         try {
-            return (java.lang.String)classInstance.Get("TargetZone");
+            retObjectTargetZone = classInstance.Get("TargetZone");
+            return (java.lang.String)retObjectTargetZone;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectTargetZone != null ? retObjectTargetZone.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -297,7 +325,7 @@ public class GenerateTrustInfo extends TaskExtension  {
 
     public void setTargetZone(java.lang.String TargetZone) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TargetZone", TargetZone);
         } catch (JCNativeException jcne) {

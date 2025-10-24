@@ -176,9 +176,13 @@ public class BinaryMessageEncodingBindingElement extends MessageEncodingBindingE
     
     public boolean ShouldSerializeMessageVersion() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShouldSerializeMessageVersion = null;
         try {
-            return (boolean)classInstance.Invoke("ShouldSerializeMessageVersion");
+            retObjectShouldSerializeMessageVersion = classInstance.Invoke("ShouldSerializeMessageVersion");
+            return (boolean)retObjectShouldSerializeMessageVersion;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectShouldSerializeMessageVersion != null ? retObjectShouldSerializeMessageVersion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,9 +190,13 @@ public class BinaryMessageEncodingBindingElement extends MessageEncodingBindingE
 
     public boolean ShouldSerializeReaderQuotas() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShouldSerializeReaderQuotas = null;
         try {
-            return (boolean)classInstance.Invoke("ShouldSerializeReaderQuotas");
+            retObjectShouldSerializeReaderQuotas = classInstance.Invoke("ShouldSerializeReaderQuotas");
+            return (boolean)retObjectShouldSerializeReaderQuotas;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectShouldSerializeReaderQuotas != null ? retObjectShouldSerializeReaderQuotas.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,10 +204,14 @@ public class BinaryMessageEncodingBindingElement extends MessageEncodingBindingE
 
     public BindingElement Clone() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClone = null;
         try {
-            JCObject objClone = (JCObject)classInstance.Invoke("Clone");
+            retObjectClone = classInstance.Invoke("Clone");
+            JCObject objClone = (JCObject)retObjectClone;
             return new BindingElement(objClone);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClone != null ? retObjectClone.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -207,10 +219,14 @@ public class BinaryMessageEncodingBindingElement extends MessageEncodingBindingE
 
     public MessageEncoderFactory CreateMessageEncoderFactory() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateMessageEncoderFactory = null;
         try {
-            JCObject objCreateMessageEncoderFactory = (JCObject)classInstance.Invoke("CreateMessageEncoderFactory");
+            retObjectCreateMessageEncoderFactory = classInstance.Invoke("CreateMessageEncoderFactory");
+            JCObject objCreateMessageEncoderFactory = (JCObject)retObjectCreateMessageEncoderFactory;
             return new MessageEncoderFactory(objCreateMessageEncoderFactory);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateMessageEncoderFactory != null ? retObjectCreateMessageEncoderFactory.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -222,7 +238,7 @@ public class BinaryMessageEncodingBindingElement extends MessageEncodingBindingE
      */
     @Deprecated 
     public void ExportContract(WsdlExporter exporter, WsdlContractConversionContext context) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIWsdlExportExtension to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIWsdlExportExtension to obtain the full interface.");
     }
 
     /**
@@ -231,7 +247,7 @@ public class BinaryMessageEncodingBindingElement extends MessageEncodingBindingE
      */
     @Deprecated 
     public void ExportEndpoint(WsdlExporter exporter, WsdlEndpointConversionContext context) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIWsdlExportExtension to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIWsdlExportExtension to obtain the full interface.");
     }
 
     /**
@@ -240,7 +256,7 @@ public class BinaryMessageEncodingBindingElement extends MessageEncodingBindingE
      */
     @Deprecated 
     public void ExportPolicy(MetadataExporter exporter, PolicyConversionContext context) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIPolicyExportExtension to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIPolicyExportExtension to obtain the full interface.");
     }
 
 
@@ -249,9 +265,20 @@ public class BinaryMessageEncodingBindingElement extends MessageEncodingBindingE
     
     public int getMaxReadPoolSize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxReadPoolSize = null;
         try {
-            return (int)classInstance.Get("MaxReadPoolSize");
+            retObjectMaxReadPoolSize = classInstance.Get("MaxReadPoolSize");
+            return (int)retObjectMaxReadPoolSize;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaxReadPoolSize_ToString = retObjectMaxReadPoolSize == null ? "null" : retObjectMaxReadPoolSize.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMaxReadPoolSizeNumber = (java.lang.Number)retObjectMaxReadPoolSize;
+                return retObjectMaxReadPoolSizeNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxReadPoolSize != null ? retObjectMaxReadPoolSize.getClass() : "null", retObjectMaxReadPoolSize_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -259,7 +286,7 @@ public class BinaryMessageEncodingBindingElement extends MessageEncodingBindingE
 
     public void setMaxReadPoolSize(int MaxReadPoolSize) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaxReadPoolSize", MaxReadPoolSize);
         } catch (JCNativeException jcne) {
@@ -269,9 +296,20 @@ public class BinaryMessageEncodingBindingElement extends MessageEncodingBindingE
 
     public int getMaxSessionSize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxSessionSize = null;
         try {
-            return (int)classInstance.Get("MaxSessionSize");
+            retObjectMaxSessionSize = classInstance.Get("MaxSessionSize");
+            return (int)retObjectMaxSessionSize;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaxSessionSize_ToString = retObjectMaxSessionSize == null ? "null" : retObjectMaxSessionSize.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMaxSessionSizeNumber = (java.lang.Number)retObjectMaxSessionSize;
+                return retObjectMaxSessionSizeNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxSessionSize != null ? retObjectMaxSessionSize.getClass() : "null", retObjectMaxSessionSize_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -279,7 +317,7 @@ public class BinaryMessageEncodingBindingElement extends MessageEncodingBindingE
 
     public void setMaxSessionSize(int MaxSessionSize) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaxSessionSize", MaxSessionSize);
         } catch (JCNativeException jcne) {
@@ -289,9 +327,20 @@ public class BinaryMessageEncodingBindingElement extends MessageEncodingBindingE
 
     public int getMaxWritePoolSize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxWritePoolSize = null;
         try {
-            return (int)classInstance.Get("MaxWritePoolSize");
+            retObjectMaxWritePoolSize = classInstance.Get("MaxWritePoolSize");
+            return (int)retObjectMaxWritePoolSize;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaxWritePoolSize_ToString = retObjectMaxWritePoolSize == null ? "null" : retObjectMaxWritePoolSize.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMaxWritePoolSizeNumber = (java.lang.Number)retObjectMaxWritePoolSize;
+                return retObjectMaxWritePoolSizeNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxWritePoolSize != null ? retObjectMaxWritePoolSize.getClass() : "null", retObjectMaxWritePoolSize_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -299,7 +348,7 @@ public class BinaryMessageEncodingBindingElement extends MessageEncodingBindingE
 
     public void setMaxWritePoolSize(int MaxWritePoolSize) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaxWritePoolSize", MaxWritePoolSize);
         } catch (JCNativeException jcne) {
@@ -309,10 +358,14 @@ public class BinaryMessageEncodingBindingElement extends MessageEncodingBindingE
 
     public CompressionFormat getCompressionFormat() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCompressionFormat = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CompressionFormat");
+            retObjectCompressionFormat = classInstance.Get("CompressionFormat");
+            JCObject val = (JCObject)retObjectCompressionFormat;
             return new CompressionFormat(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCompressionFormat != null ? retObjectCompressionFormat.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -320,7 +373,7 @@ public class BinaryMessageEncodingBindingElement extends MessageEncodingBindingE
 
     public void setCompressionFormat(CompressionFormat CompressionFormat) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CompressionFormat", CompressionFormat == null ? null : CompressionFormat.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -330,10 +383,14 @@ public class BinaryMessageEncodingBindingElement extends MessageEncodingBindingE
 
     public XmlDictionaryReaderQuotas getReaderQuotas() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReaderQuotas = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ReaderQuotas");
+            retObjectReaderQuotas = classInstance.Get("ReaderQuotas");
+            JCObject val = (JCObject)retObjectReaderQuotas;
             return new XmlDictionaryReaderQuotas(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReaderQuotas != null ? retObjectReaderQuotas.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -341,7 +398,7 @@ public class BinaryMessageEncodingBindingElement extends MessageEncodingBindingE
 
     public void setReaderQuotas(XmlDictionaryReaderQuotas ReaderQuotas) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ReaderQuotas", ReaderQuotas == null ? null : ReaderQuotas.getJCOInstance());
         } catch (JCNativeException jcne) {

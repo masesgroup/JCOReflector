@@ -143,9 +143,13 @@ public class IAttachedPropertyStoreImplementation extends NetObject implements I
     
     public boolean RemoveProperty(AttachableMemberIdentifier attachableMemberIdentifier) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRemoveProperty = null;
         try {
-            return (boolean)classInstance.Invoke("RemoveProperty", attachableMemberIdentifier == null ? null : attachableMemberIdentifier.getJCOInstance());
+            retObjectRemoveProperty = classInstance.Invoke("RemoveProperty", attachableMemberIdentifier == null ? null : attachableMemberIdentifier.getJCOInstance());
+            return (boolean)retObjectRemoveProperty;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectRemoveProperty != null ? retObjectRemoveProperty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -153,9 +157,13 @@ public class IAttachedPropertyStoreImplementation extends NetObject implements I
 
     public boolean TryGetProperty(AttachableMemberIdentifier attachableMemberIdentifier, JCORefOut<NetObject> value) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryGetProperty = null;
         try {
-            return (boolean)classInstance.Invoke("TryGetProperty", attachableMemberIdentifier == null ? null : attachableMemberIdentifier.getJCOInstance(), value.getJCRefOut());
+            retObjectTryGetProperty = classInstance.Invoke("TryGetProperty", attachableMemberIdentifier == null ? null : attachableMemberIdentifier.getJCOInstance(), value.getJCRefOut());
+            return (boolean)retObjectTryGetProperty;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryGetProperty != null ? retObjectTryGetProperty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -163,7 +171,7 @@ public class IAttachedPropertyStoreImplementation extends NetObject implements I
 
     public void SetProperty(AttachableMemberIdentifier attachableMemberIdentifier, NetObject value) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetProperty", attachableMemberIdentifier == null ? null : attachableMemberIdentifier.getJCOInstance(), value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -177,9 +185,20 @@ public class IAttachedPropertyStoreImplementation extends NetObject implements I
     
     public int getPropertyCount() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPropertyCount = null;
         try {
-            return (int)classInstance.Get("PropertyCount");
+            retObjectPropertyCount = classInstance.Get("PropertyCount");
+            return (int)retObjectPropertyCount;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectPropertyCount_ToString = retObjectPropertyCount == null ? "null" : retObjectPropertyCount.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectPropertyCountNumber = (java.lang.Number)retObjectPropertyCount;
+                return retObjectPropertyCountNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectPropertyCount != null ? retObjectPropertyCount.getClass() : "null", retObjectPropertyCount_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

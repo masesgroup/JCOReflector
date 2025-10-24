@@ -162,9 +162,13 @@ public class FileExtensionsAttribute extends DataTypeAttribute  {
     
     public boolean IsValid(NetObject value) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsValid = null;
         try {
-            return (boolean)classInstance.Invoke("IsValid", value == null ? null : value.getJCOInstance());
+            retObjectIsValid = classInstance.Invoke("IsValid", value == null ? null : value.getJCOInstance());
+            return (boolean)retObjectIsValid;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsValid != null ? retObjectIsValid.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,9 +176,13 @@ public class FileExtensionsAttribute extends DataTypeAttribute  {
 
     public java.lang.String FormatErrorMessage(java.lang.String name) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFormatErrorMessage = null;
         try {
-            return (java.lang.String)classInstance.Invoke("FormatErrorMessage", name);
+            retObjectFormatErrorMessage = classInstance.Invoke("FormatErrorMessage", name);
+            return (java.lang.String)retObjectFormatErrorMessage;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectFormatErrorMessage != null ? retObjectFormatErrorMessage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,9 +194,13 @@ public class FileExtensionsAttribute extends DataTypeAttribute  {
     
     public java.lang.String getExtensions() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExtensions = null;
         try {
-            return (java.lang.String)classInstance.Get("Extensions");
+            retObjectExtensions = classInstance.Get("Extensions");
+            return (java.lang.String)retObjectExtensions;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectExtensions != null ? retObjectExtensions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,7 +208,7 @@ public class FileExtensionsAttribute extends DataTypeAttribute  {
 
     public void setExtensions(java.lang.String Extensions) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Extensions", Extensions);
         } catch (JCNativeException jcne) {

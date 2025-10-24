@@ -160,9 +160,13 @@ public class ButtonRenderer extends NetObject  {
     
     public static boolean IsBackgroundPartiallyTransparent(PushButtonState state) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsBackgroundPartiallyTransparent = null;
         try {
-            return (boolean)classType.Invoke("IsBackgroundPartiallyTransparent", state == null ? null : state.getJCOInstance());
+            retObjectIsBackgroundPartiallyTransparent = classType.Invoke("IsBackgroundPartiallyTransparent", state == null ? null : state.getJCOInstance());
+            return (boolean)retObjectIsBackgroundPartiallyTransparent;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsBackgroundPartiallyTransparent != null ? retObjectIsBackgroundPartiallyTransparent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,7 +174,7 @@ public class ButtonRenderer extends NetObject  {
 
     public static void DrawButton(Graphics g, Rectangle bounds, boolean focused, PushButtonState state) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.collections.generic.KeyNotFoundException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.componentmodel.InvalidEnumArgumentException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("DrawButton", g == null ? null : g.getJCOInstance(), bounds == null ? null : bounds.getJCOInstance(), focused, state == null ? null : state.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -180,7 +184,7 @@ public class ButtonRenderer extends NetObject  {
 
     public static void DrawButton(Graphics g, Rectangle bounds, Image image, Rectangle imageBounds, boolean focused, PushButtonState state) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.ArgumentNullException, system.componentmodel.Win32Exception, system.componentmodel.InvalidEnumArgumentException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("DrawButton", g == null ? null : g.getJCOInstance(), bounds == null ? null : bounds.getJCOInstance(), image == null ? null : image.getJCOInstance(), imageBounds == null ? null : imageBounds.getJCOInstance(), focused, state == null ? null : state.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -190,7 +194,7 @@ public class ButtonRenderer extends NetObject  {
 
     public static void DrawButton(Graphics g, Rectangle bounds, java.lang.String buttonText, Font font, boolean focused, PushButtonState state) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.collections.generic.KeyNotFoundException, system.componentmodel.Win32Exception, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("DrawButton", g == null ? null : g.getJCOInstance(), bounds == null ? null : bounds.getJCOInstance(), buttonText, font == null ? null : font.getJCOInstance(), focused, state == null ? null : state.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -200,7 +204,7 @@ public class ButtonRenderer extends NetObject  {
 
     public static void DrawButton(Graphics g, Rectangle bounds, java.lang.String buttonText, Font font, Image image, Rectangle imageBounds, boolean focused, PushButtonState state) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException, system.ArgumentNullException, system.componentmodel.Win32Exception, system.componentmodel.InvalidEnumArgumentException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("DrawButton", g == null ? null : g.getJCOInstance(), bounds == null ? null : bounds.getJCOInstance(), buttonText, font == null ? null : font.getJCOInstance(), image == null ? null : image.getJCOInstance(), imageBounds == null ? null : imageBounds.getJCOInstance(), focused, state == null ? null : state.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -210,7 +214,7 @@ public class ButtonRenderer extends NetObject  {
 
     public static void DrawButton(Graphics g, Rectangle bounds, java.lang.String buttonText, Font font, TextFormatFlags flags, boolean focused, PushButtonState state) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.ArgumentNullException, system.componentmodel.Win32Exception, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("DrawButton", g == null ? null : g.getJCOInstance(), bounds == null ? null : bounds.getJCOInstance(), buttonText, font == null ? null : font.getJCOInstance(), flags == null ? null : flags.getJCOInstance(), focused, state == null ? null : state.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -220,7 +224,7 @@ public class ButtonRenderer extends NetObject  {
 
     public static void DrawButton(Graphics g, Rectangle bounds, java.lang.String buttonText, Font font, TextFormatFlags flags, Image image, Rectangle imageBounds, boolean focused, PushButtonState state) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.collections.generic.KeyNotFoundException, system.componentmodel.Win32Exception, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("DrawButton", g == null ? null : g.getJCOInstance(), bounds == null ? null : bounds.getJCOInstance(), buttonText, font == null ? null : font.getJCOInstance(), flags == null ? null : flags.getJCOInstance(), image == null ? null : image.getJCOInstance(), imageBounds == null ? null : imageBounds.getJCOInstance(), focused, state == null ? null : state.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -230,7 +234,7 @@ public class ButtonRenderer extends NetObject  {
 
     public static void DrawButton(Graphics g, Rectangle bounds, PushButtonState state) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.collections.generic.KeyNotFoundException, system.componentmodel.Win32Exception, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("DrawButton", g == null ? null : g.getJCOInstance(), bounds == null ? null : bounds.getJCOInstance(), state == null ? null : state.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -240,7 +244,7 @@ public class ButtonRenderer extends NetObject  {
 
     public static void DrawParentBackground(Graphics g, Rectangle bounds, Control childControl) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.collections.generic.KeyNotFoundException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.NotSupportedException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("DrawParentBackground", g == null ? null : g.getJCOInstance(), bounds == null ? null : bounds.getJCOInstance(), childControl == null ? null : childControl.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -254,9 +258,13 @@ public class ButtonRenderer extends NetObject  {
     
     public static boolean getRenderMatchingApplicationState() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectRenderMatchingApplicationState = null;
         try {
-            return (boolean)classType.Get("RenderMatchingApplicationState");
+            retObjectRenderMatchingApplicationState = classType.Get("RenderMatchingApplicationState");
+            return (boolean)retObjectRenderMatchingApplicationState;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectRenderMatchingApplicationState != null ? retObjectRenderMatchingApplicationState.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -264,7 +272,7 @@ public class ButtonRenderer extends NetObject  {
 
     public static void setRenderMatchingApplicationState(boolean RenderMatchingApplicationState) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Set("RenderMatchingApplicationState", RenderMatchingApplicationState);
         } catch (JCNativeException jcne) {

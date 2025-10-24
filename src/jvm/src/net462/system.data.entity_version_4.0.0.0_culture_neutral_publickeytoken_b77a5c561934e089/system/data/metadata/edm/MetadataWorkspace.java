@@ -171,9 +171,13 @@ public class MetadataWorkspace extends NetObject  {
     
     public boolean TryGetEdmSpaceType(EnumType objectSpaceType, JCORefOut<EnumType> edmSpaceType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.data.MappingException, system.data.MetadataException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryGetEdmSpaceType = null;
         try {
-            return (boolean)classInstance.Invoke("TryGetEdmSpaceType", objectSpaceType == null ? null : objectSpaceType.getJCOInstance(), edmSpaceType.getJCRefOut());
+            retObjectTryGetEdmSpaceType = classInstance.Invoke("TryGetEdmSpaceType", objectSpaceType == null ? null : objectSpaceType.getJCOInstance(), edmSpaceType.getJCRefOut());
+            return (boolean)retObjectTryGetEdmSpaceType;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryGetEdmSpaceType != null ? retObjectTryGetEdmSpaceType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,9 +185,13 @@ public class MetadataWorkspace extends NetObject  {
 
     public boolean TryGetEdmSpaceType(StructuralType objectSpaceType, JCORefOut<StructuralType> edmSpaceType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.data.MappingException, system.data.MetadataException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryGetEdmSpaceType = null;
         try {
-            return (boolean)classInstance.Invoke("TryGetEdmSpaceType", objectSpaceType == null ? null : objectSpaceType.getJCOInstance(), edmSpaceType.getJCRefOut());
+            retObjectTryGetEdmSpaceType = classInstance.Invoke("TryGetEdmSpaceType", objectSpaceType == null ? null : objectSpaceType.getJCOInstance(), edmSpaceType.getJCRefOut());
+            return (boolean)retObjectTryGetEdmSpaceType;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryGetEdmSpaceType != null ? retObjectTryGetEdmSpaceType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,9 +199,13 @@ public class MetadataWorkspace extends NetObject  {
 
     public boolean TryGetEntityContainer(java.lang.String name, boolean ignoreCase, DataSpace dataSpace, JCORefOut<EntityContainer> entityContainer) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException, system.data.MappingException, system.OutOfMemoryException, system.data.MetadataException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryGetEntityContainer = null;
         try {
-            return (boolean)classInstance.Invoke("TryGetEntityContainer", name, ignoreCase, dataSpace == null ? null : dataSpace.getJCOInstance(), entityContainer.getJCRefOut());
+            retObjectTryGetEntityContainer = classInstance.Invoke("TryGetEntityContainer", name, ignoreCase, dataSpace == null ? null : dataSpace.getJCOInstance(), entityContainer.getJCRefOut());
+            return (boolean)retObjectTryGetEntityContainer;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryGetEntityContainer != null ? retObjectTryGetEntityContainer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,9 +213,13 @@ public class MetadataWorkspace extends NetObject  {
 
     public boolean TryGetEntityContainer(java.lang.String name, DataSpace dataSpace, JCORefOut<EntityContainer> entityContainer) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException, system.data.MappingException, system.OutOfMemoryException, system.data.MetadataException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryGetEntityContainer = null;
         try {
-            return (boolean)classInstance.Invoke("TryGetEntityContainer", name, dataSpace == null ? null : dataSpace.getJCOInstance(), entityContainer.getJCRefOut());
+            retObjectTryGetEntityContainer = classInstance.Invoke("TryGetEntityContainer", name, dataSpace == null ? null : dataSpace.getJCOInstance(), entityContainer.getJCRefOut());
+            return (boolean)retObjectTryGetEntityContainer;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryGetEntityContainer != null ? retObjectTryGetEntityContainer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -211,9 +227,13 @@ public class MetadataWorkspace extends NetObject  {
 
     public boolean TryGetItemCollection(DataSpace dataSpace, JCORefOut<ItemCollection> collection) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.IndexOutOfRangeException, system.data.MappingException, system.OutOfMemoryException, system.data.MetadataException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryGetItemCollection = null;
         try {
-            return (boolean)classInstance.Invoke("TryGetItemCollection", dataSpace == null ? null : dataSpace.getJCOInstance(), collection.getJCRefOut());
+            retObjectTryGetItemCollection = classInstance.Invoke("TryGetItemCollection", dataSpace == null ? null : dataSpace.getJCOInstance(), collection.getJCRefOut());
+            return (boolean)retObjectTryGetItemCollection;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryGetItemCollection != null ? retObjectTryGetItemCollection.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -221,9 +241,13 @@ public class MetadataWorkspace extends NetObject  {
 
     public boolean TryGetObjectSpaceType(EnumType edmSpaceType, JCORefOut<EnumType> objectSpaceType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.data.MappingException, system.data.MetadataException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryGetObjectSpaceType = null;
         try {
-            return (boolean)classInstance.Invoke("TryGetObjectSpaceType", edmSpaceType == null ? null : edmSpaceType.getJCOInstance(), objectSpaceType.getJCRefOut());
+            retObjectTryGetObjectSpaceType = classInstance.Invoke("TryGetObjectSpaceType", edmSpaceType == null ? null : edmSpaceType.getJCOInstance(), objectSpaceType.getJCRefOut());
+            return (boolean)retObjectTryGetObjectSpaceType;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryGetObjectSpaceType != null ? retObjectTryGetObjectSpaceType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -231,9 +255,13 @@ public class MetadataWorkspace extends NetObject  {
 
     public boolean TryGetObjectSpaceType(StructuralType edmSpaceType, JCORefOut<StructuralType> objectSpaceType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.data.MappingException, system.data.MetadataException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryGetObjectSpaceType = null;
         try {
-            return (boolean)classInstance.Invoke("TryGetObjectSpaceType", edmSpaceType == null ? null : edmSpaceType.getJCOInstance(), objectSpaceType.getJCRefOut());
+            retObjectTryGetObjectSpaceType = classInstance.Invoke("TryGetObjectSpaceType", edmSpaceType == null ? null : edmSpaceType.getJCOInstance(), objectSpaceType.getJCRefOut());
+            return (boolean)retObjectTryGetObjectSpaceType;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryGetObjectSpaceType != null ? retObjectTryGetObjectSpaceType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -241,9 +269,13 @@ public class MetadataWorkspace extends NetObject  {
 
     public boolean TryGetType(java.lang.String name, java.lang.String namespaceName, boolean ignoreCase, DataSpace dataSpace, JCORefOut<EdmType> type) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.IndexOutOfRangeException, system.data.MappingException, system.OutOfMemoryException, system.data.MetadataException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryGetType = null;
         try {
-            return (boolean)classInstance.Invoke("TryGetType", name, namespaceName, ignoreCase, dataSpace == null ? null : dataSpace.getJCOInstance(), type.getJCRefOut());
+            retObjectTryGetType = classInstance.Invoke("TryGetType", name, namespaceName, ignoreCase, dataSpace == null ? null : dataSpace.getJCOInstance(), type.getJCRefOut());
+            return (boolean)retObjectTryGetType;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryGetType != null ? retObjectTryGetType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -251,9 +283,13 @@ public class MetadataWorkspace extends NetObject  {
 
     public boolean TryGetType(java.lang.String name, java.lang.String namespaceName, DataSpace dataSpace, JCORefOut<EdmType> type) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.IndexOutOfRangeException, system.data.MappingException, system.OutOfMemoryException, system.data.MetadataException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryGetType = null;
         try {
-            return (boolean)classInstance.Invoke("TryGetType", name, namespaceName, dataSpace == null ? null : dataSpace.getJCOInstance(), type.getJCRefOut());
+            retObjectTryGetType = classInstance.Invoke("TryGetType", name, namespaceName, dataSpace == null ? null : dataSpace.getJCOInstance(), type.getJCRefOut());
+            return (boolean)retObjectTryGetType;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryGetType != null ? retObjectTryGetType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -261,10 +297,14 @@ public class MetadataWorkspace extends NetObject  {
 
     public DbQueryCommandTree CreateQueryCommandTree(DbExpression query) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.data.MappingException, system.data.MetadataException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateQueryCommandTree = null;
         try {
-            JCObject objCreateQueryCommandTree = (JCObject)classInstance.Invoke("CreateQueryCommandTree", query == null ? null : query.getJCOInstance());
+            retObjectCreateQueryCommandTree = classInstance.Invoke("CreateQueryCommandTree", query == null ? null : query.getJCOInstance());
+            JCObject objCreateQueryCommandTree = (JCObject)retObjectCreateQueryCommandTree;
             return new DbQueryCommandTree(objCreateQueryCommandTree);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateQueryCommandTree != null ? retObjectCreateQueryCommandTree.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -272,10 +312,14 @@ public class MetadataWorkspace extends NetObject  {
 
     public EntitySqlParser CreateEntitySqlParser() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateEntitySqlParser = null;
         try {
-            JCObject objCreateEntitySqlParser = (JCObject)classInstance.Invoke("CreateEntitySqlParser");
+            retObjectCreateEntitySqlParser = classInstance.Invoke("CreateEntitySqlParser");
+            JCObject objCreateEntitySqlParser = (JCObject)retObjectCreateEntitySqlParser;
             return new EntitySqlParser(objCreateEntitySqlParser);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateEntitySqlParser != null ? retObjectCreateEntitySqlParser.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -283,10 +327,14 @@ public class MetadataWorkspace extends NetObject  {
 
     public EdmType GetType(java.lang.String name, java.lang.String namespaceName, boolean ignoreCase, DataSpace dataSpace) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.IndexOutOfRangeException, system.data.MappingException, system.OutOfMemoryException, system.data.MetadataException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetType = null;
         try {
-            JCObject objGetType = (JCObject)classInstance.Invoke("GetType", name, namespaceName, ignoreCase, dataSpace == null ? null : dataSpace.getJCOInstance());
+            retObjectGetType = classInstance.Invoke("GetType", name, namespaceName, ignoreCase, dataSpace == null ? null : dataSpace.getJCOInstance());
+            JCObject objGetType = (JCObject)retObjectGetType;
             return new EdmType(objGetType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetType != null ? retObjectGetType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -294,10 +342,14 @@ public class MetadataWorkspace extends NetObject  {
 
     public EdmType GetType(java.lang.String name, java.lang.String namespaceName, DataSpace dataSpace) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.IndexOutOfRangeException, system.data.MappingException, system.OutOfMemoryException, system.data.MetadataException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetType = null;
         try {
-            JCObject objGetType = (JCObject)classInstance.Invoke("GetType", name, namespaceName, dataSpace == null ? null : dataSpace.getJCOInstance());
+            retObjectGetType = classInstance.Invoke("GetType", name, namespaceName, dataSpace == null ? null : dataSpace.getJCOInstance());
+            JCObject objGetType = (JCObject)retObjectGetType;
             return new EdmType(objGetType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetType != null ? retObjectGetType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -305,10 +357,14 @@ public class MetadataWorkspace extends NetObject  {
 
     public EntityContainer GetEntityContainer(java.lang.String name, boolean ignoreCase, DataSpace dataSpace) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.IndexOutOfRangeException, system.data.MappingException, system.OutOfMemoryException, system.data.MetadataException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetEntityContainer = null;
         try {
-            JCObject objGetEntityContainer = (JCObject)classInstance.Invoke("GetEntityContainer", name, ignoreCase, dataSpace == null ? null : dataSpace.getJCOInstance());
+            retObjectGetEntityContainer = classInstance.Invoke("GetEntityContainer", name, ignoreCase, dataSpace == null ? null : dataSpace.getJCOInstance());
+            JCObject objGetEntityContainer = (JCObject)retObjectGetEntityContainer;
             return new EntityContainer(objGetEntityContainer);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetEntityContainer != null ? retObjectGetEntityContainer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -316,10 +372,14 @@ public class MetadataWorkspace extends NetObject  {
 
     public EntityContainer GetEntityContainer(java.lang.String name, DataSpace dataSpace) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.IndexOutOfRangeException, system.data.MappingException, system.OutOfMemoryException, system.data.MetadataException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetEntityContainer = null;
         try {
-            JCObject objGetEntityContainer = (JCObject)classInstance.Invoke("GetEntityContainer", name, dataSpace == null ? null : dataSpace.getJCOInstance());
+            retObjectGetEntityContainer = classInstance.Invoke("GetEntityContainer", name, dataSpace == null ? null : dataSpace.getJCOInstance());
+            JCObject objGetEntityContainer = (JCObject)retObjectGetEntityContainer;
             return new EntityContainer(objGetEntityContainer);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetEntityContainer != null ? retObjectGetEntityContainer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -327,10 +387,14 @@ public class MetadataWorkspace extends NetObject  {
 
     public EnumType GetEdmSpaceType(EnumType objectSpaceType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.data.MappingException, system.data.MetadataException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetEdmSpaceType = null;
         try {
-            JCObject objGetEdmSpaceType = (JCObject)classInstance.Invoke("GetEdmSpaceType", objectSpaceType == null ? null : objectSpaceType.getJCOInstance());
+            retObjectGetEdmSpaceType = classInstance.Invoke("GetEdmSpaceType", objectSpaceType == null ? null : objectSpaceType.getJCOInstance());
+            JCObject objGetEdmSpaceType = (JCObject)retObjectGetEdmSpaceType;
             return new EnumType(objGetEdmSpaceType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetEdmSpaceType != null ? retObjectGetEdmSpaceType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -338,10 +402,14 @@ public class MetadataWorkspace extends NetObject  {
 
     public EnumType GetObjectSpaceType(EnumType edmSpaceType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.data.MappingException, system.data.MetadataException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetObjectSpaceType = null;
         try {
-            JCObject objGetObjectSpaceType = (JCObject)classInstance.Invoke("GetObjectSpaceType", edmSpaceType == null ? null : edmSpaceType.getJCOInstance());
+            retObjectGetObjectSpaceType = classInstance.Invoke("GetObjectSpaceType", edmSpaceType == null ? null : edmSpaceType.getJCOInstance());
+            JCObject objGetObjectSpaceType = (JCObject)retObjectGetObjectSpaceType;
             return new EnumType(objGetObjectSpaceType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetObjectSpaceType != null ? retObjectGetObjectSpaceType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -349,10 +417,14 @@ public class MetadataWorkspace extends NetObject  {
 
     public ItemCollection GetItemCollection(DataSpace dataSpace) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.IndexOutOfRangeException, system.data.MappingException, system.OutOfMemoryException, system.data.MetadataException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetItemCollection = null;
         try {
-            JCObject objGetItemCollection = (JCObject)classInstance.Invoke("GetItemCollection", dataSpace == null ? null : dataSpace.getJCOInstance());
+            retObjectGetItemCollection = classInstance.Invoke("GetItemCollection", dataSpace == null ? null : dataSpace.getJCOInstance());
+            JCObject objGetItemCollection = (JCObject)retObjectGetItemCollection;
             return new ItemCollection(objGetItemCollection);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetItemCollection != null ? retObjectGetItemCollection.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -360,10 +432,14 @@ public class MetadataWorkspace extends NetObject  {
 
     public StructuralType GetEdmSpaceType(StructuralType objectSpaceType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.data.MappingException, system.data.MetadataException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetEdmSpaceType = null;
         try {
-            JCObject objGetEdmSpaceType = (JCObject)classInstance.Invoke("GetEdmSpaceType", objectSpaceType == null ? null : objectSpaceType.getJCOInstance());
+            retObjectGetEdmSpaceType = classInstance.Invoke("GetEdmSpaceType", objectSpaceType == null ? null : objectSpaceType.getJCOInstance());
+            JCObject objGetEdmSpaceType = (JCObject)retObjectGetEdmSpaceType;
             return new StructuralType(objGetEdmSpaceType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetEdmSpaceType != null ? retObjectGetEdmSpaceType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -371,10 +447,14 @@ public class MetadataWorkspace extends NetObject  {
 
     public StructuralType GetObjectSpaceType(StructuralType edmSpaceType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.data.MappingException, system.data.MetadataException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetObjectSpaceType = null;
         try {
-            JCObject objGetObjectSpaceType = (JCObject)classInstance.Invoke("GetObjectSpaceType", edmSpaceType == null ? null : edmSpaceType.getJCOInstance());
+            retObjectGetObjectSpaceType = classInstance.Invoke("GetObjectSpaceType", edmSpaceType == null ? null : edmSpaceType.getJCOInstance());
+            JCObject objGetObjectSpaceType = (JCObject)retObjectGetObjectSpaceType;
             return new StructuralType(objGetObjectSpaceType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetObjectSpaceType != null ? retObjectGetObjectSpaceType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -382,7 +462,7 @@ public class MetadataWorkspace extends NetObject  {
 
     public static void ClearCache() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.data.MetadataException, system.NotSupportedException, system.io.FileNotFoundException, system.NotImplementedException, system.NullReferenceException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("ClearCache");
         } catch (JCNativeException jcne) {
@@ -392,7 +472,7 @@ public class MetadataWorkspace extends NetObject  {
 
     public void LoadFromAssembly(Assembly assembly) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.data.MappingException, system.InvalidOperationException, system.data.MetadataException, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("LoadFromAssembly", assembly == null ? null : assembly.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -402,7 +482,7 @@ public class MetadataWorkspace extends NetObject  {
 
     public void RegisterItemCollection(ItemCollection collection) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.data.MetadataException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RegisterItemCollection", collection == null ? null : collection.getJCOInstance());
         } catch (JCNativeException jcne) {

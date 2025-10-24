@@ -165,10 +165,12 @@ public class BitmapMetadataBlob extends NetObject  {
     
     public byte[] GetBlobValue() throws Throwable, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetBlobValue = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetBlobValue");
+            retObjectGetBlobValue = classInstance.Invoke("GetBlobValue");
+            JCObject resultingObjects = (JCObject)retObjectGetBlobValue;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -177,6 +179,8 @@ public class BitmapMetadataBlob extends NetObject  {
 				resultingArray[indexGetBlobValue] = (byte)resultingArrayList.get(indexGetBlobValue);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectGetBlobValue != null ? retObjectGetBlobValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

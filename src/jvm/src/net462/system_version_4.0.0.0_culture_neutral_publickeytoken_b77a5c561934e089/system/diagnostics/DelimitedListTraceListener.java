@@ -220,7 +220,7 @@ public class DelimitedListTraceListener extends TextWriterTraceListener  {
     
     public void TraceData(TraceEventCache eventCache, java.lang.String source, TraceEventType eventType, int id, NetObject data) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.resources.MissingManifestResourceException, system.PlatformNotSupportedException, system.NotSupportedException, system.NullReferenceException, system.componentmodel.Win32Exception, system.OverflowException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("TraceData", eventCache == null ? null : eventCache.getJCOInstance(), source, eventType == null ? null : eventType.getJCOInstance(), id, data == null ? null : data.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -230,7 +230,7 @@ public class DelimitedListTraceListener extends TextWriterTraceListener  {
 
     public void TraceData(TraceEventCache eventCache, java.lang.String source, TraceEventType eventType, int id, NetObject... data) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.resources.MissingManifestResourceException, system.PlatformNotSupportedException, system.NotSupportedException, system.NullReferenceException, system.componentmodel.Win32Exception, system.OverflowException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("TraceData", eventCache == null ? null : eventCache.getJCOInstance(), source, eventType == null ? null : eventType.getJCOInstance(), id, toObjectFromArray(data));
         } catch (JCNativeException jcne) {
@@ -240,7 +240,7 @@ public class DelimitedListTraceListener extends TextWriterTraceListener  {
 
     public void TraceEvent(TraceEventCache eventCache, java.lang.String source, TraceEventType eventType, int id, java.lang.String message) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.resources.MissingManifestResourceException, system.PlatformNotSupportedException, system.NotSupportedException, system.NullReferenceException, system.componentmodel.Win32Exception, system.OverflowException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("TraceEvent", eventCache == null ? null : eventCache.getJCOInstance(), source, eventType == null ? null : eventType.getJCOInstance(), id, message);
         } catch (JCNativeException jcne) {
@@ -250,7 +250,7 @@ public class DelimitedListTraceListener extends TextWriterTraceListener  {
 
     public void TraceEvent(TraceEventCache eventCache, java.lang.String source, TraceEventType eventType, int id, java.lang.String format, NetObject... args) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.resources.MissingManifestResourceException, system.PlatformNotSupportedException, system.NotSupportedException, system.NullReferenceException, system.componentmodel.Win32Exception, system.OverflowException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("TraceEvent", eventCache == null ? null : eventCache.getJCOInstance(), source, eventType == null ? null : eventType.getJCOInstance(), id, format, toObjectFromArray(args));
         } catch (JCNativeException jcne) {
@@ -264,9 +264,13 @@ public class DelimitedListTraceListener extends TextWriterTraceListener  {
     
     public java.lang.String getDelimiter() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDelimiter = null;
         try {
-            return (java.lang.String)classInstance.Get("Delimiter");
+            retObjectDelimiter = classInstance.Get("Delimiter");
+            return (java.lang.String)retObjectDelimiter;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDelimiter != null ? retObjectDelimiter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -274,7 +278,7 @@ public class DelimitedListTraceListener extends TextWriterTraceListener  {
 
     public void setDelimiter(java.lang.String Delimiter) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Delimiter", Delimiter);
         } catch (JCNativeException jcne) {

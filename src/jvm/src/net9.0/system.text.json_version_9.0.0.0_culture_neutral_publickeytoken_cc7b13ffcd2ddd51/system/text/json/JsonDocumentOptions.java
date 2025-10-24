@@ -161,9 +161,13 @@ public class JsonDocumentOptions extends ValueType  {
     
     public boolean getAllowTrailingCommas() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAllowTrailingCommas = null;
         try {
-            return (boolean)classInstance.Get("AllowTrailingCommas");
+            retObjectAllowTrailingCommas = classInstance.Get("AllowTrailingCommas");
+            return (boolean)retObjectAllowTrailingCommas;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAllowTrailingCommas != null ? retObjectAllowTrailingCommas.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,7 +175,7 @@ public class JsonDocumentOptions extends ValueType  {
 
     public void setAllowTrailingCommas(boolean AllowTrailingCommas) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AllowTrailingCommas", AllowTrailingCommas);
         } catch (JCNativeException jcne) {
@@ -181,9 +185,20 @@ public class JsonDocumentOptions extends ValueType  {
 
     public int getMaxDepth() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxDepth = null;
         try {
-            return (int)classInstance.Get("MaxDepth");
+            retObjectMaxDepth = classInstance.Get("MaxDepth");
+            return (int)retObjectMaxDepth;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaxDepth_ToString = retObjectMaxDepth == null ? "null" : retObjectMaxDepth.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMaxDepthNumber = (java.lang.Number)retObjectMaxDepth;
+                return retObjectMaxDepthNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxDepth != null ? retObjectMaxDepth.getClass() : "null", retObjectMaxDepth_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,7 +206,7 @@ public class JsonDocumentOptions extends ValueType  {
 
     public void setMaxDepth(int MaxDepth) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaxDepth", MaxDepth);
         } catch (JCNativeException jcne) {
@@ -201,10 +216,14 @@ public class JsonDocumentOptions extends ValueType  {
 
     public JsonCommentHandling getCommentHandling() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCommentHandling = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CommentHandling");
+            retObjectCommentHandling = classInstance.Get("CommentHandling");
+            JCObject val = (JCObject)retObjectCommentHandling;
             return new JsonCommentHandling(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCommentHandling != null ? retObjectCommentHandling.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -212,7 +231,7 @@ public class JsonDocumentOptions extends ValueType  {
 
     public void setCommentHandling(JsonCommentHandling CommentHandling) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CommentHandling", CommentHandling == null ? null : CommentHandling.getJCOInstance());
         } catch (JCNativeException jcne) {

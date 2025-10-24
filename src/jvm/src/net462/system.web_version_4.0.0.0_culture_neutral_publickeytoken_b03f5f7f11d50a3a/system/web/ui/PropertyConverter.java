@@ -154,10 +154,14 @@ public class PropertyConverter extends NetObject  {
     
     public static NetObject EnumFromString(NetType enumType, java.lang.String value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.InvalidCastException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.globalization.CultureNotFoundException, system.NullReferenceException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectEnumFromString = null;
         try {
-            JCObject objEnumFromString = (JCObject)classType.Invoke("EnumFromString", enumType == null ? null : enumType.getJCOInstance(), value);
+            retObjectEnumFromString = classType.Invoke("EnumFromString", enumType == null ? null : enumType.getJCOInstance(), value);
+            JCObject objEnumFromString = (JCObject)retObjectEnumFromString;
             return new NetObject(objEnumFromString);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEnumFromString != null ? retObjectEnumFromString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -165,10 +169,14 @@ public class PropertyConverter extends NetObject  {
 
     public static NetObject ObjectFromString(NetType objType, MemberInfo propertyInfo, java.lang.String value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.InvalidCastException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.web.HttpException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectObjectFromString = null;
         try {
-            JCObject objObjectFromString = (JCObject)classType.Invoke("ObjectFromString", objType == null ? null : objType.getJCOInstance(), propertyInfo == null ? null : propertyInfo.getJCOInstance(), value);
+            retObjectObjectFromString = classType.Invoke("ObjectFromString", objType == null ? null : objType.getJCOInstance(), propertyInfo == null ? null : propertyInfo.getJCOInstance(), value);
+            JCObject objObjectFromString = (JCObject)retObjectObjectFromString;
             return new NetObject(objObjectFromString);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectObjectFromString != null ? retObjectObjectFromString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,9 +184,13 @@ public class PropertyConverter extends NetObject  {
 
     public static java.lang.String EnumToString(NetType enumType, NetObject enumValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectEnumToString = null;
         try {
-            return (java.lang.String)classType.Invoke("EnumToString", enumType == null ? null : enumType.getJCOInstance(), enumValue == null ? null : enumValue.getJCOInstance());
+            retObjectEnumToString = classType.Invoke("EnumToString", enumType == null ? null : enumType.getJCOInstance(), enumValue == null ? null : enumValue.getJCOInstance());
+            return (java.lang.String)retObjectEnumToString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectEnumToString != null ? retObjectEnumToString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

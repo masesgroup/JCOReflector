@@ -200,10 +200,14 @@ public class WindowsIdentity extends ClaimsIdentity implements system.runtime.se
     
     public ClaimsIdentity Clone() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.FormatException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClone = null;
         try {
-            JCObject objClone = (JCObject)classInstance.Invoke("Clone");
+            retObjectClone = classInstance.Invoke("Clone");
+            JCObject objClone = (JCObject)retObjectClone;
             return new ClaimsIdentity(objClone);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClone != null ? retObjectClone.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -211,10 +215,14 @@ public class WindowsIdentity extends ClaimsIdentity implements system.runtime.se
 
     public static WindowsIdentity GetAnonymous() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetAnonymous = null;
         try {
-            JCObject objGetAnonymous = (JCObject)classType.Invoke("GetAnonymous");
+            retObjectGetAnonymous = classType.Invoke("GetAnonymous");
+            JCObject objGetAnonymous = (JCObject)retObjectGetAnonymous;
             return new WindowsIdentity(objGetAnonymous);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetAnonymous != null ? retObjectGetAnonymous.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -222,10 +230,14 @@ public class WindowsIdentity extends ClaimsIdentity implements system.runtime.se
 
     public static WindowsIdentity GetCurrent() throws Throwable, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.ArgumentNullException, system.security.SecurityException, system.ArgumentException, system.InvalidOperationException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetCurrent = null;
         try {
-            JCObject objGetCurrent = (JCObject)classType.Invoke("GetCurrent");
+            retObjectGetCurrent = classType.Invoke("GetCurrent");
+            JCObject objGetCurrent = (JCObject)retObjectGetCurrent;
             return new WindowsIdentity(objGetCurrent);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCurrent != null ? retObjectGetCurrent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -233,10 +245,14 @@ public class WindowsIdentity extends ClaimsIdentity implements system.runtime.se
 
     public static WindowsIdentity GetCurrent(boolean ifImpersonating) throws Throwable, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.ArgumentNullException, system.security.SecurityException, system.ArgumentException, system.InvalidOperationException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetCurrent = null;
         try {
-            JCObject objGetCurrent = (JCObject)classType.Invoke("GetCurrent", ifImpersonating);
+            retObjectGetCurrent = classType.Invoke("GetCurrent", ifImpersonating);
+            JCObject objGetCurrent = (JCObject)retObjectGetCurrent;
             return new WindowsIdentity(objGetCurrent);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCurrent != null ? retObjectGetCurrent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -244,10 +260,14 @@ public class WindowsIdentity extends ClaimsIdentity implements system.runtime.se
 
     public static WindowsIdentity GetCurrent(TokenAccessLevels desiredAccess) throws Throwable, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.ArgumentNullException, system.security.SecurityException, system.ArgumentException, system.InvalidOperationException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetCurrent = null;
         try {
-            JCObject objGetCurrent = (JCObject)classType.Invoke("GetCurrent", desiredAccess == null ? null : desiredAccess.getJCOInstance());
+            retObjectGetCurrent = classType.Invoke("GetCurrent", desiredAccess == null ? null : desiredAccess.getJCOInstance());
+            JCObject objGetCurrent = (JCObject)retObjectGetCurrent;
             return new WindowsIdentity(objGetCurrent);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCurrent != null ? retObjectGetCurrent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -255,10 +275,14 @@ public class WindowsIdentity extends ClaimsIdentity implements system.runtime.se
 
     public WindowsImpersonationContext Impersonate() throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.ArgumentNullException, system.security.SecurityException, system.ArgumentException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectImpersonate = null;
         try {
-            JCObject objImpersonate = (JCObject)classInstance.Invoke("Impersonate");
+            retObjectImpersonate = classInstance.Invoke("Impersonate");
+            JCObject objImpersonate = (JCObject)retObjectImpersonate;
             return new WindowsImpersonationContext(objImpersonate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectImpersonate != null ? retObjectImpersonate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -266,7 +290,7 @@ public class WindowsIdentity extends ClaimsIdentity implements system.runtime.se
 
     public void Dispose() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
@@ -276,7 +300,7 @@ public class WindowsIdentity extends ClaimsIdentity implements system.runtime.se
 
     public static void RunImpersonated(SafeAccessTokenHandle safeAccessTokenHandle, Action action) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.security.SecurityException, system.NullReferenceException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("RunImpersonated", safeAccessTokenHandle == null ? null : safeAccessTokenHandle.getJCOInstance(), action);
         } catch (JCNativeException jcne) {
@@ -290,7 +314,7 @@ public class WindowsIdentity extends ClaimsIdentity implements system.runtime.se
      */
     @Deprecated 
     public void GetObjectData(SerializationInfo info, StreamingContext context) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToISerializable to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToISerializable to obtain the full interface.");
     }
 
     /**
@@ -299,13 +323,13 @@ public class WindowsIdentity extends ClaimsIdentity implements system.runtime.se
      */
     @Deprecated 
     public void OnDeserialization(NetObject sender) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDeserializationCallback to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDeserializationCallback to obtain the full interface.");
     }
 
     public void close() throws Exception {
         try {
             if (classInstance == null)
-                throw new UnsupportedOperationException("classInstance is null.");
+                throw new java.lang.UnsupportedOperationException("classInstance is null.");
             try {
                 classInstance.Invoke("Dispose");
             }
@@ -321,9 +345,13 @@ public class WindowsIdentity extends ClaimsIdentity implements system.runtime.se
     
     public boolean getIsAnonymous() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.security.SecurityException, system.AccessViolationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsAnonymous = null;
         try {
-            return (boolean)classInstance.Get("IsAnonymous");
+            retObjectIsAnonymous = classInstance.Get("IsAnonymous");
+            return (boolean)retObjectIsAnonymous;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsAnonymous != null ? retObjectIsAnonymous.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -331,9 +359,13 @@ public class WindowsIdentity extends ClaimsIdentity implements system.runtime.se
 
     public boolean getIsGuest() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsGuest = null;
         try {
-            return (boolean)classInstance.Get("IsGuest");
+            retObjectIsGuest = classInstance.Get("IsGuest");
+            return (boolean)retObjectIsGuest;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsGuest != null ? retObjectIsGuest.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -341,9 +373,13 @@ public class WindowsIdentity extends ClaimsIdentity implements system.runtime.se
 
     public boolean getIsSystem() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.security.SecurityException, system.AccessViolationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsSystem = null;
         try {
-            return (boolean)classInstance.Get("IsSystem");
+            retObjectIsSystem = classInstance.Get("IsSystem");
+            return (boolean)retObjectIsSystem;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsSystem != null ? retObjectIsSystem.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -351,10 +387,14 @@ public class WindowsIdentity extends ClaimsIdentity implements system.runtime.se
 
     public SafeAccessTokenHandle getAccessToken() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAccessToken = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AccessToken");
+            retObjectAccessToken = classInstance.Get("AccessToken");
+            JCObject val = (JCObject)retObjectAccessToken;
             return new SafeAccessTokenHandle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAccessToken != null ? retObjectAccessToken.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -362,10 +402,14 @@ public class WindowsIdentity extends ClaimsIdentity implements system.runtime.se
 
     public IdentityReferenceCollection getGroups() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.OutOfMemoryException, system.security.SecurityException, system.AccessViolationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGroups = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Groups");
+            retObjectGroups = classInstance.Get("Groups");
+            JCObject val = (JCObject)retObjectGroups;
             return new IdentityReferenceCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGroups != null ? retObjectGroups.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -373,10 +417,14 @@ public class WindowsIdentity extends ClaimsIdentity implements system.runtime.se
 
     public SecurityIdentifier getOwner() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.AccessViolationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOwner = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Owner");
+            retObjectOwner = classInstance.Get("Owner");
+            JCObject val = (JCObject)retObjectOwner;
             return new SecurityIdentifier(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOwner != null ? retObjectOwner.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -384,10 +432,14 @@ public class WindowsIdentity extends ClaimsIdentity implements system.runtime.se
 
     public SecurityIdentifier getUser() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.AccessViolationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUser = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("User");
+            retObjectUser = classInstance.Get("User");
+            JCObject val = (JCObject)retObjectUser;
             return new SecurityIdentifier(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUser != null ? retObjectUser.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -395,10 +447,14 @@ public class WindowsIdentity extends ClaimsIdentity implements system.runtime.se
 
     public TokenImpersonationLevel getImpersonationLevel() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectImpersonationLevel = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ImpersonationLevel");
+            retObjectImpersonationLevel = classInstance.Get("ImpersonationLevel");
+            JCObject val = (JCObject)retObjectImpersonationLevel;
             return new TokenImpersonationLevel(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectImpersonationLevel != null ? retObjectImpersonationLevel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

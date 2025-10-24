@@ -190,10 +190,14 @@ public class ResourceManager extends NetObject  {
     
     public UnmanagedMemoryStream GetStream(java.lang.String name) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.diagnostics.tracing.EventSourceException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetStream = null;
         try {
-            JCObject objGetStream = (JCObject)classInstance.Invoke("GetStream", name);
+            retObjectGetStream = classInstance.Invoke("GetStream", name);
+            JCObject objGetStream = (JCObject)retObjectGetStream;
             return new UnmanagedMemoryStream(objGetStream);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetStream != null ? retObjectGetStream.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,10 +205,14 @@ public class ResourceManager extends NetObject  {
 
     public UnmanagedMemoryStream GetStream(java.lang.String name, CultureInfo culture) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetStream = null;
         try {
-            JCObject objGetStream = (JCObject)classInstance.Invoke("GetStream", name, culture == null ? null : culture.getJCOInstance());
+            retObjectGetStream = classInstance.Invoke("GetStream", name, culture == null ? null : culture.getJCOInstance());
+            JCObject objGetStream = (JCObject)retObjectGetStream;
             return new UnmanagedMemoryStream(objGetStream);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetStream != null ? retObjectGetStream.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -212,10 +220,14 @@ public class ResourceManager extends NetObject  {
 
     public NetObject GetObject(java.lang.String name) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetObject = null;
         try {
-            JCObject objGetObject = (JCObject)classInstance.Invoke("GetObject", name);
+            retObjectGetObject = classInstance.Invoke("GetObject", name);
+            JCObject objGetObject = (JCObject)retObjectGetObject;
             return new NetObject(objGetObject);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetObject != null ? retObjectGetObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -223,10 +235,14 @@ public class ResourceManager extends NetObject  {
 
     public NetObject GetObject(java.lang.String name, CultureInfo culture) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetObject = null;
         try {
-            JCObject objGetObject = (JCObject)classInstance.Invoke("GetObject", name, culture == null ? null : culture.getJCOInstance());
+            retObjectGetObject = classInstance.Invoke("GetObject", name, culture == null ? null : culture.getJCOInstance());
+            JCObject objGetObject = (JCObject)retObjectGetObject;
             return new NetObject(objGetObject);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetObject != null ? retObjectGetObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -234,10 +250,14 @@ public class ResourceManager extends NetObject  {
 
     public static ResourceManager CreateFileBasedResourceManager(java.lang.String baseName, java.lang.String resourceDir, NetType usingResourceSet) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.NotImplementedException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateFileBasedResourceManager = null;
         try {
-            JCObject objCreateFileBasedResourceManager = (JCObject)classType.Invoke("CreateFileBasedResourceManager", baseName, resourceDir, usingResourceSet == null ? null : usingResourceSet.getJCOInstance());
+            retObjectCreateFileBasedResourceManager = classType.Invoke("CreateFileBasedResourceManager", baseName, resourceDir, usingResourceSet == null ? null : usingResourceSet.getJCOInstance());
+            JCObject objCreateFileBasedResourceManager = (JCObject)retObjectCreateFileBasedResourceManager;
             return new ResourceManager(objCreateFileBasedResourceManager);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateFileBasedResourceManager != null ? retObjectCreateFileBasedResourceManager.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -245,10 +265,14 @@ public class ResourceManager extends NetObject  {
 
     public ResourceSet GetResourceSet(CultureInfo culture, boolean createIfNotExists, boolean tryParents) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotImplementedException, system.ObjectDisposedException, system.io.EndOfStreamException, system.io.IOException, system.OutOfMemoryException, system.NotSupportedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.BadImageFormatException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.TypeLoadException, system.diagnostics.tracing.EventSourceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetResourceSet = null;
         try {
-            JCObject objGetResourceSet = (JCObject)classInstance.Invoke("GetResourceSet", culture == null ? null : culture.getJCOInstance(), createIfNotExists, tryParents);
+            retObjectGetResourceSet = classInstance.Invoke("GetResourceSet", culture == null ? null : culture.getJCOInstance(), createIfNotExists, tryParents);
+            JCObject objGetResourceSet = (JCObject)retObjectGetResourceSet;
             return new ResourceSet(objGetResourceSet);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetResourceSet != null ? retObjectGetResourceSet.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -256,9 +280,13 @@ public class ResourceManager extends NetObject  {
 
     public java.lang.String GetString(java.lang.String name) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetString = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetString", name);
+            retObjectGetString = classInstance.Invoke("GetString", name);
+            return (java.lang.String)retObjectGetString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetString != null ? retObjectGetString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -266,9 +294,13 @@ public class ResourceManager extends NetObject  {
 
     public java.lang.String GetString(java.lang.String name, CultureInfo culture) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.IndexOutOfRangeException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetString = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetString", name, culture == null ? null : culture.getJCOInstance());
+            retObjectGetString = classInstance.Invoke("GetString", name, culture == null ? null : culture.getJCOInstance());
+            return (java.lang.String)retObjectGetString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetString != null ? retObjectGetString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -276,7 +308,7 @@ public class ResourceManager extends NetObject  {
 
     public void ReleaseAllResources() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.diagnostics.tracing.EventSourceException, system.ArgumentNullException, system.OutOfMemoryException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ReleaseAllResources");
         } catch (JCNativeException jcne) {
@@ -290,9 +322,13 @@ public class ResourceManager extends NetObject  {
     
     public boolean getIgnoreCase() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIgnoreCase = null;
         try {
-            return (boolean)classInstance.Get("IgnoreCase");
+            retObjectIgnoreCase = classInstance.Get("IgnoreCase");
+            return (boolean)retObjectIgnoreCase;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIgnoreCase != null ? retObjectIgnoreCase.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -300,7 +336,7 @@ public class ResourceManager extends NetObject  {
 
     public void setIgnoreCase(boolean IgnoreCase) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IgnoreCase", IgnoreCase);
         } catch (JCNativeException jcne) {
@@ -310,9 +346,13 @@ public class ResourceManager extends NetObject  {
 
     public java.lang.String getBaseName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBaseName = null;
         try {
-            return (java.lang.String)classInstance.Get("BaseName");
+            retObjectBaseName = classInstance.Get("BaseName");
+            return (java.lang.String)retObjectBaseName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectBaseName != null ? retObjectBaseName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -320,10 +360,14 @@ public class ResourceManager extends NetObject  {
 
     public NetType getResourceSetType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResourceSetType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ResourceSetType");
+            retObjectResourceSetType = classInstance.Get("ResourceSetType");
+            JCObject val = (JCObject)retObjectResourceSetType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectResourceSetType != null ? retObjectResourceSetType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

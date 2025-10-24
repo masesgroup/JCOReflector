@@ -167,9 +167,20 @@ public class TraceEventCache extends NetObject  {
     
     public int getProcessId() throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.NotSupportedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.AccessViolationException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProcessId = null;
         try {
-            return (int)classInstance.Get("ProcessId");
+            retObjectProcessId = classInstance.Get("ProcessId");
+            return (int)retObjectProcessId;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectProcessId_ToString = retObjectProcessId == null ? "null" : retObjectProcessId.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectProcessIdNumber = (java.lang.Number)retObjectProcessId;
+                return retObjectProcessIdNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectProcessId != null ? retObjectProcessId.getClass() : "null", retObjectProcessId_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,9 +188,20 @@ public class TraceEventCache extends NetObject  {
 
     public long getTimestamp() throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTimestamp = null;
         try {
-            return (long)classInstance.Get("Timestamp");
+            retObjectTimestamp = classInstance.Get("Timestamp");
+            return (long)retObjectTimestamp;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectTimestamp_ToString = retObjectTimestamp == null ? "null" : retObjectTimestamp.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectTimestampNumber = (java.lang.Number)retObjectTimestamp;
+                return retObjectTimestampNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectTimestamp != null ? retObjectTimestamp.getClass() : "null", retObjectTimestamp_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,10 +209,14 @@ public class TraceEventCache extends NetObject  {
 
     public Stack getLogicalOperationStack() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.security.SecurityException, system.InvalidOperationException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLogicalOperationStack = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("LogicalOperationStack");
+            retObjectLogicalOperationStack = classInstance.Get("LogicalOperationStack");
+            JCObject val = (JCObject)retObjectLogicalOperationStack;
             return new Stack(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLogicalOperationStack != null ? retObjectLogicalOperationStack.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,10 +224,14 @@ public class TraceEventCache extends NetObject  {
 
     public DateTime getDateTime() throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDateTime = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DateTime");
+            retObjectDateTime = classInstance.Get("DateTime");
+            JCObject val = (JCObject)retObjectDateTime;
             return new DateTime(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDateTime != null ? retObjectDateTime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -209,9 +239,13 @@ public class TraceEventCache extends NetObject  {
 
     public java.lang.String getCallstack() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.security.SecurityException, system.TypeLoadException, system.NotSupportedException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCallstack = null;
         try {
-            return (java.lang.String)classInstance.Get("Callstack");
+            retObjectCallstack = classInstance.Get("Callstack");
+            return (java.lang.String)retObjectCallstack;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectCallstack != null ? retObjectCallstack.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -219,9 +253,13 @@ public class TraceEventCache extends NetObject  {
 
     public java.lang.String getThreadId() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectThreadId = null;
         try {
-            return (java.lang.String)classInstance.Get("ThreadId");
+            retObjectThreadId = classInstance.Get("ThreadId");
+            return (java.lang.String)retObjectThreadId;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectThreadId != null ? retObjectThreadId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

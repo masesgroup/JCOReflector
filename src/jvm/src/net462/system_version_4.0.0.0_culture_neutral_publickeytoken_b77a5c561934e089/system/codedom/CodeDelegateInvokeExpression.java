@@ -187,10 +187,14 @@ public class CodeDelegateInvokeExpression extends CodeExpression  {
     
     public CodeExpression getTargetObject() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTargetObject = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TargetObject");
+            retObjectTargetObject = classInstance.Get("TargetObject");
+            JCObject val = (JCObject)retObjectTargetObject;
             return new CodeExpression(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTargetObject != null ? retObjectTargetObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,7 +202,7 @@ public class CodeDelegateInvokeExpression extends CodeExpression  {
 
     public void setTargetObject(CodeExpression TargetObject) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TargetObject", TargetObject == null ? null : TargetObject.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -208,10 +212,14 @@ public class CodeDelegateInvokeExpression extends CodeExpression  {
 
     public CodeExpressionCollection getParameters() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectParameters = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Parameters");
+            retObjectParameters = classInstance.Get("Parameters");
+            JCObject val = (JCObject)retObjectParameters;
             return new CodeExpressionCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParameters != null ? retObjectParameters.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

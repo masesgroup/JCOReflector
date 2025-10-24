@@ -168,7 +168,7 @@ public class PrintDialog extends NetObject  {
     
     public void PrintDocument(DocumentPaginator documentPaginator, java.lang.String description) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.security.SecurityException, system.NotImplementedException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.windows.controls.PrintDialogException, system.ArgumentOutOfRangeException, system.printing.PrintingNotSupportedException, system.printing.PrintQueueException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("PrintDocument", documentPaginator == null ? null : documentPaginator.getJCOInstance(), description);
         } catch (JCNativeException jcne) {
@@ -178,7 +178,7 @@ public class PrintDialog extends NetObject  {
 
     public void PrintVisual(Visual visual, java.lang.String description) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.security.SecurityException, system.NotImplementedException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.windows.controls.PrintDialogException, system.ArgumentOutOfRangeException, system.printing.PrintingNotSupportedException, system.printing.PrintQueueException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("PrintVisual", visual == null ? null : visual.getJCOInstance(), description);
         } catch (JCNativeException jcne) {
@@ -192,9 +192,13 @@ public class PrintDialog extends NetObject  {
     
     public boolean getCurrentPageEnabled() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCurrentPageEnabled = null;
         try {
-            return (boolean)classInstance.Get("CurrentPageEnabled");
+            retObjectCurrentPageEnabled = classInstance.Get("CurrentPageEnabled");
+            return (boolean)retObjectCurrentPageEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCurrentPageEnabled != null ? retObjectCurrentPageEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,7 +206,7 @@ public class PrintDialog extends NetObject  {
 
     public void setCurrentPageEnabled(boolean CurrentPageEnabled) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CurrentPageEnabled", CurrentPageEnabled);
         } catch (JCNativeException jcne) {
@@ -212,9 +216,13 @@ public class PrintDialog extends NetObject  {
 
     public boolean getSelectedPagesEnabled() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectedPagesEnabled = null;
         try {
-            return (boolean)classInstance.Get("SelectedPagesEnabled");
+            retObjectSelectedPagesEnabled = classInstance.Get("SelectedPagesEnabled");
+            return (boolean)retObjectSelectedPagesEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectSelectedPagesEnabled != null ? retObjectSelectedPagesEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -222,7 +230,7 @@ public class PrintDialog extends NetObject  {
 
     public void setSelectedPagesEnabled(boolean SelectedPagesEnabled) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SelectedPagesEnabled", SelectedPagesEnabled);
         } catch (JCNativeException jcne) {
@@ -232,9 +240,13 @@ public class PrintDialog extends NetObject  {
 
     public boolean getUserPageRangeEnabled() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUserPageRangeEnabled = null;
         try {
-            return (boolean)classInstance.Get("UserPageRangeEnabled");
+            retObjectUserPageRangeEnabled = classInstance.Get("UserPageRangeEnabled");
+            return (boolean)retObjectUserPageRangeEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectUserPageRangeEnabled != null ? retObjectUserPageRangeEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -242,7 +254,7 @@ public class PrintDialog extends NetObject  {
 
     public void setUserPageRangeEnabled(boolean UserPageRangeEnabled) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UserPageRangeEnabled", UserPageRangeEnabled);
         } catch (JCNativeException jcne) {
@@ -252,9 +264,20 @@ public class PrintDialog extends NetObject  {
 
     public double getPrintableAreaHeight() throws Throwable, system.ArgumentException, system.security.SecurityException, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.NotSupportedException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.windows.controls.PrintDialogException, system.ArgumentOutOfRangeException, system.printing.PrintingNotSupportedException, system.printing.PrintQueueException, system.componentmodel.Win32Exception, system.xml.XmlException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPrintableAreaHeight = null;
         try {
-            return (double)classInstance.Get("PrintableAreaHeight");
+            retObjectPrintableAreaHeight = classInstance.Get("PrintableAreaHeight");
+            return (double)retObjectPrintableAreaHeight;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectPrintableAreaHeight_ToString = retObjectPrintableAreaHeight == null ? "null" : retObjectPrintableAreaHeight.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectPrintableAreaHeightNumber = (java.lang.Number)retObjectPrintableAreaHeight;
+                return retObjectPrintableAreaHeightNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectPrintableAreaHeight != null ? retObjectPrintableAreaHeight.getClass() : "null", retObjectPrintableAreaHeight_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -262,9 +285,20 @@ public class PrintDialog extends NetObject  {
 
     public double getPrintableAreaWidth() throws Throwable, system.ArgumentException, system.security.SecurityException, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.NotSupportedException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.windows.controls.PrintDialogException, system.ArgumentOutOfRangeException, system.printing.PrintingNotSupportedException, system.printing.PrintQueueException, system.componentmodel.Win32Exception, system.xml.XmlException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPrintableAreaWidth = null;
         try {
-            return (double)classInstance.Get("PrintableAreaWidth");
+            retObjectPrintableAreaWidth = classInstance.Get("PrintableAreaWidth");
+            return (double)retObjectPrintableAreaWidth;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectPrintableAreaWidth_ToString = retObjectPrintableAreaWidth == null ? "null" : retObjectPrintableAreaWidth.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectPrintableAreaWidthNumber = (java.lang.Number)retObjectPrintableAreaWidth;
+                return retObjectPrintableAreaWidthNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectPrintableAreaWidth != null ? retObjectPrintableAreaWidth.getClass() : "null", retObjectPrintableAreaWidth_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -272,10 +306,14 @@ public class PrintDialog extends NetObject  {
 
     public PrintQueue getPrintQueue() throws Throwable, system.ArgumentException, system.security.SecurityException, system.InvalidOperationException, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NullReferenceException, system.resources.MissingManifestResourceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPrintQueue = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PrintQueue");
+            retObjectPrintQueue = classInstance.Get("PrintQueue");
+            JCObject val = (JCObject)retObjectPrintQueue;
             return new PrintQueue(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPrintQueue != null ? retObjectPrintQueue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -283,7 +321,7 @@ public class PrintDialog extends NetObject  {
 
     public void setPrintQueue(PrintQueue PrintQueue) throws Throwable, system.ArgumentException, system.security.SecurityException, system.InvalidOperationException, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PrintQueue", PrintQueue == null ? null : PrintQueue.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -293,10 +331,14 @@ public class PrintDialog extends NetObject  {
 
     public PrintTicket getPrintTicket() throws Throwable, system.ArgumentException, system.security.SecurityException, system.InvalidOperationException, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NullReferenceException, system.resources.MissingManifestResourceException, system.printing.PrintingNotSupportedException, system.printing.PrintQueueException, system.AccessViolationException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPrintTicket = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PrintTicket");
+            retObjectPrintTicket = classInstance.Get("PrintTicket");
+            JCObject val = (JCObject)retObjectPrintTicket;
             return new PrintTicket(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPrintTicket != null ? retObjectPrintTicket.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -304,7 +346,7 @@ public class PrintDialog extends NetObject  {
 
     public void setPrintTicket(PrintTicket PrintTicket) throws Throwable, system.ArgumentException, system.security.SecurityException, system.InvalidOperationException, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PrintTicket", PrintTicket == null ? null : PrintTicket.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -314,10 +356,14 @@ public class PrintDialog extends NetObject  {
 
     public PageRange getPageRange() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPageRange = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PageRange");
+            retObjectPageRange = classInstance.Get("PageRange");
+            JCObject val = (JCObject)retObjectPageRange;
             return new PageRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPageRange != null ? retObjectPageRange.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -325,7 +371,7 @@ public class PrintDialog extends NetObject  {
 
     public void setPageRange(PageRange PageRange) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PageRange", PageRange == null ? null : PageRange.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -335,10 +381,14 @@ public class PrintDialog extends NetObject  {
 
     public PageRangeSelection getPageRangeSelection() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPageRangeSelection = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PageRangeSelection");
+            retObjectPageRangeSelection = classInstance.Get("PageRangeSelection");
+            JCObject val = (JCObject)retObjectPageRangeSelection;
             return new PageRangeSelection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPageRangeSelection != null ? retObjectPageRangeSelection.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -346,7 +396,7 @@ public class PrintDialog extends NetObject  {
 
     public void setPageRangeSelection(PageRangeSelection PageRangeSelection) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PageRangeSelection", PageRangeSelection == null ? null : PageRangeSelection.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -356,10 +406,14 @@ public class PrintDialog extends NetObject  {
 
     public UInt32 getMaxPage() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxPage = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MaxPage");
+            retObjectMaxPage = classInstance.Get("MaxPage");
+            JCObject val = (JCObject)retObjectMaxPage;
             return new UInt32(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMaxPage != null ? retObjectMaxPage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -367,7 +421,7 @@ public class PrintDialog extends NetObject  {
 
     public void setMaxPage(UInt32 MaxPage) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaxPage", MaxPage == null ? null : MaxPage.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -377,10 +431,14 @@ public class PrintDialog extends NetObject  {
 
     public UInt32 getMinPage() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMinPage = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MinPage");
+            retObjectMinPage = classInstance.Get("MinPage");
+            JCObject val = (JCObject)retObjectMinPage;
             return new UInt32(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMinPage != null ? retObjectMinPage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -388,7 +446,7 @@ public class PrintDialog extends NetObject  {
 
     public void setMinPage(UInt32 MinPage) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MinPage", MinPage == null ? null : MinPage.getJCOInstance());
         } catch (JCNativeException jcne) {

@@ -167,9 +167,13 @@ public class ActivityBindTypeConverter extends TypeConverter  {
     
     public boolean CanConvertFrom(ITypeDescriptorContext context, NetType sourceType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.security.SecurityException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.NullReferenceException, system.resources.MissingManifestResourceException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanConvertFrom = null;
         try {
-            return (boolean)classInstance.Invoke("CanConvertFrom", context == null ? null : context.getJCOInstance(), sourceType == null ? null : sourceType.getJCOInstance());
+            retObjectCanConvertFrom = classInstance.Invoke("CanConvertFrom", context == null ? null : context.getJCOInstance(), sourceType == null ? null : sourceType.getJCOInstance());
+            return (boolean)retObjectCanConvertFrom;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCanConvertFrom != null ? retObjectCanConvertFrom.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,9 +181,13 @@ public class ActivityBindTypeConverter extends TypeConverter  {
 
     public boolean CanConvertTo(ITypeDescriptorContext context, NetType destinationType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.security.SecurityException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.NullReferenceException, system.resources.MissingManifestResourceException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanConvertTo = null;
         try {
-            return (boolean)classInstance.Invoke("CanConvertTo", context == null ? null : context.getJCOInstance(), destinationType == null ? null : destinationType.getJCOInstance());
+            retObjectCanConvertTo = classInstance.Invoke("CanConvertTo", context == null ? null : context.getJCOInstance(), destinationType == null ? null : destinationType.getJCOInstance());
+            return (boolean)retObjectCanConvertTo;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCanConvertTo != null ? retObjectCanConvertTo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,9 +195,13 @@ public class ActivityBindTypeConverter extends TypeConverter  {
 
     public boolean GetPropertiesSupported(ITypeDescriptorContext context) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.security.SecurityException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.NullReferenceException, system.resources.MissingManifestResourceException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPropertiesSupported = null;
         try {
-            return (boolean)classInstance.Invoke("GetPropertiesSupported", context == null ? null : context.getJCOInstance());
+            retObjectGetPropertiesSupported = classInstance.Invoke("GetPropertiesSupported", context == null ? null : context.getJCOInstance());
+            return (boolean)retObjectGetPropertiesSupported;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectGetPropertiesSupported != null ? retObjectGetPropertiesSupported.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,9 +209,13 @@ public class ActivityBindTypeConverter extends TypeConverter  {
 
     public boolean GetStandardValuesExclusive(ITypeDescriptorContext context) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.security.SecurityException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.NullReferenceException, system.resources.MissingManifestResourceException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetStandardValuesExclusive = null;
         try {
-            return (boolean)classInstance.Invoke("GetStandardValuesExclusive", context == null ? null : context.getJCOInstance());
+            retObjectGetStandardValuesExclusive = classInstance.Invoke("GetStandardValuesExclusive", context == null ? null : context.getJCOInstance());
+            return (boolean)retObjectGetStandardValuesExclusive;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectGetStandardValuesExclusive != null ? retObjectGetStandardValuesExclusive.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -207,9 +223,13 @@ public class ActivityBindTypeConverter extends TypeConverter  {
 
     public boolean GetStandardValuesSupported(ITypeDescriptorContext context) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.security.SecurityException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.NullReferenceException, system.resources.MissingManifestResourceException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetStandardValuesSupported = null;
         try {
-            return (boolean)classInstance.Invoke("GetStandardValuesSupported", context == null ? null : context.getJCOInstance());
+            retObjectGetStandardValuesSupported = classInstance.Invoke("GetStandardValuesSupported", context == null ? null : context.getJCOInstance());
+            return (boolean)retObjectGetStandardValuesSupported;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectGetStandardValuesSupported != null ? retObjectGetStandardValuesSupported.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -217,10 +237,14 @@ public class ActivityBindTypeConverter extends TypeConverter  {
 
     public PropertyDescriptorCollection GetProperties(ITypeDescriptorContext context, NetObject value, Attribute[] attributes) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.TypeLoadException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetProperties = null;
         try {
-            JCObject objGetProperties = (JCObject)classInstance.Invoke("GetProperties", context == null ? null : context.getJCOInstance(), value == null ? null : value.getJCOInstance(), toObjectFromArray(attributes));
+            retObjectGetProperties = classInstance.Invoke("GetProperties", context == null ? null : context.getJCOInstance(), value == null ? null : value.getJCOInstance(), toObjectFromArray(attributes));
+            JCObject objGetProperties = (JCObject)retObjectGetProperties;
             return new PropertyDescriptorCollection(objGetProperties);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetProperties != null ? retObjectGetProperties.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -228,10 +252,14 @@ public class ActivityBindTypeConverter extends TypeConverter  {
 
     public NetObject ConvertFrom(ITypeDescriptorContext context, CultureInfo culture, NetObject valueToConvert) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.security.SecurityException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConvertFrom = null;
         try {
-            JCObject objConvertFrom = (JCObject)classInstance.Invoke("ConvertFrom", context == null ? null : context.getJCOInstance(), culture == null ? null : culture.getJCOInstance(), valueToConvert == null ? null : valueToConvert.getJCOInstance());
+            retObjectConvertFrom = classInstance.Invoke("ConvertFrom", context == null ? null : context.getJCOInstance(), culture == null ? null : culture.getJCOInstance(), valueToConvert == null ? null : valueToConvert.getJCOInstance());
+            JCObject objConvertFrom = (JCObject)retObjectConvertFrom;
             return new NetObject(objConvertFrom);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConvertFrom != null ? retObjectConvertFrom.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -239,10 +267,14 @@ public class ActivityBindTypeConverter extends TypeConverter  {
 
     public NetObject ConvertTo(ITypeDescriptorContext context, CultureInfo culture, NetObject value, NetType destinationType) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.security.SecurityException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConvertTo = null;
         try {
-            JCObject objConvertTo = (JCObject)classInstance.Invoke("ConvertTo", context == null ? null : context.getJCOInstance(), culture == null ? null : culture.getJCOInstance(), value == null ? null : value.getJCOInstance(), destinationType == null ? null : destinationType.getJCOInstance());
+            retObjectConvertTo = classInstance.Invoke("ConvertTo", context == null ? null : context.getJCOInstance(), culture == null ? null : culture.getJCOInstance(), value == null ? null : value.getJCOInstance(), destinationType == null ? null : destinationType.getJCOInstance());
+            JCObject objConvertTo = (JCObject)retObjectConvertTo;
             return new NetObject(objConvertTo);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConvertTo != null ? retObjectConvertTo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

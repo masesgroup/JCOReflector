@@ -166,9 +166,13 @@ public class StringLengthAttribute extends ValidationAttribute  {
     
     public boolean IsValid(NetObject value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsValid = null;
         try {
-            return (boolean)classInstance.Invoke("IsValid", value == null ? null : value.getJCOInstance());
+            retObjectIsValid = classInstance.Invoke("IsValid", value == null ? null : value.getJCOInstance());
+            return (boolean)retObjectIsValid;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsValid != null ? retObjectIsValid.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,9 +180,13 @@ public class StringLengthAttribute extends ValidationAttribute  {
 
     public java.lang.String FormatErrorMessage(java.lang.String name) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.OutOfMemoryException, system.ArrayTypeMismatchException, system.FormatException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFormatErrorMessage = null;
         try {
-            return (java.lang.String)classInstance.Invoke("FormatErrorMessage", name);
+            retObjectFormatErrorMessage = classInstance.Invoke("FormatErrorMessage", name);
+            return (java.lang.String)retObjectFormatErrorMessage;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectFormatErrorMessage != null ? retObjectFormatErrorMessage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,9 +198,20 @@ public class StringLengthAttribute extends ValidationAttribute  {
     
     public int getMaximumLength() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaximumLength = null;
         try {
-            return (int)classInstance.Get("MaximumLength");
+            retObjectMaximumLength = classInstance.Get("MaximumLength");
+            return (int)retObjectMaximumLength;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMaximumLength_ToString = retObjectMaximumLength == null ? "null" : retObjectMaximumLength.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMaximumLengthNumber = (java.lang.Number)retObjectMaximumLength;
+                return retObjectMaximumLengthNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaximumLength != null ? retObjectMaximumLength.getClass() : "null", retObjectMaximumLength_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,9 +219,20 @@ public class StringLengthAttribute extends ValidationAttribute  {
 
     public int getMinimumLength() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMinimumLength = null;
         try {
-            return (int)classInstance.Get("MinimumLength");
+            retObjectMinimumLength = classInstance.Get("MinimumLength");
+            return (int)retObjectMinimumLength;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMinimumLength_ToString = retObjectMinimumLength == null ? "null" : retObjectMinimumLength.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMinimumLengthNumber = (java.lang.Number)retObjectMinimumLength;
+                return retObjectMinimumLengthNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMinimumLength != null ? retObjectMinimumLength.getClass() : "null", retObjectMinimumLength_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -210,7 +240,7 @@ public class StringLengthAttribute extends ValidationAttribute  {
 
     public void setMinimumLength(int MinimumLength) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MinimumLength", MinimumLength);
         } catch (JCNativeException jcne) {

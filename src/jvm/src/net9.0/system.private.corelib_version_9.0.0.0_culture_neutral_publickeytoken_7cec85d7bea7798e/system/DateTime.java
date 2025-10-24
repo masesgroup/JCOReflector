@@ -347,9 +347,13 @@ public class DateTime extends ValueType implements system.runtime.serialization.
     
     public static boolean Equals(DateTime t1, DateTime t2) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectEquals = null;
         try {
-            return (boolean)classType.Invoke("Equals", t1 == null ? null : t1.getJCOInstance(), t2 == null ? null : t2.getJCOInstance());
+            retObjectEquals = classType.Invoke("Equals", t1 == null ? null : t1.getJCOInstance(), t2 == null ? null : t2.getJCOInstance());
+            return (boolean)retObjectEquals;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectEquals != null ? retObjectEquals.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -357,9 +361,13 @@ public class DateTime extends ValueType implements system.runtime.serialization.
 
     public boolean Equals(DateTime value) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEquals = null;
         try {
-            return (boolean)classInstance.Invoke("Equals", value == null ? null : value.getJCOInstance());
+            retObjectEquals = classInstance.Invoke("Equals", value == null ? null : value.getJCOInstance());
+            return (boolean)retObjectEquals;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectEquals != null ? retObjectEquals.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -367,9 +375,13 @@ public class DateTime extends ValueType implements system.runtime.serialization.
 
     public boolean IsDaylightSavingTime() throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidTimeZoneException, system.globalization.CultureNotFoundException, system.ArgumentNullException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.NullReferenceException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsDaylightSavingTime = null;
         try {
-            return (boolean)classInstance.Invoke("IsDaylightSavingTime");
+            retObjectIsDaylightSavingTime = classInstance.Invoke("IsDaylightSavingTime");
+            return (boolean)retObjectIsDaylightSavingTime;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsDaylightSavingTime != null ? retObjectIsDaylightSavingTime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -377,9 +389,13 @@ public class DateTime extends ValueType implements system.runtime.serialization.
 
     public static boolean IsLeapYear(int year) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsLeapYear = null;
         try {
-            return (boolean)classType.Invoke("IsLeapYear", year);
+            retObjectIsLeapYear = classType.Invoke("IsLeapYear", year);
+            return (boolean)retObjectIsLeapYear;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsLeapYear != null ? retObjectIsLeapYear.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -387,9 +403,13 @@ public class DateTime extends ValueType implements system.runtime.serialization.
 
     public static boolean TryParse(java.lang.String s, JCORefOut<DateTime> result) throws Throwable, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.TypeInitializationException, system.InvalidOperationException, system.OverflowException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTryParse = null;
         try {
-            return (boolean)classType.Invoke("TryParse", s, result.getJCRefOut());
+            retObjectTryParse = classType.Invoke("TryParse", s, result.getJCRefOut());
+            return (boolean)retObjectTryParse;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryParse != null ? retObjectTryParse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -397,9 +417,13 @@ public class DateTime extends ValueType implements system.runtime.serialization.
 
     public static boolean TryParse(java.lang.String s, IFormatProvider provider, JCORefOut<DateTime> result) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.OutOfMemoryException, system.OverflowException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTryParse = null;
         try {
-            return (boolean)classType.Invoke("TryParse", s, provider == null ? null : provider.getJCOInstance(), result.getJCRefOut());
+            retObjectTryParse = classType.Invoke("TryParse", s, provider == null ? null : provider.getJCOInstance(), result.getJCRefOut());
+            return (boolean)retObjectTryParse;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryParse != null ? retObjectTryParse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -407,9 +431,13 @@ public class DateTime extends ValueType implements system.runtime.serialization.
 
     public static boolean TryParse(java.lang.String s, IFormatProvider provider, DateTimeStyles styles, JCORefOut<DateTime> result) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.TypeInitializationException, system.OverflowException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTryParse = null;
         try {
-            return (boolean)classType.Invoke("TryParse", s, provider == null ? null : provider.getJCOInstance(), styles == null ? null : styles.getJCOInstance(), result.getJCRefOut());
+            retObjectTryParse = classType.Invoke("TryParse", s, provider == null ? null : provider.getJCOInstance(), styles == null ? null : styles.getJCOInstance(), result.getJCRefOut());
+            return (boolean)retObjectTryParse;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryParse != null ? retObjectTryParse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -417,9 +445,13 @@ public class DateTime extends ValueType implements system.runtime.serialization.
 
     public static boolean TryParseExact(java.lang.String s, java.lang.String format, IFormatProvider provider, DateTimeStyles style, JCORefOut<DateTime> result) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.TypeInitializationException, system.OverflowException, system.OutOfMemoryException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTryParseExact = null;
         try {
-            return (boolean)classType.Invoke("TryParseExact", s, format, provider == null ? null : provider.getJCOInstance(), style == null ? null : style.getJCOInstance(), result.getJCRefOut());
+            retObjectTryParseExact = classType.Invoke("TryParseExact", s, format, provider == null ? null : provider.getJCOInstance(), style == null ? null : style.getJCOInstance(), result.getJCRefOut());
+            return (boolean)retObjectTryParseExact;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryParseExact != null ? retObjectTryParseExact.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -427,9 +459,13 @@ public class DateTime extends ValueType implements system.runtime.serialization.
 
     public static boolean TryParseExact(java.lang.String s, java.lang.String[] formats, IFormatProvider provider, DateTimeStyles style, JCORefOut<DateTime> result) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.TypeInitializationException, system.OverflowException, system.OutOfMemoryException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTryParseExact = null;
         try {
-            return (boolean)classType.Invoke("TryParseExact", s, formats, provider == null ? null : provider.getJCOInstance(), style == null ? null : style.getJCOInstance(), result.getJCRefOut());
+            retObjectTryParseExact = classType.Invoke("TryParseExact", s, formats, provider == null ? null : provider.getJCOInstance(), style == null ? null : style.getJCOInstance(), result.getJCRefOut());
+            return (boolean)retObjectTryParseExact;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryParseExact != null ? retObjectTryParseExact.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -437,9 +473,20 @@ public class DateTime extends ValueType implements system.runtime.serialization.
 
     public double ToOADate() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToOADate = null;
         try {
-            return (double)classInstance.Invoke("ToOADate");
+            retObjectToOADate = classInstance.Invoke("ToOADate");
+            return (double)retObjectToOADate;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectToOADate_ToString = retObjectToOADate == null ? "null" : retObjectToOADate.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectToOADateNumber = (java.lang.Number)retObjectToOADate;
+                return retObjectToOADateNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectToOADate != null ? retObjectToOADate.getClass() : "null", retObjectToOADate_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -447,9 +494,20 @@ public class DateTime extends ValueType implements system.runtime.serialization.
 
     public static int Compare(DateTime t1, DateTime t2) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCompare = null;
         try {
-            return (int)classType.Invoke("Compare", t1 == null ? null : t1.getJCOInstance(), t2 == null ? null : t2.getJCOInstance());
+            retObjectCompare = classType.Invoke("Compare", t1 == null ? null : t1.getJCOInstance(), t2 == null ? null : t2.getJCOInstance());
+            return (int)retObjectCompare;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCompare_ToString = retObjectCompare == null ? "null" : retObjectCompare.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectCompareNumber = (java.lang.Number)retObjectCompare;
+                return retObjectCompareNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCompare != null ? retObjectCompare.getClass() : "null", retObjectCompare_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -457,9 +515,20 @@ public class DateTime extends ValueType implements system.runtime.serialization.
 
     public int CompareTo(DateTime value) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCompareTo = null;
         try {
-            return (int)classInstance.Invoke("CompareTo", value == null ? null : value.getJCOInstance());
+            retObjectCompareTo = classInstance.Invoke("CompareTo", value == null ? null : value.getJCOInstance());
+            return (int)retObjectCompareTo;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCompareTo_ToString = retObjectCompareTo == null ? "null" : retObjectCompareTo.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectCompareToNumber = (java.lang.Number)retObjectCompareTo;
+                return retObjectCompareToNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCompareTo != null ? retObjectCompareTo.getClass() : "null", retObjectCompareTo_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -467,9 +536,20 @@ public class DateTime extends ValueType implements system.runtime.serialization.
 
     public int CompareTo(NetObject value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.IndexOutOfRangeException, system.RankException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCompareTo = null;
         try {
-            return (int)classInstance.Invoke("CompareTo", value == null ? null : value.getJCOInstance());
+            retObjectCompareTo = classInstance.Invoke("CompareTo", value == null ? null : value.getJCOInstance());
+            return (int)retObjectCompareTo;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCompareTo_ToString = retObjectCompareTo == null ? "null" : retObjectCompareTo.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectCompareToNumber = (java.lang.Number)retObjectCompareTo;
+                return retObjectCompareToNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCompareTo != null ? retObjectCompareTo.getClass() : "null", retObjectCompareTo_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -477,9 +557,20 @@ public class DateTime extends ValueType implements system.runtime.serialization.
 
     public static int DaysInMonth(int year, int month) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDaysInMonth = null;
         try {
-            return (int)classType.Invoke("DaysInMonth", year, month);
+            retObjectDaysInMonth = classType.Invoke("DaysInMonth", year, month);
+            return (int)retObjectDaysInMonth;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDaysInMonth_ToString = retObjectDaysInMonth == null ? "null" : retObjectDaysInMonth.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectDaysInMonthNumber = (java.lang.Number)retObjectDaysInMonth;
+                return retObjectDaysInMonthNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectDaysInMonth != null ? retObjectDaysInMonth.getClass() : "null", retObjectDaysInMonth_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -487,9 +578,20 @@ public class DateTime extends ValueType implements system.runtime.serialization.
 
     public long ToBinary() throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidTimeZoneException, system.globalization.CultureNotFoundException, system.ArgumentNullException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.NullReferenceException, system.IndexOutOfRangeException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToBinary = null;
         try {
-            return (long)classInstance.Invoke("ToBinary");
+            retObjectToBinary = classInstance.Invoke("ToBinary");
+            return (long)retObjectToBinary;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectToBinary_ToString = retObjectToBinary == null ? "null" : retObjectToBinary.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectToBinaryNumber = (java.lang.Number)retObjectToBinary;
+                return retObjectToBinaryNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectToBinary != null ? retObjectToBinary.getClass() : "null", retObjectToBinary_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -497,9 +599,20 @@ public class DateTime extends ValueType implements system.runtime.serialization.
 
     public long ToFileTime() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidTimeZoneException, system.InvalidOperationException, system.PlatformNotSupportedException, system.UnauthorizedAccessException, system.io.IOException, system.NullReferenceException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToFileTime = null;
         try {
-            return (long)classInstance.Invoke("ToFileTime");
+            retObjectToFileTime = classInstance.Invoke("ToFileTime");
+            return (long)retObjectToFileTime;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectToFileTime_ToString = retObjectToFileTime == null ? "null" : retObjectToFileTime.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectToFileTimeNumber = (java.lang.Number)retObjectToFileTime;
+                return retObjectToFileTimeNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectToFileTime != null ? retObjectToFileTime.getClass() : "null", retObjectToFileTime_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -507,9 +620,20 @@ public class DateTime extends ValueType implements system.runtime.serialization.
 
     public long ToFileTimeUtc() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidTimeZoneException, system.InvalidOperationException, system.PlatformNotSupportedException, system.UnauthorizedAccessException, system.io.IOException, system.NullReferenceException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToFileTimeUtc = null;
         try {
-            return (long)classInstance.Invoke("ToFileTimeUtc");
+            retObjectToFileTimeUtc = classInstance.Invoke("ToFileTimeUtc");
+            return (long)retObjectToFileTimeUtc;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectToFileTimeUtc_ToString = retObjectToFileTimeUtc == null ? "null" : retObjectToFileTimeUtc.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectToFileTimeUtcNumber = (java.lang.Number)retObjectToFileTimeUtc;
+                return retObjectToFileTimeUtcNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectToFileTimeUtc != null ? retObjectToFileTimeUtc.getClass() : "null", retObjectToFileTimeUtc_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -517,10 +641,14 @@ public class DateTime extends ValueType implements system.runtime.serialization.
 
     public DateTime Add(TimeSpan value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAdd = null;
         try {
-            JCObject objAdd = (JCObject)classInstance.Invoke("Add", value == null ? null : value.getJCOInstance());
+            retObjectAdd = classInstance.Invoke("Add", value == null ? null : value.getJCOInstance());
+            JCObject objAdd = (JCObject)retObjectAdd;
             return new DateTime(objAdd);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAdd != null ? retObjectAdd.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -528,10 +656,14 @@ public class DateTime extends ValueType implements system.runtime.serialization.
 
     public DateTime AddDays(double value) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddDays = null;
         try {
-            JCObject objAddDays = (JCObject)classInstance.Invoke("AddDays", value);
+            retObjectAddDays = classInstance.Invoke("AddDays", value);
+            JCObject objAddDays = (JCObject)retObjectAddDays;
             return new DateTime(objAddDays);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddDays != null ? retObjectAddDays.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -539,10 +671,14 @@ public class DateTime extends ValueType implements system.runtime.serialization.
 
     public DateTime AddHours(double value) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddHours = null;
         try {
-            JCObject objAddHours = (JCObject)classInstance.Invoke("AddHours", value);
+            retObjectAddHours = classInstance.Invoke("AddHours", value);
+            JCObject objAddHours = (JCObject)retObjectAddHours;
             return new DateTime(objAddHours);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddHours != null ? retObjectAddHours.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -550,10 +686,14 @@ public class DateTime extends ValueType implements system.runtime.serialization.
 
     public DateTime AddMicroseconds(double value) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddMicroseconds = null;
         try {
-            JCObject objAddMicroseconds = (JCObject)classInstance.Invoke("AddMicroseconds", value);
+            retObjectAddMicroseconds = classInstance.Invoke("AddMicroseconds", value);
+            JCObject objAddMicroseconds = (JCObject)retObjectAddMicroseconds;
             return new DateTime(objAddMicroseconds);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddMicroseconds != null ? retObjectAddMicroseconds.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -561,10 +701,14 @@ public class DateTime extends ValueType implements system.runtime.serialization.
 
     public DateTime AddMilliseconds(double value) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddMilliseconds = null;
         try {
-            JCObject objAddMilliseconds = (JCObject)classInstance.Invoke("AddMilliseconds", value);
+            retObjectAddMilliseconds = classInstance.Invoke("AddMilliseconds", value);
+            JCObject objAddMilliseconds = (JCObject)retObjectAddMilliseconds;
             return new DateTime(objAddMilliseconds);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddMilliseconds != null ? retObjectAddMilliseconds.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -572,10 +716,14 @@ public class DateTime extends ValueType implements system.runtime.serialization.
 
     public DateTime AddMinutes(double value) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddMinutes = null;
         try {
-            JCObject objAddMinutes = (JCObject)classInstance.Invoke("AddMinutes", value);
+            retObjectAddMinutes = classInstance.Invoke("AddMinutes", value);
+            JCObject objAddMinutes = (JCObject)retObjectAddMinutes;
             return new DateTime(objAddMinutes);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddMinutes != null ? retObjectAddMinutes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -583,10 +731,14 @@ public class DateTime extends ValueType implements system.runtime.serialization.
 
     public DateTime AddMonths(int months) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.IndexOutOfRangeException, system.RankException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddMonths = null;
         try {
-            JCObject objAddMonths = (JCObject)classInstance.Invoke("AddMonths", months);
+            retObjectAddMonths = classInstance.Invoke("AddMonths", months);
+            JCObject objAddMonths = (JCObject)retObjectAddMonths;
             return new DateTime(objAddMonths);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddMonths != null ? retObjectAddMonths.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -594,10 +746,14 @@ public class DateTime extends ValueType implements system.runtime.serialization.
 
     public DateTime AddSeconds(double value) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddSeconds = null;
         try {
-            JCObject objAddSeconds = (JCObject)classInstance.Invoke("AddSeconds", value);
+            retObjectAddSeconds = classInstance.Invoke("AddSeconds", value);
+            JCObject objAddSeconds = (JCObject)retObjectAddSeconds;
             return new DateTime(objAddSeconds);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddSeconds != null ? retObjectAddSeconds.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -605,10 +761,14 @@ public class DateTime extends ValueType implements system.runtime.serialization.
 
     public DateTime AddTicks(long value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddTicks = null;
         try {
-            JCObject objAddTicks = (JCObject)classInstance.Invoke("AddTicks", value);
+            retObjectAddTicks = classInstance.Invoke("AddTicks", value);
+            JCObject objAddTicks = (JCObject)retObjectAddTicks;
             return new DateTime(objAddTicks);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddTicks != null ? retObjectAddTicks.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -616,10 +776,14 @@ public class DateTime extends ValueType implements system.runtime.serialization.
 
     public DateTime AddYears(int value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.IndexOutOfRangeException, system.RankException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddYears = null;
         try {
-            JCObject objAddYears = (JCObject)classInstance.Invoke("AddYears", value);
+            retObjectAddYears = classInstance.Invoke("AddYears", value);
+            JCObject objAddYears = (JCObject)retObjectAddYears;
             return new DateTime(objAddYears);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddYears != null ? retObjectAddYears.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -627,10 +791,14 @@ public class DateTime extends ValueType implements system.runtime.serialization.
 
     public static DateTime FromBinary(long dateData) throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidTimeZoneException, system.globalization.CultureNotFoundException, system.ArgumentNullException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.NullReferenceException, system.IndexOutOfRangeException, system.OverflowException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFromBinary = null;
         try {
-            JCObject objFromBinary = (JCObject)classType.Invoke("FromBinary", dateData);
+            retObjectFromBinary = classType.Invoke("FromBinary", dateData);
+            JCObject objFromBinary = (JCObject)retObjectFromBinary;
             return new DateTime(objFromBinary);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFromBinary != null ? retObjectFromBinary.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -638,10 +806,14 @@ public class DateTime extends ValueType implements system.runtime.serialization.
 
     public static DateTime FromFileTime(long fileTime) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.InvalidTimeZoneException, system.UnauthorizedAccessException, system.io.IOException, system.OverflowException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFromFileTime = null;
         try {
-            JCObject objFromFileTime = (JCObject)classType.Invoke("FromFileTime", fileTime);
+            retObjectFromFileTime = classType.Invoke("FromFileTime", fileTime);
+            JCObject objFromFileTime = (JCObject)retObjectFromFileTime;
             return new DateTime(objFromFileTime);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFromFileTime != null ? retObjectFromFileTime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -649,10 +821,14 @@ public class DateTime extends ValueType implements system.runtime.serialization.
 
     public static DateTime FromFileTimeUtc(long fileTime) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.IndexOutOfRangeException, system.RankException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFromFileTimeUtc = null;
         try {
-            JCObject objFromFileTimeUtc = (JCObject)classType.Invoke("FromFileTimeUtc", fileTime);
+            retObjectFromFileTimeUtc = classType.Invoke("FromFileTimeUtc", fileTime);
+            JCObject objFromFileTimeUtc = (JCObject)retObjectFromFileTimeUtc;
             return new DateTime(objFromFileTimeUtc);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFromFileTimeUtc != null ? retObjectFromFileTimeUtc.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -660,10 +836,14 @@ public class DateTime extends ValueType implements system.runtime.serialization.
 
     public static DateTime FromOADate(double d) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFromOADate = null;
         try {
-            JCObject objFromOADate = (JCObject)classType.Invoke("FromOADate", d);
+            retObjectFromOADate = classType.Invoke("FromOADate", d);
+            JCObject objFromOADate = (JCObject)retObjectFromOADate;
             return new DateTime(objFromOADate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFromOADate != null ? retObjectFromOADate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -671,10 +851,14 @@ public class DateTime extends ValueType implements system.runtime.serialization.
 
     public static DateTime Parse(java.lang.String s, IFormatProvider provider, DateTimeStyles styles) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.TypeInitializationException, system.OverflowException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectParse = null;
         try {
-            JCObject objParse = (JCObject)classType.Invoke("Parse", s, provider == null ? null : provider.getJCOInstance(), styles == null ? null : styles.getJCOInstance());
+            retObjectParse = classType.Invoke("Parse", s, provider == null ? null : provider.getJCOInstance(), styles == null ? null : styles.getJCOInstance());
+            JCObject objParse = (JCObject)retObjectParse;
             return new DateTime(objParse);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParse != null ? retObjectParse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -682,10 +866,14 @@ public class DateTime extends ValueType implements system.runtime.serialization.
 
     public static DateTime Parse(java.lang.String s, IFormatProvider provider) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.TypeInitializationException, system.OverflowException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectParse = null;
         try {
-            JCObject objParse = (JCObject)classType.Invoke("Parse", s, provider == null ? null : provider.getJCOInstance());
+            retObjectParse = classType.Invoke("Parse", s, provider == null ? null : provider.getJCOInstance());
+            JCObject objParse = (JCObject)retObjectParse;
             return new DateTime(objParse);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParse != null ? retObjectParse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -693,10 +881,14 @@ public class DateTime extends ValueType implements system.runtime.serialization.
 
     public static DateTime Parse(java.lang.String s) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.TypeInitializationException, system.OverflowException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectParse = null;
         try {
-            JCObject objParse = (JCObject)classType.Invoke("Parse", s);
+            retObjectParse = classType.Invoke("Parse", s);
+            JCObject objParse = (JCObject)retObjectParse;
             return new DateTime(objParse);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParse != null ? retObjectParse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -704,10 +896,14 @@ public class DateTime extends ValueType implements system.runtime.serialization.
 
     public static DateTime ParseExact(java.lang.String s, java.lang.String format, IFormatProvider provider, DateTimeStyles style) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.TypeInitializationException, system.OverflowException, system.OutOfMemoryException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectParseExact = null;
         try {
-            JCObject objParseExact = (JCObject)classType.Invoke("ParseExact", s, format, provider == null ? null : provider.getJCOInstance(), style == null ? null : style.getJCOInstance());
+            retObjectParseExact = classType.Invoke("ParseExact", s, format, provider == null ? null : provider.getJCOInstance(), style == null ? null : style.getJCOInstance());
+            JCObject objParseExact = (JCObject)retObjectParseExact;
             return new DateTime(objParseExact);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParseExact != null ? retObjectParseExact.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -715,10 +911,14 @@ public class DateTime extends ValueType implements system.runtime.serialization.
 
     public static DateTime ParseExact(java.lang.String s, java.lang.String format, IFormatProvider provider) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.TypeInitializationException, system.OverflowException, system.OutOfMemoryException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectParseExact = null;
         try {
-            JCObject objParseExact = (JCObject)classType.Invoke("ParseExact", s, format, provider == null ? null : provider.getJCOInstance());
+            retObjectParseExact = classType.Invoke("ParseExact", s, format, provider == null ? null : provider.getJCOInstance());
+            JCObject objParseExact = (JCObject)retObjectParseExact;
             return new DateTime(objParseExact);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParseExact != null ? retObjectParseExact.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -726,10 +926,14 @@ public class DateTime extends ValueType implements system.runtime.serialization.
 
     public static DateTime ParseExact(java.lang.String s, java.lang.String[] formats, IFormatProvider provider, DateTimeStyles style) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.TypeInitializationException, system.OverflowException, system.OutOfMemoryException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectParseExact = null;
         try {
-            JCObject objParseExact = (JCObject)classType.Invoke("ParseExact", s, formats, provider == null ? null : provider.getJCOInstance(), style == null ? null : style.getJCOInstance());
+            retObjectParseExact = classType.Invoke("ParseExact", s, formats, provider == null ? null : provider.getJCOInstance(), style == null ? null : style.getJCOInstance());
+            JCObject objParseExact = (JCObject)retObjectParseExact;
             return new DateTime(objParseExact);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParseExact != null ? retObjectParseExact.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -737,10 +941,14 @@ public class DateTime extends ValueType implements system.runtime.serialization.
 
     public static DateTime ParseExact(java.lang.String dupParam0, JCORefOut dupParam1, IFormatProvider dupParam2, DateTimeStyles dupParam3) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.TypeInitializationException, system.OverflowException, system.OutOfMemoryException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectParseExact = null;
         try {
-            JCObject objParseExact = (JCObject)classType.Invoke("ParseExact", dupParam0, dupParam1.getJCRefOut(), dupParam2 == null ? null : dupParam2.getJCOInstance(), dupParam3 == null ? null : dupParam3.getJCOInstance());
+            retObjectParseExact = classType.Invoke("ParseExact", dupParam0, dupParam1.getJCRefOut(), dupParam2 == null ? null : dupParam2.getJCOInstance(), dupParam3 == null ? null : dupParam3.getJCOInstance());
+            JCObject objParseExact = (JCObject)retObjectParseExact;
             return new DateTime(objParseExact);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParseExact != null ? retObjectParseExact.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -748,10 +956,14 @@ public class DateTime extends ValueType implements system.runtime.serialization.
 
     public static DateTime SpecifyKind(DateTime value, DateTimeKind kind) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSpecifyKind = null;
         try {
-            JCObject objSpecifyKind = (JCObject)classType.Invoke("SpecifyKind", value == null ? null : value.getJCOInstance(), kind == null ? null : kind.getJCOInstance());
+            retObjectSpecifyKind = classType.Invoke("SpecifyKind", value == null ? null : value.getJCOInstance(), kind == null ? null : kind.getJCOInstance());
+            JCObject objSpecifyKind = (JCObject)retObjectSpecifyKind;
             return new DateTime(objSpecifyKind);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSpecifyKind != null ? retObjectSpecifyKind.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -759,10 +971,14 @@ public class DateTime extends ValueType implements system.runtime.serialization.
 
     public DateTime Subtract(TimeSpan value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSubtract = null;
         try {
-            JCObject objSubtract = (JCObject)classInstance.Invoke("Subtract", value == null ? null : value.getJCOInstance());
+            retObjectSubtract = classInstance.Invoke("Subtract", value == null ? null : value.getJCOInstance());
+            JCObject objSubtract = (JCObject)retObjectSubtract;
             return new DateTime(objSubtract);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSubtract != null ? retObjectSubtract.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -770,10 +986,14 @@ public class DateTime extends ValueType implements system.runtime.serialization.
 
     public DateTime ToLocalTime() throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidTimeZoneException, system.globalization.CultureNotFoundException, system.ArgumentNullException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.NullReferenceException, system.OverflowException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToLocalTime = null;
         try {
-            JCObject objToLocalTime = (JCObject)classInstance.Invoke("ToLocalTime");
+            retObjectToLocalTime = classInstance.Invoke("ToLocalTime");
+            JCObject objToLocalTime = (JCObject)retObjectToLocalTime;
             return new DateTime(objToLocalTime);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToLocalTime != null ? retObjectToLocalTime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -781,10 +1001,14 @@ public class DateTime extends ValueType implements system.runtime.serialization.
 
     public DateTime ToUniversalTime() throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidTimeZoneException, system.globalization.CultureNotFoundException, system.ArgumentNullException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.NullReferenceException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToUniversalTime = null;
         try {
-            JCObject objToUniversalTime = (JCObject)classInstance.Invoke("ToUniversalTime");
+            retObjectToUniversalTime = classInstance.Invoke("ToUniversalTime");
+            JCObject objToUniversalTime = (JCObject)retObjectToUniversalTime;
             return new DateTime(objToUniversalTime);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToUniversalTime != null ? retObjectToUniversalTime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -792,9 +1016,13 @@ public class DateTime extends ValueType implements system.runtime.serialization.
 
     public java.lang.String ToLongDateString() throws Throwable, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.security.SecurityException, system.OverflowException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToLongDateString = null;
         try {
-            return (java.lang.String)classInstance.Invoke("ToLongDateString");
+            retObjectToLongDateString = classInstance.Invoke("ToLongDateString");
+            return (java.lang.String)retObjectToLongDateString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectToLongDateString != null ? retObjectToLongDateString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -802,9 +1030,13 @@ public class DateTime extends ValueType implements system.runtime.serialization.
 
     public java.lang.String ToLongTimeString() throws Throwable, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.security.SecurityException, system.OverflowException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToLongTimeString = null;
         try {
-            return (java.lang.String)classInstance.Invoke("ToLongTimeString");
+            retObjectToLongTimeString = classInstance.Invoke("ToLongTimeString");
+            return (java.lang.String)retObjectToLongTimeString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectToLongTimeString != null ? retObjectToLongTimeString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -812,9 +1044,13 @@ public class DateTime extends ValueType implements system.runtime.serialization.
 
     public java.lang.String ToShortDateString() throws Throwable, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.security.SecurityException, system.OverflowException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToShortDateString = null;
         try {
-            return (java.lang.String)classInstance.Invoke("ToShortDateString");
+            retObjectToShortDateString = classInstance.Invoke("ToShortDateString");
+            return (java.lang.String)retObjectToShortDateString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectToShortDateString != null ? retObjectToShortDateString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -822,9 +1058,13 @@ public class DateTime extends ValueType implements system.runtime.serialization.
 
     public java.lang.String ToShortTimeString() throws Throwable, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.security.SecurityException, system.OverflowException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToShortTimeString = null;
         try {
-            return (java.lang.String)classInstance.Invoke("ToShortTimeString");
+            retObjectToShortTimeString = classInstance.Invoke("ToShortTimeString");
+            return (java.lang.String)retObjectToShortTimeString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectToShortTimeString != null ? retObjectToShortTimeString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -832,9 +1072,13 @@ public class DateTime extends ValueType implements system.runtime.serialization.
 
     public java.lang.String ToString(IFormatProvider provider) throws Throwable, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.security.SecurityException, system.OverflowException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToString = null;
         try {
-            return (java.lang.String)classInstance.Invoke("ToString", provider == null ? null : provider.getJCOInstance());
+            retObjectToString = classInstance.Invoke("ToString", provider == null ? null : provider.getJCOInstance());
+            return (java.lang.String)retObjectToString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectToString != null ? retObjectToString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -842,9 +1086,13 @@ public class DateTime extends ValueType implements system.runtime.serialization.
 
     public java.lang.String ToString(java.lang.String format, IFormatProvider provider) throws Throwable, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.security.SecurityException, system.OverflowException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToString = null;
         try {
-            return (java.lang.String)classInstance.Invoke("ToString", format, provider == null ? null : provider.getJCOInstance());
+            retObjectToString = classInstance.Invoke("ToString", format, provider == null ? null : provider.getJCOInstance());
+            return (java.lang.String)retObjectToString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectToString != null ? retObjectToString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -852,9 +1100,13 @@ public class DateTime extends ValueType implements system.runtime.serialization.
 
     public java.lang.String ToString(java.lang.String format) throws Throwable, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.security.SecurityException, system.OverflowException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToString = null;
         try {
-            return (java.lang.String)classInstance.Invoke("ToString", format);
+            retObjectToString = classInstance.Invoke("ToString", format);
+            return (java.lang.String)retObjectToString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectToString != null ? retObjectToString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -862,10 +1114,12 @@ public class DateTime extends ValueType implements system.runtime.serialization.
 
     public java.lang.String[] GetDateTimeFormats() throws Throwable, system.ArgumentNullException, system.OutOfMemoryException, system.ArgumentException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDateTimeFormats = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetDateTimeFormats");
+            retObjectGetDateTimeFormats = classInstance.Invoke("GetDateTimeFormats");
+            JCObject resultingObjects = (JCObject)retObjectGetDateTimeFormats;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -874,6 +1128,8 @@ public class DateTime extends ValueType implements system.runtime.serialization.
 				resultingArray[indexGetDateTimeFormats] = (java.lang.String)resultingArrayList.get(indexGetDateTimeFormats);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectGetDateTimeFormats != null ? retObjectGetDateTimeFormats.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -881,10 +1137,12 @@ public class DateTime extends ValueType implements system.runtime.serialization.
 
     public java.lang.String[] GetDateTimeFormats(char format, IFormatProvider provider) throws Throwable, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.TypeInitializationException, system.OutOfMemoryException, system.InvalidOperationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDateTimeFormats = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetDateTimeFormats", format, provider == null ? null : provider.getJCOInstance());
+            retObjectGetDateTimeFormats = classInstance.Invoke("GetDateTimeFormats", format, provider == null ? null : provider.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectGetDateTimeFormats;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -893,6 +1151,8 @@ public class DateTime extends ValueType implements system.runtime.serialization.
 				resultingArray[indexGetDateTimeFormats] = (java.lang.String)resultingArrayList.get(indexGetDateTimeFormats);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectGetDateTimeFormats != null ? retObjectGetDateTimeFormats.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -900,10 +1160,12 @@ public class DateTime extends ValueType implements system.runtime.serialization.
 
     public java.lang.String[] GetDateTimeFormats(char format) throws Throwable, system.ArgumentNullException, system.OutOfMemoryException, system.ArgumentException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException, system.IndexOutOfRangeException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDateTimeFormats = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetDateTimeFormats", format);
+            retObjectGetDateTimeFormats = classInstance.Invoke("GetDateTimeFormats", format);
+            JCObject resultingObjects = (JCObject)retObjectGetDateTimeFormats;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -912,6 +1174,8 @@ public class DateTime extends ValueType implements system.runtime.serialization.
 				resultingArray[indexGetDateTimeFormats] = (java.lang.String)resultingArrayList.get(indexGetDateTimeFormats);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectGetDateTimeFormats != null ? retObjectGetDateTimeFormats.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -919,10 +1183,12 @@ public class DateTime extends ValueType implements system.runtime.serialization.
 
     public java.lang.String[] GetDateTimeFormats(IFormatProvider provider) throws Throwable, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.TypeInitializationException, system.OutOfMemoryException, system.InvalidOperationException, system.FormatException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDateTimeFormats = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetDateTimeFormats", provider == null ? null : provider.getJCOInstance());
+            retObjectGetDateTimeFormats = classInstance.Invoke("GetDateTimeFormats", provider == null ? null : provider.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectGetDateTimeFormats;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -931,6 +1197,8 @@ public class DateTime extends ValueType implements system.runtime.serialization.
 				resultingArray[indexGetDateTimeFormats] = (java.lang.String)resultingArrayList.get(indexGetDateTimeFormats);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectGetDateTimeFormats != null ? retObjectGetDateTimeFormats.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -938,10 +1206,14 @@ public class DateTime extends ValueType implements system.runtime.serialization.
 
     public TimeSpan Subtract(DateTime value) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSubtract = null;
         try {
-            JCObject objSubtract = (JCObject)classInstance.Invoke("Subtract", value == null ? null : value.getJCOInstance());
+            retObjectSubtract = classInstance.Invoke("Subtract", value == null ? null : value.getJCOInstance());
+            JCObject objSubtract = (JCObject)retObjectSubtract;
             return new TimeSpan(objSubtract);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSubtract != null ? retObjectSubtract.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -949,10 +1221,14 @@ public class DateTime extends ValueType implements system.runtime.serialization.
 
     public TypeCode GetTypeCode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetTypeCode = null;
         try {
-            JCObject objGetTypeCode = (JCObject)classInstance.Invoke("GetTypeCode");
+            retObjectGetTypeCode = classInstance.Invoke("GetTypeCode");
+            JCObject objGetTypeCode = (JCObject)retObjectGetTypeCode;
             return new TypeCode(objGetTypeCode);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetTypeCode != null ? retObjectGetTypeCode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -960,7 +1236,7 @@ public class DateTime extends ValueType implements system.runtime.serialization.
 
     public void Deconstruct(JCORefOut<java.util.concurrent.atomic.AtomicInteger> year, JCORefOut<java.util.concurrent.atomic.AtomicInteger> month, JCORefOut<java.util.concurrent.atomic.AtomicInteger> day) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Deconstruct", year.getJCRefOut(), month.getJCRefOut(), day.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -970,7 +1246,7 @@ public class DateTime extends ValueType implements system.runtime.serialization.
 
     public void Deconstruct(JCORefOut<DateOnly> date, JCORefOut<TimeOnly> time) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Deconstruct", date.getJCRefOut(), time.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -984,7 +1260,7 @@ public class DateTime extends ValueType implements system.runtime.serialization.
      */
     @Deprecated 
     public boolean ToBoolean(IFormatProvider provider) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIConvertible to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIConvertible to obtain the full interface.");
     }
 
     /**
@@ -993,7 +1269,7 @@ public class DateTime extends ValueType implements system.runtime.serialization.
      */
     @Deprecated 
     public byte ToByte(IFormatProvider provider) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIConvertible to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIConvertible to obtain the full interface.");
     }
 
     /**
@@ -1002,7 +1278,7 @@ public class DateTime extends ValueType implements system.runtime.serialization.
      */
     @Deprecated 
     public char ToChar(IFormatProvider provider) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIConvertible to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIConvertible to obtain the full interface.");
     }
 
     /**
@@ -1011,7 +1287,7 @@ public class DateTime extends ValueType implements system.runtime.serialization.
      */
     @Deprecated 
     public double ToDouble(IFormatProvider provider) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIConvertible to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIConvertible to obtain the full interface.");
     }
 
     /**
@@ -1020,7 +1296,7 @@ public class DateTime extends ValueType implements system.runtime.serialization.
      */
     @Deprecated 
     public short ToInt16(IFormatProvider provider) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIConvertible to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIConvertible to obtain the full interface.");
     }
 
     /**
@@ -1029,7 +1305,7 @@ public class DateTime extends ValueType implements system.runtime.serialization.
      */
     @Deprecated 
     public int ToInt32(IFormatProvider provider) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIConvertible to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIConvertible to obtain the full interface.");
     }
 
     /**
@@ -1038,7 +1314,7 @@ public class DateTime extends ValueType implements system.runtime.serialization.
      */
     @Deprecated 
     public long ToInt64(IFormatProvider provider) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIConvertible to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIConvertible to obtain the full interface.");
     }
 
     /**
@@ -1047,7 +1323,7 @@ public class DateTime extends ValueType implements system.runtime.serialization.
      */
     @Deprecated 
     public SByte ToSByte(IFormatProvider provider) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIConvertible to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIConvertible to obtain the full interface.");
     }
 
     /**
@@ -1056,7 +1332,7 @@ public class DateTime extends ValueType implements system.runtime.serialization.
      */
     @Deprecated 
     public Single ToSingle(IFormatProvider provider) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIConvertible to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIConvertible to obtain the full interface.");
     }
 
     /**
@@ -1065,7 +1341,7 @@ public class DateTime extends ValueType implements system.runtime.serialization.
      */
     @Deprecated 
     public DateTime ToDateTime(IFormatProvider provider) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIConvertible to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIConvertible to obtain the full interface.");
     }
 
     /**
@@ -1074,7 +1350,7 @@ public class DateTime extends ValueType implements system.runtime.serialization.
      */
     @Deprecated 
     public Decimal ToDecimal(IFormatProvider provider) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIConvertible to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIConvertible to obtain the full interface.");
     }
 
     /**
@@ -1083,7 +1359,7 @@ public class DateTime extends ValueType implements system.runtime.serialization.
      */
     @Deprecated 
     public NetObject ToType(NetType conversionType, IFormatProvider provider) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIConvertible to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIConvertible to obtain the full interface.");
     }
 
     /**
@@ -1092,7 +1368,7 @@ public class DateTime extends ValueType implements system.runtime.serialization.
      */
     @Deprecated 
     public UInt16 ToUInt16(IFormatProvider provider) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIConvertible to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIConvertible to obtain the full interface.");
     }
 
     /**
@@ -1101,7 +1377,7 @@ public class DateTime extends ValueType implements system.runtime.serialization.
      */
     @Deprecated 
     public UInt32 ToUInt32(IFormatProvider provider) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIConvertible to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIConvertible to obtain the full interface.");
     }
 
     /**
@@ -1110,7 +1386,7 @@ public class DateTime extends ValueType implements system.runtime.serialization.
      */
     @Deprecated 
     public UInt64 ToUInt64(IFormatProvider provider) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIConvertible to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIConvertible to obtain the full interface.");
     }
 
     /**
@@ -1119,7 +1395,7 @@ public class DateTime extends ValueType implements system.runtime.serialization.
      */
     @Deprecated 
     public void GetObjectData(SerializationInfo info, StreamingContext context) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToISerializable to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToISerializable to obtain the full interface.");
     }
 
 
@@ -1128,9 +1404,20 @@ public class DateTime extends ValueType implements system.runtime.serialization.
     
     public int getDay() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDay = null;
         try {
-            return (int)classInstance.Get("Day");
+            retObjectDay = classInstance.Get("Day");
+            return (int)retObjectDay;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDay_ToString = retObjectDay == null ? "null" : retObjectDay.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectDayNumber = (java.lang.Number)retObjectDay;
+                return retObjectDayNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectDay != null ? retObjectDay.getClass() : "null", retObjectDay_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1138,9 +1425,20 @@ public class DateTime extends ValueType implements system.runtime.serialization.
 
     public int getDayOfYear() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDayOfYear = null;
         try {
-            return (int)classInstance.Get("DayOfYear");
+            retObjectDayOfYear = classInstance.Get("DayOfYear");
+            return (int)retObjectDayOfYear;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDayOfYear_ToString = retObjectDayOfYear == null ? "null" : retObjectDayOfYear.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectDayOfYearNumber = (java.lang.Number)retObjectDayOfYear;
+                return retObjectDayOfYearNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectDayOfYear != null ? retObjectDayOfYear.getClass() : "null", retObjectDayOfYear_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1148,9 +1446,20 @@ public class DateTime extends ValueType implements system.runtime.serialization.
 
     public int getHour() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHour = null;
         try {
-            return (int)classInstance.Get("Hour");
+            retObjectHour = classInstance.Get("Hour");
+            return (int)retObjectHour;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectHour_ToString = retObjectHour == null ? "null" : retObjectHour.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectHourNumber = (java.lang.Number)retObjectHour;
+                return retObjectHourNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectHour != null ? retObjectHour.getClass() : "null", retObjectHour_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1158,9 +1467,20 @@ public class DateTime extends ValueType implements system.runtime.serialization.
 
     public int getMicrosecond() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMicrosecond = null;
         try {
-            return (int)classInstance.Get("Microsecond");
+            retObjectMicrosecond = classInstance.Get("Microsecond");
+            return (int)retObjectMicrosecond;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMicrosecond_ToString = retObjectMicrosecond == null ? "null" : retObjectMicrosecond.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMicrosecondNumber = (java.lang.Number)retObjectMicrosecond;
+                return retObjectMicrosecondNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMicrosecond != null ? retObjectMicrosecond.getClass() : "null", retObjectMicrosecond_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1168,9 +1488,20 @@ public class DateTime extends ValueType implements system.runtime.serialization.
 
     public int getMillisecond() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMillisecond = null;
         try {
-            return (int)classInstance.Get("Millisecond");
+            retObjectMillisecond = classInstance.Get("Millisecond");
+            return (int)retObjectMillisecond;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMillisecond_ToString = retObjectMillisecond == null ? "null" : retObjectMillisecond.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMillisecondNumber = (java.lang.Number)retObjectMillisecond;
+                return retObjectMillisecondNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMillisecond != null ? retObjectMillisecond.getClass() : "null", retObjectMillisecond_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1178,9 +1509,20 @@ public class DateTime extends ValueType implements system.runtime.serialization.
 
     public int getMinute() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMinute = null;
         try {
-            return (int)classInstance.Get("Minute");
+            retObjectMinute = classInstance.Get("Minute");
+            return (int)retObjectMinute;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMinute_ToString = retObjectMinute == null ? "null" : retObjectMinute.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMinuteNumber = (java.lang.Number)retObjectMinute;
+                return retObjectMinuteNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMinute != null ? retObjectMinute.getClass() : "null", retObjectMinute_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1188,9 +1530,20 @@ public class DateTime extends ValueType implements system.runtime.serialization.
 
     public int getMonth() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMonth = null;
         try {
-            return (int)classInstance.Get("Month");
+            retObjectMonth = classInstance.Get("Month");
+            return (int)retObjectMonth;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectMonth_ToString = retObjectMonth == null ? "null" : retObjectMonth.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMonthNumber = (java.lang.Number)retObjectMonth;
+                return retObjectMonthNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMonth != null ? retObjectMonth.getClass() : "null", retObjectMonth_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1198,9 +1551,20 @@ public class DateTime extends ValueType implements system.runtime.serialization.
 
     public int getNanosecond() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNanosecond = null;
         try {
-            return (int)classInstance.Get("Nanosecond");
+            retObjectNanosecond = classInstance.Get("Nanosecond");
+            return (int)retObjectNanosecond;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectNanosecond_ToString = retObjectNanosecond == null ? "null" : retObjectNanosecond.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectNanosecondNumber = (java.lang.Number)retObjectNanosecond;
+                return retObjectNanosecondNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectNanosecond != null ? retObjectNanosecond.getClass() : "null", retObjectNanosecond_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1208,9 +1572,20 @@ public class DateTime extends ValueType implements system.runtime.serialization.
 
     public int getSecond() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSecond = null;
         try {
-            return (int)classInstance.Get("Second");
+            retObjectSecond = classInstance.Get("Second");
+            return (int)retObjectSecond;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectSecond_ToString = retObjectSecond == null ? "null" : retObjectSecond.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectSecondNumber = (java.lang.Number)retObjectSecond;
+                return retObjectSecondNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectSecond != null ? retObjectSecond.getClass() : "null", retObjectSecond_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1218,9 +1593,20 @@ public class DateTime extends ValueType implements system.runtime.serialization.
 
     public int getYear() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectYear = null;
         try {
-            return (int)classInstance.Get("Year");
+            retObjectYear = classInstance.Get("Year");
+            return (int)retObjectYear;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectYear_ToString = retObjectYear == null ? "null" : retObjectYear.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectYearNumber = (java.lang.Number)retObjectYear;
+                return retObjectYearNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectYear != null ? retObjectYear.getClass() : "null", retObjectYear_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1228,9 +1614,20 @@ public class DateTime extends ValueType implements system.runtime.serialization.
 
     public long getTicks() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTicks = null;
         try {
-            return (long)classInstance.Get("Ticks");
+            retObjectTicks = classInstance.Get("Ticks");
+            return (long)retObjectTicks;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectTicks_ToString = retObjectTicks == null ? "null" : retObjectTicks.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectTicksNumber = (java.lang.Number)retObjectTicks;
+                return retObjectTicksNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectTicks != null ? retObjectTicks.getClass() : "null", retObjectTicks_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1238,10 +1635,14 @@ public class DateTime extends ValueType implements system.runtime.serialization.
 
     public DateTime getDate() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDate = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Date");
+            retObjectDate = classInstance.Get("Date");
+            JCObject val = (JCObject)retObjectDate;
             return new DateTime(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDate != null ? retObjectDate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1249,10 +1650,14 @@ public class DateTime extends ValueType implements system.runtime.serialization.
 
     public static DateTime getNow() throws Throwable, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.InvalidTimeZoneException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.NullReferenceException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectNow = null;
         try {
-            JCObject val = (JCObject)classType.Get("Now");
+            retObjectNow = classType.Get("Now");
+            JCObject val = (JCObject)retObjectNow;
             return new DateTime(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNow != null ? retObjectNow.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1260,10 +1665,14 @@ public class DateTime extends ValueType implements system.runtime.serialization.
 
     public static DateTime getToday() throws Throwable, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.InvalidTimeZoneException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.NullReferenceException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectToday = null;
         try {
-            JCObject val = (JCObject)classType.Get("Today");
+            retObjectToday = classType.Get("Today");
+            JCObject val = (JCObject)retObjectToday;
             return new DateTime(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToday != null ? retObjectToday.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1271,10 +1680,14 @@ public class DateTime extends ValueType implements system.runtime.serialization.
 
     public static DateTime getUtcNow() throws Throwable, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectUtcNow = null;
         try {
-            JCObject val = (JCObject)classType.Get("UtcNow");
+            retObjectUtcNow = classType.Get("UtcNow");
+            JCObject val = (JCObject)retObjectUtcNow;
             return new DateTime(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUtcNow != null ? retObjectUtcNow.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1282,10 +1695,14 @@ public class DateTime extends ValueType implements system.runtime.serialization.
 
     public DateTimeKind getKind() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectKind = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Kind");
+            retObjectKind = classInstance.Get("Kind");
+            JCObject val = (JCObject)retObjectKind;
             return new DateTimeKind(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectKind != null ? retObjectKind.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1293,10 +1710,14 @@ public class DateTime extends ValueType implements system.runtime.serialization.
 
     public DayOfWeek getDayOfWeek() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDayOfWeek = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DayOfWeek");
+            retObjectDayOfWeek = classInstance.Get("DayOfWeek");
+            JCObject val = (JCObject)retObjectDayOfWeek;
             return new DayOfWeek(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDayOfWeek != null ? retObjectDayOfWeek.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1304,10 +1725,14 @@ public class DateTime extends ValueType implements system.runtime.serialization.
 
     public TimeSpan getTimeOfDay() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTimeOfDay = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TimeOfDay");
+            retObjectTimeOfDay = classInstance.Get("TimeOfDay");
+            JCObject val = (JCObject)retObjectTimeOfDay;
             return new TimeSpan(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTimeOfDay != null ? retObjectTimeOfDay.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

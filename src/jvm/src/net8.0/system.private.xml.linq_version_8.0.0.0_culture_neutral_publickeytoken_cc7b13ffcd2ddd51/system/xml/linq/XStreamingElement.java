@@ -190,9 +190,13 @@ public class XStreamingElement extends NetObject  {
     
     public java.lang.String ToString(SaveOptions options) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentException, system.OutOfMemoryException, system.xml.XmlException, system.ArgumentOutOfRangeException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToString = null;
         try {
-            return (java.lang.String)classInstance.Invoke("ToString", options == null ? null : options.getJCOInstance());
+            retObjectToString = classInstance.Invoke("ToString", options == null ? null : options.getJCOInstance());
+            return (java.lang.String)retObjectToString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectToString != null ? retObjectToString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,7 +204,7 @@ public class XStreamingElement extends NetObject  {
 
     public void Add(NetObject content) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArgumentException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Add", content == null ? null : content.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -210,7 +214,7 @@ public class XStreamingElement extends NetObject  {
 
     public void Add(NetObject... content) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArgumentException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Add", (java.lang.Object)toObjectFromArray(content));
         } catch (JCNativeException jcne) {
@@ -220,7 +224,7 @@ public class XStreamingElement extends NetObject  {
 
     public void Save(Stream stream, SaveOptions options) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentException, system.OutOfMemoryException, system.xml.XmlException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArrayTypeMismatchException, system.RankException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Save", stream == null ? null : stream.getJCOInstance(), options == null ? null : options.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -230,7 +234,7 @@ public class XStreamingElement extends NetObject  {
 
     public void Save(Stream stream) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentException, system.OutOfMemoryException, system.xml.XmlException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Save", stream == null ? null : stream.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -240,7 +244,7 @@ public class XStreamingElement extends NetObject  {
 
     public void Save(TextWriter textWriter, SaveOptions options) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentException, system.OutOfMemoryException, system.xml.XmlException, system.ArgumentOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Save", textWriter == null ? null : textWriter.getJCOInstance(), options == null ? null : options.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -250,7 +254,7 @@ public class XStreamingElement extends NetObject  {
 
     public void Save(TextWriter textWriter) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentException, system.OutOfMemoryException, system.xml.XmlException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Save", textWriter == null ? null : textWriter.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -260,7 +264,7 @@ public class XStreamingElement extends NetObject  {
 
     public void Save(java.lang.String fileName, SaveOptions options) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentException, system.OutOfMemoryException, system.xml.XmlException, system.ArgumentOutOfRangeException, system.runtime.serialization.SerializationException, system.NotSupportedException, system.ArrayTypeMismatchException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Save", fileName, options == null ? null : options.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -270,7 +274,7 @@ public class XStreamingElement extends NetObject  {
 
     public void Save(java.lang.String fileName) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentException, system.OutOfMemoryException, system.xml.XmlException, system.ArgumentOutOfRangeException, system.runtime.serialization.SerializationException, system.NotSupportedException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Save", fileName);
         } catch (JCNativeException jcne) {
@@ -280,7 +284,7 @@ public class XStreamingElement extends NetObject  {
 
     public void Save(XmlWriter writer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OverflowException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Save", writer == null ? null : writer.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -290,7 +294,7 @@ public class XStreamingElement extends NetObject  {
 
     public void WriteTo(XmlWriter writer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OverflowException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteTo", writer == null ? null : writer.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -304,10 +308,14 @@ public class XStreamingElement extends NetObject  {
     
     public XName getName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectName = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Name");
+            retObjectName = classInstance.Get("Name");
+            JCObject val = (JCObject)retObjectName;
             return new XName(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectName != null ? retObjectName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -315,7 +323,7 @@ public class XStreamingElement extends NetObject  {
 
     public void setName(XName Name) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Name", Name == null ? null : Name.getJCOInstance());
         } catch (JCNativeException jcne) {

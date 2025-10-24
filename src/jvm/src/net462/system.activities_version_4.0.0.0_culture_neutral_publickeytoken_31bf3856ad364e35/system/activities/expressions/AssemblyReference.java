@@ -163,7 +163,7 @@ public class AssemblyReference extends NetObject  {
     
     public void LoadAssembly() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotImplementedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("LoadAssembly");
         } catch (JCNativeException jcne) {
@@ -177,10 +177,14 @@ public class AssemblyReference extends NetObject  {
     
     public Assembly getAssembly() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAssembly = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Assembly");
+            retObjectAssembly = classInstance.Get("Assembly");
+            JCObject val = (JCObject)retObjectAssembly;
             return new Assembly(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAssembly != null ? retObjectAssembly.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,7 +192,7 @@ public class AssemblyReference extends NetObject  {
 
     public void setAssembly(Assembly Assembly) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Assembly", Assembly == null ? null : Assembly.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -198,10 +202,14 @@ public class AssemblyReference extends NetObject  {
 
     public AssemblyName getAssemblyName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAssemblyName = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AssemblyName");
+            retObjectAssemblyName = classInstance.Get("AssemblyName");
+            JCObject val = (JCObject)retObjectAssemblyName;
             return new AssemblyName(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAssemblyName != null ? retObjectAssemblyName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -209,7 +217,7 @@ public class AssemblyReference extends NetObject  {
 
     public void setAssemblyName(AssemblyName AssemblyName) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AssemblyName", AssemblyName == null ? null : AssemblyName.getJCOInstance());
         } catch (JCNativeException jcne) {

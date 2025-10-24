@@ -172,10 +172,14 @@ public class BookmarkResumptionRecord extends TrackingRecord  {
     
     public ActivityInfo getOwner() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOwner = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Owner");
+            retObjectOwner = classInstance.Get("Owner");
+            JCObject val = (JCObject)retObjectOwner;
             return new ActivityInfo(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOwner != null ? retObjectOwner.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,7 +187,7 @@ public class BookmarkResumptionRecord extends TrackingRecord  {
 
     public void setOwner(ActivityInfo Owner) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Owner", Owner == null ? null : Owner.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -193,10 +197,14 @@ public class BookmarkResumptionRecord extends TrackingRecord  {
 
     public Guid getBookmarkScope() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBookmarkScope = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("BookmarkScope");
+            retObjectBookmarkScope = classInstance.Get("BookmarkScope");
+            JCObject val = (JCObject)retObjectBookmarkScope;
             return new Guid(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBookmarkScope != null ? retObjectBookmarkScope.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -204,7 +212,7 @@ public class BookmarkResumptionRecord extends TrackingRecord  {
 
     public void setBookmarkScope(Guid BookmarkScope) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BookmarkScope", BookmarkScope == null ? null : BookmarkScope.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -214,10 +222,14 @@ public class BookmarkResumptionRecord extends TrackingRecord  {
 
     public NetObject getPayload() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPayload = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Payload");
+            retObjectPayload = classInstance.Get("Payload");
+            JCObject val = (JCObject)retObjectPayload;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPayload != null ? retObjectPayload.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -225,7 +237,7 @@ public class BookmarkResumptionRecord extends TrackingRecord  {
 
     public void setPayload(NetObject Payload) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Payload", Payload == null ? null : Payload.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -235,9 +247,13 @@ public class BookmarkResumptionRecord extends TrackingRecord  {
 
     public java.lang.String getBookmarkName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBookmarkName = null;
         try {
-            return (java.lang.String)classInstance.Get("BookmarkName");
+            retObjectBookmarkName = classInstance.Get("BookmarkName");
+            return (java.lang.String)retObjectBookmarkName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectBookmarkName != null ? retObjectBookmarkName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -245,7 +261,7 @@ public class BookmarkResumptionRecord extends TrackingRecord  {
 
     public void setBookmarkName(java.lang.String BookmarkName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BookmarkName", BookmarkName);
         } catch (JCNativeException jcne) {

@@ -177,9 +177,13 @@ public class XsdDataContractImporter extends NetObject  {
     
     public boolean CanImport(XmlSchemaSet schemas) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException, system.xml.schema.XmlSchemaException, system.RankException, system.xml.XmlException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanImport = null;
         try {
-            return (boolean)classInstance.Invoke("CanImport", schemas == null ? null : schemas.getJCOInstance());
+            retObjectCanImport = classInstance.Invoke("CanImport", schemas == null ? null : schemas.getJCOInstance());
+            return (boolean)retObjectCanImport;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCanImport != null ? retObjectCanImport.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,9 +191,13 @@ public class XsdDataContractImporter extends NetObject  {
 
     public boolean CanImport(XmlSchemaSet schemas, XmlSchemaElement element) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException, system.xml.schema.XmlSchemaException, system.RankException, system.xml.XmlException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanImport = null;
         try {
-            return (boolean)classInstance.Invoke("CanImport", schemas == null ? null : schemas.getJCOInstance(), element == null ? null : element.getJCOInstance());
+            retObjectCanImport = classInstance.Invoke("CanImport", schemas == null ? null : schemas.getJCOInstance(), element == null ? null : element.getJCOInstance());
+            return (boolean)retObjectCanImport;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCanImport != null ? retObjectCanImport.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,9 +205,13 @@ public class XsdDataContractImporter extends NetObject  {
 
     public boolean CanImport(XmlSchemaSet schemas, XmlQualifiedName typeName) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException, system.xml.schema.XmlSchemaException, system.RankException, system.xml.XmlException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanImport = null;
         try {
-            return (boolean)classInstance.Invoke("CanImport", schemas == null ? null : schemas.getJCOInstance(), typeName == null ? null : typeName.getJCOInstance());
+            retObjectCanImport = classInstance.Invoke("CanImport", schemas == null ? null : schemas.getJCOInstance(), typeName == null ? null : typeName.getJCOInstance());
+            return (boolean)retObjectCanImport;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCanImport != null ? retObjectCanImport.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -207,10 +219,14 @@ public class XsdDataContractImporter extends NetObject  {
 
     public CodeTypeReference GetCodeTypeReference(XmlQualifiedName typeName) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException, system.NotSupportedException, system.runtime.serialization.InvalidDataContractException, system.globalization.CultureNotFoundException, system.UriFormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetCodeTypeReference = null;
         try {
-            JCObject objGetCodeTypeReference = (JCObject)classInstance.Invoke("GetCodeTypeReference", typeName == null ? null : typeName.getJCOInstance());
+            retObjectGetCodeTypeReference = classInstance.Invoke("GetCodeTypeReference", typeName == null ? null : typeName.getJCOInstance());
+            JCObject objGetCodeTypeReference = (JCObject)retObjectGetCodeTypeReference;
             return new CodeTypeReference(objGetCodeTypeReference);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCodeTypeReference != null ? retObjectGetCodeTypeReference.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -218,10 +234,14 @@ public class XsdDataContractImporter extends NetObject  {
 
     public CodeTypeReference GetCodeTypeReference(XmlQualifiedName typeName, XmlSchemaElement element) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException, system.runtime.serialization.InvalidDataContractException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetCodeTypeReference = null;
         try {
-            JCObject objGetCodeTypeReference = (JCObject)classInstance.Invoke("GetCodeTypeReference", typeName == null ? null : typeName.getJCOInstance(), element == null ? null : element.getJCOInstance());
+            retObjectGetCodeTypeReference = classInstance.Invoke("GetCodeTypeReference", typeName == null ? null : typeName.getJCOInstance(), element == null ? null : element.getJCOInstance());
+            JCObject objGetCodeTypeReference = (JCObject)retObjectGetCodeTypeReference;
             return new CodeTypeReference(objGetCodeTypeReference);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCodeTypeReference != null ? retObjectGetCodeTypeReference.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -229,10 +249,14 @@ public class XsdDataContractImporter extends NetObject  {
 
     public XmlQualifiedName Import(XmlSchemaSet schemas, XmlSchemaElement element) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.NotSupportedException, system.xml.schema.XmlSchemaException, system.RankException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectImport = null;
         try {
-            JCObject objImport = (JCObject)classInstance.Invoke("Import", schemas == null ? null : schemas.getJCOInstance(), element == null ? null : element.getJCOInstance());
+            retObjectImport = classInstance.Invoke("Import", schemas == null ? null : schemas.getJCOInstance(), element == null ? null : element.getJCOInstance());
+            JCObject objImport = (JCObject)retObjectImport;
             return new XmlQualifiedName(objImport);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectImport != null ? retObjectImport.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -240,7 +264,7 @@ public class XsdDataContractImporter extends NetObject  {
 
     public void Import(XmlSchemaSet schemas) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.NotSupportedException, system.xml.schema.XmlSchemaException, system.RankException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Import", schemas == null ? null : schemas.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -250,7 +274,7 @@ public class XsdDataContractImporter extends NetObject  {
 
     public void Import(XmlSchemaSet schemas, XmlQualifiedName typeName) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.NotSupportedException, system.xml.schema.XmlSchemaException, system.RankException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Import", schemas == null ? null : schemas.getJCOInstance(), typeName == null ? null : typeName.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -264,10 +288,14 @@ public class XsdDataContractImporter extends NetObject  {
     
     public CodeCompileUnit getCodeCompileUnit() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCodeCompileUnit = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CodeCompileUnit");
+            retObjectCodeCompileUnit = classInstance.Get("CodeCompileUnit");
+            JCObject val = (JCObject)retObjectCodeCompileUnit;
             return new CodeCompileUnit(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCodeCompileUnit != null ? retObjectCodeCompileUnit.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -275,10 +303,14 @@ public class XsdDataContractImporter extends NetObject  {
 
     public ImportOptions getOptions() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOptions = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Options");
+            retObjectOptions = classInstance.Get("Options");
+            JCObject val = (JCObject)retObjectOptions;
             return new ImportOptions(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOptions != null ? retObjectOptions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -286,7 +318,7 @@ public class XsdDataContractImporter extends NetObject  {
 
     public void setOptions(ImportOptions Options) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Options", Options == null ? null : Options.getJCOInstance());
         } catch (JCNativeException jcne) {

@@ -182,7 +182,7 @@ public class InvokeWebServiceActivity extends Activity implements system.workflo
      */
     @Deprecated 
     public NetType GetPropertyType(IServiceProvider serviceProvider, java.lang.String propertyName) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDynamicPropertyTypeProvider to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDynamicPropertyTypeProvider to obtain the full interface.");
     }
 
     /**
@@ -191,7 +191,7 @@ public class InvokeWebServiceActivity extends Activity implements system.workflo
      */
     @Deprecated 
     public AccessTypes GetAccessType(IServiceProvider serviceProvider, java.lang.String propertyName) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDynamicPropertyTypeProvider to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDynamicPropertyTypeProvider to obtain the full interface.");
     }
 
 
@@ -200,9 +200,13 @@ public class InvokeWebServiceActivity extends Activity implements system.workflo
     
     public java.lang.String getMethodName() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMethodName = null;
         try {
-            return (java.lang.String)classInstance.Get("MethodName");
+            retObjectMethodName = classInstance.Get("MethodName");
+            return (java.lang.String)retObjectMethodName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectMethodName != null ? retObjectMethodName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -210,7 +214,7 @@ public class InvokeWebServiceActivity extends Activity implements system.workflo
 
     public void setMethodName(java.lang.String MethodName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException, system.MulticastNotSupportedException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MethodName", MethodName);
         } catch (JCNativeException jcne) {
@@ -220,9 +224,13 @@ public class InvokeWebServiceActivity extends Activity implements system.workflo
 
     public java.lang.String getSessionId() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSessionId = null;
         try {
-            return (java.lang.String)classInstance.Get("SessionId");
+            retObjectSessionId = classInstance.Get("SessionId");
+            return (java.lang.String)retObjectSessionId;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSessionId != null ? retObjectSessionId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -230,7 +238,7 @@ public class InvokeWebServiceActivity extends Activity implements system.workflo
 
     public void setSessionId(java.lang.String SessionId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException, system.MulticastNotSupportedException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SessionId", SessionId);
         } catch (JCNativeException jcne) {
@@ -240,10 +248,14 @@ public class InvokeWebServiceActivity extends Activity implements system.workflo
 
     public NetType getProxyClass() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProxyClass = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ProxyClass");
+            retObjectProxyClass = classInstance.Get("ProxyClass");
+            JCObject val = (JCObject)retObjectProxyClass;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectProxyClass != null ? retObjectProxyClass.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -251,7 +263,7 @@ public class InvokeWebServiceActivity extends Activity implements system.workflo
 
     public void setProxyClass(NetType ProxyClass) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException, system.MulticastNotSupportedException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ProxyClass", ProxyClass == null ? null : ProxyClass.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -261,10 +273,14 @@ public class InvokeWebServiceActivity extends Activity implements system.workflo
 
     public WorkflowParameterBindingCollection getParameterBindings() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectParameterBindings = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ParameterBindings");
+            retObjectParameterBindings = classInstance.Get("ParameterBindings");
+            JCObject val = (JCObject)retObjectParameterBindings;
             return new WorkflowParameterBindingCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParameterBindings != null ? retObjectParameterBindings.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

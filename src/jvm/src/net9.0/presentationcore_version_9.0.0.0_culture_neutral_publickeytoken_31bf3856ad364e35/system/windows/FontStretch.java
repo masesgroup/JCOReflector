@@ -161,9 +161,13 @@ public class FontStretch extends ValueType implements system.IFormattable {
     
     public boolean Equals(FontStretch obj) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEquals = null;
         try {
-            return (boolean)classInstance.Invoke("Equals", obj == null ? null : obj.getJCOInstance());
+            retObjectEquals = classInstance.Invoke("Equals", obj == null ? null : obj.getJCOInstance());
+            return (boolean)retObjectEquals;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectEquals != null ? retObjectEquals.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,9 +175,20 @@ public class FontStretch extends ValueType implements system.IFormattable {
 
     public static int Compare(FontStretch left, FontStretch right) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCompare = null;
         try {
-            return (int)classType.Invoke("Compare", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            retObjectCompare = classType.Invoke("Compare", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            return (int)retObjectCompare;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectCompare_ToString = retObjectCompare == null ? "null" : retObjectCompare.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectCompareNumber = (java.lang.Number)retObjectCompare;
+                return retObjectCompareNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCompare != null ? retObjectCompare.getClass() : "null", retObjectCompare_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,9 +196,20 @@ public class FontStretch extends ValueType implements system.IFormattable {
 
     public int ToOpenTypeStretch() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToOpenTypeStretch = null;
         try {
-            return (int)classInstance.Invoke("ToOpenTypeStretch");
+            retObjectToOpenTypeStretch = classInstance.Invoke("ToOpenTypeStretch");
+            return (int)retObjectToOpenTypeStretch;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectToOpenTypeStretch_ToString = retObjectToOpenTypeStretch == null ? "null" : retObjectToOpenTypeStretch.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectToOpenTypeStretchNumber = (java.lang.Number)retObjectToOpenTypeStretch;
+                return retObjectToOpenTypeStretchNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectToOpenTypeStretch != null ? retObjectToOpenTypeStretch.getClass() : "null", retObjectToOpenTypeStretch_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,10 +217,14 @@ public class FontStretch extends ValueType implements system.IFormattable {
 
     public static FontStretch FromOpenTypeStretch(int stretchValue) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFromOpenTypeStretch = null;
         try {
-            JCObject objFromOpenTypeStretch = (JCObject)classType.Invoke("FromOpenTypeStretch", stretchValue);
+            retObjectFromOpenTypeStretch = classType.Invoke("FromOpenTypeStretch", stretchValue);
+            JCObject objFromOpenTypeStretch = (JCObject)retObjectFromOpenTypeStretch;
             return new FontStretch(objFromOpenTypeStretch);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFromOpenTypeStretch != null ? retObjectFromOpenTypeStretch.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -206,7 +236,7 @@ public class FontStretch extends ValueType implements system.IFormattable {
      */
     @Deprecated 
     public java.lang.String ToString(java.lang.String format, IFormatProvider formatProvider) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIFormattable to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIFormattable to obtain the full interface.");
     }
 
 

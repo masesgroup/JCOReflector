@@ -156,9 +156,20 @@ public class Int16AnimationBase extends AnimationTimeline  {
     
     public short GetCurrentValue(short defaultOriginValue, short defaultDestinationValue, AnimationClock animationClock) throws Throwable, system.ArgumentException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetCurrentValue = null;
         try {
-            return (short)classInstance.Invoke("GetCurrentValue", defaultOriginValue, defaultDestinationValue, animationClock == null ? null : animationClock.getJCOInstance());
+            retObjectGetCurrentValue = classInstance.Invoke("GetCurrentValue", defaultOriginValue, defaultDestinationValue, animationClock == null ? null : animationClock.getJCOInstance());
+            return (short)retObjectGetCurrentValue;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetCurrentValue_ToString = retObjectGetCurrentValue == null ? "null" : retObjectGetCurrentValue.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetCurrentValueNumber = (java.lang.Number)retObjectGetCurrentValue;
+                return retObjectGetCurrentValueNumber.shortValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into short and, as fallback solution, into java.lang.Number", retObjectGetCurrentValue != null ? retObjectGetCurrentValue.getClass() : "null", retObjectGetCurrentValue_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -166,10 +177,14 @@ public class Int16AnimationBase extends AnimationTimeline  {
 
     public NetObject GetCurrentValue(NetObject defaultOriginValue, NetObject defaultDestinationValue, AnimationClock animationClock) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetCurrentValue = null;
         try {
-            JCObject objGetCurrentValue = (JCObject)classInstance.Invoke("GetCurrentValue", defaultOriginValue == null ? null : defaultOriginValue.getJCOInstance(), defaultDestinationValue == null ? null : defaultDestinationValue.getJCOInstance(), animationClock == null ? null : animationClock.getJCOInstance());
+            retObjectGetCurrentValue = classInstance.Invoke("GetCurrentValue", defaultOriginValue == null ? null : defaultOriginValue.getJCOInstance(), defaultDestinationValue == null ? null : defaultDestinationValue.getJCOInstance(), animationClock == null ? null : animationClock.getJCOInstance());
+            JCObject objGetCurrentValue = (JCObject)retObjectGetCurrentValue;
             return new NetObject(objGetCurrentValue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCurrentValue != null ? retObjectGetCurrentValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,10 +192,14 @@ public class Int16AnimationBase extends AnimationTimeline  {
 
     public Int16AnimationBase CloneNewInt16AnimationBase() throws Throwable, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClone = null;
         try {
-            JCObject objClone = (JCObject)classInstance.Invoke("Clone");
+            retObjectClone = classInstance.Invoke("Clone");
+            JCObject objClone = (JCObject)retObjectClone;
             return new Int16AnimationBase(objClone);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClone != null ? retObjectClone.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

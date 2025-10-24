@@ -160,9 +160,20 @@ public class RuleFiringRecord extends NetObject  {
     
     public int getTimesRaised() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTimesRaised = null;
         try {
-            return (int)classInstance.Get("TimesRaised");
+            retObjectTimesRaised = classInstance.Get("TimesRaised");
+            return (int)retObjectTimesRaised;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectTimesRaised_ToString = retObjectTimesRaised == null ? "null" : retObjectTimesRaised.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectTimesRaisedNumber = (java.lang.Number)retObjectTimesRaised;
+                return retObjectTimesRaisedNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectTimesRaised != null ? retObjectTimesRaised.getClass() : "null", retObjectTimesRaised_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,10 +181,14 @@ public class RuleFiringRecord extends NetObject  {
 
     public DateTime getLastFired() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLastFired = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("LastFired");
+            retObjectLastFired = classInstance.Get("LastFired");
+            JCObject val = (JCObject)retObjectLastFired;
             return new DateTime(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLastFired != null ? retObjectLastFired.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

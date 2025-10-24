@@ -214,7 +214,7 @@ public class SessionSecurityToken extends SecurityToken  {
     
     public void GetObjectData(SerializationInfo info, StreamingContext context) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.OutOfMemoryException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.UriFormatException, system.InvalidTimeZoneException, system.security.SecurityException, system.io.IOException, system.OverflowException, system.MulticastNotSupportedException, system.NotSupportedException, system.runtime.serialization.SerializationException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetObjectData", info == null ? null : info.getJCOInstance(), context == null ? null : context.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -228,9 +228,13 @@ public class SessionSecurityToken extends SecurityToken  {
     
     public boolean getIsPersistent() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsPersistent = null;
         try {
-            return (boolean)classInstance.Get("IsPersistent");
+            retObjectIsPersistent = classInstance.Get("IsPersistent");
+            return (boolean)retObjectIsPersistent;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsPersistent != null ? retObjectIsPersistent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -238,7 +242,7 @@ public class SessionSecurityToken extends SecurityToken  {
 
     public void setIsPersistent(boolean IsPersistent) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsPersistent", IsPersistent);
         } catch (JCNativeException jcne) {
@@ -248,9 +252,13 @@ public class SessionSecurityToken extends SecurityToken  {
 
     public boolean getIsReferenceMode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsReferenceMode = null;
         try {
-            return (boolean)classInstance.Get("IsReferenceMode");
+            retObjectIsReferenceMode = classInstance.Get("IsReferenceMode");
+            return (boolean)retObjectIsReferenceMode;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsReferenceMode != null ? retObjectIsReferenceMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -258,7 +266,7 @@ public class SessionSecurityToken extends SecurityToken  {
 
     public void setIsReferenceMode(boolean IsReferenceMode) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsReferenceMode", IsReferenceMode);
         } catch (JCNativeException jcne) {
@@ -268,10 +276,14 @@ public class SessionSecurityToken extends SecurityToken  {
 
     public DateTime getKeyEffectiveTime() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectKeyEffectiveTime = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("KeyEffectiveTime");
+            retObjectKeyEffectiveTime = classInstance.Get("KeyEffectiveTime");
+            JCObject val = (JCObject)retObjectKeyEffectiveTime;
             return new DateTime(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectKeyEffectiveTime != null ? retObjectKeyEffectiveTime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -279,10 +291,14 @@ public class SessionSecurityToken extends SecurityToken  {
 
     public DateTime getKeyExpirationTime() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectKeyExpirationTime = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("KeyExpirationTime");
+            retObjectKeyExpirationTime = classInstance.Get("KeyExpirationTime");
+            JCObject val = (JCObject)retObjectKeyExpirationTime;
             return new DateTime(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectKeyExpirationTime != null ? retObjectKeyExpirationTime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -290,10 +306,14 @@ public class SessionSecurityToken extends SecurityToken  {
 
     public ClaimsPrincipal getClaimsPrincipal() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClaimsPrincipal = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ClaimsPrincipal");
+            retObjectClaimsPrincipal = classInstance.Get("ClaimsPrincipal");
+            JCObject val = (JCObject)retObjectClaimsPrincipal;
             return new ClaimsPrincipal(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClaimsPrincipal != null ? retObjectClaimsPrincipal.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -301,9 +321,13 @@ public class SessionSecurityToken extends SecurityToken  {
 
     public java.lang.String getContext() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContext = null;
         try {
-            return (java.lang.String)classInstance.Get("Context");
+            retObjectContext = classInstance.Get("Context");
+            return (java.lang.String)retObjectContext;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectContext != null ? retObjectContext.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -311,9 +335,13 @@ public class SessionSecurityToken extends SecurityToken  {
 
     public java.lang.String getEndpointId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEndpointId = null;
         try {
-            return (java.lang.String)classInstance.Get("EndpointId");
+            retObjectEndpointId = classInstance.Get("EndpointId");
+            return (java.lang.String)retObjectEndpointId;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectEndpointId != null ? retObjectEndpointId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -321,10 +349,14 @@ public class SessionSecurityToken extends SecurityToken  {
 
     public Uri getSecureConversationVersion() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSecureConversationVersion = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SecureConversationVersion");
+            retObjectSecureConversationVersion = classInstance.Get("SecureConversationVersion");
+            JCObject val = (JCObject)retObjectSecureConversationVersion;
             return new Uri(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSecureConversationVersion != null ? retObjectSecureConversationVersion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -332,10 +364,14 @@ public class SessionSecurityToken extends SecurityToken  {
 
     public UniqueId getContextId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContextId = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ContextId");
+            retObjectContextId = classInstance.Get("ContextId");
+            JCObject val = (JCObject)retObjectContextId;
             return new UniqueId(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContextId != null ? retObjectContextId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -343,10 +379,14 @@ public class SessionSecurityToken extends SecurityToken  {
 
     public UniqueId getKeyGeneration() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectKeyGeneration = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("KeyGeneration");
+            retObjectKeyGeneration = classInstance.Get("KeyGeneration");
+            JCObject val = (JCObject)retObjectKeyGeneration;
             return new UniqueId(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectKeyGeneration != null ? retObjectKeyGeneration.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

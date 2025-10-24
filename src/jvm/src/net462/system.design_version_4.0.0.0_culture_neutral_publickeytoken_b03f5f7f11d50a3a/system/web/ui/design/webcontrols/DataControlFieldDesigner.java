@@ -158,9 +158,13 @@ public class DataControlFieldDesigner extends NetObject  {
     
     public boolean IsEnabled(DataBoundControl parent) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsEnabled = null;
         try {
-            return (boolean)classInstance.Invoke("IsEnabled", parent == null ? null : parent.getJCOInstance());
+            retObjectIsEnabled = classInstance.Invoke("IsEnabled", parent == null ? null : parent.getJCOInstance());
+            return (boolean)retObjectIsEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsEnabled != null ? retObjectIsEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -168,9 +172,13 @@ public class DataControlFieldDesigner extends NetObject  {
 
     public java.lang.String GetNodeText(DataControlField dataControlField) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetNodeText = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetNodeText", dataControlField == null ? null : dataControlField.getJCOInstance());
+            retObjectGetNodeText = classInstance.Invoke("GetNodeText", dataControlField == null ? null : dataControlField.getJCOInstance());
+            return (java.lang.String)retObjectGetNodeText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetNodeText != null ? retObjectGetNodeText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,10 +186,14 @@ public class DataControlFieldDesigner extends NetObject  {
 
     public DataControlField CreateField() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateField = null;
         try {
-            JCObject objCreateField = (JCObject)classInstance.Invoke("CreateField");
+            retObjectCreateField = classInstance.Invoke("CreateField");
+            JCObject objCreateField = (JCObject)retObjectCreateField;
             return new DataControlField(objCreateField);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateField != null ? retObjectCreateField.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -189,10 +201,14 @@ public class DataControlFieldDesigner extends NetObject  {
 
     public DataControlField CreateField(IDataSourceFieldSchema fieldSchema) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateField = null;
         try {
-            JCObject objCreateField = (JCObject)classInstance.Invoke("CreateField", fieldSchema == null ? null : fieldSchema.getJCOInstance());
+            retObjectCreateField = classInstance.Invoke("CreateField", fieldSchema == null ? null : fieldSchema.getJCOInstance());
+            JCObject objCreateField = (JCObject)retObjectCreateField;
             return new DataControlField(objCreateField);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateField != null ? retObjectCreateField.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,10 +216,14 @@ public class DataControlFieldDesigner extends NetObject  {
 
     public TemplateField CreateTemplateField(DataControlField dataControlField, DataBoundControl dataBoundControl) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateTemplateField = null;
         try {
-            JCObject objCreateTemplateField = (JCObject)classInstance.Invoke("CreateTemplateField", dataControlField == null ? null : dataControlField.getJCOInstance(), dataBoundControl == null ? null : dataBoundControl.getJCOInstance());
+            retObjectCreateTemplateField = classInstance.Invoke("CreateTemplateField", dataControlField == null ? null : dataControlField.getJCOInstance(), dataBoundControl == null ? null : dataBoundControl.getJCOInstance());
+            JCObject objCreateTemplateField = (JCObject)retObjectCreateTemplateField;
             return new TemplateField(objCreateTemplateField);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateTemplateField != null ? retObjectCreateTemplateField.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -215,9 +235,13 @@ public class DataControlFieldDesigner extends NetObject  {
     
     public boolean getUsesSchema() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUsesSchema = null;
         try {
-            return (boolean)classInstance.Get("UsesSchema");
+            retObjectUsesSchema = classInstance.Get("UsesSchema");
+            return (boolean)retObjectUsesSchema;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectUsesSchema != null ? retObjectUsesSchema.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -225,9 +249,13 @@ public class DataControlFieldDesigner extends NetObject  {
 
     public java.lang.String getDefaultNodeText() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDefaultNodeText = null;
         try {
-            return (java.lang.String)classInstance.Get("DefaultNodeText");
+            retObjectDefaultNodeText = classInstance.Get("DefaultNodeText");
+            return (java.lang.String)retObjectDefaultNodeText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDefaultNodeText != null ? retObjectDefaultNodeText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

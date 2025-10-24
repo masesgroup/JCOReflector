@@ -158,9 +158,13 @@ public class ToolStripManager extends NetObject  {
     
     public static boolean IsShortcutDefined(Keys shortcut) throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsShortcutDefined = null;
         try {
-            return (boolean)classType.Invoke("IsShortcutDefined", shortcut == null ? null : shortcut.getJCOInstance());
+            retObjectIsShortcutDefined = classType.Invoke("IsShortcutDefined", shortcut == null ? null : shortcut.getJCOInstance());
+            return (boolean)retObjectIsShortcutDefined;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsShortcutDefined != null ? retObjectIsShortcutDefined.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -168,9 +172,13 @@ public class ToolStripManager extends NetObject  {
 
     public static boolean IsValidShortcut(Keys shortcut) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsValidShortcut = null;
         try {
-            return (boolean)classType.Invoke("IsValidShortcut", shortcut == null ? null : shortcut.getJCOInstance());
+            retObjectIsValidShortcut = classType.Invoke("IsValidShortcut", shortcut == null ? null : shortcut.getJCOInstance());
+            return (boolean)retObjectIsValidShortcut;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsValidShortcut != null ? retObjectIsValidShortcut.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,9 +186,13 @@ public class ToolStripManager extends NetObject  {
 
     public static boolean Merge(ToolStrip sourceToolStrip, java.lang.String targetName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.MulticastNotSupportedException, system.threading.ThreadStateException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMerge = null;
         try {
-            return (boolean)classType.Invoke("Merge", sourceToolStrip == null ? null : sourceToolStrip.getJCOInstance(), targetName);
+            retObjectMerge = classType.Invoke("Merge", sourceToolStrip == null ? null : sourceToolStrip.getJCOInstance(), targetName);
+            return (boolean)retObjectMerge;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectMerge != null ? retObjectMerge.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,9 +200,13 @@ public class ToolStripManager extends NetObject  {
 
     public static boolean Merge(ToolStrip sourceToolStrip, ToolStrip targetToolStrip) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.MulticastNotSupportedException, system.IndexOutOfRangeException, system.threading.ThreadStateException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMerge = null;
         try {
-            return (boolean)classType.Invoke("Merge", sourceToolStrip == null ? null : sourceToolStrip.getJCOInstance(), targetToolStrip == null ? null : targetToolStrip.getJCOInstance());
+            retObjectMerge = classType.Invoke("Merge", sourceToolStrip == null ? null : sourceToolStrip.getJCOInstance(), targetToolStrip == null ? null : targetToolStrip.getJCOInstance());
+            return (boolean)retObjectMerge;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectMerge != null ? retObjectMerge.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,9 +214,13 @@ public class ToolStripManager extends NetObject  {
 
     public static boolean RevertMerge(java.lang.String targetName) throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.MulticastNotSupportedException, system.threading.ThreadStateException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectRevertMerge = null;
         try {
-            return (boolean)classType.Invoke("RevertMerge", targetName);
+            retObjectRevertMerge = classType.Invoke("RevertMerge", targetName);
+            return (boolean)retObjectRevertMerge;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectRevertMerge != null ? retObjectRevertMerge.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -208,9 +228,13 @@ public class ToolStripManager extends NetObject  {
 
     public static boolean RevertMerge(ToolStrip targetToolStrip, ToolStrip sourceToolStrip) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.MulticastNotSupportedException, system.threading.ThreadStateException, system.componentmodel.Win32Exception, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectRevertMerge = null;
         try {
-            return (boolean)classType.Invoke("RevertMerge", targetToolStrip == null ? null : targetToolStrip.getJCOInstance(), sourceToolStrip == null ? null : sourceToolStrip.getJCOInstance());
+            retObjectRevertMerge = classType.Invoke("RevertMerge", targetToolStrip == null ? null : targetToolStrip.getJCOInstance(), sourceToolStrip == null ? null : sourceToolStrip.getJCOInstance());
+            return (boolean)retObjectRevertMerge;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectRevertMerge != null ? retObjectRevertMerge.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -218,9 +242,13 @@ public class ToolStripManager extends NetObject  {
 
     public static boolean RevertMerge(ToolStrip targetToolStrip) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.MulticastNotSupportedException, system.threading.ThreadStateException, system.componentmodel.Win32Exception, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectRevertMerge = null;
         try {
-            return (boolean)classType.Invoke("RevertMerge", targetToolStrip == null ? null : targetToolStrip.getJCOInstance());
+            retObjectRevertMerge = classType.Invoke("RevertMerge", targetToolStrip == null ? null : targetToolStrip.getJCOInstance());
+            return (boolean)retObjectRevertMerge;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectRevertMerge != null ? retObjectRevertMerge.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -228,10 +256,14 @@ public class ToolStripManager extends NetObject  {
 
     public static ToolStrip FindToolStrip(java.lang.String toolStripName) throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFindToolStrip = null;
         try {
-            JCObject objFindToolStrip = (JCObject)classType.Invoke("FindToolStrip", toolStripName);
+            retObjectFindToolStrip = classType.Invoke("FindToolStrip", toolStripName);
+            JCObject objFindToolStrip = (JCObject)retObjectFindToolStrip;
             return new ToolStrip(objFindToolStrip);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFindToolStrip != null ? retObjectFindToolStrip.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -239,7 +271,7 @@ public class ToolStripManager extends NetObject  {
 
     public static void LoadSettings(Form targetForm, java.lang.String key) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.configuration.SettingsPropertyNotFoundException, system.runtime.serialization.SerializationException, system.TypeLoadException, system.componentmodel.Win32Exception, system.NotImplementedException, system.componentmodel.InvalidEnumArgumentException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("LoadSettings", targetForm == null ? null : targetForm.getJCOInstance(), key);
         } catch (JCNativeException jcne) {
@@ -249,7 +281,7 @@ public class ToolStripManager extends NetObject  {
 
     public static void LoadSettings(Form targetForm) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.configuration.SettingsPropertyNotFoundException, system.runtime.serialization.SerializationException, system.componentmodel.Win32Exception, system.componentmodel.InvalidEnumArgumentException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("LoadSettings", targetForm == null ? null : targetForm.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -259,7 +291,7 @@ public class ToolStripManager extends NetObject  {
 
     public static void SaveSettings(Form sourceForm, java.lang.String key) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.componentmodel.InvalidEnumArgumentException, system.configuration.SettingsPropertyNotFoundException, system.configuration.SettingsPropertyIsReadOnlyException, system.configuration.SettingsPropertyWrongTypeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SaveSettings", sourceForm == null ? null : sourceForm.getJCOInstance(), key);
         } catch (JCNativeException jcne) {
@@ -269,7 +301,7 @@ public class ToolStripManager extends NetObject  {
 
     public static void SaveSettings(Form sourceForm) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.componentmodel.InvalidEnumArgumentException, system.configuration.SettingsPropertyNotFoundException, system.configuration.SettingsPropertyIsReadOnlyException, system.configuration.SettingsPropertyWrongTypeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SaveSettings", sourceForm == null ? null : sourceForm.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -283,9 +315,13 @@ public class ToolStripManager extends NetObject  {
     
     public static boolean getVisualStylesEnabled() throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectVisualStylesEnabled = null;
         try {
-            return (boolean)classType.Get("VisualStylesEnabled");
+            retObjectVisualStylesEnabled = classType.Get("VisualStylesEnabled");
+            return (boolean)retObjectVisualStylesEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectVisualStylesEnabled != null ? retObjectVisualStylesEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -293,7 +329,7 @@ public class ToolStripManager extends NetObject  {
 
     public static void setVisualStylesEnabled(boolean VisualStylesEnabled) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Set("VisualStylesEnabled", VisualStylesEnabled);
         } catch (JCNativeException jcne) {
@@ -303,10 +339,14 @@ public class ToolStripManager extends NetObject  {
 
     public static ToolStripManagerRenderMode getRenderMode() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectRenderMode = null;
         try {
-            JCObject val = (JCObject)classType.Get("RenderMode");
+            retObjectRenderMode = classType.Get("RenderMode");
+            JCObject val = (JCObject)retObjectRenderMode;
             return new ToolStripManagerRenderMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRenderMode != null ? retObjectRenderMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -314,7 +354,7 @@ public class ToolStripManager extends NetObject  {
 
     public static void setRenderMode(ToolStripManagerRenderMode RenderMode) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Set("RenderMode", RenderMode == null ? null : RenderMode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -324,10 +364,14 @@ public class ToolStripManager extends NetObject  {
 
     public static ToolStripRenderer getRenderer() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectRenderer = null;
         try {
-            JCObject val = (JCObject)classType.Get("Renderer");
+            retObjectRenderer = classType.Get("Renderer");
+            JCObject val = (JCObject)retObjectRenderer;
             return new ToolStripRenderer(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRenderer != null ? retObjectRenderer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -335,7 +379,7 @@ public class ToolStripManager extends NetObject  {
 
     public static void setRenderer(ToolStripRenderer Renderer) throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Set("Renderer", Renderer == null ? null : Renderer.getJCOInstance());
         } catch (JCNativeException jcne) {

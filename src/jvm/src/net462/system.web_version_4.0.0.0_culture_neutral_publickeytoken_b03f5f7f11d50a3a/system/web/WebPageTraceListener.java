@@ -164,7 +164,7 @@ public class WebPageTraceListener extends TraceListener  {
     
     public void TraceEvent(TraceEventCache eventCache, java.lang.String source, TraceEventType severity, int id, java.lang.String message) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.TypeInitializationException, system.OutOfMemoryException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.FormatException, system.IndexOutOfRangeException, system.web.HttpRequestValidationException, system.OverflowException, system.NullReferenceException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("TraceEvent", eventCache == null ? null : eventCache.getJCOInstance(), source, severity == null ? null : severity.getJCOInstance(), id, message);
         } catch (JCNativeException jcne) {
@@ -174,7 +174,7 @@ public class WebPageTraceListener extends TraceListener  {
 
     public void TraceEvent(TraceEventCache eventCache, java.lang.String source, TraceEventType severity, int id, java.lang.String format, NetObject... args) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.InvalidOperationException, system.ArgumentException, system.resources.MissingManifestResourceException, system.PlatformNotSupportedException, system.NotSupportedException, system.componentmodel.Win32Exception, system.IndexOutOfRangeException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("TraceEvent", eventCache == null ? null : eventCache.getJCOInstance(), source, severity == null ? null : severity.getJCOInstance(), id, format, toObjectFromArray(args));
         } catch (JCNativeException jcne) {
@@ -184,7 +184,7 @@ public class WebPageTraceListener extends TraceListener  {
 
     public void Write(java.lang.String message) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.web.HttpException, system.ArgumentNullException, system.configuration.ConfigurationErrorsException, system.InvalidOperationException, system.NotSupportedException, system.configuration.ConfigurationException, system.FormatException, system.IndexOutOfRangeException, system.web.HttpRequestValidationException, system.OverflowException, system.NullReferenceException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Write", message);
         } catch (JCNativeException jcne) {
@@ -194,7 +194,7 @@ public class WebPageTraceListener extends TraceListener  {
 
     public void Write(java.lang.String message, java.lang.String category) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.web.HttpException, system.ArgumentNullException, system.configuration.ConfigurationErrorsException, system.InvalidOperationException, system.NotSupportedException, system.configuration.ConfigurationException, system.FormatException, system.IndexOutOfRangeException, system.web.HttpRequestValidationException, system.OverflowException, system.NullReferenceException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Write", message, category);
         } catch (JCNativeException jcne) {
@@ -204,7 +204,7 @@ public class WebPageTraceListener extends TraceListener  {
 
     public void WriteLine(java.lang.String message) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.web.HttpException, system.ArgumentNullException, system.configuration.ConfigurationErrorsException, system.InvalidOperationException, system.NotSupportedException, system.configuration.ConfigurationException, system.FormatException, system.IndexOutOfRangeException, system.web.HttpRequestValidationException, system.OverflowException, system.NullReferenceException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteLine", message);
         } catch (JCNativeException jcne) {
@@ -214,7 +214,7 @@ public class WebPageTraceListener extends TraceListener  {
 
     public void WriteLine(java.lang.String message, java.lang.String category) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.web.HttpException, system.ArgumentNullException, system.configuration.ConfigurationErrorsException, system.InvalidOperationException, system.NotSupportedException, system.configuration.ConfigurationException, system.FormatException, system.IndexOutOfRangeException, system.web.HttpRequestValidationException, system.OverflowException, system.NullReferenceException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteLine", message, category);
         } catch (JCNativeException jcne) {

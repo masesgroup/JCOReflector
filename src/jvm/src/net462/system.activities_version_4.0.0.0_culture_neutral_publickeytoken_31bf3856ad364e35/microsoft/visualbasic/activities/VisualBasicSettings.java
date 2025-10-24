@@ -166,10 +166,14 @@ public class VisualBasicSettings extends NetObject  {
     
     public static VisualBasicSettings getDefault() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDefault = null;
         try {
-            JCObject val = (JCObject)classType.Get("Default");
+            retObjectDefault = classType.Get("Default");
+            JCObject val = (JCObject)retObjectDefault;
             return new VisualBasicSettings(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefault != null ? retObjectDefault.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -145,10 +145,14 @@ public class ISerializationSurrogateProvider2Implementation extends NetObject im
     
     public NetObject GetCustomDataToExport(MemberInfo memberInfo, NetType dataContractType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetCustomDataToExport = null;
         try {
-            JCObject objGetCustomDataToExport = (JCObject)classInstance.Invoke("GetCustomDataToExport", memberInfo == null ? null : memberInfo.getJCOInstance(), dataContractType == null ? null : dataContractType.getJCOInstance());
+            retObjectGetCustomDataToExport = classInstance.Invoke("GetCustomDataToExport", memberInfo == null ? null : memberInfo.getJCOInstance(), dataContractType == null ? null : dataContractType.getJCOInstance());
+            JCObject objGetCustomDataToExport = (JCObject)retObjectGetCustomDataToExport;
             return new NetObject(objGetCustomDataToExport);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCustomDataToExport != null ? retObjectGetCustomDataToExport.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -156,10 +160,14 @@ public class ISerializationSurrogateProvider2Implementation extends NetObject im
 
     public NetObject GetCustomDataToExport(NetType runtimeType, NetType dataContractType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetCustomDataToExport = null;
         try {
-            JCObject objGetCustomDataToExport = (JCObject)classInstance.Invoke("GetCustomDataToExport", runtimeType == null ? null : runtimeType.getJCOInstance(), dataContractType == null ? null : dataContractType.getJCOInstance());
+            retObjectGetCustomDataToExport = classInstance.Invoke("GetCustomDataToExport", runtimeType == null ? null : runtimeType.getJCOInstance(), dataContractType == null ? null : dataContractType.getJCOInstance());
+            JCObject objGetCustomDataToExport = (JCObject)retObjectGetCustomDataToExport;
             return new NetObject(objGetCustomDataToExport);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCustomDataToExport != null ? retObjectGetCustomDataToExport.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -167,10 +175,14 @@ public class ISerializationSurrogateProvider2Implementation extends NetObject im
 
     public NetObject GetDeserializedObject(NetObject obj, NetType targetType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDeserializedObject = null;
         try {
-            JCObject objGetDeserializedObject = (JCObject)classInstance.Invoke("GetDeserializedObject", obj == null ? null : obj.getJCOInstance(), targetType == null ? null : targetType.getJCOInstance());
+            retObjectGetDeserializedObject = classInstance.Invoke("GetDeserializedObject", obj == null ? null : obj.getJCOInstance(), targetType == null ? null : targetType.getJCOInstance());
+            JCObject objGetDeserializedObject = (JCObject)retObjectGetDeserializedObject;
             return new NetObject(objGetDeserializedObject);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetDeserializedObject != null ? retObjectGetDeserializedObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,10 +190,14 @@ public class ISerializationSurrogateProvider2Implementation extends NetObject im
 
     public NetObject GetObjectToSerialize(NetObject obj, NetType targetType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetObjectToSerialize = null;
         try {
-            JCObject objGetObjectToSerialize = (JCObject)classInstance.Invoke("GetObjectToSerialize", obj == null ? null : obj.getJCOInstance(), targetType == null ? null : targetType.getJCOInstance());
+            retObjectGetObjectToSerialize = classInstance.Invoke("GetObjectToSerialize", obj == null ? null : obj.getJCOInstance(), targetType == null ? null : targetType.getJCOInstance());
+            JCObject objGetObjectToSerialize = (JCObject)retObjectGetObjectToSerialize;
             return new NetObject(objGetObjectToSerialize);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetObjectToSerialize != null ? retObjectGetObjectToSerialize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -189,10 +205,14 @@ public class ISerializationSurrogateProvider2Implementation extends NetObject im
 
     public NetType GetReferencedTypeOnImport(java.lang.String typeName, java.lang.String typeNamespace, NetObject customData) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetReferencedTypeOnImport = null;
         try {
-            JCObject objGetReferencedTypeOnImport = (JCObject)classInstance.Invoke("GetReferencedTypeOnImport", typeName, typeNamespace, customData == null ? null : customData.getJCOInstance());
+            retObjectGetReferencedTypeOnImport = classInstance.Invoke("GetReferencedTypeOnImport", typeName, typeNamespace, customData == null ? null : customData.getJCOInstance());
+            JCObject objGetReferencedTypeOnImport = (JCObject)retObjectGetReferencedTypeOnImport;
             return new NetType(objGetReferencedTypeOnImport);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetReferencedTypeOnImport != null ? retObjectGetReferencedTypeOnImport.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,10 +220,14 @@ public class ISerializationSurrogateProvider2Implementation extends NetObject im
 
     public NetType GetSurrogateType(NetType type) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSurrogateType = null;
         try {
-            JCObject objGetSurrogateType = (JCObject)classInstance.Invoke("GetSurrogateType", type == null ? null : type.getJCOInstance());
+            retObjectGetSurrogateType = classInstance.Invoke("GetSurrogateType", type == null ? null : type.getJCOInstance());
+            JCObject objGetSurrogateType = (JCObject)retObjectGetSurrogateType;
             return new NetType(objGetSurrogateType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSurrogateType != null ? retObjectGetSurrogateType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -169,10 +169,14 @@ public class UriSection extends ConfigurationSection  {
     
     public IdnElement getIdn() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIdn = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Idn");
+            retObjectIdn = classInstance.Get("Idn");
+            JCObject val = (JCObject)retObjectIdn;
             return new IdnElement(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIdn != null ? retObjectIdn.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,10 +184,14 @@ public class UriSection extends ConfigurationSection  {
 
     public IriParsingElement getIriParsing() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIriParsing = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("IriParsing");
+            retObjectIriParsing = classInstance.Get("IriParsing");
+            JCObject val = (JCObject)retObjectIriParsing;
             return new IriParsingElement(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIriParsing != null ? retObjectIriParsing.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,10 +199,14 @@ public class UriSection extends ConfigurationSection  {
 
     public SchemeSettingElementCollection getSchemeSettings() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSchemeSettings = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SchemeSettings");
+            retObjectSchemeSettings = classInstance.Get("SchemeSettings");
+            JCObject val = (JCObject)retObjectSchemeSettings;
             return new SchemeSettingElementCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSchemeSettings != null ? retObjectSchemeSettings.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

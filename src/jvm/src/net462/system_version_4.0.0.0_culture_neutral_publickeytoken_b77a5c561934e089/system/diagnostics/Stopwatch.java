@@ -163,9 +163,20 @@ public class Stopwatch extends NetObject  {
     
     public static long GetTimestamp() throws Throwable, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetTimestamp = null;
         try {
-            return (long)classType.Invoke("GetTimestamp");
+            retObjectGetTimestamp = classType.Invoke("GetTimestamp");
+            return (long)retObjectGetTimestamp;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectGetTimestamp_ToString = retObjectGetTimestamp == null ? "null" : retObjectGetTimestamp.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetTimestampNumber = (java.lang.Number)retObjectGetTimestamp;
+                return retObjectGetTimestampNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectGetTimestamp != null ? retObjectGetTimestamp.getClass() : "null", retObjectGetTimestamp_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -173,10 +184,14 @@ public class Stopwatch extends NetObject  {
 
     public static Stopwatch StartNew() throws Throwable, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectStartNew = null;
         try {
-            JCObject objStartNew = (JCObject)classType.Invoke("StartNew");
+            retObjectStartNew = classType.Invoke("StartNew");
+            JCObject objStartNew = (JCObject)retObjectStartNew;
             return new Stopwatch(objStartNew);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStartNew != null ? retObjectStartNew.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -184,7 +199,7 @@ public class Stopwatch extends NetObject  {
 
     public void Reset() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Reset");
         } catch (JCNativeException jcne) {
@@ -194,7 +209,7 @@ public class Stopwatch extends NetObject  {
 
     public void Restart() throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Restart");
         } catch (JCNativeException jcne) {
@@ -204,7 +219,7 @@ public class Stopwatch extends NetObject  {
 
     public void Start() throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Start");
         } catch (JCNativeException jcne) {
@@ -214,7 +229,7 @@ public class Stopwatch extends NetObject  {
 
     public void Stop() throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Stop");
         } catch (JCNativeException jcne) {
@@ -228,9 +243,13 @@ public class Stopwatch extends NetObject  {
     
     public boolean getIsRunning() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsRunning = null;
         try {
-            return (boolean)classInstance.Get("IsRunning");
+            retObjectIsRunning = classInstance.Get("IsRunning");
+            return (boolean)retObjectIsRunning;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsRunning != null ? retObjectIsRunning.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -238,9 +257,20 @@ public class Stopwatch extends NetObject  {
 
     public long getElapsedMilliseconds() throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectElapsedMilliseconds = null;
         try {
-            return (long)classInstance.Get("ElapsedMilliseconds");
+            retObjectElapsedMilliseconds = classInstance.Get("ElapsedMilliseconds");
+            return (long)retObjectElapsedMilliseconds;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectElapsedMilliseconds_ToString = retObjectElapsedMilliseconds == null ? "null" : retObjectElapsedMilliseconds.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectElapsedMillisecondsNumber = (java.lang.Number)retObjectElapsedMilliseconds;
+                return retObjectElapsedMillisecondsNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectElapsedMilliseconds != null ? retObjectElapsedMilliseconds.getClass() : "null", retObjectElapsedMilliseconds_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -248,9 +278,20 @@ public class Stopwatch extends NetObject  {
 
     public long getElapsedTicks() throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectElapsedTicks = null;
         try {
-            return (long)classInstance.Get("ElapsedTicks");
+            retObjectElapsedTicks = classInstance.Get("ElapsedTicks");
+            return (long)retObjectElapsedTicks;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectElapsedTicks_ToString = retObjectElapsedTicks == null ? "null" : retObjectElapsedTicks.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectElapsedTicksNumber = (java.lang.Number)retObjectElapsedTicks;
+                return retObjectElapsedTicksNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectElapsedTicks != null ? retObjectElapsedTicks.getClass() : "null", retObjectElapsedTicks_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -258,10 +299,14 @@ public class Stopwatch extends NetObject  {
 
     public TimeSpan getElapsed() throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectElapsed = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Elapsed");
+            retObjectElapsed = classInstance.Get("Elapsed");
+            JCObject val = (JCObject)retObjectElapsed;
             return new TimeSpan(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectElapsed != null ? retObjectElapsed.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

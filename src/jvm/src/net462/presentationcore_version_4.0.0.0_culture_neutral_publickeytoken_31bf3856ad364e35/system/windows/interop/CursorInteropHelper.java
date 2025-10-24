@@ -155,10 +155,14 @@ public class CursorInteropHelper extends NetObject  {
     
     public static Cursor Create(SafeHandle cursorHandle) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
         try {
-            JCObject objCreate = (JCObject)classType.Invoke("Create", cursorHandle == null ? null : cursorHandle.getJCOInstance());
+            retObjectCreate = classType.Invoke("Create", cursorHandle == null ? null : cursorHandle.getJCOInstance());
+            JCObject objCreate = (JCObject)retObjectCreate;
             return new Cursor(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

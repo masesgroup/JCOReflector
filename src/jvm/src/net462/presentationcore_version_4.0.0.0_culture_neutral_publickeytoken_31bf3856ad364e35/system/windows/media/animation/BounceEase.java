@@ -166,9 +166,20 @@ public class BounceEase extends EasingFunctionBase  {
     
     public double getBounciness() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBounciness = null;
         try {
-            return (double)classInstance.Get("Bounciness");
+            retObjectBounciness = classInstance.Get("Bounciness");
+            return (double)retObjectBounciness;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectBounciness_ToString = retObjectBounciness == null ? "null" : retObjectBounciness.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectBouncinessNumber = (java.lang.Number)retObjectBounciness;
+                return retObjectBouncinessNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectBounciness != null ? retObjectBounciness.getClass() : "null", retObjectBounciness_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,7 +187,7 @@ public class BounceEase extends EasingFunctionBase  {
 
     public void setBounciness(double Bounciness) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Bounciness", Bounciness);
         } catch (JCNativeException jcne) {
@@ -186,9 +197,20 @@ public class BounceEase extends EasingFunctionBase  {
 
     public int getBounces() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBounces = null;
         try {
-            return (int)classInstance.Get("Bounces");
+            retObjectBounces = classInstance.Get("Bounces");
+            return (int)retObjectBounces;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectBounces_ToString = retObjectBounces == null ? "null" : retObjectBounces.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectBouncesNumber = (java.lang.Number)retObjectBounces;
+                return retObjectBouncesNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectBounces != null ? retObjectBounces.getClass() : "null", retObjectBounces_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,7 +218,7 @@ public class BounceEase extends EasingFunctionBase  {
 
     public void setBounces(int Bounces) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Bounces", Bounces);
         } catch (JCNativeException jcne) {

@@ -172,10 +172,14 @@ public class CancelRequestedRecord extends TrackingRecord  {
     
     public ActivityInfo getActivity() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectActivity = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Activity");
+            retObjectActivity = classInstance.Get("Activity");
+            JCObject val = (JCObject)retObjectActivity;
             return new ActivityInfo(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectActivity != null ? retObjectActivity.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,7 +187,7 @@ public class CancelRequestedRecord extends TrackingRecord  {
 
     public void setActivity(ActivityInfo Activity) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Activity", Activity == null ? null : Activity.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -193,10 +197,14 @@ public class CancelRequestedRecord extends TrackingRecord  {
 
     public ActivityInfo getChild() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectChild = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Child");
+            retObjectChild = classInstance.Get("Child");
+            JCObject val = (JCObject)retObjectChild;
             return new ActivityInfo(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectChild != null ? retObjectChild.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -204,7 +212,7 @@ public class CancelRequestedRecord extends TrackingRecord  {
 
     public void setChild(ActivityInfo Child) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Child", Child == null ? null : Child.getJCOInstance());
         } catch (JCNativeException jcne) {

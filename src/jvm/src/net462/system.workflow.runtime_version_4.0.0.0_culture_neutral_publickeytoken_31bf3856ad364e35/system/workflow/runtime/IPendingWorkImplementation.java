@@ -145,9 +145,13 @@ public class IPendingWorkImplementation extends NetObject implements IPendingWor
     
     public boolean MustCommit(ICollection items) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMustCommit = null;
         try {
-            return (boolean)classInstance.Invoke("MustCommit", items == null ? null : items.getJCOInstance());
+            retObjectMustCommit = classInstance.Invoke("MustCommit", items == null ? null : items.getJCOInstance());
+            return (boolean)retObjectMustCommit;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectMustCommit != null ? retObjectMustCommit.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -155,7 +159,7 @@ public class IPendingWorkImplementation extends NetObject implements IPendingWor
 
     public void Commit(Transaction transaction, ICollection items) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Commit", transaction == null ? null : transaction.getJCOInstance(), items == null ? null : items.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -165,7 +169,7 @@ public class IPendingWorkImplementation extends NetObject implements IPendingWor
 
     public void Complete(boolean succeeded, ICollection items) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Complete", succeeded, items == null ? null : items.getJCOInstance());
         } catch (JCNativeException jcne) {

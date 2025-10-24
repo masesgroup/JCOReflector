@@ -216,9 +216,20 @@ public class PerformanceCounter extends Component  {
     
     public long Decrement() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.NullReferenceException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception, system.io.IOException, system.security.SecurityException, system.configuration.ConfigurationException, system.OutOfMemoryException, system.SystemException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ApplicationException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDecrement = null;
         try {
-            return (long)classInstance.Invoke("Decrement");
+            retObjectDecrement = classInstance.Invoke("Decrement");
+            return (long)retObjectDecrement;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectDecrement_ToString = retObjectDecrement == null ? "null" : retObjectDecrement.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectDecrementNumber = (java.lang.Number)retObjectDecrement;
+                return retObjectDecrementNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectDecrement != null ? retObjectDecrement.getClass() : "null", retObjectDecrement_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -226,9 +237,20 @@ public class PerformanceCounter extends Component  {
 
     public long Increment() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.NullReferenceException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception, system.io.IOException, system.security.SecurityException, system.configuration.ConfigurationException, system.OutOfMemoryException, system.SystemException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ApplicationException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIncrement = null;
         try {
-            return (long)classInstance.Invoke("Increment");
+            retObjectIncrement = classInstance.Invoke("Increment");
+            return (long)retObjectIncrement;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectIncrement_ToString = retObjectIncrement == null ? "null" : retObjectIncrement.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectIncrementNumber = (java.lang.Number)retObjectIncrement;
+                return retObjectIncrementNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectIncrement != null ? retObjectIncrement.getClass() : "null", retObjectIncrement_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -236,9 +258,20 @@ public class PerformanceCounter extends Component  {
 
     public long IncrementBy(long value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.NullReferenceException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception, system.io.IOException, system.security.SecurityException, system.configuration.ConfigurationException, system.OutOfMemoryException, system.SystemException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ApplicationException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIncrementBy = null;
         try {
-            return (long)classInstance.Invoke("IncrementBy", value);
+            retObjectIncrementBy = classInstance.Invoke("IncrementBy", value);
+            return (long)retObjectIncrementBy;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectIncrementBy_ToString = retObjectIncrementBy == null ? "null" : retObjectIncrementBy.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectIncrementByNumber = (java.lang.Number)retObjectIncrementBy;
+                return retObjectIncrementByNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectIncrementBy != null ? retObjectIncrementBy.getClass() : "null", retObjectIncrementBy_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -246,10 +279,14 @@ public class PerformanceCounter extends Component  {
 
     public Single NextValue() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.NullReferenceException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.NotSupportedException, system.componentmodel.Win32Exception, system.security.SecurityException, system.configuration.ConfigurationException, system.OutOfMemoryException, system.SystemException, system.threading.WaitHandleCannotBeOpenedException, system.ApplicationException, system.AccessViolationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNextValue = null;
         try {
-            JCObject objNextValue = (JCObject)classInstance.Invoke("NextValue");
+            retObjectNextValue = classInstance.Invoke("NextValue");
+            JCObject objNextValue = (JCObject)retObjectNextValue;
             return new Single(objNextValue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNextValue != null ? retObjectNextValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -257,10 +294,14 @@ public class PerformanceCounter extends Component  {
 
     public CounterSample NextSample() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NullReferenceException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.NotSupportedException, system.componentmodel.Win32Exception, system.io.IOException, system.security.SecurityException, system.IndexOutOfRangeException, system.configuration.ConfigurationException, system.OutOfMemoryException, system.SystemException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ApplicationException, system.OverflowException, system.AccessViolationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNextSample = null;
         try {
-            JCObject objNextSample = (JCObject)classInstance.Invoke("NextSample");
+            retObjectNextSample = classInstance.Invoke("NextSample");
+            JCObject objNextSample = (JCObject)retObjectNextSample;
             return new CounterSample(objNextSample);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNextSample != null ? retObjectNextSample.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -268,7 +309,7 @@ public class PerformanceCounter extends Component  {
 
     public void BeginInit() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("BeginInit");
         } catch (JCNativeException jcne) {
@@ -278,7 +319,7 @@ public class PerformanceCounter extends Component  {
 
     public void Close() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Close");
         } catch (JCNativeException jcne) {
@@ -288,7 +329,7 @@ public class PerformanceCounter extends Component  {
 
     public static void CloseSharedResources() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NullReferenceException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("CloseSharedResources");
         } catch (JCNativeException jcne) {
@@ -298,7 +339,7 @@ public class PerformanceCounter extends Component  {
 
     public void EndInit() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NullReferenceException, system.PlatformNotSupportedException, system.NotSupportedException, system.componentmodel.Win32Exception, system.io.IOException, system.security.SecurityException, system.configuration.ConfigurationException, system.OutOfMemoryException, system.SystemException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ApplicationException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EndInit");
         } catch (JCNativeException jcne) {
@@ -308,7 +349,7 @@ public class PerformanceCounter extends Component  {
 
     public void RemoveInstance() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.NullReferenceException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception, system.io.IOException, system.security.SecurityException, system.IndexOutOfRangeException, system.configuration.ConfigurationException, system.OutOfMemoryException, system.SystemException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ApplicationException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RemoveInstance");
         } catch (JCNativeException jcne) {
@@ -322,9 +363,13 @@ public class PerformanceCounter extends Component  {
     
     public boolean getReadOnly() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadOnly = null;
         try {
-            return (boolean)classInstance.Get("ReadOnly");
+            retObjectReadOnly = classInstance.Get("ReadOnly");
+            return (boolean)retObjectReadOnly;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectReadOnly != null ? retObjectReadOnly.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -332,7 +377,7 @@ public class PerformanceCounter extends Component  {
 
     public void setReadOnly(boolean ReadOnly) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.ArgumentException, system.security.SecurityException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ReadOnly", ReadOnly);
         } catch (JCNativeException jcne) {
@@ -342,9 +387,20 @@ public class PerformanceCounter extends Component  {
 
     public long getRawValue() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.NullReferenceException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.NotSupportedException, system.componentmodel.Win32Exception, system.security.SecurityException, system.configuration.ConfigurationException, system.OutOfMemoryException, system.SystemException, system.threading.WaitHandleCannotBeOpenedException, system.ApplicationException, system.AccessViolationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRawValue = null;
         try {
-            return (long)classInstance.Get("RawValue");
+            retObjectRawValue = classInstance.Get("RawValue");
+            return (long)retObjectRawValue;
+        } catch (java.lang.ClassCastException cce) {
+            java.lang.String retObjectRawValue_ToString = retObjectRawValue == null ? "null" : retObjectRawValue.toString();
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectRawValueNumber = (java.lang.Number)retObjectRawValue;
+                return retObjectRawValueNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectRawValue != null ? retObjectRawValue.getClass() : "null", retObjectRawValue_ToString), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -352,7 +408,7 @@ public class PerformanceCounter extends Component  {
 
     public void setRawValue(long RawValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.NullReferenceException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception, system.io.IOException, system.security.SecurityException, system.configuration.ConfigurationException, system.OutOfMemoryException, system.SystemException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ApplicationException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RawValue", RawValue);
         } catch (JCNativeException jcne) {
@@ -362,10 +418,14 @@ public class PerformanceCounter extends Component  {
 
     public PerformanceCounterInstanceLifetime getInstanceLifetime() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInstanceLifetime = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("InstanceLifetime");
+            retObjectInstanceLifetime = classInstance.Get("InstanceLifetime");
+            JCObject val = (JCObject)retObjectInstanceLifetime;
             return new PerformanceCounterInstanceLifetime(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInstanceLifetime != null ? retObjectInstanceLifetime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -373,7 +433,7 @@ public class PerformanceCounter extends Component  {
 
     public void setInstanceLifetime(PerformanceCounterInstanceLifetime InstanceLifetime) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("InstanceLifetime", InstanceLifetime == null ? null : InstanceLifetime.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -383,10 +443,14 @@ public class PerformanceCounter extends Component  {
 
     public PerformanceCounterType getCounterType() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NullReferenceException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.NotSupportedException, system.componentmodel.Win32Exception, system.io.IOException, system.security.SecurityException, system.IndexOutOfRangeException, system.configuration.ConfigurationException, system.OutOfMemoryException, system.SystemException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ApplicationException, system.OverflowException, system.AccessViolationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCounterType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CounterType");
+            retObjectCounterType = classInstance.Get("CounterType");
+            JCObject val = (JCObject)retObjectCounterType;
             return new PerformanceCounterType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCounterType != null ? retObjectCounterType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -394,9 +458,13 @@ public class PerformanceCounter extends Component  {
 
     public java.lang.String getCategoryName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCategoryName = null;
         try {
-            return (java.lang.String)classInstance.Get("CategoryName");
+            retObjectCategoryName = classInstance.Get("CategoryName");
+            return (java.lang.String)retObjectCategoryName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectCategoryName != null ? retObjectCategoryName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -404,7 +472,7 @@ public class PerformanceCounter extends Component  {
 
     public void setCategoryName(java.lang.String CategoryName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CategoryName", CategoryName);
         } catch (JCNativeException jcne) {
@@ -414,9 +482,13 @@ public class PerformanceCounter extends Component  {
 
     public java.lang.String getCounterHelp() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NullReferenceException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.NotSupportedException, system.componentmodel.Win32Exception, system.io.IOException, system.security.SecurityException, system.IndexOutOfRangeException, system.configuration.ConfigurationException, system.OutOfMemoryException, system.SystemException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ApplicationException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCounterHelp = null;
         try {
-            return (java.lang.String)classInstance.Get("CounterHelp");
+            retObjectCounterHelp = classInstance.Get("CounterHelp");
+            return (java.lang.String)retObjectCounterHelp;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectCounterHelp != null ? retObjectCounterHelp.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -424,9 +496,13 @@ public class PerformanceCounter extends Component  {
 
     public java.lang.String getCounterName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCounterName = null;
         try {
-            return (java.lang.String)classInstance.Get("CounterName");
+            retObjectCounterName = classInstance.Get("CounterName");
+            return (java.lang.String)retObjectCounterName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectCounterName != null ? retObjectCounterName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -434,7 +510,7 @@ public class PerformanceCounter extends Component  {
 
     public void setCounterName(java.lang.String CounterName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CounterName", CounterName);
         } catch (JCNativeException jcne) {
@@ -444,9 +520,13 @@ public class PerformanceCounter extends Component  {
 
     public java.lang.String getInstanceName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInstanceName = null;
         try {
-            return (java.lang.String)classInstance.Get("InstanceName");
+            retObjectInstanceName = classInstance.Get("InstanceName");
+            return (java.lang.String)retObjectInstanceName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectInstanceName != null ? retObjectInstanceName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -454,7 +534,7 @@ public class PerformanceCounter extends Component  {
 
     public void setInstanceName(java.lang.String InstanceName) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("InstanceName", InstanceName);
         } catch (JCNativeException jcne) {
@@ -464,9 +544,13 @@ public class PerformanceCounter extends Component  {
 
     public java.lang.String getMachineName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMachineName = null;
         try {
-            return (java.lang.String)classInstance.Get("MachineName");
+            retObjectMachineName = classInstance.Get("MachineName");
+            return (java.lang.String)retObjectMachineName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectMachineName != null ? retObjectMachineName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -474,7 +558,7 @@ public class PerformanceCounter extends Component  {
 
     public void setMachineName(java.lang.String MachineName) throws Throwable, system.NullReferenceException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MachineName", MachineName);
         } catch (JCNativeException jcne) {

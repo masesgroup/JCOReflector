@@ -162,9 +162,13 @@ public class SubstitutionDesigner extends ControlDesigner  {
     
     public java.lang.String GetDesignTimeHtml() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.OutOfMemoryException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDesignTimeHtml = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetDesignTimeHtml");
+            retObjectGetDesignTimeHtml = classInstance.Invoke("GetDesignTimeHtml");
+            return (java.lang.String)retObjectGetDesignTimeHtml;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetDesignTimeHtml != null ? retObjectGetDesignTimeHtml.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

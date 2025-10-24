@@ -156,10 +156,14 @@ public class PeerMessagePropagationFilter extends NetObject  {
     
     public PeerMessagePropagation ShouldMessagePropagate(Message message, PeerMessageOrigination origination) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShouldMessagePropagate = null;
         try {
-            JCObject objShouldMessagePropagate = (JCObject)classInstance.Invoke("ShouldMessagePropagate", message == null ? null : message.getJCOInstance(), origination == null ? null : origination.getJCOInstance());
+            retObjectShouldMessagePropagate = classInstance.Invoke("ShouldMessagePropagate", message == null ? null : message.getJCOInstance(), origination == null ? null : origination.getJCOInstance());
+            JCObject objShouldMessagePropagate = (JCObject)retObjectShouldMessagePropagate;
             return new PeerMessagePropagation(objShouldMessagePropagate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectShouldMessagePropagate != null ? retObjectShouldMessagePropagate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

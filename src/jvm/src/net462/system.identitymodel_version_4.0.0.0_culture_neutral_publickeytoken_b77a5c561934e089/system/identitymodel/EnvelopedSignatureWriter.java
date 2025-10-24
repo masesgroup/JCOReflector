@@ -169,7 +169,7 @@ public class EnvelopedSignatureWriter extends DelegatingXmlDictionaryWriter  {
     
     public void WriteEndElement() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.collections.generic.KeyNotFoundException, system.security.cryptography.CryptographicUnexpectedOperationException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.xml.XmlException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteEndElement");
         } catch (JCNativeException jcne) {
@@ -179,7 +179,7 @@ public class EnvelopedSignatureWriter extends DelegatingXmlDictionaryWriter  {
 
     public void WriteFullEndElement() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.collections.generic.KeyNotFoundException, system.security.cryptography.CryptographicUnexpectedOperationException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.xml.XmlException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteFullEndElement");
         } catch (JCNativeException jcne) {
@@ -189,7 +189,7 @@ public class EnvelopedSignatureWriter extends DelegatingXmlDictionaryWriter  {
 
     public void WriteSignature() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteSignature");
         } catch (JCNativeException jcne) {
@@ -199,7 +199,7 @@ public class EnvelopedSignatureWriter extends DelegatingXmlDictionaryWriter  {
 
     public void WriteStartElement(java.lang.String prefix, java.lang.String localName, java.lang.String ns) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteStartElement", prefix, localName, ns);
         } catch (JCNativeException jcne) {

@@ -212,9 +212,13 @@ public class Region extends MarshalByRefObject implements AutoCloseable {
     
     public boolean Equals(Region region, Graphics g) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEquals = null;
         try {
-            return (boolean)classInstance.Invoke("Equals", region == null ? null : region.getJCOInstance(), g == null ? null : g.getJCOInstance());
+            retObjectEquals = classInstance.Invoke("Equals", region == null ? null : region.getJCOInstance(), g == null ? null : g.getJCOInstance());
+            return (boolean)retObjectEquals;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectEquals != null ? retObjectEquals.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -222,9 +226,13 @@ public class Region extends MarshalByRefObject implements AutoCloseable {
 
     public boolean IsEmpty(Graphics g) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsEmpty = null;
         try {
-            return (boolean)classInstance.Invoke("IsEmpty", g == null ? null : g.getJCOInstance());
+            retObjectIsEmpty = classInstance.Invoke("IsEmpty", g == null ? null : g.getJCOInstance());
+            return (boolean)retObjectIsEmpty;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsEmpty != null ? retObjectIsEmpty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -232,9 +240,13 @@ public class Region extends MarshalByRefObject implements AutoCloseable {
 
     public boolean IsInfinite(Graphics g) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsInfinite = null;
         try {
-            return (boolean)classInstance.Invoke("IsInfinite", g == null ? null : g.getJCOInstance());
+            retObjectIsInfinite = classInstance.Invoke("IsInfinite", g == null ? null : g.getJCOInstance());
+            return (boolean)retObjectIsInfinite;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsInfinite != null ? retObjectIsInfinite.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -242,9 +254,13 @@ public class Region extends MarshalByRefObject implements AutoCloseable {
 
     public boolean IsVisible(int x, int y, int width, int height, Graphics g) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.FormatException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsVisible = null;
         try {
-            return (boolean)classInstance.Invoke("IsVisible", x, y, width, height, g == null ? null : g.getJCOInstance());
+            retObjectIsVisible = classInstance.Invoke("IsVisible", x, y, width, height, g == null ? null : g.getJCOInstance());
+            return (boolean)retObjectIsVisible;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsVisible != null ? retObjectIsVisible.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -252,9 +268,13 @@ public class Region extends MarshalByRefObject implements AutoCloseable {
 
     public boolean IsVisible(int x, int y, int width, int height) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.FormatException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsVisible = null;
         try {
-            return (boolean)classInstance.Invoke("IsVisible", x, y, width, height);
+            retObjectIsVisible = classInstance.Invoke("IsVisible", x, y, width, height);
+            return (boolean)retObjectIsVisible;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsVisible != null ? retObjectIsVisible.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -262,9 +282,13 @@ public class Region extends MarshalByRefObject implements AutoCloseable {
 
     public boolean IsVisible(int x, int y, Graphics g) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.FormatException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsVisible = null;
         try {
-            return (boolean)classInstance.Invoke("IsVisible", x, y, g == null ? null : g.getJCOInstance());
+            retObjectIsVisible = classInstance.Invoke("IsVisible", x, y, g == null ? null : g.getJCOInstance());
+            return (boolean)retObjectIsVisible;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsVisible != null ? retObjectIsVisible.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -272,9 +296,13 @@ public class Region extends MarshalByRefObject implements AutoCloseable {
 
     public boolean IsVisible(Single x, Single y, Single width, Single height, Graphics g) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsVisible = null;
         try {
-            return (boolean)classInstance.Invoke("IsVisible", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance(), width == null ? null : width.getJCOInstance(), height == null ? null : height.getJCOInstance(), g == null ? null : g.getJCOInstance());
+            retObjectIsVisible = classInstance.Invoke("IsVisible", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance(), width == null ? null : width.getJCOInstance(), height == null ? null : height.getJCOInstance(), g == null ? null : g.getJCOInstance());
+            return (boolean)retObjectIsVisible;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsVisible != null ? retObjectIsVisible.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -282,9 +310,13 @@ public class Region extends MarshalByRefObject implements AutoCloseable {
 
     public boolean IsVisible(Single x, Single y, Single width, Single height) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsVisible = null;
         try {
-            return (boolean)classInstance.Invoke("IsVisible", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance(), width == null ? null : width.getJCOInstance(), height == null ? null : height.getJCOInstance());
+            retObjectIsVisible = classInstance.Invoke("IsVisible", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance(), width == null ? null : width.getJCOInstance(), height == null ? null : height.getJCOInstance());
+            return (boolean)retObjectIsVisible;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsVisible != null ? retObjectIsVisible.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -292,9 +324,13 @@ public class Region extends MarshalByRefObject implements AutoCloseable {
 
     public boolean IsVisible(Single x, Single y, Graphics g) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsVisible = null;
         try {
-            return (boolean)classInstance.Invoke("IsVisible", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance(), g == null ? null : g.getJCOInstance());
+            retObjectIsVisible = classInstance.Invoke("IsVisible", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance(), g == null ? null : g.getJCOInstance());
+            return (boolean)retObjectIsVisible;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsVisible != null ? retObjectIsVisible.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -302,9 +338,13 @@ public class Region extends MarshalByRefObject implements AutoCloseable {
 
     public boolean IsVisible(Single x, Single y) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsVisible = null;
         try {
-            return (boolean)classInstance.Invoke("IsVisible", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            retObjectIsVisible = classInstance.Invoke("IsVisible", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            return (boolean)retObjectIsVisible;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsVisible != null ? retObjectIsVisible.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -312,9 +352,13 @@ public class Region extends MarshalByRefObject implements AutoCloseable {
 
     public boolean IsVisible(Point point, Graphics g) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsVisible = null;
         try {
-            return (boolean)classInstance.Invoke("IsVisible", point == null ? null : point.getJCOInstance(), g == null ? null : g.getJCOInstance());
+            retObjectIsVisible = classInstance.Invoke("IsVisible", point == null ? null : point.getJCOInstance(), g == null ? null : g.getJCOInstance());
+            return (boolean)retObjectIsVisible;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsVisible != null ? retObjectIsVisible.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -322,9 +366,13 @@ public class Region extends MarshalByRefObject implements AutoCloseable {
 
     public boolean IsVisible(Point point) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.FormatException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsVisible = null;
         try {
-            return (boolean)classInstance.Invoke("IsVisible", point == null ? null : point.getJCOInstance());
+            retObjectIsVisible = classInstance.Invoke("IsVisible", point == null ? null : point.getJCOInstance());
+            return (boolean)retObjectIsVisible;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsVisible != null ? retObjectIsVisible.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -332,9 +380,13 @@ public class Region extends MarshalByRefObject implements AutoCloseable {
 
     public boolean IsVisible(PointF point, Graphics g) throws Throwable, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsVisible = null;
         try {
-            return (boolean)classInstance.Invoke("IsVisible", point == null ? null : point.getJCOInstance(), g == null ? null : g.getJCOInstance());
+            retObjectIsVisible = classInstance.Invoke("IsVisible", point == null ? null : point.getJCOInstance(), g == null ? null : g.getJCOInstance());
+            return (boolean)retObjectIsVisible;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsVisible != null ? retObjectIsVisible.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -342,9 +394,13 @@ public class Region extends MarshalByRefObject implements AutoCloseable {
 
     public boolean IsVisible(PointF point) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsVisible = null;
         try {
-            return (boolean)classInstance.Invoke("IsVisible", point == null ? null : point.getJCOInstance());
+            retObjectIsVisible = classInstance.Invoke("IsVisible", point == null ? null : point.getJCOInstance());
+            return (boolean)retObjectIsVisible;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsVisible != null ? retObjectIsVisible.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -352,9 +408,13 @@ public class Region extends MarshalByRefObject implements AutoCloseable {
 
     public boolean IsVisible(Rectangle rect, Graphics g) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsVisible = null;
         try {
-            return (boolean)classInstance.Invoke("IsVisible", rect == null ? null : rect.getJCOInstance(), g == null ? null : g.getJCOInstance());
+            retObjectIsVisible = classInstance.Invoke("IsVisible", rect == null ? null : rect.getJCOInstance(), g == null ? null : g.getJCOInstance());
+            return (boolean)retObjectIsVisible;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsVisible != null ? retObjectIsVisible.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -362,9 +422,13 @@ public class Region extends MarshalByRefObject implements AutoCloseable {
 
     public boolean IsVisible(Rectangle rect) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.FormatException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsVisible = null;
         try {
-            return (boolean)classInstance.Invoke("IsVisible", rect == null ? null : rect.getJCOInstance());
+            retObjectIsVisible = classInstance.Invoke("IsVisible", rect == null ? null : rect.getJCOInstance());
+            return (boolean)retObjectIsVisible;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsVisible != null ? retObjectIsVisible.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -372,9 +436,13 @@ public class Region extends MarshalByRefObject implements AutoCloseable {
 
     public boolean IsVisible(RectangleF rect, Graphics g) throws Throwable, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsVisible = null;
         try {
-            return (boolean)classInstance.Invoke("IsVisible", rect == null ? null : rect.getJCOInstance(), g == null ? null : g.getJCOInstance());
+            retObjectIsVisible = classInstance.Invoke("IsVisible", rect == null ? null : rect.getJCOInstance(), g == null ? null : g.getJCOInstance());
+            return (boolean)retObjectIsVisible;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsVisible != null ? retObjectIsVisible.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -382,9 +450,13 @@ public class Region extends MarshalByRefObject implements AutoCloseable {
 
     public boolean IsVisible(RectangleF rect) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsVisible = null;
         try {
-            return (boolean)classInstance.Invoke("IsVisible", rect == null ? null : rect.getJCOInstance());
+            retObjectIsVisible = classInstance.Invoke("IsVisible", rect == null ? null : rect.getJCOInstance());
+            return (boolean)retObjectIsVisible;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsVisible != null ? retObjectIsVisible.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -392,10 +464,14 @@ public class Region extends MarshalByRefObject implements AutoCloseable {
 
     public RegionData GetRegionData() throws Throwable, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetRegionData = null;
         try {
-            JCObject objGetRegionData = (JCObject)classInstance.Invoke("GetRegionData");
+            retObjectGetRegionData = classInstance.Invoke("GetRegionData");
+            JCObject objGetRegionData = (JCObject)retObjectGetRegionData;
             return new RegionData(objGetRegionData);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetRegionData != null ? retObjectGetRegionData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -403,10 +479,14 @@ public class Region extends MarshalByRefObject implements AutoCloseable {
 
     public RectangleF GetBounds(Graphics g) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetBounds = null;
         try {
-            JCObject objGetBounds = (JCObject)classInstance.Invoke("GetBounds", g == null ? null : g.getJCOInstance());
+            retObjectGetBounds = classInstance.Invoke("GetBounds", g == null ? null : g.getJCOInstance());
+            JCObject objGetBounds = (JCObject)retObjectGetBounds;
             return new RectangleF(objGetBounds);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetBounds != null ? retObjectGetBounds.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -414,16 +494,20 @@ public class Region extends MarshalByRefObject implements AutoCloseable {
 
     public RectangleF[] GetRegionScans(Matrix matrix) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetRegionScans = null;
         try {
             ArrayList<RectangleF> resultingArrayList = new ArrayList<RectangleF>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetRegionScans", matrix == null ? null : matrix.getJCOInstance());
+            retObjectGetRegionScans = classInstance.Invoke("GetRegionScans", matrix == null ? null : matrix.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectGetRegionScans;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new RectangleF(resultingObject));
             }
             RectangleF[] resultingArray = new RectangleF[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetRegionScans != null ? retObjectGetRegionScans.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -431,10 +515,14 @@ public class Region extends MarshalByRefObject implements AutoCloseable {
 
     public Region Clone() throws Throwable, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClone = null;
         try {
-            JCObject objClone = (JCObject)classInstance.Invoke("Clone");
+            retObjectClone = classInstance.Invoke("Clone");
+            JCObject objClone = (JCObject)retObjectClone;
             return new Region(objClone);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClone != null ? retObjectClone.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -442,7 +530,7 @@ public class Region extends MarshalByRefObject implements AutoCloseable {
 
     public void Complement(GraphicsPath path) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Complement", path == null ? null : path.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -452,7 +540,7 @@ public class Region extends MarshalByRefObject implements AutoCloseable {
 
     public void Complement(Rectangle rect) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Complement", rect == null ? null : rect.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -462,7 +550,7 @@ public class Region extends MarshalByRefObject implements AutoCloseable {
 
     public void Complement(RectangleF rect) throws Throwable, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Complement", rect == null ? null : rect.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -472,7 +560,7 @@ public class Region extends MarshalByRefObject implements AutoCloseable {
 
     public void Complement(Region region) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Complement", region == null ? null : region.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -482,7 +570,7 @@ public class Region extends MarshalByRefObject implements AutoCloseable {
 
     public void Dispose() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
@@ -492,7 +580,7 @@ public class Region extends MarshalByRefObject implements AutoCloseable {
 
     public void Exclude(GraphicsPath path) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Exclude", path == null ? null : path.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -502,7 +590,7 @@ public class Region extends MarshalByRefObject implements AutoCloseable {
 
     public void Exclude(Rectangle rect) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Exclude", rect == null ? null : rect.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -512,7 +600,7 @@ public class Region extends MarshalByRefObject implements AutoCloseable {
 
     public void Exclude(RectangleF rect) throws Throwable, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Exclude", rect == null ? null : rect.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -522,7 +610,7 @@ public class Region extends MarshalByRefObject implements AutoCloseable {
 
     public void Exclude(Region region) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Exclude", region == null ? null : region.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -532,7 +620,7 @@ public class Region extends MarshalByRefObject implements AutoCloseable {
 
     public void Intersect(GraphicsPath path) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Intersect", path == null ? null : path.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -542,7 +630,7 @@ public class Region extends MarshalByRefObject implements AutoCloseable {
 
     public void Intersect(Rectangle rect) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Intersect", rect == null ? null : rect.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -552,7 +640,7 @@ public class Region extends MarshalByRefObject implements AutoCloseable {
 
     public void Intersect(RectangleF rect) throws Throwable, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Intersect", rect == null ? null : rect.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -562,7 +650,7 @@ public class Region extends MarshalByRefObject implements AutoCloseable {
 
     public void Intersect(Region region) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Intersect", region == null ? null : region.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -572,7 +660,7 @@ public class Region extends MarshalByRefObject implements AutoCloseable {
 
     public void MakeEmpty() throws Throwable, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("MakeEmpty");
         } catch (JCNativeException jcne) {
@@ -582,7 +670,7 @@ public class Region extends MarshalByRefObject implements AutoCloseable {
 
     public void MakeInfinite() throws Throwable, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("MakeInfinite");
         } catch (JCNativeException jcne) {
@@ -592,7 +680,7 @@ public class Region extends MarshalByRefObject implements AutoCloseable {
 
     public void Transform(Matrix matrix) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Transform", matrix == null ? null : matrix.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -602,7 +690,7 @@ public class Region extends MarshalByRefObject implements AutoCloseable {
 
     public void Translate(int dx, int dy) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Translate", dx, dy);
         } catch (JCNativeException jcne) {
@@ -612,7 +700,7 @@ public class Region extends MarshalByRefObject implements AutoCloseable {
 
     public void Translate(Single dx, Single dy) throws Throwable, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Translate", dx == null ? null : dx.getJCOInstance(), dy == null ? null : dy.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -622,7 +710,7 @@ public class Region extends MarshalByRefObject implements AutoCloseable {
 
     public void Union(GraphicsPath path) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Union", path == null ? null : path.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -632,7 +720,7 @@ public class Region extends MarshalByRefObject implements AutoCloseable {
 
     public void Union(Rectangle rect) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Union", rect == null ? null : rect.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -642,7 +730,7 @@ public class Region extends MarshalByRefObject implements AutoCloseable {
 
     public void Union(RectangleF rect) throws Throwable, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Union", rect == null ? null : rect.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -652,7 +740,7 @@ public class Region extends MarshalByRefObject implements AutoCloseable {
 
     public void Union(Region region) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Union", region == null ? null : region.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -662,7 +750,7 @@ public class Region extends MarshalByRefObject implements AutoCloseable {
 
     public void Xor(GraphicsPath path) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Xor", path == null ? null : path.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -672,7 +760,7 @@ public class Region extends MarshalByRefObject implements AutoCloseable {
 
     public void Xor(Rectangle rect) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Xor", rect == null ? null : rect.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -682,7 +770,7 @@ public class Region extends MarshalByRefObject implements AutoCloseable {
 
     public void Xor(RectangleF rect) throws Throwable, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Xor", rect == null ? null : rect.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -692,7 +780,7 @@ public class Region extends MarshalByRefObject implements AutoCloseable {
 
     public void Xor(Region region) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Xor", region == null ? null : region.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -703,7 +791,7 @@ public class Region extends MarshalByRefObject implements AutoCloseable {
     public void close() throws Exception {
         try {
             if (classInstance == null)
-                throw new UnsupportedOperationException("classInstance is null.");
+                throw new java.lang.UnsupportedOperationException("classInstance is null.");
             try {
                 classInstance.Invoke("Dispose");
             }

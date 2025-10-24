@@ -169,9 +169,13 @@ public class BoundField extends DataControlField  {
     
     public boolean Initialize(boolean enableSorting, Control control) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInitialize = null;
         try {
-            return (boolean)classInstance.Invoke("Initialize", enableSorting, control == null ? null : control.getJCOInstance());
+            retObjectInitialize = classInstance.Invoke("Initialize", enableSorting, control == null ? null : control.getJCOInstance());
+            return (boolean)retObjectInitialize;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectInitialize != null ? retObjectInitialize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,7 +183,7 @@ public class BoundField extends DataControlField  {
 
     public void ExtractValuesFromCell(IOrderedDictionary dictionary, DataControlFieldCell cell, DataControlRowState rowState, boolean includeReadOnly) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.threading.ThreadAbortException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ExtractValuesFromCell", dictionary == null ? null : dictionary.getJCOInstance(), cell == null ? null : cell.getJCOInstance(), rowState == null ? null : rowState.getJCOInstance(), includeReadOnly);
         } catch (JCNativeException jcne) {
@@ -189,7 +193,7 @@ public class BoundField extends DataControlField  {
 
     public void InitializeCell(DataControlFieldCell cell, DataControlCellType cellType, DataControlRowState rowState, int rowIndex) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.threading.ThreadAbortException, system.configuration.ConfigurationException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.reflection.AmbiguousMatchException, system.NullReferenceException, system.NotSupportedException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("InitializeCell", cell == null ? null : cell.getJCOInstance(), cellType == null ? null : cellType.getJCOInstance(), rowState == null ? null : rowState.getJCOInstance(), rowIndex);
         } catch (JCNativeException jcne) {
@@ -199,7 +203,7 @@ public class BoundField extends DataControlField  {
 
     public void ValidateSupportsCallback() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ValidateSupportsCallback");
         } catch (JCNativeException jcne) {
@@ -213,9 +217,13 @@ public class BoundField extends DataControlField  {
     
     public boolean getApplyFormatInEditMode() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectApplyFormatInEditMode = null;
         try {
-            return (boolean)classInstance.Get("ApplyFormatInEditMode");
+            retObjectApplyFormatInEditMode = classInstance.Get("ApplyFormatInEditMode");
+            return (boolean)retObjectApplyFormatInEditMode;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectApplyFormatInEditMode != null ? retObjectApplyFormatInEditMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -223,7 +231,7 @@ public class BoundField extends DataControlField  {
 
     public void setApplyFormatInEditMode(boolean ApplyFormatInEditMode) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ApplyFormatInEditMode", ApplyFormatInEditMode);
         } catch (JCNativeException jcne) {
@@ -233,9 +241,13 @@ public class BoundField extends DataControlField  {
 
     public boolean getConvertEmptyStringToNull() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConvertEmptyStringToNull = null;
         try {
-            return (boolean)classInstance.Get("ConvertEmptyStringToNull");
+            retObjectConvertEmptyStringToNull = classInstance.Get("ConvertEmptyStringToNull");
+            return (boolean)retObjectConvertEmptyStringToNull;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectConvertEmptyStringToNull != null ? retObjectConvertEmptyStringToNull.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -243,7 +255,7 @@ public class BoundField extends DataControlField  {
 
     public void setConvertEmptyStringToNull(boolean ConvertEmptyStringToNull) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ConvertEmptyStringToNull", ConvertEmptyStringToNull);
         } catch (JCNativeException jcne) {
@@ -253,9 +265,13 @@ public class BoundField extends DataControlField  {
 
     public boolean getHtmlEncode() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHtmlEncode = null;
         try {
-            return (boolean)classInstance.Get("HtmlEncode");
+            retObjectHtmlEncode = classInstance.Get("HtmlEncode");
+            return (boolean)retObjectHtmlEncode;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectHtmlEncode != null ? retObjectHtmlEncode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -263,7 +279,7 @@ public class BoundField extends DataControlField  {
 
     public void setHtmlEncode(boolean HtmlEncode) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("HtmlEncode", HtmlEncode);
         } catch (JCNativeException jcne) {
@@ -273,9 +289,13 @@ public class BoundField extends DataControlField  {
 
     public boolean getHtmlEncodeFormatString() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHtmlEncodeFormatString = null;
         try {
-            return (boolean)classInstance.Get("HtmlEncodeFormatString");
+            retObjectHtmlEncodeFormatString = classInstance.Get("HtmlEncodeFormatString");
+            return (boolean)retObjectHtmlEncodeFormatString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectHtmlEncodeFormatString != null ? retObjectHtmlEncodeFormatString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -283,7 +303,7 @@ public class BoundField extends DataControlField  {
 
     public void setHtmlEncodeFormatString(boolean HtmlEncodeFormatString) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("HtmlEncodeFormatString", HtmlEncodeFormatString);
         } catch (JCNativeException jcne) {
@@ -293,9 +313,13 @@ public class BoundField extends DataControlField  {
 
     public boolean getReadOnly() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadOnly = null;
         try {
-            return (boolean)classInstance.Get("ReadOnly");
+            retObjectReadOnly = classInstance.Get("ReadOnly");
+            return (boolean)retObjectReadOnly;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectReadOnly != null ? retObjectReadOnly.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -303,7 +327,7 @@ public class BoundField extends DataControlField  {
 
     public void setReadOnly(boolean ReadOnly) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ReadOnly", ReadOnly);
         } catch (JCNativeException jcne) {
@@ -313,9 +337,13 @@ public class BoundField extends DataControlField  {
 
     public java.lang.String getDataField() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDataField = null;
         try {
-            return (java.lang.String)classInstance.Get("DataField");
+            retObjectDataField = classInstance.Get("DataField");
+            return (java.lang.String)retObjectDataField;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDataField != null ? retObjectDataField.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -323,7 +351,7 @@ public class BoundField extends DataControlField  {
 
     public void setDataField(java.lang.String DataField) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DataField", DataField);
         } catch (JCNativeException jcne) {
@@ -333,9 +361,13 @@ public class BoundField extends DataControlField  {
 
     public java.lang.String getDataFormatString() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDataFormatString = null;
         try {
-            return (java.lang.String)classInstance.Get("DataFormatString");
+            retObjectDataFormatString = classInstance.Get("DataFormatString");
+            return (java.lang.String)retObjectDataFormatString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDataFormatString != null ? retObjectDataFormatString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -343,7 +375,7 @@ public class BoundField extends DataControlField  {
 
     public void setDataFormatString(java.lang.String DataFormatString) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DataFormatString", DataFormatString);
         } catch (JCNativeException jcne) {
@@ -353,9 +385,13 @@ public class BoundField extends DataControlField  {
 
     public java.lang.String getNullDisplayText() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNullDisplayText = null;
         try {
-            return (java.lang.String)classInstance.Get("NullDisplayText");
+            retObjectNullDisplayText = classInstance.Get("NullDisplayText");
+            return (java.lang.String)retObjectNullDisplayText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectNullDisplayText != null ? retObjectNullDisplayText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -363,7 +399,7 @@ public class BoundField extends DataControlField  {
 
     public void setNullDisplayText(java.lang.String NullDisplayText) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("NullDisplayText", NullDisplayText);
         } catch (JCNativeException jcne) {
@@ -373,10 +409,14 @@ public class BoundField extends DataControlField  {
 
     public ValidateRequestMode getValidateRequestMode() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValidateRequestMode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ValidateRequestMode");
+            retObjectValidateRequestMode = classInstance.Get("ValidateRequestMode");
+            JCObject val = (JCObject)retObjectValidateRequestMode;
             return new ValidateRequestMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectValidateRequestMode != null ? retObjectValidateRequestMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -384,7 +424,7 @@ public class BoundField extends DataControlField  {
 
     public void setValidateRequestMode(ValidateRequestMode ValidateRequestMode) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ValidateRequestMode", ValidateRequestMode == null ? null : ValidateRequestMode.getJCOInstance());
         } catch (JCNativeException jcne) {

@@ -157,10 +157,14 @@ public class JsonSchemaExporter extends NetObject  {
     
     public static JsonNode GetJsonSchemaAsNode(JsonSerializerOptions options, NetType type, JsonSchemaExporterOptions exporterOptions) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.NullReferenceException, system.collections.generic.KeyNotFoundException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetJsonSchemaAsNode = null;
         try {
-            JCObject objGetJsonSchemaAsNode = (JCObject)classType.Invoke("GetJsonSchemaAsNode", options == null ? null : options.getJCOInstance(), type == null ? null : type.getJCOInstance(), exporterOptions == null ? null : exporterOptions.getJCOInstance());
+            retObjectGetJsonSchemaAsNode = classType.Invoke("GetJsonSchemaAsNode", options == null ? null : options.getJCOInstance(), type == null ? null : type.getJCOInstance(), exporterOptions == null ? null : exporterOptions.getJCOInstance());
+            JCObject objGetJsonSchemaAsNode = (JCObject)retObjectGetJsonSchemaAsNode;
             return new JsonNode(objGetJsonSchemaAsNode);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetJsonSchemaAsNode != null ? retObjectGetJsonSchemaAsNode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -168,10 +172,14 @@ public class JsonSchemaExporter extends NetObject  {
 
     public static JsonNode GetJsonSchemaAsNode(JsonTypeInfo typeInfo, JsonSchemaExporterOptions exporterOptions) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.NullReferenceException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetJsonSchemaAsNode = null;
         try {
-            JCObject objGetJsonSchemaAsNode = (JCObject)classType.Invoke("GetJsonSchemaAsNode", typeInfo == null ? null : typeInfo.getJCOInstance(), exporterOptions == null ? null : exporterOptions.getJCOInstance());
+            retObjectGetJsonSchemaAsNode = classType.Invoke("GetJsonSchemaAsNode", typeInfo == null ? null : typeInfo.getJCOInstance(), exporterOptions == null ? null : exporterOptions.getJCOInstance());
+            JCObject objGetJsonSchemaAsNode = (JCObject)retObjectGetJsonSchemaAsNode;
             return new JsonNode(objGetJsonSchemaAsNode);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetJsonSchemaAsNode != null ? retObjectGetJsonSchemaAsNode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

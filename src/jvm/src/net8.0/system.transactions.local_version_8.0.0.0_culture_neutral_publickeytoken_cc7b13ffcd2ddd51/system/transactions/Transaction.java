@@ -174,9 +174,13 @@ public class Transaction extends NetObject implements system.runtime.serializati
     
     public boolean EnlistPromotableSinglePhase(IPromotableSinglePhaseNotification promotableSinglePhaseNotification, Guid promoterType) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.OverflowException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.ArgumentNullException, system.ObjectDisposedException, system.transactions.TransactionException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEnlistPromotableSinglePhase = null;
         try {
-            return (boolean)classInstance.Invoke("EnlistPromotableSinglePhase", promotableSinglePhaseNotification == null ? null : promotableSinglePhaseNotification.getJCOInstance(), promoterType == null ? null : promoterType.getJCOInstance());
+            retObjectEnlistPromotableSinglePhase = classInstance.Invoke("EnlistPromotableSinglePhase", promotableSinglePhaseNotification == null ? null : promotableSinglePhaseNotification.getJCOInstance(), promoterType == null ? null : promoterType.getJCOInstance());
+            return (boolean)retObjectEnlistPromotableSinglePhase;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectEnlistPromotableSinglePhase != null ? retObjectEnlistPromotableSinglePhase.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -184,9 +188,13 @@ public class Transaction extends NetObject implements system.runtime.serializati
 
     public boolean EnlistPromotableSinglePhase(IPromotableSinglePhaseNotification promotableSinglePhaseNotification) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.FormatException, system.ArgumentException, system.diagnostics.tracing.EventSourceException, system.ObjectDisposedException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.transactions.TransactionException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEnlistPromotableSinglePhase = null;
         try {
-            return (boolean)classInstance.Invoke("EnlistPromotableSinglePhase", promotableSinglePhaseNotification == null ? null : promotableSinglePhaseNotification.getJCOInstance());
+            retObjectEnlistPromotableSinglePhase = classInstance.Invoke("EnlistPromotableSinglePhase", promotableSinglePhaseNotification == null ? null : promotableSinglePhaseNotification.getJCOInstance());
+            return (boolean)retObjectEnlistPromotableSinglePhase;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectEnlistPromotableSinglePhase != null ? retObjectEnlistPromotableSinglePhase.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -194,10 +202,12 @@ public class Transaction extends NetObject implements system.runtime.serializati
 
     public byte[] GetPromotedToken() throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.OverflowException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.ArgumentNullException, system.ObjectDisposedException, system.transactions.TransactionException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPromotedToken = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetPromotedToken");
+            retObjectGetPromotedToken = classInstance.Invoke("GetPromotedToken");
+            JCObject resultingObjects = (JCObject)retObjectGetPromotedToken;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -206,6 +216,8 @@ public class Transaction extends NetObject implements system.runtime.serializati
 				resultingArray[indexGetPromotedToken] = (byte)resultingArrayList.get(indexGetPromotedToken);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectGetPromotedToken != null ? retObjectGetPromotedToken.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,10 +225,14 @@ public class Transaction extends NetObject implements system.runtime.serializati
 
     public DependentTransaction DependentClone(DependentCloneOption cloneOption) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.OverflowException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.ArgumentNullException, system.ObjectDisposedException, system.transactions.TransactionException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDependentClone = null;
         try {
-            JCObject objDependentClone = (JCObject)classInstance.Invoke("DependentClone", cloneOption == null ? null : cloneOption.getJCOInstance());
+            retObjectDependentClone = classInstance.Invoke("DependentClone", cloneOption == null ? null : cloneOption.getJCOInstance());
+            JCObject objDependentClone = (JCObject)retObjectDependentClone;
             return new DependentTransaction(objDependentClone);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDependentClone != null ? retObjectDependentClone.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -224,10 +240,14 @@ public class Transaction extends NetObject implements system.runtime.serializati
 
     public Enlistment EnlistDurable(Guid resourceManagerIdentifier, IEnlistmentNotification enlistmentNotification, EnlistmentOptions enlistmentOptions) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.OverflowException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.ArgumentNullException, system.ObjectDisposedException, system.transactions.TransactionException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEnlistDurable = null;
         try {
-            JCObject objEnlistDurable = (JCObject)classInstance.Invoke("EnlistDurable", resourceManagerIdentifier == null ? null : resourceManagerIdentifier.getJCOInstance(), enlistmentNotification == null ? null : enlistmentNotification.getJCOInstance(), enlistmentOptions == null ? null : enlistmentOptions.getJCOInstance());
+            retObjectEnlistDurable = classInstance.Invoke("EnlistDurable", resourceManagerIdentifier == null ? null : resourceManagerIdentifier.getJCOInstance(), enlistmentNotification == null ? null : enlistmentNotification.getJCOInstance(), enlistmentOptions == null ? null : enlistmentOptions.getJCOInstance());
+            JCObject objEnlistDurable = (JCObject)retObjectEnlistDurable;
             return new Enlistment(objEnlistDurable);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEnlistDurable != null ? retObjectEnlistDurable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -235,10 +255,14 @@ public class Transaction extends NetObject implements system.runtime.serializati
 
     public Enlistment EnlistDurable(Guid resourceManagerIdentifier, ISinglePhaseNotification singlePhaseNotification, EnlistmentOptions enlistmentOptions) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.OverflowException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.ArgumentNullException, system.ObjectDisposedException, system.transactions.TransactionException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEnlistDurable = null;
         try {
-            JCObject objEnlistDurable = (JCObject)classInstance.Invoke("EnlistDurable", resourceManagerIdentifier == null ? null : resourceManagerIdentifier.getJCOInstance(), singlePhaseNotification == null ? null : singlePhaseNotification.getJCOInstance(), enlistmentOptions == null ? null : enlistmentOptions.getJCOInstance());
+            retObjectEnlistDurable = classInstance.Invoke("EnlistDurable", resourceManagerIdentifier == null ? null : resourceManagerIdentifier.getJCOInstance(), singlePhaseNotification == null ? null : singlePhaseNotification.getJCOInstance(), enlistmentOptions == null ? null : enlistmentOptions.getJCOInstance());
+            JCObject objEnlistDurable = (JCObject)retObjectEnlistDurable;
             return new Enlistment(objEnlistDurable);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEnlistDurable != null ? retObjectEnlistDurable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -246,10 +270,14 @@ public class Transaction extends NetObject implements system.runtime.serializati
 
     public Enlistment EnlistVolatile(IEnlistmentNotification enlistmentNotification, EnlistmentOptions enlistmentOptions) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.OverflowException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.ArgumentNullException, system.ObjectDisposedException, system.transactions.TransactionException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEnlistVolatile = null;
         try {
-            JCObject objEnlistVolatile = (JCObject)classInstance.Invoke("EnlistVolatile", enlistmentNotification == null ? null : enlistmentNotification.getJCOInstance(), enlistmentOptions == null ? null : enlistmentOptions.getJCOInstance());
+            retObjectEnlistVolatile = classInstance.Invoke("EnlistVolatile", enlistmentNotification == null ? null : enlistmentNotification.getJCOInstance(), enlistmentOptions == null ? null : enlistmentOptions.getJCOInstance());
+            JCObject objEnlistVolatile = (JCObject)retObjectEnlistVolatile;
             return new Enlistment(objEnlistVolatile);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEnlistVolatile != null ? retObjectEnlistVolatile.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -257,10 +285,14 @@ public class Transaction extends NetObject implements system.runtime.serializati
 
     public Enlistment EnlistVolatile(ISinglePhaseNotification singlePhaseNotification, EnlistmentOptions enlistmentOptions) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.OverflowException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.ArgumentNullException, system.ObjectDisposedException, system.transactions.TransactionException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEnlistVolatile = null;
         try {
-            JCObject objEnlistVolatile = (JCObject)classInstance.Invoke("EnlistVolatile", singlePhaseNotification == null ? null : singlePhaseNotification.getJCOInstance(), enlistmentOptions == null ? null : enlistmentOptions.getJCOInstance());
+            retObjectEnlistVolatile = classInstance.Invoke("EnlistVolatile", singlePhaseNotification == null ? null : singlePhaseNotification.getJCOInstance(), enlistmentOptions == null ? null : enlistmentOptions.getJCOInstance());
+            JCObject objEnlistVolatile = (JCObject)retObjectEnlistVolatile;
             return new Enlistment(objEnlistVolatile);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEnlistVolatile != null ? retObjectEnlistVolatile.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -268,10 +300,14 @@ public class Transaction extends NetObject implements system.runtime.serializati
 
     public Enlistment PromoteAndEnlistDurable(Guid resourceManagerIdentifier, IPromotableSinglePhaseNotification promotableNotification, ISinglePhaseNotification enlistmentNotification, EnlistmentOptions enlistmentOptions) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.OverflowException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.ArgumentNullException, system.ObjectDisposedException, system.transactions.TransactionException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPromoteAndEnlistDurable = null;
         try {
-            JCObject objPromoteAndEnlistDurable = (JCObject)classInstance.Invoke("PromoteAndEnlistDurable", resourceManagerIdentifier == null ? null : resourceManagerIdentifier.getJCOInstance(), promotableNotification == null ? null : promotableNotification.getJCOInstance(), enlistmentNotification == null ? null : enlistmentNotification.getJCOInstance(), enlistmentOptions == null ? null : enlistmentOptions.getJCOInstance());
+            retObjectPromoteAndEnlistDurable = classInstance.Invoke("PromoteAndEnlistDurable", resourceManagerIdentifier == null ? null : resourceManagerIdentifier.getJCOInstance(), promotableNotification == null ? null : promotableNotification.getJCOInstance(), enlistmentNotification == null ? null : enlistmentNotification.getJCOInstance(), enlistmentOptions == null ? null : enlistmentOptions.getJCOInstance());
+            JCObject objPromoteAndEnlistDurable = (JCObject)retObjectPromoteAndEnlistDurable;
             return new Enlistment(objPromoteAndEnlistDurable);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPromoteAndEnlistDurable != null ? retObjectPromoteAndEnlistDurable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -279,10 +315,14 @@ public class Transaction extends NetObject implements system.runtime.serializati
 
     public Transaction Clone() throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.OverflowException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.ArgumentNullException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClone = null;
         try {
-            JCObject objClone = (JCObject)classInstance.Invoke("Clone");
+            retObjectClone = classInstance.Invoke("Clone");
+            JCObject objClone = (JCObject)retObjectClone;
             return new Transaction(objClone);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClone != null ? retObjectClone.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -290,7 +330,7 @@ public class Transaction extends NetObject implements system.runtime.serializati
 
     public void Dispose() throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.FormatException, system.ArgumentException, system.diagnostics.tracing.EventSourceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
@@ -300,7 +340,7 @@ public class Transaction extends NetObject implements system.runtime.serializati
 
     public void Rollback() throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.OverflowException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.ArgumentNullException, system.ObjectDisposedException, system.transactions.TransactionException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Rollback");
         } catch (JCNativeException jcne) {
@@ -310,7 +350,7 @@ public class Transaction extends NetObject implements system.runtime.serializati
 
     public void Rollback(NetException e) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.OverflowException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.ArgumentNullException, system.ObjectDisposedException, system.transactions.TransactionException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Rollback", e == null ? null : e.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -320,7 +360,7 @@ public class Transaction extends NetObject implements system.runtime.serializati
 
     public void SetDistributedTransactionIdentifier(IPromotableSinglePhaseNotification promotableNotification, Guid distributedTransactionIdentifier) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.OverflowException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.ArgumentNullException, system.ObjectDisposedException, system.transactions.TransactionException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetDistributedTransactionIdentifier", promotableNotification == null ? null : promotableNotification.getJCOInstance(), distributedTransactionIdentifier == null ? null : distributedTransactionIdentifier.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -334,13 +374,13 @@ public class Transaction extends NetObject implements system.runtime.serializati
      */
     @Deprecated 
     public void GetObjectData(SerializationInfo info, StreamingContext context) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToISerializable to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToISerializable to obtain the full interface.");
     }
 
     public void close() throws Exception {
         try {
             if (classInstance == null)
-                throw new UnsupportedOperationException("classInstance is null.");
+                throw new java.lang.UnsupportedOperationException("classInstance is null.");
             try {
                 classInstance.Invoke("Dispose");
             }
@@ -356,10 +396,14 @@ public class Transaction extends NetObject implements system.runtime.serializati
     
     public Guid getPromoterType() throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.OverflowException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.ArgumentNullException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPromoterType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PromoterType");
+            retObjectPromoterType = classInstance.Get("PromoterType");
+            JCObject val = (JCObject)retObjectPromoterType;
             return new Guid(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPromoterType != null ? retObjectPromoterType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -367,10 +411,14 @@ public class Transaction extends NetObject implements system.runtime.serializati
 
     public IsolationLevel getIsolationLevel() throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.OverflowException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.ArgumentNullException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsolationLevel = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("IsolationLevel");
+            retObjectIsolationLevel = classInstance.Get("IsolationLevel");
+            JCObject val = (JCObject)retObjectIsolationLevel;
             return new IsolationLevel(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIsolationLevel != null ? retObjectIsolationLevel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -378,10 +426,14 @@ public class Transaction extends NetObject implements system.runtime.serializati
 
     public static Transaction getCurrent() throws Throwable, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OverflowException, system.FormatException, system.InvalidOperationException, system.ArgumentException, system.NotSupportedException, system.diagnostics.tracing.EventSourceException, system.ArgumentNullException, system.globalization.CultureNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCurrent = null;
         try {
-            JCObject val = (JCObject)classType.Get("Current");
+            retObjectCurrent = classType.Get("Current");
+            JCObject val = (JCObject)retObjectCurrent;
             return new Transaction(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCurrent != null ? retObjectCurrent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -389,7 +441,7 @@ public class Transaction extends NetObject implements system.runtime.serializati
 
     public static void setCurrent(Transaction Current) throws Throwable, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OverflowException, system.FormatException, system.InvalidOperationException, system.ArgumentException, system.NotSupportedException, system.diagnostics.tracing.EventSourceException, system.ArgumentNullException, system.globalization.CultureNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Set("Current", Current == null ? null : Current.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -399,10 +451,14 @@ public class Transaction extends NetObject implements system.runtime.serializati
 
     public TransactionInformation getTransactionInformation() throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.OverflowException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.ArgumentNullException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTransactionInformation = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TransactionInformation");
+            retObjectTransactionInformation = classInstance.Get("TransactionInformation");
+            JCObject val = (JCObject)retObjectTransactionInformation;
             return new TransactionInformation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTransactionInformation != null ? retObjectTransactionInformation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -415,7 +471,7 @@ public class Transaction extends NetObject implements system.runtime.serializati
 
     public void addTransactionCompleted(TransactionCompletedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("TransactionCompleted", handler);
         } catch (JCNativeException jcne) {
@@ -425,7 +481,7 @@ public class Transaction extends NetObject implements system.runtime.serializati
 
     public void removeTransactionCompleted(TransactionCompletedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("TransactionCompleted", handler);
         } catch (JCNativeException jcne) {
